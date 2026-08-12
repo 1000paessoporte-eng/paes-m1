@@ -1,10 +1,14 @@
 from datetime import datetime
 from enum import StrEnum
+from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, String, Text, func
+from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
+
+if TYPE_CHECKING:
+    from paes_api.modules.skill_tree.models import SkillNode
 
 
 class Difficulty(StrEnum):

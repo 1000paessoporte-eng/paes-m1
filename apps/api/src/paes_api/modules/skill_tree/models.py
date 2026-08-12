@@ -1,10 +1,15 @@
 from datetime import datetime
 from enum import StrEnum
+from typing import TYPE_CHECKING
 
-from sqlalchemy import DateTime, Enum, Float, ForeignKey, Integer, String, Table, Column
+from sqlalchemy import Column, DateTime, Enum, Float, ForeignKey, Integer, String, Table
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
+
+if TYPE_CHECKING:
+    from paes_api.modules.content.models import Question
+    from paes_api.modules.users.models import User
 
 
 class SkillAxis(StrEnum):

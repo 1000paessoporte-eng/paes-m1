@@ -1,10 +1,14 @@
 from datetime import datetime
 from enum import StrEnum
+from typing import TYPE_CHECKING
 
 from sqlalchemy import DateTime, Enum, ForeignKey, Integer, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
+
+if TYPE_CHECKING:
+    from paes_api.modules.users.models import User
 
 EXAM_DURATION_SECONDS = 2 * 3600 + 20 * 60  # 2h 20m, duración oficial PAES M1
 
