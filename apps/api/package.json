@@ -1,0 +1,11 @@
+{
+  "name": "@paes-m1/api",
+  "private": true,
+  "scripts": {
+    "dev": "uv run uvicorn paes_api.main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "uv sync --frozen",
+    "lint": "uv run ruff check .",
+    "test": "uv run pytest",
+    "typecheck": "uv run mypy src"
+  }
+}

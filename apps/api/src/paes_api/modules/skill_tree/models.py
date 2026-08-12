@@ -1,0 +1,85 @@
+from datetime import datetime
+from enum import StrEnum
+
+from sqlalchemy import DateTime, Enum, Float, ForeignKey, Integer, String, Table, Column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from paes_api.shared.base import Base
+
+
+class SkillAxis(StrEnum):
+    NUMEROS = "numeros"
+    ALGEBRA = "algebra"
+    GEOMETRIA = "geometria"
+    PROBABILIDAD = "probabilidad"
+
+
+class ProgressStatus(StrEnum):
+    LOCKED = "locked"
+    UNLOCKED = "unlocked"
+    MASTERED = "mastered"
+
+
+# Un nodo puede requerir varios nodos previos (grafo, no solo árbol binario).
+skill_prerequisites = Table(
+    "skill_prerequisites",
+    Base.metadata,
+    Column("skill_node_id", ForeignKey("skill_nodes.id"), primary_key=True),
+    Column("prerequisite_id", ForeignKey("skill_nodes.id"), primary_key=True),
+)
+
+
+class SkillNode(Base):
+    """Nodo del Árbol de Habilidades. `unlock_threshold` es el % de acierto
+    mínimo exigido en TODOS los prerequisites para desbloquear este nodo."""
+
+    __tablename__ = "skill_nodes"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    code: Mapped[str] = mapped_column(String(60), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(160))
+    axis: Mapped[SkillAxis] = mapped_column(Enum(SkillAxis))
+    tier: Mapped[int] = mapped_column(Integer, default=1)  # nivel/profundidad en el árbol
+    unlock_threshold: Mapped[float] = mapped_column(Float, default=0.75)
+    display_order: Mapped[int] = mapped_column(Integer, default=0)
+
+    prerequisites: Mapped[list["SkillNode"]] = relationship(
+        "SkillNode",
+        secondary=skill_prerequisites,
+        primaryjoin=id == skill_prerequisites.c.skill_node_id,
+        secondaryjoin=id == skill_prerequisites.c.prerequisite_id,
+    )
+    questions: Mapped[list["Question"]] = relationship(back_populates="skill_node")
+    user_progress: Mapped[list["UserSkillProgress"]] = relationship(
+        back_populates="skill_node"
+    )
+
+
+class UserSkillProgress(Base):
+    """Progreso independiente por (usuario, nodo) — el corazón del loop de
+    juego: cada intento actualiza accuracy y puede desbloquear nodos hijos."""
+
+    __tablename__ = "user_skill_progress"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    skill_node_id: Mapped[int] = mapped_column(ForeignKey("skill_nodes.id"), index=True)
+
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+    correct: Mapped[int] = mapped_column(Integer, default=0)
+    status: Mapped[ProgressStatus] = mapped_column(
+        Enum(ProgressStatus), default=ProgressStatus.LOCKED
+    )
+    unlocked_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+    mastered_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
+    user: Mapped["User"] = relationship(back_populates="skill_progress")
+    skill_node: Mapped["SkillNode"] = relationship(back_populates="user_progress")
+
+    @property
+    def accuracy(self) -> float:
+        return self.correct / self.attempts if self.attempts else 0.0
