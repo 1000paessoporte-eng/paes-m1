@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     cors_origins: list[str] = [
         "http://localhost:3000",
         "http://192.168.1.11:3000",
+        "https://healing-aims-photographs-guaranteed.trycloudflare.com",
     ]
 
 

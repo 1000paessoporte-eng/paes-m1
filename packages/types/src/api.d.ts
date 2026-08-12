@@ -55,6 +55,74 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam/start": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Start Exam */
+        post: operations["start_exam_api_exam_start_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/exam/{attempt_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Exam State */
+        get: operations["get_exam_state_api_exam__attempt_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/exam/{attempt_id}/answer": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Answer Question */
+        post: operations["answer_question_api_exam__attempt_id__answer_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/exam/{attempt_id}/submit": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Submit Exam */
+        post: operations["submit_exam_api_exam__attempt_id__submit_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -90,10 +158,112 @@ export interface components {
             distractor_justification?: string | null;
         };
         /**
+         * AttemptStatus
+         * @enum {string}
+         */
+        AttemptStatus: "in_progress" | "submitted" | "abandoned";
+        /**
          * Difficulty
          * @enum {string}
          */
         Difficulty: "facil" | "medio" | "dificil";
+        /**
+         * ExamAlternativeOut
+         * @description Alternativa durante el examen: SIN is_correct ni
+         *     distractor_justification. Esos datos solo se exponen después de
+         *     submit (feature de Smart Feedback / autopsia del error).
+         */
+        ExamAlternativeOut: {
+            /** Id */
+            id: number;
+            /** Label */
+            label: string;
+            /** Text */
+            text: string;
+        };
+        /** ExamAnswerIn */
+        ExamAnswerIn: {
+            /** Question Id */
+            question_id: number;
+            /** Selected Alternative Id */
+            selected_alternative_id?: number | null;
+            /**
+             * Time Spent Ms
+             * @default 0
+             */
+            time_spent_ms: number;
+        };
+        /** ExamAnswerState */
+        ExamAnswerState: {
+            /** Selected Alternative Id */
+            selected_alternative_id?: number | null;
+            /**
+             * Time Spent Ms
+             * @default 0
+             */
+            time_spent_ms: number;
+        };
+        /** ExamQuestionOut */
+        ExamQuestionOut: {
+            /** Id */
+            id: number;
+            /** Skill Node Id */
+            skill_node_id: number;
+            difficulty: components["schemas"]["Difficulty"];
+            /** Stem */
+            stem: string;
+            /** Image Url */
+            image_url?: string | null;
+            /** Alternatives */
+            alternatives: components["schemas"]["ExamAlternativeOut"][];
+        };
+        /** ExamResultOut */
+        ExamResultOut: {
+            /** Attempt Id */
+            attempt_id: number;
+            status: components["schemas"]["AttemptStatus"];
+            /** Total Questions */
+            total_questions: number;
+            /** Answered */
+            answered: number;
+            /** Correct */
+            correct: number;
+            /** Elapsed Seconds */
+            elapsed_seconds: number;
+        };
+        /** ExamStartOut */
+        ExamStartOut: {
+            /** Attempt Id */
+            attempt_id: number;
+            /**
+             * Started At
+             * Format: date-time
+             */
+            started_at: string;
+            /** Duration Limit Seconds */
+            duration_limit_seconds: number;
+            /** Questions */
+            questions: components["schemas"]["ExamQuestionOut"][];
+        };
+        /** ExamStateOut */
+        ExamStateOut: {
+            /** Attempt Id */
+            attempt_id: number;
+            /**
+             * Started At
+             * Format: date-time
+             */
+            started_at: string;
+            /** Duration Limit Seconds */
+            duration_limit_seconds: number;
+            /** Questions */
+            questions: components["schemas"]["ExamQuestionOut"][];
+            status: components["schemas"]["AttemptStatus"];
+            /** Answers */
+            answers: {
+                [key: string]: components["schemas"]["ExamAnswerState"];
+            };
+        };
         /** HTTPValidationError */
         HTTPValidationError: {
             /** Detail */
@@ -230,6 +400,125 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["QuestionOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    start_exam_api_exam_start_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamStartOut"];
+                };
+            };
+        };
+    };
+    get_exam_state_api_exam__attempt_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamStateOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    answer_question_api_exam__attempt_id__answer_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ExamAnswerIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: boolean;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    submit_exam_api_exam__attempt_id__submit_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamResultOut"];
                 };
             };
             /** @description Validation Error */
