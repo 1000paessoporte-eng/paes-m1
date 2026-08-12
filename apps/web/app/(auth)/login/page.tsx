@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { GoogleButton } from "@/components/auth/google-button";
 import { ApiError, loginUser } from "@/lib/api";
 import { setClientAuth } from "@/lib/auth";
 
@@ -20,7 +21,7 @@ export default function LoginPage() {
     try {
       const { access_token, user } = await loginUser(email, password);
       setClientAuth(access_token, user);
-      router.push("/arbol");
+      router.push("/examen");
       router.refresh();
     } catch (err) {
       setError(
@@ -34,31 +35,32 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="bg-grid-fade relative flex flex-1 items-center justify-center overflow-hidden px-6 py-20">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/3 -z-10 h-[320px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-[100px]"
-        style={{
-          background:
-            "radial-gradient(closest-side, var(--accent), var(--accent-2), transparent)",
-        }}
-      />
-
-      <div className="w-full max-w-sm rounded-2xl border border-border bg-surface p-6 shadow-2xl shadow-black/20">
+    <main className="flex flex-1 items-center justify-center px-6 py-20">
+      <div className="w-full max-w-sm rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-foreground/5">
         <span
           className="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold text-white"
           style={{
             background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
           }}
         >
-          M1
+          m
         </span>
-        <h1 className="mt-4 text-lg font-semibold">Inicia sesión</h1>
+        <h1 className="mt-4 text-lg font-semibold">Inicia sesión en milpaes</h1>
         <p className="mt-1 text-sm text-muted">
-          Continúa tu progreso en el árbol de habilidades.
+          Continúa tus ensayos y tu progreso donde los dejaste.
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
+        <div className="mt-6 flex justify-center">
+          <GoogleButton redirectTo="/examen" onError={setError} />
+        </div>
+
+        <div className="my-5 flex items-center gap-3 text-xs text-muted">
+          <span className="h-px flex-1 bg-border" />
+          o con tu correo
+          <span className="h-px flex-1 bg-border" />
+        </div>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <label className="flex flex-col gap-1.5 text-left">
             <span className="text-xs font-medium text-muted">Correo</span>
             <input

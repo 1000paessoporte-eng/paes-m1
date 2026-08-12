@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { formatFullDate, formatShortDate } from "./chart-utils";
 
-const COLOR = "#d95926"; // naranja, validado (dataviz skill) junto al azul del chart de tiempo
+const COLOR = "#d95926"; // naranja, distinguible del azul del chart de tiempo; ≥3:1 sobre blanco
 
 interface Point {
   date: string;

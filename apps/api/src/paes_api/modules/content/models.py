@@ -24,6 +24,9 @@ class Question(Base):
     skill_node_id: Mapped[int] = mapped_column(ForeignKey("skill_nodes.id"), index=True)
     difficulty: Mapped[Difficulty] = mapped_column(Enum(Difficulty))
     stem: Mapped[str] = mapped_column(Text)
+    #: Desarrollo paso a paso de por qué la respuesta correcta lo es. Nunca
+    #: menciona letras de alternativa: el orden A-D se mezcla al sembrar.
+    explanation: Mapped[str | None] = mapped_column(Text, nullable=True)
     image_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()

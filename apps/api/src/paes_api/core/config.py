@@ -8,6 +8,9 @@ class Settings(BaseSettings):
 
     environment: str = "development"
     secret_key: str = "change-me"
+    #: Client ID de la app de Google (OAuth 2.0). Vacío desactiva el login con
+    #: Google: la API rechaza /auth/google y la web no muestra el botón.
+    google_client_id: str = ""
     database_url: str = "postgresql+psycopg://paes:paes@localhost:5432/paes_m1"
     cors_origins: list[str] = [
         "http://localhost:3000",

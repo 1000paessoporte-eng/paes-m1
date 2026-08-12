@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { formatFullDate, formatShortDate, niceMax, roundedTopBarPath } from "./chart-utils";
 
-const COLOR = "#3987e5"; // azul, validado (dataviz skill) contra la superficie oscura de la app
+const COLOR = "#3987e5"; // azul; contraste ≥3:1 sobre el fondo blanco de la app
 
 interface Point {
   date: string;

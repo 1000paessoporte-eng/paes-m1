@@ -96,9 +96,7 @@ def answer_practice_question(
     return PracticeAnswerOut(
         is_correct=selected.is_correct,
         correct_alternative_id=correct_alt.id,
-        distractor_justification=(
-            selected.distractor_justification if not selected.is_correct else None
-        ),
+        explanation=question.explanation,
         node_accuracy=updated.accuracy,
         node_attempts=updated.attempts,
         newly_unlocked=[n.name for n in newly_unlocked],

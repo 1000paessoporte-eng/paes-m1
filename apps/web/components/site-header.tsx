@@ -9,8 +9,8 @@ import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } fro
 const NAV_ITEMS = [
   { href: "/", label: "Inicio" },
   { href: "/arbol", label: "Árbol de Habilidades" },
-  { href: "/examen", label: "Modo Examen" },
-  { href: "/feedback", label: "Feedback" },
+  { href: "/examen", label: "Modo Ensayo" },
+  { href: "/historial", label: "Mi progreso" },
   { href: "/analitica", label: "Analítica" },
 ] as const;
 
@@ -52,9 +52,9 @@ export function SiteHeader() {
               background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
             }}
           >
-            M1
+            m
           </span>
-          <span className="text-sm font-semibold tracking-tight">PAES M1</span>
+          <span className="text-sm font-semibold tracking-tight">milpaes</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

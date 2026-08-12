@@ -31,7 +31,8 @@ class PracticeAnswerIn(BaseModel):
 class PracticeAnswerOut(BaseModel):
     is_correct: bool
     correct_alternative_id: int
-    distractor_justification: str | None = None
+    #: Desarrollo de por qué la respuesta correcta lo es.
+    explanation: str | None = None
     node_accuracy: float
     node_attempts: int
     newly_unlocked: list[str] = []

@@ -10,6 +10,9 @@ class UserOut(BaseModel):
     email: str
     name: str
     created_at: datetime
+    avatar_url: str | None = None
+    #: Si es False, la cuenta entró con Google y aún no define contraseña.
+    has_password: bool = True
 
 
 class RegisterIn(BaseModel):
@@ -21,6 +24,18 @@ class RegisterIn(BaseModel):
 class LoginIn(BaseModel):
     email: EmailStr
     password: str
+
+
+class GoogleLoginIn(BaseModel):
+    """`credential` es el ID token (JWT) que entrega Google Identity Services."""
+
+    credential: str
+
+
+class AuthConfigOut(BaseModel):
+    """Qué métodos de inicio de sesión están habilitados en este despliegue."""
+
+    google_enabled: bool
 
 
 class TokenOut(BaseModel):

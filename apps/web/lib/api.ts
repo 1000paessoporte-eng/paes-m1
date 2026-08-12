@@ -1,4 +1,4 @@
-import type { paths } from "@paes-m1/types";
+import type { components, paths } from "@paes-m1/types";
 
 // En el servidor (Server Components) usamos la URL interna, rápida y sin
 // depender de red externa. En el navegador (Client Components) usamos la
@@ -16,6 +16,17 @@ export type Question =
 
 export type ExamStart =
   paths["/api/exam/start"]["post"]["responses"][200]["content"]["application/json"];
+
+export type ExamOptions =
+  paths["/api/exam/options"]["get"]["responses"][200]["content"]["application/json"];
+
+export type AxisOption = ExamOptions["axes"][number];
+
+export type ExamConfig = components["schemas"]["ExamConfigIn"];
+
+export type Pace = components["schemas"]["Pace"];
+
+export type BreakdownItem = components["schemas"]["BreakdownItemOut"];
 
 export type ExamState =
   paths["/api/exam/{attempt_id}"]["get"]["responses"][200]["content"]["application/json"];
@@ -70,6 +81,8 @@ async function apiFetch<T>(path: string, token?: string, init?: RequestInit): Pr
       .catch(() => undefined);
     throw new ApiError(res.status, path, detail);
   }
+  // 204 (por ejemplo, borrar un intento) no trae cuerpo que parsear.
+  if (res.status === 204) return undefined as T;
   return res.json() as Promise<T>;
 }
 
@@ -117,8 +130,24 @@ export function getQuestions(skillNodeId?: number, token?: string): Promise<Ques
   return apiFetch<Question[]>(`/api/questions${qs}`, token);
 }
 
-export function startExam(token?: string): Promise<ExamStart> {
-  return apiFetch<ExamStart>("/api/exam/start", token, { method: "POST" });
+export function getExamOptions(token?: string): Promise<ExamOptions> {
+  return apiFetch<ExamOptions>("/api/exam/options", token);
+}
+
+export function startExam(config: ExamConfig, token?: string): Promise<ExamStart> {
+  return apiFetch<ExamStart>("/api/exam/start", token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(config),
+  });
+}
+
+export function getExamResult(attemptId: number, token?: string): Promise<ExamResult> {
+  return apiFetch<ExamResult>(`/api/exam/${attemptId}/result`, token);
+}
+
+export function deleteExamAttempt(attemptId: number, token?: string): Promise<void> {
+  return apiFetch<void>(`/api/exam/${attemptId}`, token, { method: "DELETE" });
 }
 
 export function getExamState(attemptId: number, token?: string): Promise<ExamState> {
@@ -130,6 +159,7 @@ export function answerExamQuestion(
   questionId: number,
   selectedAlternativeId: number | null,
   timeSpentMs: number,
+  flagged: boolean,
   token?: string
 ): Promise<{ ok: boolean }> {
   return apiFetch<{ ok: boolean }>(`/api/exam/${attemptId}/answer`, token, {
@@ -139,6 +169,7 @@ export function answerExamQuestion(
       question_id: questionId,
       selected_alternative_id: selectedAlternativeId,
       time_spent_ms: timeSpentMs,
+      flagged,
     }),
   });
 }
@@ -164,6 +195,22 @@ export function registerUser(email: string, password: string, name: string): Pro
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password, name }),
+  });
+}
+
+export type AuthConfig =
+  paths["/api/auth/config"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getAuthConfig(): Promise<AuthConfig> {
+  return apiFetch<AuthConfig>("/api/auth/config");
+}
+
+/** `credential` es el ID token que entrega Google Identity Services. */
+export function loginWithGoogle(credential: string): Promise<TokenOut> {
+  return apiFetch<TokenOut>("/api/auth/google", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ credential }),
   });
 }
 

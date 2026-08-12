@@ -38,6 +38,43 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/auth/config": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Auth Config
+         * @description La web consulta esto para saber si mostrar el botón de Google.
+         */
+        get: operations["auth_config_api_auth_config_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/auth/google": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Login With Google */
+        post: operations["login_with_google_api_auth_google_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/auth/me": {
         parameters: {
             query?: never;
@@ -128,6 +165,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam/options": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Exam Options
+         * @description Ejes y disponibilidad del banco, para la pantalla de configuración.
+         */
+        get: operations["get_exam_options_api_exam_options_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/exam": {
         parameters: {
             query?: never;
@@ -173,7 +230,8 @@ export interface paths {
         get: operations["get_exam_state_api_exam__attempt_id__get"];
         put?: never;
         post?: never;
-        delete?: never;
+        /** Delete Exam Attempt */
+        delete: operations["delete_exam_attempt_api_exam__attempt_id__delete"];
         options?: never;
         head?: never;
         patch?: never;
@@ -207,6 +265,26 @@ export interface paths {
         put?: never;
         /** Submit Exam */
         post: operations["submit_exam_api_exam__attempt_id__submit_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/exam/{attempt_id}/result": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Exam Result
+         * @description Mismo resumen que devuelve submit, para volver a abrir un ensayo pasado.
+         */
+        get: operations["get_exam_result_api_exam__attempt_id__result_get"];
+        put?: never;
+        post?: never;
         delete?: never;
         options?: never;
         head?: never;
@@ -335,6 +413,44 @@ export interface components {
          * @enum {string}
          */
         AttemptStatus: "in_progress" | "submitted" | "abandoned";
+        /**
+         * AuthConfigOut
+         * @description Qué métodos de inicio de sesión están habilitados en este despliegue.
+         */
+        AuthConfigOut: {
+            /** Google Enabled */
+            google_enabled: boolean;
+        };
+        /**
+         * AxisOptionOut
+         * @description Un eje temático y cuántas preguntas hay disponibles en el banco.
+         */
+        AxisOptionOut: {
+            /** Axis */
+            axis: string;
+            /** Label */
+            label: string;
+            /** Available */
+            available: number;
+        };
+        /**
+         * BreakdownItemOut
+         * @description Desempeño agrupado por eje, nodo o dificultad.
+         */
+        BreakdownItemOut: {
+            /** Name */
+            name: string;
+            /** Correct */
+            correct: number;
+            /** Incorrect */
+            incorrect: number;
+            /** Omitted */
+            omitted: number;
+            /** Total */
+            total: number;
+            /** Percentage */
+            percentage: number;
+        };
         /** DailyStat */
         DailyStat: {
             /**
@@ -360,7 +476,7 @@ export interface components {
          * ExamAlternativeOut
          * @description Alternativa durante el examen: SIN is_correct ni
          *     distractor_justification. Esos datos solo se exponen después de
-         *     submit (feature de Smart Feedback / autopsia del error).
+         *     submit (revisión de respuestas).
          */
         ExamAlternativeOut: {
             /** Id */
@@ -381,6 +497,11 @@ export interface components {
              * @default 0
              */
             time_spent_ms: number;
+            /**
+             * Flagged
+             * @default false
+             */
+            flagged: boolean;
         };
         /** ExamAnswerState */
         ExamAnswerState: {
@@ -391,6 +512,11 @@ export interface components {
              * @default 0
              */
             time_spent_ms: number;
+            /**
+             * Flagged
+             * @default false
+             */
+            flagged: boolean;
         };
         /** ExamAttemptSummary */
         ExamAttemptSummary: {
@@ -410,6 +536,54 @@ export interface components {
             answered: number;
             /** Correct */
             correct: number;
+            /** Estimated Score */
+            estimated_score?: number | null;
+            /** Elapsed Seconds */
+            elapsed_seconds: number;
+            /** Duration Limit Seconds */
+            duration_limit_seconds: number;
+            pace: components["schemas"]["Pace"];
+            /** Axes */
+            axes: string[];
+        };
+        /**
+         * ExamConfigIn
+         * @description Configuración elegida por el estudiante antes de comenzar.
+         */
+        ExamConfigIn: {
+            /**
+             * Question Count
+             * @default 20
+             */
+            question_count: number;
+            /** @default oficial */
+            pace: components["schemas"]["Pace"];
+            /** Axes */
+            axes?: string[];
+        };
+        /** ExamConfigOut */
+        ExamConfigOut: {
+            /** Question Count */
+            question_count: number;
+            pace: components["schemas"]["Pace"];
+            /** Axes */
+            axes: string[];
+        };
+        /**
+         * ExamOptionsOut
+         * @description Todo lo que la pantalla de configuración necesita para armarse.
+         */
+        ExamOptionsOut: {
+            /** Axes */
+            axes: components["schemas"]["AxisOptionOut"][];
+            /** Total Available */
+            total_available: number;
+            /** Seconds Per Question */
+            seconds_per_question: number;
+            /** Official Questions */
+            official_questions: number;
+            /** Official Duration Min */
+            official_duration_min: number;
         };
         /** ExamQuestionOut */
         ExamQuestionOut: {
@@ -417,6 +591,16 @@ export interface components {
             id: number;
             /** Skill Node Id */
             skill_node_id: number;
+            /**
+             * Skill Node Name
+             * @default
+             */
+            skill_node_name: string;
+            /**
+             * Axis
+             * @default
+             */
+            axis: string;
             difficulty: components["schemas"]["Difficulty"];
             /** Stem */
             stem: string;
@@ -436,8 +620,22 @@ export interface components {
             answered: number;
             /** Correct */
             correct: number;
+            /** Incorrect */
+            incorrect: number;
+            /** Omitted */
+            omitted: number;
+            /** Estimated Score */
+            estimated_score: number;
             /** Elapsed Seconds */
             elapsed_seconds: number;
+            /** Duration Limit Seconds */
+            duration_limit_seconds: number;
+            /** By Axis */
+            by_axis: components["schemas"]["BreakdownItemOut"][];
+            /** By Difficulty */
+            by_difficulty: components["schemas"]["BreakdownItemOut"][];
+            /** By Node */
+            by_node: components["schemas"]["BreakdownItemOut"][];
         };
         /** ExamReviewOut */
         ExamReviewOut: {
@@ -460,6 +658,7 @@ export interface components {
             started_at: string;
             /** Duration Limit Seconds */
             duration_limit_seconds: number;
+            config: components["schemas"]["ExamConfigOut"];
             /** Questions */
             questions: components["schemas"]["ExamQuestionOut"][];
         };
@@ -474,6 +673,7 @@ export interface components {
             started_at: string;
             /** Duration Limit Seconds */
             duration_limit_seconds: number;
+            config: components["schemas"]["ExamConfigOut"];
             /** Questions */
             questions: components["schemas"]["ExamQuestionOut"][];
             status: components["schemas"]["AttemptStatus"];
@@ -481,6 +681,14 @@ export interface components {
             answers: {
                 [key: string]: components["schemas"]["ExamAnswerState"];
             };
+        };
+        /**
+         * GoogleLoginIn
+         * @description `credential` es el ID token (JWT) que entrega Google Identity Services.
+         */
+        GoogleLoginIn: {
+            /** Credential */
+            credential: string;
         };
         /** HTTPValidationError */
         HTTPValidationError: {
@@ -514,6 +722,16 @@ export interface components {
             /** Accuracy */
             accuracy: number;
         };
+        /**
+         * Pace
+         * @description Ritmo del ensayo: ajusta el tiempo respecto de la proporción oficial.
+         *
+         *     El oficial replica la razón de la PAES real; los otros dos existen porque a
+         *     veces conviene entrenar bajo presión o dedicar más tiempo a razonar cuando
+         *     recién se está estudiando la materia.
+         * @enum {string}
+         */
+        Pace: "oficial" | "exigente" | "relajado";
         /** PracticeAlternativeOut */
         PracticeAlternativeOut: {
             /** Id */
@@ -536,8 +754,8 @@ export interface components {
             is_correct: boolean;
             /** Correct Alternative Id */
             correct_alternative_id: number;
-            /** Distractor Justification */
-            distractor_justification?: string | null;
+            /** Explanation */
+            explanation?: string | null;
             /** Node Accuracy */
             node_accuracy: number;
             /** Node Attempts */
@@ -603,7 +821,7 @@ export interface components {
         /**
          * ReviewAlternativeOut
          * @description Alternativa en la revisión post-examen: SÍ incluye is_correct y
-         *     distractor_justification — la autopsia del error.
+         *     distractor_justification — el porqué de cada error.
          */
         ReviewAlternativeOut: {
             /** Id */
@@ -625,6 +843,8 @@ export interface components {
             id: number;
             /** Stem */
             stem: string;
+            /** Explanation */
+            explanation?: string | null;
             difficulty: components["schemas"]["Difficulty"];
             /** Skill Node Id */
             skill_node_id: number;
@@ -632,6 +852,8 @@ export interface components {
             skill_node_code: string;
             /** Skill Node Name */
             skill_node_name: string;
+            /** Axis */
+            axis: string;
             /** Time Spent Ms */
             time_spent_ms: number;
             /** Answered Correctly */
@@ -703,6 +925,13 @@ export interface components {
              * Format: date-time
              */
             created_at: string;
+            /** Avatar Url */
+            avatar_url?: string | null;
+            /**
+             * Has Password
+             * @default true
+             */
+            has_password: boolean;
         };
         /** ValidationError */
         ValidationError: {
@@ -769,6 +998,59 @@ export interface operations {
         requestBody: {
             content: {
                 "application/json": components["schemas"]["LoginIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TokenOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    auth_config_api_auth_config_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AuthConfigOut"];
+                };
+            };
+        };
+    };
+    login_with_google_api_auth_google_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GoogleLoginIn"];
             };
         };
         responses: {
@@ -947,6 +1229,26 @@ export interface operations {
             };
         };
     };
+    get_exam_options_api_exam_options_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamOptionsOut"];
+                };
+            };
+        };
+    };
     list_exam_attempts_api_exam_get: {
         parameters: {
             query?: never;
@@ -974,7 +1276,11 @@ export interface operations {
             path?: never;
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["ExamConfigIn"] | null;
+            };
+        };
         responses: {
             /** @description Successful Response */
             200: {
@@ -983,6 +1289,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ExamStartOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -1006,6 +1321,35 @@ export interface operations {
                 content: {
                     "application/json": components["schemas"]["ExamStateOut"];
                 };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    delete_exam_attempt_api_exam__attempt_id__delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             /** @description Validation Error */
             422: {
@@ -1056,6 +1400,37 @@ export interface operations {
         };
     };
     submit_exam_api_exam__attempt_id__submit_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamResultOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_exam_result_api_exam__attempt_id__result_get: {
         parameters: {
             query?: never;
             header?: never;

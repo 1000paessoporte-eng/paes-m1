@@ -63,17 +63,26 @@ def seed_skill_nodes(db) -> dict[str, SkillNode]:
 
 def seed_questions(db, nodes_by_code: dict[str, SkillNode]) -> None:
     created = 0
+    updated = 0
     for q in QUESTIONS:
         exists = db.execute(
             select(Question).where(Question.stem == q["stem"])
         ).scalar_one_or_none()
         if exists:
+            # La pregunta ya está, pero su explicación puede haber cambiado (o
+            # no existir, si se sembró antes de que hubiera columna). Se
+            # actualiza sin tocar las alternativas, para no invalidar los
+            # intentos que ya apuntan a ellas.
+            if exists.explanation != q["explanation"]:
+                exists.explanation = q["explanation"]
+                updated += 1
             continue
 
         question = Question(
             skill_node_id=nodes_by_code[q["skill_node"]].id,
             difficulty=Difficulty(q["difficulty"]),
             stem=q["stem"],
+            explanation=q["explanation"],
         )
         db.add(question)
         db.flush()
@@ -92,7 +101,10 @@ def seed_questions(db, nodes_by_code: dict[str, SkillNode]) -> None:
             )
         created += 1
     db.commit()
-    print(f"questions: {created} preguntas nuevas insertadas (de {len(QUESTIONS)} definidas)")
+    print(
+        f"questions: {created} nuevas insertadas, {updated} explicaciones actualizadas "
+        f"(de {len(QUESTIONS)} definidas)"
+    )
 
 
 def seed_demo_user(db) -> None:

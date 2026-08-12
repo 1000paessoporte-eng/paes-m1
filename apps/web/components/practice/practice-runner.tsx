@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { TextoRico } from "@/components/texto-rico";
 import {
   answerPractice,
   ApiError,
@@ -146,7 +147,7 @@ export function PracticeRunner({ code }: { code: string }) {
       : 0;
     return (
       <div className="mx-auto flex max-w-lg flex-col items-center rounded-2xl border border-border bg-surface px-6 py-16 text-center">
-        <span className="text-5xl font-semibold tracking-tight text-gradient">{pct}%</span>
+        <span className="text-5xl font-semibold tracking-tight text-accent">{pct}%</span>
         <p className="mt-2 text-sm text-muted">
           {sessionCorrect} de {questions.length} correctas en esta ronda de{" "}
           {nodeName}
@@ -260,9 +261,13 @@ export function PracticeRunner({ code }: { code: string }) {
             <p className="font-medium">
               {answered.is_correct ? "¡Correcto!" : "Incorrecto"}
             </p>
-            {!answered.is_correct && answered.distractor_justification && (
-              <p className="mt-1 text-foreground">{answered.distractor_justification}</p>
-            )}
+          </div>
+        )}
+
+        {answered?.explanation && (
+          <div className="mt-3 rounded-lg border border-border bg-surface-hover px-4 py-3 text-sm">
+            <h3 className="mb-2 font-semibold">Cómo se resuelve</h3>
+            <TextoRico texto={answered.explanation} className="text-foreground" />
           </div>
         )}
 

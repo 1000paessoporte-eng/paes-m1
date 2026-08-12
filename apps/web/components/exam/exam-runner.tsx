@@ -1,9 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { TextoRico } from "@/components/texto-rico";
+import { ExamConfigScreen } from "@/components/exam/exam-config";
+import { ExamResults } from "@/components/exam/exam-results";
+import { QuestionNavigator } from "@/components/exam/question-navigator";
 import {
   ApiError,
   answerExamQuestion,
@@ -12,48 +15,51 @@ import {
   startExam,
   submitExam,
   type ExamAttemptSummary,
+  type ExamConfig,
+  type ExamOptions,
   type ExamQuestion,
   type ExamResult,
-  type NodeDiagnosis,
+  type ExamReview,
 } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
+import { formatearReloj } from "@/lib/tiempo";
 
 const STORAGE_KEY = "paes_exam_attempt_id";
 const LABELS = ["A", "B", "C", "D", "E"];
 
-type Phase = "idle" | "loading" | "in_progress" | "submitted" | "error";
+type Phase = "config" | "loading" | "in_progress" | "submitted";
 
-function formatClock(ms: number): string {
-  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
-  const h = Math.floor(totalSeconds / 3600);
-  const m = Math.floor((totalSeconds % 3600) / 60);
-  const s = totalSeconds % 60;
-  return [h, m, s].map((v) => String(v).padStart(2, "0")).join(":");
+interface AnswerState {
+  selected: number | null;
+  flagged: boolean;
 }
 
 interface ExamRunnerProps {
+  options: ExamOptions;
   pastAttempts: ExamAttemptSummary[];
   resumableAttemptId: number | null;
 }
 
-export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps) {
+export function ExamRunner({ options, pastAttempts, resumableAttemptId }: ExamRunnerProps) {
   const router = useRouter();
-  const [phase, setPhase] = useState<Phase>("idle");
+  const [phase, setPhase] = useState<Phase>("config");
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [questions, setQuestions] = useState<ExamQuestion[]>([]);
   const [deadline, setDeadline] = useState<number>(0);
   const [remainingMs, setRemainingMs] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selections, setSelections] = useState<Record<number, number | null>>({});
+  const [answers, setAnswers] = useState<Record<number, AnswerState>>({});
   const [, setElapsedByQuestion] = useState<Record<number, number>>({});
   const [result, setResult] = useState<ExamResult | null>(null);
-  const [weakNodes, setWeakNodes] = useState<NodeDiagnosis[] | null>(null);
+  const [review, setReview] = useState<ExamReview | null>(null);
   const [confirmingSubmit, setConfirmingSubmit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const segmentStartRef = useRef(0);
   const attemptIdRef = useRef<number | null>(null);
+  const answersRef = useRef(answers);
+  answersRef.current = answers;
 
   useEffect(() => {
     attemptIdRef.current = attemptId;
@@ -61,8 +67,10 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
 
   const currentQuestion = questions[currentIndex] as ExamQuestion | undefined;
 
+  /** Guarda una respuesta. Los valores se pasan explícitos porque al llamarlo
+   *  justo después de un setState el estado todavía no se ha actualizado. */
   const flush = useCallback(
-    (questionId: number, selectedAlternativeId: number | null): Promise<void> => {
+    (questionId: number, selected: number | null, flagged: boolean): Promise<void> => {
       const now = Date.now();
       const delta = now - segmentStartRef.current;
       segmentStartRef.current = now;
@@ -78,13 +86,15 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
       return answerExamQuestion(
         id,
         questionId,
-        selectedAlternativeId,
+        selected,
         total,
+        flagged,
         getClientToken() ?? undefined
       ).then(
         () => {},
         (err) => {
-          // Autosave best-effort: si falla, el próximo flush reintenta con el tiempo acumulado.
+          // Autosave best-effort: si falla, el próximo flush reintenta con el
+          // tiempo acumulado.
           if (err instanceof ApiError && err.status === 401) router.push("/login");
         }
       );
@@ -96,20 +106,49 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
     (index: number) => {
       if (index < 0 || index >= questions.length || index === currentIndex) return;
       const q = questions[currentIndex];
-      if (q) flush(q.id, selections[q.id] ?? null);
+      if (q) {
+        const estado = answersRef.current[q.id];
+        flush(q.id, estado?.selected ?? null, estado?.flagged ?? false);
+      }
       setCurrentIndex(index);
     },
-    [currentIndex, questions, selections, flush]
+    [currentIndex, questions, flush]
   );
 
   const selectAlternative = useCallback(
     (altId: number) => {
       if (!currentQuestion) return;
-      setSelections((prev) => ({ ...prev, [currentQuestion.id]: altId }));
-      flush(currentQuestion.id, altId);
+      const qid = currentQuestion.id;
+      const actual = answersRef.current[qid] ?? { selected: null, flagged: false };
+      // Volver a tocar la alternativa marcada la deselecciona: en la PAES
+      // dejar en blanco no penaliza, así que debe ser posible retractarse.
+      const selected = actual.selected === altId ? null : altId;
+      setAnswers((prev) => ({ ...prev, [qid]: { ...actual, selected } }));
+      flush(qid, selected, actual.flagged);
     },
     [currentQuestion, flush]
   );
+
+  const toggleFlag = useCallback(() => {
+    if (!currentQuestion) return;
+    const qid = currentQuestion.id;
+    const actual = answersRef.current[qid] ?? { selected: null, flagged: false };
+    const flagged = !actual.flagged;
+    setAnswers((prev) => ({ ...prev, [qid]: { ...actual, flagged } }));
+    flush(qid, actual.selected, flagged);
+  }, [currentQuestion, flush]);
+
+  const loadResult = useCallback(async (id: number) => {
+    const token = getClientToken() ?? undefined;
+    const res = await submitExam(id, token);
+    setResult(res);
+    setPhase("submitted");
+    localStorage.removeItem(STORAGE_KEY);
+    // Mejor esfuerzo: si falla, se muestra el puntaje sin la revisión.
+    getExamReview(id, token)
+      .then(setReview)
+      .catch(() => {});
+  }, []);
 
   const doSubmit = useCallback(async () => {
     const id = attemptIdRef.current;
@@ -120,27 +159,20 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
       // submit — si se disparan en paralelo, el submit puede llegar primero
       // y el answer subsiguiente falla con 409 (intento ya finalizado).
       if (currentQuestion) {
-        await flush(currentQuestion.id, selections[currentQuestion.id] ?? null);
+        const estado = answersRef.current[currentQuestion.id];
+        await flush(currentQuestion.id, estado?.selected ?? null, estado?.flagged ?? false);
       }
-      const token = getClientToken() ?? undefined;
-      const res = await submitExam(id, token);
-      setResult(res);
-      setPhase("submitted");
-      localStorage.removeItem(STORAGE_KEY);
-      // Mejor esfuerzo: si falla, el resumen de nodos débiles simplemente no se muestra.
-      getExamReview(id, token)
-        .then((review) => setWeakNodes(review.node_diagnosis.slice(0, 3)))
-        .catch(() => {});
+      await loadResult(id);
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) {
         router.push("/login");
         return;
       }
-      setErrorMsg("No se pudo enviar el examen. Revisa tu conexión e intenta de nuevo.");
+      setErrorMsg("No se pudo enviar el ensayo. Revisa tu conexión e intenta de nuevo.");
     } finally {
       setSubmitting(false);
     }
-  }, [currentQuestion, selections, flush, router, submitting]);
+  }, [currentQuestion, flush, loadResult, router, submitting]);
 
   const resumeAttempt = useCallback(async (id: number) => {
     setPhase("loading");
@@ -148,7 +180,7 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
       const state = await getExamState(id, getClientToken() ?? undefined);
       if (state.status !== "in_progress") {
         localStorage.removeItem(STORAGE_KEY);
-        setPhase("idle");
+        setPhase("config");
         return;
       }
       localStorage.setItem(STORAGE_KEY, String(id));
@@ -157,39 +189,41 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
       setDeadline(
         new Date(state.started_at).getTime() + state.duration_limit_seconds * 1000
       );
-      const sel: Record<number, number | null> = {};
+      const next: Record<number, AnswerState> = {};
       const elap: Record<number, number> = {};
       for (const [qid, ans] of Object.entries(state.answers)) {
-        sel[Number(qid)] = ans.selected_alternative_id ?? null;
+        next[Number(qid)] = {
+          selected: ans.selected_alternative_id ?? null,
+          flagged: ans.flagged ?? false,
+        };
         elap[Number(qid)] = ans.time_spent_ms ?? 0;
       }
-      setSelections(sel);
+      setAnswers(next);
       setElapsedByQuestion(elap);
+      setCurrentIndex(0);
+      segmentStartRef.current = Date.now();
       setPhase("in_progress");
     } catch {
       localStorage.removeItem(STORAGE_KEY);
-      setPhase("idle");
+      setPhase("config");
     }
   }, []);
 
-  // Resumir un intento en curso al montar: primero localStorage (mismo
-  // navegador), y si no hay nada, un intento in_progress que el servidor
-  // ya sabe que es nuestro (ej. se limpió el localStorage o es otro
-  // dispositivo) — así nunca se crean intentos duplicados sin querer.
+  // Resumir un ensayo en curso al montar: primero localStorage (mismo
+  // navegador), y si no hay nada, un intento in_progress que el servidor ya
+  // sabe que es nuestro (ej. se limpió el localStorage o es otro dispositivo)
+  // — así nunca se crean intentos duplicados sin querer.
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
-    const id = saved ? Number(saved) : resumableAttemptId;
+    const id = saved ? Number(saved) : null;
     if (id == null || !Number.isFinite(id)) return;
-    // Fetch de datos al montar: resumeAttempt marca "loading" antes del
-    // await, patrón estándar de carga inicial (no una lectura de estado
-    // externo que deba evitarse en un efecto).
+    // Fetch de datos al montar: resumeAttempt marca "loading" antes del await,
+    // patrón estándar de carga inicial.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     resumeAttempt(id);
-  }, [resumableAttemptId, resumeAttempt]);
+  }, [resumeAttempt]);
 
-  // Advertencia al cerrar/recargar la pestaña con un examen en curso —
-  // el autosave por pregunta ya cubre la mayoría de los casos, esto es
-  // una segunda red de seguridad para no perder la respuesta actual.
+  // Advertencia al cerrar/recargar la pestaña con un ensayo en curso.
   useEffect(() => {
     if (phase !== "in_progress") return;
     function onBeforeUnload(e: BeforeUnloadEvent) {
@@ -199,31 +233,38 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
     return () => window.removeEventListener("beforeunload", onBeforeUnload);
   }, [phase]);
 
-  // Reset del cronómetro de "tiempo en esta pregunta" al entrar a una nueva pregunta.
+  // Reset del cronómetro de "tiempo en esta pregunta" al cambiar de pregunta.
   useEffect(() => {
     segmentStartRef.current = Date.now();
   }, [currentIndex]);
 
-  // Countdown de 2h20m, con auto-submit al llegar a 0.
+  // Al cambiar de pantalla se vuelve arriba: sin esto, la revisión de
+  // resultados se abre a media página.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [phase]);
+
+  // Countdown con auto-envío al llegar a 0. Se calcula contra la hora límite
+  // en lugar de restar 1 cada segundo, porque los navegadores ralentizan los
+  // intervalos en pestañas inactivas y el conteo se desincronizaría.
   useEffect(() => {
     if (phase !== "in_progress" || deadline === 0) return;
     const tick = () => {
       const left = deadline - Date.now();
       setRemainingMs(Math.max(0, left));
-      if (left <= 0) {
-        doSubmit();
-      }
+      if (left <= 0) doSubmit();
     };
     tick();
     const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
   }, [phase, deadline, doSubmit]);
 
-  // Atajos de teclado: ← → para navegar, 1-4/A-D para responder, Enter para avanzar.
+  // Atajos: A-D (o 1-4) para responder, flechas para navegar.
   useEffect(() => {
     if (phase !== "in_progress") return;
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "ArrowRight" || e.key === "Enter") {
+      if (e.target instanceof HTMLInputElement) return;
+      if (e.key === "ArrowRight") {
         e.preventDefault();
         goToQuestion(currentIndex + 1);
       } else if (e.key === "ArrowLeft") {
@@ -248,52 +289,37 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [phase, currentIndex, currentQuestion, goToQuestion, selectAlternative]);
 
-  async function handleStart() {
+  async function handleStart(config: ExamConfig) {
     setPhase("loading");
     setErrorMsg(null);
     setResult(null);
-    setWeakNodes(null);
+    setReview(null);
     try {
-      const data = await startExam(getClientToken() ?? undefined);
+      const data = await startExam(config, getClientToken() ?? undefined);
       localStorage.setItem(STORAGE_KEY, String(data.attempt_id));
       setAttemptId(data.attempt_id);
       setQuestions(data.questions);
       setDeadline(new Date(data.started_at).getTime() + data.duration_limit_seconds * 1000);
       setRemainingMs(data.duration_limit_seconds * 1000);
       setCurrentIndex(0);
-      setSelections({});
+      setAnswers({});
       setElapsedByQuestion({});
       segmentStartRef.current = Date.now();
       setPhase("in_progress");
-    } catch {
-      setErrorMsg("No se pudo iniciar el examen. Verifica que la API esté disponible.");
-      setPhase("error");
+    } catch (err) {
+      if (err instanceof ApiError && err.status === 401) {
+        router.push("/login");
+        return;
+      }
+      setErrorMsg("No se pudo iniciar el ensayo. Verifica que la API esté disponible.");
+      setPhase("config");
     }
   }
 
-  async function handlePrimaryAction() {
-    if (resumableAttemptId != null) {
-      await resumeAttempt(resumableAttemptId);
-    } else {
-      await handleStart();
-    }
-  }
-
-  const answeredCount = useMemo(
-    () => Object.values(selections).filter((v) => v != null).length,
-    [selections]
+  const respondidas = useMemo(
+    () => Object.values(answers).filter((a) => a.selected != null).length,
+    [answers]
   );
-
-  if (phase === "idle" || phase === "error") {
-    return (
-      <StartScreen
-        onStart={handlePrimaryAction}
-        errorMsg={errorMsg}
-        pastAttempts={pastAttempts}
-        resumable={resumableAttemptId != null}
-      />
-    );
-  }
 
   if (phase === "loading") {
     return (
@@ -304,286 +330,237 @@ export function ExamRunner({ pastAttempts, resumableAttemptId }: ExamRunnerProps
   }
 
   if (phase === "submitted" && result) {
-    return <ResultScreen result={result} weakNodes={weakNodes} />;
+    return (
+      <ExamResults
+        result={result}
+        review={review}
+        onNuevoEnsayo={() => {
+          setResult(null);
+          setReview(null);
+          setAttemptId(null);
+          setPhase("config");
+          router.refresh();
+        }}
+      />
+    );
   }
 
-  if (!currentQuestion) return null;
+  if (phase === "config" || !currentQuestion) {
+    return (
+      <ExamConfigScreen
+        options={options}
+        ensayosRendidos={pastAttempts.length}
+        resumable={resumableAttemptId != null}
+        errorMsg={errorMsg}
+        onComenzar={handleStart}
+        onContinuar={() => resumableAttemptId != null && resumeAttempt(resumableAttemptId)}
+      />
+    );
+  }
 
-  const low = remainingMs < 5 * 60 * 1000;
+  const critico = remainingMs <= 5 * 60 * 1000;
+  const sinResponder = questions.length - respondidas;
+  const estado = answers[currentQuestion.id];
 
   return (
-    <div className="flex flex-col gap-6">
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3">
-        <span className="text-sm text-muted">
-          Pregunta <span className="text-foreground">{currentIndex + 1}</span> de{" "}
-          {questions.length} · {answeredCount} respondidas
-        </span>
-        <span
-          className={cn(
-            "font-mono text-lg font-semibold tabular-nums",
-            low ? "text-danger" : "text-foreground"
-          )}
-        >
-          {formatClock(remainingMs)}
-        </span>
-        {confirmingSubmit ? (
-          <div className="flex items-center gap-2 text-sm">
-            <span className="text-muted">¿Enviar y finalizar?</span>
+    <div className="mx-auto max-w-3xl">
+      {/* ── Barra superior ──────────────────────────────────────────── */}
+      <header className="sticky top-14 z-20 -mx-4 border-b border-border bg-background/95 px-4 backdrop-blur sm:-mx-6 sm:px-6">
+        <div className="flex items-center gap-3 py-3">
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-xs text-muted">Competencia Matemática 1</p>
+            <p className="font-semibold">
+              Pregunta {currentIndex + 1} de {questions.length}
+            </p>
+          </div>
+
+          <div
+            className={cn(
+              "rounded-lg px-3 py-1.5 font-mono text-lg font-bold tabular-nums",
+              critico ? "bg-danger/10 text-danger" : "bg-surface-hover"
+            )}
+            role="timer"
+            aria-live={critico ? "polite" : "off"}
+            aria-label="Tiempo restante"
+          >
+            {formatearReloj(remainingMs)}
+          </div>
+
+          <span className="rounded-lg border border-border px-3 py-2 text-sm font-medium tabular-nums">
+            {respondidas}/{questions.length}
+          </span>
+        </div>
+
+        <div className="-mx-4 h-1 w-[calc(100%+2rem)] bg-surface-hover sm:-mx-6 sm:w-[calc(100%+3rem)]">
+          <div
+            className="h-full bg-accent transition-all"
+            style={{ width: `${(respondidas / questions.length) * 100}%` }}
+          />
+        </div>
+      </header>
+
+      <QuestionNavigator
+        items={questions.map((q) => ({
+          id: q.id,
+          answered: answers[q.id]?.selected != null,
+          flagged: answers[q.id]?.flagged ?? false,
+        }))}
+        currentIndex={currentIndex}
+        onSelect={goToQuestion}
+      />
+
+      {/* ── Pregunta ────────────────────────────────────────────────── */}
+      {/* pb generoso: deja aire para que la pastilla flotante del navegador
+          no tape el final del contenido. */}
+      <main className="py-6 pb-24">
+        <article className="rounded-xl border border-border bg-surface p-5">
+          <div className="mb-3 flex items-start justify-between gap-3">
+            <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-medium text-muted">
+              {currentQuestion.axis || currentQuestion.skill_node_name}
+            </span>
             <button
-              onClick={doSubmit}
-              disabled={submitting}
-              className="rounded-md bg-danger px-3 py-1.5 font-medium text-white disabled:cursor-not-allowed disabled:opacity-60"
+              type="button"
+              onClick={toggleFlag}
+              className={cn(
+                "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
+                estado?.flagged
+                  ? "border-warning/50 bg-warning/10 text-warning"
+                  : "border-border text-muted hover:bg-surface-hover"
+              )}
             >
-              {submitting ? "Enviando…" : "Sí, finalizar"}
-            </button>
-            <button
-              onClick={() => setConfirmingSubmit(false)}
-              disabled={submitting}
-              className="rounded-md border border-border px-3 py-1.5 text-muted hover:bg-surface-hover disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              Cancelar
+              {estado?.flagged ? "★ Marcada" : "☆ Marcar"}
             </button>
           </div>
-        ) : (
-          <button
-            onClick={() => setConfirmingSubmit(true)}
-            className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:bg-surface-hover"
-          >
-            Finalizar examen
-          </button>
-        )}
-      </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_220px]">
-        <div className="rounded-xl border border-border bg-surface p-6">
-          <span className="text-xs font-medium text-muted">
-            {currentQuestion.difficulty === "facil"
-              ? "Fácil"
-              : currentQuestion.difficulty === "medio"
-                ? "Medio"
-                : "Difícil"}
-          </span>
-          <p className="mt-2 text-base leading-relaxed text-foreground">
-            {currentQuestion.stem}
-          </p>
+          <TextoRico texto={currentQuestion.stem} className="text-lg" />
 
-          <div className="mt-6 flex flex-col gap-2.5">
+          <div className="mt-5 space-y-2">
             {currentQuestion.alternatives.map((alt, i) => {
-              const selected = selections[currentQuestion.id] === alt.id;
+              const elegida = estado?.selected === alt.id;
               return (
                 <button
                   key={alt.id}
+                  type="button"
                   onClick={() => selectAlternative(alt.id)}
+                  aria-pressed={elegida}
                   className={cn(
-                    "flex items-start gap-3 rounded-lg border px-4 py-3 text-left text-sm transition-colors",
-                    selected
-                      ? "border-accent bg-accent/10 text-foreground"
-                      : "border-border bg-background text-foreground hover:border-border-strong hover:bg-surface-hover"
+                    "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition",
+                    elegida
+                      ? "border-accent bg-accent/10 ring-1 ring-accent"
+                      : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
                   )}
                 >
                   <span
                     className={cn(
-                      "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[11px] font-medium",
-                      selected
-                        ? "border-accent bg-accent text-accent-foreground"
-                        : "border-border-strong text-muted"
+                      "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold",
+                      elegida
+                        ? "bg-accent text-accent-foreground"
+                        : "bg-surface-hover text-muted"
                     )}
                   >
                     {LABELS[i]}
                   </span>
-                  <span>{alt.text}</span>
+                  <TextoRico texto={alt.text} inline />
                 </button>
               );
             })}
           </div>
+        </article>
 
-          <div className="mt-6 flex items-center justify-between">
+        {/* ── Navegación ────────────────────────────────────────────── */}
+        <nav className="mt-5 flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => goToQuestion(currentIndex - 1)}
+            disabled={currentIndex === 0}
+            className="rounded-lg border border-border px-4 py-2.5 font-medium transition hover:bg-surface-hover disabled:opacity-40"
+          >
+            Anterior
+          </button>
+
+          {currentIndex < questions.length - 1 ? (
             <button
-              onClick={() => goToQuestion(currentIndex - 1)}
-              disabled={currentIndex === 0}
-              className="rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-surface-hover disabled:pointer-events-none disabled:opacity-40"
-            >
-              ← Anterior
-            </button>
-            <span className="hidden text-xs text-muted sm:inline">
-              Atajos: ← → para navegar · 1-4 para responder · Enter para avanzar
-            </span>
-            <button
+              type="button"
               onClick={() => goToQuestion(currentIndex + 1)}
-              disabled={currentIndex === questions.length - 1}
-              className="btn-glow rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground disabled:pointer-events-none disabled:opacity-40"
+              className="btn-glow flex-1 rounded-lg px-4 py-2.5 font-semibold text-accent-foreground"
             >
-              Siguiente →
+              Siguiente
             </button>
-          </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setConfirmingSubmit(true)}
+              className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-white transition hover:opacity-90"
+            >
+              Terminar ensayo
+            </button>
+          )}
+        </nav>
+
+        <div className="mt-6 flex justify-between text-sm">
+          <button
+            type="button"
+            onClick={() => setConfirmingSubmit(true)}
+            className="flex items-center gap-2 rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-muted transition hover:border-danger/50 hover:bg-danger/5 hover:text-danger"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="5" y="5" width="14" height="14" rx="2" />
+            </svg>
+            Terminar antes
+          </button>
         </div>
 
-        <div className="rounded-xl border border-border bg-surface p-4">
-          <p className="text-xs font-medium text-muted">Navegador</p>
-          <div className="mt-3 grid grid-cols-6 gap-1.5 lg:grid-cols-5">
-            {questions.map((q, i) => {
-              const answered = selections[q.id] != null;
-              const active = i === currentIndex;
-              return (
-                <button
-                  key={q.id}
-                  onClick={() => goToQuestion(i)}
-                  className={cn(
-                    "flex h-8 w-8 items-center justify-center rounded-md text-xs font-medium transition-colors",
-                    active
-                      ? "bg-accent text-accent-foreground"
-                      : answered
-                        ? "bg-success/15 text-success hover:bg-success/25"
-                        : "bg-surface-hover text-muted hover:text-foreground"
-                  )}
-                >
-                  {i + 1}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+        {errorMsg && (
+          <p className="mt-4 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-sm text-danger">
+            {errorMsg}
+          </p>
+        )}
 
-const ATTEMPT_DATE_FMT = new Intl.DateTimeFormat("es-CL", {
-  day: "2-digit",
-  month: "short",
-  hour: "2-digit",
-  minute: "2-digit",
-});
-
-function StartScreen({
-  onStart,
-  errorMsg,
-  pastAttempts,
-  resumable,
-}: {
-  onStart: () => void;
-  errorMsg: string | null;
-  pastAttempts: ExamAttemptSummary[];
-  resumable: boolean;
-}) {
-  return (
-    <div className="mx-auto flex max-w-lg flex-col items-center rounded-2xl border border-border bg-surface px-6 py-16 text-center">
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="13" r="8" />
-          <path d="M12 9v4l3 2M9 2h6M12 2v2" />
-        </svg>
-      </div>
-      <h1 className="mt-5 text-xl font-semibold">Modo Examen Focus</h1>
-      <p className="mt-2 max-w-sm text-sm text-muted">
-        Simulacro cronometrado de 2 horas 20 minutos, con todas las preguntas
-        del banco actual. Tu progreso se guarda automáticamente: puedes recargar
-        la página sin perder tus respuestas.
-      </p>
-      <ul className="mt-5 flex flex-col gap-1.5 text-left text-xs text-muted">
-        <li>← → para moverte entre preguntas</li>
-        <li>1-4 (o A-D) para elegir una alternativa</li>
-        <li>Enter para avanzar a la siguiente</li>
-      </ul>
-      {resumable && (
-        <p className="mt-4 rounded-lg border border-accent/40 bg-accent/10 px-3 py-2 text-xs text-foreground">
-          Tienes un simulacro en curso sin finalizar. Al continuar retomas
-          justo donde quedaste.
+        <p className="mt-4 text-center text-xs text-muted">
+          Atajos: teclas A-D para responder, flechas ← → para navegar.
         </p>
-      )}
-      {errorMsg && (
-        <p className="mt-4 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-xs text-danger">
-          {errorMsg}
-        </p>
-      )}
-      <button onClick={onStart} className="btn-glow mt-6 rounded-lg px-5 py-2.5 text-sm font-medium text-accent-foreground">
-        {resumable ? "Continuar simulacro" : "Comenzar simulacro"}
-      </button>
+      </main>
 
-      {pastAttempts.length > 0 && (
-        <div className="mt-10 w-full text-left">
-          <p className="text-xs font-medium text-muted">Simulacros anteriores</p>
-          <div className="mt-2 flex flex-col gap-1.5">
-            {pastAttempts.slice(0, 5).map((a) => {
-              const pct = a.total_questions
-                ? Math.round((a.correct / a.total_questions) * 100)
-                : 0;
-              return (
-                <Link
-                  key={a.attempt_id}
-                  href={`/feedback?attempt=${a.attempt_id}`}
-                  className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2 text-xs transition-colors hover:border-border-strong hover:bg-surface-hover"
-                >
-                  <span className="text-muted" suppressHydrationWarning>
-                    {ATTEMPT_DATE_FMT.format(new Date(a.started_at))}
-                  </span>
-                  <span className="font-medium text-foreground">
-                    {a.correct}/{a.total_questions} · {pct}%
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function ResultScreen({
-  result,
-  weakNodes,
-}: {
-  result: ExamResult;
-  weakNodes: NodeDiagnosis[] | null;
-}) {
-  const pct = result.total_questions
-    ? Math.round((result.correct / result.total_questions) * 100)
-    : 0;
-  return (
-    <div className="mx-auto flex max-w-lg flex-col items-center rounded-2xl border border-border bg-surface px-6 py-16 text-center">
-      <span className="text-5xl font-semibold tracking-tight text-gradient">{pct}%</span>
-      <p className="mt-2 text-sm text-muted">
-        {result.correct} de {result.total_questions} correctas ·{" "}
-        {result.answered} respondidas
-      </p>
-      <p className="mt-1 text-xs text-muted">
-        Tiempo usado: {formatClock(result.elapsed_seconds * 1000)}
-      </p>
-
-      {weakNodes && weakNodes.length > 0 && (
-        <div className="mt-8 w-full text-left">
-          <p className="text-xs font-medium text-muted">Tus nodos más débiles</p>
-          <div className="mt-2 flex flex-col gap-1.5">
-            {weakNodes.map((n) => (
-              <div
-                key={n.skill_node_id}
-                className="flex items-center justify-between rounded-lg border border-border bg-background px-3 py-2 text-xs"
+      {/* ── Confirmación de término ─────────────────────────────────── */}
+      {confirmingSubmit && (
+        <div className="fixed inset-0 z-30 flex items-center justify-center bg-foreground/40 p-4">
+          <div className="w-full max-w-sm rounded-xl border border-border bg-background p-5">
+            <h2 className="text-lg font-bold">¿Terminar el ensayo?</h2>
+            <p className="mt-2 text-sm text-muted">
+              {sinResponder > 0 ? (
+                <>
+                  Te quedan{" "}
+                  <strong className="text-foreground">
+                    {sinResponder} {sinResponder === 1 ? "pregunta" : "preguntas"}
+                  </strong>{" "}
+                  sin responder. En la PAES las respuestas incorrectas no
+                  descuentan, así que conviene contestarlas todas.
+                </>
+              ) : (
+                "Respondiste todas las preguntas. Al terminar verás tu puntaje y las explicaciones."
+              )}
+            </p>
+            <div className="mt-5 flex gap-2">
+              <button
+                type="button"
+                onClick={() => setConfirmingSubmit(false)}
+                disabled={submitting}
+                className="flex-1 rounded-lg border border-border px-4 py-2.5 font-medium hover:bg-surface-hover disabled:opacity-60"
               >
-                <span className="text-foreground">{n.skill_node_name}</span>
-                <span className="text-muted">
-                  {n.correct}/{n.total} · {Math.round(n.accuracy * 100)}%
-                </span>
-              </div>
-            ))}
+                Seguir
+              </button>
+              <button
+                type="button"
+                onClick={doSubmit}
+                disabled={submitting}
+                className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
+              >
+                {submitting ? "Enviando…" : "Terminar"}
+              </button>
+            </div>
           </div>
         </div>
       )}
-
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <Link
-          href={`/feedback?attempt=${result.attempt_id}`}
-          className="btn-glow rounded-lg px-5 py-2.5 text-sm font-medium text-accent-foreground"
-        >
-          Ver diagnóstico completo
-        </Link>
-        <Link
-          href="/arbol"
-          className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium hover:bg-surface-hover"
-        >
-          Ir al Árbol de Habilidades
-        </Link>
-      </div>
     </div>
   );
 }

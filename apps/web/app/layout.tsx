@@ -14,16 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PAES M1 — Prepara tu Competencia Matemática",
+  title: "milpaes — Prepara tu PAES M1",
   description:
-    "Plataforma de preparación para la prueba PAES M1 con árbol de habilidades, modo examen focus y feedback inteligente.",
+    "Ensayos PAES M1 cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`dark ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <SiteHeader />

@@ -8,7 +8,11 @@ importar modelos individuales."""
 
 from paes_api.modules.analytics.models import StudyStreak
 from paes_api.modules.content.models import Alternative, Question
-from paes_api.modules.exam_focus.models import ExamAnswer, ExamAttempt
+from paes_api.modules.exam_focus.models import (
+    ExamAnswer,
+    ExamAttempt,
+    ExamAttemptQuestion,
+)
 from paes_api.modules.skill_tree.models import SkillNode, UserSkillProgress
 from paes_api.modules.users.models import User
 
@@ -16,6 +20,7 @@ __all__ = [
     "Alternative",
     "ExamAnswer",
     "ExamAttempt",
+    "ExamAttemptQuestion",
     "Question",
     "SkillNode",
     "StudyStreak",

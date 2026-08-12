@@ -1,12 +1,15 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
+from paes_api.core.config import get_settings
 from paes_api.core.database import get_db
 from paes_api.core.security import create_access_token
 from paes_api.modules.users import service
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
 from paes_api.modules.users.schemas import (
+    AuthConfigOut,
+    GoogleLoginIn,
     LoginIn,
     RegisterIn,
     TokenOut,
@@ -31,6 +34,25 @@ def login(payload: LoginIn, db: Session = Depends(get_db)) -> TokenOut:
     if user is None:
         raise HTTPException(status_code=401, detail="Correo o contraseña incorrectos")
     return TokenOut(access_token=create_access_token(user.id), user=UserOut.model_validate(user))
+
+
+@router.get("/config", response_model=AuthConfigOut)
+def auth_config() -> AuthConfigOut:
+    """La web consulta esto para saber si mostrar el botón de Google."""
+    return AuthConfigOut(google_enabled=bool(get_settings().google_client_id))
+
+
+@router.post("/google", response_model=TokenOut)
+def login_with_google(payload: GoogleLoginIn, db: Session = Depends(get_db)) -> TokenOut:
+    try:
+        user = service.login_with_google(
+            db, payload.credential, get_settings().google_client_id
+        )
+    except service.GoogleAuthError as exc:
+        raise HTTPException(status_code=401, detail=str(exc)) from exc
+    return TokenOut(
+        access_token=create_access_token(user.id), user=UserOut.model_validate(user)
+    )
 
 
 @router.get("/me", response_model=UserOut)
