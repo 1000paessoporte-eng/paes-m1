@@ -6,7 +6,9 @@ from paes_api.core.config import get_settings
 from paes_api.modules.analytics.router import router as analytics_router
 from paes_api.modules.content.router import router as content_router
 from paes_api.modules.exam_focus.router import router as exam_router
+from paes_api.modules.practice.router import router as practice_router
 from paes_api.modules.skill_tree.router import router as skill_tree_router
+from paes_api.modules.users.router import router as users_router
 
 settings = get_settings()
 
@@ -20,9 +22,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(users_router, prefix="/api")
 app.include_router(skill_tree_router, prefix="/api")
 app.include_router(content_router, prefix="/api")
 app.include_router(exam_router, prefix="/api")
+app.include_router(practice_router, prefix="/api")
 app.include_router(analytics_router, prefix="/api")
 
 

@@ -25,6 +25,7 @@ from paes_api.modules.exam_focus.schemas import (
     ReviewAlternativeOut,
     ReviewQuestionOut,
 )
+from paes_api.modules.skill_tree import service as skill_tree_service
 from paes_api.modules.skill_tree.models import SkillNode
 from paes_api.modules.users.models import User
 
@@ -94,6 +95,7 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
         attempt.finished_at = datetime.now(UTC)
         db.commit()
         db.refresh(attempt)
+        skill_tree_service.apply_attempt_results(db, attempt.user_id, attempt.id)
 
     answers = get_answers_map(db, attempt.id)
     total = len(get_exam_questions(db))

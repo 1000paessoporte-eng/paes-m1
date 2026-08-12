@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } from "@/lib/auth";
 
 const NAV_ITEMS = [
   { href: "/", label: "Inicio" },
@@ -15,7 +16,31 @@ const NAV_ITEMS = [
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
+  const [user, setUser] = useState<AuthUser | null>(null);
+
+  useEffect(() => {
+    // Lectura de cookie (estado externo al DOM) tras montar: evita mismatch
+    // de hidratación, ya que el SSR no tiene acceso a document.cookie.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setUser(getClientUser());
+  }, [pathname]);
+
+  useEffect(() => {
+    // Re-lee la cookie ante login/logout/cambio de nombre disparado desde
+    // otro componente en la MISMA página (sin esto, el header queda
+    // desactualizado hasta el próximo cambio de ruta).
+    return onClientAuthChange(() => setUser(getClientUser()));
+  }, []);
+
+  function handleLogout() {
+    clearClientAuth();
+    setUser(null);
+    setOpen(false);
+    router.push("/login");
+    router.refresh();
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
@@ -53,13 +78,27 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden md:block">
-          <Link
-            href="/login"
-            className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-surface-hover"
-          >
-            Iniciar sesión
-          </Link>
+        <div className="hidden items-center gap-3 md:flex">
+          {user ? (
+            <>
+              <Link href="/perfil" className="text-sm text-muted hover:text-foreground">
+                Hola, <span className="text-foreground">{user.name}</span>
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-surface-hover"
+              >
+                Cerrar sesión
+              </button>
+            </>
+          ) : (
+            <Link
+              href="/login"
+              className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-surface-hover"
+            >
+              Iniciar sesión
+            </Link>
+          )}
         </div>
 
         <button
@@ -108,13 +147,22 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link
-            href="/login"
-            onClick={() => setOpen(false)}
-            className="mt-1 rounded-md border border-border px-3 py-2 text-sm font-medium hover:bg-surface-hover"
-          >
-            Iniciar sesión
-          </Link>
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="mt-1 rounded-md border border-border px-3 py-2 text-left text-sm font-medium hover:bg-surface-hover"
+            >
+              Cerrar sesión ({user.name})
+            </button>
+          ) : (
+            <Link
+              href="/login"
+              onClick={() => setOpen(false)}
+              className="mt-1 rounded-md border border-border px-3 py-2 text-sm font-medium hover:bg-surface-hover"
+            >
+              Iniciar sesión
+            </Link>
+          )}
         </nav>
       )}
     </header>

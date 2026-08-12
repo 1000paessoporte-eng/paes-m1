@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { cn } from "@paes-m1/utils";
-import { getExamReview, listExamAttempts, type ReviewQuestion } from "@/lib/api";
+import { ApiError, getExamReview, listExamAttempts, type ReviewQuestion } from "@/lib/api";
+import { TOKEN_COOKIE } from "@/lib/auth";
 import { ComingSoon } from "@/components/coming-soon";
 
 const DATE_FMT = new Intl.DateTimeFormat("es-CL", {
@@ -9,6 +12,15 @@ const DATE_FMT = new Intl.DateTimeFormat("es-CL", {
   hour: "2-digit",
   minute: "2-digit",
 });
+
+function formatDuration(startedAt: string, finishedAt: string | null | undefined): string {
+  if (!finishedAt) return "—";
+  const ms = new Date(finishedAt).getTime() - new Date(startedAt).getTime();
+  const totalMinutes = Math.max(0, Math.round(ms / 60000));
+  const h = Math.floor(totalMinutes / 60);
+  const m = totalMinutes % 60;
+  return h > 0 ? `${h} h ${m} min` : `${m} min`;
+}
 
 type Filter = "todas" | "incorrectas" | "sin-responder";
 
@@ -22,7 +34,15 @@ export default async function SmartFeedbackPage({
   searchParams,
 }: PageProps<"/feedback">) {
   const sp = await searchParams;
-  const attempts = (await listExamAttempts()).filter((a) => a.status === "submitted");
+  const token = (await cookies()).get(TOKEN_COOKIE)?.value;
+
+  let attempts;
+  try {
+    attempts = (await listExamAttempts(token)).filter((a) => a.status === "submitted");
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 401) redirect("/login");
+    throw err;
+  }
 
   if (attempts.length === 0) {
     return (
@@ -48,8 +68,13 @@ export default async function SmartFeedbackPage({
     ? ((Array.isArray(sp.filter) ? sp.filter[0] : sp.filter) as Filter)
     : "todas";
 
-  const review = await getExamReview(selectedId);
+  const review = await getExamReview(selectedId, token);
   const questions = review.questions.filter((q) => matchesFilter(q, filter));
+  const selectedAttempt = attempts.find((a) => a.attempt_id === selectedId) ?? attempts[0];
+  const selectedPct = selectedAttempt.total_questions
+    ? Math.round((selectedAttempt.correct / selectedAttempt.total_questions) * 100)
+    : 0;
+  const unanswered = selectedAttempt.total_questions - selectedAttempt.answered;
 
   const FILTERS: { key: Filter; label: string }[] = [
     { key: "todas", label: "Todas" },
@@ -59,11 +84,38 @@ export default async function SmartFeedbackPage({
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Smart Feedback</h1>
-      <p className="mt-1 text-sm text-muted">
-        Autopsia del error: diagnóstico por sub-eje y justificación de cada
-        distractor.
-      </p>
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold">Smart Feedback</h1>
+          <p className="mt-1 text-sm text-muted">
+            Autopsia del error: diagnóstico por sub-eje y justificación de cada
+            distractor.
+          </p>
+        </div>
+        <Link
+          href="/examen"
+          className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:bg-surface-hover"
+        >
+          Nuevo simulacro
+        </Link>
+      </div>
+
+      {/* Resumen del intento seleccionado */}
+      <div className="mt-6 flex flex-wrap items-center gap-6 rounded-xl border border-border bg-surface px-5 py-4">
+        <span className="text-3xl font-semibold tracking-tight text-gradient">
+          {selectedPct}%
+        </span>
+        <div className="flex flex-col gap-0.5 text-xs text-muted">
+          <span className="text-sm text-foreground">
+            {selectedAttempt.correct} de {selectedAttempt.total_questions} correctas
+            {unanswered > 0 && ` · ${unanswered} sin responder`}
+          </span>
+          <span>
+            {DATE_FMT.format(new Date(selectedAttempt.started_at))} ·{" "}
+            {formatDuration(selectedAttempt.started_at, selectedAttempt.finished_at)}
+          </span>
+        </div>
+      </div>
 
       {/* Selector de intento */}
       <div className="mt-6 flex flex-wrap gap-2">

@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ApiError, loginUser } from "@/lib/api";
+import { ApiError, registerUser } from "@/lib/api";
 import { setClientAuth } from "@/lib/auth";
 
-export default function LoginPage() {
+export default function RegistroPage() {
   const router = useRouter();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -18,16 +19,18 @@ export default function LoginPage() {
     setLoading(true);
     setError(null);
     try {
-      const { access_token, user } = await loginUser(email, password);
+      const { access_token, user } = await registerUser(email, password, name);
       setClientAuth(access_token, user);
       router.push("/arbol");
       router.refresh();
     } catch (err) {
-      setError(
-        err instanceof ApiError && err.status === 401
-          ? "Correo o contraseña incorrectos."
-          : "No se pudo iniciar sesión. Verifica que la API esté disponible."
-      );
+      if (err instanceof ApiError && err.status === 409) {
+        setError("Ese correo ya está registrado. Intenta iniciar sesión.");
+      } else if (err instanceof ApiError && err.status === 422) {
+        setError("Revisa el correo y usa una contraseña de al menos 8 caracteres.");
+      } else {
+        setError("No se pudo crear la cuenta. Verifica que la API esté disponible.");
+      }
     } finally {
       setLoading(false);
     }
@@ -53,12 +56,24 @@ export default function LoginPage() {
         >
           M1
         </span>
-        <h1 className="mt-4 text-lg font-semibold">Inicia sesión</h1>
+        <h1 className="mt-4 text-lg font-semibold">Crea tu cuenta</h1>
         <p className="mt-1 text-sm text-muted">
-          Continúa tu progreso en el árbol de habilidades.
+          Empieza a desbloquear el árbol de habilidades desde nivel 1.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
+          <label className="flex flex-col gap-1.5 text-left">
+            <span className="text-xs font-medium text-muted">Nombre</span>
+            <input
+              type="text"
+              required
+              autoComplete="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Tu nombre"
+              className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted/60"
+            />
+          </label>
           <label className="flex flex-col gap-1.5 text-left">
             <span className="text-xs font-medium text-muted">Correo</span>
             <input
@@ -76,10 +91,11 @@ export default function LoginPage() {
             <input
               type="password"
               required
-              autoComplete="current-password"
+              minLength={8}
+              autoComplete="new-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
+              placeholder="Mínimo 8 caracteres"
               className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted/60"
             />
           </label>
@@ -95,14 +111,14 @@ export default function LoginPage() {
             disabled={loading}
             className="btn-glow mt-2 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {loading ? "Ingresando…" : "Continuar"}
+            {loading ? "Creando cuenta…" : "Crear cuenta"}
           </button>
         </form>
 
         <p className="mt-4 text-center text-xs text-muted">
-          ¿No tienes cuenta?{" "}
-          <Link href="/registro" className="font-medium text-accent hover:underline">
-            Crear cuenta
+          ¿Ya tienes cuenta?{" "}
+          <Link href="/login" className="font-medium text-accent hover:underline">
+            Inicia sesión
           </Link>
         </p>
       </div>

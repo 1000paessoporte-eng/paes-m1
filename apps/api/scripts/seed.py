@@ -18,10 +18,15 @@ from sqlalchemy import select
 
 import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.metadata
 from paes_api.core.database import SessionLocal, engine
+from paes_api.core.security import hash_password
 from paes_api.modules.content.models import Alternative, Difficulty, Question
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+from paes_api.modules.users.models import User
 from paes_api.seed_data import QUESTIONS, SKILL_NODES
 from paes_api.shared.base import Base
+
+DEMO_EMAIL = "demo@paes-m1.cl"
+DEMO_PASSWORD = "demo1234"
 
 LABELS = ["A", "B", "C", "D"]
 RNG = random.Random(42)
@@ -90,12 +95,34 @@ def seed_questions(db, nodes_by_code: dict[str, SkillNode]) -> None:
     print(f"questions: {created} preguntas nuevas insertadas (de {len(QUESTIONS)} definidas)")
 
 
+def seed_demo_user(db) -> None:
+    existing = db.execute(select(User).where(User.email == DEMO_EMAIL)).scalar_one_or_none()
+    if existing:
+        if not existing.hashed_password:
+            existing.hashed_password = hash_password(DEMO_PASSWORD)
+            db.commit()
+            print(f"demo user: password rellenada ({DEMO_EMAIL} / {DEMO_PASSWORD})")
+        else:
+            print(f"demo user: ya existe ({DEMO_EMAIL})")
+        return
+    db.add(
+        User(
+            email=DEMO_EMAIL,
+            hashed_password=hash_password(DEMO_PASSWORD),
+            name="Estudiante Demo",
+        )
+    )
+    db.commit()
+    print(f"demo user: creado ({DEMO_EMAIL} / {DEMO_PASSWORD})")
+
+
 def main() -> None:
     Base.metadata.create_all(engine)
     db = SessionLocal()
     try:
         nodes = seed_skill_nodes(db)
         seed_questions(db, nodes)
+        seed_demo_user(db)
     finally:
         db.close()
 

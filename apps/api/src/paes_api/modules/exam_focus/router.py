@@ -13,7 +13,8 @@ from paes_api.modules.exam_focus.schemas import (
     ExamStartOut,
     ExamStateOut,
 )
-from paes_api.modules.users.service import get_or_create_demo_user
+from paes_api.modules.users.deps import get_current_user
+from paes_api.modules.users.models import User
 
 router = APIRouter(prefix="/exam", tags=["exam-focus"])
 
@@ -34,22 +35,24 @@ def _to_question_out(questions) -> list[ExamQuestionOut]:
     ]
 
 
-def _get_attempt_or_404(db: Session, attempt_id: int):
+def _get_attempt_or_404(db: Session, attempt_id: int, user: User):
     attempt = service.get_attempt(db, attempt_id)
-    if attempt is None:
+    if attempt is None or attempt.user_id != user.id:
         raise HTTPException(status_code=404, detail="Intento de examen no encontrado")
     return attempt
 
 
 @router.get("", response_model=list[ExamAttemptSummary])
-def list_exam_attempts(db: Session = Depends(get_db)) -> list[ExamAttemptSummary]:
-    user = get_or_create_demo_user(db)
+def list_exam_attempts(
+    db: Session = Depends(get_db), user: User = Depends(get_current_user)
+) -> list[ExamAttemptSummary]:
     return service.list_attempts(db, user)
 
 
 @router.post("/start", response_model=ExamStartOut)
-def start_exam(db: Session = Depends(get_db)) -> ExamStartOut:
-    user = get_or_create_demo_user(db)
+def start_exam(
+    db: Session = Depends(get_db), user: User = Depends(get_current_user)
+) -> ExamStartOut:
     attempt = service.start_attempt(db, user)
     questions = service.get_exam_questions(db)
     return ExamStartOut(
@@ -61,8 +64,10 @@ def start_exam(db: Session = Depends(get_db)) -> ExamStartOut:
 
 
 @router.get("/{attempt_id}", response_model=ExamStateOut)
-def get_exam_state(attempt_id: int, db: Session = Depends(get_db)) -> ExamStateOut:
-    attempt = _get_attempt_or_404(db, attempt_id)
+def get_exam_state(
+    attempt_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)
+) -> ExamStateOut:
+    attempt = _get_attempt_or_404(db, attempt_id, user)
     questions = service.get_exam_questions(db)
     answers = service.get_answers_map(db, attempt_id)
     return ExamStateOut(
@@ -77,9 +82,12 @@ def get_exam_state(attempt_id: int, db: Session = Depends(get_db)) -> ExamStateO
 
 @router.post("/{attempt_id}/answer")
 def answer_question(
-    attempt_id: int, payload: ExamAnswerIn, db: Session = Depends(get_db)
+    attempt_id: int,
+    payload: ExamAnswerIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ) -> dict[str, bool]:
-    attempt = _get_attempt_or_404(db, attempt_id)
+    attempt = _get_attempt_or_404(db, attempt_id, user)
     if attempt.status != AttemptStatus.IN_PROGRESS:
         raise HTTPException(status_code=409, detail="El intento ya fue finalizado")
     service.upsert_answer(db, attempt_id, payload)
@@ -87,14 +95,18 @@ def answer_question(
 
 
 @router.post("/{attempt_id}/submit", response_model=ExamResultOut)
-def submit_exam(attempt_id: int, db: Session = Depends(get_db)) -> ExamResultOut:
-    attempt = _get_attempt_or_404(db, attempt_id)
+def submit_exam(
+    attempt_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)
+) -> ExamResultOut:
+    attempt = _get_attempt_or_404(db, attempt_id, user)
     return service.submit_attempt(db, attempt)
 
 
 @router.get("/{attempt_id}/review", response_model=ExamReviewOut)
-def get_exam_review(attempt_id: int, db: Session = Depends(get_db)) -> ExamReviewOut:
-    attempt = _get_attempt_or_404(db, attempt_id)
+def get_exam_review(
+    attempt_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)
+) -> ExamReviewOut:
+    attempt = _get_attempt_or_404(db, attempt_id, user)
     if attempt.status != AttemptStatus.SUBMITTED:
         raise HTTPException(
             status_code=409, detail="La revisión solo está disponible tras finalizar el examen"

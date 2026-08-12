@@ -28,3 +28,4 @@ __pycache__/
 *.log
 npm-debug.log*
 pnpm-debug.log*
+.gstack/

@@ -1,11 +1,22 @@
-import { getAnalyticsSummary } from "@/lib/api";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { ApiError, getAnalyticsSummary } from "@/lib/api";
+import { TOKEN_COOKIE } from "@/lib/auth";
 import { StatTile } from "@/components/analytics/stat-tile";
 import { TimeInvestedChart } from "@/components/analytics/time-invested-chart";
 import { AccuracyChart } from "@/components/analytics/accuracy-chart";
 import { ComingSoon } from "@/components/coming-soon";
 
 export default async function DashboardAnaliticoPage() {
-  const summary = await getAnalyticsSummary();
+  const token = (await cookies()).get(TOKEN_COOKIE)?.value;
+
+  let summary;
+  try {
+    summary = await getAnalyticsSummary(token);
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 401) redirect("/login");
+    throw err;
+  }
 
   if (summary.total_questions_answered === 0) {
     return (

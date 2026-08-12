@@ -4,6 +4,58 @@
  */
 
 export interface paths {
+    "/api/auth/register": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Register */
+        post: operations["register_api_auth_register_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/auth/login": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Login */
+        post: operations["login_api_auth_login_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/auth/me": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Me */
+        get: operations["me_api_auth_me_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /** Update Me */
+        patch: operations["update_me_api_auth_me_patch"];
+        trace?: never;
+    };
     "/api/skill-tree": {
         parameters: {
             query?: never;
@@ -13,6 +65,23 @@ export interface paths {
         };
         /** List Skill Nodes */
         get: operations["list_skill_nodes_api_skill_tree_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/skill-tree/recommended": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Recommended Node */
+        get: operations["get_recommended_node_api_skill_tree_recommended_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -45,7 +114,11 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** List Questions */
+        /**
+         * List Questions
+         * @description Nunca expone is_correct ni distractor_justification (ver
+         *     QuestionSafeOut) — misma regla de integridad que el Modo Examen.
+         */
         get: operations["list_questions_api_questions_get"];
         put?: never;
         post?: never;
@@ -157,6 +230,40 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/practice/{code}/questions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Practice Questions */
+        get: operations["get_practice_questions_api_practice__code__questions_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/practice/{code}/answer": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Answer Practice Question */
+        post: operations["answer_practice_question_api_practice__code__answer_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/analytics/summary": {
         parameters: {
             query?: never;
@@ -195,18 +302,18 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
-        /** AlternativeOut */
-        AlternativeOut: {
+        /**
+         * AlternativeSafeOut
+         * @description Alternativa sin is_correct ni distractor_justification — para
+         *     listados públicos/autenticados que no deben revelar la respuesta.
+         */
+        AlternativeSafeOut: {
             /** Id */
             id: number;
             /** Label */
             label: string;
             /** Text */
             text: string;
-            /** Is Correct */
-            is_correct: boolean;
-            /** Distractor Justification */
-            distractor_justification?: string | null;
         };
         /** AnalyticsSummaryOut */
         AnalyticsSummaryOut: {
@@ -380,6 +487,16 @@ export interface components {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
         };
+        /** LoginIn */
+        LoginIn: {
+            /**
+             * Email
+             * Format: email
+             */
+            email: string;
+            /** Password */
+            password: string;
+        };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
             /** Skill Node Id */
@@ -397,8 +514,68 @@ export interface components {
             /** Accuracy */
             accuracy: number;
         };
-        /** QuestionOut */
-        QuestionOut: {
+        /** PracticeAlternativeOut */
+        PracticeAlternativeOut: {
+            /** Id */
+            id: number;
+            /** Label */
+            label: string;
+            /** Text */
+            text: string;
+        };
+        /** PracticeAnswerIn */
+        PracticeAnswerIn: {
+            /** Question Id */
+            question_id: number;
+            /** Selected Alternative Id */
+            selected_alternative_id: number;
+        };
+        /** PracticeAnswerOut */
+        PracticeAnswerOut: {
+            /** Is Correct */
+            is_correct: boolean;
+            /** Correct Alternative Id */
+            correct_alternative_id: number;
+            /** Distractor Justification */
+            distractor_justification?: string | null;
+            /** Node Accuracy */
+            node_accuracy: number;
+            /** Node Attempts */
+            node_attempts: number;
+            /**
+             * Newly Unlocked
+             * @default []
+             */
+            newly_unlocked: string[];
+        };
+        /** PracticeQuestionOut */
+        PracticeQuestionOut: {
+            /** Id */
+            id: number;
+            difficulty: components["schemas"]["Difficulty"];
+            /** Stem */
+            stem: string;
+            /** Image Url */
+            image_url?: string | null;
+            /** Alternatives */
+            alternatives: components["schemas"]["PracticeAlternativeOut"][];
+        };
+        /** PracticeStartOut */
+        PracticeStartOut: {
+            /** Node Code */
+            node_code: string;
+            /** Node Name */
+            node_name: string;
+            /** Questions */
+            questions: components["schemas"]["PracticeQuestionOut"][];
+        };
+        /**
+         * ProgressStatus
+         * @enum {string}
+         */
+        ProgressStatus: "locked" | "unlocked" | "mastered";
+        /** QuestionSafeOut */
+        QuestionSafeOut: {
             /** Id */
             id: number;
             /** Skill Node Id */
@@ -409,7 +586,19 @@ export interface components {
             /** Image Url */
             image_url?: string | null;
             /** Alternatives */
-            alternatives: components["schemas"]["AlternativeOut"][];
+            alternatives: components["schemas"]["AlternativeSafeOut"][];
+        };
+        /** RegisterIn */
+        RegisterIn: {
+            /**
+             * Email
+             * Format: email
+             */
+            email: string;
+            /** Password */
+            password: string;
+            /** Name */
+            name: string;
         };
         /**
          * ReviewAlternativeOut
@@ -455,8 +644,8 @@ export interface components {
          * @enum {string}
          */
         SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad";
-        /** SkillNodeOut */
-        SkillNodeOut: {
+        /** SkillNodeProgressOut */
+        SkillNodeProgressOut: {
             /** Id */
             id: number;
             /** Code */
@@ -475,6 +664,45 @@ export interface components {
              * @default []
              */
             prerequisite_codes: string[];
+            status: components["schemas"]["ProgressStatus"];
+            /** Accuracy */
+            accuracy: number;
+            /** Attempts */
+            attempts: number;
+        };
+        /** TokenOut */
+        TokenOut: {
+            /** Access Token */
+            access_token: string;
+            /**
+             * Token Type
+             * @default bearer
+             */
+            token_type: string;
+            user: components["schemas"]["UserOut"];
+        };
+        /** UpdateMeIn */
+        UpdateMeIn: {
+            /** Name */
+            name?: string | null;
+            /** Current Password */
+            current_password?: string | null;
+            /** New Password */
+            new_password?: string | null;
+        };
+        /** UserOut */
+        UserOut: {
+            /** Id */
+            id: number;
+            /** Email */
+            email: string;
+            /** Name */
+            name: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
         };
         /** ValidationError */
         ValidationError: {
@@ -498,6 +726,125 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    register_api_auth_register_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["RegisterIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TokenOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    login_api_auth_login_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["LoginIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TokenOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    me_api_auth_me_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["UserOut"];
+                };
+            };
+        };
+    };
+    update_me_api_auth_me_patch: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdateMeIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["UserOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     list_skill_nodes_api_skill_tree_get: {
         parameters: {
             query?: never;
@@ -513,7 +860,27 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["SkillNodeOut"][];
+                    "application/json": components["schemas"]["SkillNodeProgressOut"][];
+                };
+            };
+        };
+    };
+    get_recommended_node_api_skill_tree_recommended_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SkillNodeProgressOut"] | null;
                 };
             };
         };
@@ -535,7 +902,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["SkillNodeOut"];
+                    "application/json": components["schemas"]["SkillNodeProgressOut"];
                 };
             };
             /** @description Validation Error */
@@ -566,7 +933,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["QuestionOut"][];
+                    "application/json": components["schemas"]["QuestionSafeOut"][];
                 };
             };
             /** @description Validation Error */
@@ -737,6 +1104,72 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ExamReviewOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_practice_questions_api_practice__code__questions_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                code: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PracticeStartOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    answer_practice_question_api_practice__code__answer_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                code: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PracticeAnswerIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PracticeAnswerOut"];
                 };
             };
             /** @description Validation Error */

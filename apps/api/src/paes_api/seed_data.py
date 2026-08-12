@@ -215,6 +215,16 @@ QUESTIONS = [
         ],
     ),
     _q(
+        "alg_cuadratica", "facil",
+        "Resuelve: x² − 16 = 0",
+        "x = 4 y x = −4",
+        [
+            ("x = 8", "Dividió 16 por 2 en lugar de calcular su raíz cuadrada."),
+            ("x = 4", "Solo consideró la raíz positiva, olvidando que x = −4 también es solución."),
+            ("x = 256", "Elevó 16 al cuadrado en lugar de calcular su raíz cuadrada."),
+        ],
+    ),
+    _q(
         "alg_cuadratica", "medio",
         "Resuelve: x² − 5x + 6 = 0",
         "x = 2 y x = 3",
@@ -222,6 +232,36 @@ QUESTIONS = [
             ("x = −2 y x = −3", "Cambió el signo de las soluciones al leer la factorización (x−2)(x−3), olvidando que las raíces son los valores que anulan cada factor."),
             ("x = 1 y x = 6", "Buscó dos números que sumen 6 y multipliquen −5, invirtiendo el rol de los coeficientes en la factorización."),
             ("x = 5 y x = 6", "Confundió el coeficiente de x (−5) y el término libre (6) con las propias soluciones de la ecuación."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Resuelve: 2x² + 3x − 2 = 0",
+        "x = 1/2 y x = −2",
+        [
+            ("x = 1 y x = −2", "Factorizó ignorando que el coeficiente de x² es 2, usando (x−1)(x+2) en lugar de (2x−1)(x+2)."),
+            ("x = 1/2 y x = 2", "Calculó correctamente una raíz pero cambió el signo de la segunda."),
+            ("x = −1/2 y x = 2", "Invirtió el signo de ambas raíces respecto a la solución real."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿Cuál es el eje de simetría de la parábola y = x² − 6x + 8?",
+        "x = 3",
+        [
+            ("x = −3", "Usó el signo equivocado de b al calcular x=−b/2a (usó b en lugar de −b)."),
+            ("x = 6", "Usó directamente el valor de b como eje de simetría, sin dividir por 2a."),
+            ("x = 8", "Confundió el término independiente (8) con el eje de simetría de la parábola."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 2) y (4, 11)?",
+        "3",
+        [
+            ("1/3", "Invirtió la fórmula de la pendiente, calculando Δx/Δy en lugar de Δy/Δx."),
+            ("9", "Calculó solo la diferencia de las coordenadas y (11−2) sin dividir por la diferencia de las coordenadas x."),
+            ("−3", "Calculó el valor correcto de la pendiente pero con el signo invertido, al restar las coordenadas en orden inconsistente."),
         ],
     ),
     _q(
