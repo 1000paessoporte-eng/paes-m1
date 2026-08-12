@@ -9,7 +9,10 @@ class Settings(BaseSettings):
     environment: str = "development"
     secret_key: str = "change-me"
     database_url: str = "postgresql+psycopg://paes:paes@localhost:5432/paes_m1"
-    cors_origins: list[str] = ["http://localhost:3000"]
+    cors_origins: list[str] = [
+        "http://localhost:3000",
+        "http://192.168.1.11:3000",
+    ]
 
 
 @lru_cache
