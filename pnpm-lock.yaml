@@ -19,9 +19,6 @@ importers:
       '@paes-m1/types':
         specifier: workspace:*
         version: link:../../packages/types
-      '@paes-m1/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       '@paes-m1/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -69,22 +66,11 @@ importers:
         specifier: ^5
         version: 5.9.3
 
-  packages/config: {}
-
   packages/types:
     devDependencies:
       openapi-typescript:
         specifier: ^7.5.0
         version: 7.13.0(typescript@5.9.3)
-
-  packages/ui:
-    dependencies:
-      '@paes-m1/utils':
-        specifier: workspace:*
-        version: link:../utils
-      react:
-        specifier: ^19
-        version: 19.2.8
 
   packages/utils:
     dependencies:

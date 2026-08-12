@@ -94,11 +94,11 @@ def update_user(db: Session, user: User, payload: UpdateMeIn) -> User:
     if payload.new_password is not None:
         # Quien entró con Google todavía no tiene contraseña: puede definir una
         # sin dar la anterior, ya que su identidad ya está probada por el JWT.
-        if user.hashed_password is not None:
-            if payload.current_password is None or not verify_password(
-                payload.current_password, user.hashed_password
-            ):
-                raise WrongPasswordError
+        if user.hashed_password is not None and (
+            payload.current_password is None
+            or not verify_password(payload.current_password, user.hashed_password)
+        ):
+            raise WrongPasswordError
         user.hashed_password = hash_password(payload.new_password)
 
     if payload.name is not None:

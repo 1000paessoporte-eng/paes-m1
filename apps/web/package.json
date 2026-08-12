@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@paes-m1/types": "workspace:*",
-    "@paes-m1/ui": "workspace:*",
     "@paes-m1/utils": "workspace:*",
     "framer-motion": "^12.4.0",
     "katex": "^0.18.4",

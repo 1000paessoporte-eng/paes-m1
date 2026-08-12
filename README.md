@@ -55,10 +55,8 @@ Monorepo **Turborepo + pnpm workspaces**.
 ```
 apps/web        Next.js (App Router, TS) — frontend
 apps/api        FastAPI (Python, uv)     — backend
-packages/ui      Design system compartido
 packages/types    Tipos TS generados desde el OpenAPI schema de la API
-packages/config   eslint/tsconfig/tailwind compartidos
-packages/utils    Utilidades TS compartidas
+packages/utils    Utilidades TS compartidas (cn)
 ```
 
 **Por qué FastAPI y no Node**: el backend necesita afinidad con
