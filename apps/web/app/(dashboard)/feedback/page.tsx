@@ -1,13 +1,17 @@
+import { ComingSoon } from "@/components/coming-soon";
+
 export default function SmartFeedbackPage() {
   return (
-    <div>
-      <h1 className="text-2xl font-semibold">Smart Feedback</h1>
-      <p className="mt-1 text-sm text-muted">
-        Autopsia del error: diagnóstico por sub-eje y justificación de cada
-        distractor.
-      </p>
-      {/* TODO: vista de revisión post-examen conectada a
-          GET /api/attempts/{{id}}/review */}
-    </div>
+    <ComingSoon
+      title="Smart Feedback"
+      description="Autopsia del error por sub-eje temático: cada distractor trae la justificación exacta del error conceptual, con rutas de nivelación a tus nodos más débiles."
+      icon={
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="9" />
+          <circle cx="12" cy="12" r="5" />
+          <circle cx="12" cy="12" r="1" fill="currentColor" />
+        </svg>
+      }
+    />
   );
 }

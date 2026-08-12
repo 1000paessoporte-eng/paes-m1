@@ -20,8 +20,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-sm font-semibold tracking-tight">
-          PAES M1
+        <Link href="/" className="flex items-center gap-2">
+          <span
+            className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-white"
+            style={{
+              background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
+            }}
+          >
+            M1
+          </span>
+          <span className="text-sm font-semibold tracking-tight">PAES M1</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -35,7 +43,7 @@ export function SiteHeader() {
                 className={cn(
                   "rounded-md px-3 py-1.5 text-sm transition-colors",
                   active
-                    ? "bg-surface-hover text-foreground"
+                    ? "bg-accent/10 text-foreground"
                     : "text-muted hover:bg-surface-hover hover:text-foreground"
                 )}
               >

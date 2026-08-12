@@ -4,9 +4,9 @@ import { cn } from "@paes-m1/utils";
 type Variant = "primary" | "secondary" | "ghost";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  primary: "bg-accent text-accent-foreground hover:opacity-90",
+  primary: "btn-glow text-accent-foreground",
   secondary:
-    "border border-border text-foreground hover:bg-surface-hover",
+    "border border-border text-foreground hover:bg-surface-hover hover:border-border-strong",
   ghost: "text-muted hover:bg-surface-hover hover:text-foreground",
 };
 
@@ -22,7 +22,7 @@ export function Button({
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50",
+        "inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50",
         VARIANT_CLASSES[variant],
         className
       )}
