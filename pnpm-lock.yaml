@@ -16,6 +16,15 @@ importers:
 
   apps/web:
     dependencies:
+      '@paes-m1/types':
+        specifier: workspace:*
+        version: link:../../packages/types
+      '@paes-m1/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@paes-m1/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       framer-motion:
         specifier: ^12.4.0
         version: 12.43.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
