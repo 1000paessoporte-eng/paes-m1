@@ -55,6 +55,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** List Exam Attempts */
+        get: operations["list_exam_attempts_api_exam_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/exam/start": {
         parameters: {
             query?: never;
@@ -123,6 +140,40 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam/{attempt_id}/review": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Exam Review */
+        get: operations["get_exam_review_api_exam__attempt_id__review_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/analytics/summary": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Summary */
+        get: operations["get_summary_api_analytics_summary_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -157,11 +208,42 @@ export interface components {
             /** Distractor Justification */
             distractor_justification?: string | null;
         };
+        /** AnalyticsSummaryOut */
+        AnalyticsSummaryOut: {
+            /** Current Streak Days */
+            current_streak_days: number;
+            /** Total Questions Answered */
+            total_questions_answered: number;
+            /** Total Correct */
+            total_correct: number;
+            /** Overall Accuracy */
+            overall_accuracy: number | null;
+            /** Total Minutes Practiced */
+            total_minutes_practiced: number;
+            /** Daily */
+            daily: components["schemas"]["DailyStat"][];
+        };
         /**
          * AttemptStatus
          * @enum {string}
          */
         AttemptStatus: "in_progress" | "submitted" | "abandoned";
+        /** DailyStat */
+        DailyStat: {
+            /**
+             * Date
+             * Format: date
+             */
+            date: string;
+            /** Questions Answered */
+            questions_answered: number;
+            /** Correct */
+            correct: number;
+            /** Accuracy */
+            accuracy: number | null;
+            /** Minutes Practiced */
+            minutes_practiced: number;
+        };
         /**
          * Difficulty
          * @enum {string}
@@ -203,6 +285,25 @@ export interface components {
              */
             time_spent_ms: number;
         };
+        /** ExamAttemptSummary */
+        ExamAttemptSummary: {
+            /** Attempt Id */
+            attempt_id: number;
+            /**
+             * Started At
+             * Format: date-time
+             */
+            started_at: string;
+            /** Finished At */
+            finished_at?: string | null;
+            status: components["schemas"]["AttemptStatus"];
+            /** Total Questions */
+            total_questions: number;
+            /** Answered */
+            answered: number;
+            /** Correct */
+            correct: number;
+        };
         /** ExamQuestionOut */
         ExamQuestionOut: {
             /** Id */
@@ -230,6 +331,16 @@ export interface components {
             correct: number;
             /** Elapsed Seconds */
             elapsed_seconds: number;
+        };
+        /** ExamReviewOut */
+        ExamReviewOut: {
+            /** Attempt Id */
+            attempt_id: number;
+            status: components["schemas"]["AttemptStatus"];
+            /** Questions */
+            questions: components["schemas"]["ReviewQuestionOut"][];
+            /** Node Diagnosis */
+            node_diagnosis: components["schemas"]["NodeDiagnosisOut"][];
         };
         /** ExamStartOut */
         ExamStartOut: {
@@ -269,6 +380,23 @@ export interface components {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
         };
+        /** NodeDiagnosisOut */
+        NodeDiagnosisOut: {
+            /** Skill Node Id */
+            skill_node_id: number;
+            /** Skill Node Code */
+            skill_node_code: string;
+            /** Skill Node Name */
+            skill_node_name: string;
+            /** Axis */
+            axis: string;
+            /** Total */
+            total: number;
+            /** Correct */
+            correct: number;
+            /** Accuracy */
+            accuracy: number;
+        };
         /** QuestionOut */
         QuestionOut: {
             /** Id */
@@ -282,6 +410,45 @@ export interface components {
             image_url?: string | null;
             /** Alternatives */
             alternatives: components["schemas"]["AlternativeOut"][];
+        };
+        /**
+         * ReviewAlternativeOut
+         * @description Alternativa en la revisión post-examen: SÍ incluye is_correct y
+         *     distractor_justification — la autopsia del error.
+         */
+        ReviewAlternativeOut: {
+            /** Id */
+            id: number;
+            /** Label */
+            label: string;
+            /** Text */
+            text: string;
+            /** Is Correct */
+            is_correct: boolean;
+            /** Distractor Justification */
+            distractor_justification?: string | null;
+            /** Selected */
+            selected: boolean;
+        };
+        /** ReviewQuestionOut */
+        ReviewQuestionOut: {
+            /** Id */
+            id: number;
+            /** Stem */
+            stem: string;
+            difficulty: components["schemas"]["Difficulty"];
+            /** Skill Node Id */
+            skill_node_id: number;
+            /** Skill Node Code */
+            skill_node_code: string;
+            /** Skill Node Name */
+            skill_node_name: string;
+            /** Time Spent Ms */
+            time_spent_ms: number;
+            /** Answered Correctly */
+            answered_correctly: boolean | null;
+            /** Alternatives */
+            alternatives: components["schemas"]["ReviewAlternativeOut"][];
         };
         /**
          * SkillAxis
@@ -413,6 +580,26 @@ export interface operations {
             };
         };
     };
+    list_exam_attempts_api_exam_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamAttemptSummary"][];
+                };
+            };
+        };
+    };
     start_exam_api_exam_start_post: {
         parameters: {
             query?: never;
@@ -528,6 +715,57 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_exam_review_api_exam__attempt_id__review_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExamReviewOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_summary_api_analytics_summary_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AnalyticsSummaryOut"];
                 };
             };
         };

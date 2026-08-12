@@ -25,6 +25,18 @@ export type ExamQuestion = ExamState["questions"][number];
 export type ExamResult =
   paths["/api/exam/{attempt_id}/submit"]["post"]["responses"][200]["content"]["application/json"];
 
+export type ExamAttemptSummary =
+  paths["/api/exam"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export type ExamReview =
+  paths["/api/exam/{attempt_id}/review"]["get"]["responses"][200]["content"]["application/json"];
+
+export type ReviewQuestion = ExamReview["questions"][number];
+export type NodeDiagnosis = ExamReview["node_diagnosis"][number];
+
+export type AnalyticsSummary =
+  paths["/api/analytics/summary"]["get"]["responses"][200]["content"]["application/json"];
+
 class ApiError extends Error {
   constructor(
     public status: number,
@@ -82,4 +94,16 @@ export function answerExamQuestion(
 
 export function submitExam(attemptId: number): Promise<ExamResult> {
   return apiFetch<ExamResult>(`/api/exam/${attemptId}/submit`, { method: "POST" });
+}
+
+export function listExamAttempts(): Promise<ExamAttemptSummary[]> {
+  return apiFetch<ExamAttemptSummary[]>("/api/exam");
+}
+
+export function getExamReview(attemptId: number): Promise<ExamReview> {
+  return apiFetch<ExamReview>(`/api/exam/${attemptId}/review`);
+}
+
+export function getAnalyticsSummary(): Promise<AnalyticsSummary> {
+  return apiFetch<AnalyticsSummary>("/api/analytics/summary");
 }

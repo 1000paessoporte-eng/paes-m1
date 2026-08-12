@@ -1,15 +1,86 @@
+import { getAnalyticsSummary } from "@/lib/api";
+import { StatTile } from "@/components/analytics/stat-tile";
+import { TimeInvestedChart } from "@/components/analytics/time-invested-chart";
+import { AccuracyChart } from "@/components/analytics/accuracy-chart";
 import { ComingSoon } from "@/components/coming-soon";
 
-export default function DashboardAnaliticoPage() {
+export default async function DashboardAnaliticoPage() {
+  const summary = await getAnalyticsSummary();
+
+  if (summary.total_questions_answered === 0) {
+    return (
+      <ComingSoon
+        title="Dashboard Analítico"
+        description="Aún no hay datos de práctica. Responde algunas preguntas en el Modo Examen para ver aquí tu progreso."
+        icon={
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 20V10M12 20V4M20 20v-7" />
+          </svg>
+        }
+      />
+    );
+  }
+
+  const accuracyPct =
+    summary.overall_accuracy != null ? `${Math.round(summary.overall_accuracy * 100)}%` : "—";
+
   return (
-    <ComingSoon
-      title="Dashboard Analítico"
-      description="Tiempo invertido vs. tasa de acierto, y rachas de práctica diaria, para saber exactamente dónde enfocar tu próxima sesión de estudio."
-      icon={
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 20V10M12 20V4M20 20v-7" />
-        </svg>
-      }
-    />
+    <div>
+      <h1 className="text-2xl font-semibold">Analítica</h1>
+      <p className="mt-1 text-sm text-muted">
+        Tiempo invertido vs. tasa de acierto, y rachas de práctica diaria.
+      </p>
+
+      <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <StatTile
+          label="Racha actual"
+          value={`${summary.current_streak_days} ${summary.current_streak_days === 1 ? "día" : "días"}`}
+          icon={
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-1-.5-2-1-2.5.5 3 3 4 3 6.5a5 5 0 0 1-10 0c0-5.5 5-6 5-13Z" />
+            </svg>
+          }
+        />
+        <StatTile
+          label="Precisión global"
+          value={accuracyPct}
+          icon={
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="12" cy="12" r="1" fill="currentColor" />
+            </svg>
+          }
+        />
+        <StatTile
+          label="Preguntas respondidas"
+          value={String(summary.total_questions_answered)}
+          icon={
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+            </svg>
+          }
+        />
+        <StatTile
+          label="Tiempo total practicado"
+          value={`${Math.round(summary.total_minutes_practiced)} min`}
+          icon={
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="13" r="8" />
+              <path d="M12 9v4l3 2M9 2h6M12 2v2" />
+            </svg>
+          }
+        />
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 gap-4 xl:grid-cols-2">
+        <TimeInvestedChart
+          data={summary.daily.map((d) => ({ date: d.date, minutes: d.minutes_practiced }))}
+        />
+        <AccuracyChart
+          data={summary.daily.map((d) => ({ date: d.date, accuracy: d.accuracy }))}
+        />
+      </div>
+    </div>
   );
 }

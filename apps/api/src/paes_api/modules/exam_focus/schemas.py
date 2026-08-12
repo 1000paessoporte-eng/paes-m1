@@ -55,3 +55,54 @@ class ExamResultOut(BaseModel):
     answered: int
     correct: int
     elapsed_seconds: int
+
+
+class ExamAttemptSummary(BaseModel):
+    attempt_id: int
+    started_at: datetime
+    finished_at: datetime | None = None
+    status: AttemptStatus
+    total_questions: int
+    answered: int
+    correct: int
+
+
+class ReviewAlternativeOut(BaseModel):
+    """Alternativa en la revisión post-examen: SÍ incluye is_correct y
+    distractor_justification — la autopsia del error."""
+
+    id: int
+    label: str
+    text: str
+    is_correct: bool
+    distractor_justification: str | None = None
+    selected: bool
+
+
+class ReviewQuestionOut(BaseModel):
+    id: int
+    stem: str
+    difficulty: Difficulty
+    skill_node_id: int
+    skill_node_code: str
+    skill_node_name: str
+    time_spent_ms: int
+    answered_correctly: bool | None
+    alternatives: list[ReviewAlternativeOut]
+
+
+class NodeDiagnosisOut(BaseModel):
+    skill_node_id: int
+    skill_node_code: str
+    skill_node_name: str
+    axis: str
+    total: int
+    correct: int
+    accuracy: float
+
+
+class ExamReviewOut(BaseModel):
+    attempt_id: int
+    status: AttemptStatus
+    questions: list[ReviewQuestionOut]
+    node_diagnosis: list[NodeDiagnosisOut]

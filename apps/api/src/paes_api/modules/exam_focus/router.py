@@ -6,8 +6,10 @@ from paes_api.modules.exam_focus import service
 from paes_api.modules.exam_focus.models import AttemptStatus
 from paes_api.modules.exam_focus.schemas import (
     ExamAnswerIn,
+    ExamAttemptSummary,
     ExamQuestionOut,
     ExamResultOut,
+    ExamReviewOut,
     ExamStartOut,
     ExamStateOut,
 )
@@ -37,6 +39,12 @@ def _get_attempt_or_404(db: Session, attempt_id: int):
     if attempt is None:
         raise HTTPException(status_code=404, detail="Intento de examen no encontrado")
     return attempt
+
+
+@router.get("", response_model=list[ExamAttemptSummary])
+def list_exam_attempts(db: Session = Depends(get_db)) -> list[ExamAttemptSummary]:
+    user = get_or_create_demo_user(db)
+    return service.list_attempts(db, user)
 
 
 @router.post("/start", response_model=ExamStartOut)
@@ -82,3 +90,13 @@ def answer_question(
 def submit_exam(attempt_id: int, db: Session = Depends(get_db)) -> ExamResultOut:
     attempt = _get_attempt_or_404(db, attempt_id)
     return service.submit_attempt(db, attempt)
+
+
+@router.get("/{attempt_id}/review", response_model=ExamReviewOut)
+def get_exam_review(attempt_id: int, db: Session = Depends(get_db)) -> ExamReviewOut:
+    attempt = _get_attempt_or_404(db, attempt_id)
+    if attempt.status != AttemptStatus.SUBMITTED:
+        raise HTTPException(
+            status_code=409, detail="La revisión solo está disponible tras finalizar el examen"
+        )
+    return service.get_review(db, attempt)
