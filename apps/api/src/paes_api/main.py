@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.metadata
 from paes_api.core.config import get_settings
 from paes_api.modules.content.router import router as content_router
 from paes_api.modules.skill_tree.router import router as skill_tree_router

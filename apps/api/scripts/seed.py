@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from sqlalchemy import select
 
+import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.metadata
 from paes_api.core.database import SessionLocal, engine
 from paes_api.modules.content.models import Alternative, Difficulty, Question
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode

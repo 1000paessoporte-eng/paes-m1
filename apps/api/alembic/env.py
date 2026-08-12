@@ -5,16 +5,9 @@ from sqlalchemy import pool
 
 from alembic import context
 
+import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.metadata
 from paes_api.core.config import get_settings
 from paes_api.shared.base import Base
-
-# Importar todos los modelos para que queden registrados en Base.metadata
-# antes de que Alembic compare el estado de la DB (autogenerate).
-from paes_api.modules.users.models import User  # noqa: F401
-from paes_api.modules.skill_tree.models import SkillNode, UserSkillProgress  # noqa: F401
-from paes_api.modules.content.models import Question, Alternative  # noqa: F401
-from paes_api.modules.exam_focus.models import ExamAttempt, ExamAnswer  # noqa: F401
-from paes_api.modules.analytics.models import StudyStreak  # noqa: F401
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
