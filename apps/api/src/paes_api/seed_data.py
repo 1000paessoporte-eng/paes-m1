@@ -1,6 +1,6 @@
 """Datos semilla: Árbol de Habilidades + banco de preguntas PAES M1.
 
-Dos lotes (36 + 30 = 66 preguntas, repartidas por eje). Cada pregunta trae
+Tres lotes (36 + 30 + 45 = 111 preguntas, repartidas por eje). Cada pregunta trae
 `explanation`: el desarrollo paso a paso de por qué la respuesta correcta
 lo es, que es lo que ve el estudiante al revisar su ensayo. Las
 alternativas incorrectas conservan `justification` (el error conceptual
@@ -1319,6 +1319,732 @@ QUESTIONS = [
             ("1/2", "Contó solo los números pares (3 de 6) sin sumar el caso adicional del 5."),
             ("5/6", "Contó erróneamente 5 casos favorables, incluyendo por error algún número que no cumple ninguna de las dos condiciones."),
             ("1", "Asumió que el evento cubre todos los resultados posibles del dado."),
+        ],
+    ),
+    # ---------- AMPLIACIÓN (segundo lote, 45 preguntas) ----------
+    # ---------- NÚMEROS ----------
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 2/5 × 3/7?",
+        "6/35",
+        "Para multiplicar fracciones se multiplican los numeradores entre sí y los "
+        "denominadores entre sí, sin necesidad de buscar un denominador común.\n\n"
+        "1) Multiplica los numeradores: 2 × 3 = 6.\n"
+        "2) Multiplica los denominadores: 5 × 7 = 35.\n"
+        "3) El resultado es 6/35, que no se puede simplificar porque 6 y 35 no "
+        "comparten factores en común.",
+        [
+            ("5/12", "Sumó los numeradores y los denominadores por separado (2+3 y 5+7), en lugar de multiplicarlos."),
+            ("14/15", "Invirtió la segunda fracción como si fuera una división, en lugar de multiplicar directamente."),
+            ("6/12", "Multiplicó los numeradores correctamente, pero sumó los denominadores (5+7) en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de 5/6 − 1/3?",
+        "1/2",
+        "Para restar fracciones necesitas el mismo denominador en ambas.\n\n"
+        "1) El mínimo común múltiplo de 6 y 3 es 6, así que solo hay que convertir "
+        "1/3: como 6 ÷ 3 = 2, multiplicas arriba y abajo por 2, y 1/3 = 2/6.\n"
+        "2) Resta los numeradores manteniendo el denominador: 5/6 − 2/6 = 3/6.\n"
+        "3) Simplifica dividiendo ambos por 3: 3/6 = 1/2.",
+        [
+            ("4/3", "Restó los numeradores entre sí y los denominadores entre sí, sin buscar un denominador común."),
+            ("7/6", "Sumó las fracciones en lugar de restarlas."),
+            ("2/3", "No convirtió 1/3 a sextos antes de restar: usó 1/6 en su lugar."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de 2 − 3/4 × 2/3?",
+        "3/2",
+        "El orden de las operaciones exige resolver primero la multiplicación y "
+        "recién después la resta.\n\n"
+        "1) Multiplica primero: 3/4 × 2/3 = 6/12 = 1/2.\n"
+        "2) Ahora resta ese resultado de 2: 2 − 1/2.\n"
+        "3) Escribe el 2 como 4/2 para restar: 4/2 − 1/2 = 3/2.\n\n"
+        "Resolver la resta antes que la multiplicación cambia por completo el "
+        "resultado, porque la multiplicación tiene prioridad.",
+        [
+            ("5/6", "Restó primero (2 − 3/4 = 5/4) y multiplicó después por 2/3, sin respetar que la multiplicación va primero."),
+            ("1/2", "Calculó solo la multiplicación (3/4 × 2/3) y olvidó restarla de 2."),
+            ("7/12", "Restó ambas fracciones de 2 por separado (2 − 3/4 − 2/3), en lugar de multiplicarlas primero y restar solo el resultado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 2⁴?",
+        "16",
+        "Una potencia indica cuántas veces se multiplica la base por sí misma.\n\n"
+        "1) El exponente 4 dice que el 2 se multiplica por sí mismo cuatro veces: "
+        "2 × 2 × 2 × 2.\n"
+        "2) Multiplica de a pares: 2 × 2 = 4, y 4 × 2 = 8, y 8 × 2 = 16.\n\n"
+        "No se debe confundir con multiplicar la base por el exponente (2 × 4 = 8): "
+        "una potencia es una multiplicación repetida, no una multiplicación simple.",
+        [
+            ("8", "Sumó la base consigo misma 4 veces (2+2+2+2) en lugar de multiplicarla por sí misma 4 veces."),
+            ("32", "Multiplicó la base una vez de más, usando 5 factores en lugar de 4."),
+            ("1/16", "Calculó 2⁻⁴ (el recíproco) en lugar de 2⁴."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √50 en su forma más simple?",
+        "5√2",
+        "Para simplificar una raíz no exacta, se busca el mayor factor cuadrado "
+        "perfecto que la divida.\n\n"
+        "1) Descompón 50 buscando un factor que sea cuadrado perfecto: 50 = 25 × 2, "
+        "y 25 es cuadrado perfecto (5²).\n"
+        "2) Separa la raíz del producto: √50 = √25 × √2.\n"
+        "3) Calcula la raíz del factor cuadrado perfecto: √25 = 5.\n"
+        "4) El resultado queda como 5√2, porque √2 no se puede simplificar más.",
+        [
+            ("25√2", "Factorizó 50 como 25×2 pero no calculó la raíz de 25, dejándolo fuera de la raíz sin simplificar."),
+            ("10√5", "Buscó un factor distinto de 25 (usó 10×5), que no es un cuadrado perfecto y no simplifica correctamente la raíz."),
+            ("≈7,1", "Dio una aproximación decimal de la raíz en lugar de su forma exacta simplificada."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (3²)³?",
+        "729",
+        "Al elevar una potencia a otro exponente, se multiplican los exponentes.\n\n"
+        "1) Aplica la regla de potencia de una potencia: (3²)³ = 3^(2×3) = 3⁶.\n"
+        "2) Calcula 3⁶ multiplicando seis veces: 3×3=9, 9×3=27, 27×3=81, 81×3=243, "
+        "243×3=729.\n\n"
+        "Es fácil confundirse y sumar los exponentes en lugar de multiplicarlos: esa "
+        "regla (sumar) es para multiplicar potencias de igual base, no para una "
+        "potencia elevada a otra.",
+        [
+            ("243", "Sumó los exponentes (2+3=5) en lugar de multiplicarlos, obteniendo 3⁵."),
+            ("9", "Calculó solo 3² y olvidó aplicar el exponente exterior (elevar al cubo)."),
+            ("216", "Multiplicó la base por el exponente interior (3×2=6) antes de elevar al cubo, en lugar de multiplicar los exponentes."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿A cuánto equivale el 20% de 150?",
+        "30",
+        "Calcular un porcentaje es multiplicar el número por el porcentaje escrito "
+        "como decimal.\n\n"
+        "1) Convierte 20% a decimal dividiendo por 100: 20% = 0,20.\n"
+        "2) Multiplica: 150 × 0,20 = 30.",
+        [
+            ("130", "Restó 20 directamente de 150 en lugar de calcular el 20% de 150."),
+            ("7,5", "Dividió 150 entre 20 en lugar de multiplicarlo por 0,20."),
+            ("3", "Usó 2% en lugar de 20% al convertir el porcentaje a decimal (error de coma decimal)."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Un producto cuesta $8.000 y tiene un descuento del 25%. ¿Cuál es su precio final?",
+        "$6.000",
+        "Primero se calcula el monto del descuento y luego se resta del precio "
+        "original.\n\n"
+        "1) Calcula el 25% de $8.000: 8.000 × 0,25 = $2.000.\n"
+        "2) Resta ese descuento del precio original: 8.000 − 2.000 = $6.000.",
+        [
+            ("$2.000", "Calculó el monto del descuento pero no lo restó del precio original."),
+            ("$6.400", "Calculó un 20% de descuento en lugar del 25% indicado en el enunciado."),
+            ("$10.000", "Sumó el descuento al precio original en lugar de restarlo."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un pantalón cuesta $12.000 después de un descuento del 20%. ¿Cuál era su precio original?",
+        "$15.000",
+        "El precio con descuento equivale al 80% del precio original, así que hay "
+        "que deshacer ese porcentaje para encontrar el 100%.\n\n"
+        "1) Si hubo un 20% de descuento, lo que queda es el 80% del precio "
+        "original: precio_original × 0,8 = 12.000.\n"
+        "2) Despeja dividiendo: precio_original = 12.000 ÷ 0,8 = $15.000.\n\n"
+        "Verifica: el 20% de $15.000 es $3.000, y 15.000 − 3.000 = $12.000. "
+        "Coincide con el enunciado.",
+        [
+            ("$14.400", "Sumó un 20% al precio con descuento (12.000×1,2) en lugar de deshacer el descuento para encontrar el precio original."),
+            ("$9.600", "Volvió a aplicar el 20% de descuento sobre 12.000, en lugar de calcular el precio original."),
+            ("$16.000", "Dividió por 0,75 en lugar de por 0,8, confundiendo el 20% de descuento con un 25%."),
+        ],
+    ),
+    # ---------- ÁLGEBRA ----------
+    _q(
+        "alg_expresiones", "facil",
+        "Reduce la expresión: 5x + 3y − 2x + y",
+        "3x + 4y",
+        "Se agrupan y combinan los términos semejantes: los que tienen x entre sí, y "
+        "los que tienen y entre sí.\n\n"
+        "1) Combina los términos en x: 5x − 2x = 3x.\n"
+        "2) Combina los términos en y: 3y + y = 4y. El término \"y\" solo tiene "
+        "coeficiente 1, aunque no se escriba.\n"
+        "3) El resultado final es 3x + 4y.",
+        [
+            ("3x + 3y", "No consideró el coeficiente 1 del término y aislado al sumarlo con 3y."),
+            ("7x + 4y", "Sumó los términos en x en lugar de restarlos, ignorando el signo negativo de 2x."),
+            ("3xy", "Combinó los términos en x y en y como si fueran semejantes, cuando no lo son."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "Factoriza la expresión: 6x² + 9x",
+        "3x(2x + 3)",
+        "Se busca el máximo factor común de ambos términos, tanto en los "
+        "coeficientes como en la parte literal.\n\n"
+        "1) El máximo común divisor de 6 y 9 es 3.\n"
+        "2) Ambos términos tienen al menos una x, así que el factor común "
+        "completo es 3x.\n"
+        "3) Divide cada término por 3x: 6x² ÷ 3x = 2x, y 9x ÷ 3x = 3.\n"
+        "4) El resultado factorizado es 3x(2x + 3).\n\n"
+        "Verifica expandiendo: 3x × 2x = 6x², y 3x × 3 = 9x. Coincide con la "
+        "expresión original.",
+        [
+            ("3(2x² + 3x)", "Sacó como factor común solo el 3, sin incluir la x que también es común a ambos términos."),
+            ("x(6x + 9)", "Sacó como factor común solo la x, sin incluir el 3 que también es común a ambos términos."),
+            ("3x(2x + 9)", "Sacó correctamente el factor común 3x, pero al dividir 9x ÷ 3x cometió un error y dejó 9 en lugar de 3."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "Simplifica la expresión (x² − 4)/(x − 2), para x ≠ 2",
+        "x + 2",
+        "El numerador es una diferencia de cuadrados que se puede factorizar y "
+        "cancelar con el denominador.\n\n"
+        "1) Factoriza x² − 4 como (x + 2)(x − 2).\n"
+        "2) La expresión queda [(x + 2)(x − 2)] / (x − 2).\n"
+        "3) Como x ≠ 2, el factor (x − 2) no es cero y se puede cancelar arriba y "
+        "abajo, dejando solo x + 2.",
+        [
+            ("x − 2", "Canceló mal los factores, quedándose con el denominador en lugar del factor que realmente se simplifica."),
+            ("x² − 2", "Restó el denominador del numerador en lugar de factorizar y cancelar."),
+            ("x + 4", "Sumó ambos términos independientes con el mismo signo (2 y 2), en lugar de reconocer que provienen de signos opuestos (x+2)(x−2)."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "Resuelve: x/3 + 2 = 7",
+        "15",
+        "Se despeja x deshaciendo las operaciones en orden inverso.\n\n"
+        "1) Resta 2 a ambos lados: x/3 = 5.\n"
+        "2) Multiplica ambos lados por 3: x = 15.\n\n"
+        "Verifica: 15/3 + 2 = 5 + 2 = 7. Coincide con la ecuación original.",
+        [
+            ("21", "Multiplicó 7 por 3 sin restar primero el 2, saltándose el primer paso del despeje."),
+            ("5", "Encontró que x/3 = 5 pero no multiplicó por 3 para terminar de despejar x."),
+            ("27", "Sumó 2 en lugar de restarlo al despejar el término independiente."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "Resuelve la inecuación: 3(x − 1) ≤ 2x + 4",
+        "x ≤ 7",
+        "Primero se distribuye el paréntesis y luego se despeja x como en una "
+        "ecuación normal.\n\n"
+        "1) Distribuye el 3: 3x − 3 ≤ 2x + 4.\n"
+        "2) Pasa los términos en x a un lado y los números al otro: "
+        "3x − 2x ≤ 4 + 3.\n"
+        "3) Queda x ≤ 7.\n\n"
+        "Como no se dividió por ningún número negativo, el sentido de la "
+        "desigualdad no cambia en ningún paso.",
+        [
+            ("x ≥ 7", "Invirtió el sentido de la desigualdad sin haber multiplicado ni dividido por un número negativo."),
+            ("x ≤ 5", "No distribuyó el 3 en el paréntesis: multiplicó por x pero no por el −1 dentro de él."),
+            ("x ≤ 1", "Al mover el −3 al otro lado de la desigualdad, no le cambió el signo correctamente."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "El triple de un número, disminuido en 7, es igual al doble del mismo número aumentado en 5. "
+        "¿Cuál es el número?",
+        "12",
+        "Primero se traduce el enunciado a una ecuación y luego se despeja.\n\n"
+        "1) Llama x al número. \"El triple disminuido en 7\" es 3x − 7. \"El doble "
+        "aumentado en 5\" es 2x + 5. El enunciado dice que son iguales: "
+        "3x − 7 = 2x + 5.\n"
+        "2) Pasa los términos en x a un lado y los números al otro: "
+        "3x − 2x = 5 + 7.\n"
+        "3) Queda x = 12.\n\n"
+        "Verifica: el triple de 12 disminuido en 7 es 36 − 7 = 29. El doble de 12 "
+        "aumentado en 5 es 24 + 5 = 29. Ambos coinciden.",
+        [
+            ("2", "Interpretó 'aumentado en 5' como una resta en lugar de una suma al plantear la ecuación."),
+            ("−2", "Interpretó 'disminuido en 7' como una suma en lugar de una resta al plantear la ecuación."),
+            ("−12", "Al pasar los términos independientes de lado, no cambió correctamente sus signos, obteniendo el opuesto del valor correcto."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "Resuelve el sistema: y = x + 2 ; y = 3x − 4",
+        "x = 3, y = 5",
+        "Como ambas ecuaciones ya están despejadas en función de y, se pueden "
+        "igualar directamente (método de sustitución).\n\n"
+        "1) Iguala las dos expresiones de y: x + 2 = 3x − 4.\n"
+        "2) Agrupa los términos en x de un lado y los números del otro: "
+        "2 + 4 = 3x − x, es decir 6 = 2x.\n"
+        "3) Despeja: x = 3.\n"
+        "4) Reemplaza en cualquiera de las ecuaciones: y = 3 + 2 = 5.\n\n"
+        "Verifica en la otra ecuación: y = 3(3) − 4 = 9 − 4 = 5. Coincide.",
+        [
+            ("x = 3, y = 13", "Encontró correctamente x=3, pero al calcular y cambió el signo del término independiente (usó +4 en lugar de −4)."),
+            ("x = 2, y = 4", "Llegó correctamente a 2x = 6, pero dividió por 3 en lugar de por 2 al despejar x."),
+            ("x = 5, y = 3", "Encontró los valores correctos pero los intercambió entre las variables."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "Resuelve el sistema: 2x + y = 11 ; x + y = 7",
+        "x = 4, y = 3",
+        "Conviene el método de reducción, restando una ecuación de la otra para "
+        "eliminar y.\n\n"
+        "1) Resta la segunda ecuación de la primera: (2x + y) − (x + y) = 11 − 7, "
+        "lo que da x = 4.\n"
+        "2) Reemplaza x = 4 en la segunda ecuación: 4 + y = 7, entonces y = 3.\n\n"
+        "Verifica en la primera ecuación: 2(4) + 3 = 8 + 3 = 11. Coincide.",
+        [
+            ("x = 4, y = 7", "Sustituyó x=4 en la primera ecuación pero olvidó el coeficiente 2 (usó x+y=11 en lugar de 2x+y=11), obteniendo y=7."),
+            ("x = 3, y = 4", "Encontró los valores correctos pero los intercambió entre las variables."),
+            ("x = 4, y = 11", "Sustituyó x=4 en la ecuación pero no completó el despeje de y, dejando el valor de la constante sin restarle 2x."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "La suma de dos números es 18. El primero es el doble del segundo. "
+        "¿Cuáles son los números (el primero y el segundo)?",
+        "12 y 6",
+        "Se traduce el enunciado a un sistema de ecuaciones y se resuelve por "
+        "sustitución.\n\n"
+        "1) Llama a al primer número y b al segundo. El enunciado dice a + b = 18 "
+        "y a = 2b.\n"
+        "2) Sustituye a = 2b en la primera ecuación: 2b + b = 18, o sea 3b = 18.\n"
+        "3) Despeja: b = 6.\n"
+        "4) Calcula a: a = 2 × 6 = 12.\n\n"
+        "Verifica: 12 + 6 = 18 y 12 es el doble de 6. Ambas condiciones se cumplen.",
+        [
+            ("6 y 12", "Intercambió cuál número es el primero y cuál el segundo."),
+            ("9 y 9", "Repartió el total en partes iguales, sin usar la condición de que el primero es el doble del segundo."),
+            ("10 y 8", "Interpretó 'el doble del segundo' como 'el segundo más 2', en lugar de multiplicarlo por 2."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "Resuelve: x² = 49",
+        "x = 7 y x = −7",
+        "Al extraer la raíz cuadrada de ambos lados hay que considerar las dos "
+        "soluciones posibles.\n\n"
+        "1) Extrae raíz cuadrada a ambos lados de x² = 49.\n"
+        "2) Tanto 7 como −7 elevados al cuadrado dan 49, así que ambos son "
+        "solución: x = 7 y x = −7.",
+        [
+            ("x = 24,5", "Dividió 49 por 2 en lugar de calcular su raíz cuadrada."),
+            ("x = 7", "Solo consideró la raíz positiva, olvidando que x = −7 también es solución."),
+            ("x = 2401", "Elevó 49 al cuadrado en lugar de calcular su raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "Resuelve: x² + 2x − 15 = 0",
+        "x = −5 y x = 3",
+        "Se factoriza buscando dos números que sumados den 2 y multiplicados den "
+        "−15.\n\n"
+        "1) Busca los dos números: 5 y −3 cumplen, porque 5 + (−3) = 2 y "
+        "5 × (−3) = −15.\n"
+        "2) La factorización queda (x + 5)(x − 3) = 0.\n"
+        "3) Cada factor puede ser cero: x + 5 = 0 da x = −5, y x − 3 = 0 da x = 3.",
+        [
+            ("x = 5 y x = −3", "Invirtió los signos de las soluciones al despejar cada factor."),
+            ("x = −5 y x = −3", "Usó el mismo signo para ambas soluciones, sin notar que su producto debe ser negativo (−15)."),
+            ("x = 15 y x = −1", "Eligió un par de números cuyo producto es −15 pero cuya suma no es 2 (no verificó ambas condiciones)."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Resuelve usando la fórmula general: x² − 4x − 5 = 0",
+        "x = 5 y x = −1",
+        "Se aplica la fórmula general x = (−b ± √(b² − 4ac)) / 2a con a=1, b=−4, "
+        "c=−5.\n\n"
+        "1) Calcula el discriminante: b² − 4ac = (−4)² − 4(1)(−5) = 16 + 20 = 36.\n"
+        "2) Calcula su raíz: √36 = 6.\n"
+        "3) Aplica la fórmula: x = (−(−4) ± 6) / 2(1) = (4 ± 6) / 2.\n"
+        "4) Las dos soluciones son (4 + 6)/2 = 5 y (4 − 6)/2 = −1.",
+        [
+            ("x = 10 y x = −2", "Calculó correctamente el discriminante y (4±6), pero olvidó dividir por 2a al final."),
+            ("x = 1 y x = −5", "Usó −b = −4 en lugar de −b = 4 (el opuesto de b=−4), invirtiendo el signo en la fórmula."),
+            ("x = 5", "Calculó solo la raíz con el signo positivo del discriminante y no consideró la solución con signo negativo."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 2) y (3, 8)?",
+        "3",
+        "La pendiente es el cambio en y dividido por el cambio en x entre dos "
+        "puntos.\n\n"
+        "1) Calcula el cambio en y: 8 − 2 = 6.\n"
+        "2) Calcula el cambio en x: 3 − 1 = 2.\n"
+        "3) Divide: 6 / 2 = 3.",
+        [
+            ("6", "Calculó solo la diferencia de las coordenadas y (8−2=6) y no la dividió por la diferencia de las coordenadas x."),
+            ("1/3", "Calculó el cociente invertido (Δx/Δy) en lugar de la pendiente correcta (Δy/Δx)."),
+            ("−3", "Restó las coordenadas y en el orden correcto pero usó el orden opuesto para las coordenadas x, invirtiendo el signo del resultado."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es el vértice de la parábola y = x² − 6x + 5?",
+        "(3, −4)",
+        "La coordenada x del vértice se calcula con −b/2a, y luego se reemplaza en "
+        "la función para obtener y.\n\n"
+        "1) Identifica los coeficientes: a=1, b=−6, c=5.\n"
+        "2) Calcula la coordenada x: −b/2a = −(−6)/2(1) = 6/2 = 3.\n"
+        "3) Reemplaza x=3 en la función: y = 3² − 6(3) + 5 = 9 − 18 + 5 = −4.\n"
+        "4) El vértice es (3, −4).",
+        [
+            ("(6, 5)", "Usó los valores de b y c directamente como coordenadas del vértice, sin aplicar la fórmula −b/2a."),
+            ("(−3, 32)", "Cometió un error de signo al calcular la coordenada x del vértice, y evaluó la función en ese punto equivocado."),
+            ("(3, 4)", "Calculó correctamente la coordenada x del vértice, pero cometió un error de signo al evaluar y en ese punto."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la imagen (el valor de y) de f(x) = 2x² − 3 cuando x = −2?",
+        "5",
+        "Se reemplaza x por −2 y se sigue el orden de operaciones: primero la "
+        "potencia, luego la multiplicación y al final la resta.\n\n"
+        "1) Eleva al cuadrado primero: (−2)² = 4.\n"
+        "2) Multiplica por 2: 2 × 4 = 8.\n"
+        "3) Resta 3: 8 − 3 = 5.",
+        [
+            ("−11", "Calculó (−2)² como −4 en lugar de 4, olvidando que el cuadrado de un número negativo es positivo."),
+            ("1", "Olvidó multiplicar por 2 antes de restar 3: solo elevó al cuadrado y restó."),
+            ("13", "Multiplicó 2 por x antes de elevar al cuadrado (2×(−2))², en lugar de elevar x al cuadrado primero y luego multiplicar por 2."),
+        ],
+    ),
+    # ---------- GEOMETRÍA ----------
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área de un triángulo de base 10 cm y altura 6 cm?",
+        "30 cm²",
+        "El área de un triángulo es base por altura, dividido por 2.\n\n"
+        "1) Multiplica base por altura: 10 × 6 = 60.\n"
+        "2) Divide por 2: 60 / 2 = 30 cm².",
+        [
+            ("60 cm²", "Multiplicó base por altura pero olvidó dividir por 2, calculando el área como si fuera un rectángulo."),
+            ("16 cm²", "Sumó la base y la altura (10+6) en lugar de multiplicarlas."),
+            ("8 cm²", "Promedió la base y la altura en lugar de aplicar la fórmula del área de un triángulo."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un rectángulo tiene un área de 48 cm² y su base mide 8 cm. ¿Cuánto mide su altura?",
+        "6 cm",
+        "El área de un rectángulo es base por altura, así que la altura se "
+        "despeja dividiendo el área por la base.\n\n"
+        "1) Área = base × altura, entonces altura = área / base.\n"
+        "2) Reemplaza: 48 / 8 = 6 cm.",
+        [
+            ("40 cm", "Restó la base del área (48−8) en lugar de dividir el área por la base."),
+            ("384 cm", "Multiplicó el área por la base (48×8) en lugar de dividirla."),
+            ("16 cm", "Dividió el área por 3 en lugar de por 8, usando un valor equivocado para la base."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un terreno rectangular tiene un perímetro de 60 m. Si el largo mide el doble que el ancho, "
+        "¿cuál es el área del terreno?",
+        "200 m²",
+        "Se plantea el perímetro en función del ancho y se despeja, para luego "
+        "calcular el área.\n\n"
+        "1) Llama a al ancho; el largo es 2a. El perímetro es 2(a + 2a) = 6a.\n"
+        "2) Iguala al perímetro dado: 6a = 60, entonces a = 10 m (ancho).\n"
+        "3) El largo es 2 × 10 = 20 m.\n"
+        "4) El área es ancho × largo: 10 × 20 = 200 m².",
+        [
+            ("225 m²", "Calculó el lado asumiendo que el terreno es un cuadrado (60÷4=15), sin usar la condición de que el largo es el doble del ancho."),
+            ("100 m²", "Calculó correctamente que el ancho mide 10 m, pero no aplicó la condición de que el largo es el doble, asumiendo un cuadrado de 10×10."),
+            ("30 m²", "Sumó el largo y el ancho (10+20) en lugar de multiplicarlos para obtener el área."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un triángulo rectángulo tiene catetos de 6 cm y 8 cm. ¿Cuánto mide su hipotenusa?",
+        "10 cm",
+        "El teorema de Pitágoras dice que el cuadrado de la hipotenusa es igual a "
+        "la suma de los cuadrados de los catetos.\n\n"
+        "1) Eleva al cuadrado los catetos: 6² = 36 y 8² = 64.\n"
+        "2) Súmalos: 36 + 64 = 100.\n"
+        "3) Extrae la raíz cuadrada: √100 = 10 cm.",
+        [
+            ("14 cm", "Sumó los catetos directamente (6+8) en lugar de aplicar el teorema de Pitágoras."),
+            ("48 cm", "Multiplicó los catetos entre sí, calculando el área del triángulo en lugar de la hipotenusa."),
+            ("100 cm", "Sumó los cuadrados de los catetos correctamente (36+64=100), pero olvidó calcular la raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un triángulo rectángulo tiene hipotenusa de 13 cm y un cateto de 5 cm. "
+        "¿Cuánto mide el otro cateto?",
+        "12 cm",
+        "Cuando se conoce la hipotenusa y un cateto, el teorema de Pitágoras se "
+        "despeja restando en lugar de sumando.\n\n"
+        "1) Eleva al cuadrado la hipotenusa y el cateto conocido: 13² = 169 y "
+        "5² = 25.\n"
+        "2) Resta: 169 − 25 = 144.\n"
+        "3) Extrae la raíz cuadrada: √144 = 12 cm.",
+        [
+            ("18 cm", "Sumó la hipotenusa y el cateto conocido directamente (13+5), en lugar de aplicar el teorema de Pitágoras."),
+            ("8 cm", "Restó el cateto conocido de la hipotenusa directamente (13−5), en lugar de restar sus cuadrados y luego calcular la raíz."),
+            ("≈13,9 cm", "Sumó los cuadrados de la hipotenusa y el cateto conocido (169+25), en lugar de restarlos."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Una escalera de 10 m se apoya en una pared vertical. Si la base de la escalera está a 6 m "
+        "de la pared, ¿a qué altura de la pared llega la escalera?",
+        "8 m",
+        "La escalera es la hipotenusa de un triángulo rectángulo, la distancia a "
+        "la pared es un cateto y la altura buscada es el otro cateto.\n\n"
+        "1) Eleva al cuadrado la escalera y la distancia a la pared: 10² = 100 y "
+        "6² = 36.\n"
+        "2) Resta para obtener el cateto que falta: 100 − 36 = 64.\n"
+        "3) Extrae la raíz cuadrada: √64 = 8 m.",
+        [
+            ("4 m", "Restó directamente la base de la longitud de la escalera (10−6), en lugar de aplicar el teorema de Pitágoras."),
+            ("16 m", "Sumó la longitud de la escalera y la distancia a la pared (10+6), en lugar de tratarlas como hipotenusa y cateto."),
+            ("64 m", "Calculó correctamente 10² − 6² = 64, pero olvidó calcular la raíz cuadrada para obtener la altura."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (3, 5) al reflejarlo respecto del eje X?",
+        "(3, −5)",
+        "Al reflejar un punto respecto del eje X, la coordenada x no cambia y la "
+        "coordenada y cambia de signo.\n\n"
+        "1) La coordenada x se mantiene: 3.\n"
+        "2) La coordenada y cambia de signo: 5 pasa a −5.\n"
+        "3) El punto reflejado es (3, −5).",
+        [
+            ("(−3, 5)", "Reflejó el punto respecto del eje Y en lugar del eje X, cambiando el signo de la coordenada x en lugar de la y."),
+            ("(−3, −5)", "Reflejó el punto respecto del origen, cambiando el signo de ambas coordenadas, en lugar de reflejarlo solo respecto del eje X."),
+            ("(5, 3)", "Intercambió las coordenadas x e y del punto, en lugar de aplicar la reflexión respecto del eje X."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "Se traslada el punto (2, −3) según el vector (4, 1). ¿Cuáles son las coordenadas del punto "
+        "trasladado?",
+        "(6, −2)",
+        "Trasladar un punto según un vector significa sumar las componentes del "
+        "vector a las coordenadas del punto.\n\n"
+        "1) Suma la primera componente del vector a la coordenada x: 2 + 4 = 6.\n"
+        "2) Suma la segunda componente a la coordenada y: −3 + 1 = −2.\n"
+        "3) El punto trasladado es (6, −2).",
+        [
+            ("(−2, −4)", "Restó las componentes del vector de traslación en lugar de sumarlas a las coordenadas originales."),
+            ("(3, 1)", "Intercambió las componentes del vector de traslación, usando (1, 4) en lugar de (4, 1)."),
+            ("(8, −3)", "Multiplicó la coordenada x por la primera componente del vector en lugar de sumarla, y no modificó la coordenada y."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Un cuadrado tiene un vértice en (4, 0). Si se rota 90° en torno al origen, en sentido "
+        "antihorario, ¿en qué punto queda ese vértice?",
+        "(0, 4)",
+        "Una rotación de 90° antihoraria en torno al origen transforma cada punto "
+        "(x, y) en (−y, x).\n\n"
+        "1) Identifica las coordenadas originales: x = 4, y = 0.\n"
+        "2) Aplica la regla: el nuevo punto es (−y, x) = (−0, 4) = (0, 4).",
+        [
+            ("(4, 0)", "No aplicó la rotación: dejó el punto en su posición original."),
+            ("(0, −4)", "Aplicó la regla de rotación en sentido horario (y, −x) en lugar de antihorario, invirtiendo el signo del resultado."),
+            ("(−4, 0)", "Calculó la posición del punto tras una rotación de 180° en lugar de 90°."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de un cubo de arista 4 cm?",
+        "64 cm³",
+        "El volumen de un cubo es la arista elevada al cubo, porque tiene tres "
+        "dimensiones iguales.\n\n"
+        "1) Eleva la arista al cubo: 4³ = 4 × 4 × 4.\n"
+        "2) Calcula: 4 × 4 = 16, y 16 × 4 = 64 cm³.",
+        [
+            ("16 cm³", "Calculó el área de una cara del cubo (4²) en lugar de su volumen (4³)."),
+            ("12 cm³", "Multiplicó la arista por 3 (el número de dimensiones) en lugar de elevarla al cubo."),
+            ("8 cm³", "Multiplicó la arista por 2 en lugar de elevarla al cubo."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuántas caras tiene un prisma de base triangular?",
+        "5",
+        "Un prisma de base triangular tiene dos bases triangulares (iguales y "
+        "paralelas) y tres caras laterales rectangulares, una por cada lado del "
+        "triángulo.\n\n"
+        "1) Cuenta las bases: 2 caras triangulares.\n"
+        "2) Cuenta las caras laterales: 3 caras rectangulares, una por cada lado "
+        "del triángulo de la base.\n"
+        "3) Suma: 2 + 3 = 5 caras en total.",
+        [
+            ("3", "Contó solo las caras laterales (rectangulares), sin incluir las dos bases triangulares."),
+            ("6", "Confundió este sólido con un prisma de base cuadrada, que sí tiene 6 caras."),
+            ("4", "Contó una sola base triangular y las tres caras laterales, olvidando la segunda base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un cilindro tiene radio 3 cm y altura 10 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
+        "282,6 cm³",
+        "El volumen de un cilindro es el área de su base circular multiplicada "
+        "por la altura.\n\n"
+        "1) Calcula el área de la base: π × r² = 3,14 × 3² = 3,14 × 9 = 28,26 cm².\n"
+        "2) Multiplica por la altura: 28,26 × 10 = 282,6 cm³.",
+        [
+            ("94,2 cm³", "No elevó el radio al cuadrado: multiplicó π por el radio (sin elevarlo) y por la altura."),
+            ("188,4 cm³", "Calculó el área lateral del cilindro (2πrh) en lugar de su volumen (πr²h)."),
+            ("1130,4 cm³", "Usó el diámetro (6 cm) en lugar del radio en la fórmula, elevándolo al cuadrado por error."),
+        ],
+    ),
+    # ---------- PROBABILIDAD ----------
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la moda del conjunto de datos: 4, 7, 4, 9, 4, 2?",
+        "4",
+        "La moda es el valor que más veces se repite en el conjunto, sin "
+        "necesidad de ordenar los datos.\n\n"
+        "1) Cuenta cuántas veces aparece cada valor: el 4 aparece 3 veces, y los "
+        "demás (7, 9, 2) aparecen solo una vez cada uno.\n"
+        "2) El valor que más se repite es 4, así que esa es la moda.",
+        [
+            ("9", "Identificó el valor máximo del conjunto en lugar de el que más se repite."),
+            ("5", "Calculó la media (promedio) del conjunto en lugar de identificar la moda."),
+            ("3", "Entregó la cantidad de veces que se repite el valor más frecuente, en lugar del valor mismo."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Las notas de un curso en una prueba son: 5,5 − 6,0 − 4,5 − 5,5 − 7,0 − 5,5 − 6,0. "
+        "¿Cuál es la moda?",
+        "5,5",
+        "Se cuenta cuántas veces aparece cada nota distinta.\n\n"
+        "1) El 5,5 aparece 3 veces.\n"
+        "2) El 6,0 aparece 2 veces.\n"
+        "3) El 4,5 y el 7,0 aparecen solo 1 vez cada uno.\n"
+        "4) El valor que más se repite es 5,5, así que esa es la moda del curso.",
+        [
+            ("6,0", "Identificó un valor que se repite, pero no el que más veces aparece: 5,5 se repite 3 veces, más que 6,0."),
+            ("5,71", "Calculó el promedio del curso en lugar de identificar la nota que más se repite."),
+            ("7,0", "Identificó la nota máxima del curso en lugar de la que más se repite."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un conjunto de 5 datos tiene media 8. Si cuatro de los datos son 6, 7, 9 y 10, "
+        "¿cuál es el quinto dato?",
+        "8",
+        "Si la media de 5 datos es 8, la suma total de esos 5 datos debe ser "
+        "8 × 5.\n\n"
+        "1) Calcula la suma total necesaria: 8 × 5 = 40.\n"
+        "2) Suma los cuatro datos conocidos: 6 + 7 + 9 + 10 = 32.\n"
+        "3) El quinto dato es la diferencia: 40 − 32 = 8.",
+        [
+            ("40", "Calculó la suma total necesaria (8×5=40) pero no la usó para despejar el quinto dato: la entregó como si fuera la respuesta."),
+            ("6,4", "Dividió la suma de los cuatro datos conocidos por la cantidad total de datos (32÷5), en lugar de restarla de la suma total necesaria."),
+            ("32", "Calculó la suma de los cuatro datos conocidos pero no continuó el cálculo para encontrar el quinto dato."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un local vende helados con 3 sabores y 2 tipos de cono. ¿Cuántas combinaciones distintas de "
+        "sabor y cono se pueden formar?",
+        "6",
+        "Cuando dos elecciones son independientes, el total de combinaciones es "
+        "el producto de las opciones de cada una (principio multiplicativo).\n\n"
+        "1) Hay 3 sabores posibles.\n"
+        "2) Por cada sabor, hay 2 tipos de cono posibles.\n"
+        "3) Multiplica: 3 × 2 = 6 combinaciones distintas.",
+        [
+            ("5", "Sumó la cantidad de sabores y tipos de cono (3+2), en lugar de multiplicarlas."),
+            ("3", "Consideró solo la cantidad de sabores disponibles, sin tomar en cuenta los tipos de cono."),
+            ("9", "Calculó 3² en lugar de multiplicar la cantidad de sabores por la cantidad de tipos de cono."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra \"AMOR\" "
+        "(todas sus letras son distintas)?",
+        "24",
+        "Como se usan las 4 letras y el orden importa, se trata de una "
+        "permutación de las 4, que se calcula con el factorial.\n\n"
+        "1) Para la primera posición hay 4 letras disponibles, para la segunda "
+        "quedan 3, para la tercera 2 y para la última 1.\n"
+        "2) Multiplica las opciones de cada paso: 4 × 3 × 2 × 1 = 24.",
+        [
+            ("16", "Calculó 4² (4×4) en lugar de 4! (4×3×2×1), confundiendo una potencia con un factorial."),
+            ("10", "Sumó los números del 1 al 4 (4+3+2+1=10) en lugar de multiplicarlos."),
+            ("4", "Entregó la cantidad de letras de la palabra, sin calcular de cuántas formas se pueden ordenar."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "En una carrera de 3 personas, ¿de cuántas formas distintas pueden llegar en 1er y "
+        "2do lugar (sin empates)?",
+        "6",
+        "Para el primer lugar hay 3 personas posibles; una vez ocupado ese "
+        "lugar, quedan 2 personas posibles para el segundo.\n\n"
+        "1) Opciones para el primer lugar: 3.\n"
+        "2) Opciones para el segundo lugar, ya elegido el primero: 2.\n"
+        "3) Multiplica: 3 × 2 = 6 formas distintas.",
+        [
+            ("3", "Consideró solo las opciones para el primer lugar, sin multiplicar por las opciones restantes para el segundo lugar."),
+            ("9", "Multiplicó 3×3, permitiendo que la misma persona ocupe el primer y el segundo lugar a la vez."),
+            ("1", "Asumió que solo existe un orden posible de llegada, sin considerar que distintas personas pueden ocupar cada lugar."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza una moneda dos veces. ¿Cuál es la probabilidad de obtener cara ambas veces?",
+        "1/4",
+        "Como los dos lanzamientos son independientes, se multiplican sus "
+        "probabilidades individuales.\n\n"
+        "1) La probabilidad de obtener cara en un lanzamiento es 1/2.\n"
+        "2) Como son dos lanzamientos independientes, se multiplica: "
+        "1/2 × 1/2 = 1/4.",
+        [
+            ("1/2", "Calculó la probabilidad de obtener cara en un solo lanzamiento, sin considerar que el evento pide dos lanzamientos seguidos."),
+            ("1", "Asumió que el evento es seguro, sin calcular la probabilidad real de que ocurra dos veces seguidas."),
+            ("3/4", "Calculó la probabilidad de obtener al menos una cara en los dos lanzamientos, en lugar de obtener cara en ambos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En una bolsa hay 4 bolitas numeradas del 1 al 4. Se saca una, se observa su número y se "
+        "devuelve a la bolsa; luego se saca otra. ¿Cuál es la probabilidad de que ambas bolitas "
+        "sean el número 3?",
+        "1/16",
+        "Como la bolita se devuelve a la bolsa, las dos extracciones son "
+        "independientes y se multiplican sus probabilidades.\n\n"
+        "1) La probabilidad de sacar el 3 en una extracción es 1/4.\n"
+        "2) Como se devuelve la bolita, la segunda extracción también tiene "
+        "probabilidad 1/4 de dar el 3.\n"
+        "3) Multiplica: 1/4 × 1/4 = 1/16.",
+        [
+            ("1/4", "Calculó la probabilidad de sacar el número 3 en una sola extracción, sin multiplicar por la segunda extracción."),
+            ("1/2", "Sumó las probabilidades de cada extracción (1/4+1/4) en lugar de multiplicarlas, ya que ambos eventos deben ocurrir a la vez."),
+            ("1/12", "Calculó la probabilidad como si la primera bolita no se devolviera a la bolsa, cuando el enunciado indica que sí se devuelve."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En un curso, el 60% de los estudiantes practica algún deporte y, de ellos, el 25% practica "
+        "natación. ¿Qué porcentaje del curso completo practica natación?",
+        "15%",
+        "Cuando un porcentaje se aplica sobre otro porcentaje (y no sobre el "
+        "total), hay que multiplicarlos como decimales para obtener la "
+        "proporción real sobre el total.\n\n"
+        "1) Convierte ambos porcentajes a decimal: 60% = 0,60 y 25% = 0,25.\n"
+        "2) Multiplícalos: 0,60 × 0,25 = 0,15.\n"
+        "3) Convierte de vuelta a porcentaje: 0,15 = 15%.",
+        [
+            ("25%", "Entregó el 25% tal como aparece en el enunciado, sin considerar que ese porcentaje es solo sobre el 60% que practica deporte, no sobre el curso completo."),
+            ("85%", "Sumó los dos porcentajes del enunciado (60%+25%) en lugar de multiplicarlos."),
+            ("35%", "Restó los porcentajes del enunciado (60%−25%) en lugar de multiplicarlos."),
         ],
     ),
 ]
