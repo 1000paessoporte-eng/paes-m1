@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Términos y condiciones — 1000paes",
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 
 export default function TerminosPage() {
   return (
+    <>
     <main className="flex-1 px-6 py-16">
       <article className="mx-auto max-w-2xl">
         <h1 className="text-2xl font-semibold tracking-tight">Términos y condiciones</h1>
@@ -127,5 +129,7 @@ export default function TerminosPage() {
         </p>
       </article>
     </main>
+    <SiteFooter />
+    </>
   );
 }

@@ -1,163 +1,288 @@
-# 1000paes — Plataforma de preparación PAES M1
+# 1000paes — Plataforma de preparación PAES
+
+**Producción: https://1000paes.cl**
 
 > La plataforma se llama **1000paes** de cara al usuario. Los paquetes internos
-> del monorepo siguen llamándose `@paes-m1/*` y el repo `paes-m1`: renombrarlos
-> no aporta nada al producto y rompería imports y rutas.
+> del monorepo siguen llamándose `@paes-m1/*`, el repo `paes-m1` y los proyectos
+> de Vercel `milpaes-web` / `milpaes-api`: renombrarlos no aporta nada al
+> producto y rompería imports, rutas y el deploy.
 
-> Nota para IAs/agentes: este README resume el proyecto para que no necesites
-> explorar todo el repo. Lee esto primero; solo entra a los archivos
-> mencionados si necesitas el detalle de implementación.
+> **Nota para IAs/agentes**: este README resume el proyecto para que no
+> necesites explorar todo el repo. Léelo primero; entra a los archivos
+> mencionados solo si necesitas el detalle de implementación. Presta especial
+> atención a la sección **Deploy** — hay dos formas fáciles de romper
+> producción ahí.
 
-## La idea
+---
 
-Plataforma web para preparar la prueba **PAES M1** (Competencia Matemática 1,
-Chile). No es un banco de preguntas plano: el temario (Números, Álgebra,
-Geometría, Probabilidad) se presenta como un **Árbol de Habilidades estilo
-RPG** — el estudiante empieza en nivel 1 y los nodos superiores (ej. Ecuaciones
-Cuadráticas) quedan bloqueados hasta lograr un % mínimo de acierto en los
-nodos previos (ej. Álgebra Lineal). El objetivo de largo plazo es que la API
-recomiende automáticamente en qué nodo débil enfocarse (motor adaptativo con
-pandas/scikit-learn), y que cada error del estudiante tenga una explicación
-conceptual precisa de por qué se equivocó (no solo "incorrecto").
+## 1. Qué es
 
-Features core, cada una como módulo vertical en el backend:
+Plataforma web chilena para preparar la **PAES** (Prueba de Acceso a la
+Educación Superior). Hoy cubre **Competencia Matemática M1 y M2**; el selector
+de pruebas ya contempla las cinco (Lectora, M1, M2, Historia, Ciencias) y las
+tres restantes aparecen como "Próximamente" hasta tener banco de preguntas.
 
-| Feature | Estado | Descripción |
+No es un banco de preguntas plano. Las piezas:
+
+| Feature | Estado | Qué hace |
 |---|---|---|
-| **Árbol de Habilidades** | 🟡 Diseño conceptual, DB lista | Progreso por nodo desbloqueable, gamificado tipo RPG |
-| **Modo Ensayo** | 🟢 Funcional | Ensayo configurable (ejes, cantidad, ritmo) con tiempo proporcional al oficial |
-| **Puntaje y revisión** | 🟢 Funcional | Puntaje PAES estimado, desglose por eje/dificultad/nodo y justificación de cada distractor |
-| **Historial de progreso** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado y respaldo JSON |
-| **Analítica / Dashboard** | 🟢 Implementado | Panel de resultados y progreso |
+| **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (M1/M2), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
+| **Puntaje y revisión** | 🟢 Funcional | Puntaje 100-1000 con tablas oficiales DEMRE, desglose por eje/dificultad/nodo, desarrollo paso a paso de cada pregunta. |
+| **Árbol de Habilidades** | 🟢 Funcional (solo M1 en la UI) | Temario como grafo de nodos con prerequisitos y desbloqueo por dominio. |
+| **Práctica por nodo** | 🟢 Funcional | `/practicar/[code]`: una pregunta a la vez con corrección inmediata. |
+| **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
+| **Analítica** | 🟢 Funcional | Racha, precisión global, tiempo invertido, gráficos SVG propios. |
+| **Demo sin cuenta** | 🟢 Funcional | `/demo`: 5 preguntas, sin auth y sin persistir nada. |
+| **Cobros / planes** | 🔴 No implementado | Los planes Pro y Colegios son vitrina. No hay pasarela de pago. |
 
-### Modo Ensayo
+### Contenido actual
 
-El estudiante arma el ensayo: elige ejes temáticos, cuántas preguntas y el
-ritmo (`oficial` / `exigente` / `relajado`). La duración se calcula desde la
-razón oficial de la prueba — 140 min / 65 preguntas ≈ 2 min 9 s por pregunta —
-multiplicada por la cantidad elegida y el factor del ritmo.
+- **26 nodos** de habilidad: 15 de M1 + 11 exclusivos de M2.
+- **144 preguntas**: 111 de M1 + 33 exclusivas de M2.
+- M2 reutiliza el banco de M1 (`SUBJECT_INCLUDES` en `exam_focus/service.py`),
+  porque el temario DEMRE dice que M2 evalúa *"todos los conocimientos de M1,
+  además de"* contenido propio. Por eso el pool de M2 es M1 ∪ M2 = 144.
 
-Como la selección es aleatoria y proporcional por eje, el set de cada intento
-se **persiste** en `exam_attempt_questions`: sin eso, un GET posterior (resume
-tras refresh, o la revisión meses después) no podría reconstruir el mismo
-ensayo. Los intentos anteriores a esa tabla caen al comportamiento antiguo
-(todas las preguntas), que es exactamente el examen que rindieron.
+Todo el contenido vive en `apps/api/src/paes_api/seed_data.py` y se carga con
+`scripts/seed.py` (idempotente: solo inserta preguntas cuyo `stem` no exista).
 
-El puntaje se estima con la tabla de conversión de `modules/exam_focus/scoring.py`
-(escala 100-1000, valores referenciales): la proporción de aciertos se escala a
-la base de 60 preguntas puntuadas y se interpola. Siempre se presenta como
-"puntaje estimado".
+---
 
-## Arquitectura
+## 2. Arquitectura
 
 Monorepo **Turborepo + pnpm workspaces**.
 
 ```
-apps/web        Next.js (App Router, TS) — frontend
-apps/api        FastAPI (Python, uv)     — backend
-packages/types    Tipos TS generados desde el OpenAPI schema de la API
+apps/web          Next.js 16 (App Router, TS) — frontend
+apps/api          FastAPI (Python, uv)        — backend
+packages/types    Tipos TS generados desde el OpenAPI de la API
 packages/utils    Utilidades TS compartidas (cn)
 ```
 
-**Por qué FastAPI y no Node**: el backend necesita afinidad con
-pandas/scikit-learn para el futuro motor de recomendación de nodos débiles.
-Los tipos compartidos frontend↔backend se generan desde el schema OpenAPI de
-FastAPI (`openapi-typescript`) hacia `packages/types` — la API es la fuente de
-verdad de los tipos, no al revés.
+**Por qué FastAPI y no Node**: afinidad con pandas/scikit-learn para el motor
+de recomendación. Los tipos se generan desde el schema OpenAPI hacia
+`packages/types` — **la API es la fuente de verdad de los tipos**, no al revés:
+
+```bash
+# con la API corriendo en :8000
+cd packages/types && pnpm generate
+```
 
 ### Backend — `apps/api/src/paes_api/`
 
-Organizado por módulos verticales, uno por feature core, más dominios de
-soporte:
+Módulos verticales, uno por feature:
 
 ```
-modules/skill_tree/    Árbol de Habilidades
+modules/skill_tree/    Árbol de Habilidades (grafo de prerequisitos, desbloqueo)
 modules/exam_focus/    Modo Ensayo (config, runner, puntaje, revisión, historial)
-  └ scoring.py         Tabla de conversión a puntaje PAES y ritmo oficial
+  └ scoring.py         Tablas de conversión a puntaje PAES, parametrizadas por prueba
+modules/practice/      Práctica por nodo individual
 modules/analytics/     Dashboard
-modules/users/         Soporte (auth real: registro, login, perfil)
-modules/content/       Soporte (preguntas, alternativas, nodos)
-all_models.py          Punto único de import de TODOS los modelos SQLAlchemy
-                        (necesario para que resuelvan relaciones declaradas
-                        por string; lo usan alembic/env.py, scripts/seed.py y main.py)
+modules/demo/          Demo pública sin auth
+modules/users/         Auth (registro, login, Google, reset de contraseña, perfil)
+modules/content/       Preguntas, alternativas
+all_models.py          Import único de TODOS los modelos SQLAlchemy. Necesario
+                       para resolver relaciones declaradas por string; lo usan
+                       alembic/env.py, scripts/seed.py y main.py.
+seed_data.py           SKILL_NODES (M1), SKILL_NODES_M2 y QUESTIONS
 ```
 
-DB: PostgreSQL. Migraciones con Alembic. Seed real corrido: 15 nodos, 36
-preguntas.
-
-**Regla de seguridad de contenido**: los endpoints de ensayo (`start/get/answer/submit`
-en `modules/exam_focus`) **nunca** exponen `is_correct` ni
+**Regla de seguridad de contenido**: los endpoints de ensayo
+(`start`/`get`/`answer`/`submit`) **nunca** exponen `is_correct` ni
 `distractor_justification` mientras el ensayo está en curso. Esos datos solo
 aparecen en `/review`, que exige el intento ya finalizado.
+
+### El concepto `subject` (prueba PAES)
+
+Añadido para soportar M2 sin duplicar el árbol de M1:
+
+- `SkillNode.subject` y `ExamAttempt.subject` (enum `Subject`: `m1` | `m2`).
+- `scoring.SCORING_BY_SUBJECT` guarda, por prueba, cuántas preguntas trae
+  oficialmente, cuántas puntúan, cuánto dura y su tabla de conversión real
+  del DEMRE. **No inventes tablas**: si agregas una prueba, consíguela en
+  demre.cl.
+- `/arbol` filtra a M1 a propósito (no hay UI de árbol para M2 todavía), pero
+  el **cálculo de desbloqueos corre sobre todos los nodos** — los nodos de M2
+  tienen prerequisitos en M1 y romper eso rompería el progreso.
 
 ### Frontend — `apps/web/`
 
 ```
-app/(dashboard)/arbol/       UI Árbol de Habilidades
-app/(dashboard)/examen/      UI Modo Ensayo
-app/(dashboard)/historial/   UI Mi progreso (historial + gráfico)
-app/(dashboard)/analitica/   UI Dashboard
-components/exam/exam-config.tsx   Pantalla de configuración del ensayo
-components/exam/exam-runner.tsx   SPA del ensayo: timer contra la hora límite,
-                                   marcar preguntas, navegador, atajos de
-                                   teclado, autosave por pregunta, resume via
-                                   localStorage + GET /api/exam/{id}
-components/exam/exam-results.tsx  Puntaje, desgloses y revisión con explicaciones
-components/history/               Historial y gráfico SVG de evolución
-components/texto-rico.tsx         Renderiza LaTeX ($...$) con KaTeX y tablas markdown
-lib/api.ts   Separa API_URL (server-side) de NEXT_PUBLIC_API_URL (browser)
+app/page.tsx                      Portada: landing pública o panel según sesión
+app/sobre-nosotros/               Quiénes somos
+app/preguntas-frecuentes/         FAQ
+app/terminos/, app/privacidad/    Legales
+app/demo/                         Demo sin cuenta
+app/(auth)/                       login, registro, olvide/restablecer contraseña
+app/(dashboard)/                  arbol, examen, historial, analitica, perfil, practicar
+app/sitemap.ts, app/robots.ts     SEO
+app/opengraph-image.tsx           Card de preview para redes/WhatsApp
+
+components/home/landing-publica.tsx   Portada sin sesión
+components/home/panel-inicio.tsx      Portada con sesión
+components/site-header.tsx            Header global
+components/site-footer.tsx            Footer global (columnas + redes sociales)
+components/exam/exam-config.tsx       Config del ensayo (selector de prueba M1/M2)
+components/exam/exam-runner.tsx       SPA del ensayo: timer, autosave, resume, atajos
+components/texto-rico.tsx             LaTeX ($...$) con KaTeX y tablas markdown
+lib/api.ts                            API_URL (server) vs NEXT_PUBLIC_API_URL (browser)
+lib/redes-sociales.ts                 URLs de RRSS — ver abajo
 ```
 
-El tema es claro (fondo blanco) y se define con variables CSS en
-`app/globals.css`; los componentes usan los tokens (`bg-surface`, `text-muted`,
-`border-border`…), así que cambiar la paleta es editar solo `:root`.
+**Redes sociales**: las cuentas todavía no existen. `lib/redes-sociales.ts`
+tiene las llaves con string vacío y el footer **solo renderiza las que tengan
+URL**, así no queda ningún link roto. Cuando existan, pegar la URL ahí y listo.
 
-## Desarrollo
+**Tema**: claro, definido con variables CSS en `app/globals.css`. Los
+componentes usan tokens (`bg-surface`, `text-muted`, `border-border`…), así que
+cambiar la paleta es editar solo `:root`.
+
+---
+
+## 3. Desarrollo local
 
 ```bash
 pnpm install
-pnpm dev          # levanta web + api vía turbo
+pnpm dev            # web (:3000) + api (:8000) vía turbo
 ```
 
-El backend también se puede correr solo con `uv` dentro de `apps/api`.
-Variables de entorno reales en `apps/api/.env` (gitignored, ver `.env.example`).
+El backend solo: `cd apps/api && uv run uvicorn paes_api.main:app --reload`
 
-### Exponer fuera de la LAN
+Requiere PostgreSQL local. Variables en `apps/api/.env` (gitignored, ver
+`.env.example`).
 
-Se usan dos túneles `cloudflared` (uno para :3000 web, otro para :8000 api).
-El dominio del túnel web debe agregarse a `next.config.ts` → `allowedDevOrigins`
-y a `cors_origins` en la config de la API.
+### Verificación antes de commitear
 
-### Inicio de sesión con Google
+```bash
+cd apps/api && uv run pytest tests/ -q && uv run ruff check src/
+cd apps/web && pnpm typecheck && pnpm build
+```
 
-Flujo de ID token de Google Identity Services: el navegador obtiene un JWT
-firmado por Google y lo manda a `POST /api/auth/google`, que verifica firma,
-expiración y **audiencia** (que el token sea para nuestro client ID) antes de
-crear la sesión. Sin esa última comprobación, un token válido de cualquier otra
-app serviría para entrar.
+**Errores preexistentes conocidos** (no son regresiones tuyas, no los "arregles"
+sin querer al revisar):
 
-Se configura con el mismo client ID en dos variables: `GOOGLE_CLIENT_ID`
-(apps/api/.env) y `NEXT_PUBLIC_GOOGLE_CLIENT_ID` (apps/web/.env.local). Si
-están vacías, el botón no se muestra y `/api/auth/google` responde 401: la web
-sigue funcionando con correo y contraseña. Las cuentas de Google se guardan con
-`google_sub` y sin contraseña (`hashed_password` NULL); si el correo ya existía
-registrado con contraseña, se **enlaza** en vez de duplicar, conservando el
-historial.
+- `pnpm lint` falla con 2 errores: `app/page.tsx:21` (JSX dentro de try/catch)
+  y `components/exam/exam-runner.tsx:71` (ref durante render).
+- `uv run mypy src/` reporta 1 error en `exam_focus/router.py:42`.
 
-**Restricción de Google**: los orígenes autorizados no admiten IPs privadas.
-`http://192.168.1.15:3000` no sirve; solo `http://localhost:3000` o un dominio
-con HTTPS. `NEXT_PUBLIC_*` se incrusta en tiempo de build, así que **hay que
-reconstruir** (`pnpm build`) después de configurar el client ID.
+---
 
-### Servir en la LAN
+## 4. Deploy ⚠️
 
-`apps/web/next.config.ts` reenvía `/api/*` al backend, y `NEXT_PUBLIC_API_URL`
-va vacío en `.env.local` para que el navegador use rutas relativas. Así basta
-con abrir el puerto 3000: no hay CORS de por medio ni la IP del host queda
-quemada en el bundle del cliente.
+**Todo cambio se cierra con: commit → push → deploy.** El deploy es explícito.
 
-## Pendiente
+```bash
+git add -A && git commit -m "..." && git push origin main
 
-- UI real del Árbol de Habilidades y lógica de desbloqueo por nodo
-- Motor de recomendación adaptativo (ML sobre progreso por nodo)
-- Ampliar el banco de preguntas (hoy 36) y agregar enunciados con LaTeX
+# Frontend — SIEMPRE desde la RAÍZ del repo
+cd /ruta/al/repo && vercel deploy --prod --yes
+
+# Backend — desde apps/api
+cd apps/api && vercel deploy --prod --yes
+```
+
+Dos trampas que ya causaron problemas:
+
+1. **Pushear a GitHub NO despliega nada.** No hay integración Git ↔ Vercel en
+   este proyecto (verificado: los deployments no tienen `gitSource`). Si solo
+   pusheas, producción sigue con el código viejo.
+2. **El deploy del frontend se corre desde la raíz del repo, no desde
+   `apps/web`.** Hacerlo desde `apps/web` crea un proyecto Vercel nuevo y roto
+   (falla con `npm install` porque pierde el contexto del monorepo). El
+   `.vercel/project.json` de la raíz apunta a `milpaes-web`.
+
+### Proyectos Vercel
+
+| Proyecto | Root | Qué sirve |
+|---|---|---|
+| `milpaes-web` | raíz del repo | Next.js. Alias: `1000paes.cl`, `www.1000paes.cl` |
+| `milpaes-api` | `apps/api` | FastAPI como función serverless (`api/index.py`) |
+
+La web reenvía `/api/*` al backend vía `next.config.ts` → `rewrites` usando la
+env var `API_URL` (server-side). Por eso el navegador solo habla con
+`1000paes.cl`: no hace falta subdominio de API ni CORS en producción, y
+`NEXT_PUBLIC_API_URL` va **vacío** para que el browser use rutas relativas.
+
+Región: ambos en `gru1` (São Paulo), igual que la DB. Tenerlos en regiones
+distintas agregó ~700ms por request en su momento.
+
+### Cuentas 🔑
+
+**Todo este proyecto vive en `1000paessoporte@gmail.com`** (Vercel, Neon,
+dominio). No usar cuentas personales para servicios del proyecto.
+
+### Base de datos
+
+PostgreSQL en **Neon**, región `sa-east-1`. Dos connection strings:
+
+- **Pooled** (host con `-pooler`): para el runtime de la API → `DATABASE_URL` en Vercel.
+- **Directa** (sin `-pooler`): para Alembic y `scripts/seed.py`.
+
+Las credenciales reales están en `apps/api/.env.local` (**gitignored**, nunca
+en este README: el repo es público). Si no las tienes, se sacan del dashboard
+de Neon con la cuenta de arriba.
+
+> ⚠️ `DATABASE_URL` en Vercel está marcada como **Sensitive**: es de solo
+> escritura, nadie puede volver a leerla (ni el dueño). Si se pierde el
+> `.env.local` y no está en Neon, la única salida es rotar la base. Ya pasó una
+> vez.
+
+Aplicar cambios de esquema y contenido a producción:
+
+```bash
+cd apps/api
+export DATABASE_URL="<connection string DIRECTA>"
+uv run alembic upgrade head
+uv run python scripts/seed.py
+```
+
+---
+
+## 5. Detalles que muerden
+
+**Inicio de sesión con Google.** El browser obtiene un ID token firmado por
+Google y lo manda a `POST /api/auth/google`, que verifica firma, expiración y
+**audiencia** (que el token sea para nuestro client ID) antes de crear sesión.
+Sin esa última comprobación, un token de cualquier otra app serviría para
+entrar. Se configura con el mismo client ID en `GOOGLE_CLIENT_ID` (api) y
+`NEXT_PUBLIC_GOOGLE_CLIENT_ID` (web). Si están vacías, el botón no se muestra y
+el endpoint responde 401: la web sigue andando con correo y contraseña.
+`NEXT_PUBLIC_*` se incrusta en build time, así que **hay que reconstruir**
+después de cambiarlo. Google no acepta IPs privadas como origen autorizado.
+
+**Set de preguntas persistido.** Como la selección del ensayo es aleatoria y
+proporcional por eje, el set de cada intento se guarda en
+`exam_attempt_questions`. Sin eso, un GET posterior (resume tras refresh, o la
+revisión meses después) no podría reconstruir el mismo ensayo. Los intentos
+anteriores a esa tabla caen al comportamiento antiguo (todas las preguntas del
+subject), que es exactamente el ensayo que rindieron.
+
+**Contenido: nada de datos inventados.** Las tablas de puntaje, la cantidad de
+preguntas y los tiempos salen del DEMRE. Las preguntas nuevas se verifican
+matemáticamente antes de commitear (checklist: 4 alternativas, exactamente 1
+correcta, sin texto duplicado, `skill_node` existente). La landing no muestra
+logos de instituciones ni testimonios porque no los tenemos.
+
+**Analytics.** `@vercel/analytics` y `@vercel/speed-insights` están montados en
+`app/layout.tsx`. Las métricas se ven en el dashboard de Vercel.
+
+---
+
+## 6. Pendiente
+
+Ordenado por impacto:
+
+1. **Pasarela de pago** (Webpay/Transbank, Flow o MercadoPago). Sin esto los
+   planes Pro y Colegios no pueden existir de verdad.
+2. **Seguir ampliando el banco de preguntas.** Un ensayo M1 completo son 65 de
+   las 111 disponibles: todavía hay poco margen antes de repetir.
+3. **Las otras tres pruebas.** Ojo: Competencia Lectora **no encaja** en el
+   modelo actual de nodos por eje — necesita pasajes de lectura + preguntas
+   asociadas, o sea un diseño de datos distinto. Historia y Ciencias sí encajan
+   pero requieren contenido factual verificado.
+4. **UI del Árbol de Habilidades para M2** (hoy `/arbol` es solo M1).
+5. **Motor de recomendación real.** Hoy `get_recommended_node()` es un ranking
+   ponderado con pandas (accuracy 60% + impacto 30% + nunca intentado 40%), no
+   un modelo entrenado.
+6. **Limpieza**: hay un proyecto Vercel llamado `web` creado por error en un
+   deploy mal ejecutado. Está vacío y se puede borrar.

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Planes } from "@/components/home/planes";
+import { SiteFooter } from "@/components/site-footer";
 import type { AuthUserOut, ExamAttemptSummary } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
 
@@ -196,15 +197,7 @@ export function PanelInicio({ user, attempts }: Props) {
 
       <Planes />
 
-      <footer className="border-t border-border px-6 py-10">
-        <div className="mx-auto max-w-5xl text-center text-xs leading-relaxed text-muted">
-          <p>
-            1000paes no tiene relación con el DEMRE. El puntaje mostrado es una
-            estimación referencial: el puntaje real depende de la forma rendida
-            y del proceso de admisión.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

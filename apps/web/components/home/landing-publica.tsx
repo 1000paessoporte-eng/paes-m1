@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { GoogleButton } from "@/components/auth/google-button";
 import { Planes } from "@/components/home/planes";
+import { SiteFooter } from "@/components/site-footer";
+import { diasHastaPaes } from "@/lib/paes-fecha";
 
 /** Portada para visitantes sin sesión: nombre, entrada y qué ofrece el sitio. */
 
@@ -163,7 +165,7 @@ export function LandingPublica() {
         </div>
       </section>
 
-      <section className="border-t border-border px-6 py-20">
+      <section id="como-funciona" className="border-t border-border px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-lg text-center">
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -274,27 +276,154 @@ export function LandingPublica() {
         </div>
       </section>
 
-      <Planes />
+      {/* ── Lo que necesitas saber ──────────────────────────────────── */}
+      <section className="border-t border-border px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-lg text-center">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Lo que necesitas saber de la PAES
+            </h2>
+            <p className="mt-3 text-sm text-muted">
+              Los datos oficiales de las pruebas de Competencia Matemática,
+              según el temario del DEMRE.
+            </p>
+          </div>
 
-      <footer className="border-t border-border px-6 py-10">
-        <div className="mx-auto max-w-5xl text-center text-xs leading-relaxed text-muted">
-          <p>
-            1000paes no tiene relación con el DEMRE. El puntaje mostrado es una
-            estimación referencial: el puntaje real depende de la forma rendida
-            y del proceso de admisión.
-          </p>
-          <p className="mt-3">
-            <Link href="/terminos" className="hover:text-foreground hover:underline">
-              Términos
-            </Link>{" "}
-            ·{" "}
-            <Link href="/privacidad" className="hover:text-foreground hover:underline">
-              Privacidad
+          <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
+            {PRUEBAS_INFO.map((prueba) => (
+              <div
+                key={prueba.nombre}
+                className="rounded-xl border border-border bg-surface p-6"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-semibold text-foreground">{prueba.nombre}</h3>
+                  <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
+                    Disponible
+                  </span>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {prueba.descripcion}
+                </p>
+                <dl className="mt-4 grid grid-cols-2 gap-3 border-t border-border pt-4 text-sm">
+                  <div>
+                    <dt className="text-xs text-muted">Preguntas</dt>
+                    <dd className="font-semibold tabular-nums">{prueba.preguntas}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs text-muted">Duración oficial</dt>
+                    <dd className="font-semibold">{prueba.duracion}</dd>
+                  </div>
+                </dl>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {DATOS_PAES.map((dato) => (
+              <div
+                key={dato.title}
+                className="rounded-xl border border-border bg-surface p-5"
+              >
+                <h3 className="text-sm font-semibold text-foreground">
+                  {dato.title}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                  {dato.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-sm text-muted">
+            ¿Te quedan dudas sobre cómo funciona la plataforma?{" "}
+            <Link
+              href="/preguntas-frecuentes"
+              className="font-medium text-accent hover:underline"
+            >
+              Mira las preguntas frecuentes
             </Link>
+            .
           </p>
         </div>
-      </footer>
+      </section>
+
+      {/* ── Cierre motivacional ─────────────────────────────────────── */}
+      <CierreMotivacional />
+
+      <Planes />
+
+      <SiteFooter />
     </main>
+  );
+}
+
+/** Datos oficiales de cada prueba, tomados del temario DEMRE. */
+const PRUEBAS_INFO = [
+  {
+    nombre: "Competencia Matemática M1",
+    descripcion:
+      "La prueba base de matemática: cubre el temario de 7° básico a 2° medio. La rinden todas las carreras que piden matemática.",
+    preguntas: "65",
+    duracion: "2 h 20 min",
+  },
+  {
+    nombre: "Competencia Matemática M2",
+    descripcion:
+      "Evalúa todo lo de M1 más contenido avanzado de 3° y 4° medio. La piden carreras científicas, de ingeniería y de salud.",
+    preguntas: "55",
+    duracion: "2 h 20 min",
+  },
+] as const;
+
+const DATOS_PAES = [
+  {
+    title: "Cuatro ejes temáticos",
+    description:
+      "Números, Álgebra y funciones, Geometría, y Probabilidad y estadística. Tu resultado se desglosa por cada uno.",
+  },
+  {
+    title: "Puntaje de 100 a 1000",
+    description:
+      "La conversión desde tus respuestas correctas no es lineal: depende de la tabla oficial de cada aplicación.",
+  },
+  {
+    title: "Equivocarse no descuenta",
+    description:
+      "Las respuestas incorrectas no restan puntaje, así que siempre conviene contestar todas las preguntas.",
+  },
+] as const;
+
+/** Banda de cierre: recuerda cuánto falta para la prueba y empuja a empezar. */
+function CierreMotivacional() {
+  const dias = diasHastaPaes();
+
+  return (
+    <section className="hero-glow relative overflow-hidden border-t border-border px-6 py-20">
+      <div className="relative mx-auto max-w-2xl text-center">
+        {dias !== null && (
+          <span className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
+            Faltan {dias} {dias === 1 ? "día" : "días"} para la PAES
+          </span>
+        )}
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance sm:text-4xl">
+          El puntaje no se decide el día de la prueba
+        </h2>
+        <p className="mt-4 text-balance leading-relaxed text-muted">
+          Se decide en los meses de antes, en cada ejercicio que entendiste de
+          verdad en vez de dejar pasar. Empieza hoy con un ensayo y descubre
+          exactamente en qué estás parado.
+        </p>
+        <Link
+          href="/registro"
+          className="btn-glow mt-8 inline-flex rounded-lg px-8 py-3.5 text-base font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
+        >
+          Empezar gratis →
+        </Link>
+        <p className="mt-3 text-xs text-muted">
+          Sin tarjeta. Sin compromiso. Toma un minuto.
+        </p>
+      </div>
+    </section>
   );
 }
 
