@@ -368,7 +368,7 @@ export function ExamRunner({ options, pastAttempts, resumableAttemptId }: ExamRu
       <header className="sticky top-14 z-20 -mx-4 border-b border-border bg-background/95 px-4 backdrop-blur sm:-mx-6 sm:px-6">
         <div className="flex items-center gap-3 py-3">
           <div className="min-w-0 flex-1">
-            <p className="truncate text-xs text-muted">Competencia Matemática 1</p>
+            <p className="truncate text-xs text-muted">Competencia Matemática M1</p>
             <p className="font-semibold">
               Pregunta {currentIndex + 1} de {questions.length}
             </p>

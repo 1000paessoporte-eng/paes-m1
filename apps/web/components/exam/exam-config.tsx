@@ -15,6 +15,19 @@ const FORMATOS = [
   { cantidad: 20, nombre: "Corto", detalle: "Para una sesión rápida" },
 ] as const;
 
+/**
+ * Pruebas PAES. Por ahora solo Competencia Matemática M1 tiene banco de
+ * preguntas; las demás se muestran para que quede claro que la plataforma
+ * las va a cubrir, pero deshabilitadas hasta que tengan contenido.
+ */
+const PRUEBAS = [
+  { id: "lectora", nombre: "Competencia Lectora", disponible: false },
+  { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
+  { id: "m2", nombre: "Competencia Matemática M2", disponible: false },
+  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: false },
+  { id: "ciencias", nombre: "Ciencias", disponible: false },
+] as const;
+
 const RITMOS: Pace[] = ["oficial", "exigente", "relajado"];
 
 const DESCRIPCION_RITMO: Record<Pace, string> = {
@@ -120,10 +133,43 @@ export function ExamConfigScreen({
         </p>
       )}
 
+      {/* ── Prueba ──────────────────────────────────────────────────── */}
+      <section className="mb-8">
+        <h2 className="mb-1 text-sm font-semibold tracking-wide text-muted uppercase">
+          1. Prueba
+        </h2>
+        <p className="mb-3 text-sm text-muted">
+          Vamos a cubrir las cinco pruebas PAES. Hoy solo Competencia
+          Matemática M1 tiene ensayos disponibles.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {PRUEBAS.map((prueba) => (
+            <button
+              key={prueba.id}
+              type="button"
+              disabled={!prueba.disponible}
+              aria-pressed={prueba.disponible}
+              title={prueba.disponible ? undefined : "Próximamente"}
+              className={cn(
+                "rounded-full border px-3.5 py-1.5 text-sm transition disabled:cursor-not-allowed",
+                prueba.disponible
+                  ? "border-accent bg-accent text-accent-foreground"
+                  : "border-border bg-surface text-muted opacity-60"
+              )}
+            >
+              {prueba.nombre}
+              {!prueba.disponible && (
+                <span className="ml-1.5 text-xs">· Próximamente</span>
+              )}
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* ── Ejes temáticos ──────────────────────────────────────────── */}
       <section className="mb-8">
         <h2 className="mb-1 text-sm font-semibold tracking-wide text-muted uppercase">
-          1. Ejes temáticos
+          2. Ejes temáticos
         </h2>
         <p className="mb-3 text-sm text-muted">
           Sin selección se incluyen todos, repartidos proporcionalmente.
@@ -159,7 +205,7 @@ export function ExamConfigScreen({
       {/* ── Formato del ensayo ──────────────────────────────────────── */}
       <section className="mb-8">
         <h2 className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">
-          2. ¿Cuántas preguntas?
+          3. ¿Cuántas preguntas?
         </h2>
         <div className="grid gap-2 sm:grid-cols-3">
           {FORMATOS.map((f) => {
@@ -220,7 +266,7 @@ export function ExamConfigScreen({
       {/* ── Ritmo ───────────────────────────────────────────────────── */}
       <section className="mb-8">
         <h2 className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">
-          3. Ritmo
+          4. Ritmo
         </h2>
         <div className="grid gap-2 sm:grid-cols-3">
           {RITMOS.map((r) => (
@@ -250,7 +296,7 @@ export function ExamConfigScreen({
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <span className="text-muted">
             {cantidadEfectiva} preguntas de{" "}
-            <strong className="text-foreground">Competencia Matemática 1</strong>
+            <strong className="text-foreground">Competencia Matemática M1</strong>
           </span>
           <span className="text-2xl font-bold tabular-nums">
             {formatearDuracionLarga(duracion)}
