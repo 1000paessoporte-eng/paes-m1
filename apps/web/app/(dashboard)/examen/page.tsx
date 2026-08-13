@@ -11,7 +11,7 @@ export default async function ModoEnsayoPage() {
   try {
     attempts = await listExamAttempts(token);
   } catch (err) {
-    if (err instanceof ApiError && err.status === 401) redirect("/login");
+    if (err instanceof ApiError && err.status === 401) redirect("/login?next=/examen");
   }
 
   const [optionsM1, repasoM1, optionsM2, repasoM2] = await Promise.all([
@@ -22,15 +22,18 @@ export default async function ModoEnsayoPage() {
   ]);
 
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
-  const resumableAttemptId =
-    attempts.find((a) => a.status === "in_progress")?.attempt_id ?? null;
+  // Se pasa también el subject: el ensayo pendiente puede ser de otra prueba
+  // que la elegida en pantalla, y retomarlo cambia de prueba. Hay que decirlo.
+  const enCurso = attempts.find((a) => a.status === "in_progress");
 
   return (
     <ExamRunner
       optionsBySubject={{ m1: optionsM1, m2: optionsM2 }}
       repasoBySubject={{ m1: repasoM1, m2: repasoM2 }}
       pastAttempts={pastAttempts}
-      resumableAttemptId={resumableAttemptId}
+      resumable={
+        enCurso ? { attemptId: enCurso.attempt_id, subject: enCurso.subject } : null
+      }
     />
   );
 }

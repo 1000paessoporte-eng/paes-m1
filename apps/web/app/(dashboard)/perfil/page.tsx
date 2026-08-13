@@ -18,7 +18,7 @@ export default async function PerfilPage() {
       getAnalyticsSummary(token),
     ]);
   } catch (err) {
-    if (err instanceof ApiError && err.status === 401) redirect("/login");
+    if (err instanceof ApiError && err.status === 401) redirect("/login?next=/perfil");
     throw err;
   }
 

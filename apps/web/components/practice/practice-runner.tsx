@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { TextoRico } from "@/components/texto-rico";
@@ -12,7 +12,7 @@ import {
   type PracticeAnswerResult,
   type PracticeQuestion,
 } from "@/lib/api";
-import { getClientToken } from "@/lib/auth";
+import { getClientToken, loginHref } from "@/lib/auth";
 
 const LABELS = ["A", "B", "C", "D", "E"];
 
@@ -20,6 +20,7 @@ type Phase = "loading" | "locked" | "error" | "ready" | "done";
 
 export function PracticeRunner({ code }: { code: string }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [phase, setPhase] = useState<Phase>("loading");
   const [nodeName, setNodeName] = useState("");
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
@@ -44,7 +45,7 @@ export function PracticeRunner({ code }: { code: string }) {
       setPhase(data.questions.length > 0 ? "ready" : "error");
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) {
-        router.push("/login");
+        router.push(loginHref(pathname));
         return;
       }
       if (err instanceof ApiError && err.status === 403) {
@@ -53,7 +54,7 @@ export function PracticeRunner({ code }: { code: string }) {
       }
       setPhase("error");
     }
-  }, [code, router]);
+  }, [code, router, pathname]);
 
   useEffect(() => {
     // Fetch de datos al montar: load() marca "loading" antes del await,
@@ -79,7 +80,7 @@ export function PracticeRunner({ code }: { code: string }) {
         ]);
       }
     } catch (err) {
-      if (err instanceof ApiError && err.status === 401) router.push("/login");
+      if (err instanceof ApiError && err.status === 401) router.push(loginHref(pathname));
     }
   }
 

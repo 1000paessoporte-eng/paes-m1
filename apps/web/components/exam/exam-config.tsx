@@ -62,7 +62,7 @@ interface Props {
   optionsBySubject: Record<Subject, ExamOptions>;
   repasoBySubject: Record<Subject, Repaso>;
   ensayosRendidos: number;
-  resumable: boolean;
+  resumable: { attemptId: number; subject: Subject } | null;
   errorMsg: string | null;
   onComenzar: (config: ExamConfig) => void;
   onContinuar: () => void;
@@ -164,15 +164,17 @@ export function ExamConfigScreen({
       {resumable && (
         <div className="mb-8 rounded-xl border border-accent/40 bg-accent/5 p-4">
           <p className="text-sm">
-            Tienes un ensayo en curso sin finalizar. Al continuar retomas justo
-            donde quedaste.
+            Tienes un ensayo de{" "}
+            <strong>{SUBJECT_LABELS[resumable.subject]}</strong> en curso sin
+            finalizar. Al continuar retomas justo donde quedaste
+            {resumable.subject !== subject && ", y vuelves a esa prueba"}.
           </p>
           <button
             type="button"
             onClick={onContinuar}
             className="btn-glow mt-3 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
           >
-            Continuar ensayo
+            Continuar ensayo de {SUBJECT_LABELS[resumable.subject]}
           </button>
         </div>
       )}

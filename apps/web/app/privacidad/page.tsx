@@ -91,6 +91,14 @@ export default function PrivacidadPage() {
               ensayo si recargas la página. No usamos cookies de rastreo ni
               publicidad de terceros.
             </p>
+            <p>
+              Para saber cuánta gente usa el sitio guardamos, por cada página
+              que se abre, la ruta visitada y un número aleatorio que se genera
+              en tu navegador. Ese número no dice quién eres: solo sirve para no
+              contarte varias veces si abres varias páginas. No guardamos tu
+              dirección IP ni tu user agent, y puedes borrarlo cuando quieras
+              vaciando el almacenamiento local del sitio.
+            </p>
           </section>
 
           <section>

@@ -10,10 +10,21 @@ from sqlalchemy.orm import Session
 from paes_api.core.config import get_settings
 from paes_api.core.email import send_email
 from paes_api.core.security import hash_password, verify_password
-from paes_api.modules.users.models import PasswordResetToken, User
+from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 from paes_api.modules.users.schemas import RegisterIn, UpdateMeIn
 
 RESET_TOKEN_TTL_MINUTES = 30
+
+
+def record_login(db: Session, user: User, method: str) -> None:
+    """Deja constancia de una entrada exitosa.
+
+    Se guardan las dos cosas a propósito: `last_login_at` responde "¿sigue
+    activa esta cuenta?" sin recorrer la tabla de eventos, y `login_events`
+    responde "¿cuánta gente entró esta semana?", que el campo suelto no puede."""
+    user.last_login_at = datetime.now(UTC)
+    db.add(LoginEvent(user_id=user.id, method=method))
+    db.commit()
 
 
 def _as_aware_utc(dt: datetime) -> datetime:

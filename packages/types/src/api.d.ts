@@ -460,6 +460,50 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/metrics/pageview": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Registrar Visita
+         * @description Registra una visita. Público: la mayor parte del tráfico que interesa
+         *     medir es de gente que todavía no tiene cuenta.
+         *
+         *     Nunca falla hacia el usuario: medir no puede romper la navegación.
+         */
+        post: operations["registrar_visita_api_metrics_pageview_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/admin/metrics": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Metrics
+         * @description Todo el panel en una sola llamada: son consultas agregadas y baratas, y
+         *     partirlas en cinco endpoints solo multiplicaría los viajes.
+         */
+        get: operations["metrics_api_admin_metrics_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -481,6 +525,18 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** AdminMetricsOut */
+        AdminMetricsOut: {
+            /**
+             * Generado En
+             * Format: date-time
+             */
+            generado_en: string;
+            usuarios: components["schemas"]["UsuariosOut"];
+            sesiones: components["schemas"]["SesionesOut"];
+            visitas: components["schemas"]["VisitasOut"];
+            contenido: components["schemas"]["ContenidoOut"];
+        };
         /**
          * AlternativeSafeOut
          * @description Alternativa sin is_correct ni distractor_justification — para
@@ -551,6 +607,35 @@ export interface components {
             total: number;
             /** Percentage */
             percentage: number;
+        };
+        /** ContenidoOut */
+        ContenidoOut: {
+            ensayos: components["schemas"]["ConteoPeriodo"];
+            /** Puntaje Promedio */
+            puntaje_promedio: number | null;
+            /** Respuestas Totales */
+            respuestas_totales: number;
+            /** Tasa Acierto Global */
+            tasa_acierto_global: number | null;
+            /** Preguntas Mas Falladas */
+            preguntas_mas_falladas: components["schemas"]["PreguntaFallada"][];
+            /** Nodos Mas Flojos */
+            nodos_mas_flojos: components["schemas"]["NodoFlojo"][];
+        };
+        /**
+         * ConteoPeriodo
+         * @description El mismo número medido en tres ventanas. Un solo total no dice si algo
+         *     está creciendo o si pasó hace meses.
+         */
+        ConteoPeriodo: {
+            /** Hoy */
+            hoy: number;
+            /** Ultimos 7 */
+            ultimos_7: number;
+            /** Ultimos 30 */
+            ultimos_30: number;
+            /** Total */
+            total: number;
         };
         /** DailyStat */
         DailyStat: {
@@ -890,6 +975,17 @@ export interface components {
             /** Accuracy */
             accuracy: number;
         };
+        /** NodoFlojo */
+        NodoFlojo: {
+            /** Code */
+            code: string;
+            /** Name */
+            name: string;
+            /** Respuestas */
+            respuestas: number;
+            /** Tasa Acierto */
+            tasa_acierto: number;
+        };
         /**
          * Pace
          * @description Ritmo del ensayo: ajusta el tiempo respecto de la proporción oficial.
@@ -900,6 +996,16 @@ export interface components {
          * @enum {string}
          */
         Pace: "oficial" | "exigente" | "relajado";
+        /**
+         * PageViewIn
+         * @description Lo que manda el navegador en cada cambio de página.
+         */
+        PageViewIn: {
+            /** Path */
+            path: string;
+            /** Visitor Id */
+            visitor_id: string;
+        };
         /** PracticeAlternativeOut */
         PracticeAlternativeOut: {
             /** Id */
@@ -954,6 +1060,19 @@ export interface components {
             node_name: string;
             /** Questions */
             questions: components["schemas"]["PracticeQuestionOut"][];
+        };
+        /** PreguntaFallada */
+        PreguntaFallada: {
+            /** Question Id */
+            question_id: number;
+            /** Stem */
+            stem: string;
+            /** Axis */
+            axis: string;
+            /** Respuestas */
+            respuestas: number;
+            /** Tasa Acierto */
+            tasa_acierto: number;
         };
         /**
          * ProgressStatus
@@ -1051,6 +1170,36 @@ export interface components {
             /** Alternatives */
             alternatives: components["schemas"]["ReviewAlternativeOut"][];
         };
+        /** RutaVisitas */
+        RutaVisitas: {
+            /** Path */
+            path: string;
+            /** Visitas */
+            visitas: number;
+            /** Visitantes */
+            visitantes: number;
+        };
+        /** SerieDia */
+        SerieDia: {
+            /** Dia */
+            dia: string;
+            /** Valor */
+            valor: number;
+        };
+        /** SesionesOut */
+        SesionesOut: {
+            entradas: components["schemas"]["ConteoPeriodo"];
+            /** Activos 7 */
+            activos_7: number;
+            /** Activos 30 */
+            activos_30: number;
+            /** Por Metodo */
+            por_metodo: {
+                [key: string]: number;
+            };
+            /** Entradas Por Dia */
+            entradas_por_dia: components["schemas"]["SerieDia"][];
+        };
         /**
          * SkillAxis
          * @enum {string}
@@ -1133,6 +1282,37 @@ export interface components {
              * @default true
              */
             has_password: boolean;
+            /**
+             * Is Admin
+             * @default false
+             */
+            is_admin: boolean;
+        };
+        /** UsuarioResumen */
+        UsuarioResumen: {
+            /** Id */
+            id: number;
+            /** Email */
+            email: string;
+            /** Name */
+            name: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Last Login At */
+            last_login_at?: string | null;
+            /** Ensayos */
+            ensayos: number;
+        };
+        /** UsuariosOut */
+        UsuariosOut: {
+            registros: components["schemas"]["ConteoPeriodo"];
+            /** Nuevos Por Dia */
+            nuevos_por_dia: components["schemas"]["SerieDia"][];
+            /** Ultimos */
+            ultimos: components["schemas"]["UsuarioResumen"][];
         };
         /** ValidationError */
         ValidationError: {
@@ -1146,6 +1326,17 @@ export interface components {
             input?: unknown;
             /** Context */
             ctx?: Record<string, never>;
+        };
+        /** VisitasOut */
+        VisitasOut: {
+            vistas: components["schemas"]["ConteoPeriodo"];
+            visitantes: components["schemas"]["ConteoPeriodo"];
+            /** Anonimas 7 */
+            anonimas_7: number;
+            /** Vistas Por Dia */
+            vistas_por_dia: components["schemas"]["SerieDia"][];
+            /** Top Rutas */
+            top_rutas: components["schemas"]["RutaVisitas"][];
         };
     };
     responses: never;
@@ -1932,6 +2123,57 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    registrar_visita_api_metrics_pageview_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PageViewIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    metrics_api_admin_metrics_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AdminMetricsOut"];
                 };
             };
         };

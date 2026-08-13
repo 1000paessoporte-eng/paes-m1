@@ -31,6 +31,9 @@ export interface AuthUser {
   id: number;
   email: string;
   name: string;
+  /** Solo decide si se muestra el enlace al panel. La API vuelve a comprobarlo
+   *  en cada llamada, así que editar la cookie no da acceso a nada. */
+  is_admin?: boolean;
 }
 
 function readCookie(name: string): string | null {
@@ -61,6 +64,16 @@ export function clearClientAuth() {
 
 export function getClientToken(): string | null {
   return readCookie(TOKEN_COOKIE);
+}
+
+/**
+ * Ruta de entrada llevando de vuelta a donde estaba la persona. Se usa cuando
+ * la sesión caduca a mitad de uso: sin esto, quien iba en /historial terminaba
+ * en /examen tras volver a entrar.
+ */
+export function loginHref(next?: string | null): string {
+  if (!next) return "/login";
+  return `/login?next=${encodeURIComponent(next)}`;
 }
 
 export function getClientUser(): AuthUser | null {

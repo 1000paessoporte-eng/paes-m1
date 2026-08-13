@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { PageViewTracker } from "@/components/metrics/page-view-tracker";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <SiteHeader />
         {children}
+        <PageViewTracker />
         <Analytics />
         <SpeedInsights />
       </body>

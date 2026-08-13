@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { TextoRico } from "@/components/texto-rico";
@@ -23,7 +23,7 @@ import {
   type Repaso,
   type Subject,
 } from "@/lib/api";
-import { getClientToken } from "@/lib/auth";
+import { getClientToken, loginHref } from "@/lib/auth";
 import { formatearReloj } from "@/lib/tiempo";
 
 const STORAGE_KEY = "paes_exam_attempt_id";
@@ -36,20 +36,26 @@ interface AnswerState {
   flagged: boolean;
 }
 
+interface ResumableAttempt {
+  attemptId: number;
+  subject: Subject;
+}
+
 interface ExamRunnerProps {
   optionsBySubject: Record<Subject, ExamOptions>;
   pastAttempts: ExamAttemptSummary[];
-  resumableAttemptId: number | null;
+  resumable: ResumableAttempt | null;
   repasoBySubject: Record<Subject, Repaso>;
 }
 
 export function ExamRunner({
   optionsBySubject,
   pastAttempts,
-  resumableAttemptId,
+  resumable,
   repasoBySubject,
 }: ExamRunnerProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [phase, setPhase] = useState<Phase>("config");
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [attemptSubject, setAttemptSubject] = useState<Subject>("m1");
@@ -104,11 +110,11 @@ export function ExamRunner({
         (err) => {
           // Autosave best-effort: si falla, el próximo flush reintenta con el
           // tiempo acumulado.
-          if (err instanceof ApiError && err.status === 401) router.push("/login");
+          if (err instanceof ApiError && err.status === 401) router.push(loginHref(pathname));
         }
       );
     },
-    [router]
+    [router, pathname]
   );
 
   const goToQuestion = useCallback(
@@ -152,6 +158,10 @@ export function ExamRunner({
     const res = await submitExam(id, token);
     setResult(res);
     setPhase("submitted");
+    // El modal de confirmación cumplió su función: si no se baja acá queda en
+    // true para siempre (solo "Seguir" lo bajaba), y reaparece solo al empezar
+    // el siguiente ensayo, encima de la pregunta 1.
+    setConfirmingSubmit(false);
     localStorage.removeItem(STORAGE_KEY);
     // Mejor esfuerzo: si falla, se muestra el puntaje sin la revisión.
     getExamReview(id, token)
@@ -174,14 +184,14 @@ export function ExamRunner({
       await loadResult(id);
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) {
-        router.push("/login");
+        router.push(loginHref(pathname));
         return;
       }
       setErrorMsg("No se pudo enviar el ensayo. Revisa tu conexión e intenta de nuevo.");
     } finally {
       setSubmitting(false);
     }
-  }, [currentQuestion, flush, loadResult, router, submitting]);
+  }, [currentQuestion, flush, loadResult, router, pathname, submitting]);
 
   const resumeAttempt = useCallback(async (id: number) => {
     setPhase("loading");
@@ -319,7 +329,7 @@ export function ExamRunner({
       setPhase("in_progress");
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) {
-        router.push("/login");
+        router.push(loginHref(pathname));
         return;
       }
       setErrorMsg("No se pudo iniciar el ensayo. Verifica que la API esté disponible.");
@@ -362,10 +372,10 @@ export function ExamRunner({
         optionsBySubject={optionsBySubject}
         repasoBySubject={repasoBySubject}
         ensayosRendidos={pastAttempts.length}
-        resumable={resumableAttemptId != null}
+        resumable={resumable}
         errorMsg={errorMsg}
         onComenzar={handleStart}
-        onContinuar={() => resumableAttemptId != null && resumeAttempt(resumableAttemptId)}
+        onContinuar={() => resumable != null && resumeAttempt(resumable.attemptId)}
       />
     );
   }

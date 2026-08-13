@@ -56,6 +56,9 @@ export type AuthUserOut =
 export type TokenOut =
   paths["/api/auth/login"]["post"]["responses"][200]["content"]["application/json"];
 
+export type AdminMetrics =
+  paths["/api/admin/metrics"]["get"]["responses"][200]["content"]["application/json"];
+
 export class ApiError extends Error {
   constructor(
     public status: number,
@@ -200,6 +203,22 @@ export function getExamReview(attemptId: number, token?: string): Promise<ExamRe
 
 export function getAnalyticsSummary(token?: string): Promise<AnalyticsSummary> {
   return apiFetch<AnalyticsSummary>("/api/analytics/summary", token);
+}
+
+export function getAdminMetrics(token?: string): Promise<AdminMetrics> {
+  return apiFetch<AdminMetrics>("/api/admin/metrics", token);
+}
+
+/**
+ * Registra una visita. Silencia cualquier error a propósito: medir nunca debe
+ * romper la navegación de quien está usando el sitio.
+ */
+export function trackPageView(path: string, visitorId: string, token?: string): void {
+  apiFetch<void>("/api/metrics/pageview", token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ path, visitor_id: visitorId }),
+  }).catch(() => {});
 }
 
 export function registerUser(email: string, password: string, name: string): Promise<TokenOut> {

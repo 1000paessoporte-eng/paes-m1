@@ -13,6 +13,9 @@ class UserOut(BaseModel):
     avatar_url: str | None = None
     #: Si es False, la cuenta entró con Google y aún no define contraseña.
     has_password: bool = True
+    #: La web solo lo usa para mostrar u ocultar el enlace al panel. Quien
+    #: manda es la API: /api/admin exige el rol en cada llamada.
+    is_admin: bool = False
 
 
 class RegisterIn(BaseModel):

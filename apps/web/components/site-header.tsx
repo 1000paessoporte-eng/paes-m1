@@ -20,6 +20,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
 
+  // El panel solo se enlaza para admins. Ocultarlo es comodidad, no seguridad:
+  // /api/admin exige el rol en cada llamada.
+  const navItems = user?.is_admin
+    ? [...NAV_ITEMS, { href: "/admin", label: "Admin" } as const]
+    : NAV_ITEMS;
+
   useEffect(() => {
     // Lectura de cookie (estado externo al DOM) tras montar: evita mismatch
     // de hidratación, ya que el SSR no tiene acceso a document.cookie.
@@ -58,7 +64,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {NAV_ITEMS.map((item) => {
+          {navItems.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
@@ -128,7 +134,7 @@ export function SiteHeader() {
 
       {open && (
         <nav className="flex flex-col gap-1 border-t border-border px-4 py-3 md:hidden">
-          {NAV_ITEMS.map((item) => {
+          {navItems.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (

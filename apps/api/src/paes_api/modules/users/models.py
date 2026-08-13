@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TYPE_CHECKING
 
-from sqlalchemy import DateTime, ForeignKey, String, func
+from sqlalchemy import Boolean, DateTime, ForeignKey, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
@@ -25,6 +25,15 @@ class User(Base):
     )
     avatar_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     name: Mapped[str] = mapped_column(String(120))
+    #: Acceso al panel de administración (/admin). Se otorga a mano con
+    #: `scripts/make_admin.py`: no hay forma de volverse admin desde la web,
+    #: porque el panel expone datos de todas las cuentas.
+    is_admin: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false")
+    #: Última entrada exitosa. Sirve para "quién sigue activo" sin recorrer
+    #: toda la tabla de eventos.
+    last_login_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
@@ -38,6 +47,23 @@ class User(Base):
     def has_password(self) -> bool:
         """False en cuentas de Google que aún no definen una contraseña."""
         return self.hashed_password is not None
+
+
+class LoginEvent(Base):
+    """Una fila por entrada exitosa (contraseña o Google).
+
+    `User.last_login_at` solo guarda la última: para responder "cuánta gente
+    entró esta semana" hace falta el historial, no el estado actual."""
+
+    __tablename__ = "login_events"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    #: "password" | "google". Sirve para saber cuánto se usa cada vía de entrada.
+    method: Mapped[str] = mapped_column(String(20))
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), index=True
+    )
 
 
 class PasswordResetToken(Base):

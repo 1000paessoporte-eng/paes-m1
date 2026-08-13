@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { ProgressChart } from "@/components/history/progress-chart";
 import { ApiError, deleteExamAttempt, type ExamAttemptSummary } from "@/lib/api";
-import { getClientToken } from "@/lib/auth";
+import { getClientToken, loginHref } from "@/lib/auth";
 import { formatearTiempo } from "@/lib/tiempo";
 
 const FECHA_FMT = new Intl.DateTimeFormat("es-CL", {
@@ -43,6 +43,7 @@ interface Props {
 
 export function HistoryView({ intentos }: Props) {
   const router = useRouter();
+  const pathname = usePathname();
   const [borrando, setBorrando] = useState<number | null>(null);
   const [confirmarBorrado, setConfirmarBorrado] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -57,7 +58,7 @@ export function HistoryView({ intentos }: Props) {
       router.refresh();
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) {
-        router.push("/login");
+        router.push(loginHref(pathname));
         return;
       }
       setError("No se pudo eliminar el ensayo. Intenta de nuevo.");

@@ -89,10 +89,16 @@ export function GoogleButton({ redirectTo = "/examen", onError }: Props) {
 
   return (
     <>
+      {/* `onReady` y no `onLoad`: onLoad solo corre la primera vez que el
+          script se descarga. Al navegar dentro del sitio y volver, el script
+          ya está cargado, onLoad no vuelve a dispararse y el botón quedaba
+          sin renderizar (un hueco vacío). onReady corre también en cada
+          re-montaje del componente. */}
       <Script
+        id="google-identity-services"
         src="https://accounts.google.com/gsi/client"
         strategy="afterInteractive"
-        onLoad={() => setListo(true)}
+        onReady={() => setListo(true)}
       />
       <div className="flex flex-col items-center gap-2">
         <div ref={contenedor} />

@@ -16,7 +16,7 @@ export default async function ArbolHabilidadesPage() {
       getRecommendedNode(token),
     ]);
   } catch (err) {
-    if (err instanceof ApiError && err.status === 401) redirect("/login");
+    if (err instanceof ApiError && err.status === 401) redirect("/login?next=/arbol");
     return (
       <div>
         <h1 className="text-2xl font-semibold">Árbol de Habilidades</h1>

@@ -29,6 +29,8 @@ def register(request: Request, payload: RegisterIn, db: Session = Depends(get_db
     user = service.register_user(db, payload)
     if user is None:
         raise HTTPException(status_code=409, detail="Ese correo ya está registrado")
+    # Registrarse deja la sesión abierta, así que cuenta como entrada.
+    service.record_login(db, user, "password")
     return TokenOut(access_token=create_access_token(user.id), user=UserOut.model_validate(user))
 
 
@@ -38,6 +40,7 @@ def login(request: Request, payload: LoginIn, db: Session = Depends(get_db)) -> 
     user = service.authenticate(db, payload.email, payload.password)
     if user is None:
         raise HTTPException(status_code=401, detail="Correo o contraseña incorrectos")
+    service.record_login(db, user, "password")
     return TokenOut(access_token=create_access_token(user.id), user=UserOut.model_validate(user))
 
 
@@ -55,6 +58,7 @@ def login_with_google(payload: GoogleLoginIn, db: Session = Depends(get_db)) -> 
         )
     except service.GoogleAuthError as exc:
         raise HTTPException(status_code=401, detail=str(exc)) from exc
+    service.record_login(db, user, "google")
     return TokenOut(
         access_token=create_access_token(user.id), user=UserOut.model_validate(user)
     )

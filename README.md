@@ -39,6 +39,7 @@ No es un banco de preguntas plano. Las piezas:
 | **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
 | **Analítica** | 🟢 Funcional | Racha, precisión global, tiempo invertido, gráficos SVG propios. |
 | **Demo sin cuenta** | 🟢 Funcional | `/demo`: 5 preguntas, sin auth y sin persistir nada. |
+| **Panel de administración** | 🟢 Funcional | `/admin`: usuarios, entradas, visitas (incluidas anónimas) y uso del contenido. Solo cuentas con rol admin. |
 | **Cobros / planes** | 🔴 No implementado | Los planes Pro y Colegios son vitrina. No hay pasarela de pago. |
 
 ### Contenido actual
@@ -86,6 +87,8 @@ modules/practice/      Práctica por nodo individual
 modules/analytics/     Dashboard
 modules/demo/          Demo pública sin auth
 modules/users/         Auth (registro, login, Google, reset de contraseña, perfil)
+modules/metrics/       Ingesta pública de visitas (POST /metrics/pageview)
+modules/admin/         Panel: agregados de usuarios, sesiones, visitas y contenido
 modules/content/       Preguntas, alternativas
 all_models.py          Import único de TODOS los modelos SQLAlchemy. Necesario
                        para resolver relaciones declaradas por string; lo usan
@@ -97,6 +100,53 @@ seed_data.py           SKILL_NODES (M1), SKILL_NODES_M2 y QUESTIONS
 (`start`/`get`/`answer`/`submit`) **nunca** exponen `is_correct` ni
 `distractor_justification` mientras el ensayo está en curso. Esos datos solo
 aparecen en `/review`, que exige el intento ya finalizado.
+
+### Administración y métricas
+
+`User.is_admin` da acceso a `/admin`. **No hay forma de volverse admin desde la
+web**: el panel muestra datos de todas las cuentas, así que el rol se otorga a
+mano con acceso a la base:
+
+```bash
+cd apps/api
+uv run python scripts/make_admin.py correo@ejemplo.cl      # otorgar
+uv run python scripts/make_admin.py correo@ejemplo.cl --quitar
+uv run python scripts/make_admin.py --listar
+```
+
+Contra producción hay que exportar antes la `DATABASE_URL` **directa** de Neon,
+igual que para alembic y el seed.
+
+**Hoy el único rol admin es la cuenta del proyecto, `1000paessoporte@gmail.com`.**
+Conviene que se registre desde la web (así elige su propia contraseña) y recién
+después se le otorgue el rol con el script; `--crear` existe para entornos
+locales, no para producción.
+
+`/api/admin/metrics` responde **404 y no 403** a las cuentas sin rol: una cuenta
+normal no debe enterarse de que el panel existe. La página `/admin` hace lo
+mismo. El enlace en el header se oculta por comodidad, no por seguridad — la
+API vuelve a comprobar el rol en cada llamada, así que editar la cookie no
+sirve de nada.
+
+De dónde salen los números:
+
+- **Usuarios**: tabla `users`.
+- **Entradas**: tabla `login_events`, una fila por inicio de sesión (incluido
+  el registro, que deja la sesión abierta). `users.last_login_at` guarda solo
+  la última: se usan las dos porque el campo suelto no puede responder
+  "cuánta gente entró esta semana".
+- **Visitas**: tabla `page_views`, alimentada por `PageViewTracker` en el
+  layout raíz. Guarda la ruta (sin query string: el token de restablecer
+  contraseña viaja ahí) y un identificador aleatorio de navegador guardado en
+  localStorage. **No se guarda IP ni user agent** — está declarado así en
+  `/privacidad`, y cambiarlo obliga a actualizar esa página.
+- **Contenido**: `exam_answers` (correcta o no vía la alternativa elegida) más
+  `practice_answers`. Las respuestas en blanco no entran al cálculo de
+  acierto, y los rankings exigen un mínimo de 5 respuestas para que una
+  pregunta contestada una sola vez no aparezca como "la peor".
+
+Esto convive con Vercel Analytics sin reemplazarlo: aquel mide rendimiento y
+tráfico, este alimenta las tablas que el panel cruza con registros y ensayos.
 
 ### El concepto `subject` (prueba PAES)
 
@@ -120,10 +170,12 @@ app/preguntas-frecuentes/         FAQ
 app/terminos/, app/privacidad/    Legales
 app/demo/                         Demo sin cuenta
 app/(auth)/                       login, registro, olvide/restablecer contraseña
-app/(dashboard)/                  arbol, examen, historial, analitica, perfil, practicar
+app/(dashboard)/                  arbol, examen, historial, analitica, perfil, practicar, admin
 app/sitemap.ts, app/robots.ts     SEO
 app/opengraph-image.tsx           Card de preview para redes/WhatsApp
 
+components/auth/auth-panel.tsx        Entrar / crear cuenta en una sola pantalla
+components/metrics/page-view-tracker.tsx  Avisa cada cambio de ruta al backend
 components/home/landing-publica.tsx   Portada sin sesión
 components/home/panel-inicio.tsx      Portada con sesión
 components/site-header.tsx            Header global
@@ -255,6 +307,23 @@ entrar. Se configura con el mismo client ID en `GOOGLE_CLIENT_ID` (api) y
 el endpoint responde 401: la web sigue andando con correo y contraseña.
 `NEXT_PUBLIC_*` se incrusta en build time, así que **hay que reconstruir**
 después de cambiarlo. Google no acepta IPs privadas como origen autorizado.
+
+El `<Script>` de Google usa **`onReady` y no `onLoad`**. `onLoad` corre solo la
+primera vez que el script se descarga: al navegar dentro del sitio y volver, el
+script ya está cargado, `onLoad` no vuelve a dispararse y el botón quedaba sin
+renderizar (un hueco vacío en la portada y en registro). `onReady` corre también
+en cada re-montaje del componente. No cambiarlo de vuelta.
+
+**Entrar y crear cuenta son una sola pantalla** (`components/auth/auth-panel.tsx`),
+con pestañas. `/login` y `/registro` siguen existiendo porque hay enlaces
+repartidos por el sitio y el sitemap; cada ruta solo decide qué pestaña abre, y
+cambiar de pestaña actualiza la URL con `replace`. Aceptan `?next=` para volver
+a donde estaba la persona, y solo admiten rutas internas (un `next` con `http://`
+o `//` permitiría usar 1000paes como trampolín a un sitio ajeno). Las páginas del
+dashboard mandan su propia ruta al redirigir por 401. **Salvedad conocida**: el
+gate de `app/(dashboard)/layout.tsx` corre sin sesión y no puede saber la ruta
+(Next 16 no la expone por cabeceras, verificado), así que quien entra sin haber
+iniciado sesión nunca cae en `/examen`, que es el comportamiento de siempre.
 
 **Set de preguntas persistido.** Como la selección del ensayo es aleatoria y
 proporcional por eje, el set de cada intento se guarda en
