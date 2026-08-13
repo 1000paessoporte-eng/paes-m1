@@ -41,6 +41,45 @@ const DATOS = [
   { label: "Gratis mientras estamos en beta", icon: SparkIcon },
 ] as const;
 
+const PASOS = [
+  {
+    title: "Elige tu ensayo",
+    description:
+      "M1 o M2, qué ejes practicar, cuántas preguntas y a qué ritmo. Tú decides el formato.",
+  },
+  {
+    title: "Ríndelo con tiempo real",
+    description:
+      "El cronómetro respeta la misma proporción minutos/pregunta que la prueba oficial DEMRE.",
+  },
+  {
+    title: "Revisa y refuerza",
+    description:
+      "Puntaje estimado, desglose por eje y la resolución paso a paso de cada pregunta que fallaste.",
+  },
+] as const;
+
+const CONFIANZA = [
+  {
+    title: "Puntaje con tablas oficiales",
+    description:
+      "La conversión a escala 100-1000 usa las tablas de transformación publicadas por el DEMRE para cada prueba, no una fórmula inventada.",
+    icon: TargetIcon,
+  },
+  {
+    title: "Tiempo real de cada prueba",
+    description:
+      "El cronómetro respeta la razón oficial minutos/pregunta: M1 son 65 preguntas en 140 min, M2 son 55 preguntas en 140 min.",
+    icon: ClockIcon,
+  },
+  {
+    title: "Sin letra chica",
+    description:
+      "Estamos en beta: todo lo que ves hoy es gratis, y sumamos preguntas y funciones nuevas cada semana.",
+    icon: SparkIcon,
+  },
+] as const;
+
 export function LandingPublica() {
   return (
     <main className="flex flex-1 flex-col">
@@ -64,7 +103,12 @@ export function LandingPublica() {
               </span>
             </h1>
 
-            <p className="max-w-xl text-balance text-muted sm:text-lg">
+            <p className="max-w-xl text-balance text-lg font-medium text-foreground sm:text-xl">
+              La PAES se acerca. Prepárate con datos reales, no con
+              suposiciones.
+            </p>
+
+            <p className="max-w-xl text-balance text-muted">
               Ensayos de matemática con el tiempo real de la prueba, tu puntaje
               estimado y la resolución de cada ejercicio. Practica, mide y
               mejora.
@@ -83,37 +127,73 @@ export function LandingPublica() {
             </ul>
 
             <div className="mt-2 flex flex-col items-center gap-3 lg:items-start">
-              <GoogleButton redirectTo="/examen" />
+              <Link
+                href="/registro"
+                className="btn-glow rounded-lg px-8 py-3.5 text-base font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
+              >
+                Empezar gratis →
+              </Link>
               <div className="flex items-center gap-3 self-stretch text-xs text-muted">
                 <span className="h-px flex-1 bg-border" />
                 o
                 <span className="h-px flex-1 bg-border" />
               </div>
-              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                <Link
-                  href="/registro"
-                  className="btn-glow rounded-lg px-6 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
-                >
-                  Crear cuenta gratis
-                </Link>
+              <GoogleButton redirectTo="/examen" />
+              <p className="text-sm text-muted">
                 <Link
                   href="/demo"
-                  className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface-hover"
+                  className="font-medium text-accent underline-offset-4 hover:underline"
                 >
                   Pruébalo sin cuenta
                 </Link>
-              </div>
-              <Link
-                href="/login"
-                className="text-sm text-muted underline-offset-4 hover:text-foreground hover:underline"
-              >
-                ¿Ya tienes cuenta? Inicia sesión
-              </Link>
+                {" · "}
+                <Link
+                  href="/login"
+                  className="underline-offset-4 hover:text-foreground hover:underline"
+                >
+                  Ya tengo cuenta
+                </Link>
+              </p>
             </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-sm lg:mx-0">
             <PuntajeMockup />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-lg text-center">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Así funciona
+            </h2>
+            <p className="mt-3 text-sm text-muted">
+              Sin vueltas: armas tu ensayo, lo rindes y sabes exactamente qué
+              reforzar.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+            {PASOS.map((paso, i) => (
+              <div key={paso.title} className="flex flex-col items-center text-center sm:items-start sm:text-left">
+                <span
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-accent-foreground"
+                  style={{
+                    background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
+                  }}
+                >
+                  {i + 1}
+                </span>
+                <h3 className="mt-4 text-sm font-semibold text-foreground">
+                  {paso.title}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                  {paso.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -158,6 +238,39 @@ export function LandingPublica() {
             </Link>
             .
           </p>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-surface/50 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-lg text-center">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              Hecho con los datos reales de la PAES
+            </h2>
+            <p className="mt-3 text-sm text-muted">
+              Nada de fórmulas inventadas: el puntaje y los tiempos salen de
+              lo que publica el DEMRE.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {CONFIANZA.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-border bg-background p-5"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                  <item.icon />
+                </div>
+                <h3 className="mt-3 text-sm font-semibold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
