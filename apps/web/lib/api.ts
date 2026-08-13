@@ -134,6 +134,13 @@ export function getExamOptions(token?: string): Promise<ExamOptions> {
   return apiFetch<ExamOptions>("/api/exam/options", token);
 }
 
+export type Repaso =
+  paths["/api/exam/repaso"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getRepaso(token?: string): Promise<Repaso> {
+  return apiFetch<Repaso>("/api/exam/repaso", token);
+}
+
 export function startExam(config: ExamConfig, token?: string): Promise<ExamStart> {
   return apiFetch<ExamStart>("/api/exam/start", token, {
     method: "POST",
@@ -250,5 +257,27 @@ export function resetPassword(token: string, newPassword: string): Promise<void>
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token, new_password: newPassword }),
+  });
+}
+
+// ── Demo pública, sin cuenta ────────────────────────────────────────────
+
+export type DemoQuestion =
+  paths["/api/demo/questions"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export type DemoGradeResult =
+  paths["/api/demo/grade"]["post"]["responses"][200]["content"]["application/json"];
+
+export function getDemoQuestions(): Promise<DemoQuestion[]> {
+  return apiFetch<DemoQuestion[]>("/api/demo/questions");
+}
+
+export function gradeDemo(
+  answers: { question_id: number; selected_alternative_id: number | null }[]
+): Promise<DemoGradeResult> {
+  return apiFetch<DemoGradeResult>("/api/demo/grade", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ answers }),
   });
 }

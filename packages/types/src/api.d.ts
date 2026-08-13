@@ -223,6 +223,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam/repaso": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Repaso
+         * @description Sugerencia para el botón "Ensayo de repaso" en la config del ensayo.
+         */
+        get: operations["get_repaso_api_exam_repaso_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/exam": {
         parameters: {
             query?: never;
@@ -397,6 +417,49 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/demo/questions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Demo Questions
+         * @description Preguntas de prueba SIN cuenta: pública, sin auth, sin persistir nada.
+         *     Solo fácil/medio -- la demo busca enganchar, no frustrar en el primer
+         *     contacto con la plataforma.
+         */
+        get: operations["get_demo_questions_api_demo_questions_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/demo/grade": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Grade Demo
+         * @description Corrige la demo al vuelo, sin guardar ningún intento -- no hay usuario
+         *     todavía, así que no hay dónde guardarlo.
+         */
+        post: operations["grade_demo_api_demo_grade_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -504,6 +567,60 @@ export interface components {
             accuracy: number | null;
             /** Minutes Practiced */
             minutes_practiced: number;
+        };
+        /**
+         * DemoAlternativeOut
+         * @description Sin is_correct: misma regla de integridad que el Modo Examen.
+         */
+        DemoAlternativeOut: {
+            /** Id */
+            id: number;
+            /** Label */
+            label: string;
+            /** Text */
+            text: string;
+        };
+        /** DemoAnswerIn */
+        DemoAnswerIn: {
+            /** Question Id */
+            question_id: number;
+            /** Selected Alternative Id */
+            selected_alternative_id?: number | null;
+        };
+        /** DemoGradeIn */
+        DemoGradeIn: {
+            /** Answers */
+            answers: components["schemas"]["DemoAnswerIn"][];
+        };
+        /** DemoGradeItemOut */
+        DemoGradeItemOut: {
+            /** Question Id */
+            question_id: number;
+            /** Is Correct */
+            is_correct: boolean;
+            /** Correct Alternative Id */
+            correct_alternative_id: number;
+            /** Explanation */
+            explanation?: string | null;
+        };
+        /** DemoGradeOut */
+        DemoGradeOut: {
+            /** Items */
+            items: components["schemas"]["DemoGradeItemOut"][];
+            /** Correct */
+            correct: number;
+            /** Total */
+            total: number;
+        };
+        /** DemoQuestionOut */
+        DemoQuestionOut: {
+            /** Id */
+            id: number;
+            difficulty: components["schemas"]["Difficulty"];
+            /** Stem */
+            stem: string;
+            /** Alternatives */
+            alternatives: components["schemas"]["DemoAlternativeOut"][];
         };
         /**
          * Difficulty
@@ -863,6 +980,21 @@ export interface components {
             password: string;
             /** Name */
             name: string;
+        };
+        /**
+         * RepasoOut
+         * @description Sugerencia para el boton "Ensayo de repaso": los ejes de los nodos
+         *     donde el estudiante rinde peor, reusando el mismo progreso del Arbol de
+         *     Habilidades. has_data en False significa que todavia no hay suficientes
+         *     respuestas para sugerir nada (usuario nuevo).
+         */
+        RepasoOut: {
+            /** Has Data */
+            has_data: boolean;
+            /** Axes */
+            axes: string[];
+            /** Axis Labels */
+            axis_labels: string[];
         };
         /** ResetPasswordIn */
         ResetPasswordIn: {
@@ -1364,6 +1496,26 @@ export interface operations {
             };
         };
     };
+    get_repaso_api_exam_repaso_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RepasoOut"];
+                };
+            };
+        };
+    };
     list_exam_attempts_api_exam_get: {
         parameters: {
             query?: never;
@@ -1689,6 +1841,59 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AnalyticsSummaryOut"];
+                };
+            };
+        };
+    };
+    get_demo_questions_api_demo_questions_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DemoQuestionOut"][];
+                };
+            };
+        };
+    };
+    grade_demo_api_demo_grade_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["DemoGradeIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DemoGradeOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

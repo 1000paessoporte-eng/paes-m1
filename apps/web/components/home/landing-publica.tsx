@@ -63,6 +63,12 @@ export function LandingPublica() {
             >
               Crear una cuenta nueva
             </Link>
+            <Link
+              href="/demo"
+              className="text-sm font-medium text-accent underline-offset-4 hover:underline"
+            >
+              Pruébalo sin cuenta →
+            </Link>
           </div>
         </div>
       </section>

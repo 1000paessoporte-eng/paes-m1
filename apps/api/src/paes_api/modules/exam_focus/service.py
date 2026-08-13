@@ -36,6 +36,7 @@ from paes_api.modules.exam_focus.schemas import (
     ExamResultOut,
     ExamReviewOut,
     NodeDiagnosisOut,
+    RepasoOut,
     ReviewAlternativeOut,
     ReviewQuestionOut,
 )
@@ -80,6 +81,28 @@ def get_options(db: Session) -> ExamOptionsOut:
         seconds_per_question=scoring.segundos_por_pregunta(),
         official_questions=scoring.PREGUNTAS_OFICIALES,
         official_duration_min=scoring.DURACION_OFICIAL_MIN,
+    )
+
+
+def get_repaso(db: Session, user_id: int) -> RepasoOut:
+    """Sugerencia para "Ensayo de repaso": los ejes de los 2 nodos con peor
+    accuracy entre los que el usuario ya intento, reusando el mismo progreso
+    que alimenta el Arbol de Habilidades (no es un calculo nuevo)."""
+    tree = skill_tree_service.get_user_skill_tree(db, user_id)
+    attempted = [n for n in tree if n.attempts > 0]
+    if not attempted:
+        return RepasoOut(has_data=False, axes=[], axis_labels=[])
+
+    weakest = sorted(attempted, key=lambda n: n.accuracy)[:2]
+    axes: list[str] = []
+    for node in weakest:
+        if node.axis.value not in axes:
+            axes.append(node.axis.value)
+
+    return RepasoOut(
+        has_data=True,
+        axes=axes,
+        axis_labels=[AXIS_LABELS[a] for a in axes],
     )
 
 

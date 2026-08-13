@@ -20,6 +20,7 @@ import {
   type ExamQuestion,
   type ExamResult,
   type ExamReview,
+  type Repaso,
 } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { formatearReloj } from "@/lib/tiempo";
@@ -38,9 +39,15 @@ interface ExamRunnerProps {
   options: ExamOptions;
   pastAttempts: ExamAttemptSummary[];
   resumableAttemptId: number | null;
+  repaso: Repaso;
 }
 
-export function ExamRunner({ options, pastAttempts, resumableAttemptId }: ExamRunnerProps) {
+export function ExamRunner({
+  options,
+  pastAttempts,
+  resumableAttemptId,
+  repaso,
+}: ExamRunnerProps) {
   const router = useRouter();
   const [phase, setPhase] = useState<Phase>("config");
   const [attemptId, setAttemptId] = useState<number | null>(null);
@@ -349,6 +356,7 @@ export function ExamRunner({ options, pastAttempts, resumableAttemptId }: ExamRu
     return (
       <ExamConfigScreen
         options={options}
+        repaso={repaso}
         ensayosRendidos={pastAttempts.length}
         resumable={resumableAttemptId != null}
         errorMsg={errorMsg}

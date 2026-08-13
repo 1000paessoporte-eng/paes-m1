@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "@paes-m1/utils";
-import type { ExamConfig, ExamOptions, Pace } from "@/lib/api";
+import type { ExamConfig, ExamOptions, Pace, Repaso } from "@/lib/api";
+import { diasHastaPaes } from "@/lib/paes-fecha";
 
 /**
  * Formatos de ensayo. 65 es la prueba oficial completa, 34 la mitad y 20 un
@@ -54,6 +55,7 @@ function formatearDuracionLarga(segundos: number): string {
 
 interface Props {
   options: ExamOptions;
+  repaso: Repaso;
   ensayosRendidos: number;
   resumable: boolean;
   errorMsg: string | null;
@@ -63,6 +65,7 @@ interface Props {
 
 export function ExamConfigScreen({
   options,
+  repaso,
   ensayosRendidos,
   resumable,
   errorMsg,
@@ -72,6 +75,7 @@ export function ExamConfigScreen({
   const [cantidad, setCantidad] = useState(20);
   const [ritmo, setRitmo] = useState<Pace>("oficial");
   const [ejes, setEjes] = useState<string[]>([]);
+  const dias = diasHastaPaes();
 
   const maxDisponible = useMemo(() => {
     if (ejes.length === 0) return options.total_available;
@@ -98,9 +102,17 @@ export function ExamConfigScreen({
   return (
     <div className="mx-auto max-w-3xl">
       <header className="mb-10">
-        <p className="text-sm font-medium text-accent">
-          Preparación PAES · Admisión 2027
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-sm font-medium text-accent">
+            Preparación PAES · Admisión 2027
+          </p>
+          {dias !== null && (
+            <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">
+              Faltan <strong className="text-foreground">{dias}</strong>{" "}
+              {dias === 1 ? "día" : "días"} para la PAES
+            </span>
+          )}
+        </div>
         <h1 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl">
           Modo Ensayo
         </h1>
@@ -110,6 +122,30 @@ export function ExamConfigScreen({
           explicación de cada respuesta.
         </p>
       </header>
+
+      {repaso.has_data && (
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4">
+          <div>
+            <p className="text-sm font-medium">Ensayo de repaso</p>
+            <p className="mt-0.5 text-sm text-muted">
+              Enfocado en donde peor rindes:{" "}
+              <strong className="text-foreground">
+                {repaso.axis_labels.join(" y ")}
+              </strong>
+              .
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() =>
+              onComenzar({ question_count: 20, pace: "oficial", axes: repaso.axes })
+            }
+            className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
+          >
+            Empezar ahora
+          </button>
+        </div>
+      )}
 
       {resumable && (
         <div className="mb-8 rounded-xl border border-accent/40 bg-accent/5 p-4">

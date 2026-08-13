@@ -66,6 +66,17 @@ class ExamConfigOut(BaseModel):
     axes: list[str]
 
 
+class RepasoOut(BaseModel):
+    """Sugerencia para el boton "Ensayo de repaso": los ejes de los nodos
+    donde el estudiante rinde peor, reusando el mismo progreso del Arbol de
+    Habilidades. has_data en False significa que todavia no hay suficientes
+    respuestas para sugerir nada (usuario nuevo)."""
+
+    has_data: bool
+    axes: list[str]
+    axis_labels: list[str]
+
+
 class ExamStartOut(BaseModel):
     attempt_id: int
     started_at: datetime
