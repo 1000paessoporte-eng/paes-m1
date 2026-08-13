@@ -6,8 +6,10 @@ const API_ORIGIN = process.env.API_URL ?? "http://127.0.0.1:8000";
 
 const nextConfig: NextConfig = {
   // Build standalone (server.js + node_modules mínimos) para la imagen
-  // Docker de produccion -- ver apps/web/Dockerfile.
-  output: "standalone",
+  // Docker de produccion -- ver apps/web/Dockerfile. Vercel hace su propio
+  // empaquetado/tracing y choca con output "standalone", asi que solo se usa
+  // fuera de Vercel.
+  ...(process.env.VERCEL ? {} : { output: "standalone" as const }),
   // Monorepo: sin esto, el file tracing de standalone puede confundirse con
   // el lockfile del workspace en la raiz y quedar en la carpeta equivocada.
   outputFileTracingRoot: path.join(__dirname, "../../"),
