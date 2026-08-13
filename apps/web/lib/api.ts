@@ -236,3 +236,19 @@ export function updateMe(payload: UpdateMeIn, token?: string): Promise<AuthUserO
     body: JSON.stringify(payload),
   });
 }
+
+export function forgotPassword(email: string): Promise<void> {
+  return apiFetch<void>("/api/auth/forgot-password", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+}
+
+export function resetPassword(token: string, newPassword: string): Promise<void> {
+  return apiFetch<void>("/api/auth/reset-password", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token, new_password: newPassword }),
+  });
+}

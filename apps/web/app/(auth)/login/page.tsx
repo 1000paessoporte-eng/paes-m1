@@ -74,7 +74,12 @@ export default function LoginPage() {
             />
           </label>
           <label className="flex flex-col gap-1.5 text-left">
-            <span className="text-xs font-medium text-muted">Contraseña</span>
+            <span className="flex items-center justify-between text-xs font-medium text-muted">
+              Contraseña
+              <Link href="/olvide-contrasena" className="font-medium text-accent hover:underline">
+                ¿Olvidaste tu contraseña?
+              </Link>
+            </span>
             <input
               type="password"
               required

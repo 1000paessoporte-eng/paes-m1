@@ -75,6 +75,44 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/auth/forgot-password": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Forgot Password
+         * @description Siempre responde 204, exista o no el correo: no revela qué cuentas
+         *     están registradas.
+         */
+        post: operations["forgot_password_api_auth_forgot_password_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/auth/reset-password": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Reset Password */
+        post: operations["reset_password_api_auth_reset_password_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/auth/me": {
         parameters: {
             query?: never;
@@ -682,6 +720,14 @@ export interface components {
                 [key: string]: components["schemas"]["ExamAnswerState"];
             };
         };
+        /** ForgotPasswordIn */
+        ForgotPasswordIn: {
+            /**
+             * Email
+             * Format: email
+             */
+            email: string;
+        };
         /**
          * GoogleLoginIn
          * @description `credential` es el ID token (JWT) que entrega Google Identity Services.
@@ -817,6 +863,13 @@ export interface components {
             password: string;
             /** Name */
             name: string;
+        };
+        /** ResetPasswordIn */
+        ResetPasswordIn: {
+            /** Token */
+            token: string;
+            /** New Password */
+            new_password: string;
         };
         /**
          * ReviewAlternativeOut
@@ -1062,6 +1115,68 @@ export interface operations {
                 content: {
                     "application/json": components["schemas"]["TokenOut"];
                 };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    forgot_password_api_auth_forgot_password_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ForgotPasswordIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reset_password_api_auth_reset_password_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ResetPasswordIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
             /** @description Validation Error */
             422: {

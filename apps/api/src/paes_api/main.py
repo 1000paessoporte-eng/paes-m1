@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 
 import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.metadata
 from paes_api.core.config import get_settings
+from paes_api.core.limiter import limiter
 from paes_api.modules.analytics.router import router as analytics_router
 from paes_api.modules.content.router import router as content_router
 from paes_api.modules.exam_focus.router import router as exam_router
@@ -13,6 +17,10 @@ from paes_api.modules.users.router import router as users_router
 settings = get_settings()
 
 app = FastAPI(title="PAES M1 API", version="0.1.0")
+
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)  # type: ignore[arg-type]
+app.add_middleware(SlowAPIMiddleware)
 
 app.add_middleware(
     CORSMiddleware,

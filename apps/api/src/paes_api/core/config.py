@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -12,6 +13,27 @@ class Settings(BaseSettings):
     #: Google: la API rechaza /auth/google y la web no muestra el botón.
     google_client_id: str = ""
     database_url: str = "postgresql+psycopg://paes:paes@localhost:5432/paes_m1"
+
+    @field_validator("database_url")
+    @classmethod
+    def _usar_driver_psycopg(cls, v: str) -> str:
+        # Proveedores gestionados (Neon, etc.) entregan connection strings con
+        # el esquema generico "postgresql://", que SQLAlchemy resuelve al
+        # driver psycopg2 -- no instalado en este proyecto (se usa psycopg 3).
+        if v.startswith("postgresql://"):
+            return "postgresql+psycopg://" + v[len("postgresql://") :]
+        return v
+    #: Origen público del frontend, para armar el link de "restablecer
+    #: contraseña" que se manda por correo.
+    frontend_url: str = "http://localhost:3000"
+    #: SMTP para enviar correos transaccionales (recuperación de contraseña).
+    #: smtp_host vacío = no hay proveedor configurado: el correo solo se deja
+    #: en el log, útil para desarrollo local sin depender de un proveedor real.
+    smtp_host: str = ""
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
+    smtp_from: str = "milpaes <no-responder@1000paes.cl>"
     cors_origins: list[str] = [
         "http://localhost:3000",
         "http://192.168.1.11:3000",

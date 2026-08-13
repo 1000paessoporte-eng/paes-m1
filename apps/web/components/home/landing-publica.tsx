@@ -117,6 +117,15 @@ export function LandingPublica() {
             estimación referencial: el puntaje real depende de la forma rendida
             y del proceso de admisión.
           </p>
+          <p className="mt-3">
+            <Link href="/terminos" className="hover:text-foreground hover:underline">
+              Términos
+            </Link>{" "}
+            ·{" "}
+            <Link href="/privacidad" className="hover:text-foreground hover:underline">
+              Privacidad
+            </Link>
+          </p>
         </div>
       </footer>
     </main>

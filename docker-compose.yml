@@ -1,0 +1,60 @@
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: paes
+      POSTGRES_PASSWORD: paes
+      POSTGRES_DB: paes_m1
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U paes"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./apps/api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg://paes:paes@db:5432/paes_m1
+      SECRET_KEY: ${SECRET_KEY:?falta SECRET_KEY en .env}
+      ENVIRONMENT: production
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      CORS_ORIGINS: ${CORS_ORIGINS:-["http://localhost:3000"]}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-milpaes <no-responder@1000paes.cl>}
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+        NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+    restart: unless-stopped
+    depends_on:
+      - api
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "3000:3000"
+
+volumes:
+  db_data:

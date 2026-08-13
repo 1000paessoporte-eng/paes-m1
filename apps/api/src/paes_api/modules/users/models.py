@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TYPE_CHECKING
 
-from sqlalchemy import DateTime, String, func
+from sqlalchemy import DateTime, ForeignKey, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
@@ -38,3 +38,22 @@ class User(Base):
     def has_password(self) -> bool:
         """False en cuentas de Google que aún no definen una contraseña."""
         return self.hashed_password is not None
+
+
+class PasswordResetToken(Base):
+    """Token de un solo uso para el flujo de 'olvidé mi contraseña'.
+
+    Se guarda el hash SHA-256 del token, no el token en sí: una fuga de la
+    tabla no debe permitir a nadie resetear contraseñas ajenas. El token
+    plano solo existe en el correo enviado al usuario."""
+
+    __tablename__ = "password_reset_tokens"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
