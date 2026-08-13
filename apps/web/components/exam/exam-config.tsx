@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "@paes-m1/utils";
-import type { ExamConfig, ExamOptions, Pace, Repaso } from "@/lib/api";
+import type { ExamConfig, ExamOptions, Pace, Repaso, Subject } from "@/lib/api";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 
 /**
@@ -17,17 +17,22 @@ const FORMATOS = [
 ] as const;
 
 /**
- * Pruebas PAES. Por ahora solo Competencia Matemática M1 tiene banco de
- * preguntas; las demás se muestran para que quede claro que la plataforma
- * las va a cubrir, pero deshabilitadas hasta que tengan contenido.
+ * Pruebas PAES. M1 y M2 ya tienen banco de preguntas; las demás se muestran
+ * para que quede claro que la plataforma las va a cubrir, pero deshabilitadas
+ * hasta que tengan contenido.
  */
-const PRUEBAS = [
+const PRUEBAS: { id: Subject | "lectora" | "historia" | "ciencias"; nombre: string; disponible: boolean }[] = [
   { id: "lectora", nombre: "Competencia Lectora", disponible: false },
   { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
-  { id: "m2", nombre: "Competencia Matemática M2", disponible: false },
+  { id: "m2", nombre: "Competencia Matemática M2", disponible: true },
   { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: false },
   { id: "ciencias", nombre: "Ciencias", disponible: false },
-] as const;
+];
+
+export const SUBJECT_LABELS: Record<Subject, string> = {
+  m1: "Competencia Matemática M1",
+  m2: "Competencia Matemática M2",
+};
 
 const RITMOS: Pace[] = ["oficial", "exigente", "relajado"];
 
@@ -54,8 +59,8 @@ function formatearDuracionLarga(segundos: number): string {
 }
 
 interface Props {
-  options: ExamOptions;
-  repaso: Repaso;
+  optionsBySubject: Record<Subject, ExamOptions>;
+  repasoBySubject: Record<Subject, Repaso>;
   ensayosRendidos: number;
   resumable: boolean;
   errorMsg: string | null;
@@ -64,18 +69,22 @@ interface Props {
 }
 
 export function ExamConfigScreen({
-  options,
-  repaso,
+  optionsBySubject,
+  repasoBySubject,
   ensayosRendidos,
   resumable,
   errorMsg,
   onComenzar,
   onContinuar,
 }: Props) {
+  const [subject, setSubject] = useState<Subject>("m1");
   const [cantidad, setCantidad] = useState(20);
   const [ritmo, setRitmo] = useState<Pace>("oficial");
   const [ejes, setEjes] = useState<string[]>([]);
   const dias = diasHastaPaes();
+
+  const options = optionsBySubject[subject];
+  const repaso = repasoBySubject[subject];
 
   const maxDisponible = useMemo(() => {
     if (ejes.length === 0) return options.total_available;
@@ -138,7 +147,12 @@ export function ExamConfigScreen({
           <button
             type="button"
             onClick={() =>
-              onComenzar({ question_count: 20, pace: "oficial", axes: repaso.axes })
+              onComenzar({
+                subject,
+                question_count: 20,
+                pace: "oficial",
+                axes: repaso.axes,
+              })
             }
             className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
           >
@@ -175,30 +189,41 @@ export function ExamConfigScreen({
           1. Prueba
         </h2>
         <p className="mb-3 text-sm text-muted">
-          Vamos a cubrir las cinco pruebas PAES. Hoy solo Competencia
-          Matemática M1 tiene ensayos disponibles.
+          Vamos a cubrir las cinco pruebas PAES. Hoy Competencia Matemática M1
+          y M2 tienen ensayos disponibles.
         </p>
         <div className="flex flex-wrap gap-2">
-          {PRUEBAS.map((prueba) => (
-            <button
-              key={prueba.id}
-              type="button"
-              disabled={!prueba.disponible}
-              aria-pressed={prueba.disponible}
-              title={prueba.disponible ? undefined : "Próximamente"}
-              className={cn(
-                "rounded-full border px-3.5 py-1.5 text-sm transition disabled:cursor-not-allowed",
-                prueba.disponible
-                  ? "border-accent bg-accent text-accent-foreground"
-                  : "border-border bg-surface text-muted opacity-60"
-              )}
-            >
-              {prueba.nombre}
-              {!prueba.disponible && (
-                <span className="ml-1.5 text-xs">· Próximamente</span>
-              )}
-            </button>
-          ))}
+          {PRUEBAS.map((prueba) => {
+            const activa = prueba.disponible && prueba.id === subject;
+            return (
+              <button
+                key={prueba.id}
+                type="button"
+                disabled={!prueba.disponible}
+                aria-pressed={activa}
+                title={prueba.disponible ? undefined : "Próximamente"}
+                onClick={() => {
+                  if (prueba.disponible) {
+                    setSubject(prueba.id as Subject);
+                    setEjes([]);
+                  }
+                }}
+                className={cn(
+                  "rounded-full border px-3.5 py-1.5 text-sm transition disabled:cursor-not-allowed",
+                  activa
+                    ? "border-accent bg-accent text-accent-foreground"
+                    : prueba.disponible
+                      ? "border-border bg-surface hover:border-border-strong"
+                      : "border-border bg-surface text-muted opacity-60"
+                )}
+              >
+                {prueba.nombre}
+                {!prueba.disponible && (
+                  <span className="ml-1.5 text-xs">· Próximamente</span>
+                )}
+              </button>
+            );
+          })}
         </div>
       </section>
 
@@ -332,7 +357,9 @@ export function ExamConfigScreen({
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <span className="text-muted">
             {cantidadEfectiva} preguntas de{" "}
-            <strong className="text-foreground">Competencia Matemática M1</strong>
+            <strong className="text-foreground">
+              {PRUEBAS.find((p) => p.id === subject)?.nombre}
+            </strong>
           </span>
           <span className="text-2xl font-bold tabular-nums">
             {formatearDuracionLarga(duracion)}
@@ -348,6 +375,7 @@ export function ExamConfigScreen({
           type="button"
           onClick={() =>
             onComenzar({
+              subject,
               question_count: cantidadEfectiva,
               pace: ritmo,
               axes: ejes,

@@ -24,6 +24,8 @@ export type AxisOption = ExamOptions["axes"][number];
 
 export type ExamConfig = components["schemas"]["ExamConfigIn"];
 
+export type Subject = components["schemas"]["Subject"];
+
 export type Pace = components["schemas"]["Pace"];
 
 export type BreakdownItem = components["schemas"]["BreakdownItemOut"];
@@ -130,15 +132,18 @@ export function getQuestions(skillNodeId?: number, token?: string): Promise<Ques
   return apiFetch<Question[]>(`/api/questions${qs}`, token);
 }
 
-export function getExamOptions(token?: string): Promise<ExamOptions> {
-  return apiFetch<ExamOptions>("/api/exam/options", token);
+export function getExamOptions(
+  token?: string,
+  subject: Subject = "m1"
+): Promise<ExamOptions> {
+  return apiFetch<ExamOptions>(`/api/exam/options?subject=${subject}`, token);
 }
 
 export type Repaso =
   paths["/api/exam/repaso"]["get"]["responses"][200]["content"]["application/json"];
 
-export function getRepaso(token?: string): Promise<Repaso> {
-  return apiFetch<Repaso>("/api/exam/repaso", token);
+export function getRepaso(token?: string, subject: Subject = "m1"): Promise<Repaso> {
+  return apiFetch<Repaso>(`/api/exam/repaso?subject=${subject}`, token);
 }
 
 export function startExam(config: ExamConfig, token?: string): Promise<ExamStart> {

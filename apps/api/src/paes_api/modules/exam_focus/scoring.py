@@ -4,22 +4,20 @@ La PAES entrega un puntaje en escala 100-1000. La conversión desde el número
 de respuestas correctas NO es lineal: se construye a partir de promedios de
 habilidades y se equipara entre las distintas formas de la prueba.
 
-Los valores de abajo son REFERENCIALES, basados en tablas publicadas para
-procesos recientes de la PAES Regular M1. El puntaje real depende de la forma
-rendida y del proceso de admisión, por lo que la app siempre presenta este
-número como "puntaje estimado".
-
-La prueba oficial tiene 65 preguntas, de las cuales 60 puntúan (5 son de
-pilotaje). Por eso la tabla va de 0 a 60.
+Los valores de abajo son REFERENCIALES, basados en tablas publicadas por el
+DEMRE para procesos recientes. El puntaje real depende de la forma rendida y
+del proceso de admisión, por lo que la app siempre presenta este número como
+"puntaje estimado". Cada prueba PAES tiene su propia tabla y su propia razón
+tiempo/preguntas — por eso todo está parametrizado por `Subject`.
 """
 
-# Datos oficiales del temario DEMRE (Admisión 2027) para M1.
-PREGUNTAS_OFICIALES = 65
-PREGUNTAS_PUNTUADAS = 60
-DURACION_OFICIAL_MIN = 140
+from dataclasses import dataclass
 
-#: Puntaje PAES para cada cantidad de respuestas correctas, de 0 a 60.
-TABLA_M1: list[int] = [
+from paes_api.modules.skill_tree.models import Subject
+
+# Tabla oficial DEMRE, PAES Regular M1 (Admisión 2027). 65 preguntas, de las
+# cuales 60 puntúan (5 son de pilotaje). Por eso la tabla va de 0 a 60.
+_TABLA_M1: list[int] = [
     100, 134, 164, 192, 217, 240, 260, 280, 298, 316,  # 0-9
     334, 350, 364, 377, 388, 401, 416, 432, 446, 458,  # 10-19
     467, 475, 483, 494, 506, 521, 535, 548, 557, 564,  # 20-29
@@ -29,28 +27,77 @@ TABLA_M1: list[int] = [
     1000,  # 60
 ]
 
+# Tabla oficial DEMRE, PAES de Invierno M2 (Proceso 2025). 55 preguntas
+# oficiales (temario Admisión 2026), de las cuales 49 puntuaron en esta
+# aplicación (el resto fueron de pilotaje). Fuente: demre.cl/paes/
+# factores-seleccion/tabla-transformacion-puntajes-paes-invierno-p2025-m2
+_TABLA_M2: list[int] = [
+    100, 181, 212, 240, 265, 287, 308, 327, 347, 365,  # 0-9
+    381, 396, 409, 424, 439, 455, 469, 481, 491, 502,  # 10-19
+    514, 528, 542, 556, 567, 577, 586, 596, 609, 623,  # 20-29
+    637, 651, 662, 672, 683, 695, 710, 725, 740, 755,  # 30-39
+    768, 783, 800, 818, 837, 856, 877, 900, 926,       # 40-48
+    1000,  # 49
+]
 
-def segundos_por_pregunta() -> float:
-    """Ritmo oficial: 140 min / 65 preguntas ≈ 2 min 9 s por pregunta."""
-    return (DURACION_OFICIAL_MIN * 60) / PREGUNTAS_OFICIALES
+
+@dataclass(frozen=True)
+class SubjectScoring:
+    """Parámetros de una prueba PAES: cuántas preguntas trae oficialmente,
+    cuántas de esas puntúan, cuánto dura, y la tabla de conversión."""
+
+    preguntas_oficiales: int
+    preguntas_puntuadas: int
+    duracion_oficial_min: int
+    tabla: list[int]
 
 
-def estimar_puntaje(correctas: int, total: int) -> int:
+SCORING_BY_SUBJECT: dict[Subject, SubjectScoring] = {
+    Subject.M1: SubjectScoring(
+        preguntas_oficiales=65,
+        preguntas_puntuadas=60,
+        duracion_oficial_min=140,
+        tabla=_TABLA_M1,
+    ),
+    Subject.M2: SubjectScoring(
+        preguntas_oficiales=55,
+        preguntas_puntuadas=49,
+        duracion_oficial_min=140,
+        tabla=_TABLA_M2,
+    ),
+}
+
+# Compatibilidad hacia atrás: código existente que importaba estas constantes
+# asumiendo M1 (nunca había otra prueba).
+PREGUNTAS_OFICIALES = SCORING_BY_SUBJECT[Subject.M1].preguntas_oficiales
+PREGUNTAS_PUNTUADAS = SCORING_BY_SUBJECT[Subject.M1].preguntas_puntuadas
+DURACION_OFICIAL_MIN = SCORING_BY_SUBJECT[Subject.M1].duracion_oficial_min
+
+
+def segundos_por_pregunta(subject: Subject = Subject.M1) -> float:
+    """Ritmo oficial de la prueba: duración total / cantidad de preguntas."""
+    s = SCORING_BY_SUBJECT[subject]
+    return (s.duracion_oficial_min * 60) / s.preguntas_oficiales
+
+
+def estimar_puntaje(correctas: int, total: int, subject: Subject = Subject.M1) -> int:
     """Estima el puntaje PAES de un ensayo de cualquier largo.
 
     Un ensayo de 20 preguntas no puede usar la tabla directamente (12 correctas
-    de 20 no equivalen a 12 correctas de 60). Se escala la proporción de
-    aciertos a la base de 60 preguntas y luego se interpola en la tabla.
+    de 20 no equivalen a 12 correctas del total puntuado). Se escala la
+    proporción de aciertos a la base puntuada de la prueba y luego se
+    interpola en su tabla.
     """
     if total <= 0:
         return 100
 
+    s = SCORING_BY_SUBJECT[subject]
     proporcion = min(max(correctas / total, 0.0), 1.0)
-    equivalente = proporcion * PREGUNTAS_PUNTUADAS
+    equivalente = proporcion * s.preguntas_puntuadas
 
     inferior = int(equivalente)
-    superior = min(inferior + 1, PREGUNTAS_PUNTUADAS)
+    superior = min(inferior + 1, s.preguntas_puntuadas)
     fraccion = equivalente - inferior
 
-    puntaje = TABLA_M1[inferior] + (TABLA_M1[superior] - TABLA_M1[inferior]) * fraccion
+    puntaje = s.tabla[inferior] + (s.tabla[superior] - s.tabla[inferior]) * fraccion
     return round(puntaje)

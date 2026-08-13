@@ -685,6 +685,7 @@ export interface components {
             /** Finished At */
             finished_at?: string | null;
             status: components["schemas"]["AttemptStatus"];
+            subject: components["schemas"]["Subject"];
             /** Total Questions */
             total_questions: number;
             /** Answered */
@@ -706,6 +707,8 @@ export interface components {
          * @description Configuración elegida por el estudiante antes de comenzar.
          */
         ExamConfigIn: {
+            /** @default m1 */
+            subject: components["schemas"]["Subject"];
             /**
              * Question Count
              * @default 20
@@ -718,6 +721,7 @@ export interface components {
         };
         /** ExamConfigOut */
         ExamConfigOut: {
+            subject: components["schemas"]["Subject"];
             /** Question Count */
             question_count: number;
             pace: components["schemas"]["Pace"];
@@ -729,6 +733,7 @@ export interface components {
          * @description Todo lo que la pantalla de configuración necesita para armarse.
          */
         ExamOptionsOut: {
+            subject: components["schemas"]["Subject"];
             /** Axes */
             axes: components["schemas"]["AxisOptionOut"][];
             /** Total Available */
@@ -1060,6 +1065,7 @@ export interface components {
             /** Name */
             name: string;
             axis: components["schemas"]["SkillAxis"];
+            subject: components["schemas"]["Subject"];
             /** Tier */
             tier: number;
             /** Unlock Threshold */
@@ -1077,6 +1083,16 @@ export interface components {
             /** Attempts */
             attempts: number;
         };
+        /**
+         * Subject
+         * @description Prueba PAES a la que pertenece un nodo. M2 evalúa "todos los
+         *     conocimientos de M1, además de" contenido propio (ver temario DEMRE), por
+         *     eso M2 no duplica los nodos de M1: los reutiliza y solo agrega los nodos
+         *     exclusivos de M2. `exam_focus.service.SUBJECT_INCLUDES` es la fuente de
+         *     verdad de qué subjects entran al banco de preguntas de cada prueba.
+         * @enum {string}
+         */
+        Subject: "m1" | "m2";
         /** TokenOut */
         TokenOut: {
             /** Access Token */
@@ -1478,7 +1494,9 @@ export interface operations {
     };
     get_exam_options_api_exam_options_get: {
         parameters: {
-            query?: never;
+            query?: {
+                subject?: components["schemas"]["Subject"];
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -1494,11 +1512,22 @@ export interface operations {
                     "application/json": components["schemas"]["ExamOptionsOut"];
                 };
             };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
         };
     };
     get_repaso_api_exam_repaso_get: {
         parameters: {
-            query?: never;
+            query?: {
+                subject?: components["schemas"]["Subject"];
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -1512,6 +1541,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["RepasoOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

@@ -14,9 +14,11 @@ export default async function ModoEnsayoPage() {
     if (err instanceof ApiError && err.status === 401) redirect("/login");
   }
 
-  const [options, repaso] = await Promise.all([
-    getExamOptions(token),
-    getRepaso(token),
+  const [optionsM1, repasoM1, optionsM2, repasoM2] = await Promise.all([
+    getExamOptions(token, "m1"),
+    getRepaso(token, "m1"),
+    getExamOptions(token, "m2"),
+    getRepaso(token, "m2"),
   ]);
 
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
@@ -25,8 +27,8 @@ export default async function ModoEnsayoPage() {
 
   return (
     <ExamRunner
-      options={options}
-      repaso={repaso}
+      optionsBySubject={{ m1: optionsM1, m2: optionsM2 }}
+      repasoBySubject={{ m1: repasoM1, m2: repasoM2 }}
       pastAttempts={pastAttempts}
       resumableAttemptId={resumableAttemptId}
     />

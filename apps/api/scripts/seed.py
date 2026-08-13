@@ -20,9 +20,9 @@ import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.
 from paes_api.core.database import SessionLocal, engine
 from paes_api.core.security import hash_password
 from paes_api.modules.content.models import Alternative, Difficulty, Question
-from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 from paes_api.modules.users.models import User
-from paes_api.seed_data import QUESTIONS, SKILL_NODES
+from paes_api.seed_data import QUESTIONS, SKILL_NODES, SKILL_NODES_M2
 from paes_api.shared.base import Base
 
 DEMO_EMAIL = "demo@paes-m1.cl"
@@ -33,8 +33,12 @@ RNG = random.Random(42)
 
 
 def seed_skill_nodes(db) -> dict[str, SkillNode]:
+    all_nodes = [(*n, Subject.M1) for n in SKILL_NODES] + [
+        (*n, Subject.M2) for n in SKILL_NODES_M2
+    ]
+
     by_code: dict[str, SkillNode] = {}
-    for code, name, axis, tier, _prereqs in SKILL_NODES:
+    for code, name, axis, tier, _prereqs, subject in all_nodes:
         existing = db.execute(
             select(SkillNode).where(SkillNode.code == code)
         ).scalar_one_or_none()
@@ -45,6 +49,7 @@ def seed_skill_nodes(db) -> dict[str, SkillNode]:
             code=code,
             name=name,
             axis=SkillAxis(axis),
+            subject=subject,
             tier=tier,
             unlock_threshold=0.75,
             display_order=tier,
@@ -53,7 +58,7 @@ def seed_skill_nodes(db) -> dict[str, SkillNode]:
         by_code[code] = node
     db.flush()
 
-    for code, *_rest, prereq_codes in SKILL_NODES:
+    for code, *_rest, prereq_codes, _subject in all_nodes:
         node = by_code[code]
         node.prerequisites = [by_code[p] for p in prereq_codes]
     db.commit()

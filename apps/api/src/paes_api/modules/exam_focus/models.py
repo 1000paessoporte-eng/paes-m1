@@ -5,6 +5,7 @@ from typing import TYPE_CHECKING
 from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
+from paes_api.modules.skill_tree.models import Subject
 from paes_api.shared.base import Base
 
 if TYPE_CHECKING:
@@ -58,6 +59,9 @@ class ExamAttempt(Base):
         Enum(AttemptStatus), default=AttemptStatus.IN_PROGRESS
     )
     pace: Mapped[Pace] = mapped_column(Enum(Pace), default=Pace.OFICIAL)
+    subject: Mapped[Subject] = mapped_column(
+        Enum(Subject), default=Subject.M1, server_default=Subject.M1.name
+    )
     #: Ejes elegidos separados por coma. NULL o vacío significa "todos".
     axes: Mapped[str | None] = mapped_column(String(200), nullable=True)
     #: Puntaje PAES estimado, calculado al finalizar. NULL mientras esté en curso.

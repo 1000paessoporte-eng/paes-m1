@@ -50,7 +50,7 @@ export function LandingPublica() {
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
             <span className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-              PAES M1 · Competencia Matemática · Admisión 2027
+              PAES · Competencia Matemática M1 y M2 · Admisión 2027
             </span>
 
             <h1 className="text-6xl font-bold tracking-tight text-balance sm:text-7xl">

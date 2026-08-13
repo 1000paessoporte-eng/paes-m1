@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { TextoRico } from "@/components/texto-rico";
-import { ExamConfigScreen } from "@/components/exam/exam-config";
+import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
 import { QuestionNavigator } from "@/components/exam/question-navigator";
 import {
@@ -21,6 +21,7 @@ import {
   type ExamResult,
   type ExamReview,
   type Repaso,
+  type Subject,
 } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { formatearReloj } from "@/lib/tiempo";
@@ -36,21 +37,22 @@ interface AnswerState {
 }
 
 interface ExamRunnerProps {
-  options: ExamOptions;
+  optionsBySubject: Record<Subject, ExamOptions>;
   pastAttempts: ExamAttemptSummary[];
   resumableAttemptId: number | null;
-  repaso: Repaso;
+  repasoBySubject: Record<Subject, Repaso>;
 }
 
 export function ExamRunner({
-  options,
+  optionsBySubject,
   pastAttempts,
   resumableAttemptId,
-  repaso,
+  repasoBySubject,
 }: ExamRunnerProps) {
   const router = useRouter();
   const [phase, setPhase] = useState<Phase>("config");
   const [attemptId, setAttemptId] = useState<number | null>(null);
+  const [attemptSubject, setAttemptSubject] = useState<Subject>("m1");
   const [questions, setQuestions] = useState<ExamQuestion[]>([]);
   const [deadline, setDeadline] = useState<number>(0);
   const [remainingMs, setRemainingMs] = useState(0);
@@ -192,6 +194,7 @@ export function ExamRunner({
       }
       localStorage.setItem(STORAGE_KEY, String(id));
       setAttemptId(id);
+      setAttemptSubject(state.config.subject);
       setQuestions(state.questions);
       setDeadline(
         new Date(state.started_at).getTime() + state.duration_limit_seconds * 1000
@@ -305,6 +308,7 @@ export function ExamRunner({
       const data = await startExam(config, getClientToken() ?? undefined);
       localStorage.setItem(STORAGE_KEY, String(data.attempt_id));
       setAttemptId(data.attempt_id);
+      setAttemptSubject(data.config.subject);
       setQuestions(data.questions);
       setDeadline(new Date(data.started_at).getTime() + data.duration_limit_seconds * 1000);
       setRemainingMs(data.duration_limit_seconds * 1000);
@@ -355,8 +359,8 @@ export function ExamRunner({
   if (phase === "config" || !currentQuestion) {
     return (
       <ExamConfigScreen
-        options={options}
-        repaso={repaso}
+        optionsBySubject={optionsBySubject}
+        repasoBySubject={repasoBySubject}
         ensayosRendidos={pastAttempts.length}
         resumable={resumableAttemptId != null}
         errorMsg={errorMsg}
@@ -376,7 +380,7 @@ export function ExamRunner({
       <header className="sticky top-14 z-20 -mx-4 border-b border-border bg-background/95 px-4 backdrop-blur sm:-mx-6 sm:px-6">
         <div className="flex items-center gap-3 py-3">
           <div className="min-w-0 flex-1">
-            <p className="truncate text-xs text-muted">Competencia Matemática M1</p>
+            <p className="truncate text-xs text-muted">{SUBJECT_LABELS[attemptSubject]}</p>
             <p className="font-semibold">
               Pregunta {currentIndex + 1} de {questions.length}
             </p>

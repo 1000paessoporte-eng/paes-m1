@@ -17,6 +17,7 @@ from paes_api.modules.exam_focus.schemas import (
     ExamStateOut,
     RepasoOut,
 )
+from paes_api.modules.skill_tree.models import Subject
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
 
@@ -53,17 +54,21 @@ def _get_attempt_or_404(db: Session, attempt_id: int, user: User):
 
 
 @router.get("/options", response_model=ExamOptionsOut)
-def get_exam_options(db: Session = Depends(get_db)) -> ExamOptionsOut:
+def get_exam_options(
+    subject: Subject = Subject.M1, db: Session = Depends(get_db)
+) -> ExamOptionsOut:
     """Ejes y disponibilidad del banco, para la pantalla de configuración."""
-    return service.get_options(db)
+    return service.get_options(db, subject)
 
 
 @router.get("/repaso", response_model=RepasoOut)
 def get_repaso(
-    db: Session = Depends(get_db), user: User = Depends(get_current_user)
+    subject: Subject = Subject.M1,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ) -> RepasoOut:
     """Sugerencia para el botón "Ensayo de repaso" en la config del ensayo."""
-    return service.get_repaso(db, user.id)
+    return service.get_repaso(db, user.id, subject)
 
 
 @router.get("", response_model=list[ExamAttemptSummary])

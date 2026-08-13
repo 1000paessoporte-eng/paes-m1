@@ -24,6 +24,7 @@ from paes_api.modules.exam_focus.models import ExamAnswer
 from paes_api.modules.skill_tree.models import (
     ProgressStatus,
     SkillNode,
+    Subject,
     UserSkillProgress,
 )
 from paes_api.modules.skill_tree.schemas import SkillNodeProgressOut
@@ -98,19 +99,29 @@ def _recompute_unlocks(
                 changed = True
 
 
-def get_user_skill_tree(db: Session, user_id: int) -> list[SkillNodeProgressOut]:
+def get_user_skill_tree(
+    db: Session, user_id: int, subject: Subject | None = Subject.M1
+) -> list[SkillNodeProgressOut]:
+    """`subject=None` trae los nodos de TODAS las pruebas (uso interno /
+    admin); por defecto se filtra a M1 porque hoy el Árbol de Habilidades en
+    /arbol solo tiene UI para esa prueba. El cálculo de desbloqueos corre
+    igual sobre TODOS los nodos sin filtrar, para no romper el progreso de
+    pruebas que sí dependen de nodos de otro subject (M2 depende de M1)."""
     nodes_by_id = _load_nodes(db)
     progress_by_node = _ensure_progress(db, user_id, nodes_by_id)
     _recompute_unlocks(nodes_by_id, progress_by_node)
     db.commit()
 
     ordered = sorted(nodes_by_id.values(), key=lambda n: (n.axis, n.display_order))
+    if subject is not None:
+        ordered = [n for n in ordered if n.subject == subject]
     return [
         SkillNodeProgressOut(
             id=node.id,
             code=node.code,
             name=node.name,
             axis=node.axis,
+            subject=node.subject,
             tier=node.tier,
             unlock_threshold=node.unlock_threshold,
             display_order=node.display_order,

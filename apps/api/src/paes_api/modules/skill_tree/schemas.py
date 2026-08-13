@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict
 
-from paes_api.modules.skill_tree.models import ProgressStatus, SkillAxis
+from paes_api.modules.skill_tree.models import ProgressStatus, SkillAxis, Subject
 
 
 class SkillNodeOut(BaseModel):
@@ -10,6 +10,7 @@ class SkillNodeOut(BaseModel):
     code: str
     name: str
     axis: SkillAxis
+    subject: Subject
     tier: int
     unlock_threshold: float
     display_order: int

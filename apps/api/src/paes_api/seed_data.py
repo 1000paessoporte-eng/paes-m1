@@ -58,6 +58,30 @@ SKILL_NODES = [
     ("prob_reglas", "Reglas de probabilidad", "probabilidad", 3, ["prob_combinatoria"]),
 ]
 
+# Nodos exclusivos de M2 (code, name, axis, tier, prerequisites). M2 evalúa
+# "todos los conocimientos de M1, además de" contenido propio (temario DEMRE
+# Admisión 2026), así que estos nodos se agregan sobre el árbol de M1 en vez
+# de duplicarlo: cada uno toma como prerequisito el nodo M1 más relacionado.
+# `seed.py` los siembra con subject="m2"; `SUBJECT_INCLUDES` en
+# exam_focus/service.py hace que el banco de M2 sea M1 ∪ M2.
+SKILL_NODES_M2 = [
+    # Números
+    ("num_reales", "El conjunto de los números reales", "numeros", 2, ["num_racionales", "num_potencias_raices"]),
+    ("num_financiera", "Matemática financiera", "numeros", 3, ["num_porcentajes"]),
+    ("num_logaritmos", "Logaritmos", "numeros", 3, ["num_potencias_raices"]),
+    # Álgebra y funciones
+    ("alg_sistemas_casos", "Sistemas 2x2: única, infinitas o ninguna solución", "algebra", 4, ["alg_sistemas"]),
+    ("alg_funcion_potencia", "Función potencia", "algebra", 5, ["alg_funciones"]),
+    # Geometría
+    ("geo_homotecia", "Homotecia de figuras planas", "geometria", 3, ["geo_transformaciones"]),
+    ("geo_trigonometria", "Razones trigonométricas en triángulos rectángulos", "geometria", 3, ["geo_pitagoras"]),
+    # Probabilidad y estadística
+    ("prob_dispersion", "Medidas de dispersión", "probabilidad", 2, ["prob_estadistica_desc"]),
+    ("prob_condicional", "Probabilidad condicional", "probabilidad", 4, ["prob_reglas"]),
+    ("prob_permutacion", "Permutación y combinatoria (nivel M2)", "probabilidad", 3, ["prob_combinatoria"]),
+    ("prob_binomial", "Modelos probabilísticos (binomial)", "probabilidad", 4, ["prob_permutacion", "prob_condicional"]),
+]
+
 
 def _q(
     skill_node: str,
@@ -2045,6 +2069,560 @@ QUESTIONS = [
             ("25%", "Entregó el 25% tal como aparece en el enunciado, sin considerar que ese porcentaje es solo sobre el 60% que practica deporte, no sobre el curso completo."),
             ("85%", "Sumó los dos porcentajes del enunciado (60%+25%) en lugar de multiplicarlos."),
             ("35%", "Restó los porcentajes del enunciado (60%−25%) en lugar de multiplicarlos."),
+        ],
+    ),
+    # ==================== M2 (contenido exclusivo) ====================
+    # ---------- NÚMEROS ----------
+    _q(
+        "num_reales", "facil",
+        "Ordena de menor a mayor: √2, 1,5, 4/3",
+        "4/3 < √2 < 1,5",
+        "Para ordenar hay que comparar los tres valores en la misma forma "
+        "(decimal es lo más simple).\n\n"
+        "1) 4/3 = 1,333…\n"
+        "2) √2 = 1,4142… (está entre 1,4² = 1,96 y 1,5² = 2,25, más cerca de 1,4).\n"
+        "3) 1,5 ya está en forma decimal.\n"
+        "4) Comparando: 1,333 < 1,414 < 1,5, es decir, 4/3 < √2 < 1,5.",
+        [
+            ("√2 < 4/3 < 1,5", "Subestimó el valor de √2, ubicándolo por debajo de 4/3 cuando en realidad 1,414 es mayor que 1,333."),
+            ("1,5 < √2 < 4/3", "Invirtió por completo el orden de los tres valores."),
+            ("4/3 < 1,5 < √2", "Sobreestimó el valor de √2, ubicándolo como el mayor de los tres cuando es menor que 1,5."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el valor de |−7| + |3 − 8|?",
+        "12",
+        "Se resuelve cada valor absoluto por separado antes de sumar.\n\n"
+        "1) |−7| = 7.\n"
+        "2) Dentro del segundo valor absoluto: 3 − 8 = −5, y |−5| = 5.\n"
+        "3) Suma: 7 + 5 = 12.",
+        [
+            ("−12", "No aplicó el valor absoluto: sumó los números directamente con su signo (−7 + (3−8) = −12)."),
+            ("2", "Aplicó el valor absoluto solo al primer término, dejando el segundo con su signo original (7 + (3−8) = 2)."),
+            ("18", "Calculó el valor absoluto de cada número por separado (7, 3 y 8) y los sumó, en lugar de restar primero 3−8 y recién ahí aplicar el valor absoluto."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "El área de un cuadrado es 18 cm². ¿Cuánto mide, aproximadamente, su lado?",
+        "3√2 cm (≈4,24 cm)",
+        "El lado de un cuadrado es la raíz cuadrada de su área.\n\n"
+        "1) Lado = √18.\n"
+        "2) Simplifica: 18 = 9 × 2, y 9 es cuadrado perfecto, así que "
+        "√18 = √9 × √2 = 3√2.\n"
+        "3) Como √2 ≈ 1,41, el lado mide aproximadamente 3 × 1,41 ≈ 4,24 cm.",
+        [
+            ("9 cm", "Dividió el área por 2 en lugar de calcular su raíz cuadrada."),
+            ("6 cm", "Dividió el área por 3 en lugar de calcular su raíz cuadrada."),
+            ("4 cm", "Aproximó a la raíz del cuadrado perfecto más cercano por debajo (√16=4) en lugar de calcular √18."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "Un banco ofrece un interés simple del 2% mensual. Si depositas $100.000, "
+        "¿cuánto interés ganas en 3 meses?",
+        "$6.000",
+        "En interés simple, el interés de cada mes se calcula siempre sobre el "
+        "capital inicial, y se suman los meses.\n\n"
+        "1) Interés de un mes: 100.000 × 0,02 = $2.000.\n"
+        "2) Como son 3 meses y el interés simple no se acumula sobre sí mismo: "
+        "2.000 × 3 = $6.000.",
+        [
+            ("$2.000", "Calculó el interés de un solo mes y olvidó multiplicarlo por los 3 meses."),
+            ("$106.000", "Calculó el monto final (capital + interés) en lugar de solo el interés ganado."),
+            ("$6.121", "Calculó interés compuesto (aplicando el 2% sobre el saldo acumulado cada mes) en lugar de interés simple, que siempre se calcula sobre el capital inicial."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Pides un crédito de consumo de $500.000 a pagar en 1 cuota, con un interés "
+        "simple del 3% mensual a 4 meses. ¿Cuánto debes pagar en total?",
+        "$560.000",
+        "El total a pagar es el capital más el interés acumulado en los 4 "
+        "meses.\n\n"
+        "1) Interés de un mes: 500.000 × 0,03 = $15.000.\n"
+        "2) Interés de los 4 meses: 15.000 × 4 = $60.000.\n"
+        "3) Total a pagar: 500.000 + 60.000 = $560.000.",
+        [
+            ("$500.000", "Olvidó agregar el interés: pagó solo el capital original."),
+            ("$60.000", "Entregó solo el interés acumulado, sin sumarlo al capital que también hay que devolver."),
+            ("$515.000", "Calculó el interés de un solo mes y lo sumó al capital, sin multiplicarlo por los 4 meses del crédito."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un ahorro de $200.000 gana un interés simple mensual. Después de 5 meses, "
+        "el ahorro creció a $230.000. ¿Cuál es la tasa de interés mensual?",
+        "3% mensual",
+        "Primero se calcula el interés total ganado y luego se reparte entre "
+        "los meses.\n\n"
+        "1) Interés total ganado: 230.000 − 200.000 = $30.000.\n"
+        "2) Ese interés se generó en 5 meses, así que el interés de un mes es "
+        "30.000 ÷ 5 = $6.000.\n"
+        "3) La tasa mensual es ese interés sobre el capital: "
+        "6.000 ÷ 200.000 = 0,03 = 3%.",
+        [
+            ("15%", "Calculó la tasa de interés total del periodo completo (30.000/200.000=15%) pero no la dividió entre los 5 meses para obtener la tasa mensual."),
+            ("1,5%", "Calculó correctamente que el interés total fue de 15%, pero lo dividió por 10 en lugar de por los 5 meses reales."),
+            ("$30.000", "Entregó el monto de interés ganado en lugar de calcular la tasa de interés mensual que pedía el enunciado."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₂(8)?",
+        "3",
+        "log₂(8) es la pregunta \"¿a qué exponente hay que elevar 2 para "
+        "obtener 8?\".\n\n"
+        "1) Prueba con exponentes de 2: 2¹=2, 2²=4, 2³=8.\n"
+        "2) El exponente que da 8 es 3, así que log₂(8) = 3.",
+        [
+            ("4", "Calculó log₂(16) en lugar de log₂(8): 2⁴=16, no 8."),
+            ("6", "Multiplicó la base por el resultado esperado (2×3=6) en lugar de identificar el exponente."),
+            ("0,375", "Calculó 3/8 en lugar de identificar a qué exponente se eleva 2 para obtener 8."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Resuelve: log₅(x) = 2",
+        "x = 25",
+        "La definición de logaritmo dice que log_b(x) = n equivale a x = b^n.\n\n"
+        "1) Aquí la base es 5 y el resultado del logaritmo es 2.\n"
+        "2) Despeja aplicando la definición: x = 5² = 25.",
+        [
+            ("x = 10", "Multiplicó la base por el exponente (5×2) en lugar de elevar la base al exponente (5²)."),
+            ("x = 2,5", "Dividió la base por el exponente en lugar de elevar la base al exponente dado."),
+            ("x = 32", "Invirtió la base y el exponente: calculó 2⁵ en lugar de 5²."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Usando que log(2) ≈ 0,301 y log(3) ≈ 0,477, ¿cuál es el valor aproximado "
+        "de log(6)?",
+        "≈0,778",
+        "6 = 2 × 3, y el logaritmo de un producto es la suma de los "
+        "logaritmos de cada factor.\n\n"
+        "1) log(6) = log(2 × 3) = log(2) + log(3).\n"
+        "2) Reemplaza: 0,301 + 0,477 = 0,778.",
+        [
+            ("≈0,144", "Multiplicó los logaritmos entre sí en lugar de sumarlos: la propiedad del logaritmo de un producto es una suma, no una multiplicación."),
+            ("≈0,176", "Restó los logaritmos en lugar de sumarlos, calculando log(3/2) en vez de log(2×3)."),
+            ("5", "Sumó los números 2 y 3 directamente, en lugar de sumar sus logaritmos."),
+        ],
+    ),
+    # ---------- ÁLGEBRA Y FUNCIONES ----------
+    _q(
+        "alg_sistemas_casos", "facil",
+        "¿Cuántas soluciones tiene el sistema: x + y = 5 ; x + y = 8?",
+        "Ninguna solución",
+        "Ambas ecuaciones tienen exactamente los mismos coeficientes para x e "
+        "y, pero distinto término independiente.\n\n"
+        "1) Eso significa que ambas rectas tienen la misma pendiente (son "
+        "paralelas).\n"
+        "2) Como los términos independientes son distintos (5 ≠ 8), no es la "
+        "misma recta: son paralelas y nunca se cruzan.\n"
+        "3) Por lo tanto, el sistema no tiene solución.",
+        [
+            ("Una única solución", "No reconoció que ambas ecuaciones tienen los mismos coeficientes de x e y, lo que las hace rectas paralelas sin intersección."),
+            ("Infinitas soluciones", "Confundió este caso con el de rectas coincidentes; aquí los términos independientes son distintos (5≠8), así que no es la misma recta."),
+            ("x=5, y=8", "Interpretó cada ecuación como si diera directamente el valor de una variable, en lugar de analizar el sistema como un todo."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "¿Cuántas soluciones tiene el sistema: 2x + 4y = 10 ; x + 2y = 5?",
+        "Infinitas soluciones",
+        "Hay que comparar si una ecuación es múltiplo de la otra.\n\n"
+        "1) Multiplica la segunda ecuación completa por 2: "
+        "2(x + 2y) = 2(5), es decir, 2x + 4y = 10.\n"
+        "2) Es exactamente igual a la primera ecuación: ambas representan la "
+        "misma recta.\n"
+        "3) Cuando las dos ecuaciones son la misma recta, cualquier punto de "
+        "esa recta es solución del sistema: hay infinitas soluciones.",
+        [
+            ("Ninguna solución", "Notó que las ecuaciones son proporcionales, pero concluyó que son rectas paralelas distintas en lugar de la misma recta coincidente."),
+            ("Una única solución, x=5, y=0", "Encontró un par de valores que sí satisface ambas ecuaciones, pero no reconoció que el sistema tiene infinitas soluciones (cualquier punto de esa recta funciona, no solo ese)."),
+            ("El sistema no se puede resolver", "Interpretó que el sistema no tiene solución determinable, cuando en realidad tiene infinitas soluciones porque ambas ecuaciones representan la misma recta."),
+        ],
+    ),
+    _q(
+        "alg_sistemas_casos", "dificil",
+        "¿Para qué valor de k el sistema 3x + ky = 6 ; x + 2y = 4 NO tiene solución "
+        "única (es paralelo)?",
+        "k = 6",
+        "Un sistema no tiene solución única cuando los coeficientes de ambas "
+        "ecuaciones son proporcionales.\n\n"
+        "1) La proporción entre los coeficientes de x debe igualar a la de "
+        "los coeficientes de y: 3/1 = k/2.\n"
+        "2) Despeja: k = 3 × 2 = 6.\n"
+        "3) Verifica que no sea la misma recta comparando con los términos "
+        "independientes: 6/4 = 1,5, que es distinto de 3/1 = 3, así que con "
+        "k=6 el sistema es paralelo (sin solución), no coincidente.",
+        [
+            ("k = 3", "Igualó directamente los coeficientes (k=3) sin considerar la proporción correcta entre ambas ecuaciones (3/1 = k/2)."),
+            ("k = 12", "Multiplicó 3×2×2 en lugar de resolver correctamente la proporción 3/1 = k/2."),
+            ("k = 4", "Usó un término independiente de las ecuaciones en lugar de los coeficientes de las variables para plantear la proporción."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "facil",
+        "¿Cuál es el valor de f(x) = x³ cuando x = −2?",
+        "−8",
+        "Se reemplaza x por −2 y se eleva al cubo, respetando el signo.\n\n"
+        "1) (−2)³ = (−2) × (−2) × (−2).\n"
+        "2) (−2) × (−2) = 4, y 4 × (−2) = −8.\n"
+        "3) El cubo de un número negativo es negativo (a diferencia del "
+        "cuadrado).",
+        [
+            ("8", "Olvidó que el cubo de un número negativo es negativo: perdió el signo al elevar al cubo."),
+            ("−6", "Multiplicó la base por el exponente (−2×3) en lugar de elevarla al cubo."),
+            ("6", "Multiplicó el valor absoluto de la base por el exponente, ignorando tanto el signo como la operación de potencia."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿Cuál de las siguientes funciones potencia tiene un gráfico simétrico "
+        "respecto al origen (función impar)?",
+        "f(x) = x³",
+        "Una función potencia con exponente impar es simétrica respecto al "
+        "origen; con exponente par, es simétrica respecto al eje Y.\n\n"
+        "1) x³ tiene exponente 3, que es impar.\n"
+        "2) Verifica con la definición de función impar: f(−x) = −f(x). Aquí "
+        "(−x)³ = −x³, se cumple.\n"
+        "3) Las otras opciones tienen exponente par, así que son simétricas "
+        "respecto al eje Y, no al origen.",
+        [
+            ("f(x) = x²", "Tiene exponente par: su gráfico es simétrico respecto al eje Y, no respecto al origen."),
+            ("f(x) = x⁴", "También tiene exponente par: al igual que x², su simetría es respecto al eje Y, no al origen."),
+            ("f(x) = 2x²", "El coeficiente 2 no cambia la paridad del exponente: sigue siendo una función par, simétrica respecto al eje Y."),
+        ],
+    ),
+    _q(
+        "alg_funcion_potencia", "dificil",
+        "Si f(x) = x⁵, ¿cuál es el valor de f(−1) + f(2)?",
+        "31",
+        "Se evalúa la función en cada valor por separado y luego se suman "
+        "los resultados.\n\n"
+        "1) f(−1) = (−1)⁵ = −1, porque un exponente impar conserva el signo "
+        "negativo de la base.\n"
+        "2) f(2) = 2⁵ = 32.\n"
+        "3) Suma: −1 + 32 = 31.",
+        [
+            ("33", "Calculó (−1)⁵ como 1 en lugar de −1, olvidando que un exponente impar conserva el signo negativo de la base."),
+            ("−31", "Cometió un error de signo en ambos términos: calculó (−1)⁵=1 y 2⁵=−32."),
+            ("1", "Sumó los valores de x primero (−1+2=1) y evaluó la función una sola vez, en lugar de evaluar f en cada valor por separado y sumar los resultados."),
+        ],
+    ),
+    # ---------- GEOMETRÍA ----------
+    _q(
+        "geo_homotecia", "facil",
+        "Un triángulo tiene lados de 3 cm, 4 cm y 5 cm. Se le aplica una homotecia "
+        "de razón k=2. ¿Cuáles son las medidas de los lados del triángulo "
+        "resultante?",
+        "6 cm, 8 cm y 10 cm",
+        "En una homotecia, cada medida lineal de la figura se multiplica por "
+        "la razón k.\n\n"
+        "1) Multiplica cada lado por 2: 3×2=6, 4×2=8, 5×2=10.",
+        [
+            ("5 cm, 6 cm y 7 cm", "Sumó 2 a cada lado en lugar de multiplicarlo por la razón de homotecia."),
+            ("1,5 cm, 2 cm y 2,5 cm", "Dividió cada lado por la razón de homotecia en lugar de multiplicarlo."),
+            ("9 cm, 16 cm y 25 cm", "Elevó al cuadrado cada lado en lugar de multiplicarlo por la razón (confundió con el cambio de área, que sí es cuadrático)."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "medio",
+        "Un cuadrado de área 9 cm² se somete a una homotecia de razón k=3. ¿Cuál "
+        "es el área de la figura resultante?",
+        "81 cm²",
+        "A diferencia de las longitudes, el área escala según el cuadrado de "
+        "la razón de homotecia.\n\n"
+        "1) La razón de homotecia es k=3.\n"
+        "2) El área se multiplica por k²: 9 × 3² = 9 × 9 = 81 cm².",
+        [
+            ("27 cm²", "Multiplicó el área original por la razón de homotecia (k) en lugar de por k², que es cómo escala el área."),
+            ("9 cm²", "No aplicó la homotecia al área: la dejó igual a la original."),
+            ("12 cm²", "Sumó la razón de homotecia al área original en lugar de aplicar el escalamiento correspondiente."),
+        ],
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "Un punto P(2, 3) se somete a una homotecia de centro en el origen (0,0) "
+        "y razón k = −2. ¿Cuáles son las coordenadas del punto resultante?",
+        "(−4, −6)",
+        "Con centro en el origen, las coordenadas del punto resultante se "
+        "obtienen multiplicando cada coordenada por la razón k.\n\n"
+        "1) Coordenada x: 2 × (−2) = −4.\n"
+        "2) Coordenada y: 3 × (−2) = −6.\n"
+        "3) El punto resultante es (−4, −6). El signo negativo de k invierte "
+        "el punto respecto al centro, además de escalarlo.",
+        [
+            ("(4, 6)", "Aplicó la razón de homotecia ignorando su signo negativo, como si k fuera 2 en lugar de −2."),
+            ("(0, 1)", "Sumó la razón de homotecia a cada coordenada en lugar de multiplicarlas."),
+            ("(−2, −3)", "Solo invirtió el signo de las coordenadas, sin multiplicarlas también por 2."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "facil",
+        "En un triángulo rectángulo, el cateto opuesto a un ángulo mide 6 cm y la "
+        "hipotenusa mide 10 cm. ¿Cuál es el seno de ese ángulo?",
+        "3/5 (0,6)",
+        "El seno de un ángulo agudo en un triángulo rectángulo es el cateto "
+        "opuesto dividido por la hipotenusa.\n\n"
+        "1) sen(ángulo) = cateto opuesto / hipotenusa = 6/10.\n"
+        "2) Simplifica dividiendo por 2: 6/10 = 3/5 = 0,6.",
+        [
+            ("5/3", "Invirtió la razón: dividió la hipotenusa por el cateto opuesto en lugar de el cateto opuesto por la hipotenusa."),
+            ("4/5", "Calculó el coseno del ángulo (cateto adyacente/hipotenusa, con adyacente=8 vía Pitágoras) en lugar del seno (cateto opuesto/hipotenusa)."),
+            ("3/4", "Calculó la tangente del ángulo (cateto opuesto/cateto adyacente = 6/8) en lugar del seno (cateto opuesto/hipotenusa)."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En un triángulo rectángulo, un ángulo agudo tiene coseno 0,8. Si la "
+        "hipotenusa mide 15 cm, ¿cuánto mide el cateto adyacente a ese ángulo?",
+        "12 cm",
+        "El coseno es el cateto adyacente dividido por la hipotenusa, así "
+        "que el cateto adyacente se despeja multiplicando.\n\n"
+        "1) cos(ángulo) = cateto adyacente / hipotenusa.\n"
+        "2) Despeja: cateto adyacente = cos(ángulo) × hipotenusa = 0,8 × 15 "
+        "= 12 cm.",
+        [
+            ("18,75 cm", "Dividió la hipotenusa por el coseno en lugar de multiplicarla."),
+            ("0,053 cm", "Dividió el coseno por la hipotenusa en lugar de multiplicar ambos valores."),
+            ("9 cm", "Calculó el cateto opuesto (usando Pitágoras a partir del adyacente=12) en lugar de responder con el cateto adyacente que pedía el enunciado."),
+        ],
+    ),
+    _q(
+        "geo_trigonometria", "dificil",
+        "Desde un punto en el suelo a 20 m de la base de un edificio, el ángulo de "
+        "elevación hacia la parte superior del edificio tiene una tangente de "
+        "1,5. ¿Cuál es la altura del edificio?",
+        "30 m",
+        "La tangente del ángulo de elevación es la altura (cateto opuesto) "
+        "dividida por la distancia al edificio (cateto adyacente).\n\n"
+        "1) tan(ángulo) = altura / distancia.\n"
+        "2) Despeja: altura = tan(ángulo) × distancia = 1,5 × 20 = 30 m.",
+        [
+            ("13,33 m", "Dividió la distancia por la tangente en lugar de multiplicarla."),
+            ("21,5 m", "Sumó la tangente a la distancia en lugar de multiplicarlas."),
+            ("24 m", "Leyó mal el valor de la tangente del enunciado (usó 1,2 en lugar de 1,5)."),
+        ],
+    ),
+    # ---------- PROBABILIDAD Y ESTADÍSTICA ----------
+    _q(
+        "prob_dispersion", "facil",
+        "¿Cuál es la varianza de los datos: 2, 4, 6? (la media es 4)",
+        "8/3 (≈2,67)",
+        "La varianza es el promedio de las diferencias al cuadrado respecto "
+        "a la media.\n\n"
+        "1) Calcula cada diferencia respecto a la media (4) y elévala al "
+        "cuadrado: (2−4)²=4, (4−4)²=0, (6−4)²=4.\n"
+        "2) Súmalas: 4+0+4=8.\n"
+        "3) Divide por la cantidad de datos: 8/3 ≈ 2,67.",
+        [
+            ("0", "Sumó las diferencias respecto a la media sin elevarlas al cuadrado: como son −2, 0 y 2, se cancelaron y dieron 0."),
+            ("8", "Calculó la suma de los cuadrados de las diferencias respecto a la media (8) pero olvidó dividir por la cantidad de datos."),
+            ("≈1,63", "Calculó la raíz cuadrada de la varianza (que es la desviación estándar) en lugar de la varianza misma."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "¿Cuál es la desviación estándar de los datos: 3, 5, 7? (la media es 5 y "
+        "la varianza es 8/3)",
+        "≈1,63",
+        "La desviación estándar es la raíz cuadrada de la varianza.\n\n"
+        "1) La varianza ya está dada: 8/3 ≈ 2,67.\n"
+        "2) Calcula su raíz cuadrada: √2,67 ≈ 1,63.",
+        [
+            ("8/3 (≈2,67)", "Entregó la varianza directamente, sin calcular su raíz cuadrada para obtener la desviación estándar."),
+            ("≈2,83", "Calculó la raíz cuadrada de la suma de los cuadrados (8) sin dividirla antes por la cantidad de datos."),
+            ("4", "Calculó el rango de los datos (7−3=4) en lugar de la desviación estándar."),
+        ],
+    ),
+    _q(
+        "prob_dispersion", "dificil",
+        "Dos cursos rindieron una prueba. El curso A tiene media 5,5 y desviación "
+        "estándar 0,3. El curso B tiene media 5,5 y desviación estándar 1,2. "
+        "¿Qué significa esto?",
+        "Ambos cursos tuvieron el mismo promedio, pero las notas del curso A "
+        "fueron más parejas entre sí que las del curso B.",
+        "La media dice cuál fue el promedio; la desviación estándar dice qué "
+        "tan dispersos (parejos o no) están los datos alrededor de esa "
+        "media.\n\n"
+        "1) Ambos cursos tienen la misma media (5,5): en promedio, les fue "
+        "igual de bien.\n"
+        "2) El curso A tiene una desviación estándar más baja (0,3): sus "
+        "notas están más concentradas cerca del promedio.\n"
+        "3) El curso B tiene una desviación estándar más alta (1,2): sus "
+        "notas están más dispersas, con más estudiantes lejos del promedio "
+        "(tanto por arriba como por abajo).",
+        [
+            ("El curso B tuvo mejores resultados que el curso A, porque su desviación estándar es mayor.", "Interpretó una desviación estándar más alta como mejor desempeño, cuando en realidad indica mayor dispersión (menos consistencia), no mejores notas."),
+            ("El curso A tuvo un promedio más alto que el curso B.", "Confundió la desviación estándar con el promedio: ambos cursos tienen la misma media (5,5), la diferencia está solo en qué tan dispersas están las notas."),
+            ("No se puede comparar nada porque los cursos son distintos.", "No usó la información entregada: la desviación estándar sí permite comparar qué tan homogéneas son las notas entre ambos cursos."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "facil",
+        "En una bolsa hay 4 bolitas rojas y 6 azules. Se saca una al azar y resulta "
+        "azul. Sin devolverla, se saca una segunda bolita. ¿Cuál es la "
+        "probabilidad de que la segunda también sea azul?",
+        "5/9",
+        "Como la primera bolita azul no se devuelve, hay que recalcular "
+        "tanto las azules restantes como el total antes de la segunda "
+        "extracción.\n\n"
+        "1) Antes: 4 rojas + 6 azules = 10 en total.\n"
+        "2) Tras sacar una azul sin devolverla, quedan 4 rojas + 5 azules = "
+        "9 en total.\n"
+        "3) La probabilidad de que la segunda también sea azul es 5/9.",
+        [
+            ("6/10 (3/5)", "No actualizó la cantidad de bolitas tras la primera extracción: calculó la probabilidad como si todavía hubiera 6 azules de 10 en total."),
+            ("5/10 (1/2)", "Actualizó la cantidad de bolitas azules restantes, pero no descontó la bolita ya sacada del total."),
+            ("4/9", "Usó la cantidad de bolitas rojas restantes en el numerador en lugar de las azules."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "En un curso, el 40% de los estudiantes practica deporte y el 15% "
+        "practica deporte Y toca un instrumento musical. De los que practican "
+        "deporte, ¿qué porcentaje también toca un instrumento?",
+        "37,5%",
+        "Se pide una probabilidad condicional: entre quienes practican "
+        "deporte, cuántos también tocan un instrumento.\n\n"
+        "1) La fórmula es: P(instrumento | deporte) = P(deporte y "
+        "instrumento) / P(deporte).\n"
+        "2) Reemplaza: 15% / 40% = 0,15 / 0,40 = 0,375.\n"
+        "3) Como porcentaje: 37,5%.",
+        [
+            ("15%", "Entregó el porcentaje conjunto (15%) directamente, sin dividirlo por el porcentaje de quienes practican deporte para obtener la probabilidad condicional."),
+            ("6%", "Multiplicó los porcentajes en lugar de dividir el porcentaje conjunto por el porcentaje de quienes practican deporte."),
+            ("55%", "Sumó los porcentajes (40%+15%) en lugar de dividir el porcentaje conjunto por el porcentaje de quienes practican deporte."),
+        ],
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "En una fábrica, el 2% de los productos tiene un defecto. De los productos "
+        "defectuosos, el 30% son detectados por el control de calidad. ¿Qué "
+        "porcentaje de TODOS los productos son defectuosos Y fueron detectados?",
+        "0,6%",
+        "Acá se pide lo contrario del ejercicio típico: en vez de dividir "
+        "para obtener una probabilidad condicional, hay que multiplicar la "
+        "probabilidad total por la condicional para obtener la conjunta.\n\n"
+        "1) P(defectuoso) = 2% = 0,02.\n"
+        "2) P(detectado | defectuoso) = 30% = 0,30.\n"
+        "3) P(defectuoso Y detectado) = P(defectuoso) × P(detectado | "
+        "defectuoso) = 0,02 × 0,30 = 0,006 = 0,6%.",
+        [
+            ("30%", "Entregó el porcentaje condicional (30%) directamente, sin multiplicarlo por el porcentaje de productos defectuosos."),
+            ("32%", "Sumó los porcentajes (2%+30%) en lugar de multiplicarlos."),
+            ("15%", "Dividió los porcentajes (30/2) en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "prob_permutacion", "facil",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra "
+        "\"ANA\"? (la letra A se repite 2 veces)",
+        "3",
+        "Cuando hay letras repetidas, el total de permutaciones se divide "
+        "por el factorial de las repeticiones, porque intercambiar letras "
+        "iguales entre sí no genera un orden distinto.\n\n"
+        "1) Si las 3 letras fueran distintas, habría 3! = 6 formas.\n"
+        "2) Pero la A se repite 2 veces, así que se divide por 2!: "
+        "6 / 2 = 3.",
+        [
+            ("6", "Calculó 3! como si las 3 letras fueran distintas, sin dividir por las repeticiones de la letra A."),
+            ("2", "Dividió 3! entre 3 en lugar de entre 2! (el factorial de la cantidad de letras repetidas)."),
+            ("9", "Calculó 3² en lugar de aplicar la fórmula de permutaciones con elementos repetidos (3!/2!)."),
+        ],
+    ),
+    _q(
+        "prob_permutacion", "medio",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra "
+        "\"MAMA\"? (la M se repite 2 veces y la A se repite 2 veces)",
+        "6",
+        "Con dos letras repetidas, se divide por el factorial de cada una "
+        "de las repeticiones.\n\n"
+        "1) Si las 4 letras fueran distintas, habría 4! = 24 formas.\n"
+        "2) Se divide por las repeticiones de M (2!) y también por las de A "
+        "(2!): 24 / (2! × 2!) = 24 / 4 = 6.",
+        [
+            ("24", "Calculó 4! sin dividir por las repeticiones de ninguna letra."),
+            ("12", "Dividió 4! solo por el factorial de las repeticiones de una letra, olvidando dividir también por las de la otra."),
+            ("8", "Dividió 4! entre un valor que no corresponde a las repeticiones reales (2!×2!=4)."),
+        ],
+    ),
+    _q(
+        "prob_permutacion", "dificil",
+        "Un comité de 4 personas se debe formar eligiendo 2 hombres de un grupo de "
+        "5 hombres, y 2 mujeres de un grupo de 4 mujeres. ¿De cuántas formas "
+        "distintas se puede formar el comité?",
+        "60",
+        "Se calcula la cantidad de formas de elegir cada grupo por separado "
+        "y luego se multiplican (principio multiplicativo), porque ambas "
+        "elecciones ocurren a la vez.\n\n"
+        "1) Formas de elegir 2 hombres de 5 (el orden no importa, es una "
+        "combinación): C(5,2) = 10.\n"
+        "2) Formas de elegir 2 mujeres de 4: C(4,2) = 6.\n"
+        "3) Multiplica ambas cantidades: 10 × 6 = 60.",
+        [
+            ("16", "Sumó las combinaciones de hombres y mujeres (10+6) en lugar de multiplicarlas."),
+            ("20", "Multiplicó la cantidad total de hombres y mujeres disponibles (5×4) en lugar de las combinaciones posibles de elegir 2 de cada grupo."),
+            ("120", "Calculó una permutación (P(5,2)=20) en lugar de una combinación (C(5,2)=10) para elegir a los hombres, sin notar que el orden dentro del comité no importa."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "facil",
+        "Se lanza una moneda 3 veces. ¿Cuál es la probabilidad de obtener "
+        "exactamente 2 caras?",
+        "3/8",
+        "Es un modelo binomial: hay que considerar tanto la probabilidad de "
+        "cada resultado como la cantidad de formas distintas en que puede "
+        "ocurrir.\n\n"
+        "1) La probabilidad de una secuencia específica con 2 caras y 1 "
+        "sello es (1/2)² × (1/2)¹ = 1/8.\n"
+        "2) Hay C(3,2) = 3 formas distintas de elegir en cuáles de los 3 "
+        "lanzamientos caen las 2 caras (CCS, CSC, SCC).\n"
+        "3) Multiplica: 3 × 1/8 = 3/8.",
+        [
+            ("1/2", "Calculó la probabilidad de un solo lanzamiento, en lugar de usar el modelo binomial para los 3 lanzamientos."),
+            ("1/8", "Calculó la probabilidad de una secuencia específica ((1/2)³) sin multiplicar por la cantidad de formas distintas en que pueden ocurrir las 2 caras (C(3,2)=3)."),
+            ("3/4", "Contó el doble de los casos favorables reales (6 en lugar de 3), duplicando alguna combinación por error."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "La probabilidad de que un estudiante apruebe un examen de manera "
+        "independiente es 0,8. Si 2 estudiantes rinden el examen, ¿cuál es la "
+        "probabilidad de que AMBOS aprueben?",
+        "0,64 (64%)",
+        "Cuando dos eventos son independientes, la probabilidad de que "
+        "ambos ocurran es el producto de sus probabilidades individuales.\n\n"
+        "1) Probabilidad de que el primero apruebe: 0,8.\n"
+        "2) Probabilidad de que el segundo apruebe: 0,8.\n"
+        "3) Como son independientes, se multiplican: 0,8 × 0,8 = 0,64.",
+        [
+            ("1,6 (160%)", "Sumó las probabilidades en lugar de multiplicarlas — el resultado ni siquiera podría ser una probabilidad válida, porque supera a 1."),
+            ("0,8 (80%)", "Calculó la probabilidad de que apruebe un solo estudiante, sin considerar que se pide la probabilidad de que ambos aprueben."),
+            ("0,4 (40%)", "Dividió la probabilidad por la cantidad de estudiantes en lugar de multiplicar las probabilidades independientes."),
+        ],
+    ),
+    _q(
+        "prob_binomial", "dificil",
+        "Un tirador acierta al blanco con probabilidad 0,6 en cada disparo, de "
+        "forma independiente. Si dispara 3 veces, ¿cuál es la probabilidad de "
+        "que acierte EXACTAMENTE 1 vez?",
+        "0,288 (28,8%)",
+        "Es un modelo binomial con 3 intentos, donde interesa exactamente 1 "
+        "éxito.\n\n"
+        "1) La probabilidad de una secuencia específica con 1 acierto y 2 "
+        "fallas es 0,6 × 0,4 × 0,4 = 0,096.\n"
+        "2) Hay C(3,1) = 3 formas distintas de elegir en cuál de los 3 "
+        "disparos ocurre el acierto.\n"
+        "3) Multiplica: 3 × 0,096 = 0,288.",
+        [
+            ("0,6", "Entregó directamente la probabilidad de acierto de un solo disparo, sin aplicar el modelo binomial para los 3 disparos."),
+            ("0,096", "Calculó la probabilidad de una secuencia específica (acierto en el primer disparo y falla en los otros dos) sin multiplicar por las 3 formas distintas en que puede ocurrir exactamente 1 acierto."),
+            ("0,216", "Calculó la probabilidad de acertar los 3 disparos (0,6³) en lugar de la de acertar exactamente 1."),
         ],
     ),
 ]

@@ -19,6 +19,17 @@ class SkillAxis(StrEnum):
     PROBABILIDAD = "probabilidad"
 
 
+class Subject(StrEnum):
+    """Prueba PAES a la que pertenece un nodo. M2 evalúa "todos los
+    conocimientos de M1, además de" contenido propio (ver temario DEMRE), por
+    eso M2 no duplica los nodos de M1: los reutiliza y solo agrega los nodos
+    exclusivos de M2. `exam_focus.service.SUBJECT_INCLUDES` es la fuente de
+    verdad de qué subjects entran al banco de preguntas de cada prueba."""
+
+    M1 = "m1"
+    M2 = "m2"
+
+
 class ProgressStatus(StrEnum):
     LOCKED = "locked"
     UNLOCKED = "unlocked"
@@ -44,6 +55,9 @@ class SkillNode(Base):
     code: Mapped[str] = mapped_column(String(60), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(160))
     axis: Mapped[SkillAxis] = mapped_column(Enum(SkillAxis))
+    subject: Mapped[Subject] = mapped_column(
+        Enum(Subject), default=Subject.M1, server_default=Subject.M1.name
+    )
     tier: Mapped[int] = mapped_column(Integer, default=1)  # nivel/profundidad en el árbol
     unlock_threshold: Mapped[float] = mapped_column(Float, default=0.75)
     display_order: Mapped[int] = mapped_column(Integer, default=0)

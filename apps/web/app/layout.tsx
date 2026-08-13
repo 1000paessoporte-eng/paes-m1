@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 const BASE_URL = "https://1000paes.cl";
-const TITLE = "1000paes — Prepara tu PAES M1";
+const TITLE = "1000paes — Prepara tu PAES";
 const DESCRIPTION =
-  "Ensayos PAES M1 cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso.";
+  "Ensayos PAES cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso. Competencia Matemática M1 y M2 disponibles.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s — 1000paes",
   },
   description: DESCRIPTION,
-  keywords: ["PAES", "PAES M1", "ensayo PAES", "puntaje PAES", "admisión universitaria Chile"],
+  keywords: ["PAES", "PAES M1", "PAES M2", "ensayo PAES", "puntaje PAES", "admisión universitaria Chile"],
   openGraph: {
     type: "website",
     locale: "es_CL",

@@ -41,7 +41,7 @@ from paes_api.modules.exam_focus.schemas import (
     ReviewQuestionOut,
 )
 from paes_api.modules.skill_tree import service as skill_tree_service
-from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 from paes_api.modules.users.models import User
 
 #: Nombre legible de cada eje, como aparece en el temario DEMRE.
@@ -54,19 +54,30 @@ AXIS_LABELS: dict[str, str] = {
 
 DIFFICULTY_LABELS = {"facil": "Fácil", "medio": "Medio", "dificil": "Difícil"}
 
+#: Qué subjects entran al banco de una prueba. M2 evalúa "todos los
+#: conocimientos de M1, además de" contenido propio (temario DEMRE), así que
+#: su pool incluye los nodos de M1 más los exclusivos de M2.
+SUBJECT_INCLUDES: dict[Subject, list[Subject]] = {
+    Subject.M1: [Subject.M1],
+    Subject.M2: [Subject.M1, Subject.M2],
+}
 
-def _all_questions(db: Session) -> list[Question]:
+
+def _all_questions(db: Session, subject: Subject = Subject.M1) -> list[Question]:
+    included = SUBJECT_INCLUDES[subject]
     stmt = (
         select(Question)
+        .join(Question.skill_node)
+        .where(SkillNode.subject.in_(included))
         .options(selectinload(Question.alternatives), selectinload(Question.skill_node))
         .order_by(Question.skill_node_id, Question.id)
     )
     return list(db.execute(stmt).scalars().all())
 
 
-def get_options(db: Session) -> ExamOptionsOut:
+def get_options(db: Session, subject: Subject = Subject.M1) -> ExamOptionsOut:
     """Ejes disponibles y cuántas preguntas tiene el banco de cada uno."""
-    questions = _all_questions(db)
+    questions = _all_questions(db, subject)
     counts: dict[str, int] = defaultdict(int)
     for q in questions:
         counts[q.skill_node.axis.value] += 1
@@ -76,19 +87,24 @@ def get_options(db: Session) -> ExamOptionsOut:
         for axis, label in AXIS_LABELS.items()
     ]
     return ExamOptionsOut(
+        subject=subject,
         axes=axes,
         total_available=len(questions),
-        seconds_per_question=scoring.segundos_por_pregunta(),
-        official_questions=scoring.PREGUNTAS_OFICIALES,
-        official_duration_min=scoring.DURACION_OFICIAL_MIN,
+        seconds_per_question=scoring.segundos_por_pregunta(subject),
+        official_questions=scoring.SCORING_BY_SUBJECT[subject].preguntas_oficiales,
+        official_duration_min=scoring.SCORING_BY_SUBJECT[subject].duracion_oficial_min,
     )
 
 
-def get_repaso(db: Session, user_id: int) -> RepasoOut:
+def get_repaso(db: Session, user_id: int, subject: Subject = Subject.M1) -> RepasoOut:
     """Sugerencia para "Ensayo de repaso": los ejes de los 2 nodos con peor
     accuracy entre los que el usuario ya intento, reusando el mismo progreso
-    que alimenta el Arbol de Habilidades (no es un calculo nuevo)."""
-    tree = skill_tree_service.get_user_skill_tree(db, user_id)
+    que alimenta el Arbol de Habilidades (no es un calculo nuevo).
+
+    Nota: hoy siempre mira el progreso de M1 (el Árbol de Habilidades solo
+    tiene UI para esa prueba), incluso si el ensayo que se va a rendir es M2.
+    """
+    tree = skill_tree_service.get_user_skill_tree(db, user_id, subject)
     attempted = [n for n in tree if n.attempts > 0]
     if not attempted:
         return RepasoOut(has_data=False, axes=[], axis_labels=[])
@@ -106,9 +122,11 @@ def get_repaso(db: Session, user_id: int) -> RepasoOut:
     )
 
 
-def duration_for(question_count: int, pace: Pace) -> int:
+def duration_for(question_count: int, pace: Pace, subject: Subject = Subject.M1) -> int:
     """Duración en segundos, proporcional a la razón oficial de la prueba."""
-    return round(scoring.segundos_por_pregunta() * question_count * PACE_FACTOR[pace])
+    return round(
+        scoring.segundos_por_pregunta(subject) * question_count * PACE_FACTOR[pace]
+    )
 
 
 def _select_questions(
@@ -155,15 +173,16 @@ def _select_questions(
 
 
 def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
-    pool = _all_questions(db)
+    pool = _all_questions(db, config.subject)
     valid_axes = [a for a in config.axes if a in AXIS_LABELS]
     chosen = _select_questions(pool, valid_axes, config.question_count)
 
     attempt = ExamAttempt(
         user_id=user.id,
         pace=config.pace,
+        subject=config.subject,
         axes=",".join(valid_axes) or None,
-        duration_limit_seconds=duration_for(len(chosen), config.pace),
+        duration_limit_seconds=duration_for(len(chosen), config.pace, config.subject),
     )
     db.add(attempt)
     db.flush()  # necesita el id del intento para las filas de preguntas
@@ -186,7 +205,8 @@ def attempt_questions(db: Session, attempt: ExamAttempt) -> list[Question]:
 
     Los intentos creados antes de que existiera `exam_attempt_questions` no
     tienen set persistido; para esos se cae al comportamiento antiguo (todas
-    las preguntas), que es exactamente el ensayo que rindieron.
+    las preguntas del subject del intento), que es exactamente el ensayo que
+    rindieron (esos intentos son todos de antes de que existiera M2).
     """
     rows = (
         db.execute(
@@ -198,14 +218,24 @@ def attempt_questions(db: Session, attempt: ExamAttempt) -> list[Question]:
         .all()
     )
     if not rows:
-        return _all_questions(db)
+        return _all_questions(db, attempt.subject)
 
-    by_id = {q.id: q for q in _all_questions(db)}
+    # Se buscan por id directo (no por `_all_questions`, que filtra por
+    # subject): el set ya quedó fijado al crear el intento, así que da igual
+    # el subject actual, solo interesan esas preguntas puntuales.
+    question_ids = [r.question_id for r in rows]
+    stmt = (
+        select(Question)
+        .where(Question.id.in_(question_ids))
+        .options(selectinload(Question.alternatives), selectinload(Question.skill_node))
+    )
+    by_id = {q.id: q for q in db.execute(stmt).scalars().all()}
     return [by_id[r.question_id] for r in rows if r.question_id in by_id]
 
 
 def attempt_config(attempt: ExamAttempt, question_count: int) -> ExamConfigOut:
     return ExamConfigOut(
+        subject=attempt.subject,
         question_count=question_count,
         pace=attempt.pace,
         axes=attempt.axes.split(",") if attempt.axes else [],
@@ -317,7 +347,7 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
         else:
             incorrect += 1
 
-    score = scoring.estimar_puntaje(correct, len(questions))
+    score = scoring.estimar_puntaje(correct, len(questions), attempt.subject)
 
     if attempt.status == AttemptStatus.IN_PROGRESS:
         attempt.status = AttemptStatus.SUBMITTED
@@ -382,13 +412,14 @@ def list_attempts(db: Session, user: User) -> list[ExamAttemptSummary]:
         # al vuelo para que el historial y su gráfico no queden con huecos.
         score = a.estimated_score
         if score is None and a.status == AttemptStatus.SUBMITTED:
-            score = scoring.estimar_puntaje(correct, len(questions))
+            score = scoring.estimar_puntaje(correct, len(questions), a.subject)
         out.append(
             ExamAttemptSummary(
                 attempt_id=a.id,
                 started_at=a.started_at,
                 finished_at=a.finished_at,
                 status=a.status,
+                subject=a.subject,
                 total_questions=len(questions),
                 answered=answered,
                 correct=correct,

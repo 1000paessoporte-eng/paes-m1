@@ -68,7 +68,7 @@ export function PanelInicio({ user, attempts }: Props) {
       <section className="px-6 pt-16 pb-16 sm:pt-20">
         <div className="mx-auto max-w-5xl">
           <p className="text-sm font-medium text-accent">
-            Preparación PAES M1 · Admisión 2027
+            Preparación PAES · Admisión 2027
           </p>
           <h1 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl">
             Hola, {nombre}

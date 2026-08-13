@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 
 from paes_api.modules.content.models import Difficulty
 from paes_api.modules.exam_focus.models import AttemptStatus, Pace
+from paes_api.modules.skill_tree.models import Subject
 
 
 class ExamAlternativeOut(BaseModel):
@@ -44,6 +45,7 @@ class AxisOptionOut(BaseModel):
 class ExamOptionsOut(BaseModel):
     """Todo lo que la pantalla de configuración necesita para armarse."""
 
+    subject: Subject
     axes: list[AxisOptionOut]
     total_available: int
     seconds_per_question: float
@@ -54,6 +56,7 @@ class ExamOptionsOut(BaseModel):
 class ExamConfigIn(BaseModel):
     """Configuración elegida por el estudiante antes de comenzar."""
 
+    subject: Subject = Subject.M1
     question_count: int = Field(default=20, ge=1, le=200)
     pace: Pace = Pace.OFICIAL
     #: Ejes seleccionados. Lista vacía significa "todos", repartidos proporcionalmente.
@@ -61,6 +64,7 @@ class ExamConfigIn(BaseModel):
 
 
 class ExamConfigOut(BaseModel):
+    subject: Subject
     question_count: int
     pace: Pace
     axes: list[str]
@@ -129,6 +133,7 @@ class ExamAttemptSummary(BaseModel):
     started_at: datetime
     finished_at: datetime | None = None
     status: AttemptStatus
+    subject: Subject
     total_questions: int
     answered: int
     correct: int
