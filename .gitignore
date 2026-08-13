@@ -30,3 +30,6 @@ __pycache__/
 npm-debug.log*
 pnpm-debug.log*
 .gstack/
+
+# Handoff privado con credenciales — NUNCA se commitea (repo publico)
+HANDOFF-PRIVADO.md

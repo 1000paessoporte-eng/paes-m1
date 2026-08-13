@@ -12,6 +12,12 @@
 > mencionados solo si necesitas el detalle de implementación. Presta especial
 > atención a la sección **Deploy** — hay dos formas fáciles de romper
 > producción ahí.
+>
+> **¿Necesitas credenciales?** No están en este repo y nunca deben estarlo: el
+> repo es **público**. Van en un archivo aparte, `HANDOFF-PRIVADO.md`, que se
+> entrega a mano entre los socios (WhatsApp, correo o gestor de contraseñas) y
+> está en `.gitignore`. Si estás trabajando en este proyecto y no lo tienes,
+> pídeselo a quien te dio acceso — no lo busques en GitHub.
 
 ---
 
@@ -218,14 +224,14 @@ PostgreSQL en **Neon**, región `sa-east-1`. Dos connection strings:
 - **Pooled** (host con `-pooler`): para el runtime de la API → `DATABASE_URL` en Vercel.
 - **Directa** (sin `-pooler`): para Alembic y `scripts/seed.py`.
 
-Las credenciales reales están en `apps/api/.env.local` (**gitignored**, nunca
-en este README: el repo es público). Si no las tienes, se sacan del dashboard
-de Neon con la cuenta de arriba.
+Los connection strings reales están en **`HANDOFF-PRIVADO.md`** (gitignored, se
+entrega a mano) y en `apps/api/.env.local`. Nunca en este README ni en ningún
+archivo rastreado por git: el repo es público y los bots que rastrean GitHub
+encuentran un `postgresql://…` con contraseña en minutos.
 
 > ⚠️ `DATABASE_URL` en Vercel está marcada como **Sensitive**: es de solo
-> escritura, nadie puede volver a leerla (ni el dueño). Si se pierde el
-> `.env.local` y no está en Neon, la única salida es rotar la base. Ya pasó una
-> vez.
+> escritura, nadie puede volver a leerla (ni el dueño). Si se pierden esas dos
+> copias locales, la única salida es rotar la base. Ya pasó una vez.
 
 Aplicar cambios de esquema y contenido a producción:
 
