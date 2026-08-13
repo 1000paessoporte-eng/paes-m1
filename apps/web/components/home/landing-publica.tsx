@@ -10,65 +10,110 @@ const FEATURES = [
     description:
       "Arma el ensayo a tu medida: elige los ejes, cuántas preguntas y el ritmo. El tiempo es proporcional al de la prueba real, y tus respuestas se guardan solas.",
     icon: TimerIcon,
+    badgeClass: "bg-accent/10 text-accent",
   },
   {
     title: "Puntaje estimado y resolución",
     description:
       "Al terminar ves tu puntaje en escala 100-1000, el desglose por eje y dificultad, y el desarrollo paso a paso de cada ejercicio.",
     icon: TargetIcon,
+    badgeClass: "bg-success/10 text-success",
   },
   {
     title: "Árbol de Habilidades",
     description:
       "El temario completo como nodos que desbloqueas a medida que dominas cada tema: Números, Álgebra, Geometría y Probabilidad.",
     icon: TreeIcon,
+    badgeClass: "bg-warning/10 text-warning",
   },
   {
     title: "Tu progreso en el tiempo",
     description:
       "Historial de todos tus ensayos con la evolución del puntaje, tu mejor marca, el promedio y cuánto subiste respecto del ensayo anterior.",
     icon: ChartIcon,
+    badgeClass: "bg-accent-2/10 text-accent-2",
   },
+] as const;
+
+const DATOS = [
+  { label: "Tiempo real de la prueba", icon: ClockIcon },
+  { label: "Puntaje en escala 100–1000", icon: TargetIcon },
+  { label: "Gratis mientras estamos en beta", icon: SparkIcon },
 ] as const;
 
 export function LandingPublica() {
   return (
     <main className="flex flex-1 flex-col">
-      <section className="px-6 pt-24 pb-24 sm:pt-32">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">
-            PAES M1 · Competencia Matemática · Admisión 2027
-          </span>
+      <section className="hero-glow relative overflow-hidden px-6 pt-24 pb-24 sm:pt-28">
+        <div className="bg-dot-grid pointer-events-none absolute inset-0 top-0 h-[26rem]" />
 
-          <h1 className="text-6xl font-bold tracking-tight text-balance text-accent sm:text-8xl">
-            milpaes
-          </h1>
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+            <span className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
+              PAES M1 · Competencia Matemática · Admisión 2027
+            </span>
 
-          <p className="max-w-xl text-balance text-muted sm:text-lg">
-            Ensayos de matemática con el tiempo real de la prueba, tu puntaje
-            estimado y la resolución de cada ejercicio. Practica, mide y mejora.
-          </p>
+            <h1 className="text-6xl font-bold tracking-tight text-balance sm:text-7xl">
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: "linear-gradient(135deg, var(--accent), var(--accent-2))",
+                }}
+              >
+                milpaes
+              </span>
+            </h1>
 
-          <div className="mt-2 flex flex-col items-center gap-4">
-            <GoogleButton redirectTo="/examen" />
-            <Link
-              href="/login"
-              className="btn-glow rounded-lg px-6 py-3 text-sm font-medium text-accent-foreground transition-all"
-            >
-              Iniciar sesión
-            </Link>
-            <Link
-              href="/registro"
-              className="text-sm text-muted underline-offset-4 hover:text-foreground hover:underline"
-            >
-              Crear una cuenta nueva
-            </Link>
-            <Link
-              href="/demo"
-              className="text-sm font-medium text-accent underline-offset-4 hover:underline"
-            >
-              Pruébalo sin cuenta →
-            </Link>
+            <p className="max-w-xl text-balance text-muted sm:text-lg">
+              Ensayos de matemática con el tiempo real de la prueba, tu puntaje
+              estimado y la resolución de cada ejercicio. Practica, mide y
+              mejora.
+            </p>
+
+            <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
+              {DATOS.map((dato) => (
+                <li
+                  key={dato.label}
+                  className="flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
+                >
+                  <dato.icon className="text-accent" />
+                  {dato.label}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-2 flex flex-col items-center gap-3 lg:items-start">
+              <GoogleButton redirectTo="/examen" />
+              <div className="flex items-center gap-3 self-stretch text-xs text-muted">
+                <span className="h-px flex-1 bg-border" />
+                o
+                <span className="h-px flex-1 bg-border" />
+              </div>
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+                <Link
+                  href="/registro"
+                  className="btn-glow rounded-lg px-6 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
+                >
+                  Crear cuenta gratis
+                </Link>
+                <Link
+                  href="/demo"
+                  className="rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface-hover"
+                >
+                  Pruébalo sin cuenta
+                </Link>
+              </div>
+              <Link
+                href="/login"
+                className="text-sm text-muted underline-offset-4 hover:text-foreground hover:underline"
+              >
+                ¿Ya tienes cuenta? Inicia sesión
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-sm lg:mx-0">
+            <PuntajeMockup />
           </div>
         </div>
       </section>
@@ -91,7 +136,9 @@ export function LandingPublica() {
                 key={feature.title}
                 className="card-hover rounded-xl border border-border bg-surface p-6"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-surface-hover text-accent">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-lg ${feature.badgeClass}`}
+                >
                   <feature.icon />
                 </div>
                 <h3 className="mt-4 text-sm font-semibold text-foreground">
@@ -138,6 +185,80 @@ export function LandingPublica() {
   );
 }
 
+const EJES_EJEMPLO = [
+  { nombre: "Números", valor: 82, colorVar: "var(--accent)" },
+  { nombre: "Álgebra y funciones", valor: 74, colorVar: "var(--accent-2)" },
+  { nombre: "Geometría", valor: 65, colorVar: "var(--success)" },
+  { nombre: "Probabilidad", valor: 58, colorVar: "var(--warning)" },
+] as const;
+
+/** Vista previa ilustrativa del resultado de un ensayo (no son datos reales). */
+function PuntajeMockup() {
+  const radio = 46;
+  const circunferencia = 2 * Math.PI * radio;
+  const progreso = 0.78;
+
+  return (
+    <div className="relative">
+      <div className="float-chip absolute -top-4 -right-3 z-10 flex items-center gap-1.5 rounded-full border border-success/30 bg-background px-3 py-1.5 text-xs font-semibold text-success shadow-lg shadow-foreground/5 sm:-right-6">
+        <UpIcon />
+        +38 pts vs. tu último ensayo
+      </div>
+
+      <div className="rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-foreground/5">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-medium text-muted">
+            Resultado de ejemplo
+          </span>
+          <span className="rounded-full bg-surface-hover px-2 py-0.5 text-[11px] text-muted">
+            Ensayo #4
+          </span>
+        </div>
+
+        <div className="mt-5 flex items-center gap-5">
+          <svg width="104" height="104" viewBox="0 0 104 104" className="shrink-0 -rotate-90">
+            <circle cx="52" cy="52" r={radio} fill="none" stroke="var(--border)" strokeWidth="8" />
+            <circle
+              cx="52"
+              cy="52"
+              r={radio}
+              fill="none"
+              stroke="var(--accent)"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeDasharray={circunferencia}
+              strokeDashoffset={circunferencia * (1 - progreso)}
+            />
+          </svg>
+          <div>
+            <p className="text-3xl font-bold tracking-tight text-foreground">
+              780<span className="text-base font-medium text-muted">/1000</span>
+            </p>
+            <p className="text-xs text-muted">Puntaje estimado</p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-3">
+          {EJES_EJEMPLO.map((eje) => (
+            <div key={eje.nombre}>
+              <div className="mb-1 flex items-center justify-between text-xs">
+                <span className="text-foreground">{eje.nombre}</span>
+                <span className="text-muted">{eje.valor}%</span>
+              </div>
+              <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-hover">
+                <div
+                  className="h-full rounded-full"
+                  style={{ width: `${eje.valor}%`, background: eje.colorVar }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TreeIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -160,9 +281,9 @@ function TimerIcon() {
   );
 }
 
-function TargetIcon() {
+function TargetIcon({ className }: { className?: string }) {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <circle cx="12" cy="12" r="9" />
       <circle cx="12" cy="12" r="5" />
       <circle cx="12" cy="12" r="1" fill="currentColor" />
@@ -174,6 +295,31 @@ function ChartIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 20V10M12 20V4M20 20v-7" />
+    </svg>
+  );
+}
+
+function ClockIcon({ className }: { className?: string }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </svg>
+  );
+}
+
+function SparkIcon({ className }: { className?: string }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M12 2l1.8 5.6L19.5 9l-5.7 1.4L12 16l-1.8-5.6L4.5 9l5.7-1.4z" />
+    </svg>
+  );
+}
+
+function UpIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 15l6-6 6 6" />
     </svg>
   );
 }

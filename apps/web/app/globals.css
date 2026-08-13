@@ -97,3 +97,49 @@ body {
   --texto: var(--foreground);
   --superficie: var(--background);
 }
+
+/* Fondo decorativo del hero: manchas de color difuminadas fijas (no siguen al
+   scroll) detrás de un contenedor con overflow-hidden. */
+.hero-glow::before,
+.hero-glow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+.hero-glow::before {
+  top: -8rem;
+  left: 50%;
+  width: 36rem;
+  height: 22rem;
+  transform: translateX(-65%);
+  background: var(--accent);
+}
+
+.hero-glow::after {
+  top: -4rem;
+  left: 50%;
+  width: 30rem;
+  height: 20rem;
+  transform: translateX(10%);
+  background: var(--accent-2);
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(var(--border-strong) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 0%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+@keyframes float-chip {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-chip {
+  animation: float-chip 4s ease-in-out infinite;
+}
