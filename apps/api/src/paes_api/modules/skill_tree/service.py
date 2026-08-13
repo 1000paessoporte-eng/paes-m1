@@ -28,7 +28,7 @@ from paes_api.modules.skill_tree.models import (
 )
 from paes_api.modules.skill_tree.schemas import SkillNodeProgressOut
 
-MIN_ATTEMPTS_FOR_UNLOCK = 2
+MIN_ATTEMPTS_FOR_UNLOCK = 4
 
 
 def _load_nodes(db: Session) -> dict[int, SkillNode]:

@@ -13,6 +13,7 @@ from paes_api.modules.exam_focus.models import (
     ExamAttempt,
     ExamAttemptQuestion,
 )
+from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.skill_tree.models import SkillNode, UserSkillProgress
 from paes_api.modules.users.models import PasswordResetToken, User
 
@@ -22,6 +23,7 @@ __all__ = [
     "ExamAttempt",
     "ExamAttemptQuestion",
     "PasswordResetToken",
+    "PracticeAnswer",
     "Question",
     "SkillNode",
     "StudyStreak",

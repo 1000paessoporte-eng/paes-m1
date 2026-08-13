@@ -1,7 +1,7 @@
-"""Analítica del estudiante: se calcula al vuelo a partir de ExamAnswer,
-en lugar de mantener la tabla study_streaks pre-agregada (existe en el
-modelo para cuando el volumen de datos lo justifique; por ahora
-recalcular es más simple y siempre consistente con la fuente)."""
+"""Analítica del estudiante: se calcula al vuelo a partir de ExamAnswer y
+PracticeAnswer, en lugar de mantener la tabla study_streaks pre-agregada
+(existe en el modelo para cuando el volumen de datos lo justifique; por
+ahora recalcular es más simple y siempre consistente con la fuente)."""
 
 from collections import defaultdict
 from datetime import UTC, date, datetime, timedelta
@@ -12,13 +12,18 @@ from sqlalchemy.orm import Session
 from paes_api.modules.analytics.schemas import AnalyticsSummaryOut, DailyStat
 from paes_api.modules.content.models import Alternative
 from paes_api.modules.exam_focus.models import ExamAnswer, ExamAttempt
+from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.users.models import User
 
 CHART_DAYS = 14
 
 
 def _daily_buckets(db: Session, user: User) -> dict[date, dict[str, float]]:
-    rows = db.execute(
+    """Combina Modo Ensayo y Modo Práctica. Solo el ensayo trae tiempo por
+    respuesta (time_spent_ms autoguardado durante el intento); la práctica no
+    mide tiempo por pregunta, así que solo aporta a "answered"/"correct" y,
+    por lo tanto, a la racha y la precisión — no a los minutos practicados."""
+    exam_rows = db.execute(
         select(ExamAnswer, Alternative.is_correct)
         .join(ExamAttempt, ExamAnswer.attempt_id == ExamAttempt.id)
         .outerjoin(Alternative, ExamAnswer.selected_alternative_id == Alternative.id)
@@ -28,13 +33,26 @@ def _daily_buckets(db: Session, user: User) -> dict[date, dict[str, float]]:
     buckets: dict[date, dict[str, float]] = defaultdict(
         lambda: {"answered": 0, "correct": 0, "ms": 0}
     )
-    for answer, is_correct in rows:
+    for answer, is_correct in exam_rows:
         d = answer.answered_at.date()
         b = buckets[d]
         b["answered"] += 1
         if is_correct:
             b["correct"] += 1
         b["ms"] += answer.time_spent_ms or 0
+
+    practice_rows = db.execute(
+        select(PracticeAnswer.answered_at, PracticeAnswer.is_correct).where(
+            PracticeAnswer.user_id == user.id
+        )
+    ).all()
+    for answered_at, is_correct in practice_rows:
+        d = answered_at.date()
+        b = buckets[d]
+        b["answered"] += 1
+        if is_correct:
+            b["correct"] += 1
+
     return buckets
 
 

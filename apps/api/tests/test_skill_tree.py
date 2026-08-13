@@ -44,8 +44,10 @@ def test_child_unlocks_after_prerequisite_meets_threshold(
     _make_node(db_session, "hijo2", prerequisites=[root])
     _, user = register_user(email="unlock@milpaes.cl")
 
-    # 2 respuestas correctas en el nodo raiz (MIN_ATTEMPTS_FOR_UNLOCK=2,
+    # 4 respuestas correctas en el nodo raiz (MIN_ATTEMPTS_FOR_UNLOCK=4,
     # unlock_threshold=0.75) deben desbloquear a su hijo.
+    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
+    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
     skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
     newly_unlocked = skill_tree_service.apply_single_answer(
         db_session, user["id"], root.id, True
@@ -64,6 +66,8 @@ def test_node_masters_when_owner_meets_its_own_threshold(
     root = _make_node(db_session, "raiz3")
     _, user = register_user(email="master@milpaes.cl")
 
+    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
+    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
     skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
     skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
 

@@ -88,7 +88,7 @@ def test_practice_answer_unlocks_dependent_node(
 
     headers, _ = register_user(email="practica-unlock@milpaes.cl")
 
-    for _ in range(2):
+    for _ in range(4):
         resp = client.post(
             "/api/practice/raiz_practica/answer",
             json={"question_id": question.id, "selected_alternative_id": correct.id},

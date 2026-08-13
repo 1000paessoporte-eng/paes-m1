@@ -1,9 +1,12 @@
+import random
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session, selectinload
 
 from paes_api.core.database import get_db
 from paes_api.modules.content.models import Question
+from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.practice.schemas import (
     PracticeAlternativeOut,
     PracticeAnswerIn,
@@ -35,7 +38,7 @@ def get_practice_questions(
     code: str, db: Session = Depends(get_db), user: User = Depends(get_current_user)
 ) -> PracticeStartOut:
     node = _get_unlocked_node_or_error(db, code, user.id)
-    questions = (
+    questions = list(
         db.execute(
             select(Question)
             .where(Question.skill_node_id == node.id)
@@ -44,6 +47,10 @@ def get_practice_questions(
         .scalars()
         .all()
     )
+    # Sin barajar, la sesion de practica repite siempre la misma secuencia
+    # (util para "practicar de nuevo" tipo repeticion espaciada solo si el
+    # orden cambia entre sesiones).
+    random.shuffle(questions)
     return PracticeStartOut(
         node_code=node.code,
         node_name=node.name,
@@ -85,6 +92,15 @@ def answer_practice_question(
     if selected is None:
         raise HTTPException(status_code=422, detail="Alternativa inválida para esta pregunta")
     correct_alt = next(a for a in question.alternatives if a.is_correct)
+
+    db.add(
+        PracticeAnswer(
+            user_id=user.id,
+            question_id=question.id,
+            skill_node_id=node.id,
+            is_correct=selected.is_correct,
+        )
+    )
 
     newly_unlocked = skill_tree_service.apply_single_answer(
         db, user.id, node.id, selected.is_correct
