@@ -46,9 +46,9 @@ export default function RegistroPage() {
             background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
           }}
         >
-          m
+          1K
         </span>
-        <h1 className="mt-4 text-lg font-semibold">Crea tu cuenta en milpaes</h1>
+        <h1 className="mt-4 text-lg font-semibold">Crea tu cuenta en 1000paes</h1>
         <p className="mt-1 text-sm text-muted">
           Empieza a rendir ensayos y a seguir tu progreso.
         </p>

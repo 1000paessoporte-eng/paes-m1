@@ -101,7 +101,7 @@ export default function RestablecerContrasenaPage() {
             background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
           }}
         >
-          m
+          1K
         </span>
         <h1 className="mt-4 text-lg font-semibold">Crea una contraseña nueva</h1>
         <p className="mt-1 text-sm text-muted">

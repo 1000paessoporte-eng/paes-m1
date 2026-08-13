@@ -157,10 +157,10 @@ def request_password_reset(db: Session, email: str) -> None:
     reset_url = f"{get_settings().frontend_url}/restablecer-contrasena?token={raw_token}"
     send_email(
         to=user.email,
-        subject="Recupera tu contraseña en milpaes",
+        subject="Recupera tu contraseña en 1000paes",
         body=(
             f"Hola {user.name},\n\n"
-            "Recibimos una solicitud para restablecer tu contraseña en milpaes.\n"
+            "Recibimos una solicitud para restablecer tu contraseña en 1000paes.\n"
             f"Este link es válido por {RESET_TOKEN_TTL_MINUTES} minutos y solo se puede usar una vez:\n\n"
             f"{reset_url}\n\n"
             "Si no fuiste tú, ignora este correo: tu contraseña actual sigue funcionando."

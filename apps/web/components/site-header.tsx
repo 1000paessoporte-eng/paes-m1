@@ -52,9 +52,9 @@ export function SiteHeader() {
               background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
             }}
           >
-            m
+            1K
           </span>
-          <span className="text-sm font-semibold tracking-tight">milpaes</span>
+          <span className="text-sm font-semibold tracking-tight">1000paes</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

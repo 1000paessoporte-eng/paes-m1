@@ -60,7 +60,7 @@ export function LandingPublica() {
                   backgroundImage: "linear-gradient(135deg, var(--accent), var(--accent-2))",
                 }}
               >
-                milpaes
+                1000paes
               </span>
             </h1>
 
@@ -166,7 +166,7 @@ export function LandingPublica() {
       <footer className="border-t border-border px-6 py-10">
         <div className="mx-auto max-w-5xl text-center text-xs leading-relaxed text-muted">
           <p>
-            milpaes no tiene relación con el DEMRE. El puntaje mostrado es una
+            1000paes no tiene relación con el DEMRE. El puntaje mostrado es una
             estimación referencial: el puntaje real depende de la forma rendida
             y del proceso de admisión.
           </p>

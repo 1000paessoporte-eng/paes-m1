@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    smtp_from: str = "milpaes <no-responder@1000paes.cl>"
+    smtp_from: str = "1000paes <no-responder@1000paes.cl>"
     cors_origins: list[str] = [
         "http://localhost:3000",
         "http://192.168.1.11:3000",

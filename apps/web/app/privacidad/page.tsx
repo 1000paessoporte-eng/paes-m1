@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Política de privacidad — milpaes",
+  title: "Política de privacidad — 1000paes",
 };
 
 export default function PrivacidadPage() {
@@ -84,7 +84,7 @@ export default function PrivacidadPage() {
           <section>
             <h2>6. Cookies y almacenamiento local</h2>
             <p>
-              milpaes guarda tu token de sesión en una cookie del navegador y
+              1000paes guarda tu token de sesión en una cookie del navegador y
               usa el almacenamiento local para no perder tu progreso en un
               ensayo si recargas la página. No usamos cookies de rastreo ni
               publicidad de terceros.

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "milpaes — Prepara tu PAES M1",
+  title: "1000paes — Prepara tu PAES M1",
   description:
     "Ensayos PAES M1 cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso.",
 };

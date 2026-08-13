@@ -31,7 +31,7 @@ export default function OlvideContrasenaPage() {
             background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
           }}
         >
-          m
+          1K
         </span>
         <h1 className="mt-4 text-lg font-semibold">Recupera tu contraseña</h1>
         <p className="mt-1 text-sm text-muted">
@@ -41,7 +41,7 @@ export default function OlvideContrasenaPage() {
         {sent ? (
           <p className="mt-6 rounded-lg border border-border bg-background px-3 py-3 text-sm text-muted">
             Si <span className="text-foreground">{email}</span> tiene una cuenta
-            en milpaes, te llegará un correo con las instrucciones. El link
+            en 1000paes, te llegará un correo con las instrucciones. El link
             vence en 30 minutos.
           </p>
         ) : (

@@ -1,6 +1,6 @@
-# milpaes — Plataforma de preparación PAES M1
+# 1000paes — Plataforma de preparación PAES M1
 
-> La plataforma se llama **milpaes** de cara al usuario. Los paquetes internos
+> La plataforma se llama **1000paes** de cara al usuario. Los paquetes internos
 > del monorepo siguen llamándose `@paes-m1/*` y el repo `paes-m1`: renombrarlos
 > no aporta nada al producto y rompería imports y rutas.
 

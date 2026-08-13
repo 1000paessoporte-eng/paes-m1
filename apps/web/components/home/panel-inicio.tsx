@@ -162,7 +162,7 @@ export function PanelInicio({ user, attempts }: Props) {
       <footer className="border-t border-border px-6 py-10">
         <div className="mx-auto max-w-5xl text-center text-xs leading-relaxed text-muted">
           <p>
-            milpaes no tiene relación con el DEMRE. El puntaje mostrado es una
+            1000paes no tiene relación con el DEMRE. El puntaje mostrado es una
             estimación referencial: el puntaje real depende de la forma rendida
             y del proceso de admisión.
           </p>

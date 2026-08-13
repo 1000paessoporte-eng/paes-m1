@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Términos y condiciones — milpaes",
+  title: "Términos y condiciones — 1000paes",
 };
 
 export default function TerminosPage() {
@@ -14,12 +14,12 @@ export default function TerminosPage() {
 
         <div className="mt-8 flex flex-col gap-6 text-sm leading-relaxed text-muted [&_h2]:text-base [&_h2]:font-semibold [&_h2]:text-foreground [&_p]:mt-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-5">
           <section>
-            <h2>1. Qué es milpaes</h2>
+            <h2>1. Qué es 1000paes</h2>
             <p>
-              milpaes es una plataforma de preparación para la prueba PAES M1
+              1000paes es una plataforma de preparación para la prueba PAES M1
               (Competencia Matemática 1) de Chile: ensayos cronometrados,
               puntaje estimado, revisión de cada pregunta y seguimiento de tu
-              progreso. <strong>milpaes no tiene relación con el DEMRE</strong>{" "}
+              progreso. <strong>1000paes no tiene relación con el DEMRE</strong>{" "}
               ni con ninguna institución oficial del proceso de admisión. El
               puntaje que entrega la plataforma es una estimación referencial
               y no garantiza el puntaje real que obtengas al rendir la PAES.
@@ -29,7 +29,7 @@ export default function TerminosPage() {
           <section>
             <h2>2. Tu cuenta</h2>
             <p>
-              Para usar milpaes necesitas una cuenta, creada con correo y
+              Para usar 1000paes necesitas una cuenta, creada con correo y
               contraseña o con tu cuenta de Google. Eres responsable de
               mantener tu contraseña en privado y de todo lo que ocurra bajo
               tu cuenta. Avísanos si sospechas que alguien más accedió a ella.
@@ -67,7 +67,7 @@ export default function TerminosPage() {
             <h2>5. Propiedad del contenido</h2>
             <p>
               Las preguntas, alternativas, explicaciones y el diseño de la
-              plataforma son propiedad de milpaes o de sus licenciantes. Puedes
+              plataforma son propiedad de 1000paes o de sus licenciantes. Puedes
               usarlos para tu preparación personal, pero no reproducirlos ni
               distribuirlos fuera de la plataforma sin autorización.
             </p>
@@ -76,7 +76,7 @@ export default function TerminosPage() {
           <section>
             <h2>6. Disponibilidad del servicio</h2>
             <p>
-              milpaes está en desarrollo activo: features, el banco de
+              1000paes está en desarrollo activo: features, el banco de
               preguntas y la disponibilidad del servicio pueden cambiar. Hacemos
               lo posible por avisar con anticipación cambios que te afecten,
               pero no podemos garantizar un funcionamiento ininterrumpido.
@@ -86,7 +86,7 @@ export default function TerminosPage() {
           <section>
             <h2>7. Cierre de cuenta</h2>
             <p>
-              Puedes dejar de usar milpaes cuando quieras. Para eliminar tu
+              Puedes dejar de usar 1000paes cuando quieras. Para eliminar tu
               cuenta y tus datos, escríbenos a{" "}
               <a href="mailto:hola@1000paes.cl" className="text-accent hover:underline">
                 hola@1000paes.cl
