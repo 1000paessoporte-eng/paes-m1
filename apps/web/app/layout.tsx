@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
@@ -13,10 +15,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://1000paes.cl";
+const TITLE = "1000paes — Prepara tu PAES M1";
+const DESCRIPTION =
+  "Ensayos PAES M1 cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso.";
+
 export const metadata: Metadata = {
-  title: "1000paes — Prepara tu PAES M1",
-  description:
-    "Ensayos PAES M1 cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso.",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: TITLE,
+    template: "%s — 1000paes",
+  },
+  description: DESCRIPTION,
+  keywords: ["PAES", "PAES M1", "ensayo PAES", "puntaje PAES", "admisión universitaria Chile"],
+  openGraph: {
+    type: "website",
+    locale: "es_CL",
+    url: BASE_URL,
+    siteName: "1000paes",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -28,6 +52,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <SiteHeader />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

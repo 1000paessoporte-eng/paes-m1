@@ -12,6 +12,8 @@
   "dependencies": {
     "@paes-m1/types": "workspace:*",
     "@paes-m1/utils": "workspace:*",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.4.0",
     "katex": "^0.18.4",
     "next": "16.3.0",
