@@ -17,6 +17,7 @@ const SECCIONES = [
     accion: "Rendir un ensayo",
     principal: true,
     icon: TimerIcon,
+    badgeClass: "bg-accent/10 text-accent",
   },
   {
     href: "/historial",
@@ -26,6 +27,7 @@ const SECCIONES = [
     accion: "Ver mi progreso",
     principal: false,
     icon: ChartIcon,
+    badgeClass: "bg-accent-2/10 text-accent-2",
   },
   {
     href: "/arbol",
@@ -35,6 +37,7 @@ const SECCIONES = [
     accion: "Abrir el árbol",
     principal: false,
     icon: TreeIcon,
+    badgeClass: "bg-warning/10 text-warning",
   },
   {
     href: "/analitica",
@@ -44,6 +47,7 @@ const SECCIONES = [
     accion: "Ver analítica",
     principal: false,
     icon: TargetIcon,
+    badgeClass: "bg-success/10 text-success",
   },
 ] as const;
 
@@ -57,54 +61,85 @@ export function PanelInicio({ user, attempts }: Props) {
   const puntajes = rendidos.map((a) => a.estimated_score ?? 0);
   const mejor = puntajes.length > 0 ? Math.max(...puntajes) : null;
   const ultimo = puntajes.length > 0 ? puntajes[0] : null;
+  const anterior = puntajes.length > 1 ? puntajes[1] : null;
+  const variacion = ultimo != null && anterior != null ? ultimo - anterior : null;
   const enCurso = attempts.find((a) => a.status === "in_progress");
   const tiempoTotal = rendidos.reduce((acc, a) => acc + a.elapsed_seconds, 0);
+  const tieneDatos = rendidos.length > 0 && mejor != null && ultimo != null;
 
   // Solo el nombre de pila: "Hola, Juan" se lee mejor que el nombre completo.
   const nombre = user.name.split(" ")[0];
 
   return (
     <main className="flex flex-1 flex-col">
-      <section className="px-6 pt-16 pb-16 sm:pt-20">
-        <div className="mx-auto max-w-5xl">
-          <p className="text-sm font-medium text-accent">
-            Preparación PAES · Admisión 2027
-          </p>
-          <h1 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl">
-            Hola, {nombre}
-          </h1>
-          <p className="mt-3 max-w-xl text-muted">
-            {rendidos.length === 0
-              ? "Todavía no rindes ningún ensayo. El primero te dará un puntaje estimado y te mostrará en qué ejes conviene reforzar."
-              : "Este es tu panel. Retoma donde quedaste o arma un ensayo nuevo."}
-          </p>
+      <section className="hero-glow relative overflow-hidden px-6 pt-16 pb-16 sm:pt-20">
+        <div className="bg-dot-grid pointer-events-none absolute inset-0 top-0 h-[24rem]" />
 
-          {enCurso && (
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4">
-              <p className="text-sm">
-                Tienes un ensayo en curso sin finalizar. Al continuar retomas
-                justo donde quedaste.
+        <div className="relative mx-auto max-w-5xl">
+          <div
+            className={
+              tieneDatos
+                ? "grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]"
+                : "max-w-xl"
+            }
+          >
+            <div>
+              <p className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent inline-block">
+                Preparación PAES · Admisión 2027
               </p>
+              <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+                Hola,{" "}
+                <span
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(135deg, var(--accent), var(--accent-2))",
+                  }}
+                >
+                  {nombre}
+                </span>
+              </h1>
+              <p className="mt-3 max-w-xl text-muted">
+                {tieneDatos
+                  ? "Este es tu panel. Retoma donde quedaste o arma un ensayo nuevo."
+                  : "Todavía no rindes ningún ensayo. El primero te dará un puntaje estimado y te mostrará en qué ejes conviene reforzar."}
+              </p>
+
+              {enCurso && (
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4">
+                  <p className="text-sm">
+                    Tienes un ensayo en curso sin finalizar. Al continuar
+                    retomas justo donde quedaste.
+                  </p>
+                  <Link
+                    href="/examen"
+                    className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
+                  >
+                    Continuar ensayo
+                  </Link>
+                </div>
+              )}
+
               <Link
                 href="/examen"
-                className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
+                className="btn-glow mt-6 inline-flex rounded-lg px-6 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
               >
-                Continuar ensayo
+                {tieneDatos ? "Rendir un nuevo ensayo" : "Rendir tu primer ensayo"} →
               </Link>
             </div>
-          )}
 
-          {rendidos.length > 0 && (
-            <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <Estadistica etiqueta="Mejor puntaje" valor={mejor} destacado />
-              <Estadistica etiqueta="Último puntaje" valor={ultimo} />
-              <Estadistica etiqueta="Ensayos rendidos" valor={rendidos.length} />
-              <Estadistica
-                etiqueta="Tiempo practicado"
-                texto={formatearTiempo(tiempoTotal)}
-              />
-            </dl>
-          )}
+            {tieneDatos && (
+              <div className="relative mx-auto w-full max-w-sm lg:mx-0">
+                <ProgresoCard
+                  mejor={mejor}
+                  ultimo={ultimo}
+                  variacion={variacion}
+                  ensayos={rendidos.length}
+                  tiempoTotal={tiempoTotal}
+                />
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -126,7 +161,9 @@ export function PanelInicio({ user, attempts }: Props) {
                     : "card-hover group flex flex-col rounded-xl border border-border bg-surface p-6"
                 }
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-background text-accent">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-lg ${s.badgeClass}`}
+                >
                   <s.icon />
                 </div>
                 <h3 className="mt-4 font-semibold">{s.titulo}</h3>
@@ -172,29 +209,88 @@ export function PanelInicio({ user, attempts }: Props) {
   );
 }
 
-function Estadistica({
-  etiqueta,
-  valor,
-  texto,
-  destacado = false,
+/** Tarjeta con el progreso real del estudiante: mismo lenguaje visual que la
+ * tarjeta de ejemplo de la landing pública, pero con sus datos reales. */
+function ProgresoCard({
+  mejor,
+  ultimo,
+  variacion,
+  ensayos,
+  tiempoTotal,
 }: {
-  etiqueta: string;
-  valor?: number | null;
-  texto?: string;
-  destacado?: boolean;
+  mejor: number;
+  ultimo: number;
+  variacion: number | null;
+  ensayos: number;
+  tiempoTotal: number;
 }) {
+  const radio = 46;
+  const circunferencia = 2 * Math.PI * radio;
+  // Escala del anillo sobre el rango real de puntaje PAES (100-1000), no
+  // sobre 0-1000: así un puntaje de 100 se ve vacío y 1000 se ve lleno.
+  const progreso = Math.min(1, Math.max(0, (mejor - 100) / 900));
+
   return (
-    <div
-      className={
-        destacado
-          ? "rounded-xl border border-accent/40 bg-accent/5 p-4"
-          : "rounded-xl border border-border bg-surface p-4"
-      }
-    >
-      <dt className="text-xs text-muted">{etiqueta}</dt>
-      <dd className="mt-0.5 text-2xl font-bold tabular-nums">
-        {texto ?? valor ?? "—"}
-      </dd>
+    <div className="relative">
+      {variacion != null && variacion !== 0 && (
+        <div
+          className={`float-chip absolute -top-4 -right-3 z-10 flex items-center gap-1.5 rounded-full border bg-background px-3 py-1.5 text-xs font-semibold shadow-lg shadow-foreground/5 sm:-right-6 ${
+            variacion > 0
+              ? "border-success/30 text-success"
+              : "border-danger/30 text-danger"
+          }`}
+        >
+          {variacion > 0 ? <UpIcon /> : <DownIcon />}
+          {variacion > 0 ? "+" : ""}
+          {variacion} pts vs. tu ensayo anterior
+        </div>
+      )}
+
+      <div className="rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-foreground/5">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-medium text-muted">Tu progreso</span>
+          <span className="rounded-full bg-surface-hover px-2 py-0.5 text-[11px] text-muted">
+            {ensayos} {ensayos === 1 ? "ensayo" : "ensayos"}
+          </span>
+        </div>
+
+        <div className="mt-5 flex items-center gap-5">
+          <svg width="104" height="104" viewBox="0 0 104 104" className="shrink-0 -rotate-90">
+            <circle cx="52" cy="52" r={radio} fill="none" stroke="var(--border)" strokeWidth="8" />
+            <circle
+              cx="52"
+              cy="52"
+              r={radio}
+              fill="none"
+              stroke="var(--accent)"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeDasharray={circunferencia}
+              strokeDashoffset={circunferencia * (1 - progreso)}
+            />
+          </svg>
+          <div>
+            <p className="text-3xl font-bold tracking-tight text-foreground">
+              {mejor}
+              <span className="text-base font-medium text-muted">/1000</span>
+            </p>
+            <p className="text-xs text-muted">Tu mejor puntaje</p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col divide-y divide-border border-t border-border">
+          <div className="flex items-center justify-between py-2.5 text-sm">
+            <span className="text-muted">Último puntaje</span>
+            <span className="font-semibold tabular-nums">{ultimo}</span>
+          </div>
+          <div className="flex items-center justify-between py-2.5 text-sm">
+            <span className="text-muted">Tiempo practicado</span>
+            <span className="font-semibold tabular-nums">
+              {formatearTiempo(tiempoTotal)}
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -235,6 +331,22 @@ function ChartIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 20V10M12 20V4M20 20v-7" />
+    </svg>
+  );
+}
+
+function UpIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 15l6-6 6 6" />
+    </svg>
+  );
+}
+
+function DownIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 9l6 6 6-6" />
     </svg>
   );
 }
