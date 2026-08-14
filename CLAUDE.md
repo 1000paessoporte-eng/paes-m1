@@ -1,6 +1,6 @@
 # 1000paes — reglas del proyecto
 
-Plataforma chilena de preparación PAES (matemática M1 y M2). **Está en
+Plataforma chilena de preparación PAES, las cinco pruebas. **Está en
 producción y con usuarios reales**: https://1000paes.cl
 
 Trabajan dos socios, cada uno con su propia cuenta de Claude Code. Este archivo
