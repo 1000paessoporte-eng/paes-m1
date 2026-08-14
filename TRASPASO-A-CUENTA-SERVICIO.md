@@ -43,11 +43,11 @@ crea una (en este proyecto quedó `1000paessoporte-eng`).
 porque el repo pertenece a `Pabloajnxka`, no a ella:
 
 ```bash
-gh api -X PUT repos/Pabloajnxka/paes-m1/collaborators/<usuario> -f permission=push
+gh api -X PUT repos/1000paessoporte-eng/paes-m1/collaborators/<usuario> -f permission=push
 ```
 
 Y el invitado tiene que **aceptar** la invitación en
-https://github.com/Pabloajnxka/paes-m1/invitations. Nadie puede aceptarla por
+https://github.com/1000paessoporte-eng/paes-m1/invitations. Nadie puede aceptarla por
 él, ni siquiera el dueño del repo.
 
 **Paso 3.** Instalar la GitHub App de Vercel desde
@@ -58,7 +58,7 @@ enlaza por API:
 ```bash
 curl -X POST "https://api.vercel.com/v9/projects/<projectId>/link" \
   -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" \
-  -d '{"type":"github","repo":"Pabloajnxka/paes-m1","productionBranch":"main"}'
+  -d '{"type":"github","repo":"1000paessoporte-eng/paes-m1","productionBranch":"main"}'
 ```
 
 **Mientras no esté conectado no hay deploys automáticos ni previews por PR**:
@@ -173,7 +173,7 @@ verificar la propiedad de nuevo en la cuenta nueva.
 
 ### 3.4 Conexión con GitHub y previews
 
-1. Reconectar ambos proyectos al repo `Pabloajnxka/paes-m1`, rama de producción
+1. Reconectar ambos proyectos al repo `1000paessoporte-eng/paes-m1`, rama de producción
    `main`.
 2. Desactivar la protección SSO de los previews (si no, el socio no los puede
    abrir sin cuenta en esa cuenta de Vercel).

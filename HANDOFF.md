@@ -45,7 +45,7 @@ Estás tomando un proyecto en marcha. Contexto mínimo antes de tocar nada:
 | Vercel | cuenta de servicio `1000paessoporte@gmail.com` — usuario `1000paessoporte-9167` (plan **Hobby**) | Hosting y deploy (`milpaes-web`, `milpaes-api`) |
 | Google / Gmail | `1000paessoporte@gmail.com` | Cuenta raíz del proyecto: entra a Vercel y a Neon |
 | Neon | cuenta Google `1000paessoporte@gmail.com` *(confirmar)* | PostgreSQL de producción |
-| GitHub | `Pabloajnxka/paes-m1` (**público**) | Código |
+| GitHub | `1000paessoporte-eng/paes-m1` (**público**) | Código |
 | Dominio | `1000paes.cl` | DNS en AWS Route53 (lo administra el papá de Pablo) |
 
 **Contraseña de `1000paessoporte@gmail.com`:** _(Pablo: escríbela acá antes de
@@ -132,7 +132,7 @@ demo@paes-m1.cl / demo1234
 Los proyectos se transfirieron el 2026-08-14 desde la cuenta personal de Pablo
 a la cuenta de servicio; el detalle está en `TRASPASO-A-CUENTA-SERVICIO.md`.
 
-Ambos proyectos están conectados a `github.com/Pabloajnxka/paes-m1`, con
+Ambos proyectos están conectados a `github.com/1000paessoporte-eng/paes-m1`, con
 `main` como rama de producción y `apps/web` / `apps/api` como directorio raíz
 respectivamente.
 
@@ -176,7 +176,7 @@ npm i -g pnpm vercel        # o: brew install pnpm vercel
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # 2. Código
-git clone https://github.com/Pabloajnxka/paes-m1.git
+git clone https://github.com/1000paessoporte-eng/paes-m1.git
 cd paes-m1
 pnpm install
 

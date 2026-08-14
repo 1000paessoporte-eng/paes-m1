@@ -22,7 +22,8 @@ Antes de tocar nada, lee `README.md` (arquitectura y estado de cada feature) y
 3. **No se copian preguntas liberadas del DEMRE.** Son material con derechos de
    la Universidad de Chile y este producto va a cobrar. Se replica su temario,
    formato y nivel; no su contenido literal.
-4. **Las credenciales nunca entran al repo.** Es público. Viven en
+4. **Las credenciales nunca entran al repo.** Es público
+   (`github.com/1000paessoporte-eng/paes-m1`). Viven en
    `apps/api/.env` (gitignored) y en `HANDOFF-PRIVADO.md`, que se entrega a
    mano entre los socios.
 
