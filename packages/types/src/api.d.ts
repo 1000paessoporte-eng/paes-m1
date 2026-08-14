@@ -851,6 +851,7 @@ export interface components {
             stem: string;
             /** Image Url */
             image_url?: string | null;
+            passage?: components["schemas"]["PassageOut"] | null;
             /** Alternatives */
             alternatives: components["schemas"]["ExamAlternativeOut"][];
         };
@@ -1005,6 +1006,22 @@ export interface components {
             path: string;
             /** Visitor Id */
             visitor_id: string;
+        };
+        /**
+         * PassageOut
+         * @description Texto base de una pregunta de Competencia Lectora.
+         */
+        PassageOut: {
+            /** Id */
+            id: number;
+            /** Title */
+            title: string;
+            /** Body */
+            body: string;
+            /** Kind */
+            kind: string;
+            /** Source Note */
+            source_note?: string | null;
         };
         /** PracticeAlternativeOut */
         PracticeAlternativeOut: {
@@ -1202,9 +1219,15 @@ export interface components {
         };
         /**
          * SkillAxis
+         * @description Dimensión del temario a la que pertenece un nodo.
+         *
+         *     En matemática son los cuatro ejes temáticos del DEMRE. En Competencia
+         *     Lectora no hay ejes de contenido: la prueba se organiza por las tres
+         *     habilidades que declara el temario (localizar, interpretar y evaluar), y
+         *     son esas las que ocupan el lugar del eje.
          * @enum {string}
          */
-        SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad";
+        SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad" | "localizar" | "interpretar" | "evaluar";
         /** SkillNodeProgressOut */
         SkillNodeProgressOut: {
             /** Id */
@@ -1241,7 +1264,7 @@ export interface components {
          *     verdad de qué subjects entran al banco de preguntas de cada prueba.
          * @enum {string}
          */
-        Subject: "m1" | "m2";
+        Subject: "m1" | "m2" | "lectora";
         /** TokenOut */
         TokenOut: {
             /** Access Token */

@@ -4981,3 +4981,327 @@ QUESTIONS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Competencia Lectora
+#
+# La prueba son 8 textos con 65 preguntas asociadas y dura 2 horas 30 minutos
+# (temario DEMRE, Admisión 2027). No se organiza por ejes de contenido sino por
+# tres habilidades, que son las que ocupan el lugar del eje en el árbol:
+# localizar, interpretar y evaluar.
+#
+# Los textos son ORIGINALES de 1000paes. No se reproducen los del DEMRE, que
+# tienen derechos de la Universidad de Chile. Escribirlos también hace la
+# pregunta verificable: la respuesta correcta está contenida en un texto que
+# controlamos, y `scripts/verificar_banco.py` comprueba que así sea.
+# ---------------------------------------------------------------------------
+
+SKILL_NODES_LECTORA = [
+    ("lec_localizar", "Localizar información", "localizar", 1, []),
+    ("lec_interpretar", "Interpretar y relacionar", "interpretar", 2, ["lec_localizar"]),
+    ("lec_evaluar", "Evaluar y reflexionar", "evaluar", 3, ["lec_interpretar"]),
+]
+
+PASSAGES = [
+    {
+        "key": "vinchuca",
+        "title": "El insecto que cambió de casa",
+        "kind": "no_literario",
+        "source_note": "Texto original de 1000paes",
+        "body": (
+            "La vinchuca es un insecto que se alimenta de sangre y que durante "
+            "siglos vivió en las quebradas del norte de Chile, refugiada entre "
+            "las piedras y las madrigueras de roedores silvestres. Su vida "
+            "transcurría lejos de las personas.\n\n"
+            "Eso cambió cuando la agricultura llegó a los valles. Las casas de "
+            "adobe, con sus muros agrietados y sus techos de paja, resultaron "
+            "ser un refugio mejor que las piedras: más estables, más tibias y "
+            "con alimento disponible todas las noches. El insecto no fue "
+            "buscado por nadie; simplemente encontró un lugar donde le convenía "
+            "quedarse.\n\n"
+            "El problema no es la picadura, que suele pasar inadvertida. El "
+            "problema es lo que la vinchuca deja después de picar: sus "
+            "deposiciones pueden contener un parásito que, si entra al cuerpo "
+            "por la herida o por los ojos, provoca la enfermedad de Chagas. "
+            "Muchas personas conviven con el parásito durante años sin sentir "
+            "nada, y recién décadas más tarde aparecen daños en el corazón o en "
+            "el sistema digestivo.\n\n"
+            "Por eso las campañas sanitarias del siglo XX no se concentraron en "
+            "el insecto sino en la vivienda. Reemplazar el adobe agrietado por "
+            "muros lisos, cambiar los techos de paja, sellar las grietas: nada "
+            "de eso mata vinchucas, pero les quita el refugio. La estrategia "
+            "funcionó mejor que cualquier insecticida, y muestra algo que se "
+            "repite en salud pública: a veces la forma más eficaz de combatir "
+            "una enfermedad no es atacar al organismo que la transmite, sino "
+            "cambiar las condiciones que lo hacen prosperar."
+        ),
+    },
+    {
+        "key": "carta",
+        "title": "La carta que no se envió",
+        "kind": "literario",
+        "source_note": "Texto original de 1000paes",
+        "body": (
+            "Mi padre guardaba las herramientas en una caja de madera que él "
+            "mismo había hecho, con las junturas tan ajustadas que no "
+            "necesitaba clavos. Cuando yo era chico me dejaba mirar, nunca "
+            "tocar. Decía que una herramienta prestada vuelve distinta.\n\n"
+            "El invierno en que se enfermó, me pidió que le llevara la caja a "
+            "la cama. La abrió, sacó un formón, lo miró un rato largo y me lo "
+            "pasó sin decir nada. Yo tenía veintitrés años y no supe qué hacer "
+            "con las manos.\n\n"
+            "Después de que murió encontré, en el fondo de la caja, un sobre "
+            "con mi nombre escrito con su letra grande y despareja. Estaba "
+            "cerrado. Lo llevé conmigo tres meses en el bolsillo del abrigo, "
+            "hasta que el papel se puso blando de tanto doblarse.\n\n"
+            "Nunca lo abrí. No por miedo a lo que dijera, sino porque mientras "
+            "estuviera cerrado había algo de él que todavía no había terminado "
+            "de pasar. Lo guardé en la caja, junto al formón, y cerré la tapa "
+            "con las junturas ajustadas que él había hecho para que no entrara "
+            "el polvo."
+        ),
+    },
+    {
+        "key": "pantallas",
+        "title": "Dormir con el teléfono al lado",
+        "kind": "no_literario",
+        "source_note": "Texto original de 1000paes",
+        "body": (
+            "Durante años se repitió que la luz azul de las pantallas era la "
+            "culpable del mal dormir de los adolescentes. La explicación era "
+            "elegante: esa luz suprime la melatonina, la hormona que le avisa "
+            "al cuerpo que es de noche, y por lo tanto retrasa el sueño.\n\n"
+            "Los estudios recientes complican esa historia. La cantidad de luz "
+            "que emite un teléfono a treinta centímetros de la cara es bastante "
+            "menor que la de una ampolleta de techo, y bastante menor todavía "
+            "que la luz del día. Si la luz azul fuera el factor decisivo, "
+            "cualquier persona que enciende la luz del living después de las "
+            "diez debería tener el mismo problema.\n\n"
+            "Lo que sí aparece con fuerza en los datos es otra cosa: no importa "
+            "tanto la luz como lo que se hace con el aparato. Un video que "
+            "termina y encadena con el siguiente, un chat que sigue activo, una "
+            "notificación que llega a las dos de la mañana. El teléfono no "
+            "impide dormir porque ilumine, sino porque está diseñado para que "
+            "no se termine nunca.\n\n"
+            "La diferencia importa a la hora de recomendar algo. Si el problema "
+            "fuera la luz, bastaría con el modo nocturno que tiñe la pantalla "
+            "de amarillo. Si el problema es el diseño de las aplicaciones, ese "
+            "modo no sirve de nada y lo que hay que cambiar es dónde pasa la "
+            "noche el aparato."
+        ),
+    },
+]
+
+
+def _ql(
+    passage: str,
+    skill_node: str,
+    difficulty: str,
+    stem: str,
+    correct: str,
+    explanation: str,
+    distractors: list[tuple[str, str]],
+):
+    """Pregunta de Competencia Lectora, asociada a un texto base.
+
+    Igual que `_q` pero con `passage`, que apunta al `key` de PASSAGES. La
+    explicación siempre remite a lo que el texto dice, porque en esta prueba la
+    respuesta correcta se justifica con el texto y no con conocimiento previo.
+    """
+    d = _q(skill_node, difficulty, stem, correct, explanation, distractors)
+    d["passage"] = passage
+    return d
+
+
+QUESTIONS_LECTORA = [
+    # ---------- "El insecto que cambió de casa" ----------
+    _ql(
+        "vinchuca", "lec_localizar", "facil",
+        "Según el texto, ¿dónde vivía la vinchuca antes de que llegara la "
+        "agricultura a los valles?",
+        "Entre las piedras y las madrigueras de roedores silvestres",
+        "La respuesta está en el primer párrafo, que describe dónde vivía el "
+        "insecto durante siglos: «refugiada entre las piedras y las madrigueras "
+        "de roedores silvestres».\n\n"
+        "Es una pregunta de localizar: el dato aparece dicho con todas sus "
+        "letras y no hay que deducir nada. Basta con volver al párrafo donde el "
+        "texto habla del pasado del insecto.",
+        [
+            ("En las casas de adobe de los valles", "Ahí se mudó DESPUÉS de que llegó la agricultura; el texto lo presenta como el cambio, no como el punto de partida."),
+            ("En los techos de paja de las viviendas", "Los techos de paja aparecen como parte del refugio nuevo, no del original."),
+            ("En los cultivos de los valles agrícolas", "El texto nunca dice que viviera en los cultivos: menciona la agricultura como la causa del cambio, no como su hábitat."),
+        ],
+    ),
+    _ql(
+        "vinchuca", "lec_localizar", "medio",
+        "De acuerdo con el texto, ¿por qué la picadura de la vinchuca suele "
+        "pasar inadvertida?",
+        "El texto lo afirma sin explicar la causa",
+        "Acá hay que distinguir entre lo que el texto dice y lo que uno supone. "
+        "El tercer párrafo afirma que la picadura «suele pasar inadvertida», "
+        "pero en ningún momento explica por qué.\n\n"
+        "La pregunta pone a prueba si el lector se queda con lo que está "
+        "escrito o completa con conocimiento propio. En una prueba de "
+        "comprensión, lo que no está en el texto no se puede afirmar.",
+        [
+            ("Porque el insecto pica mientras la persona duerme", "Es una explicación plausible, pero el texto no la da: sería completar con lo que uno imagina."),
+            ("Porque la vinchuca inyecta una sustancia anestésica", "El texto no menciona ninguna sustancia anestésica. Es información traída de afuera."),
+            ("Porque la herida es demasiado pequeña para verse", "El texto no describe el tamaño de la herida en ningún momento."),
+        ],
+    ),
+    _ql(
+        "vinchuca", "lec_interpretar", "medio",
+        "¿Qué relación establece el texto entre la agricultura y la enfermedad "
+        "de Chagas?",
+        "La agricultura creó viviendas que resultaron mejores refugios para el "
+        "insecto, acercándolo a las personas",
+        "La relación es indirecta y hay que armarla uniendo dos párrafos.\n\n"
+        "1) El segundo párrafo dice que con la agricultura llegaron las casas "
+        "de adobe, y que esas casas fueron para el insecto un refugio mejor que "
+        "las piedras.\n"
+        "2) El tercero explica que el contacto con el insecto es lo que "
+        "transmite el parásito.\n\n"
+        "Encadenando ambos: la agricultura no causa la enfermedad, pero produce "
+        "las condiciones que ponen al insecto donde están las personas. El "
+        "propio texto subraya que «el insecto no fue buscado por nadie».",
+        [
+            ("La agricultura introdujo el parásito que provoca la enfermedad", "El texto nunca dice que la agricultura trajera el parásito: el insecto ya lo portaba."),
+            ("Los cultivos atrajeron a los roedores que contagian a las personas", "Los roedores aparecen solo como parte del hábitat original del insecto, y el texto no dice que contagien a nadie."),
+            ("La agricultura obligó a las vinchucas a alimentarse de sangre humana", "El texto dice que el insecto se alimenta de sangre desde siempre y que se quedó donde le convenía, no que fuera forzado."),
+        ],
+    ),
+    _ql(
+        "vinchuca", "lec_evaluar", "dificil",
+        "¿Cuál es el propósito principal del último párrafo del texto?",
+        "Extraer una lección general sobre cómo se combaten las enfermedades",
+        "El último párrafo cambia de nivel: deja de hablar de la vinchuca en "
+        "particular y saca una conclusión que vale más allá del caso.\n\n"
+        "La frase que lo delata es la del cierre: «muestra algo que se repite en "
+        "salud pública: a veces la forma más eficaz de combatir una enfermedad "
+        "no es atacar al organismo que la transmite, sino cambiar las "
+        "condiciones que lo hacen prosperar».\n\n"
+        "El caso concreto pasa a ser un ejemplo de un principio más amplio. Esa "
+        "es la función del párrafo dentro del texto.",
+        [
+            ("Detallar las técnicas de construcción que reemplazaron al adobe", "El párrafo menciona los cambios de vivienda, pero solo como apoyo: no se detiene en cómo se construye."),
+            ("Criticar el uso de insecticidas en las campañas sanitarias", "El texto compara ambas estrategias y dice que una funcionó mejor, pero no critica el uso de insecticidas."),
+            ("Explicar cuándo aparecen los síntomas de la enfermedad", "Eso corresponde al párrafo anterior, que habla de los daños que aparecen décadas después."),
+        ],
+    ),
+
+    # ---------- "La carta que no se envió" ----------
+    _ql(
+        "carta", "lec_localizar", "facil",
+        "¿Qué objeto le entrega el padre al narrador cuando está enfermo?",
+        "Un formón",
+        "El dato está en el segundo párrafo: el padre «sacó un formón, lo miró "
+        "un rato largo y me lo pasó sin decir nada».\n\n"
+        "Es información explícita. La dificultad está en no confundir este "
+        "objeto con los otros que aparecen en el relato: la caja, que el padre "
+        "pide que le lleven, y el sobre, que el narrador encuentra después de "
+        "su muerte.",
+        [
+            ("La caja de madera con las herramientas", "El narrador le lleva la caja a la cama; no es algo que el padre le entregue."),
+            ("Un sobre cerrado con su nombre", "El sobre aparece después de la muerte del padre, en el fondo de la caja."),
+            ("Las junturas ajustadas que él había hecho", "Las junturas son una característica de la caja, no un objeto que se pueda entregar."),
+        ],
+    ),
+    _ql(
+        "carta", "lec_interpretar", "dificil",
+        "¿Qué sugiere el narrador cuando dice que no abrió la carta «porque "
+        "mientras estuviera cerrado había algo de él que todavía no había "
+        "terminado de pasar»?",
+        "Que dejar la carta cerrada le permitía sentir que el vínculo con su "
+        "padre seguía abierto",
+        "La frase hay que leerla junto a lo que el narrador descarta antes: "
+        "aclara que no fue «por miedo a lo que dijera». Es decir, el contenido "
+        "no es el punto.\n\n"
+        "Lo que dice es que el sobre cerrado mantiene algo en suspenso. Mientras "
+        "no se lea, queda una parte del padre que todavía no ocurre del todo, y "
+        "por lo tanto tampoco termina. Abrirlo sería cerrar eso último.\n\n"
+        "El gesto final refuerza la lectura: guarda la carta junto al formón, en "
+        "la caja que el padre construyó, y cierra la tapa.",
+        [
+            ("Que temía que la carta contuviera un reproche de su padre", "El narrador descarta esa lectura de forma explícita: dice que no fue por miedo a lo que dijera."),
+            ("Que planeaba leerla cuando estuviera preparado emocionalmente", "El texto no anuncia ninguna intención de leerla más adelante: dice «nunca lo abrí» y la guarda."),
+            ("Que la carta era el único recuerdo material que le quedaba", "No es el único: también están la caja y el formón, que el relato destaca."),
+        ],
+    ),
+    _ql(
+        "carta", "lec_evaluar", "dificil",
+        "El relato menciona dos veces «las junturas tan ajustadas». ¿Qué efecto "
+        "produce esa repetición al final del texto?",
+        "Cierra el relato con la misma imagen del comienzo, dándole al gesto "
+        "final el peso de lo que el padre hacía bien",
+        "La imagen aparece al principio describiendo el oficio del padre: hizo "
+        "la caja «con las junturas tan ajustadas que no necesitaba clavos». Es "
+        "un detalle de competencia, de alguien que sabe hacer las cosas.\n\n"
+        "Al final vuelve, pero ahora es el hijo quien cierra la tapa «con las "
+        "junturas ajustadas que él había hecho». El narrador no construyó nada: "
+        "usa lo que su padre dejó hecho.\n\n"
+        "El texto termina donde empezó, y esa vuelta convierte un gesto simple "
+        "en el cierre del relato.",
+        [
+            ("Subraya que el narrador aprendió el oficio de carpintero de su padre", "El relato dice lo contrario: al narrador le dejaban mirar, nunca tocar, y no se menciona que aprendiera el oficio."),
+            ("Indica que la caja estaba en mal estado y necesitaba repararse", "Nada en el texto sugiere deterioro: las junturas ajustadas son señal de que la caja está bien hecha."),
+            ("Anticipa que el narrador abrirá la carta más adelante", "El cierre apunta a lo contrario: guarda la carta y cierra la tapa."),
+        ],
+    ),
+
+    # ---------- "Dormir con el teléfono al lado" ----------
+    _ql(
+        "pantallas", "lec_localizar", "medio",
+        "Según el texto, ¿qué compara el autor con la luz que emite un teléfono "
+        "a treinta centímetros de la cara?",
+        "La luz de una ampolleta de techo y la luz del día",
+        "El segundo párrafo hace la comparación de forma directa: esa luz «es "
+        "bastante menor que la de una ampolleta de techo, y bastante menor "
+        "todavía que la luz del día».\n\n"
+        "El punto de la comparación es mostrar que, si la luz azul fuera "
+        "decisiva, encender cualquier luz de la casa tendría el mismo efecto.",
+        [
+            ("La luz de una pantalla de computador y la de un televisor", "El texto no menciona computadores ni televisores en ningún momento."),
+            ("La luz del modo nocturno y la de la pantalla normal", "El modo nocturno aparece recién en el último párrafo, y no como término de esta comparación."),
+            ("La luz de la mañana y la del atardecer", "El texto habla de «la luz del día» en general, sin distinguir momentos."),
+        ],
+    ),
+    _ql(
+        "pantallas", "lec_interpretar", "medio",
+        "¿Qué quiere decir el texto con que el teléfono «está diseñado para que "
+        "no se termine nunca»?",
+        "Que las aplicaciones encadenan contenido de forma continua, sin un "
+        "punto natural de término",
+        "La frase resume los ejemplos que el propio párrafo entrega justo antes: "
+        "«un video que termina y encadena con el siguiente, un chat que sigue "
+        "activo, una notificación que llega a las dos de la mañana».\n\n"
+        "Todos comparten un rasgo: no hay un momento en que el contenido se "
+        "acabe y uno pueda decir que terminó. El diseño evita ese punto de "
+        "corte, y eso es lo que retrasa el sueño según el texto.",
+        [
+            ("Que la batería de los teléfonos dura toda la noche", "El texto no habla de batería ni de autonomía en ningún momento."),
+            ("Que los teléfonos están construidos para no descomponerse", "«No se termine» se refiere al contenido, no a la vida útil del aparato."),
+            ("Que las notificaciones llegan incluso con el aparato apagado", "El texto menciona notificaciones de madrugada, pero nunca dice que lleguen con el teléfono apagado."),
+        ],
+    ),
+    _ql(
+        "pantallas", "lec_evaluar", "dificil",
+        "¿Qué función cumple el último párrafo respecto del resto del texto?",
+        "Muestra que la diferencia entre ambas explicaciones cambia qué "
+        "recomendación tiene sentido dar",
+        "El texto viene discutiendo dos explicaciones del mal dormir: la luz "
+        "azul y el diseño de las aplicaciones. El último párrafo responde a la "
+        "pregunta de por qué importa distinguirlas.\n\n"
+        "Y lo hace de forma concreta: si el problema fuera la luz, bastaría con "
+        "el modo nocturno; si es el diseño, ese modo «no sirve de nada» y hay "
+        "que cambiar dónde pasa la noche el aparato.\n\n"
+        "O sea, el párrafo lleva la discusión desde la causa hasta la "
+        "consecuencia práctica. Sin él, el texto quedaría en una corrección "
+        "teórica sin utilidad.",
+        [
+            ("Reconoce que la evidencia sobre la luz azul sigue siendo válida", "El párrafo hace lo contrario: usa la hipótesis de la luz como el caso en que la recomendación NO funcionaría."),
+            ("Propone eliminar el modo nocturno de los teléfonos", "El texto dice que ese modo no serviría si el problema es el diseño, pero no propone eliminarlo."),
+            ("Resume los estudios recientes citados en el texto", "El párrafo no resume estudios: extrae la consecuencia práctica de la discusión anterior."),
+        ],
+    ),
+]

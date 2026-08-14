@@ -7,7 +7,7 @@ Cualquier módulo que necesite el registro completo de modelos debe hacer
 importar modelos individuales."""
 
 from paes_api.modules.analytics.models import StudyStreak
-from paes_api.modules.content.models import Alternative, Question
+from paes_api.modules.content.models import Alternative, Question, ReadingPassage
 from paes_api.modules.exam_focus.models import (
     ExamAnswer,
     ExamAttempt,
@@ -28,6 +28,7 @@ __all__ = [
     "PasswordResetToken",
     "PracticeAnswer",
     "Question",
+    "ReadingPassage",
     "SkillNode",
     "StudyStreak",
     "User",

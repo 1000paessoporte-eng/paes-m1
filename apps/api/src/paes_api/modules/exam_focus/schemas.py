@@ -17,6 +17,16 @@ class ExamAlternativeOut(BaseModel):
     text: str
 
 
+class PassageOut(BaseModel):
+    """Texto base de una pregunta de Competencia Lectora."""
+
+    id: int
+    title: str
+    body: str
+    kind: str
+    source_note: str | None = None
+
+
 class ExamQuestionOut(BaseModel):
     id: int
     skill_node_id: int
@@ -25,6 +35,9 @@ class ExamQuestionOut(BaseModel):
     difficulty: Difficulty
     stem: str
     image_url: str | None = None
+    #: Solo en Competencia Lectora: el texto sobre el que trata la pregunta.
+    #: Varias preguntas del mismo ensayo comparten el mismo pasaje.
+    passage: PassageOut | None = None
     alternatives: list[ExamAlternativeOut]
 
 

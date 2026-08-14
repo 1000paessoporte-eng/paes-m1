@@ -26,9 +26,22 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from paes_api.seed_data import QUESTIONS, SKILL_NODES, SKILL_NODES_M2
+from paes_api.seed_data import (
+    PASSAGES,
+    QUESTIONS,
+    QUESTIONS_LECTORA,
+    SKILL_NODES,
+    SKILL_NODES_LECTORA,
+    SKILL_NODES_M2,
+)
 
-CODIGOS = {n[0] for n in SKILL_NODES} | {n[0] for n in SKILL_NODES_M2}
+CODIGOS = (
+    {n[0] for n in SKILL_NODES}
+    | {n[0] for n in SKILL_NODES_M2}
+    | {n[0] for n in SKILL_NODES_LECTORA}
+)
+CLAVES_PASAJE = {p["key"] for p in PASSAGES}
+PASAJES_POR_CLAVE = {p["key"]: p for p in PASSAGES}
 DIFICULTADES = {"facil", "medio", "dificil"}
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
@@ -152,8 +165,30 @@ def main() -> int:
     fallas: list[str] = []
 
     # ---- capa 1: estructura ----
+    todas = QUESTIONS + QUESTIONS_LECTORA
+
+    # ---- capa 3: Competencia Lectora ----
+    # Una pregunta de lectura sin su texto es una pregunta que nadie puede
+    # responder, y un texto sin preguntas es peso muerto en el ensayo.
+    for q in QUESTIONS_LECTORA:
+        clave = q.get("passage")
+        if not clave:
+            fallas.append(f"pregunta de lectora sin texto asociado: {q['stem'][:60]}")
+        elif clave not in CLAVES_PASAJE:
+            fallas.append(f"apunta a un texto inexistente '{clave}': {q['stem'][:60]}")
+
+    usados = {q.get("passage") for q in QUESTIONS_LECTORA}
+    for clave in CLAVES_PASAJE - usados:
+        fallas.append(f"el texto '{clave}' no tiene ninguna pregunta asociada")
+
+    for p in PASSAGES:
+        if len(p["body"]) < 400:
+            fallas.append(f"texto '{p['key']}' demasiado corto ({len(p['body'])} caracteres)")
+        if not p.get("source_note"):
+            fallas.append(f"texto '{p['key']}' sin nota de origen")
+
     vistos: Counter[str] = Counter()
-    for q in QUESTIONS:
+    for q in todas:
         stem = q["stem"]
         vistos[stem] += 1
         alts = q["alternatives"]
@@ -202,7 +237,7 @@ def main() -> int:
             fallas.append(f"enunciado duplicado {veces} veces: {stem[:70]}")
 
     # ---- capa 2: aritmética ----
-    por_stem = {q["stem"]: q for q in QUESTIONS}
+    por_stem = {q["stem"]: q for q in todas}
     comprobadas = 0
     for fragmento, esperado in COMPROBACIONES.items():
         candidatas = [s for s in por_stem if fragmento in s]
@@ -221,9 +256,11 @@ def main() -> int:
         comprobadas += 1
 
     # ---- reporte ----
-    print(f"preguntas en el banco: {len(QUESTIONS)}")
+    print(f"preguntas en el banco: {len(todas)}"
+          f" (matemática {len(QUESTIONS)}, lectora {len(QUESTIONS_LECTORA)})")
+    print(f"textos de lectura: {len(PASSAGES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
-    por_nodo = Counter(q["skill_node"] for q in QUESTIONS)
+    por_nodo = Counter(q["skill_node"] for q in todas)
     sin_suficientes = [c for c in CODIGOS if por_nodo[c] < 5]
     if sin_suficientes:
         print(f"nodos con menos de 5 preguntas: {sorted(sin_suficientes)}")

@@ -41,6 +41,20 @@ _TABLA_M2: list[int] = [
 ]
 
 
+# Tabla oficial DEMRE, PAES Regular de Competencia Lectora (Proceso 2026).
+# 60 preguntas puntuadas de 65. Índice = respuestas correctas.
+# https://demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-regular-p2026-competencia-lectora
+_TABLA_LECTORA: list[int] = [
+    100, 159, 184, 206, 228, 249, 267, 284, 299, 316,
+    333, 350, 364, 376, 387, 397, 410, 424, 440, 455,
+    467, 477, 484, 492, 500, 511, 525, 540, 555, 567,
+    576, 583, 590, 597, 607, 619, 634, 650, 663, 674,
+    682, 690, 699, 710, 725, 740, 756, 770, 782, 794,
+    808, 823, 841, 860, 878, 896, 916, 938, 963, 989,
+    1000,
+]
+
+
 @dataclass(frozen=True)
 class SubjectScoring:
     """Parámetros de una prueba PAES: cuántas preguntas trae oficialmente,
@@ -58,6 +72,12 @@ SCORING_BY_SUBJECT: dict[Subject, SubjectScoring] = {
         preguntas_puntuadas=60,
         duracion_oficial_min=140,
         tabla=_TABLA_M1,
+    ),
+    Subject.LECTORA: SubjectScoring(
+        preguntas_oficiales=65,
+        preguntas_puntuadas=60,
+        duracion_oficial_min=150,
+        tabla=_TABLA_LECTORA,
     ),
     Subject.M2: SubjectScoring(
         preguntas_oficiales=55,

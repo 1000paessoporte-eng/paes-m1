@@ -15,6 +15,7 @@ from paes_api.modules.exam_focus.schemas import (
     ExamReviewOut,
     ExamStartOut,
     ExamStateOut,
+    PassageOut,
     RepasoOut,
 )
 from paes_api.modules.skill_tree.models import Subject
@@ -38,6 +39,17 @@ def _to_question_out(questions: list[Question]) -> list[ExamQuestionOut]:
             difficulty=q.difficulty,
             stem=q.stem,
             image_url=q.image_url,
+            passage=(
+                PassageOut(
+                    id=q.passage.id,
+                    title=q.passage.title,
+                    body=q.passage.body,
+                    kind=q.passage.kind,
+                    source_note=q.passage.source_note,
+                )
+                if q.passage
+                else None
+            ),
             alternatives=[
                 {"id": a.id, "label": a.label, "text": a.text} for a in q.alternatives
             ],

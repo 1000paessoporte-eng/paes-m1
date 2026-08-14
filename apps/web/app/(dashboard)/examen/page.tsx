@@ -20,12 +20,15 @@ export default async function ModoEnsayoPage() {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/examen");
   }
 
-  const [optionsM1, repasoM1, optionsM2, repasoM2] = await Promise.all([
-    getExamOptions(token, "m1"),
-    getRepaso(token, "m1"),
-    getExamOptions(token, "m2"),
-    getRepaso(token, "m2"),
-  ]);
+  const [optionsM1, repasoM1, optionsM2, repasoM2, optionsLectora, repasoLectora] =
+    await Promise.all([
+      getExamOptions(token, "m1"),
+      getRepaso(token, "m1"),
+      getExamOptions(token, "m2"),
+      getRepaso(token, "m2"),
+      getExamOptions(token, "lectora"),
+      getRepaso(token, "lectora"),
+    ]);
 
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
   // Se pasa también el subject: el ensayo pendiente puede ser de otra prueba
@@ -34,8 +37,8 @@ export default async function ModoEnsayoPage() {
 
   return (
     <ExamRunner
-      optionsBySubject={{ m1: optionsM1, m2: optionsM2 }}
-      repasoBySubject={{ m1: repasoM1, m2: repasoM2 }}
+      optionsBySubject={{ m1: optionsM1, m2: optionsM2, lectora: optionsLectora }}
+      repasoBySubject={{ m1: repasoM1, m2: repasoM2, lectora: repasoLectora }}
       pastAttempts={pastAttempts}
       resumable={
         enCurso ? { attemptId: enCurso.attempt_id, subject: enCurso.subject } : null

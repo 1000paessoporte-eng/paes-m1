@@ -19,10 +19,22 @@ from sqlalchemy import select
 import paes_api.all_models  # noqa: F401 — registra todos los modelos en Base.metadata
 from paes_api.core.database import SessionLocal, engine
 from paes_api.core.security import hash_password
-from paes_api.modules.content.models import Alternative, Difficulty, Question
+from paes_api.modules.content.models import (
+    Alternative,
+    Difficulty,
+    Question,
+    ReadingPassage,
+)
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 from paes_api.modules.users.models import User
-from paes_api.seed_data import QUESTIONS, SKILL_NODES, SKILL_NODES_M2
+from paes_api.seed_data import (
+    PASSAGES,
+    QUESTIONS,
+    QUESTIONS_LECTORA,
+    SKILL_NODES,
+    SKILL_NODES_LECTORA,
+    SKILL_NODES_M2,
+)
 from paes_api.shared.base import Base
 
 DEMO_EMAIL = "demo@paes-m1.cl"
@@ -33,9 +45,11 @@ RNG = random.Random(42)
 
 
 def seed_skill_nodes(db) -> dict[str, SkillNode]:
-    all_nodes = [(*n, Subject.M1) for n in SKILL_NODES] + [
-        (*n, Subject.M2) for n in SKILL_NODES_M2
-    ]
+    all_nodes = (
+        [(*n, Subject.M1) for n in SKILL_NODES]
+        + [(*n, Subject.M2) for n in SKILL_NODES_M2]
+        + [(*n, Subject.LECTORA) for n in SKILL_NODES_LECTORA]
+    )
 
     by_code: dict[str, SkillNode] = {}
     for code, name, axis, tier, _prereqs, subject in all_nodes:
@@ -66,10 +80,41 @@ def seed_skill_nodes(db) -> dict[str, SkillNode]:
     return by_code
 
 
-def seed_questions(db, nodes_by_code: dict[str, SkillNode]) -> None:
+def seed_passages(db) -> dict[str, ReadingPassage]:
+    """Siembra los textos de Competencia Lectora. Idempotente por título."""
+    by_key: dict[str, ReadingPassage] = {}
+    creados = 0
+    for p in PASSAGES:
+        existing = db.execute(
+            select(ReadingPassage).where(ReadingPassage.title == p["title"])
+        ).scalar_one_or_none()
+        if existing:
+            by_key[p["key"]] = existing
+            continue
+        passage = ReadingPassage(
+            title=p["title"],
+            body=p["body"],
+            kind=p["kind"],
+            source_note=p.get("source_note"),
+        )
+        db.add(passage)
+        by_key[p["key"]] = passage
+        creados += 1
+    db.flush()
+    print(f"reading_passages: {creados} nuevos (de {len(PASSAGES)} definidos)")
+    return by_key
+
+
+def seed_questions(
+    db,
+    nodes_by_code: dict[str, SkillNode],
+    passages_by_key: dict[str, ReadingPassage] | None = None,
+) -> None:
+    passages_by_key = passages_by_key or {}
+    TODAS_LAS_PREGUNTAS = QUESTIONS + QUESTIONS_LECTORA
     created = 0
     updated = 0
-    for q in QUESTIONS:
+    for q in TODAS_LAS_PREGUNTAS:
         exists = db.execute(
             select(Question).where(Question.stem == q["stem"])
         ).scalar_one_or_none()
@@ -89,6 +134,9 @@ def seed_questions(db, nodes_by_code: dict[str, SkillNode]) -> None:
             stem=q["stem"],
             explanation=q["explanation"],
         )
+        clave = q.get("passage")
+        if clave:
+            question.passage = passages_by_key[clave]
         db.add(question)
         db.flush()
 
@@ -138,7 +186,8 @@ def main() -> None:
     db = SessionLocal()
     try:
         nodes = seed_skill_nodes(db)
-        seed_questions(db, nodes)
+        passages = seed_passages(db)
+        seed_questions(db, nodes, passages)
         seed_demo_user(db)
     finally:
         db.close()
