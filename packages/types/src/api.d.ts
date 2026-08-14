@@ -1227,7 +1227,7 @@ export interface components {
          *     son esas las que ocupan el lugar del eje.
          * @enum {string}
          */
-        SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad" | "localizar" | "interpretar" | "evaluar";
+        SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad" | "localizar" | "interpretar" | "evaluar" | "biologia" | "fisica" | "quimica";
         /** SkillNodeProgressOut */
         SkillNodeProgressOut: {
             /** Id */
@@ -1264,7 +1264,7 @@ export interface components {
          *     verdad de qué subjects entran al banco de preguntas de cada prueba.
          * @enum {string}
          */
-        Subject: "m1" | "m2" | "lectora";
+        Subject: "m1" | "m2" | "lectora" | "ciencias";
         /** TokenOut */
         TokenOut: {
             /** Access Token */

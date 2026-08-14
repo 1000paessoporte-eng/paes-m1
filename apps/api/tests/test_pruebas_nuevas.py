@@ -47,3 +47,41 @@ def test_las_preguntas_de_matematica_no_llevan_texto():
     from paes_api.seed_data import QUESTIONS
 
     assert all("passage" not in q for q in QUESTIONS)
+
+
+def test_ciencias_usa_los_datos_oficiales():
+    """80 preguntas, 75 puntuadas, 160 minutos (temario DEMRE)."""
+    from paes_api.modules.exam_focus.scoring import SCORING_BY_SUBJECT
+
+    s = SCORING_BY_SUBJECT[Subject.CIENCIAS]
+    assert (s.preguntas_oficiales, s.preguntas_puntuadas, s.duracion_oficial_min) == (
+        80,
+        75,
+        160,
+    )
+    assert round(scoring.segundos_por_pregunta(Subject.CIENCIAS) * 80 / 60) == 160
+
+
+def test_tabla_de_ciencias_es_la_oficial():
+    assert scoring.estimar_puntaje(0, 75, Subject.CIENCIAS) == 100
+    assert scoring.estimar_puntaje(50, 75, Subject.CIENCIAS) == 632
+    assert scoring.estimar_puntaje(75, 75, Subject.CIENCIAS) == 1000
+
+
+def test_ciencias_ofrece_sus_tres_disciplinas():
+    assert EJES_POR_PRUEBA[Subject.CIENCIAS] == {"biologia", "fisica", "quimica"}
+    assert SUBJECT_INCLUDES[Subject.CIENCIAS] == [Subject.CIENCIAS]
+
+
+def test_biologia_declarada_sin_banco_todavia():
+    """Los nodos de Biología existen pero no tienen preguntas.
+
+    Es deliberado: su contenido es factual y el verificador no puede
+    comprobarlo. Si algún día se agregan, este test falla y hay que decidir
+    conscientemente que se revisaron a mano.
+    """
+    from paes_api.seed_data import QUESTIONS_CIENCIAS, SKILL_NODES_CIENCIAS
+
+    bio = {n[0] for n in SKILL_NODES_CIENCIAS if n[2] == "biologia"}
+    assert bio, "deberían existir nodos de biología"
+    assert not [q for q in QUESTIONS_CIENCIAS if q["skill_node"] in bio]

@@ -55,6 +55,21 @@ _TABLA_LECTORA: list[int] = [
 ]
 
 
+# Tabla oficial DEMRE, PAES Regular de Ciencias (Proceso 2026). 75 preguntas
+# puntuadas de 80. Índice = respuestas correctas.
+# https://demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-regular-p2026-ciencias
+_TABLA_CIENCIAS: list[int] = [
+    100, 116, 140, 163, 183, 202, 220, 235, 249, 263,
+    278, 293, 307, 318, 327, 335, 345, 356, 368, 381,
+    393, 402, 410, 415, 420, 427, 435, 446, 458, 471,
+    481, 489, 495, 499, 503, 507, 513, 522, 532, 545,
+    557, 567, 574, 580, 584, 588, 593, 599, 608, 619,
+    632, 644, 654, 662, 668, 673, 679, 688, 698, 711,
+    724, 736, 747, 756, 765, 776, 789, 804, 819, 834,
+    849, 866, 884, 905, 927, 1000,
+]
+
+
 @dataclass(frozen=True)
 class SubjectScoring:
     """Parámetros de una prueba PAES: cuántas preguntas trae oficialmente,
@@ -78,6 +93,12 @@ SCORING_BY_SUBJECT: dict[Subject, SubjectScoring] = {
         preguntas_puntuadas=60,
         duracion_oficial_min=150,
         tabla=_TABLA_LECTORA,
+    ),
+    Subject.CIENCIAS: SubjectScoring(
+        preguntas_oficiales=80,
+        preguntas_puntuadas=75,
+        duracion_oficial_min=160,
+        tabla=_TABLA_CIENCIAS,
     ),
     Subject.M2: SubjectScoring(
         preguntas_oficiales=55,

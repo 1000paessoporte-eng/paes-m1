@@ -20,7 +20,16 @@ export default async function ModoEnsayoPage() {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/examen");
   }
 
-  const [optionsM1, repasoM1, optionsM2, repasoM2, optionsLectora, repasoLectora] =
+  const [
+    optionsM1,
+    repasoM1,
+    optionsM2,
+    repasoM2,
+    optionsLectora,
+    repasoLectora,
+    optionsCiencias,
+    repasoCiencias,
+  ] =
     await Promise.all([
       getExamOptions(token, "m1"),
       getRepaso(token, "m1"),
@@ -28,6 +37,8 @@ export default async function ModoEnsayoPage() {
       getRepaso(token, "m2"),
       getExamOptions(token, "lectora"),
       getRepaso(token, "lectora"),
+      getExamOptions(token, "ciencias"),
+      getRepaso(token, "ciencias"),
     ]);
 
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
@@ -37,8 +48,18 @@ export default async function ModoEnsayoPage() {
 
   return (
     <ExamRunner
-      optionsBySubject={{ m1: optionsM1, m2: optionsM2, lectora: optionsLectora }}
-      repasoBySubject={{ m1: repasoM1, m2: repasoM2, lectora: repasoLectora }}
+      optionsBySubject={{
+        m1: optionsM1,
+        m2: optionsM2,
+        lectora: optionsLectora,
+        ciencias: optionsCiencias,
+      }}
+      repasoBySubject={{
+        m1: repasoM1,
+        m2: repasoM2,
+        lectora: repasoLectora,
+        ciencias: repasoCiencias,
+      }}
       pastAttempts={pastAttempts}
       resumable={
         enCurso ? { attemptId: enCurso.attempt_id, subject: enCurso.subject } : null

@@ -5305,3 +5305,266 @@ QUESTIONS_LECTORA = [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias
+#
+# La prueba son 80 preguntas (54 del módulo común y 26 del electivo) en 2 horas
+# 40 minutos, y 75 puntúan. El temario la organiza en tres ejes por disciplina:
+# Biología, Física y Química.
+#
+# El banco parte por Física y Química a propósito. Sus preguntas son
+# cuantitativas, así que `scripts/verificar_banco.py` puede recalcular cada
+# resultado igual que en matemática. Biología es contenido factual: una
+# afirmación errada no la detecta ningún script, y este proyecto no publica
+# contenido que no pueda verificar. Sus nodos quedan creados y el configurador
+# muestra 0 preguntas disponibles, que es la verdad.
+# ---------------------------------------------------------------------------
+
+SKILL_NODES_CIENCIAS = [
+    # Física
+    ("cie_movimiento", "Movimiento rectilíneo", "fisica", 1, []),
+    ("cie_fuerzas", "Fuerzas y leyes de Newton", "fisica", 2, ["cie_movimiento"]),
+    ("cie_energia", "Trabajo, energía y potencia", "fisica", 3, ["cie_fuerzas"]),
+    ("cie_ondas", "Ondas y sonido", "fisica", 2, []),
+    ("cie_electricidad", "Circuitos eléctricos", "fisica", 3, []),
+    # Química
+    ("cie_atomo", "Estructura atómica", "quimica", 1, []),
+    ("cie_estequiometria", "Cantidad de sustancia y estequiometría", "quimica", 2, ["cie_atomo"]),
+    ("cie_soluciones", "Disoluciones y concentración", "quimica", 3, ["cie_estequiometria"]),
+    ("cie_acidobase", "Ácido-base y pH", "quimica", 3, ["cie_soluciones"]),
+    # Biología: estructura creada, banco pendiente (ver nota de arriba).
+    ("cie_celula", "Célula y transporte de membrana", "biologia", 1, []),
+    ("cie_genetica", "Genética y herencia", "biologia", 2, ["cie_celula"]),
+    ("cie_ecosistemas", "Ecosistemas y flujo de energía", "biologia", 2, []),
+]
+
+QUESTIONS_CIENCIAS = [
+    # ---------- FÍSICA: movimiento ----------
+    _q(
+        "cie_movimiento", "facil",
+        "Un ciclista recorre 120 m en 15 s con velocidad constante. "
+        "¿Cuál es su rapidez?",
+        "8 m/s",
+        "La rapidez constante es la distancia recorrida dividida por el tiempo "
+        "empleado.\n\n"
+        "1) Escribe la relación: v = d / t.\n"
+        "2) Reemplaza: v = 120 m ÷ 15 s.\n"
+        "3) Calcula: v = 8 m/s.\n\n"
+        "Comprobación: si recorre 8 metros cada segundo, en 15 segundos avanza "
+        "8 · 15 = 120 m.",
+        [
+            ("1800 m/s", "Multiplicó la distancia por el tiempo en vez de dividir."),
+            ("0,125 m/s", "Dividió el tiempo por la distancia, invirtiendo la fórmula."),
+            ("135 m/s", "Sumó distancia y tiempo, que son magnitudes distintas y no se pueden sumar."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un auto parte del reposo y acelera uniformemente a 2 m/s² durante 6 s. "
+        "¿Qué distancia recorre en ese tiempo?",
+        "36 m",
+        "Con aceleración constante y partiendo del reposo, la distancia crece "
+        "con el cuadrado del tiempo.\n\n"
+        "1) La relación es d = ½ · a · t², válida porque la velocidad inicial "
+        "es cero.\n"
+        "2) Reemplaza: d = ½ · 2 m/s² · (6 s)².\n"
+        "3) Calcula el cuadrado: 6² = 36.\n"
+        "4) Resuelve: d = ½ · 2 · 36 = 36 m.",
+        [
+            ("72 m", "Olvidó el factor ½ de la fórmula y calculó a · t²."),
+            ("12 m", "Usó d = a · t, que corresponde a la velocidad final, no a la distancia."),
+            ("18 m", "Usó el tiempo sin elevarlo al cuadrado."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre un cuerpo de 4 kg actúa una fuerza neta de 20 N. "
+        "¿Cuál es su aceleración?",
+        "5 m/s²",
+        "La segunda ley de Newton relaciona la fuerza neta con la masa y la "
+        "aceleración.\n\n"
+        "1) La ley es F = m · a.\n"
+        "2) Despeja la aceleración: a = F / m.\n"
+        "3) Reemplaza: a = 20 N ÷ 4 kg = 5 m/s².\n\n"
+        "Las unidades cuadran: un newton es un kg·m/s², así que N/kg da m/s².",
+        [
+            ("80 m/s²", "Multiplicó fuerza por masa en lugar de dividir."),
+            ("0,2 m/s²", "Dividió la masa por la fuerza, invirtiendo la relación."),
+            ("24 m/s²", "Sumó fuerza y masa, que son magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Una grúa eleva una caja de 50 kg a 4 m de altura. "
+        "¿Cuánto trabajo realiza contra la gravedad? (usa g = 10 m/s²)",
+        "2000 J",
+        "El trabajo contra la gravedad es igual a la energía potencial que gana "
+        "el cuerpo.\n\n"
+        "1) La relación es W = m · g · h.\n"
+        "2) Reemplaza: W = 50 kg · 10 m/s² · 4 m.\n"
+        "3) Calcula: 50 · 10 = 500, y 500 · 4 = 2000 J.\n\n"
+        "El joule es un newton por metro: la grúa aplica 500 N durante 4 m.",
+        [
+            ("200 J", "Omitió la aceleración de gravedad y calculó solo m · h."),
+            ("500 J", "Calculó el peso del cuerpo (m · g) sin multiplicar por la altura."),
+            ("125 J", "Dividió por la altura en vez de multiplicar."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una onda tiene una frecuencia de 50 Hz y una longitud de onda de 4 m. "
+        "¿Cuál es su rapidez de propagación?",
+        "200 m/s",
+        "La rapidez de una onda es el producto de su frecuencia por su longitud "
+        "de onda.\n\n"
+        "1) La relación es v = f · λ.\n"
+        "2) Reemplaza: v = 50 Hz · 4 m.\n"
+        "3) Calcula: v = 200 m/s.\n\n"
+        "Tiene sentido dimensional: el hertz es 1/s, así que (1/s) · m da m/s.",
+        [
+            ("12,5 m/s", "Dividió la frecuencia por la longitud de onda en lugar de multiplicar."),
+            ("54 m/s", "Sumó ambas magnitudes, que no son del mismo tipo."),
+            ("0,08 m/s", "Dividió la longitud de onda por la frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Por una resistencia de 20 Ω circula una corriente de 3 A. "
+        "¿Cuál es la diferencia de potencial entre sus extremos?",
+        "60 V",
+        "La ley de Ohm relaciona voltaje, corriente y resistencia.\n\n"
+        "1) La ley es V = I · R.\n"
+        "2) Reemplaza: V = 3 A · 20 Ω.\n"
+        "3) Calcula: V = 60 V.",
+        [
+            ("6,7 V", "Dividió la resistencia por la corriente en vez de multiplicar."),
+            ("23 V", "Sumó corriente y resistencia, que son magnitudes distintas."),
+            ("0,15 V", "Dividió la corriente por la resistencia."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Dos resistencias de 6 Ω y 3 Ω se conectan en paralelo. "
+        "¿Cuál es la resistencia equivalente?",
+        "2 Ω",
+        "En paralelo se suman los inversos de las resistencias, y el resultado "
+        "es siempre menor que la más pequeña.\n\n"
+        "1) Plantea: 1/Req = 1/6 + 1/3.\n"
+        "2) Lleva a denominador común: 1/6 + 2/6 = 3/6 = 1/2.\n"
+        "3) Invierte: Req = 2 Ω.\n\n"
+        "Control: 2 Ω es menor que 3 Ω, la más chica del par, como debe ser en "
+        "un circuito paralelo.",
+        [
+            ("9 Ω", "Sumó las resistencias directamente, que es la regla de la conexión en serie."),
+            ("4,5 Ω", "Promedió ambas resistencias, que no es la regla del paralelo."),
+            ("18 Ω", "Multiplicó las resistencias sin dividir por su suma."),
+        ],
+    ),
+
+    # ---------- QUÍMICA ----------
+    _q(
+        "cie_atomo", "facil",
+        "Un átomo neutro tiene número atómico 17 y número másico 35. "
+        "¿Cuántos neutrones tiene su núcleo?",
+        "18",
+        "El número másico cuenta protones y neutrones juntos; el número atómico "
+        "cuenta solo los protones.\n\n"
+        "1) Los protones son 17, porque ese es el número atómico.\n"
+        "2) Los neutrones son la diferencia: 35 − 17 = 18.\n\n"
+        "Al ser neutro también tiene 17 electrones, pero esos no están en el "
+        "núcleo ni cuentan para el número másico.",
+        [
+            ("17", "Entregó la cantidad de protones, que es el número atómico."),
+            ("35", "Entregó el número másico, que suma protones y neutrones."),
+            ("52", "Sumó ambos números en lugar de restarlos."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántos moles hay en 88 g de dióxido de carbono (CO₂), si su masa "
+        "molar es 44 g/mol?",
+        "2 mol",
+        "Los moles son la masa dividida por la masa molar.\n\n"
+        "1) La relación es n = m / M.\n"
+        "2) Reemplaza: n = 88 g ÷ 44 g/mol.\n"
+        "3) Calcula: n = 2 mol.\n\n"
+        "Control: si un mol pesa 44 g, en 88 g caben exactamente dos.",
+        [
+            ("3872 mol", "Multiplicó la masa por la masa molar en vez de dividir."),
+            ("0,5 mol", "Dividió la masa molar por la masa, invirtiendo la relación."),
+            ("44 mol", "Entregó la masa molar como si fuera la cantidad de sustancia."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 0,5 mol de soluto en agua hasta completar 250 mL de "
+        "disolución. ¿Cuál es su concentración molar?",
+        "2 mol/L",
+        "La molaridad es la cantidad de soluto en moles por litro de "
+        "disolución, así que primero hay que pasar el volumen a litros.\n\n"
+        "1) Convierte: 250 mL = 0,25 L.\n"
+        "2) La relación es M = n / V.\n"
+        "3) Reemplaza: M = 0,5 mol ÷ 0,25 L = 2 mol/L.\n\n"
+        "El error más común acá es dividir por 250 sin convertir, que da un "
+        "número mil veces menor.",
+        [
+            ("0,002 mol/L", "Dividió por 250 sin convertir los mililitros a litros."),
+            ("0,125 mol/L", "Multiplicó los moles por el volumen en lugar de dividir."),
+            ("125 mol/L", "Multiplicó por 250 en vez de dividir por 0,25."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "medio",
+        "Una disolución tiene una concentración de iones hidrógeno de "
+        "1 × 10⁻³ mol/L. ¿Cuál es su pH?",
+        "3",
+        "El pH es el logaritmo negativo en base 10 de la concentración de iones "
+        "hidrógeno.\n\n"
+        "1) La relación es pH = −log[H⁺].\n"
+        "2) Reemplaza: pH = −log(1 × 10⁻³).\n"
+        "3) El logaritmo de 10⁻³ es −3, y su negativo es 3.\n\n"
+        "Un pH de 3 corresponde a una disolución ácida, coherente con una "
+        "concentración de hidrógeno alta.",
+        [
+            ("−3", "Olvidó el signo negativo de la definición: el pH de una disolución acuosa común no es negativo."),
+            ("11", "Calculó el pOH, que es 14 menos el pH."),
+            ("0,001", "Entregó la concentración misma en lugar de su logaritmo."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "dificil",
+        "Si el pH de una disolución es 5, ¿cuál es su pOH a 25 °C?",
+        "9",
+        "A 25 °C, el pH y el pOH de una disolución acuosa siempre suman 14.\n\n"
+        "1) La relación es pH + pOH = 14.\n"
+        "2) Despeja: pOH = 14 − 5.\n"
+        "3) Calcula: pOH = 9.\n\n"
+        "La suma constante viene del producto iónico del agua a esa "
+        "temperatura, por eso la condición de 25 °C aparece en el enunciado.",
+        [
+            ("5", "Repitió el pH: ambos coinciden solo cuando valen 7, es decir, en una disolución neutra."),
+            ("19", "Sumó el pH a 14 en vez de restarlo."),
+            ("7", "Entregó el valor del pH neutro, que no depende del dato del enunciado."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "En la reacción 2 H₂ + O₂ → 2 H₂O, ¿cuántos moles de agua se producen a "
+        "partir de 6 mol de hidrógeno, con oxígeno en exceso?",
+        "6 mol",
+        "Los coeficientes de la ecuación balanceada dan la proporción entre las "
+        "sustancias.\n\n"
+        "1) La ecuación dice que 2 mol de H₂ producen 2 mol de H₂O: la "
+        "proporción es 1 a 1.\n"
+        "2) Con 6 mol de hidrógeno se producen 6 mol de agua.\n\n"
+        "El oxígeno está en exceso, así que el hidrógeno es el reactivo "
+        "limitante y es él quien fija cuánto producto se forma.",
+        [
+            ("3 mol", "Dividió por el coeficiente 2 sin notar que también el agua lo lleva: la proporción es 1 a 1."),
+            ("12 mol", "Multiplicó por 2 en lugar de aplicar la proporción de la ecuación."),
+            ("2 mol", "Usó el coeficiente de la ecuación como si fuera la respuesta."),
+        ],
+    ),
+]
