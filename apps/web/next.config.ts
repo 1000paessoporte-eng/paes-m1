@@ -1,8 +1,23 @@
 import path from "node:path";
 import type { NextConfig } from "next";
 
-// El backend FastAPI corre en el mismo host que la web (puerto 8000).
-const API_ORIGIN = process.env.API_URL ?? "http://127.0.0.1:8000";
+// A qué backend habla esta instancia de la web.
+//
+// - Producción: API_URL, seteada en Vercel.
+// - Preview: no hay API_URL, así que se deriva de la URL de rama que Vercel
+//   asigna a este despliegue (VERCEL_BRANCH_URL, del tipo
+//   "milpaes-web-git-<rama>-<scope>.vercel.app"). Cambiando el nombre del
+//   proyecto se obtiene la URL de rama del backend, que Vercel construye con
+//   el mismo patrón porque ambos proyectos siguen el mismo repo y la misma
+//   rama. Así cada PR queda apuntando a SU backend y a la base de preview,
+//   nunca a los datos de producción.
+// - Local: la API en el puerto 8000.
+const BRANCH_API_ORIGIN = process.env.VERCEL_BRANCH_URL
+  ? `https://${process.env.VERCEL_BRANCH_URL.replace("milpaes-web", "milpaes-api")}`
+  : undefined;
+
+const API_ORIGIN =
+  process.env.API_URL ?? BRANCH_API_ORIGIN ?? "http://127.0.0.1:8000";
 
 const nextConfig: NextConfig = {
   // Build standalone (server.js + node_modules mínimos) para la imagen

@@ -74,8 +74,20 @@ CONTRASEÑA_GMAIL = <pedir a Pablo por canal privado>
 
 ## 2. Base de datos (Neon / PostgreSQL)
 
-Proyecto Neon en la región `sa-east-1` (São Paulo). Base: `neondb`, usuario
-`neondb_owner`.
+Proyecto Neon en la región `sa-east-1` (São Paulo), usuario `neondb_owner`.
+Hay **dos bases** dentro del mismo proyecto:
+
+| Base | Para qué | Quién la usa |
+|---|---|---|
+| `neondb` | Producción, con datos de estudiantes reales | `1000paes.cl` |
+| `paes_preview` | Pruebas: mismo esquema y las mismas 282 preguntas, sin datos reales | los previews de cada PR |
+
+Los previews **nunca** apuntan a `neondb`: sus variables de entorno en Vercel
+son de tipo Preview y traen el string de `paes_preview`. Por eso se puede
+romper lo que sea en un PR sin tocar a nadie.
+
+Para obtener el string de `paes_preview`, se toma el de producción y se cambia
+`/neondb?` por `/paes_preview?`.
 
 **Hay dos connection strings y NO son intercambiables:**
 
@@ -119,6 +131,10 @@ demo@paes-m1.cl / demo1234
 | `milpaes-api` | `apps/api` | FastAPI serverless | `prj_7edSJGd2ofYW8oW0MuJZTnVD5mBR` |
 
 Org / team ID: `team_y0Pxfwc1TRGfEogoIZyw0Et4`
+
+Ambos proyectos están conectados a `github.com/Pabloajnxka/paes-m1`, con
+`main` como rama de producción y `apps/web` / `apps/api` como directorio raíz
+respectivamente.
 
 Ambos corren en la región **`gru1`** (São Paulo), igual que la base de datos.
 Tenerlos en regiones distintas agregó ~700 ms por request en su momento — no
@@ -213,17 +229,53 @@ pero **cualquier cosa que escribas afecta a producción**. Úsalo solo para leer
 
 ## 5. Rutina de trabajo
 
+`main` está protegida: **no se pushea directo**, todo entra por Pull Request.
+Cada socio trabaja en su propia rama.
+
 ```bash
-# Verificar antes de commitear
-cd apps/api && uv run pytest tests/ -q && uv run ruff check src/
+git switch -c pablo/lo-que-sea      # o mati/lo-que-sea
+# ... trabajar ...
+
+# Verificar antes de pedir merge
+cd apps/api && uv run pytest tests/ -q && uv run ruff check src/ scripts/
+cd apps/api && uv run python scripts/verificar_banco.py
 cd apps/web && pnpm typecheck && pnpm build
 
-# Subir
-git add -A && git commit -m "..." && git push origin main
+git push -u origin <tu-rama>        # o la skill /ship, que hace todo esto
+```
 
-# Desplegar (NO es automático desde GitHub)
-cd <raiz-del-repo> && vercel deploy --prod --yes    # frontend
-cd apps/api && vercel deploy --prod --yes           # backend
+### El deploy es automático (desde 2026-08-14)
+
+Los proyectos de Vercel están conectados al repo de GitHub:
+
+| Qué pasa | Qué despliega Vercel |
+|---|---|
+| Push a una rama con PR | Un **preview** por proyecto, con URL propia |
+| Merge a `main` | **Producción**: `1000paes.cl` y la API |
+
+Ya **no** hay que correr `vercel deploy --prod` a mano. Si alguna vez hace falta
+(por ejemplo, para forzar un redeploy), el frontend se despliega desde la
+**raíz** del repo y nunca desde `apps/web`.
+
+Los previews son públicos, para que ambos socios puedan abrirlos sin tener
+cuenta en la misma cuenta de Vercel.
+
+### La regla que ya rompió producción
+
+**Si tocaste modelos de datos, aplica la migración a producción ANTES de que se
+despliegue la API.** El 2026-08-14 un commit agregó columnas a `users`, la
+migración nunca se aplicó, y al desplegar la API el login empezó a devolver 500
+porque el modelo pedía columnas inexistentes.
+
+```bash
+cd apps/api
+DATABASE_URL="<string directo>" uv run alembic upgrade head
+```
+
+Y si agregaste preguntas al banco, no basta con desplegar: hay que sembrarlas.
+
+```bash
+DATABASE_URL="<string directo>" uv run python scripts/seed.py
 ```
 
 **Errores preexistentes conocidos** — no son regresiones, no los persigas:
