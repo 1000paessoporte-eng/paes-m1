@@ -7550,4 +7550,1273 @@ QUESTIONS += [
             ("x = 24, y = 18", "No dividió por 2 tras agrupar los términos con y."),
         ],
     ),
+    # ---------- alg_cuadratica ----------
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² − 36 = 0?",
+        "x = 6 y x = −6",
+        "Cuando falta el término con x, se despeja el cuadrado directamente.\n\n"
+        "1) Suma 36 a ambos lados: x² = 36.\n"
+        "2) Saca raíz cuadrada. Aquí está la clave: hay dos números cuyo cuadrado da "
+        "36, el positivo y el negativo.\n"
+        "3) Las soluciones son x = 6 y x = −6.\n"
+        "4) Verifica la negativa: (−6)² − 36 = 36 − 36 = 0. Correcto.",
+        [
+            ("x = 6", "Consideró solo la raíz positiva; toda ecuación de este tipo tiene dos soluciones."),
+            ("x = 18 y x = −18", "Dividió 36 por 2 en lugar de calcular su raíz cuadrada."),
+            ("x = 36", "Despejó el término pero no aplicó la raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² = 81?",
+        "x = 9 y x = −9",
+        "La ecuación ya está despejada, solo falta la raíz.\n\n"
+        "1) Aplica raíz cuadrada a ambos lados, recordando que hay dos valores "
+        "posibles.\n"
+        "2) Como 9 · 9 = 81 y también (−9) · (−9) = 81, ambos sirven.\n"
+        "3) Las soluciones son x = 9 y x = −9.",
+        [
+            ("x = 9", "Olvidó la raíz negativa, que también cumple la ecuación."),
+            ("x = 40,5 y x = −40,5", "Dividió por 2 en vez de calcular la raíz cuadrada."),
+            ("x = 81 y x = −81", "No aplicó la raíz cuadrada al despejar."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² − 6x = 0?",
+        "x = 0 y x = 6",
+        "Cuando no hay término independiente, se factoriza sacando la x.\n\n"
+        "1) Saca factor común x: x(x − 6) = 0.\n"
+        "2) Un producto es cero cuando alguno de sus factores lo es. Entonces x = 0 o "
+        "bien x − 6 = 0.\n"
+        "3) Del segundo caso: x = 6.\n"
+        "4) Las soluciones son 0 y 6. El error típico es dividir por x, que hace "
+        "desaparecer la solución x = 0.",
+        [
+            ("x = 6", "Dividió toda la ecuación por x, perdiendo la solución x = 0."),
+            ("x = 0", "Encontró una solución y no revisó el segundo factor."),
+            ("x = 6 y x = −6", "Trató la ecuación como si fuera x² = 36."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² + 5x + 6 = 0?",
+        "x = −2 y x = −3",
+        "Se factoriza el trinomio y se iguala cada factor a cero.\n\n"
+        "1) Busca dos números que multiplicados den 6 y sumados den 5: son 2 y 3.\n"
+        "2) Factoriza: (x + 2)(x + 3) = 0.\n"
+        "3) Iguala cada factor a cero: x + 2 = 0 da x = −2, y x + 3 = 0 da x = −3.\n"
+        "4) Verifica la primera: (−2)² + 5(−2) + 6 = 4 − 10 + 6 = 0. Correcto.",
+        [
+            ("x = 2 y x = 3", "Copió los números de la factorización sin cambiarles el signo al despejar."),
+            ("x = −1 y x = −6", "Eligió una pareja que multiplica 6 pero suma 7."),
+            ("x = −5 y x = −6", "Usó directamente los coeficientes del enunciado."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² − 9x + 20 = 0?",
+        "x = 4 y x = 5",
+        "Ambos signos indican que los dos números buscados son negativos en la "
+        "factorización.\n\n"
+        "1) Busca dos números que multipliquen 20 y sumen −9: son −4 y −5.\n"
+        "2) Factoriza: (x − 4)(x − 5) = 0.\n"
+        "3) Iguala cada factor a cero: x = 4 y x = 5.\n"
+        "4) Verifica: 4² − 9 · 4 + 20 = 16 − 36 + 20 = 0. Correcto.",
+        [
+            ("x = −4 y x = −5", "Copió los signos de la factorización sin invertirlos al despejar."),
+            ("x = 2 y x = 10", "Eligió una pareja que multiplica 20 pero suma 12."),
+            ("x = 9 y x = 20", "Usó directamente los coeficientes del enunciado."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de x² + 3x − 18 = 0?",
+        "x = 3 y x = −6",
+        "Con término independiente negativo, los dos números tienen signos "
+        "distintos.\n\n"
+        "1) Busca dos números que multipliquen −18 y sumen 3: son 6 y −3.\n"
+        "2) Factoriza: (x + 6)(x − 3) = 0.\n"
+        "3) Iguala cada factor a cero: x = −6 y x = 3.\n"
+        "4) Verifica: 3² + 3 · 3 − 18 = 9 + 9 − 18 = 0. Correcto.",
+        [
+            ("x = −3 y x = 6", "Invirtió los signos de ambas soluciones."),
+            ("x = 2 y x = −9", "Eligió una pareja que multiplica −18 pero suma −7."),
+            ("x = 3 y x = 6", "Ignoró que el producto debe ser negativo, así que un factor debe serlo."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de x² − 2x − 8 = 0?",
+        "x = 4 y x = −2",
+        "Se factoriza buscando la pareja adecuada de números.\n\n"
+        "1) Necesitas dos números que multipliquen −8 y sumen −2: son −4 y 2.\n"
+        "2) Factoriza: (x − 4)(x + 2) = 0.\n"
+        "3) Iguala cada factor a cero: x = 4 y x = −2.\n"
+        "4) Verifica la segunda: (−2)² − 2(−2) − 8 = 4 + 4 − 8 = 0. Correcto.",
+        [
+            ("x = −4 y x = 2", "Invirtió los signos de ambas soluciones."),
+            ("x = 8 y x = −1", "Eligió una pareja que multiplica −8 pero suma 7."),
+            ("x = 2 y x = 4", "Ignoró que una de las soluciones debe ser negativa."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de 3x² − 12 = 0?",
+        "x = 2 y x = −2",
+        "Conviene simplificar antes de despejar.\n\n"
+        "1) Suma 12: 3x² = 12.\n"
+        "2) Divide por 3: x² = 4.\n"
+        "3) Saca raíz cuadrada considerando ambos signos: x = 2 y x = −2.\n"
+        "4) Verifica: 3 · 4 − 12 = 0 para los dos valores, porque el cuadrado elimina "
+        "el signo.",
+        [
+            ("x = 4 y x = −4", "Despejó x² = 4 pero entregó ese valor sin sacarle la raíz."),
+            ("x = 2", "Consideró solo la raíz positiva."),
+            ("x = 6 y x = −6", "Dividió 12 por 2 en lugar de por el coeficiente 3."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de x² − 10x + 25 = 0?",
+        "x = 5, una única solución",
+        "Este trinomio es un cuadrado perfecto, y eso cambia el número de "
+        "soluciones.\n\n"
+        "1) Busca dos números que multipliquen 25 y sumen −10: ambos son −5.\n"
+        "2) Factoriza: (x − 5)(x − 5) = 0, o sea (x − 5)² = 0.\n"
+        "3) Al haber un solo factor distinto, hay una sola solución: x = 5.\n"
+        "4) Se dice que es una raíz doble: la parábola toca el eje X en un único "
+        "punto en lugar de cruzarlo.",
+        [
+            ("x = 5 y x = −5", "Trató la ecuación como una diferencia de cuadrados."),
+            ("x = 10 y x = 25", "Usó directamente los coeficientes del enunciado."),
+            ("x = −5, una única solución", "Copió el signo de la factorización sin invertirlo al despejar."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de 2x² − 5x − 3 = 0?",
+        "x = 3 y x = −1/2",
+        "Con coeficiente distinto de 1 conviene la fórmula general.\n\n"
+        "1) Identifica a = 2, b = −5 y c = −3.\n"
+        "2) Calcula el discriminante: b² − 4ac = 25 − 4 · 2 · (−3) = 25 + 24 = 49.\n"
+        "3) Su raíz es 7. Aplica la fórmula: x = (5 ± 7)/(2 · 2) = (5 ± 7)/4.\n"
+        "4) Las dos soluciones son (5 + 7)/4 = 3 y (5 − 7)/4 = −1/2.",
+        [
+            ("x = 3 y x = 1/2", "Perdió el signo negativo en la solución obtenida con la resta."),
+            ("x = −3 y x = 1/2", "Invirtió el signo de ambas soluciones al aplicar la fórmula."),
+            ("x = 5 y x = −3", "Usó los coeficientes b y c como si fueran las soluciones."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "El área de un rectángulo es 40 cm² y su largo mide 3 cm más que su ancho. ¿Cuánto mide el ancho?",
+        "5 cm",
+        "Se plantea el área en función de una sola incógnita.\n\n"
+        "1) Llama a al ancho. El largo es a + 3.\n"
+        "2) El área es largo por ancho: a(a + 3) = 40.\n"
+        "3) Desarrolla y ordena: a² + 3a − 40 = 0.\n"
+        "4) Factoriza buscando dos números que multipliquen −40 y sumen 3: son 8 y "
+        "−5. Queda (a + 8)(a − 5) = 0, con soluciones a = −8 y a = 5. Una medida no "
+        "puede ser negativa, así que el ancho es 5 cm (y el largo, 8 cm).",
+        [
+            ("8 cm", "Entregó la medida del largo en lugar del ancho."),
+            ("−8 cm", "Eligió la solución negativa de la ecuación, imposible para una longitud."),
+            ("20 cm", "Dividió el área por 2, como si fuera un perímetro."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "El cuadrado de un número, menos el triple de ese mismo número, es igual a 28. ¿Cuál es el número, si se sabe que es positivo?",
+        "7",
+        "Se traduce el enunciado a una ecuación cuadrática.\n\n"
+        "1) Llama n al número: n² − 3n = 28.\n"
+        "2) Pasa todo a un lado: n² − 3n − 28 = 0.\n"
+        "3) Factoriza buscando dos números que multipliquen −28 y sumen −3: son −7 y "
+        "4. Queda (n − 7)(n + 4) = 0.\n"
+        "4) Las soluciones son 7 y −4. Como el enunciado pide el positivo, es 7. "
+        "Verifica: 49 − 21 = 28.",
+        [
+            ("−4", "Eligió la solución negativa, descartada por el enunciado."),
+            ("4", "Copió el signo de la factorización sin invertirlo al despejar."),
+            ("28", "Entregó el resultado de la operación en lugar del número buscado."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Usando la fórmula general, ¿cuáles son las soluciones de x² − 4x − 12 = 0?",
+        "x = 6 y x = −2",
+        "La fórmula general sirve para cualquier ecuación cuadrática.\n\n"
+        "1) Identifica a = 1, b = −4 y c = −12.\n"
+        "2) Calcula el discriminante: b² − 4ac = 16 − 4 · 1 · (−12) = 16 + 48 = 64.\n"
+        "3) Su raíz es 8. Aplica la fórmula: x = (4 ± 8)/2.\n"
+        "4) Las soluciones son (4 + 8)/2 = 6 y (4 − 8)/2 = −2. Verifica: "
+        "36 − 24 − 12 = 0.",
+        [
+            ("x = −6 y x = 2", "Invirtió el signo de b al aplicar la fórmula."),
+            ("x = 6 y x = 2", "Perdió el signo negativo en la solución obtenida con la resta."),
+            ("x = 2 y x = −8", "Restó 4ac en lugar de sumarlo, con c negativo, y calculó mal el discriminante."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "¿Cuáles son las soluciones de 2x² + 7x + 3 = 0?",
+        "x = −3 y x = −1/2",
+        "Se aplica la fórmula general por tener coeficiente distinto de 1.\n\n"
+        "1) Identifica a = 2, b = 7 y c = 3.\n"
+        "2) Discriminante: 49 − 4 · 2 · 3 = 49 − 24 = 25, cuya raíz es 5.\n"
+        "3) Fórmula: x = (−7 ± 5)/4.\n"
+        "4) Las soluciones son (−7 + 5)/4 = −1/2 y (−7 − 5)/4 = −3. Ambas negativas, "
+        "coherente con que todos los coeficientes sean positivos.",
+        [
+            ("x = 3 y x = 1/2", "Olvidó el signo negativo del −b en la fórmula."),
+            ("x = −3 y x = −2", "Dividió por 2 en lugar de por 2a al final."),
+            ("x = −7 y x = 3", "Usó los coeficientes b y c como si fueran las soluciones."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "¿Cuántas soluciones reales tiene la ecuación x² − 6x + 9 = 0?",
+        "Una única solución real (el discriminante vale 0)",
+        "El discriminante decide cuántas soluciones reales hay.\n\n"
+        "1) Identifica a = 1, b = −6 y c = 9.\n"
+        "2) Calcula b² − 4ac = 36 − 36 = 0.\n"
+        "3) Cuando el discriminante es cero, la raíz cuadrada aporta el mismo valor "
+        "sumando y restando, así que las dos soluciones coinciden.\n"
+        "4) Hay una única solución real, x = 3. Gráficamente, la parábola toca el eje "
+        "X en un solo punto.",
+        [
+            ("Dos soluciones reales distintas", "Supuso que toda ecuación cuadrática tiene siempre dos soluciones distintas."),
+            ("No tiene soluciones reales", "Confundió el caso de discriminante cero con el de discriminante negativo."),
+            ("Infinitas soluciones", "Una ecuación cuadrática nunca tiene infinitas soluciones."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "¿Cuántas soluciones reales tiene la ecuación 2x² + 3x + 5 = 0?",
+        "Ninguna: el discriminante vale −31",
+        "Se calcula el discriminante antes de intentar resolver.\n\n"
+        "1) Identifica a = 2, b = 3 y c = 5.\n"
+        "2) Calcula b² − 4ac = 9 − 4 · 2 · 5 = 9 − 40 = −31.\n"
+        "3) El discriminante es negativo, y no existe ningún número real cuya raíz "
+        "cuadrada sea negativa.\n"
+        "4) Por lo tanto la ecuación no tiene soluciones reales. Gráficamente, la "
+        "parábola no llega a cortar el eje X.",
+        [
+            ("Dos soluciones reales distintas", "No calculó el discriminante antes de resolver."),
+            ("Una única solución real", "Confundió el caso de discriminante negativo con el de discriminante cero."),
+            ("Dos soluciones, ambas negativas", "Dedujo el signo de las soluciones por los coeficientes sin verificar que existan."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Se lanza una pelota hacia arriba y su altura en metros, t segundos después, es h = −5t² + 20t. ¿En qué instante vuelve a tocar el suelo?",
+        "4 segundos",
+        "Tocar el suelo significa que la altura vale cero.\n\n"
+        "1) Plantea h = 0: −5t² + 20t = 0.\n"
+        "2) Saca factor común t: t(−5t + 20) = 0.\n"
+        "3) Un producto es cero si alguno de sus factores lo es: t = 0 o "
+        "−5t + 20 = 0.\n"
+        "4) El segundo caso da t = 4. La solución t = 0 corresponde al instante del "
+        "lanzamiento, así que la pelota vuelve al suelo a los 4 segundos.",
+        [
+            ("2 segundos", "Entregó el instante de altura máxima, que es el vértice de la parábola."),
+            ("0 segundos", "Eligió la solución que corresponde al momento del lanzamiento."),
+            ("20 segundos", "Tomó el coeficiente del término lineal como si fuera el tiempo."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Si las soluciones de una ecuación cuadrática son x = 3 y x = −4, ¿cuál es la ecuación en su forma factorizada?",
+        "(x − 3)(x + 4) = 0",
+        "Se reconstruye la ecuación invirtiendo el proceso de resolución.\n\n"
+        "1) Si x = 3 es solución, entonces x − 3 = 0 y ese es un factor.\n"
+        "2) Si x = −4 es solución, entonces x + 4 = 0 y ese es el otro factor.\n"
+        "3) El producto de ambos factores igualado a cero reproduce la ecuación: "
+        "(x − 3)(x + 4) = 0.\n"
+        "4) Desarrollando quedaría x² + x − 12 = 0, cuyas soluciones son en efecto 3 "
+        "y −4.",
+        [
+            ("(x + 3)(x − 4) = 0", "Copió los signos de las soluciones sin invertirlos al armar los factores."),
+            ("(x − 3)(x − 4) = 0", "Invirtió el signo de una solución pero no de la otra."),
+            ("(x + 3)(x + 4) = 0", "Sumó ambas soluciones en los factores, sin considerar sus signos."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuál es la suma de las soluciones de la ecuación x² − 7x + 10 = 0?",
+        "7",
+        "Se puede resolver la ecuación, o usar una propiedad que ahorra trabajo.\n\n"
+        "1) Factoriza: buscas dos números que multipliquen 10 y sumen −7, que son −2 "
+        "y −5. Queda (x − 2)(x − 5) = 0.\n"
+        "2) Las soluciones son 2 y 5.\n"
+        "3) Su suma es 7.\n"
+        "4) Atajo: en una ecuación de la forma x² + bx + c = 0, la suma de las "
+        "soluciones es siempre −b. Aquí b = −7, así que la suma es 7 sin necesidad de "
+        "resolver.",
+        [
+            ("10", "Entregó el producto de las soluciones en lugar de su suma."),
+            ("−7", "Aplicó el atajo pero olvidó cambiar el signo del coeficiente."),
+            ("3", "Restó las soluciones en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "El producto de dos números enteros consecutivos es 72. ¿Cuál es el menor de ellos, considerando solo los positivos?",
+        "8",
+        "Dos consecutivos se diferencian en 1, así que basta una incógnita.\n\n"
+        "1) Llama n al menor. El siguiente es n + 1.\n"
+        "2) El producto es 72: n(n + 1) = 72.\n"
+        "3) Desarrolla y ordena: n² + n − 72 = 0.\n"
+        "4) Factoriza buscando dos números que multipliquen −72 y sumen 1: son 9 y "
+        "−8. Queda (n + 9)(n − 8) = 0, con soluciones −9 y 8. El menor positivo es 8, "
+        "y en efecto 8 · 9 = 72.",
+        [
+            ("9", "Entregó el mayor de los dos números consecutivos."),
+            ("−9", "Eligió la solución negativa, descartada por el enunciado."),
+            ("36", "Dividió 72 por 2, como si los números fueran iguales."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² − 121 = 0?",
+        "x = 11 y x = −11",
+        "Sin término lineal, se despeja el cuadrado y se saca raíz.\n\n"
+        "1) Suma 121: x² = 121.\n"
+        "2) Saca raíz cuadrada considerando los dos signos posibles.\n"
+        "3) Como 11 · 11 = 121 y (−11) · (−11) = 121, las soluciones son 11 y −11.",
+        [
+            ("x = 11", "Consideró solo la raíz positiva."),
+            ("x = 60,5 y x = −60,5", "Dividió por 2 en lugar de calcular la raíz cuadrada."),
+            ("x = 121", "Despejó el término pero no aplicó la raíz."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² = 144?",
+        "x = 12 y x = −12",
+        "La ecuación ya está despejada.\n\n"
+        "1) Aplica raíz cuadrada a ambos lados, con los dos signos.\n"
+        "2) Como 12² = 144 y (−12)² = 144, ambos valores sirven.\n"
+        "3) Las soluciones son 12 y −12.",
+        [
+            ("x = 12", "Omitió la raíz negativa."),
+            ("x = 72 y x = −72", "Dividió por 2 en vez de calcular la raíz."),
+            ("x = 14 y x = −14", "Usó una raíz aproximada incorrecta: 14² es 196."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² + 8x = 0?",
+        "x = 0 y x = −8",
+        "Sin término independiente, se factoriza sacando la x.\n\n"
+        "1) Factor común x: x(x + 8) = 0.\n"
+        "2) El producto es cero si algún factor lo es: x = 0 o x + 8 = 0.\n"
+        "3) Del segundo caso: x = −8.\n"
+        "4) Dividir por x haría desaparecer la solución x = 0, que sí es válida.",
+        [
+            ("x = −8", "Dividió por x y perdió la solución x = 0."),
+            ("x = 0 y x = 8", "No cambió el signo al despejar el segundo factor."),
+            ("x = 8 y x = −8", "Trató la ecuación como si fuera x² = 64."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² + 6x + 8 = 0?",
+        "x = −2 y x = −4",
+        "Se factoriza el trinomio y se anula cada factor.\n\n"
+        "1) Busca dos números que multipliquen 8 y sumen 6: son 2 y 4.\n"
+        "2) Factoriza: (x + 2)(x + 4) = 0.\n"
+        "3) Iguala cada factor a cero: x = −2 y x = −4.\n"
+        "4) Verifica: (−2)² + 6(−2) + 8 = 4 − 12 + 8 = 0.",
+        [
+            ("x = 2 y x = 4", "No invirtió los signos al despejar cada factor."),
+            ("x = −1 y x = −8", "Eligió una pareja que multiplica 8 pero suma 9."),
+            ("x = −6 y x = −8", "Usó directamente los coeficientes del enunciado."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "facil",
+        "¿Cuáles son las soluciones de x² − 11x + 24 = 0?",
+        "x = 3 y x = 8",
+        "El signo negativo del término central y el positivo del último indican dos "
+        "números negativos en la factorización.\n\n"
+        "1) Busca dos números que multipliquen 24 y sumen −11: son −3 y −8.\n"
+        "2) Factoriza: (x − 3)(x − 8) = 0.\n"
+        "3) Iguala a cero: x = 3 y x = 8.\n"
+        "4) Verifica: 9 − 33 + 24 = 0.",
+        [
+            ("x = −3 y x = −8", "No invirtió los signos al despejar."),
+            ("x = 4 y x = 6", "Eligió una pareja que multiplica 24 pero suma 10."),
+            ("x = 11 y x = 24", "Usó directamente los coeficientes del enunciado."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de x² − x − 20 = 0?",
+        "x = 5 y x = −4",
+        "Cuidado con el término central: su coeficiente es −1, aunque no se escriba.\n\n"
+        "1) Busca dos números que multipliquen −20 y sumen −1: son −5 y 4.\n"
+        "2) Factoriza: (x − 5)(x + 4) = 0.\n"
+        "3) Iguala a cero: x = 5 y x = −4.\n"
+        "4) Verifica: 25 − 5 − 20 = 0.",
+        [
+            ("x = −5 y x = 4", "Invirtió los signos de ambas soluciones."),
+            ("x = 10 y x = −2", "Eligió una pareja que multiplica −20 pero suma 8."),
+            ("x = 5 y x = 4", "Ignoró que una solución debe ser negativa para que el producto lo sea."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de x² + 4x − 21 = 0?",
+        "x = 3 y x = −7",
+        "El término independiente negativo obliga a signos distintos.\n\n"
+        "1) Busca dos números que multipliquen −21 y sumen 4: son 7 y −3.\n"
+        "2) Factoriza: (x + 7)(x − 3) = 0.\n"
+        "3) Iguala a cero: x = −7 y x = 3.\n"
+        "4) Verifica: 9 + 12 − 21 = 0.",
+        [
+            ("x = −3 y x = 7", "Invirtió los signos de ambas soluciones."),
+            ("x = 21 y x = −1", "Eligió una pareja que multiplica −21 pero suma 20."),
+            ("x = 3 y x = 7", "Ignoró que una solución debe ser negativa."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de 5x² − 45 = 0?",
+        "x = 3 y x = −3",
+        "Conviene simplificar el coeficiente antes de sacar la raíz.\n\n"
+        "1) Suma 45: 5x² = 45.\n"
+        "2) Divide por 5: x² = 9.\n"
+        "3) Saca raíz con ambos signos: x = 3 y x = −3.\n"
+        "4) Verifica: 5 · 9 − 45 = 0 para los dos valores.",
+        [
+            ("x = 9 y x = −9", "Despejó x² = 9 pero no le sacó la raíz."),
+            ("x = 3", "Consideró solo la raíz positiva."),
+            ("x = 22,5 y x = −22,5", "Dividió 45 por 2 en lugar de por el coeficiente 5."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de x² + 12x + 36 = 0?",
+        "x = −6, una única solución",
+        "Este trinomio es un cuadrado perfecto.\n\n"
+        "1) Busca dos números que multipliquen 36 y sumen 12: ambos son 6.\n"
+        "2) Factoriza: (x + 6)² = 0.\n"
+        "3) Al repetirse el factor, hay una sola solución: x = −6.\n"
+        "4) Es una raíz doble: la parábola toca el eje X sin cruzarlo.",
+        [
+            ("x = 6 y x = −6", "Trató la ecuación como una diferencia de cuadrados."),
+            ("x = 6, una única solución", "No invirtió el signo al despejar el factor."),
+            ("x = −12 y x = −36", "Usó directamente los coeficientes del enunciado."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuáles son las soluciones de 3x² − 10x + 3 = 0?",
+        "x = 3 y x = 1/3",
+        "Con coeficiente distinto de 1 conviene la fórmula general.\n\n"
+        "1) Identifica a = 3, b = −10 y c = 3.\n"
+        "2) Discriminante: 100 − 4 · 3 · 3 = 100 − 36 = 64, cuya raíz es 8.\n"
+        "3) Fórmula: x = (10 ± 8)/6.\n"
+        "4) Las soluciones son (10 + 8)/6 = 3 y (10 − 8)/6 = 1/3.",
+        [
+            ("x = 3 y x = 3", "Usó solo el signo positivo de la fórmula, obteniendo la misma solución dos veces."),
+            ("x = −3 y x = −1/3", "Invirtió el signo de b al aplicar la fórmula."),
+            ("x = 9 y x = 1", "Dividió por a en lugar de por 2a al final."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "Un terreno rectangular tiene 5 m más de largo que de ancho y su área es de 84 m². ¿Cuánto mide el ancho?",
+        "7 m",
+        "Se expresa el área con una sola incógnita.\n\n"
+        "1) Llama a al ancho. El largo es a + 5.\n"
+        "2) El área es a(a + 5) = 84.\n"
+        "3) Ordena: a² + 5a − 84 = 0.\n"
+        "4) Factoriza buscando dos números que multipliquen −84 y sumen 5: son 12 y "
+        "−7. Queda (a + 12)(a − 7) = 0, con soluciones −12 y 7. Una longitud no puede "
+        "ser negativa, así que el ancho es 7 m y el largo 12 m.",
+        [
+            ("12 m", "Entregó la medida del largo en lugar del ancho."),
+            ("−12 m", "Eligió la solución negativa, imposible para una longitud."),
+            ("42 m", "Dividió el área por 2, como si se tratara de un perímetro."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "La suma de un número y su cuadrado es igual a 42. ¿Cuál es el número, si se sabe que es positivo?",
+        "6",
+        "Se traduce el enunciado y se ordena la ecuación.\n\n"
+        "1) Llama n al número: n + n² = 42.\n"
+        "2) Ordena: n² + n − 42 = 0.\n"
+        "3) Factoriza buscando dos números que multipliquen −42 y sumen 1: son 7 y "
+        "−6. Queda (n + 7)(n − 6) = 0.\n"
+        "4) Las soluciones son −7 y 6. Como se pide el positivo, es 6. Verifica: "
+        "6 + 36 = 42.",
+        [
+            ("−7", "Eligió la solución negativa, descartada por el enunciado."),
+            ("7", "No invirtió el signo al despejar el factor correspondiente."),
+            ("21", "Dividió 42 por 2 sin plantear la ecuación."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Usando la fórmula general, ¿cuáles son las soluciones de x² − 3x − 10 = 0?",
+        "x = 5 y x = −2",
+        "La fórmula general funciona con cualquier ecuación cuadrática.\n\n"
+        "1) Identifica a = 1, b = −3 y c = −10.\n"
+        "2) Discriminante: 9 − 4 · 1 · (−10) = 9 + 40 = 49, cuya raíz es 7.\n"
+        "3) Fórmula: x = (3 ± 7)/2.\n"
+        "4) Las soluciones son (3 + 7)/2 = 5 y (3 − 7)/2 = −2. Verifica: "
+        "25 − 15 − 10 = 0.",
+        [
+            ("x = −5 y x = 2", "Invirtió el signo de b al aplicar la fórmula."),
+            ("x = 5 y x = 2", "Perdió el signo negativo en la solución obtenida con la resta."),
+            ("x = 3 y x = −10", "Usó los coeficientes b y c como si fueran las soluciones."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "¿Cuáles son las soluciones de 3x² + 5x − 2 = 0?",
+        "x = 1/3 y x = −2",
+        "Se aplica la fórmula general por el coeficiente distinto de 1.\n\n"
+        "1) Identifica a = 3, b = 5 y c = −2.\n"
+        "2) Discriminante: 25 − 4 · 3 · (−2) = 25 + 24 = 49, cuya raíz es 7.\n"
+        "3) Fórmula: x = (−5 ± 7)/6.\n"
+        "4) Las soluciones son (−5 + 7)/6 = 1/3 y (−5 − 7)/6 = −2.",
+        [
+            ("x = −1/3 y x = 2", "Invirtió el signo de ambas soluciones."),
+            ("x = 1/3 y x = −12", "Dividió solo una de las soluciones por 2a."),
+            ("x = 2 y x = −5", "Usó los coeficientes b y c como si fueran las soluciones."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "¿Cuántas soluciones reales tiene la ecuación x² + 4x + 4 = 0?",
+        "Una única solución real (el discriminante vale 0)",
+        "El discriminante determina la cantidad de soluciones reales.\n\n"
+        "1) Identifica a = 1, b = 4 y c = 4.\n"
+        "2) Calcula b² − 4ac = 16 − 16 = 0.\n"
+        "3) Con discriminante cero, sumar y restar la raíz da el mismo valor, así que "
+        "las soluciones coinciden.\n"
+        "4) Hay una única solución real, x = −2. La parábola toca el eje X en un solo "
+        "punto.",
+        [
+            ("Dos soluciones reales distintas", "Supuso que toda cuadrática tiene siempre dos soluciones distintas."),
+            ("No tiene soluciones reales", "Confundió el discriminante cero con uno negativo."),
+            ("Depende del valor de x", "La cantidad de soluciones es una propiedad de la ecuación, no depende de x."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "¿Cuántas soluciones reales tiene la ecuación x² − 2x + 7 = 0?",
+        "Ninguna: el discriminante vale −24",
+        "Conviene calcular el discriminante antes de intentar resolver.\n\n"
+        "1) Identifica a = 1, b = −2 y c = 7.\n"
+        "2) Calcula b² − 4ac = 4 − 28 = −24.\n"
+        "3) Es negativo, y ningún número real tiene raíz cuadrada negativa.\n"
+        "4) La ecuación no tiene soluciones reales: la parábola no corta el eje X.",
+        [
+            ("Dos soluciones reales distintas", "No calculó el discriminante antes de resolver."),
+            ("Una única solución real", "Confundió el discriminante negativo con uno igual a cero."),
+            ("Dos soluciones, ambas positivas", "Dedujo el signo de las soluciones sin verificar que existan."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Un proyectil se dispara verticalmente y su altura en metros, t segundos después, está dada por h = −5t² + 30t. ¿A los cuántos segundos vuelve a tocar el suelo?",
+        "6 segundos",
+        "Tocar el suelo equivale a que la altura sea cero.\n\n"
+        "1) Plantea h = 0: −5t² + 30t = 0.\n"
+        "2) Saca factor común t: t(−5t + 30) = 0.\n"
+        "3) Las soluciones son t = 0 y −5t + 30 = 0, es decir t = 6.\n"
+        "4) La primera corresponde al instante del disparo, así que el proyectil "
+        "vuelve al suelo a los 6 segundos.",
+        [
+            ("3 segundos", "Entregó el instante de altura máxima, que es el vértice de la parábola."),
+            ("0 segundos", "Eligió la solución que corresponde al momento del disparo."),
+            ("30 segundos", "Tomó el coeficiente del término lineal como si fuera el tiempo."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "Si las soluciones de una ecuación cuadrática son x = −2 y x = 5, ¿cuál es la ecuación en su forma factorizada?",
+        "(x + 2)(x − 5) = 0",
+        "Se reconstruye la ecuación invirtiendo el despeje.\n\n"
+        "1) Si x = −2 es solución, entonces x + 2 = 0 es un factor.\n"
+        "2) Si x = 5 es solución, entonces x − 5 = 0 es el otro factor.\n"
+        "3) El producto igualado a cero da (x + 2)(x − 5) = 0.\n"
+        "4) Desarrollando queda x² − 3x − 10 = 0, cuyas soluciones son en efecto −2 "
+        "y 5.",
+        [
+            ("(x − 2)(x + 5) = 0", "Copió los signos de las soluciones sin invertirlos."),
+            ("(x + 2)(x + 5) = 0", "Invirtió el signo de una solución pero no de la otra."),
+            ("(x − 2)(x − 5) = 0", "Usó signo negativo en ambos factores, ignorando la solución negativa."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "medio",
+        "¿Cuál es el producto de las soluciones de la ecuación x² − 9x + 18 = 0?",
+        "18",
+        "Se puede factorizar, o usar una propiedad de los coeficientes.\n\n"
+        "1) Busca dos números que multipliquen 18 y sumen −9: son −3 y −6. Queda "
+        "(x − 3)(x − 6) = 0.\n"
+        "2) Las soluciones son 3 y 6.\n"
+        "3) Su producto es 18.\n"
+        "4) Atajo: en x² + bx + c = 0, el producto de las soluciones es siempre c. "
+        "Aquí c = 18, sin necesidad de resolver.",
+        [
+            ("9", "Entregó la suma de las soluciones en lugar de su producto."),
+            ("−18", "Aplicó el atajo pero cambió el signo de c innecesariamente."),
+            ("3", "Entregó una de las soluciones en vez del producto."),
+        ],
+    ),
+    _q(
+        "alg_cuadratica", "dificil",
+        "El cuadrado de la edad de Ana, menos cuatro veces su edad, es igual a 45. ¿Cuántos años tiene Ana?",
+        "9 años",
+        "Se plantea la ecuación con la edad como incógnita.\n\n"
+        "1) Llama n a la edad: n² − 4n = 45.\n"
+        "2) Ordena: n² − 4n − 45 = 0.\n"
+        "3) Factoriza buscando dos números que multipliquen −45 y sumen −4: son −9 y "
+        "5. Queda (n − 9)(n + 5) = 0.\n"
+        "4) Las soluciones son 9 y −5. Una edad no puede ser negativa, así que Ana "
+        "tiene 9 años. Verifica: 81 − 36 = 45.",
+        [
+            ("−5 años", "Eligió la solución negativa, imposible para una edad."),
+            ("5 años", "No invirtió el signo al despejar el factor correspondiente."),
+            ("45 años", "Tomó el resultado de la operación como si fuera la edad."),
+        ],
+    ),
+    # ---------- alg_funciones ----------
+    _q(
+        "alg_funciones", "facil",
+        "Si f(x) = 4x + 1, ¿cuál es el valor de f(3)?",
+        "13",
+        "Evaluar una función es reemplazar la x por el valor indicado.\n\n"
+        "1) Sustituye x por 3: f(3) = 4 · 3 + 1.\n"
+        "2) Multiplica primero: 4 · 3 = 12.\n"
+        "3) Suma: 12 + 1 = 13.",
+        [
+            ("16", "Sumó el 1 antes de multiplicar, alterando el orden de las operaciones."),
+            ("7", "Sumó el 3 al coeficiente en lugar de multiplicarlos."),
+            ("12", "Multiplicó correctamente pero olvidó sumar el término independiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "Si f(x) = x² − 2, ¿cuál es el valor de f(4)?",
+        "14",
+        "Se reemplaza la x y se respeta el orden de las operaciones.\n\n"
+        "1) Sustituye: f(4) = 4² − 2.\n"
+        "2) Calcula la potencia primero: 4² = 16.\n"
+        "3) Resta: 16 − 2 = 14.",
+        [
+            ("4", "Restó antes de elevar al cuadrado, calculando (4 − 2)²."),
+            ("6", "Multiplicó la base por 2 en lugar de elevarla al cuadrado."),
+            ("16", "Calculó el cuadrado pero olvidó restar el 2."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (2, 3) y (6, 11)?",
+        "2",
+        "La pendiente mide cuánto sube la recta por cada unidad que avanza.\n\n"
+        "1) La fórmula es m = (y₂ − y₁)/(x₂ − x₁).\n"
+        "2) Reemplaza: m = (11 − 3)/(6 − 2).\n"
+        "3) Calcula: 8/4 = 2.\n"
+        "4) Interpretación: por cada unidad que avanza en x, la recta sube 2 en y.",
+        [
+            ("0,5", "Invirtió la fórmula, dividiendo el avance en x por el avance en y."),
+            ("8", "Calculó solo la diferencia de las y sin dividir por la de las x."),
+            ("4", "Calculó solo la diferencia de las x."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿Cuál es la pendiente de la recta y = 5x − 2?",
+        "5",
+        "En la forma y = mx + n, la pendiente es el número que acompaña a la x.\n\n"
+        "1) Compara y = 5x − 2 con y = mx + n.\n"
+        "2) El coeficiente de x es 5, así que m = 5.\n"
+        "3) El −2 es el coeficiente de posición: indica dónde corta el eje Y, no la "
+        "inclinación.",
+        [
+            ("−2", "Confundió la pendiente con el coeficiente de posición."),
+            ("3", "Restó los dos números de la ecuación."),
+            ("−10", "Multiplicó los dos números de la ecuación."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿En qué punto corta al eje Y la recta y = 3x + 7?",
+        "(0, 7)",
+        "Sobre el eje Y todos los puntos tienen x = 0.\n\n"
+        "1) Reemplaza x por 0: y = 3 · 0 + 7.\n"
+        "2) Calcula: y = 7.\n"
+        "3) El punto de corte es (0, 7).\n"
+        "4) Atajo: en y = mx + n, el corte con el eje Y es siempre (0, n).",
+        [
+            ("(7, 0)", "Intercambió las coordenadas: ese punto está sobre el eje X."),
+            ("(0, 3)", "Usó la pendiente en lugar del coeficiente de posición."),
+            ("(−7/3, 0)", "Calculó el corte con el eje X en lugar del eje Y."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es el vértice de la parábola y = x² − 8x + 12?",
+        "(4, −4)",
+        "El vértice se obtiene primero en x y después reemplazando.\n\n"
+        "1) La coordenada x del vértice es −b/(2a). Aquí a = 1 y b = −8, así que "
+        "x = 8/2 = 4.\n"
+        "2) Reemplaza en la función para obtener la y: 4² − 8 · 4 + 12.\n"
+        "3) Calcula: 16 − 32 + 12 = −4.\n"
+        "4) El vértice es (4, −4). Como a es positivo, la parábola se abre hacia "
+        "arriba y ese punto es su mínimo.",
+        [
+            ("(−4, 60)", "Olvidó el signo negativo en la fórmula −b/(2a)."),
+            ("(4, 12)", "Usó el término independiente como coordenada y en vez de evaluar la función."),
+            ("(8, 12)", "Tomó el coeficiente b directamente, sin dividir por 2a."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es el eje de simetría de la parábola y = x² + 4x − 5?",
+        "x = −2",
+        "El eje de simetría es la recta vertical que pasa por el vértice.\n\n"
+        "1) Su ecuación es x = −b/(2a).\n"
+        "2) Aquí a = 1 y b = 4, así que x = −4/2.\n"
+        "3) El eje de simetría es x = −2.\n"
+        "4) Comprueba la simetría: en x = −1 y en x = −3 la función vale lo mismo "
+        "(−8 en ambos casos).",
+        [
+            ("x = 2", "Olvidó el signo negativo de la fórmula."),
+            ("x = −5", "Usó el término independiente en lugar de calcular el eje."),
+            ("y = −2", "Escribió el eje como una recta horizontal; el eje de simetría de una parábola vertical es vertical."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuáles son las intersecciones con el eje X de la parábola y = x² − 5x + 6?",
+        "(2, 0) y (3, 0)",
+        "Sobre el eje X la coordenada y vale cero.\n\n"
+        "1) Iguala la función a cero: x² − 5x + 6 = 0.\n"
+        "2) Factoriza buscando dos números que multipliquen 6 y sumen −5: son −2 y "
+        "−3. Queda (x − 2)(x − 3) = 0.\n"
+        "3) Las soluciones son x = 2 y x = 3.\n"
+        "4) Los puntos son (2, 0) y (3, 0), porque están sobre el eje X.",
+        [
+            ("(0, 2) y (0, 3)", "Intercambió las coordenadas: esos puntos están sobre el eje Y."),
+            ("(−2, 0) y (−3, 0)", "No invirtió los signos al despejar los factores."),
+            ("(0, 6)", "Calculó la intersección con el eje Y en lugar de con el eje X."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Una recta pasa por el punto (0, 5) y tiene pendiente −2. ¿Cuál es su ecuación?",
+        "y = −2x + 5",
+        "El punto entregado está justo sobre el eje Y, lo que simplifica el trabajo.\n\n"
+        "1) La forma general es y = mx + n, donde m es la pendiente y n el corte con "
+        "el eje Y.\n"
+        "2) La pendiente es m = −2.\n"
+        "3) Como el punto (0, 5) tiene x = 0, corresponde al corte con el eje Y, así "
+        "que n = 5.\n"
+        "4) La ecuación es y = −2x + 5.",
+        [
+            ("y = 5x − 2", "Intercambió la pendiente con el coeficiente de posición."),
+            ("y = 2x + 5", "Perdió el signo negativo de la pendiente."),
+            ("y = −2x − 5", "Cambió el signo del coeficiente de posición."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "La función f(x) = 3x + b cumple que f(2) = 11. ¿Cuál es el valor de b?",
+        "5",
+        "Se reemplaza el dato conocido y se despeja la incógnita.\n\n"
+        "1) Evalúa en x = 2: f(2) = 3 · 2 + b = 6 + b.\n"
+        "2) Como f(2) vale 11: 6 + b = 11.\n"
+        "3) Despeja: b = 11 − 6 = 5.\n"
+        "4) Verifica: f(x) = 3x + 5, y f(2) = 6 + 5 = 11. Correcto.",
+        [
+            ("17", "Sumó el 6 en lugar de restarlo al despejar."),
+            ("11", "Tomó el valor de la función como si fuera directamente b."),
+            ("2", "Entregó el valor de x en lugar del de b."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Un taxi cobra $500 fijos al subir más $300 por cada kilómetro recorrido. ¿Cuál es la función que representa el costo total según los kilómetros x?",
+        "C(x) = 300x + 500",
+        "Se separa lo que es fijo de lo que depende de la distancia.\n\n"
+        "1) El cobro de $500 no cambia con la distancia: es el término independiente.\n"
+        "2) Los $300 se cobran por cada kilómetro, así que se multiplican por x: "
+        "300x. Ese es el término variable.\n"
+        "3) El costo total es la suma: C(x) = 300x + 500.\n"
+        "4) En el lenguaje de funciones lineales, 300 es la pendiente y 500 el "
+        "coeficiente de posición.",
+        [
+            ("C(x) = 500x + 300", "Intercambió el cobro fijo con el cobro por kilómetro."),
+            ("C(x) = 800x", "Sumó ambos valores y los aplicó a cada kilómetro."),
+            ("C(x) = 300x", "Omitió el cobro fijo de subida."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Un taxi cobra $500 fijos al subir más $300 por kilómetro. ¿Cuánto cuesta un viaje de 8 kilómetros?",
+        "$2.900",
+        "Se aplica la función de costo al valor pedido.\n\n"
+        "1) El costo es C(x) = 300x + 500.\n"
+        "2) Reemplaza x por 8: C(8) = 300 · 8 + 500.\n"
+        "3) Multiplica: 300 · 8 = 2.400.\n"
+        "4) Suma el cobro fijo: 2.400 + 500 = 2.900.",
+        [
+            ("$2.400", "Calculó el cobro por distancia pero olvidó el cobro fijo."),
+            ("$6.400", "Aplicó el cobro fijo a cada kilómetro en lugar de una sola vez."),
+            ("$4.000", "Sumó los $500 a los $300 antes de multiplicar por los kilómetros."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la imagen de f(x) = −2x + 7 cuando x = −3?",
+        "13",
+        "Hay que cuidar el doble signo negativo.\n\n"
+        "1) Sustituye: f(−3) = −2 · (−3) + 7.\n"
+        "2) Multiplica primero: menos por menos da más, así que −2 · (−3) = 6.\n"
+        "3) Suma: 6 + 7 = 13.",
+        [
+            ("1", "Trató el producto como negativo, calculando −6 + 7."),
+            ("−13", "Cambió el signo de todo el resultado."),
+            ("11", "Multiplicó el −2 por 3 sin considerar el signo de x, y ajustó mal el resto."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Cuál es el vértice de la parábola y = 2x² − 8x + 5?",
+        "(2, −3)",
+        "Con coeficiente principal distinto de 1, la fórmula del vértice sigue "
+        "siendo la misma.\n\n"
+        "1) La coordenada x es −b/(2a). Aquí a = 2 y b = −8, así que x = 8/4 = 2.\n"
+        "2) Reemplaza en la función: 2 · 2² − 8 · 2 + 5.\n"
+        "3) Calcula: 2 · 4 = 8, luego 8 − 16 + 5 = −3.\n"
+        "4) El vértice es (2, −3), y como a es positivo se trata de un mínimo.",
+        [
+            ("(4, 5)", "Dividió b por a en lugar de por 2a."),
+            ("(2, 5)", "Usó el término independiente como coordenada y sin evaluar la función."),
+            ("(−2, 29)", "Olvidó el signo negativo en la fórmula −b/(2a)."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Cuál es el valor mínimo que alcanza la función y = x² − 6x + 11?",
+        "2",
+        "El valor mínimo de una parábola que se abre hacia arriba está en su "
+        "vértice.\n\n"
+        "1) Como a = 1 es positivo, la parábola se abre hacia arriba y el vértice es "
+        "un mínimo.\n"
+        "2) La coordenada x del vértice es −b/(2a) = 6/2 = 3.\n"
+        "3) Evalúa la función ahí: 3² − 6 · 3 + 11 = 9 − 18 + 11 = 2.\n"
+        "4) El valor mínimo es 2, y se alcanza cuando x = 3.",
+        [
+            ("3", "Entregó la coordenada x del vértice en lugar del valor mínimo de la función."),
+            ("11", "Tomó el término independiente como si fuera el mínimo."),
+            ("−2", "Cambió el signo del resultado al evaluar la función."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Cuál es la ecuación de la recta que pasa por los puntos (1, 4) y (3, 10)?",
+        "y = 3x + 1",
+        "Primero se calcula la pendiente y después el coeficiente de posición.\n\n"
+        "1) Pendiente: m = (10 − 4)/(3 − 1) = 6/2 = 3.\n"
+        "2) La ecuación tiene la forma y = 3x + n.\n"
+        "3) Reemplaza uno de los puntos, por ejemplo (1, 4): 4 = 3 · 1 + n, entonces "
+        "n = 1.\n"
+        "4) La ecuación es y = 3x + 1. Verifica con el otro punto: "
+        "3 · 3 + 1 = 10. Correcto.",
+        [
+            ("y = 3x − 1", "Cambió el signo del coeficiente de posición al despejarlo."),
+            ("y = 3x + 4", "Usó la coordenada y del primer punto como coeficiente de posición."),
+            ("y = (1/3)x + 1", "Invirtió la fórmula de la pendiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Para qué valor de x la función f(x) = 4x − 20 se hace cero?",
+        "x = 5",
+        "Se busca el punto donde la recta cruza el eje X.\n\n"
+        "1) Iguala la función a cero: 4x − 20 = 0.\n"
+        "2) Suma 20: 4x = 20.\n"
+        "3) Divide por 4: x = 5.\n"
+        "4) Ese valor se llama cero o raíz de la función: el punto (5, 0) está sobre "
+        "la recta.",
+        [
+            ("x = 20", "Despejó el 20 pero no dividió por el coeficiente."),
+            ("x = −5", "Cambió el signo al despejar."),
+            ("x = −20", "Evaluó la función en x = 0 en lugar de igualarla a cero."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "Una empresa tiene un ingreso dado por I(x) = 50x y un costo dado por C(x) = 20x + 900, donde x son las unidades vendidas. ¿Cuántas unidades debe vender para no ganar ni perder?",
+        "30 unidades",
+        "No ganar ni perder significa que el ingreso iguala exactamente al costo.\n\n"
+        "1) Iguala ambas funciones: 50x = 20x + 900.\n"
+        "2) Resta 20x: 30x = 900.\n"
+        "3) Divide por 30: x = 30.\n"
+        "4) Verifica: con 30 unidades el ingreso es 1.500 y el costo es "
+        "600 + 900 = 1.500. Coinciden, así que ese es el punto de equilibrio.",
+        [
+            ("18 unidades", "Dividió los 900 de costo fijo por 50 en lugar de por la diferencia entre ingreso y costo variable."),
+            ("45 unidades", "Dividió los 900 por 20, usando solo el costo variable."),
+            ("900 unidades", "Tomó el costo fijo como si fuera la cantidad de unidades."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (−2, 1) y (2, 9)?",
+        "2",
+        "La fórmula funciona igual con coordenadas negativas, cuidando los signos.\n\n"
+        "1) Aplica m = (y₂ − y₁)/(x₂ − x₁).\n"
+        "2) Numerador: 9 − 1 = 8.\n"
+        "3) Denominador: 2 − (−2) = 2 + 2 = 4. Restar un negativo equivale a sumar.\n"
+        "4) Pendiente: 8/4 = 2.",
+        [
+            ("8", "Calculó solo la diferencia de las y sin dividir."),
+            ("4", "Restó mal el denominador, tratando 2 − (−2) como 2 − 2 y ajustando el resultado."),
+            ("0,5", "Invirtió la fórmula, dividiendo el avance en x por el avance en y."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "La parábola y = x² + bx + 3 pasa por el punto (1, 6). ¿Cuál es el valor de b?",
+        "2",
+        "Que la parábola pase por un punto significa que sus coordenadas satisfacen "
+        "la ecuación.\n\n"
+        "1) Reemplaza x = 1 e y = 6: 6 = 1² + b · 1 + 3.\n"
+        "2) Simplifica: 6 = 1 + b + 3, o sea 6 = b + 4.\n"
+        "3) Despeja: b = 2.\n"
+        "4) Verifica: y = x² + 2x + 3 evaluada en x = 1 da 1 + 2 + 3 = 6. Correcto.",
+        [
+            ("10", "Sumó el 4 en lugar de restarlo al despejar."),
+            ("6", "Tomó la coordenada y del punto como si fuera directamente b."),
+            ("3", "Entregó el término independiente de la parábola en lugar de b."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "Si f(x) = 2x − 5, ¿cuál es el valor de f(4)?",
+        "3",
+        "Evaluar es reemplazar la x por el valor dado.\n\n"
+        "1) Sustituye: f(4) = 2 · 4 − 5.\n"
+        "2) Multiplica primero: 2 · 4 = 8.\n"
+        "3) Resta: 8 − 5 = 3.",
+        [
+            ("−2", "Restó antes de multiplicar, calculando 2(4 − 5)."),
+            ("8", "Multiplicó pero olvidó restar el término independiente."),
+            ("13", "Sumó el 5 en lugar de restarlo."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "Si f(x) = x² + 3, ¿cuál es el valor de f(2)?",
+        "7",
+        "Se reemplaza y se respeta el orden de las operaciones.\n\n"
+        "1) Sustituye: f(2) = 2² + 3.\n"
+        "2) Calcula la potencia primero: 2² = 4.\n"
+        "3) Suma: 4 + 3 = 7.",
+        [
+            ("25", "Sumó antes de elevar al cuadrado, calculando (2 + 3)²."),
+            ("10", "Multiplicó la base por 2 en lugar de elevarla al cuadrado, y sumó mal."),
+            ("4", "Calculó el cuadrado pero olvidó sumar el 3."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (0, 0) y (4, 12)?",
+        "3",
+        "La pendiente compara el avance vertical con el horizontal.\n\n"
+        "1) Aplica m = (y₂ − y₁)/(x₂ − x₁).\n"
+        "2) Reemplaza: m = (12 − 0)/(4 − 0) = 12/4.\n"
+        "3) La pendiente es 3.\n"
+        "4) Como la recta pasa por el origen, su ecuación es simplemente y = 3x.",
+        [
+            ("12", "Calculó solo el avance vertical sin dividir por el horizontal."),
+            ("1/3", "Invirtió la fórmula de la pendiente."),
+            ("4", "Entregó el avance horizontal en lugar de la pendiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿Cuál es la pendiente de la recta y = −3x + 8?",
+        "−3",
+        "En y = mx + n la pendiente es el coeficiente de x, con su signo.\n\n"
+        "1) Compara y = −3x + 8 con y = mx + n.\n"
+        "2) El coeficiente de x es −3, así que m = −3.\n"
+        "3) El signo negativo indica que la recta baja de izquierda a derecha.",
+        [
+            ("3", "Ignoró el signo negativo del coeficiente."),
+            ("8", "Confundió la pendiente con el coeficiente de posición."),
+            ("5", "Sumó los dos números de la ecuación."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "¿En qué punto corta al eje Y la recta y = −4x + 2?",
+        "(0, 2)",
+        "Sobre el eje Y la coordenada x vale cero.\n\n"
+        "1) Reemplaza x por 0: y = −4 · 0 + 2 = 2.\n"
+        "2) El punto de corte es (0, 2).\n"
+        "3) Regla práctica: en y = mx + n, el corte con el eje Y es siempre (0, n).",
+        [
+            ("(2, 0)", "Intercambió las coordenadas: ese punto está sobre el eje X."),
+            ("(0, −4)", "Usó la pendiente en lugar del coeficiente de posición."),
+            ("(0,5, 0)", "Calculó el corte con el eje X en lugar del eje Y."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "Si f(x) = 6 − x, ¿cuál es el valor de f(10)?",
+        "−4",
+        "El resultado puede ser negativo, y eso es perfectamente válido.\n\n"
+        "1) Sustituye: f(10) = 6 − 10.\n"
+        "2) Como se resta un número mayor, el resultado es negativo: −4.\n"
+        "3) Gráficamente, la recta ya cruzó el eje X en ese punto.",
+        [
+            ("4", "Restó en el orden inverso, calculando 10 − 6."),
+            ("16", "Sumó en lugar de restar."),
+            ("60", "Multiplicó los dos números en vez de restarlos."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es el vértice de la parábola y = x² + 2x − 3?",
+        "(−1, −4)",
+        "Primero la coordenada x, después se evalúa.\n\n"
+        "1) x del vértice: −b/(2a) = −2/2 = −1.\n"
+        "2) Reemplaza en la función: (−1)² + 2(−1) − 3.\n"
+        "3) Calcula: 1 − 2 − 3 = −4.\n"
+        "4) El vértice es (−1, −4), y por ser a positivo corresponde a un mínimo.",
+        [
+            ("(1, 0)", "Olvidó el signo negativo en la fórmula −b/(2a)."),
+            ("(−1, −3)", "Usó el término independiente como coordenada y sin evaluar."),
+            ("(−2, −3)", "Tomó el coeficiente b directamente, sin dividir por 2a."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es el eje de simetría de la parábola y = 2x² − 12x + 7?",
+        "x = 3",
+        "El eje pasa por el vértice y es vertical.\n\n"
+        "1) Su ecuación es x = −b/(2a).\n"
+        "2) Aquí a = 2 y b = −12, así que x = 12/4.\n"
+        "3) El eje de simetría es x = 3.\n"
+        "4) Ojo con el denominador: es 2a, no solo a.",
+        [
+            ("x = 6", "Dividió b por a en lugar de por 2a."),
+            ("x = −3", "Olvidó el signo negativo de la fórmula, con b ya negativo."),
+            ("x = 7", "Usó el término independiente en vez de calcular el eje."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuáles son las intersecciones con el eje X de la parábola y = x² − 9?",
+        "(3, 0) y (−3, 0)",
+        "Sobre el eje X la coordenada y vale cero.\n\n"
+        "1) Iguala a cero: x² − 9 = 0.\n"
+        "2) Despeja: x² = 9.\n"
+        "3) Saca raíz con ambos signos: x = 3 y x = −3.\n"
+        "4) Los puntos son (3, 0) y (−3, 0), simétricos respecto del eje Y.",
+        [
+            ("(0, 3) y (0, −3)", "Intercambió las coordenadas: esos puntos están sobre el eje Y."),
+            ("(9, 0) y (−9, 0)", "Despejó x² = 9 pero no le sacó la raíz."),
+            ("(3, 0)", "Consideró solo la raíz positiva."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Una recta pasa por el punto (2, 7) y tiene pendiente 3. ¿Cuál es su ecuación?",
+        "y = 3x + 1",
+        "Se conoce la pendiente, así que falta el coeficiente de posición.\n\n"
+        "1) La ecuación tiene la forma y = 3x + n.\n"
+        "2) Reemplaza el punto (2, 7): 7 = 3 · 2 + n.\n"
+        "3) Despeja: 7 = 6 + n, entonces n = 1.\n"
+        "4) La ecuación es y = 3x + 1. Verifica: en x = 2 da 7. Correcto.",
+        [
+            ("y = 3x + 7", "Usó la coordenada y del punto como coeficiente de posición, sin despejar."),
+            ("y = 3x − 1", "Cambió el signo del coeficiente de posición."),
+            ("y = 2x + 3", "Intercambió la coordenada x del punto con la pendiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "La función f(x) = mx + 2 cumple que f(4) = 14. ¿Cuál es el valor de m?",
+        "3",
+        "Se reemplaza el dato y se despeja la pendiente.\n\n"
+        "1) Evalúa en x = 4: f(4) = 4m + 2.\n"
+        "2) Como f(4) = 14: 4m + 2 = 14.\n"
+        "3) Resta 2: 4m = 12.\n"
+        "4) Divide por 4: m = 3. Verifica: f(x) = 3x + 2 y f(4) = 14.",
+        [
+            ("12", "Despejó el 2 pero no dividió por el coeficiente 4."),
+            ("4", "Entregó el valor de x en lugar de la pendiente."),
+            ("3,5", "Dividió 14 por 4 sin restar antes el término independiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Un plan de internet cobra $12.000 fijos al mes más $200 por cada GB adicional. ¿Cuánto se paga en un mes con 15 GB adicionales?",
+        "$15.000",
+        "Se separa el cargo fijo del variable.\n\n"
+        "1) El costo se modela como C(x) = 200x + 12.000.\n"
+        "2) Reemplaza x por 15: C(15) = 200 · 15 + 12.000.\n"
+        "3) Multiplica: 200 · 15 = 3.000.\n"
+        "4) Suma el cargo fijo: 3.000 + 12.000 = 15.000.",
+        [
+            ("$3.000", "Calculó solo el cargo por GB adicionales, sin el cargo fijo."),
+            ("$180.000", "Aplicó el cargo fijo a cada GB en lugar de una sola vez."),
+            ("$12.200", "Sumó los $200 una sola vez en lugar de multiplicarlos por los 15 GB."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Una piscina se vacía siguiendo la función V(t) = 2000 − 50t, donde V son litros y t los minutos transcurridos. ¿Cuánta agua queda a los 12 minutos?",
+        "1.400 litros",
+        "Se evalúa la función en el tiempo indicado.\n\n"
+        "1) Reemplaza t por 12: V(12) = 2.000 − 50 · 12.\n"
+        "2) Multiplica primero: 50 · 12 = 600.\n"
+        "3) Resta: 2.000 − 600 = 1.400.\n"
+        "4) Interpretación: la pendiente −50 significa que se pierden 50 litros por "
+        "minuto, y los 2.000 son el volumen inicial.",
+        [
+            ("600 litros", "Calculó el agua que salió en lugar de la que queda."),
+            ("1.988 litros", "Restó los 12 minutos en vez de multiplicarlos por 50."),
+            ("2.600 litros", "Sumó en lugar de restar, pese a que la piscina se está vaciando."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Cuál es el vértice de la parábola y = −x² + 4x + 1?",
+        "(2, 5)",
+        "El signo negativo del coeficiente principal invierte la parábola.\n\n"
+        "1) x del vértice: −b/(2a), con a = −1 y b = 4. Entonces x = −4/(−2) = 2.\n"
+        "2) Evalúa: −(2²) + 4 · 2 + 1 = −4 + 8 + 1 = 5.\n"
+        "3) El vértice es (2, 5).\n"
+        "4) Como a es negativo, la parábola se abre hacia abajo y ese punto es un "
+        "máximo, no un mínimo.",
+        [
+            ("(−2, −11)", "Perdió uno de los signos negativos al calcular −b/(2a)."),
+            ("(2, 13)", "Elevó al cuadrado sin aplicar el signo negativo del primer término."),
+            ("(2, 1)", "Usó el término independiente como coordenada y sin evaluar la función."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Cuál es el valor máximo que alcanza la función y = −2x² + 8x − 3?",
+        "5",
+        "Con coeficiente principal negativo, el vértice es un máximo.\n\n"
+        "1) Como a = −2 es negativo, la parábola se abre hacia abajo.\n"
+        "2) x del vértice: −b/(2a) = −8/(−4) = 2.\n"
+        "3) Evalúa: −2 · 2² + 8 · 2 − 3 = −8 + 16 − 3 = 5.\n"
+        "4) El valor máximo es 5, alcanzado en x = 2.",
+        [
+            ("2", "Entregó la coordenada x del vértice en lugar del valor máximo."),
+            ("−3", "Tomó el término independiente como si fuera el máximo."),
+            ("No tiene máximo", "Confundió la orientación: con a negativo la parábola sí tiene un máximo."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿Cuál es la ecuación de la recta que pasa por los puntos (−1, 2) y (2, 11)?",
+        "y = 3x + 5",
+        "Primero la pendiente, después el coeficiente de posición.\n\n"
+        "1) Pendiente: m = (11 − 2)/(2 − (−1)) = 9/3 = 3.\n"
+        "2) La ecuación es y = 3x + n.\n"
+        "3) Reemplaza el punto (−1, 2): 2 = 3(−1) + n, o sea 2 = −3 + n.\n"
+        "4) Despeja: n = 5. La ecuación es y = 3x + 5. Verifica con (2, 11): "
+        "6 + 5 = 11.",
+        [
+            ("y = 3x − 1", "Sumó el −3 en lugar de restarlo al despejar el coeficiente de posición."),
+            ("y = 3x + 2", "Usó la coordenada y del primer punto como coeficiente de posición."),
+            ("y = 9x + 5", "Olvidó dividir por la diferencia de las x al calcular la pendiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "¿En qué punto corta al eje X la recta y = 5x − 15?",
+        "(3, 0)",
+        "Sobre el eje X la coordenada y vale cero.\n\n"
+        "1) Iguala y a cero: 5x − 15 = 0.\n"
+        "2) Suma 15: 5x = 15.\n"
+        "3) Divide por 5: x = 3.\n"
+        "4) El punto de corte es (3, 0). Ese valor de x es el cero de la función.",
+        [
+            ("(0, 3)", "Intercambió las coordenadas: ese punto está sobre el eje Y."),
+            ("(0, −15)", "Calculó el corte con el eje Y en lugar de con el eje X."),
+            ("(15, 0)", "Despejó el 15 pero no dividió por el coeficiente 5."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "Una empresa tiene ingresos I(x) = 40x y costos C(x) = 15x + 1000, con x el número de unidades vendidas. ¿Cuál es su punto de equilibrio?",
+        "40 unidades",
+        "El punto de equilibrio es donde los ingresos igualan a los costos.\n\n"
+        "1) Iguala: 40x = 15x + 1.000.\n"
+        "2) Resta 15x: 25x = 1.000.\n"
+        "3) Divide por 25: x = 40.\n"
+        "4) Verifica: con 40 unidades el ingreso es 1.600 y el costo "
+        "600 + 1.000 = 1.600. Coinciden.",
+        [
+            ("25 unidades", "Dividió el costo fijo por 40 en lugar de por la diferencia entre precio y costo variable."),
+            ("66,7 unidades", "Dividió el costo fijo por 15, usando solo el costo variable."),
+            ("1.000 unidades", "Tomó el costo fijo como si fuera el número de unidades."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la pendiente de la recta que pasa por los puntos (3, −2) y (7, 6)?",
+        "2",
+        "La fórmula es la misma, cuidando el signo de la coordenada negativa.\n\n"
+        "1) Aplica m = (y₂ − y₁)/(x₂ − x₁).\n"
+        "2) Numerador: 6 − (−2) = 6 + 2 = 8. Restar un negativo equivale a sumar.\n"
+        "3) Denominador: 7 − 3 = 4.\n"
+        "4) Pendiente: 8/4 = 2.",
+        [
+            ("1", "Calculó el numerador como 6 − 2, sin aplicar la resta de un negativo."),
+            ("8", "Calculó solo el avance vertical sin dividir."),
+            ("0,5", "Invirtió la fórmula de la pendiente."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "dificil",
+        "La parábola y = ax² + 2 pasa por el punto (2, 14). ¿Cuál es el valor de a?",
+        "3",
+        "Las coordenadas del punto deben satisfacer la ecuación.\n\n"
+        "1) Reemplaza x = 2 e y = 14: 14 = a · 2² + 2.\n"
+        "2) Calcula la potencia: 14 = 4a + 2.\n"
+        "3) Resta 2: 4a = 12.\n"
+        "4) Divide por 4: a = 3. Verifica: y = 3x² + 2 evaluada en x = 2 da "
+        "12 + 2 = 14.",
+        [
+            ("12", "Despejó el 2 pero no dividió por el 4 que aporta el cuadrado."),
+            ("6", "Multiplicó la base por 2 en vez de elevarla al cuadrado."),
+            ("2", "Entregó el término independiente de la parábola en lugar de a."),
+        ],
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Si f(x) = x² − 4x, ¿qué valor toma la función cuando x = −1?",
+        "5",
+        "Hay que cuidar los signos al reemplazar un valor negativo.\n\n"
+        "1) Sustituye: f(−1) = (−1)² − 4 · (−1).\n"
+        "2) Primer término: (−1)² = 1, porque todo cuadrado es positivo.\n"
+        "3) Segundo término: −4 · (−1) = +4. Menos por menos da más.\n"
+        "4) Suma: 1 + 4 = 5.",
+        [
+            ("−3", "Calculó (−1)² como −1, aplicando el cuadrado sin considerar el paréntesis."),
+            ("−5", "Cambió el signo del resultado final."),
+            ("3", "Dejó negativo el segundo término, calculando 1 − 4 y ajustando el signo."),
+        ],
+    ),
 ]
