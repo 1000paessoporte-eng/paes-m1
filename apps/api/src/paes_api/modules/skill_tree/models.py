@@ -29,6 +29,10 @@ class SkillAxis(StrEnum):
     LOCALIZAR = "localizar"
     INTERPRETAR = "interpretar"
     EVALUAR = "evaluar"
+    # Ciencias
+    BIOLOGIA = "biologia"
+    FISICA = "fisica"
+    QUIMICA = "quimica"
 
 
 class Subject(StrEnum):
@@ -41,6 +45,7 @@ class Subject(StrEnum):
     M1 = "m1"
     M2 = "m2"
     LECTORA = "lectora"
+    CIENCIAS = "ciencias"
 
 
 class ProgressStatus(StrEnum):

@@ -21,18 +21,19 @@ const FORMATOS = [
  * para que quede claro que la plataforma las va a cubrir, pero deshabilitadas
  * hasta que tengan contenido.
  */
-const PRUEBAS: { id: Subject | "historia" | "ciencias"; nombre: string; disponible: boolean }[] = [
+const PRUEBAS: { id: Subject | "historia"; nombre: string; disponible: boolean }[] = [
   { id: "lectora", nombre: "Competencia Lectora", disponible: true },
   { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
   { id: "m2", nombre: "Competencia Matemática M2", disponible: true },
   { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: false },
-  { id: "ciencias", nombre: "Ciencias", disponible: false },
+  { id: "ciencias", nombre: "Ciencias", disponible: true },
 ];
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
   lectora: "Competencia Lectora",
   m1: "Competencia Matemática M1",
   m2: "Competencia Matemática M2",
+  ciencias: "Ciencias",
 };
 
 const RITMOS: Pace[] = ["oficial", "exigente", "relajado"];

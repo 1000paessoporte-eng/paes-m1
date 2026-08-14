@@ -30,8 +30,10 @@ from paes_api.modules.users.models import User
 from paes_api.seed_data import (
     PASSAGES,
     QUESTIONS,
+    QUESTIONS_CIENCIAS,
     QUESTIONS_LECTORA,
     SKILL_NODES,
+    SKILL_NODES_CIENCIAS,
     SKILL_NODES_LECTORA,
     SKILL_NODES_M2,
 )
@@ -49,6 +51,7 @@ def seed_skill_nodes(db) -> dict[str, SkillNode]:
         [(*n, Subject.M1) for n in SKILL_NODES]
         + [(*n, Subject.M2) for n in SKILL_NODES_M2]
         + [(*n, Subject.LECTORA) for n in SKILL_NODES_LECTORA]
+        + [(*n, Subject.CIENCIAS) for n in SKILL_NODES_CIENCIAS]
     )
 
     by_code: dict[str, SkillNode] = {}
@@ -111,7 +114,7 @@ def seed_questions(
     passages_by_key: dict[str, ReadingPassage] | None = None,
 ) -> None:
     passages_by_key = passages_by_key or {}
-    TODAS_LAS_PREGUNTAS = QUESTIONS + QUESTIONS_LECTORA
+    TODAS_LAS_PREGUNTAS = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS
     created = 0
     updated = 0
     for q in TODAS_LAS_PREGUNTAS:

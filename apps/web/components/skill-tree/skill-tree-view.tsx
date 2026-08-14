@@ -41,6 +41,31 @@ const AXIS_META: Record<SkillNode["axis"], AxisMeta> = {
     bar: "bg-emerald-400",
     icon: GeometryIcon,
   },
+  // Ciencias: el eje es la disciplina.
+  biologia: {
+    label: "Biología",
+    iconBg: "bg-emerald-500/10",
+    iconColor: "text-emerald-400",
+    border: "hover:border-emerald-500/50",
+    bar: "bg-emerald-400",
+    icon: GeometryIcon,
+  },
+  fisica: {
+    label: "Física",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-400",
+    border: "hover:border-sky-500/50",
+    bar: "bg-sky-400",
+    icon: NumbersIcon,
+  },
+  quimica: {
+    label: "Química",
+    iconBg: "bg-amber-500/10",
+    iconColor: "text-amber-400",
+    border: "hover:border-amber-500/50",
+    bar: "bg-amber-400",
+    icon: AlgebraIcon,
+  },
   numeros: {
     label: "Números",
     iconBg: "bg-sky-500/10",

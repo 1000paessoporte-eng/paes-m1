@@ -29,8 +29,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from paes_api.seed_data import (
     PASSAGES,
     QUESTIONS,
+    QUESTIONS_CIENCIAS,
     QUESTIONS_LECTORA,
     SKILL_NODES,
+    SKILL_NODES_CIENCIAS,
     SKILL_NODES_LECTORA,
     SKILL_NODES_M2,
 )
@@ -39,6 +41,7 @@ CODIGOS = (
     {n[0] for n in SKILL_NODES}
     | {n[0] for n in SKILL_NODES_M2}
     | {n[0] for n in SKILL_NODES_LECTORA}
+    | {n[0] for n in SKILL_NODES_CIENCIAS}
 )
 CLAVES_PASAJE = {p["key"] for p in PASSAGES}
 PASAJES_POR_CLAVE = {p["key"]: p for p in PASSAGES}
@@ -136,6 +139,21 @@ COMPROBACIONES: dict[str, str] = {
     "moneda 3 veces": str(Fraction(3, 8)),
     "5 intentos y probabilidad de éxito 0,2": str(int(5 * 0.2)),
     "4 veces con probabilidad de éxito 0,5": str(comb(4, 3) * 0.5**4).replace(".", ","),
+    # --- Ciencias: física ---
+    "recorre 120 m en 15 s": f"{120 // 15} m/s",
+    "acelera uniformemente a 2 m/s² durante 6 s": f"{0.5 * 2 * 6**2:.0f} m",
+    "cuerpo de 4 kg actúa una fuerza neta de 20 N": f"{20 // 4} m/s²",
+    "caja de 50 kg a 4 m de altura": f"{50 * 10 * 4} J",
+    "frecuencia de 50 Hz y una longitud de onda de 4 m": f"{50 * 4} m/s",
+    "resistencia de 20 Ω circula una corriente de 3 A": f"{3 * 20} V",
+    "6 Ω y 3 Ω se conectan en paralelo": f"{1 / (1/6 + 1/3):.0f} Ω",
+    # --- Ciencias: química ---
+    "número atómico 17 y número másico 35": str(35 - 17),
+    "88 g de dióxido de carbono": f"{88 // 44} mol",
+    "0,5 mol de soluto": f"{0.5 / 0.25:.0f} mol/L",
+    "1 × 10⁻³ mol/L": str(3),
+    "pH de una disolución es 5": str(14 - 5),
+    "6 mol de hidrógeno": "6 mol",
     # --- M2 números ---
     "racionalizar 6/√3": "2√3" if isclose(6 / sqrt(3), 2 * sqrt(3)) else "?",
     "(√5 + 2)(√5 − 2)": str(5 - 4),
@@ -165,7 +183,7 @@ def main() -> int:
     fallas: list[str] = []
 
     # ---- capa 1: estructura ----
-    todas = QUESTIONS + QUESTIONS_LECTORA
+    todas = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS
 
     # ---- capa 3: Competencia Lectora ----
     # Una pregunta de lectura sin su texto es una pregunta que nadie puede
@@ -256,8 +274,10 @@ def main() -> int:
         comprobadas += 1
 
     # ---- reporte ----
-    print(f"preguntas en el banco: {len(todas)}"
-          f" (matemática {len(QUESTIONS)}, lectora {len(QUESTIONS_LECTORA)})")
+    print(
+        f"preguntas en el banco: {len(todas)} (matemática {len(QUESTIONS)}, "
+        f"lectora {len(QUESTIONS_LECTORA)}, ciencias {len(QUESTIONS_CIENCIAS)})"
+    )
     print(f"textos de lectura: {len(PASSAGES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
     por_nodo = Counter(q["skill_node"] for q in todas)
