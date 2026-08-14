@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DemoRunner } from "@/components/demo/demo-runner";
 
 export const metadata: Metadata = {
-  title: "Prueba sin cuenta — 1000paes",
+  title: "Prueba sin cuenta",
 };
 
 export default function DemoPage() {

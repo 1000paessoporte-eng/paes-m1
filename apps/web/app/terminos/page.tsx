@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Términos y condiciones — 1000paes",
+  title: "Términos y condiciones",
 };
 
 export default function TerminosPage() {

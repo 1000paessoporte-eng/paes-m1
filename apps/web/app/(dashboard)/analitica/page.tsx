@@ -7,6 +7,12 @@ import { TimeInvestedChart } from "@/components/analytics/time-invested-chart";
 import { AccuracyChart } from "@/components/analytics/accuracy-chart";
 import { ComingSoon } from "@/components/coming-soon";
 
+export const metadata = {
+  title: "Analítica",
+  description: "Tiempo invertido, tasa de acierto y rachas de práctica.",
+};
+
+
 export default async function DashboardAnaliticoPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
