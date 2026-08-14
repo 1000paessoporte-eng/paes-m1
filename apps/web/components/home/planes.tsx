@@ -1,7 +1,24 @@
 /**
- * Planes de pago. Todavía no hay precios decididos, así que se muestran como
- * anticipo: poner cifras que después cambien sería prometer algo que no está
- * definido. Cada plan sí declara su duración y su periodo de cobro.
+ * Planes de pago.
+ *
+ * Los precios se fijaron contra el mercado chileno de preparación PAES
+ * (agosto 2026), tomando como referencia lo que cobra cada categoría:
+ *
+ * - Plataformas de práctica de matemática, la competencia directa:
+ *   SimplePAES $8.000/mes. Es el techo natural de 1000paes: hoy el banco de
+ *   preguntas es más chico, así que cobrar por encima no se sostiene.
+ * - Plataformas con banco grande + clases: PreuTest $26.000/mes o $86.000/año.
+ * - Preuniversitarios online completos: Filadd $397.000-$467.000 al año
+ *   (~$33.000/mes en 12 cuotas). Otra liga: incluyen clases en vivo.
+ * - Modelo B2B donde el colegio paga y el alumno entra gratis:
+ *   Puntaje Nacional, Umáximo. Ninguno publica su tarifa institucional.
+ *
+ * De ahí el posicionamiento: Pro entra bajo el competidor directo, y el plan
+ * de temporada existe porque la demanda es estacional (la PAES se rinde a fin
+ * de año, no se estudia todo el año parejo).
+ *
+ * Los precios se muestran con IVA incluido, como exige el marco de precios al
+ * consumidor final.
  */
 
 const PLANES = [
@@ -9,6 +26,8 @@ const PLANES = [
     nombre: "Gratis",
     resumen: "Para partir hoy",
     precio: "Sin costo",
+    periodo: null,
+    alternativa: null,
     facturacion: "No requiere tarjeta",
     duracion: "Acceso permanente",
     incluye: [
@@ -23,8 +42,10 @@ const PLANES = [
   {
     nombre: "Pro",
     resumen: "Para preparar en serio",
-    precio: "Precio por definir",
-    facturacion: "Mensual o anual",
+    precio: "$5.990",
+    periodo: "al mes",
+    alternativa: "o $34.900 por toda la temporada, hasta el día de la PAES",
+    facturacion: "Mensual, sin permanencia",
     duracion: "Mientras la suscripción esté activa",
     incluye: [
       "Todo lo del plan Gratis",
@@ -39,8 +60,10 @@ const PLANES = [
   {
     nombre: "Colegios",
     resumen: "Para cursos completos",
-    precio: "Precio por definir",
-    facturacion: "Por semestre o año escolar",
+    precio: "$3.500",
+    periodo: "por alumno al año",
+    alternativa: "Desde un curso (30 alumnos). Sobre 200 alumnos, a convenir",
+    facturacion: "Por año escolar, con factura",
     duracion: "Todo el periodo contratado",
     incluye: [
       "Todo lo del plan Pro para cada estudiante",
@@ -66,8 +89,12 @@ export function Planes() {
             Planes
           </h2>
           <p className="mt-3 text-sm text-muted">
-            Hoy todo lo que ves está disponible sin costo. Estos son los planes
-            que vienen; los precios se anunciarán acá mismo.
+            Hoy todo lo que ves está disponible sin costo, y seguirá estándolo
+            para el plan Gratis. Estos son los precios de los planes que vienen;
+            avisaremos antes de que empiece a cobrarse.
+          </p>
+          <p className="mt-2 text-xs text-muted">
+            Valores en pesos chilenos, IVA incluido.
           </p>
         </div>
 
@@ -91,15 +118,25 @@ export function Planes() {
               </div>
               <p className="mt-1 text-sm text-muted">{plan.resumen}</p>
 
-              <p
-                className={
-                  plan.disponible
-                    ? "mt-4 text-2xl font-bold tracking-tight text-success"
-                    : "mt-4 text-2xl font-bold tracking-tight text-muted"
-                }
-              >
-                {plan.precio}
+              <p className="mt-4 flex items-baseline gap-1.5">
+                <span
+                  className={
+                    plan.disponible
+                      ? "text-2xl font-bold tracking-tight text-success"
+                      : "text-2xl font-bold tracking-tight"
+                  }
+                >
+                  {plan.precio}
+                </span>
+                {plan.periodo && (
+                  <span className="text-sm text-muted">{plan.periodo}</span>
+                )}
               </p>
+              {plan.alternativa && (
+                <p className="mt-1 text-xs leading-relaxed text-muted">
+                  {plan.alternativa}
+                </p>
+              )}
 
               <dl className="mt-4 flex flex-col gap-1.5 border-y border-border py-3 text-xs">
                 <div className="flex justify-between gap-2">
