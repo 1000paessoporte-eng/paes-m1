@@ -133,3 +133,33 @@ def test_historia_no_afirma_hechos_sin_fuente():
     for q in QUESTIONS_HISTORIA:
         if ejes[q["skill_node"]] in ("historia", "ciudadania"):
             assert q.get("passage"), f"sin fuente: {q['stem'][:50]}"
+
+
+def test_cada_texto_de_lectora_sostiene_varias_preguntas():
+    """En la prueba real un texto nunca trae una sola pregunta.
+
+    Escribir un texto largo para preguntar una cosa desperdicia el minuto que
+    el estudiante gastó leyéndolo, y en un ensayo corto además desbalancea el
+    tiempo. Tres es el piso.
+    """
+    from collections import Counter
+
+    from paes_api.seed_data import PASSAGES, QUESTIONS_LECTORA
+
+    por_texto = Counter(q["passage"] for q in QUESTIONS_LECTORA)
+    for p in PASSAGES:
+        assert por_texto[p["key"]] >= 3, (
+            f"el texto '{p['key']}' tiene {por_texto[p['key']]} pregunta(s)"
+        )
+
+
+def test_lectora_cubre_sus_tres_habilidades_en_cada_dificultad():
+    """El ensayo mezcla dificultades; si un eje solo tiene preguntas fáciles,
+    el alumno que lo domina nunca encuentra dónde equivocarse."""
+    from paes_api.seed_data import QUESTIONS_LECTORA
+
+    ejes = {q["skill_node"] for q in QUESTIONS_LECTORA}
+    assert ejes == {"lec_localizar", "lec_interpretar", "lec_evaluar"}
+    for eje in ejes:
+        dificultades = {q["difficulty"] for q in QUESTIONS_LECTORA if q["skill_node"] == eje}
+        assert len(dificultades) >= 2, f"{eje} solo tiene preguntas {dificultades}"

@@ -91,11 +91,26 @@ def seed_passages(db) -> dict[str, ReadingPassage]:
     """Siembra los textos de Competencia Lectora. Idempotente por título."""
     by_key: dict[str, ReadingPassage] = {}
     creados = 0
+    actualizados = 0
     for p in PASSAGES + PASSAGES_HISTORIA:
         existing = db.execute(
             select(ReadingPassage).where(ReadingPassage.title == p["title"])
         ).scalar_one_or_none()
         if existing:
+            # El texto sí se actualiza (a diferencia del enunciado de una
+            # pregunta, que identifica el registro): corregir una errata o
+            # mejorar el formato de una tabla no debe obligar a borrar el
+            # pasaje y perder las preguntas que cuelgan de él.
+            cambios = (
+                existing.body != p["body"]
+                or existing.kind != p["kind"]
+                or existing.source_note != p.get("source_note")
+            )
+            if cambios:
+                existing.body = p["body"]
+                existing.kind = p["kind"]
+                existing.source_note = p.get("source_note")
+                actualizados += 1
             by_key[p["key"]] = existing
             continue
         passage = ReadingPassage(
@@ -109,7 +124,7 @@ def seed_passages(db) -> dict[str, ReadingPassage]:
         creados += 1
     db.flush()
     print(
-        f"reading_passages: {creados} nuevos "
+        f"reading_passages: {creados} nuevos, {actualizados} actualizados "
         f"(de {len(PASSAGES) + len(PASSAGES_HISTORIA)} definidos)"
     )
     return by_key
