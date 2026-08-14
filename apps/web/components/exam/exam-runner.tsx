@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { PassagePanel } from "@/components/exam/passage-panel";
 import { TextoRico } from "@/components/texto-rico";
 import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
@@ -453,6 +454,14 @@ export function ExamRunner({
               {estado?.flagged ? "★ Marcada" : "☆ Marcar"}
             </button>
           </div>
+
+          {/* En Competencia Lectora la pregunta no se entiende sin su texto:
+              va arriba, dentro del mismo bloque, para que se lean juntos. */}
+          {currentQuestion.passage && (
+            <div className="mb-5">
+              <PassagePanel passage={currentQuestion.passage} />
+            </div>
+          )}
 
           <TextoRico texto={currentQuestion.stem} className="text-lg" />
 

@@ -17,12 +17,12 @@ const FORMATOS = [
 ] as const;
 
 /**
- * Pruebas PAES. M1 y M2 ya tienen banco de preguntas; las demás se muestran
+ * Pruebas PAES. Competencia Lectora, M1 y M2 ya tienen banco; las demás se muestran
  * para que quede claro que la plataforma las va a cubrir, pero deshabilitadas
  * hasta que tengan contenido.
  */
-const PRUEBAS: { id: Subject | "lectora" | "historia" | "ciencias"; nombre: string; disponible: boolean }[] = [
-  { id: "lectora", nombre: "Competencia Lectora", disponible: false },
+const PRUEBAS: { id: Subject | "historia" | "ciencias"; nombre: string; disponible: boolean }[] = [
+  { id: "lectora", nombre: "Competencia Lectora", disponible: true },
   { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
   { id: "m2", nombre: "Competencia Matemática M2", disponible: true },
   { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: false },
@@ -30,6 +30,7 @@ const PRUEBAS: { id: Subject | "lectora" | "historia" | "ciencias"; nombre: stri
 ];
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
+  lectora: "Competencia Lectora",
   m1: "Competencia Matemática M1",
   m2: "Competencia Matemática M2",
 };

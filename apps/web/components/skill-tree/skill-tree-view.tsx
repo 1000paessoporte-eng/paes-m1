@@ -16,6 +16,31 @@ type AxisMeta = {
 };
 
 const AXIS_META: Record<SkillNode["axis"], AxisMeta> = {
+  // Competencia Lectora: el "eje" es la habilidad que evalúa el temario.
+  localizar: {
+    label: "Localizar",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-400",
+    border: "hover:border-sky-500/50",
+    bar: "bg-sky-400",
+    icon: NumbersIcon,
+  },
+  interpretar: {
+    label: "Interpretar",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-400",
+    border: "hover:border-violet-500/50",
+    bar: "bg-violet-400",
+    icon: AlgebraIcon,
+  },
+  evaluar: {
+    label: "Evaluar",
+    iconBg: "bg-emerald-500/10",
+    iconColor: "text-emerald-400",
+    border: "hover:border-emerald-500/50",
+    bar: "bg-emerald-400",
+    icon: GeometryIcon,
+  },
   numeros: {
     label: "Números",
     iconBg: "bg-sky-500/10",
