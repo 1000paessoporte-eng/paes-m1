@@ -4980,4 +4980,2574 @@ QUESTIONS += [
             ("Responder al azar 8 preguntas de alternativas y contar los aciertos", "Sí es binomial: cada respuesta es acierto o error con probabilidad constante."),
         ],
     ),
+    # ==================================================================
+    # LOTE 4 — eje NÚMEROS (36 preguntas: 6 por nodo)
+    # Originales, escritas sobre el temario DEMRE. Ningún enunciado
+    # proviene de ítems liberados ni de otros sitios de ensayos.
+    # ==================================================================
+    # ---------- num_racionales ----------
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 5/8 − 1/6?",
+        "11/24",
+        "Para restar fracciones ambas deben tener el mismo denominador.\n\n"
+        "1) Busca el mínimo común múltiplo de 8 y 6. Los múltiplos de 8 son 8, 16, 24… "
+        "y los de 6 son 6, 12, 18, 24… El primero que comparten es 24.\n"
+        "2) Lleva cada fracción a veinticuatroavos. Como 24 ÷ 8 = 3, multiplicas arriba "
+        "y abajo por 3: 5/8 = 15/24. Como 24 ÷ 6 = 4, multiplicas por 4: 1/6 = 4/24.\n"
+        "3) Con los denominadores iguales, restas solo los numeradores: "
+        "15/24 − 4/24 = 11/24.\n"
+        "4) Comprueba si se simplifica: 11 es primo y no divide a 24, así que 11/24 ya "
+        "está en su forma mínima.",
+        [
+            ("4/2", "Restó numeradores entre sí y denominadores entre sí, sin buscar un denominador común."),
+            ("19/24", "Igualó bien los denominadores pero sumó en lugar de restar."),
+            ("5/48", "Multiplicó las fracciones en lugar de restarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "En una jarra hay 7/8 de litro de jugo y se sirven 1/4 de litro. ¿Cuánto jugo queda en la jarra?",
+        "5/8 de litro",
+        "Servir es quitar, así que la operación es una resta de fracciones.\n\n"
+        "1) Plantea la resta: 7/8 − 1/4.\n"
+        "2) Iguala los denominadores. Como 8 es múltiplo de 4, basta llevar 1/4 a "
+        "octavos: multiplicas arriba y abajo por 2 y queda 2/8.\n"
+        "3) Resta los numeradores manteniendo el denominador: 7/8 − 2/8 = 5/8.\n"
+        "4) Contrasta con el sentido común: quedaba casi un litro y se sirvió un cuarto, "
+        "así que el resultado debe estar algo por encima de medio litro. 5/8 = 0,625 lo cumple.",
+        [
+            ("6/8 de litro", "Restó 1 al numerador sin llevar antes las fracciones a un denominador común."),
+            ("9/8 de litro", "Sumó en lugar de restar, obteniendo más jugo del que había al principio."),
+            ("7/32 de litro", "Multiplicó las dos fracciones en vez de restarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (3/4) ÷ (9/8)?",
+        "2/3",
+        "Dividir por una fracción equivale a multiplicar por su recíproco: la misma "
+        "fracción dada vuelta.\n\n"
+        "1) El divisor es 9/8, así que su recíproco es 8/9. La división se transforma en "
+        "3/4 × 8/9.\n"
+        "2) Multiplica numeradores entre sí y denominadores entre sí: "
+        "(3 × 8)/(4 × 9) = 24/36.\n"
+        "3) Simplifica dividiendo ambos términos por 12: 24 ÷ 12 = 2 y 36 ÷ 12 = 3, "
+        "o sea 2/3.\n\n"
+        "Control rápido: 9/8 es mayor que 1, así que dividir por él tiene que achicar "
+        "el 3/4 original. Y 2/3 es menor que 3/4.",
+        [
+            ("27/32", "Multiplicó las fracciones directamente, sin invertir el divisor."),
+            ("3/2", "Invirtió el dividendo en lugar del divisor al aplicar la regla del recíproco."),
+            ("15/8", "Sumó las fracciones en lugar de dividirlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Un ciclista recorre 2/5 de una ruta el primer día y 1/3 del total el segundo. ¿Qué fracción de la ruta le queda por recorrer?",
+        "4/15",
+        "La ruta completa es 1. Lo que queda es el total menos lo ya recorrido.\n\n"
+        "1) Suma lo recorrido: 2/5 + 1/3. El mínimo común múltiplo de 5 y 3 es 15, "
+        "así que 2/5 = 6/15 y 1/3 = 5/15.\n"
+        "2) 6/15 + 5/15 = 11/15 de la ruta recorrida.\n"
+        "3) Resta ese avance del total: 1 − 11/15. Escribe el 1 como 15/15 para poder "
+        "restar: 15/15 − 11/15 = 4/15.\n"
+        "4) Verifica: 11/15 recorrido más 4/15 restante suman 15/15, es decir la ruta "
+        "completa.",
+        [
+            ("11/15", "Calculó correctamente lo recorrido, pero eso no es lo que se pregunta: falta restarlo del total."),
+            ("3/8", "Sumó numeradores entre sí y denominadores entre sí al juntar los dos días."),
+            ("2/15", "Multiplicó las dos fracciones en lugar de sumarlas y restarlas del total."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Si x = 3/8 y y = 5/6, ¿cuál es el valor de (y − x) ÷ (y + x)?",
+        "11/29",
+        "Conviene resolver por separado el numerador y el denominador antes de dividir.\n\n"
+        "1) Iguala denominadores: el mínimo común múltiplo de 8 y 6 es 24, así que "
+        "x = 9/24 e y = 20/24.\n"
+        "2) Diferencia: y − x = 20/24 − 9/24 = 11/24.\n"
+        "3) Suma: y + x = 20/24 + 9/24 = 29/24.\n"
+        "4) Divide: (11/24) ÷ (29/24) = 11/24 × 24/29. Los 24 se cancelan y queda 11/29.\n\n"
+        "Control: la diferencia es bastante menor que la suma, así que el cociente debe "
+        "ser un número pequeño, menor que 1.",
+        [
+            ("29/11", "Dividió la suma por la diferencia, invirtiendo el orden que pide el enunciado."),
+            ("11/24", "Calculó solo la diferencia y no la dividió por la suma."),
+            ("29/24", "Calculó solo la suma y la entregó como resultado final."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (5/6 − 1/2) × (3/4 + 1/2)?",
+        "5/12",
+        "Primero se resuelve cada paréntesis y recién después se multiplica.\n\n"
+        "1) Primer paréntesis: 5/6 − 1/2. Con denominador 6 queda 5/6 − 3/6 = 2/6, "
+        "que se simplifica a 1/3.\n"
+        "2) Segundo paréntesis: 3/4 + 1/2. Con denominador 4 queda 3/4 + 2/4 = 5/4.\n"
+        "3) Multiplica los dos resultados: 1/3 × 5/4 = (1 × 5)/(3 × 4) = 5/12.\n"
+        "4) Comprueba que no se simplifique: 5 es primo y no divide a 12.",
+        [
+            ("19/12", "Sumó los dos paréntesis en lugar de multiplicarlos."),
+            ("4/15", "Invirtió el segundo paréntesis y terminó dividiendo en vez de multiplicar."),
+            ("1/3", "Resolvió solo el primer paréntesis y olvidó multiplicarlo por el segundo."),
+        ],
+    ),
+    # ---------- num_potencias_raices ----------
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 3² · 3³?",
+        "243",
+        "Al multiplicar potencias de igual base, la base se mantiene y los exponentes "
+        "se suman.\n\n"
+        "1) Ambos factores tienen base 3, así que aplicas la regla: 3² · 3³ = 3^(2+3) = 3⁵.\n"
+        "2) Calcula 3⁵ multiplicando cinco veces el 3: 3 · 3 = 9, 9 · 3 = 27, "
+        "27 · 3 = 81, 81 · 3 = 243.\n"
+        "3) Verificación directa: 3² = 9 y 3³ = 27, y 9 · 27 = 243. Coincide.",
+        [
+            ("729", "Multiplicó los exponentes en lugar de sumarlos, calculando 3⁶."),
+            ("36", "Sumó las potencias en vez de multiplicarlas: 9 + 27."),
+            ("59.049", "Multiplicó también las bases, calculando 9⁵ en lugar de 3⁵."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de √169 + √36?",
+        "19",
+        "Cada raíz se calcula por separado y después se suman los resultados.\n\n"
+        "1) √169: busca el número que multiplicado por sí mismo da 169. Como "
+        "13 · 13 = 169, la raíz es 13.\n"
+        "2) √36: como 6 · 6 = 36, la raíz es 6.\n"
+        "3) Suma: 13 + 6 = 19.\n\n"
+        "Importante: la raíz de una suma no es la suma de las raíces. Aquí se suman dos "
+        "raíces ya calculadas, que es distinto de √(169 + 36).",
+        [
+            ("14,3", "Sumó primero los números dentro de las raíces y calculó √205."),
+            ("78", "Multiplicó las raíces en lugar de sumarlas."),
+            ("7", "Restó las raíces en lugar de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (5⁴ · 5²) ÷ 5³?",
+        "125",
+        "Se aplican dos reglas seguidas, ambas sobre la misma base.\n\n"
+        "1) En el numerador se multiplican potencias de igual base, así que los "
+        "exponentes se suman: 5⁴ · 5² = 5⁶.\n"
+        "2) Al dividir potencias de igual base, los exponentes se restan: "
+        "5⁶ ÷ 5³ = 5^(6−3) = 5³.\n"
+        "3) Calcula 5³ = 5 · 5 · 5 = 125.\n"
+        "4) Atajo útil: podías operar todos los exponentes de una vez, 4 + 2 − 3 = 3, "
+        "y llegar directo a 5³.",
+        [
+            ("15.625", "Sumó bien los exponentes del numerador pero olvidó restar el del divisor, quedándose en 5⁶."),
+            ("25", "Restó los exponentes del numerador en lugar de sumarlos."),
+            ("3.125", "Multiplicó los exponentes del numerador en vez de sumarlos, llegando a 5⁵."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 3⁻³?",
+        "1/27",
+        "Un exponente negativo no vuelve negativo el resultado: indica que hay que "
+        "invertir la base.\n\n"
+        "1) La regla es a⁻ⁿ = 1/aⁿ. Aplicada aquí: 3⁻³ = 1/3³.\n"
+        "2) Calcula el denominador: 3³ = 3 · 3 · 3 = 27.\n"
+        "3) El resultado es 1/27.\n\n"
+        "Fíjate en el sentido: elevar a un exponente negativo produce un número más "
+        "chico que 1, pero siempre positivo si la base es positiva.",
+        [
+            ("−27", "Interpretó el signo del exponente como el signo del resultado."),
+            ("27", "Ignoró el signo negativo del exponente y calculó 3³."),
+            ("1/9", "Invirtió bien la base pero se equivocó de exponente, calculando 1/3²."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Si 3ˣ = 81, ¿cuál es el valor de x?",
+        "4",
+        "La pregunta es: ¿cuántas veces hay que multiplicar el 3 por sí mismo para "
+        "llegar a 81?\n\n"
+        "1) Descompón el 81 en factores de 3: 81 = 3 · 27, 27 = 3 · 9 y 9 = 3 · 3.\n"
+        "2) Reuniendo todo: 81 = 3 · 3 · 3 · 3, es decir cuatro factores.\n"
+        "3) Por lo tanto 81 = 3⁴, y como las bases coinciden, los exponentes también: "
+        "x = 4.\n"
+        "4) Verifica reemplazando: 3⁴ = 81. Correcto.",
+        [
+            ("27", "Dividió 81 por 3 en lugar de buscar el exponente."),
+            ("9", "Calculó la raíz cuadrada de 81, que responde otra pregunta."),
+            ("5", "Contó una multiplicación de más: 3⁵ da 243, no 81."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √(3² + 4²) · √49?",
+        "35",
+        "Hay que resolver primero lo que está dentro de cada raíz.\n\n"
+        "1) Dentro de la primera raíz: 3² + 4² = 9 + 16 = 25. Esa raíz vale √25 = 5.\n"
+        "2) La segunda raíz: √49 = 7.\n"
+        "3) Multiplica los dos resultados: 5 · 7 = 35.\n\n"
+        "Ojo con el error clásico: √(3² + 4²) no es 3 + 4. Primero se suman los "
+        "cuadrados y recién entonces se saca la raíz.",
+        [
+            ("49", "Calculó la primera raíz como 3 + 4 = 7 y lo multiplicó por 7."),
+            ("5", "Resolvió bien la primera raíz pero olvidó multiplicarla por la segunda."),
+            ("175", "No extrajo la primera raíz y multiplicó 25 por 7."),
+        ],
+    ),
+    # ---------- num_porcentajes ----------
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 35% de 480?",
+        "168",
+        "Un porcentaje es una fracción de cada 100.\n\n"
+        "1) Convierte el porcentaje a decimal dividiendo por 100: 35% = 0,35.\n"
+        "2) Multiplica por la cantidad: 0,35 · 480 = 168.\n"
+        "3) Otra vía, útil para calcular mentalmente: el 10% de 480 es 48, así que el "
+        "30% es 144. El 5% es la mitad del 10%, o sea 24. Sumando: 144 + 24 = 168.\n"
+        "4) Control: el resultado debe estar entre el 25% (120) y la mitad (240).",
+        [
+            ("16.800", "Multiplicó por 35 pero olvidó dividir por 100."),
+            ("312", "Calculó el 65% restante en lugar del 35% pedido."),
+            ("144", "Usó un 30% en lugar del 35% del enunciado."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Un artículo cuesta $24.000 y sube un 15%. ¿Cuál es el nuevo precio?",
+        "$27.600",
+        "Subir un 15% significa quedarse con el 100% original más un 15% extra.\n\n"
+        "1) Calcula el aumento: el 10% de 24.000 es 2.400 y el 5% es la mitad, 1.200. "
+        "El 15% es 2.400 + 1.200 = 3.600.\n"
+        "2) Suma el aumento al precio original: 24.000 + 3.600 = 27.600.\n"
+        "3) Camino directo: como el precio final es el 115% del original, basta "
+        "multiplicar 24.000 · 1,15 = 27.600.\n"
+        "4) Control: el precio tiene que ser mayor que el original pero no llegar a "
+        "una vez y media.",
+        [
+            ("$20.400", "Aplicó un descuento del 15% en lugar de un alza."),
+            ("$3.600", "Calculó correctamente el aumento, pero no lo sumó al precio original."),
+            ("$39.000", "Sumó 15.000 pesos en vez del 15% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "En un curso de 45 estudiantes, 27 aprobaron una prueba. ¿Qué porcentaje del curso aprobó?",
+        "60%",
+        "Un porcentaje se obtiene comparando la parte con el total.\n\n"
+        "1) Escribe la razón entre la parte y el total: 27/45.\n"
+        "2) Simplifica dividiendo ambos por 9: 27 ÷ 9 = 3 y 45 ÷ 9 = 5, o sea 3/5.\n"
+        "3) Lleva la fracción a porcentaje multiplicando por 100: 3/5 · 100 = 60. "
+        "El resultado es 60%.\n"
+        "4) Control: 27 es algo más de la mitad de 45, así que el porcentaje debe "
+        "superar el 50%.",
+        [
+            ("40%", "Calculó el porcentaje de quienes no aprobaron."),
+            ("27%", "Tomó la cantidad de aprobados como si ya fuera un porcentaje."),
+            ("166,7%", "Dividió el total por la parte en lugar de la parte por el total."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un producto de $50.000 tiene dos descuentos sucesivos: 20% y luego 10% sobre el precio ya rebajado. ¿Cuál es el precio final?",
+        "$36.000",
+        "Los descuentos sucesivos no se suman: el segundo se aplica sobre un precio "
+        "que ya bajó.\n\n"
+        "1) Primer descuento: el 20% de 50.000 es 10.000, así que el precio pasa a "
+        "40.000.\n"
+        "2) Segundo descuento: el 10% se calcula sobre 40.000, no sobre 50.000. "
+        "El 10% de 40.000 es 4.000.\n"
+        "3) Precio final: 40.000 − 4.000 = 36.000.\n"
+        "4) Camino directo: 50.000 · 0,8 · 0,9 = 36.000. Equivale a un único descuento "
+        "del 28%, no del 30%.",
+        [
+            ("$35.000", "Sumó los descuentos y aplicó un 30% de una sola vez."),
+            ("$40.000", "Aplicó solo el primer descuento y olvidó el segundo."),
+            ("$45.000", "Aplicó solo el descuento del 10%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Doce operarios pintan un muro en 10 días. ¿Cuántos días tardarían 8 operarios trabajando al mismo ritmo?",
+        "15 días",
+        "Esta es una proporcionalidad inversa: menos trabajadores implica más días.\n\n"
+        "1) Calcula el trabajo total en días-operario: 12 operarios · 10 días = "
+        "120 días-operario. Esa cantidad no cambia.\n"
+        "2) Reparte ese mismo trabajo entre 8 operarios: 120 ÷ 8 = 15.\n"
+        "3) La respuesta es 15 días.\n"
+        "4) Control de sentido: al bajar de 12 a 8 operarios el plazo tiene que "
+        "alargarse, nunca acortarse.",
+        [
+            ("6,7 días", "Aplicó proporcionalidad directa, como si menos operarios significara menos días."),
+            ("14 días", "Sumó a los 10 días los 4 operarios que faltan, mezclando unidades distintas."),
+            ("30 días", "Repartió el trabajo entre 4 operarios en lugar de entre 8."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "El precio de un artículo sube un 60% y luego baja un 25% sobre el nuevo precio. Respecto del precio inicial, ¿qué ocurre?",
+        "Sube un 20%",
+        "Conviene trabajar con un precio inicial cómodo, por ejemplo 100.\n\n"
+        "1) Alza del 60%: el precio pasa de 100 a 160.\n"
+        "2) Baja del 25%, pero calculada sobre 160, no sobre 100: el 25% de 160 es 40.\n"
+        "3) Precio final: 160 − 40 = 120.\n"
+        "4) Comparando con el inicial: de 100 a 120 hay un alza del 20%.\n\n"
+        "El punto clave es que la baja se aplica sobre una base mayor, así que los "
+        "porcentajes no se pueden restar directamente.",
+        [
+            ("Sube un 35%", "Restó los porcentajes o aplicó la baja del 25% sobre el precio inicial en lugar del aumentado."),
+            ("Sube un 45%", "Descontó un 25% del aumento (15 puntos) en vez de un 25% del precio nuevo."),
+            ("Queda igual que el precio inicial", "Supuso que un alza y una baja consecutivas siempre se anulan entre sí."),
+        ],
+    ),
+    # ---------- num_reales ----------
+    _q(
+        "num_reales", "facil",
+        "¿Cuál es el valor de √75 en su forma más simple?",
+        "5√3",
+        "Simplificar una raíz consiste en extraer los factores que sean cuadrados "
+        "perfectos.\n\n"
+        "1) Descompón 75 buscando un cuadrado perfecto entre sus factores: "
+        "75 = 25 · 3, y 25 es cuadrado perfecto.\n"
+        "2) Separa la raíz del producto: √75 = √25 · √3.\n"
+        "3) Extrae la que se puede: √25 = 5, así que queda 5√3.\n"
+        "4) Verifica de vuelta: (5√3)² = 25 · 3 = 75. Correcto.",
+        [
+            ("25√3", "Sacó el 25 de la raíz sin calcular su raíz cuadrada."),
+            ("3√5", "Intercambió los papeles: extrajo el 3 y dejó el 5 dentro de la raíz."),
+            ("15", "Multiplicó 5 por 3 como si la raíz hubiera desaparecido por completo."),
+        ],
+    ),
+    _q(
+        "num_reales", "facil",
+        "¿Entre qué dos enteros consecutivos se encuentra √58?",
+        "Entre 7 y 8",
+        "Se acota la raíz entre los dos cuadrados perfectos más cercanos.\n\n"
+        "1) Busca el cuadrado perfecto justo por debajo de 58: 7² = 49.\n"
+        "2) Busca el que está justo por encima: 8² = 64.\n"
+        "3) Como 49 < 58 < 64, al sacar raíz se mantiene el orden: 7 < √58 < 8.\n"
+        "4) De hecho 58 está más cerca de 64 que de 49, así que √58 vale "
+        "aproximadamente 7,6.",
+        [
+            ("Entre 6 y 7", "Usó cuadrados demasiado bajos: 7² ya es 49, menor que 58."),
+            ("Entre 8 y 9", "Usó cuadrados demasiado altos: 8² es 64, que ya supera a 58."),
+            ("Entre 28 y 29", "Dividió 58 por 2 en lugar de buscar su raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "¿Cuál es el resultado de (√5 + √5)²?",
+        "20",
+        "Primero se simplifica lo que está dentro del paréntesis.\n\n"
+        "1) √5 + √5 son dos términos semejantes, igual que x + x = 2x. Entonces la suma "
+        "es 2√5.\n"
+        "2) Ahora eleva al cuadrado: (2√5)² = 2² · (√5)².\n"
+        "3) Calcula cada parte: 2² = 4 y (√5)² = 5.\n"
+        "4) Multiplica: 4 · 5 = 20.",
+        [
+            ("10", "Elevó al cuadrado cada sumando por separado (5 + 5) y olvidó el doble producto."),
+            ("2√5", "Simplificó bien la suma pero no llegó a elevarla al cuadrado."),
+            ("100", "Sumó los radicandos obteniendo 10 y después elevó ese resultado al cuadrado."),
+        ],
+    ),
+    _q(
+        "num_reales", "medio",
+        "Si a = √12 y b = √27, ¿cuál es el valor de a + b?",
+        "5√3",
+        "Dos raíces solo se pueden sumar si tienen el mismo radicando, así que primero "
+        "hay que simplificarlas.\n\n"
+        "1) Simplifica la primera: 12 = 4 · 3, entonces √12 = √4 · √3 = 2√3.\n"
+        "2) Simplifica la segunda: 27 = 9 · 3, entonces √27 = √9 · √3 = 3√3.\n"
+        "3) Ahora ambas comparten el radicando 3, así que se suman los coeficientes: "
+        "2√3 + 3√3 = 5√3.\n"
+        "4) Aproximación de control: √3 ≈ 1,73, así que el resultado ronda 8,66. "
+        "Y √12 ≈ 3,46 más √27 ≈ 5,20 dan lo mismo.",
+        [
+            ("√39", "Sumó los radicandos: √(12 + 27), que no es una operación válida."),
+            ("6√3", "Multiplicó los coeficientes en lugar de sumarlos."),
+            ("No se pueden sumar porque tienen distinto radicando", "No simplificó las raíces antes de compararlas; una vez simplificadas ambas quedan con radicando 3."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Cuál es el resultado de racionalizar 10/√5?",
+        "2√5",
+        "Racionalizar es eliminar la raíz del denominador sin alterar el valor.\n\n"
+        "1) Multiplica numerador y denominador por √5. Como equivale a multiplicar por "
+        "1, el valor no cambia: (10 · √5)/(√5 · √5).\n"
+        "2) El denominador se vuelve entero: √5 · √5 = 5.\n"
+        "3) Queda 10√5/5.\n"
+        "4) Simplifica el coeficiente: 10 ÷ 5 = 2, así que el resultado es 2√5.",
+        [
+            ("10√5", "Multiplicó arriba y abajo por √5 pero no simplificó el 10 con el 5 del denominador."),
+            ("2/√5", "Simplificó el coeficiente pero dejó la raíz en el denominador, que es justo lo que había que eliminar."),
+            ("5√2", "Intercambió el coeficiente con el radicando al simplificar."),
+        ],
+    ),
+    _q(
+        "num_reales", "dificil",
+        "¿Cuál es el valor de |−9| − |4 − 11|?",
+        "2",
+        "El valor absoluto entrega siempre la distancia al cero, es decir un número "
+        "no negativo.\n\n"
+        "1) Primer módulo: |−9| = 9.\n"
+        "2) Segundo módulo: resuelve primero lo de adentro, 4 − 11 = −7. Entonces "
+        "|−7| = 7.\n"
+        "3) Ahora sí resta los dos resultados: 9 − 7 = 2.\n\n"
+        "El orden importa: el valor absoluto se aplica a lo que quedó dentro de las "
+        "barras, no a cada número por separado.",
+        [
+            ("16", "Sumó los dos valores absolutos en lugar de restarlos."),
+            ("−16", "No aplicó el valor absoluto y operó directamente con −9 y −7."),
+            ("12", "Calculó bien el interior pero mantuvo el signo negativo del segundo módulo, restando un número negativo."),
+        ],
+    ),
+    # ---------- num_financiera ----------
+    _q(
+        "num_financiera", "facil",
+        "Se depositan $300.000 al 4% de interés simple anual. ¿Cuánto interés se genera en 3 años?",
+        "$36.000",
+        "En el interés simple, los intereses se calculan siempre sobre el capital "
+        "inicial, que nunca cambia.\n\n"
+        "1) Calcula el interés de un año: el 4% de 300.000 es 0,04 · 300.000 = 12.000.\n"
+        "2) Como el capital base no varía, cada año genera lo mismo.\n"
+        "3) Multiplica por los 3 años: 12.000 · 3 = 36.000.\n"
+        "4) En fórmula: I = C · i · t = 300.000 · 0,04 · 3 = 36.000.",
+        [
+            ("$12.000", "Calculó el interés de un solo año y no lo multiplicó por los 3."),
+            ("$336.000", "Entregó el monto final acumulado en lugar del interés generado."),
+            ("$37.459", "Aplicó interés compuesto, que capitaliza los intereses año a año, en vez de interés simple."),
+        ],
+    ),
+    _q(
+        "num_financiera", "facil",
+        "Un capital de $500.000 se invierte al 6% de interés simple anual. ¿Cuál es el monto acumulado al cabo de 2 años?",
+        "$560.000",
+        "El monto acumulado es el capital inicial más todos los intereses ganados.\n\n"
+        "1) Interés de un año: el 6% de 500.000 es 30.000.\n"
+        "2) Interés de dos años, con interés simple: 30.000 · 2 = 60.000.\n"
+        "3) Monto acumulado: 500.000 + 60.000 = 560.000.\n"
+        "4) Distingue bien los dos conceptos: el interés ganado fue 60.000; el monto es "
+        "el total que hay al final, 560.000.",
+        [
+            ("$530.000", "Consideró un solo año de intereses en lugar de dos."),
+            ("$60.000", "Entregó únicamente el interés ganado, sin sumarle el capital inicial."),
+            ("$561.800", "Aplicó interés compuesto en lugar del interés simple que indica el enunciado."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "Un capital de $120.000 se invierte al 5% compuesto anual durante 2 años. ¿Cuál es el monto final?",
+        "$132.300",
+        "En el interés compuesto, los intereses de cada período se suman al capital y "
+        "pasan a generar intereses ellos mismos.\n\n"
+        "1) Primer año: el 5% de 120.000 es 6.000. El capital pasa a 126.000.\n"
+        "2) Segundo año: el 5% se calcula ahora sobre 126.000, no sobre 120.000. "
+        "El 5% de 126.000 es 6.300.\n"
+        "3) Monto final: 126.000 + 6.300 = 132.300.\n"
+        "4) En fórmula: M = C · (1 + i)ᵗ = 120.000 · 1,05² = 132.300.",
+        [
+            ("$132.000", "Aplicó interés simple: 6.000 por cada año, sin capitalizar el primero."),
+            ("$126.000", "Calculó solo el primer año de capitalización."),
+            ("$12.300", "Entregó únicamente los intereses ganados, sin sumar el capital."),
+        ],
+    ),
+    _q(
+        "num_financiera", "medio",
+        "¿Cuál es la diferencia entre el interés compuesto y el interés simple para un capital de $80.000 al 5% anual en 2 años?",
+        "$200",
+        "Hay que calcular ambos intereses por separado y compararlos.\n\n"
+        "1) Interés simple: el 5% de 80.000 es 4.000 por año, y en 2 años son 8.000.\n"
+        "2) Interés compuesto: el primer año genera 4.000 y el capital pasa a 84.000. "
+        "El segundo año el 5% se calcula sobre 84.000, dando 4.200.\n"
+        "3) Interés compuesto total: 4.000 + 4.200 = 8.200.\n"
+        "4) Diferencia: 8.200 − 8.000 = 200. Ese monto es exactamente el 5% de los "
+        "4.000 del primer año, es decir el interés que generaron los intereses.",
+        [
+            ("$0", "Supuso que ambos sistemas rinden lo mismo; se diferencian desde el segundo período."),
+            ("$8.200", "Entregó el interés compuesto total en lugar de la diferencia entre ambos."),
+            ("$8.000", "Entregó el interés simple total en lugar de la diferencia."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Una deuda de $1.200.000 se paga en 12 cuotas iguales sin interés. Si ya se pagaron 5 cuotas, ¿cuánto falta por pagar?",
+        "$700.000",
+        "Como no hay interés, la deuda se reparte en partes iguales.\n\n"
+        "1) Calcula el valor de cada cuota: 1.200.000 ÷ 12 = 100.000.\n"
+        "2) Cuenta las cuotas que faltan: 12 − 5 = 7.\n"
+        "3) Multiplica: 7 · 100.000 = 700.000.\n"
+        "4) Verificación: lo pagado son 5 · 100.000 = 500.000, y 500.000 + 700.000 "
+        "devuelve la deuda original.",
+        [
+            ("$500.000", "Calculó lo que ya se pagó en lugar de lo que falta."),
+            ("$100.000", "Entregó el valor de una sola cuota."),
+            ("$600.000", "Dividió la deuda por la mitad, sin considerar cuántas cuotas se pagaron realmente."),
+        ],
+    ),
+    _q(
+        "num_financiera", "dificil",
+        "Un artículo cuesta $45.000 al contado o en 3 cuotas de $16.500. ¿Qué porcentaje de recargo tiene la compra a crédito?",
+        "10%",
+        "El recargo se mide comparando cuánto más se paga respecto del precio al "
+        "contado.\n\n"
+        "1) Calcula el total a crédito: 3 · 16.500 = 49.500.\n"
+        "2) Obtén el recargo en pesos: 49.500 − 45.000 = 4.500.\n"
+        "3) Exprésalo como porcentaje del precio al contado, que es la referencia: "
+        "4.500 / 45.000 = 0,1.\n"
+        "4) Multiplicando por 100 queda 10%.",
+        [
+            ("$4.500", "Calculó bien el recargo en pesos, pero la pregunta pide el porcentaje."),
+            ("9,1%", "Dividió el recargo por el precio a crédito en lugar del precio al contado."),
+            ("36,7%", "Comparó el valor de una cuota con el precio al contado."),
+        ],
+    ),
+    # ---------- num_logaritmos ----------
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log₂ 64?",
+        "6",
+        "Un logaritmo responde a la pregunta: ¿a qué exponente hay que elevar la base "
+        "para obtener ese número?\n\n"
+        "1) Aquí la base es 2 y el número es 64, así que buscas el x tal que 2ˣ = 64.\n"
+        "2) Ve multiplicando por 2: 2, 4, 8, 16, 32, 64. Son seis pasos.\n"
+        "3) Entonces 2⁶ = 64 y por lo tanto log₂ 64 = 6.",
+        [
+            ("32", "Dividió 64 por 2 en lugar de buscar el exponente."),
+            ("8", "Calculó la raíz cuadrada de 64, que responde otra pregunta."),
+            ("5", "Contó una multiplicación de menos: 2⁵ da 32, no 64."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "facil",
+        "¿Cuál es el valor de log 10.000, en base 10?",
+        "4",
+        "Cuando no se escribe la base, se asume que es 10.\n\n"
+        "1) Buscas el exponente x tal que 10ˣ = 10.000.\n"
+        "2) Cuenta los ceros: 10.000 tiene cuatro ceros, y cada cero corresponde a un "
+        "factor 10. Entonces 10.000 = 10⁴.\n"
+        "3) Por lo tanto log 10.000 = 4.\n\n"
+        "Regla práctica: en base 10, el logaritmo de una potencia de diez es "
+        "simplemente su cantidad de ceros.",
+        [
+            ("10.000", "Repitió el número en vez de calcular el exponente."),
+            ("1.000", "Dividió por 10 en lugar de buscar el exponente."),
+            ("5", "Contó los dígitos del número (que son cinco) en lugar de los ceros."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "Si log x = 2 en base 10, ¿cuál es el valor de x?",
+        "100",
+        "Aquí el logaritmo es el dato y la incógnita es el número.\n\n"
+        "1) Traduce la expresión a su forma exponencial: log x = 2 en base 10 significa "
+        "10² = x.\n"
+        "2) Calcula: 10² = 100.\n"
+        "3) Entonces x = 100.\n"
+        "4) Verifica en sentido contrario: el logaritmo en base 10 de 100 es 2, porque "
+        "100 tiene dos ceros.",
+        [
+            ("20", "Multiplicó la base por el exponente en lugar de elevar."),
+            ("10", "Confundió la base con el resultado buscado."),
+            ("1.000", "Usó un exponente 3 en lugar del 2 que da el enunciado."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿Cuál es el valor de log₃ 9 + log₂ 8?",
+        "5",
+        "Cada logaritmo se resuelve por separado porque tienen bases distintas.\n\n"
+        "1) log₃ 9: buscas el exponente tal que 3ˣ = 9. Como 3² = 9, vale 2.\n"
+        "2) log₂ 8: buscas el exponente tal que 2ˣ = 8. Como 2³ = 8, vale 3.\n"
+        "3) Suma los dos resultados: 2 + 3 = 5.\n\n"
+        "Cuidado: la propiedad que convierte una suma de logaritmos en el logaritmo de "
+        "un producto solo se aplica cuando ambos comparten la misma base, y aquí no "
+        "es el caso.",
+        [
+            ("6", "Multiplicó los dos resultados en lugar de sumarlos."),
+            ("17", "Sumó los argumentos (9 + 8) en vez de los logaritmos."),
+            ("72", "Aplicó la propiedad del producto pese a que las bases son distintas, multiplicando 9 por 8."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "Si log 2 ≈ 0,301, ¿cuál es el valor aproximado de log 8?",
+        "0,903",
+        "La clave es escribir el 8 como una potencia de 2 para poder usar el dato.\n\n"
+        "1) Descompón: 8 = 2³.\n"
+        "2) Aplica la propiedad del exponente, que lo baja multiplicando: "
+        "log 8 = log 2³ = 3 · log 2.\n"
+        "3) Reemplaza el dato: 3 · 0,301 = 0,903.\n"
+        "4) Control: 8 está entre 1 y 10, así que su logaritmo en base 10 debe caer "
+        "entre 0 y 1.",
+        [
+            ("2,408", "Multiplicó por 8 en lugar de por el exponente 3."),
+            ("0,602", "Usó exponente 2, como si 8 fuera 2²."),
+            ("1,204", "Usó exponente 4, como si 8 fuera 2⁴."),
+        ],
+    ),
+    _q(
+        "num_logaritmos", "dificil",
+        "¿Cuál es el valor de log₂ 128 − log₂ 8?",
+        "4",
+        "Se pueden resolver los dos logaritmos por separado, o usar la propiedad del "
+        "cociente. Ambos caminos llegan a lo mismo.\n\n"
+        "1) Primer logaritmo: 2⁷ = 128, así que log₂ 128 = 7.\n"
+        "2) Segundo logaritmo: 2³ = 8, así que log₂ 8 = 3.\n"
+        "3) Resta: 7 − 3 = 4.\n"
+        "4) Camino alternativo: como las bases coinciden, la resta equivale al "
+        "logaritmo del cociente, log₂ (128/8) = log₂ 16 = 4.",
+        [
+            ("16", "Dividió los argumentos y entregó ese cociente sin calcular su logaritmo."),
+            ("120", "Restó los argumentos en lugar de los logaritmos."),
+            ("2,3", "Dividió los resultados (7 entre 3) en vez de restarlos."),
+        ],
+    ),
+    # ==================================================================
+    # LOTE 5 — eje ÁLGEBRA Y FUNCIONES (M1)
+    # ==================================================================
+    # ---------- alg_expresiones ----------
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el resultado de reducir 7x − 3x + 2x?",
+        "6x",
+        "Todos los términos son semejantes: comparten la misma letra con el mismo "
+        "exponente, así que se pueden juntar en uno solo.\n\n"
+        "1) Identifica los coeficientes respetando su signo: +7, −3 y +2.\n"
+        "2) Súmalos en orden: 7 − 3 = 4, y 4 + 2 = 6.\n"
+        "3) La letra se mantiene igual, así que el resultado es 6x.\n\n"
+        "Comprobación: si x valiera 1, la expresión original daría 7 − 3 + 2 = 6, "
+        "y 6x también daría 6.",
+        [
+            ("12x", "Sumó los tres coeficientes ignorando el signo negativo del segundo."),
+            ("6x³", "Sumó también los exponentes, como si se estuvieran multiplicando los términos."),
+            ("2x", "Restó los coeficientes en el orden equivocado: 7 − 3 − 2."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el resultado de reducir 6m + 4n − 2m − 9n?",
+        "4m − 5n",
+        "Solo se pueden juntar los términos que comparten la misma letra.\n\n"
+        "1) Agrupa por letra: los términos con m son 6m y −2m; los términos con n son "
+        "+4n y −9n.\n"
+        "2) Reduce los de m: 6 − 2 = 4, o sea 4m.\n"
+        "3) Reduce los de n: 4 − 9 = −5, o sea −5n.\n"
+        "4) La expresión final es 4m − 5n. No se puede seguir reduciendo porque m y n "
+        "son letras distintas.",
+        [
+            ("−1mn", "Mezcló términos con letras distintas, que no son semejantes entre sí."),
+            ("4m + 5n", "Reduzco bien los coeficientes pero perdió el signo negativo del resultado en n."),
+            ("8m − 13n", "Sumó los coeficientes sin considerar los signos de resta."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el desarrollo de (x + 5)²?",
+        "x² + 10x + 25",
+        "El cuadrado de un binomio no es el cuadrado de cada término por separado: "
+        "aparece un término del medio.\n\n"
+        "1) La regla es (a + b)² = a² + 2ab + b². Aquí a = x y b = 5.\n"
+        "2) Primer término: x².\n"
+        "3) Doble producto: 2 · x · 5 = 10x.\n"
+        "4) Último término: 5² = 25.\n\n"
+        "Reuniendo todo queda x² + 10x + 25. Puedes comprobarlo con x = 1: "
+        "(1 + 5)² = 36, y 1 + 10 + 25 = 36.",
+        [
+            ("x² + 25", "Elevó al cuadrado cada término por separado y omitió el doble producto."),
+            ("x² + 5x + 25", "Usó el 5 una sola vez en el término del medio en lugar del doble producto."),
+            ("x² + 10x + 10", "Duplicó el 5 en el último término en vez de elevarlo al cuadrado."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el desarrollo de (x − 3)²?",
+        "x² − 6x + 9",
+        "Se aplica el cuadrado de binomio con el signo negativo incluido.\n\n"
+        "1) La regla es (a − b)² = a² − 2ab + b², con a = x y b = 3.\n"
+        "2) Primer término: x².\n"
+        "3) Doble producto, con signo negativo: −2 · x · 3 = −6x.\n"
+        "4) Último término: (−3)² = 9, positivo, porque todo cuadrado lo es.\n\n"
+        "El resultado es x² − 6x + 9. Fíjate en que solo el término del medio queda "
+        "negativo.",
+        [
+            ("x² − 9", "Elevó al cuadrado cada término por separado y omitió el término central."),
+            ("x² − 6x − 9", "Arrastró el signo negativo también al último término, pero un cuadrado nunca es negativo."),
+            ("x² − 3x + 9", "Olvidó duplicar el producto en el término del medio."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el desarrollo de (x + 6)(x − 6)?",
+        "x² − 36",
+        "Este es el producto de una suma por su diferencia, que tiene un resultado "
+        "especialmente corto.\n\n"
+        "1) La regla es (a + b)(a − b) = a² − b², con a = x y b = 6.\n"
+        "2) Aplicándola: x² − 36.\n"
+        "3) Si prefieres desarrollarlo término a término: x² − 6x + 6x − 36. Los "
+        "términos del medio se cancelan entre sí, y por eso el resultado tiene solo "
+        "dos términos.",
+        [
+            ("x² + 36", "Aplicó la resta a las letras pero no al número, que debe quedar negativo."),
+            ("x² − 12x − 36", "Sumó los términos del medio en lugar de cancelarlos."),
+            ("x² − 6x − 36", "Canceló solo uno de los dos términos centrales."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es la factorización de x² − 64?",
+        "(x + 8)(x − 8)",
+        "Una resta de dos cuadrados perfectos siempre se factoriza como una suma por "
+        "una diferencia.\n\n"
+        "1) Reconoce los cuadrados: x² es el cuadrado de x, y 64 es el cuadrado de 8.\n"
+        "2) Aplica la regla a² − b² = (a + b)(a − b).\n"
+        "3) Con a = x y b = 8 queda (x + 8)(x − 8).\n"
+        "4) Verifica multiplicando: x² − 8x + 8x − 64 = x² − 64. Correcto.",
+        [
+            ("(x − 8)(x − 8)", "Usó dos veces el signo negativo; así se obtendría x² − 16x + 64."),
+            ("(x + 8)(x + 8)", "Usó dos veces el signo positivo, que corresponde a un cuadrado de binomio."),
+            ("(x + 64)(x − 64)", "No sacó la raíz cuadrada del 64 al identificar los términos."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es la factorización de 4x² + 8x?",
+        "4x(x + 2)",
+        "Cuando todos los términos comparten un factor, ese factor se saca afuera.\n\n"
+        "1) Busca el mayor número que divida a 4 y a 8: es 4.\n"
+        "2) Busca la letra común: ambos términos tienen al menos una x.\n"
+        "3) El factor común es entonces 4x. Sácalo: 4x² ÷ 4x = x, y 8x ÷ 4x = 2.\n"
+        "4) Queda 4x(x + 2). Verifica distribuyendo: 4x · x = 4x² y 4x · 2 = 8x.",
+        [
+            ("4(x² + 2x)", "Sacó solo el factor numérico y dejó la x dentro del paréntesis."),
+            ("4x(x + 8)", "No dividió el segundo término por el factor común completo."),
+            ("2x(2x + 4)", "Usó un factor común incompleto: 2 en lugar de 4, así que aún se puede factorizar más."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el resultado de reducir 2(4x + 3) − 5x?",
+        "3x + 6",
+        "Primero se elimina el paréntesis distribuyendo, y después se reducen los "
+        "términos semejantes.\n\n"
+        "1) Distribuye el 2: 2 · 4x = 8x y 2 · 3 = 6. Queda 8x + 6 − 5x.\n"
+        "2) Junta los términos con x: 8x − 5x = 3x.\n"
+        "3) El 6 no tiene con quién juntarse, así que se mantiene.\n"
+        "4) El resultado es 3x + 6.",
+        [
+            ("4x + 6", "Restó el 5x antes de distribuir el 2, alterando el orden de las operaciones."),
+            ("3x + 3", "Distribuyó el 2 solo sobre el término con x y no sobre el 3."),
+            ("9x", "Sumó el 6 al término con x, pese a que no son términos semejantes."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es la factorización de x² + 9x + 20?",
+        "(x + 4)(x + 5)",
+        "Se buscan dos números que cumplan dos condiciones a la vez.\n\n"
+        "1) Necesitas dos números que multiplicados den 20 y sumados den 9.\n"
+        "2) Lista las parejas que dan 20: 1 y 20, 2 y 10, 4 y 5.\n"
+        "3) Revisa cuál suma 9: 1 + 20 = 21, 2 + 10 = 12, y 4 + 5 = 9. Esa es.\n"
+        "4) La factorización es (x + 4)(x + 5). Verifica: x² + 5x + 4x + 20 = "
+        "x² + 9x + 20.",
+        [
+            ("(x + 2)(x + 10)", "Eligió una pareja que multiplica 20 pero suma 12, no 9."),
+            ("(x + 9)(x + 20)", "Usó directamente los coeficientes del enunciado sin buscar la pareja correcta."),
+            ("(x − 4)(x − 5)", "Usó signos negativos; así el término del medio quedaría −9x."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es la factorización de x² − 3x − 10?",
+        "(x − 5)(x + 2)",
+        "Con signos mezclados hay que fijarse en qué signo lleva cada número.\n\n"
+        "1) Buscas dos números que multiplicados den −10 y sumados den −3.\n"
+        "2) Como el producto es negativo, uno debe ser positivo y el otro negativo.\n"
+        "3) Prueba las parejas: −5 y +2 multiplican −10 y suman −3. Esa cumple.\n"
+        "4) La factorización es (x − 5)(x + 2). Verifica: x² + 2x − 5x − 10 = "
+        "x² − 3x − 10.",
+        [
+            ("(x + 5)(x − 2)", "Invirtió los signos: esta pareja suma +3, no −3."),
+            ("(x − 5)(x − 2)", "Usó ambos negativos, con lo que el producto daría +10."),
+            ("(x − 10)(x + 1)", "Eligió una pareja que multiplica −10 pero suma −9."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el resultado de simplificar (x² − 36)/(x − 6), con x ≠ 6?",
+        "x + 6",
+        "Para simplificar una fracción algebraica hay que factorizar primero.\n\n"
+        "1) El numerador es una diferencia de cuadrados: x² − 36 = (x + 6)(x − 6).\n"
+        "2) Reescribe la fracción: [(x + 6)(x − 6)]/(x − 6).\n"
+        "3) El factor (x − 6) aparece arriba y abajo, así que se cancela. Por eso el "
+        "enunciado exige x ≠ 6: ahí ese factor valdría cero.\n"
+        "4) Queda x + 6.",
+        [
+            ("x − 6", "Canceló el factor equivocado, dejando el que sí se simplificaba."),
+            ("x² − 6", "Canceló solo el número, tratando la fracción término a término en lugar de factorizarla."),
+            ("6", "Canceló las x entre sí, algo que solo puede hacerse con factores completos."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el resultado de simplificar (3x + 6)/(x + 2), con x ≠ −2?",
+        "3",
+        "Conviene sacar factor común en el numerador para que aparezca el mismo "
+        "paréntesis de abajo.\n\n"
+        "1) En el numerador, 3 divide a ambos términos: 3x + 6 = 3(x + 2).\n"
+        "2) Reescribe la fracción: [3(x + 2)]/(x + 2).\n"
+        "3) El paréntesis (x + 2) está arriba y abajo, así que se cancela.\n"
+        "4) Queda simplemente 3, un número que no depende de x.",
+        [
+            ("3x", "Canceló solo el 6 con el 2, en vez de factorizar y cancelar el paréntesis completo."),
+            ("x + 2", "Canceló el 3 con el numerador, dejando el factor que sí se simplificaba."),
+            ("3x + 3", "Restó el 2 del denominador al 6 del numerador, que no es una operación válida en una fracción."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el desarrollo de (x + 2)(x + 7)?",
+        "x² + 9x + 14",
+        "Se multiplica cada término del primer paréntesis por cada término del "
+        "segundo.\n\n"
+        "1) x · x = x².\n"
+        "2) x · 7 = 7x.\n"
+        "3) 2 · x = 2x.\n"
+        "4) 2 · 7 = 14.\n\n"
+        "Sumando todo: x² + 7x + 2x + 14 = x² + 9x + 14. Atajo: el término del medio "
+        "es la suma de los números (2 + 7) y el último es su producto (2 · 7).",
+        [
+            ("x² + 14", "Multiplicó solo los primeros términos entre sí y los últimos entre sí."),
+            ("x² + 14x + 9", "Intercambió la suma con el producto de los números."),
+            ("x² + 9x + 9", "Sumó los números también en el término final, en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "Si x = −2, ¿cuál es el valor numérico de 3x² − 4x + 1?",
+        "21",
+        "Se reemplaza la letra por su valor, cuidando los signos y el orden de las "
+        "operaciones.\n\n"
+        "1) Primer término: 3x² significa 3 · (−2)². Primero el cuadrado: (−2)² = 4. "
+        "Luego 3 · 4 = 12.\n"
+        "2) Segundo término: −4x = −4 · (−2) = +8. Menos por menos da más.\n"
+        "3) Tercer término: +1.\n"
+        "4) Suma todo: 12 + 8 + 1 = 21.",
+        [
+            ("5", "Calculó 3x² como (3 · −2)² o dejó el segundo término negativo, perdiendo el cambio de signo."),
+            ("−3", "Elevó al cuadrado el 3 junto con la x y arrastró mal los signos."),
+            ("17", "Interpretó (−2)² como −4, aplicando el cuadrado solo al 2."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el resultado de reducir 5(2a − 3) − 3(a − 4)?",
+        "7a − 3",
+        "Hay que distribuir los dos paréntesis antes de reducir, con especial cuidado "
+        "en el segundo por el signo negativo.\n\n"
+        "1) Primer paréntesis: 5 · 2a = 10a y 5 · (−3) = −15. Queda 10a − 15.\n"
+        "2) Segundo paréntesis: el −3 multiplica a ambos términos. −3 · a = −3a y "
+        "−3 · (−4) = +12.\n"
+        "3) Junta todo: 10a − 15 − 3a + 12.\n"
+        "4) Reduce: 10a − 3a = 7a, y −15 + 12 = −3. El resultado es 7a − 3.",
+        [
+            ("7a − 27", "No cambió el signo del segundo término al distribuir el −3, dejando −12."),
+            ("13a − 3", "Sumó los términos con a en lugar de restarlos."),
+            ("7a + 27", "Perdió los dos signos negativos al distribuir."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es la factorización completa de 2x² − 18?",
+        "2(x + 3)(x − 3)",
+        "Cuando hay factor común y además una diferencia de cuadrados, se aplican los "
+        "dos pasos en orden.\n\n"
+        "1) Saca primero el factor común 2: 2x² − 18 = 2(x² − 9).\n"
+        "2) Lo que quedó dentro es una diferencia de cuadrados, porque 9 = 3².\n"
+        "3) Factoriza ese paréntesis: x² − 9 = (x + 3)(x − 3).\n"
+        "4) La factorización completa es 2(x + 3)(x − 3). Si te detienes en el paso 1, "
+        "la factorización queda a medias.",
+        [
+            ("2(x² − 9)", "Se detuvo tras sacar el factor común; el paréntesis todavía se puede factorizar."),
+            ("(2x + 3)(2x − 3)", "Repartió el 2 dentro de los paréntesis; al desarrollarlo daría 4x² − 9."),
+            ("2(x − 3)(x − 3)", "Usó dos veces el signo negativo, que corresponde a un cuadrado de binomio."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "Si a + b = 7 y ab = 12, ¿cuál es el valor de a² + b²?",
+        "25",
+        "No hace falta encontrar a y b por separado: basta una identidad algebraica.\n\n"
+        "1) Parte del cuadrado de la suma: (a + b)² = a² + 2ab + b².\n"
+        "2) Despeja lo que buscas: a² + b² = (a + b)² − 2ab.\n"
+        "3) Reemplaza los datos: 7² − 2 · 12 = 49 − 24.\n"
+        "4) El resultado es 25.\n\n"
+        "Control: los números que suman 7 y multiplican 12 son 3 y 4, y en efecto "
+        "9 + 16 = 25.",
+        [
+            ("49", "Elevó la suma al cuadrado pero no restó el doble producto."),
+            ("73", "Sumó el doble producto en lugar de restarlo."),
+            ("37", "Restó el producto una sola vez en vez del doble producto."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "Si a − b = 5 y ab = 6, ¿cuál es el valor de a² + b²?",
+        "37",
+        "Se usa la identidad del cuadrado de una diferencia, que cambia el signo del "
+        "término central.\n\n"
+        "1) Parte de (a − b)² = a² − 2ab + b².\n"
+        "2) Despeja: a² + b² = (a − b)² + 2ab. Fíjate en que aquí el doble producto "
+        "se suma, al revés que con la suma.\n"
+        "3) Reemplaza: 5² + 2 · 6 = 25 + 12.\n"
+        "4) El resultado es 37.\n\n"
+        "Control: 6 y 1 cumplen que su diferencia es 5 y su producto 6, y "
+        "36 + 1 = 37.",
+        [
+            ("13", "Restó el doble producto, aplicando la identidad de la suma en lugar de la de la diferencia."),
+            ("25", "Elevó la diferencia al cuadrado pero no agregó el doble producto."),
+            ("31", "Sumó el producto una sola vez en vez del doble producto."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "¿Cuál es el resultado de simplificar (x² + 5x + 6)/(x + 2), con x ≠ −2?",
+        "x + 3",
+        "El numerador es un trinomio factorizable, y al hacerlo aparece el "
+        "denominador.\n\n"
+        "1) Busca dos números que multipliquen 6 y sumen 5: son 2 y 3.\n"
+        "2) Entonces x² + 5x + 6 = (x + 2)(x + 3).\n"
+        "3) Reescribe la fracción: [(x + 2)(x + 3)]/(x + 2).\n"
+        "4) Cancela el factor (x + 2), que está arriba y abajo, y queda x + 3.",
+        [
+            ("x + 2", "Canceló el factor equivocado y conservó el que se simplificaba."),
+            ("x² + 3", "Canceló solo los términos numéricos en lugar de factorizar el numerador."),
+            ("x + 5", "Restó el 2 del denominador al término del medio, sin factorizar."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "¿Cuál es el resultado de simplificar (x² − 4)/(x² + 4x + 4), con x ≠ −2?",
+        "(x − 2)/(x + 2)",
+        "Hay que factorizar arriba y abajo antes de poder cancelar.\n\n"
+        "1) El numerador es una diferencia de cuadrados: x² − 4 = (x + 2)(x − 2).\n"
+        "2) El denominador es un cuadrado de binomio: x² + 4x + 4 = (x + 2)².\n"
+        "3) La fracción queda [(x + 2)(x − 2)]/[(x + 2)(x + 2)].\n"
+        "4) Cancela un factor (x + 2) de arriba con uno de abajo. Queda "
+        "(x − 2)/(x + 2), que ya no se simplifica más.",
+        [
+            ("x − 2", "Canceló los dos factores del denominador, cuando arriba solo había uno para cancelar."),
+            ("(x + 2)/(x − 2)", "Invirtió el resultado final."),
+            ("−1", "Canceló las expresiones término a término en lugar de factorizarlas."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el resultado de reducir 8y − y + 3y?",
+        "10y",
+        "Los tres términos son semejantes, así que basta operar sus coeficientes.\n\n"
+        "1) Ojo con el segundo término: −y equivale a −1y, aunque el 1 no se escriba.\n"
+        "2) Opera los coeficientes: 8 − 1 = 7, y 7 + 3 = 10.\n"
+        "3) El resultado es 10y.",
+        [
+            ("11y", "Ignoró el término −y por no tener número visible delante."),
+            ("10y³", "Sumó los exponentes, como si los términos se estuvieran multiplicando."),
+            ("4y", "Restó el tercer término en lugar de sumarlo."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el resultado de reducir 3a + 7b − a − 2b?",
+        "2a + 5b",
+        "Se agrupan por letra, porque términos con letras distintas no son "
+        "semejantes.\n\n"
+        "1) Términos con a: 3a y −a. Como −a es −1a, queda 3 − 1 = 2, o sea 2a.\n"
+        "2) Términos con b: 7b y −2b. Queda 7 − 2 = 5, o sea 5b.\n"
+        "3) El resultado es 2a + 5b, y ahí se detiene: a y b no se pueden juntar.",
+        [
+            ("7ab", "Sumó todos los coeficientes mezclando términos con letras distintas."),
+            ("3a + 5b", "Olvidó restar el término −a por no llevar número visible."),
+            ("2a + 9b", "Sumó el 2b en lugar de restarlo."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el desarrollo de (x + 1)(x + 9)?",
+        "x² + 10x + 9",
+        "Se multiplica cada término del primer paréntesis por cada uno del segundo.\n\n"
+        "1) x · x = x².\n"
+        "2) Los términos del medio: x · 9 = 9x y 1 · x = x. Juntos dan 10x.\n"
+        "3) El término final: 1 · 9 = 9.\n\n"
+        "El resultado es x² + 10x + 9. Como atajo, el coeficiente central es la suma "
+        "de los números (1 + 9) y el término libre es su producto (1 · 9).",
+        [
+            ("x² + 9", "Multiplicó solo el primer término por el primero y el segundo por el segundo."),
+            ("x² + 9x + 10", "Intercambió la suma con el producto de los dos números."),
+            ("x² + 10x + 10", "Sumó los números también en el término final."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el desarrollo de (2x + 3)²?",
+        "4x² + 12x + 9",
+        "Es un cuadrado de binomio en el que el primer término lleva coeficiente.\n\n"
+        "1) Aplica (a + b)² = a² + 2ab + b², con a = 2x y b = 3.\n"
+        "2) Primer término: (2x)² = 4x². El exponente afecta también al 2.\n"
+        "3) Doble producto: 2 · 2x · 3 = 12x.\n"
+        "4) Último término: 3² = 9.\n\n"
+        "El resultado es 4x² + 12x + 9.",
+        [
+            ("2x² + 12x + 9", "No elevó al cuadrado el coeficiente del primer término."),
+            ("4x² + 9", "Elevó al cuadrado cada término pero omitió el doble producto."),
+            ("4x² + 6x + 9", "Calculó el término del medio sin duplicarlo."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es la factorización de x² − 100?",
+        "(x + 10)(x − 10)",
+        "Es una diferencia de cuadrados perfectos.\n\n"
+        "1) x² es el cuadrado de x, y 100 es el cuadrado de 10.\n"
+        "2) Aplica a² − b² = (a + b)(a − b).\n"
+        "3) Queda (x + 10)(x − 10).\n"
+        "4) Verifica: x² − 10x + 10x − 100 = x² − 100.",
+        [
+            ("(x − 10)(x − 10)", "Usó dos signos negativos, lo que daría x² − 20x + 100."),
+            ("(x + 100)(x − 100)", "No sacó la raíz cuadrada de 100 al identificar los términos."),
+            ("(x + 50)(x − 50)", "Dividió el 100 por 2 en lugar de calcular su raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es la factorización de 5x² − 15x?",
+        "5x(x − 3)",
+        "Ambos términos comparten factores, así que se saca el factor común.\n\n"
+        "1) El mayor número que divide a 5 y a 15 es 5.\n"
+        "2) Ambos términos tienen al menos una x, así que la x también sale.\n"
+        "3) El factor común es 5x. Divide cada término: 5x² ÷ 5x = x y "
+        "15x ÷ 5x = 3.\n"
+        "4) Queda 5x(x − 3). Verifica distribuyendo: 5x · x = 5x² y 5x · 3 = 15x.",
+        [
+            ("5(x² − 3x)", "Sacó solo el factor numérico y dejó la x dentro del paréntesis."),
+            ("5x(x − 15)", "No dividió el segundo término por el factor común completo."),
+            ("x(5x − 15)", "Sacó solo la letra, dejando un factor numérico aún factorizable."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es la expresión algebraica que representa el doble de un número aumentado en 7?",
+        "2n + 7",
+        "Conviene traducir la frase por partes, en el mismo orden en que está escrita.\n\n"
+        "1) Llama n al número desconocido.\n"
+        "2) 'El doble de un número' significa multiplicarlo por 2: 2n.\n"
+        "3) 'Aumentado en 7' significa sumarle 7 a lo anterior: 2n + 7.\n\n"
+        "El orden importa: aquí primero se dobla y después se suma.",
+        [
+            ("2(n + 7)", "Sumó primero y dobló después, que corresponde al doble de un número aumentado en 7 tomado como bloque."),
+            ("n + 7", "Omitió el doble del número."),
+            ("2n − 7", "Interpretó 'aumentado' como una resta."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "facil",
+        "¿Cuál es el resultado de reducir 4(x − 2) + 3x?",
+        "7x − 8",
+        "Primero se distribuye el paréntesis y después se reducen los semejantes.\n\n"
+        "1) Distribuye el 4: 4 · x = 4x y 4 · (−2) = −8. Queda 4x − 8 + 3x.\n"
+        "2) Junta los términos con x: 4x + 3x = 7x.\n"
+        "3) El −8 queda solo, sin término semejante.\n"
+        "4) El resultado es 7x − 8.",
+        [
+            ("7x − 2", "Distribuyó el 4 solo sobre la x y no sobre el −2."),
+            ("4x − 8 + 3x", "Dejó la expresión sin reducir los términos semejantes."),
+            ("−x", "Restó el 8 al coeficiente de x, mezclando términos que no son semejantes."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es la factorización de x² + 11x + 30?",
+        "(x + 5)(x + 6)",
+        "Se buscan dos números que multiplicados den 30 y sumados den 11.\n\n"
+        "1) Parejas que multiplican 30: 1 y 30, 2 y 15, 3 y 10, 5 y 6.\n"
+        "2) Revisa cuál suma 11: 5 + 6 = 11. Esa es.\n"
+        "3) Como ambos signos del trinomio son positivos, los dos números son "
+        "positivos.\n"
+        "4) La factorización es (x + 5)(x + 6). Verifica: x² + 6x + 5x + 30.",
+        [
+            ("(x + 3)(x + 10)", "Eligió una pareja que multiplica 30 pero suma 13."),
+            ("(x + 2)(x + 15)", "Eligió una pareja que multiplica 30 pero suma 17."),
+            ("(x − 5)(x − 6)", "Usó signos negativos; así el término central quedaría −11x."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es la factorización de x² − 8x + 15?",
+        "(x − 3)(x − 5)",
+        "El signo del término central y el del término libre indican qué signos "
+        "buscar.\n\n"
+        "1) Necesitas dos números que multipliquen +15 y sumen −8.\n"
+        "2) Como el producto es positivo y la suma negativa, ambos deben ser "
+        "negativos.\n"
+        "3) Prueba: −3 y −5 multiplican 15 y suman −8. Esos son.\n"
+        "4) La factorización es (x − 3)(x − 5).",
+        [
+            ("(x + 3)(x + 5)", "Usó ambos positivos; así el término central quedaría +8x."),
+            ("(x − 1)(x − 15)", "Eligió una pareja que multiplica 15 pero suma −16."),
+            ("(x + 3)(x − 5)", "Mezcló los signos; así el producto daría −15, no +15."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es la factorización de x² + 2x − 24?",
+        "(x + 6)(x − 4)",
+        "Con término libre negativo, los dos números tienen signos distintos.\n\n"
+        "1) Buscas dos números que multipliquen −24 y sumen +2.\n"
+        "2) Como el producto es negativo, uno es positivo y el otro negativo. Y como "
+        "la suma es positiva, el mayor en valor absoluto es el positivo.\n"
+        "3) Prueba parejas de 24: 6 y 4 se diferencian en 2. Con +6 y −4 se cumple "
+        "todo.\n"
+        "4) La factorización es (x + 6)(x − 4).",
+        [
+            ("(x − 6)(x + 4)", "Invirtió los signos: esta pareja suma −2."),
+            ("(x + 8)(x − 3)", "Eligió una pareja que multiplica −24 pero suma +5."),
+            ("(x + 12)(x − 2)", "Eligió una pareja que multiplica −24 pero suma +10."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el resultado de simplificar (x² − 25)/(x + 5), con x ≠ −5?",
+        "x − 5",
+        "Se factoriza el numerador para que aparezca el denominador.\n\n"
+        "1) El numerador es una diferencia de cuadrados: x² − 25 = (x + 5)(x − 5).\n"
+        "2) La fracción queda [(x + 5)(x − 5)]/(x + 5).\n"
+        "3) Cancela el factor (x + 5), presente arriba y abajo.\n"
+        "4) Queda x − 5.",
+        [
+            ("x + 5", "Canceló el factor equivocado y conservó el que se simplificaba."),
+            ("x² − 5", "Canceló solo los números, tratando la fracción término a término."),
+            ("−5", "Canceló las x entre sí, algo que solo puede hacerse con factores completos."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el resultado de simplificar (4x + 12)/(x + 3), con x ≠ −3?",
+        "4",
+        "Se saca factor común arriba para que aparezca el paréntesis de abajo.\n\n"
+        "1) El 4 divide a ambos términos del numerador: 4x + 12 = 4(x + 3).\n"
+        "2) La fracción queda [4(x + 3)]/(x + 3).\n"
+        "3) Cancela el paréntesis (x + 3).\n"
+        "4) Queda 4, un valor que no depende de x.",
+        [
+            ("4x", "Canceló solo el 12 con el 3 en lugar de factorizar el numerador."),
+            ("x + 3", "Canceló el 4, dejando el factor que sí se simplificaba."),
+            ("4x + 9", "Restó el 3 del denominador al 12 del numerador, operación no válida en una fracción."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "Si x = 3, ¿cuál es el valor numérico de 2x² − 5x + 4?",
+        "7",
+        "Se reemplaza la letra por su valor respetando el orden de las operaciones.\n\n"
+        "1) Primer término: 2x² es 2 · 3². Primero el cuadrado, 3² = 9, y después "
+        "2 · 9 = 18.\n"
+        "2) Segundo término: −5x = −5 · 3 = −15.\n"
+        "3) Tercer término: +4.\n"
+        "4) Suma todo: 18 − 15 + 4 = 7.",
+        [
+            ("31", "Calculó 2x² como (2 · 3)², elevando al cuadrado también el coeficiente."),
+            ("−1", "Restó el 4 en lugar de sumarlo."),
+            ("13", "Multiplicó antes de elevar al cuadrado en el primer término y arrastró el error."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el resultado de reducir 3(2m + 5) − 2(m − 1)?",
+        "4m + 17",
+        "Se distribuyen ambos paréntesis con cuidado en los signos.\n\n"
+        "1) Primer paréntesis: 3 · 2m = 6m y 3 · 5 = 15. Queda 6m + 15.\n"
+        "2) Segundo paréntesis: el −2 multiplica a los dos términos. −2 · m = −2m y "
+        "−2 · (−1) = +2.\n"
+        "3) Junta todo: 6m + 15 − 2m + 2.\n"
+        "4) Reduce: 6m − 2m = 4m, y 15 + 2 = 17. El resultado es 4m + 17.",
+        [
+            ("4m + 13", "No cambió el signo del segundo término al distribuir el −2."),
+            ("8m + 17", "Sumó los términos con m en lugar de restarlos."),
+            ("4m + 15", "Distribuyó el −2 solo sobre la m y olvidó el −1."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál es el desarrollo de (3x − 2)(3x + 2)?",
+        "9x² − 4",
+        "Es una suma por su diferencia, con coeficiente en el primer término.\n\n"
+        "1) Aplica (a − b)(a + b) = a² − b², con a = 3x y b = 2.\n"
+        "2) Primer término: (3x)² = 9x². El exponente afecta también al 3.\n"
+        "3) Segundo término: 2² = 4, restando.\n"
+        "4) El resultado es 9x² − 4. Los términos centrales (−6x y +6x) se cancelan.",
+        [
+            ("3x² − 4", "No elevó al cuadrado el coeficiente del primer término."),
+            ("9x² + 4", "No aplicó el signo negativo al término numérico."),
+            ("9x² − 12x − 4", "Sumó los términos centrales en lugar de cancelarlos."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "Un rectángulo tiene largo (x + 5) y ancho (x − 2). ¿Cuál es la expresión reducida de su perímetro?",
+        "4x + 6",
+        "El perímetro suma los cuatro lados: dos largos y dos anchos.\n\n"
+        "1) Plantea: P = 2(x + 5) + 2(x − 2).\n"
+        "2) Distribuye: 2x + 10 + 2x − 4.\n"
+        "3) Reduce los términos con x: 2x + 2x = 4x.\n"
+        "4) Reduce los números: 10 − 4 = 6. El perímetro es 4x + 6.",
+        [
+            ("2x + 3", "Sumó largo y ancho una sola vez, olvidando que cada lado se repite dos veces."),
+            ("x² + 3x − 10", "Calculó el área en lugar del perímetro."),
+            ("4x + 14", "No cambió el signo del −2 al duplicar el ancho."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "Si a + b = 10 y ab = 21, ¿cuál es el valor de a² + b²?",
+        "58",
+        "Se usa la identidad del cuadrado de una suma, sin necesidad de hallar a y b.\n\n"
+        "1) Parte de (a + b)² = a² + 2ab + b².\n"
+        "2) Despeja: a² + b² = (a + b)² − 2ab.\n"
+        "3) Reemplaza: 10² − 2 · 21 = 100 − 42.\n"
+        "4) El resultado es 58.\n\n"
+        "Control: los números que suman 10 y multiplican 21 son 3 y 7, y "
+        "9 + 49 = 58.",
+        [
+            ("100", "Elevó la suma al cuadrado pero no restó el doble producto."),
+            ("142", "Sumó el doble producto en lugar de restarlo."),
+            ("79", "Restó el producto una sola vez en vez del doble producto."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "¿Cuál es el resultado de simplificar (x² − 7x + 12)/(x − 3), con x ≠ 3?",
+        "x − 4",
+        "Se factoriza el trinomio del numerador para que aparezca el denominador.\n\n"
+        "1) Buscas dos números que multipliquen 12 y sumen −7: son −3 y −4.\n"
+        "2) Entonces x² − 7x + 12 = (x − 3)(x − 4).\n"
+        "3) La fracción queda [(x − 3)(x − 4)]/(x − 3).\n"
+        "4) Cancela el factor (x − 3) y queda x − 4.",
+        [
+            ("x − 3", "Canceló el factor equivocado y conservó el que se simplificaba."),
+            ("x + 4", "Factorizó con signos positivos, que darían un término central +7x."),
+            ("x − 7", "Restó el 3 del denominador al término central, sin factorizar."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "¿Cuál es la factorización completa de 3x² − 27?",
+        "3(x + 3)(x − 3)",
+        "Primero el factor común, después la diferencia de cuadrados.\n\n"
+        "1) Saca el 3, que divide a ambos términos: 3x² − 27 = 3(x² − 9).\n"
+        "2) Lo de adentro es una diferencia de cuadrados, con 9 = 3².\n"
+        "3) Factoriza: x² − 9 = (x + 3)(x − 3).\n"
+        "4) La factorización completa es 3(x + 3)(x − 3). Detenerse en el paso 1 deja "
+        "el trabajo a medias.",
+        [
+            ("3(x² − 9)", "Se detuvo tras el factor común; el paréntesis aún se factoriza."),
+            ("(3x + 3)(3x − 3)", "Repartió el 3 dentro de los paréntesis; al desarrollarlo daría 9x² − 9."),
+            ("3(x − 3)(x − 3)", "Usó dos signos negativos, que corresponden a un cuadrado de binomio."),
+        ],
+    ),
+    _q(
+        "alg_expresiones", "dificil",
+        "¿Cuál es el resultado de simplificar (x² + 6x + 9)/(x² − 9), con x ≠ 3 y x ≠ −3?",
+        "(x + 3)/(x − 3)",
+        "Hay que factorizar numerador y denominador antes de cancelar.\n\n"
+        "1) El numerador es un cuadrado de binomio: x² + 6x + 9 = (x + 3)².\n"
+        "2) El denominador es una diferencia de cuadrados: x² − 9 = (x + 3)(x − 3).\n"
+        "3) La fracción queda [(x + 3)(x + 3)]/[(x + 3)(x − 3)].\n"
+        "4) Cancela un factor (x + 3) arriba con uno abajo. Queda (x + 3)/(x − 3), "
+        "que ya no se simplifica más.",
+        [
+            ("x + 3", "Canceló los dos factores del denominador cuando solo correspondía cancelar uno."),
+            ("(x − 3)/(x + 3)", "Invirtió el resultado final."),
+            ("−1", "Canceló término a término en lugar de factorizar."),
+        ],
+    ),
+    # ---------- alg_lineal ----------
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 3x + 4 = 19?",
+        "x = 5",
+        "Se despeja la x dejándola sola a un lado de la igualdad.\n\n"
+        "1) Quita el +4 restando 4 a ambos lados: 3x = 19 − 4, o sea 3x = 15.\n"
+        "2) Quita el 3 que multiplica dividiendo por 3 a ambos lados: x = 15 ÷ 3.\n"
+        "3) Entonces x = 5.\n"
+        "4) Verifica reemplazando: 3 · 5 + 4 = 15 + 4 = 19. Correcto.",
+        [
+            ("x = 7", "Restó el 4 solo en un lado o lo sumó en vez de restarlo antes de dividir."),
+            ("x = 15", "Despejó el 4 pero no dividió por el coeficiente 3."),
+            ("x = 69", "Multiplicó por 3 en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 5x − 8 = 12?",
+        "x = 4",
+        "Se aísla el término con x y después se elimina su coeficiente.\n\n"
+        "1) El −8 pasa sumando: 5x = 12 + 8, o sea 5x = 20.\n"
+        "2) El 5 está multiplicando, así que pasa dividiendo: x = 20 ÷ 5.\n"
+        "3) Entonces x = 4.\n"
+        "4) Verifica: 5 · 4 − 8 = 20 − 8 = 12. Correcto.",
+        [
+            ("x = 0,8", "Restó el 8 en lugar de sumarlo al despejar."),
+            ("x = 20", "Despejó bien el 8 pero no dividió por el coeficiente."),
+            ("x = 100", "Multiplicó por 5 en vez de dividir."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de x/4 + 3 = 8?",
+        "x = 20",
+        "Primero se despeja la fracción y después se elimina el denominador.\n\n"
+        "1) Resta 3 a ambos lados: x/4 = 8 − 3, o sea x/4 = 5.\n"
+        "2) El 4 está dividiendo, así que pasa multiplicando: x = 5 · 4.\n"
+        "3) Entonces x = 20.\n"
+        "4) Verifica: 20/4 + 3 = 5 + 3 = 8. Correcto.",
+        [
+            ("x = 32", "Multiplicó por 4 antes de restar el 3, alterando el orden del despeje."),
+            ("x = 5", "Se detuvo en x/4 = 5 sin multiplicar por el denominador."),
+            ("x = 1,25", "Dividió por 4 en lugar de multiplicar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 2x + 9 = 3x − 1?",
+        "x = 10",
+        "Cuando hay x a ambos lados, se juntan todas de un mismo lado.\n\n"
+        "1) Resta 2x a ambos lados: 9 = x − 1.\n"
+        "2) Suma 1 a ambos lados: 10 = x.\n"
+        "3) Entonces x = 10.\n"
+        "4) Verifica: a la izquierda 2 · 10 + 9 = 29, y a la derecha 3 · 10 − 1 = 29. "
+        "Coinciden.",
+        [
+            ("x = 8", "Restó el 1 en lugar de sumarlo al despejar."),
+            ("x = −10", "Movió los términos con x al lado equivocado y perdió el signo."),
+            ("x = 2", "Restó los coeficientes de x y los términos libres por separado, sin despejar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es el conjunto solución de la inecuación x + 5 > 12?",
+        "x > 7",
+        "Una inecuación se resuelve igual que una ecuación, cuidando el sentido del "
+        "signo.\n\n"
+        "1) Resta 5 a ambos lados: x > 12 − 5.\n"
+        "2) Entonces x > 7.\n"
+        "3) Como solo se sumó o restó (no se multiplicó ni dividió por un negativo), "
+        "el signo mayor que se mantiene igual.\n"
+        "4) Comprueba con un valor: x = 8 cumple, porque 8 + 5 = 13 > 12.",
+        [
+            ("x < 7", "Invirtió el sentido de la desigualdad sin motivo: eso solo ocurre al multiplicar o dividir por un negativo."),
+            ("x > 17", "Sumó el 5 en lugar de restarlo."),
+            ("x > 12", "Ignoró el 5 al despejar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es el conjunto solución de la inecuación 4x ≤ 20?",
+        "x ≤ 5",
+        "Se divide por el coeficiente, que en este caso es positivo.\n\n"
+        "1) Divide ambos lados por 4: x ≤ 20 ÷ 4.\n"
+        "2) Entonces x ≤ 5.\n"
+        "3) Como se dividió por un número positivo, el sentido de la desigualdad no "
+        "cambia.\n"
+        "4) Comprueba: x = 5 cumple con igualdad (4 · 5 = 20) y x = 4 también cumple.",
+        [
+            ("x ≥ 5", "Invirtió el sentido de la desigualdad pese a haber dividido por un número positivo."),
+            ("x ≤ 80", "Multiplicó por 4 en lugar de dividir."),
+            ("x ≤ 16", "Restó 4 en vez de dividir por 4."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 7 − x = 2?",
+        "x = 5",
+        "Aquí la incógnita aparece restando, así que conviene ordenarla primero.\n\n"
+        "1) Resta 7 a ambos lados: −x = 2 − 7, o sea −x = −5.\n"
+        "2) Multiplica ambos lados por −1 para dejar la x positiva: x = 5.\n"
+        "3) Verifica: 7 − 5 = 2. Correcto.\n\n"
+        "Otra vía: pasar la x al lado derecho y el 2 al izquierdo, quedando "
+        "7 − 2 = x.",
+        [
+            ("x = −5", "Se quedó en −x = −5 sin multiplicar por −1 para despejar la x."),
+            ("x = 9", "Sumó el 2 al 7 en lugar de restarlo."),
+            ("x = 14", "Multiplicó en lugar de restar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 6x = 4x + 14?",
+        "x = 7",
+        "Se agrupan los términos con x de un solo lado.\n\n"
+        "1) Resta 4x a ambos lados: 6x − 4x = 14, o sea 2x = 14.\n"
+        "2) Divide por 2: x = 7.\n"
+        "3) Verifica: a la izquierda 6 · 7 = 42, y a la derecha 4 · 7 + 14 = 42. "
+        "Coinciden.",
+        [
+            ("x = 14", "Restó los términos con x pero olvidó dividir por el coeficiente 2."),
+            ("x = 1,4", "Sumó los coeficientes de x en lugar de restarlos, dividiendo por 10."),
+            ("x = 3,5", "Dividió el 14 por 4 en vez de por la diferencia de coeficientes."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de 4(x + 3) = 2x + 20?",
+        "x = 4",
+        "Primero se elimina el paréntesis y después se agrupan los términos.\n\n"
+        "1) Distribuye el 4: 4x + 12 = 2x + 20.\n"
+        "2) Resta 2x a ambos lados: 2x + 12 = 20.\n"
+        "3) Resta 12: 2x = 8.\n"
+        "4) Divide por 2: x = 4. Verifica: 4(4 + 3) = 28 y 2 · 4 + 20 = 28.",
+        [
+            ("x = 8", "Distribuyó el 4 solo sobre la x y no sobre el 3."),
+            ("x = 16", "Agrupó bien pero no dividió por el coeficiente final."),
+            ("x = 2", "Restó el 12 antes de agrupar los términos con x y perdió un paso."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de 5(x − 1) = 3(x + 3)?",
+        "x = 7",
+        "Se distribuyen ambos paréntesis y luego se agrupa.\n\n"
+        "1) Lado izquierdo: 5x − 5. Lado derecho: 3x + 9.\n"
+        "2) Resta 3x a ambos lados: 2x − 5 = 9.\n"
+        "3) Suma 5: 2x = 14.\n"
+        "4) Divide por 2: x = 7. Verifica: 5(7 − 1) = 30 y 3(7 + 3) = 30.",
+        [
+            ("x = 2", "No distribuyó los factores sobre los términos numéricos de los paréntesis."),
+            ("x = 14", "Agrupó correctamente pero no dividió por 2 al final."),
+            ("x = −7", "Movió los términos al lado equivocado y arrastró un signo cambiado."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es el conjunto solución de la inecuación −4x + 2 < 14?",
+        "x > −3",
+        "El paso clave aparece al dividir por un número negativo.\n\n"
+        "1) Resta 2 a ambos lados: −4x < 12.\n"
+        "2) Divide por −4. Al dividir por un número negativo, la desigualdad cambia "
+        "de sentido: x > 12 ÷ (−4).\n"
+        "3) Entonces x > −3.\n"
+        "4) Comprueba con x = 0: −4 · 0 + 2 = 2, que efectivamente es menor que 14.",
+        [
+            ("x < −3", "Dividió por un número negativo sin invertir el sentido de la desigualdad."),
+            ("x > 3", "Perdió el signo negativo al dividir."),
+            ("x > −4", "Restó el 2 al 14 en el lado equivocado antes de dividir."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es el conjunto solución de la inecuación 5x − 3 ≥ 2x + 9?",
+        "x ≥ 4",
+        "Se agrupan los términos con x de un lado, igual que en una ecuación.\n\n"
+        "1) Resta 2x a ambos lados: 3x − 3 ≥ 9.\n"
+        "2) Suma 3: 3x ≥ 12.\n"
+        "3) Divide por 3, que es positivo, así que el sentido se mantiene: x ≥ 4.\n"
+        "4) Comprueba con x = 4: a la izquierda 17 y a la derecha 17, y la igualdad "
+        "está incluida.",
+        [
+            ("x ≤ 4", "Invirtió el sentido de la desigualdad pese a haber dividido por un positivo."),
+            ("x ≥ 12", "Agrupó bien pero no dividió por el coeficiente 3."),
+            ("x ≥ 2", "Restó el 3 en lugar de sumarlo al despejar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de x/2 + x/3 = 5?",
+        "x = 6",
+        "Conviene eliminar los denominadores antes de despejar.\n\n"
+        "1) El mínimo común múltiplo de 2 y 3 es 6. Multiplica toda la ecuación por 6: "
+        "6 · (x/2) + 6 · (x/3) = 6 · 5.\n"
+        "2) Queda 3x + 2x = 30.\n"
+        "3) Reduce: 5x = 30.\n"
+        "4) Divide por 5: x = 6. Verifica: 6/2 + 6/3 = 3 + 2 = 5.",
+        [
+            ("x = 30", "Eliminó los denominadores pero no redujo ni dividió por el coeficiente final."),
+            ("x = 2,5", "Sumó las fracciones como si x/2 + x/3 fuera x/5."),
+            ("x = 12", "Usó como denominador común el producto 6 pero multiplicó solo un lado de la igualdad."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "El doble de un número disminuido en 5 es 19. ¿Cuál es el número?",
+        "12",
+        "Se traduce el enunciado a una ecuación y se despeja.\n\n"
+        "1) Llama n al número. 'El doble' es 2n, y 'disminuido en 5' es 2n − 5.\n"
+        "2) La ecuación es 2n − 5 = 19.\n"
+        "3) Suma 5: 2n = 24.\n"
+        "4) Divide por 2: n = 12. Verifica: el doble de 12 es 24, y 24 − 5 = 19.",
+        [
+            ("7", "Restó el 5 en lugar de sumarlo al despejar."),
+            ("24", "Despejó bien pero olvidó dividir por 2 para deshacer el doble."),
+            ("14", "Interpretó el enunciado como 2(n − 5) = 19 y redondeó el resultado."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "La suma de dos números consecutivos es 47. ¿Cuál es el menor de ellos?",
+        "23",
+        "Dos números consecutivos se diferencian en 1, así que basta una incógnita.\n\n"
+        "1) Llama n al menor. El siguiente es n + 1.\n"
+        "2) La ecuación es n + (n + 1) = 47.\n"
+        "3) Reduce: 2n + 1 = 47, entonces 2n = 46.\n"
+        "4) Divide por 2: n = 23. Los números son 23 y 24, y en efecto suman 47.",
+        [
+            ("24", "Encontró el número correcto pero entregó el mayor en lugar del menor."),
+            ("23,5", "Dividió 47 por 2 sin considerar que los números se diferencian en 1."),
+            ("46", "Despejó el 1 pero olvidó dividir por 2."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de 3(2x − 1) = 4x + 7?",
+        "x = 5",
+        "Se distribuye el paréntesis y luego se agrupan los términos con x.\n\n"
+        "1) Distribuye: 6x − 3 = 4x + 7.\n"
+        "2) Resta 4x a ambos lados: 2x − 3 = 7.\n"
+        "3) Suma 3: 2x = 10.\n"
+        "4) Divide por 2: x = 5. Verifica: 3(2 · 5 − 1) = 27 y 4 · 5 + 7 = 27.",
+        [
+            ("x = 10", "Agrupó bien pero no dividió por el coeficiente final."),
+            ("x = 2", "Restó el 3 en lugar de sumarlo al despejar."),
+            ("x = 4", "Distribuyó el 3 solo sobre el 2x y no sobre el −1."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "¿Cuál es la solución de (x + 2)/3 = (x − 4)/2?",
+        "x = 16",
+        "Con una fracción a cada lado, conviene multiplicar en cruz.\n\n"
+        "1) Multiplica en cruz: 2(x + 2) = 3(x − 4).\n"
+        "2) Distribuye ambos lados: 2x + 4 = 3x − 12.\n"
+        "3) Resta 2x: 4 = x − 12.\n"
+        "4) Suma 12: x = 16. Verifica: (16 + 2)/3 = 6 y (16 − 4)/2 = 6. Coinciden.",
+        [
+            ("x = −16", "Movió los términos al lado equivocado y arrastró el signo cambiado."),
+            ("x = 8", "Multiplicó en cruz pero no distribuyó los factores sobre los términos numéricos."),
+            ("x = 2", "Igualó los numeradores entre sí y los denominadores entre sí."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "Un padre tiene 40 años y su hijo 10. ¿En cuántos años más la edad del padre será el doble de la del hijo?",
+        "20 años",
+        "El truco es que ambos envejecen la misma cantidad de años.\n\n"
+        "1) Llama t a los años que deben pasar. En ese momento el padre tendrá 40 + t "
+        "y el hijo 10 + t.\n"
+        "2) La condición es que el padre duplique al hijo: 40 + t = 2(10 + t).\n"
+        "3) Distribuye: 40 + t = 20 + 2t.\n"
+        "4) Despeja: 40 − 20 = 2t − t, o sea t = 20. En 20 años el padre tendrá 60 y "
+        "el hijo 30, y 60 es el doble de 30.",
+        [
+            ("10 años", "Igualó las edades futuras sin plantear la relación de doble."),
+            ("30 años", "Restó las edades actuales en lugar de plantear la ecuación."),
+            ("5 años", "Sumó los años solo a la edad del hijo, dejando fija la del padre."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "¿Cuál es el conjunto solución de la inecuación 2(x − 3) > 3(x + 1)?",
+        "x < −9",
+        "Al despejar queda un coeficiente negativo, y ahí cambia el sentido.\n\n"
+        "1) Distribuye ambos lados: 2x − 6 > 3x + 3.\n"
+        "2) Resta 3x a ambos lados: −x − 6 > 3.\n"
+        "3) Suma 6: −x > 9.\n"
+        "4) Multiplica por −1 e invierte el sentido de la desigualdad: x < −9.\n\n"
+        "Comprueba con x = −10: a la izquierda 2(−13) = −26 y a la derecha "
+        "3(−9) = −27. En efecto −26 > −27.",
+        [
+            ("x > −9", "Multiplicó por −1 sin invertir el sentido de la desigualdad."),
+            ("x < 9", "Perdió el signo negativo al despejar."),
+            ("x < −3", "No distribuyó los factores sobre los términos numéricos de los paréntesis."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "Un número aumentado en su mitad es igual a 27. ¿Cuál es el número?",
+        "18",
+        "Se traduce el enunciado usando una fracción.\n\n"
+        "1) Llama n al número. Su mitad es n/2.\n"
+        "2) La ecuación es n + n/2 = 27.\n"
+        "3) Multiplica todo por 2 para quitar el denominador: 2n + n = 54, o sea "
+        "3n = 54.\n"
+        "4) Divide por 3: n = 18. Verifica: 18 + 9 = 27. Correcto.",
+        [
+            ("13,5", "Dividió 27 por 2, respondiendo cuál es la mitad en lugar del número."),
+            ("54", "Multiplicó por 2 pero no dividió por el coeficiente 3."),
+            ("9", "Resolvió cuánto vale la mitad del número en lugar del número mismo."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 2x − 7 = 9?",
+        "x = 8",
+        "Se despeja la x en dos pasos.\n\n"
+        "1) El −7 pasa sumando: 2x = 9 + 7, o sea 2x = 16.\n"
+        "2) El 2 pasa dividiendo: x = 16 ÷ 2.\n"
+        "3) Entonces x = 8.\n"
+        "4) Verifica: 2 · 8 − 7 = 16 − 7 = 9. Correcto.",
+        [
+            ("x = 1", "Restó el 7 en lugar de sumarlo al despejar."),
+            ("x = 16", "Despejó el 7 pero no dividió por el coeficiente."),
+            ("x = 32", "Multiplicó por 2 en vez de dividir."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 8 + 3x = 23?",
+        "x = 5",
+        "El término con x puede estar en segundo lugar; el procedimiento no cambia.\n\n"
+        "1) Resta 8 a ambos lados: 3x = 23 − 8, o sea 3x = 15.\n"
+        "2) Divide por 3: x = 5.\n"
+        "3) Verifica: 8 + 3 · 5 = 8 + 15 = 23. Correcto.",
+        [
+            ("x = 15", "Despejó bien el 8 pero no dividió por el coeficiente 3."),
+            ("x = 10,3", "Sumó el 8 en lugar de restarlo antes de dividir."),
+            ("x = 45", "Multiplicó por 3 en vez de dividir."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de x/5 = 7?",
+        "x = 35",
+        "La x está dividida, así que se deshace multiplicando.\n\n"
+        "1) El 5 está dividiendo, por lo tanto pasa multiplicando al otro lado.\n"
+        "2) x = 7 · 5.\n"
+        "3) Entonces x = 35.\n"
+        "4) Verifica: 35/5 = 7. Correcto.",
+        [
+            ("x = 1,4", "Dividió por 5 en lugar de multiplicar."),
+            ("x = 12", "Sumó el 5 en vez de multiplicar por él."),
+            ("x = 2", "Restó el 5 al 7 en lugar de multiplicar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 9x = 5x + 24?",
+        "x = 6",
+        "Se juntan los términos con x de un mismo lado.\n\n"
+        "1) Resta 5x a ambos lados: 9x − 5x = 24, o sea 4x = 24.\n"
+        "2) Divide por 4: x = 6.\n"
+        "3) Verifica: a la izquierda 9 · 6 = 54, y a la derecha 5 · 6 + 24 = 54.",
+        [
+            ("x = 24", "Restó los términos con x pero no dividió por el coeficiente."),
+            ("x = 1,7", "Sumó los coeficientes de x en lugar de restarlos."),
+            ("x = 4,8", "Dividió el 24 por 5 en vez de por la diferencia de coeficientes."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es el conjunto solución de la inecuación x − 4 ≥ 6?",
+        "x ≥ 10",
+        "Se despeja igual que una ecuación.\n\n"
+        "1) Suma 4 a ambos lados: x ≥ 6 + 4.\n"
+        "2) Entonces x ≥ 10.\n"
+        "3) Como solo se sumó, el sentido de la desigualdad no cambia.\n"
+        "4) Comprueba con x = 10: 10 − 4 = 6, y la igualdad está incluida.",
+        [
+            ("x ≤ 10", "Invirtió el sentido de la desigualdad sin motivo."),
+            ("x ≥ 2", "Restó el 4 en lugar de sumarlo."),
+            ("x ≥ 24", "Multiplicó por 4 en vez de sumarlo."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es el conjunto solución de la inecuación 3x < 21?",
+        "x < 7",
+        "Se divide por el coeficiente, que es positivo.\n\n"
+        "1) Divide ambos lados por 3: x < 21 ÷ 3.\n"
+        "2) Entonces x < 7.\n"
+        "3) El sentido se mantiene porque el 3 es positivo.\n"
+        "4) Comprueba con x = 6: 3 · 6 = 18, que es menor que 21.",
+        [
+            ("x > 7", "Invirtió el sentido pese a haber dividido por un número positivo."),
+            ("x < 63", "Multiplicó por 3 en lugar de dividir."),
+            ("x < 18", "Restó 3 en vez de dividir por 3."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "¿Cuál es la solución de 10 − 2x = 4?",
+        "x = 3",
+        "El término con x aparece restando, así que se ordena primero.\n\n"
+        "1) Resta 10 a ambos lados: −2x = 4 − 10, o sea −2x = −6.\n"
+        "2) Divide por −2: x = (−6) ÷ (−2) = 3.\n"
+        "3) Verifica: 10 − 2 · 3 = 10 − 6 = 4. Correcto.",
+        [
+            ("x = −3", "Perdió uno de los dos signos negativos al dividir."),
+            ("x = 7", "Restó el 4 al 10 sin considerar el coeficiente 2."),
+            ("x = 2", "Dividió el 4 por 2 sin despejar primero el 10."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de 6(x − 2) = 3x + 6?",
+        "x = 6",
+        "Se distribuye el paréntesis y luego se agrupan los términos con x.\n\n"
+        "1) Distribuye: 6x − 12 = 3x + 6.\n"
+        "2) Resta 3x: 3x − 12 = 6.\n"
+        "3) Suma 12: 3x = 18.\n"
+        "4) Divide por 3: x = 6. Verifica: 6(6 − 2) = 24 y 3 · 6 + 6 = 24.",
+        [
+            ("x = 18", "Agrupó correctamente pero no dividió por el coeficiente final."),
+            ("x = 2", "Distribuyó el 6 solo sobre la x y no sobre el −2."),
+            ("x = −2", "Restó el 12 en lugar de sumarlo al despejar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de 2(x + 4) + 3 = 5x − 4?",
+        "x = 5",
+        "Primero se ordena el lado izquierdo por completo.\n\n"
+        "1) Distribuye: 2x + 8 + 3 = 5x − 4.\n"
+        "2) Reduce el lado izquierdo: 2x + 11 = 5x − 4.\n"
+        "3) Resta 2x y suma 4 a ambos lados: 15 = 3x.\n"
+        "4) Divide por 3: x = 5. Verifica: 2(5 + 4) + 3 = 21 y 5 · 5 − 4 = 21.",
+        [
+            ("x = 15", "Agrupó bien pero no dividió por el coeficiente final."),
+            ("x = 3,7", "Olvidó sumar el 3 al reducir el lado izquierdo."),
+            ("x = 2,3", "Restó el 4 en lugar de sumarlo al pasarlo de lado."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es el conjunto solución de la inecuación −2x ≥ 10?",
+        "x ≤ −5",
+        "Dividir por un coeficiente negativo obliga a invertir la desigualdad.\n\n"
+        "1) Divide ambos lados por −2.\n"
+        "2) Como el divisor es negativo, el signo mayor o igual se transforma en menor "
+        "o igual: x ≤ 10 ÷ (−2).\n"
+        "3) Entonces x ≤ −5.\n"
+        "4) Comprueba con x = −6: −2 · (−6) = 12, que efectivamente es mayor que 10.",
+        [
+            ("x ≥ −5", "Dividió por un negativo sin invertir el sentido de la desigualdad."),
+            ("x ≤ 5", "Perdió el signo negativo del resultado."),
+            ("x ≥ 5", "Perdió el signo negativo y además no invirtió el sentido."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es el conjunto solución de la inecuación 4(x + 1) < 2x + 10?",
+        "x < 3",
+        "Se distribuye y luego se agrupa, igual que en una ecuación.\n\n"
+        "1) Distribuye: 4x + 4 < 2x + 10.\n"
+        "2) Resta 2x: 2x + 4 < 10.\n"
+        "3) Resta 4: 2x < 6.\n"
+        "4) Divide por 2, que es positivo, así que el sentido se conserva: x < 3.",
+        [
+            ("x > 3", "Invirtió el sentido pese a haber dividido por un número positivo."),
+            ("x < 6", "Agrupó bien pero no dividió por el coeficiente 2."),
+            ("x < 1,5", "Distribuyó el 4 solo sobre la x y no sobre el 1."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "¿Cuál es la solución de x/3 − x/6 = 2?",
+        "x = 12",
+        "Se eliminan los denominadores multiplicando por el mínimo común múltiplo.\n\n"
+        "1) El mínimo común múltiplo de 3 y 6 es 6. Multiplica toda la ecuación por 6.\n"
+        "2) Queda 2x − x = 12.\n"
+        "3) Reduce: x = 12.\n"
+        "4) Verifica: 12/3 − 12/6 = 4 − 2 = 2. Correcto.",
+        [
+            ("x = 4", "Restó los denominadores como si x/3 − x/6 fuera x/3."),
+            ("x = 6", "Multiplicó solo un lado de la igualdad por el denominador común."),
+            ("x = 36", "Multiplicó por el producto de los denominadores en lugar de por su mínimo común múltiplo."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "El triple de un número aumentado en 4 es igual a 25. ¿Cuál es el número?",
+        "7",
+        "Se traduce la frase a una ecuación respetando el orden.\n\n"
+        "1) Llama n al número. El triple es 3n, y aumentado en 4 es 3n + 4.\n"
+        "2) La ecuación es 3n + 4 = 25.\n"
+        "3) Resta 4: 3n = 21.\n"
+        "4) Divide por 3: n = 7. Verifica: 3 · 7 + 4 = 25.",
+        [
+            ("21", "Despejó el 4 pero olvidó dividir por 3."),
+            ("9,7", "Sumó el 4 en lugar de restarlo al despejar."),
+            ("4,3", "Interpretó el enunciado como 3(n + 4) = 25."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "La suma de dos números pares consecutivos es 66. ¿Cuál es el menor de ellos?",
+        "32",
+        "Dos pares consecutivos se diferencian en 2, no en 1.\n\n"
+        "1) Llama n al menor. El siguiente par es n + 2.\n"
+        "2) La ecuación es n + (n + 2) = 66.\n"
+        "3) Reduce: 2n + 2 = 66, entonces 2n = 64.\n"
+        "4) Divide por 2: n = 32. Los números son 32 y 34, que suman 66.",
+        [
+            ("34", "Encontró los números correctos pero entregó el mayor."),
+            ("33", "Trató los números como consecutivos comunes, con diferencia 1."),
+            ("64", "Despejó el 2 pero no dividió por el coeficiente."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "Si 3x + 2y = 12 e y = 3, ¿cuál es el valor de x?",
+        "x = 2",
+        "Con el valor de y conocido, la ecuación queda con una sola incógnita.\n\n"
+        "1) Reemplaza y por 3: 3x + 2 · 3 = 12.\n"
+        "2) Calcula: 3x + 6 = 12.\n"
+        "3) Resta 6: 3x = 6.\n"
+        "4) Divide por 3: x = 2. Verifica: 3 · 2 + 2 · 3 = 6 + 6 = 12.",
+        [
+            ("x = 6", "Despejó el 6 pero no dividió por el coeficiente 3."),
+            ("x = 3", "Reemplazó el valor en el término equivocado."),
+            ("x = 4", "Ignoró el término 2y al despejar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "¿Cuál es la solución de (2x − 1)/4 = (x + 3)/3?",
+        "x = 7,5",
+        "Con una fracción a cada lado, se multiplica en cruz.\n\n"
+        "1) Multiplica en cruz: 3(2x − 1) = 4(x + 3).\n"
+        "2) Distribuye: 6x − 3 = 4x + 12.\n"
+        "3) Resta 4x y suma 3: 2x = 15.\n"
+        "4) Divide por 2: x = 7,5. Verifica: (15 − 1)/4 = 3,5 y (7,5 + 3)/3 = 3,5.",
+        [
+            ("x = 15", "Agrupó correctamente pero no dividió por el coeficiente final."),
+            ("x = 4", "Multiplicó en cruz sin distribuir sobre los términos numéricos."),
+            ("x = 2", "Igualó numeradores entre sí y denominadores entre sí."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "Ana tiene el triple de la edad de Beto. Juntos suman 48 años. ¿Cuántos años tiene Beto?",
+        "12 años",
+        "Conviene llamar incógnita a la cantidad menor.\n\n"
+        "1) Llama b a la edad de Beto. La de Ana es 3b.\n"
+        "2) La suma es 48: b + 3b = 48.\n"
+        "3) Reduce: 4b = 48.\n"
+        "4) Divide por 4: b = 12. Ana tiene 36, y 12 + 36 = 48. Correcto.",
+        [
+            ("36 años", "Calculó la edad de Ana en lugar de la de Beto."),
+            ("16 años", "Dividió 48 por 3 en vez de por la suma de las partes."),
+            ("24 años", "Repartió la suma en dos partes iguales, ignorando que una es el triple de la otra."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "¿Cuál es el conjunto solución de la inecuación (x + 5)/2 ≤ x − 1?",
+        "x ≥ 7",
+        "Primero se elimina el denominador y después se agrupa.\n\n"
+        "1) Multiplica ambos lados por 2, que es positivo, así que el sentido no "
+        "cambia: x + 5 ≤ 2(x − 1).\n"
+        "2) Distribuye: x + 5 ≤ 2x − 2.\n"
+        "3) Resta x y suma 2: 7 ≤ x.\n"
+        "4) Escrito con la incógnita a la izquierda, eso es x ≥ 7. Comprueba con "
+        "x = 7: a la izquierda 6 y a la derecha 6.",
+        [
+            ("x ≤ 7", "Dio vuelta la desigualdad al reescribirla con la x a la izquierda."),
+            ("x ≥ 3", "Multiplicó por 2 solo el lado izquierdo."),
+            ("x ≥ 1", "Distribuyó el 2 solo sobre la x y no sobre el −1."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "Un número más su tercera parte es igual a 32. ¿Cuál es el número?",
+        "24",
+        "Se plantea la ecuación con la fracción y se elimina el denominador.\n\n"
+        "1) Llama n al número. Su tercera parte es n/3.\n"
+        "2) La ecuación es n + n/3 = 32.\n"
+        "3) Multiplica todo por 3: 3n + n = 96, o sea 4n = 96.\n"
+        "4) Divide por 4: n = 24. Verifica: 24 + 8 = 32. Correcto.",
+        [
+            ("96", "Multiplicó por 3 pero no dividió por el coeficiente 4."),
+            ("10,7", "Dividió 32 por 3, respondiendo cuál es la tercera parte."),
+            ("8", "Calculó la tercera parte del número en lugar del número mismo."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "¿Cuál es la solución de 5(x − 2) − 3(x + 1) = 7?",
+        "x = 10",
+        "Hay que distribuir los dos paréntesis cuidando el signo del segundo.\n\n"
+        "1) Primer paréntesis: 5x − 10.\n"
+        "2) Segundo paréntesis: el −3 multiplica a ambos términos, dando −3x − 3.\n"
+        "3) Junta y reduce: 5x − 10 − 3x − 3 = 2x − 13. La ecuación es 2x − 13 = 7.\n"
+        "4) Suma 13 y divide por 2: 2x = 20, entonces x = 10. Verifica: "
+        "5 · 8 − 3 · 11 = 40 − 33 = 7.",
+        [
+            ("x = 7", "No cambió el signo del +1 al distribuir el −3, obteniendo 2x − 7."),
+            ("x = 20", "Agrupó bien pero no dividió por el coeficiente final."),
+            ("x = −3", "Restó el 13 en lugar de sumarlo al despejar."),
+        ],
+    ),
+    _q(
+        "alg_lineal", "dificil",
+        "Si al doble de un número se le resta 9, se obtiene el mismo número aumentado en 4. ¿Cuál es el número?",
+        "13",
+        "Ambos lados de la ecuación describen la misma cantidad de formas distintas.\n\n"
+        "1) Llama n al número. 'El doble menos 9' es 2n − 9.\n"
+        "2) 'El mismo número aumentado en 4' es n + 4.\n"
+        "3) Iguala: 2n − 9 = n + 4.\n"
+        "4) Resta n y suma 9: n = 13. Verifica: el doble de 13 menos 9 es 17, y "
+        "13 + 4 también es 17.",
+        [
+            ("5", "Restó el 4 en lugar de sumarlo al despejar."),
+            ("26", "Calculó el doble del número en lugar del número."),
+            ("2,5", "Sumó los términos con n en vez de restarlos al agrupar."),
+        ],
+    ),
+    # ---------- alg_sistemas ----------
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema x + y = 9 ; x − y = 3?",
+        "x = 6, y = 3",
+        "Cuando una incógnita aparece sumando en una ecuación y restando en la otra, "
+        "conviene sumar ambas ecuaciones.\n\n"
+        "1) Suma las dos ecuaciones término a término: (x + y) + (x − y) = 9 + 3. "
+        "Las y se cancelan y queda 2x = 12.\n"
+        "2) Divide por 2: x = 6.\n"
+        "3) Reemplaza en la primera ecuación: 6 + y = 9, entonces y = 3.\n"
+        "4) Verifica en la segunda: 6 − 3 = 3. Correcto.",
+        [
+            ("x = 3, y = 6", "Intercambió los valores de las incógnitas al final."),
+            ("x = 12, y = 3", "Sumó las ecuaciones pero no dividió por 2 al despejar."),
+            ("x = 4,5, y = 4,5", "Repartió el 9 en partes iguales, ignorando la segunda ecuación."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema x + y = 20 ; x = 3y?",
+        "x = 15, y = 5",
+        "Cuando una incógnita ya está despejada, lo más rápido es sustituir.\n\n"
+        "1) La segunda ecuación dice que x vale 3y. Reemplázalo en la primera: "
+        "3y + y = 20.\n"
+        "2) Reduce: 4y = 20.\n"
+        "3) Divide por 4: y = 5.\n"
+        "4) Vuelve a la sustitución: x = 3 · 5 = 15. Verifica: 15 + 5 = 20.",
+        [
+            ("x = 5, y = 15", "Intercambió los valores: x debe ser el triple, no la tercera parte."),
+            ("x = 10, y = 10", "Repartió el total en partes iguales, ignorando la relación de triple."),
+            ("x = 6,7, y = 13,3", "Dividió 20 por 3 en lugar de por la suma de las partes."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema x + y = 8 ; 2x + y = 13?",
+        "x = 5, y = 3",
+        "Como la y tiene el mismo coeficiente en ambas ecuaciones, conviene "
+        "restarlas.\n\n"
+        "1) Resta la primera de la segunda: (2x + y) − (x + y) = 13 − 8. Las y se "
+        "cancelan y queda x = 5.\n"
+        "2) Reemplaza en la primera: 5 + y = 8, entonces y = 3.\n"
+        "3) Verifica en la segunda: 2 · 5 + 3 = 13. Correcto.",
+        [
+            ("x = 3, y = 5", "Intercambió los valores de las incógnitas."),
+            ("x = 21, y = −13", "Sumó las ecuaciones en lugar de restarlas, sin cancelar nada."),
+            ("x = 5, y = 8", "Encontró bien la x pero no la reemplazó para calcular la y."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema y = 2x ; x + y = 15?",
+        "x = 5, y = 10",
+        "La primera ecuación entrega la y ya despejada, así que se sustituye.\n\n"
+        "1) Reemplaza y por 2x en la segunda: x + 2x = 15.\n"
+        "2) Reduce: 3x = 15.\n"
+        "3) Divide por 3: x = 5.\n"
+        "4) Calcula la y: y = 2 · 5 = 10. Verifica: 5 + 10 = 15.",
+        [
+            ("x = 10, y = 5", "Intercambió los valores: la y debe ser el doble de la x."),
+            ("x = 7,5, y = 15", "Repartió el total en dos partes iguales, ignorando la relación de doble."),
+            ("x = 15, y = 30", "Usó el total como valor de x sin resolver el sistema."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "La suma de dos números es 24 y su diferencia es 6. ¿Cuáles son los números, del mayor al menor?",
+        "15 y 9",
+        "Se plantea un sistema con la suma y la diferencia.\n\n"
+        "1) Llama x al mayor e y al menor: x + y = 24 y x − y = 6.\n"
+        "2) Suma las dos ecuaciones: 2x = 30, entonces x = 15.\n"
+        "3) Reemplaza: 15 + y = 24, entonces y = 9.\n"
+        "4) Verifica: suman 24 y se diferencian en 6. Correcto.",
+        [
+            ("18 y 6", "Tomó la diferencia como si fuera directamente el número menor."),
+            ("12 y 12", "Repartió la suma en partes iguales, ignorando la diferencia."),
+            ("16 y 8", "Buscó números que se diferenciaran en 8 en lugar de en 6."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 3x + y = 14 ; x + y = 6?",
+        "x = 4, y = 2",
+        "La y tiene el mismo coeficiente en ambas ecuaciones, así que se eliminan "
+        "restando.\n\n"
+        "1) Resta la segunda de la primera: (3x + y) − (x + y) = 14 − 6. Queda "
+        "2x = 8.\n"
+        "2) Divide por 2: x = 4.\n"
+        "3) Reemplaza en la segunda: 4 + y = 6, entonces y = 2.\n"
+        "4) Verifica en la primera: 3 · 4 + 2 = 14. Correcto.",
+        [
+            ("x = 8, y = −2", "Restó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 2, y = 4", "Intercambió los valores de las incógnitas."),
+            ("x = 5, y = 1", "Sumó las ecuaciones en lugar de restarlas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 2x + 3y = 16 ; x − y = 3?",
+        "x = 5, y = 2",
+        "Conviene despejar de la ecuación más simple y sustituir.\n\n"
+        "1) De la segunda ecuación: x = y + 3.\n"
+        "2) Reemplaza en la primera: 2(y + 3) + 3y = 16.\n"
+        "3) Distribuye y reduce: 2y + 6 + 3y = 16, o sea 5y = 10, entonces y = 2.\n"
+        "4) Calcula la x: x = 2 + 3 = 5. Verifica: 2 · 5 + 3 · 2 = 16.",
+        [
+            ("x = 2, y = 5", "Intercambió los valores de las incógnitas."),
+            ("x = 8, y = 5", "Despejó x = y − 3 en vez de x = y + 3, cambiando el signo."),
+            ("x = 3, y = 0", "Tomó la diferencia de la segunda ecuación como valor directo de x."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 4x − y = 10 ; 2x + y = 8?",
+        "x = 3, y = 2",
+        "La y aparece restando en una ecuación y sumando en la otra: se suman.\n\n"
+        "1) Suma las dos ecuaciones: (4x − y) + (2x + y) = 10 + 8. Las y se cancelan "
+        "y queda 6x = 18.\n"
+        "2) Divide por 6: x = 3.\n"
+        "3) Reemplaza en la segunda: 2 · 3 + y = 8, entonces y = 2.\n"
+        "4) Verifica en la primera: 4 · 3 − 2 = 10. Correcto.",
+        [
+            ("x = 18, y = 2", "Sumó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 1, y = 6", "Restó las ecuaciones en lugar de sumarlas, sin cancelar la y."),
+            ("x = 2, y = 3", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema x + 2y = 11 ; 3x − 2y = 9?",
+        "x = 5, y = 3",
+        "Los términos en y son opuestos, así que sumando se eliminan.\n\n"
+        "1) Suma ambas ecuaciones: (x + 2y) + (3x − 2y) = 11 + 9. Queda 4x = 20.\n"
+        "2) Divide por 4: x = 5.\n"
+        "3) Reemplaza en la primera: 5 + 2y = 11, entonces 2y = 6 e y = 3.\n"
+        "4) Verifica en la segunda: 3 · 5 − 2 · 3 = 9. Correcto.",
+        [
+            ("x = 20, y = 3", "Sumó las ecuaciones pero olvidó dividir por 4."),
+            ("x = 5, y = 6", "Despejó 2y = 6 y no dividió por 2 para obtener la y."),
+            ("x = 3, y = 5", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "En una librería, 2 cuadernos y 3 lápices cuestan $4.300, mientras que 1 cuaderno y 2 lápices cuestan $2.400. ¿Cuánto cuesta un cuaderno?",
+        "$1.400",
+        "Cada tipo de artículo es una incógnita.\n\n"
+        "1) Llama c al precio del cuaderno y l al del lápiz: 2c + 3l = 4.300 y "
+        "c + 2l = 2.400.\n"
+        "2) De la segunda ecuación despeja c = 2.400 − 2l.\n"
+        "3) Reemplaza en la primera: 2(2.400 − 2l) + 3l = 4.300, o sea "
+        "4.800 − 4l + 3l = 4.300. Queda −l = −500, entonces l = 500.\n"
+        "4) Calcula el cuaderno: c = 2.400 − 2 · 500 = 1.400. Verifica: "
+        "2 · 1.400 + 3 · 500 = 4.300.",
+        [
+            ("$500", "Entregó el precio del lápiz en lugar del cuaderno."),
+            ("$1.900", "Restó los dos totales sin considerar las cantidades de cada artículo."),
+            ("$2.150", "Dividió el primer total por 2, como si los 4.300 fueran solo cuadernos."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 5x + 2y = 24 ; 3x − 2y = 8?",
+        "x = 4, y = 2",
+        "Los términos en y son opuestos, así que se eliminan sumando.\n\n"
+        "1) Suma ambas ecuaciones: 8x = 32.\n"
+        "2) Divide por 8: x = 4.\n"
+        "3) Reemplaza en la primera: 5 · 4 + 2y = 24, o sea 20 + 2y = 24, entonces "
+        "2y = 4 e y = 2.\n"
+        "4) Verifica en la segunda: 3 · 4 − 2 · 2 = 8. Correcto.",
+        [
+            ("x = 32, y = 2", "Sumó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 4, y = 4", "Despejó 2y = 4 y no dividió por 2."),
+            ("x = 2, y = 4", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "En un estacionamiento hay autos y motos. En total se cuentan 20 vehículos y 70 ruedas. ¿Cuántos autos hay?",
+        "15 autos",
+        "Se plantea una ecuación por vehículos y otra por ruedas.\n\n"
+        "1) Llama a a los autos y m a las motos: a + m = 20.\n"
+        "2) Cada auto tiene 4 ruedas y cada moto 2: 4a + 2m = 70.\n"
+        "3) De la primera, m = 20 − a. Reemplaza: 4a + 2(20 − a) = 70, o sea "
+        "4a + 40 − 2a = 70. Queda 2a = 30.\n"
+        "4) Divide por 2: a = 15. Hay 15 autos y 5 motos, que suman "
+        "60 + 10 = 70 ruedas.",
+        [
+            ("5 autos", "Entregó la cantidad de motos en lugar de la de autos."),
+            ("10 autos", "Repartió los vehículos en partes iguales, sin usar el dato de las ruedas."),
+            ("17,5 autos", "Dividió las 70 ruedas por 4 sin considerar las motos."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 6x + y = 20 ; 2x + y = 8?",
+        "x = 3, y = 2",
+        "La y tiene igual coeficiente en ambas ecuaciones, así que se elimina "
+        "restando.\n\n"
+        "1) Resta la segunda de la primera: 4x = 12.\n"
+        "2) Divide por 4: x = 3.\n"
+        "3) Reemplaza en la segunda: 2 · 3 + y = 8, entonces y = 2.\n"
+        "4) Verifica en la primera: 6 · 3 + 2 = 20. Correcto.",
+        [
+            ("x = 12, y = 2", "Restó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 3,5, y = 1", "Sumó las ecuaciones en lugar de restarlas."),
+            ("x = 2, y = 3", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema x − y = 5 ; x + y = 11?",
+        "x = 8, y = 3",
+        "Sumando ambas ecuaciones se elimina la y.\n\n"
+        "1) Suma término a término: 2x = 16.\n"
+        "2) Divide por 2: x = 8.\n"
+        "3) Reemplaza en la segunda: 8 + y = 11, entonces y = 3.\n"
+        "4) Verifica en la primera: 8 − 3 = 5. Correcto.",
+        [
+            ("x = 3, y = 8", "Intercambió los valores de las incógnitas."),
+            ("x = 16, y = 3", "Sumó las ecuaciones pero no dividió por 2."),
+            ("x = 5,5, y = 5,5", "Repartió el 11 en partes iguales, ignorando la diferencia."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "¿Cuál es la solución del sistema 3x + 2y = 19 ; 2x + 3y = 16?",
+        "x = 5, y = 2",
+        "Ningún coeficiente se cancela directamente, así que conviene igualarlos "
+        "primero.\n\n"
+        "1) Multiplica la primera por 3 y la segunda por 2: 9x + 6y = 57 y "
+        "4x + 6y = 32.\n"
+        "2) Resta la segunda de la primera: 5x = 25, entonces x = 5.\n"
+        "3) Reemplaza en la primera original: 3 · 5 + 2y = 19, o sea 15 + 2y = 19, "
+        "entonces 2y = 4 e y = 2.\n"
+        "4) Verifica en la segunda: 2 · 5 + 3 · 2 = 16. Correcto.",
+        [
+            ("x = 2, y = 5", "Intercambió los valores de las incógnitas."),
+            ("x = 3,5, y = 3,5", "Sumó ambas ecuaciones y repartió el resultado en partes iguales."),
+            ("x = 25, y = 2", "Eliminó bien una incógnita pero no dividió por el coeficiente resultante."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "¿Cuál es la solución del sistema x/2 + y = 7 ; x + y = 10?",
+        "x = 6, y = 4",
+        "Primero conviene quitar el denominador de la primera ecuación.\n\n"
+        "1) Multiplica la primera ecuación por 2: x + 2y = 14.\n"
+        "2) Resta la segunda: (x + 2y) − (x + y) = 14 − 10. Queda y = 4.\n"
+        "3) Reemplaza en la segunda: x + 4 = 10, entonces x = 6.\n"
+        "4) Verifica en la primera original: 6/2 + 4 = 3 + 4 = 7. Correcto.",
+        [
+            ("x = 4, y = 6", "Intercambió los valores de las incógnitas."),
+            ("x = 3, y = 7", "Trató x/2 como si fuera x, sin eliminar el denominador."),
+            ("x = 14, y = 0", "Multiplicó por 2 solo un término de la primera ecuación."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "De dos números, el mayor excede al menor en 8 y su suma es 34. ¿Cuáles son, del mayor al menor?",
+        "21 y 13",
+        "'Excede en 8' significa que la diferencia entre ambos es 8.\n\n"
+        "1) Llama x al mayor e y al menor: x − y = 8 y x + y = 34.\n"
+        "2) Suma ambas ecuaciones: 2x = 42, entonces x = 21.\n"
+        "3) Reemplaza: 21 + y = 34, entonces y = 13.\n"
+        "4) Verifica: 21 − 13 = 8 y 21 + 13 = 34. Correcto.",
+        [
+            ("26 y 8", "Tomó el 8 como si fuera directamente el número menor."),
+            ("17 y 17", "Repartió la suma en partes iguales, ignorando el exceso."),
+            ("13 y 21", "Encontró los números correctos pero los entregó en el orden inverso."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "¿Cuál es la solución del sistema 4x + 3y = 27 ; 2x − y = 1?",
+        "x = 3, y = 5",
+        "La segunda ecuación permite despejar la y con facilidad.\n\n"
+        "1) De la segunda: y = 2x − 1.\n"
+        "2) Reemplaza en la primera: 4x + 3(2x − 1) = 27.\n"
+        "3) Distribuye y reduce: 4x + 6x − 3 = 27, o sea 10x = 30, entonces x = 3.\n"
+        "4) Calcula la y: y = 2 · 3 − 1 = 5. Verifica: 4 · 3 + 3 · 5 = 27.",
+        [
+            ("x = 5, y = 3", "Intercambió los valores de las incógnitas."),
+            ("x = 2,4, y = 3,8", "Despejó y = 2x + 1, cambiando el signo del término independiente."),
+            ("x = 3, y = 7", "Calculó la y reemplazando en la ecuación equivocada."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "En una función de teatro las entradas de adulto cuestan $5.000 y las de niño $3.000. Se vendieron 40 entradas y se recaudaron $164.000. ¿Cuántas entradas de adulto se vendieron?",
+        "22 entradas",
+        "Una ecuación cuenta entradas y la otra cuenta dinero.\n\n"
+        "1) Llama a a las entradas de adulto y n a las de niño: a + n = 40.\n"
+        "2) Por la recaudación: 5.000a + 3.000n = 164.000.\n"
+        "3) De la primera, n = 40 − a. Reemplaza: 5.000a + 3.000(40 − a) = 164.000, "
+        "o sea 5.000a + 120.000 − 3.000a = 164.000.\n"
+        "4) Queda 2.000a = 44.000, entonces a = 22. Se vendieron 22 de adulto y 18 de "
+        "niño, que recaudan 110.000 + 54.000 = 164.000.",
+        [
+            ("18 entradas", "Entregó la cantidad de entradas de niño en lugar de las de adulto."),
+            ("20 entradas", "Repartió las 40 entradas en partes iguales, sin usar la recaudación."),
+            ("32,8 entradas", "Dividió la recaudación total por 5.000, como si todas fueran de adulto."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es el valor de x − y si x + y = 14 y x − 2y = 2?",
+        "6",
+        "Primero se resuelve el sistema y después se calcula lo que se pide.\n\n"
+        "1) De la primera ecuación: x = 14 − y.\n"
+        "2) Reemplaza en la segunda: (14 − y) − 2y = 2, o sea 14 − 3y = 2.\n"
+        "3) Despeja: 3y = 12, entonces y = 4, y por lo tanto x = 10.\n"
+        "4) La pregunta pide x − y: 10 − 4 = 6.",
+        [
+            ("10", "Entregó el valor de x en lugar de la diferencia pedida."),
+            ("14", "Entregó la suma de las incógnitas en vez de su diferencia."),
+            ("4", "Entregó el valor de y en lugar de la diferencia."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "Si 2x + y = 9 y x + 2y = 9, ¿cuál es el valor de x + y?",
+        "6",
+        "No hace falta resolver el sistema completo: basta con sumar las ecuaciones.\n\n"
+        "1) Suma ambas ecuaciones: (2x + y) + (x + 2y) = 9 + 9, o sea 3x + 3y = 18.\n"
+        "2) Saca factor común 3: 3(x + y) = 18.\n"
+        "3) Divide por 3: x + y = 6.\n"
+        "4) Comprobación: por la simetría del sistema, x = y = 3, y en efecto suman 6.",
+        [
+            ("18", "Sumó las ecuaciones pero no dividió por 3 al factorizar."),
+            ("9", "Entregó el término independiente de una de las ecuaciones."),
+            ("3", "Calculó el valor de una incógnita en lugar de la suma de ambas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema x + y = 12 ; y = x + 4?",
+        "x = 4, y = 8",
+        "La segunda ecuación ya entrega la y despejada.\n\n"
+        "1) Reemplaza y por x + 4 en la primera: x + (x + 4) = 12.\n"
+        "2) Reduce: 2x + 4 = 12, entonces 2x = 8.\n"
+        "3) Divide por 2: x = 4.\n"
+        "4) Calcula la y: y = 4 + 4 = 8. Verifica: 4 + 8 = 12.",
+        [
+            ("x = 8, y = 4", "Intercambió los valores: la y debe ser la mayor por el +4."),
+            ("x = 6, y = 6", "Repartió el total en partes iguales, ignorando la segunda ecuación."),
+            ("x = 8, y = 12", "Usó el total como valor de y sin resolver el sistema."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema 2x + y = 10 ; y = 4?",
+        "x = 3, y = 4",
+        "Una de las incógnitas ya viene dada, así que basta reemplazarla.\n\n"
+        "1) Sustituye y = 4 en la primera ecuación: 2x + 4 = 10.\n"
+        "2) Resta 4: 2x = 6.\n"
+        "3) Divide por 2: x = 3.\n"
+        "4) Verifica: 2 · 3 + 4 = 10. Correcto.",
+        [
+            ("x = 6, y = 4", "Despejó el 4 pero no dividió por el coeficiente 2."),
+            ("x = 5, y = 4", "Dividió el 10 por 2 sin restar antes el valor de y."),
+            ("x = 4, y = 3", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema x + y = 30 ; x − y = 10?",
+        "x = 20, y = 10",
+        "Con una suma y una diferencia, sumar las ecuaciones elimina la y.\n\n"
+        "1) Suma término a término: 2x = 40.\n"
+        "2) Divide por 2: x = 20.\n"
+        "3) Reemplaza en la primera: 20 + y = 30, entonces y = 10.\n"
+        "4) Verifica en la segunda: 20 − 10 = 10. Correcto.",
+        [
+            ("x = 10, y = 20", "Intercambió los valores de las incógnitas."),
+            ("x = 40, y = 10", "Sumó las ecuaciones pero no dividió por 2."),
+            ("x = 15, y = 15", "Repartió la suma en partes iguales, ignorando la diferencia."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema y = x − 3 ; x + y = 17?",
+        "x = 10, y = 7",
+        "La primera ecuación entrega la y en función de x.\n\n"
+        "1) Reemplaza en la segunda: x + (x − 3) = 17.\n"
+        "2) Reduce: 2x − 3 = 17, entonces 2x = 20.\n"
+        "3) Divide por 2: x = 10.\n"
+        "4) Calcula la y: y = 10 − 3 = 7. Verifica: 10 + 7 = 17.",
+        [
+            ("x = 7, y = 10", "Intercambió los valores: la y debe ser la menor por el −3."),
+            ("x = 8,5, y = 8,5", "Repartió el total en partes iguales, ignorando la primera ecuación."),
+            ("x = 20, y = 17", "No dividió por 2 tras agrupar los términos con x."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "facil",
+        "¿Cuál es la solución del sistema 3x = y ; x + y = 16?",
+        "x = 4, y = 12",
+        "La primera ecuación dice que y es el triple de x.\n\n"
+        "1) Reemplaza y por 3x en la segunda: x + 3x = 16.\n"
+        "2) Reduce: 4x = 16.\n"
+        "3) Divide por 4: x = 4.\n"
+        "4) Calcula la y: y = 3 · 4 = 12. Verifica: 4 + 12 = 16.",
+        [
+            ("x = 12, y = 4", "Intercambió los valores: la y es el triple, no la tercera parte."),
+            ("x = 8, y = 8", "Repartió el total en partes iguales, ignorando la relación de triple."),
+            ("x = 5,3, y = 16", "Dividió el total por 3 en lugar de por la suma de las partes."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 2x − y = 7 ; x + y = 8?",
+        "x = 5, y = 3",
+        "La y aparece restando en una ecuación y sumando en la otra: se suman.\n\n"
+        "1) Suma ambas ecuaciones: 3x = 15.\n"
+        "2) Divide por 3: x = 5.\n"
+        "3) Reemplaza en la segunda: 5 + y = 8, entonces y = 3.\n"
+        "4) Verifica en la primera: 2 · 5 − 3 = 7. Correcto.",
+        [
+            ("x = 15, y = 3", "Sumó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 3, y = 5", "Intercambió los valores de las incógnitas."),
+            ("x = 1, y = 7", "Restó las ecuaciones en lugar de sumarlas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 3x + 4y = 26 ; x − 2y = 2?",
+        "x = 6, y = 2",
+        "Conviene despejar de la segunda ecuación y sustituir.\n\n"
+        "1) De la segunda: x = 2y + 2.\n"
+        "2) Reemplaza en la primera: 3(2y + 2) + 4y = 26.\n"
+        "3) Distribuye y reduce: 6y + 6 + 4y = 26, o sea 10y = 20, entonces y = 2.\n"
+        "4) Calcula la x: x = 2 · 2 + 2 = 6. Verifica: 3 · 6 + 4 · 2 = 26.",
+        [
+            ("x = 2, y = 6", "Intercambió los valores de las incógnitas."),
+            ("x = 10, y = 4", "Despejó x = 2y − 2, cambiando el signo del término independiente."),
+            ("x = 26, y = 2", "Encontró bien la y pero no la reemplazó para obtener la x."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 5x − 2y = 11 ; 3x + 2y = 13?",
+        "x = 3, y = 2",
+        "Los términos en y son opuestos: se eliminan sumando.\n\n"
+        "1) Suma ambas ecuaciones: 8x = 24.\n"
+        "2) Divide por 8: x = 3.\n"
+        "3) Reemplaza en la segunda: 3 · 3 + 2y = 13, o sea 9 + 2y = 13, entonces "
+        "2y = 4 e y = 2.\n"
+        "4) Verifica en la primera: 5 · 3 − 2 · 2 = 11. Correcto.",
+        [
+            ("x = 24, y = 2", "Sumó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 3, y = 4", "Despejó 2y = 4 y no dividió por 2."),
+            ("x = 2, y = 3", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema x + 3y = 14 ; 2x − 3y = 1?",
+        "x = 5, y = 3",
+        "Los términos en y son opuestos, así que sumando desaparecen.\n\n"
+        "1) Suma ambas ecuaciones: 3x = 15.\n"
+        "2) Divide por 3: x = 5.\n"
+        "3) Reemplaza en la primera: 5 + 3y = 14, o sea 3y = 9, entonces y = 3.\n"
+        "4) Verifica en la segunda: 2 · 5 − 3 · 3 = 1. Correcto.",
+        [
+            ("x = 15, y = 3", "Sumó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 5, y = 9", "Despejó 3y = 9 y no dividió por 3."),
+            ("x = 3, y = 5", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "En un almacén, 2 kilos de pan y 3 litros de leche cuestan $6.500. Un kilo de pan y un litro de leche cuestan $2.700. ¿Cuánto cuesta un litro de leche?",
+        "$1.100",
+        "Cada producto es una incógnita distinta.\n\n"
+        "1) Llama p al kilo de pan y l al litro de leche: 2p + 3l = 6.500 y "
+        "p + l = 2.700.\n"
+        "2) De la segunda: p = 2.700 − l.\n"
+        "3) Reemplaza en la primera: 2(2.700 − l) + 3l = 6.500, o sea "
+        "5.400 − 2l + 3l = 6.500.\n"
+        "4) Queda 5.400 + l = 6.500, entonces l = 1.100. El pan cuesta 1.600, y "
+        "2 · 1.600 + 3 · 1.100 = 6.500.",
+        [
+            ("$1.600", "Entregó el precio del kilo de pan en lugar del litro de leche."),
+            ("$1.350", "Repartió los $2.700 en partes iguales entre ambos productos."),
+            ("$3.800", "Restó los dos totales sin considerar las cantidades de cada producto."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema 4x + y = 17 ; 2x + y = 11?",
+        "x = 3, y = 5",
+        "La y tiene el mismo coeficiente en ambas ecuaciones, así que se elimina "
+        "restando.\n\n"
+        "1) Resta la segunda de la primera: 2x = 6.\n"
+        "2) Divide por 2: x = 3.\n"
+        "3) Reemplaza en la segunda: 2 · 3 + y = 11, entonces y = 5.\n"
+        "4) Verifica en la primera: 4 · 3 + 5 = 17. Correcto.",
+        [
+            ("x = 6, y = 5", "Restó las ecuaciones pero no dividió por el coeficiente resultante."),
+            ("x = 4,7, y = 14", "Sumó las ecuaciones en lugar de restarlas."),
+            ("x = 5, y = 3", "Intercambió los valores de las incógnitas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "En una granja hay ovejas y patos. Se cuentan 25 cabezas y 80 patas. ¿Cuántos patos hay?",
+        "10 patos",
+        "Una ecuación cuenta cabezas y la otra cuenta patas.\n\n"
+        "1) Llama o a las ovejas y p a los patos: o + p = 25.\n"
+        "2) Las ovejas tienen 4 patas y los patos 2: 4o + 2p = 80.\n"
+        "3) De la primera, o = 25 − p. Reemplaza: 4(25 − p) + 2p = 80, o sea "
+        "100 − 4p + 2p = 80.\n"
+        "4) Queda 100 − 2p = 80, entonces 2p = 20 y p = 10. Hay 15 ovejas y 10 patos: "
+        "60 + 20 = 80 patas.",
+        [
+            ("15 patos", "Entregó la cantidad de ovejas en lugar de la de patos."),
+            ("40 patos", "Dividió las 80 patas por 2 sin considerar a las ovejas."),
+            ("12,5 patos", "Repartió las cabezas en partes iguales, sin usar el dato de las patas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "¿Cuál es la solución del sistema 2x + 3y = 17 ; 5x − 2y = 14?",
+        "x = 4, y = 3",
+        "Ningún coeficiente se cancela solo, así que hay que igualarlos primero.\n\n"
+        "1) Multiplica la primera por 2 y la segunda por 3: 4x + 6y = 34 y "
+        "15x − 6y = 42.\n"
+        "2) Suma ambas: 19x = 76, entonces x = 4.\n"
+        "3) Reemplaza en la primera original: 2 · 4 + 3y = 17, o sea 8 + 3y = 17, "
+        "entonces 3y = 9 e y = 3.\n"
+        "4) Verifica en la segunda: 5 · 4 − 2 · 3 = 14. Correcto.",
+        [
+            ("x = 3, y = 4", "Intercambió los valores de las incógnitas."),
+            ("x = 76, y = 3", "Eliminó bien una incógnita pero no dividió por el coeficiente resultante."),
+            ("x = 4, y = 9", "Despejó 3y = 9 y no dividió por 3."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "¿Cuál es la solución del sistema x/3 + y = 5 ; x + y = 9?",
+        "x = 6, y = 3",
+        "Primero se elimina el denominador de la primera ecuación.\n\n"
+        "1) Multiplica la primera por 3: x + 3y = 15.\n"
+        "2) Resta la segunda: (x + 3y) − (x + y) = 15 − 9, o sea 2y = 6.\n"
+        "3) Divide por 2: y = 3.\n"
+        "4) Reemplaza en la segunda: x + 3 = 9, entonces x = 6. Verifica en la "
+        "primera original: 6/3 + 3 = 2 + 3 = 5.",
+        [
+            ("x = 3, y = 6", "Intercambió los valores de las incógnitas."),
+            ("x = 4, y = 5", "Trató x/3 como si fuera x, sin eliminar el denominador."),
+            ("x = 15, y = 0", "Multiplicó por 3 solo un término de la primera ecuación."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "La suma de dos números es 40 y uno de ellos es 4 veces el otro. ¿Cuáles son, del mayor al menor?",
+        "32 y 8",
+        "Conviene llamar incógnita al número menor.\n\n"
+        "1) Llama y al menor. El mayor es 4y.\n"
+        "2) La suma es 40: y + 4y = 40.\n"
+        "3) Reduce: 5y = 40, entonces y = 8.\n"
+        "4) El mayor es 4 · 8 = 32. Verifica: 32 + 8 = 40 y 32 es 4 veces 8.",
+        [
+            ("8 y 32", "Encontró los números correctos pero los entregó en el orden inverso."),
+            ("20 y 20", "Repartió la suma en partes iguales, ignorando la relación."),
+            ("30 y 10", "Dividió el total por 4 en lugar de por la suma de las partes."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "¿Cuál es la solución del sistema 5x + 3y = 29 ; 2x − y = 5?",
+        "x = 4, y = 3",
+        "La segunda ecuación permite despejar la y directamente.\n\n"
+        "1) De la segunda: y = 2x − 5.\n"
+        "2) Reemplaza en la primera: 5x + 3(2x − 5) = 29.\n"
+        "3) Distribuye y reduce: 5x + 6x − 15 = 29, o sea 11x = 44, entonces x = 4.\n"
+        "4) Calcula la y: y = 2 · 4 − 5 = 3. Verifica: 5 · 4 + 3 · 3 = 29.",
+        [
+            ("x = 3, y = 4", "Intercambió los valores de las incógnitas."),
+            ("x = 4, y = 13", "Despejó y = 2x + 5, cambiando el signo del término independiente."),
+            ("x = 44, y = 3", "Agrupó bien pero no dividió por el coeficiente resultante."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "En un cine, 3 entradas de adulto y 2 de niño cuestan $19.000. Una entrada de adulto y una de niño cuestan $7.000. ¿Cuánto cuesta una entrada de niño?",
+        "$2.000",
+        "Cada tipo de entrada es una incógnita.\n\n"
+        "1) Llama a a la entrada de adulto y n a la de niño: 3a + 2n = 19.000 y "
+        "a + n = 7.000.\n"
+        "2) De la segunda: a = 7.000 − n.\n"
+        "3) Reemplaza en la primera: 3(7.000 − n) + 2n = 19.000, o sea "
+        "21.000 − 3n + 2n = 19.000.\n"
+        "4) Queda 21.000 − n = 19.000, entonces n = 2.000. La de adulto cuesta 5.000, "
+        "y 3 · 5.000 + 2 · 2.000 = 19.000.",
+        [
+            ("$5.000", "Entregó el precio de la entrada de adulto en lugar de la de niño."),
+            ("$3.500", "Repartió los $7.000 en partes iguales entre ambos tipos de entrada."),
+            ("$12.000", "Restó los dos totales sin considerar las cantidades de cada tipo."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es el valor de x · y si x + y = 9 y x − y = 1?",
+        "20",
+        "Primero se resuelve el sistema y después se calcula el producto.\n\n"
+        "1) Suma ambas ecuaciones: 2x = 10, entonces x = 5.\n"
+        "2) Reemplaza en la primera: 5 + y = 9, entonces y = 4.\n"
+        "3) La pregunta pide el producto: 5 · 4 = 20.\n"
+        "4) Verifica el sistema: 5 + 4 = 9 y 5 − 4 = 1. Correcto.",
+        [
+            ("9", "Entregó la suma de las incógnitas en lugar de su producto."),
+            ("5", "Entregó el valor de x en vez del producto pedido."),
+            ("1", "Entregó la diferencia de las incógnitas en lugar del producto."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "dificil",
+        "Si 3x + y = 11 y x + 3y = 9, ¿cuál es el valor de x + y?",
+        "5",
+        "No hace falta resolver el sistema completo: basta sumar las ecuaciones.\n\n"
+        "1) Suma ambas: (3x + y) + (x + 3y) = 11 + 9, o sea 4x + 4y = 20.\n"
+        "2) Saca factor común 4: 4(x + y) = 20.\n"
+        "3) Divide por 4: x + y = 5.\n"
+        "4) Comprobación: resolviendo el sistema se obtiene x = 3 e y = 2, que en "
+        "efecto suman 5.",
+        [
+            ("20", "Sumó las ecuaciones pero no dividió por 4 al factorizar."),
+            ("11", "Entregó el término independiente de una de las ecuaciones."),
+            ("3", "Calculó el valor de una incógnita en lugar de la suma de ambas."),
+        ],
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "¿Cuál es la solución del sistema x + y = 18 ; x = y + 6?",
+        "x = 12, y = 6",
+        "La segunda ecuación entrega la x en función de y.\n\n"
+        "1) Reemplaza en la primera: (y + 6) + y = 18.\n"
+        "2) Reduce: 2y + 6 = 18, entonces 2y = 12.\n"
+        "3) Divide por 2: y = 6.\n"
+        "4) Calcula la x: x = 6 + 6 = 12. Verifica: 12 + 6 = 18 y 12 − 6 = 6.",
+        [
+            ("x = 6, y = 12", "Intercambió los valores: la x debe ser la mayor por el +6."),
+            ("x = 9, y = 9", "Repartió el total en partes iguales, ignorando la segunda ecuación."),
+            ("x = 24, y = 18", "No dividió por 2 tras agrupar los términos con y."),
+        ],
+    ),
 ]
