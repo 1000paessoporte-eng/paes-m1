@@ -104,3 +104,8 @@ dev empieza a devolver 404 en sus chunks.
 - `packages/types` — tipos TS generados desde el OpenAPI de FastAPI.
 - El concepto `subject`: M2 no duplica los nodos de M1, los reutiliza. El banco
   de M2 es M1 ∪ M2 (`SUBJECT_INCLUDES` en `exam_focus/service.py`).
+
+## 7. Contacto
+
+Dudas de infraestructura o credenciales: ver `HANDOFF.md` y, para los valores
+reales, `HANDOFF-PRIVADO.md` (fuera de git, se pide al otro socio).
