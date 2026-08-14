@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { ApiError, resetPassword } from "@/lib/api";
 
+
 function ResetForm() {
   const token = useSearchParams().get("token") ?? "";
   const [password, setPassword] = useState("");

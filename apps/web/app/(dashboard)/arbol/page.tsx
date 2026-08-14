@@ -5,6 +5,12 @@ import { ApiError, getRecommendedNode, getSkillTree } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { SkillTreeView } from "@/components/skill-tree/skill-tree-view";
 
+export const metadata = {
+  title: "Árbol de Habilidades",
+  description: "El temario como nodos que se desbloquean a medida que dominas cada tema.",
+};
+
+
 export default async function ArbolHabilidadesPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 

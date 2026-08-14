@@ -4,6 +4,12 @@ import { ApiError, getAnalyticsSummary, getMe, getSkillTree, listExamAttempts } 
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ProfileForm } from "@/components/profile/profile-form";
 
+export const metadata = {
+  title: "Mi perfil",
+  description: "Tus datos de cuenta y tus estadísticas.",
+};
+
+
 const DATE_FMT = new Intl.DateTimeFormat("es-CL", { day: "2-digit", month: "long", year: "numeric" });
 
 export default async function PerfilPage() {

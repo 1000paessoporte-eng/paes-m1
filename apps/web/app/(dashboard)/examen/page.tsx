@@ -4,6 +4,12 @@ import { ApiError, getExamOptions, getRepaso, listExamAttempts } from "@/lib/api
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ExamRunner } from "@/components/exam/exam-runner";
 
+export const metadata = {
+  title: "Modo Ensayo",
+  description: "Arma un ensayo con el tiempo proporcional al de la prueba real.",
+};
+
+
 export default async function ModoEnsayoPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 

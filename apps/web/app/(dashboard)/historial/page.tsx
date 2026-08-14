@@ -4,6 +4,12 @@ import { ApiError, listExamAttempts } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { HistoryView } from "@/components/history/history-view";
 
+export const metadata = {
+  title: "Mi progreso",
+  description: "Todos tus ensayos con la evolución de tu puntaje.",
+};
+
+
 export default async function HistorialPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
