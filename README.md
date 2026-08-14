@@ -27,15 +27,18 @@
 ## 1. Qué es
 
 Plataforma web chilena para preparar la **PAES** (Prueba de Acceso a la
-Educación Superior). Hoy cubre **Competencia Matemática M1 y M2**; el selector
-de pruebas ya contempla las cinco (Lectora, M1, M2, Historia, Ciencias) y las
-tres restantes aparecen como "Próximamente" hasta tener banco de preguntas.
+Educación Superior). Cubre **las cinco pruebas**: Competencia Lectora,
+Competencia Matemática M1 y M2, Historia y Ciencias Sociales, y Ciencias. Cada
+una con su tabla de puntaje oficial DEMRE, su duración y sus ejes propios.
+
+El banco no está parejo entre pruebas: matemática tiene 282 preguntas y las
+otras tres recién empiezan. Ver "Contenido actual".
 
 No es un banco de preguntas plano. Las piezas:
 
 | Feature | Estado | Qué hace |
 |---|---|---|
-| **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (M1/M2), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
+| **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (las cinco), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
 | **Puntaje y revisión** | 🟢 Funcional | Puntaje 100-1000 con tablas oficiales DEMRE, desglose por eje/dificultad/nodo, desarrollo paso a paso de cada pregunta. |
 | **Árbol de Habilidades** | 🟢 Funcional (solo M1 en la UI) | Temario como grafo de nodos con prerequisitos y desbloqueo por dominio. |
 | **Práctica por nodo** | 🟢 Funcional | `/practicar/[code]`: una pregunta a la vez con corrección inmediata. |
@@ -47,11 +50,25 @@ No es un banco de preguntas plano. Las piezas:
 
 ### Contenido actual
 
-- **26 nodos** de habilidad: 15 de M1 + 11 exclusivos de M2.
-- **144 preguntas**: 111 de M1 + 33 exclusivas de M2.
+- **47 nodos** de habilidad, repartidos entre las cinco pruebas.
+- **314 preguntas**: 195 de M1, 87 exclusivas de M2, 10 de Lectora, 13 de
+  Ciencias, 9 de Historia.
+- **5 textos fuente** (`reading_passages`): tres para Competencia Lectora y dos
+  para Historia. Varias preguntas comparten un mismo texto, igual que en la
+  prueba real.
 - M2 reutiliza el banco de M1 (`SUBJECT_INCLUDES` en `exam_focus/service.py`),
   porque el temario DEMRE dice que M2 evalúa *"todos los conocimientos de M1,
-  además de"* contenido propio. Por eso el pool de M2 es M1 ∪ M2 = 144.
+  además de"* contenido propio. Por eso el pool de M2 es M1 ∪ M2 = 282.
+
+**Los bancos nuevos son chicos y hay que decirlo:** un ensayo oficial de
+Historia son 65 preguntas y hay 9. Sirven para probar el flujo completo, no
+todavía para practicar en serio.
+
+**Qué NO cubre el banco de Historia y Ciencias:** preguntas de memoria pura.
+Las de Historia y Formación ciudadana se apoyan en fuentes escritas por el
+proyecto y se responden analizándolas — un test lo exige
+(`test_historia_no_afirma_hechos_sin_fuente`). Publicar contenido factual sin
+que lo revise un profesor rompería la primera regla del proyecto.
 
 Todo el contenido vive en `apps/api/src/paes_api/seed_data.py` y se carga con
 `scripts/seed.py` (idempotente: solo inserta preguntas cuyo `stem` no exista).
@@ -353,12 +370,13 @@ Ordenado por impacto:
 
 1. **Pasarela de pago** (Webpay/Transbank, Flow o MercadoPago). Sin esto los
    planes Pro y Colegios no pueden existir de verdad.
-2. **Seguir ampliando el banco de preguntas.** Un ensayo M1 completo son 65 de
-   las 111 disponibles: todavía hay poco margen antes de repetir.
-3. **Las otras tres pruebas.** Ojo: Competencia Lectora **no encaja** en el
-   modelo actual de nodos por eje — necesita pasajes de lectura + preguntas
-   asociadas, o sea un diseño de datos distinto. Historia y Ciencias sí encajan
-   pero requieren contenido factual verificado.
+2. **Seguir ampliando el banco de preguntas**, sobre todo Lectora, Ciencias e
+   Historia: entre las tres suman 32 preguntas y cada ensayo oficial pide 60 o
+   más. Matemática está mejor (282), pero un ensayo M1 son 65.
+3. **Contenido factual con revisión de profesor.** Historia y Biología de
+   memoria siguen fuera del banco a propósito: ningún script puede verificar
+   que una afirmación histórica sea cierta. Ese tramo entra cuando alguien con
+   la formación lo revise.
 4. **UI del Árbol de Habilidades para M2** (hoy `/arbol` es solo M1).
 5. **Motor de recomendación real.** Hoy `get_recommended_node()` es un ranking
    ponderado con pandas (accuracy 60% + impacto 30% + nunca intentado 40%), no
