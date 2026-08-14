@@ -49,8 +49,11 @@ export function PanelDashboard({
   // Solo el nombre de pila: "Hola, Juan" se lee mejor que el nombre completo.
   const nombre = user.name.split(" ")[0];
 
+  // El gris del panel va translúcido para que la hoja de cuaderno del fondo se
+  // vea a través; las tarjetas sí son opacas y tapan la cuadrícula, que es lo
+  // que mantiene legibles los números.
   return (
-    <main className="min-h-[calc(100vh-3.5rem)] flex-1 bg-surface">
+    <main className="min-h-[calc(100vh-3.5rem)] flex-1 bg-surface/70">
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {/* Bienvenida + acción principal */}
@@ -104,10 +107,10 @@ function Bienvenida({
   precision: number | null;
   tiempoTotal: number;
 }) {
+  // Sin trama interna: el fondo del sitio ya es una hoja de cuaderno, y dos
+  // patrones distintos superpuestos se leen como ruido.
   return (
     <section className="card-panel relative overflow-hidden p-6 sm:p-8">
-      <div className="bg-dot-grid pointer-events-none absolute inset-0 opacity-60" />
-
       <div className="relative">
         <p className="inline-block rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
           Preparación PAES · Admisión 2027
