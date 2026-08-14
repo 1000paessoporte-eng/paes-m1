@@ -410,6 +410,57 @@ COMPROBACIONES: dict[str, str] = {
     "(3, −2) y (7, 6)": str((6 - (-2)) // (7 - 3)),
     "y = ax² + 2 pasa por el punto (2, 14)": str((14 - 2) // 2**2),
     "f(x) = x² − 4x": str((-1) ** 2 - 4 * (-1)),
+    # ================= LOTE 6 — eje NÚMEROS =================
+    "1/3 + 2/5": str(Fraction(1, 3) + Fraction(2, 5)),
+    "7/10 − 2/5": str(Fraction(7, 10) - Fraction(2, 5)),
+    "3/8 × 4/9": str(Fraction(3, 8) * Fraction(4, 9)),
+    "(5/6) ÷ (5/12)": str(Fraction(5, 6) / Fraction(5, 12)),
+    "2/3 + 1/6 + 1/2": str(Fraction(2, 3) + Fraction(1, 6) + Fraction(1, 2)),
+    "3/4 de taza de azúcar": str(Fraction(3, 4) * Fraction(1, 2)),
+    "1 − (2/7 + 1/3)": str(1 - (Fraction(2, 7) + Fraction(1, 3))),
+    "(3/4) × (8/15)": str(Fraction(3, 4) * Fraction(8, 15)),
+    "5/2 ÷ 3/4": str(Fraction(5, 2) / Fraction(3, 4)),
+    "estanque está lleno hasta 5/6": str(Fraction(5, 6) - Fraction(2, 5) * Fraction(5, 6)),
+    "3 − 2/5 × 5/6": str(3 - Fraction(2, 5) * Fraction(5, 6)),
+    "albañil avanza 3/8": str(Fraction(3, 8) + Fraction(1, 4)),
+    "(1/2 + 1/3) ÷ (1/2 − 1/3)": str(
+        (Fraction(1, 2) + Fraction(1, 3)) / (Fraction(1, 2) - Fraction(1, 3))
+    ),
+    "m = 3/4 y n = 2/3": str(
+        Fraction(3, 4) * Fraction(2, 3) + Fraction(3, 4) / Fraction(2, 3)
+    ),
+    "(2/3)² + 1/9": str(Fraction(2, 3) ** 2 + Fraction(1, 9)),
+    "depósito está lleno hasta sus 3/5": str(1 - (Fraction(3, 5) + Fraction(2, 7))),
+    "dos fracciones es mayor: 5/8 o 7/12": (
+        "5/8" if Fraction(5, 8) > Fraction(7, 12) else "7/12"
+    ),
+    "Ordena de menor a mayor las fracciones": ", ".join(
+        str(f) for f in sorted([Fraction(2, 3), Fraction(3, 5), Fraction(7, 10)])
+    ),
+    "(3/4 − 1/6) ÷ (1/2 + 1/3)": str(
+        (Fraction(3, 4) - Fraction(1, 6)) / (Fraction(1, 2) + Fraction(1, 3))
+    ),
+    "3/4 de kilo de café en 6 bolsas": str(Fraction(3, 4) / 6),
+    "el valor de 4³": str(4**3),
+    "√100 + √9": str(int(sqrt(100) + sqrt(9))),
+    "2⁵ · 2²": str(2**5 * 2**2),
+    "(2²)⁴": str((2**2) ** 4),
+    "10⁻²": str(Fraction(1, 10**2)),
+    "√64 · √4": str(int(sqrt(64) * sqrt(4))),
+    "(4³ · 4²) ÷ 4⁴": str(4**3 * 4**2 // 4**4),
+    "√72 en su forma más simple": "6" if isclose(sqrt(72), 6 * sqrt(2)) else "?",
+    "(5²)³ ÷ 5⁴": str((5**2) ** 3 // 5**4),
+    "3⁰ + 2⁻¹": str(1 + Fraction(1, 2)),
+    "√98 − √50": "2" if isclose(sqrt(98) - sqrt(50), 2 * sqrt(2)) else "?",
+    "plaza cuadrada tiene un área de 121 m²": f"{int(sqrt(121))} m",
+    "2⁻³ · 2⁵": str(2 ** (-3 + 5)),
+    "5ˣ = 625": str(4 if 5**4 == 625 else None),
+    "(3⁻² · 3⁵) ÷ 3²": str(3 ** (-2 + 5 - 2)),
+    "√(5² + 12²)": str(int(sqrt(5**2 + 12**2))),
+    "2³ + 3²": str(2**3 + 3**2),
+    "√(16 · 25)": str(int(sqrt(16 * 25))),
+    "(7²)⁰": str(7**0),
+    "2^(x−1) = 16": str(5 if 2 ** (5 - 1) == 16 else None),
 }
 
 

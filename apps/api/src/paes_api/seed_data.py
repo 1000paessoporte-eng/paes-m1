@@ -8819,4 +8819,617 @@ QUESTIONS += [
             ("3", "Dejó negativo el segundo término, calculando 1 − 4 y ajustando el signo."),
         ],
     ),
+    # ==================================================================
+    # LOTE 6 — eje NÚMEROS (M1), ampliación hasta la cuota por nodo
+    # ==================================================================
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 1/3 + 2/5?",
+        "11/15",
+        "Para sumar fracciones se necesita un denominador común.\n\n"
+        "1) El mínimo común múltiplo de 3 y 5 es 15, porque no tienen factores "
+        "comunes: basta multiplicarlos.\n"
+        "2) Convierte: 1/3 = 5/15 y 2/5 = 6/15.\n"
+        "3) Suma los numeradores: 5/15 + 6/15 = 11/15.\n"
+        "4) No se simplifica: 11 es primo y no divide a 15.",
+        [
+            ("3/8", "Sumó numeradores entre sí y denominadores entre sí."),
+            ("2/15", "Multiplicó las fracciones en lugar de sumarlas."),
+            ("1/15", "Restó las fracciones en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 7/10 − 2/5?",
+        "3/10",
+        "Como 10 es múltiplo de 5, basta convertir una sola fracción.\n\n"
+        "1) Lleva 2/5 a décimos: multiplicas arriba y abajo por 2, quedando 4/10.\n"
+        "2) Resta los numeradores: 7/10 − 4/10 = 3/10.\n"
+        "3) No se simplifica: 3 no divide a 10.",
+        [
+            ("5/5", "Restó numeradores entre sí y denominadores entre sí."),
+            ("11/10", "Sumó las fracciones en lugar de restarlas."),
+            ("14/50", "Multiplicó las fracciones en vez de restarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 3/8 × 4/9?",
+        "1/6",
+        "Multiplicar fracciones no requiere denominador común.\n\n"
+        "1) Multiplica numeradores entre sí y denominadores entre sí: "
+        "(3 × 4)/(8 × 9) = 12/72.\n"
+        "2) Simplifica dividiendo ambos por 12: 12 ÷ 12 = 1 y 72 ÷ 12 = 6.\n"
+        "3) El resultado es 1/6.\n\n"
+        "Atajo: podías simplificar antes de multiplicar, cancelando el 3 con el 9 y "
+        "el 4 con el 8.",
+        [
+            ("7/17", "Sumó numeradores entre sí y denominadores entre sí."),
+            ("27/32", "Invirtió la segunda fracción, como si fuera una división."),
+            ("12/72", "Multiplicó correctamente pero no simplificó el resultado."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de (5/6) ÷ (5/12)?",
+        "2",
+        "Dividir por una fracción es multiplicar por su recíproco.\n\n"
+        "1) El divisor es 5/12, cuyo recíproco es 12/5.\n"
+        "2) La operación pasa a ser 5/6 × 12/5 = 60/30.\n"
+        "3) Simplifica: 60 ÷ 30 = 2.\n"
+        "4) Control: como 5/12 es menor que 5/6, el cociente debe ser mayor que 1.",
+        [
+            ("25/72", "Multiplicó directamente sin invertir el divisor."),
+            ("1/2", "Invirtió el dividendo en lugar del divisor."),
+            ("15/6", "Sumó las fracciones en lugar de dividirlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 2/3 + 1/6 + 1/2?",
+        "4/3",
+        "Con tres fracciones se busca un único denominador común para todas.\n\n"
+        "1) El mínimo común múltiplo de 3, 6 y 2 es 6.\n"
+        "2) Convierte: 2/3 = 4/6, 1/6 queda igual, y 1/2 = 3/6.\n"
+        "3) Suma: 4/6 + 1/6 + 3/6 = 8/6.\n"
+        "4) Simplifica dividiendo por 2: 8/6 = 4/3.",
+        [
+            ("4/11", "Sumó numeradores entre sí y denominadores entre sí."),
+            ("8/6", "Sumó correctamente pero no simplificó el resultado."),
+            ("1/6", "Multiplicó las tres fracciones en lugar de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "Una receta pide 3/4 de taza de azúcar, pero se prepara solo la mitad de la receta. ¿Cuánta azúcar se necesita?",
+        "3/8 de taza",
+        "Calcular 'la mitad de' algo es multiplicar por 1/2.\n\n"
+        "1) Plantea la operación: 3/4 × 1/2.\n"
+        "2) Multiplica numeradores y denominadores: (3 × 1)/(4 × 2) = 3/8.\n"
+        "3) Se necesitan 3/8 de taza.\n"
+        "4) Control: 3/8 debe ser menor que 3/4, y en efecto lo es.",
+        [
+            ("3/2 de taza", "Dividió por 1/2 en lugar de multiplicar, obteniendo el doble."),
+            ("1/4 de taza", "Restó 1/2 a 3/4 en vez de calcular la mitad."),
+            ("5/4 de taza", "Sumó las fracciones en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de 1 − (2/7 + 1/3)?",
+        "8/21",
+        "Primero se resuelve el paréntesis y después se resta del entero.\n\n"
+        "1) Denominador común de 7 y 3: 21. Convierte: 2/7 = 6/21 y 1/3 = 7/21.\n"
+        "2) Suma: 6/21 + 7/21 = 13/21.\n"
+        "3) Escribe el 1 como 21/21 para poder restar.\n"
+        "4) Resta: 21/21 − 13/21 = 8/21.",
+        [
+            ("13/21", "Resolvió el paréntesis pero olvidó restarlo del entero."),
+            ("3/10", "Sumó numeradores entre sí y denominadores entre sí dentro del paréntesis."),
+            ("19/21", "Restó solo una de las dos fracciones del entero."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (3/4) × (8/15)?",
+        "2/5",
+        "Conviene simplificar antes de multiplicar para trabajar con números "
+        "pequeños.\n\n"
+        "1) El 3 del numerador y el 15 del denominador se dividen por 3: quedan 1 y "
+        "5.\n"
+        "2) El 8 del numerador y el 4 del denominador se dividen por 4: quedan 2 y 1.\n"
+        "3) Multiplica lo que queda: (1 × 2)/(1 × 5) = 2/5.\n"
+        "4) Sin simplificar antes daría 24/60, que se reduce igualmente a 2/5.",
+        [
+            ("24/60", "Multiplicó correctamente pero no simplificó el resultado."),
+            ("45/32", "Invirtió la segunda fracción, como si fuera una división."),
+            ("11/19", "Sumó numeradores entre sí y denominadores entre sí."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de 5/2 ÷ 3/4?",
+        "10/3",
+        "Se multiplica por el recíproco del divisor.\n\n"
+        "1) El recíproco de 3/4 es 4/3.\n"
+        "2) La operación pasa a ser 5/2 × 4/3 = 20/6.\n"
+        "3) Simplifica dividiendo por 2: 10/3.\n"
+        "4) Control: 3/4 es menor que 1, así que dividir por él debe agrandar el "
+        "5/2. Y 10/3 ≈ 3,33 es mayor que 2,5.",
+        [
+            ("15/8", "Multiplicó directamente sin invertir el divisor."),
+            ("6/10", "Invirtió el dividendo en lugar del divisor."),
+            ("20/6", "Aplicó bien la regla pero no simplificó."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Un estanque está lleno hasta 5/6 de su capacidad. Si se consume 2/5 del agua que contiene, ¿qué fracción de la capacidad total queda?",
+        "1/2",
+        "Ojo con la referencia: el 2/5 se calcula sobre el agua que hay, no sobre la "
+        "capacidad total.\n\n"
+        "1) Si se consume 2/5 de lo que hay, queda 3/5 de esa cantidad.\n"
+        "2) Calcula 3/5 de 5/6: multiplica 3/5 × 5/6 = 15/30.\n"
+        "3) Simplifica: 15/30 = 1/2.\n"
+        "4) Queda la mitad de la capacidad total.",
+        [
+            ("13/30", "Restó 2/5 directamente a 5/6, como si el 2/5 fuera de la capacidad total."),
+            ("1/3", "Calculó el agua consumida en lugar de la que queda."),
+            ("3/5", "Entregó la fracción del agua que queda, pero medida respecto del agua inicial y no de la capacidad total."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de 3 − 2/5 × 5/6?",
+        "8/3",
+        "La multiplicación se resuelve antes que la resta.\n\n"
+        "1) Multiplica primero: 2/5 × 5/6 = 10/30, que se simplifica a 1/3.\n"
+        "2) Ahora resta: 3 − 1/3.\n"
+        "3) Escribe el 3 como 9/3: 9/3 − 1/3 = 8/3.\n"
+        "4) Si hubieras restado primero, el resultado sería otro: el orden de las "
+        "operaciones no es negociable.",
+        [
+            ("13/6", "Restó antes de multiplicar, calculando (3 − 2/5) × 5/6."),
+            ("1/3", "Resolvió la multiplicación pero olvidó restarla del 3."),
+            ("3/3", "Restó el 1/3 al numerador y al denominador por separado."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Un albañil avanza 3/8 de un muro el lunes y 1/4 del muro el martes. ¿Qué fracción del muro lleva construida?",
+        "5/8",
+        "Se suman las dos fracciones de avance.\n\n"
+        "1) Plantea: 3/8 + 1/4.\n"
+        "2) Como 8 es múltiplo de 4, lleva 1/4 a octavos: 1/4 = 2/8.\n"
+        "3) Suma: 3/8 + 2/8 = 5/8.\n"
+        "4) Control: lleva algo más de la mitad del muro, coherente con 5/8 = 0,625.",
+        [
+            ("4/12", "Sumó numeradores entre sí y denominadores entre sí."),
+            ("3/32", "Multiplicó las fracciones en lugar de sumarlas."),
+            ("1/8", "Restó las fracciones en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (1/2 + 1/3) ÷ (1/2 − 1/3)?",
+        "5",
+        "Se resuelve cada paréntesis por separado y después se divide.\n\n"
+        "1) Numerador: 1/2 + 1/3 con denominador 6 da 3/6 + 2/6 = 5/6.\n"
+        "2) Denominador: 1/2 − 1/3 da 3/6 − 2/6 = 1/6.\n"
+        "3) Divide: (5/6) ÷ (1/6) = 5/6 × 6/1 = 30/6.\n"
+        "4) Simplifica: 5. El 6 se cancela porque ambos paréntesis quedaron con el "
+        "mismo denominador.",
+        [
+            ("1/5", "Invirtió el orden de la división, dividiendo la resta por la suma."),
+            ("5/6", "Resolvió el numerador pero no llegó a dividir."),
+            ("6", "Canceló mal los denominadores al aplicar el recíproco."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Si m = 3/4 y n = 2/3, ¿cuál es el valor de (m × n) + (m ÷ n)?",
+        "13/8",
+        "Se calculan las dos operaciones por separado y después se suman.\n\n"
+        "1) Producto: 3/4 × 2/3 = 6/12 = 1/2.\n"
+        "2) Cociente: 3/4 ÷ 2/3 = 3/4 × 3/2 = 9/8.\n"
+        "3) Suma ambos resultados. Denominador común de 2 y 8 es 8: "
+        "1/2 = 4/8.\n"
+        "4) Resultado: 4/8 + 9/8 = 13/8.",
+        [
+            ("1", "Calculó el producto y el cociente pero los restó en lugar de sumarlos."),
+            ("5/8", "Invirtió la fracción equivocada en la división, obteniendo 1/8 en vez de 9/8."),
+            ("9/16", "Multiplicó los dos resultados en lugar de sumarlos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (2/3)² + 1/9?",
+        "5/9",
+        "Elevar una fracción al cuadrado afecta al numerador y al denominador.\n\n"
+        "1) Calcula la potencia: (2/3)² = 2²/3² = 4/9.\n"
+        "2) Ahora suma: 4/9 + 1/9. Los denominadores ya coinciden.\n"
+        "3) Suma los numeradores: 5/9.\n"
+        "4) No se simplifica: 5 no divide a 9.",
+        [
+            ("4/9", "Elevó al cuadrado correctamente pero olvidó sumar el 1/9."),
+            ("2/3", "Elevó al cuadrado solo el numerador, obteniendo 4/3 y ajustando mal."),
+            ("5/18", "Sumó también los denominadores al juntar las fracciones."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Un depósito está lleno hasta sus 3/5 y se le agrega agua equivalente a 2/7 de su capacidad. ¿Qué fracción falta para llenarlo por completo?",
+        "4/35",
+        "Se suma lo que hay y se resta del total.\n\n"
+        "1) Denominador común de 5 y 7: 35. Convierte: 3/5 = 21/35 y 2/7 = 10/35.\n"
+        "2) Suma lo que hay: 21/35 + 10/35 = 31/35.\n"
+        "3) El depósito completo es 35/35.\n"
+        "4) Falta: 35/35 − 31/35 = 4/35.",
+        [
+            ("31/35", "Calculó lo que hay en el depósito, no lo que falta."),
+            ("1/2", "Restó los numeradores y denominadores por separado."),
+            ("6/35", "Multiplicó las fracciones en lugar de sumarlas antes de restar."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál de estas dos fracciones es mayor: 5/8 o 7/12?",
+        "5/8",
+        "Para comparar fracciones se llevan a un denominador común.\n\n"
+        "1) El mínimo común múltiplo de 8 y 12 es 24.\n"
+        "2) Convierte: 5/8 = 15/24 y 7/12 = 14/24.\n"
+        "3) Con el mismo denominador manda el numerador: 15 > 14.\n"
+        "4) Por lo tanto 5/8 es mayor. En decimales: 0,625 contra 0,583.",
+        [
+            ("7/12", "Comparó los denominadores suponiendo que el mayor indica una fracción mayor."),
+            ("Son iguales", "No llevó las fracciones a un denominador común antes de comparar."),
+            ("No se pueden comparar", "Fracciones con distinto denominador sí se comparan, igualándolas primero."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Ordena de menor a mayor las fracciones 2/3, 3/5 y 7/10.",
+        "3/5, 2/3, 7/10",
+        "Se llevan todas a un denominador común, o se pasan a decimal.\n\n"
+        "1) El mínimo común múltiplo de 3, 5 y 10 es 30.\n"
+        "2) Convierte: 2/3 = 20/30, 3/5 = 18/30 y 7/10 = 21/30.\n"
+        "3) Ordena por numerador: 18 < 20 < 21.\n"
+        "4) El orden es 3/5, 2/3, 7/10. En decimales: 0,6 < 0,67 < 0,7.",
+        [
+            ("2/3, 3/5, 7/10", "Comparó los numeradores sin igualar los denominadores."),
+            ("7/10, 2/3, 3/5", "Ordenó de mayor a menor en lugar de menor a mayor."),
+            ("3/5, 7/10, 2/3", "Comparó bien las dos primeras pero invirtió las dos últimas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (3/4 − 1/6) ÷ (1/2 + 1/3)?",
+        "7/10",
+        "Se resuelve cada paréntesis y después se aplica la división.\n\n"
+        "1) Numerador: 3/4 − 1/6 con denominador 12 da 9/12 − 2/12 = 7/12.\n"
+        "2) Denominador: 1/2 + 1/3 con denominador 6 da 3/6 + 2/6 = 5/6.\n"
+        "3) Divide multiplicando por el recíproco: 7/12 × 6/5 = 42/60.\n"
+        "4) Simplifica dividiendo por 6: 7/10.",
+        [
+            ("10/7", "Invirtió el orden de la división."),
+            ("35/72", "Multiplicó los dos paréntesis en lugar de dividirlos."),
+            ("42/60", "Aplicó bien la regla pero no simplificó el resultado."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Se reparten 3/4 de kilo de café en 6 bolsas iguales. ¿Cuánto café lleva cada bolsa?",
+        "1/8 de kilo",
+        "Repartir en partes iguales es dividir.\n\n"
+        "1) Plantea: 3/4 ÷ 6.\n"
+        "2) Un entero se puede escribir como fracción: 6 = 6/1, cuyo recíproco es "
+        "1/6.\n"
+        "3) Multiplica: 3/4 × 1/6 = 3/24.\n"
+        "4) Simplifica dividiendo por 3: 1/8 de kilo por bolsa.",
+        [
+            ("9/2 de kilo", "Multiplicó por 6 en lugar de dividir."),
+            ("1/2 de kilo", "Dividió solo el numerador por 6 sin ajustar la fracción."),
+            ("3/10 de kilo", "Restó 6 al denominador en vez de dividir la fracción."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 4³?",
+        "64",
+        "Una potencia indica cuántas veces se multiplica la base por sí misma.\n\n"
+        "1) El exponente 3 significa tres factores: 4 · 4 · 4.\n"
+        "2) Calcula por pasos: 4 · 4 = 16.\n"
+        "3) Luego 16 · 4 = 64.",
+        [
+            ("12", "Multiplicó la base por el exponente en lugar de elevar."),
+            ("16", "Se detuvo en 4², usando un factor de menos."),
+            ("256", "Usó un factor de más, calculando 4⁴."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de √100 + √9?",
+        "13",
+        "Cada raíz se resuelve por separado antes de sumar.\n\n"
+        "1) √100 = 10, porque 10 · 10 = 100.\n"
+        "2) √9 = 3, porque 3 · 3 = 9.\n"
+        "3) Suma: 10 + 3 = 13.\n\n"
+        "Recuerda que la raíz de una suma no es la suma de las raíces: "
+        "√109 no vale 13.",
+        [
+            ("10,4", "Sumó primero dentro de las raíces y calculó √109."),
+            ("30", "Multiplicó las raíces en lugar de sumarlas."),
+            ("7", "Restó las raíces en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 2⁵ · 2²?",
+        "128",
+        "Al multiplicar potencias de igual base se suman los exponentes.\n\n"
+        "1) Aplica la regla: 2⁵ · 2² = 2^(5+2) = 2⁷.\n"
+        "2) Calcula 2⁷ duplicando siete veces: 2, 4, 8, 16, 32, 64, 128.\n"
+        "3) Verificación directa: 2⁵ = 32 y 2² = 4, y 32 · 4 = 128.",
+        [
+            ("1.024", "Multiplicó los exponentes en lugar de sumarlos, calculando 2¹⁰."),
+            ("36", "Sumó las potencias en vez de multiplicarlas: 32 + 4."),
+            ("64", "Usó un exponente de menos, calculando 2⁶."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (2²)⁴?",
+        "256",
+        "Una potencia de otra potencia multiplica los exponentes.\n\n"
+        "1) Aplica la regla: (2²)⁴ = 2^(2·4) = 2⁸.\n"
+        "2) Calcula 2⁸ = 256.\n"
+        "3) Verificación: 2² = 4, y 4⁴ = 4 · 4 · 4 · 4 = 256. Coincide.",
+        [
+            ("64", "Sumó los exponentes en lugar de multiplicarlos, calculando 2⁶."),
+            ("16", "Se quedó en el primer paso, calculando solo 2⁴."),
+            ("32", "Usó el exponente equivocado, calculando 2⁵."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 10⁻²?",
+        "1/100",
+        "El exponente negativo indica que hay que invertir la base, no cambiar el "
+        "signo.\n\n"
+        "1) Aplica a⁻ⁿ = 1/aⁿ: 10⁻² = 1/10².\n"
+        "2) Calcula el denominador: 10² = 100.\n"
+        "3) El resultado es 1/100, que también se escribe 0,01.",
+        [
+            ("−100", "Interpretó el signo del exponente como signo del resultado."),
+            ("100", "Ignoró el signo negativo del exponente."),
+            ("−1/100", "Invirtió correctamente pero además arrastró un signo negativo que no corresponde."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de √64 · √4?",
+        "16",
+        "Se puede resolver cada raíz por separado o juntarlas primero.\n\n"
+        "1) Camino directo: √64 = 8 y √4 = 2.\n"
+        "2) Multiplica: 8 · 2 = 16.\n"
+        "3) Camino alternativo: el producto de raíces es la raíz del producto, "
+        "√(64 · 4) = √256 = 16. Coincide.",
+        [
+            ("10", "Sumó las raíces en lugar de multiplicarlas."),
+            ("256", "Multiplicó los números sin extraer después la raíz."),
+            ("4", "Dividió las raíces en vez de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (4³ · 4²) ÷ 4⁴?",
+        "4",
+        "Se combinan dos reglas sobre la misma base.\n\n"
+        "1) En el numerador se suman los exponentes: 4³ · 4² = 4⁵.\n"
+        "2) Al dividir se restan: 4⁵ ÷ 4⁴ = 4^(5−4) = 4¹.\n"
+        "3) El resultado es 4.\n"
+        "4) Atajo: opera todos los exponentes de una vez, 3 + 2 − 4 = 1.",
+        [
+            ("1.024", "Sumó los exponentes del numerador pero olvidó restar el del divisor."),
+            ("16", "Restó los exponentes del numerador en lugar de sumarlos."),
+            ("4⁹", "Sumó también el exponente del divisor en vez de restarlo."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √72 en su forma más simple?",
+        "6√2",
+        "Se extraen los factores que sean cuadrados perfectos.\n\n"
+        "1) Descompón 72 buscando el mayor cuadrado perfecto: 72 = 36 · 2.\n"
+        "2) Separa: √72 = √36 · √2.\n"
+        "3) Extrae la raíz exacta: √36 = 6.\n"
+        "4) El resultado es 6√2. Verifica: (6√2)² = 36 · 2 = 72.",
+        [
+            ("36√2", "Sacó el 36 de la raíz sin calcular su raíz cuadrada."),
+            ("2√6", "Intercambió el factor extraído con el que queda dentro."),
+            ("12", "Multiplicó 6 por 2 como si la raíz hubiera desaparecido."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (5²)³ ÷ 5⁴?",
+        "25",
+        "Primero la potencia de potencia, después la división.\n\n"
+        "1) (5²)³ = 5^(2·3) = 5⁶, multiplicando los exponentes.\n"
+        "2) Divide restando exponentes: 5⁶ ÷ 5⁴ = 5².\n"
+        "3) Calcula: 5² = 25.",
+        [
+            ("5", "Sumó los exponentes de la potencia de potencia en lugar de multiplicarlos."),
+            ("15.625", "Resolvió la potencia de potencia pero olvidó dividir."),
+            ("625", "Restó mal los exponentes, quedándose en 5⁴."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 3⁰ + 2⁻¹?",
+        "3/2",
+        "Hay dos reglas distintas en juego, una por cada término.\n\n"
+        "1) Todo número distinto de cero elevado a cero vale 1, así que 3⁰ = 1.\n"
+        "2) El exponente negativo invierte la base: 2⁻¹ = 1/2.\n"
+        "3) Suma: 1 + 1/2 = 3/2.",
+        [
+            ("1/2", "Consideró que 3⁰ vale 0 en lugar de 1."),
+            ("5/2", "Interpretó 2⁻¹ como 2, ignorando el exponente negativo."),
+            ("−1", "Trató el exponente negativo como si volviera negativo el resultado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √98 − √50?",
+        "2√2",
+        "Dos raíces solo se restan si tienen el mismo radicando, así que primero se "
+        "simplifican.\n\n"
+        "1) √98: como 98 = 49 · 2, queda √49 · √2 = 7√2.\n"
+        "2) √50: como 50 = 25 · 2, queda √25 · √2 = 5√2.\n"
+        "3) Ahora comparten radicando, así que se restan los coeficientes: "
+        "7√2 − 5√2 = 2√2.\n"
+        "4) Control aproximado: 9,9 − 7,07 ≈ 2,83, y 2√2 ≈ 2,83.",
+        [
+            ("√48", "Restó los radicandos: √(98 − 50), que no es una operación válida."),
+            ("12√2", "Sumó los coeficientes en lugar de restarlos."),
+            ("2", "Restó bien los coeficientes pero perdió el radical."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "Una plaza cuadrada tiene un área de 121 m². ¿Cuánto mide cada uno de sus lados?",
+        "11 m",
+        "El área de un cuadrado es el lado elevado al cuadrado, así que el lado es "
+        "la raíz del área.\n\n"
+        "1) Plantea: lado² = 121.\n"
+        "2) Saca raíz cuadrada: lado = √121.\n"
+        "3) Como 11 · 11 = 121, el lado mide 11 m.\n"
+        "4) Aunque −11 también cumple la ecuación, una medida no puede ser negativa.",
+        [
+            ("60,5 m", "Dividió el área por 2 en lugar de calcular su raíz cuadrada."),
+            ("30,25 m", "Dividió el área por 4, confundiendo el área con el perímetro."),
+            ("242 m", "Multiplicó el área por 2 en vez de sacarle la raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 2⁻³ · 2⁵?",
+        "4",
+        "La regla de sumar exponentes también vale cuando alguno es negativo.\n\n"
+        "1) Suma los exponentes respetando el signo: −3 + 5 = 2.\n"
+        "2) Queda 2² = 4.\n"
+        "3) Verificación: 2⁻³ = 1/8 y 2⁵ = 32, y 32/8 = 4. Coincide.",
+        [
+            ("1/256", "Restó los exponentes en lugar de sumarlos, obteniendo 2⁻⁸."),
+            ("256", "Ignoró el signo negativo, sumando 3 + 5."),
+            ("−4", "Arrastró el signo del exponente al resultado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Si 5ˣ = 625, ¿cuál es el valor de x?",
+        "4",
+        "Se busca cuántas veces hay que multiplicar el 5 para llegar a 625.\n\n"
+        "1) Ve multiplicando: 5, 25, 125, 625. Son cuatro factores.\n"
+        "2) Entonces 625 = 5⁴.\n"
+        "3) Como las bases coinciden, los exponentes también: x = 4.\n"
+        "4) Verifica: 5⁴ = 625. Correcto.",
+        [
+            ("125", "Dividió 625 por 5 en lugar de buscar el exponente."),
+            ("25", "Calculó la raíz cuadrada de 625, que responde otra pregunta."),
+            ("5", "Contó una multiplicación de más: 5⁵ da 3.125."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de (3⁻² · 3⁵) ÷ 3²?",
+        "3",
+        "Todos los exponentes se pueden operar de una sola vez.\n\n"
+        "1) En el numerador se suman: −2 + 5 = 3, quedando 3³.\n"
+        "2) Al dividir se resta el exponente del divisor: 3 − 2 = 1.\n"
+        "3) Queda 3¹ = 3.\n"
+        "4) Atajo: −2 + 5 − 2 = 1 directamente.",
+        [
+            ("27", "Sumó bien el numerador pero olvidó restar el exponente del divisor."),
+            ("1/3", "Restó los exponentes del numerador en lugar de sumarlos."),
+            ("243", "Ignoró el signo negativo del primer exponente."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √(5² + 12²)?",
+        "13",
+        "Primero se resuelve todo lo que está dentro de la raíz.\n\n"
+        "1) Calcula los cuadrados: 5² = 25 y 12² = 144.\n"
+        "2) Suma: 25 + 144 = 169.\n"
+        "3) Saca la raíz: √169 = 13.\n\n"
+        "Ojo con el error clásico: √(5² + 12²) no es 5 + 12. Estos números forman "
+        "además un trío pitagórico conocido.",
+        [
+            ("17", "Sacó la raíz de cada término por separado y sumó: 5 + 12."),
+            ("169", "Sumó correctamente pero no aplicó la raíz."),
+            ("60", "Multiplicó los números dentro de la raíz en lugar de sumar sus cuadrados."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de 2³ + 3²?",
+        "17",
+        "Cada potencia se calcula por separado, cuidando cuál es la base y cuál el "
+        "exponente.\n\n"
+        "1) 2³ significa 2 · 2 · 2 = 8.\n"
+        "2) 3² significa 3 · 3 = 9.\n"
+        "3) Suma: 8 + 9 = 17.\n\n"
+        "Confundir base con exponente cambia el resultado: 3² no es lo mismo que 2³.",
+        [
+            ("13", "Multiplicó base por exponente en cada término: 6 + 6, y ajustó mal."),
+            ("72", "Multiplicó las potencias en lugar de sumarlas."),
+            ("16", "Calculó ambas potencias con la misma base, como 2³ + 2³."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √(16 · 25)?",
+        "20",
+        "La raíz de un producto es el producto de las raíces.\n\n"
+        "1) Camino corto: √(16 · 25) = √16 · √25 = 4 · 5 = 20.\n"
+        "2) Camino largo: 16 · 25 = 400, y √400 = 20.\n"
+        "3) Ambos caminos coinciden. Esta propiedad vale para el producto, pero no "
+        "para la suma.",
+        [
+            ("9", "Sumó las raíces en lugar de multiplicarlas."),
+            ("400", "Multiplicó los números sin aplicar después la raíz."),
+            ("41", "Sacó la raíz de cada factor y los sumó al cuadrado, mezclando operaciones."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (7²)⁰?",
+        "1",
+        "Cualquier número distinto de cero elevado a cero vale 1.\n\n"
+        "1) Multiplica los exponentes: (7²)⁰ = 7^(2·0) = 7⁰.\n"
+        "2) Por la regla del exponente cero, 7⁰ = 1.\n"
+        "3) No importa cuán grande sea la base: mientras no sea cero, el resultado "
+        "es 1.",
+        [
+            ("0", "Supuso que elevar a cero anula el resultado."),
+            ("49", "Ignoró el exponente exterior y calculó solo 7²."),
+            ("7", "Aplicó el exponente cero solo a una parte de la expresión."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Si 2^(x−1) = 16, ¿cuál es el valor de x?",
+        "5",
+        "Se iguala el exponente después de expresar ambos lados con la misma base.\n\n"
+        "1) Escribe 16 como potencia de 2: 16 = 2⁴.\n"
+        "2) La ecuación queda 2^(x−1) = 2⁴.\n"
+        "3) Con bases iguales, los exponentes deben coincidir: x − 1 = 4.\n"
+        "4) Despeja: x = 5. Verifica: 2^(5−1) = 2⁴ = 16.",
+        [
+            ("4", "Igualó x directamente al exponente, sin despejar el −1."),
+            ("3", "Restó el 1 en lugar de sumarlo al despejar."),
+            ("8", "Dividió 16 por 2 en vez de trabajar con los exponentes."),
+        ],
+    ),
 ]
