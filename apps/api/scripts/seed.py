@@ -168,7 +168,7 @@ def seed_questions(
     db.commit()
     print(
         f"questions: {created} nuevas insertadas, {updated} explicaciones actualizadas "
-        f"(de {len(QUESTIONS)} definidas)"
+        f"(de {len(TODAS_LAS_PREGUNTAS)} definidas)"
     )
 
 
