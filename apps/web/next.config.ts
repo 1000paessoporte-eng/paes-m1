@@ -1,7 +1,20 @@
 import path from "node:path";
 import type { NextConfig } from "next";
 
-// El backend FastAPI corre en el mismo host que la web (puerto 8000).
+// A qué backend habla esta instancia de la web.
+//
+// - Producción y preview: API_URL, seteada en Vercel para cada entorno. En
+//   preview apunta a milpaes-api-preview.vercel.app, un alias estable del
+//   backend de pruebas, que usa la base `paes_preview` y no la de producción.
+//
+//   Se intentó derivar la URL del backend desde VERCEL_BRANCH_URL, pero no
+//   sirve: con nombres de rama largos Vercel trunca el alias y le agrega un
+//   hash DISTINTO en cada proyecto (…-git-mi-rama-488173 en la API frente a
+//   …-git-mi-rama-1146d8 en la web), así que una URL no se puede deducir de la
+//   otra. El alias hay que reapuntarlo cuando un PR cambia el backend:
+//   `vercel alias set <deployment> milpaes-api-preview.vercel.app`.
+//
+// - Local: la API en el puerto 8000.
 const API_ORIGIN = process.env.API_URL ?? "http://127.0.0.1:8000";
 
 const nextConfig: NextConfig = {
