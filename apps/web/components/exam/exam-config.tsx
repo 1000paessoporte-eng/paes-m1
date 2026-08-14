@@ -193,8 +193,9 @@ export function ExamConfigScreen({
           1. Prueba
         </h2>
         <p className="mb-3 text-sm text-muted">
-          Vamos a cubrir las cinco pruebas PAES. Hoy Competencia Matemática M1
-          y M2 tienen ensayos disponibles.
+          Las cinco pruebas tienen ensayos. Matemática es la de banco más
+          grande; en las otras todavía hay pocas preguntas y el ensayo completo
+          no alcanza a armarse.
         </p>
         <div className="flex flex-wrap gap-2">
           {PRUEBAS.map((prueba) => {
