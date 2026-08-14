@@ -3,21 +3,19 @@ import type { NextConfig } from "next";
 
 // A qué backend habla esta instancia de la web.
 //
-// - Producción: API_URL, seteada en Vercel.
-// - Preview: no hay API_URL, así que se deriva de la URL de rama que Vercel
-//   asigna a este despliegue (VERCEL_BRANCH_URL, del tipo
-//   "milpaes-web-git-<rama>-<scope>.vercel.app"). Cambiando el nombre del
-//   proyecto se obtiene la URL de rama del backend, que Vercel construye con
-//   el mismo patrón porque ambos proyectos siguen el mismo repo y la misma
-//   rama. Así cada PR queda apuntando a SU backend y a la base de preview,
-//   nunca a los datos de producción.
+// - Producción y preview: API_URL, seteada en Vercel para cada entorno. En
+//   preview apunta a milpaes-api-preview.vercel.app, un alias estable del
+//   backend de pruebas, que usa la base `paes_preview` y no la de producción.
+//
+//   Se intentó derivar la URL del backend desde VERCEL_BRANCH_URL, pero no
+//   sirve: con nombres de rama largos Vercel trunca el alias y le agrega un
+//   hash DISTINTO en cada proyecto (…-git-mi-rama-488173 en la API frente a
+//   …-git-mi-rama-1146d8 en la web), así que una URL no se puede deducir de la
+//   otra. El alias hay que reapuntarlo cuando un PR cambia el backend:
+//   `vercel alias set <deployment> milpaes-api-preview.vercel.app`.
+//
 // - Local: la API en el puerto 8000.
-const BRANCH_API_ORIGIN = process.env.VERCEL_BRANCH_URL
-  ? `https://${process.env.VERCEL_BRANCH_URL.replace("milpaes-web", "milpaes-api")}`
-  : undefined;
-
-const API_ORIGIN =
-  process.env.API_URL ?? BRANCH_API_ORIGIN ?? "http://127.0.0.1:8000";
+const API_ORIGIN = process.env.API_URL ?? "http://127.0.0.1:8000";
 
 const nextConfig: NextConfig = {
   // Build standalone (server.js + node_modules mínimos) para la imagen

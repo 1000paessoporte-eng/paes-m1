@@ -41,6 +41,16 @@ commitea, pushea y abre el PR. `/review` revisa un PR antes de mergear.
 Cada PR genera su propia URL de preview en Vercel. **Prueba ahí, no en
 producción.** Al mergear a `main`, Vercel despliega a producción solo.
 
+Los previews usan la base `paes_preview`, no la de producción: se puede romper
+lo que sea sin tocar los datos de ningún estudiante. El frontend de preview
+habla con `milpaes-api-preview.vercel.app`, un alias estable del backend de
+pruebas. **Si tu PR cambia la API**, reapunta ese alias a tu despliegue para
+probar contra tu propio backend:
+
+```bash
+vercel alias set <url-del-deployment-de-preview> milpaes-api-preview.vercel.app
+```
+
 Si los dos van a tocar la misma zona del código, díganlo antes: el repo
 resuelve conflictos de texto, no de diseño.
 
