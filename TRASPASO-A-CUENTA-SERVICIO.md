@@ -23,22 +23,47 @@ Contra lo esperado, Vercel se llevó casi todo:
 Producción no se cayó en ningún momento: durante toda la operación
 `1000paes.cl` respondió 200 y el login siguió funcionando.
 
-## Lo único que quedó pendiente
+## Reconectar GitHub: son tres pasos, no uno
 
-La cuenta nueva necesita **conectar GitHub como método de acceso** antes de que
-se puedan reenlazar los proyectos. Es un paso OAuth en el navegador, no hay API:
+Esto es lo único que no viaja, y cuesta más de lo que parece porque Vercel lo
+pide en tres capas distintas. El error que devuelve la API va cambiando a
+medida que avanzas, y cada mensaje indica cuál es el paso que falta:
 
-1. Entrar a https://vercel.com/account con `1000paessoporte@gmail.com`.
-2. En *Login Connections*, conectar **GitHub**.
-3. Después, reenlazar ambos proyectos (o pedírselo a Claude):
+| Error de la API | Qué falta |
+|---|---|
+| `You need to add a Login Connection to your GitHub account first` | 1. Conectar GitHub como método de acceso |
+| `You need admin or write access to the repository` | 2. Dar acceso al repo a esa cuenta de GitHub |
+| `You need to install the GitHub integration first` | 3. Instalar la GitHub App de Vercel |
+
+**Paso 1.** En https://vercel.com/account, sección *Login Connections*,
+conectar **GitHub**. Si la cuenta de servicio no tiene cuenta de GitHub, se
+crea una (en este proyecto quedó `1000paessoporte-eng`).
+
+**Paso 2.** Esa cuenta de GitHub necesita permiso de escritura sobre el repo,
+porque el repo pertenece a `Pabloajnxka`, no a ella:
 
 ```bash
-cd <raiz-del-repo> && vercel git connect
-cd apps/api && vercel git connect https://github.com/Pabloajnxka/paes-m1
+gh api -X PUT repos/Pabloajnxka/paes-m1/collaborators/<usuario> -f permission=push
+```
+
+Y el invitado tiene que **aceptar** la invitación en
+https://github.com/Pabloajnxka/paes-m1/invitations. Nadie puede aceptarla por
+él, ni siquiera el dueño del repo.
+
+**Paso 3.** Instalar la GitHub App de Vercel desde
+*Proyecto → Settings → Git → Connect Git Repository*, dándole acceso al repo.
+Con hacerlo una vez queda instalada para toda la cuenta; el segundo proyecto se
+enlaza por API:
+
+```bash
+curl -X POST "https://api.vercel.com/v9/projects/<projectId>/link" \
+  -H "Authorization: Bearer <TOKEN>" -H "Content-Type: application/json" \
+  -d '{"type":"github","repo":"Pabloajnxka/paes-m1","productionBranch":"main"}'
 ```
 
 **Mientras no esté conectado no hay deploys automáticos ni previews por PR**:
-los deploys hay que hacerlos a mano con `vercel deploy --prod`.
+los deploys hay que hacerlos a mano con `vercel deploy --prod`, y mergear un PR
+no despliega nada.
 
 ---
 
