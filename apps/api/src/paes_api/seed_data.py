@@ -5568,3 +5568,254 @@ QUESTIONS_CIENCIAS = [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Historia y Ciencias Sociales
+#
+# 65 preguntas en 2 horas, 60 puntuadas. Tres ejes: Historia (Mundo, América y
+# Chile), Formación ciudadana, y Economía y sociedad.
+#
+# El temario del DEMRE evalúa tres habilidades: pensamiento temporal y
+# espacial, ANÁLISIS DE FUENTES y pensamiento crítico. Eso es lo que hace
+# posible un banco verificable acá: las preguntas se apoyan en fuentes que
+# escribe el proyecto (tablas de datos, textos de análisis), igual que en
+# Competencia Lectora, y la respuesta correcta se comprueba contra la fuente.
+# En Economía se suman preguntas de cálculo, verificables como las de
+# matemática.
+#
+# Lo que NO hay acá es preguntas de memoria de contenido ("en qué año ocurrió
+# tal cosa"). Ningún script puede comprobar que una afirmación histórica sea
+# verdadera, y este proyecto no publica contenido que no pueda verificar. Ese
+# tramo del temario necesita revisión de un profesor antes de existir.
+# ---------------------------------------------------------------------------
+
+SKILL_NODES_HISTORIA = [
+    ("his_fuentes", "Análisis de fuentes históricas", "historia", 1, []),
+    ("his_temporal", "Pensamiento temporal y cambio histórico", "historia", 2, ["his_fuentes"]),
+    ("civ_democracia", "Democracia y participación", "ciudadania", 1, []),
+    ("civ_derechos", "Derechos y deberes ciudadanos", "ciudadania", 2, ["civ_democracia"]),
+    ("eco_indicadores", "Indicadores económicos", "economia", 1, []),
+    ("eco_mercado", "Oferta, demanda y mercado", "economia", 2, ["eco_indicadores"]),
+]
+
+PASSAGES_HISTORIA = [
+    {
+        "key": "migracion_tabla",
+        "title": "Población de la comuna de San Alberto, 1990-2020",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla construida con datos ficticios por 1000paes para ejercitar "
+            "lectura de fuentes. No corresponde a una comuna real."
+        ),
+        "body": (
+            "Año | Población total | Población rural | Población urbana\n"
+            "1990 | 12.400 | 8.100 | 4.300\n"
+            "2000 | 15.800 | 6.900 | 8.900\n"
+            "2010 | 21.300 | 5.200 | 16.100\n"
+            "2020 | 28.700 | 3.800 | 24.900\n\n"
+            "La comuna incorporó servicios de agua potable urbana en 1998 y un "
+            "camino pavimentado hacia la capital regional en 2005."
+        ),
+    },
+    {
+        "key": "fuente_participacion",
+        "title": "Dos miradas sobre la participación electoral",
+        "kind": "no_literario",
+        "source_note": "Textos originales de 1000paes, escritos como fuentes de contraste.",
+        "body": (
+            "FUENTE 1\n"
+            "«Cuando el voto es voluntario, quien acude a las urnas lo hace por "
+            "convicción. El resultado refleja la voluntad de quienes de verdad "
+            "quieren decidir, y no la de quienes votan solo para evitar una "
+            "multa. Una participación menor puede ser señal de un electorado "
+            "más consciente, no de uno más indiferente.»\n\n"
+            "FUENTE 2\n"
+            "«El problema del voto voluntario no es cuánta gente vota, sino "
+            "quién deja de votar. La abstención no se reparte parejo: se "
+            "concentra en los sectores con menos ingresos y menos años de "
+            "escolaridad. Un padrón que se achica por ese lado produce "
+            "autoridades que responden a una parte del país y no al conjunto.»"
+        ),
+    },
+]
+
+QUESTIONS_HISTORIA = [
+    # ---------- Análisis de fuentes: la tabla ----------
+    _ql(
+        "migracion_tabla", "his_fuentes", "facil",
+        "Según la tabla, ¿cuánto aumentó la población total de la comuna entre "
+        "1990 y 2020?",
+        "16.300 habitantes",
+        "El dato se obtiene restando los dos valores que la tabla entrega.\n\n"
+        "1) Población total en 2020: 28.700.\n"
+        "2) Población total en 1990: 12.400.\n"
+        "3) Diferencia: 28.700 − 12.400 = 16.300 habitantes.\n\n"
+        "Es una pregunta de lectura de fuente: el dato no requiere conocimiento "
+        "previo, solo ubicar las dos celdas correctas y restar.",
+        [
+            ("28.700 habitantes", "Es la población de 2020, no el aumento respecto de 1990."),
+            ("24.900 habitantes", "Es la población urbana de 2020, no la variación de la población total."),
+            ("41.100 habitantes", "Sumó ambas poblaciones en lugar de restarlas."),
+        ],
+    ),
+    _ql(
+        "migracion_tabla", "his_temporal", "medio",
+        "¿Qué proceso muestra la tabla entre 1990 y 2020?",
+        "Un aumento de la población total acompañado de una migración del campo "
+        "a la ciudad dentro de la comuna",
+        "Hay que leer dos tendencias a la vez y relacionarlas.\n\n"
+        "1) La población total sube de 12.400 a 28.700: la comuna crece.\n"
+        "2) La población rural baja de 8.100 a 3.800, mientras la urbana sube "
+        "de 4.300 a 24.900.\n"
+        "3) O sea, el crecimiento se concentra en lo urbano mientras lo rural "
+        "se reduce en términos absolutos.\n\n"
+        "Ese doble movimiento es lo que describe un proceso de urbanización.",
+        [
+            ("Un despoblamiento general de la comuna", "La población total no baja: sube de 12.400 a 28.700."),
+            ("Un crecimiento parejo entre zonas rurales y urbanas", "La tabla muestra lo contrario: lo rural cae mientras lo urbano crece."),
+            ("Una migración desde otras regiones hacia el campo", "La tabla no informa de dónde llega la gente, y la población rural disminuye."),
+        ],
+    ),
+    _ql(
+        "migracion_tabla", "his_fuentes", "dificil",
+        "Un estudiante afirma que el camino pavimentado de 2005 causó el "
+        "crecimiento urbano de la comuna. ¿Qué se puede decir de esa "
+        "afirmación a partir de la fuente?",
+        "La fuente no permite afirmarlo: el crecimiento urbano ya venía "
+        "ocurriendo antes de 2005",
+        "Acá se evalúa si el estudiante distingue entre lo que la fuente muestra "
+        "y lo que interpreta.\n\n"
+        "1) La población urbana pasó de 4.300 en 1990 a 8.900 en 2000, es "
+        "decir, ya se había duplicado antes de que existiera el camino.\n"
+        "2) La tabla registra la obra de 2005, pero no entrega ninguna "
+        "información que permita atribuirle el crecimiento.\n"
+        "3) Que dos hechos ocurran en el mismo periodo no prueba que uno cause "
+        "el otro.\n\n"
+        "Lo correcto es decir que la fuente no alcanza para sostener esa "
+        "afirmación, sin negar que el camino haya podido influir.",
+        [
+            ("La afirmación es correcta: el crecimiento se acelera después de 2005", "El crecimiento urbano ya venía desde antes, así que la fuente no permite atribuirlo al camino."),
+            ("La afirmación es falsa: el camino redujo la población urbana", "La población urbana siguió creciendo después de 2005, de 8.900 a 24.900."),
+            ("La afirmación es correcta porque la fuente menciona el camino", "Que la fuente mencione un hecho no significa que establezca su efecto."),
+        ],
+    ),
+
+    # ---------- Formación ciudadana: contraste de fuentes ----------
+    _ql(
+        "fuente_participacion", "civ_democracia", "medio",
+        "¿En qué se diferencian las dos fuentes respecto de la participación "
+        "electoral?",
+        "La primera valora la convicción de quien vota; la segunda se preocupa "
+        "de quiénes quedan fuera",
+        "Ambas hablan de lo mismo pero miden cosas distintas.\n\n"
+        "1) La Fuente 1 pone el foco en la calidad del voto: quien acude lo "
+        "hace «por convicción», y una participación menor podría indicar un "
+        "electorado «más consciente».\n"
+        "2) La Fuente 2 desplaza la pregunta: dice explícitamente que el "
+        "problema «no es cuánta gente vota, sino quién deja de votar», y apunta "
+        "a que la abstención se concentra en ciertos sectores.\n\n"
+        "La diferencia no es el dato sino qué consideran relevante de él.",
+        [
+            ("La primera defiende el voto obligatorio y la segunda el voluntario", "Ninguna de las dos propone un sistema: discuten cómo interpretar la participación."),
+            ("La primera usa datos estadísticos y la segunda opiniones personales", "Ninguna entrega cifras; ambas argumentan."),
+            ("Ambas coinciden en que la baja participación es un problema grave", "La Fuente 1 sugiere lo contrario: que puede ser señal de un electorado más consciente."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "civ_derechos", "dificil",
+        "¿Qué supuesto sobre la representación política sostiene la Fuente 2?",
+        "Que una autoridad electa por un padrón sesgado responde a una parte "
+        "del país y no al conjunto",
+        "El supuesto no está dicho como tesis, hay que extraerlo del cierre del "
+        "texto.\n\n"
+        "1) La fuente sostiene que la abstención «se concentra en los sectores "
+        "con menos ingresos y menos años de escolaridad».\n"
+        "2) De ahí concluye que ese padrón «produce autoridades que responden a "
+        "una parte del país y no al conjunto».\n"
+        "3) El supuesto que conecta ambas ideas es que la composición de quienes "
+        "votan determina a quién termina representando la autoridad electa.\n\n"
+        "Sin ese supuesto, el argumento no se sostendría.",
+        [
+            ("Que el voto obligatorio garantiza mejores autoridades", "La fuente no habla de la calidad de las autoridades ni propone la obligatoriedad."),
+            ("Que la participación electoral siempre disminuye con el tiempo", "La fuente no afirma ninguna tendencia temporal."),
+            ("Que quienes no votan carecen de interés en la política", "La fuente atribuye la abstención a factores socioeconómicos, no a falta de interés."),
+        ],
+    ),
+
+    # ---------- Economía: cuantitativo, verificable ----------
+    _q(
+        "eco_indicadores", "medio",
+        "En un país hay 8.000.000 de personas en la fuerza de trabajo y 640.000 "
+        "están desocupadas. ¿Cuál es la tasa de desempleo?",
+        "8%",
+        "La tasa de desempleo es la proporción de desocupados dentro de la "
+        "fuerza de trabajo, no dentro de la población total.\n\n"
+        "1) Divide: 640.000 ÷ 8.000.000 = 0,08.\n"
+        "2) Expresa en porcentaje: 0,08 · 100 = 8%.\n\n"
+        "El denominador importa: si se usara la población total, que incluye "
+        "niños y personas fuera de la fuerza de trabajo, la tasa quedaría "
+        "artificialmente baja.",
+        [
+            ("0,08%", "Olvidó multiplicar por 100 al pasar la proporción a porcentaje."),
+            ("12,5%", "Dividió la fuerza de trabajo por los desocupados, invirtiendo la razón."),
+            ("64%", "Corrió la coma decimal al calcular la proporción."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Si una canasta de bienes costaba $50.000 el año pasado y hoy cuesta "
+        "$53.500, ¿cuál fue la variación porcentual de precios?",
+        "7%",
+        "La variación porcentual compara el cambio con el valor inicial.\n\n"
+        "1) Calcula el alza: 53.500 − 50.000 = 3.500.\n"
+        "2) Divide por el valor inicial: 3.500 ÷ 50.000 = 0,07.\n"
+        "3) Expresa en porcentaje: 7%.\n\n"
+        "Es el mismo cálculo con que se construye el IPC, que mide cuánto varía "
+        "el costo de una canasta representativa entre dos momentos.",
+        [
+            ("3,5%", "Dividió el alza por 100.000 o corrió la coma decimal."),
+            ("6,5%", "Dividió por el precio nuevo en vez del inicial."),
+            ("3.500%", "Entregó el alza en pesos como si fuera un porcentaje."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "En un mercado, cuando el precio de un bien sube y todo lo demás se "
+        "mantiene constante, ¿qué ocurre según la ley de demanda?",
+        "La cantidad demandada disminuye",
+        "La ley de demanda describe una relación inversa entre precio y "
+        "cantidad demandada.\n\n"
+        "1) Si el precio sube, el bien se vuelve más caro respecto de sus "
+        "alternativas y respecto del ingreso de las personas.\n"
+        "2) Por eso, manteniendo todo lo demás igual, la cantidad que los "
+        "consumidores están dispuestos a comprar disminuye.\n\n"
+        "La condición «todo lo demás constante» es parte de la ley: si al mismo "
+        "tiempo cambiara el ingreso o el precio de un sustituto, el resultado "
+        "podría ser otro.",
+        [
+            ("La cantidad demandada aumenta", "Eso describiría una relación directa, contraria a la ley de demanda."),
+            ("La demanda se desplaza hacia la derecha", "Un cambio de precio mueve la cantidad demandada a lo largo de la curva; la curva se desplaza cuando cambia otro factor."),
+            ("La cantidad demandada se mantiene igual", "Eso solo ocurriría en un caso extremo de demanda perfectamente inelástica, que no es lo que describe la ley."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "El precio de equilibrio de un mercado es aquel en que:",
+        "La cantidad ofrecida es igual a la cantidad demandada",
+        "El equilibrio es el punto donde las dos fuerzas del mercado coinciden.\n\n"
+        "1) Si el precio estuviera por encima, habría más oferta que demanda y "
+        "el excedente presionaría el precio a la baja.\n"
+        "2) Si estuviera por debajo, la demanda superaría a la oferta y la "
+        "escasez lo empujaría al alza.\n"
+        "3) Solo cuando ambas cantidades coinciden desaparece la presión y el "
+        "precio se estabiliza.\n\n"
+        "Por eso el equilibrio se define por la igualdad de cantidades, no por "
+        "el nivel del precio ni por el beneficio de alguna de las partes.",
+        [
+            ("El precio alcanza su valor más bajo posible", "El equilibrio no es un mínimo: puede ser un precio alto si la oferta es escasa."),
+            ("Los productores obtienen su mayor ganancia", "El equilibrio iguala cantidades; no maximiza la ganancia de ninguna de las partes."),
+            ("Toda la población puede comprar el bien", "El equilibrio no garantiza acceso universal: quienes no pueden pagar ese precio quedan fuera."),
+        ],
+    ),
+]

@@ -29,11 +29,14 @@ from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 from paes_api.modules.users.models import User
 from paes_api.seed_data import (
     PASSAGES,
+    PASSAGES_HISTORIA,
     QUESTIONS,
     QUESTIONS_CIENCIAS,
+    QUESTIONS_HISTORIA,
     QUESTIONS_LECTORA,
     SKILL_NODES,
     SKILL_NODES_CIENCIAS,
+    SKILL_NODES_HISTORIA,
     SKILL_NODES_LECTORA,
     SKILL_NODES_M2,
 )
@@ -52,6 +55,7 @@ def seed_skill_nodes(db) -> dict[str, SkillNode]:
         + [(*n, Subject.M2) for n in SKILL_NODES_M2]
         + [(*n, Subject.LECTORA) for n in SKILL_NODES_LECTORA]
         + [(*n, Subject.CIENCIAS) for n in SKILL_NODES_CIENCIAS]
+        + [(*n, Subject.HISTORIA) for n in SKILL_NODES_HISTORIA]
     )
 
     by_code: dict[str, SkillNode] = {}
@@ -87,7 +91,7 @@ def seed_passages(db) -> dict[str, ReadingPassage]:
     """Siembra los textos de Competencia Lectora. Idempotente por título."""
     by_key: dict[str, ReadingPassage] = {}
     creados = 0
-    for p in PASSAGES:
+    for p in PASSAGES + PASSAGES_HISTORIA:
         existing = db.execute(
             select(ReadingPassage).where(ReadingPassage.title == p["title"])
         ).scalar_one_or_none()
@@ -104,7 +108,10 @@ def seed_passages(db) -> dict[str, ReadingPassage]:
         by_key[p["key"]] = passage
         creados += 1
     db.flush()
-    print(f"reading_passages: {creados} nuevos (de {len(PASSAGES)} definidos)")
+    print(
+        f"reading_passages: {creados} nuevos "
+        f"(de {len(PASSAGES) + len(PASSAGES_HISTORIA)} definidos)"
+    )
     return by_key
 
 
@@ -114,7 +121,9 @@ def seed_questions(
     passages_by_key: dict[str, ReadingPassage] | None = None,
 ) -> None:
     passages_by_key = passages_by_key or {}
-    TODAS_LAS_PREGUNTAS = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS
+    TODAS_LAS_PREGUNTAS = (
+        QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS + QUESTIONS_HISTORIA
+    )
     created = 0
     updated = 0
     for q in TODAS_LAS_PREGUNTAS:

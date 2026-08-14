@@ -85,3 +85,51 @@ def test_biologia_declarada_sin_banco_todavia():
     bio = {n[0] for n in SKILL_NODES_CIENCIAS if n[2] == "biologia"}
     assert bio, "deberían existir nodos de biología"
     assert not [q for q in QUESTIONS_CIENCIAS if q["skill_node"] in bio]
+
+
+def test_historia_usa_los_datos_oficiales():
+    """65 preguntas, 60 puntuadas, 2 horas (temario DEMRE)."""
+    from paes_api.modules.exam_focus.scoring import SCORING_BY_SUBJECT
+
+    s = SCORING_BY_SUBJECT[Subject.HISTORIA]
+    assert (s.preguntas_oficiales, s.preguntas_puntuadas, s.duracion_oficial_min) == (
+        65,
+        60,
+        120,
+    )
+    assert round(scoring.segundos_por_pregunta(Subject.HISTORIA) * 65 / 60) == 120
+
+
+def test_tabla_de_historia_es_la_oficial():
+    assert scoring.estimar_puntaje(0, 60, Subject.HISTORIA) == 100
+    assert scoring.estimar_puntaje(30, 60, Subject.HISTORIA) == 545
+    assert scoring.estimar_puntaje(60, 60, Subject.HISTORIA) == 1000
+
+
+def test_historia_ofrece_sus_tres_ejes():
+    assert EJES_POR_PRUEBA[Subject.HISTORIA] == {"historia", "ciudadania", "economia"}
+    assert SUBJECT_INCLUDES[Subject.HISTORIA] == [Subject.HISTORIA]
+
+
+def test_las_cinco_pruebas_tienen_banco_propio():
+    """Ninguna prueba comparte banco con otra, salvo M2 que incluye M1."""
+    for s in Subject:
+        assert s in SUBJECT_INCLUDES, f"{s} sin banco declarado"
+        assert s in EJES_POR_PRUEBA, f"{s} sin ejes declarados"
+    assert SUBJECT_INCLUDES[Subject.M2] == [Subject.M1, Subject.M2]
+
+
+def test_historia_no_afirma_hechos_sin_fuente():
+    """Toda pregunta de los ejes de historia y ciudadanía se apoya en una fuente.
+
+    Es la regla que hace verificable este banco: la respuesta se comprueba
+    contra un texto que escribimos, no contra conocimiento histórico que
+    ningún script puede validar. Las de economía son de cálculo y no la
+    necesitan.
+    """
+    from paes_api.seed_data import QUESTIONS_HISTORIA, SKILL_NODES_HISTORIA
+
+    ejes = {n[0]: n[2] for n in SKILL_NODES_HISTORIA}
+    for q in QUESTIONS_HISTORIA:
+        if ejes[q["skill_node"]] in ("historia", "ciudadania"):
+            assert q.get("passage"), f"sin fuente: {q['stem'][:50]}"

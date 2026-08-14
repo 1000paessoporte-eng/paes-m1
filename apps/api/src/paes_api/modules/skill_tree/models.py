@@ -33,6 +33,10 @@ class SkillAxis(StrEnum):
     BIOLOGIA = "biologia"
     FISICA = "fisica"
     QUIMICA = "quimica"
+    # Historia y Ciencias Sociales
+    HISTORIA = "historia"
+    CIUDADANIA = "ciudadania"
+    ECONOMIA = "economia"
 
 
 class Subject(StrEnum):
@@ -46,6 +50,7 @@ class Subject(StrEnum):
     M2 = "m2"
     LECTORA = "lectora"
     CIENCIAS = "ciencias"
+    HISTORIA = "historia"
 
 
 class ProgressStatus(StrEnum):
