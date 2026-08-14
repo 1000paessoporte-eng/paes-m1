@@ -14,8 +14,16 @@ const nextConfig: NextConfig = {
   // el lockfile del workspace en la raiz y quedar en la carpeta equivocada.
   outputFileTracingRoot: path.join(__dirname, "../../"),
 
-  // Túnel público (Cloudflare) usado para probar la app fuera de la LAN.
-  allowedDevOrigins: ["healing-aims-photographs-guaranteed.trycloudflare.com"],
+  // Orígenes permitidos en desarrollo. Next solo autoriza "localhost" por
+  // defecto: abrir el dev server por 127.0.0.1 o por la IP de la LAN devuelve
+  // 403 en los chunks y la página carga sin JavaScript, sin más pista que un
+  // aviso en la consola del servidor.
+  allowedDevOrigins: [
+    "127.0.0.1",
+    "192.168.1.11",
+    // Túnel público (Cloudflare) usado para probar la app fuera de la LAN.
+    "healing-aims-photographs-guaranteed.trycloudflare.com",
+  ],
 
   // El navegador habla siempre con el origen de la web y esta reenvía a la API.
   // Así los equipos de la LAN solo necesitan un puerto abierto y la IP del host
