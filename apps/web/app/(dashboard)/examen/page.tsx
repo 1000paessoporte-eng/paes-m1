@@ -29,6 +29,8 @@ export default async function ModoEnsayoPage() {
     repasoLectora,
     optionsCiencias,
     repasoCiencias,
+    optionsHistoria,
+    repasoHistoria,
   ] =
     await Promise.all([
       getExamOptions(token, "m1"),
@@ -39,6 +41,8 @@ export default async function ModoEnsayoPage() {
       getRepaso(token, "lectora"),
       getExamOptions(token, "ciencias"),
       getRepaso(token, "ciencias"),
+      getExamOptions(token, "historia"),
+      getRepaso(token, "historia"),
     ]);
 
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
@@ -53,12 +57,14 @@ export default async function ModoEnsayoPage() {
         m2: optionsM2,
         lectora: optionsLectora,
         ciencias: optionsCiencias,
+        historia: optionsHistoria,
       }}
       repasoBySubject={{
         m1: repasoM1,
         m2: repasoM2,
         lectora: repasoLectora,
         ciencias: repasoCiencias,
+        historia: repasoHistoria,
       }}
       pastAttempts={pastAttempts}
       resumable={

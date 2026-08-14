@@ -54,6 +54,10 @@ AXIS_LABELS: dict[str, str] = {
     SkillAxis.BIOLOGIA.value: "Biología",
     SkillAxis.FISICA.value: "Física",
     SkillAxis.QUIMICA.value: "Química",
+    # Historia y Ciencias Sociales.
+    SkillAxis.HISTORIA.value: "Historia",
+    SkillAxis.CIUDADANIA.value: "Formación ciudadana",
+    SkillAxis.ECONOMIA.value: "Economía y sociedad",
     SkillAxis.NUMEROS.value: "Números",
     SkillAxis.ALGEBRA.value: "Álgebra y Funciones",
     SkillAxis.GEOMETRIA.value: "Geometría",
@@ -71,6 +75,7 @@ EJES_POR_PRUEBA: dict[Subject, set[str]] = {
     Subject.M2: {"numeros", "algebra", "geometria", "probabilidad"},
     Subject.LECTORA: {"localizar", "interpretar", "evaluar"},
     Subject.CIENCIAS: {"biologia", "fisica", "quimica"},
+    Subject.HISTORIA: {"historia", "ciudadania", "economia"},
 }
 
 SUBJECT_INCLUDES: dict[Subject, list[Subject]] = {
@@ -79,6 +84,7 @@ SUBJECT_INCLUDES: dict[Subject, list[Subject]] = {
     # Competencia Lectora no comparte banco con matemática.
     Subject.LECTORA: [Subject.LECTORA],
     Subject.CIENCIAS: [Subject.CIENCIAS],
+    Subject.HISTORIA: [Subject.HISTORIA],
 }
 
 

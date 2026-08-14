@@ -28,11 +28,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from paes_api.seed_data import (
     PASSAGES,
+    PASSAGES_HISTORIA,
     QUESTIONS,
     QUESTIONS_CIENCIAS,
+    QUESTIONS_HISTORIA,
     QUESTIONS_LECTORA,
     SKILL_NODES,
     SKILL_NODES_CIENCIAS,
+    SKILL_NODES_HISTORIA,
     SKILL_NODES_LECTORA,
     SKILL_NODES_M2,
 )
@@ -42,9 +45,11 @@ CODIGOS = (
     | {n[0] for n in SKILL_NODES_M2}
     | {n[0] for n in SKILL_NODES_LECTORA}
     | {n[0] for n in SKILL_NODES_CIENCIAS}
+    | {n[0] for n in SKILL_NODES_HISTORIA}
 )
-CLAVES_PASAJE = {p["key"] for p in PASSAGES}
-PASAJES_POR_CLAVE = {p["key"]: p for p in PASSAGES}
+TODOS_LOS_PASAJES = PASSAGES + PASSAGES_HISTORIA
+CLAVES_PASAJE = {p["key"] for p in TODOS_LOS_PASAJES}
+PASAJES_POR_CLAVE = {p["key"]: p for p in TODOS_LOS_PASAJES}
 DIFICULTADES = {"facil", "medio", "dificil"}
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
@@ -139,6 +144,10 @@ COMPROBACIONES: dict[str, str] = {
     "moneda 3 veces": str(Fraction(3, 8)),
     "5 intentos y probabilidad de éxito 0,2": str(int(5 * 0.2)),
     "4 veces con probabilidad de éxito 0,5": str(comb(4, 3) * 0.5**4).replace(".", ","),
+    # --- Historia: economía y lectura de tabla ---
+    "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
+    "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
+    "aumentó la población total de la comuna": f"{28700 - 12400:,}".replace(",", ".") + " habitantes",
     # --- Ciencias: física ---
     "recorre 120 m en 15 s": f"{120 // 15} m/s",
     "acelera uniformemente a 2 m/s² durante 6 s": f"{0.5 * 2 * 6**2:.0f} m",
@@ -183,25 +192,32 @@ def main() -> int:
     fallas: list[str] = []
 
     # ---- capa 1: estructura ----
-    todas = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS
+    todas = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS + QUESTIONS_HISTORIA
 
     # ---- capa 3: Competencia Lectora ----
     # Una pregunta de lectura sin su texto es una pregunta que nadie puede
     # responder, y un texto sin preguntas es peso muerto en el ensayo.
-    for q in QUESTIONS_LECTORA:
+    con_fuente = QUESTIONS_LECTORA + [q for q in QUESTIONS_HISTORIA if q.get("passage")]
+    for q in con_fuente:
         clave = q.get("passage")
         if not clave:
             fallas.append(f"pregunta de lectora sin texto asociado: {q['stem'][:60]}")
         elif clave not in CLAVES_PASAJE:
             fallas.append(f"apunta a un texto inexistente '{clave}': {q['stem'][:60]}")
 
-    usados = {q.get("passage") for q in QUESTIONS_LECTORA}
+    usados = {q.get("passage") for q in con_fuente}
     for clave in CLAVES_PASAJE - usados:
         fallas.append(f"el texto '{clave}' no tiene ninguna pregunta asociada")
 
-    for p in PASSAGES:
-        if len(p["body"]) < 400:
-            fallas.append(f"texto '{p['key']}' demasiado corto ({len(p['body'])} caracteres)")
+    # Un texto continuo corto no da para preguntar; una tabla o infografía sí,
+    # porque su densidad está en los datos y no en la extensión.
+    for p in TODOS_LOS_PASAJES:
+        minimo = 150 if p["kind"] == "discontinuo" else 400
+        if len(p["body"]) < minimo:
+            fallas.append(
+                f"texto '{p['key']}' demasiado corto para su tipo "
+                f"({len(p['body'])} caracteres, mínimo {minimo})"
+            )
         if not p.get("source_note"):
             fallas.append(f"texto '{p['key']}' sin nota de origen")
 
@@ -276,9 +292,10 @@ def main() -> int:
     # ---- reporte ----
     print(
         f"preguntas en el banco: {len(todas)} (matemática {len(QUESTIONS)}, "
-        f"lectora {len(QUESTIONS_LECTORA)}, ciencias {len(QUESTIONS_CIENCIAS)})"
+        f"lectora {len(QUESTIONS_LECTORA)}, ciencias {len(QUESTIONS_CIENCIAS)}, "
+        f"historia {len(QUESTIONS_HISTORIA)})"
     )
-    print(f"textos de lectura: {len(PASSAGES)}")
+    print(f"textos y fuentes: {len(TODOS_LOS_PASAJES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
     por_nodo = Counter(q["skill_node"] for q in todas)
     sin_suficientes = [c for c in CODIGOS if por_nodo[c] < 5]

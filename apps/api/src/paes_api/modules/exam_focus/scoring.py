@@ -70,6 +70,20 @@ _TABLA_CIENCIAS: list[int] = [
 ]
 
 
+# Tabla oficial DEMRE, PAES Regular de Historia y Cs. Sociales (Proceso 2026).
+# 60 preguntas puntuadas de 65. Índice = respuestas correctas.
+# https://demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-regular-p2026-hycsoc
+_TABLA_HISTORIA: list[int] = [
+    100, 117, 145, 169, 191, 212, 233, 253, 270, 286,
+    300, 314, 331, 348, 364, 377, 387, 397, 406, 418,
+    432, 447, 463, 476, 486, 493, 500, 508, 517, 530,
+    545, 561, 574, 585, 593, 600, 607, 616, 628, 643,
+    659, 673, 686, 695, 705, 714, 727, 742, 759, 775,
+    790, 804, 818, 835, 853, 874, 894, 915, 938, 964,
+    1000,
+]
+
+
 @dataclass(frozen=True)
 class SubjectScoring:
     """Parámetros de una prueba PAES: cuántas preguntas trae oficialmente,
@@ -99,6 +113,12 @@ SCORING_BY_SUBJECT: dict[Subject, SubjectScoring] = {
         preguntas_puntuadas=75,
         duracion_oficial_min=160,
         tabla=_TABLA_CIENCIAS,
+    ),
+    Subject.HISTORIA: SubjectScoring(
+        preguntas_oficiales=65,
+        preguntas_puntuadas=60,
+        duracion_oficial_min=120,
+        tabla=_TABLA_HISTORIA,
     ),
     Subject.M2: SubjectScoring(
         preguntas_oficiales=55,

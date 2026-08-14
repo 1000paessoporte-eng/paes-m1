@@ -41,6 +41,31 @@ const AXIS_META: Record<SkillNode["axis"], AxisMeta> = {
     bar: "bg-emerald-400",
     icon: GeometryIcon,
   },
+  // Historia y Ciencias Sociales.
+  historia: {
+    label: "Historia",
+    iconBg: "bg-amber-500/10",
+    iconColor: "text-amber-400",
+    border: "hover:border-amber-500/50",
+    bar: "bg-amber-400",
+    icon: GeometryIcon,
+  },
+  ciudadania: {
+    label: "Formación ciudadana",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-400",
+    border: "hover:border-violet-500/50",
+    bar: "bg-violet-400",
+    icon: AlgebraIcon,
+  },
+  economia: {
+    label: "Economía y sociedad",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-400",
+    border: "hover:border-sky-500/50",
+    bar: "bg-sky-400",
+    icon: NumbersIcon,
+  },
   // Ciencias: el eje es la disciplina.
   biologia: {
     label: "Biología",

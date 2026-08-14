@@ -17,15 +17,14 @@ const FORMATOS = [
 ] as const;
 
 /**
- * Pruebas PAES. Competencia Lectora, M1 y M2 ya tienen banco; las demás se muestran
- * para que quede claro que la plataforma las va a cubrir, pero deshabilitadas
- * hasta que tengan contenido.
+ * Las cinco pruebas PAES. Todas tienen banco, aunque de tamaños muy distintos:
+ * matemática es la más grande y las otras tres van creciendo.
  */
-const PRUEBAS: { id: Subject | "historia"; nombre: string; disponible: boolean }[] = [
+const PRUEBAS: { id: Subject; nombre: string; disponible: boolean }[] = [
   { id: "lectora", nombre: "Competencia Lectora", disponible: true },
   { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
   { id: "m2", nombre: "Competencia Matemática M2", disponible: true },
-  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: false },
+  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: true },
   { id: "ciencias", nombre: "Ciencias", disponible: true },
 ];
 
@@ -34,6 +33,7 @@ export const SUBJECT_LABELS: Record<Subject, string> = {
   m1: "Competencia Matemática M1",
   m2: "Competencia Matemática M2",
   ciencias: "Ciencias",
+  historia: "Historia y Ciencias Sociales",
 };
 
 const RITMOS: Pace[] = ["oficial", "exigente", "relajado"];
