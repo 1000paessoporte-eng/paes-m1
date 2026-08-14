@@ -22,6 +22,10 @@
      blanco (4.6:1); el normal solo para rellenos y bordes. */
   --accent-warm: #ea580c;
   --accent-warm-strong: #c2410c;
+  /* Trazo de la hoja de cuaderno. Azul lavado, no gris: el gris sobre blanco
+     se lee como suciedad de pantalla. */
+  --cuaderno-fino: color-mix(in srgb, var(--accent) 7%, transparent);
+  --cuaderno-grueso: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
 @theme inline {
@@ -49,8 +53,32 @@ html {
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
+}
+
+/* Hoja de cuaderno de matemáticas: cuadrícula fina de fondo en todo el sitio,
+   con un renglón marcado cada cinco cuadros, como el papel real.
+
+   Va en `html` y no en un pseudo-elemento del body: un ::before con z-index
+   negativo termina pintándose por delante de las tarjetas y las líneas cruzan
+   el contenido. En la raíz queda garantizadamente detrás de todo, y `fixed`
+   hace que la hoja no se arrastre con el scroll.
+
+   La opacidad es deliberadamente baja: compite con datos, y los números de la
+   analítica y del árbol tienen que leerse sin esfuerzo. */
+html {
+  background-color: var(--background);
+  background-image:
+    linear-gradient(to right, var(--cuaderno-fino) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--cuaderno-fino) 1px, transparent 1px),
+    linear-gradient(to right, var(--cuaderno-grueso) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--cuaderno-grueso) 1px, transparent 1px);
+  background-size:
+    28px 28px,
+    28px 28px,
+    140px 140px,
+    140px 140px;
+  background-attachment: fixed;
 }
 
 ::selection {
