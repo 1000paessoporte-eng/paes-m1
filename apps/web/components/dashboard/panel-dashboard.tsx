@@ -44,7 +44,14 @@ export function PanelDashboard({
   const mejor = puntajes.length > 0 ? Math.max(...puntajes) : null;
   const variacion = ultimo != null && anterior != null ? ultimo - anterior : null;
   const enCurso = attempts.find((a) => a.status === "in_progress");
-  const tiempoTotal = rendidos.reduce((acc, a) => acc + a.elapsed_seconds, 0);
+  // El tiempo practicado sale de analítica, que suma lo que el estudiante tardó
+  // en cada pregunta. Sumar `elapsed_seconds` de los intentos, en cambio, cuenta
+  // el reloj corriendo de los ensayos abandonados: un intento dejado a medias
+  // suma sus dos horas completas y el panel llegaba a decir "7 horas
+  // practicadas" cuando eran 6 minutos reales.
+  const tiempoTotalSegundos = Math.round(
+    (analytics?.total_minutes_practiced ?? 0) * 60
+  );
 
   // Solo el nombre de pila: "Hola, Juan" se lee mejor que el nombre completo.
   const nombre = user.name.split(" ")[0];
@@ -65,7 +72,7 @@ export function PanelDashboard({
               mejor={mejor}
               racha={analytics?.current_streak_days ?? 0}
               precision={analytics?.overall_accuracy ?? null}
-              tiempoTotal={tiempoTotal}
+              tiempoTotal={tiempoTotalSegundos}
             />
           </div>
 
