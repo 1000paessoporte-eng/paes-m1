@@ -17,6 +17,11 @@
   --success: #15803d;
   --danger: #dc2626;
   --warning: #b45309;
+  /* Acento cálido: marca la acción principal y el foco de atención, para que
+     no compita con el azul del sistema. El tono fuerte es el que se usa sobre
+     blanco (4.6:1); el normal solo para rellenos y bordes. */
+  --accent-warm: #ea580c;
+  --accent-warm-strong: #c2410c;
 }
 
 @theme inline {
@@ -33,6 +38,8 @@
   --color-success: var(--success);
   --color-danger: var(--danger);
   --color-warning: var(--warning);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-warm-strong: var(--accent-warm-strong);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -142,4 +149,24 @@ body {
 
 .float-chip {
   animation: float-chip 4s ease-in-out infinite;
+}
+
+/* Botón de acción principal del panel: cálido, para que destaque sobre el
+   azul que usa el resto de la interfaz. */
+.btn-warm {
+  background: linear-gradient(135deg, var(--accent-warm), #f97316);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.08);
+}
+
+.btn-warm:hover {
+  box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--accent-warm) 75%, transparent);
+}
+
+/* Tarjetas del panel: blancas sobre el gris del fondo, con sombra suave en
+   lugar de borde marcado. */
+.card-panel {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -16px rgb(15 23 42 / 0.12);
 }
