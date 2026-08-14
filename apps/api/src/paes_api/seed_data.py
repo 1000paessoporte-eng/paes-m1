@@ -9432,4 +9432,1551 @@ QUESTIONS += [
             ("8", "Dividió 16 por 2 en vez de trabajar con los exponentes."),
         ],
     ),
+    # ---------- num_porcentajes ----------
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 25% de 320?",
+        "80",
+        "El 25% equivale a la cuarta parte.\n\n"
+        "1) Convierte el porcentaje a decimal: 25% = 0,25.\n"
+        "2) Multiplica: 0,25 · 320 = 80.\n"
+        "3) Camino mental: el 25% es dividir por 4, y 320 ÷ 4 = 80.",
+        [
+            ("8.000", "Multiplicó por 25 pero olvidó dividir por 100."),
+            ("240", "Calculó el 75% restante en lugar del 25% pedido."),
+            ("64", "Usó un 20% en lugar del 25%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 60% de 45?",
+        "27",
+        "Se pasa el porcentaje a decimal y se multiplica.\n\n"
+        "1) 60% = 0,6.\n"
+        "2) Multiplica: 0,6 · 45 = 27.\n"
+        "3) Camino mental: el 10% de 45 es 4,5, así que el 60% es 4,5 · 6 = 27.",
+        [
+            ("2.700", "Multiplicó por 60 sin dividir por 100."),
+            ("18", "Calculó el 40% restante en lugar del 60%."),
+            ("75", "Sumó 60 y 45 en lugar de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Un producto cuesta $16.000 y tiene un descuento del 10%. ¿Cuál es su precio final?",
+        "$14.400",
+        "Con un 10% de descuento se paga el 90% del precio.\n\n"
+        "1) Calcula el descuento: el 10% de 16.000 es 1.600.\n"
+        "2) Réstalo: 16.000 − 1.600 = 14.400.\n"
+        "3) Camino directo: 16.000 · 0,9 = 14.400.",
+        [
+            ("$1.600", "Calculó el descuento pero no lo restó del precio."),
+            ("$17.600", "Sumó el 10% en lugar de restarlo."),
+            ("$15.900", "Restó 100 pesos en vez del 10% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Un sueldo de $450.000 sube un 8%. ¿Cuál es el nuevo sueldo?",
+        "$486.000",
+        "Subir un 8% significa quedar con el 108% del sueldo original.\n\n"
+        "1) Calcula el aumento: el 8% de 450.000. Como el 1% es 4.500, el 8% es "
+        "4.500 · 8 = 36.000.\n"
+        "2) Suma: 450.000 + 36.000 = 486.000.\n"
+        "3) Camino directo: 450.000 · 1,08 = 486.000.",
+        [
+            ("$36.000", "Calculó el aumento pero no lo sumó al sueldo original."),
+            ("$414.000", "Restó el 8% en lugar de sumarlo."),
+            ("$458.000", "Sumó 8.000 pesos en vez del 8% del sueldo."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Qué porcentaje representa 18 de un total de 60?",
+        "30%",
+        "Se compara la parte con el total.\n\n"
+        "1) Escribe la razón: 18/60.\n"
+        "2) Simplifica dividiendo por 6: 3/10.\n"
+        "3) Multiplica por 100: 3/10 · 100 = 30. El resultado es 30%.",
+        [
+            ("70%", "Calculó el porcentaje de la parte restante."),
+            ("18%", "Tomó la cantidad como si ya fuera un porcentaje."),
+            ("333%", "Dividió el total por la parte en lugar de la parte por el total."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Qué porcentaje representa 9 de un total de 36?",
+        "25%",
+        "Se divide la parte por el total y se lleva a porcentaje.\n\n"
+        "1) Razón: 9/36.\n"
+        "2) Simplifica dividiendo por 9: 1/4.\n"
+        "3) Un cuarto equivale al 25%.",
+        [
+            ("75%", "Calculó el porcentaje de la parte restante."),
+            ("9%", "Tomó la cantidad como si fuera directamente un porcentaje."),
+            ("400%", "Dividió el total por la parte."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Después de aplicar un descuento del 40%, un producto queda en $9.000. ¿Cuál era su precio original?",
+        "$15.000",
+        "El precio final representa el 60% del original, no el 40%.\n\n"
+        "1) Si se descontó un 40%, lo que se paga es el 100% − 40% = 60%.\n"
+        "2) Plantea: 0,6 · precio = 9.000.\n"
+        "3) Despeja dividiendo: precio = 9.000 ÷ 0,6 = 15.000.\n"
+        "4) Verifica: el 40% de 15.000 es 6.000, y 15.000 − 6.000 = 9.000.",
+        [
+            ("$12.600", "Le sumó un 40% al precio final en lugar de deshacer el descuento."),
+            ("$22.500", "Dividió por 0,4 en vez de por 0,6, usando el porcentaje descontado."),
+            ("$13.000", "Sumó los 4.000 del descuento estimado a ojo."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El precio de un artículo subió de $8.000 a $10.000. ¿Cuál fue el porcentaje de aumento?",
+        "25%",
+        "El aumento se mide siempre respecto del precio inicial.\n\n"
+        "1) Calcula la diferencia: 10.000 − 8.000 = 2.000.\n"
+        "2) Divide por el precio inicial, que es la referencia: 2.000/8.000 = 0,25.\n"
+        "3) Multiplica por 100: 25%.\n"
+        "4) Error frecuente: dividir por el precio final, que daría 20%.",
+        [
+            ("20%", "Dividió el aumento por el precio final en lugar del inicial."),
+            ("2.000%", "Entregó la diferencia en pesos como si fuera un porcentaje."),
+            ("125%", "Dividió el precio final por el inicial sin restar antes."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El precio de un artículo bajó de $25.000 a $20.000. ¿Cuál fue el porcentaje de descuento?",
+        "20%",
+        "El descuento se mide respecto del precio original.\n\n"
+        "1) Diferencia: 25.000 − 20.000 = 5.000.\n"
+        "2) Divide por el precio original: 5.000/25.000 = 0,2.\n"
+        "3) Multiplica por 100: 20%.\n"
+        "4) Si dividieras por el precio final darías 25%, que responde otra pregunta.",
+        [
+            ("25%", "Dividió la rebaja por el precio final en lugar del original."),
+            ("5.000%", "Entregó la rebaja en pesos como si fuera un porcentaje."),
+            ("80%", "Calculó qué porcentaje del original representa el precio final."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "En una elección votaron 4.500 personas y un candidato obtuvo el 36% de los votos. ¿Cuántos votos obtuvo?",
+        "1.620 votos",
+        "Se calcula el porcentaje sobre el total de votantes.\n\n"
+        "1) Convierte: 36% = 0,36.\n"
+        "2) Multiplica: 0,36 · 4.500 = 1.620.\n"
+        "3) Camino mental: el 1% de 4.500 es 45, así que el 36% es 45 · 36 = 1.620.",
+        [
+            ("2.880 votos", "Calculó los votos que no obtuvo, es decir el 64%."),
+            ("162.000 votos", "Multiplicó por 36 sin dividir por 100."),
+            ("125 votos", "Dividió el total por 36 en lugar de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El 15% de un número es 45. ¿Cuál es ese número?",
+        "300",
+        "Aquí se conoce la parte y se busca el total.\n\n"
+        "1) Plantea: 0,15 · n = 45.\n"
+        "2) Despeja dividiendo: n = 45 ÷ 0,15.\n"
+        "3) Calcula: 45 ÷ 0,15 = 300.\n"
+        "4) Verifica: el 15% de 300 es 45. Correcto.",
+        [
+            ("6,75", "Calculó el 15% de 45 en lugar de despejar el total."),
+            ("51,75", "Le sumó un 15% al 45."),
+            ("675", "Multiplicó por 15 en vez de dividir por 0,15."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "En un curso de 30 estudiantes, el 40% son hombres. ¿Cuántas mujeres hay?",
+        "18 mujeres",
+        "Conviene calcular primero el porcentaje que corresponde a las mujeres.\n\n"
+        "1) Si el 40% son hombres, el 60% son mujeres.\n"
+        "2) Calcula el 60% de 30: 0,6 · 30 = 18.\n"
+        "3) Hay 18 mujeres.\n"
+        "4) Verifica: los hombres son el 40% de 30, o sea 12, y 12 + 18 = 30.",
+        [
+            ("12 mujeres", "Calculó la cantidad de hombres en lugar de la de mujeres."),
+            ("40 mujeres", "Tomó el porcentaje como si fuera la cantidad de personas."),
+            ("15 mujeres", "Repartió el curso en mitades iguales, ignorando el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un producto de $60.000 tiene descuentos sucesivos de 10% y 20%, aplicados uno después del otro. ¿Cuál es el precio final?",
+        "$43.200",
+        "El segundo descuento se calcula sobre el precio ya rebajado.\n\n"
+        "1) Primer descuento: el 10% de 60.000 es 6.000, así que queda en 54.000.\n"
+        "2) Segundo descuento: el 20% de 54.000 es 10.800.\n"
+        "3) Precio final: 54.000 − 10.800 = 43.200.\n"
+        "4) Camino directo: 60.000 · 0,9 · 0,8 = 43.200. Equivale a un único "
+        "descuento del 28%, no del 30%.",
+        [
+            ("$42.000", "Sumó los descuentos y aplicó un 30% de una sola vez."),
+            ("$54.000", "Aplicó solo el primer descuento."),
+            ("$48.000", "Aplicó solo el descuento del 20%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "El precio de un producto sube un 30% y luego baja un 30% sobre el nuevo precio. Respecto del precio inicial, ¿qué ocurre?",
+        "Baja un 9%",
+        "Conviene partir de un precio cómodo, por ejemplo 100.\n\n"
+        "1) Alza del 30%: el precio pasa de 100 a 130.\n"
+        "2) Baja del 30%, pero sobre 130: el 30% de 130 es 39.\n"
+        "3) Precio final: 130 − 39 = 91.\n"
+        "4) Comparado con el inicial, bajó 9 de cada 100, es decir un 9%. La clave es "
+        "que la baja se aplica sobre una base mayor que la del alza.",
+        [
+            ("Queda igual que al principio", "Supuso que un alza y una baja del mismo porcentaje se anulan."),
+            ("Baja un 30%", "Consideró solo la baja, ignorando el alza previa."),
+            ("Sube un 9%", "Calculó bien la magnitud pero invirtió el sentido del cambio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Cinco máquinas producen 200 piezas en 4 horas. Trabajando al mismo ritmo, ¿cuántas piezas producen 8 máquinas en esas mismas 4 horas?",
+        "320 piezas",
+        "Con el tiempo fijo, la producción es directamente proporcional al número de "
+        "máquinas.\n\n"
+        "1) Calcula la producción de una sola máquina: 200 ÷ 5 = 40 piezas en 4 "
+        "horas.\n"
+        "2) Multiplica por las 8 máquinas: 40 · 8 = 320.\n"
+        "3) Control de sentido: más máquinas en el mismo tiempo produce más piezas, "
+        "así que el resultado debe superar las 200.",
+        [
+            ("125 piezas", "Aplicó proporcionalidad inversa, como si más máquinas produjeran menos."),
+            ("203 piezas", "Sumó las 3 máquinas adicionales como si fueran piezas."),
+            ("1.600 piezas", "Multiplicó las 200 piezas por las 8 máquinas, sin dividir antes por 5."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Tres obreros pintan una casa en 12 días. ¿Cuántos días tardarían 4 obreros trabajando al mismo ritmo?",
+        "9 días",
+        "Más obreros implica menos días: es proporcionalidad inversa.\n\n"
+        "1) Calcula el trabajo total en días-obrero: 3 · 12 = 36.\n"
+        "2) Reparte ese trabajo entre 4 obreros: 36 ÷ 4 = 9.\n"
+        "3) Tardarían 9 días.\n"
+        "4) Control: al aumentar los obreros el plazo debe acortarse, y 9 < 12.",
+        [
+            ("16 días", "Aplicó proporcionalidad directa, alargando el plazo al sumar obreros."),
+            ("11 días", "Restó un día por cada obrero adicional."),
+            ("48 días", "Multiplicó los días por los obreros en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un capital aumenta un 20% y después ese nuevo monto aumenta un 25%. ¿Cuál es el aumento total respecto del capital inicial?",
+        "50%",
+        "Los aumentos sucesivos se multiplican, no se suman.\n\n"
+        "1) Parte de 100. Tras el primer aumento: 100 · 1,2 = 120.\n"
+        "2) El segundo aumento se aplica sobre 120: 120 · 1,25 = 150.\n"
+        "3) De 100 a 150 hay un aumento de 50, es decir un 50%.\n"
+        "4) El resultado supera la suma simple (20 + 25 = 45) porque el segundo "
+        "aumento actúa sobre una base ya crecida.",
+        [
+            ("45%", "Sumó los porcentajes directamente en lugar de encadenarlos."),
+            ("25%", "Consideró solo el segundo aumento."),
+            ("5%", "Restó los porcentajes en vez de componerlos."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Una camisa cuesta $19.900 y está con un 30% de descuento. ¿Cuánto se paga por ella?",
+        "$13.930",
+        "Con un 30% de descuento se paga el 70% del precio.\n\n"
+        "1) Calcula el 70%: 19.900 · 0,7.\n"
+        "2) Multiplica: 19.900 · 0,7 = 13.930.\n"
+        "3) Camino alternativo: el 30% de 19.900 es 5.970, y "
+        "19.900 − 5.970 = 13.930.",
+        [
+            ("$5.970", "Calculó el descuento pero no lo restó del precio."),
+            ("$25.870", "Sumó el 30% en lugar de restarlo."),
+            ("$16.900", "Restó 3.000 pesos en vez del 30% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "El precio de un producto con IVA incluido de 19% es $23.800. ¿Cuál es su precio neto, sin IVA?",
+        "$20.000",
+        "El precio con IVA es el 119% del neto, no el 100%.\n\n"
+        "1) Plantea: neto · 1,19 = 23.800.\n"
+        "2) Despeja dividiendo: neto = 23.800 ÷ 1,19.\n"
+        "3) Calcula: 20.000.\n"
+        "4) Verifica: el 19% de 20.000 es 3.800, y 20.000 + 3.800 = 23.800.\n\n"
+        "Error frecuente: restarle el 19% al precio con IVA, que daría 19.278 y no "
+        "reconstruye el total al volver a aplicar el impuesto.",
+        [
+            ("$19.278", "Restó el 19% del precio con IVA en vez de dividir por 1,19."),
+            ("$4.522", "Calculó el 19% del precio con IVA, que tampoco es el impuesto real."),
+            ("$28.322", "Sumó el 19% en lugar de quitarlo."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "¿Cuánto es el 120% de 250?",
+        "300",
+        "Un porcentaje mayor que 100 da un resultado mayor que la cantidad "
+        "original.\n\n"
+        "1) Convierte: 120% = 1,2.\n"
+        "2) Multiplica: 1,2 · 250 = 300.\n"
+        "3) Otra lectura: el 100% de 250 es 250, y el 20% adicional es 50. "
+        "Sumando, 300.",
+        [
+            ("250", "Supuso que un porcentaje nunca puede superar la cantidad original."),
+            ("50", "Calculó solo el 20% adicional, sin sumar el 100%."),
+            ("30.000", "Multiplicó por 120 sin dividir por 100."),
+        ],
+    ),
+    # ==================================================================
+    # LOTE 7 — eje GEOMETRÍA (M1)
+    # ==================================================================
+    # ---------- geo_plana ----------
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área de un cuadrado de lado 7 cm?",
+        "49 cm²",
+        "El área de un cuadrado es el lado multiplicado por sí mismo.\n\n"
+        "1) Aplica la fórmula A = lado².\n"
+        "2) Calcula: 7 · 7 = 49.\n"
+        "3) El área es 49 cm². Las unidades van al cuadrado porque se multiplican dos "
+        "longitudes.",
+        [
+            ("28 cm²", "Calculó el perímetro en lugar del área."),
+            ("14 cm²", "Multiplicó el lado por 2 en vez de elevarlo al cuadrado."),
+            ("49 cm", "Calculó bien el número pero usó unidades de longitud en lugar de área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el perímetro de un cuadrado de lado 9 cm?",
+        "36 cm",
+        "El perímetro es la suma de todos los lados.\n\n"
+        "1) Un cuadrado tiene cuatro lados iguales, así que P = 4 · lado.\n"
+        "2) Calcula: 4 · 9 = 36.\n"
+        "3) El perímetro es 36 cm, en unidades de longitud.",
+        [
+            ("81 cm", "Calculó el área en lugar del perímetro."),
+            ("18 cm", "Sumó solo dos lados."),
+            ("36 cm²", "Calculó bien el número pero usó unidades de área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área de un rectángulo de 12 cm de largo y 6 cm de ancho?",
+        "72 cm²",
+        "El área de un rectángulo es largo por ancho.\n\n"
+        "1) Aplica A = largo · ancho.\n"
+        "2) Calcula: 12 · 6 = 72.\n"
+        "3) El área es 72 cm².",
+        [
+            ("36 cm²", "Calculó el perímetro en lugar del área."),
+            ("18 cm²", "Sumó las dimensiones en vez de multiplicarlas."),
+            ("144 cm²", "Elevó el largo al cuadrado, tratándolo como un cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el perímetro de un rectángulo de 15 cm de largo y 8 cm de ancho?",
+        "46 cm",
+        "El perímetro suma los cuatro lados: dos largos y dos anchos.\n\n"
+        "1) Aplica P = 2 · (largo + ancho).\n"
+        "2) Suma primero: 15 + 8 = 23.\n"
+        "3) Multiplica por 2: 46.\n"
+        "4) El perímetro es 46 cm.",
+        [
+            ("23 cm", "Sumó largo y ancho una sola vez, olvidando que cada lado se repite."),
+            ("120 cm", "Multiplicó las dimensiones, que da el área y no el perímetro."),
+            ("30 cm", "Duplicó solo el largo."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área de un triángulo de base 14 cm y altura 5 cm?",
+        "35 cm²",
+        "El área de un triángulo es la mitad del producto entre base y altura.\n\n"
+        "1) Aplica A = (base · altura)/2.\n"
+        "2) Multiplica: 14 · 5 = 70.\n"
+        "3) Divide por 2: 35.\n"
+        "4) El área es 35 cm². La división por 2 viene de que el triángulo es la "
+        "mitad de un rectángulo con la misma base y altura.",
+        [
+            ("70 cm²", "Multiplicó base por altura pero olvidó dividir por 2."),
+            ("19 cm²", "Sumó base y altura en lugar de multiplicarlas."),
+            ("9,5 cm²", "Sumó base y altura y después dividió por 2."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el perímetro de un triángulo equilátero de lado 12 cm?",
+        "36 cm",
+        "En un triángulo equilátero los tres lados son iguales.\n\n"
+        "1) Aplica P = 3 · lado.\n"
+        "2) Calcula: 3 · 12 = 36.\n"
+        "3) El perímetro es 36 cm.",
+        [
+            ("48 cm", "Multiplicó por 4, como si fuera un cuadrilátero."),
+            ("24 cm", "Sumó solo dos lados."),
+            ("72 cm²", "Calculó base por altura suponiendo que la altura vale lo mismo que el lado."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "¿Cuál es el área de un círculo de radio 4 cm? (usa π ≈ 3,14)",
+        "50,24 cm²",
+        "El área de un círculo depende del cuadrado del radio.\n\n"
+        "1) Aplica A = π · r².\n"
+        "2) Eleva el radio al cuadrado primero: 4² = 16.\n"
+        "3) Multiplica por π: 3,14 · 16 = 50,24.\n"
+        "4) El área es 50,24 cm².",
+        [
+            ("25,12 cm²", "Calculó el perímetro (2πr) en lugar del área."),
+            ("12,56 cm²", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("100,48 cm²", "Usó el diámetro en lugar del radio dentro de la fórmula."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "¿Cuál es la longitud de una circunferencia de radio 7 cm? (usa π ≈ 3,14)",
+        "43,96 cm",
+        "La longitud de la circunferencia es su contorno.\n\n"
+        "1) Aplica L = 2 · π · r.\n"
+        "2) Calcula: 2 · 3,14 = 6,28.\n"
+        "3) Multiplica por el radio: 6,28 · 7 = 43,96.\n"
+        "4) La longitud es 43,96 cm, en unidades de longitud.",
+        [
+            ("153,86 cm", "Calculó el área en lugar de la longitud."),
+            ("21,98 cm", "Olvidó multiplicar por 2 en la fórmula."),
+            ("43,96 cm²", "Calculó bien el número pero usó unidades de área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un trapecio tiene bases de 10 cm y 6 cm, y una altura de 4 cm. ¿Cuál es su área?",
+        "32 cm²",
+        "El área de un trapecio usa el promedio de las dos bases.\n\n"
+        "1) Aplica A = [(base mayor + base menor)/2] · altura.\n"
+        "2) Suma las bases: 10 + 6 = 16.\n"
+        "3) Divide por 2: 8. Ese es el promedio de las bases.\n"
+        "4) Multiplica por la altura: 8 · 4 = 32 cm².",
+        [
+            ("64 cm²", "Sumó las bases y multiplicó por la altura sin dividir por 2."),
+            ("240 cm²", "Multiplicó las dos bases entre sí y por la altura."),
+            ("20 cm²", "Usó solo una de las bases en la fórmula del rectángulo."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un rombo tiene diagonales que miden 12 cm y 8 cm. ¿Cuál es su área?",
+        "48 cm²",
+        "El área de un rombo se calcula con sus diagonales.\n\n"
+        "1) Aplica A = (D · d)/2, donde D y d son las diagonales.\n"
+        "2) Multiplica: 12 · 8 = 96.\n"
+        "3) Divide por 2: 48.\n"
+        "4) El área es 48 cm².",
+        [
+            ("96 cm²", "Multiplicó las diagonales pero olvidó dividir por 2."),
+            ("40 cm²", "Calculó el perímetro suponiendo que las diagonales son lados."),
+            ("20 cm²", "Sumó las diagonales en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Una cancha rectangular mide 30 m de largo y 18 m de ancho. ¿Cuántos metros de alambre se necesitan para cercarla completamente?",
+        "96 m",
+        "Cercar significa rodear el borde, así que se pide el perímetro.\n\n"
+        "1) Aplica P = 2 · (largo + ancho).\n"
+        "2) Suma: 30 + 18 = 48.\n"
+        "3) Multiplica por 2: 96.\n"
+        "4) Se necesitan 96 m de alambre.",
+        [
+            ("540 m", "Calculó el área en lugar del perímetro."),
+            ("48 m", "Sumó largo y ancho una sola vez."),
+            ("60 m", "Duplicó solo el largo de la cancha."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Una sala rectangular mide 6,5 m por 4 m. ¿Cuál es su superficie?",
+        "26 m²",
+        "La superficie de un rectángulo es el producto de sus dimensiones.\n\n"
+        "1) Aplica A = largo · ancho.\n"
+        "2) Calcula: 6,5 · 4. Puedes verlo como 6 · 4 = 24 más 0,5 · 4 = 2.\n"
+        "3) Total: 26.\n"
+        "4) La superficie es 26 m².",
+        [
+            ("21 m²", "Calculó el perímetro en lugar de la superficie."),
+            ("10,5 m²", "Sumó las dimensiones en vez de multiplicarlas."),
+            ("24 m²", "Ignoró los 0,5 m al multiplicar."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un cuadrado tiene un perímetro de 48 cm. ¿Cuál es su área?",
+        "144 cm²",
+        "Primero hay que recuperar el lado a partir del perímetro.\n\n"
+        "1) El perímetro de un cuadrado es 4 veces el lado, así que "
+        "lado = 48 ÷ 4 = 12 cm.\n"
+        "2) Ahora calcula el área: 12² = 144.\n"
+        "3) El área es 144 cm².",
+        [
+            ("2.304 cm²", "Elevó el perímetro al cuadrado en lugar del lado."),
+            ("48 cm²", "Entregó el perímetro con unidades de área."),
+            ("24 cm²", "Dividió el perímetro por 2 en lugar de calcular el lado y elevarlo."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un triángulo tiene un área de 36 cm² y su altura mide 9 cm. ¿Cuánto mide su base?",
+        "8 cm",
+        "Se despeja la base a partir de la fórmula del área.\n\n"
+        "1) La fórmula es A = (base · altura)/2.\n"
+        "2) Reemplaza: 36 = (base · 9)/2.\n"
+        "3) Multiplica ambos lados por 2: 72 = base · 9.\n"
+        "4) Divide por 9: base = 8 cm.",
+        [
+            ("4 cm", "Dividió el área por la altura sin multiplicar antes por 2."),
+            ("324 cm", "Multiplicó el área por la altura en lugar de dividir."),
+            ("18 cm", "Multiplicó por 2 pero dividió por la mitad de la altura."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un círculo tiene un diámetro de 10 cm. ¿Cuál es su área? (usa π ≈ 3,14)",
+        "78,5 cm²",
+        "La fórmula usa el radio, no el diámetro: ese es el paso que se olvida.\n\n"
+        "1) El radio es la mitad del diámetro: 10 ÷ 2 = 5 cm.\n"
+        "2) Aplica A = π · r²: eleva primero, 5² = 25.\n"
+        "3) Multiplica: 3,14 · 25 = 78,5.\n"
+        "4) El área es 78,5 cm².",
+        [
+            ("314 cm²", "Usó el diámetro como si fuera el radio."),
+            ("31,4 cm²", "Calculó la longitud de la circunferencia en lugar del área."),
+            ("15,7 cm²", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un terreno rectangular tiene un perímetro de 44 m y su largo mide 4 m más que su ancho. ¿Cuál es su área?",
+        "117 m²",
+        "Primero se hallan las dimensiones y después el área.\n\n"
+        "1) Llama a al ancho. El largo es a + 4.\n"
+        "2) El perímetro es 2(a + a + 4) = 44, o sea 4a + 8 = 44.\n"
+        "3) Despeja: 4a = 36, entonces a = 9. El largo es 13.\n"
+        "4) Área: 9 · 13 = 117 m². Verifica el perímetro: 2(9 + 13) = 44.",
+        [
+            ("44 m²", "Entregó el perímetro con unidades de área."),
+            ("121 m²", "Repartió el perímetro en partes iguales, ignorando la diferencia de 4 m."),
+            ("22 m²", "Dividió el perímetro por 2 y lo tomó como área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Si el radio de un círculo se duplica, ¿qué ocurre con su área?",
+        "Queda multiplicada por 4",
+        "El radio aparece elevado al cuadrado, y eso amplifica el efecto.\n\n"
+        "1) El área original es A = π · r².\n"
+        "2) Con el radio duplicado: π · (2r)² = π · 4r².\n"
+        "3) Eso es 4 veces el área original.\n"
+        "4) Ejemplo concreto: con r = 3 el área es 28,26; con r = 6 es 113,04, "
+        "exactamente el cuádruple.",
+        [
+            ("Queda multiplicada por 2", "Supuso que el área crece en la misma proporción que el radio."),
+            ("Queda multiplicada por 8", "Aplicó el factor del volumen, que eleva al cubo."),
+            ("Queda multiplicada por 16", "Elevó al cuadrado el factor 4 en lugar del 2."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un cuadrado de lado 8 cm tiene inscrito un círculo que toca sus cuatro lados. ¿Cuál es el área de la región del cuadrado que queda fuera del círculo? (usa π ≈ 3,14)",
+        "13,76 cm²",
+        "Se resta el área del círculo a la del cuadrado.\n\n"
+        "1) Área del cuadrado: 8² = 64 cm².\n"
+        "2) El círculo inscrito tiene diámetro igual al lado, así que su radio es "
+        "8 ÷ 2 = 4 cm.\n"
+        "3) Área del círculo: 3,14 · 4² = 3,14 · 16 = 50,24 cm².\n"
+        "4) Resta: 64 − 50,24 = 13,76 cm².",
+        [
+            ("50,24 cm²", "Entregó el área del círculo en lugar de la región que queda fuera."),
+            ("64 cm²", "Entregó el área del cuadrado sin descontar el círculo."),
+            ("−136,96 cm²", "Usó el lado completo como radio del círculo, obteniendo un área mayor que la del cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "¿Cuál es el área de un paralelogramo de base 9 cm y altura 5 cm?",
+        "45 cm²",
+        "El área de un paralelogramo es base por altura, sin dividir por dos.\n\n"
+        "1) Aplica A = base · altura.\n"
+        "2) Calcula: 9 · 5 = 45.\n"
+        "3) El área es 45 cm².\n\n"
+        "Ojo: la altura es la distancia perpendicular entre las bases, no la medida "
+        "del lado inclinado.",
+        [
+            ("22,5 cm²", "Dividió por 2, aplicando la fórmula del triángulo."),
+            ("28 cm²", "Calculó el perímetro suponiendo que la altura es un lado."),
+            ("14 cm²", "Sumó base y altura en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Una piscina rectangular mide 12 m por 5 m y está rodeada por una vereda de 1 m de ancho en todo su contorno. ¿Cuál es el área de la vereda?",
+        "38 m²",
+        "Se calcula el área total incluyendo la vereda y se le resta la piscina.\n\n"
+        "1) La vereda agrega 1 m por cada lado, así que el rectángulo exterior mide "
+        "12 + 2 = 14 m por 5 + 2 = 7 m.\n"
+        "2) Área exterior: 14 · 7 = 98 m².\n"
+        "3) Área de la piscina: 12 · 5 = 60 m².\n"
+        "4) Área de la vereda: 98 − 60 = 38 m².",
+        [
+            ("98 m²", "Entregó el área total incluyendo la piscina."),
+            ("22 m²", "Agregó 1 m a cada dimensión en vez de 2, olvidando que la vereda rodea ambos extremos."),
+            ("34 m²", "Calculó el perímetro de la piscina y lo multiplicó por el ancho de la vereda, sin contar las esquinas."),
+        ],
+    ),
+    # ---------- geo_pitagoras ----------
+    _q(
+        "geo_pitagoras", "facil",
+        "Un triángulo rectángulo tiene catetos de 5 cm y 12 cm. ¿Cuánto mide la hipotenusa?",
+        "13 cm",
+        "El teorema de Pitágoras relaciona los tres lados de un triángulo "
+        "rectángulo.\n\n"
+        "1) La fórmula es h² = a² + b², con h la hipotenusa.\n"
+        "2) Calcula los cuadrados: 5² = 25 y 12² = 144.\n"
+        "3) Suma: 25 + 144 = 169.\n"
+        "4) Saca la raíz: h = √169 = 13 cm.",
+        [
+            ("17 cm", "Sumó los catetos directamente, sin elevarlos al cuadrado."),
+            ("169 cm", "Sumó los cuadrados pero no aplicó la raíz."),
+            ("7 cm", "Restó los catetos en lugar de aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un triángulo rectángulo tiene catetos de 8 cm y 15 cm. ¿Cuánto mide la hipotenusa?",
+        "17 cm",
+        "Se aplica el teorema de Pitágoras.\n\n"
+        "1) h² = 8² + 15².\n"
+        "2) Calcula: 64 + 225 = 289.\n"
+        "3) Saca la raíz: √289 = 17.\n"
+        "4) La hipotenusa mide 17 cm. Siempre es el lado más largo del triángulo.",
+        [
+            ("23 cm", "Sumó los catetos sin elevarlos al cuadrado."),
+            ("289 cm", "Sumó los cuadrados pero olvidó la raíz."),
+            ("12,7 cm", "Sacó la raíz de cada cateto antes de sumar."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "En un triángulo rectángulo, la hipotenusa mide 10 cm y uno de sus catetos mide 6 cm. ¿Cuánto mide el otro cateto?",
+        "8 cm",
+        "Cuando se busca un cateto, el teorema se usa restando.\n\n"
+        "1) De h² = a² + b² se despeja b² = h² − a².\n"
+        "2) Calcula: 10² − 6² = 100 − 36 = 64.\n"
+        "3) Saca la raíz: √64 = 8 cm.\n"
+        "4) Verifica: 6² + 8² = 36 + 64 = 100 = 10².",
+        [
+            ("4 cm", "Restó las medidas directamente, sin elevarlas al cuadrado."),
+            ("11,7 cm", "Sumó los cuadrados en lugar de restarlos."),
+            ("64 cm", "Restó los cuadrados pero no aplicó la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "En un triángulo rectángulo, la hipotenusa mide 17 cm y un cateto mide 8 cm. ¿Cuánto mide el otro cateto?",
+        "15 cm",
+        "Se despeja el cateto desconocido.\n\n"
+        "1) b² = h² − a² = 17² − 8².\n"
+        "2) Calcula: 289 − 64 = 225.\n"
+        "3) Saca la raíz: √225 = 15 cm.\n"
+        "4) Verifica: 8² + 15² = 64 + 225 = 289 = 17².",
+        [
+            ("9 cm", "Restó las medidas sin elevarlas al cuadrado."),
+            ("18,8 cm", "Sumó los cuadrados en vez de restarlos."),
+            ("225 cm", "Restó bien los cuadrados pero olvidó la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un triángulo rectángulo tiene catetos de 7 cm y 24 cm. ¿Cuánto mide la hipotenusa?",
+        "25 cm",
+        "Se aplica el teorema de Pitágoras.\n\n"
+        "1) h² = 7² + 24² = 49 + 576.\n"
+        "2) Suma: 625.\n"
+        "3) Saca la raíz: √625 = 25 cm.\n"
+        "4) Los números 7, 24 y 25 forman un trío pitagórico, igual que 3-4-5.",
+        [
+            ("31 cm", "Sumó los catetos sin elevarlos al cuadrado."),
+            ("625 cm", "Sumó los cuadrados pero no aplicó la raíz."),
+            ("17 cm", "Restó los catetos en lugar de aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "¿Cuánto mide la diagonal de un rectángulo que mide 9 cm por 12 cm?",
+        "15 cm",
+        "La diagonal divide al rectángulo en dos triángulos rectángulos.\n\n"
+        "1) Los lados del rectángulo son los catetos y la diagonal es la "
+        "hipotenusa.\n"
+        "2) d² = 9² + 12² = 81 + 144 = 225.\n"
+        "3) Saca la raíz: √225 = 15 cm.\n"
+        "4) Control: la diagonal siempre debe ser mayor que cualquiera de los lados.",
+        [
+            ("21 cm", "Sumó los lados sin elevarlos al cuadrado."),
+            ("108 cm", "Calculó el área del rectángulo en lugar de la diagonal."),
+            ("3 cm", "Restó los lados en vez de aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "¿Cuánto mide la diagonal de un cuadrado de lado 10 cm?",
+        "10√2 cm",
+        "La diagonal de un cuadrado forma un triángulo rectángulo con dos lados "
+        "iguales.\n\n"
+        "1) d² = 10² + 10² = 100 + 100 = 200.\n"
+        "2) Saca la raíz: √200.\n"
+        "3) Simplifica: 200 = 100 · 2, así que √200 = 10√2.\n"
+        "4) Aproximadamente 14,1 cm. En general, la diagonal de un cuadrado es su "
+        "lado multiplicado por √2.",
+        [
+            ("20 cm", "Sumó los dos lados sin elevarlos al cuadrado."),
+            ("100 cm", "Calculó el área del cuadrado en lugar de la diagonal."),
+            ("10 cm", "Supuso que la diagonal mide lo mismo que el lado."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Una rampa sube 3 m de altura a lo largo de una base horizontal de 4 m. ¿Cuánto mide la superficie inclinada de la rampa?",
+        "5 m",
+        "La rampa, la altura y la base forman un triángulo rectángulo.\n\n"
+        "1) La altura y la base son los catetos; la rampa es la hipotenusa.\n"
+        "2) r² = 3² + 4² = 9 + 16 = 25.\n"
+        "3) Saca la raíz: √25 = 5 m.\n"
+        "4) Este es el trío pitagórico más conocido: 3, 4 y 5.",
+        [
+            ("7 m", "Sumó altura y base sin elevarlas al cuadrado."),
+            ("12 m", "Multiplicó altura por base, que da el doble del área."),
+            ("1 m", "Restó la altura de la base."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un mástil de 12 m de alto se sujeta con un cable tensado desde su punta hasta un punto del suelo situado a 5 m de su base. ¿Cuánto mide el cable?",
+        "13 m",
+        "El mástil, el suelo y el cable forman un triángulo rectángulo.\n\n"
+        "1) El mástil y la distancia en el suelo son los catetos; el cable es la "
+        "hipotenusa.\n"
+        "2) c² = 12² + 5² = 144 + 25 = 169.\n"
+        "3) Saca la raíz: √169 = 13 m.\n"
+        "4) Control: el cable debe ser más largo que el mástil, y 13 > 12.",
+        [
+            ("17 m", "Sumó las medidas sin elevarlas al cuadrado."),
+            ("60 m", "Multiplicó las dos medidas."),
+            ("10,9 m", "Restó los cuadrados en lugar de sumarlos."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un triángulo rectángulo tiene catetos de 20 cm y 21 cm. ¿Cuánto mide la hipotenusa?",
+        "29 cm",
+        "Se aplica el teorema aunque los números no sean los habituales.\n\n"
+        "1) h² = 20² + 21² = 400 + 441.\n"
+        "2) Suma: 841.\n"
+        "3) Saca la raíz: √841 = 29 cm.\n"
+        "4) Verifica: 29² = 841. Correcto.",
+        [
+            ("41 cm", "Sumó los catetos sin elevarlos al cuadrado."),
+            ("841 cm", "Sumó los cuadrados pero no aplicó la raíz."),
+            ("1 cm", "Restó los catetos en vez de aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En un triángulo rectángulo la hipotenusa mide 15 cm y un cateto mide 9 cm. ¿Cuánto mide el otro cateto?",
+        "12 cm",
+        "Se despeja el cateto restando los cuadrados.\n\n"
+        "1) b² = 15² − 9² = 225 − 81 = 144.\n"
+        "2) Saca la raíz: √144 = 12 cm.\n"
+        "3) Verifica: 9² + 12² = 81 + 144 = 225 = 15².\n"
+        "4) Este triángulo es el 3-4-5 multiplicado por 3.",
+        [
+            ("6 cm", "Restó las medidas directamente, sin elevarlas al cuadrado."),
+            ("17,5 cm", "Sumó los cuadrados en lugar de restarlos."),
+            ("144 cm", "Restó bien pero olvidó aplicar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Una cancha rectangular mide 60 m por 80 m. ¿Cuánto mide su diagonal?",
+        "100 m",
+        "La diagonal es la hipotenusa del triángulo que forman dos lados.\n\n"
+        "1) d² = 60² + 80² = 3.600 + 6.400 = 10.000.\n"
+        "2) Saca la raíz: √10.000 = 100 m.\n"
+        "3) Control: la diagonal debe superar al lado más largo, y 100 > 80.\n"
+        "4) Es el trío 3-4-5 multiplicado por 20.",
+        [
+            ("140 m", "Sumó los lados sin elevarlos al cuadrado."),
+            ("4.800 m", "Calculó el área de la cancha en lugar de la diagonal."),
+            ("20 m", "Restó los lados en vez de aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "¿Cuál de estos tríos de medidas SÍ puede formar un triángulo rectángulo?",
+        "9, 40 y 41",
+        "Un trío forma triángulo rectángulo si cumple el teorema de Pitágoras, con "
+        "el mayor como hipotenusa.\n\n"
+        "1) Prueba 9, 40 y 41: 9² + 40² = 81 + 1.600 = 1.681, y 41² = 1.681. "
+        "Cumple.\n"
+        "2) Prueba 5, 6 y 8: 25 + 36 = 61, pero 8² = 64. No cumple.\n"
+        "3) Prueba 7, 8 y 12: 49 + 64 = 113, pero 12² = 144. No cumple.\n"
+        "4) Prueba 10, 12 y 15: 100 + 144 = 244, pero 15² = 225. No cumple.",
+        [
+            ("5, 6 y 8", "La suma de los cuadrados de los dos menores da 61, no 64."),
+            ("7, 8 y 12", "La suma de los cuadrados de los dos menores da 113, no 144."),
+            ("10, 12 y 15", "La suma de los cuadrados de los dos menores da 244, no 225."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Un triángulo rectángulo tiene hipotenusa 10 cm y un cateto de 6 cm. ¿Cuál es su área?",
+        "24 cm²",
+        "Primero hay que encontrar el cateto que falta, porque el área los usa a "
+        "ambos.\n\n"
+        "1) Calcula el otro cateto: b² = 10² − 6² = 100 − 36 = 64, entonces b = 8 cm.\n"
+        "2) En un triángulo rectángulo los catetos son la base y la altura.\n"
+        "3) Área = (6 · 8)/2 = 48/2.\n"
+        "4) El área es 24 cm².",
+        [
+            ("30 cm²", "Usó la hipotenusa como si fuera un cateto: (6 · 10)/2."),
+            ("48 cm²", "Multiplicó los catetos pero olvidó dividir por 2."),
+            ("8 cm²", "Entregó la medida del cateto faltante en lugar del área."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Una escalera de 13 m se apoya contra una pared vertical y su base está a 5 m de la pared. ¿A qué altura llega la escalera?",
+        "12 m",
+        "La escalera es la hipotenusa; la pared y el suelo son los catetos.\n\n"
+        "1) Despeja la altura: a² = 13² − 5².\n"
+        "2) Calcula: 169 − 25 = 144.\n"
+        "3) Saca la raíz: √144 = 12 m.\n"
+        "4) Control: la altura debe ser menor que la escalera, y 12 < 13.",
+        [
+            ("8 m", "Restó las medidas directamente, sin elevarlas al cuadrado."),
+            ("13,9 m", "Sumó los cuadrados en lugar de restarlos, obteniendo una altura mayor que la escalera."),
+            ("144 m", "Restó bien los cuadrados pero olvidó la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "¿Cuál es el perímetro de un triángulo rectángulo de catetos 6 cm y 8 cm?",
+        "24 cm",
+        "El perímetro necesita los tres lados, así que primero hay que hallar la "
+        "hipotenusa.\n\n"
+        "1) h² = 6² + 8² = 36 + 64 = 100, entonces h = 10 cm.\n"
+        "2) Suma los tres lados: 6 + 8 + 10.\n"
+        "3) El perímetro es 24 cm.",
+        [
+            ("14 cm", "Sumó solo los dos catetos, sin incluir la hipotenusa."),
+            ("48 cm", "Calculó el doble del producto de los catetos."),
+            ("10 cm", "Entregó la hipotenusa en lugar del perímetro."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "¿Cuál es la altura de un triángulo equilátero de lado 8 cm?",
+        "4√3 cm",
+        "La altura divide al triángulo equilátero en dos triángulos rectángulos "
+        "iguales.\n\n"
+        "1) La altura cae en el punto medio de la base, así que uno de los catetos "
+        "mide 8 ÷ 2 = 4 cm.\n"
+        "2) La hipotenusa es el lado completo, 8 cm.\n"
+        "3) Despeja la altura: a² = 8² − 4² = 64 − 16 = 48.\n"
+        "4) Saca la raíz y simplifica: √48 = √(16 · 3) = 4√3 cm, aproximadamente "
+        "6,93 cm.",
+        [
+            ("8 cm", "Supuso que la altura mide lo mismo que el lado."),
+            ("4 cm", "Entregó la mitad de la base en lugar de la altura."),
+            ("√48 cm", "Aplicó bien el teorema pero no simplificó la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Dos personas parten del mismo punto: una camina 9 km hacia el norte y la otra 12 km hacia el este. ¿A qué distancia quedan una de la otra?",
+        "15 km",
+        "Norte y este forman un ángulo recto, así que los recorridos son los "
+        "catetos.\n\n"
+        "1) La distancia entre ambas es la hipotenusa: d² = 9² + 12².\n"
+        "2) Calcula: 81 + 144 = 225.\n"
+        "3) Saca la raíz: √225 = 15 km.\n"
+        "4) Control: la distancia directa debe ser menor que la suma de los "
+        "recorridos (21 km) y mayor que cada uno por separado.",
+        [
+            ("21 km", "Sumó las distancias como si hubieran caminado en la misma dirección."),
+            ("3 km", "Restó las distancias recorridas."),
+            ("108 km", "Multiplicó las dos distancias."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En un triángulo rectángulo la hipotenusa mide 26 cm y un cateto mide 10 cm. ¿Cuánto mide el otro cateto?",
+        "24 cm",
+        "Se despeja restando los cuadrados.\n\n"
+        "1) b² = 26² − 10² = 676 − 100 = 576.\n"
+        "2) Saca la raíz: √576 = 24 cm.\n"
+        "3) Verifica: 10² + 24² = 100 + 576 = 676 = 26².\n"
+        "4) Es el trío 5-12-13 multiplicado por 2.",
+        [
+            ("16 cm", "Restó las medidas sin elevarlas al cuadrado."),
+            ("27,9 cm", "Sumó los cuadrados en lugar de restarlos."),
+            ("576 cm", "Restó bien los cuadrados pero no aplicó la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Un rombo tiene diagonales que miden 16 cm y 12 cm. ¿Cuánto mide cada uno de sus lados?",
+        "10 cm",
+        "Las diagonales de un rombo se cortan en el punto medio y forman ángulo "
+        "recto.\n\n"
+        "1) Cada diagonal queda dividida en dos mitades: 16 ÷ 2 = 8 cm y "
+        "12 ÷ 2 = 6 cm.\n"
+        "2) Esas mitades son los catetos de un triángulo rectángulo cuyo lado "
+        "inclinado es el lado del rombo.\n"
+        "3) l² = 8² + 6² = 64 + 36 = 100.\n"
+        "4) Saca la raíz: l = 10 cm. Los cuatro lados del rombo miden lo mismo.",
+        [
+            ("14 cm", "Sumó las mitades de las diagonales sin aplicar el teorema."),
+            ("20 cm", "Usó las diagonales completas como catetos en lugar de sus mitades."),
+            ("28 cm", "Sumó las diagonales completas y dividió por 1, sin usar el teorema."),
+        ],
+    ),
+    # ---------- geo_transformaciones ----------
+    _q(
+        "geo_transformaciones", "facil",
+        "El punto (5, 2) se traslada según el vector (3, −4). ¿Cuáles son sus nuevas coordenadas?",
+        "(8, −2)",
+        "Trasladar es sumar el vector a las coordenadas del punto.\n\n"
+        "1) Suma las primeras coordenadas: 5 + 3 = 8.\n"
+        "2) Suma las segundas: 2 + (−4) = −2.\n"
+        "3) El punto trasladado es (8, −2).",
+        [
+            ("(2, 6)", "Restó el vector en lugar de sumarlo."),
+            ("(8, 2)", "Ignoró el signo negativo de la segunda componente del vector."),
+            ("(15, −8)", "Multiplicó las coordenadas por el vector en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "El punto (−1, 3) se traslada según el vector (2, 5). ¿Cuáles son sus nuevas coordenadas?",
+        "(1, 8)",
+        "Se suma componente a componente.\n\n"
+        "1) Primera coordenada: −1 + 2 = 1.\n"
+        "2) Segunda coordenada: 3 + 5 = 8.\n"
+        "3) El punto trasladado es (1, 8).",
+        [
+            ("(−3, −2)", "Restó el vector en lugar de sumarlo."),
+            ("(3, 8)", "Trató el −1 como si fuera 1 al sumar."),
+            ("(−2, 15)", "Multiplicó las coordenadas por las del vector."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (7, −2) al reflejarlo respecto del eje Y?",
+        "(−7, −2)",
+        "Al reflejar respecto del eje Y, la coordenada horizontal cambia de signo.\n\n"
+        "1) El eje Y es la línea vertical: la reflexión invierte el lado izquierdo "
+        "con el derecho.\n"
+        "2) La primera coordenada cambia de signo: 7 pasa a −7.\n"
+        "3) La segunda se mantiene: −2.\n"
+        "4) El punto reflejado es (−7, −2).",
+        [
+            ("(7, 2)", "Cambió de signo la coordenada equivocada: eso corresponde al eje X."),
+            ("(−7, 2)", "Cambió el signo de ambas coordenadas, lo que equivale a una rotación de 180°."),
+            ("(−2, 7)", "Intercambió las coordenadas en lugar de cambiar un signo."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (−5, 4) al reflejarlo respecto del eje X?",
+        "(−5, −4)",
+        "Al reflejar respecto del eje X, la coordenada vertical cambia de signo.\n\n"
+        "1) El eje X es la línea horizontal: la reflexión invierte arriba con abajo.\n"
+        "2) La primera coordenada se mantiene: −5.\n"
+        "3) La segunda cambia de signo: 4 pasa a −4.\n"
+        "4) El punto reflejado es (−5, −4).",
+        [
+            ("(5, 4)", "Cambió de signo la coordenada equivocada: eso corresponde al eje Y."),
+            ("(5, −4)", "Cambió el signo de ambas coordenadas, equivalente a una rotación de 180°."),
+            ("(4, −5)", "Intercambió las coordenadas."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "El punto (3, 0) se rota 90° en sentido antihorario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(0, 3)",
+        "Conviene visualizar dónde está el punto antes de rotar.\n\n"
+        "1) El punto (3, 0) está sobre el eje X, a 3 unidades a la derecha del "
+        "origen.\n"
+        "2) Al girar 90° en sentido antihorario, ese punto sube hasta el eje Y "
+        "positivo, manteniendo su distancia al origen.\n"
+        "3) Queda en (0, 3).\n"
+        "4) La regla general es (x, y) → (−y, x).",
+        [
+            ("(0, −3)", "Rotó en sentido horario en lugar de antihorario."),
+            ("(−3, 0)", "Rotó 180° en vez de 90°."),
+            ("(3, 0)", "Dejó el punto sin mover."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "El punto (0, 5) se rota 180° en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(0, −5)",
+        "Una rotación de 180° manda cada punto al lado opuesto del origen.\n\n"
+        "1) La regla es (x, y) → (−x, −y).\n"
+        "2) Primera coordenada: −0 = 0.\n"
+        "3) Segunda coordenada: −5.\n"
+        "4) El punto queda en (0, −5), justo al otro lado del origen y a la misma "
+        "distancia.",
+        [
+            ("(5, 0)", "Intercambió las coordenadas, que corresponde a una rotación de 90°."),
+            ("(0, 5)", "Dejó el punto sin mover."),
+            ("(−5, 0)", "Rotó 90° y además cambió el signo."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (2, 5) se rota 180° en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(−2, −5)",
+        "En una rotación de 180° ambas coordenadas cambian de signo.\n\n"
+        "1) Aplica la regla (x, y) → (−x, −y).\n"
+        "2) Primera coordenada: 2 pasa a −2.\n"
+        "3) Segunda coordenada: 5 pasa a −5.\n"
+        "4) El punto queda en (−2, −5).",
+        [
+            ("(−5, 2)", "Aplicó la regla de una rotación de 90° antihorario."),
+            ("(2, −5)", "Cambió el signo de una sola coordenada, que es una reflexión."),
+            ("(5, 2)", "Intercambió las coordenadas sin cambiar signos."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "¿Cuáles son las coordenadas del punto (4, 6) al reflejarlo respecto del origen?",
+        "(−4, −6)",
+        "La reflexión respecto del origen cambia el signo de ambas coordenadas.\n\n"
+        "1) Aplica (x, y) → (−x, −y).\n"
+        "2) Primera: 4 pasa a −4.\n"
+        "3) Segunda: 6 pasa a −6.\n"
+        "4) El resultado es (−4, −6). Esta transformación produce el mismo efecto que "
+        "una rotación de 180° en torno al origen.",
+        [
+            ("(−4, 6)", "Reflejó solo respecto del eje Y."),
+            ("(4, −6)", "Reflejó solo respecto del eje X."),
+            ("(6, 4)", "Intercambió las coordenadas en lugar de cambiar sus signos."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (8, −3) se traslada según el vector (−5, 7). ¿Cuáles son sus nuevas coordenadas?",
+        "(3, 4)",
+        "Se suma el vector componente a componente, cuidando los signos.\n\n"
+        "1) Primera coordenada: 8 + (−5) = 3.\n"
+        "2) Segunda coordenada: −3 + 7 = 4.\n"
+        "3) El punto trasladado es (3, 4).",
+        [
+            ("(13, −10)", "Restó el vector en lugar de sumarlo."),
+            ("(3, −10)", "Sumó bien la primera coordenada pero restó en la segunda."),
+            ("(13, 4)", "Ignoró el signo negativo de la primera componente del vector."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (1, 4) se rota 90° en sentido antihorario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(−4, 1)",
+        "La rotación de 90° antihorario intercambia las coordenadas y cambia un "
+        "signo.\n\n"
+        "1) La regla es (x, y) → (−y, x).\n"
+        "2) La nueva primera coordenada es −4, el opuesto de la antigua segunda.\n"
+        "3) La nueva segunda coordenada es 1, la antigua primera.\n"
+        "4) El punto queda en (−4, 1).",
+        [
+            ("(4, −1)", "Rotó en sentido horario en lugar de antihorario."),
+            ("(4, 1)", "Intercambió las coordenadas pero no cambió ningún signo."),
+            ("(−1, −4)", "Aplicó una rotación de 180°."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (−2, 3) se rota 90° en sentido horario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(3, 2)",
+        "La rotación horaria usa una regla distinta a la antihoraria.\n\n"
+        "1) La regla del giro horario es (x, y) → (y, −x).\n"
+        "2) La nueva primera coordenada es 3, la antigua segunda.\n"
+        "3) La nueva segunda coordenada es −(−2) = 2.\n"
+        "4) El punto queda en (3, 2).",
+        [
+            ("(−3, −2)", "Rotó en sentido antihorario en lugar de horario."),
+            ("(3, −2)", "Aplicó la regla horaria pero olvidó que el opuesto de −2 es +2."),
+            ("(2, −3)", "Cambió el signo de ambas coordenadas sin intercambiarlas."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto A(2, 3) se refleja respecto del eje X y el resultado se traslada según el vector (1, 5). ¿Dónde queda?",
+        "(3, 2)",
+        "Se aplican las dos transformaciones en el orden indicado.\n\n"
+        "1) Reflexión respecto del eje X: cambia el signo de la segunda coordenada, "
+        "así que (2, 3) pasa a (2, −3).\n"
+        "2) Traslación: suma el vector (1, 5) a ese resultado.\n"
+        "3) Primera coordenada: 2 + 1 = 3. Segunda: −3 + 5 = 2.\n"
+        "4) El punto final es (3, 2).",
+        [
+            ("(3, 8)", "Trasladó el punto original sin aplicar antes la reflexión."),
+            ("(−1, 2)", "Reflejó respecto del eje Y en lugar del eje X."),
+            ("(1, −8)", "Restó el vector en vez de sumarlo tras reflejar."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "¿Qué vector traslada el punto (2, 1) hasta el punto (7, −3)?",
+        "(5, −4)",
+        "El vector de traslación es la diferencia entre el punto final y el "
+        "inicial.\n\n"
+        "1) Primera componente: 7 − 2 = 5.\n"
+        "2) Segunda componente: −3 − 1 = −4.\n"
+        "3) El vector es (5, −4).\n"
+        "4) Verifica: (2 + 5, 1 − 4) = (7, −3). Correcto.",
+        [
+            ("(−5, 4)", "Restó en el orden inverso, del punto inicial al final."),
+            ("(9, −2)", "Sumó las coordenadas en lugar de restarlas."),
+            ("(5, 4)", "Perdió el signo negativo de la segunda componente."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (3, −5) se refleja respecto del eje Y y después se rota 180° en torno al origen. ¿Dónde queda?",
+        "(3, 5)",
+        "Se aplican las transformaciones una tras otra.\n\n"
+        "1) Reflexión respecto del eje Y: cambia el signo de la primera coordenada, "
+        "quedando (−3, −5).\n"
+        "2) Rotación de 180°: cambia el signo de ambas coordenadas, quedando (3, 5).\n"
+        "3) El punto final es (3, 5).\n"
+        "4) Nota: la combinación de ambas equivale a una sola reflexión respecto del "
+        "eje X.",
+        [
+            ("(−3, −5)", "Aplicó solo la reflexión y omitió la rotación."),
+            ("(−3, 5)", "Cambió el signo de una sola coordenada en la rotación."),
+            ("(5, 3)", "Intercambió las coordenadas, que no corresponde a ninguna de las dos transformaciones."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Un triángulo con vértices (0, 0), (4, 0) y (0, 3) se traslada según el vector (2, 5). ¿Cuál es la nueva posición del vértice (4, 0)?",
+        "(6, 5)",
+        "En una traslación, todos los vértices se mueven con el mismo vector.\n\n"
+        "1) Toma el vértice pedido: (4, 0).\n"
+        "2) Suma el vector: 4 + 2 = 6 y 0 + 5 = 5.\n"
+        "3) El vértice queda en (6, 5).\n"
+        "4) La forma y el tamaño del triángulo no cambian: la traslación es una "
+        "isometría.",
+        [
+            ("(2, 5)", "Entregó el vector de traslación en lugar del vértice trasladado."),
+            ("(2, −5)", "Restó el vector en lugar de sumarlo."),
+            ("(6, 8)", "Sumó el vector al vértice equivocado, usando el (0, 3)."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "¿Qué transformación lleva el punto (5, 2) al punto (2, 5)?",
+        "Una reflexión respecto de la recta y = x",
+        "Cuando las coordenadas se intercambian sin cambiar de signo, se trata de "
+        "una reflexión en la diagonal.\n\n"
+        "1) Observa el cambio: el 5 y el 2 se intercambiaron de posición, "
+        "conservando su signo.\n"
+        "2) La reflexión respecto de la recta y = x hace exactamente eso: "
+        "(x, y) → (y, x).\n"
+        "3) Una rotación de 180° habría cambiado los signos, y una traslación habría "
+        "movido ambas coordenadas en la misma dirección.\n"
+        "4) La respuesta es la reflexión respecto de la recta y = x.",
+        [
+            ("Una rotación de 180° en torno al origen", "Esa transformación daría (−5, −2), cambiando ambos signos."),
+            ("Una reflexión respecto del eje X", "Esa transformación daría (5, −2), sin intercambiar coordenadas."),
+            ("Una traslación según el vector (3, 3)", "Ese vector daría (8, 5), moviendo ambas coordenadas hacia arriba."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "¿Cuál de estas transformaciones invierte la orientación de una figura, como ocurre con una imagen en un espejo?",
+        "La reflexión",
+        "Las isometrías conservan las medidas, pero no todas conservan la "
+        "orientación.\n\n"
+        "1) La traslación mueve la figura sin girarla ni voltearla.\n"
+        "2) La rotación la gira, pero el recorrido de sus vértices mantiene el mismo "
+        "sentido.\n"
+        "3) La reflexión, en cambio, produce una imagen especular: si los vértices "
+        "iban en sentido horario, pasan a ir en sentido antihorario.\n"
+        "4) Por eso se dice que la reflexión invierte la orientación.",
+        [
+            ("La traslación", "Mueve la figura pero conserva tanto sus medidas como su orientación."),
+            ("La rotación", "Gira la figura, pero el sentido en que se recorren sus vértices no cambia."),
+            ("Ninguna, todas conservan la orientación", "Las isometrías conservan las medidas, pero la reflexión sí invierte la orientación."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (4, 1) se rota 270° en sentido antihorario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(1, −4)",
+        "Girar 270° en un sentido equivale a girar 90° en el sentido contrario.\n\n"
+        "1) Una vuelta completa son 360°, así que 270° antihorario deja el punto en "
+        "la misma posición que 90° horario.\n"
+        "2) La regla del giro horario de 90° es (x, y) → (y, −x).\n"
+        "3) Aplicada al punto: primera coordenada 1, segunda −4.\n"
+        "4) El punto queda en (1, −4).",
+        [
+            ("(−1, 4)", "Aplicó una rotación de 90° antihorario en lugar de 270°."),
+            ("(−4, −1)", "Aplicó una rotación de 180°."),
+            ("(4, 1)", "Supuso que 270° devuelve el punto a su posición original."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (−3, −2) se traslada según el vector (0, 6). ¿Cuáles son sus nuevas coordenadas?",
+        "(−3, 4)",
+        "Un vector con primera componente cero mueve el punto solo verticalmente.\n\n"
+        "1) Primera coordenada: −3 + 0 = −3, no cambia.\n"
+        "2) Segunda coordenada: −2 + 6 = 4.\n"
+        "3) El punto queda en (−3, 4): subió 6 unidades sin desplazarse a los lados.",
+        [
+            ("(3, 4)", "Cambió el signo de la primera coordenada sin motivo."),
+            ("(−3, −8)", "Restó el vector en lugar de sumarlo."),
+            ("(6, 4)", "Reemplazó la primera coordenada por la componente del vector."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (6, 8) se refleja respecto del origen y el resultado se traslada según el vector (2, −3). ¿Dónde queda?",
+        "(−4, −11)",
+        "Se aplican las dos transformaciones en orden.\n\n"
+        "1) Reflexión respecto del origen: cambia el signo de ambas coordenadas, "
+        "quedando (−6, −8).\n"
+        "2) Traslación: suma el vector (2, −3).\n"
+        "3) Primera coordenada: −6 + 2 = −4. Segunda: −8 + (−3) = −11.\n"
+        "4) El punto final es (−4, −11).",
+        [
+            ("(8, 5)", "Trasladó el punto original sin aplicar antes la reflexión."),
+            ("(−8, −5)", "Restó el vector en lugar de sumarlo tras reflejar."),
+            ("(−4, −5)", "Sumó el 3 en vez de restarlo en la segunda coordenada."),
+        ],
+    ),
+    # ---------- geo_solidos ----------
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de un cubo de arista 3 cm?",
+        "27 cm³",
+        "El volumen de un cubo es la arista elevada al cubo.\n\n"
+        "1) Aplica V = arista³.\n"
+        "2) Calcula: 3 · 3 · 3 = 27.\n"
+        "3) El volumen es 27 cm³. Las unidades van al cubo porque se multiplican "
+        "tres longitudes.",
+        [
+            ("9 cm³", "Elevó al cuadrado en lugar de al cubo: eso da el área de una cara."),
+            ("54 cm³", "Calculó el área total de las seis caras, no el volumen."),
+            ("12 cm³", "Multiplicó la arista por 4, como si fuera un perímetro."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "Una caja mide 6 cm de largo, 4 cm de ancho y 2 cm de alto. ¿Cuál es su volumen?",
+        "48 cm³",
+        "El volumen de un paralelepípedo es el producto de sus tres dimensiones.\n\n"
+        "1) Aplica V = largo · ancho · alto.\n"
+        "2) Multiplica por pasos: 6 · 4 = 24.\n"
+        "3) Luego 24 · 2 = 48.\n"
+        "4) El volumen es 48 cm³.",
+        [
+            ("12 cm³", "Sumó las tres dimensiones en lugar de multiplicarlas."),
+            ("88 cm³", "Calculó el área total de la caja en vez del volumen."),
+            ("24 cm³", "Multiplicó solo dos de las tres dimensiones."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuántas caras tiene un cubo?",
+        "6",
+        "Conviene contarlas por pares opuestos.\n\n"
+        "1) Hay una cara arriba y una abajo: 2.\n"
+        "2) Hay una al frente y una atrás: 2 más.\n"
+        "3) Hay una a cada lado: 2 más.\n"
+        "4) En total, 6 caras, todas cuadradas e iguales.",
+        [
+            ("8", "Contó los vértices en lugar de las caras."),
+            ("12", "Contó las aristas en lugar de las caras."),
+            ("4", "Contó solo las caras laterales, omitiendo la base y la tapa."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuántos vértices tiene un cubo?",
+        "8",
+        "Los vértices son las esquinas donde se juntan tres aristas.\n\n"
+        "1) La cara de abajo es un cuadrado, con 4 esquinas.\n"
+        "2) La cara de arriba es otro cuadrado, con otras 4.\n"
+        "3) En total, 4 + 4 = 8 vértices.",
+        [
+            ("6", "Contó las caras en lugar de los vértices."),
+            ("12", "Contó las aristas en lugar de los vértices."),
+            ("4", "Contó las esquinas de una sola cara."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el área total de un cubo de arista 3 cm?",
+        "54 cm²",
+        "El área total es la suma de las áreas de todas las caras.\n\n"
+        "1) Cada cara es un cuadrado de área 3² = 9 cm².\n"
+        "2) El cubo tiene 6 caras iguales.\n"
+        "3) Multiplica: 6 · 9 = 54.\n"
+        "4) El área total es 54 cm², en unidades de superficie.",
+        [
+            ("27 cm²", "Calculó el volumen en lugar del área total."),
+            ("9 cm²", "Calculó el área de una sola cara."),
+            ("18 cm²", "Multiplicó el área de una cara por 2 en lugar de por 6."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el volumen de un cilindro de radio 5 cm y altura 4 cm? (usa π ≈ 3,14)",
+        "314 cm³",
+        "El volumen de un cilindro es el área de su base circular por la altura.\n\n"
+        "1) Área de la base: π · r² = 3,14 · 25 = 78,5 cm².\n"
+        "2) Multiplica por la altura: 78,5 · 4 = 314.\n"
+        "3) El volumen es 314 cm³.",
+        [
+            ("62,8 cm³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("78,5 cm³", "Calculó el área de la base pero no la multiplicó por la altura."),
+            ("104,7 cm³", "Dividió por 3, aplicando la fórmula del cono."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el volumen de un cono de radio 3 cm y altura 4 cm? (usa π ≈ 3,14)",
+        "37,68 cm³",
+        "El cono ocupa un tercio del cilindro que lo contiene.\n\n"
+        "1) Aplica V = (π · r² · h)/3.\n"
+        "2) Área de la base: 3,14 · 9 = 28,26 cm².\n"
+        "3) Multiplica por la altura: 28,26 · 4 = 113,04.\n"
+        "4) Divide por 3: 37,68 cm³.",
+        [
+            ("113,04 cm³", "Calculó el volumen del cilindro, sin dividir por 3."),
+            ("12,56 cm³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("28,26 cm³", "Se quedó en el área de la base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Una esfera tiene radio 6 cm. ¿Cuál es su volumen? (usa π ≈ 3,14 y V = (4/3)πr³)",
+        "904,32 cm³",
+        "En la esfera el radio va elevado al cubo.\n\n"
+        "1) Calcula r³: 6³ = 216.\n"
+        "2) Multiplica por π: 3,14 · 216 = 678,24.\n"
+        "3) Multiplica por 4/3: 678,24 · 4 = 2.712,96, y dividido por 3 da 904,32.\n"
+        "4) El volumen es 904,32 cm³.",
+        [
+            ("452,16 cm³", "Elevó el radio al cuadrado en lugar de al cubo, y ajustó el resto."),
+            ("678,24 cm³", "Olvidó multiplicar por el factor 4/3."),
+            ("2.712,96 cm³", "Multiplicó por 4 pero no dividió por 3."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un paralelepípedo mide 6 cm, 4 cm y 3 cm. ¿Cuál es su área total?",
+        "108 cm²",
+        "El área total suma las seis caras, que son iguales de a pares.\n\n"
+        "1) Calcula el área de cada par de caras: 6 · 4 = 24, 6 · 3 = 18 y "
+        "4 · 3 = 12.\n"
+        "2) Suma esas tres: 24 + 18 + 12 = 54.\n"
+        "3) Multiplica por 2, porque cada cara tiene su opuesta: 54 · 2 = 108.\n"
+        "4) El área total es 108 cm².",
+        [
+            ("72 cm²", "Calculó el volumen en lugar del área total."),
+            ("54 cm²", "Sumó las tres caras distintas pero no las duplicó."),
+            ("13 cm²", "Sumó las tres dimensiones en lugar de multiplicarlas de a pares."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un prisma tiene base triangular de 6 cm de base y 4 cm de altura, y el prisma mide 10 cm de largo. ¿Cuál es su volumen?",
+        "120 cm³",
+        "El volumen de un prisma es el área de su base por su longitud.\n\n"
+        "1) Área de la base triangular: (6 · 4)/2 = 12 cm².\n"
+        "2) Multiplica por el largo del prisma: 12 · 10 = 120.\n"
+        "3) El volumen es 120 cm³.",
+        [
+            ("240 cm³", "No dividió por 2 al calcular el área del triángulo de la base."),
+            ("12 cm³", "Se quedó en el área de la base sin multiplicar por el largo."),
+            ("40 cm³", "Dividió por 3, aplicando la fórmula de una pirámide."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un estanque cilíndrico tiene 2 m de radio y 3 m de altura. ¿Cuál es su capacidad? (usa π ≈ 3,14)",
+        "37,68 m³",
+        "La capacidad corresponde al volumen del cilindro.\n\n"
+        "1) Área de la base: 3,14 · 2² = 3,14 · 4 = 12,56 m².\n"
+        "2) Multiplica por la altura: 12,56 · 3 = 37,68.\n"
+        "3) La capacidad es 37,68 m³.",
+        [
+            ("18,84 m³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("12,56 m³", "Se quedó en el área de la base."),
+            ("12,56 m³ por metro", "Confundió capacidad total con área de base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Si la arista de un cubo se triplica, ¿por cuánto queda multiplicado su volumen?",
+        "Por 27",
+        "El volumen depende del cubo de la arista, y eso amplifica mucho el "
+        "cambio.\n\n"
+        "1) Volumen original: a³.\n"
+        "2) Con la arista triplicada: (3a)³ = 27a³.\n"
+        "3) El volumen queda multiplicado por 27.\n"
+        "4) Ejemplo: un cubo de arista 2 tiene volumen 8; uno de arista 6 tiene "
+        "volumen 216, exactamente 27 veces más.",
+        [
+            ("Por 3", "Supuso que el volumen crece en la misma proporción que la arista."),
+            ("Por 9", "Aplicó el factor del área, que eleva al cuadrado."),
+            ("Por 6", "Multiplicó el factor 3 por las dos dimensiones restantes."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un cubo tiene un volumen de 64 cm³. ¿Cuánto mide su arista?",
+        "4 cm",
+        "Se invierte la fórmula del volumen.\n\n"
+        "1) El volumen es arista³, así que la arista es la raíz cúbica del volumen.\n"
+        "2) Busca el número que multiplicado tres veces por sí mismo da 64: "
+        "4 · 4 · 4 = 64.\n"
+        "3) La arista mide 4 cm.\n"
+        "4) Verifica: 4³ = 64 cm³.",
+        [
+            ("8 cm", "Calculó la raíz cuadrada en lugar de la raíz cúbica."),
+            ("21,3 cm", "Dividió el volumen por 3 en vez de calcular la raíz cúbica."),
+            ("16 cm", "Dividió el volumen por 4 sin invertir correctamente la fórmula."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un cilindro tiene un volumen de 502,4 cm³ y un radio de 4 cm. ¿Cuál es su altura? (usa π ≈ 3,14)",
+        "10 cm",
+        "Se despeja la altura de la fórmula del volumen.\n\n"
+        "1) La fórmula es V = π · r² · h.\n"
+        "2) Calcula el área de la base: 3,14 · 16 = 50,24 cm².\n"
+        "3) Despeja: h = 502,4 ÷ 50,24.\n"
+        "4) La altura es 10 cm. Verifica: 50,24 · 10 = 502,4 cm³.",
+        [
+            ("40 cm", "Dividió por π · r en lugar de por π · r²."),
+            ("125,6 cm", "Dividió el volumen por 4 en vez de por el área de la base."),
+            ("160 cm", "Dividió por π sin considerar el radio."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuántas aristas tiene un prisma de base triangular?",
+        "9",
+        "Conviene contar por grupos.\n\n"
+        "1) El triángulo de la base tiene 3 aristas.\n"
+        "2) El triángulo de arriba aporta otras 3.\n"
+        "3) Las aristas verticales que unen ambos triángulos son 3 más.\n"
+        "4) En total: 3 + 3 + 3 = 9 aristas.",
+        [
+            ("6", "Contó solo las aristas de las dos bases, olvidando las verticales."),
+            ("5", "Contó las caras en lugar de las aristas."),
+            ("12", "Usó el número de aristas de un cubo."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuántas caras tiene una pirámide de base cuadrada?",
+        "5",
+        "Se cuentan la base y las caras laterales.\n\n"
+        "1) La base es un cuadrado: 1 cara.\n"
+        "2) Cada lado del cuadrado sostiene un triángulo que sube hasta la punta: "
+        "4 caras laterales.\n"
+        "3) En total: 1 + 4 = 5 caras.",
+        [
+            ("4", "Contó solo las caras triangulares, olvidando la base."),
+            ("6", "Usó el número de caras de un cubo."),
+            ("8", "Contó las aristas en lugar de las caras."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "¿Cuántos cubos de 5 cm de arista caben exactamente dentro de una caja de 20 cm × 15 cm × 10 cm?",
+        "24 cubos",
+        "Se puede comparar volúmenes, porque las medidas encajan sin sobras.\n\n"
+        "1) Volumen de la caja: 20 · 15 · 10 = 3.000 cm³.\n"
+        "2) Volumen de cada cubo: 5³ = 125 cm³.\n"
+        "3) Divide: 3.000 ÷ 125 = 24.\n"
+        "4) Comprobación por dimensiones: caben 4 a lo largo, 3 a lo ancho y 2 de "
+        "alto, y 4 · 3 · 2 = 24.",
+        [
+            ("600 cubos", "Dividió el volumen de la caja por la arista en vez de por el volumen del cubo."),
+            ("9 cubos", "Sumó las divisiones de cada dimensión en lugar de multiplicarlas."),
+            ("125 cubos", "Entregó el volumen de un cubo como si fuera la cantidad."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "¿Cuál es el área total de un cilindro de radio 3 cm y altura 7 cm? (usa π ≈ 3,14)",
+        "188,4 cm²",
+        "El área total suma las dos tapas circulares y la superficie lateral.\n\n"
+        "1) Las dos tapas: 2 · π · r² = 2 · 3,14 · 9 = 56,52 cm².\n"
+        "2) La superficie lateral es un rectángulo cuyo ancho es la circunferencia de "
+        "la base: 2 · π · r · h = 2 · 3,14 · 3 · 7 = 131,88 cm².\n"
+        "3) Suma: 56,52 + 131,88 = 188,4.\n"
+        "4) El área total es 188,4 cm².",
+        [
+            ("131,88 cm²", "Calculó solo la superficie lateral, sin las dos tapas."),
+            ("197,82 cm²", "Calculó el volumen del cilindro en lugar del área."),
+            ("28,26 cm²", "Calculó el área de una sola tapa."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el volumen de una pirámide de base cuadrada de lado 6 cm y altura 10 cm?",
+        "120 cm³",
+        "La pirámide ocupa un tercio del prisma que la contiene.\n\n"
+        "1) Área de la base: 6² = 36 cm².\n"
+        "2) Multiplica por la altura: 36 · 10 = 360.\n"
+        "3) Divide por 3: 120.\n"
+        "4) El volumen es 120 cm³.",
+        [
+            ("360 cm³", "Calculó el volumen del prisma, sin dividir por 3."),
+            ("36 cm³", "Se quedó en el área de la base."),
+            ("180 cm³", "Dividió por 2 en lugar de por 3."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Si se duplica la altura de un cilindro y se mantiene su radio, ¿por cuánto queda multiplicado su volumen?",
+        "Por 2",
+        "La altura aparece elevada a la primera potencia, no al cuadrado.\n\n"
+        "1) Volumen original: π · r² · h.\n"
+        "2) Con la altura duplicada: π · r² · 2h = 2 · (π · r² · h).\n"
+        "3) El volumen queda multiplicado por 2.\n"
+        "4) Distinto sería duplicar el radio: ahí el volumen se cuadruplicaría, "
+        "porque el radio va al cuadrado.",
+        [
+            ("Por 4", "Aplicó el factor que corresponde a duplicar el radio, no la altura."),
+            ("Por 8", "Aplicó el factor de duplicar las tres dimensiones a la vez."),
+            ("No cambia", "La altura sí influye directamente en el volumen del cilindro."),
+        ],
+    ),
 ]
