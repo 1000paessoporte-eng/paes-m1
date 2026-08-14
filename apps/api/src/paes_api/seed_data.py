@@ -10979,4 +10979,319 @@ QUESTIONS += [
             ("No cambia", "La altura sí influye directamente en el volumen del cilindro."),
         ],
     ),
+    # ==================================================================
+    # LOTE 8 — eje PROBABILIDAD Y ESTADÍSTICA (M1)
+    # ==================================================================
+    # ---------- prob_estadistica_desc ----------
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la media de los datos 5, 10, 15 y 20?",
+        "12,5",
+        "La media es la suma de los datos dividida por su cantidad.\n\n"
+        "1) Suma: 5 + 10 + 15 + 20 = 50.\n"
+        "2) Cuenta los datos: son 4.\n"
+        "3) Divide: 50 ÷ 4 = 12,5.\n"
+        "4) La media no tiene por qué coincidir con ninguno de los datos.",
+        [
+            ("50", "Sumó los datos pero no dividió por la cantidad."),
+            ("12", "Redondeó hacia abajo descartando la parte decimal, que sí forma parte de la media."),
+            ("15", "Entregó la mediana aproximada en lugar de la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la mediana de los datos 2, 8, 4, 10 y 6?",
+        "6",
+        "La mediana es el valor central, pero solo después de ordenar.\n\n"
+        "1) Ordena de menor a mayor: 2, 4, 6, 8, 10.\n"
+        "2) Como hay 5 datos (cantidad impar), el central es el tercero.\n"
+        "3) La mediana es 6.\n"
+        "4) Olvidar ordenar es el error más común: en la lista original el tercer "
+        "valor era 4.",
+        [
+            ("4", "Tomó el valor central sin ordenar antes los datos."),
+            ("30", "Sumó todos los datos en lugar de buscar el central."),
+            ("8", "Contó desde el extremo equivocado tras ordenar."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la moda del conjunto 1, 3, 3, 5, 8 y 3?",
+        "3",
+        "La moda es el dato que más veces se repite.\n\n"
+        "1) Cuenta las apariciones: el 1 aparece una vez, el 3 aparece tres veces, "
+        "el 5 una y el 8 una.\n"
+        "2) El valor con más repeticiones es el 3.\n"
+        "3) La moda es 3.",
+        [
+            ("8", "Eligió el dato de mayor valor en lugar del más frecuente."),
+            ("3,83", "Calculó la media en lugar de la moda."),
+            ("4", "Entregó la cantidad de valores distintos del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es el rango del conjunto 8, 15, 3, 22 y 11?",
+        "19",
+        "El rango mide cuánto se dispersan los datos entre sus extremos.\n\n"
+        "1) Identifica el valor máximo: 22.\n"
+        "2) Identifica el mínimo: 3.\n"
+        "3) Resta: 22 − 3 = 19.\n"
+        "4) El rango es 19.",
+        [
+            ("25", "Sumó el máximo y el mínimo en lugar de restarlos."),
+            ("11", "Entregó la mediana del conjunto en lugar del rango."),
+            ("22", "Entregó solo el valor máximo."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es el promedio de 12, 15 y 18?",
+        "15",
+        "El promedio es la suma dividida por la cantidad de datos.\n\n"
+        "1) Suma: 12 + 15 + 18 = 45.\n"
+        "2) Divide por 3: 45 ÷ 3 = 15.\n"
+        "3) Como los datos están igualmente espaciados, el promedio coincide con el "
+        "del medio.",
+        [
+            ("45", "Sumó los datos pero no dividió por la cantidad."),
+            ("22,5", "Dividió por 2 en lugar de por la cantidad de datos."),
+            ("6", "Calculó el rango en lugar del promedio."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es la mediana de los datos 4, 9, 2, 7, 6 y 11?",
+        "6,5",
+        "Con una cantidad par de datos, la mediana es el promedio de los dos "
+        "centrales.\n\n"
+        "1) Ordena: 2, 4, 6, 7, 9, 11.\n"
+        "2) Hay 6 datos, así que los centrales son el tercero y el cuarto: 6 y 7.\n"
+        "3) Promedia: (6 + 7)/2 = 6,5.\n"
+        "4) La mediana es 6,5, un valor que no aparece en la lista.",
+        [
+            ("6", "Eligió solo el primero de los dos valores centrales."),
+            ("7", "Eligió solo el segundo de los dos valores centrales."),
+            ("6,5 y 7", "La mediana es un único valor, no un par."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Las notas de un estudiante fueron 4,0 − 5,0 − 6,0 − 7,0 − 3,0. ¿Cuál es su promedio?",
+        "5,0",
+        "Se suman todas las notas y se divide por su cantidad.\n\n"
+        "1) Suma: 4,0 + 5,0 + 6,0 + 7,0 + 3,0 = 25,0.\n"
+        "2) Cuenta las notas: son 5.\n"
+        "3) Divide: 25 ÷ 5 = 5,0.\n"
+        "4) El promedio es 5,0.",
+        [
+            ("25,0", "Sumó las notas pero no dividió por la cantidad."),
+            ("5,5", "Promedió solo algunas de las notas."),
+            ("4,0", "Entregó la moda aparente en lugar del promedio."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Un conjunto de 6 datos tiene media 10. Si cinco de ellos son 8, 9, 11, 12 y 13, ¿cuál es el sexto dato?",
+        "7",
+        "Se reconstruye la suma total a partir de la media.\n\n"
+        "1) Si la media de 6 datos es 10, la suma total es 6 · 10 = 60.\n"
+        "2) Suma los cinco conocidos: 8 + 9 + 11 + 12 + 13 = 53.\n"
+        "3) El dato faltante es la diferencia: 60 − 53 = 7.\n"
+        "4) Verifica: (8 + 9 + 11 + 12 + 13 + 7)/6 = 60/6 = 10.",
+        [
+            ("10", "Supuso que el dato faltante debe ser igual a la media."),
+            ("53", "Entregó la suma de los datos conocidos."),
+            ("60", "Entregó la suma total sin restar los datos conocidos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En una prueba, 5 estudiantes obtuvieron nota 4, 3 obtuvieron nota 5 y 2 obtuvieron nota 6. ¿Cuál es el promedio del curso?",
+        "4,7",
+        "Cuando hay repeticiones conviene usar el promedio ponderado.\n\n"
+        "1) Multiplica cada nota por cuántas veces aparece: 5 · 4 = 20, 3 · 5 = 15 y "
+        "2 · 6 = 12.\n"
+        "2) Suma esos productos: 20 + 15 + 12 = 47.\n"
+        "3) Cuenta el total de estudiantes: 5 + 3 + 2 = 10.\n"
+        "4) Divide: 47 ÷ 10 = 4,7.",
+        [
+            ("5,0", "Promedió las tres notas distintas sin considerar cuántos estudiantes obtuvo cada una."),
+            ("47", "Sumó los productos pero no dividió por el total de estudiantes."),
+            ("15,7", "Dividió por la cantidad de notas distintas en lugar de por el total de estudiantes."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el rango del conjunto 45, 12, 78, 33 y 90?",
+        "78",
+        "El rango es la diferencia entre el mayor y el menor.\n\n"
+        "1) Máximo: 90.\n"
+        "2) Mínimo: 12.\n"
+        "3) Resta: 90 − 12 = 78.\n"
+        "4) Que el resultado coincida con uno de los datos es casualidad; el rango "
+        "es una medida de dispersión, no un dato del conjunto.",
+        [
+            ("102", "Sumó el máximo y el mínimo en lugar de restarlos."),
+            ("45", "Entregó la mediana del conjunto."),
+            ("90", "Entregó solo el valor máximo."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Si a todos los datos de un conjunto se les suma 5, ¿qué ocurre con su media?",
+        "Aumenta en 5",
+        "Sumar una constante desplaza todo el conjunto sin cambiar su forma.\n\n"
+        "1) La media es la suma total dividida por la cantidad n de datos.\n"
+        "2) Si a cada dato se le suma 5, la suma total aumenta en 5n.\n"
+        "3) Al dividir por n, la media aumenta exactamente en 5.\n"
+        "4) Ejemplo: los datos 2, 4, 6 tienen media 4; los datos 7, 9, 11 tienen "
+        "media 9.",
+        [
+            ("Queda multiplicada por 5", "Eso ocurriría si cada dato se multiplicara por 5, no si se le suma."),
+            ("No cambia", "Sumar una constante sí desplaza la media; lo que no cambia es el rango."),
+            ("Aumenta en 5 dividido por la cantidad de datos", "El aumento por dato es 5, y al promediar el efecto sigue siendo 5."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "El promedio de 5 números es 12. Si se elimina uno de ellos, el promedio de los 4 restantes es 13. ¿Qué número se eliminó?",
+        "8",
+        "Se comparan las sumas totales antes y después.\n\n"
+        "1) Suma de los 5 números: 5 · 12 = 60.\n"
+        "2) Suma de los 4 restantes: 4 · 13 = 52.\n"
+        "3) El número eliminado es la diferencia: 60 − 52 = 8.\n"
+        "4) Tiene sentido: al sacar un número menor que el promedio, el promedio de "
+        "los que quedan sube.",
+        [
+            ("1", "Restó los dos promedios en lugar de las sumas totales."),
+            ("12", "Supuso que el número eliminado era igual al promedio original."),
+            ("13", "Entregó el nuevo promedio en lugar del dato eliminado."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un estudiante lleva notas 5,0 − 6,0 − 4,5 y rendirá una cuarta prueba. ¿Qué nota necesita para que su promedio final sea 5,5?",
+        "6,5",
+        "Se plantea cuánto debe sumar el total para alcanzar el promedio buscado.\n\n"
+        "1) Para que el promedio de 4 notas sea 5,5, la suma debe ser "
+        "4 · 5,5 = 22.\n"
+        "2) Suma las notas que ya tiene: 5,0 + 6,0 + 4,5 = 15,5.\n"
+        "3) La nota que falta es 22 − 15,5 = 6,5.\n"
+        "4) Verifica: (5,0 + 6,0 + 4,5 + 6,5)/4 = 22/4 = 5,5.",
+        [
+            ("5,5", "Supuso que basta con obtener exactamente el promedio buscado."),
+            ("7,0", "Sobreestimó la nota necesaria sin plantear la suma total."),
+            ("22", "Entregó la suma total requerida en lugar de la nota que falta."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es la moda del conjunto 2, 4, 4, 6, 6 y 8?",
+        "4 y 6",
+        "Un conjunto puede tener más de una moda.\n\n"
+        "1) Cuenta las apariciones: el 2 una vez, el 4 dos veces, el 6 dos veces y "
+        "el 8 una vez.\n"
+        "2) Hay un empate: tanto el 4 como el 6 aparecen dos veces.\n"
+        "3) Ambos son moda, y el conjunto se llama bimodal.",
+        [
+            ("4", "Eligió solo la primera de las dos modas, dejando fuera un valor igual de frecuente."),
+            ("5", "Calculó la media del conjunto en lugar de la moda."),
+            ("No tiene moda", "Sí la tiene: hay valores que se repiten más que otros, aunque sean dos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "¿Cuál es la media de los primeros cinco números pares positivos?",
+        "6",
+        "Primero hay que identificar los datos y después promediarlos.\n\n"
+        "1) Los primeros cinco pares positivos son 2, 4, 6, 8 y 10.\n"
+        "2) Suma: 2 + 4 + 6 + 8 + 10 = 30.\n"
+        "3) Divide por 5: 30 ÷ 5 = 6.\n"
+        "4) Como están igualmente espaciados, la media coincide con el valor central.",
+        [
+            ("30", "Sumó los números pero no dividió por la cantidad."),
+            ("5", "Entregó la cantidad de datos en lugar de su media."),
+            ("4", "Incluyó el 0 como primer número par positivo, desplazando la lista."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es la mediana de 15, 22, 8, 19, 30, 12 y 25?",
+        "19",
+        "Con 7 datos hay un único valor central, una vez ordenados.\n\n"
+        "1) Ordena: 8, 12, 15, 19, 22, 25, 30.\n"
+        "2) Hay 7 datos, así que el central es el cuarto.\n"
+        "3) La mediana es 19.\n"
+        "4) Quedan tres datos a cada lado, que es justamente lo que define a la "
+        "mediana.",
+        [
+            ("19,5", "Promedió dos valores centrales, algo que solo corresponde con cantidad par de datos."),
+            ("22", "Contó desde el extremo equivocado tras ordenar."),
+            ("18,7", "Calculó la media en lugar de la mediana."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En una empresa, cuatro personas ganan $400.000 y una gana $2.000.000. ¿Cuál es el sueldo promedio?",
+        "$720.000",
+        "El promedio se calcula sobre el total, aunque un dato sea muy distinto al "
+        "resto.\n\n"
+        "1) Suma los sueldos: 4 · 400.000 = 1.600.000, más 2.000.000, da 3.600.000.\n"
+        "2) Divide por las 5 personas: 3.600.000 ÷ 5 = 720.000.\n"
+        "3) El promedio es $720.000.\n"
+        "4) Nota importante: ninguna persona gana esa cantidad. El sueldo alto "
+        "arrastra la media hacia arriba, y por eso en estos casos la mediana "
+        "($400.000) suele describir mejor al grupo.",
+        [
+            ("$400.000", "Entregó la mediana, que describe mejor al grupo pero no es lo que se pide."),
+            ("$1.200.000", "Promedió los dos valores distintos sin considerar cuántas personas gana cada uno."),
+            ("$3.600.000", "Sumó los sueldos pero no dividió por la cantidad de personas."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el rango de los datos 3,5 − 7,2 − 5,1 − 9,8?",
+        "6,3",
+        "El rango también se calcula con decimales.\n\n"
+        "1) Máximo: 9,8.\n"
+        "2) Mínimo: 3,5.\n"
+        "3) Resta: 9,8 − 3,5 = 6,3.",
+        [
+            ("13,3", "Sumó el máximo y el mínimo en lugar de restarlos."),
+            ("6,4", "Restó mal la parte decimal."),
+            ("9,8", "Entregó solo el valor máximo."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Si a un conjunto de datos se le agrega un nuevo dato exactamente igual a la media, ¿qué ocurre con la media?",
+        "No cambia",
+        "Conviene razonarlo con la suma total.\n\n"
+        "1) Si la media de n datos es m, la suma total es n · m.\n"
+        "2) Al agregar un dato de valor m, la nueva suma es n · m + m = (n + 1) · m.\n"
+        "3) La nueva cantidad de datos es n + 1.\n"
+        "4) La nueva media es (n + 1) · m dividido por (n + 1), o sea m. Se mantiene "
+        "igual.",
+        [
+            ("Aumenta", "El dato agregado no está por encima de la media, así que no la empuja hacia arriba."),
+            ("Disminuye", "El dato agregado no está por debajo de la media."),
+            ("Se duplica", "Agregar un dato no multiplica la media; a lo sumo la desplaza."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el promedio de 3, 5, 7, 9 y 11?",
+        "7",
+        "Se suma y se divide por la cantidad de datos.\n\n"
+        "1) Suma: 3 + 5 + 7 + 9 + 11 = 35.\n"
+        "2) Divide por 5: 35 ÷ 5 = 7.\n"
+        "3) Como los datos están igualmente espaciados de 2 en 2, el promedio "
+        "coincide con el valor central.",
+        [
+            ("35", "Sumó los datos pero no dividió por la cantidad."),
+            ("8", "Calculó el rango dividido por 1 en lugar del promedio."),
+            ("5", "Entregó la cantidad de datos en lugar de su promedio."),
+        ],
+    ),
 ]

@@ -571,6 +571,29 @@ COMPROBACIONES: dict[str, str] = {
     ),
     "pirámide de base cuadrada de lado 6 cm y altura 10 cm": f"{6**2 * 10 // 3} cm³",
     "duplica la altura de un cilindro": str(2),
+    # ================= LOTE 8 — eje PROBABILIDAD Y ESTADÍSTICA =================
+    "media de los datos 5, 10, 15 y 20": f"{(5 + 10 + 15 + 20) / 4:.1f}".replace(".", ","),
+    "mediana de los datos 2, 8, 4, 10 y 6": str(sorted([2, 8, 4, 10, 6])[2]),
+    "moda del conjunto 1, 3, 3, 5, 8 y 3": str(Counter([1, 3, 3, 5, 8, 3]).most_common(1)[0][0]),
+    "rango del conjunto 8, 15, 3, 22 y 11": str(max(8, 15, 3, 22, 11) - min(8, 15, 3, 22, 11)),
+    "promedio de 12, 15 y 18": str((12 + 15 + 18) // 3),
+    "mediana de los datos 4, 9, 2, 7, 6 y 11": (
+        f"{(sorted([4, 9, 2, 7, 6, 11])[2] + sorted([4, 9, 2, 7, 6, 11])[3]) / 2:.1f}".replace(".", ",")
+    ),
+    "notas de un estudiante fueron 4,0": f"{(4 + 5 + 6 + 7 + 3) / 5:.1f}".replace(".", ","),
+    "6 datos tiene media 10": str(6 * 10 - (8 + 9 + 11 + 12 + 13)),
+    "5 estudiantes obtuvieron nota 4": f"{(5 * 4 + 3 * 5 + 2 * 6) / 10:.1f}".replace(".", ","),
+    "rango del conjunto 45, 12, 78, 33 y 90": str(max(45, 12, 78, 33, 90) - min(45, 12, 78, 33, 90)),
+    "se les suma 5, ¿qué ocurre con su media": str(5),
+    "promedio de 5 números es 12": str(5 * 12 - 4 * 13),
+    "promedio final sea 5,5": f"{4 * 5.5 - (5.0 + 6.0 + 4.5):.1f}".replace(".", ","),
+    "moda del conjunto 2, 4, 4, 6, 6 y 8": "4 y 6",
+    "primeros cinco números pares positivos": str((2 + 4 + 6 + 8 + 10) // 5),
+    "mediana de 15, 22, 8, 19, 30, 12 y 25": str(sorted([15, 22, 8, 19, 30, 12, 25])[3]),
+    "cuatro personas ganan $400.000": f"${(4 * 400000 + 2000000) // 5:,}".replace(",", "."),
+    "rango de los datos 3,5": f"{9.8 - 3.5:.1f}".replace(".", ","),
+    "dato exactamente igual a la media": "No cambia",
+    "promedio de 3, 5, 7, 9 y 11": str((3 + 5 + 7 + 9 + 11) // 5),
 }
 
 
