@@ -127,10 +127,13 @@ function Bienvenida({
         </h1>
 
         <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
-          {ensayos === 0
-            ? "Tu primer ensayo define el punto de partida: te da un puntaje estimado y muestra en qué ejes conviene reforzar."
-            : enCurso
-              ? "Tienes un ensayo sin terminar. Al continuar retomas justo donde quedaste, con el tiempo que te quedaba."
+          {/* El ensayo en curso manda sobre el resto: si hay uno a medias, el
+              texto tiene que explicar el botón "Reanudar", aunque todavía no
+              haya ningún ensayo terminado. */}
+          {enCurso
+            ? "Tienes un ensayo sin terminar. Al continuar retomas justo donde quedaste, con el tiempo que te quedaba."
+            : ensayos === 0
+              ? "Tu primer ensayo define el punto de partida: te da un puntaje estimado y muestra en qué ejes conviene reforzar."
               : "Cada ensayo actualiza tu puntaje estimado y desbloquea temas nuevos en el árbol."}
         </p>
 
