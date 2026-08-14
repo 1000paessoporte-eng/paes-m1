@@ -52,17 +52,17 @@ export function SiteFooter() {
             </h3>
             <ul className="mt-3 flex flex-col gap-2 text-sm text-muted">
               <li>
-                <Link href="/sobre-nosotros" className="hover:text-foreground hover:underline">
+                <Link href="/sobre-nosotros" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Quiénes somos
                 </Link>
               </li>
               <li>
-                <Link href="/#como-funciona" className="hover:text-foreground hover:underline">
+                <Link href="/#como-funciona" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Cómo funciona
                 </Link>
               </li>
               <li>
-                <Link href="/#planes" className="hover:text-foreground hover:underline">
+                <Link href="/planes" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Planes
                 </Link>
               </li>
@@ -77,18 +77,18 @@ export function SiteFooter() {
               <li>
                 <Link
                   href="/preguntas-frecuentes"
-                  className="hover:text-foreground hover:underline"
+                  className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline"
                 >
                   Preguntas frecuentes
                 </Link>
               </li>
               <li>
-                <Link href="/terminos" className="hover:text-foreground hover:underline">
+                <Link href="/terminos" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Términos y condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/privacidad" className="hover:text-foreground hover:underline">
+                <Link href="/privacidad" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Política de privacidad
                 </Link>
               </li>
@@ -101,17 +101,17 @@ export function SiteFooter() {
             </h3>
             <ul className="mt-3 flex flex-col gap-2 text-sm text-muted">
               <li>
-                <Link href="/registro" className="hover:text-foreground hover:underline">
+                <Link href="/registro" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Crear cuenta gratis
                 </Link>
               </li>
               <li>
-                <Link href="/login" className="hover:text-foreground hover:underline">
+                <Link href="/login" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Iniciar sesión
                 </Link>
               </li>
               <li>
-                <Link href="/demo" className="hover:text-foreground hover:underline">
+                <Link href="/demo" className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                   Probar sin cuenta
                 </Link>
               </li>
@@ -149,7 +149,7 @@ export function SiteFooter() {
           {EMAIL_CONTACTO && (
             <p className="mt-2">
               Contacto:{" "}
-              <a href={`mailto:${EMAIL_CONTACTO}`} className="hover:text-foreground hover:underline">
+              <a href={`mailto:${EMAIL_CONTACTO}`} className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline">
                 {EMAIL_CONTACTO}
               </a>
             </p>
