@@ -202,7 +202,7 @@ const ACCESOS = [
   { href: "/analitica", titulo: "Analítica", texto: "Tiempo y acierto en el tiempo" },
   { href: "/historial", titulo: "Mi progreso", texto: "Evolución de tus puntajes" },
   { href: "/perfil", titulo: "Mi perfil", texto: "Nombre y contraseña" },
-  { href: "/#planes", titulo: "Planes", texto: "Qué incluye cada uno" },
+  { href: "#planes", titulo: "Planes", texto: "Qué incluye cada uno" },
 ] as const;
 
 function AccesosRapidos() {

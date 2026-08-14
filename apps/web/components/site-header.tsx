@@ -6,12 +6,24 @@ import { useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } from "@/lib/auth";
 
+// Menú de la aplicación: solo tiene sentido con la sesión iniciada, porque
+// todas estas rutas exigen autenticación.
 const NAV_ITEMS = [
-  { href: "/", label: "Inicio" },
+  { href: "/panel", label: "Inicio" },
   { href: "/arbol", label: "Árbol de Habilidades" },
   { href: "/examen", label: "Modo Ensayo" },
   { href: "/historial", label: "Mi progreso" },
   { href: "/analitica", label: "Analítica" },
+] as const;
+
+// Menú de la portada pública: a quien todavía no tiene cuenta se le ofrecen
+// las páginas que puede abrir, no las de la aplicación que lo rebotarían al
+// login.
+const NAV_PUBLICO = [
+  { href: "/", label: "Inicio" },
+  { href: "/sobre-nosotros", label: "Sobre nosotros" },
+  { href: "/demo", label: "Probar sin cuenta" },
+  { href: "/preguntas-frecuentes", label: "Preguntas frecuentes" },
 ] as const;
 
 export function SiteHeader() {
@@ -20,11 +32,13 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
 
-  // El panel solo se enlaza para admins. Ocultarlo es comodidad, no seguridad:
-  // /api/admin exige el rol en cada llamada.
+  const items = user ? NAV_ITEMS : NAV_PUBLICO;
+
+  // El panel de admin solo se enlaza para admins. Ocultarlo es comodidad, no
+  // seguridad: /api/admin exige el rol en cada llamada.
   const navItems = user?.is_admin
-    ? [...NAV_ITEMS, { href: "/admin", label: "Admin" } as const]
-    : NAV_ITEMS;
+    ? [...items, { href: "/admin", label: "Admin" } as const]
+    : items;
 
   useEffect(() => {
     // Lectura de cookie (estado externo al DOM) tras montar: evita mismatch
@@ -51,7 +65,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href={user ? "/panel" : "/"} className="flex items-center gap-2">
           <span
             className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-white"
             style={{

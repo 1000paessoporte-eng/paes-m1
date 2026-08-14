@@ -69,7 +69,7 @@ export function getClientToken(): string | null {
 /**
  * Ruta de entrada llevando de vuelta a donde estaba la persona. Se usa cuando
  * la sesión caduca a mitad de uso: sin esto, quien iba en /historial terminaba
- * en /examen tras volver a entrar.
+ * en el panel tras volver a entrar.
  */
 export function loginHref(next?: string | null): string {
   if (!next) return "/login";

@@ -45,7 +45,7 @@ interface Props {
   onError?: (mensaje: string) => void;
 }
 
-export function GoogleButton({ redirectTo = "/examen", onError }: Props) {
+export function GoogleButton({ redirectTo = "/panel", onError }: Props) {
   const router = useRouter();
   const contenedor = useRef<HTMLDivElement>(null);
   const [listo, setListo] = useState(false);

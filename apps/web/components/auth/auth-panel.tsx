@@ -22,7 +22,7 @@ import { setClientAuth } from "@/lib/auth";
 export type AuthTab = "login" | "registro";
 
 /** A dónde ir tras entrar, si la pantalla anterior no pidió algo distinto. */
-const DESTINO_POR_DEFECTO = "/examen";
+const DESTINO_POR_DEFECTO = "/panel";
 
 /**
  * Solo se aceptan rutas internas. Un `next` con `http://` o `//` permitiría
