@@ -7,7 +7,6 @@ import type {
   SkillNode,
 } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
-import { Planes } from "@/components/home/planes";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
@@ -89,9 +88,6 @@ export function PanelDashboard({
         </div>
       </div>
 
-      {/* Los planes siguen colgando del panel para que el ancla "#planes"
-          tenga destino también con la sesión iniciada. */}
-      <Planes />
       <SiteFooter />
     </main>
   );
@@ -212,7 +208,7 @@ const ACCESOS = [
   { href: "/analitica", titulo: "Analítica", texto: "Tiempo y acierto en el tiempo" },
   { href: "/historial", titulo: "Mi progreso", texto: "Evolución de tus puntajes" },
   { href: "/perfil", titulo: "Mi perfil", texto: "Nombre y contraseña" },
-  { href: "#planes", titulo: "Planes", texto: "Qué incluye cada uno" },
+  { href: "/planes", titulo: "Planes", texto: "Qué incluye cada uno" },
 ] as const;
 
 function AccesosRapidos() {
