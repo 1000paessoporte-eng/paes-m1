@@ -594,6 +594,27 @@ COMPROBACIONES: dict[str, str] = {
     "rango de los datos 3,5": f"{9.8 - 3.5:.1f}".replace(".", ","),
     "dato exactamente igual a la media": "No cambia",
     "promedio de 3, 5, 7, 9 y 11": str((3 + 5 + 7 + 9 + 11) // 5),
+    # --- técnicas de conteo ---
+    "ordenar 3 personas en una fila": str(factorial(3)),
+    "ordenar 5 libros diferentes en un estante": str(factorial(5)),
+    "5 entradas y 3 postres": str(5 * 3),
+    "4 camisas y 3 corbatas": str(4 * 3),
+    "letras de la palabra SOL": str(factorial(3)),
+    "comité de 3 personas a partir de un grupo de 5": str(comb(5, 3)),
+    "elegir 2 personas de un grupo de 8": str(comb(8, 2)),
+    "carrera con 5 corredores": str(5 * 4 * 3),
+    "2 cifras distintas se pueden formar usando los dígitos 1, 2, 3 y 4": str(4 * 3),
+    "patente se forma con 3 letras": f"{26**3:,}".replace(",", "."),
+    "3 entradas, 4 platos de fondo y 2 postres": str(3 * 4 * 2),
+    "subconjuntos de 2 elementos tiene un conjunto de 6": str(comb(6, 2)),
+    "letras de la palabra PERRO": str(factorial(5) // factorial(2)),
+    "comité de 4 personas de un grupo de 7": str(comb(7, 4)),
+    "plantel de 10 jugadores": str(comb(10, 5)),
+    "4 cifras distintas se pueden formar con los dígitos del 0 al 9": f"{9 * 9 * 8 * 7:,}".replace(",", "."),
+    "claves distintas de 4 dígitos": f"{10**4:,}".replace(",", "."),
+    "reunión de 8 personas": str(comb(8, 2)),
+    "ordenar 7 personas en una fila": f"{factorial(7):,}".replace(",", "."),
+    "6 hombres y 4 mujeres": str(comb(6, 2) * comb(4, 2)),
 }
 
 
