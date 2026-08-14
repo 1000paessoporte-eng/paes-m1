@@ -1,10 +1,50 @@
-# Traspaso de la infraestructura a 1000paessoporte@gmail.com
+# Traspaso de la infraestructura a la cuenta de servicio
 
-Hoy Vercel cuelga de la cuenta **personal** de Pablo
-(`ortegapablogutxd@gmail.com`, usuario `pabloajnxka`). Este documento es el
-procedimiento para moverlo a la cuenta de servicio.
+**Hecho el 2026-08-14.** `milpaes-web` y `milpaes-api` ya viven en la cuenta
+`1000paessoporte@gmail.com` (usuario `1000paessoporte-9167`). Antes colgaban de
+la cuenta personal de Pablo, en contra de la regla del proyecto.
 
-**Producción está viva.** Hazlo con calma y con el sitio a mano para revisar.
+Este documento queda como registro de qué se movió y de qué hay que rehacer si
+alguna vez se repite la operación.
+
+## Qué viajó solo y qué no
+
+Contra lo esperado, Vercel se llevó casi todo:
+
+| Cosa | ¿Viajó? |
+|---|---|
+| Deployments e historial | Sí |
+| **Variables de entorno**, incluidas las Sensitive | **Sí** |
+| Dominios `1000paes.cl` y `www`, ya verificados | Sí |
+| `rootDirectory`, framework, `installCommand` | Sí |
+| Previews sin protección SSO | Sí |
+| **Conexión con GitHub** | **No: hay que rehacerla** |
+
+Producción no se cayó en ningún momento: durante toda la operación
+`1000paes.cl` respondió 200 y el login siguió funcionando.
+
+## Lo único que quedó pendiente
+
+La cuenta nueva necesita **conectar GitHub como método de acceso** antes de que
+se puedan reenlazar los proyectos. Es un paso OAuth en el navegador, no hay API:
+
+1. Entrar a https://vercel.com/account con `1000paessoporte@gmail.com`.
+2. En *Login Connections*, conectar **GitHub**.
+3. Después, reenlazar ambos proyectos (o pedírselo a Claude):
+
+```bash
+cd <raiz-del-repo> && vercel git connect
+cd apps/api && vercel git connect https://github.com/Pabloajnxka/paes-m1
+```
+
+**Mientras no esté conectado no hay deploys automáticos ni previews por PR**:
+los deploys hay que hacerlos a mano con `vercel deploy --prod`.
+
+---
+
+## Procedimiento de referencia
+
+Lo que sigue es el guion completo, por si hay que repetir la operación.
 
 ---
 
@@ -27,7 +67,7 @@ marcados Sensitive) y hay que volver a cargarlos a mano en la cuenta nueva.
 
 ## 2. Transferir cada proyecto
 
-Con la sesión de **`ortegapablogutxd@gmail.com`**, para `milpaes-web` y después
+Con la sesión de la cuenta de origen, para `milpaes-web` y después
 para `milpaes-api`:
 
 1. Proyecto → **Settings** → **Advanced** → *Transfer Project*.
