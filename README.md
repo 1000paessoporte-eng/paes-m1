@@ -13,11 +13,14 @@
 > atención a la sección **Deploy** — hay dos formas fáciles de romper
 > producción ahí.
 >
-> **¿Necesitas credenciales?** No están en este repo y nunca deben estarlo: el
-> repo es **público**. Van en un archivo aparte, `HANDOFF-PRIVADO.md`, que se
-> entrega a mano entre los socios (WhatsApp, correo o gestor de contraseñas) y
-> está en `.gitignore`. Si estás trabajando en este proyecto y no lo tienes,
-> pídeselo a quien te dio acceso — no lo busques en GitHub.
+> **¿Tomas el proyecto ahora?** Lee **[`HANDOFF.md`](HANDOFF.md)**: cuentas,
+> infraestructura, project IDs de Vercel, puesta en marcha en una máquina nueva,
+> rutina de trabajo y pendientes por impacto. Está todo ahí salvo los secretos.
+>
+> **Los secretos** (contraseña de Neon y `SECRET_KEY`) no están en este repo y
+> no deben estarlo: el repo es **público**, y un `postgresql://…` con contraseña
+> lo encuentran los bots que rastrean GitHub en minutos. Se piden por canal
+> privado y viven solo en `apps/api/.env` local, que está gitignored.
 
 ---
 
@@ -276,10 +279,11 @@ PostgreSQL en **Neon**, región `sa-east-1`. Dos connection strings:
 - **Pooled** (host con `-pooler`): para el runtime de la API → `DATABASE_URL` en Vercel.
 - **Directa** (sin `-pooler`): para Alembic y `scripts/seed.py`.
 
-Los connection strings reales están en **`HANDOFF-PRIVADO.md`** (gitignored, se
-entrega a mano) y en `apps/api/.env.local`. Nunca en este README ni en ningún
-archivo rastreado por git: el repo es público y los bots que rastrean GitHub
-encuentran un `postgresql://…` con contraseña en minutos.
+La forma de ambos está documentada en [`HANDOFF.md`](HANDOFF.md), con la
+contraseña como `<PASSWORD_NEON>`. El valor real se pide por canal privado y
+vive solo en `apps/api/.env` local. Nunca en este README ni en ningún archivo
+rastreado por git: el repo es público y los bots que rastrean GitHub encuentran
+un `postgresql://…` con contraseña en minutos.
 
 > ⚠️ `DATABASE_URL` en Vercel está marcada como **Sensitive**: es de solo
 > escritura, nadie puede volver a leerla (ni el dueño). Si se pierden esas dos
