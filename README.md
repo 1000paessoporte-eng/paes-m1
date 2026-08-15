@@ -40,7 +40,8 @@ No es un banco de preguntas plano. Las piezas:
 |---|---|---|
 | **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (las cinco), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
 | **Puntaje y revisión** | 🟢 Funcional | Puntaje 100-1000 con tablas oficiales DEMRE, desglose por eje/dificultad/nodo, desarrollo paso a paso de cada pregunta. |
-| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos. Cada nodo de M1 trae su lección: teoría, ejemplo resuelto paso a paso y el error típico, antes de practicar. |
+| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos (`/arbol?prueba=`). Cada nodo de M1 trae su lección en `/aprender/[code]`: teoría, ejemplo resuelto paso a paso y el error típico, antes de practicar. |
+| **Mi meta** | 🟢 Funcional | `/meta`: lista de hasta 10 preferencias con las ponderaciones oficiales del DEMRE, puntaje ponderado, simulador, ritmo contra la fecha de la PAES y plan de práctica. |
 | **Práctica por nodo** | 🟢 Funcional | `/practicar/[code]`: una pregunta a la vez con corrección inmediata. |
 | **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
 | **Analítica** | 🟢 Funcional | Racha, precisión global, tiempo invertido, gráficos SVG propios. |
@@ -51,10 +52,15 @@ No es un banco de preguntas plano. Las piezas:
 ### Contenido actual
 
 - **47 nodos** de habilidad, repartidos entre las cinco pruebas.
-- **314 preguntas**: 195 de M1, 87 exclusivas de M2, 10 de Lectora, 13 de
+- **344 preguntas**: 195 de M1, 87 exclusivas de M2, 40 de Lectora, 13 de
   Ciencias, 9 de Historia.
-- **5 textos fuente** (`reading_passages`): tres para Competencia Lectora y dos
-  para Historia. Varias preguntas comparten un mismo texto, igual que en la
+- **11 textos fuente** (`reading_passages`): nueve para Competencia Lectora y
+  dos para Historia.
+- **15 lecciones** (`lessons`): el temario completo de M1. Las otras cuatro
+  pruebas todavía no tienen teoría escrita y llevan directo a practicar.
+- **1.855 carreras** con sus ponderaciones oficiales, extraídas del PDF del
+  DEMRE con `scripts/extraer_carreras.py`. **Se re-extraen cada proceso de
+  admisión**: las ponderaciones cambian todos los años. Varias preguntas comparten un mismo texto, igual que en la
   prueba real.
 - M2 reutiliza el banco de M1 (`SUBJECT_INCLUDES` en `exam_focus/service.py`),
   porque el temario DEMRE dice que M2 evalúa *"todos los conocimientos de M1,
@@ -377,6 +383,15 @@ Ordenado por impacto:
    memoria siguen fuera del banco a propósito: ningún script puede verificar
    que una afirmación histórica sea cierta. Ese tramo entra cuando alguien con
    la formación lo revise.
+4. **Puntajes de corte de admisión.** `/meta` muestra hoy el *mínimo de
+   postulación*, que viene en el PDF del DEMRE. El corte real —el puntaje del
+   último seleccionado— lo publica cada universidad tras el proceso y no lo
+   tenemos. Sin él, la pantalla dice "tu ponderado es 682" pero no "te faltan
+   24 puntos para Medicina en la Chile". Es trabajo de recolección de datos,
+   no de código, y **no se estima**: un corte inventado es alguien decidiendo
+   su matrícula con información falsa.
+5. **Lecciones para las otras cuatro pruebas.** Hoy solo M1 tiene teoría; el
+   resto de los nodos lleva directo a practicar y el árbol lo dice en pantalla.
 4. **Lecciones para las otras cuatro pruebas.** Hoy la teoría está escrita para los 15 nodos de M1; el resto lleva directo a practicar.
 5. **Motor de recomendación real.** Hoy `get_recommended_node()` es un ranking
    ponderado con pandas (accuracy 60% + impacto 30% + nunca intentado 40%), no
