@@ -152,3 +152,47 @@ def test_el_dataset_declara_proceso_y_fuente() -> None:
     datos = json.loads(ruta.read_text(encoding="utf-8"))
     assert datos["proceso"] == 2026
     assert datos["fuente"].startswith("https://demre.cl/")
+
+
+def test_se_busca_sin_tildes(client: TestClient, register_user, db_session) -> None:
+    """Nadie escribe "ENFERMERÍA" con tilde en un buscador. Este fue un bug
+    real: la carrera existía y la búsqueda no la encontraba."""
+    from paes_api.modules.goals.models import Carrera
+
+    c = Carrera(
+        codigo="99003", universidad="UNIVERSIDAD DE CONCEPCIÓN",
+        nombre="ENFERMERÍA", sede="CONCEPCIÓN",
+        nem=20, ranking=20, lectora=30, m1=30,
+        proceso=2026, fuente="https://demre.cl/",
+    )
+    db_session.add(c)
+    db_session.commit()
+
+    headers, _ = register_user(email="tildes@test.cl")
+    for termino in ("enfermeria", "ENFERMERIA", "Enfermería"):
+        resp = client.get(f"/api/meta/carreras?q={termino}", headers=headers)
+        assert resp.status_code == 200
+        assert len(resp.json()) == 1, f"'{termino}' no encontró la carrera"
+
+
+def test_se_busca_por_palabras_sueltas(
+    client: TestClient, register_user, db_session
+) -> None:
+    """"enfermeria concepcion" tiene que funcionar aunque en el dato la
+    universidad vaya antes que la sede."""
+    from paes_api.modules.goals.models import Carrera
+
+    db_session.add(
+        Carrera(
+            codigo="99004", universidad="UNIVERSIDAD DE CONCEPCIÓN",
+            nombre="ENFERMERÍA", sede="LOS ÁNGELES",
+            nem=20, ranking=20, lectora=30, m1=30,
+            proceso=2026, fuente="https://demre.cl/",
+        )
+    )
+    db_session.commit()
+
+    headers, _ = register_user(email="palabras@test.cl")
+    resp = client.get("/api/meta/carreras?q=enfermeria angeles", headers=headers)
+    assert resp.status_code == 200
+    assert len(resp.json()) == 1

@@ -9,7 +9,7 @@ exactamente los mismos puntajes.
 
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, Float, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Float, ForeignKey, Integer, String, event
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
@@ -35,6 +35,12 @@ class Carrera(Base):
     universidad: Mapped[str] = mapped_column(String(200), index=True)
     nombre: Mapped[str] = mapped_column(String(250), index=True)
     sede: Mapped[str] = mapped_column(String(120))
+    #: Nombre y universidad sin tildes y en minúsculas, para buscar.
+    #: Nadie escribe "ENFERMERÍA" con tilde en un buscador, y un ILIKE contra
+    #: el nombre original no encuentra nada. Es una columna y no `unaccent()`
+    #: de Postgres para no depender de una extensión y para que la búsqueda se
+    #: comporte igual en los tests.
+    busqueda: Mapped[str] = mapped_column(String(400), index=True, default="")
 
     #: Ponderaciones en porcentaje. Suman 100 entre todas.
     nem: Mapped[float | None] = mapped_column(Float, nullable=True)
@@ -77,3 +83,23 @@ class MetaUsuario(Base):
 
     user: Mapped["User"] = relationship(back_populates="goal")
     carrera: Mapped["Carrera"] = relationship(back_populates="metas")
+
+
+def _texto_de_busqueda(carrera: Carrera) -> str:
+    """Nombre, universidad y sede, sin tildes y en minúsculas."""
+    from paes_api.modules.goals.service import normalizar
+
+    return normalizar(f"{carrera.nombre} {carrera.universidad} {carrera.sede}")
+
+
+@event.listens_for(Carrera, "before_insert")
+@event.listens_for(Carrera, "before_update")
+def _mantener_busqueda(mapper, connection, target: Carrera) -> None:
+    """`busqueda` se deriva sola, siempre.
+
+    Es un dato derivado, y dejar que cada llamador se acuerde de llenarlo es
+    garantizar que algún día alguien no lo haga: esa carrera existiría en la
+    base y sería invisible en el buscador, que es la peor clase de error —no
+    falla, simplemente no aparece.
+    """
+    target.busqueda = _texto_de_busqueda(target)

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { Carrera, Meta } from "@/lib/api";
 import { borrarMeta, buscarCarreras, fijarMeta } from "@/lib/api";
+import { getClientToken } from "@/lib/auth";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 
@@ -43,7 +44,7 @@ export function MetaView({ inicial }: { inicial: Meta | null }) {
       meta={meta}
       onCambiar={() => setEditando(true)}
       onBorrar={async () => {
-        await borrarMeta();
+        await borrarMeta(getClientToken() ?? undefined);
         setMeta(null);
         setEditando(true);
       }}
@@ -76,7 +77,7 @@ function Buscador({
     setBuscando(true);
     setError(null);
     try {
-      setResultados(await buscarCarreras(texto));
+      setResultados(await buscarCarreras(texto, getClientToken() ?? undefined));
     } catch {
       setError("No se pudo buscar. Intenta de nuevo.");
     } finally {
@@ -87,11 +88,14 @@ function Buscador({
   async function guardar() {
     if (!elegida) return;
     try {
-      const m = await fijarMeta({
-        carrera_id: elegida.id,
-        puntaje_nem: nem ? Number(nem) : null,
-        puntaje_ranking: ranking ? Number(ranking) : null,
-      });
+      const m = await fijarMeta(
+        {
+          carrera_id: elegida.id,
+          puntaje_nem: nem ? Number(nem) : null,
+          puntaje_ranking: ranking ? Number(ranking) : null,
+        },
+        getClientToken() ?? undefined
+      );
       onListo(m);
     } catch {
       setError("No se pudo guardar tu meta.");
