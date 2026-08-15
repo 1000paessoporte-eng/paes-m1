@@ -32,6 +32,11 @@
      blancas sobre menta claro. */
   --on-fill: #ffffff;
 
+  /* Grafito: el color del lápiz N°2 con que se rinde la PAES. Sobre papel
+     blanco es mina; en el tema oscuro se invierte a tiza sobre pizarra,
+     porque un trazo oscuro sobre fondo oscuro no se ve. */
+  --grafito: #2b2b33;
+
   /* Verde menta para lo que salió bien; en claro va oscuro para poder ser
      texto (5.5:1), y el menta brillante queda para rellenos. */
   --success: #047857;
@@ -79,6 +84,7 @@
     --accent-2: #22d3ee;
     --accent-foreground: #0b0b12;
     --on-fill: #0b0b12;
+    --grafito: #d4d4dd;
 
     --success: #34d399;
     --success-bright: #34d399;
@@ -119,6 +125,7 @@
   --accent-2: #22d3ee;
   --accent-foreground: #0b0b12;
   --on-fill: #0b0b12;
+  --grafito: #d4d4dd;
 
   --success: #34d399;
   --success-bright: #34d399;
@@ -152,6 +159,7 @@
   --color-accent-2: var(--accent-2);
   --color-accent-foreground: var(--accent-foreground);
   --color-on-fill: var(--on-fill);
+  --color-grafito: var(--grafito);
   --color-success: var(--success);
   --color-success-bright: var(--success-bright);
   --color-danger: var(--danger);
@@ -303,6 +311,42 @@ html {
 }
 
 /* ===========================================================================
+   LA BURBUJA
+   ---------------------------------------------------------------------------
+   El cartón de respuestas es EL artefacto de la PAES: todo el que la rindió
+   recuerda rellenar burbujas con lápiz grafito. Es también, exactamente, la
+   acción central de esta plataforma —elegir A, B, C o D—, así que la marca
+   vive en el mismo gesto que el producto.
+
+   Lo que separa esto de un radio button cualquiera es el relleno: grafito
+   denso al centro que se abre hacia el borde, con el trazo del lápiz saliéndose
+   un poco de la línea. Si quedara un círculo de color plano, no sería nada.
+   =========================================================================== */
+
+.burbuja {
+  border: 1.5px solid var(--border-strong);
+  background: transparent;
+  transition:
+    border-color var(--dur-rapida) var(--ease-suave),
+    box-shadow var(--dur-rapida) var(--ease-suave);
+}
+
+.burbuja-marcada {
+  border-color: var(--grafito);
+  /* Denso al centro y algo más suelto en el borde, como la mina apretada
+     contra el papel. El segundo gradiente, descentrado, evita el relleno
+     perfectamente uniforme que delataría un círculo de CSS. */
+  background:
+    radial-gradient(
+      circle at 38% 34%,
+      color-mix(in srgb, var(--grafito) 92%, transparent) 0%,
+      var(--grafito) 55%,
+      color-mix(in srgb, var(--grafito) 88%, transparent) 100%
+    );
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--grafito) 55%, transparent);
+}
+
+/* ===========================================================================
    MOVIMIENTO
    ---------------------------------------------------------------------------
    Curvas y duraciones en un solo lugar. Las animaciones de entrada usan
@@ -436,34 +480,27 @@ html {
    DECORACIÓN
    =========================================================================== */
 
-/* Fondo del hero: manchas de color difuminadas detrás de un contenedor con
-   overflow-hidden. */
-.hero-glow::before,
-.hero-glow::after {
+/* Fondo del hero.
+
+   Antes eran dos manchas de color difuminadas al 35% —violeta y cian— que es
+   exactamente el fondo que produce cualquier generador de páginas y que no
+   dice nada de esta plataforma en particular. Queda UNA sola, tenue y
+   descentrada, cuyo trabajo es separar el titular de la cuadrícula del fondo,
+   no llamar la atención. Lo que se ve en el hero es el papel cuadriculado, que
+   sí pertenece al mundo de quien estudia. */
+.hero-glow::before {
   content: "";
   position: absolute;
   z-index: -1;
-  border-radius: 9999px;
-  filter: blur(80px);
-  opacity: 0.35;
-}
-
-.hero-glow::before {
-  top: -8rem;
+  top: -10rem;
   left: 50%;
-  width: 36rem;
-  height: 22rem;
-  transform: translateX(-65%);
-  background: var(--accent);
-}
-
-.hero-glow::after {
-  top: -4rem;
-  left: 50%;
-  width: 30rem;
+  width: 34rem;
   height: 20rem;
-  transform: translateX(10%);
-  background: var(--accent-2);
+  transform: translateX(-55%);
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.18;
+  background: var(--accent);
 }
 
 .bg-dot-grid {

@@ -91,13 +91,18 @@ export function QuestionNavigator({ items, currentIndex, onSelect }: Props) {
                 aria-label={`Pregunta ${i + 1}${
                   item.answered ? ", respondida" : ", sin responder"
                 }${item.flagged ? ", marcada para revisar" : ""}`}
+                // El panel es el cartón de respuestas del ensayo: cada
+                // pregunta es una burbuja, rellena de grafito si ya se
+                // respondió. De un vistazo se lee igual que un cartón a medio
+                // llenar, que es exactamente lo que es.
                 className={cn(
-                  "relative flex aspect-square items-center justify-center rounded border text-[10px] font-semibold tabular-nums transition",
-                  actual
-                    ? "border-accent bg-accent text-accent-foreground"
-                    : item.answered
-                      ? "border-success/50 bg-success/15 text-success hover:bg-success/25"
-                      : "border-border bg-surface text-muted hover:bg-surface-hover hover:text-foreground"
+                  "relative flex aspect-square items-center justify-center rounded-full text-[10px] font-semibold tabular-nums transition",
+                  item.answered
+                    ? "burbuja burbuja-marcada text-on-fill"
+                    : "burbuja text-muted hover:bg-surface-hover hover:text-foreground",
+                  // La pregunta en pantalla se marca con un anillo alrededor y
+                  // no cambiando el relleno: el relleno ya significa otra cosa.
+                  actual && "ring-2 ring-accent ring-offset-1 ring-offset-background"
                 )}
               >
                 {i + 1}
@@ -113,9 +118,12 @@ export function QuestionNavigator({ items, currentIndex, onSelect }: Props) {
         </div>
       </div>
 
-      <p className="border-t border-border px-3 py-1.5 text-[10px] leading-tight text-muted">
-        <span className="text-success">■</span> respondida ·{" "}
-        <span className="text-warning">●</span> marcada
+      <p className="flex items-center gap-1.5 border-t border-border px-3 py-1.5 text-[10px] leading-tight text-muted">
+        <span
+          aria-hidden
+          className="burbuja burbuja-marcada inline-block h-2.5 w-2.5 rounded-full"
+        />
+        respondida ·<span className="text-warning">●</span> marcada
       </p>
     </aside>
   );
