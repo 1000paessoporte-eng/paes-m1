@@ -6240,6 +6240,626 @@ QUESTIONS_CIENCIAS = [
             ("2 mol", "Usó el coeficiente de la ecuación como si fuera la respuesta."),
         ],
     ),
+    # ---------- FÍSICA: movimiento ----------
+    _q(
+        "cie_movimiento", "facil",
+        "Un tren viaja a 90 km/h. ¿Cuál es su rapidez en metros por segundo?",
+        "25 m/s",
+        "Para pasar de km/h a m/s se divide por 3,6, porque un kilómetro son "
+        "1.000 metros y una hora son 3.600 segundos: $\\frac{1000}{3600} = "
+        "\\frac{1}{3,6}$.\n\n"
+        "Entonces $90 \\div 3,6 = 25$ m/s.\n\n"
+        "Conviene tener a mano la conversión inversa: para pasar de m/s a km/h "
+        "se multiplica por 3,6.",
+        [
+            ("32,4 m/s", "Multiplicó por 3,6 en vez de dividir: esa es la conversión al revés, de m/s a km/h."),
+            ("90 m/s", "Dejó el número igual, como si las unidades no importaran."),
+            ("1,5 m/s", "Dividió por 60 una sola vez, convirtiendo horas a minutos pero no a segundos."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un objeto se deja caer desde el reposo. Si se desprecia el roce del "
+        "aire, ¿qué rapidez tiene a los 3 segundos? (Usa $g = 10$ m/s².)",
+        "30 m/s",
+        "En caída libre la rapidez crece según $v = g \\cdot t$, porque la "
+        "velocidad inicial es cero.\n\n"
+        "Reemplazando: $v = 10 \\cdot 3 = 30$ m/s.\n\n"
+        "Ojo con no confundir esta fórmula con la de la distancia recorrida, "
+        "que lleva el tiempo al cuadrado y un medio: $h = \\frac{1}{2} g t^2$.",
+        [
+            ("45 m/s", "Usó la fórmula de la distancia ($\\frac{1}{2}gt^2 = 45$) y entregó ese número como si fuera rapidez. Es una distancia en metros, no una velocidad."),
+            ("10 m/s", "Entregó la aceleración de gravedad sin multiplicarla por el tiempo."),
+            ("90 m/s", "Multiplicó $g$ por $t^2$ sin el factor un medio, y además eso da distancia."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un automóvil aumenta su rapidez de 5 m/s a 25 m/s en 4 segundos. "
+        "¿Cuál es su aceleración media?",
+        "5 m/s²",
+        "La aceleración media es el cambio de velocidad dividido por el tiempo "
+        "que tomó: $a = \\frac{v_f - v_i}{t}$.\n\n"
+        "Reemplazando: $a = \\frac{25 - 5}{4} = \\frac{20}{4} = 5$ m/s².\n\n"
+        "Lo que importa es la DIFERENCIA de velocidades, no la velocidad final: "
+        "un auto que ya venía moviéndose no partió de cero.",
+        [
+            ("6,25 m/s²", "Dividió la velocidad final por el tiempo, olvidando que el auto ya llevaba 5 m/s."),
+            ("20 m/s²", "Calculó el cambio de velocidad pero no lo dividió por el tiempo."),
+            ("7,5 m/s²", "Sumó las dos velocidades y dividió por el tiempo, en vez de restarlas."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un camión mantiene una rapidez constante de 25 m/s durante 8 segundos. "
+        "¿Qué distancia recorre?",
+        "200 m",
+        "Con rapidez constante la distancia es simplemente $d = v \\cdot t$, "
+        "sin ningún término de aceleración.\n\n"
+        "Reemplazando: $d = 25 \\cdot 8 = 200$ m.\n\n"
+        "La palabra clave del enunciado es «constante»: si hubiera aceleración, "
+        "habría que usar otra fórmula.",
+        [
+            ("100 m", "Aplicó el factor un medio de la fórmula con aceleración, que acá no corresponde porque la rapidez es constante."),
+            ("3,1 m", "Dividió la rapidez por el tiempo en vez de multiplicar."),
+            ("33 m", "Sumó los dos valores en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un auto que va a 20 m/s frena uniformemente hasta detenerse en 5 "
+        "segundos. ¿Cuál es su aceleración?",
+        "−4 m/s²",
+        "La aceleración sigue siendo $a = \\frac{v_f - v_i}{t}$, y acá la "
+        "velocidad final es cero porque el auto se detiene.\n\n"
+        "$a = \\frac{0 - 20}{5} = \\frac{-20}{5} = -4$ m/s².\n\n"
+        "El signo negativo no es un detalle: indica que la aceleración apunta en "
+        "sentido contrario al movimiento, que es lo que significa frenar.",
+        [
+            ("4 m/s²", "El valor está bien pero le falta el signo: una aceleración positiva describiría un auto que acelera, no uno que frena."),
+            ("−100 m/s²", "Multiplicó la velocidad por el tiempo en vez de dividir."),
+            ("−0,25 m/s²", "Dividió el tiempo por la velocidad, invirtiendo la fórmula."),
+        ],
+    ),
+    # ---------- FÍSICA: fuerzas ----------
+    _q(
+        "cie_fuerzas", "facil",
+        "¿Cuál es el peso de un cuerpo de 8 kg en la superficie terrestre? "
+        "(Usa $g = 10$ m/s².)",
+        "80 N",
+        "El peso es la fuerza con que la Tierra atrae al cuerpo, y se calcula "
+        "como $P = m \\cdot g$.\n\n"
+        "Reemplazando: $P = 8 \\cdot 10 = 80$ N.\n\n"
+        "Masa y peso no son lo mismo: la masa se mide en kilogramos y no cambia "
+        "de lugar; el peso es una fuerza, se mide en newtons y depende de dónde "
+        "esté el cuerpo.",
+        [
+            ("8 N", "Entregó la masa con unidad de fuerza, sin multiplicar por la gravedad."),
+            ("0,8 N", "Dividió la masa por la gravedad en vez de multiplicar."),
+            ("18 N", "Sumó la masa y la gravedad en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre un cuerpo de 6 kg actúan dos fuerzas horizontales opuestas: una "
+        "de 30 N hacia la derecha y otra de 12 N hacia la izquierda. ¿Cuál es "
+        "su aceleración?",
+        "3 m/s²",
+        "Primero se calcula la fuerza NETA, que es la suma considerando el "
+        "sentido: $30 - 12 = 18$ N hacia la derecha.\n\n"
+        "Después se aplica la segunda ley de Newton, $F = m \\cdot a$, "
+        "despejando: $a = \\frac{18}{6} = 3$ m/s².\n\n"
+        "El orden importa: la segunda ley se aplica a la fuerza neta, no a cada "
+        "fuerza por separado.",
+        [
+            ("5 m/s²", "Usó solo la fuerza de 30 N e ignoró la que se le opone."),
+            ("7 m/s²", "Sumó las dos fuerzas en vez de restarlas, como si apuntaran en el mismo sentido."),
+            ("2 m/s²", "Usó solo la fuerza de 12 N."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Una caja de 5 kg es empujada con una fuerza de 40 N sobre una "
+        "superficie que ejerce 10 N de roce. ¿Cuál es su aceleración?",
+        "6 m/s²",
+        "El roce siempre se opone al movimiento, así que la fuerza neta es "
+        "$40 - 10 = 30$ N.\n\n"
+        "Con la segunda ley: $a = \\frac{30}{5} = 6$ m/s².\n\n"
+        "Un error frecuente es sumar el roce: es una fuerza que frena, nunca una "
+        "que empuja.",
+        [
+            ("8 m/s²", "Ignoró el roce y usó los 40 N completos."),
+            ("10 m/s²", "Sumó el roce a la fuerza aplicada, cuando el roce se opone al movimiento."),
+            ("2 m/s²", "Usó solo la fuerza de roce."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Sobre un objeto actúan dos fuerzas perpendiculares entre sí: una de 3 N "
+        "y otra de 4 N. ¿Cuál es la magnitud de la fuerza neta?",
+        "5 N",
+        "Las fuerzas son vectores: cuando forman ángulo recto no se suman "
+        "directamente, se combinan con el teorema de Pitágoras.\n\n"
+        "$F = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$ N.\n\n"
+        "Solo se pueden sumar como números cuando las fuerzas apuntan en la "
+        "misma dirección.",
+        [
+            ("7 N", "Sumó las magnitudes como si las fuerzas apuntaran en la misma dirección, ignorando que son perpendiculares."),
+            ("1 N", "Restó las magnitudes, que sería el caso si apuntaran en sentidos opuestos."),
+            ("12 N", "Multiplicó las dos fuerzas, operación que no corresponde a la suma de vectores."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un libro descansa inmóvil sobre una mesa. Si su peso es de 15 N, ¿cuál "
+        "es la magnitud de la fuerza normal que la mesa ejerce sobre él?",
+        "15 N",
+        "El libro está en reposo, así que la fuerza neta sobre él es cero: eso "
+        "es lo que significa el equilibrio.\n\n"
+        "Como el peso tira hacia abajo con 15 N, la mesa debe empujar hacia "
+        "arriba con exactamente 15 N para que se cancelen.\n\n"
+        "La normal no siempre vale lo mismo que el peso —cambia en un plano "
+        "inclinado o si alguien presiona el libro—, pero acá el enunciado dice "
+        "que está inmóvil sobre una superficie horizontal.",
+        [
+            ("30 N", "Duplicó el peso, como si la normal tuviera que superarlo para sostener el libro. Si así fuera, el libro saldría disparado hacia arriba."),
+            ("0 N", "Supuso que no hay fuerza porque no hay movimiento; en realidad hay dos fuerzas que se anulan."),
+            ("1,5 N", "Confundió el peso con la masa y aplicó la gravedad al revés."),
+        ],
+    ),
+    # ---------- FÍSICA: energía ----------
+    _q(
+        "cie_energia", "facil",
+        "¿Cuál es la energía potencial gravitatoria de un cuerpo de 2 kg "
+        "ubicado a 5 m de altura? (Usa $g = 10$ m/s².)",
+        "100 J",
+        "La energía potencial gravitatoria es $E_p = m \\cdot g \\cdot h$.\n\n"
+        "Reemplazando: $E_p = 2 \\cdot 10 \\cdot 5 = 100$ J.\n\n"
+        "Se mide desde un nivel de referencia: la misma caja tiene distinta "
+        "energía potencial según si se mide desde el suelo o desde una mesa.",
+        [
+            ("10 J", "Multiplicó solo la masa por la altura, olvidando la gravedad."),
+            ("50 J", "Aplicó el factor un medio, que corresponde a la energía cinética y no a la potencial."),
+            ("17 J", "Sumó los tres valores en vez de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Un cuerpo de 4 kg se mueve a 3 m/s. ¿Cuál es su energía cinética?",
+        "18 J",
+        "La energía cinética es $E_c = \\frac{1}{2} m v^2$.\n\n"
+        "Reemplazando: $E_c = \\frac{1}{2} \\cdot 4 \\cdot 3^2 = 2 \\cdot 9 "
+        "= 18$ J.\n\n"
+        "La velocidad va al cuadrado ANTES de multiplicar: por eso duplicar la "
+        "rapidez cuadruplica la energía cinética, un dato que explica por qué "
+        "los choques a alta velocidad son tan destructivos.",
+        [
+            ("36 J", "Olvidó el factor un medio de la fórmula."),
+            ("6 J", "Multiplicó la masa por la velocidad sin elevarla al cuadrado ni aplicar el medio."),
+            ("72 J", "Elevó al cuadrado el producto completo en vez de solo la velocidad."),
+        ],
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Una máquina realiza un trabajo de 600 J en 20 segundos. ¿Cuál es su "
+        "potencia media?",
+        "30 W",
+        "La potencia es el trabajo dividido por el tiempo que tomó: "
+        "$P = \\frac{W}{t}$.\n\n"
+        "Reemplazando: $P = \\frac{600}{20} = 30$ W.\n\n"
+        "Dos máquinas pueden hacer el mismo trabajo con potencias muy distintas: "
+        "la más potente simplemente lo hace en menos tiempo.",
+        [
+            ("12.000 W", "Multiplicó el trabajo por el tiempo en lugar de dividir."),
+            ("0,03 W", "Dividió el tiempo por el trabajo, invirtiendo la fórmula."),
+            ("620 W", "Sumó ambos valores."),
+        ],
+    ),
+    _q(
+        "cie_energia", "dificil",
+        "Un objeto se suelta desde 20 m de altura. Si se desprecia el roce, "
+        "¿con qué rapidez llega al suelo? (Usa $g = 10$ m/s².)",
+        "20 m/s",
+        "Por conservación de la energía, toda la energía potencial del inicio se "
+        "convierte en cinética al llegar abajo: $mgh = \\frac{1}{2}mv^2$.\n\n"
+        "La masa se cancela a ambos lados, así que $v = \\sqrt{2gh}$. "
+        "Reemplazando: $v = \\sqrt{2 \\cdot 10 \\cdot 20} = \\sqrt{400} = "
+        "20$ m/s.\n\n"
+        "Que la masa se cancele explica algo que parece raro: sin roce, dos "
+        "cuerpos de distinta masa soltados desde la misma altura llegan al suelo "
+        "con la misma rapidez.",
+        [
+            ("400 m/s", "Se quedó con el valor de $2gh$ sin sacarle la raíz cuadrada."),
+            ("200 m/s", "Multiplicó la gravedad por la altura sin el factor 2 ni la raíz."),
+            ("40 m/s", "Duplicó el resultado correcto, aplicando el 2 fuera de la raíz."),
+        ],
+    ),
+    _q(
+        "cie_energia", "facil",
+        "Una fuerza de 25 N desplaza un cuerpo 8 m en la misma dirección de la "
+        "fuerza. ¿Cuánto trabajo realiza?",
+        "200 J",
+        "Cuando la fuerza y el desplazamiento van en la misma dirección, el "
+        "trabajo es $W = F \\cdot d$.\n\n"
+        "Reemplazando: $W = 25 \\cdot 8 = 200$ J.\n\n"
+        "Si la fuerza fuera perpendicular al movimiento, el trabajo sería cero: "
+        "por eso cargar un bolso caminando en horizontal no realiza trabajo "
+        "sobre él, por cansador que resulte.",
+        [
+            ("3,1 J", "Dividió la fuerza por la distancia en vez de multiplicar."),
+            ("33 J", "Sumó ambos valores."),
+            ("100 J", "Aplicó un factor un medio que no corresponde a la definición de trabajo."),
+        ],
+    ),
+    # ---------- FÍSICA: ondas ----------
+    _q(
+        "cie_ondas", "facil",
+        "Una onda tiene un periodo de 0,2 s. ¿Cuál es su frecuencia?",
+        "5 Hz",
+        "La frecuencia y el periodo son inversos: $f = \\frac{1}{T}$.\n\n"
+        "Reemplazando: $f = \\frac{1}{0,2} = 5$ Hz.\n\n"
+        "El periodo es cuánto demora UN ciclo; la frecuencia, cuántos ciclos "
+        "ocurren en un segundo. Si cada ciclo dura una quinta parte de segundo, "
+        "caben cinco en un segundo.",
+        [
+            ("0,2 Hz", "Entregó el periodo con unidad de frecuencia, sin invertirlo."),
+            ("2 Hz", "Movió la coma sin hacer la división."),
+            ("0,5 Hz", "Invirtió mal el decimal: $\\frac{1}{0,2}$ es 5, no 0,5."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "El sonido viaja en el aire a unos 340 m/s. Si una onda sonora tiene una "
+        "frecuencia de 170 Hz, ¿cuál es su longitud de onda?",
+        "2 m",
+        "La relación entre rapidez, frecuencia y longitud de onda es "
+        "$v = \\lambda \\cdot f$. Despejando la longitud: $\\lambda = "
+        "\\frac{v}{f}$.\n\n"
+        "Reemplazando: $\\lambda = \\frac{340}{170} = 2$ m.\n\n"
+        "En un mismo medio la rapidez es fija, así que a mayor frecuencia menor "
+        "longitud de onda: los sonidos agudos tienen ondas más cortas.",
+        [
+            ("57.800 m", "Multiplicó la rapidez por la frecuencia en vez de dividir."),
+            ("0,5 m", "Dividió la frecuencia por la rapidez, invirtiendo la fórmula."),
+            ("510 m", "Sumó ambos valores."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una onda avanza con una longitud de onda de 3 m y una frecuencia de 12 "
+        "Hz. ¿Cuál es su rapidez de propagación?",
+        "36 m/s",
+        "Se usa directamente $v = \\lambda \\cdot f$.\n\n"
+        "Reemplazando: $v = 3 \\cdot 12 = 36$ m/s.\n\n"
+        "Esta rapidez depende del medio, no de quien genera la onda: si la misma "
+        "onda pasa a otro medio, cambia la longitud pero la frecuencia se "
+        "mantiene.",
+        [
+            ("4 m/s", "Dividió la frecuencia por la longitud en vez de multiplicar."),
+            ("15 m/s", "Sumó ambos valores."),
+            ("0,25 m/s", "Dividió la longitud por la frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Una onda de radio se propaga a $3 \\times 10^8$ m/s con una longitud "
+        "de onda de 100 m. ¿Cuál es su frecuencia?",
+        "3 × 10⁶ Hz",
+        "Despejando de $v = \\lambda \\cdot f$: $f = \\frac{v}{\\lambda}$."
+        "\n\n"
+        "Reemplazando: $f = \\frac{3 \\times 10^8}{100} = 3 \\times 10^8 "
+        "\\div 10^2 = 3 \\times 10^6$ Hz.\n\n"
+        "Al dividir potencias de diez se RESTAN los exponentes. Ese resultado, 3 "
+        "millones de hertz, son 3 MHz: el rango de la radio.",
+        [
+            ("3 × 10¹⁰ Hz", "Sumó los exponentes en vez de restarlos, que es lo que corresponde a una división."),
+            ("3 × 10⁸ Hz", "Entregó la rapidez de la luz sin dividir por la longitud de onda."),
+            ("100 Hz", "Entregó la longitud de onda con unidad de frecuencia."),
+        ],
+    ),
+    # ---------- FÍSICA: electricidad ----------
+    _q(
+        "cie_electricidad", "facil",
+        "Una ampolleta conectada a 220 V deja pasar una corriente de 0,5 A. "
+        "¿Cuál es su resistencia?",
+        "440 Ω",
+        "De la ley de Ohm, $V = I \\cdot R$, se despeja $R = \\frac{V}{I}$."
+        "\n\n"
+        "Reemplazando: $R = \\frac{220}{0,5} = 440$ Ω.\n\n"
+        "Dividir por un número menor que uno AUMENTA el resultado: por eso una "
+        "corriente pequeña con voltaje alto implica una resistencia grande.",
+        [
+            ("110 Ω", "Multiplicó el voltaje por la corriente en vez de dividir."),
+            ("220 Ω", "Entregó el voltaje sin dividir por la corriente."),
+            ("0,002 Ω", "Dividió la corriente por el voltaje, invirtiendo la fórmula."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Dos resistencias de 4 Ω y 6 Ω se conectan en SERIE. ¿Cuál es la "
+        "resistencia equivalente?",
+        "10 Ω",
+        "En serie las resistencias simplemente se suman: "
+        "$R_{eq} = R_1 + R_2 = 4 + 6 = 10$ Ω.\n\n"
+        "Tiene sentido físico: la corriente debe atravesar las dos una tras "
+        "otra, así que los obstáculos se acumulan.\n\n"
+        "En paralelo es distinto —ahí la equivalente es MENOR que la más "
+        "pequeña— porque la corriente encuentra dos caminos.",
+        [
+            ("2,4 Ω", "Aplicó la fórmula de paralelo, que corresponde cuando hay dos caminos para la corriente y no uno solo."),
+            ("24 Ω", "Multiplicó las resistencias en vez de sumarlas."),
+            ("2 Ω", "Restó las resistencias."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un artefacto funciona con 12 V y consume 2 A. ¿Cuál es su potencia "
+        "eléctrica?",
+        "24 W",
+        "La potencia eléctrica es $P = V \\cdot I$.\n\n"
+        "Reemplazando: $P = 12 \\cdot 2 = 24$ W.\n\n"
+        "Esta es la fórmula que explica la cuenta de la luz: lo que se paga es "
+        "potencia por tiempo, y por eso los artefactos de alto consumo son los "
+        "que combinan voltaje y corriente altos.",
+        [
+            ("6 W", "Dividió el voltaje por la corriente en vez de multiplicar."),
+            ("14 W", "Sumó ambos valores."),
+            ("48 W", "Duplicó el resultado, quizá aplicando la corriente dos veces."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Una resistencia de 10 Ω es atravesada por una corriente de 3 A. ¿Qué "
+        "potencia disipa?",
+        "90 W",
+        "Cuando se conocen la corriente y la resistencia conviene usar "
+        "$P = I^2 \\cdot R$.\n\n"
+        "Reemplazando: $P = 3^2 \\cdot 10 = 9 \\cdot 10 = 90$ W.\n\n"
+        "La corriente va al cuadrado, así que duplicarla cuadruplica la potencia "
+        "disipada en calor. Es la razón por la que un cable sobrecargado se "
+        "calienta tan rápido.",
+        [
+            ("30 W", "Usó $I \\cdot R$ sin elevar la corriente al cuadrado."),
+            ("300 W", "Elevó al cuadrado el producto completo en vez de solo la corriente."),
+            ("0,9 W", "Dividió en lugar de multiplicar."),
+        ],
+    ),
+    # ---------- QUÍMICA: átomo ----------
+    _q(
+        "cie_atomo", "facil",
+        "Un átomo neutro tiene 11 protones. ¿Cuántos electrones tiene?",
+        "11 electrones",
+        "En un átomo NEUTRO la carga total es cero, y como protones y electrones "
+        "tienen cargas iguales y opuestas, deben ser la misma cantidad.\n\n"
+        "Por eso 11 protones implican 11 electrones.\n\n"
+        "Si el número de electrones fuera distinto, ya no sería un átomo neutro "
+        "sino un ion: con menos electrones sería un catión y con más, un anión.",
+        [
+            ("22 electrones", "Duplicó el número de protones, quizá confundiendo con el número másico."),
+            ("0 electrones", "Interpretó «neutro» como ausencia de carga eléctrica en las partículas, cuando significa que las cargas se compensan."),
+            ("12 electrones", "Agregó un electrón de más, lo que describiría un ion negativo y no un átomo neutro."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "El ion $Ca^{2+}$ proviene de un átomo de calcio con número atómico 20. "
+        "¿Cuántos electrones tiene el ion?",
+        "18 electrones",
+        "El número atómico dice que el átomo neutro tiene 20 protones y 20 "
+        "electrones.\n\n"
+        "La carga $2+$ significa que PERDIÓ dos electrones: quedan $20 - 2 = 18$."
+        "\n\n"
+        "Una carga positiva siempre indica electrones perdidos, no protones "
+        "ganados: el número de protones define al elemento y no cambia en una "
+        "reacción química.",
+        [
+            ("22 electrones", "Sumó dos electrones en vez de restarlos: eso describiría un ion negativo."),
+            ("20 electrones", "Ignoró la carga del ion y respondió por el átomo neutro."),
+            ("2 electrones", "Entregó la carga del ion como si fuera la cantidad de electrones."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Un átomo tiene número másico 40 y 20 neutrones. ¿Cuál es su número "
+        "atómico?",
+        "20",
+        "El número másico es la suma de protones y neutrones: $A = Z + N$."
+        "\n\n"
+        "Despejando el número atómico: $Z = 40 - 20 = 20$.\n\n"
+        "El número atómico es la identidad del elemento —20 protones son calcio, "
+        "siempre— mientras que el número de neutrones puede variar entre sus "
+        "isótopos.",
+        [
+            ("60", "Sumó ambos valores en vez de restarlos."),
+            ("40", "Entregó el número másico sin descontar los neutrones."),
+            ("2", "Dividió el número másico por los neutrones."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "Un átomo de cloro tiene 17 protones y 18 neutrones. ¿Cuál es su "
+        "número másico?",
+        "35",
+        "El número másico cuenta las partículas del núcleo: protones más "
+        "neutrones, $A = Z + N$.\n\n"
+        "Reemplazando: $A = 17 + 18 = 35$.\n\n"
+        "Los electrones no entran en la cuenta. Su masa es unas 1.800 veces "
+        "menor que la de un protón, así que no alcanzan a mover el número "
+        "másico.",
+        [
+            ("17", "Entregó el número atómico, que cuenta solo los protones."),
+            ("18", "Contó solo los neutrones."),
+            ("1", "Restó los protones a los neutrones en vez de sumarlos."),
+        ],
+    ),
+    # ---------- QUÍMICA: estequiometría ----------
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Cuántos gramos hay en 3 moles de agua (H₂O), si su masa molar es 18 "
+        "g/mol?",
+        "54 g",
+        "La masa molar dice cuántos gramos pesa un mol, así que la masa es "
+        "$m = n \\cdot M$.\n\n"
+        "Reemplazando: $m = 3 \\cdot 18 = 54$ g.\n\n"
+        "Si el ejercicio pidiera lo contrario —moles a partir de gramos— habría "
+        "que dividir. Conviene fijarse siempre en qué unidad pide la respuesta.",
+        [
+            ("6 g", "Dividió los moles por la masa molar en vez de multiplicar."),
+            ("21 g", "Sumó ambos valores."),
+            ("18 g", "Entregó la masa de un solo mol, sin considerar que son tres."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "En la reacción $N_2 + 3H_2 \\rightarrow 2NH_3$, ¿cuántos moles de "
+        "amoníaco se producen a partir de 4 moles de nitrógeno, con hidrógeno "
+        "en exceso?",
+        "8 mol",
+        "Los coeficientes de la ecuación dan la proporción: por cada 1 mol de "
+        "$N_2$ se forman 2 de $NH_3$.\n\n"
+        "Con 4 moles de nitrógeno: $4 \\times 2 = 8$ moles de amoníaco.\n\n"
+        "«Hidrógeno en exceso» significa que el nitrógeno es el reactivo "
+        "limitante: es él quien determina cuánto producto se forma.",
+        [
+            ("4 mol", "Copió los moles de nitrógeno sin aplicar la proporción 1 a 2 de la ecuación."),
+            ("2 mol", "Entregó el coeficiente de la ecuación en vez de calcular."),
+            ("12 mol", "Usó el coeficiente del hidrógeno, que no es el reactivo limitante."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "¿Cuántas moléculas hay en 2 moles de una sustancia? (Número de "
+        "Avogadro: $6 \\times 10^{23}$ partículas por mol.)",
+        "1,2 × 10²⁴ moléculas",
+        "Un mol contiene $6 \\times 10^{23}$ partículas, así que dos moles "
+        "contienen el doble.\n\n"
+        "$2 \\times 6 \\times 10^{23} = 12 \\times 10^{23} = 1,2 \\times "
+        "10^{24}$.\n\n"
+        "El último paso es de notación científica: $12 \\times 10^{23}$ se "
+        "escribe con un solo dígito antes de la coma, moviendo el exponente.",
+        [
+            ("6 × 10²³ moléculas", "Entregó el número de Avogadro sin multiplicarlo por los dos moles."),
+            ("1,2 × 10²³ moléculas", "Movió la coma pero olvidó subir el exponente: $12 \\times 10^{23}$ son $1,2 \\times 10^{24}$."),
+            ("3 × 10²³ moléculas", "Dividió por dos en vez de multiplicar."),
+        ],
+    ),
+    # ---------- QUÍMICA: disoluciones ----------
+    _q(
+        "cie_soluciones", "facil",
+        "¿Cuál es la concentración molar de una disolución que contiene 2 moles "
+        "de soluto en 4 litros de disolución?",
+        "0,5 mol/L",
+        "La molaridad es moles de soluto por litro de disolución: "
+        "$M = \\frac{n}{V}$.\n\n"
+        "Reemplazando: $M = \\frac{2}{4} = 0,5$ mol/L.\n\n"
+        "El volumen es el de la DISOLUCIÓN terminada, no el del solvente que se "
+        "agregó: al disolverse, el soluto también ocupa espacio.",
+        [
+            ("2 mol/L", "Entregó los moles sin dividir por el volumen."),
+            ("8 mol/L", "Multiplicó en vez de dividir."),
+            ("4 mol/L", "Entregó el volumen como si fuera la concentración."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Cuántos moles de soluto hay en 500 mL de una disolución 0,4 mol/L?",
+        "0,2 mol",
+        "Primero se pasan los mililitros a litros, porque la molaridad se define "
+        "por litro: $500\\ \\text{mL} = 0,5$ L.\n\n"
+        "Después, despejando de $M = \\frac{n}{V}$: $n = M \\cdot V = 0,4 "
+        "\\cdot 0,5 = 0,2$ mol.\n\n"
+        "Saltarse la conversión de unidades es el error más común de todo el "
+        "tema, y multiplica el resultado por mil.",
+        [
+            ("200 mol", "Multiplicó por 500 sin convertir los mililitros a litros."),
+            ("0,8 mol", "Dividió la concentración por el volumen en vez de multiplicar."),
+            ("1,25 mol", "Dividió el volumen por la concentración."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Se diluye una disolución de 100 mL y 2 mol/L agregando agua hasta "
+        "completar 400 mL. ¿Cuál es la concentración final?",
+        "0,5 mol/L",
+        "Al diluir, la cantidad de soluto NO cambia: solo aumenta el volumen. "
+        "Eso se expresa como $M_1 V_1 = M_2 V_2$.\n\n"
+        "Reemplazando: $2 \\cdot 100 = M_2 \\cdot 400$, entonces "
+        "$M_2 = \\frac{200}{400} = 0,5$ mol/L.\n\n"
+        "Cuadruplicar el volumen deja la concentración en la cuarta parte, que "
+        "es exactamente lo que muestra el resultado.",
+        [
+            ("2 mol/L", "Supuso que la concentración no cambia al agregar agua; lo que no cambia es la cantidad de soluto."),
+            ("8 mol/L", "Multiplicó por la razón de volúmenes en vez de dividir: agregar agua nunca concentra una disolución."),
+            ("0,05 mol/L", "Se equivocó en un factor diez al operar los volúmenes."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "¿Qué masa de hidróxido de sodio se necesita para preparar 2 litros de "
+        "una disolución 0,5 mol/L? La masa molar del $NaOH$ es 40 g/mol.",
+        "40 g",
+        "Son dos pasos y el orden importa. Primero, cuántos moles hace falta: "
+        "$n = M \\cdot V = 0,5 \\cdot 2 = 1$ mol.\n\n"
+        "Recién ahí se pasa de moles a gramos con la masa molar: "
+        "$m = 1 \\cdot 40 = 40$ g.\n\n"
+        "La molaridad nunca entrega gramos directamente: siempre pasa por los "
+        "moles, y por eso la masa molar es imprescindible en este tipo de "
+        "problema.",
+        [
+            ("20 g", "Se saltó el volumen y usó solo la concentración por la masa molar."),
+            ("80 g", "Multiplicó por el volumen dos veces."),
+            ("1 g", "Se quedó en los moles y no convirtió a gramos."),
+        ],
+    ),
+    # ---------- QUÍMICA: ácido-base ----------
+    _q(
+        "cie_acidobase", "facil",
+        "Una disolución tiene pH 9. ¿Es ácida, neutra o básica?",
+        "Básica",
+        "A 25 °C la escala de pH tiene su punto neutro en 7: bajo ese valor la "
+        "disolución es ácida y sobre él, básica.\n\n"
+        "Como 9 es mayor que 7, la disolución es básica.\n\n"
+        "Cada unidad de pH representa un factor de diez en la concentración de "
+        "iones hidrógeno, así que pH 9 tiene cien veces menos $H^+$ que pH 7.",
+        [
+            ("Ácida", "Invirtió la escala: los valores bajo 7 son los ácidos."),
+            ("Neutra", "El punto neutro es exactamente 7, no cualquier valor cercano."),
+            ("Depende de la temperatura, no se puede saber", "La temperatura sí mueve el punto neutro, pero el enunciado se refiere a las condiciones habituales de 25 °C, donde 9 es básico."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "medio",
+        "¿Cuál es el pH de una disolución cuya concentración de iones hidrógeno "
+        "es $1 \\times 10^{-5}$ mol/L?",
+        "5",
+        "El pH es el logaritmo negativo de la concentración de $H^+$: "
+        "$pH = -\\log[H^+]$.\n\n"
+        "Cuando la concentración es una potencia exacta de diez, el pH es el "
+        "exponente sin el signo: $-\\log(10^{-5}) = 5$.\n\n"
+        "Ese atajo solo funciona con potencias exactas de diez; con otros "
+        "valores hay que calcular el logaritmo.",
+        [
+            ("−5", "Olvidó el signo negativo de la definición: el pH de una disolución acuosa común nunca es negativo."),
+            ("9", "Calculó el pOH en vez del pH."),
+            ("10⁻⁵", "Entregó la concentración misma en lugar de su logaritmo."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "dificil",
+        "Una disolución tiene pOH 3. ¿Cuál es su concentración de iones "
+        "hidróxido $[OH^-]$?",
+        "1 × 10⁻³ mol/L",
+        "El pOH se define como $pOH = -\\log[OH^-]$, así que para volver a la "
+        "concentración se invierte: $[OH^-] = 10^{-pOH}$.\n\n"
+        "Con pOH 3: $[OH^-] = 10^{-3}$ mol/L.\n\n"
+        "Y como $pH + pOH = 14$, esta disolución tiene pH 11: es básica, lo que "
+        "calza con tener bastante $OH^-$.",
+        [
+            ("1 × 10³ mol/L", "Olvidó el signo negativo del exponente. Una concentración de mil moles por litro es físicamente imposible."),
+            ("1 × 10⁻¹¹ mol/L", "Usó el pH (11) en vez del pOH: esa sería la concentración de $H^+$."),
+            ("3 mol/L", "Entregó el valor del pOH como si fuera una concentración."),
+        ],
+    ),
 ]
 
 
