@@ -9,6 +9,7 @@ from paes_api.core.config import get_settings
 from paes_api.core.limiter import limiter
 from paes_api.modules.admin.router import router as admin_router
 from paes_api.modules.analytics.router import router as analytics_router
+from paes_api.modules.billing.router import router as billing_router
 from paes_api.modules.content.router import router as content_router
 from paes_api.modules.demo.router import router as demo_router
 from paes_api.modules.exam_focus.router import router as exam_router
@@ -43,6 +44,7 @@ app.include_router(goals_router, prefix="/api")
 app.include_router(practice_router, prefix="/api")
 app.include_router(reminders_router, prefix="/api")
 app.include_router(analytics_router, prefix="/api")
+app.include_router(billing_router, prefix="/api")
 app.include_router(demo_router, prefix="/api")
 app.include_router(metrics_router, prefix="/api")
 app.include_router(admin_router, prefix="/api")

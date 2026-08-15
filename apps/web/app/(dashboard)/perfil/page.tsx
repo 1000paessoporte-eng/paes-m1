@@ -1,8 +1,16 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getAnalyticsSummary, getMe, getSkillTree, listExamAttempts } from "@/lib/api";
+import {
+  ApiError,
+  getAnalyticsSummary,
+  getMe,
+  getMiPlan,
+  getSkillTree,
+  listExamAttempts,
+} from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ProfileForm } from "@/components/profile/profile-form";
+import { MiPlanPanel } from "@/components/plan/mi-plan";
 
 export const metadata = {
   title: "Mi perfil",
@@ -15,13 +23,14 @@ const DATE_FMT = new Intl.DateTimeFormat("es-CL", { day: "2-digit", month: "long
 export default async function PerfilPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
-  let user, nodes, attempts, summary;
+  let user, nodes, attempts, summary, plan;
   try {
-    [user, nodes, attempts, summary] = await Promise.all([
+    [user, nodes, attempts, summary, plan] = await Promise.all([
       getMe(token ?? ""),
       getSkillTree(token),
       listExamAttempts(token),
       getAnalyticsSummary(token),
+      getMiPlan(token),
     ]);
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/perfil");
@@ -53,6 +62,10 @@ export default async function PerfilPage() {
       </div>
 
       <div className="mt-8 max-w-lg">
+        <MiPlanPanel inicial={plan} />
+      </div>
+
+      <div className="mt-5 max-w-lg">
         <ProfileForm
           initialName={user.name}
           email={user.email}

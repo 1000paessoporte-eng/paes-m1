@@ -184,6 +184,20 @@ export function guardarNotas(
   });
 }
 
+export type MiPlan = paths["/api/plan"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getMiPlan(token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan", token);
+}
+
+export function canjearCodigo(codigo: string, token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan/canjear", token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ codigo }),
+  });
+}
+
 /** Un nodo con el progreso del estudiante. */
 export function getSkillNode(code: string, token?: string): Promise<SkillNode> {
   return apiFetch<SkillNode>(`/api/skill-tree/${code}`, token);
