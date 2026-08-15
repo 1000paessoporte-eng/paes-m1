@@ -79,6 +79,53 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
     "prob_reglas": Fraction(5, 8) * Fraction(4, 7),                   # 5/14
 }
 
+# --- Ciencias: física y química ---
+# Cada valor se recalcula acá desde la definición, sin mirar la alternativa que
+# el banco marcó como correcta. Es la única forma de que un error de cálculo no
+# pase silenciosamente a un estudiante que lo va a estudiar como verdad.
+COMPROBACIONES_CIENCIAS: dict[str, str] = {
+    # Movimiento
+    "Un tren viaja a 90 km/h": str(round(90 / 3.6)),
+    "se deja caer desde el reposo": str(10 * 3),
+    "aumenta su rapidez de 5 m/s a 25 m/s": str((25 - 5) // 4),
+    "rapidez constante de 25 m/s durante 8": str(25 * 8),
+    "frena uniformemente hasta detenerse en 5": str((0 - 20) // 5),
+    # Fuerzas
+    "peso de un cuerpo de 8 kg": str(8 * 10),
+    "una de 30 N hacia la derecha": str((30 - 12) // 6),
+    "empujada con una fuerza de 40 N": str((40 - 10) // 5),
+    "dos fuerzas perpendiculares": str(int(sqrt(3**2 + 4**2))),
+    # Energía
+    "energía potencial gravitatoria de un cuerpo de 2 kg": str(2 * 10 * 5),
+    "cuerpo de 4 kg se mueve a 3 m/s": str(int(0.5 * 4 * 3**2)),
+    "trabajo de 600 J en 20 segundos": str(600 // 20),
+    "se suelta desde 20 m de altura": str(int(sqrt(2 * 10 * 20))),
+    "fuerza de 25 N desplaza un cuerpo 8 m": str(25 * 8),
+    # Ondas
+    "periodo de 0,2 s": str(int(1 / 0.2)),
+    "frecuencia de 170 Hz": str(340 // 170),
+    "longitud de onda de 3 m y una frecuencia de 12": str(3 * 12),
+    # Electricidad
+    "ampolleta conectada a 220 V": str(int(220 / 0.5)),
+    "4 Ω y 6 Ω se conectan en SERIE": str(4 + 6),
+    "funciona con 12 V y consume 2 A": str(12 * 2),
+    "resistencia de 10 Ω es atravesada por una corriente de 3 A": str(3**2 * 10),
+    # Átomo
+    "átomo neutro tiene 11 protones": str(11),
+    "ion $Ca^{2+}$": str(20 - 2),
+    "número másico 40 y 20 neutrones": str(40 - 20),
+    # Estequiometría y disoluciones
+    "17 protones y 18 neutrones": str(17 + 18),
+    "preparar 2 litros de": str(int(0.5 * 2 * 40)),
+    "3 moles de agua": str(3 * 18),
+    "4 moles de nitrógeno": str(4 * 2),
+    "2 moles de soluto en 4 litros": str(2 / 4),
+    "500 mL de una disolución 0,4": str(0.4 * 0.5),
+    "diluye una disolución de 100 mL y 2 mol/L": str(2 * 100 / 400),
+    # Ácido-base
+    "concentración de iones hidrógeno es $1 \\times 10^{-5}$": str(5),
+}
+
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
     # --- racionales ---
@@ -215,6 +262,16 @@ def _norm(t: str) -> str:
     return t.replace("\u2212", "-").replace("\u00a0", " ").strip()
 
 
+def _norm_numero(t: str) -> str:
+    """Normaliza la coma decimal antes de comparar.
+
+    El banco escribe los decimales como se escriben en Chile —"0,5"— y Python
+    los calcula como "0.5". Es el mismo número escrito distinto, no un error de
+    aritmética, y sin esto el verificador reportaría fallas donde no las hay.
+    """
+    return _norm(t).replace(",", ".")
+
+
 def _valores_del_texto(texto: str) -> set[Fraction]:
     """Todos los números que aparecen en un texto, como valores exactos.
 
@@ -336,7 +393,7 @@ def main() -> int:
     # ---- capa 2: aritmética ----
     por_stem = {q["stem"]: q for q in todas}
     comprobadas = 0
-    for fragmento, esperado in COMPROBACIONES.items():
+    for fragmento, esperado in {**COMPROBACIONES, **COMPROBACIONES_CIENCIAS}.items():
         candidatas = [s for s in por_stem if fragmento in s]
         if len(candidatas) != 1:
             fallas.append(
@@ -345,7 +402,7 @@ def main() -> int:
             continue
         q = por_stem[candidatas[0]]
         correcta = next(a["text"] for a in q["alternatives"] if a["is_correct"])
-        if _norm(esperado) not in _norm(correcta):
+        if _norm_numero(esperado) not in _norm_numero(correcta):
             fallas.append(
                 f"aritmética: '{fragmento}' → esperado '{esperado}', "
                 f"la marcada correcta dice '{correcta}'"
