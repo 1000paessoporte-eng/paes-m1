@@ -5,6 +5,7 @@ from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.metrics.schemas import PageViewIn
+from paes_api.modules.metrics.user_agent import clasificar
 from paes_api.modules.users.deps import get_current_user_optional
 from paes_api.modules.users.models import User
 
@@ -30,11 +31,18 @@ def registrar_visita(
         return
     path = path.split("?")[0].split("#")[0][:255]
 
+    # El user agent se lee y se descarta en el acto: a la base solo llegan las
+    # tres categorías gruesas, nunca la cadena original.
+    device, sistema, navegador = clasificar(request.headers.get("user-agent"))
+
     db.add(
         PageView(
             path=path,
             visitor_id=payload.visitor_id,
             user_id=user.id if user else None,
+            device=device,
+            os=sistema,
+            browser=navegador,
         )
     )
     db.commit()

@@ -779,6 +779,8 @@ export interface components {
             retencion: components["schemas"]["RetencionOut"];
             ensayos: components["schemas"]["EnsayosOut"];
             banco: components["schemas"]["BancoOut"];
+            visitantes: components["schemas"]["VisitantesOut"];
+            alumnos: components["schemas"]["AlumnosOut"];
         };
         /**
          * AlternativeSafeOut
@@ -792,6 +794,52 @@ export interface components {
             label: string;
             /** Text */
             text: string;
+        };
+        /** AlumnoDetalle */
+        AlumnoDetalle: {
+            /** Id */
+            id: number;
+            /** Email */
+            email: string;
+            /** Name */
+            name: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Last Login At */
+            last_login_at: string | null;
+            /** Curso */
+            curso: string | null;
+            /** Pruebas Objetivo */
+            pruebas_objetivo: string | null;
+            /** Horas Semana */
+            horas_semana: number | null;
+            /** Ensayos Iniciados */
+            ensayos_iniciados: number;
+            /** Ensayos Terminados */
+            ensayos_terminados: number;
+            /** Respuestas */
+            respuestas: number;
+            /** Tasa Acierto */
+            tasa_acierto: number | null;
+            /** Mejor Puntaje */
+            mejor_puntaje: number | null;
+            /** Dias Activos */
+            dias_activos: number;
+            /** Por Prueba */
+            por_prueba: components["schemas"]["ResultadoPrueba"][];
+        };
+        /**
+         * AlumnosOut
+         * @description Qué hizo cada cuenta registrada. Es el detalle detrás de los promedios.
+         */
+        AlumnosOut: {
+            /** Total */
+            total: number;
+            /** Detalle */
+            detalle: components["schemas"]["AlumnoDetalle"][];
         };
         /** AnalyticsSummaryOut */
         AnalyticsSummaryOut: {
@@ -1752,6 +1800,17 @@ export interface components {
             /** New Password */
             new_password: string;
         };
+        /** ResultadoPrueba */
+        ResultadoPrueba: {
+            /** Subject */
+            subject: string;
+            /** Ensayos */
+            ensayos: number;
+            /** Mejor */
+            mejor: number | null;
+            /** Ultimo */
+            ultimo: number | null;
+        };
         /**
          * RetencionOut
          * @description Si la gente vuelve. Un registro que no vuelve es un registro perdido.
@@ -2001,6 +2060,67 @@ export interface components {
             input?: unknown;
             /** Context */
             ctx?: Record<string, never>;
+        };
+        /**
+         * VisitanteDetalle
+         * @description Una fila por navegador distinto.
+         *
+         *     `visitor` es solo el prefijo del identificador aleatorio: alcanza para
+         *     distinguir filas entre sí y no expone el valor completo, que es lo único
+         *     con lo que se podría seguir a alguien entre sesiones.
+         */
+        VisitanteDetalle: {
+            /** Visitor */
+            visitor: string;
+            /** Device */
+            device: string | null;
+            /** Os */
+            os: string | null;
+            /** Browser */
+            browser: string | null;
+            /** Visitas */
+            visitas: number;
+            /** Dias */
+            dias: number;
+            /**
+             * Primera
+             * Format: date-time
+             */
+            primera: string;
+            /**
+             * Ultima
+             * Format: date-time
+             */
+            ultima: string;
+            /** Con Cuenta */
+            con_cuenta: boolean;
+        };
+        /**
+         * VisitantesOut
+         * @description Con qué equipos entra la gente.
+         *
+         *     Existe para responder una pregunta concreta: si 27 visitantes son 27
+         *     personas o una sola probando el sitio. La diversidad de dispositivos no lo
+         *     prueba, pero lo delata: 27 navegadores idénticos en el mismo día no son 27
+         *     personas.
+         */
+        VisitantesOut: {
+            /** Por Dispositivo */
+            por_dispositivo: {
+                [key: string]: number;
+            };
+            /** Por Sistema */
+            por_sistema: {
+                [key: string]: number;
+            };
+            /** Por Navegador */
+            por_navegador: {
+                [key: string]: number;
+            };
+            /** Sin Clasificar */
+            sin_clasificar: number;
+            /** Recientes */
+            recientes: components["schemas"]["VisitanteDetalle"][];
         };
         /** VisitasOut */
         VisitasOut: {

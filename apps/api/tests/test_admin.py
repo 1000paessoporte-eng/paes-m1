@@ -180,3 +180,40 @@ def test_cobertura_del_banco_cubre_las_cinco_pruebas(
         # ensayos_completos es banco/oficiales: debe ser coherente con ambos.
         assert c["ensayos_completos"] == round(c["banco"] / c["oficiales"], 2)
         assert c["nunca_respondidas"] <= c["banco"]
+
+
+def test_total_de_alumnos_coincide_con_las_cuentas(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """El total debe ser la cantidad de cuentas, no un residuo de otra consulta.
+
+    Se rompió una vez: el bucle que acumula aciertos usaba una variable llamada
+    `total`, que en Python reasigna la misma del conteo de usuarios. El panel
+    mostraba cuentas que no existían. Mientras el listado quepa bajo el tope,
+    el total y las filas tienen que coincidir.
+    """
+    for i in range(3):
+        register_user(email=f"alumno{i}@milpaes.cl")
+    headers, _ = register_user(email="jefa5@milpaes.cl")
+    _hacer_admin(db_session, "jefa5@milpaes.cl")
+
+    alumnos = client.get("/api/admin/metrics", headers=headers).json()["alumnos"]
+    assert alumnos["total"] == 4
+    assert len(alumnos["detalle"]) == alumnos["total"]
+
+
+def test_visitantes_no_exponen_el_identificador_completo(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """El visitor_id se recorta: entero permitiría seguir a alguien entre sesiones."""
+    headers, _ = register_user(email="jefa6@milpaes.cl")
+    _hacer_admin(db_session, "jefa6@milpaes.cl")
+
+    entero = "a" * 40
+    client.post("/api/metrics/pageview", json={"path": "/", "visitor_id": entero})
+
+    visitantes = client.get("/api/admin/metrics", headers=headers).json()["visitantes"]
+    assert visitantes["recientes"], "la visita recién registrada debería aparecer"
+    for v in visitantes["recientes"]:
+        assert len(v["visitor"]) <= 8
+        assert v["visitor"] != entero

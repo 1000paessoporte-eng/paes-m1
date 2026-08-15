@@ -156,6 +156,77 @@ class BancoOut(BaseModel):
     nodos_flacos: list[str]
 
 
+class VisitanteDetalle(BaseModel):
+    """Una fila por navegador distinto.
+
+    `visitor` es solo el prefijo del identificador aleatorio: alcanza para
+    distinguir filas entre sí y no expone el valor completo, que es lo único
+    con lo que se podría seguir a alguien entre sesiones.
+    """
+
+    visitor: str
+    device: str | None
+    os: str | None
+    browser: str | None
+    visitas: int
+    #: Días distintos con actividad. Uno solo sugiere alguien de paso.
+    dias: int
+    primera: datetime
+    ultima: datetime
+    #: Si en algún momento navegó con sesión iniciada.
+    con_cuenta: bool
+
+
+class VisitantesOut(BaseModel):
+    """Con qué equipos entra la gente.
+
+    Existe para responder una pregunta concreta: si 27 visitantes son 27
+    personas o una sola probando el sitio. La diversidad de dispositivos no lo
+    prueba, pero lo delata: 27 navegadores idénticos en el mismo día no son 27
+    personas.
+    """
+
+    por_dispositivo: dict[str, int]
+    por_sistema: dict[str, int]
+    por_navegador: dict[str, int]
+    #: Visitas registradas antes de que se guardaran estas categorías.
+    sin_clasificar: int
+    recientes: list[VisitanteDetalle]
+
+
+class ResultadoPrueba(BaseModel):
+    subject: str
+    ensayos: int
+    mejor: int | None
+    ultimo: int | None
+
+
+class AlumnoDetalle(BaseModel):
+    id: int
+    email: str
+    name: str
+    created_at: datetime
+    last_login_at: datetime | None
+    #: Lo que declaró en el cuestionario de bienvenida, si lo respondió.
+    curso: str | None
+    pruebas_objetivo: str | None
+    horas_semana: int | None
+    ensayos_iniciados: int
+    ensayos_terminados: int
+    respuestas: int
+    tasa_acierto: float | None
+    mejor_puntaje: int | None
+    dias_activos: int
+    por_prueba: list[ResultadoPrueba]
+
+
+class AlumnosOut(BaseModel):
+    """Qué hizo cada cuenta registrada. Es el detalle detrás de los promedios."""
+
+    total: int
+    detalle: list[AlumnoDetalle]
+
+
 class AdminMetricsOut(BaseModel):
     generado_en: datetime
     usuarios: UsuariosOut
@@ -166,3 +237,5 @@ class AdminMetricsOut(BaseModel):
     retencion: RetencionOut
     ensayos: EnsayosOut
     banco: BancoOut
+    visitantes: VisitantesOut
+    alumnos: AlumnosOut
