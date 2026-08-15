@@ -237,7 +237,11 @@ html {
    fijas sobre contenido que hace scroll). Usado en todas partes, el
    glassmorphism deja una interfaz lechosa y sin jerarquía. */
 .glass {
-  background: color-mix(in srgb, var(--background) 72%, transparent);
+  /* 88% y no menos: el desenfoque de fondo no siempre se aplica (Safari viejo,
+     modo de ahorro de datos, capturas), y si el vidrio depende solo del blur
+     el título de la sección de atrás se lee a través de la barra. El color
+     tiene que tapar por sí solo; el blur es el adorno, no el sustento. */
+  background: color-mix(in srgb, var(--background) 88%, transparent);
   backdrop-filter: blur(12px) saturate(140%);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
   border-bottom: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
