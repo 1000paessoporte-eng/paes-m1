@@ -38,17 +38,27 @@ const COLOR_POR_EJE: Record<string, string> = {
   "Economía y sociedad": "var(--accent-warm)",
 };
 
+const NOMBRE_PRUEBA: Record<string, string> = {
+  lectora: "Competencia Lectora",
+  m1: "Matemática M1",
+  m2: "Matemática M2",
+  ciencias: "Ciencias",
+  historia: "Historia y Cs. Sociales",
+};
+
 interface Props {
   puntaje: number | null;
   variacion: number | null;
   porEje: BreakdownItem[];
+  /** Prueba del ensayo del que salen estos ejes. */
+  ejesDe?: string | null;
 }
 
 // El orden del temario DEMRE: el backend agrupa por eje sin garantizar un
 // orden, y verlos siempre en la misma secuencia hace comparables dos ensayos.
 const ORDEN_EJES = Object.keys(COLOR_POR_EJE);
 
-export function ProgresoModulo({ puntaje, variacion, porEje }: Props) {
+export function ProgresoModulo({ puntaje, variacion, porEje, ejesDe }: Props) {
   const ejesOrdenados = [...porEje].sort((a, b) => {
     const ia = ORDEN_EJES.indexOf(a.name);
     const ib = ORDEN_EJES.indexOf(b.name);
@@ -99,8 +109,14 @@ export function ProgresoModulo({ puntaje, variacion, porEje }: Props) {
 
           {porEje.length > 0 && (
             <div className="mt-6 border-t border-border pt-5">
+              {/* De qué ensayo salen estos números. Sin esto, un ensayo
+                  abandonado deja los ejes en 0% y parece que se perdieron los
+                  datos de todos los anteriores. */}
               <p className="text-xs font-medium text-muted">
-                Rendimiento por eje temático
+                Rendimiento por eje
+                {ejesDe && NOMBRE_PRUEBA[ejesDe]
+                  ? ` · último ensayo de ${NOMBRE_PRUEBA[ejesDe]}`
+                  : " · último ensayo"}
               </p>
               <ul className="mt-4 flex flex-col gap-3.5">
                 {ejesOrdenados.map((eje, i) => (

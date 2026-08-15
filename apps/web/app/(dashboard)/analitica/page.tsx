@@ -5,7 +5,7 @@ import { TOKEN_COOKIE } from "@/lib/auth";
 import { StatTile } from "@/components/analytics/stat-tile";
 import { TimeInvestedChart } from "@/components/analytics/time-invested-chart";
 import { AccuracyChart } from "@/components/analytics/accuracy-chart";
-import { ComingSoon } from "@/components/coming-soon";
+import { EstadoVacio } from "@/components/estado-vacio";
 
 export const metadata = {
   title: "Analítica",
@@ -26,9 +26,10 @@ export default async function DashboardAnaliticoPage() {
 
   if (summary.total_questions_answered === 0) {
     return (
-      <ComingSoon
-        title="Dashboard Analítico"
-        description="Aún no hay datos de práctica. Responde algunas preguntas en el Modo Examen para ver aquí tu progreso."
+      <EstadoVacio
+        title="Tu analítica aparece con tu primer ensayo"
+        description="Acá vas a ver cuánto tiempo practicaste, cómo evoluciona tu tasa de acierto y tu racha de días seguidos. Necesita al menos un ensayo rendido para tener algo que mostrar."
+        accion={{ href: "/examen", label: "Rendir mi primer ensayo →" }}
         icon={
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <path d="M4 20V10M12 20V4M20 20v-7" />
