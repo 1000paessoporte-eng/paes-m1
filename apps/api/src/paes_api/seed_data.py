@@ -7804,6 +7804,1006 @@ QUESTIONS_CIENCIAS = [
             ("0,8 kcal", "Aplicó el 10% cuatro veces, un nivel más allá del terciario."),
         ],
     ),
+    # ---------- Segunda tanda: física ----------
+    _q(
+        "cie_movimiento", "medio",
+        "Un móvil recorre 300 m en 20 s y luego 100 m en 5 s. ¿Cuál es su "
+        "rapidez media en todo el trayecto?",
+        "16 m/s",
+        "La rapidez media NO es el promedio de las rapideces: es la distancia "
+        "total dividida por el tiempo total.\n\n"
+        "1) Distancia total: $300 + 100 = 400$ m.\n"
+        "2) Tiempo total: $20 + 5 = 25$ s.\n"
+        "3) Rapidez media: $\\frac{400}{25} = 16$ m/s.\n\n"
+        "Promediar 15 m/s y 20 m/s daría 17,5 m/s, que es incorrecto: el primer "
+        "tramo duró más tiempo y por eso pesa más en el resultado.",
+        [
+            ("17,5 m/s", "Promedió ambas rapideces, pero los tramos duraron tiempos distintos."),
+            ("20 m/s", "Usó solo el segundo tramo."),
+            ("400 m/s", "Entregó la distancia total sin dividir por el tiempo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un cuerpo se lanza verticalmente hacia arriba a 30 m/s. Considerando "
+        "$g = 10$ m/s², ¿cuánto tarda en alcanzar su altura máxima?",
+        "3 segundos",
+        "En la altura máxima la velocidad vertical vale cero: ese es el dato "
+        "que resuelve el problema.\n\n"
+        "Con $v = v_0 - g\\,t$, se tiene $0 = 30 - 10t$, de donde $t = 3$ s.\n\n"
+        "La gravedad no se apaga en el punto más alto. Sigue actuando, y por eso "
+        "el cuerpo no se queda suspendido: la velocidad pasa por cero y de "
+        "inmediato se vuelve negativa.",
+        [
+            ("6 segundos", "Ese es el tiempo total de subida y bajada, no solo el de subida."),
+            ("30 segundos", "Usó la velocidad inicial como si fuera un tiempo."),
+            ("300 segundos", "Multiplicó la velocidad por la gravedad en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un auto viaja a 15 m/s y acelera a 3 m/s² durante 6 s. ¿Qué distancia "
+        "recorre en ese tiempo?",
+        "144 m",
+        "Con aceleración constante y velocidad inicial, la distancia es "
+        "$d = v_0 t + \\frac{1}{2}a t^2$.\n\n"
+        "1) Aporte de la velocidad inicial: $15 \\cdot 6 = 90$ m.\n"
+        "2) Aporte de la aceleración: $\\frac{1}{2} \\cdot 3 \\cdot 36 = 54$ m.\n"
+        "3) Total: $90 + 54 = 144$ m.\n\n"
+        "Olvidar el primer término es el error más común: daría 54 m, como si el "
+        "auto hubiera partido detenido.",
+        [
+            ("54 m", "Olvidó que el auto ya venía a 15 m/s antes de acelerar."),
+            ("90 m", "Consideró solo la velocidad inicial, ignorando la aceleración."),
+            ("198 m", "Usó el cuadrado del tiempo también en el primer término."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un ascensor sube con aceleración de 2 m/s² llevando a una persona de "
+        "60 kg. Con $g = 10$ m/s², ¿cuál es la fuerza normal que el piso ejerce "
+        "sobre ella?",
+        "720 N",
+        "Sobre la persona actúan dos fuerzas: su peso hacia abajo y la normal "
+        "hacia arriba.\n\n"
+        "Como acelera hacia arriba, la normal debe superar al peso: "
+        "$N - mg = ma$, entonces $N = m(g + a) = 60 \\cdot 12 = 720$ N.\n\n"
+        "Por eso uno se siente más pesado cuando el ascensor arranca hacia "
+        "arriba. La masa no cambió: cambió la fuerza que el piso ejerce.",
+        [
+            ("600 N", "Es el peso en reposo; con el ascensor acelerando la normal es mayor."),
+            ("480 N", "Restó la aceleración en vez de sumarla: eso ocurriría bajando."),
+            ("120 N", "Multiplicó la masa solo por la aceleración, olvidando la gravedad."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Una caja de 10 kg se desliza sobre una superficie con coeficiente de "
+        "roce 0,3. Con $g = 10$ m/s², ¿cuál es la fuerza de roce?",
+        "30 N",
+        "La fuerza de roce se calcula como $f = \\mu N$, y sobre una superficie "
+        "horizontal la normal iguala al peso.\n\n"
+        "1) Normal: $N = 10 \\cdot 10 = 100$ N.\n"
+        "2) Roce: $f = 0,3 \\cdot 100 = 30$ N.\n\n"
+        "El roce no depende del área de contacto ni de la rapidez: depende del "
+        "material —eso es $\\mu$— y de cuánto se aprietan las superficies.",
+        [
+            ("100 N", "Entregó la fuerza normal sin multiplicar por el coeficiente."),
+            ("3 N", "Multiplicó el coeficiente por la masa en vez de por la normal."),
+            ("300 N", "Multiplicó por 10 de más al calcular."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Según la tercera ley de Newton, cuando un martillo golpea un clavo, "
+        "¿qué ocurre?",
+        "El clavo ejerce sobre el martillo una fuerza igual y opuesta",
+        "La tercera ley dice que las fuerzas siempre vienen de a pares: si un "
+        "cuerpo empuja a otro, el segundo lo empuja de vuelta con la misma "
+        "intensidad y sentido contrario.\n\n"
+        "El clavo se hunde y el martillo no porque tienen masas y resistencias "
+        "distintas, no porque reciban fuerzas distintas.\n\n"
+        "La clave es que las dos fuerzas actúan sobre CUERPOS DISTINTOS. Por eso "
+        "no se anulan entre sí, aunque sean iguales y opuestas.",
+        [
+            ("El martillo ejerce más fuerza porque se mueve más rápido", "La rapidez no altera la igualdad del par de fuerzas."),
+            ("El clavo no ejerce ninguna fuerza porque está quieto", "Estar quieto no impide ejercer fuerza; el par existe siempre."),
+            ("Ambas fuerzas se anulan y el clavo no debería moverse", "No se anulan porque actúan sobre cuerpos distintos."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un cuerpo de 2 kg cuelga en reposo de una cuerda. Con $g = 10$ m/s², "
+        "¿cuál es la tensión de la cuerda?",
+        "20 N",
+        "En reposo la fuerza neta es cero, así que la tensión debe equilibrar "
+        "exactamente al peso.\n\n"
+        "$T = mg = 2 \\cdot 10 = 20$ N.\n\n"
+        "Que la fuerza neta sea cero no significa que no haya fuerzas: hay dos, "
+        "iguales y opuestas. Equilibrio es una suma nula, no ausencia.",
+        [
+            ("0 N", "Confundió fuerza neta cero con tensión cero; la cuerda sí está tensa."),
+            ("2 N", "Entregó la masa, no la fuerza."),
+            ("40 N", "Duplicó el peso sin motivo; en reposo la tensión lo iguala."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un cuerpo se mueve en línea recta con rapidez constante. ¿Qué se puede "
+        "afirmar sobre las fuerzas que actúan sobre él?",
+        "La fuerza neta es cero, aunque puedan actuar varias fuerzas",
+        "La primera ley de Newton dice que un cuerpo mantiene su estado de "
+        "movimiento mientras la fuerza NETA sea cero.\n\n"
+        "Rapidez constante en línea recta significa aceleración cero, y por "
+        "$F = ma$, fuerza neta cero.\n\n"
+        "Eso no implica ausencia de fuerzas. Un auto a velocidad constante tiene "
+        "motor y roce actuando: simplemente se cancelan.",
+        [
+            ("No actúa ninguna fuerza sobre él", "Pueden actuar varias; lo que vale cero es su suma."),
+            ("Actúa una fuerza constante hacia adelante", "Una fuerza neta constante produciría aceleración, no rapidez constante."),
+            ("La fuerza neta es igual a su peso", "El peso está equilibrado por la normal; no determina el movimiento horizontal."),
+        ],
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Un cuerpo de 2 kg cae desde 10 m. Justo antes de tocar el suelo, ¿cuál "
+        "es su energía cinética? Se desprecia el roce y $g = 10$ m/s².",
+        "200 J",
+        "Sin roce, toda la energía potencial inicial se convierte en cinética."
+        "\n\n"
+        "1) Energía potencial arriba: $E_p = mgh = 2 \\cdot 10 \\cdot 10 = 200$ J.\n"
+        "2) Abajo esa energía está completa como cinética: 200 J.\n\n"
+        "No hace falta calcular la velocidad. La conservación de la energía "
+        "permite saltarse el paso intermedio por completo.",
+        [
+            ("20 J", "Olvidó multiplicar por la altura."),
+            ("100 J", "Aplicó el factor un medio, que corresponde a la fórmula de la cinética con la velocidad, no acá."),
+            ("400 J", "Duplicó el resultado sin motivo."),
+        ],
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Una ampolleta de 60 W permanece encendida 5 horas. ¿Cuánta energía "
+        "consume en kilowatt-hora?",
+        "0,3 kWh",
+        "El kilowatt-hora es potencia por tiempo, con la potencia en kilowatts."
+        "\n\n"
+        "1) 60 W son $0,06$ kW.\n"
+        "2) Energía: $0,06 \\cdot 5 = 0,3$ kWh.\n\n"
+        "Es la unidad con que se cobra la electricidad. Confundir potencia con "
+        "energía es el error típico: los 60 W describen el ritmo de consumo, no "
+        "el consumo total.",
+        [
+            ("300 kWh", "No convirtió los watts a kilowatts."),
+            ("12 kWh", "Dividió el tiempo por la potencia en lugar de multiplicar."),
+            ("65 kWh", "Sumó potencia y tiempo en vez de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_energia", "dificil",
+        "Una máquina recibe 500 J y entrega 350 J de trabajo útil. ¿Cuál es su "
+        "eficiencia?",
+        "70%",
+        "La eficiencia es la razón entre lo que la máquina entrega y lo que "
+        "recibe.\n\n"
+        "$\\frac{350}{500} \\times 100 = 70\\%$.\n\n"
+        "Los 150 J restantes no desaparecen: se disipan como calor y ruido. Por "
+        "eso ninguna máquina real alcanza el 100%, y una que lo superara "
+        "violaría la conservación de la energía.",
+        [
+            ("143%", "Invirtió la razón: la salida nunca supera a la entrada."),
+            ("30%", "Calculó la fracción que se pierde, no la que se aprovecha."),
+            ("150%", "Usó la energía perdida como si fuera un porcentaje."),
+        ],
+    ),
+    _q(
+        "cie_energia", "facil",
+        "Un resorte comprimido, un cuerpo en altura y una batería cargada "
+        "comparten una característica. ¿Cuál?",
+        "Los tres almacenan energía potencial",
+        "La energía potencial es energía guardada en virtud de una posición o "
+        "una configuración, disponible para transformarse en otra forma.\n\n"
+        "El resorte la guarda en su deformación elástica, el cuerpo en su "
+        "posición dentro del campo gravitatorio y la batería en su "
+        "configuración química.\n\n"
+        "Ninguno está en movimiento, así que no hay energía cinética: hay "
+        "energía disponible esperando liberarse.",
+        [
+            ("Los tres poseen energía cinética", "La energía cinética requiere movimiento, y ninguno se está moviendo."),
+            ("Los tres generan energía", "La energía no se genera; se transforma de una forma a otra."),
+            ("Los tres tienen la misma cantidad de energía", "Almacenan la misma FORMA de energía, no la misma cantidad."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "¿Qué característica del sonido determina que se perciba como más agudo "
+        "o más grave?",
+        "La frecuencia",
+        "La frecuencia cuenta cuántas oscilaciones ocurren por segundo, y es lo "
+        "que el oído interpreta como altura del sonido.\n\n"
+        "A mayor frecuencia, sonido más agudo; a menor frecuencia, más grave."
+        "\n\n"
+        "Conviene no confundirla con la amplitud, que determina el volumen. Un "
+        "sonido grave puede ser fortísimo y uno agudo, apenas audible.",
+        [
+            ("La amplitud", "La amplitud determina la intensidad o volumen, no si es agudo o grave."),
+            ("La rapidez de propagación", "Depende del medio; en el mismo aire, todos los sonidos viajan igual de rápido."),
+            ("La longitud de la onda sonora únicamente", "Está relacionada, pero es la frecuencia la que define la altura percibida."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Una onda pasa del aire al agua, donde viaja más rápido. Si su "
+        "frecuencia no cambia, ¿qué ocurre con su longitud de onda?",
+        "Aumenta",
+        "La relación $v = \\lambda f$ vincula las tres magnitudes.\n\n"
+        "Al cambiar de medio, la frecuencia se conserva —la impone la fuente, no "
+        "el medio— mientras que la rapidez sí cambia. Si $v$ aumenta y $f$ se "
+        "mantiene, $\\lambda = v/f$ necesariamente aumenta.\n\n"
+        "Esa es la clave de todo el tema: lo que un medio nuevo modifica es la "
+        "rapidez, y la longitud de onda se acomoda.",
+        [
+            ("Disminuye", "Ocurriría si la rapidez bajara, pero en el agua el sonido va más rápido."),
+            ("Se mantiene igual", "Solo si la rapidez no cambiara, y el enunciado dice que sí lo hace."),
+            ("Se duplica exactamente", "Cambia en la misma proporción que la rapidez, que el enunciado no especifica."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "¿En qué se diferencian una onda longitudinal y una transversal?",
+        "En la dirección en que oscila el medio respecto de la propagación",
+        "En una onda transversal el medio oscila perpendicularmente a la "
+        "dirección en que avanza la onda: es el caso de una cuerda sacudida o "
+        "de la luz.\n\n"
+        "En una longitudinal el medio oscila en la misma dirección en que la "
+        "onda viaja, comprimiéndose y expandiéndose. El sonido en el aire es el "
+        "ejemplo clásico.\n\n"
+        "La diferencia no está en la rapidez ni en la energía, sino en la "
+        "geometría del movimiento.",
+        [
+            ("En que solo una de ellas transporta energía", "Ambas transportan energía; es lo que define a una onda."),
+            ("En que la longitudinal es siempre más rápida", "La rapidez depende del medio, no del tipo de onda."),
+            ("En que la transversal no necesita un medio material", "La luz no lo necesita, pero una cuerda sí; el tipo de onda no lo determina."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Una onda tiene una amplitud de 4 cm y una frecuencia de 25 Hz. ¿Cuántas "
+        "oscilaciones completa en 4 segundos?",
+        "100 oscilaciones",
+        "La frecuencia indica cuántas oscilaciones ocurren por segundo, así que "
+        "basta multiplicar por el tiempo.\n\n"
+        "$25 \\cdot 4 = 100$ oscilaciones.\n\n"
+        "La amplitud de 4 cm es un dato que no interviene: describe qué tan "
+        "grande es cada oscilación, no cuántas hay.",
+        [
+            ("25 oscilaciones", "Entregó la frecuencia sin considerar los 4 segundos."),
+            ("6,25 oscilaciones", "Dividió en vez de multiplicar."),
+            ("400 oscilaciones", "Usó la amplitud como si fuera parte del cálculo."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un artefacto de 1.100 W se conecta a 220 V. ¿Qué corriente circula por "
+        "él?",
+        "5 A",
+        "De la relación $P = V \\cdot I$ se despeja la corriente.\n\n"
+        "$I = \\frac{P}{V} = \\frac{1.100}{220} = 5$ A.\n\n"
+        "Este cálculo es el que define qué fusible o qué cable soporta un "
+        "artefacto: a mayor potencia con el mismo voltaje, más corriente y más "
+        "calentamiento del cable.",
+        [
+            ("242.000 A", "Multiplicó potencia por voltaje en lugar de dividir."),
+            ("0,2 A", "Invirtió la división."),
+            ("220 A", "Entregó el voltaje en vez de la corriente."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Tres resistencias de 6 Ω cada una se conectan en paralelo. ¿Cuál es la "
+        "resistencia equivalente?",
+        "2 Ω",
+        "En paralelo se suman los inversos: "
+        "$\\frac{1}{R} = \\frac{1}{6} + \\frac{1}{6} + \\frac{1}{6} = "
+        "\\frac{3}{6}$, de donde $R = 2$ Ω.\n\n"
+        "Cuando todas son iguales hay un atajo: la equivalente es el valor de "
+        "una dividido por la cantidad, $6 \\div 3 = 2$.\n\n"
+        "En paralelo la resistencia equivalente siempre es MENOR que la más "
+        "pequeña del conjunto, porque se abren más caminos para la corriente.",
+        [
+            ("18 Ω", "Sumó las resistencias, que es lo que corresponde en serie."),
+            ("6 Ω", "Supuso que conectar iguales en paralelo no cambia el valor."),
+            ("0,5 Ω", "Se quedó con la suma de los inversos sin invertir el resultado."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "¿Qué diferencia hay entre un material conductor y uno aislante?",
+        "En el conductor los electrones se desplazan con facilidad; en el "
+        "aislante están fuertemente ligados",
+        "La diferencia está en la libertad de los electrones dentro del "
+        "material.\n\n"
+        "En un metal los electrones externos se mueven casi libremente por toda "
+        "la estructura, y por eso conduce. En un aislante como el plástico o el "
+        "vidrio están firmemente unidos a sus átomos y casi no se desplazan.\n\n"
+        "Un cable eléctrico usa las dos cosas a la vez: cobre para que la "
+        "corriente circule y plástico alrededor para que no se escape.",
+        [
+            ("El conductor tiene más electrones que el aislante", "No es la cantidad sino cuán libres están para moverse."),
+            ("El aislante no tiene electrones", "Todo material tiene electrones; en el aislante están poco disponibles."),
+            ("El conductor siempre está cargado eléctricamente", "Un conductor puede estar neutro y conducir igual."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En un circuito en SERIE con dos ampolletas, ¿qué ocurre si una de ellas "
+        "se quema?",
+        "Se apaga también la otra, porque se interrumpe el único camino de la "
+        "corriente",
+        "En serie los componentes se conectan uno tras otro, formando un solo "
+        "camino cerrado.\n\n"
+        "Si una ampolleta se quema, ese camino se corta y la corriente deja de "
+        "circular por todo el circuito.\n\n"
+        "En paralelo pasa lo contrario: cada ampolleta tiene su propia rama, y "
+        "por eso en una casa se puede quemar una y las demás siguen "
+        "funcionando.",
+        [
+            ("La otra sigue encendida con igual brillo", "Eso ocurre en un circuito en paralelo, donde cada rama es independiente."),
+            ("La otra se enciende con más intensidad", "Sin circulación de corriente no hay brillo alguno."),
+            ("Nada cambia, porque cada ampolleta funciona por su cuenta", "En serie comparten el mismo camino y dependen una de la otra."),
+        ],
+    ),
+    # ---------- Segunda tanda: química ----------
+    _q(
+        "cie_ondas", "medio",
+        "El eco se produce cuando el sonido regresa tras chocar con una "
+        "superficie. ¿Qué fenómeno ondulatorio lo explica?",
+        "La reflexión",
+        "La reflexión ocurre cuando una onda encuentra un obstáculo y vuelve al "
+        "medio del que venía, conservando su rapidez y su frecuencia.\n\n"
+        "El eco es exactamente eso: el sonido rebota en un muro o un cerro y "
+        "regresa al oído con retraso.\n\n"
+        "No confundir con la refracción, que es el cambio de dirección al pasar "
+        "a otro medio, ni con la difracción, que es el rodeo de un obstáculo.",
+        [
+            ("La refracción", "La refracción implica atravesar otro medio y cambiar de rapidez, no volver."),
+            ("La difracción", "La difracción es la capacidad de la onda de rodear obstáculos o bordes."),
+            ("La absorción", "Si el sonido fuera absorbido no regresaría, y no habría eco."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Dos átomos tienen 6 protones cada uno, pero uno tiene 6 neutrones y el "
+        "otro 8. ¿Qué relación existe entre ellos?",
+        "Son isótopos del mismo elemento",
+        "El número de protones define el elemento: con 6 protones, ambos son "
+        "carbono, sin discusión.\n\n"
+        "Lo que difiere es el número de neutrones, y eso cambia la masa pero no "
+        "la identidad química. Átomos así se llaman isótopos.\n\n"
+        "Es el fundamento del carbono-14 para datar restos: se comporta "
+        "químicamente igual que el carbono-12, pero pesa distinto y es "
+        "radiactivo.",
+        [
+            ("Son elementos distintos", "El elemento lo define el número de protones, y ambos tienen 6."),
+            ("Son iones del mismo elemento", "Un ion difiere en electrones, no en neutrones."),
+            ("Son moléculas del mismo compuesto", "Se trata de átomos individuales, no de moléculas."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Un átomo tiene la configuración electrónica $1s^2\\,2s^2\\,2p^6\\,"
+        "3s^1$. ¿Cuántos electrones de valencia tiene?",
+        "1 electrón de valencia",
+        "Los electrones de valencia son los del último nivel de energía "
+        "ocupado, que acá es el nivel 3.\n\n"
+        "En $3s^1$ hay un solo electrón, así que tiene 1 electrón de valencia."
+        "\n\n"
+        "Ese único electrón externo explica su comportamiento: lo cede con "
+        "facilidad para quedar con el nivel anterior completo, y por eso los "
+        "elementos con esta configuración son metales muy reactivos.",
+        [
+            ("11 electrones de valencia", "Ese es el total de electrones del átomo, no los del último nivel."),
+            ("8 electrones de valencia", "Corresponde al nivel 2, que ya está completo y no es el externo."),
+            ("3 electrones de valencia", "Confundió el número del nivel con la cantidad de electrones en él."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "¿Por qué los gases nobles son prácticamente inertes?",
+        "Porque tienen su último nivel de energía completo y no necesitan "
+        "ganar ni ceder electrones",
+        "La reactividad química se explica por la tendencia de los átomos a "
+        "alcanzar un último nivel completo, que es la configuración más "
+        "estable.\n\n"
+        "Los gases nobles ya nacen así: su nivel externo está lleno, de modo que "
+        "no ganan ni pierden ni comparten electrones para estabilizarse.\n\n"
+        "El resto de los elementos reacciona precisamente para PARECERSE a "
+        "ellos. Esa es la lógica detrás de los enlaces químicos.",
+        [
+            ("Porque no tienen electrones en el último nivel", "Sí los tienen; lo que ocurre es que el nivel está completo."),
+            ("Porque son muy pesados y se mueven poco", "La reactividad depende de la configuración electrónica, no de la masa."),
+            ("Porque tienen carga eléctrica positiva", "Son átomos neutros, como cualquier átomo sin ionizar."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué mantiene unidos a los átomos de sodio y cloro en el cloruro de "
+        "sodio (sal de mesa)?",
+        "Un enlace iónico: el sodio cede un electrón y el cloro lo recibe",
+        "El sodio tiene un electrón de valencia que le sobra y el cloro tiene "
+        "siete, o sea le falta uno para completar su nivel.\n\n"
+        "El sodio lo cede y queda como $Na^+$; el cloro lo recibe y queda como "
+        "$Cl^-$. Cargas opuestas se atraen, y esa atracción es el enlace "
+        "iónico.\n\n"
+        "En el enlace covalente, en cambio, los electrones no se transfieren "
+        "sino que se comparten, como ocurre entre los dos hidrógenos del $H_2$.",
+        [
+            ("Un enlace covalente: comparten un par de electrones", "En el covalente los electrones se comparten; acá hay transferencia."),
+            ("Un enlace metálico entre sus núcleos", "El enlace metálico ocurre entre metales, y el cloro no lo es."),
+            ("Una fuerza magnética entre los átomos", "El enlace químico es de naturaleza eléctrica, no magnética."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Cuántos moles hay en 40 g de hidróxido de sodio (NaOH), si su masa "
+        "molar es 40 g/mol?",
+        "1 mol",
+        "El número de moles se obtiene dividiendo la masa por la masa molar."
+        "\n\n"
+        "$n = \\frac{40}{40} = 1$ mol.\n\n"
+        "La masa molar es justamente cuántos gramos pesa un mol de esa "
+        "sustancia. Que la masa coincida con ella significa que hay exactamente "
+        "un mol.",
+        [
+            ("40 moles", "Entregó la masa en gramos sin dividir por la masa molar."),
+            ("1.600 moles", "Multiplicó en vez de dividir."),
+            ("0,025 moles", "Invirtió la división."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "En la reacción $2Mg + O_2 \\rightarrow 2MgO$, ¿cuántos moles de "
+        "magnesio se necesitan para obtener 6 moles de óxido de magnesio?",
+        "6 moles",
+        "Los coeficientes de la ecuación balanceada dan la proporción entre las "
+        "sustancias.\n\n"
+        "El magnesio y el óxido están en relación $2 : 2$, es decir uno a uno. "
+        "Para 6 moles de $MgO$ hacen falta 6 moles de $Mg$.\n\n"
+        "El oxígeno sí sigue otra proporción: $2 : 1$, así que se necesitarían "
+        "3 moles de $O_2$. Cada sustancia tiene su propia razón respecto del "
+        "producto.",
+        [
+            ("3 moles", "Usó la proporción del oxígeno, que es 2:1, en lugar de la del magnesio."),
+            ("12 moles", "Duplicó, como si la relación fuera 2:1 a favor del magnesio."),
+            ("2 moles", "Tomó el coeficiente de la ecuación como si fuera la cantidad pedida."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "¿Por qué debe balancearse una ecuación química?",
+        "Porque la masa se conserva: los átomos de cada elemento deben ser los "
+        "mismos antes y después",
+        "En una reacción química los átomos se reordenan, pero ninguno aparece "
+        "ni desaparece.\n\n"
+        "Balancear es ajustar los coeficientes hasta que cada elemento tenga la "
+        "misma cantidad de átomos a ambos lados de la flecha.\n\n"
+        "Sin eso, la ecuación afirmaría que se creó o se destruyó materia, y "
+        "además cualquier cálculo de cantidades saldría mal, porque las "
+        "proporciones se leen de esos coeficientes.",
+        [
+            ("Para que la reacción ocurra más rápido", "La velocidad depende de las condiciones, no de cómo se escriba la ecuación."),
+            ("Para que los reactivos y productos tengan el mismo volumen", "El volumen puede cambiar; lo que se conserva es la cantidad de átomos."),
+            ("Porque así lo exige la notación química, sin otra razón", "Hay una razón física de fondo: la conservación de la masa."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "Se hacen reaccionar 5 moles de $H_2$ con 1 mol de $O_2$ según "
+        "$2H_2 + O_2 \\rightarrow 2H_2O$. ¿Cuál es el reactivo limitante?",
+        "El oxígeno",
+        "El reactivo limitante es el que se agota primero y detiene la "
+        "reacción.\n\n"
+        "1) Para consumir 1 mol de $O_2$ se necesitan 2 moles de $H_2$.\n"
+        "2) Hay 5 moles de $H_2$ disponibles: sobra hidrógeno.\n"
+        "3) El oxígeno se acaba primero, así que él limita la reacción.\n\n"
+        "Tener más cantidad no significa estar en exceso: lo que decide es la "
+        "proporción que exige la ecuación, no el número suelto.",
+        [
+            ("El hidrógeno", "Hay 5 moles y solo se necesitan 2: está en exceso, no limita."),
+            ("Ninguno, porque están en proporción exacta", "La proporción exacta sería 2:1, es decir 2 moles de $H_2$ por 1 de $O_2$."),
+            ("Ambos por igual", "Solo uno se agota primero, y en este caso es el oxígeno."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Se disuelven 20 g de sal en 180 g de agua. ¿Cuál es el porcentaje en "
+        "masa de la disolución?",
+        "10%",
+        "El porcentaje en masa compara el soluto con la disolución COMPLETA, no "
+        "con el disolvente.\n\n"
+        "1) Masa de la disolución: $20 + 180 = 200$ g.\n"
+        "2) Porcentaje: $\\frac{20}{200} \\times 100 = 10\\%$.\n\n"
+        "Dividir por los 180 g del agua daría 11,1%, y es el error más común "
+        "del tema: el denominador incluye siempre al soluto.",
+        [
+            ("11,1%", "Dividió por la masa del agua en lugar de la masa total de la disolución."),
+            ("20%", "Usó los gramos de soluto como si ya fueran un porcentaje."),
+            ("90%", "Calculó la proporción de agua, no la de sal."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "facil",
+        "En una disolución de azúcar en agua, ¿cuál es el soluto y cuál el "
+        "disolvente?",
+        "El azúcar es el soluto y el agua el disolvente",
+        "El soluto es la sustancia que se disuelve y suele estar en menor "
+        "proporción; el disolvente es el que la disuelve y está en mayor "
+        "cantidad.\n\n"
+        "El azúcar se dispersa en el agua, así que es el soluto; el agua lo "
+        "recibe y es el disolvente.\n\n"
+        "El agua se llama disolvente universal por la cantidad de sustancias "
+        "que puede disolver, y esa propiedad es la que hace posible la vida "
+        "tal como la conocemos.",
+        [
+            ("El agua es el soluto y el azúcar el disolvente", "Está invertido: se disuelve el azúcar en el agua."),
+            ("Ambos son solutos", "Toda disolución necesita un disolvente que reciba al soluto."),
+            ("Depende de la temperatura del agua", "La temperatura cambia cuánto se disuelve, no cuál es cuál."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "¿Por qué el azúcar se disuelve más rápido en agua caliente que en agua "
+        "fría?",
+        "Porque a mayor temperatura las moléculas se mueven más rápido y chocan "
+        "con más frecuencia con el soluto",
+        "La temperatura es una medida de la energía cinética promedio de las "
+        "moléculas.\n\n"
+        "En agua caliente las moléculas se mueven más rápido, golpean el "
+        "azúcar con mayor frecuencia y energía, y separan sus partículas más "
+        "velozmente.\n\n"
+        "Conviene distinguir dos cosas que se confunden: la temperatura afecta "
+        "la VELOCIDAD de disolución y también, en la mayoría de los sólidos, "
+        "cuánto llega a disolverse en total.",
+        [
+            ("Porque el agua caliente tiene más espacio entre sus moléculas para el azúcar", "La disolución no es cuestión de espacio libre sino de interacción entre partículas."),
+            ("Porque el calor transforma químicamente el azúcar", "Disolverse es un cambio físico; el azúcar sigue siendo azúcar."),
+            ("Porque el agua caliente pesa menos", "La densidad cambia levemente, pero no es lo que explica la rapidez."),
+        ],
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Una disolución no admite más soluto y el exceso queda depositado en el "
+        "fondo. ¿Cómo se llama esa disolución?",
+        "Saturada",
+        "Una disolución está saturada cuando alcanzó la máxima cantidad de "
+        "soluto que puede mantener disuelto a esa temperatura.\n\n"
+        "El exceso ya no se disuelve y se deposita: es la señal visible de que "
+        "se llegó al límite.\n\n"
+        "Si se calienta, ese límite suele subir y el depósito puede volver a "
+        "disolverse. Por eso hablar de saturación sin decir a qué temperatura "
+        "deja la afirmación incompleta.",
+        [
+            ("Diluida", "Una disolución diluida tiene poco soluto respecto de lo que podría admitir."),
+            ("Concentrada pero no saturada", "Si hay soluto sin disolver en el fondo, el límite ya se alcanzó."),
+            ("Sobresaturada", "La sobresaturada mantiene disuelto MÁS de lo normal, sin depósito, y es inestable."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "medio",
+        "¿Qué caracteriza a un ácido según la teoría de Arrhenius?",
+        "Que en disolución acuosa libera iones $H^+$",
+        "Arrhenius definió los ácidos y las bases por lo que liberan al "
+        "disolverse en agua.\n\n"
+        "Un ácido libera iones hidrógeno $H^+$; una base libera iones hidroxilo "
+        "$OH^-$. Esa diferencia explica todo lo demás: el pH, la neutralización "
+        "y el comportamiento frente a los indicadores.\n\n"
+        "Cuando un ácido y una base se juntan, el $H^+$ y el $OH^-$ forman agua, "
+        "y de ahí que la reacción se llame neutralización.",
+        [
+            ("Que en disolución acuosa libera iones $OH^-$", "Esa es la definición de base, no de ácido."),
+            ("Que tiene un pH mayor que 7", "Es al revés: los ácidos tienen pH menor que 7."),
+            ("Que conduce electricidad sin disolverse", "La conducción requiere iones en disolución."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "medio",
+        "Una disolución tiene pH 3 y otra pH 5. ¿Cuántas veces más ácida es la "
+        "primera?",
+        "100 veces",
+        "La escala de pH es logarítmica: cada unidad representa un factor diez "
+        "en la concentración de iones $H^+$.\n\n"
+        "Entre pH 3 y pH 5 hay dos unidades, así que la diferencia es "
+        "$10^2 = 100$ veces.\n\n"
+        "Por eso una variación que parece pequeña puede ser enorme. Que el pH "
+        "del océano baje 0,1 no es un cambio menor: es un aumento cercano al "
+        "26% en la acidez.",
+        [
+            ("2 veces", "Restó los valores de pH, pero la escala no es lineal sino logarítmica."),
+            ("10 veces", "Corresponde a una sola unidad de diferencia, y acá son dos."),
+            ("1.000 veces", "Sería el factor para tres unidades de diferencia."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "dificil",
+        "Se mezclan cantidades equivalentes de un ácido fuerte y una base "
+        "fuerte. ¿Qué se obtiene?",
+        "Una sal y agua, con pH cercano a 7",
+        "La neutralización combina el $H^+$ del ácido con el $OH^-$ de la base "
+        "para formar agua.\n\n"
+        "Los iones restantes —el del ácido y el de la base— quedan formando una "
+        "sal disuelta. Con cantidades equivalentes de un ácido y una base "
+        "fuertes, el resultado queda con pH cercano a 7.\n\n"
+        "El ejemplo típico es $HCl + NaOH \\rightarrow NaCl + H_2O$: ácido "
+        "clorhídrico y soda cáustica producen sal de mesa y agua.",
+        [
+            ("Una disolución más ácida que las originales", "La neutralización acerca el pH a 7; no lo aleja hacia el extremo ácido."),
+            ("Solamente agua pura", "También se forma una sal, que queda disuelta."),
+            ("Un gas que se libera de inmediato", "La neutralización entre ácido y base fuertes no produce gas."),
+        ],
+    ),
+    _q(
+        "cie_acidobase", "facil",
+        "El jugo gástrico tiene pH cercano a 2 y la sangre, cercano a 7,4. "
+        "¿Cuál de los dos es ácido?",
+        "El jugo gástrico, porque su pH es menor que 7",
+        "La escala de pH va de 0 a 14: bajo 7 es ácido, 7 es neutro y sobre 7 "
+        "es básico.\n\n"
+        "El jugo gástrico con pH 2 está muy por debajo de 7, así que es "
+        "fuertemente ácido; la sangre con 7,4 es levemente básica.\n\n"
+        "Esa acidez del estómago no es un defecto: activa enzimas digestivas y "
+        "elimina buena parte de los microorganismos que llegan con la comida.",
+        [
+            ("La sangre, porque su pH es mayor que 7", "Un pH mayor que 7 indica carácter básico, no ácido."),
+            ("Ambos, porque tienen pH distinto de cero", "Solo es ácido lo que está bajo 7; la sangre está sobre ese valor."),
+            ("Ninguno, porque ambos están dentro del cuerpo", "Estar en el cuerpo no determina el pH de un fluido."),
+        ],
+    ),
+    _q(
+        "cie_estequiometria", "facil",
+        "¿Qué representa el número de Avogadro?",
+        "La cantidad de partículas que contiene un mol de cualquier sustancia",
+        "El mol es una unidad de cantidad de partículas, igual que una docena "
+        "pero muchísimo mayor.\n\n"
+        "El número de Avogadro, aproximadamente $6,02 \\times 10^{23}$, es "
+        "cuántas partículas hay en un mol, sea de átomos, moléculas o iones."
+        "\n\n"
+        "Existe porque los átomos son demasiado pequeños para contarlos de a "
+        "uno: el mol permite pasar de la balanza del laboratorio al número real "
+        "de partículas.",
+        [
+            ("La masa en gramos de un mol de sustancia", "Esa es la masa molar, que es distinta para cada sustancia."),
+            ("El número de protones de un átomo", "Ese es el número atómico."),
+            ("El volumen que ocupa un mol de gas", "Ese es el volumen molar, unos 22,4 L en condiciones normales."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Dónde se concentra prácticamente toda la masa de un átomo?",
+        "En el núcleo, donde están los protones y los neutrones",
+        "El núcleo reúne protones y neutrones, que son casi 1.800 veces más "
+        "masivos que un electrón.\n\n"
+        "Los electrones aportan una fracción despreciable de la masa, aunque "
+        "ocupen casi todo el volumen del átomo.\n\n"
+        "De ahí la imagen clásica: el átomo es sobre todo espacio vacío, con "
+        "casi toda su masa apretada en un núcleo diminuto en el centro.",
+        [
+            ("En los electrones que giran alrededor", "Los electrones ocupan casi todo el volumen, pero casi nada de la masa."),
+            ("Repartida por igual entre núcleo y electrones", "El núcleo concentra más del 99,9% de la masa."),
+            ("En el espacio vacío entre el núcleo y los electrones", "El vacío no aporta masa."),
+        ],
+    ),
+    # ---------- Segunda tanda: biología ----------
+    _q(
+        "cie_celula", "facil",
+        "¿Cuál es la diferencia fundamental entre una célula procarionte y una "
+        "eucarionte?",
+        "La eucarionte tiene el material genético dentro de un núcleo delimitado "
+        "por una membrana",
+        "La palabra lo dice: «carionte» viene de núcleo. Eucarionte es "
+        "núcleo verdadero; procarionte, antes del núcleo.\n\n"
+        "En la procarionte —las bacterias— el ADN flota en el citoplasma sin "
+        "envoltura. En la eucarionte está encerrado en un núcleo con membrana "
+        "propia.\n\n"
+        "De ahí se sigue el resto: las eucariontes tienen además organelos "
+        "internos con membrana, como mitocondrias y cloroplastos, que las "
+        "procariontes no poseen.",
+        [
+            ("La procarionte no tiene material genético", "Todas las células tienen ADN; la diferencia es si está dentro de un núcleo."),
+            ("La eucarionte no tiene membrana plasmática", "Toda célula tiene membrana plasmática; el núcleo es una envoltura adicional."),
+            ("La procarionte es siempre más grande", "Ocurre lo contrario: las procariontes suelen ser bastante menores."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Cuál es la función principal de las mitocondrias?",
+        "Obtener energía en forma de ATP mediante la respiración celular",
+        "La mitocondria toma la glucosa ya procesada y, usando oxígeno, extrae "
+        "de ella la mayor parte de la energía aprovechable, que queda "
+        "almacenada como ATP.\n\n"
+        "Ese ATP es la moneda energética que la célula gasta en todo lo demás: "
+        "transporte activo, síntesis de proteínas, movimiento.\n\n"
+        "Por eso las células con mayor demanda energética —musculares, "
+        "nerviosas— tienen muchas más mitocondrias que el resto.",
+        [
+            ("Fabricar proteínas a partir de la información del ADN", "Eso lo hacen los ribosomas."),
+            ("Digerir sustancias y desechos dentro de la célula", "Esa es la función de los lisosomas."),
+            ("Producir glucosa a partir de luz solar", "Eso ocurre en los cloroplastos, y solo en células vegetales."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué estructura celular controla qué sustancias entran y salen de la "
+        "célula?",
+        "La membrana plasmática, que es selectivamente permeable",
+        "La membrana plasmática rodea a toda célula y decide el intercambio con "
+        "el exterior.\n\n"
+        "Se dice selectivamente permeable porque no deja pasar todo: algunas "
+        "sustancias cruzan libremente, otras necesitan proteínas "
+        "transportadoras y otras quedan fuera.\n\n"
+        "Ese control es lo que permite que el interior de la célula tenga una "
+        "composición distinta del medio, que es una condición de la vida.",
+        [
+            ("La pared celular, presente en todas las células", "La pared celular no existe en células animales, y su función es de sostén."),
+            ("El núcleo, que dirige toda la actividad celular", "El núcleo guarda la información genética; no regula el intercambio con el exterior."),
+            ("El citoplasma, donde ocurren las reacciones", "El citoplasma es el medio interno, no la frontera con el exterior."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Una célula vegetal se coloca en agua destilada. ¿Por qué no estalla, a "
+        "diferencia de una célula animal?",
+        "Porque su pared celular resiste la presión del agua que entra",
+        "En agua destilada el medio es hipotónico: entra agua por osmosis y la "
+        "célula se hincha.\n\n"
+        "La célula animal solo tiene membrana plasmática, que cede y termina "
+        "rompiéndose. La vegetal tiene además una pared rígida de celulosa que "
+        "contiene la expansión.\n\n"
+        "La presión que el contenido ejerce contra esa pared se llama presión "
+        "de turgencia, y es lo que mantiene erguidas las hojas y los tallos "
+        "tiernos. Cuando falta agua, la planta se marchita.",
+        [
+            ("Porque no permite la entrada de agua por osmosis", "El agua sí entra; lo que cambia es que la pared resiste."),
+            ("Porque expulsa el exceso de agua por transporte activo", "El equilibrio se resuelve por la resistencia de la pared, no bombeando agua hacia afuera."),
+            ("Porque su membrana es impermeable al agua", "La membrana vegetal también deja pasar agua."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Dónde ocurre la síntesis de proteínas dentro de la célula?",
+        "En los ribosomas",
+        "Los ribosomas leen la información que llega desde el núcleo en forma de "
+        "ARN mensajero y ensamblan los aminoácidos en el orden indicado.\n\n"
+        "Están libres en el citoplasma o adheridos al retículo endoplasmático "
+        "rugoso, que debe su aspecto justamente a ellos.\n\n"
+        "Es la única estructura presente tanto en procariontes como en "
+        "eucariontes, lo que dice algo sobre su antigüedad: fabricar proteínas "
+        "es anterior a la existencia del núcleo.",
+        [
+            ("En el núcleo, junto al ADN", "En el núcleo se transcribe el ARN, pero la proteína se ensambla fuera."),
+            ("En las mitocondrias", "Las mitocondrias producen ATP; no son el sitio principal de síntesis proteica."),
+            ("En el aparato de Golgi", "El Golgi modifica y distribuye proteínas ya fabricadas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué diferencia hay entre genotipo y fenotipo?",
+        "El genotipo es la información genética; el fenotipo, la característica "
+        "que se manifiesta",
+        "El genotipo son los alelos que el individuo posee, por ejemplo $Aa$ o "
+        "$AA$. El fenotipo es lo observable: el color, la forma, la altura.\n\n"
+        "Genotipos distintos pueden dar el mismo fenotipo: $AA$ y $Aa$ se ven "
+        "iguales si $A$ es dominante.\n\n"
+        "Además el ambiente influye en el fenotipo. Dos plantas con el mismo "
+        "genotipo pueden crecer distinto según el agua y la luz que reciban.",
+        [
+            ("El genotipo es lo que se ve y el fenotipo lo que se hereda", "Está invertido: lo observable es el fenotipo."),
+            ("Son sinónimos usados en contextos distintos", "Designan cosas diferentes: información y manifestación."),
+            ("El fenotipo solo existe en los organismos con reproducción sexual", "Todo organismo tiene fenotipo, sea cual sea su forma de reproducción."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "En el ADN, la adenina se aparea siempre con la timina y la citosina con "
+        "la guanina. Si una hebra tiene 30% de adenina, ¿qué porcentaje de "
+        "timina tiene la molécula completa?",
+        "30%",
+        "El apareamiento de bases es estricto: cada adenina de una hebra tiene "
+        "enfrente una timina en la otra.\n\n"
+        "Por eso en la molécula de doble hebra la cantidad de adenina y de "
+        "timina siempre coincide: si hay 30% de una, hay 30% de la otra.\n\n"
+        "Lo mismo ocurre entre citosina y guanina, que se reparten el 40% "
+        "restante. Esa regularidad se conoce como reglas de Chargaff, y fue una "
+        "de las pistas que llevó al modelo de la doble hélice.",
+        [
+            ("70%", "Ese sería el porcentaje de todas las demás bases juntas."),
+            ("20%", "Corresponde a lo que tendría cada una de las otras dos bases, no a la timina."),
+            ("15%", "Dividió el porcentaje de adenina a la mitad sin razón."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué es una mutación?",
+        "Un cambio en la secuencia del ADN, que puede ser perjudicial, neutro o "
+        "beneficioso",
+        "Una mutación es cualquier alteración en la secuencia de bases del ADN, "
+        "sea por error al copiarlo o por agentes externos como la radiación."
+        "\n\n"
+        "No todas son dañinas. Muchas no producen ningún efecto, algunas "
+        "perjudican y unas pocas resultan ventajosas en un ambiente "
+        "determinado.\n\n"
+        "Esa variabilidad es materia prima de la evolución: sin mutaciones no "
+        "habría diferencias sobre las cuales la selección natural pudiera "
+        "actuar.",
+        [
+            ("Un daño irreversible que siempre causa enfermedad", "Muchas mutaciones son neutras y algunas resultan ventajosas."),
+            ("La mezcla de genes de los dos progenitores", "Eso es la recombinación genética, propia de la reproducción sexual."),
+            ("La pérdida completa de un cromosoma únicamente", "Esa es un tipo particular; una mutación puede afectar una sola base."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Dos padres de ojos cafés tienen un hijo de ojos azules. Si el café es "
+        "dominante, ¿qué genotipo tienen los padres?",
+        "Ambos son heterocigotos",
+        "El hijo de ojos azules muestra el carácter recesivo, así que su "
+        "genotipo debe ser $aa$: recibió un alelo recesivo de cada padre.\n\n"
+        "Como los padres tienen ojos cafés, cada uno posee al menos un alelo "
+        "dominante. Y como cada uno entregó un recesivo, ambos son "
+        "necesariamente $Aa$.\n\n"
+        "Es la lógica inversa del cuadro de Punnett: se parte del hijo y se "
+        "deduce hacia atrás qué debían tener los padres.",
+        [
+            ("Ambos son homocigotos dominantes", "Dos padres $AA$ no podrían aportar el alelo recesivo que el hijo necesita."),
+            ("Uno es homocigoto dominante y el otro heterocigoto", "El padre $AA$ no podría entregar un alelo recesivo."),
+            ("Ambos son homocigotos recesivos", "Entonces tendrían ojos azules, y el enunciado dice que los tienen cafés."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué función cumple el ARN mensajero?",
+        "Llevar la información del ADN desde el núcleo hasta los ribosomas",
+        "El ADN no sale del núcleo, pero las proteínas se fabrican fuera de él. "
+        "El ARN mensajero resuelve ese problema.\n\n"
+        "Se transcribe a partir de un tramo de ADN, sale del núcleo y llega a "
+        "los ribosomas, donde su secuencia se traduce en una cadena de "
+        "aminoácidos.\n\n"
+        "Es una copia de trabajo, no el original: se usa y se degrada, mientras "
+        "el ADN permanece protegido en el núcleo.",
+        [
+            ("Almacenar de forma permanente la información hereditaria", "Esa es la función del ADN; el ARN mensajero es una copia temporal."),
+            ("Unir los aminoácidos entre sí", "Eso ocurre en el ribosoma; el ARN mensajero aporta las instrucciones."),
+            ("Duplicar el ADN antes de la división celular", "La duplicación del ADN es otro proceso, previo a la mitosis."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "¿Qué papel cumplen los descomponedores en un ecosistema?",
+        "Transforman la materia orgánica muerta en compuestos que los "
+        "productores pueden reutilizar",
+        "Hongos y bacterias descomponedoras actúan sobre restos y desechos de "
+        "todos los niveles tróficos.\n\n"
+        "Al degradarlos, liberan al suelo compuestos inorgánicos —nitrógeno, "
+        "fósforo— que las plantas vuelven a absorber por sus raíces.\n\n"
+        "Son los que cierran el ciclo de la materia. Sin ellos los nutrientes "
+        "quedarían atrapados en los restos y el ecosistema se detendría, por "
+        "mucha luz solar que siguiera llegando.",
+        [
+            ("Producen su propio alimento mediante la fotosíntesis", "Eso lo hacen los productores; los descomponedores obtienen energía de la materia muerta."),
+            ("Se alimentan exclusivamente de organismos vivos", "Actúan sobre restos y desechos, no sobre presas vivas."),
+            ("Ocupan el primer nivel trófico del ecosistema", "El primer nivel corresponde a los productores."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Qué diferencia hay entre una cadena trófica y una red trófica?",
+        "La cadena muestra una sola secuencia lineal; la red, todas las "
+        "conexiones alimentarias entre sí",
+        "La cadena trófica es una simplificación: hierba, conejo, zorro, en "
+        "línea recta.\n\n"
+        "La red trófica reconoce que en la realidad casi ningún organismo come "
+        "una sola cosa ni es comido por uno solo, y representa el conjunto de "
+        "esas relaciones cruzadas.\n\n"
+        "Esa diferencia importa para entender la estabilidad: si desaparece una "
+        "especie, en una cadena se corta todo, mientras que en una red los "
+        "demás pueden tener alternativas.",
+        [
+            ("La cadena incluye a los descomponedores y la red no", "Ambas pueden incluirlos; la diferencia está en la complejidad de las conexiones."),
+            ("La red se aplica solo a ecosistemas acuáticos", "Se aplica a cualquier ecosistema."),
+            ("La cadena representa energía y la red, materia", "Las dos representan relaciones alimentarias, por donde circulan materia y energía."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "En un ecosistema, ¿qué se entiende por hábitat de una especie?",
+        "El lugar físico donde vive, con sus condiciones ambientales",
+        "El hábitat responde a la pregunta dónde vive: el lugar concreto y las "
+        "condiciones de temperatura, humedad y sustrato que lo caracterizan."
+        "\n\n"
+        "Es distinto del nicho ecológico, que responde a de qué vive y qué "
+        "papel cumple: de qué se alimenta, cuándo está activa, con quién "
+        "compite.\n\n"
+        "La imagen clásica es que el hábitat es la dirección de la especie y el "
+        "nicho, su oficio.",
+        [
+            ("El conjunto de funciones que cumple dentro del ecosistema", "Eso corresponde al nicho ecológico."),
+            ("La cantidad de individuos que la componen", "Eso es el tamaño poblacional."),
+            ("La relación que mantiene con las especies que la depredan", "Esa es una interacción, parte del nicho."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "En una relación de mutualismo, ¿qué ocurre con las dos especies "
+        "involucradas?",
+        "Ambas obtienen un beneficio",
+        "El mutualismo es una interacción en la que las dos especies salen "
+        "ganando, como la abeja que obtiene néctar mientras poliniza la flor."
+        "\n\n"
+        "Conviene distinguirlo de otras interacciones cercanas: en el "
+        "comensalismo una gana y la otra no se ve afectada; en el parasitismo "
+        "una gana a costa del perjuicio de la otra.\n\n"
+        "El error habitual es pensar que hay cooperación intencional. No la "
+        "hay: cada especie actúa por su propio beneficio, y el del otro es una "
+        "consecuencia.",
+        [
+            ("Una se beneficia y la otra resulta perjudicada", "Eso describe el parasitismo o la depredación."),
+            ("Una se beneficia y la otra no se ve afectada", "Eso es comensalismo."),
+            ("Ambas resultan perjudicadas por la interacción", "Esa situación se acerca a la competencia, no al mutualismo."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "Se introduce una especie exótica sin depredadores naturales en un "
+        "ecosistema. ¿Cuál es el efecto más probable?",
+        "Su población crece sin control y desplaza a especies nativas",
+        "El control de una población depende en buena parte de sus depredadores "
+        "y competidores.\n\n"
+        "Una especie introducida que no los tiene puede reproducirse sin freno, "
+        "consumir recursos que usaban las nativas y desplazarlas de su "
+        "nicho.\n\n"
+        "En Chile hay ejemplos conocidos, como el castor en Tierra del Fuego. "
+        "Es una de las principales causas de pérdida de biodiversidad en el "
+        "mundo, junto con la destrucción de hábitat.",
+        [
+            ("Se extingue rápidamente por no estar adaptada", "Puede ocurrir, pero cuando encuentra condiciones favorables y sin depredadores pasa lo contrario."),
+            ("El ecosistema se estabiliza al ganar una especie más", "Más especies no implica más estabilidad si se rompen las relaciones existentes."),
+            ("No produce ningún efecto porque cada especie tiene su nicho", "La especie introducida suele competir por nichos ya ocupados."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué diferencia principal existe entre una célula vegetal y una animal?",
+        "La vegetal tiene pared celular y cloroplastos, que la animal no posee",
+        "Ambas son eucariontes y comparten núcleo, membrana, citoplasma, "
+        "mitocondrias y ribosomas.\n\n"
+        "La vegetal suma dos estructuras propias: una pared rígida de celulosa "
+        "que le da forma y sostén, y cloroplastos donde ocurre la "
+        "fotosíntesis.\n\n"
+        "Suele tener además una vacuola central grande que almacena agua y "
+        "mantiene la turgencia, mientras que en la animal las vacuolas son "
+        "pequeñas y numerosas.",
+        [
+            ("La vegetal no tiene núcleo definido", "Ambas son eucariontes y tienen núcleo."),
+            ("La animal tiene cloroplastos y la vegetal no", "Está invertido: los cloroplastos son de la célula vegetal."),
+            ("La animal carece de mitocondrias", "Las células animales tienen mitocondrias; de hecho dependen mucho de ellas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué es un alelo?",
+        "Cada una de las variantes que puede tener un mismo gen",
+        "Un gen ocupa una posición determinada en el cromosoma y controla una "
+        "característica; un alelo es cada versión distinta de ese gen.\n\n"
+        "En el color de ojos, por ejemplo, hay un alelo para café y otro para "
+        "azul: mismo gen, variantes diferentes.\n\n"
+        "Como los cromosomas vienen de a pares, cada individuo tiene dos alelos "
+        "por gen, uno de cada progenitor. Que sean iguales o distintos define "
+        "si es homocigoto o heterocigoto.",
+        [
+            ("Un cromosoma completo heredado de un progenitor", "Un cromosoma contiene muchísimos genes, y cada gen sus alelos."),
+            ("La proteína que produce un gen", "El alelo es una variante del gen, no su producto."),
+            ("Una mutación que aparece en la descendencia", "Las mutaciones pueden originar alelos nuevos, pero no son lo mismo."),
+        ],
+    ),
 ]
 
 
