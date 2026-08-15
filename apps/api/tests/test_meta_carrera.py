@@ -34,13 +34,16 @@ def test_ponderado_es_la_suma_de_cada_factor_por_su_peso(
     client: TestClient, register_user, carrera_ing
 ) -> None:
     headers, _ = register_user()
-    resp = client.put(
-        "/api/meta",
+    client.put(
+        "/api/meta/notas",
         headers=headers,
-        json={"carrera_id": carrera_ing.id, "puntaje_nem": 700, "puntaje_ranking": 800},
+        json={"puntaje_nem": 700, "puntaje_ranking": 800},
     )
-    assert resp.status_code == 200
-    datos = resp.json()
+    resp = client.post(
+        "/api/meta/postulaciones", headers=headers, json={"carrera_id": carrera_ing.id}
+    )
+    assert resp.status_code == 201
+    datos = resp.json()["postulaciones"][0]
 
     aportes = {a["factor"]: a for a in datos["aportes"]}
     # 10% de 700 y 20% de 800, recalculado acá sin mirar el servicio.
@@ -59,9 +62,9 @@ def test_cada_10_puntos_valen_la_decima_parte_de_la_ponderacion(
     """La regla que hace útil la pantalla: en una carrera que pondera M1 al
     35%, subir 10 puntos en M1 sube 3,5 el ponderado."""
     headers, _ = register_user()
-    datos = client.put(
-        "/api/meta", headers=headers, json={"carrera_id": carrera_ing.id}
-    ).json()
+    datos = client.post(
+        "/api/meta/postulaciones", headers=headers, json={"carrera_id": carrera_ing.id}
+    ).json()["postulaciones"][0]
 
     aportes = {a["factor"]: a for a in datos["aportes"]}
     assert aportes["m1"]["por_cada_10"] == 3.5
@@ -73,9 +76,9 @@ def test_la_palanca_pondera_el_peso_por_el_margen(
 ) -> None:
     """Con todo en cero, la mejor palanca es la prueba de mayor ponderación."""
     headers, _ = register_user()
-    datos = client.put(
-        "/api/meta", headers=headers, json={"carrera_id": carrera_ing.id}
-    ).json()
+    datos = client.post(
+        "/api/meta/postulaciones", headers=headers, json={"carrera_id": carrera_ing.id}
+    ).json()["postulaciones"][0]
     assert datos["mejor_palanca"] == "Matemática M1"
 
 
@@ -96,17 +99,22 @@ def test_la_palanca_nunca_es_el_ranking_ni_el_nem(
     db_session.commit()
 
     headers, _ = register_user(email="palanca@test.cl")
-    datos = client.put(
-        "/api/meta",
+    client.put(
+        "/api/meta/notas",
         headers=headers,
-        json={"carrera_id": c.id, "puntaje_nem": 300, "puntaje_ranking": 300},
-    ).json()
+        json={"puntaje_nem": 300, "puntaje_ranking": 300},
+    )
+    datos = client.post(
+        "/api/meta/postulaciones", headers=headers, json={"carrera_id": c.id}
+    ).json()["postulaciones"][0]
     assert datos["mejor_palanca"] in ("Competencia Lectora", "Matemática M1")
 
 
 def test_una_carrera_sin_los_datos_no_entra(client: TestClient, register_user) -> None:
     headers, _ = register_user()
-    resp = client.put("/api/meta", headers=headers, json={"carrera_id": 999999})
+    resp = client.post(
+        "/api/meta/postulaciones", headers=headers, json={"carrera_id": 999999}
+    )
     assert resp.status_code == 404
 
 
@@ -196,3 +204,31 @@ def test_se_busca_por_palabras_sueltas(
     resp = client.get("/api/meta/carreras?q=enfermeria angeles", headers=headers)
     assert resp.status_code == 200
     assert len(resp.json()) == 1
+
+
+def test_no_hay_ritmo_con_ensayos_del_mismo_dia(
+    client: TestClient, register_user, db_session
+) -> None:
+    """Extrapolar un día a un mes multiplica el ruido por treinta: cuatro
+    ensayos rendidos la misma tarde llegaban a decir "vienes bajando 2.760
+    puntos al mes", que es un disparate con aspecto de dato."""
+    from datetime import UTC, datetime
+
+    from paes_api.modules.exam_focus.models import ExamAttempt
+
+    headers, usuario = register_user(email="ritmo@test.cl")
+    hoy = datetime.now(UTC)
+    for puntaje in (500, 480, 460, 408):
+        db_session.add(
+            ExamAttempt(
+                user_id=usuario["id"], subject="m1", status="submitted",
+                estimated_score=puntaje, started_at=hoy, finished_at=hoy,
+                duration_limit_seconds=2580,
+            )
+        )
+    db_session.commit()
+
+    proyeccion = client.get("/api/meta", headers=headers).json()["proyeccion"]
+    assert proyeccion["ensayos_considerados"] == 4
+    assert proyeccion["puntos_por_mes"] is None
+    assert proyeccion["proyectado"] is None

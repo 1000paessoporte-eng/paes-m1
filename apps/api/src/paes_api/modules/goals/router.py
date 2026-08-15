@@ -5,7 +5,13 @@ from sqlalchemy.orm import Session
 from paes_api.core.database import get_db
 from paes_api.modules.goals import service
 from paes_api.modules.goals.models import Carrera, MetaUsuario
-from paes_api.modules.goals.schemas import CarreraOut, MetaIn, MetaOut
+from paes_api.modules.goals.schemas import (
+    CarreraOut,
+    MetaOut,
+    NotasIn,
+    OrdenIn,
+    PostularIn,
+)
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
 
@@ -14,54 +20,109 @@ router = APIRouter(prefix="/meta", tags=["meta"])
 
 @router.get("/carreras", response_model=list[CarreraOut])
 def buscar_carreras(
-    q: str = Query(min_length=3, description="Nombre de carrera o universidad"),
+    q: str = Query(min_length=3, description="Nombre de carrera, universidad o sede"),
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> list[Carrera]:
     return service.buscar_carreras(db, q)
 
 
-@router.get("", response_model=MetaOut | None)
+@router.get("", response_model=MetaOut)
 def ver_meta(
     db: Session = Depends(get_db), user: User = Depends(get_current_user)
-) -> MetaOut | None:
+) -> MetaOut:
     return service.calcular_meta(db, user.id)
 
 
-@router.put("", response_model=MetaOut)
-def fijar_meta(
-    payload: MetaIn,
+@router.post("/postulaciones", response_model=MetaOut, status_code=201)
+def agregar_postulacion(
+    payload: PostularIn,
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> MetaOut:
-    carrera = db.get(Carrera, payload.carrera_id)
-    if carrera is None:
+    """Agrega una carrera al final de la lista de preferencias."""
+    if db.get(Carrera, payload.carrera_id) is None:
         raise HTTPException(status_code=404, detail="Carrera no encontrada")
 
-    meta = db.execute(
+    actuales = db.execute(
         select(MetaUsuario).where(MetaUsuario.user_id == user.id)
-    ).scalar_one_or_none()
-    if meta is None:
-        meta = MetaUsuario(user_id=user.id)
-        db.add(meta)
+    ).scalars().all()
 
-    meta.carrera_id = carrera.id
-    meta.puntaje_nem = payload.puntaje_nem
-    meta.puntaje_ranking = payload.puntaje_ranking
+    if any(m.carrera_id == payload.carrera_id for m in actuales):
+        raise HTTPException(status_code=409, detail="Esa carrera ya está en tu lista")
+    if len(actuales) >= service.MAX_PREFERENCIAS:
+        raise HTTPException(
+            status_code=409,
+            detail=f"El sistema admite hasta {service.MAX_PREFERENCIAS} preferencias",
+        )
+
+    db.add(
+        MetaUsuario(
+            user_id=user.id,
+            carrera_id=payload.carrera_id,
+            preferencia=len(actuales) + 1,
+        )
+    )
     db.commit()
-
-    resultado = service.calcular_meta(db, user.id)
-    assert resultado is not None  # se acaba de crear
-    return resultado
+    return service.calcular_meta(db, user.id)
 
 
-@router.delete("", status_code=204)
-def borrar_meta(
-    db: Session = Depends(get_db), user: User = Depends(get_current_user)
-) -> None:
+@router.put("/orden", response_model=MetaOut)
+def reordenar(
+    payload: OrdenIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> MetaOut:
+    """Reordena la lista. El orden decide dónde queda uno, así que es parte
+    de la decisión y no un detalle de presentación."""
+    postulaciones = {
+        m.carrera_id: m
+        for m in db.execute(
+            select(MetaUsuario).where(MetaUsuario.user_id == user.id)
+        ).scalars().all()
+    }
+    for posicion, carrera_id in enumerate(payload.carrera_ids, start=1):
+        meta = postulaciones.get(carrera_id)
+        if meta is not None:
+            meta.preferencia = posicion
+    db.commit()
+    return service.calcular_meta(db, user.id)
+
+
+@router.delete("/postulaciones/{carrera_id}", response_model=MetaOut)
+def quitar_postulacion(
+    carrera_id: int,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> MetaOut:
     meta = db.execute(
-        select(MetaUsuario).where(MetaUsuario.user_id == user.id)
+        select(MetaUsuario)
+        .where(MetaUsuario.user_id == user.id)
+        .where(MetaUsuario.carrera_id == carrera_id)
     ).scalar_one_or_none()
     if meta is not None:
         db.delete(meta)
+        db.flush()
+        # Las preferencias se renumeran: dejar un hueco (1, 2, 4) haría que la
+        # lista dijera algo falso sobre el orden real.
+        resto = db.execute(
+            select(MetaUsuario)
+            .where(MetaUsuario.user_id == user.id)
+            .order_by(MetaUsuario.preferencia)
+        ).scalars().all()
+        for posicion, m in enumerate(resto, start=1):
+            m.preferencia = posicion
         db.commit()
+    return service.calcular_meta(db, user.id)
+
+
+@router.put("/notas", response_model=MetaOut)
+def guardar_notas(
+    payload: NotasIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> MetaOut:
+    user.puntaje_nem = payload.puntaje_nem
+    user.puntaje_ranking = payload.puntaje_ranking
+    db.commit()
+    return service.calcular_meta(db, user.id)

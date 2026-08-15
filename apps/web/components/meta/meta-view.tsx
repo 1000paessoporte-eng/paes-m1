@@ -1,408 +1,628 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import type { Carrera, Meta } from "@/lib/api";
-import { borrarMeta, buscarCarreras, fijarMeta } from "@/lib/api";
+import type { Carrera, Meta, Postulacion } from "@/lib/api";
+import {
+  agregarPostulacion,
+  buscarCarreras,
+  guardarNotas,
+  quitarPostulacion,
+  reordenarPostulaciones,
+} from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 
 /**
- * Mi meta: la carrera y cuánto falta.
+ * Mi meta: la lista de postulación y qué falta para cada preferencia.
  *
- * En Chile nadie estudia para "subir el puntaje": se estudia para entrar a una
- * carrera. El puntaje que decide una admisión es el PONDERADO, que combina NEM,
- * ranking y las pruebas con los pesos que fija cada carrera — y casi ningún
- * estudiante lo tiene a la vista mientras estudia.
- *
- * Lo que esta pantalla responde, y que ninguna tabla de puntajes de corte
- * responde, es dónde rinde más la próxima hora de estudio: en una carrera que
- * pondera M1 al 35%, diez puntos en M1 valen tres veces y media más que diez
- * puntos donde pondera 10%.
+ * En Chile no se postula a una carrera: se postulan hasta diez en orden de
+ * preferencia, y ese orden decide dónde queda uno. La pregunta que responde
+ * esta pantalla no es "¿alcanzo para esta?" sino "¿hasta qué preferencia
+ * alcanzo, y qué hago con lo que falta?".
  */
-export function MetaView({ inicial }: { inicial: Meta | null }) {
-  const [meta, setMeta] = useState<Meta | null>(inicial);
-  const [editando, setEditando] = useState(inicial === null);
 
-  if (editando || meta === null) {
-    return (
-      <Buscador
-        actual={meta}
-        onListo={(m) => {
-          setMeta(m);
-          setEditando(false);
-        }}
-        onCancelar={meta ? () => setEditando(false) : undefined}
-      />
-    );
-  }
+const MAX = 10;
+
+function token() {
+  return getClientToken() ?? undefined;
+}
+
+export function MetaView({ inicial }: { inicial: Meta }) {
+  const [meta, setMeta] = useState<Meta>(inicial);
+  const [agregando, setAgregando] = useState(inicial.postulaciones.length === 0);
+
+  const alcanzadas = meta.postulaciones.filter((p) => p.alcanza === true).length;
 
   return (
-    <Resultado
-      meta={meta}
-      onCambiar={() => setEditando(true)}
-      onBorrar={async () => {
-        await borrarMeta(getClientToken() ?? undefined);
-        setMeta(null);
-        setEditando(true);
-      }}
-    />
+    <div className="mx-auto w-full max-w-3xl">
+      <header className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <p className="text-xs font-medium tracking-wide text-accent uppercase">Mi meta</p>
+          <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">
+            Mi lista de postulación
+          </h1>
+          <p className="mt-1 text-sm text-muted">
+            {meta.postulaciones.length === 0
+              ? "Agrega hasta 10 carreras en el orden que las quieres."
+              : `${meta.postulaciones.length} de ${MAX} preferencias · ${alcanzadas} con el mínimo alcanzado`}
+          </p>
+        </div>
+        {!agregando && meta.postulaciones.length < MAX && (
+          <button
+            type="button"
+            onClick={() => setAgregando(true)}
+            className="btn-warm rounded-lg px-4 py-2 text-sm font-semibold text-on-fill"
+          >
+            Agregar carrera
+          </button>
+        )}
+      </header>
+
+      {agregando && (
+        <Buscador
+          yaElegidas={meta.postulaciones.map((p) => p.carrera.id)}
+          onAgregada={(m) => {
+            setMeta(m);
+            setAgregando(false);
+          }}
+          onCerrar={meta.postulaciones.length > 0 ? () => setAgregando(false) : undefined}
+        />
+      )}
+
+      <Notas meta={meta} onGuardado={setMeta} />
+
+      {meta.postulaciones.length > 0 && (
+        <>
+          <Proyeccion meta={meta} />
+          <Simulador meta={meta} />
+
+          <section className="mt-8" aria-labelledby="h-lista">
+            <h2 id="h-lista" className="font-semibold tracking-tight">
+              Tus preferencias
+            </h2>
+            <ol className="mt-4 flex flex-col gap-3">
+              {meta.postulaciones.map((p, i) => (
+                <Fila
+                  key={p.carrera.id}
+                  p={p}
+                  esPrimera={i === 0}
+                  esUltima={i === meta.postulaciones.length - 1}
+                  onSubir={async () => {
+                    const ids = meta.postulaciones.map((x) => x.carrera.id);
+                    [ids[i - 1], ids[i]] = [ids[i], ids[i - 1]];
+                    setMeta(await reordenarPostulaciones(ids, token()));
+                  }}
+                  onBajar={async () => {
+                    const ids = meta.postulaciones.map((x) => x.carrera.id);
+                    [ids[i], ids[i + 1]] = [ids[i + 1], ids[i]];
+                    setMeta(await reordenarPostulaciones(ids, token()));
+                  }}
+                  onQuitar={async () =>
+                    setMeta(await quitarPostulacion(p.carrera.id, token()))
+                  }
+                />
+              ))}
+            </ol>
+          </section>
+
+          <Plan meta={meta} />
+        </>
+      )}
+    </div>
   );
 }
 
-/* ── Elegir carrera ───────────────────────────────────────────────────── */
+/* ── Buscar y agregar ─────────────────────────────────────────────────── */
 
 function Buscador({
-  actual,
-  onListo,
-  onCancelar,
+  yaElegidas,
+  onAgregada,
+  onCerrar,
 }: {
-  actual: Meta | null;
-  onListo: (m: Meta) => void;
-  onCancelar?: () => void;
+  yaElegidas: number[];
+  onAgregada: (m: Meta) => void;
+  onCerrar?: () => void;
 }) {
   const [texto, setTexto] = useState("");
-  const [resultados, setResultados] = useState<Carrera[]>([]);
-  const [elegida, setElegida] = useState<Carrera | null>(null);
-  const [nem, setNem] = useState(actual?.carrera ? "" : "");
-  const [ranking, setRanking] = useState("");
-  const [buscando, setBuscando] = useState(false);
+  const [resultados, setResultados] = useState<Carrera[] | null>(null);
+  const [cargando, setCargando] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function buscar(e: React.FormEvent) {
     e.preventDefault();
     if (texto.trim().length < 3) return;
-    setBuscando(true);
+    setCargando(true);
     setError(null);
     try {
-      setResultados(await buscarCarreras(texto, getClientToken() ?? undefined));
+      setResultados(await buscarCarreras(texto, token()));
     } catch {
       setError("No se pudo buscar. Intenta de nuevo.");
     } finally {
-      setBuscando(false);
-    }
-  }
-
-  async function guardar() {
-    if (!elegida) return;
-    try {
-      const m = await fijarMeta(
-        {
-          carrera_id: elegida.id,
-          puntaje_nem: nem ? Number(nem) : null,
-          puntaje_ranking: ranking ? Number(ranking) : null,
-        },
-        getClientToken() ?? undefined
-      );
-      onListo(m);
-    } catch {
-      setError("No se pudo guardar tu meta.");
+      setCargando(false);
     }
   }
 
   return (
-    <div className="mx-auto w-full max-w-2xl">
-      <h1 className="text-2xl font-bold tracking-tight">¿A qué carrera quieres entrar?</h1>
-      <p className="mt-2 text-sm leading-relaxed text-muted">
-        Cada carrera pondera las pruebas distinto. Con la tuya elegida, la
-        plataforma puede decirte dónde rinde más cada hora de estudio.
-      </p>
-
-      <form onSubmit={buscar} className="mt-6 flex gap-2">
+    <section className="card-panel mt-6 p-5">
+      <form onSubmit={buscar} className="flex gap-2">
         <input
           value={texto}
           onChange={(e) => setTexto(e.target.value)}
-          placeholder="Ingeniería civil, enfermería, Universidad de Chile…"
+          placeholder="Ingeniería civil, enfermería concepción…"
           aria-label="Buscar carrera o universidad"
           className="min-w-0 flex-1 rounded-lg border border-border bg-background px-4 py-2.5 text-sm"
         />
         <button
           type="submit"
-          disabled={texto.trim().length < 3 || buscando}
+          disabled={texto.trim().length < 3 || cargando}
           className="btn-glow shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground disabled:opacity-50"
         >
-          {buscando ? "Buscando…" : "Buscar"}
+          {cargando ? "Buscando…" : "Buscar"}
         </button>
+        {onCerrar && (
+          <button
+            type="button"
+            onClick={onCerrar}
+            className="shrink-0 rounded-lg border border-border px-3 text-sm hover:bg-surface-hover"
+          >
+            Cerrar
+          </button>
+        )}
       </form>
 
-      {error && (
-        <p className="mt-3 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-sm text-danger">
-          {error}
+      {error && <p className="mt-3 text-sm text-danger">{error}</p>}
+
+      {resultados?.length === 0 && (
+        <p className="mt-4 text-sm text-muted">
+          Sin resultados. Son 1.855 carreras del proceso 2026; unas pocas quedaron
+          fuera porque su fila en el documento oficial no se pudo leer con
+          seguridad.
         </p>
       )}
 
-      {resultados.length > 0 && (
-        <ul className="mt-5 flex flex-col gap-2">
-          {resultados.map((c) => (
-            <li key={c.id}>
-              <button
-                type="button"
-                onClick={() => setElegida(c)}
-                aria-pressed={elegida?.id === c.id}
-                className={
-                  "w-full rounded-xl border p-4 text-left transition " +
-                  (elegida?.id === c.id
-                    ? "border-accent bg-accent/5 ring-1 ring-accent"
-                    : "border-border bg-surface hover:border-border-strong")
-                }
-              >
-                <span className="block text-sm font-semibold">{c.nombre}</span>
-                <span className="block text-xs text-muted">
-                  {c.universidad} · {c.sede}
-                </span>
-                <span className="mt-2 block text-xs text-muted">
-                  {[
-                    c.nem && `NEM ${c.nem}%`,
-                    c.ranking && `Ranking ${c.ranking}%`,
-                    c.lectora && `Lectora ${c.lectora}%`,
-                    c.m1 && `M1 ${c.m1}%`,
-                    c.m2 && `M2 ${c.m2}%`,
-                    c.historia && `Historia ${c.historia}%`,
-                    c.ciencias && `Ciencias ${c.ciencias}%`,
-                  ]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </span>
-              </button>
-            </li>
-          ))}
+      {resultados && resultados.length > 0 && (
+        <ul className="mt-4 flex max-h-96 flex-col gap-2 overflow-y-auto">
+          {resultados.map((c) => {
+            const ya = yaElegidas.includes(c.id);
+            return (
+              <li key={c.id}>
+                <button
+                  type="button"
+                  disabled={ya}
+                  onClick={async () => onAgregada(await agregarPostulacion(c.id, token()))}
+                  className="w-full rounded-xl border border-border bg-surface p-3 text-left transition hover:border-border-strong disabled:opacity-50"
+                >
+                  <span className="block text-sm font-semibold">
+                    {c.nombre}
+                    {ya && <span className="text-xs text-muted"> · ya está</span>}
+                  </span>
+                  <span className="block text-xs text-muted">
+                    {c.universidad} · {c.sede}
+                  </span>
+                  <span className="mt-1 block text-xs text-muted">
+                    {c.vacantes ? `${c.vacantes} vacantes` : "Vacantes no informadas"}
+                    {c.ponderado_min ? ` · mínimo ${c.ponderado_min} pts` : ""}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
         </ul>
       )}
-
-      {resultados.length === 0 && texto && !buscando && (
-        <p className="mt-5 rounded-lg border border-border bg-surface px-4 py-3 text-sm text-muted">
-          Sin resultados. Los datos son del proceso de Admisión 2026 y cubren
-          1.855 carreras de las 47 universidades del sistema centralizado; unas
-          pocas quedaron fuera porque su fila en el documento oficial no se pudo
-          leer con seguridad.
-        </p>
-      )}
-
-      {elegida && (
-        <div className="card-panel mt-6 p-5">
-          <h2 className="font-semibold tracking-tight">Tus notas</h2>
-          <p className="mt-1 text-sm text-muted">
-            Opcional. Son los puntajes de NEM y ranking que vienen en tu informe,
-            no el promedio de notas: la conversión la hace el DEMRE y no la
-            estimamos acá. Sin ellos igual verás el peso de cada prueba.
-          </p>
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            <label className="text-sm">
-              <span className="block text-xs text-muted">Puntaje NEM</span>
-              <input
-                inputMode="numeric"
-                value={nem}
-                onChange={(e) => setNem(e.target.value.replace(/\D/g, "").slice(0, 4))}
-                placeholder="Ej: 720"
-                className="mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 tabular-nums"
-              />
-            </label>
-            <label className="text-sm">
-              <span className="block text-xs text-muted">Puntaje ranking</span>
-              <input
-                inputMode="numeric"
-                value={ranking}
-                onChange={(e) => setRanking(e.target.value.replace(/\D/g, "").slice(0, 4))}
-                placeholder="Ej: 780"
-                className="mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 tabular-nums"
-              />
-            </label>
-          </div>
-
-          <div className="mt-5 flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={guardar}
-              className="btn-warm rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
-            >
-              Fijar esta meta →
-            </button>
-            {onCancelar && (
-              <button
-                type="button"
-                onClick={onCancelar}
-                className="rounded-lg border border-border px-4 py-2.5 text-sm font-medium hover:bg-surface-hover"
-              >
-                Cancelar
-              </button>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+    </section>
   );
 }
 
-/* ── Ver la brecha ────────────────────────────────────────────────────── */
+/* ── Notas del colegio ────────────────────────────────────────────────── */
 
-function Resultado({
-  meta,
-  onCambiar,
-  onBorrar,
-}: {
-  meta: Meta;
-  onCambiar: () => void;
-  onBorrar: () => void;
-}) {
-  const quieto = useReducedMotion();
-  const { carrera, aportes, ponderado, faltantes, mejor_palanca } = meta;
+function Notas({ meta, onGuardado }: { meta: Meta; onGuardado: (m: Meta) => void }) {
+  const [nem, setNem] = useState(meta.puntaje_nem?.toString() ?? "");
+  const [ranking, setRanking] = useState(meta.puntaje_ranking?.toString() ?? "");
+  const [guardado, setGuardado] = useState(false);
 
-  // El máximo posible con estas ponderaciones es 1000: sirve de escala para
-  // leer el ponderado actual sin inventar un puntaje de corte.
-  const porcentaje = ponderado ? (ponderado / 1000) * 100 : 0;
+  const faltan = meta.puntaje_nem == null || meta.puntaje_ranking == null;
 
   return (
-    <div className="mx-auto w-full max-w-3xl">
-      <header>
-        <p className="text-xs font-medium tracking-wide text-accent uppercase">Mi meta</p>
-        <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">
-          {carrera.nombre}
-        </h1>
-        <p className="mt-1 text-sm text-muted">
-          {carrera.universidad} · {carrera.sede}
-        </p>
-      </header>
+    <section className="card-panel mt-5 p-5">
+      <h2 className="text-sm font-semibold tracking-tight">Tus notas</h2>
+      <p className="mt-1 text-xs leading-relaxed text-muted">
+        Los puntajes de NEM y ranking que vienen en tu informe, no el promedio de
+        notas: esa conversión la hace el DEMRE y no la estimamos acá. Casi todas
+        las carreras los ponderan, así que sin ellos el puntaje final no se puede
+        calcular.
+      </p>
+      <div className="mt-3 flex flex-wrap items-end gap-3">
+        <label className="text-sm">
+          <span className="block text-xs text-muted">Puntaje NEM</span>
+          <input
+            inputMode="numeric"
+            value={nem}
+            onChange={(e) => setNem(e.target.value.replace(/\D/g, "").slice(0, 4))}
+            placeholder="720"
+            className="mt-1 w-28 rounded-lg border border-border bg-background px-3 py-2 tabular-nums"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="block text-xs text-muted">Puntaje ranking</span>
+          <input
+            inputMode="numeric"
+            value={ranking}
+            onChange={(e) => setRanking(e.target.value.replace(/\D/g, "").slice(0, 4))}
+            placeholder="780"
+            className="mt-1 w-28 rounded-lg border border-border bg-background px-3 py-2 tabular-nums"
+          />
+        </label>
+        <button
+          type="button"
+          onClick={async () => {
+            onGuardado(
+              await guardarNotas(
+                {
+                  puntaje_nem: nem ? Number(nem) : null,
+                  puntaje_ranking: ranking ? Number(ranking) : null,
+                },
+                token()
+              )
+            );
+            setGuardado(true);
+          }}
+          className="rounded-lg border border-border px-4 py-2 text-sm font-medium hover:bg-surface-hover"
+        >
+          {guardado ? "Guardado" : "Guardar"}
+        </button>
+        {faltan && !guardado && (
+          <span className="text-xs text-warning">Faltan tus notas</span>
+        )}
+      </div>
+    </section>
+  );
+}
 
-      {/* ── Puntaje ponderado ─────────────────────────────────────────── */}
-      <section className="card-panel mt-6 p-6">
-        {ponderado != null ? (
-          <>
-            <p className="text-sm text-muted">Tu puntaje ponderado proyectado</p>
-            <p className="mt-1 text-5xl font-bold tracking-tight tabular-nums">
-              <NumeroAnimado valor={Math.round(ponderado)} />
-              <span className="text-xl font-medium text-muted">/1000</span>
-            </p>
-            <div className="mt-4">
-              <BarraProgreso
-                porcentaje={porcentaje}
-                etiqueta="Puntaje ponderado proyectado"
-                alto="h-2.5"
+/* ── Proyección contra la fecha de la PAES ────────────────────────────── */
+
+function Proyeccion({ meta }: { meta: Meta }) {
+  const { proyeccion } = meta;
+  if (proyeccion.dias_para_paes == null) return null;
+
+  const sube = (proyeccion.puntos_por_mes ?? 0) > 0;
+
+  return (
+    <section className="card-panel mt-5 p-5">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="font-semibold tracking-tight">Tu ritmo</h2>
+        <span className="text-sm text-muted">
+          Faltan{" "}
+          <strong className="text-foreground tabular-nums">
+            {proyeccion.dias_para_paes}
+          </strong>{" "}
+          días para la PAES
+        </span>
+      </div>
+
+      {proyeccion.puntos_por_mes == null ? (
+        <p className="mt-2 text-sm text-muted">
+          Con {proyeccion.ensayos_considerados}{" "}
+          {proyeccion.ensayos_considerados === 1 ? "ensayo" : "ensayos"} todavía no
+          hay tendencia que valga: dos puntos son una recta, no un ritmo. Rinde al
+          menos tres de la misma prueba.
+        </p>
+      ) : (
+        <p className="mt-2 text-sm leading-relaxed">
+          Vienes{" "}
+          <strong className={sube ? "text-success" : "text-danger"}>
+            {sube ? "subiendo" : "bajando"} {Math.abs(proyeccion.puntos_por_mes)} puntos
+            al mes
+          </strong>{" "}
+          sobre {proyeccion.ensayos_considerados} ensayos. A este ritmo llegarías a{" "}
+          <strong className="tabular-nums">{proyeccion.proyectado}</strong> en
+          noviembre.
+          <span className="mt-1 block text-xs text-muted">
+            Es una recta trazada entre tu primer y último ensayo de esa prueba, no
+            una promesa.
+          </span>
+        </p>
+      )}
+    </section>
+  );
+}
+
+/* ── Simulador ────────────────────────────────────────────────────────── */
+
+/**
+ * "¿Y si subo M1 a 750?"
+ *
+ * Corre entero en el navegador: el ponderado es una suma de pesos por puntajes
+ * y las ponderaciones ya vienen en el payload, así que no hace falta ida y
+ * vuelta al servidor para responder cada movimiento del deslizador.
+ */
+function Simulador({ meta }: { meta: Meta }) {
+  const pruebas = useMemo(() => {
+    const vistos = new Map<string, { etiqueta: string; actual: number }>();
+    for (const p of meta.postulaciones) {
+      for (const a of p.aportes) {
+        if (a.factor === "nem" || a.factor === "ranking") continue;
+        if (!vistos.has(a.factor)) {
+          vistos.set(a.factor, { etiqueta: a.etiqueta, actual: a.puntaje ?? 500 });
+        }
+      }
+    }
+    return [...vistos.entries()];
+  }, [meta]);
+
+  const [valores, setValores] = useState<Record<string, number>>(() =>
+    Object.fromEntries(pruebas.map(([f, v]) => [f, v.actual]))
+  );
+  const [abierto, setAbierto] = useState(false);
+
+  if (pruebas.length === 0) return null;
+
+  function simular(p: Postulacion): number | null {
+    let total = 0;
+    for (const a of p.aportes) {
+      const puntaje =
+        a.factor === "nem" || a.factor === "ranking"
+          ? a.puntaje
+          : (valores[a.factor] ?? a.puntaje);
+      if (puntaje == null) return null;
+      total += (a.ponderacion * puntaje) / 100;
+    }
+    return Math.round(total * 10) / 10;
+  }
+
+  const alcanzadas = meta.postulaciones.filter((p) => {
+    const s = simular(p);
+    return s != null && p.carrera.ponderado_min != null && s >= p.carrera.ponderado_min;
+  }).length;
+
+  const conMinimo = meta.postulaciones.filter(
+    (p) => p.carrera.ponderado_min != null
+  ).length;
+
+  return (
+    <section className="card-panel mt-5 p-5">
+      <button
+        type="button"
+        onClick={() => setAbierto((v) => !v)}
+        aria-expanded={abierto}
+        className="flex w-full items-center justify-between gap-3 text-left"
+      >
+        <span>
+          <span className="block font-semibold tracking-tight">¿Y si mejoro?</span>
+          <span className="block text-xs text-muted">
+            Mueve los puntajes y mira qué preferencias alcanzarías
+          </span>
+        </span>
+        <span className="text-muted" aria-hidden>
+          {abierto ? "▲" : "▼"}
+        </span>
+      </button>
+
+      {abierto && (
+        <div className="mt-4">
+          {pruebas.map(([factor, info]) => (
+            <div key={factor} className="mb-4">
+              <div className="flex items-baseline justify-between gap-3 text-sm">
+                <span>{info.etiqueta}</span>
+                <span className="tabular-nums">
+                  <strong>{valores[factor]}</strong>
+                  <span className="text-xs text-muted"> (hoy {info.actual})</span>
+                </span>
+              </div>
+              <input
+                type="range"
+                min={100}
+                max={1000}
+                step={10}
+                value={valores[factor]}
+                aria-label={`Puntaje simulado de ${info.etiqueta}`}
+                onChange={(e) =>
+                  setValores((v) => ({ ...v, [factor]: Number(e.target.value) }))
+                }
+                className="mt-2 w-full accent-[var(--accent)]"
               />
             </div>
-            <p className="mt-3 text-xs leading-relaxed text-muted">
-              Calculado con las ponderaciones oficiales de esta carrera y tu
-              mejor puntaje en cada prueba. Es una proyección con tus ensayos, no
-              un puntaje oficial.
-            </p>
-          </>
-        ) : (
-          <>
-            <p className="text-sm font-medium">
-              Te falta rendir {faltantes.length === 1 ? "una prueba" : "algunas pruebas"}{" "}
-              para completar la proyección
-            </p>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {faltantes.map((f) => (
+          ))}
+
+          <p className="rounded-lg border border-accent/30 bg-accent/5 px-4 py-3 text-sm">
+            Con esos puntajes alcanzarías el mínimo de{" "}
+            <strong className="tabular-nums">{alcanzadas}</strong> de tus {conMinimo}{" "}
+            preferencias que declaran uno.
+            <span className="mt-1 block text-xs text-muted">
+              El mínimo de postulación es la primera barrera, no el puntaje de
+              corte: entrar depende además de cuántos postulen y de las vacantes.
+            </span>
+          </p>
+
+          <ul className="mt-3 flex flex-col gap-1.5">
+            {meta.postulaciones.map((p) => {
+              const s = simular(p);
+              const min = p.carrera.ponderado_min;
+              return (
                 <li
-                  key={f}
-                  className="rounded-full border border-warning/40 bg-warning/10 px-3 py-1 text-xs font-medium text-warning"
+                  key={p.carrera.id}
+                  className="flex items-baseline justify-between gap-3 text-xs"
                 >
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-3 text-xs text-muted">
-              Mostrar un ponderado parcial como si fuera el total sería
-              engañarte: aparece cuando estén todos los factores.
-            </p>
-          </>
-        )}
-      </section>
-
-      {/* ── Dónde rinde más estudiar ──────────────────────────────────── */}
-      <section className="card-panel mt-5 p-6" aria-labelledby="h-aportes">
-        <h2 id="h-aportes" className="font-semibold tracking-tight">
-          Dónde rinde más tu estudio
-        </h2>
-        <p className="mt-1 text-sm text-muted">
-          Cuánto sube tu ponderado por cada 10 puntos que ganes en cada factor.
-          {mejor_palanca && (
-            <>
-              {" "}
-              Hoy tu mayor palanca es <strong className="text-foreground">{mejor_palanca}</strong>.
-            </>
-          )}
-        </p>
-
-        <ul className="mt-5 flex flex-col gap-4">
-          {[...aportes]
-            .sort((a, b) => b.por_cada_10 - a.por_cada_10)
-            .map((a, i) => (
-              <motion.li
-                key={a.factor}
-                initial={quieto ? false : { opacity: 0, x: -8 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: i * 0.05 }}
-              >
-                <div className="flex items-baseline justify-between gap-3 text-sm">
-                  <span className="min-w-0 truncate">
-                    {a.etiqueta}
-                    <span className="ml-2 text-xs text-muted">pondera {a.ponderacion}%</span>
+                  <span className="min-w-0 truncate text-muted">
+                    {p.preferencia}. {p.carrera.nombre}
                   </span>
                   <span className="shrink-0 tabular-nums">
-                    <strong className="text-foreground">+{a.por_cada_10}</strong>
-                    <span className="text-xs text-muted"> por cada 10 pts</span>
+                    {s ?? "—"}
+                    {min != null && (
+                      <span
+                        className={s != null && s >= min ? "text-success" : "text-muted"}
+                      >
+                        {" "}
+                        / {min}
+                      </span>
+                    )}
                   </span>
-                </div>
-                <div className="mt-1.5">
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/* ── Una preferencia ──────────────────────────────────────────────────── */
+
+function Fila({
+  p,
+  esPrimera,
+  esUltima,
+  onSubir,
+  onBajar,
+  onQuitar,
+}: {
+  p: Postulacion;
+  esPrimera: boolean;
+  esUltima: boolean;
+  onSubir: () => void;
+  onBajar: () => void;
+  onQuitar: () => void;
+}) {
+  const quieto = useReducedMotion();
+  const min = p.carrera.ponderado_min;
+
+  return (
+    <motion.li layout={!quieto} className="card-panel p-4">
+      <div className="flex items-start gap-3">
+        <span
+          className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-surface-hover text-sm font-bold tabular-nums"
+          aria-label={`Preferencia ${p.preferencia}`}
+        >
+          {p.preferencia}
+        </span>
+
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-semibold">{p.carrera.nombre}</p>
+          <p className="text-xs text-muted">
+            {p.carrera.universidad} · {p.carrera.sede}
+            {p.carrera.vacantes ? ` · ${p.carrera.vacantes} vacantes` : ""}
+          </p>
+
+          {p.ponderado != null ? (
+            <div className="mt-3">
+              <div className="flex items-baseline justify-between gap-3">
+                <span className="text-2xl font-bold tabular-nums">
+                  <NumeroAnimado valor={Math.round(p.ponderado)} />
+                </span>
+                {min != null ? (
+                  <span
+                    className={
+                      "rounded-full px-2.5 py-0.5 text-xs font-semibold " +
+                      (p.alcanza
+                        ? "bg-success/10 text-success"
+                        : "bg-warning/10 text-warning")
+                    }
+                  >
+                    {p.alcanza ? "Alcanzas el mínimo" : `Te faltan ${p.brecha} pts`}
+                  </span>
+                ) : (
+                  <span className="text-xs text-muted">Sin mínimo publicado</span>
+                )}
+              </div>
+              {min != null && (
+                <div className="mt-2">
                   <BarraProgreso
-                    porcentaje={a.ponderacion}
-                    etiqueta={`${a.etiqueta}: pondera ${a.ponderacion}%`}
-                    delay={i * 0.05}
+                    porcentaje={Math.min(100, (p.ponderado / min) * 100)}
+                    color={p.alcanza ? "var(--success)" : "var(--accent)"}
+                    etiqueta={`${p.carrera.nombre}: ${p.ponderado} de ${min}`}
                     alto="h-1.5"
                   />
+                  <p className="mt-1 text-xs text-muted">
+                    Mínimo oficial para postular: {min} pts
+                  </p>
                 </div>
-                <p className="mt-1 text-xs text-muted">
-                  {a.origen === "falta"
-                    ? "Sin puntaje todavía"
-                    : a.origen === "ingresado"
-                      ? `${a.puntaje} pts · lo ingresaste tú`
-                      : `${a.puntaje} pts · tu mejor ensayo`}
-                </p>
-              </motion.li>
-            ))}
-        </ul>
-      </section>
+              )}
+            </div>
+          ) : (
+            <p className="mt-2 text-xs text-warning">
+              Falta {p.faltantes.join(", ")} para calcular tu puntaje acá.
+            </p>
+          )}
+        </div>
 
-      <p className="mt-5 text-xs leading-relaxed text-muted">
-        Ponderaciones oficiales del Proceso de Admisión {carrera.proceso}, según
-        la oferta definitiva del DEMRE.{" "}
-        <a
-          href={carrera.fuente}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline-offset-4 hover:underline"
-        >
-          Ver el documento
-        </a>
-        . Cambian cada año: revísalas antes de postular.
+        <div className="flex shrink-0 flex-col gap-1">
+          <button
+            type="button"
+            onClick={onSubir}
+            disabled={esPrimera}
+            aria-label="Subir preferencia"
+            className="rounded px-2 text-muted hover:bg-surface-hover hover:text-foreground disabled:opacity-30"
+          >
+            ▲
+          </button>
+          <button
+            type="button"
+            onClick={onBajar}
+            disabled={esUltima}
+            aria-label="Bajar preferencia"
+            className="rounded px-2 text-muted hover:bg-surface-hover hover:text-foreground disabled:opacity-30"
+          >
+            ▼
+          </button>
+          <button
+            type="button"
+            onClick={onQuitar}
+            aria-label="Quitar de la lista"
+            className="rounded px-2 text-muted hover:text-danger"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </motion.li>
+  );
+}
+
+/* ── El plan ──────────────────────────────────────────────────────────── */
+
+function Plan({ meta }: { meta: Meta }) {
+  if (meta.plan.length === 0) return null;
+
+  return (
+    <section className="card-panel mt-8 p-6" aria-labelledby="h-plan">
+      <h2 id="h-plan" className="font-semibold tracking-tight">
+        Qué practicar esta semana
+      </h2>
+      <p className="mt-1 text-sm text-muted">
+        Los temas donde peor rindes dentro de la prueba que más mueve tu
+        {meta.plan_para ? (
+          <>
+            {" "}
+            primera preferencia sin alcanzar: <strong>{meta.plan_para}</strong>.
+          </>
+        ) : (
+          " puntaje."
+        )}
       </p>
 
-      <div className="mt-6 flex flex-wrap gap-3">
-        <Link
-          href="/examen"
-          className="btn-warm rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
-        >
-          Practicar {mejor_palanca ?? "ahora"} →
-        </Link>
-        <button
-          type="button"
-          onClick={onCambiar}
-          className="rounded-lg border border-border px-4 py-2.5 text-sm font-medium hover:bg-surface-hover"
-        >
-          Cambiar carrera
-        </button>
-        <button
-          type="button"
-          onClick={onBorrar}
-          className="rounded-lg px-3 py-2.5 text-sm text-muted hover:text-danger"
-        >
-          Quitar meta
-        </button>
-      </div>
-    </div>
+      <ul className="mt-4 flex flex-col divide-y divide-border">
+        {meta.plan.map((n) => (
+          <li key={n.code} className="flex items-center justify-between gap-3 py-3">
+            <span className="min-w-0">
+              <span className="block text-sm font-medium">{n.name}</span>
+              <span className="block text-xs text-muted">
+                {n.attempts === 0
+                  ? "Sin practicar todavía"
+                  : `${Math.round(n.accuracy * 100)}% de acierto en ${n.attempts} respuestas`}
+              </span>
+            </span>
+            <Link
+              href={n.has_lesson ? `/aprender/${n.code}` : `/practicar/${n.code}`}
+              className="shrink-0 text-xs font-medium text-accent hover:underline"
+            >
+              {n.has_lesson ? "Estudiar →" : "Practicar →"}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

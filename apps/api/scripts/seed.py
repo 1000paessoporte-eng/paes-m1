@@ -280,6 +280,9 @@ def seed_carreras(db) -> None:
             "m2": fila.get("m2"),
             "prueba_especial": fila.get("prueba_especial"),
             "electivo_alternativo": fila.get("electivo_alternativo", False),
+            "ponderado_min": fila.get("ponderado_min"),
+            "promedio_min": fila.get("promedio_min"),
+            "vacantes": fila.get("vacantes"),
             "proceso": datos["proceso"],
             "fuente": datos["fuente"],
         }
