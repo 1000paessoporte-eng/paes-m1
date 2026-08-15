@@ -122,6 +122,15 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "2 moles de soluto en 4 litros": str(2 / 4),
     "500 mL de una disolución 0,4": str(0.4 * 0.5),
     "diluye una disolución de 100 mL y 2 mol/L": str(2 * 100 / 400),
+    # Historia y Cs. Sociales: economía y cálculo temporal
+    "4.500.000 personas ocupadas": str(round(500_000 / (4_500_000 + 500_000) * 100)),
+    "IPC de un país pasa de 100 a 106": str(round((106 - 100) / 100 * 100)),
+    "PIB de 300.000 millones": f"{300_000 // 20:,}".replace(",", "."),
+    "fuerza de trabajo es de 60.000": str(round(3_000 / 60_000 * 100)),
+    "ofrecen 800 unidades": str(800 - 500),
+    "vende 200 unidades a 3.000 pesos": f"{3_000 * 200:,}".replace(",", "."),
+    "cayó el sector primario": str(55 - 11),
+    "comienza en 1810 y termina en 1830": str(1830 - 1810),
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),
