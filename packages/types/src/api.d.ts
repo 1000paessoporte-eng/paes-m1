@@ -599,6 +599,45 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/plan": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Mi Plan */
+        get: operations["mi_plan_api_plan_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/canjear": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Canjear
+         * @description Canjea un código promocional. El motivo del rechazo se le dice al
+         *     estudiante tal cual: "ya venció" y "ya se agotó" son cosas distintas y
+         *     esconderlo detrás de un error genérico solo genera correos a soporte.
+         */
+        post: operations["canjear_api_plan_canjear_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/demo/questions": {
         parameters: {
             query?: never;
@@ -831,6 +870,11 @@ export interface components {
             total: number;
             /** Percentage */
             percentage: number;
+        };
+        /** CanjearIn */
+        CanjearIn: {
+            /** Codigo */
+            codigo: string;
         };
         /** CarreraOut */
         CarreraOut: {
@@ -1282,6 +1326,25 @@ export interface components {
             /** Plan Para */
             plan_para: string | null;
         };
+        /**
+         * MiPlanOut
+         * @description El plan del usuario y lo que puede hacer con él.
+         */
+        MiPlanOut: {
+            plan: components["schemas"]["Plan"];
+            /** Vence El */
+            vence_el?: string | null;
+            /** Ensayos Usados */
+            ensayos_usados: number;
+            /** Ensayos Limite */
+            ensayos_limite: number | null;
+            /** Carreras Limite */
+            carreras_limite: number;
+            /** Analisis Avanzado */
+            analisis_avanzado: boolean;
+            /** Limites Activos */
+            limites_activos: boolean;
+        };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
             /** Skill Node Id */
@@ -1376,6 +1439,11 @@ export interface components {
             /** Source Note */
             source_note?: string | null;
         };
+        /**
+         * Plan
+         * @enum {string}
+         */
+        Plan: "gratis" | "pro" | "colegios";
         /** PostulacionOut */
         PostulacionOut: {
             /** Preferencia */
@@ -2778,6 +2846,59 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AnalyticsSummaryOut"];
+                };
+            };
+        };
+    };
+    mi_plan_api_plan_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MiPlanOut"];
+                };
+            };
+        };
+    };
+    canjear_api_plan_canjear_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CanjearIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MiPlanOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

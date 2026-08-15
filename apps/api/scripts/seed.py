@@ -302,6 +302,39 @@ def seed_carreras(db) -> None:
     )
 
 
+def seed_codigos(db) -> None:
+    """Códigos de ejemplo para poder probar el canje sin pasarela.
+
+    Son de prueba y con tope bajo a propósito: un código de demostración con
+    usos ilimitados en producción es plan Pro gratis para quien lo adivine.
+    """
+    from datetime import UTC, datetime, timedelta
+
+    from paes_api.modules.billing.models import Plan, PromoCode
+
+    ejemplos = [
+        {
+            "codigo": "PRUEBA-PRO",
+            "plan": Plan.PRO,
+            "dias": 30,
+            "usos_maximos": 20,
+            "descripcion": "Código de prueba interna, 30 días de Pro",
+            "vence_el": datetime.now(UTC) + timedelta(days=90),
+        },
+    ]
+
+    creados = 0
+    for datos in ejemplos:
+        existe = db.execute(
+            select(PromoCode).where(PromoCode.codigo == datos["codigo"])
+        ).scalar_one_or_none()
+        if existe is None:
+            db.add(PromoCode(**datos))
+            creados += 1
+    db.commit()
+    print(f"promo_codes: {creados} nuevos (de {len(ejemplos)} definidos)")
+
+
 def seed_demo_user(db) -> None:
     existing = db.execute(select(User).where(User.email == DEMO_EMAIL)).scalar_one_or_none()
     if existing:
@@ -332,6 +365,7 @@ def main() -> None:
         seed_questions(db, nodes, passages)
         seed_lessons(db, nodes)
         seed_carreras(db)
+        seed_codigos(db)
         seed_demo_user(db)
     finally:
         db.close()

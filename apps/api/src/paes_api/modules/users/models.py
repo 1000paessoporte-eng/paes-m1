@@ -7,6 +7,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from paes_api.shared.base import Base
 
 if TYPE_CHECKING:
+    from paes_api.modules.billing.models import Subscription
     from paes_api.modules.exam_focus.models import ExamAttempt
     from paes_api.modules.goals.models import MetaUsuario
     from paes_api.modules.skill_tree.models import UserSkillProgress
@@ -53,6 +54,9 @@ class User(Base):
     puntaje_nem: Mapped[int | None] = mapped_column(Integer, nullable=True)
     puntaje_ranking: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
+    subscriptions: Mapped[list["Subscription"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
     goal: Mapped[list["MetaUsuario"]] = relationship(
         back_populates="user", cascade="all, delete-orphan"
     )
