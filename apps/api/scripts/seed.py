@@ -26,6 +26,7 @@ from paes_api.modules.content.models import (
     Question,
     ReadingPassage,
 )
+from paes_api.modules.goals.models import Carrera
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 from paes_api.modules.users.models import User
 from paes_api.seed_data import (
@@ -244,6 +245,60 @@ def seed_lessons(db, nodes_by_code: dict[str, SkillNode]) -> None:
     )
 
 
+def seed_carreras(db) -> None:
+    """Carga las ponderaciones oficiales del proceso vigente.
+
+    El archivo lo genera `scripts/extraer_carreras.py` desde el PDF del DEMRE y
+    solo contiene carreras cuyas ponderaciones suman 100. Se actualiza en vez de
+    duplicar: cada proceso cambia los pesos y una carrera tiene que poder
+    corregirse sin perder las metas que apuntan a ella.
+    """
+    import json
+
+    ruta = Path(__file__).resolve().parents[1] / "src/paes_api/data/carreras_2026.json"
+    if not ruta.exists():
+        print("carreras: falta el archivo de datos, se omite")
+        return
+
+    datos = json.loads(ruta.read_text(encoding="utf-8"))
+    existentes = {
+        c.codigo: c for c in db.execute(select(Carrera)).scalars().all()
+    }
+
+    creadas = actualizadas = 0
+    for fila in datos["carreras"]:
+        valores = {
+            "universidad": fila["universidad"],
+            "nombre": fila["carrera"],
+            "sede": fila["sede"],
+            "nem": fila.get("nem"),
+            "ranking": fila.get("ranking"),
+            "lectora": fila.get("lectora"),
+            "m1": fila.get("m1"),
+            "historia": fila.get("historia"),
+            "ciencias": fila.get("ciencias"),
+            "m2": fila.get("m2"),
+            "prueba_especial": fila.get("prueba_especial"),
+            "electivo_alternativo": fila.get("electivo_alternativo", False),
+            "proceso": datos["proceso"],
+            "fuente": datos["fuente"],
+        }
+        actual = existentes.get(fila["codigo"])
+        if actual is None:
+            db.add(Carrera(codigo=fila["codigo"], **valores))
+            creadas += 1
+        elif any(getattr(actual, k) != v for k, v in valores.items()):
+            for k, v in valores.items():
+                setattr(actual, k, v)
+            actualizadas += 1
+
+    db.commit()
+    print(
+        f"carreras: {creadas} nuevas, {actualizadas} actualizadas "
+        f"(proceso {datos['proceso']}, {len(datos['carreras'])} en el archivo)"
+    )
+
+
 def seed_demo_user(db) -> None:
     existing = db.execute(select(User).where(User.email == DEMO_EMAIL)).scalar_one_or_none()
     if existing:
@@ -273,6 +328,7 @@ def main() -> None:
         passages = seed_passages(db)
         seed_questions(db, nodes, passages)
         seed_lessons(db, nodes)
+        seed_carreras(db)
         seed_demo_user(db)
     finally:
         db.close()

@@ -132,6 +132,36 @@ export function getSkillTree(
   return apiFetch<SkillNode[]>(`/api/skill-tree?subject=${subject}`, token);
 }
 
+export type Carrera =
+  paths["/api/meta/carreras"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export type Meta = NonNullable<
+  paths["/api/meta"]["get"]["responses"][200]["content"]["application/json"]
+>;
+
+export function buscarCarreras(q: string, token?: string): Promise<Carrera[]> {
+  return apiFetch<Carrera[]>(`/api/meta/carreras?q=${encodeURIComponent(q)}`, token);
+}
+
+export function getMeta(token?: string): Promise<Meta | null> {
+  return apiFetch<Meta | null>("/api/meta", token);
+}
+
+export function fijarMeta(
+  payload: { carrera_id: number; puntaje_nem?: number | null; puntaje_ranking?: number | null },
+  token?: string
+): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta", token, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+}
+
+export function borrarMeta(token?: string): Promise<void> {
+  return apiFetch<void>("/api/meta", token, { method: "DELETE" });
+}
+
 /** Un nodo con el progreso del estudiante. */
 export function getSkillNode(code: string, token?: string): Promise<SkillNode> {
   return apiFetch<SkillNode>(`/api/skill-tree/${code}`, token);

@@ -408,6 +408,42 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/meta/carreras": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Buscar Carreras */
+        get: operations["buscar_carreras_api_meta_carreras_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Ver Meta */
+        get: operations["ver_meta_api_meta_get"];
+        /** Fijar Meta */
+        put: operations["fijar_meta_api_meta_put"];
+        post?: never;
+        /** Borrar Meta */
+        delete: operations["borrar_meta_api_meta_delete"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/practice/{code}/questions": {
         parameters: {
             query?: never;
@@ -608,6 +644,26 @@ export interface components {
             daily: components["schemas"]["DailyStat"][];
         };
         /**
+         * AporteOut
+         * @description Cuánto pone cada factor en el puntaje ponderado, y cuánto podría poner.
+         */
+        AporteOut: {
+            /** Factor */
+            factor: string;
+            /** Etiqueta */
+            etiqueta: string;
+            /** Ponderacion */
+            ponderacion: number;
+            /** Puntaje */
+            puntaje: number | null;
+            /** Aporte */
+            aporte: number;
+            /** Por Cada 10 */
+            por_cada_10: number;
+            /** Origen */
+            origen: string;
+        };
+        /**
          * AttemptStatus
          * @enum {string}
          */
@@ -649,6 +705,41 @@ export interface components {
             total: number;
             /** Percentage */
             percentage: number;
+        };
+        /** CarreraOut */
+        CarreraOut: {
+            /** Id */
+            id: number;
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+            /** Nem */
+            nem?: number | null;
+            /** Ranking */
+            ranking?: number | null;
+            /** Lectora */
+            lectora?: number | null;
+            /** M1 */
+            m1?: number | null;
+            /** Historia */
+            historia?: number | null;
+            /** Ciencias */
+            ciencias?: number | null;
+            /** M2 */
+            m2?: number | null;
+            /** Prueba Especial */
+            prueba_especial?: number | null;
+            /** Electivo Alternativo */
+            electivo_alternativo: boolean;
+            /** Proceso */
+            proceso: number;
+            /** Fuente */
+            fuente: string;
         };
         /** ContenidoOut */
         ContenidoOut: {
@@ -1044,6 +1135,27 @@ export interface components {
             email: string;
             /** Password */
             password: string;
+        };
+        /** MetaIn */
+        MetaIn: {
+            /** Carrera Id */
+            carrera_id: number;
+            /** Puntaje Nem */
+            puntaje_nem?: number | null;
+            /** Puntaje Ranking */
+            puntaje_ranking?: number | null;
+        };
+        /** MetaOut */
+        MetaOut: {
+            carrera: components["schemas"]["CarreraOut"];
+            /** Ponderado */
+            ponderado: number | null;
+            /** Aportes */
+            aportes: components["schemas"]["AporteOut"][];
+            /** Faltantes */
+            faltantes: string[];
+            /** Mejor Palanca */
+            mejor_palanca: string | null;
         };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
@@ -2162,6 +2274,109 @@ export interface operations {
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
                 };
+            };
+        };
+    };
+    buscar_carreras_api_meta_carreras_get: {
+        parameters: {
+            query: {
+                /** @description Nombre de carrera o universidad */
+                q: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CarreraOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    ver_meta_api_meta_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"] | null;
+                };
+            };
+        };
+    };
+    fijar_meta_api_meta_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MetaIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    borrar_meta_api_meta_delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
         };
     };
