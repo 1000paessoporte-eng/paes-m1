@@ -27,6 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from paes_api.seed_data import (
+    LESSONS,
     PASSAGES,
     PASSAGES_HISTORIA,
     QUESTIONS,
@@ -51,6 +52,32 @@ TODOS_LOS_PASAJES = PASSAGES + PASSAGES_HISTORIA
 CLAVES_PASAJE = {p["key"] for p in TODOS_LOS_PASAJES}
 PASAJES_POR_CLAVE = {p["key"]: p for p in TODOS_LOS_PASAJES}
 DIFICULTADES = {"facil", "medio", "dificil"}
+
+# Resultado final del ejemplo resuelto de cada lección, recalculado acá sin
+# mirar el texto. Una lección con la aritmética mala es peor que no tener
+# lección: el estudiante la estudia creyendo que está bien.
+#
+# ALCANCE: comprueba que el resultado correcto aparezca en la resolución, no
+# que cada paso intermedio esté bien — para eso haría falta un motor simbólico.
+# Si alguien cambia un número intermedio y el final sigue apareciendo en otro
+# paso, esto no lo detecta. Detecta lo que importa más: que el ejemplo termine
+# donde debe terminar.
+RESULTADOS_LECCIONES: dict[str, Fraction] = {
+    "num_racionales": Fraction(5, 6) - Fraction(2, 9),                # 11/18
+    "num_potencias_raices": Fraction(2**5) * Fraction(1, 2**3) * 2,   # 8
+    "num_porcentajes": Fraction(round(20000 * 1.20 * 0.85)),          # 20.400
+    "alg_lineal": Fraction(9),                                        # x = 9
+    "alg_sistemas": Fraction(7),                                      # x = 7
+    "alg_cuadratica": Fraction(3),                                    # x = 2 o 3
+    "alg_funciones": Fraction(3),                                     # pendiente 3
+    "geo_plana": Fraction(round((8 * 5 - 3.14 * 2**2) * 100), 100),   # 27,44
+    "geo_pitagoras": Fraction(int(sqrt(13**2 - 5**2))),               # 12
+    "geo_transformaciones": Fraction(5),                              # (5, 3)
+    "geo_solidos": Fraction(round(3.14 * 10**2 * 20)),                # 6.280
+    "prob_estadistica_desc": Fraction(4 + 5 + 5 + 6 + 10, 5),         # 6
+    "prob_combinatoria": Fraction(comb(6, 2)),                        # 15
+    "prob_reglas": Fraction(5, 8) * Fraction(4, 7),                   # 5/14
+}
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
@@ -188,6 +215,42 @@ def _norm(t: str) -> str:
     return t.replace("\u2212", "-").replace("\u00a0", " ").strip()
 
 
+def _valores_del_texto(texto: str) -> set[Fraction]:
+    """Todos los números que aparecen en un texto, como valores exactos.
+
+    Compara VALOR y no cadena, porque el mismo número se escribe de varias
+    formas legítimas en el banco: `\\frac{11}{18}` en LaTeX, `20.400` con punto
+    de miles a la chilena, `27{,}44` con coma decimal. Buscar el string "11/18"
+    dentro de un texto que dice `\\frac{11}{18}` falla sin que nada esté malo.
+    """
+    t = _norm(texto)
+
+    valores: set[Fraction] = set()
+
+    # Fracciones LaTeX: \frac{a}{b} y \dfrac{a}{b}.
+    for num, den in re.findall(r"\\d?frac\{(-?\d+)\}\{(-?\d+)\}", t):
+        if int(den) != 0:
+            valores.add(Fraction(int(num), int(den)))
+
+    # Fracciones escritas con barra.
+    for num, den in re.findall(r"(-?\d+)\s*/\s*(\d+)", t):
+        if int(den) != 0:
+            valores.add(Fraction(int(num), int(den)))
+
+    # Números sueltos. El punto separa miles y la coma decimales (formato
+    # chileno); en LaTeX la coma decimal se escribe {,}.
+    limpio = t.replace("{,}", ",")
+    for crudo in re.findall(r"-?\d[\d.]*(?:,\d+)?", limpio):
+        sin_miles = crudo.replace(".", "") if "," in crudo or crudo.count(".") >= 1 else crudo
+        sin_miles = sin_miles.replace(",", ".")
+        try:
+            valores.add(Fraction(sin_miles))
+        except (ValueError, ZeroDivisionError):
+            continue
+
+    return valores
+
+
 def main() -> int:
     fallas: list[str] = []
 
@@ -289,6 +352,40 @@ def main() -> int:
             )
         comprobadas += 1
 
+    # ---- capa 4: lecciones ----
+    # La lección es lo que el estudiante lee ANTES de practicar, y se la cree.
+    # Vale la misma exigencia que una pregunta.
+    for codigo, leccion in LESSONS.items():
+        if codigo not in CODIGOS:
+            fallas.append(f"lección de un nodo inexistente: '{codigo}'")
+        for campo in ("intro", "theory", "example_statement"):
+            if not leccion.get(campo, "").strip():
+                fallas.append(f"lección '{codigo}' sin {campo}")
+        pasos = leccion.get("example_steps", [])
+        if len(pasos) < 2:
+            fallas.append(f"lección '{codigo}' tiene {len(pasos)} paso(s); mínimo 2")
+        for i, paso in enumerate(pasos, 1):
+            # El "porque" es la razón de ser del formato: sin él queda una
+            # receta para copiar, no una explicación.
+            if not paso.get("accion", "").strip():
+                fallas.append(f"lección '{codigo}', paso {i} sin acción")
+            if not paso.get("porque", "").strip():
+                fallas.append(f"lección '{codigo}', paso {i} sin el porqué")
+
+    leidas = 0
+    for codigo, esperado in RESULTADOS_LECCIONES.items():
+        leccion = LESSONS.get(codigo)
+        if leccion is None:
+            fallas.append(f"se comprueba un resultado de '{codigo}', que no existe")
+            continue
+        texto = " ".join(p["accion"] for p in leccion["example_steps"])
+        if esperado not in _valores_del_texto(texto):
+            fallas.append(
+                f"aritmética de la lección '{codigo}': el resultado recalculado "
+                f"es {esperado} y no aparece en ningún paso del ejemplo"
+            )
+        leidas += 1
+
     # ---- reporte ----
     print(
         f"preguntas en el banco: {len(todas)} (matemática {len(QUESTIONS)}, "
@@ -297,6 +394,7 @@ def main() -> int:
     )
     print(f"textos y fuentes: {len(TODOS_LOS_PASAJES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
+    print(f"lecciones: {len(LESSONS)} ({leidas} con resultado recalculado)")
     por_nodo = Counter(q["skill_node"] for q in todas)
     sin_suficientes = [c for c in CODIGOS if por_nodo[c] < 5]
     if sin_suficientes:

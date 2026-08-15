@@ -27,7 +27,11 @@ from paes_api.modules.skill_tree.models import (
     Subject,
     UserSkillProgress,
 )
-from paes_api.modules.skill_tree.schemas import SkillNodeProgressOut
+from paes_api.modules.skill_tree.schemas import (
+    LessonOut,
+    LessonStepOut,
+    SkillNodeProgressOut,
+)
 
 MIN_ATTEMPTS_FOR_UNLOCK = 4
 
@@ -129,6 +133,7 @@ def get_user_skill_tree(
             status=progress_by_node[node.id].status,
             accuracy=progress_by_node[node.id].accuracy,
             attempts=progress_by_node[node.id].attempts,
+            has_lesson=node.lesson is not None,
         )
         for node in ordered
     ]
@@ -247,3 +252,29 @@ def apply_attempt_results(db: Session, user_id: int, attempt_id: int) -> None:
 
     _recompute_unlocks(nodes_by_id, progress_by_node)
     db.commit()
+
+
+def get_lesson(db: Session, code: str) -> LessonOut | None:
+    """La teoría de un nodo, o None si todavía no tiene.
+
+    No exige progreso: un estudiante puede leer la teoría de un tema bloqueado.
+    Bloquear el acceso a la explicación sería castigar justo a quien más la
+    necesita; lo que se desbloquea con el progreso es la práctica, no el
+    estudio.
+    """
+    node = db.execute(
+        select(SkillNode).where(SkillNode.code == code)
+    ).scalar_one_or_none()
+    if node is None or node.lesson is None:
+        return None
+
+    leccion = node.lesson
+    return LessonOut(
+        node_code=node.code,
+        node_name=node.name,
+        intro=leccion.intro,
+        theory=leccion.theory,
+        example_statement=leccion.example_statement,
+        example_steps=[LessonStepOut(**paso) for paso in leccion.example_steps],
+        common_error=leccion.common_error,
+    )
