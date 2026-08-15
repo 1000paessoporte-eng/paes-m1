@@ -42,6 +42,7 @@ const SECCIONES = [
       "Haber tenido plan Pro o superior activo por al menos 6 meses, sumados, dentro de los 12 meses anteriores al día de la prueba. No necesitan ser consecutivos.",
       "Haber rendido y terminado al menos 30 ensayos de 34 preguntas o más en la plataforma. Los ensayos cortos, la práctica por tema y los intentos abandonados no cuentan.",
       "Haber practicado en al menos 90 días distintos, entendiendo por día practicado aquel en que se respondieron 10 o más preguntas.",
+      "Haber alcanzado una racha de al menos 15 días seguidos rindiendo ensayos. Se considera la racha MÁS LARGA lograda en el periodo, no la que esté activa al momento de la prueba: enfermarse un día no puede dejar a nadie fuera del premio.",
       "Que al menos 10 de esos ensayos correspondan a la misma prueba en la que se obtuvo el puntaje nacional.",
       "Presentar el certificado oficial de resultados del DEMRE, a nombre del titular de la cuenta y con el mismo RUT registrado.",
       "Que la cuenta no haya sido suspendida por uso compartido, automatización o cualquier forma de manipulación de los registros de práctica.",

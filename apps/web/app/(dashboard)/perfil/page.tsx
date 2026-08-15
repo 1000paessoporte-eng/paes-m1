@@ -53,7 +53,11 @@ export default async function PerfilPage() {
       </div>
 
       <div className="mt-8 max-w-lg">
-        <ProfileForm initialName={user.name} email={user.email} />
+        <ProfileForm
+          initialName={user.name}
+          email={user.email}
+          initialRecordatorios={user.recordatorios_email ?? true}
+        />
       </div>
     </div>
   );

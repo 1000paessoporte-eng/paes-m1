@@ -556,6 +556,32 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/reminders/run": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Correr Recordatorios
+         * @description Manda los recordatorios del día. La llama el cron, no una persona.
+         *
+         *     Va protegido por un secreto compartido y no por sesión: quien la ejecuta es
+         *     una tarea programada, no un usuario. Sin el secreto configurado el endpoint
+         *     queda cerrado —404— en vez de abierto: un disparador de correos masivos
+         *     accesible por internet es exactamente la clase de puerta que no se deja
+         *     entornada por comodidad.
+         */
+        post: operations["correr_recordatorios_api_reminders_run_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/analytics/summary": {
         parameters: {
             query?: never;
@@ -715,6 +741,21 @@ export interface components {
              * @default 0
              */
             active_days: number;
+            /**
+             * Exam Streak Days
+             * @default 0
+             */
+            exam_streak_days: number;
+            /**
+             * Best Exam Streak Days
+             * @default 0
+             */
+            best_exam_streak_days: number;
+            /**
+             * Exam Days
+             * @default 0
+             */
+            exam_days: number;
             /** Total Questions Answered */
             total_questions_answered: number;
             /** Total Correct */
@@ -1632,6 +1673,8 @@ export interface components {
         };
         /** UpdateMeIn */
         UpdateMeIn: {
+            /** Recordatorios Email */
+            recordatorios_email?: boolean | null;
             /** Name */
             name?: string | null;
             /** Current Password */
@@ -1641,6 +1684,11 @@ export interface components {
         };
         /** UserOut */
         UserOut: {
+            /**
+             * Recordatorios Email
+             * @default true
+             */
+            recordatorios_email: boolean;
             /** Id */
             id: number;
             /** Email */
@@ -2663,6 +2711,39 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["PracticeAnswerOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    correr_recordatorios_api_reminders_run_post: {
+        parameters: {
+            query?: never;
+            header?: {
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
                 };
             };
             /** @description Validation Error */

@@ -39,6 +39,15 @@ class User(Base):
         DateTime(timezone=True), server_default=func.now()
     )
 
+    #: Recordatorios por correo para no perder la racha. Opt-in explícito: se
+    #: activa al registrarse y se puede apagar en el perfil o desde el enlace
+    #: que va al pie de cada correo. Nunca se manda a quien lo apagó.
+    recordatorios_email: Mapped[bool] = mapped_column(Boolean, default=True)
+    #: Cuándo se le mandó el último, para no escribirle todos los días.
+    ultimo_recordatorio: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
     #: Puntajes de NEM y ranking, tal como vienen en el informe del estudiante.
     #: Son de la persona, no de cada carrera a la que postula.
     puntaje_nem: Mapped[int | None] = mapped_column(Integer, nullable=True)
