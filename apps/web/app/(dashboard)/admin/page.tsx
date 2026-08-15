@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { ApiError, getAdminMetrics } from "@/lib/api";
+import { ApiError, getAdminMetrics, type AdminMetrics } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { SerieChart } from "@/components/admin/serie-chart";
 import { StatTile } from "@/components/analytics/stat-tile";
@@ -40,6 +40,13 @@ export default async function AdminPage() {
     throw err;
   }
 
+  // El front y la API se despliegan por separado, así que durante unos minutos
+  // una versión puede ir adelante de la otra. Antes eso tumbaba la pantalla
+  // completa: la página leía m.embudo de una respuesta que todavía no lo traía
+  // y lanzaba, dejando al admin sin ninguna métrica, ni siquiera las que sí
+  // habían llegado. Cada sección nueva se dibuja solo si su dato existe.
+  const p = m as Partial<AdminMetrics>;
+
   return (
     <div>
       <h1 className="text-2xl font-semibold">Panel de administración</h1>
@@ -52,10 +59,18 @@ export default async function AdminPage() {
         <StatTile label="Cuentas registradas" value={String(m.usuarios.registros.total)} icon={<IconoPersonas />} />
         <StatTile label="Entraron esta semana" value={String(m.sesiones.activos_7)} icon={<IconoEntrada />} />
         <StatTile label="Visitantes esta semana" value={String(m.visitas.visitantes.ultimos_7)} icon={<IconoOjo />} />
-        <StatTile label="Se registran" value={porcentaje(m.embudo.tasa_registro)} icon={<IconoCheck />} />
+        <StatTile
+          label={p.embudo ? "Se registran" : "Ensayos rendidos"}
+          value={p.embudo ? porcentaje(p.embudo.tasa_registro) : String(m.contenido.ensayos.total)}
+          icon={<IconoCheck />}
+        />
       </div>
 
 
+      {p.embudo && (() => {
+        const embudo = p.embudo;
+        return (
+        <>
       {/* ── Embudo ───────────────────────────────────────────────────── */}
       <Seccion titulo="Embudo de conversión (30 días)">
         <p className="mb-3 text-xs leading-relaxed text-muted">
@@ -65,34 +80,41 @@ export default async function AdminPage() {
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           <Paso
             label="Visitaron"
-            valor={m.embudo.visitantes}
+            valor={embudo.visitantes}
             nota="Navegadores distintos"
           />
           <Paso
             label="Se registraron"
-            valor={m.embudo.registrados}
-            nota={`${porcentaje(m.embudo.tasa_registro)} de quienes visitaron`}
+            valor={embudo.registrados}
+            nota={`${porcentaje(embudo.tasa_registro)} de quienes visitaron`}
           />
           <Paso
             label="Rindieron un ensayo"
-            valor={m.embudo.con_ensayo}
-            nota={`${porcentaje(m.embudo.tasa_activacion)} de quienes se registraron`}
+            valor={embudo.con_ensayo}
+            nota={`${porcentaje(embudo.tasa_activacion)} de quienes se registraron`}
           />
           <Paso
             label="Lo terminaron"
-            valor={m.embudo.con_ensayo_terminado}
-            nota={`${porcentaje(m.embudo.tasa_finalizacion)} de quienes lo empezaron`}
+            valor={embudo.con_ensayo_terminado}
+            nota={`${porcentaje(embudo.tasa_finalizacion)} de quienes lo empezaron`}
           />
         </div>
         <p className="mt-3 text-xs leading-relaxed text-muted">
-          Además, {m.embudo.visitantes_convertidos}{" "}
-          {m.embudo.visitantes_convertidos === 1 ? "navegador estuvo" : "navegadores estuvieron"}{" "}
-          sin sesión y después {m.embudo.visitantes_convertidos === 1 ? "apareció" : "aparecieron"}{" "}
+          Además, {embudo.visitantes_convertidos}{" "}
+          {embudo.visitantes_convertidos === 1 ? "navegador estuvo" : "navegadores estuvieron"}{" "}
+          sin sesión y después {embudo.visitantes_convertidos === 1 ? "apareció" : "aparecieron"}{" "}
           con cuenta iniciada. Es la única conversión que se puede observar
           directamente; no se guarda nada que identifique a la persona.
         </p>
       </Seccion>
+        </>
+        );
+      })()}
 
+      {p.retencion && (() => {
+        const retencion = p.retencion;
+        return (
+        <>
       {/* ── Retención ────────────────────────────────────────────────── */}
       <Seccion titulo="Retención">
         <p className="mb-3 text-xs leading-relaxed text-muted">
@@ -100,38 +122,45 @@ export default async function AdminPage() {
           perdido, aunque siga contando en el total.
         </p>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          <Dato label="Entraron 1 solo día" valor={m.retencion.un_dia} />
-          <Dato label="Entraron 2 o 3 días" valor={m.retencion.dos_a_tres} />
-          <Dato label="Entraron 4 días o más" valor={m.retencion.cuatro_o_mas} />
+          <Dato label="Entraron 1 solo día" valor={retencion.un_dia} />
+          <Dato label="Entraron 2 o 3 días" valor={retencion.dos_a_tres} />
+          <Dato label="Entraron 4 días o más" valor={retencion.cuatro_o_mas} />
           <Dato
             label="Volvieron tras registrarse"
             valor={
-              m.retencion.base_volvieron === 0
+              retencion.base_volvieron === 0
                 ? "—"
-                : `${m.retencion.volvieron} de ${m.retencion.base_volvieron}`
+                : `${retencion.volvieron} de ${retencion.base_volvieron}`
             }
           />
         </div>
-        {m.retencion.base_volvieron === 0 && (
+        {retencion.base_volvieron === 0 && (
           <p className="mt-3 text-xs leading-relaxed text-muted">
             Todavía no hay nadie registrado hace más de una semana, así que no se
             puede medir si vuelven. Se mostrará solo cuando el dato exista.
           </p>
         )}
       </Seccion>
+        </>
+        );
+      })()}
 
+      {p.ensayos && (() => {
+        const ensayos = p.ensayos;
+        return (
+        <>
       {/* ── Ensayos ──────────────────────────────────────────────────── */}
       <Seccion titulo="Ensayos">
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          <Dato label="Iniciados" valor={m.ensayos.iniciados} />
-          <Dato label="Terminados" valor={m.ensayos.terminados} />
-          <Dato label="Abandonados" valor={m.ensayos.abandonados} />
+          <Dato label="Iniciados" valor={ensayos.iniciados} />
+          <Dato label="Terminados" valor={ensayos.terminados} />
+          <Dato label="Abandonados" valor={ensayos.abandonados} />
           <Dato
             label="Duración mediana"
             valor={
-              m.ensayos.duracion_mediana_min == null
+              ensayos.duracion_mediana_min == null
                 ? "—"
-                : `${m.ensayos.duracion_mediana_min} min`
+                : `${ensayos.duracion_mediana_min} min`
             }
           />
         </div>
@@ -139,7 +168,7 @@ export default async function AdminPage() {
         <Tabla
           titulo="Uso por prueba"
           cabeceras={["Prueba", "Iniciados", "Terminados", "Puntaje promedio"]}
-          filas={m.ensayos.por_prueba.map((u) => [
+          filas={ensayos.por_prueba.map((u) => [
             u.subject.toUpperCase(),
             String(u.iniciados),
             String(u.terminados),
@@ -148,7 +177,14 @@ export default async function AdminPage() {
           vacio="Todavía no se ha rendido ningún ensayo."
         />
       </Seccion>
+        </>
+        );
+      })()}
 
+      {p.banco && (() => {
+        const banco = p.banco;
+        return (
+        <>
       {/* ── Banco ────────────────────────────────────────────────────── */}
       <Seccion titulo="Cobertura del banco">
         <p className="mb-3 text-xs leading-relaxed text-muted">
@@ -158,7 +194,7 @@ export default async function AdminPage() {
         <Tabla
           titulo="Preguntas por prueba"
           cabeceras={["Prueba", "Banco", "Oficiales", "Ensayos completos", "Sin responder"]}
-          filas={m.banco.por_prueba.map((c) => [
+          filas={banco.por_prueba.map((c) => [
             c.subject.toUpperCase(),
             String(c.banco),
             String(c.oficiales),
@@ -172,14 +208,17 @@ export default async function AdminPage() {
           ])}
           vacio="Sin datos de banco."
         />
-        {m.banco.nodos_flacos.length > 0 && (
+        {banco.nodos_flacos.length > 0 && (
           <p className="mt-3 text-xs leading-relaxed text-muted">
-            Nodos con menos de 5 preguntas ({m.banco.nodos_flacos.length}):{" "}
-            <code className="text-xs">{m.banco.nodos_flacos.join(", ")}</code>. Se
+            Nodos con menos de 5 preguntas ({banco.nodos_flacos.length}):{" "}
+            <code className="text-xs">{banco.nodos_flacos.join(", ")}</code>. Se
             ven practicables en el árbol y se agotan al primer intento.
           </p>
         )}
       </Seccion>
+        </>
+        );
+      })()}
 
       {/* ── Usuarios ─────────────────────────────────────────────────── */}
       <Seccion titulo="Usuarios">
