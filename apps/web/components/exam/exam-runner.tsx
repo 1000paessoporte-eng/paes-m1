@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { PassagePanel } from "@/components/exam/passage-panel";
+import { Burbuja } from "@/components/ui/burbuja";
 import { TextoRico } from "@/components/texto-rico";
 import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
@@ -490,21 +491,19 @@ export function ExamRunner({
                     // no hay hover, y sin esto la única señal de que el dedo
                     // acertó llega cuando ya se pintó la alternativa.
                     "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
+                    // La señal de "elegida" la da la burbuja, no la fila: en un
+                    // cartón de respuestas lo que se rellena es el círculo. El
+                    // contenedor solo se firma con un borde de grafito, sin
+                    // fondo de color, para no competir con ella.
                     elegida
-                      ? "border-accent bg-accent/10 ring-1 ring-accent"
+                      ? "border-grafito bg-surface"
                       : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
                   )}
                 >
-                  <span
-                    className={cn(
-                      "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors duration-150",
-                      elegida
-                        ? "bg-accent text-accent-foreground"
-                        : "bg-surface-hover text-muted"
-                    )}
-                  >
-                    {LABELS[i]}
-                  </span>
+                  {/* La burbuja del cartón de respuestas: acá es el uso puro,
+                      porque durante el ensayo nunca se corrige en pantalla.
+                      Ver components/ui/burbuja.tsx. */}
+                  <Burbuja letra={LABELS[i]} marcada={elegida} />
                   <TextoRico texto={alt.text} inline />
                 </button>
               );
