@@ -136,3 +136,47 @@ def test_contenido_sin_datos_no_inventa_ceros(
     assert contenido["puntaje_promedio"] is None
     assert contenido["tasa_acierto_global"] is None
     assert contenido["preguntas_mas_falladas"] == []
+
+
+def test_secciones_nuevas_presentes(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    headers, _ = register_user(email="jefa2@milpaes.cl")
+    _hacer_admin(db_session, "jefa2@milpaes.cl")
+
+    body = client.get("/api/admin/metrics", headers=headers).json()
+    assert set(body) >= {"embudo", "retencion", "ensayos", "banco"}
+
+
+def test_tasas_sin_denominador_viajan_como_null(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """Una plataforma recién estrenada no tiene ensayos, y un 0% ahí mentiría.
+
+    Con cero registros que hayan rendido algo, "0% de finalización" se leería
+    como que todos abandonan. El campo va en null y la pantalla muestra un
+    guión, que es lo que corresponde cuando el dato no existe todavía.
+    """
+    headers, _ = register_user(email="jefa3@milpaes.cl")
+    _hacer_admin(db_session, "jefa3@milpaes.cl")
+
+    embudo = client.get("/api/admin/metrics", headers=headers).json()["embudo"]
+    # Nadie rindió nada: activación y finalización no se pueden calcular.
+    assert embudo["tasa_activacion"] is None or embudo["con_ensayo"] == 0
+    assert embudo["tasa_finalizacion"] is None
+
+
+def test_cobertura_del_banco_cubre_las_cinco_pruebas(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """Es la métrica que evita ofrecer una prueba que no arma un ensayo."""
+    headers, _ = register_user(email="jefa4@milpaes.cl")
+    _hacer_admin(db_session, "jefa4@milpaes.cl")
+
+    banco = client.get("/api/admin/metrics", headers=headers).json()["banco"]
+    pruebas = {c["subject"] for c in banco["por_prueba"]}
+    assert pruebas == {"m1", "m2", "lectora", "ciencias", "historia"}
+    for c in banco["por_prueba"]:
+        # ensayos_completos es banco/oficiales: debe ser coherente con ambos.
+        assert c["ensayos_completos"] == round(c["banco"] / c["oficiales"], 2)
+        assert c["nunca_respondidas"] <= c["banco"]

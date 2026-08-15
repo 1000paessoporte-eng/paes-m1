@@ -81,9 +81,88 @@ class ContenidoOut(BaseModel):
     nodos_mas_flojos: list[NodoFlojo]
 
 
+class EmbudoOut(BaseModel):
+    """De visita anónima a ensayo terminado, en los últimos 30 días.
+
+    Es la pregunta que ningún total responde: no importa cuánta gente entra si
+    no se sabe dónde deja de avanzar. Las tasas viajan como null cuando el
+    denominador es cero, porque un 0% se leería como "nadie convierte" cuando
+    en realidad nadie llegó todavía a ese paso.
+    """
+
+    visitantes: int
+    registrados: int
+    #: Cuentas creadas en la ventana que además iniciaron al menos un ensayo.
+    con_ensayo: int
+    con_ensayo_terminado: int
+    tasa_registro: float | None
+    tasa_activacion: float | None
+    tasa_finalizacion: float | None
+    #: Navegadores que estuvieron anónimos y después aparecieron con sesión.
+    #: Es la única medida directa de conversión que permite el visitor_id.
+    visitantes_convertidos: int
+
+
+class RetencionOut(BaseModel):
+    """Si la gente vuelve. Un registro que no vuelve es un registro perdido."""
+
+    #: Usuarios con actividad en 1, en 2-3 y en 4 o más días distintos (30 días).
+    un_dia: int
+    dos_a_tres: int
+    cuatro_o_mas: int
+    #: De los registrados hace 7 días o más, cuántos tuvieron actividad después
+    #: del día en que se registraron. `base` es cuántos podían hacerlo.
+    volvieron: int
+    base_volvieron: int
+
+
+class UsoPrueba(BaseModel):
+    subject: str
+    iniciados: int
+    terminados: int
+    puntaje_promedio: float | None
+
+
+class EnsayosOut(BaseModel):
+    """Qué se rinde y qué se abandona."""
+
+    iniciados: int
+    terminados: int
+    #: En curso y sin tocar hace más de un día: en la práctica, abandonados.
+    abandonados: int
+    tasa_finalizacion: float | None
+    duracion_mediana_min: float | None
+    por_prueba: list[UsoPrueba]
+
+
+class CoberturaPrueba(BaseModel):
+    subject: str
+    #: Preguntas activas en el banco para esa prueba.
+    banco: int
+    #: Cuántas trae la prueba oficial del DEMRE.
+    oficiales: int
+    #: banco / oficiales. Bajo 1 significa que no alcanza para un ensayo completo.
+    ensayos_completos: float
+    #: Preguntas del banco que nunca ha respondido nadie.
+    nunca_respondidas: int
+
+
+class BancoOut(BaseModel):
+    """Salud del contenido: si el banco alcanza para lo que la portada promete."""
+
+    por_prueba: list[CoberturaPrueba]
+    #: Nodos publicados con menos de 5 preguntas: aparecen practicables y se
+    #: agotan al primer intento.
+    nodos_flacos: list[str]
+
+
 class AdminMetricsOut(BaseModel):
     generado_en: datetime
     usuarios: UsuariosOut
     sesiones: SesionesOut
     visitas: VisitasOut
     contenido: ContenidoOut
+    embudo: EmbudoOut
+    retencion: RetencionOut
+    ensayos: EnsayosOut
+    banco: BancoOut

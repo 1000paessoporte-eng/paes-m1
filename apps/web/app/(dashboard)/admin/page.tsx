@@ -52,8 +52,134 @@ export default async function AdminPage() {
         <StatTile label="Cuentas registradas" value={String(m.usuarios.registros.total)} icon={<IconoPersonas />} />
         <StatTile label="Entraron esta semana" value={String(m.sesiones.activos_7)} icon={<IconoEntrada />} />
         <StatTile label="Visitantes esta semana" value={String(m.visitas.visitantes.ultimos_7)} icon={<IconoOjo />} />
-        <StatTile label="Ensayos rendidos" value={String(m.contenido.ensayos.total)} icon={<IconoCheck />} />
+        <StatTile label="Se registran" value={porcentaje(m.embudo.tasa_registro)} icon={<IconoCheck />} />
       </div>
+
+
+      {/* ── Embudo ───────────────────────────────────────────────────── */}
+      <Seccion titulo="Embudo de conversión (30 días)">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          Dónde deja de avanzar la gente. Un total de visitas no dice nada si no
+          se sabe en qué paso se pierde.
+        </p>
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Paso
+            label="Visitaron"
+            valor={m.embudo.visitantes}
+            nota="Navegadores distintos"
+          />
+          <Paso
+            label="Se registraron"
+            valor={m.embudo.registrados}
+            nota={`${porcentaje(m.embudo.tasa_registro)} de quienes visitaron`}
+          />
+          <Paso
+            label="Rindieron un ensayo"
+            valor={m.embudo.con_ensayo}
+            nota={`${porcentaje(m.embudo.tasa_activacion)} de quienes se registraron`}
+          />
+          <Paso
+            label="Lo terminaron"
+            valor={m.embudo.con_ensayo_terminado}
+            nota={`${porcentaje(m.embudo.tasa_finalizacion)} de quienes lo empezaron`}
+          />
+        </div>
+        <p className="mt-3 text-xs leading-relaxed text-muted">
+          Además, {m.embudo.visitantes_convertidos}{" "}
+          {m.embudo.visitantes_convertidos === 1 ? "navegador estuvo" : "navegadores estuvieron"}{" "}
+          sin sesión y después {m.embudo.visitantes_convertidos === 1 ? "apareció" : "aparecieron"}{" "}
+          con cuenta iniciada. Es la única conversión que se puede observar
+          directamente; no se guarda nada que identifique a la persona.
+        </p>
+      </Seccion>
+
+      {/* ── Retención ────────────────────────────────────────────────── */}
+      <Seccion titulo="Retención">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          Si vuelven. Un registro que entra una vez y no regresa es un registro
+          perdido, aunque siga contando en el total.
+        </p>
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Dato label="Entraron 1 solo día" valor={m.retencion.un_dia} />
+          <Dato label="Entraron 2 o 3 días" valor={m.retencion.dos_a_tres} />
+          <Dato label="Entraron 4 días o más" valor={m.retencion.cuatro_o_mas} />
+          <Dato
+            label="Volvieron tras registrarse"
+            valor={
+              m.retencion.base_volvieron === 0
+                ? "—"
+                : `${m.retencion.volvieron} de ${m.retencion.base_volvieron}`
+            }
+          />
+        </div>
+        {m.retencion.base_volvieron === 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            Todavía no hay nadie registrado hace más de una semana, así que no se
+            puede medir si vuelven. Se mostrará solo cuando el dato exista.
+          </p>
+        )}
+      </Seccion>
+
+      {/* ── Ensayos ──────────────────────────────────────────────────── */}
+      <Seccion titulo="Ensayos">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Dato label="Iniciados" valor={m.ensayos.iniciados} />
+          <Dato label="Terminados" valor={m.ensayos.terminados} />
+          <Dato label="Abandonados" valor={m.ensayos.abandonados} />
+          <Dato
+            label="Duración mediana"
+            valor={
+              m.ensayos.duracion_mediana_min == null
+                ? "—"
+                : `${m.ensayos.duracion_mediana_min} min`
+            }
+          />
+        </div>
+
+        <Tabla
+          titulo="Uso por prueba"
+          cabeceras={["Prueba", "Iniciados", "Terminados", "Puntaje promedio"]}
+          filas={m.ensayos.por_prueba.map((u) => [
+            u.subject.toUpperCase(),
+            String(u.iniciados),
+            String(u.terminados),
+            u.puntaje_promedio == null ? "—" : String(u.puntaje_promedio),
+          ])}
+          vacio="Todavía no se ha rendido ningún ensayo."
+        />
+      </Seccion>
+
+      {/* ── Banco ────────────────────────────────────────────────────── */}
+      <Seccion titulo="Cobertura del banco">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          Si el contenido alcanza para lo que la portada ofrece. Bajo 1,0 la
+          prueba no arma ni un ensayo completo, aunque aparezca en el menú.
+        </p>
+        <Tabla
+          titulo="Preguntas por prueba"
+          cabeceras={["Prueba", "Banco", "Oficiales", "Ensayos completos", "Sin responder"]}
+          filas={m.banco.por_prueba.map((c) => [
+            c.subject.toUpperCase(),
+            String(c.banco),
+            String(c.oficiales),
+            <span
+              key="e"
+              className={c.ensayos_completos < 1 ? "font-semibold text-danger" : ""}
+            >
+              {c.ensayos_completos.toFixed(2)}×
+            </span>,
+            String(c.nunca_respondidas),
+          ])}
+          vacio="Sin datos de banco."
+        />
+        {m.banco.nodos_flacos.length > 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            Nodos con menos de 5 preguntas ({m.banco.nodos_flacos.length}):{" "}
+            <code className="text-xs">{m.banco.nodos_flacos.join(", ")}</code>. Se
+            ven practicables en el árbol y se agotan al primer intento.
+          </p>
+        )}
+      </Seccion>
 
       {/* ── Usuarios ─────────────────────────────────────────────────── */}
       <Seccion titulo="Usuarios">
@@ -214,6 +340,24 @@ function Seccion({ titulo, children }: { titulo: string; children: React.ReactNo
       </h2>
       {children}
     </section>
+  );
+}
+
+function Paso({
+  label,
+  valor,
+  nota,
+}: {
+  label: string;
+  valor: number;
+  nota: string;
+}) {
+  return (
+    <div className="rounded-xl border border-border bg-surface p-4">
+      <p className="text-xs text-muted">{label}</p>
+      <p className="mt-1 text-2xl font-semibold tracking-tight tabular-nums">{valor}</p>
+      <p className="mt-1 text-xs text-muted">{nota}</p>
+    </div>
   );
 }
 
