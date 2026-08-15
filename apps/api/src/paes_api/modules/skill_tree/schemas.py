@@ -15,6 +15,11 @@ class SkillNodeOut(BaseModel):
     unlock_threshold: float
     display_order: int
     prerequisite_codes: list[str] = []
+    #: Los nombres de esos prerrequisitos. Van con el nodo porque la pantalla
+    #: filtra por prueba: los prerrequisitos de M2 son nodos de M1, que no
+    #: vienen en la misma respuesta, y sin esto la tarjeta terminaba mostrando
+    #: el código interno ("Requiere: num_racionales") al estudiante.
+    prerequisite_names: list[str] = []
 
 
 class SkillNodeProgressOut(SkillNodeOut):

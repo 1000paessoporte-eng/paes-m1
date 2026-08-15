@@ -55,6 +55,15 @@ export default async function ArbolHabilidadesPage({
 
   const conLeccion = nodes.filter((n) => n.has_lesson).length;
 
+  // Una prueba sin ningún nodo practicable es un callejón sin salida: el
+  // estudiante ve una pantalla de tarjetas grises y ninguna explicación. Pasa
+  // en M2, cuyos once nodos dependen todos de temas de M1 — que es correcto
+  // pedagógicamente, pero hay que decirlo y mostrar por dónde empezar.
+  const practicables = nodes.filter((n) => n.status !== "locked");
+  const prerrequisitos = [
+    ...new Set(nodes.flatMap((n) => n.prerequisite_codes)),
+  ].filter((code) => !nodes.some((n) => n.code === code));
+
   return (
     <div>
       <h1 className="text-2xl font-semibold">Árbol de Habilidades</h1>
@@ -92,6 +101,25 @@ export default async function ArbolHabilidadesPage({
           Los temas de esta prueba todavía no tienen la teoría escrita: por
           ahora llevan directo a practicar. Matemática M1 sí la tiene completa.
         </p>
+      )}
+
+      {nodes.length > 0 && practicables.length === 0 && (
+        <div className="mt-5 rounded-xl border border-warning/40 bg-warning/10 p-5">
+          <p className="text-sm font-semibold text-warning">
+            Todavía no puedes practicar estos temas
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-foreground">
+            {prerrequisitos.length > 0
+              ? "Esta prueba se construye sobre otra: cada tema de acá exige dominar antes su equivalente en Competencia Matemática M1. Practica M1 hasta llegar al 75% de acierto en esos temas y estos se abren solos."
+              : "Cada tema de esta prueba exige dominar antes el que viene más abajo en el árbol."}
+          </p>
+          <Link
+            href="/arbol?prueba=m1"
+            className="btn-warm mt-4 inline-block rounded-lg px-4 py-2 text-sm font-semibold text-on-fill"
+          >
+            Ir al árbol de M1 →
+          </Link>
+        </div>
       )}
 
       {recommended && (

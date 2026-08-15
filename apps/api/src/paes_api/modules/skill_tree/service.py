@@ -130,6 +130,7 @@ def get_user_skill_tree(
             unlock_threshold=node.unlock_threshold,
             display_order=node.display_order,
             prerequisite_codes=[p.code for p in node.prerequisites],
+            prerequisite_names=[p.name for p in node.prerequisites],
             status=progress_by_node[node.id].status,
             accuracy=progress_by_node[node.id].accuracy,
             attempts=progress_by_node[node.id].attempts,
