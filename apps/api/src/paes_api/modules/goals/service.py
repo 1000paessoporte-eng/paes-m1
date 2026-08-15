@@ -7,6 +7,8 @@ con las mismas horas de estudio, subir diez puntos en la prueba que la carrera
 pondera al 35% vale tres veces y media más que subirlos donde pondera 10%.
 """
 
+import unicodedata
+
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -137,15 +139,32 @@ def calcular_meta(db: Session, user_id: int) -> MetaOut | None:
     )
 
 
+def normalizar(texto: str) -> str:
+    """Sin tildes y en minúsculas, para comparar como escribe la gente."""
+    sin_tildes = unicodedata.normalize("NFD", texto)
+    sin_tildes = "".join(c for c in sin_tildes if unicodedata.category(c) != "Mn")
+    return " ".join(sin_tildes.lower().split())
+
+
 def buscar_carreras(db: Session, texto: str, limite: int = 20) -> list[Carrera]:
-    """Busca por nombre de carrera o de universidad."""
-    patron = f"%{texto.strip()}%"
+    """Busca por nombre de carrera, universidad o sede, ignorando tildes.
+
+    Cada palabra se exige por separado en vez de buscar la frase completa: así
+    "enfermeria concepcion" encuentra la carrera aunque en el dato el nombre de
+    la universidad vaya antes que el de la sede, y el estudiante no tiene que
+    adivinar el orden ni el nombre oficial exacto.
+    """
+    palabras = [p for p in normalizar(texto).split() if p]
+    if not palabras:
+        return []
+
+    consulta = select(Carrera)
+    for palabra in palabras:
+        consulta = consulta.where(Carrera.busqueda.like(f"%{palabra}%"))
+
     return list(
         db.execute(
-            select(Carrera)
-            .where(Carrera.nombre.ilike(patron) | Carrera.universidad.ilike(patron))
-            .order_by(Carrera.universidad, Carrera.nombre)
-            .limit(limite)
+            consulta.order_by(Carrera.universidad, Carrera.nombre).limit(limite)
         )
         .scalars()
         .all()
