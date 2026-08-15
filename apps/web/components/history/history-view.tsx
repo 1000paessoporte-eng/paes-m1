@@ -221,7 +221,7 @@ export function HistoryView({ intentos }: Props) {
               <button
                 type="button"
                 onClick={borrarTodo}
-                className="flex-1 rounded-lg bg-danger px-4 py-2.5 font-semibold text-white hover:opacity-90"
+                className="flex-1 rounded-lg bg-danger px-4 py-2.5 font-semibold text-on-fill hover:opacity-90"
               >
                 Borrar
               </button>

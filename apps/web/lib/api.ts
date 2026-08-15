@@ -76,8 +76,10 @@ async function apiFetch<T>(path: string, token?: string, init?: RequestInit): Pr
   const res = await fetch(`${API_URL}${path}`, {
     ...init,
     headers,
-    // El árbol de habilidades y el examen cambian por intento; no cachear.
-    cache: "no-store",
+    // Por defecto no se cachea: el árbol de habilidades y el examen cambian
+    // por intento. Quien tenga un dato que sí sirva cacheado (las cifras
+    // públicas del banco) lo pide explícitamente en su `init`.
+    cache: init?.cache ?? "no-store",
   });
   if (!res.ok) {
     const detail = await res
@@ -101,6 +103,24 @@ export type PracticeQuestion = PracticeStart["questions"][number];
 
 export type PracticeAnswerResult =
   paths["/api/practice/{code}/answer"]["post"]["responses"][200]["content"]["application/json"];
+
+export type ContentStats =
+  paths["/api/questions/stats"]["get"]["responses"][200]["content"]["application/json"];
+
+/**
+ * Cifras del banco para la portada.
+ *
+ * Se cachean una hora: el banco no crece cada minuto y la portada es la página
+ * más visitada del sitio. Si la API no responde, quien llama recibe el error y
+ * decide — la portada prefiere no mostrar el dato antes que mostrar uno viejo
+ * escrito a mano.
+ */
+export function getContentStats(): Promise<ContentStats> {
+  return apiFetch<ContentStats>("/api/questions/stats", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 3600 },
+  });
+}
 
 export function getSkillTree(token?: string): Promise<SkillNode[]> {
   return apiFetch<SkillNode[]>("/api/skill-tree", token);

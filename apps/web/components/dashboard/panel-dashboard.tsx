@@ -10,6 +10,10 @@ import { formatearTiempo } from "@/lib/tiempo";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
+import { Insignias, Racha } from "@/components/gamificacion/logros";
+import { calcularLogros } from "@/lib/logros";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
+import { Reveal } from "@/components/motion/reveal";
 
 /**
  * Panel del estudiante autenticado.
@@ -17,6 +21,11 @@ import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
  * Es la pantalla de trabajo, no una portada: cada tarjeta responde una
  * pregunta concreta ("¿qué hago ahora?", "¿cómo voy?", "¿qué sigue?") y lleva
  * a la sección que la desarrolla.
+ *
+ * La grilla es tipo bento: bloques de distinto tamaño donde el tamaño indica
+ * importancia. El bloque de bienvenida ocupa dos columnas porque contiene la
+ * única acción que importa —empezar un ensayo—; los accesos secundarios ocupan
+ * una y van al final.
  */
 
 interface Props {
@@ -52,6 +61,19 @@ export function PanelDashboard({
     (analytics?.total_minutes_practiced ?? 0) * 60
   );
 
+  const racha = analytics?.current_streak_days ?? 0;
+  const precision = analytics?.overall_accuracy ?? null;
+
+  // Los logros se derivan de lo que el estudiante hizo de verdad; ninguno se
+  // regala. Ver el comentario de cabecera de `lib/logros.ts`.
+  const logros = calcularLogros({
+    ensayos: rendidos.length,
+    racha,
+    precision,
+    nodosDominados: nodos.filter((n) => n.status === "mastered").length,
+    mejorPuntaje: mejor,
+  });
+
   // Solo el nombre de pila: "Hola, Juan" se lee mejor que el nombre completo.
   const nombre = user.name.split(" ")[0];
 
@@ -69,22 +91,31 @@ export function PanelDashboard({
               enCurso={enCurso != null}
               ensayos={rendidos.length}
               mejor={mejor}
-              racha={analytics?.current_streak_days ?? 0}
-              precision={analytics?.overall_accuracy ?? null}
+              racha={racha}
+              precision={precision}
               tiempoTotal={tiempoTotalSegundos}
             />
           </div>
 
           {/* Progreso y analítica */}
-          <ProgresoModulo puntaje={ultimo} variacion={variacion} porEje={porEje} />
+          <Reveal delay={0.05}>
+            <ProgresoModulo puntaje={ultimo} variacion={variacion} porEje={porEje} />
+          </Reveal>
 
           {/* Árbol de habilidades */}
-          <div className="lg:col-span-2">
+          <Reveal delay={0.1} className="lg:col-span-2">
             <ArbolModulo nodos={nodos} recomendado={recomendado} />
-          </div>
+          </Reveal>
+
+          {/* Logros */}
+          <Reveal delay={0.15}>
+            <Insignias logros={logros} />
+          </Reveal>
 
           {/* Accesos secundarios */}
-          <AccesosRapidos />
+          <Reveal delay={0.2} className="lg:col-span-3">
+            <AccesosRapidos />
+          </Reveal>
         </div>
       </div>
 
@@ -115,21 +146,17 @@ function Bienvenida({
   return (
     <section className="card-panel relative overflow-hidden p-6 sm:p-8">
       <div className="relative">
-        <p className="inline-block rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-          Preparación PAES · Admisión 2027
-        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="inline-block rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
+            Preparación PAES · Admisión 2027
+          </p>
+          {/* La racha va arriba, junto al saludo: es lo que se viene a mirar
+              todos los días, y abajo del todo se perdía. */}
+          <Racha dias={racha} />
+        </div>
 
         <h1 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
-          Hola,{" "}
-          <span
-            className="bg-clip-text text-transparent"
-            style={{
-              backgroundImage:
-                "linear-gradient(135deg, var(--accent), var(--accent-2))",
-            }}
-          >
-            {nombre}
-          </span>
+          Hola, <span className="texto-marca">{nombre}</span>
         </h1>
 
         <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">
@@ -146,7 +173,7 @@ function Bienvenida({
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link
             href="/examen"
-            className="btn-warm rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+            className="btn-warm rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
           >
             {enCurso
               ? "Reanudar ensayo"
@@ -167,38 +194,43 @@ function Bienvenida({
 
         {ensayos > 0 && (
           <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border pt-5 sm:grid-cols-4">
-            <Metrica etiqueta="Ensayos rendidos" valor={String(ensayos)} />
-            <Metrica
-              etiqueta="Mejor puntaje"
-              valor={mejor != null ? String(mejor) : "—"}
-            />
+            <Metrica etiqueta="Ensayos rendidos" valor={ensayos} />
+            <Metrica etiqueta="Mejor puntaje" valor={mejor} />
             <Metrica
               etiqueta="Precisión global"
-              valor={precision != null ? `${Math.round(precision * 100)}%` : "—"}
+              valor={precision != null ? Math.round(precision * 100) : null}
+              sufijo="%"
             />
-            <Metrica
-              etiqueta="Tiempo practicado"
-              valor={formatearTiempo(tiempoTotal)}
-            />
+            <Metrica etiqueta="Tiempo practicado" texto={formatearTiempo(tiempoTotal)} />
           </dl>
-        )}
-
-        {racha > 0 && (
-          <p className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-accent-warm/10 px-3 py-1 text-xs font-semibold text-accent-warm-strong">
-            🔥 {racha} {racha === 1 ? "día seguido" : "días seguidos"} practicando
-          </p>
         )}
       </div>
     </section>
   );
 }
 
-function Metrica({ etiqueta, valor }: { etiqueta: string; valor: string }) {
+function Metrica({
+  etiqueta,
+  valor,
+  texto,
+  sufijo = "",
+}: {
+  etiqueta: string;
+  valor?: number | null;
+  texto?: string;
+  sufijo?: string;
+}) {
   return (
     <div>
       <dt className="text-xs text-muted">{etiqueta}</dt>
       <dd className="mt-0.5 text-xl font-bold tabular-nums tracking-tight">
-        {valor}
+        {texto != null ? (
+          texto
+        ) : valor != null ? (
+          <NumeroAnimado valor={valor} sufijo={sufijo} duracion={0.8} />
+        ) : (
+          "—"
+        )}
       </dd>
     </div>
   );
@@ -217,12 +249,14 @@ function AccesosRapidos() {
       <h2 id="h-accesos" className="font-semibold tracking-tight">
         Accesos
       </h2>
-      <ul className="mt-4 flex flex-col divide-y divide-border">
+      {/* En una fila completa los accesos van en grilla, no en lista: en móvil
+          quedan de a uno, y desde tablet aprovechan el ancho. */}
+      <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
         {ACCESOS.map((a) => (
           <li key={a.href}>
             <Link
               href={a.href}
-              className="group flex items-center justify-between gap-3 py-3 transition-colors"
+              className="card-hover group flex items-center justify-between gap-3 rounded-xl border border-border p-3"
             >
               <span className="min-w-0">
                 <span className="block text-sm font-medium group-hover:text-accent">

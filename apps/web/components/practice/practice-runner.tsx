@@ -234,9 +234,9 @@ export function PracticeRunner({ code }: { code: string }) {
                   className={cn(
                     "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[11px] font-medium",
                     isCorrectAlt
-                      ? "border-success bg-success text-white"
+                      ? "border-success bg-success text-on-fill"
                       : isWrongSelected
-                        ? "border-danger bg-danger text-white"
+                        ? "border-danger bg-danger text-on-fill"
                         : isSelected
                           ? "border-accent bg-accent text-accent-foreground"
                           : "border-border-strong text-muted"

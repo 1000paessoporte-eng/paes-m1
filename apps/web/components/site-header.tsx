@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } from "@/lib/auth";
+import { TemaToggle } from "@/components/tema-toggle";
 
 // Menú de la aplicación: solo tiene sentido con la sesión iniciada, porque
 // todas estas rutas exigen autenticación.
@@ -63,11 +64,11 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+    <header className="glass sticky top-0 z-50">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href={user ? "/panel" : "/"} className="flex items-center gap-2">
           <span
-            className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-white"
+            className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-accent-foreground"
             style={{
               background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
             }}
@@ -99,6 +100,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
+          <TemaToggle />
           {user ? (
             <>
               <Link href="/perfil" className="text-sm text-muted hover:text-foreground">
@@ -167,6 +169,10 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <div className="mt-2 flex items-center justify-between border-t border-border px-3 pt-3">
+            <span className="text-sm text-muted">Tema</span>
+            <TemaToggle />
+          </div>
           {user ? (
             <button
               onClick={handleLogout}

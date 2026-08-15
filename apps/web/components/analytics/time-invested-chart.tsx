@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { formatFullDate, formatShortDate, niceMax, roundedTopBarPath } from "./chart-utils";
 
-const COLOR = "#3987e5"; // azul; contraste ≥3:1 sobre el fondo blanco de la app
+// Color de la serie por rol y no por hex: el gráfico tiene que verse igual de
+// legible en claro y en oscuro, y un azul calibrado contra fondo blanco se
+// apaga sobre fondo negro. Ambos valores del token superan 3:1 contra su
+// fondo, el mínimo para elementos gráficos.
+const COLOR = "var(--accent)";
 
 interface Point {
   date: string;

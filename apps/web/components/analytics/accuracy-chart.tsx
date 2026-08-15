@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { formatFullDate, formatShortDate } from "./chart-utils";
 
-const COLOR = "#d95926"; // naranja, distinguible del azul del chart de tiempo; ≥3:1 sobre blanco
+// Naranjo por rol: distinguible del violeta del gráfico de tiempo y legible en
+// los dos temas (ver nota en time-invested-chart).
+const COLOR = "var(--accent-warm)";
 
 interface Point {
   date: string;
