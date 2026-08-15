@@ -10,6 +10,7 @@ import type {
 import { formatearTiempo } from "@/lib/tiempo";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
+import { AnuncioPremio } from "@/components/premio/anuncio-premio";
 import { MetaModulo } from "@/components/dashboard/meta-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
 import { Insignias, Racha } from "@/components/gamificacion/logros";
@@ -68,6 +69,11 @@ export function PanelDashboard({
   );
 
   const racha = analytics?.current_streak_days ?? 0;
+
+  // Progreso hacia los requisitos del premio que ya se pueden cumplir hoy. Un
+  // ensayo "completo" son 34 preguntas o más, igual que en las bases: si el
+  // anuncio contara distinto que el reglamento, el reclamo llegaría después.
+  const ensayosCompletos = rendidos.filter((a) => a.total_questions >= 34).length;
   const precision = analytics?.overall_accuracy ?? null;
 
   // Los logros se derivan de lo que el estudiante hizo de verdad; ninguno se
@@ -88,6 +94,12 @@ export function PanelDashboard({
   // que mantiene legibles los números.
   return (
     <main className="min-h-[calc(100vh-3.5rem)] flex-1 bg-surface/70">
+      <AnuncioPremio
+        progreso={{
+          ensayosCompletos,
+          diasPracticados: analytics?.active_days ?? 0,
+        }}
+      />
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {/* Bienvenida + acción principal */}
