@@ -36,9 +36,13 @@ class GoogleLoginIn(BaseModel):
 
 
 class AuthConfigOut(BaseModel):
-    """Qué métodos de inicio de sesión están habilitados en este despliegue."""
+    """Qué puede hacer este despliegue, para que la interfaz no prometa de más."""
 
     google_enabled: bool
+    #: False cuando el servidor no tiene SMTP: la recuperación de contraseña
+    #: no puede enviar el enlace, y la pantalla tiene que decirlo en vez de
+    #: prometer un correo que nunca va a llegar.
+    email_enabled: bool = False
 
 
 class TokenOut(BaseModel):

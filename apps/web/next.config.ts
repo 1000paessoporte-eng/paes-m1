@@ -44,6 +44,36 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [{ source: "/api/:path*", destination: `${API_ORIGIN}/api/:path*` }];
   },
+
+  // Cabeceras de seguridad. Producción solo traía HSTS, que lo pone Vercel:
+  // faltaba todo lo demás en un sitio con cuentas, sesiones y datos de
+  // estudiantes que en su mayoría son menores de edad.
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          // Nadie puede meter el sitio en un iframe: sin esto, una página
+          // ajena puede superponer botones invisibles sobre los nuestros y
+          // hacer que el estudiante haga clic donde no cree (clickjacking).
+          { key: "X-Frame-Options", value: "DENY" },
+          // El navegador respeta el Content-Type declarado en vez de adivinar
+          // por el contenido, que es como un archivo subido termina
+          // ejecutándose como script.
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          // Al salir del sitio se manda el dominio, nunca la ruta completa: la
+          // URL de un ensayo o de una recuperación de contraseña no tiene por
+          // qué viajar en el Referer.
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          // No usamos cámara, micrófono ni ubicación: se apagan de entrada.
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), payment=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

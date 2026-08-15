@@ -47,7 +47,12 @@ export interface paths {
         };
         /**
          * Auth Config
-         * @description La web consulta esto para saber si mostrar el botón de Google.
+         * @description Qué puede hacer este servidor, para que la interfaz no prometa de más.
+         *
+         *     Sin SMTP configurado, "te llegará un correo con las instrucciones" es una
+         *     promesa incumplible: el enlace de recuperación se genera igual pero queda
+         *     en el log, y el estudiante espera algo que nunca llega. La pantalla
+         *     necesita saberlo para decir la verdad.
          */
         get: operations["auth_config_api_auth_config_get"];
         put?: never;
@@ -740,11 +745,16 @@ export interface components {
         AttemptStatus: "in_progress" | "submitted" | "abandoned";
         /**
          * AuthConfigOut
-         * @description Qué métodos de inicio de sesión están habilitados en este despliegue.
+         * @description Qué puede hacer este despliegue, para que la interfaz no prometa de más.
          */
         AuthConfigOut: {
             /** Google Enabled */
             google_enabled: boolean;
+            /**
+             * Email Enabled
+             * @default false
+             */
+            email_enabled: boolean;
         };
         /**
          * AxisOptionOut
