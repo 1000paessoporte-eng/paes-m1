@@ -83,9 +83,9 @@ def test_ciencias_ofrece_sus_tres_disciplinas():
 #
 # Para subir un número acá hay que haber leído la pregunta completa.
 BIOLOGIA_REVISADAS = {
-    "cie_celula": 5,
-    "cie_genetica": 5,
-    "cie_ecosistemas": 5,
+    "cie_celula": 11,
+    "cie_genetica": 11,
+    "cie_ecosistemas": 10,
 }
 
 
