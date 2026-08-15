@@ -220,6 +220,126 @@ export default async function AdminPage() {
         );
       })()}
 
+      {p.visitantes && (() => {
+        const visitantes = p.visitantes;
+        return (
+        <>
+      {/* ── Visitantes ───────────────────────────────────────────────── */}
+      <Seccion titulo="Quién visita (30 días)">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          No se guarda dirección IP ni el user agent completo, así que esto no
+          prueba que dos visitas sean de personas distintas. Lo que sí muestra
+          es si hay diversidad real de equipos: muchos navegadores idénticos, con
+          una sola visita cada uno y el mismo día, casi nunca son personas.
+        </p>
+
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <Reparto titulo="Dispositivo" datos={visitantes.por_dispositivo} />
+          <Reparto titulo="Sistema" datos={visitantes.por_sistema} />
+          <Reparto titulo="Navegador" datos={visitantes.por_navegador} />
+        </div>
+
+        {visitantes.sin_clasificar > 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            {visitantes.sin_clasificar} visitas son anteriores a que se
+            empezara a guardar esta información y aparecen sin categoría. Las
+            nuevas sí la traen.
+          </p>
+        )}
+
+        <Tabla
+          titulo="Navegadores recientes"
+          cabeceras={["Id", "Dispositivo", "Sistema", "Navegador", "Visitas", "Días", "Cuenta"]}
+          filas={visitantes.recientes.map((v) => [
+            <code key="i" className="text-xs">{v.visitor}</code>,
+            v.device ?? "—",
+            v.os ?? "—",
+            v.browser ?? "—",
+            String(v.visitas),
+            String(v.dias),
+            v.con_cuenta ? "Sí" : "No",
+          ])}
+          vacio="Todavía no hay visitas registradas."
+        />
+      </Seccion>
+        </>
+        );
+      })()}
+
+      {p.alumnos && (() => {
+        const alumnos = p.alumnos;
+        return (
+        <>
+      {/* ── Alumnos ──────────────────────────────────────────────────── */}
+      <Seccion titulo={`Resultados por alumno (${alumnos.total})`}>
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          El detalle detrás de los promedios. Un promedio de 275 puntos puede ser
+          tres personas parecidas o una que rinde bien y otra que abandona.
+        </p>
+
+        {alumnos.detalle.length === 0 ? (
+          <p className="rounded-xl border border-border bg-surface p-5 text-xs text-muted">
+            Todavía no hay cuentas registradas.
+          </p>
+        ) : (
+          <div className="flex flex-col gap-3">
+            {alumnos.detalle.map((a) => (
+              <div key={a.id} className="rounded-xl border border-border bg-surface p-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div className="min-w-0">
+                    <p className="truncate font-medium">{a.name}</p>
+                    <p className="truncate text-xs text-muted">{a.email}</p>
+                  </div>
+                  <p className="text-xs text-muted">
+                    Se registró el {fecha(a.created_at)} · último acceso{" "}
+                    {fecha(a.last_login_at)}
+                  </p>
+                </div>
+
+                <div className="mt-4 grid grid-cols-2 gap-3 lg:grid-cols-5">
+                  <Mini label="Ensayos" valor={`${a.ensayos_terminados}/${a.ensayos_iniciados}`} />
+                  <Mini label="Respuestas" valor={String(a.respuestas)} />
+                  <Mini label="Acierto" valor={porcentaje(a.tasa_acierto)} />
+                  <Mini label="Mejor puntaje" valor={a.mejor_puntaje == null ? "—" : String(a.mejor_puntaje)} />
+                  <Mini label="Días activos" valor={String(a.dias_activos)} />
+                </div>
+
+                {(a.curso || a.pruebas_objetivo || a.horas_semana != null) && (
+                  <p className="mt-3 text-xs text-muted">
+                    Declaró:{" "}
+                    {[
+                      a.curso,
+                      a.pruebas_objetivo,
+                      a.horas_semana != null ? `${a.horas_semana} h/semana` : null,
+                    ]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                )}
+
+                {a.por_prueba.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {a.por_prueba.map((r) => (
+                      <span
+                        key={r.subject}
+                        className="rounded-full border border-border px-3 py-1 text-xs"
+                      >
+                        <strong>{r.subject.toUpperCase()}</strong> · {r.ensayos}{" "}
+                        {r.ensayos === 1 ? "ensayo" : "ensayos"}
+                        {r.mejor != null && ` · mejor ${r.mejor}`}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </Seccion>
+        </>
+        );
+      })()}
+
       {/* ── Usuarios ─────────────────────────────────────────────────── */}
       <Seccion titulo="Usuarios">
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -396,6 +516,36 @@ function Paso({
       <p className="text-xs text-muted">{label}</p>
       <p className="mt-1 text-2xl font-semibold tracking-tight tabular-nums">{valor}</p>
       <p className="mt-1 text-xs text-muted">{nota}</p>
+    </div>
+  );
+}
+
+function Reparto({ titulo, datos }: { titulo: string; datos: Record<string, number> }) {
+  const filas = Object.entries(datos).sort((a, b) => b[1] - a[1]);
+  return (
+    <div className="rounded-xl border border-border bg-surface p-5">
+      <h3 className="text-sm font-semibold">{titulo}</h3>
+      {filas.length === 0 ? (
+        <p className="mt-3 text-xs text-muted">Sin datos todavía.</p>
+      ) : (
+        <ul className="mt-3 flex flex-col gap-1.5">
+          {filas.map(([nombre, total]) => (
+            <li key={nombre} className="flex justify-between gap-3 text-sm">
+              <span className="truncate">{nombre}</span>
+              <span className="shrink-0 tabular-nums text-muted">{total}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function Mini({ label, valor }: { label: string; valor: string }) {
+  return (
+    <div>
+      <p className="text-xs text-muted">{label}</p>
+      <p className="mt-0.5 font-semibold tabular-nums">{valor}</p>
     </div>
   );
 }

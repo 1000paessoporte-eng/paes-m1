@@ -13,9 +13,15 @@ class PageView(Base):
     necesita cruzar visitas con registros y ensayos en la misma consulta, y
     Vercel no expone esos datos por API en el plan actual.
 
-    Deliberadamente NO se guarda dirección IP ni user agent: para saber
-    "cuántas personas entran" basta un identificador aleatorio de navegador,
-    y no guardar el dato es la única forma segura de no filtrarlo."""
+    Deliberadamente NO se guarda dirección IP ni el user agent completo. Para
+    saber "cuántas personas entran" basta un identificador aleatorio de
+    navegador, y no guardar el dato es la única forma segura de no filtrarlo.
+
+    Sí se guardan tres categorías GRUESAS derivadas del user agent —tipo de
+    dispositivo, sistema operativo y navegador— porque sin ellas era imposible
+    distinguir 27 personas distintas de una sola persona probando el sitio en
+    varias pestañas. Son buckets ("móvil", "Windows", "Chrome"), no la cadena
+    original: sirven para leer diversidad, no para reconocer a nadie."""
 
     __tablename__ = "page_views"
 
@@ -31,6 +37,13 @@ class PageView(Base):
     user_id: Mapped[int | None] = mapped_column(
         ForeignKey("users.id"), nullable=True, index=True
     )
+    #: "movil", "escritorio" o "tablet". NULL en las visitas anteriores a que
+    #: se empezara a registrar.
+    device: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    #: Familia del sistema operativo: "Windows", "Android", "iOS", "macOS"...
+    os: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    #: Familia del navegador: "Chrome", "Safari", "Firefox", "Edge"...
+    browser: Mapped[str | None] = mapped_column(String(20), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True
     )
