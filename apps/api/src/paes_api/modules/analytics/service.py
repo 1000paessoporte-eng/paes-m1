@@ -77,6 +77,10 @@ def get_summary(db: Session, user: User) -> AnalyticsSummaryOut:
 
     streak = _compute_streak(set(buckets.keys()))
 
+    # Un día "con práctica" son 10 preguntas o más: abrir la aplicación y
+    # responder una no es haber practicado ese día.
+    active_days = sum(1 for b in buckets.values() if int(b["answered"]) >= 10)
+
     since = datetime.now(UTC).date() - timedelta(days=CHART_DAYS - 1)
     daily: list[DailyStat] = []
     for i in range(CHART_DAYS):
@@ -95,6 +99,7 @@ def get_summary(db: Session, user: User) -> AnalyticsSummaryOut:
 
     return AnalyticsSummaryOut(
         current_streak_days=streak,
+        active_days=active_days,
         total_questions_answered=total_answered,
         total_correct=total_correct,
         overall_accuracy=(total_correct / total_answered) if total_answered else None,

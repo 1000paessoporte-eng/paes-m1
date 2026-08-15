@@ -13,6 +13,10 @@ class DailyStat(BaseModel):
 
 class AnalyticsSummaryOut(BaseModel):
     current_streak_days: int
+    #: Días distintos con al menos 10 preguntas respondidas, en todo el
+    #: historial. Es el criterio de constancia que exigen las bases del premio,
+    #: y la serie `daily` no sirve para eso: solo cubre las últimas dos semanas.
+    active_days: int = 0
     total_questions_answered: int
     total_correct: int
     overall_accuracy: float | None

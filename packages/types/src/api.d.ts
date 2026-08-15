@@ -710,6 +710,11 @@ export interface components {
         AnalyticsSummaryOut: {
             /** Current Streak Days */
             current_streak_days: number;
+            /**
+             * Active Days
+             * @default 0
+             */
+            active_days: number;
             /** Total Questions Answered */
             total_questions_answered: number;
             /** Total Correct */
