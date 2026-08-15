@@ -13,22 +13,30 @@ from sqlalchemy.orm import Session
 
 from paes_api.modules.admin.schemas import (
     AdminMetricsOut,
+    BancoOut,
+    CoberturaPrueba,
     ContenidoOut,
     ConteoPeriodo,
+    EmbudoOut,
+    EnsayosOut,
     NodoFlojo,
     PreguntaFallada,
+    RetencionOut,
     RutaVisitas,
     SerieDia,
     SesionesOut,
+    UsoPrueba,
     UsuarioResumen,
     UsuariosOut,
     VisitasOut,
 )
 from paes_api.modules.content.models import Alternative, Question
 from paes_api.modules.exam_focus.models import AttemptStatus, ExamAnswer, ExamAttempt
+from paes_api.modules.exam_focus.scoring import SCORING_BY_SUBJECT
+from paes_api.modules.exam_focus.service import SUBJECT_INCLUDES
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.practice.models import PracticeAnswer
-from paes_api.modules.skill_tree.models import SkillNode
+from paes_api.modules.skill_tree.models import SkillNode, Subject
 from paes_api.modules.users.models import LoginEvent, User
 
 #: Cuántos días cubre cada gráfico de evolución.
@@ -39,6 +47,17 @@ TOPE_RANKING = 10
 #: acierto. Sin esto, una pregunta respondida una sola vez y fallada aparece
 #: como "la peor" con 0%, que no significa nada.
 MINIMO_RESPUESTAS = 5
+#: Un ensayo en curso sin actividad por más tiempo que esto se cuenta como
+#: abandonado. Nadie retoma al día siguiente un ensayo cronometrado.
+HORAS_PARA_ABANDONO = 24
+#: Piso de preguntas para que un nodo sea practicable de verdad.
+MINIMO_POR_NODO = 5
+
+
+def _tasa(numerador: int, denominador: int) -> float | None:
+    """None cuando no hay denominador: un 0% diría que nadie convierte, cuando
+    lo que pasa es que todavía nadie llegó a ese paso."""
+    return numerador / denominador if denominador else None
 
 
 def _ventanas(ahora: datetime) -> tuple[datetime, datetime, datetime]:
@@ -314,6 +333,231 @@ def _contenido(db: Session, ahora: datetime) -> ContenidoOut:
     )
 
 
+def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
+    """Dónde se cae la gente entre entrar y terminar un ensayo."""
+    _, _, hace_30 = _ventanas(ahora)
+
+    visitantes = (
+        db.execute(
+            select(func.count(func.distinct(PageView.visitor_id))).where(
+                PageView.created_at >= hace_30
+            )
+        ).scalar_one()
+        or 0
+    )
+
+    nuevos = select(User.id).where(User.created_at >= hace_30).scalar_subquery()
+    registrados = (
+        db.execute(select(func.count()).select_from(User).where(User.created_at >= hace_30)).scalar_one()
+        or 0
+    )
+
+    def cuentas_con_ensayo(solo_terminados: bool) -> int:
+        stmt = select(func.count(func.distinct(ExamAttempt.user_id))).where(
+            ExamAttempt.user_id.in_(nuevos)
+        )
+        if solo_terminados:
+            stmt = stmt.where(ExamAttempt.status == AttemptStatus.SUBMITTED)
+        return db.execute(stmt).scalar_one() or 0
+
+    con_ensayo = cuentas_con_ensayo(False)
+    terminado = cuentas_con_ensayo(True)
+
+    # Un navegador que primero anduvo anónimo y después apareció con sesión es
+    # una conversión observada, no estimada. Es lo más cerca que se puede
+    # llegar sin guardar nada que identifique a la persona.
+    anonimos = select(func.distinct(PageView.visitor_id)).where(
+        PageView.created_at >= hace_30, PageView.user_id.is_(None)
+    )
+    convertidos = (
+        db.execute(
+            select(func.count(func.distinct(PageView.visitor_id))).where(
+                PageView.created_at >= hace_30,
+                PageView.user_id.is_not(None),
+                PageView.visitor_id.in_(anonimos),
+            )
+        ).scalar_one()
+        or 0
+    )
+
+    return EmbudoOut(
+        visitantes=visitantes,
+        registrados=registrados,
+        con_ensayo=con_ensayo,
+        con_ensayo_terminado=terminado,
+        tasa_registro=_tasa(registrados, visitantes),
+        tasa_activacion=_tasa(con_ensayo, registrados),
+        tasa_finalizacion=_tasa(terminado, con_ensayo),
+        visitantes_convertidos=convertidos,
+    )
+
+
+def _retencion(db: Session, ahora: datetime) -> RetencionOut:
+    """Cuánta gente vuelve. Se mide sobre visitas, que es la señal más amplia:
+    alguien puede entrar a leer una lección sin responder nada."""
+    _, hace_7, hace_30 = _ventanas(ahora)
+
+    dias_por_usuario = db.execute(
+        select(
+            PageView.user_id,
+            func.count(func.distinct(func.date(PageView.created_at))).label("dias"),
+        )
+        .where(PageView.created_at >= hace_30, PageView.user_id.is_not(None))
+        .group_by(PageView.user_id)
+    ).all()
+
+    un_dia = sum(1 for f in dias_por_usuario if f.dias == 1)
+    dos_a_tres = sum(1 for f in dias_por_usuario if 2 <= f.dias <= 3)
+    cuatro_o_mas = sum(1 for f in dias_por_usuario if f.dias >= 4)
+
+    # Solo puede "volver" quien lleva al menos una semana registrado: contar a
+    # quien se inscribió ayer como no-retornado castiga a los más nuevos.
+    con_tiempo = db.execute(
+        select(User.id, User.created_at).where(User.created_at < hace_7)
+    ).all()
+    base = len(con_tiempo)
+    volvieron = 0
+    for user_id, creado in con_tiempo:
+        despues = (
+            db.execute(
+                select(func.count())
+                .select_from(PageView)
+                .where(
+                    PageView.user_id == user_id,
+                    func.date(PageView.created_at) > func.date(creado),
+                )
+            ).scalar_one()
+            or 0
+        )
+        if despues:
+            volvieron += 1
+
+    return RetencionOut(
+        un_dia=un_dia,
+        dos_a_tres=dos_a_tres,
+        cuatro_o_mas=cuatro_o_mas,
+        volvieron=volvieron,
+        base_volvieron=base,
+    )
+
+
+def _ensayos(db: Session, ahora: datetime) -> EnsayosOut:
+    """Qué se rinde, qué se abandona y con qué prueba."""
+    iniciados = db.execute(select(func.count()).select_from(ExamAttempt)).scalar_one() or 0
+    terminados = (
+        db.execute(
+            select(func.count())
+            .select_from(ExamAttempt)
+            .where(ExamAttempt.status == AttemptStatus.SUBMITTED)
+        ).scalar_one()
+        or 0
+    )
+    abandonados = (
+        db.execute(
+            select(func.count())
+            .select_from(ExamAttempt)
+            .where(
+                ExamAttempt.status == AttemptStatus.IN_PROGRESS,
+                ExamAttempt.started_at < ahora - timedelta(hours=HORAS_PARA_ABANDONO),
+            )
+        ).scalar_one()
+        or 0
+    )
+
+    # Mediana y no promedio: un solo ensayo dejado abierto tres horas mueve el
+    # promedio lo suficiente como para inventar una tendencia que no existe.
+    duraciones = sorted(
+        (fin - ini).total_seconds() / 60
+        for ini, fin in db.execute(
+            select(ExamAttempt.started_at, ExamAttempt.finished_at).where(
+                ExamAttempt.finished_at.is_not(None)
+            )
+        ).all()
+    )
+    mediana = None
+    if duraciones:
+        medio = len(duraciones) // 2
+        mediana = (
+            duraciones[medio]
+            if len(duraciones) % 2
+            else (duraciones[medio - 1] + duraciones[medio]) / 2
+        )
+
+    por_prueba: list[UsoPrueba] = []
+    for subject in Subject:
+        filas = db.execute(
+            select(
+                func.count().label("iniciados"),
+                func.count(ExamAttempt.finished_at).label("terminados"),
+                func.avg(ExamAttempt.estimated_score).label("promedio"),
+            ).where(ExamAttempt.subject == subject)
+        ).one()
+        if not filas.iniciados:
+            continue
+        por_prueba.append(
+            UsoPrueba(
+                subject=subject.value,
+                iniciados=int(filas.iniciados),
+                terminados=int(filas.terminados),
+                puntaje_promedio=round(float(filas.promedio), 1) if filas.promedio else None,
+            )
+        )
+
+    return EnsayosOut(
+        iniciados=iniciados,
+        terminados=terminados,
+        abandonados=abandonados,
+        tasa_finalizacion=_tasa(terminados, iniciados),
+        duracion_mediana_min=round(mediana, 1) if mediana is not None else None,
+        por_prueba=por_prueba,
+    )
+
+
+def _banco(db: Session) -> BancoOut:
+    """Si el banco alcanza para lo que la portada promete.
+
+    Es la métrica que evita el peor error del producto: ofrecer las cinco
+    pruebas y que una de ellas no arme ni un ensayo completo."""
+    respondidas = set(
+        db.execute(select(func.distinct(ExamAnswer.question_id))).scalars().all()
+    ) | set(db.execute(select(func.distinct(PracticeAnswer.question_id))).scalars().all())
+
+    por_prueba: list[CoberturaPrueba] = []
+    for subject, scoring in SCORING_BY_SUBJECT.items():
+        ids = (
+            db.execute(
+                select(Question.id)
+                .join(Question.skill_node)
+                .where(SkillNode.subject.in_(SUBJECT_INCLUDES[subject]))
+            )
+            .scalars()
+            .all()
+        )
+        banco = len(ids)
+        por_prueba.append(
+            CoberturaPrueba(
+                subject=subject.value,
+                banco=banco,
+                oficiales=scoring.preguntas_oficiales,
+                ensayos_completos=round(banco / scoring.preguntas_oficiales, 2),
+                nunca_respondidas=sum(1 for qid in ids if qid not in respondidas),
+            )
+        )
+
+    flacos = [
+        str(code)
+        for code, total in db.execute(
+            select(SkillNode.code, func.count(Question.id))
+            .outerjoin(Question, Question.skill_node_id == SkillNode.id)
+            .group_by(SkillNode.code)
+            .order_by(SkillNode.code)
+        ).all()
+        if total < MINIMO_POR_NODO
+    ]
+
+    return BancoOut(por_prueba=por_prueba, nodos_flacos=flacos)
+
+
 def build_metrics(db: Session) -> AdminMetricsOut:
     ahora = datetime.now(UTC)
     return AdminMetricsOut(
@@ -322,4 +566,8 @@ def build_metrics(db: Session) -> AdminMetricsOut:
         sesiones=_sesiones(db, ahora),
         visitas=_visitas(db, ahora),
         contenido=_contenido(db, ahora),
+        embudo=_embudo(db, ahora),
+        retencion=_retencion(db, ahora),
+        ensayos=_ensayos(db, ahora),
+        banco=_banco(db),
     )

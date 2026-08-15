@@ -775,6 +775,10 @@ export interface components {
             sesiones: components["schemas"]["SesionesOut"];
             visitas: components["schemas"]["VisitasOut"];
             contenido: components["schemas"]["ContenidoOut"];
+            embudo: components["schemas"]["EmbudoOut"];
+            retencion: components["schemas"]["RetencionOut"];
+            ensayos: components["schemas"]["EnsayosOut"];
+            banco: components["schemas"]["BancoOut"];
         };
         /**
          * AlternativeSafeOut
@@ -872,6 +876,16 @@ export interface components {
             available: number;
         };
         /**
+         * BancoOut
+         * @description Salud del contenido: si el banco alcanza para lo que la portada promete.
+         */
+        BancoOut: {
+            /** Por Prueba */
+            por_prueba: components["schemas"]["CoberturaPrueba"][];
+            /** Nodos Flacos */
+            nodos_flacos: string[];
+        };
+        /**
          * BreakdownItemOut
          * @description Desempeño agrupado por eje, nodo o dificultad.
          */
@@ -934,6 +948,19 @@ export interface components {
             proceso: number;
             /** Fuente */
             fuente: string;
+        };
+        /** CoberturaPrueba */
+        CoberturaPrueba: {
+            /** Subject */
+            subject: string;
+            /** Banco */
+            banco: number;
+            /** Oficiales */
+            oficiales: number;
+            /** Ensayos Completos */
+            ensayos_completos: number;
+            /** Nunca Respondidas */
+            nunca_respondidas: number;
         };
         /** ContenidoOut */
         ContenidoOut: {
@@ -1056,6 +1083,51 @@ export interface components {
          * @enum {string}
          */
         Difficulty: "facil" | "medio" | "dificil";
+        /**
+         * EmbudoOut
+         * @description De visita anónima a ensayo terminado, en los últimos 30 días.
+         *
+         *     Es la pregunta que ningún total responde: no importa cuánta gente entra si
+         *     no se sabe dónde deja de avanzar. Las tasas viajan como null cuando el
+         *     denominador es cero, porque un 0% se leería como "nadie convierte" cuando
+         *     en realidad nadie llegó todavía a ese paso.
+         */
+        EmbudoOut: {
+            /** Visitantes */
+            visitantes: number;
+            /** Registrados */
+            registrados: number;
+            /** Con Ensayo */
+            con_ensayo: number;
+            /** Con Ensayo Terminado */
+            con_ensayo_terminado: number;
+            /** Tasa Registro */
+            tasa_registro: number | null;
+            /** Tasa Activacion */
+            tasa_activacion: number | null;
+            /** Tasa Finalizacion */
+            tasa_finalizacion: number | null;
+            /** Visitantes Convertidos */
+            visitantes_convertidos: number;
+        };
+        /**
+         * EnsayosOut
+         * @description Qué se rinde y qué se abandona.
+         */
+        EnsayosOut: {
+            /** Iniciados */
+            iniciados: number;
+            /** Terminados */
+            terminados: number;
+            /** Abandonados */
+            abandonados: number;
+            /** Tasa Finalizacion */
+            tasa_finalizacion: number | null;
+            /** Duracion Mediana Min */
+            duracion_mediana_min: number | null;
+            /** Por Prueba */
+            por_prueba: components["schemas"]["UsoPrueba"][];
+        };
         /**
          * ExamAlternativeOut
          * @description Alternativa durante el examen: SIN is_correct ni
@@ -1681,6 +1753,22 @@ export interface components {
             new_password: string;
         };
         /**
+         * RetencionOut
+         * @description Si la gente vuelve. Un registro que no vuelve es un registro perdido.
+         */
+        RetencionOut: {
+            /** Un Dia */
+            un_dia: number;
+            /** Dos A Tres */
+            dos_a_tres: number;
+            /** Cuatro O Mas */
+            cuatro_o_mas: number;
+            /** Volvieron */
+            volvieron: number;
+            /** Base Volvieron */
+            base_volvieron: number;
+        };
+        /**
          * ReviewAlternativeOut
          * @description Alternativa en la revisión post-examen: SÍ incluye is_correct y
          *     distractor_justification — el porqué de cada error.
@@ -1863,6 +1951,17 @@ export interface components {
              * @default false
              */
             is_admin: boolean;
+        };
+        /** UsoPrueba */
+        UsoPrueba: {
+            /** Subject */
+            subject: string;
+            /** Iniciados */
+            iniciados: number;
+            /** Terminados */
+            terminados: number;
+            /** Puntaje Promedio */
+            puntaje_promedio: number | null;
         };
         /** UsuarioResumen */
         UsuarioResumen: {
