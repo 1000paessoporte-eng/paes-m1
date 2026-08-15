@@ -73,18 +73,51 @@ def test_ciencias_ofrece_sus_tres_disciplinas():
     assert SUBJECT_INCLUDES[Subject.CIENCIAS] == [Subject.CIENCIAS]
 
 
-def test_biologia_declarada_sin_banco_todavia():
-    """Los nodos de Biología existen pero no tienen preguntas.
+# Cuántas preguntas de biología se revisaron a mano, por nodo.
+#
+# Biología es el único eje donde la respuesta no siempre sale de un cálculo,
+# así que el verificador no alcanza a cubrirlo solo. Este conteo es el
+# reemplazo del tripwire anterior —que exigía CERO preguntas— y cumple la
+# misma función: si alguien agrega una pregunta nueva, el test falla y obliga
+# a declarar explícitamente que se revisó antes de que la vea un estudiante.
+#
+# Para subir un número acá hay que haber leído la pregunta completa.
+BIOLOGIA_REVISADAS = {
+    "cie_celula": 5,
+    "cie_genetica": 5,
+    "cie_ecosistemas": 5,
+}
 
-    Es deliberado: su contenido es factual y el verificador no puede
-    comprobarlo. Si algún día se agregan, este test falla y hay que decidir
-    conscientemente que se revisaron a mano.
-    """
+
+def test_biologia_solo_trae_preguntas_revisadas():
+    """El banco de biología coincide con lo que se revisó a mano."""
+    from collections import Counter
+
     from paes_api.seed_data import QUESTIONS_CIENCIAS, SKILL_NODES_CIENCIAS
 
     bio = {n[0] for n in SKILL_NODES_CIENCIAS if n[2] == "biologia"}
-    assert bio, "deberían existir nodos de biología"
-    assert not [q for q in QUESTIONS_CIENCIAS if q["skill_node"] in bio]
+    assert bio == set(BIOLOGIA_REVISADAS), "cambió el conjunto de nodos de biología"
+
+    real = Counter(q["skill_node"] for q in QUESTIONS_CIENCIAS if q["skill_node"] in bio)
+    assert dict(real) == BIOLOGIA_REVISADAS, (
+        "el banco de biología no coincide con lo revisado a mano. "
+        "Lee las preguntas nuevas y recién ahí actualiza BIOLOGIA_REVISADAS."
+    )
+
+
+def test_ciencias_no_deja_nodos_sin_practicar():
+    """Ningún nodo de Ciencias queda con menos de 5 preguntas.
+
+    Un nodo con dos preguntas es peor que no tenerlo: aparece practicable en
+    el árbol y se agota al primer intento.
+    """
+    from collections import Counter
+
+    from paes_api.seed_data import QUESTIONS_CIENCIAS, SKILL_NODES_CIENCIAS
+
+    por_nodo = Counter(q["skill_node"] for q in QUESTIONS_CIENCIAS)
+    flacos = sorted(n[0] for n in SKILL_NODES_CIENCIAS if por_nodo[n[0]] < 5)
+    assert not flacos, f"nodos de Ciencias con menos de 5 preguntas: {flacos}"
 
 
 def test_historia_usa_los_datos_oficiales():

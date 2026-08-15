@@ -122,6 +122,18 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "2 moles de soluto en 4 litros": str(2 / 4),
     "500 mL de una disolución 0,4": str(0.4 * 0.5),
     "diluye una disolución de 100 mL y 2 mol/L": str(2 * 100 / 400),
+    # Biología: lo que sí se puede recalcular
+    "saca 3 iones": str(3 - 2),
+    "se divide por mitosis": str(46),
+    "moléculas de $CO_2$ se necesitan": str(6),
+    "dos plantas heterocigotas": str(round(1 / 4 * 100)),
+    "heterocigota $Aa$ con una homocigota recesiva": str(round(1 / 2 * 100)),
+    "entra en meiosis": str(46 // 2),
+    "porcentaje de los HIJOS VARONES": str(round(1 / 2 * 100)),
+    "grupo sanguíneo $AB$": str(round(2 / 4 * 100)),
+    "los productores fijan 10.000 kcal": str(int(10_000 * 0.1 * 0.1)),
+    "consumidor primario recibe 500 kcal": f"{int(500 / 0.1):,}".replace(",", "."),
+    "8.000 kcal en los productores": str(int(8_000 * 0.1 * 0.1 * 0.1)),
     # Ácido-base
     "concentración de iones hidrógeno es $1 \\times 10^{-5}$": str(5),
 }
