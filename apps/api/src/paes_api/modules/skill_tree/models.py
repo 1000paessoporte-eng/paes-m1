@@ -8,7 +8,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from paes_api.shared.base import Base
 
 if TYPE_CHECKING:
-    from paes_api.modules.content.models import Question
+    from paes_api.modules.content.models import Lesson, Question
     from paes_api.modules.users.models import User
 
 
@@ -92,6 +92,11 @@ class SkillNode(Base):
         secondaryjoin=id == skill_prerequisites.c.prerequisite_id,
     )
     questions: Mapped[list["Question"]] = relationship(back_populates="skill_node")
+    #: La teoría del nodo. Opcional: un nodo sin lección lleva directo a
+    #: practicar, y la interfaz no ofrece "Aprender".
+    lesson: Mapped["Lesson | None"] = relationship(
+        back_populates="skill_node", uselist=False
+    )
     user_progress: Mapped[list["UserSkillProgress"]] = relationship(
         back_populates="skill_node"
     )

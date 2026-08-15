@@ -6493,3 +6493,676 @@ QUESTIONS_HISTORIA = [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Lecciones del Árbol de Habilidades
+#
+# El árbol medía sin enseñar: un estudiante que fallaba en "Potencias y raíces"
+# solo recibía más preguntas de potencias y raíces. Estas lecciones son lo que
+# se estudia ANTES de practicar el nodo.
+#
+# Cada una tiene cuatro partes con trabajos distintos:
+#   intro              para qué sirve esto (una o dos frases, sin jerga)
+#   theory             las propiedades que hay que saber
+#   example_statement  un ejercicio del tipo que sale en la prueba
+#   example_steps      su resolución, donde cada paso dice POR QUÉ se hace
+#   common_error       la trampa en la que cae casi todo el mundo
+#
+# El "porque" de cada paso es obligatorio. Un paso sin justificación produce
+# estudiantes que copian el procedimiento y se pierden apenas cambia el
+# enunciado, que es exactamente lo que hace la PAES.
+#
+# Los números de cada ejemplo se recalculan en scripts/verificar_banco.py.
+# ---------------------------------------------------------------------------
+
+LESSONS: dict[str, dict] = {
+    "num_racionales": {
+        "intro": (
+            "Sumar, restar, multiplicar y dividir fracciones aparece dentro de "
+            "casi todos los otros temas: si esto se te enreda, se te enreda "
+            "también lo que viene después."
+        ),
+        "theory": (
+            "**Para sumar o restar** hace falta el mismo denominador. Se busca "
+            "el mínimo común múltiplo de los denominadores, se amplifica cada "
+            "fracción hasta él y recién ahí se suman los numeradores. El "
+            "denominador NO se suma.\n\n"
+            "**Para multiplicar** no hace falta nada: numerador por numerador y "
+            "denominador por denominador.\n\n"
+            "**Para dividir** se multiplica por el inverso de la segunda: "
+            "$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\cdot \\frac{d}{c}$.\n\n"
+            "**El orden de las operaciones** manda sobre todo lo anterior: "
+            "primero paréntesis, después multiplicaciones y divisiones, y al "
+            "final sumas y restas."
+        ),
+        "example_statement": "Calcula $\\frac{5}{6} - \\frac{2}{9}$.",
+        "example_steps": [
+            {
+                "accion": "Busco el mínimo común múltiplo de 6 y 9. Los múltiplos de 6 son 6, 12, 18… y los de 9 son 9, 18… El primero que comparten es 18.",
+                "porque": "Restar fracciones exige que las dos midan con la misma unidad. Sextos y novenos son unidades distintas: no se pueden restar directamente.",
+            },
+            {
+                "accion": "Amplifico cada fracción a dieciochoavos: $\\frac{5}{6} = \\frac{15}{18}$ (multipliqué arriba y abajo por 3) y $\\frac{2}{9} = \\frac{4}{18}$ (por 2).",
+                "porque": "Multiplicar numerador y denominador por el mismo número no cambia el valor de la fracción, solo cómo está escrita.",
+            },
+            {
+                "accion": "Ahora sí resto los numeradores: $\\frac{15}{18} - \\frac{4}{18} = \\frac{11}{18}$.",
+                "porque": "Con la misma unidad abajo, restar quince dieciochoavos menos cuatro dieciochoavos es restar 15 − 4.",
+            },
+            {
+                "accion": "Reviso si se puede simplificar: 11 es primo y no divide a 18, así que $\\frac{11}{18}$ es la respuesta final.",
+                "porque": "En la PAES las alternativas vienen simplificadas; una respuesta correcta sin simplificar puede no aparecer entre ellas.",
+            },
+        ],
+        "common_error": (
+            "Restar los denominadores entre sí: $\\frac{5}{6} - \\frac{2}{9} \\neq "
+            "\\frac{3}{3}$. El denominador dice en cuántas partes se dividió el "
+            "entero, no es una cantidad que se sume ni se reste."
+        ),
+    },
+    "num_potencias_raices": {
+        "intro": (
+            "Las potencias son la forma corta de escribir multiplicaciones "
+            "repetidas, y sus propiedades permiten operar sin desarrollar nada. "
+            "Aparecen en notación científica, interés compuesto y funciones."
+        ),
+        "theory": (
+            "**Mismo base, se suman los exponentes** al multiplicar: "
+            "$a^m \\cdot a^n = a^{m+n}$. Al dividir se restan: "
+            "$\\frac{a^m}{a^n} = a^{m-n}$.\n\n"
+            "**Potencia de potencia**: se multiplican los exponentes, "
+            "$(a^m)^n = a^{m \\cdot n}$.\n\n"
+            "**Exponente negativo** significa recíproco, no número negativo: "
+            "$a^{-n} = \\frac{1}{a^n}$. Así, $2^{-3} = \\frac{1}{8}$, que es "
+            "positivo.\n\n"
+            "**Exponente cero**: $a^0 = 1$ para cualquier $a \\neq 0$.\n\n"
+            "**Raíces**: una raíz es una potencia de exponente fraccionario, "
+            "$\\sqrt[n]{a^m} = a^{m/n}$. Por eso $\\sqrt{a} = a^{1/2}$ y valen "
+            "las mismas propiedades."
+        ),
+        "example_statement": "Calcula $\\dfrac{2^5 \\cdot 2^{-3}}{2^{-1}}$.",
+        "example_steps": [
+            {
+                "accion": "Arriba tengo la misma base multiplicándose, así que sumo los exponentes: $2^5 \\cdot 2^{-3} = 2^{5+(-3)} = 2^2$.",
+                "porque": "La propiedad del producto vale igual con exponentes negativos: sumar −3 es lo mismo que restar 3.",
+            },
+            {
+                "accion": "Ahora divido: $\\frac{2^2}{2^{-1}} = 2^{2-(-1)} = 2^{3}$.",
+                "porque": "Al dividir se resta el exponente de abajo. Restar un número negativo suma, y ahí es donde se pierde la mayoría.",
+            },
+            {
+                "accion": "Calculo la potencia: $2^3 = 8$.",
+                "porque": "El resultado se pide como número, y $2^3$ significa $2 \\cdot 2 \\cdot 2$.",
+            },
+        ],
+        "common_error": (
+            "Creer que $2^{-3}$ es $-8$. El signo del exponente no pasa al "
+            "resultado: indica que la potencia va al denominador. "
+            "$2^{-3} = \\frac{1}{2^3} = \\frac{1}{8}$, un número positivo."
+        ),
+    },
+    "num_porcentajes": {
+        "intro": (
+            "Un porcentaje es una fracción de denominador 100. Es el contenido "
+            "que más aparece en la vida real —descuentos, IVA, sueldos— y uno de "
+            "los que más se repite en la prueba."
+        ),
+        "theory": (
+            "**El $p\\%$ de una cantidad** es multiplicarla por "
+            "$\\frac{p}{100}$. El 20% de 350 es $350 \\cdot 0{,}20 = 70$.\n\n"
+            "**Aumentar un $p\\%$** es multiplicar por $1 + \\frac{p}{100}$; "
+            "**descontar un $p\\%$**, por $1 - \\frac{p}{100}$. Subir 20% es "
+            "multiplicar por 1,2; bajar 15%, por 0,85.\n\n"
+            "**Los porcentajes sucesivos se multiplican, no se suman.** Subir "
+            "20% y luego bajar 20% NO devuelve al valor original.\n\n"
+            "**Proporcionalidad directa**: si una cantidad crece, la otra crece "
+            "en la misma razón, y $\\frac{a}{b}$ se mantiene constante. En la "
+            "**inversa**, el producto $a \\cdot b$ es el que se mantiene."
+        ),
+        "example_statement": (
+            "Una bicicleta cuesta $\\$20.000$. En marzo sube un 20% y en abril, "
+            "sobre el precio nuevo, baja un 15%. ¿Cuánto cuesta después de los "
+            "dos cambios?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Aplico la subida: $20.000 \\cdot 1{,}20 = 24.000$.",
+                "porque": "Subir 20% es quedarse con el 100% original más 20 puntos: el 120%, o sea 1,20.",
+            },
+            {
+                "accion": "Aplico la baja SOBRE los $\\$24.000$: $24.000 \\cdot 0{,}85 = 20.400$.",
+                "porque": "El enunciado dice «sobre el precio nuevo». El 15% se calcula del valor vigente en abril, no del precio de partida.",
+            },
+            {
+                "accion": "El precio final es $\\$20.400$, es decir 400 pesos más caro que al principio.",
+                "porque": "Subir 20% y bajar 15% no se cancelan: $1{,}20 \\cdot 0{,}85 = 1{,}02$, un alza neta del 2%.",
+            },
+        ],
+        "common_error": (
+            "Sumar y restar los porcentajes: creer que +20% y −15% dejan un +5% "
+            "y responder $\\$21.000$. Los porcentajes se aplican uno sobre el "
+            "resultado del otro, así que se multiplican."
+        ),
+    },
+    "alg_expresiones": {
+        "intro": (
+            "Factorizar es escribir una suma como una multiplicación. Sirve para "
+            "simplificar fracciones algebraicas y para resolver ecuaciones: si un "
+            "producto es cero, alguno de sus factores es cero."
+        ),
+        "theory": (
+            "**Factor común**: lo que se repite en todos los términos sale "
+            "afuera. $6x^2 + 9x = 3x(2x + 3)$.\n\n"
+            "**Diferencia de cuadrados**: "
+            "$a^2 - b^2 = (a+b)(a-b)$. Ojo: la SUMA de cuadrados no se factoriza "
+            "en los reales.\n\n"
+            "**Trinomio cuadrado perfecto**: "
+            "$a^2 \\pm 2ab + b^2 = (a \\pm b)^2$.\n\n"
+            "**Trinomio de la forma** $x^2 + bx + c$: se buscan dos números que "
+            "multiplicados den $c$ y sumados den $b$. Para $x^2 + 5x + 6$ son 2 y "
+            "3, así que queda $(x+2)(x+3)$."
+        ),
+        "example_statement": "Factoriza completamente $2x^2 - 8$.",
+        "example_steps": [
+            {
+                "accion": "Saco el factor común 2: $2x^2 - 8 = 2(x^2 - 4)$.",
+                "porque": "Los dos términos son divisibles por 2. El factor común siempre se busca primero, porque deja adentro una expresión más simple.",
+            },
+            {
+                "accion": "Reconozco que $x^2 - 4$ es una diferencia de cuadrados, con $a = x$ y $b = 2$, porque $4 = 2^2$.",
+                "porque": "Ambos términos son cuadrados perfectos y están restándose, que es exactamente la forma $a^2 - b^2$.",
+            },
+            {
+                "accion": "Aplico la identidad: $x^2 - 4 = (x+2)(x-2)$, así que el resultado es $2(x+2)(x-2)$.",
+                "porque": "«Completamente» significa que ningún factor se puede seguir descomponiendo, y $x+2$ y $x-2$ ya no se pueden.",
+            },
+        ],
+        "common_error": (
+            "Detenerse en $2(x^2 - 4)$ y darlo por factorizado, o intentar "
+            "factorizar $x^2 + 4$. La suma de cuadrados no tiene factorización "
+            "en los números reales."
+        ),
+    },
+    "alg_lineal": {
+        "intro": (
+            "Resolver una ecuación es encontrar el valor que hace verdadera la "
+            "igualdad. Es la herramienta base: modelar un problema en palabras y "
+            "despejar la incógnita."
+        ),
+        "theory": (
+            "**Lo que se hace a un lado se hace al otro.** Sumar, restar, "
+            "multiplicar o dividir por lo mismo a ambos lados mantiene la "
+            "igualdad.\n\n"
+            "**El orden conviene así**: primero se eliminan paréntesis, después "
+            "se juntan las incógnitas a un lado y los números al otro, y recién "
+            "al final se divide.\n\n"
+            "**Inecuaciones**: se resuelven igual, con UNA diferencia crítica. "
+            "Al multiplicar o dividir por un número **negativo**, el signo de "
+            "desigualdad se da vuelta: de $-2x < 6$ se pasa a $x > -3$.\n\n"
+            "**Siempre conviene verificar**: reemplazar la solución en la "
+            "ecuación original y comprobar que los dos lados dan lo mismo."
+        ),
+        "example_statement": "Resuelve $3(x - 2) + 4 = 2x + 7$.",
+        "example_steps": [
+            {
+                "accion": "Elimino el paréntesis multiplicando: $3x - 6 + 4 = 2x + 7$.",
+                "porque": "El 3 multiplica a TODO lo que está dentro del paréntesis, tanto a la $x$ como al −2.",
+            },
+            {
+                "accion": "Junto los números del lado izquierdo: $3x - 2 = 2x + 7$.",
+                "porque": "$-6 + 4 = -2$. Ordenar antes de despejar evita arrastrar términos de más.",
+            },
+            {
+                "accion": "Resto $2x$ a ambos lados: $x - 2 = 7$.",
+                "porque": "Quiero las incógnitas juntas de un solo lado, y restar lo mismo a ambos lados no altera la igualdad.",
+            },
+            {
+                "accion": "Sumo 2 a ambos lados: $x = 9$.",
+                "porque": "Queda la incógnita sola, que es lo que significa resolver.",
+            },
+            {
+                "accion": "Verifico en la ecuación original: a la izquierda $3(9-2)+4 = 21+4 = 25$, y a la derecha $2 \\cdot 9 + 7 = 25$. Coinciden.",
+                "porque": "La verificación detecta cualquier error de signo en menos de diez segundos, y en la prueba vale lo mismo que resolver bien.",
+            },
+        ],
+        "common_error": (
+            "En las inecuaciones, no dar vuelta el signo al dividir por un "
+            "negativo. Si $-2x < 6$, dividir por −2 obliga a escribir $x > -3$, "
+            "no $x < -3$."
+        ),
+    },
+    "alg_sistemas": {
+        "intro": (
+            "Un sistema 2x2 son dos ecuaciones con dos incógnitas. Resolverlo es "
+            "encontrar el par de valores que cumple las dos a la vez: el punto "
+            "donde se cruzan las dos rectas."
+        ),
+        "theory": (
+            "**Sustitución**: se despeja una incógnita en una ecuación y se "
+            "reemplaza en la otra. Conviene cuando alguna ya está casi "
+            "despejada.\n\n"
+            "**Igualación**: se despeja la MISMA incógnita en ambas y se igualan "
+            "las expresiones.\n\n"
+            "**Reducción (o suma y resta)**: se multiplican las ecuaciones por "
+            "los números necesarios para que una incógnita quede con "
+            "coeficientes opuestos, y se suman para que desaparezca.\n\n"
+            "**La solución es un par $(x, y)$**, no un solo número, y tiene que "
+            "cumplir LAS DOS ecuaciones. Siempre se verifica en ambas."
+        ),
+        "example_statement": "Resuelve el sistema $x + y = 12$ ; $x - y = 2$.",
+        "example_steps": [
+            {
+                "accion": "Sumo las dos ecuaciones término a término: $(x+y) + (x-y) = 12 + 2$, que da $2x = 14$.",
+                "porque": "Los términos $+y$ y $-y$ son opuestos, así que al sumar se cancelan y queda una sola incógnita. Es el método de reducción.",
+            },
+            {
+                "accion": "Despejo: $x = \\frac{14}{2} = 7$.",
+                "porque": "Con una sola incógnita, la ecuación se resuelve dividiendo.",
+            },
+            {
+                "accion": "Reemplazo $x = 7$ en la primera ecuación: $7 + y = 12$, entonces $y = 5$.",
+                "porque": "Ya conocido un valor, cualquiera de las dos ecuaciones originales entrega el otro.",
+            },
+            {
+                "accion": "Verifico en la SEGUNDA: $7 - 5 = 2$. Correcto. La solución es $(7, 5)$.",
+                "porque": "Verificar en la ecuación que no se usó para despejar es lo que detecta un error de reemplazo.",
+            },
+        ],
+        "common_error": (
+            "Encontrar $x$ y entregar eso como respuesta. La solución de un "
+            "sistema 2x2 son los dos valores; una alternativa con el $x$ correcto "
+            "y el $y$ equivocado es una trampa clásica de la prueba."
+        ),
+    },
+    "alg_cuadratica": {
+        "intro": (
+            "Una ecuación cuadrática tiene la incógnita elevada al cuadrado y "
+            "puede tener dos soluciones, una o ninguna. Describe todo lo que "
+            "sube y baja: áreas, trayectorias, máximos."
+        ),
+        "theory": (
+            "**Forma general**: $ax^2 + bx + c = 0$, con $a \\neq 0$.\n\n"
+            "**Fórmula general**: "
+            "$x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$. Sirve siempre.\n\n"
+            "**El discriminante** $\\Delta = b^2 - 4ac$ dice cuántas soluciones "
+            "hay antes de calcularlas: si $\\Delta > 0$ hay dos, si "
+            "$\\Delta = 0$ hay una, y si $\\Delta < 0$ no hay solución "
+            "real.\n\n"
+            "**Por factorización**: si la ecuación se puede escribir como "
+            "$(x - p)(x - q) = 0$, entonces $x = p$ o $x = q$, porque un producto "
+            "solo da cero si alguno de sus factores es cero."
+        ),
+        "example_statement": "Resuelve $x^2 - 5x + 6 = 0$.",
+        "example_steps": [
+            {
+                "accion": "Calculo el discriminante: $\\Delta = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1$.",
+                "porque": "Es positivo, así que sé de antemano que hay dos soluciones reales distintas.",
+            },
+            {
+                "accion": "Busco dos números que multiplicados den 6 y sumados den −5: son −2 y −3.",
+                "porque": "Con números enteros pequeños, factorizar es más rápido y seguro que aplicar la fórmula.",
+            },
+            {
+                "accion": "Escribo la ecuación factorizada: $(x - 2)(x - 3) = 0$.",
+                "porque": "Al desarrollarla se obtiene $x^2 - 5x + 6$, así que es la misma ecuación escrita como producto.",
+            },
+            {
+                "accion": "Un producto es cero solo si algún factor lo es, así que $x = 2$ o $x = 3$.",
+                "porque": "Esta es la propiedad que hace útil factorizar, y es la que la prueba evalúa.",
+            },
+        ],
+        "common_error": (
+            "Entregar una sola solución. Una cuadrática con discriminante "
+            "positivo tiene dos, y el enunciado suele pedir la suma, el producto "
+            "o la mayor de ellas."
+        ),
+    },
+    "alg_funciones": {
+        "intro": (
+            "Una función asigna a cada valor de entrada exactamente un valor de "
+            "salida. La lineal crece siempre al mismo ritmo; la cuadrática "
+            "cambia de dirección una vez."
+        ),
+        "theory": (
+            "**Función lineal**: $f(x) = mx + n$. Su gráfico es una recta. La "
+            "**pendiente** $m$ dice cuánto sube $y$ cuando $x$ aumenta en 1: si "
+            "$m > 0$ la recta sube, si $m < 0$ baja. El **coeficiente de "
+            "posición** $n$ es donde corta al eje $Y$.\n\n"
+            "**Pendiente entre dos puntos**: "
+            "$m = \\dfrac{y_2 - y_1}{x_2 - x_1}$.\n\n"
+            "**Función cuadrática**: $f(x) = ax^2 + bx + c$. Su gráfico es una "
+            "parábola: abre hacia arriba si $a > 0$ y hacia abajo si $a < 0$.\n\n"
+            "**Vértice**: está en $x = -\\dfrac{b}{2a}$, y ahí ocurre el mínimo "
+            "(si abre hacia arriba) o el máximo (si abre hacia abajo)."
+        ),
+        "example_statement": (
+            "Una recta pasa por los puntos $(1, 5)$ y $(3, 11)$. Encuentra su "
+            "ecuación."
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la pendiente: $m = \\frac{11 - 5}{3 - 1} = \\frac{6}{2} = 3$.",
+                "porque": "La pendiente es cuánto cambia $y$ dividido por cuánto cambió $x$. Acá $y$ subió 6 mientras $x$ avanzaba 2.",
+            },
+            {
+                "accion": "Uso $y = 3x + n$ y reemplazo el punto $(1, 5)$: $5 = 3 \\cdot 1 + n$.",
+                "porque": "Si el punto pertenece a la recta, sus coordenadas tienen que satisfacer la ecuación.",
+            },
+            {
+                "accion": "Despejo: $n = 5 - 3 = 2$. La ecuación es $y = 3x + 2$.",
+                "porque": "Con la pendiente y un punto queda determinada una única recta.",
+            },
+            {
+                "accion": "Verifico con el otro punto: $3 \\cdot 3 + 2 = 11$. Coincide.",
+                "porque": "Si el segundo punto no calzara, el error estaría en la pendiente.",
+            },
+        ],
+        "common_error": (
+            "Invertir la pendiente y calcular $\\frac{x_2 - x_1}{y_2 - y_1}$. "
+            "La pendiente es el cambio vertical dividido por el horizontal, en "
+            "ese orden."
+        ),
+    },
+    "geo_plana": {
+        "intro": (
+            "Perímetro es cuánto mide el contorno; área, cuánta superficie cubre. "
+            "Son magnitudes distintas y en la prueba conviven en el mismo "
+            "enunciado para ver si se confunden."
+        ),
+        "theory": (
+            "**Rectángulo**: área $= a \\cdot b$, perímetro $= 2(a+b)$.\n\n"
+            "**Triángulo**: área $= \\dfrac{base \\cdot altura}{2}$. La altura "
+            "es perpendicular a la base, no el lado inclinado.\n\n"
+            "**Círculo**: área $= \\pi r^2$, perímetro (circunferencia) "
+            "$= 2\\pi r$. El diámetro es $2r$: si el enunciado da el diámetro, "
+            "hay que dividirlo entre 2 antes de usar la fórmula.\n\n"
+            "**Trapecio**: área $= \\dfrac{(B + b) \\cdot h}{2}$.\n\n"
+            "**Figuras compuestas**: se descomponen en figuras conocidas y se "
+            "suman o restan sus áreas."
+        ),
+        "example_statement": (
+            "Un jardín rectangular mide 8 m por 5 m y tiene en el centro una "
+            "fuente circular de 2 m de radio. ¿Cuál es el área de pasto? "
+            "(Usa $\\pi \\approx 3{,}14$.)"
+        ),
+        "example_steps": [
+            {
+                "accion": "Área del rectángulo completo: $8 \\cdot 5 = 40$ m².",
+                "porque": "Es la superficie total antes de descontar nada.",
+            },
+            {
+                "accion": "Área de la fuente: $\\pi r^2 = 3{,}14 \\cdot 2^2 = 3{,}14 \\cdot 4 = 12{,}56$ m².",
+                "porque": "El radio se eleva al cuadrado ANTES de multiplicar por $\\pi$; el exponente afecta solo al radio.",
+            },
+            {
+                "accion": "Resto: $40 - 12{,}56 = 27{,}44$ m² de pasto.",
+                "porque": "El pasto es lo que queda del rectángulo una vez sacada la fuente. Es una figura compuesta por resta.",
+            },
+        ],
+        "common_error": (
+            "Confundir radio con diámetro. Si el enunciado dice «una fuente de 2 "
+            "metros de diámetro», el radio es 1 y el área es la cuarta parte de "
+            "la calculada acá."
+        ),
+    },
+    "geo_pitagoras": {
+        "intro": (
+            "En cualquier triángulo rectángulo, conocer dos lados basta para "
+            "obtener el tercero. Es la herramienta que aparece en diagonales, "
+            "alturas y distancias."
+        ),
+        "theory": (
+            "**El teorema**: en un triángulo rectángulo, "
+            "$a^2 + b^2 = c^2$, donde $c$ es la **hipotenusa** —el lado opuesto "
+            "al ángulo recto, siempre el más largo— y $a$, $b$ son los "
+            "catetos.\n\n"
+            "**Solo vale si hay ángulo recto.** En un triángulo cualquiera no se "
+            "puede aplicar.\n\n"
+            "**Para buscar un cateto** se despeja restando: "
+            "$a = \\sqrt{c^2 - b^2}$.\n\n"
+            "**Tríos pitagóricos** que conviene reconocer de memoria: "
+            "(3, 4, 5), (5, 12, 13), (8, 15, 17) y sus múltiplos, como "
+            "(6, 8, 10)."
+        ),
+        "example_statement": (
+            "Una escalera de 13 m se apoya en un muro vertical y su base está a "
+            "5 m del muro. ¿A qué altura llega la escalera?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico los elementos: la escalera es la hipotenusa ($c = 13$), la distancia al muro es un cateto ($b = 5$) y la altura buscada es el otro cateto.",
+                "porque": "El muro es vertical y el suelo horizontal, así que forman el ángulo recto. La escalera, opuesta a él, es la hipotenusa.",
+            },
+            {
+                "accion": "Planteo: $a^2 + 5^2 = 13^2$, es decir $a^2 + 25 = 169$.",
+                "porque": "El teorema relaciona los cuadrados de los tres lados, y acá el desconocido es un cateto.",
+            },
+            {
+                "accion": "Despejo: $a^2 = 169 - 25 = 144$, entonces $a = \\sqrt{144} = 12$ m.",
+                "porque": "Para buscar un cateto se RESTA, no se suma: la hipotenusa es la mayor y su cuadrado contiene a los otros dos.",
+            },
+        ],
+        "common_error": (
+            "Sumar cuando había que restar: dar $\\sqrt{13^2 + 5^2}$ como "
+            "respuesta. Eso entrega un lado más largo que la escalera, lo que es "
+            "imposible: la hipotenusa siempre es el lado mayor."
+        ),
+    },
+    "geo_transformaciones": {
+        "intro": (
+            "Trasladar, rotar y reflejar una figura cambia su posición pero no "
+            "su forma ni su tamaño. Por eso se llaman isométricas: «misma "
+            "medida»."
+        ),
+        "theory": (
+            "**Traslación** según un vector $(a, b)$: cada punto se mueve $a$ "
+            "en horizontal y $b$ en vertical. El punto $(x, y)$ llega a "
+            "$(x+a,\\; y+b)$.\n\n"
+            "**Reflexión (simetría axial)**: respecto del eje $X$, "
+            "$(x, y) \\to (x, -y)$; respecto del eje $Y$, "
+            "$(x, y) \\to (-x, y)$. Cambia solo la coordenada del eje "
+            "perpendicular al espejo.\n\n"
+            "**Rotación en 90° antihorario** con centro en el origen: "
+            "$(x, y) \\to (-y, x)$. En 180°: $(x, y) \\to (-x, -y)$.\n\n"
+            "**Las tres conservan** las longitudes de los lados y la medida de "
+            "los ángulos: la figura resultante es congruente con la original."
+        ),
+        "example_statement": (
+            "El punto $P(-3, 4)$ se refleja respecto del eje $Y$ y el resultado "
+            "se traslada según el vector $(2, -1)$. ¿Dónde queda?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Reflejo respecto del eje $Y$: $(-3, 4)$ pasa a $(3, 4)$.",
+                "porque": "El eje $Y$ actúa como espejo vertical, así que cambia el signo de la coordenada horizontal y la vertical se mantiene.",
+            },
+            {
+                "accion": "Traslado ese resultado según $(2, -1)$: $(3+2,\\; 4-1) = (5, 3)$.",
+                "porque": "Trasladar es sumar el vector a las coordenadas: 2 a la derecha y 1 hacia abajo.",
+            },
+            {
+                "accion": "El punto final es $(5, 3)$.",
+                "porque": "El orden importa: reflejar y después trasladar no da lo mismo que trasladar y después reflejar.",
+            },
+        ],
+        "common_error": (
+            "Cambiar la coordenada equivocada al reflejar. Respecto del eje $Y$ "
+            "cambia la $x$; respecto del eje $X$ cambia la $y$. Conviene pensar "
+            "en cuál eje es el espejo y mover el punto perpendicular a él."
+        ),
+    },
+    "geo_solidos": {
+        "intro": (
+            "El volumen mide cuánto cabe adentro; el área de superficie, cuánto "
+            "papel se necesita para forrarlo. Aparecen en problemas de "
+            "capacidad, envases y pintura."
+        ),
+        "theory": (
+            "**Prisma o cubo**: volumen $= $ área de la base $\\times$ altura. "
+            "Para el cubo de arista $a$: $V = a^3$ y superficie $= 6a^2$.\n\n"
+            "**Cilindro**: $V = \\pi r^2 h$. Su superficie total es "
+            "$2\\pi r^2 + 2\\pi r h$: las dos tapas más el manto.\n\n"
+            "**Cono**: $V = \\dfrac{\\pi r^2 h}{3}$, un tercio del cilindro de "
+            "igual base y altura.\n\n"
+            "**Esfera**: $V = \\dfrac{4}{3}\\pi r^3$ y superficie "
+            "$= 4\\pi r^2$.\n\n"
+            "**Las unidades cambian de exponente**: el área va en unidades "
+            "cuadradas y el volumen en cúbicas. Y $1$ litro $= 1000$ cm³."
+        ),
+        "example_statement": (
+            "Un tarro cilíndrico tiene 10 cm de radio y 20 cm de altura. ¿Cuál "
+            "es su volumen? (Usa $\\pi \\approx 3{,}14$.)"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo el área de la base, que es un círculo: $\\pi r^2 = 3{,}14 \\cdot 10^2 = 314$ cm².",
+                "porque": "El volumen de un cilindro es la base repetida a lo largo de toda la altura, así que primero hay que saber cuánto mide esa base.",
+            },
+            {
+                "accion": "Multiplico por la altura: $314 \\cdot 20 = 6.280$ cm³.",
+                "porque": "Apilar el área de la base 20 cm hacia arriba es exactamente multiplicar por la altura.",
+            },
+            {
+                "accion": "Si el enunciado pidiera litros: $6.280 \\div 1000 = 6{,}28$ litros.",
+                "porque": "Un litro equivale a 1000 cm³, y la prueba suele pedir el resultado en la unidad que no viene dada.",
+            },
+        ],
+        "common_error": (
+            "Elevar al cuadrado todo el producto en vez de solo el radio, o "
+            "usar el diámetro como si fuera radio. En $\\pi r^2 h$ el exponente "
+            "afecta únicamente a $r$."
+        ),
+    },
+    "prob_estadistica_desc": {
+        "intro": (
+            "Media, mediana y moda resumen un conjunto de datos en un solo "
+            "número, pero no dicen lo mismo. Elegir cuál mirar es parte de lo "
+            "que evalúa la prueba."
+        ),
+        "theory": (
+            "**Media aritmética**: la suma de todos los datos dividida por "
+            "cuántos son. Le afectan mucho los valores extremos.\n\n"
+            "**Mediana**: el valor del medio con los datos ORDENADOS. Si la "
+            "cantidad de datos es par, es el promedio de los dos centrales. No "
+            "le afectan los extremos.\n\n"
+            "**Moda**: el dato que más se repite. Puede no existir o haber "
+            "varias.\n\n"
+            "**Rango**: la diferencia entre el mayor y el menor.\n\n"
+            "**Cuándo usar cuál**: si hay un dato muy alejado del resto (un "
+            "sueldo enorme entre sueldos normales), la mediana representa mejor "
+            "al grupo que la media."
+        ),
+        "example_statement": (
+            "Las notas de un estudiante son 4, 5, 5, 6 y 10. Calcula la media y "
+            "la mediana, y decide cuál lo representa mejor."
+        ),
+        "example_steps": [
+            {
+                "accion": "Media: $\\frac{4+5+5+6+10}{5} = \\frac{30}{5} = 6{,}0$.",
+                "porque": "Es la suma de todas las notas repartida en partes iguales entre las cinco evaluaciones.",
+            },
+            {
+                "accion": "Ordeno los datos —ya están— y tomo el central: 4, 5, **5**, 6, 10. La mediana es 5.",
+                "porque": "Con cinco datos, el tercero deja dos por debajo y dos por encima. Ordenar primero es obligatorio.",
+            },
+            {
+                "accion": "La media (6,0) es mayor que la mediana (5) porque el 10 la empuja hacia arriba; cuatro de las cinco notas están por debajo de la media.",
+                "porque": "Un solo valor extremo arrastra la media pero no mueve la mediana, y por eso acá la mediana representa mejor el desempeño habitual.",
+            },
+        ],
+        "common_error": (
+            "Calcular la mediana sin ordenar los datos. En la lista 10, 4, 5, 6, "
+            "5 el valor central es 5, no el 5 que aparece tercero en el desorden: "
+            "hay que ordenar siempre antes de contar."
+        ),
+    },
+    "prob_combinatoria": {
+        "intro": (
+            "Contar cuántas opciones hay sin escribirlas todas. Es lo que "
+            "permite después calcular probabilidades: casos favorables sobre "
+            "casos posibles."
+        ),
+        "theory": (
+            "**Principio multiplicativo**: si una decisión tiene $m$ opciones y "
+            "otra independiente tiene $n$, juntas dan $m \\cdot n$ "
+            "posibilidades.\n\n"
+            "**Permutaciones** (importa el orden, se usan todos): $n! = n \\cdot "
+            "(n-1) \\cdots 2 \\cdot 1$.\n\n"
+            "**Variaciones** (importa el orden, se eligen $k$ de $n$): "
+            "$\\dfrac{n!}{(n-k)!}$.\n\n"
+            "**Combinaciones** (NO importa el orden): "
+            "$\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$.\n\n"
+            "**La pregunta que decide todo**: ¿cambia el resultado si altero el "
+            "orden? Un podio sí cambia (primero y segundo no son lo mismo); un "
+            "comité de dos personas no."
+        ),
+        "example_statement": (
+            "De un grupo de 6 personas se debe elegir un comité de 2, sin "
+            "distinguir cargos. ¿De cuántas formas distintas se puede hacer?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Me pregunto si importa el orden. Elegir a Ana y Beto es el mismo comité que elegir a Beto y Ana, así que NO importa: es una combinación.",
+                "porque": "El enunciado dice «sin distinguir cargos». Si dijera presidente y secretario, el orden sí importaría y el número sería el doble.",
+            },
+            {
+                "accion": "Aplico la fórmula: $\\binom{6}{2} = \\frac{6!}{2!\\,4!}$.",
+                "porque": "Son $n = 6$ personas disponibles y $k = 2$ lugares por llenar.",
+            },
+            {
+                "accion": "Simplifico: $\\frac{6 \\cdot 5}{2 \\cdot 1} = \\frac{30}{2} = 15$.",
+                "porque": "El $4!$ del denominador cancela la parte baja del $6!$, así que basta multiplicar los dos primeros factores y dividir por $2!$.",
+            },
+        ],
+        "common_error": (
+            "Usar variaciones donde correspondían combinaciones y responder 30. "
+            "Ese número cuenta dos veces cada comité, una por cada orden posible "
+            "de las mismas dos personas."
+        ),
+    },
+    "prob_reglas": {
+        "intro": (
+            "La probabilidad mide qué tan posible es algo, en una escala de 0 a "
+            "1. Con dos o tres reglas se resuelve la mayoría de las preguntas de "
+            "la prueba."
+        ),
+        "theory": (
+            "**Definición clásica**: $P(A) = \\dfrac{\\text{casos "
+            "favorables}}{\\text{casos posibles}}$, cuando todos los casos son "
+            "igualmente probables. Siempre está entre 0 y 1.\n\n"
+            "**Complemento**: $P(\\text{no } A) = 1 - P(A)$. Es el atajo para "
+            "cualquier pregunta que diga «al menos uno».\n\n"
+            "**Unión**: $P(A \\text{ o } B) = P(A) + P(B) - P(A \\text{ y } B)$. "
+            "Se resta la intersección para no contarla dos veces.\n\n"
+            "**Eventos independientes** (uno no afecta al otro): "
+            "$P(A \\text{ y } B) = P(A) \\cdot P(B)$.\n\n"
+            "**Con o sin reposición**: si el objeto extraído no se devuelve, el "
+            "total cambia para la segunda extracción y los eventos dejan de ser "
+            "independientes."
+        ),
+        "example_statement": (
+            "Una bolsa tiene 5 bolitas rojas y 3 azules. Se sacan dos sin "
+            "reposición. ¿Cuál es la probabilidad de que ambas sean rojas?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Primera extracción: hay 5 rojas entre 8 bolitas, así que $P = \\frac{5}{8}$.",
+                "porque": "Todas las bolitas tienen la misma posibilidad de salir, así que es casos favorables sobre casos totales.",
+            },
+            {
+                "accion": "Segunda extracción, suponiendo que la primera fue roja: quedan 4 rojas entre 7 bolitas, $P = \\frac{4}{7}$.",
+                "porque": "«Sin reposición» significa que la bolita no vuelve: cambian tanto las rojas disponibles como el total.",
+            },
+            {
+                "accion": "Multiplico las dos: $\\frac{5}{8} \\cdot \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}$.",
+                "porque": "Para que ocurran los dos sucesos encadenados se multiplica la probabilidad del primero por la del segundo dado que ocurrió el primero.",
+            },
+        ],
+        "common_error": (
+            "Usar $\\frac{5}{8}$ dos veces y responder $\\frac{25}{64}$. Eso "
+            "sería correcto CON reposición; sin reposición el segundo cálculo "
+            "parte de una bolsa distinta."
+        ),
+    },
+}

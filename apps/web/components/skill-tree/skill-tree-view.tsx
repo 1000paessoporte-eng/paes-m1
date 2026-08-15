@@ -125,11 +125,32 @@ const AXIS_META: Record<SkillNode["axis"], AxisMeta> = {
   },
 };
 
+/**
+ * Orden canónico de los ejes, con los trece de las cinco pruebas.
+ *
+ * Las columnas NO se toman de esta lista sino de los ejes que traen los nodos
+ * recibidos: el árbol de Competencia Lectora no tiene "Números", y fijar las
+ * columnas dejaba cuatro columnas de matemática vacías al cambiar de prueba.
+ * Esta lista solo dice en qué orden se muestran las que sí existen.
+ */
 const AXIS_ORDER: SkillNode["axis"][] = [
+  // Matemática
   "numeros",
   "algebra",
   "geometria",
   "probabilidad",
+  // Competencia Lectora
+  "localizar",
+  "interpretar",
+  "evaluar",
+  // Ciencias
+  "biologia",
+  "fisica",
+  "quimica",
+  // Historia y Ciencias Sociales
+  "historia",
+  "ciudadania",
+  "economia",
 ];
 
 const GUTTER_X = 12; // centro del gutter de conectores, en px
@@ -141,7 +162,12 @@ interface SkillTreeViewProps {
 export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   const nameByCode = new Map(nodes.map((n) => [n.code, n.name]));
 
-  const columns = AXIS_ORDER.map((axis) => ({
+  // Solo los ejes que existen en esta prueba, en el orden canónico.
+  const ejesPresentes = AXIS_ORDER.filter((axis) =>
+    nodes.some((n) => n.axis === axis)
+  );
+
+  const columns = ejesPresentes.map((axis) => ({
     axis,
     nodes: nodes
       .filter((n) => n.axis === axis)
@@ -149,7 +175,14 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   }));
 
   return (
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+    <div
+      className={cn(
+        "grid grid-cols-1 gap-8 sm:grid-cols-2",
+        // Tres ejes (Lectora, Ciencias, Historia) o cuatro (matemática): la
+        // grilla se ajusta para que no queden columnas huérfanas.
+        columns.length === 3 ? "xl:grid-cols-3" : "xl:grid-cols-4"
+      )}
+    >
       {columns.map((column) => (
         <TreeColumn
           key={column.axis}
@@ -335,14 +368,32 @@ function TreeColumn({
                       </p>
                     )}
 
-                    {!locked && (
-                      <Link
-                        href={`/practicar/${node.code}`}
-                        className="mt-3 inline-block text-xs font-medium text-accent hover:underline"
-                      >
-                        Practicar →
-                      </Link>
-                    )}
+                    {/* Aprender aparece aunque el nodo esté bloqueado: lo que
+                        se gana practicando es el derecho a practicar, no el
+                        derecho a estudiar. Negarle la explicación a quien
+                        todavía no domina el prerrequisito es exactamente al
+                        revés de lo que sirve. */}
+                    <div className="mt-3 flex flex-wrap items-center gap-3">
+                      {node.has_lesson && (
+                        <Link
+                          href={`/aprender/${node.code}`}
+                          className="text-xs font-medium text-accent hover:underline"
+                        >
+                          Aprender →
+                        </Link>
+                      )}
+                      {!locked && (
+                        <Link
+                          href={`/practicar/${node.code}`}
+                          className={
+                            "text-xs font-medium hover:underline " +
+                            (node.has_lesson ? "text-muted" : "text-accent")
+                          }
+                        >
+                          Practicar →
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

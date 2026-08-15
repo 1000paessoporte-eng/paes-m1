@@ -21,3 +21,25 @@ class SkillNodeProgressOut(SkillNodeOut):
     status: ProgressStatus
     accuracy: float
     attempts: int
+    #: Si el nodo tiene teoría escrita. La interfaz ofrece "Aprender" solo
+    #: cuando la hay; el resto lleva directo a practicar.
+    has_lesson: bool = False
+
+
+class LessonStepOut(BaseModel):
+    accion: str
+    porque: str
+
+
+class LessonOut(BaseModel):
+    """La teoría del nodo: lo que se estudia antes de practicar."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    node_code: str
+    node_name: str
+    intro: str
+    theory: str
+    example_statement: str
+    example_steps: list[LessonStepOut]
+    common_error: str | None = None

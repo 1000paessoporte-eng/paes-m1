@@ -7,6 +7,8 @@ import katex from "katex";
  *  - Fórmulas LaTeX entre signos `$`, por ejemplo `$\frac{3}{4}$`.
  *  - Párrafos separados por línea en blanco.
  *  - Tablas simples en formato markdown (líneas que empiezan con `|`).
+ *  - Negritas con `**texto**`, para destacar el nombre de una propiedad
+ *    dentro de la teoría de una lección.
  *
  * Se usa KaTeX en lugar de imágenes para que las fórmulas se puedan copiar y
  * escalen bien en pantallas pequeñas.
@@ -34,9 +36,17 @@ function renderizarConFormulas(texto: string): string {
           return escaparHtml(parte);
         }
       }
-      return escaparHtml(parte);
+      // Las negritas se aplican DESPUÉS de escapar, así que el texto del
+      // banco no puede inyectar etiquetas: los `<` ya se convirtieron en
+      // `&lt;` y lo único que se reintroduce es el <strong> de acá.
+      return negritas(escaparHtml(parte));
     })
     .join("");
+}
+
+/** `**así**` se convierte en negrita. Solo eso: no es un motor de markdown. */
+function negritas(texto: string): string {
+  return texto.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 }
 
 function esTabla(bloque: string): boolean {

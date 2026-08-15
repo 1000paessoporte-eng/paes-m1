@@ -165,6 +165,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/skill-tree/{code}/leccion": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Lesson
+         * @description La teoría del nodo. 404 si el nodo todavía no tiene lección escrita.
+         */
+        get: operations["get_lesson_api_skill_tree__code__leccion_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/skill-tree/{code}": {
         parameters: {
             query?: never;
@@ -988,6 +1008,33 @@ export interface components {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
         };
+        /**
+         * LessonOut
+         * @description La teoría del nodo: lo que se estudia antes de practicar.
+         */
+        LessonOut: {
+            /** Node Code */
+            node_code: string;
+            /** Node Name */
+            node_name: string;
+            /** Intro */
+            intro: string;
+            /** Theory */
+            theory: string;
+            /** Example Statement */
+            example_statement: string;
+            /** Example Steps */
+            example_steps: components["schemas"]["LessonStepOut"][];
+            /** Common Error */
+            common_error?: string | null;
+        };
+        /** LessonStepOut */
+        LessonStepOut: {
+            /** Accion */
+            accion: string;
+            /** Porque */
+            porque: string;
+        };
         /** LoginIn */
         LoginIn: {
             /**
@@ -1293,6 +1340,11 @@ export interface components {
             accuracy: number;
             /** Attempts */
             attempts: number;
+            /**
+             * Has Lesson
+             * @default false
+             */
+            has_lesson: boolean;
         };
         /**
          * Subject
@@ -1645,7 +1697,10 @@ export interface operations {
     };
     list_skill_nodes_api_skill_tree_get: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description Prueba cuyo temario se quiere ver. El árbol es distinto por prueba: cada una tiene sus propios ejes y prerrequisitos. */
+                subject?: components["schemas"]["Subject"];
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -1659,6 +1714,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SkillNodeProgressOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -1679,6 +1743,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SkillNodeProgressOut"] | null;
+                };
+            };
+        };
+    };
+    get_lesson_api_skill_tree__code__leccion_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                code: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["LessonOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

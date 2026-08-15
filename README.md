@@ -40,7 +40,7 @@ No es un banco de preguntas plano. Las piezas:
 |---|---|---|
 | **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (las cinco), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
 | **Puntaje y revisión** | 🟢 Funcional | Puntaje 100-1000 con tablas oficiales DEMRE, desglose por eje/dificultad/nodo, desarrollo paso a paso de cada pregunta. |
-| **Árbol de Habilidades** | 🟢 Funcional (solo M1 en la UI) | Temario como grafo de nodos con prerequisitos y desbloqueo por dominio. |
+| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos. Cada nodo de M1 trae su lección: teoría, ejemplo resuelto paso a paso y el error típico, antes de practicar. |
 | **Práctica por nodo** | 🟢 Funcional | `/practicar/[code]`: una pregunta a la vez con corrección inmediata. |
 | **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
 | **Analítica** | 🟢 Funcional | Racha, precisión global, tiempo invertido, gráficos SVG propios. |
@@ -377,7 +377,7 @@ Ordenado por impacto:
    memoria siguen fuera del banco a propósito: ningún script puede verificar
    que una afirmación histórica sea cierta. Ese tramo entra cuando alguien con
    la formación lo revise.
-4. **UI del Árbol de Habilidades para M2** (hoy `/arbol` es solo M1).
+4. **Lecciones para las otras cuatro pruebas.** Hoy la teoría está escrita para los 15 nodos de M1; el resto lleva directo a practicar.
 5. **Motor de recomendación real.** Hoy `get_recommended_node()` es un ranking
    ponderado con pandas (accuracy 60% + impacto 30% + nunca intentado 40%), no
    un modelo entrenado.

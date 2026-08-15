@@ -22,12 +22,14 @@ from paes_api.core.security import hash_password
 from paes_api.modules.content.models import (
     Alternative,
     Difficulty,
+    Lesson,
     Question,
     ReadingPassage,
 )
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 from paes_api.modules.users.models import User
 from paes_api.seed_data import (
+    LESSONS,
     PASSAGES,
     PASSAGES_HISTORIA,
     QUESTIONS,
@@ -187,6 +189,61 @@ def seed_questions(
     )
 
 
+def seed_lessons(db, nodes_by_code: dict[str, SkillNode]) -> None:
+    """Siembra la teoría de cada nodo. Idempotente por nodo, y SÍ actualiza.
+
+    A diferencia de una pregunta —cuyo enunciado identifica el registro—, una
+    lección se corrige: mejorar una explicación o arreglar una errata no puede
+    obligar a borrar el nodo.
+    """
+    creadas = 0
+    actualizadas = 0
+    for code, datos in LESSONS.items():
+        node = nodes_by_code.get(code)
+        if node is None:
+            print(f"  aviso: lección de un nodo que no existe ({code}), se omite")
+            continue
+
+        existente = db.execute(
+            select(Lesson).where(Lesson.skill_node_id == node.id)
+        ).scalar_one_or_none()
+
+        if existente is None:
+            db.add(
+                Lesson(
+                    skill_node_id=node.id,
+                    intro=datos["intro"],
+                    theory=datos["theory"],
+                    example_statement=datos["example_statement"],
+                    example_steps=datos["example_steps"],
+                    common_error=datos.get("common_error"),
+                )
+            )
+            creadas += 1
+            continue
+
+        cambios = (
+            existente.intro != datos["intro"]
+            or existente.theory != datos["theory"]
+            or existente.example_statement != datos["example_statement"]
+            or existente.example_steps != datos["example_steps"]
+            or existente.common_error != datos.get("common_error")
+        )
+        if cambios:
+            existente.intro = datos["intro"]
+            existente.theory = datos["theory"]
+            existente.example_statement = datos["example_statement"]
+            existente.example_steps = datos["example_steps"]
+            existente.common_error = datos.get("common_error")
+            actualizadas += 1
+
+    db.commit()
+    print(
+        f"lessons: {creadas} nuevas, {actualizadas} actualizadas "
+        f"(de {len(LESSONS)} definidas)"
+    )
+
+
 def seed_demo_user(db) -> None:
     existing = db.execute(select(User).where(User.email == DEMO_EMAIL)).scalar_one_or_none()
     if existing:
@@ -215,6 +272,7 @@ def main() -> None:
         nodes = seed_skill_nodes(db)
         passages = seed_passages(db)
         seed_questions(db, nodes, passages)
+        seed_lessons(db, nodes)
         seed_demo_user(db)
     finally:
         db.close()

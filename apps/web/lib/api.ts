@@ -122,8 +122,24 @@ export function getContentStats(): Promise<ContentStats> {
   });
 }
 
-export function getSkillTree(token?: string): Promise<SkillNode[]> {
-  return apiFetch<SkillNode[]>("/api/skill-tree", token);
+export type Lesson =
+  paths["/api/skill-tree/{code}/leccion"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getSkillTree(
+  token?: string,
+  subject: string = "m1"
+): Promise<SkillNode[]> {
+  return apiFetch<SkillNode[]>(`/api/skill-tree?subject=${subject}`, token);
+}
+
+/** Un nodo con el progreso del estudiante. */
+export function getSkillNode(code: string, token?: string): Promise<SkillNode> {
+  return apiFetch<SkillNode>(`/api/skill-tree/${code}`, token);
+}
+
+/** La teoría de un nodo. Lanza ApiError 404 si el tema aún no tiene lección. */
+export function getLesson(code: string, token?: string): Promise<Lesson> {
+  return apiFetch<Lesson>(`/api/skill-tree/${code}/leccion`, token);
 }
 
 export function getRecommendedNode(token?: string): Promise<RecommendedNode> {

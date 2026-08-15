@@ -7,18 +7,37 @@ import { SkillTreeView } from "@/components/skill-tree/skill-tree-view";
 
 export const metadata = {
   title: "Árbol de Habilidades",
-  description: "El temario como nodos que se desbloquean a medida que dominas cada tema.",
+  description:
+    "El temario de cada prueba como nodos: primero se estudia la teoría y después se practica.",
 };
 
+/** Las cinco pruebas. Cada una tiene su propio árbol, con sus ejes. */
+const PRUEBAS = [
+  { id: "lectora", label: "Competencia Lectora" },
+  { id: "m1", label: "Matemática M1" },
+  { id: "m2", label: "Matemática M2" },
+  { id: "ciencias", label: "Ciencias" },
+  { id: "historia", label: "Historia" },
+] as const;
 
-export default async function ArbolHabilidadesPage() {
+const PRUEBAS_VALIDAS = PRUEBAS.map((p) => p.id) as readonly string[];
+
+export default async function ArbolHabilidadesPage({
+  searchParams,
+}: PageProps<"/arbol">) {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
+  const params = await searchParams;
+
+  // La prueba viaja en la URL y no en estado local: así el estudiante puede
+  // guardar el enlace de "el árbol de Ciencias" y volver ahí directo.
+  const pedida = typeof params.prueba === "string" ? params.prueba : "m1";
+  const prueba = PRUEBAS_VALIDAS.includes(pedida) ? pedida : "m1";
 
   let nodes;
   let recommended;
   try {
     [nodes, recommended] = await Promise.all([
-      getSkillTree(token),
+      getSkillTree(token, prueba),
       getRecommendedNode(token),
     ]);
   } catch (err) {
@@ -34,12 +53,46 @@ export default async function ArbolHabilidadesPage() {
     );
   }
 
+  const conLeccion = nodes.filter((n) => n.has_lesson).length;
+
   return (
     <div>
       <h1 className="text-2xl font-semibold">Árbol de Habilidades</h1>
       <p className="mt-1 text-sm text-muted">
-        Números, Álgebra, Geometría y Probabilidad como nodos desbloqueables.
+        Cada tema trae primero la teoría con un ejemplo resuelto, y después las
+        preguntas para practicarlo.
       </p>
+
+      {/* ── Prueba ──────────────────────────────────────────────────── */}
+      <nav className="mt-5 flex flex-wrap gap-2" aria-label="Prueba">
+        {PRUEBAS.map((p) => {
+          const activa = p.id === prueba;
+          return (
+            <Link
+              key={p.id}
+              href={`/arbol?prueba=${p.id}`}
+              aria-current={activa ? "page" : undefined}
+              className={
+                "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors " +
+                (activa
+                  ? "border-accent bg-accent/10 text-accent"
+                  : "border-border text-muted hover:bg-surface-hover hover:text-foreground")
+              }
+            >
+              {p.label}
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* Decirlo es más honesto que dejar que lo descubra clic a clic: hoy
+          solo M1 tiene la teoría escrita. */}
+      {conLeccion === 0 && (
+        <p className="mt-4 rounded-lg border border-border bg-surface px-4 py-3 text-sm text-muted">
+          Los temas de esta prueba todavía no tienen la teoría escrita: por
+          ahora llevan directo a practicar. Matemática M1 sí la tiene completa.
+        </p>
+      )}
 
       {recommended && (
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/10 px-5 py-4">
@@ -52,10 +105,14 @@ export default async function ArbolHabilidadesPage() {
             </p>
           </div>
           <Link
-            href={`/practicar/${recommended.code}`}
+            href={
+              recommended.has_lesson
+                ? `/aprender/${recommended.code}`
+                : `/practicar/${recommended.code}`
+            }
             className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
           >
-            Practicar
+            {recommended.has_lesson ? "Estudiar este tema" : "Practicar"}
           </Link>
         </div>
       )}
