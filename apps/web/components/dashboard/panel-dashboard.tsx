@@ -98,6 +98,7 @@ export function PanelDashboard({
         progreso={{
           ensayosCompletos,
           diasPracticados: analytics?.active_days ?? 0,
+          mejorRachaEnsayos: analytics?.best_exam_streak_days ?? 0,
         }}
       />
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
@@ -110,6 +111,7 @@ export function PanelDashboard({
               ensayos={rendidos.length}
               mejor={mejor}
               racha={racha}
+              rachaEnsayos={analytics?.exam_streak_days ?? 0}
               precision={precision}
               tiempoTotal={tiempoTotalSegundos}
             />
@@ -158,6 +160,7 @@ function Bienvenida({
   ensayos,
   mejor,
   racha,
+  rachaEnsayos,
   precision,
   tiempoTotal,
 }: {
@@ -166,6 +169,7 @@ function Bienvenida({
   ensayos: number;
   mejor: number | null;
   racha: number;
+  rachaEnsayos: number;
   precision: number | null;
   tiempoTotal: number;
 }) {
@@ -181,6 +185,14 @@ function Bienvenida({
           {/* La racha va arriba, junto al saludo: es lo que se viene a mirar
               todos los días, y abajo del todo se perdía. */}
           <Racha dias={racha} />
+          {/* La racha de ENSAYOS es la que cuenta para el premio, así que se
+              muestra aparte de la de práctica: son cosas distintas y mezclarlas
+              haría que alguien creyera que califica cuando no. */}
+          {rachaEnsayos > 0 && (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/5 px-3 py-1.5 text-sm font-semibold text-accent">
+              📝 {rachaEnsayos} {rachaEnsayos === 1 ? "día" : "días"} con ensayo
+            </span>
+          )}
         </div>
 
         <h1 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">

@@ -318,3 +318,26 @@ En orden:
 3. **`SECRET_KEY`**: genera uno nuevo (`openssl rand -base64 48`) y reemplázalo
    en Vercel. Ojo: esto **cierra la sesión de todos los usuarios**, porque
    invalida los JWT emitidos. Es el precio correcto si hubo filtración.
+
+## Recordatorios por correo
+
+El sistema está construido y **no envía nada todavía**: sin `SMTP_HOST`, cada
+correo se escribe en el log del servidor en vez de salir. Es a propósito, para
+poder probar el flujo completo antes de contratar un proveedor.
+
+Para activarlo hacen falta dos variables en el proyecto `milpaes-api` de Vercel:
+
+- `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM` — de
+  Resend, Brevo o el proveedor que se elija. El plan gratuito de cualquiera de
+  los dos alcanza de sobra para el volumen actual.
+- `CRON_SECRET` — cualquier cadena larga y aleatoria. Sin ella el endpoint
+  `/api/reminders/run` responde 404 y no se puede disparar desde fuera.
+
+El cron ya está declarado en `apps/api/vercel.json` y corre todos los días a las
+22:00 UTC (19:00 en Chile continental). El día que existan esas variables,
+empieza a mandar correos sin tocar código.
+
+Reglas que el sistema respeta, y que conviene no relajar: nunca escribe a quien
+apagó los recordatorios en su perfil, nunca dos veces en menos de dos días,
+nunca a quien ya rindió hoy, y nunca a una cuenta con más de 45 días sin
+actividad. Cada correo lleva el enlace para apagarlos.

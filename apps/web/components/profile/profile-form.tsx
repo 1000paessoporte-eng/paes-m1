@@ -10,14 +10,23 @@ type Msg = { type: "ok" | "error"; text: string };
 export function ProfileForm({
   initialName,
   email,
+  initialRecordatorios,
 }: {
   initialName: string;
   email: string;
+  initialRecordatorios: boolean;
 }) {
   const router = useRouter();
   const [name, setName] = useState(initialName);
   const [savingName, setSavingName] = useState(false);
   const [nameMsg, setNameMsg] = useState<Msg | null>(null);
+
+  // Los recordatorios se apagan acá y desde el enlace al pie de cada correo.
+  // Que apagarlos cueste un clic es lo que evita que la gente marque el
+  // remitente como spam, que arrastraría también los correos de recuperar
+  // contraseña.
+  const [recordatorios, setRecordatorios] = useState(initialRecordatorios);
+  const [guardandoAviso, setGuardandoAviso] = useState(false);
 
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");

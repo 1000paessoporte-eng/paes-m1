@@ -54,6 +54,11 @@ const REQUISITOS_PREMIO = [
       "De 34 preguntas o más, terminados. Los ensayos cortos y la práctica por tema no cuentan para este requisito.",
   },
   {
+    titulo: "15 días seguidos con ensayo",
+    detalle:
+      "Tu mejor racha, no la que tengas activa el día de la prueba. Enfermarse un día no deja a nadie fuera.",
+  },
+  {
     titulo: "90 días distintos con práctica",
     detalle:
       "Días en que respondiste al menos 10 preguntas. Se premia la constancia, no una maratón de última semana.",

@@ -31,10 +31,13 @@ export interface ProgresoPremio {
   ensayosCompletos: number;
   /** Días distintos con práctica registrada. */
   diasPracticados: number;
+  /** El tramo más largo de días seguidos rindiendo ensayos. */
+  mejorRachaEnsayos: number;
 }
 
 const META_ENSAYOS = 30;
 const META_DIAS = 90;
+const META_RACHA = 15;
 
 export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
   const [abierto, setAbierto] = useState(false);
@@ -66,6 +69,7 @@ export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
 
   const faltanEnsayos = Math.max(0, META_ENSAYOS - progreso.ensayosCompletos);
   const faltanDias = Math.max(0, META_DIAS - progreso.diasPracticados);
+  const faltanRacha = Math.max(0, META_RACHA - progreso.mejorRachaEnsayos);
 
   return (
     <AnimatePresence>
@@ -147,6 +151,14 @@ export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
                   etiqueta="días con práctica"
                   falta={
                     faltanDias === 0 ? "Requisito cumplido" : `Te faltan ${faltanDias}`
+                  }
+                />
+                <Requisito
+                  hecho={progreso.mejorRachaEnsayos}
+                  meta={META_RACHA}
+                  etiqueta="días seguidos con ensayo"
+                  falta={
+                    faltanRacha === 0 ? "Requisito cumplido" : `Te faltan ${faltanRacha}`
                   }
                 />
               </div>

@@ -130,6 +130,9 @@ def update_user(db: Session, user: User, payload: UpdateMeIn) -> User:
     if payload.name is not None:
         user.name = payload.name
 
+    if payload.recordatorios_email is not None:
+        user.recordatorios_email = payload.recordatorios_email
+
     db.commit()
     db.refresh(user)
     return user

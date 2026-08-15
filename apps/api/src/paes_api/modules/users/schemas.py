@@ -4,6 +4,7 @@ from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
 class UserOut(BaseModel):
+    recordatorios_email: bool = True
     model_config = ConfigDict(from_attributes=True)
 
     id: int
@@ -52,6 +53,7 @@ class TokenOut(BaseModel):
 
 
 class UpdateMeIn(BaseModel):
+    recordatorios_email: bool | None = None
     name: str | None = Field(default=None, min_length=1, max_length=120)
     current_password: str | None = None
     new_password: str | None = Field(default=None, min_length=8, max_length=128)

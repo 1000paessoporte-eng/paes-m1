@@ -34,6 +34,9 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
     smtp_from: str = "1000paes <no-responder@1000paes.cl>"
+    #: Secreto compartido con el cron que dispara los recordatorios. Vacío deja
+    #: el endpoint cerrado: sin él no hay forma de gatillar correos masivos.
+    cron_secret: str = ""
     cors_origins: list[str] = [
         "http://localhost:3000",
         "http://192.168.1.11:3000",
