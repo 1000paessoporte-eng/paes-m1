@@ -232,3 +232,37 @@ def test_no_hay_ritmo_con_ensayos_del_mismo_dia(
     assert proyeccion["ensayos_considerados"] == 4
     assert proyeccion["puntos_por_mes"] is None
     assert proyeccion["proyectado"] is None
+
+
+def test_el_plan_se_ajusta_a_las_horas_declaradas() -> None:
+    """Un plan que no cabe en la semana de alguien no es un plan, es una lista
+    de deseos: se mira, no alcanza, y no se hace ninguna de las cosas."""
+    from paes_api.modules.goals.service import _plan_semanal
+
+    # Dos horas: alcanza el ensayo (55 min) y dos temas de 30.
+    corto = _plan_semanal(horas=2, temas_disponibles=4)
+    assert corto.alcanza_un_ensayo is True
+    assert corto.temas_que_caben == 2
+
+    # Diez horas: le sobra para los cuatro temas disponibles.
+    largo = _plan_semanal(horas=10, temas_disponibles=4)
+    assert largo.temas_que_caben == 4
+
+
+def test_sin_horas_declaradas_se_propone_el_plan_completo() -> None:
+    """Mejor mostrar de más que inventarle una disponibilidad que nunca dijo."""
+    from paes_api.modules.goals.service import _plan_semanal
+
+    plan = _plan_semanal(horas=None, temas_disponibles=4)
+    assert plan.temas_que_caben == 4
+    assert plan.alcanza_un_ensayo is True
+
+
+def test_con_muy_poco_tiempo_el_ensayo_va_primero() -> None:
+    """Si algo se cae de la semana que sean los temas, no el ensayo: es lo que
+    mide el avance y lo que exige el premio."""
+    from paes_api.modules.goals.service import _plan_semanal
+
+    plan = _plan_semanal(horas=1, temas_disponibles=4)
+    assert plan.alcanza_un_ensayo is True
+    assert plan.temas_que_caben == 0

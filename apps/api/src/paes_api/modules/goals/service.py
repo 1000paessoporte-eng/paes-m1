@@ -19,6 +19,7 @@ from paes_api.modules.goals.schemas import (
     CarreraOut,
     MetaOut,
     NodoDebilOut,
+    PlanSemanalOut,
     PostulacionOut,
     ProyeccionOut,
 )
@@ -250,6 +251,47 @@ def _plan(db: Session, user_id: int, palanca: str | None) -> list[NodoDebilOut]:
     ]
 
 
+#: Cuánto toma cada cosa, medido con el propio producto.
+#: Una lección con su ejemplo se lee en unos diez minutos, y practicar el tema
+#: hasta que deje de fallar toma otros veinte.
+MINUTOS_POR_TEMA = 30
+#: Un ensayo corto son 20 preguntas al ritmo oficial de M1, más la revisión.
+MINUTOS_ENSAYO_CORTO = 55
+
+
+def _plan_semanal(horas: int | None, temas_disponibles: int) -> PlanSemanalOut:
+    """Cuánto del plan cabe de verdad en la semana del estudiante.
+
+    Sin horas declaradas se propone el plan completo: es mejor mostrar de más
+    que inventarle una disponibilidad que nunca dijo tener.
+
+    Con horas declaradas, el ensayo se reserva PRIMERO. Es lo que mide el
+    avance y lo que exige el premio, así que si algo se cae de la semana que
+    sean los temas, no el ensayo.
+    """
+    if horas is None or horas <= 0:
+        return PlanSemanalOut(
+            horas_semana=horas,
+            temas_que_caben=temas_disponibles,
+            alcanza_un_ensayo=True,
+            minutos_estimados=temas_disponibles * MINUTOS_POR_TEMA
+            + MINUTOS_ENSAYO_CORTO,
+        )
+
+    minutos = horas * 60
+    alcanza_ensayo = minutos >= MINUTOS_ENSAYO_CORTO
+    restantes = minutos - (MINUTOS_ENSAYO_CORTO if alcanza_ensayo else 0)
+    caben = max(0, min(temas_disponibles, restantes // MINUTOS_POR_TEMA))
+
+    return PlanSemanalOut(
+        horas_semana=horas,
+        temas_que_caben=int(caben),
+        alcanza_un_ensayo=alcanza_ensayo,
+        minutos_estimados=int(caben) * MINUTOS_POR_TEMA
+        + (MINUTOS_ENSAYO_CORTO if alcanza_ensayo else 0),
+    )
+
+
 def calcular_meta(db: Session, user_id: int) -> MetaOut:
     user = db.get(User, user_id)
     assert user is not None
@@ -276,11 +318,14 @@ def calcular_meta(db: Session, user_id: int) -> MetaOut:
     objetivo = next((p for p in salida if p.alcanza is not True), None)
     palanca = objetivo.mejor_palanca if objetivo else None
 
+    plan = _plan(db, user_id, palanca)
+
     return MetaOut(
         postulaciones=salida,
         puntaje_nem=user.puntaje_nem,
         puntaje_ranking=user.puntaje_ranking,
         proyeccion=_proyeccion(db, user_id),
-        plan=_plan(db, user_id, palanca),
+        plan=plan,
         plan_para=objetivo.carrera.nombre if objetivo else None,
+        plan_semanal=_plan_semanal(user.horas_semana, len(plan)),
     )

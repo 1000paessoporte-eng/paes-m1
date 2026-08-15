@@ -82,6 +82,23 @@ class NodoDebilOut(BaseModel):
     has_lesson: bool
 
 
+class PlanSemanalOut(BaseModel):
+    """El plan dimensionado con las horas que el estudiante declaró tener.
+
+    Existe porque un plan que no cabe en la semana de alguien no es un plan, es
+    una lista de deseos: el estudiante lo mira, ve que no le alcanza, y no hace
+    ninguna de las cosas.
+    """
+
+    horas_semana: int | None
+    #: Cuántos temas del plan alcanza a estudiar con ese tiempo.
+    temas_que_caben: int
+    #: Si además le da el tiempo para un ensayo corto.
+    alcanza_un_ensayo: bool
+    #: Minutos que suma el plan propuesto.
+    minutos_estimados: int
+
+
 class MetaOut(BaseModel):
     postulaciones: list[PostulacionOut]
     puntaje_nem: int | None
@@ -91,3 +108,4 @@ class MetaOut(BaseModel):
     #: preferencia que todavía no se alcanza.
     plan: list[NodoDebilOut]
     plan_para: str | None
+    plan_semanal: PlanSemanalOut
