@@ -5,12 +5,14 @@ import type {
   BreakdownItem,
   ExamAttemptSummary,
   Meta,
+  Onboarding,
   SkillNode,
 } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
 import { AnuncioPremio } from "@/components/premio/anuncio-premio";
+import { Cuestionario } from "@/components/onboarding/cuestionario";
 import { MetaModulo } from "@/components/dashboard/meta-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
 import { Insignias, Racha } from "@/components/gamificacion/logros";
@@ -39,6 +41,7 @@ interface Props {
   porEje: BreakdownItem[];
   analytics: AnalyticsSummary | null;
   meta: Meta | null;
+  onboarding: Onboarding | null;
   ejesDe: string | null;
 }
 
@@ -50,6 +53,7 @@ export function PanelDashboard({
   porEje,
   analytics,
   meta,
+  onboarding,
   ejesDe,
 }: Props) {
   const rendidos = attempts.filter((a) => a.status === "submitted");
@@ -94,13 +98,20 @@ export function PanelDashboard({
   // que mantiene legibles los números.
   return (
     <main className="min-h-[calc(100vh-3.5rem)] flex-1 bg-surface/70">
-      <AnuncioPremio
+      {/* El cuestionario tiene prioridad sobre cualquier otro aviso: es lo
+          primero que ve alguien que acaba de entrar, y con sus respuestas se
+          configura el resto. */}
+      {onboarding && !onboarding.respondido ? (
+        <Cuestionario nombre={nombre} />
+      ) : (
+        <AnuncioPremio
         progreso={{
           ensayosCompletos,
           diasPracticados: analytics?.active_days ?? 0,
           mejorRachaEnsayos: analytics?.best_exam_streak_days ?? 0,
-        }}
-      />
+          }}
+        />
+      )}
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           {/* Bienvenida + acción principal */}

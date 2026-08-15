@@ -198,6 +198,30 @@ export function canjearCodigo(codigo: string, token?: string): Promise<MiPlan> {
   });
 }
 
+export type Onboarding =
+  paths["/api/auth/onboarding"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getOnboarding(token?: string): Promise<Onboarding> {
+  return apiFetch<Onboarding>("/api/auth/onboarding", token);
+}
+
+export function guardarOnboarding(
+  payload: {
+    pruebas_objetivo: string[];
+    curso: string | null;
+    primera_vez: boolean | null;
+    puntaje_anterior: number | null;
+    horas_semana: number | null;
+  },
+  token?: string
+): Promise<Onboarding> {
+  return apiFetch<Onboarding>("/api/auth/onboarding", token, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+}
+
 /** Un nodo con el progreso del estudiante. */
 export function getSkillNode(code: string, token?: string): Promise<SkillNode> {
   return apiFetch<SkillNode>(`/api/skill-tree/${code}`, token);

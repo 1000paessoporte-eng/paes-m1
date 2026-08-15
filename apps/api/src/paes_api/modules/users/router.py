@@ -13,6 +13,8 @@ from paes_api.modules.users.schemas import (
     ForgotPasswordIn,
     GoogleLoginIn,
     LoginIn,
+    OnboardingIn,
+    OnboardingOut,
     RegisterIn,
     ResetPasswordIn,
     TokenOut,
@@ -42,6 +44,21 @@ def login(request: Request, payload: LoginIn, db: Session = Depends(get_db)) -> 
         raise HTTPException(status_code=401, detail="Correo o contraseña incorrectos")
     service.record_login(db, user, "password")
     return TokenOut(access_token=create_access_token(user.id), user=UserOut.model_validate(user))
+
+
+@router.get("/onboarding", response_model=OnboardingOut)
+def ver_onboarding(user: User = Depends(get_current_user)) -> OnboardingOut:
+    return OnboardingOut(**service.onboarding_de(user))
+
+
+@router.put("/onboarding", response_model=OnboardingOut)
+def responder_onboarding(
+    payload: OnboardingIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> OnboardingOut:
+    service.guardar_onboarding(db, user, payload)
+    return OnboardingOut(**service.onboarding_de(user))
 
 
 @router.get("/config", response_model=AuthConfigOut)

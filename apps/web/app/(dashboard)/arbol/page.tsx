@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getRecommendedNode, getSkillTree } from "@/lib/api";
+import { ApiError, getOnboarding, getRecommendedNode, getSkillTree } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { SkillTreeView } from "@/components/skill-tree/skill-tree-view";
 
@@ -29,8 +29,15 @@ export default async function ArbolHabilidadesPage({
   const params = await searchParams;
 
   // La prueba viaja en la URL y no en estado local: así el estudiante puede
-  // guardar el enlace de "el árbol de Ciencias" y volver ahí directo.
-  const pedida = typeof params.prueba === "string" ? params.prueba : "m1";
+  // guardar el enlace de "el árbol de Ciencias" y volver ahí directo. Sin
+  // parámetro se abre la que dijo que va a rendir en el cuestionario de
+  // bienvenida, no M1 por defecto: preguntarle y después ignorarlo sería peor
+  // que no preguntar.
+  const preferida = await getOnboarding(token)
+    .then((o) => o.pruebas_objetivo?.[0])
+    .catch(() => undefined);
+  const pedida =
+    typeof params.prueba === "string" ? params.prueba : (preferida ?? "m1");
   const prueba = PRUEBAS_VALIDAS.includes(pedida) ? pedida : "m1";
 
   let nodes;
