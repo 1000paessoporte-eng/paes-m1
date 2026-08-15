@@ -60,6 +60,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="es"
       className={`${jakarta.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
+      // El scroll suave es nuestro y deliberado; sin este atributo Next avisa
+      // en cada carga que podría interferir con sus transiciones de ruta.
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>

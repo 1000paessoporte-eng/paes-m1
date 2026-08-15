@@ -4,11 +4,13 @@ import type {
   AuthUserOut,
   BreakdownItem,
   ExamAttemptSummary,
+  Meta,
   SkillNode,
 } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
+import { MetaModulo } from "@/components/dashboard/meta-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
 import { Insignias, Racha } from "@/components/gamificacion/logros";
 import { calcularLogros } from "@/lib/logros";
@@ -35,6 +37,8 @@ interface Props {
   recomendado: SkillNode | null;
   porEje: BreakdownItem[];
   analytics: AnalyticsSummary | null;
+  meta: Meta | null;
+  ejesDe: string | null;
 }
 
 export function PanelDashboard({
@@ -44,6 +48,8 @@ export function PanelDashboard({
   recomendado,
   porEje,
   analytics,
+  meta,
+  ejesDe,
 }: Props) {
   const rendidos = attempts.filter((a) => a.status === "submitted");
   const puntajes = rendidos.map((a) => a.estimated_score ?? 0);
@@ -99,7 +105,12 @@ export function PanelDashboard({
 
           {/* Progreso y analítica */}
           <Reveal delay={0.05}>
-            <ProgresoModulo puntaje={ultimo} variacion={variacion} porEje={porEje} />
+            <ProgresoModulo
+              puntaje={ultimo}
+              variacion={variacion}
+              porEje={porEje}
+              ejesDe={ejesDe}
+            />
           </Reveal>
 
           {/* Árbol de habilidades */}
@@ -107,13 +118,18 @@ export function PanelDashboard({
             <ArbolModulo nodos={nodos} recomendado={recomendado} />
           </Reveal>
 
-          {/* Logros */}
+          {/* La meta: cuánto falta para la carrera que quiere */}
           <Reveal delay={0.15}>
+            <MetaModulo meta={meta} />
+          </Reveal>
+
+          {/* Logros */}
+          <Reveal delay={0.2}>
             <Insignias logros={logros} />
           </Reveal>
 
           {/* Accesos secundarios */}
-          <Reveal delay={0.2} className="lg:col-span-3">
+          <Reveal delay={0.25} className="lg:col-span-2">
             <AccesosRapidos />
           </Reveal>
         </div>
@@ -251,7 +267,7 @@ function AccesosRapidos() {
       </h2>
       {/* En una fila completa los accesos van en grilla, no en lista: en móvil
           quedan de a uno, y desde tablet aprovechan el ancho. */}
-      <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
         {ACCESOS.map((a) => (
           <li key={a.href}>
             <Link

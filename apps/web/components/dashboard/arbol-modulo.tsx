@@ -163,10 +163,10 @@ function NodoRuta({
 
         {sugerido && !bloqueado && (
           <Link
-            href={`/practicar/${nodo.code}`}
+            href={nodo.has_lesson ? `/aprender/${nodo.code}` : `/practicar/${nodo.code}`}
             className="mt-2 inline-flex rounded-lg border border-accent-warm/40 px-3 py-1.5 text-xs font-semibold text-accent-warm-strong transition-colors hover:bg-accent-warm/5"
           >
-            Practicar este tema →
+            {nodo.has_lesson ? "Estudiar este tema →" : "Practicar este tema →"}
           </Link>
         )}
       </div>

@@ -26,6 +26,20 @@ const FEATURES = [
     badgeClass: "bg-success/10 text-success",
   },
   {
+    title: "Primero aprender, después practicar",
+    description:
+      "Cada tema de Matemática M1 trae su lección: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
+    icon: TreeIcon,
+    badgeClass: "bg-accent/10 text-accent",
+  },
+  {
+    title: "Mi meta: la carrera, no el puntaje",
+    description:
+      "Arma tu lista de hasta 10 preferencias y mira cuánto te falta en cada una, con las ponderaciones oficiales del DEMRE de 1.855 carreras. Sabes dónde rinde más cada hora de estudio.",
+    icon: TargetIcon,
+    badgeClass: "bg-accent-warm/10 text-accent-warm-strong",
+  },
+  {
     title: "Árbol de Habilidades",
     description:
       "El temario como nodos que desbloqueas a medida que dominas cada tema, con los prerrequisitos dibujados: 47 nodos entre las cinco pruebas.",

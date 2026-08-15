@@ -11,10 +11,10 @@ import { TemaToggle } from "@/components/tema-toggle";
 // todas estas rutas exigen autenticación.
 const NAV_ITEMS = [
   { href: "/panel", label: "Inicio" },
-  { href: "/arbol", label: "Árbol de Habilidades" },
-  { href: "/examen", label: "Modo Ensayo" },
+  { href: "/arbol", label: "Árbol" },
+  { href: "/examen", label: "Ensayos" },
   { href: "/meta", label: "Mi meta" },
-  { href: "/historial", label: "Mi progreso" },
+  { href: "/historial", label: "Progreso" },
   { href: "/analitica", label: "Analítica" },
 ] as const;
 
@@ -79,7 +79,7 @@ export function SiteHeader() {
           <span className="text-sm font-semibold tracking-tight">1000paes</span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -100,12 +100,12 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <TemaToggle />
           {user ? (
             <>
               <Link href="/perfil" className="text-sm text-muted hover:text-foreground">
-                Hola, <span className="text-foreground">{user.name}</span>
+                Hola, <span className="text-foreground">{user.name.split(" ")[0]}</span>
               </Link>
               <button
                 onClick={handleLogout}
@@ -129,7 +129,7 @@ export function SiteHeader() {
           aria-label="Abrir menú"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-surface-hover md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-surface-hover lg:hidden"
         >
           <svg
             width="18"
@@ -150,7 +150,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-border px-4 py-3 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-border px-4 py-3 lg:hidden">
           {navItems.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
