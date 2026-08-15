@@ -7,7 +7,7 @@ import { MetaView } from "@/components/meta/meta-view";
 export const metadata = {
   title: "Mi meta",
   description:
-    "La carrera a la que quieres entrar, tu puntaje ponderado proyectado y dónde rinde más estudiar.",
+    "Tu lista de postulación, cuánto falta para cada preferencia y qué practicar para acortar la brecha.",
 };
 
 export default async function MetaPage() {
@@ -21,6 +21,14 @@ export default async function MetaPage() {
     if (err instanceof ApiError && err.status === 401) sinSesion = true;
   }
   if (sinSesion) redirect("/login?next=/meta");
+
+  if (meta === null) {
+    return (
+      <p className="mx-auto max-w-lg text-center text-sm text-muted">
+        No se pudo cargar tu meta. Vuelve a intentarlo en unos segundos.
+      </p>
+    );
+  }
 
   return <MetaView inicial={meta} />;
 }

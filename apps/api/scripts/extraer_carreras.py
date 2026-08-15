@@ -130,6 +130,30 @@ def extraer(pdf: Path) -> tuple[list[dict], list[tuple[str, str]]]:
             siguiente = _num(resto[7]) if len(resto) > 7 else None
             especial = siguiente if (siguiente is not None and siguiente <= 100) else None
 
+            # Tras las ponderaciones vienen los requisitos y las vacantes. Se
+            # localizan por magnitud y no por posición, porque la cantidad de
+            # columnas varía entre universidades: los puntajes mínimos van de
+            # 100 a 1000 y las vacantes son cifras chicas.
+            cola = resto[8:] if especial is not None else resto[7:]
+            puntajes = [v for v in (_num(c) for c in cola) if v is not None and 100 <= v <= 1000]
+            ponderado_min = puntajes[0] if len(puntajes) >= 2 else None
+            promedio_min = puntajes[1] if len(puntajes) >= 2 else (
+                puntajes[0] if len(puntajes) == 1 else None
+            )
+            # Las vacantes son el primer número chico DESPUÉS de los puntajes.
+            vacantes = None
+            vistos_puntajes = 0
+            for c in cola:
+                v = _num(c)
+                if v is None:
+                    continue
+                if 100 <= v <= 1000:
+                    vistos_puntajes += 1
+                    continue
+                if vistos_puntajes >= 1 and v > 0:
+                    vacantes = int(v)
+                    break
+
             total = sum(v or 0 for v in ponderaciones.values()) + (especial or 0)
             if electivo:
                 total -= min(ponderaciones["historia"] or 0, ponderaciones["ciencias"] or 0)
@@ -147,6 +171,9 @@ def extraer(pdf: Path) -> tuple[list[dict], list[tuple[str, str]]]:
                 "sede": sede,
                 "electivo_alternativo": electivo,
                 "prueba_especial": especial,
+                "ponderado_min": ponderado_min,
+                "promedio_min": promedio_min,
+                "vacantes": vacantes,
                 **ponderaciones,
             })
 

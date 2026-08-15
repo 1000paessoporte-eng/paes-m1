@@ -9,7 +9,15 @@ exactamente los mismos puntajes.
 
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, Float, ForeignKey, Integer, String, event
+from sqlalchemy import (
+    Boolean,
+    Float,
+    ForeignKey,
+    Integer,
+    String,
+    UniqueConstraint,
+    event,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
@@ -56,6 +64,13 @@ class Carrera(Base):
     #: pero solo cuenta la mejor de las dos.
     electivo_alternativo: Mapped[bool] = mapped_column(Boolean, default=False)
 
+    #: Requisitos oficiales de POSTULACIÓN (no son los puntajes de corte, que
+    #: se publican después de cada proceso). Sin alcanzarlos la postulación ni
+    #: siquiera se puede hacer, así que son la primera barrera real.
+    ponderado_min: Mapped[float | None] = mapped_column(Float, nullable=True)
+    promedio_min: Mapped[float | None] = mapped_column(Float, nullable=True)
+    vacantes: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
     proceso: Mapped[int] = mapped_column(Integer)
     fuente: Mapped[str] = mapped_column(String(300))
 
@@ -63,23 +78,27 @@ class Carrera(Base):
 
 
 class MetaUsuario(Base):
-    """La carrera que el estudiante persigue, con sus datos de colegio.
+    """Una carrera dentro de la lista de postulación del estudiante.
 
-    NEM y ranking se guardan como PUNTAJE (100-1000) y no como promedio de
-    notas: la conversión de notas a puntaje la hace el DEMRE con una tabla que
-    depende de la generación, así que calcularla acá sería inventar. El
-    estudiante los copia de su informe, o los deja en blanco y ve la proyección
-    solo con lo que sí sabemos.
+    En Chile no se postula a una carrera: se postulan hasta diez en orden de
+    preferencia, y ese orden decide dónde queda uno. Por eso hay una fila por
+    carrera y no una meta única — la pregunta que importa no es "¿alcanzo para
+    esta?" sino "¿hasta qué preferencia alcanzo?".
+
+    NEM y ranking NO viven acá sino en el usuario: son datos de la persona y no
+    de cada postulación, y repetirlos por fila garantizaba que algún día
+    estuvieran en desacuerdo entre sí.
     """
 
     __tablename__ = "user_goals"
+    __table_args__ = (UniqueConstraint("user_id", "carrera_id", name="uq_meta_usuario_carrera"),)
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), unique=True, index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
     carrera_id: Mapped[int] = mapped_column(ForeignKey("carreras.id"), index=True)
 
-    puntaje_nem: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    puntaje_ranking: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    #: 1 es la primera preferencia. El sistema real admite hasta 10.
+    preferencia: Mapped[int] = mapped_column(Integer, default=1)
 
     user: Mapped["User"] = relationship(back_populates="goal")
     carrera: Mapped["Carrera"] = relationship(back_populates="metas")

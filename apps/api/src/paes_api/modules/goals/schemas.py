@@ -18,38 +18,76 @@ class CarreraOut(BaseModel):
     m2: float | None = None
     prueba_especial: float | None = None
     electivo_alternativo: bool
+    ponderado_min: float | None = None
+    promedio_min: float | None = None
+    vacantes: int | None = None
     proceso: int
     fuente: str
 
 
-class MetaIn(BaseModel):
-    carrera_id: int
-    #: Puntajes de 100 a 1000, tal como vienen en el informe del estudiante.
+class NotasIn(BaseModel):
     puntaje_nem: int | None = Field(default=None, ge=100, le=1000)
     puntaje_ranking: int | None = Field(default=None, ge=100, le=1000)
 
 
-class AporteOut(BaseModel):
-    """Cuánto pone cada factor en el puntaje ponderado, y cuánto podría poner."""
+class PostularIn(BaseModel):
+    carrera_id: int
 
+
+class OrdenIn(BaseModel):
+    """Los ids de carrera en el orden de preferencia deseado."""
+
+    carrera_ids: list[int]
+
+
+class AporteOut(BaseModel):
     factor: str
     etiqueta: str
     ponderacion: float
     puntaje: int | None
-    #: Puntos de ponderado que aporta hoy este factor.
     aporte: float
-    #: Cuánto sube el ponderado por cada 10 puntos de mejora en este factor.
     por_cada_10: float
-    #: De dónde salió el puntaje: "ensayo", "ingresado" o "falta".
     origen: str
 
 
-class MetaOut(BaseModel):
+class PostulacionOut(BaseModel):
+    preferencia: int
     carrera: CarreraOut
-    #: None si falta algún puntaje que la carrera pondera.
     ponderado: float | None
-    #: Mínimo oficial para postular, si la carrera lo exige.
+    #: Puntos que faltan para el mínimo oficial de postulación. Negativo o cero
+    #: significa que ya se alcanza.
+    brecha: float | None
+    alcanza: bool | None
     aportes: list[AporteOut]
     faltantes: list[str]
-    #: El factor donde una mejora rinde más: mayor ponderación y más margen.
     mejor_palanca: str | None
+
+
+class ProyeccionOut(BaseModel):
+    """Ritmo de mejora medido sobre los ensayos ya rendidos."""
+
+    puntos_por_mes: float | None
+    ensayos_considerados: int
+    dias_para_paes: int | None
+    #: Puntaje proyectado a la fecha de la PAES, si hay tendencia suficiente.
+    proyectado: float | None
+
+
+class NodoDebilOut(BaseModel):
+    code: str
+    name: str
+    axis: str
+    accuracy: float
+    attempts: int
+    has_lesson: bool
+
+
+class MetaOut(BaseModel):
+    postulaciones: list[PostulacionOut]
+    puntaje_nem: int | None
+    puntaje_ranking: int | None
+    proyeccion: ProyeccionOut
+    #: Los nodos donde conviene practicar para mover la palanca de la primera
+    #: preferencia que todavía no se alcanza.
+    plan: list[NodoDebilOut]
+    plan_para: str | None

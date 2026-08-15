@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, String, func
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
@@ -39,8 +39,13 @@ class User(Base):
         DateTime(timezone=True), server_default=func.now()
     )
 
-    goal: Mapped["MetaUsuario | None"] = relationship(
-        back_populates="user", uselist=False, cascade="all, delete-orphan"
+    #: Puntajes de NEM y ranking, tal como vienen en el informe del estudiante.
+    #: Son de la persona, no de cada carrera a la que postula.
+    puntaje_nem: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    puntaje_ranking: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    goal: Mapped[list["MetaUsuario"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
     )
     skill_progress: Mapped[list["UserSkillProgress"]] = relationship(
         back_populates="user"

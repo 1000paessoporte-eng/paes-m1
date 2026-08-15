@@ -135,31 +135,53 @@ export function getSkillTree(
 export type Carrera =
   paths["/api/meta/carreras"]["get"]["responses"][200]["content"]["application/json"][number];
 
-export type Meta = NonNullable<
-  paths["/api/meta"]["get"]["responses"][200]["content"]["application/json"]
->;
+export type Meta = paths["/api/meta"]["get"]["responses"][200]["content"]["application/json"];
+export type Postulacion = Meta["postulaciones"][number];
 
 export function buscarCarreras(q: string, token?: string): Promise<Carrera[]> {
   return apiFetch<Carrera[]>(`/api/meta/carreras?q=${encodeURIComponent(q)}`, token);
 }
 
-export function getMeta(token?: string): Promise<Meta | null> {
-  return apiFetch<Meta | null>("/api/meta", token);
+export function getMeta(token?: string): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta", token);
 }
 
-export function fijarMeta(
-  payload: { carrera_id: number; puntaje_nem?: number | null; puntaje_ranking?: number | null },
-  token?: string
-): Promise<Meta> {
-  return apiFetch<Meta>("/api/meta", token, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
+const JSON_HEADERS = { "Content-Type": "application/json" };
+
+export function agregarPostulacion(carrera_id: number, token?: string): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta/postulaciones", token, {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ carrera_id }),
   });
 }
 
-export function borrarMeta(token?: string): Promise<void> {
-  return apiFetch<void>("/api/meta", token, { method: "DELETE" });
+export function quitarPostulacion(carrera_id: number, token?: string): Promise<Meta> {
+  return apiFetch<Meta>(`/api/meta/postulaciones/${carrera_id}`, token, {
+    method: "DELETE",
+  });
+}
+
+export function reordenarPostulaciones(
+  carrera_ids: number[],
+  token?: string
+): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta/orden", token, {
+    method: "PUT",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ carrera_ids }),
+  });
+}
+
+export function guardarNotas(
+  payload: { puntaje_nem: number | null; puntaje_ranking: number | null },
+  token?: string
+): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta/notas", token, {
+    method: "PUT",
+    headers: JSON_HEADERS,
+    body: JSON.stringify(payload),
+  });
 }
 
 /** Un nodo con el progreso del estudiante. */

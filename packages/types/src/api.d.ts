@@ -434,11 +434,84 @@ export interface paths {
         };
         /** Ver Meta */
         get: operations["ver_meta_api_meta_get"];
-        /** Fijar Meta */
-        put: operations["fijar_meta_api_meta_put"];
+        put?: never;
         post?: never;
-        /** Borrar Meta */
-        delete: operations["borrar_meta_api_meta_delete"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/postulaciones": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Agregar Postulacion
+         * @description Agrega una carrera al final de la lista de preferencias.
+         */
+        post: operations["agregar_postulacion_api_meta_postulaciones_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/orden": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Reordenar
+         * @description Reordena la lista. El orden decide dónde queda uno, así que es parte
+         *     de la decisión y no un detalle de presentación.
+         */
+        put: operations["reordenar_api_meta_orden_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/postulaciones/{carrera_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** Quitar Postulacion */
+        delete: operations["quitar_postulacion_api_meta_postulaciones__carrera_id__delete"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/notas": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /** Guardar Notas */
+        put: operations["guardar_notas_api_meta_notas_put"];
+        post?: never;
+        delete?: never;
         options?: never;
         head?: never;
         patch?: never;
@@ -643,10 +716,7 @@ export interface components {
             /** Daily */
             daily: components["schemas"]["DailyStat"][];
         };
-        /**
-         * AporteOut
-         * @description Cuánto pone cada factor en el puntaje ponderado, y cuánto podría poner.
-         */
+        /** AporteOut */
         AporteOut: {
             /** Factor */
             factor: string;
@@ -736,6 +806,12 @@ export interface components {
             prueba_especial?: number | null;
             /** Electivo Alternativo */
             electivo_alternativo: boolean;
+            /** Ponderado Min */
+            ponderado_min?: number | null;
+            /** Promedio Min */
+            promedio_min?: number | null;
+            /** Vacantes */
+            vacantes?: number | null;
             /** Proceso */
             proceso: number;
             /** Fuente */
@@ -1136,26 +1212,19 @@ export interface components {
             /** Password */
             password: string;
         };
-        /** MetaIn */
-        MetaIn: {
-            /** Carrera Id */
-            carrera_id: number;
-            /** Puntaje Nem */
-            puntaje_nem?: number | null;
-            /** Puntaje Ranking */
-            puntaje_ranking?: number | null;
-        };
         /** MetaOut */
         MetaOut: {
-            carrera: components["schemas"]["CarreraOut"];
-            /** Ponderado */
-            ponderado: number | null;
-            /** Aportes */
-            aportes: components["schemas"]["AporteOut"][];
-            /** Faltantes */
-            faltantes: string[];
-            /** Mejor Palanca */
-            mejor_palanca: string | null;
+            /** Postulaciones */
+            postulaciones: components["schemas"]["PostulacionOut"][];
+            /** Puntaje Nem */
+            puntaje_nem: number | null;
+            /** Puntaje Ranking */
+            puntaje_ranking: number | null;
+            proyeccion: components["schemas"]["ProyeccionOut"];
+            /** Plan */
+            plan: components["schemas"]["NodoDebilOut"][];
+            /** Plan Para */
+            plan_para: string | null;
         };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
@@ -1174,6 +1243,21 @@ export interface components {
             /** Accuracy */
             accuracy: number;
         };
+        /** NodoDebilOut */
+        NodoDebilOut: {
+            /** Code */
+            code: string;
+            /** Name */
+            name: string;
+            /** Axis */
+            axis: string;
+            /** Accuracy */
+            accuracy: number;
+            /** Attempts */
+            attempts: number;
+            /** Has Lesson */
+            has_lesson: boolean;
+        };
         /** NodoFlojo */
         NodoFlojo: {
             /** Code */
@@ -1184,6 +1268,21 @@ export interface components {
             respuestas: number;
             /** Tasa Acierto */
             tasa_acierto: number;
+        };
+        /** NotasIn */
+        NotasIn: {
+            /** Puntaje Nem */
+            puntaje_nem?: number | null;
+            /** Puntaje Ranking */
+            puntaje_ranking?: number | null;
+        };
+        /**
+         * OrdenIn
+         * @description Los ids de carrera en el orden de preferencia deseado.
+         */
+        OrdenIn: {
+            /** Carrera Ids */
+            carrera_ids: number[];
         };
         /**
          * Pace
@@ -1220,6 +1319,29 @@ export interface components {
             kind: string;
             /** Source Note */
             source_note?: string | null;
+        };
+        /** PostulacionOut */
+        PostulacionOut: {
+            /** Preferencia */
+            preferencia: number;
+            carrera: components["schemas"]["CarreraOut"];
+            /** Ponderado */
+            ponderado: number | null;
+            /** Brecha */
+            brecha: number | null;
+            /** Alcanza */
+            alcanza: boolean | null;
+            /** Aportes */
+            aportes: components["schemas"]["AporteOut"][];
+            /** Faltantes */
+            faltantes: string[];
+            /** Mejor Palanca */
+            mejor_palanca: string | null;
+        };
+        /** PostularIn */
+        PostularIn: {
+            /** Carrera Id */
+            carrera_id: number;
         };
         /** PracticeAlternativeOut */
         PracticeAlternativeOut: {
@@ -1294,6 +1416,20 @@ export interface components {
          * @enum {string}
          */
         ProgressStatus: "locked" | "unlocked" | "mastered";
+        /**
+         * ProyeccionOut
+         * @description Ritmo de mejora medido sobre los ensayos ya rendidos.
+         */
+        ProyeccionOut: {
+            /** Puntos Por Mes */
+            puntos_por_mes: number | null;
+            /** Ensayos Considerados */
+            ensayos_considerados: number;
+            /** Dias Para Paes */
+            dias_para_paes: number | null;
+            /** Proyectado */
+            proyectado: number | null;
+        };
         /** QuestionSafeOut */
         QuestionSafeOut: {
             /** Id */
@@ -2280,7 +2416,7 @@ export interface operations {
     buscar_carreras_api_meta_carreras_get: {
         parameters: {
             query: {
-                /** @description Nombre de carrera o universidad */
+                /** @description Nombre de carrera, universidad o sede */
                 q: string;
             };
             header?: never;
@@ -2324,12 +2460,12 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["MetaOut"] | null;
+                    "application/json": components["schemas"]["MetaOut"];
                 };
             };
         };
     };
-    fijar_meta_api_meta_put: {
+    agregar_postulacion_api_meta_postulaciones_post: {
         parameters: {
             query?: never;
             header?: never;
@@ -2338,7 +2474,40 @@ export interface operations {
         };
         requestBody: {
             content: {
-                "application/json": components["schemas"]["MetaIn"];
+                "application/json": components["schemas"]["PostularIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reordenar_api_meta_orden_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["OrdenIn"];
             };
         };
         responses: {
@@ -2362,21 +2531,67 @@ export interface operations {
             };
         };
     };
-    borrar_meta_api_meta_delete: {
+    quitar_postulacion_api_meta_postulaciones__carrera_id__delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                carrera_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    guardar_notas_api_meta_notas_put: {
         parameters: {
             query?: never;
             header?: never;
             path?: never;
             cookie?: never;
         };
-        requestBody?: never;
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["NotasIn"];
+            };
+        };
         responses: {
             /** @description Successful Response */
-            204: {
+            200: {
                 headers: {
                     [name: string]: unknown;
                 };
-                content?: never;
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
             };
         };
     };
