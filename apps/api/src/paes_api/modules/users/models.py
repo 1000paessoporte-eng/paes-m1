@@ -8,6 +8,7 @@ from paes_api.shared.base import Base
 
 if TYPE_CHECKING:
     from paes_api.modules.exam_focus.models import ExamAttempt
+    from paes_api.modules.goals.models import MetaUsuario
     from paes_api.modules.skill_tree.models import UserSkillProgress
 
 
@@ -38,6 +39,9 @@ class User(Base):
         DateTime(timezone=True), server_default=func.now()
     )
 
+    goal: Mapped["MetaUsuario | None"] = relationship(
+        back_populates="user", uselist=False, cascade="all, delete-orphan"
+    )
     skill_progress: Mapped[list["UserSkillProgress"]] = relationship(
         back_populates="user"
     )
