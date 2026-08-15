@@ -1343,6 +1343,7 @@ export interface components {
             plan: components["schemas"]["NodoDebilOut"][];
             /** Plan Para */
             plan_para: string | null;
+            plan_semanal: components["schemas"]["PlanSemanalOut"];
         };
         /**
          * MiPlanOut
@@ -1503,6 +1504,24 @@ export interface components {
          * @enum {string}
          */
         Plan: "gratis" | "pro" | "colegios";
+        /**
+         * PlanSemanalOut
+         * @description El plan dimensionado con las horas que el estudiante declaró tener.
+         *
+         *     Existe porque un plan que no cabe en la semana de alguien no es un plan, es
+         *     una lista de deseos: el estudiante lo mira, ve que no le alcanza, y no hace
+         *     ninguna de las cosas.
+         */
+        PlanSemanalOut: {
+            /** Horas Semana */
+            horas_semana: number | null;
+            /** Temas Que Caben */
+            temas_que_caben: number;
+            /** Alcanza Un Ensayo */
+            alcanza_un_ensayo: boolean;
+            /** Minutos Estimados */
+            minutos_estimados: number;
+        };
         /** PostulacionOut */
         PostulacionOut: {
             /** Preferencia */

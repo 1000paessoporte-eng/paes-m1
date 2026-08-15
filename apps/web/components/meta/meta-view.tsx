@@ -586,11 +586,26 @@ function Fila({
 function Plan({ meta }: { meta: Meta }) {
   if (meta.plan.length === 0) return null;
 
+  const semanal = meta.plan_semanal;
+  // Solo se proponen los temas que caben en la semana que el estudiante dijo
+  // tener. Un plan que no cabe se mira, no alcanza, y no se hace ninguna de
+  // las cosas.
+  const temas = meta.plan.slice(0, Math.max(1, semanal?.temas_que_caben ?? meta.plan.length));
+  const horas = semanal?.horas_semana ?? null;
+  const minutos = semanal?.minutos_estimados ?? 0;
+
   return (
     <section className="card-panel mt-8 p-6" aria-labelledby="h-plan">
-      <h2 id="h-plan" className="font-semibold tracking-tight">
-        Qué practicar esta semana
-      </h2>
+      <div className="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 id="h-plan" className="font-semibold tracking-tight">
+          Qué practicar esta semana
+        </h2>
+        {minutos > 0 && (
+          <span className="text-xs text-muted">
+            ≈ {Math.round(minutos / 60)} h {minutos % 60 ? `${minutos % 60} min` : ""}
+          </span>
+        )}
+      </div>
       <p className="mt-1 text-sm text-muted">
         Los temas donde peor rindes dentro de la prueba que más mueve tu
         {meta.plan_para ? (
@@ -603,8 +618,20 @@ function Plan({ meta }: { meta: Meta }) {
         )}
       </p>
 
+      {horas != null && (
+        <p className="mt-3 rounded-lg border border-accent/30 bg-accent/5 px-3 py-2 text-xs leading-relaxed">
+          Dijiste que puedes estudiar <strong>{horas} h a la semana</strong>. Con
+          eso alcanzas{" "}
+          {semanal?.alcanza_un_ensayo ? "un ensayo corto y " : ""}
+          {temas.length} {temas.length === 1 ? "tema" : "temas"}.{" "}
+          <Link href="/perfil" className="text-accent underline-offset-4 hover:underline">
+            Cambiar mis horas
+          </Link>
+        </p>
+      )}
+
       <ul className="mt-4 flex flex-col divide-y divide-border">
-        {meta.plan.map((n) => (
+        {temas.map((n) => (
           <li key={n.code} className="flex items-center justify-between gap-3 py-3">
             <span className="min-w-0">
               <span className="block text-sm font-medium">{n.name}</span>
@@ -623,6 +650,15 @@ function Plan({ meta }: { meta: Meta }) {
           </li>
         ))}
       </ul>
+
+      {semanal?.alcanza_un_ensayo && (
+        <Link
+          href="/examen"
+          className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
+        >
+          Y un ensayo corto para medir cómo vas →
+        </Link>
+      )}
     </section>
   );
 }
