@@ -361,9 +361,15 @@ function TreeColumn({
                     {node.prerequisite_codes.length > 0 && (
                       <p className="mt-2 text-xs text-muted">
                         Requiere:{" "}
-                        {node.prerequisite_codes
-                          .map((code) => nameByCode.get(code) ?? code)
-                          .join(", ")}{" "}
+                        {/* El nombre viene con el nodo: los prerrequisitos de
+                            M2 son nodos de M1 y no están en esta respuesta, así
+                            que el mapa local no alcanza. */}
+                        {(node.prerequisite_names?.length
+                          ? node.prerequisite_names
+                          : node.prerequisite_codes.map(
+                              (code) => nameByCode.get(code) ?? code
+                            )
+                        ).join(", ")}{" "}
                         · ≥{Math.round(node.unlock_threshold * 100)}% acierto
                       </p>
                     )}

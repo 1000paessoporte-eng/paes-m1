@@ -1639,6 +1639,11 @@ export interface components {
              * @default []
              */
             prerequisite_codes: string[];
+            /**
+             * Prerequisite Names
+             * @default []
+             */
+            prerequisite_names: string[];
             status: components["schemas"]["ProgressStatus"];
             /** Accuracy */
             accuracy: number;
