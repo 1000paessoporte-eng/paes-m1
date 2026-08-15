@@ -6860,6 +6860,283 @@ QUESTIONS_CIENCIAS = [
             ("3 mol/L", "Entregó el valor del pOH como si fuera una concentración."),
         ],
     ),
+    # ---------- BIOLOGÍA: célula y transporte ----------
+    # Biología es el único eje donde la respuesta no siempre sale de un
+    # cálculo. Por eso el banco se apoya en lo que sí se puede recalcular
+    # —conteos de cromosomas, estequiometría, proporciones— y en invariantes
+    # de libro que no dependen de una fuente específica.
+    _q(
+        "cie_celula", "facil",
+        "Una célula animal se coloca en una disolución con mayor concentración "
+        "de sales que su interior. ¿Qué le ocurre?",
+        "Pierde agua y se arruga",
+        "El agua se mueve por osmosis desde donde está más diluida hacia donde "
+        "está más concentrada, buscando igualar ambos lados.\n\n"
+        "Si afuera hay más sal, el medio es hipertónico respecto de la célula: "
+        "el agua sale y la célula se deshidrata y se arruga.\n\n"
+        "El error de fondo es pensar que se mueve la sal. En osmosis la "
+        "membrana deja pasar el agua, no el soluto: por eso lo que se desplaza "
+        "es siempre el agua.",
+        [
+            ("Gana agua y se hincha", "Eso pasaría en un medio hipotónico, con menos sales afuera que adentro."),
+            ("No cambia, porque la membrana es impermeable", "La membrana es selectivamente permeable y el agua la atraviesa con facilidad."),
+            ("Absorbe sal hasta igualar las concentraciones", "En osmosis se mueve el agua, no el soluto; la sal no cruza libremente la membrana."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "La bomba sodio-potasio saca 3 iones $Na^+$ e ingresa 2 iones $K^+$ en "
+        "cada ciclo. ¿Cuántas cargas positivas netas pierde la célula por "
+        "ciclo?",
+        "1 carga positiva",
+        "Se cuentan las cargas que entran y las que salen: salen 3 positivas y "
+        "entran 2 positivas.\n\n"
+        "El balance es $3 - 2 = 1$ carga positiva que la célula pierde en cada "
+        "ciclo.\n\n"
+        "Ese desbalance es justamente el punto: la bomba no solo mueve iones, "
+        "deja el interior más negativo que el exterior, y ese potencial de "
+        "membrana es lo que después permite el impulso nervioso.",
+        [
+            ("5 cargas positivas", "Sumó los dos flujos en vez de restarlos; van en direcciones opuestas."),
+            ("Ninguna, queda equilibrada", "Supuso un intercambio uno a uno, pero salen 3 y entran 2."),
+            ("2 cargas positivas", "Contó solo los iones que entran."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Una célula somática humana tiene 46 cromosomas y se divide por "
+        "mitosis. ¿Cuántos cromosomas tiene cada célula hija?",
+        "46 cromosomas",
+        "La mitosis duplica el material genético antes de repartirlo, así que "
+        "cada célula hija recibe una copia completa.\n\n"
+        "De una célula con 46 cromosomas salen dos células con 46 cromosomas "
+        "cada una: la mitosis conserva el número.\n\n"
+        "La que reduce el número a la mitad es la meiosis, y solo ocurre para "
+        "formar gametos. Confundirlas es el error más frecuente del tema.",
+        [
+            ("23 cromosomas", "Describió la meiosis, que sí reduce el número a la mitad."),
+            ("92 cromosomas", "Se quedó en el paso intermedio, cuando el material ya se duplicó pero todavía no se reparte."),
+            ("46 en una y 23 en la otra", "La mitosis reparte en partes iguales; no produce células distintas entre sí."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Una sustancia entra a la célula desde donde está menos concentrada "
+        "hacia donde está más concentrada. ¿Qué tipo de transporte es?",
+        "Transporte activo, con gasto de ATP",
+        "Ir de menor a mayor concentración es moverse EN CONTRA del gradiente, "
+        "y eso nunca ocurre solo.\n\n"
+        "Como el proceso no es espontáneo, la célula tiene que pagarlo con "
+        "energía: por eso se llama transporte activo y consume ATP.\n\n"
+        "La regla es corta: a favor del gradiente es gratis (transporte "
+        "pasivo), en contra del gradiente se paga.",
+        [
+            ("Difusión simple, sin gasto de energía", "La difusión simple solo va a favor del gradiente, nunca en contra."),
+            ("Difusión facilitada por proteínas", "También es pasiva: la proteína da el paso, pero no aporta energía para subir el gradiente."),
+            ("Osmosis", "La osmosis describe el movimiento del agua, no el de un soluto contra su gradiente."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "En la fotosíntesis, la ecuación global es $6CO_2 + 6H_2O \\rightarrow "
+        "C_6H_{12}O_6 + 6O_2$. ¿Cuántas moléculas de $CO_2$ se necesitan para "
+        "formar una molécula de glucosa?",
+        "6 moléculas",
+        "La ecuación está balanceada, así que los coeficientes se leen "
+        "directamente como proporción.\n\n"
+        "Delante del $CO_2$ hay un 6 y delante de la glucosa un 1: se "
+        "necesitan 6 moléculas de $CO_2$ por cada molécula de glucosa.\n\n"
+        "Ese 6 no es arbitrario. La glucosa es $C_6H_{12}O_6$ y tiene seis "
+        "carbonos: cada uno tuvo que llegar desde una molécula de $CO_2$, "
+        "porque los átomos no aparecen de la nada.",
+        [
+            ("12 moléculas", "Usó el subíndice del hidrógeno en vez del coeficiente del dióxido de carbono."),
+            ("1 molécula", "Leyó el coeficiente de la glucosa en lugar del reactivo."),
+            ("18 moléculas", "Sumó los coeficientes de ambos reactivos."),
+        ],
+    ),
+    # ---------- BIOLOGÍA: genética ----------
+    _q(
+        "cie_genetica", "facil",
+        "Se cruzan dos plantas heterocigotas $Aa$, donde $A$ es dominante. "
+        "¿Qué porcentaje de la descendencia muestra el carácter recesivo?",
+        "25%",
+        "El cuadro de Punnett de $Aa \\times Aa$ da cuatro combinaciones "
+        "igualmente probables: $AA$, $Aa$, $aA$ y $aa$.\n\n"
+        "El carácter recesivo solo se ve cuando NO hay ningún alelo dominante, "
+        "es decir únicamente en $aa$: 1 de cada 4, o sea el 25%.\n\n"
+        "Las otras tres se ven iguales entre sí aunque su genotipo difiera. Por "
+        "eso la proporción de fenotipos es 3:1 y la de genotipos 1:2:1.",
+        [
+            ("75%", "Entregó la proporción del carácter dominante, que son las otras tres combinaciones."),
+            ("50%", "Confundió la proporción con la de los heterocigotos, que son dos de cuatro."),
+            ("100%", "Supondría que ambos padres son recesivos, pero acá los dos son heterocigotos."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Se cruza una planta heterocigota $Aa$ con una homocigota recesiva "
+        "$aa$. ¿Qué porcentaje de la descendencia muestra el carácter "
+        "dominante?",
+        "50%",
+        "El progenitor $Aa$ aporta $A$ o $a$ con igual probabilidad; el $aa$ "
+        "solo puede aportar $a$.\n\n"
+        "Las combinaciones posibles son entonces $Aa$ y $aa$, mitad y mitad: el "
+        "50% muestra el carácter dominante.\n\n"
+        "Este cruce se llama retrocruzamiento de prueba y sirve justamente para "
+        "eso: si aparece descendencia recesiva, el otro progenitor era "
+        "heterocigoto sin lugar a dudas.",
+        [
+            ("25%", "Aplicó la proporción del cruce entre dos heterocigotos, que no es este caso."),
+            ("75%", "Usó la proporción 3:1, que corresponde a $Aa \\times Aa$."),
+            ("100%", "Eso ocurriría si el primer progenitor fuera homocigoto dominante $AA$."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Una célula humana con 46 cromosomas entra en meiosis. ¿Cuántos "
+        "cromosomas tiene cada gameto resultante?",
+        "23 cromosomas",
+        "La meiosis es una división reduccional: su función es dejar la mitad "
+        "del material genético en cada gameto.\n\n"
+        "De 46 cromosomas se pasa a $46 \\div 2 = 23$ por gameto.\n\n"
+        "Tiene que ser así para que la especie se mantenga estable: al unirse "
+        "dos gametos de 23, el nuevo individuo vuelve a tener 46. Si la meiosis "
+        "no redujera, cada generación duplicaría su número de cromosomas.",
+        [
+            ("46 cromosomas", "Describió la mitosis, que conserva el número; la meiosis lo reduce a la mitad."),
+            ("92 cromosomas", "Duplicó en vez de reducir."),
+            ("12 cromosomas", "No corresponde a ninguna división de 46; la mitad exacta es 23."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Una mujer portadora de hemofilia ($X^H X^h$) tiene hijos con un hombre "
+        "sano ($X^H Y$). La hemofilia es recesiva y está ligada al cromosoma X. "
+        "¿Qué porcentaje de los HIJOS VARONES será hemofílico?",
+        "50%",
+        "Los varones reciben el Y del padre y uno de los dos X de la madre.\n\n"
+        "La madre puede aportar $X^H$ o $X^h$ con igual probabilidad, así que "
+        "los hijos varones son $X^H Y$ (sano) o $X^h Y$ (hemofílico): la mitad "
+        "de ellos.\n\n"
+        "Los varones no tienen un segundo X que compense el alelo enfermo, y "
+        "por eso basta con uno para manifestar la enfermedad. Las hijas, en "
+        "cambio, reciben el $X^H$ del padre y ninguna resulta hemofílica.",
+        [
+            ("25%", "Ese es el porcentaje sobre el total de hijos e hijas, no sobre los varones."),
+            ("100%", "Requeriría que la madre fuera hemofílica $X^h X^h$, no portadora."),
+            ("0%", "Ignoró que la madre portadora puede transmitir el alelo enfermo."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Dos personas de grupo sanguíneo $AB$ tienen descendencia. ¿Qué "
+        "porcentaje de los hijos será del grupo $AB$?",
+        "50%",
+        "Cada progenitor $AB$ aporta el alelo $A$ o el $B$ con igual "
+        "probabilidad.\n\n"
+        "Las cuatro combinaciones son $AA$, $AB$, $BA$ y $BB$: dos de las "
+        "cuatro son $AB$, o sea el 50%.\n\n"
+        "El grupo $AB$ es el caso clásico de codominancia: ninguno de los dos "
+        "alelos tapa al otro, y por eso se expresan ambos en vez de mezclarse.",
+        [
+            ("100%", "Supuso que dos padres $AB$ solo pueden tener hijos $AB$, pero cada uno aporta un solo alelo."),
+            ("25%", "Contó solo una de las dos combinaciones que dan $AB$."),
+            ("0%", "El cruce sí puede producir descendencia $AB$; de hecho es la mitad."),
+        ],
+    ),
+    # ---------- BIOLOGÍA: ecosistemas ----------
+    _q(
+        "cie_ecosistemas", "facil",
+        "En una cadena trófica, los productores fijan 10.000 kcal. Si en cada "
+        "nivel se transfiere aproximadamente el 10% de la energía, ¿cuánta "
+        "energía llega al consumidor secundario?",
+        "100 kcal",
+        "Se aplica el 10% una vez por cada salto de nivel.\n\n"
+        "Del productor al consumidor primario: $10.000 \\times 0,1 = 1.000$ "
+        "kcal. Del primario al secundario: $1.000 \\times 0,1 = 100$ kcal."
+        "\n\n"
+        "El 90% restante se pierde en cada paso como calor y actividad "
+        "metabólica. Por eso las cadenas tróficas casi nunca superan los cuatro "
+        "o cinco niveles: no queda energía suficiente para sostener otro.",
+        [
+            ("1.000 kcal", "Aplicó el 10% una sola vez: eso corresponde al consumidor primario."),
+            ("10 kcal", "Aplicó el 10% tres veces, un nivel de más."),
+            ("9.000 kcal", "Calculó lo que se pierde en el primer salto en vez de lo que se transfiere."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "facil",
+        "En un ecosistema, ¿qué organismos ocupan el primer nivel trófico?",
+        "Los productores, que fabrican su propio alimento",
+        "El primer nivel trófico es el que introduce la energía al ecosistema "
+        "sin tomarla de otro ser vivo.\n\n"
+        "Eso lo hacen los productores —plantas, algas y algunas bacterias— "
+        "capturando energía luminosa o química y transformándola en materia "
+        "orgánica.\n\n"
+        "Todos los demás niveles dependen de este. Sin productores no hay "
+        "energía entrando al sistema, y la cadena completa se cae.",
+        [
+            ("Los herbívoros, porque comen directamente de las plantas", "Son el segundo nivel: dependen de los productores para obtener energía."),
+            ("Los descomponedores, porque reciclan la materia", "Actúan sobre restos de todos los niveles; no son el punto de entrada de la energía."),
+            ("Los depredadores tope, porque controlan el ecosistema", "Ocupan el último nivel, no el primero."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "Un consumidor primario recibe 500 kcal. Con una eficiencia de "
+        "transferencia del 10%, ¿cuánta energía había en el nivel de los "
+        "productores?",
+        "5.000 kcal",
+        "Acá se va hacia atrás en la cadena, así que en vez de multiplicar por "
+        "0,1 hay que dividir.\n\n"
+        "Si $500$ kcal son el 10% del nivel anterior, entonces ese nivel tenía "
+        "$500 \\div 0,1 = 5.000$ kcal.\n\n"
+        "Conviene comprobarlo en el sentido directo: el 10% de 5.000 es 500. Si "
+        "el resultado no es mayor que el dato, el cálculo está al revés.",
+        [
+            ("50 kcal", "Multiplicó por 0,1 en vez de dividir: eso da el nivel siguiente, no el anterior."),
+            ("5.500 kcal", "Sumó el 10% al dato en vez de tratarlo como una fracción del total."),
+            ("450 kcal", "Restó el 10%, pero el nivel anterior siempre contiene mucha más energía."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "¿Por qué la energía fluye en un solo sentido en un ecosistema, "
+        "mientras la materia circula?",
+        "Porque la energía se degrada a calor y no se puede reutilizar",
+        "La materia son átomos: el carbono de una hoja pasa al herbívoro, "
+        "vuelve al suelo con los descomponedores y regresa a otra planta. Los "
+        "mismos átomos dan vueltas indefinidamente.\n\n"
+        "La energía no. En cada transformación una parte se disipa como calor, "
+        "y ese calor ya no sirve para sostener procesos biológicos.\n\n"
+        "Por eso el ecosistema necesita una entrada CONSTANTE de energía desde "
+        "el Sol, pero no necesita que le lleguen átomos nuevos.",
+        [
+            ("Porque los depredadores impiden que la energía retroceda", "La dirección del flujo es una consecuencia física, no del comportamiento de los organismos."),
+            ("Porque la materia se crea en los productores", "Los productores transforman materia existente; no la crean."),
+            ("Porque la energía se acumula en el último nivel trófico", "Ocurre lo contrario: cada nivel dispone de mucha menos energía que el anterior."),
+        ],
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "Una pirámide de energía tiene 8.000 kcal en los productores. Con un "
+        "10% de transferencia por nivel, ¿cuánta energía llega al consumidor "
+        "terciario?",
+        "8 kcal",
+        "El consumidor terciario está a tres saltos del productor, así que el "
+        "10% se aplica tres veces.\n\n"
+        "$8.000 \\times 0,1 = 800$; $800 \\times 0,1 = 80$; $80 \\times "
+        "0,1 = 8$ kcal.\n\n"
+        "Equivale a dividir por mil de una vez. Ese desplome explica por qué los "
+        "grandes depredadores son escasos: sostener uno exige una base enorme "
+        "de productores debajo.",
+        [
+            ("80 kcal", "Aplicó el 10% dos veces: eso corresponde al consumidor secundario."),
+            ("800 kcal", "Aplicó el 10% una sola vez, quedándose en el consumidor primario."),
+            ("0,8 kcal", "Aplicó el 10% cuatro veces, un nivel más allá del terciario."),
+        ],
+    ),
 ]
 
 
