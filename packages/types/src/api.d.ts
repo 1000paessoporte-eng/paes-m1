@@ -38,6 +38,24 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/auth/onboarding": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Ver Onboarding */
+        get: operations["ver_onboarding_api_auth_onboarding_get"];
+        /** Responder Onboarding */
+        put: operations["responder_onboarding_api_auth_onboarding_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/auth/config": {
         parameters: {
             query?: never;
@@ -1396,6 +1414,47 @@ export interface components {
             puntaje_ranking?: number | null;
         };
         /**
+         * OnboardingIn
+         * @description Respuestas del cuestionario de bienvenida. Todo es opcional: se puede
+         *     saltar, y saltarlo también cuenta como responder —no se vuelve a preguntar.
+         */
+        OnboardingIn: {
+            /** Pruebas Objetivo */
+            pruebas_objetivo?: string[];
+            /** Curso */
+            curso?: string | null;
+            /** Primera Vez */
+            primera_vez?: boolean | null;
+            /** Puntaje Anterior */
+            puntaje_anterior?: number | null;
+            /** Horas Semana */
+            horas_semana?: number | null;
+        };
+        /**
+         * OnboardingOut
+         * @description Lo respondido, para el perfil y para configurar la plataforma.
+         */
+        OnboardingOut: {
+            /**
+             * Pruebas Objetivo
+             * @default []
+             */
+            pruebas_objetivo: string[];
+            /** Curso */
+            curso?: string | null;
+            /** Primera Vez */
+            primera_vez?: boolean | null;
+            /** Puntaje Anterior */
+            puntaje_anterior?: number | null;
+            /** Horas Semana */
+            horas_semana?: number | null;
+            /**
+             * Respondido
+             * @default false
+             */
+            respondido: boolean;
+        };
+        /**
          * OrdenIn
          * @description Los ids de carrera en el orden de preferencia deseado.
          */
@@ -1898,6 +1957,59 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["TokenOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    ver_onboarding_api_auth_onboarding_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["OnboardingOut"];
+                };
+            };
+        };
+    };
+    responder_onboarding_api_auth_onboarding_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["OnboardingIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["OnboardingOut"];
                 };
             };
             /** @description Validation Error */

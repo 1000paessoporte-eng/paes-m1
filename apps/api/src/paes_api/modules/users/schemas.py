@@ -52,6 +52,32 @@ class TokenOut(BaseModel):
     user: UserOut
 
 
+class OnboardingIn(BaseModel):
+    """Respuestas del cuestionario de bienvenida. Todo es opcional: se puede
+    saltar, y saltarlo también cuenta como responder —no se vuelve a preguntar."""
+
+    pruebas_objetivo: list[str] = Field(default_factory=list, max_length=5)
+    curso: str | None = Field(default=None, max_length=20)
+    primera_vez: bool | None = None
+    puntaje_anterior: int | None = Field(default=None, ge=100, le=1000)
+    horas_semana: int | None = Field(default=None, ge=0, le=60)
+
+
+class OnboardingOut(BaseModel):
+    """Lo respondido, para el perfil y para configurar la plataforma."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    pruebas_objetivo: list[str] = []
+    curso: str | None = None
+    primera_vez: bool | None = None
+    puntaje_anterior: int | None = None
+    horas_semana: int | None = None
+    #: False mientras no se le haya preguntado: es lo que dispara el
+    #: cuestionario al entrar.
+    respondido: bool = False
+
+
 class UpdateMeIn(BaseModel):
     recordatorios_email: bool | None = None
     name: str | None = Field(default=None, min_length=1, max_length=120)
