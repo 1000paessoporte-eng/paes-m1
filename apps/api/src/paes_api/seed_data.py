@@ -7209,6 +7209,333 @@ PASSAGES_HISTORIA = [
             "autoridades que responden a una parte del país y no al conjunto.»"
         ),
     },
+    {
+        "key": "fuente_conquista",
+        "title": "Dos relatos sobre un mismo encuentro",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes, escritos como fuentes de contraste "
+            "al modo de las crónicas y testimonios del siglo XVI. No son citas "
+            "de documentos históricos reales."
+        ),
+        "body": (
+            "FUENTE 1 — Relato de un cronista que acompañó a la expedición\n"
+            "«Llegamos al valle y hallamos a los naturales en gran número, mas "
+            "sin orden ni disciplina de guerra. Nuestro capitán, movido por el "
+            "servicio de Dios y de Su Majestad, les habló de paz y les ofreció "
+            "amparo. Algunos lo recibieron de buen grado; otros, ciegos aún, "
+            "prefirieron la resistencia y hubo que reducirlos por las armas, "
+            "como manda la razón cuando falta el entendimiento.»\n\n"
+            "FUENTE 2 — Testimonio recogido a un habitante del valle, "
+            "transmitido oralmente y puesto por escrito generaciones después\n"
+            "«Vinieron hombres de hierro montados en animales que no "
+            "conocíamos. Dijeron palabras que nadie entendió y pidieron "
+            "alimento, y se lo dimos. Después pidieron el oro, y luego pidieron "
+            "las tierras y a nuestra gente para trabajarlas. Cuando dijimos que "
+            "no, quemaron las siembras. No hubo entendimiento que faltara: hubo "
+            "una lengua que no quisimos hablar.»"
+        ),
+    },
+    {
+        "key": "empleo_sectores",
+        "title": "Distribución del empleo por sector en el país de Valdivia, 1960-2020",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla construida con datos ficticios por 1000paes para ejercitar "
+            "lectura de fuentes. No corresponde a un país real."
+        ),
+        "body": (
+            "Porcentaje del total de trabajadores ocupados en cada sector.\n\n"
+            "| Año | Sector primario | Sector secundario | Sector terciario |\n"
+            "|---|---|---|---|\n"
+            "| 1960 | 55 | 20 | 25 |\n"
+            "| 1980 | 38 | 28 | 34 |\n"
+            "| 2000 | 22 | 26 | 52 |\n"
+            "| 2020 | 11 | 19 | 70 |\n\n"
+            "Sector primario: agricultura, ganadería, pesca y minería. "
+            "Secundario: industria y construcción. Terciario: comercio y "
+            "servicios."
+        ),
+    },
+    {
+        "key": "fuente_memoria",
+        "title": "Un mismo hecho, dos maneras de recordarlo",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes, escritos como fuentes de contraste "
+            "sobre el problema de la memoria histórica. No son citas reales."
+        ),
+        "body": (
+            "FUENTE 1 — Editorial de un diario, publicado al año siguiente de "
+            "los hechos\n"
+            "«Lo ocurrido fue un episodio lamentable pero inevitable. El país "
+            "atravesaba una crisis y las autoridades actuaron con los medios "
+            "que tenían a mano. Insistir hoy en revisar aquellos días solo "
+            "reabre heridas que el tiempo ya está cerrando.»\n\n"
+            "FUENTE 2 — Declaración de una agrupación de familiares, cuarenta "
+            "años después\n"
+            "«Nos dijeron que el tiempo cerraría las heridas. El tiempo no "
+            "cierra nada por sí solo: lo que cierra es la verdad. Mientras no "
+            "se sepa qué pasó y quién lo decidió, no hay pasado que pase. No "
+            "pedimos que se reabra nada, pedimos que por fin se abra.»"
+        ),
+    },
+    {
+        "key": "civ_poderes",
+        "title": "La organización del Estado de Chile",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "marco institucional vigente para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El poder del Estado en Chile se reparte entre tres órganos "
+            "distintos, de modo que ninguno lo concentre por completo. El "
+            "Poder Ejecutivo, encabezado por el Presidente de la República, "
+            "gobierna y administra. El Poder Legislativo elabora y aprueba las "
+            "leyes. El Poder Judicial, con la Corte Suprema a la cabeza, "
+            "resuelve los conflictos aplicando la ley.\n\n"
+            "El Poder Legislativo reside en el Congreso Nacional, que es "
+            "bicameral: está compuesto por la Cámara de Diputados y el Senado. "
+            "Un proyecto de ley debe ser aprobado por ambas cámaras antes de "
+            "pasar al Presidente para su promulgación. El Presidente participa "
+            "del proceso —puede presentar proyectos, vetarlos y promulgarlos— "
+            "pero no legisla por sí solo.\n\n"
+            "La finalidad de esta separación no es la eficiencia sino el "
+            "control recíproco: cada poder limita a los otros. De ahí se sigue "
+            "el principio de Estado de derecho, según el cual todas las "
+            "personas e instituciones, incluido el propio gobierno, están "
+            "sometidas a la ley. Nadie está por encima de ella, ni el "
+            "Presidente, ni un ministro, ni una mayoría parlamentaria.\n\n"
+            "En el nivel local, la administración de cada comuna corresponde a "
+            "la municipalidad, encabezada por el alcalde. Junto a él, un "
+            "concejo municipal elegido por los vecinos cumple funciones "
+            "normativas, resolutivas y de fiscalización: aprueba el "
+            "presupuesto comunal y controla la gestión del alcalde. Ambas "
+            "autoridades son elegidas por votación popular."
+        ),
+    },
+    {
+        "key": "civ_sufragio",
+        "title": "Formas de participar en democracia",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado para ejercitar "
+            "lectura de fuentes sobre participación ciudadana."
+        ),
+        "body": (
+            "En Chile el sufragio es universal, personal, igualitario y "
+            "secreto. Universal significa que votan todos los ciudadanos "
+            "habilitados. Personal, que nadie puede votar por otro. "
+            "Igualitario, que el voto de cada persona vale exactamente lo "
+            "mismo que el de cualquier otra, sin que pesen más la riqueza, la "
+            "educación, el sexo o el origen. Secreto, que nadie puede saber "
+            "qué votó una persona y, por lo tanto, presionarla.\n\n"
+            "La democracia puede ejercerse de dos maneras. En la democracia "
+            "directa la ciudadanía decide ella misma sobre los asuntos, como "
+            "en la asamblea ateniense. En la representativa elige autoridades "
+            "que deciden en su nombre durante un período, y les pide cuentas en "
+            "la elección siguiente. Chile es representativo como regla, pero "
+            "contempla mecanismos de participación directa: el plebiscito es "
+            "una consulta en que se pregunta a la ciudadanía para que se "
+            "pronuncie sobre un asunto determinado, y existe tanto a nivel "
+            "comunal como nacional.\n\n"
+            "Los partidos políticos cumplen dos tareas propias del sistema "
+            "representativo: organizan y representan corrientes de opinión, "
+            "canalizando demandas ciudadanas dispersas, y seleccionan y "
+            "presentan candidatos a los cargos de elección popular. Que un "
+            "gobierno sea sucedido por la oposición —lo que se llama "
+            "alternancia— se considera un indicador de salud democrática, "
+            "porque demuestra que las elecciones son competitivas de verdad, "
+            "que quien pierde acepta el resultado y que el poder se entrega "
+            "pacíficamente.\n\n"
+            "No toda participación ocurre votando. La sociedad civil "
+            "organizada —juntas de vecinos, sindicatos, centros de alumnos, "
+            "fundaciones— canaliza demandas y ejerce control social de forma "
+            "permanente. Es un complemento de la representación electoral y no "
+            "un sustituto: actúa en el día a día del territorio, donde el voto "
+            "no llega."
+        ),
+    },
+    {
+        "key": "civ_ddhh",
+        "title": "Qué son los derechos humanos",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado para ejercitar "
+            "lectura de fuentes sobre derechos y deberes."
+        ),
+        "body": (
+            "Los derechos humanos son universales: corresponden a todas las "
+            "personas por el solo hecho de serlo, sin distinción de "
+            "nacionalidad, sexo, religión, situación migratoria ni ninguna "
+            "otra condición. No se ganan por mérito ni se otorgan como premio. "
+            "Por eso se dice que el Estado no los concede sino que los "
+            "reconoce, y su obligación es respetarlos y garantizarlos incluso "
+            "frente a quien la sociedad rechaza. Son además inalienables: no "
+            "pueden limitarse por decisión de una mayoría.\n\n"
+            "La Declaración Universal de los Derechos Humanos fue aprobada en "
+            "1948 por la Asamblea General de las Naciones Unidas, tres años "
+            "después del fin de la Segunda Guerra Mundial. Ese contexto "
+            "explica su contenido: nace como respuesta al Holocausto y a la "
+            "constatación de que un Estado podía aniquilar legalmente a su "
+            "propia población.\n\n"
+            "Suelen distinguirse generaciones de derechos. Los de primera "
+            "generación son los civiles y políticos —vida, libertad de "
+            "expresión, debido proceso— y exigen sobre todo que el Estado se "
+            "abstenga: que no censure, que no detenga arbitrariamente. Los de "
+            "segunda generación son los económicos, sociales y culturales, "
+            "como la educación y la salud, y exigen lo contrario: "
+            "prestaciones activas del Estado, con escuelas, hospitales, "
+            "profesionales y presupuesto. Por eso su realización es progresiva "
+            "y depende de los recursos disponibles. Los de tercera generación "
+            "son derechos colectivos, referidos a asuntos como el medio "
+            "ambiente y la paz.\n\n"
+            "La ciudadanía implica también deberes, que son la contracara de "
+            "los derechos: respetar la Constitución y las leyes, contribuir "
+            "mediante el pago de impuestos, respetar los derechos de los demás "
+            "y cuidar los bienes públicos. Para que el Estado garantice "
+            "educación, salud o seguridad necesita recursos y un marco de "
+            "convivencia respetado por todos."
+        ),
+    },
+    {
+        "key": "civ_proteccion",
+        "title": "Cómo se protegen los derechos en Chile",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir de la "
+            "normativa vigente para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Un derecho escrito que no puede exigirse queda en declaración. "
+            "Por eso el ordenamiento chileno contempla mecanismos concretos.\n\n"
+            "El recurso de protección es una acción judicial que permite a "
+            "cualquier persona acudir directamente a la Corte de Apelaciones "
+            "cuando un acto u omisión arbitrario o ilegal la priva, perturba o "
+            "amenaza en el ejercicio de determinados derechos garantizados por "
+            "la Constitución. Su característica es la rapidez: busca "
+            "restablecer el imperio del derecho sin esperar un juicio "
+            "ordinario completo.\n\n"
+            "La Ley 20.609, conocida como Ley Zamudio, sanciona la "
+            "discriminación arbitraria, entendida como toda distinción sin "
+            "justificación razonable basada en categorías como nacionalidad, "
+            "sexo, religión, orientación sexual o discapacidad. La palabra "
+            "arbitraria es decisiva: no toda distinción es ilegal. Exigir un "
+            "título profesional para ejercer medicina es razonable; rechazar a "
+            "alguien por su nacionalidad, no.\n\n"
+            "La Ley 19.496 establece los derechos de los consumidores, entre "
+            "ellos la garantía legal frente a productos defectuosos: "
+            "reparación, cambio o devolución del dinero. El SERNAC vela por su "
+            "cumplimiento y recibe denuncias. Existe porque entre un comercio "
+            "y un consumidor hay un desequilibrio que el solo acuerdo privado "
+            "no corrige.\n\n"
+            "El Instituto Nacional de Derechos Humanos (INDH) es una "
+            "corporación autónoma de derecho público encargada de promover y "
+            "proteger los derechos humanos de quienes habitan el país. Elabora "
+            "informes y puede deducir acciones judiciales. Su autonomía "
+            "respecto del gobierno es esencial: si dependiera del gobierno de "
+            "turno no podría fiscalizar al Estado, que es el principal "
+            "obligado en esta materia.\n\n"
+            "En materia penal rige la presunción de inocencia: toda persona es "
+            "inocente mientras no se pruebe lo contrario. Su consecuencia "
+            "práctica es que la carga de la prueba recae en quien acusa y no "
+            "en el imputado; si la prueba no alcanza, corresponde absolver. "
+            "Exigir al acusado que demuestre su inocencia lo obligaría a "
+            "probar un hecho negativo, algo por lo general imposible.\n\n"
+            "Ningún derecho es absoluto. La libertad de expresión protege "
+            "opinar, informar y criticar, incluso de forma incómoda para el "
+            "poder, pero no ampara la injuria, la calumnia ni la incitación a "
+            "la violencia, porque ahí se lesionan derechos de terceros. Esos "
+            "límites deben estar establecidos por ley y ser proporcionales; si "
+            "quedaran a discreción de la autoridad, la excepción se "
+            "convertiría en censura, que está prohibida."
+        ),
+    },
+    {
+        "key": "his_duraciones",
+        "title": "Cómo se ordena el tiempo en historia",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto metodológico original de 1000paes, redactado para "
+            "ejercitar lectura de fuentes sobre pensamiento temporal."
+        ),
+        "body": (
+            "El tiempo histórico es continuo: no viene cortado en pedazos. La "
+            "periodización es la herramienta con que el historiador lo divide "
+            "en etapas según criterios definidos, para poder analizarlo. Se "
+            "traza a partir de un criterio explícito —político, económico, "
+            "cultural— y por eso distintos criterios producen distintas "
+            "periodizaciones del mismo pasado. Es una construcción y no un "
+            "hecho: nadie se acostó en la Edad Media y despertó en la Edad "
+            "Moderna.\n\n"
+            "No todos los cambios ocurren a la misma velocidad. El "
+            "acontecimiento dura días o meses: una batalla, una elección. La "
+            "media duración abarca décadas: una crisis económica, un ciclo "
+            "político. Los procesos de larga duración son transformaciones "
+            "lentas que se extienden por siglos, como los cambios en las "
+            "mentalidades o en las estructuras económicas, y resultan casi "
+            "imperceptibles para quien los vive.\n\n"
+            "Analizar continuidades y cambios consiste en identificar qué "
+            "elementos se transformaron y cuáles permanecieron pese a la "
+            "transformación. Ningún proceso cambia todo ni deja todo igual: "
+            "una revolución puede cambiar el régimen político y mantener "
+            "intacta la estructura de propiedad de la tierra.\n\n"
+            "La causa es lo que contribuye a que un proceso ocurra; la "
+            "consecuencia, lo que resulta de él. Un mismo hecho puede ser "
+            "ambas cosas según el proceso analizado: una crisis económica es "
+            "consecuencia de una guerra y, a la vez, causa de un cambio "
+            "político posterior.\n\n"
+            "Para ubicar los hechos se usan siglos. Cada siglo abarca cien "
+            "años y el primero va del año 1 al 100, de modo que el siglo XVI "
+            "comprende de 1501 a 1600. La regla rápida consiste en tomar las "
+            "dos primeras cifras del año y sumar uno, salvo que el año termine "
+            "exactamente en 00. La extensión de un período, en cambio, se "
+            "obtiene restando el año inicial del final."
+        ),
+    },
+    {
+        "key": "his_oficio",
+        "title": "El oficio del historiador",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto metodológico original de 1000paes, redactado para "
+            "ejercitar lectura de fuentes sobre el trabajo histórico."
+        ),
+        "body": (
+            "La primera regla del oficio es evitar el anacronismo, que "
+            "consiste en aplicar al pasado categorías, valores o conocimientos "
+            "de otra época. Reprochar a alguien no saber algo que en su tiempo "
+            "aún no había sido establecido no describe su ignorancia: describe "
+            "la confusión de quien juzga. Cada época debe entenderse según lo "
+            "que estaba disponible y era pensable en ella.\n\n"
+            "El contexto histórico es el conjunto de condiciones políticas, "
+            "económicas, sociales y culturales de la época que permiten "
+            "comprender por qué un hecho ocurrió y qué significó. Una misma "
+            "acción puede significar cosas opuestas en contextos distintos: "
+            "publicar un texto crítico bajo una dictadura y hacerlo en "
+            "democracia no son el mismo acto. Reconstruir el contexto no es un "
+            "adorno introductorio, es lo que impide leer el pasado como si "
+            "hubiera ocurrido en nuestra época.\n\n"
+            "Los procesos históricos son multicausales porque los fenómenos "
+            "sociales resultan de la combinación de factores políticos, "
+            "económicos, sociales y culturales. Una revolución no se explica "
+            "solo por el hambre, ni solo por las ideas, ni solo por la "
+            "debilidad del gobierno: es la convergencia de esos factores lo "
+            "que la vuelve posible. De ahí que se distinga entre causas "
+            "estructurales, que preparan el terreno durante años, y causas "
+            "inmediatas, que actúan como detonante.\n\n"
+            "Se afirma que la historia se reescribe con cada generación. El "
+            "pasado no cambia, pero las preguntas que se le hacen sí: cuando "
+            "la historiografía empezó a interrogarse por la vida cotidiana, "
+            "por el trabajo de las mujeres o por los pueblos sin escritura, "
+            "aparecieron temas enteros que antes no se investigaban. A eso se "
+            "suman archivos que se abren y técnicas nuevas de análisis. Eso no "
+            "vuelve arbitraria la disciplina: las afirmaciones siguen "
+            "exigiendo evidencia. Lo que cambia es qué se busca y con qué "
+            "herramientas."
+        ),
+    },
 ]
 
 QUESTIONS_HISTORIA = [
@@ -7387,6 +7714,1151 @@ QUESTIONS_HISTORIA = [
             ("El precio alcanza su valor más bajo posible", "El equilibrio no es un mínimo: puede ser un precio alto si la oferta es escasa."),
             ("Los productores obtienen su mayor ganancia", "El equilibrio iguala cantidades; no maximiza la ganancia de ninguna de las partes."),
             ("Toda la población puede comprar el bien", "El equilibrio no garantiza acceso universal: quienes no pueden pagar ese precio quedan fuera."),
+        ],
+    ),
+    # ---------- ECONOMÍA: indicadores ----------
+    _q(
+        "eco_indicadores", "facil",
+        "En un país hay 4.500.000 personas ocupadas y 500.000 desocupadas. "
+        "¿Cuál es la tasa de desempleo?",
+        "10%",
+        "La tasa de desempleo NO se calcula sobre la población total, sino "
+        "sobre la fuerza de trabajo: quienes trabajan más quienes buscan "
+        "trabajo.\n\n"
+        "1) Fuerza de trabajo: $4.500.000 + 500.000 = 5.000.000$.\n"
+        "2) Tasa: $\\frac{500.000}{5.000.000} \\times 100 = 10\\%$.\n\n"
+        "Quien está estudiando, jubilado o no busca empleo queda fuera del "
+        "cálculo: son población inactiva, no desempleados.",
+        [
+            ("11,1%", "Dividió los desocupados por los ocupados en vez de por la fuerza de trabajo."),
+            ("5%", "Usó una población total mayor, no la fuerza de trabajo."),
+            ("90%", "Calculó la proporción de ocupados, que es la tasa de ocupación."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "El IPC de un país pasa de 100 a 106 puntos en un año. ¿Cuál fue la "
+        "inflación anual?",
+        "6%",
+        "La inflación es la variación porcentual del índice de precios entre "
+        "dos momentos.\n\n"
+        "$\\frac{106 - 100}{100} \\times 100 = 6\\%$.\n\n"
+        "El IPC mide una canasta fija de bienes y servicios representativa del "
+        "consumo de los hogares. Que suba 6% no significa que todo suba 6%: es "
+        "un promedio ponderado, y adentro hay precios que suben mucho más y "
+        "otros que bajan.",
+        [
+            ("106%", "Entregó el valor del índice, no su variación."),
+            ("1,06%", "Se equivocó en un factor cien al pasar a porcentaje."),
+            ("94%", "Restó al revés, como si los precios hubieran caído."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Un país tiene un PIB de 300.000 millones de dólares y 20 millones de "
+        "habitantes. ¿Cuál es su PIB per cápita?",
+        "15.000 dólares",
+        "El PIB per cápita reparte la producción total entre todos los "
+        "habitantes.\n\n"
+        "$\\frac{300.000\\ \\text{millones}}{20\\ \\text{millones}} = 15.000$ "
+        "dólares por habitante.\n\n"
+        "Es un promedio, y como todo promedio esconde la distribución: dos "
+        "países con el mismo PIB per cápita pueden tener realidades muy "
+        "distintas si en uno la riqueza está concentrada. Por eso nunca se lee "
+        "solo, sino junto a indicadores de desigualdad.",
+        [
+            ("15.000 millones de dólares", "Arrastró la unidad equivocada: el resultado es por habitante, no en millones."),
+            ("6.000.000 de dólares", "Multiplicó en vez de dividir."),
+            ("20.000 dólares", "Usó una población menor que la del enunciado."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "El sueldo de un trabajador sube de $500.000 a $550.000, y en el mismo "
+        "período la inflación fue de 10%. ¿Qué ocurrió con su salario REAL?",
+        "Se mantuvo igual",
+        "El salario nominal es la cifra del contrato; el salario real es lo que "
+        "esa cifra alcanza a comprar.\n\n"
+        "1) El sueldo subió $\\frac{550.000 - 500.000}{500.000} \\times 100 = "
+        "10\\%$.\n"
+        "2) Los precios también subieron 10%.\n"
+        "3) Como ambos crecieron lo mismo, el poder adquisitivo no cambió.\n\n"
+        "La regla práctica: el salario real mejora solo si el sueldo sube MÁS "
+        "que la inflación. Un aumento nominal por debajo de la inflación es, en "
+        "los hechos, una rebaja.",
+        [
+            ("Aumentó 10%", "Ese es el aumento nominal; la inflación se lo comió por completo."),
+            ("Aumentó 50.000 pesos", "Es la diferencia nominal, sin descontar el alza de precios."),
+            ("Disminuyó 10%", "Habría ocurrido si el sueldo no hubiera subido nada."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "¿Qué mide el Producto Interno Bruto (PIB) de un país?",
+        "El valor de todos los bienes y servicios finales producidos dentro del "
+        "país en un período",
+        "El PIB suma el valor de la producción FINAL hecha dentro de las "
+        "fronteras del país durante un período, normalmente un año.\n\n"
+        "Dice 'finales' para no contar dos veces: si se sumara la harina y "
+        "además el pan hecho con esa harina, la misma producción entraría "
+        "dos veces al total.\n\n"
+        "Y dice 'dentro del país' sin importar la nacionalidad del dueño: lo "
+        "que produce una empresa extranjera en Chile es PIB chileno.",
+        [
+            ("La riqueza total acumulada por el país a lo largo de su historia", "El PIB es un flujo de un período, no un stock acumulado."),
+            ("El dinero que el Estado recauda en impuestos", "Eso son los ingresos fiscales, una parte del presupuesto público."),
+            ("El promedio de ingresos de los hogares", "Ese es otro indicador; el PIB mide producción, no ingreso familiar promedio."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Una persona de 30 años no tiene trabajo, no busca empleo y se dedica a "
+        "estudiar a tiempo completo. ¿Cómo la clasifica la estadística "
+        "laboral?",
+        "Como población inactiva",
+        "La clasificación depende de dos preguntas: ¿trabaja? y, si no, ¿está "
+        "buscando trabajo?\n\n"
+        "Esta persona no trabaja y tampoco busca, así que no es ni ocupada ni "
+        "desocupada: es población inactiva, fuera de la fuerza de trabajo.\n\n"
+        "Por eso la tasa de desempleo puede bajar por una mala razón: si mucha "
+        "gente se cansa de buscar y deja de hacerlo, sale del denominador y el "
+        "indicador mejora sin que haya más empleo.",
+        [
+            ("Como desocupada", "Para ser desocupado hay que estar buscando trabajo activamente."),
+            ("Como ocupada", "No tiene empleo; estudiar no cuenta como ocupación laboral."),
+            ("Como subempleada", "El subempleo describe a quien trabaja menos horas de las que querría, no a quien no trabaja."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "El PIB de un país creció 8% en valor, pero la inflación del mismo "
+        "período fue 8%. ¿Qué pasó con el PIB REAL?",
+        "No creció: se mantuvo prácticamente igual",
+        "El PIB nominal se mide a precios corrientes, así que sube tanto si se "
+        "produce más como si simplemente todo cuesta más.\n\n"
+        "Acá el aumento del 8% se explica íntegramente por el alza de precios: "
+        "descontada la inflación, no queda crecimiento.\n\n"
+        "El PIB real corrige esa distorsión midiendo a precios de un año base. "
+        "Es el único que responde la pregunta que importa: ¿el país produjo más "
+        "cosas, o solo más caras?",
+        [
+            ("Creció 8%", "Ese es el crecimiento nominal, que incluye el efecto de los precios."),
+            ("Creció 16%", "Sumó inflación y crecimiento nominal; el ajuste es una resta, no una suma."),
+            ("Cayó 8%", "La caída ocurriría si el PIB nominal no hubiera subido nada."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "En un país de 100.000 habitantes, la fuerza de trabajo es de 60.000 "
+        "personas y hay 3.000 desocupados. ¿Cuál es la tasa de desempleo?",
+        "5%",
+        "El denominador siempre es la fuerza de trabajo, no la población "
+        "total.\n\n"
+        "$\\frac{3.000}{60.000} \\times 100 = 5\\%$.\n\n"
+        "Usar los 100.000 habitantes daría 3%, un número más bajo y "
+        "equivocado: incluiría en el denominador a niños, jubilados y a "
+        "cualquiera que no esté en el mercado laboral.",
+        [
+            ("3%", "Dividió por la población total en vez de por la fuerza de trabajo."),
+            ("20%", "Invirtió la razón entre las cifras."),
+            ("57%", "Restó los desocupados de la fuerza de trabajo en vez de calcular la proporción."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "¿Por qué el Banco Central suele subir la tasa de interés cuando la "
+        "inflación es alta?",
+        "Para encarecer el crédito, moderar el consumo y frenar el alza de "
+        "precios",
+        "La inflación alta suele venir de una demanda que corre más rápido que "
+        "la producción disponible.\n\n"
+        "Al subir la tasa, pedir prestado sale más caro y ahorrar rinde más: "
+        "los hogares y las empresas postergan compras e inversiones, la demanda "
+        "se enfría y los precios dejan de empujar hacia arriba.\n\n"
+        "Tiene un costo y por eso es una decisión difícil: la misma medida que "
+        "frena los precios también frena la actividad y el empleo.",
+        [
+            ("Para aumentar la cantidad de dinero en circulación", "Subir la tasa hace lo contrario: retira estímulo de la economía."),
+            ("Para que el Estado recaude más impuestos", "La tasa de interés es política monetaria, no tributaria."),
+            ("Para que suban los sueldos al mismo ritmo que los precios", "El Banco Central no fija sueldos; su objetivo es la estabilidad de precios."),
+        ],
+    ),
+    # ---------- ECONOMÍA: oferta, demanda y mercado ----------
+    _q(
+        "eco_mercado", "facil",
+        "Según la ley de la demanda, si el precio de un bien sube y todo lo "
+        "demás se mantiene constante, ¿qué ocurre con la cantidad demandada?",
+        "Disminuye",
+        "La ley de la demanda describe una relación inversa entre precio y "
+        "cantidad demandada.\n\n"
+        "Si algo se encarece, parte de los consumidores compra menos, lo "
+        "reemplaza por un sustituto o directamente deja de comprarlo.\n\n"
+        "La frase 'todo lo demás constante' no es un adorno: si al mismo tiempo "
+        "subieran los ingresos o cambiara la moda, el efecto del precio podría "
+        "quedar tapado por esos otros factores.",
+        [
+            ("Aumenta", "Describe la ley de la oferta, que sí es directa: a mayor precio, los productores ofrecen más."),
+            ("Se mantiene igual", "Solo ocurriría en un bien de demanda perfectamente inelástica, un caso extremo y poco común."),
+            ("Aumenta primero y luego disminuye", "La relación es monótona: a mayor precio, menor cantidad demandada."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "En un mercado, ¿qué define el punto de equilibrio?",
+        "El precio al que la cantidad ofrecida es igual a la cantidad demandada",
+        "El equilibrio es donde las curvas de oferta y demanda se cruzan: a ese "
+        "precio, todo lo que los vendedores quieren vender coincide con lo que "
+        "los compradores quieren comprar.\n\n"
+        "Ahí no sobra ni falta producto, y por eso el precio no tiene razón "
+        "para moverse.\n\n"
+        "Fuera del equilibrio siempre hay una presión: si el precio está por "
+        "encima sobra producto y tiende a bajar; si está por debajo, falta y "
+        "tiende a subir.",
+        [
+            ("El precio más alto que los consumidores están dispuestos a pagar", "Ese sería el techo de la demanda, no el punto donde ambas fuerzas coinciden."),
+            ("El precio fijado por el Estado", "En un mercado libre el equilibrio surge de la interacción entre oferentes y demandantes."),
+            ("El punto donde la oferta es máxima", "El equilibrio no busca maximizar la oferta, sino igualarla con la demanda."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "En un mercado, a $2.000 pesos los productores ofrecen 800 unidades y "
+        "los consumidores demandan 500. ¿Qué situación se produce?",
+        "Un exceso de oferta de 300 unidades, que presiona el precio a la baja",
+        "Se comparan ambas cantidades a ese precio: $800 - 500 = 300$ unidades "
+        "que nadie compra.\n\n"
+        "Cuando sobra producto, los vendedores compiten por deshacerse del "
+        "stock y bajan el precio; a medida que baja, la cantidad demandada sube "
+        "y la ofrecida cae, hasta que se encuentran.\n\n"
+        "Que sobre producto significa que el precio está POR ENCIMA del "
+        "equilibrio, no por debajo.",
+        [
+            ("Un exceso de demanda de 300 unidades, que presiona el precio al alza", "Invirtió la situación: acá se ofrece más de lo que se demanda."),
+            ("El mercado está en equilibrio", "En equilibrio ambas cantidades coinciden, y acá difieren en 300 unidades."),
+            ("Un exceso de oferta de 1.300 unidades", "Sumó ambas cantidades en vez de restarlas."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Sube fuertemente el precio del té y, como consecuencia, aumenta la "
+        "venta de café. ¿Qué relación existe entre ambos bienes?",
+        "Son bienes sustitutos",
+        "Dos bienes son sustitutos cuando uno puede reemplazar al otro en el "
+        "consumo.\n\n"
+        "Si el té se encarece, parte de los consumidores se cambia al café: por "
+        "eso el alza del precio de uno aumenta la demanda del otro.\n\n"
+        "Los complementarios funcionan al revés: se consumen juntos, así que si "
+        "sube el precio de uno, cae la demanda del otro. Auto y bencina, o "
+        "impresora y tinta.",
+        [
+            ("Son bienes complementarios", "En ese caso el alza del té habría hecho CAER la venta de café, no subirla."),
+            ("Son bienes inferiores", "Esa categoría describe cómo cambia la demanda con el ingreso, no con el precio de otro bien."),
+            ("No tienen relación entre sí", "Si el precio de uno mueve la demanda del otro, la relación existe por definición."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "El Estado fija un precio máximo por debajo del precio de equilibrio "
+        "para un producto de primera necesidad. ¿Cuál es el efecto más probable "
+        "en ese mercado?",
+        "Escasez del producto, porque se demanda más de lo que se ofrece a ese "
+        "precio",
+        "Un precio máximo por debajo del equilibrio cambia los incentivos de "
+        "los dos lados a la vez.\n\n"
+        "A ese precio más bajo los consumidores quieren comprar más, pero a los "
+        "productores les resulta menos rentable y ofrecen menos. La diferencia "
+        "entre ambas cantidades es escasez.\n\n"
+        "De ahí las consecuencias típicas: colas, racionamiento y mercados "
+        "informales. La medida busca proteger el acceso, pero el efecto sobre la "
+        "cantidad disponible va en el sentido contrario.",
+        [
+            ("Abundancia del producto, porque se vuelve más accesible", "Ser más barato aumenta la demanda, pero reduce la cantidad que los productores están dispuestos a ofrecer."),
+            ("Ningún efecto, porque el mercado se ajusta solo", "Un precio fijado por ley impide justamente ese ajuste."),
+            ("Un aumento de la oferta, porque se venden más unidades", "Un precio más bajo desincentiva producir, no lo contrario."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Una tienda vende 200 unidades a 3.000 pesos cada una. ¿Cuál es su "
+        "ingreso total?",
+        "600.000 pesos",
+        "El ingreso total es simplemente el precio multiplicado por la cantidad "
+        "vendida.\n\n"
+        "$3.000 \\times 200 = 600.000$ pesos.\n\n"
+        "Ojo con la palabra: ingreso NO es ganancia. Para saber cuánto ganó hay "
+        "que descontar los costos, y una empresa puede tener un ingreso alto y "
+        "aun así estar perdiendo dinero.",
+        [
+            ("3.200 pesos", "Sumó precio y cantidad en vez de multiplicarlos."),
+            ("15 pesos", "Dividió el precio por la cantidad."),
+            ("200.000 pesos", "Perdió un factor al operar el precio."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Aumenta el ingreso promedio de las familias de una ciudad. ¿Qué ocurre "
+        "con la curva de demanda de un bien normal?",
+        "Se desplaza hacia la derecha: se demanda más a cada precio",
+        "Hay que distinguir dos cosas que se confunden siempre. Un cambio de "
+        "PRECIO mueve el punto A LO LARGO de la curva; un cambio en otro "
+        "factor mueve la curva completa.\n\n"
+        "Acá lo que cambió es el ingreso, no el precio: con más plata "
+        "disponible, las familias compran más de ese bien a cualquier precio, y "
+        "la curva entera se corre a la derecha.\n\n"
+        "Se llama bien normal justamente por eso. En un bien inferior pasaría lo "
+        "contrario: al subir el ingreso se consume menos.",
+        [
+            ("Se desplaza hacia la izquierda", "Eso ocurriría si el ingreso cayera, o si se tratara de un bien inferior."),
+            ("Se mantiene igual, solo cambia el punto sobre la curva", "El punto se mueve sobre la curva cuando cambia el precio; acá cambió el ingreso."),
+            ("Se vuelve vertical", "Una demanda vertical describe insensibilidad total al precio, que no es lo que provoca un cambio de ingreso."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "¿Qué caracteriza a un mercado de competencia perfecta?",
+        "Muchos compradores y vendedores, producto homogéneo y ninguno puede "
+        "fijar el precio por sí solo",
+        "En competencia perfecta ningún participante es lo bastante grande como "
+        "para mover el precio: todos lo toman como un dato del mercado.\n\n"
+        "Eso exige varias condiciones a la vez: muchos oferentes y demandantes, "
+        "un producto sin diferencias relevantes entre vendedores, información "
+        "disponible y libertad para entrar o salir del mercado.\n\n"
+        "Es un modelo de referencia más que una foto de la realidad. Sirve "
+        "porque permite medir cuánto se aleja un mercado concreto de esa "
+        "situación ideal.",
+        [
+            ("Un solo vendedor que controla toda la oferta", "Eso es un monopolio, el extremo opuesto de la competencia perfecta."),
+            ("Pocos vendedores que acuerdan los precios entre sí", "Describe un oligopolio con colusión, no competencia perfecta."),
+            ("Un producto muy diferenciado por marca y publicidad", "La diferenciación es propia de la competencia monopolística."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Una sequía destruye gran parte de la cosecha de un producto agrícola. "
+        "¿Qué ocurre con la curva de oferta y con el precio de equilibrio?",
+        "La oferta se desplaza a la izquierda y el precio de equilibrio sube",
+        "La sequía no cambió lo que los consumidores quieren: cambió lo que hay "
+        "disponible.\n\n"
+        "Con menos producto, a cada precio los productores pueden ofrecer menos: "
+        "la curva de oferta se corre a la izquierda.\n\n"
+        "Con la demanda intacta y menos oferta, el cruce entre ambas se produce "
+        "a un precio más alto y a una cantidad menor. Es el mecanismo detrás de "
+        "casi toda alza de precios tras un desastre natural.",
+        [
+            ("La oferta se desplaza a la derecha y el precio baja", "Un desastre reduce la producción disponible; no la aumenta."),
+            ("La demanda se desplaza a la izquierda y el precio baja", "La sequía afecta a los productores, no a las preferencias de los consumidores."),
+            ("No cambia nada, porque la gente necesita igual el producto", "Que la necesidad se mantenga es justamente lo que empuja el precio hacia arriba cuando hay menos producto."),
+        ],
+    ),
+    # ---------- CIUDADANÍA: democracia y participación ----------
+    _ql(
+        "civ_poderes",
+        "civ_democracia", "facil",
+        "¿Cuáles son los tres poderes del Estado en Chile y qué función "
+        "principal cumple cada uno?",
+        "Ejecutivo (gobierna y administra), Legislativo (elabora las leyes) y "
+        "Judicial (resuelve los conflictos aplicando la ley)",
+        "La separación de poderes reparte el poder del Estado en tres órganos "
+        "distintos para que ninguno lo concentre todo.\n\n"
+        "El Ejecutivo, encabezado por el Presidente de la República, gobierna y "
+        "administra. El Legislativo, el Congreso Nacional, elabora y aprueba "
+        "las leyes. El Judicial, con la Corte Suprema a la cabeza, resuelve "
+        "conflictos aplicando esas leyes.\n\n"
+        "La idea de fondo no es la eficiencia sino el control mutuo: cada poder "
+        "limita a los otros, y por eso la separación es una garantía contra el "
+        "abuso.",
+        [
+            ("Ejecutivo, Legislativo y Municipal", "Los municipios son parte de la administración del Estado, no un cuarto poder."),
+            ("Presidente, Congreso y Fuerzas Armadas", "Las Fuerzas Armadas dependen del Ejecutivo; no constituyen un poder del Estado."),
+            ("Legislativo, Judicial y Electoral", "El Servicio Electoral cumple una función autónoma, pero no es uno de los tres poderes clásicos."),
+        ],
+    ),
+    _ql(
+        "civ_poderes",
+        "civ_democracia", "facil",
+        "¿Qué órgano del Estado chileno tiene la función de elaborar y aprobar "
+        "las leyes?",
+        "El Congreso Nacional, compuesto por la Cámara de Diputados y el Senado",
+        "La función legislativa recae en el Congreso Nacional, que en Chile es "
+        "bicameral: Cámara de Diputados y Senado.\n\n"
+        "Un proyecto debe ser aprobado por ambas cámaras antes de llegar al "
+        "Presidente para su promulgación.\n\n"
+        "El Presidente participa del proceso —puede presentar proyectos, vetar "
+        "y promulgar— pero no legisla por sí solo. Esa cooperación forzada "
+        "entre poderes es parte del diseño.",
+        [
+            ("La Corte Suprema", "El Poder Judicial aplica e interpreta las leyes, pero no las crea."),
+            ("El Presidente de la República por decreto", "Los decretos regulan la aplicación de leyes existentes; no las reemplazan."),
+            ("El Tribunal Constitucional", "Revisa que las normas se ajusten a la Constitución; no elabora leyes."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio",
+        "civ_democracia", "medio",
+        "En Chile, el sufragio es universal, personal, igualitario y secreto. "
+        "¿Qué significa que sea IGUALITARIO?",
+        "Que el voto de cada persona tiene exactamente el mismo valor que el de "
+        "cualquier otra",
+        "Cada uno de esos cuatro adjetivos resuelve un abuso histórico "
+        "distinto.\n\n"
+        "Igualitario significa 'una persona, un voto': ningún voto pesa más por "
+        "la riqueza, el nivel educacional, el sexo o el origen de quien lo "
+        "emite.\n\n"
+        "Los otros tres cubren lo demás: universal, que votan todos los "
+        "ciudadanos habilitados; personal, que nadie puede votar por otro; "
+        "secreto, que nadie puede saber qué votaste y por lo tanto presionarte.",
+        [
+            ("Que todos los ciudadanos habilitados pueden votar", "Esa es la característica de universal, no de igualitario."),
+            ("Que nadie puede conocer por quién votó una persona", "Corresponde al carácter secreto del sufragio."),
+            ("Que el voto debe emitirse en persona y no por delegación", "Eso define el carácter personal del sufragio."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio",
+        "civ_democracia", "medio",
+        "¿Qué diferencia hay entre una democracia representativa y una "
+        "democracia directa?",
+        "En la representativa la ciudadanía elige autoridades que deciden en su "
+        "nombre; en la directa decide ella misma sobre los asuntos",
+        "En la democracia directa el pueblo vota las decisiones mismas, como en "
+        "la asamblea ateniense o en un plebiscito.\n\n"
+        "En la representativa elige a quienes tomarán esas decisiones durante "
+        "un período determinado, y les pide cuentas en la elección siguiente."
+        "\n\n"
+        "Chile combina ambas: es representativa como regla, pero contempla "
+        "mecanismos de participación directa como los plebiscitos comunales y "
+        "nacionales.",
+        [
+            ("La representativa es más antigua que la directa", "Es al revés: la experiencia ateniense de democracia directa es muy anterior."),
+            ("En la directa gobiernan los partidos políticos", "Los partidos son actores propios de la democracia representativa."),
+            ("La directa solo existe en países pequeños", "El tamaño influye en su viabilidad práctica, pero no es lo que las define."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio",
+        "civ_democracia", "medio",
+        "¿Cuál es la función principal de los partidos políticos en una "
+        "democracia?",
+        "Organizar y representar corrientes de opinión, y presentar candidatos "
+        "a los cargos de elección popular",
+        "Los partidos agrupan a personas que comparten una visión de sociedad y "
+        "la convierten en programas concretos.\n\n"
+        "Cumplen dos tareas que ninguna otra organización cubre: canalizan "
+        "demandas ciudadanas dispersas hacia el sistema político, y seleccionan "
+        "y presentan candidatos a los cargos de elección popular.\n\n"
+        "Sin ellos, cada elección sería una suma de individuos sin proyecto "
+        "común, y la ciudadanía no tendría cómo saber qué está eligiendo más "
+        "allá de un nombre.",
+        [
+            ("Administrar el Estado y ejecutar el presupuesto", "Esa es tarea del gobierno de turno y de la administración pública, no del partido como tal."),
+            ("Fiscalizar a los tribunales de justicia", "El Poder Judicial tiene sus propios mecanismos de control; no depende de los partidos."),
+            ("Representar exclusivamente a sus militantes", "Un partido aspira a representar a un sector amplio de la sociedad, no solo a quienes están inscritos en él."),
+        ],
+    ),
+    _ql(
+        "civ_poderes",
+        "civ_democracia", "medio",
+        "¿Qué caracteriza a un Estado de derecho?",
+        "Que todas las personas e instituciones, incluido el gobierno, están "
+        "sometidas a la ley",
+        "La clave está en el 'incluido el gobierno'. En un Estado de derecho "
+        "nadie está por encima de la ley: ni el Presidente, ni un ministro, ni "
+        "una mayoría parlamentaria.\n\n"
+        "Eso exige varias condiciones juntas: normas conocidas y generales, "
+        "separación de poderes, tribunales independientes y respeto a los "
+        "derechos fundamentales.\n\n"
+        "Es lo que distingue el poder de la fuerza. Sin él, la ley se aplica a "
+        "los gobernados pero no a los gobernantes.",
+        [
+            ("Que existan muchas leyes que regulen la vida social", "La cantidad de leyes no garantiza nada; lo decisivo es que también obliguen a quien gobierna."),
+            ("Que el gobierno pueda actuar con rapidez ante las emergencias", "La eficacia no define un Estado de derecho; de hecho suele limitarla en favor del control."),
+            ("Que la mayoría pueda decidir cualquier cosa mediante votación", "Los derechos fundamentales limitan lo que una mayoría puede decidir."),
+        ],
+    ),
+    _ql(
+        "civ_poderes",
+        "civ_democracia", "facil",
+        "¿Qué autoridades encabezan el gobierno de una comuna en Chile?",
+        "El alcalde y el concejo municipal, ambos elegidos por votación popular",
+        "La administración de cada comuna corresponde a la municipalidad, "
+        "encabezada por el alcalde.\n\n"
+        "Junto a él, un concejo municipal elegido por los vecinos cumple "
+        "funciones normativas, resolutivas y de fiscalización: aprueba el "
+        "presupuesto comunal y controla la gestión del alcalde.\n\n"
+        "Es el nivel del Estado más cercano a la vida cotidiana —basura, "
+        "permisos, áreas verdes, salud primaria— y por eso es donde la "
+        "participación ciudadana tiene el efecto más directo.",
+        [
+            ("El delegado presidencial regional", "Representa al Presidente en la región; no gobierna la comuna."),
+            ("El gobernador regional", "Encabeza el gobierno regional, un nivel distinto del comunal."),
+            ("El intendente designado por el Presidente", "El cargo de intendente designado fue reemplazado por autoridades regionales electas."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio",
+        "civ_democracia", "dificil",
+        "¿Por qué se considera que la alternancia en el poder es un indicador "
+        "de salud democrática?",
+        "Porque muestra que las reglas permiten que la oposición gane y que el "
+        "poder se entregue pacíficamente",
+        "Lo relevante no es que cambie el gobierno por sí mismo, sino lo que "
+        "ese cambio demuestra.\n\n"
+        "La alternancia prueba que las elecciones son competitivas de verdad, "
+        "que quien pierde acepta el resultado y que quien gobierna entrega el "
+        "cargo sin resistencia.\n\n"
+        "Un sistema donde el oficialismo nunca puede perder tiene elecciones, "
+        "pero no competencia real. Las elecciones son condición necesaria de la "
+        "democracia, no suficiente.",
+        [
+            ("Porque los gobiernos nuevos siempre gobiernan mejor que los anteriores", "La alternancia no garantiza mejores resultados; lo que muestra es que el sistema funciona."),
+            ("Porque impide que los partidos políticos se organicen", "La democracia necesita partidos organizados, no lo contrario."),
+            ("Porque obliga a cambiar la Constitución en cada período", "La alternancia opera dentro del marco constitucional, sin exigir su reemplazo."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio",
+        "civ_democracia", "medio",
+        "Un grupo de vecinos se organiza en una junta de vecinos para gestionar "
+        "mejoras en su barrio. ¿Qué tipo de participación es?",
+        "Participación ciudadana en la sociedad civil organizada",
+        "No toda participación ocurre votando. La sociedad civil organizada "
+        "—juntas de vecinos, sindicatos, centros de alumnos, fundaciones— "
+        "canaliza demandas y ejerce control social de forma permanente, no solo "
+        "cada cuatro años.\n\n"
+        "Una junta de vecinos es el ejemplo clásico: son personas que se "
+        "organizan voluntariamente para incidir en asuntos que las afectan "
+        "directamente.\n\n"
+        "Es un complemento de la representación electoral, no un sustituto: "
+        "actúa donde el voto no llega, en el día a día del territorio.",
+        [
+            ("Participación electoral", "La participación electoral se ejerce votando en elecciones o plebiscitos."),
+            ("Participación en un partido político", "Un partido busca acceder a cargos de elección popular; una junta de vecinos, no."),
+            ("Ejercicio de una función pública del Estado", "La junta de vecinos es una organización de la sociedad civil, no un órgano estatal."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio",
+        "civ_democracia", "medio",
+        "¿Qué es un plebiscito?",
+        "Una consulta directa a la ciudadanía para que se pronuncie sobre un "
+        "asunto determinado",
+        "El plebiscito interrumpe la lógica representativa: en vez de que la "
+        "autoridad electa decida, se le pregunta directamente a la "
+        "ciudadanía.\n\n"
+        "Se usa para asuntos de especial importancia, y en Chile existe tanto a "
+        "nivel comunal como nacional.\n\n"
+        "Su valor está en la legitimidad: una decisión aprobada así queda "
+        "respaldada por el voto directo. Su límite es que reduce asuntos "
+        "complejos a una alternativa cerrada.",
+        [
+            ("Una elección para renovar el Congreso Nacional", "Eso es una elección parlamentaria: se eligen personas, no se resuelve un asunto."),
+            ("Una encuesta de opinión aplicada a una muestra de la población", "Una encuesta no tiene efecto vinculante ni convoca a todo el padrón."),
+            ("Una votación interna de los militantes de un partido", "Esa es una elección primaria o interna, limitada al partido."),
+        ],
+    ),
+    # ---------- CIUDADANÍA: derechos y deberes ----------
+    _ql(
+        "civ_ddhh",
+        "civ_derechos", "facil",
+        "Los derechos humanos son universales. ¿Qué significa exactamente esa "
+        "característica?",
+        "Que corresponden a todas las personas por el solo hecho de serlo, sin "
+        "distinción alguna",
+        "Universales quiere decir que no dependen de ninguna condición: ni de "
+        "la nacionalidad, ni del sexo, ni de la religión, ni de la situación "
+        "migratoria, ni de haber cometido un delito.\n\n"
+        "No se ganan por mérito ni se otorgan como un premio: se tienen por ser "
+        "persona.\n\n"
+        "Por eso el Estado no los 'concede'. Los reconoce, y su obligación es "
+        "respetarlos y garantizarlos, incluso frente a quien la sociedad "
+        "rechaza.",
+        [
+            ("Que están reconocidos en la mayoría de los países del mundo", "El grado de reconocimiento formal es otra cosa; universal se refiere a quiénes son titulares."),
+            ("Que se aplican solo a los ciudadanos de un país", "Eso los volvería derechos de ciudadanía, no derechos humanos."),
+            ("Que pueden limitarse cuando la mayoría lo decide", "Corresponde a lo contrario de su carácter inalienable."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh",
+        "civ_derechos", "facil",
+        "¿En qué año y en qué organismo se aprobó la Declaración Universal de "
+        "los Derechos Humanos?",
+        "En 1948, en la Asamblea General de las Naciones Unidas",
+        "La Declaración Universal fue aprobada por la Asamblea General de la "
+        "ONU en 1948, tres años después del fin de la Segunda Guerra "
+        "Mundial.\n\n"
+        "Ese contexto explica su contenido: nace como respuesta directa al "
+        "Holocausto y a la constatación de que un Estado podía aniquilar "
+        "legalmente a su propia población.\n\n"
+        "No es un tratado obligatorio en sí misma, pero es la base de todo el "
+        "sistema internacional de derechos humanos que vino después.",
+        [
+            ("En 1945, en la Sociedad de las Naciones", "La Sociedad de las Naciones fue anterior a la ONU y se disolvió sin aprobar esta Declaración."),
+            ("En 1919, en el Tratado de Versalles", "Versalles cerró la Primera Guerra Mundial y no estableció una declaración de derechos humanos."),
+            ("En 1789, en la Revolución Francesa", "Esa fue la Declaración de los Derechos del Hombre y del Ciudadano, un antecedente pero no la Declaración Universal."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh",
+        "civ_derechos", "medio",
+        "El derecho a la educación y el derecho a la salud pertenecen a los "
+        "llamados derechos de segunda generación. ¿Qué los caracteriza?",
+        "Son derechos económicos, sociales y culturales, y exigen del Estado "
+        "prestaciones activas",
+        "Los de primera generación —vida, libertad de expresión, debido "
+        "proceso— exigen sobre todo que el Estado NO haga: que no censure, que "
+        "no detenga arbitrariamente.\n\n"
+        "Los de segunda generación exigen lo contrario: que el Estado sí haga. "
+        "Garantizar educación o salud requiere escuelas, hospitales, "
+        "profesionales y presupuesto.\n\n"
+        "De ahí que su realización sea progresiva y dependa de los recursos "
+        "disponibles, mientras que los de primera generación son exigibles de "
+        "inmediato.",
+        [
+            ("Son derechos civiles y políticos que limitan la acción del Estado", "Esa es la descripción de los derechos de primera generación."),
+            ("Solo corresponden a quienes pagan impuestos", "Ningún derecho humano depende de la contribución tributaria de la persona."),
+            ("Son derechos colectivos referidos al medio ambiente y la paz", "Esos suelen clasificarse como de tercera generación."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion",
+        "civ_derechos", "medio",
+        "¿Qué es el recurso de protección en el ordenamiento jurídico chileno?",
+        "Una acción judicial para pedir amparo cuando un acto arbitrario o "
+        "ilegal amenaza o vulnera ciertos derechos constitucionales",
+        "El recurso de protección permite que cualquier persona acuda "
+        "directamente a la Corte de Apelaciones cuando un acto u omisión "
+        "arbitrario o ilegal la priva, perturba o amenaza en el ejercicio de "
+        "determinados derechos garantizados por la Constitución.\n\n"
+        "Su gracia es la rapidez: busca restablecer el imperio del derecho sin "
+        "esperar un juicio ordinario completo.\n\n"
+        "Es lo que convierte un derecho escrito en un derecho exigible. Sin un "
+        "mecanismo así, la garantía constitucional queda como declaración.",
+        [
+            ("Un beneficio económico que entrega el Estado a personas vulnerables", "El recurso de protección es una acción judicial, no una prestación social."),
+            ("Una ley que protege a los trabajadores frente al despido", "La protección laboral se regula en el Código del Trabajo, por otra vía."),
+            ("Un permiso para realizar manifestaciones públicas", "El derecho de reunión se ejerce conforme a la ley; no requiere este recurso."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion",
+        "civ_derechos", "medio",
+        "Una persona es rechazada en un empleo exclusivamente por su "
+        "nacionalidad. ¿Qué figura describe esa situación en Chile?",
+        "Discriminación arbitraria, sancionada por la Ley 20.609",
+        "Hay discriminación arbitraria cuando se hace una distinción sin "
+        "justificación razonable, basada en categorías como nacionalidad, "
+        "sexo, religión, orientación sexual o discapacidad.\n\n"
+        "La Ley 20.609, conocida como Ley Zamudio, establece un mecanismo "
+        "judicial para denunciarla y obtener reparación.\n\n"
+        "La palabra 'arbitraria' es la clave: no toda distinción es ilegal. "
+        "Exigir un título profesional para ejercer medicina es una distinción "
+        "razonable; rechazar por nacionalidad no lo es.",
+        [
+            ("Una decisión legítima del empleador, protegida por la libertad de contratación", "La libertad de contratación no ampara distinciones basadas en categorías prohibidas."),
+            ("Un incumplimiento de contrato", "No existe contrato previo: el problema está en el criterio usado para no contratar."),
+            ("Una falta administrativa sin consecuencias legales", "La ley contempla un procedimiento judicial y sanciones para estos casos."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh",
+        "civ_derechos", "facil",
+        "Además de derechos, la ciudadanía implica deberes. ¿Cuál de los "
+        "siguientes es un deber ciudadano en Chile?",
+        "Respetar la Constitución y las leyes, y contribuir mediante el pago de "
+        "impuestos",
+        "Los deberes ciudadanos son la contracara de los derechos: para que el "
+        "Estado garantice educación, salud o seguridad necesita recursos y un "
+        "marco de convivencia respetado por todos.\n\n"
+        "Entre ellos están respetar la Constitución y las leyes, pagar los "
+        "impuestos que correspondan, respetar los derechos de los demás y "
+        "cuidar los bienes públicos.\n\n"
+        "Derechos y deberes no se oponen: los segundos son la condición para "
+        "que los primeros sean sostenibles.",
+        [
+            ("Militar en algún partido político", "La afiliación política es voluntaria y está protegida como libertad, no exigida como deber."),
+            ("Estar de acuerdo con las decisiones del gobierno de turno", "La discrepancia es un derecho; la democracia se sostiene precisamente sobre ella."),
+            ("Renunciar a los derechos propios cuando el Estado lo solicite", "Los derechos fundamentales son irrenunciables."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion",
+        "civ_derechos", "medio",
+        "Un consumidor compra un producto con fallas y el local se niega a "
+        "responder. ¿Qué normativa lo ampara en Chile?",
+        "La Ley 19.496 sobre protección de los derechos de los consumidores",
+        "La Ley 19.496 establece los derechos básicos del consumidor, entre "
+        "ellos la garantía legal frente a productos defectuosos: reparación, "
+        "cambio o devolución del dinero.\n\n"
+        "El SERNAC es el organismo encargado de velar por su cumplimiento y "
+        "recibir denuncias.\n\n"
+        "Es un buen ejemplo de que los derechos no viven solo en la "
+        "Constitución: buena parte de los que se ejercen a diario están en "
+        "leyes específicas y tienen un organismo concreto detrás.",
+        [
+            ("El Código del Trabajo", "Regula la relación entre empleadores y trabajadores, no entre comercio y consumidor."),
+            ("La Ley de Transparencia", "Se refiere al acceso a la información de los órganos del Estado."),
+            ("Ninguna: se trata de un acuerdo privado entre las partes", "Existe una ley específica que protege al consumidor precisamente por el desequilibrio entre las partes."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion",
+        "civ_derechos", "dificil",
+        "¿Por qué se dice que la libertad de expresión no es un derecho "
+        "absoluto?",
+        "Porque su ejercicio encuentra límites en otros derechos, como la honra "
+        "de las personas",
+        "Ningún derecho se ejerce en el vacío: todos conviven con los derechos "
+        "de los demás.\n\n"
+        "La libertad de expresión protege opinar, informar y criticar, incluso "
+        "de forma incómoda para el poder. Pero no ampara la injuria, la "
+        "calumnia ni la incitación a la violencia, porque ahí se lesionan "
+        "derechos de terceros.\n\n"
+        "El límite debe estar establecido por ley y ser proporcional. Si "
+        "quedara a discreción de la autoridad, la excepción se convertiría en "
+        "censura.",
+        [
+            ("Porque el Estado puede prohibir cualquier opinión que considere inconveniente", "Eso sería censura; los límites deben estar en la ley y ser proporcionales, no depender del criterio de la autoridad."),
+            ("Porque solo la prensa tiene derecho a expresarse públicamente", "El derecho corresponde a todas las personas, no a un grupo profesional."),
+            ("Porque las opiniones deben ser aprobadas antes de publicarse", "La censura previa está justamente prohibida."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion",
+        "civ_derechos", "medio",
+        "¿Cuál es la función del Instituto Nacional de Derechos Humanos (INDH) "
+        "en Chile?",
+        "Promover y proteger los derechos humanos de quienes habitan el país, "
+        "de forma autónoma del gobierno",
+        "El INDH es una corporación autónoma de derecho público creada para "
+        "promover y proteger los derechos humanos de las personas que habitan "
+        "en Chile.\n\n"
+        "Elabora informes, deduce acciones judiciales en casos graves y observa "
+        "situaciones donde puedan estar vulnerándose derechos.\n\n"
+        "Su autonomía es el punto: si dependiera del gobierno de turno, no "
+        "podría fiscalizar al Estado, que es justamente el principal obligado "
+        "en materia de derechos humanos.",
+        [
+            ("Juzgar y condenar a quienes violan los derechos humanos", "Juzgar corresponde a los tribunales; el INDH puede accionar ante ellos, no reemplazarlos."),
+            ("Representar al gobierno ante organismos internacionales", "Esa representación corresponde al Estado a través de la Cancillería."),
+            ("Entregar beneficios sociales a personas vulnerables", "No es un organismo de prestaciones sociales."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion",
+        "civ_derechos", "dificil",
+        "La presunción de inocencia establece que toda persona es inocente "
+        "mientras no se pruebe lo contrario. ¿Qué consecuencia práctica tiene "
+        "en un proceso penal?",
+        "Que la carga de la prueba recae en quien acusa, no en el imputado",
+        "La presunción de inocencia reparte el peso del proceso: no es el "
+        "acusado quien debe demostrar que no hizo nada, sino la acusación quien "
+        "debe probar que sí lo hizo.\n\n"
+        "De ahí se siguen otras consecuencias: si la prueba no alcanza, "
+        "corresponde absolver, y la prisión preventiva es excepcional porque el "
+        "imputado aún no ha sido condenado.\n\n"
+        "Invertir esa carga obligaría a probar un hecho negativo —demostrar que "
+        "algo no ocurrió— que suele ser imposible.",
+        [
+            ("Que el imputado debe demostrar su inocencia ante el tribunal", "Es exactamente lo contrario: exigirle eso vulnera la presunción de inocencia."),
+            ("Que nadie puede ser detenido antes de la sentencia", "La detención y la prisión preventiva son posibles, pero excepcionales y sujetas a requisitos."),
+            ("Que el juez debe creer la versión del acusado", "El tribunal valora la prueba; no está obligado a creer a ninguna de las partes."),
+        ],
+    ),
+    # ---------- HISTORIA: análisis de fuentes ----------
+    _ql(
+        "fuente_conquista", "his_fuentes", "medio",
+        "¿Cuál es la diferencia principal entre ambas fuentes respecto de lo "
+        "que ocurrió en el valle?",
+        "Coinciden en los hechos básicos, pero difieren radicalmente en cómo "
+        "los justifican",
+        "Conviene separar los hechos de su interpretación.\n\n"
+        "1) Ambas relatan lo mismo: llegada de los expedicionarios, contacto "
+        "inicial, exigencias posteriores y uso de la violencia.\n"
+        "2) La Fuente 1 presenta esa violencia como una necesidad razonable "
+        "ante quienes 'prefirieron la resistencia'.\n"
+        "3) La Fuente 2 la presenta como la respuesta a una negativa legítima "
+        "frente a exigencias crecientes.\n\n"
+        "El desacuerdo no está en QUÉ pasó sino en QUIÉN tenía razón, y eso "
+        "depende del lugar desde el que cada fuente habla.",
+        [
+            ("Una relata hechos reales y la otra es una invención posterior", "Que un testimonio se ponga por escrito después no lo convierte en falso; sí obliga a considerar cómo se transmitió."),
+            ("Describen episodios distintos ocurridos en lugares diferentes", "Ambas se refieren al mismo encuentro en el mismo valle."),
+            ("La segunda fuente no aporta información sobre los hechos", "Aporta datos concretos: la entrega de alimento, las exigencias sucesivas y la quema de las siembras."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "medio",
+        "La Fuente 1 afirma que el capitán actuó «movido por el servicio de "
+        "Dios y de Su Majestad». ¿Qué revela esa expresión sobre el autor?",
+        "Que escribe desde la visión del mundo de los conquistadores, para "
+        "quienes la empresa tenía una justificación religiosa y política",
+        "Una fuente no solo informa sobre los hechos: informa sobre quien la "
+        "escribió.\n\n"
+        "Invocar a Dios y al rey como motivos no es un adorno retórico: es el "
+        "marco con el que los cronistas entendían y legitimaban la conquista "
+        "ante las autoridades que leerían el texto.\n\n"
+        "Detectar eso no es descartar la fuente. Es leerla sabiendo qué "
+        "intereses y qué mentalidad la produjeron, que es exactamente el "
+        "trabajo del historiador.",
+        [
+            ("Que el autor era un sacerdote y no un militar", "La expresión refleja una mentalidad compartida de la época, no necesariamente el oficio de quien escribe."),
+            ("Que el relato es completamente falso", "Sesgo no equivale a falsedad: una fuente parcial puede aportar información válida si se lee críticamente."),
+            ("Que el autor desaprobaba la conducta del capitán", "La frase justifica al capitán en lugar de criticarlo."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "dificil",
+        "La Fuente 2 fue transmitida oralmente y escrita generaciones después. "
+        "¿Cómo debe considerar el historiador esa característica?",
+        "Como un factor que exige cautela sobre los detalles, sin invalidar el "
+        "testimonio",
+        "La transmisión oral introduce un problema real: los detalles pueden "
+        "modificarse con el paso de las generaciones.\n\n"
+        "Pero descartar la fuente por eso dejaría la historia escrita "
+        "únicamente por quienes tenían acceso a la escritura, es decir, por un "
+        "solo lado del conflicto.\n\n"
+        "El criterio profesional es intermedio: se contrasta con otras fuentes, "
+        "se es prudente con las precisiones y se valora lo que aporta de "
+        "manera única, que es la perspectiva de quienes vivieron el proceso "
+        "desde el otro lado.",
+        [
+            ("Como motivo suficiente para descartarla como fuente histórica", "Eso eliminaría casi toda la voz de los pueblos sin escritura, empobreciendo la reconstrucción del pasado."),
+            ("Como garantía de mayor objetividad que la fuente escrita", "Ninguna forma de transmisión garantiza objetividad por sí misma."),
+            ("Como un dato irrelevante para el análisis", "Las condiciones de producción y transmisión de una fuente siempre importan."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_fuentes", "facil",
+        "Según la tabla, ¿cuántos puntos porcentuales cayó el sector primario "
+        "entre 1960 y 2020?",
+        "44 puntos porcentuales",
+        "Se ubican los dos valores del sector primario y se restan.\n\n"
+        "1) En 1960: 55%.\n"
+        "2) En 2020: 11%.\n"
+        "3) Diferencia: $55 - 11 = 44$ puntos porcentuales.\n\n"
+        "Se dice 'puntos porcentuales' y no 'por ciento' porque se está "
+        "comparando la diferencia entre dos porcentajes, no calculando una "
+        "variación relativa.",
+        [
+            ("11 puntos porcentuales", "Es el valor de 2020, no la caída respecto de 1960."),
+            ("66 puntos porcentuales", "Sumó ambos valores en vez de restarlos."),
+            ("80 puntos porcentuales", "Corresponde a la caída relativa aproximada, no a la diferencia entre ambos porcentajes."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_fuentes", "medio",
+        "¿Qué proceso muestra la tabla en el conjunto del período 1960-2020?",
+        "Una terciarización de la economía: el empleo se desplaza hacia el "
+        "comercio y los servicios",
+        "Hay que leer las tres columnas a la vez.\n\n"
+        "1) El primario cae sostenidamente: de 55% a 11%.\n"
+        "2) El secundario sube hasta 1980 y después retrocede: 20, 28, 26, 19.\n"
+        "3) El terciario crece sin interrupción: de 25% a 70%.\n\n"
+        "El destino del empleo que sale del campo y de la industria es el "
+        "sector servicios. Ese desplazamiento es lo que se llama "
+        "terciarización, y es una tendencia común en las economías del período.",
+        [
+            ("Una industrialización acelerada durante todo el período", "El sector secundario crece solo hasta 1980 y después cae; en 2020 está por debajo de su nivel de 1960."),
+            ("Un estancamiento de la estructura del empleo", "Las tres columnas cambian de manera significativa: no hay estancamiento."),
+            ("Un retorno de los trabajadores a las actividades agrícolas", "El sector primario cae en cada período sin excepción."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_fuentes", "medio",
+        "¿En qué período el sector secundario alcanzó su punto más alto según "
+        "la tabla?",
+        "En 1980, con 28%",
+        "Se recorre la columna del sector secundario y se busca el valor "
+        "máximo.\n\n"
+        "Los valores son 20 (1960), 28 (1980), 26 (2000) y 19 (2020): el mayor "
+        "es 28, correspondiente a 1980.\n\n"
+        "Ese máximo intermedio es informativo: muestra que la industria sí "
+        "creció, pero que su peso en el empleo empezó a caer después, mientras "
+        "el sector terciario seguía subiendo.",
+        [
+            ("En 2020, con 19%", "Es el valor más bajo de la serie, no el más alto."),
+            ("En 1960, con 20%", "Es el punto de partida, y es inferior al de 1980."),
+            ("En 2000, con 26%", "Es alto, pero está por debajo del 28% de 1980."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_fuentes", "dificil",
+        "Un estudiante concluye a partir de la tabla que «en 2020 el país "
+        "producía menos alimentos que en 1960». ¿Es válida esa conclusión?",
+        "No, porque la tabla informa sobre empleo y no sobre volumen de "
+        "producción",
+        "Es un error de lectura muy frecuente: extraer de una fuente una "
+        "conclusión sobre algo que la fuente no mide.\n\n"
+        "La tabla muestra en qué sector trabaja la gente, no cuánto se produce. "
+        "Con maquinaria y tecnología, menos trabajadores pueden producir "
+        "bastante más que antes.\n\n"
+        "La regla al analizar una fuente es simple: se puede concluir sobre lo "
+        "que la fuente mide, y para lo demás hacen falta otros datos.",
+        [
+            ("Sí, porque hay menos trabajadores en el sector primario", "Menos trabajadores no implica menor producción si aumentó la productividad."),
+            ("Sí, porque el sector terciario desplazó al primario", "El desplazamiento es de empleo; la tabla no permite afirmar nada sobre el volumen producido."),
+            ("No, porque la tabla no cubre el año 2020", "La tabla sí incluye 2020; el problema es otro: mide empleo, no producción."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_fuentes", "medio",
+        "¿Qué postura sobre el pasado sostiene la Fuente 1?",
+        "Que revisar lo ocurrido reabre conflictos y que conviene dejar que el "
+        "tiempo los cierre",
+        "La Fuente 1 reconoce los hechos como «lamentables», pero los presenta "
+        "como inevitables dada la crisis.\n\n"
+        "Su conclusión es explícita: insistir en revisarlos «solo reabre "
+        "heridas que el tiempo ya está cerrando».\n\n"
+        "Es una postura sobre qué hacer con el pasado, no una descripción "
+        "neutra de él. Y el momento en que se escribe —al año siguiente— ayuda "
+        "a entender por qué se plantea así.",
+        [
+            ("Que es necesario investigar a fondo lo ocurrido", "Esa es la posición de la Fuente 2, no de la Fuente 1."),
+            ("Que los hechos nunca ocurrieron", "La Fuente 1 los reconoce; discrepa sobre qué hacer con ellos."),
+            ("Que las autoridades actuaron de manera incorrecta", "Sostiene lo contrario: que actuaron con los medios disponibles."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_fuentes", "dificil",
+        "La Fuente 2 responde: «El tiempo no cierra nada por sí solo: lo que "
+        "cierra es la verdad». ¿Qué está discutiendo con la Fuente 1?",
+        "La idea de que el paso del tiempo baste para resolver un conflicto sin "
+        "esclarecer lo ocurrido",
+        "La Fuente 2 toma la metáfora de la Fuente 1 —las heridas que el tiempo "
+        "cierra— y la desarma usando sus mismos términos.\n\n"
+        "Su tesis es que lo que permite cerrar no es el transcurso del tiempo "
+        "sino el esclarecimiento: saber qué pasó y quién lo decidió.\n\n"
+        "El cierre del texto invierte deliberadamente la acusación: «no pedimos "
+        "que se reabra nada, pedimos que por fin se abra». Está negando el "
+        "supuesto de que alguna vez se abrió.",
+        [
+            ("La veracidad de los hechos que la Fuente 1 relata", "Ambas fuentes coinciden en que los hechos ocurrieron; discrepan sobre qué hacer con ellos."),
+            ("La necesidad de que el país supere la crisis", "La crisis es el contexto que menciona la Fuente 1, no el punto en disputa."),
+            ("La autoría del editorial publicado el año siguiente", "El texto discute el argumento, no quién lo firmó."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_fuentes", "medio",
+        "Ambas fuentes fueron escritas con cuarenta años de distancia. ¿Por qué "
+        "es relevante ese dato para analizarlas?",
+        "Porque el momento en que se escribe una fuente condiciona lo que se "
+        "puede decir y lo que se busca al decirlo",
+        "Una fuente siempre se produce en un contexto, y ese contexto forma "
+        "parte de su significado.\n\n"
+        "La Fuente 1 se publica al año siguiente, cuando el conflicto está "
+        "abierto y hay intereses activos en cerrarlo. La Fuente 2 se emite "
+        "cuarenta años después, cuando ya existe distancia y una demanda "
+        "acumulada de esclarecimiento.\n\n"
+        "Ubicar cada fuente en su momento no es un dato accesorio: es lo que "
+        "permite entender por qué dice lo que dice.",
+        [
+            ("Porque la fuente más antigua es siempre más confiable", "La antigüedad no determina la confiabilidad; una fuente cercana a los hechos puede tener fuertes intereses en juego."),
+            ("Porque la fuente más reciente cuenta con más información objetiva", "Puede contar con más información, pero eso no la vuelve automáticamente objetiva."),
+            ("Porque solo las fuentes contemporáneas a los hechos sirven al historiador", "Las fuentes posteriores son fundamentales para estudiar la memoria y los efectos de largo plazo."),
+        ],
+    ),
+    # ---------- HISTORIA: pensamiento temporal ----------
+    _ql(
+        "his_duraciones",
+        "his_temporal", "facil",
+        "¿Qué es la periodización en el estudio de la historia?",
+        "Dividir el tiempo en etapas según criterios definidos, para poder "
+        "analizarlo",
+        "El tiempo histórico es continuo: no viene cortado en pedazos. La "
+        "periodización es una herramienta que crea el historiador para poder "
+        "estudiarlo.\n\n"
+        "Se traza a partir de un criterio explícito —político, económico, "
+        "cultural— y por eso distintos criterios producen distintas "
+        "periodizaciones del mismo pasado.\n\n"
+        "Conviene recordar que es una construcción y no un hecho: nadie se "
+        "acostó en la Edad Media y despertó en la Edad Moderna.",
+        [
+            ("Ordenar los hechos según la fecha exacta en que ocurrieron", "Eso es una cronología; la periodización agrupa según un criterio de análisis."),
+            ("Determinar la causa que originó cada acontecimiento", "Eso es el análisis causal, otra operación del trabajo histórico."),
+            ("Establecer qué períodos fueron más importantes que otros", "La periodización organiza el tiempo; no jerarquiza etapas."),
+        ],
+    ),
+    _ql(
+        "his_duraciones",
+        "his_temporal", "medio",
+        "En el análisis histórico, ¿qué se entiende por procesos de larga "
+        "duración?",
+        "Transformaciones lentas que se extienden por siglos, como los cambios "
+        "en las mentalidades o en las estructuras económicas",
+        "No todos los cambios ocurren a la misma velocidad, y esa es la idea "
+        "central de las duraciones históricas.\n\n"
+        "El acontecimiento dura días o meses: una batalla, una elección. La "
+        "media duración abarca décadas: una crisis económica, un ciclo "
+        "político. La larga duración se mide en siglos y es casi imperceptible "
+        "para quien la vive: la estructura agraria, la mentalidad religiosa, la "
+        "posición de la mujer.\n\n"
+        "Mirar solo los acontecimientos hace perder de vista lo que realmente "
+        "explica la mayor parte del cambio.",
+        [
+            ("Los acontecimientos que tuvieron consecuencias importantes", "La importancia de un hecho no determina su duración: un acontecimiento breve puede ser decisivo."),
+            ("Los períodos de guerra prolongada entre países", "Una guerra larga sigue siendo un acontecimiento o, a lo más, media duración."),
+            ("Las etapas que los historiadores no logran fechar con precisión", "La dificultad para fecharlas es una consecuencia, no la definición."),
+        ],
+    ),
+    _ql(
+        "his_duraciones",
+        "his_temporal", "medio",
+        "Al estudiar un proceso histórico, ¿qué significa analizar continuidades "
+        "y cambios?",
+        "Identificar qué elementos se transformaron y cuáles permanecieron a "
+        "pesar de la transformación",
+        "Ningún proceso cambia todo ni deja todo igual: siempre hay una mezcla, "
+        "y describirla es el trabajo del análisis histórico.\n\n"
+        "Una revolución puede cambiar el régimen político y mantener intacta la "
+        "estructura de propiedad de la tierra. Reconocer ambas cosas al mismo "
+        "tiempo entrega una imagen mucho más precisa que decir 'todo cambió'."
+        "\n\n"
+        "El error habitual es quedarse solo con lo que cambió, porque es lo más "
+        "visible y lo que aparece en los titulares de la época.",
+        [
+            ("Comparar dos períodos para determinar cuál fue mejor", "El análisis histórico describe transformaciones; no emite juicios de valor sobre qué época fue superior."),
+            ("Establecer la fecha exacta en que comenzó un proceso", "Eso es datación, y los procesos rara vez tienen una fecha de inicio nítida."),
+            ("Distinguir las causas de las consecuencias de un hecho", "Es otra operación del análisis, distinta de identificar qué permanece y qué se transforma."),
+        ],
+    ),
+    _ql(
+        "his_oficio",
+        "his_temporal", "dificil",
+        "Un estudiante afirma que «los campesinos medievales eran ignorantes "
+        "porque no sabían que la Tierra giraba alrededor del Sol». ¿Qué error "
+        "de razonamiento histórico comete?",
+        "Anacronismo: juzga el pasado con conocimientos y criterios que no "
+        "estaban disponibles entonces",
+        "El anacronismo consiste en aplicar al pasado categorías, valores o "
+        "conocimientos de otra época.\n\n"
+        "El modelo heliocéntrico se difundió muy posteriormente: reprochar a "
+        "alguien no saber algo que aún no había sido establecido no describe su "
+        "ignorancia, describe la confusión de quien juzga.\n\n"
+        "Evitarlo es la primera regla del oficio: hay que entender a cada época "
+        "según lo que estaba disponible y era pensable en ella, no según lo que "
+        "sabemos hoy.",
+        [
+            ("Generalización: extiende a todos los campesinos el rasgo de algunos", "Aunque la afirmación generaliza, el problema central es aplicar un conocimiento posterior."),
+            ("Error de datación: sitúa mal el período medieval", "El problema no está en las fechas sino en el criterio con que se juzga."),
+            ("Confusión entre causa y consecuencia", "No hay ninguna relación causal en juego en la afirmación."),
+        ],
+    ),
+    _ql(
+        "his_duraciones",
+        "his_temporal", "medio",
+        "¿Qué diferencia hay entre una causa y una consecuencia de un proceso "
+        "histórico?",
+        "La causa es lo que contribuye a que el proceso ocurra; la consecuencia "
+        "es lo que resulta de él",
+        "La causa antecede y explica; la consecuencia sigue y deriva. La "
+        "dirección de la relación es lo que las distingue.\n\n"
+        "Un mismo hecho puede ser ambas cosas según el proceso que se esté "
+        "analizando: una crisis económica es consecuencia de una guerra y, a la "
+        "vez, causa de un cambio político posterior.\n\n"
+        "Por eso siempre hay que preguntar 'causa de qué' y 'consecuencia de "
+        "qué': fuera de un proceso concreto, la distinción no significa nada.",
+        [
+            ("La causa siempre es un hecho político y la consecuencia, económico", "Ambas pueden ser de cualquier tipo: político, económico, social o cultural."),
+            ("La causa es un hecho verificable y la consecuencia, una interpretación", "Ambas se establecen mediante evidencia y análisis."),
+            ("La causa ocurre en la larga duración y la consecuencia, en la corta", "No hay correspondencia fija entre el tipo de relación y la duración."),
+        ],
+    ),
+    _ql(
+        "his_oficio",
+        "his_temporal", "medio",
+        "¿Por qué los historiadores sostienen que un mismo proceso puede tener "
+        "múltiples causas?",
+        "Porque los fenómenos sociales resultan de la combinación de factores "
+        "políticos, económicos, sociales y culturales",
+        "Reducir un proceso histórico a una sola causa casi siempre deja fuera "
+        "algo esencial.\n\n"
+        "Una revolución no se explica solo por el hambre, ni solo por las "
+        "ideas, ni solo por la debilidad del gobierno: es la convergencia de "
+        "esos factores lo que la vuelve posible.\n\n"
+        "Por eso el trabajo histórico distingue entre causas estructurales, que "
+        "preparan el terreno durante años, y causas inmediatas, que actúan como "
+        "detonante. Confundirlas hace que el detonante parezca la explicación "
+        "completa.",
+        [
+            ("Porque nunca se puede saber con certeza qué ocurrió realmente", "La multicausalidad no proviene de la ignorancia sino de la naturaleza de los fenómenos sociales."),
+            ("Porque cada historiador defiende la causa que prefiere", "Existen desacuerdos interpretativos, pero la multicausalidad no es una cuestión de gustos."),
+            ("Porque las causas antiguas pierden validez con el tiempo", "Las causas no caducan; lo que cambia es la interpretación que se hace de ellas."),
+        ],
+    ),
+    _ql(
+        "his_duraciones",
+        "his_temporal", "facil",
+        "Si un hecho ocurrió en el año 1520, ¿a qué siglo pertenece?",
+        "Al siglo XVI",
+        "Cada siglo abarca cien años, y el primero va del año 1 al 100. Por eso "
+        "el siglo XVI comprende de 1501 a 1600.\n\n"
+        "El año 1520 cae dentro de ese rango: pertenece al siglo XVI.\n\n"
+        "La regla rápida: se toman las dos primeras cifras del año y se suma "
+        "uno, salvo que el año termine exactamente en 00. Así, 1520 da "
+        "$15 + 1 = 16$.",
+        [
+            ("Al siglo XV", "El siglo XV termina en 1500; el año 1520 ya está en el siguiente."),
+            ("Al siglo XVII", "El siglo XVII comienza en 1601, ochenta años después."),
+            ("Al siglo XX", "Corresponde a los años 1901-2000."),
+        ],
+    ),
+    _ql(
+        "his_oficio",
+        "his_temporal", "medio",
+        "¿Qué se entiende por contexto histórico de un hecho?",
+        "El conjunto de condiciones de la época que permiten comprender por qué "
+        "ese hecho ocurrió y qué significó",
+        "Un hecho aislado dice poco. El contexto es el entramado de "
+        "circunstancias políticas, económicas, sociales y culturales en el que "
+        "ese hecho se vuelve inteligible.\n\n"
+        "Una misma acción puede significar cosas opuestas en contextos "
+        "distintos: publicar un texto crítico bajo una dictadura y hacerlo en "
+        "democracia no son el mismo acto.\n\n"
+        "Reconstruir el contexto no es un adorno introductorio: es lo que "
+        "impide leer el pasado como si hubiera ocurrido en nuestra época.",
+        [
+            ("La secuencia de hechos que ocurrieron inmediatamente antes", "Eso son los antecedentes; el contexto es más amplio y no solo cronológico."),
+            ("La opinión que los historiadores actuales tienen sobre ese hecho", "Esa es la interpretación historiográfica, no el contexto de la época."),
+            ("El lugar geográfico exacto donde sucedió", "La ubicación es un dato del contexto, pero no lo agota."),
+        ],
+    ),
+    _ql(
+        "his_oficio",
+        "his_temporal", "dificil",
+        "¿Por qué se afirma que la historia se reescribe con cada generación?",
+        "Porque cada época formula preguntas nuevas al pasado y accede a "
+        "fuentes que antes no estaban disponibles",
+        "El pasado no cambia, pero las preguntas que se le hacen sí.\n\n"
+        "Cuando la historiografía empezó a preguntarse por la vida cotidiana, "
+        "por el trabajo de las mujeres o por los pueblos sin escritura, "
+        "aparecieron temas enteros que antes ni se investigaban. A eso se suman "
+        "archivos que se abren y técnicas nuevas de análisis.\n\n"
+        "Eso no vuelve arbitraria a la disciplina: las afirmaciones siguen "
+        "exigiendo evidencia. Lo que cambia es qué se busca y con qué "
+        "herramientas.",
+        [
+            ("Porque los hechos del pasado cambian con el tiempo", "Los hechos ocurrieron una sola vez; lo que cambia es su estudio e interpretación."),
+            ("Porque los historiadores no logran ponerse de acuerdo", "El desacuerdo existe, pero la renovación viene de nuevas preguntas y fuentes, no de la falta de acuerdo."),
+            ("Porque cada gobierno impone su versión de la historia", "Ha ocurrido en contextos autoritarios, pero no explica la renovación propia del trabajo histórico."),
+        ],
+    ),
+    _ql(
+        "his_duraciones",
+        "his_temporal", "medio",
+        "Un proceso histórico comienza en 1810 y termina en 1830. ¿Cuántos años "
+        "abarca?",
+        "20 años",
+        "La extensión de un período se obtiene restando el año inicial del "
+        "final.\n\n"
+        "$1830 - 1810 = 20$ años.\n\n"
+        "Este cálculo simple es la base de cualquier línea de tiempo: permite "
+        "comparar la duración de distintos procesos y ubicarlos "
+        "proporcionalmente en una escala.",
+        [
+            ("30 años", "Restó incorrectamente las decenas."),
+            ("3.640 años", "Sumó ambos años en vez de restarlos."),
+            ("21 años", "Contó ambos extremos como años completos, lo que no corresponde para medir una extensión."),
         ],
     ),
 ]
