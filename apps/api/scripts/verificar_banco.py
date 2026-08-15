@@ -124,6 +124,9 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "diluye una disolución de 100 mL y 2 mol/L": str(2 * 100 / 400),
     # Competencia Lectora: la tabla de residuos
     "aumentaron los plásticos": str(22 - 12),
+    # Competencia Lectora: la campaña del agua
+    "aplica las dos primeras medidas": str(30 + 15),
+    "gasta 150 litros al día": str(150 * 4),
     # Historia y Cs. Sociales: economía y cálculo temporal
     "4.500.000 personas ocupadas": str(round(500_000 / (4_500_000 + 500_000) * 100)),
     "IPC de un país pasa de 100 a 106": str(round((106 - 100) / 100 * 100)),
