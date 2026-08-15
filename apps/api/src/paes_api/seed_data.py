@@ -5437,6 +5437,146 @@ PASSAGES = [
             "ahora entiendo que él tampoco lo creía."
         ),
     },
+    {
+        "key": "cartas_uniforme",
+        "title": "Dos cartas sobre el uniforme escolar",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes, escritos como cartas al director de "
+            "posturas opuestas. No corresponden a cartas reales publicadas."
+        ),
+        "body": (
+            "PRIMERA CARTA\n"
+            "Señor director:\n"
+            "Leí con extrañeza la propuesta de eliminar el uniforme en los "
+            "colegios municipales de la comuna. Se argumenta que limita la "
+            "expresión personal, como si la adolescencia se jugara en la ropa. "
+            "El uniforme cumple una función que nadie ha reemplazado: iguala "
+            "hacia afuera. En una sala donde todos visten igual, nadie sabe si "
+            "el compañero de al lado tiene un padre cesante. Quitarlo no libera "
+            "a nadie; convierte cada mañana en una exhibición de lo que la "
+            "familia puede pagar.\n"
+            "Marta Ríos, apoderada\n\n"
+            "SEGUNDA CARTA\n"
+            "Señor director:\n"
+            "La carta de la señora Ríos supone que la desigualdad desaparece si "
+            "se la tapa. No desaparece: los estudiantes saben perfectamente "
+            "quién vive dónde, quién llega en auto y quién camina cuarenta "
+            "minutos. El uniforme no borra esa información, solo impide "
+            "hablarla. Y tiene un costo que rara vez se menciona: obliga a las "
+            "familias a comprar una ropa que no sirve para nada más, además de "
+            "la que el niño necesita igual. Si el objetivo es la igualdad, "
+            "discutamos el precio de las mochilas, los paseos de curso y los "
+            "materiales. El uniforme es la parte más visible del problema y la "
+            "menos importante.\n"
+            "Ignacio Fuentes, profesor"
+        ),
+    },
+    {
+        "key": "divulgacion_sueno",
+        "title": "Lo que el cerebro hace mientras duermes",
+        "kind": "no_literario",
+        "source_note": "Texto original de 1000paes",
+        "body": (
+            "Durante mucho tiempo se creyó que dormir era simplemente apagarse: "
+            "un período de inactividad necesario para reponer fuerzas, como "
+            "recargar una batería. Los registros de actividad cerebral "
+            "mostraron algo distinto. En ciertas fases del sueño el cerebro "
+            "consume casi tanta energía como despierto.\n\n"
+            "Buena parte de esa actividad tiene que ver con la memoria. "
+            "Durante el día se acumulan experiencias en una zona llamada "
+            "hipocampo, que funciona como un archivo provisorio de alta "
+            "rotación. Mientras se duerme, esos registros se reactivan y "
+            "algunos se transfieren a la corteza cerebral, donde quedan de "
+            "forma más estable. El proceso se llama consolidación, y explica un "
+            "hallazgo repetido en los estudios: quienes duermen después de "
+            "aprender algo lo recuerdan mejor que quienes se mantienen "
+            "despiertos el mismo tiempo.\n\n"
+            "Lo interesante es que no se guarda todo. El cerebro parece "
+            "seleccionar, y prioriza lo que en el momento de aprender venía "
+            "acompañado de una expectativa de uso futuro o de una carga "
+            "emocional. Dormir menos no solo reduce cuánto se retiene: cambia "
+            "qué se retiene.\n\n"
+            "También hay un aseo. El líquido que rodea al cerebro circula con "
+            "más facilidad durante el sueño y arrastra residuos que la "
+            "actividad diurna deja acumulados. Se ha propuesto que ese lavado "
+            "explicaría parte del deterioro asociado a la falta crónica de "
+            "sueño, aunque la evidencia en humanos todavía es preliminar y "
+            "conviene no adelantarse.\n\n"
+            "Nada de esto convierte al sueño en un truco de estudio. Dormir "
+            "ocho horas no reemplaza haber estudiado; lo que hace es decidir "
+            "cuánto de lo estudiado sobrevive. Trasnochar antes de una prueba "
+            "es, en ese sentido, una operación curiosa: se gana tiempo de "
+            "repaso a cambio de sabotear el mecanismo que iba a fijarlo."
+        ),
+    },
+    {
+        "key": "cuento_mudanza",
+        "title": "Las cajas",
+        "kind": "literario",
+        "source_note": "Texto original de 1000paes, escrito como relato breve",
+        "body": (
+            "Mi mamá dijo que era una casa mejor y que yo iba a tener pieza "
+            "propia. Lo dijo tres veces en la misma semana, siempre con la "
+            "misma sonrisa, y a la tercera entendí que no me lo estaba diciendo "
+            "a mí.\n\n"
+            "Empaqué mis cosas en cuatro cajas. En la primera puse los libros; "
+            "en la segunda, la ropa; en la tercera, los cuadernos del año "
+            "pasado que no sirven para nada y que igual guardo. La cuarta la "
+            "dejé abierta hasta el final, porque ahí iban las cosas que uno no "
+            "sabe dónde poner: el reloj despertador, el cargador, la foto del "
+            "curso.\n\n"
+            "El camión llegó un sábado a las ocho. Los tipos eran rápidos y "
+            "hablaban fuerte, y en cuarenta minutos la casa quedó vacía. Nunca "
+            "había visto mi pieza sin nada adentro. Es más chica de lo que yo "
+            "pensaba. Toda la vida creí que vivía en un lugar grande y resulta "
+            "que lo grande eran mis cosas.\n\n"
+            "Antes de salir volví a entrar, con la excusa de revisar si "
+            "quedaba algo. No quedaba nada. En la pared, a la altura de mi "
+            "rodilla, seguían las rayas con que mi papá me medía cada "
+            "cumpleaños, la última de hace cuatro años. Pensé en sacarle una "
+            "foto y no le saqué ninguna.\n\n"
+            "En la casa nueva mi pieza es más grande y tiene una ventana que da "
+            "a la calle. Puse los libros, la ropa, los cuadernos que no sirven. "
+            "La cuarta caja lleva dos semanas en un rincón, cerrada. Mi mamá me "
+            "preguntó ayer por qué no la abro. Le dije que no he tenido tiempo, "
+            "que es pura cuestión de sentarse un rato.\n\n"
+            "Ella me miró como se mira a alguien que está mintiendo mal, y no "
+            "insistió."
+        ),
+    },
+    {
+        "key": "campana_agua",
+        "title": "Campaña «Cada gota cuenta»: consumo de agua en el hogar",
+        "kind": "discontinuo",
+        "source_note": (
+            "Afiche construido con datos ficticios por 1000paes para ejercitar "
+            "lectura de textos discontinuos. No corresponde a una campaña real."
+        ),
+        "body": (
+            "CADA GOTA CUENTA — Municipalidad de Villa Alegre\n\n"
+            "¿En qué se va el agua de tu casa?\n\n"
+            "| Uso | Litros por persona al día | % del total |\n"
+            "|---|---|---|\n"
+            "| Ducha | 60 | 40 |\n"
+            "| Estanque del baño | 45 | 30 |\n"
+            "| Lavado de ropa | 22 | 15 |\n"
+            "| Cocina y lavaloza | 15 | 10 |\n"
+            "| Riego y aseo | 8 | 5 |\n"
+            "| TOTAL | 150 | 100 |\n\n"
+            "TRES MEDIDAS Y LO QUE AHORRAN\n"
+            "1. Reducir la ducha de 10 a 5 minutos: hasta 30 litros por "
+            "persona al día.\n"
+            "2. Instalar una descarga de doble botón: hasta 15 litros por "
+            "persona al día.\n"
+            "3. Regar al atardecer en vez de mediodía: reduce a la mitad la "
+            "pérdida por evaporación.\n\n"
+            "Letra chica del afiche: «Las cifras corresponden a un hogar "
+            "promedio de cuatro personas en zona urbana. El consumo real varía "
+            "según el número de habitantes, la estación del año y el tipo de "
+            "artefactos instalados»."
+        ),
+    },
 ]
 
 
@@ -6642,6 +6782,890 @@ QUESTIONS_LECTORA = [
             ("Explica por qué el narrador dejó de usarlo", "El relato indica que lo usa: se lo pone y le da cuerda cada noche."),
             ("Muestra que el reloj estaba deteriorado por el uso", "El deterioro se menciona antes, en la correa; el tamaño es otro asunto."),
             ("Justifica que su hermana no quisiera quedárselo", "Ella lo rechazó por lo usado, no por el tamaño."),
+        ],
+    ),
+    # ---------- Dos cartas sobre el uniforme escolar ----------
+    _ql(
+        "cartas_uniforme", "lec_localizar", "facil",
+        "¿Qué función atribuye la primera carta al uniforme escolar?",
+        "Igualar hacia afuera, ocultando las diferencias económicas entre "
+        "familias",
+        "La primera carta lo dice de manera explícita: «El uniforme cumple una "
+        "función que nadie ha reemplazado: iguala hacia afuera».\n\n"
+        "Y lo desarrolla con un ejemplo: «En una sala donde todos visten "
+        "igual, nadie sabe si el compañero de al lado tiene un padre "
+        "cesante».\n\n"
+        "La expresión «hacia afuera» es precisa y conviene notarla: la autora "
+        "no afirma que el uniforme elimine la desigualdad, sino que evita que "
+        "se vea.",
+        [
+            ("Fortalecer la identidad y el orgullo de pertenecer al colegio", "Ese argumento, habitual en el debate, no aparece en esta carta."),
+            ("Reducir el gasto anual de las familias", "La segunda carta sostiene lo contrario: que el uniforme implica un gasto adicional."),
+            ("Mejorar la disciplina dentro de la sala de clases", "La carta no menciona la disciplina en ningún momento."),
+        ],
+    ),
+    _ql(
+        "cartas_uniforme", "lec_interpretar", "medio",
+        "¿Cómo responde la segunda carta al argumento de la primera?",
+        "Sostiene que el uniforme no elimina la desigualdad, solo impide "
+        "hablarla",
+        "La segunda carta no niega que exista desigualdad ni que el uniforme "
+        "la tape: acepta ambas cosas y discute la conclusión.\n\n"
+        "Su tesis es que los estudiantes ya conocen esas diferencias —«saben "
+        "perfectamente quién vive dónde, quién llega en auto y quién camina "
+        "cuarenta minutos»— y que el uniforme solo «impide hablarla».\n\n"
+        "Es una refutación por el interior del argumento: concede la premisa y "
+        "muestra que no lleva a donde la primera carta cree.",
+        [
+            ("Afirma que la desigualdad económica no existe en los colegios", "La segunda carta la da por evidente; discute si el uniforme la resuelve."),
+            ("Propone reemplazar el uniforme por otra vestimenta común", "No propone un reemplazo, sino discutir otros gastos."),
+            ("Sostiene que la expresión personal es más importante que la igualdad", "Ese argumento es el que la primera carta atribuye a otros; la segunda no lo usa."),
+        ],
+    ),
+    _ql(
+        "cartas_uniforme", "lec_interpretar", "medio",
+        "¿Qué costo del uniforme menciona la segunda carta que la primera no "
+        "considera?",
+        "Que obliga a comprar ropa que no sirve para otra cosa, además de la "
+        "que el niño necesita igual",
+        "La segunda carta introduce un factor económico ausente en la "
+        "primera.\n\n"
+        "Señala que el uniforme «obliga a las familias a comprar una ropa que "
+        "no sirve para nada más, además de la que el niño necesita igual»: es "
+        "un gasto que se suma, no que reemplaza.\n\n"
+        "El detalle es hábil porque usa el terreno de la primera carta —la "
+        "situación económica de las familias— para llegar a la conclusión "
+        "opuesta.",
+        [
+            ("Que los colegios cobran comisión por venderlo", "La carta no menciona ninguna comisión."),
+            ("Que se deteriora rápidamente con el uso diario", "El desgaste no aparece en el texto."),
+            ("Que impide que los estudiantes elijan ropa cómoda", "La comodidad no es el argumento que la carta desarrolla."),
+        ],
+    ),
+    _ql(
+        "cartas_uniforme", "lec_evaluar", "dificil",
+        "La segunda carta termina diciendo que el uniforme «es la parte más "
+        "visible del problema y la menos importante». ¿Qué logra con ese "
+        "cierre?",
+        "Reubica la discusión: acepta que el problema existe, pero sostiene que "
+        "el debate se centró en lo secundario",
+        "El cierre hace dos movimientos a la vez.\n\n"
+        "Concede que hay un problema real de desigualdad —no lo niega en ningún "
+        "momento— y al mismo tiempo desplaza el foco hacia otros gastos que "
+        "menciona antes: mochilas, paseos de curso, materiales.\n\n"
+        "El efecto es dejar a la primera carta discutiendo un asunto menor. No "
+        "la refuta punto por punto: la reencuadra.",
+        [
+            ("Reconoce que la primera carta tenía razón en lo esencial", "Concede que el problema existe, pero rechaza la solución que la primera propone."),
+            ("Descarta que la desigualdad sea un asunto del colegio", "La carta sostiene lo contrario: enumera varios gastos escolares desiguales."),
+            ("Propone eliminar también los paseos de curso y los materiales", "Propone discutir su precio, no eliminarlos."),
+        ],
+    ),
+    _ql(
+        "cartas_uniforme", "lec_evaluar", "medio",
+        "¿Qué diferencia hay en la posición desde la que escribe cada autor?",
+        "Una escribe como apoderada y el otro como profesor, lo que explica "
+        "parte de su mirada",
+        "Las firmas no son un dato decorativo: «Marta Ríos, apoderada» e "
+        "«Ignacio Fuentes, profesor».\n\n"
+        "La apoderada argumenta desde la experiencia familiar y desde lo que "
+        "ocurre puertas afuera de la sala. El profesor argumenta desde adentro, "
+        "apelando a lo que los estudiantes saben unos de otros.\n\n"
+        "Identificar quién habla es parte de evaluar un texto argumentativo: no "
+        "valida ni invalida la postura, pero explica desde dónde se construye.",
+        [
+            ("Ambos escriben en representación del mismo colegio", "Nada en las cartas indica que pertenezcan al mismo establecimiento."),
+            ("Una escribe con datos oficiales y el otro con opiniones", "Ninguna de las dos cartas presenta cifras ni fuentes."),
+            ("El profesor escribe en nombre de las autoridades comunales", "Firma a título personal, no institucional."),
+        ],
+    ),
+    _ql(
+        "cartas_uniforme", "lec_localizar", "medio",
+        "¿Cuál es la propuesta concreta que hace la segunda carta?",
+        "Discutir el precio de las mochilas, los paseos de curso y los "
+        "materiales",
+        "Después de cuestionar el foco del debate, la segunda carta señala qué "
+        "debería discutirse en su lugar.\n\n"
+        "Su frase es directa: «Si el objetivo es la igualdad, discutamos el "
+        "precio de las mochilas, los paseos de curso y los materiales».\n\n"
+        "Es lo que convierte la carta en algo más que una objeción: no solo "
+        "rechaza el argumento contrario, ofrece un terreno alternativo.",
+        [
+            ("Eliminar de inmediato el uniforme en toda la comuna", "La carta cuestiona el argumento a favor del uniforme, pero su propuesta es otra."),
+            ("Entregar uniformes gratuitos a las familias que lo necesiten", "Esa alternativa no aparece en el texto."),
+            ("Realizar una consulta entre los apoderados del colegio", "No propone ninguna consulta."),
+        ],
+    ),
+    # ---------- Lo que el cerebro hace mientras duermes ----------
+    _ql(
+        "divulgacion_sueno", "lec_localizar", "facil",
+        "Según el texto, ¿qué zona del cerebro funciona como archivo provisorio "
+        "de las experiencias del día?",
+        "El hipocampo",
+        "El segundo párrafo lo nombra con precisión: «se acumulan experiencias "
+        "en una zona llamada hipocampo, que funciona como un archivo provisorio "
+        "de alta rotación».\n\n"
+        "La corteza cerebral aparece después, como el destino de esos "
+        "registros, no como el archivo temporal.\n\n"
+        "La distinción entre ambos es justamente la que permite entender qué "
+        "significa consolidar.",
+        [
+            ("La corteza cerebral", "Es donde los registros quedan de forma estable, no el archivo provisorio."),
+            ("El líquido que rodea al cerebro", "Se menciona a propósito del aseo cerebral, no del almacenamiento."),
+            ("El sistema de consolidación", "La consolidación es el proceso, no una zona del cerebro."),
+        ],
+    ),
+    _ql(
+        "divulgacion_sueno", "lec_localizar", "medio",
+        "¿Qué hallazgo repetido en los estudios menciona el texto sobre dormir "
+        "después de aprender?",
+        "Que quienes duermen recuerdan mejor que quienes se mantienen "
+        "despiertos el mismo tiempo",
+        "El texto presenta ese resultado como consecuencia observable de la "
+        "consolidación.\n\n"
+        "La formulación exacta importa: la comparación es con quienes «se "
+        "mantienen despiertos el mismo tiempo», no simplemente con quienes "
+        "duermen menos horas en total.\n\n"
+        "Ese control es lo que permite atribuir la diferencia al sueño y no "
+        "solo al paso del tiempo.",
+        [
+            ("Que dormir permite aprender contenidos sin haberlos estudiado", "El texto niega esto explícitamente al final."),
+            ("Que el hipocampo aumenta de tamaño durante la noche", "El texto no menciona ningún cambio de tamaño."),
+            ("Que dormir más de ocho horas mejora siempre el rendimiento", "El texto no establece esa relación."),
+        ],
+    ),
+    _ql(
+        "divulgacion_sueno", "lec_interpretar", "medio",
+        "¿Qué función cumple en el texto la comparación inicial del sueño con "
+        "recargar una batería?",
+        "Presentar la idea antigua que los registros de actividad cerebral "
+        "vinieron a corregir",
+        "El primer párrafo describe lo que «se creyó durante mucho tiempo»: que "
+        "dormir era simplemente apagarse.\n\n"
+        "La imagen de la batería resume esa concepción, y el propio párrafo la "
+        "desmiente enseguida: «los registros de actividad cerebral mostraron "
+        "algo distinto».\n\n"
+        "Es un recurso frecuente en divulgación: instalar la idea que el lector "
+        "trae para que el contraste con la evidencia resulte nítido.",
+        [
+            ("Explicar cómo el cerebro almacena energía durante la noche", "La comparación se usa para descartarla, no para explicar un mecanismo."),
+            ("Demostrar que dormir sirve para reponer fuerzas físicas", "El texto cuestiona precisamente esa visión reducida."),
+            ("Introducir el tema del aseo cerebral", "El aseo cerebral aparece más adelante y no se relaciona con la batería."),
+        ],
+    ),
+    _ql(
+        "divulgacion_sueno", "lec_interpretar", "dificil",
+        "El texto afirma que «dormir menos no solo reduce cuánto se retiene: "
+        "cambia qué se retiene». ¿Qué implica esa distinción?",
+        "Que la falta de sueño afecta la selección de los recuerdos, no "
+        "únicamente su cantidad",
+        "El párrafo anterior explica que el cerebro no guarda todo: prioriza lo "
+        "que venía con expectativa de uso futuro o carga emocional.\n\n"
+        "Si ese proceso de selección ocurre mientras se duerme, dormir poco no "
+        "solo achica el total conservado: altera cuáles recuerdos sobreviven."
+        "\n\n"
+        "La distinción entre cuánto y qué es el punto del párrafo. Una pérdida "
+        "de cantidad se compensa estudiando más; una alteración de la "
+        "selección, no.",
+        [
+            ("Que dormir poco impide por completo formar recuerdos nuevos", "El texto habla de menor retención y selección distinta, no de imposibilidad."),
+            ("Que los recuerdos emocionales se pierden primero", "El texto señala lo contrario: la carga emocional favorece que se conserven."),
+            ("Que la cantidad de sueño no influye en el aprendizaje", "El texto afirma que sí influye, en dos sentidos distintos."),
+        ],
+    ),
+    _ql(
+        "divulgacion_sueno", "lec_evaluar", "dificil",
+        "Sobre el lavado cerebral durante el sueño, el texto dice que la "
+        "evidencia en humanos «todavía es preliminar y conviene no "
+        "adelantarse». ¿Qué revela esa advertencia sobre el autor?",
+        "Que distingue entre lo que está establecido y lo que aún es una "
+        "hipótesis",
+        "El texto presenta la consolidación de la memoria con seguridad, "
+        "apoyada en un «hallazgo repetido en los estudios».\n\n"
+        "Con el lavado cerebral cambia el registro: usa «se ha propuesto» y "
+        "advierte que la evidencia es preliminar.\n\n"
+        "Esa graduación es una marca de divulgación honesta. Presentar ambas "
+        "cosas con la misma certeza sería más impactante y menos veraz.",
+        [
+            ("Que considera falso el mecanismo de lavado cerebral", "No lo declara falso: dice que la evidencia todavía es insuficiente."),
+            ("Que desconfía de toda la investigación sobre el sueño", "Presenta con seguridad los hallazgos sobre memoria; la cautela es puntual."),
+            ("Que el tema no tiene relación con el resto del texto", "Se integra como otra función del sueño, aunque con menor respaldo."),
+        ],
+    ),
+    _ql(
+        "divulgacion_sueno", "lec_evaluar", "medio",
+        "¿Qué postura sostiene el texto respecto de trasnochar antes de una "
+        "prueba?",
+        "Que se gana tiempo de repaso a costa de sabotear el mecanismo que "
+        "fijaría lo estudiado",
+        "El cierre es explícito: trasnochar es «una operación curiosa: se gana "
+        "tiempo de repaso a cambio de sabotear el mecanismo que iba a "
+        "fijarlo».\n\n"
+        "Antes aclara que dormir no reemplaza estudiar; lo que hace es «decidir "
+        "cuánto de lo estudiado sobrevive».\n\n"
+        "Las dos afirmaciones se sostienen juntas: el sueño no es un atajo, "
+        "pero quitárselo al estudio anula parte del esfuerzo ya hecho.",
+        [
+            ("Que es una estrategia eficaz si el contenido es breve", "El texto no plantea excepciones según la extensión del contenido."),
+            ("Que da lo mismo, porque lo decisivo es solo cuánto se estudió", "El texto sostiene que el sueño decide cuánto de lo estudiado sobrevive."),
+            ("Que dormir ocho horas puede reemplazar el estudio previo", "El texto lo descarta de forma directa."),
+        ],
+    ),
+    # ---------- Las cajas ----------
+    _ql(
+        "cuento_mudanza", "lec_localizar", "facil",
+        "¿Qué guarda el narrador en la cuarta caja?",
+        "Las cosas que no sabe dónde poner: el reloj despertador, el cargador y "
+        "la foto del curso",
+        "El segundo párrafo describe el contenido de cada caja.\n\n"
+        "Las tres primeras tienen categorías claras —libros, ropa, cuadernos— y "
+        "la cuarta queda «abierta hasta el final, porque ahí iban las cosas que "
+        "uno no sabe dónde poner».\n\n"
+        "Que esa sea justamente la caja que después no logra abrir no es "
+        "casualidad, y el relato lo deja funcionar sin explicarlo.",
+        [
+            ("Los libros y los cuadernos del año pasado", "Van en la primera y la tercera caja."),
+            ("La ropa que usará en la casa nueva", "La ropa va en la segunda caja."),
+            ("Las fotos de su papá", "El relato menciona una foto del curso, no fotos de su papá."),
+        ],
+    ),
+    _ql(
+        "cuento_mudanza", "lec_interpretar", "medio",
+        "El narrador dice: «lo dijo tres veces en la misma semana, siempre con "
+        "la misma sonrisa, y a la tercera entendí que no me lo estaba diciendo "
+        "a mí». ¿Qué comprende en ese momento?",
+        "Que su madre repetía esas palabras para convencerse a sí misma",
+        "La clave está en la repetición y en «la misma sonrisa»: una frase "
+        "ensayada, no una noticia.\n\n"
+        "Si la madre necesita decirla tres veces, el destinatario real no es el "
+        "hijo. Es ella misma, tratando de sostener una decisión que quizás "
+        "tampoco la convence del todo.\n\n"
+        "El narrador no lo explica: entrega el detalle y confía en que el "
+        "lector lo arme. Esa es la manera en que este relato dice las cosas.",
+        [
+            ("Que su madre le estaba mintiendo sobre el tamaño de la casa", "La casa nueva efectivamente tiene una pieza más grande."),
+            ("Que la decisión la había tomado otra persona de la familia", "Nada en el texto sugiere que fuera decisión de un tercero."),
+            ("Que no lo estaba escuchando cuando le hablaba", "La madre sí se dirige a él; el punto es a quién intenta convencer."),
+        ],
+    ),
+    _ql(
+        "cuento_mudanza", "lec_interpretar", "dificil",
+        "¿Qué significa la reflexión «toda la vida creí que vivía en un lugar "
+        "grande y resulta que lo grande eran mis cosas»?",
+        "Que el valor que le daba a su casa venía de lo vivido en ella, no del "
+        "espacio físico",
+        "El narrador ve por primera vez su pieza vacía y descubre que es «más "
+        "chica de lo que yo pensaba».\n\n"
+        "La frase da vuelta la explicación: lo que hacía grande al lugar no "
+        "eran sus metros sino lo que había dentro, es decir su vida ahí.\n\n"
+        "Por eso la casa nueva, objetivamente mejor —pieza más grande, ventana a "
+        "la calle—, no lo compensa. El relato deja claro que lo que se pierde "
+        "en una mudanza no se mide en metros cuadrados.",
+        [
+            ("Que sus muebles ocupaban demasiado espacio en la pieza", "La observación no es sobre el mobiliario sino sobre lo que el lugar significaba."),
+            ("Que prefiere las casas pequeñas a las grandes", "No expresa una preferencia por el tamaño."),
+            ("Que su familia tenía más cosas de las que necesitaba", "La reflexión no juzga la cantidad de pertenencias."),
+        ],
+    ),
+    _ql(
+        "cuento_mudanza", "lec_evaluar", "dificil",
+        "¿Por qué el narrador no ha abierto la cuarta caja?",
+        "Porque abrirla significaría cerrar del todo la vida anterior, y "
+        "todavía no puede",
+        "El relato entrega la evidencia y evita la explicación.\n\n"
+        "La cuarta caja es la de lo que no tiene lugar asignado, y lleva dos "
+        "semanas cerrada mientras las otras ya se vaciaron. La excusa que le da "
+        "a su madre —«no he tenido tiempo, es pura cuestión de sentarse un "
+        "rato»— es débil, y la reacción de ella lo confirma: «me miró como se "
+        "mira a alguien que está mintiendo mal».\n\n"
+        "Mientras la caja siga cerrada, algo de la casa anterior sigue sin "
+        "guardarse en la nueva.",
+        [
+            ("Porque efectivamente no ha tenido tiempo de desempacar", "El propio relato desmiente esa excusa mediante la reacción de la madre."),
+            ("Porque piensa devolver esas cosas a la casa anterior", "No hay ninguna intención de volver."),
+            ("Porque su madre le pidió que no la abriera todavía", "Ocurre lo contrario: ella le pregunta por qué no la abre."),
+        ],
+    ),
+    _ql(
+        "cuento_mudanza", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el narrador mencione las marcas de altura en "
+        "la pared y decida no fotografiarlas?",
+        "Muestra la pérdida sin nombrarla: el gesto que no hace dice más que "
+        "una explicación",
+        "Las marcas son la huella física del padre —«las rayas con que mi papá "
+        "me medía cada cumpleaños»— y la última es «de hace cuatro años», un "
+        "dato que el relato deja caer sin comentar.\n\n"
+        "El narrador piensa en fotografiarlas y no lo hace. Ni explica por qué "
+        "ni describe lo que siente.\n\n"
+        "Ese silencio es el recurso central del cuento. Una frase que explicara "
+        "la emoción sería menos eficaz que el gesto interrumpido.",
+        [
+            ("Indica que el narrador olvidó llevar su teléfono ese día", "El relato no menciona ningún impedimento práctico."),
+            ("Sugiere que no le interesaba conservar recuerdos de la casa", "Si no le interesaran, no habría vuelto a entrar ni reparado en las marcas."),
+            ("Demuestra que las marcas se habían borrado con el tiempo", "El texto dice que seguían ahí."),
+        ],
+    ),
+    _ql(
+        "cuento_mudanza", "lec_localizar", "medio",
+        "¿Qué hace el narrador antes de salir definitivamente de la casa?",
+        "Vuelve a entrar con la excusa de revisar si quedaba algo",
+        "El cuarto párrafo lo relata: «Antes de salir volví a entrar, con la "
+        "excusa de revisar si quedaba algo. No quedaba nada».\n\n"
+        "La palabra «excusa» está puesta por el propio narrador, que reconoce "
+        "que no volvió a buscar objetos.\n\n"
+        "Vuelve a despedirse, aunque el texto nunca usa esa palabra.",
+        [
+            ("Toma una fotografía de su pieza vacía", "Piensa en fotografiar las marcas de la pared, pero no lo hace."),
+            ("Ayuda a los trabajadores a cargar el camión", "El relato dice que ellos hicieron el trabajo en cuarenta minutos."),
+            ("Se despide de los vecinos del sector", "No se menciona a ningún vecino."),
+        ],
+    ),
+    # ---------- Campaña «Cada gota cuenta» ----------
+    _ql(
+        "campana_agua", "lec_localizar", "facil",
+        "Según la tabla, ¿cuántos litros por persona al día se consumen en la "
+        "ducha?",
+        "60 litros",
+        "El dato se lee directamente en la fila «Ducha» de la tabla: 60 litros "
+        "por persona al día, equivalentes al 40% del total.\n\n"
+        "Es el uso más alto de todos, por encima del estanque del baño, que "
+        "aparece con 45 litros.\n\n"
+        "Ubicar la celda correcta es todo el ejercicio: la tabla entrega dos "
+        "columnas por fila y conviene no confundir litros con porcentaje.",
+        [
+            ("40 litros", "40 es el porcentaje del total, no la cantidad de litros."),
+            ("45 litros", "Corresponde al estanque del baño."),
+            ("150 litros", "Es el consumo total diario por persona, sumando todos los usos."),
+        ],
+    ),
+    _ql(
+        "campana_agua", "lec_localizar", "medio",
+        "¿Qué medida del afiche produce el mayor ahorro por persona al día?",
+        "Reducir la ducha de 10 a 5 minutos, con hasta 30 litros",
+        "El afiche enumera tres medidas con su ahorro.\n\n"
+        "La primera ahorra hasta 30 litros por persona al día; la segunda, "
+        "hasta 15; la tercera no se expresa en litros sino como una reducción a "
+        "la mitad de la pérdida por evaporación.\n\n"
+        "Que la mayor medida caiga sobre la ducha es coherente con la tabla: es "
+        "también el uso que más consume.",
+        [
+            ("Instalar una descarga de doble botón, con hasta 15 litros", "Ahorra la mitad que acortar la ducha."),
+            ("Regar al atardecer en vez de mediodía", "Su ahorro no se expresa en litros y el riego es solo el 5% del consumo."),
+            ("Las tres ahorran la misma cantidad", "El afiche indica cifras distintas para cada una."),
+        ],
+    ),
+    _ql(
+        "campana_agua", "lec_interpretar", "medio",
+        "¿Por qué la campaña se concentra en la ducha y el estanque del baño?",
+        "Porque juntos representan el 70% del consumo, donde cualquier ahorro "
+        "rinde más",
+        "Hay que cruzar la tabla con las medidas propuestas.\n\n"
+        "La ducha es el 40% del consumo y el estanque el 30%: entre ambos "
+        "suman el 70%. Las dos primeras medidas del afiche apuntan justamente "
+        "ahí.\n\n"
+        "Es una decisión de eficacia: reducir a la mitad el riego, que es el "
+        "5%, movería mucho menos la aguja que un cambio pequeño en la ducha.",
+        [
+            ("Porque son los usos más fáciles de modificar para las familias", "El afiche no argumenta por facilidad sino que entrega cifras de consumo."),
+            ("Porque son los únicos usos que la municipalidad puede medir", "La tabla mide los cinco usos."),
+            ("Porque el resto de los usos no consume agua potable", "Todos los usos de la tabla forman parte del mismo consumo."),
+        ],
+    ),
+    _ql(
+        "campana_agua", "lec_interpretar", "medio",
+        "Si una persona aplica las dos primeras medidas, ¿cuánto ahorraría al "
+        "día según el afiche?",
+        "Hasta 45 litros",
+        "Se suman los ahorros que el propio afiche declara.\n\n"
+        "1) Ducha más corta: hasta 30 litros.\n"
+        "2) Descarga de doble botón: hasta 15 litros.\n"
+        "3) Total: $30 + 15 = 45$ litros por persona al día.\n\n"
+        "Conviene notar la palabra «hasta»: son topes, no promedios "
+        "garantizados. El ahorro real puede ser menor.",
+        [
+            ("Hasta 105 litros", "Ese sería el consumo restante, no el ahorro."),
+            ("Hasta 15 litros", "Considera solo la segunda medida."),
+            ("Hasta 30 litros", "Considera solo la primera medida."),
+        ],
+    ),
+    _ql(
+        "campana_agua", "lec_evaluar", "dificil",
+        "¿Qué función cumple la letra chica del afiche?",
+        "Advertir que las cifras son un promedio y que el consumo real varía "
+        "según cada hogar",
+        "La letra chica precisa que los datos «corresponden a un hogar promedio "
+        "de cuatro personas en zona urbana» y que el consumo «varía según el "
+        "número de habitantes, la estación del año y el tipo de artefactos».\n\n"
+        "Sin esa aclaración, la tabla podría leerse como una medición exacta "
+        "aplicable a cualquier casa.\n\n"
+        "Es lo que separa una campaña informativa de una que exagera: reconocer "
+        "el alcance real de sus propias cifras, aunque sea en letra pequeña.",
+        [
+            ("Indicar que las medidas propuestas son obligatorias", "La letra chica se refiere a las cifras, no a la obligatoriedad."),
+            ("Explicar cómo se instala la descarga de doble botón", "No entrega instrucciones técnicas."),
+            ("Justificar por qué el riego consume tan poca agua", "No explica ningún uso en particular."),
+        ],
+    ),
+    _ql(
+        "campana_agua", "lec_evaluar", "dificil",
+        "Un lector concluye que «una familia de cuatro personas gasta 150 "
+        "litros al día». ¿Es correcta esa lectura?",
+        "No, porque los 150 litros son por persona, así que la familia gastaría "
+        "unos 600",
+        "El encabezado de la columna es explícito: «Litros por persona al día», "
+        "y la fila TOTAL indica 150 con ese mismo criterio.\n\n"
+        "Para cuatro personas habría que multiplicar: $150 \\times 4 = 600$ "
+        "litros diarios.\n\n"
+        "Es el error más frecuente al leer una tabla: tomar el total de la "
+        "columna sin revisar la unidad en que está expresado.",
+        [
+            ("Sí, porque la letra chica habla de un hogar de cuatro personas", "La letra chica indica el tipo de hogar medido, pero la columna sigue siendo por persona."),
+            ("Sí, porque 150 es la suma de todos los usos de la tabla", "Es la suma por persona, no por familia."),
+            ("No, porque la tabla no entrega ningún total", "La tabla sí incluye una fila TOTAL con 150 litros."),
+        ],
+    ),
+    # ---------- Preguntas adicionales sobre los textos ya existentes ----------
+    _ql(
+        "vinchuca", "lec_evaluar", "medio",
+        "¿Qué actitud adopta el texto frente al insecto que describe?",
+        "Explicativa: describe su comportamiento sin presentarlo como culpable",
+        "El texto relata un desplazamiento —de las quebradas a las casas— y "
+        "explica las condiciones que lo hicieron posible.\n\n"
+        "No atribuye intención ni maldad al insecto: describe una adaptación a "
+        "un entorno que cambió.\n\n"
+        "Esa distancia es propia de la divulgación científica. Cargar el relato "
+        "de adjetivos alarmantes serviría para asustar, no para entender por "
+        "qué ocurrió.",
+        [
+            ("Alarmista: busca generar temor en el lector", "El texto informa sobre un proceso; no apela al miedo."),
+            ("Irónica: se burla de quienes temen al insecto", "No hay ironía ni burla en el texto."),
+            ("Nostálgica: lamenta que el insecto haya cambiado de hábitat", "El texto no expresa lamento por el cambio."),
+        ],
+    ),
+    _ql(
+        "vinchuca", "lec_interpretar", "medio",
+        "¿Qué relación establece el texto entre la actividad humana y el "
+        "cambio de hábitat del insecto?",
+        "Que las construcciones humanas ofrecieron condiciones parecidas a las "
+        "de su refugio original",
+        "El texto describe un hábitat original —quebradas, piedras, madrigueras "
+        "de roedores— y luego el traslado a las viviendas.\n\n"
+        "La conexión que propone no es que el insecto haya cambiado, sino que "
+        "encontró en lo construido un ambiente equivalente al que ya "
+        "ocupaba.\n\n"
+        "Entender eso es entender el fenómeno completo: no hubo invasión, hubo "
+        "continuidad en un espacio nuevo.",
+        [
+            ("Que la actividad humana obligó al insecto a evolucionar rápidamente", "El texto describe un cambio de hábitat, no una transformación de la especie."),
+            ("Que las construcciones humanas ahuyentaron a los roedores y por eso el insecto los siguió", "Esa cadena causal no aparece en el texto."),
+            ("Que no existe relación entre ambos hechos", "El texto vincula explícitamente el cambio con la ocupación humana del territorio."),
+        ],
+    ),
+    _ql(
+        "vinchuca", "lec_localizar", "medio",
+        "¿Dónde vivía el insecto antes de instalarse en las viviendas?",
+        "En las quebradas del norte, entre piedras y madrigueras de roedores "
+        "silvestres",
+        "El primer párrafo entrega el hábitat original con precisión: «vivió en "
+        "las quebradas del norte de Chile, refugiada entre las piedras y las "
+        "madrigueras de roedores silvestres».\n\n"
+        "Los dos elementos —piedras y madrigueras— importan porque explican qué "
+        "buscaba: refugio y una fuente de alimento cercana.\n\n"
+        "Es información literal, disponible sin conocimiento previo.",
+        [
+            ("En los bosques del sur del país", "El texto sitúa su hábitat original en el norte."),
+            ("En zonas agrícolas del valle central", "No se menciona esa zona."),
+            ("Siempre habitó en las viviendas humanas", "El texto describe justamente un traslado posterior."),
+        ],
+    ),
+    _ql(
+        "carta", "lec_interpretar", "medio",
+        "¿Qué revela sobre quien escribe el hecho de que la carta nunca se "
+        "haya enviado?",
+        "Que necesitaba escribir más de lo que necesitaba ser respondido",
+        "Una carta escrita y no enviada cumple una función distinta de la "
+        "comunicación: sirve para ordenar lo que quien escribe siente.\n\n"
+        "El destinatario existe, pero el gesto termina en la escritura misma."
+        "\n\n"
+        "Por eso el texto puede decir cosas que difícilmente se dirían en voz "
+        "alta: el papel permite una franqueza que el envío haría imposible.",
+        [
+            ("Que se arrepintió de lo que había escrito", "El texto no expresa arrepentimiento por su contenido."),
+            ("Que la persona destinataria ya no podía leerla", "El relato no establece esa imposibilidad."),
+            ("Que el envío era imposible por razones prácticas", "El obstáculo no es logístico."),
+        ],
+    ),
+    _ql(
+        "carta", "lec_evaluar", "dificil",
+        "¿Qué aporta al texto que esté escrito en primera persona y dirigido a "
+        "un tú?",
+        "Instala al lector en el lugar del destinatario, volviendo íntimo lo que "
+        "lee",
+        "La segunda persona convierte la lectura en una escucha: el lector "
+        "ocupa, sin quererlo, el sitio de aquel a quien se escribe.\n\n"
+        "Eso produce una cercanía que un relato en tercera persona no lograría "
+        "con el mismo material.\n\n"
+        "Es un recurso deliberado del género epistolar, y es lo que hace que un "
+        "texto breve pese más de lo que su extensión sugiere.",
+        [
+            ("Permite conocer la versión de ambas partes del conflicto", "Solo se escucha una voz: la de quien escribe."),
+            ("Da objetividad al relato de los hechos", "La primera persona aporta subjetividad, no objetividad."),
+            ("Facilita ubicar la fecha exacta de lo ocurrido", "La forma verbal no aporta precisión temporal."),
+        ],
+    ),
+    _ql(
+        "carta", "lec_localizar", "medio",
+        "¿Qué caracteriza el tono con que está escrita la carta?",
+        "Íntimo y directo, dirigido a una persona concreta",
+        "El texto se dirige a alguien determinado y habla desde la experiencia "
+        "personal de quien escribe.\n\n"
+        "No busca convencer a un público ni exponer un argumento general: se "
+        "concentra en una relación entre dos.\n\n"
+        "Reconocer el tono es parte de identificar el propósito del texto, y "
+        "acá el propósito no es informar sino decir algo pendiente.",
+        [
+            ("Formal y protocolar, propio de un documento oficial", "El texto no tiene registro administrativo ni fórmulas oficiales."),
+            ("Humorístico, con la intención de hacer reír", "No hay intención cómica."),
+            ("Técnico, con vocabulario especializado", "El vocabulario es cotidiano."),
+        ],
+    ),
+    _ql(
+        "pantallas", "lec_interpretar", "medio",
+        "¿Cuál es la idea central que organiza el texto?",
+        "Que el uso del teléfono antes de dormir afecta el descanso",
+        "El texto vincula un hábito concreto —el teléfono en la cama— con sus "
+        "efectos sobre el sueño.\n\n"
+        "Todo lo demás en el texto se subordina a esa relación: es el hilo que "
+        "ordena la información.\n\n"
+        "Identificar la idea central exige distinguir entre lo que el texto "
+        "sostiene y los datos que usa para sostenerlo.",
+        [
+            ("Que los teléfonos deberían prohibirse a los adolescentes", "El texto no plantea prohibiciones."),
+            ("Que dormir menos de ocho horas es siempre perjudicial", "El texto se refiere al efecto del hábito, no fija un número de horas."),
+            ("Que las pantallas dañan permanentemente la vista", "El daño visual no es el tema del texto."),
+        ],
+    ),
+    _ql(
+        "pantallas", "lec_evaluar", "medio",
+        "¿A qué tipo de lector parece dirigirse el texto?",
+        "A un lector general interesado en entender un hábito cotidiano",
+        "El texto explica el fenómeno sin exigir formación previa y usa un "
+        "vocabulario accesible.\n\n"
+        "No se dirige a especialistas —no discute metodología ni cita estudios "
+        "en detalle— ni a un público infantil.\n\n"
+        "Reconocer el destinatario ayuda a evaluar si el texto cumple su "
+        "propósito: informar de manera comprensible sobre algo que el lector "
+        "probablemente hace todas las noches.",
+        [
+            ("A especialistas en medicina del sueño", "El texto no entra en el nivel técnico que ese público requeriría."),
+            ("A niños de enseñanza básica", "El registro es adulto o adolescente."),
+            ("A autoridades encargadas de regular la tecnología", "No propone medidas regulatorias."),
+        ],
+    ),
+    _ql(
+        "pantallas", "lec_localizar", "medio",
+        "¿Qué hábito específico aborda el texto?",
+        "Usar el teléfono en la cama antes de dormir",
+        "El título ya lo anticipa —«Dormir con el teléfono al lado»— y el "
+        "cuerpo del texto lo desarrolla.\n\n"
+        "No se trata del uso del teléfono en general ni del tiempo total frente "
+        "a pantallas: el foco está en el momento previo al sueño.\n\n"
+        "Esa delimitación es lo que hace verificable la afirmación del texto: "
+        "un hábito preciso, no una condena general a la tecnología.",
+        [
+            ("El uso de redes sociales durante la jornada escolar", "El texto no aborda el horario escolar."),
+            ("La cantidad total de horas frente a pantallas al día", "El foco está en el momento previo a dormir, no en el total diario."),
+            ("El uso del teléfono mientras se estudia", "El estudio no es el tema del texto."),
+        ],
+    ),
+    _ql(
+        "ballenas", "lec_evaluar", "dificil",
+        "¿Qué hace que el fenómeno descrito en el texto resulte preocupante?",
+        "Que el cambio en el canto sugiere una alteración del entorno provocada "
+        "desde fuera",
+        "El texto no presenta el cambio como una curiosidad biológica sino como "
+        "una señal.\n\n"
+        "Un canto que baja de tono indica que algo en las condiciones del medio "
+        "se modificó, y esa modificación no viene de los animales.\n\n"
+        "Leer una señal exige distinguir el hecho de su significado: el dato es "
+        "un cambio de frecuencia; lo preocupante es lo que ese cambio permite "
+        "inferir.",
+        [
+            ("Que las ballenas estén perdiendo la capacidad de comunicarse", "El texto describe un cambio en el canto, no su pérdida."),
+            ("Que el fenómeno sea imposible de medir con precisión", "El texto se apoya justamente en mediciones."),
+            ("Que las ballenas hayan reducido su población a la mitad", "El texto no entrega ese dato poblacional."),
+        ],
+    ),
+    _ql(
+        "ballenas", "lec_interpretar", "medio",
+        "¿Por qué el canto de las ballenas resulta útil como objeto de estudio?",
+        "Porque puede medirse a lo largo del tiempo y registrar cambios del "
+        "entorno",
+        "El canto es un fenómeno registrable: se puede grabar, comparar entre "
+        "años y medir con precisión.\n\n"
+        "Eso lo convierte en un indicador, es decir en algo observable que "
+        "informa sobre condiciones que no se ven directamente.\n\n"
+        "La utilidad no está en el canto en sí, sino en que permite seguir la "
+        "pista de otra cosa.",
+        [
+            ("Porque permite comunicarse con las ballenas", "El estudio del canto no implica comunicación con los animales."),
+            ("Porque es el único comportamiento observable de la especie", "Las ballenas presentan muchos otros comportamientos estudiables."),
+            ("Porque su significado ya se conoce por completo", "El texto no afirma que su significado esté resuelto."),
+        ],
+    ),
+    _ql(
+        "columna_celular", "lec_interpretar", "medio",
+        "¿Qué estrategia argumentativa usa el título «Guardar el celular no es "
+        "un castigo»?",
+        "Anticipa la objeción más probable del lector y la niega desde el "
+        "comienzo",
+        "El título no enuncia la tesis en positivo: responde por adelantado a "
+        "lo que el lector va a pensar.\n\n"
+        "Quien lea sobre guardar el celular en clases probablemente lo "
+        "interprete como una sanción, y el título se adelanta a esa lectura."
+        "\n\n"
+        "Es un recurso de la columna de opinión: desarmar la resistencia antes "
+        "de que se forme, para que el argumento tenga espacio.",
+        [
+            ("Presenta datos estadísticos que respaldan la medida", "El título no contiene datos."),
+            ("Formula una pregunta abierta al lector", "El título es una afirmación, no una pregunta."),
+            ("Cita la opinión de una autoridad en la materia", "No hay cita de autoridad en el título."),
+        ],
+    ),
+    _ql(
+        "columna_celular", "lec_evaluar", "dificil",
+        "¿Qué distingue a esta columna de un texto meramente informativo?",
+        "Que sostiene una postura y busca persuadir, además de exponer "
+        "información",
+        "Un texto informativo se limita a presentar hechos; una columna de "
+        "opinión toma partido.\n\n"
+        "Acá hay una tesis explícita sobre lo que debería hacerse, y la "
+        "información aparece al servicio de defenderla.\n\n"
+        "Reconocer esa diferencia cambia cómo se lee: frente a una columna, la "
+        "pregunta correcta no es solo qué dice, sino qué quiere lograr y con "
+        "qué argumentos.",
+        [
+            ("Que utiliza un lenguaje más técnico y preciso", "El registro no es lo que distingue a la columna de opinión."),
+            ("Que está escrita en tercera persona", "La persona gramatical no define el género."),
+            ("Que evita cualquier juicio de valor", "La columna se caracteriza precisamente por emitirlos."),
+        ],
+    ),
+    _ql(
+        "feria", "lec_interpretar", "medio",
+        "¿Qué imagen de la feria construye el relato?",
+        "Un espacio social donde el intercambio va más allá de la compra y la "
+        "venta",
+        "El relato no describe la feria como un simple lugar de transacciones: "
+        "atiende a los vínculos, las conversaciones y la rutina compartida."
+        "\n\n"
+        "Lo económico está presente, pero es el escenario de algo más: un "
+        "encuentro que se repite cada sábado.\n\n"
+        "Reconstruir esa imagen exige leer el conjunto, no una frase suelta: "
+        "está distribuida en toda la escena.",
+        [
+            ("Un lugar caótico donde nadie se conoce", "El relato muestra reconocimiento y trato habitual entre las personas."),
+            ("Un espacio en decadencia que está por desaparecer", "El texto no plantea un final ni un declive."),
+            ("Un sitio exclusivamente comercial y funcional", "El relato muestra que lo que ocurre ahí excede lo comercial."),
+        ],
+    ),
+    _ql(
+        "feria", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el relato se sitúe en los sábados y no en un "
+        "día cualquiera?",
+        "Instala la idea de una rutina repetida, que da peso a lo cotidiano",
+        "El título mismo lo marca: «Los sábados en la feria», en plural.\n\n"
+        "No se narra un sábado particular sino lo que ocurre todos los "
+        "sábados, y esa repetición convierte la escena en costumbre.\n\n"
+        "Un hecho aislado sería anécdota. Una rutina es otra cosa: describe "
+        "cómo se organiza la vida de quienes participan de ella.",
+        [
+            ("Sugiere que el resto de la semana la feria está cerrada", "El texto no informa sobre los demás días ni es su punto."),
+            ("Indica que se trata de un acontecimiento excepcional", "El plural sugiere justamente lo contrario: algo habitual."),
+            ("Permite fechar con exactitud los hechos narrados", "El plural impide fechar un día concreto."),
+        ],
+    ),
+    _ql(
+        "poema_puerto", "lec_evaluar", "dificil",
+        "¿Qué aporta al poema que esté ambientado en invierno y no en otra "
+        "estación?",
+        "El invierno refuerza el estado de ánimo que el poema construye",
+        "En poesía el escenario rara vez es solo escenario: colabora con el "
+        "tono.\n\n"
+        "El invierno —con su luz escasa, su frío y su quietud— acompaña y "
+        "amplifica lo que el hablante expresa, en lugar de contradecirlo.\n\n"
+        "Es lo que suele llamarse correspondencia entre paisaje y estado "
+        "interior. Cambiar la estación cambiaría el poema completo, aunque las "
+        "palabras restantes fueran las mismas.",
+        [
+            ("Permite identificar el mes exacto en que ocurre la escena", "La estación no cumple una función de datación."),
+            ("Indica que el puerto solo funciona en esa estación", "El poema no informa sobre la actividad portuaria."),
+            ("Contrasta con la alegría que expresa el hablante", "El invierno acompaña el tono del poema en lugar de contrastarlo."),
+        ],
+    ),
+    _ql(
+        "poema_puerto", "lec_interpretar", "medio",
+        "¿Qué caracteriza al hablante del poema?",
+        "Observa el puerto desde una distancia que también es emocional",
+        "El hablante describe lo que ve, y en esa descripción deja ver su "
+        "propio estado.\n\n"
+        "No participa de la escena: la mira. Esa posición de observador es "
+        "también una posición afectiva, y explica el tono del poema.\n\n"
+        "En un texto lírico el hablante no es el autor: es la voz construida "
+        "dentro del poema, y se reconstruye a partir de cómo dice lo que dice.",
+        [
+            ("Participa activamente en las labores del puerto", "El hablante observa; no se describe trabajando."),
+            ("Se dirige a un interlocutor que le responde", "No hay diálogo en el poema."),
+            ("Relata hechos históricos ocurridos en el lugar", "El poema no tiene propósito documental."),
+        ],
+    ),
+    _ql(
+        "tabla_lectura", "lec_evaluar", "dificil",
+        "¿Qué NO permite concluir la tabla de tiempo de lectura por edad?",
+        "Por qué las personas de cada edad leen la cantidad que leen",
+        "La tabla entrega cuánto se lee según la edad, y eso es todo lo que "
+        "mide.\n\n"
+        "Las causas —tiempo disponible, hábitos, acceso a libros, oferta "
+        "escolar— no aparecen en ninguna columna, y atribuirlas sería agregar "
+        "algo que el dato no contiene.\n\n"
+        "Es la distinción básica al leer datos: una tabla describe, no explica. "
+        "Para lo segundo hacen falta otras fuentes.",
+        [
+            ("Cuál grupo de edad dedica más tiempo a leer", "Eso sí se puede leer directamente en la tabla."),
+            ("Si el tiempo de lectura aumenta o disminuye con la edad", "La tendencia sí se puede observar comparando las filas."),
+            ("La diferencia de tiempo entre dos grupos de edad", "Se obtiene restando los valores correspondientes."),
+        ],
+    ),
+    _ql(
+        "tabla_lectura", "lec_interpretar", "medio",
+        "¿Qué ventaja tiene presentar esta información en una tabla y no en un "
+        "párrafo?",
+        "Permite comparar los grupos de un vistazo, sin recorrer una "
+        "descripción larga",
+        "Una tabla organiza los datos en filas y columnas, de modo que la "
+        "comparación es visual e inmediata.\n\n"
+        "El mismo contenido en prosa obligaría a retener cada cifra mientras se "
+        "lee la siguiente, y a reconstruir mentalmente la comparación.\n\n"
+        "Esa es la función del texto discontinuo: no dice cosas distintas, las "
+        "dispone de un modo que facilita cierto tipo de lectura.",
+        [
+            ("Permite incluir más información que un párrafo del mismo largo", "La ventaja no es la cantidad sino la facilidad de comparación."),
+            ("Evita que el lector tenga que interpretar los datos", "La tabla sigue exigiendo interpretación."),
+            ("Garantiza que los datos sean más precisos", "El formato no altera la precisión de la medición."),
+        ],
+    ),
+    _ql(
+        "instructivo_sismo", "lec_evaluar", "medio",
+        "¿Qué caracteriza al lenguaje de un texto instructivo como este?",
+        "Usa formas verbales directas y pasos ordenados, para que la acción sea "
+        "inequívoca",
+        "Un instructivo se juega en la claridad: quien lo consulta necesita "
+        "saber qué hacer sin margen de duda, y a veces con urgencia.\n\n"
+        "De ahí las formas verbales directas y la secuencia numerada o "
+        "jerarquizada de los pasos.\n\n"
+        "La ambigüedad, que en un texto literario puede ser un recurso, acá "
+        "sería un defecto grave: en una emergencia se lee rápido y se actúa.",
+        [
+            ("Emplea un lenguaje figurado para hacerlo memorable", "El lenguaje figurado introduciría ambigüedad, indeseable en un instructivo."),
+            ("Presenta varias opciones para que el lector elija", "Un instructivo de emergencia busca indicar la acción correcta, no ofrecer alternativas."),
+            ("Argumenta las razones de cada medida en detalle", "Puede explicar brevemente, pero su propósito es guiar la acción."),
+        ],
+    ),
+    _ql(
+        "instructivo_sismo", "lec_interpretar", "medio",
+        "¿Cuál es el propósito principal del texto?",
+        "Indicar cómo actuar durante y después de un sismo",
+        "El título lo anuncia —«Qué hacer cuando tiembla»— y el cuerpo entrega "
+        "las indicaciones correspondientes.\n\n"
+        "No busca explicar por qué ocurren los sismos ni convencer de nada: "
+        "busca orientar una conducta.\n\n"
+        "Reconocer el propósito es el primer paso para evaluar un texto: un "
+        "instructivo se juzga por su claridad y utilidad, no por su originalidad.",
+        [
+            ("Explicar las causas geológicas de los sismos en Chile", "El texto no aborda el origen de los sismos."),
+            ("Convencer al lector de vivir en zonas menos sísmicas", "No hay intención persuasiva de ese tipo."),
+            ("Relatar la experiencia de quienes vivieron un terremoto", "El texto no es un relato testimonial."),
+        ],
+    ),
+    _ql(
+        "micorrizas", "lec_localizar", "medio",
+        "Según el texto, ¿qué le entrega el árbol al hongo?",
+        "Azúcares producidos mediante la fotosíntesis",
+        "El segundo párrafo describe el intercambio en ambas direcciones.\n\n"
+        "El árbol «le entrega al hongo azúcares que produce con la "
+        "fotosíntesis», mientras el hongo aporta agua y minerales.\n\n"
+        "La pregunta apunta a la dirección árbol → hongo. Invertirla es el "
+        "error más fácil, porque ambas mitades del intercambio están en la "
+        "misma oración.",
+        [
+            ("Agua y minerales del suelo", "Eso es lo que el hongo entrega al árbol."),
+            ("Protección física frente a las heladas", "El texto no menciona ninguna protección de ese tipo."),
+            ("Espacio para que el hongo crezca dentro de la raíz", "El texto describe un intercambio de sustancias, no de espacio."),
+        ],
+    ),
+    _ql(
+        "columna_ia", "lec_localizar", "medio",
+        "Según el autor, ¿por qué se pide a los estudiantes que escriban?",
+        "Porque escribir es la forma más exigente de pensar",
+        "El tercer párrafo lo formula de manera directa: «Escribir se pide "
+        "porque escribir es la forma más exigente de pensar».\n\n"
+        "Y lo explica enseguida: uno cree entender una idea hasta que intenta "
+        "ponerla en una frase.\n\n"
+        "Es la premisa sobre la que se apoya todo el argumento posterior, "
+        "incluida la comparación del gimnasio.",
+        [
+            ("Porque los profesores necesitan evaluar la ortografía", "El texto no menciona la evaluación ortográfica."),
+            ("Porque el ensayo es el formato exigido por el currículum", "El autor discute el propósito del ejercicio, no su origen normativo."),
+            ("Porque permite obtener información sobre el texto leído", "El autor descarta esto: el profesor no lee por falta de información."),
+        ],
+    ),
+    _ql(
+        "grafico_residuos", "lec_localizar", "medio",
+        "Según la tabla, ¿qué categoría de residuo tenía el menor porcentaje en "
+        "2015?",
+        "Metales, con 4%",
+        "Se recorre la columna de 2015 buscando el valor más bajo.\n\n"
+        "Los valores son 48, 17, 12, 9, 4 y 10: el menor es 4, correspondiente "
+        "a metales.\n\n"
+        "Conviene revisar la columna completa antes de responder: «Otros», con "
+        "10%, aparece al final de la tabla y puede confundirse con el mínimo si "
+        "se lee apurado.",
+        [
+            ("Vidrio, con 9%", "El vidrio tiene 9%, superior al 4% de los metales."),
+            ("Otros, con 10%", "Está por encima de vidrio y metales."),
+            ("Plásticos, con 12%", "Es uno de los valores más altos de esa columna."),
+        ],
+    ),
+    _ql(
+        "dialogo_ventana", "lec_localizar", "medio",
+        "¿Qué le lleva Julia a su madre?",
+        "Las pastillas y el diario",
+        "Es la primera réplica de la obra: «Te traje las pastillas y el "
+        "diario».\n\n"
+        "El dato importa después, cuando Elena vuelve a preguntar por las "
+        "pastillas pese a habérselas recibido.\n\n"
+        "En teatro conviene retener lo que se dice al comienzo: suele volver "
+        "cargado de otro sentido.",
+        [
+            ("Ropa y artículos de aseo", "No se mencionan en la escena."),
+            ("Solamente el diario del día", "También le lleva las pastillas."),
+            ("Fotografías de la familia", "No aparecen en la obra."),
+        ],
+    ),
+    _ql(
+        "cuento_reloj", "lec_localizar", "medio",
+        "¿Qué regalo le hizo el narrador a su padre para su cumpleaños?",
+        "Un reloj digital que se ajustaba solo",
+        "El segundo párrafo lo cuenta: «Le regalé uno digital para su "
+        "cumpleaños, uno que se ajustaba solo y que no había que tocar "
+        "jamás».\n\n"
+        "La descripción no es casual: precisamente lo que el narrador "
+        "consideraba una ventaja —no tener que tocarlo— era lo que eliminaba el "
+        "gesto que su padre valoraba.\n\n"
+        "El regalo dura dos semanas y el padre vuelve al suyo.",
+        [
+            ("Una correa nueva para su reloj de cuerda", "El relato menciona la correa gastada, pero no como regalo."),
+            ("Un reloj de cuerda idéntico al que ya tenía", "El regalo fue un reloj digital, opuesto al suyo."),
+            ("Un despertador para la mesa de noche", "El despertador aparece en otro relato, no en este."),
         ],
     ),
 ]
