@@ -224,7 +224,7 @@ function RevisionItem({
         <div className="mb-2 flex items-center gap-2">
           <span
             className={cn(
-              "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white",
+              "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-on-fill",
               acertada ? "bg-success" : omitida ? "bg-border-strong" : "bg-danger"
             )}
             aria-label={acertada ? "Correcta" : omitida ? "Omitida" : "Incorrecta"}
@@ -256,9 +256,9 @@ function RevisionItem({
                 className={cn(
                   "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold",
                   alt.is_correct
-                    ? "bg-success text-white"
+                    ? "bg-success text-on-fill"
                     : alt.selected
-                      ? "bg-danger text-white"
+                      ? "bg-danger text-on-fill"
                       : "bg-surface-hover text-muted"
                 )}
               >

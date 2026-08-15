@@ -381,14 +381,20 @@ export function ExamRunner({
     );
   }
 
+  // El reloj avisa antes de asustar. Ámbar a los diez minutos, rojo con
+  // latido a los cinco: el estudiante alcanza a reorganizarse en vez de
+  // descubrir el apuro cuando ya no puede hacer nada. Son umbrales absolutos
+  // y no proporcionales porque lo que importa es cuánto queda, no qué
+  // fracción: cinco minutos son cinco minutos en un ensayo de 20 o de 65.
   const critico = remainingMs <= 5 * 60 * 1000;
+  const aviso = !critico && remainingMs <= 10 * 60 * 1000;
   const sinResponder = questions.length - respondidas;
   const estado = answers[currentQuestion.id];
 
   return (
     <div className="mx-auto max-w-3xl">
       {/* ── Barra superior ──────────────────────────────────────────── */}
-      <header className="sticky top-14 z-20 -mx-4 border-b border-border bg-background/95 px-4 backdrop-blur sm:-mx-6 sm:px-6">
+      <header className="glass sticky top-14 z-20 -mx-4 px-4 sm:-mx-6 sm:px-6">
         <div className="flex items-center gap-3 py-3">
           <div className="min-w-0 flex-1">
             <p className="truncate text-xs text-muted">{SUBJECT_LABELS[attemptSubject]}</p>
@@ -399,8 +405,10 @@ export function ExamRunner({
 
           <div
             className={cn(
-              "rounded-lg px-3 py-1.5 font-mono text-lg font-bold tabular-nums",
-              critico ? "bg-danger/10 text-danger" : "bg-surface-hover"
+              "rounded-lg px-3 py-1.5 font-mono text-lg font-bold tabular-nums transition-colors duration-700",
+              critico && "bg-danger/10 text-danger pulso-reloj",
+              aviso && "bg-warning/10 text-warning",
+              !critico && !aviso && "bg-surface-hover"
             )}
             role="timer"
             aria-live={critico ? "polite" : "off"}
@@ -416,8 +424,11 @@ export function ExamRunner({
 
         <div className="-mx-4 h-1 w-[calc(100%+2rem)] bg-surface-hover sm:-mx-6 sm:w-[calc(100%+3rem)]">
           <div
-            className="h-full bg-accent transition-all"
-            style={{ width: `${(respondidas / questions.length) * 100}%` }}
+            className="h-full rounded-r-full transition-[width] duration-500 ease-out"
+            style={{
+              width: `${(respondidas / questions.length) * 100}%`,
+              background: "linear-gradient(90deg, var(--accent), var(--accent-2))",
+            }}
           />
         </div>
       </header>
@@ -475,7 +486,10 @@ export function ExamRunner({
                   onClick={() => selectAlternative(alt.id)}
                   aria-pressed={elegida}
                   className={cn(
-                    "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition",
+                    // `active:scale` es el acuse de recibo del toque: en móvil
+                    // no hay hover, y sin esto la única señal de que el dedo
+                    // acertó llega cuando ya se pintó la alternativa.
+                    "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
                     elegida
                       ? "border-accent bg-accent/10 ring-1 ring-accent"
                       : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
@@ -483,7 +497,7 @@ export function ExamRunner({
                 >
                   <span
                     className={cn(
-                      "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold",
+                      "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors duration-150",
                       elegida
                         ? "bg-accent text-accent-foreground"
                         : "bg-surface-hover text-muted"
@@ -521,7 +535,7 @@ export function ExamRunner({
             <button
               type="button"
               onClick={() => setConfirmingSubmit(true)}
-              className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-white transition hover:opacity-90"
+              className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90"
             >
               Terminar ensayo
             </button>
@@ -584,7 +598,7 @@ export function ExamRunner({
                 type="button"
                 onClick={doSubmit}
                 disabled={submitting}
-                className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
+                className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90 disabled:opacity-60"
               >
                 {submitting ? "Enviando…" : "Terminar"}
               </button>

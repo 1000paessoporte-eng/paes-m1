@@ -1,31 +1,143 @@
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
 
-/* Tema claro: fondo blanco, superficies apenas grises y acento azul.
-   Los contrastes de texto y de acento sobre blanco están sobre 4.5:1. */
+/* ===========================================================================
+   PALETA
+   ---------------------------------------------------------------------------
+   Los componentes escriben contra roles (`bg-surface`, `text-muted`), nunca
+   contra un hex. Cambiar de tema es reasignar estas variables y nada más.
+
+   Cada valor de texto se eligió midiendo su contraste real contra el fondo que
+   le toca, no a ojo. Los mínimos son los de WCAG AA: 4.5:1 para texto normal.
+   =========================================================================== */
+
+/* --- Tema claro (por defecto) ------------------------------------------- */
 :root {
   --background: #ffffff;
-  --surface: #f8fafc;
-  --surface-hover: #f1f5f9;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --foreground: #0f172a;
-  --muted: #64748b;
-  --accent: #2563eb;
-  --accent-2: #0ea5e9;
+  --surface: #f8f9fc;
+  --surface-hover: #f1f2f8;
+  --border: #e4e5ee;
+  --border-strong: #c9cbdb;
+  --foreground: #0f1120;
+  --muted: #576076;
+
+  /* Violeta eléctrico: es la marca. 5.7:1 sobre blanco. */
+  --accent: #7c3aed;
+  /* Cian: acompaña al violeta en degradados y series de gráficos. */
+  --accent-2: #0e7490;
   --accent-foreground: #ffffff;
-  --success: #15803d;
+  /* Texto sobre un relleno de color saturado (éxito, error, aviso, CTA). En
+     claro esos rellenos son oscuros y el texto va blanco; en oscuro son claros
+     y el texto se da vuelta. Sin este token, `text-white` fijo deja etiquetas
+     blancas sobre menta claro. */
+  --on-fill: #ffffff;
+
+  /* Verde menta para lo que salió bien; en claro va oscuro para poder ser
+     texto (5.5:1), y el menta brillante queda para rellenos. */
+  --success: #047857;
+  --success-bright: #10b981;
   --danger: #dc2626;
   --warning: #b45309;
-  /* Acento cálido: marca la acción principal y el foco de atención, para que
-     no compita con el azul del sistema. El tono fuerte es el que se usa sobre
-     blanco (4.6:1); el normal solo para rellenos y bordes. */
+
+  /* Naranjo: la acción principal. Complementario del violeta, así que el CTA
+     salta sin pelearse con la marca. El fuerte es el que lleva texto blanco
+     encima (5.2:1); el normal solo para rellenos suaves y bordes. */
   --accent-warm: #ea580c;
   --accent-warm-strong: #c2410c;
-  /* Trazo de la hoja de cuaderno. Azul lavado, no gris: el gris sobre blanco
+
+  /* Hoja de cuaderno del fondo. Violeta lavado, no gris: el gris sobre blanco
      se lee como suciedad de pantalla. */
+  --cuaderno-fino: color-mix(in srgb, var(--accent) 6%, transparent);
+  --cuaderno-grueso: color-mix(in srgb, var(--accent) 12%, transparent);
+
+  /* Sombra y realce. En claro la profundidad la da una sombra proyectada. */
+  --sombra-color: 15 17 32;
+  --sombra-card: 0 1px 2px rgb(var(--sombra-color) / 0.04),
+    0 8px 24px -16px rgb(var(--sombra-color) / 0.12);
+  --sombra-card-hover: 0 12px 32px -16px rgb(var(--sombra-color) / 0.18);
+
+  color-scheme: light;
+}
+
+/* --- Tema oscuro por preferencia del sistema ----------------------------
+   El estudiante que no eligió nada explícitamente hereda lo que dice su
+   sistema operativo. El `:not([data-theme="light"])` deja que la elección
+   manual gane por sobre el sistema. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #0b0b12;
+    --surface: #13131c;
+    --surface-hover: #1c1c28;
+    --border: #262633;
+    --border-strong: #3a3a4c;
+    --foreground: #f1f2f6;
+    --muted: #a5a6bd;
+
+    /* De noche los acentos suben de luminosidad en vez de bajar: sobre fondo
+       oscuro un violeta saturado se apaga, uno claro brilla. */
+    --accent: #a78bfa;
+    --accent-2: #22d3ee;
+    --accent-foreground: #0b0b12;
+    --on-fill: #0b0b12;
+
+    --success: #34d399;
+    --success-bright: #34d399;
+    --danger: #fca5a5;
+    --warning: #fbbf24;
+
+    --accent-warm: #fb923c;
+    --accent-warm-strong: #fdba74;
+
+    --cuaderno-fino: color-mix(in srgb, var(--accent) 7%, transparent);
+    --cuaderno-grueso: color-mix(in srgb, var(--accent) 13%, transparent);
+
+    /* En oscuro una sombra negra no se ve. La profundidad la da un borde
+       luminoso arriba de la tarjeta, como si la luz cayera desde el techo. */
+    --sombra-color: 0 0 0;
+    --sombra-card: inset 0 1px 0 0 rgb(255 255 255 / 0.04),
+      0 8px 24px -16px rgb(0 0 0 / 0.6);
+    --sombra-card-hover: inset 0 1px 0 0 rgb(255 255 255 / 0.07),
+      0 16px 40px -20px rgb(0 0 0 / 0.8);
+
+    color-scheme: dark;
+  }
+}
+
+/* --- Tema oscuro elegido a mano ----------------------------------------
+   Mismos valores, pero ganando siempre: quien apretó el botón manda por
+   sobre el sistema, en los dos sentidos. */
+:root[data-theme="dark"] {
+  --background: #0b0b12;
+  --surface: #13131c;
+  --surface-hover: #1c1c28;
+  --border: #262633;
+  --border-strong: #3a3a4c;
+  --foreground: #f1f2f6;
+  --muted: #a5a6bd;
+
+  --accent: #a78bfa;
+  --accent-2: #22d3ee;
+  --accent-foreground: #0b0b12;
+  --on-fill: #0b0b12;
+
+  --success: #34d399;
+  --success-bright: #34d399;
+  --danger: #fca5a5;
+  --warning: #fbbf24;
+
+  --accent-warm: #fb923c;
+  --accent-warm-strong: #fdba74;
+
   --cuaderno-fino: color-mix(in srgb, var(--accent) 7%, transparent);
-  --cuaderno-grueso: color-mix(in srgb, var(--accent) 14%, transparent);
+  --cuaderno-grueso: color-mix(in srgb, var(--accent) 13%, transparent);
+
+  --sombra-color: 0 0 0;
+  --sombra-card: inset 0 1px 0 0 rgb(255 255 255 / 0.04),
+    0 8px 24px -16px rgb(0 0 0 / 0.6);
+  --sombra-card-hover: inset 0 1px 0 0 rgb(255 255 255 / 0.07),
+    0 16px 40px -20px rgb(0 0 0 / 0.8);
+
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -39,14 +151,21 @@
   --color-accent: var(--accent);
   --color-accent-2: var(--accent-2);
   --color-accent-foreground: var(--accent-foreground);
+  --color-on-fill: var(--on-fill);
   --color-success: var(--success);
+  --color-success-bright: var(--success-bright);
   --color-danger: var(--danger);
   --color-warning: var(--warning);
   --color-accent-warm: var(--accent-warm);
   --color-accent-warm-strong: var(--accent-warm-strong);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-jakarta);
   --font-mono: var(--font-geist-mono);
 }
+
+/* ===========================================================================
+   BASE
+   =========================================================================== */
 
 html {
   scroll-behavior: smooth;
@@ -54,10 +173,21 @@ html {
 
 body {
   color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Hoja de cuaderno de matemáticas: cuadrícula fina de fondo en todo el sitio,
-   con un renglón marcado cada cinco cuadros, como el papel real.
+/* Los títulos llevan la geométrica; el texto largo, la de lectura. Dos fuentes
+   con trabajos distintos, no dos fuentes por gusto. */
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Hoja de cuaderno de matemáticas: cuadrícula fina en todo el sitio, con un
+   renglón marcado cada cinco cuadros, como el papel real.
 
    Va en `html` y no en un pseudo-elemento del body: un ::before con z-index
    negativo termina pintándose por delante de las tarjetas y las líneas cruzan
@@ -91,50 +221,219 @@ html {
   outline-offset: 2px;
 }
 
+/* ===========================================================================
+   SUPERFICIES Y BOTONES
+   =========================================================================== */
+
+/* Tarjeta base del panel y del resto de la interfaz. */
+.card-panel {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--sombra-card);
+}
+
+/* Vidrio: solo donde hay algo detrás que valga la pena dejar entrever (barras
+   fijas sobre contenido que hace scroll). Usado en todas partes, el
+   glassmorphism deja una interfaz lechosa y sin jerarquía. */
+.glass {
+  background: color-mix(in srgb, var(--background) 72%, transparent);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+}
+
+.card-hover {
+  transition:
+    transform 0.2s var(--ease-salida),
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--sombra-card-hover);
+}
+
+/* Botón de marca: degradado violeta→cian y un resplandor que crece al pasar
+   por encima. El brillo es sombra, no relleno, así el contraste del texto no
+   depende de dónde caiga el degradado. */
 .btn-glow {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.15s var(--ease-salida);
 }
 
 .btn-glow:hover {
   box-shadow:
     0 0 0 1px color-mix(in srgb, var(--accent) 60%, transparent),
-    0 8px 24px -8px color-mix(in srgb, var(--accent) 70%, transparent);
+    0 8px 28px -6px color-mix(in srgb, var(--accent) 70%, transparent);
 }
 
-.card-hover {
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+.btn-glow:active {
+  transform: translateY(1px) scale(0.99);
 }
 
-.card-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px -16px rgb(15 23 42 / 0.18);
+/* Acción principal del panel y del hero. Relleno sólido (no degradado) para
+   garantizar el contraste del texto blanco en toda su superficie; el brillo
+   lo pone la sombra. */
+.btn-warm {
+  background: var(--accent-warm-strong);
+  box-shadow: 0 1px 2px rgb(var(--sombra-color) / 0.08);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.15s var(--ease-salida);
 }
 
-/* KaTeX hereda el tamaño del texto contenedor en vez de agrandarlo. */
-.katex {
-  font-size: 1.05em;
+.btn-warm:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent-warm) 50%, transparent),
+    0 10px 30px -8px color-mix(in srgb, var(--accent-warm) 80%, transparent);
 }
 
-/* Las fórmulas largas pueden desbordar en móvil: que hagan scroll propio. */
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-block: 0.25rem;
+.btn-warm:active {
+  transform: translateY(1px) scale(0.99);
 }
 
-/* Roles de color del gráfico de progreso: el SVG se escribe contra roles y no
-   contra hex, para que el intercambio de paleta ocurra en un solo lugar. */
-.viz-root {
-  --serie: var(--accent);
-  --grilla: var(--border);
-  --tenue: var(--muted);
-  --texto: var(--foreground);
-  --superficie: var(--background);
+/* ===========================================================================
+   MOVIMIENTO
+   ---------------------------------------------------------------------------
+   Curvas y duraciones en un solo lugar. Las animaciones de entrada usan
+   `salida` (rápido al principio, frena al final): así el movimiento se siente
+   como algo que llega y se acomoda, no como algo que arranca de a poco.
+   =========================================================================== */
+
+:root {
+  --ease-salida: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-suave: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-rapida: 150ms;
+  --dur-media: 300ms;
+  --dur-lenta: 600ms;
 }
 
-/* Fondo decorativo del hero: manchas de color difuminadas fijas (no siguen al
-   scroll) detrás de un contenedor con overflow-hidden. */
+@keyframes float-chip {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-chip {
+  animation: float-chip 4s ease-in-out infinite;
+}
+
+/* Llama de la racha: dos capas con ritmos distintos para que el parpadeo no se
+   vea mecánico. */
+@keyframes llama {
+  0%,
+  100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.12) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+.llama {
+  animation: llama 1.6s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Brillo que recorre una insignia recién desbloqueada. */
+@keyframes destello {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+
+.destello::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, #ffffff 55%, transparent),
+    transparent
+  );
+  animation: destello 2.4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Latido del cronómetro cuando queda poco tiempo. */
+@keyframes pulso-reloj {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--danger) 45%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--danger) 0%, transparent);
+  }
+}
+
+.pulso-reloj {
+  animation: pulso-reloj 1.6s ease-out infinite;
+}
+
+/* Barra de progreso que se llena al aparecer. El ancho final lo pone el
+   componente con una variable, así el mismo keyframe sirve para cualquier
+   porcentaje. */
+@keyframes llenar-barra {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.barra-anima {
+  transform-origin: left center;
+  animation: llenar-barra var(--dur-lenta) var(--ease-salida) both;
+}
+
+/* Nada de lo anterior es información: quien pidió menos movimiento lo recibe
+   quieto, sin perder ningún dato. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .float-chip,
+  .llama,
+  .destello::after,
+  .pulso-reloj,
+  .barra-anima {
+    animation: none !important;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+}
+
+/* ===========================================================================
+   DECORACIÓN
+   =========================================================================== */
+
+/* Fondo del hero: manchas de color difuminadas detrás de un contenedor con
+   overflow-hidden. */
 .hero-glow::before,
 .hero-glow::after {
   content: "";
@@ -166,35 +465,48 @@ html {
 .bg-dot-grid {
   background-image: radial-gradient(var(--border-strong) 1px, transparent 1px);
   background-size: 22px 22px;
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 0%, black 40%, transparent 100%);
-  mask-image: radial-gradient(ellipse 60% 60% at 50% 0%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 0%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 60% 60% at 50% 0%,
+    black 40%,
+    transparent 100%
+  );
 }
 
-@keyframes float-chip {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+/* Texto con el degradado de la marca. */
+.texto-marca {
+  background-image: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.float-chip {
-  animation: float-chip 4s ease-in-out infinite;
+/* ===========================================================================
+   CONTENIDO
+   =========================================================================== */
+
+/* KaTeX hereda el tamaño del texto contenedor en vez de agrandarlo. */
+.katex {
+  font-size: 1.05em;
 }
 
-/* Botón de acción principal del panel: cálido, para que destaque sobre el
-   azul que usa el resto de la interfaz. */
-.btn-warm {
-  background: linear-gradient(135deg, var(--accent-warm), #f97316);
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.08);
+/* Las fórmulas largas pueden desbordar en móvil: que hagan scroll propio. */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25rem;
 }
 
-.btn-warm:hover {
-  box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--accent-warm) 75%, transparent);
-}
-
-/* Tarjetas del panel: blancas sobre el gris del fondo, con sombra suave en
-   lugar de borde marcado. */
-.card-panel {
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -16px rgb(15 23 42 / 0.12);
+/* Roles de color del gráfico de progreso: el SVG se escribe contra roles y no
+   contra hex, para que el intercambio de paleta ocurra en un solo lugar. */
+.viz-root {
+  --serie: var(--accent);
+  --grilla: var(--border);
+  --tenue: var(--muted);
+  --texto: var(--foreground);
+  --superficie: var(--background);
 }

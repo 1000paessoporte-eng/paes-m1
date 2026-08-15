@@ -203,6 +203,28 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/questions/stats": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Content Stats
+         * @description Totales del banco. Público y sin autenticación: la portada lo usa.
+         *
+         *     No revela ninguna pregunta, solo cuántas hay.
+         */
+        get: operations["content_stats_api_questions_stats_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/exam/options": {
         parameters: {
             query?: never;
@@ -621,6 +643,23 @@ export interface components {
             preguntas_mas_falladas: components["schemas"]["PreguntaFallada"][];
             /** Nodos Mas Flojos */
             nodos_mas_flojos: components["schemas"]["NodoFlojo"][];
+        };
+        /**
+         * ContentStatsOut
+         * @description Cifras públicas del banco, para que la portada no invente números.
+         *
+         *     La landing muestra "N preguntas verificadas"; ese N sale de contar la
+         *     tabla, no de una constante escrita a mano que envejece en silencio.
+         */
+        ContentStatsOut: {
+            /** Questions */
+            questions: number;
+            /** Passages */
+            passages: number;
+            /** Skill Nodes */
+            skill_nodes: number;
+            /** Subjects */
+            subjects: number;
         };
         /**
          * ConteoPeriodo
@@ -1702,6 +1741,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    content_stats_api_questions_stats_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ContentStatsOut"];
                 };
             };
         };

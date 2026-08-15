@@ -31,7 +31,7 @@ export function SiteFooter() {
           <div className="col-span-2 sm:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <span
-                className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-white"
+                className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-accent-foreground"
                 style={{
                   background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
                 }}

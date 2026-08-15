@@ -40,3 +40,16 @@ class QuestionSafeOut(BaseModel):
     stem: str
     image_url: str | None = None
     alternatives: list[AlternativeSafeOut]
+
+
+class ContentStatsOut(BaseModel):
+    """Cifras públicas del banco, para que la portada no invente números.
+
+    La landing muestra "N preguntas verificadas"; ese N sale de contar la
+    tabla, no de una constante escrita a mano que envejece en silencio.
+    """
+
+    questions: int
+    passages: int
+    skill_nodes: int
+    subjects: int

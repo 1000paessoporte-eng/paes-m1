@@ -86,7 +86,7 @@ cd apps/web && pnpm typecheck && pnpm build
 ```
 
 **Errores preexistentes conocidos** — no son regresiones, no los persigas:
-- `pnpm lint` falla con 2 errores (`app/page.tsx:21`, `exam-runner.tsx:71`).
+- `pnpm lint` falla con 1 error (`exam-runner.tsx:78`, acceso a un ref durante el render).
 - `uv run mypy src/` reporta 1 error en `exam_focus/router.py:42`.
 
 ## 5. Desarrollo local

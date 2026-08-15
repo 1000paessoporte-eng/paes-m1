@@ -27,7 +27,7 @@ export default function OlvideContrasenaPage() {
     <main className="flex flex-1 items-center justify-center px-6 py-20">
       <div className="w-full max-w-sm rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-foreground/5">
         <span
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold text-white"
+          className="flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold text-accent-foreground"
           style={{
             background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
           }}
