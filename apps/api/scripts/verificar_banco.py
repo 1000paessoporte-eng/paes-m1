@@ -481,6 +481,59 @@ COMPROBACIONES: dict[str, str] = {
     "vértices en A(2, 1), B(6, 1) y C(2, 4)": str(
         (6 - 2) + (4 - 1) + round(((6 - 2) ** 2 + (4 - 1) ** 2) ** 0.5)
     ),
+    # --- cuerpos geométricos: segunda tanda ---
+    # Volumen de cubos y paralelepípedos: producto de las tres dimensiones.
+    "¿Cuál es el volumen de un cubo de 6 cm de arista?": str(6**3),
+    "caja tiene 8 cm de largo, 5 cm de ancho": str(8 * 5 * 3),
+    "cubo de 10 cm de arista": f"{10**3:,}".replace(",", "."),
+    "contenedor mide 10 cm de largo": str(10 * 6 * 4),
+    "caja de herramientas mide 12 cm": str(12 * 5 * 3),
+    "base cuadrada de 5 cm de lado y una altura de 12 cm": str(5**2 * 12),
+    "piscina rectangular mide 8 m de largo": str(round(8 * 4 * 1.5)),
+    # Área total: seis caras en el cubo, tres pares distintos en el paralelepípedo.
+    "área total de un cubo de 5 cm de arista": str(6 * 5**2),
+    "área total de un cubo de 2 cm de arista": str(6 * 2**2),
+    "caja mide 7 cm de largo, 4 cm de ancho": str(2 * (7 * 4 + 7 * 3 + 4 * 3)),
+    "paralelepípedo de 10 cm de largo, 6 cm de ancho y 4 cm de alto": str(2 * (10 * 6 + 10 * 4 + 6 * 4)),
+    # Cilindros: área de la base por la altura; la lateral es un rectángulo desenrollado.
+    "cilindro de 2 cm de radio y 5 cm de altura": str(round(3.14 * 2**2 * 5, 2)).replace(".", ","),
+    "cilindro de 10 cm de radio y 2 cm de altura": str(round(3.14 * 10**2 * 2)),
+    "área lateral de un cilindro de 5 cm de radio": str(round(2 * 3.14 * 5 * 10)),
+    "estanque cilíndrico tiene 3 m de radio": str(round(3.14 * 3**2 * 4, 2)).replace(".", ","),
+    "área total de un cilindro de 2 cm de radio y 8 cm de altura": str(
+        round(2 * 3.14 * 2**2 + 2 * 3.14 * 2 * 8, 2)
+    ).replace(".", ","),
+    "lata cilíndrica cerrada tiene 5 cm de radio": str(
+        round(2 * 3.14 * 5**2 + 2 * 3.14 * 5 * 8, 2)
+    ).replace(".", ","),
+    # Elementos de los cuerpos.
+    "¿Cuántas caras tiene un paralelepípedo?": str(3 * 2),
+    "¿Cuántos vértices tiene un prisma de base triangular?": str(3 * 2),
+    "¿Cuántas aristas tiene un paralelepípedo?": str(4 * 3),
+    # Casos inversos: se da el volumen o el área y se pide una medida.
+    "cubo tiene un volumen de 216 cm³": str(round(216 ** (1 / 3))),
+    "volumen de 240 cm³ y su base mide 8 cm por 5 cm": str(240 // (8 * 5)),
+    "cilindro tiene un volumen de 471 cm³": str(round((471 / (3.14 * 6)) ** 0.5)),
+    "área total de un cubo es 96 cm²": str(round((96 / 6) ** 0.5)),
+    "cilindro tiene un volumen de 1.256 cm³": str(round(1256 / (3.14 * 10**2))),
+    # El área total da la altura, y recién ahí sale el volumen.
+    "base cuadrada de 4 cm de lado y un área total de 160 cm²": str(
+        4**2 * ((160 - 2 * 4**2) // (4 * 4))
+    ),
+    # Cuántas piezas caben: se dividen volúmenes, no medidas lineales.
+    "cajas cúbicas de 2 cm de arista caben": str((8 * 6 * 4) // 2**3),
+    "cubo de 6 cm de arista se corta en cubitos": str(6**3 // 2**3),
+    "caja mide 30 cm × 20 cm × 15 cm": str(30 * 20 * 15 // 5**3),
+    # Capacidad: 1 litro son 1.000 cm³.
+    "50 cm de largo, 40 cm de ancho y 30 cm de alto": str(50 * 40 * 30 // 1000),
+    "bidón cilíndrico tiene 20 cm de radio": str(round(3.14 * 20**2 * 50 / 1000, 2)).replace(".", ","),
+    "tres quintas partes de su capacidad": str(round(3.14 * 2**2 * 5 * 3 / 5, 2)).replace(".", ","),
+    # Superficie a pintar sin tapa: la base va una sola vez.
+    "pintar por fuera una caja sin tapa": f"{(5 * 4 + 2 * 5 * 3 + 2 * 4 * 3) * 200:,}".replace(",", "."),
+    # Escalar dimensiones: el factor va al cuadrado o al cubo según de qué dependa.
+    "duplica el radio de un cilindro": f"Por {2**2}",
+    "duplican el largo, el ancho y el alto": f"Por {2**3}",
+    "arista de un cubo aumenta en un 50%": str(round((1.5**3 - 1) * 100, 1)).replace(".", ","),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
