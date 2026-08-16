@@ -155,7 +155,7 @@ def confirmar(
 
 
 @router.get("/flow/diagnostico")
-def diagnostico(_: User = Depends(get_current_admin)) -> dict[str, object]:
+def diagnostico(user: User = Depends(get_current_admin)) -> dict[str, object]:
     """Qué responde Flow exactamente, para no diagnosticar a ciegas.
 
     Existe porque configurar una pasarela falla siempre por lo mismo —una
@@ -191,7 +191,11 @@ def diagnostico(_: User = Depends(get_current_admin)) -> dict[str, object]:
             orden=f"diag-{uuid4().hex[:10]}",
             monto=5990,
             asunto="Prueba de diagnóstico",
-            email="diagnostico@1000paes.cl",
+            # El correo del propio admin, no uno inventado: Flow valida que
+            # exista y rechaza los de fantasía con el código 1620. Usar uno
+            # falso hacía fallar el diagnóstico por un motivo que no tenía
+            # nada que ver con lo que se estaba comprobando.
+            email=user.email,
             url_confirmacion=f"{s.api_url.rstrip('/')}/api/plan/flow/confirmar",
             url_retorno=f"{s.frontend_url.rstrip('/')}/plan/resultado",
         )
