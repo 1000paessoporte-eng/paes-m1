@@ -177,6 +177,14 @@ class VisitanteDetalle(BaseModel):
     con_cuenta: bool
 
 
+class Canal(BaseModel):
+    """Por dónde llegó la gente. `origen` None significa entrada directa."""
+
+    origen: str | None
+    visitas: int
+    visitantes: int
+
+
 class VisitantesOut(BaseModel):
     """Con qué equipos entra la gente.
 
@@ -191,6 +199,14 @@ class VisitantesOut(BaseModel):
     por_navegador: dict[str, int]
     #: Visitas registradas antes de que se guardaran estas categorías.
     sin_clasificar: int
+    #: Visitas de rastreadores declarados, EXCLUIDAS de todo lo demás. Se
+    #: informan aparte en vez de borrarse: saber cuántos bots pasan también
+    #: dice algo del sitio, y esconderlos impediría notar si la heurística
+    #: está descartando gente real.
+    bots: int
+    #: De dónde llegaron, ya sin bots. El origen None es entrada directa:
+    #: alguien que escribió la dirección o vino de un enlace sin referente.
+    canales: list[Canal]
     recientes: list[VisitanteDetalle]
 
 

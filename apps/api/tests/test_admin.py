@@ -217,3 +217,77 @@ def test_visitantes_no_exponen_el_identificador_completo(
     for v in visitantes["recientes"]:
         assert len(v["visitor"]) <= 8
         assert v["visitor"] != entero
+
+
+def test_las_visitas_de_bots_no_cuentan_como_personas(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """Un rastreador no es un visitante, y contarlo distorsiona la decisión.
+
+    En la primera medición real del proyecto, 18 de 27 "visitantes" eran bots
+    de una sola visita a la portada: el triple del número que se usa para
+    decidir dónde invertir en captación.
+    """
+    headers, _ = register_user(email="jefa7@milpaes.cl")
+    _hacer_admin(db_session, "jefa7@milpaes.cl")
+
+    client.post(
+        "/api/metrics/pageview",
+        json={"path": "/", "visitor_id": "persona-0001"},
+        headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0) Chrome/120"},
+    )
+    client.post(
+        "/api/metrics/pageview",
+        json={"path": "/", "visitor_id": "robot-0001"},
+        headers={"User-Agent": "Googlebot/2.1 (+http://www.google.com/bot.html)"},
+    )
+
+    visitantes = client.get("/api/admin/metrics", headers=headers).json()["visitantes"]
+    ids = {v["visitor"] for v in visitantes["recientes"]}
+    assert any(i.startswith("persona") for i in ids), "la persona debe aparecer"
+    assert not any(i.startswith("robot") for i in ids), "el bot no debe aparecer"
+    assert visitantes["bots"] >= 1, "pero sí debe contarse aparte"
+
+
+def test_el_origen_guarda_solo_el_dominio(
+    client: TestClient, db_session: Session
+) -> None:
+    """La URL de origen puede traer términos de búsqueda o identificadores de
+    campaña. Para saber por qué canal llega la gente basta el dominio."""
+    from paes_api.modules.metrics.models import PageView
+
+    client.post(
+        "/api/metrics/pageview",
+        json={
+            "path": "/",
+            "visitor_id": "buscador-001",
+            "referrer": "https://www.google.com/search?q=algo+privado",
+        },
+        headers={"User-Agent": "Mozilla/5.0 Chrome/120"},
+    )
+    fila = db_session.execute(
+        select(PageView).where(PageView.visitor_id == "buscador-001")
+    ).scalar_one()
+    assert fila.referrer == "google.com"
+
+
+def test_el_trafico_interno_no_cuenta_como_canal(
+    client: TestClient, db_session: Session
+) -> None:
+    """Venir de otra página del propio sitio es navegación, no un canal de
+    entrada. Contarlo taparía a los canales de verdad."""
+    from paes_api.modules.metrics.models import PageView
+
+    client.post(
+        "/api/metrics/pageview",
+        json={
+            "path": "/planes",
+            "visitor_id": "interno-0001",
+            "referrer": "https://1000paes.cl/panel",
+        },
+        headers={"User-Agent": "Mozilla/5.0 Chrome/120"},
+    )
+    fila = db_session.execute(
+        select(PageView).where(PageView.visitor_id == "interno-0001")
+    ).scalar_one()
+    assert fila.referrer is None

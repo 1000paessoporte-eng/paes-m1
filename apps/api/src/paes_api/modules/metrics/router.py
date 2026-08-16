@@ -1,3 +1,5 @@
+from urllib.parse import urlparse
+
 from fastapi import APIRouter, Depends, Request, status
 from sqlalchemy.orm import Session
 
@@ -5,11 +7,37 @@ from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.metrics.schemas import PageViewIn
-from paes_api.modules.metrics.user_agent import clasificar
+from paes_api.modules.metrics.user_agent import clasificar, es_robot
 from paes_api.modules.users.deps import get_current_user_optional
 from paes_api.modules.users.models import User
 
 router = APIRouter(prefix="/metrics", tags=["metrics"])
+
+
+def _host_de(referrer: str | None) -> str | None:
+    """Solo el dominio de origen, nunca la URL completa.
+
+    Para saber por qué canal llega la gente basta con "google.com". La ruta
+    ajena, en cambio, puede traer términos de búsqueda, identificadores de
+    campaña o datos de la sesión de otro sitio, y no hay ninguna razón para
+    guardarlos.
+
+    El tráfico interno se descarta: una visita que viene de otra página del
+    propio sitio no es un canal de entrada, es navegación, y contarla como
+    origen taparía a los canales de verdad.
+    """
+    if not referrer:
+        return None
+    try:
+        host = urlparse(referrer).hostname
+    except ValueError:
+        return None
+    if not host:
+        return None
+    host = host.removeprefix("www.").lower()
+    if host.endswith("1000paes.cl") or "milpaes" in host or host == "localhost":
+        return None
+    return host[:120]
 
 
 @router.post("/pageview", status_code=status.HTTP_204_NO_CONTENT)
@@ -33,7 +61,8 @@ def registrar_visita(
 
     # El user agent se lee y se descarta en el acto: a la base solo llegan las
     # tres categorías gruesas, nunca la cadena original.
-    device, sistema, navegador = clasificar(request.headers.get("user-agent"))
+    ua = request.headers.get("user-agent")
+    device, sistema, navegador = clasificar(ua)
 
     db.add(
         PageView(
@@ -43,6 +72,8 @@ def registrar_visita(
             device=device,
             os=sistema,
             browser=navegador,
+            referrer=_host_de(payload.referrer),
+            es_bot=es_robot(ua),
         )
     )
     db.commit()
