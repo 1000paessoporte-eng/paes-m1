@@ -200,6 +200,9 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "vende 500 unidades a $2.000": f"{2_000 * 500 - 700_000:,}".replace(",", "."),
     "sector terciario entre 1960 y 2000": str(52 - 25),
     "aumentaron los plásticos entre 2015": str(22 - 12),
+    # Fuentes nuevas de Historia
+    "mujeres rurales entre 1930 y 2020": str(96 - 19),
+    "plebiscito de 2020 que en la municipal de 2016": f"{23_000 - 15_400:,}".replace(",", "."),
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),
