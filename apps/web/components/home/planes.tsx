@@ -128,10 +128,15 @@ const PLANES = [
   {
     nombre: "Colegios",
     resumen: "Para cursos completos",
-    precio: "$3.500",
-    precioNormal: "$4.900",
+    // El precio se recalculó contra el individual: un año de Pro cuesta
+    // $119.000, así que un colegio paga cerca de un sexto por alumno. El valor
+    // anterior —$3.500— dejaba un curso completo de 30 alumnos en $105.000,
+    // menos que UNA suscripción individual: no era descuento por volumen, era
+    // regalar el producto justo en el plan que más ingreso puede generar.
+    precio: "$19.900",
+    precioNormal: null,
     periodo: "por alumno al año",
-    alternativa: "Desde un curso (30 alumnos). Sobre 200 alumnos, a convenir",
+    alternativa: "Desde un curso (30 alumnos). Sobre 200, conversemos",
     facturacion: "Por año escolar, con factura",
     duracion: "Todo el periodo contratado",
     incluye: [

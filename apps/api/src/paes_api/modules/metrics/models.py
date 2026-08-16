@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import DateTime, ForeignKey, String, func
+from sqlalchemy import Boolean, DateTime, ForeignKey, String, func
 from sqlalchemy.orm import Mapped, mapped_column
 
 from paes_api.shared.base import Base
@@ -44,6 +44,16 @@ class PageView(Base):
     os: Mapped[str | None] = mapped_column(String(20), nullable=True)
     #: Familia del navegador: "Chrome", "Safari", "Firefox", "Edge"...
     browser: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    #: Dominio desde el que se llegó ("google.com", "instagram.com"). Solo el
+    #: HOST, nunca la URL completa: para saber por qué canal llega la gente
+    #: basta el dominio, y la ruta ajena puede llevar términos de búsqueda o
+    #: identificadores de campaña que no hay razón para almacenar.
+    #: NULL cuando se entró directo o el navegador no lo informó.
+    referrer: Mapped[str | None] = mapped_column(String(120), nullable=True, index=True)
+    #: Si la visita viene de un rastreador declarado. Se guarda en vez de
+    #: descartarse: un bot que entra igual es información sobre el sitio, y
+    #: borrarlo impediría notar después que la heurística estaba mal.
+    es_bot: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false")
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True
     )

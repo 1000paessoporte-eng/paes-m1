@@ -729,6 +729,36 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/plan/flow/diagnostico": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Diagnostico
+         * @description Qué responde Flow exactamente, para no diagnosticar a ciegas.
+         *
+         *     Existe porque configurar una pasarela falla siempre por lo mismo —una
+         *     credencial del ambiente equivocado, una URL mal escrita— y el mensaje que
+         *     ve el usuario es deliberadamente genérico. Sin esto, la única forma de
+         *     saber qué pasó es leer los logs del servidor.
+         *
+         *     Solo para admin: la respuesta de Flow puede nombrar la cuenta y el estado
+         *     del comercio. Nunca devuelve las credenciales; sí dice si están puestas y
+         *     contra qué ambiente se está hablando, que es lo que hace falta para
+         *     detectar el error más común: llaves de producción apuntando al sandbox.
+         */
+        get: operations["diagnostico_api_plan_flow_diagnostico_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/demo/questions": {
         parameters: {
             query?: never;
@@ -1028,6 +1058,18 @@ export interface components {
             total: number;
             /** Percentage */
             percentage: number;
+        };
+        /**
+         * Canal
+         * @description Por dónde llegó la gente. `origen` None significa entrada directa.
+         */
+        Canal: {
+            /** Origen */
+            origen: string | null;
+            /** Visitas */
+            visitas: number;
+            /** Visitantes */
+            visitantes: number;
         };
         /** CanjearIn */
         CanjearIn: {
@@ -1692,6 +1734,8 @@ export interface components {
             path: string;
             /** Visitor Id */
             visitor_id: string;
+            /** Referrer */
+            referrer?: string | null;
         };
         /**
          * PassageOut
@@ -2232,6 +2276,10 @@ export interface components {
             };
             /** Sin Clasificar */
             sin_clasificar: number;
+            /** Bots */
+            bots: number;
+            /** Canales */
+            canales: components["schemas"]["Canal"][];
             /** Recientes */
             recientes: components["schemas"]["VisitanteDetalle"][];
         };
@@ -3448,6 +3496,28 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    diagnostico_api_plan_flow_diagnostico_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: unknown;
+                    };
                 };
             };
         };

@@ -227,13 +227,33 @@ export default async function AdminPage() {
       {/* ── Visitantes ───────────────────────────────────────────────── */}
       <Seccion titulo="Quién visita (30 días)">
         <p className="mb-3 text-xs leading-relaxed text-muted">
+          Todas las cifras de este panel <strong>excluyen rastreadores</strong>.
           No se guarda dirección IP ni el user agent completo, así que esto no
-          prueba que dos visitas sean de personas distintas. Lo que sí muestra
-          es si hay diversidad real de equipos: muchos navegadores idénticos, con
-          una sola visita cada uno y el mismo día, casi nunca son personas.
+          prueba que dos visitas sean de personas distintas, pero sí muestra si
+          hay diversidad real de equipos y por qué canal llega la gente.
         </p>
 
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        {visitantes.bots > 0 && (
+          <p className="mb-3 rounded-lg border border-border bg-surface p-3 text-xs leading-relaxed text-muted">
+            Se descartaron <strong>{visitantes.bots}</strong> visitas de
+            rastreadores declarados (Google, redes sociales, monitores). No se
+            borran: se guardan aparte para poder revisar si el filtro está
+            descartando gente real.
+          </p>
+        )}
+
+        <Tabla
+          titulo="Por dónde llegan"
+          cabeceras={["Origen", "Visitas", "Navegadores"]}
+          filas={visitantes.canales.map((c) => [
+            c.origen ?? "Directo o sin referente",
+            String(c.visitas),
+            String(c.visitantes),
+          ])}
+          vacio="Todavía no hay visitas con origen registrado."
+        />
+
+        <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
           <Reparto titulo="Dispositivo" datos={visitantes.por_dispositivo} />
           <Reparto titulo="Sistema" datos={visitantes.por_sistema} />
           <Reparto titulo="Navegador" datos={visitantes.por_navegador} />

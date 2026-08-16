@@ -358,11 +358,16 @@ export function getAdminMetrics(token?: string): Promise<AdminMetrics> {
  * Registra una visita. Silencia cualquier error a propósito: medir nunca debe
  * romper la navegación de quien está usando el sitio.
  */
-export function trackPageView(path: string, visitorId: string, token?: string): void {
+export function trackPageView(
+  path: string,
+  visitorId: string,
+  token?: string,
+  referrer?: string
+): void {
   apiFetch<void>("/api/metrics/pageview", token, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ path, visitor_id: visitorId }),
+    body: JSON.stringify({ path, visitor_id: visitorId, referrer }),
   }).catch(() => {});
 }
 

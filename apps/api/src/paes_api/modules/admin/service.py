@@ -16,6 +16,7 @@ from paes_api.modules.admin.schemas import (
     AlumnoDetalle,
     AlumnosOut,
     BancoOut,
+    Canal,
     CoberturaPrueba,
     ContenidoOut,
     ConteoPeriodo,
@@ -183,12 +184,17 @@ def _sesiones(db: Session, ahora: datetime) -> SesionesOut:
 
 def _visitas(db: Session, ahora: datetime) -> VisitasOut:
     _, hace_7, _ = _ventanas(ahora)
-    base = select(func.count()).select_from(PageView)
+    # Todas las cifras de esta sección excluyen rastreadores: un embudo que
+    # arranca contando bots hace parecer que la conversión es pésima cuando en
+    # realidad el denominador está inflado.
+    base = select(func.count()).select_from(PageView).where(_humanas())
 
     vistas = _contar(db, base, PageView.created_at, ahora)
     visitantes = _contar(
         db,
-        select(func.count(func.distinct(PageView.visitor_id))).select_from(PageView),
+        select(func.count(func.distinct(PageView.visitor_id)))
+        .select_from(PageView)
+        .where(_humanas()),
         PageView.created_at,
         ahora,
     )
@@ -197,7 +203,11 @@ def _visitas(db: Session, ahora: datetime) -> VisitasOut:
         db.execute(
             select(func.count())
             .select_from(PageView)
-            .where(PageView.created_at >= hace_7, PageView.user_id.is_(None))
+            .where(
+                PageView.created_at >= hace_7,
+                PageView.user_id.is_(None),
+                _humanas(),
+            )
         ).scalar_one()
         or 0
     )
@@ -210,7 +220,7 @@ def _visitas(db: Session, ahora: datetime) -> VisitasOut:
                 func.count().label("visitas"),
                 func.count(func.distinct(PageView.visitor_id)).label("visitantes"),
             )
-            .where(PageView.created_at >= hace_7)
+            .where(PageView.created_at >= hace_7, _humanas())
             .group_by(PageView.path)
             .order_by(func.count().desc())
             .limit(TOPE_RANKING)
@@ -352,7 +362,7 @@ def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
     visitantes = (
         db.execute(
             select(func.count(func.distinct(PageView.visitor_id))).where(
-                PageView.created_at >= hace_30
+                PageView.created_at >= hace_30, _humanas()
             )
         ).scalar_one()
         or 0
@@ -379,7 +389,7 @@ def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
     # una conversión observada, no estimada. Es lo más cerca que se puede
     # llegar sin guardar nada que identifique a la persona.
     anonimos = select(func.distinct(PageView.visitor_id)).where(
-        PageView.created_at >= hace_30, PageView.user_id.is_(None)
+        PageView.created_at >= hace_30, PageView.user_id.is_(None), _humanas()
     )
     convertidos = (
         db.execute(
@@ -387,6 +397,7 @@ def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
                 PageView.created_at >= hace_30,
                 PageView.user_id.is_not(None),
                 PageView.visitor_id.in_(anonimos),
+                _humanas(),
             )
         ).scalar_one()
         or 0
@@ -570,6 +581,16 @@ def _banco(db: Session) -> BancoOut:
     return BancoOut(por_prueba=por_prueba, nodos_flacos=flacos)
 
 
+#: Filtro que aplica a TODA consulta de visitas.
+#:
+#: Los rastreadores se guardan pero no se cuentan. En la primera medición real
+#: del proyecto, 18 de 27 "visitantes" resultaron ser bots de una sola visita a
+#: la portada: incluirlos triplicaba el número que se usa para decidir dónde
+#: invertir en captación.
+def _humanas():
+    return PageView.es_bot.is_(False)
+
+
 def _visitantes(db: Session, ahora: datetime) -> VisitantesOut:
     """Con qué equipos se entra al sitio.
 
@@ -585,7 +606,7 @@ def _visitantes(db: Session, ahora: datetime) -> VisitantesOut:
             str(valor): int(total)
             for valor, total in db.execute(
                 select(columna, func.count())
-                .where(PageView.created_at >= hace_30, columna.is_not(None))
+                .where(PageView.created_at >= hace_30, columna.is_not(None), _humanas())
                 .group_by(columna)
                 .order_by(func.count().desc())
             ).all()
@@ -595,10 +616,42 @@ def _visitantes(db: Session, ahora: datetime) -> VisitantesOut:
         db.execute(
             select(func.count())
             .select_from(PageView)
-            .where(PageView.created_at >= hace_30, PageView.device.is_(None))
+            .where(
+                PageView.created_at >= hace_30,
+                PageView.device.is_(None),
+                _humanas(),
+            )
         ).scalar_one()
         or 0
     )
+
+    bots = (
+        db.execute(
+            select(func.count())
+            .select_from(PageView)
+            .where(PageView.created_at >= hace_30, PageView.es_bot.is_(True))
+        ).scalar_one()
+        or 0
+    )
+
+    canales = [
+        Canal(
+            origen=fila.referrer,
+            visitas=int(fila.visitas),
+            visitantes=int(fila.visitantes),
+        )
+        for fila in db.execute(
+            select(
+                PageView.referrer,
+                func.count().label("visitas"),
+                func.count(func.distinct(PageView.visitor_id)).label("visitantes"),
+            )
+            .where(PageView.created_at >= hace_30, _humanas())
+            .group_by(PageView.referrer)
+            .order_by(func.count().desc())
+            .limit(TOPE_RANKING)
+        ).all()
+    ]
 
     # Una fila por navegador. Las categorías se toman con max() porque son
     # constantes dentro de un mismo visitor_id salvo que el usuario actualice
@@ -615,7 +668,7 @@ def _visitantes(db: Session, ahora: datetime) -> VisitantesOut:
             func.max(PageView.created_at).label("ultima"),
             func.count(PageView.user_id).label("con_sesion"),
         )
-        .where(PageView.created_at >= hace_30)
+        .where(PageView.created_at >= hace_30, _humanas())
         .group_by(PageView.visitor_id)
         .order_by(func.max(PageView.created_at).desc())
         .limit(TOPE_VISITANTES)
@@ -641,6 +694,8 @@ def _visitantes(db: Session, ahora: datetime) -> VisitantesOut:
         por_sistema=reparto(PageView.os),
         por_navegador=reparto(PageView.browser),
         sin_clasificar=sin_clasificar,
+        bots=bots,
+        canales=canales,
         recientes=recientes,
     )
 
