@@ -13537,6 +13537,570 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Cuerpos geométricos — segunda tanda.
+#
+# El temario DEMRE (Admisión 2027) acota esta unidad a tres cuerpos: área de
+# superficies y volumen de PARALELEPÍPEDOS, CUBOS y CILINDROS, más sus problemas
+# "en diversos contextos". Todo este lote se ciñe a eso.
+#
+# Nota para quien venga después: el nodo ya traía preguntas de esferas, conos y
+# pirámides, que no están en el temario de M1 (sí aparecen en otros niveles). No
+# se tocaron acá porque sacarlas es una decisión de producto, no de contenido,
+# pero conviene saber que están fuera de programa.
+#
+# El énfasis de esta tanda son los casos inversos (dar el volumen o el área y
+# pedir una medida), las unidades de capacidad --el paso de cm³ a litros es de
+# los errores más caros-- y los problemas de cuántas piezas caben.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de un cubo de 6 cm de arista?",
+        "216 cm³",
+        "En un cubo las tres dimensiones son iguales, así que el volumen es la arista elevada al cubo.\n\n"
+        "1) Multiplica la arista tres veces: 6 · 6 · 6.\n"
+        "2) Primero 6 · 6 = 36, y después 36 · 6 = 216.\n"
+        "3) El volumen es 216 cm³. Va en centímetros cúbicos porque se multiplicaron tres medidas.",
+        [
+            ("36 cm³", "Multiplicó la arista solo dos veces, que da el área de una cara."),
+            ("18 cm³", "Multiplicó la arista por 3 en lugar de elevarla al cubo."),
+            ("216 cm²", "Llegó al número correcto pero lo expresó como área; un volumen va en unidades cúbicas."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "Una caja tiene 8 cm de largo, 5 cm de ancho y 3 cm de alto. ¿Cuál es su volumen?",
+        "120 cm³",
+        "El volumen de un paralelepípedo es el producto de sus tres dimensiones.\n\n"
+        "1) Multiplica largo por ancho: 8 · 5 = 40. Esa es el área de la base.\n"
+        "2) Multiplica por la altura: 40 · 3 = 120.\n"
+        "3) El volumen es 120 cm³.",
+        [
+            ("16 cm³", "Sumó las tres dimensiones en lugar de multiplicarlas."),
+            ("158 cm³", "Calculó el área total de la caja en vez del volumen."),
+            ("40 cm³", "Se quedó en el área de la base sin multiplicar por la altura."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el área total de un cubo de 5 cm de arista?",
+        "150 cm²",
+        "El cubo tiene seis caras cuadradas iguales.\n\n"
+        "1) Área de una cara: 5 · 5 = 25 cm².\n"
+        "2) Como hay seis caras iguales: 6 · 25 = 150.\n"
+        "3) El área total es 150 cm². Va en unidades cuadradas porque es una superficie, aunque el cuerpo sea tridimensional.",
+        [
+            ("125 cm²", "Calculó el volumen del cubo en lugar de su superficie."),
+            ("25 cm²", "Se quedó con el área de una sola cara."),
+            ("30 cm²", "Multiplicó la arista por 6 en vez de multiplicar el área de una cara por 6."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de un cubo de 10 cm de arista?",
+        "1.000 cm³",
+        "Se eleva la arista al cubo.\n\n"
+        "1) Multiplica: 10 · 10 · 10.\n"
+        "2) 10 · 10 = 100, y 100 · 10 = 1.000.\n"
+        "3) El volumen es 1.000 cm³, que equivale exactamente a 1 litro.",
+        [
+            ("100 cm³", "Multiplicó la arista solo dos veces."),
+            ("30 cm³", "Multiplicó la arista por 3 en lugar de elevarla al cubo."),
+            ("600 cm³", "Calculó el área total del cubo en vez del volumen."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "Un contenedor mide 10 cm de largo, 6 cm de ancho y 4 cm de alto. ¿Cuál es su volumen?",
+        "240 cm³",
+        "Se multiplican las tres dimensiones.\n\n"
+        "1) Largo por ancho: 10 · 6 = 60 cm², el área de la base.\n"
+        "2) Por la altura: 60 · 4 = 240.\n"
+        "3) El volumen es 240 cm³.",
+        [
+            ("20 cm³", "Sumó las tres dimensiones en lugar de multiplicarlas."),
+            ("248 cm³", "Calculó el área total del contenedor en vez del volumen."),
+            ("60 cm³", "Se quedó en el área de la base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el área total de un cubo de 2 cm de arista?",
+        "24 cm²",
+        "Seis caras cuadradas iguales.\n\n"
+        "1) Área de una cara: 2 · 2 = 4 cm².\n"
+        "2) Multiplica por las seis caras: 6 · 4 = 24.\n"
+        "3) El área total es 24 cm².",
+        [
+            ("8 cm²", "Calculó el volumen del cubo en lugar de su superficie."),
+            ("12 cm²", "Multiplicó la arista por 6 en vez del área de una cara."),
+            ("4 cm²", "Se quedó con el área de una sola cara."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuántas caras tiene un paralelepípedo?",
+        "6",
+        "Un paralelepípedo es una caja: tiene tres pares de caras opuestas iguales.\n\n"
+        "1) Dos caras corresponden a la base y la tapa.\n"
+        "2) Dos son las laterales del largo.\n"
+        "3) Dos son las laterales del ancho.\n"
+        "4) En total: 2 + 2 + 2 = 6 caras. Es el mismo número que el cubo, porque el cubo es un paralelepípedo con todas sus aristas iguales.",
+        [
+            ("8", "Contó los vértices en lugar de las caras."),
+            ("12", "Contó las aristas en lugar de las caras."),
+            ("4", "Contó solo las caras laterales y olvidó la base y la tapa."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuántos vértices tiene un prisma de base triangular?",
+        "6",
+        "Un prisma tiene dos bases iguales unidas por caras laterales.\n\n"
+        "1) La base triangular tiene 3 vértices.\n"
+        "2) La otra base, también triangular, aporta otros 3.\n"
+        "3) En total: 3 + 3 = 6 vértices.",
+        [
+            ("5", "Contó las caras del prisma en lugar de los vértices."),
+            ("9", "Contó las aristas en lugar de los vértices."),
+            ("8", "Usó el número de vértices de un cubo."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "Una caja de herramientas mide 12 cm de largo, 5 cm de ancho y 3 cm de alto. ¿Cuál es su volumen?",
+        "180 cm³",
+        "Se multiplican las tres dimensiones.\n\n"
+        "1) Largo por ancho: 12 · 5 = 60 cm².\n"
+        "2) Por la altura: 60 · 3 = 180.\n"
+        "3) El volumen es 180 cm³.",
+        [
+            ("20 cm³", "Sumó las tres dimensiones."),
+            ("222 cm³", "Calculó el área total de la caja en lugar del volumen."),
+            ("60 cm³", "Se quedó en el área de la base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de un cilindro de 2 cm de radio y 5 cm de altura? (usa π ≈ 3,14)",
+        "62,8 cm³",
+        "El volumen del cilindro es el área de su base circular multiplicada por la altura.\n\n"
+        "1) Área de la base: π · r² = 3,14 · 2² = 3,14 · 4 = 12,56 cm².\n"
+        "2) Multiplica por la altura: 12,56 · 5 = 62,8.\n"
+        "3) El volumen es 62,8 cm³.",
+        [
+            ("31,4 cm³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("251,2 cm³", "Usó el diámetro en lugar del radio al calcular la base."),
+            ("12,56 cm³", "Se quedó en el área de la base sin multiplicar por la altura."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de un cilindro de 10 cm de radio y 2 cm de altura? (usa π ≈ 3,14)",
+        "628 cm³",
+        "Área de la base por altura, igual que en cualquier cilindro.\n\n"
+        "1) Área de la base: 3,14 · 10² = 3,14 · 100 = 314 cm².\n"
+        "2) Multiplica por la altura: 314 · 2 = 628.\n"
+        "3) El volumen es 628 cm³. Fíjate en que este cilindro es ancho y bajo, al revés del anterior, y aun así el procedimiento es el mismo.",
+        [
+            ("62,8 cm³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("314 cm³", "Se quedó en el área de la base sin multiplicar por la altura."),
+            ("125,6 cm³", "Calculó el área lateral en lugar del volumen."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el área lateral de un cilindro de 5 cm de radio y 10 cm de altura, es decir, la superficie curva sin contar las tapas? (usa π ≈ 3,14)",
+        "314 cm²",
+        "Si se desenrolla la superficie curva de un cilindro, queda un rectángulo.\n\n"
+        "1) La base de ese rectángulo es el contorno del círculo: 2 · π · r = 2 · 3,14 · 5 = 31,4 cm.\n"
+        "2) Su altura es la altura del cilindro: 10 cm.\n"
+        "3) Área del rectángulo: 31,4 · 10 = 314.\n"
+        "4) El área lateral es 314 cm².",
+        [
+            ("785 cm²", "Calculó el volumen del cilindro en lugar de su área lateral."),
+            ("157 cm²", "Usó el radio en vez del contorno, olvidando el factor 2 · π."),
+            ("78,5 cm²", "Calculó el área de una tapa en lugar de la superficie curva."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuántas aristas tiene un paralelepípedo?",
+        "12",
+        "Las aristas son los segmentos donde se juntan dos caras.\n\n"
+        "1) La base tiene 4 aristas.\n"
+        "2) La tapa tiene otras 4.\n"
+        "3) Y hay 4 aristas verticales que unen la base con la tapa.\n"
+        "4) En total: 4 + 4 + 4 = 12 aristas, igual que en un cubo.",
+        [
+            ("6", "Contó las caras en lugar de las aristas."),
+            ("8", "Contó los vértices en lugar de las aristas."),
+            ("4", "Contó solo las aristas de la base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Una caja mide 7 cm de largo, 4 cm de ancho y 3 cm de alto. ¿Cuál es su área total?",
+        "122 cm²",
+        "Hay tres pares de caras iguales, así que se calculan tres áreas y se duplica la suma.\n\n"
+        "1) Cara del largo por el ancho: 7 · 4 = 28 cm².\n"
+        "2) Cara del largo por el alto: 7 · 3 = 21 cm².\n"
+        "3) Cara del ancho por el alto: 4 · 3 = 12 cm².\n"
+        "4) Suma las tres y duplica, porque cada una aparece dos veces: 2 · (28 + 21 + 12) = 2 · 61 = 122 cm².",
+        [
+            ("61 cm²", "Sumó las tres caras distintas pero olvidó que cada una aparece dos veces."),
+            ("84 cm²", "Calculó el volumen de la caja en lugar de su superficie."),
+            ("28 cm²", "Se quedó con el área de una sola cara."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Una piscina rectangular mide 8 m de largo, 4 m de ancho y 1,5 m de profundidad. ¿Cuántos metros cúbicos de agua caben en ella?",
+        "48 m³",
+        "La capacidad es el volumen del paralelepípedo.\n\n"
+        "1) Área de la base: 8 · 4 = 32 m².\n"
+        "2) Multiplica por la profundidad: 32 · 1,5 = 48.\n"
+        "3) Caben 48 m³ de agua. Multiplicar por 1,5 equivale a sumar la mitad: 32 + 16 = 48.",
+        [
+            ("13,5 m³", "Sumó las tres dimensiones en lugar de multiplicarlas."),
+            ("32 m³", "Se quedó en el área de la base sin considerar la profundidad."),
+            ("100 m³", "Calculó el área total de las paredes en vez del volumen."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un estanque cilíndrico tiene 3 m de radio y 4 m de altura. ¿Cuál es su capacidad? (usa π ≈ 3,14)",
+        "113,04 m³",
+        "La capacidad de un cilindro es el área de su base por la altura.\n\n"
+        "1) Área de la base: 3,14 · 3² = 3,14 · 9 = 28,26 m².\n"
+        "2) Multiplica por la altura: 28,26 · 4 = 113,04.\n"
+        "3) La capacidad es 113,04 m³.",
+        [
+            ("37,68 m³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("452,16 m³", "Usó el diámetro en lugar del radio al calcular la base."),
+            ("28,26 m³", "Se quedó en el área de la base sin multiplicar por la altura."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un cubo tiene un volumen de 216 cm³. ¿Cuánto mide su arista?",
+        "6 cm",
+        "Es la fórmula del cubo al revés: hay que buscar el número que multiplicado tres veces por sí mismo da 216.\n\n"
+        "1) Plantea: arista³ = 216.\n"
+        "2) Prueba con valores cercanos: 5³ = 125, muy poco; 6³ = 216, exacto.\n"
+        "3) La arista mide 6 cm.\n"
+        "4) Comprueba: 6 · 6 · 6 = 216 ✓.",
+        [
+            ("72 cm", "Dividió el volumen por 3 en lugar de sacar la raíz cúbica."),
+            ("14,7 cm", "Sacó la raíz cuadrada en vez de la cúbica."),
+            ("108 cm", "Dividió el volumen por 2."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Una caja tiene un volumen de 240 cm³ y su base mide 8 cm por 5 cm. ¿Cuál es su altura?",
+        "6 cm",
+        "Se despeja la altura desde la fórmula del volumen.\n\n"
+        "1) Área de la base: 8 · 5 = 40 cm².\n"
+        "2) La relación es volumen = área de la base · altura, o sea 240 = 40 · altura.\n"
+        "3) Despeja dividiendo: altura = 240 ÷ 40 = 6 cm.\n"
+        "4) Comprueba: 8 · 5 · 6 = 240 ✓.",
+        [
+            ("30 cm", "Dividió el volumen por 8 y olvidó considerar también el ancho."),
+            ("48 cm", "Dividió el volumen por 5 y olvidó el largo."),
+            ("40 cm", "Dio el área de la base en lugar de la altura."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un cilindro tiene un volumen de 471 cm³ y una altura de 6 cm. ¿Cuál es su radio? (usa π ≈ 3,14)",
+        "5 cm",
+        "Se deshacen los pasos de la fórmula en orden inverso: primero la altura, después π, y al final el cuadrado.\n\n"
+        "1) La fórmula es volumen = π · r² · altura, así que 471 = 3,14 · r² · 6.\n"
+        "2) Multiplica lo conocido: 3,14 · 6 = 18,84. Queda 471 = 18,84 · r².\n"
+        "3) Divide: r² = 471 ÷ 18,84 = 25.\n"
+        "4) Saca la raíz cuadrada: r = √25 = 5 cm.",
+        [
+            ("25 cm", "Se quedó en el radio al cuadrado sin sacar la raíz."),
+            ("78,5 cm", "Dividió solo por la altura y no por π."),
+            ("10 cm", "Calculó el diámetro en lugar del radio."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el área total de un cilindro de 2 cm de radio y 8 cm de altura, contando las dos tapas? (usa π ≈ 3,14)",
+        "125,6 cm²",
+        "El área total suma la superficie curva y las dos tapas circulares.\n\n"
+        "1) Área de las dos tapas: 2 · π · r² = 2 · 3,14 · 4 = 25,12 cm².\n"
+        "2) Área lateral: 2 · π · r · altura = 2 · 3,14 · 2 · 8 = 100,48 cm².\n"
+        "3) Suma ambas: 25,12 + 100,48 = 125,6.\n"
+        "4) El área total es 125,6 cm².",
+        [
+            ("100,48 cm²", "Calculó solo la superficie curva y olvidó las dos tapas."),
+            ("113,04 cm²", "Contó una sola tapa en lugar de las dos."),
+            ("100,48 cm³", "Confundió el área con el volumen, tanto en el cálculo como en la unidad."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuántas cajas cúbicas de 2 cm de arista caben exactamente dentro de un contenedor de 8 cm × 6 cm × 4 cm?",
+        "24 cajas",
+        "Se comparan los volúmenes, pero conviene comprobar que las medidas calcen.\n\n"
+        "1) Volumen del contenedor: 8 · 6 · 4 = 192 cm³.\n"
+        "2) Volumen de cada caja: 2 · 2 · 2 = 8 cm³.\n"
+        "3) Divide: 192 ÷ 8 = 24.\n"
+        "4) Caben 24 cajas. La división vale acá porque 2 divide exactamente a 8, a 6 y a 4: son 4 · 3 · 2 = 24 cajas acomodadas sin dejar huecos.",
+        [
+            ("96 cajas", "Dividió por 2 en lugar de dividir por el volumen de la caja."),
+            ("12 cajas", "Dividió las medidas lineales pero solo consideró dos dimensiones."),
+            ("8 cajas", "Dio el volumen de una caja en vez de cuántas caben."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un estanque tiene forma de caja y mide 50 cm de largo, 40 cm de ancho y 30 cm de alto. ¿Cuántos litros de agua caben en él?",
+        "60 litros",
+        "Primero el volumen en centímetros cúbicos y después la conversión a litros.\n\n"
+        "1) Volumen: 50 · 40 · 30 = 60.000 cm³.\n"
+        "2) La equivalencia clave es que 1 litro son 1.000 cm³, porque un litro es exactamente un cubo de 10 cm de arista.\n"
+        "3) Divide: 60.000 ÷ 1.000 = 60.\n"
+        "4) Caben 60 litros. Confundir el factor de conversión es el error más caro de esta pregunta.",
+        [
+            ("600 litros", "Dividió por 100 en vez de por 1.000."),
+            ("6 litros", "Dividió por 10.000, que es el factor para pasar de cm² a m²."),
+            ("60.000 litros", "Dio el volumen en centímetros cúbicos sin convertirlo a litros."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "El área total de un cubo es 96 cm². ¿Cuánto mide su arista?",
+        "4 cm",
+        "Se recorre la fórmula del área al revés.\n\n"
+        "1) El área total es 6 veces el área de una cara: 96 = 6 · arista².\n"
+        "2) Divide por 6: arista² = 96 ÷ 6 = 16.\n"
+        "3) Saca la raíz cuadrada: arista = √16 = 4 cm.\n"
+        "4) Comprueba: una cara mide 4 · 4 = 16 cm², y 6 · 16 = 96 ✓.",
+        [
+            ("16 cm", "Se quedó en el área de una cara sin sacar la raíz."),
+            ("48 cm", "Dividió el área por 2 en lugar de por 6."),
+            ("9,8 cm", "Sacó la raíz cuadrada del área total sin dividir antes por 6."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Un paralelepípedo tiene base cuadrada de 5 cm de lado y una altura de 12 cm. ¿Cuál es su volumen?",
+        "300 cm³",
+        "La base es un cuadrado, así que su área se calcula elevando el lado al cuadrado.\n\n"
+        "1) Área de la base: 5 · 5 = 25 cm².\n"
+        "2) Multiplica por la altura: 25 · 12 = 300.\n"
+        "3) El volumen es 300 cm³.",
+        [
+            ("60 cm³", "Multiplicó el lado por la altura sin elevar antes el lado al cuadrado."),
+            ("22 cm³", "Sumó las medidas en lugar de multiplicarlas."),
+            ("290 cm³", "Calculó el área total del cuerpo en vez del volumen."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "Si se duplica el radio de un cilindro y se mantiene su altura, ¿por cuánto queda multiplicado su volumen?",
+        "Por 4",
+        "Conviene comprobarlo con números y después entender por qué.\n\n"
+        "1) Toma un cilindro de radio 2 y altura 5: su volumen es π · 4 · 5 = 20π.\n"
+        "2) Duplica el radio a 4, manteniendo la altura: π · 16 · 5 = 80π.\n"
+        "3) Compara: 80π ÷ 20π = 4.\n"
+        "4) La razón es que el radio aparece elevado al cuadrado en la fórmula, así que duplicarlo multiplica el volumen por 2² = 4. La altura, en cambio, aparece sin exponente: duplicarla solo duplicaría el volumen.",
+        [
+            ("Por 2", "Aplicó el factor una sola vez, como si el radio no estuviera al cuadrado."),
+            ("Por 8", "Elevó el factor al cubo, que sería el caso si se duplicaran todas las dimensiones."),
+            ("Por 6", "Sumó los efectos en lugar de aplicar el exponente."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "¿Cuál es el área total de un paralelepípedo de 10 cm de largo, 6 cm de ancho y 4 cm de alto?",
+        "248 cm²",
+        "Tres pares de caras iguales: se calculan las tres distintas y se duplica la suma.\n\n"
+        "1) Largo por ancho: 10 · 6 = 60 cm².\n"
+        "2) Largo por alto: 10 · 4 = 40 cm².\n"
+        "3) Ancho por alto: 6 · 4 = 24 cm².\n"
+        "4) Suma y duplica: 2 · (60 + 40 + 24) = 2 · 124 = 248 cm².",
+        [
+            ("124 cm²", "Sumó las tres caras distintas pero olvidó duplicar."),
+            ("240 cm²", "Calculó el volumen del cuerpo en lugar de su superficie."),
+            ("120 cm²", "Duplicó solo la cara mayor y no consideró las otras dos."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un cubo de 8 cm de arista está lleno de agua. Si toda esa agua se vacía en una caja de base rectangular de 16 cm por 8 cm, ¿qué altura alcanza el agua?",
+        "4 cm",
+        "El agua cambia de forma pero no de volumen: esa es la idea que resuelve el problema.\n\n"
+        "1) Volumen del agua, que es el del cubo: 8 · 8 · 8 = 512 cm³.\n"
+        "2) Área de la base de la caja: 16 · 8 = 128 cm².\n"
+        "3) En la caja, el agua forma un paralelepípedo de esa base: 512 = 128 · altura.\n"
+        "4) Despeja: altura = 512 ÷ 128 = 4 cm.\n"
+        "5) Tiene sentido que baje: la base de la caja es el doble de ancha que la del cubo, así que el agua llega a la mitad de la altura.",
+        [
+            ("8 cm", "Supuso que el agua conserva la altura que tenía en el cubo."),
+            ("2 cm", "Dividió el volumen por 256, duplicando el área de la base sin motivo."),
+            ("32 cm", "Dividió el volumen solo por 16, olvidando el ancho de la base."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un cilindro tiene un volumen de 1.256 cm³ y un radio de 10 cm. ¿Cuál es su altura? (usa π ≈ 3,14)",
+        "4 cm",
+        "Se despeja la altura desde la fórmula del volumen.\n\n"
+        "1) Área de la base: 3,14 · 10² = 3,14 · 100 = 314 cm².\n"
+        "2) La relación es volumen = área de la base · altura: 1.256 = 314 · altura.\n"
+        "3) Divide: altura = 1.256 ÷ 314 = 4 cm.\n"
+        "4) Comprueba: 314 · 4 = 1.256 ✓.",
+        [
+            ("40 cm", "Dividió el volumen por π · r en vez de por π · r²."),
+            ("125,6 cm", "Dividió solo por el radio y no por el área de la base."),
+            ("400 cm", "Dividió por π sin considerar el radio."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Si se duplican el largo, el ancho y el alto de una caja, ¿por cuánto queda multiplicado su volumen?",
+        "Por 8",
+        "Conviene probarlo con un caso concreto antes de generalizar.\n\n"
+        "1) Toma una caja de 2 × 3 × 4: su volumen es 24.\n"
+        "2) Duplica las tres dimensiones: queda de 4 × 6 × 8, con volumen 192.\n"
+        "3) Compara: 192 ÷ 24 = 8.\n"
+        "4) La razón general: el volumen es el producto de las tres dimensiones, y cada una se multiplicó por 2, así que el volumen queda multiplicado por 2 · 2 · 2 = 8.",
+        [
+            ("Por 2", "Aplicó el factor una sola vez, como si el volumen dependiera de una sola dimensión."),
+            ("Por 4", "Aplicó el factor dos veces, que es lo que corresponde a una superficie y no a un volumen."),
+            ("Por 6", "Sumó los efectos de las tres dimensiones en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un cubo de 6 cm de arista se corta en cubitos de 2 cm de arista. ¿Cuántos cubitos se obtienen?",
+        "27 cubitos",
+        "Se puede resolver por volúmenes o contando cuántos caben en cada dirección; conviene ver que dan lo mismo.\n\n"
+        "1) Volumen del cubo grande: 6 · 6 · 6 = 216 cm³.\n"
+        "2) Volumen de cada cubito: 2 · 2 · 2 = 8 cm³.\n"
+        "3) Divide: 216 ÷ 8 = 27 cubitos.\n"
+        "4) Comprobación por filas: en cada arista caben 6 ÷ 2 = 3 cubitos, así que son 3 · 3 · 3 = 27 ✓.",
+        [
+            ("3 cubitos", "Dividió solo las aristas y no consideró las tres dimensiones."),
+            ("9 cubitos", "Consideró solo dos dimensiones, como si cortara una lámina y no un cuerpo."),
+            ("108 cubitos", "Dividió el volumen por 2 en lugar de por el volumen del cubito."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Se quiere pintar por fuera una caja sin tapa que mide 5 cm de largo, 4 cm de ancho y 3 cm de alto. Si pintar cuesta $200 por centímetro cuadrado, ¿cuánto cuesta pintarla?",
+        "$14.800",
+        "Lo delicado acá es no contar la tapa, que no existe.\n\n"
+        "1) Base: 5 · 4 = 20 cm². Va una sola vez, porque no hay tapa.\n"
+        "2) Las dos caras del largo: 2 · (5 · 3) = 30 cm².\n"
+        "3) Las dos caras del ancho: 2 · (4 · 3) = 24 cm².\n"
+        "4) Superficie a pintar: 20 + 30 + 24 = 74 cm².\n"
+        "5) Costo: 74 · 200 = 14.800. Pintarla cuesta $14.800.",
+        [
+            ("$18.800", "Contó también la tapa, que la caja no tiene."),
+            ("$12.000", "Calculó el volumen y lo multiplicó por el precio, mezclando unidades."),
+            ("$10.800", "Olvidó la base y pintó solo las cuatro caras laterales."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Una lata cilíndrica cerrada tiene 5 cm de radio y 8 cm de altura. ¿Cuánta lámina se necesita para fabricarla, contando la tapa y el fondo? (usa π ≈ 3,14)",
+        "408,2 cm²",
+        "La lámina cubre la superficie curva más los dos círculos.\n\n"
+        "1) Área de las dos tapas: 2 · π · r² = 2 · 3,14 · 25 = 157 cm².\n"
+        "2) Área lateral, que es el rectángulo que se forma al desenrollar el costado: 2 · π · r · altura = 2 · 3,14 · 5 · 8 = 251,2 cm².\n"
+        "3) Suma: 157 + 251,2 = 408,2.\n"
+        "4) Se necesitan 408,2 cm² de lámina.",
+        [
+            ("251,2 cm²", "Calculó solo la superficie curva y olvidó la tapa y el fondo."),
+            ("329,7 cm²", "Contó una sola tapa en lugar de las dos."),
+            ("628 cm²", "Calculó el volumen de la lata en lugar de su superficie."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un paralelepípedo tiene base cuadrada de 4 cm de lado y un área total de 160 cm². ¿Cuál es su volumen?",
+        "128 cm³",
+        "Primero hay que encontrar la altura desde el área, y recién entonces calcular el volumen.\n\n"
+        "1) La base y la tapa son cuadrados de 4 cm: aportan 2 · (4 · 4) = 32 cm².\n"
+        "2) Las cuatro caras laterales son rectángulos de 4 cm por la altura: aportan 4 · (4 · h) = 16h.\n"
+        "3) El área total es la suma: 32 + 16h = 160, de donde 16h = 128 y h = 8 cm.\n"
+        "4) Ahora el volumen: área de la base por altura = 16 · 8 = 128 cm³.",
+        [
+            ("640 cm³", "Usó el área total como si fuera el área de la base."),
+            ("160 cm³", "Confundió el área total con el volumen."),
+            ("8 cm³", "Se quedó con la altura, que era el paso intermedio."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un bidón cilíndrico tiene 20 cm de radio y 50 cm de altura. ¿Cuántos litros de líquido caben en él? (usa π ≈ 3,14)",
+        "62,8 litros",
+        "Primero el volumen en centímetros cúbicos y después la conversión.\n\n"
+        "1) Área de la base: 3,14 · 20² = 3,14 · 400 = 1.256 cm².\n"
+        "2) Volumen: 1.256 · 50 = 62.800 cm³.\n"
+        "3) Como 1 litro equivale a 1.000 cm³, divide: 62.800 ÷ 1.000 = 62,8.\n"
+        "4) Caben 62,8 litros.",
+        [
+            ("628 litros", "Dividió por 100 en lugar de por 1.000."),
+            ("62.800 litros", "Dio el resultado en centímetros cúbicos sin convertirlo a litros."),
+            ("6,28 litros", "Dividió por 10.000, que es el factor entre cm² y m², no el de capacidad."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Si la arista de un cubo aumenta en un 50%, ¿en qué porcentaje aumenta su volumen?",
+        "237,5%",
+        "Conviene tomar una arista cualquiera, porque el resultado no depende de su valor.\n\n"
+        "1) Toma arista 2: el volumen es 8.\n"
+        "2) Aumentar 50% es multiplicar por 1,5, así que la nueva arista es 3 y el nuevo volumen es 27.\n"
+        "3) La razón entre los volúmenes es 27 ÷ 8 = 3,375, es decir, el volumen nuevo es el 337,5% del original.\n"
+        "4) El aumento es lo que se agregó: 337,5% − 100% = 237,5%. Responder 337,5% es el error clásico: eso es el total, no el aumento.",
+        [
+            ("337,5%", "Dio el porcentaje que representa el volumen nuevo respecto del original, no cuánto aumentó."),
+            ("150%", "Aplicó al volumen el mismo porcentaje que a la arista, sin elevar el factor al cubo."),
+            ("125%", "Elevó el factor al cuadrado en lugar de al cubo, que es lo que corresponde a un área."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Una caja mide 30 cm × 20 cm × 15 cm y se quiere llenar completamente con cubos de 5 cm de arista. ¿Cuántos cubos se necesitan?",
+        "72 cubos",
+        "Se comparan los volúmenes, después de verificar que los cubos calcen sin dejar huecos.\n\n"
+        "1) Volumen de la caja: 30 · 20 · 15 = 9.000 cm³.\n"
+        "2) Volumen de cada cubo: 5 · 5 · 5 = 125 cm³.\n"
+        "3) Divide: 9.000 ÷ 125 = 72 cubos.\n"
+        "4) La división es válida porque 5 divide exactamente a 30, a 20 y a 15: caben 6 · 4 · 3 = 72 cubos, sin cortar ninguno.",
+        [
+            ("1.800 cubos", "Dividió por 5 en lugar de por el volumen del cubo."),
+            ("24 cubos", "Consideró solo dos de las tres dimensiones al contar."),
+            ("13 cubos", "Dividió las medidas lineales y sumó los resultados en vez de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "Un estanque cilíndrico de 2 m de radio y 5 m de altura está lleno hasta las tres quintas partes de su capacidad. ¿Cuántos metros cúbicos de agua contiene? (usa π ≈ 3,14)",
+        "37,68 m³",
+        "Primero la capacidad total y después la fracción que está ocupada.\n\n"
+        "1) Área de la base: 3,14 · 2² = 3,14 · 4 = 12,56 m².\n"
+        "2) Capacidad total: 12,56 · 5 = 62,8 m³.\n"
+        "3) Tres quintas partes significa multiplicar por 3/5: 62,8 · 3 ÷ 5.\n"
+        "4) Calcula: 62,8 · 3 = 188,4, y 188,4 ÷ 5 = 37,68 m³.",
+        [
+            ("62,8 m³", "Dio la capacidad total del estanque sin aplicar la fracción."),
+            ("25,12 m³", "Calculó las dos quintas partes, es decir, la parte vacía."),
+            ("12,56 m³", "Se quedó en el área de la base sin multiplicar por la altura."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
