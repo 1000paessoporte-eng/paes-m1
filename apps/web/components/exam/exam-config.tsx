@@ -17,21 +17,23 @@ const FORMATOS = [
 ] as const;
 
 /**
- * Pruebas PAES. M1 y M2 ya tienen banco de preguntas; las demás se muestran
- * para que quede claro que la plataforma las va a cubrir, pero deshabilitadas
- * hasta que tengan contenido.
+ * Las cinco pruebas PAES. Todas tienen banco, aunque de tamaños muy distintos:
+ * matemática es la más grande y las otras tres van creciendo.
  */
-const PRUEBAS: { id: Subject | "lectora" | "historia" | "ciencias"; nombre: string; disponible: boolean }[] = [
-  { id: "lectora", nombre: "Competencia Lectora", disponible: false },
+const PRUEBAS: { id: Subject; nombre: string; disponible: boolean }[] = [
+  { id: "lectora", nombre: "Competencia Lectora", disponible: true },
   { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
   { id: "m2", nombre: "Competencia Matemática M2", disponible: true },
-  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: false },
-  { id: "ciencias", nombre: "Ciencias", disponible: false },
+  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: true },
+  { id: "ciencias", nombre: "Ciencias", disponible: true },
 ];
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
+  lectora: "Competencia Lectora",
   m1: "Competencia Matemática M1",
   m2: "Competencia Matemática M2",
+  ciencias: "Ciencias",
+  historia: "Historia y Ciencias Sociales",
 };
 
 const RITMOS: Pace[] = ["oficial", "exigente", "relajado"];
@@ -58,10 +60,47 @@ function formatearDuracionLarga(segundos: number): string {
   return `${h} h ${m} min`;
 }
 
+/**
+ * Un paso de la configuración: número, título y su contenido.
+ *
+ * Existe para que los cuatro pasos se vean iguales y ocupen lo mismo. Antes
+ * cada sección repetía su encabezado con clases propias y ninguno quedaba
+ * alineado con el siguiente.
+ */
+function Paso({
+  numero,
+  titulo,
+  ayuda,
+  children,
+}: {
+  numero: number;
+  titulo: string;
+  ayuda?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="mb-6">
+      <div className="mb-3 flex items-baseline gap-2">
+        <span
+          className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-surface-hover text-xs font-bold tabular-nums text-muted"
+          aria-hidden
+        >
+          {numero}
+        </span>
+        <h2 className="font-semibold tracking-tight">{titulo}</h2>
+        {ayuda && <span className="text-xs text-muted">{ayuda}</span>}
+      </div>
+      {children}
+    </section>
+  );
+}
+
 interface Props {
   optionsBySubject: Record<Subject, ExamOptions>;
   repasoBySubject: Record<Subject, Repaso>;
   ensayosRendidos: number;
+  //: Cuota del mes cuando el plan la tiene. `null` = sin límite.
+  cuota?: { usados: number; limite: number | null; activa: boolean } | null;
   resumable: { attemptId: number; subject: Subject } | null;
   errorMsg: string | null;
   onComenzar: (config: ExamConfig) => void;
@@ -72,6 +111,7 @@ export function ExamConfigScreen({
   optionsBySubject,
   repasoBySubject,
   ensayosRendidos,
+  cuota,
   resumable,
   errorMsg,
   onComenzar,
@@ -109,7 +149,9 @@ export function ExamConfigScreen({
   }
 
   return (
-    <div className="mx-auto max-w-3xl">
+    // El pb en móvil reserva el alto de la barra de resumen, que va fija
+    // sobre el contenido. En escritorio la barra no es fija y no hace falta.
+    <div className="mx-auto max-w-3xl pb-36 sm:pb-0">
       <header className="mb-10">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-sm font-medium text-accent">
@@ -186,24 +228,20 @@ export function ExamConfigScreen({
       )}
 
       {/* ── Prueba ──────────────────────────────────────────────────── */}
-      <section className="mb-8">
-        <h2 className="mb-1 text-sm font-semibold tracking-wide text-muted uppercase">
-          1. Prueba
-        </h2>
-        <p className="mb-3 text-sm text-muted">
-          Vamos a cubrir las cinco pruebas PAES. Hoy Competencia Matemática M1
-          y M2 tienen ensayos disponibles.
-        </p>
+      {/* Cada chip trae su cantidad de preguntas disponibles: sin ese número
+          hay que elegir una prueba, mirar más abajo y volver, para descubrir
+          que su banco no alcanzaba. */}
+      <Paso numero={1} titulo="¿Qué prueba?">
         <div className="flex flex-wrap gap-2">
           {PRUEBAS.map((prueba) => {
             const activa = prueba.disponible && prueba.id === subject;
+            const disponibles = optionsBySubject[prueba.id].total_available;
             return (
               <button
                 key={prueba.id}
                 type="button"
                 disabled={!prueba.disponible}
                 aria-pressed={activa}
-                title={prueba.disponible ? undefined : "Próximamente"}
                 onClick={() => {
                   if (prueba.disponible) {
                     setSubject(prueba.id as Subject);
@@ -214,30 +252,46 @@ export function ExamConfigScreen({
                   "rounded-full border px-3.5 py-1.5 text-sm transition disabled:cursor-not-allowed",
                   activa
                     ? "border-accent bg-accent text-accent-foreground"
-                    : prueba.disponible
-                      ? "border-border bg-surface hover:border-border-strong"
-                      : "border-border bg-surface text-muted opacity-60"
+                    : "border-border bg-surface hover:border-border-strong"
                 )}
               >
                 {prueba.nombre}
-                {!prueba.disponible && (
-                  <span className="ml-1.5 text-xs">· Próximamente</span>
-                )}
+                <span className={activa ? "opacity-80" : "text-muted"}>
+                  {" "}
+                  ({disponibles})
+                </span>
               </button>
             );
           })}
         </div>
-      </section>
+      </Paso>
 
       {/* ── Ejes temáticos ──────────────────────────────────────────── */}
-      <section className="mb-8">
-        <h2 className="mb-1 text-sm font-semibold tracking-wide text-muted uppercase">
-          2. Ejes temáticos
-        </h2>
-        <p className="mb-3 text-sm text-muted">
-          Sin selección se incluyen todos, repartidos proporcionalmente.
-        </p>
+      <Paso
+        numero={2}
+        titulo="¿Qué temas?"
+        ayuda="Elige uno o varios para reforzar algo puntual."
+      >
         <div className="flex flex-wrap gap-2">
+          {/* "Todos" es un botón y no la ausencia de selección: el estado por
+              defecto tiene que verse elegido, no vacío. */}
+          <button
+            type="button"
+            onClick={() => setEjes([])}
+            aria-pressed={ejes.length === 0}
+            className={cn(
+              "rounded-full border px-3.5 py-1.5 text-sm font-medium transition",
+              ejes.length === 0
+                ? "border-accent bg-accent text-accent-foreground"
+                : "border-border bg-surface hover:border-border-strong"
+            )}
+          >
+            Todos los temas
+            <span className={ejes.length === 0 ? "opacity-80" : "text-muted"}>
+              {" "}
+              ({options.total_available})
+            </span>
+          </button>
           {options.axes.map((eje) => {
             const activo = ejes.includes(eje.axis);
             return (
@@ -263,13 +317,10 @@ export function ExamConfigScreen({
             );
           })}
         </div>
-      </section>
+      </Paso>
 
       {/* ── Formato del ensayo ──────────────────────────────────────── */}
-      <section className="mb-8">
-        <h2 className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">
-          3. ¿Cuántas preguntas?
-        </h2>
+      <Paso numero={3} titulo="¿Cuántas preguntas?">
         <div className="grid gap-2 sm:grid-cols-3">
           {FORMATOS.map((f) => {
             const alcanza = f.cantidad <= maxDisponible;
@@ -293,7 +344,9 @@ export function ExamConfigScreen({
                 </span>
                 <span className="mt-0.5 block text-xs text-muted">
                   {alcanza
-                    ? f.detalle
+                    ? `${f.detalle} · ${formatearDuracionLarga(
+                        options.seconds_per_question * f.cantidad * FACTOR_RITMO[ritmo]
+                      )}`
                     : `Faltan ${f.cantidad - maxDisponible} preguntas en el banco`}
                 </span>
               </button>
@@ -320,54 +373,91 @@ export function ExamConfigScreen({
               <span className="text-sm font-semibold">Todas las disponibles</span>
             </span>
             <span className="mt-0.5 block text-xs text-muted">
-              Es lo que hay en el banco con los ejes que elegiste
+              Es lo que hay en el banco con los temas que elegiste ·{" "}
+              {formatearDuracionLarga(
+                options.seconds_per_question * maxDisponible * FACTOR_RITMO[ritmo]
+              )}
             </span>
           </button>
         )}
-      </section>
+      </Paso>
 
-      {/* ── Ritmo ───────────────────────────────────────────────────── */}
-      <section className="mb-8">
-        <h2 className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">
-          4. Ritmo
-        </h2>
+      {/* ── Tiempo ──────────────────────────────────────────────────── */}
+      {/* El estudiante elige TIEMPO, no "ritmo": cada opción muestra los
+          minutos que va a durar su ensayo, que es la decisión real. El nombre
+          del ritmo pasa a ser la explicación, no la etiqueta. */}
+      <Paso numero={4} titulo="¿Con cuánto tiempo?">
         <div className="grid gap-2 sm:grid-cols-3">
-          {RITMOS.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => setRitmo(r)}
-              aria-pressed={ritmo === r}
-              className={cn(
-                "rounded-lg border p-3 text-left text-sm transition",
-                ritmo === r
-                  ? "border-accent bg-accent/5"
-                  : "border-border bg-surface hover:border-border-strong"
-              )}
-            >
-              <span className="block font-semibold capitalize">{r}</span>
-              <span className="mt-0.5 block text-xs text-muted">
-                {DESCRIPCION_RITMO[r]}
-              </span>
-            </button>
-          ))}
+          {RITMOS.map((r) => {
+            const minutos = formatearDuracionLarga(
+              options.seconds_per_question * cantidadEfectiva * FACTOR_RITMO[r]
+            );
+            return (
+              <button
+                key={r}
+                type="button"
+                onClick={() => setRitmo(r)}
+                aria-pressed={ritmo === r}
+                className={cn(
+                  "rounded-lg border p-3 text-left text-sm transition",
+                  ritmo === r
+                    ? "border-accent bg-accent/5 ring-1 ring-accent"
+                    : "border-border bg-surface hover:border-border-strong"
+                )}
+              >
+                <span className="flex items-baseline gap-2">
+                  <span className="text-lg font-bold tabular-nums">{minutos}</span>
+                  <span className="text-xs font-semibold capitalize text-muted">
+                    {r}
+                  </span>
+                </span>
+                <span className="mt-0.5 block text-xs text-muted">
+                  {DESCRIPCION_RITMO[r]}
+                </span>
+              </button>
+            );
+          })}
         </div>
-      </section>
+      </Paso>
 
       {/* ── Resumen y comienzo ──────────────────────────────────────── */}
-      <div className="rounded-xl border border-border bg-surface p-5">
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <span className="text-muted">
-            {cantidadEfectiva} preguntas de{" "}
-            <strong className="text-foreground">
-              {PRUEBAS.find((p) => p.id === subject)?.nombre}
-            </strong>
+      {/* Pegado al borde inferior: el resumen cambia con cada elección, y si
+          hay que bajar hasta el final para verlo, nadie relaciona lo que tocó
+          con lo que salió. */}
+      {/* Fija solo en móvil: ahí la pantalla es corta y el resumen queda
+          fuera de vista mientras se elige. En escritorio todo entra junto y
+          una barra flotante solo taparía opciones. */}
+      <div className="glass fixed inset-x-0 bottom-0 z-20 border-t border-border px-4 py-4 sm:static sm:mt-2 sm:rounded-xl sm:border sm:bg-surface sm:px-5">
+        <div className="flex items-baseline justify-between gap-3">
+          {/* En móvil el resumen va en una línea. El nombre largo de la prueba
+              se omite ahí: ya está elegido y visible más arriba, y en dos
+              líneas la barra crecía tanto que tapaba las opciones. */}
+          <span className="min-w-0 truncate text-sm text-muted sm:text-base">
+            <strong className="text-foreground tabular-nums">
+              {cantidadEfectiva}
+            </strong>{" "}
+            preguntas
+            <span className="hidden sm:inline">
+              {" "}
+              de{" "}
+              <strong className="text-foreground">
+                {PRUEBAS.find((p) => p.id === subject)?.nombre}
+              </strong>
+            </span>
+            {ejes.length > 0 && (
+              <span>
+                {" "}
+                · {ejes.length} {ejes.length === 1 ? "tema" : "temas"}
+              </span>
+            )}
           </span>
-          <span className="text-2xl font-bold tabular-nums">
+          <span className="shrink-0 text-xl font-bold tabular-nums sm:text-2xl">
             {formatearDuracionLarga(duracion)}
           </span>
         </div>
-        <p className="mt-1 text-sm text-muted">
+        {/* El detalle de la razón oficial se oculta en móvil: es contexto
+            útil, no la decisión, y ahí compite por el espacio del botón. */}
+        <p className="mt-1 hidden text-sm text-muted sm:block">
           La prueba oficial da {Math.floor(segPregunta / 60)} min{" "}
           {Math.round(segPregunta % 60)} s por pregunta
           {ritmo !== "oficial" && ", y este ritmo lo ajusta"}.
@@ -383,11 +473,49 @@ export function ExamConfigScreen({
               axes: ejes,
             })
           }
-          className="btn-glow mt-4 w-full rounded-lg px-4 py-3 font-semibold text-accent-foreground"
+          className="btn-glow mt-2.5 w-full rounded-lg px-4 py-3 font-semibold text-accent-foreground sm:mt-3"
         >
           Comenzar ensayo
         </button>
       </div>
+
+      {cuota?.limite != null && (() => {
+        const restantes = Math.max(0, cuota.limite - cuota.usados);
+        const sinCupo = restantes === 0;
+        return (
+          <div
+            className={
+              "mt-4 rounded-lg border p-3 text-center text-xs leading-relaxed " +
+              (sinCupo
+                ? "border-accent-warm/40 bg-accent-warm/5"
+                : "border-border")
+            }
+          >
+            {sinCupo ? (
+              <>
+                <strong className="text-accent-warm-strong">
+                  Usaste tus {cuota.limite} ensayos de este mes.
+                </strong>{" "}
+                {cuota.activa ? (
+                  <>
+                    Con el plan Pro son ilimitados.{" "}
+                    <Link href="/planes" className="font-medium text-accent hover:underline">
+                      Ver planes
+                    </Link>
+                  </>
+                ) : (
+                  "Por ahora puedes seguir rindiendo igual."
+                )}
+              </>
+            ) : (
+              <>
+                Te quedan <strong>{restantes}</strong> de {cuota.limite} ensayos
+                este mes en el plan Gratis.
+              </>
+            )}
+          </div>
+        );
+      })()}
 
       {ensayosRendidos > 0 && (
         <Link

@@ -34,6 +34,35 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
     smtp_from: str = "1000paes <no-responder@1000paes.cl>"
+    #: Cuántos ensayos al mes permite el plan Gratis. Va por entorno porque
+    #: es una palanca de negocio que conviene poder mover mirando la
+    #: conversión: bajarlo aprieta y sube el incentivo a comprar, subirlo deja
+    #: probar más antes de decidir. Encontrar el número correcto es cuestión de
+    #: prueba y error, y no debería costar un despliegue cada vez.
+    ensayos_gratis_por_mes: int = 4
+    #: Si los límites del plan Gratis bloquean de verdad. Va por entorno y no
+    #: en el código para que encenderlos no exija un despliegue: el día que el
+    #: cobro funcione se cambia la variable y listo. Arranca APAGADO a
+    #: propósito, porque cortarle los ensayos a alguien antes de que exista la
+    #: forma de pagar es dejarlo sin salida.
+    limites_activos: bool = False
+    #: Origen público de esta API. Flow necesita una URL alcanzable desde
+    #: internet para avisar que un pago se completó, y esa URL no puede
+    #: derivarse de la petición del usuario: la fija el despliegue.
+    api_url: str = "http://localhost:8000"
+    #: Credenciales de Flow, la pasarela de pago. Vacías desactivan el cobro
+    #: por completo: la API rechaza /plan/pagar y la web no muestra el botón.
+    #: Nunca van al repo —es público—: se cargan como variables de entorno.
+    flow_api_key: str = ""
+    flow_secret_key: str = ""
+    #: Sandbox mientras se prueba, producción cuando se cobra de verdad. El
+    #: valor por defecto es el de pruebas a propósito: si alguien despliega sin
+    #: configurarlo, cobra en un ambiente falso en vez de cobrarle a una
+    #: persona real.
+    flow_base_url: str = "https://sandbox.flow.cl/api"
+    #: Secreto compartido con el cron que dispara los recordatorios. Vacío deja
+    #: el endpoint cerrado: sin él no hay forma de gatillar correos masivos.
+    cron_secret: str = ""
     cors_origins: list[str] = [
         "http://localhost:3000",
         "http://192.168.1.11:3000",

@@ -76,8 +76,10 @@ async function apiFetch<T>(path: string, token?: string, init?: RequestInit): Pr
   const res = await fetch(`${API_URL}${path}`, {
     ...init,
     headers,
-    // El árbol de habilidades y el examen cambian por intento; no cachear.
-    cache: "no-store",
+    // Por defecto no se cachea: el árbol de habilidades y el examen cambian
+    // por intento. Quien tenga un dato que sí sirva cacheado (las cifras
+    // públicas del banco) lo pide explícitamente en su `init`.
+    cache: init?.cache ?? "no-store",
   });
   if (!res.ok) {
     const detail = await res
@@ -102,8 +104,151 @@ export type PracticeQuestion = PracticeStart["questions"][number];
 export type PracticeAnswerResult =
   paths["/api/practice/{code}/answer"]["post"]["responses"][200]["content"]["application/json"];
 
-export function getSkillTree(token?: string): Promise<SkillNode[]> {
-  return apiFetch<SkillNode[]>("/api/skill-tree", token);
+export type ContentStats =
+  paths["/api/questions/stats"]["get"]["responses"][200]["content"]["application/json"];
+
+/**
+ * Cifras del banco para la portada.
+ *
+ * Se cachean una hora: el banco no crece cada minuto y la portada es la página
+ * más visitada del sitio. Si la API no responde, quien llama recibe el error y
+ * decide — la portada prefiere no mostrar el dato antes que mostrar uno viejo
+ * escrito a mano.
+ */
+export function getContentStats(): Promise<ContentStats> {
+  return apiFetch<ContentStats>("/api/questions/stats", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 3600 },
+  });
+}
+
+export type Lesson =
+  paths["/api/skill-tree/{code}/leccion"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getSkillTree(
+  token?: string,
+  subject: string = "m1"
+): Promise<SkillNode[]> {
+  return apiFetch<SkillNode[]>(`/api/skill-tree?subject=${subject}`, token);
+}
+
+export type Carrera =
+  paths["/api/meta/carreras"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export type Meta = paths["/api/meta"]["get"]["responses"][200]["content"]["application/json"];
+export type Postulacion = Meta["postulaciones"][number];
+
+export function buscarCarreras(q: string, token?: string): Promise<Carrera[]> {
+  return apiFetch<Carrera[]>(`/api/meta/carreras?q=${encodeURIComponent(q)}`, token);
+}
+
+export function getMeta(token?: string): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta", token);
+}
+
+const JSON_HEADERS = { "Content-Type": "application/json" };
+
+export function agregarPostulacion(carrera_id: number, token?: string): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta/postulaciones", token, {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ carrera_id }),
+  });
+}
+
+export function quitarPostulacion(carrera_id: number, token?: string): Promise<Meta> {
+  return apiFetch<Meta>(`/api/meta/postulaciones/${carrera_id}`, token, {
+    method: "DELETE",
+  });
+}
+
+export function reordenarPostulaciones(
+  carrera_ids: number[],
+  token?: string
+): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta/orden", token, {
+    method: "PUT",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ carrera_ids }),
+  });
+}
+
+export function guardarNotas(
+  payload: { puntaje_nem: number | null; puntaje_ranking: number | null },
+  token?: string
+): Promise<Meta> {
+  return apiFetch<Meta>("/api/meta/notas", token, {
+    method: "PUT",
+    headers: JSON_HEADERS,
+    body: JSON.stringify(payload),
+  });
+}
+
+export type MiPlan = paths["/api/plan"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getMiPlan(token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan", token);
+}
+
+export type Productos =
+  paths["/api/plan/productos"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getProductos(): Promise<Productos> {
+  return apiFetch<Productos>("/api/plan/productos");
+}
+
+/** Devuelve la URL de Flow a la que hay que enviar al usuario. */
+export function iniciarPago(
+  producto: string,
+  token?: string
+): Promise<{ url: string; orden: string }> {
+  return apiFetch("/api/plan/pagar", token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ producto }),
+  });
+}
+
+export function canjearCodigo(codigo: string, token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan/canjear", token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ codigo }),
+  });
+}
+
+export type Onboarding =
+  paths["/api/auth/onboarding"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getOnboarding(token?: string): Promise<Onboarding> {
+  return apiFetch<Onboarding>("/api/auth/onboarding", token);
+}
+
+export function guardarOnboarding(
+  payload: {
+    pruebas_objetivo: string[];
+    curso: string | null;
+    primera_vez: boolean | null;
+    puntaje_anterior: number | null;
+    horas_semana: number | null;
+  },
+  token?: string
+): Promise<Onboarding> {
+  return apiFetch<Onboarding>("/api/auth/onboarding", token, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+}
+
+/** Un nodo con el progreso del estudiante. */
+export function getSkillNode(code: string, token?: string): Promise<SkillNode> {
+  return apiFetch<SkillNode>(`/api/skill-tree/${code}`, token);
+}
+
+/** La teoría de un nodo. Lanza ApiError 404 si el tema aún no tiene lección. */
+export function getLesson(code: string, token?: string): Promise<Lesson> {
+  return apiFetch<Lesson>(`/api/skill-tree/${code}/leccion`, token);
 }
 
 export function getRecommendedNode(token?: string): Promise<RecommendedNode> {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Política de privacidad — 1000paes",
+  title: "Política de privacidad",
 };
 
 export default function PrivacidadPage() {

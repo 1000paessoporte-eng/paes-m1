@@ -5,14 +5,16 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } from "@/lib/auth";
+import { TemaToggle } from "@/components/tema-toggle";
 
 // Menú de la aplicación: solo tiene sentido con la sesión iniciada, porque
 // todas estas rutas exigen autenticación.
 const NAV_ITEMS = [
   { href: "/panel", label: "Inicio" },
-  { href: "/arbol", label: "Árbol de Habilidades" },
-  { href: "/examen", label: "Modo Ensayo" },
-  { href: "/historial", label: "Mi progreso" },
+  { href: "/arbol", label: "Árbol" },
+  { href: "/examen", label: "Ensayos" },
+  { href: "/meta", label: "Mi meta" },
+  { href: "/historial", label: "Progreso" },
   { href: "/analitica", label: "Analítica" },
 ] as const;
 
@@ -63,11 +65,11 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+    <header className="glass sticky top-0 z-50">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href={user ? "/panel" : "/"} className="flex items-center gap-2">
           <span
-            className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-white"
+            className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-accent-foreground"
             style={{
               background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
             }}
@@ -77,7 +79,7 @@ export function SiteHeader() {
           <span className="text-sm font-semibold tracking-tight">1000paes</span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -98,11 +100,12 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
+          <TemaToggle />
           {user ? (
             <>
               <Link href="/perfil" className="text-sm text-muted hover:text-foreground">
-                Hola, <span className="text-foreground">{user.name}</span>
+                Hola, <span className="text-foreground">{user.name.split(" ")[0]}</span>
               </Link>
               <button
                 onClick={handleLogout}
@@ -126,7 +129,7 @@ export function SiteHeader() {
           aria-label="Abrir menú"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-surface-hover md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-surface-hover lg:hidden"
         >
           <svg
             width="18"
@@ -147,7 +150,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-border px-4 py-3 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-border px-4 py-3 lg:hidden">
           {navItems.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -167,6 +170,10 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <div className="mt-2 flex items-center justify-between border-t border-border px-3 pt-3">
+            <span className="text-sm text-muted">Tema</span>
+            <TemaToggle />
+          </div>
           {user ? (
             <button
               onClick={handleLogout}

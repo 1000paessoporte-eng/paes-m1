@@ -120,9 +120,9 @@ function NodoRuta({
         <span
           className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 text-[10px] font-bold ${
             dominado
-              ? "border-success bg-success text-white"
+              ? "border-success bg-success text-on-fill"
               : sugerido
-                ? "border-accent-warm bg-accent-warm text-white"
+                ? "border-accent-warm bg-accent-warm text-on-fill"
                 : bloqueado
                   ? "border-border-strong bg-background text-muted"
                   : "border-accent bg-background text-accent"
@@ -163,10 +163,10 @@ function NodoRuta({
 
         {sugerido && !bloqueado && (
           <Link
-            href={`/practicar/${nodo.code}`}
+            href={nodo.has_lesson ? `/aprender/${nodo.code}` : `/practicar/${nodo.code}`}
             className="mt-2 inline-flex rounded-lg border border-accent-warm/40 px-3 py-1.5 text-xs font-semibold text-accent-warm-strong transition-colors hover:bg-accent-warm/5"
           >
-            Practicar este tema →
+            {nodo.has_lesson ? "Estudiar este tema →" : "Practicar este tema →"}
           </Link>
         )}
       </div>

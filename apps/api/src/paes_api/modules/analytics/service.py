@@ -5,6 +5,7 @@ ahora recalcular es más simple y siempre consistente con la fuente)."""
 
 from collections import defaultdict
 from datetime import UTC, date, datetime, timedelta
+from itertools import pairwise
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -68,6 +69,39 @@ def _compute_streak(active_dates: set[date]) -> int:
     return streak
 
 
+def _dias_con_ensayo(db: Session, user: User) -> set[date]:
+    """Días en que el estudiante TERMINÓ al menos un ensayo.
+
+    Distinto de los días con actividad: responder tres preguntas sueltas no es
+    lo mismo que sentarse a rendir. Esta es la racha que se muestra como logro
+    y la que exige el premio.
+    """
+    filas = db.execute(
+        select(ExamAttempt.finished_at)
+        .where(ExamAttempt.user_id == user.id)
+        .where(ExamAttempt.status == "submitted")
+        .where(ExamAttempt.finished_at.is_not(None))
+    ).scalars().all()
+    return {f.date() for f in filas if f is not None}
+
+
+def _mejor_racha(fechas: set[date]) -> int:
+    """El tramo consecutivo más largo, no el actual.
+
+    Es lo que se usa para el premio a propósito: la racha actual castiga para
+    siempre a quien se enfermó un martes, y eso no mide constancia, mide suerte.
+    El mejor tramo sí premia haber sostenido el hábito.
+    """
+    if not fechas:
+        return 0
+    ordenadas = sorted(fechas)
+    mejor = actual = 1
+    for previa, siguiente in pairwise(ordenadas):
+        actual = actual + 1 if (siguiente - previa).days == 1 else 1
+        mejor = max(mejor, actual)
+    return mejor
+
+
 def get_summary(db: Session, user: User) -> AnalyticsSummaryOut:
     buckets = _daily_buckets(db, user)
 
@@ -76,6 +110,14 @@ def get_summary(db: Session, user: User) -> AnalyticsSummaryOut:
     total_ms = sum(b["ms"] for b in buckets.values())
 
     streak = _compute_streak(set(buckets.keys()))
+
+    # Un día "con práctica" son 10 preguntas o más: abrir la aplicación y
+    # responder una no es haber practicado ese día.
+    active_days = sum(1 for b in buckets.values() if int(b["answered"]) >= 10)
+
+    dias_ensayo = _dias_con_ensayo(db, user)
+    exam_streak = _compute_streak(dias_ensayo)
+    best_exam_streak = _mejor_racha(dias_ensayo)
 
     since = datetime.now(UTC).date() - timedelta(days=CHART_DAYS - 1)
     daily: list[DailyStat] = []
@@ -95,6 +137,10 @@ def get_summary(db: Session, user: User) -> AnalyticsSummaryOut:
 
     return AnalyticsSummaryOut(
         current_streak_days=streak,
+        active_days=active_days,
+        exam_streak_days=exam_streak,
+        best_exam_streak_days=best_exam_streak,
+        exam_days=len(dias_ensayo),
         total_questions_answered=total_answered,
         total_correct=total_correct,
         overall_accuracy=(total_correct / total_answered) if total_answered else None,

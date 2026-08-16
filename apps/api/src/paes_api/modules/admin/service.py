@@ -13,22 +13,35 @@ from sqlalchemy.orm import Session
 
 from paes_api.modules.admin.schemas import (
     AdminMetricsOut,
+    AlumnoDetalle,
+    AlumnosOut,
+    BancoOut,
+    CoberturaPrueba,
     ContenidoOut,
     ConteoPeriodo,
+    EmbudoOut,
+    EnsayosOut,
     NodoFlojo,
     PreguntaFallada,
+    ResultadoPrueba,
+    RetencionOut,
     RutaVisitas,
     SerieDia,
     SesionesOut,
+    UsoPrueba,
     UsuarioResumen,
     UsuariosOut,
+    VisitanteDetalle,
+    VisitantesOut,
     VisitasOut,
 )
 from paes_api.modules.content.models import Alternative, Question
 from paes_api.modules.exam_focus.models import AttemptStatus, ExamAnswer, ExamAttempt
+from paes_api.modules.exam_focus.scoring import SCORING_BY_SUBJECT
+from paes_api.modules.exam_focus.service import SUBJECT_INCLUDES
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.practice.models import PracticeAnswer
-from paes_api.modules.skill_tree.models import SkillNode
+from paes_api.modules.skill_tree.models import SkillNode, Subject
 from paes_api.modules.users.models import LoginEvent, User
 
 #: Cuántos días cubre cada gráfico de evolución.
@@ -39,6 +52,24 @@ TOPE_RANKING = 10
 #: acierto. Sin esto, una pregunta respondida una sola vez y fallada aparece
 #: como "la peor" con 0%, que no significa nada.
 MINIMO_RESPUESTAS = 5
+#: Un ensayo en curso sin actividad por más tiempo que esto se cuenta como
+#: abandonado. Nadie retoma al día siguiente un ensayo cronometrado.
+HORAS_PARA_ABANDONO = 24
+#: Piso de preguntas para que un nodo sea practicable de verdad.
+MINIMO_POR_NODO = 5
+#: Cuántos navegadores distintos se listan en el detalle de visitantes.
+TOPE_VISITANTES = 40
+#: Cuántas cuentas se listan con su detalle de resultados.
+TOPE_ALUMNOS = 50
+#: Prefijo del visitor_id que se muestra. No se expone el valor completo, que
+#: es lo único que permitiría seguir a alguien entre sesiones.
+LARGO_VISITOR = 8
+
+
+def _tasa(numerador: int, denominador: int) -> float | None:
+    """None cuando no hay denominador: un 0% diría que nadie convierte, cuando
+    lo que pasa es que todavía nadie llegó a ese paso."""
+    return numerador / denominador if denominador else None
 
 
 def _ventanas(ahora: datetime) -> tuple[datetime, datetime, datetime]:
@@ -314,6 +345,423 @@ def _contenido(db: Session, ahora: datetime) -> ContenidoOut:
     )
 
 
+def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
+    """Dónde se cae la gente entre entrar y terminar un ensayo."""
+    _, _, hace_30 = _ventanas(ahora)
+
+    visitantes = (
+        db.execute(
+            select(func.count(func.distinct(PageView.visitor_id))).where(
+                PageView.created_at >= hace_30
+            )
+        ).scalar_one()
+        or 0
+    )
+
+    nuevos = select(User.id).where(User.created_at >= hace_30).scalar_subquery()
+    registrados = (
+        db.execute(select(func.count()).select_from(User).where(User.created_at >= hace_30)).scalar_one()
+        or 0
+    )
+
+    def cuentas_con_ensayo(solo_terminados: bool) -> int:
+        stmt = select(func.count(func.distinct(ExamAttempt.user_id))).where(
+            ExamAttempt.user_id.in_(nuevos)
+        )
+        if solo_terminados:
+            stmt = stmt.where(ExamAttempt.status == AttemptStatus.SUBMITTED)
+        return db.execute(stmt).scalar_one() or 0
+
+    con_ensayo = cuentas_con_ensayo(False)
+    terminado = cuentas_con_ensayo(True)
+
+    # Un navegador que primero anduvo anónimo y después apareció con sesión es
+    # una conversión observada, no estimada. Es lo más cerca que se puede
+    # llegar sin guardar nada que identifique a la persona.
+    anonimos = select(func.distinct(PageView.visitor_id)).where(
+        PageView.created_at >= hace_30, PageView.user_id.is_(None)
+    )
+    convertidos = (
+        db.execute(
+            select(func.count(func.distinct(PageView.visitor_id))).where(
+                PageView.created_at >= hace_30,
+                PageView.user_id.is_not(None),
+                PageView.visitor_id.in_(anonimos),
+            )
+        ).scalar_one()
+        or 0
+    )
+
+    return EmbudoOut(
+        visitantes=visitantes,
+        registrados=registrados,
+        con_ensayo=con_ensayo,
+        con_ensayo_terminado=terminado,
+        tasa_registro=_tasa(registrados, visitantes),
+        tasa_activacion=_tasa(con_ensayo, registrados),
+        tasa_finalizacion=_tasa(terminado, con_ensayo),
+        visitantes_convertidos=convertidos,
+    )
+
+
+def _retencion(db: Session, ahora: datetime) -> RetencionOut:
+    """Cuánta gente vuelve. Se mide sobre visitas, que es la señal más amplia:
+    alguien puede entrar a leer una lección sin responder nada."""
+    _, hace_7, hace_30 = _ventanas(ahora)
+
+    dias_por_usuario = db.execute(
+        select(
+            PageView.user_id,
+            func.count(func.distinct(func.date(PageView.created_at))).label("dias"),
+        )
+        .where(PageView.created_at >= hace_30, PageView.user_id.is_not(None))
+        .group_by(PageView.user_id)
+    ).all()
+
+    un_dia = sum(1 for f in dias_por_usuario if f.dias == 1)
+    dos_a_tres = sum(1 for f in dias_por_usuario if 2 <= f.dias <= 3)
+    cuatro_o_mas = sum(1 for f in dias_por_usuario if f.dias >= 4)
+
+    # Solo puede "volver" quien lleva al menos una semana registrado: contar a
+    # quien se inscribió ayer como no-retornado castiga a los más nuevos.
+    con_tiempo = db.execute(
+        select(User.id, User.created_at).where(User.created_at < hace_7)
+    ).all()
+    base = len(con_tiempo)
+    volvieron = 0
+    for user_id, creado in con_tiempo:
+        despues = (
+            db.execute(
+                select(func.count())
+                .select_from(PageView)
+                .where(
+                    PageView.user_id == user_id,
+                    func.date(PageView.created_at) > func.date(creado),
+                )
+            ).scalar_one()
+            or 0
+        )
+        if despues:
+            volvieron += 1
+
+    return RetencionOut(
+        un_dia=un_dia,
+        dos_a_tres=dos_a_tres,
+        cuatro_o_mas=cuatro_o_mas,
+        volvieron=volvieron,
+        base_volvieron=base,
+    )
+
+
+def _ensayos(db: Session, ahora: datetime) -> EnsayosOut:
+    """Qué se rinde, qué se abandona y con qué prueba."""
+    iniciados = db.execute(select(func.count()).select_from(ExamAttempt)).scalar_one() or 0
+    terminados = (
+        db.execute(
+            select(func.count())
+            .select_from(ExamAttempt)
+            .where(ExamAttempt.status == AttemptStatus.SUBMITTED)
+        ).scalar_one()
+        or 0
+    )
+    abandonados = (
+        db.execute(
+            select(func.count())
+            .select_from(ExamAttempt)
+            .where(
+                ExamAttempt.status == AttemptStatus.IN_PROGRESS,
+                ExamAttempt.started_at < ahora - timedelta(hours=HORAS_PARA_ABANDONO),
+            )
+        ).scalar_one()
+        or 0
+    )
+
+    # Mediana y no promedio: un solo ensayo dejado abierto tres horas mueve el
+    # promedio lo suficiente como para inventar una tendencia que no existe.
+    duraciones = sorted(
+        (fin - ini).total_seconds() / 60
+        for ini, fin in db.execute(
+            select(ExamAttempt.started_at, ExamAttempt.finished_at).where(
+                ExamAttempt.finished_at.is_not(None)
+            )
+        ).all()
+    )
+    mediana = None
+    if duraciones:
+        medio = len(duraciones) // 2
+        mediana = (
+            duraciones[medio]
+            if len(duraciones) % 2
+            else (duraciones[medio - 1] + duraciones[medio]) / 2
+        )
+
+    por_prueba: list[UsoPrueba] = []
+    for subject in Subject:
+        filas = db.execute(
+            select(
+                func.count().label("iniciados"),
+                func.count(ExamAttempt.finished_at).label("terminados"),
+                func.avg(ExamAttempt.estimated_score).label("promedio"),
+            ).where(ExamAttempt.subject == subject)
+        ).one()
+        if not filas.iniciados:
+            continue
+        por_prueba.append(
+            UsoPrueba(
+                subject=subject.value,
+                iniciados=int(filas.iniciados),
+                terminados=int(filas.terminados),
+                puntaje_promedio=round(float(filas.promedio), 1) if filas.promedio else None,
+            )
+        )
+
+    return EnsayosOut(
+        iniciados=iniciados,
+        terminados=terminados,
+        abandonados=abandonados,
+        tasa_finalizacion=_tasa(terminados, iniciados),
+        duracion_mediana_min=round(mediana, 1) if mediana is not None else None,
+        por_prueba=por_prueba,
+    )
+
+
+def _banco(db: Session) -> BancoOut:
+    """Si el banco alcanza para lo que la portada promete.
+
+    Es la métrica que evita el peor error del producto: ofrecer las cinco
+    pruebas y que una de ellas no arme ni un ensayo completo."""
+    respondidas = set(
+        db.execute(select(func.distinct(ExamAnswer.question_id))).scalars().all()
+    ) | set(db.execute(select(func.distinct(PracticeAnswer.question_id))).scalars().all())
+
+    por_prueba: list[CoberturaPrueba] = []
+    for subject, scoring in SCORING_BY_SUBJECT.items():
+        ids = (
+            db.execute(
+                select(Question.id)
+                .join(Question.skill_node)
+                .where(SkillNode.subject.in_(SUBJECT_INCLUDES[subject]))
+            )
+            .scalars()
+            .all()
+        )
+        banco = len(ids)
+        por_prueba.append(
+            CoberturaPrueba(
+                subject=subject.value,
+                banco=banco,
+                oficiales=scoring.preguntas_oficiales,
+                ensayos_completos=round(banco / scoring.preguntas_oficiales, 2),
+                nunca_respondidas=sum(1 for qid in ids if qid not in respondidas),
+            )
+        )
+
+    flacos = [
+        str(code)
+        for code, total in db.execute(
+            select(SkillNode.code, func.count(Question.id))
+            .outerjoin(Question, Question.skill_node_id == SkillNode.id)
+            .group_by(SkillNode.code)
+            .order_by(SkillNode.code)
+        ).all()
+        if total < MINIMO_POR_NODO
+    ]
+
+    return BancoOut(por_prueba=por_prueba, nodos_flacos=flacos)
+
+
+def _visitantes(db: Session, ahora: datetime) -> VisitantesOut:
+    """Con qué equipos se entra al sitio.
+
+    No responde con certeza si dos visitas son de personas distintas —para eso
+    haría falta guardar IP o una huella del navegador, que es justo lo que este
+    proyecto decidió no almacenar—, pero sí muestra si hay diversidad real de
+    equipos o si todo viene del mismo tipo de navegador.
+    """
+    _, _, hace_30 = _ventanas(ahora)
+
+    def reparto(columna) -> dict[str, int]:
+        return {
+            str(valor): int(total)
+            for valor, total in db.execute(
+                select(columna, func.count())
+                .where(PageView.created_at >= hace_30, columna.is_not(None))
+                .group_by(columna)
+                .order_by(func.count().desc())
+            ).all()
+        }
+
+    sin_clasificar = (
+        db.execute(
+            select(func.count())
+            .select_from(PageView)
+            .where(PageView.created_at >= hace_30, PageView.device.is_(None))
+        ).scalar_one()
+        or 0
+    )
+
+    # Una fila por navegador. Las categorías se toman con max() porque son
+    # constantes dentro de un mismo visitor_id salvo que el usuario actualice
+    # el navegador, caso en que cualquiera de los dos valores sirve igual.
+    filas = db.execute(
+        select(
+            PageView.visitor_id,
+            func.max(PageView.device).label("device"),
+            func.max(PageView.os).label("os"),
+            func.max(PageView.browser).label("browser"),
+            func.count().label("visitas"),
+            func.count(func.distinct(func.date(PageView.created_at))).label("dias"),
+            func.min(PageView.created_at).label("primera"),
+            func.max(PageView.created_at).label("ultima"),
+            func.count(PageView.user_id).label("con_sesion"),
+        )
+        .where(PageView.created_at >= hace_30)
+        .group_by(PageView.visitor_id)
+        .order_by(func.max(PageView.created_at).desc())
+        .limit(TOPE_VISITANTES)
+    ).all()
+
+    recientes = [
+        VisitanteDetalle(
+            visitor=str(f.visitor_id)[:LARGO_VISITOR],
+            device=f.device,
+            os=f.os,
+            browser=f.browser,
+            visitas=int(f.visitas),
+            dias=int(f.dias),
+            primera=f.primera,
+            ultima=f.ultima,
+            con_cuenta=bool(f.con_sesion),
+        )
+        for f in filas
+    ]
+
+    return VisitantesOut(
+        por_dispositivo=reparto(PageView.device),
+        por_sistema=reparto(PageView.os),
+        por_navegador=reparto(PageView.browser),
+        sin_clasificar=sin_clasificar,
+        recientes=recientes,
+    )
+
+
+def _alumnos(db: Session) -> AlumnosOut:
+    """Qué hizo cada cuenta: el detalle que los promedios esconden."""
+    total = db.execute(select(func.count()).select_from(User)).scalar_one() or 0
+    usuarios = list(
+        db.execute(
+            select(User).order_by(User.created_at.desc()).limit(TOPE_ALUMNOS)
+        ).scalars()
+    )
+    if not usuarios:
+        return AlumnosOut(total=total, detalle=[])
+
+    ids = [u.id for u in usuarios]
+
+    # Todo lo agregable se pide de una vez y se indexa en memoria: una consulta
+    # por usuario funcionaría con tres cuentas y se caería con trescientas.
+    intentos: dict[int, tuple[int, int, int | None]] = {
+        int(f.user_id): (int(f.iniciados), int(f.terminados), f.mejor)
+        for f in db.execute(
+            select(
+                ExamAttempt.user_id,
+                func.count().label("iniciados"),
+                func.count(ExamAttempt.finished_at).label("terminados"),
+                func.max(ExamAttempt.estimated_score).label("mejor"),
+            )
+            .where(ExamAttempt.user_id.in_(ids))
+            .group_by(ExamAttempt.user_id)
+        ).all()
+    }
+
+    # El acierto no vive en la respuesta sino en la alternativa elegida, así que
+    # hay que unir con Alternative. Las respuestas en blanco quedan fuera solas
+    # (no tienen alternativa que unir): omitir no es equivocarse, y contarlas
+    # como error haría ver flojo a quien no alcanzó a llegar al final.
+    acumulado: dict[int, list[int]] = defaultdict(lambda: [0, 0])
+    for user_id, es_correcta, cuantas in db.execute(
+        select(ExamAttempt.user_id, Alternative.is_correct, func.count())
+        .join(ExamAnswer, ExamAnswer.attempt_id == ExamAttempt.id)
+        .join(Alternative, Alternative.id == ExamAnswer.selected_alternative_id)
+        .where(ExamAttempt.user_id.in_(ids))
+        .group_by(ExamAttempt.user_id, Alternative.is_correct)
+    ).all():
+        acumulado[int(user_id)][0] += int(cuantas)
+        if es_correcta:
+            acumulado[int(user_id)][1] += int(cuantas)
+    respuestas: dict[int, tuple[int, int]] = {
+        uid: (datos[0], datos[1]) for uid, datos in acumulado.items()
+    }
+
+    dias: dict[int, int] = {
+        int(f.user_id): int(f.dias)
+        for f in db.execute(
+            select(
+                PageView.user_id,
+                func.count(func.distinct(func.date(PageView.created_at))).label("dias"),
+            )
+            .where(PageView.user_id.in_(ids))
+            .group_by(PageView.user_id)
+        ).all()
+    }
+
+    por_prueba: dict[int, list[ResultadoPrueba]] = defaultdict(list)
+    for f in db.execute(
+        select(
+            ExamAttempt.user_id,
+            ExamAttempt.subject,
+            func.count().label("ensayos"),
+            func.max(ExamAttempt.estimated_score).label("mejor"),
+        )
+        .where(ExamAttempt.user_id.in_(ids))
+        .group_by(ExamAttempt.user_id, ExamAttempt.subject)
+    ).all():
+        ultimo = db.execute(
+            select(ExamAttempt.estimated_score)
+            .where(
+                ExamAttempt.user_id == f.user_id,
+                ExamAttempt.subject == f.subject,
+                ExamAttempt.estimated_score.is_not(None),
+            )
+            .order_by(ExamAttempt.started_at.desc())
+            .limit(1)
+        ).scalar_one_or_none()
+        por_prueba[int(f.user_id)].append(
+            ResultadoPrueba(
+                subject=f.subject.value,
+                ensayos=int(f.ensayos),
+                mejor=f.mejor,
+                ultimo=ultimo,
+            )
+        )
+
+    detalle: list[AlumnoDetalle] = []
+    for u in usuarios:
+        iniciados, terminados, mejor = intentos.get(u.id, (0, 0, None))
+        resp, aciertos = respuestas.get(u.id, (0, 0))
+        detalle.append(
+            AlumnoDetalle(
+                id=u.id,
+                email=u.email,
+                name=u.name,
+                created_at=u.created_at,
+                last_login_at=u.last_login_at,
+                curso=u.curso,
+                pruebas_objetivo=u.pruebas_objetivo,
+                horas_semana=u.horas_semana,
+                ensayos_iniciados=iniciados,
+                ensayos_terminados=terminados,
+                respuestas=resp,
+                tasa_acierto=_tasa(aciertos, resp),
+                mejor_puntaje=mejor,
+                dias_activos=dias.get(u.id, 0),
+                por_prueba=sorted(por_prueba.get(u.id, []), key=lambda r: r.subject),
+            )
+        )
+
+    return AlumnosOut(total=total, detalle=detalle)
+
+
 def build_metrics(db: Session) -> AdminMetricsOut:
     ahora = datetime.now(UTC)
     return AdminMetricsOut(
@@ -322,4 +770,10 @@ def build_metrics(db: Session) -> AdminMetricsOut:
         sesiones=_sesiones(db, ahora),
         visitas=_visitas(db, ahora),
         contenido=_contenido(db, ahora),
+        embudo=_embudo(db, ahora),
+        retencion=_retencion(db, ahora),
+        ensayos=_ensayos(db, ahora),
+        banco=_banco(db),
+        visitantes=_visitantes(db, ahora),
+        alumnos=_alumnos(db),
     )

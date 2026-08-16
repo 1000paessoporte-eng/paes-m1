@@ -8,15 +8,35 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from paes_api.shared.base import Base
 
 if TYPE_CHECKING:
-    from paes_api.modules.content.models import Question
+    from paes_api.modules.content.models import Lesson, Question
     from paes_api.modules.users.models import User
 
 
 class SkillAxis(StrEnum):
+    """Dimensión del temario a la que pertenece un nodo.
+
+    En matemática son los cuatro ejes temáticos del DEMRE. En Competencia
+    Lectora no hay ejes de contenido: la prueba se organiza por las tres
+    habilidades que declara el temario (localizar, interpretar y evaluar), y
+    son esas las que ocupan el lugar del eje.
+    """
+
     NUMEROS = "numeros"
     ALGEBRA = "algebra"
     GEOMETRIA = "geometria"
     PROBABILIDAD = "probabilidad"
+    # Competencia Lectora
+    LOCALIZAR = "localizar"
+    INTERPRETAR = "interpretar"
+    EVALUAR = "evaluar"
+    # Ciencias
+    BIOLOGIA = "biologia"
+    FISICA = "fisica"
+    QUIMICA = "quimica"
+    # Historia y Ciencias Sociales
+    HISTORIA = "historia"
+    CIUDADANIA = "ciudadania"
+    ECONOMIA = "economia"
 
 
 class Subject(StrEnum):
@@ -28,6 +48,9 @@ class Subject(StrEnum):
 
     M1 = "m1"
     M2 = "m2"
+    LECTORA = "lectora"
+    CIENCIAS = "ciencias"
+    HISTORIA = "historia"
 
 
 class ProgressStatus(StrEnum):
@@ -69,6 +92,11 @@ class SkillNode(Base):
         secondaryjoin=id == skill_prerequisites.c.prerequisite_id,
     )
     questions: Mapped[list["Question"]] = relationship(back_populates="skill_node")
+    #: La teoría del nodo. Opcional: un nodo sin lección lleva directo a
+    #: practicar, y la interfaz no ofrece "Aprender".
+    lesson: Mapped["Lesson | None"] = relationship(
+        back_populates="skill_node", uselist=False
+    )
     user_progress: Mapped[list["UserSkillProgress"]] = relationship(
         back_populates="skill_node"
     )

@@ -1,25 +1,53 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getAnalyticsSummary, getMe, getSkillTree, listExamAttempts } from "@/lib/api";
+import {
+  ApiError,
+  getAnalyticsSummary,
+  getMe,
+  getMiPlan,
+  getProductos,
+  getOnboarding,
+  getSkillTree,
+  listExamAttempts,
+} from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ProfileForm } from "@/components/profile/profile-form";
+import { MiPlanPanel } from "@/components/plan/mi-plan";
+import { MisDatos } from "@/components/onboarding/mis-datos";
+
+export const metadata = {
+  title: "Mi perfil",
+  description: "Tus datos de cuenta y tus estadísticas.",
+};
+
 
 const DATE_FMT = new Intl.DateTimeFormat("es-CL", { day: "2-digit", month: "long", year: "numeric" });
 
 export default async function PerfilPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
-  let user, nodes, attempts, summary;
+  let user, nodes, attempts, summary, plan, onboarding;
   try {
-    [user, nodes, attempts, summary] = await Promise.all([
+    [user, nodes, attempts, summary, plan, onboarding] = await Promise.all([
       getMe(token ?? ""),
       getSkillTree(token),
       listExamAttempts(token),
       getAnalyticsSummary(token),
+      getMiPlan(token),
+      getOnboarding(token),
     ]);
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/perfil");
     throw err;
+  }
+
+  // Los productos van aparte del Promise.all: si el catálogo falla, la página
+  // debe seguir cargando sin el bloque de compra en vez de caerse entera.
+  let productos;
+  try {
+    productos = await getProductos();
+  } catch {
+    productos = undefined;
   }
 
   const masteredCount = nodes.filter((n) => n.status === "mastered").length;
@@ -47,7 +75,19 @@ export default async function PerfilPage() {
       </div>
 
       <div className="mt-8 max-w-lg">
-        <ProfileForm initialName={user.name} email={user.email} />
+        <MisDatos inicial={onboarding} />
+      </div>
+
+      <div className="mt-5 max-w-lg">
+        <MiPlanPanel inicial={plan} productos={productos} />
+      </div>
+
+      <div className="mt-5 max-w-lg">
+        <ProfileForm
+          initialName={user.name}
+          email={user.email}
+          initialRecordatorios={user.recordatorios_email ?? true}
+        />
       </div>
     </div>
   );

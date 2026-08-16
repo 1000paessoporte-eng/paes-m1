@@ -16,6 +16,81 @@ type AxisMeta = {
 };
 
 const AXIS_META: Record<SkillNode["axis"], AxisMeta> = {
+  // Competencia Lectora: el "eje" es la habilidad que evalúa el temario.
+  localizar: {
+    label: "Localizar",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-400",
+    border: "hover:border-sky-500/50",
+    bar: "bg-sky-400",
+    icon: NumbersIcon,
+  },
+  interpretar: {
+    label: "Interpretar",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-400",
+    border: "hover:border-violet-500/50",
+    bar: "bg-violet-400",
+    icon: AlgebraIcon,
+  },
+  evaluar: {
+    label: "Evaluar",
+    iconBg: "bg-emerald-500/10",
+    iconColor: "text-emerald-400",
+    border: "hover:border-emerald-500/50",
+    bar: "bg-emerald-400",
+    icon: GeometryIcon,
+  },
+  // Historia y Ciencias Sociales.
+  historia: {
+    label: "Historia",
+    iconBg: "bg-amber-500/10",
+    iconColor: "text-amber-400",
+    border: "hover:border-amber-500/50",
+    bar: "bg-amber-400",
+    icon: GeometryIcon,
+  },
+  ciudadania: {
+    label: "Formación ciudadana",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-400",
+    border: "hover:border-violet-500/50",
+    bar: "bg-violet-400",
+    icon: AlgebraIcon,
+  },
+  economia: {
+    label: "Economía y sociedad",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-400",
+    border: "hover:border-sky-500/50",
+    bar: "bg-sky-400",
+    icon: NumbersIcon,
+  },
+  // Ciencias: el eje es la disciplina.
+  biologia: {
+    label: "Biología",
+    iconBg: "bg-emerald-500/10",
+    iconColor: "text-emerald-400",
+    border: "hover:border-emerald-500/50",
+    bar: "bg-emerald-400",
+    icon: GeometryIcon,
+  },
+  fisica: {
+    label: "Física",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-400",
+    border: "hover:border-sky-500/50",
+    bar: "bg-sky-400",
+    icon: NumbersIcon,
+  },
+  quimica: {
+    label: "Química",
+    iconBg: "bg-amber-500/10",
+    iconColor: "text-amber-400",
+    border: "hover:border-amber-500/50",
+    bar: "bg-amber-400",
+    icon: AlgebraIcon,
+  },
   numeros: {
     label: "Números",
     iconBg: "bg-sky-500/10",
@@ -50,11 +125,32 @@ const AXIS_META: Record<SkillNode["axis"], AxisMeta> = {
   },
 };
 
+/**
+ * Orden canónico de los ejes, con los trece de las cinco pruebas.
+ *
+ * Las columnas NO se toman de esta lista sino de los ejes que traen los nodos
+ * recibidos: el árbol de Competencia Lectora no tiene "Números", y fijar las
+ * columnas dejaba cuatro columnas de matemática vacías al cambiar de prueba.
+ * Esta lista solo dice en qué orden se muestran las que sí existen.
+ */
 const AXIS_ORDER: SkillNode["axis"][] = [
+  // Matemática
   "numeros",
   "algebra",
   "geometria",
   "probabilidad",
+  // Competencia Lectora
+  "localizar",
+  "interpretar",
+  "evaluar",
+  // Ciencias
+  "biologia",
+  "fisica",
+  "quimica",
+  // Historia y Ciencias Sociales
+  "historia",
+  "ciudadania",
+  "economia",
 ];
 
 const GUTTER_X = 12; // centro del gutter de conectores, en px
@@ -66,7 +162,12 @@ interface SkillTreeViewProps {
 export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   const nameByCode = new Map(nodes.map((n) => [n.code, n.name]));
 
-  const columns = AXIS_ORDER.map((axis) => ({
+  // Solo los ejes que existen en esta prueba, en el orden canónico.
+  const ejesPresentes = AXIS_ORDER.filter((axis) =>
+    nodes.some((n) => n.axis === axis)
+  );
+
+  const columns = ejesPresentes.map((axis) => ({
     axis,
     nodes: nodes
       .filter((n) => n.axis === axis)
@@ -74,7 +175,14 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   }));
 
   return (
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+    <div
+      className={cn(
+        "grid grid-cols-1 gap-8 sm:grid-cols-2",
+        // Tres ejes (Lectora, Ciencias, Historia) o cuatro (matemática): la
+        // grilla se ajusta para que no queden columnas huérfanas.
+        columns.length === 3 ? "xl:grid-cols-3" : "xl:grid-cols-4"
+      )}
+    >
       {columns.map((column) => (
         <TreeColumn
           key={column.axis}
@@ -253,21 +361,45 @@ function TreeColumn({
                     {node.prerequisite_codes.length > 0 && (
                       <p className="mt-2 text-xs text-muted">
                         Requiere:{" "}
-                        {node.prerequisite_codes
-                          .map((code) => nameByCode.get(code) ?? code)
-                          .join(", ")}{" "}
+                        {/* El nombre viene con el nodo: los prerrequisitos de
+                            M2 son nodos de M1 y no están en esta respuesta, así
+                            que el mapa local no alcanza. */}
+                        {(node.prerequisite_names?.length
+                          ? node.prerequisite_names
+                          : node.prerequisite_codes.map(
+                              (code) => nameByCode.get(code) ?? code
+                            )
+                        ).join(", ")}{" "}
                         · ≥{Math.round(node.unlock_threshold * 100)}% acierto
                       </p>
                     )}
 
-                    {!locked && (
-                      <Link
-                        href={`/practicar/${node.code}`}
-                        className="mt-3 inline-block text-xs font-medium text-accent hover:underline"
-                      >
-                        Practicar →
-                      </Link>
-                    )}
+                    {/* Aprender aparece aunque el nodo esté bloqueado: lo que
+                        se gana practicando es el derecho a practicar, no el
+                        derecho a estudiar. Negarle la explicación a quien
+                        todavía no domina el prerrequisito es exactamente al
+                        revés de lo que sirve. */}
+                    <div className="mt-3 flex flex-wrap items-center gap-3">
+                      {node.has_lesson && (
+                        <Link
+                          href={`/aprender/${node.code}`}
+                          className="text-xs font-medium text-accent hover:underline"
+                        >
+                          Aprender →
+                        </Link>
+                      )}
+                      {!locked && (
+                        <Link
+                          href={`/practicar/${node.code}`}
+                          className={
+                            "text-xs font-medium hover:underline " +
+                            (node.has_lesson ? "text-muted" : "text-accent")
+                          }
+                        >
+                          Practicar →
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

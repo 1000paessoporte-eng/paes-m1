@@ -136,3 +136,84 @@ def test_contenido_sin_datos_no_inventa_ceros(
     assert contenido["puntaje_promedio"] is None
     assert contenido["tasa_acierto_global"] is None
     assert contenido["preguntas_mas_falladas"] == []
+
+
+def test_secciones_nuevas_presentes(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    headers, _ = register_user(email="jefa2@milpaes.cl")
+    _hacer_admin(db_session, "jefa2@milpaes.cl")
+
+    body = client.get("/api/admin/metrics", headers=headers).json()
+    assert set(body) >= {"embudo", "retencion", "ensayos", "banco"}
+
+
+def test_tasas_sin_denominador_viajan_como_null(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """Una plataforma recién estrenada no tiene ensayos, y un 0% ahí mentiría.
+
+    Con cero registros que hayan rendido algo, "0% de finalización" se leería
+    como que todos abandonan. El campo va en null y la pantalla muestra un
+    guión, que es lo que corresponde cuando el dato no existe todavía.
+    """
+    headers, _ = register_user(email="jefa3@milpaes.cl")
+    _hacer_admin(db_session, "jefa3@milpaes.cl")
+
+    embudo = client.get("/api/admin/metrics", headers=headers).json()["embudo"]
+    # Nadie rindió nada: activación y finalización no se pueden calcular.
+    assert embudo["tasa_activacion"] is None or embudo["con_ensayo"] == 0
+    assert embudo["tasa_finalizacion"] is None
+
+
+def test_cobertura_del_banco_cubre_las_cinco_pruebas(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """Es la métrica que evita ofrecer una prueba que no arma un ensayo."""
+    headers, _ = register_user(email="jefa4@milpaes.cl")
+    _hacer_admin(db_session, "jefa4@milpaes.cl")
+
+    banco = client.get("/api/admin/metrics", headers=headers).json()["banco"]
+    pruebas = {c["subject"] for c in banco["por_prueba"]}
+    assert pruebas == {"m1", "m2", "lectora", "ciencias", "historia"}
+    for c in banco["por_prueba"]:
+        # ensayos_completos es banco/oficiales: debe ser coherente con ambos.
+        assert c["ensayos_completos"] == round(c["banco"] / c["oficiales"], 2)
+        assert c["nunca_respondidas"] <= c["banco"]
+
+
+def test_total_de_alumnos_coincide_con_las_cuentas(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """El total debe ser la cantidad de cuentas, no un residuo de otra consulta.
+
+    Se rompió una vez: el bucle que acumula aciertos usaba una variable llamada
+    `total`, que en Python reasigna la misma del conteo de usuarios. El panel
+    mostraba cuentas que no existían. Mientras el listado quepa bajo el tope,
+    el total y las filas tienen que coincidir.
+    """
+    for i in range(3):
+        register_user(email=f"alumno{i}@milpaes.cl")
+    headers, _ = register_user(email="jefa5@milpaes.cl")
+    _hacer_admin(db_session, "jefa5@milpaes.cl")
+
+    alumnos = client.get("/api/admin/metrics", headers=headers).json()["alumnos"]
+    assert alumnos["total"] == 4
+    assert len(alumnos["detalle"]) == alumnos["total"]
+
+
+def test_visitantes_no_exponen_el_identificador_completo(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """El visitor_id se recorta: entero permitiría seguir a alguien entre sesiones."""
+    headers, _ = register_user(email="jefa6@milpaes.cl")
+    _hacer_admin(db_session, "jefa6@milpaes.cl")
+
+    entero = "a" * 40
+    client.post("/api/metrics/pageview", json={"path": "/", "visitor_id": entero})
+
+    visitantes = client.get("/api/admin/metrics", headers=headers).json()["visitantes"]
+    assert visitantes["recientes"], "la visita recién registrada debería aparecer"
+    for v in visitantes["recientes"]:
+        assert len(v["visitor"]) <= 8
+        assert v["visitor"] != entero

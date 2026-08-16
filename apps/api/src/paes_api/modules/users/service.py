@@ -130,6 +130,9 @@ def update_user(db: Session, user: User, payload: UpdateMeIn) -> User:
     if payload.name is not None:
         user.name = payload.name
 
+    if payload.recordatorios_email is not None:
+        user.recordatorios_email = payload.recordatorios_email
+
     db.commit()
     db.refresh(user)
     return user
@@ -210,3 +213,41 @@ def reset_password(db: Session, raw_token: str, new_password: str) -> bool:
     )
     db.commit()
     return True
+
+
+def guardar_onboarding(db: Session, user: User, payload) -> User:
+    """Guarda las respuestas del cuestionario de bienvenida.
+
+    Marca `onboarding_at` siempre, incluso si el estudiante lo saltó sin
+    responder nada: la marca significa "ya se le preguntó", no "respondió". Sin
+    esa distinción, a quien lo salta se le vuelve a mostrar en cada inicio de
+    sesión, que es la forma más rápida de que alguien deje de entrar.
+    """
+    from datetime import UTC, datetime
+
+    if payload.pruebas_objetivo:
+        user.pruebas_objetivo = ",".join(payload.pruebas_objetivo[:5])
+    if payload.curso is not None:
+        user.curso = payload.curso
+    if payload.primera_vez is not None:
+        user.primera_vez = payload.primera_vez
+    if payload.puntaje_anterior is not None:
+        user.puntaje_anterior = payload.puntaje_anterior
+    if payload.horas_semana is not None:
+        user.horas_semana = payload.horas_semana
+
+    user.onboarding_at = datetime.now(UTC)
+    db.commit()
+    db.refresh(user)
+    return user
+
+
+def onboarding_de(user: User) -> dict:
+    return {
+        "pruebas_objetivo": user.pruebas_objetivo.split(",") if user.pruebas_objetivo else [],
+        "curso": user.curso,
+        "primera_vez": user.primera_vez,
+        "puntaje_anterior": user.puntaje_anterior,
+        "horas_semana": user.horas_semana,
+        "respondido": user.onboarding_at is not None,
+    }

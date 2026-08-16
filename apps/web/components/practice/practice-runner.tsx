@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { TextoRico } from "@/components/texto-rico";
+import { Burbuja } from "@/components/ui/burbuja";
 import {
   answerPractice,
   ApiError,
@@ -230,20 +231,25 @@ export function PracticeRunner({ code }: { code: string }) {
                   answered && !isCorrectAlt && !isWrongSelected && "opacity-60"
                 )}
               >
-                <span
-                  className={cn(
-                    "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border text-[11px] font-medium",
-                    isCorrectAlt
-                      ? "border-success bg-success text-white"
-                      : isWrongSelected
-                        ? "border-danger bg-danger text-white"
-                        : isSelected
-                          ? "border-accent bg-accent text-accent-foreground"
-                          : "border-border-strong text-muted"
-                  )}
-                >
-                  {LABELS[i]}
-                </span>
+                {/* Mientras el estudiante elige, la burbuja de grafito: es el
+                    gesto del cartón de respuestas. Una vez corregido manda el
+                    verde o el rojo, porque ahí el color ES la información y no
+                    la marca. */}
+                {isCorrectAlt || isWrongSelected ? (
+                  <span
+                    aria-hidden
+                    className={cn(
+                      "flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[11px] font-bold",
+                      isCorrectAlt
+                        ? "border-success bg-success text-on-fill"
+                        : "border-danger bg-danger text-on-fill"
+                    )}
+                  >
+                    {LABELS[i]}
+                  </span>
+                ) : (
+                  <Burbuja letra={LABELS[i]} marcada={isSelected} tamano="chica" />
+                )}
                 <span>{alt.text}</span>
               </button>
             );

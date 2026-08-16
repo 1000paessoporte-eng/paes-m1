@@ -2,7 +2,7 @@ from datetime import datetime
 from enum import StrEnum
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, String, Text, func
+from sqlalchemy import JSON, Boolean, DateTime, Enum, ForeignKey, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
@@ -17,6 +17,37 @@ class Difficulty(StrEnum):
     DIFICIL = "dificil"
 
 
+class ReadingPassage(Base):
+    """Texto base de Competencia Lectora, compartido por varias preguntas.
+
+    La PAES de Competencia Lectora son 8 textos con 65 preguntas asociadas: la
+    pregunta sola no se entiende sin el texto. Por eso el pasaje es su propia
+    entidad y no un campo de `Question`, que se duplicaría en cada una.
+
+    Los textos son originales del proyecto. No se reproducen los del DEMRE:
+    tienen derechos de la Universidad de Chile, y además un texto propio hace
+    verificable la respuesta, porque está contenida en lo que escribimos.
+    """
+
+    __tablename__ = "reading_passages"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    #: Título visible sobre el texto.
+    title: Mapped[str] = mapped_column(String(200))
+    #: Cuerpo del texto. Puede traer saltos de línea y párrafos.
+    body: Mapped[str] = mapped_column(Text)
+    #: "literario" | "no_literario" | "discontinuo". El temario 2027 sumó peso a
+    #: los discontinuos (infografías, tablas), por eso son una categoría propia.
+    kind: Mapped[str] = mapped_column(String(20), default="no_literario")
+    #: De dónde sale el texto. Para los propios: "Texto original de 1000paes".
+    source_note: Mapped[str | None] = mapped_column(String(300), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+
+    questions: Mapped[list["Question"]] = relationship(back_populates="passage")
+
+
 class Question(Base):
     __tablename__ = "questions"
 
@@ -28,11 +59,16 @@ class Question(Base):
     #: menciona letras de alternativa: el orden A-D se mezcla al sembrar.
     explanation: Mapped[str | None] = mapped_column(Text, nullable=True)
     image_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    #: Texto base, solo en Competencia Lectora. NULL en matemática.
+    passage_id: Mapped[int | None] = mapped_column(
+        ForeignKey("reading_passages.id"), nullable=True, index=True
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
 
     skill_node: Mapped["SkillNode"] = relationship(back_populates="questions")
+    passage: Mapped["ReadingPassage | None"] = relationship(back_populates="questions")
     alternatives: Mapped[list["Alternative"]] = relationship(
         back_populates="question", order_by="Alternative.label"
     )
@@ -53,3 +89,40 @@ class Alternative(Base):
     distractor_justification: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     question: Mapped["Question"] = relationship(back_populates="alternatives")
+
+
+class Lesson(Base):
+    """Lo que se estudia antes de practicar un nodo del árbol.
+
+    El Árbol de Habilidades no sirve de nada si solo mide: un estudiante que
+    falla en "Potencias y raíces" necesita que alguien le explique las
+    propiedades antes de mandarlo a fallar otras diez preguntas. Esta tabla es
+    esa explicación.
+
+    Tiene una estructura fija en vez de un campo libre de texto porque las
+    cuatro partes cumplen funciones distintas y la interfaz las muestra
+    distinto: `intro` responde "¿para qué me sirve esto?", `theory` es lo que
+    hay que saber, `example_steps` es un ejercicio resuelto donde cada paso
+    dice **por qué** se hace, y `common_error` es la trampa en la que caen casi
+    todos.
+
+    Un nodo puede no tener lección todavía; en ese caso la interfaz lleva
+    directo a practicar.
+    """
+
+    __tablename__ = "lessons"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    skill_node_id: Mapped[int] = mapped_column(
+        ForeignKey("skill_nodes.id"), unique=True, index=True
+    )
+
+    intro: Mapped[str] = mapped_column(Text)
+    theory: Mapped[str] = mapped_column(Text)
+    example_statement: Mapped[str] = mapped_column(Text)
+    #: Lista de {"accion", "porque"}. El "porque" es obligatorio: un paso sin
+    #: justificación es una receta para copiar, no una explicación.
+    example_steps: Mapped[list[dict[str, str]]] = mapped_column(JSON, default=list)
+    common_error: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    skill_node: Mapped["SkillNode"] = relationship(back_populates="lesson")

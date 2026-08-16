@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { ApiError, getAdminMetrics } from "@/lib/api";
+import { ApiError, getAdminMetrics, type AdminMetrics } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { SerieChart } from "@/components/admin/serie-chart";
 import { StatTile } from "@/components/analytics/stat-tile";
@@ -40,6 +40,13 @@ export default async function AdminPage() {
     throw err;
   }
 
+  // El front y la API se despliegan por separado, así que durante unos minutos
+  // una versión puede ir adelante de la otra. Antes eso tumbaba la pantalla
+  // completa: la página leía m.embudo de una respuesta que todavía no lo traía
+  // y lanzaba, dejando al admin sin ninguna métrica, ni siquiera las que sí
+  // habían llegado. Cada sección nueva se dibuja solo si su dato existe.
+  const p = m as Partial<AdminMetrics>;
+
   return (
     <div>
       <h1 className="text-2xl font-semibold">Panel de administración</h1>
@@ -52,8 +59,286 @@ export default async function AdminPage() {
         <StatTile label="Cuentas registradas" value={String(m.usuarios.registros.total)} icon={<IconoPersonas />} />
         <StatTile label="Entraron esta semana" value={String(m.sesiones.activos_7)} icon={<IconoEntrada />} />
         <StatTile label="Visitantes esta semana" value={String(m.visitas.visitantes.ultimos_7)} icon={<IconoOjo />} />
-        <StatTile label="Ensayos rendidos" value={String(m.contenido.ensayos.total)} icon={<IconoCheck />} />
+        <StatTile
+          label={p.embudo ? "Se registran" : "Ensayos rendidos"}
+          value={p.embudo ? porcentaje(p.embudo.tasa_registro) : String(m.contenido.ensayos.total)}
+          icon={<IconoCheck />}
+        />
       </div>
+
+
+      {p.embudo && (() => {
+        const embudo = p.embudo;
+        return (
+        <>
+      {/* ── Embudo ───────────────────────────────────────────────────── */}
+      <Seccion titulo="Embudo de conversión (30 días)">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          Dónde deja de avanzar la gente. Un total de visitas no dice nada si no
+          se sabe en qué paso se pierde.
+        </p>
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Paso
+            label="Visitaron"
+            valor={embudo.visitantes}
+            nota="Navegadores distintos"
+          />
+          <Paso
+            label="Se registraron"
+            valor={embudo.registrados}
+            nota={`${porcentaje(embudo.tasa_registro)} de quienes visitaron`}
+          />
+          <Paso
+            label="Rindieron un ensayo"
+            valor={embudo.con_ensayo}
+            nota={`${porcentaje(embudo.tasa_activacion)} de quienes se registraron`}
+          />
+          <Paso
+            label="Lo terminaron"
+            valor={embudo.con_ensayo_terminado}
+            nota={`${porcentaje(embudo.tasa_finalizacion)} de quienes lo empezaron`}
+          />
+        </div>
+        <p className="mt-3 text-xs leading-relaxed text-muted">
+          Además, {embudo.visitantes_convertidos}{" "}
+          {embudo.visitantes_convertidos === 1 ? "navegador estuvo" : "navegadores estuvieron"}{" "}
+          sin sesión y después {embudo.visitantes_convertidos === 1 ? "apareció" : "aparecieron"}{" "}
+          con cuenta iniciada. Es la única conversión que se puede observar
+          directamente; no se guarda nada que identifique a la persona.
+        </p>
+      </Seccion>
+        </>
+        );
+      })()}
+
+      {p.retencion && (() => {
+        const retencion = p.retencion;
+        return (
+        <>
+      {/* ── Retención ────────────────────────────────────────────────── */}
+      <Seccion titulo="Retención">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          Si vuelven. Un registro que entra una vez y no regresa es un registro
+          perdido, aunque siga contando en el total.
+        </p>
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Dato label="Entraron 1 solo día" valor={retencion.un_dia} />
+          <Dato label="Entraron 2 o 3 días" valor={retencion.dos_a_tres} />
+          <Dato label="Entraron 4 días o más" valor={retencion.cuatro_o_mas} />
+          <Dato
+            label="Volvieron tras registrarse"
+            valor={
+              retencion.base_volvieron === 0
+                ? "—"
+                : `${retencion.volvieron} de ${retencion.base_volvieron}`
+            }
+          />
+        </div>
+        {retencion.base_volvieron === 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            Todavía no hay nadie registrado hace más de una semana, así que no se
+            puede medir si vuelven. Se mostrará solo cuando el dato exista.
+          </p>
+        )}
+      </Seccion>
+        </>
+        );
+      })()}
+
+      {p.ensayos && (() => {
+        const ensayos = p.ensayos;
+        return (
+        <>
+      {/* ── Ensayos ──────────────────────────────────────────────────── */}
+      <Seccion titulo="Ensayos">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <Dato label="Iniciados" valor={ensayos.iniciados} />
+          <Dato label="Terminados" valor={ensayos.terminados} />
+          <Dato label="Abandonados" valor={ensayos.abandonados} />
+          <Dato
+            label="Duración mediana"
+            valor={
+              ensayos.duracion_mediana_min == null
+                ? "—"
+                : `${ensayos.duracion_mediana_min} min`
+            }
+          />
+        </div>
+
+        <Tabla
+          titulo="Uso por prueba"
+          cabeceras={["Prueba", "Iniciados", "Terminados", "Puntaje promedio"]}
+          filas={ensayos.por_prueba.map((u) => [
+            u.subject.toUpperCase(),
+            String(u.iniciados),
+            String(u.terminados),
+            u.puntaje_promedio == null ? "—" : String(u.puntaje_promedio),
+          ])}
+          vacio="Todavía no se ha rendido ningún ensayo."
+        />
+      </Seccion>
+        </>
+        );
+      })()}
+
+      {p.banco && (() => {
+        const banco = p.banco;
+        return (
+        <>
+      {/* ── Banco ────────────────────────────────────────────────────── */}
+      <Seccion titulo="Cobertura del banco">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          Si el contenido alcanza para lo que la portada ofrece. Bajo 1,0 la
+          prueba no arma ni un ensayo completo, aunque aparezca en el menú.
+        </p>
+        <Tabla
+          titulo="Preguntas por prueba"
+          cabeceras={["Prueba", "Banco", "Oficiales", "Ensayos completos", "Sin responder"]}
+          filas={banco.por_prueba.map((c) => [
+            c.subject.toUpperCase(),
+            String(c.banco),
+            String(c.oficiales),
+            <span
+              key="e"
+              className={c.ensayos_completos < 1 ? "font-semibold text-danger" : ""}
+            >
+              {c.ensayos_completos.toFixed(2)}×
+            </span>,
+            String(c.nunca_respondidas),
+          ])}
+          vacio="Sin datos de banco."
+        />
+        {banco.nodos_flacos.length > 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            Nodos con menos de 5 preguntas ({banco.nodos_flacos.length}):{" "}
+            <code className="text-xs">{banco.nodos_flacos.join(", ")}</code>. Se
+            ven practicables en el árbol y se agotan al primer intento.
+          </p>
+        )}
+      </Seccion>
+        </>
+        );
+      })()}
+
+      {p.visitantes && (() => {
+        const visitantes = p.visitantes;
+        return (
+        <>
+      {/* ── Visitantes ───────────────────────────────────────────────── */}
+      <Seccion titulo="Quién visita (30 días)">
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          No se guarda dirección IP ni el user agent completo, así que esto no
+          prueba que dos visitas sean de personas distintas. Lo que sí muestra
+          es si hay diversidad real de equipos: muchos navegadores idénticos, con
+          una sola visita cada uno y el mismo día, casi nunca son personas.
+        </p>
+
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <Reparto titulo="Dispositivo" datos={visitantes.por_dispositivo} />
+          <Reparto titulo="Sistema" datos={visitantes.por_sistema} />
+          <Reparto titulo="Navegador" datos={visitantes.por_navegador} />
+        </div>
+
+        {visitantes.sin_clasificar > 0 && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            {visitantes.sin_clasificar} visitas son anteriores a que se
+            empezara a guardar esta información y aparecen sin categoría. Las
+            nuevas sí la traen.
+          </p>
+        )}
+
+        <Tabla
+          titulo="Navegadores recientes"
+          cabeceras={["Id", "Dispositivo", "Sistema", "Navegador", "Visitas", "Días", "Cuenta"]}
+          filas={visitantes.recientes.map((v) => [
+            <code key="i" className="text-xs">{v.visitor}</code>,
+            v.device ?? "—",
+            v.os ?? "—",
+            v.browser ?? "—",
+            String(v.visitas),
+            String(v.dias),
+            v.con_cuenta ? "Sí" : "No",
+          ])}
+          vacio="Todavía no hay visitas registradas."
+        />
+      </Seccion>
+        </>
+        );
+      })()}
+
+      {p.alumnos && (() => {
+        const alumnos = p.alumnos;
+        return (
+        <>
+      {/* ── Alumnos ──────────────────────────────────────────────────── */}
+      <Seccion titulo={`Resultados por alumno (${alumnos.total})`}>
+        <p className="mb-3 text-xs leading-relaxed text-muted">
+          El detalle detrás de los promedios. Un promedio de 275 puntos puede ser
+          tres personas parecidas o una que rinde bien y otra que abandona.
+        </p>
+
+        {alumnos.detalle.length === 0 ? (
+          <p className="rounded-xl border border-border bg-surface p-5 text-xs text-muted">
+            Todavía no hay cuentas registradas.
+          </p>
+        ) : (
+          <div className="flex flex-col gap-3">
+            {alumnos.detalle.map((a) => (
+              <div key={a.id} className="rounded-xl border border-border bg-surface p-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <div className="min-w-0">
+                    <p className="truncate font-medium">{a.name}</p>
+                    <p className="truncate text-xs text-muted">{a.email}</p>
+                  </div>
+                  <p className="text-xs text-muted">
+                    Se registró el {fecha(a.created_at)} · último acceso{" "}
+                    {fecha(a.last_login_at)}
+                  </p>
+                </div>
+
+                <div className="mt-4 grid grid-cols-2 gap-3 lg:grid-cols-5">
+                  <Mini label="Ensayos" valor={`${a.ensayos_terminados}/${a.ensayos_iniciados}`} />
+                  <Mini label="Respuestas" valor={String(a.respuestas)} />
+                  <Mini label="Acierto" valor={porcentaje(a.tasa_acierto)} />
+                  <Mini label="Mejor puntaje" valor={a.mejor_puntaje == null ? "—" : String(a.mejor_puntaje)} />
+                  <Mini label="Días activos" valor={String(a.dias_activos)} />
+                </div>
+
+                {(a.curso || a.pruebas_objetivo || a.horas_semana != null) && (
+                  <p className="mt-3 text-xs text-muted">
+                    Declaró:{" "}
+                    {[
+                      a.curso,
+                      a.pruebas_objetivo,
+                      a.horas_semana != null ? `${a.horas_semana} h/semana` : null,
+                    ]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                )}
+
+                {a.por_prueba.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {a.por_prueba.map((r) => (
+                      <span
+                        key={r.subject}
+                        className="rounded-full border border-border px-3 py-1 text-xs"
+                      >
+                        <strong>{r.subject.toUpperCase()}</strong> · {r.ensayos}{" "}
+                        {r.ensayos === 1 ? "ensayo" : "ensayos"}
+                        {r.mejor != null && ` · mejor ${r.mejor}`}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </Seccion>
+        </>
+        );
+      })()}
 
       {/* ── Usuarios ─────────────────────────────────────────────────── */}
       <Seccion titulo="Usuarios">
@@ -214,6 +499,54 @@ function Seccion({ titulo, children }: { titulo: string; children: React.ReactNo
       </h2>
       {children}
     </section>
+  );
+}
+
+function Paso({
+  label,
+  valor,
+  nota,
+}: {
+  label: string;
+  valor: number;
+  nota: string;
+}) {
+  return (
+    <div className="rounded-xl border border-border bg-surface p-4">
+      <p className="text-xs text-muted">{label}</p>
+      <p className="mt-1 text-2xl font-semibold tracking-tight tabular-nums">{valor}</p>
+      <p className="mt-1 text-xs text-muted">{nota}</p>
+    </div>
+  );
+}
+
+function Reparto({ titulo, datos }: { titulo: string; datos: Record<string, number> }) {
+  const filas = Object.entries(datos).sort((a, b) => b[1] - a[1]);
+  return (
+    <div className="rounded-xl border border-border bg-surface p-5">
+      <h3 className="text-sm font-semibold">{titulo}</h3>
+      {filas.length === 0 ? (
+        <p className="mt-3 text-xs text-muted">Sin datos todavía.</p>
+      ) : (
+        <ul className="mt-3 flex flex-col gap-1.5">
+          {filas.map(([nombre, total]) => (
+            <li key={nombre} className="flex justify-between gap-3 text-sm">
+              <span className="truncate">{nombre}</span>
+              <span className="shrink-0 tabular-nums text-muted">{total}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function Mini({ label, valor }: { label: string; valor: string }) {
+  return (
+    <div>
+      <p className="text-xs text-muted">{label}</p>
+      <p className="mt-0.5 font-semibold tabular-nums">{valor}</p>
+    </div>
   );
 }
 

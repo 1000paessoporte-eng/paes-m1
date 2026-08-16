@@ -3,9 +3,12 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { PassagePanel } from "@/components/exam/passage-panel";
+import { Burbuja } from "@/components/ui/burbuja";
 import { TextoRico } from "@/components/texto-rico";
 import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
+import { LimiteAlcanzado } from "@/components/exam/limite-alcanzado";
 import { QuestionNavigator } from "@/components/exam/question-navigator";
 import {
   ApiError,
@@ -29,7 +32,7 @@ import { formatearReloj } from "@/lib/tiempo";
 const STORAGE_KEY = "paes_exam_attempt_id";
 const LABELS = ["A", "B", "C", "D", "E"];
 
-type Phase = "config" | "loading" | "in_progress" | "submitted";
+type Phase = "config" | "loading" | "in_progress" | "submitted" | "limite";
 
 interface AnswerState {
   selected: number | null;
@@ -46,6 +49,9 @@ interface ExamRunnerProps {
   pastAttempts: ExamAttemptSummary[];
   resumable: ResumableAttempt | null;
   repasoBySubject: Record<Subject, Repaso>;
+  //: Cuota de ensayos del mes, para avisarle al alumno ANTES de que choque.
+  //: Llega desde el servidor para no hacer otra llamada al montar.
+  cuota?: { usados: number; limite: number | null; activa: boolean } | null;
 }
 
 export function ExamRunner({
@@ -53,6 +59,7 @@ export function ExamRunner({
   pastAttempts,
   resumable,
   repasoBySubject,
+  cuota,
 }: ExamRunnerProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -70,6 +77,9 @@ export function ExamRunner({
   const [confirmingSubmit, setConfirmingSubmit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  //: Motivo exacto que devuelve la API al tocar el tope del plan. Se muestra
+  //: literal para que el alumno vea el número real, no una frase genérica.
+  const [limiteMotivo, setLimiteMotivo] = useState<string | null>(null);
 
   const segmentStartRef = useRef(0);
   const attemptIdRef = useRef<number | null>(null);
@@ -332,6 +342,13 @@ export function ExamRunner({
         router.push(loginHref(pathname));
         return;
       }
+      // 409 con motivo es el tope del plan, no una falla. Mezclarlos hacía que
+      // el alumno viera un error técnico donde había una decisión de producto.
+      if (err instanceof ApiError && err.status === 409 && err.detail) {
+        setLimiteMotivo(err.detail);
+        setPhase("limite");
+        return;
+      }
       setErrorMsg("No se pudo iniciar el ensayo. Verifica que la API esté disponible.");
       setPhase("config");
     }
@@ -341,6 +358,18 @@ export function ExamRunner({
     () => Object.values(answers).filter((a) => a.selected != null).length,
     [answers]
   );
+
+  if (phase === "limite") {
+    return (
+      <LimiteAlcanzado
+        motivo={limiteMotivo ?? "Llegaste al límite de ensayos de tu plan."}
+        onVolver={() => {
+          setLimiteMotivo(null);
+          setPhase("config");
+        }}
+      />
+    );
+  }
 
   if (phase === "loading") {
     return (
@@ -372,6 +401,7 @@ export function ExamRunner({
         optionsBySubject={optionsBySubject}
         repasoBySubject={repasoBySubject}
         ensayosRendidos={pastAttempts.length}
+        cuota={cuota}
         resumable={resumable}
         errorMsg={errorMsg}
         onComenzar={handleStart}
@@ -380,14 +410,20 @@ export function ExamRunner({
     );
   }
 
+  // El reloj avisa antes de asustar. Ámbar a los diez minutos, rojo con
+  // latido a los cinco: el estudiante alcanza a reorganizarse en vez de
+  // descubrir el apuro cuando ya no puede hacer nada. Son umbrales absolutos
+  // y no proporcionales porque lo que importa es cuánto queda, no qué
+  // fracción: cinco minutos son cinco minutos en un ensayo de 20 o de 65.
   const critico = remainingMs <= 5 * 60 * 1000;
+  const aviso = !critico && remainingMs <= 10 * 60 * 1000;
   const sinResponder = questions.length - respondidas;
   const estado = answers[currentQuestion.id];
 
   return (
     <div className="mx-auto max-w-3xl">
       {/* ── Barra superior ──────────────────────────────────────────── */}
-      <header className="sticky top-14 z-20 -mx-4 border-b border-border bg-background/95 px-4 backdrop-blur sm:-mx-6 sm:px-6">
+      <header className="glass sticky top-14 z-20 -mx-4 px-4 sm:-mx-6 sm:px-6">
         <div className="flex items-center gap-3 py-3">
           <div className="min-w-0 flex-1">
             <p className="truncate text-xs text-muted">{SUBJECT_LABELS[attemptSubject]}</p>
@@ -398,8 +434,10 @@ export function ExamRunner({
 
           <div
             className={cn(
-              "rounded-lg px-3 py-1.5 font-mono text-lg font-bold tabular-nums",
-              critico ? "bg-danger/10 text-danger" : "bg-surface-hover"
+              "rounded-lg px-3 py-1.5 font-mono text-lg font-bold tabular-nums transition-colors duration-700",
+              critico && "bg-danger/10 text-danger pulso-reloj",
+              aviso && "bg-warning/10 text-warning",
+              !critico && !aviso && "bg-surface-hover"
             )}
             role="timer"
             aria-live={critico ? "polite" : "off"}
@@ -415,8 +453,11 @@ export function ExamRunner({
 
         <div className="-mx-4 h-1 w-[calc(100%+2rem)] bg-surface-hover sm:-mx-6 sm:w-[calc(100%+3rem)]">
           <div
-            className="h-full bg-accent transition-all"
-            style={{ width: `${(respondidas / questions.length) * 100}%` }}
+            className="h-full rounded-r-full transition-[width] duration-500 ease-out"
+            style={{
+              width: `${(respondidas / questions.length) * 100}%`,
+              background: "linear-gradient(90deg, var(--accent), var(--accent-2))",
+            }}
           />
         </div>
       </header>
@@ -454,6 +495,14 @@ export function ExamRunner({
             </button>
           </div>
 
+          {/* En Competencia Lectora la pregunta no se entiende sin su texto:
+              va arriba, dentro del mismo bloque, para que se lean juntos. */}
+          {currentQuestion.passage && (
+            <div className="mb-5">
+              <PassagePanel passage={currentQuestion.passage} />
+            </div>
+          )}
+
           <TextoRico texto={currentQuestion.stem} className="text-lg" />
 
           <div className="mt-5 space-y-2">
@@ -466,22 +515,23 @@ export function ExamRunner({
                   onClick={() => selectAlternative(alt.id)}
                   aria-pressed={elegida}
                   className={cn(
-                    "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition",
+                    // `active:scale` es el acuse de recibo del toque: en móvil
+                    // no hay hover, y sin esto la única señal de que el dedo
+                    // acertó llega cuando ya se pintó la alternativa.
+                    "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
+                    // La señal de "elegida" la da la burbuja, no la fila: en un
+                    // cartón de respuestas lo que se rellena es el círculo. El
+                    // contenedor solo se firma con un borde de grafito, sin
+                    // fondo de color, para no competir con ella.
                     elegida
-                      ? "border-accent bg-accent/10 ring-1 ring-accent"
+                      ? "border-grafito bg-surface"
                       : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
                   )}
                 >
-                  <span
-                    className={cn(
-                      "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold",
-                      elegida
-                        ? "bg-accent text-accent-foreground"
-                        : "bg-surface-hover text-muted"
-                    )}
-                  >
-                    {LABELS[i]}
-                  </span>
+                  {/* La burbuja del cartón de respuestas: acá es el uso puro,
+                      porque durante el ensayo nunca se corrige en pantalla.
+                      Ver components/ui/burbuja.tsx. */}
+                  <Burbuja letra={LABELS[i]} marcada={elegida} />
                   <TextoRico texto={alt.text} inline />
                 </button>
               );
@@ -512,7 +562,7 @@ export function ExamRunner({
             <button
               type="button"
               onClick={() => setConfirmingSubmit(true)}
-              className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-white transition hover:opacity-90"
+              className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90"
             >
               Terminar ensayo
             </button>
@@ -575,7 +625,7 @@ export function ExamRunner({
                 type="button"
                 onClick={doSubmit}
                 disabled={submitting}
-                className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
+                className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90 disabled:opacity-60"
               >
                 {submitting ? "Enviando…" : "Terminar"}
               </button>

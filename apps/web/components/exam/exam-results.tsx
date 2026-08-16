@@ -224,7 +224,7 @@ function RevisionItem({
         <div className="mb-2 flex items-center gap-2">
           <span
             className={cn(
-              "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white",
+              "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-on-fill",
               acertada ? "bg-success" : omitida ? "bg-border-strong" : "bg-danger"
             )}
             aria-label={acertada ? "Correcta" : omitida ? "Omitida" : "Incorrecta"}
@@ -256,9 +256,9 @@ function RevisionItem({
                 className={cn(
                   "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold",
                   alt.is_correct
-                    ? "bg-success text-white"
+                    ? "bg-success text-on-fill"
                     : alt.selected
-                      ? "bg-danger text-white"
+                      ? "bg-danger text-on-fill"
                       : "bg-surface-hover text-muted"
                 )}
               >
@@ -312,12 +312,36 @@ function RevisionItem({
   );
 }
 
+// El backend agrupa en un diccionario, así que el orden en que llegan los
+// grupos depende de en qué posición cayeron las preguntas del ensayo: la
+// dificultad salía "Difícil, Fácil, Medio" y los ejes en cualquier orden. Se
+// fija acá el orden con el que la gente los lee, y lo desconocido (los nodos
+// del árbol, que son decenas) conserva el orden recibido.
+const ORDEN_CONOCIDO = [
+  "Fácil",
+  "Medio",
+  "Difícil",
+  "Números",
+  "Álgebra y Funciones",
+  "Geometría",
+  "Probabilidad y Estadística",
+];
+
+function ordenar(items: BreakdownItem[]): BreakdownItem[] {
+  return [...items].sort((a, b) => {
+    const ia = ORDEN_CONOCIDO.indexOf(a.name);
+    const ib = ORDEN_CONOCIDO.indexOf(b.name);
+    if (ia < 0 && ib < 0) return 0;
+    return (ia < 0 ? ORDEN_CONOCIDO.length : ia) - (ib < 0 ? ORDEN_CONOCIDO.length : ib);
+  });
+}
+
 function Desglose({ titulo, items }: { titulo: string; items: BreakdownItem[] }) {
   return (
     <section className="rounded-xl border border-border bg-surface p-4">
       <h2 className="mb-3 text-sm font-semibold">{titulo}</h2>
       <ul className="space-y-2.5">
-        {items.map((item) => (
+        {ordenar(items).map((item) => (
           <li key={item.name}>
             <div className="mb-1 flex items-baseline justify-between gap-2 text-sm">
               <span className="truncate">{item.name}</span>

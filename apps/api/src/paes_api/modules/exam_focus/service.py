@@ -46,6 +46,18 @@ from paes_api.modules.users.models import User
 
 #: Nombre legible de cada eje, como aparece en el temario DEMRE.
 AXIS_LABELS: dict[str, str] = {
+    # Competencia Lectora se organiza por habilidades, no por ejes de contenido.
+    SkillAxis.LOCALIZAR.value: "Localizar información",
+    SkillAxis.INTERPRETAR.value: "Interpretar y relacionar",
+    SkillAxis.EVALUAR.value: "Evaluar y reflexionar",
+    # Ciencias: los ejes son las tres disciplinas del temario.
+    SkillAxis.BIOLOGIA.value: "Biología",
+    SkillAxis.FISICA.value: "Física",
+    SkillAxis.QUIMICA.value: "Química",
+    # Historia y Ciencias Sociales.
+    SkillAxis.HISTORIA.value: "Historia",
+    SkillAxis.CIUDADANIA.value: "Formación ciudadana",
+    SkillAxis.ECONOMIA.value: "Economía y sociedad",
     SkillAxis.NUMEROS.value: "Números",
     SkillAxis.ALGEBRA.value: "Álgebra y Funciones",
     SkillAxis.GEOMETRIA.value: "Geometría",
@@ -57,9 +69,22 @@ DIFFICULTY_LABELS = {"facil": "Fácil", "medio": "Medio", "dificil": "Difícil"}
 #: Qué subjects entran al banco de una prueba. M2 evalúa "todos los
 #: conocimientos de M1, además de" contenido propio (temario DEMRE), así que
 #: su pool incluye los nodos de M1 más los exclusivos de M2.
+#: Qué ejes ofrece cada prueba en el configurador de ensayo.
+EJES_POR_PRUEBA: dict[Subject, set[str]] = {
+    Subject.M1: {"numeros", "algebra", "geometria", "probabilidad"},
+    Subject.M2: {"numeros", "algebra", "geometria", "probabilidad"},
+    Subject.LECTORA: {"localizar", "interpretar", "evaluar"},
+    Subject.CIENCIAS: {"biologia", "fisica", "quimica"},
+    Subject.HISTORIA: {"historia", "ciudadania", "economia"},
+}
+
 SUBJECT_INCLUDES: dict[Subject, list[Subject]] = {
     Subject.M1: [Subject.M1],
     Subject.M2: [Subject.M1, Subject.M2],
+    # Competencia Lectora no comparte banco con matemática.
+    Subject.LECTORA: [Subject.LECTORA],
+    Subject.CIENCIAS: [Subject.CIENCIAS],
+    Subject.HISTORIA: [Subject.HISTORIA],
 }
 
 
@@ -82,9 +107,14 @@ def get_options(db: Session, subject: Subject = Subject.M1) -> ExamOptionsOut:
     for q in questions:
         counts[q.skill_node.axis.value] += 1
 
+    # Solo los ejes que esta prueba usa. Matemática y Competencia Lectora
+    # comparten el enum de ejes, así que sin filtrar el configurador de un
+    # ensayo de lectura mostraría "Números (0)" y el de matemática mostraría
+    # "Localizar (0)".
     axes = [
         AxisOptionOut(axis=axis, label=label, available=counts.get(axis, 0))
         for axis, label in AXIS_LABELS.items()
+        if axis in EJES_POR_PRUEBA[subject]
     ]
     return ExamOptionsOut(
         subject=subject,

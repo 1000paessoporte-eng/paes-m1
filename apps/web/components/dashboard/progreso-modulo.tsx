@@ -1,5 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import type { BreakdownItem } from "@/lib/api";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
+import { BarraProgreso } from "@/components/ui/barra-progreso";
 
 /**
  * Puntaje estimado y desglose por eje del último ensayo rendido.
@@ -9,26 +14,51 @@ import type { BreakdownItem } from "@/lib/api";
  * nunca muestren números distintos.
  */
 
-// El color por eje es el mismo que usa la vista previa de la landing, para que
-// un eje se reconozca por su color en toda la plataforma. El orden de las
-// claves es el del temario DEMRE: el backend agrupa por eje sin garantizar un
-// orden, y verlos siempre en la misma secuencia hace comparables dos ensayos.
+// Un eje se reconoce por su color en toda la plataforma, así que el mapa cubre
+// los trece ejes de las cinco pruebas y no solo los de matemática. Dentro de
+// cada prueba los colores se separan entre sí; entre pruebas pueden repetirse,
+// porque un ensayo nunca mezcla dos.
 const COLOR_POR_EJE: Record<string, string> = {
+  // Competencia Matemática
   "Números": "var(--accent)",
   "Álgebra y Funciones": "var(--accent-2)",
   "Geometría": "var(--success)",
   "Probabilidad y Estadística": "var(--accent-warm)",
+  // Competencia Lectora
+  "Localizar información": "var(--accent)",
+  "Interpretar y relacionar": "var(--accent-2)",
+  "Evaluar y reflexionar": "var(--success)",
+  // Ciencias
+  "Biología": "var(--success)",
+  "Física": "var(--accent)",
+  "Química": "var(--accent-2)",
+  // Historia y Ciencias Sociales
+  "Historia": "var(--accent)",
+  "Formación ciudadana": "var(--accent-2)",
+  "Economía y sociedad": "var(--accent-warm)",
+};
+
+const NOMBRE_PRUEBA: Record<string, string> = {
+  lectora: "Competencia Lectora",
+  m1: "Matemática M1",
+  m2: "Matemática M2",
+  ciencias: "Ciencias",
+  historia: "Historia y Cs. Sociales",
 };
 
 interface Props {
   puntaje: number | null;
   variacion: number | null;
   porEje: BreakdownItem[];
+  /** Prueba del ensayo del que salen estos ejes. */
+  ejesDe?: string | null;
 }
 
+// El orden del temario DEMRE: el backend agrupa por eje sin garantizar un
+// orden, y verlos siempre en la misma secuencia hace comparables dos ensayos.
 const ORDEN_EJES = Object.keys(COLOR_POR_EJE);
 
-export function ProgresoModulo({ puntaje, variacion, porEje }: Props) {
+export function ProgresoModulo({ puntaje, variacion, porEje, ejesDe }: Props) {
   const ejesOrdenados = [...porEje].sort((a, b) => {
     const ia = ORDEN_EJES.indexOf(a.name);
     const ib = ORDEN_EJES.indexOf(b.name);
@@ -58,7 +88,7 @@ export function ProgresoModulo({ puntaje, variacion, porEje }: Props) {
             <AnilloPuntaje puntaje={puntaje} />
             <div>
               <p className="text-3xl font-bold tracking-tight tabular-nums">
-                {puntaje}
+                <NumeroAnimado valor={puntaje} />
                 <span className="text-base font-medium text-muted">/1000</span>
               </p>
               <p className="text-xs text-muted">Puntaje estimado</p>
@@ -79,12 +109,18 @@ export function ProgresoModulo({ puntaje, variacion, porEje }: Props) {
 
           {porEje.length > 0 && (
             <div className="mt-6 border-t border-border pt-5">
+              {/* De qué ensayo salen estos números. Sin esto, un ensayo
+                  abandonado deja los ejes en 0% y parece que se perdieron los
+                  datos de todos los anteriores. */}
               <p className="text-xs font-medium text-muted">
-                Rendimiento por eje temático
+                Rendimiento por eje
+                {ejesDe && NOMBRE_PRUEBA[ejesDe]
+                  ? ` · último ensayo de ${NOMBRE_PRUEBA[ejesDe]}`
+                  : " · último ensayo"}
               </p>
               <ul className="mt-4 flex flex-col gap-3.5">
-                {ejesOrdenados.map((eje) => (
-                  <BarraEje key={eje.name} eje={eje} />
+                {ejesOrdenados.map((eje, i) => (
+                  <BarraEje key={eje.name} eje={eje} orden={i} />
                 ))}
               </ul>
             </div>
@@ -95,11 +131,19 @@ export function ProgresoModulo({ puntaje, variacion, porEje }: Props) {
   );
 }
 
-/** Anillo del puntaje, escalado sobre el rango real PAES (100-1000). */
+/**
+ * Anillo del puntaje, escalado sobre el rango real PAES (100-1000).
+ *
+ * El trazo se dibuja al aparecer, como si alguien lo estuviera marcando. Es la
+ * cifra que el estudiante viene a mirar, así que se gana medio segundo de
+ * atención antes de quedarse quieta.
+ */
 function AnilloPuntaje({ puntaje }: { puntaje: number }) {
+  const quieto = useReducedMotion();
   const radio = 46;
   const circunferencia = 2 * Math.PI * radio;
   const progreso = Math.min(1, Math.max(0, (puntaje - 100) / 900));
+  const offsetFinal = circunferencia * (1 - progreso);
 
   return (
     <svg
@@ -110,8 +154,15 @@ function AnilloPuntaje({ puntaje }: { puntaje: number }) {
       role="img"
       aria-label={`Puntaje estimado ${puntaje} de 1000`}
     >
-      <circle cx="52" cy="52" r={radio} fill="none" stroke="var(--border)" strokeWidth="8" />
       <circle
+        cx="52"
+        cy="52"
+        r={radio}
+        fill="none"
+        stroke="var(--border)"
+        strokeWidth="8"
+      />
+      <motion.circle
         cx="52"
         cy="52"
         r={radio}
@@ -120,13 +171,17 @@ function AnilloPuntaje({ puntaje }: { puntaje: number }) {
         strokeWidth="8"
         strokeLinecap="round"
         strokeDasharray={circunferencia}
-        strokeDashoffset={circunferencia * (1 - progreso)}
+        initial={quieto ? false : { strokeDashoffset: circunferencia }}
+        whileInView={{ strokeDashoffset: offsetFinal }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+        style={{ strokeDashoffset: offsetFinal }}
       />
     </svg>
   );
 }
 
-function BarraEje({ eje }: { eje: BreakdownItem }) {
+function BarraEje({ eje, orden }: { eje: BreakdownItem; orden: number }) {
   const color = COLOR_POR_EJE[eje.name] ?? "var(--accent)";
   const pct = Math.round(eje.percentage);
 
@@ -141,17 +196,14 @@ function BarraEje({ eje }: { eje: BreakdownItem }) {
           </span>
         </span>
       </div>
-      <div
-        className="mt-1.5 h-2 overflow-hidden rounded-full bg-surface-hover"
-        role="progressbar"
-        aria-valuenow={pct}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-label={eje.name}
-      >
-        <div
-          className="h-full rounded-full transition-[width] duration-500"
-          style={{ width: `${pct}%`, background: color }}
+      <div className="mt-1.5">
+        {/* Las barras entran en cascada, de arriba abajo: el ojo las recorre en
+            el mismo orden en que se leen las etiquetas. */}
+        <BarraProgreso
+          porcentaje={pct}
+          color={color}
+          etiqueta={eje.name}
+          delay={orden * 0.08}
         />
       </div>
     </li>

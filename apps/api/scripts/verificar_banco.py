@@ -26,10 +26,198 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from paes_api.seed_data import QUESTIONS, SKILL_NODES, SKILL_NODES_M2
+from paes_api.seed_data import (
+    LESSONS,
+    PASSAGES,
+    PASSAGES_HISTORIA,
+    QUESTIONS,
+    QUESTIONS_CIENCIAS,
+    QUESTIONS_HISTORIA,
+    QUESTIONS_LECTORA,
+    SKILL_NODES,
+    SKILL_NODES_CIENCIAS,
+    SKILL_NODES_HISTORIA,
+    SKILL_NODES_LECTORA,
+    SKILL_NODES_M2,
+)
 
-CODIGOS = {n[0] for n in SKILL_NODES} | {n[0] for n in SKILL_NODES_M2}
+CODIGOS = (
+    {n[0] for n in SKILL_NODES}
+    | {n[0] for n in SKILL_NODES_M2}
+    | {n[0] for n in SKILL_NODES_LECTORA}
+    | {n[0] for n in SKILL_NODES_CIENCIAS}
+    | {n[0] for n in SKILL_NODES_HISTORIA}
+)
+TODOS_LOS_PASAJES = PASSAGES + PASSAGES_HISTORIA
+CLAVES_PASAJE = {p["key"] for p in TODOS_LOS_PASAJES}
+PASAJES_POR_CLAVE = {p["key"]: p for p in TODOS_LOS_PASAJES}
 DIFICULTADES = {"facil", "medio", "dificil"}
+
+# Resultado final del ejemplo resuelto de cada lección, recalculado acá sin
+# mirar el texto. Una lección con la aritmética mala es peor que no tener
+# lección: el estudiante la estudia creyendo que está bien.
+#
+# ALCANCE: comprueba que el resultado correcto aparezca en la resolución, no
+# que cada paso intermedio esté bien — para eso haría falta un motor simbólico.
+# Si alguien cambia un número intermedio y el final sigue apareciendo en otro
+# paso, esto no lo detecta. Detecta lo que importa más: que el ejemplo termine
+# donde debe terminar.
+RESULTADOS_LECCIONES: dict[str, Fraction] = {
+    "num_racionales": Fraction(5, 6) - Fraction(2, 9),                # 11/18
+    "num_potencias_raices": Fraction(2**5) * Fraction(1, 2**3) * 2,   # 8
+    "num_porcentajes": Fraction(round(20000 * 1.20 * 0.85)),          # 20.400
+    "alg_lineal": Fraction(9),                                        # x = 9
+    "alg_sistemas": Fraction(7),                                      # x = 7
+    "alg_cuadratica": Fraction(3),                                    # x = 2 o 3
+    "alg_funciones": Fraction(3),                                     # pendiente 3
+    "geo_plana": Fraction(round((8 * 5 - 3.14 * 2**2) * 100), 100),   # 27,44
+    "geo_pitagoras": Fraction(int(sqrt(13**2 - 5**2))),               # 12
+    "geo_transformaciones": Fraction(5),                              # (5, 3)
+    "geo_solidos": Fraction(round(3.14 * 10**2 * 20)),                # 6.280
+    "prob_estadistica_desc": Fraction(4 + 5 + 5 + 6 + 10, 5),         # 6
+    "prob_combinatoria": Fraction(comb(6, 2)),                        # 15
+    "prob_reglas": Fraction(5, 8) * Fraction(4, 7),                   # 5/14
+}
+
+# --- Ciencias: física y química ---
+# Cada valor se recalcula acá desde la definición, sin mirar la alternativa que
+# el banco marcó como correcta. Es la única forma de que un error de cálculo no
+# pase silenciosamente a un estudiante que lo va a estudiar como verdad.
+COMPROBACIONES_CIENCIAS: dict[str, str] = {
+    # Movimiento
+    "Un tren viaja a 90 km/h": str(round(90 / 3.6)),
+    "se deja caer desde el reposo": str(10 * 3),
+    "aumenta su rapidez de 5 m/s a 25 m/s": str((25 - 5) // 4),
+    "rapidez constante de 25 m/s durante 8": str(25 * 8),
+    "frena uniformemente hasta detenerse en 5": str((0 - 20) // 5),
+    # Fuerzas
+    "peso de un cuerpo de 8 kg": str(8 * 10),
+    "una de 30 N hacia la derecha": str((30 - 12) // 6),
+    "empujada con una fuerza de 40 N": str((40 - 10) // 5),
+    "dos fuerzas perpendiculares": str(int(sqrt(3**2 + 4**2))),
+    # Energía
+    "energía potencial gravitatoria de un cuerpo de 2 kg": str(2 * 10 * 5),
+    "cuerpo de 4 kg se mueve a 3 m/s": str(int(0.5 * 4 * 3**2)),
+    "trabajo de 600 J en 20 segundos": str(600 // 20),
+    "se suelta desde 20 m de altura": str(int(sqrt(2 * 10 * 20))),
+    "fuerza de 25 N desplaza un cuerpo 8 m": str(25 * 8),
+    # Ondas
+    "periodo de 0,2 s": str(int(1 / 0.2)),
+    "frecuencia de 170 Hz": str(340 // 170),
+    "longitud de onda de 3 m y una frecuencia de 12": str(3 * 12),
+    # Electricidad
+    "ampolleta conectada a 220 V": str(int(220 / 0.5)),
+    "4 Ω y 6 Ω se conectan en SERIE": str(4 + 6),
+    "funciona con 12 V y consume 2 A": str(12 * 2),
+    "resistencia de 10 Ω es atravesada por una corriente de 3 A": str(3**2 * 10),
+    # Átomo
+    "átomo neutro tiene 11 protones": str(11),
+    "ion $Ca^{2+}$": str(20 - 2),
+    "número másico 40 y 20 neutrones": str(40 - 20),
+    # Estequiometría y disoluciones
+    "17 protones y 18 neutrones": str(17 + 18),
+    "preparar 2 litros de una disolución 0,5 mol/L? La masa molar": str(int(0.5 * 2 * 40)),
+    "3 moles de agua": str(3 * 18),
+    "4 moles de nitrógeno": str(4 * 2),
+    "2 moles de soluto en 4 litros": str(2 / 4),
+    "500 mL de una disolución 0,4": str(0.4 * 0.5),
+    "diluye una disolución de 100 mL y 2 mol/L": str(2 * 100 / 400),
+    # Competencia Lectora: la tabla de residuos
+    "aumentaron los plásticos": str(22 - 12),
+    # Competencia Lectora: la campaña del agua
+    "aplica las dos primeras medidas": str(30 + 15),
+    "gasta 150 litros al día": str(150 * 4),
+    # Historia y Cs. Sociales: economía y cálculo temporal
+    "4.500.000 personas ocupadas": str(round(500_000 / (4_500_000 + 500_000) * 100)),
+    "IPC de un país pasa de 100 a 106": str(round((106 - 100) / 100 * 100)),
+    "PIB de 300.000 millones": f"{300_000 // 20:,}".replace(",", "."),
+    "fuerza de trabajo es de 60.000": str(round(3_000 / 60_000 * 100)),
+    "ofrecen 800 unidades": str(800 - 500),
+    "vende 200 unidades a 3.000 pesos": f"{3_000 * 200:,}".replace(",", "."),
+    "cayó el sector primario": str(55 - 11),
+    "comienza en 1810 y termina en 1830": str(1830 - 1810),
+    # Segunda tanda de Ciencias
+    "recorre 300 m en 20 s": str((300 + 100) // (20 + 5)),
+    "lanza verticalmente hacia arriba a 30 m/s": str(30 // 10),
+    "viaja a 15 m/s y acelera a 3": str(int(15 * 6 + 0.5 * 3 * 6**2)),
+    "ascensor sube con aceleración": str(60 * (10 + 2)),
+    "coeficiente de roce 0,3": str(int(0.3 * 10 * 10)),
+    "cuerpo de 2 kg cuelga en reposo": str(2 * 10),
+    "cuerpo de 2 kg cae desde 10 m": str(2 * 10 * 10),
+    "ampolleta de 60 W permanece encendida": str(60 / 1000 * 5).replace(".", ","),
+    "recibe 500 J y entrega 350 J": str(round(350 / 500 * 100)),
+    "frecuencia de 25 Hz. ¿Cuántas": str(25 * 4),
+    "artefacto de 1.100 W": str(1100 // 220),
+    "Tres resistencias de 6 Ω cada una": str(6 // 3),
+    "40 g de hidróxido de sodio (NaOH)": str(40 // 40),
+    "6 moles de óxido de magnesio": str(6),
+    "20 g de sal en 180 g de agua": str(round(20 / (20 + 180) * 100)),
+    "pH 3 y otra pH 5": str(10 ** (5 - 3)),
+    # Tercera tanda de Ciencias
+    "atleta corre 400 m en 50 s": str(400 // 50),
+    "recorre 240 m en 12 s": str(240 // 12 * 20),
+    "cae libremente desde el reposo durante 4 s": str(int(0.5 * 10 * 4**2)),
+    "auto a 30 m/s frena": str(30 // 5),
+    "alcanza 12 m/s en 4 s": str(12 // 4),
+    "tren de 200 m viaja a 20 m/s": str((600 + 200) // 20),
+    "parten del mismo punto en sentidos opuestos": str((15 + 25) * 10),
+    "cuerpo de 12 kg acelere a 3": str(12 * 3),
+    "20 kg sube por una cuerda": str(20 * (10 + 3)),
+    "fuerza de 50 N hacia la derecha": str((50 - 20) // 5),
+    "cuerpo de 6 kg está en reposo sobre una mesa": str(6 * 10),
+    "de 3 kg y 5 kg, son arrastrados": str(24 // (3 + 5)),
+    "cuerpo de 10 kg se mueve a 6 m/s": str(int(0.5 * 10 * 6**2)),
+    "bomba eleva 200 kg de agua": str(200 * 10 * 5 // 20),
+    "carrito de 2 kg baja sin roce": str(int((2 * 10 * 5) ** 0.5)),
+    "motor consume 2.000 J": str(2000 - 1200),
+    "grúa levanta 300 kg a 6 m": f"{300 * 10 * 6:,}".replace(",", "."),
+    "longitud de onda de 2 m y avanza a 10 m/s": str(10 // 2),
+    "onda sonora de 680 Hz": str(340 / 680).replace(".", ","),
+    "periodo de 0,05 s": str(int(1 / 0.05)),
+    "resistencia de 25 Ω se conecta a una fuente de 100 V": str(100 // 25),
+    "estufa de 2.000 W funciona 3 horas": str(2000 // 1000 * 3),
+    "10 Ω y 15 Ω se conectan en serie": str(100 // (10 + 15)),
+    "aparato de 60 W conectado a 120 V": str(120**2 // 60),
+    "ion tiene 16 protones y 18 electrones": str(18 - 16),
+    "2 moles de oxígeno molecular": str(2 * 32),
+    "quemar 4 moles de carbono": str(4),
+    "36 g de agua, si su masa molar es 18": str(36 // 18),
+    "partir de 4 moles de hidrógeno": str(4 * 18),
+    "oxígeno hay en total en $3H_2SO_4$": str(3 * 4),
+    "3 moles de soluto en 1,5 litros": str(int(3 / 1.5)),
+    "200 mL de una disolución 3 mol/L": str(3 * 200 // 600),
+    "250 mL de una disolución 0,4 mol/L de": str(int(0.4 * 0.25 * 60)),
+    "40 g de soluto en 160 g de agua": str(round(40 / (40 + 160) * 100)),
+    "2 litros de disolución 0,5 mol/L. ¿Cuántos moles": str(int(0.5 * 2)),
+    "10^{-9}$ mol/L": str(9),
+    "pOH 4, ¿cuál es su pH": str(14 - 4),
+    "pH 2 y otra pH 6": f"{10 ** (6 - 2):,}".replace(",", "."),
+    # Segunda tanda de Historia: economía
+    "IPC sube de 120 a 126": str(round((126 - 120) / 120 * 100)),
+    "PIB de 120.000 millones y 8 millones": f"{120_000 // 8:,}".replace(",", "."),
+    "8 millones de personas en edad de trabajar": str(round(500 / 5500 * 100, 1)).replace(".", ","),
+    "a $500 los consumidores demandan 900": str(900 - 400),
+    "vende 500 unidades a $2.000": f"{2_000 * 500 - 700_000:,}".replace(",", "."),
+    "sector terciario entre 1960 y 2000": str(52 - 25),
+    "aumentaron los plásticos entre 2015": str(22 - 12),
+    # Fuentes nuevas de Historia
+    "mujeres rurales entre 1930 y 2020": str(96 - 19),
+    "plebiscito de 2020 que en la municipal de 2016": f"{23_000 - 15_400:,}".replace(",", "."),
+    # Biología: lo que sí se puede recalcular
+    "saca 3 iones": str(3 - 2),
+    "se divide por mitosis": str(46),
+    "moléculas de $CO_2$ se necesitan": str(6),
+    "dos plantas heterocigotas": str(round(1 / 4 * 100)),
+    "heterocigota $Aa$ con una homocigota recesiva": str(round(1 / 2 * 100)),
+    "entra en meiosis": str(46 // 2),
+    "porcentaje de los HIJOS VARONES": str(round(1 / 2 * 100)),
+    "grupo sanguíneo $AB$": str(round(2 / 4 * 100)),
+    "los productores fijan 10.000 kcal": str(int(10_000 * 0.1 * 0.1)),
+    "consumidor primario recibe 500 kcal": f"{int(500 / 0.1):,}".replace(",", "."),
+    "8.000 kcal en los productores": str(int(8_000 * 0.1 * 0.1 * 0.1)),
+    # Ácido-base
+    "concentración de iones hidrógeno es $1 \\times 10^{-5}$": str(5),
+}
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
@@ -123,6 +311,25 @@ COMPROBACIONES: dict[str, str] = {
     "moneda 3 veces": str(Fraction(3, 8)),
     "5 intentos y probabilidad de éxito 0,2": str(int(5 * 0.2)),
     "4 veces con probabilidad de éxito 0,5": str(comb(4, 3) * 0.5**4).replace(".", ","),
+    # --- Historia: economía y lectura de tabla ---
+    "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
+    "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
+    "aumentó la población total de la comuna": f"{28700 - 12400:,}".replace(",", ".") + " habitantes",
+    # --- Ciencias: física ---
+    "recorre 120 m en 15 s": f"{120 // 15} m/s",
+    "acelera uniformemente a 2 m/s² durante 6 s": f"{0.5 * 2 * 6**2:.0f} m",
+    "cuerpo de 4 kg actúa una fuerza neta de 20 N": f"{20 // 4} m/s²",
+    "caja de 50 kg a 4 m de altura": f"{50 * 10 * 4} J",
+    "frecuencia de 50 Hz y una longitud de onda de 4 m": f"{50 * 4} m/s",
+    "resistencia de 20 Ω circula una corriente de 3 A": f"{3 * 20} V",
+    "6 Ω y 3 Ω se conectan en paralelo": f"{1 / (1/6 + 1/3):.0f} Ω",
+    # --- Ciencias: química ---
+    "número atómico 17 y número másico 35": str(35 - 17),
+    "88 g de dióxido de carbono": f"{88 // 44} mol",
+    "0,5 mol de soluto": f"{0.5 / 0.25:.0f} mol/L",
+    "1 × 10⁻³ mol/L": str(3),
+    "pH de una disolución es 5": str(14 - 5),
+    "6 mol de hidrógeno": "6 mol",
     # --- M2 números ---
     "racionalizar 6/√3": "2√3" if isclose(6 / sqrt(3), 2 * sqrt(3)) else "?",
     "(√5 + 2)(√5 − 2)": str(5 - 4),
@@ -623,12 +830,87 @@ def _norm(t: str) -> str:
     return t.replace("\u2212", "-").replace("\u00a0", " ").strip()
 
 
+def _norm_numero(t: str) -> str:
+    """Normaliza la coma decimal antes de comparar.
+
+    El banco escribe los decimales como se escriben en Chile —"0,5"— y Python
+    los calcula como "0.5". Es el mismo número escrito distinto, no un error de
+    aritmética, y sin esto el verificador reportaría fallas donde no las hay.
+    """
+    return _norm(t).replace(",", ".")
+
+
+def _valores_del_texto(texto: str) -> set[Fraction]:
+    """Todos los números que aparecen en un texto, como valores exactos.
+
+    Compara VALOR y no cadena, porque el mismo número se escribe de varias
+    formas legítimas en el banco: `\\frac{11}{18}` en LaTeX, `20.400` con punto
+    de miles a la chilena, `27{,}44` con coma decimal. Buscar el string "11/18"
+    dentro de un texto que dice `\\frac{11}{18}` falla sin que nada esté malo.
+    """
+    t = _norm(texto)
+
+    valores: set[Fraction] = set()
+
+    # Fracciones LaTeX: \frac{a}{b} y \dfrac{a}{b}.
+    for num, den in re.findall(r"\\d?frac\{(-?\d+)\}\{(-?\d+)\}", t):
+        if int(den) != 0:
+            valores.add(Fraction(int(num), int(den)))
+
+    # Fracciones escritas con barra.
+    for num, den in re.findall(r"(-?\d+)\s*/\s*(\d+)", t):
+        if int(den) != 0:
+            valores.add(Fraction(int(num), int(den)))
+
+    # Números sueltos. El punto separa miles y la coma decimales (formato
+    # chileno); en LaTeX la coma decimal se escribe {,}.
+    limpio = t.replace("{,}", ",")
+    for crudo in re.findall(r"-?\d[\d.]*(?:,\d+)?", limpio):
+        sin_miles = crudo.replace(".", "") if "," in crudo or crudo.count(".") >= 1 else crudo
+        sin_miles = sin_miles.replace(",", ".")
+        try:
+            valores.add(Fraction(sin_miles))
+        except (ValueError, ZeroDivisionError):
+            continue
+
+    return valores
+
+
 def main() -> int:
     fallas: list[str] = []
 
     # ---- capa 1: estructura ----
+    todas = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS + QUESTIONS_HISTORIA
+
+    # ---- capa 3: Competencia Lectora ----
+    # Una pregunta de lectura sin su texto es una pregunta que nadie puede
+    # responder, y un texto sin preguntas es peso muerto en el ensayo.
+    con_fuente = QUESTIONS_LECTORA + [q for q in QUESTIONS_HISTORIA if q.get("passage")]
+    for q in con_fuente:
+        clave = q.get("passage")
+        if not clave:
+            fallas.append(f"pregunta de lectora sin texto asociado: {q['stem'][:60]}")
+        elif clave not in CLAVES_PASAJE:
+            fallas.append(f"apunta a un texto inexistente '{clave}': {q['stem'][:60]}")
+
+    usados = {q.get("passage") for q in con_fuente}
+    for clave in CLAVES_PASAJE - usados:
+        fallas.append(f"el texto '{clave}' no tiene ninguna pregunta asociada")
+
+    # Un texto continuo corto no da para preguntar; una tabla o infografía sí,
+    # porque su densidad está en los datos y no en la extensión.
+    for p in TODOS_LOS_PASAJES:
+        minimo = 150 if p["kind"] == "discontinuo" else 400
+        if len(p["body"]) < minimo:
+            fallas.append(
+                f"texto '{p['key']}' demasiado corto para su tipo "
+                f"({len(p['body'])} caracteres, mínimo {minimo})"
+            )
+        if not p.get("source_note"):
+            fallas.append(f"texto '{p['key']}' sin nota de origen")
+
     vistos: Counter[str] = Counter()
-    for q in QUESTIONS:
+    for q in todas:
         stem = q["stem"]
         vistos[stem] += 1
         alts = q["alternatives"]
@@ -677,9 +959,9 @@ def main() -> int:
             fallas.append(f"enunciado duplicado {veces} veces: {stem[:70]}")
 
     # ---- capa 2: aritmética ----
-    por_stem = {q["stem"]: q for q in QUESTIONS}
+    por_stem = {q["stem"]: q for q in todas}
     comprobadas = 0
-    for fragmento, esperado in COMPROBACIONES.items():
+    for fragmento, esperado in {**COMPROBACIONES, **COMPROBACIONES_CIENCIAS}.items():
         candidatas = [s for s in por_stem if fragmento in s]
         if len(candidatas) != 1:
             fallas.append(
@@ -688,17 +970,57 @@ def main() -> int:
             continue
         q = por_stem[candidatas[0]]
         correcta = next(a["text"] for a in q["alternatives"] if a["is_correct"])
-        if _norm(esperado) not in _norm(correcta):
+        if _norm_numero(esperado) not in _norm_numero(correcta):
             fallas.append(
                 f"aritmética: '{fragmento}' → esperado '{esperado}', "
                 f"la marcada correcta dice '{correcta}'"
             )
         comprobadas += 1
 
+    # ---- capa 4: lecciones ----
+    # La lección es lo que el estudiante lee ANTES de practicar, y se la cree.
+    # Vale la misma exigencia que una pregunta.
+    for codigo, leccion in LESSONS.items():
+        if codigo not in CODIGOS:
+            fallas.append(f"lección de un nodo inexistente: '{codigo}'")
+        for campo in ("intro", "theory", "example_statement"):
+            if not leccion.get(campo, "").strip():
+                fallas.append(f"lección '{codigo}' sin {campo}")
+        pasos = leccion.get("example_steps", [])
+        if len(pasos) < 2:
+            fallas.append(f"lección '{codigo}' tiene {len(pasos)} paso(s); mínimo 2")
+        for i, paso in enumerate(pasos, 1):
+            # El "porque" es la razón de ser del formato: sin él queda una
+            # receta para copiar, no una explicación.
+            if not paso.get("accion", "").strip():
+                fallas.append(f"lección '{codigo}', paso {i} sin acción")
+            if not paso.get("porque", "").strip():
+                fallas.append(f"lección '{codigo}', paso {i} sin el porqué")
+
+    leidas = 0
+    for codigo, esperado in RESULTADOS_LECCIONES.items():
+        leccion = LESSONS.get(codigo)
+        if leccion is None:
+            fallas.append(f"se comprueba un resultado de '{codigo}', que no existe")
+            continue
+        texto = " ".join(p["accion"] for p in leccion["example_steps"])
+        if esperado not in _valores_del_texto(texto):
+            fallas.append(
+                f"aritmética de la lección '{codigo}': el resultado recalculado "
+                f"es {esperado} y no aparece en ningún paso del ejemplo"
+            )
+        leidas += 1
+
     # ---- reporte ----
-    print(f"preguntas en el banco: {len(QUESTIONS)}")
+    print(
+        f"preguntas en el banco: {len(todas)} (matemática {len(QUESTIONS)}, "
+        f"lectora {len(QUESTIONS_LECTORA)}, ciencias {len(QUESTIONS_CIENCIAS)}, "
+        f"historia {len(QUESTIONS_HISTORIA)})"
+    )
+    print(f"textos y fuentes: {len(TODOS_LOS_PASAJES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
-    por_nodo = Counter(q["skill_node"] for q in QUESTIONS)
+    print(f"lecciones: {len(LESSONS)} ({leidas} con resultado recalculado)")
+    por_nodo = Counter(q["skill_node"] for q in todas)
     sin_suficientes = [c for c in CODIGOS if por_nodo[c] < 5]
     if sin_suficientes:
         print(f"nodos con menos de 5 preguntas: {sorted(sin_suficientes)}")

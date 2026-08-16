@@ -13,6 +13,8 @@ from paes_api.modules.users.schemas import (
     ForgotPasswordIn,
     GoogleLoginIn,
     LoginIn,
+    OnboardingIn,
+    OnboardingOut,
     RegisterIn,
     ResetPasswordIn,
     TokenOut,
@@ -44,10 +46,35 @@ def login(request: Request, payload: LoginIn, db: Session = Depends(get_db)) -> 
     return TokenOut(access_token=create_access_token(user.id), user=UserOut.model_validate(user))
 
 
+@router.get("/onboarding", response_model=OnboardingOut)
+def ver_onboarding(user: User = Depends(get_current_user)) -> OnboardingOut:
+    return OnboardingOut(**service.onboarding_de(user))
+
+
+@router.put("/onboarding", response_model=OnboardingOut)
+def responder_onboarding(
+    payload: OnboardingIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> OnboardingOut:
+    service.guardar_onboarding(db, user, payload)
+    return OnboardingOut(**service.onboarding_de(user))
+
+
 @router.get("/config", response_model=AuthConfigOut)
 def auth_config() -> AuthConfigOut:
-    """La web consulta esto para saber si mostrar el botón de Google."""
-    return AuthConfigOut(google_enabled=bool(get_settings().google_client_id))
+    """Qué puede hacer este servidor, para que la interfaz no prometa de más.
+
+    Sin SMTP configurado, "te llegará un correo con las instrucciones" es una
+    promesa incumplible: el enlace de recuperación se genera igual pero queda
+    en el log, y el estudiante espera algo que nunca llega. La pantalla
+    necesita saberlo para decir la verdad.
+    """
+    ajustes = get_settings()
+    return AuthConfigOut(
+        google_enabled=bool(ajustes.google_client_id),
+        email_enabled=bool(ajustes.smtp_host),
+    )
 
 
 @router.post("/google", response_model=TokenOut)

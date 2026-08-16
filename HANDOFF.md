@@ -34,8 +34,7 @@ Estás tomando un proyecto en marcha. Contexto mínimo antes de tocar nada:
      de instituciones ni testimonios porque no existen.
   4. Las cuentas de servicio del proyecto usan `1000paessoporte@gmail.com`,
      nunca correos personales. **Excepcion historica:** la cuenta de Vercel
-     quedo bajo `ortegapablogutxd@gmail.com` (ver seccion 1). Pendiente de
-     migrar; mientras tanto es la que hay.
+     Vercel se migro a esa cuenta el 2026-08-14.
 
 ---
 
@@ -43,10 +42,10 @@ Estás tomando un proyecto en marcha. Contexto mínimo antes de tocar nada:
 
 | Servicio | Cuenta | Para qué |
 |---|---|---|
-| Vercel | login `ortegapablogutxd@gmail.com` — usuario `pabloajnxka`, team `pablos-projects-27637841` (plan **Hobby**) | Hosting y deploy (`milpaes-web`, `milpaes-api`) |
-| Google / Gmail | `1000paessoporte@gmail.com` | Cuenta de servicio del proyecto (Neon) |
+| Vercel | cuenta de servicio `1000paessoporte@gmail.com` — usuario `1000paessoporte-9167` (plan **Hobby**) | Hosting y deploy (`milpaes-web`, `milpaes-api`) |
+| Google / Gmail | `1000paessoporte@gmail.com` | Cuenta raíz del proyecto: entra a Vercel y a Neon |
 | Neon | cuenta Google `1000paessoporte@gmail.com` *(confirmar)* | PostgreSQL de producción |
-| GitHub | `Pabloajnxka/paes-m1` (**público**) | Código |
+| GitHub | `1000paessoporte-eng/paes-m1` (**público**) | Código |
 | Dominio | `1000paes.cl` | DNS en AWS Route53 (lo administra el papá de Pablo) |
 
 **Contraseña de `1000paessoporte@gmail.com`:** _(Pablo: escríbela acá antes de
@@ -130,9 +129,10 @@ demo@paes-m1.cl / demo1234
 | `milpaes-web` | **raíz del repo** | Next.js. Alias `1000paes.cl` y `www.1000paes.cl` | `prj_pNtav9y32SQRpZxy43A6Hp6Z4cKg` |
 | `milpaes-api` | `apps/api` | FastAPI serverless | `prj_7edSJGd2ofYW8oW0MuJZTnVD5mBR` |
 
-Org / team ID: `team_y0Pxfwc1TRGfEogoIZyw0Et4`
+Los proyectos se transfirieron el 2026-08-14 desde la cuenta personal de Pablo
+a la cuenta de servicio; el detalle está en `TRASPASO-A-CUENTA-SERVICIO.md`.
 
-Ambos proyectos están conectados a `github.com/Pabloajnxka/paes-m1`, con
+Ambos proyectos están conectados a `github.com/1000paessoporte-eng/paes-m1`, con
 `main` como rama de producción y `apps/web` / `apps/api` como directorio raíz
 respectivamente.
 
@@ -176,11 +176,11 @@ npm i -g pnpm vercel        # o: brew install pnpm vercel
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # 2. Código
-git clone https://github.com/Pabloajnxka/paes-m1.git
+git clone https://github.com/1000paessoporte-eng/paes-m1.git
 cd paes-m1
 pnpm install
 
-# 3. Autenticar Vercel (login: ortegapablogutxd@gmail.com, o mejor el token de la seccion 1)
+# 3. Autenticar Vercel (login: 1000paessoporte@gmail.com, o el token de la seccion 1)
 vercel login
 vercel link --yes                      # enlaza milpaes-web (desde la raíz)
 cd apps/api && vercel link --yes       # enlaza milpaes-api
@@ -318,3 +318,26 @@ En orden:
 3. **`SECRET_KEY`**: genera uno nuevo (`openssl rand -base64 48`) y reemplázalo
    en Vercel. Ojo: esto **cierra la sesión de todos los usuarios**, porque
    invalida los JWT emitidos. Es el precio correcto si hubo filtración.
+
+## Recordatorios por correo
+
+El sistema está construido y **no envía nada todavía**: sin `SMTP_HOST`, cada
+correo se escribe en el log del servidor en vez de salir. Es a propósito, para
+poder probar el flujo completo antes de contratar un proveedor.
+
+Para activarlo hacen falta dos variables en el proyecto `milpaes-api` de Vercel:
+
+- `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM` — de
+  Resend, Brevo o el proveedor que se elija. El plan gratuito de cualquiera de
+  los dos alcanza de sobra para el volumen actual.
+- `CRON_SECRET` — cualquier cadena larga y aleatoria. Sin ella el endpoint
+  `/api/reminders/run` responde 404 y no se puede disparar desde fuera.
+
+El cron ya está declarado en `apps/api/vercel.json` y corre todos los días a las
+22:00 UTC (19:00 en Chile continental). El día que existan esas variables,
+empieza a mandar correos sin tocar código.
+
+Reglas que el sistema respeta, y que conviene no relajar: nunca escribe a quien
+apagó los recordatorios en su perfil, nunca dos veces en menos de dos días,
+nunca a quien ya rindió hoy, y nunca a una cuenta con más de 45 días sin
+actividad. Cada correo lleva el enlace para apagarlos.

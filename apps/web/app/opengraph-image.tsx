@@ -17,7 +17,7 @@ export default function Image() {
           justifyContent: "center",
           background: "#ffffff",
           backgroundImage:
-            "radial-gradient(circle at 22% 20%, rgba(37,99,235,0.16), transparent 55%), radial-gradient(circle at 78% 75%, rgba(14,165,233,0.16), transparent 55%)",
+            "radial-gradient(circle at 22% 20%, rgba(124,58,237,0.18), transparent 55%), radial-gradient(circle at 78% 75%, rgba(34,211,238,0.16), transparent 55%)",
         }}
       >
         <div
@@ -27,13 +27,13 @@ export default function Image() {
             gap: 20,
             padding: "10px 24px",
             borderRadius: 999,
-            border: "2px solid #e2e8f0",
+            border: "2px solid #e4e5ee",
             fontSize: 28,
-            color: "#2563eb",
+            color: "#7c3aed",
             fontWeight: 600,
           }}
         >
-          PAES · Competencia Matemática M1 y M2
+          PAES · Las cinco pruebas · Admisión 2027
         </div>
         <div
           style={{
@@ -42,14 +42,14 @@ export default function Image() {
             fontSize: 160,
             fontWeight: 800,
             letterSpacing: -4,
-            backgroundImage: "linear-gradient(135deg, #2563eb, #0ea5e9)",
+            backgroundImage: "linear-gradient(135deg, #7c3aed, #0e7490)",
             backgroundClip: "text",
             color: "transparent",
           }}
         >
           1000paes
         </div>
-        <div style={{ display: "flex", marginTop: 20, fontSize: 34, color: "#64748b" }}>
+        <div style={{ display: "flex", marginTop: 20, fontSize: 34, color: "#576076" }}>
           Ensayos con tiempo real, puntaje estimado y resolución paso a paso
         </div>
       </div>

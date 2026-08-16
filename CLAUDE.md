@@ -1,6 +1,6 @@
 # 1000paes — reglas del proyecto
 
-Plataforma chilena de preparación PAES (matemática M1 y M2). **Está en
+Plataforma chilena de preparación PAES, las cinco pruebas. **Está en
 producción y con usuarios reales**: https://1000paes.cl
 
 Trabajan dos socios, cada uno con su propia cuenta de Claude Code. Este archivo
@@ -22,7 +22,8 @@ Antes de tocar nada, lee `README.md` (arquitectura y estado de cada feature) y
 3. **No se copian preguntas liberadas del DEMRE.** Son material con derechos de
    la Universidad de Chile y este producto va a cobrar. Se replica su temario,
    formato y nivel; no su contenido literal.
-4. **Las credenciales nunca entran al repo.** Es público. Viven en
+4. **Las credenciales nunca entran al repo.** Es público
+   (`github.com/1000paessoporte-eng/paes-m1`). Viven en
    `apps/api/.env` (gitignored) y en `HANDOFF-PRIVADO.md`, que se entrega a
    mano entre los socios.
 
@@ -85,8 +86,26 @@ cd apps/web && pnpm typecheck && pnpm build
 ```
 
 **Errores preexistentes conocidos** — no son regresiones, no los persigas:
-- `pnpm lint` falla con 2 errores (`app/page.tsx:21`, `exam-runner.tsx:71`).
+- `pnpm lint` falla con 1 error (`exam-runner.tsx:78`, acceso a un ref durante el render).
 - `uv run mypy src/` reporta 1 error en `exam_focus/router.py:42`.
+
+## 4.1 Trampas que ya costaron tiempo
+
+- **`uvicorn --reload` no siempre recarga** en este entorno. Si un cambio del
+  backend no aparece, mata el proceso y relánzalo antes de buscar un bug que no
+  existe.
+- **`next dev` deja un lock** en `.next/dev-server.json`. Si dice que ya hay un
+  servidor corriendo, bórralo y mata `next-server`.
+- **Los componentes cliente deben pasar `getClientToken()`** en cada llamada: la
+  API autentica con Bearer, no con la cookie. Sin eso devuelve 401.
+- **Una columna NOT NULL nueva sobre una tabla con filas va en tres pasos**:
+  nullable, `UPDATE` para rellenar, y recién ahí `NOT NULL`. Si además mueves
+  datos entre tablas, cópialos ANTES de borrar la columna vieja.
+- **Los datos derivados se derivan solos**, con un listener
+  `before_insert`/`before_update`. La columna de búsqueda de carreras se llenaba
+  en el seed y cualquier fila creada por otro camino quedaba invisible.
+- **Buscar texto en español**: sin tildes y por palabras sueltas. Nadie escribe
+  "ENFERMERÍA" con tilde en un buscador.
 
 ## 5. Desarrollo local
 

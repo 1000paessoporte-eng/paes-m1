@@ -7,12 +7,19 @@ Cualquier módulo que necesite el registro completo de modelos debe hacer
 importar modelos individuales."""
 
 from paes_api.modules.analytics.models import StudyStreak
-from paes_api.modules.content.models import Alternative, Question
+from paes_api.modules.billing.models import PromoCode, Subscription
+from paes_api.modules.content.models import (
+    Alternative,
+    Lesson,
+    Question,
+    ReadingPassage,
+)
 from paes_api.modules.exam_focus.models import (
     ExamAnswer,
     ExamAttempt,
     ExamAttemptQuestion,
 )
+from paes_api.modules.goals.models import Carrera, MetaUsuario
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.skill_tree.models import SkillNode, UserSkillProgress
@@ -20,16 +27,22 @@ from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 
 __all__ = [
     "Alternative",
+    "Carrera",
     "ExamAnswer",
     "ExamAttempt",
     "ExamAttemptQuestion",
+    "Lesson",
     "LoginEvent",
+    "MetaUsuario",
     "PageView",
     "PasswordResetToken",
     "PracticeAnswer",
+    "PromoCode",
     "Question",
+    "ReadingPassage",
     "SkillNode",
     "StudyStreak",
+    "Subscription",
     "User",
     "UserSkillProgress",
 ]

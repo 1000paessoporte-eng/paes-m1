@@ -38,6 +38,24 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/auth/onboarding": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Ver Onboarding */
+        get: operations["ver_onboarding_api_auth_onboarding_get"];
+        /** Responder Onboarding */
+        put: operations["responder_onboarding_api_auth_onboarding_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/auth/config": {
         parameters: {
             query?: never;
@@ -47,7 +65,12 @@ export interface paths {
         };
         /**
          * Auth Config
-         * @description La web consulta esto para saber si mostrar el botón de Google.
+         * @description Qué puede hacer este servidor, para que la interfaz no prometa de más.
+         *
+         *     Sin SMTP configurado, "te llegará un correo con las instrucciones" es una
+         *     promesa incumplible: el enlace de recuperación se genera igual pero queda
+         *     en el log, y el estudiante espera algo que nunca llega. La pantalla
+         *     necesita saberlo para decir la verdad.
          */
         get: operations["auth_config_api_auth_config_get"];
         put?: never;
@@ -165,6 +188,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/skill-tree/{code}/leccion": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Lesson
+         * @description La teoría del nodo. 404 si el nodo todavía no tiene lección escrita.
+         */
+        get: operations["get_lesson_api_skill_tree__code__leccion_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/skill-tree/{code}": {
         parameters: {
             query?: never;
@@ -195,6 +238,28 @@ export interface paths {
          *     QuestionSafeOut) — misma regla de integridad que el Modo Examen.
          */
         get: operations["list_questions_api_questions_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/questions/stats": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Content Stats
+         * @description Totales del banco. Público y sin autenticación: la portada lo usa.
+         *
+         *     No revela ninguna pregunta, solo cuántas hay.
+         */
+        get: operations["content_stats_api_questions_stats_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -366,6 +431,115 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/meta/carreras": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Buscar Carreras */
+        get: operations["buscar_carreras_api_meta_carreras_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Ver Meta */
+        get: operations["ver_meta_api_meta_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/postulaciones": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Agregar Postulacion
+         * @description Agrega una carrera al final de la lista de preferencias.
+         */
+        post: operations["agregar_postulacion_api_meta_postulaciones_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/orden": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Reordenar
+         * @description Reordena la lista. El orden decide dónde queda uno, así que es parte
+         *     de la decisión y no un detalle de presentación.
+         */
+        put: operations["reordenar_api_meta_orden_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/postulaciones/{carrera_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** Quitar Postulacion */
+        delete: operations["quitar_postulacion_api_meta_postulaciones__carrera_id__delete"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/meta/notas": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /** Guardar Notas */
+        put: operations["guardar_notas_api_meta_notas_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/practice/{code}/questions": {
         parameters: {
             query?: never;
@@ -400,6 +574,32 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/reminders/run": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Correr Recordatorios
+         * @description Manda los recordatorios del día. La llama el cron, no una persona.
+         *
+         *     Va protegido por un secreto compartido y no por sesión: quien la ejecuta es
+         *     una tarea programada, no un usuario. Sin el secreto configurado el endpoint
+         *     queda cerrado —404— en vez de abierto: un disparador de correos masivos
+         *     accesible por internet es exactamente la clase de puerta que no se deja
+         *     entornada por comodidad.
+         */
+        post: operations["correr_recordatorios_api_reminders_run_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/analytics/summary": {
         parameters: {
             query?: never;
@@ -411,6 +611,118 @@ export interface paths {
         get: operations["get_summary_api_analytics_summary_get"];
         put?: never;
         post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Mi Plan */
+        get: operations["mi_plan_api_plan_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/canjear": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Canjear
+         * @description Canjea un código promocional. El motivo del rechazo se le dice al
+         *     estudiante tal cual: "ya venció" y "ya se agotó" son cosas distintas y
+         *     esconderlo detrás de un error genérico solo genera correos a soporte.
+         */
+        post: operations["canjear_api_plan_canjear_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/productos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Productos
+         * @description Qué se puede comprar y si el cobro está habilitado.
+         *
+         *     Público: la página de precios lo consulta sin sesión para decidir si
+         *     muestra el botón de pago o el aviso de "disponible pronto".
+         */
+        get: operations["productos_api_plan_productos_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/pagar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Pagar
+         * @description Crea la orden en Flow y devuelve la URL a la que hay que ir a pagar.
+         */
+        post: operations["pagar_api_plan_pagar_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/flow/confirmar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Confirmar
+         * @description Webhook de Flow. Es el ÚNICO camino que activa una suscripción pagada.
+         *
+         *     Deliberadamente público y sin autenticación: lo llama Flow, no un usuario.
+         *     Su seguridad no está en quién lo llama sino en que el token recibido se
+         *     verifica contra Flow de servidor a servidor antes de activar nada. Un token
+         *     inventado no encuentra orden, y uno robado tampoco sirve: Flow dirá si esa
+         *     orden está pagada y por cuánto.
+         *
+         *     Responde 200 salvo error interno: Flow reintenta ante cualquier otra cosa, y
+         *     reintentar una orden ya procesada no aporta nada porque la confirmación es
+         *     idempotente.
+         */
+        post: operations["confirmar_api_plan_flow_confirmar_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -536,6 +848,12 @@ export interface components {
             sesiones: components["schemas"]["SesionesOut"];
             visitas: components["schemas"]["VisitasOut"];
             contenido: components["schemas"]["ContenidoOut"];
+            embudo: components["schemas"]["EmbudoOut"];
+            retencion: components["schemas"]["RetencionOut"];
+            ensayos: components["schemas"]["EnsayosOut"];
+            banco: components["schemas"]["BancoOut"];
+            visitantes: components["schemas"]["VisitantesOut"];
+            alumnos: components["schemas"]["AlumnosOut"];
         };
         /**
          * AlternativeSafeOut
@@ -550,10 +868,76 @@ export interface components {
             /** Text */
             text: string;
         };
+        /** AlumnoDetalle */
+        AlumnoDetalle: {
+            /** Id */
+            id: number;
+            /** Email */
+            email: string;
+            /** Name */
+            name: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Last Login At */
+            last_login_at: string | null;
+            /** Curso */
+            curso: string | null;
+            /** Pruebas Objetivo */
+            pruebas_objetivo: string | null;
+            /** Horas Semana */
+            horas_semana: number | null;
+            /** Ensayos Iniciados */
+            ensayos_iniciados: number;
+            /** Ensayos Terminados */
+            ensayos_terminados: number;
+            /** Respuestas */
+            respuestas: number;
+            /** Tasa Acierto */
+            tasa_acierto: number | null;
+            /** Mejor Puntaje */
+            mejor_puntaje: number | null;
+            /** Dias Activos */
+            dias_activos: number;
+            /** Por Prueba */
+            por_prueba: components["schemas"]["ResultadoPrueba"][];
+        };
+        /**
+         * AlumnosOut
+         * @description Qué hizo cada cuenta registrada. Es el detalle detrás de los promedios.
+         */
+        AlumnosOut: {
+            /** Total */
+            total: number;
+            /** Detalle */
+            detalle: components["schemas"]["AlumnoDetalle"][];
+        };
         /** AnalyticsSummaryOut */
         AnalyticsSummaryOut: {
             /** Current Streak Days */
             current_streak_days: number;
+            /**
+             * Active Days
+             * @default 0
+             */
+            active_days: number;
+            /**
+             * Exam Streak Days
+             * @default 0
+             */
+            exam_streak_days: number;
+            /**
+             * Best Exam Streak Days
+             * @default 0
+             */
+            best_exam_streak_days: number;
+            /**
+             * Exam Days
+             * @default 0
+             */
+            exam_days: number;
             /** Total Questions Answered */
             total_questions_answered: number;
             /** Total Correct */
@@ -565,6 +949,23 @@ export interface components {
             /** Daily */
             daily: components["schemas"]["DailyStat"][];
         };
+        /** AporteOut */
+        AporteOut: {
+            /** Factor */
+            factor: string;
+            /** Etiqueta */
+            etiqueta: string;
+            /** Ponderacion */
+            ponderacion: number;
+            /** Puntaje */
+            puntaje: number | null;
+            /** Aporte */
+            aporte: number;
+            /** Por Cada 10 */
+            por_cada_10: number;
+            /** Origen */
+            origen: string;
+        };
         /**
          * AttemptStatus
          * @enum {string}
@@ -572,11 +973,16 @@ export interface components {
         AttemptStatus: "in_progress" | "submitted" | "abandoned";
         /**
          * AuthConfigOut
-         * @description Qué métodos de inicio de sesión están habilitados en este despliegue.
+         * @description Qué puede hacer este despliegue, para que la interfaz no prometa de más.
          */
         AuthConfigOut: {
             /** Google Enabled */
             google_enabled: boolean;
+            /**
+             * Email Enabled
+             * @default false
+             */
+            email_enabled: boolean;
         };
         /**
          * AxisOptionOut
@@ -589,6 +995,21 @@ export interface components {
             label: string;
             /** Available */
             available: number;
+        };
+        /**
+         * BancoOut
+         * @description Salud del contenido: si el banco alcanza para lo que la portada promete.
+         */
+        BancoOut: {
+            /** Por Prueba */
+            por_prueba: components["schemas"]["CoberturaPrueba"][];
+            /** Nodos Flacos */
+            nodos_flacos: string[];
+        };
+        /** Body_confirmar_api_plan_flow_confirmar_post */
+        Body_confirmar_api_plan_flow_confirmar_post: {
+            /** Token */
+            token: string;
         };
         /**
          * BreakdownItemOut
@@ -608,6 +1029,65 @@ export interface components {
             /** Percentage */
             percentage: number;
         };
+        /** CanjearIn */
+        CanjearIn: {
+            /** Codigo */
+            codigo: string;
+        };
+        /** CarreraOut */
+        CarreraOut: {
+            /** Id */
+            id: number;
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+            /** Nem */
+            nem?: number | null;
+            /** Ranking */
+            ranking?: number | null;
+            /** Lectora */
+            lectora?: number | null;
+            /** M1 */
+            m1?: number | null;
+            /** Historia */
+            historia?: number | null;
+            /** Ciencias */
+            ciencias?: number | null;
+            /** M2 */
+            m2?: number | null;
+            /** Prueba Especial */
+            prueba_especial?: number | null;
+            /** Electivo Alternativo */
+            electivo_alternativo: boolean;
+            /** Ponderado Min */
+            ponderado_min?: number | null;
+            /** Promedio Min */
+            promedio_min?: number | null;
+            /** Vacantes */
+            vacantes?: number | null;
+            /** Proceso */
+            proceso: number;
+            /** Fuente */
+            fuente: string;
+        };
+        /** CoberturaPrueba */
+        CoberturaPrueba: {
+            /** Subject */
+            subject: string;
+            /** Banco */
+            banco: number;
+            /** Oficiales */
+            oficiales: number;
+            /** Ensayos Completos */
+            ensayos_completos: number;
+            /** Nunca Respondidas */
+            nunca_respondidas: number;
+        };
         /** ContenidoOut */
         ContenidoOut: {
             ensayos: components["schemas"]["ConteoPeriodo"];
@@ -621,6 +1101,23 @@ export interface components {
             preguntas_mas_falladas: components["schemas"]["PreguntaFallada"][];
             /** Nodos Mas Flojos */
             nodos_mas_flojos: components["schemas"]["NodoFlojo"][];
+        };
+        /**
+         * ContentStatsOut
+         * @description Cifras públicas del banco, para que la portada no invente números.
+         *
+         *     La landing muestra "N preguntas verificadas"; ese N sale de contar la
+         *     tabla, no de una constante escrita a mano que envejece en silencio.
+         */
+        ContentStatsOut: {
+            /** Questions */
+            questions: number;
+            /** Passages */
+            passages: number;
+            /** Skill Nodes */
+            skill_nodes: number;
+            /** Subjects */
+            subjects: number;
         };
         /**
          * ConteoPeriodo
@@ -712,6 +1209,51 @@ export interface components {
          * @enum {string}
          */
         Difficulty: "facil" | "medio" | "dificil";
+        /**
+         * EmbudoOut
+         * @description De visita anónima a ensayo terminado, en los últimos 30 días.
+         *
+         *     Es la pregunta que ningún total responde: no importa cuánta gente entra si
+         *     no se sabe dónde deja de avanzar. Las tasas viajan como null cuando el
+         *     denominador es cero, porque un 0% se leería como "nadie convierte" cuando
+         *     en realidad nadie llegó todavía a ese paso.
+         */
+        EmbudoOut: {
+            /** Visitantes */
+            visitantes: number;
+            /** Registrados */
+            registrados: number;
+            /** Con Ensayo */
+            con_ensayo: number;
+            /** Con Ensayo Terminado */
+            con_ensayo_terminado: number;
+            /** Tasa Registro */
+            tasa_registro: number | null;
+            /** Tasa Activacion */
+            tasa_activacion: number | null;
+            /** Tasa Finalizacion */
+            tasa_finalizacion: number | null;
+            /** Visitantes Convertidos */
+            visitantes_convertidos: number;
+        };
+        /**
+         * EnsayosOut
+         * @description Qué se rinde y qué se abandona.
+         */
+        EnsayosOut: {
+            /** Iniciados */
+            iniciados: number;
+            /** Terminados */
+            terminados: number;
+            /** Abandonados */
+            abandonados: number;
+            /** Tasa Finalizacion */
+            tasa_finalizacion: number | null;
+            /** Duracion Mediana Min */
+            duracion_mediana_min: number | null;
+            /** Por Prueba */
+            por_prueba: components["schemas"]["UsoPrueba"][];
+        };
         /**
          * ExamAlternativeOut
          * @description Alternativa durante el examen: SIN is_correct ni
@@ -851,6 +1393,7 @@ export interface components {
             stem: string;
             /** Image Url */
             image_url?: string | null;
+            passage?: components["schemas"]["PassageOut"] | null;
             /** Alternatives */
             alternatives: components["schemas"]["ExamAlternativeOut"][];
         };
@@ -948,6 +1491,33 @@ export interface components {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
         };
+        /**
+         * LessonOut
+         * @description La teoría del nodo: lo que se estudia antes de practicar.
+         */
+        LessonOut: {
+            /** Node Code */
+            node_code: string;
+            /** Node Name */
+            node_name: string;
+            /** Intro */
+            intro: string;
+            /** Theory */
+            theory: string;
+            /** Example Statement */
+            example_statement: string;
+            /** Example Steps */
+            example_steps: components["schemas"]["LessonStepOut"][];
+            /** Common Error */
+            common_error?: string | null;
+        };
+        /** LessonStepOut */
+        LessonStepOut: {
+            /** Accion */
+            accion: string;
+            /** Porque */
+            porque: string;
+        };
         /** LoginIn */
         LoginIn: {
             /**
@@ -957,6 +1527,40 @@ export interface components {
             email: string;
             /** Password */
             password: string;
+        };
+        /** MetaOut */
+        MetaOut: {
+            /** Postulaciones */
+            postulaciones: components["schemas"]["PostulacionOut"][];
+            /** Puntaje Nem */
+            puntaje_nem: number | null;
+            /** Puntaje Ranking */
+            puntaje_ranking: number | null;
+            proyeccion: components["schemas"]["ProyeccionOut"];
+            /** Plan */
+            plan: components["schemas"]["NodoDebilOut"][];
+            /** Plan Para */
+            plan_para: string | null;
+            plan_semanal: components["schemas"]["PlanSemanalOut"];
+        };
+        /**
+         * MiPlanOut
+         * @description El plan del usuario y lo que puede hacer con él.
+         */
+        MiPlanOut: {
+            plan: components["schemas"]["Plan"];
+            /** Vence El */
+            vence_el?: string | null;
+            /** Ensayos Usados */
+            ensayos_usados: number;
+            /** Ensayos Limite */
+            ensayos_limite: number | null;
+            /** Carreras Limite */
+            carreras_limite: number;
+            /** Analisis Avanzado */
+            analisis_avanzado: boolean;
+            /** Limites Activos */
+            limites_activos: boolean;
         };
         /** NodeDiagnosisOut */
         NodeDiagnosisOut: {
@@ -975,6 +1579,21 @@ export interface components {
             /** Accuracy */
             accuracy: number;
         };
+        /** NodoDebilOut */
+        NodoDebilOut: {
+            /** Code */
+            code: string;
+            /** Name */
+            name: string;
+            /** Axis */
+            axis: string;
+            /** Accuracy */
+            accuracy: number;
+            /** Attempts */
+            attempts: number;
+            /** Has Lesson */
+            has_lesson: boolean;
+        };
         /** NodoFlojo */
         NodoFlojo: {
             /** Code */
@@ -986,6 +1605,62 @@ export interface components {
             /** Tasa Acierto */
             tasa_acierto: number;
         };
+        /** NotasIn */
+        NotasIn: {
+            /** Puntaje Nem */
+            puntaje_nem?: number | null;
+            /** Puntaje Ranking */
+            puntaje_ranking?: number | null;
+        };
+        /**
+         * OnboardingIn
+         * @description Respuestas del cuestionario de bienvenida. Todo es opcional: se puede
+         *     saltar, y saltarlo también cuenta como responder —no se vuelve a preguntar.
+         */
+        OnboardingIn: {
+            /** Pruebas Objetivo */
+            pruebas_objetivo?: string[];
+            /** Curso */
+            curso?: string | null;
+            /** Primera Vez */
+            primera_vez?: boolean | null;
+            /** Puntaje Anterior */
+            puntaje_anterior?: number | null;
+            /** Horas Semana */
+            horas_semana?: number | null;
+        };
+        /**
+         * OnboardingOut
+         * @description Lo respondido, para el perfil y para configurar la plataforma.
+         */
+        OnboardingOut: {
+            /**
+             * Pruebas Objetivo
+             * @default []
+             */
+            pruebas_objetivo: string[];
+            /** Curso */
+            curso?: string | null;
+            /** Primera Vez */
+            primera_vez?: boolean | null;
+            /** Puntaje Anterior */
+            puntaje_anterior?: number | null;
+            /** Horas Semana */
+            horas_semana?: number | null;
+            /**
+             * Respondido
+             * @default false
+             */
+            respondido: boolean;
+        };
+        /**
+         * OrdenIn
+         * @description Los ids de carrera en el orden de preferencia deseado.
+         */
+        OrdenIn: {
+            /** Carrera Ids */
+            carrera_ids: number[];
+        };
         /**
          * Pace
          * @description Ritmo del ensayo: ajusta el tiempo respecto de la proporción oficial.
@@ -996,6 +1671,18 @@ export interface components {
          * @enum {string}
          */
         Pace: "oficial" | "exigente" | "relajado";
+        /** PagarIn */
+        PagarIn: {
+            /** Producto */
+            producto: string;
+        };
+        /** PagarOut */
+        PagarOut: {
+            /** Url */
+            url: string;
+            /** Orden */
+            orden: string;
+        };
         /**
          * PageViewIn
          * @description Lo que manda el navegador en cada cambio de página.
@@ -1005,6 +1692,68 @@ export interface components {
             path: string;
             /** Visitor Id */
             visitor_id: string;
+        };
+        /**
+         * PassageOut
+         * @description Texto base de una pregunta de Competencia Lectora.
+         */
+        PassageOut: {
+            /** Id */
+            id: number;
+            /** Title */
+            title: string;
+            /** Body */
+            body: string;
+            /** Kind */
+            kind: string;
+            /** Source Note */
+            source_note?: string | null;
+        };
+        /**
+         * Plan
+         * @enum {string}
+         */
+        Plan: "gratis" | "pro" | "colegios";
+        /**
+         * PlanSemanalOut
+         * @description El plan dimensionado con las horas que el estudiante declaró tener.
+         *
+         *     Existe porque un plan que no cabe en la semana de alguien no es un plan, es
+         *     una lista de deseos: el estudiante lo mira, ve que no le alcanza, y no hace
+         *     ninguna de las cosas.
+         */
+        PlanSemanalOut: {
+            /** Horas Semana */
+            horas_semana: number | null;
+            /** Temas Que Caben */
+            temas_que_caben: number;
+            /** Alcanza Un Ensayo */
+            alcanza_un_ensayo: boolean;
+            /** Minutos Estimados */
+            minutos_estimados: number;
+        };
+        /** PostulacionOut */
+        PostulacionOut: {
+            /** Preferencia */
+            preferencia: number;
+            carrera: components["schemas"]["CarreraOut"];
+            /** Ponderado */
+            ponderado: number | null;
+            /** Brecha */
+            brecha: number | null;
+            /** Alcanza */
+            alcanza: boolean | null;
+            /** Aportes */
+            aportes: components["schemas"]["AporteOut"][];
+            /** Faltantes */
+            faltantes: string[];
+            /** Mejor Palanca */
+            mejor_palanca: string | null;
+        };
+        /** PostularIn */
+        PostularIn: {
+            /** Carrera Id */
+            carrera_id: number;
         };
         /** PracticeAlternativeOut */
         PracticeAlternativeOut: {
@@ -1075,10 +1824,47 @@ export interface components {
             tasa_acierto: number;
         };
         /**
+         * ProductoOut
+         * @description Un producto comprable, tal como se muestra en la página.
+         */
+        ProductoOut: {
+            /** Id */
+            id: string;
+            /** Plan */
+            plan: string;
+            /** Dias */
+            dias: number;
+            /** Monto */
+            monto: number;
+            /** Asunto */
+            asunto: string;
+        };
+        /** ProductosOut */
+        ProductosOut: {
+            /** Pago Disponible */
+            pago_disponible: boolean;
+            /** Productos */
+            productos: components["schemas"]["ProductoOut"][];
+        };
+        /**
          * ProgressStatus
          * @enum {string}
          */
         ProgressStatus: "locked" | "unlocked" | "mastered";
+        /**
+         * ProyeccionOut
+         * @description Ritmo de mejora medido sobre los ensayos ya rendidos.
+         */
+        ProyeccionOut: {
+            /** Puntos Por Mes */
+            puntos_por_mes: number | null;
+            /** Ensayos Considerados */
+            ensayos_considerados: number;
+            /** Dias Para Paes */
+            dias_para_paes: number | null;
+            /** Proyectado */
+            proyectado: number | null;
+        };
         /** QuestionSafeOut */
         QuestionSafeOut: {
             /** Id */
@@ -1126,6 +1912,33 @@ export interface components {
             token: string;
             /** New Password */
             new_password: string;
+        };
+        /** ResultadoPrueba */
+        ResultadoPrueba: {
+            /** Subject */
+            subject: string;
+            /** Ensayos */
+            ensayos: number;
+            /** Mejor */
+            mejor: number | null;
+            /** Ultimo */
+            ultimo: number | null;
+        };
+        /**
+         * RetencionOut
+         * @description Si la gente vuelve. Un registro que no vuelve es un registro perdido.
+         */
+        RetencionOut: {
+            /** Un Dia */
+            un_dia: number;
+            /** Dos A Tres */
+            dos_a_tres: number;
+            /** Cuatro O Mas */
+            cuatro_o_mas: number;
+            /** Volvieron */
+            volvieron: number;
+            /** Base Volvieron */
+            base_volvieron: number;
         };
         /**
          * ReviewAlternativeOut
@@ -1202,9 +2015,15 @@ export interface components {
         };
         /**
          * SkillAxis
+         * @description Dimensión del temario a la que pertenece un nodo.
+         *
+         *     En matemática son los cuatro ejes temáticos del DEMRE. En Competencia
+         *     Lectora no hay ejes de contenido: la prueba se organiza por las tres
+         *     habilidades que declara el temario (localizar, interpretar y evaluar), y
+         *     son esas las que ocupan el lugar del eje.
          * @enum {string}
          */
-        SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad";
+        SkillAxis: "numeros" | "algebra" | "geometria" | "probabilidad" | "localizar" | "interpretar" | "evaluar" | "biologia" | "fisica" | "quimica" | "historia" | "ciudadania" | "economia";
         /** SkillNodeProgressOut */
         SkillNodeProgressOut: {
             /** Id */
@@ -1226,11 +2045,21 @@ export interface components {
              * @default []
              */
             prerequisite_codes: string[];
+            /**
+             * Prerequisite Names
+             * @default []
+             */
+            prerequisite_names: string[];
             status: components["schemas"]["ProgressStatus"];
             /** Accuracy */
             accuracy: number;
             /** Attempts */
             attempts: number;
+            /**
+             * Has Lesson
+             * @default false
+             */
+            has_lesson: boolean;
         };
         /**
          * Subject
@@ -1241,7 +2070,7 @@ export interface components {
          *     verdad de qué subjects entran al banco de preguntas de cada prueba.
          * @enum {string}
          */
-        Subject: "m1" | "m2";
+        Subject: "m1" | "m2" | "lectora" | "ciencias" | "historia";
         /** TokenOut */
         TokenOut: {
             /** Access Token */
@@ -1255,6 +2084,8 @@ export interface components {
         };
         /** UpdateMeIn */
         UpdateMeIn: {
+            /** Recordatorios Email */
+            recordatorios_email?: boolean | null;
             /** Name */
             name?: string | null;
             /** Current Password */
@@ -1264,6 +2095,11 @@ export interface components {
         };
         /** UserOut */
         UserOut: {
+            /**
+             * Recordatorios Email
+             * @default true
+             */
+            recordatorios_email: boolean;
             /** Id */
             id: number;
             /** Email */
@@ -1287,6 +2123,17 @@ export interface components {
              * @default false
              */
             is_admin: boolean;
+        };
+        /** UsoPrueba */
+        UsoPrueba: {
+            /** Subject */
+            subject: string;
+            /** Iniciados */
+            iniciados: number;
+            /** Terminados */
+            terminados: number;
+            /** Puntaje Promedio */
+            puntaje_promedio: number | null;
         };
         /** UsuarioResumen */
         UsuarioResumen: {
@@ -1326,6 +2173,67 @@ export interface components {
             input?: unknown;
             /** Context */
             ctx?: Record<string, never>;
+        };
+        /**
+         * VisitanteDetalle
+         * @description Una fila por navegador distinto.
+         *
+         *     `visitor` es solo el prefijo del identificador aleatorio: alcanza para
+         *     distinguir filas entre sí y no expone el valor completo, que es lo único
+         *     con lo que se podría seguir a alguien entre sesiones.
+         */
+        VisitanteDetalle: {
+            /** Visitor */
+            visitor: string;
+            /** Device */
+            device: string | null;
+            /** Os */
+            os: string | null;
+            /** Browser */
+            browser: string | null;
+            /** Visitas */
+            visitas: number;
+            /** Dias */
+            dias: number;
+            /**
+             * Primera
+             * Format: date-time
+             */
+            primera: string;
+            /**
+             * Ultima
+             * Format: date-time
+             */
+            ultima: string;
+            /** Con Cuenta */
+            con_cuenta: boolean;
+        };
+        /**
+         * VisitantesOut
+         * @description Con qué equipos entra la gente.
+         *
+         *     Existe para responder una pregunta concreta: si 27 visitantes son 27
+         *     personas o una sola probando el sitio. La diversidad de dispositivos no lo
+         *     prueba, pero lo delata: 27 navegadores idénticos en el mismo día no son 27
+         *     personas.
+         */
+        VisitantesOut: {
+            /** Por Dispositivo */
+            por_dispositivo: {
+                [key: string]: number;
+            };
+            /** Por Sistema */
+            por_sistema: {
+                [key: string]: number;
+            };
+            /** Por Navegador */
+            por_navegador: {
+                [key: string]: number;
+            };
+            /** Sin Clasificar */
+            sin_clasificar: number;
+            /** Recientes */
+            recientes: components["schemas"]["VisitanteDetalle"][];
         };
         /** VisitasOut */
         VisitasOut: {
@@ -1400,6 +2308,59 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["TokenOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    ver_onboarding_api_auth_onboarding_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["OnboardingOut"];
+                };
+            };
+        };
+    };
+    responder_onboarding_api_auth_onboarding_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["OnboardingIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["OnboardingOut"];
                 };
             };
             /** @description Validation Error */
@@ -1583,7 +2544,10 @@ export interface operations {
     };
     list_skill_nodes_api_skill_tree_get: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description Prueba cuyo temario se quiere ver. El árbol es distinto por prueba: cada una tiene sus propios ejes y prerrequisitos. */
+                subject?: components["schemas"]["Subject"];
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -1597,6 +2561,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SkillNodeProgressOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -1617,6 +2590,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SkillNodeProgressOut"] | null;
+                };
+            };
+        };
+    };
+    get_lesson_api_skill_tree__code__leccion_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                code: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["LessonOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -1679,6 +2683,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    content_stats_api_questions_stats_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ContentStatsOut"];
                 };
             };
         };
@@ -1988,6 +3012,188 @@ export interface operations {
             };
         };
     };
+    buscar_carreras_api_meta_carreras_get: {
+        parameters: {
+            query: {
+                /** @description Nombre de carrera, universidad o sede */
+                q: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CarreraOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    ver_meta_api_meta_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+        };
+    };
+    agregar_postulacion_api_meta_postulaciones_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PostularIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reordenar_api_meta_orden_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["OrdenIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    quitar_postulacion_api_meta_postulaciones__carrera_id__delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                carrera_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    guardar_notas_api_meta_notas_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["NotasIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     get_practice_questions_api_practice__code__questions_get: {
         parameters: {
             query?: never;
@@ -2054,6 +3260,39 @@ export interface operations {
             };
         };
     };
+    correr_recordatorios_api_reminders_run_post: {
+        parameters: {
+            query?: never;
+            header?: {
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     get_summary_api_analytics_summary_get: {
         parameters: {
             query?: never;
@@ -2070,6 +3309,145 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AnalyticsSummaryOut"];
+                };
+            };
+        };
+    };
+    mi_plan_api_plan_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MiPlanOut"];
+                };
+            };
+        };
+    };
+    canjear_api_plan_canjear_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CanjearIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MiPlanOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    productos_api_plan_productos_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ProductosOut"];
+                };
+            };
+        };
+    };
+    pagar_api_plan_pagar_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PagarIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PagarOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    confirmar_api_plan_flow_confirmar_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/x-www-form-urlencoded": components["schemas"]["Body_confirmar_api_plan_flow_confirmar_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

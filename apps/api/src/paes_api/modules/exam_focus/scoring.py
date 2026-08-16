@@ -41,6 +41,49 @@ _TABLA_M2: list[int] = [
 ]
 
 
+# Tabla oficial DEMRE, PAES Regular de Competencia Lectora (Proceso 2026).
+# 60 preguntas puntuadas de 65. Índice = respuestas correctas.
+# https://demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-regular-p2026-competencia-lectora
+_TABLA_LECTORA: list[int] = [
+    100, 159, 184, 206, 228, 249, 267, 284, 299, 316,
+    333, 350, 364, 376, 387, 397, 410, 424, 440, 455,
+    467, 477, 484, 492, 500, 511, 525, 540, 555, 567,
+    576, 583, 590, 597, 607, 619, 634, 650, 663, 674,
+    682, 690, 699, 710, 725, 740, 756, 770, 782, 794,
+    808, 823, 841, 860, 878, 896, 916, 938, 963, 989,
+    1000,
+]
+
+
+# Tabla oficial DEMRE, PAES Regular de Ciencias (Proceso 2026). 75 preguntas
+# puntuadas de 80. Índice = respuestas correctas.
+# https://demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-regular-p2026-ciencias
+_TABLA_CIENCIAS: list[int] = [
+    100, 116, 140, 163, 183, 202, 220, 235, 249, 263,
+    278, 293, 307, 318, 327, 335, 345, 356, 368, 381,
+    393, 402, 410, 415, 420, 427, 435, 446, 458, 471,
+    481, 489, 495, 499, 503, 507, 513, 522, 532, 545,
+    557, 567, 574, 580, 584, 588, 593, 599, 608, 619,
+    632, 644, 654, 662, 668, 673, 679, 688, 698, 711,
+    724, 736, 747, 756, 765, 776, 789, 804, 819, 834,
+    849, 866, 884, 905, 927, 1000,
+]
+
+
+# Tabla oficial DEMRE, PAES Regular de Historia y Cs. Sociales (Proceso 2026).
+# 60 preguntas puntuadas de 65. Índice = respuestas correctas.
+# https://demre.cl/paes/factores-seleccion/tabla-transformacion-puntajes-paes-regular-p2026-hycsoc
+_TABLA_HISTORIA: list[int] = [
+    100, 117, 145, 169, 191, 212, 233, 253, 270, 286,
+    300, 314, 331, 348, 364, 377, 387, 397, 406, 418,
+    432, 447, 463, 476, 486, 493, 500, 508, 517, 530,
+    545, 561, 574, 585, 593, 600, 607, 616, 628, 643,
+    659, 673, 686, 695, 705, 714, 727, 742, 759, 775,
+    790, 804, 818, 835, 853, 874, 894, 915, 938, 964,
+    1000,
+]
+
+
 @dataclass(frozen=True)
 class SubjectScoring:
     """Parámetros de una prueba PAES: cuántas preguntas trae oficialmente,
@@ -58,6 +101,24 @@ SCORING_BY_SUBJECT: dict[Subject, SubjectScoring] = {
         preguntas_puntuadas=60,
         duracion_oficial_min=140,
         tabla=_TABLA_M1,
+    ),
+    Subject.LECTORA: SubjectScoring(
+        preguntas_oficiales=65,
+        preguntas_puntuadas=60,
+        duracion_oficial_min=150,
+        tabla=_TABLA_LECTORA,
+    ),
+    Subject.CIENCIAS: SubjectScoring(
+        preguntas_oficiales=80,
+        preguntas_puntuadas=75,
+        duracion_oficial_min=160,
+        tabla=_TABLA_CIENCIAS,
+    ),
+    Subject.HISTORIA: SubjectScoring(
+        preguntas_oficiales=65,
+        preguntas_puntuadas=60,
+        duracion_oficial_min=120,
+        tabla=_TABLA_HISTORIA,
     ),
     Subject.M2: SubjectScoring(
         preguntas_oficiales=55,

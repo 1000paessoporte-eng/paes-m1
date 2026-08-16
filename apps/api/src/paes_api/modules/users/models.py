@@ -1,13 +1,15 @@
 from datetime import datetime
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, String, func
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.shared.base import Base
 
 if TYPE_CHECKING:
+    from paes_api.modules.billing.models import Subscription
     from paes_api.modules.exam_focus.models import ExamAttempt
+    from paes_api.modules.goals.models import MetaUsuario
     from paes_api.modules.skill_tree.models import UserSkillProgress
 
 
@@ -38,6 +40,49 @@ class User(Base):
         DateTime(timezone=True), server_default=func.now()
     )
 
+    # ── Cuestionario de bienvenida ──────────────────────────────────────
+    # Se pregunta una sola vez, al primer inicio de sesión, y sirve para que la
+    # plataforma se configure sola: qué prueba abre por defecto, con qué
+    # urgencia y desde qué punto de partida. Guardar respuestas que después no
+    # cambian nada es hacerle perder el tiempo al estudiante.
+
+    #: Pruebas que va a rendir, separadas por coma ("m1,lectora"). La primera
+    #: es la principal: es la que abre el árbol y el configurador de ensayo.
+    pruebas_objetivo: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    #: "tercero", "cuarto" o "egresado".
+    curso: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    #: Si es la primera vez que rinde la PAES.
+    primera_vez: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    #: Su mejor puntaje anterior, si ya la rindió. Es el punto de partida real
+    #: contra el que se mide el progreso.
+    puntaje_anterior: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    #: Horas de estudio por semana que cree que puede dedicar.
+    horas_semana: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    #: Cuándo lo respondió o lo saltó. Null = todavía no se le ha preguntado.
+    onboarding_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
+    #: Recordatorios por correo para no perder la racha. Opt-in explícito: se
+    #: activa al registrarse y se puede apagar en el perfil o desde el enlace
+    #: que va al pie de cada correo. Nunca se manda a quien lo apagó.
+    recordatorios_email: Mapped[bool] = mapped_column(Boolean, default=True)
+    #: Cuándo se le mandó el último, para no escribirle todos los días.
+    ultimo_recordatorio: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
+    #: Puntajes de NEM y ranking, tal como vienen en el informe del estudiante.
+    #: Son de la persona, no de cada carrera a la que postula.
+    puntaje_nem: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    puntaje_ranking: Mapped[int | None] = mapped_column(Integer, nullable=True)
+
+    subscriptions: Mapped[list["Subscription"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
+    goal: Mapped[list["MetaUsuario"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
     skill_progress: Mapped[list["UserSkillProgress"]] = relationship(
         back_populates="user"
     )

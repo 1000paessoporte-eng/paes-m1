@@ -1,5 +1,9 @@
 import Link from "next/link";
+import type { ContentStats } from "@/lib/api";
 import { GoogleButton } from "@/components/auth/google-button";
+import { TituloRotativo } from "@/components/home/titulo-rotativo";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
+import { Reveal } from "@/components/motion/reveal";
 import { Planes } from "@/components/home/planes";
 import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
@@ -22,9 +26,23 @@ const FEATURES = [
     badgeClass: "bg-success/10 text-success",
   },
   {
+    title: "Primero aprender, después practicar",
+    description:
+      "Cada tema de Matemática M1 trae su lección: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
+    icon: TreeIcon,
+    badgeClass: "bg-accent/10 text-accent",
+  },
+  {
+    title: "Mi meta: la carrera, no el puntaje",
+    description:
+      "Arma tu lista de hasta 10 preferencias y mira cuánto te falta en cada una, con las ponderaciones oficiales del DEMRE de 1.855 carreras. Sabes dónde rinde más cada hora de estudio.",
+    icon: TargetIcon,
+    badgeClass: "bg-accent-warm/10 text-accent-warm-strong",
+  },
+  {
     title: "Árbol de Habilidades",
     description:
-      "El temario completo como nodos que desbloqueas a medida que dominas cada tema: Números, Álgebra, Geometría y Probabilidad.",
+      "El temario como nodos que desbloqueas a medida que dominas cada tema, con los prerrequisitos dibujados: 47 nodos entre las cinco pruebas.",
     icon: TreeIcon,
     badgeClass: "bg-warning/10 text-warning",
   },
@@ -43,11 +61,21 @@ const DATOS = [
   { label: "Gratis mientras estamos en beta", icon: SparkIcon },
 ] as const;
 
+// Las cinco pruebas, en el orden en que las rinde un postulante. Rotan dentro
+// del titular; la primera es la que ve quien no tiene JavaScript.
+const PRUEBAS_ROTATIVAS = [
+  "Competencia Lectora",
+  "Matemática M1",
+  "Matemática M2",
+  "Ciencias",
+  "Historia",
+];
+
 const PASOS = [
   {
     title: "Elige tu ensayo",
     description:
-      "M1 o M2, qué ejes practicar, cuántas preguntas y a qué ritmo. Tú decides el formato.",
+      "Qué prueba, qué ejes practicar, cuántas preguntas y a qué ritmo. Tú decides el formato.",
   },
   {
     title: "Ríndelo con tiempo real",
@@ -71,7 +99,7 @@ const CONFIANZA = [
   {
     title: "Tiempo real de cada prueba",
     description:
-      "El cronómetro respeta la razón oficial minutos/pregunta: M1 son 65 preguntas en 140 min, M2 son 55 preguntas en 140 min.",
+      "El cronómetro respeta la razón oficial minutos/pregunta de cada prueba: Competencia Lectora son 65 preguntas en 150 min; M1, 65 en 140; M2, 55 en 140; Ciencias, 80 en 160; Historia, 65 en 120.",
     icon: ClockIcon,
   },
   {
@@ -82,7 +110,13 @@ const CONFIANZA = [
   },
 ] as const;
 
-export function LandingPublica() {
+export function LandingPublica({
+  stats,
+  pagoDisponible = false,
+}: {
+  stats: ContentStats | null;
+  pagoDisponible?: boolean;
+}) {
   return (
     <main className="flex flex-1 flex-col">
       <section className="hero-glow relative overflow-hidden px-6 pt-24 pb-24 sm:pt-28">
@@ -91,18 +125,12 @@ export function LandingPublica() {
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
             <span className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-              PAES · Competencia Matemática M1 y M2 · Admisión 2027
+              PAES · Las cinco pruebas · Admisión 2027
             </span>
 
-            <h1 className="text-6xl font-bold tracking-tight text-balance sm:text-7xl">
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(135deg, var(--accent), var(--accent-2))",
-                }}
-              >
-                1000paes
-              </span>
+            <h1 className="text-5xl font-bold tracking-tight text-balance sm:text-6xl">
+              Ensayos de{" "}
+              <TituloRotativo palabras={PRUEBAS_ROTATIVAS} />
             </h1>
 
             <p className="max-w-xl text-balance text-lg font-medium text-foreground sm:text-xl">
@@ -111,9 +139,9 @@ export function LandingPublica() {
             </p>
 
             <p className="max-w-xl text-balance text-muted">
-              Ensayos de matemática con el tiempo real de la prueba, tu puntaje
-              estimado y la resolución de cada ejercicio. Practica, mide y
-              mejora.
+              Con el tiempo real de cada prueba, tu puntaje estimado según las
+              tablas oficiales del DEMRE y la resolución paso a paso de cada
+              ejercicio. Practica, mide y mejora.
             </p>
 
             <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
@@ -131,9 +159,9 @@ export function LandingPublica() {
             <div className="mt-2 flex flex-col items-center gap-3 lg:items-start">
               <Link
                 href="/registro"
-                className="btn-glow rounded-lg px-8 py-3.5 text-base font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
+                className="btn-glow rounded-xl px-8 py-3.5 text-base font-semibold text-accent-foreground"
               >
-                Empezar gratis →
+                Empezar mi primer ensayo →
               </Link>
               <div className="flex items-center gap-3 self-stretch text-xs text-muted">
                 <span className="h-px flex-1 bg-border" />
@@ -164,6 +192,8 @@ export function LandingPublica() {
           </div>
         </div>
       </section>
+
+      <FranjaCifras stats={stats} />
 
       <section id="como-funciona" className="border-t border-border px-6 py-20">
         <div className="mx-auto max-w-5xl">
@@ -284,16 +314,16 @@ export function LandingPublica() {
               Lo que necesitas saber de la PAES
             </h2>
             <p className="mt-3 text-sm text-muted">
-              Los datos oficiales de las pruebas de Competencia Matemática,
-              según el temario del DEMRE.
+              Los datos oficiales de las cinco pruebas, según el temario del
+              DEMRE. El tiempo de tu ensayo se calcula con esta proporción.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {PRUEBAS_INFO.map((prueba) => (
               <div
                 key={prueba.nombre}
-                className="rounded-xl border border-border bg-surface p-6"
+                className="card-hover rounded-xl border border-border bg-surface p-6"
               >
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="font-semibold text-foreground">{prueba.nombre}</h3>
@@ -350,7 +380,7 @@ export function LandingPublica() {
       {/* ── Cierre motivacional ─────────────────────────────────────── */}
       <CierreMotivacional />
 
-      <Planes />
+      <Planes pagoDisponible={pagoDisponible} />
 
       <SiteFooter />
     </main>
@@ -359,6 +389,13 @@ export function LandingPublica() {
 
 /** Datos oficiales de cada prueba, tomados del temario DEMRE. */
 const PRUEBAS_INFO = [
+  {
+    nombre: "Competencia Lectora",
+    descripcion:
+      "Obligatoria para todos: textos literarios, no literarios y discontinuos, con preguntas de localizar, interpretar y evaluar.",
+    preguntas: "65",
+    duracion: "2 h 30 min",
+  },
   {
     nombre: "Competencia Matemática M1",
     descripcion:
@@ -373,13 +410,27 @@ const PRUEBAS_INFO = [
     preguntas: "55",
     duracion: "2 h 20 min",
   },
+  {
+    nombre: "Ciencias",
+    descripcion:
+      "Módulo común de Biología, Física y Química más un módulo electivo. Es la prueba más larga de las cinco.",
+    preguntas: "80",
+    duracion: "2 h 40 min",
+  },
+  {
+    nombre: "Historia y Ciencias Sociales",
+    descripcion:
+      "Historia, formación ciudadana y economía. Evalúa sobre todo análisis de fuentes: tablas, textos y datos.",
+    preguntas: "65",
+    duracion: "2 h",
+  },
 ] as const;
 
 const DATOS_PAES = [
   {
-    title: "Cuatro ejes temáticos",
+    title: "Cada prueba, sus ejes",
     description:
-      "Números, Álgebra y funciones, Geometría, y Probabilidad y estadística. Tu resultado se desglosa por cada uno.",
+      "Matemática se divide en Números, Álgebra y funciones, Geometría, y Probabilidad; Lectora en localizar, interpretar y evaluar. Tu resultado se desglosa por cada eje.",
   },
   {
     title: "Puntaje de 100 a 1000",
@@ -435,6 +486,50 @@ const EJES_EJEMPLO = [
 ] as const;
 
 /** Vista previa ilustrativa del resultado de un ensayo (no son datos reales). */
+/**
+ * Cifras del banco, contadas en la base al momento de servir la página.
+ *
+ * Nada de "más de 500 ejercicios": el número que se muestra es el que hay. Si
+ * la API no respondió, la franja no se dibuja — un dato de menos es preferible
+ * a uno inflado, sobre todo en la única página que promete que acá no se
+ * inventan datos.
+ */
+function FranjaCifras({ stats }: { stats: ContentStats | null }) {
+  if (!stats) return null;
+
+  const cifras = [
+    { valor: stats.questions, etiqueta: "preguntas verificadas" },
+    { valor: stats.subjects, etiqueta: "pruebas PAES" },
+    { valor: stats.skill_nodes, etiqueta: "temas en el árbol" },
+    { valor: stats.passages, etiqueta: "textos de lectura" },
+  ];
+
+  return (
+    <section
+      className="border-t border-border bg-surface/60 px-6 py-10"
+      aria-label="Cifras del banco de preguntas"
+    >
+      <Reveal>
+        <dl className="mx-auto grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
+          {cifras.map((c) => (
+            <div key={c.etiqueta} className="text-center">
+              <dt className="sr-only">{c.etiqueta}</dt>
+              <dd>
+                <span className="block text-3xl font-bold tracking-tight tabular-nums sm:text-4xl">
+                  <NumeroAnimado valor={c.valor} />
+                </span>
+                <span className="mt-1 block text-xs text-muted sm:text-sm">
+                  {c.etiqueta}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </Reveal>
+    </section>
+  );
+}
+
 function PuntajeMockup() {
   const radio = 46;
   const circunferencia = 2 * Math.PI * radio;

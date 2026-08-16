@@ -81,9 +81,161 @@ class ContenidoOut(BaseModel):
     nodos_mas_flojos: list[NodoFlojo]
 
 
+class EmbudoOut(BaseModel):
+    """De visita anónima a ensayo terminado, en los últimos 30 días.
+
+    Es la pregunta que ningún total responde: no importa cuánta gente entra si
+    no se sabe dónde deja de avanzar. Las tasas viajan como null cuando el
+    denominador es cero, porque un 0% se leería como "nadie convierte" cuando
+    en realidad nadie llegó todavía a ese paso.
+    """
+
+    visitantes: int
+    registrados: int
+    #: Cuentas creadas en la ventana que además iniciaron al menos un ensayo.
+    con_ensayo: int
+    con_ensayo_terminado: int
+    tasa_registro: float | None
+    tasa_activacion: float | None
+    tasa_finalizacion: float | None
+    #: Navegadores que estuvieron anónimos y después aparecieron con sesión.
+    #: Es la única medida directa de conversión que permite el visitor_id.
+    visitantes_convertidos: int
+
+
+class RetencionOut(BaseModel):
+    """Si la gente vuelve. Un registro que no vuelve es un registro perdido."""
+
+    #: Usuarios con actividad en 1, en 2-3 y en 4 o más días distintos (30 días).
+    un_dia: int
+    dos_a_tres: int
+    cuatro_o_mas: int
+    #: De los registrados hace 7 días o más, cuántos tuvieron actividad después
+    #: del día en que se registraron. `base` es cuántos podían hacerlo.
+    volvieron: int
+    base_volvieron: int
+
+
+class UsoPrueba(BaseModel):
+    subject: str
+    iniciados: int
+    terminados: int
+    puntaje_promedio: float | None
+
+
+class EnsayosOut(BaseModel):
+    """Qué se rinde y qué se abandona."""
+
+    iniciados: int
+    terminados: int
+    #: En curso y sin tocar hace más de un día: en la práctica, abandonados.
+    abandonados: int
+    tasa_finalizacion: float | None
+    duracion_mediana_min: float | None
+    por_prueba: list[UsoPrueba]
+
+
+class CoberturaPrueba(BaseModel):
+    subject: str
+    #: Preguntas activas en el banco para esa prueba.
+    banco: int
+    #: Cuántas trae la prueba oficial del DEMRE.
+    oficiales: int
+    #: banco / oficiales. Bajo 1 significa que no alcanza para un ensayo completo.
+    ensayos_completos: float
+    #: Preguntas del banco que nunca ha respondido nadie.
+    nunca_respondidas: int
+
+
+class BancoOut(BaseModel):
+    """Salud del contenido: si el banco alcanza para lo que la portada promete."""
+
+    por_prueba: list[CoberturaPrueba]
+    #: Nodos publicados con menos de 5 preguntas: aparecen practicables y se
+    #: agotan al primer intento.
+    nodos_flacos: list[str]
+
+
+class VisitanteDetalle(BaseModel):
+    """Una fila por navegador distinto.
+
+    `visitor` es solo el prefijo del identificador aleatorio: alcanza para
+    distinguir filas entre sí y no expone el valor completo, que es lo único
+    con lo que se podría seguir a alguien entre sesiones.
+    """
+
+    visitor: str
+    device: str | None
+    os: str | None
+    browser: str | None
+    visitas: int
+    #: Días distintos con actividad. Uno solo sugiere alguien de paso.
+    dias: int
+    primera: datetime
+    ultima: datetime
+    #: Si en algún momento navegó con sesión iniciada.
+    con_cuenta: bool
+
+
+class VisitantesOut(BaseModel):
+    """Con qué equipos entra la gente.
+
+    Existe para responder una pregunta concreta: si 27 visitantes son 27
+    personas o una sola probando el sitio. La diversidad de dispositivos no lo
+    prueba, pero lo delata: 27 navegadores idénticos en el mismo día no son 27
+    personas.
+    """
+
+    por_dispositivo: dict[str, int]
+    por_sistema: dict[str, int]
+    por_navegador: dict[str, int]
+    #: Visitas registradas antes de que se guardaran estas categorías.
+    sin_clasificar: int
+    recientes: list[VisitanteDetalle]
+
+
+class ResultadoPrueba(BaseModel):
+    subject: str
+    ensayos: int
+    mejor: int | None
+    ultimo: int | None
+
+
+class AlumnoDetalle(BaseModel):
+    id: int
+    email: str
+    name: str
+    created_at: datetime
+    last_login_at: datetime | None
+    #: Lo que declaró en el cuestionario de bienvenida, si lo respondió.
+    curso: str | None
+    pruebas_objetivo: str | None
+    horas_semana: int | None
+    ensayos_iniciados: int
+    ensayos_terminados: int
+    respuestas: int
+    tasa_acierto: float | None
+    mejor_puntaje: int | None
+    dias_activos: int
+    por_prueba: list[ResultadoPrueba]
+
+
+class AlumnosOut(BaseModel):
+    """Qué hizo cada cuenta registrada. Es el detalle detrás de los promedios."""
+
+    total: int
+    detalle: list[AlumnoDetalle]
+
+
 class AdminMetricsOut(BaseModel):
     generado_en: datetime
     usuarios: UsuariosOut
     sesiones: SesionesOut
     visitas: VisitasOut
     contenido: ContenidoOut
+    embudo: EmbudoOut
+    retencion: RetencionOut
+    ensayos: EnsayosOut
+    banco: BancoOut
+    visitantes: VisitantesOut
+    alumnos: AlumnosOut

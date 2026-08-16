@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Response
 from sqlalchemy.orm import Session
 
 from paes_api.core.database import get_db
+from paes_api.modules.billing import service as billing
 from paes_api.modules.content.models import Question
 from paes_api.modules.exam_focus import service
 from paes_api.modules.exam_focus.models import AttemptStatus
@@ -15,6 +16,7 @@ from paes_api.modules.exam_focus.schemas import (
     ExamReviewOut,
     ExamStartOut,
     ExamStateOut,
+    PassageOut,
     RepasoOut,
 )
 from paes_api.modules.skill_tree.models import Subject
@@ -38,6 +40,17 @@ def _to_question_out(questions: list[Question]) -> list[ExamQuestionOut]:
             difficulty=q.difficulty,
             stem=q.stem,
             image_url=q.image_url,
+            passage=(
+                PassageOut(
+                    id=q.passage.id,
+                    title=q.passage.title,
+                    body=q.passage.body,
+                    kind=q.passage.kind,
+                    source_note=q.passage.source_note,
+                )
+                if q.passage
+                else None
+            ),
             alternatives=[
                 {"id": a.id, "label": a.label, "text": a.text} for a in q.alternatives
             ],
@@ -84,6 +97,14 @@ def start_exam(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> ExamStartOut:
+    # El plan Gratis tiene un tope de ensayos al mes. Hoy se informa y no
+    # bloquea (ver billing.limites_activos()): cortarle el paso a alguien
+    # mandándolo a contratar un plan que todavía no se puede contratar es
+    # frustración sin salida.
+    permitido, motivo = billing.puede_rendir(db, user.id)
+    if not permitido:
+        raise HTTPException(status_code=409, detail=motivo)
+
     attempt = service.start_attempt(db, user, config or ExamConfigIn())
     questions = service.attempt_questions(db, attempt)
     if not questions:
