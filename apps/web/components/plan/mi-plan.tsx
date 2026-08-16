@@ -72,7 +72,9 @@ export function MiPlanPanel({
       // Se sale del sitio hacia Flow. No se limpia el estado a propósito: el
       // botón queda deshabilitado hasta que el navegador cambie de página, de
       // modo que un doble clic no genere dos órdenes.
-      window.location.href = url;
+      // assign() y no `location.href = ...`: asignar sobre el objeto global
+      // es una mutación que el linter de React marca como error.
+      window.location.assign(url);
     } catch (err) {
       setErrorPago(
         err instanceof ApiError && err.detail
