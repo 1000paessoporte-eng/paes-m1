@@ -11603,6 +11603,321 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Reglas de las probabilidades — segunda tanda.
+#
+# El nodo `prob_reglas` era el más flaco del eje (14 preguntas contra 33 de sus
+# vecinos). El temario DEMRE (Admisión 2027) le pide exactamente dos cosas:
+# probabilidad de un evento "en diversos contextos" y la regla aditiva y
+# multiplicativa, también "en diversos contextos". Por eso acá cada enunciado
+# ocurre en una situación concreta (una feria, un taller, una encuesta) en vez
+# de la bolsa de bolitas abstracta: el contexto es parte de lo que se evalúa.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_reglas", "facil",
+        "En una feria escolar una ruleta tiene 20 sectores iguales, numerados del 1 al 20. Si se hace girar una vez, ¿cuál es la probabilidad de que se detenga en un múltiplo de 5?",
+        "1/5",
+        "La probabilidad es la razón entre los casos favorables y el total de casos posibles.\n\n"
+        "1) Los sectores son iguales, así que los 20 resultados tienen la misma posibilidad de salir. El total de casos posibles es 20.\n"
+        "2) Busca los múltiplos de 5 entre 1 y 20: son 5, 10, 15 y 20. Ojo con no pasarse de 20, porque el siguiente múltiplo, 25, ya no está en la ruleta.\n"
+        "3) Hay 4 casos favorables, así que la probabilidad es 4/20.\n"
+        "4) Simplifica dividiendo arriba y abajo por 4: 4/20 = 1/5.",
+        [
+            ("1/20", "Consideró un solo sector favorable en lugar de contar los cuatro múltiplos de 5."),
+            ("4/5", "Calculó la probabilidad del suceso contrario: que el resultado NO sea múltiplo de 5."),
+            ("1/4", "Contó cinco múltiplos de 5 entre 1 y 20, uno de más."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Un curso tiene 32 estudiantes, de los cuales 18 son mujeres. Si se elige a una persona al azar para representar al curso, ¿cuál es la probabilidad de que sea hombre?",
+        "7/16",
+        "Primero hay que averiguar el dato que falta, porque el enunciado entrega el total y las mujeres, no los hombres.\n\n"
+        "1) Si hay 32 estudiantes y 18 son mujeres, los hombres son 32 − 18 = 14.\n"
+        "2) El total de casos posibles es 32, porque cualquiera de los 32 puede resultar elegido.\n"
+        "3) La probabilidad es entonces 14/32.\n"
+        "4) Simplifica dividiendo arriba y abajo por 2: 14/32 = 7/16.",
+        [
+            ("9/16", "Calculó la probabilidad de elegir una mujer, que es el suceso contrario."),
+            ("7/9", "Dividió la cantidad de hombres por la de mujeres, en vez de dividirla por el total del curso."),
+            ("1/32", "Consideró un solo caso favorable en lugar de los 14 hombres."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una bolsa hay 9 caramelos de limón y 15 de frutilla, todos del mismo tamaño y envoltorio. Si se saca uno sin mirar, ¿cuál es la probabilidad de que sea de limón?",
+        "3/8",
+        "El total no viene dado: hay que armarlo sumando los dos sabores.\n\n"
+        "1) En la bolsa hay 9 + 15 = 24 caramelos en total.\n"
+        "2) Que sean del mismo tamaño y envoltorio importa: garantiza que todos tengan la misma posibilidad de ser sacados.\n"
+        "3) Los casos favorables son los 9 de limón, así que la probabilidad es 9/24.\n"
+        "4) Simplifica dividiendo arriba y abajo por 3: 9/24 = 3/8.",
+        [
+            ("5/8", "Calculó la probabilidad de sacar un caramelo de frutilla."),
+            ("3/5", "Dividió los caramelos de limón por los de frutilla en lugar de dividirlos por el total."),
+            ("1/24", "Consideró un único caramelo favorable en vez de los 9 de limón."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "El registro de un recorrido indica que la probabilidad de que el bus llegue atrasado a cierto paradero es 0,15. ¿Cuál es la probabilidad de que llegue a tiempo?",
+        "0,85",
+        "Llegar a tiempo y llegar atrasado son sucesos contrarios: uno de los dos ocurre siempre, y nunca los dos a la vez.\n\n"
+        "1) Cuando dos sucesos son contrarios, sus probabilidades suman 1, porque entre ambos cubren todo lo que puede pasar.\n"
+        "2) Entonces la probabilidad buscada es 1 − 0,15.\n"
+        "3) Al restar: 1 − 0,15 = 0,85.\n"
+        "4) El resultado tiene sentido: si el atraso es poco probable, llegar a tiempo debe ser muy probable.",
+        [
+            ("0,15", "Repitió la probabilidad del atraso en lugar de calcular la del suceso contrario."),
+            ("1,15", "Sumó en vez de restar, y obtuvo un valor mayor que 1, imposible para una probabilidad."),
+            ("0,5", "Supuso que los dos resultados son igualmente probables, ignorando el dato del registro."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Un juego de mesa usa un dado de 12 caras numeradas del 1 al 12. ¿Cuál es la probabilidad de obtener un múltiplo de 4 en un lanzamiento?",
+        "1/4",
+        "El dado tiene 12 caras equiprobables, así que basta contar cuántas cumplen la condición.\n\n"
+        "1) El total de casos posibles es 12.\n"
+        "2) Los múltiplos de 4 entre 1 y 12 son 4, 8 y 12. El siguiente sería 16, que no existe en este dado.\n"
+        "3) Hay 3 casos favorables, así que la probabilidad es 3/12.\n"
+        "4) Simplifica dividiendo arriba y abajo por 3: 3/12 = 1/4.",
+        [
+            ("1/12", "Consideró una sola cara favorable en lugar de las tres que son múltiplos de 4."),
+            ("1/3", "Contó cuatro múltiplos de 4 entre 1 y 12, uno de más."),
+            ("3/4", "Calculó la probabilidad de que el resultado NO sea múltiplo de 4."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Un naipe español tiene 40 cartas repartidas en partes iguales entre cuatro pintas: oro, copa, espada y basto. Si se extrae una carta al azar, ¿cuál es la probabilidad de que sea de oro?",
+        "1/4",
+        "Hay que deducir cuántas cartas de oro hay antes de calcular nada.\n\n"
+        "1) Las 40 cartas se reparten en partes iguales entre 4 pintas, así que cada pinta tiene 40 ÷ 4 = 10 cartas.\n"
+        "2) Los casos favorables son esas 10 cartas de oro y el total de casos posibles es 40.\n"
+        "3) La probabilidad es 10/40.\n"
+        "4) Simplifica dividiendo arriba y abajo por 10: 10/40 = 1/4. Tiene sentido: como las cuatro pintas son igual de numerosas, cada una se lleva un cuarto del naipe.",
+        [
+            ("1/40", "Consideró una sola carta favorable en vez de las 10 que son de oro."),
+            ("1/10", "Usó la cantidad de cartas por pinta como si fuera la probabilidad, sin compararla con el total."),
+            ("3/4", "Calculó la probabilidad de que la carta NO sea de oro."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En un estacionamiento hay 25 autos y 10 de ellos son rojos. Si se elige un auto al azar para una revisión, ¿cuál es la probabilidad de que NO sea rojo?",
+        "3/5",
+        "La pregunta apunta al suceso contrario del que está descrito con números, así que hay que contar los que no cumplen la condición.\n\n"
+        "1) Si hay 25 autos y 10 son rojos, los que no son rojos son 25 − 10 = 15.\n"
+        "2) El total de casos posibles sigue siendo 25.\n"
+        "3) La probabilidad es 15/25.\n"
+        "4) Simplifica dividiendo arriba y abajo por 5: 15/25 = 3/5.",
+        [
+            ("2/5", "Calculó la probabilidad de que el auto sí sea rojo."),
+            ("2/3", "Comparó los autos rojos con los que no lo son, en lugar de compararlos con el total."),
+            ("1/25", "Consideró un solo auto favorable en lugar de los 15 que no son rojos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En un quiosco, la probabilidad de que un cliente compre solamente bebida es 0,35 y la de que compre solamente pan es 0,45. Si ningún cliente compra ambas cosas, ¿cuál es la probabilidad de que un cliente compre bebida o pan?",
+        "0,8",
+        "La palabra \"o\" pide la regla aditiva, y hay que fijarse en si los sucesos pueden ocurrir juntos.\n\n"
+        "1) El enunciado dice que ningún cliente compra ambas cosas: los sucesos son excluyentes, no se solapan.\n"
+        "2) Cuando dos sucesos son excluyentes, la probabilidad de que ocurra uno u otro es la suma de sus probabilidades, sin descontar nada.\n"
+        "3) Entonces: 0,35 + 0,45 = 0,80.\n"
+        "4) El resultado es menor que 1, como debe ser: queda un 0,20 de clientes que no compran ninguna de las dos cosas.",
+        [
+            ("0,1575", "Multiplicó las dos probabilidades, que es la regla del suceso conjunto y no la de la unión."),
+            ("0,1", "Restó una probabilidad de la otra en lugar de sumarlas."),
+            ("0,4", "Promedió las dos probabilidades en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En un curso de 40 estudiantes, 22 juegan fútbol, 16 juegan vóleibol y 8 practican ambos deportes. Si se elige a un estudiante al azar, ¿cuál es la probabilidad de que practique al menos uno de los dos deportes?",
+        "3/4",
+        "Acá los dos grupos se solapan, así que sumar directamente cuenta gente dos veces.\n\n"
+        "1) Los 8 que practican ambos deportes están incluidos tanto en los 22 de fútbol como en los 16 de vóleibol.\n"
+        "2) Por eso la regla aditiva descuenta la intersección: 22 + 16 − 8 = 30 estudiantes practican al menos un deporte.\n"
+        "3) La probabilidad es 30/40.\n"
+        "4) Simplifica dividiendo arriba y abajo por 10: 30/40 = 3/4.",
+        [
+            ("19/20", "Sumó 22 y 16 sin descontar a los 8 que quedan contados dos veces."),
+            ("1/5", "Calculó la probabilidad de que practique ambos deportes."),
+            ("1/4", "Calculó la probabilidad de que no practique ninguno de los dos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En un taller, la probabilidad de que la máquina A esté operativa en un día cualquiera es 0,9 y la de la máquina B es 0,8. Si el funcionamiento de una no afecta al de la otra, ¿cuál es la probabilidad de que ambas estén operativas el mismo día?",
+        "0,72",
+        "La palabra clave es \"ambas\": se piden dos cosas a la vez, y eso es la regla multiplicativa.\n\n"
+        "1) El enunciado dice que el funcionamiento de una no afecta al de la otra, o sea que los sucesos son independientes.\n"
+        "2) Para sucesos independientes, la probabilidad de que ocurran los dos es el producto de sus probabilidades.\n"
+        "3) Entonces: 0,9 · 0,8 = 0,72.\n"
+        "4) Verifica que tenga sentido: exigir dos condiciones a la vez siempre da una probabilidad menor que cada una por separado, y 0,72 es menor que 0,8 y que 0,9.",
+        [
+            ("1,7", "Sumó las probabilidades y obtuvo un valor mayor que 1, imposible para una probabilidad."),
+            ("0,85", "Promedió las dos probabilidades en lugar de multiplicarlas."),
+            ("0,1", "Calculó la diferencia entre ambas probabilidades."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Una caja contiene 5 lápices azules y 3 rojos. Se sacan dos lápices al azar, uno después del otro y sin devolver el primero a la caja. ¿Cuál es la probabilidad de que ambos sean rojos?",
+        "3/28",
+        "Al no devolver el primer lápiz, la segunda extracción ocurre sobre una caja distinta: hay que actualizar los números.\n\n"
+        "1) En la caja hay 5 + 3 = 8 lápices. La probabilidad de que el primero sea rojo es 3/8.\n"
+        "2) Si el primero fue rojo y no se devuelve, quedan 7 lápices y solo 2 rojos. La probabilidad de que el segundo también sea rojo es 2/7.\n"
+        "3) Como se piden las dos cosas juntas, se multiplican: (3/8) · (2/7) = 6/56.\n"
+        "4) Simplifica dividiendo arriba y abajo por 2: 6/56 = 3/28.",
+        [
+            ("9/64", "Usó 3/8 en ambas extracciones, como si el primer lápiz se devolviera a la caja."),
+            ("5/14", "Calculó la probabilidad de que ambos lápices sean azules."),
+            ("3/8", "Se quedó con la probabilidad de la primera extracción y no consideró la segunda."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Un arquero acierta al blanco con probabilidad 0,6 en cada disparo, y lo que ocurre en un disparo no influye en el siguiente. ¿Cuál es la probabilidad de que acierte en dos disparos consecutivos?",
+        "0,36",
+        "Se piden dos aciertos a la vez, con sucesos independientes: es la regla multiplicativa.\n\n"
+        "1) El enunciado aclara que un disparo no influye en el siguiente, así que la probabilidad de acertar se mantiene en 0,6 las dos veces.\n"
+        "2) Para que ocurran ambos aciertos se multiplican las probabilidades: 0,6 · 0,6.\n"
+        "3) Al multiplicar: 0,6 · 0,6 = 0,36.\n"
+        "4) Tiene sentido que baje: acertar dos veces seguidas es más difícil que acertar una sola.",
+        [
+            ("1,2", "Sumó las probabilidades de los dos disparos y obtuvo un valor mayor que 1."),
+            ("0,6", "Se quedó con la probabilidad de un solo disparo."),
+            ("0,3", "Dividió la probabilidad por 2 en lugar de multiplicarla por sí misma."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanzan tres monedas equilibradas al mismo tiempo. ¿Cuál es la probabilidad de obtener al menos una cara?",
+        "7/8",
+        "\"Al menos una\" agrupa varios casos, y es mucho más corto calcular el único caso que queda fuera.\n\n"
+        "1) El suceso contrario de \"al menos una cara\" es \"ninguna cara\", es decir, que las tres salgan sello.\n"
+        "2) Cada moneda sale sello con probabilidad 1/2 y los lanzamientos son independientes, así que las tres salen sello con probabilidad (1/2) · (1/2) · (1/2) = 1/8.\n"
+        "3) La probabilidad buscada es 1 menos la del suceso contrario: 1 − 1/8.\n"
+        "4) Al restar: 1 − 1/8 = 7/8.",
+        [
+            ("1/8", "Calculó la probabilidad de que las tres salgan sello, que es justamente el caso que se descarta."),
+            ("3/8", "Contó solo los casos con exactamente una cara, dejando fuera los de dos y tres caras."),
+            ("1/2", "Miró una sola moneda e ignoró las otras dos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En una encuesta a 200 personas, 120 prefieren té, 50 prefieren café y 30 no prefieren ninguna de las dos bebidas. Si se elige una persona al azar, ¿cuál es la probabilidad de que prefiera té o café?",
+        "17/20",
+        "Cada persona encuestada cae en una sola categoría, así que los grupos no se solapan.\n\n"
+        "1) Comprueba que los datos cierren: 120 + 50 + 30 = 200, el total de encuestados. Nadie está contado dos veces.\n"
+        "2) Como los grupos son excluyentes, quienes prefieren té o café son 120 + 50 = 170.\n"
+        "3) La probabilidad es 170/200.\n"
+        "4) Simplifica dividiendo arriba y abajo por 10: 170/200 = 17/20.",
+        [
+            ("3/20", "Calculó la probabilidad de que la persona no prefiera ninguna de las dos bebidas."),
+            ("3/5", "Se quedó solo con quienes prefieren té."),
+            ("1/4", "Se quedó solo con quienes prefieren café."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En un colegio de 300 estudiantes, 180 usan transporte público, 140 almuerzan en el establecimiento y 90 hacen ambas cosas. Si se elige un estudiante al azar, ¿cuál es la probabilidad de que use transporte público o almuerce en el establecimiento?",
+        "23/30",
+        "Los dos grupos se cruzan, así que la suma directa infla el resultado.\n\n"
+        "1) Si sumas 180 y 140 obtienes 320, que ya es más que los 300 estudiantes del colegio: señal de que hay gente contada dos veces.\n"
+        "2) Los repetidos son los 90 que hacen ambas cosas. La regla aditiva los descuenta una vez: 180 + 140 − 90 = 230.\n"
+        "3) La probabilidad es 230/300.\n"
+        "4) Simplifica dividiendo arriba y abajo por 10: 230/300 = 23/30.",
+        [
+            ("16/15", "Sumó 180 y 140 sin descontar los 90 repetidos, y obtuvo un valor mayor que 1."),
+            ("3/10", "Calculó la probabilidad de que haga ambas cosas."),
+            ("7/30", "Calculó la probabilidad de que no haga ninguna de las dos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Una urna contiene 7 fichas verdes y 5 moradas. Se extraen dos fichas al azar, una tras otra y sin reposición. ¿Cuál es la probabilidad de que sean de distinto color?",
+        "35/66",
+        "\"De distinto color\" ocurre de dos maneras, y hay que contar las dos.\n\n"
+        "1) En la urna hay 7 + 5 = 12 fichas.\n"
+        "2) Primer caso, verde y después morada: (7/12) · (5/11) = 35/132. Al no haber reposición, en la segunda extracción quedan 11 fichas.\n"
+        "3) Segundo caso, morada y después verde: (5/12) · (7/11) = 35/132. Da lo mismo que el anterior, porque se multiplican los mismos números en otro orden.\n"
+        "4) Los dos casos son excluyentes, así que se suman: 35/132 + 35/132 = 70/132.\n"
+        "5) Simplifica dividiendo arriba y abajo por 2: 70/132 = 35/66.",
+        [
+            ("35/132", "Consideró solo el orden verde y después morada, olvidando el caso inverso."),
+            ("7/22", "Calculó la probabilidad de que ambas fichas sean verdes."),
+            ("5/33", "Calculó la probabilidad de que ambas fichas sean moradas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Un equipo tiene tres componentes que funcionan de forma independiente, y cada uno falla con probabilidad 0,1. ¿Cuál es la probabilidad de que falle al menos uno de los tres?",
+        "0,271",
+        "\"Al menos uno\" reúne muchos casos: que falle uno, que fallen dos, que fallen los tres. Conviene ir por el contrario.\n\n"
+        "1) El suceso contrario es que no falle ninguno, es decir, que los tres funcionen.\n"
+        "2) Cada componente funciona con probabilidad 1 − 0,1 = 0,9, y como son independientes se multiplican: 0,9 · 0,9 · 0,9 = 0,729.\n"
+        "3) La probabilidad buscada es 1 menos esa: 1 − 0,729.\n"
+        "4) Al restar: 1 − 0,729 = 0,271.",
+        [
+            ("0,3", "Sumó las tres probabilidades de falla, contando de más los casos en que falla más de un componente."),
+            ("0,001", "Calculó la probabilidad de que fallen los tres a la vez."),
+            ("0,729", "Se quedó con la probabilidad de que ninguno falle, que es el paso intermedio y no la respuesta."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En un sorteo, la probabilidad de ganar el premio principal es 0,45, la de ganar el premio sorpresa es 0,3 y la de ganar ambos es 0,15. ¿Cuál es la probabilidad de no ganar ningún premio?",
+        "0,4",
+        "Son dos pasos: primero la unión con la regla aditiva, y recién después el suceso contrario.\n\n"
+        "1) Los dos premios pueden ganarse juntos, así que la regla aditiva descuenta esa intersección: 0,45 + 0,3 − 0,15 = 0,6. Esa es la probabilidad de ganar al menos un premio.\n"
+        "2) No ganar ningún premio es el suceso contrario de ganar al menos uno.\n"
+        "3) Entonces: 1 − 0,6 = 0,4.\n"
+        "4) El error clásico acá es restarle a 1 la suma 0,45 + 0,3 sin devolver los 0,15 que estaban contados dos veces.",
+        [
+            ("0,25", "Restó a 1 la suma de 0,45 y 0,3 sin descontar antes los casos contados dos veces."),
+            ("0,6", "Calculó la probabilidad de ganar al menos un premio, que es el suceso contrario del pedido."),
+            ("0,85", "Restó a 1 solamente la probabilidad de ganar ambos premios."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De 10 postulantes a un cargo, 4 tienen experiencia previa. Si se eligen 2 al azar y sin reposición, ¿cuál es la probabilidad de que al menos uno de los elegidos tenga experiencia?",
+        "2/3",
+        "De nuevo conviene el suceso contrario, porque \"al menos uno\" mezcla dos situaciones distintas.\n\n"
+        "1) El contrario es que ninguno de los dos tenga experiencia, o sea que ambos salgan del grupo de 10 − 4 = 6 sin experiencia.\n"
+        "2) La probabilidad de que el primero no tenga experiencia es 6/10. Como no hay reposición, para el segundo quedan 9 postulantes y 5 sin experiencia: 5/9.\n"
+        "3) Se multiplican: (6/10) · (5/9) = 30/90 = 1/3.\n"
+        "4) La probabilidad buscada es 1 − 1/3 = 2/3.",
+        [
+            ("1/3", "Se quedó con la probabilidad de que ninguno tenga experiencia, que es el paso intermedio y no la respuesta."),
+            ("4/5", "Sumó las probabilidades de que cada elegido tenga experiencia, contando dos veces el caso en que ambos la tienen."),
+            ("2/15", "Calculó la probabilidad de que ambos tengan experiencia."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una fábrica, la máquina A produce el 60% de las piezas y el 5% de esas piezas sale defectuosa; la máquina B produce el 40% restante y el 2% de las suyas sale defectuosa. Si se toma una pieza al azar de la producción total, ¿cuál es la probabilidad de que sea defectuosa?",
+        "0,038",
+        "Los porcentajes de falla no se pueden comparar directamente, porque cada máquina aporta una cantidad distinta de piezas.\n\n"
+        "1) Piezas defectuosas que vienen de A: hay que pedir dos cosas a la vez (que sea de A y que salga fallada), así que se multiplica: 0,6 · 0,05 = 0,03.\n"
+        "2) Piezas defectuosas que vienen de B: 0,4 · 0,02 = 0,008.\n"
+        "3) Una pieza defectuosa viene de A o viene de B, y no puede venir de las dos. Al ser casos excluyentes, se suman: 0,03 + 0,008 = 0,038.\n"
+        "4) El resultado queda entre 0,02 y 0,05, como corresponde a un promedio ponderado de ambas tasas, y más cerca de 0,05 porque A produce más piezas.",
+        [
+            ("0,07", "Sumó los dos porcentajes de defectuosas sin ponderarlos por cuánto produce cada máquina."),
+            ("0,03", "Consideró solo las piezas defectuosas que vienen de la máquina A."),
+            ("0,001", "Multiplicó entre sí los dos porcentajes de defectuosas."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora

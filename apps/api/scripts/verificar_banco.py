@@ -311,6 +311,35 @@ COMPROBACIONES: dict[str, str] = {
     "moneda 3 veces": str(Fraction(3, 8)),
     "5 intentos y probabilidad de éxito 0,2": str(int(5 * 0.2)),
     "4 veces con probabilidad de éxito 0,5": str(comb(4, 3) * 0.5**4).replace(".", ","),
+    # --- reglas de las probabilidades: segunda tanda ---
+    # Cada valor se recalcula acá desde los datos del enunciado, sin mirar la
+    # alternativa marcada como correcta. Si alguien edita una pregunta y le
+    # descuadra la aritmética, esto lo caza.
+    "ruleta tiene 20 sectores iguales": str(Fraction(4, 20)),
+    "32 estudiantes, de los cuales 18 son mujeres": str(Fraction(32 - 18, 32)),
+    "9 caramelos de limón y 15 de frutilla": str(Fraction(9, 9 + 15)),
+    "el bus llegue atrasado a cierto paradero es 0,15": str(round(1 - 0.15, 2)).replace(".", ","),
+    "dado de 12 caras numeradas del 1 al 12": str(Fraction(3, 12)),
+    "naipe español tiene 40 cartas": str(Fraction(40 // 4, 40)),
+    "25 autos y 10 de ellos son rojos": str(Fraction(25 - 10, 25)),
+    # Excluyentes: se suman sin descontar nada.
+    "compre solamente bebida es 0,35": str(round(0.35 + 0.45, 2)).replace(".", ","),
+    # Con intersección: la regla aditiva descuenta los contados dos veces.
+    "22 juegan fútbol, 16 juegan vóleibol": str(Fraction(22 + 16 - 8, 40)),
+    "máquina A esté operativa en un día cualquiera": str(round(0.9 * 0.8, 2)).replace(".", ","),
+    # Sin reposición: la segunda extracción cambia numerador y denominador.
+    "5 lápices azules y 3 rojos": str(Fraction(3, 8) * Fraction(2, 7)),
+    "arquero acierta al blanco con probabilidad 0,6": str(round(0.6 * 0.6, 2)).replace(".", ","),
+    "lanzan tres monedas equilibradas": str(1 - Fraction(1, 2) ** 3),
+    "120 prefieren té, 50 prefieren café": str(Fraction(120 + 50, 200)),
+    "180 usan transporte público": str(Fraction(180 + 140 - 90, 300)),
+    # Distinto color: los dos órdenes posibles, sumados.
+    "7 fichas verdes y 5 moradas": str(2 * Fraction(7, 12) * Fraction(5, 11)),
+    "cada uno falla con probabilidad 0,1": str(round(1 - 0.9**3, 3)).replace(".", ","),
+    "ganar el premio principal es 0,45": str(round(1 - (0.45 + 0.3 - 0.15), 2)).replace(".", ","),
+    "De 10 postulantes a un cargo": str(1 - Fraction(6, 10) * Fraction(5, 9)),
+    # Ponderar por producción antes de sumar: 60% y 40% no pesan igual.
+    "máquina A produce el 60% de las piezas": str(round(0.6 * 0.05 + 0.4 * 0.02, 3)).replace(".", ","),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
