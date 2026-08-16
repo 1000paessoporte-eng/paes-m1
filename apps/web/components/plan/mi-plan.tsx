@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { MiPlan } from "@/lib/api";
-import { ApiError, canjearCodigo } from "@/lib/api";
+import type { MiPlan, Productos } from "@/lib/api";
+import { ApiError, canjearCodigo, iniciarPago } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
 
@@ -21,8 +21,16 @@ const NOMBRE: Record<string, string> = {
   colegios: "Plan Colegios",
 };
 
-export function MiPlanPanel({ inicial }: { inicial: MiPlan }) {
+export function MiPlanPanel({
+  inicial,
+  productos,
+}: {
+  inicial: MiPlan;
+  productos?: Productos;
+}) {
   const [plan, setPlan] = useState(inicial);
+  const [pagando, setPagando] = useState<string | null>(null);
+  const [errorPago, setErrorPago] = useState<string | null>(null);
   const [codigo, setCodigo] = useState("");
   const [canjeando, setCanjeando] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -55,6 +63,30 @@ export function MiPlanPanel({ inicial }: { inicial: MiPlan }) {
       setCanjeando(false);
     }
   }
+
+  async function comprar(producto: string) {
+    setPagando(producto);
+    setErrorPago(null);
+    try {
+      const { url } = await iniciarPago(producto, getClientToken() ?? undefined);
+      // Se sale del sitio hacia Flow. No se limpia el estado a propósito: el
+      // botón queda deshabilitado hasta que el navegador cambie de página, de
+      // modo que un doble clic no genere dos órdenes.
+      window.location.href = url;
+    } catch (err) {
+      setErrorPago(
+        err instanceof ApiError && err.detail
+          ? err.detail
+          : "No se pudo iniciar el pago. Inténtalo de nuevo."
+      );
+      setPagando(null);
+    }
+  }
+
+  const comprables =
+    productos?.pago_disponible && plan.plan === "gratis"
+      ? productos.productos
+      : [];
 
   return (
     <section className="card-panel p-6" aria-labelledby="h-plan">
@@ -116,8 +148,41 @@ export function MiPlanPanel({ inicial }: { inicial: MiPlan }) {
         </p>
       )}
 
-      {/* Canje de código: es la única forma de obtener Pro hoy, así que va
-          acá y no escondido en la página de precios. */}
+      {comprables.length > 0 && (
+        <div className="mt-5 border-t border-border pt-4">
+          <p className="text-xs font-medium text-muted">Pasar a Pro</p>
+          <div className="mt-3 flex flex-col gap-2">
+            {comprables.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => comprar(p.id)}
+                disabled={pagando !== null}
+                className="flex items-center justify-between gap-3 rounded-xl border border-border p-3 text-left transition hover:border-border-strong disabled:opacity-50"
+              >
+                <span className="min-w-0">
+                  <span className="block text-sm font-medium">{p.asunto}</span>
+                  <span className="block text-xs text-muted">
+                    {p.dias} días de acceso
+                  </span>
+                </span>
+                <span className="shrink-0 text-sm font-semibold tabular-nums">
+                  ${p.monto.toLocaleString("es-CL")}
+                </span>
+              </button>
+            ))}
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-muted">
+            {pagando
+              ? "Te estamos llevando a Flow para completar el pago…"
+              : "El pago se procesa en Flow. No guardamos los datos de tu tarjeta."}
+          </p>
+          {errorPago && <p className="mt-2 text-sm text-danger">{errorPago}</p>}
+        </div>
+      )}
+
+      {/* Canje de código: sigue disponible junto al pago, porque es la vía de
+          los colegios piloto y de cualquier convenio. */}
       <form onSubmit={canjear} className="mt-5 border-t border-border pt-4">
         <label
           htmlFor="codigo-plan"
