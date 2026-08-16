@@ -93,25 +93,49 @@ class Producto:
     asunto: str
 
 
-#: Los montos coinciden con los precios de lanzamiento publicados en la página.
-#: Si cambian allá, cambian acá: un test verifica que ningún producto quede en
-#: cero, que es el error que convertiría el cobro en un regalo silencioso.
+#: Los planes que se pueden comprar, del más corto al más largo.
+#:
+#: La regla que ordena la escala: a MENOR plazo, MAYOR precio por día. Quien
+#: compra tres días paga la comodidad de no comprometerse; quien compra un año
+#: entrega el efectivo por adelantado y recibe descuento. Si el precio diario
+#: fuera parejo nadie compraría el plan largo, y si el corto fuera barato
+#: canibalizaría al mensual: cuatro semanas sueltas tienen que salir más caras
+#: que un mes, y diez compras de tres días más caras todavía.
+#:
+#: El anual no cuesta doce meses porque el producto es estacional: nadie
+#: prepara la PAES un año entero, el ciclo real son ocho o nueve meses. Cobrar
+#: la lista completa sería pedir por meses que el estudiante no va a usar.
+#:
+#: Un test verifica que la escala se mantenga coherente si alguien cambia un
+#: precio: ningún plan puede salir más barato por día que uno más largo.
 PRODUCTOS: dict[str, Producto] = {
+    "pro_3dias": Producto(
+        id="pro_3dias",
+        plan=Plan.PRO,
+        dias=3,
+        monto=3990,
+        asunto="1000paes Pro - 3 días",
+    ),
+    "pro_semana": Producto(
+        id="pro_semana",
+        plan=Plan.PRO,
+        dias=7,
+        monto=6990,
+        asunto="1000paes Pro - 7 días",
+    ),
     "pro_mensual": Producto(
         id="pro_mensual",
         plan=Plan.PRO,
         dias=30,
-        monto=5990,
+        monto=15000,
         asunto="1000paes Pro - 1 mes",
     ),
-    "pro_temporada": Producto(
-        id="pro_temporada",
+    "pro_anual": Producto(
+        id="pro_anual",
         plan=Plan.PRO,
-        # Hasta el día de la PAES: se venden como 240 días, que cubre desde
-        # cualquier momento del año escolar hasta rendir.
-        dias=240,
-        monto=34900,
-        asunto="1000paes Pro - temporada completa",
+        dias=365,
+        monto=119000,
+        asunto="1000paes Pro - 1 año",
     ),
 }
 

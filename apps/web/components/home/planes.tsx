@@ -104,11 +104,15 @@ const PLANES = [
   {
     nombre: "Pro",
     resumen: "Para preparar en serio",
-    precio: "$5.990",
-    precioNormal: "$9.990",
+    precio: "$15.000",
+    // Sin precio tachado: el "normal $9.990" nunca se cobró, y presentar como
+    // rebaja algo que no lo es sería justamente lo que prohíbe la Ley 19.496.
+    // Si algún día se sube el precio de verdad, ahí sí podrá mostrarse el
+    // anterior.
+    precioNormal: null,
     periodo: "al mes",
-    alternativa: "o $34.900 por toda la temporada (normal $59.900), hasta el día de la PAES",
-    facturacion: "Mensual, sin permanencia",
+    alternativa: "También por 3 días, una semana o un año completo",
+    facturacion: "Sin permanencia: pagas el período que elijas",
     duracion: "Mientras la suscripción esté activa",
     incluye: [
       "Todo lo del plan Gratis",
@@ -149,6 +153,61 @@ const PLANES = [
  * volver a desplegar. Y si el cobro se cae, vuelve al estado honesto en vez de
  * ofrecer un botón que lleva a un error.
  */
+/**
+ * Las cuatro duraciones de Pro, de la más corta a la más larga.
+ *
+ * Se muestran juntas y con el precio POR DÍA a la vista porque es el único
+ * número que hace comparable un plan de tres días con uno de un año. Sin él,
+ * $3.990 parece más barato que $15.000 y la decisión se toma mirando la cifra
+ * equivocada.
+ *
+ * El orden va de menor a mayor plazo y el mensual queda destacado: es el que
+ * conviene a la mayoría, y el que sirve de referencia para leer los otros.
+ */
+function EscalaPro() {
+  const opciones = [
+    { id: "pro_3dias", nombre: "3 días", precio: "$3.990", porDia: "$1.330 por día" },
+    { id: "pro_semana", nombre: "1 semana", precio: "$6.990", porDia: "$999 por día" },
+    {
+      id: "pro_mensual",
+      nombre: "1 mes",
+      precio: "$15.000",
+      porDia: "$500 por día",
+      destacado: true,
+    },
+    {
+      id: "pro_anual",
+      nombre: "1 año",
+      precio: "$119.000",
+      porDia: "$326 por día · ahorras 4 meses",
+    },
+  ];
+
+  return (
+    <div className="mt-6 flex flex-col gap-2">
+      {opciones.map((o) => (
+        <div
+          key={o.id}
+          className={
+            "rounded-xl border p-3 " +
+            (o.destacado ? "border-accent bg-accent/5" : "border-border")
+          }
+        >
+          <div className="flex items-baseline justify-between gap-3">
+            <span className="text-sm font-medium">{o.nombre}</span>
+            <span className="text-sm font-semibold tabular-nums">{o.precio}</span>
+          </div>
+          <p className="mt-0.5 text-xs text-muted">{o.porDia}</p>
+          <BotonComprar producto={o.id} etiqueta={`Contratar ${o.nombre}`} compacto />
+        </div>
+      ))}
+      <p className="mt-1 text-center text-xs text-muted">
+        Pago seguro con Flow. No guardamos los datos de tu tarjeta.
+      </p>
+    </div>
+  );
+}
+
 export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean }) {
   return (
     <section id="planes" className="border-t border-border px-6 py-20">
@@ -243,7 +302,7 @@ export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean })
               </ul>
 
               {pagoDisponible && plan.nombre === "Pro" ? (
-                <BotonComprar producto="pro_mensual" etiqueta="Contratar Pro" />
+                <EscalaPro />
               ) : (
                 <button
                   type="button"

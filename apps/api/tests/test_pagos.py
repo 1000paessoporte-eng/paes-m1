@@ -7,9 +7,9 @@ con Flow, y confirmar dos veces la misma orden no otorga el doble de días.
 """
 
 from datetime import UTC, datetime, timedelta
+from itertools import pairwise
 from unittest.mock import patch
 
-import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -272,9 +272,42 @@ def test_renovar_acumula_sobre_lo_que_queda(
     assert 38 <= dias <= 41, f"venció en {dias} días, se esperaban ~40"
 
 
-@pytest.mark.parametrize("producto", ["pro_mensual", "pro_temporada"])
-def test_cada_producto_otorga_el_plan_pro(producto: str) -> None:
-    assert service.PRODUCTOS[producto].plan == Plan.PRO
+def test_cada_producto_otorga_el_plan_pro() -> None:
+    for p in service.PRODUCTOS.values():
+        assert p.plan == Plan.PRO, f"{p.id} no otorga Pro"
+
+
+def test_la_escala_de_precios_es_coherente() -> None:
+    """A menor plazo, mayor precio por día. Sin excepciones.
+
+    Es la regla que sostiene toda la escala y la más fácil de romper sin
+    darse cuenta al ajustar un solo precio. Si un plan corto saliera más
+    barato por día que uno largo, nadie compraría el largo: se compraría el
+    corto muchas veces, que además rinde menos plata por la comisión de cada
+    transacción.
+    """
+    por_duracion = sorted(service.PRODUCTOS.values(), key=lambda p: p.dias)
+    for corto, largo in pairwise(por_duracion):
+        assert corto.monto / corto.dias > largo.monto / largo.dias, (
+            f"{corto.id} cuesta {corto.monto / corto.dias:.0f} por día y "
+            f"{largo.id} cuesta {largo.monto / largo.dias:.0f}: "
+            "el plan más corto tiene que salir más caro por día"
+        )
+
+
+def test_ningun_plan_corto_canibaliza_al_siguiente() -> None:
+    """Repetir el plan corto hasta cubrir el largo debe salir más caro.
+
+    Es la comprobación práctica de la regla anterior: si comprar cuatro
+    semanas sueltas costara menos que un mes, el plan mensual sobraría.
+    """
+    por_duracion = sorted(service.PRODUCTOS.values(), key=lambda p: p.dias)
+    for corto, largo in pairwise(por_duracion):
+        veces = -(-largo.dias // corto.dias)  # techo de la división
+        assert corto.monto * veces > largo.monto, (
+            f"{veces} compras de {corto.id} cubren {largo.id} y cuestan "
+            f"{corto.monto * veces}, menos que sus {largo.monto}"
+        )
 
 
 def test_los_limites_se_encienden_por_entorno(monkeypatch) -> None:

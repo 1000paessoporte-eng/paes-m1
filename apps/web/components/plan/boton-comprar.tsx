@@ -15,9 +15,13 @@ import { getClientToken } from "@/lib/auth";
 export function BotonComprar({
   producto,
   etiqueta,
+  compacto = false,
 }: {
   producto: string;
   etiqueta: string;
+  //: Dentro de una lista de opciones el aviso de Flow se repetiría por cada
+  //: una. Se muestra una sola vez fuera de la lista.
+  compacto?: boolean;
 }) {
   const router = useRouter();
   const [cargando, setCargando] = useState(false);
@@ -48,19 +52,26 @@ export function BotonComprar({
   }
 
   return (
-    <div className="mt-6">
+    <div className={compacto ? "mt-2" : "mt-6"}>
       <button
         type="button"
         onClick={comprar}
         disabled={cargando}
-        className="btn-warm w-full rounded-lg px-4 py-2.5 text-sm font-semibold text-on-fill disabled:opacity-60"
+        className={
+          "w-full rounded-lg font-semibold disabled:opacity-60 " +
+          (compacto
+            ? "border border-border px-3 py-1.5 text-xs transition-colors hover:bg-surface-hover"
+            : "btn-warm px-4 py-2.5 text-sm text-on-fill")
+        }
       >
         {cargando ? "Llevándote a Flow…" : etiqueta}
       </button>
       {error && <p className="mt-2 text-xs text-danger">{error}</p>}
-      <p className="mt-2 text-center text-xs text-muted">
-        Pago seguro con Flow. No guardamos los datos de tu tarjeta.
-      </p>
+      {!compacto && (
+        <p className="mt-2 text-center text-xs text-muted">
+          Pago seguro con Flow. No guardamos los datos de tu tarjeta.
+        </p>
+      )}
     </div>
   );
 }
