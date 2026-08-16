@@ -192,6 +192,14 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "10^{-9}$ mol/L": str(9),
     "pOH 4, ¿cuál es su pH": str(14 - 4),
     "pH 2 y otra pH 6": f"{10 ** (6 - 2):,}".replace(",", "."),
+    # Segunda tanda de Historia: economía
+    "IPC sube de 120 a 126": str(round((126 - 120) / 120 * 100)),
+    "PIB de 120.000 millones y 8 millones": f"{120_000 // 8:,}".replace(",", "."),
+    "8 millones de personas en edad de trabajar": str(round(500 / 5500 * 100, 1)).replace(".", ","),
+    "a $500 los consumidores demandan 900": str(900 - 400),
+    "vende 500 unidades a $2.000": f"{2_000 * 500 - 700_000:,}".replace(",", "."),
+    "sector terciario entre 1960 y 2000": str(52 - 25),
+    "aumentaron los plásticos entre 2015": str(22 - 12),
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),
