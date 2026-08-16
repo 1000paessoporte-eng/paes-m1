@@ -10,7 +10,7 @@ import { BarraProgreso } from "@/components/ui/barra-progreso";
  * entonces conviene que la salida esté a la vista y no haya que recordarla.
  *
  * Muestra el consumo real antes que el precio. "Llevas 3 de 4 ensayos" es
- * información sobre la propia situación; "$5.990 al mes" sin contexto es
+ * información sobre la propia situación; "$15.000 al mes" sin contexto es
  * publicidad. El orden decide cuál de las dos parece.
  */
 export function ProModulo({
@@ -32,7 +32,7 @@ export function ProModulo({
         <h2 id="h-pro" className="font-semibold tracking-tight">
           Plan Pro
         </h2>
-        <span className="text-xs font-medium text-muted">$5.990 al mes</span>
+        <span className="text-xs font-medium text-muted">$15.000 al mes</span>
       </div>
 
       {limite != null ? (
