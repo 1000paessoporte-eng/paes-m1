@@ -384,6 +384,58 @@ COMPROBACIONES: dict[str, str] = {
     # Efecto de escalar una dimensión sobre el área.
     "lado de un cuadrado se triplica": str(3**2),
     "radio de un círculo aumenta en un 50%": str(round((1.5**2 - 1) * 100)),
+    # --- Teorema de Pitágoras: segunda tanda ---
+    # Hipotenusa a partir de los dos catetos.
+    "jardín rectangular mide 12 m de ancho y 16 m": str(round((12**2 + 16**2) ** 0.5)),
+    "rampa de acceso sube 7 m de altura": str(round((7**2 + 24**2) ** 0.5)),
+    "tirante de acero": str(round((18**2 + 24**2) ** 0.5)),
+    "catetos que miden 30 cm y 40 cm": str(round((30**2 + 40**2) ** 0.5)),
+    "pantalla rectangular mide 21 cm de ancho": str(round((21**2 + 28**2) ** 0.5)),
+    "volantín se eleva a 40 m de altura": str(round((40**2 + 9**2) ** 0.5)),
+    "catetos de 33 cm y 44 cm": str(round((33**2 + 44**2) ** 0.5)),
+    "sube 12 cm por la pared y avanza 35 cm": str(round((12**2 + 35**2) ** 0.5)),
+    "pantalla mide 48 cm de ancho y 36 cm de alto": str(round((48**2 + 36**2) ** 0.5)),
+    # Cateto a partir de la hipotenusa: los cuadrados se restan.
+    "hipotenusa mide 20 cm y uno de sus catetos mide 12 cm": str(round((20**2 - 12**2) ** 0.5)),
+    "hipotenusa mide 34 cm y un cateto mide 16 cm": str(round((34**2 - 16**2) ** 0.5)),
+    "hipotenusa mide 53 cm y un cateto mide 28 cm": str(round((53**2 - 28**2) ** 0.5)),
+    "la hipotenusa mide 2 cm más que ese cateto": str(round(((8 + 2) ** 2 - 8**2) ** 0.5)),
+    # Resultados irracionales: lado · √2 en el cuadrado, lado · √3 / 2 en el equilátero.
+    "mantel cuadrado mide 7 cm de lado": f"{7}√2",
+    "triángulo equilátero de 12 cm de lado": f"{12 // 2}√3",
+    "triángulo equilátero de 6 cm de lado": f"{6 // 2}√3",
+    # Distancia entre dos puntos del plano cartesiano.
+    "A(1, 2) y B(9, 8)": str(round(((9 - 1) ** 2 + (8 - 2) ** 2) ** 0.5)),
+    "P(−3, 1) y Q(2, 13)": str(round(((2 - (-3)) ** 2 + (13 - 1) ** 2) ** 0.5)),
+    # Pitágoras sobre las mitades de una figura.
+    "diagonales que miden 24 cm y 10 cm": str(round(((24 // 2) ** 2 + (10 // 2) ** 2) ** 0.5)),
+    "dos lados iguales de 13 cm y una base de 10 cm": str(round((13**2 - (10 // 2) ** 2) ** 0.5)),
+    "trapecio isósceles tiene bases de 20 cm y 12 cm": str(round((5**2 - ((20 - 12) // 2) ** 2) ** 0.5)),
+    "circunferencia de 13 cm de radio se traza una cuerda": str(2 * round((13**2 - 5**2) ** 0.5)),
+    # Pitágoras como paso intermedio de otro cálculo.
+    "área de un triángulo rectángulo cuyos catetos miden 10 cm y 24 cm": str(10 * 24 // 2),
+    "cercar un terreno con forma de triángulo rectángulo": str(9 + 12 + round((9**2 + 12**2) ** 0.5)),
+    "antena de 24 m se sujeta con dos cables": str(2 * round((24**2 + 7**2) ** 0.5)),
+    "hipotenusa de 25 cm y uno de sus catetos mide 15 cm": str(15 * round((25**2 - 15**2) ** 0.5) // 2),
+    "área de un triángulo rectángulo es 54 cm²": str(round((12**2 + (2 * 54 // 12) ** 2) ** 0.5)),
+    "cuadrado y un triángulo rectángulo de catetos 6 cm y 8 cm": str(((6 + 8 + round((6**2 + 8**2) ** 0.5)) // 4) ** 2),
+    "diagonal de un cuadrado mide 8√2 cm": str(8**2),
+    "barco navega 24 km hacia el norte": str(round((24**2 + 45**2) ** 0.5)),
+    "torre proyecta una sombra de 24 m": str(round((26**2 - 24**2) ** 0.5)),
+    # La escalera conserva su largo: misma hipotenusa en las dos posiciones.
+    "escalera de 25 m apoyada en una pared vertical llega a 24 m": str(
+        round((25**2 - (round((25**2 - 24**2) ** 0.5) + 8) ** 2) ** 0.5)
+    ),
+    # Un cateto es el doble del otro: 5x² = 45.
+    "hipotenusa mide √45 cm": str(round((45 / 5) ** 0.5)),
+    # Perímetro y diagonal: (l+a)² = l² + a² + 2·área.
+    "perímetro de 34 cm y su diagonal mide 13 cm": str(((34 // 2) ** 2 - 13**2) // 2),
+    # El único trío que no cumple el teorema.
+    "NO puede corresponder a los lados": next(
+        f"{a}, {b} y {c}"
+        for a, b, c in [(10, 24, 26), (12, 16, 20), (8, 15, 17), (5, 6, 8)]
+        if a**2 + b**2 != c**2
+    ),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
