@@ -1,4 +1,5 @@
 import logging
+from uuid import uuid4
 
 from fastapi import APIRouter, Depends, Form, HTTPException, Response, status
 from sqlalchemy.orm import Session
@@ -14,7 +15,7 @@ from paes_api.modules.billing.schemas import (
     ProductoOut,
     ProductosOut,
 )
-from paes_api.modules.users.deps import get_current_user
+from paes_api.modules.users.deps import get_current_admin, get_current_user
 from paes_api.modules.users.models import User
 
 logger = logging.getLogger(__name__)
@@ -150,3 +151,51 @@ def confirmar(
         raise HTTPException(status_code=500, detail="reintentar") from None
 
     return Response(status_code=status.HTTP_200_OK)
+
+
+@router.get("/flow/diagnostico")
+def diagnostico(_: User = Depends(get_current_admin)) -> dict[str, object]:
+    """Qué responde Flow exactamente, para no diagnosticar a ciegas.
+
+    Existe porque configurar una pasarela falla siempre por lo mismo —una
+    credencial del ambiente equivocado, una URL mal escrita— y el mensaje que
+    ve el usuario es deliberadamente genérico. Sin esto, la única forma de
+    saber qué pasó es leer los logs del servidor.
+
+    Solo para admin: la respuesta de Flow puede nombrar la cuenta y el estado
+    del comercio. Nunca devuelve las credenciales; sí dice si están puestas y
+    contra qué ambiente se está hablando, que es lo que hace falta para
+    detectar el error más común: llaves de producción apuntando al sandbox.
+    """
+    s = get_settings()
+    info: dict[str, object] = {
+        "configurado": flow.esta_configurado(),
+        "ambiente": s.flow_base_url,
+        "api_url": s.api_url,
+        # Solo el largo y el prefijo: suficiente para notar que quedó pegada a
+        # medias o con espacios, sin exponer el valor.
+        "api_key_largo": len(s.flow_api_key),
+        "api_key_empieza": s.flow_api_key[:4] if s.flow_api_key else "",
+        "secret_key_largo": len(s.flow_secret_key),
+    }
+
+    if not flow.esta_configurado():
+        info["resultado"] = "faltan credenciales"
+        return info
+
+    try:
+        flow.crear_orden(
+            orden=f"diag-{uuid4().hex[:10]}",
+            monto=5990,
+            asunto="Prueba de diagnóstico",
+            email="diagnostico@1000paes.cl",
+            url_confirmacion=f"{s.api_url.rstrip('/')}/api/plan/flow/confirmar",
+            url_retorno=f"{s.frontend_url.rstrip('/')}/plan/resultado",
+        )
+    except flow.FlowError as e:
+        info["resultado"] = "error"
+        info["mensaje_de_flow"] = str(e)
+        return info
+
+    info["resultado"] = "ok: Flow aceptó una orden de prueba"
+    return info
