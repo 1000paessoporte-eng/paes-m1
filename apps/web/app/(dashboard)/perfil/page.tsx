@@ -5,6 +5,7 @@ import {
   getAnalyticsSummary,
   getMe,
   getMiPlan,
+  getProductos,
   getOnboarding,
   getSkillTree,
   listExamAttempts,
@@ -40,6 +41,15 @@ export default async function PerfilPage() {
     throw err;
   }
 
+  // Los productos van aparte del Promise.all: si el catálogo falla, la página
+  // debe seguir cargando sin el bloque de compra en vez de caerse entera.
+  let productos;
+  try {
+    productos = await getProductos();
+  } catch {
+    productos = undefined;
+  }
+
   const masteredCount = nodes.filter((n) => n.status === "mastered").length;
   const submittedAttempts = attempts.filter((a) => a.status === "submitted").length;
 
@@ -69,7 +79,7 @@ export default async function PerfilPage() {
       </div>
 
       <div className="mt-5 max-w-lg">
-        <MiPlanPanel inicial={plan} />
+        <MiPlanPanel inicial={plan} productos={productos} />
       </div>
 
       <div className="mt-5 max-w-lg">

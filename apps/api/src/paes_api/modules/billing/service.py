@@ -10,18 +10,23 @@ respetarlos.
 
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
+from uuid import uuid4
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from paes_api.modules.billing import flow
 from paes_api.modules.billing.models import (
     Origen,
+    Pago,
+    PagoStatus,
     Plan,
     PromoCode,
     Subscription,
     SubscriptionStatus,
 )
 from paes_api.modules.exam_focus.models import ExamAttempt
+from paes_api.modules.users.models import User
 
 #: Interruptor general. En False los límites se calculan y se muestran, pero no
 #: bloquean nada. Se enciende el día que se pueda contratar el plan Pro.
@@ -48,6 +53,58 @@ LIMITES: dict[Plan, Limites] = {
         ensayos_por_mes=None, carreras_en_meta=10, analisis_avanzado=True
     ),
 }
+
+
+@dataclass(frozen=True)
+class Producto:
+    """Lo que se puede comprar.
+
+    El precio vive ACÁ y no en el navegador. El cliente elige un identificador
+    de producto; cuánto cuesta lo decide el servidor. Si el monto viajara desde
+    el frontend, cualquiera podría comprar la temporada completa por cien pesos
+    editando la petición.
+    """
+
+    id: str
+    plan: Plan
+    dias: int
+    monto: int
+    asunto: str
+
+
+#: Los montos coinciden con los precios de lanzamiento publicados en la página.
+#: Si cambian allá, cambian acá: un test verifica que ningún producto quede en
+#: cero, que es el error que convertiría el cobro en un regalo silencioso.
+PRODUCTOS: dict[str, Producto] = {
+    "pro_mensual": Producto(
+        id="pro_mensual",
+        plan=Plan.PRO,
+        dias=30,
+        monto=5990,
+        asunto="1000paes Pro - 1 mes",
+    ),
+    "pro_temporada": Producto(
+        id="pro_temporada",
+        plan=Plan.PRO,
+        # Hasta el día de la PAES: se venden como 240 días, que cubre desde
+        # cualquier momento del año escolar hasta rendir.
+        dias=240,
+        monto=34900,
+        asunto="1000paes Pro - temporada completa",
+    ),
+}
+
+
+class ProductoInvalido(Exception):
+    """El identificador de producto no existe."""
+
+
+class PagoNoEncontrado(Exception):
+    """El token no corresponde a ninguna orden registrada."""
+
+
+class MontoNoCoincide(Exception):
+    """Flow informó un monto distinto del que se cobró al crear la orden."""
 
 
 class CodigoInvalido(Exception):
@@ -176,3 +233,130 @@ def canjear_codigo(db: Session, user_id: int, codigo: str) -> Subscription:
     db.commit()
     db.refresh(sub)
     return sub
+
+
+# ---------------------------------------------------------------------------
+# Cobro con Flow
+# ---------------------------------------------------------------------------
+
+
+def _nueva_orden(user_id: int) -> str:
+    """Identificador de orden único y sin información sensible.
+
+    Lleva el id del usuario para poder conciliar a ojo en el panel de Flow, y
+    un sufijo aleatorio porque una persona puede intentar pagar varias veces y
+    Flow exige que el commerceOrder no se repita nunca.
+    """
+    return f"p{user_id}-{uuid4().hex[:12]}"
+
+
+def crear_pago(
+    db: Session,
+    user: User,
+    producto_id: str,
+    *,
+    url_confirmacion: str,
+    url_retorno: str,
+) -> tuple[Pago, str]:
+    """Registra la orden y la crea en Flow. Devuelve el pago y la URL de pago.
+
+    El registro local se guarda ANTES de llamar a Flow. Si se hiciera al revés
+    y la escritura fallara, existiría un cobro en Flow sin orden que lo respalde
+    en la base: el usuario habría pagado y el sistema no tendría cómo saberlo.
+    """
+    producto = PRODUCTOS.get(producto_id)
+    if producto is None:
+        raise ProductoInvalido(producto_id)
+
+    pago = Pago(
+        user_id=user.id,
+        orden=_nueva_orden(user.id),
+        plan=producto.plan,
+        dias=producto.dias,
+        monto=producto.monto,
+        status=PagoStatus.PENDIENTE,
+    )
+    db.add(pago)
+    db.commit()
+    db.refresh(pago)
+
+    datos = flow.crear_orden(
+        orden=pago.orden,
+        monto=producto.monto,
+        asunto=producto.asunto,
+        email=user.email,
+        url_confirmacion=url_confirmacion,
+        url_retorno=url_retorno,
+    )
+    pago.token = datos["token"]
+    pago.flow_order = str(datos.get("flowOrder") or "")
+    db.commit()
+
+    return pago, f"{datos['url']}?token={datos['token']}"
+
+
+def confirmar_pago(db: Session, token: str) -> Pago:
+    """Confirma una orden consultando a Flow y activa la suscripción.
+
+    Es el único camino por el que se otorga un plan pagado. Tres resguardos:
+
+    1. **Se le pregunta a Flow.** El token que llega por el webhook no prueba
+       nada por sí solo; el estado se obtiene de servidor a servidor.
+    2. **Se compara el monto.** Si Flow informa menos de lo que la orden decía,
+       no se activa nada y queda registrado para revisarlo a mano.
+    3. **Es idempotente.** Flow puede llamar al webhook varias veces por la
+       misma orden; una vez marcada como pagada, las llamadas siguientes no
+       vuelven a extender la suscripción.
+    """
+    pago = db.execute(select(Pago).where(Pago.token == token)).scalar_one_or_none()
+    if pago is None:
+        raise PagoNoEncontrado(token)
+
+    # Idempotencia: si ya se procesó, se devuelve tal cual sin tocar nada.
+    if pago.status == PagoStatus.PAGADO:
+        return pago
+
+    datos = flow.estado(token)
+    estado_flow = int(datos.get("status", 0))
+
+    if estado_flow == flow.RECHAZADA:
+        pago.status = PagoStatus.RECHAZADO
+        db.commit()
+        return pago
+    if estado_flow == flow.ANULADA:
+        pago.status = PagoStatus.ANULADO
+        db.commit()
+        return pago
+    if estado_flow != flow.PAGADA:
+        # Sigue pendiente: no se toca el registro. Flow volverá a avisar.
+        return pago
+
+    pagado = int(float(datos.get("amount", 0)))
+    if pagado < pago.monto:
+        # No se activa nada y no se marca como pagado: queda pendiente y visible
+        # para revisión manual. Marcarlo como rechazado escondería el problema.
+        raise MontoNoCoincide(
+            f"orden {pago.orden}: se esperaban {pago.monto} y Flow informó {pagado}"
+        )
+
+    ahora = datetime.now(UTC)
+    pago.status = PagoStatus.PAGADO
+    pago.confirmado_at = ahora
+
+    # La suscripción se ACUMULA sobre lo que quede vigente: quien renueva antes
+    # de que se le venza no pierde los días que le sobraban.
+    _, actual = plan_actual(db, pago.user_id)
+    desde = actual.expires_at if actual and actual.expires_at else ahora
+    db.add(
+        Subscription(
+            user_id=pago.user_id,
+            plan=pago.plan,
+            status=SubscriptionStatus.ACTIVE,
+            origen=Origen.PAGO,
+            started_at=ahora,
+            expires_at=desde + timedelta(days=pago.dias),
+        )
+    )
+    db.commit()
+    db.refresh(pago)
+    return pago

@@ -44,6 +44,60 @@ class Origen(StrEnum):
     MANUAL = "manual"
 
 
+class PagoStatus(StrEnum):
+    """Estado de una orden de pago.
+
+    PENDIENTE es el estado inicial y también el de una orden abandonada: quien
+    llega al formulario de Flow y cierra la pestaña deja su orden así para
+    siempre. No se limpian: sirven para medir cuánta gente se cae en el paso
+    del pago, que es justo lo que no se puede ver de otra forma.
+    """
+
+    PENDIENTE = "pendiente"
+    PAGADO = "pagado"
+    RECHAZADO = "rechazado"
+    ANULADO = "anulado"
+
+
+class Pago(Base):
+    """Una orden de pago enviada a Flow.
+
+    Existe por dos razones que no se pueden delegar a la pasarela. La primera
+    es el monto: el precio se fija acá y se compara contra lo que Flow informa
+    al confirmar, de modo que nadie pueda pagar mil pesos por un plan de seis
+    mil manipulando la petición. La segunda es la idempotencia: Flow puede
+    llamar al webhook más de una vez por la misma orden, y sin un registro
+    propio cada llamada extendería la suscripción de nuevo.
+    """
+
+    __tablename__ = "pagos"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    #: Identificador propio que viaja a Flow como commerceOrder. Único: es la
+    #: llave con que se reconoce la orden al volver.
+    orden: Mapped[str] = mapped_column(String(40), unique=True, index=True)
+    plan: Mapped[Plan] = mapped_column(Enum(Plan), default=Plan.PRO)
+    #: Días de suscripción que otorga esta compra.
+    dias: Mapped[int] = mapped_column(Integer, default=30)
+    #: Monto en pesos, sin decimales. Es el que se compara al confirmar.
+    monto: Mapped[int] = mapped_column(Integer)
+    status: Mapped[PagoStatus] = mapped_column(
+        Enum(PagoStatus), default=PagoStatus.PENDIENTE
+    )
+    #: Token que devuelve Flow al crear la orden; con él se consulta el estado.
+    token: Mapped[str | None] = mapped_column(String(120), nullable=True, index=True)
+    #: Número de orden de Flow, útil para conciliar contra su panel.
+    flow_order: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    #: Cuándo se confirmó el pago. NULL mientras no se confirme.
+    confirmado_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
+
 class Subscription(Base):
     """Un plan activo para un usuario, con su fecha de término.
 

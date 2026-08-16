@@ -1,11 +1,23 @@
-from fastapi import APIRouter, Depends, HTTPException
+import logging
+
+from fastapi import APIRouter, Depends, Form, HTTPException, Response, status
 from sqlalchemy.orm import Session
 
+from paes_api.core.config import get_settings
 from paes_api.core.database import get_db
-from paes_api.modules.billing import service
-from paes_api.modules.billing.schemas import CanjearIn, MiPlanOut
+from paes_api.modules.billing import flow, service
+from paes_api.modules.billing.schemas import (
+    CanjearIn,
+    MiPlanOut,
+    PagarIn,
+    PagarOut,
+    ProductoOut,
+    ProductosOut,
+)
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/plan", tags=["plan"])
 
@@ -45,3 +57,96 @@ def canjear(
     except service.CodigoInvalido as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     return _armar(db, user.id)
+
+
+@router.get("/productos", response_model=ProductosOut)
+def productos() -> ProductosOut:
+    """Qué se puede comprar y si el cobro está habilitado.
+
+    Público: la página de precios lo consulta sin sesión para decidir si
+    muestra el botón de pago o el aviso de "disponible pronto"."""
+    return ProductosOut(
+        pago_disponible=flow.esta_configurado(),
+        productos=[
+            ProductoOut(
+                id=p.id,
+                plan=p.plan.value,
+                dias=p.dias,
+                monto=p.monto,
+                asunto=p.asunto,
+            )
+            for p in service.PRODUCTOS.values()
+        ],
+    )
+
+
+@router.post("/pagar", response_model=PagarOut)
+def pagar(
+    payload: PagarIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> PagarOut:
+    """Crea la orden en Flow y devuelve la URL a la que hay que ir a pagar."""
+    settings = get_settings()
+    api_base = settings.api_url.rstrip("/")
+    front = settings.frontend_url.rstrip("/")
+
+    try:
+        pago, url = service.crear_pago(
+            db,
+            user,
+            payload.producto,
+            # Flow llama a esta URL de servidor a servidor. Debe ser pública y
+            # apuntar a la API, nunca al frontend.
+            url_confirmacion=f"{api_base}/api/plan/flow/confirmar",
+            url_retorno=f"{front}/plan/resultado",
+        )
+    except service.ProductoInvalido:
+        raise HTTPException(status_code=422, detail="Ese plan no existe.") from None
+    except flow.FlowNoConfigurado:
+        raise HTTPException(
+            status_code=503,
+            detail="El pago en línea todavía no está disponible.",
+        ) from None
+    except flow.FlowError as e:
+        logger.error("Flow falló al crear la orden: %s", e)
+        raise HTTPException(
+            status_code=502,
+            detail="No se pudo iniciar el pago. Inténtalo de nuevo en unos minutos.",
+        ) from None
+
+    return PagarOut(url=url, orden=pago.orden)
+
+
+@router.post("/flow/confirmar", status_code=status.HTTP_200_OK)
+def confirmar(
+    token: str = Form(...),
+    db: Session = Depends(get_db),
+) -> Response:
+    """Webhook de Flow. Es el ÚNICO camino que activa una suscripción pagada.
+
+    Deliberadamente público y sin autenticación: lo llama Flow, no un usuario.
+    Su seguridad no está en quién lo llama sino en que el token recibido se
+    verifica contra Flow de servidor a servidor antes de activar nada. Un token
+    inventado no encuentra orden, y uno robado tampoco sirve: Flow dirá si esa
+    orden está pagada y por cuánto.
+
+    Responde 200 salvo error interno: Flow reintenta ante cualquier otra cosa, y
+    reintentar una orden ya procesada no aporta nada porque la confirmación es
+    idempotente."""
+    try:
+        service.confirmar_pago(db, token)
+    except service.PagoNoEncontrado:
+        # No se filtra que el token es desconocido: se responde 200 igual para
+        # no convertir el webhook en un oráculo que confirme tokens válidos.
+        logger.warning("Flow confirmó un token sin orden asociada")
+    except service.MontoNoCoincide as e:
+        # Nunca debería pasar. Si pasa, hay que mirarlo a mano: la orden queda
+        # pendiente y sin suscripción otorgada.
+        logger.error("Monto distinto del esperado: %s", e)
+    except flow.FlowError as e:
+        logger.error("No se pudo verificar el pago con Flow: %s", e)
+        # 500 para que Flow reintente: puede haber sido una caída transitoria.
+        raise HTTPException(status_code=500, detail="reintentar") from None
+
+    return Response(status_code=status.HTTP_200_OK)

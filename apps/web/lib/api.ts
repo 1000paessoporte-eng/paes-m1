@@ -190,6 +190,25 @@ export function getMiPlan(token?: string): Promise<MiPlan> {
   return apiFetch<MiPlan>("/api/plan", token);
 }
 
+export type Productos =
+  paths["/api/plan/productos"]["get"]["responses"][200]["content"]["application/json"];
+
+export function getProductos(): Promise<Productos> {
+  return apiFetch<Productos>("/api/plan/productos");
+}
+
+/** Devuelve la URL de Flow a la que hay que enviar al usuario. */
+export function iniciarPago(
+  producto: string,
+  token?: string
+): Promise<{ url: string; orden: string }> {
+  return apiFetch("/api/plan/pagar", token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ producto }),
+  });
+}
+
 export function canjearCodigo(codigo: string, token?: string): Promise<MiPlan> {
   return apiFetch<MiPlan>("/api/plan/canjear", token, {
     method: "POST",

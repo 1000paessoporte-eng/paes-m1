@@ -656,6 +656,79 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/plan/productos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Productos
+         * @description Qué se puede comprar y si el cobro está habilitado.
+         *
+         *     Público: la página de precios lo consulta sin sesión para decidir si
+         *     muestra el botón de pago o el aviso de "disponible pronto".
+         */
+        get: operations["productos_api_plan_productos_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/pagar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Pagar
+         * @description Crea la orden en Flow y devuelve la URL a la que hay que ir a pagar.
+         */
+        post: operations["pagar_api_plan_pagar_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/flow/confirmar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Confirmar
+         * @description Webhook de Flow. Es el ÚNICO camino que activa una suscripción pagada.
+         *
+         *     Deliberadamente público y sin autenticación: lo llama Flow, no un usuario.
+         *     Su seguridad no está en quién lo llama sino en que el token recibido se
+         *     verifica contra Flow de servidor a servidor antes de activar nada. Un token
+         *     inventado no encuentra orden, y uno robado tampoco sirve: Flow dirá si esa
+         *     orden está pagada y por cuánto.
+         *
+         *     Responde 200 salvo error interno: Flow reintenta ante cualquier otra cosa, y
+         *     reintentar una orden ya procesada no aporta nada porque la confirmación es
+         *     idempotente.
+         */
+        post: operations["confirmar_api_plan_flow_confirmar_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/demo/questions": {
         parameters: {
             query?: never;
@@ -932,6 +1005,11 @@ export interface components {
             por_prueba: components["schemas"]["CoberturaPrueba"][];
             /** Nodos Flacos */
             nodos_flacos: string[];
+        };
+        /** Body_confirmar_api_plan_flow_confirmar_post */
+        Body_confirmar_api_plan_flow_confirmar_post: {
+            /** Token */
+            token: string;
         };
         /**
          * BreakdownItemOut
@@ -1593,6 +1671,18 @@ export interface components {
          * @enum {string}
          */
         Pace: "oficial" | "exigente" | "relajado";
+        /** PagarIn */
+        PagarIn: {
+            /** Producto */
+            producto: string;
+        };
+        /** PagarOut */
+        PagarOut: {
+            /** Url */
+            url: string;
+            /** Orden */
+            orden: string;
+        };
         /**
          * PageViewIn
          * @description Lo que manda el navegador en cada cambio de página.
@@ -1732,6 +1822,29 @@ export interface components {
             respuestas: number;
             /** Tasa Acierto */
             tasa_acierto: number;
+        };
+        /**
+         * ProductoOut
+         * @description Un producto comprable, tal como se muestra en la página.
+         */
+        ProductoOut: {
+            /** Id */
+            id: string;
+            /** Plan */
+            plan: string;
+            /** Dias */
+            dias: number;
+            /** Monto */
+            monto: number;
+            /** Asunto */
+            asunto: string;
+        };
+        /** ProductosOut */
+        ProductosOut: {
+            /** Pago Disponible */
+            pago_disponible: boolean;
+            /** Productos */
+            productos: components["schemas"]["ProductoOut"][];
         };
         /**
          * ProgressStatus
@@ -3240,6 +3353,92 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["MiPlanOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    productos_api_plan_productos_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ProductosOut"];
+                };
+            };
+        };
+    };
+    pagar_api_plan_pagar_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PagarIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PagarOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    confirmar_api_plan_flow_confirmar_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/x-www-form-urlencoded": components["schemas"]["Body_confirmar_api_plan_flow_confirmar_post"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
                 };
             };
             /** @description Validation Error */
