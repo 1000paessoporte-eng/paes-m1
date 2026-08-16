@@ -98,7 +98,7 @@ def start_exam(
     user: User = Depends(get_current_user),
 ) -> ExamStartOut:
     # El plan Gratis tiene un tope de ensayos al mes. Hoy se informa y no
-    # bloquea (ver billing.LIMITES_ACTIVOS): cortarle el paso a alguien
+    # bloquea (ver billing.limites_activos()): cortarle el paso a alguien
     # mandándolo a contratar un plan que todavía no se puede contratar es
     # frustración sin salida.
     permitido, motivo = billing.puede_rendir(db, user.id)

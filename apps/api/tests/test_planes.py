@@ -106,4 +106,4 @@ def test_los_limites_no_bloquean_todavia() -> None:
     """Mientras el plan Pro no se pueda contratar, el tope se informa pero no
     corta: mandar a alguien a una pantalla que dice "disponible pronto" es
     frustración sin salida."""
-    assert service.LIMITES_ACTIVOS is False
+    assert service.limites_activos() is False

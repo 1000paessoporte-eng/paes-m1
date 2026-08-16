@@ -275,3 +275,23 @@ def test_renovar_acumula_sobre_lo_que_queda(
 @pytest.mark.parametrize("producto", ["pro_mensual", "pro_temporada"])
 def test_cada_producto_otorga_el_plan_pro(producto: str) -> None:
     assert service.PRODUCTOS[producto].plan == Plan.PRO
+
+
+def test_los_limites_se_encienden_por_entorno(monkeypatch) -> None:
+    """Encender los límites no debe exigir editar código ni desplegar.
+
+    Antes era una constante de módulo: cambiarla obligaba a un despliegue justo
+    en el momento más delicado, el día que empieza a cobrarse. Ahora se lee del
+    entorno en cada llamada.
+    """
+    from paes_api.core.config import get_settings
+
+    assert service.limites_activos() is False
+
+    get_settings.cache_clear()
+    monkeypatch.setenv("LIMITES_ACTIVOS", "true")
+    try:
+        assert service.limites_activos() is True
+    finally:
+        monkeypatch.delenv("LIMITES_ACTIVOS", raising=False)
+        get_settings.cache_clear()
