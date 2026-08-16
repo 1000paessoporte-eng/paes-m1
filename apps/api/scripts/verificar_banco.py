@@ -340,6 +340,50 @@ COMPROBACIONES: dict[str, str] = {
     "De 10 postulantes a un cargo": str(1 - Fraction(6, 10) * Fraction(5, 9)),
     # Ponderar por producción antes de sumar: 60% y 40% no pesan igual.
     "máquina A produce el 60% de las piezas": str(round(0.6 * 0.05 + 0.4 * 0.02, 3)).replace(".", ","),
+    # --- perímetros y áreas: segunda tanda ---
+    # Aplicación directa de fórmula.
+    "cada pieza es un paralelogramo de 14 cm": str(14 * 6),
+    "bases paralelas miden 9 m y 5 m": str((9 + 5) // 2 * 6),
+    "varillas, que corresponden a las diagonales": f"{70 * 50 // 2:,}".replace(",", "."),
+    "baldosa cuadrada mide 25 cm de lado": str(25**2),
+    "mantel cuadrado de 130 cm de lado": str(4 * 130),
+    "vela de un velero de juguete": str(16 * 9 // 2),
+    "huerto rectangular mide 20 m de largo": str(20 * 7),
+    "cuadro rectangular mide 17 cm": str(2 * (17 + 11)),
+    "triángulo equilátero de 15 cm de lado": str(3 * 15),
+    "tapa circular de un frasco": str(round(3.14 * 3**2, 2)).replace(".", ","),
+    "platillo circular tiene 10 cm de radio": str(round(2 * 3.14 * 10, 2)).replace(".", ","),
+    "cartel tiene forma de rombo": str(4 * 8),
+    "pizza familiar tiene 30 cm de diámetro": str(round(3.14 * (30 // 2) ** 2, 2)).replace(".", ","),
+    # Casos inversos: se da el área y se pide una medida.
+    "vitral tiene forma de trapecio y su área": str(60 // ((8 + 12) // 2)),
+    "lámina con forma de paralelogramo": str(96 // 8),
+    "rombo tiene un área de 84 cm²": str(2 * 84 // 14),
+    "área de una mesa circular es 200,96": str(round((200.96 / 3.14) ** 0.5)),
+    "contorno de un plato circular mide 37,68": str(round(37.68 / (2 * 3.14))),
+    # Figuras compuestas, unidades y contexto.
+    "living tiene forma de L": str(6 * 4 + 3 * 2),
+    "ventana tiene forma de semicírculo de 6 cm": str(round(3.14 * 6**2 / 2, 2)).replace(".", ","),
+    # 12 m² de piso divididos por 0,04 m² de baldosa; en float hay que redondear.
+    "baldosas cuadradas de 20 cm de lado": str(round((4 * 3) / (0.2 * 0.2))),
+    "Pintar una pared cuesta $3.500": f"{round(5 * 2.4) * 3500:,}".replace(",", "."),
+    "dos lados perpendiculares miden 9 m y 12 m": str(9 * 12 // 2),
+    "plancha rectangular de 20 cm por 12 cm": str(20 * 12 - 4 * 3**2),
+    "bases miden 25 m y 15 m, y su altura 12 m": f"{(25 + 15) // 2 * 12 * 8000:,}".replace(",", "."),
+    # Anillos: restar áreas, nunca radios.
+    "argolla metálica": str(round(3.14 * (10**2 - 6**2), 2)).replace(".", ","),
+    "piscina circular de 4 m de radio está rodeada": str(round(3.14 * ((4 + 1) ** 2 - 4**2), 2)).replace(".", ","),
+    "borde decorativo de 10 cm de ancho hacia adentro": str(round((3 - 2 * 0.1) * (2 - 2 * 0.1), 2)).replace(".", ","),
+    # Escala y semejanza: el factor lineal va al cuadrado para las superficies.
+    "plano a escala 1 : 100": str(5 * 4),
+    "plano a escala 1 : 50": str(30 * 50**2 / 10_000).replace(".", ","),
+    "razón entre sus lados es 2 : 5": str(12 * 5**2 // 2**2),
+    # Ecuación previa antes de poder calcular el área.
+    "perímetro de 70 m y su largo mide 5 m más": str((70 // 2 - 5) // 2 * ((70 // 2 - 5) // 2 + 5)),
+    "mismo perímetro: 40 cm": str((40 // 4) ** 2 - 14 * 6),
+    # Efecto de escalar una dimensión sobre el área.
+    "lado de un cuadrado se triplica": str(3**2),
+    "radio de un círculo aumenta en un 50%": str(round((1.5**2 - 1) * 100)),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",

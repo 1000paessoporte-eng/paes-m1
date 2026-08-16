@@ -11918,6 +11918,556 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Perímetros y áreas — segunda tanda.
+#
+# El temario DEMRE (Admisión 2027) pide para esta unidad "perímetro y áreas de
+# triángulos, paralelogramos, trapecios y círculos" y sus problemas "en diversos
+# contextos". Las 32 preguntas que ya existían eran casi todas del tipo "¿cuál es
+# el área de un rectángulo de 8 por 5?": aplicación directa de la fórmula, sin
+# situación. Esta tanda mete el contexto (un volantín, un plano a escala, un piso
+# por embaldosar) y sube el peso de los casos inversos —dar el área y pedir un
+# lado— que son los que de verdad separan a quien entendió la fórmula de quien la
+# memorizó.
+#
+# Incluye escala y semejanza de figuras, que el temario exige en el mismo eje y
+# que el Árbol de Habilidades todavía no tiene como nodo propio.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_plana", "facil",
+        "En un mosaico, cada pieza es un paralelogramo de 14 cm de base y 6 cm de altura. ¿Cuál es el área de una pieza?",
+        "84 cm²",
+        "El área de un paralelogramo se calcula igual que la de un rectángulo: base por altura.\n\n"
+        "1) La altura no es el lado inclinado, sino la distancia perpendicular entre las dos bases. Acá el enunciado ya la entrega: 6 cm.\n"
+        "2) Multiplica base por altura: 14 · 6 = 84.\n"
+        "3) Como se multiplicaron dos medidas en centímetros, el resultado va en centímetros cuadrados: 84 cm².",
+        [
+            ("40 cm²", "Calculó el perímetro sumando los lados en vez del área."),
+            ("42 cm²", "Dividió el producto por 2, como si el paralelogramo fuera un triángulo."),
+            ("84 cm", "Llegó al número correcto pero lo dejó en centímetros; un área se mide en unidades cuadradas."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Un panel decorativo tiene forma de trapecio: sus bases paralelas miden 9 m y 5 m, y su altura es de 6 m. ¿Cuál es el área del panel?",
+        "42 m²",
+        "En el trapecio se promedian las dos bases y ese promedio se multiplica por la altura.\n\n"
+        "1) Suma las bases: 9 + 5 = 14.\n"
+        "2) Divide por 2 para obtener el promedio: 14 ÷ 2 = 7. Esto equivale a convertir el trapecio en un rectángulo de la misma altura.\n"
+        "3) Multiplica por la altura: 7 · 6 = 42.\n"
+        "4) El área del panel es 42 m².",
+        [
+            ("84 m²", "Multiplicó la suma de las bases por la altura sin dividir por 2."),
+            ("270 m²", "Multiplicó las dos bases entre sí y luego por la altura."),
+            ("20 m²", "Sumó las tres medidas en lugar de aplicar la fórmula del área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Un volantín tiene forma de rombo y sus dos varillas, que corresponden a las diagonales, miden 70 cm y 50 cm. ¿Cuál es el área del volantín?",
+        "1.750 cm²",
+        "El área de un rombo es el producto de sus diagonales dividido por 2.\n\n"
+        "1) Multiplica las diagonales: 70 · 50 = 3.500.\n"
+        "2) Divide por 2: 3.500 ÷ 2 = 1.750.\n"
+        "3) La razón de ese 2 es que el rombo ocupa exactamente la mitad del rectángulo que tendría por lados las dos diagonales.\n"
+        "4) El área es 1.750 cm².",
+        [
+            ("3.500 cm²", "Multiplicó las diagonales pero olvidó dividir por 2."),
+            ("240 cm²", "Sumó las diagonales y multiplicó por 2, que sería el perímetro de otro rectángulo."),
+            ("120 cm²", "Sumó las dos diagonales en lugar de aplicar la fórmula del área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Una baldosa cuadrada mide 25 cm de lado. ¿Cuál es su área?",
+        "625 cm²",
+        "En un cuadrado los cuatro lados son iguales, así que el área es el lado multiplicado por sí mismo.\n\n"
+        "1) Aplica la fórmula: 25 · 25.\n"
+        "2) Al multiplicar: 25 · 25 = 625.\n"
+        "3) El área de la baldosa es 625 cm².",
+        [
+            ("100 cm²", "Calculó el perímetro, que es 4 · 25, en lugar del área."),
+            ("50 cm²", "Multiplicó el lado por 2 en vez de elevarlo al cuadrado."),
+            ("625 cm", "Llegó al número correcto pero lo dejó en centímetros; un área va en unidades cuadradas."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Se quiere coser una cinta alrededor del borde de un mantel cuadrado de 130 cm de lado. ¿Cuántos centímetros de cinta se necesitan?",
+        "520 cm",
+        "Rodear el borde es calcular el perímetro, no el área.\n\n"
+        "1) El cuadrado tiene cuatro lados iguales, así que el perímetro es 4 veces el lado.\n"
+        "2) Multiplica: 4 · 130 = 520.\n"
+        "3) Se necesitan 520 cm de cinta. Fíjate en que el resultado va en centímetros y no en centímetros cuadrados, porque una longitud no es una superficie.",
+        [
+            ("16.900 cm", "Calculó el área elevando el lado al cuadrado, cuando lo que se pide es el contorno."),
+            ("260 cm", "Sumó solo dos lados en lugar de los cuatro."),
+            ("130 cm", "Se quedó con la medida de un solo lado."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "La vela de un velero de juguete tiene forma de triángulo, con 16 cm de base y 9 cm de altura. ¿Cuál es el área de la vela?",
+        "72 cm²",
+        "El triángulo es la mitad de un paralelogramo con la misma base y la misma altura, y de ahí viene el 2 que divide.\n\n"
+        "1) Multiplica base por altura: 16 · 9 = 144.\n"
+        "2) Divide por 2: 144 ÷ 2 = 72.\n"
+        "3) El área de la vela es 72 cm².",
+        [
+            ("144 cm²", "Multiplicó base por altura pero olvidó dividir por 2."),
+            ("50 cm²", "Sumó la base y la altura y multiplicó por 2, que no corresponde a ninguna fórmula de área."),
+            ("25 cm²", "Sumó la base y la altura en lugar de aplicar la fórmula."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Un huerto rectangular mide 20 m de largo y 7 m de ancho. ¿Cuál es su superficie?",
+        "140 m²",
+        "La superficie de un rectángulo es el producto de sus dos dimensiones.\n\n"
+        "1) Multiplica largo por ancho: 20 · 7 = 140.\n"
+        "2) La superficie del huerto es 140 m².\n"
+        "3) Una forma de comprobarlo: el huerto se puede imaginar dividido en 20 franjas de 1 m por 7 m, y cada franja aporta 7 m².",
+        [
+            ("54 m²", "Calculó el perímetro, que es 2 · (20 + 7), en lugar de la superficie."),
+            ("27 m²", "Sumó las dos dimensiones en vez de multiplicarlas."),
+            ("140 m", "Llegó al número correcto pero lo dejó en metros; una superficie va en metros cuadrados."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Un cuadro rectangular mide 17 cm de largo y 11 cm de ancho. ¿Cuántos centímetros de marco se necesitan para rodearlo completamente?",
+        "56 cm",
+        "Rodear el cuadro es recorrer su perímetro.\n\n"
+        "1) En un rectángulo hay dos lados de cada medida, así que el perímetro es 2 · (largo + ancho).\n"
+        "2) Suma primero: 17 + 11 = 28.\n"
+        "3) Multiplica por 2: 28 · 2 = 56.\n"
+        "4) Se necesitan 56 cm de marco.",
+        [
+            ("187 cm", "Calculó el área multiplicando largo por ancho, cuando lo que se pide es el contorno."),
+            ("28 cm", "Sumó un largo y un ancho pero olvidó que hay dos de cada uno."),
+            ("34 cm", "Duplicó solo el largo y no consideró los dos anchos."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Una señal de tránsito tiene forma de triángulo equilátero de 15 cm de lado. ¿Cuál es su perímetro?",
+        "45 cm",
+        "Equilátero significa que los tres lados miden lo mismo.\n\n"
+        "1) El perímetro es la suma de los tres lados: 15 + 15 + 15.\n"
+        "2) Como los tres son iguales, basta multiplicar: 3 · 15 = 45.\n"
+        "3) El perímetro es 45 cm.",
+        [
+            ("60 cm", "Multiplicó por 4, como si la figura fuera un cuadrado."),
+            ("30 cm", "Sumó solo dos de los tres lados."),
+            ("112,5 cm²", "Intentó calcular un área, cuando lo que se pide es el contorno."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "La tapa circular de un frasco tiene 3 cm de radio. ¿Cuál es su área? (usa π ≈ 3,14)",
+        "28,26 cm²",
+        "El área del círculo es π multiplicado por el radio al cuadrado.\n\n"
+        "1) Eleva el radio al cuadrado: 3² = 9. Ojo: se eleva solo el radio, no el producto completo.\n"
+        "2) Multiplica por π: 3,14 · 9 = 28,26.\n"
+        "3) El área de la tapa es 28,26 cm².",
+        [
+            ("18,84 cm²", "Calculó la longitud de la circunferencia, que es 2 · π · r, en lugar del área."),
+            ("9,42 cm²", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+            ("88,74 cm²", "Elevó al cuadrado el producto π · r en vez de elevar solo el radio."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Un platillo circular tiene 10 cm de radio. ¿Cuánto mide su contorno? (usa π ≈ 3,14)",
+        "62,8 cm",
+        "El contorno de un círculo es la longitud de la circunferencia: 2 · π · radio.\n\n"
+        "1) Duplica el radio para obtener el diámetro: 2 · 10 = 20.\n"
+        "2) Multiplica por π: 3,14 · 20 = 62,8.\n"
+        "3) El contorno mide 62,8 cm. Va en centímetros y no en centímetros cuadrados, porque es una longitud.",
+        [
+            ("314 cm", "Calculó el área, que es π · r², en lugar del contorno."),
+            ("31,4 cm", "Usó el radio en vez del diámetro, y olvidó el factor 2."),
+            ("20 cm", "Se quedó en el diámetro sin multiplicar por π."),
+        ],
+    ),
+    _q(
+        "geo_plana", "facil",
+        "Un cartel tiene forma de rombo, con sus cuatro lados iguales de 8 cm cada uno. ¿Cuál es su perímetro?",
+        "32 cm",
+        "Aunque sus diagonales sean distintas, el rombo tiene los cuatro lados iguales.\n\n"
+        "1) El perímetro es la suma de los cuatro lados: 4 · 8.\n"
+        "2) Al multiplicar: 4 · 8 = 32.\n"
+        "3) El perímetro es 32 cm. Fíjate en que las diagonales no intervienen: esas sirven para el área, no para el contorno.",
+        [
+            ("64 cm", "Multiplicó por 8 en lugar de por 4, o duplicó el perímetro."),
+            ("16 cm", "Sumó solo dos lados."),
+            ("32 cm²", "Llegó al número correcto pero lo expresó como área; un perímetro es una longitud."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un vitral tiene forma de trapecio y su área es de 60 cm². Si sus bases miden 8 cm y 12 cm, ¿cuál es su altura?",
+        "6 cm",
+        "Es la fórmula del trapecio al revés: se conoce el área y se busca la altura.\n\n"
+        "1) La fórmula dice área = ((base mayor + base menor) ÷ 2) · altura.\n"
+        "2) Calcula primero el promedio de las bases: (12 + 8) ÷ 2 = 10.\n"
+        "3) Reemplaza: 60 = 10 · altura.\n"
+        "4) Despeja dividiendo: altura = 60 ÷ 10 = 6 cm.",
+        [
+            ("3 cm", "Dividió por 2 una vez de más: aplicó el 2 de la fórmula después de haber promediado las bases."),
+            ("12 cm", "Dividió el área por una sola de las bases en vez de por el promedio de ambas."),
+            ("30 cm", "Dividió el área por 2 sin usar las bases."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Una lámina con forma de paralelogramo tiene un área de 96 cm² y su altura mide 8 cm. ¿Cuánto mide su base?",
+        "12 cm",
+        "El área del paralelogramo es base por altura, así que la base se obtiene dividiendo.\n\n"
+        "1) Escribe la relación: 96 = base · 8.\n"
+        "2) Despeja dividiendo ambos lados por 8: base = 96 ÷ 8.\n"
+        "3) Al dividir: 96 ÷ 8 = 12.\n"
+        "4) La base mide 12 cm. Puedes comprobarlo: 12 · 8 = 96, que es el área dada.",
+        [
+            ("24 cm", "Multiplicó el área por 2 antes de dividir, como si la figura fuera un triángulo."),
+            ("6 cm", "Dividió 96 por 16 en vez de por 8, duplicando la altura sin motivo."),
+            ("88 cm", "Restó la altura del área en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un rombo tiene un área de 84 cm² y una de sus diagonales mide 14 cm. ¿Cuánto mide la otra diagonal?",
+        "12 cm",
+        "Se despeja la diagonal desconocida desde la fórmula del rombo.\n\n"
+        "1) La fórmula es área = (diagonal mayor · diagonal menor) ÷ 2.\n"
+        "2) Reemplaza lo conocido: 84 = (14 · d) ÷ 2.\n"
+        "3) Multiplica ambos lados por 2 para sacar la división: 168 = 14 · d.\n"
+        "4) Divide por 14: d = 168 ÷ 14 = 12 cm.",
+        [
+            ("6 cm", "Dividió el área por la diagonal conocida sin multiplicar antes por 2."),
+            ("24 cm", "Multiplicó por 2 dos veces, aplicando el factor de más."),
+            ("70 cm", "Restó la diagonal conocida del área en lugar de despejar."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "El área de una mesa circular es 200,96 cm². ¿Cuánto mide su radio? (usa π ≈ 3,14)",
+        "8 cm",
+        "Es la fórmula del círculo al revés: hay que deshacer primero la multiplicación por π y después el cuadrado.\n\n"
+        "1) La fórmula es área = π · r². Reemplaza: 200,96 = 3,14 · r².\n"
+        "2) Divide ambos lados por 3,14: r² = 200,96 ÷ 3,14 = 64.\n"
+        "3) Ahora saca la raíz cuadrada: r = √64 = 8.\n"
+        "4) El radio mide 8 cm. El orden importa: si sacas la raíz antes de dividir por π, el resultado no calza.",
+        [
+            ("64 cm", "Se quedó en el radio al cuadrado y no sacó la raíz."),
+            ("32 cm", "Dividió el área por π y luego por 2, en vez de sacar la raíz cuadrada."),
+            ("16 cm", "Calculó el diámetro en lugar del radio."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "El contorno de un plato circular mide 37,68 cm. ¿Cuánto mide su radio? (usa π ≈ 3,14)",
+        "6 cm",
+        "Se despeja el radio desde la fórmula de la longitud de la circunferencia.\n\n"
+        "1) La fórmula es longitud = 2 · π · r. Reemplaza: 37,68 = 2 · 3,14 · r.\n"
+        "2) Multiplica primero lo conocido: 2 · 3,14 = 6,28. Queda 37,68 = 6,28 · r.\n"
+        "3) Divide: r = 37,68 ÷ 6,28 = 6.\n"
+        "4) El radio mide 6 cm.",
+        [
+            ("12 cm", "Dividió solo por π y se quedó con el diámetro en lugar del radio."),
+            ("3 cm", "Dividió una vez de más por 2 después de haber usado el 2 de la fórmula."),
+            ("113,04 cm", "Calculó el área a partir del radio en vez de despejar el radio."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un living tiene forma de L y se puede dividir en dos rectángulos: uno de 6 m por 4 m y otro de 3 m por 2 m. ¿Cuál es la superficie total del living?",
+        "30 m²",
+        "Una figura compuesta se resuelve partiéndola en figuras conocidas y sumando.\n\n"
+        "1) Superficie del primer rectángulo: 6 · 4 = 24 m².\n"
+        "2) Superficie del segundo: 3 · 2 = 6 m².\n"
+        "3) Como los dos rectángulos no se superponen, las superficies se suman: 24 + 6 = 30 m².\n"
+        "4) La superficie total es 30 m². Si las piezas se solaparan habría que descontar la zona común, pero acá el enunciado dice que la L se divide en dos partes.",
+        [
+            ("18 m²", "Restó la superficie del rectángulo pequeño en lugar de sumarla."),
+            ("24 m²", "Se quedó solo con el rectángulo grande y olvidó el segundo."),
+            ("144 m²", "Multiplicó las dos superficies entre sí en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Una ventana tiene forma de semicírculo de 6 cm de radio en la maqueta de un arquitecto. ¿Cuál es su área? (usa π ≈ 3,14)",
+        "56,52 cm²",
+        "Un semicírculo es exactamente la mitad de un círculo, así que se calcula el círculo completo y se divide.\n\n"
+        "1) Área del círculo completo: π · r² = 3,14 · 6² = 3,14 · 36 = 113,04 cm².\n"
+        "2) El semicírculo es la mitad: 113,04 ÷ 2 = 56,52.\n"
+        "3) El área de la ventana es 56,52 cm².",
+        [
+            ("113,04 cm²", "Calculó el círculo completo y olvidó quedarse con la mitad."),
+            ("28,26 cm²", "Dividió por 2 dos veces, o usó la mitad del radio en lugar de la mitad del área."),
+            ("18,84 cm²", "Calculó la mitad de la longitud de la circunferencia en vez del área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un piso rectangular mide 4 m por 3 m y se quiere cubrir con baldosas cuadradas de 20 cm de lado. Si no se pierde material al cortar, ¿cuántas baldosas se necesitan?",
+        "300 baldosas",
+        "Hay que trabajar las dos superficies en la misma unidad antes de dividir.\n\n"
+        "1) Superficie del piso: 4 · 3 = 12 m².\n"
+        "2) Pasa la baldosa a metros: 20 cm son 0,2 m, así que cada baldosa mide 0,2 · 0,2 = 0,04 m².\n"
+        "3) Divide la superficie del piso por la de una baldosa: 12 ÷ 0,04 = 300.\n"
+        "4) Se necesitan 300 baldosas. El error más caro acá es dividir 12 por 400 sin convertir unidades: mezcla metros con centímetros.",
+        [
+            ("60 baldosas", "Dividió las medidas lineales en lugar de las superficies."),
+            ("240 baldosas", "Usó 0,05 m² por baldosa, como si el lado fuera de 22 cm."),
+            ("3.000 baldosas", "Se equivocó en un factor 10 al convertir centímetros a metros."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Pintar una pared cuesta $3.500 por metro cuadrado. Si la pared mide 5 m de largo y 2,4 m de alto, ¿cuánto cuesta pintarla completa?",
+        "$42.000",
+        "Primero la superficie, después el costo.\n\n"
+        "1) Superficie de la pared: 5 · 2,4 = 12 m².\n"
+        "2) Cada metro cuadrado cuesta $3.500, así que se multiplica: 12 · 3.500.\n"
+        "3) Al multiplicar: 12 · 3.500 = 42.000.\n"
+        "4) Pintarla cuesta $42.000.",
+        [
+            ("$51.800", "Multiplicó el precio por el perímetro, que es 2 · (5 + 2,4) = 14,8 m, en lugar de por la superficie."),
+            ("$25.900", "Sumó las dimensiones (5 + 2,4 = 7,4) en vez de multiplicarlas para obtener la superficie."),
+            ("$420.000", "Se corrió un cero al multiplicar."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Un terreno tiene forma de triángulo rectángulo y sus dos lados perpendiculares miden 9 m y 12 m. ¿Cuál es su área?",
+        "54 m²",
+        "En un triángulo rectángulo los dos lados perpendiculares hacen de base y altura, así que no hace falta ningún dato extra.\n\n"
+        "1) Toma 9 m como base y 12 m como altura: son perpendiculares entre sí, que es justo lo que la fórmula pide.\n"
+        "2) Multiplica: 9 · 12 = 108.\n"
+        "3) Divide por 2: 108 ÷ 2 = 54.\n"
+        "4) El área es 54 m². No se necesita la hipotenusa para nada.",
+        [
+            ("108 m²", "Multiplicó los dos lados pero olvidó dividir por 2."),
+            ("21 m²", "Sumó los dos lados en lugar de aplicar la fórmula del área."),
+            ("15 m²", "Calculó la hipotenusa con el Teorema de Pitágoras, que acá no se pide."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "En un plano a escala 1 : 100, una sala aparece como un rectángulo de 5 cm por 4 cm. ¿Cuál es la superficie real de la sala?",
+        "20 m²",
+        "La escala se aplica a las medidas lineales, y recién después se calcula la superficie.\n\n"
+        "1) Escala 1 : 100 significa que 1 cm del plano equivale a 100 cm reales, o sea 1 m.\n"
+        "2) Entonces el largo real es 5 · 100 = 500 cm = 5 m, y el ancho real es 4 · 100 = 400 cm = 4 m.\n"
+        "3) Superficie real: 5 · 4 = 20 m².\n"
+        "4) Ojo con el atajo tentador: multiplicar los 20 cm² del plano por 100 da 2.000, que no es la respuesta. Al pasar a superficies el factor se aplica dos veces, una por cada dimensión.",
+        [
+            ("2 m²", "Multiplicó la superficie del plano por 100 una sola vez, en vez de aplicar la escala a cada dimensión."),
+            ("200 m²", "Aplicó el factor a las dos dimensiones pero se corrió un cero en la conversión final."),
+            ("20 cm²", "Se quedó con la superficie medida en el plano, sin aplicar la escala."),
+        ],
+    ),
+    _q(
+        "geo_plana", "medio",
+        "Una pizza familiar tiene 30 cm de diámetro. ¿Cuál es el área de su superficie? (usa π ≈ 3,14)",
+        "706,5 cm²",
+        "El dato que entrega el enunciado es el diámetro, y la fórmula del área trabaja con el radio.\n\n"
+        "1) El radio es la mitad del diámetro: 30 ÷ 2 = 15 cm. Saltarse este paso es el error más común de esta pregunta.\n"
+        "2) Eleva el radio al cuadrado: 15² = 225.\n"
+        "3) Multiplica por π: 3,14 · 225 = 706,5.\n"
+        "4) El área es 706,5 cm².",
+        [
+            ("2.826 cm²", "Usó el diámetro como si fuera el radio, lo que cuadruplica el área."),
+            ("94,2 cm²", "Calculó la longitud del contorno en lugar del área."),
+            ("47,1 cm²", "Multiplicó π por el radio sin elevarlo al cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Una argolla metálica está formada por dos círculos con el mismo centro: el exterior tiene 10 cm de radio y el interior, 6 cm. ¿Cuál es el área de la parte metálica? (usa π ≈ 3,14)",
+        "200,96 cm²",
+        "La parte metálica es lo que queda al quitarle al círculo grande el hueco del chico.\n\n"
+        "1) Área del círculo exterior: 3,14 · 10² = 3,14 · 100 = 314 cm².\n"
+        "2) Área del círculo interior: 3,14 · 6² = 3,14 · 36 = 113,04 cm².\n"
+        "3) Resta: 314 − 113,04 = 200,96 cm².\n"
+        "4) Atajo útil para comprobar: se puede factorizar π · (10² − 6²) = 3,14 · 64 = 200,96, que da lo mismo. Lo que NO se puede hacer es restar los radios primero y elevar al cuadrado después: 3,14 · 4² daría 50,24, que es otra cosa.",
+        [
+            ("50,24 cm²", "Restó los radios antes de elevar al cuadrado; la resta va después de calcular cada área."),
+            ("427,04 cm²", "Sumó las dos áreas en lugar de restarlas."),
+            ("314 cm²", "Se quedó con el área del círculo exterior sin descontar el hueco."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un terreno rectangular tiene un perímetro de 70 m y su largo mide 5 m más que su ancho. ¿Cuál es el área del terreno?",
+        "300 m²",
+        "Primero hay que encontrar las dimensiones con una ecuación, y recién después calcular el área.\n\n"
+        "1) Llama x al ancho. Entonces el largo es x + 5.\n"
+        "2) El perímetro es 2 · (largo + ancho): 2 · (x + x + 5) = 70.\n"
+        "3) Resuelve: 2 · (2x + 5) = 70, o sea 4x + 10 = 70, entonces 4x = 60 y x = 15.\n"
+        "4) El ancho es 15 m y el largo 15 + 5 = 20 m. Comprueba el perímetro: 2 · (20 + 15) = 70 ✓.\n"
+        "5) Área: 20 · 15 = 300 m².",
+        [
+            ("306,25 m²", "Supuso que el terreno era cuadrado de lado 17,5 m, ignorando que el largo mide 5 m más que el ancho."),
+            ("225 m²", "Encontró bien el ancho, 15 m, pero lo usó también como largo y olvidó los 5 m de diferencia."),
+            ("350 m²", "Multiplicó el perímetro por 5 en lugar de resolver la ecuación."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Dos triángulos son semejantes y la razón entre sus lados es 2 : 5. Si el triángulo más pequeño tiene un área de 12 cm², ¿cuál es el área del más grande?",
+        "75 cm²",
+        "En figuras semejantes las áreas no crecen en la misma razón que los lados: crecen en esa razón elevada al cuadrado.\n\n"
+        "1) La razón entre los lados es 2 : 5.\n"
+        "2) La razón entre las áreas es entonces 2² : 5², es decir 4 : 25. La razón se eleva al cuadrado porque el área depende de dos dimensiones, y cada una se multiplica por el mismo factor.\n"
+        "3) Plantea la proporción: 12 / área mayor = 4 / 25.\n"
+        "4) Despeja: área mayor = 12 · 25 ÷ 4 = 300 ÷ 4 = 75 cm².",
+        [
+            ("30 cm²", "Aplicó la razón 2 : 5 directamente a las áreas, sin elevarla al cuadrado."),
+            ("300 cm²", "Multiplicó por 25 pero olvidó dividir por 4."),
+            ("60 cm²", "Multiplicó el área por 5, usando solo un término de la razón."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Una piscina circular de 4 m de radio está rodeada por una vereda de 1 m de ancho en todo su contorno. ¿Cuál es el área de la vereda? (usa π ≈ 3,14)",
+        "28,26 m²",
+        "La vereda es un anillo: el círculo grande menos la piscina.\n\n"
+        "1) El radio exterior incluye la vereda: 4 + 1 = 5 m. El ancho de la vereda se suma al radio, no al diámetro.\n"
+        "2) Área del círculo exterior: 3,14 · 5² = 3,14 · 25 = 78,5 m².\n"
+        "3) Área de la piscina: 3,14 · 4² = 3,14 · 16 = 50,24 m².\n"
+        "4) Resta: 78,5 − 50,24 = 28,26 m².",
+        [
+            ("3,14 m²", "Restó los radios antes de elevar al cuadrado, calculando el área de un círculo de radio 1."),
+            ("78,5 m²", "Se quedó con el área del círculo exterior sin descontar la piscina."),
+            ("25,12 m²", "Calculó la longitud del contorno de la piscina en vez del área de la vereda."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "A una plancha rectangular de 20 cm por 12 cm se le recorta un cuadrado de 3 cm de lado en cada una de sus cuatro esquinas. ¿Cuál es el área de la plancha que queda?",
+        "204 cm²",
+        "Se calcula el total y se descuenta lo recortado.\n\n"
+        "1) Área de la plancha completa: 20 · 12 = 240 cm².\n"
+        "2) Área de un cuadrado recortado: 3 · 3 = 9 cm².\n"
+        "3) Como son cuatro esquinas: 4 · 9 = 36 cm² recortados.\n"
+        "4) Resta: 240 − 36 = 204 cm².",
+        [
+            ("231 cm²", "Descontó un solo cuadrado en lugar de los cuatro."),
+            ("228 cm²", "Descontó 12 cm², usando el perímetro del cuadrado en vez de su área."),
+            ("240 cm²", "Se quedó con la plancha completa sin descontar los recortes."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Si el lado de un cuadrado se triplica, ¿qué ocurre con su área?",
+        "Queda multiplicada por 9",
+        "Conviene probarlo con un caso concreto y después ver por qué vale siempre.\n\n"
+        "1) Toma un cuadrado de lado 2: su área es 2² = 4.\n"
+        "2) Triplica el lado: pasa a 6, y su área es 6² = 36.\n"
+        "3) Compara: 36 ÷ 4 = 9. El área quedó multiplicada por 9.\n"
+        "4) La razón general: si el lado pasa de L a 3L, el área pasa de L² a (3L)² = 9L². El factor se aplica a las dos dimensiones, y por eso se eleva al cuadrado.",
+        [
+            ("Queda multiplicada por 3", "Aplicó el factor una sola vez, como si el área dependiera de una sola dimensión."),
+            ("Queda multiplicada por 6", "Duplicó el factor en vez de elevarlo al cuadrado."),
+            ("Queda multiplicada por 27", "Elevó el factor al cubo, que es lo que corresponde a un volumen y no a un área."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un terreno tiene forma de trapecio: sus bases miden 25 m y 15 m, y su altura 12 m. Si el metro cuadrado se vende a $8.000, ¿cuánto cuesta el terreno completo?",
+        "$1.920.000",
+        "Dos pasos: la superficie del trapecio y después el precio.\n\n"
+        "1) Promedia las bases: (25 + 15) ÷ 2 = 20.\n"
+        "2) Multiplica por la altura: 20 · 12 = 240 m².\n"
+        "3) Multiplica por el precio del metro cuadrado: 240 · 8.000 = 1.920.000.\n"
+        "4) El terreno cuesta $1.920.000.",
+        [
+            ("$3.840.000", "Olvidó dividir por 2 al promediar las bases, y el área le quedó al doble."),
+            ("$960.000", "Dividió por 2 una vez de más al aplicar la fórmula del trapecio."),
+            ("$416.000", "Calculó el perímetro aproximado en lugar de la superficie."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "En un plano a escala 1 : 50, una bodega ocupa una superficie de 30 cm². ¿Cuál es su superficie real?",
+        "7,5 m²",
+        "La escala se aplica a las longitudes; para las superficies el factor va al cuadrado.\n\n"
+        "1) Escala 1 : 50 significa que cada longitud real es 50 veces la del plano.\n"
+        "2) Como una superficie tiene dos dimensiones y cada una se multiplica por 50, la superficie real es 50² = 2.500 veces la del plano.\n"
+        "3) Superficie real en centímetros cuadrados: 30 · 2.500 = 75.000 cm².\n"
+        "4) Pasa a metros cuadrados sabiendo que 1 m² = 10.000 cm²: 75.000 ÷ 10.000 = 7,5 m².",
+        [
+            ("0,15 m²", "Multiplicó por 50 una sola vez, sin elevar el factor al cuadrado."),
+            ("75 m²", "Aplicó bien el factor pero se corrió un cero al pasar de centímetros cuadrados a metros cuadrados."),
+            ("1.500 m²", "Multiplicó por 50 y trató los centímetros cuadrados como si ya fueran metros cuadrados."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un cuadrado y un rectángulo tienen el mismo perímetro: 40 cm. Si el rectángulo mide 14 cm por 6 cm, ¿cuánto mayor es el área del cuadrado que la del rectángulo?",
+        "16 cm²",
+        "Con el mismo perímetro las áreas no tienen por qué coincidir, y esa es justamente la idea de la pregunta.\n\n"
+        "1) Comprueba el perímetro del rectángulo: 2 · (14 + 6) = 40 ✓.\n"
+        "2) El cuadrado tiene el mismo perímetro, así que su lado es 40 ÷ 4 = 10 cm.\n"
+        "3) Área del cuadrado: 10 · 10 = 100 cm². Área del rectángulo: 14 · 6 = 84 cm².\n"
+        "4) Diferencia: 100 − 84 = 16 cm². De todas las figuras con un perímetro dado, la más cuadrada es la que encierra más área.",
+        [
+            ("0 cm²", "Supuso que a igual perímetro corresponde igual área."),
+            ("184 cm²", "Sumó las dos áreas en lugar de restarlas."),
+            ("8 cm²", "Comparó las dimensiones en vez de las áreas."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Si el radio de un círculo aumenta en un 50%, ¿en qué porcentaje aumenta su área?",
+        "125%",
+        "Conviene tomar un radio cualquiera y comparar, porque el resultado no depende del valor inicial.\n\n"
+        "1) Toma radio 2: el área es π · 4.\n"
+        "2) Aumentar 50% significa multiplicar por 1,5, así que el nuevo radio es 3 y la nueva área es π · 9.\n"
+        "3) La razón entre las áreas es 9/4 = 2,25, es decir, la nueva área es el 225% de la original.\n"
+        "4) El aumento es lo que se agregó: 225% − 100% = 125%. Un error clásico es responder 225%, que es el total y no el aumento.",
+        [
+            ("225%", "Dio el porcentaje que representa el área nueva respecto de la original, no cuánto aumentó."),
+            ("50%", "Aplicó a la superficie el mismo porcentaje que al radio, sin elevar el factor al cuadrado."),
+            ("100%", "Supuso que el área se duplica, que correspondería a multiplicar el radio por √2."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "En un triángulo, la base se reduce a la mitad y al mismo tiempo la altura se duplica. ¿Qué ocurre con su área?",
+        "No cambia",
+        "Los dos cambios actúan sobre el mismo producto y se compensan exactamente.\n\n"
+        "1) El área original es (base · altura) ÷ 2.\n"
+        "2) La nueva base es la mitad, o sea base ÷ 2, y la nueva altura es el doble, o sea 2 · altura.\n"
+        "3) El nuevo producto es (base ÷ 2) · (2 · altura) = base · altura: el 2 que divide y el 2 que multiplica se cancelan.\n"
+        "4) Como el producto es el mismo, el área tampoco cambia. Con números: base 10 y altura 4 dan área 20; base 5 y altura 8 dan área 20.",
+        [
+            ("Queda multiplicada por 2", "Consideró solo el efecto de duplicar la altura e ignoró la reducción de la base."),
+            ("Queda reducida a la mitad", "Consideró solo el efecto de reducir la base e ignoró el aumento de la altura."),
+            ("Queda multiplicada por 4", "Sumó los dos efectos como si se reforzaran, en vez de ver que se compensan."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un cartel rectangular mide 3 m por 2 m y tiene un borde decorativo de 10 cm de ancho hacia adentro en todo su contorno. ¿Cuál es el área de la parte interior, sin contar el borde?",
+        "5,04 m²",
+        "Lo clave es que el borde descuenta su ancho por los dos lados de cada dimensión.\n\n"
+        "1) Pasa el borde a metros: 10 cm = 0,1 m.\n"
+        "2) Al largo hay que restarle el borde de arriba y el de abajo: 3 − 0,1 − 0,1 = 2,8 m.\n"
+        "3) Al ancho, lo mismo por los dos costados: 2 − 0,1 − 0,1 = 1,8 m.\n"
+        "4) Área interior: 2,8 · 1,8 = 5,04 m².",
+        [
+            ("5,51 m²", "Restó el borde una sola vez en cada dimensión, olvidando que aparece en los dos extremos."),
+            ("6 m²", "Se quedó con el área total del cartel sin descontar el borde."),
+            ("0,96 m²", "Calculó el área del borde en lugar de la de la parte interior."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
