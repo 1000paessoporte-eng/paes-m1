@@ -15411,6 +15411,1034 @@ QUESTIONS_HISTORIA = [
             ("21 años", "Contó ambos extremos como años completos, lo que no corresponde para medir una extensión."),
         ],
     ),
+    # ---------- Segunda tanda: economía ----------
+    _q(
+        "eco_indicadores", "facil",
+        "Si el IPC sube de 120 a 126 puntos en un año, ¿cuál fue la inflación?",
+        "5%",
+        "La inflación es la variación porcentual del índice.\n\n"
+        "$\\frac{126 - 120}{120} \\times 100 = 5\\%$.\n\n"
+        "El denominador es siempre el valor inicial: dividir por 126 daría un "
+        "resultado distinto y equivocado.",
+        [
+            ("6%", "Entregó la diferencia en puntos, no el porcentaje."),
+            ("126%", "Entregó el valor del índice."),
+            ("4,8%", "Dividió por el valor final en vez del inicial."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "¿Qué mide la línea de la pobreza?",
+        "El ingreso mínimo necesario para cubrir un conjunto básico de "
+        "necesidades",
+        "La línea de la pobreza fija un umbral de ingreso: quien queda por "
+        "debajo no alcanza a cubrir una canasta básica de bienes y "
+        "servicios.\n\n"
+        "Es una medida monetaria, y por eso tiene límites: no captura acceso a "
+        "salud, educación o vivienda.\n\n"
+        "Por eso hoy suele complementarse con mediciones multidimensionales, "
+        "que incorporan esas otras carencias.",
+        [
+            ("El promedio de ingresos de la población", "Ese es otro indicador, y no define un umbral de pobreza."),
+            ("La cantidad total de personas sin empleo", "Eso lo mide la tasa de desempleo."),
+            ("La diferencia entre el ingreso más alto y el más bajo", "Eso se acerca a un indicador de desigualdad."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Un país tiene un PIB de 120.000 millones y 8 millones de habitantes. "
+        "¿Cuál es su PIB per cápita?",
+        "15.000",
+        "El PIB per cápita reparte la producción entre todos los habitantes."
+        "\n\n"
+        "$\\frac{120.000}{8} = 15.000$ por habitante.\n\n"
+        "Como todo promedio, esconde la distribución: dos países con el mismo "
+        "PIB per cápita pueden tener realidades muy distintas.",
+        [
+            ("960.000", "Multiplicó en vez de dividir."),
+            ("1.500", "Se equivocó en un factor diez."),
+            ("8.000", "Entregó la población, no el resultado."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "¿Qué mide el coeficiente de Gini?",
+        "La desigualdad en la distribución del ingreso de un país",
+        "El coeficiente de Gini va de 0 a 1: cero sería una igualdad perfecta, "
+        "donde todos reciben lo mismo, y uno la concentración total en una sola "
+        "persona.\n\n"
+        "Ningún país real está en los extremos, pero la comparación entre "
+        "países y a lo largo del tiempo sí es informativa.\n\n"
+        "Es un complemento necesario del PIB per cápita: dice cómo se reparte "
+        "lo que ese promedio esconde.",
+        [
+            ("El crecimiento económico anual de un país", "Eso lo mide la variación del PIB."),
+            ("La cantidad de personas bajo la línea de la pobreza", "Esa es la tasa de pobreza."),
+            ("El nivel de precios de una canasta de bienes", "Ese es el IPC."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "¿Qué es la deflación?",
+        "Una caída sostenida del nivel general de precios",
+        "La deflación es lo contrario de la inflación: los precios bajan de "
+        "manera sostenida.\n\n"
+        "Suena favorable para el consumidor, pero suele ser mala señal: si la "
+        "gente espera que todo cueste menos mañana, posterga sus compras, la "
+        "demanda cae y la actividad se frena.\n\n"
+        "Los bancos centrales la vigilan tanto como a la inflación alta, "
+        "porque romper esa espiral es difícil.",
+        [
+            ("Una inflación menor a la esperada", "Eso es desinflación: los precios siguen subiendo, más lento."),
+            ("Un aumento del desempleo por cierre de empresas", "Puede acompañarla, pero no es su definición."),
+            ("La pérdida de valor de la moneda frente al dólar", "Esa es una devaluación."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "En un país hay 8 millones de personas en edad de trabajar, 5 millones "
+        "ocupadas y 500 mil buscando empleo. ¿Cuál es la tasa de desempleo?",
+        "9,1%",
+        "El denominador es la fuerza de trabajo: ocupados más desocupados, no "
+        "la población en edad de trabajar.\n\n"
+        "1) Fuerza de trabajo: $5.000.000 + 500.000 = 5.500.000$.\n"
+        "2) Tasa: $\\frac{500.000}{5.500.000} \\times 100 \\approx 9,1\\%$.\n\n"
+        "Usar los 8 millones daría 6,25%, un número más bajo y equivocado: "
+        "incluiría a quienes no participan del mercado laboral.",
+        [
+            ("6,25%", "Dividió por la población en edad de trabajar, no por la fuerza de trabajo."),
+            ("10%", "Usó los 5 millones de ocupados como denominador."),
+            ("5%", "No corresponde a ninguna operación válida con los datos."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "¿Qué son los impuestos y cuál es su función principal?",
+        "Pagos obligatorios al Estado que financian el gasto público",
+        "Los impuestos son la principal fuente de ingresos del Estado y "
+        "financian educación, salud, seguridad, infraestructura y "
+        "subsidios.\n\n"
+        "También cumplen una función redistributiva cuando son progresivos, es "
+        "decir cuando quien tiene más aporta proporcionalmente más.\n\n"
+        "El IVA, en cambio, es proporcional: todos pagan el mismo porcentaje "
+        "sobre lo que consumen, y por eso pesa relativamente más en los "
+        "ingresos bajos.",
+        [
+            ("Aportes voluntarios que hacen las empresas al Estado", "Los impuestos son obligatorios por ley."),
+            ("Multas aplicadas por incumplir la normativa", "Las multas son sanciones, no impuestos."),
+            ("Préstamos que el Estado solicita a los ciudadanos", "Eso corresponde a la deuda pública."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "¿Qué es el presupuesto fiscal y qué ocurre cuando hay déficit?",
+        "Es el plan de ingresos y gastos del Estado; hay déficit cuando gasta "
+        "más de lo que recauda",
+        "El presupuesto proyecta cuánto recaudará el Estado y en qué lo "
+        "gastará durante un período.\n\n"
+        "Si el gasto supera a los ingresos hay déficit, y debe financiarse con "
+        "deuda o con ahorros acumulados. Si ocurre lo contrario, hay "
+        "superávit.\n\n"
+        "Un déficit no es necesariamente malo: puede ser deliberado para "
+        "sostener la actividad en una crisis. Lo problemático es que se vuelva "
+        "permanente y la deuda crezca sin control.",
+        [
+            ("Es el total de impuestos recaudados en un año", "Esos son los ingresos fiscales, una parte del presupuesto."),
+            ("Es la deuda que el país mantiene con el extranjero", "Esa es la deuda externa."),
+            ("Hay déficit cuando el Estado recauda más de lo previsto", "Eso sería un superávit."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "¿Qué diferencia hay entre crecimiento económico y desarrollo?",
+        "El crecimiento mide el aumento de la producción; el desarrollo "
+        "incorpora calidad de vida y distribución",
+        "El crecimiento se mide con la variación del PIB: es cuantitativo y "
+        "responde cuánto más se produjo.\n\n"
+        "El desarrollo es más amplio: incluye salud, educación, esperanza de "
+        "vida, equidad y sostenibilidad.\n\n"
+        "Un país puede crecer sin desarrollarse, si ese crecimiento se "
+        "concentra en pocas manos o destruye el ambiente que lo sostiene.",
+        [
+            ("Son sinónimos usados en contextos distintos", "Miden cosas diferentes: producción y bienestar."),
+            ("El desarrollo se mide en dólares y el crecimiento en porcentaje", "La unidad no es lo que los distingue."),
+            ("El crecimiento solo ocurre en países desarrollados", "Cualquier economía puede crecer."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "El sueldo de una persona sube 4% y la inflación del año fue 7%. ¿Qué "
+        "ocurrió con su poder adquisitivo?",
+        "Disminuyó, porque los precios subieron más que su sueldo",
+        "El salario real depende de la relación entre el alza del sueldo y la "
+        "de los precios.\n\n"
+        "Con un sueldo que sube 4% y precios que suben 7%, lo que la persona "
+        "puede comprar se reduce: perdió poder adquisitivo aproximadamente un "
+        "3%.\n\n"
+        "Un aumento nominal por debajo de la inflación es, en los hechos, una "
+        "rebaja de sueldo.",
+        [
+            ("Aumentó 4%, según el reajuste recibido", "Ese es el aumento nominal, que la inflación más que compensó."),
+            ("Se mantuvo igual, porque ambos subieron", "Solo se mantendría si ambos subieran lo mismo."),
+            ("Aumentó 3%, por la diferencia entre ambas cifras", "La diferencia va en contra, no a favor."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "¿Por qué el IPC puede no reflejar el alza de precios que percibe una "
+        "familia concreta?",
+        "Porque mide una canasta promedio, y cada hogar consume una "
+        "combinación distinta de bienes",
+        "El IPC pondera los productos según el consumo de un hogar "
+        "representativo.\n\n"
+        "Una familia que gasta buena parte de su ingreso en transporte y "
+        "alimentos sentirá con más fuerza el alza de esos ítems, aunque el "
+        "índice general suba poco.\n\n"
+        "Por eso la inflación percibida suele diferir de la medida: ambas "
+        "pueden ser correctas y estar hablando de canastas distintas.",
+        [
+            ("Porque el IPC se calcula con datos de años anteriores", "Se calcula con precios del período medido."),
+            ("Porque las familias no saben cuánto gastan realmente", "La diferencia proviene de la composición del consumo, no de un error de percepción."),
+            ("Porque el IPC solo considera productos importados", "Considera bienes y servicios de consumo habitual, nacionales e importados."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "¿Qué ocurre con la cantidad ofrecida de un bien cuando sube su precio?",
+        "Aumenta",
+        "La ley de la oferta establece una relación directa entre precio y "
+        "cantidad ofrecida.\n\n"
+        "A mayor precio, producir se vuelve más rentable y los productores "
+        "están dispuestos a ofrecer más unidades.\n\n"
+        "Es lo contrario de la demanda, donde la relación es inversa: cuando "
+        "sube el precio, los consumidores compran menos.",
+        [
+            ("Disminuye", "Esa es la ley de la demanda, no la de la oferta."),
+            ("Se mantiene constante", "Solo ocurriría con una oferta perfectamente inelástica."),
+            ("Depende únicamente del clima", "Los factores externos influyen, pero la ley describe la relación con el precio."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "En un mercado, a $500 los consumidores demandan 900 unidades y los "
+        "productores ofrecen 400. ¿Qué ocurre?",
+        "Hay escasez de 500 unidades y el precio tiende a subir",
+        "Se comparan ambas cantidades a ese precio: $900 - 400 = 500$ unidades "
+        "que la gente quiere y no encuentra.\n\n"
+        "Cuando falta producto, los consumidores compiten por él y el precio "
+        "sube; al subir, la cantidad ofrecida crece y la demandada cae, hasta "
+        "que se encuentran.\n\n"
+        "Que falte producto significa que el precio está POR DEBAJO del "
+        "equilibrio.",
+        [
+            ("Hay exceso de oferta de 500 unidades y el precio baja", "Invirtió la situación: se demanda más de lo que se ofrece."),
+            ("El mercado está en equilibrio", "En equilibrio ambas cantidades coinciden."),
+            ("Hay escasez de 1.300 unidades", "Sumó ambas cantidades en vez de restarlas."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "¿Qué es un monopolio?",
+        "Un mercado con un solo oferente, que puede fijar el precio",
+        "En un monopolio existe un único vendedor de un bien sin sustitutos "
+        "cercanos.\n\n"
+        "Al no enfrentar competencia, puede fijar el precio en vez de tomarlo "
+        "del mercado, y suele producir menos y cobrar más de lo que ocurriría "
+        "en competencia.\n\n"
+        "Por eso los Estados regulan los monopolios o los prohíben, salvo "
+        "cuando son naturales: casos donde tener una sola red —de agua o "
+        "electricidad— resulta más eficiente que duplicarla.",
+        [
+            ("Un mercado con muchos vendedores de productos diferenciados", "Eso es competencia monopolística."),
+            ("Un acuerdo de precios entre varias empresas", "Ese es un cartel o colusión."),
+            ("Un mercado donde el Estado fija todos los precios", "El monopolio se define por la cantidad de oferentes."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Sube el precio de la bencina y cae la venta de automóviles grandes. "
+        "¿Qué relación existe entre ambos bienes?",
+        "Son bienes complementarios",
+        "Dos bienes son complementarios cuando se consumen juntos: uno no sirve "
+        "sin el otro.\n\n"
+        "Si la bencina se encarece, el costo de usar un auto grande sube, y por "
+        "eso su demanda cae. El alza del precio de uno reduce la demanda del "
+        "otro.\n\n"
+        "Los sustitutos funcionan al revés: si sube el precio del té, aumenta "
+        "la demanda de café.",
+        [
+            ("Son bienes sustitutos", "En ese caso el alza de uno habría aumentado la venta del otro."),
+            ("Son bienes independientes", "Si el precio de uno mueve la demanda del otro, la relación existe."),
+            ("Son bienes inferiores", "Esa categoría describe la relación con el ingreso, no con otro precio."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "¿Qué es un bien inferior en economía?",
+        "Aquel cuya demanda disminuye cuando aumenta el ingreso del consumidor",
+        "La clasificación depende de cómo responde la demanda al ingreso, no "
+        "de la calidad del producto.\n\n"
+        "Un bien inferior se consume menos a medida que la gente tiene más "
+        "dinero, porque lo reemplaza por alternativas que prefiere.\n\n"
+        "El nombre confunde: no significa que sea de mala calidad, sino que "
+        "cumple una función que se abandona cuando el presupuesto lo permite.",
+        [
+            ("Aquel de mala calidad o con defectos de fabricación", "La categoría no se refiere a la calidad del producto."),
+            ("Aquel cuyo precio es más bajo que el de sus competidores", "El precio no define esta clasificación."),
+            ("Aquel que solo se vende en mercados informales", "El canal de venta no interviene en la definición."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Una empresa vende 500 unidades a $2.000 cada una y sus costos totales "
+        "son $700.000. ¿Cuál es su ganancia?",
+        "300.000 pesos",
+        "La ganancia es el ingreso menos los costos.\n\n"
+        "1) Ingreso: $2.000 \\times 500 = 1.000.000$.\n"
+        "2) Ganancia: $1.000.000 - 700.000 = 300.000$ pesos.\n\n"
+        "Confundir ingreso con ganancia es el error clásico: una empresa puede "
+        "vender mucho y perder dinero si sus costos son mayores.",
+        [
+            ("1.000.000 de pesos", "Ese es el ingreso total, sin descontar los costos."),
+            ("700.000 pesos", "Corresponde a los costos."),
+            ("1.700.000 pesos", "Sumó ingresos y costos en vez de restarlos."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "¿Qué es la elasticidad precio de la demanda?",
+        "Cuánto varía la cantidad demandada frente a un cambio en el precio",
+        "La elasticidad mide la sensibilidad de los consumidores al precio."
+        "\n\n"
+        "Una demanda elástica reacciona mucho: un alza pequeña reduce "
+        "bastante las ventas, como ocurre con bienes que tienen sustitutos. Una "
+        "demanda inelástica reacciona poco, como la de los medicamentos "
+        "esenciales.\n\n"
+        "Es lo que decide si subir el precio aumenta o reduce el ingreso total "
+        "de una empresa.",
+        [
+            ("El precio máximo que los consumidores aceptan pagar", "Ese sería el precio de reserva."),
+            ("La velocidad con que un producto se agota en el mercado", "La elasticidad no mide velocidad de venta."),
+            ("La diferencia entre el precio de costo y el de venta", "Eso es el margen."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "¿Qué es la colusión y por qué está sancionada?",
+        "Un acuerdo entre competidores para fijar precios, que perjudica a los "
+        "consumidores",
+        "La colusión ocurre cuando empresas que deberían competir se ponen de "
+        "acuerdo en precios, cuotas o zonas de venta.\n\n"
+        "El efecto es que los consumidores pagan más de lo que pagarían con "
+        "competencia real, sin recibir nada a cambio.\n\n"
+        "En Chile está sancionada por la libre competencia, con multas y penas "
+        "que pueden incluir cárcel para los responsables.",
+        [
+            ("La fusión legal de dos empresas del mismo rubro", "Una fusión es un acto societario que puede autorizarse."),
+            ("La competencia agresiva mediante bajas de precios", "Competir bajando precios no es colusión."),
+            ("El acuerdo entre una empresa y sus trabajadores", "Eso corresponde a la negociación colectiva."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "¿Qué rol cumple el dinero en una economía?",
+        "Sirve como medio de intercambio, unidad de cuenta y depósito de valor",
+        "El dinero cumple tres funciones a la vez.\n\n"
+        "Como medio de intercambio evita el trueque, donde cada parte debía "
+        "querer justo lo que la otra ofrecía. Como unidad de cuenta permite "
+        "comparar precios en una misma escala. Como depósito de valor permite "
+        "guardar poder de compra para después.\n\n"
+        "La inflación alta daña sobre todo la tercera: el dinero guardado "
+        "pierde valor con el tiempo.",
+        [
+            ("Únicamente facilitar el intercambio de bienes", "Esa es solo una de sus tres funciones."),
+            ("Determinar el valor real del trabajo de las personas", "El dinero mide precios; no fija el valor del trabajo."),
+            ("Garantizar que los precios se mantengan estables", "La estabilidad depende de la política monetaria, no del dinero en sí."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Un nuevo competidor entra a un mercado con un producto similar. ¿Qué "
+        "efecto es más probable sobre el precio?",
+        "Tiende a bajar, porque aumenta la oferta disponible",
+        "La entrada de un competidor desplaza la curva de oferta hacia la "
+        "derecha: hay más producto disponible a cada precio.\n\n"
+        "Con la demanda sin cambios, el nuevo punto de equilibrio se ubica a un "
+        "precio menor y a una cantidad mayor.\n\n"
+        "Es la razón por la que la libre competencia se protege: beneficia "
+        "directamente al consumidor.",
+        [
+            ("Tiende a subir, porque hay más empresas cobrando", "Más oferentes compitiendo presionan el precio hacia abajo."),
+            ("No cambia, porque la demanda es la misma", "La demanda se mantiene, pero el equilibrio se mueve porque cambió la oferta."),
+            ("Se duplica, por el costo de la nueva empresa", "Los costos del entrante no fijan el precio de mercado."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "¿Qué es una externalidad negativa y por qué justifica la intervención "
+        "del Estado?",
+        "Un costo que la actividad impone a terceros y que no está incluido en "
+        "el precio",
+        "Una fábrica que contamina un río traslada un costo a quienes viven "
+        "aguas abajo, sin que ese costo aparezca en el precio de su producto."
+        "\n\n"
+        "El mercado por sí solo no lo corrige: a la empresa le conviene seguir, "
+        "porque no paga ese daño.\n\n"
+        "De ahí que se justifiquen impuestos, normas o compensaciones: "
+        "obligan a que el costo real quede incorporado en la decisión de "
+        "producir.",
+        [
+            ("Una pérdida que sufre la empresa por competir", "La externalidad recae sobre terceros, no sobre la empresa."),
+            ("Un impuesto que encarece el producto final", "El impuesto puede ser la respuesta a la externalidad, no la externalidad."),
+            ("La quiebra de una empresa por mala administración", "No involucra costos trasladados a terceros ajenos a la transacción."),
+        ],
+    ),
+    # ---------- Más preguntas sobre las fuentes ya existentes ----------
+    _ql(
+        "migracion_tabla", "his_fuentes", "medio",
+        "Según la tabla, ¿en qué década la población rural tuvo su mayor caída "
+        "absoluta?",
+        "Entre 1990 y 2000, con 1.200 habitantes menos",
+        "Se calculan las diferencias sucesivas de la columna rural.\n\n"
+        "De 1990 a 2000: $8.100 - 6.900 = 1.200$. De 2000 a 2010: $6.900 - "
+        "5.200 = 1.700$. De 2010 a 2020: $5.200 - 3.800 = 1.400$.\n\n"
+        "La mayor caída fue entre 2000 y 2010, con 1.700 habitantes: conviene "
+        "revisar los tres intervalos antes de responder.",
+        [
+            ("Entre 2000 y 2010, con 1.700 habitantes menos", "Ese es efectivamente el mayor descenso de la serie."),
+            ("Entre 2010 y 2020, con 1.400 habitantes menos", "Es la segunda mayor caída, no la primera."),
+            ("La caída fue igual en las tres décadas", "Las diferencias son 1.200, 1.700 y 1.400: no son iguales."),
+        ],
+    ),
+    _ql(
+        "migracion_tabla", "his_temporal", "medio",
+        "¿Qué relación puede establecerse entre las obras mencionadas y los "
+        "datos de la tabla?",
+        "El agua potable urbana y el camino pavimentado coinciden con la "
+        "aceleración del crecimiento urbano",
+        "La tabla informa dos obras: agua potable urbana en 1998 y camino "
+        "pavimentado en 2005.\n\n"
+        "El crecimiento urbano se acelera justamente después: de 4.300 a 8.900 "
+        "entre 1990 y 2000, y luego a 16.100 en 2010.\n\n"
+        "La coincidencia permite proponer la relación, no probarla: la tabla no "
+        "mide causas y podrían intervenir otros factores.",
+        [
+            ("Las obras provocaron la disminución de la población total", "La población total creció en todo el período."),
+            ("Las obras no tuvieron relación con los cambios observados", "Coinciden temporalmente con la aceleración del crecimiento urbano."),
+            ("Las obras explican la caída de la población urbana", "La población urbana aumentó, no cayó."),
+        ],
+    ),
+    _ql(
+        "migracion_tabla", "his_fuentes", "dificil",
+        "¿Qué NO permite concluir esta tabla?",
+        "Si las personas que dejaron el sector rural se quedaron en la comuna o "
+        "emigraron a otra",
+        "La tabla entrega totales por sector dentro de la comuna, no "
+        "trayectorias individuales.\n\n"
+        "Que lo rural caiga y lo urbano suba es compatible con dos historias "
+        "distintas: gente que se trasladó dentro de la comuna, o gente que se "
+        "fue mientras llegaban otros desde fuera.\n\n"
+        "Para distinguirlas harían falta datos de migración, que la fuente no "
+        "contiene.",
+        [
+            ("Cuánto creció la población total del período", "Se obtiene restando los valores de 1990 y 2020."),
+            ("En qué década la población urbana superó a la rural", "Se puede determinar comparando ambas columnas."),
+            ("Cuál era la proporción de población rural en 1990", "Se calcula con los datos de esa fila."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "civ_democracia", "medio",
+        "¿Qué supone la primera fuente sobre quienes votan cuando el sufragio "
+        "es voluntario?",
+        "Que acuden por convicción, y que por eso el resultado refleja mejor la "
+        "voluntad de quienes quieren decidir",
+        "La primera fuente sostiene que «quien acude a las urnas lo hace por "
+        "convicción».\n\n"
+        "De ahí deriva su conclusión: el resultado reflejaría la voluntad de "
+        "quienes de verdad quieren decidir, y no la de quienes votan por "
+        "obligación.\n\n"
+        "El supuesto de fondo es que la abstención expresa desinterés genuino y "
+        "no una barrera para participar.",
+        [
+            ("Que la mayoría se abstiene por falta de información", "La fuente no atribuye la abstención a desinformación."),
+            ("Que el voto voluntario aumenta la participación total", "Sostiene que mejora la calidad del voto, no su cantidad."),
+            ("Que solo deberían votar quienes tengan educación cívica", "No plantea ningún requisito para votar."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "civ_democracia", "dificil",
+        "¿Qué tipo de desacuerdo hay entre ambas fuentes?",
+        "Difieren sobre qué significa una baja participación electoral",
+        "Ambas observan el mismo hecho: con voto voluntario participa menos "
+        "gente.\n\n"
+        "La primera lo interpreta como depuración —vota quien de verdad "
+        "quiere—. La segunda, como exclusión de sectores que enfrentan más "
+        "barreras para llegar a las urnas.\n\n"
+        "El desacuerdo no es sobre los datos sino sobre qué conclusión "
+        "extraer de ellos, que es el tipo de discusión más común en un debate "
+        "público.",
+        [
+            ("Difieren sobre si el voto debe ser secreto", "El secreto del voto no está en discusión en ninguna de las dos."),
+            ("Difieren sobre la cantidad real de votantes", "Ambas parten del mismo hecho: la participación baja."),
+            ("Difieren sobre quién debe organizar las elecciones", "La organización electoral no aparece en el debate."),
+        ],
+    ),
+    _ql(
+        "fuente_participacion", "civ_derechos", "medio",
+        "¿Qué derecho está en el centro del debate entre ambas fuentes?",
+        "El derecho a sufragio y las condiciones para ejercerlo",
+        "Las dos fuentes discuten sobre el voto: si conviene que sea voluntario "
+        "u obligatorio, y qué significa que participe menos gente.\n\n"
+        "Eso pone en el centro el derecho a sufragio, que es un derecho "
+        "político de primera generación.\n\n"
+        "La discusión de fondo es clásica en democracia: un derecho puede "
+        "existir formalmente y aun así ser difícil de ejercer para algunos.",
+        [
+            ("El derecho a la educación cívica obligatoria", "La formación cívica no es el objeto del debate."),
+            ("El derecho de reunión y manifestación", "No se discute la protesta ni la reunión."),
+            ("El derecho a la libertad de expresión", "No está en cuestión en ninguna de las dos fuentes."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "medio",
+        "¿Qué elemento de la Fuente 2 permite reconstruir la secuencia de los "
+        "hechos?",
+        "La sucesión de exigencias: primero alimento, después oro y finalmente "
+        "tierras y trabajo",
+        "El testimonio ordena los hechos de forma acumulativa: «pidieron "
+        "alimento, y se lo dimos. Después pidieron el oro, y luego pidieron las "
+        "tierras y a nuestra gente para trabajarlas».\n\n"
+        "Esa progresión es información histórica: describe una relación que "
+        "cambia de naturaleza con el tiempo.\n\n"
+        "La violencia aparece recién cuando la respuesta es negativa, lo que "
+        "sitúa la quema de siembras al final de la secuencia y no al comienzo.",
+        [
+            ("La mención de los animales desconocidos", "Aporta a la impresión inicial, pero no ordena los hechos."),
+            ("La referencia a los hombres de hierro", "Describe la apariencia de los recién llegados, no la secuencia."),
+            ("La afirmación final sobre la lengua", "Es una interpretación del narrador, no un hecho ordenado en el tiempo."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_temporal", "dificil",
+        "¿Qué error se cometería al juzgar la Fuente 1 con criterios morales "
+        "actuales sin más análisis?",
+        "Un anacronismo: aplicar categorías de hoy a una mentalidad de otra "
+        "época sin intentar comprenderla",
+        "El cronista escribe desde un marco que consideraba legítima la "
+        "empresa de conquista y que era compartido en su tiempo.\n\n"
+        "Juzgarlo solo con criterios actuales impide entender cómo pensaba, que "
+        "es justamente lo que el historiador necesita reconstruir.\n\n"
+        "Evitar el anacronismo no significa justificar: significa explicar "
+        "primero y, si se juzga, hacerlo sabiendo qué se está juzgando.",
+        [
+            ("Un error de datación de los hechos relatados", "El problema no está en las fechas."),
+            ("Una confusión entre causa y consecuencia", "No hay una relación causal mal atribuida."),
+            ("Una generalización a partir de un caso aislado", "El problema es el criterio de juicio, no el alcance de la muestra."),
+        ],
+    ),
+    _ql(
+        "fuente_conquista", "his_fuentes", "medio",
+        "La Fuente 1 menciona que algunos naturales recibieron la paz «de buen "
+        "grado». ¿Qué precaución exige esa afirmación?",
+        "Considerar que proviene de una de las partes del conflicto, que tiene "
+        "interés en presentarlo así",
+        "El cronista acompañaba la expedición y escribía para autoridades que "
+        "evaluarían esa empresa.\n\n"
+        "Afirmar que hubo aceptación voluntaria favorece esa versión, y por eso "
+        "requiere contraste con otras fuentes antes de darse por establecida."
+        "\n\n"
+        "No significa que sea falsa. Significa que su origen obliga a leerla "
+        "con cautela.",
+        [
+            ("Descartarla por completo por provenir de un conquistador", "Sesgo no equivale a falsedad; se contrasta, no se descarta."),
+            ("Aceptarla sin más, por ser un testimonio directo", "Ser testigo directo no elimina el interés en la versión que se cuenta."),
+            ("Considerar que fue escrita muchos siglos después", "El cronista acompañó la expedición."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_fuentes", "medio",
+        "Según la tabla, ¿cuánto creció el sector terciario entre 1960 y 2000?",
+        "27 puntos porcentuales",
+        "Se ubican ambos valores en la columna del sector terciario y se "
+        "restan.\n\n"
+        "1) En 1960: 25%.\n"
+        "2) En 2000: 52%.\n"
+        "3) Diferencia: $52 - 25 = 27$ puntos porcentuales.\n\n"
+        "Es más del doble del valor inicial, lo que confirma la tendencia de "
+        "terciarización que muestra toda la serie.",
+        [
+            ("52 puntos porcentuales", "Es el valor de 2000, no el crecimiento."),
+            ("45 puntos porcentuales", "Corresponde al crecimiento hasta 2020, no hasta 2000."),
+            ("77 puntos porcentuales", "Sumó ambos valores en vez de restarlos."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_temporal", "dificil",
+        "¿Qué proceso de larga duración refleja la tabla?",
+        "La transformación de la estructura productiva, que se despliega a lo "
+        "largo de sesenta años",
+        "La tabla cubre seis décadas y muestra un cambio sostenido, sin "
+        "retrocesos, en la distribución del empleo.\n\n"
+        "Ese tipo de transformación no ocurre por un acontecimiento puntual: "
+        "se acumula lentamente y resulta casi imperceptible para quien la "
+        "vive.\n\n"
+        "Es un buen ejemplo de proceso de larga duración: nadie recuerda el día "
+        "en que el país dejó de ser mayoritariamente agrícola.",
+        [
+            ("Un acontecimiento político que cambió el país en un año", "La tabla muestra un cambio gradual, no un hecho puntual."),
+            ("Un ciclo económico de corta duración", "Los ciclos duran años; acá el cambio abarca décadas."),
+            ("Una crisis que revirtió la tendencia previa", "No hay reversión: la tendencia se sostiene en toda la serie."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_fuentes", "medio",
+        "¿Qué actividades incluye el sector secundario según la nota de la "
+        "tabla?",
+        "Industria y construcción",
+        "La nota al pie define las tres categorías.\n\n"
+        "El primario abarca agricultura, ganadería, pesca y minería; el "
+        "secundario, industria y construcción; el terciario, comercio y "
+        "servicios.\n\n"
+        "Sin esa definición, un lector podría clasificar la minería como "
+        "industria y leer mal toda la tabla. Las notas no son decorativas.",
+        [
+            ("Comercio y servicios", "Esas son las actividades del sector terciario."),
+            ("Agricultura, ganadería, pesca y minería", "Corresponden al sector primario."),
+            ("Solamente la industria manufacturera", "La nota incluye también la construcción."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_fuentes", "medio",
+        "¿Qué argumento usa la Fuente 1 para justificar lo ocurrido?",
+        "Que el país atravesaba una crisis y las autoridades actuaron con los "
+        "medios disponibles",
+        "La Fuente 1 califica los hechos como «lamentable pero inevitable»."
+        "\n\n"
+        "Su justificación es contextual: «El país atravesaba una crisis y las "
+        "autoridades actuaron con los medios que tenían a mano».\n\n"
+        "Es un argumento de circunstancia: no niega lo ocurrido, sostiene que "
+        "las condiciones no dejaban alternativa.",
+        [
+            ("Que los hechos nunca ocurrieron realmente", "La fuente los reconoce."),
+            ("Que los responsables ya fueron sancionados", "No menciona sanciones."),
+            ("Que las víctimas provocaron la situación", "No atribuye responsabilidad a las víctimas."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "his_temporal", "dificil",
+        "¿Qué muestra este par de fuentes sobre la relación entre memoria y "
+        "tiempo histórico?",
+        "Que el paso del tiempo no cierra un proceso por sí solo: la "
+        "interpretación de los hechos sigue en disputa",
+        "Cuarenta años separan ambos textos y el desacuerdo persiste intacto."
+        "\n\n"
+        "La Fuente 1 confiaba en que el tiempo cerraría las heridas; la Fuente "
+        "2, cuatro décadas después, muestra que no ocurrió.\n\n"
+        "Es un ejemplo de por qué la historia se reescribe: los hechos no "
+        "cambian, pero lo que una sociedad hace con ellos sigue en movimiento.",
+        [
+            ("Que los hechos históricos se olvidan naturalmente con los años", "El par de fuentes demuestra lo contrario."),
+            ("Que las fuentes más recientes siempre son más confiables", "La antigüedad no determina la confiabilidad."),
+            ("Que cuarenta años bastan para alcanzar consenso histórico", "El desacuerdo persiste después de ese plazo."),
+        ],
+    ),
+    _ql(
+        "fuente_memoria", "civ_derechos", "medio",
+        "¿Qué demanda plantea la agrupación de familiares en la Fuente 2?",
+        "Saber qué pasó y quién lo decidió",
+        "La Fuente 2 formula su exigencia de manera precisa: «Mientras no se "
+        "sepa qué pasó y quién lo decidió, no hay pasado que pase».\n\n"
+        "No pide castigo ni compensación: pide verdad, es decir "
+        "esclarecimiento de los hechos y de las responsabilidades.\n\n"
+        "El derecho a la verdad es reconocido en el derecho internacional de "
+        "los derechos humanos, tanto para las víctimas como para la sociedad.",
+        [
+            ("Una compensación económica para las familias", "La fuente no menciona reparación económica."),
+            ("Que se reabra el debate político sobre la crisis", "La fuente rechaza expresamente la idea de reabrir."),
+            ("Que se olvide lo ocurrido para avanzar", "Sostiene lo contrario."),
+        ],
+    ),
+    _ql(
+        "civ_poderes", "civ_democracia", "medio",
+        "Según el texto, ¿por qué existe la separación de poderes?",
+        "Para el control recíproco: cada poder limita a los otros",
+        "El texto es explícito: «La finalidad de esta separación no es la "
+        "eficiencia sino el control recíproco».\n\n"
+        "La aclaración importa. Repartir el poder entre tres órganos hace el "
+        "gobierno más lento, no más rápido, y eso está asumido.\n\n"
+        "Lo que se busca es impedir que alguien concentre todo el poder, "
+        "aunque el costo sea perder agilidad.",
+        [
+            ("Para que el gobierno funcione con mayor rapidez", "El texto descarta expresamente la eficiencia como finalidad."),
+            ("Para repartir el trabajo administrativo del Estado", "La finalidad no es la división de tareas sino el control mutuo."),
+            ("Para que cada región tenga representación propia", "La separación de poderes no es una división territorial."),
+        ],
+    ),
+    _ql(
+        "civ_poderes", "civ_democracia", "medio",
+        "Según el texto, ¿cuál es el papel del Presidente en el proceso de "
+        "formación de una ley?",
+        "Puede presentar proyectos, vetarlos y promulgarlos, pero no legisla "
+        "por sí solo",
+        "El texto describe una participación acotada: el Presidente interviene "
+        "en varias etapas, sin reemplazar al Congreso.\n\n"
+        "Un proyecto debe ser aprobado por ambas cámaras antes de llegar a él "
+        "para su promulgación.\n\n"
+        "Esa cooperación forzada entre dos poderes es parte del diseño: ninguno "
+        "puede legislar por su cuenta.",
+        [
+            ("Aprueba las leyes en reemplazo del Congreso cuando hay urgencia", "El texto señala que no legisla por sí solo."),
+            ("No participa en absoluto del proceso legislativo", "Puede presentar proyectos, vetar y promulgar."),
+            ("Redacta las leyes que después el Congreso solo firma", "Ambas cámaras deben aprobarlas."),
+        ],
+    ),
+    _ql(
+        "civ_poderes", "civ_democracia", "dificil",
+        "Según el texto, ¿qué implica que el Estado de derecho alcance también "
+        "al gobierno?",
+        "Que ni el Presidente, ni un ministro, ni una mayoría parlamentaria "
+        "están por encima de la ley",
+        "El texto lo enuncia con esos tres ejemplos, y no son casuales: cubren "
+        "el Ejecutivo y el Legislativo, es decir a quienes tienen el poder."
+        "\n\n"
+        "Mencionar a la mayoría parlamentaria es lo más exigente: significa que "
+        "ni siquiera ganar una elección habilita a saltarse la ley.\n\n"
+        "Ese es el contenido real del principio. Si obligara solo a los "
+        "gobernados, no sería Estado de derecho sino simple autoridad.",
+        [
+            ("Que el gobierno puede modificar la ley cuando lo estime necesario", "El texto sostiene lo contrario: también está sometido a ella."),
+            ("Que los ciudadanos deben obedecer sin cuestionar", "El principio limita al poder, no aumenta la obediencia exigida."),
+            ("Que solo los tribunales están sujetos a la ley", "Alcanza a todas las personas e instituciones."),
+        ],
+    ),
+    _ql(
+        "civ_poderes", "civ_democracia", "medio",
+        "Según el texto, ¿qué funciones cumple el concejo municipal?",
+        "Normativas, resolutivas y de fiscalización, incluida la aprobación del "
+        "presupuesto comunal",
+        "El texto enumera las tres funciones y agrega dos tareas concretas: "
+        "aprueba el presupuesto comunal y controla la gestión del alcalde."
+        "\n\n"
+        "La fiscalización es la más relevante: introduce un contrapeso dentro "
+        "del propio municipio.\n\n"
+        "Ambas autoridades son elegidas por votación popular, así que el "
+        "control no viene de arriba sino de otro órgano con el mismo origen.",
+        [
+            ("Únicamente asesorar al alcalde en sus decisiones", "El texto le atribuye funciones resolutivas y de fiscalización, no solo asesoría."),
+            ("Designar al alcalde de entre sus miembros", "El alcalde es elegido por votación popular."),
+            ("Representar al Presidente en la comuna", "Esa función corresponde a otras autoridades."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿qué significa que el sufragio sea secreto y para qué "
+        "sirve?",
+        "Que nadie puede saber qué votó una persona y, por lo tanto, presionarla",
+        "El texto liga la característica a su propósito: el secreto existe para "
+        "impedir la presión.\n\n"
+        "Si el voto fuera conocido, un empleador, un dirigente o un familiar "
+        "podría condicionarlo, y la libertad de elegir se volvería nominal."
+        "\n\n"
+        "Cada uno de los cuatro adjetivos del sufragio responde a un abuso "
+        "histórico concreto; este responde al de la coacción.",
+        [
+            ("Que el conteo de votos se realiza en privado", "El escrutinio es público; lo secreto es el voto individual."),
+            ("Que solo la autoridad electoral conoce el resultado", "El resultado es público."),
+            ("Que no se difunden las cifras hasta el día siguiente", "El secreto se refiere al voto de cada persona."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "dificil",
+        "Según el texto, ¿por qué la sociedad civil organizada es un "
+        "complemento y no un sustituto de la representación electoral?",
+        "Porque actúa de forma permanente en el territorio, donde el voto no "
+        "llega",
+        "El texto distingue dos temporalidades. El voto se ejerce cada cierto "
+        "número de años; la sociedad civil organizada canaliza demandas «de "
+        "forma permanente».\n\n"
+        "Por eso no compite con la representación: cubre el espacio entre una "
+        "elección y la siguiente, en el día a día del territorio.\n\n"
+        "Ninguna de las dos formas alcanza sola: la representación decide, la "
+        "organización social vigila y presiona.",
+        [
+            ("Porque sus dirigentes no son elegidos democráticamente", "El texto no plantea un problema de legitimidad."),
+            ("Porque solo puede ocuparse de asuntos locales menores", "El texto no restringe su alcance a asuntos menores."),
+            ("Porque reemplaza a los partidos políticos", "El texto la presenta como complemento, no como reemplazo."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿qué demuestra la alternancia en el poder?",
+        "Que las elecciones son competitivas, que quien pierde acepta el "
+        "resultado y que el poder se entrega pacíficamente",
+        "El texto enumera las tres cosas que la alternancia prueba, y las tres "
+        "importan por separado.\n\n"
+        "Que las elecciones sean competitivas descarta que estén amarradas; "
+        "que el perdedor acepte descarta el fraude denunciado; que el poder se "
+        "entregue descarta el atrincheramiento.\n\n"
+        "Un sistema donde el oficialismo nunca puede perder tiene elecciones, "
+        "pero no competencia real.",
+        [
+            ("Que el gobierno saliente hizo mal su trabajo", "La alternancia no es un juicio sobre la gestión."),
+            ("Que la ciudadanía cambia de opinión con facilidad", "El texto no interpreta la alternancia como volatilidad."),
+            ("Que los partidos políticos han perdido influencia", "La alternancia se produce entre partidos y no implica su debilitamiento."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_derechos", "medio",
+        "Según el texto, ¿qué significa que los derechos humanos sean "
+        "inalienables?",
+        "Que no pueden limitarse por decisión de una mayoría",
+        "El texto lo señala al cerrar el primer párrafo: «Son además "
+        "inalienables: no pueden limitarse por decisión de una mayoría».\n\n"
+        "Es una idea exigente para la democracia: hay cosas que una votación no "
+        "puede decidir, por amplia que sea.\n\n"
+        "Justamente ahí está su función. Un derecho que la mayoría pudiera "
+        "suprimir no protegería a nadie de la mayoría.",
+        [
+            ("Que se pierden si la persona comete un delito grave", "El texto afirma que se garantizan incluso a quien la sociedad rechaza."),
+            ("Que solo los reconoce el país donde se nació", "Los derechos humanos no dependen de la nacionalidad."),
+            ("Que deben renovarse periódicamente por ley", "No requieren renovación: se reconocen, no se conceden."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_derechos", "dificil",
+        "Según el texto, ¿por qué la realización de los derechos de segunda "
+        "generación es progresiva?",
+        "Porque exigen prestaciones activas del Estado y dependen de los "
+        "recursos disponibles",
+        "El texto contrasta ambos tipos. Los de primera generación exigen que "
+        "el Estado se abstenga: no censurar, no detener arbitrariamente, y eso "
+        "puede cumplirse de inmediato.\n\n"
+        "Los de segunda exigen hacer: escuelas, hospitales, profesionales, "
+        "presupuesto. Nada de eso se construye por decreto.\n\n"
+        "De ahí que su cumplimiento sea gradual, lo que no lo vuelve optativo: "
+        "el Estado debe avanzar, no puede retroceder.",
+        [
+            ("Porque son menos importantes que los civiles y políticos", "El texto no los jerarquiza."),
+            ("Porque solo corresponden a quienes trabajan", "No dependen de la situación laboral de la persona."),
+            ("Porque fueron reconocidos mucho después de 1948", "La razón que da el texto es su naturaleza prestacional."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_derechos", "medio",
+        "Según el texto, ¿por qué se dice que el Estado no concede los derechos "
+        "humanos sino que los reconoce?",
+        "Porque corresponden a las personas por el solo hecho de serlo, antes "
+        "de cualquier decisión estatal",
+        "Si el Estado los concediera, podría también quitarlos: quedarían "
+        "sujetos a su voluntad.\n\n"
+        "El texto sostiene que existen con anterioridad a esa decisión, y que "
+        "la obligación estatal es respetarlos y garantizarlos, «incluso frente "
+        "a quien la sociedad rechaza».\n\n"
+        "Ese matiz es el que impide que se conviertan en un privilegio "
+        "revocable.",
+        [
+            ("Porque los tratados internacionales obligan a los Estados", "Los tratados los reconocen; el fundamento es anterior."),
+            ("Porque el Estado no tiene recursos para garantizarlos", "La disponibilidad de recursos es otro asunto."),
+            ("Porque los derechos se ganan con el cumplimiento de deberes", "El texto señala que no se ganan por mérito."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_derechos", "medio",
+        "Según el texto, ¿qué relación hay entre los derechos y los deberes "
+        "ciudadanos?",
+        "Los deberes son la contracara: sin ellos el Estado no podría "
+        "garantizar los derechos",
+        "El texto los presenta como dos caras de lo mismo: «Para que el Estado "
+        "garantice educación, salud o seguridad necesita recursos y un marco de "
+        "convivencia respetado por todos».\n\n"
+        "De ahí que respetar la ley, pagar impuestos y cuidar los bienes "
+        "públicos no sean concesiones sino condiciones.\n\n"
+        "No se trata de un intercambio —los derechos no se pierden por "
+        "incumplir un deber— sino de sostenibilidad.",
+        [
+            ("Los deberes se cumplen a cambio de recibir derechos", "Los derechos no dependen del cumplimiento de deberes."),
+            ("No existe ninguna relación entre ambos", "El texto los vincula explícitamente."),
+            ("Los deberes solo obligan a quienes pagan impuestos", "Alcanzan a toda la ciudadanía."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_derechos", "medio",
+        "Según el texto, ¿qué distingue al recurso de protección de un juicio "
+        "ordinario?",
+        "Su rapidez: busca restablecer el imperio del derecho sin esperar un "
+        "juicio completo",
+        "El texto lo señala como su característica definitoria.\n\n"
+        "Un juicio ordinario puede tomar años, y hay vulneraciones que no "
+        "admiten esa espera: una amenaza a la vida o a la salud requiere "
+        "respuesta inmediata.\n\n"
+        "Por eso se acude directamente a la Corte de Apelaciones, saltándose "
+        "las etapas de un procedimiento común.",
+        [
+            ("Que solo pueden usarlo los abogados", "El texto señala que puede acudir cualquier persona."),
+            ("Que no requiere presentarse ante un tribunal", "Se presenta ante la Corte de Apelaciones."),
+            ("Que se aplica a cualquier conflicto entre particulares", "Procede frente a actos arbitrarios o ilegales que afecten ciertos derechos."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_derechos", "dificil",
+        "Según el texto, ¿por qué la palabra «arbitraria» es decisiva en la "
+        "definición de discriminación?",
+        "Porque no toda distinción es ilegal: lo prohibido es la que carece de "
+        "justificación razonable",
+        "El texto entrega dos ejemplos que se contrastan.\n\n"
+        "Exigir un título profesional para ejercer medicina es una distinción "
+        "razonable: hay una razón directa entre el requisito y la función. "
+        "Rechazar a alguien por su nacionalidad no la tiene.\n\n"
+        "Sin ese adjetivo, la norma prohibiría cualquier diferencia y sería "
+        "inaplicable. Con él, distingue entre criterio y prejuicio.",
+        [
+            ("Porque solo se sancionan las discriminaciones intencionales", "El criterio es la falta de justificación, no la intención."),
+            ("Porque las distinciones legales requieren autorización previa", "No se exige autorización para distinciones razonables."),
+            ("Porque la ley solo protege a ciertos grupos específicos", "La norma protege frente a distinciones arbitrarias en general."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_derechos", "medio",
+        "Según el texto, ¿por qué existe una ley especial que protege al "
+        "consumidor?",
+        "Porque entre un comercio y un consumidor hay un desequilibrio que el "
+        "acuerdo privado no corrige",
+        "El texto lo dice de forma directa al cerrar ese párrafo.\n\n"
+        "Un comercio conoce el producto, redacta el contrato y tiene asesoría "
+        "legal; el consumidor rara vez cuenta con eso.\n\n"
+        "Dejar la relación al puro acuerdo entre partes supondría una igualdad "
+        "que no existe, y por eso la ley fija garantías mínimas que no pueden "
+        "renunciarse.",
+        [
+            ("Porque los comercios suelen actuar de mala fe", "El fundamento es estructural, no una presunción de mala fe."),
+            ("Porque el Código Civil no regula las compraventas", "Sí las regula; la ley del consumidor agrega protecciones específicas."),
+            ("Porque los consumidores desconocen sus obligaciones", "El fundamento es el desequilibrio entre las partes."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_derechos", "dificil",
+        "Según el texto, ¿por qué exigir al acusado que demuestre su inocencia "
+        "sería un problema práctico además de jurídico?",
+        "Porque lo obligaría a probar un hecho negativo, algo por lo general "
+        "imposible",
+        "El texto agrega esa razón práctica a la garantía jurídica.\n\n"
+        "Probar que algo ocurrió requiere presentar evidencia de ello. Probar "
+        "que NO ocurrió exige, en rigor, descartar todas las posibilidades, y "
+        "eso rara vez puede hacerse.\n\n"
+        "Por eso la carga recae en quien acusa: es el único que puede aportar "
+        "evidencia positiva de lo que sostiene.",
+        [
+            ("Porque los acusados no tienen acceso a abogados", "El texto no menciona el acceso a defensa como fundamento."),
+            ("Porque los tribunales no cuentan con tiempo suficiente", "La razón es la naturaleza de la prueba, no la carga de trabajo."),
+            ("Porque las pruebas siempre favorecen a quien acusa", "El texto no afirma eso."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_derechos", "medio",
+        "Según el texto, ¿por qué la autonomía del INDH es esencial para su "
+        "función?",
+        "Porque debe fiscalizar al Estado, que es el principal obligado en "
+        "materia de derechos humanos",
+        "El texto lo explica sin rodeos: si dependiera del gobierno de turno, "
+        "no podría fiscalizar al Estado.\n\n"
+        "El razonamiento es simple y contundente: nadie puede controlar "
+        "eficazmente a quien lo nombra y puede removerlo.\n\n"
+        "Por eso el INDH es una corporación autónoma de derecho público, con "
+        "capacidad para emitir informes críticos y deducir acciones judiciales.",
+        [
+            ("Porque así puede recibir financiamiento internacional", "El texto no vincula la autonomía con el financiamiento."),
+            ("Porque debe representar al Estado ante otros países", "Esa representación corresponde a la Cancillería."),
+            ("Porque los tribunales no aceptan acciones de organismos estatales", "El texto no plantea ese impedimento."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "medio",
+        "Según el texto, ¿por qué la periodización es una construcción y no un "
+        "hecho?",
+        "Porque el historiador la traza según un criterio, y criterios distintos "
+        "producen periodizaciones distintas",
+        "El texto insiste en que el tiempo histórico es continuo: «no viene "
+        "cortado en pedazos».\n\n"
+        "Los cortes los pone el historiador según lo que quiera analizar: un "
+        "criterio político, uno económico y uno cultural dividen el mismo "
+        "pasado de maneras diferentes.\n\n"
+        "La frase que cierra la idea lo resume: «nadie se acostó en la Edad "
+        "Media y despertó en la Edad Moderna».",
+        [
+            ("Porque los historiadores no logran ponerse de acuerdo en las fechas", "No es un problema de desacuerdo sino de criterio de análisis."),
+            ("Porque las fuentes de cada época son incompletas", "La razón no está en las fuentes disponibles."),
+            ("Porque las etapas históricas cambian con el tiempo", "El pasado no cambia; cambia cómo se lo divide para estudiarlo."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "dificil",
+        "Según el texto, ¿por qué un mismo hecho puede ser causa y consecuencia "
+        "a la vez?",
+        "Porque depende del proceso que se esté analizando",
+        "El texto entrega un ejemplo concreto: una crisis económica es "
+        "consecuencia de una guerra y, al mismo tiempo, causa de un cambio "
+        "político posterior.\n\n"
+        "El hecho es uno solo; lo que cambia es el proceso desde el cual se lo "
+        "mira.\n\n"
+        "De ahí que preguntar «¿es causa o consecuencia?» sin especificar de "
+        "qué no tenga respuesta posible.",
+        [
+            ("Porque los historiadores interpretan los hechos de forma subjetiva", "La razón es el marco de análisis, no la subjetividad."),
+            ("Porque las causas se transforman en consecuencias con el tiempo", "No hay transformación: el hecho ocupa distinto lugar según el proceso."),
+            ("Porque toda causa produce siempre una única consecuencia", "El texto sostiene lo contrario respecto de la multicausalidad."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "medio",
+        "Según el texto, ¿qué distingue una causa estructural de una inmediata?",
+        "La estructural prepara el terreno durante años; la inmediata actúa "
+        "como detonante",
+        "El texto introduce la distinción al hablar de multicausalidad.\n\n"
+        "Las causas estructurales operan lentamente y crean las condiciones: "
+        "desigualdad acumulada, deterioro institucional. Las inmediatas son el "
+        "hecho puntual que desencadena.\n\n"
+        "Confundirlas hace que el detonante parezca la explicación completa, "
+        "que es el error más común al contar un proceso histórico.",
+        [
+            ("La estructural es política y la inmediata, económica", "Ambas pueden ser de cualquier tipo."),
+            ("La estructural es más importante que la inmediata", "El texto no las jerarquiza: operan en tiempos distintos."),
+            ("La inmediata siempre ocurre después del proceso", "La inmediata precede al proceso; lo desencadena."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "dificil",
+        "Según el texto, ¿por qué reconstruir el contexto «no es un adorno "
+        "introductorio»?",
+        "Porque es lo que impide leer el pasado como si hubiera ocurrido en "
+        "nuestra época",
+        "El texto entrega un ejemplo que lo demuestra: publicar un texto "
+        "crítico bajo una dictadura y hacerlo en democracia «no son el mismo "
+        "acto».\n\n"
+        "La acción es idéntica; lo que cambia es lo que significa y lo que "
+        "arriesga quien la realiza.\n\n"
+        "Sin contexto, el historiador describiría gestos vacíos. Con él, puede "
+        "explicar por qué ocurrieron y qué pesaban.",
+        [
+            ("Porque permite ubicar el hecho en el mapa", "La ubicación geográfica es un dato del contexto, pero no su función principal."),
+            ("Porque las introducciones deben ser extensas", "El texto discute la función del contexto, no la extensión de un escrito."),
+            ("Porque los lectores actuales desconocen las fechas", "La razón no es el desconocimiento de fechas."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_temporal", "medio",
+        "Según el texto, ¿qué NO implica que la historia se reescriba con cada "
+        "generación?",
+        "Que la disciplina sea arbitraria: las afirmaciones siguen exigiendo "
+        "evidencia",
+        "El texto se anticipa a la objeción más previsible.\n\n"
+        "Reconoce que las preguntas cambian, que se abren archivos y aparecen "
+        "técnicas nuevas, pero cierra con una advertencia: «Eso no vuelve "
+        "arbitraria la disciplina».\n\n"
+        "Lo que cambia es qué se busca y con qué herramientas, no la exigencia "
+        "de sostener cada afirmación con evidencia.",
+        [
+            ("Que aparezcan temas que antes no se investigaban", "El texto afirma justamente que eso ocurre."),
+            ("Que se abran archivos antes inaccesibles", "El texto lo menciona como una de las causas."),
+            ("Que las preguntas al pasado cambien con el tiempo", "Es lo que el texto sostiene."),
+        ],
+    ),
 ]
 
 
