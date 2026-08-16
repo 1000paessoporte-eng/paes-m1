@@ -3,16 +3,17 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { marcarMostrado } from "@/lib/anuncios";
 
 /**
  * El anuncio del premio al puntaje nacional, al entrar al panel.
  *
  * Tres decisiones que hacen la diferencia entre un anuncio y una molestia:
  *
- * 1. **Se muestra una sola vez.** Un modal en cada inicio de sesión se cierra
- *    sin leer a la segunda vez y deja al estudiante peleado con la aplicación.
- *    La versión va en la clave guardada, así que se puede lanzar otro anuncio
- *    más adelante sin volver a mostrar este.
+ * 1. **Se muestra una vez al día como máximo, y alternando con el aviso del
+ *    plan Pro.** El turno lo decide `lib/anuncios.ts` y no este componente:
+ *    si cada aviso resolviera su propio calendario, dos podrían caer el mismo
+ *    día y el estudiante los cerraría sin leer ninguno.
  *
  * 2. **Aparece después de un instante**, no encima de la pantalla en blanco:
  *    quien entra apurado a rendir un ensayo alcanza a ver dónde está parado
@@ -23,7 +24,6 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
  *    el que va en 0 ve exactamente qué tendría que hacer.
  */
 
-const CLAVE = "anuncio-premio-v1";
 const ESPERA_MS = 900;
 
 export interface ProgresoPremio {
@@ -44,8 +44,9 @@ export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
   const quieto = useReducedMotion();
   const cerrarRef = useRef<HTMLButtonElement>(null);
 
+  // Quién decide si toca mostrarlo hoy es el panel, no este componente: si
+  // cada aviso resolviera su propio turno, dos podrían coincidir el mismo día.
   useEffect(() => {
-    if (localStorage.getItem(CLAVE)) return;
     const id = setTimeout(() => setAbierto(true), ESPERA_MS);
     return () => clearTimeout(id);
   }, []);
@@ -63,7 +64,7 @@ export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
   }, [abierto]);
 
   function cerrar() {
-    localStorage.setItem(CLAVE, new Date().toISOString());
+    marcarMostrado("premio");
     setAbierto(false);
   }
 
