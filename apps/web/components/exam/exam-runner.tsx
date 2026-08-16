@@ -8,6 +8,7 @@ import { Burbuja } from "@/components/ui/burbuja";
 import { TextoRico } from "@/components/texto-rico";
 import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
+import { LimiteAlcanzado } from "@/components/exam/limite-alcanzado";
 import { QuestionNavigator } from "@/components/exam/question-navigator";
 import {
   ApiError,
@@ -31,7 +32,7 @@ import { formatearReloj } from "@/lib/tiempo";
 const STORAGE_KEY = "paes_exam_attempt_id";
 const LABELS = ["A", "B", "C", "D", "E"];
 
-type Phase = "config" | "loading" | "in_progress" | "submitted";
+type Phase = "config" | "loading" | "in_progress" | "submitted" | "limite";
 
 interface AnswerState {
   selected: number | null;
@@ -48,6 +49,9 @@ interface ExamRunnerProps {
   pastAttempts: ExamAttemptSummary[];
   resumable: ResumableAttempt | null;
   repasoBySubject: Record<Subject, Repaso>;
+  //: Cuota de ensayos del mes, para avisarle al alumno ANTES de que choque.
+  //: Llega desde el servidor para no hacer otra llamada al montar.
+  cuota?: { usados: number; limite: number | null; activa: boolean } | null;
 }
 
 export function ExamRunner({
@@ -55,6 +59,7 @@ export function ExamRunner({
   pastAttempts,
   resumable,
   repasoBySubject,
+  cuota,
 }: ExamRunnerProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -72,6 +77,9 @@ export function ExamRunner({
   const [confirmingSubmit, setConfirmingSubmit] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  //: Motivo exacto que devuelve la API al tocar el tope del plan. Se muestra
+  //: literal para que el alumno vea el número real, no una frase genérica.
+  const [limiteMotivo, setLimiteMotivo] = useState<string | null>(null);
 
   const segmentStartRef = useRef(0);
   const attemptIdRef = useRef<number | null>(null);
@@ -334,6 +342,13 @@ export function ExamRunner({
         router.push(loginHref(pathname));
         return;
       }
+      // 409 con motivo es el tope del plan, no una falla. Mezclarlos hacía que
+      // el alumno viera un error técnico donde había una decisión de producto.
+      if (err instanceof ApiError && err.status === 409 && err.detail) {
+        setLimiteMotivo(err.detail);
+        setPhase("limite");
+        return;
+      }
       setErrorMsg("No se pudo iniciar el ensayo. Verifica que la API esté disponible.");
       setPhase("config");
     }
@@ -343,6 +358,18 @@ export function ExamRunner({
     () => Object.values(answers).filter((a) => a.selected != null).length,
     [answers]
   );
+
+  if (phase === "limite") {
+    return (
+      <LimiteAlcanzado
+        motivo={limiteMotivo ?? "Llegaste al límite de ensayos de tu plan."}
+        onVolver={() => {
+          setLimiteMotivo(null);
+          setPhase("config");
+        }}
+      />
+    );
+  }
 
   if (phase === "loading") {
     return (
@@ -374,6 +401,7 @@ export function ExamRunner({
         optionsBySubject={optionsBySubject}
         repasoBySubject={repasoBySubject}
         ensayosRendidos={pastAttempts.length}
+        cuota={cuota}
         resumable={resumable}
         errorMsg={errorMsg}
         onComenzar={handleStart}

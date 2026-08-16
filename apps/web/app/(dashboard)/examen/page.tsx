@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getExamOptions, getRepaso, listExamAttempts } from "@/lib/api";
+import { ApiError, getExamOptions, getMiPlan, getRepaso, listExamAttempts } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ExamRunner } from "@/components/exam/exam-runner";
 
@@ -45,6 +45,20 @@ export default async function ModoEnsayoPage() {
       getRepaso(token, "historia"),
     ]);
 
+  // La cuota se pide aparte y con su propio try: si falla, el alumno igual
+  // puede rendir. Un aviso de cupo no vale romper la pantalla del ensayo.
+  let cuota = null;
+  try {
+    const plan = await getMiPlan(token);
+    cuota = {
+      usados: plan.ensayos_usados,
+      limite: plan.ensayos_limite,
+      activa: plan.limites_activos,
+    };
+  } catch {
+    cuota = null;
+  }
+
   const pastAttempts = attempts.filter((a) => a.status === "submitted");
   // Se pasa también el subject: el ensayo pendiente puede ser de otra prueba
   // que la elegida en pantalla, y retomarlo cambia de prueba. Hay que decirlo.
@@ -59,6 +73,7 @@ export default async function ModoEnsayoPage() {
         ciencias: optionsCiencias,
         historia: optionsHistoria,
       }}
+      cuota={cuota}
       repasoBySubject={{
         m1: repasoM1,
         m2: repasoM2,

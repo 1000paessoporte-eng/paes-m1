@@ -51,16 +51,29 @@ class Limites:
     analisis_avanzado: bool
 
 
-LIMITES: dict[Plan, Limites] = {
-    # El plan Gratis tiene que dejar APRENDER completo: las lecciones y el árbol
-    # entero están incluidos a propósito. Lo que se limita es el volumen de
-    # simulacros, que es lo caro de producir, no el acceso al contenido.
-    Plan.GRATIS: Limites(ensayos_por_mes=4, carreras_en_meta=1, analisis_avanzado=False),
-    Plan.PRO: Limites(ensayos_por_mes=None, carreras_en_meta=10, analisis_avanzado=True),
-    Plan.COLEGIOS: Limites(
-        ensayos_por_mes=None, carreras_en_meta=10, analisis_avanzado=True
-    ),
-}
+def limites_de(plan: Plan) -> Limites:
+    """Qué permite cada plan.
+
+    El plan Gratis tiene que dejar APRENDER completo: las lecciones y el árbol
+    entero están incluidos a propósito. Lo que se limita es el volumen de
+    simulacros, que es lo caro de producir, no el acceso al contenido. Un muro
+    sobre el material de estudio ahuyenta al que todavía no sabe si el producto
+    le sirve; uno sobre la cantidad de ensayos lo deja comprobarlo y aprieta
+    recién cuando ya le encontró el valor.
+
+    La cuota del plan Gratis se lee del entorno en cada llamada para poder
+    ajustarla mirando la conversión, sin desplegar.
+    """
+    if plan is Plan.GRATIS:
+        return Limites(
+            ensayos_por_mes=get_settings().ensayos_gratis_por_mes,
+            carreras_en_meta=1,
+            analisis_avanzado=False,
+        )
+    return Limites(ensayos_por_mes=None, carreras_en_meta=10, analisis_avanzado=True)
+
+
+
 
 
 @dataclass(frozen=True)
@@ -179,7 +192,7 @@ def ensayos_del_mes(db: Session, user_id: int) -> int:
 def puede_rendir(db: Session, user_id: int) -> tuple[bool, str | None]:
     """Si puede empezar otro ensayo, y si no, por qué."""
     plan, _ = plan_actual(db, user_id)
-    limite = LIMITES[plan].ensayos_por_mes
+    limite = limites_de(plan).ensayos_por_mes
     if limite is None:
         return True, None
 
