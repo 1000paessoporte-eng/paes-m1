@@ -110,7 +110,13 @@ const CONFIANZA = [
   },
 ] as const;
 
-export function LandingPublica({ stats }: { stats: ContentStats | null }) {
+export function LandingPublica({
+  stats,
+  pagoDisponible = false,
+}: {
+  stats: ContentStats | null;
+  pagoDisponible?: boolean;
+}) {
   return (
     <main className="flex flex-1 flex-col">
       <section className="hero-glow relative overflow-hidden px-6 pt-24 pb-24 sm:pt-28">
@@ -374,7 +380,7 @@ export function LandingPublica({ stats }: { stats: ContentStats | null }) {
       {/* ── Cierre motivacional ─────────────────────────────────────── */}
       <CierreMotivacional />
 
-      <Planes />
+      <Planes pagoDisponible={pagoDisponible} />
 
       <SiteFooter />
     </main>

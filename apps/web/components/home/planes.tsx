@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BotonComprar } from "@/components/plan/boton-comprar";
 /*
  * PRECIO DE LANZAMIENTO, NO "ANTES/AHORA"
  * ---------------------------------------
@@ -141,21 +142,30 @@ const PLANES = [
   },
 ] as const;
 
-export function Planes() {
+/**
+ * `pagoDisponible` llega desde la API y no está escrito a mano a propósito.
+ * Cuando existan las credenciales de Flow, esta página deja de decir
+ * "Disponible pronto" sola, sin que nadie tenga que acordarse de editarla y
+ * volver a desplegar. Y si el cobro se cae, vuelve al estado honesto en vez de
+ * ofrecer un botón que lleva a un error.
+ */
+export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean }) {
   return (
     <section id="planes" className="border-t border-border px-6 py-20">
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-lg text-center">
-          <span className="rounded-full border border-accent/40 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-            Próximamente
-          </span>
+          {!pagoDisponible && (
+            <span className="rounded-full border border-accent/40 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
+              Próximamente
+            </span>
+          )}
           <h2 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
             Planes
           </h2>
           <p className="mt-3 text-sm text-muted">
-            Hoy todo lo que ves está disponible sin costo, y seguirá estándolo
-            para el plan Gratis. Estos son los precios de los planes que vienen;
-            avisaremos antes de que empiece a cobrarse.
+            {pagoDisponible
+              ? "El plan Gratis es y seguirá siendo sin costo. Pro agrega ensayos sin límite y el análisis completo de tus errores."
+              : "Hoy todo lo que ves está disponible sin costo, y seguirá estándolo para el plan Gratis. Estos son los precios de los planes que vienen; avisaremos antes de que empiece a cobrarse."}
           </p>
           <p className="mt-2 text-xs text-muted">
             Valores en pesos chilenos, IVA incluido.
@@ -232,13 +242,21 @@ export function Planes() {
                 ))}
               </ul>
 
-              <button
-                type="button"
-                disabled
-                className="mt-6 w-full cursor-not-allowed rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-muted"
-              >
-                {plan.disponible ? "Es el plan actual" : "Disponible pronto"}
-              </button>
+              {pagoDisponible && plan.nombre === "Pro" ? (
+                <BotonComprar producto="pro_mensual" etiqueta="Contratar Pro" />
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  className="mt-6 w-full cursor-not-allowed rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-muted"
+                >
+                  {plan.disponible
+                    ? "Es el plan actual"
+                    : plan.nombre === "Colegios"
+                      ? "Escríbenos"
+                      : "Disponible pronto"}
+                </button>
+              )}
             </div>
           ))}
         </div>

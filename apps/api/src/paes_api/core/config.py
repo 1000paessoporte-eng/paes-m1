@@ -34,6 +34,12 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
     smtp_from: str = "1000paes <no-responder@1000paes.cl>"
+    #: Si los límites del plan Gratis bloquean de verdad. Va por entorno y no
+    #: en el código para que encenderlos no exija un despliegue: el día que el
+    #: cobro funcione se cambia la variable y listo. Arranca APAGADO a
+    #: propósito, porque cortarle los ensayos a alguien antes de que exista la
+    #: forma de pagar es dejarlo sin salida.
+    limites_activos: bool = False
     #: Origen público de esta API. Flow necesita una URL alcanzable desde
     #: internet para avisar que un pago se completó, y esa URL no puede
     #: derivarse de la petición del usuario: la fija el despliegue.

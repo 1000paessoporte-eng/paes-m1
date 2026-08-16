@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { getContentStats, type ContentStats } from "@/lib/api";
+import { getContentStats, getProductos, type ContentStats } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { LandingPublica } from "@/components/home/landing-publica";
 
@@ -25,5 +25,14 @@ export default async function HomePage() {
     stats = null;
   }
 
-  return <LandingPublica stats={stats} />;
+  // Igual que las cifras: si el catálogo no responde, la portada muestra los
+  // planes sin botón de compra en vez de ofrecer uno que llevaría a un error.
+  let pagoDisponible = false;
+  try {
+    pagoDisponible = (await getProductos()).pago_disponible;
+  } catch {
+    pagoDisponible = false;
+  }
+
+  return <LandingPublica stats={stats} pagoDisponible={pagoDisponible} />;
 }

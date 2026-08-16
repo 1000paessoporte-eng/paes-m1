@@ -1,7 +1,7 @@
 """Qué plan tiene cada usuario, qué puede hacer con él, y cómo se canjea un código.
 
 Una decisión que ordena todo el módulo: **los límites del plan Gratis existen
-en el código pero no se aplican todavía** (ver `LIMITES_ACTIVOS`). Cortarle los
+en el código pero no se aplican todavía** (ver `limites_activos()`). Cortarle los
 ensayos a alguien hoy sería mandarlo a una pantalla que dice "contrata Pro" y
 que abajo dice "disponible pronto": la frustración sin la salida. El día que
 exista la pasarela se cambia una constante y el sistema entero empieza a
@@ -15,6 +15,7 @@ from uuid import uuid4
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from paes_api.core.config import get_settings
 from paes_api.modules.billing import flow
 from paes_api.modules.billing.models import (
     Origen,
@@ -28,9 +29,16 @@ from paes_api.modules.billing.models import (
 from paes_api.modules.exam_focus.models import ExamAttempt
 from paes_api.modules.users.models import User
 
-#: Interruptor general. En False los límites se calculan y se muestran, pero no
-#: bloquean nada. Se enciende el día que se pueda contratar el plan Pro.
-LIMITES_ACTIVOS = False
+
+def limites_activos() -> bool:
+    """Si los límites del plan Gratis bloquean de verdad.
+
+    En False se calculan y se muestran —el alumno ve "2 de 4 ensayos este
+    mes"— pero no impiden nada. Se lee del entorno en cada llamada y no de una
+    constante de módulo para que encenderlos sea cambiar una variable, no
+    editar código y volver a desplegar.
+    """
+    return get_settings().limites_activos
 
 
 @dataclass(frozen=True)
@@ -184,7 +192,7 @@ def puede_rendir(db: Session, user_id: int) -> tuple[bool, str | None]:
         "El plan Pro no tiene límite."
     )
     # Mientras no se pueda contratar Pro, el límite se informa pero no corta.
-    return (not LIMITES_ACTIVOS), motivo
+    return (not limites_activos()), motivo
 
 
 def canjear_codigo(db: Session, user_id: int, codigo: str) -> Subscription:
