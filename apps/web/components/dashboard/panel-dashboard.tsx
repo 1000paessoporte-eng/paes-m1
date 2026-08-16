@@ -5,6 +5,7 @@ import type {
   BreakdownItem,
   ExamAttemptSummary,
   Meta,
+  MiPlan,
   Onboarding,
   SkillNode,
 } from "@/lib/api";
@@ -12,8 +13,11 @@ import { formatearTiempo } from "@/lib/tiempo";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
 import { AnuncioPremio } from "@/components/premio/anuncio-premio";
+import { AnuncioPlanes } from "@/components/plan/anuncio-planes";
+import { AnunciosDiarios } from "@/components/dashboard/anuncios-diarios";
 import { Cuestionario } from "@/components/onboarding/cuestionario";
 import { MetaModulo } from "@/components/dashboard/meta-modulo";
+import { ProModulo } from "@/components/dashboard/pro-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
 import { Insignias, Racha } from "@/components/gamificacion/logros";
 import { calcularLogros } from "@/lib/logros";
@@ -43,6 +47,8 @@ interface Props {
   meta: Meta | null;
   onboarding: Onboarding | null;
   ejesDe: string | null;
+  //: Plan del alumno, para decidir si corresponde ofrecerle Pro.
+  plan?: MiPlan | null;
 }
 
 export function PanelDashboard({
@@ -55,6 +61,7 @@ export function PanelDashboard({
   meta,
   onboarding,
   ejesDe,
+  plan,
 }: Props) {
   const rendidos = attempts.filter((a) => a.status === "submitted");
   const puntajes = rendidos.map((a) => a.estimated_score ?? 0);
@@ -104,12 +111,26 @@ export function PanelDashboard({
       {onboarding && !onboarding.respondido ? (
         <Cuestionario nombre={nombre} />
       ) : (
-        <AnuncioPremio
-        progreso={{
-          ensayosCompletos,
-          diasPracticados: analytics?.active_days ?? 0,
-          mejorRachaEnsayos: analytics?.best_exam_streak_days ?? 0,
-          }}
+        <AnunciosDiarios
+          ofrecerPro={plan != null && plan.plan === "gratis"}
+          premio={
+            <AnuncioPremio
+              progreso={{
+                ensayosCompletos,
+                diasPracticados: analytics?.active_days ?? 0,
+                mejorRachaEnsayos: analytics?.best_exam_streak_days ?? 0,
+              }}
+            />
+          }
+          planes={
+            plan ? (
+              <AnuncioPlanes
+                usados={plan.ensayos_usados}
+                limite={plan.ensayos_limite}
+                precio="$5.990 al mes"
+              />
+            ) : null
+          }
         />
       )}
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
@@ -152,6 +173,17 @@ export function PanelDashboard({
           <Reveal delay={0.2}>
             <Insignias logros={logros} />
           </Reveal>
+
+          {/* El plan Pro, solo para quien está en Gratis. A quien ya lo tiene
+              no se le ofrece lo que ya compró. */}
+          {plan?.plan === "gratis" && (
+            <Reveal delay={0.22}>
+              <ProModulo
+                usados={plan.ensayos_usados}
+                limite={plan.ensayos_limite}
+              />
+            </Reveal>
+          )}
 
           {/* Accesos secundarios */}
           <Reveal delay={0.25} className="lg:col-span-2">
