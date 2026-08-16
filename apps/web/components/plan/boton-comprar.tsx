@@ -40,7 +40,9 @@ export function BotonComprar({
       // Se abandona el sitio hacia Flow. No se limpia `cargando` a propósito:
       // el botón queda inhabilitado hasta que cambie la página, de modo que un
       // doble clic no genere dos órdenes.
-      window.location.href = url;
+      // assign() y no `location.href = ...`: asignar sobre el objeto global
+      // es una mutación que el linter de React marca como error.
+      window.location.assign(url);
     } catch (err) {
       setError(
         err instanceof ApiError && err.detail
