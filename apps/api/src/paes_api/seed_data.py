@@ -13004,6 +13004,539 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Transformaciones isométricas — segunda tanda.
+#
+# Las 33 preguntas que ya existían eran todas del mismo molde: "el punto (a, b)
+# se traslada / refleja / rota, cuáles son sus nuevas coordenadas". Ninguna tenía
+# contexto, y el temario DEMRE pide para esta unidad "problemas que involucren
+# rotación, traslación y reflexión en diversos contextos", además de "puntos y
+# vectores en el plano cartesiano".
+#
+# Esta tanda agrega el contexto (un dron, un robot, un videojuego, el plano de
+# una bodega) y sobre todo tipos de pregunta que faltaban: reflexiones respecto
+# de rectas que no son los ejes, composición de traslaciones, el problema
+# inverso --dado el resultado, encontrar el punto o el vector de partida--,
+# módulo de un vector, y las propiedades que distinguen una isometría de una
+# transformación que no lo es.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_transformaciones", "facil",
+        "En un videojuego, un personaje está en la casilla (7, 3) y se mueve según el vector (−3, 5). ¿En qué casilla queda?",
+        "(4, 8)",
+        "Trasladar es sumar el vector a las coordenadas, cada componente con la suya.\n\n"
+        "1) La primera coordenada se suma con la primera del vector: 7 + (−3) = 4.\n"
+        "2) La segunda con la segunda: 3 + 5 = 8.\n"
+        "3) El personaje queda en (4, 8). Fíjate en que la componente negativa del vector mueve hacia la izquierda, por eso la primera coordenada bajó.",
+        [
+            ("(10, 8)", "Sumó 3 en lugar de −3, ignorando el signo del vector."),
+            ("(4, −2)", "Restó la segunda componente en vez de sumarla."),
+            ("(−3, 5)", "Dio el vector en lugar del punto trasladado."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "Un dron se encuentra en el punto (−4, 2) y se desplaza según el vector (6, −5). ¿Cuál es su nueva posición?",
+        "(2, −3)",
+        "Se suma componente a componente, respetando los signos.\n\n"
+        "1) Primera coordenada: −4 + 6 = 2.\n"
+        "2) Segunda coordenada: 2 + (−5) = −3.\n"
+        "3) El dron queda en (2, −3).",
+        [
+            ("(−10, 7)", "Restó el vector en lugar de sumarlo."),
+            ("(2, 7)", "Sumó 5 en vez de −5, ignorando el signo."),
+            ("(10, −3)", "Cambió el signo de la primera coordenada del punto antes de sumar."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (9, −4) al reflejarlo respecto del eje X?",
+        "(9, 4)",
+        "El eje X funciona como un espejo horizontal: cambia solo la altura.\n\n"
+        "1) Reflejar respecto del eje X deja igual la primera coordenada y le cambia el signo a la segunda.\n"
+        "2) La primera se mantiene: 9.\n"
+        "3) La segunda cambia de signo: −4 pasa a 4.\n"
+        "4) El punto reflejado es (9, 4). Tiene sentido: estaba 4 unidades bajo el eje y queda 4 unidades sobre él.",
+        [
+            ("(−9, −4)", "Reflejó respecto del eje Y, cambiando la coordenada equivocada."),
+            ("(−9, 4)", "Cambió el signo de las dos coordenadas, que corresponde a reflejar respecto del origen."),
+            ("(9, −4)", "Dejó el punto igual, sin aplicar la reflexión."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (−8, 5) al reflejarlo respecto del eje Y?",
+        "(8, 5)",
+        "El eje Y es un espejo vertical: cambia solo el desplazamiento horizontal.\n\n"
+        "1) Reflejar respecto del eje Y le cambia el signo a la primera coordenada y deja igual la segunda.\n"
+        "2) La primera cambia de signo: −8 pasa a 8.\n"
+        "3) La segunda se mantiene: 5.\n"
+        "4) El punto reflejado es (8, 5).",
+        [
+            ("(−8, −5)", "Reflejó respecto del eje X, cambiando la coordenada equivocada."),
+            ("(8, −5)", "Cambió el signo de las dos coordenadas, que corresponde a reflejar respecto del origen."),
+            ("(5, −8)", "Intercambió las coordenadas, que corresponde a reflejar respecto de la recta y = x."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "El punto (6, 0) se rota 180° en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(−6, 0)",
+        "Una rotación de 180° manda cada punto al lado opuesto del origen, a la misma distancia.\n\n"
+        "1) La regla es que las dos coordenadas cambian de signo.\n"
+        "2) La primera: 6 pasa a −6.\n"
+        "3) La segunda: 0 cambiado de signo sigue siendo 0.\n"
+        "4) El punto queda en (−6, 0), justo al otro lado del origen sobre el mismo eje.",
+        [
+            ("(6, 0)", "Dejó el punto igual; girar 180° sí lo mueve, salvo que estuviera en el origen."),
+            ("(0, 6)", "Rotó 90° en lugar de 180°."),
+            ("(0, −6)", "Rotó 90° en el sentido contrario en lugar de 180°."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "Una ficha ubicada en (0, 7) se rota 90° en sentido horario en torno al origen. ¿Dónde queda?",
+        "(7, 0)",
+        "En sentido horario, la regla es que el punto (x, y) va a parar a (y, −x).\n\n"
+        "1) La nueva primera coordenada es la segunda del punto original: 7.\n"
+        "2) La nueva segunda coordenada es la primera cambiada de signo: −0, que es 0.\n"
+        "3) La ficha queda en (7, 0). Se puede comprobar imaginando el giro: estaba arriba sobre el eje vertical, y girando en el sentido de los punteros del reloj queda a la derecha sobre el eje horizontal.",
+        [
+            ("(−7, 0)", "Rotó en sentido antihorario en lugar de horario."),
+            ("(0, −7)", "Rotó 180° en vez de 90°."),
+            ("(7, 7)", "Copió la segunda coordenada en las dos posiciones."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (2, 9) al reflejarlo respecto del origen?",
+        "(−2, −9)",
+        "Reflejar respecto del origen equivale a rotar 180°: el punto va al lado opuesto.\n\n"
+        "1) Las dos coordenadas cambian de signo.\n"
+        "2) La primera: 2 pasa a −2.\n"
+        "3) La segunda: 9 pasa a −9.\n"
+        "4) El punto queda en (−2, −9).",
+        [
+            ("(−2, 9)", "Cambió el signo solo de la primera coordenada, que es reflejar respecto del eje Y."),
+            ("(2, −9)", "Cambió el signo solo de la segunda coordenada, que es reflejar respecto del eje X."),
+            ("(9, 2)", "Intercambió las coordenadas en lugar de cambiarles el signo."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "En el plano de una bodega, una caja está en el punto (5, 6) y se traslada según el vector (0, −4). ¿Cuál es su nueva ubicación?",
+        "(5, 2)",
+        "Una componente del vector es cero, así que el movimiento es puramente vertical.\n\n"
+        "1) Primera coordenada: 5 + 0 = 5. No se mueve horizontalmente.\n"
+        "2) Segunda coordenada: 6 + (−4) = 2.\n"
+        "3) La caja queda en (5, 2), cuatro unidades más abajo y en la misma columna.",
+        [
+            ("(1, 6)", "Aplicó el −4 a la coordenada equivocada."),
+            ("(5, 10)", "Sumó 4 en lugar de −4."),
+            ("(5, −4)", "Reemplazó la coordenada por la del vector en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "El punto (−7, −1) se traslada según el vector (7, 1). ¿Cuáles son sus nuevas coordenadas?",
+        "(0, 0)",
+        "El vector es exactamente el opuesto del punto, así que lo devuelve al origen.\n\n"
+        "1) Primera coordenada: −7 + 7 = 0.\n"
+        "2) Segunda coordenada: −1 + 1 = 0.\n"
+        "3) El punto queda en (0, 0), el origen. Siempre que el vector de traslación sea el opuesto de las coordenadas del punto, el resultado es el origen.",
+        [
+            ("(−14, −2)", "Restó el vector en lugar de sumarlo."),
+            ("(7, 1)", "Dio el vector de traslación en vez del punto resultante."),
+            ("(−7, −1)", "Dejó el punto igual, sin aplicar la traslación."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (3, 8) al reflejarlo respecto del eje Y?",
+        "(−3, 8)",
+        "El eje Y actúa como espejo vertical.\n\n"
+        "1) La primera coordenada cambia de signo: 3 pasa a −3.\n"
+        "2) La segunda se mantiene: 8.\n"
+        "3) El punto reflejado es (−3, 8).",
+        [
+            ("(3, −8)", "Reflejó respecto del eje X, cambiando la coordenada equivocada."),
+            ("(−3, −8)", "Cambió el signo de ambas coordenadas, que es reflejar respecto del origen."),
+            ("(8, 3)", "Intercambió las coordenadas, que corresponde a la recta y = x."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Cuáles son las coordenadas del punto (−5, −6) al reflejarlo respecto del eje X?",
+        "(−5, 6)",
+        "Solo la segunda coordenada cambia, aunque las dos sean negativas.\n\n"
+        "1) La primera se mantiene tal cual, incluido su signo: −5.\n"
+        "2) La segunda cambia de signo: −6 pasa a 6.\n"
+        "3) El punto reflejado es (−5, 6). El punto estaba en el tercer cuadrante y queda en el segundo.",
+        [
+            ("(5, −6)", "Reflejó respecto del eje Y, cambiando la coordenada equivocada."),
+            ("(5, 6)", "Cambió el signo de ambas coordenadas, que es reflejar respecto del origen."),
+            ("(−5, −6)", "Dejó el punto igual, sin aplicar la reflexión."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "¿Qué vector traslada el punto (1, 4) hasta el punto (6, 9)?",
+        "(5, 5)",
+        "El vector se obtiene restando: punto de llegada menos punto de partida.\n\n"
+        "1) Primera componente: 6 − 1 = 5.\n"
+        "2) Segunda componente: 9 − 4 = 5.\n"
+        "3) El vector es (5, 5). Comprueba sumándolo al punto inicial: (1 + 5, 4 + 5) = (6, 9) ✓.\n"
+        "4) El orden de la resta importa: si la haces al revés obtienes el vector que va de vuelta.",
+        [
+            ("(−5, −5)", "Restó al revés, y obtuvo el vector que hace el camino de vuelta."),
+            ("(7, 13)", "Sumó las coordenadas de los dos puntos en lugar de restarlas."),
+            ("(6, 9)", "Dio el punto de llegada en vez del vector."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "Un robot parte del punto (2, 1), se traslada según el vector (4, 3) y después según el vector (−1, 2). ¿En qué punto termina?",
+        "(5, 6)",
+        "Dos traslaciones seguidas equivalen a una sola: la suma de los dos vectores.\n\n"
+        "1) Primera traslación: (2 + 4, 1 + 3) = (6, 4).\n"
+        "2) Segunda traslación sobre ese resultado: (6 + (−1), 4 + 2) = (5, 6).\n"
+        "3) El robot termina en (5, 6).\n"
+        "4) Atajo para comprobarlo: suma primero los vectores, (4 + (−1), 3 + 2) = (3, 5), y aplícalo de una vez al punto inicial: (2 + 3, 1 + 5) = (5, 6) ✓. El orden de las traslaciones no altera el resultado.",
+        [
+            ("(7, 2)", "Restó el segundo vector en lugar de sumarlo."),
+            ("(3, 5)", "Dio el vector resultante en vez del punto final."),
+            ("(6, 4)", "Se quedó después de la primera traslación."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (5, −2) se rota 90° en sentido antihorario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(2, 5)",
+        "En sentido antihorario, el punto (x, y) se transforma en (−y, x).\n\n"
+        "1) La nueva primera coordenada es la segunda cambiada de signo: −(−2) = 2.\n"
+        "2) La nueva segunda coordenada es la primera tal cual: 5.\n"
+        "3) El punto queda en (2, 5). Estaba en el cuarto cuadrante y pasa al primero, que es lo que corresponde a un cuarto de vuelta en ese sentido.",
+        [
+            ("(−2, −5)", "Aplicó la regla del sentido horario en lugar del antihorario."),
+            ("(−5, 2)", "Rotó 180° en lugar de 90°."),
+            ("(−2, 5)", "Intercambió las coordenadas pero no le cambió el signo a ninguna."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (−3, 6) se rota 90° en sentido horario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(6, 3)",
+        "En sentido horario, el punto (x, y) se transforma en (y, −x).\n\n"
+        "1) La nueva primera coordenada es la segunda tal cual: 6.\n"
+        "2) La nueva segunda coordenada es la primera cambiada de signo: −(−3) = 3.\n"
+        "3) El punto queda en (6, 3), pasando del segundo cuadrante al primero.",
+        [
+            ("(−6, −3)", "Aplicó la regla del sentido antihorario en lugar del horario."),
+            ("(6, −3)", "Olvidó que cambiar el signo de −3 da 3, no −3."),
+            ("(3, −6)", "Intercambió las coordenadas y les cambió el signo a las dos."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (7, −4) se rota 270° en sentido antihorario en torno al origen. ¿Cuáles son sus nuevas coordenadas?",
+        "(−4, −7)",
+        "Rotar 270° en un sentido es lo mismo que rotar 90° en el otro, y conviene usar el camino corto.\n\n"
+        "1) Una vuelta completa son 360°, así que 270° antihorario equivale a 90° horario.\n"
+        "2) La regla del sentido horario es (x, y) → (y, −x).\n"
+        "3) Aplícala: la nueva primera coordenada es −4, y la nueva segunda es −7.\n"
+        "4) El punto queda en (−4, −7).",
+        [
+            ("(4, 7)", "Aplicó la regla del sentido antihorario sin convertir antes los 270°."),
+            ("(−7, 4)", "Rotó 180° en lugar de 270°."),
+            ("(−4, 7)", "Intercambió las coordenadas pero le cambió el signo a la equivocada."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "¿Qué vector traslada el punto (−2, 5) hasta el punto (3, −1)?",
+        "(5, −6)",
+        "El vector es la resta entre el punto de llegada y el de partida, con cuidado en los signos.\n\n"
+        "1) Primera componente: 3 − (−2) = 3 + 2 = 5. Restar un negativo suma.\n"
+        "2) Segunda componente: −1 − 5 = −6.\n"
+        "3) El vector es (5, −6). Comprueba: (−2 + 5, 5 + (−6)) = (3, −1) ✓.",
+        [
+            ("(1, −6)", "Calculó 3 − 2 en vez de 3 − (−2), tratando el negativo como positivo."),
+            ("(−5, 6)", "Restó al revés y obtuvo el vector de vuelta."),
+            ("(1, 4)", "Sumó las coordenadas de los dos puntos en lugar de restarlas."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (4, 3) se refleja respecto de la recta vertical x = 6. ¿Cuáles son sus nuevas coordenadas?",
+        "(8, 3)",
+        "El espejo ya no es un eje, pero la idea es la misma: el punto queda a la misma distancia, al otro lado.\n\n"
+        "1) La recta x = 6 es vertical, así que la altura no cambia: la segunda coordenada sigue siendo 3.\n"
+        "2) Mide la distancia horizontal del punto al espejo: 6 − 4 = 2. El punto está 2 unidades a la izquierda.\n"
+        "3) El reflejado queda 2 unidades a la derecha del espejo: 6 + 2 = 8.\n"
+        "4) El punto reflejado es (8, 3).",
+        [
+            ("(−4, 3)", "Reflejó respecto del eje Y, ignorando que el espejo está en x = 6."),
+            ("(2, 3)", "Restó la distancia en vez de sumarla, y quedó del mismo lado del espejo."),
+            ("(4, 9)", "Aplicó la reflexión a la coordenada vertical, cuando el espejo es vertical."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (5, 2) se refleja respecto de la recta horizontal y = 5. ¿Cuáles son sus nuevas coordenadas?",
+        "(5, 8)",
+        "Con un espejo horizontal cambia la altura y se mantiene la posición horizontal.\n\n"
+        "1) La recta y = 5 es horizontal, así que la primera coordenada no cambia: sigue siendo 5.\n"
+        "2) Distancia vertical del punto al espejo: 5 − 2 = 3. El punto está 3 unidades por debajo.\n"
+        "3) El reflejado queda 3 unidades por encima: 5 + 3 = 8.\n"
+        "4) El punto reflejado es (5, 8).",
+        [
+            ("(5, −2)", "Reflejó respecto del eje X, ignorando que el espejo está en y = 5."),
+            ("(5, 3)", "Se quedó con la distancia al espejo en vez de la nueva coordenada."),
+            ("(8, 2)", "Aplicó la reflexión a la coordenada horizontal, cuando el espejo es horizontal."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "Un triángulo tiene vértices en (1, 1), (5, 1) y (1, 4). Si se traslada según el vector (3, −2), ¿cuál es la nueva posición del vértice (5, 1)?",
+        "(8, −1)",
+        "En una traslación todos los vértices se mueven igual, así que basta trabajar con el que se pregunta.\n\n"
+        "1) Primera coordenada: 5 + 3 = 8.\n"
+        "2) Segunda coordenada: 1 + (−2) = −1.\n"
+        "3) El vértice queda en (8, −1). Los otros dos se mueven con el mismo vector, y la figura conserva su forma y su tamaño.",
+        [
+            ("(2, 3)", "Restó el vector en lugar de sumarlo."),
+            ("(4, −1)", "Trasladó el vértice (1, 1) en vez del que se pedía."),
+            ("(8, 3)", "Sumó 2 en vez de −2, ignorando el signo."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "¿Cuál es el módulo del vector de traslación (9, 12), es decir, cuánto se desplaza en línea recta un punto trasladado según él?",
+        "15",
+        "El módulo de un vector es la hipotenusa del triángulo que forman sus dos componentes.\n\n"
+        "1) Las componentes 9 y 12 son perpendiculares entre sí: una es horizontal y la otra vertical.\n"
+        "2) Aplica el Teorema de Pitágoras: 9² + 12² = 81 + 144 = 225.\n"
+        "3) Saca la raíz: √225 = 15.\n"
+        "4) El punto se desplaza 15 unidades en línea recta, menos que las 21 que recorrería moviéndose primero en horizontal y después en vertical.",
+        [
+            ("21", "Sumó las dos componentes, que es el recorrido en zigzag y no el desplazamiento recto."),
+            ("3", "Restó las dos componentes."),
+            ("225", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (−6, 2) se refleja respecto del eje X y el resultado se traslada según el vector (3, 4). ¿Dónde queda?",
+        "(−3, 2)",
+        "Se aplican las dos transformaciones en el orden que indica el enunciado.\n\n"
+        "1) Reflexión respecto del eje X: cambia el signo de la segunda coordenada. (−6, 2) pasa a (−6, −2).\n"
+        "2) Traslación según (3, 4) sobre ese resultado: (−6 + 3, −2 + 4) = (−3, 2).\n"
+        "3) El punto final es (−3, 2). Ojo con no aplicar la traslación al punto original: el orden importa.",
+        [
+            ("(−3, 6)", "Trasladó el punto original sin aplicar antes la reflexión."),
+            ("(9, 6)", "Reflejó respecto del eje Y en lugar del eje X."),
+            ("(−9, −6)", "Restó el vector en lugar de sumarlo."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "El punto (8, 5) se rota 180° en torno al origen y el resultado se refleja respecto del eje Y. ¿Dónde queda?",
+        "(8, −5)",
+        "Se encadenan las dos transformaciones, una después de la otra.\n\n"
+        "1) Rotación de 180°: cambian de signo las dos coordenadas. (8, 5) pasa a (−8, −5).\n"
+        "2) Reflexión respecto del eje Y sobre ese resultado: cambia de signo solo la primera. (−8, −5) pasa a (8, −5).\n"
+        "3) El punto final es (8, −5).\n"
+        "4) Vale la pena notar el resultado: aplicar esas dos transformaciones seguidas equivale a una sola reflexión respecto del eje X.",
+        [
+            ("(−8, 5)", "Aplicó la reflexión respecto del eje X en lugar del eje Y."),
+            ("(−8, −5)", "Se quedó después de la rotación, sin aplicar la reflexión."),
+            ("(8, 5)", "Las dos transformaciones se le cancelaron, como si fueran inversas."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "¿Qué transformación lleva el punto (−4, 7) al punto (4, 7)?",
+        "Una reflexión respecto del eje Y",
+        "Conviene mirar qué cambió y qué se mantuvo.\n\n"
+        "1) La segunda coordenada no cambió: sigue siendo 7.\n"
+        "2) La primera cambió de signo: de −4 pasó a 4.\n"
+        "3) Cambiar el signo solo de la primera coordenada, dejando la segunda intacta, es exactamente lo que hace una reflexión respecto del eje Y.\n"
+        "4) Descarta las otras comprobando: una reflexión respecto del eje X habría dado (−4, −7), y una rotación de 180° habría dado (4, −7).",
+        [
+            ("Una reflexión respecto del eje X", "Esa transformación habría dado (−4, −7), cambiando la segunda coordenada."),
+            ("Una rotación de 180° en torno al origen", "Esa transformación habría dado (4, −7), cambiando las dos coordenadas."),
+            ("Una traslación según el vector (8, 7)", "Ese vector habría llevado el punto a (4, 14), moviéndolo también en vertical."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (3, −2) se rota 90° en sentido antihorario en torno al origen y el resultado se traslada según el vector (−1, 5). ¿Dónde queda?",
+        "(1, 8)",
+        "Primero la rotación, después la traslación, en el orden que dice el enunciado.\n\n"
+        "1) Rotación 90° antihorario: la regla es (x, y) → (−y, x). El punto (3, −2) pasa a (2, 3).\n"
+        "2) Traslación según (−1, 5): (2 + (−1), 3 + 5) = (1, 8).\n"
+        "3) El punto final es (1, 8).",
+        [
+            ("(2, 3)", "Se quedó después de la rotación, sin aplicar la traslación."),
+            ("(−3, 2)", "Aplicó la regla del sentido horario en la rotación."),
+            ("(3, −2)", "Restó el vector en lugar de sumarlo, y volvió al punto de partida."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Un cuadrado tiene vértices en (0, 0), (4, 0), (4, 4) y (0, 4). Si se rota 90° en sentido antihorario en torno al origen, ¿dónde queda el vértice (4, 4)?",
+        "(−4, 4)",
+        "Basta aplicar la regla de la rotación al vértice que se pregunta.\n\n"
+        "1) La regla del sentido antihorario es (x, y) → (−y, x).\n"
+        "2) Para (4, 4): la nueva primera coordenada es −4 y la nueva segunda es 4.\n"
+        "3) El vértice queda en (−4, 4).\n"
+        "4) Tiene sentido geométricamente: el cuadrado estaba en el primer cuadrante y, tras un cuarto de vuelta en ese sentido, pasa al segundo. El vértice en el origen, eso sí, no se mueve: es el centro del giro.",
+        [
+            ("(4, −4)", "Aplicó la regla del sentido horario."),
+            ("(−4, −4)", "Rotó 180° en lugar de 90°."),
+            ("(4, 4)", "Dejó el vértice igual; solo el vértice del origen queda fijo en esta rotación."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Un punto se trasladó según el vector (5, −3) y quedó en (2, 4). ¿Cuáles eran sus coordenadas originales?",
+        "(−3, 7)",
+        "Es el problema al revés: se conoce la llegada y se busca la partida, así que hay que deshacer la traslación.\n\n"
+        "1) Deshacer una traslación es aplicar el vector opuesto, o equivalentemente restar el vector original.\n"
+        "2) Primera coordenada: 2 − 5 = −3.\n"
+        "3) Segunda coordenada: 4 − (−3) = 4 + 3 = 7. Restar un negativo suma.\n"
+        "4) El punto original era (−3, 7). Comprueba: (−3 + 5, 7 + (−3)) = (2, 4) ✓.",
+        [
+            ("(7, 1)", "Sumó el vector en lugar de restarlo, avanzando otra vez en vez de retroceder."),
+            ("(−3, 1)", "Restó bien la primera coordenada pero trató el −3 como positivo en la segunda."),
+            ("(−5, 3)", "Dio el vector opuesto en vez del punto original."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (6, −1) se refleja respecto de la recta y = x. ¿Cuáles son sus nuevas coordenadas?",
+        "(−1, 6)",
+        "La recta y = x es la diagonal donde las dos coordenadas valen lo mismo, y reflejar en ella intercambia los papeles.\n\n"
+        "1) La regla es (x, y) → (y, x): las coordenadas se intercambian, sin cambiar de signo.\n"
+        "2) La nueva primera coordenada es la segunda original: −1.\n"
+        "3) La nueva segunda es la primera original: 6.\n"
+        "4) El punto reflejado es (−1, 6). Comprobación útil: los puntos que están sobre la recta y = x no se mueven, porque intercambiar coordenadas iguales no cambia nada.",
+        [
+            ("(1, −6)", "Intercambió las coordenadas y además les cambió el signo, que no corresponde a esta reflexión."),
+            ("(−6, 1)", "Cambió el signo de ambas coordenadas, que es una rotación de 180°."),
+            ("(6, 1)", "Cambió el signo de la segunda coordenada, que es reflejar respecto del eje X."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "¿Cuál de estas transformaciones NO deja ningún punto en su lugar?",
+        "Una traslación según el vector (3, 2)",
+        "Un punto queda en su lugar cuando la transformación lo manda a sí mismo. Hay que buscar la que no tenga ninguno.\n\n"
+        "1) En una rotación en torno al origen, el origen mismo no se mueve: es el centro del giro.\n"
+        "2) En una reflexión respecto del eje X, todos los puntos que están sobre ese eje quedan fijos, porque su segunda coordenada es 0 y cambiarle el signo no la altera.\n"
+        "3) En una reflexión respecto de la recta y = x, todos los puntos de esa recta quedan fijos.\n"
+        "4) En una traslación de vector distinto de cero, en cambio, absolutamente todos los puntos se mueven la misma cantidad. No hay ninguno que quede en su lugar.",
+        [
+            ("Una rotación de 90° en torno al origen", "El origen queda fijo: es el centro del giro."),
+            ("Una reflexión respecto del eje X", "Todos los puntos que están sobre el eje X quedan fijos."),
+            ("Una reflexión respecto de la recta y = x", "Todos los puntos de esa recta quedan fijos."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Si a un punto se le aplican tres rotaciones seguidas de 90° en sentido antihorario en torno al origen, ¿a qué transformación equivale el resultado?",
+        "A una rotación de 90° en sentido horario",
+        "Las rotaciones sucesivas en torno al mismo centro se suman.\n\n"
+        "1) Tres giros de 90° en el mismo sentido suman 3 · 90° = 270° antihorario.\n"
+        "2) Una vuelta completa son 360°, y girar 360° deja todo igual.\n"
+        "3) Por eso girar 270° en un sentido lleva al mismo lugar que girar 360° − 270° = 90° en el sentido contrario.\n"
+        "4) El resultado equivale a una rotación de 90° en sentido horario. Puedes comprobarlo con un punto concreto: (1, 0) tras tres giros antihorarios queda en (0, −1), que es justo donde lo deja un giro horario de 90°.",
+        [
+            ("A una rotación de 180°", "Eso equivaldría a solo dos giros de 90°, no a tres."),
+            ("A dejar el punto en su lugar", "Eso ocurriría con cuatro giros de 90°, que completan una vuelta entera."),
+            ("A una rotación de 90° en sentido antihorario", "Ese es el efecto de un solo giro, no de tres."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (−5, 3) se refleja primero respecto del eje X y después respecto del eje Y. ¿Dónde queda?",
+        "(5, −3)",
+        "Se aplican las reflexiones una tras otra y conviene fijarse en el efecto combinado.\n\n"
+        "1) Reflexión respecto del eje X: cambia el signo de la segunda coordenada. (−5, 3) pasa a (−5, −3).\n"
+        "2) Reflexión respecto del eje Y sobre ese resultado: cambia el signo de la primera. (−5, −3) pasa a (5, −3).\n"
+        "3) El punto final es (5, −3).\n"
+        "4) Entre las dos reflexiones terminaron cambiando de signo ambas coordenadas, que es exactamente lo que hace una rotación de 180°. Reflejar en los dos ejes, en cualquier orden, siempre equivale a eso.",
+        [
+            ("(−5, 3)", "Aplicó las dos reflexiones a la misma coordenada, y se cancelaron."),
+            ("(−5, −3)", "Se quedó después de la primera reflexión."),
+            ("(3, −5)", "Intercambió las coordenadas, que corresponde a reflejar respecto de la recta y = x."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Un triángulo tiene vértices en A(2, 1), B(6, 1) y C(2, 4). Si se refleja respecto del eje Y, ¿cuál es el perímetro del triángulo reflejado?",
+        "12",
+        "La clave está en una propiedad, no en reflejar cada vértice: la reflexión es una isometría y conserva todas las medidas.\n\n"
+        "1) Como el perímetro no cambia, basta calcular el del triángulo original.\n"
+        "2) Lado AB: A y B tienen la misma segunda coordenada, así que el lado es horizontal y mide 6 − 2 = 4.\n"
+        "3) Lado AC: A y C tienen la misma primera coordenada, así que es vertical y mide 4 − 1 = 3.\n"
+        "4) AB y AC son perpendiculares, así que BC es la hipotenusa: √(4² + 3²) = √25 = 5.\n"
+        "5) Perímetro: 4 + 3 + 5 = 12. El triángulo reflejado tiene exactamente el mismo.",
+        [
+            ("7", "Sumó solo los dos lados que se leen directo de las coordenadas y olvidó la hipotenusa."),
+            ("6", "Calculó el área del triángulo en lugar del perímetro."),
+            ("24", "Duplicó el perímetro, como si la figura reflejada se sumara a la original."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "Un triángulo tiene un vértice en (1, 2). ¿Qué vector hay que aplicar para trasladarlo de modo que ese vértice quede en el origen?",
+        "(−1, −2)",
+        "Se busca el vector que lleva un punto conocido a otro punto conocido.\n\n"
+        "1) El vector es la resta entre la llegada y la partida: (0, 0) − (1, 2).\n"
+        "2) Primera componente: 0 − 1 = −1.\n"
+        "3) Segunda componente: 0 − 2 = −2.\n"
+        "4) El vector es (−1, −2), que es simplemente el opuesto de las coordenadas del vértice. Comprueba: (1 + (−1), 2 + (−2)) = (0, 0) ✓.",
+        [
+            ("(1, 2)", "Dio las coordenadas del vértice en vez del vector que lo lleva al origen."),
+            ("(0, 0)", "Dio el punto de llegada en lugar del vector."),
+            ("(−2, −1)", "Intercambió las componentes del vector."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "El punto (7, 2) se traslada según un vector (a, b) y queda en (3, 9). ¿Cuánto vale a + b?",
+        "3",
+        "Primero hay que encontrar cada componente del vector y recién después sumarlas.\n\n"
+        "1) La traslación cumple 7 + a = 3, de donde a = 3 − 7 = −4.\n"
+        "2) También cumple 2 + b = 9, de donde b = 9 − 2 = 7.\n"
+        "3) El vector es (−4, 7).\n"
+        "4) La suma pedida: a + b = −4 + 7 = 3. Ojo con no responder −4 ni 7 por separado, ni sumar las coordenadas de los puntos.",
+        [
+            ("11", "Sumó los valores absolutos, ignorando que la primera componente es negativa."),
+            ("−11", "Calculó el vector al revés, restando la llegada de la partida."),
+            ("21", "Sumó las coordenadas de los dos puntos en lugar de calcular el vector."),
+        ],
+    ),
+    _q(
+        "geo_transformaciones", "dificil",
+        "A un punto cualquiera se le aplica una traslación según el vector (3, −1) y enseguida otra según el vector (−3, 1). ¿Qué ocurre con el punto?",
+        "Queda exactamente donde estaba",
+        "Dos traslaciones seguidas equivalen a una sola cuyo vector es la suma de ambos.\n\n"
+        "1) Suma los dos vectores componente a componente: (3 + (−3), −1 + 1) = (0, 0).\n"
+        "2) Una traslación según el vector (0, 0) no mueve nada: cada coordenada se suma con cero.\n"
+        "3) Por eso el punto queda exactamente donde estaba, sea cual sea.\n"
+        "4) Los dos vectores son opuestos, y el segundo deshace el camino que hizo el primero.",
+        [
+            ("Se traslada según el vector (6, −2)", "Sumó los vectores como si el segundo tuviera los mismos signos que el primero."),
+            ("Queda reflejado respecto del origen", "Confundió el efecto de dos traslaciones opuestas con el de una reflexión."),
+            ("Se traslada según el vector (0, 2)", "Sumó bien las primeras componentes pero restó las segundas."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora

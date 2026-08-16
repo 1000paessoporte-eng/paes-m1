@@ -436,6 +436,51 @@ COMPROBACIONES: dict[str, str] = {
         for a, b, c in [(10, 24, 26), (12, 16, 20), (8, 15, 17), (5, 6, 8)]
         if a**2 + b**2 != c**2
     ),
+    # --- transformaciones isométricas: segunda tanda ---
+    # Traslación: se suma el vector componente a componente.
+    "videojuego, un personaje está en la casilla (7, 3)": f"({7 + (-3)}, {3 + 5})",
+    "dron se encuentra en el punto (−4, 2)": f"({-4 + 6}, {2 + (-5)})",
+    "una caja está en el punto (5, 6)": f"({5 + 0}, {6 + (-4)})",
+    "punto (−7, −1) se traslada según el vector (7, 1)": f"({-7 + 7}, {-1 + 1})",
+    "robot parte del punto (2, 1)": f"({2 + 4 + (-1)}, {1 + 3 + 2})",
+    "nueva posición del vértice (5, 1)": f"({5 + 3}, {1 + (-2)})",
+    # Reflexión en los ejes: cambia de signo una sola coordenada.
+    "punto (9, −4) al reflejarlo respecto del eje X": f"(9, {0 - (-4)})",
+    "punto (−8, 5) al reflejarlo respecto del eje Y": f"({0 - (-8)}, 5)",
+    "punto (3, 8) al reflejarlo respecto del eje Y": f"({0 - 3}, 8)",
+    "punto (−5, −6) al reflejarlo respecto del eje X": f"({-5}, {0 - (-6)})",
+    "punto (2, 9) al reflejarlo respecto del origen": f"({-2}, {-9})",
+    # Reflexión en rectas que no son los ejes: el punto queda al otro lado, a igual distancia.
+    "recta vertical x = 6": f"({2 * 6 - 4}, 3)",
+    "recta horizontal y = 5": f"(5, {2 * 5 - 2})",
+    # Reflexión en y = x: se intercambian las coordenadas.
+    "punto (6, −1) se refleja respecto de la recta y = x": f"({-1}, {6})",
+    # Rotaciones: 90° antihorario (x,y)->(-y,x); horario (x,y)->(y,-x); 180° (-x,-y).
+    "punto (6, 0) se rota 180°": f"({-6}, {0})",
+    "ficha ubicada en (0, 7)": f"({7}, {-0})",
+    "punto (5, −2) se rota 90° en sentido antihorario": f"({0 - (-2)}, {5})",
+    "punto (−3, 6) se rota 90° en sentido horario": f"({6}, {0 - (-3)})",
+    # 270° antihorario equivale a 90° horario.
+    "punto (7, −4) se rota 270°": f"({-4}, {-7})",
+    # Vector entre dos puntos: llegada menos partida.
+    "traslada el punto (1, 4) hasta el punto (6, 9)": f"({6 - 1}, {9 - 4})",
+    "traslada el punto (−2, 5) hasta el punto (3, −1)": f"({3 - (-2)}, {-1 - 5})",
+    "triángulo tiene un vértice en (1, 2)": f"({0 - 1}, {0 - 2})",
+    # Problema inverso: se conoce la llegada y se busca la partida.
+    "trasladó según el vector (5, −3) y quedó en (2, 4)": f"({2 - 5}, {4 - (-3)})",
+    "traslada según un vector (a, b) y queda en (3, 9)": str((3 - 7) + (9 - 2)),
+    # Composiciones.
+    "punto (−6, 2) se refleja respecto del eje X y el resultado se traslada": f"({-6 + 3}, {-2 + 4})",
+    "punto (8, 5) se rota 180° en torno al origen y el resultado se refleja": f"({0 - (-8)}, {-5})",
+    "punto (3, −2) se rota 90° en sentido antihorario en torno al origen y el resultado": f"({0 - (-2) + (-1)}, {3 + 5})",
+    "punto (−5, 3) se refleja primero respecto del eje X": f"({0 - (-5)}, {-3})",
+    "dónde queda el vértice (4, 4)": f"({-4}, {4})",
+    # Módulo de un vector: Pitágoras sobre sus componentes.
+    "módulo del vector de traslación (9, 12)": str(round((9**2 + 12**2) ** 0.5)),
+    # La reflexión es isometría: el perímetro no cambia.
+    "vértices en A(2, 1), B(6, 1) y C(2, 4)": str(
+        (6 - 2) + (4 - 1) + round(((6 - 2) ** 2 + (4 - 1) ** 2) ** 0.5)
+    ),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
