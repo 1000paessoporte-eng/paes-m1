@@ -12468,6 +12468,542 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Teorema de Pitágoras — segunda tanda.
+#
+# El nodo tenía 33 preguntas pero con poca variedad real: la mayoría era
+# "catetos a y b, ¿cuánto mide la hipotenusa?" sobre las mismas cuatro ternas
+# (6-8-10, 5-12-13, 9-12-15, 8-15-17), y había pares que eran la misma pregunta
+# reformulada. Esta tanda usa ternas que el banco no tocaba (7-24-25, 33-44-55,
+# 12-35-37, 28-45-53, 16-30-34, 24-45-51) y, sobre todo, cambia el tipo de
+# problema: distancia entre dos puntos del plano, cuerdas de una circunferencia,
+# alturas de isósceles y de trapecios, y casos donde Pitágoras es el segundo
+# paso y no el primero.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_pitagoras", "facil",
+        "Un jardín rectangular mide 12 m de ancho y 16 m de largo. ¿Cuánto mide el sendero recto que lo cruza en diagonal?",
+        "20 m",
+        "La diagonal parte el rectángulo en dos triángulos rectángulos, y sus lados son los catetos.\n\n"
+        "1) Los catetos son 12 m y 16 m; la diagonal es la hipotenusa.\n"
+        "2) Eleva al cuadrado y suma: 12² + 16² = 144 + 256 = 400.\n"
+        "3) Saca la raíz: √400 = 20.\n"
+        "4) El sendero mide 20 m. Comprueba que sea razonable: la diagonal siempre es mayor que cada lado y menor que la suma de ambos, y 20 está entre 16 y 28.",
+        [
+            ("28 m", "Sumó los dos lados en lugar de aplicar el teorema."),
+            ("14 m", "Promedió los dos lados."),
+            ("400 m", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Una rampa de acceso sube 7 m de altura a lo largo de una base horizontal de 24 m. ¿Cuánto mide la superficie inclinada de la rampa?",
+        "25 m",
+        "La altura y la base son perpendiculares entre sí, así que son los catetos; la rampa es la hipotenusa.\n\n"
+        "1) Eleva al cuadrado y suma: 7² + 24² = 49 + 576 = 625.\n"
+        "2) Saca la raíz: √625 = 25.\n"
+        "3) La rampa mide 25 m.",
+        [
+            ("31 m", "Sumó la altura y la base en vez de aplicar el teorema."),
+            ("23 m", "Restó los cuadrados en lugar de sumarlos, como si la rampa fuera un cateto."),
+            ("625 m", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un tirante de acero une la punta de un poste de 18 m con un punto del suelo situado a 24 m de su base. ¿Cuánto mide el tirante?",
+        "30 m",
+        "El poste es vertical y el suelo horizontal, así que forman un ángulo recto.\n\n"
+        "1) Los catetos son 18 m y 24 m, y el tirante es la hipotenusa.\n"
+        "2) Suma los cuadrados: 18² + 24² = 324 + 576 = 900.\n"
+        "3) Saca la raíz: √900 = 30.\n"
+        "4) El tirante mide 30 m.",
+        [
+            ("42 m", "Sumó las dos medidas sin elevarlas al cuadrado."),
+            ("6 m", "Restó las dos medidas."),
+            ("900 m", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un triángulo rectángulo tiene catetos que miden 30 cm y 40 cm. ¿Cuánto mide su hipotenusa?",
+        "50 cm",
+        "Se aplica el teorema directamente, porque los dos datos son los catetos.\n\n"
+        "1) Suma los cuadrados: 30² + 40² = 900 + 1.600 = 2.500.\n"
+        "2) Saca la raíz: √2.500 = 50.\n"
+        "3) La hipotenusa mide 50 cm.",
+        [
+            ("70 cm", "Sumó los catetos sin elevarlos al cuadrado."),
+            ("10 cm", "Restó los catetos."),
+            ("2.500 cm", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "En un triángulo rectángulo la hipotenusa mide 20 cm y uno de sus catetos mide 12 cm. ¿Cuánto mide el otro cateto?",
+        "16 cm",
+        "Cuando el dato conocido es la hipotenusa, los cuadrados se restan en lugar de sumarse.\n\n"
+        "1) La relación es hipotenusa² = cateto² + cateto², así que 20² = 12² + x².\n"
+        "2) Reemplaza: 400 = 144 + x², de donde x² = 400 − 144 = 256.\n"
+        "3) Saca la raíz: x = √256 = 16.\n"
+        "4) El otro cateto mide 16 cm. Comprueba: un cateto siempre es menor que la hipotenusa, y 16 < 20.",
+        [
+            ("8 cm", "Restó las medidas directamente en vez de restar sus cuadrados."),
+            ("23,3 cm", "Sumó los cuadrados, como si el dato de 20 cm fuera un cateto."),
+            ("256 cm", "Se quedó en la resta de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Una pantalla rectangular mide 21 cm de ancho y 28 cm de alto. ¿Cuánto mide su diagonal?",
+        "35 cm",
+        "El ancho y el alto de un rectángulo son perpendiculares, así que hacen de catetos.\n\n"
+        "1) Suma los cuadrados: 21² + 28² = 441 + 784 = 1.225.\n"
+        "2) Saca la raíz: √1.225 = 35.\n"
+        "3) La diagonal mide 35 cm.",
+        [
+            ("49 cm", "Sumó ancho y alto sin elevarlos al cuadrado."),
+            ("7 cm", "Restó las dos medidas."),
+            ("24,5 cm", "Promedió las dos medidas."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un volantín se eleva a 40 m de altura y su hilo, completamente tenso, llega al suelo a 9 m del punto que está justo debajo del volantín. ¿Cuántos metros de hilo se soltaron?",
+        "41 m",
+        "La altura es vertical y la distancia en el suelo es horizontal, así que forman un ángulo recto y el hilo es la hipotenusa.\n\n"
+        "1) Suma los cuadrados: 40² + 9² = 1.600 + 81 = 1.681.\n"
+        "2) Saca la raíz: √1.681 = 41.\n"
+        "3) Se soltaron 41 m de hilo. Fíjate en que el hilo es apenas más largo que la altura, lo que tiene sentido porque el volantín está casi vertical.",
+        [
+            ("49 m", "Sumó las dos medidas sin elevarlas al cuadrado."),
+            ("31 m", "Restó las dos medidas."),
+            ("39 m", "Restó los cuadrados en vez de sumarlos, tratando los 40 m como si fueran la hipotenusa."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "En un triángulo rectángulo la hipotenusa mide 34 cm y un cateto mide 16 cm. ¿Cuánto mide el otro cateto?",
+        "30 cm",
+        "Se despeja el cateto desconocido restando los cuadrados.\n\n"
+        "1) Plantea: 34² = 16² + x².\n"
+        "2) Calcula los cuadrados: 1.156 = 256 + x², así que x² = 900.\n"
+        "3) Saca la raíz: x = √900 = 30.\n"
+        "4) El otro cateto mide 30 cm.",
+        [
+            ("18 cm", "Restó las medidas directamente en lugar de restar sus cuadrados."),
+            ("37,6 cm", "Sumó los cuadrados, tratando la hipotenusa como si fuera un cateto."),
+            ("900 cm", "Se quedó en la resta de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Un triángulo rectángulo tiene catetos de 33 cm y 44 cm. ¿Cuánto mide su hipotenusa?",
+        "55 cm",
+        "Los dos datos son catetos, así que se suman sus cuadrados.\n\n"
+        "1) Suma: 33² + 44² = 1.089 + 1.936 = 3.025.\n"
+        "2) Saca la raíz: √3.025 = 55.\n"
+        "3) La hipotenusa mide 55 cm. Este trío es la terna 3-4-5 multiplicada por 11, lo que explica que dé un número entero.",
+        [
+            ("77 cm", "Sumó los catetos sin elevarlos al cuadrado."),
+            ("11 cm", "Restó los catetos."),
+            ("38,5 cm", "Promedió los dos catetos."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "¿Cuál es el área de un triángulo rectángulo cuyos catetos miden 10 cm y 24 cm?",
+        "120 cm²",
+        "Para el área no hace falta Pitágoras: los catetos ya son la base y la altura.\n\n"
+        "1) En un triángulo rectángulo los dos catetos son perpendiculares entre sí, que es justo lo que pide la fórmula del área.\n"
+        "2) Multiplica y divide por 2: (10 · 24) ÷ 2 = 240 ÷ 2 = 120.\n"
+        "3) El área es 120 cm². La hipotenusa, que mide 26 cm, no interviene.",
+        [
+            ("240 cm²", "Multiplicó los catetos pero olvidó dividir por 2."),
+            ("130 cm²", "Usó la hipotenusa de 26 cm como altura en lugar de un cateto."),
+            ("26 cm²", "Calculó la hipotenusa, que no es lo que se pide."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Una tabla se apoya formando un triángulo rectángulo con la pared y el piso: sube 12 cm por la pared y avanza 35 cm por el piso. ¿Cuánto mide la tabla?",
+        "37 cm",
+        "La pared y el piso son perpendiculares, así que la tabla es la hipotenusa.\n\n"
+        "1) Suma los cuadrados: 12² + 35² = 144 + 1.225 = 1.369.\n"
+        "2) Saca la raíz: √1.369 = 37.\n"
+        "3) La tabla mide 37 cm.",
+        [
+            ("47 cm", "Sumó las dos medidas sin elevarlas al cuadrado."),
+            ("23 cm", "Restó las dos medidas."),
+            ("32,9 cm", "Restó los cuadrados en vez de sumarlos."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "En un triángulo rectángulo la hipotenusa mide 53 cm y un cateto mide 28 cm. ¿Cuánto mide el otro cateto?",
+        "45 cm",
+        "Con la hipotenusa como dato, los cuadrados se restan.\n\n"
+        "1) Plantea: 53² = 28² + x².\n"
+        "2) Calcula: 2.809 = 784 + x², así que x² = 2.025.\n"
+        "3) Saca la raíz: x = √2.025 = 45.\n"
+        "4) El otro cateto mide 45 cm.",
+        [
+            ("25 cm", "Restó las medidas directamente en lugar de restar sus cuadrados."),
+            ("60 cm", "Sumó los cuadrados, tratando la hipotenusa como si fuera un cateto."),
+            ("2.025 cm", "Se quedó en la resta de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Los televisores se miden por su diagonal. Si una pantalla mide 48 cm de ancho y 36 cm de alto, ¿cuánto mide en diagonal?",
+        "60 cm",
+        "La diagonal de la pantalla es la hipotenusa del triángulo que forman el ancho y el alto.\n\n"
+        "1) Suma los cuadrados: 48² + 36² = 2.304 + 1.296 = 3.600.\n"
+        "2) Saca la raíz: √3.600 = 60.\n"
+        "3) La pantalla mide 60 cm de diagonal. Es la terna 3-4-5 multiplicada por 12.",
+        [
+            ("84 cm", "Sumó ancho y alto sin elevarlos al cuadrado."),
+            ("42 cm", "Promedió las dos medidas."),
+            ("12 cm", "Restó las dos medidas."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un mantel cuadrado mide 7 cm de lado en la maqueta de un diseñador. ¿Cuánto mide su diagonal?",
+        "7√2 cm",
+        "La diagonal de un cuadrado forma un triángulo rectángulo con dos de sus lados, que son iguales.\n\n"
+        "1) Los dos catetos miden 7 cm cada uno, así que d² = 7² + 7² = 49 + 49 = 98.\n"
+        "2) Saca la raíz: d = √98.\n"
+        "3) Simplifica: 98 = 49 · 2, y como √49 = 7, queda d = 7√2.\n"
+        "4) La diagonal mide 7√2 cm, que es aproximadamente 9,9 cm. En cualquier cuadrado la diagonal es el lado multiplicado por √2.",
+        [
+            ("14 cm", "Sumó los dos lados, como si la diagonal recorriera el borde."),
+            ("7√3 cm", "Usó √3, que corresponde a la altura de un triángulo equilátero y no a la diagonal de un cuadrado."),
+            ("49 cm", "Se quedó en el cuadrado del lado sin completar el cálculo."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "¿Cuál es la altura de un triángulo equilátero de 12 cm de lado?",
+        "6√3 cm",
+        "La altura parte el triángulo equilátero en dos triángulos rectángulos iguales.\n\n"
+        "1) La altura cae en el punto medio de la base, así que un cateto mide 12 ÷ 2 = 6 cm.\n"
+        "2) La hipotenusa es un lado completo: 12 cm.\n"
+        "3) Aplica el teorema: h² = 12² − 6² = 144 − 36 = 108.\n"
+        "4) Saca la raíz y simplifica: √108 = √(36 · 3) = 6√3.\n"
+        "5) La altura mide 6√3 cm, unos 10,4 cm.",
+        [
+            ("12√3 cm", "Olvidó que la altura solo abarca la mitad de la base, y no dividió por 2."),
+            ("6 cm", "Se quedó con la mitad de la base en vez de calcular la altura."),
+            ("6√2 cm", "Usó √2, que corresponde a la diagonal de un cuadrado y no a la altura de un equilátero."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En el plano cartesiano, ¿cuál es la distancia entre los puntos A(1, 2) y B(9, 8)?",
+        "10",
+        "La distancia entre dos puntos es la hipotenusa del triángulo que forman sus diferencias de coordenadas.\n\n"
+        "1) Diferencia horizontal: 9 − 1 = 8.\n"
+        "2) Diferencia vertical: 8 − 2 = 6.\n"
+        "3) Esas dos diferencias son perpendiculares entre sí, así que se aplica el teorema: d² = 8² + 6² = 64 + 36 = 100.\n"
+        "4) Saca la raíz: d = √100 = 10.",
+        [
+            ("14", "Sumó las dos diferencias sin elevarlas al cuadrado."),
+            ("2", "Restó las dos diferencias."),
+            ("100", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un rombo tiene diagonales que miden 24 cm y 10 cm. ¿Cuánto mide cada uno de sus lados?",
+        "13 cm",
+        "Las diagonales del rombo se cortan en el punto medio y forman ángulo recto, así que cada lado es la hipotenusa de un triángulo formado por las mitades.\n\n"
+        "1) Mitad de la primera diagonal: 24 ÷ 2 = 12 cm.\n"
+        "2) Mitad de la segunda: 10 ÷ 2 = 5 cm.\n"
+        "3) Aplica el teorema con esas mitades: lado² = 12² + 5² = 144 + 25 = 169.\n"
+        "4) Saca la raíz: lado = √169 = 13 cm.",
+        [
+            ("26 cm", "Usó las diagonales completas en lugar de sus mitades."),
+            ("17 cm", "Sumó las mitades sin elevarlas al cuadrado."),
+            ("7 cm", "Restó las mitades de las diagonales."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un triángulo isósceles tiene dos lados iguales de 13 cm y una base de 10 cm. ¿Cuál es su altura?",
+        "12 cm",
+        "En un triángulo isósceles la altura cae justo en el punto medio de la base.\n\n"
+        "1) La mitad de la base es 10 ÷ 2 = 5 cm, y ese es uno de los catetos.\n"
+        "2) La hipotenusa es uno de los lados iguales: 13 cm.\n"
+        "3) Aplica el teorema: h² = 13² − 5² = 169 − 25 = 144.\n"
+        "4) Saca la raíz: h = √144 = 12 cm.",
+        [
+            ("8,3 cm", "Usó la base completa de 10 cm como cateto, en vez de su mitad."),
+            ("18 cm", "Sumó el lado igual y la mitad de la base en vez de aplicar el teorema."),
+            ("6,5 cm", "Tomó la mitad del lado igual en vez de aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En un triángulo rectángulo, un cateto mide 8 cm y la hipotenusa mide 2 cm más que ese cateto. ¿Cuánto mide el otro cateto?",
+        "6 cm",
+        "El primer paso no es Pitágoras, sino traducir la frase a un número.\n\n"
+        "1) La hipotenusa mide 2 cm más que el cateto de 8 cm, o sea 8 + 2 = 10 cm.\n"
+        "2) Ahora sí, aplica el teorema con la hipotenusa conocida: 10² = 8² + x².\n"
+        "3) Calcula: 100 = 64 + x², de donde x² = 36.\n"
+        "4) Saca la raíz: x = √36 = 6 cm.",
+        [
+            ("2 cm", "Se quedó con la diferencia del enunciado sin aplicar el teorema."),
+            ("12,8 cm", "Sumó los cuadrados en lugar de restarlos, tratando la hipotenusa como un cateto."),
+            ("10 cm", "Dio la medida de la hipotenusa, que era un paso intermedio y no lo que se pedía."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Se quiere cercar un terreno con forma de triángulo rectángulo cuyos catetos miden 9 m y 12 m. ¿Cuántos metros de cerca se necesitan?",
+        "36 m",
+        "El perímetro necesita los tres lados, y el tercero hay que calcularlo.\n\n"
+        "1) Primero la hipotenusa: 9² + 12² = 81 + 144 = 225, y √225 = 15 m.\n"
+        "2) Ahora suma los tres lados: 9 + 12 + 15 = 36.\n"
+        "3) Se necesitan 36 m de cerca.",
+        [
+            ("21 m", "Sumó solo los dos catetos y olvidó el tercer lado."),
+            ("54 m", "Calculó el área del terreno en lugar de su contorno."),
+            ("15 m", "Se quedó con la hipotenusa, que era el paso intermedio."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "¿Cuál es la altura de un triángulo equilátero de 6 cm de lado?",
+        "3√3 cm",
+        "La altura divide el equilátero en dos triángulos rectángulos iguales.\n\n"
+        "1) La altura llega al punto medio de la base, así que un cateto mide 6 ÷ 2 = 3 cm.\n"
+        "2) La hipotenusa es un lado completo: 6 cm.\n"
+        "3) Aplica el teorema: h² = 6² − 3² = 36 − 9 = 27.\n"
+        "4) Simplifica la raíz: √27 = √(9 · 3) = 3√3.\n"
+        "5) La altura mide 3√3 cm, unos 5,2 cm: menos que el lado, como corresponde.",
+        [
+            ("6√3 cm", "No dividió la base por 2 antes de aplicar el teorema."),
+            ("3 cm", "Se quedó con la mitad de la base en lugar de calcular la altura."),
+            ("3√2 cm", "Usó √2, que corresponde a la diagonal de un cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Una antena de 24 m se sujeta con dos cables iguales que llegan al suelo a 7 m de su base, uno a cada lado. ¿Cuántos metros de cable se usaron en total?",
+        "50 m",
+        "Se calcula un cable y después se considera que son dos.\n\n"
+        "1) Cada cable es la hipotenusa de un triángulo de catetos 24 m y 7 m.\n"
+        "2) Suma los cuadrados: 24² + 7² = 576 + 49 = 625.\n"
+        "3) Saca la raíz: √625 = 25 m por cable.\n"
+        "4) Como son dos cables: 25 · 2 = 50 m en total. Olvidar este último paso es el error más frecuente de esta pregunta.",
+        [
+            ("25 m", "Calculó bien un cable pero olvidó que son dos."),
+            ("62 m", "Sumó las medidas sin elevarlas al cuadrado y después duplicó."),
+            ("31 m", "Sumó la altura y la distancia de un solo cable, sin aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En el plano cartesiano, ¿cuál es la distancia entre los puntos P(−3, 1) y Q(2, 13)?",
+        "13",
+        "Las diferencias de coordenadas son los catetos, y hay que tener cuidado con el signo negativo.\n\n"
+        "1) Diferencia horizontal: 2 − (−3) = 2 + 3 = 5. Restar un negativo suma.\n"
+        "2) Diferencia vertical: 13 − 1 = 12.\n"
+        "3) Aplica el teorema: d² = 5² + 12² = 25 + 144 = 169.\n"
+        "4) Saca la raíz: d = √169 = 13.",
+        [
+            ("12,04", "Usó 2 − 3 = −1 como diferencia horizontal, restando el negativo como si fuera positivo."),
+            ("17", "Sumó las dos diferencias sin elevarlas al cuadrado."),
+            ("169", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "Un triángulo rectángulo tiene hipotenusa de 25 cm y uno de sus catetos mide 15 cm. ¿Cuál es su área?",
+        "150 cm²",
+        "Para el área hacen falta los dos catetos, así que primero hay que encontrar el que falta.\n\n"
+        "1) Aplica el teorema: 25² = 15² + x², o sea 625 = 225 + x², de donde x² = 400.\n"
+        "2) Saca la raíz: x = √400 = 20 cm.\n"
+        "3) Ahora el área, con los dos catetos como base y altura: (15 · 20) ÷ 2 = 300 ÷ 2 = 150.\n"
+        "4) El área es 150 cm². Usar la hipotenusa como base es el error típico: no es perpendicular a ningún cateto.",
+        [
+            ("187,5 cm²", "Usó la hipotenusa y un cateto como base y altura, pero no son perpendiculares entre sí."),
+            ("300 cm²", "Multiplicó bien los catetos pero olvidó dividir por 2."),
+            ("20 cm²", "Se quedó con el cateto que faltaba, que era el paso intermedio."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "El área de un triángulo rectángulo es 54 cm² y uno de sus catetos mide 12 cm. ¿Cuánto mide su hipotenusa?",
+        "15 cm",
+        "Son dos pasos encadenados: del área se saca el cateto que falta, y recién entonces se aplica Pitágoras.\n\n"
+        "1) El área es (cateto · cateto) ÷ 2, así que 54 = (12 · x) ÷ 2.\n"
+        "2) Multiplica por 2 y despeja: 108 = 12x, de donde x = 9 cm.\n"
+        "3) Ahora aplica el teorema con los dos catetos: 12² + 9² = 144 + 81 = 225.\n"
+        "4) Saca la raíz: √225 = 15 cm.",
+        [
+            ("9 cm", "Se quedó con el cateto que faltaba, que era el paso intermedio."),
+            ("12,8 cm", "Usó 4,5 como segundo cateto, olvidando multiplicar el área por 2 al despejar."),
+            ("21 cm", "Sumó los dos catetos sin elevarlos al cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "¿Cuál de estos tríos de medidas NO puede corresponder a los lados de un triángulo rectángulo?",
+        "5, 6 y 8",
+        "Un trío cumple el teorema solo si el cuadrado del lado mayor es igual a la suma de los cuadrados de los otros dos.\n\n"
+        "1) Con 10, 24 y 26: 10² + 24² = 100 + 576 = 676, y 26² = 676. Sí cumple.\n"
+        "2) Con 12, 16 y 20: 144 + 256 = 400, y 20² = 400. Sí cumple.\n"
+        "3) Con 8, 15 y 17: 64 + 225 = 289, y 17² = 289. Sí cumple.\n"
+        "4) Con 5, 6 y 8: 5² + 6² = 25 + 36 = 61, pero 8² = 64. Como 61 ≠ 64, este trío no forma un triángulo rectángulo.",
+        [
+            ("10, 24 y 26", "Sí cumple el teorema: 100 + 576 = 676 = 26²."),
+            ("12, 16 y 20", "Sí cumple el teorema: 144 + 256 = 400 = 20²."),
+            ("8, 15 y 17", "Sí cumple el teorema: 64 + 225 = 289 = 17²."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Un trapecio isósceles tiene bases de 20 cm y 12 cm, y sus lados no paralelos miden 5 cm. ¿Cuál es su altura?",
+        "3 cm",
+        "Bajando las dos alturas se forman dos triángulos rectángulos iguales en los extremos.\n\n"
+        "1) La diferencia entre las bases es 20 − 12 = 8 cm, y se reparte por igual entre los dos extremos porque el trapecio es isósceles.\n"
+        "2) A cada extremo le tocan 8 ÷ 2 = 4 cm, y ese es uno de los catetos.\n"
+        "3) La hipotenusa es el lado no paralelo: 5 cm.\n"
+        "4) Aplica el teorema: h² = 5² − 4² = 25 − 16 = 9, así que h = √9 = 3 cm.",
+        [
+            ("4 cm", "Se quedó con la proyección horizontal en lugar de calcular la altura."),
+            ("6,2 cm", "Tomó los 8 cm de diferencia como si fueran la hipotenusa, en vez de repartirlos entre los dos extremos."),
+            ("8 cm", "Se quedó con la diferencia entre las bases sin aplicar el teorema."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Una escalera de 25 m apoyada en una pared vertical llega a 24 m de altura. Si su base se aleja 8 m más de la pared, ¿a qué altura llegará la escalera?",
+        "20 m",
+        "La escalera no cambia de largo, así que la hipotenusa sigue siendo 25 m en las dos posiciones.\n\n"
+        "1) Encuentra la distancia inicial de la base a la pared: 25² − 24² = 625 − 576 = 49, así que son √49 = 7 m.\n"
+        "2) Al alejarse 8 m más, la nueva distancia es 7 + 8 = 15 m.\n"
+        "3) Aplica el teorema otra vez, con la misma escalera: h² = 25² − 15² = 625 − 225 = 400.\n"
+        "4) Saca la raíz: h = √400 = 20 m. La escalera baja de 24 m a 20 m.",
+        [
+            ("16 m", "Restó los 8 m directamente de la altura, como si el descenso fuera igual al desplazamiento."),
+            ("15 m", "Se quedó con la nueva distancia de la base a la pared, que era el paso intermedio."),
+            ("7 m", "Se quedó con la distancia inicial de la base, que era el paso intermedio."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "La diagonal de un cuadrado mide 8√2 cm. ¿Cuál es su área?",
+        "64 cm²",
+        "Conviene recordar la relación entre lado y diagonal de un cuadrado, o deducirla con el teorema.\n\n"
+        "1) En un cuadrado de lado L, la diagonal cumple d² = L² + L² = 2L², o sea d = L√2.\n"
+        "2) Como la diagonal es 8√2, comparando queda L = 8 cm.\n"
+        "3) El área es L²: 8 · 8 = 64.\n"
+        "4) El área es 64 cm². Comprobación: con lado 8, la diagonal sería √(64 + 64) = √128 = 8√2 ✓.",
+        [
+            ("128 cm²", "Elevó la diagonal al cuadrado y tomó ese valor como área, sin dividir por 2."),
+            ("32 cm²", "Calculó el área del triángulo formado por la diagonal en vez del cuadrado completo."),
+            ("16 cm²", "Tomó 4 como lado, dividiendo la diagonal por 2 en lugar de por √2."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Un barco navega 24 km hacia el norte y luego 45 km hacia el este. ¿A qué distancia se encuentra del punto de partida?",
+        "51 km",
+        "Norte y este son direcciones perpendiculares, así que el recorrido forma un triángulo rectángulo.\n\n"
+        "1) Los dos tramos son los catetos: 24 km y 45 km. La distancia buscada es la hipotenusa, o sea la línea recta desde el punto de partida.\n"
+        "2) Suma los cuadrados: 24² + 45² = 576 + 2.025 = 2.601.\n"
+        "3) Saca la raíz: √2.601 = 51.\n"
+        "4) El barco está a 51 km del punto de partida, menos que los 69 km que efectivamente navegó.",
+        [
+            ("69 km", "Sumó los dos tramos, que es la distancia recorrida y no la separación en línea recta."),
+            ("21 km", "Restó los dos tramos."),
+            ("34,5 km", "Promedió los dos tramos."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "En un triángulo rectángulo, un cateto mide el doble que el otro y la hipotenusa mide √45 cm. ¿Cuánto mide el cateto menor?",
+        "3 cm",
+        "Se le pone nombre al cateto menor y el otro se escribe en función de él.\n\n"
+        "1) Llama x al cateto menor. El otro es el doble: 2x.\n"
+        "2) Aplica el teorema: x² + (2x)² = (√45)².\n"
+        "3) Desarrolla con cuidado: (2x)² = 4x², y (√45)² = 45. Queda x² + 4x² = 45, o sea 5x² = 45.\n"
+        "4) Despeja: x² = 9, así que x = 3.\n"
+        "5) El cateto menor mide 3 cm y el mayor 6 cm. Comprueba: 9 + 36 = 45 ✓.",
+        [
+            ("6 cm", "Dio la medida del cateto mayor en lugar de la del menor."),
+            ("√15 cm", "Escribió (2x)² como 2x², olvidando elevar también el 2 al cuadrado."),
+            ("9 cm", "Se quedó en x² sin sacar la raíz."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Un rectángulo tiene un perímetro de 34 cm y su diagonal mide 13 cm. ¿Cuál es su área?",
+        "60 cm²",
+        "No hace falta encontrar cada lado por separado: basta combinar las dos condiciones.\n\n"
+        "1) Del perímetro: 2 · (largo + ancho) = 34, así que largo + ancho = 17.\n"
+        "2) De la diagonal, por el teorema: largo² + ancho² = 13² = 169.\n"
+        "3) Eleva al cuadrado la primera relación: (largo + ancho)² = 17², es decir largo² + 2 · largo · ancho + ancho² = 289.\n"
+        "4) Reemplaza lo que ya sabes: 169 + 2 · área = 289, de donde 2 · área = 120.\n"
+        "5) El área es 60 cm². Los lados son 12 y 5, que efectivamente suman 17 y dan diagonal 13.",
+        [
+            ("72,25 cm²", "Supuso que el rectángulo era un cuadrado de lado 8,5 cm, ignorando el dato de la diagonal."),
+            ("120 cm²", "Se quedó en el doble del área sin dividir por 2 en el último paso."),
+            ("30 cm²", "Calculó el área del triángulo que forma la diagonal en lugar del rectángulo completo."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Una torre proyecta una sombra de 24 m sobre el suelo. Si la distancia desde la punta de la torre hasta el extremo de la sombra es 26 m, ¿cuánto mide la torre?",
+        "10 m",
+        "La torre es vertical y la sombra horizontal, así que la línea que une la punta con el extremo de la sombra es la hipotenusa.\n\n"
+        "1) Plantea: 26² = 24² + altura².\n"
+        "2) Calcula: 676 = 576 + altura², de donde altura² = 100.\n"
+        "3) Saca la raíz: altura = √100 = 10 m.\n"
+        "4) La torre mide 10 m.",
+        [
+            ("2 m", "Restó las medidas directamente en lugar de restar sus cuadrados."),
+            ("35,4 m", "Sumó los cuadrados, tratando los 26 m como si fueran un cateto."),
+            ("50 m", "Sumó las dos medidas."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "Un cuadrado y un triángulo rectángulo de catetos 6 cm y 8 cm tienen el mismo perímetro. ¿Cuál es el área del cuadrado?",
+        "36 cm²",
+        "Hay que pasar por tres pasos: la hipotenusa, el perímetro y recién ahí el lado del cuadrado.\n\n"
+        "1) Hipotenusa del triángulo: 6² + 8² = 36 + 64 = 100, y √100 = 10 cm.\n"
+        "2) Perímetro del triángulo: 6 + 8 + 10 = 24 cm.\n"
+        "3) El cuadrado tiene ese mismo perímetro, así que su lado es 24 ÷ 4 = 6 cm.\n"
+        "4) Área del cuadrado: 6 · 6 = 36 cm².",
+        [
+            ("24 cm²", "Calculó el área del triángulo en lugar de la del cuadrado."),
+            ("12,25 cm²", "Usó solo los dos catetos para el perímetro, olvidando la hipotenusa."),
+            ("100 cm²", "Usó la hipotenusa como lado del cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "En una circunferencia de 13 cm de radio se traza una cuerda que está a 5 cm del centro. ¿Cuánto mide la cuerda?",
+        "24 cm",
+        "El segmento que va del centro a la cuerda es perpendicular a ella y la corta justo por la mitad.\n\n"
+        "1) Une el centro con un extremo de la cuerda: ese segmento es un radio y mide 13 cm. Esa es la hipotenusa.\n"
+        "2) La distancia del centro a la cuerda, 5 cm, es uno de los catetos.\n"
+        "3) El otro cateto es la mitad de la cuerda: m² = 13² − 5² = 169 − 25 = 144, así que m = 12 cm.\n"
+        "4) La cuerda completa es el doble: 12 · 2 = 24 cm. Olvidar este último paso es el error más frecuente acá.",
+        [
+            ("12 cm", "Calculó bien la mitad de la cuerda pero olvidó duplicarla."),
+            ("26 cm", "Usó el diámetro completo como respuesta, sin considerar la distancia al centro."),
+            ("8 cm", "Restó las medidas directamente en lugar de restar sus cuadrados."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
