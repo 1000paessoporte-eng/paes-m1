@@ -1,4 +1,5 @@
 import logging
+import time
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, Form, HTTPException, Response, status
@@ -177,12 +178,14 @@ def diagnostico(_: User = Depends(get_current_admin)) -> dict[str, object]:
         "api_key_largo": len(s.flow_api_key),
         "api_key_empieza": s.flow_api_key[:4] if s.flow_api_key else "",
         "secret_key_largo": len(s.flow_secret_key),
+        "timeout_segundos": flow.TIMEOUT,
     }
 
     if not flow.esta_configurado():
         info["resultado"] = "faltan credenciales"
         return info
 
+    inicio = time.monotonic()
     try:
         flow.crear_orden(
             orden=f"diag-{uuid4().hex[:10]}",
@@ -195,7 +198,9 @@ def diagnostico(_: User = Depends(get_current_admin)) -> dict[str, object]:
     except flow.FlowError as e:
         info["resultado"] = "error"
         info["mensaje_de_flow"] = str(e)
+        info["tardo_segundos"] = round(time.monotonic() - inicio, 1)
         return info
 
     info["resultado"] = "ok: Flow aceptó una orden de prueba"
+    info["tardo_segundos"] = round(time.monotonic() - inicio, 1)
     return info

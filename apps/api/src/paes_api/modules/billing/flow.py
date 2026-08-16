@@ -23,10 +23,14 @@ import requests
 
 from paes_api.core.config import get_settings
 
-#: Flow corta a los 10 segundos en su propia documentación; se deja algo más
-#: para no fallar por una latencia transitoria, pero no tanto como para dejar
-#: colgada la petición del usuario.
-TIMEOUT = 15
+#: Cuánto se espera a Flow antes de rendirse.
+#:
+#: Se subió de 15 a 25 porque el ambiente de PRODUCCIÓN de Flow resultó ser
+#: bastante más lento que el sandbox: con 15 segundos daba read timeout de
+#: forma consistente mientras el sandbox respondía al instante. El techo lo
+#: pone Vercel, que corta la función a los 30, así que 25 deja margen para
+#: devolver un error ordenado en vez de que la petición muera sin respuesta.
+TIMEOUT = 25
 
 #: Códigos de estado que devuelve Flow en `status`.
 PAGADA = 2
