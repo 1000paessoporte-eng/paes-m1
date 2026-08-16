@@ -26,7 +26,7 @@ router = APIRouter(prefix="/plan", tags=["plan"])
 
 def _armar(db: Session, user_id: int) -> MiPlanOut:
     plan, sub = service.plan_actual(db, user_id)
-    limites = service.LIMITES[plan]
+    limites = service.limites_de(plan)
     return MiPlanOut(
         plan=plan,
         vence_el=sub.expires_at if sub else None,

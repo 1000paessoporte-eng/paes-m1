@@ -295,3 +295,39 @@ def test_los_limites_se_encienden_por_entorno(monkeypatch) -> None:
     finally:
         monkeypatch.delenv("LIMITES_ACTIVOS", raising=False)
         get_settings.cache_clear()
+
+
+def test_la_cuota_gratis_se_ajusta_por_entorno(monkeypatch) -> None:
+    """El número de ensayos gratis es una palanca de negocio, no una constante.
+
+    Encontrar el punto donde aprieta sin espantar es prueba y error contra la
+    conversión real, y cada ajuste no puede costar un despliegue.
+    """
+    from paes_api.core.config import get_settings
+    from paes_api.modules.billing.models import Plan
+
+    assert service.limites_de(Plan.GRATIS).ensayos_por_mes == 4
+
+    get_settings.cache_clear()
+    monkeypatch.setenv("ENSAYOS_GRATIS_POR_MES", "2")
+    try:
+        assert service.limites_de(Plan.GRATIS).ensayos_por_mes == 2
+        # Pro nunca se ve afectado por esa variable.
+        assert service.limites_de(Plan.PRO).ensayos_por_mes is None
+    finally:
+        monkeypatch.delenv("ENSAYOS_GRATIS_POR_MES", raising=False)
+        get_settings.cache_clear()
+
+
+def test_el_plan_gratis_conserva_el_acceso_a_aprender() -> None:
+    """Lo que se limita es el volumen de ensayos, nunca el material de estudio.
+
+    Si algún día alguien restringe las lecciones o el árbol para empujar la
+    compra, este test lo obliga a hacerlo a conciencia: un muro sobre el
+    contenido ahuyenta a quien todavía no sabe si el producto le sirve.
+    """
+    from paes_api.modules.billing.models import Plan
+
+    gratis = service.limites_de(Plan.GRATIS)
+    assert gratis.ensayos_por_mes is not None, "el plan Gratis sí limita ensayos"
+    assert gratis.carreras_en_meta >= 1, "debe poder seguir al menos una carrera"

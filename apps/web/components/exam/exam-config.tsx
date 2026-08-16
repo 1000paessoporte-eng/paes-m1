@@ -99,6 +99,8 @@ interface Props {
   optionsBySubject: Record<Subject, ExamOptions>;
   repasoBySubject: Record<Subject, Repaso>;
   ensayosRendidos: number;
+  //: Cuota del mes cuando el plan la tiene. `null` = sin límite.
+  cuota?: { usados: number; limite: number | null; activa: boolean } | null;
   resumable: { attemptId: number; subject: Subject } | null;
   errorMsg: string | null;
   onComenzar: (config: ExamConfig) => void;
@@ -109,6 +111,7 @@ export function ExamConfigScreen({
   optionsBySubject,
   repasoBySubject,
   ensayosRendidos,
+  cuota,
   resumable,
   errorMsg,
   onComenzar,
@@ -475,6 +478,44 @@ export function ExamConfigScreen({
           Comenzar ensayo
         </button>
       </div>
+
+      {cuota?.limite != null && (() => {
+        const restantes = Math.max(0, cuota.limite - cuota.usados);
+        const sinCupo = restantes === 0;
+        return (
+          <div
+            className={
+              "mt-4 rounded-lg border p-3 text-center text-xs leading-relaxed " +
+              (sinCupo
+                ? "border-accent-warm/40 bg-accent-warm/5"
+                : "border-border")
+            }
+          >
+            {sinCupo ? (
+              <>
+                <strong className="text-accent-warm-strong">
+                  Usaste tus {cuota.limite} ensayos de este mes.
+                </strong>{" "}
+                {cuota.activa ? (
+                  <>
+                    Con el plan Pro son ilimitados.{" "}
+                    <Link href="/planes" className="font-medium text-accent hover:underline">
+                      Ver planes
+                    </Link>
+                  </>
+                ) : (
+                  "Por ahora puedes seguir rindiendo igual."
+                )}
+              </>
+            ) : (
+              <>
+                Te quedan <strong>{restantes}</strong> de {cuota.limite} ensayos
+                este mes en el plan Gratis.
+              </>
+            )}
+          </div>
+        );
+      })()}
 
       {ensayosRendidos > 0 && (
         <Link

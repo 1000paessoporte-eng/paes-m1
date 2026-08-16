@@ -34,6 +34,12 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
     smtp_from: str = "1000paes <no-responder@1000paes.cl>"
+    #: Cuántos ensayos al mes permite el plan Gratis. Va por entorno porque
+    #: es una palanca de negocio que conviene poder mover mirando la
+    #: conversión: bajarlo aprieta y sube el incentivo a comprar, subirlo deja
+    #: probar más antes de decidir. Encontrar el número correcto es cuestión de
+    #: prueba y error, y no debería costar un despliegue cada vez.
+    ensayos_gratis_por_mes: int = 4
     #: Si los límites del plan Gratis bloquean de verdad. Va por entorno y no
     #: en el código para que encenderlos no exija un despliegue: el día que el
     #: cobro funcione se cambia la variable y listo. Arranca APAGADO a

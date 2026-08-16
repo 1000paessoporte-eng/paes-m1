@@ -97,9 +97,9 @@ def test_una_suscripcion_vencida_no_da_plan(
 
 @pytest.mark.parametrize("plan", list(Plan))
 def test_todo_plan_declara_sus_limites(plan: Plan) -> None:
-    """Un plan sin límites declarados haría que `LIMITES[plan]` reviente en
+    """Un plan sin límites declarados haría que `limites_de(plan)` reviente en
     producción la primera vez que alguien lo tenga."""
-    assert plan in service.LIMITES
+    assert service.limites_de(plan) is not None
 
 
 def test_los_limites_no_bloquean_todavia() -> None:
