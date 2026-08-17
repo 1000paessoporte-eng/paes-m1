@@ -534,6 +534,45 @@ COMPROBACIONES: dict[str, str] = {
     "duplica el radio de un cilindro": f"Por {2**2}",
     "duplican el largo, el ancho y el alto": f"Por {2**3}",
     "arista de un cubo aumenta en un 50%": str(round((1.5**3 - 1) * 100, 1)).replace(".", ","),
+    # --- enteros y racionales: segunda tanda ---
+    # Operatoria con enteros negativos, que es lo que el nodo no cubría.
+    "temperatura en una ciudad era de −3 °C": str(-3 - 5),
+    "resultado de −7 + 12": str(-7 + 12),
+    "resultado de −4 · (−6)": str(-4 * -6),
+    "resultado de −20 ÷ 5": str(-20 // 5),
+    # 8 − (−3) se resuelve como 8 + 3: restar un negativo suma.
+    "resultado de 8 − (−3)": str(8 + 3),
+    "buzo se encuentra a 12 metros bajo": str(-12 + 5),
+    "resultado de −6 + 4 − (−9)": str(-6 + 4 + 9),
+    "resultado de (−3)² − (−3)": str((-3) ** 2 + 3),
+    "saldo de −45.000 pesos": f"{-45_000 + 70_000:,}".replace(",", "."),
+    "resultado de (−5) · 3 + 20 ÷ (−4)": str(-5 * 3 + 20 // -4),
+    "pasó de −8 °C en la madrugada a 6 °C": str(6 + 8),
+    "resultado de −3 · (5 − 8) + (−4)²": str(-3 * (5 - 8) + (-4) ** 2),
+    "termómetro marcaba −6 °C a las 6": str(-6 + (11 - 6) * 2),
+    # Orden: con negativos la comparación se invierte respecto de los valores.
+    "es el menor: −5, −12, 3 o 0": str(min(-5, -12, 3, 0)),
+    "mayor: −2/3 o −3/5": str(max(Fraction(-2, 3), Fraction(-3, 5))),
+    "Ordena de menor a mayor las fracciones −1/2": ", ".join(
+        str(f) for f in sorted([Fraction(-1, 2), Fraction(-3, 4), Fraction(1, 4)])
+    ),
+    "Ordena de menor a mayor los números −0,6": ", ".join(
+        t for _, t in sorted([(Fraction(-2, 3), "-2/3"), (Fraction(-3, 5), "-0,6"), (Fraction(-29, 50), "-0,58")])
+    ),
+    "¿Cuántos números enteros hay entre −4 y 3": str(len(range(-4 + 1, 3))),
+    # Paso de decimal a fracción irreducible.
+    "0,75 como fracción irreducible": str(Fraction(75, 100)),
+    "0,375 como fracción irreducible": str(Fraction(375, 1000)),
+    "resultado de 1,25 + 3/4": str(Fraction(125, 100) + Fraction(3, 4)),
+    # Operatoria con fracciones, incluidas las negativas.
+    "resultado de 3/5 + 1/10": str(Fraction(3, 5) + Fraction(1, 10)),
+    "resultado de 2/9 × 3/8": str(Fraction(2, 9) * Fraction(3, 8)),
+    "resultado de −2/3 + 1/6": str(Fraction(-2, 3) + Fraction(1, 6)),
+    "resultado de (−2/5) ÷ (4/15)": str(Fraction(-2, 5) / Fraction(4, 15)),
+    "resultado de (−1/2)³ + 1/4": str(Fraction(-1, 2) ** 3 + Fraction(1, 4)),
+    "resultado de 2 − (−3/4) ÷ (3/2)": str(2 - Fraction(-3, 4) / Fraction(3, 2)),
+    "punto medio entre −5/6 y 1/3": str((Fraction(-5, 6) + Fraction(1, 3)) / 2),
+    "deuda de $120.000 ya se han pagado 3/8": f"{120_000 * 5 // 8:,}".replace(",", "."),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
@@ -864,7 +903,9 @@ COMPROBACIONES: dict[str, str] = {
     "dos fracciones es mayor: 5/8 o 7/12": (
         "5/8" if Fraction(5, 8) > Fraction(7, 12) else "7/12"
     ),
-    "Ordena de menor a mayor las fracciones": ", ".join(
+    # El fragmento lleva los números porque hay más de una pregunta que empieza
+    # con "Ordena de menor a mayor las fracciones".
+    "Ordena de menor a mayor las fracciones 2/3": ", ".join(
         str(f) for f in sorted([Fraction(2, 3), Fraction(3, 5), Fraction(7, 10)])
     ),
     "(3/4 − 1/6) ÷ (1/2 + 1/3)": str(

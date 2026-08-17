@@ -14101,6 +14101,454 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Números enteros y racionales — segunda tanda.
+#
+# El temario DEMRE pide para esta unidad tres cosas: "operaciones y ORDEN en el
+# conjunto de los números ENTEROS", "operaciones y COMPARACIÓN entre números
+# racionales" y problemas "en diversos contextos".
+#
+# Las 39 preguntas que ya existían cubrían bien la operatoria con fracciones,
+# pero casi solo con fracciones positivas: no había prácticamente nada de
+# enteros negativos, ni de ordenar, ni de comparar, ni del paso entre decimal y
+# fracción. Esta tanda va derecho a ese hueco, con los contextos donde los
+# negativos aparecen de verdad: temperaturas, profundidades y saldos bancarios.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_racionales", "facil",
+        "La temperatura en una ciudad era de −3 °C y durante la noche bajó 5 °C más. ¿Cuál es la nueva temperatura?",
+        "−8 °C",
+        "Bajar la temperatura significa restar, y partimos de un número que ya es negativo.\n\n"
+        "1) Plantea la operación: −3 − 5.\n"
+        "2) Al restar sobre un número negativo, te alejas más del cero hacia la izquierda: −3 − 5 = −8.\n"
+        "3) La nueva temperatura es −8 °C. Tiene sentido: si ya hacía frío bajo cero y bajó más, tiene que quedar un número más negativo.",
+        [
+            ("2 °C", "Sumó los 5 grados en lugar de restarlos."),
+            ("−2 °C", "Restó 3 a 5 en vez de restar 5 a −3."),
+            ("8 °C", "Operó con los números sin considerar el signo negativo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de −7 + 12?",
+        "5",
+        "Se suman un número negativo y uno positivo, así que se compensan entre sí.\n\n"
+        "1) Cuando los signos son distintos, se restan los valores y se conserva el signo del mayor en valor absoluto.\n"
+        "2) Aquí 12 es mayor que 7, así que el resultado será positivo.\n"
+        "3) Resta: 12 − 7 = 5.\n"
+        "4) El resultado es 5.",
+        [
+            ("−5", "Se quedó con el signo del número menor en lugar del mayor."),
+            ("19", "Sumó los dos valores como si ambos fueran positivos."),
+            ("−19", "Sumó los valores y además dejó el signo negativo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de −4 · (−6)?",
+        "24",
+        "Al multiplicar, la regla de los signos decide si el resultado es positivo o negativo.\n\n"
+        "1) Multiplica los valores sin mirar el signo: 4 · 6 = 24.\n"
+        "2) Los dos factores son negativos, y menos por menos da más.\n"
+        "3) El resultado es 24, positivo.",
+        [
+            ("−24", "Aplicó mal la regla de los signos: dos negativos dan positivo, no negativo."),
+            ("−10", "Sumó los valores en lugar de multiplicarlos."),
+            ("10", "Sumó en vez de multiplicar, aunque acertó con el signo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de −20 ÷ 5?",
+        "−4",
+        "La regla de los signos vale igual para la división que para la multiplicación.\n\n"
+        "1) Divide los valores: 20 ÷ 5 = 4.\n"
+        "2) Un número negativo dividido por uno positivo da negativo, porque los signos son distintos.\n"
+        "3) El resultado es −4.",
+        [
+            ("4", "Ignoró que los signos eran distintos y dejó el resultado positivo."),
+            ("−15", "Sumó en lugar de dividir."),
+            ("−100", "Multiplicó en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 8 − (−3)?",
+        "11",
+        "Restar un número negativo equivale a sumar su opuesto.\n\n"
+        "1) Los dos signos seguidos se combinan: menos por menos da más, así que 8 − (−3) se convierte en 8 + 3.\n"
+        "2) Suma: 8 + 3 = 11.\n"
+        "3) El resultado es 11. Fíjate en que restar algo negativo hace crecer el resultado, no disminuirlo.",
+        [
+            ("5", "Restó 3 directamente, ignorando que el 3 venía con signo negativo."),
+            ("−11", "Aplicó bien la operación pero le puso signo negativo al resultado."),
+            ("−5", "Trató la expresión como −8 − 3."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál de estos números es el menor: −5, −12, 3 o 0?",
+        "−12",
+        "En la recta numérica, mientras más a la izquierda está un número, menor es.\n\n"
+        "1) Los negativos son todos menores que 0 y que cualquier positivo, así que descarta el 3 y el 0.\n"
+        "2) Entre −5 y −12, el menor es el que está más lejos del cero hacia la izquierda.\n"
+        "3) Como 12 es mayor que 5, el número −12 queda más a la izquierda y por lo tanto es el menor.\n"
+        "4) El menor es −12. Con los negativos el orden se invierte respecto de lo que dice la intuición: mientras más grande el número sin signo, menor es el negativo.",
+        [
+            ("−5", "Eligió el negativo más cercano al cero, que en realidad es el mayor de los dos negativos."),
+            ("0", "Supuso que el cero es el menor, pero cualquier negativo es menor que él."),
+            ("3", "Eligió el mayor de los cuatro números."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cómo se escribe 0,75 como fracción irreducible?",
+        "3/4",
+        "Un decimal se pasa a fracción usando el lugar que ocupa la última cifra.\n\n"
+        "1) El 0,75 tiene dos cifras decimales, así que se escribe como 75/100.\n"
+        "2) Simplifica: 75 y 100 se dividen ambos por 25.\n"
+        "3) 75 ÷ 25 = 3 y 100 ÷ 25 = 4, así que queda 3/4.\n"
+        "4) Comprueba dividiendo: 3 ÷ 4 = 0,75 ✓.",
+        [
+            ("75/10", "Usó un solo cero en el denominador, cuando hay dos cifras decimales."),
+            ("7/5", "Separó las cifras del decimal en lugar de usar el valor posicional."),
+            ("1/75", "Invirtió la fracción."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 3/5 + 1/10?",
+        "7/10",
+        "Para sumar fracciones hay que llevarlas a un mismo denominador.\n\n"
+        "1) Busca el mínimo común múltiplo de 5 y 10: como 10 es múltiplo de 5, sirve el mismo 10.\n"
+        "2) Convierte la primera: 3/5 = 6/10, multiplicando arriba y abajo por 2.\n"
+        "3) Suma los numeradores: 6/10 + 1/10 = 7/10.\n"
+        "4) Como 7 es primo y no divide a 10, la fracción ya está en su forma más simple.",
+        [
+            ("4/15", "Sumó numeradores con numeradores y denominadores con denominadores."),
+            ("4/10", "Sumó los numeradores sin convertir antes la primera fracción."),
+            ("3/50", "Multiplicó las fracciones en lugar de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "Un buzo se encuentra a 12 metros bajo el nivel del mar, lo que se representa como −12 m. Si sube 5 metros, ¿a qué profundidad queda?",
+        "−7 m",
+        "Subir significa acercarse al cero, así que se suma.\n\n"
+        "1) Plantea la operación: −12 + 5.\n"
+        "2) Los signos son distintos, así que se restan los valores: 12 − 5 = 7.\n"
+        "3) Como 12 es mayor que 5, el resultado conserva el signo negativo: −7.\n"
+        "4) El buzo queda a −7 m, es decir, 7 metros bajo el nivel del mar. Sigue estando bajo el agua, que es lo esperable si subió menos de lo que estaba hundido.",
+        [
+            ("−17 m", "Restó los 5 metros en lugar de sumarlos, hundiendo más al buzo."),
+            ("7 m", "Perdió el signo negativo y dejó al buzo sobre el nivel del mar."),
+            ("17 m", "Sumó los valores sin considerar los signos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 2/9 × 3/8?",
+        "1/12",
+        "Multiplicar fracciones es directo: numerador con numerador y denominador con denominador.\n\n"
+        "1) Multiplica arriba: 2 · 3 = 6.\n"
+        "2) Multiplica abajo: 9 · 8 = 72.\n"
+        "3) Queda 6/72, que se puede simplificar dividiendo ambos por 6: 1/12.\n"
+        "4) Atajo útil: se podía simplificar antes de multiplicar, cancelando el 3 con el 9 y el 2 con el 8.",
+        [
+            ("6/72", "Llegó al resultado correcto pero no lo simplificó."),
+            ("16/27", "Multiplicó en cruz, como si fuera una división."),
+            ("5/17", "Sumó numeradores y denominadores en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de −6 + 4 − (−9)?",
+        "7",
+        "Conviene resolver de izquierda a derecha, arreglando primero los signos dobles.\n\n"
+        "1) El −(−9) del final se convierte en +9, porque restar un negativo es sumar.\n"
+        "2) La expresión queda: −6 + 4 + 9.\n"
+        "3) Resuelve por partes: −6 + 4 = −2.\n"
+        "4) Y después: −2 + 9 = 7.",
+        [
+            ("−11", "Restó el 9 en lugar de sumarlo, sin resolver el doble signo."),
+            ("−1", "Restó el 4 en vez de sumarlo."),
+            ("19", "Sumó los tres valores ignorando el signo del −6."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (−3)² − (−3)?",
+        "12",
+        "Hay que distinguir el cuadrado de un negativo del signo que va delante.\n\n"
+        "1) Calcula la potencia primero: (−3)² significa (−3) · (−3), y menos por menos da más, así que es 9.\n"
+        "2) El segundo término es −(−3), que se convierte en +3.\n"
+        "3) Suma: 9 + 3 = 12.\n"
+        "4) Ojo con la trampa: (−3)² es 9, pero −3² sería −9, porque ahí el cuadrado afecta solo al 3.",
+        [
+            ("6", "Calculó (−3)² como 9 pero restó 3 en vez de sumarlo."),
+            ("−6", "Tomó (−3)² como −9 y después sumó 3."),
+            ("−12", "Tomó (−3)² como −9 y restó 3."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Una cuenta bancaria tiene un saldo de −45.000 pesos, es decir, está sobregirada. Si se depositan 70.000 pesos, ¿cuál es el nuevo saldo?",
+        "25.000 pesos",
+        "Depositar suma al saldo, aunque el saldo de partida sea negativo.\n\n"
+        "1) Plantea la operación: −45.000 + 70.000.\n"
+        "2) Los signos son distintos, así que se restan los valores: 70.000 − 45.000 = 25.000.\n"
+        "3) Como 70.000 es mayor, el resultado queda positivo: 25.000.\n"
+        "4) El nuevo saldo es de 25.000 pesos. Los primeros 45.000 del depósito se fueron en cubrir el sobregiro.",
+        [
+            ("−25.000 pesos", "Conservó el signo negativo del saldo inicial en lugar del signo del número mayor."),
+            ("115.000 pesos", "Sumó los dos valores como si el saldo inicial fuera positivo."),
+            ("70.000 pesos", "Ignoró el sobregiro y se quedó con el monto depositado."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Ordena de menor a mayor las fracciones −1/2, −3/4 y 1/4.",
+        "−3/4, −1/2, 1/4",
+        "Con negativos el orden se invierte, así que conviene pasarlos a decimal para verlo claro.\n\n"
+        "1) Convierte: −1/2 = −0,5; −3/4 = −0,75; 1/4 = 0,25.\n"
+        "2) Cualquier negativo es menor que cualquier positivo, así que 1/4 va al final.\n"
+        "3) Entre los dos negativos, el menor es el que está más lejos del cero: −0,75 es menor que −0,5.\n"
+        "4) El orden de menor a mayor es: −3/4, −1/2, 1/4.",
+        [
+            ("−1/2, −3/4, 1/4", "Ordenó los negativos como si fueran positivos: creyó que −1/2 es menor que −3/4."),
+            ("1/4, −1/2, −3/4", "Ordenó de mayor a menor en vez de al revés."),
+            ("1/4, −3/4, −1/2", "Puso el positivo primero y además invirtió el orden de los negativos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cómo se escribe 0,375 como fracción irreducible?",
+        "3/8",
+        "El número de cifras decimales indica el denominador de partida.\n\n"
+        "1) Hay tres cifras decimales, así que se escribe como 375/1.000.\n"
+        "2) Ambos números se dividen por 125: 375 ÷ 125 = 3 y 1.000 ÷ 125 = 8.\n"
+        "3) Queda 3/8.\n"
+        "4) Comprueba: 3 ÷ 8 = 0,375 ✓.",
+        [
+            ("375/100", "Usó dos ceros en el denominador cuando hay tres cifras decimales."),
+            ("3/4", "Simplificó de más y perdió una cifra decimal en el camino."),
+            ("37/5", "Separó las cifras en lugar de usar el valor posicional."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de −2/3 + 1/6?",
+        "−1/2",
+        "Se busca denominador común y después se opera respetando los signos.\n\n"
+        "1) El mínimo común múltiplo de 3 y 6 es 6.\n"
+        "2) Convierte la primera: −2/3 = −4/6.\n"
+        "3) Suma los numeradores conservando el denominador: −4/6 + 1/6 = −3/6.\n"
+        "4) Simplifica dividiendo por 3: −3/6 = −1/2.",
+        [
+            ("−5/6", "Restó el 1/6 en lugar de sumarlo."),
+            ("1/2", "Llegó al valor correcto pero perdió el signo negativo."),
+            ("−1/6", "Sumó los numeradores sin convertir antes la primera fracción."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (−5) · 3 + 20 ÷ (−4)?",
+        "−20",
+        "Primero multiplicaciones y divisiones, y recién al final la suma.\n\n"
+        "1) Resuelve la multiplicación: (−5) · 3 = −15, porque los signos son distintos.\n"
+        "2) Resuelve la división: 20 ÷ (−4) = −5, también por signos distintos.\n"
+        "3) Ahora suma los dos resultados: −15 + (−5) = −20.\n"
+        "4) Sumar dos negativos siempre da un negativo más grande en valor absoluto.",
+        [
+            ("−10", "Sumó −15 y 5, perdiendo el signo del resultado de la división."),
+            ("20", "Operó con los valores sin considerar ningún signo."),
+            ("−35", "Restó el 20 en lugar de dividirlo por −4."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál de estos dos números es mayor: −2/3 o −3/5?",
+        "−3/5",
+        "Con fracciones negativas conviene pasar a decimal, porque la intuición engaña.\n\n"
+        "1) Convierte: −2/3 = −0,666… y −3/5 = −0,6.\n"
+        "2) En la recta numérica, −0,6 está más cerca del cero que −0,666…\n"
+        "3) El que está más a la derecha es el mayor, así que −3/5 es mayor que −2/3.\n"
+        "4) Fíjate en que 2/3 sí es mayor que 3/5, pero al ponerles signo negativo la comparación se da vuelta.",
+        [
+            ("−2/3", "Comparó las fracciones como si fueran positivas, donde 2/3 sí es mayor que 3/5."),
+            ("Son iguales", "Supuso que valen lo mismo, pero −0,666… y −0,6 son distintos."),
+            ("No se pueden comparar", "Las fracciones negativas sí se comparan, igual que cualquier número racional."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "La temperatura de un pueblo pasó de −8 °C en la madrugada a 6 °C al mediodía. ¿Cuántos grados subió?",
+        "14 °C",
+        "La variación es la temperatura final menos la inicial.\n\n"
+        "1) Plantea: 6 − (−8).\n"
+        "2) Restar un negativo es sumar: 6 + 8 = 14.\n"
+        "3) La temperatura subió 14 °C.\n"
+        "4) Se puede comprobar contando en la recta numérica: de −8 a 0 hay 8 grados, y de 0 a 6 hay 6 más. En total 8 + 6 = 14 ✓.",
+        [
+            ("2 °C", "Restó 8 a 6 en vez de restar un número negativo."),
+            ("−2 °C", "Calculó la diferencia al revés y además se equivocó en el signo doble."),
+            ("−14 °C", "Acertó con la magnitud pero le puso signo negativo a una subida."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de 1,25 + 3/4?",
+        "2",
+        "Conviene llevar los dos números a la misma forma antes de sumar.\n\n"
+        "1) Pasa la fracción a decimal: 3 ÷ 4 = 0,75.\n"
+        "2) Suma: 1,25 + 0,75 = 2.\n"
+        "3) El resultado es exactamente 2.\n"
+        "4) También sale trabajando con fracciones: 1,25 = 5/4, y 5/4 + 3/4 = 8/4 = 2 ✓.",
+        [
+            ("1,28", "Sumó el 3 y el 4 de la fracción a los decimales, sin convertirla."),
+            ("2,25", "Sumó 1 en lugar de 0,75."),
+            ("4/5", "Sumó los números como si todos fueran partes de una fracción."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de −3 · (5 − 8) + (−4)²?",
+        "25",
+        "Primero el paréntesis, después la potencia, luego la multiplicación y al final la suma.\n\n"
+        "1) Resuelve el paréntesis: 5 − 8 = −3.\n"
+        "2) Resuelve la potencia: (−4)² = (−4) · (−4) = 16, positivo porque menos por menos da más.\n"
+        "3) Ahora la multiplicación: −3 · (−3) = 9, también positivo.\n"
+        "4) Finalmente suma: 9 + 16 = 25.",
+        [
+            ("−7", "Calculó (−4)² como −16, aplicando el cuadrado solo al 4."),
+            ("7", "Obtuvo −9 en la multiplicación, olvidando que menos por menos da más."),
+            ("−23", "Resolvió el paréntesis como 5 + 8 en lugar de 5 − 8."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Un termómetro marcaba −6 °C a las 6 de la mañana y la temperatura subió 2 °C cada hora hasta las 11. ¿Qué marcaba a las 11?",
+        "4 °C",
+        "Hay que contar bien cuántas horas transcurrieron antes de multiplicar.\n\n"
+        "1) De las 6 a las 11 hay 11 − 6 = 5 horas.\n"
+        "2) En cada hora subió 2 °C, así que en total subió 5 · 2 = 10 °C.\n"
+        "3) Parte de −6 y súmale ese aumento: −6 + 10 = 4.\n"
+        "4) A las 11 marcaba 4 °C. El error clásico es contar 6 horas en vez de 5, o quedarse en el aumento sin sumarlo a la temperatura inicial.",
+        [
+            ("6 °C", "Contó 6 horas en lugar de 5, incluyendo la hora de partida."),
+            ("10 °C", "Se quedó con el aumento total y no lo sumó a la temperatura inicial."),
+            ("−16 °C", "Restó el aumento en lugar de sumarlo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (−2/5) ÷ (4/15)?",
+        "−3/2",
+        "Dividir fracciones es multiplicar por la inversa, y el signo se decide aparte.\n\n"
+        "1) Invierte la segunda fracción: 4/15 pasa a 15/4.\n"
+        "2) La operación queda: (−2/5) · (15/4).\n"
+        "3) Multiplica: arriba −2 · 15 = −30, abajo 5 · 4 = 20. Queda −30/20.\n"
+        "4) Simplifica dividiendo por 10: −3/2. El signo es negativo porque solo uno de los dos números lo era.",
+        [
+            ("3/2", "Hizo bien la operación pero perdió el signo negativo."),
+            ("−8/75", "Multiplicó las fracciones sin invertir la segunda."),
+            ("−2/3", "Invirtió la primera fracción en lugar de la segunda."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Ordena de menor a mayor los números −0,6, −2/3 y −0,58.",
+        "−2/3, −0,6, −0,58",
+        "Todos son negativos, así que conviene compararlos en la misma forma decimal.\n\n"
+        "1) Convierte la fracción: −2/3 = −0,666…\n"
+        "2) Ahora compara los tres decimales: −0,666…, −0,6 y −0,58.\n"
+        "3) Con negativos, el menor es el que tiene mayor valor sin signo: −0,666… es el menor, y −0,58 el mayor porque es el más cercano al cero.\n"
+        "4) El orden de menor a mayor es: −2/3, −0,6, −0,58.",
+        [
+            ("−0,58, −0,6, −2/3", "Ordenó de mayor a menor en vez de al revés."),
+            ("−0,6, −0,58, −2/3", "Trató la fracción como si fuera menor que ambos decimales sin convertirla."),
+            ("−0,58, −2/3, −0,6", "Comparó los valores sin signo, como si todos fueran positivos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (−1/2)³ + 1/4?",
+        "1/8",
+        "Un exponente impar conserva el signo negativo de la base.\n\n"
+        "1) Calcula la potencia: (−1/2)³ = (−1/2) · (−1/2) · (−1/2). Las dos primeras dan +1/4, y al multiplicar por la tercera queda −1/8.\n"
+        "2) La expresión es entonces −1/8 + 1/4.\n"
+        "3) Lleva a denominador común: 1/4 = 2/8.\n"
+        "4) Suma: −1/8 + 2/8 = 1/8.",
+        [
+            ("3/8", "Calculó la potencia como +1/8, olvidando que un exponente impar conserva el signo negativo."),
+            ("−3/8", "Restó las fracciones y además dejó el signo negativo."),
+            ("−1/8", "Se quedó en el resultado de la potencia sin sumarle 1/4."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "De una deuda de $120.000 ya se han pagado 3/8. ¿Cuánto falta por pagar?",
+        "$75.000",
+        "Se puede calcular directo la fracción que falta, sin pasar por lo pagado.\n\n"
+        "1) Si se pagaron 3/8, lo que falta es el resto del total: 1 − 3/8 = 8/8 − 3/8 = 5/8.\n"
+        "2) Calcula esa fracción del total: 5/8 de 120.000.\n"
+        "3) Divide primero por 8: 120.000 ÷ 8 = 15.000. Después multiplica por 5: 15.000 · 5 = 75.000.\n"
+        "4) Faltan $75.000. Comprueba: lo pagado son 3 · 15.000 = 45.000, y 45.000 + 75.000 = 120.000 ✓.",
+        [
+            ("$45.000", "Calculó lo que ya se pagó en lugar de lo que falta."),
+            ("$40.000", "Dividió el total por 3 en vez de aplicar la fracción que falta."),
+            ("$117.000", "Restó 3.000 al total, tratando la fracción como si fuera un monto."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de 2 − (−3/4) ÷ (3/2)?",
+        "5/2",
+        "La división va antes que la resta, y hay un signo negativo que arrastrar.\n\n"
+        "1) Resuelve primero la división: (−3/4) ÷ (3/2) es (−3/4) · (2/3).\n"
+        "2) Multiplica: arriba −3 · 2 = −6, abajo 4 · 3 = 12. Queda −6/12 = −1/2.\n"
+        "3) Ahora la resta: 2 − (−1/2), y restar un negativo es sumar: 2 + 1/2.\n"
+        "4) El resultado es 5/2, o sea 2,5.",
+        [
+            ("3/2", "Restó 1/2 en lugar de sumarlo, sin resolver el doble signo."),
+            ("−5/2", "Llegó al valor correcto pero le dejó signo negativo."),
+            ("11/6", "Resolvió la resta antes que la división, sin respetar la prioridad de operaciones."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el número que está justo en el punto medio entre −5/6 y 1/3 en la recta numérica?",
+        "−1/4",
+        "El punto medio entre dos números es su promedio.\n\n"
+        "1) Suma los dos números: −5/6 + 1/3. Lleva a denominador común: −5/6 + 2/6 = −3/6 = −1/2.\n"
+        "2) Divide esa suma por 2: (−1/2) ÷ 2 = −1/4.\n"
+        "3) El punto medio es −1/4.\n"
+        "4) Comprueba que la distancia sea la misma a los dos lados: de −5/6 a −1/4 hay 7/12, y de −1/4 a 1/3 también hay 7/12 ✓.",
+        [
+            ("−1/2", "Se quedó en la suma de los dos números sin dividirla por 2."),
+            ("−7/12", "Calculó la mitad de la distancia entre ambos en vez del punto medio."),
+            ("1/4", "Llegó al valor correcto pero perdió el signo negativo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuántos números enteros hay entre −4 y 3, sin contar el −4 ni el 3?",
+        "6",
+        "Conviene listarlos, porque acá es fácil equivocarse con el cero o con los extremos.\n\n"
+        "1) Los enteros estrictamente entre −4 y 3 son: −3, −2, −1, 0, 1 y 2.\n"
+        "2) Cuéntalos: son 6.\n"
+        "3) El cero cuenta como un entero más, y olvidarlo es el error más común.\n"
+        "4) Otra forma de verlo: entre dos enteros hay (3 − (−4)) − 1 = 7 − 1 = 6 números.",
+        [
+            ("5", "Olvidó contar el cero."),
+            ("7", "Incluyó uno de los extremos, que el enunciado excluye."),
+            ("8", "Incluyó los dos extremos."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
