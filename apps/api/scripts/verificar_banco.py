@@ -654,6 +654,55 @@ COMPROBACIONES: dict[str, str] = {
     + f"{36_000 - round(50_000 * 0.7):,}".replace(",", "."),
     # Reparto proporcional: el total se parte en la suma de la razón.
     "reparten $120.000 entre dos personas en la razón 2 : 3": f"{120_000 * 3 // 5:,}".replace(",", "."),
+    # --- estadística descriptiva: segunda tanda ---
+    # Frecuencia relativa: la parte comparada con el total.
+    "encuesta a 50 personas, 20 eligieron el cine": str(20 / 50).replace(".", ","),
+    "el dato 7 aparece 5 veces sobre un total de 25": f"{5 * 100 // 25}%",
+    "grupo de 40 personas, 10 tienen 20 años": str(10 / 40).replace(".", ","),
+    "encuesta a 80 personas, 24 prefieren el fútbol": f"{24 * 100 // 80}%",
+    "0,2, 0,35 y 0,3": str(round(1 - (0.2 + 0.35 + 0.3), 2)).replace(".", ","),
+    # Tendencia central.
+    "mediana de los datos 3, 6, 9, 12 y 15": str(sorted([3, 6, 9, 12, 15])[2]),
+    "media de los datos 2, 4, 6, 8, 10 y 12": str((2 + 4 + 6 + 8 + 10 + 12) // 6),
+    "moda del conjunto 8, 5, 8, 3, 8 y 5": str(Counter([8, 5, 8, 3, 8, 5]).most_common(1)[0][0]),
+    "rango del conjunto 25, 40, 18 y 33": str(max(25, 40, 18, 33) - min(25, 40, 18, 33)),
+    "media de 14, 18 y 22": str((14 + 18 + 22) // 3),
+    "tres datos iguales a 5 y dos datos iguales a 10": str(3 * 5 + 2 * 10),
+    "mediana de los datos 4, 4, 7 y 9": str((4 + 7) / 2).replace(".", ","),
+    "mediana de los datos 5, 8, 12, 15, 18, 21, 24, 27 y 30": str(
+        sorted([5, 8, 12, 15, 18, 21, 24, 27, 30])[4]
+    ),
+    "25 estudiantes, 8 obtuvieron nota 4": str(
+        Counter([4] * 8 + [5] * 12 + [6] * 5).most_common(1)[0][0]
+    ),
+    # Media ponderada desde una tabla de frecuencias.
+    "nota 4 la obtuvieron 6 estudiantes": str(
+        round((4 * 6 + 5 * 10 + 6 * 4) / (6 + 10 + 4), 1)
+    ).replace(".", ","),
+    "conjunto de 8 datos tiene una media de 15": str(15 * 8),
+    "4 notas cuyo promedio es 5,2": str(round(5.2 * 4, 1)).replace(".", ","),
+    # Medidas de posición: cuartiles, percentiles y diagrama de cajón.
+    "primer cuartil (Q1) de los datos 2, 4, 6, 8, 10, 12, 14 y 16": str((4 + 6) // 2),
+    "tercer cuartil (Q3) de los datos 2, 4, 6, 8, 10, 12, 14 y 16": str((12 + 14) // 2),
+    "primer cuartil es 12 y el tercer cuartil es 28": str(28 - 12),
+    "rango intercuartílico de los datos 3, 5, 7, 9, 11, 13, 15 y 17": str((13 + 15) // 2 - (5 + 7) // 2),
+    "200 datos, el percentil 30": str(round(200 * 0.3)),
+    "20 datos ordenados, ¿cuántos datos son menores o iguales al percentil 25": str(round(20 * 0.25)),
+    # Entre Q1 y Q3 vive el 50% central; sobre Q3 queda el 25%.
+    "mínimo 5, Q1 = 10, mediana 15": f"{2 * 25}%",
+    "mínimo 4, Q1 = 9, mediana 14": f"{100 - 75}%",
+    # Criterio de dato atípico: Q3 + 1,5 veces el rango intercuartílico.
+    "Q1 = 15 y Q3 = 35": str(round(35 + 1.5 * (35 - 15))),
+    # Problemas de suma total: quitar o agregar datos.
+    "promedio de 6 números es 20": str((20 * 6 - 30) // 5),
+    "30 estudiantes tiene promedio 5,0": str(round((5.0 * 30 - 6.0 * 10) / 20, 1)).replace(".", ","),
+    "media de 10 datos es 12": str((12 * 10 + 20 + 28) // (10 + 2)),
+    # La mediana con una cantidad par de datos.
+    "50 datos ordenados de menor a mayor": f"{50 // 2} y {50 // 2 + 1}",
+    # Con un dato extremo, la mediana representa mejor que la media.
+    "300, 320, 340, 360 y 2.000": str(sorted([300, 320, 340, 360, 2000])[2]),
+    # Escalar los datos escala la media en el mismo factor.
+    "se les multiplica por 3": f"Queda multiplicada por {3}",
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",

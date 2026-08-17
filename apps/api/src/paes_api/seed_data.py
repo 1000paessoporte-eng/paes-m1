@@ -15430,6 +15430,534 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Estadística descriptiva — segunda tanda.
+#
+# El temario DEMRE divide este eje en tres unidades, y el nodo solo cubría una:
+#
+#   1. "Representación de datos a través de tablas y gráficos": tablas de
+#      frecuencia ABSOLUTA y RELATIVA, promedio, y problemas con tablas.
+#      -> el nodo no tenía ninguna pregunta de frecuencia relativa.
+#   2. "Medidas de POSICIÓN": cuartiles, percentiles y DIAGRAMA DE CAJÓN.
+#      -> el nodo no tenía ninguna pregunta. Una unidad temática completa en
+#         cero.
+#   3. Medidas de tendencia central. -> esta sí, y bien cubierta (34 preguntas).
+#
+# Esta tanda cubre las dos que faltaban. Los diagramas de cajón se describen
+# con sus cinco números (mínimo, Q1, mediana, Q3, máximo) en el enunciado,
+# porque el banco es de texto y no admite imágenes; eso no le quita nada a la
+# habilidad evaluada, que es interpretar la distribución.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En una encuesta a 50 personas, 20 eligieron el cine como su panorama favorito. ¿Cuál es la frecuencia relativa de esa preferencia?",
+        "0,4",
+        "La frecuencia relativa compara cuántas veces aparece un dato con el total.\n\n"
+        "1) Escribe la razón entre la frecuencia absoluta y el total: 20/50.\n"
+        "2) Divide: 20 ÷ 50 = 0,4.\n"
+        "3) La frecuencia relativa es 0,4, que también se puede leer como el 40%.\n"
+        "4) Toda frecuencia relativa está entre 0 y 1: si te da un número mayor que 1, algo salió mal.",
+        [
+            ("20", "Dio la frecuencia absoluta en lugar de la relativa."),
+            ("2,5", "Dividió el total por la frecuencia en vez de al revés."),
+            ("30", "Calculó cuántas personas NO eligieron cine."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En una tabla de frecuencias, el dato 7 aparece 5 veces sobre un total de 25 datos. ¿Cuál es su frecuencia relativa expresada en porcentaje?",
+        "20%",
+        "Se calcula la frecuencia relativa y después se lleva a porcentaje.\n\n"
+        "1) Frecuencia relativa: 5/25 = 0,2.\n"
+        "2) Para pasarla a porcentaje se multiplica por 100: 0,2 · 100 = 20.\n"
+        "3) La frecuencia relativa es del 20%.",
+        [
+            ("5%", "Usó la frecuencia absoluta como si fuera el porcentaje."),
+            ("25%", "Usó el total de datos como si fuera el porcentaje."),
+            ("500%", "Dividió el total por la frecuencia en lugar de al revés."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la mediana de los datos 3, 6, 9, 12 y 15?",
+        "9",
+        "La mediana es el valor que queda justo al medio con los datos ordenados.\n\n"
+        "1) Comprueba que estén ordenados: 3, 6, 9, 12, 15 ✓.\n"
+        "2) Son 5 datos, una cantidad impar, así que hay un único valor central.\n"
+        "3) El del medio es el tercero: 9.\n"
+        "4) Verifica que queden dos datos a cada lado: 3 y 6 abajo, 12 y 15 arriba ✓.",
+        [
+            ("12", "Contó desde un extremo y se corrió una posición."),
+            ("7,5", "Promedió los dos datos que rodean al central, que es lo que corresponde solo con una cantidad par de datos."),
+            ("3", "Dio el dato mínimo en lugar del valor central."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la media de los datos 2, 4, 6, 8, 10 y 12?",
+        "7",
+        "La media se obtiene sumando todo y dividiendo por la cantidad de datos.\n\n"
+        "1) Suma: 2 + 4 + 6 + 8 + 10 + 12 = 42.\n"
+        "2) Cuenta los datos: son 6.\n"
+        "3) Divide: 42 ÷ 6 = 7.",
+        [
+            ("42", "Se quedó en la suma sin dividir por la cantidad de datos."),
+            ("6", "Dio la cantidad de datos en lugar de la media."),
+            ("10", "Calculó el rango, que es 12 − 2, en vez de la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la moda del conjunto 8, 5, 8, 3, 8 y 5?",
+        "8",
+        "La moda es el dato que más se repite.\n\n"
+        "1) Cuenta las apariciones: el 8 aparece 3 veces, el 5 aparece 2 veces y el 3 aparece 1 vez.\n"
+        "2) El que más se repite es el 8.\n"
+        "3) La moda es 8.",
+        [
+            ("5", "Eligió el segundo dato más frecuente."),
+            ("3", "Eligió la cantidad de veces que se repite el dato más frecuente, no el dato."),
+            ("6,17", "Calculó la media en lugar de la moda."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es el rango del conjunto 25, 40, 18 y 33?",
+        "22",
+        "El rango mide cuánto se estiran los datos: es la diferencia entre el mayor y el menor.\n\n"
+        "1) Identifica el mayor: 40.\n"
+        "2) Identifica el menor: 18.\n"
+        "3) Resta: 40 − 18 = 22.",
+        [
+            ("58", "Sumó el mayor y el menor en lugar de restarlos."),
+            ("29", "Calculó la media del conjunto en vez del rango."),
+            ("40", "Dio el dato mayor sin restarle el menor."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En un grupo de 40 personas, 10 tienen 20 años. ¿Cuál es la frecuencia relativa de esa edad?",
+        "0,25",
+        "Se compara la frecuencia con el total del grupo.\n\n"
+        "1) Escribe la razón: 10/40.\n"
+        "2) Simplifica: 10 y 40 se dividen por 10, y queda 1/4.\n"
+        "3) Como decimal: 0,25.\n"
+        "4) Ojo con no usar el 20 de la edad: ese es el valor del dato, no su frecuencia.",
+        [
+            ("0,5", "Usó la edad de 20 años como frecuencia, en vez de las 10 personas."),
+            ("10", "Dio la frecuencia absoluta en lugar de la relativa."),
+            ("4", "Dividió el total por la frecuencia en vez de al revés."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En un conjunto de datos, ¿con qué medida coincide siempre el segundo cuartil (Q2)?",
+        "Con la mediana",
+        "Los cuartiles parten el conjunto ordenado en cuatro grupos con la misma cantidad de datos.\n\n"
+        "1) Q1 deja por debajo el 25% de los datos, Q2 el 50% y Q3 el 75%.\n"
+        "2) Dejar por debajo la mitad de los datos es exactamente la definición de la mediana.\n"
+        "3) Por eso Q2 y la mediana son siempre el mismo valor.",
+        [
+            ("Con la media", "La media es el promedio y puede ser distinta de la mediana, sobre todo si hay datos extremos."),
+            ("Con la moda", "La moda es el dato más frecuente y no tiene por qué caer al medio."),
+            ("Con el rango", "El rango mide dispersión, no posición: es una diferencia, no un valor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la media de 14, 18 y 22?",
+        "18",
+        "Se suma y se divide por la cantidad de datos.\n\n"
+        "1) Suma: 14 + 18 + 22 = 54.\n"
+        "2) Divide por 3: 54 ÷ 3 = 18.\n"
+        "3) Fíjate en que la media coincide con el dato del medio, porque los datos están igualmente espaciados.",
+        [
+            ("54", "Se quedó en la suma sin dividir."),
+            ("27", "Dividió por 2 en lugar de por 3."),
+            ("8", "Calculó el rango en vez de la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "Un conjunto está formado por tres datos iguales a 5 y dos datos iguales a 10. ¿Cuál es la suma total de los datos?",
+        "35",
+        "Cada dato se cuenta tantas veces como indica su frecuencia.\n\n"
+        "1) Los tres datos de valor 5 aportan 3 · 5 = 15.\n"
+        "2) Los dos de valor 10 aportan 2 · 10 = 20.\n"
+        "3) Suma total: 15 + 20 = 35.\n"
+        "4) Este es el paso previo para calcular una media a partir de una tabla de frecuencias.",
+        [
+            ("15", "Sumó los valores distintos sin considerar cuántas veces aparece cada uno."),
+            ("50", "Multiplicó los cinco datos por 10."),
+            ("7", "Calculó la media en lugar de la suma."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la mediana de los datos 4, 4, 7 y 9?",
+        "5,5",
+        "Con una cantidad par de datos hay dos valores centrales, y la mediana es su promedio.\n\n"
+        "1) Los datos ya están ordenados: 4, 4, 7, 9.\n"
+        "2) Son 4 datos, así que los centrales son el segundo y el tercero: 4 y 7.\n"
+        "3) Promedia: (4 + 7) ÷ 2 = 11 ÷ 2 = 5,5.\n"
+        "4) La mediana no tiene por qué ser uno de los datos del conjunto.",
+        [
+            ("4", "Tomó solo el primero de los dos datos centrales."),
+            ("7", "Tomó solo el segundo de los dos datos centrales."),
+            ("6", "Calculó la media de los cuatro datos en vez de la mediana."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el primer cuartil (Q1) de los datos 2, 4, 6, 8, 10, 12, 14 y 16?",
+        "5",
+        "Q1 es la mediana de la mitad inferior de los datos.\n\n"
+        "1) Los datos ya están ordenados y son 8, una cantidad par.\n"
+        "2) Divide en dos mitades: la inferior es 2, 4, 6, 8 y la superior 10, 12, 14, 16.\n"
+        "3) Q1 es la mediana de la mitad inferior. Como tiene 4 datos, se promedian los dos centrales: (4 + 6) ÷ 2 = 5.\n"
+        "4) Q1 = 5, y por debajo queda el 25% de los datos.",
+        [
+            ("4", "Tomó el segundo dato del conjunto en vez de la mediana de la mitad inferior."),
+            ("9", "Calculó la mediana de todo el conjunto, que es Q2 y no Q1."),
+            ("2", "Dio el dato mínimo en lugar del primer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el tercer cuartil (Q3) de los datos 2, 4, 6, 8, 10, 12, 14 y 16?",
+        "13",
+        "Q3 es la mediana de la mitad superior de los datos.\n\n"
+        "1) Divide el conjunto ordenado en dos mitades: la superior es 10, 12, 14, 16.\n"
+        "2) Q3 es la mediana de esa mitad: como son 4 datos, se promedian los dos centrales.\n"
+        "3) Calcula: (12 + 14) ÷ 2 = 13.\n"
+        "4) Q3 = 13, y por encima queda el 25% de los datos.",
+        [
+            ("14", "Tomó un dato de la mitad superior en vez de su mediana."),
+            ("9", "Calculó la mediana del conjunto completo, que es Q2."),
+            ("16", "Dio el dato máximo en lugar del tercer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En un conjunto de datos, el primer cuartil es 12 y el tercer cuartil es 28. ¿Cuál es el rango intercuartílico?",
+        "16",
+        "El rango intercuartílico mide la dispersión del 50% central de los datos.\n\n"
+        "1) Se calcula como Q3 − Q1.\n"
+        "2) Reemplaza: 28 − 12 = 16.\n"
+        "3) El rango intercuartílico es 16.\n"
+        "4) Su gracia frente al rango común es que no se ve afectado por datos extremos, porque solo mira la mitad central.",
+        [
+            ("40", "Sumó los cuartiles en lugar de restarlos."),
+            ("20", "Promedió los dos cuartiles en vez de calcular su diferencia."),
+            ("28", "Dio el tercer cuartil sin restarle el primero."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Un diagrama de cajón muestra estos valores: mínimo 5, Q1 = 10, mediana 15, Q3 = 22 y máximo 30. ¿Qué porcentaje de los datos está entre 10 y 22?",
+        "50%",
+        "Los cuartiles reparten los datos en cuatro grupos iguales, cada uno con el 25%.\n\n"
+        "1) Entre el mínimo y Q1 está el 25% de los datos.\n"
+        "2) Entre Q1 y la mediana hay otro 25%, y entre la mediana y Q3 otro 25%.\n"
+        "3) Los valores 10 y 22 son justamente Q1 y Q3, así que entre ellos hay 25% + 25% = 50%.\n"
+        "4) Ese 50% central es lo que representa la caja del diagrama, y su ancho es el rango intercuartílico.",
+        [
+            ("25%", "Consideró solo uno de los dos cuartos que hay entre Q1 y Q3."),
+            ("75%", "Contó también el cuarto que va del mínimo a Q1."),
+            ("12%", "Calculó la diferencia entre los valores en vez del porcentaje de datos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En una prueba, la nota 4 la obtuvieron 6 estudiantes, la nota 5 la obtuvieron 10 y la nota 6 la obtuvieron 4. ¿Cuál es el promedio del curso?",
+        "4,9",
+        "Con una tabla de frecuencias, cada nota pesa según cuántas veces aparece.\n\n"
+        "1) Multiplica cada nota por su frecuencia: 4 · 6 = 24, 5 · 10 = 50 y 6 · 4 = 24.\n"
+        "2) Suma esos productos: 24 + 50 + 24 = 98.\n"
+        "3) Cuenta el total de estudiantes: 6 + 10 + 4 = 20.\n"
+        "4) Divide: 98 ÷ 20 = 4,9. El promedio queda cerca del 5 porque esa nota es la más frecuente.",
+        [
+            ("5", "Promedió las tres notas distintas sin considerar cuántos estudiantes sacó cada una."),
+            ("32,7", "Dividió por la cantidad de notas distintas en vez de por el total de estudiantes."),
+            ("98", "Se quedó en la suma ponderada sin dividir."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En un conjunto de 200 datos, el percentil 30 corresponde al valor 45. ¿Cuántos datos son menores o iguales a 45?",
+        "60",
+        "El percentil indica qué porcentaje de los datos queda por debajo de un valor.\n\n"
+        "1) El percentil 30 deja por debajo el 30% de los datos.\n"
+        "2) Calcula ese 30% del total: 200 · 0,3 = 60.\n"
+        "3) Hay 60 datos menores o iguales a 45.\n"
+        "4) El valor 45 no interviene en el cálculo: es el dato que ocupa esa posición, no una cantidad.",
+        [
+            ("45", "Usó el valor del percentil como si fuera una cantidad de datos."),
+            ("140", "Calculó los datos que están por encima del percentil 30."),
+            ("30", "Dio el número del percentil en lugar de la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es la mediana de los datos 5, 8, 12, 15, 18, 21, 24, 27 y 30?",
+        "18",
+        "Con una cantidad impar de datos hay un único valor central.\n\n"
+        "1) Los datos ya están ordenados y son 9.\n"
+        "2) Con 9 datos, el central es el quinto: cuatro quedan abajo y cuatro arriba.\n"
+        "3) Cuenta hasta el quinto: 5, 8, 12, 15, 18.\n"
+        "4) La mediana es 18.",
+        [
+            ("15", "Se corrió una posición y tomó el cuarto dato."),
+            ("17,8", "Calculó la media en lugar de la mediana."),
+            ("21", "Se corrió una posición hacia el otro lado y tomó el sexto dato."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En un curso de 25 estudiantes, 8 obtuvieron nota 4, 12 obtuvieron nota 5 y 5 obtuvieron nota 6. ¿Cuál es la moda?",
+        "5",
+        "La moda es el valor que más se repite, no la frecuencia con que se repite.\n\n"
+        "1) Compara las frecuencias: la nota 4 aparece 8 veces, la 5 aparece 12 veces y la 6 aparece 5 veces.\n"
+        "2) La frecuencia mayor es 12, y le corresponde a la nota 5.\n"
+        "3) La moda es 5.\n"
+        "4) El error clásico acá es responder 12: esa es la frecuencia, no el dato.",
+        [
+            ("12", "Dio la frecuencia más alta en lugar del dato al que corresponde."),
+            ("4", "Eligió la nota más baja en vez de la más frecuente."),
+            ("6", "Eligió la nota más alta en vez de la más frecuente."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Un conjunto de 8 datos tiene una media de 15. ¿Cuál es la suma de todos los datos?",
+        "120",
+        "Se recorre la fórmula de la media al revés.\n\n"
+        "1) La media es la suma dividida por la cantidad de datos: 15 = suma ÷ 8.\n"
+        "2) Despeja multiplicando: suma = 15 · 8.\n"
+        "3) Calcula: 15 · 8 = 120.\n"
+        "4) Este paso es la base de casi todos los problemas de \"falta un dato\": si conoces la media y la cantidad, conoces la suma.",
+        [
+            ("1,875", "Dividió la media por la cantidad de datos en lugar de multiplicar."),
+            ("23", "Sumó la media y la cantidad de datos."),
+            ("15", "Dio la media en lugar de la suma."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En una encuesta a 80 personas, 24 prefieren el fútbol. ¿Qué porcentaje del total representa esa preferencia?",
+        "30%",
+        "Se compara la frecuencia con el total y se lleva a porcentaje.\n\n"
+        "1) Escribe la razón: 24/80.\n"
+        "2) Divide: 24 ÷ 80 = 0,3.\n"
+        "3) Multiplica por 100: 30%.\n"
+        "4) Comprueba con una estimación: 24 es un poco menos de un tercio de 80, y 30% es un poco menos de 33% ✓.",
+        [
+            ("24%", "Usó la frecuencia absoluta como si fuera el porcentaje."),
+            ("70%", "Calculó el porcentaje de quienes NO prefieren fútbol."),
+            ("333%", "Dividió el total por la frecuencia en lugar de al revés."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el rango intercuartílico de los datos 3, 5, 7, 9, 11, 13, 15 y 17?",
+        "8",
+        "Hay que encontrar los dos cuartiles antes de restar.\n\n"
+        "1) Los 8 datos se parten en dos mitades: 3, 5, 7, 9 abajo y 11, 13, 15, 17 arriba.\n"
+        "2) Q1 es la mediana de la mitad inferior: (5 + 7) ÷ 2 = 6.\n"
+        "3) Q3 es la mediana de la mitad superior: (13 + 15) ÷ 2 = 14.\n"
+        "4) Rango intercuartílico: 14 − 6 = 8.",
+        [
+            ("14", "Dio el valor de Q3 sin restarle Q1."),
+            ("20", "Sumó los dos cuartiles en lugar de restarlos."),
+            ("6", "Dio el valor de Q1 sin restarlo de Q3."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Si a todos los datos de un conjunto se les multiplica por 3, ¿qué ocurre con su media?",
+        "Queda multiplicada por 3",
+        "Conviene probarlo con un caso chico y después ver por qué vale siempre.\n\n"
+        "1) Toma los datos 2, 4 y 6: su media es 12 ÷ 3 = 4.\n"
+        "2) Multiplica cada uno por 3: quedan 6, 12 y 18, cuya media es 36 ÷ 3 = 12.\n"
+        "3) Compara: 12 es 3 veces 4.\n"
+        "4) La razón: al triplicar cada dato, la suma se triplica, y como la cantidad de datos no cambia, la media también se triplica.",
+        [
+            ("Aumenta en 3", "Confundió multiplicar con sumar; sumar 3 a cada dato sí aumentaría la media en 3."),
+            ("No cambia", "Multiplicar los datos sí altera la media; lo que no cambia con esa operación es la cantidad de datos."),
+            ("Queda multiplicada por 9", "Elevó el factor al cuadrado, que es lo que le pasa a la varianza, no a la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un diagrama de cajón muestra: mínimo 4, Q1 = 9, mediana 14, Q3 = 17 y máximo 28. ¿Qué porcentaje de los datos es mayor que 17?",
+        "25%",
+        "Cada cuartil marca un corte del 25% de los datos.\n\n"
+        "1) El valor 17 es Q3, el tercer cuartil.\n"
+        "2) Por definición, Q3 deja por debajo el 75% de los datos.\n"
+        "3) Entonces por encima queda el 100% − 75% = 25%.\n"
+        "4) En el dibujo, ese 25% es el bigote derecho, el que va de 17 a 28.",
+        [
+            ("75%", "Dio el porcentaje que queda por debajo de Q3, no por encima."),
+            ("50%", "Usó la mediana como referencia en lugar de Q3."),
+            ("11%", "Calculó la diferencia entre 28 y 17 en vez del porcentaje de datos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "El promedio de 6 números es 20. Si se elimina el número 30, ¿cuál es el promedio de los 5 restantes?",
+        "18",
+        "Se trabaja con la suma total, que es lo que permite quitar un dato.\n\n"
+        "1) Suma de los 6 números: 20 · 6 = 120.\n"
+        "2) Al eliminar el 30, la nueva suma es 120 − 30 = 90.\n"
+        "3) Quedan 5 números, así que el nuevo promedio es 90 ÷ 5 = 18.\n"
+        "4) Tiene sentido que baje: el número eliminado, 30, estaba por encima del promedio anterior.",
+        [
+            ("20", "Supuso que el promedio no cambia al sacar un dato."),
+            ("22", "Restó mal la suma, o supuso que el promedio sube al eliminar un dato grande."),
+            ("15", "Dividió la suma original por 8 en lugar de restar y dividir por 5."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un curso de 30 estudiantes tiene promedio 5,0. Si 10 de ellos tienen promedio 6,0, ¿cuál es el promedio de los otros 20?",
+        "4,5",
+        "Se reconstruyen las sumas de cada grupo y se despeja la que falta.\n\n"
+        "1) Suma total del curso: 5,0 · 30 = 150.\n"
+        "2) Suma del grupo de 10: 6,0 · 10 = 60.\n"
+        "3) Suma de los 20 restantes: 150 − 60 = 90.\n"
+        "4) Su promedio: 90 ÷ 20 = 4,5.\n"
+        "5) Comprueba que sea coherente: si un grupo está sobre el promedio general, el otro tiene que estar bajo ✓.",
+        [
+            ("4,0", "Restó 1,0 al promedio general, suponiendo que la diferencia del grupo de 10 se traslada entera al otro grupo."),
+            ("5,5", "Sumó la diferencia en lugar de restarla, y subió el promedio del grupo equivocado."),
+            ("5,0", "Supuso que el resto del curso mantiene el promedio general."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un conjunto de 20 datos ordenados, ¿cuántos datos son menores o iguales al percentil 25?",
+        "5",
+        "El percentil 25 deja por debajo la cuarta parte de los datos.\n\n"
+        "1) El percentil 25 equivale al primer cuartil: por debajo queda el 25% de los datos.\n"
+        "2) Calcula ese 25% del total: 20 · 0,25 = 5.\n"
+        "3) Son 5 datos.\n"
+        "4) Fíjate en que la pregunta es por la cantidad de datos, no por el valor que ocupa esa posición.",
+        [
+            ("25", "Confundió el número del percentil con una cantidad de datos."),
+            ("15", "Calculó los datos que quedan por encima del percentil 25."),
+            ("4", "Dividió 20 por 5 en lugar de calcular el 25%."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Los sueldos mensuales de cinco personas, en miles de pesos, son 300, 320, 340, 360 y 2.000. ¿Qué valor representa mejor el sueldo típico del grupo?",
+        "La mediana, que es 340",
+        "Cuando hay un dato muy alejado del resto, la media se corre hacia él y deja de ser representativa.\n\n"
+        "1) Calcula la media: (300 + 320 + 340 + 360 + 2.000) ÷ 5 = 3.320 ÷ 5 = 664.\n"
+        "2) Pero cuatro de las cinco personas ganan menos de 400: la media de 664 no describe a casi nadie.\n"
+        "3) Calcula la mediana: con los datos ordenados, el central es 340.\n"
+        "4) La mediana es más representativa porque no se ve arrastrada por el sueldo extremo de 2.000. Por eso los sueldos suelen informarse con la mediana y no con el promedio.",
+        [
+            ("La media, que es 664", "La media está inflada por el sueldo de 2.000 y no representa a los otros cuatro."),
+            ("La moda, que es 300", "No hay ningún dato repetido, así que el conjunto no tiene moda."),
+            ("El rango, que es 1.700", "El rango mide dispersión, no un valor típico."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un conjunto de datos, Q1 = 15 y Q3 = 35. Según el criterio de 1,5 veces el rango intercuartílico, ¿un dato de valor 70 se considera atípico?",
+        "Sí, porque supera el límite de 65",
+        "El criterio marca hasta dónde llega lo \"normal\" y qué queda fuera.\n\n"
+        "1) Calcula el rango intercuartílico: 35 − 15 = 20.\n"
+        "2) Multiplica por 1,5: 20 · 1,5 = 30.\n"
+        "3) El límite superior es Q3 más ese valor: 35 + 30 = 65.\n"
+        "4) Como 70 es mayor que 65, el dato queda fuera del rango esperable y se considera atípico.",
+        [
+            ("No, porque está dentro del límite de 95", "Sumó 1,5 veces el rango intercuartílico al máximo en vez de a Q3, o usó un múltiplo equivocado."),
+            ("No, porque el criterio solo se aplica a datos menores que Q1", "El criterio funciona en los dos extremos, con un límite inferior y otro superior."),
+            ("Sí, porque es mayor que Q3", "Ser mayor que Q3 no basta: el 25% de los datos lo es. Hay que superar el límite de 65."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "La media de 10 datos es 12. Si se agregan dos datos más, 20 y 28, ¿cuál es la nueva media?",
+        "14",
+        "Hay que actualizar la suma y también la cantidad de datos.\n\n"
+        "1) Suma de los 10 datos originales: 12 · 10 = 120.\n"
+        "2) Suma de los datos agregados: 20 + 28 = 48.\n"
+        "3) Nueva suma total: 120 + 48 = 168.\n"
+        "4) Nueva cantidad de datos: 10 + 2 = 12. Olvidar esto es el error más frecuente.\n"
+        "5) Nueva media: 168 ÷ 12 = 14.",
+        [
+            ("16,8", "Actualizó la suma pero siguió dividiendo por los 10 datos originales."),
+            ("12", "Supuso que agregar datos no cambia la media."),
+            ("20", "Promedió la media anterior con los dos datos nuevos, sin ponderar por la cantidad."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En una tabla de frecuencias con cuatro categorías, las frecuencias relativas de tres de ellas son 0,2, 0,35 y 0,3. ¿Cuál es la frecuencia relativa de la cuarta?",
+        "0,15",
+        "Las frecuencias relativas de todas las categorías suman siempre 1, porque juntas cubren el total.\n\n"
+        "1) Suma las tres conocidas: 0,2 + 0,35 + 0,3 = 0,85.\n"
+        "2) Resta a 1: 1 − 0,85 = 0,15.\n"
+        "3) La cuarta frecuencia relativa es 0,15, o sea el 15%.\n"
+        "4) Si la suma te diera más de 1, es señal de que hay un error en los datos.",
+        [
+            ("0,85", "Dio la suma de las tres conocidas en lugar de lo que falta."),
+            ("1,15", "Sumó las tres a 1 en vez de restarlas."),
+            ("0,25", "Supuso que las cuatro categorías se reparten por igual, sin usar las frecuencias dadas."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un conjunto de 50 datos ordenados de menor a mayor, ¿cómo se obtiene la mediana?",
+        "Promediando los datos que ocupan las posiciones 25 y 26",
+        "Con una cantidad par de datos no existe un único valor central.\n\n"
+        "1) Como 50 es par, no hay un dato que deje exactamente la mitad a cada lado.\n"
+        "2) Los dos centrales son el que ocupa la posición 50 ÷ 2 = 25 y el siguiente, el 26.\n"
+        "3) La mediana es el promedio de esos dos valores.\n"
+        "4) Con una cantidad impar, en cambio, sí hay un único dato central y no hace falta promediar.",
+        [
+            ("Tomando el dato de la posición 25", "Con una cantidad par de datos hay dos centrales, no uno."),
+            ("Tomando el dato de la posición 50", "Esa es la posición del dato máximo, no de la mediana."),
+            ("Promediando el dato menor y el mayor", "Eso da el punto medio del rango, que no es la mediana."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un estudiante tiene 4 notas cuyo promedio es 5,2. ¿Cuánto suman sus notas?",
+        "20,8",
+        "Se despeja la suma desde la fórmula del promedio.\n\n"
+        "1) El promedio es la suma dividida por la cantidad: 5,2 = suma ÷ 4.\n"
+        "2) Multiplica ambos lados por 4: suma = 5,2 · 4.\n"
+        "3) Calcula: 5,2 · 4 = 20,8.\n"
+        "4) Comprueba que sea razonable: cuatro notas cercanas a 5 tienen que sumar algo cercano a 20 ✓.",
+        [
+            ("1,3", "Dividió el promedio por 4 en lugar de multiplicar."),
+            ("9,2", "Sumó el promedio y la cantidad de notas."),
+            ("5,2", "Dio el promedio en lugar de la suma."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un diagrama de cajón, el bigote izquierdo va de 2 a 8 y el bigote derecho va de 20 a 35. ¿Qué se puede afirmar sobre la distribución de los datos?",
+        "El 25% superior está más disperso que el 25% inferior",
+        "Cada bigote representa un cuarto de los datos, y su largo muestra cuánto se estiran.\n\n"
+        "1) El bigote izquierdo cubre el 25% de los datos más bajos y abarca 8 − 2 = 6 unidades.\n"
+        "2) El bigote derecho cubre el 25% más alto y abarca 35 − 20 = 15 unidades.\n"
+        "3) La misma cantidad de datos ocupa mucho más terreno a la derecha, así que ese cuarto está más disperso.\n"
+        "4) Es un error frecuente pensar que un bigote más largo tiene más datos: los cuatro grupos siempre tienen el 25% cada uno; lo que cambia es cuánto se estiran.",
+        [
+            ("Hay más datos en el 25% superior que en el inferior", "Cada bigote contiene siempre el 25% de los datos; lo que cambia es su dispersión, no su cantidad."),
+            ("Los datos se concentran en los extremos", "Los bigotes son las zonas menos densas: la concentración está en la caja, que reúne el 50% central."),
+            ("La mediana está más cerca del máximo", "Los bigotes no entregan información sobre la posición de la mediana dentro de la caja."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
