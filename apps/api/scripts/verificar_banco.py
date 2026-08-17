@@ -71,6 +71,7 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
     "alg_cuadratica": Fraction(3),                                    # x = 2 o 3
     "alg_funciones": Fraction(3),                                     # pendiente 3
     "geo_plana": Fraction(round((8 * 5 - 3.14 * 2**2) * 100), 100),   # 27,44
+    "geo_semejanza": Fraction(16 * 5**2, 2**2),                       # 100 cm²
     "geo_pitagoras": Fraction(int(sqrt(13**2 - 5**2))),               # 12
     "geo_transformaciones": Fraction(5),                              # (5, 3)
     "geo_solidos": Fraction(round(3.14 * 10**2 * 20)),                # 6.280
@@ -271,7 +272,7 @@ COMPROBACIONES: dict[str, str] = {
     "cubo de arista 4 cm": f"{4**3} cm³",
     "cilindro de radio 3 cm y altura 10 cm": f"{3.14 * 9 * 10:.1f} cm³".replace(".", ","),
     "5 cm de largo, 3 cm de ancho y 2 cm de alto": f"{2 * (5 * 3 + 5 * 2 + 3 * 2)} cm²",
-    "cono tiene radio 6 cm y altura 10 cm": f"{3.14 * 36 * 10 / 3:.1f} cm³".replace(".", ","),
+    "cilindro tiene 8 cm de diámetro y 15 cm de altura": f"{3.14 * (8 // 2) ** 2 * 15:.1f} cm³".replace(".", ","),
     "P(6, 1) se traslada": f"({6 - 4}, {1 - 3})",
     "P(−3, 4) se refleja respecto del eje Y": f"({3 + 2}, {4 - 1})",
     "P(3, −2) una homotecia": f"({3 * 4}, {-2 * 4})",
@@ -377,8 +378,9 @@ COMPROBACIONES: dict[str, str] = {
     "piscina circular de 4 m de radio está rodeada": str(round(3.14 * ((4 + 1) ** 2 - 4**2), 2)).replace(".", ","),
     "borde decorativo de 10 cm de ancho hacia adentro": str(round((3 - 2 * 0.1) * (2 - 2 * 0.1), 2)).replace(".", ","),
     # Escala y semejanza: el factor lineal va al cuadrado para las superficies.
-    "plano a escala 1 : 100": str(5 * 4),
-    "plano a escala 1 : 50": str(30 * 50**2 / 10_000).replace(".", ","),
+    # Los fragmentos llevan el objeto porque hay varias preguntas por escala.
+    "1 : 100, una sala aparece": str(5 * 4),
+    "1 : 50, una bodega ocupa": str(30 * 50**2 / 10_000).replace(".", ","),
     "razón entre sus lados es 2 : 5": str(12 * 5**2 // 2**2),
     # Ecuación previa antes de poder calcular el área.
     "perímetro de 70 m y su largo mide 5 m más": str((70 // 2 - 5) // 2 * ((70 // 2 - 5) // 2 + 5)),
@@ -714,7 +716,7 @@ COMPROBACIONES: dict[str, str] = {
     "1 de 2 tipos de pan": str(2 * 3 * 2),
     "7 modelos de polera y 5 de jockey": str(7 * 5),
     "código de acceso tiene 2 dígitos": str(10**2),
-    "3 rutas, y de la B a la C hay 4": str(3 * 4),
+    "7 rutas, y de la B a la C hay 3": str(7 * 3),
     "4 entradas, 6 platos de fondo y 3 postres": str(4 * 6 * 3),
     "3 letras seguidas de 2 dígitos": f"{26**3 * 10**2:,}".replace(",", "."),
     # Espacios muestrales, que son el denominador de una probabilidad.
@@ -751,7 +753,7 @@ COMPROBACIONES: dict[str, str] = {
     # --- reglas de las probabilidades: tercera tanda ---
     # Probabilidad simple: casos favorables sobre casos posibles.
     "3 bolitas rojas, 4 azules y 5 verdes": str(Fraction(4, 3 + 4 + 5)),
-    "obtener un número menor que 5": str(Fraction(4, 6)),
+    "obtener un número menor que 3": str(Fraction(2, 6)),
     "12 lápices y 3 de ellos están malos": str(Fraction(3, 12)),
     "naipe español de 40 cartas, que tiene 4 reyes": str(Fraction(4, 40)),
     "moneda equilibrada una vez": str(Fraction(1, 2)),
@@ -806,7 +808,7 @@ COMPROBACIONES: dict[str, str] = {
     "desarrollo de (x + 6)²": f"x² + {2 * 6}x + {6**2}",
     "resultado de (x − 7)(x + 7)": f"x² − {7**2}",
     "factorización de x² − 81": f"(x + {round(81**0.5)})(x − {round(81**0.5)})",
-    "factorización de 6x² + 9x": f"3x(2x + {9 // 3})",
+    "factorización de 8x² + 12x": f"4x(2x + {12 // 4})",
     "reducir 5(2x − 1) − 3(x + 2)": f"{5 * 2 - 3}x − {5 * 1 + 3 * 2}",
     "desarrollo de (2x − 5)²": f"{2**2}x² − {2 * 2 * 5}x + {5**2}",
     "factorización de x² + 10x + 21": "(x + 3)(x + 7)" if 3 * 7 == 21 and 3 + 7 == 10 else "?",
@@ -837,7 +839,7 @@ COMPROBACIONES: dict[str, str] = {
     "plan de internet A cuesta $8.000": f"Desde {(12_000 - 8_000) // (200 - 100) + 1} GB",
     # Sistemas 2x2.
     "x + y = 10 y x − y = 4": str((10 + 4) // 2),
-    "x + y = 12 e y = 2x": str(12 // (1 + 2)),
+    "x + y = 15 e y = 4x": str(15 // (1 + 4)),
     "2x + y = 11 e y = 3": str((11 - 3) // 2),
     "x = 5 y x + y = 9": str(9 - 5),
     "x + y = 7 y x − y = 1": str((7 - 1) // 2),
@@ -850,8 +852,8 @@ COMPROBACIONES: dict[str, str] = {
     "25 animales y 82 patas": str((82 - 2 * 25) // 2),
     "suma de dos números es 25 y el mayor es 4 unidades": str(2 * ((25 - 4) // 3) + 4),
     # Ecuaciones cuadráticas.
-    "ecuación x² = 49": f"x = {round(49**0.5)} y x = -{round(49**0.5)}",
-    "ecuación x² − 16 = 0": f"x = {round(16**0.5)} y x = -{round(16**0.5)}",
+    "ecuación x² = 121": f"x = {round(121**0.5)} y x = -{round(121**0.5)}",
+    "ecuación x² − 100 = 0": f"x = {round(100**0.5)} y x = -{round(100**0.5)}",
     "ecuación (x − 3)(x + 5) = 0": f"x = {3} y x = -{5}",
     "ecuación x² − 5x = 0": f"x = 0 y x = {5}",
     "ecuación x² + 2x + 1 = 0": f"x = -{2 // 2}",
@@ -875,8 +877,88 @@ COMPROBACIONES: dict[str, str] = {
     "ceros de la función f(x) = x² − 7x": f"x = 0 y x = {7}",
     "pasa por los puntos (1, 5) y (3, 11)": str((11 - 5) // (3 - 1)),
     # Vértice: x = -b/(2a), y después se evalúa.
-    "vértice de la parábola de ecuación y = x² − 6x + 5": f"({6 // 2}, {(6 // 2) ** 2 - 6 * (6 // 2) + 5})",
+    "vértice de la parábola de ecuación y = x² − 8x + 7": f"({8 // 2}, {(8 // 2) ** 2 - 8 * (8 // 2) + 7})",
     "vértice de la parábola de ecuación y = 2x² + 8x + 5": f"({-8 // (2 * 2)}, {2 * (-2) ** 2 + 8 * -2 + 5})",
+    # --- semejanza y proporcionalidad de figuras (nodo nuevo) ---
+    # De plano a realidad se MULTIPLICA por la escala.
+    "escala 1 : 200, un muro aparece dibujado con 4 cm": f"{4 * 200 // 100} m",
+    "1 : 50, una ventana aparece con 6 cm": f"{6 * 50 // 100} m",
+    "1 : 1.000, un terreno aparece con 12 cm de frente": f"{12 * 1_000 // 100} m",
+    "1 : 80, un pasillo aparece con 5 cm": f"{5 * 80 // 100} m",
+    "1 : 150, dos puntos aparecen separados por 8 cm": f"{8 * 150 // 100} m",
+    "1 : 500.000, dos ciudades aparecen separadas por 3 cm": f"{3 * 500_000 // 100_000} km",
+    "1 : 400.000, una ruta aparece con 3,5 cm": f"{round(3.5 * 400_000 / 100_000)} km",
+    "1 cm representa 2 km": f"{7 * 2} km",
+    # De realidad a plano o maqueta se DIVIDE.
+    "maqueta está hecha a escala 1 : 20": f"{40 // 20} m",
+    "sala mide 7 m de largo en la realidad": f"{7 * 100 // 100} cm",
+    "pieza mide 75 cm en la realidad": f"{75 // 25} cm",
+    "pared mide 6 m de largo": f"{6 * 100 // 150} cm",
+    "auto mide 4,8 m de largo": f"{round(4.8 * 100) // 40} cm",
+    "edificio mide 30 m de alto": str(30 / 25).replace(".", ",") + " m",
+    "avión mide 64 m de largo": f"{64 // 32} m",
+    "1 : 250.000, ¿con cuántos centímetros": f"{60 * 100_000 // 250_000} cm",
+    # Deducir la escala a partir de dos medidas.
+    "5 cm representan 10 m": f"1 : {10 * 100 // 5}",
+    "terreno de 40 m de frente": f"1 : {40 * 100 // 20}",
+    # Razón de semejanza aplicada a lados y perímetros (misma razón).
+    "razón de semejanza 1 : 3. Si un lado del triángulo menor mide 5 cm": f"{5 * 3} cm",
+    "razón de semejanza 2 : 3. Si el perímetro del menor es 24 cm": f"{24 * 3 // 2} cm",
+    "razón de semejanza 3 : 4. Si un lado de la primera mide 12 cm": f"{12 * 4 // 3} cm",
+    "razón de semejanza 5 : 2. Si un lado de la figura mayor mide 35 cm": f"{35 * 2 // 5} cm",
+    "razón de semejanza 3 : 5. Si el perímetro del mayor es 45 cm": f"{45 * 3 // 5} cm",
+    "razón 4 : 7. Si un lado del menor mide 12 cm": f"{12 * 7 // 4} cm",
+    "perímetros de 36 cm y 48 cm": f"{9 * 48 // 36} cm",
+    "razón 3 : 5. Si la altura del menor mide 12 cm": f"{12 * 5 // 3} cm",
+    "un lado de 4 cm le corresponde uno de 6 cm": str(round(9 * 6 / 4, 1)).replace(".", ",") + " cm",
+    "primero mide 4 cm por 6 cm y el segundo tiene 10 cm de ancho": f"{10 * 6 // 4} cm",
+    "lados de 8 cm, 12 cm y 16 cm": f"{12 * 3 // 2} cm y {16 * 3 // 2} cm",
+    "lados de 9 cm, 12 cm y 15 cm": f"{12 * 2 // 3} cm y {15 * 2 // 3} cm",
+    # Razones deducidas desde medidas.
+    "cuadrado tiene 4 cm de lado y otro tiene 12 cm": f"1 : {12 // 4}",
+    "lados correspondientes de 5 cm y 20 cm": f"1 : {20 // 5}",
+    "círculos tienen radios de 2 cm y 6 cm": f"1 : {6 // 2}",
+    "perímetros de 20 cm y 50 cm": f"{20 // 10} : {50 // 10}",
+    # Ampliaciones y reducciones: las dos dimensiones por el mismo factor.
+    "fotografía de 8 cm de ancho se amplía al doble": f"{8 * 2} cm",
+    "rectángulo de 3 cm por 5 cm se amplía al triple": f"{3 * 3} cm por {5 * 3} cm",
+    "fotografía de 10 cm por 15 cm se reduce a la mitad": f"{10 // 2} cm por "
+    + str(15 / 2).replace(".", ",")
+    + " cm",
+    "6 cm de ancho por 9 cm de alto y se amplía": str(round(9 * 15 / 6, 1)).replace(".", ",") + " cm",
+    "fotografía de 12 cm por 18 cm se amplía 1,5 veces": f"{round(2 * (12 * 1.5 + 18 * 1.5))} cm",
+    # Sombras y espejos: triángulos semejantes en el mundo real.
+    "poste de 6 m proyecta una sombra de 8 m": str(round(6 * 2 / 8, 1)).replace(".", ",") + " m",
+    "bastón de 1 m proyecta una sombra de 0,8 m": f"{round(12 / 0.8)} m",
+    "poste de 5 m proyecta una sombra de 4 m": f"{28 * 5 // 4} m",
+    "espejo en el suelo": f"{round(1.6 * 15 / 2)} m",
+    # Teorema de Tales.
+    "segmentos de 3 cm y 4 cm; en la segunda": f"{6 * 4 // 3} cm",
+    "segmentos de 8 cm y 12 cm; sobre la otra": str(round(5 * 12 / 8, 1)).replace(".", ",") + " cm",
+    "AD mide 4 cm, DB mide 6 cm y AE mide 6 cm": f"{6 * 6 // 4} cm",
+    "segmentos de 6 cm y 4 cm. Si el tercer lado mide 15 cm": f"{15 * 6 // 10} cm y {15 * 4 // 10} cm",
+    "le corresponde uno de x cm": f"{round((3 * 12) ** 0.5)} cm",
+    # Áreas: la razón va AL CUADRADO.
+    "razón de semejanza 2 : 5. Si el área de la menor es 16 cm²": f"{16 * 5**2 // 2**2} cm²",
+    "razón de semejanza 1 : 4. Si el área de la menor es 7 cm²": f"{7 * 4**2} cm²",
+    "razón 2 : 3. Si el área del menor es 24 cm²": f"{24 * 3**2 // 2**2} cm²",
+    "razón 2 : 5. Si el área del menor es 60 cm²": f"{60 * 5**2 // 2**2} cm²",
+    "razón 9 : 16": f"{round(9**0.5)} : {round(16**0.5)}",
+    "razón 25 : 49": f"{round(25**0.5)} : {round(49**0.5)}",
+    "1 : 200, una bodega ocupa 25 cm²": f"{25 * 200**2 // 10_000} m²",
+    "1 : 2.000, un terreno ocupa 4 cm²": f"{4 * 2_000**2 // 10_000:,}".replace(",", ".") + " m²",
+    "superficie real de 18 m²": f"{18 * 10_000 // 60**2} cm²",
+    "1 : 50.000, un lago ocupa 3 cm²": str(3 * 50_000**2 / 10_000 / 1_000_000).replace(".", ",") + " km²",
+    # Volúmenes: la razón va AL CUBO.
+    "razón de semejanza 1 : 2. Si el volumen del menor es 5 cm³": f"{5 * 2**3} cm³",
+    "maqueta está hecha a escala 1 : 50": "1 : " + f"{50**3:,}".replace(",", "."),
+    "cubos son semejantes con razón de semejanza 2 : 3": f"{16 * 3**3 // 2**3} cm³",
+    "razón 8 : 27": f"{round(8 ** (1 / 3))} : {round(27 ** (1 / 3))}",
+    "piscina mide 25 m de largo, 10 m de ancho y 2 m de profundidad": f"{25 * 10 * 2} cm³",
+    # --- reposición de geo_plana ---
+    "pista de atletismo": f"{2880 // (2 * (84 + 60))} vueltas",
+    "jardín rectangular mide 20 m por 12 m": f"{20 * 12 - (20 - 2 * 2) * (12 - 2 * 2)} m²",
+    "24 cm de base y 10 cm de altura": f"{(24 - 9) * 10 // 2} cm²",
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
@@ -1151,7 +1233,7 @@ COMPROBACIONES: dict[str, str] = {
     "eje de simetría de la parábola y = x² + 4x − 5": f"x = {-4 // 2}",
     "eje X de la parábola y = x² − 5x + 6": "(2, 0) y (3, 0)" if 2 * 3 == 6 and 2 + 3 == 5 else "?",
     "(0, 5) y tiene pendiente −2": f"y = −2x + {5}",
-    "f(x) = 3x + b cumple que f(2) = 11": str(11 - 3 * 2),
+    "f(x) = 4x + b cumple que f(2) = 11": str(11 - 4 * 2),
     "función que representa el costo total": f"C(x) = {300}x + {500}",
     "viaje de 8 kilómetros": f"${300 * 8 + 500:,}".replace(",", "."),
     "f(x) = −2x + 7 cuando x = −3": str(-2 * -3 + 7),
@@ -1284,7 +1366,7 @@ COMPROBACIONES: dict[str, str] = {
     "hipotenusa mide 10 cm y uno de sus catetos mide 6 cm": f"{int(sqrt(10**2 - 6**2))} cm",
     "hipotenusa mide 17 cm y un cateto mide 8 cm": f"{int(sqrt(17**2 - 8**2))} cm",
     "catetos de 7 cm y 24 cm": f"{int(sqrt(7**2 + 24**2))} cm",
-    "rectángulo que mide 9 cm por 12 cm": f"{int(sqrt(9**2 + 12**2))} cm",
+    "rectángulo que mide 16 cm por 30 cm": f"{int(sqrt(16**2 + 30**2))} cm",
     "diagonal de un cuadrado de lado 10 cm": "10" if isclose(sqrt(2 * 100), 10 * sqrt(2)) else "?",
     "rampa sube 3 m de altura": f"{int(sqrt(3**2 + 4**2))} m",
     "mástil de 12 m de alto": f"{int(sqrt(12**2 + 5**2))} m",
@@ -1330,8 +1412,8 @@ COMPROBACIONES: dict[str, str] = {
     "vértices tiene un cubo": str(8),
     "área total de un cubo de arista 3 cm": f"{6 * 3**2} cm²",
     "cilindro de radio 5 cm y altura 4 cm": f"{3.14 * 5**2 * 4:.0f} cm³",
-    "cono de radio 3 cm y altura 4 cm": f"{3.14 * 3**2 * 4 / 3:.2f} cm³".replace(".", ","),
-    "esfera tiene radio 6 cm": f"{4 / 3 * 3.14 * 6**3:.2f} cm³".replace(".", ","),
+    "paralelepípedo de 9 cm de largo, 7 cm de ancho": f"{9 * 7 * 4} cm³",
+    "caja cúbica tiene un área total de 216 cm²": f"{round((216 / 6) ** 0.5)} cm",
     "paralelepípedo mide 6 cm, 4 cm y 3 cm": f"{2 * (6 * 4 + 6 * 3 + 4 * 3)} cm²",
     "base triangular de 6 cm de base y 4 cm de altura": f"{6 * 4 // 2 * 10} cm³",
     "estanque cilíndrico tiene 2 m de radio": f"{3.14 * 2**2 * 3:.2f} m³".replace(".", ","),
@@ -1339,16 +1421,19 @@ COMPROBACIONES: dict[str, str] = {
     "cubo tiene un volumen de 64 cm³": f"{round(64 ** (1 / 3))} cm",
     "cilindro tiene un volumen de 502,4 cm³": f"{round(502.4 / (3.14 * 4**2))} cm",
     "aristas tiene un prisma de base triangular": str(3 * 3),
-    "caras tiene una pirámide de base cuadrada": str(1 + 4),
+    "volumen de 60 cm³ y dos de sus dimensiones": f"{60 // (5 * 3)} cm",
     "cubos de 5 cm de arista caben": f"{20 * 15 * 10 // 5**3} cubos",
     "área total de un cilindro de radio 3 cm y altura 7 cm": (
         f"{2 * 3.14 * 3**2 + 2 * 3.14 * 3 * 7:.1f} cm²".replace(".", ",")
     ),
-    "pirámide de base cuadrada de lado 6 cm y altura 10 cm": f"{6**2 * 10 // 3} cm³",
+    "estanque cúbico de 30 cm de arista": f"{30**3 // 1000} litros",
+    # Cuerpos con el mismo volumen: el dato que los conecta.
+    "cubo de 6 cm de arista y un paralelepípedo": f"{6**3 // (9 * 8)} cm",
+    "arista de un cubo se reduce a la mitad": f"Por 1/{2**3}",
     "duplica la altura de un cilindro": str(2),
     # ================= LOTE 8 — eje PROBABILIDAD Y ESTADÍSTICA =================
     "media de los datos 5, 10, 15 y 20": f"{(5 + 10 + 15 + 20) / 4:.1f}".replace(".", ","),
-    "mediana de los datos 2, 8, 4, 10 y 6": str(sorted([2, 8, 4, 10, 6])[2]),
+    "mediana de los datos 6, 14, 8, 20 y 12": str(sorted([6, 14, 8, 20, 12])[2]),
     "moda del conjunto 1, 3, 3, 5, 8 y 3": str(Counter([1, 3, 3, 5, 8, 3]).most_common(1)[0][0]),
     "rango del conjunto 8, 15, 3, 22 y 11": str(max(8, 15, 3, 22, 11) - min(8, 15, 3, 22, 11)),
     "promedio de 12, 15 y 18": str((12 + 15 + 18) // 3),
@@ -1373,7 +1458,7 @@ COMPROBACIONES: dict[str, str] = {
     "ordenar 3 personas en una fila": str(factorial(3)),
     "ordenar 5 libros diferentes en un estante": str(factorial(5)),
     "5 entradas y 3 postres": str(5 * 3),
-    "4 camisas y 3 corbatas": str(4 * 3),
+    "9 camisas y 4 corbatas": str(9 * 4),
     "letras de la palabra SOL": str(factorial(3)),
     "comité de 3 personas a partir de un grupo de 5": str(comb(5, 3)),
     "elegir 2 personas de un grupo de 8": str(comb(8, 2)),
@@ -1381,7 +1466,7 @@ COMPROBACIONES: dict[str, str] = {
     "2 cifras distintas se pueden formar usando los dígitos 1, 2, 3 y 4": str(4 * 3),
     "patente se forma con 3 letras": f"{26**3:,}".replace(",", "."),
     "3 entradas, 4 platos de fondo y 2 postres": str(3 * 4 * 2),
-    "subconjuntos de 2 elementos tiene un conjunto de 6": str(comb(6, 2)),
+    "subconjuntos de 2 elementos tiene un conjunto de 11": str(comb(11, 2)),
     "letras de la palabra PERRO": str(factorial(5) // factorial(2)),
     "comité de 4 personas de un grupo de 7": str(comb(7, 4)),
     "plantel de 10 jugadores": str(comb(10, 5)),
@@ -1391,6 +1476,19 @@ COMPROBACIONES: dict[str, str] = {
     "ordenar 7 personas en una fila": f"{factorial(7):,}".replace(",", "."),
     "6 hombres y 4 mujeres": str(comb(6, 2) * comb(4, 2)),
 }
+
+
+_SUPERINDICES = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")
+
+
+def _numeros_del_stem(stem: str) -> tuple[str, ...]:
+    """Los números que aparecen en un enunciado, incluidos los exponentes.
+
+    Los exponentes se escriben en superíndice (2³, x²) y `\\d` no los reconoce.
+    Sin traducirlos, "2³ · 2⁴" y "2⁵ · 2²" tienen la misma firma numérica y el
+    detector de duplicados los daría por repetidos sin serlo.
+    """
+    return tuple(sorted(re.findall(r"\d+(?:[.,]\d+)?", stem.translate(_SUPERINDICES))))
 
 
 def _norm(t: str) -> str:
@@ -1508,19 +1606,26 @@ def main() -> int:
             if re.search(r"\balternativa [A-D]\b|\bopción [A-D]\b", t):
                 fallas.append(f"menciona una letra de alternativa: {stem[:60]}")
 
-    # Dos preguntas del mismo nodo con los mismos números suelen ser la misma
-    # pregunta con otra redacción: al estudiante le tocan repetidas en un ensayo.
-    por_firma: dict[tuple[str, tuple[str, ...]], list[str]] = {}
+    # Dos preguntas del mismo nodo con los mismos números Y la misma respuesta
+    # correcta son la misma pregunta reformulada, aunque el enunciado no calce
+    # letra por letra. Al estudiante le tocan repetidas dentro de un mismo
+    # ensayo, que es justo lo que no puede pasar. Antes esto era solo un aviso
+    # y por eso el banco acumuló pares como "¿cuánto mide LA hipotenusa?" y
+    # "¿cuánto mide SU hipotenusa?" con los mismos catetos.
+    por_firma: dict[tuple[str, tuple[str, ...], str], list[str]] = {}
     for q in QUESTIONS:
-        numeros = tuple(sorted(re.findall(r"\d+(?:[.,]\d+)?", q["stem"])))
+        numeros = _numeros_del_stem(q["stem"])
         if not numeros:
             continue
-        por_firma.setdefault((q["skill_node"], numeros), []).append(q["stem"])
-    for (nodo, numeros), stems in por_firma.items():
+        correcta = next(a["text"] for a in q["alternatives"] if a["is_correct"])
+        por_firma.setdefault((q["skill_node"], numeros, correcta), []).append(q["stem"])
+    for (nodo, numeros, correcta), stems in por_firma.items():
         if len(stems) > 1:
-            print(f"  aviso: {nodo} tiene {len(stems)} preguntas con los números {numeros}")
-            for st in stems:
-                print(f"      {st[:78]}")
+            detalle = "\n".join(f"        · {st[:76]}" for st in stems)
+            fallas.append(
+                f"{nodo}: {len(stems)} preguntas con los mismos números {numeros} y la misma "
+                f"respuesta '{correcta}'; son la misma pregunta reformulada:\n{detalle}"
+            )
 
     for stem, veces in vistos.items():
         if veces > 1:
