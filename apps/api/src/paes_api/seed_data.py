@@ -1215,20 +1215,19 @@ QUESTIONS = [
     ),
     _q(
         "geo_solidos", "dificil",
-        "Una esfera tiene radio 3 cm. ¿Cuál es su volumen aproximado? "
-        "(usa π ≈ 3,14 y la fórmula V = (4/3) × π × r³)",
-        "113,04 cm³",
-        "Se reemplazan los datos en la fórmula del volumen de la esfera, "
-        "resolviendo en el orden correcto.\n\n"
-        "1) Eleva el radio al cubo: 3³ = 27.\n"
-        "2) Multiplica por π: 3,14 × 27 = 84,78.\n"
-        "3) Multiplica por 4: 84,78 × 4 = 339,12.\n"
-        "4) Divide por 3, el último factor de la fórmula: 339,12 ÷ 3 = 113,04.\n\n"
-        "El resultado va en cm³, porque el volumen ocupa tres dimensiones.",
+        "Un cubo de 6 cm de arista y un paralelepípedo tienen el mismo volumen. Si la base "
+        "del paralelepípedo mide 9 cm por 8 cm, ¿cuál es su altura?",
+        "3 cm",
+        "El dato que conecta los dos cuerpos es el volumen, así que hay que calcularlo primero.\n\n"
+        "1) Volumen del cubo: 6 · 6 · 6 = 216 cm³.\n"
+        "2) El paralelepípedo tiene ese mismo volumen, y el área de su base es 9 · 8 = 72 cm².\n"
+        "3) Plantea: 216 = 72 · altura.\n"
+        "4) Despeja dividiendo: altura = 216 ÷ 72 = 3 cm.\n"
+        "5) Comprueba: 9 · 8 · 3 = 216 ✓.",
         [
-            ("28,26 cm³", "Calculó π×r² (como el área de un círculo) en lugar de aplicar la fórmula del volumen de la esfera."),
-            ("339,12 cm³", "Calculó correctamente 4×π×r³ pero olvidó dividir por 3 en el último paso."),
-            ("84,78 cm³", "Calculó π×r³ pero olvidó multiplicar por el factor 4/3 de la fórmula."),
+            ("6 cm", "Supuso que el paralelepípedo conserva la altura del cubo."),
+            ("24 cm", "Dividió el volumen solo por 9, olvidando la otra dimensión de la base."),
+            ("72 cm", "Dio el área de la base en lugar de la altura."),
         ],
     ),
     # ---------- PROBABILIDAD ----------
@@ -1271,19 +1270,19 @@ QUESTIONS = [
     ),
     _q(
         "prob_combinatoria", "facil",
-        "¿De cuántas formas distintas se pueden ordenar 5 fotos diferentes en un álbum, una tras otra?",
-        "120",
-        "Como importa el orden y se usan las 5 fotos, es una permutación, que "
+        "¿De cuántas formas distintas se pueden ordenar 9 fotos diferentes en un álbum, una tras otra?",
+        "362.880",
+        "Como importa el orden y se usan las 9 fotos, es una permutación, que "
         "se calcula con el factorial.\n\n"
-        "1) Para el primer lugar hay 5 fotos disponibles, para el segundo "
-        "quedan 4, luego 3, luego 2 y finalmente 1.\n"
-        "2) Multiplica las opciones de cada lugar: 5 × 4 × 3 × 2 × 1 = 120.\n\n"
-        "Esa multiplicación es 5! (cinco factorial). Se multiplican y no se "
+        "1) Para el primer lugar hay 9 fotos disponibles, para el segundo "
+        "quedan 8, luego 7, y así hasta la última.\n"
+        "2) Multiplica las opciones de cada lugar: 9 × 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 362.880.\n\n"
+        "Esa multiplicación es 9! (nueve factorial). Se multiplican y no se "
         "suman porque cada elección se combina con todas las posteriores.",
         [
-            ("25", "Calculó 5² en lugar de 5! (confundió una permutación con una potencia)."),
-            ("5", "Entregó solo la cantidad de fotos, sin calcular las formas de ordenarlas."),
-            ("15", "Sumó 5+4+3+2+1 en lugar de multiplicar esos mismos valores."),
+            ("81", "Calculó 9² en lugar de 9! (confundió una permutación con una potencia)."),
+            ("9", "Entregó solo la cantidad de fotos, sin calcular las formas de ordenarlas."),
+            ("45", "Sumó 9+8+7+…+1 en lugar de multiplicar esos mismos valores."),
         ],
     ),
     _q(
@@ -1787,34 +1786,34 @@ QUESTIONS = [
     ),
     _q(
         "geo_pitagoras", "facil",
-        "Un triángulo rectángulo tiene catetos de 6 cm y 8 cm. ¿Cuánto mide su hipotenusa?",
-        "10 cm",
+        "Un triángulo rectángulo tiene catetos de 14 cm y 48 cm. ¿Cuánto mide su hipotenusa?",
+        "50 cm",
         "El teorema de Pitágoras dice que el cuadrado de la hipotenusa es igual a "
         "la suma de los cuadrados de los catetos.\n\n"
-        "1) Eleva al cuadrado los catetos: 6² = 36 y 8² = 64.\n"
-        "2) Súmalos: 36 + 64 = 100.\n"
-        "3) Extrae la raíz cuadrada: √100 = 10 cm.",
+        "1) Eleva al cuadrado los catetos: 14² = 196 y 48² = 2.304.\n"
+        "2) Súmalos: 196 + 2.304 = 2.500.\n"
+        "3) Extrae la raíz cuadrada: √2.500 = 50 cm.",
         [
-            ("14 cm", "Sumó los catetos directamente (6+8) en lugar de aplicar el teorema de Pitágoras."),
-            ("48 cm", "Multiplicó los catetos entre sí, calculando el área del triángulo en lugar de la hipotenusa."),
-            ("100 cm", "Sumó los cuadrados de los catetos correctamente (36+64=100), pero olvidó calcular la raíz cuadrada."),
+            ("62 cm", "Sumó los catetos directamente (14+48) en lugar de aplicar el teorema de Pitágoras."),
+            ("34 cm", "Restó los catetos en lugar de aplicar el teorema."),
+            ("2.500 cm", "Sumó los cuadrados de los catetos correctamente, pero olvidó calcular la raíz cuadrada."),
         ],
     ),
     _q(
         "geo_pitagoras", "medio",
-        "Un triángulo rectángulo tiene hipotenusa de 13 cm y un cateto de 5 cm. "
+        "Un triángulo rectángulo tiene hipotenusa de 41 cm y un cateto de 40 cm. "
         "¿Cuánto mide el otro cateto?",
-        "12 cm",
+        "9 cm",
         "Cuando se conoce la hipotenusa y un cateto, el teorema de Pitágoras se "
         "despeja restando en lugar de sumando.\n\n"
-        "1) Eleva al cuadrado la hipotenusa y el cateto conocido: 13² = 169 y "
-        "5² = 25.\n"
-        "2) Resta: 169 − 25 = 144.\n"
-        "3) Extrae la raíz cuadrada: √144 = 12 cm.",
+        "1) Eleva al cuadrado la hipotenusa y el cateto conocido: 41² = 1.681 y "
+        "40² = 1.600.\n"
+        "2) Resta: 1.681 − 1.600 = 81.\n"
+        "3) Extrae la raíz cuadrada: √81 = 9 cm.",
         [
-            ("18 cm", "Sumó la hipotenusa y el cateto conocido directamente (13+5), en lugar de aplicar el teorema de Pitágoras."),
-            ("8 cm", "Restó el cateto conocido de la hipotenusa directamente (13−5), en lugar de restar sus cuadrados y luego calcular la raíz."),
-            ("≈13,9 cm", "Sumó los cuadrados de la hipotenusa y el cateto conocido (169+25), en lugar de restarlos."),
+            ("81 cm", "Restó bien los cuadrados pero olvidó calcular la raíz cuadrada."),
+            ("1 cm", "Restó el cateto conocido de la hipotenusa directamente (41−40), en lugar de restar sus cuadrados y luego calcular la raíz."),
+            ("≈57,3 cm", "Sumó los cuadrados de la hipotenusa y el cateto conocido, en lugar de restarlos."),
         ],
     ),
     _q(
@@ -1913,16 +1912,16 @@ QUESTIONS = [
     ),
     _q(
         "geo_solidos", "medio",
-        "Un cilindro tiene radio 3 cm y altura 10 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
-        "282,6 cm³",
+        "Un cilindro tiene radio 4 cm y altura 5 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
+        "251,2 cm³",
         "El volumen de un cilindro es el área de su base circular multiplicada "
         "por la altura.\n\n"
-        "1) Calcula el área de la base: π × r² = 3,14 × 3² = 3,14 × 9 = 28,26 cm².\n"
-        "2) Multiplica por la altura: 28,26 × 10 = 282,6 cm³.",
+        "1) Calcula el área de la base: π × r² = 3,14 × 4² = 3,14 × 16 = 50,24 cm².\n"
+        "2) Multiplica por la altura: 50,24 × 5 = 251,2 cm³.",
         [
-            ("94,2 cm³", "No elevó el radio al cuadrado: multiplicó π por el radio (sin elevarlo) y por la altura."),
-            ("188,4 cm³", "Calculó el área lateral del cilindro (2πrh) en lugar de su volumen (πr²h)."),
-            ("1130,4 cm³", "Usó el diámetro (6 cm) en lugar del radio en la fórmula, elevándolo al cuadrado por error."),
+            ("62,8 cm³", "No elevó el radio al cuadrado: multiplicó π por el radio (sin elevarlo) y por la altura."),
+            ("125,6 cm³", "Calculó el área lateral del cilindro (2πrh) en lugar de su volumen (πr²h)."),
+            ("1.004,8 cm³", "Usó el diámetro (8 cm) en lugar del radio en la fórmula, elevándolo al cuadrado por error."),
         ],
     ),
     # ---------- PROBABILIDAD ----------
@@ -3717,36 +3716,38 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "dificil",
-        "Si el radio de una esfera se duplica, ¿por cuánto queda multiplicado su "
+        "Si la arista de un cubo se reduce a la mitad, ¿por cuánto queda multiplicado su "
         "volumen?",
-        "Por 8",
-        "El volumen de la esfera depende del cubo del radio, así que el factor se eleva "
+        "Por 1/8",
+        "El volumen del cubo depende del cubo de la arista, así que el factor se eleva "
         "al cubo.\n\n"
-        "1) El volumen es (4/3)πr³.\n"
-        "2) Al duplicar el radio queda 2r, y su cubo es (2r)³ = 8r³.\n"
-        "3) El nuevo volumen es 8 veces el original.\n\n"
-        "Como referencia, si el radio se duplica el área de la superficie se "
-        "cuadruplica, porque depende del cuadrado del radio.",
+        "1) El volumen es arista³.\n"
+        "2) Al reducir la arista a la mitad queda L/2, y su cubo es (L/2)³ = L³/8.\n"
+        "3) El nuevo volumen es la octava parte del original.\n"
+        "4) Compruébalo con números: un cubo de arista 4 tiene volumen 64; uno de arista 2 "
+        "tiene volumen 8, y 8 es la octava parte de 64 ✓.\n\n"
+        "Como referencia, con esa misma reducción el área total queda multiplicada por 1/4, "
+        "porque depende del cuadrado de la arista.",
         [
-            ("Por 2", "Aplicó al volumen el mismo factor que al radio."),
-            ("Por 4", "Usó el factor que corresponde al área de la superficie, no al volumen."),
-            ("Por 6", "Multiplicó el factor por 3 en lugar de elevarlo al cubo."),
+            ("Por 1/2", "Aplicó al volumen el mismo factor que a la arista."),
+            ("Por 1/4", "Usó el factor que corresponde al área total, no al volumen."),
+            ("Por 1/6", "Multiplicó el factor por 3 en lugar de elevarlo al cubo."),
         ],
     ),
     _q(
         "geo_solidos", "dificil",
-        "Un cono tiene radio 6 cm y altura 10 cm. ¿Cuál es su volumen? "
+        "Un cilindro tiene 8 cm de diámetro y 15 cm de altura. ¿Cuál es su volumen? "
         "(usa π ≈ 3,14)",
-        "376,8 cm³",
-        "El volumen del cono es un tercio del volumen del cilindro de igual base y "
-        "altura.\n\n"
-        "1) Área de la base: 3,14 · 6² = 3,14 · 36 = 113,04 cm².\n"
-        "2) Multiplica por la altura: 113,04 · 10 = 1.130,4.\n"
-        "3) Divide por 3: 1.130,4 ÷ 3 = 376,8 cm³.",
+        "753,6 cm³",
+        "El enunciado entrega el diámetro, y la fórmula trabaja con el radio.\n\n"
+        "1) El radio es la mitad del diámetro: 8 ÷ 2 = 4 cm. Saltarse este paso es el error "
+        "más caro de esta pregunta, porque cuadruplica el resultado.\n"
+        "2) Área de la base: 3,14 · 4² = 3,14 · 16 = 50,24 cm².\n"
+        "3) Multiplica por la altura: 50,24 · 15 = 753,6 cm³.",
         [
-            ("1130,4 cm³", "Calculó el volumen del cilindro y olvidó dividir por 3."),
-            ("113,04 cm³", "Se quedó en el área de la base sin usar la altura."),
-            ("188,4 cm³", "Dividió por 2 en lugar de por 3."),
+            ("3.014,4 cm³", "Usó el diámetro como si fuera el radio, lo que multiplica el volumen por 4."),
+            ("50,24 cm³", "Se quedó en el área de la base sin usar la altura."),
+            ("376,8 cm³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
         ],
     ),
     _q(
@@ -8332,15 +8333,15 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "La función f(x) = 3x + b cumple que f(2) = 11. ¿Cuál es el valor de b?",
-        "5",
+        "La función f(x) = 4x + b cumple que f(2) = 11. ¿Cuál es el valor de b?",
+        "3",
         "Se reemplaza el dato conocido y se despeja la incógnita.\n\n"
-        "1) Evalúa en x = 2: f(2) = 3 · 2 + b = 6 + b.\n"
-        "2) Como f(2) vale 11: 6 + b = 11.\n"
-        "3) Despeja: b = 11 − 6 = 5.\n"
-        "4) Verifica: f(x) = 3x + 5, y f(2) = 6 + 5 = 11. Correcto.",
+        "1) Evalúa en x = 2: f(2) = 4 · 2 + b = 8 + b.\n"
+        "2) Como f(2) vale 11: 8 + b = 11.\n"
+        "3) Despeja: b = 11 − 8 = 3.\n"
+        "4) Verifica: f(x) = 4x + 3, y f(2) = 8 + 3 = 11. Correcto.",
         [
-            ("17", "Sumó el 6 en lugar de restarlo al despejar."),
+            ("19", "Sumó el 8 en lugar de restarlo al despejar."),
             ("11", "Tomó el valor de la función como si fuera directamente b."),
             ("2", "Entregó el valor de x en lugar del de b."),
         ],
@@ -10120,18 +10121,18 @@ QUESTIONS += [
     ),
     _q(
         "geo_pitagoras", "medio",
-        "¿Cuánto mide la diagonal de un rectángulo que mide 9 cm por 12 cm?",
-        "15 cm",
+        "¿Cuánto mide la diagonal de un rectángulo que mide 16 cm por 30 cm?",
+        "34 cm",
         "La diagonal divide al rectángulo en dos triángulos rectángulos.\n\n"
         "1) Los lados del rectángulo son los catetos y la diagonal es la "
         "hipotenusa.\n"
-        "2) d² = 9² + 12² = 81 + 144 = 225.\n"
-        "3) Saca la raíz: √225 = 15 cm.\n"
+        "2) d² = 16² + 30² = 256 + 900 = 1.156.\n"
+        "3) Saca la raíz: √1.156 = 34 cm.\n"
         "4) Control: la diagonal siempre debe ser mayor que cualquiera de los lados.",
         [
-            ("21 cm", "Sumó los lados sin elevarlos al cuadrado."),
-            ("108 cm", "Calculó el área del rectángulo en lugar de la diagonal."),
-            ("3 cm", "Restó los lados en vez de aplicar el teorema."),
+            ("46 cm", "Sumó los lados sin elevarlos al cuadrado."),
+            ("480 cm", "Calculó el área del rectángulo en lugar de la diagonal."),
+            ("14 cm", "Restó los lados en vez de aplicar el teorema."),
         ],
     ),
     _q(
@@ -10766,32 +10767,31 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "medio",
-        "¿Cuál es el volumen de un cono de radio 3 cm y altura 4 cm? (usa π ≈ 3,14)",
-        "37,68 cm³",
-        "El cono ocupa un tercio del cilindro que lo contiene.\n\n"
-        "1) Aplica V = (π · r² · h)/3.\n"
-        "2) Área de la base: 3,14 · 9 = 28,26 cm².\n"
-        "3) Multiplica por la altura: 28,26 · 4 = 113,04.\n"
-        "4) Divide por 3: 37,68 cm³.",
+        "¿Cuál es el volumen de un paralelepípedo de 9 cm de largo, 7 cm de ancho y 4 cm de alto?",
+        "252 cm³",
+        "El volumen de un paralelepípedo es el producto de sus tres dimensiones.\n\n"
+        "1) Área de la base: 9 · 7 = 63 cm².\n"
+        "2) Multiplica por la altura: 63 · 4 = 252.\n"
+        "3) El volumen es 252 cm³.",
         [
-            ("113,04 cm³", "Calculó el volumen del cilindro, sin dividir por 3."),
-            ("12,56 cm³", "Multiplicó π por el radio sin elevarlo al cuadrado."),
-            ("28,26 cm³", "Se quedó en el área de la base."),
+            ("20 cm³", "Sumó las tres dimensiones en lugar de multiplicarlas."),
+            ("63 cm³", "Se quedó en el área de la base sin multiplicar por la altura."),
+            ("254 cm³", "Calculó el área total del cuerpo en vez del volumen."),
         ],
     ),
     _q(
         "geo_solidos", "medio",
-        "Una esfera tiene radio 6 cm. ¿Cuál es su volumen? (usa π ≈ 3,14 y V = (4/3)πr³)",
-        "904,32 cm³",
-        "En la esfera el radio va elevado al cubo.\n\n"
-        "1) Calcula r³: 6³ = 216.\n"
-        "2) Multiplica por π: 3,14 · 216 = 678,24.\n"
-        "3) Multiplica por 4/3: 678,24 · 4 = 2.712,96, y dividido por 3 da 904,32.\n"
-        "4) El volumen es 904,32 cm³.",
+        "Una caja cúbica tiene un área total de 216 cm². ¿Cuánto mide su arista?",
+        "6 cm",
+        "Se recorre al revés la fórmula del área del cubo.\n\n"
+        "1) El área total es 6 veces el área de una cara: 216 = 6 · arista².\n"
+        "2) Divide por 6: arista² = 216 ÷ 6 = 36.\n"
+        "3) Saca la raíz cuadrada: arista = √36 = 6 cm.\n"
+        "4) Comprueba: una cara mide 36 cm² y 6 · 36 = 216 ✓.",
         [
-            ("452,16 cm³", "Elevó el radio al cuadrado en lugar de al cubo, y ajustó el resto."),
-            ("678,24 cm³", "Olvidó multiplicar por el factor 4/3."),
-            ("2.712,96 cm³", "Multiplicó por 4 pero no dividió por 3."),
+            ("36 cm", "Se quedó en el área de una cara sin sacar la raíz."),
+            ("14,7 cm", "Sacó la raíz cuadrada del área total sin dividir antes por 6."),
+            ("108 cm", "Dividió el área por 2 en lugar de por 6."),
         ],
     ),
     _q(
@@ -10903,17 +10903,18 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "medio",
-        "¿Cuántas caras tiene una pirámide de base cuadrada?",
-        "5",
-        "Se cuentan la base y las caras laterales.\n\n"
-        "1) La base es un cuadrado: 1 cara.\n"
-        "2) Cada lado del cuadrado sostiene un triángulo que sube hasta la punta: "
-        "4 caras laterales.\n"
-        "3) En total: 1 + 4 = 5 caras.",
+        "Un paralelepípedo tiene un volumen de 60 cm³ y dos de sus dimensiones miden 5 cm y "
+        "3 cm. ¿Cuánto mide la tercera?",
+        "4 cm",
+        "Se despeja la dimensión que falta desde la fórmula del volumen.\n\n"
+        "1) El volumen es el producto de las tres dimensiones: 60 = 5 · 3 · x.\n"
+        "2) Multiplica lo conocido: 5 · 3 = 15, así que 60 = 15 · x.\n"
+        "3) Divide: x = 60 ÷ 15 = 4 cm.\n"
+        "4) Comprueba: 5 · 3 · 4 = 60 ✓.",
         [
-            ("4", "Contó solo las caras triangulares, olvidando la base."),
-            ("6", "Usó el número de caras de un cubo."),
-            ("8", "Contó las aristas en lugar de las caras."),
+            ("12 cm", "Dividió el volumen solo por 5, olvidando la otra dimensión conocida."),
+            ("20 cm", "Dividió el volumen solo por 3."),
+            ("15 cm", "Dio el área de la base en lugar de la tercera dimensión."),
         ],
     ),
     _q(
@@ -10950,17 +10951,17 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "medio",
-        "¿Cuál es el volumen de una pirámide de base cuadrada de lado 6 cm y altura 10 cm?",
-        "120 cm³",
-        "La pirámide ocupa un tercio del prisma que la contiene.\n\n"
-        "1) Área de la base: 6² = 36 cm².\n"
-        "2) Multiplica por la altura: 36 · 10 = 360.\n"
-        "3) Divide por 3: 120.\n"
-        "4) El volumen es 120 cm³.",
+        "¿Cuántos litros de agua caben en un estanque cúbico de 30 cm de arista?",
+        "27 litros",
+        "Primero el volumen en centímetros cúbicos y después la conversión.\n\n"
+        "1) Volumen del cubo: 30 · 30 · 30 = 27.000 cm³.\n"
+        "2) La equivalencia clave es que 1 litro son 1.000 cm³.\n"
+        "3) Divide: 27.000 ÷ 1.000 = 27.\n"
+        "4) Caben 27 litros.",
         [
-            ("360 cm³", "Calculó el volumen del prisma, sin dividir por 3."),
-            ("36 cm³", "Se quedó en el área de la base."),
-            ("180 cm³", "Dividió por 2 en lugar de por 3."),
+            ("270 litros", "Dividió por 100 en lugar de por 1.000."),
+            ("27.000 litros", "Dio el volumen en centímetros cúbicos sin convertirlo a litros."),
+            ("2,7 litros", "Dividió por 10.000, que es el factor entre cm² y m², no el de capacidad."),
         ],
     ),
     _q(
@@ -11000,18 +11001,18 @@ QUESTIONS += [
     ),
     _q(
         "prob_estadistica_desc", "facil",
-        "¿Cuál es la mediana de los datos 2, 8, 4, 10 y 6?",
-        "6",
+        "¿Cuál es la mediana de los datos 6, 14, 8, 20 y 12?",
+        "12",
         "La mediana es el valor central, pero solo después de ordenar.\n\n"
-        "1) Ordena de menor a mayor: 2, 4, 6, 8, 10.\n"
+        "1) Ordena de menor a mayor: 6, 8, 12, 14, 20.\n"
         "2) Como hay 5 datos (cantidad impar), el central es el tercero.\n"
-        "3) La mediana es 6.\n"
+        "3) La mediana es 12.\n"
         "4) Olvidar ordenar es el error más común: en la lista original el tercer "
-        "valor era 4.",
+        "valor era 8.",
         [
-            ("4", "Tomó el valor central sin ordenar antes los datos."),
-            ("30", "Sumó todos los datos en lugar de buscar el central."),
-            ("8", "Contó desde el extremo equivocado tras ordenar."),
+            ("8", "Tomó el valor central sin ordenar antes los datos."),
+            ("60", "Sumó todos los datos en lugar de buscar el central."),
+            ("14", "Contó desde el extremo equivocado tras ordenar."),
         ],
     ),
     _q(
@@ -11342,16 +11343,16 @@ QUESTIONS += [
     ),
     _q(
         "prob_combinatoria", "facil",
-        "Con 4 camisas y 3 corbatas distintas, ¿cuántos conjuntos diferentes de camisa y corbata se pueden formar?",
-        "12",
+        "Con 9 camisas y 4 corbatas distintas, ¿cuántos conjuntos diferentes de camisa y corbata se pueden formar?",
+        "36",
         "Cada camisa se puede combinar con cualquiera de las corbatas.\n\n"
-        "1) Hay 4 opciones de camisa.\n"
-        "2) Por cada camisa hay 3 corbatas posibles.\n"
-        "3) Multiplica: 4 · 3 = 12 conjuntos distintos.",
+        "1) Hay 9 opciones de camisa.\n"
+        "2) Por cada camisa hay 4 corbatas posibles.\n"
+        "3) Multiplica: 9 · 4 = 36 conjuntos distintos.",
         [
-            ("7", "Sumó las prendas en lugar de multiplicar las opciones."),
-            ("24", "Multiplicó por 2 de más, como si el orden de vestirse importara."),
-            ("4", "Contó solo las camisas."),
+            ("13", "Sumó las prendas en lugar de multiplicar las opciones."),
+            ("72", "Multiplicó por 2 de más, como si el orden de vestirse importara."),
+            ("9", "Contó solo las camisas."),
         ],
     ),
     _q(
@@ -11462,16 +11463,16 @@ QUESTIONS += [
     ),
     _q(
         "prob_combinatoria", "medio",
-        "¿Cuántos subconjuntos de 2 elementos tiene un conjunto de 6 elementos?",
-        "15",
+        "¿Cuántos subconjuntos de 2 elementos tiene un conjunto de 11 elementos?",
+        "55",
         "Un subconjunto no distingue orden: {a, b} y {b, a} son el mismo.\n\n"
-        "1) Si el orden importara: 6 · 5 = 30.\n"
+        "1) Si el orden importara: 11 · 10 = 110.\n"
         "2) Cada par se cuenta dos veces, así que divide por 2.\n"
-        "3) 30 ÷ 2 = 15 subconjuntos.",
+        "3) 110 ÷ 2 = 55 subconjuntos.",
         [
-            ("30", "Contó pares ordenados sin dividir por las repeticiones."),
-            ("36", "Calculó 6², permitiendo repetir el mismo elemento."),
-            ("12", "Multiplicó 6 · 2 en lugar de aplicar combinaciones."),
+            ("110", "Contó pares ordenados sin dividir por las repeticiones."),
+            ("121", "Calculó 11², permitiendo repetir el mismo elemento."),
+            ("22", "Multiplicó 11 · 2 en lugar de aplicar combinaciones."),
         ],
     ),
     _q(
@@ -16121,16 +16122,16 @@ QUESTIONS += [
     ),
     _q(
         "prob_combinatoria", "facil",
-        "Para ir de la ciudad A a la B hay 3 rutas, y de la B a la C hay 4. ¿De cuántas formas distintas se puede viajar de A a C pasando por B?",
-        "12",
+        "Para ir de la ciudad A a la B hay 7 rutas, y de la B a la C hay 3. ¿De cuántas formas distintas se puede viajar de A a C pasando por B?",
+        "21",
         "El viaje son dos tramos sucesivos, así que las opciones se multiplican.\n\n"
-        "1) Cada una de las 3 rutas hasta B se puede continuar con cualquiera de las 4 rutas hasta C.\n"
-        "2) Multiplica: 3 · 4 = 12.\n"
-        "3) Hay 12 recorridos distintos.",
+        "1) Cada una de las 7 rutas hasta B se puede continuar con cualquiera de las 3 rutas hasta C.\n"
+        "2) Multiplica: 7 · 3 = 21.\n"
+        "3) Hay 21 recorridos distintos.",
         [
-            ("7", "Sumó las rutas de los dos tramos, que sería el caso si se pudiera elegir una sola."),
-            ("4", "Contó solo el segundo tramo."),
-            ("9", "Multiplicó 3 por 3, usando dos veces las rutas del primer tramo."),
+            ("10", "Sumó las rutas de los dos tramos, que sería el caso si se pudiera elegir una sola."),
+            ("3", "Contó solo el segundo tramo."),
+            ("49", "Multiplicó 7 por 7, usando dos veces las rutas del primer tramo."),
         ],
     ),
     _q(
@@ -16526,16 +16527,16 @@ QUESTIONS += [
     ),
     _q(
         "prob_reglas", "facil",
-        "Se lanza un dado común de 6 caras. ¿Cuál es la probabilidad de obtener un número menor que 5?",
-        "2/3",
-        "Hay que contar bien cuáles cumplen la condición, sin incluir el 5.\n\n"
-        "1) Los números menores que 5 son 1, 2, 3 y 4: son 4 casos favorables.\n"
+        "Se lanza un dado común de 6 caras. ¿Cuál es la probabilidad de obtener un número menor que 3?",
+        "1/3",
+        "Hay que contar bien cuáles cumplen la condición, sin incluir el 3.\n\n"
+        "1) Los números menores que 3 son 1 y 2: son 2 casos favorables.\n"
         "2) El total de casos posibles es 6.\n"
-        "3) La probabilidad es 4/6.\n"
-        "4) Simplifica dividiendo por 2: 4/6 = 2/3.",
+        "3) La probabilidad es 2/6.\n"
+        "4) Simplifica dividiendo por 2: 2/6 = 1/3.",
         [
-            ("5/6", "Incluyó el 5 entre los favorables, cuando el enunciado pide MENOR que 5."),
-            ("1/3", "Calculó la probabilidad de obtener 5 o más."),
+            ("1/2", "Incluyó el 3 entre los favorables, cuando el enunciado pide MENOR que 3."),
+            ("2/3", "Calculó la probabilidad de obtener 3 o más."),
             ("1/6", "Consideró un solo caso favorable."),
         ],
     ),
@@ -17093,17 +17094,17 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es la factorización de 6x² + 9x?",
-        "3x(2x + 3)",
+        "¿Cuál es la factorización de 8x² + 12x?",
+        "4x(2x + 3)",
         "Se saca el factor común, que incluye tanto el número como la variable.\n\n"
-        "1) El máximo común divisor de 6 y 9 es 3.\n"
+        "1) El máximo común divisor de 8 y 12 es 4.\n"
         "2) Los dos términos tienen al menos una x, así que también sale x.\n"
-        "3) El factor común es 3x. Al dividir: 6x² ÷ 3x = 2x y 9x ÷ 3x = 3.\n"
-        "4) Queda 3x(2x + 3).",
+        "3) El factor común es 4x. Al dividir: 8x² ÷ 4x = 2x y 12x ÷ 4x = 3.\n"
+        "4) Queda 4x(2x + 3).",
         [
-            ("3(2x² + 3x)", "Sacó solo el factor numérico y dejó la x adentro."),
-            ("x(6x + 9)", "Sacó solo la variable y dejó el factor numérico adentro."),
-            ("3x(2x + 9)", "Dividió mal el segundo término: 9x ÷ 3x es 3, no 9."),
+            ("4(2x² + 3x)", "Sacó solo el factor numérico y dejó la x adentro."),
+            ("x(8x + 12)", "Sacó solo la variable y dejó el factor numérico adentro."),
+            ("2x(4x + 6)", "Sacó un factor común que no es el máximo: la expresión todavía se puede factorizar."),
         ],
     ),
     _q(
@@ -17468,17 +17469,17 @@ QUESTIONS += [
     ),
     _q(
         "alg_sistemas", "facil",
-        "En el sistema x + y = 12 e y = 2x, ¿cuál es el valor de x?",
-        "4",
+        "En el sistema x + y = 15 e y = 4x, ¿cuál es el valor de x?",
+        "3",
         "La segunda ecuación ya entrega y despejada, así que conviene sustituir.\n\n"
-        "1) Reemplaza y por 2x en la primera: x + 2x = 12.\n"
-        "2) Reduce: 3x = 12.\n"
-        "3) Divide por 3: x = 4.\n"
-        "4) Comprueba: y = 2 · 4 = 8, y 4 + 8 = 12 ✓.",
+        "1) Reemplaza y por 4x en la primera: x + 4x = 15.\n"
+        "2) Reduce: 5x = 15.\n"
+        "3) Divide por 5: x = 3.\n"
+        "4) Comprueba: y = 4 · 3 = 12, y 3 + 12 = 15 ✓.",
         [
-            ("8", "Dio el valor de y en lugar del de x."),
-            ("6", "Repartió el 12 en partes iguales, ignorando que y es el doble de x."),
-            ("12", "Dio el total sin resolver el sistema."),
+            ("12", "Dio el valor de y en lugar del de x."),
+            ("7,5", "Repartió el 15 en partes iguales, ignorando que y es el cuádruple de x."),
+            ("15", "Dio el total sin resolver el sistema."),
         ],
     ),
     _q(
@@ -17668,30 +17669,30 @@ QUESTIONS += [
     # ---------- alg_cuadratica ----------
     _q(
         "alg_cuadratica", "facil",
-        "¿Cuáles son las soluciones de la ecuación x² = 49?",
-        "x = 7 y x = −7",
+        "¿Cuáles son las soluciones de la ecuación x² = 121?",
+        "x = 11 y x = −11",
         "Una ecuación cuadrática de este tipo tiene dos soluciones, no una.\n\n"
-        "1) Al sacar raíz cuadrada hay que considerar los dos signos: x = ±√49.\n"
-        "2) Como √49 = 7, las soluciones son 7 y −7.\n"
-        "3) Comprueba las dos: 7² = 49 ✓ y (−7)² = 49 ✓, porque menos por menos da más.",
+        "1) Al sacar raíz cuadrada hay que considerar los dos signos: x = ±√121.\n"
+        "2) Como √121 = 11, las soluciones son 11 y −11.\n"
+        "3) Comprueba las dos: 11² = 121 ✓ y (−11)² = 121 ✓, porque menos por menos da más.",
         [
-            ("x = 7", "Dio solo la raíz positiva y olvidó que el cuadrado de un negativo también es positivo."),
-            ("x = 24,5", "Dividió 49 por 2 en lugar de sacar la raíz cuadrada."),
-            ("x = 98", "Multiplicó por 2 en vez de sacar la raíz."),
+            ("x = 11", "Dio solo la raíz positiva y olvidó que el cuadrado de un negativo también es positivo."),
+            ("x = 60,5", "Dividió 121 por 2 en lugar de sacar la raíz cuadrada."),
+            ("x = 242", "Multiplicó por 2 en vez de sacar la raíz."),
         ],
     ),
     _q(
         "alg_cuadratica", "facil",
-        "¿Cuáles son las soluciones de la ecuación x² − 16 = 0?",
-        "x = 4 y x = −4",
+        "¿Cuáles son las soluciones de la ecuación x² − 100 = 0?",
+        "x = 10 y x = −10",
         "Se despeja el cuadrado y después se saca raíz con los dos signos.\n\n"
-        "1) Suma 16 a ambos lados: x² = 16.\n"
-        "2) Saca raíz considerando ambos signos: x = ±4.\n"
-        "3) Las soluciones son 4 y −4. También sale factorizando: x² − 16 = (x + 4)(x − 4) = 0.",
+        "1) Suma 100 a ambos lados: x² = 100.\n"
+        "2) Saca raíz considerando ambos signos: x = ±10.\n"
+        "3) Las soluciones son 10 y −10. También sale factorizando: x² − 100 = (x + 10)(x − 10) = 0.",
         [
-            ("x = 4", "Dio solo la raíz positiva."),
-            ("x = 8", "Dividió 16 por 2 en lugar de sacar la raíz."),
-            ("x = 16", "No aplicó ninguna operación para despejar la x."),
+            ("x = 10", "Dio solo la raíz positiva."),
+            ("x = 50", "Dividió 100 por 2 en lugar de sacar la raíz."),
+            ("x = 100", "No aplicó ninguna operación para despejar la x."),
         ],
     ),
     _q(
@@ -17964,17 +17965,17 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "¿Cuál es el vértice de la parábola de ecuación y = x² − 6x + 5?",
-        "(3, −4)",
+        "¿Cuál es el vértice de la parábola de ecuación y = x² − 8x + 7?",
+        "(4, −9)",
         "Se calcula primero la coordenada x del vértice y con ella la coordenada y.\n\n"
-        "1) La fórmula del vértice es x = −b/(2a), con a = 1 y b = −6.\n"
-        "2) Calcula: x = 6/2 = 3.\n"
-        "3) Reemplaza en la ecuación para obtener y: 3² − 6 · 3 + 5 = 9 − 18 + 5 = −4.\n"
-        "4) El vértice es (3, −4). Como a es positivo, la parábola se abre hacia arriba y ese punto es su mínimo.",
+        "1) La fórmula del vértice es x = −b/(2a), con a = 1 y b = −8.\n"
+        "2) Calcula: x = 8/2 = 4.\n"
+        "3) Reemplaza en la ecuación para obtener y: 4² − 8 · 4 + 7 = 16 − 32 + 7 = −9.\n"
+        "4) El vértice es (4, −9). Como a es positivo, la parábola se abre hacia arriba y ese punto es su mínimo.",
         [
-            ("(−3, 32)", "Usó x = b/(2a) sin cambiar el signo, y evaluó en −3."),
-            ("(3, 5)", "Calculó bien la coordenada x pero usó el término independiente como y."),
-            ("(6, 5)", "Usó el coeficiente b directamente como coordenada del vértice."),
+            ("(−4, 55)", "Usó x = b/(2a) sin cambiar el signo, y evaluó en −4."),
+            ("(4, 7)", "Calculó bien la coordenada x pero usó el término independiente como y."),
+            ("(8, 7)", "Usó el coeficiente b directamente como coordenada del vértice."),
         ],
     ),
     _q(
