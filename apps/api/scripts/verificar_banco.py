@@ -288,14 +288,16 @@ COMPROBACIONES: dict[str, str] = {
     "3 estudiantes obtuvieron nota 6": str((3 * 6 + 2 * 4) / 5).replace(".", ","),
     "4 entradas y 5 platos de fondo": str(4 * 5),
     "ordenar 6 cuadros": str(factorial(6)),
-    "3 cifras distintas": str(5 * 4 * 3),
+    # Lleva los dígitos porque hay varias preguntas de "3 cifras distintas".
+    "3 cifras distintas se pueden formar usando los dígitos 1, 2, 3, 4 y 5": str(5 * 4 * 3),
     "6 personas se debe elegir un comité de 2": str(comb(6, 2)),
     "2 letras seguidas de 3 dígitos": f"{26**2 * 10**3:,}".replace(",", "."),
     "3 poleras y 4 pantalones": str(3 * 4),
     "número primo": str(Fraction(3, 6)),
     "7 fichas blancas y 5 negras": str(Fraction(5, 12)),
     "Se lanzan dos monedas. ¿Cuál": str(Fraction(1, 4)),
-    "baraja de 52 cartas": f"{4 + 13 - 1}/52",
+    # Lleva la condición porque hay varias preguntas sobre la baraja de 52.
+    "sea un as o una carta de corazones": f"{4 + 13 - 1}/52",
     "4 bolitas blancas y 6 negras": str(Fraction(4, 10) * Fraction(3, 9)),
     "llueva mañana es 0,3": str(round(1 - 0.3, 1)).replace(".", ","),
     "varianza del conjunto 2, 4, 6": str(Fraction(8, 3)),
@@ -654,6 +656,150 @@ COMPROBACIONES: dict[str, str] = {
     + f"{36_000 - round(50_000 * 0.7):,}".replace(",", "."),
     # Reparto proporcional: el total se parte en la suma de la razón.
     "reparten $120.000 entre dos personas en la razón 2 : 3": f"{120_000 * 3 // 5:,}".replace(",", "."),
+    # --- estadística descriptiva: segunda tanda ---
+    # Frecuencia relativa: la parte comparada con el total.
+    "encuesta a 50 personas, 20 eligieron el cine": str(20 / 50).replace(".", ","),
+    "el dato 7 aparece 5 veces sobre un total de 25": f"{5 * 100 // 25}%",
+    "grupo de 40 personas, 10 tienen 20 años": str(10 / 40).replace(".", ","),
+    "encuesta a 80 personas, 24 prefieren el fútbol": f"{24 * 100 // 80}%",
+    "0,2, 0,35 y 0,3": str(round(1 - (0.2 + 0.35 + 0.3), 2)).replace(".", ","),
+    # Tendencia central.
+    "mediana de los datos 3, 6, 9, 12 y 15": str(sorted([3, 6, 9, 12, 15])[2]),
+    "media de los datos 2, 4, 6, 8, 10 y 12": str((2 + 4 + 6 + 8 + 10 + 12) // 6),
+    "moda del conjunto 8, 5, 8, 3, 8 y 5": str(Counter([8, 5, 8, 3, 8, 5]).most_common(1)[0][0]),
+    "rango del conjunto 25, 40, 18 y 33": str(max(25, 40, 18, 33) - min(25, 40, 18, 33)),
+    "media de 14, 18 y 22": str((14 + 18 + 22) // 3),
+    "tres datos iguales a 5 y dos datos iguales a 10": str(3 * 5 + 2 * 10),
+    "mediana de los datos 4, 4, 7 y 9": str((4 + 7) / 2).replace(".", ","),
+    "mediana de los datos 5, 8, 12, 15, 18, 21, 24, 27 y 30": str(
+        sorted([5, 8, 12, 15, 18, 21, 24, 27, 30])[4]
+    ),
+    "25 estudiantes, 8 obtuvieron nota 4": str(
+        Counter([4] * 8 + [5] * 12 + [6] * 5).most_common(1)[0][0]
+    ),
+    # Media ponderada desde una tabla de frecuencias.
+    "nota 4 la obtuvieron 6 estudiantes": str(
+        round((4 * 6 + 5 * 10 + 6 * 4) / (6 + 10 + 4), 1)
+    ).replace(".", ","),
+    "conjunto de 8 datos tiene una media de 15": str(15 * 8),
+    "4 notas cuyo promedio es 5,2": str(round(5.2 * 4, 1)).replace(".", ","),
+    # Medidas de posición: cuartiles, percentiles y diagrama de cajón.
+    "primer cuartil (Q1) de los datos 2, 4, 6, 8, 10, 12, 14 y 16": str((4 + 6) // 2),
+    "tercer cuartil (Q3) de los datos 2, 4, 6, 8, 10, 12, 14 y 16": str((12 + 14) // 2),
+    "primer cuartil es 12 y el tercer cuartil es 28": str(28 - 12),
+    "rango intercuartílico de los datos 3, 5, 7, 9, 11, 13, 15 y 17": str((13 + 15) // 2 - (5 + 7) // 2),
+    "200 datos, el percentil 30": str(round(200 * 0.3)),
+    "20 datos ordenados, ¿cuántos datos son menores o iguales al percentil 25": str(round(20 * 0.25)),
+    # Entre Q1 y Q3 vive el 50% central; sobre Q3 queda el 25%.
+    "mínimo 5, Q1 = 10, mediana 15": f"{2 * 25}%",
+    "mínimo 4, Q1 = 9, mediana 14": f"{100 - 75}%",
+    # Criterio de dato atípico: Q3 + 1,5 veces el rango intercuartílico.
+    "Q1 = 15 y Q3 = 35": str(round(35 + 1.5 * (35 - 15))),
+    # Problemas de suma total: quitar o agregar datos.
+    "promedio de 6 números es 20": str((20 * 6 - 30) // 5),
+    "30 estudiantes tiene promedio 5,0": str(round((5.0 * 30 - 6.0 * 10) / 20, 1)).replace(".", ","),
+    "media de 10 datos es 12": str((12 * 10 + 20 + 28) // (10 + 2)),
+    # La mediana con una cantidad par de datos.
+    "50 datos ordenados de menor a mayor": f"{50 // 2} y {50 // 2 + 1}",
+    # Con un dato extremo, la mediana representa mejor que la media.
+    "300, 320, 340, 360 y 2.000": str(sorted([300, 320, 340, 360, 2000])[2]),
+    # Escalar los datos escala la media en el mismo factor.
+    "se les multiplica por 3": f"Queda multiplicada por {3}",
+    # --- técnicas de conteo: segunda tanda ---
+    # Principio multiplicativo: una elección de cada grupo.
+    "6 tipos de café y 4 tipos de queque": str(6 * 4),
+    "5 gorros y 6 bufandas": str(5 * 6),
+    "un dado de 6 caras y una moneda": str(6 * 2),
+    "cerrojo de seguridad tiene 3 ruedas": str(4**3),
+    "1 de 2 tipos de pan": str(2 * 3 * 2),
+    "7 modelos de polera y 5 de jockey": str(7 * 5),
+    "código de acceso tiene 2 dígitos": str(10**2),
+    "3 rutas, y de la B a la C hay 4": str(3 * 4),
+    "4 entradas, 6 platos de fondo y 3 postres": str(4 * 6 * 3),
+    "3 letras seguidas de 2 dígitos": f"{26**3 * 10**2:,}".replace(",", "."),
+    # Espacios muestrales, que son el denominador de una probabilidad.
+    "resultados distintos se pueden obtener al lanzar dos dados": str(6**2),
+    "lanzar tres monedas": str(2**3),
+    "la suma es igual a 7": str(sum(1 for a in range(1, 7) for b in range(1, 7) if a + b == 7)),
+    # Permutaciones: importa el orden.
+    "ordenar 2 personas en una fila": str(factorial(2)),
+    "ordenar 8 personas en una fila": f"{factorial(8):,}".replace(",", "."),
+    "3 cifras distintas se pueden formar usando los dígitos 1, 2, 3, 4, 5 y 6": str(6 * 5 * 4),
+    "carrera con 7 corredores": str(7 * 6 * 5),
+    "bandera de 3 franjas": str(5 * 4 * 3),
+    "4 cifras se pueden formar usando solo los dígitos 1, 2 y 3": str(3**4),
+    # Permutaciones con elementos repetidos: se divide por cada repetición.
+    "letras de la palabra COCO": str(factorial(4) // (factorial(2) * factorial(2))),
+    "letras de la palabra BANANA": str(factorial(6) // (factorial(3) * factorial(2))),
+    # Combinaciones: no importa el orden.
+    "parejas distintas se pueden formar con 4 personas": str(comb(4, 2)),
+    "elegir 3 personas de un grupo de 7": str(comb(7, 3)),
+    "subconjuntos de 3 elementos tiene un conjunto de 8": str(comb(8, 3)),
+    "2 delegados de un curso de 12": str(comb(12, 2)),
+    "3 premios idénticos entre 9 personas": str(comb(9, 3)),
+    # El esquema de las parejas: partidos, brindis y diagonales son lo mismo.
+    "torneo participan 6 equipos": str(comb(6, 2)),
+    "reunión de 10 personas": str(comb(10, 2)),
+    "diagonales tiene un polígono de 8 lados": str(comb(8, 2) - 8),
+    # Conteo con restricciones: se empieza por la posición restringida.
+    "números pares de 2 cifras distintas": str(2 * 3),
+    "0, 1, 2, 3 y 4, si el número no puede comenzar con 0": str(4 * 4 * 3),
+    "3 cifras distintas y mayores que 500": str(2 * 5 * 4),
+    "sentar 5 personas en una fila, si dos de ellas": str(factorial(4) * factorial(2)),
+    "una persona determinada debe estar sí o sí": str(comb(9, 2)),
+    "2 hombres y 3 mujeres": str(comb(5, 2) * comb(6, 3)),
+    # --- reglas de las probabilidades: tercera tanda ---
+    # Probabilidad simple: casos favorables sobre casos posibles.
+    "3 bolitas rojas, 4 azules y 5 verdes": str(Fraction(4, 3 + 4 + 5)),
+    "obtener un número menor que 5": str(Fraction(4, 6)),
+    "12 lápices y 3 de ellos están malos": str(Fraction(3, 12)),
+    "naipe español de 40 cartas, que tiene 4 reyes": str(Fraction(4, 40)),
+    "moneda equilibrada una vez": str(Fraction(1, 2)),
+    "15 fichas numeradas del 1 al 15": str(Fraction(15 // 5, 15)),
+    "36 estudiantes, 27 aprobaron": str(Fraction(27, 36)),
+    "dado de 8 caras numeradas del 1 al 8": str(Fraction(4, 8)),
+    "tómbola hay 30 números y solo 5": str(Fraction(5, 30)),
+    "12 figuras (J, Q y K": str(Fraction(12, 52)),
+    # Suceso contrario.
+    "gane su próximo partido es 0,45": str(round(1 - 0.45, 2)).replace(".", ","),
+    "llueva mañana es 1/4": str(1 - Fraction(1, 4)),
+    # Espacio muestral de dos dados: hay que contar los 36 pares.
+    "suma de los puntos sea 7": str(
+        Fraction(sum(1 for a in range(1, 7) for b in range(1, 7) if a + b == 7), 36)
+    ),
+    "suma de los puntos sea mayor que 9": str(
+        Fraction(sum(1 for a in range(1, 7) for b in range(1, 7) if a + b > 9), 36)
+    ),
+    "obtener exactamente una cara": str(Fraction(2, 4)),
+    # Regla aditiva, con y sin intersección.
+    "sucesos excluyentes se sabe que P(A) = 0,5": str(round(0.5 + 0.4, 2)).replace(".", ","),
+    "P(A) = 0,6, P(B) = 0,5 y P(A y B) = 0,2": str(round(0.6 + 0.5 - 0.2, 2)).replace(".", ","),
+    "8 fichas numeradas del 1 al 8": str(
+        Fraction(len({n for n in range(1, 9) if n % 2 == 0} | {n for n in range(1, 9) if n > 6}), 8)
+    ),
+    "múltiplo de 2 o un múltiplo de 3": str(
+        Fraction(len({n for n in range(1, 7) if n % 2 == 0} | {n for n in range(1, 7) if n % 3 == 0}), 6)
+    ),
+    # Regla multiplicativa con independientes.
+    "se anota su color y se devuelve a la caja": str(Fraction(6, 10) ** 2),
+    "dado de 6 caras dos veces seguidas": str(Fraction(1, 6) ** 2),
+    "3% de las piezas sale defectuosa": str(round(0.03**2, 4)).replace(".", ","),
+    "independientes cumplen P(A) = 0,7": str(round(0.7 * 0.6, 2)).replace(".", ","),
+    # Sin reposición: el segundo factor se calcula sobre lo que queda.
+    "5 bolitas blancas y 7 negras": str(Fraction(5 - 1, 5 + 7 - 1)),
+    "20 estudiantes, 12 practican": str(Fraction(12, 20) * Fraction(11, 19)),
+    "13 corazones, se extraen dos cartas": str(Fraction(13, 52) * Fraction(12, 51)),
+    "10 productos y 3 de ellos están defectuosos": str(Fraction(7, 10) * Fraction(6, 9)),
+    "3 bolitas rojas y 3 azules": str(2 * Fraction(3, 6) * Fraction(2, 5)),
+    # "Al menos uno" por complemento.
+    "4 bolitas rojas y 6 azules. Se sacan dos": str(1 - Fraction(6, 10) * Fraction(5, 9)),
+    "cuatro monedas equilibradas": str(1 - Fraction(1, 2) ** 4),
+    "ganar una partida es 0,2": str(round((1 - 0.2) ** 3, 3)).replace(".", ","),
+    # Tabla de doble entrada y probabilidad condicional: cambia el universo.
+    "60 son mujeres y de ellas 40 usan lentes": str(Fraction(40, 100)),
+    "200 personas encuestadas, 120 son hombres": str(Fraction(30, 80 + 30)),
+    # Probabilidad total: ponderar cada grupo por su tamaño.
+    "40% de los estudiantes son de primer año": str(round(0.4 * 0.25 + 0.6 * 0.10, 2)).replace(".", ","),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",

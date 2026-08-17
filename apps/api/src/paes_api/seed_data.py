@@ -15430,6 +15430,1590 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Estadística descriptiva — segunda tanda.
+#
+# El temario DEMRE divide este eje en tres unidades, y el nodo solo cubría una:
+#
+#   1. "Representación de datos a través de tablas y gráficos": tablas de
+#      frecuencia ABSOLUTA y RELATIVA, promedio, y problemas con tablas.
+#      -> el nodo no tenía ninguna pregunta de frecuencia relativa.
+#   2. "Medidas de POSICIÓN": cuartiles, percentiles y DIAGRAMA DE CAJÓN.
+#      -> el nodo no tenía ninguna pregunta. Una unidad temática completa en
+#         cero.
+#   3. Medidas de tendencia central. -> esta sí, y bien cubierta (34 preguntas).
+#
+# Esta tanda cubre las dos que faltaban. Los diagramas de cajón se describen
+# con sus cinco números (mínimo, Q1, mediana, Q3, máximo) en el enunciado,
+# porque el banco es de texto y no admite imágenes; eso no le quita nada a la
+# habilidad evaluada, que es interpretar la distribución.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En una encuesta a 50 personas, 20 eligieron el cine como su panorama favorito. ¿Cuál es la frecuencia relativa de esa preferencia?",
+        "0,4",
+        "La frecuencia relativa compara cuántas veces aparece un dato con el total.\n\n"
+        "1) Escribe la razón entre la frecuencia absoluta y el total: 20/50.\n"
+        "2) Divide: 20 ÷ 50 = 0,4.\n"
+        "3) La frecuencia relativa es 0,4, que también se puede leer como el 40%.\n"
+        "4) Toda frecuencia relativa está entre 0 y 1: si te da un número mayor que 1, algo salió mal.",
+        [
+            ("20", "Dio la frecuencia absoluta en lugar de la relativa."),
+            ("2,5", "Dividió el total por la frecuencia en vez de al revés."),
+            ("30", "Calculó cuántas personas NO eligieron cine."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En una tabla de frecuencias, el dato 7 aparece 5 veces sobre un total de 25 datos. ¿Cuál es su frecuencia relativa expresada en porcentaje?",
+        "20%",
+        "Se calcula la frecuencia relativa y después se lleva a porcentaje.\n\n"
+        "1) Frecuencia relativa: 5/25 = 0,2.\n"
+        "2) Para pasarla a porcentaje se multiplica por 100: 0,2 · 100 = 20.\n"
+        "3) La frecuencia relativa es del 20%.",
+        [
+            ("5%", "Usó la frecuencia absoluta como si fuera el porcentaje."),
+            ("25%", "Usó el total de datos como si fuera el porcentaje."),
+            ("500%", "Dividió el total por la frecuencia en lugar de al revés."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la mediana de los datos 3, 6, 9, 12 y 15?",
+        "9",
+        "La mediana es el valor que queda justo al medio con los datos ordenados.\n\n"
+        "1) Comprueba que estén ordenados: 3, 6, 9, 12, 15 ✓.\n"
+        "2) Son 5 datos, una cantidad impar, así que hay un único valor central.\n"
+        "3) El del medio es el tercero: 9.\n"
+        "4) Verifica que queden dos datos a cada lado: 3 y 6 abajo, 12 y 15 arriba ✓.",
+        [
+            ("12", "Contó desde un extremo y se corrió una posición."),
+            ("7,5", "Promedió los dos datos que rodean al central, que es lo que corresponde solo con una cantidad par de datos."),
+            ("3", "Dio el dato mínimo en lugar del valor central."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la media de los datos 2, 4, 6, 8, 10 y 12?",
+        "7",
+        "La media se obtiene sumando todo y dividiendo por la cantidad de datos.\n\n"
+        "1) Suma: 2 + 4 + 6 + 8 + 10 + 12 = 42.\n"
+        "2) Cuenta los datos: son 6.\n"
+        "3) Divide: 42 ÷ 6 = 7.",
+        [
+            ("42", "Se quedó en la suma sin dividir por la cantidad de datos."),
+            ("6", "Dio la cantidad de datos en lugar de la media."),
+            ("10", "Calculó el rango, que es 12 − 2, en vez de la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la moda del conjunto 8, 5, 8, 3, 8 y 5?",
+        "8",
+        "La moda es el dato que más se repite.\n\n"
+        "1) Cuenta las apariciones: el 8 aparece 3 veces, el 5 aparece 2 veces y el 3 aparece 1 vez.\n"
+        "2) El que más se repite es el 8.\n"
+        "3) La moda es 8.",
+        [
+            ("5", "Eligió el segundo dato más frecuente."),
+            ("3", "Eligió la cantidad de veces que se repite el dato más frecuente, no el dato."),
+            ("6,17", "Calculó la media en lugar de la moda."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es el rango del conjunto 25, 40, 18 y 33?",
+        "22",
+        "El rango mide cuánto se estiran los datos: es la diferencia entre el mayor y el menor.\n\n"
+        "1) Identifica el mayor: 40.\n"
+        "2) Identifica el menor: 18.\n"
+        "3) Resta: 40 − 18 = 22.",
+        [
+            ("58", "Sumó el mayor y el menor en lugar de restarlos."),
+            ("29", "Calculó la media del conjunto en vez del rango."),
+            ("40", "Dio el dato mayor sin restarle el menor."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En un grupo de 40 personas, 10 tienen 20 años. ¿Cuál es la frecuencia relativa de esa edad?",
+        "0,25",
+        "Se compara la frecuencia con el total del grupo.\n\n"
+        "1) Escribe la razón: 10/40.\n"
+        "2) Simplifica: 10 y 40 se dividen por 10, y queda 1/4.\n"
+        "3) Como decimal: 0,25.\n"
+        "4) Ojo con no usar el 20 de la edad: ese es el valor del dato, no su frecuencia.",
+        [
+            ("0,5", "Usó la edad de 20 años como frecuencia, en vez de las 10 personas."),
+            ("10", "Dio la frecuencia absoluta en lugar de la relativa."),
+            ("4", "Dividió el total por la frecuencia en vez de al revés."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "En un conjunto de datos, ¿con qué medida coincide siempre el segundo cuartil (Q2)?",
+        "Con la mediana",
+        "Los cuartiles parten el conjunto ordenado en cuatro grupos con la misma cantidad de datos.\n\n"
+        "1) Q1 deja por debajo el 25% de los datos, Q2 el 50% y Q3 el 75%.\n"
+        "2) Dejar por debajo la mitad de los datos es exactamente la definición de la mediana.\n"
+        "3) Por eso Q2 y la mediana son siempre el mismo valor.",
+        [
+            ("Con la media", "La media es el promedio y puede ser distinta de la mediana, sobre todo si hay datos extremos."),
+            ("Con la moda", "La moda es el dato más frecuente y no tiene por qué caer al medio."),
+            ("Con el rango", "El rango mide dispersión, no posición: es una diferencia, no un valor del conjunto."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la media de 14, 18 y 22?",
+        "18",
+        "Se suma y se divide por la cantidad de datos.\n\n"
+        "1) Suma: 14 + 18 + 22 = 54.\n"
+        "2) Divide por 3: 54 ÷ 3 = 18.\n"
+        "3) Fíjate en que la media coincide con el dato del medio, porque los datos están igualmente espaciados.",
+        [
+            ("54", "Se quedó en la suma sin dividir."),
+            ("27", "Dividió por 2 en lugar de por 3."),
+            ("8", "Calculó el rango en vez de la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "Un conjunto está formado por tres datos iguales a 5 y dos datos iguales a 10. ¿Cuál es la suma total de los datos?",
+        "35",
+        "Cada dato se cuenta tantas veces como indica su frecuencia.\n\n"
+        "1) Los tres datos de valor 5 aportan 3 · 5 = 15.\n"
+        "2) Los dos de valor 10 aportan 2 · 10 = 20.\n"
+        "3) Suma total: 15 + 20 = 35.\n"
+        "4) Este es el paso previo para calcular una media a partir de una tabla de frecuencias.",
+        [
+            ("15", "Sumó los valores distintos sin considerar cuántas veces aparece cada uno."),
+            ("50", "Multiplicó los cinco datos por 10."),
+            ("7", "Calculó la media en lugar de la suma."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "¿Cuál es la mediana de los datos 4, 4, 7 y 9?",
+        "5,5",
+        "Con una cantidad par de datos hay dos valores centrales, y la mediana es su promedio.\n\n"
+        "1) Los datos ya están ordenados: 4, 4, 7, 9.\n"
+        "2) Son 4 datos, así que los centrales son el segundo y el tercero: 4 y 7.\n"
+        "3) Promedia: (4 + 7) ÷ 2 = 11 ÷ 2 = 5,5.\n"
+        "4) La mediana no tiene por qué ser uno de los datos del conjunto.",
+        [
+            ("4", "Tomó solo el primero de los dos datos centrales."),
+            ("7", "Tomó solo el segundo de los dos datos centrales."),
+            ("6", "Calculó la media de los cuatro datos en vez de la mediana."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el primer cuartil (Q1) de los datos 2, 4, 6, 8, 10, 12, 14 y 16?",
+        "5",
+        "Q1 es la mediana de la mitad inferior de los datos.\n\n"
+        "1) Los datos ya están ordenados y son 8, una cantidad par.\n"
+        "2) Divide en dos mitades: la inferior es 2, 4, 6, 8 y la superior 10, 12, 14, 16.\n"
+        "3) Q1 es la mediana de la mitad inferior. Como tiene 4 datos, se promedian los dos centrales: (4 + 6) ÷ 2 = 5.\n"
+        "4) Q1 = 5, y por debajo queda el 25% de los datos.",
+        [
+            ("4", "Tomó el segundo dato del conjunto en vez de la mediana de la mitad inferior."),
+            ("9", "Calculó la mediana de todo el conjunto, que es Q2 y no Q1."),
+            ("2", "Dio el dato mínimo en lugar del primer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el tercer cuartil (Q3) de los datos 2, 4, 6, 8, 10, 12, 14 y 16?",
+        "13",
+        "Q3 es la mediana de la mitad superior de los datos.\n\n"
+        "1) Divide el conjunto ordenado en dos mitades: la superior es 10, 12, 14, 16.\n"
+        "2) Q3 es la mediana de esa mitad: como son 4 datos, se promedian los dos centrales.\n"
+        "3) Calcula: (12 + 14) ÷ 2 = 13.\n"
+        "4) Q3 = 13, y por encima queda el 25% de los datos.",
+        [
+            ("14", "Tomó un dato de la mitad superior en vez de su mediana."),
+            ("9", "Calculó la mediana del conjunto completo, que es Q2."),
+            ("16", "Dio el dato máximo en lugar del tercer cuartil."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En un conjunto de datos, el primer cuartil es 12 y el tercer cuartil es 28. ¿Cuál es el rango intercuartílico?",
+        "16",
+        "El rango intercuartílico mide la dispersión del 50% central de los datos.\n\n"
+        "1) Se calcula como Q3 − Q1.\n"
+        "2) Reemplaza: 28 − 12 = 16.\n"
+        "3) El rango intercuartílico es 16.\n"
+        "4) Su gracia frente al rango común es que no se ve afectado por datos extremos, porque solo mira la mitad central.",
+        [
+            ("40", "Sumó los cuartiles en lugar de restarlos."),
+            ("20", "Promedió los dos cuartiles en vez de calcular su diferencia."),
+            ("28", "Dio el tercer cuartil sin restarle el primero."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Un diagrama de cajón muestra estos valores: mínimo 5, Q1 = 10, mediana 15, Q3 = 22 y máximo 30. ¿Qué porcentaje de los datos está entre 10 y 22?",
+        "50%",
+        "Los cuartiles reparten los datos en cuatro grupos iguales, cada uno con el 25%.\n\n"
+        "1) Entre el mínimo y Q1 está el 25% de los datos.\n"
+        "2) Entre Q1 y la mediana hay otro 25%, y entre la mediana y Q3 otro 25%.\n"
+        "3) Los valores 10 y 22 son justamente Q1 y Q3, así que entre ellos hay 25% + 25% = 50%.\n"
+        "4) Ese 50% central es lo que representa la caja del diagrama, y su ancho es el rango intercuartílico.",
+        [
+            ("25%", "Consideró solo uno de los dos cuartos que hay entre Q1 y Q3."),
+            ("75%", "Contó también el cuarto que va del mínimo a Q1."),
+            ("12%", "Calculó la diferencia entre los valores en vez del porcentaje de datos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En una prueba, la nota 4 la obtuvieron 6 estudiantes, la nota 5 la obtuvieron 10 y la nota 6 la obtuvieron 4. ¿Cuál es el promedio del curso?",
+        "4,9",
+        "Con una tabla de frecuencias, cada nota pesa según cuántas veces aparece.\n\n"
+        "1) Multiplica cada nota por su frecuencia: 4 · 6 = 24, 5 · 10 = 50 y 6 · 4 = 24.\n"
+        "2) Suma esos productos: 24 + 50 + 24 = 98.\n"
+        "3) Cuenta el total de estudiantes: 6 + 10 + 4 = 20.\n"
+        "4) Divide: 98 ÷ 20 = 4,9. El promedio queda cerca del 5 porque esa nota es la más frecuente.",
+        [
+            ("5", "Promedió las tres notas distintas sin considerar cuántos estudiantes sacó cada una."),
+            ("32,7", "Dividió por la cantidad de notas distintas en vez de por el total de estudiantes."),
+            ("98", "Se quedó en la suma ponderada sin dividir."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En un conjunto de 200 datos, el percentil 30 corresponde al valor 45. ¿Cuántos datos son menores o iguales a 45?",
+        "60",
+        "El percentil indica qué porcentaje de los datos queda por debajo de un valor.\n\n"
+        "1) El percentil 30 deja por debajo el 30% de los datos.\n"
+        "2) Calcula ese 30% del total: 200 · 0,3 = 60.\n"
+        "3) Hay 60 datos menores o iguales a 45.\n"
+        "4) El valor 45 no interviene en el cálculo: es el dato que ocupa esa posición, no una cantidad.",
+        [
+            ("45", "Usó el valor del percentil como si fuera una cantidad de datos."),
+            ("140", "Calculó los datos que están por encima del percentil 30."),
+            ("30", "Dio el número del percentil en lugar de la cantidad de datos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es la mediana de los datos 5, 8, 12, 15, 18, 21, 24, 27 y 30?",
+        "18",
+        "Con una cantidad impar de datos hay un único valor central.\n\n"
+        "1) Los datos ya están ordenados y son 9.\n"
+        "2) Con 9 datos, el central es el quinto: cuatro quedan abajo y cuatro arriba.\n"
+        "3) Cuenta hasta el quinto: 5, 8, 12, 15, 18.\n"
+        "4) La mediana es 18.",
+        [
+            ("15", "Se corrió una posición y tomó el cuarto dato."),
+            ("17,8", "Calculó la media en lugar de la mediana."),
+            ("21", "Se corrió una posición hacia el otro lado y tomó el sexto dato."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En un curso de 25 estudiantes, 8 obtuvieron nota 4, 12 obtuvieron nota 5 y 5 obtuvieron nota 6. ¿Cuál es la moda?",
+        "5",
+        "La moda es el valor que más se repite, no la frecuencia con que se repite.\n\n"
+        "1) Compara las frecuencias: la nota 4 aparece 8 veces, la 5 aparece 12 veces y la 6 aparece 5 veces.\n"
+        "2) La frecuencia mayor es 12, y le corresponde a la nota 5.\n"
+        "3) La moda es 5.\n"
+        "4) El error clásico acá es responder 12: esa es la frecuencia, no el dato.",
+        [
+            ("12", "Dio la frecuencia más alta en lugar del dato al que corresponde."),
+            ("4", "Eligió la nota más baja en vez de la más frecuente."),
+            ("6", "Eligió la nota más alta en vez de la más frecuente."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Un conjunto de 8 datos tiene una media de 15. ¿Cuál es la suma de todos los datos?",
+        "120",
+        "Se recorre la fórmula de la media al revés.\n\n"
+        "1) La media es la suma dividida por la cantidad de datos: 15 = suma ÷ 8.\n"
+        "2) Despeja multiplicando: suma = 15 · 8.\n"
+        "3) Calcula: 15 · 8 = 120.\n"
+        "4) Este paso es la base de casi todos los problemas de \"falta un dato\": si conoces la media y la cantidad, conoces la suma.",
+        [
+            ("1,875", "Dividió la media por la cantidad de datos en lugar de multiplicar."),
+            ("23", "Sumó la media y la cantidad de datos."),
+            ("15", "Dio la media en lugar de la suma."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "En una encuesta a 80 personas, 24 prefieren el fútbol. ¿Qué porcentaje del total representa esa preferencia?",
+        "30%",
+        "Se compara la frecuencia con el total y se lleva a porcentaje.\n\n"
+        "1) Escribe la razón: 24/80.\n"
+        "2) Divide: 24 ÷ 80 = 0,3.\n"
+        "3) Multiplica por 100: 30%.\n"
+        "4) Comprueba con una estimación: 24 es un poco menos de un tercio de 80, y 30% es un poco menos de 33% ✓.",
+        [
+            ("24%", "Usó la frecuencia absoluta como si fuera el porcentaje."),
+            ("70%", "Calculó el porcentaje de quienes NO prefieren fútbol."),
+            ("333%", "Dividió el total por la frecuencia en lugar de al revés."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "¿Cuál es el rango intercuartílico de los datos 3, 5, 7, 9, 11, 13, 15 y 17?",
+        "8",
+        "Hay que encontrar los dos cuartiles antes de restar.\n\n"
+        "1) Los 8 datos se parten en dos mitades: 3, 5, 7, 9 abajo y 11, 13, 15, 17 arriba.\n"
+        "2) Q1 es la mediana de la mitad inferior: (5 + 7) ÷ 2 = 6.\n"
+        "3) Q3 es la mediana de la mitad superior: (13 + 15) ÷ 2 = 14.\n"
+        "4) Rango intercuartílico: 14 − 6 = 8.",
+        [
+            ("14", "Dio el valor de Q3 sin restarle Q1."),
+            ("20", "Sumó los dos cuartiles en lugar de restarlos."),
+            ("6", "Dio el valor de Q1 sin restarlo de Q3."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Si a todos los datos de un conjunto se les multiplica por 3, ¿qué ocurre con su media?",
+        "Queda multiplicada por 3",
+        "Conviene probarlo con un caso chico y después ver por qué vale siempre.\n\n"
+        "1) Toma los datos 2, 4 y 6: su media es 12 ÷ 3 = 4.\n"
+        "2) Multiplica cada uno por 3: quedan 6, 12 y 18, cuya media es 36 ÷ 3 = 12.\n"
+        "3) Compara: 12 es 3 veces 4.\n"
+        "4) La razón: al triplicar cada dato, la suma se triplica, y como la cantidad de datos no cambia, la media también se triplica.",
+        [
+            ("Aumenta en 3", "Confundió multiplicar con sumar; sumar 3 a cada dato sí aumentaría la media en 3."),
+            ("No cambia", "Multiplicar los datos sí altera la media; lo que no cambia con esa operación es la cantidad de datos."),
+            ("Queda multiplicada por 9", "Elevó el factor al cuadrado, que es lo que le pasa a la varianza, no a la media."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un diagrama de cajón muestra: mínimo 4, Q1 = 9, mediana 14, Q3 = 17 y máximo 28. ¿Qué porcentaje de los datos es mayor que 17?",
+        "25%",
+        "Cada cuartil marca un corte del 25% de los datos.\n\n"
+        "1) El valor 17 es Q3, el tercer cuartil.\n"
+        "2) Por definición, Q3 deja por debajo el 75% de los datos.\n"
+        "3) Entonces por encima queda el 100% − 75% = 25%.\n"
+        "4) En el dibujo, ese 25% es el bigote derecho, el que va de 17 a 28.",
+        [
+            ("75%", "Dio el porcentaje que queda por debajo de Q3, no por encima."),
+            ("50%", "Usó la mediana como referencia en lugar de Q3."),
+            ("11%", "Calculó la diferencia entre 28 y 17 en vez del porcentaje de datos."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "El promedio de 6 números es 20. Si se elimina el número 30, ¿cuál es el promedio de los 5 restantes?",
+        "18",
+        "Se trabaja con la suma total, que es lo que permite quitar un dato.\n\n"
+        "1) Suma de los 6 números: 20 · 6 = 120.\n"
+        "2) Al eliminar el 30, la nueva suma es 120 − 30 = 90.\n"
+        "3) Quedan 5 números, así que el nuevo promedio es 90 ÷ 5 = 18.\n"
+        "4) Tiene sentido que baje: el número eliminado, 30, estaba por encima del promedio anterior.",
+        [
+            ("20", "Supuso que el promedio no cambia al sacar un dato."),
+            ("22", "Restó mal la suma, o supuso que el promedio sube al eliminar un dato grande."),
+            ("15", "Dividió la suma original por 8 en lugar de restar y dividir por 5."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un curso de 30 estudiantes tiene promedio 5,0. Si 10 de ellos tienen promedio 6,0, ¿cuál es el promedio de los otros 20?",
+        "4,5",
+        "Se reconstruyen las sumas de cada grupo y se despeja la que falta.\n\n"
+        "1) Suma total del curso: 5,0 · 30 = 150.\n"
+        "2) Suma del grupo de 10: 6,0 · 10 = 60.\n"
+        "3) Suma de los 20 restantes: 150 − 60 = 90.\n"
+        "4) Su promedio: 90 ÷ 20 = 4,5.\n"
+        "5) Comprueba que sea coherente: si un grupo está sobre el promedio general, el otro tiene que estar bajo ✓.",
+        [
+            ("4,0", "Restó 1,0 al promedio general, suponiendo que la diferencia del grupo de 10 se traslada entera al otro grupo."),
+            ("5,5", "Sumó la diferencia en lugar de restarla, y subió el promedio del grupo equivocado."),
+            ("5,0", "Supuso que el resto del curso mantiene el promedio general."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un conjunto de 20 datos ordenados, ¿cuántos datos son menores o iguales al percentil 25?",
+        "5",
+        "El percentil 25 deja por debajo la cuarta parte de los datos.\n\n"
+        "1) El percentil 25 equivale al primer cuartil: por debajo queda el 25% de los datos.\n"
+        "2) Calcula ese 25% del total: 20 · 0,25 = 5.\n"
+        "3) Son 5 datos.\n"
+        "4) Fíjate en que la pregunta es por la cantidad de datos, no por el valor que ocupa esa posición.",
+        [
+            ("25", "Confundió el número del percentil con una cantidad de datos."),
+            ("15", "Calculó los datos que quedan por encima del percentil 25."),
+            ("4", "Dividió 20 por 5 en lugar de calcular el 25%."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Los sueldos mensuales de cinco personas, en miles de pesos, son 300, 320, 340, 360 y 2.000. ¿Qué valor representa mejor el sueldo típico del grupo?",
+        "La mediana, que es 340",
+        "Cuando hay un dato muy alejado del resto, la media se corre hacia él y deja de ser representativa.\n\n"
+        "1) Calcula la media: (300 + 320 + 340 + 360 + 2.000) ÷ 5 = 3.320 ÷ 5 = 664.\n"
+        "2) Pero cuatro de las cinco personas ganan menos de 400: la media de 664 no describe a casi nadie.\n"
+        "3) Calcula la mediana: con los datos ordenados, el central es 340.\n"
+        "4) La mediana es más representativa porque no se ve arrastrada por el sueldo extremo de 2.000. Por eso los sueldos suelen informarse con la mediana y no con el promedio.",
+        [
+            ("La media, que es 664", "La media está inflada por el sueldo de 2.000 y no representa a los otros cuatro."),
+            ("La moda, que es 300", "No hay ningún dato repetido, así que el conjunto no tiene moda."),
+            ("El rango, que es 1.700", "El rango mide dispersión, no un valor típico."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un conjunto de datos, Q1 = 15 y Q3 = 35. Según el criterio de 1,5 veces el rango intercuartílico, ¿un dato de valor 70 se considera atípico?",
+        "Sí, porque supera el límite de 65",
+        "El criterio marca hasta dónde llega lo \"normal\" y qué queda fuera.\n\n"
+        "1) Calcula el rango intercuartílico: 35 − 15 = 20.\n"
+        "2) Multiplica por 1,5: 20 · 1,5 = 30.\n"
+        "3) El límite superior es Q3 más ese valor: 35 + 30 = 65.\n"
+        "4) Como 70 es mayor que 65, el dato queda fuera del rango esperable y se considera atípico.",
+        [
+            ("No, porque está dentro del límite de 95", "Sumó 1,5 veces el rango intercuartílico al máximo en vez de a Q3, o usó un múltiplo equivocado."),
+            ("No, porque el criterio solo se aplica a datos menores que Q1", "El criterio funciona en los dos extremos, con un límite inferior y otro superior."),
+            ("Sí, porque es mayor que Q3", "Ser mayor que Q3 no basta: el 25% de los datos lo es. Hay que superar el límite de 65."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "La media de 10 datos es 12. Si se agregan dos datos más, 20 y 28, ¿cuál es la nueva media?",
+        "14",
+        "Hay que actualizar la suma y también la cantidad de datos.\n\n"
+        "1) Suma de los 10 datos originales: 12 · 10 = 120.\n"
+        "2) Suma de los datos agregados: 20 + 28 = 48.\n"
+        "3) Nueva suma total: 120 + 48 = 168.\n"
+        "4) Nueva cantidad de datos: 10 + 2 = 12. Olvidar esto es el error más frecuente.\n"
+        "5) Nueva media: 168 ÷ 12 = 14.",
+        [
+            ("16,8", "Actualizó la suma pero siguió dividiendo por los 10 datos originales."),
+            ("12", "Supuso que agregar datos no cambia la media."),
+            ("20", "Promedió la media anterior con los dos datos nuevos, sin ponderar por la cantidad."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En una tabla de frecuencias con cuatro categorías, las frecuencias relativas de tres de ellas son 0,2, 0,35 y 0,3. ¿Cuál es la frecuencia relativa de la cuarta?",
+        "0,15",
+        "Las frecuencias relativas de todas las categorías suman siempre 1, porque juntas cubren el total.\n\n"
+        "1) Suma las tres conocidas: 0,2 + 0,35 + 0,3 = 0,85.\n"
+        "2) Resta a 1: 1 − 0,85 = 0,15.\n"
+        "3) La cuarta frecuencia relativa es 0,15, o sea el 15%.\n"
+        "4) Si la suma te diera más de 1, es señal de que hay un error en los datos.",
+        [
+            ("0,85", "Dio la suma de las tres conocidas en lugar de lo que falta."),
+            ("1,15", "Sumó las tres a 1 en vez de restarlas."),
+            ("0,25", "Supuso que las cuatro categorías se reparten por igual, sin usar las frecuencias dadas."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un conjunto de 50 datos ordenados de menor a mayor, ¿cómo se obtiene la mediana?",
+        "Promediando los datos que ocupan las posiciones 25 y 26",
+        "Con una cantidad par de datos no existe un único valor central.\n\n"
+        "1) Como 50 es par, no hay un dato que deje exactamente la mitad a cada lado.\n"
+        "2) Los dos centrales son el que ocupa la posición 50 ÷ 2 = 25 y el siguiente, el 26.\n"
+        "3) La mediana es el promedio de esos dos valores.\n"
+        "4) Con una cantidad impar, en cambio, sí hay un único dato central y no hace falta promediar.",
+        [
+            ("Tomando el dato de la posición 25", "Con una cantidad par de datos hay dos centrales, no uno."),
+            ("Tomando el dato de la posición 50", "Esa es la posición del dato máximo, no de la mediana."),
+            ("Promediando el dato menor y el mayor", "Eso da el punto medio del rango, que no es la mediana."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "Un estudiante tiene 4 notas cuyo promedio es 5,2. ¿Cuánto suman sus notas?",
+        "20,8",
+        "Se despeja la suma desde la fórmula del promedio.\n\n"
+        "1) El promedio es la suma dividida por la cantidad: 5,2 = suma ÷ 4.\n"
+        "2) Multiplica ambos lados por 4: suma = 5,2 · 4.\n"
+        "3) Calcula: 5,2 · 4 = 20,8.\n"
+        "4) Comprueba que sea razonable: cuatro notas cercanas a 5 tienen que sumar algo cercano a 20 ✓.",
+        [
+            ("1,3", "Dividió el promedio por 4 en lugar de multiplicar."),
+            ("9,2", "Sumó el promedio y la cantidad de notas."),
+            ("5,2", "Dio el promedio en lugar de la suma."),
+        ],
+    ),
+    _q(
+        "prob_estadistica_desc", "dificil",
+        "En un diagrama de cajón, el bigote izquierdo va de 2 a 8 y el bigote derecho va de 20 a 35. ¿Qué se puede afirmar sobre la distribución de los datos?",
+        "El 25% superior está más disperso que el 25% inferior",
+        "Cada bigote representa un cuarto de los datos, y su largo muestra cuánto se estiran.\n\n"
+        "1) El bigote izquierdo cubre el 25% de los datos más bajos y abarca 8 − 2 = 6 unidades.\n"
+        "2) El bigote derecho cubre el 25% más alto y abarca 35 − 20 = 15 unidades.\n"
+        "3) La misma cantidad de datos ocupa mucho más terreno a la derecha, así que ese cuarto está más disperso.\n"
+        "4) Es un error frecuente pensar que un bigote más largo tiene más datos: los cuatro grupos siempre tienen el 25% cada uno; lo que cambia es cuánto se estiran.",
+        [
+            ("Hay más datos en el 25% superior que en el inferior", "Cada bigote contiene siempre el 25% de los datos; lo que cambia es su dispersión, no su cantidad."),
+            ("Los datos se concentran en los extremos", "Los bigotes son las zonas menos densas: la concentración está en la caja, que reúne el 50% central."),
+            ("La mediana está más cerca del máximo", "Los bigotes no entregan información sobre la posición de la mediana dentro de la caja."),
+        ],
+    ),
+]
+
+# ---------------------------------------------------------------------------
+# Técnicas de conteo — segunda tanda.
+#
+# Nota de temario para quien venga después: la combinatoria NO aparece como
+# unidad temática propia en el temario de M1, que en este eje solo lista tablas
+# y gráficos, medidas de posición y reglas de las probabilidades. Sí existe como
+# nodo de M2 (`prob_permutacion`). Este nodo se mantiene en M1 porque contar
+# casos es la herramienta con la que se calcula "casos favorables sobre casos
+# posibles", y por eso esta tanda inclina los enunciados hacia ese uso: espacios
+# muestrales de dados y monedas, y conteos que después alimentan una
+# probabilidad.
+#
+# Lo que faltaba en el nodo: conteo con restricciones (que la cifra final sea
+# par, que dos personas vayan juntas, que alguien esté sí o sí en el comité),
+# permutaciones con elementos repetidos más allá de un solo caso, y el conteo
+# de pares dentro de un grupo, que es el mismo esquema de los apretones de mano,
+# los partidos de un torneo y las diagonales de un polígono.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_combinatoria", "facil",
+        "Una cafetería ofrece 6 tipos de café y 4 tipos de queque. ¿Cuántas combinaciones distintas de café y queque se pueden pedir?",
+        "24",
+        "Cuando hay que elegir una cosa de cada grupo, las opciones se multiplican.\n\n"
+        "1) Por cada uno de los 6 cafés se puede acompañar con cualquiera de los 4 queques.\n"
+        "2) Multiplica: 6 · 4 = 24.\n"
+        "3) Hay 24 combinaciones posibles.",
+        [
+            ("10", "Sumó las opciones en lugar de multiplicarlas."),
+            ("2", "Restó las opciones de los dos grupos."),
+            ("30", "Multiplicó por 5 en vez de por 4."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿De cuántas formas distintas se pueden ordenar 2 personas en una fila?",
+        "2",
+        "Ordenar todos los elementos de un grupo es una permutación.\n\n"
+        "1) Para el primer lugar hay 2 candidatos.\n"
+        "2) Elegido ese, para el segundo lugar queda solo 1.\n"
+        "3) Multiplica: 2 · 1 = 2. Son los órdenes AB y BA.",
+        [
+            ("1", "Consideró que solo hay una forma, olvidando que el orden importa."),
+            ("4", "Multiplicó 2 por 2, como si la primera persona pudiera repetirse en el segundo lugar."),
+            ("3", "Sumó las posiciones en lugar de multiplicar las opciones."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Con 5 gorros y 6 bufandas distintas, ¿cuántos conjuntos diferentes de gorro y bufanda se pueden armar?",
+        "30",
+        "Se elige una prenda de cada grupo, así que las opciones se multiplican.\n\n"
+        "1) Cada uno de los 5 gorros se puede combinar con cualquiera de las 6 bufandas.\n"
+        "2) Multiplica: 5 · 6 = 30.\n"
+        "3) Hay 30 conjuntos distintos.",
+        [
+            ("11", "Sumó las prendas en lugar de multiplicar las opciones."),
+            ("1", "Restó los dos números."),
+            ("25", "Multiplicó 5 por 5, usando dos veces la cantidad de gorros."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Se lanzan al mismo tiempo un dado de 6 caras y una moneda. ¿Cuántos resultados distintos son posibles?",
+        "12",
+        "Contar el espacio muestral es el primer paso para calcular cualquier probabilidad.\n\n"
+        "1) El dado tiene 6 resultados posibles y la moneda 2.\n"
+        "2) Cada resultado del dado se puede dar junto a cada resultado de la moneda, así que se multiplican: 6 · 2 = 12.\n"
+        "3) Hay 12 resultados posibles, del tipo (1, cara), (1, sello), (2, cara)…",
+        [
+            ("8", "Sumó los resultados de cada objeto en lugar de multiplicarlos."),
+            ("6", "Contó solo los resultados del dado."),
+            ("36", "Multiplicó 6 por 6, como si se lanzaran dos dados."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un cerrojo de seguridad tiene 3 ruedas y cada una muestra 4 símbolos distintos. ¿Cuántas combinaciones diferentes se pueden formar?",
+        "64",
+        "Cada rueda se elige de forma independiente y sus símbolos se pueden repetir entre ruedas.\n\n"
+        "1) La primera rueda tiene 4 opciones, la segunda otras 4 y la tercera otras 4.\n"
+        "2) Multiplica: 4 · 4 · 4 = 64.\n"
+        "3) Hay 64 combinaciones, que también se escribe como 4³.",
+        [
+            ("12", "Multiplicó las ruedas por los símbolos en vez de multiplicar las opciones de cada rueda."),
+            ("24", "Calculó las ordenaciones de 4 elementos en lugar de las combinaciones del cerrojo."),
+            ("7", "Sumó ruedas y símbolos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un local arma sándwiches eligiendo 1 de 2 tipos de pan, 1 de 3 quesos y 1 de 2 salsas. ¿Cuántos sándwiches distintos se pueden preparar?",
+        "12",
+        "Con tres decisiones sucesivas, las opciones se multiplican todas.\n\n"
+        "1) Hay 2 opciones de pan, 3 de queso y 2 de salsa.\n"
+        "2) Multiplica: 2 · 3 · 2 = 12.\n"
+        "3) Se pueden preparar 12 sándwiches distintos.",
+        [
+            ("7", "Sumó las opciones de los tres grupos."),
+            ("6", "Multiplicó solo el pan y el queso, olvidando la salsa."),
+            ("4", "Multiplicó solo el pan y la salsa, olvidando el queso."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿Cuántos resultados distintos se pueden obtener al lanzar dos dados de 6 caras?",
+        "36",
+        "Cada dado es independiente del otro, así que sus resultados se multiplican.\n\n"
+        "1) El primer dado tiene 6 resultados posibles.\n"
+        "2) Para cada uno de ellos, el segundo dado tiene otros 6.\n"
+        "3) Multiplica: 6 · 6 = 36.\n"
+        "4) Son 36 pares ordenados, desde (1,1) hasta (6,6). Este número es el denominador de casi todas las probabilidades con dos dados.",
+        [
+            ("12", "Sumó los resultados de los dos dados."),
+            ("21", "Contó solo los pares sin repetir el orden, cuando (2,5) y (5,2) son resultados distintos."),
+            ("6", "Contó los resultados de un solo dado."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Una tienda tiene 7 modelos de polera y 5 de jockey. ¿Cuántos conjuntos distintos de polera y jockey se pueden formar?",
+        "35",
+        "Se elige una prenda de cada tipo, así que se multiplican las opciones.\n\n"
+        "1) Cada una de las 7 poleras se combina con cualquiera de los 5 jockeys.\n"
+        "2) Multiplica: 7 · 5 = 35.\n"
+        "3) Hay 35 conjuntos distintos.",
+        [
+            ("12", "Sumó las prendas en lugar de multiplicar."),
+            ("2", "Restó los dos números."),
+            ("49", "Multiplicó 7 por 7, usando dos veces la cantidad de poleras."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿De cuántas formas distintas se pueden ordenar 8 personas en una fila?",
+        "40.320",
+        "Ordenar todos los elementos de un grupo es calcular su factorial.\n\n"
+        "1) Para el primer lugar hay 8 candidatos, para el segundo 7, para el tercero 6, y así hasta el último.\n"
+        "2) Multiplica: 8 · 7 · 6 · 5 · 4 · 3 · 2 · 1.\n"
+        "3) El resultado es 40.320, que se escribe 8!.",
+        [
+            ("64", "Elevó 8 al cuadrado en lugar de calcular el factorial."),
+            ("36", "Sumó los números del 1 al 8."),
+            ("5.040", "Calculó 7!, olvidando multiplicar por la octava persona."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un código de acceso tiene 2 dígitos y estos pueden repetirse. ¿Cuántos códigos distintos existen?",
+        "100",
+        "Cada posición se llena de forma independiente, con todos los dígitos disponibles.\n\n"
+        "1) Los dígitos van del 0 al 9, así que hay 10 opciones para cada posición.\n"
+        "2) Como pueden repetirse, la segunda posición también tiene 10 opciones.\n"
+        "3) Multiplica: 10 · 10 = 100. Son los códigos del 00 al 99.",
+        [
+            ("90", "Descontó los códigos con dígitos repetidos, que el enunciado sí permite."),
+            ("20", "Sumó las opciones de las dos posiciones."),
+            ("45", "Contó los pares sin importar el orden, cuando 12 y 21 son códigos distintos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Para ir de la ciudad A a la B hay 3 rutas, y de la B a la C hay 4. ¿De cuántas formas distintas se puede viajar de A a C pasando por B?",
+        "12",
+        "El viaje son dos tramos sucesivos, así que las opciones se multiplican.\n\n"
+        "1) Cada una de las 3 rutas hasta B se puede continuar con cualquiera de las 4 rutas hasta C.\n"
+        "2) Multiplica: 3 · 4 = 12.\n"
+        "3) Hay 12 recorridos distintos.",
+        [
+            ("7", "Sumó las rutas de los dos tramos, que sería el caso si se pudiera elegir una sola."),
+            ("4", "Contó solo el segundo tramo."),
+            ("9", "Multiplicó 3 por 3, usando dos veces las rutas del primer tramo."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿Cuántas parejas distintas se pueden formar con 4 personas, si no importa quién va primero?",
+        "6",
+        "Al no importar el orden, la pareja formada por Ana y Beto es la misma que la de Beto y Ana.\n\n"
+        "1) Si el orden importara habría 4 · 3 = 12 formas.\n"
+        "2) Pero cada pareja quedó contada dos veces, una por cada orden.\n"
+        "3) Divide por 2: 12 ÷ 2 = 6.\n"
+        "4) Hay 6 parejas distintas.",
+        [
+            ("12", "Contó los pares ordenados, sin descontar que cada pareja se repite dos veces."),
+            ("4", "Dio la cantidad de personas en lugar de la de parejas."),
+            ("8", "Multiplicó las personas por 2."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos números de 3 cifras distintas se pueden formar usando los dígitos 1, 2, 3, 4, 5 y 6?",
+        "120",
+        "Cada cifra que se usa deja de estar disponible para las siguientes.\n\n"
+        "1) Para la primera cifra hay 6 opciones.\n"
+        "2) Para la segunda quedan 5, porque el dígito ya usado no se puede repetir.\n"
+        "3) Para la tercera quedan 4.\n"
+        "4) Multiplica: 6 · 5 · 4 = 120.",
+        [
+            ("216", "Usó 6 opciones en las tres posiciones, permitiendo repetir dígitos."),
+            ("18", "Multiplicó los 6 dígitos por las 3 posiciones."),
+            ("20", "Contó los grupos de 3 dígitos sin importar el orden, cuando 123 y 321 son números distintos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas se pueden elegir 3 personas de un grupo de 7, si no se distinguen cargos?",
+        "35",
+        "Al no distinguir cargos, el orden no importa y hay que descontar las repeticiones.\n\n"
+        "1) Si el orden importara: 7 · 6 · 5 = 210 formas.\n"
+        "2) Pero cada grupo de 3 personas se contó varias veces, una por cada orden posible de esas 3, y esos órdenes son 3 · 2 · 1 = 6.\n"
+        "3) Divide: 210 ÷ 6 = 35.\n"
+        "4) Se pueden formar 35 grupos distintos.",
+        [
+            ("210", "Contó los grupos ordenados, sin descontar los órdenes repetidos."),
+            ("21", "Calculó los grupos de 2 personas en lugar de los de 3."),
+            ("343", "Elevó 7 al cubo, permitiendo elegir a la misma persona varias veces."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "En una carrera con 7 corredores, ¿de cuántas formas distintas se pueden repartir el 1er, 2do y 3er lugar?",
+        "210",
+        "Acá el orden sí importa: no es lo mismo salir primero que tercero.\n\n"
+        "1) Para el primer lugar hay 7 candidatos.\n"
+        "2) Para el segundo quedan 6, porque el ganador ya no puede repetir.\n"
+        "3) Para el tercero quedan 5.\n"
+        "4) Multiplica: 7 · 6 · 5 = 210.",
+        [
+            ("35", "Contó los grupos de 3 sin importar el orden, cuando los lugares del podio sí se distinguen."),
+            ("343", "Usó 7 opciones en los tres lugares, permitiendo que alguien ocupe dos puestos."),
+            ("21", "Multiplicó los corredores por los lugares del podio."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos subconjuntos de 3 elementos tiene un conjunto de 8 elementos?",
+        "56",
+        "En un subconjunto el orden de los elementos no importa.\n\n"
+        "1) Si el orden importara: 8 · 7 · 6 = 336.\n"
+        "2) Cada subconjunto de 3 elementos aparece repetido tantas veces como órdenes tenga: 3 · 2 · 1 = 6.\n"
+        "3) Divide: 336 ÷ 6 = 56.\n"
+        "4) Hay 56 subconjuntos de 3 elementos.",
+        [
+            ("336", "Contó los grupos ordenados, sin descontar las repeticiones."),
+            ("24", "Multiplicó los 8 elementos por los 3 del subconjunto."),
+            ("512", "Elevó 8 al cubo, permitiendo repetir elementos dentro del subconjunto."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Una clave se forma con 3 letras seguidas de 2 dígitos, y tanto letras como dígitos pueden repetirse. Con 26 letras y 10 dígitos, ¿cuántas claves distintas existen?",
+        "1.757.600",
+        "Cada posición se llena de forma independiente, así que todas las opciones se multiplican.\n\n"
+        "1) Las tres letras aportan 26 · 26 · 26 = 17.576 posibilidades.\n"
+        "2) Los dos dígitos aportan 10 · 10 = 100.\n"
+        "3) Multiplica ambas partes: 17.576 · 100 = 1.757.600.\n"
+        "4) Existen 1.757.600 claves distintas.",
+        [
+            ("17.676", "Sumó las posibilidades de las letras y de los dígitos en lugar de multiplicarlas."),
+            ("15.600", "Descontó las repeticiones de letras, que el enunciado sí permite."),
+            ("175.760", "Multiplicó por 10 en vez de por 100, contando un solo dígito."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "En un torneo participan 6 equipos y todos juegan exactamente una vez contra cada uno de los demás. ¿Cuántos partidos se juegan en total?",
+        "15",
+        "Un partido queda definido por la pareja de equipos, sin importar el orden.\n\n"
+        "1) Cada equipo juega contra los otros 5, lo que daría 6 · 5 = 30.\n"
+        "2) Pero así cada partido se contó dos veces, una desde cada equipo.\n"
+        "3) Divide por 2: 30 ÷ 2 = 15.\n"
+        "4) Se juegan 15 partidos. Es el mismo esquema de contar apretones de mano o de elegir parejas.",
+        [
+            ("30", "Contó cada partido dos veces, una por cada equipo."),
+            ("36", "Multiplicó 6 por 6, incluyendo partidos de un equipo contra sí mismo."),
+            ("11", "Sumó los partidos de los dos primeros equipos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos números pares de 2 cifras distintas se pueden formar con los dígitos 1, 2, 3 y 4?",
+        "6",
+        "Cuando hay una restricción, conviene empezar por la posición restringida.\n\n"
+        "1) Para que el número sea par, la cifra de las unidades debe ser 2 o 4: hay 2 opciones.\n"
+        "2) Fijada esa, para las decenas quedan 3 dígitos disponibles, porque no se pueden repetir.\n"
+        "3) Multiplica: 2 · 3 = 6.\n"
+        "4) Son 12, 14, 32, 34, 42 y 24. Empezar por las decenas complica el conteo, porque el número de opciones para las unidades dependería de cuál se eligió.",
+        [
+            ("12", "Contó todos los números de 2 cifras distintas, sin exigir que fueran pares."),
+            ("8", "Permitió repetir dígitos, cuando el enunciado pide cifras distintas."),
+            ("2", "Contó solo las opciones para la cifra de las unidades."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas se pueden elegir 2 delegados de un curso de 12 estudiantes, si ambos tienen el mismo rol?",
+        "66",
+        "Como los dos delegados cumplen el mismo rol, el orden no importa.\n\n"
+        "1) Si el orden importara: 12 · 11 = 132.\n"
+        "2) Cada pareja quedó contada dos veces, una por cada orden.\n"
+        "3) Divide: 132 ÷ 2 = 66.\n"
+        "4) Hay 66 parejas posibles.",
+        [
+            ("132", "Contó las parejas ordenadas, como si los cargos se distinguieran."),
+            ("144", "Multiplicó 12 por 12, permitiendo elegir dos veces a la misma persona."),
+            ("24", "Multiplicó los estudiantes por los 2 delegados."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Se quiere diseñar una bandera de 3 franjas horizontales, cada una de un color distinto, eligiendo entre 5 colores. ¿Cuántas banderas diferentes se pueden hacer?",
+        "60",
+        "El orden de las franjas importa: una bandera roja-azul-verde no es la misma que verde-azul-roja.\n\n"
+        "1) Para la primera franja hay 5 colores.\n"
+        "2) Para la segunda quedan 4, porque los colores deben ser distintos.\n"
+        "3) Para la tercera quedan 3.\n"
+        "4) Multiplica: 5 · 4 · 3 = 60.",
+        [
+            ("10", "Contó los grupos de 3 colores sin importar el orden de las franjas."),
+            ("125", "Usó 5 opciones en las tres franjas, permitiendo repetir colores."),
+            ("15", "Multiplicó los colores por las franjas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Un menú ofrece 4 entradas, 6 platos de fondo y 3 postres. ¿Cuántos menús completos distintos se pueden armar?",
+        "72",
+        "Se elige un plato de cada categoría, así que todas las opciones se multiplican.\n\n"
+        "1) Hay 4 opciones de entrada, 6 de fondo y 3 de postre.\n"
+        "2) Multiplica: 4 · 6 = 24, y después 24 · 3 = 72.\n"
+        "3) Se pueden armar 72 menús distintos.",
+        [
+            ("13", "Sumó las opciones de las tres categorías."),
+            ("24", "Multiplicó solo las entradas y los fondos, olvidando los postres."),
+            ("18", "Multiplicó solo los fondos y los postres, olvidando las entradas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra COCO?",
+        "6",
+        "La palabra tiene dos letras repetidas, y cada repetición reduce la cantidad de órdenes distinguibles.\n\n"
+        "1) Si las 4 letras fueran todas distintas, habría 4 · 3 · 2 · 1 = 24 órdenes.\n"
+        "2) Pero la C aparece dos veces y se puede intercambiar consigo misma de 2 formas, y lo mismo pasa con la O.\n"
+        "3) Divide por ambas repeticiones: 24 ÷ (2 · 2) = 24 ÷ 4 = 6.\n"
+        "4) Hay 6 ordenaciones distinguibles: COCO, COOC, CCOO, OCCO, OCOC y OOCC.",
+        [
+            ("24", "Trató las cuatro letras como si todas fueran distintas."),
+            ("12", "Descontó la repetición de una sola de las dos letras."),
+            ("4", "Dio la cantidad de letras en vez de la de ordenaciones."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos resultados distintos se pueden obtener al lanzar tres monedas?",
+        "8",
+        "Cada moneda aporta sus propias posibilidades, de forma independiente.\n\n"
+        "1) Cada moneda tiene 2 resultados: cara o sello.\n"
+        "2) Con tres monedas: 2 · 2 · 2 = 8.\n"
+        "3) Son 8 resultados, desde (cara, cara, cara) hasta (sello, sello, sello).\n"
+        "4) Este 8 es el denominador de todas las probabilidades con tres monedas.",
+        [
+            ("6", "Multiplicó las monedas por sus dos caras en lugar de multiplicar las opciones."),
+            ("4", "Contó los resultados de dos monedas y olvidó la tercera."),
+            ("9", "Elevó 3 al cuadrado, invirtiendo la base y el exponente."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántos números de 3 cifras distintas se pueden formar con los dígitos 0, 1, 2, 3 y 4, si el número no puede comenzar con 0?",
+        "48",
+        "La restricción afecta solo a la primera posición, así que hay que empezar por ella.\n\n"
+        "1) Para la cifra de las centenas hay 4 opciones: 1, 2, 3 o 4. El 0 queda excluido.\n"
+        "2) Para las decenas quedan 4 dígitos disponibles: los 5 originales menos el ya usado. Ojo: acá el 0 sí puede aparecer.\n"
+        "3) Para las unidades quedan 3.\n"
+        "4) Multiplica: 4 · 4 · 3 = 48.",
+        [
+            ("60", "Permitió que el número empezara con 0, contando números que en realidad son de 2 cifras."),
+            ("24", "Descartó el 0 también en las decenas y unidades, cuando la restricción solo afecta a la primera cifra."),
+            ("100", "Permitió repetir dígitos, cuando el enunciado pide cifras distintas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "De un grupo de 5 hombres y 6 mujeres se debe formar un comité con 2 hombres y 3 mujeres. ¿Cuántos comités distintos se pueden armar?",
+        "200",
+        "Se cuenta cada grupo por separado y después se combinan.\n\n"
+        "1) Formas de elegir 2 hombres entre 5, sin importar el orden: (5 · 4) ÷ 2 = 10.\n"
+        "2) Formas de elegir 3 mujeres entre 6: (6 · 5 · 4) ÷ 6 = 20.\n"
+        "3) Como cada selección de hombres se puede combinar con cualquiera de mujeres, se multiplican: 10 · 20 = 200.\n"
+        "4) Se pueden armar 200 comités.",
+        [
+            ("30", "Sumó las opciones de cada grupo en lugar de multiplicarlas."),
+            ("462", "Eligió 5 personas del grupo completo de 11, sin respetar la composición pedida."),
+            ("2.400", "Contó los ordenamientos dentro de cada grupo, cuando los cargos no se distinguen."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra BANANA?",
+        "60",
+        "Hay dos letras repetidas y cada repetición reduce la cantidad de órdenes distinguibles.\n\n"
+        "1) Si las 6 letras fueran distintas habría 6! = 720 órdenes.\n"
+        "2) La A aparece 3 veces, y esas 3 A se pueden intercambiar de 3! = 6 formas sin cambiar la palabra.\n"
+        "3) La N aparece 2 veces, con 2! = 2 intercambios.\n"
+        "4) Divide por ambas repeticiones: 720 ÷ (6 · 2) = 720 ÷ 12 = 60.",
+        [
+            ("720", "Trató las seis letras como si todas fueran distintas."),
+            ("120", "Descontó solo la repetición de la A y olvidó la de la N."),
+            ("360", "Dividió solo por 2, considerando una sola de las dos letras repetidas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "En una reunión de 10 personas, todas brindan exactamente una vez con cada una de las demás. ¿Cuántos brindis se producen?",
+        "45",
+        "Un brindis queda definido por la pareja de personas, sin importar quién lo inicia.\n\n"
+        "1) Cada persona brinda con las otras 9, lo que daría 10 · 9 = 90.\n"
+        "2) Pero así cada brindis se contó dos veces, una desde cada persona.\n"
+        "3) Divide por 2: 90 ÷ 2 = 45.\n"
+        "4) Se producen 45 brindis.",
+        [
+            ("90", "Contó cada brindis dos veces, una por cada participante."),
+            ("100", "Multiplicó 10 por 10, incluyendo el brindis de alguien consigo mismo."),
+            ("19", "Sumó los brindis de las dos primeras personas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántos números de 4 cifras se pueden formar usando solo los dígitos 1, 2 y 3, si se pueden repetir?",
+        "81",
+        "Al permitirse la repetición, cada posición mantiene todas las opciones.\n\n"
+        "1) Para cada una de las 4 posiciones hay 3 dígitos disponibles.\n"
+        "2) Multiplica: 3 · 3 · 3 · 3 = 81, o sea 3⁴.\n"
+        "3) Se pueden formar 81 números.\n"
+        "4) Ojo con no confundir la base y el exponente: 4³ = 64 sería la respuesta si hubiera 4 dígitos disponibles y 3 posiciones.",
+        [
+            ("64", "Invirtió base y exponente: calculó 4³ en vez de 3⁴."),
+            ("24", "Calculó las ordenaciones de 4 elementos distintos, cuando acá se repiten."),
+            ("12", "Multiplicó las posiciones por los dígitos disponibles."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿De cuántas formas se pueden sentar 5 personas en una fila, si dos de ellas deben quedar siempre juntas?",
+        "48",
+        "El truco es tratar a las dos personas que van juntas como si fueran un solo bloque.\n\n"
+        "1) Si las dos van pegadas, se pueden pensar como un único elemento. Junto a las otras 3 personas, hay 4 elementos que ordenar.\n"
+        "2) Esos 4 elementos se ordenan de 4! = 24 formas.\n"
+        "3) Pero dentro del bloque las dos personas se pueden intercambiar entre sí: 2 formas.\n"
+        "4) Multiplica: 24 · 2 = 48.",
+        [
+            ("24", "Trató el bloque como fijo y olvidó que las dos personas se pueden intercambiar dentro de él."),
+            ("120", "Contó todas las ordenaciones de las 5 personas, sin imponer la restricción."),
+            ("240", "Multiplicó las 120 ordenaciones libres por 2, en vez de partir del bloque."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántas diagonales tiene un polígono de 8 lados?",
+        "20",
+        "Una diagonal une dos vértices que no son consecutivos.\n\n"
+        "1) Cuenta primero todos los segmentos que unen dos vértices cualesquiera: son las parejas de 8 vértices, (8 · 7) ÷ 2 = 28.\n"
+        "2) De esos 28 segmentos, 8 son los lados del polígono, que unen vértices consecutivos.\n"
+        "3) Resta: 28 − 8 = 20.\n"
+        "4) El polígono tiene 20 diagonales.",
+        [
+            ("28", "Contó todos los segmentos entre vértices, sin descontar los 8 lados."),
+            ("56", "Contó los segmentos ordenados, sin dividir por 2."),
+            ("16", "Multiplicó los lados por 2."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "De un grupo de 10 personas se elige un comité de 3, pero una persona determinada debe estar sí o sí. ¿Cuántos comités distintos se pueden formar?",
+        "36",
+        "Si una persona ya está adentro, el problema se reduce a llenar los cupos que quedan.\n\n"
+        "1) Esa persona ocupa uno de los 3 lugares y no hay que elegirla: viene dada.\n"
+        "2) Quedan 2 cupos por llenar entre las 9 personas restantes.\n"
+        "3) Como no se distinguen cargos, son las parejas de 9: (9 · 8) ÷ 2 = 36.\n"
+        "4) Se pueden formar 36 comités.",
+        [
+            ("120", "Contó todos los comités de 3 entre las 10 personas, sin imponer la restricción."),
+            ("84", "Eligió los 3 miembros entre las 9 restantes, dejando fuera a la persona que debía estar."),
+            ("72", "Contó las parejas ordenadas de las 9 restantes, sin dividir por 2."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "Al lanzar dos dados de 6 caras, ¿en cuántos de los resultados posibles la suma es igual a 7?",
+        "6",
+        "Conviene listar los pares ordenados de forma sistemática para no saltarse ninguno.\n\n"
+        "1) Empieza fijando el primer dado y busca qué necesita el segundo: si sale 1, el otro debe ser 6; si sale 2, el otro 5; y así.\n"
+        "2) Los pares son (1,6), (2,5), (3,4), (4,3), (5,2) y (6,1).\n"
+        "3) Son 6 resultados. Ojo: (3,4) y (4,3) son distintos, porque los dados se distinguen.\n"
+        "4) Como el total de resultados es 36, la probabilidad de sumar 7 sería 6/36 = 1/6, la suma más probable de dos dados.",
+        [
+            ("3", "Contó solo las parejas sin repetir el orden, cuando los dados se distinguen."),
+            ("7", "Usó el valor de la suma como si fuera la cantidad de resultados."),
+            ("12", "Contó también los pares que suman otros valores cercanos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "Se reparten 3 premios idénticos entre 9 personas, y nadie puede recibir más de uno. ¿De cuántas formas distintas se pueden repartir?",
+        "84",
+        "Como los premios son idénticos, lo único que importa es quiénes son los tres ganadores.\n\n"
+        "1) Si los premios se distinguieran habría 9 · 8 · 7 = 504 repartos.\n"
+        "2) Pero al ser idénticos, los 3 · 2 · 1 = 6 órdenes de un mismo trío dan el mismo reparto.\n"
+        "3) Divide: 504 ÷ 6 = 84.\n"
+        "4) Hay 84 repartos distintos.",
+        [
+            ("504", "Contó los repartos como si los tres premios fueran distintos entre sí."),
+            ("729", "Elevó 9 al cubo, permitiendo que una persona reciba más de un premio."),
+            ("27", "Multiplicó las personas por los premios."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántos números de 3 cifras distintas y mayores que 500 se pueden formar con los dígitos 1, 2, 3, 4, 5 y 6?",
+        "40",
+        "La condición de ser mayor que 500 restringe solo la primera cifra, así que se empieza por ahí.\n\n"
+        "1) Para que el número supere 500, la cifra de las centenas debe ser 5 o 6: hay 2 opciones.\n"
+        "2) Fijada esa, para las decenas quedan 5 dígitos disponibles, porque no se pueden repetir.\n"
+        "3) Para las unidades quedan 4.\n"
+        "4) Multiplica: 2 · 5 · 4 = 40.",
+        [
+            ("120", "Contó todos los números de 3 cifras distintas, sin exigir que superaran 500."),
+            ("72", "Permitió repetir dígitos después de fijar la primera cifra."),
+            ("20", "Contó solo los que empiezan con 5, olvidando los que empiezan con 6."),
+        ],
+    ),
+]
+
+# ---------------------------------------------------------------------------
+# Reglas de las probabilidades — tercera tanda.
+#
+# La tanda anterior cubrió la regla aditiva y la multiplicativa en contextos.
+# Esta agrega los tipos que seguían faltando:
+#
+# - Probabilidad a partir de una TABLA DE DOBLE ENTRADA, que es el formato en
+#   que la PAES presenta la mayoría de estos problemas.
+# - Probabilidad CONDICIONAL leída desde esos datos ("dado que ya sabemos que…").
+# - Sumas de dos dados, que exigen contar el espacio muestral antes de dividir.
+# - "Al menos uno" resuelto por complemento con más de dos ensayos.
+# - Extracciones sucesivas con y sin reposición, comparadas.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_reglas", "facil",
+        "Una urna contiene 3 bolitas rojas, 4 azules y 5 verdes. Si se saca una al azar, ¿cuál es la probabilidad de que sea azul?",
+        "1/3",
+        "Primero hay que armar el total, que el enunciado no entrega directamente.\n\n"
+        "1) Total de bolitas: 3 + 4 + 5 = 12.\n"
+        "2) Casos favorables: las 4 azules.\n"
+        "3) La probabilidad es 4/12.\n"
+        "4) Simplifica dividiendo por 4: 4/12 = 1/3.",
+        [
+            ("1/2", "Comparó las azules con las que no son azules, en vez de con el total."),
+            ("1/4", "Usó la cantidad de azules como denominador."),
+            ("2/3", "Calculó la probabilidad de que NO sea azul."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza un dado común de 6 caras. ¿Cuál es la probabilidad de obtener un número menor que 5?",
+        "2/3",
+        "Hay que contar bien cuáles cumplen la condición, sin incluir el 5.\n\n"
+        "1) Los números menores que 5 son 1, 2, 3 y 4: son 4 casos favorables.\n"
+        "2) El total de casos posibles es 6.\n"
+        "3) La probabilidad es 4/6.\n"
+        "4) Simplifica dividiendo por 2: 4/6 = 2/3.",
+        [
+            ("5/6", "Incluyó el 5 entre los favorables, cuando el enunciado pide MENOR que 5."),
+            ("1/3", "Calculó la probabilidad de obtener 5 o más."),
+            ("1/6", "Consideró un solo caso favorable."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "La probabilidad de que un equipo gane su próximo partido es 0,45. Si no hay empates, ¿cuál es la probabilidad de que no gane?",
+        "0,55",
+        "Ganar y no ganar son sucesos contrarios: cubren todo lo que puede pasar.\n\n"
+        "1) Las probabilidades de dos sucesos contrarios suman 1.\n"
+        "2) Entonces la buscada es 1 − 0,45.\n"
+        "3) Al restar: 1 − 0,45 = 0,55.",
+        [
+            ("0,45", "Repitió la probabilidad de ganar en lugar de calcular la contraria."),
+            ("0,65", "Restó a 1,1 en vez de a 1."),
+            ("1,45", "Sumó en lugar de restar, y obtuvo un valor mayor que 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una caja hay 12 lápices y 3 de ellos están malos. Si se saca uno al azar, ¿cuál es la probabilidad de que esté malo?",
+        "1/4",
+        "Se compara la cantidad de casos favorables con el total.\n\n"
+        "1) Casos favorables: los 3 lápices malos.\n"
+        "2) Total de casos: los 12 lápices de la caja.\n"
+        "3) La probabilidad es 3/12.\n"
+        "4) Simplifica dividiendo por 3: 3/12 = 1/4.",
+        [
+            ("1/3", "Comparó los malos con los buenos en lugar de con el total."),
+            ("3/4", "Calculó la probabilidad de que el lápiz esté bueno."),
+            ("1/12", "Consideró un solo lápiz favorable en vez de los 3 malos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "De un naipe español de 40 cartas, que tiene 4 reyes, se extrae una al azar. ¿Cuál es la probabilidad de que sea un rey?",
+        "1/10",
+        "Se comparan los casos favorables con el total de cartas.\n\n"
+        "1) Casos favorables: los 4 reyes.\n"
+        "2) Total: 40 cartas.\n"
+        "3) La probabilidad es 4/40.\n"
+        "4) Simplifica dividiendo por 4: 4/40 = 1/10.",
+        [
+            ("1/4", "Usó la cantidad de reyes como denominador."),
+            ("1/40", "Consideró una sola carta favorable en vez de los 4 reyes."),
+            ("9/10", "Calculó la probabilidad de que NO sea rey."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza una moneda equilibrada una vez. ¿Cuál es la probabilidad de que salga sello?",
+        "1/2",
+        "La moneda tiene dos resultados igualmente probables.\n\n"
+        "1) Casos posibles: cara y sello, o sea 2.\n"
+        "2) Casos favorables: solo uno, el sello.\n"
+        "3) La probabilidad es 1/2, es decir, 0,5 o un 50%.",
+        [
+            ("1", "Confundió \"seguro que pasa\" con \"es uno de dos resultados\"."),
+            ("1/4", "Calculó la probabilidad de sacar sello dos veces seguidas."),
+            ("2", "Dio la cantidad de resultados posibles en lugar de la probabilidad."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una bolsa hay 15 fichas numeradas del 1 al 15. Si se saca una al azar, ¿cuál es la probabilidad de que el número sea múltiplo de 5?",
+        "1/5",
+        "Primero se cuentan los múltiplos de 5 dentro del rango.\n\n"
+        "1) Los múltiplos de 5 entre 1 y 15 son 5, 10 y 15: son 3.\n"
+        "2) El total de fichas es 15.\n"
+        "3) La probabilidad es 3/15.\n"
+        "4) Simplifica dividiendo por 3: 3/15 = 1/5.",
+        [
+            ("1/15", "Consideró un solo múltiplo en lugar de los tres."),
+            ("1/3", "Usó la cantidad de múltiplos como denominador."),
+            ("4/5", "Calculó la probabilidad de que NO sea múltiplo de 5."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En un curso de 36 estudiantes, 27 aprobaron una prueba. Si se elige uno al azar, ¿cuál es la probabilidad de que haya aprobado?",
+        "3/4",
+        "Se compara la cantidad de aprobados con el total del curso.\n\n"
+        "1) Casos favorables: 27 aprobados.\n"
+        "2) Total: 36 estudiantes.\n"
+        "3) La probabilidad es 27/36.\n"
+        "4) Simplifica dividiendo por 9: 27/36 = 3/4.",
+        [
+            ("1/4", "Calculó la probabilidad de que el estudiante haya reprobado."),
+            ("3", "Se quedó con la simplificación del numerador sin escribir la fracción."),
+            ("1/36", "Consideró un solo estudiante favorable."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza un dado de 8 caras numeradas del 1 al 8. ¿Cuál es la probabilidad de obtener un número impar?",
+        "1/2",
+        "Se cuentan los impares dentro del rango del dado.\n\n"
+        "1) Los impares del 1 al 8 son 1, 3, 5 y 7: son 4.\n"
+        "2) El total de caras es 8.\n"
+        "3) La probabilidad es 4/8, que simplificada da 1/2.\n"
+        "4) Tiene sentido: en cualquier rango que empiece en 1 y termine en un número par, la mitad son impares.",
+        [
+            ("1/8", "Consideró una sola cara favorable en lugar de las cuatro impares."),
+            ("3/8", "Contó solo tres impares y dejó fuera uno."),
+            ("1/4", "Dividió la cantidad de impares por el doble del total."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "La probabilidad de que llueva mañana es 1/4. ¿Cuál es la probabilidad de que no llueva?",
+        "3/4",
+        "Llover y no llover son sucesos contrarios.\n\n"
+        "1) Las probabilidades de dos sucesos contrarios suman 1.\n"
+        "2) Entonces la buscada es 1 − 1/4.\n"
+        "3) Escribe el 1 como 4/4: 4/4 − 1/4 = 3/4.",
+        [
+            ("1/4", "Repitió la probabilidad de que llueva."),
+            ("1/2", "Supuso que llover y no llover son igualmente probables, ignorando el dato."),
+            ("4/3", "Invirtió la fracción en lugar de restarla de 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una tómbola hay 30 números y solo 5 de ellos premian. ¿Cuál es la probabilidad de ganar con un número?",
+        "1/6",
+        "Se comparan los números premiados con el total.\n\n"
+        "1) Casos favorables: los 5 números que premian.\n"
+        "2) Total: 30 números.\n"
+        "3) La probabilidad es 5/30.\n"
+        "4) Simplifica dividiendo por 5: 5/30 = 1/6.",
+        [
+            ("1/5", "Usó la cantidad de premios como denominador."),
+            ("5/6", "Calculó la probabilidad de NO ganar."),
+            ("1/30", "Consideró un solo número premiado en vez de los 5."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanzan dos dados de 6 caras. ¿Cuál es la probabilidad de que la suma de los puntos sea 7?",
+        "1/6",
+        "Hay que contar el espacio muestral completo antes de dividir.\n\n"
+        "1) Casos posibles: cada dado tiene 6 resultados, así que son 6 · 6 = 36 pares.\n"
+        "2) Casos favorables: (1,6), (2,5), (3,4), (4,3), (5,2) y (6,1). Son 6. Ojo: (3,4) y (4,3) cuentan por separado porque los dados se distinguen.\n"
+        "3) La probabilidad es 6/36.\n"
+        "4) Simplifica: 6/36 = 1/6. El 7 es la suma más probable de dos dados.",
+        [
+            ("1/12", "Contó solo 3 pares, sin considerar que cada uno se puede dar en dos órdenes."),
+            ("1/36", "Consideró un solo caso favorable."),
+            ("7/36", "Usó el valor de la suma como cantidad de casos favorables."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "De 100 personas encuestadas, 60 son mujeres y de ellas 40 usan lentes. Si se elige una persona al azar, ¿cuál es la probabilidad de que sea una mujer que usa lentes?",
+        "2/5",
+        "Se busca cuántas personas cumplen las dos condiciones a la vez.\n\n"
+        "1) Las mujeres que usan lentes son 40, un dato que el enunciado entrega directo.\n"
+        "2) El total de personas es 100.\n"
+        "3) La probabilidad es 40/100.\n"
+        "4) Simplifica dividiendo por 20: 40/100 = 2/5.",
+        [
+            ("2/3", "Comparó las mujeres con lentes solo con el grupo de mujeres, no con el total."),
+            ("3/5", "Calculó la probabilidad de elegir una mujer, sin la condición de los lentes."),
+            ("1/5", "Calculó la probabilidad de elegir una mujer que NO usa lentes."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Una caja tiene 6 bolitas rojas y 4 verdes. Se saca una, se anota su color y se devuelve a la caja; luego se saca otra. ¿Cuál es la probabilidad de que ambas sean rojas?",
+        "9/25",
+        "Al devolver la bolita, la segunda extracción ocurre en las mismas condiciones que la primera.\n\n"
+        "1) Hay 10 bolitas en total, así que la probabilidad de sacar roja es 6/10 = 3/5.\n"
+        "2) Como la bolita se devuelve, la segunda extracción también tiene probabilidad 3/5. Los sucesos son independientes.\n"
+        "3) Se piden las dos juntas, así que se multiplican: (3/5) · (3/5) = 9/25.",
+        [
+            ("1/3", "Aplicó la fórmula sin reposición, reduciendo la caja en la segunda extracción."),
+            ("6/10", "Se quedó con la probabilidad de la primera extracción."),
+            ("6/5", "Sumó las probabilidades en lugar de multiplicarlas, y obtuvo un valor mayor que 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanzan dos monedas equilibradas. ¿Cuál es la probabilidad de obtener exactamente una cara?",
+        "1/2",
+        "Conviene listar los cuatro resultados posibles, porque \"exactamente una\" excluye el caso de dos.\n\n"
+        "1) Los resultados son: cara-cara, cara-sello, sello-cara y sello-sello. Son 4.\n"
+        "2) Con exactamente una cara hay dos: cara-sello y sello-cara.\n"
+        "3) La probabilidad es 2/4 = 1/2.\n"
+        "4) Ojo con no contar cara-cara: ahí hay dos caras, no exactamente una.",
+        [
+            ("1/4", "Contó solo uno de los dos órdenes en que puede salir una única cara."),
+            ("3/4", "Calculó la probabilidad de obtener al menos una cara, que incluye el caso de dos."),
+            ("1/3", "Usó 3 resultados posibles, tratando cara-sello y sello-cara como uno solo."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Para dos sucesos excluyentes se sabe que P(A) = 0,5 y P(B) = 0,4. ¿Cuál es la probabilidad de que ocurra A o B?",
+        "0,9",
+        "Al ser excluyentes, los sucesos no pueden ocurrir juntos y no hay intersección que descontar.\n\n"
+        "1) La regla aditiva general es P(A o B) = P(A) + P(B) − P(A y B).\n"
+        "2) Como son excluyentes, P(A y B) = 0.\n"
+        "3) Entonces basta sumar: 0,5 + 0,4 = 0,9.\n"
+        "4) El resultado es menor que 1, como debe ser: queda un 0,1 en el que no ocurre ninguno.",
+        [
+            ("0,2", "Multiplicó las probabilidades, que corresponde al suceso conjunto y no a la unión."),
+            ("0,1", "Restó una probabilidad de la otra."),
+            ("0,45", "Promedió las dos probabilidades."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "De una baraja de 52 cartas, que tiene 12 figuras (J, Q y K de cada pinta), se extrae una al azar. ¿Cuál es la probabilidad de que sea una figura?",
+        "3/13",
+        "Se comparan los casos favorables con el total de cartas.\n\n"
+        "1) Casos favorables: las 12 figuras.\n"
+        "2) Total: 52 cartas.\n"
+        "3) La probabilidad es 12/52.\n"
+        "4) Simplifica dividiendo por 4: 12/52 = 3/13.",
+        [
+            ("1/13", "Consideró solo un tipo de figura en lugar de las tres."),
+            ("10/13", "Calculó la probabilidad de que NO sea figura."),
+            ("3/4", "Usó las 4 pintas como denominador en vez del total de cartas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Una urna tiene 5 bolitas blancas y 7 negras. Se saca una y no se devuelve, y resultó ser blanca. ¿Cuál es la probabilidad de que la siguiente también sea blanca?",
+        "4/11",
+        "La primera extracción ya ocurrió, así que hay que actualizar el contenido de la urna.\n\n"
+        "1) Al principio había 5 + 7 = 12 bolitas.\n"
+        "2) Salió una blanca y no se devolvió: quedan 11 bolitas y solo 4 blancas.\n"
+        "3) La probabilidad de que la siguiente sea blanca es 4/11.\n"
+        "4) Fíjate en que bajó respecto de la inicial, 5/12: sacar una blanca deja menos blancas disponibles.",
+        [
+            ("5/12", "Usó las cantidades iniciales, sin descontar la bolita ya extraída."),
+            ("5/11", "Descontó la bolita del total pero no de las blancas."),
+            ("4/12", "Descontó la bolita de las blancas pero no del total."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanza un dado de 6 caras dos veces seguidas. ¿Cuál es la probabilidad de obtener un 6 en ambos lanzamientos?",
+        "1/36",
+        "Los lanzamientos son independientes: el primero no cambia lo que puede pasar en el segundo.\n\n"
+        "1) La probabilidad de obtener 6 en un lanzamiento es 1/6.\n"
+        "2) Como se piden los dos, se multiplican: (1/6) · (1/6).\n"
+        "3) El resultado es 1/36.",
+        [
+            ("1/3", "Sumó las probabilidades en lugar de multiplicarlas."),
+            ("1/12", "Multiplicó 1/6 por 1/2 en vez de por 1/6."),
+            ("1/6", "Se quedó con la probabilidad de un solo lanzamiento."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En una línea de producción, el 3% de las piezas sale defectuosa. Si se toman dos piezas al azar y de forma independiente, ¿cuál es la probabilidad de que ambas sean defectuosas?",
+        "0,0009",
+        "Se piden dos condiciones a la vez con sucesos independientes: regla multiplicativa.\n\n"
+        "1) El 3% equivale a 0,03.\n"
+        "2) Como las piezas son independientes, se multiplican: 0,03 · 0,03.\n"
+        "3) El resultado es 0,0009, o sea un 0,09%.\n"
+        "4) Tiene sentido que sea mucho menor que 0,03: exigir que las dos fallen es bastante más raro que una sola.",
+        [
+            ("0,06", "Sumó las probabilidades en lugar de multiplicarlas."),
+            ("0,09", "Multiplicó los porcentajes sin convertirlos a decimales."),
+            ("0,03", "Se quedó con la probabilidad de una sola pieza."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "De 20 estudiantes, 12 practican algún deporte. Se eligen 2 al azar y sin reposición. ¿Cuál es la probabilidad de que ambos practiquen deporte?",
+        "33/95",
+        "Sin reposición, la segunda probabilidad se calcula sobre un grupo ya reducido.\n\n"
+        "1) La probabilidad de que el primero practique deporte es 12/20 = 3/5.\n"
+        "2) Si el primero practicaba, quedan 19 estudiantes y 11 deportistas: 11/19.\n"
+        "3) Multiplica: (3/5) · (11/19) = 33/95.",
+        [
+            ("9/25", "Usó 12/20 dos veces, como si hubiera reposición."),
+            ("3/5", "Se quedó con la probabilidad de la primera elección."),
+            ("112/95", "Sumó las probabilidades en lugar de multiplicarlas, y obtuvo un valor mayor que 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Dos sucesos independientes cumplen P(A) = 0,7 y P(B) = 0,6. ¿Cuál es la probabilidad de que ocurran ambos?",
+        "0,42",
+        "Para sucesos independientes, la probabilidad conjunta es el producto.\n\n"
+        "1) La regla dice P(A y B) = P(A) · P(B) cuando son independientes.\n"
+        "2) Multiplica: 0,7 · 0,6 = 0,42.\n"
+        "3) Verifica que tenga sentido: exigir dos condiciones a la vez siempre da menos que cada una por separado, y 0,42 es menor que 0,6 y que 0,7.",
+        [
+            ("1,3", "Sumó las probabilidades y obtuvo un valor mayor que 1, imposible."),
+            ("0,65", "Promedió las dos probabilidades."),
+            ("0,1", "Restó una probabilidad de la otra."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Se lanzan dos dados de 6 caras. ¿Cuál es la probabilidad de que la suma de los puntos sea mayor que 9?",
+        "1/6",
+        "Conviene contar por separado cada suma que cumple la condición.\n\n"
+        "1) Casos posibles: 6 · 6 = 36.\n"
+        "2) Suma 10: (4,6), (5,5) y (6,4), o sea 3 casos.\n"
+        "3) Suma 11: (5,6) y (6,5), o sea 2 casos.\n"
+        "4) Suma 12: solo (6,6), 1 caso.\n"
+        "5) Favorables: 3 + 2 + 1 = 6, así que la probabilidad es 6/36 = 1/6. Ojo: \"mayor que 9\" no incluye el 9.",
+        [
+            ("5/18", "Incluyó también la suma 9, cuando el enunciado pide estrictamente mayor."),
+            ("1/9", "Contó solo las combinaciones sin repetir el orden."),
+            ("3/36", "Consideró solo los casos de suma 10."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Una urna tiene 4 bolitas rojas y 6 azules. Se sacan dos al azar, una tras otra y sin reposición. ¿Cuál es la probabilidad de que al menos una sea roja?",
+        "2/3",
+        "\"Al menos una\" agrupa varios casos, y conviene ir por el contrario.\n\n"
+        "1) El suceso contrario es que ninguna sea roja, es decir, que las dos sean azules.\n"
+        "2) La primera azul: 6/10. Sin reposición, la segunda azul: 5/9.\n"
+        "3) Multiplica: (6/10) · (5/9) = 30/90 = 1/3.\n"
+        "4) La probabilidad buscada es 1 − 1/3 = 2/3.",
+        [
+            ("1/3", "Se quedó con la probabilidad de que ninguna sea roja, que es el paso intermedio."),
+            ("2/15", "Calculó la probabilidad de que ambas sean rojas."),
+            ("4/5", "Sumó las probabilidades de cada extracción, contando dos veces el caso en que ambas son rojas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De 200 personas encuestadas, 120 son hombres. Tienen auto 80 de los hombres y 30 de las mujeres. Si se elige al azar una persona que tiene auto, ¿cuál es la probabilidad de que sea mujer?",
+        "3/11",
+        "La condición \"que tiene auto\" cambia el universo: ya no son las 200 personas.\n\n"
+        "1) Total de personas con auto: 80 hombres + 30 mujeres = 110.\n"
+        "2) De esas, las mujeres con auto son 30.\n"
+        "3) Como ya sabemos que la persona tiene auto, el denominador es 110 y no 200: la probabilidad es 30/110.\n"
+        "4) Simplifica dividiendo por 10: 30/110 = 3/11.",
+        [
+            ("3/20", "Usó las 200 personas como denominador, sin restringirse a quienes tienen auto."),
+            ("3/8", "Comparó las mujeres con auto con las 80 mujeres del total en vez de con quienes tienen auto."),
+            ("8/11", "Calculó la probabilidad de que sea hombre."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Se lanzan cuatro monedas equilibradas. ¿Cuál es la probabilidad de obtener al menos una cara?",
+        "15/16",
+        "El contrario de \"al menos una cara\" es un único caso, y por eso conviene calcularlo así.\n\n"
+        "1) El suceso contrario es que las cuatro salgan sello.\n"
+        "2) Cada moneda sale sello con probabilidad 1/2 y son independientes: (1/2)⁴ = 1/16.\n"
+        "3) La probabilidad buscada es 1 − 1/16 = 15/16.\n"
+        "4) Contar directo los casos favorables exigiría sumar los de una, dos, tres y cuatro caras: mucho más largo para el mismo resultado.",
+        [
+            ("1/16", "Calculó la probabilidad de que las cuatro salgan sello, que es el caso descartado."),
+            ("1/4", "Se quedó con la probabilidad de una sola moneda elevada al cuadrado."),
+            ("4/16", "Contó solo los casos con exactamente una cara."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Para dos sucesos se sabe que P(A) = 0,6, P(B) = 0,5 y P(A y B) = 0,2. ¿Cuál es la probabilidad de que ocurra A o B?",
+        "0,9",
+        "Los sucesos se solapan, así que la regla aditiva descuenta la intersección.\n\n"
+        "1) La regla dice P(A o B) = P(A) + P(B) − P(A y B).\n"
+        "2) Reemplaza: 0,6 + 0,5 − 0,2.\n"
+        "3) Calcula: 1,1 − 0,2 = 0,9.\n"
+        "4) Fíjate en que sin descontar la intersección el resultado habría sido 1,1, un valor imposible para una probabilidad. Ese absurdo es la señal de que hay que restar.",
+        [
+            ("1,1", "Sumó las dos probabilidades sin descontar la intersección, y obtuvo un valor imposible."),
+            ("0,3", "Multiplicó las probabilidades en lugar de aplicar la regla aditiva."),
+            ("0,7", "Restó la intersección dos veces."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una caja hay 8 fichas numeradas del 1 al 8. Se saca una al azar. ¿Cuál es la probabilidad de que el número sea par o mayor que 6?",
+        "5/8",
+        "Los dos grupos se solapan, así que hay que descontar lo contado dos veces.\n\n"
+        "1) Pares: 2, 4, 6 y 8, o sea 4 fichas.\n"
+        "2) Mayores que 6: 7 y 8, o sea 2 fichas.\n"
+        "3) El 8 está en los dos grupos, así que quedó contado dos veces: la intersección es 1.\n"
+        "4) Aplica la regla aditiva: 4 + 2 − 1 = 5 fichas favorables sobre 8, o sea 5/8.",
+        [
+            ("6/8", "Sumó 4 y 2 sin descontar el 8, que cumple las dos condiciones."),
+            ("1/8", "Contó solo la ficha que cumple ambas condiciones."),
+            ("1/2", "Consideró solo las fichas pares."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En un juego, la probabilidad de ganar una partida es 0,2. Si se juegan tres partidas independientes, ¿cuál es la probabilidad de perder las tres?",
+        "0,512",
+        "Perder cada partida tiene su propia probabilidad, que sale del suceso contrario.\n\n"
+        "1) Si se gana con 0,2, se pierde con 1 − 0,2 = 0,8.\n"
+        "2) Como las partidas son independientes, se multiplican las tres: 0,8 · 0,8 · 0,8.\n"
+        "3) Calcula: 0,8 · 0,8 = 0,64, y 0,64 · 0,8 = 0,512.",
+        [
+            ("0,8", "Se quedó con la probabilidad de perder una sola partida."),
+            ("0,008", "Multiplicó las probabilidades de GANAR las tres en lugar de las de perder."),
+            ("2,4", "Multiplicó 0,8 por 3 en vez de elevarlo al cubo."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De una baraja de 52 cartas, que tiene 13 corazones, se extraen dos cartas al azar y sin reposición. ¿Cuál es la probabilidad de que ambas sean corazones?",
+        "1/17",
+        "Sin reposición, la segunda extracción ocurre sobre una baraja más chica.\n\n"
+        "1) Primera carta corazón: 13/52 = 1/4.\n"
+        "2) Si salió un corazón y no se devuelve, quedan 51 cartas y 12 corazones: 12/51.\n"
+        "3) Multiplica: (1/4) · (12/51) = 12/204.\n"
+        "4) Simplifica dividiendo por 12: 12/204 = 1/17.",
+        [
+            ("1/16", "Usó 13/52 dos veces, como si la carta se devolviera a la baraja."),
+            ("1/4", "Se quedó con la probabilidad de la primera carta."),
+            ("33/68", "Sumó las dos probabilidades en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una universidad, el 40% de los estudiantes son de primer año y de ellos el 25% tiene beca. Del resto de los estudiantes, tiene beca el 10%. ¿Cuál es la probabilidad de que un estudiante elegido al azar tenga beca?",
+        "0,16",
+        "Los dos grupos aportan becados y hay que ponderar cada uno por su tamaño.\n\n"
+        "1) Becados de primer año: hay que pedir dos cosas a la vez, así que se multiplica: 0,4 · 0,25 = 0,1.\n"
+        "2) El resto de los estudiantes es el 60%, y sus becados: 0,6 · 0,10 = 0,06.\n"
+        "3) Un becado viene de uno u otro grupo, y no puede venir de los dos. Al ser excluyentes, se suman: 0,1 + 0,06 = 0,16.\n"
+        "4) El resultado queda entre 0,10 y 0,25, como corresponde a un promedio ponderado de ambas tasas.",
+        [
+            ("0,35", "Sumó los dos porcentajes de beca sin ponderarlos por el tamaño de cada grupo."),
+            ("0,1", "Consideró solo a los becados de primer año."),
+            ("0,025", "Multiplicó entre sí los dos porcentajes de beca."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Se lanza un dado de 6 caras. ¿Cuál es la probabilidad de obtener un múltiplo de 2 o un múltiplo de 3?",
+        "2/3",
+        "Los dos conjuntos se solapan en el 6, así que hay que aplicar la regla aditiva con cuidado.\n\n"
+        "1) Múltiplos de 2: 2, 4 y 6, o sea 3 casos.\n"
+        "2) Múltiplos de 3: 3 y 6, o sea 2 casos.\n"
+        "3) El 6 aparece en las dos listas, así que la intersección es 1 caso.\n"
+        "4) Favorables: 3 + 2 − 1 = 4. La probabilidad es 4/6 = 2/3.",
+        [
+            ("5/6", "Sumó 3 y 2 sin descontar el 6, que es múltiplo de ambos."),
+            ("1/6", "Contó solo el 6, que cumple las dos condiciones."),
+            ("1/2", "Consideró solo los múltiplos de 2."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Una urna contiene 3 bolitas rojas y 3 azules. Se sacan dos al azar, una tras otra y sin reposición. ¿Cuál es la probabilidad de que ambas sean del mismo color?",
+        "2/5",
+        "\"Del mismo color\" ocurre de dos maneras excluyentes, y hay que sumarlas.\n\n"
+        "1) Ambas rojas: (3/6) · (2/5) = 6/30 = 1/5.\n"
+        "2) Ambas azules: (3/6) · (2/5) = 1/5. Da lo mismo porque hay igual cantidad de cada color.\n"
+        "3) Los dos casos no pueden ocurrir juntos, así que se suman: 1/5 + 1/5 = 2/5.\n"
+        "4) Comprobación: la probabilidad de que sean de distinto color sería 3/5, y 2/5 + 3/5 = 1 ✓.",
+        [
+            ("1/5", "Calculó solo el caso de las dos rojas, olvidando el de las dos azules."),
+            ("3/5", "Calculó la probabilidad de que sean de distinto color."),
+            ("1/2", "Usó las probabilidades iniciales sin descontar la bolita ya extraída."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una caja hay 10 productos y 3 de ellos están defectuosos. Se revisan dos al azar, uno tras otro y sin reposición. ¿Cuál es la probabilidad de que ninguno esté defectuoso?",
+        "7/15",
+        "Se piden dos condiciones seguidas, con el contenido de la caja cambiando entre medio.\n\n"
+        "1) Productos buenos: 10 − 3 = 7. La probabilidad de que el primero esté bueno es 7/10.\n"
+        "2) Si el primero estaba bueno y no se devuelve, quedan 9 productos y 6 buenos: 6/9.\n"
+        "3) Multiplica: (7/10) · (6/9) = 42/90.\n"
+        "4) Simplifica dividiendo por 6: 42/90 = 7/15.",
+        [
+            ("49/100", "Usó 7/10 dos veces, como si el producto se devolviera a la caja."),
+            ("1/15", "Calculó la probabilidad de que ambos estén defectuosos."),
+            ("7/10", "Se quedó con la probabilidad del primer producto."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
