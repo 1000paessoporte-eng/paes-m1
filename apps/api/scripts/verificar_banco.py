@@ -296,7 +296,8 @@ COMPROBACIONES: dict[str, str] = {
     "número primo": str(Fraction(3, 6)),
     "7 fichas blancas y 5 negras": str(Fraction(5, 12)),
     "Se lanzan dos monedas. ¿Cuál": str(Fraction(1, 4)),
-    "baraja de 52 cartas": f"{4 + 13 - 1}/52",
+    # Lleva la condición porque hay varias preguntas sobre la baraja de 52.
+    "sea un as o una carta de corazones": f"{4 + 13 - 1}/52",
     "4 bolitas blancas y 6 negras": str(Fraction(4, 10) * Fraction(3, 9)),
     "llueva mañana es 0,3": str(round(1 - 0.3, 1)).replace(".", ","),
     "varianza del conjunto 2, 4, 6": str(Fraction(8, 3)),
@@ -747,6 +748,58 @@ COMPROBACIONES: dict[str, str] = {
     "sentar 5 personas en una fila, si dos de ellas": str(factorial(4) * factorial(2)),
     "una persona determinada debe estar sí o sí": str(comb(9, 2)),
     "2 hombres y 3 mujeres": str(comb(5, 2) * comb(6, 3)),
+    # --- reglas de las probabilidades: tercera tanda ---
+    # Probabilidad simple: casos favorables sobre casos posibles.
+    "3 bolitas rojas, 4 azules y 5 verdes": str(Fraction(4, 3 + 4 + 5)),
+    "obtener un número menor que 5": str(Fraction(4, 6)),
+    "12 lápices y 3 de ellos están malos": str(Fraction(3, 12)),
+    "naipe español de 40 cartas, que tiene 4 reyes": str(Fraction(4, 40)),
+    "moneda equilibrada una vez": str(Fraction(1, 2)),
+    "15 fichas numeradas del 1 al 15": str(Fraction(15 // 5, 15)),
+    "36 estudiantes, 27 aprobaron": str(Fraction(27, 36)),
+    "dado de 8 caras numeradas del 1 al 8": str(Fraction(4, 8)),
+    "tómbola hay 30 números y solo 5": str(Fraction(5, 30)),
+    "12 figuras (J, Q y K": str(Fraction(12, 52)),
+    # Suceso contrario.
+    "gane su próximo partido es 0,45": str(round(1 - 0.45, 2)).replace(".", ","),
+    "llueva mañana es 1/4": str(1 - Fraction(1, 4)),
+    # Espacio muestral de dos dados: hay que contar los 36 pares.
+    "suma de los puntos sea 7": str(
+        Fraction(sum(1 for a in range(1, 7) for b in range(1, 7) if a + b == 7), 36)
+    ),
+    "suma de los puntos sea mayor que 9": str(
+        Fraction(sum(1 for a in range(1, 7) for b in range(1, 7) if a + b > 9), 36)
+    ),
+    "obtener exactamente una cara": str(Fraction(2, 4)),
+    # Regla aditiva, con y sin intersección.
+    "sucesos excluyentes se sabe que P(A) = 0,5": str(round(0.5 + 0.4, 2)).replace(".", ","),
+    "P(A) = 0,6, P(B) = 0,5 y P(A y B) = 0,2": str(round(0.6 + 0.5 - 0.2, 2)).replace(".", ","),
+    "8 fichas numeradas del 1 al 8": str(
+        Fraction(len({n for n in range(1, 9) if n % 2 == 0} | {n for n in range(1, 9) if n > 6}), 8)
+    ),
+    "múltiplo de 2 o un múltiplo de 3": str(
+        Fraction(len({n for n in range(1, 7) if n % 2 == 0} | {n for n in range(1, 7) if n % 3 == 0}), 6)
+    ),
+    # Regla multiplicativa con independientes.
+    "se anota su color y se devuelve a la caja": str(Fraction(6, 10) ** 2),
+    "dado de 6 caras dos veces seguidas": str(Fraction(1, 6) ** 2),
+    "3% de las piezas sale defectuosa": str(round(0.03**2, 4)).replace(".", ","),
+    "independientes cumplen P(A) = 0,7": str(round(0.7 * 0.6, 2)).replace(".", ","),
+    # Sin reposición: el segundo factor se calcula sobre lo que queda.
+    "5 bolitas blancas y 7 negras": str(Fraction(5 - 1, 5 + 7 - 1)),
+    "20 estudiantes, 12 practican": str(Fraction(12, 20) * Fraction(11, 19)),
+    "13 corazones, se extraen dos cartas": str(Fraction(13, 52) * Fraction(12, 51)),
+    "10 productos y 3 de ellos están defectuosos": str(Fraction(7, 10) * Fraction(6, 9)),
+    "3 bolitas rojas y 3 azules": str(2 * Fraction(3, 6) * Fraction(2, 5)),
+    # "Al menos uno" por complemento.
+    "4 bolitas rojas y 6 azules. Se sacan dos": str(1 - Fraction(6, 10) * Fraction(5, 9)),
+    "cuatro monedas equilibradas": str(1 - Fraction(1, 2) ** 4),
+    "ganar una partida es 0,2": str(round((1 - 0.2) ** 3, 3)).replace(".", ","),
+    # Tabla de doble entrada y probabilidad condicional: cambia el universo.
+    "60 son mujeres y de ellas 40 usan lentes": str(Fraction(40, 100)),
+    "200 personas encuestadas, 120 son hombres": str(Fraction(30, 80 + 30)),
+    # Probabilidad total: ponderar cada grupo por su tamaño.
+    "40% de los estudiantes son de primer año": str(round(0.4 * 0.25 + 0.6 * 0.10, 2)).replace(".", ","),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",

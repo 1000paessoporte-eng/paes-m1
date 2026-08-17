@@ -16494,6 +16494,526 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Reglas de las probabilidades — tercera tanda.
+#
+# La tanda anterior cubrió la regla aditiva y la multiplicativa en contextos.
+# Esta agrega los tipos que seguían faltando:
+#
+# - Probabilidad a partir de una TABLA DE DOBLE ENTRADA, que es el formato en
+#   que la PAES presenta la mayoría de estos problemas.
+# - Probabilidad CONDICIONAL leída desde esos datos ("dado que ya sabemos que…").
+# - Sumas de dos dados, que exigen contar el espacio muestral antes de dividir.
+# - "Al menos uno" resuelto por complemento con más de dos ensayos.
+# - Extracciones sucesivas con y sin reposición, comparadas.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_reglas", "facil",
+        "Una urna contiene 3 bolitas rojas, 4 azules y 5 verdes. Si se saca una al azar, ¿cuál es la probabilidad de que sea azul?",
+        "1/3",
+        "Primero hay que armar el total, que el enunciado no entrega directamente.\n\n"
+        "1) Total de bolitas: 3 + 4 + 5 = 12.\n"
+        "2) Casos favorables: las 4 azules.\n"
+        "3) La probabilidad es 4/12.\n"
+        "4) Simplifica dividiendo por 4: 4/12 = 1/3.",
+        [
+            ("1/2", "Comparó las azules con las que no son azules, en vez de con el total."),
+            ("1/4", "Usó la cantidad de azules como denominador."),
+            ("2/3", "Calculó la probabilidad de que NO sea azul."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza un dado común de 6 caras. ¿Cuál es la probabilidad de obtener un número menor que 5?",
+        "2/3",
+        "Hay que contar bien cuáles cumplen la condición, sin incluir el 5.\n\n"
+        "1) Los números menores que 5 son 1, 2, 3 y 4: son 4 casos favorables.\n"
+        "2) El total de casos posibles es 6.\n"
+        "3) La probabilidad es 4/6.\n"
+        "4) Simplifica dividiendo por 2: 4/6 = 2/3.",
+        [
+            ("5/6", "Incluyó el 5 entre los favorables, cuando el enunciado pide MENOR que 5."),
+            ("1/3", "Calculó la probabilidad de obtener 5 o más."),
+            ("1/6", "Consideró un solo caso favorable."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "La probabilidad de que un equipo gane su próximo partido es 0,45. Si no hay empates, ¿cuál es la probabilidad de que no gane?",
+        "0,55",
+        "Ganar y no ganar son sucesos contrarios: cubren todo lo que puede pasar.\n\n"
+        "1) Las probabilidades de dos sucesos contrarios suman 1.\n"
+        "2) Entonces la buscada es 1 − 0,45.\n"
+        "3) Al restar: 1 − 0,45 = 0,55.",
+        [
+            ("0,45", "Repitió la probabilidad de ganar en lugar de calcular la contraria."),
+            ("0,65", "Restó a 1,1 en vez de a 1."),
+            ("1,45", "Sumó en lugar de restar, y obtuvo un valor mayor que 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una caja hay 12 lápices y 3 de ellos están malos. Si se saca uno al azar, ¿cuál es la probabilidad de que esté malo?",
+        "1/4",
+        "Se compara la cantidad de casos favorables con el total.\n\n"
+        "1) Casos favorables: los 3 lápices malos.\n"
+        "2) Total de casos: los 12 lápices de la caja.\n"
+        "3) La probabilidad es 3/12.\n"
+        "4) Simplifica dividiendo por 3: 3/12 = 1/4.",
+        [
+            ("1/3", "Comparó los malos con los buenos en lugar de con el total."),
+            ("3/4", "Calculó la probabilidad de que el lápiz esté bueno."),
+            ("1/12", "Consideró un solo lápiz favorable en vez de los 3 malos."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "De un naipe español de 40 cartas, que tiene 4 reyes, se extrae una al azar. ¿Cuál es la probabilidad de que sea un rey?",
+        "1/10",
+        "Se comparan los casos favorables con el total de cartas.\n\n"
+        "1) Casos favorables: los 4 reyes.\n"
+        "2) Total: 40 cartas.\n"
+        "3) La probabilidad es 4/40.\n"
+        "4) Simplifica dividiendo por 4: 4/40 = 1/10.",
+        [
+            ("1/4", "Usó la cantidad de reyes como denominador."),
+            ("1/40", "Consideró una sola carta favorable en vez de los 4 reyes."),
+            ("9/10", "Calculó la probabilidad de que NO sea rey."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza una moneda equilibrada una vez. ¿Cuál es la probabilidad de que salga sello?",
+        "1/2",
+        "La moneda tiene dos resultados igualmente probables.\n\n"
+        "1) Casos posibles: cara y sello, o sea 2.\n"
+        "2) Casos favorables: solo uno, el sello.\n"
+        "3) La probabilidad es 1/2, es decir, 0,5 o un 50%.",
+        [
+            ("1", "Confundió \"seguro que pasa\" con \"es uno de dos resultados\"."),
+            ("1/4", "Calculó la probabilidad de sacar sello dos veces seguidas."),
+            ("2", "Dio la cantidad de resultados posibles en lugar de la probabilidad."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una bolsa hay 15 fichas numeradas del 1 al 15. Si se saca una al azar, ¿cuál es la probabilidad de que el número sea múltiplo de 5?",
+        "1/5",
+        "Primero se cuentan los múltiplos de 5 dentro del rango.\n\n"
+        "1) Los múltiplos de 5 entre 1 y 15 son 5, 10 y 15: son 3.\n"
+        "2) El total de fichas es 15.\n"
+        "3) La probabilidad es 3/15.\n"
+        "4) Simplifica dividiendo por 3: 3/15 = 1/5.",
+        [
+            ("1/15", "Consideró un solo múltiplo en lugar de los tres."),
+            ("1/3", "Usó la cantidad de múltiplos como denominador."),
+            ("4/5", "Calculó la probabilidad de que NO sea múltiplo de 5."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En un curso de 36 estudiantes, 27 aprobaron una prueba. Si se elige uno al azar, ¿cuál es la probabilidad de que haya aprobado?",
+        "3/4",
+        "Se compara la cantidad de aprobados con el total del curso.\n\n"
+        "1) Casos favorables: 27 aprobados.\n"
+        "2) Total: 36 estudiantes.\n"
+        "3) La probabilidad es 27/36.\n"
+        "4) Simplifica dividiendo por 9: 27/36 = 3/4.",
+        [
+            ("1/4", "Calculó la probabilidad de que el estudiante haya reprobado."),
+            ("3", "Se quedó con la simplificación del numerador sin escribir la fracción."),
+            ("1/36", "Consideró un solo estudiante favorable."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "Se lanza un dado de 8 caras numeradas del 1 al 8. ¿Cuál es la probabilidad de obtener un número impar?",
+        "1/2",
+        "Se cuentan los impares dentro del rango del dado.\n\n"
+        "1) Los impares del 1 al 8 son 1, 3, 5 y 7: son 4.\n"
+        "2) El total de caras es 8.\n"
+        "3) La probabilidad es 4/8, que simplificada da 1/2.\n"
+        "4) Tiene sentido: en cualquier rango que empiece en 1 y termine en un número par, la mitad son impares.",
+        [
+            ("1/8", "Consideró una sola cara favorable en lugar de las cuatro impares."),
+            ("3/8", "Contó solo tres impares y dejó fuera uno."),
+            ("1/4", "Dividió la cantidad de impares por el doble del total."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "La probabilidad de que llueva mañana es 1/4. ¿Cuál es la probabilidad de que no llueva?",
+        "3/4",
+        "Llover y no llover son sucesos contrarios.\n\n"
+        "1) Las probabilidades de dos sucesos contrarios suman 1.\n"
+        "2) Entonces la buscada es 1 − 1/4.\n"
+        "3) Escribe el 1 como 4/4: 4/4 − 1/4 = 3/4.",
+        [
+            ("1/4", "Repitió la probabilidad de que llueva."),
+            ("1/2", "Supuso que llover y no llover son igualmente probables, ignorando el dato."),
+            ("4/3", "Invirtió la fracción en lugar de restarla de 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "En una tómbola hay 30 números y solo 5 de ellos premian. ¿Cuál es la probabilidad de ganar con un número?",
+        "1/6",
+        "Se comparan los números premiados con el total.\n\n"
+        "1) Casos favorables: los 5 números que premian.\n"
+        "2) Total: 30 números.\n"
+        "3) La probabilidad es 5/30.\n"
+        "4) Simplifica dividiendo por 5: 5/30 = 1/6.",
+        [
+            ("1/5", "Usó la cantidad de premios como denominador."),
+            ("5/6", "Calculó la probabilidad de NO ganar."),
+            ("1/30", "Consideró un solo número premiado en vez de los 5."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanzan dos dados de 6 caras. ¿Cuál es la probabilidad de que la suma de los puntos sea 7?",
+        "1/6",
+        "Hay que contar el espacio muestral completo antes de dividir.\n\n"
+        "1) Casos posibles: cada dado tiene 6 resultados, así que son 6 · 6 = 36 pares.\n"
+        "2) Casos favorables: (1,6), (2,5), (3,4), (4,3), (5,2) y (6,1). Son 6. Ojo: (3,4) y (4,3) cuentan por separado porque los dados se distinguen.\n"
+        "3) La probabilidad es 6/36.\n"
+        "4) Simplifica: 6/36 = 1/6. El 7 es la suma más probable de dos dados.",
+        [
+            ("1/12", "Contó solo 3 pares, sin considerar que cada uno se puede dar en dos órdenes."),
+            ("1/36", "Consideró un solo caso favorable."),
+            ("7/36", "Usó el valor de la suma como cantidad de casos favorables."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "De 100 personas encuestadas, 60 son mujeres y de ellas 40 usan lentes. Si se elige una persona al azar, ¿cuál es la probabilidad de que sea una mujer que usa lentes?",
+        "2/5",
+        "Se busca cuántas personas cumplen las dos condiciones a la vez.\n\n"
+        "1) Las mujeres que usan lentes son 40, un dato que el enunciado entrega directo.\n"
+        "2) El total de personas es 100.\n"
+        "3) La probabilidad es 40/100.\n"
+        "4) Simplifica dividiendo por 20: 40/100 = 2/5.",
+        [
+            ("2/3", "Comparó las mujeres con lentes solo con el grupo de mujeres, no con el total."),
+            ("3/5", "Calculó la probabilidad de elegir una mujer, sin la condición de los lentes."),
+            ("1/5", "Calculó la probabilidad de elegir una mujer que NO usa lentes."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Una caja tiene 6 bolitas rojas y 4 verdes. Se saca una, se anota su color y se devuelve a la caja; luego se saca otra. ¿Cuál es la probabilidad de que ambas sean rojas?",
+        "9/25",
+        "Al devolver la bolita, la segunda extracción ocurre en las mismas condiciones que la primera.\n\n"
+        "1) Hay 10 bolitas en total, así que la probabilidad de sacar roja es 6/10 = 3/5.\n"
+        "2) Como la bolita se devuelve, la segunda extracción también tiene probabilidad 3/5. Los sucesos son independientes.\n"
+        "3) Se piden las dos juntas, así que se multiplican: (3/5) · (3/5) = 9/25.",
+        [
+            ("1/3", "Aplicó la fórmula sin reposición, reduciendo la caja en la segunda extracción."),
+            ("6/10", "Se quedó con la probabilidad de la primera extracción."),
+            ("6/5", "Sumó las probabilidades en lugar de multiplicarlas, y obtuvo un valor mayor que 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanzan dos monedas equilibradas. ¿Cuál es la probabilidad de obtener exactamente una cara?",
+        "1/2",
+        "Conviene listar los cuatro resultados posibles, porque \"exactamente una\" excluye el caso de dos.\n\n"
+        "1) Los resultados son: cara-cara, cara-sello, sello-cara y sello-sello. Son 4.\n"
+        "2) Con exactamente una cara hay dos: cara-sello y sello-cara.\n"
+        "3) La probabilidad es 2/4 = 1/2.\n"
+        "4) Ojo con no contar cara-cara: ahí hay dos caras, no exactamente una.",
+        [
+            ("1/4", "Contó solo uno de los dos órdenes en que puede salir una única cara."),
+            ("3/4", "Calculó la probabilidad de obtener al menos una cara, que incluye el caso de dos."),
+            ("1/3", "Usó 3 resultados posibles, tratando cara-sello y sello-cara como uno solo."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Para dos sucesos excluyentes se sabe que P(A) = 0,5 y P(B) = 0,4. ¿Cuál es la probabilidad de que ocurra A o B?",
+        "0,9",
+        "Al ser excluyentes, los sucesos no pueden ocurrir juntos y no hay intersección que descontar.\n\n"
+        "1) La regla aditiva general es P(A o B) = P(A) + P(B) − P(A y B).\n"
+        "2) Como son excluyentes, P(A y B) = 0.\n"
+        "3) Entonces basta sumar: 0,5 + 0,4 = 0,9.\n"
+        "4) El resultado es menor que 1, como debe ser: queda un 0,1 en el que no ocurre ninguno.",
+        [
+            ("0,2", "Multiplicó las probabilidades, que corresponde al suceso conjunto y no a la unión."),
+            ("0,1", "Restó una probabilidad de la otra."),
+            ("0,45", "Promedió las dos probabilidades."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "De una baraja de 52 cartas, que tiene 12 figuras (J, Q y K de cada pinta), se extrae una al azar. ¿Cuál es la probabilidad de que sea una figura?",
+        "3/13",
+        "Se comparan los casos favorables con el total de cartas.\n\n"
+        "1) Casos favorables: las 12 figuras.\n"
+        "2) Total: 52 cartas.\n"
+        "3) La probabilidad es 12/52.\n"
+        "4) Simplifica dividiendo por 4: 12/52 = 3/13.",
+        [
+            ("1/13", "Consideró solo un tipo de figura en lugar de las tres."),
+            ("10/13", "Calculó la probabilidad de que NO sea figura."),
+            ("3/4", "Usó las 4 pintas como denominador en vez del total de cartas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Una urna tiene 5 bolitas blancas y 7 negras. Se saca una y no se devuelve, y resultó ser blanca. ¿Cuál es la probabilidad de que la siguiente también sea blanca?",
+        "4/11",
+        "La primera extracción ya ocurrió, así que hay que actualizar el contenido de la urna.\n\n"
+        "1) Al principio había 5 + 7 = 12 bolitas.\n"
+        "2) Salió una blanca y no se devolvió: quedan 11 bolitas y solo 4 blancas.\n"
+        "3) La probabilidad de que la siguiente sea blanca es 4/11.\n"
+        "4) Fíjate en que bajó respecto de la inicial, 5/12: sacar una blanca deja menos blancas disponibles.",
+        [
+            ("5/12", "Usó las cantidades iniciales, sin descontar la bolita ya extraída."),
+            ("5/11", "Descontó la bolita del total pero no de las blancas."),
+            ("4/12", "Descontó la bolita de las blancas pero no del total."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Se lanza un dado de 6 caras dos veces seguidas. ¿Cuál es la probabilidad de obtener un 6 en ambos lanzamientos?",
+        "1/36",
+        "Los lanzamientos son independientes: el primero no cambia lo que puede pasar en el segundo.\n\n"
+        "1) La probabilidad de obtener 6 en un lanzamiento es 1/6.\n"
+        "2) Como se piden los dos, se multiplican: (1/6) · (1/6).\n"
+        "3) El resultado es 1/36.",
+        [
+            ("1/3", "Sumó las probabilidades en lugar de multiplicarlas."),
+            ("1/12", "Multiplicó 1/6 por 1/2 en vez de por 1/6."),
+            ("1/6", "Se quedó con la probabilidad de un solo lanzamiento."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En una línea de producción, el 3% de las piezas sale defectuosa. Si se toman dos piezas al azar y de forma independiente, ¿cuál es la probabilidad de que ambas sean defectuosas?",
+        "0,0009",
+        "Se piden dos condiciones a la vez con sucesos independientes: regla multiplicativa.\n\n"
+        "1) El 3% equivale a 0,03.\n"
+        "2) Como las piezas son independientes, se multiplican: 0,03 · 0,03.\n"
+        "3) El resultado es 0,0009, o sea un 0,09%.\n"
+        "4) Tiene sentido que sea mucho menor que 0,03: exigir que las dos fallen es bastante más raro que una sola.",
+        [
+            ("0,06", "Sumó las probabilidades en lugar de multiplicarlas."),
+            ("0,09", "Multiplicó los porcentajes sin convertirlos a decimales."),
+            ("0,03", "Se quedó con la probabilidad de una sola pieza."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "De 20 estudiantes, 12 practican algún deporte. Se eligen 2 al azar y sin reposición. ¿Cuál es la probabilidad de que ambos practiquen deporte?",
+        "33/95",
+        "Sin reposición, la segunda probabilidad se calcula sobre un grupo ya reducido.\n\n"
+        "1) La probabilidad de que el primero practique deporte es 12/20 = 3/5.\n"
+        "2) Si el primero practicaba, quedan 19 estudiantes y 11 deportistas: 11/19.\n"
+        "3) Multiplica: (3/5) · (11/19) = 33/95.",
+        [
+            ("9/25", "Usó 12/20 dos veces, como si hubiera reposición."),
+            ("3/5", "Se quedó con la probabilidad de la primera elección."),
+            ("112/95", "Sumó las probabilidades en lugar de multiplicarlas, y obtuvo un valor mayor que 1."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "Dos sucesos independientes cumplen P(A) = 0,7 y P(B) = 0,6. ¿Cuál es la probabilidad de que ocurran ambos?",
+        "0,42",
+        "Para sucesos independientes, la probabilidad conjunta es el producto.\n\n"
+        "1) La regla dice P(A y B) = P(A) · P(B) cuando son independientes.\n"
+        "2) Multiplica: 0,7 · 0,6 = 0,42.\n"
+        "3) Verifica que tenga sentido: exigir dos condiciones a la vez siempre da menos que cada una por separado, y 0,42 es menor que 0,6 y que 0,7.",
+        [
+            ("1,3", "Sumó las probabilidades y obtuvo un valor mayor que 1, imposible."),
+            ("0,65", "Promedió las dos probabilidades."),
+            ("0,1", "Restó una probabilidad de la otra."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Se lanzan dos dados de 6 caras. ¿Cuál es la probabilidad de que la suma de los puntos sea mayor que 9?",
+        "1/6",
+        "Conviene contar por separado cada suma que cumple la condición.\n\n"
+        "1) Casos posibles: 6 · 6 = 36.\n"
+        "2) Suma 10: (4,6), (5,5) y (6,4), o sea 3 casos.\n"
+        "3) Suma 11: (5,6) y (6,5), o sea 2 casos.\n"
+        "4) Suma 12: solo (6,6), 1 caso.\n"
+        "5) Favorables: 3 + 2 + 1 = 6, así que la probabilidad es 6/36 = 1/6. Ojo: \"mayor que 9\" no incluye el 9.",
+        [
+            ("5/18", "Incluyó también la suma 9, cuando el enunciado pide estrictamente mayor."),
+            ("1/9", "Contó solo las combinaciones sin repetir el orden."),
+            ("3/36", "Consideró solo los casos de suma 10."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Una urna tiene 4 bolitas rojas y 6 azules. Se sacan dos al azar, una tras otra y sin reposición. ¿Cuál es la probabilidad de que al menos una sea roja?",
+        "2/3",
+        "\"Al menos una\" agrupa varios casos, y conviene ir por el contrario.\n\n"
+        "1) El suceso contrario es que ninguna sea roja, es decir, que las dos sean azules.\n"
+        "2) La primera azul: 6/10. Sin reposición, la segunda azul: 5/9.\n"
+        "3) Multiplica: (6/10) · (5/9) = 30/90 = 1/3.\n"
+        "4) La probabilidad buscada es 1 − 1/3 = 2/3.",
+        [
+            ("1/3", "Se quedó con la probabilidad de que ninguna sea roja, que es el paso intermedio."),
+            ("2/15", "Calculó la probabilidad de que ambas sean rojas."),
+            ("4/5", "Sumó las probabilidades de cada extracción, contando dos veces el caso en que ambas son rojas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De 200 personas encuestadas, 120 son hombres. Tienen auto 80 de los hombres y 30 de las mujeres. Si se elige al azar una persona que tiene auto, ¿cuál es la probabilidad de que sea mujer?",
+        "3/11",
+        "La condición \"que tiene auto\" cambia el universo: ya no son las 200 personas.\n\n"
+        "1) Total de personas con auto: 80 hombres + 30 mujeres = 110.\n"
+        "2) De esas, las mujeres con auto son 30.\n"
+        "3) Como ya sabemos que la persona tiene auto, el denominador es 110 y no 200: la probabilidad es 30/110.\n"
+        "4) Simplifica dividiendo por 10: 30/110 = 3/11.",
+        [
+            ("3/20", "Usó las 200 personas como denominador, sin restringirse a quienes tienen auto."),
+            ("3/8", "Comparó las mujeres con auto con las 80 mujeres del total en vez de con quienes tienen auto."),
+            ("8/11", "Calculó la probabilidad de que sea hombre."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Se lanzan cuatro monedas equilibradas. ¿Cuál es la probabilidad de obtener al menos una cara?",
+        "15/16",
+        "El contrario de \"al menos una cara\" es un único caso, y por eso conviene calcularlo así.\n\n"
+        "1) El suceso contrario es que las cuatro salgan sello.\n"
+        "2) Cada moneda sale sello con probabilidad 1/2 y son independientes: (1/2)⁴ = 1/16.\n"
+        "3) La probabilidad buscada es 1 − 1/16 = 15/16.\n"
+        "4) Contar directo los casos favorables exigiría sumar los de una, dos, tres y cuatro caras: mucho más largo para el mismo resultado.",
+        [
+            ("1/16", "Calculó la probabilidad de que las cuatro salgan sello, que es el caso descartado."),
+            ("1/4", "Se quedó con la probabilidad de una sola moneda elevada al cuadrado."),
+            ("4/16", "Contó solo los casos con exactamente una cara."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Para dos sucesos se sabe que P(A) = 0,6, P(B) = 0,5 y P(A y B) = 0,2. ¿Cuál es la probabilidad de que ocurra A o B?",
+        "0,9",
+        "Los sucesos se solapan, así que la regla aditiva descuenta la intersección.\n\n"
+        "1) La regla dice P(A o B) = P(A) + P(B) − P(A y B).\n"
+        "2) Reemplaza: 0,6 + 0,5 − 0,2.\n"
+        "3) Calcula: 1,1 − 0,2 = 0,9.\n"
+        "4) Fíjate en que sin descontar la intersección el resultado habría sido 1,1, un valor imposible para una probabilidad. Ese absurdo es la señal de que hay que restar.",
+        [
+            ("1,1", "Sumó las dos probabilidades sin descontar la intersección, y obtuvo un valor imposible."),
+            ("0,3", "Multiplicó las probabilidades en lugar de aplicar la regla aditiva."),
+            ("0,7", "Restó la intersección dos veces."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una caja hay 8 fichas numeradas del 1 al 8. Se saca una al azar. ¿Cuál es la probabilidad de que el número sea par o mayor que 6?",
+        "5/8",
+        "Los dos grupos se solapan, así que hay que descontar lo contado dos veces.\n\n"
+        "1) Pares: 2, 4, 6 y 8, o sea 4 fichas.\n"
+        "2) Mayores que 6: 7 y 8, o sea 2 fichas.\n"
+        "3) El 8 está en los dos grupos, así que quedó contado dos veces: la intersección es 1.\n"
+        "4) Aplica la regla aditiva: 4 + 2 − 1 = 5 fichas favorables sobre 8, o sea 5/8.",
+        [
+            ("6/8", "Sumó 4 y 2 sin descontar el 8, que cumple las dos condiciones."),
+            ("1/8", "Contó solo la ficha que cumple ambas condiciones."),
+            ("1/2", "Consideró solo las fichas pares."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En un juego, la probabilidad de ganar una partida es 0,2. Si se juegan tres partidas independientes, ¿cuál es la probabilidad de perder las tres?",
+        "0,512",
+        "Perder cada partida tiene su propia probabilidad, que sale del suceso contrario.\n\n"
+        "1) Si se gana con 0,2, se pierde con 1 − 0,2 = 0,8.\n"
+        "2) Como las partidas son independientes, se multiplican las tres: 0,8 · 0,8 · 0,8.\n"
+        "3) Calcula: 0,8 · 0,8 = 0,64, y 0,64 · 0,8 = 0,512.",
+        [
+            ("0,8", "Se quedó con la probabilidad de perder una sola partida."),
+            ("0,008", "Multiplicó las probabilidades de GANAR las tres en lugar de las de perder."),
+            ("2,4", "Multiplicó 0,8 por 3 en vez de elevarlo al cubo."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De una baraja de 52 cartas, que tiene 13 corazones, se extraen dos cartas al azar y sin reposición. ¿Cuál es la probabilidad de que ambas sean corazones?",
+        "1/17",
+        "Sin reposición, la segunda extracción ocurre sobre una baraja más chica.\n\n"
+        "1) Primera carta corazón: 13/52 = 1/4.\n"
+        "2) Si salió un corazón y no se devuelve, quedan 51 cartas y 12 corazones: 12/51.\n"
+        "3) Multiplica: (1/4) · (12/51) = 12/204.\n"
+        "4) Simplifica dividiendo por 12: 12/204 = 1/17.",
+        [
+            ("1/16", "Usó 13/52 dos veces, como si la carta se devolviera a la baraja."),
+            ("1/4", "Se quedó con la probabilidad de la primera carta."),
+            ("33/68", "Sumó las dos probabilidades en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una universidad, el 40% de los estudiantes son de primer año y de ellos el 25% tiene beca. Del resto de los estudiantes, tiene beca el 10%. ¿Cuál es la probabilidad de que un estudiante elegido al azar tenga beca?",
+        "0,16",
+        "Los dos grupos aportan becados y hay que ponderar cada uno por su tamaño.\n\n"
+        "1) Becados de primer año: hay que pedir dos cosas a la vez, así que se multiplica: 0,4 · 0,25 = 0,1.\n"
+        "2) El resto de los estudiantes es el 60%, y sus becados: 0,6 · 0,10 = 0,06.\n"
+        "3) Un becado viene de uno u otro grupo, y no puede venir de los dos. Al ser excluyentes, se suman: 0,1 + 0,06 = 0,16.\n"
+        "4) El resultado queda entre 0,10 y 0,25, como corresponde a un promedio ponderado de ambas tasas.",
+        [
+            ("0,35", "Sumó los dos porcentajes de beca sin ponderarlos por el tamaño de cada grupo."),
+            ("0,1", "Consideró solo a los becados de primer año."),
+            ("0,025", "Multiplicó entre sí los dos porcentajes de beca."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Se lanza un dado de 6 caras. ¿Cuál es la probabilidad de obtener un múltiplo de 2 o un múltiplo de 3?",
+        "2/3",
+        "Los dos conjuntos se solapan en el 6, así que hay que aplicar la regla aditiva con cuidado.\n\n"
+        "1) Múltiplos de 2: 2, 4 y 6, o sea 3 casos.\n"
+        "2) Múltiplos de 3: 3 y 6, o sea 2 casos.\n"
+        "3) El 6 aparece en las dos listas, así que la intersección es 1 caso.\n"
+        "4) Favorables: 3 + 2 − 1 = 4. La probabilidad es 4/6 = 2/3.",
+        [
+            ("5/6", "Sumó 3 y 2 sin descontar el 6, que es múltiplo de ambos."),
+            ("1/6", "Contó solo el 6, que cumple las dos condiciones."),
+            ("1/2", "Consideró solo los múltiplos de 2."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "Una urna contiene 3 bolitas rojas y 3 azules. Se sacan dos al azar, una tras otra y sin reposición. ¿Cuál es la probabilidad de que ambas sean del mismo color?",
+        "2/5",
+        "\"Del mismo color\" ocurre de dos maneras excluyentes, y hay que sumarlas.\n\n"
+        "1) Ambas rojas: (3/6) · (2/5) = 6/30 = 1/5.\n"
+        "2) Ambas azules: (3/6) · (2/5) = 1/5. Da lo mismo porque hay igual cantidad de cada color.\n"
+        "3) Los dos casos no pueden ocurrir juntos, así que se suman: 1/5 + 1/5 = 2/5.\n"
+        "4) Comprobación: la probabilidad de que sean de distinto color sería 3/5, y 2/5 + 3/5 = 1 ✓.",
+        [
+            ("1/5", "Calculó solo el caso de las dos rojas, olvidando el de las dos azules."),
+            ("3/5", "Calculó la probabilidad de que sean de distinto color."),
+            ("1/2", "Usó las probabilidades iniciales sin descontar la bolita ya extraída."),
+        ],
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "En una caja hay 10 productos y 3 de ellos están defectuosos. Se revisan dos al azar, uno tras otro y sin reposición. ¿Cuál es la probabilidad de que ninguno esté defectuoso?",
+        "7/15",
+        "Se piden dos condiciones seguidas, con el contenido de la caja cambiando entre medio.\n\n"
+        "1) Productos buenos: 10 − 3 = 7. La probabilidad de que el primero esté bueno es 7/10.\n"
+        "2) Si el primero estaba bueno y no se devuelve, quedan 9 productos y 6 buenos: 6/9.\n"
+        "3) Multiplica: (7/10) · (6/9) = 42/90.\n"
+        "4) Simplifica dividiendo por 6: 42/90 = 7/15.",
+        [
+            ("49/100", "Usó 7/10 dos veces, como si el producto se devolviera a la caja."),
+            ("1/15", "Calculó la probabilidad de que ambos estén defectuosos."),
+            ("7/10", "Se quedó con la probabilidad del primer producto."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
