@@ -611,6 +611,49 @@ COMPROBACIONES: dict[str, str] = {
     ),
     # Crecimiento que se duplica: es una potencia, no una multiplicación.
     "cultivo de bacterias se duplica cada hora": f"{200 * 2**6:,}".replace(",", "."),
+    # --- porcentaje y proporcionalidad: segunda tanda ---
+    # Porcentaje directo.
+    "el 40% de 350": str(round(350 * 0.4)),
+    "el 5% de 800": str(round(800 * 0.05)),
+    "el 75% de 200": str(round(200 * 0.75)),
+    "el 8% de 2.500": str(round(2500 * 0.08)),
+    "el 150% de 60": str(round(60 * 1.5)),
+    "grupo de 80 personas, el 25% usa lentes": str(round(80 * 0.25)),
+    "examen tiene 80 preguntas": str(round(80 * 0.65)),
+    "solución de 500 ml contiene un 12%": str(round(500 * 0.12)),
+    "propina del 10% sobre una cuenta de $24.000": f"{round(24_000 * 0.1):,}".replace(",", "."),
+    # Qué porcentaje representa una parte del total.
+    "representa 12 de un total de 48": f"{12 * 100 // 48}%",
+    "representa 45 de un total de 90": f"{45 * 100 // 90}%",
+    # Aumentos y descuentos.
+    "bebida cuesta $1.200 y sube un 10%": f"{round(1_200 * 1.1):,}".replace(",", "."),
+    "libro cuesta $15.000 y tiene un 20% de descuento": f"{round(15_000 * 0.8):,}".replace(",", "."),
+    "servicio cuesta $30.000 más IVA": f"{round(30_000 * 1.19):,}".replace(",", "."),
+    "600 asistentes a un evento, el 45% son mujeres": str(round(600 * 0.55)),
+    # Variación porcentual: siempre sobre el valor inicial.
+    "pasó de 2.400 a 3.000 habitantes": f"{round((3000 - 2400) / 2400 * 100)}%",
+    "subió de $4.000 a $5.200": f"{round((5200 - 4000) / 4000 * 100)}%",
+    # Problemas inversos: se conoce el resultado y se busca el punto de partida.
+    "El 30% de un número es 72": str(round(72 / 0.3)),
+    "aumento del 15%, un sueldo quedó en $690.000": f"{round(690_000 / 1.15):,}".replace(",", "."),
+    # Proporcionalidad directa.
+    "3 cm representan 15 km": str(8 * 15 // 3),
+    "6 kilos de pan cuestan $9.000": f"{10 * 9_000 // 6:,}".replace(",", "."),
+    "recorre 240 km con 20 litros": str(35 * 240 // 20),
+    # Proporcionalidad inversa: el producto se mantiene constante.
+    "Cuatro llaves llenan un estanque en 6 horas": str(4 * 6 // 3),
+    # Porcentajes encadenados: se multiplican los factores, nunca se suman.
+    "10% de descuento y, sobre el precio ya rebajado, otro 10%": f"{round((1 - 0.9 * 0.9) * 100)}%",
+    "el 20% del 40% de 800": str(round(800 * 0.4 * 0.2)),
+    "baja un 40% y después sube un 40%": f"{round((1 - 0.6 * 1.4) * 100)}%",
+    "el 80% de las personas prefiere té": f"{round(0.8 * 0.35 * 100)}%",
+    # El total también cambia cuando se incorpora gente.
+    "18 hombres y 12 mujeres": f"{(12 + 10) * 100 // (18 + 12 + 10)}%",
+    # Comparar dos ofertas exige calcular ambos precios finales.
+    "tienda A, que ofrece un 30% de descuento": "$"
+    + f"{36_000 - round(50_000 * 0.7):,}".replace(",", "."),
+    # Reparto proporcional: el total se parte en la suma de la razón.
+    "reparten $120.000 entre dos personas en la razón 2 : 3": f"{120_000 * 3 // 5:,}".replace(",", "."),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",

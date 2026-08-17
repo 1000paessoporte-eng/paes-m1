@@ -14979,6 +14979,457 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Porcentaje y proporcionalidad — segunda tanda.
+#
+# El nodo ya cubría bien descuentos, aumentos y variaciones sucesivas. Lo que
+# faltaba era proporcionalidad DIRECTA --el nodo solo tenía problemas de
+# proporción inversa, del tipo "más trabajadores, menos días"-- y los contextos
+# donde el porcentaje aparece a diario: IVA, propinas, concentraciones,
+# rendimiento de combustible, escalas de mapas y reparto proporcional.
+#
+# Se agrega también el porcentaje de un porcentaje y la comparación entre dos
+# ofertas, que obliga a calcular ambas antes de decidir.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 40% de 350?",
+        "140",
+        "Calcular un porcentaje es multiplicar por la fracción que representa.\n\n"
+        "1) El 40% equivale a 40/100, o sea 0,4.\n"
+        "2) Multiplica: 350 · 0,4 = 140.\n"
+        "3) Otra forma: el 10% de 350 es 35, y el 40% son cuatro veces eso: 4 · 35 = 140 ✓.",
+        [
+            ("14", "Calculó el 4% en lugar del 40%."),
+            ("875", "Dividió por el porcentaje en vez de multiplicar."),
+            ("310", "Restó 40 al total en lugar de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 5% de 800?",
+        "40",
+        "Conviene apoyarse en el 10%, que es fácil de calcular mentalmente.\n\n"
+        "1) El 10% de 800 se obtiene moviendo la coma un lugar: 80.\n"
+        "2) El 5% es la mitad del 10%: 80 ÷ 2 = 40.\n"
+        "3) Comprueba con la fórmula: 800 · 0,05 = 40 ✓.",
+        [
+            ("400", "Calculó el 50% en lugar del 5%."),
+            ("160", "Dividió 800 por 5 en vez de calcular el porcentaje."),
+            ("795", "Restó 5 al total."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Qué porcentaje representa 12 de un total de 48?",
+        "25%",
+        "Se compara la parte con el total y se lleva a base 100.\n\n"
+        "1) Escribe la fracción: 12/48.\n"
+        "2) Simplifica: 12 y 48 se dividen por 12, y queda 1/4.\n"
+        "3) Un cuarto es 25 de cada 100, así que corresponde al 25%.",
+        [
+            ("12%", "Dio la parte como si ya fuera el porcentaje."),
+            ("400%", "Dividió el total por la parte en lugar de la parte por el total."),
+            ("36%", "Restó la parte del total y usó ese número como porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Una bebida cuesta $1.200 y sube un 10%. ¿Cuál es el nuevo precio?",
+        "$1.320",
+        "Un aumento se suma al precio original.\n\n"
+        "1) Calcula el 10% de 1.200: mueve la coma un lugar y queda 120.\n"
+        "2) Súmalo al precio: 1.200 + 120 = 1.320.\n"
+        "3) Atajo: subir un 10% es multiplicar por 1,1, y 1.200 · 1,1 = 1.320 ✓.",
+        [
+            ("$1.080", "Restó el 10% en lugar de sumarlo."),
+            ("$1.210", "Sumó 10 pesos en vez del 10% del precio."),
+            ("$2.400", "Duplicó el precio, como si el aumento fuera del 100%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 75% de 200?",
+        "150",
+        "El 75% es lo mismo que tres cuartos.\n\n"
+        "1) Divide el total en cuatro partes: 200 ÷ 4 = 50.\n"
+        "2) Toma tres de esas partes: 3 · 50 = 150.\n"
+        "3) Comprueba: 200 · 0,75 = 150 ✓.",
+        [
+            ("50", "Calculó el 25% en lugar del 75%, o sea la parte que sobra."),
+            ("175", "Restó 25 al total en vez de calcular tres cuartos."),
+            ("1.500", "Se corrió un lugar al multiplicar."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Un libro cuesta $15.000 y tiene un 20% de descuento. ¿Cuánto se paga por él?",
+        "$12.000",
+        "Se puede calcular el descuento y restarlo, o ir directo a lo que se paga.\n\n"
+        "1) El 20% de 15.000 es 3.000, porque el 10% es 1.500.\n"
+        "2) Resta del precio: 15.000 − 3.000 = 12.000.\n"
+        "3) Camino directo: si se descuenta el 20%, se paga el 80%, y 15.000 · 0,8 = 12.000 ✓.",
+        [
+            ("$3.000", "Dio el monto del descuento en lugar de lo que hay que pagar."),
+            ("$18.000", "Sumó el descuento en vez de restarlo."),
+            ("$14.980", "Restó 20 pesos en lugar del 20% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Qué porcentaje representa 45 de un total de 90?",
+        "50%",
+        "Se compara la parte con el total.\n\n"
+        "1) Escribe la fracción: 45/90.\n"
+        "2) Simplifica: es exactamente la mitad, o sea 1/2.\n"
+        "3) La mitad corresponde al 50%.",
+        [
+            ("45%", "Dio la parte como si fuera el porcentaje."),
+            ("200%", "Dividió el total por la parte en lugar de al revés."),
+            ("2%", "Se quedó con el 2 del denominador de la fracción simplificada."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 8% de 2.500?",
+        "200",
+        "Conviene partir del 1%, que se obtiene dividiendo por 100.\n\n"
+        "1) El 1% de 2.500 es 25.\n"
+        "2) El 8% son ocho veces eso: 8 · 25 = 200.\n"
+        "3) Comprueba: 2.500 · 0,08 = 200 ✓.",
+        [
+            ("20", "Calculó el 0,8% en lugar del 8%."),
+            ("2.000", "Calculó el 80% en lugar del 8%."),
+            ("312,5", "Dividió 2.500 por 8 en vez de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "En un grupo de 80 personas, el 25% usa lentes. ¿Cuántas personas usan lentes?",
+        "20",
+        "El 25% es la cuarta parte del total.\n\n"
+        "1) Divide el total por 4: 80 ÷ 4 = 20.\n"
+        "2) Usan lentes 20 personas.\n"
+        "3) Comprueba: 80 · 0,25 = 20 ✓.",
+        [
+            ("60", "Calculó las personas que NO usan lentes."),
+            ("25", "Confundió el porcentaje con la cantidad de personas."),
+            ("40", "Calculó el 50% en lugar del 25%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 150% de 60?",
+        "90",
+        "Un porcentaje mayor que 100 da un resultado mayor que el número original.\n\n"
+        "1) El 150% equivale a 1,5.\n"
+        "2) Multiplica: 60 · 1,5 = 90.\n"
+        "3) Otra forma: el 100% es 60 y el 50% es 30, así que el 150% es 60 + 30 = 90 ✓.",
+        [
+            ("60", "Se quedó en el 100%, sin agregar el 50% restante."),
+            ("30", "Calculó solo el 50%."),
+            ("9.000", "Multiplicó por 150 sin dividir por 100."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "En un restaurante se deja una propina del 10% sobre una cuenta de $24.000. ¿Cuánto es la propina?",
+        "$2.400",
+        "El 10% se calcula moviendo la coma un lugar hacia la izquierda.\n\n"
+        "1) La cuenta es 24.000, así que el 10% es 2.400.\n"
+        "2) La propina es $2.400.\n"
+        "3) Comprueba: 24.000 · 0,1 = 2.400 ✓.",
+        [
+            ("$240", "Calculó el 1% en lugar del 10%."),
+            ("$26.400", "Dio el total a pagar con propina incluida, no la propina."),
+            ("$21.600", "Restó la propina de la cuenta en vez de calcularla."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El 30% de un número es 72. ¿Cuál es ese número?",
+        "240",
+        "Es el problema al revés: se conoce la parte y se busca el total.\n\n"
+        "1) Plantea la relación: 0,3 · x = 72.\n"
+        "2) Despeja dividiendo: x = 72 ÷ 0,3.\n"
+        "3) Calcula: 72 ÷ 0,3 = 240.\n"
+        "4) Comprueba: el 30% de 240 es 72 ✓. Fíjate en que el resultado tiene que ser MAYOR que 72, porque 72 es solo una parte.",
+        [
+            ("21,6", "Calculó el 30% de 72 en lugar de despejar el total."),
+            ("102", "Sumó 30 a 72."),
+            ("2,4", "Dividió por 30 en vez de por 0,3."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "La población de un pueblo pasó de 2.400 a 3.000 habitantes. ¿Cuál fue el aumento porcentual?",
+        "25%",
+        "La variación porcentual siempre se calcula sobre el valor inicial.\n\n"
+        "1) Calcula el aumento absoluto: 3.000 − 2.400 = 600 habitantes.\n"
+        "2) Compara ese aumento con la población inicial: 600/2.400.\n"
+        "3) Simplifica: 600/2.400 = 1/4, que es el 25%.\n"
+        "4) El error clásico es dividir por 3.000, la población final: eso daría 20%, que no es el aumento sino la proporción que el crecimiento representa del total nuevo.",
+        [
+            ("20%", "Dividió el aumento por la población final en lugar de por la inicial."),
+            ("600%", "Dio el aumento absoluto como si fuera un porcentaje."),
+            ("125%", "Calculó qué porcentaje es la población nueva de la vieja, no cuánto aumentó."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un examen tiene 80 preguntas y un estudiante responde correctamente el 65%. ¿Cuántas preguntas respondió bien?",
+        "52",
+        "Se calcula el porcentaje sobre el total de preguntas.\n\n"
+        "1) El 65% equivale a 0,65.\n"
+        "2) Multiplica: 80 · 0,65 = 52.\n"
+        "3) Otra forma: el 50% son 40 y el 15% son 12, y 40 + 12 = 52 ✓.",
+        [
+            ("28", "Calculó las preguntas incorrectas, que son el 35%."),
+            ("65", "Confundió el porcentaje con la cantidad de preguntas."),
+            ("15", "Restó 65 a 80."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "En un mapa, 3 cm representan 15 km reales. ¿Cuántos kilómetros representan 8 cm?",
+        "40 km",
+        "Es una proporción directa: al doble de centímetros, el doble de kilómetros.\n\n"
+        "1) Averigua cuántos kilómetros representa 1 cm: 15 ÷ 3 = 5 km.\n"
+        "2) Multiplica por los 8 cm: 8 · 5 = 40.\n"
+        "3) Representan 40 km. Comprueba la proporción: 3/15 = 8/40, porque 3 · 40 = 15 · 8 ✓.",
+        [
+            ("20 km", "Sumó la diferencia de centímetros en vez de aplicar la proporción."),
+            ("120 km", "Multiplicó los 8 cm por los 15 km sin dividir antes por 3."),
+            ("1,6 km", "Invirtió la razón y dividió en el sentido equivocado."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Si 6 kilos de pan cuestan $9.000, ¿cuánto cuestan 10 kilos al mismo precio?",
+        "$15.000",
+        "A más kilos, más dinero: es proporción directa.\n\n"
+        "1) Calcula el precio de 1 kilo: 9.000 ÷ 6 = 1.500.\n"
+        "2) Multiplica por los 10 kilos: 10 · 1.500 = 15.000.\n"
+        "3) Cuestan $15.000. Comprueba: 6/9.000 = 10/15.000 ✓.",
+        [
+            ("$13.000", "Sumó los 4 kilos extra a mil pesos cada uno, sin usar el precio real por kilo."),
+            ("$5.400", "Aplicó una proporción inversa, como si a más kilos correspondiera menos dinero."),
+            ("$90.000", "Multiplicó los 10 kilos por los 9.000 sin dividir antes por 6."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El precio de un producto subió de $4.000 a $5.200. ¿Cuál fue el aumento porcentual?",
+        "30%",
+        "El aumento se compara siempre con el precio inicial.\n\n"
+        "1) Aumento absoluto: 5.200 − 4.000 = 1.200.\n"
+        "2) Divide por el precio inicial: 1.200/4.000 = 0,3.\n"
+        "3) Eso equivale al 30%.\n"
+        "4) Comprueba: 4.000 · 1,3 = 5.200 ✓.",
+        [
+            ("23%", "Dividió el aumento por el precio final en lugar del inicial."),
+            ("130%", "Calculó qué porcentaje es el precio nuevo del viejo, no cuánto subió."),
+            ("3%", "Se equivocó en un factor 10 al dividir."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "De los 600 asistentes a un evento, el 45% son mujeres. ¿Cuántos hombres hay?",
+        "330",
+        "Conviene ir directo al porcentaje que se pregunta en vez de calcular las mujeres y restar.\n\n"
+        "1) Si el 45% son mujeres, los hombres son el 100% − 45% = 55%.\n"
+        "2) Calcula: 600 · 0,55 = 330.\n"
+        "3) Hay 330 hombres.\n"
+        "4) Comprueba por el otro camino: las mujeres son 600 · 0,45 = 270, y 600 − 270 = 330 ✓.",
+        [
+            ("270", "Calculó la cantidad de mujeres en lugar de la de hombres."),
+            ("55", "Dio el porcentaje de hombres en vez de la cantidad."),
+            ("555", "Restó 45 al total de asistentes."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Después de un aumento del 15%, un sueldo quedó en $690.000. ¿Cuánto era antes del aumento?",
+        "$600.000",
+        "El sueldo final es el 115% del original, así que hay que deshacer esa multiplicación.\n\n"
+        "1) Si subió un 15%, el nuevo sueldo es el 115% del anterior: 1,15 · x = 690.000.\n"
+        "2) Despeja dividiendo: x = 690.000 ÷ 1,15 = 600.000.\n"
+        "3) El sueldo era $600.000.\n"
+        "4) Comprueba: el 15% de 600.000 es 90.000, y 600.000 + 90.000 = 690.000 ✓. Restarle el 15% a 690.000 NO funciona: daría 586.500.",
+        [
+            ("$586.500", "Le restó el 15% al sueldo final, en vez de dividir por 1,15."),
+            ("$675.000", "Restó 15.000 pesos en lugar de deshacer el porcentaje."),
+            ("$793.500", "Le sumó otro 15% al sueldo final."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Una solución de 500 ml contiene un 12% de sal. ¿Cuántos mililitros de sal contiene?",
+        "60 ml",
+        "La concentración es un porcentaje del total de la solución.\n\n"
+        "1) El 12% equivale a 0,12.\n"
+        "2) Multiplica: 500 · 0,12 = 60.\n"
+        "3) Contiene 60 ml de sal. El resto, 440 ml, es el otro componente.",
+        [
+            ("440 ml", "Calculó el volumen que NO es sal."),
+            ("12 ml", "Confundió el porcentaje con la cantidad."),
+            ("41,7 ml", "Dividió 500 por 12 en lugar de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un auto recorre 240 km con 20 litros de bencina. Al mismo rendimiento, ¿cuántos kilómetros recorre con 35 litros?",
+        "420 km",
+        "A más bencina, más kilómetros: proporción directa.\n\n"
+        "1) Calcula el rendimiento por litro: 240 ÷ 20 = 12 km por litro.\n"
+        "2) Multiplica por los 35 litros: 35 · 12 = 420.\n"
+        "3) Recorre 420 km.",
+        [
+            ("255 km", "Sumó los 15 litros extra como si fueran kilómetros."),
+            ("137 km", "Aplicó una proporción inversa, que no corresponde acá."),
+            ("8.400 km", "Multiplicó 240 por 35 sin dividir antes por 20."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "A un producto se le aplica un 10% de descuento y, sobre el precio ya rebajado, otro 10%. ¿A qué descuento único equivalen los dos juntos?",
+        "19%",
+        "Los porcentajes sucesivos no se suman, porque el segundo se calcula sobre una base ya reducida.\n\n"
+        "1) Tras el primer descuento queda el 90% del precio, o sea un factor 0,9.\n"
+        "2) Tras el segundo queda el 90% de eso: 0,9 · 0,9 = 0,81.\n"
+        "3) Si queda el 81%, el descuento total fue del 100% − 81% = 19%.\n"
+        "4) Con un precio de $1.000: baja a $900 y después a $810, o sea $190 menos. Sumar 10 + 10 = 20% es el error típico: el segundo 10% se aplica sobre $900 y no sobre $1.000.",
+        [
+            ("20%", "Sumó los dos porcentajes, ignorando que el segundo se calcula sobre el precio ya rebajado."),
+            ("21%", "Aplicó los descuentos como si fueran aumentos."),
+            ("10%", "Aplicó un solo descuento y olvidó que eran dos."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un artículo cuesta $50.000 en la tienda A, que ofrece un 30% de descuento. En la tienda B el mismo artículo cuesta $36.000 sin descuento. ¿Dónde conviene comprarlo y por cuánto?",
+        "En la tienda A, por $1.000 menos",
+        "Hay que llevar las dos ofertas al mismo terreno: cuánto se paga finalmente en cada una.\n\n"
+        "1) Precio final en A: con 30% de descuento se paga el 70%, o sea 50.000 · 0,7 = 35.000.\n"
+        "2) Precio final en B: 36.000, sin descuento.\n"
+        "3) Compara: 35.000 es menor que 36.000.\n"
+        "4) Conviene la tienda A, y la diferencia es 36.000 − 35.000 = $1.000.",
+        [
+            ("En la tienda B, por $1.000 menos", "Comparó al revés: 35.000 es menor que 36.000, así que A es la más barata."),
+            ("En la tienda A, por $14.000 menos", "Comparó los precios de lista sin aplicarle a la tienda A su descuento."),
+            ("Cuestan lo mismo", "No calculó el precio final de A, que es 35.000 y no 36.000."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "¿Cuánto es el 20% del 40% de 800?",
+        "64",
+        "Se aplica un porcentaje sobre el resultado del otro, en orden.\n\n"
+        "1) Calcula primero el 40% de 800: 800 · 0,4 = 320.\n"
+        "2) Ahora el 20% de ese resultado: 320 · 0,2 = 64.\n"
+        "3) El resultado es 64.\n"
+        "4) Atajo: aplicar dos porcentajes seguidos es multiplicar los factores, 0,2 · 0,4 = 0,08, o sea el 8% de 800 = 64 ✓. Sumar 20 + 40 = 60% daría 480, que es otra cosa.",
+        [
+            ("480", "Sumó los dos porcentajes en lugar de aplicarlos uno sobre el otro."),
+            ("320", "Se quedó en el 40% de 800, sin aplicar el 20%."),
+            ("160", "Calculó el 20% de 800 directamente, ignorando el 40%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un curso tiene 18 hombres y 12 mujeres. Si se incorporan 10 mujeres más, ¿qué porcentaje del nuevo total son mujeres?",
+        "55%",
+        "Lo delicado es que cambia la cantidad de mujeres y también el total.\n\n"
+        "1) Mujeres después de la incorporación: 12 + 10 = 22.\n"
+        "2) Total del curso después: 18 + 22 = 40. Ojo: el total también creció, no se queda en 30.\n"
+        "3) Calcula la proporción: 22/40 = 0,55.\n"
+        "4) Corresponde al 55%.",
+        [
+            ("73,3%", "Usó el total original de 30 estudiantes en vez del nuevo total de 40."),
+            ("40%", "Se quedó con la proporción de mujeres antes de la incorporación."),
+            ("25%", "Calculó qué porcentaje representan las 10 mujeres nuevas del total final."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un servicio cuesta $30.000 más IVA. Si el IVA es del 19%, ¿cuánto se paga en total?",
+        "$35.700",
+        "El IVA se calcula sobre el precio neto y se suma.\n\n"
+        "1) Calcula el 19% de 30.000: 30.000 · 0,19 = 5.700.\n"
+        "2) Súmalo al precio neto: 30.000 + 5.700 = 35.700.\n"
+        "3) Se pagan $35.700.\n"
+        "4) Atajo: multiplicar directamente por 1,19 da el total en un paso, 30.000 · 1,19 = 35.700 ✓.",
+        [
+            ("$5.700", "Dio el monto del IVA en lugar del total a pagar."),
+            ("$24.300", "Restó el IVA en vez de sumarlo."),
+            ("$30.019", "Sumó 19 pesos en lugar del 19% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Cuatro llaves llenan un estanque en 6 horas. Trabajando al mismo ritmo, ¿cuánto demoran 3 llaves en llenarlo?",
+        "8 horas",
+        "Es proporción inversa: menos llaves, más tiempo.\n\n"
+        "1) Calcula el trabajo total en \"llaves por hora\": 4 · 6 = 24. Ese número no cambia, porque el estanque es el mismo.\n"
+        "2) Con 3 llaves, el tiempo sale de dividir: 24 ÷ 3 = 8.\n"
+        "3) Demoran 8 horas.\n"
+        "4) Comprueba que tenga sentido: con menos llaves el tiempo tiene que subir, y 8 es mayor que 6 ✓.",
+        [
+            ("4,5 horas", "Aplicó una proporción directa, que haría bajar el tiempo con menos llaves."),
+            ("18 horas", "Multiplicó las horas por las llaves que faltaban en vez de repartir el trabajo total."),
+            ("6 horas", "Supuso que el tiempo no cambia al sacar una llave."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "El precio de un producto baja un 40% y después sube un 40% sobre el precio ya rebajado. Respecto del precio inicial, ¿qué ocurre?",
+        "Baja un 16%",
+        "Los porcentajes sucesivos se multiplican, y por eso una baja seguida de una subida igual no devuelve al punto de partida.\n\n"
+        "1) Tras la baja del 40% queda el 60%, o sea un factor 0,6.\n"
+        "2) La subida del 40% multiplica por 1,4, pero sobre ese precio ya rebajado.\n"
+        "3) El factor total es 0,6 · 1,4 = 0,84, es decir, queda el 84% del precio inicial.\n"
+        "4) La baja total es 100% − 84% = 16%. Con $10.000: baja a $6.000 y sube a $8.400.\n"
+        "5) La razón de fondo: el 40% de bajada se calcula sobre el precio alto y el 40% de subida sobre el precio bajo, así que se descuenta más de lo que se recupera.",
+        [
+            ("Queda igual", "Supuso que una baja y una subida del mismo porcentaje se cancelan, pero se aplican sobre bases distintas."),
+            ("Baja un 20%", "Restó los porcentajes en lugar de multiplicar los factores."),
+            ("Sube un 16%", "Acertó con la magnitud pero invirtió el sentido del cambio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "En una encuesta, el 80% de las personas prefiere té. De quienes prefieren té, el 35% le pone azúcar. ¿Qué porcentaje del total prefiere té con azúcar?",
+        "28%",
+        "El segundo porcentaje se aplica solo sobre una parte, no sobre el total.\n\n"
+        "1) El 35% no es del total: es de quienes prefieren té, que son el 80%.\n"
+        "2) Para llevarlo al total se multiplican los dos porcentajes: 0,8 · 0,35 = 0,28.\n"
+        "3) Corresponde al 28% del total.\n"
+        "4) Compruébalo con 100 personas: 80 prefieren té, y el 35% de esas 80 son 28 ✓.",
+        [
+            ("35%", "Tomó el porcentaje como si fuera del total, cuando es solo de quienes prefieren té."),
+            ("115%", "Sumó los dos porcentajes, obteniendo un valor imposible."),
+            ("45%", "Restó los dos porcentajes."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Se reparten $120.000 entre dos personas en la razón 2 : 3. ¿Cuánto recibe quien lleva la parte mayor?",
+        "$72.000",
+        "En un reparto proporcional conviene contar primero en cuántas partes iguales se divide el total.\n\n"
+        "1) La razón 2 : 3 significa que el total se divide en 2 + 3 = 5 partes iguales.\n"
+        "2) Calcula cuánto vale una parte: 120.000 ÷ 5 = 24.000.\n"
+        "3) La parte mayor son 3 de esas partes: 3 · 24.000 = 72.000.\n"
+        "4) Recibe $72.000. Comprueba: la otra persona recibe 2 · 24.000 = 48.000, y 72.000 + 48.000 = 120.000 ✓.",
+        [
+            ("$48.000", "Calculó la parte menor en lugar de la mayor."),
+            ("$60.000", "Repartió el total en partes iguales, ignorando la razón."),
+            ("$40.000", "Dividió el total por 3 en vez de por las 5 partes de la razón."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
