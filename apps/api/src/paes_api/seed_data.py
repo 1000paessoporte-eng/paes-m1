@@ -14549,6 +14549,436 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Potencias y raíces enésimas — segunda tanda.
+#
+# El temario DEMRE pide tres cosas acá: "propiedades de las potencias de base
+# RACIONAL y exponente RACIONAL", "descomposición y propiedades de las RAÍCES
+# ENÉSIMAS en los números reales", y problemas "en diversos contextos".
+#
+# Las 40 preguntas que ya existían trabajaban solo potencias de base entera y
+# exponente entero, y todas las raíces eran cuadradas. Faltaba por completo lo
+# que el temario nombra de forma explícita: bases fraccionarias, exponentes
+# fraccionarios y raíces de índice distinto de 2. Esta tanda lo cubre.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (2/3)²?",
+        "4/9",
+        "Cuando la base es una fracción, el exponente afecta al numerador y al denominador por igual.\n\n"
+        "1) Eleva el numerador: 2² = 4.\n"
+        "2) Eleva el denominador: 3² = 9.\n"
+        "3) El resultado es 4/9.\n"
+        "4) Fíjate en que el resultado es menor que la fracción original: elevar al cuadrado un número entre 0 y 1 siempre lo achica.",
+        [
+            ("4/3", "Elevó solo el numerador y dejó el denominador intacto."),
+            ("2/9", "Elevó solo el denominador."),
+            ("4/6", "Multiplicó el denominador por 2 en vez de elevarlo al cuadrado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de ∛27?",
+        "3",
+        "La raíz cúbica busca el número que multiplicado tres veces por sí mismo da el radicando.\n\n"
+        "1) Pregúntate: ¿qué número al cubo da 27?\n"
+        "2) Prueba: 2³ = 8, muy poco; 3³ = 3 · 3 · 3 = 27, exacto.\n"
+        "3) Entonces ∛27 = 3.",
+        [
+            ("9", "Dividió 27 por 3 en lugar de buscar la raíz cúbica."),
+            ("27", "Dejó el número igual sin aplicar la raíz."),
+            ("5,2", "Calculó la raíz cuadrada de 27 en vez de la cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de ∛64?",
+        "4",
+        "Se busca el número que elevado al cubo da 64.\n\n"
+        "1) Prueba con 3: 3³ = 27, poco.\n"
+        "2) Prueba con 4: 4³ = 4 · 4 · 4 = 64, exacto.\n"
+        "3) Entonces ∛64 = 4.\n"
+        "4) Ojo con no confundirla con la raíz cuadrada: √64 es 8, no 4.",
+        [
+            ("8", "Calculó la raíz cuadrada de 64 en lugar de la cúbica."),
+            ("16", "Dividió 64 por 4 en vez de buscar la raíz cúbica."),
+            ("21,3", "Dividió 64 por 3, confundiendo el índice de la raíz con un divisor."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (1/2)⁻¹?",
+        "2",
+        "Un exponente negativo indica que hay que dar vuelta la fracción.\n\n"
+        "1) La regla es que elevar a −1 equivale a invertir la base.\n"
+        "2) Invierte 1/2: queda 2/1.\n"
+        "3) El resultado es 2.",
+        [
+            ("1/2", "Dejó la fracción igual, sin aplicar el exponente negativo."),
+            ("−2", "Le pasó el signo negativo al resultado; el exponente negativo invierte, no cambia de signo."),
+            ("1/4", "Elevó al cuadrado en lugar de invertir."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 6³?",
+        "216",
+        "El exponente indica cuántas veces se multiplica la base por sí misma.\n\n"
+        "1) Escribe la multiplicación: 6 · 6 · 6.\n"
+        "2) Primero 6 · 6 = 36.\n"
+        "3) Después 36 · 6 = 216.",
+        [
+            ("18", "Multiplicó la base por el exponente en lugar de elevarla."),
+            ("36", "Se quedó en 6², multiplicando solo dos veces."),
+            ("666", "Escribió la base tres veces en lugar de multiplicarla."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de √225?",
+        "15",
+        "Se busca el número que elevado al cuadrado da 225.\n\n"
+        "1) Como 10² = 100 y 20² = 400, la respuesta está entre 10 y 20.\n"
+        "2) Termina en 5, así que conviene probar 15: 15 · 15 = 225.\n"
+        "3) Entonces √225 = 15.",
+        [
+            ("112,5", "Dividió 225 por 2 en lugar de sacar la raíz."),
+            ("25", "Confundió el resultado con la raíz de 625."),
+            ("45", "Multiplicó por 0,2 en vez de buscar el número que al cuadrado da 225."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (3/5)²?",
+        "9/25",
+        "El exponente se aplica arriba y abajo.\n\n"
+        "1) Numerador: 3² = 9.\n"
+        "2) Denominador: 5² = 25.\n"
+        "3) El resultado es 9/25.",
+        [
+            ("6/10", "Multiplicó numerador y denominador por 2 en vez de elevarlos al cuadrado."),
+            ("9/5", "Elevó solo el numerador."),
+            ("3/25", "Elevó solo el denominador."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "Una caja cúbica tiene un volumen de 343 cm³. ¿Cuánto mide su arista?",
+        "7 cm",
+        "El volumen de un cubo es la arista elevada al cubo, así que la arista es la raíz cúbica del volumen.\n\n"
+        "1) Plantea: arista³ = 343.\n"
+        "2) Prueba valores: 6³ = 216, poco; 7³ = 343, exacto.\n"
+        "3) La arista mide 7 cm.\n"
+        "4) Comprueba: 7 · 7 · 7 = 343 ✓.",
+        [
+            ("18,5 cm", "Sacó la raíz cuadrada del volumen en lugar de la cúbica."),
+            ("114,3 cm", "Dividió el volumen por 3, confundiendo el índice con un divisor."),
+            ("49 cm", "Se quedó en 7², un paso antes de la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 4⁻¹?",
+        "1/4",
+        "Un exponente −1 convierte el número en su inverso.\n\n"
+        "1) La regla general es que a⁻ⁿ equivale a 1 dividido por aⁿ.\n"
+        "2) Aquí: 4⁻¹ = 1/4¹ = 1/4.\n"
+        "3) El resultado es 1/4.",
+        [
+            ("−4", "Le pasó el signo negativo al resultado; el exponente negativo invierte, no cambia de signo."),
+            ("−1/4", "Invirtió correctamente pero además le agregó un signo negativo."),
+            ("4", "Ignoró el exponente negativo."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 8^(1/3)?",
+        "2",
+        "Un exponente fraccionario con 1 en el numerador es exactamente una raíz.\n\n"
+        "1) La regla es que a^(1/n) equivale a la raíz enésima de a.\n"
+        "2) Aquí el denominador del exponente es 3, así que 8^(1/3) es la raíz cúbica de 8.\n"
+        "3) Busca el número que al cubo da 8: 2³ = 8.\n"
+        "4) El resultado es 2.",
+        [
+            ("8/3", "Multiplicó la base por la fracción en lugar de interpretarla como raíz."),
+            ("2,83", "Calculó la raíz cuadrada de 8 en lugar de la cúbica."),
+            ("24", "Multiplicó 8 por 3 en vez de sacar la raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 16^(1/2)?",
+        "4",
+        "El exponente 1/2 es la raíz cuadrada escrita de otra forma.\n\n"
+        "1) Por la regla a^(1/n) = raíz enésima de a, y acá n = 2.\n"
+        "2) Entonces 16^(1/2) = √16.\n"
+        "3) Busca el número que al cuadrado da 16: 4 · 4 = 16.\n"
+        "4) El resultado es 4.",
+        [
+            ("8", "Dividió 16 por 2 en lugar de sacar la raíz."),
+            ("256", "Elevó 16 al cuadrado en vez de sacar la raíz."),
+            ("32", "Multiplicó 16 por 2."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (2/5)⁻²?",
+        "25/4",
+        "Hay dos cosas que hacer: invertir por el signo del exponente y elevar por su valor.\n\n"
+        "1) El exponente negativo invierte la base: (2/5)⁻² pasa a (5/2)².\n"
+        "2) Ahora eleva arriba y abajo: 5² = 25 y 2² = 4.\n"
+        "3) El resultado es 25/4.\n"
+        "4) Tiene sentido que sea mayor que 1: elevar a un exponente negativo una fracción menor que 1 da un número mayor que 1.",
+        [
+            ("4/25", "Elevó al cuadrado sin invertir antes la base."),
+            ("−4/25", "Le pasó el signo del exponente al resultado en vez de invertir."),
+            ("5/2", "Invirtió la base pero olvidó aplicar el exponente 2."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de ∛(8 · 27)?",
+        "6",
+        "La raíz de un producto se puede separar en el producto de las raíces, y eso simplifica mucho el cálculo.\n\n"
+        "1) La propiedad dice que ∛(a · b) = ∛a · ∛b.\n"
+        "2) Aplícala: ∛8 · ∛27.\n"
+        "3) Calcula cada una: ∛8 = 2 y ∛27 = 3.\n"
+        "4) Multiplica: 2 · 3 = 6. También sale multiplicando primero (8 · 27 = 216) y sacando ∛216 = 6, pero separar es más rápido.",
+        [
+            ("216", "Multiplicó dentro de la raíz pero no la aplicó."),
+            ("5", "Sumó las raíces en lugar de multiplicarlas."),
+            ("14,7", "Calculó la raíz cuadrada de 216 en vez de la cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √12 · √3?",
+        "6",
+        "El producto de dos raíces del mismo índice es la raíz del producto.\n\n"
+        "1) La propiedad dice que √a · √b = √(a · b).\n"
+        "2) Aplícala: √12 · √3 = √36.\n"
+        "3) Calcula: √36 = 6.\n"
+        "4) El resultado es un número entero, aunque ninguna de las dos raíces por separado lo fuera.",
+        [
+            ("√36", "Dejó la respuesta a medio camino sin calcular la raíz."),
+            ("15", "Sumó los números dentro de las raíces en lugar de multiplicarlos."),
+            ("√15", "Sumó los radicandos y además dejó la raíz sin resolver."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √200 en su forma más simple?",
+        "10√2",
+        "Se descompone el radicando buscando el mayor cuadrado perfecto que lo divida.\n\n"
+        "1) Busca un cuadrado perfecto que divida a 200: sirve 100, porque 200 = 100 · 2.\n"
+        "2) Separa la raíz: √200 = √100 · √2.\n"
+        "3) Calcula la parte exacta: √100 = 10.\n"
+        "4) Queda 10√2. Usar 4 en vez de 100 también funciona pero deja 2√50, que todavía se puede simplificar.",
+        [
+            ("2√50", "Descompuso con un cuadrado perfecto pequeño y el resultado quedó sin simplificar del todo."),
+            ("20√2", "Se equivocó al calcular √100."),
+            ("100√2", "Sacó el 100 de la raíz sin aplicarle la raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (2/3)³ · (3/2)²?",
+        "2/3",
+        "Conviene resolver cada potencia por separado y después multiplicar.\n\n"
+        "1) Primera potencia: (2/3)³ = 8/27.\n"
+        "2) Segunda: (3/2)² = 9/4.\n"
+        "3) Multiplica: (8 · 9)/(27 · 4) = 72/108.\n"
+        "4) Simplifica dividiendo ambos por 36: 72/108 = 2/3.\n"
+        "5) Atajo: como las bases son inversas, (3/2)² es lo mismo que (2/3)⁻², así que todo se reduce a (2/3)³⁻² = (2/3)¹.",
+        [
+            ("3/2", "Invirtió el resultado final."),
+            ("8/27", "Se quedó en la primera potencia sin multiplicar por la segunda."),
+            ("4/9", "Restó los exponentes al revés y obtuvo (2/3)²."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de ∛(−125)?",
+        "−5",
+        "A diferencia de las raíces cuadradas, las de índice impar sí aceptan radicandos negativos.\n\n"
+        "1) Busca el número que al cubo da −125.\n"
+        "2) Prueba con −5: (−5) · (−5) · (−5). Los dos primeros dan 25, y al multiplicar por el tercer −5 queda −125.\n"
+        "3) Entonces ∛(−125) = −5.\n"
+        "4) La razón de fondo: al elevar al cubo, un número negativo sigue siendo negativo, porque el exponente impar conserva el signo.",
+        [
+            ("5", "Perdió el signo negativo; un cubo negativo viene de una base negativa."),
+            ("No existe", "Eso es cierto para las raíces de índice par, pero no para las impares."),
+            ("−25", "Dividió 125 por 5 en lugar de sacar la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 9^(3/2)?",
+        "27",
+        "En un exponente fraccionario, el denominador es el índice de la raíz y el numerador la potencia.\n\n"
+        "1) La regla es a^(m/n) = (raíz enésima de a) elevada a m.\n"
+        "2) Aquí el denominador es 2, así que primero √9 = 3.\n"
+        "3) El numerador es 3, así que ahora eleva: 3³ = 27.\n"
+        "4) El resultado es 27. Conviene sacar la raíz primero: elevar 9 al cubo daría 729 y habría que sacarle raíz igual, con números mucho más grandes.",
+        [
+            ("13,5", "Multiplicó 9 por la fracción 3/2 en lugar de interpretarla como raíz y potencia."),
+            ("729", "Elevó al cubo pero no aplicó la raíz cuadrada."),
+            ("3", "Se quedó en la raíz sin aplicar después el exponente 3."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √48 en su forma más simple?",
+        "4√3",
+        "Se descompone buscando el mayor cuadrado perfecto que divida al radicando.\n\n"
+        "1) Los cuadrados perfectos que dividen a 48 son 4 y 16. Conviene el mayor: 48 = 16 · 3.\n"
+        "2) Separa: √48 = √16 · √3.\n"
+        "3) Calcula la parte exacta: √16 = 4.\n"
+        "4) Queda 4√3.",
+        [
+            ("2√12", "Usó 4 como cuadrado perfecto y el resultado quedó sin simplificar del todo."),
+            ("16√3", "Sacó el 16 de la raíz sin aplicarle la raíz."),
+            ("4√12", "Aplicó la raíz al 16 pero dejó el 48 completo dentro."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de 27^(2/3)?",
+        "9",
+        "El denominador del exponente indica la raíz y el numerador la potencia.\n\n"
+        "1) Denominador 3: saca la raíz cúbica de 27, que es 3.\n"
+        "2) Numerador 2: eleva ese resultado al cuadrado, 3² = 9.\n"
+        "3) El resultado es 9.\n"
+        "4) El orden se puede invertir (27² = 729 y ∛729 = 9), pero sacar la raíz primero mantiene los números chicos.",
+        [
+            ("18", "Multiplicó 27 por la fracción 2/3 en lugar de interpretarla como raíz y potencia."),
+            ("729", "Elevó al cuadrado y no aplicó la raíz cúbica."),
+            ("3", "Se quedó en la raíz cúbica sin elevar al cuadrado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de (√5)⁴?",
+        "25",
+        "Elevar una raíz a una potencia par deja un resultado entero.\n\n"
+        "1) Escribe la raíz como potencia: √5 = 5^(1/2).\n"
+        "2) Al elevar una potencia a otra, los exponentes se multiplican: (5^(1/2))⁴ = 5^(4/2) = 5².\n"
+        "3) Calcula: 5² = 25.\n"
+        "4) También se ve agrupando: (√5)⁴ = (√5 · √5) · (√5 · √5) = 5 · 5 = 25.",
+        [
+            ("20", "Multiplicó 5 por 4 en lugar de aplicar el exponente."),
+            ("5", "Se quedó en (√5)², que es solo la mitad del exponente."),
+            ("625", "Elevó 5 a la cuarta sin considerar que la base era una raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √75 + √27?",
+        "8√3",
+        "Dos raíces solo se pueden sumar si quedan con el mismo radicando, así que primero hay que simplificarlas.\n\n"
+        "1) Descompón la primera: 75 = 25 · 3, así que √75 = 5√3.\n"
+        "2) Descompón la segunda: 27 = 9 · 3, así que √27 = 3√3.\n"
+        "3) Ahora las dos tienen √3, así que se suman los coeficientes: 5√3 + 3√3 = 8√3.\n"
+        "4) Ojo con el error clásico: √75 + √27 NO es √102. Las raíces no se suman por dentro.",
+        [
+            ("√102", "Sumó los radicandos, que no es una propiedad válida de las raíces."),
+            ("15√3", "Multiplicó los coeficientes en lugar de sumarlos."),
+            ("8√6", "Sumó bien los coeficientes pero también sumó los radicandos."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Si (1/2)ˣ = 1/32, ¿cuál es el valor de x?",
+        "5",
+        "Conviene escribir el lado derecho como una potencia de la misma base.\n\n"
+        "1) La base es 1/2, así que hay que expresar 1/32 como potencia de 1/2.\n"
+        "2) Prueba: (1/2)² = 1/4, (1/2)³ = 1/8, (1/2)⁴ = 1/16, (1/2)⁵ = 1/32.\n"
+        "3) Como las bases son iguales, los exponentes también lo son: x = 5.\n"
+        "4) Comprueba: (1/2)⁵ = 1/32 ✓.",
+        [
+            ("−5", "Confundió la base 1/2 con 2 y le cambió el signo al exponente."),
+            ("32", "Dio el denominador del resultado en vez del exponente."),
+            ("16", "Se quedó un paso antes, en (1/2)⁴."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de ∛(1/8)?",
+        "1/2",
+        "La raíz de una fracción se aplica arriba y abajo por separado.\n\n"
+        "1) La propiedad dice que la raíz de un cociente es el cociente de las raíces.\n"
+        "2) Numerador: ∛1 = 1.\n"
+        "3) Denominador: ∛8 = 2.\n"
+        "4) El resultado es 1/2. Comprueba: (1/2)³ = 1/8 ✓.",
+        [
+            ("1/4", "Sacó la raíz cuadrada del denominador en lugar de la cúbica."),
+            ("2", "Invirtió la fracción del resultado."),
+            ("1/24", "Multiplicó el denominador por 3 en vez de sacarle la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de (2³ · 2⁻⁵)⁻¹?",
+        "4",
+        "Se simplifica primero lo de adentro del paréntesis y después se aplica el exponente exterior.\n\n"
+        "1) Al multiplicar potencias de igual base, los exponentes se suman: 2³ · 2⁻⁵ = 2^(3 + (−5)) = 2⁻².\n"
+        "2) Ahora el exponente exterior: al elevar una potencia a otra, los exponentes se multiplican. (2⁻²)⁻¹ = 2^((−2) · (−1)) = 2².\n"
+        "3) Calcula: 2² = 4.",
+        [
+            ("1/4", "Se quedó en 2⁻² sin aplicar el exponente exterior."),
+            ("−4", "Le pasó al resultado el signo del exponente."),
+            ("256", "Sumó los exponentes como si ambos fueran positivos, y además ignoró el exponente exterior."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Un cultivo de bacterias se duplica cada hora. Si parte con 200 bacterias, ¿cuántas habrá después de 6 horas?",
+        "12.800",
+        "Duplicarse repetidamente es una potencia de 2, no una multiplicación por 2.\n\n"
+        "1) Cada hora la cantidad se multiplica por 2, así que después de 6 horas se multiplicó 6 veces: 2⁶.\n"
+        "2) Calcula: 2⁶ = 64.\n"
+        "3) Multiplica por la cantidad inicial: 200 · 64 = 12.800.\n"
+        "4) Habrá 12.800 bacterias. El error clásico es multiplicar 200 · 2 · 6 = 2.400, que sería un crecimiento constante y no uno que se duplica.",
+        [
+            ("2.400", "Multiplicó por 2 y por 6, como si el crecimiento fuera constante y no una duplicación."),
+            ("1.200", "Multiplicó las 200 bacterias por las 6 horas."),
+            ("64", "Se quedó en 2⁶ sin considerar las 200 bacterias iniciales."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √(2⁸)?",
+        "16",
+        "Conviene usar la propiedad de la potencia de una potencia en vez de calcular 2⁸.\n\n"
+        "1) Escribe la raíz como exponente 1/2: √(2⁸) = (2⁸)^(1/2).\n"
+        "2) Al elevar una potencia a otra, los exponentes se multiplican: 2^(8 · 1/2) = 2⁴.\n"
+        "3) Calcula: 2⁴ = 16.\n"
+        "4) Regla práctica: sacar la raíz cuadrada de una potencia equivale a dividir su exponente por 2.",
+        [
+            ("256", "Calculó 2⁸ pero no le aplicó la raíz."),
+            ("4", "Dividió el exponente por 4 en lugar de por 2."),
+            ("128", "Le restó 1 al exponente en vez de dividirlo por 2: calculó 2⁷."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de 16^(3/4)?",
+        "8",
+        "El denominador del exponente da el índice de la raíz y el numerador la potencia.\n\n"
+        "1) Denominador 4: saca la raíz cuarta de 16, o sea el número que elevado a 4 da 16. Es 2, porque 2⁴ = 16.\n"
+        "2) Numerador 3: eleva ese resultado al cubo, 2³ = 8.\n"
+        "3) El resultado es 8.\n"
+        "4) Hacerlo al revés da lo mismo pero con números enormes: 16³ = 4.096, y la raíz cuarta de 4.096 es 8.",
+        [
+            ("12", "Multiplicó 16 por la fracción 3/4 en lugar de interpretarla como raíz y potencia."),
+            ("4.096", "Elevó al cubo y no aplicó la raíz cuarta."),
+            ("2", "Se quedó en la raíz cuarta sin elevar al cubo."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora

@@ -573,6 +573,44 @@ COMPROBACIONES: dict[str, str] = {
     "resultado de 2 − (−3/4) ÷ (3/2)": str(2 - Fraction(-3, 4) / Fraction(3, 2)),
     "punto medio entre −5/6 y 1/3": str((Fraction(-5, 6) + Fraction(1, 3)) / 2),
     "deuda de $120.000 ya se han pagado 3/8": f"{120_000 * 5 // 8:,}".replace(",", "."),
+    # --- potencias y raíces: segunda tanda ---
+    # Base racional: el exponente afecta a numerador y denominador por igual.
+    "valor de (2/3)²": str(Fraction(2, 3) ** 2),
+    "valor de (3/5)²": str(Fraction(3, 5) ** 2),
+    "valor de (1/2)⁻¹": str(Fraction(1, 2) ** -1),
+    "valor de 4⁻¹": str(Fraction(1, 4)),
+    "valor de (2/5)⁻²": str(Fraction(2, 5) ** -2),
+    "valor de (2/3)³ · (3/2)²": str(Fraction(2, 3) ** 3 * Fraction(3, 2) ** 2),
+    # Raíces enésimas. round() porque la potencia fraccionaria en float no cae exacta.
+    "valor de ∛27": str(round(27 ** (1 / 3))),
+    "valor de ∛64": str(round(64 ** (1 / 3))),
+    "valor de ∛(8 · 27)": str(round((8 * 27) ** (1 / 3))),
+    "valor de ∛(−125)": str(-round(125 ** (1 / 3))),
+    "valor de ∛(1/8)": str(Fraction(1, round(8 ** (1 / 3)))),
+    "caja cúbica tiene un volumen de 343 cm³": str(round(343 ** (1 / 3))),
+    # Exponente racional: el denominador es el índice y el numerador la potencia.
+    "valor de 8^(1/3)": str(round(8 ** (1 / 3))),
+    "valor de 16^(1/2)": str(round(16**0.5)),
+    "valor de 9^(3/2)": str(round(9**0.5) ** 3),
+    "valor de 27^(2/3)": str(round(27 ** (1 / 3)) ** 2),
+    "valor de 16^(3/4)": str(round(16**0.25) ** 3),
+    # Potencias y raíces de base entera.
+    "valor de 6³": str(6**3),
+    "valor de √225": str(round(225**0.5)),
+    "valor de (√5)⁴": str(5 ** (4 // 2)),
+    "valor de √(2⁸)": str(2 ** (8 // 2)),
+    "valor de (2³ · 2⁻⁵)⁻¹": str(2 ** -(3 - 5)),
+    # Propiedades de las raíces: producto, descomposición y suma de semejantes.
+    "valor de √12 · √3": str(round((12 * 3) ** 0.5)),
+    "valor de √200 en su forma más simple": f"{round((200 // 2) ** 0.5)}√2",
+    "valor de √48 en su forma más simple": f"{round((48 // 3) ** 0.5)}√3",
+    "valor de √75 + √27": f"{round((75 // 3) ** 0.5) + round((27 // 3) ** 0.5)}√3",
+    # Ecuación exponencial con base fraccionaria.
+    "Si (1/2)ˣ = 1/32": str(
+        next(x for x in range(1, 12) if Fraction(1, 2) ** x == Fraction(1, 32))
+    ),
+    # Crecimiento que se duplica: es una potencia, no una multiplicación.
+    "cultivo de bacterias se duplica cada hora": f"{200 * 2**6:,}".replace(",", "."),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
