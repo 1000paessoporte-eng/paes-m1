@@ -534,6 +534,126 @@ COMPROBACIONES: dict[str, str] = {
     "duplica el radio de un cilindro": f"Por {2**2}",
     "duplican el largo, el ancho y el alto": f"Por {2**3}",
     "arista de un cubo aumenta en un 50%": str(round((1.5**3 - 1) * 100, 1)).replace(".", ","),
+    # --- enteros y racionales: segunda tanda ---
+    # Operatoria con enteros negativos, que es lo que el nodo no cubría.
+    "temperatura en una ciudad era de −3 °C": str(-3 - 5),
+    "resultado de −7 + 12": str(-7 + 12),
+    "resultado de −4 · (−6)": str(-4 * -6),
+    "resultado de −20 ÷ 5": str(-20 // 5),
+    # 8 − (−3) se resuelve como 8 + 3: restar un negativo suma.
+    "resultado de 8 − (−3)": str(8 + 3),
+    "buzo se encuentra a 12 metros bajo": str(-12 + 5),
+    "resultado de −6 + 4 − (−9)": str(-6 + 4 + 9),
+    "resultado de (−3)² − (−3)": str((-3) ** 2 + 3),
+    "saldo de −45.000 pesos": f"{-45_000 + 70_000:,}".replace(",", "."),
+    "resultado de (−5) · 3 + 20 ÷ (−4)": str(-5 * 3 + 20 // -4),
+    "pasó de −8 °C en la madrugada a 6 °C": str(6 + 8),
+    "resultado de −3 · (5 − 8) + (−4)²": str(-3 * (5 - 8) + (-4) ** 2),
+    "termómetro marcaba −6 °C a las 6": str(-6 + (11 - 6) * 2),
+    # Orden: con negativos la comparación se invierte respecto de los valores.
+    "es el menor: −5, −12, 3 o 0": str(min(-5, -12, 3, 0)),
+    "mayor: −2/3 o −3/5": str(max(Fraction(-2, 3), Fraction(-3, 5))),
+    "Ordena de menor a mayor las fracciones −1/2": ", ".join(
+        str(f) for f in sorted([Fraction(-1, 2), Fraction(-3, 4), Fraction(1, 4)])
+    ),
+    "Ordena de menor a mayor los números −0,6": ", ".join(
+        t for _, t in sorted([(Fraction(-2, 3), "-2/3"), (Fraction(-3, 5), "-0,6"), (Fraction(-29, 50), "-0,58")])
+    ),
+    "¿Cuántos números enteros hay entre −4 y 3": str(len(range(-4 + 1, 3))),
+    # Paso de decimal a fracción irreducible.
+    "0,75 como fracción irreducible": str(Fraction(75, 100)),
+    "0,375 como fracción irreducible": str(Fraction(375, 1000)),
+    "resultado de 1,25 + 3/4": str(Fraction(125, 100) + Fraction(3, 4)),
+    # Operatoria con fracciones, incluidas las negativas.
+    "resultado de 3/5 + 1/10": str(Fraction(3, 5) + Fraction(1, 10)),
+    "resultado de 2/9 × 3/8": str(Fraction(2, 9) * Fraction(3, 8)),
+    "resultado de −2/3 + 1/6": str(Fraction(-2, 3) + Fraction(1, 6)),
+    "resultado de (−2/5) ÷ (4/15)": str(Fraction(-2, 5) / Fraction(4, 15)),
+    "resultado de (−1/2)³ + 1/4": str(Fraction(-1, 2) ** 3 + Fraction(1, 4)),
+    "resultado de 2 − (−3/4) ÷ (3/2)": str(2 - Fraction(-3, 4) / Fraction(3, 2)),
+    "punto medio entre −5/6 y 1/3": str((Fraction(-5, 6) + Fraction(1, 3)) / 2),
+    "deuda de $120.000 ya se han pagado 3/8": f"{120_000 * 5 // 8:,}".replace(",", "."),
+    # --- potencias y raíces: segunda tanda ---
+    # Base racional: el exponente afecta a numerador y denominador por igual.
+    "valor de (2/3)²": str(Fraction(2, 3) ** 2),
+    "valor de (3/5)²": str(Fraction(3, 5) ** 2),
+    "valor de (1/2)⁻¹": str(Fraction(1, 2) ** -1),
+    "valor de 4⁻¹": str(Fraction(1, 4)),
+    "valor de (2/5)⁻²": str(Fraction(2, 5) ** -2),
+    "valor de (2/3)³ · (3/2)²": str(Fraction(2, 3) ** 3 * Fraction(3, 2) ** 2),
+    # Raíces enésimas. round() porque la potencia fraccionaria en float no cae exacta.
+    "valor de ∛27": str(round(27 ** (1 / 3))),
+    "valor de ∛64": str(round(64 ** (1 / 3))),
+    "valor de ∛(8 · 27)": str(round((8 * 27) ** (1 / 3))),
+    "valor de ∛(−125)": str(-round(125 ** (1 / 3))),
+    "valor de ∛(1/8)": str(Fraction(1, round(8 ** (1 / 3)))),
+    "caja cúbica tiene un volumen de 343 cm³": str(round(343 ** (1 / 3))),
+    # Exponente racional: el denominador es el índice y el numerador la potencia.
+    "valor de 8^(1/3)": str(round(8 ** (1 / 3))),
+    "valor de 16^(1/2)": str(round(16**0.5)),
+    "valor de 9^(3/2)": str(round(9**0.5) ** 3),
+    "valor de 27^(2/3)": str(round(27 ** (1 / 3)) ** 2),
+    "valor de 16^(3/4)": str(round(16**0.25) ** 3),
+    # Potencias y raíces de base entera.
+    "valor de 6³": str(6**3),
+    "valor de √225": str(round(225**0.5)),
+    "valor de (√5)⁴": str(5 ** (4 // 2)),
+    "valor de √(2⁸)": str(2 ** (8 // 2)),
+    "valor de (2³ · 2⁻⁵)⁻¹": str(2 ** -(3 - 5)),
+    # Propiedades de las raíces: producto, descomposición y suma de semejantes.
+    "valor de √12 · √3": str(round((12 * 3) ** 0.5)),
+    "valor de √200 en su forma más simple": f"{round((200 // 2) ** 0.5)}√2",
+    "valor de √48 en su forma más simple": f"{round((48 // 3) ** 0.5)}√3",
+    "valor de √75 + √27": f"{round((75 // 3) ** 0.5) + round((27 // 3) ** 0.5)}√3",
+    # Ecuación exponencial con base fraccionaria.
+    "Si (1/2)ˣ = 1/32": str(
+        next(x for x in range(1, 12) if Fraction(1, 2) ** x == Fraction(1, 32))
+    ),
+    # Crecimiento que se duplica: es una potencia, no una multiplicación.
+    "cultivo de bacterias se duplica cada hora": f"{200 * 2**6:,}".replace(",", "."),
+    # --- porcentaje y proporcionalidad: segunda tanda ---
+    # Porcentaje directo.
+    "el 40% de 350": str(round(350 * 0.4)),
+    "el 5% de 800": str(round(800 * 0.05)),
+    "el 75% de 200": str(round(200 * 0.75)),
+    "el 8% de 2.500": str(round(2500 * 0.08)),
+    "el 150% de 60": str(round(60 * 1.5)),
+    "grupo de 80 personas, el 25% usa lentes": str(round(80 * 0.25)),
+    "examen tiene 80 preguntas": str(round(80 * 0.65)),
+    "solución de 500 ml contiene un 12%": str(round(500 * 0.12)),
+    "propina del 10% sobre una cuenta de $24.000": f"{round(24_000 * 0.1):,}".replace(",", "."),
+    # Qué porcentaje representa una parte del total.
+    "representa 12 de un total de 48": f"{12 * 100 // 48}%",
+    "representa 45 de un total de 90": f"{45 * 100 // 90}%",
+    # Aumentos y descuentos.
+    "bebida cuesta $1.200 y sube un 10%": f"{round(1_200 * 1.1):,}".replace(",", "."),
+    "libro cuesta $15.000 y tiene un 20% de descuento": f"{round(15_000 * 0.8):,}".replace(",", "."),
+    "servicio cuesta $30.000 más IVA": f"{round(30_000 * 1.19):,}".replace(",", "."),
+    "600 asistentes a un evento, el 45% son mujeres": str(round(600 * 0.55)),
+    # Variación porcentual: siempre sobre el valor inicial.
+    "pasó de 2.400 a 3.000 habitantes": f"{round((3000 - 2400) / 2400 * 100)}%",
+    "subió de $4.000 a $5.200": f"{round((5200 - 4000) / 4000 * 100)}%",
+    # Problemas inversos: se conoce el resultado y se busca el punto de partida.
+    "El 30% de un número es 72": str(round(72 / 0.3)),
+    "aumento del 15%, un sueldo quedó en $690.000": f"{round(690_000 / 1.15):,}".replace(",", "."),
+    # Proporcionalidad directa.
+    "3 cm representan 15 km": str(8 * 15 // 3),
+    "6 kilos de pan cuestan $9.000": f"{10 * 9_000 // 6:,}".replace(",", "."),
+    "recorre 240 km con 20 litros": str(35 * 240 // 20),
+    # Proporcionalidad inversa: el producto se mantiene constante.
+    "Cuatro llaves llenan un estanque en 6 horas": str(4 * 6 // 3),
+    # Porcentajes encadenados: se multiplican los factores, nunca se suman.
+    "10% de descuento y, sobre el precio ya rebajado, otro 10%": f"{round((1 - 0.9 * 0.9) * 100)}%",
+    "el 20% del 40% de 800": str(round(800 * 0.4 * 0.2)),
+    "baja un 40% y después sube un 40%": f"{round((1 - 0.6 * 1.4) * 100)}%",
+    "el 80% de las personas prefiere té": f"{round(0.8 * 0.35 * 100)}%",
+    # El total también cambia cuando se incorpora gente.
+    "18 hombres y 12 mujeres": f"{(12 + 10) * 100 // (18 + 12 + 10)}%",
+    # Comparar dos ofertas exige calcular ambos precios finales.
+    "tienda A, que ofrece un 30% de descuento": "$"
+    + f"{36_000 - round(50_000 * 0.7):,}".replace(",", "."),
+    # Reparto proporcional: el total se parte en la suma de la razón.
+    "reparten $120.000 entre dos personas en la razón 2 : 3": f"{120_000 * 3 // 5:,}".replace(",", "."),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
@@ -864,7 +984,9 @@ COMPROBACIONES: dict[str, str] = {
     "dos fracciones es mayor: 5/8 o 7/12": (
         "5/8" if Fraction(5, 8) > Fraction(7, 12) else "7/12"
     ),
-    "Ordena de menor a mayor las fracciones": ", ".join(
+    # El fragmento lleva los números porque hay más de una pregunta que empieza
+    # con "Ordena de menor a mayor las fracciones".
+    "Ordena de menor a mayor las fracciones 2/3": ", ".join(
         str(f) for f in sorted([Fraction(2, 3), Fraction(3, 5), Fraction(7, 10)])
     ),
     "(3/4 − 1/6) ÷ (1/2 + 1/3)": str(

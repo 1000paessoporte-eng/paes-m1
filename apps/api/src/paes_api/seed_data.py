@@ -14101,6 +14101,1335 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Números enteros y racionales — segunda tanda.
+#
+# El temario DEMRE pide para esta unidad tres cosas: "operaciones y ORDEN en el
+# conjunto de los números ENTEROS", "operaciones y COMPARACIÓN entre números
+# racionales" y problemas "en diversos contextos".
+#
+# Las 39 preguntas que ya existían cubrían bien la operatoria con fracciones,
+# pero casi solo con fracciones positivas: no había prácticamente nada de
+# enteros negativos, ni de ordenar, ni de comparar, ni del paso entre decimal y
+# fracción. Esta tanda va derecho a ese hueco, con los contextos donde los
+# negativos aparecen de verdad: temperaturas, profundidades y saldos bancarios.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_racionales", "facil",
+        "La temperatura en una ciudad era de −3 °C y durante la noche bajó 5 °C más. ¿Cuál es la nueva temperatura?",
+        "−8 °C",
+        "Bajar la temperatura significa restar, y partimos de un número que ya es negativo.\n\n"
+        "1) Plantea la operación: −3 − 5.\n"
+        "2) Al restar sobre un número negativo, te alejas más del cero hacia la izquierda: −3 − 5 = −8.\n"
+        "3) La nueva temperatura es −8 °C. Tiene sentido: si ya hacía frío bajo cero y bajó más, tiene que quedar un número más negativo.",
+        [
+            ("2 °C", "Sumó los 5 grados en lugar de restarlos."),
+            ("−2 °C", "Restó 3 a 5 en vez de restar 5 a −3."),
+            ("8 °C", "Operó con los números sin considerar el signo negativo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de −7 + 12?",
+        "5",
+        "Se suman un número negativo y uno positivo, así que se compensan entre sí.\n\n"
+        "1) Cuando los signos son distintos, se restan los valores y se conserva el signo del mayor en valor absoluto.\n"
+        "2) Aquí 12 es mayor que 7, así que el resultado será positivo.\n"
+        "3) Resta: 12 − 7 = 5.\n"
+        "4) El resultado es 5.",
+        [
+            ("−5", "Se quedó con el signo del número menor en lugar del mayor."),
+            ("19", "Sumó los dos valores como si ambos fueran positivos."),
+            ("−19", "Sumó los valores y además dejó el signo negativo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de −4 · (−6)?",
+        "24",
+        "Al multiplicar, la regla de los signos decide si el resultado es positivo o negativo.\n\n"
+        "1) Multiplica los valores sin mirar el signo: 4 · 6 = 24.\n"
+        "2) Los dos factores son negativos, y menos por menos da más.\n"
+        "3) El resultado es 24, positivo.",
+        [
+            ("−24", "Aplicó mal la regla de los signos: dos negativos dan positivo, no negativo."),
+            ("−10", "Sumó los valores en lugar de multiplicarlos."),
+            ("10", "Sumó en vez de multiplicar, aunque acertó con el signo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de −20 ÷ 5?",
+        "−4",
+        "La regla de los signos vale igual para la división que para la multiplicación.\n\n"
+        "1) Divide los valores: 20 ÷ 5 = 4.\n"
+        "2) Un número negativo dividido por uno positivo da negativo, porque los signos son distintos.\n"
+        "3) El resultado es −4.",
+        [
+            ("4", "Ignoró que los signos eran distintos y dejó el resultado positivo."),
+            ("−15", "Sumó en lugar de dividir."),
+            ("−100", "Multiplicó en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 8 − (−3)?",
+        "11",
+        "Restar un número negativo equivale a sumar su opuesto.\n\n"
+        "1) Los dos signos seguidos se combinan: menos por menos da más, así que 8 − (−3) se convierte en 8 + 3.\n"
+        "2) Suma: 8 + 3 = 11.\n"
+        "3) El resultado es 11. Fíjate en que restar algo negativo hace crecer el resultado, no disminuirlo.",
+        [
+            ("5", "Restó 3 directamente, ignorando que el 3 venía con signo negativo."),
+            ("−11", "Aplicó bien la operación pero le puso signo negativo al resultado."),
+            ("−5", "Trató la expresión como −8 − 3."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál de estos números es el menor: −5, −12, 3 o 0?",
+        "−12",
+        "En la recta numérica, mientras más a la izquierda está un número, menor es.\n\n"
+        "1) Los negativos son todos menores que 0 y que cualquier positivo, así que descarta el 3 y el 0.\n"
+        "2) Entre −5 y −12, el menor es el que está más lejos del cero hacia la izquierda.\n"
+        "3) Como 12 es mayor que 5, el número −12 queda más a la izquierda y por lo tanto es el menor.\n"
+        "4) El menor es −12. Con los negativos el orden se invierte respecto de lo que dice la intuición: mientras más grande el número sin signo, menor es el negativo.",
+        [
+            ("−5", "Eligió el negativo más cercano al cero, que en realidad es el mayor de los dos negativos."),
+            ("0", "Supuso que el cero es el menor, pero cualquier negativo es menor que él."),
+            ("3", "Eligió el mayor de los cuatro números."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cómo se escribe 0,75 como fracción irreducible?",
+        "3/4",
+        "Un decimal se pasa a fracción usando el lugar que ocupa la última cifra.\n\n"
+        "1) El 0,75 tiene dos cifras decimales, así que se escribe como 75/100.\n"
+        "2) Simplifica: 75 y 100 se dividen ambos por 25.\n"
+        "3) 75 ÷ 25 = 3 y 100 ÷ 25 = 4, así que queda 3/4.\n"
+        "4) Comprueba dividiendo: 3 ÷ 4 = 0,75 ✓.",
+        [
+            ("75/10", "Usó un solo cero en el denominador, cuando hay dos cifras decimales."),
+            ("7/5", "Separó las cifras del decimal en lugar de usar el valor posicional."),
+            ("1/75", "Invirtió la fracción."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 3/5 + 1/10?",
+        "7/10",
+        "Para sumar fracciones hay que llevarlas a un mismo denominador.\n\n"
+        "1) Busca el mínimo común múltiplo de 5 y 10: como 10 es múltiplo de 5, sirve el mismo 10.\n"
+        "2) Convierte la primera: 3/5 = 6/10, multiplicando arriba y abajo por 2.\n"
+        "3) Suma los numeradores: 6/10 + 1/10 = 7/10.\n"
+        "4) Como 7 es primo y no divide a 10, la fracción ya está en su forma más simple.",
+        [
+            ("4/15", "Sumó numeradores con numeradores y denominadores con denominadores."),
+            ("4/10", "Sumó los numeradores sin convertir antes la primera fracción."),
+            ("3/50", "Multiplicó las fracciones en lugar de sumarlas."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "Un buzo se encuentra a 12 metros bajo el nivel del mar, lo que se representa como −12 m. Si sube 5 metros, ¿a qué profundidad queda?",
+        "−7 m",
+        "Subir significa acercarse al cero, así que se suma.\n\n"
+        "1) Plantea la operación: −12 + 5.\n"
+        "2) Los signos son distintos, así que se restan los valores: 12 − 5 = 7.\n"
+        "3) Como 12 es mayor que 5, el resultado conserva el signo negativo: −7.\n"
+        "4) El buzo queda a −7 m, es decir, 7 metros bajo el nivel del mar. Sigue estando bajo el agua, que es lo esperable si subió menos de lo que estaba hundido.",
+        [
+            ("−17 m", "Restó los 5 metros en lugar de sumarlos, hundiendo más al buzo."),
+            ("7 m", "Perdió el signo negativo y dejó al buzo sobre el nivel del mar."),
+            ("17 m", "Sumó los valores sin considerar los signos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "facil",
+        "¿Cuál es el resultado de 2/9 × 3/8?",
+        "1/12",
+        "Multiplicar fracciones es directo: numerador con numerador y denominador con denominador.\n\n"
+        "1) Multiplica arriba: 2 · 3 = 6.\n"
+        "2) Multiplica abajo: 9 · 8 = 72.\n"
+        "3) Queda 6/72, que se puede simplificar dividiendo ambos por 6: 1/12.\n"
+        "4) Atajo útil: se podía simplificar antes de multiplicar, cancelando el 3 con el 9 y el 2 con el 8.",
+        [
+            ("6/72", "Llegó al resultado correcto pero no lo simplificó."),
+            ("16/27", "Multiplicó en cruz, como si fuera una división."),
+            ("5/17", "Sumó numeradores y denominadores en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de −6 + 4 − (−9)?",
+        "7",
+        "Conviene resolver de izquierda a derecha, arreglando primero los signos dobles.\n\n"
+        "1) El −(−9) del final se convierte en +9, porque restar un negativo es sumar.\n"
+        "2) La expresión queda: −6 + 4 + 9.\n"
+        "3) Resuelve por partes: −6 + 4 = −2.\n"
+        "4) Y después: −2 + 9 = 7.",
+        [
+            ("−11", "Restó el 9 en lugar de sumarlo, sin resolver el doble signo."),
+            ("−1", "Restó el 4 en vez de sumarlo."),
+            ("19", "Sumó los tres valores ignorando el signo del −6."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (−3)² − (−3)?",
+        "12",
+        "Hay que distinguir el cuadrado de un negativo del signo que va delante.\n\n"
+        "1) Calcula la potencia primero: (−3)² significa (−3) · (−3), y menos por menos da más, así que es 9.\n"
+        "2) El segundo término es −(−3), que se convierte en +3.\n"
+        "3) Suma: 9 + 3 = 12.\n"
+        "4) Ojo con la trampa: (−3)² es 9, pero −3² sería −9, porque ahí el cuadrado afecta solo al 3.",
+        [
+            ("6", "Calculó (−3)² como 9 pero restó 3 en vez de sumarlo."),
+            ("−6", "Tomó (−3)² como −9 y después sumó 3."),
+            ("−12", "Tomó (−3)² como −9 y restó 3."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Una cuenta bancaria tiene un saldo de −45.000 pesos, es decir, está sobregirada. Si se depositan 70.000 pesos, ¿cuál es el nuevo saldo?",
+        "25.000 pesos",
+        "Depositar suma al saldo, aunque el saldo de partida sea negativo.\n\n"
+        "1) Plantea la operación: −45.000 + 70.000.\n"
+        "2) Los signos son distintos, así que se restan los valores: 70.000 − 45.000 = 25.000.\n"
+        "3) Como 70.000 es mayor, el resultado queda positivo: 25.000.\n"
+        "4) El nuevo saldo es de 25.000 pesos. Los primeros 45.000 del depósito se fueron en cubrir el sobregiro.",
+        [
+            ("−25.000 pesos", "Conservó el signo negativo del saldo inicial en lugar del signo del número mayor."),
+            ("115.000 pesos", "Sumó los dos valores como si el saldo inicial fuera positivo."),
+            ("70.000 pesos", "Ignoró el sobregiro y se quedó con el monto depositado."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Ordena de menor a mayor las fracciones −1/2, −3/4 y 1/4.",
+        "−3/4, −1/2, 1/4",
+        "Con negativos el orden se invierte, así que conviene pasarlos a decimal para verlo claro.\n\n"
+        "1) Convierte: −1/2 = −0,5; −3/4 = −0,75; 1/4 = 0,25.\n"
+        "2) Cualquier negativo es menor que cualquier positivo, así que 1/4 va al final.\n"
+        "3) Entre los dos negativos, el menor es el que está más lejos del cero: −0,75 es menor que −0,5.\n"
+        "4) El orden de menor a mayor es: −3/4, −1/2, 1/4.",
+        [
+            ("−1/2, −3/4, 1/4", "Ordenó los negativos como si fueran positivos: creyó que −1/2 es menor que −3/4."),
+            ("1/4, −1/2, −3/4", "Ordenó de mayor a menor en vez de al revés."),
+            ("1/4, −3/4, −1/2", "Puso el positivo primero y además invirtió el orden de los negativos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cómo se escribe 0,375 como fracción irreducible?",
+        "3/8",
+        "El número de cifras decimales indica el denominador de partida.\n\n"
+        "1) Hay tres cifras decimales, así que se escribe como 375/1.000.\n"
+        "2) Ambos números se dividen por 125: 375 ÷ 125 = 3 y 1.000 ÷ 125 = 8.\n"
+        "3) Queda 3/8.\n"
+        "4) Comprueba: 3 ÷ 8 = 0,375 ✓.",
+        [
+            ("375/100", "Usó dos ceros en el denominador cuando hay tres cifras decimales."),
+            ("3/4", "Simplificó de más y perdió una cifra decimal en el camino."),
+            ("37/5", "Separó las cifras en lugar de usar el valor posicional."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de −2/3 + 1/6?",
+        "−1/2",
+        "Se busca denominador común y después se opera respetando los signos.\n\n"
+        "1) El mínimo común múltiplo de 3 y 6 es 6.\n"
+        "2) Convierte la primera: −2/3 = −4/6.\n"
+        "3) Suma los numeradores conservando el denominador: −4/6 + 1/6 = −3/6.\n"
+        "4) Simplifica dividiendo por 3: −3/6 = −1/2.",
+        [
+            ("−5/6", "Restó el 1/6 en lugar de sumarlo."),
+            ("1/2", "Llegó al valor correcto pero perdió el signo negativo."),
+            ("−1/6", "Sumó los numeradores sin convertir antes la primera fracción."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de (−5) · 3 + 20 ÷ (−4)?",
+        "−20",
+        "Primero multiplicaciones y divisiones, y recién al final la suma.\n\n"
+        "1) Resuelve la multiplicación: (−5) · 3 = −15, porque los signos son distintos.\n"
+        "2) Resuelve la división: 20 ÷ (−4) = −5, también por signos distintos.\n"
+        "3) Ahora suma los dos resultados: −15 + (−5) = −20.\n"
+        "4) Sumar dos negativos siempre da un negativo más grande en valor absoluto.",
+        [
+            ("−10", "Sumó −15 y 5, perdiendo el signo del resultado de la división."),
+            ("20", "Operó con los valores sin considerar ningún signo."),
+            ("−35", "Restó el 20 en lugar de dividirlo por −4."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál de estos dos números es mayor: −2/3 o −3/5?",
+        "−3/5",
+        "Con fracciones negativas conviene pasar a decimal, porque la intuición engaña.\n\n"
+        "1) Convierte: −2/3 = −0,666… y −3/5 = −0,6.\n"
+        "2) En la recta numérica, −0,6 está más cerca del cero que −0,666…\n"
+        "3) El que está más a la derecha es el mayor, así que −3/5 es mayor que −2/3.\n"
+        "4) Fíjate en que 2/3 sí es mayor que 3/5, pero al ponerles signo negativo la comparación se da vuelta.",
+        [
+            ("−2/3", "Comparó las fracciones como si fueran positivas, donde 2/3 sí es mayor que 3/5."),
+            ("Son iguales", "Supuso que valen lo mismo, pero −0,666… y −0,6 son distintos."),
+            ("No se pueden comparar", "Las fracciones negativas sí se comparan, igual que cualquier número racional."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "La temperatura de un pueblo pasó de −8 °C en la madrugada a 6 °C al mediodía. ¿Cuántos grados subió?",
+        "14 °C",
+        "La variación es la temperatura final menos la inicial.\n\n"
+        "1) Plantea: 6 − (−8).\n"
+        "2) Restar un negativo es sumar: 6 + 8 = 14.\n"
+        "3) La temperatura subió 14 °C.\n"
+        "4) Se puede comprobar contando en la recta numérica: de −8 a 0 hay 8 grados, y de 0 a 6 hay 6 más. En total 8 + 6 = 14 ✓.",
+        [
+            ("2 °C", "Restó 8 a 6 en vez de restar un número negativo."),
+            ("−2 °C", "Calculó la diferencia al revés y además se equivocó en el signo doble."),
+            ("−14 °C", "Acertó con la magnitud pero le puso signo negativo a una subida."),
+        ],
+    ),
+    _q(
+        "num_racionales", "medio",
+        "¿Cuál es el resultado de 1,25 + 3/4?",
+        "2",
+        "Conviene llevar los dos números a la misma forma antes de sumar.\n\n"
+        "1) Pasa la fracción a decimal: 3 ÷ 4 = 0,75.\n"
+        "2) Suma: 1,25 + 0,75 = 2.\n"
+        "3) El resultado es exactamente 2.\n"
+        "4) También sale trabajando con fracciones: 1,25 = 5/4, y 5/4 + 3/4 = 8/4 = 2 ✓.",
+        [
+            ("1,28", "Sumó el 3 y el 4 de la fracción a los decimales, sin convertirla."),
+            ("2,25", "Sumó 1 en lugar de 0,75."),
+            ("4/5", "Sumó los números como si todos fueran partes de una fracción."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de −3 · (5 − 8) + (−4)²?",
+        "25",
+        "Primero el paréntesis, después la potencia, luego la multiplicación y al final la suma.\n\n"
+        "1) Resuelve el paréntesis: 5 − 8 = −3.\n"
+        "2) Resuelve la potencia: (−4)² = (−4) · (−4) = 16, positivo porque menos por menos da más.\n"
+        "3) Ahora la multiplicación: −3 · (−3) = 9, también positivo.\n"
+        "4) Finalmente suma: 9 + 16 = 25.",
+        [
+            ("−7", "Calculó (−4)² como −16, aplicando el cuadrado solo al 4."),
+            ("7", "Obtuvo −9 en la multiplicación, olvidando que menos por menos da más."),
+            ("−23", "Resolvió el paréntesis como 5 + 8 en lugar de 5 − 8."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Un termómetro marcaba −6 °C a las 6 de la mañana y la temperatura subió 2 °C cada hora hasta las 11. ¿Qué marcaba a las 11?",
+        "4 °C",
+        "Hay que contar bien cuántas horas transcurrieron antes de multiplicar.\n\n"
+        "1) De las 6 a las 11 hay 11 − 6 = 5 horas.\n"
+        "2) En cada hora subió 2 °C, así que en total subió 5 · 2 = 10 °C.\n"
+        "3) Parte de −6 y súmale ese aumento: −6 + 10 = 4.\n"
+        "4) A las 11 marcaba 4 °C. El error clásico es contar 6 horas en vez de 5, o quedarse en el aumento sin sumarlo a la temperatura inicial.",
+        [
+            ("6 °C", "Contó 6 horas en lugar de 5, incluyendo la hora de partida."),
+            ("10 °C", "Se quedó con el aumento total y no lo sumó a la temperatura inicial."),
+            ("−16 °C", "Restó el aumento en lugar de sumarlo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (−2/5) ÷ (4/15)?",
+        "−3/2",
+        "Dividir fracciones es multiplicar por la inversa, y el signo se decide aparte.\n\n"
+        "1) Invierte la segunda fracción: 4/15 pasa a 15/4.\n"
+        "2) La operación queda: (−2/5) · (15/4).\n"
+        "3) Multiplica: arriba −2 · 15 = −30, abajo 5 · 4 = 20. Queda −30/20.\n"
+        "4) Simplifica dividiendo por 10: −3/2. El signo es negativo porque solo uno de los dos números lo era.",
+        [
+            ("3/2", "Hizo bien la operación pero perdió el signo negativo."),
+            ("−8/75", "Multiplicó las fracciones sin invertir la segunda."),
+            ("−2/3", "Invirtió la primera fracción en lugar de la segunda."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "Ordena de menor a mayor los números −0,6, −2/3 y −0,58.",
+        "−2/3, −0,6, −0,58",
+        "Todos son negativos, así que conviene compararlos en la misma forma decimal.\n\n"
+        "1) Convierte la fracción: −2/3 = −0,666…\n"
+        "2) Ahora compara los tres decimales: −0,666…, −0,6 y −0,58.\n"
+        "3) Con negativos, el menor es el que tiene mayor valor sin signo: −0,666… es el menor, y −0,58 el mayor porque es el más cercano al cero.\n"
+        "4) El orden de menor a mayor es: −2/3, −0,6, −0,58.",
+        [
+            ("−0,58, −0,6, −2/3", "Ordenó de mayor a menor en vez de al revés."),
+            ("−0,6, −0,58, −2/3", "Trató la fracción como si fuera menor que ambos decimales sin convertirla."),
+            ("−0,58, −2/3, −0,6", "Comparó los valores sin signo, como si todos fueran positivos."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de (−1/2)³ + 1/4?",
+        "1/8",
+        "Un exponente impar conserva el signo negativo de la base.\n\n"
+        "1) Calcula la potencia: (−1/2)³ = (−1/2) · (−1/2) · (−1/2). Las dos primeras dan +1/4, y al multiplicar por la tercera queda −1/8.\n"
+        "2) La expresión es entonces −1/8 + 1/4.\n"
+        "3) Lleva a denominador común: 1/4 = 2/8.\n"
+        "4) Suma: −1/8 + 2/8 = 1/8.",
+        [
+            ("3/8", "Calculó la potencia como +1/8, olvidando que un exponente impar conserva el signo negativo."),
+            ("−3/8", "Restó las fracciones y además dejó el signo negativo."),
+            ("−1/8", "Se quedó en el resultado de la potencia sin sumarle 1/4."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "De una deuda de $120.000 ya se han pagado 3/8. ¿Cuánto falta por pagar?",
+        "$75.000",
+        "Se puede calcular directo la fracción que falta, sin pasar por lo pagado.\n\n"
+        "1) Si se pagaron 3/8, lo que falta es el resto del total: 1 − 3/8 = 8/8 − 3/8 = 5/8.\n"
+        "2) Calcula esa fracción del total: 5/8 de 120.000.\n"
+        "3) Divide primero por 8: 120.000 ÷ 8 = 15.000. Después multiplica por 5: 15.000 · 5 = 75.000.\n"
+        "4) Faltan $75.000. Comprueba: lo pagado son 3 · 15.000 = 45.000, y 45.000 + 75.000 = 120.000 ✓.",
+        [
+            ("$45.000", "Calculó lo que ya se pagó en lugar de lo que falta."),
+            ("$40.000", "Dividió el total por 3 en vez de aplicar la fracción que falta."),
+            ("$117.000", "Restó 3.000 al total, tratando la fracción como si fuera un monto."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el resultado de 2 − (−3/4) ÷ (3/2)?",
+        "5/2",
+        "La división va antes que la resta, y hay un signo negativo que arrastrar.\n\n"
+        "1) Resuelve primero la división: (−3/4) ÷ (3/2) es (−3/4) · (2/3).\n"
+        "2) Multiplica: arriba −3 · 2 = −6, abajo 4 · 3 = 12. Queda −6/12 = −1/2.\n"
+        "3) Ahora la resta: 2 − (−1/2), y restar un negativo es sumar: 2 + 1/2.\n"
+        "4) El resultado es 5/2, o sea 2,5.",
+        [
+            ("3/2", "Restó 1/2 en lugar de sumarlo, sin resolver el doble signo."),
+            ("−5/2", "Llegó al valor correcto pero le dejó signo negativo."),
+            ("11/6", "Resolvió la resta antes que la división, sin respetar la prioridad de operaciones."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuál es el número que está justo en el punto medio entre −5/6 y 1/3 en la recta numérica?",
+        "−1/4",
+        "El punto medio entre dos números es su promedio.\n\n"
+        "1) Suma los dos números: −5/6 + 1/3. Lleva a denominador común: −5/6 + 2/6 = −3/6 = −1/2.\n"
+        "2) Divide esa suma por 2: (−1/2) ÷ 2 = −1/4.\n"
+        "3) El punto medio es −1/4.\n"
+        "4) Comprueba que la distancia sea la misma a los dos lados: de −5/6 a −1/4 hay 7/12, y de −1/4 a 1/3 también hay 7/12 ✓.",
+        [
+            ("−1/2", "Se quedó en la suma de los dos números sin dividirla por 2."),
+            ("−7/12", "Calculó la mitad de la distancia entre ambos en vez del punto medio."),
+            ("1/4", "Llegó al valor correcto pero perdió el signo negativo."),
+        ],
+    ),
+    _q(
+        "num_racionales", "dificil",
+        "¿Cuántos números enteros hay entre −4 y 3, sin contar el −4 ni el 3?",
+        "6",
+        "Conviene listarlos, porque acá es fácil equivocarse con el cero o con los extremos.\n\n"
+        "1) Los enteros estrictamente entre −4 y 3 son: −3, −2, −1, 0, 1 y 2.\n"
+        "2) Cuéntalos: son 6.\n"
+        "3) El cero cuenta como un entero más, y olvidarlo es el error más común.\n"
+        "4) Otra forma de verlo: entre dos enteros hay (3 − (−4)) − 1 = 7 − 1 = 6 números.",
+        [
+            ("5", "Olvidó contar el cero."),
+            ("7", "Incluyó uno de los extremos, que el enunciado excluye."),
+            ("8", "Incluyó los dos extremos."),
+        ],
+    ),
+]
+
+# ---------------------------------------------------------------------------
+# Potencias y raíces enésimas — segunda tanda.
+#
+# El temario DEMRE pide tres cosas acá: "propiedades de las potencias de base
+# RACIONAL y exponente RACIONAL", "descomposición y propiedades de las RAÍCES
+# ENÉSIMAS en los números reales", y problemas "en diversos contextos".
+#
+# Las 40 preguntas que ya existían trabajaban solo potencias de base entera y
+# exponente entero, y todas las raíces eran cuadradas. Faltaba por completo lo
+# que el temario nombra de forma explícita: bases fraccionarias, exponentes
+# fraccionarios y raíces de índice distinto de 2. Esta tanda lo cubre.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (2/3)²?",
+        "4/9",
+        "Cuando la base es una fracción, el exponente afecta al numerador y al denominador por igual.\n\n"
+        "1) Eleva el numerador: 2² = 4.\n"
+        "2) Eleva el denominador: 3² = 9.\n"
+        "3) El resultado es 4/9.\n"
+        "4) Fíjate en que el resultado es menor que la fracción original: elevar al cuadrado un número entre 0 y 1 siempre lo achica.",
+        [
+            ("4/3", "Elevó solo el numerador y dejó el denominador intacto."),
+            ("2/9", "Elevó solo el denominador."),
+            ("4/6", "Multiplicó el denominador por 2 en vez de elevarlo al cuadrado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de ∛27?",
+        "3",
+        "La raíz cúbica busca el número que multiplicado tres veces por sí mismo da el radicando.\n\n"
+        "1) Pregúntate: ¿qué número al cubo da 27?\n"
+        "2) Prueba: 2³ = 8, muy poco; 3³ = 3 · 3 · 3 = 27, exacto.\n"
+        "3) Entonces ∛27 = 3.",
+        [
+            ("9", "Dividió 27 por 3 en lugar de buscar la raíz cúbica."),
+            ("27", "Dejó el número igual sin aplicar la raíz."),
+            ("5,2", "Calculó la raíz cuadrada de 27 en vez de la cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de ∛64?",
+        "4",
+        "Se busca el número que elevado al cubo da 64.\n\n"
+        "1) Prueba con 3: 3³ = 27, poco.\n"
+        "2) Prueba con 4: 4³ = 4 · 4 · 4 = 64, exacto.\n"
+        "3) Entonces ∛64 = 4.\n"
+        "4) Ojo con no confundirla con la raíz cuadrada: √64 es 8, no 4.",
+        [
+            ("8", "Calculó la raíz cuadrada de 64 en lugar de la cúbica."),
+            ("16", "Dividió 64 por 4 en vez de buscar la raíz cúbica."),
+            ("21,3", "Dividió 64 por 3, confundiendo el índice de la raíz con un divisor."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (1/2)⁻¹?",
+        "2",
+        "Un exponente negativo indica que hay que dar vuelta la fracción.\n\n"
+        "1) La regla es que elevar a −1 equivale a invertir la base.\n"
+        "2) Invierte 1/2: queda 2/1.\n"
+        "3) El resultado es 2.",
+        [
+            ("1/2", "Dejó la fracción igual, sin aplicar el exponente negativo."),
+            ("−2", "Le pasó el signo negativo al resultado; el exponente negativo invierte, no cambia de signo."),
+            ("1/4", "Elevó al cuadrado en lugar de invertir."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 6³?",
+        "216",
+        "El exponente indica cuántas veces se multiplica la base por sí misma.\n\n"
+        "1) Escribe la multiplicación: 6 · 6 · 6.\n"
+        "2) Primero 6 · 6 = 36.\n"
+        "3) Después 36 · 6 = 216.",
+        [
+            ("18", "Multiplicó la base por el exponente en lugar de elevarla."),
+            ("36", "Se quedó en 6², multiplicando solo dos veces."),
+            ("666", "Escribió la base tres veces en lugar de multiplicarla."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de √225?",
+        "15",
+        "Se busca el número que elevado al cuadrado da 225.\n\n"
+        "1) Como 10² = 100 y 20² = 400, la respuesta está entre 10 y 20.\n"
+        "2) Termina en 5, así que conviene probar 15: 15 · 15 = 225.\n"
+        "3) Entonces √225 = 15.",
+        [
+            ("112,5", "Dividió 225 por 2 en lugar de sacar la raíz."),
+            ("25", "Confundió el resultado con la raíz de 625."),
+            ("45", "Multiplicó por 0,2 en vez de buscar el número que al cuadrado da 225."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de (3/5)²?",
+        "9/25",
+        "El exponente se aplica arriba y abajo.\n\n"
+        "1) Numerador: 3² = 9.\n"
+        "2) Denominador: 5² = 25.\n"
+        "3) El resultado es 9/25.",
+        [
+            ("6/10", "Multiplicó numerador y denominador por 2 en vez de elevarlos al cuadrado."),
+            ("9/5", "Elevó solo el numerador."),
+            ("3/25", "Elevó solo el denominador."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "Una caja cúbica tiene un volumen de 343 cm³. ¿Cuánto mide su arista?",
+        "7 cm",
+        "El volumen de un cubo es la arista elevada al cubo, así que la arista es la raíz cúbica del volumen.\n\n"
+        "1) Plantea: arista³ = 343.\n"
+        "2) Prueba valores: 6³ = 216, poco; 7³ = 343, exacto.\n"
+        "3) La arista mide 7 cm.\n"
+        "4) Comprueba: 7 · 7 · 7 = 343 ✓.",
+        [
+            ("18,5 cm", "Sacó la raíz cuadrada del volumen en lugar de la cúbica."),
+            ("114,3 cm", "Dividió el volumen por 3, confundiendo el índice con un divisor."),
+            ("49 cm", "Se quedó en 7², un paso antes de la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "¿Cuál es el valor de 4⁻¹?",
+        "1/4",
+        "Un exponente −1 convierte el número en su inverso.\n\n"
+        "1) La regla general es que a⁻ⁿ equivale a 1 dividido por aⁿ.\n"
+        "2) Aquí: 4⁻¹ = 1/4¹ = 1/4.\n"
+        "3) El resultado es 1/4.",
+        [
+            ("−4", "Le pasó el signo negativo al resultado; el exponente negativo invierte, no cambia de signo."),
+            ("−1/4", "Invirtió correctamente pero además le agregó un signo negativo."),
+            ("4", "Ignoró el exponente negativo."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 8^(1/3)?",
+        "2",
+        "Un exponente fraccionario con 1 en el numerador es exactamente una raíz.\n\n"
+        "1) La regla es que a^(1/n) equivale a la raíz enésima de a.\n"
+        "2) Aquí el denominador del exponente es 3, así que 8^(1/3) es la raíz cúbica de 8.\n"
+        "3) Busca el número que al cubo da 8: 2³ = 8.\n"
+        "4) El resultado es 2.",
+        [
+            ("8/3", "Multiplicó la base por la fracción en lugar de interpretarla como raíz."),
+            ("2,83", "Calculó la raíz cuadrada de 8 en lugar de la cúbica."),
+            ("24", "Multiplicó 8 por 3 en vez de sacar la raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 16^(1/2)?",
+        "4",
+        "El exponente 1/2 es la raíz cuadrada escrita de otra forma.\n\n"
+        "1) Por la regla a^(1/n) = raíz enésima de a, y acá n = 2.\n"
+        "2) Entonces 16^(1/2) = √16.\n"
+        "3) Busca el número que al cuadrado da 16: 4 · 4 = 16.\n"
+        "4) El resultado es 4.",
+        [
+            ("8", "Dividió 16 por 2 en lugar de sacar la raíz."),
+            ("256", "Elevó 16 al cuadrado en vez de sacar la raíz."),
+            ("32", "Multiplicó 16 por 2."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (2/5)⁻²?",
+        "25/4",
+        "Hay dos cosas que hacer: invertir por el signo del exponente y elevar por su valor.\n\n"
+        "1) El exponente negativo invierte la base: (2/5)⁻² pasa a (5/2)².\n"
+        "2) Ahora eleva arriba y abajo: 5² = 25 y 2² = 4.\n"
+        "3) El resultado es 25/4.\n"
+        "4) Tiene sentido que sea mayor que 1: elevar a un exponente negativo una fracción menor que 1 da un número mayor que 1.",
+        [
+            ("4/25", "Elevó al cuadrado sin invertir antes la base."),
+            ("−4/25", "Le pasó el signo del exponente al resultado en vez de invertir."),
+            ("5/2", "Invirtió la base pero olvidó aplicar el exponente 2."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de ∛(8 · 27)?",
+        "6",
+        "La raíz de un producto se puede separar en el producto de las raíces, y eso simplifica mucho el cálculo.\n\n"
+        "1) La propiedad dice que ∛(a · b) = ∛a · ∛b.\n"
+        "2) Aplícala: ∛8 · ∛27.\n"
+        "3) Calcula cada una: ∛8 = 2 y ∛27 = 3.\n"
+        "4) Multiplica: 2 · 3 = 6. También sale multiplicando primero (8 · 27 = 216) y sacando ∛216 = 6, pero separar es más rápido.",
+        [
+            ("216", "Multiplicó dentro de la raíz pero no la aplicó."),
+            ("5", "Sumó las raíces en lugar de multiplicarlas."),
+            ("14,7", "Calculó la raíz cuadrada de 216 en vez de la cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √12 · √3?",
+        "6",
+        "El producto de dos raíces del mismo índice es la raíz del producto.\n\n"
+        "1) La propiedad dice que √a · √b = √(a · b).\n"
+        "2) Aplícala: √12 · √3 = √36.\n"
+        "3) Calcula: √36 = 6.\n"
+        "4) El resultado es un número entero, aunque ninguna de las dos raíces por separado lo fuera.",
+        [
+            ("√36", "Dejó la respuesta a medio camino sin calcular la raíz."),
+            ("15", "Sumó los números dentro de las raíces en lugar de multiplicarlos."),
+            ("√15", "Sumó los radicandos y además dejó la raíz sin resolver."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √200 en su forma más simple?",
+        "10√2",
+        "Se descompone el radicando buscando el mayor cuadrado perfecto que lo divida.\n\n"
+        "1) Busca un cuadrado perfecto que divida a 200: sirve 100, porque 200 = 100 · 2.\n"
+        "2) Separa la raíz: √200 = √100 · √2.\n"
+        "3) Calcula la parte exacta: √100 = 10.\n"
+        "4) Queda 10√2. Usar 4 en vez de 100 también funciona pero deja 2√50, que todavía se puede simplificar.",
+        [
+            ("2√50", "Descompuso con un cuadrado perfecto pequeño y el resultado quedó sin simplificar del todo."),
+            ("20√2", "Se equivocó al calcular √100."),
+            ("100√2", "Sacó el 100 de la raíz sin aplicarle la raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de (2/3)³ · (3/2)²?",
+        "2/3",
+        "Conviene resolver cada potencia por separado y después multiplicar.\n\n"
+        "1) Primera potencia: (2/3)³ = 8/27.\n"
+        "2) Segunda: (3/2)² = 9/4.\n"
+        "3) Multiplica: (8 · 9)/(27 · 4) = 72/108.\n"
+        "4) Simplifica dividiendo ambos por 36: 72/108 = 2/3.\n"
+        "5) Atajo: como las bases son inversas, (3/2)² es lo mismo que (2/3)⁻², así que todo se reduce a (2/3)³⁻² = (2/3)¹.",
+        [
+            ("3/2", "Invirtió el resultado final."),
+            ("8/27", "Se quedó en la primera potencia sin multiplicar por la segunda."),
+            ("4/9", "Restó los exponentes al revés y obtuvo (2/3)²."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de ∛(−125)?",
+        "−5",
+        "A diferencia de las raíces cuadradas, las de índice impar sí aceptan radicandos negativos.\n\n"
+        "1) Busca el número que al cubo da −125.\n"
+        "2) Prueba con −5: (−5) · (−5) · (−5). Los dos primeros dan 25, y al multiplicar por el tercer −5 queda −125.\n"
+        "3) Entonces ∛(−125) = −5.\n"
+        "4) La razón de fondo: al elevar al cubo, un número negativo sigue siendo negativo, porque el exponente impar conserva el signo.",
+        [
+            ("5", "Perdió el signo negativo; un cubo negativo viene de una base negativa."),
+            ("No existe", "Eso es cierto para las raíces de índice par, pero no para las impares."),
+            ("−25", "Dividió 125 por 5 en lugar de sacar la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de 9^(3/2)?",
+        "27",
+        "En un exponente fraccionario, el denominador es el índice de la raíz y el numerador la potencia.\n\n"
+        "1) La regla es a^(m/n) = (raíz enésima de a) elevada a m.\n"
+        "2) Aquí el denominador es 2, así que primero √9 = 3.\n"
+        "3) El numerador es 3, así que ahora eleva: 3³ = 27.\n"
+        "4) El resultado es 27. Conviene sacar la raíz primero: elevar 9 al cubo daría 729 y habría que sacarle raíz igual, con números mucho más grandes.",
+        [
+            ("13,5", "Multiplicó 9 por la fracción 3/2 en lugar de interpretarla como raíz y potencia."),
+            ("729", "Elevó al cubo pero no aplicó la raíz cuadrada."),
+            ("3", "Se quedó en la raíz sin aplicar después el exponente 3."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "¿Cuál es el valor de √48 en su forma más simple?",
+        "4√3",
+        "Se descompone buscando el mayor cuadrado perfecto que divida al radicando.\n\n"
+        "1) Los cuadrados perfectos que dividen a 48 son 4 y 16. Conviene el mayor: 48 = 16 · 3.\n"
+        "2) Separa: √48 = √16 · √3.\n"
+        "3) Calcula la parte exacta: √16 = 4.\n"
+        "4) Queda 4√3.",
+        [
+            ("2√12", "Usó 4 como cuadrado perfecto y el resultado quedó sin simplificar del todo."),
+            ("16√3", "Sacó el 16 de la raíz sin aplicarle la raíz."),
+            ("4√12", "Aplicó la raíz al 16 pero dejó el 48 completo dentro."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de 27^(2/3)?",
+        "9",
+        "El denominador del exponente indica la raíz y el numerador la potencia.\n\n"
+        "1) Denominador 3: saca la raíz cúbica de 27, que es 3.\n"
+        "2) Numerador 2: eleva ese resultado al cuadrado, 3² = 9.\n"
+        "3) El resultado es 9.\n"
+        "4) El orden se puede invertir (27² = 729 y ∛729 = 9), pero sacar la raíz primero mantiene los números chicos.",
+        [
+            ("18", "Multiplicó 27 por la fracción 2/3 en lugar de interpretarla como raíz y potencia."),
+            ("729", "Elevó al cuadrado y no aplicó la raíz cúbica."),
+            ("3", "Se quedó en la raíz cúbica sin elevar al cuadrado."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de (√5)⁴?",
+        "25",
+        "Elevar una raíz a una potencia par deja un resultado entero.\n\n"
+        "1) Escribe la raíz como potencia: √5 = 5^(1/2).\n"
+        "2) Al elevar una potencia a otra, los exponentes se multiplican: (5^(1/2))⁴ = 5^(4/2) = 5².\n"
+        "3) Calcula: 5² = 25.\n"
+        "4) También se ve agrupando: (√5)⁴ = (√5 · √5) · (√5 · √5) = 5 · 5 = 25.",
+        [
+            ("20", "Multiplicó 5 por 4 en lugar de aplicar el exponente."),
+            ("5", "Se quedó en (√5)², que es solo la mitad del exponente."),
+            ("625", "Elevó 5 a la cuarta sin considerar que la base era una raíz."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √75 + √27?",
+        "8√3",
+        "Dos raíces solo se pueden sumar si quedan con el mismo radicando, así que primero hay que simplificarlas.\n\n"
+        "1) Descompón la primera: 75 = 25 · 3, así que √75 = 5√3.\n"
+        "2) Descompón la segunda: 27 = 9 · 3, así que √27 = 3√3.\n"
+        "3) Ahora las dos tienen √3, así que se suman los coeficientes: 5√3 + 3√3 = 8√3.\n"
+        "4) Ojo con el error clásico: √75 + √27 NO es √102. Las raíces no se suman por dentro.",
+        [
+            ("√102", "Sumó los radicandos, que no es una propiedad válida de las raíces."),
+            ("15√3", "Multiplicó los coeficientes en lugar de sumarlos."),
+            ("8√6", "Sumó bien los coeficientes pero también sumó los radicandos."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Si (1/2)ˣ = 1/32, ¿cuál es el valor de x?",
+        "5",
+        "Conviene escribir el lado derecho como una potencia de la misma base.\n\n"
+        "1) La base es 1/2, así que hay que expresar 1/32 como potencia de 1/2.\n"
+        "2) Prueba: (1/2)² = 1/4, (1/2)³ = 1/8, (1/2)⁴ = 1/16, (1/2)⁵ = 1/32.\n"
+        "3) Como las bases son iguales, los exponentes también lo son: x = 5.\n"
+        "4) Comprueba: (1/2)⁵ = 1/32 ✓.",
+        [
+            ("−5", "Confundió la base 1/2 con 2 y le cambió el signo al exponente."),
+            ("32", "Dio el denominador del resultado en vez del exponente."),
+            ("16", "Se quedó un paso antes, en (1/2)⁴."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de ∛(1/8)?",
+        "1/2",
+        "La raíz de una fracción se aplica arriba y abajo por separado.\n\n"
+        "1) La propiedad dice que la raíz de un cociente es el cociente de las raíces.\n"
+        "2) Numerador: ∛1 = 1.\n"
+        "3) Denominador: ∛8 = 2.\n"
+        "4) El resultado es 1/2. Comprueba: (1/2)³ = 1/8 ✓.",
+        [
+            ("1/4", "Sacó la raíz cuadrada del denominador en lugar de la cúbica."),
+            ("2", "Invirtió la fracción del resultado."),
+            ("1/24", "Multiplicó el denominador por 3 en vez de sacarle la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de (2³ · 2⁻⁵)⁻¹?",
+        "4",
+        "Se simplifica primero lo de adentro del paréntesis y después se aplica el exponente exterior.\n\n"
+        "1) Al multiplicar potencias de igual base, los exponentes se suman: 2³ · 2⁻⁵ = 2^(3 + (−5)) = 2⁻².\n"
+        "2) Ahora el exponente exterior: al elevar una potencia a otra, los exponentes se multiplican. (2⁻²)⁻¹ = 2^((−2) · (−1)) = 2².\n"
+        "3) Calcula: 2² = 4.",
+        [
+            ("1/4", "Se quedó en 2⁻² sin aplicar el exponente exterior."),
+            ("−4", "Le pasó al resultado el signo del exponente."),
+            ("256", "Sumó los exponentes como si ambos fueran positivos, y además ignoró el exponente exterior."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "Un cultivo de bacterias se duplica cada hora. Si parte con 200 bacterias, ¿cuántas habrá después de 6 horas?",
+        "12.800",
+        "Duplicarse repetidamente es una potencia de 2, no una multiplicación por 2.\n\n"
+        "1) Cada hora la cantidad se multiplica por 2, así que después de 6 horas se multiplicó 6 veces: 2⁶.\n"
+        "2) Calcula: 2⁶ = 64.\n"
+        "3) Multiplica por la cantidad inicial: 200 · 64 = 12.800.\n"
+        "4) Habrá 12.800 bacterias. El error clásico es multiplicar 200 · 2 · 6 = 2.400, que sería un crecimiento constante y no uno que se duplica.",
+        [
+            ("2.400", "Multiplicó por 2 y por 6, como si el crecimiento fuera constante y no una duplicación."),
+            ("1.200", "Multiplicó las 200 bacterias por las 6 horas."),
+            ("64", "Se quedó en 2⁶ sin considerar las 200 bacterias iniciales."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de √(2⁸)?",
+        "16",
+        "Conviene usar la propiedad de la potencia de una potencia en vez de calcular 2⁸.\n\n"
+        "1) Escribe la raíz como exponente 1/2: √(2⁸) = (2⁸)^(1/2).\n"
+        "2) Al elevar una potencia a otra, los exponentes se multiplican: 2^(8 · 1/2) = 2⁴.\n"
+        "3) Calcula: 2⁴ = 16.\n"
+        "4) Regla práctica: sacar la raíz cuadrada de una potencia equivale a dividir su exponente por 2.",
+        [
+            ("256", "Calculó 2⁸ pero no le aplicó la raíz."),
+            ("4", "Dividió el exponente por 4 en lugar de por 2."),
+            ("128", "Le restó 1 al exponente en vez de dividirlo por 2: calculó 2⁷."),
+        ],
+    ),
+    _q(
+        "num_potencias_raices", "dificil",
+        "¿Cuál es el valor de 16^(3/4)?",
+        "8",
+        "El denominador del exponente da el índice de la raíz y el numerador la potencia.\n\n"
+        "1) Denominador 4: saca la raíz cuarta de 16, o sea el número que elevado a 4 da 16. Es 2, porque 2⁴ = 16.\n"
+        "2) Numerador 3: eleva ese resultado al cubo, 2³ = 8.\n"
+        "3) El resultado es 8.\n"
+        "4) Hacerlo al revés da lo mismo pero con números enormes: 16³ = 4.096, y la raíz cuarta de 4.096 es 8.",
+        [
+            ("12", "Multiplicó 16 por la fracción 3/4 en lugar de interpretarla como raíz y potencia."),
+            ("4.096", "Elevó al cubo y no aplicó la raíz cuarta."),
+            ("2", "Se quedó en la raíz cuarta sin elevar al cubo."),
+        ],
+    ),
+]
+
+# ---------------------------------------------------------------------------
+# Porcentaje y proporcionalidad — segunda tanda.
+#
+# El nodo ya cubría bien descuentos, aumentos y variaciones sucesivas. Lo que
+# faltaba era proporcionalidad DIRECTA --el nodo solo tenía problemas de
+# proporción inversa, del tipo "más trabajadores, menos días"-- y los contextos
+# donde el porcentaje aparece a diario: IVA, propinas, concentraciones,
+# rendimiento de combustible, escalas de mapas y reparto proporcional.
+#
+# Se agrega también el porcentaje de un porcentaje y la comparación entre dos
+# ofertas, que obliga a calcular ambas antes de decidir.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 40% de 350?",
+        "140",
+        "Calcular un porcentaje es multiplicar por la fracción que representa.\n\n"
+        "1) El 40% equivale a 40/100, o sea 0,4.\n"
+        "2) Multiplica: 350 · 0,4 = 140.\n"
+        "3) Otra forma: el 10% de 350 es 35, y el 40% son cuatro veces eso: 4 · 35 = 140 ✓.",
+        [
+            ("14", "Calculó el 4% en lugar del 40%."),
+            ("875", "Dividió por el porcentaje en vez de multiplicar."),
+            ("310", "Restó 40 al total en lugar de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 5% de 800?",
+        "40",
+        "Conviene apoyarse en el 10%, que es fácil de calcular mentalmente.\n\n"
+        "1) El 10% de 800 se obtiene moviendo la coma un lugar: 80.\n"
+        "2) El 5% es la mitad del 10%: 80 ÷ 2 = 40.\n"
+        "3) Comprueba con la fórmula: 800 · 0,05 = 40 ✓.",
+        [
+            ("400", "Calculó el 50% en lugar del 5%."),
+            ("160", "Dividió 800 por 5 en vez de calcular el porcentaje."),
+            ("795", "Restó 5 al total."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Qué porcentaje representa 12 de un total de 48?",
+        "25%",
+        "Se compara la parte con el total y se lleva a base 100.\n\n"
+        "1) Escribe la fracción: 12/48.\n"
+        "2) Simplifica: 12 y 48 se dividen por 12, y queda 1/4.\n"
+        "3) Un cuarto es 25 de cada 100, así que corresponde al 25%.",
+        [
+            ("12%", "Dio la parte como si ya fuera el porcentaje."),
+            ("400%", "Dividió el total por la parte en lugar de la parte por el total."),
+            ("36%", "Restó la parte del total y usó ese número como porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Una bebida cuesta $1.200 y sube un 10%. ¿Cuál es el nuevo precio?",
+        "$1.320",
+        "Un aumento se suma al precio original.\n\n"
+        "1) Calcula el 10% de 1.200: mueve la coma un lugar y queda 120.\n"
+        "2) Súmalo al precio: 1.200 + 120 = 1.320.\n"
+        "3) Atajo: subir un 10% es multiplicar por 1,1, y 1.200 · 1,1 = 1.320 ✓.",
+        [
+            ("$1.080", "Restó el 10% en lugar de sumarlo."),
+            ("$1.210", "Sumó 10 pesos en vez del 10% del precio."),
+            ("$2.400", "Duplicó el precio, como si el aumento fuera del 100%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 75% de 200?",
+        "150",
+        "El 75% es lo mismo que tres cuartos.\n\n"
+        "1) Divide el total en cuatro partes: 200 ÷ 4 = 50.\n"
+        "2) Toma tres de esas partes: 3 · 50 = 150.\n"
+        "3) Comprueba: 200 · 0,75 = 150 ✓.",
+        [
+            ("50", "Calculó el 25% en lugar del 75%, o sea la parte que sobra."),
+            ("175", "Restó 25 al total en vez de calcular tres cuartos."),
+            ("1.500", "Se corrió un lugar al multiplicar."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "Un libro cuesta $15.000 y tiene un 20% de descuento. ¿Cuánto se paga por él?",
+        "$12.000",
+        "Se puede calcular el descuento y restarlo, o ir directo a lo que se paga.\n\n"
+        "1) El 20% de 15.000 es 3.000, porque el 10% es 1.500.\n"
+        "2) Resta del precio: 15.000 − 3.000 = 12.000.\n"
+        "3) Camino directo: si se descuenta el 20%, se paga el 80%, y 15.000 · 0,8 = 12.000 ✓.",
+        [
+            ("$3.000", "Dio el monto del descuento en lugar de lo que hay que pagar."),
+            ("$18.000", "Sumó el descuento en vez de restarlo."),
+            ("$14.980", "Restó 20 pesos en lugar del 20% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Qué porcentaje representa 45 de un total de 90?",
+        "50%",
+        "Se compara la parte con el total.\n\n"
+        "1) Escribe la fracción: 45/90.\n"
+        "2) Simplifica: es exactamente la mitad, o sea 1/2.\n"
+        "3) La mitad corresponde al 50%.",
+        [
+            ("45%", "Dio la parte como si fuera el porcentaje."),
+            ("200%", "Dividió el total por la parte en lugar de al revés."),
+            ("2%", "Se quedó con el 2 del denominador de la fracción simplificada."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 8% de 2.500?",
+        "200",
+        "Conviene partir del 1%, que se obtiene dividiendo por 100.\n\n"
+        "1) El 1% de 2.500 es 25.\n"
+        "2) El 8% son ocho veces eso: 8 · 25 = 200.\n"
+        "3) Comprueba: 2.500 · 0,08 = 200 ✓.",
+        [
+            ("20", "Calculó el 0,8% en lugar del 8%."),
+            ("2.000", "Calculó el 80% en lugar del 8%."),
+            ("312,5", "Dividió 2.500 por 8 en vez de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "En un grupo de 80 personas, el 25% usa lentes. ¿Cuántas personas usan lentes?",
+        "20",
+        "El 25% es la cuarta parte del total.\n\n"
+        "1) Divide el total por 4: 80 ÷ 4 = 20.\n"
+        "2) Usan lentes 20 personas.\n"
+        "3) Comprueba: 80 · 0,25 = 20 ✓.",
+        [
+            ("60", "Calculó las personas que NO usan lentes."),
+            ("25", "Confundió el porcentaje con la cantidad de personas."),
+            ("40", "Calculó el 50% en lugar del 25%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "¿Cuánto es el 150% de 60?",
+        "90",
+        "Un porcentaje mayor que 100 da un resultado mayor que el número original.\n\n"
+        "1) El 150% equivale a 1,5.\n"
+        "2) Multiplica: 60 · 1,5 = 90.\n"
+        "3) Otra forma: el 100% es 60 y el 50% es 30, así que el 150% es 60 + 30 = 90 ✓.",
+        [
+            ("60", "Se quedó en el 100%, sin agregar el 50% restante."),
+            ("30", "Calculó solo el 50%."),
+            ("9.000", "Multiplicó por 150 sin dividir por 100."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "En un restaurante se deja una propina del 10% sobre una cuenta de $24.000. ¿Cuánto es la propina?",
+        "$2.400",
+        "El 10% se calcula moviendo la coma un lugar hacia la izquierda.\n\n"
+        "1) La cuenta es 24.000, así que el 10% es 2.400.\n"
+        "2) La propina es $2.400.\n"
+        "3) Comprueba: 24.000 · 0,1 = 2.400 ✓.",
+        [
+            ("$240", "Calculó el 1% en lugar del 10%."),
+            ("$26.400", "Dio el total a pagar con propina incluida, no la propina."),
+            ("$21.600", "Restó la propina de la cuenta en vez de calcularla."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El 30% de un número es 72. ¿Cuál es ese número?",
+        "240",
+        "Es el problema al revés: se conoce la parte y se busca el total.\n\n"
+        "1) Plantea la relación: 0,3 · x = 72.\n"
+        "2) Despeja dividiendo: x = 72 ÷ 0,3.\n"
+        "3) Calcula: 72 ÷ 0,3 = 240.\n"
+        "4) Comprueba: el 30% de 240 es 72 ✓. Fíjate en que el resultado tiene que ser MAYOR que 72, porque 72 es solo una parte.",
+        [
+            ("21,6", "Calculó el 30% de 72 en lugar de despejar el total."),
+            ("102", "Sumó 30 a 72."),
+            ("2,4", "Dividió por 30 en vez de por 0,3."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "La población de un pueblo pasó de 2.400 a 3.000 habitantes. ¿Cuál fue el aumento porcentual?",
+        "25%",
+        "La variación porcentual siempre se calcula sobre el valor inicial.\n\n"
+        "1) Calcula el aumento absoluto: 3.000 − 2.400 = 600 habitantes.\n"
+        "2) Compara ese aumento con la población inicial: 600/2.400.\n"
+        "3) Simplifica: 600/2.400 = 1/4, que es el 25%.\n"
+        "4) El error clásico es dividir por 3.000, la población final: eso daría 20%, que no es el aumento sino la proporción que el crecimiento representa del total nuevo.",
+        [
+            ("20%", "Dividió el aumento por la población final en lugar de por la inicial."),
+            ("600%", "Dio el aumento absoluto como si fuera un porcentaje."),
+            ("125%", "Calculó qué porcentaje es la población nueva de la vieja, no cuánto aumentó."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un examen tiene 80 preguntas y un estudiante responde correctamente el 65%. ¿Cuántas preguntas respondió bien?",
+        "52",
+        "Se calcula el porcentaje sobre el total de preguntas.\n\n"
+        "1) El 65% equivale a 0,65.\n"
+        "2) Multiplica: 80 · 0,65 = 52.\n"
+        "3) Otra forma: el 50% son 40 y el 15% son 12, y 40 + 12 = 52 ✓.",
+        [
+            ("28", "Calculó las preguntas incorrectas, que son el 35%."),
+            ("65", "Confundió el porcentaje con la cantidad de preguntas."),
+            ("15", "Restó 65 a 80."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "En un mapa, 3 cm representan 15 km reales. ¿Cuántos kilómetros representan 8 cm?",
+        "40 km",
+        "Es una proporción directa: al doble de centímetros, el doble de kilómetros.\n\n"
+        "1) Averigua cuántos kilómetros representa 1 cm: 15 ÷ 3 = 5 km.\n"
+        "2) Multiplica por los 8 cm: 8 · 5 = 40.\n"
+        "3) Representan 40 km. Comprueba la proporción: 3/15 = 8/40, porque 3 · 40 = 15 · 8 ✓.",
+        [
+            ("20 km", "Sumó la diferencia de centímetros en vez de aplicar la proporción."),
+            ("120 km", "Multiplicó los 8 cm por los 15 km sin dividir antes por 3."),
+            ("1,6 km", "Invirtió la razón y dividió en el sentido equivocado."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Si 6 kilos de pan cuestan $9.000, ¿cuánto cuestan 10 kilos al mismo precio?",
+        "$15.000",
+        "A más kilos, más dinero: es proporción directa.\n\n"
+        "1) Calcula el precio de 1 kilo: 9.000 ÷ 6 = 1.500.\n"
+        "2) Multiplica por los 10 kilos: 10 · 1.500 = 15.000.\n"
+        "3) Cuestan $15.000. Comprueba: 6/9.000 = 10/15.000 ✓.",
+        [
+            ("$13.000", "Sumó los 4 kilos extra a mil pesos cada uno, sin usar el precio real por kilo."),
+            ("$5.400", "Aplicó una proporción inversa, como si a más kilos correspondiera menos dinero."),
+            ("$90.000", "Multiplicó los 10 kilos por los 9.000 sin dividir antes por 6."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El precio de un producto subió de $4.000 a $5.200. ¿Cuál fue el aumento porcentual?",
+        "30%",
+        "El aumento se compara siempre con el precio inicial.\n\n"
+        "1) Aumento absoluto: 5.200 − 4.000 = 1.200.\n"
+        "2) Divide por el precio inicial: 1.200/4.000 = 0,3.\n"
+        "3) Eso equivale al 30%.\n"
+        "4) Comprueba: 4.000 · 1,3 = 5.200 ✓.",
+        [
+            ("23%", "Dividió el aumento por el precio final en lugar del inicial."),
+            ("130%", "Calculó qué porcentaje es el precio nuevo del viejo, no cuánto subió."),
+            ("3%", "Se equivocó en un factor 10 al dividir."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "De los 600 asistentes a un evento, el 45% son mujeres. ¿Cuántos hombres hay?",
+        "330",
+        "Conviene ir directo al porcentaje que se pregunta en vez de calcular las mujeres y restar.\n\n"
+        "1) Si el 45% son mujeres, los hombres son el 100% − 45% = 55%.\n"
+        "2) Calcula: 600 · 0,55 = 330.\n"
+        "3) Hay 330 hombres.\n"
+        "4) Comprueba por el otro camino: las mujeres son 600 · 0,45 = 270, y 600 − 270 = 330 ✓.",
+        [
+            ("270", "Calculó la cantidad de mujeres en lugar de la de hombres."),
+            ("55", "Dio el porcentaje de hombres en vez de la cantidad."),
+            ("555", "Restó 45 al total de asistentes."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Después de un aumento del 15%, un sueldo quedó en $690.000. ¿Cuánto era antes del aumento?",
+        "$600.000",
+        "El sueldo final es el 115% del original, así que hay que deshacer esa multiplicación.\n\n"
+        "1) Si subió un 15%, el nuevo sueldo es el 115% del anterior: 1,15 · x = 690.000.\n"
+        "2) Despeja dividiendo: x = 690.000 ÷ 1,15 = 600.000.\n"
+        "3) El sueldo era $600.000.\n"
+        "4) Comprueba: el 15% de 600.000 es 90.000, y 600.000 + 90.000 = 690.000 ✓. Restarle el 15% a 690.000 NO funciona: daría 586.500.",
+        [
+            ("$586.500", "Le restó el 15% al sueldo final, en vez de dividir por 1,15."),
+            ("$675.000", "Restó 15.000 pesos en lugar de deshacer el porcentaje."),
+            ("$793.500", "Le sumó otro 15% al sueldo final."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Una solución de 500 ml contiene un 12% de sal. ¿Cuántos mililitros de sal contiene?",
+        "60 ml",
+        "La concentración es un porcentaje del total de la solución.\n\n"
+        "1) El 12% equivale a 0,12.\n"
+        "2) Multiplica: 500 · 0,12 = 60.\n"
+        "3) Contiene 60 ml de sal. El resto, 440 ml, es el otro componente.",
+        [
+            ("440 ml", "Calculó el volumen que NO es sal."),
+            ("12 ml", "Confundió el porcentaje con la cantidad."),
+            ("41,7 ml", "Dividió 500 por 12 en lugar de calcular el porcentaje."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "Un auto recorre 240 km con 20 litros de bencina. Al mismo rendimiento, ¿cuántos kilómetros recorre con 35 litros?",
+        "420 km",
+        "A más bencina, más kilómetros: proporción directa.\n\n"
+        "1) Calcula el rendimiento por litro: 240 ÷ 20 = 12 km por litro.\n"
+        "2) Multiplica por los 35 litros: 35 · 12 = 420.\n"
+        "3) Recorre 420 km.",
+        [
+            ("255 km", "Sumó los 15 litros extra como si fueran kilómetros."),
+            ("137 km", "Aplicó una proporción inversa, que no corresponde acá."),
+            ("8.400 km", "Multiplicó 240 por 35 sin dividir antes por 20."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "A un producto se le aplica un 10% de descuento y, sobre el precio ya rebajado, otro 10%. ¿A qué descuento único equivalen los dos juntos?",
+        "19%",
+        "Los porcentajes sucesivos no se suman, porque el segundo se calcula sobre una base ya reducida.\n\n"
+        "1) Tras el primer descuento queda el 90% del precio, o sea un factor 0,9.\n"
+        "2) Tras el segundo queda el 90% de eso: 0,9 · 0,9 = 0,81.\n"
+        "3) Si queda el 81%, el descuento total fue del 100% − 81% = 19%.\n"
+        "4) Con un precio de $1.000: baja a $900 y después a $810, o sea $190 menos. Sumar 10 + 10 = 20% es el error típico: el segundo 10% se aplica sobre $900 y no sobre $1.000.",
+        [
+            ("20%", "Sumó los dos porcentajes, ignorando que el segundo se calcula sobre el precio ya rebajado."),
+            ("21%", "Aplicó los descuentos como si fueran aumentos."),
+            ("10%", "Aplicó un solo descuento y olvidó que eran dos."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un artículo cuesta $50.000 en la tienda A, que ofrece un 30% de descuento. En la tienda B el mismo artículo cuesta $36.000 sin descuento. ¿Dónde conviene comprarlo y por cuánto?",
+        "En la tienda A, por $1.000 menos",
+        "Hay que llevar las dos ofertas al mismo terreno: cuánto se paga finalmente en cada una.\n\n"
+        "1) Precio final en A: con 30% de descuento se paga el 70%, o sea 50.000 · 0,7 = 35.000.\n"
+        "2) Precio final en B: 36.000, sin descuento.\n"
+        "3) Compara: 35.000 es menor que 36.000.\n"
+        "4) Conviene la tienda A, y la diferencia es 36.000 − 35.000 = $1.000.",
+        [
+            ("En la tienda B, por $1.000 menos", "Comparó al revés: 35.000 es menor que 36.000, así que A es la más barata."),
+            ("En la tienda A, por $14.000 menos", "Comparó los precios de lista sin aplicarle a la tienda A su descuento."),
+            ("Cuestan lo mismo", "No calculó el precio final de A, que es 35.000 y no 36.000."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "¿Cuánto es el 20% del 40% de 800?",
+        "64",
+        "Se aplica un porcentaje sobre el resultado del otro, en orden.\n\n"
+        "1) Calcula primero el 40% de 800: 800 · 0,4 = 320.\n"
+        "2) Ahora el 20% de ese resultado: 320 · 0,2 = 64.\n"
+        "3) El resultado es 64.\n"
+        "4) Atajo: aplicar dos porcentajes seguidos es multiplicar los factores, 0,2 · 0,4 = 0,08, o sea el 8% de 800 = 64 ✓. Sumar 20 + 40 = 60% daría 480, que es otra cosa.",
+        [
+            ("480", "Sumó los dos porcentajes en lugar de aplicarlos uno sobre el otro."),
+            ("320", "Se quedó en el 40% de 800, sin aplicar el 20%."),
+            ("160", "Calculó el 20% de 800 directamente, ignorando el 40%."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un curso tiene 18 hombres y 12 mujeres. Si se incorporan 10 mujeres más, ¿qué porcentaje del nuevo total son mujeres?",
+        "55%",
+        "Lo delicado es que cambia la cantidad de mujeres y también el total.\n\n"
+        "1) Mujeres después de la incorporación: 12 + 10 = 22.\n"
+        "2) Total del curso después: 18 + 22 = 40. Ojo: el total también creció, no se queda en 30.\n"
+        "3) Calcula la proporción: 22/40 = 0,55.\n"
+        "4) Corresponde al 55%.",
+        [
+            ("73,3%", "Usó el total original de 30 estudiantes en vez del nuevo total de 40."),
+            ("40%", "Se quedó con la proporción de mujeres antes de la incorporación."),
+            ("25%", "Calculó qué porcentaje representan las 10 mujeres nuevas del total final."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un servicio cuesta $30.000 más IVA. Si el IVA es del 19%, ¿cuánto se paga en total?",
+        "$35.700",
+        "El IVA se calcula sobre el precio neto y se suma.\n\n"
+        "1) Calcula el 19% de 30.000: 30.000 · 0,19 = 5.700.\n"
+        "2) Súmalo al precio neto: 30.000 + 5.700 = 35.700.\n"
+        "3) Se pagan $35.700.\n"
+        "4) Atajo: multiplicar directamente por 1,19 da el total en un paso, 30.000 · 1,19 = 35.700 ✓.",
+        [
+            ("$5.700", "Dio el monto del IVA en lugar del total a pagar."),
+            ("$24.300", "Restó el IVA en vez de sumarlo."),
+            ("$30.019", "Sumó 19 pesos en lugar del 19% del precio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Cuatro llaves llenan un estanque en 6 horas. Trabajando al mismo ritmo, ¿cuánto demoran 3 llaves en llenarlo?",
+        "8 horas",
+        "Es proporción inversa: menos llaves, más tiempo.\n\n"
+        "1) Calcula el trabajo total en \"llaves por hora\": 4 · 6 = 24. Ese número no cambia, porque el estanque es el mismo.\n"
+        "2) Con 3 llaves, el tiempo sale de dividir: 24 ÷ 3 = 8.\n"
+        "3) Demoran 8 horas.\n"
+        "4) Comprueba que tenga sentido: con menos llaves el tiempo tiene que subir, y 8 es mayor que 6 ✓.",
+        [
+            ("4,5 horas", "Aplicó una proporción directa, que haría bajar el tiempo con menos llaves."),
+            ("18 horas", "Multiplicó las horas por las llaves que faltaban en vez de repartir el trabajo total."),
+            ("6 horas", "Supuso que el tiempo no cambia al sacar una llave."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "El precio de un producto baja un 40% y después sube un 40% sobre el precio ya rebajado. Respecto del precio inicial, ¿qué ocurre?",
+        "Baja un 16%",
+        "Los porcentajes sucesivos se multiplican, y por eso una baja seguida de una subida igual no devuelve al punto de partida.\n\n"
+        "1) Tras la baja del 40% queda el 60%, o sea un factor 0,6.\n"
+        "2) La subida del 40% multiplica por 1,4, pero sobre ese precio ya rebajado.\n"
+        "3) El factor total es 0,6 · 1,4 = 0,84, es decir, queda el 84% del precio inicial.\n"
+        "4) La baja total es 100% − 84% = 16%. Con $10.000: baja a $6.000 y sube a $8.400.\n"
+        "5) La razón de fondo: el 40% de bajada se calcula sobre el precio alto y el 40% de subida sobre el precio bajo, así que se descuenta más de lo que se recupera.",
+        [
+            ("Queda igual", "Supuso que una baja y una subida del mismo porcentaje se cancelan, pero se aplican sobre bases distintas."),
+            ("Baja un 20%", "Restó los porcentajes en lugar de multiplicar los factores."),
+            ("Sube un 16%", "Acertó con la magnitud pero invirtió el sentido del cambio."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "En una encuesta, el 80% de las personas prefiere té. De quienes prefieren té, el 35% le pone azúcar. ¿Qué porcentaje del total prefiere té con azúcar?",
+        "28%",
+        "El segundo porcentaje se aplica solo sobre una parte, no sobre el total.\n\n"
+        "1) El 35% no es del total: es de quienes prefieren té, que son el 80%.\n"
+        "2) Para llevarlo al total se multiplican los dos porcentajes: 0,8 · 0,35 = 0,28.\n"
+        "3) Corresponde al 28% del total.\n"
+        "4) Compruébalo con 100 personas: 80 prefieren té, y el 35% de esas 80 son 28 ✓.",
+        [
+            ("35%", "Tomó el porcentaje como si fuera del total, cuando es solo de quienes prefieren té."),
+            ("115%", "Sumó los dos porcentajes, obteniendo un valor imposible."),
+            ("45%", "Restó los dos porcentajes."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Se reparten $120.000 entre dos personas en la razón 2 : 3. ¿Cuánto recibe quien lleva la parte mayor?",
+        "$72.000",
+        "En un reparto proporcional conviene contar primero en cuántas partes iguales se divide el total.\n\n"
+        "1) La razón 2 : 3 significa que el total se divide en 2 + 3 = 5 partes iguales.\n"
+        "2) Calcula cuánto vale una parte: 120.000 ÷ 5 = 24.000.\n"
+        "3) La parte mayor son 3 de esas partes: 3 · 24.000 = 72.000.\n"
+        "4) Recibe $72.000. Comprueba: la otra persona recibe 2 · 24.000 = 48.000, y 72.000 + 48.000 = 120.000 ✓.",
+        [
+            ("$48.000", "Calculó la parte menor en lugar de la mayor."),
+            ("$60.000", "Repartió el total en partes iguales, ignorando la razón."),
+            ("$40.000", "Dividió el total por 3 en vez de por las 5 partes de la razón."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora
