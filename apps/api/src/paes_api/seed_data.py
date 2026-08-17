@@ -15958,6 +15958,542 @@ QUESTIONS += [
     ),
 ]
 
+# ---------------------------------------------------------------------------
+# Técnicas de conteo — segunda tanda.
+#
+# Nota de temario para quien venga después: la combinatoria NO aparece como
+# unidad temática propia en el temario de M1, que en este eje solo lista tablas
+# y gráficos, medidas de posición y reglas de las probabilidades. Sí existe como
+# nodo de M2 (`prob_permutacion`). Este nodo se mantiene en M1 porque contar
+# casos es la herramienta con la que se calcula "casos favorables sobre casos
+# posibles", y por eso esta tanda inclina los enunciados hacia ese uso: espacios
+# muestrales de dados y monedas, y conteos que después alimentan una
+# probabilidad.
+#
+# Lo que faltaba en el nodo: conteo con restricciones (que la cifra final sea
+# par, que dos personas vayan juntas, que alguien esté sí o sí en el comité),
+# permutaciones con elementos repetidos más allá de un solo caso, y el conteo
+# de pares dentro de un grupo, que es el mismo esquema de los apretones de mano,
+# los partidos de un torneo y las diagonales de un polígono.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "prob_combinatoria", "facil",
+        "Una cafetería ofrece 6 tipos de café y 4 tipos de queque. ¿Cuántas combinaciones distintas de café y queque se pueden pedir?",
+        "24",
+        "Cuando hay que elegir una cosa de cada grupo, las opciones se multiplican.\n\n"
+        "1) Por cada uno de los 6 cafés se puede acompañar con cualquiera de los 4 queques.\n"
+        "2) Multiplica: 6 · 4 = 24.\n"
+        "3) Hay 24 combinaciones posibles.",
+        [
+            ("10", "Sumó las opciones en lugar de multiplicarlas."),
+            ("2", "Restó las opciones de los dos grupos."),
+            ("30", "Multiplicó por 5 en vez de por 4."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿De cuántas formas distintas se pueden ordenar 2 personas en una fila?",
+        "2",
+        "Ordenar todos los elementos de un grupo es una permutación.\n\n"
+        "1) Para el primer lugar hay 2 candidatos.\n"
+        "2) Elegido ese, para el segundo lugar queda solo 1.\n"
+        "3) Multiplica: 2 · 1 = 2. Son los órdenes AB y BA.",
+        [
+            ("1", "Consideró que solo hay una forma, olvidando que el orden importa."),
+            ("4", "Multiplicó 2 por 2, como si la primera persona pudiera repetirse en el segundo lugar."),
+            ("3", "Sumó las posiciones en lugar de multiplicar las opciones."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Con 5 gorros y 6 bufandas distintas, ¿cuántos conjuntos diferentes de gorro y bufanda se pueden armar?",
+        "30",
+        "Se elige una prenda de cada grupo, así que las opciones se multiplican.\n\n"
+        "1) Cada uno de los 5 gorros se puede combinar con cualquiera de las 6 bufandas.\n"
+        "2) Multiplica: 5 · 6 = 30.\n"
+        "3) Hay 30 conjuntos distintos.",
+        [
+            ("11", "Sumó las prendas en lugar de multiplicar las opciones."),
+            ("1", "Restó los dos números."),
+            ("25", "Multiplicó 5 por 5, usando dos veces la cantidad de gorros."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Se lanzan al mismo tiempo un dado de 6 caras y una moneda. ¿Cuántos resultados distintos son posibles?",
+        "12",
+        "Contar el espacio muestral es el primer paso para calcular cualquier probabilidad.\n\n"
+        "1) El dado tiene 6 resultados posibles y la moneda 2.\n"
+        "2) Cada resultado del dado se puede dar junto a cada resultado de la moneda, así que se multiplican: 6 · 2 = 12.\n"
+        "3) Hay 12 resultados posibles, del tipo (1, cara), (1, sello), (2, cara)…",
+        [
+            ("8", "Sumó los resultados de cada objeto en lugar de multiplicarlos."),
+            ("6", "Contó solo los resultados del dado."),
+            ("36", "Multiplicó 6 por 6, como si se lanzaran dos dados."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un cerrojo de seguridad tiene 3 ruedas y cada una muestra 4 símbolos distintos. ¿Cuántas combinaciones diferentes se pueden formar?",
+        "64",
+        "Cada rueda se elige de forma independiente y sus símbolos se pueden repetir entre ruedas.\n\n"
+        "1) La primera rueda tiene 4 opciones, la segunda otras 4 y la tercera otras 4.\n"
+        "2) Multiplica: 4 · 4 · 4 = 64.\n"
+        "3) Hay 64 combinaciones, que también se escribe como 4³.",
+        [
+            ("12", "Multiplicó las ruedas por los símbolos en vez de multiplicar las opciones de cada rueda."),
+            ("24", "Calculó las ordenaciones de 4 elementos en lugar de las combinaciones del cerrojo."),
+            ("7", "Sumó ruedas y símbolos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un local arma sándwiches eligiendo 1 de 2 tipos de pan, 1 de 3 quesos y 1 de 2 salsas. ¿Cuántos sándwiches distintos se pueden preparar?",
+        "12",
+        "Con tres decisiones sucesivas, las opciones se multiplican todas.\n\n"
+        "1) Hay 2 opciones de pan, 3 de queso y 2 de salsa.\n"
+        "2) Multiplica: 2 · 3 · 2 = 12.\n"
+        "3) Se pueden preparar 12 sándwiches distintos.",
+        [
+            ("7", "Sumó las opciones de los tres grupos."),
+            ("6", "Multiplicó solo el pan y el queso, olvidando la salsa."),
+            ("4", "Multiplicó solo el pan y la salsa, olvidando el queso."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿Cuántos resultados distintos se pueden obtener al lanzar dos dados de 6 caras?",
+        "36",
+        "Cada dado es independiente del otro, así que sus resultados se multiplican.\n\n"
+        "1) El primer dado tiene 6 resultados posibles.\n"
+        "2) Para cada uno de ellos, el segundo dado tiene otros 6.\n"
+        "3) Multiplica: 6 · 6 = 36.\n"
+        "4) Son 36 pares ordenados, desde (1,1) hasta (6,6). Este número es el denominador de casi todas las probabilidades con dos dados.",
+        [
+            ("12", "Sumó los resultados de los dos dados."),
+            ("21", "Contó solo los pares sin repetir el orden, cuando (2,5) y (5,2) son resultados distintos."),
+            ("6", "Contó los resultados de un solo dado."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Una tienda tiene 7 modelos de polera y 5 de jockey. ¿Cuántos conjuntos distintos de polera y jockey se pueden formar?",
+        "35",
+        "Se elige una prenda de cada tipo, así que se multiplican las opciones.\n\n"
+        "1) Cada una de las 7 poleras se combina con cualquiera de los 5 jockeys.\n"
+        "2) Multiplica: 7 · 5 = 35.\n"
+        "3) Hay 35 conjuntos distintos.",
+        [
+            ("12", "Sumó las prendas en lugar de multiplicar."),
+            ("2", "Restó los dos números."),
+            ("49", "Multiplicó 7 por 7, usando dos veces la cantidad de poleras."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿De cuántas formas distintas se pueden ordenar 8 personas en una fila?",
+        "40.320",
+        "Ordenar todos los elementos de un grupo es calcular su factorial.\n\n"
+        "1) Para el primer lugar hay 8 candidatos, para el segundo 7, para el tercero 6, y así hasta el último.\n"
+        "2) Multiplica: 8 · 7 · 6 · 5 · 4 · 3 · 2 · 1.\n"
+        "3) El resultado es 40.320, que se escribe 8!.",
+        [
+            ("64", "Elevó 8 al cuadrado en lugar de calcular el factorial."),
+            ("36", "Sumó los números del 1 al 8."),
+            ("5.040", "Calculó 7!, olvidando multiplicar por la octava persona."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Un código de acceso tiene 2 dígitos y estos pueden repetirse. ¿Cuántos códigos distintos existen?",
+        "100",
+        "Cada posición se llena de forma independiente, con todos los dígitos disponibles.\n\n"
+        "1) Los dígitos van del 0 al 9, así que hay 10 opciones para cada posición.\n"
+        "2) Como pueden repetirse, la segunda posición también tiene 10 opciones.\n"
+        "3) Multiplica: 10 · 10 = 100. Son los códigos del 00 al 99.",
+        [
+            ("90", "Descontó los códigos con dígitos repetidos, que el enunciado sí permite."),
+            ("20", "Sumó las opciones de las dos posiciones."),
+            ("45", "Contó los pares sin importar el orden, cuando 12 y 21 son códigos distintos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "Para ir de la ciudad A a la B hay 3 rutas, y de la B a la C hay 4. ¿De cuántas formas distintas se puede viajar de A a C pasando por B?",
+        "12",
+        "El viaje son dos tramos sucesivos, así que las opciones se multiplican.\n\n"
+        "1) Cada una de las 3 rutas hasta B se puede continuar con cualquiera de las 4 rutas hasta C.\n"
+        "2) Multiplica: 3 · 4 = 12.\n"
+        "3) Hay 12 recorridos distintos.",
+        [
+            ("7", "Sumó las rutas de los dos tramos, que sería el caso si se pudiera elegir una sola."),
+            ("4", "Contó solo el segundo tramo."),
+            ("9", "Multiplicó 3 por 3, usando dos veces las rutas del primer tramo."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "¿Cuántas parejas distintas se pueden formar con 4 personas, si no importa quién va primero?",
+        "6",
+        "Al no importar el orden, la pareja formada por Ana y Beto es la misma que la de Beto y Ana.\n\n"
+        "1) Si el orden importara habría 4 · 3 = 12 formas.\n"
+        "2) Pero cada pareja quedó contada dos veces, una por cada orden.\n"
+        "3) Divide por 2: 12 ÷ 2 = 6.\n"
+        "4) Hay 6 parejas distintas.",
+        [
+            ("12", "Contó los pares ordenados, sin descontar que cada pareja se repite dos veces."),
+            ("4", "Dio la cantidad de personas en lugar de la de parejas."),
+            ("8", "Multiplicó las personas por 2."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos números de 3 cifras distintas se pueden formar usando los dígitos 1, 2, 3, 4, 5 y 6?",
+        "120",
+        "Cada cifra que se usa deja de estar disponible para las siguientes.\n\n"
+        "1) Para la primera cifra hay 6 opciones.\n"
+        "2) Para la segunda quedan 5, porque el dígito ya usado no se puede repetir.\n"
+        "3) Para la tercera quedan 4.\n"
+        "4) Multiplica: 6 · 5 · 4 = 120.",
+        [
+            ("216", "Usó 6 opciones en las tres posiciones, permitiendo repetir dígitos."),
+            ("18", "Multiplicó los 6 dígitos por las 3 posiciones."),
+            ("20", "Contó los grupos de 3 dígitos sin importar el orden, cuando 123 y 321 son números distintos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas se pueden elegir 3 personas de un grupo de 7, si no se distinguen cargos?",
+        "35",
+        "Al no distinguir cargos, el orden no importa y hay que descontar las repeticiones.\n\n"
+        "1) Si el orden importara: 7 · 6 · 5 = 210 formas.\n"
+        "2) Pero cada grupo de 3 personas se contó varias veces, una por cada orden posible de esas 3, y esos órdenes son 3 · 2 · 1 = 6.\n"
+        "3) Divide: 210 ÷ 6 = 35.\n"
+        "4) Se pueden formar 35 grupos distintos.",
+        [
+            ("210", "Contó los grupos ordenados, sin descontar los órdenes repetidos."),
+            ("21", "Calculó los grupos de 2 personas en lugar de los de 3."),
+            ("343", "Elevó 7 al cubo, permitiendo elegir a la misma persona varias veces."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "En una carrera con 7 corredores, ¿de cuántas formas distintas se pueden repartir el 1er, 2do y 3er lugar?",
+        "210",
+        "Acá el orden sí importa: no es lo mismo salir primero que tercero.\n\n"
+        "1) Para el primer lugar hay 7 candidatos.\n"
+        "2) Para el segundo quedan 6, porque el ganador ya no puede repetir.\n"
+        "3) Para el tercero quedan 5.\n"
+        "4) Multiplica: 7 · 6 · 5 = 210.",
+        [
+            ("35", "Contó los grupos de 3 sin importar el orden, cuando los lugares del podio sí se distinguen."),
+            ("343", "Usó 7 opciones en los tres lugares, permitiendo que alguien ocupe dos puestos."),
+            ("21", "Multiplicó los corredores por los lugares del podio."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos subconjuntos de 3 elementos tiene un conjunto de 8 elementos?",
+        "56",
+        "En un subconjunto el orden de los elementos no importa.\n\n"
+        "1) Si el orden importara: 8 · 7 · 6 = 336.\n"
+        "2) Cada subconjunto de 3 elementos aparece repetido tantas veces como órdenes tenga: 3 · 2 · 1 = 6.\n"
+        "3) Divide: 336 ÷ 6 = 56.\n"
+        "4) Hay 56 subconjuntos de 3 elementos.",
+        [
+            ("336", "Contó los grupos ordenados, sin descontar las repeticiones."),
+            ("24", "Multiplicó los 8 elementos por los 3 del subconjunto."),
+            ("512", "Elevó 8 al cubo, permitiendo repetir elementos dentro del subconjunto."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Una clave se forma con 3 letras seguidas de 2 dígitos, y tanto letras como dígitos pueden repetirse. Con 26 letras y 10 dígitos, ¿cuántas claves distintas existen?",
+        "1.757.600",
+        "Cada posición se llena de forma independiente, así que todas las opciones se multiplican.\n\n"
+        "1) Las tres letras aportan 26 · 26 · 26 = 17.576 posibilidades.\n"
+        "2) Los dos dígitos aportan 10 · 10 = 100.\n"
+        "3) Multiplica ambas partes: 17.576 · 100 = 1.757.600.\n"
+        "4) Existen 1.757.600 claves distintas.",
+        [
+            ("17.676", "Sumó las posibilidades de las letras y de los dígitos en lugar de multiplicarlas."),
+            ("15.600", "Descontó las repeticiones de letras, que el enunciado sí permite."),
+            ("175.760", "Multiplicó por 10 en vez de por 100, contando un solo dígito."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "En un torneo participan 6 equipos y todos juegan exactamente una vez contra cada uno de los demás. ¿Cuántos partidos se juegan en total?",
+        "15",
+        "Un partido queda definido por la pareja de equipos, sin importar el orden.\n\n"
+        "1) Cada equipo juega contra los otros 5, lo que daría 6 · 5 = 30.\n"
+        "2) Pero así cada partido se contó dos veces, una desde cada equipo.\n"
+        "3) Divide por 2: 30 ÷ 2 = 15.\n"
+        "4) Se juegan 15 partidos. Es el mismo esquema de contar apretones de mano o de elegir parejas.",
+        [
+            ("30", "Contó cada partido dos veces, una por cada equipo."),
+            ("36", "Multiplicó 6 por 6, incluyendo partidos de un equipo contra sí mismo."),
+            ("11", "Sumó los partidos de los dos primeros equipos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos números pares de 2 cifras distintas se pueden formar con los dígitos 1, 2, 3 y 4?",
+        "6",
+        "Cuando hay una restricción, conviene empezar por la posición restringida.\n\n"
+        "1) Para que el número sea par, la cifra de las unidades debe ser 2 o 4: hay 2 opciones.\n"
+        "2) Fijada esa, para las decenas quedan 3 dígitos disponibles, porque no se pueden repetir.\n"
+        "3) Multiplica: 2 · 3 = 6.\n"
+        "4) Son 12, 14, 32, 34, 42 y 24. Empezar por las decenas complica el conteo, porque el número de opciones para las unidades dependería de cuál se eligió.",
+        [
+            ("12", "Contó todos los números de 2 cifras distintas, sin exigir que fueran pares."),
+            ("8", "Permitió repetir dígitos, cuando el enunciado pide cifras distintas."),
+            ("2", "Contó solo las opciones para la cifra de las unidades."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas se pueden elegir 2 delegados de un curso de 12 estudiantes, si ambos tienen el mismo rol?",
+        "66",
+        "Como los dos delegados cumplen el mismo rol, el orden no importa.\n\n"
+        "1) Si el orden importara: 12 · 11 = 132.\n"
+        "2) Cada pareja quedó contada dos veces, una por cada orden.\n"
+        "3) Divide: 132 ÷ 2 = 66.\n"
+        "4) Hay 66 parejas posibles.",
+        [
+            ("132", "Contó las parejas ordenadas, como si los cargos se distinguieran."),
+            ("144", "Multiplicó 12 por 12, permitiendo elegir dos veces a la misma persona."),
+            ("24", "Multiplicó los estudiantes por los 2 delegados."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Se quiere diseñar una bandera de 3 franjas horizontales, cada una de un color distinto, eligiendo entre 5 colores. ¿Cuántas banderas diferentes se pueden hacer?",
+        "60",
+        "El orden de las franjas importa: una bandera roja-azul-verde no es la misma que verde-azul-roja.\n\n"
+        "1) Para la primera franja hay 5 colores.\n"
+        "2) Para la segunda quedan 4, porque los colores deben ser distintos.\n"
+        "3) Para la tercera quedan 3.\n"
+        "4) Multiplica: 5 · 4 · 3 = 60.",
+        [
+            ("10", "Contó los grupos de 3 colores sin importar el orden de las franjas."),
+            ("125", "Usó 5 opciones en las tres franjas, permitiendo repetir colores."),
+            ("15", "Multiplicó los colores por las franjas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Un menú ofrece 4 entradas, 6 platos de fondo y 3 postres. ¿Cuántos menús completos distintos se pueden armar?",
+        "72",
+        "Se elige un plato de cada categoría, así que todas las opciones se multiplican.\n\n"
+        "1) Hay 4 opciones de entrada, 6 de fondo y 3 de postre.\n"
+        "2) Multiplica: 4 · 6 = 24, y después 24 · 3 = 72.\n"
+        "3) Se pueden armar 72 menús distintos.",
+        [
+            ("13", "Sumó las opciones de las tres categorías."),
+            ("24", "Multiplicó solo las entradas y los fondos, olvidando los postres."),
+            ("18", "Multiplicó solo los fondos y los postres, olvidando las entradas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra COCO?",
+        "6",
+        "La palabra tiene dos letras repetidas, y cada repetición reduce la cantidad de órdenes distinguibles.\n\n"
+        "1) Si las 4 letras fueran todas distintas, habría 4 · 3 · 2 · 1 = 24 órdenes.\n"
+        "2) Pero la C aparece dos veces y se puede intercambiar consigo misma de 2 formas, y lo mismo pasa con la O.\n"
+        "3) Divide por ambas repeticiones: 24 ÷ (2 · 2) = 24 ÷ 4 = 6.\n"
+        "4) Hay 6 ordenaciones distinguibles: COCO, COOC, CCOO, OCCO, OCOC y OOCC.",
+        [
+            ("24", "Trató las cuatro letras como si todas fueran distintas."),
+            ("12", "Descontó la repetición de una sola de las dos letras."),
+            ("4", "Dio la cantidad de letras en vez de la de ordenaciones."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "¿Cuántos resultados distintos se pueden obtener al lanzar tres monedas?",
+        "8",
+        "Cada moneda aporta sus propias posibilidades, de forma independiente.\n\n"
+        "1) Cada moneda tiene 2 resultados: cara o sello.\n"
+        "2) Con tres monedas: 2 · 2 · 2 = 8.\n"
+        "3) Son 8 resultados, desde (cara, cara, cara) hasta (sello, sello, sello).\n"
+        "4) Este 8 es el denominador de todas las probabilidades con tres monedas.",
+        [
+            ("6", "Multiplicó las monedas por sus dos caras en lugar de multiplicar las opciones."),
+            ("4", "Contó los resultados de dos monedas y olvidó la tercera."),
+            ("9", "Elevó 3 al cuadrado, invirtiendo la base y el exponente."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántos números de 3 cifras distintas se pueden formar con los dígitos 0, 1, 2, 3 y 4, si el número no puede comenzar con 0?",
+        "48",
+        "La restricción afecta solo a la primera posición, así que hay que empezar por ella.\n\n"
+        "1) Para la cifra de las centenas hay 4 opciones: 1, 2, 3 o 4. El 0 queda excluido.\n"
+        "2) Para las decenas quedan 4 dígitos disponibles: los 5 originales menos el ya usado. Ojo: acá el 0 sí puede aparecer.\n"
+        "3) Para las unidades quedan 3.\n"
+        "4) Multiplica: 4 · 4 · 3 = 48.",
+        [
+            ("60", "Permitió que el número empezara con 0, contando números que en realidad son de 2 cifras."),
+            ("24", "Descartó el 0 también en las decenas y unidades, cuando la restricción solo afecta a la primera cifra."),
+            ("100", "Permitió repetir dígitos, cuando el enunciado pide cifras distintas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "De un grupo de 5 hombres y 6 mujeres se debe formar un comité con 2 hombres y 3 mujeres. ¿Cuántos comités distintos se pueden armar?",
+        "200",
+        "Se cuenta cada grupo por separado y después se combinan.\n\n"
+        "1) Formas de elegir 2 hombres entre 5, sin importar el orden: (5 · 4) ÷ 2 = 10.\n"
+        "2) Formas de elegir 3 mujeres entre 6: (6 · 5 · 4) ÷ 6 = 20.\n"
+        "3) Como cada selección de hombres se puede combinar con cualquiera de mujeres, se multiplican: 10 · 20 = 200.\n"
+        "4) Se pueden armar 200 comités.",
+        [
+            ("30", "Sumó las opciones de cada grupo en lugar de multiplicarlas."),
+            ("462", "Eligió 5 personas del grupo completo de 11, sin respetar la composición pedida."),
+            ("2.400", "Contó los ordenamientos dentro de cada grupo, cuando los cargos no se distinguen."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿De cuántas formas distintas se pueden ordenar las letras de la palabra BANANA?",
+        "60",
+        "Hay dos letras repetidas y cada repetición reduce la cantidad de órdenes distinguibles.\n\n"
+        "1) Si las 6 letras fueran distintas habría 6! = 720 órdenes.\n"
+        "2) La A aparece 3 veces, y esas 3 A se pueden intercambiar de 3! = 6 formas sin cambiar la palabra.\n"
+        "3) La N aparece 2 veces, con 2! = 2 intercambios.\n"
+        "4) Divide por ambas repeticiones: 720 ÷ (6 · 2) = 720 ÷ 12 = 60.",
+        [
+            ("720", "Trató las seis letras como si todas fueran distintas."),
+            ("120", "Descontó solo la repetición de la A y olvidó la de la N."),
+            ("360", "Dividió solo por 2, considerando una sola de las dos letras repetidas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "En una reunión de 10 personas, todas brindan exactamente una vez con cada una de las demás. ¿Cuántos brindis se producen?",
+        "45",
+        "Un brindis queda definido por la pareja de personas, sin importar quién lo inicia.\n\n"
+        "1) Cada persona brinda con las otras 9, lo que daría 10 · 9 = 90.\n"
+        "2) Pero así cada brindis se contó dos veces, una desde cada persona.\n"
+        "3) Divide por 2: 90 ÷ 2 = 45.\n"
+        "4) Se producen 45 brindis.",
+        [
+            ("90", "Contó cada brindis dos veces, una por cada participante."),
+            ("100", "Multiplicó 10 por 10, incluyendo el brindis de alguien consigo mismo."),
+            ("19", "Sumó los brindis de las dos primeras personas."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántos números de 4 cifras se pueden formar usando solo los dígitos 1, 2 y 3, si se pueden repetir?",
+        "81",
+        "Al permitirse la repetición, cada posición mantiene todas las opciones.\n\n"
+        "1) Para cada una de las 4 posiciones hay 3 dígitos disponibles.\n"
+        "2) Multiplica: 3 · 3 · 3 · 3 = 81, o sea 3⁴.\n"
+        "3) Se pueden formar 81 números.\n"
+        "4) Ojo con no confundir la base y el exponente: 4³ = 64 sería la respuesta si hubiera 4 dígitos disponibles y 3 posiciones.",
+        [
+            ("64", "Invirtió base y exponente: calculó 4³ en vez de 3⁴."),
+            ("24", "Calculó las ordenaciones de 4 elementos distintos, cuando acá se repiten."),
+            ("12", "Multiplicó las posiciones por los dígitos disponibles."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿De cuántas formas se pueden sentar 5 personas en una fila, si dos de ellas deben quedar siempre juntas?",
+        "48",
+        "El truco es tratar a las dos personas que van juntas como si fueran un solo bloque.\n\n"
+        "1) Si las dos van pegadas, se pueden pensar como un único elemento. Junto a las otras 3 personas, hay 4 elementos que ordenar.\n"
+        "2) Esos 4 elementos se ordenan de 4! = 24 formas.\n"
+        "3) Pero dentro del bloque las dos personas se pueden intercambiar entre sí: 2 formas.\n"
+        "4) Multiplica: 24 · 2 = 48.",
+        [
+            ("24", "Trató el bloque como fijo y olvidó que las dos personas se pueden intercambiar dentro de él."),
+            ("120", "Contó todas las ordenaciones de las 5 personas, sin imponer la restricción."),
+            ("240", "Multiplicó las 120 ordenaciones libres por 2, en vez de partir del bloque."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántas diagonales tiene un polígono de 8 lados?",
+        "20",
+        "Una diagonal une dos vértices que no son consecutivos.\n\n"
+        "1) Cuenta primero todos los segmentos que unen dos vértices cualesquiera: son las parejas de 8 vértices, (8 · 7) ÷ 2 = 28.\n"
+        "2) De esos 28 segmentos, 8 son los lados del polígono, que unen vértices consecutivos.\n"
+        "3) Resta: 28 − 8 = 20.\n"
+        "4) El polígono tiene 20 diagonales.",
+        [
+            ("28", "Contó todos los segmentos entre vértices, sin descontar los 8 lados."),
+            ("56", "Contó los segmentos ordenados, sin dividir por 2."),
+            ("16", "Multiplicó los lados por 2."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "De un grupo de 10 personas se elige un comité de 3, pero una persona determinada debe estar sí o sí. ¿Cuántos comités distintos se pueden formar?",
+        "36",
+        "Si una persona ya está adentro, el problema se reduce a llenar los cupos que quedan.\n\n"
+        "1) Esa persona ocupa uno de los 3 lugares y no hay que elegirla: viene dada.\n"
+        "2) Quedan 2 cupos por llenar entre las 9 personas restantes.\n"
+        "3) Como no se distinguen cargos, son las parejas de 9: (9 · 8) ÷ 2 = 36.\n"
+        "4) Se pueden formar 36 comités.",
+        [
+            ("120", "Contó todos los comités de 3 entre las 10 personas, sin imponer la restricción."),
+            ("84", "Eligió los 3 miembros entre las 9 restantes, dejando fuera a la persona que debía estar."),
+            ("72", "Contó las parejas ordenadas de las 9 restantes, sin dividir por 2."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "Al lanzar dos dados de 6 caras, ¿en cuántos de los resultados posibles la suma es igual a 7?",
+        "6",
+        "Conviene listar los pares ordenados de forma sistemática para no saltarse ninguno.\n\n"
+        "1) Empieza fijando el primer dado y busca qué necesita el segundo: si sale 1, el otro debe ser 6; si sale 2, el otro 5; y así.\n"
+        "2) Los pares son (1,6), (2,5), (3,4), (4,3), (5,2) y (6,1).\n"
+        "3) Son 6 resultados. Ojo: (3,4) y (4,3) son distintos, porque los dados se distinguen.\n"
+        "4) Como el total de resultados es 36, la probabilidad de sumar 7 sería 6/36 = 1/6, la suma más probable de dos dados.",
+        [
+            ("3", "Contó solo las parejas sin repetir el orden, cuando los dados se distinguen."),
+            ("7", "Usó el valor de la suma como si fuera la cantidad de resultados."),
+            ("12", "Contó también los pares que suman otros valores cercanos."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "Se reparten 3 premios idénticos entre 9 personas, y nadie puede recibir más de uno. ¿De cuántas formas distintas se pueden repartir?",
+        "84",
+        "Como los premios son idénticos, lo único que importa es quiénes son los tres ganadores.\n\n"
+        "1) Si los premios se distinguieran habría 9 · 8 · 7 = 504 repartos.\n"
+        "2) Pero al ser idénticos, los 3 · 2 · 1 = 6 órdenes de un mismo trío dan el mismo reparto.\n"
+        "3) Divide: 504 ÷ 6 = 84.\n"
+        "4) Hay 84 repartos distintos.",
+        [
+            ("504", "Contó los repartos como si los tres premios fueran distintos entre sí."),
+            ("729", "Elevó 9 al cubo, permitiendo que una persona reciba más de un premio."),
+            ("27", "Multiplicó las personas por los premios."),
+        ],
+    ),
+    _q(
+        "prob_combinatoria", "dificil",
+        "¿Cuántos números de 3 cifras distintas y mayores que 500 se pueden formar con los dígitos 1, 2, 3, 4, 5 y 6?",
+        "40",
+        "La condición de ser mayor que 500 restringe solo la primera cifra, así que se empieza por ahí.\n\n"
+        "1) Para que el número supere 500, la cifra de las centenas debe ser 5 o 6: hay 2 opciones.\n"
+        "2) Fijada esa, para las decenas quedan 5 dígitos disponibles, porque no se pueden repetir.\n"
+        "3) Para las unidades quedan 4.\n"
+        "4) Multiplica: 2 · 5 · 4 = 40.",
+        [
+            ("120", "Contó todos los números de 3 cifras distintas, sin exigir que superaran 500."),
+            ("72", "Permitió repetir dígitos después de fijar la primera cifra."),
+            ("20", "Contó solo los que empiezan con 5, olvidando los que empiezan con 6."),
+        ],
+    ),
+]
+
 
 # ---------------------------------------------------------------------------
 # Competencia Lectora

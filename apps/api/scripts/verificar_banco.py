@@ -288,7 +288,8 @@ COMPROBACIONES: dict[str, str] = {
     "3 estudiantes obtuvieron nota 6": str((3 * 6 + 2 * 4) / 5).replace(".", ","),
     "4 entradas y 5 platos de fondo": str(4 * 5),
     "ordenar 6 cuadros": str(factorial(6)),
-    "3 cifras distintas": str(5 * 4 * 3),
+    # Lleva los dígitos porque hay varias preguntas de "3 cifras distintas".
+    "3 cifras distintas se pueden formar usando los dígitos 1, 2, 3, 4 y 5": str(5 * 4 * 3),
     "6 personas se debe elegir un comité de 2": str(comb(6, 2)),
     "2 letras seguidas de 3 dígitos": f"{26**2 * 10**3:,}".replace(",", "."),
     "3 poleras y 4 pantalones": str(3 * 4),
@@ -703,6 +704,49 @@ COMPROBACIONES: dict[str, str] = {
     "300, 320, 340, 360 y 2.000": str(sorted([300, 320, 340, 360, 2000])[2]),
     # Escalar los datos escala la media en el mismo factor.
     "se les multiplica por 3": f"Queda multiplicada por {3}",
+    # --- técnicas de conteo: segunda tanda ---
+    # Principio multiplicativo: una elección de cada grupo.
+    "6 tipos de café y 4 tipos de queque": str(6 * 4),
+    "5 gorros y 6 bufandas": str(5 * 6),
+    "un dado de 6 caras y una moneda": str(6 * 2),
+    "cerrojo de seguridad tiene 3 ruedas": str(4**3),
+    "1 de 2 tipos de pan": str(2 * 3 * 2),
+    "7 modelos de polera y 5 de jockey": str(7 * 5),
+    "código de acceso tiene 2 dígitos": str(10**2),
+    "3 rutas, y de la B a la C hay 4": str(3 * 4),
+    "4 entradas, 6 platos de fondo y 3 postres": str(4 * 6 * 3),
+    "3 letras seguidas de 2 dígitos": f"{26**3 * 10**2:,}".replace(",", "."),
+    # Espacios muestrales, que son el denominador de una probabilidad.
+    "resultados distintos se pueden obtener al lanzar dos dados": str(6**2),
+    "lanzar tres monedas": str(2**3),
+    "la suma es igual a 7": str(sum(1 for a in range(1, 7) for b in range(1, 7) if a + b == 7)),
+    # Permutaciones: importa el orden.
+    "ordenar 2 personas en una fila": str(factorial(2)),
+    "ordenar 8 personas en una fila": f"{factorial(8):,}".replace(",", "."),
+    "3 cifras distintas se pueden formar usando los dígitos 1, 2, 3, 4, 5 y 6": str(6 * 5 * 4),
+    "carrera con 7 corredores": str(7 * 6 * 5),
+    "bandera de 3 franjas": str(5 * 4 * 3),
+    "4 cifras se pueden formar usando solo los dígitos 1, 2 y 3": str(3**4),
+    # Permutaciones con elementos repetidos: se divide por cada repetición.
+    "letras de la palabra COCO": str(factorial(4) // (factorial(2) * factorial(2))),
+    "letras de la palabra BANANA": str(factorial(6) // (factorial(3) * factorial(2))),
+    # Combinaciones: no importa el orden.
+    "parejas distintas se pueden formar con 4 personas": str(comb(4, 2)),
+    "elegir 3 personas de un grupo de 7": str(comb(7, 3)),
+    "subconjuntos de 3 elementos tiene un conjunto de 8": str(comb(8, 3)),
+    "2 delegados de un curso de 12": str(comb(12, 2)),
+    "3 premios idénticos entre 9 personas": str(comb(9, 3)),
+    # El esquema de las parejas: partidos, brindis y diagonales son lo mismo.
+    "torneo participan 6 equipos": str(comb(6, 2)),
+    "reunión de 10 personas": str(comb(10, 2)),
+    "diagonales tiene un polígono de 8 lados": str(comb(8, 2) - 8),
+    # Conteo con restricciones: se empieza por la posición restringida.
+    "números pares de 2 cifras distintas": str(2 * 3),
+    "0, 1, 2, 3 y 4, si el número no puede comenzar con 0": str(4 * 4 * 3),
+    "3 cifras distintas y mayores que 500": str(2 * 5 * 4),
+    "sentar 5 personas en una fila, si dos de ellas": str(factorial(4) * factorial(2)),
+    "una persona determinada debe estar sí o sí": str(comb(9, 2)),
+    "2 hombres y 3 mujeres": str(comb(5, 2) * comb(6, 3)),
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",
