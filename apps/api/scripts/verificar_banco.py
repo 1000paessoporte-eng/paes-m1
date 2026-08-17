@@ -71,6 +71,7 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
     "alg_cuadratica": Fraction(3),                                    # x = 2 o 3
     "alg_funciones": Fraction(3),                                     # pendiente 3
     "geo_plana": Fraction(round((8 * 5 - 3.14 * 2**2) * 100), 100),   # 27,44
+    "geo_semejanza": Fraction(16 * 5**2, 2**2),                       # 100 cm²
     "geo_pitagoras": Fraction(int(sqrt(13**2 - 5**2))),               # 12
     "geo_transformaciones": Fraction(5),                              # (5, 3)
     "geo_solidos": Fraction(round(3.14 * 10**2 * 20)),                # 6.280
@@ -377,8 +378,9 @@ COMPROBACIONES: dict[str, str] = {
     "piscina circular de 4 m de radio está rodeada": str(round(3.14 * ((4 + 1) ** 2 - 4**2), 2)).replace(".", ","),
     "borde decorativo de 10 cm de ancho hacia adentro": str(round((3 - 2 * 0.1) * (2 - 2 * 0.1), 2)).replace(".", ","),
     # Escala y semejanza: el factor lineal va al cuadrado para las superficies.
-    "plano a escala 1 : 100": str(5 * 4),
-    "plano a escala 1 : 50": str(30 * 50**2 / 10_000).replace(".", ","),
+    # Los fragmentos llevan el objeto porque hay varias preguntas por escala.
+    "1 : 100, una sala aparece": str(5 * 4),
+    "1 : 50, una bodega ocupa": str(30 * 50**2 / 10_000).replace(".", ","),
     "razón entre sus lados es 2 : 5": str(12 * 5**2 // 2**2),
     # Ecuación previa antes de poder calcular el área.
     "perímetro de 70 m y su largo mide 5 m más": str((70 // 2 - 5) // 2 * ((70 // 2 - 5) // 2 + 5)),
@@ -877,6 +879,86 @@ COMPROBACIONES: dict[str, str] = {
     # Vértice: x = -b/(2a), y después se evalúa.
     "vértice de la parábola de ecuación y = x² − 8x + 7": f"({8 // 2}, {(8 // 2) ** 2 - 8 * (8 // 2) + 7})",
     "vértice de la parábola de ecuación y = 2x² + 8x + 5": f"({-8 // (2 * 2)}, {2 * (-2) ** 2 + 8 * -2 + 5})",
+    # --- semejanza y proporcionalidad de figuras (nodo nuevo) ---
+    # De plano a realidad se MULTIPLICA por la escala.
+    "escala 1 : 200, un muro aparece dibujado con 4 cm": f"{4 * 200 // 100} m",
+    "1 : 50, una ventana aparece con 6 cm": f"{6 * 50 // 100} m",
+    "1 : 1.000, un terreno aparece con 12 cm de frente": f"{12 * 1_000 // 100} m",
+    "1 : 80, un pasillo aparece con 5 cm": f"{5 * 80 // 100} m",
+    "1 : 150, dos puntos aparecen separados por 8 cm": f"{8 * 150 // 100} m",
+    "1 : 500.000, dos ciudades aparecen separadas por 3 cm": f"{3 * 500_000 // 100_000} km",
+    "1 : 400.000, una ruta aparece con 3,5 cm": f"{round(3.5 * 400_000 / 100_000)} km",
+    "1 cm representa 2 km": f"{7 * 2} km",
+    # De realidad a plano o maqueta se DIVIDE.
+    "maqueta está hecha a escala 1 : 20": f"{40 // 20} m",
+    "sala mide 7 m de largo en la realidad": f"{7 * 100 // 100} cm",
+    "pieza mide 75 cm en la realidad": f"{75 // 25} cm",
+    "pared mide 6 m de largo": f"{6 * 100 // 150} cm",
+    "auto mide 4,8 m de largo": f"{round(4.8 * 100) // 40} cm",
+    "edificio mide 30 m de alto": str(30 / 25).replace(".", ",") + " m",
+    "avión mide 64 m de largo": f"{64 // 32} m",
+    "1 : 250.000, ¿con cuántos centímetros": f"{60 * 100_000 // 250_000} cm",
+    # Deducir la escala a partir de dos medidas.
+    "5 cm representan 10 m": f"1 : {10 * 100 // 5}",
+    "terreno de 40 m de frente": f"1 : {40 * 100 // 20}",
+    # Razón de semejanza aplicada a lados y perímetros (misma razón).
+    "razón de semejanza 1 : 3. Si un lado del triángulo menor mide 5 cm": f"{5 * 3} cm",
+    "razón de semejanza 2 : 3. Si el perímetro del menor es 24 cm": f"{24 * 3 // 2} cm",
+    "razón de semejanza 3 : 4. Si un lado de la primera mide 12 cm": f"{12 * 4 // 3} cm",
+    "razón de semejanza 5 : 2. Si un lado de la figura mayor mide 35 cm": f"{35 * 2 // 5} cm",
+    "razón de semejanza 3 : 5. Si el perímetro del mayor es 45 cm": f"{45 * 3 // 5} cm",
+    "razón 4 : 7. Si un lado del menor mide 12 cm": f"{12 * 7 // 4} cm",
+    "perímetros de 36 cm y 48 cm": f"{9 * 48 // 36} cm",
+    "razón 3 : 5. Si la altura del menor mide 12 cm": f"{12 * 5 // 3} cm",
+    "un lado de 4 cm le corresponde uno de 6 cm": str(round(9 * 6 / 4, 1)).replace(".", ",") + " cm",
+    "primero mide 4 cm por 6 cm y el segundo tiene 10 cm de ancho": f"{10 * 6 // 4} cm",
+    "lados de 8 cm, 12 cm y 16 cm": f"{12 * 3 // 2} cm y {16 * 3 // 2} cm",
+    "lados de 9 cm, 12 cm y 15 cm": f"{12 * 2 // 3} cm y {15 * 2 // 3} cm",
+    # Razones deducidas desde medidas.
+    "cuadrado tiene 4 cm de lado y otro tiene 12 cm": f"1 : {12 // 4}",
+    "lados correspondientes de 5 cm y 20 cm": f"1 : {20 // 5}",
+    "círculos tienen radios de 2 cm y 6 cm": f"1 : {6 // 2}",
+    "perímetros de 20 cm y 50 cm": f"{20 // 10} : {50 // 10}",
+    # Ampliaciones y reducciones: las dos dimensiones por el mismo factor.
+    "fotografía de 8 cm de ancho se amplía al doble": f"{8 * 2} cm",
+    "rectángulo de 3 cm por 5 cm se amplía al triple": f"{3 * 3} cm por {5 * 3} cm",
+    "fotografía de 10 cm por 15 cm se reduce a la mitad": f"{10 // 2} cm por "
+    + str(15 / 2).replace(".", ",")
+    + " cm",
+    "6 cm de ancho por 9 cm de alto y se amplía": str(round(9 * 15 / 6, 1)).replace(".", ",") + " cm",
+    "fotografía de 12 cm por 18 cm se amplía 1,5 veces": f"{round(2 * (12 * 1.5 + 18 * 1.5))} cm",
+    # Sombras y espejos: triángulos semejantes en el mundo real.
+    "poste de 6 m proyecta una sombra de 8 m": str(round(6 * 2 / 8, 1)).replace(".", ",") + " m",
+    "bastón de 1 m proyecta una sombra de 0,8 m": f"{round(12 / 0.8)} m",
+    "poste de 5 m proyecta una sombra de 4 m": f"{28 * 5 // 4} m",
+    "espejo en el suelo": f"{round(1.6 * 15 / 2)} m",
+    # Teorema de Tales.
+    "segmentos de 3 cm y 4 cm; en la segunda": f"{6 * 4 // 3} cm",
+    "segmentos de 8 cm y 12 cm; sobre la otra": str(round(5 * 12 / 8, 1)).replace(".", ",") + " cm",
+    "AD mide 4 cm, DB mide 6 cm y AE mide 6 cm": f"{6 * 6 // 4} cm",
+    "segmentos de 6 cm y 4 cm. Si el tercer lado mide 15 cm": f"{15 * 6 // 10} cm y {15 * 4 // 10} cm",
+    "le corresponde uno de x cm": f"{round((3 * 12) ** 0.5)} cm",
+    # Áreas: la razón va AL CUADRADO.
+    "razón de semejanza 2 : 5. Si el área de la menor es 16 cm²": f"{16 * 5**2 // 2**2} cm²",
+    "razón de semejanza 1 : 4. Si el área de la menor es 7 cm²": f"{7 * 4**2} cm²",
+    "razón 2 : 3. Si el área del menor es 24 cm²": f"{24 * 3**2 // 2**2} cm²",
+    "razón 2 : 5. Si el área del menor es 60 cm²": f"{60 * 5**2 // 2**2} cm²",
+    "razón 9 : 16": f"{round(9**0.5)} : {round(16**0.5)}",
+    "razón 25 : 49": f"{round(25**0.5)} : {round(49**0.5)}",
+    "1 : 200, una bodega ocupa 25 cm²": f"{25 * 200**2 // 10_000} m²",
+    "1 : 2.000, un terreno ocupa 4 cm²": f"{4 * 2_000**2 // 10_000:,}".replace(",", ".") + " m²",
+    "superficie real de 18 m²": f"{18 * 10_000 // 60**2} cm²",
+    "1 : 50.000, un lago ocupa 3 cm²": str(3 * 50_000**2 / 10_000 / 1_000_000).replace(".", ",") + " km²",
+    # Volúmenes: la razón va AL CUBO.
+    "razón de semejanza 1 : 2. Si el volumen del menor es 5 cm³": f"{5 * 2**3} cm³",
+    "maqueta está hecha a escala 1 : 50": "1 : " + f"{50**3:,}".replace(",", "."),
+    "cubos son semejantes con razón de semejanza 2 : 3": f"{16 * 3**3 // 2**3} cm³",
+    "razón 8 : 27": f"{round(8 ** (1 / 3))} : {round(27 ** (1 / 3))}",
+    "piscina mide 25 m de largo, 10 m de ancho y 2 m de profundidad": f"{25 * 10 * 2} cm³",
+    # --- reposición de geo_plana ---
+    "pista de atletismo": f"{2880 // (2 * (84 + 60))} vueltas",
+    "jardín rectangular mide 20 m por 12 m": f"{20 * 12 - (20 - 2 * 2) * (12 - 2 * 2)} m²",
+    "24 cm de base y 10 cm de altura": f"{(24 - 9) * 10 // 2} cm²",
     # --- Historia: economía y lectura de tabla ---
     "8.000.000 de personas en la fuerza de trabajo": f"{640000 / 8000000 * 100:.0f}%",
     "canasta de bienes costaba $50.000": f"{(53500 - 50000) / 50000 * 100:.0f}%",

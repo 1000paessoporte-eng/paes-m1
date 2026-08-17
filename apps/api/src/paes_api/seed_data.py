@@ -39,6 +39,13 @@ SKILL_NODES = [
         ["geo_plana", "num_potencias_raices"],
     ),
     ("geo_transformaciones", "Transformaciones isométricas", "geometria", 2, ["geo_plana"]),
+    # El temario DEMRE lista "Semejanza y proporcionalidad de figuras" como una
+    # de las cuatro unidades del eje de Geometría —"aplicar propiedades de
+    # semejanza y de proporcionalidad a modelos a escala y otras situaciones de
+    # la vida diaria"— y el árbol no tenía nodo para ella: las preguntas de
+    # escala vivían dentro de geo_plana, donde se confundían con área y
+    # perímetro.
+    ("geo_semejanza", "Semejanza y proporcionalidad de figuras", "geometria", 2, ["geo_plana"]),
     ("geo_solidos", "Áreas y volúmenes de cuerpos geométricos", "geometria", 3, ["geo_pitagoras"]),
     # Probabilidad
     (
@@ -12257,7 +12264,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_plana", "medio",
+        "geo_semejanza", "medio",
         "En un plano a escala 1 : 100, una sala aparece como un rectángulo de 5 cm por 4 cm. ¿Cuál es la superficie real de la sala?",
         "20 m²",
         "La escala se aplica a las medidas lineales, y recién después se calcula la superficie.\n\n"
@@ -12318,7 +12325,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_plana", "dificil",
+        "geo_semejanza", "dificil",
         "Dos triángulos son semejantes y la razón entre sus lados es 2 : 5. Si el triángulo más pequeño tiene un área de 12 cm², ¿cuál es el área del más grande?",
         "75 cm²",
         "En figuras semejantes las áreas no crecen en la misma razón que los lados: crecen en esa razón elevada al cuadrado.\n\n"
@@ -12393,7 +12400,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_plana", "dificil",
+        "geo_semejanza", "dificil",
         "En un plano a escala 1 : 50, una bodega ocupa una superficie de 30 cm². ¿Cuál es su superficie real?",
         "7,5 m²",
         "La escala se aplica a las longitudes; para las superficies el factor va al cuadrado.\n\n"
@@ -18081,6 +18088,1030 @@ QUESTIONS += [
             ("Se traslada hacia la derecha", "El desplazamiento horizontal se logra sumando dentro del cuadrado, como en y = (x − c)²."),
             ("Se vuelve más angosta", "El ancho depende del coeficiente que acompaña a x², no del término independiente."),
             ("Se abre hacia abajo", "Eso ocurre si el coeficiente de x² se vuelve negativo, no si c aumenta."),
+        ],
+    ),
+]
+
+# ---------------------------------------------------------------------------
+# Semejanza y proporcionalidad de figuras — nodo nuevo.
+#
+# El temario DEMRE lista esta unidad dentro del eje de Geometría: "aplicar
+# propiedades de semejanza y de proporcionalidad a modelos a escala y otras
+# situaciones de la vida diaria y otras asignaturas". El árbol no tenía nodo
+# para ella y las pocas preguntas de escala vivían dentro de geo_plana, donde
+# se confundían con área y perímetro.
+#
+# Las tres ideas que el nodo tiene que dejar firmes, porque son las que se
+# prestan a error:
+#   - La razón de semejanza se aplica a las LONGITUDES. Los perímetros van en
+#     esa misma razón, porque son sumas de longitudes.
+#   - Las ÁREAS van en la razón AL CUADRADO, y los volúmenes al cubo.
+#   - Una escala 1 : n significa que lo real es n veces lo dibujado, así que
+#     para pasar de plano a realidad se MULTIPLICA.
+# ---------------------------------------------------------------------------
+
+QUESTIONS += [
+    _q(
+        "geo_semejanza", "facil",
+        "En un plano a escala 1 : 200, un muro aparece dibujado con 4 cm de largo. ¿Cuánto mide el muro en la realidad?",
+        "8 m",
+        "La escala 1 : 200 dice que cada centímetro del plano representa 200 cm reales.\n\n"
+        "1) Multiplica la medida del plano por 200: 4 · 200 = 800 cm.\n"
+        "2) Pasa a metros dividiendo por 100: 800 ÷ 100 = 8 m.\n"
+        "3) El muro mide 8 m. Fíjate en el sentido: de plano a realidad se multiplica, porque lo real es más grande.",
+        [
+            ("0,02 m", "Dividió por la escala en lugar de multiplicar, achicando algo que ya era el dibujo."),
+            ("800 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
+            ("204 m", "Sumó la escala a la medida en vez de multiplicar."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "En un plano a escala 1 : 50, una ventana aparece con 6 cm de ancho. ¿Cuál es su ancho real?",
+        "3 m",
+        "Cada centímetro del plano equivale a 50 cm reales.\n\n"
+        "1) Multiplica: 6 · 50 = 300 cm.\n"
+        "2) Pasa a metros: 300 ÷ 100 = 3 m.\n"
+        "3) La ventana mide 3 m de ancho.",
+        [
+            ("0,12 m", "Dividió por la escala en lugar de multiplicar."),
+            ("300 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
+            ("56 m", "Sumó la escala a la medida del plano."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Una maqueta está hecha a escala 1 : 20. Si la torre real mide 40 m de alto, ¿cuánto mide en la maqueta?",
+        "2 m",
+        "Acá el camino es el inverso: de la realidad a la maqueta se divide.\n\n"
+        "1) La escala 1 : 20 significa que lo real es 20 veces la maqueta.\n"
+        "2) Divide la medida real por 20: 40 ÷ 20 = 2.\n"
+        "3) En la maqueta la torre mide 2 m. El resultado tiene que ser MENOR que lo real, y 2 es menor que 40 ✓.",
+        [
+            ("800 m", "Multiplicó por la escala, agrandando algo que debía achicarse."),
+            ("20 m", "Dividió por 2 en lugar de por 20."),
+            ("40 m", "Dejó la medida real sin aplicar la escala."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos triángulos son semejantes con razón de semejanza 1 : 3. Si un lado del triángulo menor mide 5 cm, ¿cuánto mide el lado correspondiente del mayor?",
+        "15 cm",
+        "En figuras semejantes los lados correspondientes están en la razón de semejanza.\n\n"
+        "1) La razón 1 : 3 significa que cada lado del mayor es 3 veces el del menor.\n"
+        "2) Multiplica: 5 · 3 = 15.\n"
+        "3) El lado correspondiente mide 15 cm.",
+        [
+            ("8 cm", "Sumó 3 al lado en lugar de multiplicarlo por 3."),
+            ("1,67 cm", "Dividió por 3, achicando en vez de agrandar."),
+            ("45 cm", "Multiplicó por 9, que es la razón entre las áreas y no entre los lados."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Una fotografía de 8 cm de ancho se amplía al doble. ¿Cuál es el ancho de la ampliación?",
+        "16 cm",
+        "Ampliar al doble es multiplicar cada longitud por 2.\n\n"
+        "1) Multiplica el ancho por 2: 8 · 2 = 16.\n"
+        "2) El ancho de la ampliación es 16 cm.\n"
+        "3) El alto también se duplica: si no lo hiciera, la foto se vería deformada y las figuras ya no serían semejantes.",
+        [
+            ("10 cm", "Sumó 2 en lugar de multiplicar por 2."),
+            ("4 cm", "Dividió por 2, reduciendo en vez de ampliar."),
+            ("64 cm", "Multiplicó por 8, usando el propio ancho como factor."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Una sala mide 7 m de largo en la realidad. ¿Con cuántos centímetros se dibuja en un plano a escala 1 : 100?",
+        "7 cm",
+        "De la realidad al plano se divide por la escala, cuidando las unidades.\n\n"
+        "1) Pasa la medida real a centímetros: 7 m = 700 cm.\n"
+        "2) Divide por 100: 700 ÷ 100 = 7 cm.\n"
+        "3) Se dibuja con 7 cm. La escala 1 : 100 es cómoda justamente por esto: cada metro real es un centímetro del plano.",
+        [
+            ("70 cm", "Dividió por 10 en lugar de por 100."),
+            ("700 cm", "Pasó a centímetros pero no aplicó la escala."),
+            ("0,07 cm", "Dividió dos veces por 100."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos polígonos semejantes tienen razón de semejanza 2 : 3. Si el perímetro del menor es 24 cm, ¿cuál es el perímetro del mayor?",
+        "36 cm",
+        "El perímetro es una suma de longitudes, así que va en la MISMA razón que los lados.\n\n"
+        "1) La razón es 2 : 3, o sea que el mayor es 3/2 veces el menor.\n"
+        "2) Calcula: 24 · 3 ÷ 2 = 72 ÷ 2 = 36.\n"
+        "3) El perímetro del mayor es 36 cm.\n"
+        "4) Ojo: al cuadrado va la razón entre las ÁREAS, no entre los perímetros.",
+        [
+            ("54 cm", "Elevó la razón al cuadrado, que es lo que corresponde a las áreas."),
+            ("16 cm", "Aplicó la razón al revés y achicó el perímetro."),
+            ("25 cm", "Sumó 1 al perímetro en vez de aplicar la razón."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "En un mapa a escala 1 : 500.000, dos ciudades aparecen separadas por 3 cm. ¿Cuál es la distancia real entre ellas?",
+        "15 km",
+        "Se multiplica por la escala y después se convierte a kilómetros.\n\n"
+        "1) Multiplica: 3 · 500.000 = 1.500.000 cm.\n"
+        "2) Pasa a kilómetros. Como 1 km son 100.000 cm, divide: 1.500.000 ÷ 100.000 = 15.\n"
+        "3) La distancia real es 15 km.",
+        [
+            ("1,5 km", "Se equivocó en un factor 10 al convertir centímetros a kilómetros."),
+            ("150 km", "Convirtió como si 1 km fueran 10.000 cm."),
+            ("15.000 km", "No convirtió las unidades y dejó el resultado en una escala imposible."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Un cuadrado tiene 4 cm de lado y otro tiene 12 cm. ¿Cuál es la razón de semejanza entre el primero y el segundo?",
+        "1 : 3",
+        "La razón de semejanza es el cociente entre lados correspondientes, simplificado.\n\n"
+        "1) Escribe la razón: 4 : 12.\n"
+        "2) Simplifica dividiendo ambos por 4: 1 : 3.\n"
+        "3) La razón es 1 : 3. Todos los cuadrados son semejantes entre sí, porque sus ángulos son iguales y sus lados siempre proporcionales.",
+        [
+            ("1 : 9", "Elevó la razón al cuadrado, que es la razón entre las áreas."),
+            ("3 : 1", "Escribió la razón al revés: el primero es el menor."),
+            ("1 : 8", "Restó los lados en lugar de dividirlos."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos triángulos semejantes tienen lados correspondientes de 5 cm y 20 cm. ¿Cuál es la razón de semejanza del menor al mayor?",
+        "1 : 4",
+        "Se divide el lado del menor por el del mayor y se simplifica.\n\n"
+        "1) Escribe la razón: 5 : 20.\n"
+        "2) Simplifica dividiendo ambos por 5: 1 : 4.\n"
+        "3) La razón es 1 : 4, así que cada lado del mayor mide cuatro veces el del menor.",
+        [
+            ("1 : 16", "Elevó la razón al cuadrado, que corresponde a las áreas."),
+            ("4 : 1", "Escribió la razón al revés."),
+            ("1 : 15", "Restó los lados en lugar de dividirlos."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Una pieza mide 75 cm en la realidad. ¿Cuánto mide en un modelo a escala 1 : 25?",
+        "3 cm",
+        "De la realidad al modelo se divide por la escala.\n\n"
+        "1) Divide: 75 ÷ 25 = 3.\n"
+        "2) En el modelo la pieza mide 3 cm.\n"
+        "3) Comprueba el sentido: el modelo es 25 veces más chico, y 3 es bastante menor que 75 ✓.",
+        [
+            ("1.875 cm", "Multiplicó por la escala en vez de dividir."),
+            ("50 cm", "Restó 25 a la medida real."),
+            ("25 cm", "Dividió por 3 en lugar de por 25."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Un rectángulo de 3 cm por 5 cm se amplía al triple. ¿Cuáles son las dimensiones de la ampliación?",
+        "9 cm por 15 cm",
+        "Para que la figura ampliada sea semejante, las dos dimensiones se multiplican por el mismo factor.\n\n"
+        "1) Nuevo largo: 5 · 3 = 15 cm.\n"
+        "2) Nuevo ancho: 3 · 3 = 9 cm.\n"
+        "3) Las dimensiones son 9 cm por 15 cm.\n"
+        "4) Si solo se multiplicara una de las dos, la figura quedaría deformada y ya no sería semejante a la original.",
+        [
+            ("6 cm por 8 cm", "Sumó 3 a cada dimensión en lugar de multiplicarlas por 3."),
+            ("9 cm por 5 cm", "Amplió solo una dimensión, deformando la figura."),
+            ("27 cm por 45 cm", "Multiplicó por 9, que es el factor de las áreas y no el de los lados."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos círculos tienen radios de 2 cm y 6 cm. ¿Cuál es la razón entre sus perímetros?",
+        "1 : 3",
+        "El perímetro de un círculo es proporcional a su radio, así que la razón se conserva.\n\n"
+        "1) La razón entre los radios es 2 : 6, que simplificada es 1 : 3.\n"
+        "2) Como el perímetro es 2 · π · r, al triplicar el radio se triplica el perímetro: el π y el 2 son los mismos en ambos.\n"
+        "3) La razón entre los perímetros es 1 : 3, igual que entre los radios.",
+        [
+            ("1 : 9", "Elevó la razón al cuadrado, que corresponde a las áreas y no a los perímetros."),
+            ("3 : 1", "Escribió la razón al revés."),
+            ("1 : 4", "Restó los radios en lugar de dividirlos."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "En un plano a escala 1 : 1.000, un terreno aparece con 12 cm de frente. ¿Cuánto mide el frente real?",
+        "120 m",
+        "Se multiplica por la escala y se convierte a metros.\n\n"
+        "1) Multiplica: 12 · 1.000 = 12.000 cm.\n"
+        "2) Divide por 100 para pasar a metros: 12.000 ÷ 100 = 120 m.\n"
+        "3) El frente real mide 120 m.",
+        [
+            ("12 m", "Dividió por 1.000 en lugar de multiplicar."),
+            ("1.200 m", "Se equivocó en un factor 10 al convertir a metros."),
+            ("12.000 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Una pared mide 6 m de largo. ¿Con cuántos centímetros se dibuja en un plano a escala 1 : 150?",
+        "4 cm",
+        "De la realidad al plano se divide, después de igualar las unidades.\n\n"
+        "1) Pasa la medida real a centímetros: 6 m = 600 cm.\n"
+        "2) Divide por 150: 600 ÷ 150 = 4.\n"
+        "3) Se dibuja con 4 cm.",
+        [
+            ("0,04 cm", "Dividió por 15.000, mezclando la conversión de unidades con la escala."),
+            ("900 cm", "Multiplicó por la escala en lugar de dividir."),
+            ("25 cm", "Dividió los 6 m por 150 sin pasar antes a centímetros, y ajustó mal el resultado."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos figuras semejantes tienen razón de semejanza 3 : 4. Si un lado de la primera mide 12 cm, ¿cuánto mide el lado correspondiente de la segunda?",
+        "16 cm",
+        "Se plantea una proporción entre lados correspondientes.\n\n"
+        "1) Escribe la proporción: 3/4 = 12/x.\n"
+        "2) Multiplica en cruz: 3x = 48.\n"
+        "3) Divide: x = 16.\n"
+        "4) El lado correspondiente mide 16 cm. Comprueba que la razón se mantenga: 12/16 = 3/4 ✓.",
+        [
+            ("9 cm", "Aplicó la razón al revés y achicó el lado."),
+            ("13 cm", "Sumó 1 al lado en lugar de aplicar la proporción."),
+            ("48 cm", "Se quedó en el paso intermedio sin dividir por 3."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Una fotografía de 10 cm por 15 cm se reduce a la mitad. ¿Cuáles son sus nuevas dimensiones?",
+        "5 cm por 7,5 cm",
+        "Reducir a la mitad es dividir las dos dimensiones por 2.\n\n"
+        "1) Nuevo ancho: 10 ÷ 2 = 5 cm.\n"
+        "2) Nuevo alto: 15 ÷ 2 = 7,5 cm.\n"
+        "3) Las dimensiones son 5 cm por 7,5 cm.\n"
+        "4) La foto reducida es semejante a la original porque ambas medidas se dividieron por el mismo número.",
+        [
+            ("8 cm por 13 cm", "Restó 2 a cada dimensión en lugar de dividirlas por 2."),
+            ("5 cm por 15 cm", "Redujo solo una dimensión, deformando la foto."),
+            ("2,5 cm por 3,75 cm", "Dividió por 4 en lugar de por 2."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Un auto mide 4,8 m de largo. ¿Cuánto mide un modelo suyo a escala 1 : 40?",
+        "12 cm",
+        "Se pasa a centímetros y se divide por la escala.\n\n"
+        "1) Pasa la medida real a centímetros: 4,8 m = 480 cm.\n"
+        "2) Divide por 40: 480 ÷ 40 = 12.\n"
+        "3) El modelo mide 12 cm de largo.",
+        [
+            ("0,12 cm", "Dividió por 4.000, mezclando la conversión con la escala."),
+            ("192 cm", "Multiplicó por la escala en lugar de dividir."),
+            ("120 cm", "Dividió por 4 en lugar de por 40."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos triángulos semejantes tienen perímetros de 20 cm y 50 cm. ¿Cuál es la razón de semejanza entre ellos?",
+        "2 : 5",
+        "Los perímetros están en la misma razón que los lados, así que se puede leer directo de ellos.\n\n"
+        "1) Escribe la razón: 20 : 50.\n"
+        "2) Simplifica dividiendo ambos por 10: 2 : 5.\n"
+        "3) La razón de semejanza es 2 : 5.",
+        [
+            ("4 : 25", "Elevó la razón al cuadrado, que corresponde a las áreas."),
+            ("5 : 2", "Escribió la razón al revés."),
+            ("1 : 30", "Restó los perímetros en lugar de dividirlos."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "En un plano a escala 1 : 80, un pasillo aparece con 5 cm de largo. ¿Cuál es su largo real?",
+        "4 m",
+        "Se multiplica por la escala y se convierte a metros.\n\n"
+        "1) Multiplica: 5 · 80 = 400 cm.\n"
+        "2) Divide por 100: 400 ÷ 100 = 4 m.\n"
+        "3) El pasillo mide 4 m.",
+        [
+            ("0,06 m", "Dividió por la escala en lugar de multiplicar."),
+            ("400 m", "Multiplicó bien pero no convirtió a metros."),
+            ("85 m", "Sumó la escala a la medida del plano."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "En un mapa, 1 cm representa 2 km. ¿Qué distancia real corresponde a 7 cm en ese mapa?",
+        "14 km",
+        "La relación es directamente proporcional: a más centímetros, más kilómetros.\n\n"
+        "1) Cada centímetro equivale a 2 km.\n"
+        "2) Multiplica: 7 · 2 = 14.\n"
+        "3) La distancia real es 14 km.",
+        [
+            ("3,5 km", "Dividió por 2 en lugar de multiplicar."),
+            ("9 km", "Sumó 2 en vez de multiplicar por 2."),
+            ("7 km", "Dejó la medida del mapa sin aplicar la equivalencia."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "Dos figuras semejantes tienen razón de semejanza 5 : 2. Si un lado de la figura mayor mide 35 cm, ¿cuánto mide el lado correspondiente de la menor?",
+        "14 cm",
+        "Se plantea la proporción cuidando cuál término corresponde a cada figura.\n\n"
+        "1) La razón 5 : 2 va de la mayor a la menor, así que 5/2 = 35/x.\n"
+        "2) Multiplica en cruz: 5x = 70.\n"
+        "3) Divide: x = 14.\n"
+        "4) El lado de la menor mide 14 cm, y efectivamente es más chico que 35 ✓.",
+        [
+            ("87,5 cm", "Aplicó la razón al revés y agrandó en vez de achicar."),
+            ("32 cm", "Restó 3 al lado en lugar de aplicar la proporción."),
+            ("70 cm", "Se quedó en el paso intermedio sin dividir por 5."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un poste de 6 m proyecta una sombra de 8 m. A la misma hora, una persona proyecta una sombra de 2 m. ¿Cuánto mide la persona?",
+        "1,5 m",
+        "A la misma hora los rayos del sol llegan con el mismo ángulo, así que el poste y la persona forman triángulos semejantes con sus sombras.\n\n"
+        "1) Plantea la proporción entre altura y sombra: 6/8 = x/2.\n"
+        "2) Multiplica en cruz: 8x = 12.\n"
+        "3) Divide: x = 1,5.\n"
+        "4) La persona mide 1,5 m. Comprueba que sea razonable: su sombra es más corta que ella, igual que la del poste ✓.",
+        [
+            ("2,67 m", "Invirtió la proporción y dividió la sombra por la razón equivocada."),
+            ("24 m", "Multiplicó en vez de dividir, y obtuvo una persona más alta que el poste."),
+            ("12 m", "Se quedó en el paso intermedio sin dividir por 8."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En dos triángulos semejantes, a un lado de 4 cm le corresponde uno de 6 cm. ¿Qué lado del segundo triángulo le corresponde a uno de 9 cm del primero?",
+        "13,5 cm",
+        "Todos los pares de lados correspondientes están en la misma razón.\n\n"
+        "1) La razón es 4 : 6, o sea 6/4 = 1,5 del primero al segundo.\n"
+        "2) Plantea la proporción: 4/6 = 9/x.\n"
+        "3) Multiplica en cruz: 4x = 54.\n"
+        "4) Divide: x = 13,5 cm.",
+        [
+            ("6 cm", "Repitió el lado del enunciado en vez de aplicar la proporción."),
+            ("11 cm", "Sumó 2 al lado, tratando la relación como una diferencia y no como una razón."),
+            ("54 cm", "Se quedó en el paso intermedio sin dividir por 4."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En un plano a escala 1 : 200, una bodega ocupa 25 cm². ¿Cuál es su superficie real?",
+        "100 m²",
+        "La escala se aplica a las longitudes; para las superficies el factor va al cuadrado.\n\n"
+        "1) Cada longitud real es 200 veces la del plano, y una superficie tiene dos dimensiones.\n"
+        "2) Entonces la superficie real es 200² = 40.000 veces la del plano.\n"
+        "3) Calcula: 25 · 40.000 = 1.000.000 cm².\n"
+        "4) Pasa a metros cuadrados sabiendo que 1 m² = 10.000 cm²: 1.000.000 ÷ 10.000 = 100 m².",
+        [
+            ("0,5 m²", "Multiplicó por 200 una sola vez, sin elevar el factor al cuadrado."),
+            ("5.000 m²", "Aplicó el factor al cuadrado pero se equivocó al convertir a metros cuadrados."),
+            ("1.000.000 m²", "Aplicó bien el factor pero dejó el resultado en centímetros cuadrados."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Dos figuras semejantes tienen razón de semejanza 2 : 5. Si el área de la menor es 16 cm², ¿cuál es el área de la mayor?",
+        "100 cm²",
+        "Las áreas van en la razón de semejanza elevada al cuadrado.\n\n"
+        "1) La razón entre los lados es 2 : 5.\n"
+        "2) La razón entre las áreas es 2² : 5², es decir 4 : 25.\n"
+        "3) Plantea: 16/x = 4/25.\n"
+        "4) Despeja: x = 16 · 25 ÷ 4 = 100 cm².",
+        [
+            ("40 cm²", "Aplicó la razón 2 : 5 directamente a las áreas, sin elevarla al cuadrado."),
+            ("400 cm²", "Multiplicó por 25 pero olvidó dividir por 4."),
+            ("6,4 cm²", "Aplicó la razón al revés y achicó el área."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Tres rectas paralelas cortan a dos transversales. En la primera determinan segmentos de 3 cm y 4 cm; en la segunda, el primer segmento mide 6 cm. ¿Cuánto mide el segundo?",
+        "8 cm",
+        "El teorema de Tales dice que las paralelas cortan segmentos proporcionales sobre las dos transversales.\n\n"
+        "1) Plantea la proporción: 3/4 = 6/x.\n"
+        "2) Multiplica en cruz: 3x = 24.\n"
+        "3) Divide: x = 8 cm.\n"
+        "4) Comprueba que la razón se mantenga: 3/4 = 6/8 ✓, porque ambas valen 0,75.",
+        [
+            ("7 cm", "Sumó la diferencia entre 3 y 6 al segundo segmento, tratando la relación como una resta."),
+            ("4,5 cm", "Invirtió la proporción."),
+            ("24 cm", "Se quedó en el paso intermedio sin dividir por 3."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En un plano a escala 1 : 150, dos puntos aparecen separados por 8 cm. ¿Cuál es la distancia real entre ellos?",
+        "12 m",
+        "Se multiplica por la escala y se convierte a metros.\n\n"
+        "1) Multiplica: 8 · 150 = 1.200 cm.\n"
+        "2) Divide por 100: 1.200 ÷ 100 = 12 m.\n"
+        "3) La distancia real es 12 m.",
+        [
+            ("0,05 m", "Dividió por la escala en lugar de multiplicar."),
+            ("1.200 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
+            ("120 m", "Se equivocó en un factor 10 al convertir."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un triángulo tiene lados de 8 cm, 12 cm y 16 cm. Otro triángulo semejante tiene su lado menor de 12 cm. ¿Cuánto miden sus otros dos lados?",
+        "18 cm y 24 cm",
+        "Primero se obtiene la razón de semejanza y después se aplica a cada lado.\n\n"
+        "1) Los lados menores son 8 y 12, así que la razón es 12/8 = 1,5.\n"
+        "2) Aplica esa razón al segundo lado: 12 · 1,5 = 18 cm.\n"
+        "3) Y al tercero: 16 · 1,5 = 24 cm.\n"
+        "4) Los lados son 18 cm y 24 cm. Comprueba que las razones coincidan: 18/12 = 1,5 y 24/16 = 1,5 ✓.",
+        [
+            ("16 cm y 20 cm", "Sumó 4 a cada lado, tratando la semejanza como una diferencia constante."),
+            ("24 cm y 32 cm", "Usó una razón de 2 en lugar de 1,5."),
+            ("8 cm y 10,7 cm", "Aplicó la razón al revés y achicó los lados."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Dos polígonos semejantes tienen razón de semejanza 3 : 5. Si el perímetro del mayor es 45 cm, ¿cuál es el perímetro del menor?",
+        "27 cm",
+        "Los perímetros están en la misma razón que los lados.\n\n"
+        "1) Plantea la proporción: 3/5 = x/45.\n"
+        "2) Multiplica en cruz: 5x = 135.\n"
+        "3) Divide: x = 27 cm.\n"
+        "4) Comprueba que sea menor que 45 ✓, como corresponde al polígono más chico.",
+        [
+            ("75 cm", "Aplicó la razón al revés y agrandó el perímetro."),
+            ("16,2 cm", "Elevó la razón al cuadrado, que corresponde a las áreas."),
+            ("135 cm", "Se quedó en el paso intermedio sin dividir por 5."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un edificio mide 30 m de alto. ¿Cuánto mide su maqueta a escala 1 : 25?",
+        "1,2 m",
+        "De la realidad a la maqueta se divide por la escala.\n\n"
+        "1) Divide: 30 ÷ 25 = 1,2.\n"
+        "2) La maqueta mide 1,2 m de alto, o sea 120 cm.\n"
+        "3) Comprueba el sentido: la maqueta tiene que ser mucho más chica que el edificio ✓.",
+        [
+            ("750 m", "Multiplicó por la escala en lugar de dividir."),
+            ("5 m", "Restó 25 a la altura real."),
+            ("0,83 m", "Invirtió la división y calculó 25 ÷ 30."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Dos figuras semejantes tienen razón de semejanza 1 : 4. Si el área de la menor es 7 cm², ¿cuál es el área de la mayor?",
+        "112 cm²",
+        "Las áreas van en la razón elevada al cuadrado.\n\n"
+        "1) La razón entre los lados es 1 : 4.\n"
+        "2) La razón entre las áreas es 1² : 4², o sea 1 : 16.\n"
+        "3) Multiplica: 7 · 16 = 112.\n"
+        "4) El área de la mayor es 112 cm².",
+        [
+            ("28 cm²", "Aplicó la razón 1 : 4 directamente a las áreas, sin elevarla al cuadrado."),
+            ("448 cm²", "Elevó la razón al cubo, que corresponde a los volúmenes."),
+            ("11 cm²", "Sumó 4 al área en lugar de aplicar la razón."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un bastón de 1 m proyecta una sombra de 0,8 m. A la misma hora, un árbol proyecta una sombra de 12 m. ¿Cuánto mide el árbol?",
+        "15 m",
+        "El bastón y el árbol forman triángulos semejantes con sus sombras.\n\n"
+        "1) Plantea la proporción entre altura y sombra: 1/0,8 = x/12.\n"
+        "2) Multiplica en cruz: 0,8x = 12.\n"
+        "3) Divide: x = 12 ÷ 0,8 = 15.\n"
+        "4) El árbol mide 15 m. Tiene sentido: como el bastón es más alto que su sombra, el árbol también debe superar los 12 m ✓.",
+        [
+            ("9,6 m", "Multiplicó por 0,8 en lugar de dividir, y obtuvo un árbol más bajo que su sombra."),
+            ("12,8 m", "Sumó 0,8 a la sombra en vez de aplicar la proporción."),
+            ("13 m", "Sumó 1 a la sombra del árbol."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En un plano, 5 cm representan 10 m de la realidad. ¿Cuál es la escala del plano?",
+        "1 : 200",
+        "La escala compara una medida del plano con la real, en las mismas unidades.\n\n"
+        "1) Pasa la medida real a centímetros: 10 m = 1.000 cm.\n"
+        "2) La escala es 5 : 1.000.\n"
+        "3) Simplifica para dejar un 1 adelante: divide ambos por 5, y queda 1 : 200.\n"
+        "4) La escala es 1 : 200. El error clásico es no convertir las unidades y responder 1 : 2.",
+        [
+            ("1 : 2", "Comparó 5 cm con 10 m sin pasar ambas medidas a la misma unidad."),
+            ("1 : 50", "Dividió 1.000 por 20 en lugar de por 5."),
+            ("1 : 1.000", "Usó la medida real sin dividirla por la del plano."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un triángulo tiene lados de 9 cm, 12 cm y 15 cm. Otro semejante tiene su lado menor de 6 cm. ¿Cuánto miden sus otros dos lados?",
+        "8 cm y 10 cm",
+        "Se obtiene la razón desde los lados menores y se aplica al resto.\n\n"
+        "1) Los lados menores son 9 y 6, así que la razón es 6/9 = 2/3.\n"
+        "2) Aplica al segundo lado: 12 · 2/3 = 8 cm.\n"
+        "3) Y al tercero: 15 · 2/3 = 10 cm.\n"
+        "4) Los lados son 8 cm y 10 cm. Fíjate en que 6, 8 y 10 es la terna 3-4-5 multiplicada por 2, igual que 9, 12 y 15 lo es por 3.",
+        [
+            ("9 cm y 12 cm", "Restó 3 a cada lado, tratando la semejanza como una diferencia constante."),
+            ("18 cm y 22,5 cm", "Aplicó la razón al revés y agrandó los lados."),
+            ("4 cm y 5 cm", "Usó una razón de 1/3 en lugar de 2/3."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Dos rectángulos son semejantes. El primero mide 4 cm por 6 cm y el segundo tiene 10 cm de ancho. ¿Cuál es su largo?",
+        "15 cm",
+        "En rectángulos semejantes la razón entre ancho y largo es la misma en ambos.\n\n"
+        "1) Plantea la proporción: 4/6 = 10/x.\n"
+        "2) Multiplica en cruz: 4x = 60.\n"
+        "3) Divide: x = 15 cm.\n"
+        "4) Comprueba: 4/6 y 10/15 valen ambos 0,667 ✓.",
+        [
+            ("12 cm", "Sumó 6 al ancho, tratando la relación como una diferencia."),
+            ("60 cm", "Se quedó en el paso intermedio sin dividir por 4."),
+            ("6,67 cm", "Invirtió la proporción."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Las áreas de dos figuras semejantes están en razón 9 : 16. ¿Cuál es la razón entre sus lados correspondientes?",
+        "3 : 4",
+        "Es el camino inverso: de la razón de áreas se saca la de lados con una raíz.\n\n"
+        "1) La razón entre las áreas es el cuadrado de la razón entre los lados.\n"
+        "2) Entonces hay que sacar la raíz de cada término: √9 = 3 y √16 = 4.\n"
+        "3) La razón entre los lados es 3 : 4.\n"
+        "4) Comprueba: 3² : 4² = 9 : 16 ✓.",
+        [
+            ("9 : 16", "Repitió la razón de las áreas sin sacarle la raíz."),
+            ("81 : 256", "Elevó al cuadrado en lugar de sacar la raíz."),
+            ("4,5 : 8", "Dividió cada término por 2 en vez de sacar la raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En un mapa a escala 1 : 250.000, ¿con cuántos centímetros se representa una distancia real de 60 km?",
+        "24 cm",
+        "Se pasa la distancia real a centímetros y se divide por la escala.\n\n"
+        "1) Convierte: 60 km = 60 · 100.000 = 6.000.000 cm.\n"
+        "2) Divide por 250.000: 6.000.000 ÷ 250.000 = 24.\n"
+        "3) Se representa con 24 cm.",
+        [
+            ("2,4 cm", "Se equivocó en un factor 10 al convertir kilómetros a centímetros."),
+            ("240 cm", "Convirtió como si 1 km fueran 1.000.000 cm."),
+            ("15.000.000 cm", "Multiplicó por la escala en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Una fotografía mide 6 cm de ancho por 9 cm de alto y se amplía hasta que su ancho llega a 15 cm. ¿Cuál es el nuevo alto?",
+        "22,5 cm",
+        "Para que la foto no se deforme, ambas dimensiones se multiplican por el mismo factor.\n\n"
+        "1) Plantea la proporción: 6/9 = 15/x.\n"
+        "2) Multiplica en cruz: 6x = 135.\n"
+        "3) Divide: x = 22,5 cm.\n"
+        "4) Otra forma: el factor de ampliación es 15/6 = 2,5, y 9 · 2,5 = 22,5 ✓.",
+        [
+            ("18 cm", "Sumó 9 al alto, tratando la ampliación como una diferencia constante."),
+            ("10 cm", "Invirtió la proporción."),
+            ("135 cm", "Se quedó en el paso intermedio sin dividir por 6."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Dos rectas paralelas cortan a dos transversales. Sobre una determinan segmentos de 8 cm y 12 cm; sobre la otra, el segmento correspondiente al de 8 cm mide 5 cm. ¿Cuánto mide el otro?",
+        "7,5 cm",
+        "Por el teorema de Tales los segmentos correspondientes son proporcionales.\n\n"
+        "1) Plantea la proporción: 5/x = 8/12.\n"
+        "2) Multiplica en cruz: 8x = 60.\n"
+        "3) Divide: x = 7,5 cm.\n"
+        "4) Comprueba: 5/7,5 y 8/12 valen ambos 0,667 ✓.",
+        [
+            ("9 cm", "Sumó 4 al segmento, tratando la relación como una diferencia."),
+            ("3,33 cm", "Invirtió la proporción."),
+            ("60 cm", "Se quedó en el paso intermedio sin dividir por 8."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Los perímetros de dos triángulos semejantes están en razón 4 : 7. Si un lado del menor mide 12 cm, ¿cuánto mide el lado correspondiente del mayor?",
+        "21 cm",
+        "La razón entre perímetros es la misma que entre lados, así que se puede usar directamente.\n\n"
+        "1) La razón de semejanza es 4 : 7.\n"
+        "2) Plantea: 4/7 = 12/x.\n"
+        "3) Multiplica en cruz: 4x = 84.\n"
+        "4) Divide: x = 21 cm.",
+        [
+            ("15 cm", "Sumó 3 al lado, tratando la razón como una diferencia."),
+            ("6,86 cm", "Aplicó la razón al revés y achicó el lado."),
+            ("84 cm", "Se quedó en el paso intermedio sin dividir por 4."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un terreno tiene una superficie real de 18 m². ¿Cuántos centímetros cuadrados ocupa en un plano a escala 1 : 60?",
+        "50 cm²",
+        "Para superficies el factor de escala va al cuadrado, y hay que igualar unidades.\n\n"
+        "1) Pasa la superficie real a centímetros cuadrados: 18 m² = 18 · 10.000 = 180.000 cm².\n"
+        "2) El factor para superficies es 60² = 3.600.\n"
+        "3) Divide: 180.000 ÷ 3.600 = 50.\n"
+        "4) En el plano ocupa 50 cm².",
+        [
+            ("3.000 cm²", "Dividió por 60 una sola vez, sin elevar el factor al cuadrado."),
+            ("0,3 cm²", "Dividió los 18 m² por 60 sin pasarlos antes a centímetros cuadrados."),
+            ("648.000.000 cm²", "Multiplicó por el factor al cuadrado en vez de dividir."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "¿Qué se necesita saber, como mínimo, para afirmar que dos triángulos son semejantes?",
+        "Que tengan dos ángulos respectivamente iguales",
+        "Basta con los ángulos: la forma de un triángulo queda determinada por ellos.\n\n"
+        "1) Si dos triángulos comparten dos ángulos, el tercero también coincide, porque los tres suman 180°.\n"
+        "2) Con los tres ángulos iguales, los lados quedan forzosamente proporcionales: la figura es la misma, cambiada de tamaño.\n"
+        "3) Ese es el criterio AA (ángulo-ángulo), el más económico de los criterios de semejanza.\n"
+        "4) Ojo con no confundirlo con la congruencia: dos ángulos iguales garantizan misma forma, pero no mismo tamaño.",
+        [
+            ("Que tengan dos lados respectivamente iguales", "Lados iguales apuntan a congruencia, y además dos lados no fijan la forma sin el ángulo entre ellos."),
+            ("Que tengan el mismo perímetro", "Dos triángulos pueden tener igual perímetro y formas completamente distintas."),
+            ("Que tengan la misma área", "El área no determina la forma: un triángulo alargado y uno compacto pueden tener la misma."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Un avión mide 64 m de largo. ¿Cuánto mide un modelo suyo a escala 1 : 32?",
+        "2 m",
+        "De la realidad al modelo se divide por la escala.\n\n"
+        "1) Divide: 64 ÷ 32 = 2.\n"
+        "2) El modelo mide 2 m de largo.\n"
+        "3) Comprueba el sentido: el modelo tiene que ser 32 veces más chico ✓.",
+        [
+            ("2.048 m", "Multiplicó por la escala en lugar de dividir."),
+            ("32 m", "Dividió por 2 en lugar de por 32."),
+            ("0,5 m", "Invirtió la división y calculó 32 ÷ 64."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Dos triángulos semejantes tienen sus lados en razón 2 : 3. Si el área del menor es 24 cm², ¿cuál es el área del mayor?",
+        "54 cm²",
+        "Las áreas van en la razón de los lados elevada al cuadrado.\n\n"
+        "1) La razón entre los lados es 2 : 3.\n"
+        "2) La razón entre las áreas es 2² : 3², o sea 4 : 9.\n"
+        "3) Plantea: 24/x = 4/9.\n"
+        "4) Despeja: x = 24 · 9 ÷ 4 = 54 cm².",
+        [
+            ("36 cm²", "Aplicó la razón 2 : 3 directamente a las áreas, sin elevarla al cuadrado."),
+            ("216 cm²", "Multiplicó por 9 pero olvidó dividir por 4."),
+            ("10,7 cm²", "Aplicó la razón al revés y achicó el área."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Dos cuerpos son semejantes con razón de semejanza 1 : 2. Si el volumen del menor es 5 cm³, ¿cuál es el volumen del mayor?",
+        "40 cm³",
+        "Los volúmenes van en la razón de semejanza elevada al CUBO, no al cuadrado.\n\n"
+        "1) La razón entre las longitudes es 1 : 2.\n"
+        "2) Un volumen depende de tres dimensiones, y cada una se multiplica por 2, así que la razón entre volúmenes es 1³ : 2³ = 1 : 8.\n"
+        "3) Multiplica: 5 · 8 = 40 cm³.\n"
+        "4) Vale la pena tener las tres a mano: longitudes en razón r, áreas en r² y volúmenes en r³.",
+        [
+            ("10 cm³", "Aplicó la razón 1 : 2 directamente al volumen, sin elevarla."),
+            ("20 cm³", "Elevó la razón al cuadrado, que es lo que corresponde a las áreas."),
+            ("2,5 cm³", "Aplicó la razón al revés y achicó el volumen."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Una maqueta está hecha a escala 1 : 50. ¿En qué razón están el volumen de la maqueta y el del objeto real?",
+        "1 : 125.000",
+        "El factor de escala se aplica a cada una de las tres dimensiones del volumen.\n\n"
+        "1) La razón entre longitudes es 1 : 50.\n"
+        "2) Para volúmenes se eleva al cubo: 50³ = 50 · 50 · 50 = 125.000.\n"
+        "3) La razón es 1 : 125.000.\n"
+        "4) Ese número explica por qué una maqueta chica pesa tan poco comparada con lo real: cincuenta veces más chica en cada dirección son ciento veinticinco mil veces menos volumen.",
+        [
+            ("1 : 50", "Usó el factor lineal sin elevarlo, como si el volumen tuviera una sola dimensión."),
+            ("1 : 2.500", "Elevó al cuadrado, que es lo que corresponde a las superficies."),
+            ("1 : 150", "Multiplicó el factor por 3 en lugar de elevarlo al cubo."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Se pone un espejo en el suelo entre una persona y una torre. La persona mide 1,6 m y está a 2 m del espejo; la torre está a 15 m del espejo. ¿Cuánto mide la torre?",
+        "12 m",
+        "El rayo de luz se refleja con el mismo ángulo, así que se forman dos triángulos semejantes.\n\n"
+        "1) La altura y la distancia al espejo están en la misma razón en ambos triángulos.\n"
+        "2) Plantea: 1,6/2 = x/15.\n"
+        "3) Multiplica en cruz: 2x = 24.\n"
+        "4) Divide: x = 12 m.\n"
+        "5) Comprueba la razón: 1,6/2 = 0,8 y 12/15 = 0,8 ✓.",
+        [
+            ("18,75 m", "Invirtió la proporción."),
+            ("24 m", "Se quedó en el paso intermedio sin dividir por 2."),
+            ("14,6 m", "Sumó la diferencia de distancias a la altura de la persona."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "En un triángulo ABC se traza un segmento DE paralelo al lado BC. Si AD mide 4 cm, DB mide 6 cm y AE mide 6 cm, ¿cuánto mide EC?",
+        "9 cm",
+        "Una paralela a un lado divide a los otros dos en segmentos proporcionales.\n\n"
+        "1) El teorema de Tales aplicado al triángulo dice que AD/DB = AE/EC.\n"
+        "2) Reemplaza: 4/6 = 6/x.\n"
+        "3) Multiplica en cruz: 4x = 36.\n"
+        "4) Divide: x = 9 cm.\n"
+        "5) Comprueba: 4/6 y 6/9 valen ambos 0,667 ✓.",
+        [
+            ("4 cm", "Copió la medida de AD en lugar de resolver la proporción."),
+            ("8 cm", "Sumó 2 a AE, tratando la relación como una diferencia."),
+            ("36 cm", "Se quedó en el paso intermedio sin dividir por 4."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "En un plano a escala 1 : 2.000, un terreno ocupa 4 cm². ¿Cuál es su superficie real?",
+        "1.600 m²",
+        "El factor de escala va al cuadrado para las superficies, y después hay que convertir unidades.\n\n"
+        "1) Factor para superficies: 2.000² = 4.000.000.\n"
+        "2) Superficie real en centímetros cuadrados: 4 · 4.000.000 = 16.000.000 cm².\n"
+        "3) Pasa a metros cuadrados dividiendo por 10.000: 16.000.000 ÷ 10.000 = 1.600 m².",
+        [
+            ("0,8 m²", "Multiplicó por 2.000 una sola vez, sin elevar el factor al cuadrado."),
+            ("160.000 m²", "Aplicó bien el factor pero se equivocó al convertir a metros cuadrados."),
+            ("16.000.000 m²", "Dejó el resultado en centímetros cuadrados y lo etiquetó como metros."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Las áreas de dos figuras semejantes están en razón 25 : 49. ¿En qué razón están sus perímetros?",
+        "5 : 7",
+        "Los perímetros van en la razón de semejanza, y esa se obtiene sacando la raíz de la razón de áreas.\n\n"
+        "1) La razón entre las áreas es el cuadrado de la razón de semejanza.\n"
+        "2) Saca la raíz de cada término: √25 = 5 y √49 = 7.\n"
+        "3) La razón de semejanza es 5 : 7, y los perímetros van en esa misma razón porque son sumas de longitudes.\n"
+        "4) Comprueba: 5² : 7² = 25 : 49 ✓.",
+        [
+            ("25 : 49", "Usó la razón de las áreas también para los perímetros, sin sacarle la raíz."),
+            ("625 : 2.401", "Elevó al cuadrado en vez de sacar la raíz."),
+            ("12,5 : 24,5", "Dividió cada término por 2 en lugar de sacar la raíz cuadrada."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "En un mapa a escala 1 : 400.000, una ruta aparece con 3,5 cm de longitud. ¿Cuántos kilómetros mide en la realidad?",
+        "14 km",
+        "Se multiplica por la escala y se convierte a kilómetros.\n\n"
+        "1) Multiplica: 3,5 · 400.000 = 1.400.000 cm.\n"
+        "2) Como 1 km son 100.000 cm, divide: 1.400.000 ÷ 100.000 = 14.\n"
+        "3) La ruta mide 14 km.",
+        [
+            ("1,4 km", "Se equivocó en un factor 10 al convertir centímetros a kilómetros."),
+            ("140 km", "Convirtió como si 1 km fueran 10.000 cm."),
+            ("114.286 km", "Dividió por la escala en lugar de multiplicar."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Dos cubos son semejantes con razón de semejanza 2 : 3. Si el volumen del menor es 16 cm³, ¿cuál es el volumen del mayor?",
+        "54 cm³",
+        "Los volúmenes van en la razón elevada al cubo.\n\n"
+        "1) La razón entre las aristas es 2 : 3.\n"
+        "2) La razón entre los volúmenes es 2³ : 3³, o sea 8 : 27.\n"
+        "3) Plantea: 16/x = 8/27.\n"
+        "4) Despeja: x = 16 · 27 ÷ 8 = 54 cm³.",
+        [
+            ("24 cm³", "Aplicó la razón 2 : 3 directamente al volumen, sin elevarla al cubo."),
+            ("36 cm³", "Elevó la razón al cuadrado, que corresponde a las áreas."),
+            ("432 cm³", "Multiplicó por 27 pero olvidó dividir por 8."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Dos triángulos semejantes tienen sus lados en razón 2 : 5. Si el área del menor es 60 cm², ¿cuál es el área del mayor?",
+        "375 cm²",
+        "Las áreas van en la razón de semejanza al cuadrado.\n\n"
+        "1) La razón entre los lados es 2 : 5.\n"
+        "2) La razón entre las áreas es 2² : 5², o sea 4 : 25.\n"
+        "3) Plantea: 60/x = 4/25.\n"
+        "4) Despeja: x = 60 · 25 ÷ 4 = 1.500 ÷ 4 = 375 cm².",
+        [
+            ("150 cm²", "Aplicó la razón 2 : 5 directamente a las áreas."),
+            ("1.500 cm²", "Multiplicó por 25 pero olvidó dividir por 4."),
+            ("9,6 cm²", "Aplicó la razón al revés y achicó el área."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Se quiere dibujar el mismo terreno en dos planos, uno a escala 1 : 100 y otro a escala 1 : 250. ¿En cuál de los dos el dibujo resulta más grande?",
+        "En el de escala 1 : 100",
+        "Mientras mayor es el número que sigue al 1, más se achica el dibujo.\n\n"
+        "1) En la escala 1 : 100 cada centímetro del plano representa 100 cm reales; en la 1 : 250, representa 250 cm.\n"
+        "2) Compruébalo con un caso: un muro de 10 m son 1.000 cm. En el primer plano se dibuja con 1.000 ÷ 100 = 10 cm; en el segundo, con 1.000 ÷ 250 = 4 cm.\n"
+        "3) El dibujo es más grande en la escala 1 : 100.\n"
+        "4) La regla práctica: la escala con el denominador más chico es la que muestra más detalle.",
+        [
+            ("En el de escala 1 : 250", "Supuso que un número mayor en la escala da un dibujo mayor; es al revés."),
+            ("En los dos igual", "Las escalas distintas siempre dan dibujos de distinto tamaño para el mismo objeto."),
+            ("Depende del tamaño del terreno", "La razón entre ambos dibujos es siempre 250/100 = 2,5, sea cual sea el terreno."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Un poste de 5 m proyecta una sombra de 4 m. A la misma hora, un edificio proyecta una sombra de 28 m. ¿Cuánto mide el edificio?",
+        "35 m",
+        "El poste y el edificio forman triángulos semejantes con sus sombras.\n\n"
+        "1) Plantea la proporción entre altura y sombra: 5/4 = x/28.\n"
+        "2) Multiplica en cruz: 4x = 140.\n"
+        "3) Divide: x = 35 m.\n"
+        "4) Comprueba que sea coherente: como el poste es más alto que su sombra, el edificio también debe superar los 28 m ✓.",
+        [
+            ("22,4 m", "Invirtió la proporción y obtuvo un edificio más bajo que su sombra."),
+            ("29 m", "Sumó 1 a la sombra, tratando la relación como una diferencia."),
+            ("140 m", "Se quedó en el paso intermedio sin dividir por 4."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Un terreno de 40 m de frente debe quedar dibujado con 20 cm en un plano. ¿Qué escala hay que usar?",
+        "1 : 200",
+        "La escala compara la medida del plano con la real, en la misma unidad.\n\n"
+        "1) Pasa la medida real a centímetros: 40 m = 4.000 cm.\n"
+        "2) La razón es 20 : 4.000.\n"
+        "3) Simplifica para dejar un 1 adelante: divide ambos por 20, y queda 1 : 200.\n"
+        "4) La escala es 1 : 200.",
+        [
+            ("1 : 2", "Comparó 20 cm con 40 m sin pasar ambas medidas a la misma unidad."),
+            ("1 : 20", "Dividió 4.000 por 200 en lugar de por 20."),
+            ("1 : 4.000", "Usó la medida real sin dividirla por la del plano."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "En dos triángulos semejantes, a un lado de 3 cm del primero le corresponde uno de x cm del segundo, y a ese mismo lado de x cm le corresponde uno de 12 cm en un tercer triángulo semejante a ambos, con la misma razón. ¿Cuánto vale x?",
+        "6 cm",
+        "La razón entre el primero y el segundo es la misma que entre el segundo y el tercero, así que x es la media proporcional.\n\n"
+        "1) Plantea la igualdad de razones: 3/x = x/12.\n"
+        "2) Multiplica en cruz: x² = 36.\n"
+        "3) Saca la raíz: x = 6 cm. Se descarta −6 porque una longitud no puede ser negativa.\n"
+        "4) Comprueba: 3/6 = 0,5 y 6/12 = 0,5 ✓. La razón se mantiene en los dos pasos.",
+        [
+            ("7,5 cm", "Promedió 3 y 12 en lugar de buscar la media proporcional."),
+            ("36 cm", "Se quedó en x² sin sacar la raíz."),
+            ("4 cm", "Dividió 12 por 3 en vez de plantear la proporción."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Los volúmenes de dos cuerpos semejantes están en razón 8 : 27. ¿En qué razón están sus longitudes?",
+        "2 : 3",
+        "Es el camino inverso: de la razón de volúmenes se saca la de longitudes con una raíz cúbica.\n\n"
+        "1) La razón entre los volúmenes es el cubo de la razón entre las longitudes.\n"
+        "2) Saca la raíz cúbica de cada término: ∛8 = 2 y ∛27 = 3.\n"
+        "3) La razón entre las longitudes es 2 : 3.\n"
+        "4) Comprueba: 2³ : 3³ = 8 : 27 ✓.",
+        [
+            ("8 : 27", "Repitió la razón de los volúmenes sin sacarle la raíz."),
+            ("4 : 9", "Sacó la raíz cuadrada en lugar de la cúbica."),
+            ("2,7 : 9", "Dividió cada término por 3 en vez de sacar la raíz cúbica."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Una fotografía de 12 cm por 18 cm se amplía 1,5 veces. ¿Cuál es el perímetro de la ampliación?",
+        "90 cm",
+        "Primero se amplían las dos dimensiones y recién después se calcula el perímetro.\n\n"
+        "1) Nuevo ancho: 12 · 1,5 = 18 cm.\n"
+        "2) Nuevo alto: 18 · 1,5 = 27 cm.\n"
+        "3) Perímetro: 2 · (18 + 27) = 2 · 45 = 90 cm.\n"
+        "4) Atajo: el perímetro original es 2 · (12 + 18) = 60 cm, y como los perímetros van en la misma razón que los lados, 60 · 1,5 = 90 ✓.",
+        [
+            ("135 cm", "Aplicó el factor 1,5 dos veces, como si el perímetro fuera una superficie."),
+            ("60 cm", "Calculó el perímetro de la foto original sin ampliarlo."),
+            ("45 cm", "Sumó las nuevas dimensiones pero olvidó duplicar la suma."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "En un triángulo se traza una paralela a uno de sus lados, que divide a otro lado en segmentos de 6 cm y 4 cm. Si el tercer lado mide 15 cm en total, ¿en qué segmentos queda dividido?",
+        "9 cm y 6 cm",
+        "El teorema de Tales dice que la paralela divide a los dos lados en la misma razón.\n\n"
+        "1) La razón en el primer lado es 6 : 4, o sea 3 : 2.\n"
+        "2) El tercer lado, de 15 cm, se reparte en esa misma razón. Divídelo en 3 + 2 = 5 partes iguales: 15 ÷ 5 = 3 cm por parte.\n"
+        "3) Los segmentos son 3 · 3 = 9 cm y 2 · 3 = 6 cm.\n"
+        "4) Comprueba: 9 + 6 = 15 ✓, y 9/6 = 6/4 = 1,5 ✓.",
+        [
+            ("6 cm y 9 cm", "Asignó los segmentos al revés: al segmento mayor del primer lado le corresponde el mayor del tercero."),
+            ("7,5 cm y 7,5 cm", "Repartió el lado en partes iguales, ignorando la razón."),
+            ("10 cm y 5 cm", "Usó una razón 2 : 1 en lugar de 3 : 2."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Una piscina mide 25 m de largo, 10 m de ancho y 2 m de profundidad. ¿Cuál es el volumen de su maqueta a escala 1 : 100, expresado en centímetros cúbicos?",
+        "500 cm³",
+        "Conviene calcular el volumen real y aplicar el factor de escala al cubo.\n\n"
+        "1) Volumen real: 25 · 10 · 2 = 500 m³.\n"
+        "2) El factor para volúmenes es 100³ = 1.000.000, así que la maqueta tiene 500 ÷ 1.000.000 = 0,0005 m³.\n"
+        "3) Pasa a centímetros cúbicos sabiendo que 1 m³ = 1.000.000 cm³: 0,0005 · 1.000.000 = 500 cm³.\n"
+        "4) También sale reduciendo primero cada medida: 25 cm por 10 cm por 2 cm da 500 cm³ ✓, y es el camino más corto.",
+        [
+            ("5 cm³", "Dividió el volumen real por 100 una sola vez, sin elevar el factor al cubo."),
+            ("50.000 cm³", "Elevó el factor al cuadrado en lugar de al cubo."),
+            ("500.000 cm³", "Convirtió mal de metros cúbicos a centímetros cúbicos."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "En un mapa a escala 1 : 50.000, un lago ocupa 3 cm². ¿Cuál es su superficie real en kilómetros cuadrados?",
+        "0,75 km²",
+        "Hay dos pasos delicados: elevar el factor al cuadrado y convertir bien las unidades.\n\n"
+        "1) Factor para superficies: 50.000² = 2.500.000.000.\n"
+        "2) Superficie real: 3 · 2.500.000.000 = 7.500.000.000 cm².\n"
+        "3) Pasa a metros cuadrados dividiendo por 10.000: 750.000 m².\n"
+        "4) Pasa a kilómetros cuadrados dividiendo por 1.000.000: 0,75 km².",
+        [
+            ("1,5 km²", "Multiplicó por 50.000 una sola vez, sin elevar el factor al cuadrado."),
+            ("750 km²", "Se saltó la conversión de metros cuadrados a kilómetros cuadrados."),
+            ("0,075 km²", "Se equivocó en un factor 10 en alguna de las dos conversiones."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Dos triángulos semejantes tienen perímetros de 36 cm y 48 cm. Si un lado del menor mide 9 cm, ¿cuánto mide el lado correspondiente del mayor?",
+        "12 cm",
+        "La razón entre los perímetros es la razón de semejanza, y sirve directo para los lados.\n\n"
+        "1) Razón entre los perímetros: 36 : 48, que simplificada es 3 : 4.\n"
+        "2) Plantea: 3/4 = 9/x.\n"
+        "3) Multiplica en cruz: 3x = 36.\n"
+        "4) Divide: x = 12 cm.",
+        [
+            ("21 cm", "Le sumó al lado la diferencia entre los perímetros, tratando la razón como una resta."),
+            ("6,75 cm", "Aplicó la razón al revés y achicó el lado."),
+            ("36 cm", "Se quedó en el paso intermedio sin dividir por 3."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "dificil",
+        "Dos triángulos son semejantes con razón 3 : 5. Si la altura del menor mide 12 cm, ¿cuánto mide la altura correspondiente del mayor?",
+        "20 cm",
+        "En figuras semejantes todas las longitudes correspondientes van en la razón de semejanza, y la altura es una de ellas.\n\n"
+        "1) La altura no es un lado, pero sí una longitud del triángulo, así que sigue la misma razón.\n"
+        "2) Plantea: 3/5 = 12/x.\n"
+        "3) Multiplica en cruz: 3x = 60.\n"
+        "4) Divide: x = 20 cm.",
+        [
+            ("14 cm", "Sumó 2 a la altura, tratando la razón como una diferencia."),
+            ("7,2 cm", "Aplicó la razón al revés y achicó la altura."),
+            ("33,3 cm", "Elevó la razón al cuadrado, que corresponde a las áreas y no a las longitudes."),
+        ],
+    ),
+]
+
+# Reposición para geo_plana, que cedió sus tres preguntas de escala al nodo
+# nuevo. Vuelven a ser de área y perímetro, que es lo que le corresponde.
+QUESTIONS += [
+    _q(
+        "geo_plana", "medio",
+        "Una pista de atletismo tiene forma de rectángulo de 84 m de largo por 60 m de ancho. ¿Cuántas vueltas completas hay que dar para recorrer 2.880 m?",
+        "10 vueltas",
+        "Cada vuelta es el perímetro del rectángulo, así que primero hay que calcularlo.\n\n"
+        "1) Perímetro: 2 · (84 + 60) = 2 · 144 = 288 m por vuelta.\n"
+        "2) Divide la distancia total por el perímetro: 2.880 ÷ 288 = 10.\n"
+        "3) Hay que dar 10 vueltas completas.",
+        [
+            ("20 vueltas", "Usó solo la suma de un largo y un ancho, olvidando que cada uno aparece dos veces."),
+            ("34 vueltas", "Dividió por el largo del rectángulo en lugar de por el perímetro."),
+            ("5.040 vueltas", "Calculó el área del rectángulo en vez de su perímetro."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un jardín rectangular mide 20 m por 12 m y tiene un camino de 2 m de ancho por dentro, bordeándolo completamente. ¿Cuál es el área del camino?",
+        "112 m²",
+        "El camino es lo que queda al restarle al jardín completo la zona interior.\n\n"
+        "1) Área total del jardín: 20 · 12 = 240 m².\n"
+        "2) El camino se come 2 m por cada lado, así que a cada dimensión hay que restarle 2 · 2 = 4 m.\n"
+        "3) Zona interior: (20 − 4) · (12 − 4) = 16 · 8 = 128 m².\n"
+        "4) Área del camino: 240 − 128 = 112 m². Restar el ancho una sola vez por dimensión es el error típico acá.",
+        [
+            ("128 m²", "Dio el área de la zona interior en lugar de la del camino."),
+            ("60 m²", "Restó el ancho del camino una sola vez en cada dimensión."),
+            ("240 m²", "Dio el área total del jardín sin descontar la zona interior."),
+        ],
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "Un triángulo tiene 24 cm de base y 10 cm de altura. Se le recorta otro triángulo que comparte la misma altura y tiene 9 cm de base. ¿Cuál es el área de la figura que queda?",
+        "75 cm²",
+        "Se calculan las dos áreas y se restan.\n\n"
+        "1) Área del triángulo original: (24 · 10) ÷ 2 = 120 cm².\n"
+        "2) Área del triángulo recortado: (9 · 10) ÷ 2 = 45 cm².\n"
+        "3) Resta: 120 − 45 = 75 cm².\n"
+        "4) Atajo: como comparten altura, basta restar las bases y calcular una sola vez: ((24 − 9) · 10) ÷ 2 = 75 ✓.",
+        [
+            ("165 cm²", "Sumó las dos áreas en lugar de restarlas."),
+            ("150 cm²", "Restó las bases pero olvidó dividir por 2 al calcular el área."),
+            ("120 cm²", "Dio el área del triángulo original sin descontar el recorte."),
         ],
     ),
 ]
@@ -31579,6 +32610,55 @@ LESSONS: dict[str, dict] = {
             "Cambiar la coordenada equivocada al reflejar. Respecto del eje $Y$ "
             "cambia la $x$; respecto del eje $X$ cambia la $y$. Conviene pensar "
             "en cuál eje es el espejo y mover el punto perpendicular a él."
+        ),
+    },
+    "geo_semejanza": {
+        "intro": (
+            "Dos figuras semejantes tienen la misma forma y distinto tamaño. Todo "
+            "el tema se sostiene en una sola idea, y en no confundir sus tres "
+            "versiones: la razón se aplica distinto a las longitudes, a las áreas "
+            "y a los volúmenes."
+        ),
+        "theory": (
+            "**La razón de semejanza** compara longitudes correspondientes. Si es "
+            "$r$, entonces cada lado del mayor mide $r$ veces el del menor.\n\n"
+            "**Los perímetros van en esa misma razón $r$**, porque un perímetro es "
+            "una suma de longitudes.\n\n"
+            "**Las áreas van en $r^2$** y **los volúmenes en $r^3$**. La razón es "
+            "que un área depende de dos dimensiones y un volumen de tres, y el "
+            "factor se aplica a cada una.\n\n"
+            "**Una escala $1 : n$** dice que lo real es $n$ veces lo dibujado. De "
+            "plano a realidad se MULTIPLICA; de realidad a plano se DIVIDE. Antes "
+            "de operar hay que dejar ambas medidas en la misma unidad.\n\n"
+            "**Para triángulos basta el criterio AA**: si dos ángulos coinciden, "
+            "el tercero también, y los lados quedan forzosamente proporcionales."
+        ),
+        "example_statement": (
+            "Dos triángulos son semejantes con razón $2 : 5$. Si el área del menor "
+            "es $16\\ \\text{cm}^2$, ¿cuál es el área del mayor?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Anoto la razón entre las longitudes: $2 : 5$.",
+                "porque": "Es el dato que entrega el enunciado, y es el que compara lados, no áreas.",
+            },
+            {
+                "accion": "Elevo la razón al cuadrado para pasar a áreas: $2^2 : 5^2 = 4 : 25$.",
+                "porque": "Un área depende de dos dimensiones. Si cada una se multiplica por $\\frac{5}{2}$, el área se multiplica por $\\left(\\frac{5}{2}\\right)^2$. Aplicar $2 : 5$ directamente al área es el error más frecuente de este tema.",
+            },
+            {
+                "accion": "Planteo la proporción con las áreas: $\\frac{16}{x} = \\frac{4}{25}$.",
+                "porque": "Ahora los dos lados de la igualdad comparan la misma clase de magnitud: área con área.",
+            },
+            {
+                "accion": "Despejo multiplicando en cruz: $4x = 400$, de donde $x = 100\\ \\text{cm}^2$.",
+                "porque": "Comprobación rápida: el mayor tiene lados 2,5 veces más largos, así que su área debe ser bastante más de 2,5 veces la del menor. Y 100 es 6,25 veces 16, que es exactamente $2{,}5^2$.",
+            },
+        ],
+        "common_error": (
+            "Aplicarle a las áreas la razón de los lados sin elevarla al cuadrado, "
+            "y responder $40\\ \\text{cm}^2$. La regla completa: longitudes en $r$, "
+            "áreas en $r^2$, volúmenes en $r^3$."
         ),
     },
     "geo_solidos": {
