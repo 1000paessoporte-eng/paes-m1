@@ -305,7 +305,7 @@ COMPROBACIONES: dict[str, str] = {
     "un 20% seguido de otro 10%": f"{100 - 100 * 0.8 * 0.9:.0f}%",
     "De un total de T personas, C cumplen": "(C / T) · 100",
     "sube un 20% y después baja un 20%": "4" if abs(1 - 1.2 * 0.8 - 0.04) < 1e-9 else "?",
-    "Ocho trabajadores construyen": str(8 * 15 // 12),
+    "Ocho trabajadores construyen": f"d = {8 * 15} / t",
     # --- álgebra ---
     "compra 5 sacos de cemento y 3 de arena": f"{5 - 2}a + {3 + 7}b",
     "a + b = 9 y a · b = 20": str(9**2 - 2 * 20),
@@ -695,7 +695,6 @@ COMPROBACIONES: dict[str, str] = {
     "6 kilos de pan cuestan $9.000": f"{10 * 9_000 // 6:,}".replace(",", "."),
     "recorre 240 km con 20 litros": str(35 * 240 // 20),
     # Proporcionalidad inversa: el producto se mantiene constante.
-    "Cuatro llaves llenan un estanque en 6 horas": str(4 * 6 // 3),
     # Porcentajes encadenados: se multiplican los factores, nunca se suman.
     "10% de descuento y, sobre el precio ya rebajado, otro 10%": f"{round((1 - 0.9 * 0.9) * 100)}%",
     "el 20% del 40% de 800": str(round(800 * 0.4 * 0.2)),
@@ -1064,7 +1063,6 @@ COMPROBACIONES: dict[str, str] = {
     # round, no int: 24000 * 1.15 da 27599.999... en coma flotante y truncar bajaría a 27.599.
     "45 estudiantes, 27 aprobaron": f"{int(27 / 45 * 100)}%",
     "descuentos sucesivos: 20% y luego 10%": f"{int(50000 * 0.8 * 0.9):,}".replace(",", "."),
-    "Doce operarios pintan": str(12 * 10 // 8),
     "sube un 60% y luego baja un 25%": f"{round((1.6 * 0.75 - 1) * 100)}%",
     # --- números reales ---
     "√75 en su forma más simple": "5" if isclose(sqrt(75), 5 * sqrt(3)) else "?",
@@ -1374,7 +1372,7 @@ COMPROBACIONES: dict[str, str] = {
     "descuentos sucesivos de 10% y 20%": f"${round(60000 * 0.9 * 0.8):,}".replace(",", "."),
     "sube un 30% y luego baja un 30%": f"{round((1 - 1.3 * 0.7) * 100)}%",
     "Cinco máquinas producen 200 piezas": f"{200 * 8 // 5} piezas",
-    "Tres obreros pintan una casa en 12 días": f"{3 * 12 // 4} días",
+    "les corresponden y igual a 12, 6 y 3": f"y = {2 * 12} / x",
     "aumenta un 20% y después ese nuevo monto aumenta un 25%": f"{round((1.2 * 1.25 - 1) * 100)}%",
     "camisa cuesta $19.900": f"${round(19900 * 0.7):,}".replace(",", "."),
     "IVA incluido de 19% es $23.800": f"${round(23800 / 1.19):,}".replace(",", "."),
