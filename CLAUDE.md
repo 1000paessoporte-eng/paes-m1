@@ -77,6 +77,25 @@ resuelve conflictos de texto, no de diseño.
    `seed_data.py` y desplegar no basta: hay que correr `scripts/seed.py` contra
    producción. Es idempotente, no duplica.
 
+   **Y `seed.py` solo INSERTA.** Salta cualquier pregunta cuyo enunciado ya
+   exista, así que por sí solo no publica lo que cambia sin cambiar el
+   enunciado: dificultades, distractores corregidos, o el paso de un nodo de M1
+   a M2. Peor: al reescribir una pregunta, la versión vieja queda viva, porque
+   la nueva entra como si fuera adicional. Para eso está `scripts/sincronizar.py`,
+   y la secuencia completa es:
+
+   ```bash
+   cd apps/api
+   DATABASE_URL="<string directo>" uv run python scripts/seed.py
+   DATABASE_URL="<string directo>" uv run python scripts/sincronizar.py          # informe
+   DATABASE_URL="<string directo>" uv run python scripts/sincronizar.py --aplicar
+   DATABASE_URL="<string directo>" uv run python scripts/seed.py
+   ```
+
+   El primer seed crea los nodos nuevos, el sync limpia y corrige dejando
+   respaldo JSON, y el último seed repone lo que el sync borró. Al terminar,
+   `sincronizar.py` sin `--aplicar` debe informar cero en las cinco filas.
+
 ## 4. Verificar antes de pedir merge
 
 ```bash
