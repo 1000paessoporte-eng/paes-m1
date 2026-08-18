@@ -290,26 +290,20 @@ COMPROBACIONES: dict[str, str] = {
     "el 60% son mujeres": f"{round(0.6 * 25 + 0.4 * 50)}%",
     "compra un producto en $24.000 y quiere venderlo ganando un 25% sobre el precio de venta": f"${round(24000 / 0.75):,}".replace(",", "."),
     # --- racionales ---
-    "5/6 − 2/9": str(Fraction(5, 6) - Fraction(2, 9)),
-    "(3/5) × (10/9)": str(Fraction(3, 5) * Fraction(10, 9)),
     "obra lleva 2 semanas terminadas": str(2 + Fraction(1, 2) / Fraction(2, 3)),
     "tambor tiene 3/4": str(Fraction(3, 4) - Fraction(1, 3) * Fraction(3, 4)),
     "(2/3 − 1/4) ÷ (5/6 + 1/2)": str(
         (Fraction(2, 3) - Fraction(1, 4)) / (Fraction(5, 6) + Fraction(1, 2))
     ),
-    "a = 2/5 y b = 3/4": str(
-        (Fraction(2, 5) + Fraction(3, 4)) / (Fraction(3, 4) - Fraction(2, 5))
-    ),
     # --- potencias y raíces ---
     "hoja se dobla por la mitad 3 veces": str(2**3 * 2**4),
-    "√81 − √16": str(int(sqrt(81) - sqrt(16))),
-    "(3⁵ · 3²) ÷ 3⁴": str(3**5 * 3**2 // 3**4),
+    "multiplica por 3 cinco veces": str(3 ** (5 + 2 - 4)),
     "reduce el tamaño de una figura a la quinta parte": str(Fraction(1, 5**2)),
     "población de insectos se duplica cada día": str(5 if 2**5 == 32 else None),
     # --- porcentajes ---
-    "15% de 240": str(int(0.15 * 240)),
-    "18.000 y se le aplica un descuento del 25%": f"{int(18000 * 0.75):,}".replace(",", "."),
-    "40 estudiantes, 24 son mujeres": f"{int(24 / 40 * 100)}%",
+    "descuento del d por ciento": "P · (1 − d/100)",
+    "un 20% seguido de otro 10%": f"{100 - 100 * 0.8 * 0.9:.0f}%",
+    "De un total de T personas, C cumplen": "(C / T) · 100",
     "sube un 20% y después baja un 20%": "4" if abs(1 - 1.2 * 0.8 - 0.04) < 1e-9 else "?",
     "Ocho trabajadores construyen": str(8 * 15 // 12),
     # --- álgebra ---
@@ -330,18 +324,12 @@ COMPROBACIONES: dict[str, str] = {
     "triángulo de base 12 cm y altura 7 cm": f"{12 * 7 // 2} cm²",
     "circunferencia tiene radio 5 cm": f"{3.14 * 5**2:.1f} cm²".replace(".", ","),
     "perímetro 36 cm y su largo mide 11 cm": f"{(36 // 2 - 11) * 11} cm²",
-    "cuadrado de lado 10 cm tiene inscrito": f"{100 - 3.14 * 25:.1f} cm²".replace(".", ","),
+    "plancha cuadrada de 10 cm de lado se recorta el círculo": f"{100 - 3.14 * 5**2:.1f}%".replace(".", ","),
     "rectángulo de 9 cm de largo y 4 cm de ancho": f"{2 * (9 + 4)} cm",
-    "catetos miden 15 cm y 20 cm": f"{int(sqrt(15**2 + 20**2))} cm",
-    "hipotenusa mide 25 cm y un cateto 7 cm": f"{int(sqrt(25**2 - 7**2))} cm",
-    "poste de 8 m": f"{int(sqrt(8**2 + 15**2))} m",
-    "catetos miden 3 cm y 4 cm": f"{3 * 4 // 2} cm²",
-    "cubo de arista 4 cm": f"{4**3} cm³",
+    "pantalla mide 60 cm de ancho y 80 cm de alto": f"{int((60**2 + 80**2) ** 0.5)} cm",
+    "catetos miden 3 cm y 4 cm": f"({3} · {4}) / 2",
+    "cubo de arista a se pinta completamente": "6a²",
     "cilindro de radio 3 cm y altura 10 cm": f"{3.14 * 9 * 10:.1f} cm³".replace(".", ","),
-    "5 cm de largo, 3 cm de ancho y 2 cm de alto": f"{2 * (5 * 3 + 5 * 2 + 3 * 2)} cm²",
-    "cilindro tiene 8 cm de diámetro y 15 cm de altura": f"{3.14 * (8 // 2) ** 2 * 15:.1f} cm³".replace(".", ","),
-    "P(6, 1) se traslada": f"({6 - 4}, {1 - 3})",
-    "P(−3, 4) se refleja respecto del eje Y": f"({3 + 2}, {4 - 1})",
     "P(3, −2) una homotecia": f"({3 * 4}, {-2 * 4})",
     "triángulo de área 12 cm² se somete": f"{12 * 3**2} cm²",
     "8 cm y su correspondiente en la imagen mide 20": str(20 / 8).replace(".", ","),
@@ -349,11 +337,10 @@ COMPROBACIONES: dict[str, str] = {
     "ángulo de 30° y su hipotenusa mide 10 cm": f"{int(10 * 0.5)} cm",
     "sen α = 0,6": str(sqrt(1 - 0.6**2)).replace(".", ",")[:3],
     # --- estadística y probabilidad ---
-    "promedio de los datos 4, 8, 10, 6 y 12": str((4 + 8 + 10 + 6 + 12) // 5),
+    "conjunto de n datos suma S": "S / n",
     "mediana de los datos 7, 3, 9, 1 y 5": str(sorted([7, 3, 9, 1, 5])[2]),
-    "promedio de cuatro números es 15": str(5 * 16 - 4 * 15),
-    "rango del conjunto 12, 4, 19, 7 y 15": str(19 - 4),
-    "3 estudiantes obtuvieron nota 6": str((3 * 6 + 2 * 4) / 5).replace(".", ","),
+    "temperaturas máximas de una semana": str(25 - 18),
+    "la nota 4 aparece 5 veces": f"{(4 * 5 + 5 * 8 + 6 * 7) / (5 + 8 + 7):.1f}".replace(".", ","),
     "4 entradas y 5 platos de fondo": str(4 * 5),
     "ordenar 6 cuadros": str(factorial(6)),
     # Lleva los dígitos porque hay varias preguntas de "3 cifras distintas".
@@ -366,8 +353,8 @@ COMPROBACIONES: dict[str, str] = {
     "Se lanzan dos monedas. ¿Cuál": str(Fraction(1, 4)),
     # Lleva la condición porque hay varias preguntas sobre la baraja de 52.
     "sea un as o una carta de corazones": f"{4 + 13 - 1}/52",
-    "4 bolitas blancas y 6 negras": str(Fraction(4, 10) * Fraction(3, 9)),
-    "llueva mañana es 0,3": str(round(1 - 0.3, 1)).replace(".", ","),
+    "22 practican fútbol, 16 practican vóleibol": f"{22 + 16 - 8}/40",
+    "probabilidad de que ocurra un evento es p": "1 − p",
     "varianza del conjunto 2, 4, 6": str(Fraction(8, 3)),
     "el 60% practica deporte": str(round(0.24 / 0.6, 2)).replace(".", ",")[:3],
     "A y B son independientes, con P(A) = 0,5": str(0.5 * 0.3).replace(".", ","),
@@ -385,15 +372,11 @@ COMPROBACIONES: dict[str, str] = {
     # Cada valor se recalcula acá desde los datos del enunciado, sin mirar la
     # alternativa marcada como correcta. Si alguien edita una pregunta y le
     # descuadra la aritmética, esto lo caza.
-    "ruleta tiene 20 sectores iguales": str(Fraction(4, 20)),
-    "32 estudiantes, de los cuales 18 son mujeres": str(Fraction(32 - 18, 32)),
-    "9 caramelos de limón y 15 de frutilla": str(Fraction(9, 9 + 15)),
-    "el bus llegue atrasado a cierto paradero es 0,15": str(round(1 - 0.15, 2)).replace(".", ","),
-    "dado de 12 caras numeradas del 1 al 12": str(Fraction(3, 12)),
+    "Se lanza un dado común dos veces": "(1/6) · (1/6)",
+    "el número sea par O mayor que 7": f"{5 + 3 - 2}/10",
     "naipe español tiene 40 cartas": str(Fraction(40 // 4, 40)),
-    "25 autos y 10 de ellos son rojos": str(Fraction(25 - 10, 25)),
+    "una tras otra y SIN reponer la primera": "(6/10) · (5/9)",
     # Excluyentes: se suman sin descontar nada.
-    "compre solamente bebida es 0,35": str(round(0.35 + 0.45, 2)).replace(".", ","),
     # Con intersección: la regla aditiva descuenta los contados dos veces.
     "22 juegan fútbol, 16 juegan vóleibol": str(Fraction(22 + 16 - 8, 40)),
     "máquina A esté operativa en un día cualquiera": str(round(0.9 * 0.8, 2)).replace(".", ","),
@@ -448,7 +431,7 @@ COMPROBACIONES: dict[str, str] = {
     # Los fragmentos llevan el objeto porque hay varias preguntas por escala.
     "1 : 100, una sala aparece": str(5 * 4),
     "1 : 50, una bodega ocupa": str(30 * 50**2 / 10_000).replace(".", ","),
-    "razón entre sus lados es 2 : 5": str(12 * 5**2 // 2**2),
+    "figuras son semejantes con razón de semejanza 2 : 5": f"{2**2} : {5**2}",
     # Ecuación previa antes de poder calcular el área.
     "perímetro de 70 m y su largo mide 5 m más": str((70 // 2 - 5) // 2 * ((70 // 2 - 5) // 2 + 5)),
     "mismo perímetro: 40 cm": str((40 // 4) ** 2 - 14 * 6),
@@ -820,7 +803,7 @@ COMPROBACIONES: dict[str, str] = {
     # --- reglas de las probabilidades: tercera tanda ---
     # Probabilidad simple: casos favorables sobre casos posibles.
     "3 bolitas rojas, 4 azules y 5 verdes": str(Fraction(4, 3 + 4 + 5)),
-    "obtener un número menor que 3": str(Fraction(2, 6)),
+    "hay r bolitas rojas y a bolitas azules": "r / (r + a)",
     "12 lápices y 3 de ellos están malos": str(Fraction(3, 12)),
     "naipe español de 40 cartas, que tiene 4 reyes": str(Fraction(4, 40)),
     "moneda equilibrada una vez": str(Fraction(1, 2)),
@@ -957,9 +940,9 @@ COMPROBACIONES: dict[str, str] = {
     "1 : 400.000, una ruta aparece con 3,5 cm": f"{round(3.5 * 400_000 / 100_000)} km",
     "1 cm representa 2 km": f"{7 * 2} km",
     # De realidad a plano o maqueta se DIVIDE.
-    "maqueta está hecha a escala 1 : 20": f"{40 // 20} m",
+    "maqueta está hecha a escala 1 : 20. Si la torre": f"{40 // 20} m",
     "sala mide 7 m de largo en la realidad": f"{7 * 100 // 100} cm",
-    "pieza mide 75 cm en la realidad": f"{75 // 25} cm",
+    "aristas están en razón 1 : 3": f"1 : {3**3}",
     "pared mide 6 m de largo": f"{6 * 100 // 150} cm",
     "auto mide 4,8 m de largo": f"{round(4.8 * 100) // 40} cm",
     "edificio mide 30 m de alto": str(30 / 25).replace(".", ",") + " m",
@@ -970,8 +953,8 @@ COMPROBACIONES: dict[str, str] = {
     "terreno de 40 m de frente": f"1 : {40 * 100 // 20}",
     # Razón de semejanza aplicada a lados y perímetros (misma razón).
     "razón de semejanza 1 : 3. Si un lado del triángulo menor mide 5 cm": f"{5 * 3} cm",
-    "razón de semejanza 2 : 3. Si el perímetro del menor es 24 cm": f"{24 * 3 // 2} cm",
-    "razón de semejanza 3 : 4. Si un lado de la primera mide 12 cm": f"{12 * 4 // 3} cm",
+    "mapa está a escala 1 : 50.000": "R = 50.000 · d",
+    "primero tiene 300 m² de superficie": f"{300 * 2**2:,} m²".replace(",", "."),
     "razón de semejanza 5 : 2. Si un lado de la figura mayor mide 35 cm": f"{35 * 2 // 5} cm",
     "razón de semejanza 3 : 5. Si el perímetro del mayor es 45 cm": f"{45 * 3 // 5} cm",
     "razón 4 : 7. Si un lado del menor mide 12 cm": f"{12 * 7 // 4} cm",
@@ -982,12 +965,9 @@ COMPROBACIONES: dict[str, str] = {
     "lados de 8 cm, 12 cm y 16 cm": f"{12 * 3 // 2} cm y {16 * 3 // 2} cm",
     "lados de 9 cm, 12 cm y 15 cm": f"{12 * 2 // 3} cm y {15 * 2 // 3} cm",
     # Razones deducidas desde medidas.
-    "cuadrado tiene 4 cm de lado y otro tiene 12 cm": f"1 : {12 // 4}",
-    "lados correspondientes de 5 cm y 20 cm": f"1 : {20 // 5}",
-    "círculos tienen radios de 2 cm y 6 cm": f"1 : {6 // 2}",
+    "círculos tienen radios de 2 cm y 6 cm": f"1 : {(6 // 2) ** 2}",
     "perímetros de 20 cm y 50 cm": f"{20 // 10} : {50 // 10}",
     # Ampliaciones y reducciones: las dos dimensiones por el mismo factor.
-    "fotografía de 8 cm de ancho se amplía al doble": f"{8 * 2} cm",
     "rectángulo de 3 cm por 5 cm se amplía al triple": f"{3 * 3} cm por {5 * 3} cm",
     "fotografía de 10 cm por 15 cm se reduce a la mitad": f"{10 // 2} cm por "
     + str(15 / 2).replace(".", ",")
@@ -1064,7 +1044,7 @@ COMPROBACIONES: dict[str, str] = {
     "f(x) = ax³ y f(2) = 24": str(24 // 2**3),
     # ================= LOTE 4 — eje NÚMEROS =================
     # --- racionales ---
-    "5/8 − 1/6": str(Fraction(5, 8) - Fraction(1, 6)),
+    "tanque tiene a de su capacidad": "a − b",
     "jarra hay 7/8 de litro": str(Fraction(7, 8) - Fraction(1, 4)),
     "bidones que caben 9/8 de esa misma capacidad": str(Fraction(3, 4) / Fraction(9, 8)),
     "2/5 de una ruta": str(1 - (Fraction(2, 5) + Fraction(1, 3))),
@@ -1075,16 +1055,13 @@ COMPROBACIONES: dict[str, str] = {
         (Fraction(5, 6) - Fraction(1, 2)) * (Fraction(3, 4) + Fraction(1, 2))
     ),
     # --- potencias y raíces ---
-    "3² · 3³": str(3**2 * 3**3),
     "patios cuadrados miden 169 y 36 metros cuadrados": str(int(sqrt(169) + sqrt(36))),
     "(5⁴ · 5²) ÷ 5³": str(5**4 * 5**2 // 5**3),
     "3⁻³": str(Fraction(1, 3**3)),
     "cultivo se triplica cada hora": str(4 if 3**4 == 81 else None),
     "√(3² + 4²) · √49": str(round(sqrt(3**2 + 4**2) * sqrt(49))),
     # --- porcentajes ---
-    "35% de 480": str(int(0.35 * 480)),
     # round, no int: 24000 * 1.15 da 27599.999... en coma flotante y truncar bajaría a 27.599.
-    "cuesta $24.000 y sube un 15%": f"{round(24000 * 1.15):,}".replace(",", "."),
     "45 estudiantes, 27 aprobaron": f"{int(27 / 45 * 100)}%",
     "descuentos sucesivos: 20% y luego 10%": f"{int(50000 * 0.8 * 0.9):,}".replace(",", "."),
     "Doce operarios pintan": str(12 * 10 // 8),
@@ -1403,18 +1380,16 @@ COMPROBACIONES: dict[str, str] = {
     "IVA incluido de 19% es $23.800": f"${round(23800 / 1.19):,}".replace(",", "."),
     "120% de 250": str(round(1.2 * 250)),
     # ================= LOTE 7 — eje GEOMETRÍA =================
-    "área de un cuadrado de lado 7 cm": f"{7**2} cm²",
+    "jardín cuadrado de 7 metros de lado se cerca": f"{4 * 7} m de malla y {7**2} m² de pasto",
     "perímetro de un cuadrado de lado 9 cm": f"{4 * 9} cm",
-    "rectángulo de 12 cm de largo y 6 cm de ancho": f"{12 * 6} cm²",
-    "perímetro de un rectángulo de 15 cm de largo y 8 cm": f"{2 * (15 + 8)} cm",
-    "triángulo de base 14 cm y altura 5 cm": f"{14 * 5 // 2} cm²",
+    "se quiere alfombrar completa": "a · b",
+    "cinta alrededor de un cuadro rectangular": "2p + 2q",
     "triángulo equilátero de lado 12 cm": f"{3 * 12} cm",
-    "círculo de radio 4 cm": f"{3.14 * 4**2:.2f} cm²".replace(".", ","),
-    "circunferencia de radio 7 cm": f"{2 * 3.14 * 7:.2f} cm".replace(".", ","),
-    "bases de 10 cm y 6 cm, y una altura de 4 cm": f"{(10 + 6) * 4 // 2} cm²",
-    "diagonales que miden 12 cm y 8 cm": f"{12 * 8 // 2} cm²",
-    "cancha rectangular mide 30 m de largo y 18 m": f"{2 * (30 + 18)} m",
-    "sala rectangular mide 6,5 m por 4 m": f"{round(6.5 * 4)} m²",
+    "avanza la bicicleta en una vuelta completa": "2 · π · r",
+    "terreno con forma de trapecio tiene bases": "(B + b) · h / 2",
+    "afirma que su área es 96 cm²": f"{12 * 8 // 2} cm²",
+    "tres terrenos rectangulares": f"{28 * 20} m²",
+    "baldosas cuadradas de 50 cm de lado": str(round(6.5 * 4 / 0.5**2)),
     "cuadrado tiene un perímetro de 48 cm": f"{(48 // 4) ** 2} cm²",
     "área de 36 cm² y su altura mide 9 cm": f"{2 * 36 // 9} cm",
     "círculo tiene un diámetro de 10 cm": f"{3.14 * (10 / 2) ** 2:.1f} cm²".replace(".", ","),
@@ -1425,14 +1400,9 @@ COMPROBACIONES: dict[str, str] = {
     "piscina rectangular mide 12 m por 5 m": f"{(12 + 2) * (5 + 2) - 12 * 5} m²",
     # --- teorema de Pitágoras ---
     "catetos de 5 cm y 12 cm": f"{int(sqrt(5**2 + 12**2))} cm",
-    "catetos de 8 cm y 15 cm": f"{int(sqrt(8**2 + 15**2))} cm",
-    "hipotenusa mide 10 cm y uno de sus catetos mide 6 cm": f"{int(sqrt(10**2 - 6**2))} cm",
     "hipotenusa mide 17 cm y un cateto mide 8 cm": f"{int(sqrt(17**2 - 8**2))} cm",
-    "catetos de 7 cm y 24 cm": f"{int(sqrt(7**2 + 24**2))} cm",
-    "rectángulo que mide 16 cm por 30 cm": f"{int(sqrt(16**2 + 30**2))} cm",
-    "diagonal de un cuadrado de lado 10 cm": "10" if isclose(sqrt(2 * 100), 10 * sqrt(2)) else "?",
-    "rampa sube 3 m de altura": f"{int(sqrt(3**2 + 4**2))} m",
-    "mástil de 12 m de alto": f"{int(sqrt(12**2 + 5**2))} m",
+    "tabla rígida que puede pasar por ella": "√(a² + b²)",
+    "Un cuadrado tiene lado L": "L√2",
     "catetos de 20 cm y 21 cm": f"{int(sqrt(20**2 + 21**2))} cm",
     "hipotenusa mide 15 cm y un cateto mide 9 cm": f"{int(sqrt(15**2 - 9**2))} cm",
     "cancha rectangular mide 60 m por 80 m": f"{int(sqrt(60**2 + 80**2))} m",
@@ -1449,17 +1419,14 @@ COMPROBACIONES: dict[str, str] = {
     "hipotenusa mide 26 cm y un cateto mide 10 cm": f"{int(sqrt(26**2 - 10**2))} cm",
     "diagonales que miden 16 cm y 12 cm": f"{int(sqrt(8**2 + 6**2))} cm",
     # --- transformaciones isométricas ---
-    "(5, 2) se traslada según el vector (3, −4)": f"({5 + 3}, {2 - 4})",
-    "(−1, 3) se traslada según el vector (2, 5)": f"({-1 + 2}, {3 + 5})",
-    "(7, −2) al reflejarlo respecto del eje Y": f"({-7}, {-2})",
+    "punto (x, y) se refleja respecto del eje Y": "(−x, y)",
     "(−5, 4) al reflejarlo respecto del eje X": f"({-5}, {-4})",
     "(3, 0) se rota 90° en sentido antihorario": f"(0, {3})",
     "(0, 5) se rota 180°": f"(0, {-5})",
     "(2, 5) se rota 180°": f"({-2}, {-5})",
     "(4, 6) al reflejarlo respecto del origen": f"({-4}, {-6})",
-    "(8, −3) se traslada según el vector (−5, 7)": f"({8 - 5}, {-3 + 7})",
+    "termina en (3, 4) tras aplicarle el vector": f"({3 + 5}, {4 - 7})",
     "(1, 4) se rota 90° en sentido antihorario": f"({-4}, {1})",
-    "(−2, 3) se rota 90° en sentido horario": f"({3}, {2})",
     "A(2, 3) se refleja respecto del eje X": f"({2 + 1}, {-3 + 5})",
     "vector traslada el punto (2, 1) hasta el punto (7, −3)": f"({7 - 2}, {-3 - 1})",
     "(3, −5) se refleja respecto del eje Y y después se rota 180°": f"({3}, {5})",
@@ -1470,12 +1437,11 @@ COMPROBACIONES: dict[str, str] = {
     "(6, 8) se refleja respecto del origen": f"({-6 + 2}, {-8 - 3})",
     # --- cuerpos geométricos ---
     "volumen de un cubo de arista 3 cm": f"{3**3} cm³",
-    "caja mide 6 cm de largo, 4 cm de ancho y 2 cm de alto": f"{6 * 4 * 2} cm³",
+    "cuánto cabe dentro de ella": "x · y · z",
     "caras tiene un cubo": str(6),
     "vértices tiene un cubo": str(8),
-    "área total de un cubo de arista 3 cm": f"{6 * 3**2} cm²",
-    "cilindro de radio 5 cm y altura 4 cm": f"{3.14 * 5**2 * 4:.0f} cm³",
-    "paralelepípedo de 9 cm de largo, 7 cm de ancho": f"{9 * 7 * 4} cm³",
+    "estanque cilíndrico tiene radio r y altura h": "π · r² · h",
+    "envase de 1 litro tiene forma de cubo": f"{round(1000 ** (1 / 3))} cm",
     "caja cúbica tiene un área total de 216 cm²": f"{round((216 / 6) ** 0.5)} cm",
     "paralelepípedo mide 6 cm, 4 cm y 3 cm": f"{2 * (6 * 4 + 6 * 3 + 4 * 3)} cm²",
     "estanque cilíndrico tiene 2 m de radio": f"{3.14 * 2**2 * 3:.2f} m³".replace(".", ","),
@@ -1489,20 +1455,12 @@ COMPROBACIONES: dict[str, str] = {
     ),
     "estanque cúbico de 30 cm de arista": f"{30**3 // 1000} litros",
     # Cuerpos con el mismo volumen: el dato que los conecta.
-    "cubo de 6 cm de arista y un paralelepípedo": f"{6**3 // (9 * 8)} cm",
     "arista de un cubo se reduce a la mitad": f"Por 1/{2**3}",
     "duplica la altura de un cilindro": str(2),
     # ================= LOTE 8 — eje PROBABILIDAD Y ESTADÍSTICA =================
-    "media de los datos 5, 10, 15 y 20": f"{(5 + 10 + 15 + 20) / 4:.1f}".replace(".", ","),
-    "mediana de los datos 6, 14, 8, 20 y 12": str(sorted([6, 14, 8, 20, 12])[2]),
-    "moda del conjunto 1, 3, 3, 5, 8 y 3": str(Counter([1, 3, 3, 5, 8, 3]).most_common(1)[0][0]),
-    "rango del conjunto 8, 15, 3, 22 y 11": str(max(8, 15, 3, 22, 11) - min(8, 15, 3, 22, 11)),
-    "promedio de 12, 15 y 18": str((12 + 15 + 18) // 3),
-    "mediana de los datos 4, 9, 2, 7, 6 y 11": (
-        f"{(sorted([4, 9, 2, 7, 6, 11])[2] + sorted([4, 9, 2, 7, 6, 11])[3]) / 2:.1f}".replace(".", ",")
-    ),
-    "notas de un estudiante fueron 4,0": f"{(4 + 5 + 6 + 7 + 3) / 5:.1f}".replace(".", ","),
-    "6 datos tiene media 10": str(6 * 10 - (8 + 9 + 11 + 12 + 13)),
+    "A todos los datos de un conjunto se les suma 4": f"La media aumenta en {4}",
+    "ventas diarias de una semana": "15",
+    "promedio 5,0 en 5 notas y quiere subirlo a 5,5": f"{6 * 5.5 - 5 * 5.0:.1f}".replace(".", ","),
     "5 estudiantes obtuvieron nota 4": f"{(5 * 4 + 3 * 5 + 2 * 6) / 10:.1f}".replace(".", ","),
     "rango del conjunto 45, 12, 78, 33 y 90": str(max(45, 12, 78, 33, 90) - min(45, 12, 78, 33, 90)),
     "se les suma 5, ¿qué ocurre con su media": str(5),

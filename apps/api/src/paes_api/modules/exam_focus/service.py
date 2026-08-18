@@ -231,10 +231,51 @@ def _select_questions(
 
     chosen: list[Question] = []
     for axis, group in by_axis.items():
-        chosen.extend(random.sample(group, quota[axis]))
+        chosen.extend(_repartir_por_dificultad(group, quota[axis]))
 
     random.shuffle(chosen)
     return chosen
+
+
+def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Question]:
+    """Elige `cuantas` preguntas del grupo con las tres dificultades presentes.
+
+    Elegir al azar dentro del eje da el reparto correcto en promedio, pero un
+    ensayo concreto puede salir muy desviado: en 20 preguntas es posible sacar
+    12 fáciles y 3 difíciles. Como el ensayo se usa para estimar puntaje, esa
+    variación cambia el resultado sin que el estudiante haya cambiado.
+
+    El reparto es parejo entre las tres, que es como está construido el banco.
+    Si una dificultad no alcanza a llenar su cuota, lo que falta se completa
+    con el resto del grupo.
+    """
+    if cuantas >= len(grupo):
+        return list(grupo)
+
+    por_dificultad: dict[str, list[Question]] = defaultdict(list)
+    for q in grupo:
+        por_dificultad[q.difficulty.value].append(q)
+
+    niveles = [n for n in ("facil", "medio", "dificil") if por_dificultad[n]]
+    if not niveles:
+        return random.sample(grupo, cuantas)
+
+    elegidas: list[Question] = []
+    base, resto = divmod(cuantas, len(niveles))
+    # El sobrante del redondeo se reparte empezando por las de dificultad media,
+    # que es la franja más poblada de una prueba real.
+    orden = sorted(niveles, key=lambda n: ("medio", "facil", "dificil").index(n))
+    for i, nivel in enumerate(orden):
+        cupo = min(base + (1 if i < resto else 0), len(por_dificultad[nivel]))
+        elegidas.extend(random.sample(por_dificultad[nivel], cupo))
+
+    # Si alguna dificultad no tenía suficientes, se completa con lo que sobre.
+    if len(elegidas) < cuantas:
+        ya = {id(q) for q in elegidas}
+        sobrantes = [q for q in grupo if id(q) not in ya]
+        elegidas.extend(random.sample(sobrantes, cuantas - len(elegidas)))
+
+    return elegidas
 
 
 def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:

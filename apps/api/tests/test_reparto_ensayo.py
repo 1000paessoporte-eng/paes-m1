@@ -20,17 +20,25 @@ class _Nodo:
 
 
 @dataclass
+class _Dif:
+    value: str
+
+
+@dataclass
 class _Pregunta:
     id: int
     skill_node: _Nodo
+    difficulty: _Dif
 
 
 def _banco(por_eje: dict[str, int]) -> list[_Pregunta]:
+    """Cada eje con un tercio de cada dificultad, como está construido el banco."""
     preguntas, i = [], 0
     for eje, cuantas in por_eje.items():
-        for _ in range(cuantas):
+        for k in range(cuantas):
             i += 1
-            preguntas.append(_Pregunta(i, _Nodo(SkillAxis(eje))))
+            nivel = ("facil", "medio", "dificil")[k % 3]
+            preguntas.append(_Pregunta(i, _Nodo(SkillAxis(eje)), _Dif(nivel)))
     return preguntas
 
 
@@ -96,3 +104,30 @@ def test_no_pide_mas_preguntas_de_las_que_tiene_un_eje() -> None:
     reparto = _reparto(elegidas)
     assert reparto["numeros"] <= 5
     assert sum(reparto.values()) == 65
+
+
+def test_un_ensayo_corto_no_sale_cargado_a_una_dificultad() -> None:
+    """Elegir al azar dentro del eje podía dar 12 fáciles en 20 preguntas."""
+    pool = _banco(
+        {"numeros": 300, "algebra": 300, "geometria": 300, "probabilidad": 300}
+    )
+    for _ in range(20):
+        elegidas = _select_questions(pool, [], 24)
+        reparto = Counter(q.difficulty.value for q in elegidas)
+        assert set(reparto) == {"facil", "medio", "dificil"}
+        # Las tres franjas quedan parejas salvo el sobrante del redondeo, que
+        # se acumula a propósito en "medio": es la franja más poblada de una
+        # prueba real. Con 24 preguntas eso da 10 / 7 / 7.
+        assert max(reparto.values()) - min(reparto.values()) <= 3
+        assert reparto["medio"] >= reparto["facil"]
+        assert reparto["medio"] >= reparto["dificil"]
+
+
+def test_el_equilibrio_de_dificultad_aguanta_un_banco_desparejo() -> None:
+    """Si una dificultad escasea, se completa con el resto sin fallar."""
+    pool = [
+        _Pregunta(i, _Nodo(SkillAxis("algebra")), _Dif("facil" if i > 3 else "dificil"))
+        for i in range(1, 101)
+    ]
+    elegidas = _select_questions(pool, ["algebra"], 30)
+    assert len(elegidas) == 30
