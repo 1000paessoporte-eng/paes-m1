@@ -66,6 +66,29 @@ AXIS_LABELS: dict[str, str] = {
 
 DIFFICULTY_LABELS = {"facil": "Fácil", "medio": "Medio", "dificil": "Difícil"}
 
+#: Cuántas UNIDADES TEMÁTICAS oficiales tiene cada eje del temario PAES 2027.
+#: De aquí sale el reparto del ensayo, y no del tamaño del banco.
+#:
+#: El temario lista para M1: Números con 3 unidades (enteros y racionales,
+#: porcentaje, potencias y raíces); Álgebra y Funciones con 6 (expresiones
+#: algebraicas, proporcionalidad, ecuaciones e inecuaciones de primer grado,
+#: sistemas 2x2, función lineal y afín, función cuadrática); Geometría con 4
+#: (figuras geométricas, cuerpos geométricos, transformaciones isométricas,
+#: semejanza); y Probabilidad y Estadística con 3 (representación de datos,
+#: medidas de posición, reglas de las probabilidades).
+#:
+#: Repartir por tamaño de banco daba Geometría 31% y Probabilidad 13%, porque
+#: "figuras geométricas" se abrió en dos nodos (Pitágoras y áreas) y en cambio
+#: un solo nodo cubre dos unidades de estadística. Contar unidades corrige las
+#: dos distorsiones y, sobre todo, deja el reparto declarado en vez de
+#: emergente: hoy da 19% / 37% / 25% / 19%.
+UNIDADES_POR_EJE: dict[str, int] = {
+    SkillAxis.NUMEROS.value: 3,
+    SkillAxis.ALGEBRA.value: 6,
+    SkillAxis.GEOMETRIA.value: 4,
+    SkillAxis.PROBABILIDAD.value: 3,
+}
+
 #: Qué subjects entran al banco de una prueba. M2 evalúa "todos los
 #: conocimientos de M1, además de" contenido propio (temario DEMRE), así que
 #: su pool incluye los nodos de M1 más los exclusivos de M2.
@@ -162,12 +185,18 @@ def duration_for(question_count: int, pace: Pace, subject: Subject = Subject.M1)
 def _select_questions(
     pool: list[Question], axes: list[str], count: int
 ) -> list[Question]:
-    """Reparte la cantidad pedida proporcionalmente entre los ejes.
+    """Reparte la cantidad pedida entre los ejes según el temario oficial.
 
     Un muestreo puramente aleatorio puede dejar un eje sin representación en
-    ensayos cortos. Aquí se reparte en proporción al tamaño del banco de cada
-    eje y recién dentro de cada eje se elige al azar, de modo que un ensayo de
-    20 preguntas siempre toca todos los ejes pedidos.
+    ensayos cortos. Aquí se reparte primero por eje y recién dentro de cada eje
+    se elige al azar, de modo que un ensayo de 20 preguntas siempre toca todos
+    los ejes pedidos.
+
+    El peso de cada eje sale de UNIDADES_POR_EJE, o sea de cuántas unidades
+    temáticas le asigna el temario. Antes salía del tamaño del banco, y eso
+    tenía dos problemas: sobrerrepresentaba Geometría (5 nodos para 4 unidades)
+    y subrepresentaba Probabilidad (2 nodos para 3 unidades), y además el
+    reparto se movía solo cada vez que el banco crecía.
     """
     available = [q for q in pool if not axes or q.skill_node.axis.value in axes]
     if len(available) <= count:
@@ -178,12 +207,18 @@ def _select_questions(
     for q in available:
         by_axis[q.skill_node.axis.value].append(q)
 
-    total = len(available)
-    quota = {axis: int(len(group) / total * count) for axis, group in by_axis.items()}
+    # Los ejes sin peso declarado (Lectora, Ciencias, Historia) se reparten
+    # parejo entre sí: su temario no se organiza por unidades comparables.
+    pesos = {axis: UNIDADES_POR_EJE.get(axis, 1) for axis in by_axis}
+    total_peso = sum(pesos.values())
+    quota = {
+        axis: min(int(pesos[axis] / total_peso * count), len(group))
+        for axis, group in by_axis.items()
+    }
     assigned = sum(quota.values())
 
-    # Las plazas sobrantes por el redondeo van a los ejes con más banco.
-    ranked = sorted(by_axis, key=lambda a: len(by_axis[a]), reverse=True)
+    # Las plazas sobrantes por el redondeo van a los ejes de mayor peso.
+    ranked = sorted(by_axis, key=lambda a: pesos[a], reverse=True)
     i = 0
     while assigned < count and ranked:
         axis = ranked[i % len(ranked)]
