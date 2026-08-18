@@ -125,17 +125,21 @@ QUESTIONS = [
     # ---------- NÚMEROS ----------
     _q(
         "num_racionales", "facil",
-        "Una persona dedica 3/4 de hora a estudiar y 1/6 de hora a ordenar. ¿Qué fracción de hora ocupó en total?",
-        "11/12",
-        "Para sumar fracciones hay que llevarlas al mismo denominador.\n\n"
-        "1) El mínimo común múltiplo de 4 y 6 es 12.\n"
-        "2) Convierte: 3/4 = 9/12 y 1/6 = 2/12.\n"
-        "3) Suma los numeradores: 9 + 2 = 11, o sea 11/12 de hora.\n"
-        "4) Control: es un poco menos de una hora completa, lo que calza.",
+        "Para sumar 3/4 y 1/6 hay que llevarlas al mismo denominador. ¿Cuál de las siguientes afirmaciones explica por qué?",
+        "Porque el denominador indica el tamaño de las partes, y solo se pueden sumar partes del mismo tamaño",
+        "Sumar fracciones es contar partes, y para contarlas juntas tienen que "
+        "ser iguales.\n\n"
+        "1) Un cuarto y un sexto son trozos de distinto tamaño: no se pueden "
+        "juntar directamente.\n"
+        "2) Al llevarlas a doceavos, 3/4 son 9 trozos y 1/6 son 2 trozos, todos "
+        "del mismo tamaño.\n"
+        "3) Recién ahí se suman: 9 + 2 = 11 trozos, o sea 11/12.\n"
+        "4) Es la misma razón por la que no se suman 3 metros con 4 pulgadas sin "
+        "convertir antes.",
         [
-            ("4/10", "Sumó numeradores por un lado y denominadores por otro, que no es cómo se suman fracciones."),
-            ("7/12", "Restó en lugar de sumar los numeradores ya convertidos."),
-            ("1/8", "Multiplicó las fracciones en vez de sumarlas."),
+            ("Porque así el resultado queda más simple", "El denominador común no simplifica: muchas veces agranda los números."),
+            ("Porque los numeradores deben ser iguales entre sí", "Los numeradores pueden ser cualquier cosa; lo que debe coincidir es el denominador."),
+            ("Porque de lo contrario el resultado sería negativo", "El signo no tiene relación con el denominador común."),
         ],
     ),
     _q(
@@ -157,19 +161,19 @@ QUESTIONS = [
     ),
     _q(
         "num_potencias_raices", "facil",
-        "Dos terrenos cuadrados tienen superficies de 144 y 25 metros cuadrados. Si se ponen uno al lado del otro, ¿cuánto suman sus lados?",
-        "17",
-        "Cada lado sale de la raíz de su propia superficie; las raíces no se "
-        "pueden sumar antes de calcularlas.\n\n"
-        "1) Lado del primero: √144 = 12 metros.\n"
-        "2) Lado del segundo: √25 = 5 metros.\n"
-        "3) Suma: 12 + 5 = 17 metros.\n"
-        "4) Ojo: √144 + √25 NO es √169. Sumar por dentro daría 13, que es otra "
-        "cosa.",
+        "¿Cuál de las siguientes igualdades es FALSA?",
+        "√(a + b) = √a + √b",
+        "La raíz se reparte en productos y cocientes, pero nunca en sumas.\n\n"
+        "1) Con a = 9 y b = 16: √25 = 5, pero √9 + √16 = 3 + 4 = 7.\n"
+        "2) En cambio √(9 · 16) = √144 = 12, y √9 · √16 = 3 · 4 = 12. Ahí sí "
+        "coincide.\n"
+        "3) Lo mismo ocurre con los cocientes: √(16/4) = 2 y √16/√4 = 2.\n"
+        "4) Repartir la raíz sobre una suma es de los errores más frecuentes del "
+        "tema, y basta un ejemplo para descartarlo.",
         [
-            ("13", "Sumó las superficies y después sacó la raíz; la raíz de una suma no es la suma de las raíces."),
-            ("169", "Sumó las superficies y entregó ese total sin sacar ninguna raíz."),
-            ("60", "Multiplicó los lados en lugar de sumarlos."),
+            ("√(a · b) = √a · √b", "Es verdadera: la raíz de un producto es el producto de las raíces."),
+            ("√(a / b) = √a / √b", "Es verdadera para b distinto de cero."),
+            ("(√a)² = a", "Es verdadera para a mayor o igual que cero: elevar al cuadrado deshace la raíz."),
         ],
     ),
     _q(
@@ -191,20 +195,19 @@ QUESTIONS = [
     ),
     _q(
         "num_potencias_raices", "dificil",
-        "Si 3^(x+1) = 81, ¿cuál es el valor de x?",
-        "3",
-        "La estrategia es escribir ambos lados de la igualdad como potencias de la "
-        "misma base.\n\n"
-        "1) Expresa 81 como potencia de 3: 3 × 3 × 3 × 3 = 81, o sea 81 = 3⁴.\n"
-        "2) La ecuación queda 3^(x+1) = 3⁴.\n"
-        "3) Si dos potencias de igual base son iguales, sus exponentes también lo son: "
-        "x + 1 = 4.\n"
-        "4) Despeja restando 1 a ambos lados: x = 3.\n\n"
-        "Verifica reemplazando: 3^(3+1) = 3⁴ = 81. Correcto.",
+        "Para resolver 3^(x+1) = 81 se escribe 81 como potencia de 3. ¿Por qué ese paso permite despejar x?",
+        "Porque con bases iguales, dos potencias son iguales solo si sus exponentes lo son",
+        "Igualar las bases convierte una ecuación exponencial en una lineal.\n\n"
+        "1) 81 = 3⁴, así que la ecuación queda 3^(x+1) = 3⁴.\n"
+        "2) Como la base 3 es la misma en ambos lados, los exponentes tienen que "
+        "coincidir: x + 1 = 4.\n"
+        "3) Despejando: x = 3.\n"
+        "4) Esa propiedad vale porque la función exponencial no repite valores: "
+        "cada resultado viene de un único exponente.",
         [
-            ("4", "Igualó x directamente al exponente de 81 = 3⁴, sin restar 1 para despejar x."),
-            ("26", "Interpretó 3^(x+1) como una multiplicación (3·(x+1)) en lugar de una potencia, y despejó 81÷3-1."),
-            ("80", "Restó 1 directamente a 81 en lugar de trabajar con los exponentes."),
+            ("Porque toda potencia de 3 es igual a 81", "Solo 3⁴ vale 81; las demás potencias de 3 dan otros números."),
+            ("Porque los exponentes siempre se pueden sumar", "Sumar exponentes es otra propiedad, y no es lo que se usa aquí."),
+            ("Porque 81 es múltiplo de 3", "Ser múltiplo no basta: 6 es múltiplo de 3 y no es una potencia de 3."),
         ],
     ),
     _q(
@@ -227,38 +230,36 @@ QUESTIONS = [
     ),
     _q(
         "num_porcentajes", "facil",
-        "Un producto cuesta $40.000 y tiene un descuento del 20%. ¿Cuál es su precio final?",
-        "$32.000",
-        "La pregunta pide el precio final, no el monto rebajado.\n\n"
-        "1) Calcula el descuento: el 20% de 40.000 es 0,20 × 40.000 = 8.000.\n"
-        "2) Réstalo del precio original: 40.000 − 8.000 = 32.000.\n\n"
-        "El camino corto es pensar en lo que queda: si te descuentan el 20%, pagas el "
-        "80%. Entonces 0,80 × 40.000 = 32.000 directamente, en un solo paso. Ese "
-        "factor 0,80 es muy útil cuando hay varios descuentos encadenados.",
+        "¿Cuál de las siguientes expresiones NO representa el precio final de un producto de $40.000 con un 20% de descuento?",
+        "40.000 − 20",
+        "Un porcentaje es una proporción, no una cantidad de pesos.\n\n"
+        "1) El 20% de 40.000 son 8.000 pesos, así que el precio final es "
+        "32.000.\n"
+        "2) 40.000 · 0,8 da directamente 32.000, porque queda por pagar el 80%.\n"
+        "3) 40.000 − 40.000 · 0,2 también da 32.000: calcula el descuento y lo "
+        "resta.\n"
+        "4) En cambio 40.000 − 20 da 39.980: resta veinte PESOS, no un veinte "
+        "por ciento.",
         [
-            ("$8.000", "Calculó solo el monto del descuento y lo entregó como si fuera el precio final."),
-            ("$48.000", "Sumó el descuento al precio original en lugar de restarlo."),
-            ("$20.000", "Calculó el 50% del precio en lugar del 20% de descuento."),
+            ("40.000 · 0,8", "Sí lo representa: paga el 80% que queda tras el descuento."),
+            ("40.000 − 40.000 · 0,2", "Sí lo representa: calcula el descuento y lo resta."),
+            ("40.000 · (1 − 20/100)", "Sí lo representa: es la forma general del descuento."),
         ],
     ),
     _q(
         "num_porcentajes", "dificil",
-        "Un artículo aumenta su precio en un 25% y luego, sobre el nuevo precio, se aplica un "
-        "descuento del 20%. Si el precio original era $10.000, ¿cuál es el precio final?",
-        "$10.000",
-        "La clave es que cada porcentaje se aplica sobre una cantidad distinta, así "
-        "que hay que resolverlos en orden y no mezclarlos.\n\n"
-        "1) Aumento del 25% sobre 10.000: el nuevo precio es 1,25 × 10.000 = 12.500.\n"
-        "2) Descuento del 20%, pero calculado sobre 12.500, no sobre el precio "
-        "original: pagas el 80%, o sea 0,80 × 12.500 = 10.000.\n\n"
-        "El resultado vuelve al valor inicial, y eso tiene explicación: "
-        "1,25 × 0,80 = 1, es decir, los dos cambios se cancelan exactamente. No es una "
-        "coincidencia del enunciado, sino que subir un 25% y luego bajar un 20% siempre "
-        "deja el precio igual, porque el 20% se descuenta de una base mayor.",
+        "Un artículo sube un 25% y luego baja un 20% sobre el nuevo precio, quedando exactamente en su valor inicial. ¿Por qué los porcentajes distintos se compensan?",
+        "Porque el 20% se calcula sobre una base mayor que el 25%",
+        "Cada porcentaje se aplica sobre un precio distinto.\n\n"
+        "1) Parte de 100. El alza del 25% lo lleva a 125.\n"
+        "2) La baja del 20% se calcula sobre 125: son 25 pesos.\n"
+        "3) El precio vuelve a 100, exactamente el original.\n"
+        "4) La clave es que 25 pesos son el 25% de 100 pero solo el 20% de 125: "
+        "el mismo monto, distinto porcentaje, porque la base cambió.",
         [
-            ("$11.250", "Promedió o restó directamente los porcentajes (25%−20%=5%) en lugar de aplicarlos de forma sucesiva sobre precios distintos."),
-            ("$12.500", "Aplicó solo el aumento del 25% y olvidó aplicar el descuento posterior."),
-            ("$8.000", "Aplicó el 20% de descuento directamente sobre el precio original, ignorando el aumento previo."),
+            ("Porque 25% y 20% son porcentajes equivalentes", "No lo son: solo coinciden en este caso por el efecto de la base."),
+            ("Porque los porcentajes siempre se compensan al subir y bajar", "Subir y bajar el MISMO porcentaje no compensa: siempre deja por debajo."),
+            ("Porque el orden de las operaciones no importa", "El orden sí importa en general; acá lo determinante es sobre qué base se calcula cada uno."),
         ],
     ),
     # ---------- ÁLGEBRA ----------
@@ -298,18 +299,18 @@ QUESTIONS = [
     ),
     _q(
         "alg_lineal", "facil",
-        "Un taxi cobra $5.000 fijos más $2.000 por kilómetro recorrido. Si un viaje costó $17.000, ¿cuántos kilómetros se recorrieron?",
-        "6",
-        "Se arma la ecuación con lo fijo y lo variable, y después se despeja.\n\n"
-        "1) Llama x a los kilómetros. El costo es 2.000x + 5.000, en pesos.\n"
-        "2) La ecuación queda 2.000x + 5.000 = 17.000, o en miles: 2x + 5 = 17.\n"
-        "3) Resta 5 a ambos lados: 2x = 12.\n"
-        "4) Divide por 2: x = 6 kilómetros.\n"
-        "5) Comprueba: 2.000 · 6 + 5.000 = 17.000.",
+        "Un servicio cobra un monto fijo F más una tarifa T por cada unidad consumida. ¿Cuál de las siguientes expresiones representa el costo total por x unidades?",
+        "T · x + F",
+        "Lo fijo se paga una vez; lo variable se multiplica por la cantidad.\n\n"
+        "1) La tarifa se cobra por cada unidad, así que aporta T · x.\n"
+        "2) El monto fijo no depende del consumo: se suma una sola vez.\n"
+        "3) El total es T · x + F.\n"
+        "4) Comprueba con F = 5.000, T = 2.000 y x = 6: 12.000 + 5.000 = "
+        "17.000.",
         [
-            ("11", "Restó los $5.000 fijos pero olvidó dividir por el precio del kilómetro."),
-            ("8,5", "Dividió los $17.000 por 2.000 sin descontar antes el cobro fijo."),
-            ("22", "Sumó el cobro fijo en lugar de restarlo antes de dividir."),
+            ("(T + F) · x", "Cobra el monto fijo por cada unidad, cuando se paga una sola vez."),
+            ("T + F · x", "Invierte los papeles: multiplica lo fijo y deja la tarifa como cargo único."),
+            ("T · x − F", "Descuenta el monto fijo en vez de cobrarlo."),
         ],
     ),
     _q(
@@ -333,17 +334,21 @@ QUESTIONS = [
     ),
     _q(
         "alg_sistemas", "medio",
-        "Dos cajas pesan juntas 10 kilos, y la más pesada supera a la otra en 4 kilos. ¿Cuánto pesa cada caja?",
-        "7 kg y 3 kg",
-        "El enunciado entrega la suma y la diferencia, que es el caso más directo.\n\n"
-        "1) Llama x a la caja pesada e y a la liviana: x + y = 10 y x − y = 4.\n"
-        "2) Suma las dos ecuaciones: 2x = 14, de donde x = 7.\n"
-        "3) Reemplaza en la primera: 7 + y = 10, así que y = 3.\n"
-        "4) Comprueba: 7 + 3 = 10 y 7 − 3 = 4.",
+        "¿Cuál de los siguientes métodos NO sirve para resolver un sistema de dos ecuaciones lineales?",
+        "Sumar los términos independientes y dividirlos por la cantidad de incógnitas",
+        "Los tres métodos válidos buscan eliminar una incógnita.\n\n"
+        "1) Sustitución: se despeja una incógnita en una ecuación y se reemplaza "
+        "en la otra.\n"
+        "2) Reducción: se suman o restan las ecuaciones para que una incógnita "
+        "se cancele.\n"
+        "3) Igualación: se despeja la misma incógnita en ambas y se igualan las "
+        "expresiones.\n"
+        "4) Promediar términos independientes no es ninguno de esos: no elimina "
+        "nada y no respeta las ecuaciones.",
         [
-            ("6 kg y 4 kg", "Suman 10 pero se diferencian en 2, no en los 4 kilos que pide el enunciado."),
-            ("5 kg y 5 kg", "Cumple la suma pero no la diferencia: dos cajas iguales no se diferencian en nada."),
-            ("14 kg y 4 kg", "Se quedó en el paso 2x = 14 sin dividir por 2."),
+            ("Sustitución", "Es un método válido: se despeja una incógnita y se reemplaza."),
+            ("Reducción", "Es válido: sumar o restar las ecuaciones cancela una incógnita."),
+            ("Igualación", "Es válido: se despeja lo mismo en ambas y se igualan."),
         ],
     ),
     _q(
@@ -364,18 +369,20 @@ QUESTIONS = [
     ),
     _q(
         "alg_cuadratica", "facil",
-        "Un mosaico cuadrado tiene un área de 16 centímetros cuadrados. ¿Cuánto mide su lado?",
-        "4 cm",
-        "El área de un cuadrado es el lado al cuadrado, y el contexto descarta la "
-        "raíz negativa.\n\n"
-        "1) Llama x al lado: x² = 16, o sea x² − 16 = 0.\n"
-        "2) Las soluciones de la ecuación son x = 4 y x = −4.\n"
-        "3) Un lado no puede medir −4 centímetros, así que se descarta.\n"
-        "4) El lado mide 4 centímetros. Comprueba: 4² = 16.",
+        "Una ecuación cuadrática que modela una situación geométrica entrega dos soluciones: una positiva y una negativa. ¿Qué hay que hacer?",
+        "Descartar la negativa, porque una longitud no puede ser negativa",
+        "La ecuación no sabe de qué trata el problema: el contexto decide qué "
+        "soluciones sirven.\n\n"
+        "1) Matemáticamente las dos son soluciones válidas de la ecuación.\n"
+        "2) Pero si x representa el lado de un cuadrado o una cantidad de "
+        "objetos, un valor negativo no tiene sentido físico.\n"
+        "3) Por eso se descarta y se responde solo con la positiva.\n"
+        "4) Ese paso de interpretación es parte de la respuesta: omitirlo es un "
+        "error frecuente en las pruebas.",
         [
-            ("8 cm", "Dividió el área por 2 en lugar de sacarle raíz cuadrada."),
-            ("16 cm", "Entregó el área como si fuera la medida del lado."),
-            ("4 cm y −4 cm", "Las dos resuelven la ecuación, pero una longitud negativa no tiene sentido y hay que descartarla."),
+            ("Entregar ambas como respuesta", "Una longitud negativa no representa nada en el problema."),
+            ("Descartar la positiva y quedarse con la negativa", "Es al revés: la que tiene sentido es la positiva."),
+            ("Concluir que el problema no tiene solución", "Sí la tiene: es la raíz positiva."),
         ],
     ),
     _q(
@@ -415,38 +422,37 @@ QUESTIONS = [
     ),
     _q(
         "alg_funciones", "facil",
-        "La trayectoria de un salto se modela con y = x² − 6x + 8. ¿Cuál es el eje de simetría de esa parábola?",
-        "x = 3",
-        "El eje de simetría pasa por el vértice y es una recta vertical.\n\n"
-        "1) Su ecuación es x = −b/(2a).\n"
-        "2) Con a = 1 y b = −6: x = −(−6)/(2 · 1) = 3.\n"
-        "3) El eje de simetría es la recta x = 3.\n"
-        "4) Compruébalo: la parábola corta el eje X en 2 y en 4, y el 3 está justo "
-        "al medio.",
+        "En una parábola que abre hacia arriba, ¿qué representa el vértice?",
+        "El punto más bajo de la curva",
+        "El vértice es el punto de giro de la parábola.\n\n"
+        "1) Si abre hacia arriba, la curva baja hasta el vértice y después "
+        "sube: ahí está su valor mínimo.\n"
+        "2) Si abriera hacia abajo, el vértice sería el punto más alto, o sea el "
+        "máximo.\n"
+        "3) El signo del coeficiente de x² decide hacia dónde abre: positivo "
+        "hacia arriba, negativo hacia abajo.\n"
+        "4) Por eso en problemas de costo mínimo o altura máxima, la respuesta "
+        "casi siempre está en el vértice.",
         [
-            ("x = −3", "Perdió el signo: −b con b = −6 da +6, no −6."),
-            ("x = 6", "Usó b directamente sin dividir por 2a."),
-            ("x = 8", "Tomó el término independiente, que no interviene en el eje de simetría."),
+            ("El punto donde la curva corta el eje Y", "Ese es el intercepto, que se obtiene evaluando en x = 0."),
+            ("El punto donde la curva corta el eje X", "Esos son los ceros de la función, y pueden ser dos, uno o ninguno."),
+            ("El punto más alto de la curva", "Eso ocurre solo si la parábola abre hacia abajo."),
         ],
     ),
     _q(
         "alg_funciones", "facil",
-        "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 2) y (4, 11)?",
-        "3",
-        "La pendiente mide cuánto sube la recta por cada unidad que avanza hacia la "
-        "derecha: m = (y₂ − y₁) / (x₂ − x₁).\n\n"
-        "1) Toma los puntos en un orden y respétalo: (x₁, y₁) = (1, 2) y "
-        "(x₂, y₂) = (4, 11).\n"
-        "2) Calcula la variación vertical: 11 − 2 = 9.\n"
-        "3) Calcula la variación horizontal: 4 − 1 = 3.\n"
-        "4) Divide: m = 9 / 3 = 3.\n\n"
-        "La pendiente 3 significa que por cada unidad que avanzas en x, la recta sube "
-        "3 unidades en y. Si tomas los puntos en el orden inverso el resultado no "
-        "cambia, siempre que inviertas ambas restas: (2 − 11)/(1 − 4) = −9/−3 = 3.",
+        "¿Qué indica que la pendiente de una recta sea negativa?",
+        "Que al aumentar x, el valor de y disminuye",
+        "La pendiente mide cuánto cambia y por cada unidad que avanza x.\n\n"
+        "1) Si es positiva, y sube cuando x sube: la recta va hacia arriba.\n"
+        "2) Si es negativa, y baja cuando x sube: la recta va hacia abajo.\n"
+        "3) Si es cero, y no cambia: la recta es horizontal.\n"
+        "4) En un modelo de costos, una pendiente negativa podría representar un "
+        "descuento que crece con la cantidad comprada.",
         [
-            ("1/3", "Invirtió la fórmula de la pendiente, calculando Δx/Δy en lugar de Δy/Δx."),
-            ("9", "Calculó solo la diferencia de las coordenadas y (11−2) sin dividir por la diferencia de las coordenadas x."),
-            ("−3", "Calculó el valor correcto de la pendiente pero con el signo invertido, al restar las coordenadas en orden inconsistente."),
+            ("Que la recta no corta el eje Y", "Toda recta no vertical corta el eje Y, sea cual sea su pendiente."),
+            ("Que los valores de y son siempre negativos", "y = −x + 100 tiene pendiente negativa y valores positivos para x pequeños."),
+            ("Que la recta es horizontal", "Una recta horizontal tiene pendiente cero, no negativa."),
         ],
     ),
     _q(
@@ -606,57 +612,57 @@ QUESTIONS = [
     # ---------- PROBABILIDAD ----------
     _q(
         "prob_estadistica_desc", "facil",
-        "¿Cuál es la media (promedio) de los datos: 4, 8, 6, 10, 2?",
-        "6",
-        "La media se obtiene sumando todos los datos y dividiendo por cuántos "
-        "son.\n\n"
-        "1) Suma los valores: 4 + 8 + 6 + 10 + 2 = 30.\n"
-        "2) Cuenta los datos: son 5.\n"
-        "3) Divide: 30 ÷ 5 = 6.\n\n"
-        "Un control útil: la media siempre queda entre el menor y el mayor de los "
-        "datos. Aquí el mínimo es 2 y el máximo 10, y 6 cae dentro de ese rango.",
+        "A un conjunto de datos se le agrega un valor igual a su promedio. ¿Qué ocurre con el promedio?",
+        "No cambia",
+        "El promedio se mueve solo si el dato nuevo lo desequilibra.\n\n"
+        "1) Con 4, 8, 6, 10 y 2 el promedio es 30 ÷ 5 = 6.\n"
+        "2) Al agregar un 6, la suma pasa a 36 y hay 6 datos: 36 ÷ 6 = 6.\n"
+        "3) El promedio queda igual, porque el dato nuevo aporta exactamente la "
+        "parte que le corresponde.\n"
+        "4) Regla general: un dato mayor que el promedio lo sube, uno menor lo "
+        "baja, y uno igual lo deja quieto.",
         [
-            ("8", "Identificó el valor máximo del conjunto en lugar de calcular el promedio."),
-            ("30", "Entregó la suma total de los datos sin dividir por la cantidad de datos."),
-            ("5", "Dividió la suma (30) entre una cantidad de datos incorrecta (6 en lugar de 5)."),
+            ("Aumenta", "Solo aumentaría si el dato agregado fuera mayor que el promedio."),
+            ("Disminuye", "Solo bajaría si el dato agregado fuera menor que el promedio."),
+            ("Se divide por 2", "Agregar un dato no parte el promedio a la mitad."),
         ],
     ),
     _q(
         "prob_estadistica_desc", "medio",
-        "¿Cuál es la mediana del conjunto de datos: 7, 3, 9, 3, 12, 5?",
-        "6",
-        "La mediana es el valor del centro una vez ordenados los datos, así que el "
-        "primer paso es siempre ordenar.\n\n"
-        "1) Ordena de menor a mayor: 3, 3, 5, 7, 9, 12.\n"
-        "2) Cuenta cuántos son: 6 datos, una cantidad par. Cuando la cantidad es par no "
-        "hay un único valor central, sino dos.\n"
-        "3) Identifica los dos del medio, en las posiciones tercera y cuarta: 5 y 7.\n"
-        "4) Promédialos: (5 + 7) ÷ 2 = 6.\n\n"
-        "Nota que la mediana puede ser un número que no aparece en el conjunto, como "
-        "ocurre aquí. Si la cantidad de datos fuera impar, bastaría con tomar el valor "
-        "del centro sin promediar.",
+        "¿Cuál de las siguientes afirmaciones distingue correctamente la media de la mediana?",
+        "La media usa el valor de todos los datos; la mediana solo su posición en el orden",
+        "Cada medida se calcula de forma distinta y por eso reacciona distinto.\n\n"
+        "1) La media suma todos los datos, así que un valor muy grande la "
+        "arrastra hacia arriba.\n"
+        "2) La mediana solo mira quién queda al centro una vez ordenados: "
+        "cambiar el dato más grande por uno todavía mayor no la mueve.\n"
+        "3) Comprueba con 1, 2, 3, 4 y 5: media 3 y mediana 3. Ahora cambia el 5 "
+        "por 100: la media salta a 22 y la mediana sigue siendo 3.\n"
+        "4) Por eso la mediana se prefiere cuando hay valores extremos.",
         [
-            ("5", "Ordenó los datos correctamente pero eligió el menor de los dos valores centrales en lugar de promediarlos."),
-            ("7", "Ordenó los datos correctamente pero eligió el mayor de los dos valores centrales en lugar de promediarlos."),
-            ("3", "Confundió la mediana con la moda (el valor que más se repite en el conjunto)."),
+            ("La media siempre es mayor que la mediana", "En 1, 2, 3, 4 y 5 ambas valen 3; y con datos sesgados hacia abajo la media es menor."),
+            ("La mediana usa el valor de todos los datos y la media solo algunos", "Está invertido: es la media la que suma todos los valores."),
+            ("Ambas dan siempre el mismo resultado", "El ejemplo con el 100 muestra que pueden separarse muchísimo."),
         ],
     ),
     _q(
         "prob_estadistica_desc", "dificil",
-        "¿Cuál es el rango del siguiente conjunto de datos: 12, 5, 9, 20, 7?",
-        "15",
-        "El rango es una medida de dispersión: indica cuánto se separan los datos "
-        "extremos entre sí.\n\n"
-        "1) Identifica el valor máximo: 20.\n"
-        "2) Identifica el valor mínimo: 5.\n"
-        "3) Réstalos: 20 − 5 = 15.\n\n"
-        "El rango es un solo número, no un par de valores, y no dice nada sobre cómo "
-        "se distribuyen los datos intermedios: dos conjuntos muy distintos pueden "
-        "tener el mismo rango si comparten sus extremos.",
+        "Dos conjuntos de datos tienen la misma media y la misma mediana, pero rangos muy distintos. ¿Qué se puede concluir?",
+        "Uno tiene los datos más dispersos que el otro, aunque se centren en el mismo valor",
+        "Las medidas de posición y las de dispersión describen cosas "
+        "distintas.\n\n"
+        "1) Media y mediana iguales significan que ambos conjuntos se centran en "
+        "el mismo lugar.\n"
+        "2) Un rango mayor significa más distancia entre el dato mínimo y el "
+        "máximo: los datos están más desparramados.\n"
+        "3) Comprueba: 9, 10 y 11 tiene media y mediana 10 con rango 2. Y 1, 10 "
+        "y 19 también tiene media y mediana 10, pero rango 18.\n"
+        "4) Por eso un resumen con solo el promedio puede esconder situaciones "
+        "muy diferentes.",
         [
-            ("20", "Entregó el valor máximo del conjunto en lugar de calcular la diferencia entre el máximo y el mínimo."),
-            ("5", "Entregó el valor mínimo del conjunto en lugar de calcular el rango."),
-            ("10,6", "Calculó el promedio de los datos en lugar del rango."),
+            ("Uno de los dos tiene más datos que el otro", "El rango no dice nada sobre cuántos datos hay."),
+            ("Los dos conjuntos son idénticos", "Con rangos distintos no pueden serlo."),
+            ("El de mayor rango tiene mayor promedio", "El enunciado dice que las medias coinciden."),
         ],
     ),
     _q(
@@ -700,188 +706,179 @@ QUESTIONS = [
     ),
     _q(
         "prob_reglas", "facil",
-        "Al lanzar un dado de 6 caras, ¿cuál es la probabilidad de obtener un número mayor que 4?",
-        "1/3",
-        "La probabilidad de un evento es casos favorables dividido por casos "
-        "posibles.\n\n"
-        "1) Casos posibles: el dado tiene 6 caras, así que son 6.\n"
-        "2) Casos favorables: los números mayores que 4 son el 5 y el 6. El 4 no "
-        "cuenta, porque \"mayor que 4\" excluye al propio 4. Son 2 casos.\n"
-        "3) Divide: 2/6.\n"
-        "4) Simplifica dividiendo ambos por 2: 1/3.\n\n"
-        "Presta atención a esa distinción de lenguaje: si el enunciado dijera \"mayor o "
-        "igual que 4\", los casos favorables serían tres (4, 5 y 6) y la respuesta "
-        "cambiaría a 1/2.",
+        "¿Cuál de las siguientes afirmaciones sobre la probabilidad de un evento es siempre verdadera?",
+        "Está entre 0 y 1, ambos incluidos",
+        "La probabilidad es una proporción de casos favorables sobre el "
+        "total.\n\n"
+        "1) Los casos favorables nunca pueden ser más que los totales, así que "
+        "la fracción no supera 1.\n"
+        "2) Tampoco pueden ser negativos, así que no baja de 0.\n"
+        "3) El 0 corresponde a un evento imposible y el 1 a uno seguro.\n"
+        "4) Cualquier resultado fuera de ese rango delata un error de cálculo, y "
+        "es el primer control que conviene hacer.",
         [
-            ("2/3", "Contó como casos favorables los números menores o iguales a 4, en lugar de los mayores a 4."),
-            ("1/6", "Consideró solo un caso favorable (por ejemplo, únicamente el 6) en lugar de los dos válidos (5 y 6)."),
-            ("4/6", "Interpretó 'mayor que 4' como 'mayor o igual que 4', incluyendo el 4 como caso favorable."),
+            ("Es siempre mayor que 0", "Un evento imposible tiene probabilidad exactamente 0."),
+            ("Es siempre menor que 1", "Un evento seguro tiene probabilidad exactamente 1."),
+            ("Puede ser mayor que 1 si hay muchos casos favorables", "Los favorables son un subconjunto de los totales: la fracción nunca supera 1."),
         ],
     ),
     _q(
         "prob_reglas", "medio",
-        "En una bolsa hay 5 bolitas rojas y 3 azules. Si se saca una al azar, "
-        "¿cuál es la probabilidad de que sea azul?",
-        "3/8",
-        "De nuevo, casos favorables sobre casos posibles, cuidando qué va en cada "
-        "lugar.\n\n"
-        "1) Casos favorables: las bolitas azules son 3.\n"
-        "2) Casos posibles: el total de bolitas en la bolsa, sumando ambos colores, "
-        "5 + 3 = 8.\n"
-        "3) La probabilidad es 3/8, que no se puede simplificar.\n\n"
-        "El denominador es siempre el total de resultados posibles, nunca la cantidad "
-        "del otro color. Como comprobación, la probabilidad de sacar roja es 5/8, y "
-        "ambas suman 3/8 + 5/8 = 1, tal como debe ser cuando se cubren todos los "
-        "casos.",
+        "En una bolsa hay bolitas rojas y azules. Se saca una, se anota el color y se DEVUELVE a la bolsa antes de sacar la siguiente. ¿Qué efecto tiene devolverla?",
+        "Las extracciones quedan independientes: la probabilidad es la misma en cada una",
+        "Devolver la bolita deja la bolsa exactamente como estaba.\n\n"
+        "1) Con reposición, el total y la composición no cambian entre una "
+        "extracción y la siguiente.\n"
+        "2) Por eso cada extracción tiene la misma probabilidad, sin importar lo "
+        "que salió antes.\n"
+        "3) Sin reposición, en cambio, la segunda extracción ocurre sobre una "
+        "bolsa distinta y las probabilidades cambian.\n"
+        "4) Esa diferencia es la que decide si se multiplican probabilidades "
+        "iguales o probabilidades ajustadas.",
         [
-            ("5/8", "Calculó la probabilidad de sacar una bolita roja en lugar de una azul."),
-            ("3/5", "Comparó la cantidad de bolitas azules con la de rojas, en lugar de con el total de bolitas."),
-            ("1/3", "Calculó la probabilidad como 1 dividido en el número de colores distintos, ignorando cuántas bolitas hay de cada color."),
+            ("La probabilidad de la segunda extracción disminuye", "Eso pasa sin reposición; al devolver la bolita la probabilidad se mantiene."),
+            ("La probabilidad de la segunda extracción aumenta", "Devolver la bolita no favorece ningún color."),
+            ("No se puede calcular la probabilidad de la segunda", "Justamente al devolverla el cálculo es el más simple posible."),
         ],
     ),
     _q(
         "prob_reglas", "dificil",
-        "Se lanzan dos monedas al mismo tiempo. ¿Cuál es la probabilidad de obtener al menos una cara?",
-        "3/4",
-        "Con dos monedas hay que considerar el espacio muestral completo, tratando "
-        "cada moneda por separado.\n\n"
-        "1) Los resultados posibles son cuatro: cara-cara, cara-sello, sello-cara y "
-        "sello-sello. Cara-sello y sello-cara cuentan como casos distintos porque las "
-        "monedas son independientes entre sí.\n"
-        "2) \"Al menos una cara\" significa una o dos caras, así que sirven los tres "
-        "primeros resultados: 3 casos favorables de 4.\n"
-        "3) La probabilidad es 3/4.\n\n"
-        "El camino más rápido es por el complemento: lo contrario de \"al menos una "
-        "cara\" es \"ninguna cara\", que ocurre solo en sello-sello, con probabilidad "
-        "1/4. Entonces 1 − 1/4 = 3/4. Ese truco ahorra mucho trabajo cuando hay más "
-        "monedas.",
+        "Al lanzar dos monedas, un estudiante afirma que hay tres resultados posibles —dos caras, dos sellos, o una de cada una— y que cada uno tiene probabilidad 1/3. ¿Qué error cometió?",
+        "Los tres casos no son igualmente probables: 'una de cada una' ocurre de dos formas distintas",
+        "Contar resultados no basta: hay que contar casos equiprobables.\n\n"
+        "1) Los resultados equiprobables son cuatro: cara-cara, cara-sello, "
+        "sello-cara y sello-sello.\n"
+        "2) 'Una de cada una' agrupa DOS de esos cuatro, así que su probabilidad "
+        "es 2/4 = 1/2.\n"
+        "3) Dos caras y dos sellos tienen 1/4 cada uno.\n"
+        "4) Distinguir las monedas —aunque en la práctica sean iguales— es lo "
+        "que permite contar bien.",
         [
-            ("1/2", "Consideró solo dos resultados posibles (cara o sello) en lugar de los cuatro del espacio muestral conjunto (CC, CS, SC, SS)."),
-            ("1/4", "Calculó la probabilidad de obtener exactamente dos caras (CC) en lugar de 'al menos una'."),
-            ("1", "Asumió que obtener al menos una cara es un evento seguro al lanzar dos monedas."),
+            ("Debía considerar solo dos resultados posibles", "Hay cuatro casos equiprobables al distinguir las dos monedas."),
+            ("Las monedas no son equiprobables entre sí", "Cada moneda sí es equiprobable; el problema es cómo agrupó los resultados."),
+            ("No hay error: cada caso tiene probabilidad 1/3", "Al lanzar muchas veces, 'una de cada una' sale cerca de la mitad de las veces, no un tercio."),
         ],
     ),
     # ---------- LOTE 2 (30 preguntas más, agosto 2026) ----------
     # ---------- NÚMEROS ----------
     _q(
         "num_racionales", "facil",
-        "De un terreno, 2/5 está cultivado, y de esa parte cultivada 3/4 tiene maíz. ¿Qué fracción del terreno total tiene maíz?",
-        "3/10",
-        "Una fracción DE otra fracción se obtiene multiplicando.\n\n"
-        "1) Se calcula 3/4 de 2/5, o sea (2/5) · (3/4).\n"
-        "2) Multiplica numeradores y denominadores: 6/20.\n"
-        "3) Simplifica por 2: 3/10 del terreno total.\n"
-        "4) Control: debe ser menos que 2/5, porque es solo una parte de lo "
-        "cultivado, y 3/10 es menor que 4/10.",
+        "En un problema aparece la frase: 'de los 2/5 del terreno que están cultivados, 3/4 tiene maíz'. ¿Qué operación corresponde para saber qué parte del terreno total tiene maíz?",
+        "Multiplicar las dos fracciones",
+        "La palabra 'de' entre dos fracciones siempre indica multiplicación.\n\n"
+        "1) Se busca 3/4 DE 2/5, y eso se calcula multiplicando.\n"
+        "2) El resultado es 6/20 = 3/10 del terreno total.\n"
+        "3) Control de sentido: la parte con maíz tiene que ser MENOR que la "
+        "parte cultivada, y 3/10 es menor que 2/5 = 4/10.\n"
+        "4) Sumar daría más que el terreno cultivado, lo que es imposible.",
         [
-            ("23/20", "Sumó las fracciones en lugar de multiplicarlas; el resultado ni siquiera puede superar el terreno completo."),
-            ("6/5", "Multiplicó mal los denominadores y obtuvo más que el terreno entero."),
-            ("8/15", "Multiplicó en cruz, como si fuera una división."),
+            ("Sumar las dos fracciones", "La suma daría 23/20, más que el terreno completo."),
+            ("Restar la segunda de la primera", "Restar daría la parte cultivada SIN maíz, no la que tiene maíz."),
+            ("Dividir la primera por la segunda", "Dividir por una fracción menor que 1 agranda el resultado, y aquí debe achicarse."),
         ],
     ),
     _q(
         "num_racionales", "dificil",
-        "Un depósito parte con 5/6 de su capacidad, se consume 1/3 y después se agrega 1/4. ¿Con qué fracción de su capacidad queda?",
-        "3/4",
-        "Las operaciones se resuelven en el orden en que aparecen, de izquierda a "
-        "derecha.\n\n"
-        "1) El mínimo común múltiplo de 6, 3 y 4 es 12.\n"
-        "2) Convierte: 5/6 = 10/12, 1/3 = 4/12 y 1/4 = 3/12.\n"
-        "3) Opera en orden: 10 − 4 + 3 = 9, o sea 9/12.\n"
-        "4) Simplifica por 3: 3/4 de la capacidad.\n"
-        "5) Ojo con agrupar la suma primero: restar 1/3 + 1/4 de una vez daría "
-        "1/4, que es otro resultado.",
+        "Al calcular 5/6 − 1/3 + 1/4, un estudiante agrupa primero la suma y calcula 5/6 − (1/3 + 1/4). ¿Es correcto ese procedimiento?",
+        "No: la resta y la suma tienen la misma prioridad y se resuelven de izquierda a derecha",
+        "Agrupar cambia el resultado cuando hay una resta de por medio.\n\n"
+        "1) De izquierda a derecha: 10/12 − 4/12 + 3/12 = 9/12 = 3/4.\n"
+        "2) Agrupando la suma: 10/12 − 7/12 = 3/12 = 1/4.\n"
+        "3) Los resultados son distintos, así que el orden importa.\n"
+        "4) Poner un paréntesis donde no estaba equivale a cambiarle el signo al "
+        "último término: es el mismo error que restar mal un paréntesis en "
+        "álgebra.",
         [
-            ("1/4", "Agrupó la suma antes de la resta, cuando ambas tienen la misma prioridad y van de izquierda a derecha."),
-            ("17/12", "Sumó los tres términos ignorando el signo menos del consumo."),
-            ("5/6", "Convirtió mal 1/4 a doceavos y las operaciones se le anularon."),
+            ("Sí: la suma siempre se resuelve antes que la resta", "No hay tal jerarquía: ambas tienen la misma prioridad."),
+            ("Sí, porque agrupar no cambia el resultado", "Da 1/4 en vez de 3/4: sí lo cambia."),
+            ("No: primero hay que simplificar cada fracción por separado", "Las fracciones ya están simplificadas; el problema es el orden de las operaciones."),
         ],
     ),
     _q(
         "num_potencias_raices", "facil",
-        "Una bacteria se multiplica por 5 cada hora. Si en las primeras 2 horas creció 5² veces y en las 3 horas siguientes 5³ veces, ¿por cuánto se multiplicó en total en las 5 horas?",
-        "3.125",
-        "Al multiplicar potencias de igual base, los exponentes se suman.\n\n"
-        "1) El crecimiento total es 5² · 5³.\n"
-        "2) Misma base, así que se suman los exponentes: 5²⁺³ = 5⁵.\n"
-        "3) Calculando: 5⁵ = 3.125.\n"
-        "4) Tiene sentido: 5 horas multiplicando por 5 cada una es 5 elevado a 5.",
+        "Al calcular 5² · 5³, un estudiante responde 25⁵. ¿Qué error cometió?",
+        "Multiplicó las bases: al multiplicar potencias de igual base, la base se conserva",
+        "La regla suma los exponentes y deja la base intacta.\n\n"
+        "1) 5² · 5³ significa (5 · 5) · (5 · 5 · 5), o sea cinco factores de "
+        "5.\n"
+        "2) Eso es 5⁵ = 3.125, no 25⁵.\n"
+        "3) El estudiante acertó en sumar los exponentes: ese paso estaba bien.\n"
+        "4) Control rápido: 25⁵ vale más de nueve millones, muy lejos de "
+        "multiplicar 25 por 125.",
         [
-            ("25", "Se quedó solo con 5², el crecimiento de las dos primeras horas."),
-            ("15.625", "Multiplicó los exponentes en lugar de sumarlos, llegando a 5⁶."),
-            ("150", "Multiplicó las bases entre sí y los exponentes por separado, que no es una propiedad válida."),
+            ("Sumó los exponentes cuando debía multiplicarlos", "Sumarlos es correcto; multiplicarlos corresponde a elevar una potencia a otra."),
+            ("Debía restar los exponentes", "Restar corresponde a la división de potencias de igual base."),
+            ("No hay error: 5² · 5³ es 25⁵", "5² · 5³ da 3.125 y 25⁵ da 9.765.625."),
         ],
     ),
     _q(
         "num_potencias_raices", "dificil",
-        "Si 2^(2x) = 64, ¿cuál es el valor de x?",
-        "3",
-        "Igual que antes, se escriben ambos lados como potencias de la misma "
-        "base y se igualan los exponentes.\n\n"
-        "1) Expresa 64 como potencia de 2: 2×2×2×2×2×2 = 64, o sea 64 = 2⁶.\n"
-        "2) La ecuación queda 2^(2x) = 2⁶.\n"
-        "3) Si las bases son iguales, los exponentes también lo son: 2x = 6.\n"
-        "4) Despeja dividiendo por 2: x = 3.\n\n"
-        "Verifica reemplazando: 2^(2×3) = 2⁶ = 64. Correcto.",
+        "Una población se duplica cada hora. ¿Cuál de las siguientes expresiones permite encontrar cuántas horas h han pasado si la población es 64 veces la inicial?",
+        "2ʰ = 64",
+        "Modelar es escribir la ecuación antes de resolverla.\n\n"
+        "1) Duplicarse cada hora significa que tras h horas el factor de "
+        "crecimiento es 2ʰ.\n"
+        "2) Si ese factor vale 64, la ecuación es 2ʰ = 64.\n"
+        "3) Como 64 = 2⁶, resulta h = 6 horas.\n"
+        "4) Comprueba la progresión: 2, 4, 8, 16, 32 y 64.",
         [
-            ("6", "Igualó x directamente a 6 (el exponente de 64=2⁶), sin dividir por 2 para despejar x."),
-            ("12", "Multiplicó 2x=6 por 2 en lugar de dividir, al despejar x."),
-            ("2,5", "Confundió 64 con 2⁵ al contar mal las potencias de 2 (2,4,8,16,32,64 corresponden a 2¹...2⁶, no hasta 2⁵), y despejó 2x=5."),
+            ("2h = 64", "Ese modelo suma 2 por hora en vez de duplicar: daría 32 horas."),
+            ("h² = 64", "Ahí la base sería el tiempo, cuando lo que se repite es el factor 2."),
+            ("64ʰ = 2", "Invierte los papeles de la base y del resultado."),
         ],
     ),
     _q(
         "num_porcentajes", "medio",
-        "El precio de una entrada al cine subió de $6.000 a $7.500. ¿Cuál fue el porcentaje de aumento?",
-        "25%",
-        "El porcentaje de variación siempre se calcula sobre el valor original, "
-        "no sobre el nuevo.\n\n"
-        "1) Calcula cuánto aumentó en pesos: 7.500 − 6.000 = 1.500.\n"
-        "2) Divide ese aumento por el precio ORIGINAL: 1.500 ÷ 6.000 = 0,25.\n"
-        "3) Exprésalo como porcentaje: 0,25 = 25%.\n\n"
-        "Un error común es dividir por el precio nuevo en lugar del original: "
-        "eso responde una pregunta distinta (\"qué porcentaje del precio nuevo "
-        "es el aumento\"), no el porcentaje de aumento respecto al original.",
+        "Un precio sube de un valor inicial I a un valor final F. ¿Cuál de las siguientes expresiones representa el porcentaje de aumento?",
+        "((F − I) / I) · 100",
+        "El aumento se mide siempre respecto del valor INICIAL.\n\n"
+        "1) El aumento en pesos es F − I.\n"
+        "2) Para saber qué proporción representa, se divide por el valor de "
+        "partida: (F − I)/I.\n"
+        "3) Multiplicando por 100 queda en porcentaje.\n"
+        "4) Comprueba con 6.000 y 7.500: (1.500/6.000) · 100 = 25%.\n"
+        "5) Dividir por F en vez de por I es el error más común: daría 20%, que "
+        "es el porcentaje de BAJA para volver de 7.500 a 6.000.",
         [
-            ("20%", "Calculó el aumento (1.500) sobre el precio nuevo (7.500) en lugar de sobre el precio original."),
-            ("$1.500", "Entregó el aumento en pesos en lugar del porcentaje que representa."),
-            ("125%", "Calculó que el precio nuevo es el 125% del original (7.500÷6.000=1,25), pero confundió ese 125% con el porcentaje de AUMENTO, que es solo la parte que excede el 100% (o sea, 25%)."),
+            ("((F − I) / F) · 100", "Divide por el valor final: eso da el porcentaje de baja para volver al inicial."),
+            ("(F / I) · 100", "Entrega el precio final como porcentaje del inicial, o sea 125% y no 25%."),
+            ("(F − I) · 100", "Deja el aumento en pesos multiplicado por 100, sin compararlo con nada."),
         ],
     ),
     _q(
         "num_porcentajes", "dificil",
-        "Después de aplicar un descuento del 30%, un producto cuesta $21.000. ¿Cuál era su precio original?",
-        "$30.000",
-        "Cuando se conoce el precio FINAL y el porcentaje de descuento, hay que "
-        "despejar el precio original desde una ecuación, no aplicar el "
-        "porcentaje directamente sobre el precio final.\n\n"
-        "1) Si se descuenta un 30%, el precio final corresponde al 70% del "
-        "original: precio final = 0,70 × precio original.\n"
-        "2) Reemplaza el dato conocido: 21.000 = 0,70 × precio original.\n"
-        "3) Despeja dividiendo: precio original = 21.000 ÷ 0,70 = 30.000.\n\n"
-        "Verifica: el 30% de 30.000 es 9.000, y 30.000 − 9.000 = 21.000. "
-        "Coincide con el precio final del enunciado.",
+        "Un producto con un 30% de descuento cuesta $21.000. Un estudiante calcula el precio original sumándole el 30% a $21.000 y obtiene $27.300. ¿Qué error cometió?",
+        "Aplicó el 30% sobre el precio rebajado, cuando el descuento se calculó sobre el original",
+        "El porcentaje siempre se refiere a la base desde la que se calculó.\n\n"
+        "1) Los $21.000 corresponden al 70% del precio original.\n"
+        "2) El original es 21.000 ÷ 0,7 = $30.000.\n"
+        "3) Comprueba: el 30% de 30.000 son 9.000, y 30.000 − 9.000 = 21.000.\n"
+        "4) Sumar el 30% a los 21.000 da 27.300, que no cumple la condición: el "
+        "30% de 27.300 son 8.190 y quedaría en 19.110.",
         [
-            ("$27.300", "Sumó el 30% del precio FINAL (21.000) al propio precio final, en lugar de despejar el original desde la ecuación del descuento."),
-            ("$70.000", "Dividió por 0,3 (el porcentaje descontado) en lugar de por 0,7 (el porcentaje que efectivamente se paga)."),
-            ("$24.150", "Aumentó el precio final en un 15%, la mitad del descuento real, en un intento incorrecto de revertirlo."),
+            ("Debía restar el 30% en lugar de sumarlo", "Restar alejaría todavía más: el precio original es MAYOR que el rebajado."),
+            ("Se equivocó al calcular el 30% de 21.000", "El 30% de 21.000 sí son 6.300; el problema es sobre qué base lo aplicó."),
+            ("No hay error: el precio original es $27.300", "Aplicándole un 30% de descuento a 27.300 se llega a 19.110, no a 21.000."),
         ],
     ),
     # ---------- ÁLGEBRA ----------
     _q(
         "alg_expresiones", "facil",
-        "Reduce la expresión: 4a − 2b + 3a + 5b",
-        "7a + 3b",
-        "Se agrupan por separado los términos que tienen la misma parte "
-        "literal.\n\n"
-        "1) Agrupa los términos con a: 4a + 3a = 7a.\n"
-        "2) Agrupa los términos con b: −2b + 5b = 3b.\n"
-        "3) Junta ambos resultados: 7a + 3b.\n\n"
-        "Los términos en a y en b no se pueden combinar entre sí, porque tienen "
-        "distinta parte literal.",
+        "¿Cuál de las siguientes expresiones NO se puede reducir a un solo término?",
+        "4a + 3b",
+        "Solo se juntan términos con exactamente la misma parte literal.\n\n"
+        "1) 4a y 3b tienen letras distintas: no son semejantes y la expresión "
+        "queda como está.\n"
+        "2) 4a + 3a sí se reduce a 7a, porque comparten la letra y el "
+        "exponente.\n"
+        "3) 5b − 2b se reduce a 3b por lo mismo.\n"
+        "4) Y 2x + 5x da 7x.\n"
+        "5) El error clásico es escribir 4a + 3b = 7ab: eso multiplicaría las "
+        "letras, que no es lo que hace una suma.",
         [
-            ("7a − 3b", "Restó los coeficientes de b en lugar de sumarlos (calculó −2−5 en vez de −2+5)."),
-            ("a + 3b", "Restó los coeficientes de a en lugar de sumarlos (4−3 en vez de 4+3)."),
-            ("7ab", "Multiplicó los términos en a y en b entre sí, en lugar de tratarlos como términos independientes que solo se suman."),
+            ("4a + 3a", "Comparten la parte literal: se reduce a 7a."),
+            ("5b − 2b", "Comparten la parte literal: se reduce a 3b."),
+            ("2x + 5x", "Comparten la parte literal: se reduce a 7x."),
         ],
     ),
     _q(
@@ -938,19 +935,20 @@ QUESTIONS = [
     ),
     _q(
         "alg_sistemas", "facil",
-        "Resuelve el sistema: x = y + 2 ; x + y = 10",
-        "x = 6, y = 4",
-        "Como la primera ecuación ya tiene x despejada, conviene sustituirla "
-        "directamente en la segunda.\n\n"
-        "1) Reemplaza x por (y + 2) en la segunda ecuación: (y + 2) + y = 10.\n"
-        "2) Reduce los términos semejantes: 2y + 2 = 10.\n"
-        "3) Resta 2 y luego divide por 2: 2y = 8, entonces y = 4.\n"
-        "4) Reemplaza en la primera ecuación: x = 4 + 2 = 6.\n\n"
-        "Verifica en la segunda ecuación original: 6 + 4 = 10. Se cumple.",
+        "En el sistema x = y + 2 junto con x + y = 10, ¿cuál es el método más directo para resolverlo?",
+        "Sustitución, porque una incógnita ya está despejada",
+        "Conviene elegir el método según cómo vienen escritas las "
+        "ecuaciones.\n\n"
+        "1) La primera ecuación ya entrega x en función de y: x = y + 2.\n"
+        "2) Reemplazando en la segunda: (y + 2) + y = 10, o sea 2y = 8 e "
+        "y = 4.\n"
+        "3) Entonces x = 6.\n"
+        "4) Reducción también funcionaría, pero exigiría reordenar la primera "
+        "ecuación antes: sustituir es el camino más corto acá.",
         [
-            ("x = 4, y = 6", "Invirtió la relación x=y+2, usándola como y=x+2, lo que intercambia los valores finales de x e y."),
-            ("x = 10, y = 8", "Despejó 2y=8 pero olvidó dividir entre 2, dejando y=8 en lugar de 4, y arrastró ese error a x."),
-            ("x = 8, y = 6", "Al despejar 2y+2=10, sumó el 2 en lugar de restarlo (2y=12 en vez de 8)."),
+            ("Reducción, sumando ambas ecuaciones tal como están", "La primera no está ordenada: habría que reescribirla antes."),
+            ("Igualación, despejando y en ambas", "Funciona, pero da un rodeo cuando x ya viene despejada."),
+            ("Multiplicar ambas ecuaciones entre sí", "Multiplicar ecuaciones no es un método de resolución: genera términos con xy."),
         ],
     ),
     _q(
@@ -972,18 +970,19 @@ QUESTIONS = [
     ),
     _q(
         "alg_cuadratica", "facil",
-        "Una plaza cuadrada tiene una superficie de 49 metros cuadrados. ¿Cuánto mide cada lado?",
-        "7 m",
-        "Se plantea la ecuación del área y se descarta la solución sin sentido "
-        "físico.\n\n"
-        "1) Con lado x: x² = 49, es decir x² − 49 = 0.\n"
-        "2) Factorizando como diferencia de cuadrados: (x + 7)(x − 7) = 0.\n"
-        "3) Las soluciones son x = 7 y x = −7.\n"
-        "4) Una medida negativa no existe, así que el lado mide 7 metros.",
+        "¿Cuál de las siguientes ecuaciones NO es una ecuación cuadrática?",
+        "2x + 5 = 11",
+        "Una ecuación es cuadrática cuando el mayor exponente de la incógnita es "
+        "2.\n\n"
+        "1) En 2x + 5 = 11 la x aparece elevada a 1: es lineal.\n"
+        "2) x² − 49 = 0 sí lo es, aunque no tenga término central.\n"
+        "3) 3x² + 2x = 5 lo es en su forma más completa.\n"
+        "4) x² = 25 también lo es, aunque esté escrita sin igualar a cero.\n"
+        "5) Lo que importa es el exponente más alto, no cuántos términos haya.",
         [
-            ("24,5 m", "Dividió la superficie por 2 en lugar de extraer la raíz cuadrada."),
-            ("49 m", "Confundió la superficie con la medida del lado."),
-            ("7 m y −7 m", "Ambas satisfacen la ecuación, pero un lado negativo no representa nada en la plaza."),
+            ("x² − 49 = 0", "Sí es cuadrática: el mayor exponente de x es 2."),
+            ("3x² + 2x = 5", "Sí es cuadrática, y además está en su forma completa."),
+            ("x² = 25", "Sí es cuadrática, aunque esté escrita sin igualar a cero."),
         ],
     ),
     _q(
@@ -1007,17 +1006,19 @@ QUESTIONS = [
     ),
     _q(
         "alg_funciones", "facil",
-        "La ganancia diaria de un puesto, en miles de pesos, se modela con y = 2x − 4, donde x es la cantidad de productos vendidos. ¿Cuál es la ganancia si vende 3 productos?",
-        "y = 2",
-        "Evaluar una función es reemplazar la variable por el valor dado.\n\n"
-        "1) Reemplaza x = 3: y = 2 · 3 − 4.\n"
-        "2) Calcula: 6 − 4 = 2 mil pesos de ganancia.\n"
-        "3) El −4 representa un costo fijo que hay que cubrir antes de ganar: con "
-        "menos de 2 productos la ganancia sería negativa.",
+        "En el modelo de ganancia y = 2x − 4, donde x son las unidades vendidas, ¿qué representa el −4?",
+        "Un costo fijo que hay que cubrir antes de empezar a ganar",
+        "El término independiente es el valor de y cuando no se vende nada.\n\n"
+        "1) Con x = 0 la ganancia es −4: hay una pérdida de 4 mil pesos.\n"
+        "2) Eso corresponde a un costo que existe aunque no se venda nada, como "
+        "un arriendo.\n"
+        "3) Cada unidad vendida aporta 2 mil, así que hacen falta 2 unidades "
+        "solo para quedar en cero.\n"
+        "4) Ese punto de equilibrio es donde la recta corta el eje X.",
         [
-            ("y = 10", "Sumó el 4 en lugar de restarlo."),
-            ("y = 6", "Se quedó en 2 · 3 sin descontar el costo fijo."),
-            ("y = −1", "Restó el 4 antes de multiplicar, alterando el orden de las operaciones."),
+            ("La ganancia por cada unidad vendida", "Esa es la pendiente, que aquí vale 2."),
+            ("La cantidad de unidades que hay que vender", "Ese número sale de resolver y = 0, y da 2 unidades."),
+            ("Que el negocio siempre pierde dinero", "Desde 3 unidades en adelante la ganancia es positiva."),
         ],
     ),
     _q(
@@ -1182,39 +1183,38 @@ QUESTIONS = [
     # ---------- PROBABILIDAD ----------
     _q(
         "prob_estadistica_desc", "facil",
-        "¿Cuál es la moda del siguiente conjunto de datos: 3, 7, 5, 7, 2, 7, 9?",
-        "7",
-        "La moda es el valor que más veces se repite en el conjunto, a "
-        "diferencia de la media (el promedio) o la mediana (el valor central "
-        "al ordenar).\n\n"
-        "1) Cuenta cuántas veces aparece cada valor: 3 (una vez), 7 (tres "
-        "veces), 5 (una vez), 2 (una vez), 9 (una vez).\n"
-        "2) El valor 7 es el que más se repite, con 3 apariciones.\n\n"
-        "La moda es el dato mismo (7), no la cantidad de veces que se repite "
-        "(3): esa cantidad se llama frecuencia, y es un concepto distinto.",
+        "¿Cuál de las siguientes afirmaciones sobre la moda es siempre verdadera?",
+        "Un conjunto de datos puede tener más de una moda",
+        "La moda es el valor más frecuente, y puede haber empates.\n\n"
+        "1) En 2, 4, 4, 6, 6 y 8 tanto el 4 como el 6 aparecen dos veces: el "
+        "conjunto es bimodal.\n"
+        "2) También puede no haber moda útil: si todos los datos aparecen una "
+        "sola vez, ninguno destaca.\n"
+        "3) A diferencia de la media y la mediana, la moda sí tiene que ser uno "
+        "de los datos del conjunto.\n"
+        "4) Y es la única de las tres que sirve para datos que no son números, "
+        "como colores o marcas.",
         [
-            ("5", "Calculó la mediana (el valor central al ordenar los datos) en lugar de la moda."),
-            ("5,71", "Calculó la media (el promedio de los siete datos) en lugar de la moda."),
-            ("3", "Confundió la frecuencia del valor moda (cuántas veces se repite) con el valor mismo."),
+            ("Siempre hay exactamente una moda", "El conjunto 2, 4, 4, 6, 6 y 8 tiene dos."),
+            ("La moda siempre es mayor que la media", "En 1, 1 y 10 la moda es 1 y la media 4."),
+            ("La moda siempre está al centro de los datos ordenados", "Eso describe a la mediana, no a la moda."),
         ],
     ),
     _q(
         "prob_estadistica_desc", "medio",
-        "Un conjunto de 4 datos tiene media 8. Si tres de los datos son 6, 9 y 10, "
-        "¿cuál es el cuarto dato?",
-        "7",
-        "La media es la suma de todos los datos dividida por la cantidad de "
-        "datos, así que primero hay que reconstruir la suma total.\n\n"
-        "1) Si la media de 4 datos es 8, la suma de los 4 debe ser "
-        "8 × 4 = 32.\n"
-        "2) Suma los tres datos conocidos: 6 + 9 + 10 = 25.\n"
-        "3) El cuarto dato es la diferencia: 32 − 25 = 7.\n\n"
-        "Verifica: (6 + 9 + 10 + 7) / 4 = 32 / 4 = 8, que coincide con la "
-        "media dada.",
+        "Un conjunto de n datos tiene media m. ¿Cuál de las siguientes expresiones representa la suma de todos sus datos?",
+        "m · n",
+        "La media reparte la suma entre todos los datos, así que la suma se "
+        "recupera multiplicando.\n\n"
+        "1) Por definición, m = suma ÷ n.\n"
+        "2) Despejando: suma = m · n.\n"
+        "3) Comprueba con 4 datos de media 8: la suma es 32.\n"
+        "4) Este despeje es la clave de casi todos los problemas de 'falta un "
+        "dato': se calcula la suma que debería haber y se resta lo conocido.",
         [
-            ("8", "Asumió que el dato faltante debía ser igual a la media, sin calcular la suma total real de los 4 datos."),
-            ("25", "Entregó la suma de los tres datos conocidos, sin restarla del total necesario (32) para encontrar el cuarto."),
-            ("17", "Al sumar los tres datos conocidos, olvidó incluir uno de ellos (6+9=15 en lugar de 6+9+10=25)."),
+            ("m / n", "Divide dos veces: la media ya venía dividida por la cantidad."),
+            ("m + n", "Suma la cantidad de datos al promedio, que son cosas distintas."),
+            ("n / m", "Invierte la relación y entrega un número sin significado en el problema."),
         ],
     ),
     _q(
@@ -1258,39 +1258,35 @@ QUESTIONS = [
     ),
     _q(
         "prob_reglas", "facil",
-        "En una bolsa hay 4 bolitas verdes y 6 amarillas. Si se saca una al azar, "
-        "¿cuál es la probabilidad de que sea verde?",
+        "La probabilidad de que un evento ocurra es 3/5. ¿Cuál es la probabilidad de que NO ocurra?",
         "2/5",
-        "La probabilidad es casos favorables dividido por casos posibles.\n\n"
-        "1) Casos favorables: las bolitas verdes son 4.\n"
-        "2) Casos posibles: el total de bolitas, sumando ambos colores: "
-        "4 + 6 = 10.\n"
-        "3) La probabilidad es 4/10, que simplificado por 2 da 2/5.\n\n"
-        "El denominador siempre es el total de bolitas en la bolsa, nunca "
-        "solo la cantidad del otro color.",
+        "Un evento y su complemento suman siempre 1.\n\n"
+        "1) Si ocurre con probabilidad 3/5, no ocurre con 1 − 3/5.\n"
+        "2) Escribiendo 1 como 5/5: 5/5 − 3/5 = 2/5.\n"
+        "3) Control: 3/5 + 2/5 = 1, como debe ser.\n"
+        "4) Este atajo es el que hace fáciles los problemas de 'al menos uno': "
+        "conviene calcular el complemento y restarlo de 1.",
         [
-            ("6/10", "Calculó la probabilidad de sacar una bolita amarilla en lugar de una verde."),
-            ("4/6", "Comparó la cantidad de bolitas verdes con la de amarillas, en lugar de con el total de bolitas en la bolsa."),
-            ("1/2", "Asumió que había la misma cantidad de bolitas de cada color, sin considerar los valores reales del enunciado."),
+            ("3/5", "Esa es la probabilidad de que SÍ ocurra."),
+            ("5/3", "Supera 1, y ninguna probabilidad puede hacerlo."),
+            ("1/5", "3/5 más 1/5 da 4/5, no 1: falta una parte."),
         ],
     ),
     _q(
         "prob_reglas", "medio",
-        "Al lanzar un dado de 6 caras, ¿cuál es la probabilidad de obtener un número par o un 5?",
-        "2/3",
-        "Cuando el evento tiene dos condiciones unidas por \"o\", se cuentan "
-        "todos los casos que cumplen al menos una de las dos.\n\n"
-        "1) Los números pares del dado son 2, 4 y 6: eso son 3 casos.\n"
-        "2) El 5 no es par, así que se suma como un caso adicional: 1 caso "
-        "más.\n"
-        "3) En total hay 3 + 1 = 4 casos favorables de 6 posibles: 4/6.\n"
-        "4) Simplifica dividiendo por 2: 2/3.\n\n"
-        "Es clave no contar el 5 dos veces ni confundirlo con un número par: "
-        "son dos grupos de casos que no se superponen.",
+        "Dos eventos no pueden ocurrir al mismo tiempo. ¿Cuál de las siguientes expresiones representa la probabilidad de que ocurra uno u otro?",
+        "P(A) + P(B)",
+        "Cuando los eventos son excluyentes no hay casos repetidos que "
+        "descontar.\n\n"
+        "1) La regla aditiva general es P(A o B) = P(A) + P(B) − P(A y B).\n"
+        "2) Si los eventos no pueden ocurrir juntos, P(A y B) es cero.\n"
+        "3) La expresión se reduce a P(A) + P(B).\n"
+        "4) Ejemplo: al lanzar un dado, sacar un 2 y sacar un 5 son excluyentes, "
+        "así que la probabilidad de uno u otro es 1/6 + 1/6 = 1/3.",
         [
-            ("1/2", "Contó solo los números pares (3 de 6) sin sumar el caso adicional del 5."),
-            ("5/6", "Contó erróneamente 5 casos favorables, incluyendo por error algún número que no cumple ninguna de las dos condiciones."),
-            ("1", "Asumió que el evento cubre todos los resultados posibles del dado."),
+            ("P(A) · P(B)", "Esa es la probabilidad de que ocurran AMBOS, y aquí no pueden."),
+            ("P(A) + P(B) − P(A) · P(B)", "Descuenta una intersección que en este caso vale cero."),
+            ("P(A) − P(B)", "Restar no tiene sentido: la probabilidad de que ocurra alguno es mayor que cada una."),
         ],
     ),
     # ---------- AMPLIACIÓN (segundo lote, 45 preguntas) ----------
@@ -1313,50 +1309,54 @@ QUESTIONS = [
     ),
     _q(
         "num_racionales", "facil",
-        "Un estanque tiene 5/6 de su capacidad con agua y se consume 1/3 de la capacidad total. ¿Qué fracción del estanque queda con agua?",
-        "1/2",
-        "Se restan las fracciones con denominador común.\n\n"
-        "1) El mínimo común múltiplo de 6 y 3 es 6.\n"
-        "2) Convierte: 1/3 = 2/6.\n"
-        "3) Resta: 5/6 − 2/6 = 3/6, que simplificado es 1/2.\n"
-        "4) Control: quedó la mitad del estanque, menos que los 5/6 iniciales.",
+        "Un estanque tiene a de su capacidad con agua. Se consume una fracción b DEL AGUA QUE HAY. ¿Cuál de las siguientes expresiones representa el agua que queda, como fracción de la capacidad total?",
+        "a − a · b",
+        "Lo consumido se calcula sobre el agua existente, no sobre la capacidad "
+        "total.\n\n"
+        "1) El agua que hay es a, y de esa se consume la fracción b: eso es "
+        "a · b.\n"
+        "2) Lo que queda es a − a · b.\n"
+        "3) Comprueba con a = 3/4 y b = 1/3: se consume 1/4 y quedan 1/2.\n"
+        "4) La diferencia con a − b es enorme: esa expresión valdría si b fuera "
+        "una fracción de la CAPACIDAD y no del agua.",
         [
-            ("4/3", "Sumó en lugar de restar, y el resultado supera la capacidad del estanque."),
-            ("7/6", "Sumó las fracciones y además dejó un resultado mayor que el estanque lleno."),
-            ("2/3", "Restó los numeradores sin convertir 1/3 a sextos."),
+            ("a − b", "Esa sirve cuando b se mide sobre la capacidad total, no sobre el agua que hay."),
+            ("a · b", "Esa es el agua CONSUMIDA, no la que queda."),
+            ("a + a · b", "Suma lo consumido en vez de restarlo."),
         ],
     ),
     _q(
         "num_racionales", "medio",
-        "¿Cuál es el resultado de 2 − 3/4 × 2/3?",
-        "3/2",
-        "El orden de las operaciones exige resolver primero la multiplicación y "
-        "recién después la resta.\n\n"
-        "1) Multiplica primero: 3/4 × 2/3 = 6/12 = 1/2.\n"
-        "2) Ahora resta ese resultado de 2: 2 − 1/2.\n"
-        "3) Escribe el 2 como 4/2 para restar: 4/2 − 1/2 = 3/2.\n\n"
-        "Resolver la resta antes que la multiplicación cambia por completo el "
-        "resultado, porque la multiplicación tiene prioridad.",
+        "En la expresión 2 − 3/4 × 2/3, ¿qué operación se resuelve primero?",
+        "La multiplicación, porque tiene prioridad sobre la resta",
+        "El orden de las operaciones manda por sobre el orden de lectura.\n\n"
+        "1) Primero se resuelve 3/4 × 2/3 = 6/12 = 1/2.\n"
+        "2) Después se resta: 2 − 1/2 = 3/2.\n"
+        "3) Si se restara primero, quedaría (2 − 3/4) × 2/3 = 5/4 × 2/3 = 5/6, "
+        "que es otro resultado.\n"
+        "4) La regla completa: primero paréntesis, después potencias, después "
+        "multiplicaciones y divisiones, y al final sumas y restas.",
         [
-            ("5/6", "Restó primero (2 − 3/4 = 5/4) y multiplicó después por 2/3, sin respetar que la multiplicación va primero."),
-            ("1/2", "Calculó solo la multiplicación (3/4 × 2/3) y olvidó restarla de 2."),
-            ("7/12", "Restó ambas fracciones de 2 por separado (2 − 3/4 − 2/3), en lugar de multiplicarlas primero y restar solo el resultado."),
+            ("La resta, porque aparece primero de izquierda a derecha", "El orden de lectura no manda: la multiplicación tiene prioridad."),
+            ("Da lo mismo el orden, el resultado es el mismo", "Da 3/2 de una forma y 5/6 de la otra."),
+            ("Primero hay que convertir el 2 en fracción", "Puede ayudar, pero no es una operación con prioridad."),
         ],
     ),
     _q(
         "num_potencias_raices", "facil",
-        "Una célula se divide en dos cada hora. Si al comenzar hay una célula, ¿cuántas habrá después de 4 horas?",
-        "16",
-        "Cada hora la cantidad se multiplica por 2, así que después de varias "
-        "horas aparece una potencia de 2.\n\n"
-        "1) Tras 1 hora: 2 células. Tras 2 horas: 4. Tras 3 horas: 8.\n"
-        "2) En general, tras n horas hay 2ⁿ células.\n"
-        "3) Después de 4 horas: 2⁴ = 2 · 2 · 2 · 2 = 16.\n"
-        "4) Fíjate en que el exponente cuenta las divisiones, no las células.",
+        "¿Cuál de las siguientes afirmaciones sobre las potencias es siempre verdadera?",
+        "Cualquier número distinto de cero elevado a 0 da 1",
+        "La regla sale de la división de potencias de igual base.\n\n"
+        "1) Se sabe que aᵐ ÷ aᵐ = 1, porque es un número dividido por sí "
+        "mismo.\n"
+        "2) Pero por la regla de los exponentes, aᵐ ÷ aᵐ = aᵐ⁻ᵐ = a⁰.\n"
+        "3) Comparando, a⁰ tiene que valer 1.\n"
+        "4) Ojo con las otras: un exponente negativo NO da un resultado "
+        "negativo, sino el recíproco.",
         [
-            ("8", "Contó una hora de menos: 2³ = 8 corresponde a 3 horas."),
-            ("32", "Contó una hora de más: 2⁵ = 32 corresponde a 5 horas."),
-            ("2", "Multiplicó 2 por 4 en lugar de multiplicar el 2 por sí mismo cuatro veces."),
+            ("Un exponente negativo da siempre un resultado negativo", "2⁻³ vale 1/8, que es positivo: el exponente negativo indica el recíproco."),
+            ("Elevar a una potencia siempre agranda el número", "0,5² da 0,25, que es menor que 0,5."),
+            ("aᵐ · aⁿ = aᵐˑⁿ", "Al multiplicar potencias de igual base los exponentes se SUMAN."),
         ],
     ),
     _q(
@@ -1414,50 +1414,59 @@ QUESTIONS = [
     ),
     _q(
         "num_porcentajes", "facil",
-        "Un producto cuesta $8.000 y tiene un descuento del 25%. ¿Cuál es su precio final?",
-        "$6.000",
-        "Primero se calcula el monto del descuento y luego se resta del precio "
-        "original.\n\n"
-        "1) Calcula el 25% de $8.000: 8.000 × 0,25 = $2.000.\n"
-        "2) Resta ese descuento del precio original: 8.000 − 2.000 = $6.000.",
+        "¿Cuál de las siguientes afirmaciones sobre los porcentajes es siempre verdadera?",
+        "El 50% de una cantidad es siempre la mitad de esa cantidad",
+        "Un porcentaje es una fracción con denominador 100.\n\n"
+        "1) El 50% equivale a 50/100 = 1/2, así que siempre es la mitad.\n"
+        "2) Esa equivalencia no depende de la cantidad: vale para 8.000, para 3 "
+        "y para cualquier número.\n"
+        "3) En cambio un porcentaje mayor que 100 da un resultado MAYOR que la "
+        "cantidad original: el 150% de 60 son 90.\n"
+        "4) Y un porcentaje de un porcentaje se calcula multiplicando las dos "
+        "proporciones.",
         [
-            ("$2.000", "Calculó el monto del descuento pero no lo restó del precio original."),
-            ("$6.400", "Calculó un 20% de descuento en lugar del 25% indicado en el enunciado."),
-            ("$10.000", "Sumó el descuento al precio original en lugar de restarlo."),
+            ("Un porcentaje siempre da un resultado menor que la cantidad original", "El 150% de 60 da 90, que es mayor."),
+            ("El 100% de una cantidad es siempre 100", "El 100% es la cantidad completa: el 100% de 8.000 son 8.000."),
+            ("Dos descuentos de 10% equivalen a uno de 20%", "Equivalen a uno del 19%, porque el segundo se aplica sobre una base menor."),
         ],
     ),
     _q(
         "num_porcentajes", "medio",
-        "Un pantalón cuesta $12.000 después de un descuento del 20%. ¿Cuál era su precio original?",
-        "$15.000",
-        "El precio con descuento equivale al 80% del precio original, así que hay "
-        "que deshacer ese porcentaje para encontrar el 100%.\n\n"
-        "1) Si hubo un 20% de descuento, lo que queda es el 80% del precio "
-        "original: precio_original × 0,8 = 12.000.\n"
-        "2) Despeja dividiendo: precio_original = 12.000 ÷ 0,8 = $15.000.\n\n"
-        "Verifica: el 20% de $15.000 es $3.000, y 15.000 − 3.000 = $12.000. "
-        "Coincide con el enunciado.",
+        "Un producto con un d por ciento de descuento cuesta F pesos. ¿Cuál de las siguientes expresiones representa su precio original?",
+        "F / (1 − d/100)",
+        "El precio final es una fracción del original, así que se recupera "
+        "dividiendo.\n\n"
+        "1) Tras el descuento queda por pagar el (100 − d) por ciento, o sea "
+        "F = original · (1 − d/100).\n"
+        "2) Despejando: original = F ÷ (1 − d/100).\n"
+        "3) Comprueba con F = 12.000 y d = 20: 12.000 ÷ 0,8 = 15.000.\n"
+        "4) Control de sentido: el precio original siempre es MAYOR que el "
+        "rebajado, así que la operación tiene que ser una división por un número "
+        "menor que 1.",
         [
-            ("$14.400", "Sumó un 20% al precio con descuento (12.000×1,2) en lugar de deshacer el descuento para encontrar el precio original."),
-            ("$9.600", "Volvió a aplicar el 20% de descuento sobre 12.000, en lugar de calcular el precio original."),
-            ("$16.000", "Dividió por 0,75 en lugar de por 0,8, confundiendo el 20% de descuento con un 25%."),
+            ("F · (1 + d/100)", "Aplica el porcentaje sobre el precio ya rebajado, que es una base distinta."),
+            ("F + d", "Suma el porcentaje como si fuera pesos."),
+            ("F · (1 − d/100)", "Vuelve a descontar, alejándose todavía más del precio original."),
         ],
     ),
     # ---------- ÁLGEBRA ----------
     _q(
         "alg_expresiones", "facil",
-        "Una librería vende 5 cuadernos y 3 lápices, y luego devuelve 2 cuadernos y vende 1 lápiz más. Si x es el precio de un cuaderno e y el de un lápiz, ¿cuál expresión representa el total recaudado?",
-        "3x + 4y",
-        "Cada producto tiene su propio precio, así que se agrupan por separado.\n\n"
-        "1) Cuadernos: 5x − 2x = 3x.\n"
-        "2) Lápices: 3y + y = 4y. Recuerda que 'un lápiz más' es 1y, no 1.\n"
-        "3) Total recaudado: 3x + 4y.\n"
-        "4) No se puede escribir 7xy: sumar cuadernos con lápices no tiene "
-        "sentido mientras cuesten distinto.",
+        "En una expresión algebraica que representa un total de dinero, ¿qué significa que dos términos NO sean semejantes?",
+        "Que corresponden a productos distintos y no se pueden juntar en un solo término",
+        "La parte literal identifica de qué se está hablando.\n\n"
+        "1) Si x es el precio de un cuaderno e y el de un lápiz, entonces 3x son "
+        "tres cuadernos y 4y son cuatro lápices.\n"
+        "2) No se pueden sumar en un solo término, porque no cuestan lo mismo: "
+        "el total queda expresado como 3x + 4y.\n"
+        "3) Escribir 7xy sería incorrecto: eso multiplicaría los precios en vez "
+        "de sumar los gastos.\n"
+        "4) La expresión reducida al máximo es 3x + 4y, y eso ya es un "
+        "resultado.",
         [
-            ("7xy", "Juntó los dos productos en un solo término; solo se suman términos con la misma parte literal."),
-            ("3x + 3y", "Olvidó el lápiz vendido después; 3y + y son 4y."),
-            ("7x + 4y", "Sumó los 2 cuadernos devueltos en lugar de restarlos."),
+            ("Que la expresión está mal planteada", "Es perfectamente correcta: muchas expresiones no se reducen a un término."),
+            ("Que hay que multiplicarlos entre sí", "Sumar gastos no es multiplicar precios."),
+            ("Que uno de los dos términos sobra", "Ambos representan gastos reales que forman parte del total."),
         ],
     ),
     _q(
@@ -1497,18 +1506,20 @@ QUESTIONS = [
     ),
     _q(
         "alg_lineal", "facil",
-        "Una persona reparte sus ahorros en 3 partes iguales, se queda con una parte y además recibe $2.000 de regalo, quedando con $7.000. ¿A cuánto ascendían sus ahorros, en miles de pesos?",
-        "15",
-        "Se traduce la situación a una ecuación y se despeja.\n\n"
-        "1) Llama x a los ahorros en miles. Una de las tres partes es x/3.\n"
-        "2) Con el regalo queda x/3 + 2 = 7.\n"
-        "3) Resta 2: x/3 = 5.\n"
-        "4) Multiplica por 3: x = 15 mil pesos.\n"
-        "5) Comprueba: la tercera parte de 15 es 5, y 5 + 2 = 7.",
+        "¿Cuál es la diferencia entre una ecuación y una inecuación de primer grado?",
+        "La ecuación tiene en general una sola solución y la inecuación tiene infinitas",
+        "El signo que las une cambia la naturaleza de la respuesta.\n\n"
+        "1) 2x + 5 = 17 se cumple solo con x = 6.\n"
+        "2) 2x + 5 < 17 se cumple con cualquier x menor que 6: hay infinitos.\n"
+        "3) Por eso la respuesta de una inecuación se escribe como un conjunto o "
+        "un intervalo, no como un número suelto.\n"
+        "4) El procedimiento para resolverlas es casi el mismo, con una "
+        "diferencia clave: al multiplicar o dividir por un negativo, la "
+        "desigualdad se invierte.",
         [
-            ("21", "Multiplicó por 3 antes de restar el regalo, aplicando las operaciones en el orden equivocado."),
-            ("5", "Se quedó en el valor de una de las tres partes sin reconstruir el total."),
-            ("27", "Sumó el regalo en lugar de restarlo antes de multiplicar."),
+            ("La inecuación no se puede resolver algebraicamente", "Se resuelve con los mismos pasos, cuidando el signo del factor."),
+            ("La ecuación usa letras y la inecuación solo números", "Ambas pueden tener incógnitas."),
+            ("La inecuación siempre tiene solución y la ecuación no", "Hay inecuaciones sin solución, como x < x."),
         ],
     ),
     _q(
@@ -1669,18 +1680,19 @@ QUESTIONS = [
     ),
     _q(
         "alg_funciones", "medio",
-        "¿Cuál es el vértice de la parábola y = x² − 6x + 5?",
-        "(3, −4)",
-        "La coordenada x del vértice se calcula con −b/2a, y luego se reemplaza en "
-        "la función para obtener y.\n\n"
-        "1) Identifica los coeficientes: a=1, b=−6, c=5.\n"
-        "2) Calcula la coordenada x: −b/2a = −(−6)/2(1) = 6/2 = 3.\n"
-        "3) Reemplaza x=3 en la función: y = 3² − 6(3) + 5 = 9 − 18 + 5 = −4.\n"
-        "4) El vértice es (3, −4).",
+        "¿Cuál de las siguientes expresiones permite encontrar la coordenada x del vértice de la parábola y = ax² + bx + c?",
+        "−b / (2a)",
+        "El vértice está justo al medio entre los dos ceros de la función.\n\n"
+        "1) La fórmula general entrega las raíces como (−b ± √disc)/(2a).\n"
+        "2) El punto medio entre ambas es (−b)/(2a): los términos con la raíz se "
+        "cancelan al promediar.\n"
+        "3) Comprueba con y = x² − 6x + 5: la abscisa del vértice es 6/2 = 3.\n"
+        "4) La otra coordenada se obtiene evaluando la función en ese valor: "
+        "9 − 18 + 5 = −4.",
         [
-            ("(6, 5)", "Usó los valores de b y c directamente como coordenadas del vértice, sin aplicar la fórmula −b/2a."),
-            ("(−3, 32)", "Cometió un error de signo al calcular la coordenada x del vértice, y evaluó la función en ese punto equivocado."),
-            ("(3, 4)", "Calculó correctamente la coordenada x del vértice, pero cometió un error de signo al evaluar y en ese punto."),
+            ("b / (2a)", "Le falta el signo menos: con b = −6 daría −3 en vez de 3."),
+            ("−b / a", "Olvida dividir por 2: daría 6 en vez de 3."),
+            ("c / a", "El término independiente no interviene en la posición del vértice."),
         ],
     ),
     _q(
@@ -1923,49 +1935,56 @@ QUESTIONS = [
     # ---------- PROBABILIDAD ----------
     _q(
         "prob_estadistica_desc", "facil",
-        "¿Cuál es la moda del conjunto de datos: 4, 7, 4, 9, 4, 2?",
-        "4",
-        "La moda es el valor que más veces se repite en el conjunto, sin "
-        "necesidad de ordenar los datos.\n\n"
-        "1) Cuenta cuántas veces aparece cada valor: el 4 aparece 3 veces, y los "
-        "demás (7, 9, 2) aparecen solo una vez cada uno.\n"
-        "2) El valor que más se repite es 4, así que esa es la moda.",
+        "En la tabla se registran los colores de 20 autos: 8 rojos, 5 blancos, 4 negros y 3 grises. ¿Qué medida estadística se puede calcular con esos datos?",
+        "Solo la moda, porque los colores no son números",
+        "Las medidas numéricas necesitan datos numéricos.\n\n"
+        "1) La moda es el valor que más se repite, y eso se puede contar con "
+        "cualquier tipo de dato: acá es el rojo.\n"
+        "2) La media exige sumar y dividir, y los colores no se suman.\n"
+        "3) La mediana exige ordenar de menor a mayor, y los colores no tienen "
+        "un orden natural.\n"
+        "4) Por eso la moda es la única de las tres que sirve para datos "
+        "cualitativos.",
         [
-            ("9", "Identificó el valor máximo del conjunto en lugar de el que más se repite."),
-            ("5", "Calculó la media (promedio) del conjunto en lugar de identificar la moda."),
-            ("3", "Entregó la cantidad de veces que se repite el valor más frecuente, en lugar del valor mismo."),
+            ("La media, sumando las cantidades y dividiendo por 4", "Eso daría el promedio de autos por color, que no es una medida de los colores."),
+            ("La mediana, ordenando los colores alfabéticamente", "El orden alfabético es arbitrario y no representa una magnitud."),
+            ("Las tres, usando las cantidades de cada color", "Las cantidades sí son números, pero la pregunta es por la variable color."),
         ],
     ),
     _q(
         "prob_estadistica_desc", "medio",
-        "Las notas de un curso en una prueba son: 5,5 − 6,0 − 4,5 − 5,5 − 7,0 − 5,5 − 6,0. "
-        "¿Cuál es la moda?",
+        "En un curso el promedio de notas es 5,0. Si a todos los estudiantes se les sube la nota en 0,5 puntos, ¿cuál será el nuevo promedio?",
         "5,5",
-        "Se cuenta cuántas veces aparece cada nota distinta.\n\n"
-        "1) El 5,5 aparece 3 veces.\n"
-        "2) El 6,0 aparece 2 veces.\n"
-        "3) El 4,5 y el 7,0 aparecen solo 1 vez cada uno.\n"
-        "4) El valor que más se repite es 5,5, así que esa es la moda del curso.",
+        "Sumar una constante a todos los datos corre el promedio en esa misma "
+        "constante.\n\n"
+        "1) Si cada nota sube 0,5, la suma total sube 0,5 por cada estudiante.\n"
+        "2) Al repartir esa suma entre la misma cantidad de estudiantes, el "
+        "promedio sube exactamente 0,5.\n"
+        "3) El nuevo promedio es 5,5.\n"
+        "4) Fíjate en que no hace falta saber cuántos estudiantes hay: el "
+        "resultado es el mismo para cualquier curso.",
         [
-            ("6,0", "Identificó un valor que se repite, pero no el que más veces aparece: 5,5 se repite 3 veces, más que 6,0."),
-            ("5,71", "Calculó el promedio del curso en lugar de identificar la nota que más se repite."),
-            ("7,0", "Identificó la nota máxima del curso en lugar de la que más se repite."),
+            ("5,0", "Si todas las notas suben, el promedio no puede quedarse igual."),
+            ("Depende de cuántos estudiantes tenga el curso", "El aumento es el mismo para todos, así que el efecto no depende del tamaño."),
+            ("10,0", "Multiplicó el promedio por 2 en lugar de sumarle 0,5."),
         ],
     ),
     _q(
         "prob_estadistica_desc", "dificil",
-        "Un conjunto de 5 datos tiene media 8. Si cuatro de los datos son 6, 7, 9 y 10, "
-        "¿cuál es el quinto dato?",
-        "8",
-        "Si la media de 5 datos es 8, la suma total de esos 5 datos debe ser "
-        "8 × 5.\n\n"
-        "1) Calcula la suma total necesaria: 8 × 5 = 40.\n"
-        "2) Suma los cuatro datos conocidos: 6 + 7 + 9 + 10 = 32.\n"
-        "3) El quinto dato es la diferencia: 40 − 32 = 8.",
+        "Un curso de 30 estudiantes tiene promedio 5,0 y otro de 20 tiene promedio 6,0. ¿Cuál es el promedio de los 50 estudiantes juntos?",
+        "5,4",
+        "Los promedios no se promedian: hay que pesarlos por la cantidad de "
+        "datos.\n\n"
+        "1) Suma del primer curso: 30 · 5,0 = 150.\n"
+        "2) Suma del segundo: 20 · 6,0 = 120.\n"
+        "3) Suma total: 270, repartida entre 50 estudiantes: 270 ÷ 50 = 5,4.\n"
+        "4) El error clásico es responder 5,5, que es el promedio simple de 5,0 "
+        "y 6,0 e ignora que el primer curso tiene más estudiantes y por eso pesa "
+        "más.",
         [
-            ("40", "Calculó la suma total necesaria (8×5=40) pero no la usó para despejar el quinto dato: la entregó como si fuera la respuesta."),
-            ("6,4", "Dividió la suma de los cuatro datos conocidos por la cantidad total de datos (32÷5), en lugar de restarla de la suma total necesaria."),
-            ("32", "Calculó la suma de los cuatro datos conocidos pero no continuó el cálculo para encontrar el quinto dato."),
+            ("5,5", "Promedió los dos promedios sin pesarlos por la cantidad de estudiantes de cada curso."),
+            ("11,0", "Sumó los dos promedios sin dividir."),
+            ("5,0", "Usó solo el promedio del curso más numeroso."),
         ],
     ),
     _q(
@@ -2018,52 +2037,58 @@ QUESTIONS = [
     ),
     _q(
         "prob_reglas", "facil",
-        "Se lanza una moneda dos veces. ¿Cuál es la probabilidad de obtener cara ambas veces?",
-        "1/4",
-        "Como los dos lanzamientos son independientes, se multiplican sus "
-        "probabilidades individuales.\n\n"
-        "1) La probabilidad de obtener cara en un lanzamiento es 1/2.\n"
-        "2) Como son dos lanzamientos independientes, se multiplica: "
-        "1/2 × 1/2 = 1/4.",
+        "Se lanza una moneda dos veces. ¿Cuál de las siguientes expresiones representa la probabilidad de obtener cara las dos veces?",
+        "(1/2) · (1/2)",
+        "Los lanzamientos son independientes, así que las probabilidades se "
+        "multiplican.\n\n"
+        "1) Cada lanzamiento da cara con probabilidad 1/2.\n"
+        "2) El segundo no depende del primero, así que se multiplican: "
+        "(1/2) · (1/2) = 1/4.\n"
+        "3) Comprueba listando los cuatro casos posibles: cara-cara, cara-sello, "
+        "sello-cara y sello-sello. Solo uno cumple.\n"
+        "4) Sumar daría 1, o sea evento seguro, lo que claramente no "
+        "corresponde.",
         [
-            ("1/2", "Calculó la probabilidad de obtener cara en un solo lanzamiento, sin considerar que el evento pide dos lanzamientos seguidos."),
-            ("1", "Asumió que el evento es seguro, sin calcular la probabilidad real de que ocurra dos veces seguidas."),
-            ("3/4", "Calculó la probabilidad de obtener al menos una cara en los dos lanzamientos, en lugar de obtener cara en ambos."),
+            ("(1/2) + (1/2)", "Daría 1, o sea que salir cara dos veces sería seguro."),
+            ("1/2", "Esa es la probabilidad de un solo lanzamiento."),
+            ("2 · (1/2)", "Es lo mismo que sumar, con el mismo problema."),
         ],
     ),
     _q(
         "prob_reglas", "medio",
-        "En una bolsa hay 4 bolitas numeradas del 1 al 4. Se saca una, se observa su número y se "
-        "devuelve a la bolsa; luego se saca otra. ¿Cuál es la probabilidad de que ambas bolitas "
-        "sean el número 3?",
-        "1/16",
-        "Como la bolita se devuelve a la bolsa, las dos extracciones son "
-        "independientes y se multiplican sus probabilidades.\n\n"
-        "1) La probabilidad de sacar el 3 en una extracción es 1/4.\n"
-        "2) Como se devuelve la bolita, la segunda extracción también tiene "
-        "probabilidad 1/4 de dar el 3.\n"
-        "3) Multiplica: 1/4 × 1/4 = 1/16.",
+        "¿Cuál de las siguientes situaciones corresponde a eventos INDEPENDIENTES?",
+        "Lanzar un dado y después lanzar una moneda",
+        "Dos eventos son independientes cuando el resultado de uno no cambia la "
+        "probabilidad del otro.\n\n"
+        "1) El dado no tiene forma de influir en la moneda: son independientes.\n"
+        "2) Sacar dos bolitas sin reposición no lo es: la primera cambia lo que "
+        "queda en la bolsa.\n"
+        "3) Elegir un estudiante y preguntar si es hombre y si juega fútbol "
+        "tampoco tiene por qué serlo: los dos rasgos pueden estar relacionados "
+        "en ese curso.\n"
+        "4) La independencia es la que permite multiplicar las probabilidades "
+        "sin ajustar nada.",
         [
-            ("1/4", "Calculó la probabilidad de sacar el número 3 en una sola extracción, sin multiplicar por la segunda extracción."),
-            ("1/2", "Sumó las probabilidades de cada extracción (1/4+1/4) en lugar de multiplicarlas, ya que ambos eventos deben ocurrir a la vez."),
-            ("1/12", "Calculó la probabilidad como si la primera bolita no se devolviera a la bolsa, cuando el enunciado indica que sí se devuelve."),
+            ("Sacar dos bolitas de una bolsa sin devolver la primera", "La primera extracción cambia la composición de la bolsa."),
+            ("Sacar una carta y después sacar otra del mismo mazo sin reponer", "El mazo queda con una carta menos y distinta composición."),
+            ("Que llueva hoy y que llueva mañana", "El clima de días seguidos suele estar relacionado."),
         ],
     ),
     _q(
         "prob_reglas", "dificil",
-        "En un curso, el 60% de los estudiantes practica algún deporte y, de ellos, el 25% practica "
-        "natación. ¿Qué porcentaje del curso completo practica natación?",
-        "15%",
-        "Cuando un porcentaje se aplica sobre otro porcentaje (y no sobre el "
-        "total), hay que multiplicarlos como decimales para obtener la "
-        "proporción real sobre el total.\n\n"
-        "1) Convierte ambos porcentajes a decimal: 60% = 0,60 y 25% = 0,25.\n"
-        "2) Multiplícalos: 0,60 × 0,25 = 0,15.\n"
-        "3) Convierte de vuelta a porcentaje: 0,15 = 15%.",
+        "En una caja hay 3 bolitas rojas y 7 azules. Se sacan dos sin reposición. ¿Por qué la probabilidad de que la segunda sea roja depende de lo que salió primero?",
+        "Porque la primera extracción cambia cuántas bolitas rojas y cuántas en total quedan",
+        "Sin reposición, la segunda extracción ocurre sobre una caja distinta.\n\n"
+        "1) Si la primera fue roja, quedan 2 rojas de 9: probabilidad 2/9.\n"
+        "2) Si la primera fue azul, quedan 3 rojas de 9: probabilidad 3/9.\n"
+        "3) Son valores distintos, así que la segunda extracción depende de la "
+        "primera: no son independientes.\n"
+        "4) Con reposición, en cambio, ambas darían 3/10 y las extracciones "
+        "serían independientes.",
         [
-            ("25%", "Entregó el 25% tal como aparece en el enunciado, sin considerar que ese porcentaje es solo sobre el 60% que practica deporte, no sobre el curso completo."),
-            ("85%", "Sumó los dos porcentajes del enunciado (60%+25%) en lugar de multiplicarlos."),
-            ("35%", "Restó los porcentajes del enunciado (60%−25%) en lugar de multiplicarlos."),
+            ("Porque las bolitas rojas son menos que las azules", "La dependencia no viene de cuál color abunda, sino de que la caja cambia."),
+            ("Porque la segunda bolita siempre tiene menos probabilidad de ser roja", "Depende: si la primera fue azul, la probabilidad de roja sube de 3/10 a 3/9."),
+            ("No depende: cada extracción es independiente", "Sin reposición sí depende, como muestran los valores 2/9 y 3/9."),
         ],
     ),
     # ==================== M2 (contenido exclusivo) ====================
@@ -2674,36 +2699,38 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "medio",
-        "Una obra lleva 2 semanas terminadas y además se completó 1/2 de semana de un tramo que dura 2/3 de semana. Expresado como fracción, ¿cuánto avance total hay?",
-        "11/4",
-        "La división se resuelve antes que la suma, por prioridad de operaciones.\n\n"
-        "1) Primero (1/2) ÷ (2/3) = (1/2) · (3/2) = 3/4.\n"
-        "2) Después se suma el 2: 2 + 3/4.\n"
-        "3) Llevando a cuartos: 8/4 + 3/4 = 11/4.\n"
-        "4) El orden importa: sumar primero el 2 daría un resultado distinto y "
-        "equivocado.",
+        "¿Cuál de las siguientes afirmaciones sobre la división de fracciones es siempre verdadera?",
+        "Dividir por una fracción menor que 1 da un resultado mayor que el número original",
+        "Dividir es preguntar cuántas veces cabe el divisor.\n\n"
+        "1) En 2 ÷ (1/2) la pregunta es cuántos medios caben en 2: caben 4.\n"
+        "2) Como el divisor es más chico que 1, cabe más de una vez por cada "
+        "unidad, y el resultado crece.\n"
+        "3) En cambio 2 ÷ 4 da 0,5: al dividir por algo mayor que 1 el resultado "
+        "se achica.\n"
+        "4) Ese control de sentido atrapa el error de multiplicar sin invertir "
+        "el divisor.",
         [
-            ("15/4", "Sumó el 2 antes de dividir, alterando el orden de las operaciones."),
-            ("7/3", "Multiplicó en lugar de dividir las dos fracciones."),
-            ("3/4", "Resolvió bien la división pero olvidó sumar las 2 semanas."),
+            ("Dividir siempre achica el resultado", "2 ÷ (1/2) da 4, más que el 2 original."),
+            ("Dividir dos fracciones da siempre una fracción menor que ambas", "(1/2) ÷ (1/4) da 2, mayor que las dos."),
+            ("Para dividir se invierte la primera fracción", "Se invierte la SEGUNDA, que es el divisor."),
         ],
     ),
     _q(
         "num_racionales", "medio",
-        "Un tambor tiene 3/4 de su capacidad con agua. Se saca 1/3 del agua que "
-        "contiene. ¿Qué fracción de la capacidad total del tambor queda con agua?",
-        "1/2",
-        "Ojo con el referente: la fracción que se saca está calculada sobre el agua "
-        "que hay, no sobre la capacidad total.\n\n"
-        "1) El agua presente es 3/4 de la capacidad.\n"
-        "2) Se saca 1/3 de esa agua: (1/3) × (3/4) = 3/12 = 1/4 de la capacidad total.\n"
-        "3) Queda el agua inicial menos lo sacado: 3/4 − 1/4 = 2/4 = 1/2.\n\n"
-        "Otra forma: si se saca un tercio, quedan dos tercios del agua. "
-        "(2/3) × (3/4) = 6/12 = 1/2, el mismo resultado.",
+        "Un estudiante debe calcular 3/4 menos un tercio DEL AGUA que hay, y resuelve 3/4 − 1/3 = 5/12. ¿Qué error cometió?",
+        "Restó 1/3 de la capacidad total en vez de 1/3 del agua que había",
+        "La fracción que se quita está medida sobre el agua, no sobre el "
+        "tambor.\n\n"
+        "1) El agua que hay es 3/4 de la capacidad.\n"
+        "2) Un tercio de esa agua es (1/3) · (3/4) = 1/4 de la capacidad.\n"
+        "3) Lo que queda es 3/4 − 1/4 = 1/2 de la capacidad.\n"
+        "4) Leer sobre qué se calcula cada fracción es la parte más importante "
+        "de estos problemas, y la que decide entre restar y multiplicar antes de "
+        "restar.",
         [
-            ("5/12", "Restó 1/3 de la capacidad total en vez de 1/3 del agua presente: 3/4 − 1/3 = 5/12."),
-            ("1/4", "Calculó cuánta agua se sacó y entregó ese valor en lugar de lo que queda."),
-            ("2/3", "Entregó la fracción del agua que queda respecto del agua inicial, no respecto de la capacidad total."),
+            ("Se equivocó al buscar el denominador común", "El denominador común de 4 y 3 es 12, y lo usó bien."),
+            ("Debía sumar en lugar de restar", "Se saca agua, así que la resta es correcta; el error es cuánto resta."),
+            ("No hay error: quedan 5/12 del tambor", "Un tercio del agua es 1/4 de la capacidad, así que quedan 1/2."),
         ],
     ),
     _q(
@@ -2749,18 +2776,18 @@ QUESTIONS += [
     # ---------- NÚMEROS: potencias y raíces ----------
     _q(
         "num_potencias_raices", "facil",
-        "Una hoja se dobla por la mitad 3 veces y luego 4 veces más. ¿Por cuántas capas quedó multiplicado el grosor original?",
-        "128",
-        "Cada doblez duplica las capas, así que el total es una potencia de 2.\n\n"
-        "1) Los primeros dobleces aportan 2³ y los siguientes 2⁴.\n"
-        "2) Al multiplicar potencias de igual base se suman los exponentes: "
-        "2³ · 2⁴ = 2⁷.\n"
-        "3) Calculando: 2⁷ = 128 capas.\n"
-        "4) Equivale a doblar 7 veces seguidas, que es justo lo que ocurrió.",
+        "Una hoja se dobla por la mitad h veces. ¿Cuál de las siguientes expresiones representa por cuánto queda multiplicado su grosor?",
+        "2ʰ",
+        "Cada doblez duplica la cantidad de capas.\n\n"
+        "1) Con un doblez hay 2 capas, con dos hay 4, con tres hay 8.\n"
+        "2) El patrón es una potencia de 2: tras h dobleces hay 2ʰ capas.\n"
+        "3) Comprueba con 7 dobleces: 2⁷ = 128 capas.\n"
+        "4) Este crecimiento es el que hace imposible doblar una hoja muchas "
+        "veces: con 10 dobleces ya serían 1.024 capas.",
         [
-            ("64", "Contó solo 6 dobleces: 2⁶ = 64."),
-            ("4.096", "Multiplicó los exponentes en vez de sumarlos, llegando a 2¹²."),
-            ("14", "Multiplicó las bases y sumó aparte, sin aplicar la propiedad de las potencias."),
+            ("2h", "Ese modelo suma 2 capas por doblez, cuando cada doblez las duplica."),
+            ("h²", "Ahí la base sería la cantidad de dobleces, no el factor 2."),
+            ("h/2", "Doblar aumenta las capas: la expresión no puede achicarse."),
         ],
     ),
     _q(
@@ -2783,65 +2810,73 @@ QUESTIONS += [
     ),
     _q(
         "num_potencias_raices", "medio",
-        "Una cantidad se multiplica por 3 cinco veces, luego por 3 dos veces más, y finalmente se divide por 3 cuatro veces. ¿Por cuánto quedó multiplicada respecto de su valor inicial?",
-        "27",
-        "Cada operación suma o resta exponentes sobre la misma base.\n\n"
-        "1) Multiplicar cinco veces y después dos veces da 3⁵ · 3² = 3⁷.\n"
-        "2) Dividir cuatro veces resta 4 al exponente: 3⁷ ÷ 3⁴ = 3³.\n"
-        "3) El resultado es 3³ = 27.\n"
-        "4) La cuenta rápida es solo con los exponentes: 5 + 2 − 4 = 3.",
+        "¿Cuál de las siguientes igualdades corresponde a la división de potencias de igual base?",
+        "aᵐ ÷ aⁿ = aᵐ⁻ⁿ",
+        "Dividir cancela factores, y eso se traduce en restar exponentes.\n\n"
+        "1) 3⁵ ÷ 3² es (3·3·3·3·3) ÷ (3·3): se cancelan dos factores y quedan "
+        "tres.\n"
+        "2) Eso es 3³, o sea 3⁵⁻².\n"
+        "3) Comprueba: 243 ÷ 9 = 27, y 3³ = 27.\n"
+        "4) La regla explica también por qué a⁰ = 1: si m y n son iguales, la "
+        "resta da cero y el cociente vale 1.",
         [
-            ("81", "Usó exponente 4, como si hubiera dividido solo tres veces."),
-            ("9", "Usó exponente 2, restando de más al dividir."),
-            ("3", "Se quedó en el exponente 3 y lo entregó como resultado en vez de calcular 3³."),
+            ("aᵐ ÷ aⁿ = aᵐ⁺ⁿ", "Sumar corresponde a la MULTIPLICACIÓN de potencias de igual base."),
+            ("aᵐ ÷ aⁿ = aᵐˑⁿ", "Multiplicar exponentes corresponde a elevar una potencia a otra."),
+            ("aᵐ ÷ aⁿ = (a ÷ a)ᵐ⁻ⁿ", "Dividir la base por sí misma da 1, y toda potencia de 1 es 1."),
         ],
     ),
     _q(
         "num_potencias_raices", "facil",
-        "Una máquina reduce el tamaño de una figura a la quinta parte, y esa reducción se aplica dos veces seguidas. ¿Qué fracción del tamaño original queda?",
-        "1/25",
-        "Reducir a la quinta parte dos veces equivale a un exponente negativo.\n\n"
-        "1) Cada reducción multiplica por 1/5, o sea por 5⁻¹.\n"
-        "2) Dos veces seguidas: 5⁻¹ · 5⁻¹ = 5⁻².\n"
-        "3) Un exponente negativo indica el recíproco: 5⁻² = 1/5² = 1/25.\n"
-        "4) La figura queda en la veinticincoava parte del tamaño original.",
+        "¿Qué significa que un número esté elevado a un exponente negativo, como en 5⁻²?",
+        "Que hay que calcular el recíproco de la potencia con exponente positivo",
+        "El exponente negativo indica división, no signo.\n\n"
+        "1) 5⁻² significa 1 dividido por 5², o sea 1/25.\n"
+        "2) El resultado es positivo: el signo del exponente no pasa al "
+        "resultado.\n"
+        "3) La regla sale de la división de potencias: 5³ ÷ 5⁵ = 5⁻², y también "
+        "es 125/3.125 = 1/25.\n"
+        "4) Por eso un exponente negativo achica el número cuando la base es "
+        "mayor que 1.",
         [
-            ("−25", "Interpretó el exponente negativo como un resultado negativo; lo que indica es el recíproco."),
-            ("1/10", "Multiplicó el 5 por 2 en vez de elevarlo al cuadrado."),
-            ("1/5", "Aplicó una sola reducción en lugar de las dos que indica el enunciado."),
+            ("Que el resultado es un número negativo", "5⁻² vale 1/25, que es positivo."),
+            ("Que hay que restar el exponente a la base", "Eso daría 5 − 2 = 3, que no tiene relación con la potencia."),
+            ("Que la potencia no está definida", "Está perfectamente definida para cualquier base distinta de cero."),
         ],
     ),
     _q(
         "num_potencias_raices", "medio",
-        "¿Cuál es el valor de √50 − √18?",
-        "2√2",
-        "Conviene descomponer cada raíz para dejarlas con el mismo radical y poder "
-        "restarlas.\n\n"
-        "1) Descompone 50 = 25 · 2, entonces √50 = √25 · √2 = 5√2.\n"
-        "2) Descompone 18 = 9 · 2, entonces √18 = √9 · √2 = 3√2.\n"
-        "3) Ahora ambos términos tienen el mismo radical √2, así que se restan los "
-        "coeficientes: 5√2 − 3√2 = 2√2.\n\n"
-        "Verificación aproximada: √50 ≈ 7,07 y √18 ≈ 4,24; su diferencia ≈ 2,83, "
-        "que coincide con 2√2 ≈ 2,83.",
+        "Al calcular √50 − √18, un estudiante responde √32. ¿Qué error cometió?",
+        "Restó dentro de la raíz: la raíz no se reparte sobre una resta",
+        "Solo se pueden restar radicales que tengan la misma parte "
+        "irracional.\n\n"
+        "1) Lo correcto es simplificar cada uno: √50 = 5√2 y √18 = 3√2.\n"
+        "2) Ahora ambos tienen √2, así que se restan los coeficientes: "
+        "5√2 − 3√2 = 2√2.\n"
+        "3) √32 sería la respuesta si la raíz se repartiera sobre la resta, y no "
+        "lo hace: √32 ≈ 5,66 mientras que 2√2 ≈ 2,83.\n"
+        "4) De hecho √32 es 4√2, el doble del resultado correcto.",
         [
-            ("√32", "Restó los números dentro de la raíz: √(50 − 18), que no es una propiedad válida."),
-            ("8√2", "Sumó los coeficientes en lugar de restarlos."),
-            ("2", "Restó los coeficientes pero perdió el radical √2 en el camino."),
+            ("Se equivocó al restar 50 menos 18", "50 − 18 sí da 32; el problema es que esa resta no corresponde."),
+            ("Debía sumar en lugar de restar", "El enunciado pide una resta; el error está en cómo la hizo."),
+            ("No hay error: √50 − √18 es √32", "√32 vale unos 5,66 y el resultado correcto es unos 2,83."),
         ],
     ),
     _q(
         "num_potencias_raices", "dificil",
-        "Una población de insectos se duplica cada día. Si hoy es 32 veces la que había al comienzo, ¿cuántos días han pasado?",
-        "5",
-        "Hay que expresar 32 como potencia de 2 para comparar exponentes.\n\n"
-        "1) Tras x días la población es 2ˣ veces la inicial, así que 2ˣ = 32.\n"
-        "2) Escribe 32 como potencia de 2: 2 · 2 · 2 · 2 · 2 = 32, o sea 2⁵.\n"
-        "3) La ecuación queda 2ˣ = 2⁵.\n"
-        "4) Con bases iguales, los exponentes deben ser iguales: x = 5 días.",
+        "Un cultivo A se duplica cada hora y otro B se triplica cada hora. Ambos parten del mismo tamaño. ¿Qué se puede afirmar después de varias horas?",
+        "B crece más rápido, y la diferencia entre ambos se agranda con cada hora que pasa",
+        "Dos crecimientos exponenciales con bases distintas se separan cada vez "
+        "más.\n\n"
+        "1) Tras h horas, A es 2ʰ veces el inicial y B es 3ʰ.\n"
+        "2) Con h = 1 la diferencia es pequeña: 2 contra 3.\n"
+        "3) Con h = 5 ya es 32 contra 243, y con h = 10 es 1.024 contra "
+        "59.049.\n"
+        "4) La razón entre ambos, (3/2)ʰ, crece sin límite: no se estabiliza en "
+        "ningún valor.",
         [
-            ("16", "Dividió 32 por 2 y entregó ese número; lo que se busca es el exponente, no la mitad."),
-            ("6", "Contó un día de más: 2⁶ da 64, no 32."),
-            ("32", "Entregó el factor de crecimiento en lugar de la cantidad de días."),
+            ("B crece más rápido, pero la diferencia se mantiene constante", "La diferencia crece: de 1 en la primera hora a más de 58.000 en la décima."),
+            ("Ambos crecen igual porque los dos son exponenciales", "La base decide la velocidad: 3 crece mucho más rápido que 2."),
+            ("A alcanza a B después de suficientes horas", "A queda cada vez más atrás, nunca lo alcanza."),
         ],
     ),
 
@@ -2938,69 +2973,72 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es el desarrollo de (x + 4)²?",
+        "¿Cuál de las siguientes expresiones representa el área de un cuadrado cuyo lado mide (x + 4)?",
         "x² + 8x + 16",
-        "El cuadrado de un binomio es el cuadrado del primero, más el doble producto, "
-        "más el cuadrado del segundo.\n\n"
-        "1) Cuadrado del primer término: x² .\n"
-        "2) Doble producto de ambos: 2 · x · 4 = 8x.\n"
-        "3) Cuadrado del segundo término: 4² = 16.\n"
-        "4) Une los tres: x² + 8x + 16.\n\n"
-        "Comprueba con un valor: si x = 1, (1 + 4)² = 25 y "
-        "1 + 8 + 16 = 25.",
+        "El área de un cuadrado es su lado al cuadrado, y hay que desarrollar el "
+        "binomio.\n\n"
+        "1) El área es (x + 4)².\n"
+        "2) Se desarrolla como el cuadrado del primero, más el doble producto, "
+        "más el cuadrado del segundo: x² + 2 · x · 4 + 16.\n"
+        "3) Eso da x² + 8x + 16.\n"
+        "4) Geométricamente: el cuadrado grande se parte en uno de lado x, dos "
+        "franjas de x por 4, y un cuadradito de 4 por 4.",
         [
-            ("x² + 16", "Elevó cada término al cuadrado por separado y omitió el doble producto."),
-            ("x² + 4x + 16", "Usó el producto simple en vez del doble producto."),
-            ("x² + 8x + 8", "Duplicó el 4 en lugar de elevarlo al cuadrado."),
+            ("x² + 16", "Le falta el doble producto, que son las dos franjas laterales."),
+            ("x² + 4x + 16", "Puso el producto simple en vez del doble: son dos franjas, no una."),
+            ("2x + 8", "Esa expresión es la mitad del perímetro, no el área."),
         ],
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es la factorización de x² − 49?",
-        "(x + 7)(x − 7)",
-        "Se reconoce una diferencia de cuadrados: un cuadrado menos otro cuadrado.\n\n"
-        "1) Identifica los cuadrados: x² es el cuadrado de x, y 49 es el cuadrado de 7.\n"
-        "2) La diferencia de cuadrados a² − b² siempre factoriza como (a + b)(a − b).\n"
-        "3) Reemplaza a = x y b = 7: (x + 7)(x − 7).\n\n"
-        "Verifica desarrollando: x² − 7x + 7x − 49 = x² − 49.",
+        "¿Cuál de las siguientes expresiones es una diferencia de cuadrados?",
+        "x² − 49",
+        "Una diferencia de cuadrados es una resta de dos términos que son "
+        "cuadrados perfectos.\n\n"
+        "1) x² − 49 lo es: 49 es 7², así que se factoriza como "
+        "(x + 7)(x − 7).\n"
+        "2) x² + 49 es una SUMA, y las sumas de cuadrados no se factorizan en "
+        "los números reales.\n"
+        "3) x² − 50 tiene una resta, pero 50 no es un cuadrado perfecto.\n"
+        "4) x² − 7x tiene un término con x, así que se factoriza sacando factor "
+        "común y no como diferencia de cuadrados.",
         [
-            ("(x − 7)²", "Confundió la diferencia de cuadrados con un cuadrado de binomio, que daría x² − 14x + 49."),
-            ("(x + 7)²", "Aplicó el cuadrado del binomio con signo positivo, que daría x² + 14x + 49."),
-            ("x(x − 49)", "Factorizó por factor común, que no aplica porque 49 no tiene x."),
+            ("x² + 49", "Es una suma de cuadrados, y esas no se factorizan en los números reales."),
+            ("x² − 50", "50 no es un cuadrado perfecto, así que no calza con la fórmula."),
+            ("x² − 7x", "Tiene un término con x: se factoriza sacando factor común."),
         ],
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es la factorización de x² + 7x + 12?",
-        "(x + 3)(x + 4)",
-        "Para un trinomio de la forma x² + bx + c se buscan dos números que multiplicados "
-        "den c y sumados den b.\n\n"
-        "1) Necesitas dos números cuyo producto sea 12 y cuya suma sea 7.\n"
-        "2) Prueba los pares que dan 12: 1 y 12 suman 13; 2 y 6 suman 8; 3 y 4 suman 7. "
-        "Este último sirve.\n"
-        "3) La factorización es (x + 3)(x + 4).\n\n"
-        "Verifica: x² + 4x + 3x + 12 = x² + 7x + 12.",
+        "Para factorizar x² + 7x + 12 se buscan dos números. ¿Qué condiciones deben cumplir?",
+        "Que multiplicados den 12 y sumados den 7",
+        "El desarrollo del producto muestra de dónde sale cada coeficiente.\n\n"
+        "1) (x + p)(x + q) = x² + (p + q)x + pq.\n"
+        "2) Comparando: p + q debe ser 7 y p · q debe ser 12.\n"
+        "3) Las parejas que multiplican 12 son 1 y 12, 2 y 6, 3 y 4. La que "
+        "suma 7 es 3 y 4.\n"
+        "4) Entonces x² + 7x + 12 = (x + 3)(x + 4).",
         [
-            ("(x + 2)(x + 6)", "Eligió un par que multiplica 12 pero suma 8, no 7."),
-            ("(x + 1)(x + 12)", "Eligió el par que multiplica 12 pero suma 13."),
-            ("(x − 3)(x − 4)", "Usó los números correctos pero con signo negativo, lo que daría x² − 7x + 12."),
+            ("Que multiplicados den 7 y sumados den 12", "Está invertido: el término independiente sale del producto."),
+            ("Que ambos sean divisores de 7", "Deben ser divisores de 12, que es el término independiente."),
+            ("Que su diferencia sea 7 y su suma 12", "La condición es sobre la suma y el producto, no sobre la diferencia."),
         ],
     ),
     _q(
         "alg_expresiones", "medio",
-        "Si a + b = 9 y a · b = 20, ¿cuál es el valor de a² + b²?",
-        "41",
-        "No hace falta encontrar a y b por separado: sirve la identidad del cuadrado de "
-        "una suma.\n\n"
-        "1) Parte de (a + b)² = a² + 2ab + b².\n"
-        "2) Despeja lo que buscas: a² + b² = (a + b)² − 2ab.\n"
-        "3) Reemplaza los datos: 9² − 2 · 20 = 81 − 40 = 41.\n\n"
-        "Control: los números que cumplen ambas condiciones son 4 y 5, y "
-        "4² + 5² = 16 + 25 = 41.",
+        "Se conocen la suma S y el producto P de dos números. ¿Cuál de las siguientes expresiones representa la suma de sus cuadrados?",
+        "S² − 2P",
+        "Sale de despejar la identidad del cuadrado de la suma.\n\n"
+        "1) (a + b)² = a² + 2ab + b².\n"
+        "2) Despejando lo que se busca: a² + b² = (a + b)² − 2ab = S² − 2P.\n"
+        "3) Comprueba con S = 9 y P = 20: 81 − 40 = 41.\n"
+        "4) Los números eran 4 y 5, y 16 + 25 = 41. Calza.\n"
+        "5) Lo elegante del método es que no hace falta averiguar cuáles son los "
+        "números.",
         [
-            ("81", "Calculó (a + b)² y olvidó restar el doble producto."),
-            ("121", "Sumó el doble producto en lugar de restarlo: 81 + 40."),
-            ("61", "Restó una sola vez el producto (81 − 20) en vez del doble producto."),
+            ("S² + 2P", "Suma el doble producto en vez de restarlo: daría 121 en el ejemplo."),
+            ("S² − P", "Resta el producto una sola vez, cuando la identidad exige el doble."),
+            ("S − 2P", "Olvida elevar la suma al cuadrado y mezcla magnitudes distintas."),
         ],
     ),
     _q(
@@ -3024,80 +3062,89 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: ecuaciones e inecuaciones lineales ----------
     _q(
         "alg_lineal", "facil",
-        "Una panadería vende 4 bandejas iguales de pan y regala 7 panes. Si entregó 13 panes más de los que regaló, es decir 4 bandejas menos 7 panes suman 13, ¿cuántos panes trae cada bandeja?",
-        "x = 5",
-        "La situación se traduce directo a una ecuación de primer grado.\n\n"
-        "1) Llama x a los panes por bandeja: 4x − 7 = 13.\n"
-        "2) Suma 7 a ambos lados: 4x = 20.\n"
-        "3) Divide por 4: x = 5 panes por bandeja.\n"
-        "4) Comprueba: 4 · 5 − 7 = 20 − 7 = 13.",
+        "Al resolver 4x − 7 = 13, ¿cuál es el primer paso conveniente?",
+        "Sumar 7 a ambos lados para dejar solo el término con x",
+        "Se despeja de afuera hacia adentro: primero lo que suma o resta, "
+        "después lo que multiplica.\n\n"
+        "1) Sumando 7 a ambos lados queda 4x = 20.\n"
+        "2) Recién ahí se divide por 4: x = 5.\n"
+        "3) Dividir primero por 4 también funciona, pero obliga a repartir el "
+        "−7 y aparecen fracciones sin necesidad.\n"
+        "4) La regla general: deshacer las operaciones en el orden inverso al "
+        "que se aplicaron.",
         [
-            ("x = 1,5", "Restó el 7 en vez de sumarlo al pasarlo al otro lado."),
-            ("x = 20", "Se quedó en el paso intermedio sin dividir por las 4 bandejas."),
-            ("x = 3", "Dividió 13 entre 4 y redondeó, sin despejar antes el término independiente."),
+            ("Restar 7 a ambos lados", "Eso dejaría 4x − 14 = 6, alejándose del despeje."),
+            ("Dividir ambos lados por 7", "El 7 no multiplica a la x: está restando."),
+            ("Multiplicar ambos lados por 4", "Eso agranda los números sin acercarse a despejar la x."),
         ],
     ),
     _q(
         "alg_lineal", "medio",
-        "¿Cuál es la solución de 3(x − 2) = 2x + 5?",
-        "x = 11",
-        "Primero se elimina el paréntesis y después se agrupan las x a un lado.\n\n"
-        "1) Distribuye el 3: 3x − 6 = 2x + 5.\n"
-        "2) Resta 2x a ambos lados: x − 6 = 5.\n"
-        "3) Suma 6 a ambos lados: x = 11.\n\n"
-        "Verifica: 3(11 − 2) = 3 · 9 = 27, y 2 · 11 + 5 = 27.",
+        "Al resolver 3(x − 2) = 2x + 5, un estudiante escribe 3x − 2 = 2x + 5 en el primer paso. ¿Qué error cometió?",
+        "No repartió el 3 sobre los dos términos del paréntesis",
+        "La distributividad exige multiplicar por TODO lo que está dentro.\n\n"
+        "1) Lo correcto es 3(x − 2) = 3x − 6.\n"
+        "2) La ecuación queda 3x − 6 = 2x + 5, de donde x = 11.\n"
+        "3) Con el error del estudiante quedaría 3x − 2 = 2x + 5 y x = 7, que no "
+        "cumple la ecuación original: 3(7 − 2) = 15 y 2 · 7 + 5 = 19.\n"
+        "4) Reemplazar la respuesta en el enunciado original es el control que "
+        "detecta este error al instante.",
         [
-            ("x = 1", "No distribuyó el 3 al −2, resolviendo 3x − 2 = 2x + 5."),
-            ("x = −1", "Al agrupar las x restó en el sentido equivocado."),
-            ("x = 5,5", "Sumó las x de ambos lados (5x) en lugar de restarlas."),
+            ("Debía sumar el 3 en vez de multiplicarlo", "El 3 está multiplicando al paréntesis; sumarlo cambiaría la ecuación."),
+            ("Se equivocó al pasar el 2x al otro lado", "Todavía no había llegado a ese paso."),
+            ("No hay error: 3(x − 2) es 3x − 2", "Al reemplazar la solución que sale de ahí, la ecuación original no se cumple."),
         ],
     ),
     _q(
         "alg_lineal", "medio",
-        "¿Cuál es el conjunto solución de la inecuación 2x + 1 < 9?",
-        "x < 4",
-        "Una inecuación se despeja como una ecuación, cuidando el sentido del signo.\n\n"
-        "1) Resta 1 a ambos lados: 2x < 8.\n"
-        "2) Divide por 2, que es positivo, así que el signo < se mantiene: x < 4.\n\n"
-        "Comprueba con un valor: x = 3 cumple (2 · 3 + 1 = 7 < 9), y x = 5 no "
-        "(2 · 5 + 1 = 11).",
+        "La solución de una inecuación es x < 4. ¿Cuál de los siguientes valores NO pertenece al conjunto solución?",
+        "4",
+        "El símbolo < excluye el borde.\n\n"
+        "1) 'Menor que 4' significa estrictamente menor: el 4 mismo queda "
+        "fuera.\n"
+        "2) El 3, el 0 y el −10 son todos menores que 4, así que sí pertenecen.\n"
+        "3) En la recta numérica se dibuja con un punto vacío en el 4 y una "
+        "flecha hacia la izquierda.\n"
+        "4) Si la solución fuera x ≤ 4, el 4 entraría y el punto se dibujaría "
+        "relleno.",
         [
-            ("x > 4", "Invirtió el signo de la desigualdad, algo que solo corresponde al dividir por un número negativo."),
-            ("x < 5", "Dividió 9 por 2 antes de restar el 1."),
-            ("x < 8", "Restó el 1 pero no dividió por 2."),
+            ("3", "Es menor que 4, así que pertenece al conjunto solución."),
+            ("0", "Es menor que 4, así que pertenece."),
+            ("−10", "Es menor que 4; los negativos también cumplen la condición."),
         ],
     ),
     _q(
         "alg_lineal", "dificil",
-        "¿Cuál es el conjunto solución de −3x + 4 ≥ 16?",
-        "x ≤ −4",
-        "El punto clave es que al dividir por un número negativo la desigualdad cambia "
-        "de sentido.\n\n"
-        "1) Resta 4 a ambos lados: −3x ≥ 12.\n"
-        "2) Divide por −3. Como es negativo, el ≥ se transforma en ≤: x ≤ −4.\n\n"
-        "Comprueba: x = −5 cumple, porque −3(−5) + 4 = 19 ≥ 16. En cambio x = 0 no, "
-        "porque da 4.",
+        "Al resolver −3x + 4 ≥ 16, un estudiante llega a −3x ≥ 12 y responde x ≥ −4. ¿Es correcta su respuesta?",
+        "No: al dividir por −3 debía invertir la desigualdad, así que la solución es x ≤ −4",
+        "El paso hasta −3x ≥ 12 está bien; el error viene al despejar.\n\n"
+        "1) Dividir por un número negativo invierte el orden de la "
+        "desigualdad.\n"
+        "2) La solución correcta es x ≤ −4.\n"
+        "3) Compruébalo con x = 0: en la inecuación original queda 4 ≥ 16, que "
+        "es falso. Y el 0 es mayor que −4, así que la respuesta del estudiante "
+        "lo incluiría por error.\n"
+        "4) Con x = −5: −3 · (−5) + 4 = 19 ≥ 16, y −5 sí es menor que −4.",
         [
-            ("x ≥ −4", "Dividió por −3 sin invertir el sentido de la desigualdad."),
-            ("x ≤ 4", "Perdió el signo negativo al dividir."),
-            ("x ≥ 4", "Cometió los dos errores: no invirtió el signo y perdió el negativo."),
+            ("Sí: el procedimiento es correcto", "Con x = 0 la inecuación original no se cumple, y su respuesta lo incluye."),
+            ("No: debía restar 4 en vez de sumarlo", "Restar 4 a ambos lados es exactamente lo que hizo para llegar a −3x ≥ 12."),
+            ("No: la solución es x ≥ 4", "El signo del −4 no cambia al dividir; lo que cambia es el sentido de la desigualdad."),
         ],
     ),
     _q(
         "alg_lineal", "dificil",
-        "La suma de tres números consecutivos es 72. ¿Cuál es el mayor de ellos?",
-        "25",
-        "Conviene nombrar el menor con una letra y escribir los otros en función de él.\n\n"
-        "1) Sea x el menor. Los tres son x, x + 1 y x + 2.\n"
-        "2) Plantea la suma: x + (x + 1) + (x + 2) = 72.\n"
-        "3) Reduce: 3x + 3 = 72, entonces 3x = 69 y x = 23.\n"
-        "4) Los números son 23, 24 y 25, así que el mayor es 25.\n\n"
-        "Atajo: al ser consecutivos, el del medio es el promedio: 72 ÷ 3 = 24, y el "
-        "mayor es 25.",
+        "La suma de tres números consecutivos es 72. ¿Cuál de las siguientes ecuaciones modela correctamente esa situación, si x es el menor?",
+        "x + (x + 1) + (x + 2) = 72",
+        "Consecutivos significa que cada uno supera al anterior en 1.\n\n"
+        "1) Si el menor es x, los siguientes son x + 1 y x + 2.\n"
+        "2) Su suma es 3x + 3 = 72, de donde x = 23.\n"
+        "3) Los números son 23, 24 y 25, y en efecto suman 72.\n"
+        "4) Un atajo útil: cuando son tres consecutivos, el del medio es siempre "
+        "el promedio, o sea 72 ÷ 3 = 24.",
         [
-            ("24", "Encontró el número del medio y lo entregó como respuesta."),
-            ("23", "Entregó el menor de los tres en lugar del mayor."),
-            ("26", "Planteó los consecutivos partiendo desde x + 1 y se corrió un lugar."),
+            ("x + 2x + 3x = 72", "Esos son el número, su doble y su triple: no son consecutivos."),
+            ("3x = 72", "Supone que los tres son iguales, y consecutivos significa distintos."),
+            ("x + (x + 2) + (x + 4) = 72", "Esos avanzan de dos en dos: son consecutivos PARES, no consecutivos."),
         ],
     ),
     _q(
@@ -3121,53 +3168,54 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: sistemas 2x2 ----------
     _q(
         "alg_sistemas", "facil",
-        "Dos personas juntan 12 mil pesos, y una aportó 2 mil más que la otra. ¿Cuánto aportó cada una, en miles de pesos?",
-        "7 y 5",
-        "Con la suma y la diferencia, sumar las ecuaciones elimina una incógnita.\n\n"
-        "1) x + y = 12 y x − y = 2.\n"
-        "2) Sumando ambas: 2x = 14, de donde x = 7.\n"
-        "3) Reemplazando: 7 + y = 12, así que y = 5.\n"
-        "4) Comprueba: 7 + 5 = 12 y 7 − 5 = 2.",
+        "Un problema entrega la suma y la diferencia de dos números. ¿Qué método permite resolverlo en un solo paso?",
+        "Sumar las dos ecuaciones, porque así se elimina el número menor",
+        "Con suma y diferencia, los términos del segundo número tienen signos "
+        "opuestos.\n\n"
+        "1) Las ecuaciones son x + y = S y x − y = D.\n"
+        "2) Al sumarlas, +y y −y se cancelan: queda 2x = S + D.\n"
+        "3) De ahí sale el mayor directamente, y el menor se obtiene "
+        "reemplazando.\n"
+        "4) Restar las ecuaciones también sirve: elimina el mayor y entrega el "
+        "menor.",
         [
-            ("8 y 4", "Suman 12 pero se diferencian en 4, no en 2."),
-            ("6 y 6", "Cumple la suma pero no la diferencia."),
-            ("14 y 2", "Confundió el resultado intermedio 2x = 14 con el aporte de una persona."),
+            ("Multiplicar las dos ecuaciones", "Multiplicar ecuaciones genera términos con xy y complica el sistema."),
+            ("Elevar ambas al cuadrado", "Eso introduce términos cuadráticos donde no los había."),
+            ("Dividir la suma por la diferencia", "Ese cociente no despeja ninguna de las dos incógnitas."),
         ],
     ),
     _q(
         "alg_sistemas", "medio",
-        "¿Cuál es el valor de y en el sistema 2x + y = 11 ; x − y = 1?",
-        "3",
-        "Conviene sumar las ecuaciones para eliminar y, hallar x y luego volver.\n\n"
-        "1) Suma: (2x + y) + (x − y) = 11 + 1, o sea 3x = 12.\n"
-        "2) Despeja: x = 4.\n"
-        "3) Reemplaza en la segunda: 4 − y = 1, entonces y = 3.\n\n"
-        "Verifica en la primera: 2 · 4 + 3 = 11.",
+        "En el sistema 2x + y = 11 junto con x − y = 1, ¿por qué conviene sumar las dos ecuaciones?",
+        "Porque la y aparece con signos opuestos y se cancela al sumar",
+        "El método de reducción busca justamente que una incógnita "
+        "desaparezca.\n\n"
+        "1) En la primera ecuación la y va con signo positivo y en la segunda "
+        "con negativo.\n"
+        "2) Al sumar, +y y −y se anulan: queda 3x = 12, de donde x = 4.\n"
+        "3) Reemplazando en la segunda: 4 − y = 1, así que y = 3.\n"
+        "4) Si los signos hubieran sido iguales, habría convenido RESTAR las "
+        "ecuaciones en vez de sumarlas.",
         [
-            ("4", "Entregó el valor de x en lugar del de y."),
-            ("5", "Reemplazó x = 4 en la primera ecuación pero despejó mal el término y."),
-            ("−3", "Cambió el signo al despejar y en la segunda ecuación."),
+            ("Porque sumar siempre simplifica un sistema", "Sumar solo ayuda cuando una incógnita tiene signos opuestos."),
+            ("Porque los términos independientes suman 12", "Que sumen 12 es consecuencia, no la razón para elegir el método."),
+            ("Porque la x tiene coeficientes distintos", "Los coeficientes distintos en x no se cancelan al sumar."),
         ],
     ),
     _q(
         "alg_sistemas", "medio",
-        "En una feria, 3 kilos de manzanas y 2 de peras cuestan $4.600. "
-        "Un kilo de manzanas y 2 de peras cuestan $2.600. "
-        "¿Cuánto cuesta el kilo de manzanas?",
-        "$1.000",
-        "Se traduce a un sistema y se elimina la incógnita que aparece igual en ambas "
-        "ecuaciones.\n\n"
-        "1) Sea m el precio del kilo de manzanas y p el de peras: "
-        "3m + 2p = 4.600 y m + 2p = 2.600.\n"
-        "2) Ambas tienen 2p, así que resta la segunda de la primera: "
-        "2m = 2.000.\n"
-        "3) Despeja: m = 1.000.\n\n"
-        "Control: si m = 1.000, entonces 2p = 1.600 y p = 800. "
-        "Y 3 · 1.000 + 2 · 800 = 4.600.",
+        "En una feria, 3 kilos de manzanas y 2 de peras cuestan $4.600, y 1 kilo de manzanas y 4 de peras cuestan $4.200. ¿Cuál de los siguientes sistemas modela la situación, con m y p los precios por kilo?",
+        "3m + 2p = 4.600 ; m + 4p = 4.200",
+        "Cada compra se traduce en una ecuación.\n\n"
+        "1) La primera compra: 3 kilos de manzanas a m pesos más 2 de peras a p "
+        "pesos, igual a 4.600.\n"
+        "2) La segunda: 1 kilo de manzanas más 4 de peras, igual a 4.200.\n"
+        "3) Resolviéndolo: m = 1.000 y p = 800 pesos por kilo.\n"
+        "4) Comprueba: 3.000 + 1.600 = 4.600, y 1.000 + 3.200 = 4.200.",
         [
-            ("$800", "Entregó el precio del kilo de peras en lugar del de manzanas."),
-            ("$2.000", "Restó bien las ecuaciones pero no dividió por 2 al despejar m."),
-            ("$1.533", "Dividió el total de la primera ecuación por los 3 kilos de manzanas, ignorando las peras."),
+            ("3m + 2p = 4.200 ; m + 4p = 4.600", "Intercambia los totales de las dos compras."),
+            ("2m + 3p = 4.600 ; 4m + p = 4.200", "Intercambia las cantidades de cada fruta."),
+            ("3m · 2p = 4.600 ; m · 4p = 4.200", "Multiplica los precios entre sí en vez de sumar los gastos."),
         ],
     ),
     _q(
@@ -3190,19 +3238,21 @@ QUESTIONS += [
     ),
     _q(
         "alg_sistemas", "dificil",
-        "¿Cuál es la solución del sistema 4x − 3y = 6 ; 2x + y = 8?",
-        "x = 3 , y = 2",
-        "Conviene igualar coeficientes para eliminar una incógnita.\n\n"
-        "1) Multiplica la segunda ecuación por 3: 6x + 3y = 24.\n"
-        "2) Súmala con la primera, donde y tiene signo opuesto: "
-        "(4x − 3y) + (6x + 3y) = 6 + 24, es decir, 10x = 30.\n"
-        "3) Despeja: x = 3.\n"
-        "4) Reemplaza en 2x + y = 8: 6 + y = 8, entonces y = 2.\n\n"
-        "Verifica en la primera: 4 · 3 − 3 · 2 = 12 − 6 = 6.",
+        "Para resolver 4x − 3y = 6 junto con 2x + y = 8 por reducción, ¿qué conviene hacer primero?",
+        "Multiplicar la segunda ecuación por 3, para que la y quede con coeficientes opuestos",
+        "La reducción exige que una incógnita tenga coeficientes que se "
+        "cancelen.\n\n"
+        "1) La y aparece como −3y y como +y: no se cancelan directamente.\n"
+        "2) Multiplicando la segunda por 3 queda 6x + 3y = 24.\n"
+        "3) Ahora sí: al sumar con la primera, −3y y +3y se anulan y queda "
+        "10x = 30, o sea x = 3.\n"
+        "4) Reemplazando: 6 + y = 8, así que y = 2.\n"
+        "5) También servía multiplicar la segunda por −2 para eliminar la x; "
+        "cualquiera de los dos caminos llega al mismo resultado.",
         [
-            ("x = 2 , y = 3", "Intercambió los valores de las incógnitas."),
-            ("x = 3 , y = 14", "Reemplazó x en la primera ecuación con un error de signo al despejar y."),
-            ("x = 1,5 , y = 5", "Multiplicó solo un lado de la segunda ecuación al igualar coeficientes."),
+            ("Sumar las dos ecuaciones tal como están", "Los términos con y darían −2y: no se eliminan."),
+            ("Restar las dos ecuaciones tal como están", "Quedaría −4y, que tampoco elimina la incógnita."),
+            ("Dividir la primera por 4 para despejar la x", "Deja fracciones y no cancela nada: complica el sistema."),
         ],
     ),
     _q(
@@ -3224,17 +3274,20 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: ecuaciones cuadráticas ----------
     _q(
         "alg_cuadratica", "facil",
-        "Un paño cuadrado de tela cubre exactamente 25 decímetros cuadrados. ¿Cuánto mide su lado?",
-        "5 dm",
-        "El área de un cuadrado es el lado al cuadrado.\n\n"
-        "1) Con lado x: x² = 25, o sea x² − 25 = 0.\n"
-        "2) Factorizando: (x + 5)(x − 5) = 0, de donde x = 5 o x = −5.\n"
-        "3) La medida negativa se descarta y el lado mide 5 decímetros.\n"
-        "4) Comprueba: 5 · 5 = 25.",
+        "¿Cuántas soluciones reales puede tener como máximo una ecuación cuadrática?",
+        "Dos",
+        "El grado de la ecuación limita la cantidad de soluciones.\n\n"
+        "1) Una ecuación de segundo grado tiene a lo más dos soluciones "
+        "reales.\n"
+        "2) Puede tener dos distintas (discriminante positivo), una sola "
+        "(discriminante cero) o ninguna real (discriminante negativo).\n"
+        "3) Nunca puede tener tres: eso requeriría una ecuación de grado mayor.\n"
+        "4) Gráficamente: una parábola corta el eje X en dos puntos, lo toca en "
+        "uno, o no lo corta.",
         [
-            ("12,5 dm", "Dividió el área entre 2 en lugar de sacar raíz cuadrada."),
-            ("25 dm", "Entregó el área en vez de la medida del lado."),
-            ("5 dm y −5 dm", "Las dos cumplen la ecuación, pero una longitud negativa no se puede medir."),
+            ("Una", "Puede tener dos: x² − 4 = 0 se cumple con 2 y con −2."),
+            ("Tres", "Tres soluciones requieren una ecuación de grado 3 o mayor."),
+            ("Infinitas", "Solo una identidad como 0 = 0 tendría infinitas, y no es una cuadrática."),
         ],
     ),
     _q(
@@ -3276,18 +3329,21 @@ QUESTIONS += [
     ),
     _q(
         "alg_cuadratica", "medio",
-        "¿Cuáles son las soluciones de 2x² − 7x + 3 = 0?",
-        "x = 3 y x = 1/2",
-        "Con el coeficiente de x² distinto de 1 conviene aplicar la fórmula general.\n\n"
-        "1) Identifica a = 2, b = −7, c = 3.\n"
-        "2) Calcula el discriminante: b² − 4ac = 49 − 4 · 2 · 3 = 49 − 24 = 25.\n"
-        "3) Su raíz es 5, así que x = (7 ± 5)/(2 · 2) = (7 ± 5)/4.\n"
-        "4) Las soluciones son (7 + 5)/4 = 3 y (7 − 5)/4 = 1/2.\n\n"
-        "Verifica con x = 3: 2 · 9 − 21 + 3 = 0.",
+        "¿Cuándo conviene usar la fórmula general en vez de factorizar una ecuación cuadrática?",
+        "Cuando no se encuentran fácilmente dos números que cumplan la suma y el producto",
+        "Los dos métodos llegan al mismo resultado; cambia el esfuerzo.\n\n"
+        "1) Factorizar es más rápido cuando los números saltan a la vista, como "
+        "en x² + 5x + 6.\n"
+        "2) Con el coeficiente de x² distinto de 1, o con raíces que no son "
+        "enteras, buscar esos números se vuelve lento.\n"
+        "3) La fórmula general funciona siempre, sin depender de la suerte al "
+        "tantear.\n"
+        "4) Además entrega el discriminante, que de paso dice cuántas soluciones "
+        "hay antes de terminar el cálculo.",
         [
-            ("x = 3 y x = 2", "Dividió por a solo en una de las dos soluciones."),
-            ("x = −3 y x = −1/2", "Usó −b con el signo cambiado en la fórmula."),
-            ("x = 1 y x = 3/2", "Calculó mal el discriminante, usando 49 − 24 como si fuera 1."),
+            ("Siempre: factorizar nunca funciona", "Factorizar funciona perfectamente cuando los números son sencillos."),
+            ("Cuando la ecuación no tiene término independiente", "Ese es justamente el caso más fácil de factorizar, sacando x como factor común."),
+            ("Solo cuando el discriminante es negativo", "Con discriminante negativo no hay soluciones reales: la fórmula lo revela, pero sirve en todos los casos."),
         ],
     ),
     _q(
@@ -3310,19 +3366,20 @@ QUESTIONS += [
     ),
     _q(
         "alg_cuadratica", "facil",
-        "Si las soluciones de una ecuación cuadrática son x = 5 y x = −2, "
-        "¿cuál es la ecuación en su forma factorizada igualada a cero?",
-        "(x − 5)(x + 2) = 0",
-        "Cada solución se transforma en un factor con el signo invertido.\n\n"
-        "1) La solución x = 5 proviene del factor (x − 5).\n"
-        "2) La solución x = −2 proviene del factor (x + 2).\n"
-        "3) El producto igualado a cero es (x − 5)(x + 2) = 0.\n\n"
-        "Al desarrollar queda x² − 3x − 10 = 0, y puedes comprobar que x = 5 la "
-        "satisface: 25 − 15 − 10 = 0.",
+        "Si las soluciones de una ecuación cuadrática son p y q, ¿cuál de las siguientes expresiones representa su forma factorizada igualada a cero?",
+        "(x − p)(x − q) = 0",
+        "Cada factor debe anularse justo en su solución.\n\n"
+        "1) Para que x = p anule el producto, el factor tiene que ser "
+        "(x − p).\n"
+        "2) Lo mismo con q: el factor es (x − q).\n"
+        "3) Comprueba con p = 5 y q = −2: los factores son (x − 5) y "
+        "(x + 2), porque restar −2 es sumar 2.\n"
+        "4) El error típico es copiar el signo de la solución en el factor: eso "
+        "invierte las raíces.",
         [
-            ("(x + 5)(x − 2) = 0", "Copió los signos de las soluciones en vez de invertirlos."),
-            ("(x − 5)(x − 2) = 0", "Invirtió el signo de una solución pero no el de la otra."),
-            ("(x + 5)(x + 2) = 0", "Mantuvo ambos signos tal como aparecen en las soluciones."),
+            ("(x + p)(x + q) = 0", "Sus soluciones serían −p y −q, con los signos cambiados."),
+            ("(p − x)(q − x) = 0", "Tiene las mismas raíces, pero desarrollada no coincide con la forma estándar."),
+            ("(x · p)(x · q) = 0", "Ese producto se anula solo en x = 0, sin importar p ni q."),
         ],
     ),
 ]
@@ -3331,17 +3388,18 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: funciones ----------
     _q(
         "alg_funciones", "facil",
-        "El costo de un servicio, en miles de pesos, es f(x) = 3x − 4, donde x son las horas contratadas. ¿Cuánto cuesta contratar 6 horas?",
-        "14",
-        "Se reemplaza la cantidad de horas en la función.\n\n"
-        "1) f(6) = 3 · 6 − 4.\n"
-        "2) Calcula: 18 − 4 = 14 mil pesos.\n"
-        "3) El −4 es un descuento fijo que se aplica una sola vez, sin importar "
-        "cuántas horas se contraten.",
+        "¿Qué significa evaluar una función en un valor determinado?",
+        "Reemplazar la variable por ese valor y calcular el resultado",
+        "La función es una regla que asigna un resultado a cada entrada.\n\n"
+        "1) Evaluar f(x) = 3x − 4 en x = 6 significa reemplazar la x por 6.\n"
+        "2) El cálculo queda 3 · 6 − 4 = 14, así que f(6) = 14.\n"
+        "3) El resultado se llama imagen de 6 por la función.\n"
+        "4) Evaluar no es lo mismo que resolver: resolver sería buscar qué x da "
+        "un resultado dado.",
         [
-            ("22", "Sumó el descuento en lugar de restarlo."),
-            ("18", "Olvidó aplicar el descuento fijo."),
-            ("6", "Entregó las horas contratadas en vez del costo."),
+            ("Despejar la variable de la ecuación", "Eso es resolver, que es el problema inverso a evaluar."),
+            ("Encontrar dónde la función vale cero", "Eso es buscar los ceros o raíces de la función."),
+            ("Calcular la pendiente de la función", "La pendiente describe cómo cambia la función, no su valor en un punto."),
         ],
     ),
     _q(
@@ -3362,18 +3420,19 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "La ganancia de un negocio, en miles de pesos, es y = 2x − 6, donde x son las unidades vendidas. ¿Cuántas unidades hay que vender para no ganar ni perder?",
-        "3",
-        "No ganar ni perder significa ganancia cero, que es donde la recta corta el "
-        "eje X.\n\n"
-        "1) Se plantea y = 0: 2x − 6 = 0.\n"
-        "2) Despejando: 2x = 6, o sea x = 3 unidades.\n"
-        "3) El punto de corte es (3, 0). Con menos de 3 unidades hay pérdida y con "
-        "más, ganancia.",
+        "En un modelo lineal de ganancia, ¿qué representa el punto donde la recta corta el eje X?",
+        "El punto de equilibrio: la cantidad a partir de la cual el negocio deja de perder",
+        "Cortar el eje X significa que la ganancia vale cero.\n\n"
+        "1) En ese punto no hay ni ganancia ni pérdida.\n"
+        "2) Antes de él la ganancia es negativa y después positiva, porque la "
+        "pendiente es positiva.\n"
+        "3) En y = 2x − 6 ese punto está en x = 3 unidades.\n"
+        "4) No confundirlo con el corte del eje Y, que indica cuánto se pierde "
+        "sin vender nada.",
         [
-            ("6", "Tomó el término independiente como respuesta sin despejar la ecuación."),
-            ("−6", "Es el valor de la ganancia con cero unidades vendidas, no las unidades buscadas."),
-            ("2", "Ese es el aporte de cada unidad a la ganancia, no la cantidad que equilibra el negocio."),
+            ("La ganancia máxima posible", "Una recta con pendiente positiva no tiene máximo: crece sin límite."),
+            ("El costo fijo del negocio", "Ese aparece en el corte con el eje Y, no con el eje X."),
+            ("La cantidad que conviene producir", "El modelo no dice qué conviene: solo dice a partir de dónde deja de perderse."),
         ],
     ),
     _q(
@@ -3812,32 +3871,38 @@ QUESTIONS += [
     ),
     _q(
         "prob_estadistica_desc", "facil",
-        "¿Cuál es la mediana de los datos 7, 3, 9, 1 y 5?",
-        "5",
-        "La mediana es el valor central una vez ordenados los datos.\n\n"
-        "1) Ordena de menor a mayor: 1, 3, 5, 7, 9.\n"
-        "2) Como son 5 datos, la posición central es la tercera.\n"
-        "3) El tercer valor es 5.\n\n"
-        "Con una cantidad par de datos habría que promediar los dos centrales.",
+        "¿Cuál es el primer paso para calcular la mediana de un conjunto de datos?",
+        "Ordenar los datos de menor a mayor",
+        "La mediana se define sobre los datos ordenados, no sobre la lista tal "
+        "como viene.\n\n"
+        "1) Sin ordenar, el valor del centro de la lista no tiene ningún "
+        "significado.\n"
+        "2) Con 7, 3, 9, 1 y 5 el centro de la lista es 9, pero ordenados quedan "
+        "1, 3, 5, 7 y 9 y la mediana es 5.\n"
+        "3) Recién después de ordenar se busca el del medio, o el promedio de "
+        "los dos centrales si la cantidad es par.\n"
+        "4) Olvidar este paso es el error más frecuente del tema.",
         [
-            ("9", "Tomó el valor central sin ordenar previamente los datos."),
-            ("5,8", "Calculó el promedio en lugar de la mediana."),
-            ("4", "Promedió los dos valores que quedan a los lados del centro."),
+            ("Sumar todos los datos", "Eso es el primer paso para calcular la MEDIA, no la mediana."),
+            ("Contar cuántas veces se repite cada dato", "Eso sirve para la moda."),
+            ("Restar el menor del mayor", "Eso entrega el rango."),
         ],
     ),
     _q(
         "prob_estadistica_desc", "medio",
-        "En el conjunto 2, 5, 5, 7, 9, 5, 2, ¿cuál es la moda?",
-        "5",
-        "La moda es el valor que aparece con mayor frecuencia.\n\n"
-        "1) Cuenta cada valor: el 2 aparece 2 veces, el 5 aparece 3 veces, el 7 una vez "
-        "y el 9 una vez.\n"
-        "2) El valor con más repeticiones es el 5.\n\n"
-        "La moda no tiene por qué coincidir con el promedio ni con la mediana.",
+        "En un diagrama de cajón, ¿qué fracción de los datos queda dentro de la caja?",
+        "La mitad",
+        "Los bordes de la caja son el primer y el tercer cuartil.\n\n"
+        "1) El primer cuartil deja por debajo el 25% de los datos.\n"
+        "2) El tercer cuartil deja por debajo el 75%.\n"
+        "3) Entre ambos queda el 50% central de los datos: la mitad.\n"
+        "4) Cada bigote, en cambio, contiene un 25%. Que un bigote sea más largo "
+        "no significa que tenga más datos: significa que ese cuarto está más "
+        "disperso.",
         [
-            ("2", "Eligió el valor que se repite pero no el de mayor frecuencia."),
-            ("3", "Entregó la cantidad de repeticiones en lugar del valor que se repite."),
-            ("5,3", "Calculó el promedio del conjunto en vez de la moda."),
+            ("Un cuarto", "Un cuarto es lo que contiene cada bigote, no la caja."),
+            ("Tres cuartos", "Tres cuartos es lo que queda por debajo del borde derecho de la caja."),
+            ("Todos", "Los bigotes representan datos que quedan fuera de la caja."),
         ],
     ),
     _q(
@@ -3999,34 +4064,39 @@ QUESTIONS += [
     # ---------- PROBABILIDAD: reglas ----------
     _q(
         "prob_reglas", "facil",
-        "Se lanza un dado común de 6 caras. ¿Cuál es la probabilidad de obtener un "
-        "número primo?",
-        "1/2",
-        "Primero hay que identificar bien cuáles son los casos favorables.\n\n"
-        "1) Los números primos entre 1 y 6 son 2, 3 y 5. El 1 no es primo y el 4 y el "
-        "6 son compuestos.\n"
-        "2) Son 3 casos favorables de 6 posibles.\n"
-        "3) La probabilidad es 3/6 = 1/2.",
+        "En un juego se afirma que, como hay dos resultados posibles —ganar o perder—, la probabilidad de ganar es 1/2. ¿Es correcto ese razonamiento?",
+        "No: contar resultados solo sirve si todos son igualmente probables",
+        "La regla de casos favorables sobre casos totales exige que los casos "
+        "sean equiprobables.\n\n"
+        "1) En un dado las seis caras sí son equiprobables, y por eso se puede "
+        "contar directo.\n"
+        "2) En un juego cualquiera, ganar y perder no tienen por qué serlo: en "
+        "la lotería también hay dos resultados y la probabilidad de ganar es "
+        "diminuta.\n"
+        "3) Por eso hay que mirar la estructura del experimento antes de "
+        "contar.\n"
+        "4) Es el mismo error que lleva a decir que la probabilidad de que "
+        "mañana llueva es 1/2 porque llueve o no llueve.",
         [
-            ("2/3", "Incluyó el 1 entre los primos, contando 4 casos favorables."),
-            ("1/3", "Consideró solo dos números primos."),
-            ("1/6", "Consideró un único caso favorable."),
+            ("Sí: con dos resultados posibles la probabilidad siempre es 1/2", "En la lotería también hay dos resultados y la probabilidad de ganar es minúscula."),
+            ("No: la probabilidad de ganar siempre es menor que 1/2", "Hay juegos con probabilidad de ganar mayor que 1/2; el problema es el razonamiento, no el valor."),
+            ("Sí, pero solo si el juego es de azar", "Aun siendo de azar, los dos resultados pueden tener probabilidades muy distintas."),
         ],
     ),
     _q(
         "prob_reglas", "medio",
-        "En una caja hay 7 fichas blancas y 5 negras. Se saca una al azar. "
-        "¿Cuál es la probabilidad de que NO sea blanca?",
-        "5/12",
-        "Conviene contar directamente los casos que cumplen la condición pedida.\n\n"
-        "1) Que no sea blanca significa que sea negra: hay 5 fichas negras.\n"
-        "2) El total de fichas es 7 + 5 = 12.\n"
-        "3) La probabilidad es 5/12.\n\n"
-        "También se obtiene por complemento: 1 − 7/12 = 5/12.",
+        "En una caja hay 7 fichas blancas y 5 negras. ¿Cuál de las siguientes afirmaciones es correcta?",
+        "La probabilidad de sacar blanca es mayor que 1/2 y la de sacar negra es menor",
+        "Basta comparar cada cantidad con la mitad del total.\n\n"
+        "1) Hay 12 fichas en total, así que la mitad son 6.\n"
+        "2) Las blancas son 7, más que la mitad: su probabilidad es 7/12, mayor "
+        "que 1/2.\n"
+        "3) Las negras son 5, menos que la mitad: 5/12, menor que 1/2.\n"
+        "4) Y ambas suman 1, como corresponde a dos eventos complementarios.",
         [
-            ("7/12", "Calculó la probabilidad de que sí sea blanca."),
-            ("5/7", "Comparó las negras con las blancas en lugar de con el total."),
-            ("1/2", "Supuso que ambos colores son igual de probables."),
+            ("Ambas probabilidades son iguales", "Habría que tener la misma cantidad de fichas de cada color."),
+            ("La probabilidad de sacar negra es 5/7", "El denominador debe ser el TOTAL de fichas, que es 12, no las blancas."),
+            ("La suma de ambas probabilidades es mayor que 1", "Suman exactamente 1: 7/12 + 5/12 = 12/12."),
         ],
     ),
     _q(
@@ -5048,19 +5118,20 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "facil",
-        "En una jarra hay 7/8 de litro de jugo y se sirven 1/4 de litro. ¿Cuánto jugo queda en la jarra?",
-        "5/8 de litro",
-        "Servir es quitar, así que la operación es una resta de fracciones.\n\n"
-        "1) Plantea la resta: 7/8 − 1/4.\n"
-        "2) Iguala los denominadores. Como 8 es múltiplo de 4, basta llevar 1/4 a "
-        "octavos: multiplicas arriba y abajo por 2 y queda 2/8.\n"
-        "3) Resta los numeradores manteniendo el denominador: 7/8 − 2/8 = 5/8.\n"
-        "4) Contrasta con el sentido común: quedaba casi un litro y se sirvió un cuarto, "
-        "así que el resultado debe estar algo por encima de medio litro. 5/8 = 0,625 lo cumple.",
+        "¿Cuál de las siguientes afirmaciones sobre las fracciones equivalentes es siempre verdadera?",
+        "Multiplicar numerador y denominador por el mismo número no cambia el valor",
+        "Amplificar y simplificar cambian la escritura, no la cantidad.\n\n"
+        "1) 1/2 y 3/6 representan la misma parte del entero: multiplicar arriba "
+        "y abajo por 3 no altera el valor.\n"
+        "2) Eso es lo que permite llevar fracciones a denominador común antes de "
+        "sumarlas.\n"
+        "3) En cambio SUMAR el mismo número arriba y abajo sí cambia el valor: "
+        "1/2 no es lo mismo que 2/3.\n"
+        "4) Comprueba: 1/2 = 0,5 y 2/3 ≈ 0,67.",
         [
-            ("6/8 de litro", "Restó 1 al numerador sin llevar antes las fracciones a un denominador común."),
-            ("9/8 de litro", "Sumó en lugar de restar, obteniendo más jugo del que había al principio."),
-            ("7/32 de litro", "Multiplicó las dos fracciones en vez de restarlas."),
+            ("Sumar el mismo número al numerador y al denominador no cambia el valor", "1/2 da 0,5 y 2/3 da 0,67: sí cambia."),
+            ("Dos fracciones con el mismo numerador son equivalentes", "1/2 y 1/5 comparten numerador y valen distinto."),
+            ("Solo son equivalentes si tienen el mismo denominador", "1/2 y 3/6 son equivalentes con denominadores distintos."),
         ],
     ),
     _q(
@@ -5081,38 +5152,38 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "medio",
-        "Un ciclista recorre 2/5 de una ruta el primer día y 1/3 del total el segundo. ¿Qué fracción de la ruta le queda por recorrer?",
-        "4/15",
-        "La ruta completa es 1. Lo que queda es el total menos lo ya recorrido.\n\n"
-        "1) Suma lo recorrido: 2/5 + 1/3. El mínimo común múltiplo de 5 y 3 es 15, "
-        "así que 2/5 = 6/15 y 1/3 = 5/15.\n"
-        "2) 6/15 + 5/15 = 11/15 de la ruta recorrida.\n"
-        "3) Resta ese avance del total: 1 − 11/15. Escribe el 1 como 15/15 para poder "
-        "restar: 15/15 − 11/15 = 4/15.\n"
-        "4) Verifica: 11/15 recorrido más 4/15 restante suman 15/15, es decir la ruta "
-        "completa.",
+        "Un ciclista recorre 2/5 de una ruta el primer día y 1/3 del total el segundo. ¿Cuál de las siguientes expresiones representa la fracción de ruta que le falta?",
+        "1 − (2/5 + 1/3)",
+        "Lo que falta es el total menos lo recorrido.\n\n"
+        "1) Ambas fracciones están medidas sobre la ruta completa, así que se "
+        "pueden sumar directamente.\n"
+        "2) Lo recorrido es 2/5 + 1/3 = 6/15 + 5/15 = 11/15.\n"
+        "3) Lo que falta es 1 − 11/15 = 4/15.\n"
+        "4) Ojo con el detalle del enunciado: dice '1/3 del total', no '1/3 de "
+        "lo que faltaba'. Si dijera lo segundo habría que multiplicar antes de "
+        "restar.",
         [
-            ("11/15", "Calculó correctamente lo recorrido, pero eso no es lo que se pregunta: falta restarlo del total."),
-            ("3/8", "Sumó numeradores entre sí y denominadores entre sí al juntar los dos días."),
-            ("2/15", "Multiplicó las dos fracciones en lugar de sumarlas y restarlas del total."),
+            ("1 − (2/5 · 1/3)", "Multiplicar correspondería si el segundo día fuera una fracción de lo que faltaba."),
+            ("(2/5 + 1/3) − 1", "Da un valor negativo: resta al revés."),
+            ("1 − 2/5 − 1/3 − 1", "Resta el entero dos veces."),
         ],
     ),
     _q(
         "num_racionales", "dificil",
-        "Si x = 3/8 y y = 5/6, ¿cuál es el valor de (y − x) ÷ (y + x)?",
-        "11/29",
-        "Conviene resolver por separado el numerador y el denominador antes de dividir.\n\n"
-        "1) Iguala denominadores: el mínimo común múltiplo de 8 y 6 es 24, así que "
-        "x = 9/24 e y = 20/24.\n"
-        "2) Diferencia: y − x = 20/24 − 9/24 = 11/24.\n"
-        "3) Suma: y + x = 20/24 + 9/24 = 29/24.\n"
-        "4) Divide: (11/24) ÷ (29/24) = 11/24 × 24/29. Los 24 se cancelan y queda 11/29.\n\n"
-        "Control: la diferencia es bastante menor que la suma, así que el cociente debe "
-        "ser un número pequeño, menor que 1.",
+        "Sean x e y fracciones positivas con x menor que y. ¿Qué se puede afirmar sobre el cociente (y − x) ÷ (y + x)?",
+        "Es siempre menor que 1",
+        "Se compara el numerador con el denominador sin calcular nada.\n\n"
+        "1) El numerador es y − x y el denominador es y + x.\n"
+        "2) Como x es positiva, restarla da menos que sumarla: y − x es menor "
+        "que y + x.\n"
+        "3) Un cociente con numerador menor que el denominador, ambos positivos, "
+        "es menor que 1.\n"
+        "4) Comprueba con x = 3/8 e y = 5/6: el cociente es 11/29, "
+        "aproximadamente 0,38.",
         [
-            ("29/11", "Dividió la suma por la diferencia, invirtiendo el orden que pide el enunciado."),
-            ("11/24", "Calculó solo la diferencia y no la dividió por la suma."),
-            ("29/24", "Calculó solo la suma y la entregó como resultado final."),
+            ("Es siempre mayor que 1", "El numerador es más chico que el denominador, así que el cociente no llega a 1."),
+            ("Es siempre negativo", "Como y es mayor que x, el numerador es positivo."),
+            ("Es siempre igual a y ÷ x", "Con x = 3/8 e y = 5/6 ese cociente daría 20/9, muy distinto de 11/29."),
         ],
     ),
     _q(
@@ -5149,18 +5220,21 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_potencias_raices", "facil",
-        "Dos patios cuadrados miden 169 y 36 metros cuadrados de superficie. ¿Cuánto suman las medidas de sus lados?",
-        "19",
-        "Se saca la raíz de cada superficie por separado.\n\n"
-        "1) Lado del primero: √169 = 13 metros.\n"
-        "2) Lado del segundo: √36 = 6 metros.\n"
-        "3) Suma: 13 + 6 = 19 metros.\n"
-        "4) Comprueba que no se puede sumar primero: √205 no es 19.",
+        "num_potencias_raices", "medio",
+        "El área de un cuadrado es A. ¿Cuál de las siguientes expresiones representa la medida de su lado?",
+        "√A",
+        "El área de un cuadrado es el lado al cuadrado, así que el lado es la "
+        "raíz del área.\n\n"
+        "1) Si el lado es L, el área es L² = A.\n"
+        "2) Despejando: L = √A, tomando la raíz positiva porque es una "
+        "longitud.\n"
+        "3) Comprueba con A = 169: el lado mide 13 metros.\n"
+        "4) Ojo con A/2 y A/4: esas expresiones reparten el área, no deshacen el "
+        "cuadrado.",
         [
-            ("205", "Sumó las superficies sin sacar raíz a ninguna."),
-            ("14,3", "Sumó las superficies y recién ahí sacó la raíz, que no es lo mismo."),
-            ("78", "Multiplicó los lados en vez de sumarlos."),
+            ("A / 2", "Dividir por 2 no deshace un cuadrado: con A = 169 daría 84,5 en vez de 13."),
+            ("A / 4", "Esa expresión aparecería en un perímetro, no en el lado a partir del área."),
+            ("A²", "Elevar al cuadrado agranda todavía más: va en la dirección contraria."),
         ],
     ),
     _q(
@@ -5267,38 +5341,36 @@ QUESTIONS += [
     ),
     _q(
         "num_porcentajes", "medio",
-        "En un curso de 45 estudiantes, 27 aprobaron una prueba. ¿Qué porcentaje del curso aprobó?",
-        "60%",
-        "Un porcentaje se obtiene comparando la parte con el total.\n\n"
-        "1) Escribe la razón entre la parte y el total: 27/45.\n"
-        "2) Simplifica dividiendo ambos por 9: 27 ÷ 9 = 3 y 45 ÷ 9 = 5, o sea 3/5.\n"
-        "3) Lleva la fracción a porcentaje multiplicando por 100: 3/5 · 100 = 60. "
-        "El resultado es 60%.\n"
-        "4) Control: 27 es algo más de la mitad de 45, así que el porcentaje debe "
-        "superar el 50%.",
+        "En un curso el 60% aprobó una prueba. Si en otro curso también aprobó el 60%, ¿qué se puede afirmar?",
+        "La misma proporción aprobó en ambos, pero pueden ser cantidades distintas de estudiantes",
+        "Un porcentaje describe una proporción, no una cantidad.\n\n"
+        "1) En un curso de 45 estudiantes, el 60% son 27.\n"
+        "2) En uno de 30, el 60% son 18.\n"
+        "3) La proporción es la misma, pero los números absolutos no.\n"
+        "4) Por eso comparar porcentajes entre grupos de distinto tamaño exige "
+        "cuidado: el mismo porcentaje puede representar realidades muy "
+        "distintas.",
         [
-            ("40%", "Calculó el porcentaje de quienes no aprobaron."),
-            ("27%", "Tomó la cantidad de aprobados como si ya fuera un porcentaje."),
-            ("166,7%", "Dividió el total por la parte en lugar de la parte por el total."),
+            ("Aprobó la misma cantidad de estudiantes en ambos cursos", "Solo si los cursos tuvieran el mismo tamaño."),
+            ("Los dos cursos tienen la misma cantidad de estudiantes", "El porcentaje no dice nada sobre el tamaño de cada curso."),
+            ("En ambos aprobaron exactamente 60 estudiantes", "El 60% no significa 60 personas: es una proporción."),
         ],
     ),
     _q(
         "num_porcentajes", "medio",
-        "Un producto de $50.000 tiene dos descuentos sucesivos: 20% y luego 10% sobre el precio ya rebajado. ¿Cuál es el precio final?",
-        "$36.000",
-        "Los descuentos sucesivos no se suman: el segundo se aplica sobre un precio "
-        "que ya bajó.\n\n"
-        "1) Primer descuento: el 20% de 50.000 es 10.000, así que el precio pasa a "
-        "40.000.\n"
-        "2) Segundo descuento: el 10% se calcula sobre 40.000, no sobre 50.000. "
-        "El 10% de 40.000 es 4.000.\n"
-        "3) Precio final: 40.000 − 4.000 = 36.000.\n"
-        "4) Camino directo: 50.000 · 0,8 · 0,9 = 36.000. Equivale a un único descuento "
-        "del 28%, no del 30%.",
+        "¿Cuál de las siguientes expresiones representa el precio final de un producto de P pesos al que se le aplican dos descuentos sucesivos, primero del 20% y después del 10%?",
+        "P · 0,8 · 0,9",
+        "Cada descuento se aplica sobre el precio que quedó del anterior.\n\n"
+        "1) Tras el 20% queda el 80%: P · 0,8.\n"
+        "2) Sobre ese monto se descuenta el 10%, quedando el 90%: "
+        "P · 0,8 · 0,9.\n"
+        "3) El producto 0,8 · 0,9 = 0,72, o sea que queda el 72% del precio "
+        "original: un descuento total del 28%, no del 30%.\n"
+        "4) Comprueba con P = 50.000: el precio final es 36.000.",
         [
-            ("$35.000", "Sumó los descuentos y aplicó un 30% de una sola vez."),
-            ("$40.000", "Aplicó solo el primer descuento y olvidó el segundo."),
-            ("$45.000", "Aplicó solo el descuento del 10%."),
+            ("P · 0,7", "Suma los dos porcentajes como si fueran 30%, y el efecto real es del 28%."),
+            ("P · 0,8 + P · 0,9", "Suma dos precios en vez de aplicar un descuento después del otro."),
+            ("P − 0,2 − 0,1", "Resta números pequeños a un precio en pesos: los porcentajes no son cantidades."),
         ],
     ),
     _q(
@@ -9510,30 +9582,36 @@ QUESTIONS += [
     # ---------- num_porcentajes ----------
     _q(
         "num_porcentajes", "facil",
-        "¿Cuánto es el 25% de 320?",
-        "80",
-        "El 25% equivale a la cuarta parte.\n\n"
-        "1) Convierte el porcentaje a decimal: 25% = 0,25.\n"
-        "2) Multiplica: 0,25 · 320 = 80.\n"
-        "3) Camino mental: el 25% es dividir por 4, y 320 ÷ 4 = 80.",
+        "¿A qué fracción equivale un 25%?",
+        "1/4",
+        "Un porcentaje es una fracción con denominador 100.\n\n"
+        "1) El 25% es 25/100.\n"
+        "2) Simplificando por 25: 1/4.\n"
+        "3) Por eso calcular el 25% de una cantidad es lo mismo que dividirla "
+        "en cuatro: el 25% de 320 son 80.\n"
+        "4) Vale la pena memorizar las equivalencias más usadas: 50% es 1/2, "
+        "25% es 1/4, 20% es 1/5 y 10% es 1/10.",
         [
-            ("8.000", "Multiplicó por 25 pero olvidó dividir por 100."),
-            ("240", "Calculó el 75% restante en lugar del 25% pedido."),
-            ("64", "Usó un 20% en lugar del 25%."),
+            ("1/25", "Esa fracción equivale al 4%, no al 25%."),
+            ("2/5", "Esa fracción equivale al 40%."),
+            ("1/2", "Esa fracción equivale al 50%."),
         ],
     ),
     _q(
         "num_porcentajes", "facil",
-        "¿Cuánto es el 60% de 45?",
-        "27",
-        "Se pasa el porcentaje a decimal y se multiplica.\n\n"
-        "1) 60% = 0,6.\n"
-        "2) Multiplica: 0,6 · 45 = 27.\n"
-        "3) Camino mental: el 10% de 45 es 4,5, así que el 60% es 4,5 · 6 = 27.",
+        "Un estudiante afirma que calcular el 60% de 45 da lo mismo que calcular el 45% de 60. ¿Es correcta su afirmación?",
+        "Sí: ambos dan 27, porque multiplicar es conmutativo",
+        "Calcular un porcentaje es multiplicar, y el orden de los factores no "
+        "altera el producto.\n\n"
+        "1) El 60% de 45 es 0,6 · 45 = 27.\n"
+        "2) El 45% de 60 es 0,45 · 60 = 27.\n"
+        "3) Ambos son en realidad la misma multiplicación: (60 · 45)/100.\n"
+        "4) Es un atajo útil: el 8% de 50 cuesta pensarlo, pero el 50% de 8 es "
+        "obviamente 4.",
         [
-            ("2.700", "Multiplicó por 60 sin dividir por 100."),
-            ("18", "Calculó el 40% restante en lugar del 60%."),
-            ("75", "Sumó 60 y 45 en lugar de calcular el porcentaje."),
+            ("No: el 60% de 45 es mayor porque 60 es mayor que 45", "Ambos cálculos dan 27; la base más chica compensa el porcentaje más alto."),
+            ("No: solo coinciden cuando los números son múltiplos de 5", "La propiedad vale para cualquier par de números."),
+            ("Sí, pero solo porque ambos resultados son enteros", "La igualdad vale siempre, den enteros o no."),
         ],
     ),
     _q(
@@ -19493,51 +19571,55 @@ QUESTIONS += [
     ),
     _q(
         "alg_proporcionalidad", "facil",
-        "En una proporcionalidad directa, a x = 2 le corresponde y = 10 y a x = 5 le corresponde y = 25. ¿Cuál es la constante de proporcionalidad?",
-        "5",
-        "En la proporcionalidad directa la constante es el cociente y/x.\n\n"
-        "1) Con el primer par: 10 ÷ 2 = 5.\n"
-        "2) Con el segundo par: 25 ÷ 5 = 5.\n"
-        "3) Los dos dan lo mismo, así que la constante es 5 y la relación se "
-        "escribe y = 5x.\n"
-        "4) Que ambos pares den el mismo cociente es justamente lo que confirma "
-        "que la proporcionalidad es directa.",
+        "¿Cómo se reconoce una proporcionalidad directa a partir de una tabla de valores?",
+        "Dividiendo cada par y comprobando que el cociente sea el mismo en todos",
+        "La constante de la proporcionalidad directa es el cociente y/x.\n\n"
+        "1) Hay que dividir cada valor de y por su x correspondiente.\n"
+        "2) Si todos los cocientes coinciden, ese número es la constante y la "
+        "relación es directa.\n"
+        "3) Basta con que UN par no cumpla para descartarla.\n"
+        "4) Para la proporcionalidad inversa, en cambio, lo que se comprueba es "
+        "que el PRODUCTO sea constante.",
         [
-            ("2", "Dividió al revés, x entre y: eso da 1/5, no la constante, y además usó solo un par."),
-            ("20", "Multiplicó 2 por 10; el producto constante es el sello de la proporcionalidad inversa, no de esta."),
-            ("15", "Sumó 10 y 5 sin operar con un par completo: la constante sale de dividir y por x."),
+            ("Comprobando que al crecer x también crezca y", "Es necesario pero no suficiente: y = x + 10 crece igual y no es proporcional."),
+            ("Multiplicando cada par y comprobando que el producto sea el mismo", "Ese es el criterio de la proporcionalidad INVERSA."),
+            ("Restando cada par y comprobando que la diferencia sea la misma", "Una diferencia constante describe una función afín, no una proporcionalidad."),
         ],
     ),
     _q(
         "alg_proporcionalidad", "facil",
-        "En una proporcionalidad inversa, cuando x = 4 se tiene y = 15. ¿Cuál es la constante de proporcionalidad?",
-        "60",
-        "En la proporcionalidad inversa la constante es el producto x · y.\n\n"
-        "1) Multiplica el par de valores: 4 · 15 = 60.\n"
-        "2) Esa constante manda en toda la tabla: cualquier otro par tendrá que "
-        "multiplicarse también 60, por ejemplo x = 10 con y = 6.\n"
-        "3) La relación se escribe y = 60/x.",
+        "Dos magnitudes son inversamente proporcionales. ¿Cuál de las siguientes afirmaciones es siempre verdadera?",
+        "Ninguna de las dos puede valer cero",
+        "El producto de ambas debe ser una constante distinta de cero.\n\n"
+        "1) Si una valiera cero, el producto sería cero y no podría coincidir "
+        "con la constante.\n"
+        "2) Por eso la gráfica nunca toca los ejes: se acerca sin llegar.\n"
+        "3) En la proporcionalidad DIRECTA es al revés: la gráfica pasa "
+        "obligatoriamente por el origen.\n"
+        "4) Esa diferencia es la forma más rápida de distinguir las dos "
+        "gráficas.",
         [
-            ("3,75", "Dividió 15 entre 4: ese es el camino de la proporcionalidad directa, no de la inversa."),
-            ("19", "Sumó los dos valores; lo que se mantiene constante en la inversa es el producto."),
-            ("11", "Restó 4 a 15: una diferencia constante no describe una proporcionalidad."),
+            ("Ambas crecen al mismo tiempo", "En la inversa se mueven en sentidos opuestos."),
+            ("Su suma es constante", "Lo constante es el producto, no la suma."),
+            ("La gráfica pasa por el origen", "Eso ocurre en la proporcionalidad directa; la inversa nunca toca los ejes."),
         ],
     ),
     _q(
         "alg_proporcionalidad", "facil",
-        "El gráfico que representa una proporcionalidad directa entre dos magnitudes es siempre",
-        "una recta que pasa por el origen",
-        "La forma del gráfico sale directo de la fórmula.\n\n"
-        "1) Una proporcionalidad directa se escribe y = kx, que es la ecuación de "
-        "una recta de pendiente k.\n"
-        "2) Esa recta pasa por el origen, porque si x = 0 entonces y = k · 0 = 0.\n"
-        "3) El paso por el origen es lo que distingue una proporcionalidad de "
-        "cualquier otra recta: y = 2x + 3 crece parejo, pero no es proporcional, "
-        "porque con x = 0 ya vale 3.",
+        "Se compara la gráfica de una proporcionalidad directa con la de una función afín como y = 2x + 3. ¿Cuál es la diferencia?",
+        "La proporcionalidad pasa por el origen y la afín no",
+        "Ambas son rectas, pero solo una arranca en cero.\n\n"
+        "1) En y = 2x, con x = 0 se obtiene y = 0: la recta pasa por el "
+        "origen.\n"
+        "2) En y = 2x + 3, con x = 0 se obtiene y = 3: la recta está "
+        "desplazada.\n"
+        "3) Las dos crecen al mismo ritmo, porque comparten la pendiente.\n"
+        "4) Pero solo la primera tiene cociente constante: en la segunda, y/x da "
+        "5 con x = 1 y 3,5 con x = 2.",
         [
-            ("una recta que corta el eje Y sobre el origen", "Esa es una función afín como y = kx + n: crece parejo, pero con x = 0 no vale 0, así que no es proporcional."),
-            ("una curva que se acerca a los ejes sin tocarlos", "Esa es la forma de la proporcionalidad INVERSA, y = k/x, que es una hipérbola."),
-            ("una parábola que pasa por el origen", "Una parábola corresponde a y = kx², donde y crece con el cuadrado de x, no en proporción directa."),
+            ("La proporcionalidad es una curva y la afín una recta", "Las dos son rectas: la curva corresponde a la proporcionalidad inversa."),
+            ("La afín crece más rápido", "Comparten la pendiente 2, así que crecen igual de rápido."),
+            ("La proporcionalidad no se puede graficar", "Se grafica perfectamente: es una recta por el origen."),
         ],
     ),
     _q(
@@ -19560,47 +19642,55 @@ QUESTIONS += [
     # ---------- directa en contexto ----------
     _q(
         "alg_proporcionalidad", "facil",
-        "Tres kilos de pan cuestan $4.500. Al mismo precio por kilo, ¿cuánto cuestan 5 kilos?",
-        "$7.500",
-        "Conviene calcular primero el precio de un kilo.\n\n"
+        "Tres kilos de pan cuestan $4.500. ¿Cuál de las siguientes expresiones representa el precio P de k kilos, al mismo precio por kilo?",
+        "P = 1.500 · k",
+        "Primero se obtiene el precio unitario y ese es la constante.\n\n"
         "1) Precio por kilo: 4.500 ÷ 3 = 1.500.\n"
-        "2) Precio de 5 kilos: 1.500 · 5 = 7.500.\n"
-        "3) Control: 5 kilos son más que 3, así que el resultado tiene que ser "
-        "mayor que $4.500, y lo es.",
+        "2) Como la relación es directa, P = 1.500 · k.\n"
+        "3) Comprueba con k = 3: da 4.500, el dato del enunciado.\n"
+        "4) Y con k = 5: 7.500 pesos.",
         [
-            ("$6.000", "Sumó el precio de un kilo dos veces sobre el original; el salto de 3 a 5 kilos son dos kilos más, pero calculó mal el kilo."),
-            ("$2.700", "Dividió por 5 en vez de multiplicar: al comprar más pan el total no puede bajar."),
-            ("$1.500", "Se quedó en el precio de un solo kilo sin multiplicarlo por los 5 que pide el enunciado."),
+            ("P = 4.500 · k", "Usa el precio de tres kilos como si fuera el de uno."),
+            ("P = 4.500 / k", "Es una proporcionalidad inversa: haría que más pan costara menos."),
+            ("P = k / 1.500", "Invierte la relación y entrega kilos por peso, no pesos por kilo."),
         ],
     ),
     _q(
-        "alg_proporcionalidad", "facil",
-        "Un automóvil consume 6 litros de bencina cada 100 kilómetros. Al mismo rendimiento, ¿cuántos litros consume en 250 kilómetros?",
-        "15 litros",
-        "El consumo y la distancia son directamente proporcionales.\n\n"
-        "1) Consumo por kilómetro: 6 ÷ 100 = 0,06 litros.\n"
-        "2) En 250 kilómetros: 0,06 · 250 = 15 litros.\n"
-        "3) Otra forma de verlo: 250 km es dos veces y media 100 km, y 6 · 2,5 = 15.",
+        "alg_proporcionalidad", "medio",
+        "Un automóvil consume 6 litros cada 100 km y otro consume 8 litros cada 100 km. ¿Cuál de las siguientes afirmaciones es correcta?",
+        "El primero recorre más kilómetros con la misma cantidad de bencina",
+        "Menos consumo por distancia significa mayor rendimiento.\n\n"
+        "1) El primero gasta 0,06 litros por kilómetro y el segundo 0,08.\n"
+        "2) Con 24 litros, el primero recorre 400 km y el segundo 300.\n"
+        "3) Por eso el de menor consumo rinde más: recorre más con lo mismo.\n"
+        "4) Es un caso de proporcionalidad inversa entre consumo por kilómetro y "
+        "kilómetros por litro.",
         [
-            ("12 litros", "Duplicó el consumo pensando en 200 kilómetros y olvidó los 50 restantes."),
-            ("24 litros", "Multiplicó por 4 como si fueran 400 kilómetros."),
-            ("2,4 litros", "Dividió 6 por 2,5 en lugar de multiplicar: recorrer más distancia no puede gastar menos."),
+            ("El segundo rinde más porque consume más", "Consumir más por la misma distancia es rendir menos, no más."),
+            ("Ambos recorren la misma distancia con la misma bencina", "Con 24 litros uno hace 400 km y el otro 300."),
+            ("El primero necesita más bencina para el mismo trayecto", "Necesita menos: 6 litros contra 8 por cada 100 km."),
         ],
     ),
     _q(
-        "alg_proporcionalidad", "facil",
-        "En una fábrica, 4 máquinas iguales producen 200 piezas en una hora. Trabajando al mismo ritmo, ¿cuántas piezas producen 6 máquinas en una hora?",
-        "300 piezas",
-        "Con el tiempo fijo, la producción es directamente proporcional a la "
-        "cantidad de máquinas.\n\n"
-        "1) Producción de una máquina: 200 ÷ 4 = 50 piezas por hora.\n"
-        "2) Con 6 máquinas: 50 · 6 = 300 piezas.\n"
-        "3) Control: 6 máquinas son más que 4, así que la producción debe subir, "
-        "y sube.",
+        "alg_proporcionalidad", "medio",
+        "¿Por qué la cantidad de máquinas y la producción por hora son directamente proporcionales, mientras que la cantidad de máquinas y el tiempo para un pedido fijo son inversamente proporcionales?",
+        "Porque más máquinas producen más por hora, pero tardan menos en completar una cantidad fija",
+        "La misma pareja de magnitudes cambia de tipo según qué se mantenga "
+        "fijo.\n\n"
+        "1) Con el tiempo fijo, duplicar las máquinas duplica lo producido: el "
+        "cociente producción/máquinas se mantiene, y eso es proporcionalidad "
+        "directa.\n"
+        "2) Con el pedido fijo, duplicar las máquinas reduce el tiempo a la "
+        "mitad: el producto máquinas · tiempo se mantiene, y eso es "
+        "proporcionalidad inversa.\n"
+        "3) La constante en el segundo caso tiene un significado concreto: el "
+        "trabajo total medido en horas-máquina.\n"
+        "4) Por eso conviene preguntarse siempre qué magnitud queda fija antes "
+        "de decidir el tipo de proporcionalidad.",
         [
-            ("133 piezas", "Trató el problema como proporcionalidad inversa: más máquinas producen más, no menos."),
-            ("250 piezas", "Sumó 50 piezas por cada máquina extra, pero contó una sola máquina de más en vez de dos."),
-            ("1.200 piezas", "Multiplicó 200 por 6 sin dividir antes por las 4 máquinas que producían esas 200."),
+            ("Porque la producción siempre es directa y el tiempo siempre es inverso", "No es una regla fija: depende de qué se mantenga constante en cada caso."),
+            ("Porque las máquinas cambian de rendimiento según cuántas haya", "El supuesto es justamente el contrario: el ritmo por máquina no cambia."),
+            ("Porque el tiempo no puede ser proporcional a nada", "El tiempo es directamente proporcional a la cantidad producida si las máquinas no cambian."),
         ],
     ),
     _q(
