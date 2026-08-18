@@ -20,6 +20,11 @@ SKILL_NODES = [
     # Álgebra
     ("alg_expresiones", "Expresiones algebraicas y factorización", "algebra", 1, []),
     ("alg_lineal", "Ecuaciones e inecuaciones lineales", "algebra", 2, ["alg_expresiones"]),
+    # El temario 2027 lista "Proporcionalidad" como una de las seis unidades
+    # del eje Álgebra y Funciones —"concepto de proporción directa e inversa
+    # con sus diferentes representaciones"—. El árbol no la tenía: lo poco que
+    # había vivía dentro de num_porcentajes, o sea contado como eje de Números.
+    ("alg_proporcionalidad", "Proporcionalidad directa e inversa", "algebra", 2, ["num_racionales"]),
     ("alg_sistemas", "Sistemas de ecuaciones lineales 2x2", "algebra", 3, ["alg_lineal"]),
     (
         "alg_cuadratica",
@@ -2909,7 +2914,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_porcentajes", "dificil",
+        "alg_proporcionalidad", "dificil",
         "Ocho trabajadores construyen un muro en 15 días. Trabajando al mismo ritmo, "
         "¿cuántos días demoran 12 trabajadores en construir el mismo muro?",
         "10 días",
@@ -5275,7 +5280,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_porcentajes", "dificil",
+        "alg_proporcionalidad", "dificil",
         "Doce operarios pintan un muro en 10 días. ¿Cuántos días tardarían 8 operarios trabajando al mismo ritmo?",
         "15 días",
         "Esta es una proporcionalidad inversa: menos trabajadores implica más días.\n\n"
@@ -9664,7 +9669,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_porcentajes", "dificil",
+        "alg_proporcionalidad", "dificil",
         "Tres obreros pintan una casa en 12 días. ¿Cuántos días tardarían 4 obreros trabajando al mismo ritmo?",
         "9 días",
         "Más obreros implica menos días: es proporcionalidad inversa.\n\n"
@@ -15388,7 +15393,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_porcentajes", "dificil",
+        "alg_proporcionalidad", "dificil",
         "Cuatro llaves llenan un estanque en 6 horas. Trabajando al mismo ritmo, ¿cuánto demoran 3 llaves en llenarlo?",
         "8 horas",
         "Es proporción inversa: menos llaves, más tiempo.\n\n"
@@ -19147,6 +19152,1152 @@ SKILL_NODES_LECTORA = [
     ("lec_localizar", "Localizar información", "localizar", 1, []),
     ("lec_interpretar", "Interpretar y relacionar", "interpretar", 2, ["lec_localizar"]),
     ("lec_evaluar", "Evaluar y reflexionar", "evaluar", 3, ["lec_interpretar"]),
+]
+
+# ---------------------------------------------------------------------------
+# ÁLGEBRA Y FUNCIONES — Proporcionalidad
+#
+# Unidad oficial del temario 2027 que el árbol no tenía: "concepto de proporción
+# directa e inversa con sus diferentes representaciones" y "problemas que
+# involucren proporción directa e inversa en diversos contextos". Lo que había
+# eran diez preguntas sueltas dentro de num_porcentajes, o sea contadas como eje
+# de Números cuando el DEMRE las cuenta como Álgebra.
+#
+# El reparto de formatos sigue a las pruebas oficiales, donde una de cada cuatro
+# preguntas no es un cálculo directo: hay enunciados que piden elegir la
+# expresión que modela la situación, otros que piden decidir qué afirmación es
+# siempre verdadera, y otros que entregan los datos en una tabla.
+# ---------------------------------------------------------------------------
+QUESTIONS += [
+    # ---------- reconocer la proporción ----------
+    _q(
+        "alg_proporcionalidad", "facil",
+        "¿Cuándo se dice que dos magnitudes son directamente proporcionales?",
+        "Cuando al dividir una por la otra siempre se obtiene el mismo número",
+        "La proporcionalidad directa se reconoce por un cociente que no cambia.\n\n"
+        "1) Si y es directamente proporcional a x, entonces y/x vale siempre lo "
+        "mismo, y ese número fijo es la constante de proporcionalidad.\n"
+        "2) Dicho de otra forma: si una magnitud se duplica, la otra también; si "
+        "una se reduce a la mitad, la otra también.\n"
+        "3) Ojo con la trampa clásica: que las dos crezcan no basta. Tienen que "
+        "crecer en la misma proporción, no solo en el mismo sentido.",
+        [
+            ("Cuando al multiplicar una por la otra siempre se obtiene el mismo número", "Ese es el sello de la proporcionalidad INVERSA: lo constante ahí es el producto, no el cociente."),
+            ("Cuando al aumentar una, la otra también aumenta", "Le falta la condición esencial: deben crecer en la misma razón, no solo en el mismo sentido."),
+            ("Cuando al sumarlas siempre se obtiene el mismo número", "Una suma constante describe magnitudes que se reparten un total, no una proporción."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "¿Cuándo se dice que dos magnitudes son inversamente proporcionales?",
+        "Cuando al multiplicar una por la otra siempre se obtiene el mismo número",
+        "La proporcionalidad inversa se reconoce por un producto que no cambia.\n\n"
+        "1) Si x e y son inversamente proporcionales, entonces x · y vale siempre "
+        "lo mismo, y ese número fijo es la constante.\n"
+        "2) Por eso, si una magnitud se duplica, la otra se reduce a la mitad: el "
+        "producto tiene que quedar igual.\n"
+        "3) Es lo que pasa entre la cantidad de personas que hacen un trabajo y el "
+        "tiempo que demoran: más personas, menos tiempo.",
+        [
+            ("Cuando al dividir una por la otra siempre se obtiene el mismo número", "Ese es el sello de la proporcionalidad DIRECTA: lo constante ahí es el cociente."),
+            ("Cuando al aumentar una, la otra disminuye", "Le falta la condición esencial: el producto debe mantenerse fijo, no basta con que una baje."),
+            ("Cuando al restarlas siempre se obtiene el mismo número", "Una diferencia constante describe dos magnitudes que se mueven juntas, no una proporción inversa."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una proporcionalidad directa, a x = 2 le corresponde y = 10 y a x = 5 le corresponde y = 25. ¿Cuál es la constante de proporcionalidad?",
+        "5",
+        "En la proporcionalidad directa la constante es el cociente y/x.\n\n"
+        "1) Con el primer par: 10 ÷ 2 = 5.\n"
+        "2) Con el segundo par: 25 ÷ 5 = 5.\n"
+        "3) Los dos dan lo mismo, así que la constante es 5 y la relación se "
+        "escribe y = 5x.\n"
+        "4) Que ambos pares den el mismo cociente es justamente lo que confirma "
+        "que la proporcionalidad es directa.",
+        [
+            ("2", "Dividió al revés, x entre y: eso da 1/5, no la constante, y además usó solo un par."),
+            ("20", "Multiplicó 2 por 10; el producto constante es el sello de la proporcionalidad inversa, no de esta."),
+            ("15", "Sumó 10 y 5 sin operar con un par completo: la constante sale de dividir y por x."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una proporcionalidad inversa, cuando x = 4 se tiene y = 15. ¿Cuál es la constante de proporcionalidad?",
+        "60",
+        "En la proporcionalidad inversa la constante es el producto x · y.\n\n"
+        "1) Multiplica el par de valores: 4 · 15 = 60.\n"
+        "2) Esa constante manda en toda la tabla: cualquier otro par tendrá que "
+        "multiplicarse también 60, por ejemplo x = 10 con y = 6.\n"
+        "3) La relación se escribe y = 60/x.",
+        [
+            ("3,75", "Dividió 15 entre 4: ese es el camino de la proporcionalidad directa, no de la inversa."),
+            ("19", "Sumó los dos valores; lo que se mantiene constante en la inversa es el producto."),
+            ("11", "Restó 4 a 15: una diferencia constante no describe una proporcionalidad."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "El gráfico que representa una proporcionalidad directa entre dos magnitudes es siempre",
+        "una recta que pasa por el origen",
+        "La forma del gráfico sale directo de la fórmula.\n\n"
+        "1) Una proporcionalidad directa se escribe y = kx, que es la ecuación de "
+        "una recta de pendiente k.\n"
+        "2) Esa recta pasa por el origen, porque si x = 0 entonces y = k · 0 = 0.\n"
+        "3) El paso por el origen es lo que distingue una proporcionalidad de "
+        "cualquier otra recta: y = 2x + 3 crece parejo, pero no es proporcional, "
+        "porque con x = 0 ya vale 3.",
+        [
+            ("una recta que corta el eje Y sobre el origen", "Esa es una función afín como y = kx + n: crece parejo, pero con x = 0 no vale 0, así que no es proporcional."),
+            ("una curva que se acerca a los ejes sin tocarlos", "Esa es la forma de la proporcionalidad INVERSA, y = k/x, que es una hipérbola."),
+            ("una parábola que pasa por el origen", "Una parábola corresponde a y = kx², donde y crece con el cuadrado de x, no en proporción directa."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "El gráfico que representa una proporcionalidad inversa entre dos magnitudes es",
+        "una curva que se acerca a los ejes sin llegar a tocarlos",
+        "La forma sale de la fórmula y = k/x.\n\n"
+        "1) Si x crece mucho, y se hace muy pequeño, pero nunca llega a cero: la "
+        "curva se acerca al eje horizontal sin tocarlo.\n"
+        "2) Si x se acerca a cero, y se dispara: la curva se acerca al eje "
+        "vertical sin tocarlo.\n"
+        "3) Esa curva se llama hipérbola, y jamás corta los ejes, porque ni x ni y "
+        "pueden valer cero si su producto tiene que ser constante.",
+        [
+            ("una recta que pasa por el origen", "Esa es la proporcionalidad DIRECTA, y = kx."),
+            ("una recta que baja y corta el eje X", "Una recta con pendiente negativa baja de forma pareja y llega a cero; en la inversa y nunca alcanza el cero."),
+            ("una recta horizontal", "Una recta horizontal significa que y no cambia al cambiar x, o sea que no hay relación entre ambas."),
+        ],
+    ),
+    # ---------- directa en contexto ----------
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Tres kilos de pan cuestan $4.500. Al mismo precio por kilo, ¿cuánto cuestan 5 kilos?",
+        "$7.500",
+        "Conviene calcular primero el precio de un kilo.\n\n"
+        "1) Precio por kilo: 4.500 ÷ 3 = 1.500.\n"
+        "2) Precio de 5 kilos: 1.500 · 5 = 7.500.\n"
+        "3) Control: 5 kilos son más que 3, así que el resultado tiene que ser "
+        "mayor que $4.500, y lo es.",
+        [
+            ("$6.000", "Sumó el precio de un kilo dos veces sobre el original; el salto de 3 a 5 kilos son dos kilos más, pero calculó mal el kilo."),
+            ("$2.700", "Dividió por 5 en vez de multiplicar: al comprar más pan el total no puede bajar."),
+            ("$1.500", "Se quedó en el precio de un solo kilo sin multiplicarlo por los 5 que pide el enunciado."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Un automóvil consume 6 litros de bencina cada 100 kilómetros. Al mismo rendimiento, ¿cuántos litros consume en 250 kilómetros?",
+        "15 litros",
+        "El consumo y la distancia son directamente proporcionales.\n\n"
+        "1) Consumo por kilómetro: 6 ÷ 100 = 0,06 litros.\n"
+        "2) En 250 kilómetros: 0,06 · 250 = 15 litros.\n"
+        "3) Otra forma de verlo: 250 km es dos veces y media 100 km, y 6 · 2,5 = 15.",
+        [
+            ("12 litros", "Duplicó el consumo pensando en 200 kilómetros y olvidó los 50 restantes."),
+            ("24 litros", "Multiplicó por 4 como si fueran 400 kilómetros."),
+            ("2,4 litros", "Dividió 6 por 2,5 en lugar de multiplicar: recorrer más distancia no puede gastar menos."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una fábrica, 4 máquinas iguales producen 200 piezas en una hora. Trabajando al mismo ritmo, ¿cuántas piezas producen 6 máquinas en una hora?",
+        "300 piezas",
+        "Con el tiempo fijo, la producción es directamente proporcional a la "
+        "cantidad de máquinas.\n\n"
+        "1) Producción de una máquina: 200 ÷ 4 = 50 piezas por hora.\n"
+        "2) Con 6 máquinas: 50 · 6 = 300 piezas.\n"
+        "3) Control: 6 máquinas son más que 4, así que la producción debe subir, "
+        "y sube.",
+        [
+            ("133 piezas", "Trató el problema como proporcionalidad inversa: más máquinas producen más, no menos."),
+            ("250 piezas", "Sumó 50 piezas por cada máquina extra, pero contó una sola máquina de más en vez de dos."),
+            ("1.200 piezas", "Multiplicó 200 por 6 sin dividir antes por las 4 máquinas que producían esas 200."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Una receta para 4 personas lleva 300 gramos de harina. Manteniendo las proporciones, ¿cuánta harina se necesita para 6 personas?",
+        "450 gramos",
+        "La cantidad de harina es directamente proporcional a la cantidad de "
+        "personas.\n\n"
+        "1) Harina por persona: 300 ÷ 4 = 75 gramos.\n"
+        "2) Para 6 personas: 75 · 6 = 450 gramos.\n"
+        "3) Control: 6 personas son una vez y media 4 personas, y 300 · 1,5 = 450.",
+        [
+            ("500 gramos", "Sumó 200 gramos por las dos personas extra, usando 100 gramos por persona en vez de 75."),
+            ("200 gramos", "Aplicó proporcionalidad inversa: más comensales necesitan más harina, no menos."),
+            ("1.800 gramos", "Multiplicó 300 por 6 sin dividir antes entre las 4 personas de la receta original."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Una llave de agua llena 12 litros en 3 minutos. Al mismo caudal, ¿cuántos litros llena en 8 minutos?",
+        "32 litros",
+        "Con el caudal fijo, el volumen es directamente proporcional al tiempo.\n\n"
+        "1) Litros por minuto: 12 ÷ 3 = 4.\n"
+        "2) En 8 minutos: 4 · 8 = 32 litros.\n"
+        "3) Control: 8 minutos es algo menos del triple de 3 minutos, y 32 es algo "
+        "menos del triple de 12.",
+        [
+            ("36 litros", "Multiplicó por 3 el volumen original, como si fueran 9 minutos."),
+            ("24 litros", "Duplicó los 12 litros pensando en 6 minutos y dejó fuera los 2 minutos restantes."),
+            ("4,5 litros", "Dividió en lugar de multiplicar: en más tiempo la llave echa más agua, no menos."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Ocho cuadernos iguales cuestan $12.000. Al mismo precio unitario, ¿cuánto cuestan 3 cuadernos?",
+        "$4.500",
+        "El total es directamente proporcional a la cantidad de cuadernos.\n\n"
+        "1) Precio de un cuaderno: 12.000 ÷ 8 = 1.500.\n"
+        "2) Precio de 3 cuadernos: 1.500 · 3 = 4.500.\n"
+        "3) Control: 3 cuadernos son menos de la mitad de 8, y $4.500 es menos de "
+        "la mitad de $12.000.",
+        [
+            ("$4.000", "Dividió $12.000 entre 3 en vez de calcular primero el precio de un cuaderno."),
+            ("$36.000", "Multiplicó el total por 3 sin dividirlo antes entre los 8 cuadernos que costaban esa suma."),
+            ("$9.000", "Restó el valor de 5 cuadernos usando un precio unitario equivocado."),
+        ],
+    ),
+    # ---------- inversa en contexto ----------
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Un bus recorre un trayecto en 6 horas viajando a 60 km/h. Si viajara a 90 km/h, ¿cuánto demoraría en el mismo trayecto?",
+        "4 horas",
+        "Con la distancia fija, la velocidad y el tiempo son inversamente "
+        "proporcionales.\n\n"
+        "1) La constante es el producto, que aquí es la distancia: 60 · 6 = 360 "
+        "kilómetros.\n"
+        "2) A 90 km/h el tiempo sale de dividir: 360 ÷ 90 = 4 horas.\n"
+        "3) Control: si va más rápido tiene que demorar menos, y 4 horas es menos "
+        "que 6.",
+        [
+            ("9 horas", "Aplicó proporcionalidad directa: aumentó el tiempo junto con la velocidad, cuando ir más rápido demora menos."),
+            ("5 horas", "Restó una hora por cada 30 km/h de más sin usar que la distancia es lo que se mantiene fijo."),
+            ("3 horas", "Supuso que a una vez y media la velocidad el tiempo se reduce a la mitad; se reduce a dos tercios."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "El alimento almacenado en un refugio alcanza para 20 animales durante 12 días. Si en el refugio hubiera 30 animales, ¿para cuántos días alcanzaría la misma cantidad de alimento?",
+        "8 días",
+        "Con el alimento fijo, la cantidad de animales y los días son inversamente "
+        "proporcionales.\n\n"
+        "1) La constante es el producto: 20 · 12 = 240 raciones diarias.\n"
+        "2) Con 30 animales: 240 ÷ 30 = 8 días.\n"
+        "3) Control: más animales comiendo lo mismo tiene que durar menos, y 8 "
+        "días es menos que 12.",
+        [
+            ("18 días", "Aplicó proporcionalidad directa: más animales hacen durar menos el alimento, no más."),
+            ("10 días", "Restó dos días por cada diez animales de más, sin usar que el total de raciones es lo que se mantiene."),
+            ("6 días", "Supuso que al aumentar los animales a una vez y media, los días se reducen a la mitad; se reducen a dos tercios."),
+        ],
+    ),
+]
+
+QUESTIONS += [
+    # ---------- tablas ----------
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una tabla de proporcionalidad directa, a los valores de x igual a 1, 2, 3 y 4 les corresponden y igual a 7, 14, 21 y un valor desconocido. ¿Cuál es ese valor?",
+        "28",
+        "Primero se busca la constante y después se completa.\n\n"
+        "1) La constante es y/x: 7 ÷ 1 = 7, y se confirma con 14 ÷ 2 = 7 y "
+        "21 ÷ 3 = 7.\n"
+        "2) Para x = 4: y = 7 · 4 = 28.\n"
+        "3) Otra forma: cada vez que x sube en 1, y sube en 7, así que después de "
+        "21 viene 28.",
+        [
+            ("24", "Sumó 3 al valor anterior en lugar de sumar la constante, que es 7."),
+            ("35", "Se saltó un lugar: 35 corresponde a x = 5, no a x = 4."),
+            ("22", "Sumó 1 al valor anterior, como si y avanzara al mismo paso que x."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una tabla de proporcionalidad inversa, a x igual a 2, 3, 4 y 6 les corresponden y igual a 18, 12, 9 y un valor desconocido. ¿Cuál es ese valor?",
+        "6",
+        "En la proporcionalidad inversa lo que se mantiene es el producto.\n\n"
+        "1) Comprueba la constante: 2 · 18 = 36, 3 · 12 = 36 y 4 · 9 = 36.\n"
+        "2) Para x = 6: y = 36 ÷ 6 = 6.\n"
+        "3) Control: 6 es mayor que 4, así que su compañero debe ser menor que 9, "
+        "y lo es.",
+        [
+            ("7", "Restó 2 al valor anterior siguiendo el patrón de las diferencias, que en la inversa no es constante."),
+            ("13,5", "Aplicó proporcionalidad directa multiplicando por la razón entre 6 y 4."),
+            ("216", "Multiplicó 36 por 6 en lugar de dividir: al crecer x, el compañero tiene que achicarse."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Una tabla relaciona x con y así: a 2 le corresponde 6, a 4 le corresponde 12 y a 6 le corresponde 20. ¿Qué tipo de relación hay entre ambas magnitudes?",
+        "Ninguna de las dos: no es directa ni inversa",
+        "Para decidirlo hay que probar las dos condiciones sobre TODOS los pares, "
+        "no sobre uno.\n\n"
+        "1) ¿Directa? Los cocientes serían 6/2 = 3, 12/4 = 3 y 20/6 ≈ 3,33. El "
+        "tercero se sale, así que no.\n"
+        "2) ¿Inversa? Los productos serían 12, 48 y 120: ni parecidos.\n"
+        "3) Los dos primeros pares sí cumplían la proporcionalidad directa, y esa "
+        "es justamente la trampa: basta un par que no cumpla para que la relación "
+        "deje de ser proporcional.",
+        [
+            ("Directa, con constante 3", "Los dos primeros pares dan 3, pero el tercero da 20/6, que no es 3: la constante debe servir para todos."),
+            ("Inversa, con constante 12", "El primer par multiplica 12, pero el segundo multiplica 48 y el tercero 120."),
+            ("Directa, con constante 10", "Ese número no sale de dividir ningún par de la tabla."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "En una tabla, a x igual a 3, 5 y 8 les corresponden y igual a 40, 24 y 15. ¿Qué relación hay entre las dos magnitudes?",
+        "Inversa, con constante 120",
+        "Se prueban las dos condiciones sobre todos los pares.\n\n"
+        "1) ¿Directa? Los cocientes serían 40/3, 24/5 y 15/8: todos distintos, así "
+        "que no.\n"
+        "2) ¿Inversa? Los productos son 3 · 40 = 120, 5 · 24 = 120 y 8 · 15 = 120.\n"
+        "3) El producto se mantiene, así que la relación es inversa con constante "
+        "120 y se escribe y = 120/x.",
+        [
+            ("Directa, con constante 120", "El 120 sale del producto, no del cociente: en una directa lo constante es y dividido por x."),
+            ("Inversa, con constante 40", "40 es el valor de y en el primer par, no la constante, que es el producto de los dos."),
+            ("Ninguna de las dos", "Los tres productos dan exactamente 120, así que la proporcionalidad inversa sí se cumple."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una proporcionalidad directa, y vale 12 cuando x vale 4. ¿Cuánto vale y cuando x vale 7?",
+        "21",
+        "Con la constante, cualquier valor se obtiene de inmediato.\n\n"
+        "1) Constante: 12 ÷ 4 = 3, así que y = 3x.\n"
+        "2) Para x = 7: y = 3 · 7 = 21.\n"
+        "3) Control: 7 es casi el doble de 4, y 21 es casi el doble de 12.",
+        [
+            ("15", "Sumó 3 a 12 porque x subió en 3: en una proporcionalidad lo que se conserva es el cociente, no la diferencia."),
+            ("84", "Multiplicó 12 por 7 sin dividir antes por el 4 al que correspondían esos 12."),
+            ("6,86", "Dividió 48 entre 7 aplicando proporcionalidad inversa, que no es el caso."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una proporcionalidad inversa, y vale 9 cuando x vale 8. ¿Cuánto vale y cuando x vale 12?",
+        "6",
+        "En la inversa se conserva el producto.\n\n"
+        "1) Constante: 8 · 9 = 72, así que y = 72/x.\n"
+        "2) Para x = 12: y = 72 ÷ 12 = 6.\n"
+        "3) Control: x creció, así que y tiene que achicarse, y 6 es menor que 9.",
+        [
+            ("13,5", "Aplicó proporcionalidad directa: si x aumenta, en una relación inversa y disminuye."),
+            ("5", "Restó 4 a 9 siguiendo la diferencia de x, cuando lo que manda es el producto."),
+            ("864", "Multiplicó la constante por 12 en lugar de dividir."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "Si dos magnitudes son directamente proporcionales y una de ellas se triplica, ¿qué le ocurre a la otra?",
+        "También se triplica",
+        "En la proporcionalidad directa el cociente entre ambas no cambia.\n\n"
+        "1) Si y = kx y la x pasa a valer 3x, entonces la nueva y es k · 3x.\n"
+        "2) Eso es 3 · (kx), o sea tres veces la y original.\n"
+        "3) Comprueba con números: si k = 5, de x = 2 con y = 10 se pasa a x = 6 "
+        "con y = 30, y 30 es el triple de 10.",
+        [
+            ("Se reduce a la tercera parte", "Eso ocurre en la proporcionalidad INVERSA, donde el producto es lo que se conserva."),
+            ("Aumenta en 3 unidades", "Confundió multiplicar por 3 con sumar 3; la proporcionalidad conserva razones, no diferencias."),
+            ("Se mantiene igual", "Si y no cambiara al cambiar x, no habría ninguna relación entre las dos magnitudes."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Si dos magnitudes son inversamente proporcionales y una de ellas se reduce a la cuarta parte, ¿qué le ocurre a la otra?",
+        "Queda multiplicada por 4",
+        "En la proporcionalidad inversa el producto no cambia.\n\n"
+        "1) Si x · y = k y la x pasa a valer x/4, la nueva y debe cumplir "
+        "(x/4) · y' = k.\n"
+        "2) Despejando: y' = 4k/x, o sea cuatro veces la y original.\n"
+        "3) Comprueba con números: si k = 24, de x = 8 con y = 3 se pasa a x = 2 "
+        "con y = 12, y 12 es cuatro veces 3.",
+        [
+            ("También se reduce a la cuarta parte", "Eso ocurre en la proporcionalidad DIRECTA; en la inversa se mueven en sentidos opuestos."),
+            ("Disminuye en 4 unidades", "Confundió dividir por 4 con restar 4: la proporcionalidad conserva productos, no diferencias."),
+            ("Queda multiplicada por 2", "Redujo a la mitad el efecto; si x se divide por 4, y se multiplica por 4 para que el producto no cambie."),
+        ],
+    ),
+    # ---------- modelar ----------
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El precio total P de comprar cuadernos es directamente proporcional a la cantidad c de cuadernos, y un cuaderno cuesta $1.800. ¿Cuál de las siguientes expresiones representa el precio total?",
+        "P = 1.800 · c",
+        "Modelar una proporcionalidad directa es escribir y = kx con la constante "
+        "correcta.\n\n"
+        "1) La constante es el precio de una unidad: $1.800 por cuaderno.\n"
+        "2) Entonces el total es 1.800 multiplicado por la cantidad: P = 1.800 · c.\n"
+        "3) Comprueba con un caso: 3 cuadernos dan P = 1.800 · 3 = 5.400, que es "
+        "lo que uno esperaría pagar.",
+        [
+            ("P = 1.800 / c", "Esa es la forma de una proporcionalidad inversa: haría que comprar más cuadernos costara menos."),
+            ("P = 1.800 + c", "Sumar la cantidad al precio mezcla pesos con cuadernos; el precio se multiplica, no se suma."),
+            ("P = c / 1.800", "Esa expresión entrega la cantidad de cuadernos que cabe en un peso, no el precio total."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Un trabajo puede ser hecho por p personas en d días, y la cantidad total de trabajo es siempre la misma. Si 5 personas lo terminan en 12 días, ¿cuál de las siguientes expresiones representa la cantidad de días d que demoran p personas?",
+        "d = 60 / p",
+        "Personas y días son inversamente proporcionales cuando el trabajo total no "
+        "cambia.\n\n"
+        "1) La constante es el trabajo total en días-persona: 5 · 12 = 60.\n"
+        "2) Para cualquier cantidad de personas se cumple p · d = 60.\n"
+        "3) Despejando los días: d = 60/p.\n"
+        "4) Comprueba: con p = 10 da d = 6, la mitad del tiempo con el doble de "
+        "gente, que es lo esperable.",
+        [
+            ("d = 60 · p", "Haría que más personas demoraran más tiempo, al revés de lo que ocurre."),
+            ("d = 12 · p", "Usa el dato de los días como constante, cuando la constante es el producto de personas por días."),
+            ("d = p / 60", "Con 5 personas daría menos de un día; además invierte el papel de las dos magnitudes."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "La cantidad de agua que entrega una llave es directamente proporcional al tiempo que permanece abierta, y en 5 minutos entrega 30 litros. ¿Cuál de las siguientes expresiones representa los litros L entregados en t minutos?",
+        "L = 6 · t",
+        "Primero la constante, después la expresión.\n\n"
+        "1) Litros por minuto: 30 ÷ 5 = 6.\n"
+        "2) Como la relación es directa, L = 6 · t.\n"
+        "3) Comprueba con el dato del enunciado: t = 5 da L = 30, tal como dice.",
+        [
+            ("L = 30 · t", "Usa el total de litros como si fuera el caudal por minuto: en 5 minutos daría 150 litros."),
+            ("L = t / 6", "Invierte la relación: entregaría menos de un litro por minuto."),
+            ("L = 30 / t", "Esa es una proporcionalidad inversa: haría que mientras más rato esté abierta la llave, menos agua salga."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "En un mapa, 2 centímetros representan 5 kilómetros reales. ¿Cuál de las siguientes expresiones representa los kilómetros reales K que corresponden a c centímetros del mapa?",
+        "K = 2,5 · c",
+        "La distancia real es directamente proporcional a la del mapa.\n\n"
+        "1) Kilómetros por centímetro: 5 ÷ 2 = 2,5.\n"
+        "2) Entonces K = 2,5 · c.\n"
+        "3) Comprueba: c = 2 da K = 5, que es el dato del enunciado, y c = 10 da "
+        "25 kilómetros.",
+        [
+            ("K = 0,4 · c", "Invirtió la constante: 0,4 es cuántos centímetros del mapa corresponden a un kilómetro."),
+            ("K = 5 · c", "Usa los 5 kilómetros como si correspondieran a un centímetro, cuando corresponden a dos."),
+            ("K = c / 2,5", "Invierte la operación y entrega centímetros de mapa a partir de kilómetros."),
+        ],
+    ),
+    # ---------- argumentar ----------
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Una tabla muestra que cuando x aumenta, y también aumenta. ¿Qué se puede concluir con seguridad?",
+        "Nada todavía: hay que comprobar si el cociente entre y y x se mantiene constante",
+        "Crecer juntas es necesario para la proporcionalidad directa, pero no "
+        "alcanza.\n\n"
+        "1) En y = 3x, si x pasa de 2 a 4, y pasa de 6 a 12: crecen juntas y sí "
+        "son proporcionales, porque el cociente es 3 en ambos casos.\n"
+        "2) En y = x + 10, si x pasa de 2 a 4, y pasa de 12 a 14: también crecen "
+        "juntas, pero los cocientes son 6 y 3,5, así que no hay proporcionalidad.\n"
+        "3) Las dos tablas se ven parecidas mirando solo el sentido del cambio: "
+        "por eso hay que revisar el cociente antes de afirmar nada.",
+        [
+            ("Que son directamente proporcionales", "El contraejemplo y = x + 10 crece igual de parejo y no es proporcional."),
+            ("Que son inversamente proporcionales", "En la inversa una magnitud baja cuando la otra sube, que es lo contrario de lo descrito."),
+            ("Que la constante de proporcionalidad es positiva", "Habla de una constante que todavía no se sabe si existe."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Dos magnitudes son directamente proporcionales. ¿Cuál de las siguientes afirmaciones es siempre verdadera?",
+        "Si una de ellas vale cero, la otra también vale cero",
+        "Todo sale de la fórmula y = kx.\n\n"
+        "1) Si x = 0, entonces y = k · 0 = 0, sin importar cuánto valga la "
+        "constante.\n"
+        "2) Por eso el gráfico de una proporcionalidad directa pasa siempre por el "
+        "origen.\n"
+        "3) Es justamente lo que distingue y = 3x de y = 3x + 5: la segunda crece "
+        "igual de parejo, pero con x = 0 vale 5 y no es proporcional.",
+        [
+            ("La constante de proporcionalidad es siempre mayor que 1", "La constante puede ser cualquier número distinto de cero: en y = 0,5x vale la mitad."),
+            ("Al sumar una unidad a la primera, la segunda también aumenta en una unidad", "Eso solo pasaría si la constante fuera 1; con k = 3 la segunda aumenta en 3."),
+            ("Las dos magnitudes siempre toman el mismo valor", "Solo ocurre si la constante es 1; en general los valores son distintos."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Se afirma que el sueldo de un trabajador es directamente proporcional a las horas trabajadas. ¿Cuál de los siguientes datos permitiría descartar esa afirmación?",
+        "Que por 10 horas reciba $50.000 y por 20 horas reciba $110.000",
+        "Para descartar una proporcionalidad basta encontrar dos pares con cocientes "
+        "distintos.\n\n"
+        "1) Con 10 horas y $50.000, el pago por hora es 50.000 ÷ 10 = 5.000.\n"
+        "2) Con 20 horas y $110.000, el pago por hora es 110.000 ÷ 20 = 5.500.\n"
+        "3) Los dos cocientes no coinciden, así que la relación no es "
+        "proporcional: al doblar las horas el sueldo más que se dobló.\n"
+        "4) Un solo par de datos incompatibles alcanza para descartar; en cambio, "
+        "ningún par por sí solo alcanza para confirmarla.",
+        [
+            ("Que por 10 horas reciba $50.000 y por 20 horas reciba $100.000", "Los dos dan $5.000 por hora: eso es coherente con la proporcionalidad, no la descarta."),
+            ("Que por 8 horas reciba $40.000", "Un solo par de datos nunca alcanza para descartar nada: siempre define alguna constante."),
+            ("Que trabaje más horas unos meses que otros", "La cantidad de horas puede variar libremente; lo que importa es la relación entre horas y pago."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Cuatro pintores pintan una casa en 9 días. Se afirma que un solo pintor la pintaría en 36 días. ¿Qué supuesto se necesita para que ese argumento sea válido?",
+        "Que todos los pintores trabajan al mismo ritmo y sin estorbarse",
+        "El cálculo usa proporcionalidad inversa, y esa relación exige una "
+        "condición.\n\n"
+        "1) El total de trabajo se mide en días-pintor: 4 · 9 = 36.\n"
+        "2) Con un solo pintor: 36 ÷ 1 = 36 días.\n"
+        "3) Ese paso supone que el rendimiento por persona no cambia con la "
+        "cantidad de personas. Si trabajando solo rindiera distinto, o si entre "
+        "cuatro se estorbaran, el producto dejaría de ser constante y el modelo "
+        "no serviría.",
+        [
+            ("Que la casa tiene la misma superficie en todos los casos", "Eso ya está dado por el enunciado: es la misma casa, no un supuesto que haya que agregar."),
+            ("Que los pintores trabajan la misma cantidad de horas al día que antes", "Ayuda a comparar los días, pero el supuesto que sostiene la proporcionalidad inversa es que el ritmo por persona no cambie."),
+            ("Que el número de pintores es siempre un número entero", "Que sean enteros no tiene que ver con que el producto personas por días se mantenga fijo."),
+        ],
+    ),
+    # ---------- mixtas de contexto ----------
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Una impresora imprime 90 páginas en 4 minutos. Al mismo ritmo, ¿cuántos minutos demora en imprimir 315 páginas?",
+        "14 minutos",
+        "Páginas y minutos son directamente proporcionales.\n\n"
+        "1) Páginas por minuto: 90 ÷ 4 = 22,5.\n"
+        "2) Tiempo para 315 páginas: 315 ÷ 22,5 = 14 minutos.\n"
+        "3) Control: 315 páginas son tres veces y media 90, y 4 · 3,5 = 14.",
+        [
+            ("12 minutos", "Redondeó a tres veces la cantidad original y dejó fuera la media vuelta que faltaba."),
+            ("35 minutos", "Dividió 315 por 9 en vez de por 22,5: usó el ritmo equivocado."),
+            ("7.087,5 minutos", "Multiplicó en lugar de dividir por el ritmo de impresión."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "En un taller, 15 metros de cable cuestan $27.000. Al mismo precio por metro, ¿cuántos metros se pueden comprar con $45.000?",
+        "25 metros",
+        "Conviene pasar por el precio de un metro.\n\n"
+        "1) Precio por metro: 27.000 ÷ 15 = 1.800.\n"
+        "2) Metros que alcanzan con $45.000: 45.000 ÷ 1.800 = 25.\n"
+        "3) Control: $45.000 es más que $27.000, así que deben alcanzar más de 15 "
+        "metros, y alcanzan 25.",
+        [
+            ("20 metros", "Sumó cinco metros por cada $9.000 extra, pero el metro cuesta $1.800, así que con $18.000 más alcanzan diez metros."),
+            ("30 metros", "Supuso que $45.000 es el doble de $27.000, cuando es algo menos de dos veces."),
+            ("9 metros", "Dividió al revés y obtuvo menos cable pagando más plata."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Un estanque se llena con 6 llaves iguales en 20 minutos. Si se abren solo 5 de esas llaves, ¿cuánto demora en llenarse?",
+        "24 minutos",
+        "Cantidad de llaves y tiempo son inversamente proporcionales.\n\n"
+        "1) La constante es el producto: 6 · 20 = 120 minutos-llave.\n"
+        "2) Con 5 llaves: 120 ÷ 5 = 24 minutos.\n"
+        "3) Control: con menos llaves tiene que demorar más, y 24 es mayor que 20.",
+        [
+            ("16,7 minutos", "Aplicó proporcionalidad directa: con menos llaves el estanque demora más en llenarse, no menos."),
+            ("19 minutos", "Restó un minuto por cada llave que se cierra, sin usar que el producto es lo que se mantiene."),
+            ("25 minutos", "Sumó cinco minutos redondeando; el cálculo exacto da 120 dividido en 5."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Para preparar un jugo se mezclan 3 partes de agua por cada 2 partes de concentrado. Si se usan 750 mililitros de concentrado, ¿cuántos mililitros de agua se necesitan?",
+        "1.125 mililitros",
+        "La razón entre agua y concentrado se mantiene fija.\n\n"
+        "1) La razón agua a concentrado es 3 : 2, o sea 1,5 de agua por cada 1 de "
+        "concentrado.\n"
+        "2) Con 750 de concentrado: 750 · 1,5 = 1.125 mililitros de agua.\n"
+        "3) Control: debe haber más agua que concentrado, y 1.125 es mayor que "
+        "750.",
+        [
+            ("500 mililitros", "Aplicó la razón al revés, poniendo 2 partes de agua por cada 3 de concentrado."),
+            ("1.500 mililitros", "Duplicó el concentrado en lugar de multiplicarlo por una vez y media."),
+            ("450 mililitros", "Repartió los 750 en cinco partes y tomó tres, que sería el resultado si 750 fuera el total de la mezcla."),
+        ],
+    ),
+]
+
+QUESTIONS += [
+    _q(
+        "alg_proporcionalidad", "facil",
+        "El perímetro de un cuadrado, ¿es directamente proporcional a la medida de su lado?",
+        "Sí, con constante de proporcionalidad 4",
+        "Basta escribir la fórmula y mirar su forma.\n\n"
+        "1) El perímetro de un cuadrado de lado L es P = 4L.\n"
+        "2) Eso ya tiene la forma y = kx, con k igual a 4.\n"
+        "3) Se confirma con la tabla: lado 2 da perímetro 8, lado 3 da 12, lado 5 "
+        "da 20, y el cociente P/L es siempre 4.",
+        [
+            ("No, porque el perímetro depende también de la forma de la figura", "En un cuadrado los cuatro lados son iguales por definición, así que el lado determina el perímetro."),
+            ("Sí, con constante de proporcionalidad 2", "El 2 aparecería en un rectángulo al sumar largo y ancho; un cuadrado tiene cuatro lados iguales."),
+            ("No, porque al crecer el lado el perímetro crece más rápido", "Eso le pasa al área, que va con el cuadrado del lado. El perímetro crece al mismo ritmo que el lado."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "En una proporcionalidad directa representada en un gráfico, ¿qué significa la pendiente de la recta?",
+        "La constante de proporcionalidad",
+        "El gráfico y la fórmula dicen lo mismo con otras palabras.\n\n"
+        "1) Una proporcionalidad directa se escribe y = kx.\n"
+        "2) Esa es la ecuación de una recta que pasa por el origen y cuya "
+        "pendiente es exactamente k.\n"
+        "3) Por eso, mientras más inclinada la recta, mayor la constante: si la "
+        "recta representa el precio por kilo, la pendiente es el precio de un "
+        "kilo.",
+        [
+            ("El valor de y cuando x vale cero", "En una proporcionalidad directa ese valor es siempre cero: la recta parte del origen."),
+            ("La suma de las dos magnitudes", "La pendiente compara cuánto sube y por cada unidad que avanza x; no es una suma."),
+            ("La cantidad de puntos que tiene la recta", "Una recta tiene infinitos puntos; la pendiente mide su inclinación."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El área de un cuadrado, ¿es directamente proporcional a la medida de su lado?",
+        "No, porque al duplicar el lado el área queda multiplicada por 4",
+        "La prueba es mirar si el cociente área dividido por lado se mantiene.\n\n"
+        "1) El área es A = L². Con lado 2 el área es 4, y el cociente A/L es 2.\n"
+        "2) Con lado 3 el área es 9, y el cociente es 3. Ya cambió, así que no hay "
+        "proporcionalidad directa.\n"
+        "3) Se ve claro al duplicar: de lado 2 a lado 4 el área pasa de 4 a 16, o "
+        "sea se multiplica por 4 y no por 2.\n"
+        "4) El área es proporcional al CUADRADO del lado, que es otra cosa.",
+        [
+            ("Sí, porque al crecer el lado también crece el área", "Crecer juntas no basta: hace falta que el cociente entre ambas se mantenga fijo, y aquí no se mantiene."),
+            ("Sí, con constante de proporcionalidad igual al lado", "Una constante que cambia con cada figura no es una constante."),
+            ("No, porque el área y el lado se miden en unidades distintas", "Las unidades distintas no impiden la proporcionalidad: el perímetro también se mide en centímetros y sí es proporcional al lado."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "¿Son x e y directamente proporcionales si se relacionan mediante y = 5x + 2?",
+        "No, porque cuando x vale 0, y no vale 0",
+        "Toda proporcionalidad directa tiene la forma y = kx, sin término sumado.\n\n"
+        "1) Evalúa en x = 0: y = 5 · 0 + 2 = 2, y una proporcionalidad exige que "
+        "ahí valga 0.\n"
+        "2) Comprueba también el cociente: con x = 1 sale y = 7 y el cociente es "
+        "7; con x = 2 sale y = 12 y el cociente es 6. No es constante.\n"
+        "3) La relación es afín: crece de forma pareja, pero arranca desplazada "
+        "del origen y por eso no es proporcional.",
+        [
+            ("Sí, con constante de proporcionalidad 5", "El 5 es la pendiente, pero el término +2 rompe la proporcionalidad: el cociente y/x no se mantiene."),
+            ("Sí, porque y aumenta cuando x aumenta", "Que crezcan juntas es necesario pero no suficiente; falta que el cociente sea constante."),
+            ("No, porque la constante debería ser un número negativo", "Nada obliga a que la constante sea negativa; el problema está en el término independiente."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Una recta que representa una proporcionalidad directa pasa por el punto (4, 10). ¿Cuál es su constante de proporcionalidad?",
+        "2,5",
+        "La constante es el cociente entre la coordenada y y la coordenada x.\n\n"
+        "1) Constante: 10 ÷ 4 = 2,5.\n"
+        "2) La relación queda y = 2,5x.\n"
+        "3) Comprueba con el punto dado: 2,5 · 4 = 10, tal como corresponde.",
+        [
+            ("0,4", "Dividió x entre y en vez de y entre x."),
+            ("40", "Multiplicó las coordenadas: el producto constante corresponde a la proporcionalidad inversa."),
+            ("6", "Restó 4 a 10: la constante sale de dividir, no de restar."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Dos ruedas dentadas están engranadas. La primera tiene 30 dientes y da 40 vueltas. ¿Cuántas vueltas da la segunda, que tiene 24 dientes?",
+        "50 vueltas",
+        "La cantidad de dientes y las vueltas son inversamente proporcionales, "
+        "porque los dos engranajes hacen pasar la misma cantidad de dientes.\n\n"
+        "1) Dientes que pasan en total: 30 · 40 = 1.200.\n"
+        "2) Vueltas de la segunda: 1.200 ÷ 24 = 50.\n"
+        "3) Control: la rueda con menos dientes es más chica, así que tiene que "
+        "girar más veces, y 50 es mayor que 40.",
+        [
+            ("32 vueltas", "Aplicó proporcionalidad directa: la rueda más chica gira más, no menos."),
+            ("34 vueltas", "Sumó a las 40 vueltas la diferencia de dientes en lugar de usar el producto constante."),
+            ("48 vueltas", "Usó la razón 30 a 25 en lugar de 30 a 24."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Un depósito se llena con 3 llaves iguales en 4 horas. ¿Cuántas llaves iguales se necesitan para llenarlo en solo 1 hora y media?",
+        "8 llaves",
+        "Llaves y tiempo son inversamente proporcionales.\n\n"
+        "1) La constante es el producto: 3 · 4 = 12 horas-llave.\n"
+        "2) Para 1,5 horas: 12 ÷ 1,5 = 8 llaves.\n"
+        "3) Control: se quiere llenar en menos tiempo, así que hacen falta más "
+        "llaves, y 8 es más que 3.",
+        [
+            ("2 llaves", "Aplicó proporcionalidad directa: para apurar el llenado hacen falta más llaves, no menos."),
+            ("6 llaves", "Duplicó las llaves pensando en la mitad del tiempo, pero 1,5 horas no es la mitad de 4."),
+            ("12 llaves", "Se quedó con la constante 12 sin dividirla entre las horas pedidas."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El costo de arrendar una cabaña se reparte en partes iguales entre quienes van. Si van 12 personas, cada una paga $9.000. ¿Cuánto paga cada una si van 18 personas?",
+        "$6.000",
+        "Con el costo total fijo, el pago por persona es inversamente proporcional "
+        "a la cantidad de personas.\n\n"
+        "1) Costo total: 12 · 9.000 = 108.000.\n"
+        "2) Pago con 18 personas: 108.000 ÷ 18 = 6.000.\n"
+        "3) Control: mientras más gente, menos paga cada uno, y $6.000 es menos "
+        "que $9.000.",
+        [
+            ("$13.500", "Aplicó proporcionalidad directa: al sumarse más personas cada una paga menos, no más."),
+            ("$3.000", "Restó $1.000 por cada persona adicional en lugar de repartir el total entre 18."),
+            ("$8.000", "Descontó $1.000 al azar; el reparto exige dividir el total real entre los nuevos participantes."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Un móvil recorre 120 kilómetros en 2 horas y otro recorre la misma distancia en 3 horas. ¿Cuál es la razón entre la velocidad del primero y la del segundo?",
+        "3 : 2",
+        "Con la distancia fija, velocidad y tiempo son inversamente "
+        "proporcionales.\n\n"
+        "1) Velocidad del primero: 120 ÷ 2 = 60 km/h.\n"
+        "2) Velocidad del segundo: 120 ÷ 3 = 40 km/h.\n"
+        "3) La razón es 60 : 40, que simplificada por 20 queda 3 : 2.\n"
+        "4) Fíjate en que la razón de velocidades es la inversa de la razón de "
+        "tiempos, que era 2 : 3.",
+        [
+            ("2 : 3", "Esa es la razón entre los TIEMPOS; como la relación es inversa, la de velocidades queda al revés."),
+            ("1 : 1", "Recorren la misma distancia, pero en tiempos distintos, así que sus velocidades no coinciden."),
+            ("6 : 4", "Es la razón correcta sin simplificar por 2; la respuesta pide la razón reducida."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El tiempo t que demora un viaje es directamente proporcional a la distancia d e inversamente proporcional a la velocidad v. ¿Cuál de las siguientes expresiones representa esa relación?",
+        "t = k · d / v",
+        "Cada relación aporta su parte a la expresión.\n\n"
+        "1) Directamente proporcional a la distancia significa que d va "
+        "multiplicando.\n"
+        "2) Inversamente proporcional a la velocidad significa que v va "
+        "dividiendo.\n"
+        "3) Juntando ambas: t = k · d/v, que es la fórmula del tiempo de viaje "
+        "con k igual a 1.\n"
+        "4) Comprueba el sentido: a mayor distancia más tiempo, y a mayor "
+        "velocidad menos tiempo. La expresión cumple las dos cosas.",
+        [
+            ("t = k · v / d", "Está al revés: haría que viajar más rápido demorara más y que una distancia mayor demorara menos."),
+            ("t = k · d · v", "Deja la velocidad multiplicando, o sea que ir más rápido aumentaría el tiempo de viaje."),
+            ("t = k · (d + v)", "Suma dos magnitudes de distinta naturaleza; la proporcionalidad se expresa multiplicando y dividiendo."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Seis máquinas trabajando 8 horas diarias producen 480 piezas. Al mismo ritmo, ¿cuántas piezas producen 9 máquinas trabajando 5 horas diarias?",
+        "450 piezas",
+        "Con dos magnitudes cambiando a la vez conviene bajar todo a la unidad.\n\n"
+        "1) Total de horas-máquina originales: 6 · 8 = 48.\n"
+        "2) Piezas por hora-máquina: 480 ÷ 48 = 10.\n"
+        "3) Nuevas horas-máquina: 9 · 5 = 45.\n"
+        "4) Producción: 45 · 10 = 450 piezas.\n"
+        "5) Control: hay más máquinas pero bastante menos horas, así que el "
+        "resultado tiene que quedar algo por debajo de 480.",
+        [
+            ("540 piezas", "Ajustó por las máquinas y olvidó que las horas diarias bajaron de 8 a 5."),
+            ("300 piezas", "Ajustó por las horas y olvidó que las máquinas subieron de 6 a 9."),
+            ("864 piezas", "Multiplicó por las máquinas y volvió a multiplicar por las horas sin bajar antes a la unidad."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Ocho obreros levantan 240 metros de muro en 6 días. Al mismo rendimiento, ¿cuántos días necesitan 12 obreros para levantar 300 metros?",
+        "5 días",
+        "Se baja todo al rendimiento de un obrero en un día.\n\n"
+        "1) Total de días-obrero originales: 8 · 6 = 48.\n"
+        "2) Metros por obrero y por día: 240 ÷ 48 = 5.\n"
+        "3) Con 12 obreros se avanzan 12 · 5 = 60 metros por día.\n"
+        "4) Días para 300 metros: 300 ÷ 60 = 5 días.\n"
+        "5) Control: hay más obreros y algo más de muro, así que el resultado "
+        "debe quedar cerca de los 6 días originales, un poco por debajo.",
+        [
+            ("7,5 días", "Ajustó por los metros de muro y olvidó que los obreros pasaron de 8 a 12."),
+            ("4 días", "Ajustó por los obreros y dejó el muro en 240 metros, sin considerar que ahora son 300."),
+            ("9 días", "Aplicó la proporción de obreros al revés: más obreros terminan antes, no después."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Se reparten $180.000 entre tres personas en partes directamente proporcionales a 2, 3 y 4. ¿Cuánto recibe quien más recibe?",
+        "$80.000",
+        "Un reparto directamente proporcional se resuelve con el total de partes.\n\n"
+        "1) Suma las partes: 2 + 3 + 4 = 9.\n"
+        "2) Valor de cada parte: 180.000 ÷ 9 = 20.000.\n"
+        "3) Quien más recibe tiene 4 partes: 4 · 20.000 = 80.000.\n"
+        "4) Control: los tres montos son 40.000, 60.000 y 80.000, y suman "
+        "exactamente 180.000.",
+        [
+            ("$90.000", "Repartió la mitad del total a la parte mayor, como si fueran dos personas y no tres."),
+            ("$72.000", "Calculó el 40% del total, usando 4 sobre 10 en vez de 4 sobre 9."),
+            ("$60.000", "Dividió el total en tres partes iguales, ignorando que el reparto es proporcional a 2, 3 y 4."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Se reparten $120.000 entre tres personas en partes inversamente proporcionales a 2, 3 y 6. ¿Cuánto recibe la primera persona?",
+        "$60.000",
+        "Repartir de forma inversamente proporcional a unos números es repartir de "
+        "forma directamente proporcional a sus recíprocos.\n\n"
+        "1) Los recíprocos son 1/2, 1/3 y 1/6.\n"
+        "2) Llévalos a denominador común 6: 3/6, 2/6 y 1/6, o sea partes 3, 2 y 1.\n"
+        "3) Total de partes: 3 + 2 + 1 = 6, así que cada parte vale "
+        "120.000 ÷ 6 = 20.000.\n"
+        "4) La primera persona tiene 3 partes: 3 · 20.000 = 60.000.\n"
+        "5) Control: los montos son 60.000, 40.000 y 20.000, suman 120.000, y le "
+        "toca más a quien tenía el número más chico, como corresponde a un "
+        "reparto inverso.",
+        [
+            ("$21.818", "Repartió de forma directamente proporcional a 2, 3 y 6, que es justo lo contrario de lo pedido."),
+            ("$40.000", "Dividió el total en tres partes iguales sin aplicar ninguna proporcionalidad."),
+            ("$20.000", "Le asignó a la primera persona la parte más chica; en un reparto inverso el número menor recibe más."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "La magnitud y es directamente proporcional a x. Si x aumenta un 20%, ¿qué le ocurre a y?",
+        "Aumenta un 20%",
+        "En la proporcionalidad directa los cambios porcentuales se traspasan tal "
+        "cual.\n\n"
+        "1) Si y = kx y la x pasa a valer 1,2x, la nueva y es k · 1,2x.\n"
+        "2) Eso es 1,2 · (kx), o sea 1,2 veces la y original: un 20% más.\n"
+        "3) Comprueba con números: con k = 5, de x = 10 con y = 50 se pasa a "
+        "x = 12 con y = 60, y 60 es un 20% más que 50.",
+        [
+            ("Disminuye un 20%", "Eso ocurriría en una proporcionalidad inversa, y además allí la baja tampoco sería exactamente del 20%."),
+            ("Aumenta un 40%", "Duplicó el porcentaje sin razón: la constante multiplica, no amplifica el cambio."),
+            ("Aumenta en 20 unidades", "Confundió un aumento porcentual con uno de cantidad fija; el efecto depende del valor inicial."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "La magnitud y es inversamente proporcional a x. Si x aumenta un 25%, ¿qué le ocurre a y?",
+        "Disminuye un 20%",
+        "En la inversa el producto se mantiene, y por eso los porcentajes no se "
+        "reflejan como espejo.\n\n"
+        "1) Si x · y = k y la x pasa a 1,25x, la nueva y debe cumplir "
+        "1,25x · y' = k.\n"
+        "2) Despejando: y' = k/(1,25x) = 0,8 · (k/x), o sea el 80% de la y "
+        "original.\n"
+        "3) Pasar al 80% es bajar un 20%, no un 25%.\n"
+        "4) Comprueba con números: si k = 100, de x = 4 con y = 25 se pasa a "
+        "x = 5 con y = 20, y de 25 a 20 hay una baja del 20%.",
+        [
+            ("Disminuye un 25%", "Aplicó el mismo porcentaje como espejo; la inversa exige dividir por 1,25, y eso deja el 80%, no el 75%."),
+            ("Aumenta un 25%", "En una relación inversa las magnitudes se mueven en sentidos opuestos."),
+            ("Disminuye un 80%", "Confundió quedar EN el 80% con bajar un 80%: quedar en el 80% significa bajar 20 puntos."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Cinco tractores aran un campo en 12 días trabajando 6 horas diarias. ¿Cuántos días demoran 6 tractores trabajando 10 horas diarias en arar el mismo campo?",
+        "6 días",
+        "Todo el trabajo se mide en horas-tractor.\n\n"
+        "1) Trabajo total: 5 · 12 · 6 = 360 horas-tractor.\n"
+        "2) Con 6 tractores a 10 horas diarias se hacen 6 · 10 = 60 horas-tractor "
+        "por día.\n"
+        "3) Días necesarios: 360 ÷ 60 = 6 días.\n"
+        "4) Control: hay más tractores y más horas diarias, así que debe demorar "
+        "bastante menos que los 12 días originales.",
+        [
+            ("10 días", "Ajustó solo por la cantidad de tractores y dejó las horas diarias en 6."),
+            ("7,2 días", "Ajustó solo por las horas diarias y olvidó que los tractores pasaron de 5 a 6."),
+            ("4 días", "Multiplicó los dos ajustes en el mismo sentido en vez de repartir el trabajo total."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "En una tabla, el cociente y dividido por x vale 4 en todos los pares menos en uno, donde vale 4,5. ¿Qué se puede concluir?",
+        "Que la relación no es de proporcionalidad directa",
+        "La constante tiene que servir para todos los pares, sin excepción.\n\n"
+        "1) La proporcionalidad directa exige que y/x sea el mismo número en toda "
+        "la tabla.\n"
+        "2) Un solo par con cociente distinto ya rompe esa condición.\n"
+        "3) No importa que la mayoría cumpla: en matemática un contraejemplo basta "
+        "para descartar una afirmación general.\n"
+        "4) Otra cosa distinta es sospechar que ese dato está mal medido, pero eso "
+        "no se puede concluir solo mirando la tabla.",
+        [
+            ("Que la constante de proporcionalidad es 4", "Sería la constante si todos los pares dieran 4, y hay uno que no."),
+            ("Que la relación es inversamente proporcional", "Para eso los productos deberían ser constantes, y nada indica que lo sean."),
+            ("Que ese par está mal calculado", "Puede ser, pero la tabla sola no permite afirmarlo: quizá la relación simplemente no es proporcional."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Un albañil calcula que 4 ayudantes trasladan 600 ladrillos en 3 horas. Necesita trasladar 1.000 ladrillos en 2 horas. ¿Cuántos ayudantes necesita, al mismo rendimiento?",
+        "10 ayudantes",
+        "Se baja al rendimiento de un ayudante en una hora.\n\n"
+        "1) Horas-ayudante originales: 4 · 3 = 12.\n"
+        "2) Ladrillos por ayudante y por hora: 600 ÷ 12 = 50.\n"
+        "3) Para 1.000 ladrillos hacen falta 1.000 ÷ 50 = 20 horas-ayudante.\n"
+        "4) Como se dispone de 2 horas: 20 ÷ 2 = 10 ayudantes.\n"
+        "5) Control: hay que mover más ladrillos en menos tiempo, así que la "
+        "cuadrilla tiene que crecer bastante respecto de los 4 iniciales.",
+        [
+            ("7 ayudantes", "Ajustó por la cantidad de ladrillos y olvidó que el plazo se acortó de 3 a 2 horas."),
+            ("6 ayudantes", "Ajustó por el plazo y dejó la carga en 600 ladrillos."),
+            ("20 ayudantes", "Se quedó en las horas-ayudante necesarias sin repartirlas entre las 2 horas disponibles."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Para pintar una superficie de 45 metros cuadrados se necesitan 6 litros de pintura. ¿Cuál de las siguientes expresiones permite calcular los metros cuadrados M que se pueden pintar con L litros?",
+        "M = 7,5 · L",
+        "Primero el rendimiento por litro, después la expresión.\n\n"
+        "1) Metros cuadrados por litro: 45 ÷ 6 = 7,5.\n"
+        "2) Como la relación es directa: M = 7,5 · L.\n"
+        "3) Comprueba con el dato del enunciado: L = 6 da M = 45, tal como "
+        "corresponde.\n"
+        "4) Ojo con el sentido de la constante: 7,5 son metros por litro, no "
+        "litros por metro, que sería 0,133.",
+        [
+            ("M = 45 · L", "Usa la superficie total como si fuera el rendimiento de un solo litro."),
+            ("M = L / 7,5", "Invierte la relación y entrega litros a partir de metros cuadrados."),
+            ("M = 45 / L", "Es una proporcionalidad inversa: haría que con más pintura se pintara menos superficie."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Dos magnitudes cumplen que al triplicar la primera, la segunda queda dividida por 3. ¿Cuál de las siguientes afirmaciones describe correctamente la relación?",
+        "Son inversamente proporcionales y su producto es constante",
+        "El comportamiento descrito es exactamente el de la proporcionalidad "
+        "inversa.\n\n"
+        "1) Si la primera pasa de x a 3x y la segunda pasa de y a y/3, el producto "
+        "nuevo es 3x · y/3 = x · y.\n"
+        "2) El producto quedó igual que antes, y eso es la definición de "
+        "proporcionalidad inversa.\n"
+        "3) Comprueba con números: de x = 2 con y = 12 (producto 24) se pasa a "
+        "x = 6 con y = 4, y el producto sigue siendo 24.",
+        [
+            ("Son directamente proporcionales con constante negativa", "En una directa las dos crecen o decrecen juntas; una constante negativa no invierte el comportamiento así."),
+            ("Son inversamente proporcionales y su cociente es constante", "Confunde las dos condiciones: en la inversa lo constante es el producto, no el cociente."),
+            ("No hay proporcionalidad, porque una crece y la otra decrece", "Que se muevan en sentidos opuestos es justamente el sello de la proporcionalidad inversa."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Una fotocopiadora saca 240 copias en 6 minutos y otra saca 200 copias en 8 minutos. Trabajando juntas, ¿cuántas copias sacan en 10 minutos?",
+        "650 copias",
+        "Se calcula el ritmo de cada una y después se suman.\n\n"
+        "1) Primera fotocopiadora: 240 ÷ 6 = 40 copias por minuto.\n"
+        "2) Segunda fotocopiadora: 200 ÷ 8 = 25 copias por minuto.\n"
+        "3) Juntas: 40 + 25 = 65 copias por minuto.\n"
+        "4) En 10 minutos: 65 · 10 = 650 copias.\n"
+        "5) Los ritmos se suman porque las máquinas trabajan en paralelo; lo que "
+        "no se puede sumar son los tiempos.",
+        [
+            ("440 copias", "Sumó las copias de los enunciados sin llevarlas antes a un mismo intervalo de tiempo."),
+            ("400 copias", "Usó solo el ritmo de la primera máquina y multiplicó por los 10 minutos."),
+            ("325 copias", "Promedió los dos ritmos en vez de sumarlos: trabajando juntas producen la suma, no el promedio."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Un litro de cierta pintura rinde 12 metros cuadrados con una mano y 8 metros cuadrados si se dan dos manos. Se quiere pintar 96 metros cuadrados con dos manos. ¿Cuántos litros se necesitan?",
+        "12 litros",
+        "El dato relevante es el rendimiento del caso pedido, no el otro.\n\n"
+        "1) Con dos manos, un litro rinde 8 metros cuadrados.\n"
+        "2) Litros necesarios: 96 ÷ 8 = 12.\n"
+        "3) Control: el rendimiento con dos manos es menor, así que se gasta más "
+        "pintura que con una sola mano, donde habrían bastado 8 litros.\n"
+        "4) El dato de los 12 metros cuadrados está para tentar: corresponde a una "
+        "mano, que no es lo que pide el enunciado.",
+        [
+            ("8 litros", "Usó el rendimiento de una sola mano, cuando el enunciado pide dos manos."),
+            ("24 litros", "Duplicó el resultado de una mano, pero el rendimiento con dos manos ya viene dado y no es la mitad."),
+            ("16 litros", "Dividió 96 entre 6 usando un rendimiento que no aparece en el enunciado."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "En una receta, la cantidad de azúcar es directamente proporcional a la de fruta. Con 800 gramos de fruta se usan 200 gramos de azúcar. Si se quieren obtener 1.500 gramos de mezcla final, ¿cuánta fruta se necesita?",
+        "1.200 gramos",
+        "Conviene mirar qué fracción de la mezcla es fruta.\n\n"
+        "1) Con la receta original la mezcla pesa 800 + 200 = 1.000 gramos.\n"
+        "2) De esos, 800 son fruta: la fruta es 800/1.000 = 0,8 de la mezcla.\n"
+        "3) Para 1.500 gramos de mezcla: 1.500 · 0,8 = 1.200 gramos de fruta.\n"
+        "4) Control: el azúcar sería 300 gramos, y 1.200 + 300 = 1.500, con la "
+        "misma razón 4 a 1 de la receta original.",
+        [
+            ("1.500 gramos", "Tomó toda la mezcla como fruta y dejó el azúcar fuera del total."),
+            ("1.000 gramos", "Escaló mal la receta: con 1.000 de fruta la mezcla llegaría a 1.250 gramos, no a 1.500."),
+            ("375 gramos", "Aplicó la razón al revés y calculó la parte que corresponde al azúcar."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Un estanque tiene una llave que lo llena en 6 horas y un desagüe que lo vacía en 12 horas. Si se abren los dos a la vez con el estanque vacío, ¿cuánto demora en llenarse?",
+        "12 horas",
+        "Los ritmos se suman, y el del desagüe entra con signo negativo.\n\n"
+        "1) La llave llena 1/6 del estanque por hora.\n"
+        "2) El desagüe vacía 1/12 por hora.\n"
+        "3) Ritmo neto: 1/6 − 1/12 = 2/12 − 1/12 = 1/12 del estanque por hora.\n"
+        "4) Si cada hora se llena un doceavo, el estanque completo demora 12 "
+        "horas.\n"
+        "5) Control: con el desagüe abierto tiene que demorar más que las 6 horas "
+        "de la llave sola.",
+        [
+            ("18 horas", "Sumó los dos tiempos en lugar de restar los ritmos; los tiempos no se suman."),
+            ("4 horas", "Sumó los dos ritmos como si el desagüe también llenara el estanque."),
+            ("6 horas", "Ignoró el desagüe: mientras esté abierto, el llenado es más lento."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "El precio por persona de un paseo es inversamente proporcional a la cantidad de participantes. Con 15 participantes cada uno paga $24.000. ¿Cuántos participantes se necesitan para que cada uno pague $18.000?",
+        "20 participantes",
+        "El costo total del paseo es la constante.\n\n"
+        "1) Costo total: 15 · 24.000 = 360.000.\n"
+        "2) Participantes para pagar $18.000 cada uno: 360.000 ÷ 18.000 = 20.\n"
+        "3) Control: para que cada uno pague menos tiene que ir más gente, y 20 "
+        "es más que 15.",
+        [
+            ("11 participantes", "Aplicó proporcionalidad directa: con menos gente cada uno paga más, no menos."),
+            ("18 participantes", "Tomó el nuevo precio como si fuera la cantidad de personas."),
+            ("25 participantes", "Bajó el precio en la misma proporción en que subió la cantidad, sin usar el costo total fijo."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "En un plano, dos ciudades separadas realmente por 150 kilómetros aparecen a 6 centímetros de distancia. En ese mismo plano, ¿a cuántos centímetros aparecen dos pueblos separados realmente por 90 kilómetros?",
+        "3,6 centímetros",
+        "La distancia en el plano es directamente proporcional a la real.\n\n"
+        "1) Centímetros por kilómetro: 6 ÷ 150 = 0,04.\n"
+        "2) Para 90 kilómetros: 0,04 · 90 = 3,6 centímetros.\n"
+        "3) Control: 90 kilómetros es menos que 150, así que la distancia en el "
+        "plano debe ser menor que 6 centímetros.",
+        [
+            ("2,4 centímetros", "Restó proporcionalmente la diferencia de kilómetros en vez de aplicar la constante del plano."),
+            ("15 centímetros", "Invirtió la relación y usó kilómetros por centímetro como si fueran centímetros por kilómetro."),
+            ("5,4 centímetros", "Restó 0,6 centímetros a los 6 originales sin ninguna proporción de por medio."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "dificil",
+        "Se afirma que si dos magnitudes son inversamente proporcionales, entonces al duplicar una la otra siempre baja a la mitad. ¿Es correcta esa afirmación?",
+        "Sí, porque el producto debe mantenerse constante",
+        "La afirmación se sigue directamente de la definición.\n\n"
+        "1) Si x · y = k y la primera pasa a 2x, la segunda debe cumplir "
+        "2x · y' = k.\n"
+        "2) Despejando: y' = k/(2x), que es la mitad de y = k/x.\n"
+        "3) No hay excepciones mientras la relación sea realmente inversa: la "
+        "mitad sale obligada por el producto constante.\n"
+        "4) Cuidado con generalizar al revés: que la otra baja NO alcanza para "
+        "afirmar que hay proporcionalidad inversa, porque podría bajar en otra "
+        "medida.",
+        [
+            ("No, porque depende del valor de la constante", "La constante se cancela al hacer el cálculo: el resultado es la mitad sea cual sea su valor."),
+            ("No, porque la otra magnitud podría bajar en otra proporción", "Si bajara en otra proporción el producto cambiaría, y entonces la relación no sería inversa."),
+            ("Sí, pero solo si la constante es un número entero", "El razonamiento no usa en ningún momento que la constante sea entera."),
+        ],
+    ),
+]
+
+QUESTIONS += [
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Una tabla de proporcionalidad directa relaciona los litros de un estanque con las horas de llenado: a 2 horas le corresponden 50 litros y a 6 horas le corresponden 150 litros. ¿Cuántos litros hay a las 9 horas?",
+        "225 litros",
+        "Primero se confirma la constante y después se extiende la tabla.\n\n"
+        "1) Con el primer par: 50 ÷ 2 = 25 litros por hora.\n"
+        "2) Con el segundo par: 150 ÷ 6 = 25. Coinciden, así que la relación es "
+        "directa con constante 25.\n"
+        "3) A las 9 horas: 25 · 9 = 225 litros.\n"
+        "4) Control: 9 horas es una vez y media 6 horas, y 150 · 1,5 = 225.",
+        [
+            ("200 litros", "Sumó 50 litros por cada dos horas extra, usando un ritmo de 25 mal aplicado al salto de 6 a 9 horas."),
+            ("250 litros", "Multiplicó por 10 horas en lugar de 9."),
+            ("100 litros", "Aplicó proporcionalidad inversa: al pasar más tiempo el estanque acumula más agua, no menos."),
+        ],
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "Se sabe que y es inversamente proporcional a x y que cuando x vale 5, y vale 24. ¿Para qué valor de x se cumple que y vale 8?",
+        "15",
+        "La constante es el producto y no cambia en toda la relación.\n\n"
+        "1) Constante: 5 · 24 = 120.\n"
+        "2) Si y vale 8, entonces x · 8 = 120.\n"
+        "3) Despejando: x = 120 ÷ 8 = 15.\n"
+        "4) Control: y bajó de 24 a 8, o sea a la tercera parte, así que x debe "
+        "triplicarse, y 5 · 3 = 15.",
+        [
+            ("1,67", "Aplicó proporcionalidad directa: si y baja, en una relación inversa x tiene que subir."),
+            ("960", "Multiplicó la constante por 8 en lugar de dividirla."),
+            ("21", "Sumó a 5 la diferencia entre 24 y 8 dividida por dos; la proporcionalidad inversa se resuelve con el producto, no con diferencias."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "En una tienda, un artículo tiene un 25% de descuento y, al pagar con cierta tarjeta, se aplica un 10% adicional sobre el precio ya rebajado. ¿A qué descuento único equivale la promoción completa?",
+        "32,5%",
+        "Los descuentos sucesivos no se suman, porque el segundo se aplica sobre "
+        "una base más chica.\n\n"
+        "1) Parte de un precio cómodo: 100.\n"
+        "2) Tras el 25%: queda 75.\n"
+        "3) El 10% de 75 es 7,5, así que queda 67,5.\n"
+        "4) De 100 se pasó a 67,5, o sea un descuento total de 32,5%.\n"
+        "5) Por eso no es 35%: el segundo descuento se calcula sobre 75 y no "
+        "sobre los 100 iniciales.",
+        [
+            ("35%", "Sumó los dos porcentajes; el segundo descuento se aplica sobre el precio ya rebajado, no sobre el original."),
+            ("30%", "Promedió mal los dos descuentos en lugar de aplicarlos uno después del otro."),
+            ("22,5%", "Calculó el 10% sobre los 25 puntos de descuento en vez de sobre el precio rebajado."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "El precio de un artículo aumentó un 25%. ¿Qué porcentaje de descuento hay que aplicarle al nuevo precio para volver exactamente al precio original?",
+        "20%",
+        "Subir y bajar el mismo porcentaje no devuelve al punto de partida, porque "
+        "las bases son distintas.\n\n"
+        "1) Parte de 100. Tras el alza del 25% el precio queda en 125.\n"
+        "2) Para volver a 100 hay que bajar 25 pesos desde 125.\n"
+        "3) Ese descuento, en porcentaje, es 25 ÷ 125 = 0,2, o sea 20%.\n"
+        "4) La asimetría es la clave: el alza se calculó sobre 100 y la baja se "
+        "calcula sobre 125, que es una base mayor.",
+        [
+            ("25%", "Aplicó el mismo porcentaje de vuelta; sobre 125 un 25% son 31,25 pesos y el precio caería a 93,75."),
+            ("15%", "Un 15% de 125 son 18,75, insuficiente para volver a 100."),
+            ("30%", "Un 30% de 125 son 37,5, con lo que el precio quedaría por debajo del original."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "En un curso, el 60% son mujeres. De ellas, el 25% practica algún deporte, y de los hombres lo practica el 50%. ¿Qué porcentaje del curso completo practica deporte?",
+        "35%",
+        "Conviene calcular cada grupo por separado sobre el total del curso.\n\n"
+        "1) Mujeres deportistas: el 25% del 60% es 0,25 · 60 = 15% del curso.\n"
+        "2) Los hombres son el 40% del curso.\n"
+        "3) Hombres deportistas: el 50% del 40% es 0,5 · 40 = 20% del curso.\n"
+        "4) Total: 15% + 20% = 35% del curso.\n"
+        "5) Control con 100 estudiantes: 60 mujeres y 40 hombres; 15 mujeres y 20 "
+        "hombres practican deporte, o sea 35 personas de 100.",
+        [
+            ("37,5%", "Promedió los porcentajes de cada grupo sin pesarlos por su tamaño; hay más mujeres que hombres."),
+            ("75%", "Sumó directamente 25% y 50% sin aplicarlos sobre la fracción del curso que representa cada grupo."),
+            ("30%", "Calculó bien las mujeres deportistas pero aplicó el 50% sobre el total del curso en lugar de sobre los hombres."),
+        ],
+    ),
+    _q(
+        "num_porcentajes", "dificil",
+        "Un comerciante compra un producto en $24.000 y quiere venderlo ganando un 25% sobre el precio de venta. ¿A qué precio debe venderlo?",
+        "$32.000",
+        "El detalle está en sobre qué monto se calcula la ganancia: acá es sobre la "
+        "venta, no sobre la compra.\n\n"
+        "1) Si la ganancia es el 25% del precio de venta, entonces el costo es el "
+        "75% restante de ese mismo precio.\n"
+        "2) Entonces 24.000 corresponde al 75% del precio de venta.\n"
+        "3) Precio de venta: 24.000 ÷ 0,75 = 32.000.\n"
+        "4) Control: la ganancia es 32.000 − 24.000 = 8.000, y 8.000 es "
+        "exactamente el 25% de 32.000.",
+        [
+            ("$30.000", "Calculó el 25% sobre el costo de compra; el enunciado pide la ganancia sobre el precio de venta."),
+            ("$28.800", "Aplicó un 20% sobre el costo en lugar del 25% sobre la venta."),
+            ("$18.000", "Descontó el 25% al costo en vez de agregar la ganancia."),
+        ],
+    ),
 ]
 
 PASSAGES = [
@@ -32314,6 +33465,65 @@ LESSONS: dict[str, dict] = {
             "Detenerse en $2(x^2 - 4)$ y darlo por factorizado, o intentar "
             "factorizar $x^2 + 4$. La suma de cuadrados no tiene factorización "
             "en los números reales."
+        ),
+    },
+    "alg_proporcionalidad": {
+        "intro": (
+            "Casi todos los problemas de la vida diaria que aparecen en la PAES "
+            "son de proporción: precios, recetas, mapas, cuadrillas de trabajo. "
+            "La pregunta que hay que hacerse siempre es una sola: cuando una "
+            "magnitud sube, ¿la otra sube o baja?"
+        ),
+        "theory": (
+            "**Proporcionalidad directa.** Las dos magnitudes suben y bajan "
+            "juntas, y lo que se mantiene fijo es el COCIENTE: "
+            "$\\frac{y}{x} = k$, o lo que es lo mismo, $y = kx$. La constante "
+            "$k$ es el valor de una unidad: el precio de un kilo, los "
+            "kilómetros de un centímetro del mapa. Su gráfico es una recta que "
+            "pasa por el origen.\n\n"
+            "**Proporcionalidad inversa.** Una sube cuando la otra baja, y lo "
+            "que se mantiene fijo es el PRODUCTO: $x \\cdot y = k$, o sea "
+            "$y = \\frac{k}{x}$. La constante es el total del trabajo: los "
+            "días-persona de una obra, los kilómetros de un viaje. Su gráfico "
+            "es una curva que se acerca a los ejes sin tocarlos.\n\n"
+            "**Cómo saber cuál es cuál.** No basta con mirar si una sube y la "
+            "otra baja: hay que probar con los números. Divide un par y "
+            "después otro; si da lo mismo, es directa. Multiplica un par y "
+            "después otro; si da lo mismo, es inversa. Si ninguna de las dos "
+            "cosas se cumple para TODOS los pares, no hay proporcionalidad.\n\n"
+            "**Cuidado con la trampa del +.** $y = 3x$ es proporcional; "
+            "$y = 3x + 5$ no lo es, aunque crezca igual de parejo. La prueba "
+            "rápida: en una proporcionalidad directa, si $x$ vale 0 entonces "
+            "$y$ vale 0."
+        ),
+        "example_statement": (
+            "Seis pintores terminan un edificio en 10 días. Trabajando al mismo "
+            "ritmo, ¿cuántos días demoran 4 pintores?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Decido de qué tipo de proporcionalidad se trata: con menos pintores el trabajo demora más, así que es inversa.",
+                "porque": "Las dos magnitudes se mueven en sentidos opuestos. Si me equivoco acá, todo el resto del cálculo sale al revés.",
+            },
+            {
+                "accion": "Calculo la constante multiplicando el par que sí conozco: $6 \\cdot 10 = 60$ días-pintor.",
+                "porque": "En la proporcionalidad inversa lo que se mantiene fijo es el producto, y acá ese producto tiene un significado concreto: el trabajo total que exige el edificio.",
+            },
+            {
+                "accion": "Divido esa constante entre los 4 pintores: $60 \\div 4 = 15$ días.",
+                "porque": "El trabajo total no cambia, así que si hay menos gente repartiéndoselo, a cada uno le tocan más días.",
+            },
+            {
+                "accion": "Reviso que el resultado tenga sentido: 15 días es más que los 10 originales, que es lo que esperaba al sacar dos pintores.",
+                "porque": "Comprobar el sentido del resultado caza al tiro el error más común, que es aplicar la regla de tres directa donde correspondía la inversa.",
+            },
+        ],
+        "common_error": (
+            "Usar la regla de tres directa para todo. Frente a \"6 pintores en "
+            "10 días, ¿y 4 pintores?\" la respuesta automática suele ser "
+            "$\\frac{10 \\cdot 4}{6} \\approx 6{,}7$ días, o sea que MENOS "
+            "pintores terminarían ANTES. Antes de plantear la proporción hay "
+            "que decidir si las magnitudes van juntas o al revés."
         ),
     },
     "alg_lineal": {

@@ -83,6 +83,9 @@ EXCEPCIONES_DIFICULTAD = {
 # paso, esto no lo detecta. Detecta lo que importa más: que el ejemplo termine
 # donde debe terminar.
 RESULTADOS_LECCIONES: dict[str, Fraction] = {
+    # 6 pintores por 10 dias son 60 dias-pintor; repartidos entre 4 pintores dan 15 dias.
+    "alg_proporcionalidad": Fraction(6 * 10, 4),
+
     "num_racionales": Fraction(5, 6) - Fraction(2, 9),                # 11/18
     "num_potencias_raices": Fraction(2**5) * Fraction(1, 2**3) * 2,   # 8
     "num_porcentajes": Fraction(round(20000 * 1.20 * 0.85)),          # 20.400
@@ -242,6 +245,50 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
+    # --- Proporcionalidad (alg_proporcionalidad) ---
+    # Directa: la constante es el cociente. Inversa: es el producto.
+    "a x = 2 le corresponde y = 10": str(10 // 2),
+    "cuando x = 4 se tiene y = 15": str(4 * 15),
+    "Tres kilos de pan cuestan $4.500": f"${4500 // 3 * 5:,}".replace(",", "."),
+    "consume 6 litros de bencina cada 100 kilómetros": f"{6 * 250 // 100} litros",
+    "4 máquinas iguales producen 200 piezas": f"{200 // 4 * 6} piezas",
+    "receta para 4 personas lleva 300 gramos": f"{300 // 4 * 6} gramos",
+    "llena 12 litros en 3 minutos": f"{12 // 3 * 8} litros",
+    "Ocho cuadernos iguales cuestan $12.000": f"${12000 // 8 * 3:,}".replace(",", "."),
+    "recorre un trayecto en 6 horas viajando a 60 km/h": f"{60 * 6 // 90} horas",
+    "alcanza para 20 animales durante 12 días": f"{20 * 12 // 30} días",
+    "les corresponden y igual a 7, 14, 21": str(7 * 4),
+    "les corresponden y igual a 18, 12, 9": str(2 * 18 // 6),
+    "y vale 12 cuando x vale 4": str(12 // 4 * 7),
+    "y vale 9 cuando x vale 8": str(8 * 9 // 12),
+    "imprime 90 páginas en 4 minutos": f"{round(315 / (90 / 4))} minutos",
+    "15 metros de cable cuestan $27.000": f"{45000 // (27000 // 15)} metros",
+    "llena con 6 llaves iguales en 20 minutos": f"{6 * 20 // 5} minutos",
+    "3 partes de agua por cada 2 partes de concentrado": f"{750 * 3 // 2:,}".replace(",", ".") + " mililitros",
+    "pasa por el punto (4, 10)": str(10 / 4).replace(".", ","),
+    "La primera tiene 30 dientes y da 40 vueltas": f"{30 * 40 // 24} vueltas",
+    "llena con 3 llaves iguales en 4 horas": f"{round(3 * 4 / 1.5)} llaves",
+    "van 12 personas, cada una paga $9.000": f"${12 * 9000 // 18:,}".replace(",", "."),
+    "Seis máquinas trabajando 8 horas diarias producen 480 piezas": f"{480 // (6 * 8) * 9 * 5} piezas",
+    "Ocho obreros levantan 240 metros de muro en 6 días": f"{300 // (12 * (240 // (8 * 6)))} días",
+    "$180.000 entre tres personas en partes directamente proporcionales a 2, 3 y 4": f"${180000 // 9 * 4:,}".replace(",", "."),
+    "$120.000 entre tres personas en partes inversamente proporcionales a 2, 3 y 6": f"${120000 // 6 * 3:,}".replace(",", "."),
+    "Cinco tractores aran un campo en 12 días": f"{5 * 12 * 6 // (6 * 10)} días",
+    "4 ayudantes trasladan 600 ladrillos en 3 horas": f"{1000 // (600 // (4 * 3)) // 2} ayudantes",
+    "45 metros cuadrados se necesitan 6 litros": str(45 / 6).replace(".", ","),
+    "saca 240 copias en 6 minutos y otra saca 200 copias en 8 minutos": f"{(240 // 6 + 200 // 8) * 10} copias",
+    "rinde 12 metros cuadrados con una mano y 8 metros cuadrados": f"{96 // 8} litros",
+    "Con 800 gramos de fruta se usan 200 gramos de azúcar": f"{1500 * 800 // (800 + 200):,}".replace(",", ".") + " gramos",
+    "llave que lo llena en 6 horas y un desagüe que lo vacía en 12 horas": f"{1 // (Fraction(1, 6) - Fraction(1, 12))} horas",
+    "Con 15 participantes cada uno paga $24.000": f"{15 * 24000 // 18000} participantes",
+    "150 kilómetros aparecen a 6 centímetros": str(90 * 6 / 150).replace(".", ",") + " centímetros",
+    "a 2 horas le corresponden 50 litros": f"{50 // 2 * 9} litros",
+    "cuando x vale 5, y vale 24": str(5 * 24 // 8),
+    # --- Porcentajes nuevos ---
+    "25% de descuento y, al pagar con cierta tarjeta": f"{100 - 100 * 0.75 * 0.9:.1f}%".replace(".", ","),
+    "¿Qué porcentaje de descuento hay que aplicarle al nuevo precio": f"{round(25 / 125 * 100)}%",
+    "el 60% son mujeres": f"{round(0.6 * 25 + 0.4 * 50)}%",
+    "compra un producto en $24.000 y quiere venderlo ganando un 25% sobre el precio de venta": f"${round(24000 / 0.75):,}".replace(",", "."),
     # --- racionales ---
     "5/6 − 2/9": str(Fraction(5, 6) - Fraction(2, 9)),
     "(3/5) × (10/9)": str(Fraction(3, 5) * Fraction(10, 9)),
