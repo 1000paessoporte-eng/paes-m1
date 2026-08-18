@@ -224,13 +224,23 @@ export function getOnboarding(token?: string): Promise<Onboarding> {
   return apiFetch<Onboarding>("/api/auth/onboarding", token);
 }
 
+/**
+ * Guarda lo que el estudiante haya querido contar.
+ *
+ * Todos los campos son opcionales porque el guardado es parcial de verdad: el
+ * servidor solo pisa los que recibe (`users/service.py`), y marca el
+ * cuestionario como respondido aunque no venga ninguno. Eso permite que el
+ * modal de bienvenida pregunte una sola cosa y que /perfil complete el resto
+ * después, sin que ninguno de los dos tenga que mandar campos vacíos que
+ * pisarían lo ya guardado.
+ */
 export function guardarOnboarding(
   payload: {
-    pruebas_objetivo: string[];
-    curso: string | null;
-    primera_vez: boolean | null;
-    puntaje_anterior: number | null;
-    horas_semana: number | null;
+    pruebas_objetivo?: string[];
+    curso?: string | null;
+    primera_vez?: boolean | null;
+    puntaje_anterior?: number | null;
+    horas_semana?: number | null;
   },
   token?: string
 ): Promise<Onboarding> {
