@@ -1503,18 +1503,18 @@ QUESTIONS = [
     # ---------- ÁLGEBRA ----------
     _q(
         "alg_expresiones", "facil",
-        "Reduce la expresión: 5x + 3y − 2x + y",
+        "Una librería vende 5 cuadernos y 3 lápices, y luego devuelve 2 cuadernos y vende 1 lápiz más. Si x es el precio de un cuaderno e y el de un lápiz, ¿cuál expresión representa el total recaudado?",
         "3x + 4y",
-        "Se agrupan y combinan los términos semejantes: los que tienen x entre sí, y "
-        "los que tienen y entre sí.\n\n"
-        "1) Combina los términos en x: 5x − 2x = 3x.\n"
-        "2) Combina los términos en y: 3y + y = 4y. El término \"y\" solo tiene "
-        "coeficiente 1, aunque no se escriba.\n"
-        "3) El resultado final es 3x + 4y.",
+        "Cada producto tiene su propio precio, así que se agrupan por separado.\n\n"
+        "1) Cuadernos: 5x − 2x = 3x.\n"
+        "2) Lápices: 3y + y = 4y. Recuerda que 'un lápiz más' es 1y, no 1.\n"
+        "3) Total recaudado: 3x + 4y.\n"
+        "4) No se puede escribir 7xy: sumar cuadernos con lápices no tiene "
+        "sentido mientras cuesten distinto.",
         [
-            ("3x + 3y", "No consideró el coeficiente 1 del término y aislado al sumarlo con 3y."),
-            ("7x + 4y", "Sumó los términos en x en lugar de restarlos, ignorando el signo negativo de 2x."),
-            ("3xy", "Combinó los términos en x y en y como si fueran semejantes, cuando no lo son."),
+            ("7xy", "Juntó los dos productos en un solo término; solo se suman términos con la misma parte literal."),
+            ("3x + 3y", "Olvidó el lápiz vendido después; 3y + y son 4y."),
+            ("7x + 4y", "Sumó los 2 cuadernos devueltos en lugar de restarlos."),
         ],
     ),
     _q(
@@ -2937,18 +2937,18 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: expresiones y factorización ----------
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es el resultado de reducir 5a + 3b − 2a + 7b?",
+        "Una constructora compra 5 sacos de cemento y 3 de arena, y al día siguiente devuelve 2 de cemento y compra 7 de arena. Si a y b son los precios por saco de cemento y de arena, ¿cuál expresión representa el gasto total?",
         "3a + 10b",
-        "Solo se pueden sumar o restar términos semejantes, es decir, los que tienen "
-        "la misma letra.\n\n"
-        "1) Agrupa los términos con a: 5a − 2a = 3a.\n"
-        "2) Agrupa los términos con b: 3b + 7b = 10b.\n"
-        "3) La expresión reducida es 3a + 10b. No se puede seguir simplificando, "
-        "porque a y b son términos distintos.",
+        "Cada material se agrupa por separado, porque tienen precios distintos.\n\n"
+        "1) Cemento: 5a − 2a = 3a.\n"
+        "2) Arena: 3b + 7b = 10b.\n"
+        "3) Gasto total: 3a + 10b.\n"
+        "4) No se pueden sumar 3a con 10b: multiplicar por precios distintos "
+        "impide juntarlos en un solo término.",
         [
-            ("13ab", "Sumó todos los coeficientes y juntó las letras, tratando términos distintos como semejantes."),
-            ("3a + 4b", "Restó los términos en b en lugar de sumarlos."),
-            ("7a + 10b", "Sumó los términos en a en lugar de restarlos."),
+            ("13ab", "Juntó los dos materiales en un solo término; los términos con letras distintas no son semejantes."),
+            ("7a + 10b", "Sumó los 2 sacos de cemento devueltos en lugar de restarlos."),
+            ("3a + 4b", "Restó los 7 sacos de arena en lugar de sumarlos."),
         ],
     ),
     _q(
@@ -5622,36 +5622,36 @@ QUESTIONS += [
     # ---------- alg_expresiones ----------
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es el resultado de reducir 7x − 3x + 2x?",
+        "Un kiosco recibe 7 cajas de bebidas, devuelve 3 y al día siguiente recibe 2 más. Si cada caja trae x bebidas, ¿cuál es la expresión que representa la cantidad de bebidas que quedó?",
         "6x",
-        "Todos los términos son semejantes: comparten la misma letra con el mismo "
-        "exponente, así que se pueden juntar en uno solo.\n\n"
-        "1) Identifica los coeficientes respetando su signo: +7, −3 y +2.\n"
-        "2) Súmalos en orden: 7 − 3 = 4, y 4 + 2 = 6.\n"
-        "3) La letra se mantiene igual, así que el resultado es 6x.\n\n"
-        "Comprobación: si x valiera 1, la expresión original daría 7 − 3 + 2 = 6, "
-        "y 6x también daría 6.",
+        "Cada movimiento aporta un múltiplo de x, así que se suman y restan los "
+        "coeficientes.\n\n"
+        "1) Lo recibido al principio: 7x bebidas.\n"
+        "2) Lo devuelto se resta: 7x − 3x = 4x.\n"
+        "3) Lo recibido después se suma: 4x + 2x = 6x.\n"
+        "4) Solo se operan los números que acompañan a la x; la x queda igual "
+        "porque todas las cajas traen la misma cantidad.",
         [
-            ("12x", "Sumó los tres coeficientes ignorando el signo negativo del segundo."),
-            ("6x³", "Sumó también los exponentes, como si se estuvieran multiplicando los términos."),
-            ("2x", "Restó los coeficientes en el orden equivocado: 7 − 3 − 2."),
+            ("6", "Operó bien los coeficientes pero perdió la x: el resultado son bebidas, no cajas."),
+            ("12x", "Sumó las tres cantidades sin restar las 3 cajas devueltas."),
+            ("2x", "Restó las 2 cajas del segundo día en lugar de sumarlas."),
         ],
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es el resultado de reducir 6m + 4n − 2m − 9n?",
+        "Una feria vende 6 cajones de manzanas y 4 de naranjas por la mañana. Por la tarde devuelve 2 cajones de manzanas y 9 de naranjas. Si m y n son los kilos por cajón de cada fruta, ¿cuál expresión representa el saldo del día?",
         "4m − 5n",
-        "Solo se pueden juntar los términos que comparten la misma letra.\n\n"
-        "1) Agrupa por letra: los términos con m son 6m y −2m; los términos con n son "
-        "+4n y −9n.\n"
-        "2) Reduce los de m: 6 − 2 = 4, o sea 4m.\n"
-        "3) Reduce los de n: 4 − 9 = −5, o sea −5n.\n"
-        "4) La expresión final es 4m − 5n. No se puede seguir reduciendo porque m y n "
-        "son letras distintas.",
+        "Las manzanas se agrupan con las manzanas y las naranjas con las "
+        "naranjas.\n\n"
+        "1) Manzanas: 6m − 2m = 4m.\n"
+        "2) Naranjas: 4n − 9n = −5n.\n"
+        "3) El saldo es 4m − 5n. El signo negativo tiene sentido: se devolvieron "
+        "más cajones de naranjas de los que se habían vendido.\n"
+        "4) Los términos con m y con n no se pueden juntar: son frutas distintas.",
         [
-            ("−1mn", "Mezcló términos con letras distintas, que no son semejantes entre sí."),
-            ("4m + 5n", "Reduzco bien los coeficientes pero perdió el signo negativo del resultado en n."),
-            ("8m − 13n", "Sumó los coeficientes sin considerar los signos de resta."),
+            ("4m + 5n", "Restó bien las manzanas pero no arrastró el signo en las naranjas: 4n − 9n da negativo."),
+            ("−m", "Sumó todo como si manzanas y naranjas fueran lo mismo; los términos con letras distintas no se juntan."),
+            ("8m − 13n", "Sumó las devoluciones en vez de restarlas."),
         ],
     ),
     _q(
@@ -5853,20 +5853,20 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "medio",
-        "¿Cuál es el resultado de reducir 5(2a − 3) − 3(a − 4)?",
+        "alg_expresiones", "dificil",
+        "Una empresa arrienda 5 camionetas a un costo de (2a − 3) miles de pesos cada una y cancela el arriendo de 3 automóviles que costaban (a − 4) miles cada uno. ¿Cuál expresión representa el gasto neto, en miles de pesos?",
         "7a − 3",
-        "Hay que distribuir los dos paréntesis antes de reducir, con especial cuidado "
-        "en el segundo por el signo negativo.\n\n"
-        "1) Primer paréntesis: 5 · 2a = 10a y 5 · (−3) = −15. Queda 10a − 15.\n"
-        "2) Segundo paréntesis: el −3 multiplica a ambos términos. −3 · a = −3a y "
-        "−3 · (−4) = +12.\n"
-        "3) Junta todo: 10a − 15 − 3a + 12.\n"
-        "4) Reduce: 10a − 3a = 7a, y −15 + 12 = −3. El resultado es 7a − 3.",
+        "Primero se reparte cada multiplicación y recién después se reduce.\n\n"
+        "1) Camionetas: 5(2a − 3) = 10a − 15.\n"
+        "2) Automóviles cancelados: 3(a − 4) = 3a − 12, y va restando.\n"
+        "3) Gasto neto: (10a − 15) − (3a − 12) = 10a − 15 − 3a + 12.\n"
+        "4) Reduciendo: 7a − 3.\n"
+        "5) El paso delicado es el signo del −12: al restar todo el paréntesis, "
+        "ese término cambia a +12.",
         [
-            ("7a − 27", "No cambió el signo del segundo término al distribuir el −3, dejando −12."),
-            ("13a − 3", "Sumó los términos con a en lugar de restarlos."),
-            ("7a + 27", "Perdió los dos signos negativos al distribuir."),
+            ("7a − 27", "No cambió el signo del −12 al restar el paréntesis completo; quedó −15 − 12 en vez de −15 + 12."),
+            ("13a − 27", "Sumó el arriendo de los automóviles en lugar de restarlo."),
+            ("7a + 3", "Cambió de más los signos: el −15 también debía conservarse negativo."),
         ],
     ),
     _q(
@@ -5956,16 +5956,17 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es el resultado de reducir 8y − y + 3y?",
+        "Un taller tiene 8 planchas de metal, usa una y luego compra 3 más. Si cada plancha pesa y kilos, ¿cuál es la expresión que representa el peso total del metal que tiene ahora?",
         "10y",
-        "Los tres términos son semejantes, así que basta operar sus coeficientes.\n\n"
-        "1) Ojo con el segundo término: −y equivale a −1y, aunque el 1 no se escriba.\n"
-        "2) Opera los coeficientes: 8 − 1 = 7, y 7 + 3 = 10.\n"
-        "3) El resultado es 10y.",
+        "Todas las planchas pesan lo mismo, así que basta contar cuántas hay.\n\n"
+        "1) Al principio: 8y kilos.\n"
+        "2) Usa una plancha: 8y − y = 7y.\n"
+        "3) Compra tres más: 7y + 3y = 10y.\n"
+        "4) El truco está en recordar que 'una plancha' es 1y y no simplemente 1.",
         [
-            ("11y", "Ignoró el término −y por no tener número visible delante."),
-            ("10y³", "Sumó los exponentes, como si los términos se estuvieran multiplicando."),
-            ("4y", "Restó el tercer término en lugar de sumarlo."),
+            ("11y", "Olvidó restar la plancha que se usó."),
+            ("10", "Contó bien las planchas pero perdió el peso de cada una; la pregunta pide kilos."),
+            ("4y", "Restó las 3 planchas compradas en lugar de sumarlas."),
         ],
     ),
     _q(
@@ -6017,17 +6018,19 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es la factorización de x² − 100?",
+        "A un terreno cuadrado de lado x metros se le quita un cuadrado de 10 metros de lado. ¿Cuál de las siguientes expresiones representa el área que queda?",
         "(x + 10)(x − 10)",
-        "Es una diferencia de cuadrados perfectos.\n\n"
-        "1) x² es el cuadrado de x, y 100 es el cuadrado de 10.\n"
-        "2) Aplica a² − b² = (a + b)(a − b).\n"
-        "3) Queda (x + 10)(x − 10).\n"
-        "4) Verifica: x² − 10x + 10x − 100 = x² − 100.",
+        "El área que queda es una diferencia de cuadrados, y esa expresión se "
+        "factoriza siempre igual.\n\n"
+        "1) Área del terreno: x². Área quitada: 10² = 100.\n"
+        "2) Lo que queda: x² − 100.\n"
+        "3) Una diferencia de cuadrados a² − b² se factoriza como "
+        "(a + b)(a − b), así que x² − 100 = (x + 10)(x − 10).\n"
+        "4) Comprueba desarrollando: x² − 10x + 10x − 100 = x² − 100.",
         [
-            ("(x − 10)(x − 10)", "Usó dos signos negativos, lo que daría x² − 20x + 100."),
-            ("(x + 100)(x − 100)", "No sacó la raíz cuadrada de 100 al identificar los términos."),
-            ("(x + 50)(x − 50)", "Dividió el 100 por 2 en lugar de calcular su raíz cuadrada."),
+            ("(x − 10)(x − 10)", "Al desarrollarlo da x² − 20x + 100, que no es la diferencia buscada."),
+            ("(x + 10)(x + 10)", "Al desarrollarlo da x² + 20x + 100: sumaría área en vez de quitarla."),
+            ("x(x − 100)", "Sacó x como factor común, pero 100 no tiene x adentro para poder factorizarlo así."),
         ],
     ),
     _q(
@@ -6078,18 +6081,19 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es la factorización de x² + 11x + 30?",
-        "(x + 5)(x + 6)",
-        "Se buscan dos números que multiplicados den 30 y sumados den 11.\n\n"
-        "1) Parejas que multiplican 30: 1 y 30, 2 y 15, 3 y 10, 5 y 6.\n"
-        "2) Revisa cuál suma 11: 5 + 6 = 11. Esa es.\n"
-        "3) Como ambos signos del trinomio son positivos, los dos números son "
-        "positivos.\n"
-        "4) La factorización es (x + 5)(x + 6). Verifica: x² + 6x + 5x + 30.",
+        "Un rectángulo tiene área x² + 11x + 30 metros cuadrados. ¿Cuáles pueden ser las expresiones que representan sus lados?",
+        "(x + 5) y (x + 6)",
+        "Factorizar el área da directamente los lados, porque el área de un "
+        "rectángulo es el producto de ambos.\n\n"
+        "1) Hay que buscar dos números que multiplicados den 30 y sumados den 11.\n"
+        "2) Las parejas que dan 30 son 1 y 30, 2 y 15, 3 y 10, 5 y 6. La única "
+        "que suma 11 es 5 y 6.\n"
+        "3) Entonces x² + 11x + 30 = (x + 5)(x + 6).\n"
+        "4) Comprueba: x² + 6x + 5x + 30 = x² + 11x + 30.",
         [
-            ("(x + 3)(x + 10)", "Eligió una pareja que multiplica 30 pero suma 13."),
-            ("(x + 2)(x + 15)", "Eligió una pareja que multiplica 30 pero suma 17."),
-            ("(x − 5)(x − 6)", "Usó signos negativos; así el término central quedaría −11x."),
+            ("(x + 3) y (x + 10)", "Multiplicados dan 30, pero sumados dan 13 y no 11: el término central quedaría 13x."),
+            ("(x + 2) y (x + 15)", "También dan 30 al multiplicarse, pero suman 17."),
+            ("(x + 11) y (x + 30)", "Usó los coeficientes del enunciado tal cual; el 11 debe salir de la SUMA de los números, no ser uno de ellos."),
         ],
     ),
     _q(
@@ -6128,32 +6132,37 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es el resultado de simplificar (x² − 25)/(x + 5), con x ≠ −5?",
-        "x − 5",
-        "Se factoriza el numerador para que aparezca el denominador.\n\n"
+        "Un estudiante afirma que la expresión (x² − 25)/(x + 5) es igual a x − 5 para cualquier valor de x. ¿Qué se puede decir de su afirmación?",
+        "Es correcta salvo para x = −5, donde la expresión original no está definida",
+        "La simplificación está bien hecha, pero cambia el conjunto de valores "
+        "permitidos.\n\n"
         "1) El numerador es una diferencia de cuadrados: x² − 25 = (x + 5)(x − 5).\n"
-        "2) La fracción queda [(x + 5)(x − 5)]/(x + 5).\n"
-        "3) Cancela el factor (x + 5), presente arriba y abajo.\n"
-        "4) Queda x − 5.",
+        "2) Al dividir por (x + 5) queda x − 5, así que la simplificación es "
+        "correcta.\n"
+        "3) Pero con x = −5 el denominador original vale 0, y dividir por cero no "
+        "está definido.\n"
+        "4) Por eso la igualdad vale para todo x menos −5: la expresión "
+        "simplificada sí acepta ese valor, la original no.",
         [
-            ("x + 5", "Canceló el factor equivocado y conservó el que se simplificaba."),
-            ("x² − 5", "Canceló solo los números, tratando la fracción término a término."),
-            ("−5", "Canceló las x entre sí, algo que solo puede hacerse con factores completos."),
+            ("Es correcta para cualquier valor de x", "Con x = −5 el denominador se anula y la expresión original no existe."),
+            ("Es incorrecta: el resultado debería ser x + 5", "El factor que se cancela es (x + 5), así que lo que sobrevive es (x − 5)."),
+            ("Es incorrecta porque no se pueden simplificar fracciones con letras", "Sí se pueden, siempre que se cancelen factores completos y se cuide que el denominador no se anule."),
         ],
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es el resultado de simplificar (4x + 12)/(x + 3), con x ≠ −3?",
+        "Se reparte en partes iguales un total de (4x + 12) litros de pintura entre (x + 3) locales. ¿Cuántos litros recibe cada local?",
         "4",
-        "Se saca factor común arriba para que aparezca el paréntesis de abajo.\n\n"
-        "1) El 4 divide a ambos términos del numerador: 4x + 12 = 4(x + 3).\n"
-        "2) La fracción queda [4(x + 3)]/(x + 3).\n"
-        "3) Cancela el paréntesis (x + 3).\n"
-        "4) Queda 4, un valor que no depende de x.",
+        "Repartir es dividir, y conviene factorizar el numerador antes.\n\n"
+        "1) El numerador tiene factor común 4: 4x + 12 = 4(x + 3).\n"
+        "2) La división queda 4(x + 3) ÷ (x + 3).\n"
+        "3) El paréntesis se cancela completo y sobra 4.\n"
+        "4) El resultado no depende de x: cada local recibe 4 litros sin importar "
+        "cuántos locales sean, porque el total crece justo en esa proporción.",
         [
-            ("4x", "Canceló solo el 12 con el 3 en lugar de factorizar el numerador."),
-            ("x + 3", "Canceló el 4, dejando el factor que sí se simplificaba."),
-            ("4x + 9", "Restó el 3 del denominador al 12 del numerador, operación no válida en una fracción."),
+            ("4x", "Canceló el 12 con el 3 en lugar de factorizar y cancelar el paréntesis entero."),
+            ("4x + 9", "Restó 3 al término independiente; en una división no se restan términos sueltos."),
+            ("x + 3", "Entregó el divisor como resultado en lugar del cociente."),
         ],
     ),
     _q(
@@ -6174,18 +6183,19 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es el resultado de reducir 3(2m + 5) − 2(m − 1)?",
+        "Un curso junta dinero: 3 estudiantes aportan (2m + 5) pesos cada uno y se devuelve el aporte de 2 estudiantes que habían puesto (m − 1) pesos cada uno. ¿Cuál de las siguientes expresiones representa el dinero que queda?",
         "4m + 17",
-        "Se distribuyen ambos paréntesis con cuidado en los signos.\n\n"
-        "1) Primer paréntesis: 3 · 2m = 6m y 3 · 5 = 15. Queda 6m + 15.\n"
-        "2) Segundo paréntesis: el −2 multiplica a los dos términos. −2 · m = −2m y "
-        "−2 · (−1) = +2.\n"
-        "3) Junta todo: 6m + 15 − 2m + 2.\n"
-        "4) Reduce: 6m − 2m = 4m, y 15 + 2 = 17. El resultado es 4m + 17.",
+        "Se desarrolla cada producto y después se reduce con cuidado en los "
+        "signos.\n\n"
+        "1) Lo aportado: 3(2m + 5) = 6m + 15.\n"
+        "2) Lo devuelto: 2(m − 1) = 2m − 2, y va restando.\n"
+        "3) Queda (6m + 15) − (2m − 2) = 6m + 15 − 2m + 2.\n"
+        "4) Reduciendo: 4m + 17.\n"
+        "5) Ojo con el −2: al restar el paréntesis entero pasa a sumar.",
         [
-            ("4m + 13", "No cambió el signo del segundo término al distribuir el −2."),
-            ("8m + 17", "Sumó los términos con m en lugar de restarlos."),
-            ("4m + 15", "Distribuyó el −2 solo sobre la m y olvidó el −1."),
+            ("4m + 13", "Dejó el −2 restando en vez de cambiarle el signo al abrir el paréntesis con la resta delante."),
+            ("8m + 13", "Sumó lo devuelto en lugar de restarlo."),
+            ("4m + 17m", "Mezcló el término independiente con el término en m; 17 no lleva letra."),
         ],
     ),
     _q(
@@ -6220,34 +6230,36 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "dificil",
-        "Si a + b = 10 y ab = 21, ¿cuál es el valor de a² + b²?",
+        "Los dos lados de un rectángulo suman 10 centímetros y su área es 21 centímetros cuadrados. ¿Cuánto mide la diagonal al cuadrado, es decir, la suma de los cuadrados de sus lados?",
         "58",
-        "Se usa la identidad del cuadrado de una suma, sin necesidad de hallar a y b.\n\n"
-        "1) Parte de (a + b)² = a² + 2ab + b².\n"
-        "2) Despeja: a² + b² = (a + b)² − 2ab.\n"
-        "3) Reemplaza: 10² − 2 · 21 = 100 − 42.\n"
-        "4) El resultado es 58.\n\n"
-        "Control: los números que suman 10 y multiplican 21 son 3 y 7, y "
-        "9 + 49 = 58.",
+        "Por el teorema de Pitágoras la diagonal al cuadrado es a² + b², y eso se "
+        "obtiene sin calcular los lados.\n\n"
+        "1) Se sabe que a + b = 10 y a · b = 21.\n"
+        "2) De la identidad (a + b)² = a² + 2ab + b² se despeja "
+        "a² + b² = (a + b)² − 2ab.\n"
+        "3) Reemplazando: 10² − 2 · 21 = 100 − 42 = 58.\n"
+        "4) Comprobación: los lados miden 3 y 7 centímetros, y 9 + 49 = 58.",
         [
-            ("100", "Elevó la suma al cuadrado pero no restó el doble producto."),
-            ("142", "Sumó el doble producto en lugar de restarlo."),
-            ("79", "Restó el producto una sola vez en vez del doble producto."),
+            ("100", "Se quedó en el cuadrado de la suma sin descontar el doble producto."),
+            ("142", "Sumó el doble del área en lugar de restarlo."),
+            ("79", "Restó el área una sola vez, cuando la identidad exige restar el doble."),
         ],
     ),
     _q(
         "alg_expresiones", "dificil",
-        "¿Cuál es el resultado de simplificar (x² − 7x + 12)/(x − 3), con x ≠ 3?",
+        "Un terreno rectangular tiene área x² − 7x + 12 metros cuadrados y uno de sus lados mide (x − 3) metros. ¿Cuál de las siguientes expresiones representa el otro lado?",
         "x − 4",
-        "Se factoriza el trinomio del numerador para que aparezca el denominador.\n\n"
-        "1) Buscas dos números que multipliquen 12 y sumen −7: son −3 y −4.\n"
-        "2) Entonces x² − 7x + 12 = (x − 3)(x − 4).\n"
-        "3) La fracción queda [(x − 3)(x − 4)]/(x − 3).\n"
-        "4) Cancela el factor (x − 3) y queda x − 4.",
+        "El otro lado se obtiene dividiendo el área por el lado conocido, y para "
+        "eso conviene factorizar.\n\n"
+        "1) Se buscan dos números que multiplicados den 12 y sumados den −7: son "
+        "−3 y −4.\n"
+        "2) Entonces el área es (x − 3)(x − 4).\n"
+        "3) Dividiendo por (x − 3) queda (x − 4).\n"
+        "4) Comprueba: (x − 3)(x − 4) = x² − 4x − 3x + 12 = x² − 7x + 12.",
         [
-            ("x − 3", "Canceló el factor equivocado y conservó el que se simplificaba."),
-            ("x + 4", "Factorizó con signos positivos, que darían un término central +7x."),
-            ("x − 7", "Restó el 3 del denominador al término central, sin factorizar."),
+            ("x + 4", "Con signo positivo el producto daría −12 en el término independiente, y el área pide +12."),
+            ("x − 12", "Tomó el término independiente como lado; 12 es el producto de los dos números, no uno de ellos."),
+            ("x − 7", "Usó el coeficiente central, que es la suma de los números y no uno de ellos."),
         ],
     ),
     _q(
@@ -17075,17 +17087,19 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es el desarrollo de (x + 6)²?",
+        "Un patio cuadrado de x metros de lado se amplía agregando 6 metros a cada lado. ¿Cuál de las siguientes expresiones representa el área del patio ampliado?",
         "x² + 12x + 36",
-        "Es el cuadrado de un binomio: el término del medio es el que más se olvida.\n\n"
-        "1) Cuadrado del primero: x² = x².\n"
-        "2) Doble producto de ambos: 2 · x · 6 = 12x.\n"
-        "3) Cuadrado del segundo: 6² = 36.\n"
-        "4) Queda x² + 12x + 36.",
+        "El patio ampliado sigue siendo un cuadrado, ahora de lado (x + 6).\n\n"
+        "1) Su área es (x + 6)².\n"
+        "2) El cuadrado de binomio se desarrolla como el cuadrado del primero, "
+        "más el doble producto, más el cuadrado del segundo.\n"
+        "3) Eso da x² + 2 · x · 6 + 6² = x² + 12x + 36.\n"
+        "4) El término 12x tiene sentido geométrico: son las dos franjas de "
+        "6 metros de ancho y x de largo que se agregan a los costados.",
         [
-            ("x² + 36", "Elevó cada término al cuadrado por separado y olvidó el doble producto."),
-            ("x² + 6x + 36", "Usó el 6 sin duplicarlo en el término del medio."),
-            ("x² + 12x + 12", "Duplicó el 6 en lugar de elevarlo al cuadrado."),
+            ("x² + 36", "Elevó cada término por separado y se saltó el doble producto, que es justo lo que aportan las franjas laterales."),
+            ("x² + 6x + 36", "Puso el producto simple en lugar del DOBLE producto: son dos franjas, no una."),
+            ("x² + 12x + 12", "Duplicó el 6 en vez de elevarlo al cuadrado en el último término."),
         ],
     ),
     _q(
@@ -17104,31 +17118,33 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es la factorización de x² − 81?",
+        "Una plancha cuadrada de lado x centímetros tiene un hueco cuadrado de 9 centímetros de lado. ¿Cuál de las siguientes expresiones representa el área de metal que queda?",
         "(x + 9)(x − 9)",
-        "Es una diferencia de cuadrados, que siempre factoriza como suma por diferencia.\n\n"
-        "1) Reconoce los cuadrados: x² es el cuadrado de x, y 81 es el cuadrado de 9.\n"
-        "2) La diferencia de cuadrados a² − b² se factoriza como (a + b)(a − b).\n"
-        "3) Queda (x + 9)(x − 9).",
+        "El metal que queda es la diferencia de dos cuadrados.\n\n"
+        "1) Área de la plancha: x². Área del hueco: 9² = 81.\n"
+        "2) Metal restante: x² − 81.\n"
+        "3) Aplicando la diferencia de cuadrados: (x + 9)(x − 9).\n"
+        "4) Comprueba desarrollando: x² − 9x + 9x − 81 = x² − 81.",
         [
-            ("(x − 9)(x − 9)", "Usó dos signos negativos, lo que daría x² − 18x + 81."),
-            ("(x + 9)(x + 9)", "Usó dos signos positivos, lo que daría x² + 18x + 81."),
-            ("(x + 81)(x − 81)", "No sacó la raíz cuadrada del término numérico."),
+            ("(x − 9)(x − 9)", "Ese producto da x² − 18x + 81, que tiene un término central que aquí no existe."),
+            ("(x + 9)(x + 9)", "Ese producto da x² + 18x + 81: sumaría el hueco en lugar de descontarlo."),
+            ("x(x − 81)", "El 81 no contiene x, así que no se puede sacar x como factor común de él."),
         ],
     ),
     _q(
         "alg_expresiones", "facil",
-        "¿Cuál es la factorización de 8x² + 12x?",
+        "El costo de producir x artículos en un taller está dado por 8x² + 12x pesos. ¿Cuál de las siguientes expresiones es equivalente a ese costo?",
         "4x(2x + 3)",
-        "Se saca el factor común, que incluye tanto el número como la variable.\n\n"
-        "1) El máximo común divisor de 8 y 12 es 4.\n"
+        "Se saca el factor común más grande posible, mirando números y letras por "
+        "separado.\n\n"
+        "1) El mayor divisor común de 8 y 12 es 4.\n"
         "2) Los dos términos tienen al menos una x, así que también sale x.\n"
-        "3) El factor común es 4x. Al dividir: 8x² ÷ 4x = 2x y 12x ÷ 4x = 3.\n"
-        "4) Queda 4x(2x + 3).",
+        "3) El factor común es 4x, y queda 4x(2x + 3).\n"
+        "4) Comprueba desarrollando: 4x · 2x = 8x² y 4x · 3 = 12x.",
         [
-            ("4(2x² + 3x)", "Sacó solo el factor numérico y dejó la x adentro."),
-            ("x(8x + 12)", "Sacó solo la variable y dejó el factor numérico adentro."),
-            ("2x(4x + 6)", "Sacó un factor común que no es el máximo: la expresión todavía se puede factorizar."),
+            ("2x(4x + 6)", "Sacó factor común pero se quedó corto: dentro del paréntesis 4 y 6 todavía comparten el 2."),
+            ("4x(2x + 12)", "Al desarrollar da 8x² + 48x: dividió el primer término pero no el segundo."),
+            ("4(2x² + 3x)", "Sacó solo el número y dejó la x adentro, cuando ambos términos la tienen."),
         ],
     ),
     _q(
@@ -17148,32 +17164,36 @@ QUESTIONS += [
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es el desarrollo de (2x − 5)²?",
+        "Una plancha cuadrada mide (2x − 5) centímetros de lado. ¿Cuál de las siguientes expresiones representa su área?",
         "4x² − 20x + 25",
-        "El coeficiente del primer término también se eleva al cuadrado.\n\n"
-        "1) Cuadrado del primero: (2x)² = 4x². Ojo: se eleva el 2 y la x.\n"
-        "2) Doble producto: 2 · 2x · 5 = 20x, con signo negativo porque el binomio resta.\n"
-        "3) Cuadrado del segundo: 5² = 25, siempre positivo.\n"
-        "4) Queda 4x² − 20x + 25.",
+        "El área de un cuadrado es su lado al cuadrado, y hay que desarrollar el "
+        "binomio completo.\n\n"
+        "1) Área: (2x − 5)².\n"
+        "2) Cuadrado del primero: (2x)² = 4x². Ojo: se eleva también el 2.\n"
+        "3) Doble producto: 2 · 2x · (−5) = −20x.\n"
+        "4) Cuadrado del segundo: (−5)² = 25, positivo porque todo cuadrado lo es.\n"
+        "5) Resultado: 4x² − 20x + 25.",
         [
-            ("2x² − 20x + 25", "Elevó al cuadrado la x pero no el coeficiente 2."),
-            ("4x² − 10x + 25", "No duplicó el producto de los dos términos."),
-            ("4x² − 25", "Elevó cada término por separado y olvidó el término del medio."),
+            ("2x² − 20x + 25", "Elevó al cuadrado solo la x y dejó el 2 sin elevar; (2x)² es 4x²."),
+            ("4x² − 25", "Se saltó el doble producto; esa sería la respuesta de (2x − 5)(2x + 5)."),
+            ("4x² − 20x − 25", "Dejó negativo el último término, pero el cuadrado de −5 es positivo."),
         ],
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es la factorización de x² + 10x + 21?",
-        "(x + 3)(x + 7)",
-        "Se buscan dos números que multiplicados den el término independiente y sumados el coeficiente del medio.\n\n"
-        "1) Necesitas dos números cuyo producto sea 21 y cuya suma sea 10.\n"
-        "2) Las parejas que multiplican 21 son 1 y 21, 3 y 7.\n"
-        "3) La que suma 10 es 3 y 7.\n"
-        "4) La factorización es (x + 3)(x + 7). Comprueba desarrollando: x² + 7x + 3x + 21 = x² + 10x + 21 ✓.",
+        "El área de un huerto rectangular está dada por x² + 10x + 21 metros cuadrados, y uno de sus lados mide (x + 3) metros. ¿Cuál de las siguientes expresiones representa el otro lado?",
+        "x + 7",
+        "El otro lado sale de factorizar el área, o de dividirla por el lado "
+        "conocido.\n\n"
+        "1) Se buscan dos números que multiplicados den 21 y sumados den 10: son "
+        "3 y 7.\n"
+        "2) Entonces el área es (x + 3)(x + 7).\n"
+        "3) Como un lado es (x + 3), el otro es (x + 7).\n"
+        "4) Comprueba: (x + 3)(x + 7) = x² + 7x + 3x + 21 = x² + 10x + 21.",
         [
-            ("(x + 1)(x + 21)", "Eligió una pareja que multiplica 21 pero suma 22, no 10."),
-            ("(x + 5)(x + 5)", "Eligió una pareja que suma 10 pero multiplica 25, no 21."),
-            ("(x − 3)(x − 7)", "Usó signos negativos, lo que daría x² − 10x + 21."),
+            ("x + 21", "Tomó el término independiente como si fuera el lado; 21 es el PRODUCTO de los dos números, no uno de ellos."),
+            ("x + 10", "Usó el coeficiente central, que es la SUMA de los dos números y no uno de ellos."),
+            ("x − 7", "Con un signo negativo el producto daría −21 y el área no calzaría."),
         ],
     ),
     _q(
@@ -17192,33 +17212,39 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "medio",
-        "Si a + b = 12 y a · b = 35, ¿cuál es el valor de a² + b²?",
+        "alg_expresiones", "dificil",
+        "Dos tablones miden juntos 12 metros y el rectángulo que se forma con ellos como lados tiene área 35 metros cuadrados. ¿Cuánto vale la suma de los cuadrados de sus longitudes?",
         "74",
-        "No hace falta encontrar a y b: basta usar el cuadrado de la suma.\n\n"
-        "1) Sabemos que (a + b)² = a² + 2ab + b².\n"
-        "2) Despeja lo que buscas: a² + b² = (a + b)² − 2ab.\n"
-        "3) Reemplaza: 12² − 2 · 35 = 144 − 70.\n"
-        "4) El resultado es 74. Comprueba con a = 5 y b = 7: 25 + 49 = 74 ✓.",
+        "No hace falta averiguar cuánto mide cada tablón: sirve la identidad del "
+        "cuadrado de la suma.\n\n"
+        "1) Llama a y b a las longitudes: a + b = 12 y a · b = 35.\n"
+        "2) La identidad dice (a + b)² = a² + 2ab + b².\n"
+        "3) Despejando lo que se busca: a² + b² = (a + b)² − 2ab.\n"
+        "4) Reemplazando: 12² − 2 · 35 = 144 − 70 = 74.\n"
+        "5) Comprobación: los tablones miden 5 y 7 metros, y 25 + 49 = 74.",
         [
-            ("144", "Se quedó en el cuadrado de la suma sin restar el doble producto."),
-            ("109", "Restó 35 en vez de 2 · 35."),
-            ("214", "Sumó el doble producto en lugar de restarlo."),
+            ("144", "Se quedó en (a + b)² sin descontar el doble producto."),
+            ("214", "Sumó el doble producto en vez de restarlo; el despeje exige restarlo."),
+            ("109", "Restó el producto una sola vez en lugar del doble producto."),
         ],
     ),
     _q(
         "alg_expresiones", "medio",
-        "¿Cuál es la factorización completa de 5x² − 45?",
+        "El área sobrante de una lámina está dada por 5x² − 45 centímetros cuadrados. ¿Cuál de las siguientes expresiones es equivalente y está completamente factorizada?",
         "5(x + 3)(x − 3)",
-        "Primero el factor común y después la diferencia de cuadrados: el orden importa.\n\n"
-        "1) Ambos términos son divisibles por 5: 5x² − 45 = 5(x² − 9).\n"
-        "2) Lo que queda adentro es una diferencia de cuadrados, porque 9 = 3².\n"
-        "3) Factoriza: x² − 9 = (x + 3)(x − 3).\n"
-        "4) La factorización completa es 5(x + 3)(x − 3). Saltarse el factor común lleva a raíces equivocadas.",
+        "Primero el factor común y después la diferencia de cuadrados: en ese "
+        "orden.\n\n"
+        "1) Los dos términos son múltiplos de 5: 5x² − 45 = 5(x² − 9).\n"
+        "2) Lo que quedó dentro del paréntesis es una diferencia de cuadrados, "
+        "porque 9 es 3².\n"
+        "3) Factorizando: x² − 9 = (x + 3)(x − 3).\n"
+        "4) Resultado completo: 5(x + 3)(x − 3).\n"
+        "5) 'Completamente factorizada' significa que ya no queda nada por "
+        "factorizar dentro de los paréntesis.",
         [
-            ("(5x + 15)(x − 3)", "Repartió mal el factor 5 entre los dos paréntesis."),
-            ("5(x − 3)(x − 3)", "Usó dos signos negativos, lo que daría 5x² − 30x + 45."),
-            ("5(x² − 9)", "Sacó el factor común pero dejó la diferencia de cuadrados sin factorizar."),
+            ("5(x² − 9)", "Es correcta pero está a medio camino: el paréntesis todavía se puede factorizar."),
+            ("(5x + 9)(5x − 9)", "Al desarrollarlo da 25x² − 81, que no es la expresión original."),
+            ("5(x − 3)(x − 3)", "Ese producto da 5(x² − 6x + 9), con un término central que la expresión original no tiene."),
         ],
     ),
     _q(
