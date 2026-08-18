@@ -30,10 +30,21 @@ async function universidadDelSlug(
 export async function generateStaticParams() {
   // Son 47 y salen de una sola llamada, así que sí conviene prerenderizarlas:
   // son las páginas que reparten el rastreo hacia las 1.855 fichas.
-  const catalogo = await getCarrerasCatalogo();
-  return [...new Set(catalogo.map((c) => slugUniversidad(c.universidad)))].map(
-    (universidad) => ({ universidad })
-  );
+  //
+  // Si la API no responde se devuelve una lista vacía en vez de propagar el
+  // error. Un build NO puede caerse porque un servicio vivo no conteste: pasó
+  // exactamente eso al desplegar esto la primera vez, cuando la web se
+  // construyó un minuto antes de que la API publicara este endpoint y el
+  // deploy entero falló. Con la lista vacía las páginas se generan igual, solo
+  // que en la primera visita (`dynamicParams` ya está en true).
+  try {
+    const catalogo = await getCarrerasCatalogo();
+    return [...new Set(catalogo.map((c) => slugUniversidad(c.universidad)))].map(
+      (universidad) => ({ universidad })
+    );
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
