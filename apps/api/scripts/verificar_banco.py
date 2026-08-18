@@ -53,6 +53,26 @@ CLAVES_PASAJE = {p["key"] for p in TODOS_LOS_PASAJES}
 PASAJES_POR_CLAVE = {p["key"]: p for p in TODOS_LOS_PASAJES}
 DIFICULTADES = {"facil", "medio", "dificil"}
 
+# Plantillas donde los números SÍ cambian la tarea, así que dos preguntas
+# gemelas pueden llevar dificultades distintas. Cada fragmento identifica a la
+# pregunta que rompe la simetría, y va con el motivo por el que la rompe.
+EXCEPCIONES_DIFICULTAD = {
+    "x² + 12x + 36": "raíz doble: una única solución, no dos",
+    "x² − 10x + 25": "raíz doble: una única solución, no dos",
+    "2x + 3y = 17": "hay que amplificar las dos ecuaciones; la gemela se reduce directo",
+    "(1, 4) se rota 90°": "punto general; la gemela está sobre un eje y se ve a ojo",
+    "(2, 5) se rota 180°": "punto general; la gemela está sobre un eje",
+    "(4, 1) se rota 270°": "270° exige componer giros; la gemela es un cuarto de vuelta",
+    "√75 + √27": "obliga a simplificar radicales; las gemelas son raíces exactas",
+    "√98 − √50": "la resta obliga a simplificar radicales; la gemela son raíces exactas",
+    "9^(3/2)": "exponente m/n con m>1: hay potencia y raíz; las gemelas son solo raíz",
+    "√12 · √3": "exige la regla del producto de raíces; la gemela son raíces exactas",
+    "0,375": "tres cifras decimales frente a dos de la gemela",
+    "(2/3) ÷ (4/9)": "resultado fraccionario; la gemela da entero",
+    "(3/4) ÷ (9/8)": "resultado fraccionario; la gemela da entero",
+    "2, 4, 4, 6, 6 y 8": "conjunto bimodal: dos modas, no una",
+}
+
 # Resultado final del ejemplo resuelto de cada lección, recalculado acá sin
 # mirar el texto. Una lección con la aritmética mala es peor que no tener
 # lección: el estudiante la estudia creyendo que está bien.
@@ -512,8 +532,8 @@ COMPROBACIONES: dict[str, str] = {
     ).replace(".", ","),
     # Elementos de los cuerpos.
     "¿Cuántas caras tiene un paralelepípedo?": str(3 * 2),
-    "¿Cuántos vértices tiene un prisma de base triangular?": str(3 * 2),
     "¿Cuántas aristas tiene un paralelepípedo?": str(4 * 3),
+    "esquinera plástica en cada uno de sus vértices": str(4 * 2),
     # Casos inversos: se da el volumen o el área y se pide una medida.
     "cubo tiene un volumen de 216 cm³": str(round(216 ** (1 / 3))),
     "volumen de 240 cm³ y su base mide 8 cm por 5 cm": str(240 // (8 * 5)),
@@ -1415,12 +1435,10 @@ COMPROBACIONES: dict[str, str] = {
     "paralelepípedo de 9 cm de largo, 7 cm de ancho": f"{9 * 7 * 4} cm³",
     "caja cúbica tiene un área total de 216 cm²": f"{round((216 / 6) ** 0.5)} cm",
     "paralelepípedo mide 6 cm, 4 cm y 3 cm": f"{2 * (6 * 4 + 6 * 3 + 4 * 3)} cm²",
-    "base triangular de 6 cm de base y 4 cm de altura": f"{6 * 4 // 2 * 10} cm³",
     "estanque cilíndrico tiene 2 m de radio": f"{3.14 * 2**2 * 3:.2f} m³".replace(".", ","),
     "arista de un cubo se triplica": str(3**3),
     "cubo tiene un volumen de 64 cm³": f"{round(64 ** (1 / 3))} cm",
     "cilindro tiene un volumen de 502,4 cm³": f"{round(502.4 / (3.14 * 4**2))} cm",
-    "aristas tiene un prisma de base triangular": str(3 * 3),
     "volumen de 60 cm³ y dos de sus dimensiones": f"{60 // (5 * 3)} cm",
     "cubos de 5 cm de arista caben": f"{20 * 15 * 10 // 5**3} cubos",
     "área total de un cilindro de radio 3 cm y altura 7 cm": (
@@ -1626,6 +1644,52 @@ def main() -> int:
                 f"{nodo}: {len(stems)} preguntas con los mismos números {numeros} y la misma "
                 f"respuesta '{correcta}'; son la misma pregunta reformulada:\n{detalle}"
             )
+
+    # Dos alternativas con el MISMO VALOR dejan la pregunta con dos respuestas
+    # correctas. Comparar los textos no basta: "3/4" y "9/12" son cadenas
+    # distintas y el mismo número, y el alumno que resuelve bien pero no
+    # simplifica queda malo. Solo se comparan alternativas que sean un número
+    # limpio: "x < −3" y "x > −3" comparten el 3 sin ser lo mismo.
+    for q in todas:
+        puros: dict[Fraction, str] = {}
+        for a in q["alternatives"]:
+            texto = _norm(a["text"])
+            if not re.fullmatch(r"-?\d+(?:[.,]\d+)?(?:\s*/\s*-?\d+)?", texto):
+                continue
+            valores = _valores_del_texto(texto)
+            if len(valores) != 1:
+                continue
+            valor = next(iter(valores))
+            if valor in puros:
+                fallas.append(
+                    f"dos alternativas valen lo mismo ('{puros[valor]}' y "
+                    f"'{a['text']}'): {q['stem'][:60]}"
+                )
+            puros[valor] = a["text"]
+
+    # Una plantilla es un enunciado con los números cambiados. Si la tarea es la
+    # misma, la dificultad tiene que ser la misma: el ensayo se arma con esa
+    # etiqueta. Cuando los números SÍ cambian el procedimiento, la excepción se
+    # declara arriba con su motivo, para que sea una decisión y no un descuido.
+    por_plantilla: dict[tuple[str, str], list[dict]] = {}
+    for q in QUESTIONS:
+        plantilla = re.sub(r"\d+", "N", q["stem"])
+        por_plantilla.setdefault((q["skill_node"], plantilla), []).append(q)
+    for (nodo, plantilla), grupo in por_plantilla.items():
+        etiquetas = {q["difficulty"] for q in grupo}
+        if len(etiquetas) < 2:
+            continue
+        if any(
+            frag in q["stem"] for q in grupo for frag in EXCEPCIONES_DIFICULTAD
+        ):
+            continue
+        detalle = "\n".join(
+            f"        · [{q['difficulty']}] {q['stem'][:70]}" for q in grupo
+        )
+        fallas.append(
+            f"{nodo}: misma plantilla con dificultades {sorted(etiquetas)}; "
+            f"si la tarea es la misma la etiqueta debe serlo:\n{detalle}"
+        )
 
     for stem, veces in vistos.items():
         if veces > 1:

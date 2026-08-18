@@ -55,14 +55,12 @@ SKILL_NODES = [
         1,
         [],
     ),
-    (
-        "prob_combinatoria",
-        "Técnicas de conteo",
-        "probabilidad",
-        2,
-        ["prob_estadistica_desc"],
-    ),
-    ("prob_reglas", "Reglas de probabilidad", "probabilidad", 3, ["prob_combinatoria"]),
+    # Las técnicas de conteo NO son unidad del temario de M1: el eje de
+    # Probabilidad y Estadística tiene exactamente tres (representación de datos,
+    # medidas de posición y reglas de las probabilidades). Por eso el nodo vive
+    # en SKILL_NODES_M2. Sus preguntas siguen visibles para quien practica M2,
+    # porque el banco de M2 es M1 ∪ M2.
+    ("prob_reglas", "Reglas de probabilidad", "probabilidad", 2, ["prob_estadistica_desc"]),
 ]
 
 # Nodos exclusivos de M2 (code, name, axis, tier, prerequisites). M2 evalúa
@@ -85,6 +83,7 @@ SKILL_NODES_M2 = [
     # Probabilidad y estadística
     ("prob_dispersion", "Medidas de dispersión", "probabilidad", 2, ["prob_estadistica_desc"]),
     ("prob_condicional", "Probabilidad condicional", "probabilidad", 4, ["prob_reglas"]),
+    ("prob_combinatoria", "Técnicas de conteo", "probabilidad", 2, ["prob_estadistica_desc"]),
     ("prob_permutacion", "Permutación y combinatoria (nivel M2)", "probabilidad", 3, ["prob_combinatoria"]),
     ("prob_binomial", "Modelos probabilísticos (binomial)", "probabilidad", 4, ["prob_permutacion", "prob_condicional"]),
 ]
@@ -227,7 +226,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "num_porcentajes", "medio",
+        "num_porcentajes", "facil",
         "Un producto cuesta $40.000 y tiene un descuento del 20%. ¿Cuál es su precio final?",
         "$32.000",
         "La pregunta pide el precio final, no el monto rebajado.\n\n"
@@ -455,7 +454,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "alg_funciones", "medio",
+        "alg_funciones", "facil",
         "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 2) y (4, 11)?",
         "3",
         "La pendiente mide cuánto sube la recta por cada unidad que avanza hacia la "
@@ -475,7 +474,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "alg_funciones", "dificil",
+        "alg_funciones", "medio",
         "¿Cuál es el vértice de la parábola y = x² − 4x + 3?",
         "(2, −1)",
         "El vértice tiene dos coordenadas y hay que calcular ambas: primero la x, "
@@ -704,7 +703,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "prob_combinatoria", "medio",
+        "prob_combinatoria", "facil",
         "¿De cuántas formas distintas se pueden ordenar 4 libros diferentes en un estante?",
         "24",
         "Como importa el orden y se usan todos los libros, se trata de una "
@@ -722,7 +721,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "prob_combinatoria", "dificil",
+        "prob_combinatoria", "medio",
         "¿De cuántas formas se puede formar un comité de 3 personas a partir de un grupo de 6, "
         "si el orden no importa?",
         "20",
@@ -841,7 +840,7 @@ QUESTIONS = [
         [
             ("1/4", "Sumó 1/3+1/4 antes de restar 5/6, alterando el orden de izquierda a derecha de las operaciones."),
             ("17/12", "Sumó los tres términos en lugar de restar el segundo, ignorando el signo menos antes de 1/3."),
-            ("9/12", "Resolvió correctamente la operación pero no simplificó la fracción a su forma más simple."),
+            ("5/6", "Convirtió mal 1/4 a doceavos: usó 4/12 en lugar de 3/12, y el numerador le quedó 10."),
         ],
     ),
     _q(
@@ -1370,7 +1369,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "num_racionales", "medio",
+        "num_racionales", "facil",
         "¿Cuál es el resultado de 5/6 − 1/3?",
         "1/2",
         "Para restar fracciones necesitas el mismo denominador en ambas.\n\n"
@@ -1385,7 +1384,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "num_racionales", "dificil",
+        "num_racionales", "medio",
         "¿Cuál es el resultado de 2 − 3/4 × 2/3?",
         "3/2",
         "El orden de las operaciones exige resolver primero la multiplicación y "
@@ -1902,19 +1901,19 @@ QUESTIONS = [
     ),
     _q(
         "geo_solidos", "facil",
-        "¿Cuántas caras tiene un prisma de base triangular?",
-        "5",
-        "Un prisma de base triangular tiene dos bases triangulares (iguales y "
-        "paralelas) y tres caras laterales rectangulares, una por cada lado del "
-        "triángulo.\n\n"
-        "1) Cuenta las bases: 2 caras triangulares.\n"
-        "2) Cuenta las caras laterales: 3 caras rectangulares, una por cada lado "
-        "del triángulo de la base.\n"
-        "3) Suma: 2 + 3 = 5 caras en total.",
+        "Una lata de conservas tiene forma de cilindro y se quiere forrar completamente por fuera con papel. ¿Qué superficies hay que cubrir?",
+        "Las dos tapas circulares y el manto",
+        "Al desarmar un cilindro y estirarlo sobre la mesa aparecen tres piezas.\n\n"
+        "1) La tapa de arriba es un círculo.\n"
+        "2) La tapa de abajo es otro círculo igual.\n"
+        "3) El manto, que es la parte curva, se desenrolla y queda un rectángulo: "
+        "su largo es el contorno del círculo y su alto es la altura de la lata.\n"
+        "4) Por eso el área total del cilindro se calcula como dos círculos más "
+        "ese rectángulo.",
         [
-            ("3", "Contó solo las caras laterales (rectangulares), sin incluir las dos bases triangulares."),
-            ("6", "Confundió este sólido con un prisma de base cuadrada, que sí tiene 6 caras."),
-            ("4", "Contó una sola base triangular y las tres caras laterales, olvidando la segunda base."),
+            ("Solo el manto", "Olvidó las tapas: el manto cubre la parte curva, pero deja los dos círculos al aire."),
+            ("Una tapa circular y el manto", "Contó una sola tapa; forrar la lata por completo exige cubrir arriba y abajo."),
+            ("Las dos tapas circulares solamente", "Cubrió los círculos y dejó sin forrar toda la parte curva, que es la de mayor superficie."),
         ],
     ),
     _q(
@@ -2680,7 +2679,7 @@ QUESTIONS += [
         [
             ("13/14", "Sumó numeradores entre sí y denominadores entre sí en vez de multiplicar."),
             ("27/50", "Invirtió la segunda fracción y multiplicó, que es la regla de la división, no de la multiplicación."),
-            ("30/45", "Multiplicó correctamente pero no simplificó el resultado."),
+            ("3/2", "Invirtió el resultado final: entregó el recíproco de lo que había calculado bien."),
         ],
     ),
     _q(
@@ -2733,7 +2732,7 @@ QUESTIONS += [
         "4) Simplifica por 3: 15 ÷ 3 = 5 y 48 ÷ 3 = 16, o sea 5/16.",
         [
             ("5/9", "Al dividir multiplicó por 3/4 mal simplificado, o dividió los paréntesis término a término."),
-            ("15/48", "Hizo bien toda la operación pero no simplificó el resultado final."),
+            ("15/16", "Al simplificar dividió solo el denominador por 3 y dejó el numerador intacto."),
             ("16/5", "Invirtió el resultado: dividió el denominador por el numerador."),
         ],
     ),
@@ -2807,7 +2806,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_potencias_raices", "medio",
+        "num_potencias_raices", "facil",
         "¿Cuál es el valor de 5⁻²?",
         "1/25",
         "Un exponente negativo indica el recíproco de la potencia con exponente "
@@ -2824,7 +2823,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_potencias_raices", "dificil",
+        "num_potencias_raices", "medio",
         "¿Cuál es el valor de √50 − √18?",
         "2√2",
         "Conviene descomponer cada raíz para dejarlas con el mismo radical y poder "
@@ -2966,7 +2965,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "medio",
+        "alg_expresiones", "facil",
         "¿Cuál es la factorización de x² − 49?",
         "(x + 7)(x − 7)",
         "Se reconoce una diferencia de cuadrados: un cuadrado menos otro cuadrado.\n\n"
@@ -2998,7 +2997,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "dificil",
+        "alg_expresiones", "medio",
         "Si a + b = 9 y a · b = 20, ¿cuál es el valor de a² + b²?",
         "41",
         "No hace falta encontrar a y b por separado: sirve la identidad del cuadrado de "
@@ -3015,7 +3014,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "dificil",
+        "alg_expresiones", "medio",
         "¿Cuál es el resultado de simplificar (x² − 9)/(x + 3), con x ≠ −3?",
         "x − 3",
         "Conviene factorizar el numerador para buscar un factor común con el "
@@ -3263,7 +3262,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_cuadratica", "medio",
+        "alg_cuadratica", "facil",
         "¿Cuáles son las soluciones de x² − 7x = 0?",
         "x = 0 y x = 7",
         "Cuando no hay término independiente conviene factorizar por factor común, no "
@@ -3279,7 +3278,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_cuadratica", "dificil",
+        "alg_cuadratica", "medio",
         "¿Cuáles son las soluciones de 2x² − 7x + 3 = 0?",
         "x = 3 y x = 1/2",
         "Con el coeficiente de x² distinto de 1 conviene aplicar la fórmula general.\n\n"
@@ -3348,7 +3347,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_funciones", "medio",
+        "alg_funciones", "facil",
         "¿Cuál es la pendiente de la recta que pasa por los puntos (1, 2) y (5, 10)?",
         "2",
         "La pendiente es el cambio vertical dividido por el cambio horizontal entre dos "
@@ -3790,7 +3789,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_estadistica_desc", "facil",
         "¿Cuál es la mediana de los datos 7, 3, 9, 1 y 5?",
         "5",
         "La mediana es el valor central una vez ordenados los datos.\n\n"
@@ -3837,7 +3836,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "dificil",
+        "prob_estadistica_desc", "facil",
         "¿Cuál es el rango del conjunto 12, 4, 19, 7 y 15?",
         "15",
         "El rango es una medida de dispersión: la diferencia entre el dato mayor y el "
@@ -5378,7 +5377,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_reales", "dificil",
+        "num_reales", "medio",
         "¿Cuál es el resultado de racionalizar 10/√5?",
         "2√5",
         "Racionalizar es eliminar la raíz del denominador sin alterar el valor.\n\n"
@@ -5814,7 +5813,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "medio",
+        "alg_expresiones", "facil",
         "¿Cuál es el desarrollo de (x + 2)(x + 7)?",
         "x² + 9x + 14",
         "Se multiplica cada término del primer paréntesis por cada término del "
@@ -6247,7 +6246,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "dificil",
+        "alg_expresiones", "medio",
         "¿Cuál es la factorización completa de 3x² − 27?",
         "3(x + 3)(x − 3)",
         "Primero el factor común, después la diferencia de cuadrados.\n\n"
@@ -8874,7 +8873,7 @@ QUESTIONS += [
         [
             ("7/17", "Sumó numeradores entre sí y denominadores entre sí."),
             ("27/32", "Invirtió la segunda fracción, como si fuera una división."),
-            ("12/72", "Multiplicó correctamente pero no simplificó el resultado."),
+            ("1/72", "Simplificó los numeradores hasta 1 pero dejó el denominador sin tocar."),
         ],
     ),
     _q(
@@ -8903,7 +8902,7 @@ QUESTIONS += [
         "4) Simplifica dividiendo por 2: 8/6 = 4/3.",
         [
             ("4/11", "Sumó numeradores entre sí y denominadores entre sí."),
-            ("8/6", "Sumó correctamente pero no simplificó el resultado."),
+            ("1", "Convirtió mal 1/2 a sextos: usó 1/6 en lugar de 3/6, y los numeradores le sumaron 6."),
             ("1/6", "Multiplicó las tres fracciones en lugar de sumarlas."),
         ],
     ),
@@ -8938,7 +8937,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_racionales", "medio",
+        "num_racionales", "facil",
         "¿Cuál es el resultado de (3/4) × (8/15)?",
         "2/5",
         "Conviene simplificar antes de multiplicar para trabajar con números "
@@ -8949,7 +8948,7 @@ QUESTIONS += [
         "3) Multiplica lo que queda: (1 × 2)/(1 × 5) = 2/5.\n"
         "4) Sin simplificar antes daría 24/60, que se reduce igualmente a 2/5.",
         [
-            ("24/60", "Multiplicó correctamente pero no simplificó el resultado."),
+            ("5/2", "Invirtió el resultado final: entregó el recíproco de lo que había calculado bien."),
             ("45/32", "Invirtió la segunda fracción, como si fuera una división."),
             ("11/19", "Sumó numeradores entre sí y denominadores entre sí."),
         ],
@@ -8967,7 +8966,7 @@ QUESTIONS += [
         [
             ("15/8", "Multiplicó directamente sin invertir el divisor."),
             ("6/10", "Invirtió el dividendo en lugar del divisor."),
-            ("20/6", "Aplicó bien la regla pero no simplificó."),
+            ("3/10", "Invirtió el resultado final: dividió el denominador por el numerador."),
         ],
     ),
     _q(
@@ -9121,7 +9120,7 @@ QUESTIONS += [
         [
             ("10/7", "Invirtió el orden de la división."),
             ("35/72", "Multiplicó los dos paréntesis en lugar de dividirlos."),
-            ("42/60", "Aplicó bien la regla pero no simplificó el resultado."),
+            ("7/12", "Se quedó con el primer paréntesis y olvidó dividir por el segundo."),
         ],
     ),
     _q(
@@ -9728,7 +9727,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_porcentajes", "medio",
+        "num_porcentajes", "facil",
         "¿Cuánto es el 120% de 250?",
         "300",
         "Un porcentaje mayor que 100 da un resultado mayor que la cantidad "
@@ -10191,7 +10190,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_pitagoras", "medio",
+        "geo_pitagoras", "facil",
         "Un triángulo rectángulo tiene catetos de 20 cm y 21 cm. ¿Cuánto mide la hipotenusa?",
         "29 cm",
         "Se aplica el teorema aunque los números no sean los habituales.\n\n"
@@ -10206,7 +10205,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_pitagoras", "medio",
+        "geo_pitagoras", "facil",
         "En un triángulo rectángulo la hipotenusa mide 15 cm y un cateto mide 9 cm. ¿Cuánto mide el otro cateto?",
         "12 cm",
         "Se despeja el cateto restando los cuadrados.\n\n"
@@ -10334,7 +10333,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_pitagoras", "medio",
+        "geo_pitagoras", "facil",
         "En un triángulo rectángulo la hipotenusa mide 26 cm y un cateto mide 10 cm. ¿Cuánto mide el otro cateto?",
         "24 cm",
         "Se despeja restando los cuadrados.\n\n"
@@ -10349,7 +10348,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_pitagoras", "dificil",
+        "geo_pitagoras", "medio",
         "Un rombo tiene diagonales que miden 16 cm y 12 cm. ¿Cuánto mide cada uno de sus lados?",
         "10 cm",
         "Las diagonales de un rombo se cortan en el punto medio y forman ángulo "
@@ -10475,7 +10474,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_transformaciones", "medio",
+        "geo_transformaciones", "facil",
         "¿Cuáles son las coordenadas del punto (4, 6) al reflejarlo respecto del origen?",
         "(−4, −6)",
         "La reflexión respecto del origen cambia el signo de ambas coordenadas.\n\n"
@@ -10654,7 +10653,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_transformaciones", "medio",
+        "geo_transformaciones", "facil",
         "El punto (−3, −2) se traslada según el vector (0, 6). ¿Cuáles son sus nuevas coordenadas?",
         "(−3, 4)",
         "Un vector con primera componente cero mueve el punto solo verticalmente.\n\n"
@@ -10819,16 +10818,21 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "medio",
-        "Un prisma tiene base triangular de 6 cm de base y 4 cm de altura, y el prisma mide 10 cm de largo. ¿Cuál es su volumen?",
-        "120 cm³",
-        "El volumen de un prisma es el área de su base por su longitud.\n\n"
-        "1) Área de la base triangular: (6 · 4)/2 = 12 cm².\n"
-        "2) Multiplica por el largo del prisma: 12 · 10 = 120.\n"
-        "3) El volumen es 120 cm³.",
+        "Un estanque con forma de paralelepípedo mide a metros de largo, b metros de ancho y c metros de alto, y se llena de agua hasta la mitad de su altura. ¿Cuál de las siguientes expresiones representa el volumen de agua, en metros cúbicos?",
+        "(a · b · c) / 2",
+        "Conviene armar primero el volumen total y recién después aplicar la "
+        "condición del llenado.\n\n"
+        "1) El volumen de un paralelepípedo es largo por ancho por alto: a · b · c.\n"
+        "2) El agua llega hasta la mitad de la altura, así que la altura mojada es "
+        "c/2 y el volumen de agua es a · b · (c/2).\n"
+        "3) Esa expresión es la misma que (a · b · c)/2: multiplicar por c y dividir "
+        "por 2 da igual que multiplicar por c/2.\n"
+        "4) Fíjate en que la base no cambia al llenar a medias; lo único que se "
+        "reduce a la mitad es la altura.",
         [
-            ("240 cm³", "No dividió por 2 al calcular el área del triángulo de la base."),
-            ("12 cm³", "Se quedó en el área de la base sin multiplicar por el largo."),
-            ("40 cm³", "Dividió por 3, aplicando la fórmula de una pirámide."),
+            ("a · b · c", "Calculó el estanque lleno: olvidó que el agua solo llega hasta la mitad."),
+            ("(a + b + c) / 2", "Sumó las dimensiones en lugar de multiplicarlas; una suma de metros no da metros cúbicos."),
+            ("(a · b) / 2", "Redujo a la mitad el área de la base y perdió la altura: eso da metros cuadrados, no cúbicos."),
         ],
     ),
     _q(
@@ -10863,7 +10867,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_solidos", "dificil",
+        "geo_solidos", "medio",
         "Un cubo tiene un volumen de 64 cm³. ¿Cuánto mide su arista?",
         "4 cm",
         "Se invierte la fórmula del volumen.\n\n"
@@ -10895,17 +10899,22 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "medio",
-        "¿Cuántas aristas tiene un prisma de base triangular?",
-        "9",
-        "Conviene contar por grupos.\n\n"
-        "1) El triángulo de la base tiene 3 aristas.\n"
-        "2) El triángulo de arriba aporta otras 3.\n"
-        "3) Las aristas verticales que unen ambos triángulos son 3 más.\n"
-        "4) En total: 3 + 3 + 3 = 9 aristas.",
+        "Dos cajas con forma de paralelepípedo tienen exactamente el mismo volumen. ¿Cuál de las siguientes afirmaciones es siempre verdadera?",
+        "Pueden necesitar cantidades distintas de cartón para construirse",
+        "Volumen y área de superficie son cosas distintas, y un ejemplo lo deja "
+        "claro.\n\n"
+        "1) Una caja de 8 por 1 por 1 tiene volumen 8 y área total "
+        "2(8 + 8 + 1) = 34.\n"
+        "2) Una caja de 2 por 2 por 2 también tiene volumen 8, pero su área total "
+        "es 2(4 + 4 + 4) = 24.\n"
+        "3) Mismo volumen, áreas distintas: la primera necesita bastante más "
+        "cartón que la segunda.\n"
+        "4) Un solo contraejemplo basta para descartar que el área quede fijada "
+        "por el volumen.",
         [
-            ("6", "Contó solo las aristas de las dos bases, olvidando las verticales."),
-            ("5", "Contó las caras en lugar de las aristas."),
-            ("12", "Usó el número de aristas de un cubo."),
+            ("Tienen la misma área de superficie", "El contraejemplo de 8 por 1 por 1 contra 2 por 2 por 2 lo desmiente: mismo volumen, áreas 34 y 24."),
+            ("Tienen las mismas dimensiones", "El volumen es un producto: dimensiones muy distintas pueden dar el mismo resultado."),
+            ("Tienen el mismo perímetro de base", "La base puede ser larga y angosta o cuadrada sin que el volumen cambie."),
         ],
     ),
     _q(
@@ -11130,7 +11139,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_estadistica_desc", "facil",
         "¿Cuál es el rango del conjunto 45, 12, 78, 33 y 90?",
         "78",
         "El rango es la diferencia entre el mayor y el menor.\n\n"
@@ -11578,7 +11587,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_combinatoria", "medio",
+        "prob_combinatoria", "facil",
         "¿De cuántas formas distintas se pueden ordenar 7 personas en una fila?",
         "5.040",
         "Es una permutación de los 7 elementos.\n\n"
@@ -13664,16 +13673,19 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "facil",
-        "¿Cuántos vértices tiene un prisma de base triangular?",
-        "6",
-        "Un prisma tiene dos bases iguales unidas por caras laterales.\n\n"
-        "1) La base triangular tiene 3 vértices.\n"
-        "2) La otra base, también triangular, aporta otros 3.\n"
-        "3) En total: 3 + 3 = 6 vértices.",
+        "Una caja con forma de paralelepípedo se va a reforzar poniendo una esquinera plástica en cada uno de sus vértices. ¿Cuántas esquineras se necesitan?",
+        "8",
+        "Los vértices de una caja son sus esquinas, y conviene contarlas por "
+        "pisos.\n\n"
+        "1) La tapa de abajo es un rectángulo y tiene 4 esquinas.\n"
+        "2) La tapa de arriba es otro rectángulo igual, con otras 4.\n"
+        "3) En total: 4 + 4 = 8 vértices.\n"
+        "4) Cuidado con confundirlos: la misma caja tiene 12 aristas (los cantos) "
+        "y 6 caras.",
         [
-            ("5", "Contó las caras del prisma en lugar de los vértices."),
-            ("9", "Contó las aristas en lugar de los vértices."),
-            ("8", "Usó el número de vértices de un cubo."),
+            ("12", "Contó las aristas, que son los cantos donde se juntan dos caras, y no las esquinas."),
+            ("6", "Contó las caras de la caja en lugar de sus vértices."),
+            ("4", "Contó las esquinas de una sola tapa y olvidó la de abajo."),
         ],
     ),
     _q(
@@ -14265,7 +14277,7 @@ QUESTIONS += [
         "3) Queda 6/72, que se puede simplificar dividiendo ambos por 6: 1/12.\n"
         "4) Atajo útil: se podía simplificar antes de multiplicar, cancelando el 3 con el 9 y el 2 con el 8.",
         [
-            ("6/72", "Llegó al resultado correcto pero no lo simplificó."),
+            ("5/72", "Sumó los numeradores en vez de multiplicarlos, pero sí multiplicó los denominadores."),
             ("16/27", "Multiplicó en cruz, como si fuera una división."),
             ("5/17", "Sumó numeradores y denominadores en lugar de multiplicarlos."),
         ],
@@ -14822,7 +14834,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "num_potencias_raices", "medio",
+        "num_potencias_raices", "dificil",
         "¿Cuál es el valor de 9^(3/2)?",
         "27",
         "En un exponente fraccionario, el denominador es el índice de la raíz y el numerador la potencia.\n\n"
@@ -17190,7 +17202,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "alg_expresiones", "dificil",
+        "alg_expresiones", "medio",
         "¿Cuál es la factorización completa de 5x² − 45?",
         "5(x + 3)(x − 3)",
         "Primero el factor común y después la diferencia de cuadrados: el orden importa.\n\n"
@@ -18886,7 +18898,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_semejanza", "dificil",
+        "geo_semejanza", "medio",
         "Dos triángulos semejantes tienen sus lados en razón 2 : 5. Si el área del menor es 60 cm², ¿cuál es el área del mayor?",
         "375 cm²",
         "Las áreas van en la razón de semejanza al cuadrado.\n\n"
