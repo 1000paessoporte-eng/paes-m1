@@ -53,6 +53,26 @@ CLAVES_PASAJE = {p["key"] for p in TODOS_LOS_PASAJES}
 PASAJES_POR_CLAVE = {p["key"]: p for p in TODOS_LOS_PASAJES}
 DIFICULTADES = {"facil", "medio", "dificil"}
 
+# Plantillas donde los números SÍ cambian la tarea, así que dos preguntas
+# gemelas pueden llevar dificultades distintas. Cada fragmento identifica a la
+# pregunta que rompe la simetría, y va con el motivo por el que la rompe.
+EXCEPCIONES_DIFICULTAD = {
+    "x² + 12x + 36": "raíz doble: una única solución, no dos",
+    "x² − 10x + 25": "raíz doble: una única solución, no dos",
+    "2x + 3y = 17": "hay que amplificar las dos ecuaciones; la gemela se reduce directo",
+    "(1, 4) se rota 90°": "punto general; la gemela está sobre un eje y se ve a ojo",
+    "(2, 5) se rota 180°": "punto general; la gemela está sobre un eje",
+    "(4, 1) se rota 270°": "270° exige componer giros; la gemela es un cuarto de vuelta",
+    "√75 + √27": "obliga a simplificar radicales; las gemelas son raíces exactas",
+    "√98 − √50": "la resta obliga a simplificar radicales; la gemela son raíces exactas",
+    "9^(3/2)": "exponente m/n con m>1: hay potencia y raíz; las gemelas son solo raíz",
+    "√12 · √3": "exige la regla del producto de raíces; la gemela son raíces exactas",
+    "0,375": "tres cifras decimales frente a dos de la gemela",
+    "(2/3) ÷ (4/9)": "resultado fraccionario; la gemela da entero",
+    "bidones que caben 9/8": "resultado fraccionario; la gemela da entero",
+    "2, 4, 4, 6, 6 y 8": "conjunto bimodal: dos modas, no una",
+}
+
 # Resultado final del ejemplo resuelto de cada lección, recalculado acá sin
 # mirar el texto. Una lección con la aritmética mala es peor que no tener
 # lección: el estudiante la estudia creyendo que está bien.
@@ -63,6 +83,9 @@ DIFICULTADES = {"facil", "medio", "dificil"}
 # paso, esto no lo detecta. Detecta lo que importa más: que el ejemplo termine
 # donde debe terminar.
 RESULTADOS_LECCIONES: dict[str, Fraction] = {
+    # 6 pintores por 10 dias son 60 dias-pintor; repartidos entre 4 pintores dan 15 dias.
+    "alg_proporcionalidad": Fraction(6 * 10, 4),
+
     "num_racionales": Fraction(5, 6) - Fraction(2, 9),                # 11/18
     "num_potencias_raices": Fraction(2**5) * Fraction(1, 2**3) * 2,   # 8
     "num_porcentajes": Fraction(round(20000 * 1.20 * 0.85)),          # 20.400
@@ -222,10 +245,54 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
+    # --- Proporcionalidad (alg_proporcionalidad) ---
+    # Directa: la constante es el cociente. Inversa: es el producto.
+    "a x = 2 le corresponde y = 10": str(10 // 2),
+    "cuando x = 4 se tiene y = 15": str(4 * 15),
+    "Tres kilos de pan cuestan $4.500": f"${4500 // 3 * 5:,}".replace(",", "."),
+    "consume 6 litros de bencina cada 100 kilómetros": f"{6 * 250 // 100} litros",
+    "4 máquinas iguales producen 200 piezas": f"{200 // 4 * 6} piezas",
+    "receta para 4 personas lleva 300 gramos": f"{300 // 4 * 6} gramos",
+    "llena 12 litros en 3 minutos": f"{12 // 3 * 8} litros",
+    "Ocho cuadernos iguales cuestan $12.000": f"${12000 // 8 * 3:,}".replace(",", "."),
+    "recorre un trayecto en 6 horas viajando a 60 km/h": f"{60 * 6 // 90} horas",
+    "alcanza para 20 animales durante 12 días": f"{20 * 12 // 30} días",
+    "les corresponden y igual a 7, 14, 21": str(7 * 4),
+    "les corresponden y igual a 18, 12, 9": str(2 * 18 // 6),
+    "y vale 12 cuando x vale 4": str(12 // 4 * 7),
+    "y vale 9 cuando x vale 8": str(8 * 9 // 12),
+    "imprime 90 páginas en 4 minutos": f"{round(315 / (90 / 4))} minutos",
+    "15 metros de cable cuestan $27.000": f"{45000 // (27000 // 15)} metros",
+    "llena con 6 llaves iguales en 20 minutos": f"{6 * 20 // 5} minutos",
+    "3 partes de agua por cada 2 partes de concentrado": f"{750 * 3 // 2:,}".replace(",", ".") + " mililitros",
+    "pasa por el punto (4, 10)": str(10 / 4).replace(".", ","),
+    "La primera tiene 30 dientes y da 40 vueltas": f"{30 * 40 // 24} vueltas",
+    "llena con 3 llaves iguales en 4 horas": f"{round(3 * 4 / 1.5)} llaves",
+    "van 12 personas, cada una paga $9.000": f"${12 * 9000 // 18:,}".replace(",", "."),
+    "Seis máquinas trabajando 8 horas diarias producen 480 piezas": f"{480 // (6 * 8) * 9 * 5} piezas",
+    "Ocho obreros levantan 240 metros de muro en 6 días": f"{300 // (12 * (240 // (8 * 6)))} días",
+    "$180.000 entre tres personas en partes directamente proporcionales a 2, 3 y 4": f"${180000 // 9 * 4:,}".replace(",", "."),
+    "$120.000 entre tres personas en partes inversamente proporcionales a 2, 3 y 6": f"${120000 // 6 * 3:,}".replace(",", "."),
+    "Cinco tractores aran un campo en 12 días": f"{5 * 12 * 6 // (6 * 10)} días",
+    "4 ayudantes trasladan 600 ladrillos en 3 horas": f"{1000 // (600 // (4 * 3)) // 2} ayudantes",
+    "45 metros cuadrados se necesitan 6 litros": str(45 / 6).replace(".", ","),
+    "saca 240 copias en 6 minutos y otra saca 200 copias en 8 minutos": f"{(240 // 6 + 200 // 8) * 10} copias",
+    "rinde 12 metros cuadrados con una mano y 8 metros cuadrados": f"{96 // 8} litros",
+    "Con 800 gramos de fruta se usan 200 gramos de azúcar": f"{1500 * 800 // (800 + 200):,}".replace(",", ".") + " gramos",
+    "llave que lo llena en 6 horas y un desagüe que lo vacía en 12 horas": f"{1 // (Fraction(1, 6) - Fraction(1, 12))} horas",
+    "Con 15 participantes cada uno paga $24.000": f"{15 * 24000 // 18000} participantes",
+    "150 kilómetros aparecen a 6 centímetros": str(90 * 6 / 150).replace(".", ",") + " centímetros",
+    "a 2 horas le corresponden 50 litros": f"{50 // 2 * 9} litros",
+    "cuando x vale 5, y vale 24": str(5 * 24 // 8),
+    # --- Porcentajes nuevos ---
+    "25% de descuento y, al pagar con cierta tarjeta": f"{100 - 100 * 0.75 * 0.9:.1f}%".replace(".", ","),
+    "¿Qué porcentaje de descuento hay que aplicarle al nuevo precio": f"{round(25 / 125 * 100)}%",
+    "el 60% son mujeres": f"{round(0.6 * 25 + 0.4 * 50)}%",
+    "compra un producto en $24.000 y quiere venderlo ganando un 25% sobre el precio de venta": f"${round(24000 / 0.75):,}".replace(",", "."),
     # --- racionales ---
     "5/6 − 2/9": str(Fraction(5, 6) - Fraction(2, 9)),
     "(3/5) × (10/9)": str(Fraction(3, 5) * Fraction(10, 9)),
-    "2 + (1/2) ÷ (2/3)": str(2 + Fraction(1, 2) / Fraction(2, 3)),
+    "obra lleva 2 semanas terminadas": str(2 + Fraction(1, 2) / Fraction(2, 3)),
     "tambor tiene 3/4": str(Fraction(3, 4) - Fraction(1, 3) * Fraction(3, 4)),
     "(2/3 − 1/4) ÷ (5/6 + 1/2)": str(
         (Fraction(2, 3) - Fraction(1, 4)) / (Fraction(5, 6) + Fraction(1, 2))
@@ -234,11 +301,11 @@ COMPROBACIONES: dict[str, str] = {
         (Fraction(2, 5) + Fraction(3, 4)) / (Fraction(3, 4) - Fraction(2, 5))
     ),
     # --- potencias y raíces ---
-    "2³ · 2⁴": str(2**3 * 2**4),
+    "hoja se dobla por la mitad 3 veces": str(2**3 * 2**4),
     "√81 − √16": str(int(sqrt(81) - sqrt(16))),
     "(3⁵ · 3²) ÷ 3⁴": str(3**5 * 3**2 // 3**4),
-    "5⁻²": str(Fraction(1, 5**2)),
-    "2ˣ = 32": str(5 if 2**5 == 32 else None),
+    "reduce el tamaño de una figura a la quinta parte": str(Fraction(1, 5**2)),
+    "población de insectos se duplica cada día": str(5 if 2**5 == 32 else None),
     # --- porcentajes ---
     "15% de 240": str(int(0.15 * 240)),
     "18.000 y se le aplica un descuento del 25%": f"{int(18000 * 0.75):,}".replace(",", "."),
@@ -246,17 +313,17 @@ COMPROBACIONES: dict[str, str] = {
     "sube un 20% y después baja un 20%": "4" if abs(1 - 1.2 * 0.8 - 0.04) < 1e-9 else "?",
     "Ocho trabajadores construyen": str(8 * 15 // 12),
     # --- álgebra ---
-    "5a + 3b − 2a + 7b": f"{5 - 2}a + {3 + 7}b",
+    "compra 5 sacos de cemento y 3 de arena": f"{5 - 2}a + {3 + 7}b",
     "a + b = 9 y a · b = 20": str(9**2 - 2 * 20),
-    "4x − 7 = 13": str((13 + 7) // 4),
+    "panadería vende 4 bandejas iguales de pan": str((13 + 7) // 4),
     "3(x − 2) = 2x + 5": str(11 if 3 * (11 - 2) == 2 * 11 + 5 else None),
     "suma de tres números consecutivos es 72": str(72 // 3 + 1),
     "5x + 3 = 2x + 18": str((18 - 3) // (5 - 2)),
-    "3x + 2y = 16 y 2x + 3y = 14": str((16 + 14) // 5),
+    "Tres cuadernos y dos lápices cuestan 16 mil": str((16 + 14) // 5),
     "3 kilos de manzanas y 2 de peras": f"${(4600 - 2600) // 2:,}".replace(",", "."),
     "f(x) = 3x − 4": str(3 * 6 - 4),
     "(1, 2) y (5, 10)": str((10 - 2) // (5 - 1)),
-    "y = 2x − 6 corta al eje X": f"({6 // 2}, 0)",
+    "y = 2x − 6, donde x son las unidades vendidas": str(6 // 2),
     "vértice de la parábola y = x² − 6x + 5": f"({6 // 2}, {3**2 - 6 * 3 + 5})",
     "f(x) = 2x + b cumple f(3) = 11": str(11 - 2 * 3),
     # --- geometría ---
@@ -512,8 +579,8 @@ COMPROBACIONES: dict[str, str] = {
     ).replace(".", ","),
     # Elementos de los cuerpos.
     "¿Cuántas caras tiene un paralelepípedo?": str(3 * 2),
-    "¿Cuántos vértices tiene un prisma de base triangular?": str(3 * 2),
     "¿Cuántas aristas tiene un paralelepípedo?": str(4 * 3),
+    "esquinera plástica en cada uno de sus vértices": str(4 * 2),
     # Casos inversos: se da el volumen o el área y se pide una medida.
     "cubo tiene un volumen de 216 cm³": str(round(216 ** (1 / 3))),
     "volumen de 240 cm³ y su base mide 8 cm por 5 cm": str(240 // (8 * 5)),
@@ -599,8 +666,8 @@ COMPROBACIONES: dict[str, str] = {
     "valor de 27^(2/3)": str(round(27 ** (1 / 3)) ** 2),
     "valor de 16^(3/4)": str(round(16**0.25) ** 3),
     # Potencias y raíces de base entera.
-    "valor de 6³": str(6**3),
-    "valor de √225": str(round(225**0.5)),
+    "caja con forma de cubo mide 6 centímetros de arista": str(6**3),
+    "terreno cuadrado tiene una superficie de 225": str(round(225**0.5)),
     "valor de (√5)⁴": str(5 ** (4 // 2)),
     "valor de √(2⁸)": str(2 ** (8 // 2)),
     "valor de (2³ · 2⁻⁵)⁻¹": str(2 ** -(3 - 5)),
@@ -805,25 +872,25 @@ COMPROBACIONES: dict[str, str] = {
     # --- álgebra y funciones: segunda tanda ---
     # Reducción, productos notables y factorización.
     "reducir 9x − 4x + x": f"{9 - 4 + 1}x",
-    "desarrollo de (x + 6)²": f"x² + {2 * 6}x + {6**2}",
+    "patio cuadrado de x metros de lado se amplía agregando 6 metros": f"x² + {2 * 6}x + {6**2}",
     "resultado de (x − 7)(x + 7)": f"x² − {7**2}",
-    "factorización de x² − 81": f"(x + {round(81**0.5)})(x − {round(81**0.5)})",
-    "factorización de 8x² + 12x": f"4x(2x + {12 // 4})",
+    "plancha cuadrada de lado x centímetros tiene un hueco cuadrado de 9": f"(x + {round(81**0.5)})(x − {round(81**0.5)})",
+    "costo de producir x artículos en un taller está dado por 8x² + 12x": f"4x(2x + {12 // 4})",
     "reducir 5(2x − 1) − 3(x + 2)": f"{5 * 2 - 3}x − {5 * 1 + 3 * 2}",
-    "desarrollo de (2x − 5)²": f"{2**2}x² − {2 * 2 * 5}x + {5**2}",
-    "factorización de x² + 10x + 21": "(x + 3)(x + 7)" if 3 * 7 == 21 and 3 + 7 == 10 else "?",
+    "plancha cuadrada mide (2x − 5) centímetros de lado": f"{2**2}x² − {2 * 2 * 5}x + {5**2}",
+    "huerto rectangular está dada por x² + 10x + 21": "x + 7" if 3 * 7 == 21 and 3 + 7 == 10 else "?",
     "simplificar (x² − 49)/(x + 7)": f"x − {round(49**0.5)}",
-    "factorización completa de 5x² − 45": f"5(x + {round((45 // 5) ** 0.5)})(x − {round((45 // 5) ** 0.5)})",
+    "área sobrante de una lámina está dada por 5x² − 45": f"5(x + {round((45 // 5) ** 0.5)})(x − {round((45 // 5) ** 0.5)})",
     "simplificar (x² + 6x + 9)/(x + 3)": f"x + {round(9**0.5)}",
     # Identidades: (a+b)² y (a−b)² despejadas.
-    "a + b = 12 y a · b = 35": str(12**2 - 2 * 35),
+    "Dos tablones miden juntos 12 metros": str(12**2 - 2 * 35),
     "x − y = 4 y x · y = 5": str(4**2 + 2 * 5),
     "lados que miden (2x + 3) y (x − 1)": f"{2 * (2 + 1)}x + {2 * (3 - 1)}",
     # Ecuaciones lineales.
     "ecuación 4x + 7 = 23": f"x = {(23 - 7) // 4}",
     "ecuación 3x − 5 = 16": f"x = {(16 + 5) // 3}",
     "ecuación x/4 = 6": f"x = {6 * 4}",
-    "ecuación 2x + 9 = 3": f"x = {(3 - 9) // 2}",
+    "jugador parte con 9 puntos y juega 2 rondas": f"x = {(3 - 9) // 2}",
     "ecuación 5x − 3 = 2x + 12": f"x = {(12 + 3) // (5 - 2)}",
     "(x + 1)/4 = (x − 5)/2": f"x = {(4 * 5 + 2 * 1) // (4 - 2)}",
     "número aumentado en 7 es igual al triple": str((7 + 5) // (3 - 1)),
@@ -999,7 +1066,7 @@ COMPROBACIONES: dict[str, str] = {
     # --- racionales ---
     "5/8 − 1/6": str(Fraction(5, 8) - Fraction(1, 6)),
     "jarra hay 7/8 de litro": str(Fraction(7, 8) - Fraction(1, 4)),
-    "(3/4) ÷ (9/8)": str(Fraction(3, 4) / Fraction(9, 8)),
+    "bidones que caben 9/8 de esa misma capacidad": str(Fraction(3, 4) / Fraction(9, 8)),
     "2/5 de una ruta": str(1 - (Fraction(2, 5) + Fraction(1, 3))),
     "x = 3/8 y y = 5/6": str(
         (Fraction(5, 6) - Fraction(3, 8)) / (Fraction(5, 6) + Fraction(3, 8))
@@ -1009,10 +1076,10 @@ COMPROBACIONES: dict[str, str] = {
     ),
     # --- potencias y raíces ---
     "3² · 3³": str(3**2 * 3**3),
-    "√169 + √36": str(int(sqrt(169) + sqrt(36))),
+    "patios cuadrados miden 169 y 36 metros cuadrados": str(int(sqrt(169) + sqrt(36))),
     "(5⁴ · 5²) ÷ 5³": str(5**4 * 5**2 // 5**3),
     "3⁻³": str(Fraction(1, 3**3)),
-    "3ˣ = 81": str(4 if 3**4 == 81 else None),
+    "cultivo se triplica cada hora": str(4 if 3**4 == 81 else None),
     "√(3² + 4²) · √49": str(round(sqrt(3**2 + 4**2) * sqrt(49))),
     # --- porcentajes ---
     "35% de 480": str(int(0.35 * 480)),
@@ -1049,8 +1116,8 @@ COMPROBACIONES: dict[str, str] = {
     "log₂ 128 − log₂ 8": str(7 - 3),
     # ================= LOTE 5 — eje ÁLGEBRA =================
     # --- expresiones algebraicas ---
-    "reducir 7x − 3x + 2x": f"{7 - 3 + 2}x",
-    "reducir 6m + 4n − 2m − 9n": f"{6 - 2}m − {9 - 4}n",
+    "kiosco recibe 7 cajas de bebidas": f"{7 - 3 + 2}x",
+    "feria vende 6 cajones de manzanas y 4 de naranjas": f"{6 - 2}m − {9 - 4}n",
     "(x + 5)²": f"x² + {2 * 5}x + {5**2}",
     "(x − 3)²": f"x² − {2 * 3}x + {3**2}",
     "(x + 6)(x − 6)": f"x² − {6**2}",
@@ -1063,47 +1130,44 @@ COMPROBACIONES: dict[str, str] = {
     "(3x + 6)/(x + 2)": str(6 // 2),
     "(x + 2)(x + 7)": f"x² + {2 + 7}x + {2 * 7}",
     "3x² − 4x + 1": str(3 * (-2) ** 2 - 4 * (-2) + 1),
-    "5(2a − 3) − 3(a − 4)": f"{5 * 2 - 3}a − {5 * 3 - 3 * 4}",
+    "arrienda 5 camionetas a un costo de (2a − 3) miles": f"{5 * 2 - 3}a − {5 * 3 - 3 * 4}",
     "2x² − 18": f"2(x + {int(sqrt(9))})(x − {int(sqrt(9))})",
     "a + b = 7 y ab = 12": str(7**2 - 2 * 12),
     "a − b = 5 y ab = 6": str(5**2 + 2 * 6),
     "(x² + 5x + 6)/(x + 2)": f"x + {6 // 2}",
     "(x² − 4)/(x² + 4x + 4)": f"(x − {2})/(x + {2})",
-    "reducir 8y − y + 3y": f"{8 - 1 + 3}y",
+    "taller tiene 8 planchas de metal": f"{8 - 1 + 3}y",
     "reducir 3a + 7b − a − 2b": f"{3 - 1}a + {7 - 2}b",
     "(x + 1)(x + 9)": f"x² + {1 + 9}x + {1 * 9}",
     "(2x + 3)²": f"{2**2}x² + {2 * 2 * 3}x + {3**2}",
-    "factorización de x² − 100": f"(x + {int(sqrt(100))})(x − {int(sqrt(100))})",
+    "terreno cuadrado de lado x metros se le quita un cuadrado de 10": f"(x + {int(sqrt(100))})(x − {int(sqrt(100))})",
     "factorización de 5x² − 15x": f"5x(x − {15 // 5})",
     "doble de un número aumentado en 7": f"2n + {7}",
     "reducir 4(x − 2) + 3x": f"{4 + 3}x − {4 * 2}",
-    "factorización de x² + 11x + 30": "(x + 5)(x + 6)" if 5 * 6 == 30 and 5 + 6 == 11 else "?",
+    "rectángulo tiene área x² + 11x + 30": "(x + 5) y (x + 6)" if 5 * 6 == 30 and 5 + 6 == 11 else "?",
     "factorización de x² − 8x + 15": "(x − 3)(x − 5)" if 3 * 5 == 15 and 3 + 5 == 8 else "?",
     "factorización de x² + 2x − 24": "(x + 6)(x − 4)" if 6 * -4 == -24 and 6 - 4 == 2 else "?",
-    "(x² − 25)/(x + 5)": f"x − {int(sqrt(25))}",
-    "(4x + 12)/(x + 3)": str(12 // 3),
+    "(4x + 12) litros de pintura entre (x + 3) locales": str(12 // 3),
     "2x² − 5x + 4": str(2 * 3**2 - 5 * 3 + 4),
-    "3(2m + 5) − 2(m − 1)": f"{3 * 2 - 2}m + {3 * 5 + 2}",
+    "3 estudiantes aportan (2m + 5) pesos cada uno": f"{3 * 2 - 2}m + {3 * 5 + 2}",
     "(3x − 2)(3x + 2)": f"{3**2}x² − {2**2}",
     "largo (x + 5) y ancho (x − 2)": f"{2 * 2}x + {2 * (5 - 2)}",
-    "a + b = 10 y ab = 21": str(10**2 - 2 * 21),
-    "(x² − 7x + 12)/(x − 3)": f"x − {12 // 3}",
+    "lados de un rectángulo suman 10 centímetros y su área es 21": str(10**2 - 2 * 21),
+    "terreno rectangular tiene área x² − 7x + 12": f"x − {12 // 3}",
     "factorización completa de 3x² − 27": f"3(x + {int(sqrt(9))})(x − {int(sqrt(9))})",
     "(x² + 6x + 9)/(x² − 9)": f"(x + {3})/(x − {3})",
     # --- ecuaciones e inecuaciones lineales ---
-    "3x + 4 = 19": str((19 - 4) // 3),
-    "5x − 8 = 12": str((12 + 8) // 5),
+    "vendedor recibe 5 cajas de igual cantidad": str((12 + 8) // 5),
     "x/4 + 3 = 8": str((8 - 3) * 4),
-    "2x + 9 = 3x − 1": str(9 + 1),
-    "inecuación x + 5 > 12": f"x > {12 - 5}",
-    "inecuación 4x ≤ 20": f"x ≤ {20 // 4}",
+    "cobra 2 mil pesos por hora más 9 mil fijos": str(9 + 1),
+    "5 puntos acumulados en una tarjeta": f"x > {12 - 5}",
+    "ascensor soporta como máximo 20 unidades": f"x ≤ {20 // 4}",
     "7 − x = 2": str(7 - 2),
-    "6x = 4x + 14": str(14 // (6 - 4)),
-    "4(x + 3) = 2x + 20": str((20 - 4 * 3) // (4 - 2)),
+    "primero tiene 6 álbumes iguales": str(14 // (6 - 4)),
+    "compra 4 lotes que traen (x + 3) equipos": str((20 - 4 * 3) // (4 - 2)),
     "5(x − 1) = 3(x + 3)": str((3 * 3 + 5 * 1) // (5 - 3)),
-    "inecuación −4x + 2 < 14": f"x > {(14 - 2) // -4}",
-    "inecuación 5x − 3 ≥ 2x + 9": f"x ≥ {(9 + 3) // (5 - 2)}",
-    "x/2 + x/3 = 5": str(int(5 / (Fraction(1, 2) + Fraction(1, 3)))),
+    "plan A cobra 5 mil pesos por hora menos un descuento": f"x ≥ {(9 + 3) // (5 - 2)}",
+    "la mitad para un hermano y un tercio para otro": str(int(5 / (Fraction(1, 2) + Fraction(1, 3)))),
     "doble de un número disminuido en 5 es 19": str((19 + 5) // 2),
     "suma de dos números consecutivos es 47": str((47 - 1) // 2),
     "3(2x − 1) = 4x + 7": str((7 + 3) // (6 - 4)),
@@ -1128,20 +1192,19 @@ COMPROBACIONES: dict[str, str] = {
     "3x + 2y = 12 e y = 3": str((12 - 2 * 3) // 3),
     "(2x − 1)/4 = (x + 3)/3": f"{(4 * 3 + 3 * 1) / (3 * 2 - 4):.1f}".replace(".", ","),
     "triple de la edad de Beto": str(48 // (3 + 1)),
-    "inecuación (x + 5)/2 ≤ x − 1": f"x ≥ {5 + 2}",
+    "reparte a cada curso la mitad de (x + 5) cajas": f"x ≥ {5 + 2}",
     "número más su tercera parte": str(int(32 / (1 + Fraction(1, 3)))),
-    "5(x − 2) − 3(x + 1) = 7": str((7 + 5 * 2 + 3) // (5 - 3)),
+    "despacha 5 pallets con (x − 2) cajas": str((7 + 5 * 2 + 3) // (5 - 3)),
     "al doble de un número se le resta 9": str(9 + 4),
     # --- sistemas 2x2 ---
-    "x + y = 9 ; x − y = 3": f"x = {(9 + 3) // 2}, y = {(9 - 3) // 2}",
-    "x + y = 20 ; x = 3y": f"x = {3 * (20 // 4)}, y = {20 // 4}",
-    "x + y = 8 ; 2x + y = 13": f"x = {13 - 8}, y = {8 - (13 - 8)}",
-    "y = 2x ; x + y = 15": f"x = {15 // 3}, y = {2 * (15 // 3)}",
+    "Dos estantes tienen juntos 9 libros": f"{(9 + 3) // 2} y {(9 - 3) // 2}",
+    "20 herramientas entre martillos y alicates": f"{3 * (20 // 4)} martillos y {20 // 4} alicates",
+    "compra 1 café y 1 jugo por 8 mil": f"Café {13 - 8} y jugo {8 - (13 - 8)}",
+    "juntos 15 años de antigüedad en un club": f"Padre {2 * (15 // 3)} y hijo {15 // 3}",
     "suma de dos números es 24 y su diferencia es 6": f"{(24 + 6) // 2} y {(24 - 6) // 2}",
-    "3x + y = 14 ; x + y = 6": f"x = {(14 - 6) // 2}, y = {6 - (14 - 6) // 2}",
-    "2x + 3y = 16 ; x − y = 3": f"x = {(16 + 3 * 3) // 5}, y = {(16 - 2 * 3) // 5}",
-    "4x − y = 10 ; 2x + y = 8": f"x = {(10 + 8) // 6}, y = {8 - 2 * ((10 + 8) // 6)}",
-    "x + 2y = 11 ; 3x − 2y = 9": f"x = {(11 + 9) // 4}, y = {(11 - (11 + 9) // 4) // 2}",
+    "Tres poleras y un gorro cuestan 14 mil": f"Polera {(14 - 6) // 2} y gorro {6 - (14 - 6) // 2}",
+    "Dos entradas de adulto y tres de niño": f"Adulto {(16 + 3 * 3) // 5} y niño {(16 - 2 * 3) // 5}",
+    "1 caja grande y 2 chicas pesa 11 kilos": f"Grande {(11 + 9) // 4} kg y chica {(11 - (11 + 9) // 4) // 2} kg",
     "2 cuadernos y 3 lápices": f"${2400 - 2 * 500:,}".replace(",", "."),
     "5x + 2y = 24 ; 3x − 2y = 8": f"x = {(24 + 8) // 8}, y = {(24 - 5 * ((24 + 8) // 8)) // 2}",
     "20 vehículos y 70 ruedas": str((70 - 2 * 20) // 2),
@@ -1150,7 +1213,7 @@ COMPROBACIONES: dict[str, str] = {
     "3x + 2y = 19 ; 2x + 3y = 16": f"x = {(3 * 19 - 2 * 16) // 5}, y = {(3 * 16 - 2 * 19) // 5}",
     "x/2 + y = 7 ; x + y = 10": f"x = {2 * (10 - 7)}, y = {10 - 2 * (10 - 7)}",
     "mayor excede al menor en 8 y su suma es 34": f"{(34 + 8) // 2} y {(34 - 8) // 2}",
-    "4x + 3y = 27 ; 2x − y = 1": f"x = {(27 + 3) // 10}, y = {2 * ((27 + 3) // 10) - 1}",
+    "Cuatro kilos de manzanas y tres de peras": f"Manzanas {(27 + 3) // 10} y peras {2 * ((27 + 3) // 10) - 1}",
     "Se vendieron 40 entradas": str((164000 - 3000 * 40) // (5000 - 3000)),
     "x + y = 14 y x − 2y = 2": str(14 - 2 * ((14 - 2) // 3)),
     "2x + y = 9 y x + 2y = 9": str((9 + 9) // 3),
@@ -1175,14 +1238,14 @@ COMPROBACIONES: dict[str, str] = {
     "3x + y = 11 y x + 3y = 9": str((11 + 9) // 4),
     "x + y = 18 ; x = y + 6": f"x = {(18 + 6) // 2}, y = {(18 - 6) // 2}",
     # --- ecuaciones cuadráticas ---
-    "x² − 36 = 0": f"x = {int(sqrt(36))} y x = −{int(sqrt(36))}",
-    "x² = 81": f"x = {int(sqrt(81))} y x = −{int(sqrt(81))}",
+    "baldosa cuadrada tiene un área de 36": f"{int(sqrt(36))} cm",
+    "huerto cuadrado ocupa 81 metros cuadrados": f"{int(sqrt(81))} m",
     "x² − 6x = 0": f"x = 0 y x = {6}",
     "x² + 5x + 6 = 0": f"x = −{2} y x = −{3}" if 2 * 3 == 6 and 2 + 3 == 5 else "?",
     "x² − 9x + 20 = 0": f"x = {4} y x = {5}" if 4 * 5 == 20 and 4 + 5 == 9 else "?",
     "x² + 3x − 18 = 0": f"x = {3} y x = −{6}" if 3 * -6 == -18 and 3 - 6 == -3 else "?",
-    "x² − 2x − 8 = 0": f"x = {4} y x = −{2}" if 4 * -2 == -8 and 4 - 2 == 2 else "?",
-    "3x² − 12 = 0": f"x = {int(sqrt(12 // 3))} y x = −{int(sqrt(12 // 3))}",
+    "lado que mide 2 metros menos que el otro y su área es 8": ("4 m" if 4 * 2 == 8 and 4 - 2 == 2 else "?"),
+    "área total de 3 cuadrados iguales es 12": f"{int(sqrt(12 // 3))} cm",
     "x² − 10x + 25 = 0": f"x = {10 // 2}",
     "2x² − 5x − 3 = 0": f"x = {3} y x = −1/2" if 2 * 3**2 - 5 * 3 - 3 == 0 else "?",
     "largo mide 3 cm más que su ancho": f"{5} cm" if 5 * (5 + 3) == 40 else "?",
@@ -1193,7 +1256,7 @@ COMPROBACIONES: dict[str, str] = {
     "2x² + 3x + 5 = 0": str(3**2 - 4 * 2 * 5),
     "h = −5t² + 20t": f"{20 // 5} segundos",
     "soluciones de una ecuación cuadrática son x = 3 y x = −4": "(x − 3)(x + 4) = 0",
-    "suma de las soluciones de la ecuación x² − 7x + 10 = 0": str(2 + 5) if 2 * 5 == 10 and 2 + 5 == 7 else "?",
+    "las edades de dos hermanos": str(2 + 5) if 2 * 5 == 10 and 2 + 5 == 7 else "?",
     "producto de dos números enteros consecutivos es 72": str(8) if 8 * 9 == 72 else "?",
     "x² − 121 = 0": f"x = {int(sqrt(121))} y x = −{int(sqrt(121))}",
     "x² = 144": f"x = {int(sqrt(144))} y x = −{int(sqrt(144))}",
@@ -1227,18 +1290,18 @@ COMPROBACIONES: dict[str, str] = {
     "f(x) = 4x + 1": str(4 * 3 + 1),
     "f(x) = x² − 2": str(4**2 - 2),
     "(2, 3) y (6, 11)": str((11 - 3) // (6 - 2)),
-    "pendiente de la recta y = 5x − 2": str(5),
-    "corta al eje Y la recta y = 3x + 7": f"(0, {7})",
-    "vértice de la parábola y = x² − 8x + 12": f"({8 // 2}, {(8 // 2) ** 2 - 8 * (8 // 2) + 12})",
+    "¿Qué representa el 5 en ese modelo?": f"aumenta {5} mil pesos por semana",
+    "aunque no se pida ninguna unidad": str(7),
+    "y = x² − 8x + 12, donde x son las unidades": f"{8 // 2} unidades, costo {(8 // 2) ** 2 - 8 * (8 // 2) + 12}",
     "eje de simetría de la parábola y = x² + 4x − 5": f"x = {-4 // 2}",
     "eje X de la parábola y = x² − 5x + 6": "(2, 0) y (3, 0)" if 2 * 3 == 6 and 2 + 3 == 5 else "?",
     "(0, 5) y tiene pendiente −2": f"y = −2x + {5}",
-    "f(x) = 4x + b cumple que f(2) = 11": str(11 - 4 * 2),
+    "contratar 2 horas cuesta 11 mil": str(11 - 4 * 2),
     "función que representa el costo total": f"C(x) = {300}x + {500}",
     "viaje de 8 kilómetros": f"${300 * 8 + 500:,}".replace(",", "."),
     "f(x) = −2x + 7 cuando x = −3": str(-2 * -3 + 7),
-    "vértice de la parábola y = 2x² − 8x + 5": f"({8 // (2 * 2)}, {2 * 2**2 - 8 * 2 + 5})",
-    "valor mínimo que alcanza la función y = x² − 6x + 11": str(3**2 - 6 * 3 + 11),
+    "altura de un dron, en metros, sigue el modelo": f"Minuto {8 // (2 * 2)}, altura {2 * 2**2 - 8 * 2 + 5}",
+    "y = x² − 6x + 11, donde x son las horas": str(3**2 - 6 * 3 + 11),
     "(1, 4) y (3, 10)": f"y = {(10 - 4) // (3 - 1)}x + {4 - ((10 - 4) // (3 - 1))}",
     "f(x) = 4x − 20 se hace cero": f"x = {20 // 4}",
     "I(x) = 50x": f"{900 // (50 - 20)} unidades",
@@ -1266,15 +1329,15 @@ COMPROBACIONES: dict[str, str] = {
     "y = ax² + 2 pasa por el punto (2, 14)": str((14 - 2) // 2**2),
     "f(x) = x² − 4x": str((-1) ** 2 - 4 * (-1)),
     # ================= LOTE 6 — eje NÚMEROS =================
-    "1/3 + 2/5": str(Fraction(1, 3) + Fraction(2, 5)),
-    "7/10 − 2/5": str(Fraction(7, 10) - Fraction(2, 5)),
+    "1/3 del tiempo se dedicó a una tarea": str(Fraction(1, 3) + Fraction(2, 5)),
+    "cinta tenía 7/10 de metro": str(Fraction(7, 10) - Fraction(2, 5)),
     "3/8 × 4/9": str(Fraction(3, 8) * Fraction(4, 9)),
-    "(5/6) ÷ (5/12)": str(Fraction(5, 6) / Fraction(5, 12)),
-    "2/3 + 1/6 + 1/2": str(Fraction(2, 3) + Fraction(1, 6) + Fraction(1, 2)),
+    "cada receta usa 5/12 de kilo": str(Fraction(5, 6) / Fraction(5, 12)),
+    "la primera 2/3 del total, la segunda 1/6": str(Fraction(2, 3) + Fraction(1, 6) + Fraction(1, 2)),
     "3/4 de taza de azúcar": str(Fraction(3, 4) * Fraction(1, 2)),
-    "1 − (2/7 + 1/3)": str(1 - (Fraction(2, 7) + Fraction(1, 3))),
+    "2/7 se gastó en materiales": str(1 - (Fraction(2, 7) + Fraction(1, 3))),
     "(3/4) × (8/15)": str(Fraction(3, 4) * Fraction(8, 15)),
-    "5/2 ÷ 3/4": str(Fraction(5, 2) / Fraction(3, 4)),
+    "tambor contiene 5/2 litros de pintura": str(Fraction(5, 2) / Fraction(3, 4)),
     "estanque está lleno hasta 5/6": str(Fraction(5, 6) - Fraction(2, 5) * Fraction(5, 6)),
     "3 − 2/5 × 5/6": str(3 - Fraction(2, 5) * Fraction(5, 6)),
     "albañil avanza 3/8": str(Fraction(3, 8) + Fraction(1, 4)),
@@ -1298,26 +1361,26 @@ COMPROBACIONES: dict[str, str] = {
         (Fraction(3, 4) - Fraction(1, 6)) / (Fraction(1, 2) + Fraction(1, 3))
     ),
     "3/4 de kilo de café en 6 bolsas": str(Fraction(3, 4) / 6),
-    "el valor de 4³": str(4**3),
+    "cubo tiene 4 centímetros de arista": str(4**3),
     "√100 + √9": str(int(sqrt(100) + sqrt(9))),
     "2⁵ · 2²": str(2**5 * 2**2),
-    "(2²)⁴": str((2**2) ** 4),
+    "cultivo se cuadruplica cada día": str((2**2) ** 4),
     "10⁻²": str(Fraction(1, 10**2)),
     "√64 · √4": str(int(sqrt(64) * sqrt(4))),
     "(4³ · 4²) ÷ 4⁴": str(4**3 * 4**2 // 4**4),
-    "√72 en su forma más simple": "6" if isclose(sqrt(72), 6 * sqrt(2)) else "?",
+    "patio cuadrado tiene una superficie de 72": "6" if isclose(sqrt(72), 6 * sqrt(2)) else "?",
     "(5²)³ ÷ 5⁴": str((5**2) ** 3 // 5**4),
     "3⁰ + 2⁻¹": str(1 + Fraction(1, 2)),
     "√98 − √50": "2" if isclose(sqrt(98) - sqrt(50), 2 * sqrt(2)) else "?",
     "plaza cuadrada tiene un área de 121 m²": f"{int(sqrt(121))} m",
-    "2⁻³ · 2⁵": str(2 ** (-3 + 5)),
+    "imagen se reduce 3 veces a la mitad": str(2 ** (-3 + 5)),
     "5ˣ = 625": str(4 if 5**4 == 625 else None),
     "(3⁻² · 3⁵) ÷ 3²": str(3 ** (-2 + 5 - 2)),
     "√(5² + 12²)": str(int(sqrt(5**2 + 12**2))),
     "2³ + 3²": str(2**3 + 3**2),
-    "√(16 · 25)": str(int(sqrt(16 * 25))),
+    "misma superficie que un rectángulo de 16 por 25": str(int(sqrt(16 * 25))),
     "(7²)⁰": str(7**0),
-    "2^(x−1) = 16": str(5 if 2 ** (5 - 1) == 16 else None),
+    "depósito de agua duplica su contenido cada hora": str(5 if 2 ** (5 - 1) == 16 else None),
     # --- porcentajes y proporcionalidad ---
     "25% de 320": str(round(0.25 * 320)),
     "60% de 45": str(round(0.6 * 45)),
@@ -1415,12 +1478,10 @@ COMPROBACIONES: dict[str, str] = {
     "paralelepípedo de 9 cm de largo, 7 cm de ancho": f"{9 * 7 * 4} cm³",
     "caja cúbica tiene un área total de 216 cm²": f"{round((216 / 6) ** 0.5)} cm",
     "paralelepípedo mide 6 cm, 4 cm y 3 cm": f"{2 * (6 * 4 + 6 * 3 + 4 * 3)} cm²",
-    "base triangular de 6 cm de base y 4 cm de altura": f"{6 * 4 // 2 * 10} cm³",
     "estanque cilíndrico tiene 2 m de radio": f"{3.14 * 2**2 * 3:.2f} m³".replace(".", ","),
     "arista de un cubo se triplica": str(3**3),
     "cubo tiene un volumen de 64 cm³": f"{round(64 ** (1 / 3))} cm",
     "cilindro tiene un volumen de 502,4 cm³": f"{round(502.4 / (3.14 * 4**2))} cm",
-    "aristas tiene un prisma de base triangular": str(3 * 3),
     "volumen de 60 cm³ y dos de sus dimensiones": f"{60 // (5 * 3)} cm",
     "cubos de 5 cm de arista caben": f"{20 * 15 * 10 // 5**3} cubos",
     "área total de un cilindro de radio 3 cm y altura 7 cm": (
@@ -1626,6 +1687,52 @@ def main() -> int:
                 f"{nodo}: {len(stems)} preguntas con los mismos números {numeros} y la misma "
                 f"respuesta '{correcta}'; son la misma pregunta reformulada:\n{detalle}"
             )
+
+    # Dos alternativas con el MISMO VALOR dejan la pregunta con dos respuestas
+    # correctas. Comparar los textos no basta: "3/4" y "9/12" son cadenas
+    # distintas y el mismo número, y el alumno que resuelve bien pero no
+    # simplifica queda malo. Solo se comparan alternativas que sean un número
+    # limpio: "x < −3" y "x > −3" comparten el 3 sin ser lo mismo.
+    for q in todas:
+        puros: dict[Fraction, str] = {}
+        for a in q["alternatives"]:
+            texto = _norm(a["text"])
+            if not re.fullmatch(r"-?\d+(?:[.,]\d+)?(?:\s*/\s*-?\d+)?", texto):
+                continue
+            valores = _valores_del_texto(texto)
+            if len(valores) != 1:
+                continue
+            valor = next(iter(valores))
+            if valor in puros:
+                fallas.append(
+                    f"dos alternativas valen lo mismo ('{puros[valor]}' y "
+                    f"'{a['text']}'): {q['stem'][:60]}"
+                )
+            puros[valor] = a["text"]
+
+    # Una plantilla es un enunciado con los números cambiados. Si la tarea es la
+    # misma, la dificultad tiene que ser la misma: el ensayo se arma con esa
+    # etiqueta. Cuando los números SÍ cambian el procedimiento, la excepción se
+    # declara arriba con su motivo, para que sea una decisión y no un descuido.
+    por_plantilla: dict[tuple[str, str], list[dict]] = {}
+    for q in QUESTIONS:
+        plantilla = re.sub(r"\d+", "N", q["stem"])
+        por_plantilla.setdefault((q["skill_node"], plantilla), []).append(q)
+    for (nodo, plantilla), grupo in por_plantilla.items():
+        etiquetas = {q["difficulty"] for q in grupo}
+        if len(etiquetas) < 2:
+            continue
+        if any(
+            frag in q["stem"] for q in grupo for frag in EXCEPCIONES_DIFICULTAD
+        ):
+            continue
+        detalle = "\n".join(
+            f"        · [{q['difficulty']}] {q['stem'][:70]}" for q in grupo
+        )
+        fallas.append(
+            f"{nodo}: misma plantilla con dificultades {sorted(etiquetas)}; "
+            f"si la tarea es la misma la etiqueta debe serlo:\n{detalle}"
+        )
 
     for stem, veces in vistos.items():
         if veces > 1:
