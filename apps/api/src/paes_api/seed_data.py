@@ -470,76 +470,71 @@ QUESTIONS = [
     # ---------- GEOMETRÍA ----------
     _q(
         "geo_plana", "facil",
-        "¿Cuál es el área de un rectángulo de 8 cm de largo y 5 cm de ancho?",
-        "40 cm²",
-        "El área de un rectángulo es el producto de sus dos dimensiones: "
-        "A = largo × ancho.\n\n"
-        "1) Reemplaza los datos: A = 8 cm × 5 cm.\n"
-        "2) Multiplica: A = 40 cm².\n\n"
-        "Fíjate en la unidad: al multiplicar centímetros por centímetros el resultado "
-        "queda en centímetros cuadrados, porque el área mide una superficie. Esa "
-        "unidad es una buena señal para distinguirla del perímetro, que suma los "
-        "lados y se mide en centímetros simples.",
+        "Dos rectángulos tienen el mismo perímetro. ¿Cuál de las siguientes afirmaciones es siempre verdadera?",
+        "Pueden tener áreas distintas",
+        "El perímetro no determina el área: dos figuras con el mismo contorno "
+        "pueden encerrar superficies muy distintas.\n\n"
+        "1) Un rectángulo de 1 por 9 tiene perímetro 20 y área 9.\n"
+        "2) Uno de 5 por 5 también tiene perímetro 20, pero su área es 25.\n"
+        "3) Mismo contorno, áreas de 9 y 25: la afirmación queda demostrada con "
+        "un solo par de ejemplos.\n"
+        "4) De paso: entre todos los rectángulos de igual perímetro, el cuadrado "
+        "es el que encierra más área.",
         [
-            ("26 cm²", "Calculó el perímetro (2×(8+5)) en lugar del área."),
-            ("13 cm²", "Sumó el largo y el ancho en lugar de multiplicarlos."),
-            ("3 cm²", "Restó el ancho al largo en lugar de multiplicarlos."),
+            ("Tienen la misma área", "El contraejemplo de 1 por 9 contra 5 por 5 lo desmiente: 9 frente a 25."),
+            ("Tienen las mismas dimensiones", "1 por 9 y 5 por 5 comparten perímetro con dimensiones muy distintas."),
+            ("El más alargado tiene mayor área", "Es al revés: alargarlo reduce el área, y el cuadrado es el que más encierra."),
         ],
     ),
     _q(
         "geo_plana", "medio",
-        "Un círculo tiene radio 6 cm. ¿Cuál es su área aproximada? (usa π ≈ 3,14)",
-        "113,04 cm²",
-        "El área del círculo se calcula con A = π × r², donde r es el radio.\n\n"
-        "1) Eleva primero el radio al cuadrado: 6² = 36.\n"
-        "2) Multiplica por π: A = 3,14 × 36 = 113,04.\n"
-        "3) El resultado se expresa en cm², porque es una superficie: 113,04 cm².\n\n"
-        "El orden importa: hay que elevar al cuadrado antes de multiplicar por π. Y no "
-        "confundas esta fórmula con el perímetro del círculo, que es 2πr y da un valor "
-        "mucho menor.",
+        "Si el radio de un círculo se duplica, ¿qué ocurre con su área y con su perímetro?",
+        "El área queda multiplicada por 4 y el perímetro por 2",
+        "Cada magnitud crece según cuántas dimensiones la componen.\n\n"
+        "1) El área es π · r²: al pasar a 2r queda π · (2r)² = 4 · π · r².\n"
+        "2) El perímetro es 2 · π · r: al pasar a 2r queda 2 · π · 2r, o sea el "
+        "doble.\n"
+        "3) Comprueba con radios 3 y 6 usando π ≈ 3,14: áreas 28,26 y 113,04 "
+        "(cuatro veces), contornos 18,84 y 37,68 (el doble).\n"
+        "4) Es la regla general de figuras semejantes: las longitudes van con la "
+        "razón y las áreas con su cuadrado.",
         [
-            ("37,68 cm²", "Calculó el perímetro (2πr) en lugar del área (πr²)."),
-            ("18,84 cm²", "Calculó π×r en lugar de π×r², olvidando elevar el radio al cuadrado."),
-            ("452,16 cm²", "Usó el diámetro (12 cm) en lugar del radio en la fórmula del área."),
+            ("Ambos quedan multiplicados por 2", "El área depende del radio al cuadrado, así que crece cuatro veces."),
+            ("Ambos quedan multiplicados por 4", "El perímetro depende del radio de forma directa, así que solo se duplica."),
+            ("El área por 2 y el perímetro por 4", "Están invertidos: el que va al cuadrado es el área."),
         ],
     ),
     _q(
         "geo_pitagoras", "facil",
-        "Un triángulo rectángulo tiene catetos de 6 cm y 8 cm. ¿Cuánto mide la hipotenusa?",
-        "10 cm",
-        "El teorema de Pitágoras dice que en un triángulo rectángulo "
-        "a² + b² = c², donde c es la hipotenusa (el lado opuesto al ángulo recto, "
-        "siempre el más largo).\n\n"
-        "1) Eleva cada cateto al cuadrado: 6² = 36 y 8² = 64.\n"
-        "2) Súmalos: 36 + 64 = 100. Ese valor es c², no c todavía.\n"
-        "3) Extrae la raíz cuadrada para llegar al lado: c = √100 = 10 cm.\n\n"
-        "El paso que más se olvida es el tercero. Un control de sentido común: la "
-        "hipotenusa debe ser mayor que cada cateto pero menor que su suma, y 10 está "
-        "entre 8 y 14.",
+        "Un triángulo rectángulo tiene catetos que miden a y b. ¿Cuál de las siguientes expresiones representa su hipotenusa?",
+        "√(a² + b²)",
+        "El teorema de Pitágoras relaciona los cuadrados, así que hay que "
+        "deshacer el cuadrado al final.\n\n"
+        "1) Se cumple hipotenusa² = a² + b².\n"
+        "2) Para obtener la hipotenusa se saca la raíz: √(a² + b²).\n"
+        "3) Comprueba con 6 y 8: √(36 + 64) = √100 = 10.\n"
+        "4) Quedarse en a² + b² es el error más común: eso entrega el cuadrado "
+        "de la hipotenusa, no la hipotenusa.",
         [
-            ("14 cm", "Sumó los catetos directamente en lugar de aplicar el teorema de Pitágoras."),
-            ("7 cm", "Calculó el promedio de los catetos en lugar de la hipotenusa."),
-            ("100 cm", "Calculó correctamente 6²+8²=100 pero olvidó extraer la raíz cuadrada final."),
+            ("a² + b²", "Ese es el CUADRADO de la hipotenusa: con 6 y 8 daría 100 en vez de 10."),
+            ("a + b", "Con catetos 6 y 8 daría 14, y la hipotenusa mide 10."),
+            ("√a + √b", "Reparte la raíz sobre la suma, algo que no se puede hacer: √(36+64) no es √36 + √64."),
         ],
     ),
     _q(
         "geo_pitagoras", "medio",
-        "La hipotenusa de un triángulo rectángulo mide 13 cm y uno de sus catetos mide 5 cm. "
-        "¿Cuánto mide el otro cateto?",
-        "12 cm",
-        "Se usa el mismo teorema, pero ahora el dato desconocido es un cateto, así que "
-        "la operación es una resta.\n\n"
-        "1) Escribe la relación: 5² + b² = 13².\n"
-        "2) Calcula los cuadrados conocidos: 25 + b² = 169.\n"
-        "3) Despeja restando: b² = 169 − 25 = 144.\n"
-        "4) Extrae la raíz: b = √144 = 12 cm.\n\n"
-        "La resta va siempre en ese orden, hipotenusa al cuadrado menos cateto al "
-        "cuadrado, porque la hipotenusa es el lado mayor y su cuadrado es el más "
-        "grande. Verifica: 5² + 12² = 25 + 144 = 169 = 13².",
+        "En un triángulo rectángulo se conocen la hipotenusa c y un cateto a. ¿Cuál de las siguientes expresiones representa el otro cateto?",
+        "√(c² − a²)",
+        "Cuando falta un cateto, los cuadrados se restan.\n\n"
+        "1) De a² + b² = c² se despeja b² = c² − a².\n"
+        "2) Sacando raíz: b = √(c² − a²).\n"
+        "3) Comprueba con c = 13 y a = 5: √(169 − 25) = √144 = 12.\n"
+        "4) Control de sentido: un cateto siempre mide menos que la hipotenusa, "
+        "así que si el resultado sale mayor que c hay un error de signo.",
         [
-            ("18 cm", "Sumó los cuadrados de la hipotenusa y el cateto (13²+5²) en lugar de restarlos."),
-            ("8 cm", "Restó los catetos directamente (13−5) sin elevarlos al cuadrado."),
-            ("144 cm", "Calculó correctamente 13²−5²=144 pero olvidó extraer la raíz cuadrada final."),
+            ("√(c² + a²)", "Suma los cuadrados, y eso daría un lado más largo que la hipotenusa."),
+            ("c − a", "Con 13 y 5 daría 8, y el cateto mide 12."),
+            ("√(a² − c²)", "Resta al revés y deja un número negativo dentro de la raíz."),
         ],
     ),
     _q(
@@ -577,42 +572,35 @@ QUESTIONS = [
     ),
     _q(
         "geo_solidos", "medio",
-        "¿Cuál es el volumen de un cilindro de radio 3 cm y altura 10 cm? (usa π ≈ 3,14)",
-        "282,6 cm³",
-        "El volumen de un cilindro es el área de su base circular multiplicada por la "
-        "altura: V = π × r² × h.\n\n"
-        "1) Calcula el área de la base: π × 3² = 3,14 × 9 = 28,26 cm².\n"
-        "2) Multiplica por la altura: 28,26 × 10 = 282,6.\n"
-        "3) El resultado va en cm³, porque el volumen ocupa tres dimensiones: "
-        "282,6 cm³.\n\n"
-        "Pensarlo como \"área de la base por altura\" ayuda a no olvidar ningún factor, "
-        "y sirve igual para prismas y otros cuerpos rectos.",
+        "Dos cilindros tienen la misma altura, pero el radio del segundo es el doble que el del primero. ¿Qué relación hay entre sus volúmenes?",
+        "El del segundo es cuatro veces el del primero",
+        "El volumen del cilindro depende del radio al cuadrado.\n\n"
+        "1) El volumen es π · r² · h. Con la altura fija, todo depende de r².\n"
+        "2) Al duplicar el radio, r² queda multiplicado por 4.\n"
+        "3) Comprueba con altura 10 y π ≈ 3,14: radio 3 da 282,6 y radio 6 da "
+        "1.130,4, que es cuatro veces más.\n"
+        "4) Por eso conviene desconfiar de la intuición: duplicar el radio no "
+        "duplica la capacidad, la cuadruplica.",
         [
-            ("94,2 cm³", "Calculó el área basal (πr²) pero olvidó multiplicarla por la altura."),
-            ("188,4 cm³", "Usó π×d×h en lugar de π×r²×h, sin elevar el radio al cuadrado y usando el diámetro."),
-            ("1130,4 cm³", "Usó el diámetro (6 cm) como si fuera el radio en la fórmula del volumen."),
+            ("El del segundo es el doble del primero", "El radio entra al cuadrado en la fórmula, así que el efecto es cuádruple."),
+            ("El del segundo es ocho veces el del primero", "Ocho veces sería si TODAS las medidas se duplicaran, incluida la altura."),
+            ("Tienen el mismo volumen", "Un cilindro más ancho con la misma altura contiene más."),
         ],
     ),
     _q(
         "geo_solidos", "dificil",
-        "Una caja rectangular mide 4 cm de largo, 3 cm de ancho y 5 cm de alto. "
-        "¿Cuál es su área total (superficie)?",
-        "94 cm²",
-        "Una caja tiene 6 caras que se agrupan en 3 pares iguales, uno por cada "
-        "combinación de dos dimensiones.\n\n"
-        "1) Calcula el área de una cara de cada par: largo × ancho = 4 × 3 = 12; "
-        "largo × alto = 4 × 5 = 20; ancho × alto = 3 × 5 = 15.\n"
-        "2) Súmalas: 12 + 20 + 15 = 47 cm². Eso corresponde a la mitad de la caja, "
-        "una cara de cada par.\n"
-        "3) Multiplica por 2, porque cada una tiene su cara opuesta idéntica: "
-        "2 × 47 = 94 cm².\n\n"
-        "La fórmula resumida es A = 2(lg·an + lg·al + an·al). Recuerda que el área va "
-        "en cm² y el volumen en cm³: si te da centímetros cúbicos, calculaste otra "
-        "cosa.",
+        "Una caja con forma de paralelepípedo mide a, b y c. ¿Cuál de las siguientes expresiones representa el área total de sus seis caras?",
+        "2(ab + ac + bc)",
+        "Las caras van en tres pares iguales.\n\n"
+        "1) Las dos caras de arriba y abajo miden a · b cada una.\n"
+        "2) Las dos del frente y atrás miden a · c cada una.\n"
+        "3) Las dos laterales miden b · c cada una.\n"
+        "4) Sumando: 2ab + 2ac + 2bc, que se factoriza como 2(ab + ac + bc).\n"
+        "5) Comprueba con 4, 3 y 5: 2(12 + 20 + 15) = 94 cm².",
         [
-            ("60 cm³", "Calculó el volumen (4×3×5) en lugar del área total de la superficie."),
-            ("47 cm²", "Sumó correctamente las tres áreas distintas de las caras, pero olvidó multiplicar el resultado por 2."),
-            ("24 cm²", "Sumó solo las tres dimensiones (4+3+5) en lugar de calcular y sumar las áreas de las caras."),
+            ("a · b · c", "Ese es el VOLUMEN de la caja, medido en unidades cúbicas."),
+            ("ab + ac + bc", "Cuenta una sola cara de cada par: le falta la mitad de la superficie."),
+            ("2(a + b + c)", "Suma longitudes y da unidades de longitud, no de superficie."),
         ],
     ),
     # ---------- PROBABILIDAD ----------
@@ -1053,88 +1041,88 @@ QUESTIONS = [
     # ---------- GEOMETRÍA ----------
     _q(
         "geo_plana", "facil",
-        "¿Cuál es el perímetro de un rectángulo de 9 cm de largo y 4 cm de ancho?",
-        "26 cm",
-        "El perímetro es la suma de los cuatro lados: dos veces el largo más "
-        "dos veces el ancho.\n\n"
-        "1) Suma el largo y el ancho: 9 + 4 = 13.\n"
-        "2) Multiplica por 2, porque hay dos lados de cada medida: "
-        "2 × 13 = 26.\n\n"
-        "El resultado va en cm, la misma unidad de los datos, porque el "
-        "perímetro mide una longitud, no una superficie.",
+        "Un terreno rectangular mide a metros de largo y b de ancho. Se quiere cercarlo dejando un portón de 3 metros sin cerca. ¿Cuál de las siguientes expresiones representa los metros de cerca necesarios?",
+        "2a + 2b − 3",
+        "Primero el contorno completo y después el descuento del portón.\n\n"
+        "1) El perímetro del terreno es 2a + 2b.\n"
+        "2) El portón ocupa 3 metros que no llevan cerca, así que se restan.\n"
+        "3) La expresión es 2a + 2b − 3.\n"
+        "4) Comprueba con 9 por 4: el perímetro es 26 y con el portón quedan 23 "
+        "metros de cerca.",
         [
-            ("36 cm²", "Calculó el área (9×4) en lugar del perímetro, y arrastró la unidad de superficie."),
-            ("13 cm", "Sumó el largo y el ancho pero olvidó multiplicar por 2."),
-            ("5 cm", "Restó el ancho al largo en lugar de sumarlos."),
+            ("2a + 2b + 3", "Suma el portón en vez de descontarlo: quedaría más cerca que contorno."),
+            ("a · b − 3", "Usa el área en lugar del contorno, y además le resta metros a metros cuadrados."),
+            ("2(a + b − 3)", "Descuenta el portón en cada uno de los dos pares de lados, o sea dos veces."),
         ],
     ),
     _q(
         "geo_plana", "dificil",
-        "Un triángulo tiene base 10 cm y su área es 45 cm². ¿Cuál es su altura?",
-        "9 cm",
-        "El área del triángulo es A = (base × altura) / 2. Como se conoce el "
-        "área, hay que despejar la altura desde esa fórmula.\n\n"
-        "1) Reemplaza los datos conocidos: 45 = (10 × h) / 2.\n"
-        "2) Multiplica ambos lados por 2 para quitar la división: 90 = 10 × h.\n"
-        "3) Divide por 10: h = 9.\n\n"
-        "Verifica reemplazando: (10 × 9) / 2 = 90 / 2 = 45 cm², que coincide "
-        "con el área dada.",
+        "Un triángulo tiene área A y base b. ¿Cuál de las siguientes expresiones representa su altura?",
+        "2A / b",
+        "Se despeja la altura desde la fórmula del área.\n\n"
+        "1) El área es (b · h)/2.\n"
+        "2) Multiplicando por 2 ambos lados: 2A = b · h.\n"
+        "3) Dividiendo por la base: h = 2A/b.\n"
+        "4) Comprueba con A = 45 y b = 10: la altura es 90/10 = 9 centímetros.\n"
+        "5) El error más común es olvidar el 2 y responder A/b, que da la mitad "
+        "de la altura real.",
         [
-            ("4,5 cm", "Dividió el área directamente por la base (45÷10) sin considerar el factor 1/2 de la fórmula."),
-            ("90 cm", "Multiplicó el área por 2 y por la base, en lugar de despejar correctamente la altura."),
-            ("22,5 cm", "Dividió el área entre 2 (45÷2) pero no relacionó ese resultado con la base para terminar de despejar la altura."),
+            ("A / b", "Olvida el 2 de la fórmula y entrega la mitad de la altura."),
+            ("A / (2b)", "Divide por 2 en vez de multiplicar: da la cuarta parte de la altura."),
+            ("2A · b", "Multiplica por la base en vez de dividir; el resultado ni siquiera queda en unidades de longitud."),
         ],
     ),
     _q(
         "geo_pitagoras", "facil",
-        "Un triángulo rectángulo tiene catetos de 9 cm y 12 cm. ¿Cuánto mide la hipotenusa?",
-        "15 cm",
-        "Se aplica el teorema de Pitágoras: a² + b² = c².\n\n"
-        "1) Eleva cada cateto al cuadrado: 9² = 81 y 12² = 144.\n"
-        "2) Súmalos: 81 + 144 = 225.\n"
-        "3) Extrae la raíz cuadrada: c = √225 = 15 cm.\n\n"
-        "Control de sentido: la hipotenusa debe ser mayor que cada cateto pero "
-        "menor que su suma, y 15 está entre 12 y 21.",
+        "¿Cuál de los siguientes tríos de medidas SÍ forma un triángulo rectángulo?",
+        "9, 12 y 15",
+        "Se prueba en cada trío si el cuadrado del lado mayor es la suma de los "
+        "otros dos.\n\n"
+        "1) Con 9, 12 y 15: 81 + 144 = 225, y 15² = 225. Cumple.\n"
+        "2) Con 4, 5 y 6: 16 + 25 = 41, y 6² = 36. No cumple.\n"
+        "3) Con 7, 8 y 10: 49 + 64 = 113, y 10² = 100. No cumple.\n"
+        "4) Con 5, 6 y 8: 25 + 36 = 61, y 8² = 64. Queda cerca, pero no cumple: "
+        "por eso hay que calcular y no confiar en el parecido.",
         [
-            ("21 cm", "Sumó los catetos directamente en lugar de aplicar el teorema de Pitágoras."),
-            ("10,5 cm", "Calculó el promedio de los catetos en lugar de la hipotenusa."),
-            ("225 cm", "Calculó correctamente 9²+12²=225 pero olvidó extraer la raíz cuadrada final."),
+            ("4, 5 y 6", "16 + 25 da 41, y el cuadrado de 6 es 36."),
+            ("7, 8 y 10", "49 + 64 da 113, y el cuadrado de 10 es 100."),
+            ("5, 6 y 8", "25 + 36 da 61, muy cerca de 64 pero no igual."),
         ],
     ),
     _q(
         "geo_pitagoras", "dificil",
-        "Un rectángulo mide 12 cm de largo y su diagonal mide 13 cm. ¿Cuánto mide su ancho?",
-        "5 cm",
-        "La diagonal de un rectángulo, junto con el largo y el ancho, forma un "
-        "triángulo rectángulo donde la diagonal es la hipotenusa.\n\n"
-        "1) Aplica el teorema: diagonal² = largo² + ancho², o sea "
-        "13² = 12² + ancho².\n"
-        "2) Calcula los cuadrados conocidos: 169 = 144 + ancho².\n"
-        "3) Despeja restando: ancho² = 169 − 144 = 25.\n"
-        "4) Extrae la raíz: ancho = √25 = 5 cm.\n\n"
-        "Verifica: 12² + 5² = 144 + 25 = 169 = 13².",
+        "Se afirma que en todo triángulo rectángulo la hipotenusa mide menos que la suma de los dos catetos. ¿Es correcta esa afirmación?",
+        "Sí, y se deduce de que los cuadrados de los catetos suman el cuadrado de la hipotenusa",
+        "El argumento se puede hacer sin números.\n\n"
+        "1) Se cumple c² = a² + b².\n"
+        "2) En cambio (a + b)² = a² + 2ab + b², que es c² más el término "
+        "positivo 2ab.\n"
+        "3) Entonces (a + b)² es mayor que c², y como ambos son positivos, "
+        "a + b es mayor que c.\n"
+        "4) Comprueba con 3, 4 y 5: la suma de catetos es 7 y la hipotenusa 5.\n"
+        "5) Es un caso particular de la desigualdad triangular, que vale para "
+        "cualquier triángulo.",
         [
-            ("1 cm", "Restó los valores directamente (13−12) en lugar de aplicar el teorema de Pitágoras."),
-            ("25 cm", "Calculó correctamente 13²−12²=25 pero olvidó extraer la raíz cuadrada final."),
-            ("17 cm", "Sumó los cuadrados de la diagonal y el largo (13²+12²) en lugar de restarlos."),
+            ("No: con catetos grandes la hipotenusa puede superarlos", "El razonamiento no depende del tamaño: el término 2ab siempre es positivo."),
+            ("Sí, pero solo si los catetos son distintos entre sí", "También vale con catetos iguales: con 1 y 1 la hipotenusa es √2, menor que 2."),
+            ("No: la hipotenusa es siempre igual a la suma de los catetos", "Con 3 y 4 la suma es 7 y la hipotenusa 5."),
         ],
     ),
     _q(
         "geo_transformaciones", "facil",
-        "Si el punto (−2, 6) se traslada según el vector (5, −3), ¿cuáles son sus nuevas coordenadas?",
-        "(3, 3)",
-        "Trasladar un punto es sumarle el vector componente a componente, "
-        "respetando los signos de ambos.\n\n"
-        "1) Suma la primera componente del vector a la coordenada x: "
-        "−2 + 5 = 3.\n"
-        "2) Suma la segunda componente a la coordenada y: 6 + (−3) = 3.\n"
-        "3) El punto trasladado es (3, 3).\n\n"
-        "Cada componente del vector actúa solo sobre su propia coordenada: la "
-        "primera nunca afecta a y ni la segunda a x.",
+        "¿Cuál de las siguientes transformaciones NO es una isometría?",
+        "La homotecia de razón 3",
+        "Una isometría conserva todas las medidas de la figura.\n\n"
+        "1) La traslación mueve la figura sin deformarla.\n"
+        "2) La rotación la gira conservando lados y ángulos.\n"
+        "3) La reflexión la invierte como un espejo, pero las medidas no "
+        "cambian.\n"
+        "4) La homotecia, en cambio, agranda o achica: con razón 3 los lados "
+        "triplican su medida, así que no conserva las distancias.",
         [
-            ("(3, 9)", "Sumó con el signo equivocado la segunda componente, usando +3 en lugar de −3 (6+3=9 en vez de 6−3=3)."),
-            ("(-7, 9)", "Restó la primera componente del vector en lugar de sumarla, y también sumó con el signo equivocado la segunda."),
-            ("(7, 3)", "Ignoró el signo negativo de la coordenada x del punto original al sumar el vector (trató −2 como si fuera 2)."),
+            ("La traslación según el vector (4, 1)", "Mueve todos los puntos por igual: las distancias entre ellos no cambian."),
+            ("La rotación de 90° en torno al origen", "Girar la figura no altera ninguna de sus medidas."),
+            ("La reflexión respecto del eje X", "Invierte la orientación, pero conserva lados y ángulos."),
         ],
     ),
     _q(
@@ -1717,15 +1705,20 @@ QUESTIONS = [
     # ---------- GEOMETRÍA ----------
     _q(
         "geo_plana", "facil",
-        "¿Cuál es el área de un triángulo de base 10 cm y altura 6 cm?",
-        "30 cm²",
-        "El área de un triángulo es base por altura, dividido por 2.\n\n"
-        "1) Multiplica base por altura: 10 × 6 = 60.\n"
-        "2) Divide por 2: 60 / 2 = 30 cm².",
+        "Al calcular el área de un triángulo de base 10 cm y altura 6 cm, un estudiante responde 60 cm². ¿Qué error cometió?",
+        "Olvidó dividir por 2: el área de un triángulo es la mitad del rectángulo que lo contiene",
+        "El producto base por altura corresponde al rectángulo, no al "
+        "triángulo.\n\n"
+        "1) Un triángulo cabe exactamente dos veces en un rectángulo de la misma "
+        "base y altura.\n"
+        "2) Por eso su área es (10 · 6)/2 = 30 cm².\n"
+        "3) Los 60 cm² que calculó son el área del rectángulo completo.\n"
+        "4) Dibujarlo ayuda a no olvidarlo: al trazar una diagonal en un "
+        "rectángulo quedan dos triángulos iguales.",
         [
-            ("60 cm²", "Multiplicó base por altura pero olvidó dividir por 2, calculando el área como si fuera un rectángulo."),
-            ("16 cm²", "Sumó la base y la altura (10+6) en lugar de multiplicarlas."),
-            ("8 cm²", "Promedió la base y la altura en lugar de aplicar la fórmula del área de un triángulo."),
+            ("Multiplicó mal la base por la altura", "10 · 6 sí da 60; lo que falta es dividir ese resultado."),
+            ("Debía sumar la base y la altura", "El área siempre multiplica dos medidas, nunca las suma."),
+            ("No hay error: el área es 60 cm²", "Ese es el área del rectángulo; el triángulo es la mitad."),
         ],
     ),
     _q(
@@ -1749,114 +1742,130 @@ QUESTIONS = [
     ),
     _q(
         "geo_plana", "dificil",
-        "Un terreno rectangular tiene un perímetro de 60 m. Si el largo mide el doble que el ancho, "
-        "¿cuál es el área del terreno?",
-        "200 m²",
-        "Se plantea el perímetro en función del ancho y se despeja, para luego "
-        "calcular el área.\n\n"
-        "1) Llama a al ancho; el largo es 2a. El perímetro es 2(a + 2a) = 6a.\n"
-        "2) Iguala al perímetro dado: 6a = 60, entonces a = 10 m (ancho).\n"
-        "3) El largo es 2 × 10 = 20 m.\n"
-        "4) El área es ancho × largo: 10 × 20 = 200 m².",
+        "Un terreno rectangular tiene perímetro 60 m y su largo mide el doble que su ancho. ¿Cuál de las siguientes ecuaciones permite encontrar el ancho x?",
+        "2(x + 2x) = 60",
+        "Modelar es escribir la condición del perímetro con una sola "
+        "incógnita.\n\n"
+        "1) Si el ancho es x, el largo es 2x.\n"
+        "2) El perímetro suma dos anchos y dos largos: 2(x + 2x) = 60.\n"
+        "3) Reduciendo: 6x = 60, así que x = 10 metros de ancho y 20 de largo.\n"
+        "4) Comprueba: 2(10 + 20) = 60, y el área resulta 200 metros cuadrados.",
         [
-            ("225 m²", "Calculó el lado asumiendo que el terreno es un cuadrado (60÷4=15), sin usar la condición de que el largo es el doble del ancho."),
-            ("100 m²", "Calculó correctamente que el ancho mide 10 m, pero no aplicó la condición de que el largo es el doble, asumiendo un cuadrado de 10×10."),
-            ("30 m²", "Sumó el largo y el ancho (10+20) en lugar de multiplicarlos para obtener el área."),
+            ("x + 2x = 60", "Suma un solo ancho y un solo largo: le falta la otra mitad del contorno."),
+            ("x · 2x = 60", "Esa ecuación iguala el ÁREA a 60, no el perímetro."),
+            ("2x + 2 = 60", "Trata el doble como una suma de 2 en vez de una multiplicación."),
         ],
     ),
     _q(
         "geo_pitagoras", "facil",
-        "Un triángulo rectángulo tiene catetos de 14 cm y 48 cm. ¿Cuánto mide su hipotenusa?",
-        "50 cm",
-        "El teorema de Pitágoras dice que el cuadrado de la hipotenusa es igual a "
-        "la suma de los cuadrados de los catetos.\n\n"
-        "1) Eleva al cuadrado los catetos: 14² = 196 y 48² = 2.304.\n"
-        "2) Súmalos: 196 + 2.304 = 2.500.\n"
-        "3) Extrae la raíz cuadrada: √2.500 = 50 cm.",
+        "Un mapa muestra que para ir de A a B hay que caminar 300 m al norte y después 400 m al este. ¿Cuánto se ahorra quien puede ir en línea recta?",
+        "200 m",
+        "El camino recto es la hipotenusa del triángulo que forman los dos "
+        "tramos.\n\n"
+        "1) Los tramos son perpendiculares, así que forman un triángulo "
+        "rectángulo de catetos 300 y 400.\n"
+        "2) La línea recta mide √(90.000 + 160.000) = √250.000 = 500 metros.\n"
+        "3) El camino por las calles suma 300 + 400 = 700 metros.\n"
+        "4) El ahorro es 700 − 500 = 200 metros.\n"
+        "5) El error típico es responder 500, que es la distancia recta y no lo "
+        "que se ahorra.",
         [
-            ("62 cm", "Sumó los catetos directamente (14+48) en lugar de aplicar el teorema de Pitágoras."),
-            ("34 cm", "Restó los catetos en lugar de aplicar el teorema."),
-            ("2.500 cm", "Sumó los cuadrados de los catetos correctamente, pero olvidó calcular la raíz cuadrada."),
+            ("500 m", "Esa es la distancia en línea recta, no el ahorro respecto del camino largo."),
+            ("700 m", "Ese es el camino por las calles: si se ahorrara todo, no habría que caminar nada."),
+            ("100 m", "Restó mal: 700 menos 500 son 200 metros."),
         ],
     ),
     _q(
         "geo_pitagoras", "medio",
-        "Un triángulo rectángulo tiene hipotenusa de 41 cm y un cateto de 40 cm. "
-        "¿Cuánto mide el otro cateto?",
-        "9 cm",
-        "Cuando se conoce la hipotenusa y un cateto, el teorema de Pitágoras se "
-        "despeja restando en lugar de sumando.\n\n"
-        "1) Eleva al cuadrado la hipotenusa y el cateto conocido: 41² = 1.681 y "
-        "40² = 1.600.\n"
-        "2) Resta: 1.681 − 1.600 = 81.\n"
-        "3) Extrae la raíz cuadrada: √81 = 9 cm.",
+        "Un estudiante quiere saber si un triángulo de lados 8, 15 y 17 es rectángulo, y comprueba que 8² + 15² = 289 y 17² = 289. ¿Qué puede concluir?",
+        "Que sí es rectángulo, y el ángulo recto está opuesto al lado de 17",
+        "El recíproco del teorema de Pitágoras permite ir en esa dirección.\n\n"
+        "1) Si los cuadrados de los dos lados menores suman el cuadrado del "
+        "mayor, el triángulo es rectángulo.\n"
+        "2) Acá se cumple exactamente: 64 + 225 = 289 = 17².\n"
+        "3) El ángulo recto siempre queda opuesto al lado más largo, que es la "
+        "hipotenusa.\n"
+        "4) La comprobación funciona en los dos sentidos: el teorema dice que si "
+        "es rectángulo se cumple la igualdad, y el recíproco dice que si se "
+        "cumple la igualdad entonces es rectángulo.",
         [
-            ("81 cm", "Restó bien los cuadrados pero olvidó calcular la raíz cuadrada."),
-            ("1 cm", "Restó el cateto conocido de la hipotenusa directamente (41−40), en lugar de restar sus cuadrados y luego calcular la raíz."),
-            ("≈57,3 cm", "Sumó los cuadrados de la hipotenusa y el cateto conocido, en lugar de restarlos."),
+            ("Que sí es rectángulo, y el ángulo recto está opuesto al lado de 8", "El ángulo recto se opone al lado MÁS LARGO, que es la hipotenusa."),
+            ("Que no se puede concluir nada: el teorema solo funciona al revés", "El recíproco es válido: la igualdad garantiza que el triángulo es rectángulo."),
+            ("Que es rectángulo solo si además los lados son números enteros", "Que sean enteros es una coincidencia cómoda, no una condición."),
         ],
     ),
     _q(
         "geo_pitagoras", "dificil",
-        "Una escalera de 10 m se apoya en una pared vertical. Si la base de la escalera está a 6 m "
-        "de la pared, ¿a qué altura de la pared llega la escalera?",
-        "8 m",
-        "La escalera es la hipotenusa de un triángulo rectángulo, la distancia a "
-        "la pared es un cateto y la altura buscada es el otro cateto.\n\n"
-        "1) Eleva al cuadrado la escalera y la distancia a la pared: 10² = 100 y "
-        "6² = 36.\n"
-        "2) Resta para obtener el cateto que falta: 100 − 36 = 64.\n"
-        "3) Extrae la raíz cuadrada: √64 = 8 m.",
+        "Una escalera de L metros se apoya en una pared y su base está a d metros de ella. ¿Cuál de las siguientes expresiones representa la altura que alcanza?",
+        "√(L² − d²)",
+        "La escalera es la hipotenusa y la altura es un cateto.\n\n"
+        "1) La pared y el suelo forman el ángulo recto, así que la altura h "
+        "cumple h² + d² = L².\n"
+        "2) Despejando: h = √(L² − d²).\n"
+        "3) Comprueba con L = 10 y d = 6: √(100 − 36) = √64 = 8 metros.\n"
+        "4) La expresión también avisa cuándo el problema no tiene sentido: si d "
+        "fuera mayor que L, quedaría una raíz negativa, porque la escalera no "
+        "alcanzaría a llegar.",
         [
-            ("4 m", "Restó directamente la base de la longitud de la escalera (10−6), en lugar de aplicar el teorema de Pitágoras."),
-            ("16 m", "Sumó la longitud de la escalera y la distancia a la pared (10+6), en lugar de tratarlas como hipotenusa y cateto."),
-            ("64 m", "Calculó correctamente 10² − 6² = 64, pero olvidó calcular la raíz cuadrada para obtener la altura."),
+            ("√(L² + d²)", "Sumar daría una altura mayor que la escalera misma."),
+            ("L − d", "Con L = 10 y d = 6 daría 4, y la altura real es 8."),
+            ("L · d", "Multiplicar dos longitudes da un área, no una altura."),
         ],
     ),
     _q(
         "geo_transformaciones", "facil",
-        "¿Cuáles son las coordenadas del punto (3, 5) al reflejarlo respecto del eje X?",
-        "(3, −5)",
-        "Al reflejar un punto respecto del eje X, la coordenada x no cambia y la "
-        "coordenada y cambia de signo.\n\n"
-        "1) La coordenada x se mantiene: 3.\n"
-        "2) La coordenada y cambia de signo: 5 pasa a −5.\n"
-        "3) El punto reflejado es (3, −5).",
+        "Un punto se refleja respecto del eje X y queda en (3, −5). ¿Cuáles eran sus coordenadas originales?",
+        "(3, 5)",
+        "La reflexión es su propia inversa: aplicarla dos veces devuelve al punto "
+        "de partida.\n\n"
+        "1) Reflejar respecto del eje X cambia el signo de la coordenada y.\n"
+        "2) Para volver atrás basta con volver a cambiarlo: (3, −5) vuelve a "
+        "(3, 5).\n"
+        "3) Comprueba hacia adelante: (3, 5) reflejado da (3, −5), que es el "
+        "dato del enunciado.\n"
+        "4) Esa propiedad distingue la reflexión de la traslación, donde volver "
+        "atrás exige el vector opuesto.",
         [
-            ("(−3, 5)", "Reflejó el punto respecto del eje Y en lugar del eje X, cambiando el signo de la coordenada x en lugar de la y."),
-            ("(−3, −5)", "Reflejó el punto respecto del origen, cambiando el signo de ambas coordenadas, en lugar de reflejarlo solo respecto del eje X."),
-            ("(5, 3)", "Intercambió las coordenadas x e y del punto, en lugar de aplicar la reflexión respecto del eje X."),
+            ("(−3, −5)", "Cambió el signo de la x, que la reflexión respecto del eje X no toca."),
+            ("(−3, 5)", "Cambió los dos signos, que corresponde a una rotación de 180°."),
+            ("(3, −5)", "Repitió el punto de llegada en vez de deshacer la reflexión."),
         ],
     ),
     _q(
         "geo_transformaciones", "medio",
-        "Se traslada el punto (2, −3) según el vector (4, 1). ¿Cuáles son las coordenadas del punto "
-        "trasladado?",
-        "(6, −2)",
-        "Trasladar un punto según un vector significa sumar las componentes del "
-        "vector a las coordenadas del punto.\n\n"
-        "1) Suma la primera componente del vector a la coordenada x: 2 + 4 = 6.\n"
-        "2) Suma la segunda componente a la coordenada y: −3 + 1 = −2.\n"
-        "3) El punto trasladado es (6, −2).",
+        "Una figura se traslada según el vector (4, 1) y después según el vector (2, −5). ¿Qué traslación única produce el mismo resultado?",
+        "La traslación según el vector (6, −4)",
+        "Dos traslaciones seguidas equivalen a una sola con la suma de los "
+        "vectores.\n\n"
+        "1) Se suman componente a componente: (4 + 2, 1 + (−5)).\n"
+        "2) Eso da el vector (6, −4).\n"
+        "3) Comprueba con el punto (2, −3): tras la primera queda en (6, −2), y "
+        "tras la segunda en (8, −7). Aplicando (6, −4) directamente: "
+        "(2 + 6, −3 − 4) = (8, −7).\n"
+        "4) El orden no importa: sumar vectores da el mismo resultado en "
+        "cualquier orden.",
         [
-            ("(−2, −4)", "Restó las componentes del vector de traslación en lugar de sumarlas a las coordenadas originales."),
-            ("(3, 1)", "Intercambió las componentes del vector de traslación, usando (1, 4) en lugar de (4, 1)."),
-            ("(8, −3)", "Multiplicó la coordenada x por la primera componente del vector en lugar de sumarla, y no modificó la coordenada y."),
+            ("La traslación según el vector (2, 6)", "Restó las componentes en vez de sumarlas, y además cambió el signo."),
+            ("La traslación según el vector (8, −5)", "Multiplicó las primeras componentes en lugar de sumarlas."),
+            ("La traslación según el vector (6, 4)", "Perdió el signo de la segunda componente: 1 + (−5) da −4."),
         ],
     ),
     _q(
         "geo_transformaciones", "dificil",
-        "Un cuadrado tiene un vértice en (4, 0). Si se rota 90° en torno al origen, en sentido "
-        "antihorario, ¿en qué punto queda ese vértice?",
-        "(0, 4)",
-        "Una rotación de 90° antihoraria en torno al origen transforma cada punto "
-        "(x, y) en (−y, x).\n\n"
-        "1) Identifica las coordenadas originales: x = 4, y = 0.\n"
-        "2) Aplica la regla: el nuevo punto es (−y, x) = (−0, 4) = (0, 4).",
+        "Al rotar un punto 90° en sentido antihorario en torno al origen, ¿cuál de las siguientes expresiones representa su nueva posición?",
+        "(−y, x)",
+        "Conviene deducirla siguiendo un punto conocido.\n\n"
+        "1) El punto (1, 0), sobre el eje X positivo, gira un cuarto de vuelta y "
+        "llega a (0, 1).\n"
+        "2) Aplicando (−y, x) a (1, 0): queda (0, 1). Calza.\n"
+        "3) Compruébalo con otro: (3, 2) llega a (−2, 3), que efectivamente está "
+        "girado un cuarto de vuelta hacia la izquierda.\n"
+        "4) Con la regla (y, −x) el punto (1, 0) iría a (0, −1), que es el giro "
+        "en sentido HORARIO.",
         [
-            ("(4, 0)", "No aplicó la rotación: dejó el punto en su posición original."),
-            ("(0, −4)", "Aplicó la regla de rotación en sentido horario (y, −x) en lugar de antihorario, invirtiendo el signo del resultado."),
-            ("(−4, 0)", "Calculó la posición del punto tras una rotación de 180° en lugar de 90°."),
+            ("(y, −x)", "Esa es la rotación de 90° en sentido horario, o sea hacia el otro lado."),
+            ("(−x, −y)", "Esa es la rotación de 180°: media vuelta, no un cuarto."),
+            ("(x, −y)", "Esa es la reflexión respecto del eje X, que no es una rotación."),
         ],
     ),
     _q(
@@ -1894,16 +1903,21 @@ QUESTIONS = [
     ),
     _q(
         "geo_solidos", "medio",
-        "Un cilindro tiene radio 4 cm y altura 5 cm. ¿Cuál es su volumen? (usa π ≈ 3,14)",
-        "251,2 cm³",
-        "El volumen de un cilindro es el área de su base circular multiplicada "
-        "por la altura.\n\n"
-        "1) Calcula el área de la base: π × r² = 3,14 × 4² = 3,14 × 16 = 50,24 cm².\n"
-        "2) Multiplica por la altura: 50,24 × 5 = 251,2 cm³.",
+        "Dos envases tienen la misma capacidad: uno es un cubo y el otro un cilindro bajo y ancho. ¿Qué se puede afirmar?",
+        "Guardan la misma cantidad de líquido, aunque su forma sea distinta",
+        "La capacidad es el volumen, y el enunciado dice que es el mismo.\n\n"
+        "1) Que guarden lo mismo es exactamente lo que significa 'misma "
+        "capacidad'.\n"
+        "2) Lo que sí puede diferir es la superficie de material que necesita "
+        "cada envase para construirse.\n"
+        "3) También difieren sus dimensiones: uno es alto y compacto, el otro "
+        "bajo y ancho.\n"
+        "4) Volumen y área de superficie son magnitudes independientes: fijar "
+        "una no fija la otra.",
         [
-            ("62,8 cm³", "No elevó el radio al cuadrado: multiplicó π por el radio (sin elevarlo) y por la altura."),
-            ("125,6 cm³", "Calculó el área lateral del cilindro (2πrh) en lugar de su volumen (πr²h)."),
-            ("1.004,8 cm³", "Usó el diámetro (8 cm) en lugar del radio en la fórmula, elevándolo al cuadrado por error."),
+            ("Necesitan la misma cantidad de material", "Con el mismo volumen, la forma cambia cuánta superficie hace falta."),
+            ("El cilindro guarda más porque es más ancho", "El enunciado dice que las capacidades son iguales."),
+            ("Tienen la misma altura", "Uno es descrito como bajo y ancho: sus dimensiones son distintas."),
         ],
     ),
     # ---------- PROBABILIDAD ----------
@@ -3397,47 +3411,53 @@ QUESTIONS += [
     # ---------- GEOMETRÍA: perímetros y áreas ----------
     _q(
         "geo_plana", "facil",
-        "¿Cuál es el área de un triángulo de base 12 cm y altura 7 cm?",
-        "42 cm²",
-        "El área de un triángulo es la mitad del producto entre base y altura.\n\n"
-        "1) Multiplica base por altura: 12 · 7 = 84.\n"
-        "2) Divide por 2: 84 ÷ 2 = 42.\n"
-        "3) Como es área, la unidad va al cuadrado: 42 cm².",
+        "Dos triángulos tienen la misma altura, pero la base del primero es el doble que la del segundo. ¿Qué relación hay entre sus áreas?",
+        "El área del primero es el doble que la del segundo",
+        "Con la altura fija, el área es directamente proporcional a la base.\n\n"
+        "1) El área es (base · altura)/2. Si la altura no cambia, duplicar la "
+        "base duplica el resultado.\n"
+        "2) Comprueba con altura 7: base 6 da área 21 y base 12 da área 42.\n"
+        "3) Ojo con no confundirlo con el caso de figuras semejantes: ahí "
+        "cambian las DOS dimensiones y el área se cuadruplica. Aquí solo cambia "
+        "la base.",
         [
-            ("84 cm²", "Multiplicó base por altura pero olvidó dividir por 2."),
-            ("19 cm²", "Sumó base y altura en lugar de multiplicarlas."),
-            ("38 cm", "Calculó algo parecido a un perímetro en vez del área."),
+            ("El área del primero es cuatro veces la del segundo", "Eso ocurriría si además la altura se duplicara; acá la altura es la misma."),
+            ("Tienen la misma área", "Al crecer la base y mantenerse la altura, el área necesariamente crece."),
+            ("El área del primero es la mitad que la del segundo", "El de base mayor tiene mayor área, no menor."),
         ],
     ),
     _q(
         "geo_plana", "medio",
-        "Una circunferencia tiene radio 5 cm. ¿Cuál es su área? (usa π ≈ 3,14)",
-        "78,5 cm²",
-        "El área del círculo es π multiplicado por el radio al cuadrado.\n\n"
-        "1) Eleva el radio al cuadrado: 5² = 25.\n"
-        "2) Multiplica por π: 3,14 · 25 = 78,5.\n"
-        "3) El área es 78,5 cm².\n\n"
-        "Ojo con no confundirla con el perímetro, que es 2πr = 31,4 cm.",
+        "¿Cuál de las siguientes afirmaciones sobre un círculo es siempre verdadera?",
+        "Su área se mide en unidades cuadradas y su perímetro en unidades de longitud",
+        "Las unidades distinguen las dos fórmulas y sirven de control.\n\n"
+        "1) El área es π · r²: el radio aparece al cuadrado, así que el "
+        "resultado queda en centímetros cuadrados.\n"
+        "2) El perímetro es 2 · π · r: el radio aparece una sola vez, así que "
+        "queda en centímetros.\n"
+        "3) Si una respuesta de área sale en centímetros, hay un error de "
+        "fórmula en el camino.\n"
+        "4) Ese chequeo de unidades atrapa el error más frecuente del tema: usar "
+        "2πr donde iba πr².",
         [
-            ("31,4 cm²", "Calculó el perímetro de la circunferencia en lugar del área."),
-            ("15,7 cm²", "Multiplicó π por el radio sin elevarlo al cuadrado."),
-            ("157 cm²", "Usó el diámetro en lugar del radio al elevar al cuadrado."),
+            ("Su área es siempre mayor que su perímetro", "Con radio 1 el área es 3,14 y el contorno 6,28: el área es menor."),
+            ("Su perímetro es el doble de su área", "Solo ocurriría en un caso particular, no siempre."),
+            ("Ambos se miden en unidades cuadradas", "El perímetro es una longitud y va en unidades simples."),
         ],
     ),
     _q(
         "geo_plana", "medio",
-        "Un rectángulo tiene perímetro 36 cm y su largo mide 11 cm. "
-        "¿Cuál es su área?",
-        "77 cm²",
-        "Primero se obtiene el ancho a partir del perímetro y después se calcula el "
-        "área.\n\n"
-        "1) El perímetro es 2(largo + ancho): 2(11 + a) = 36.\n"
-        "2) Divide por 2: 11 + a = 18, entonces a = 7 cm.\n"
-        "3) El área es largo por ancho: 11 · 7 = 77 cm².",
+        "Se conocen el perímetro P y el largo L de un rectángulo. ¿Cuál de las siguientes expresiones representa su ancho?",
+        "(P / 2) − L",
+        "La mitad del perímetro es la suma de un largo y un ancho.\n\n"
+        "1) El perímetro es 2(L + a), así que P/2 = L + a.\n"
+        "2) Despejando el ancho: a = P/2 − L.\n"
+        "3) Comprueba con P = 36 y L = 11: 18 − 11 = 7 centímetros de ancho.\n"
+        "4) Ese rectángulo mide 11 por 7, y su perímetro es 2(11 + 7) = 36.",
         [
-            ("396 cm²", "Multiplicó el perímetro por el largo en lugar de hallar el ancho."),
-            ("275 cm²", "Restó el largo al perímetro sin dividir por 2, usando 25 como ancho."),
-            ("36 cm²", "Entregó el perímetro como si fuera el área."),
+            ("P − L", "Resta un solo largo al perímetro completo, y quedan tres lados sin descontar."),
+            ("(P − L) / 2", "Divide después de restar, cuando el orden correcto es dividir el perímetro primero."),
+            ("P / (2L)", "Divide el perímetro por el doble del largo, lo que no despeja el ancho."),
         ],
     ),
     _q(
@@ -3517,19 +3537,19 @@ QUESTIONS += [
     ),
     _q(
         "geo_pitagoras", "medio",
-        "¿Cuánto mide la diagonal de un cuadrado de lado 6 cm?",
-        "6√2 cm",
-        "La diagonal divide el cuadrado en dos triángulos rectángulos cuyos catetos son "
-        "los lados.\n\n"
-        "1) Aplica Pitágoras con ambos catetos iguales a 6: d² = 6² + 6² = 36 + 36 = 72.\n"
-        "2) Saca la raíz: d = √72.\n"
-        "3) Simplifica: 72 = 36 · 2, así que √72 = 6√2 cm.\n\n"
-        "En cualquier cuadrado la diagonal mide el lado multiplicado por √2, "
-        "aproximadamente 8,49 cm en este caso.",
+        "Al calcular la diagonal de un cuadrado de lado 6 cm, un estudiante responde 12 cm porque duplicó el lado. ¿Qué error cometió?",
+        "Supuso que la diagonal es el doble del lado, cuando es el lado multiplicado por √2",
+        "La diagonal es la hipotenusa de un triángulo rectángulo de catetos "
+        "iguales.\n\n"
+        "1) Aplicando Pitágoras: diagonal² = 6² + 6² = 72.\n"
+        "2) La diagonal es √72 = 6√2, o sea unos 8,49 centímetros.\n"
+        "3) El factor correcto es √2 ≈ 1,41, no 2.\n"
+        "4) Control de sentido: la diagonal debe medir menos que la suma de dos "
+        "lados, que es 12. Justamente 12 era la respuesta que dio.",
         [
-            ("12 cm", "Sumó los lados en lugar de aplicar el teorema."),
-            ("72 cm", "Calculó el cuadrado de la diagonal pero no sacó la raíz."),
-            ("3√2 cm", "Dividió el lado por 2 antes de aplicar el teorema."),
+            ("Debía sumar los dos lados", "Sumarlos da exactamente los 12 que respondió, y ese es el error."),
+            ("Se equivocó al elevar 6 al cuadrado", "6² sí es 36; el problema es que no usó el teorema."),
+            ("No hay error: la diagonal mide 12 cm", "La diagonal de un cuadrado siempre mide menos que dos lados."),
         ],
     ),
     _q(
@@ -3605,37 +3625,37 @@ QUESTIONS += [
     ),
     _q(
         "geo_transformaciones", "medio",
-        "¿Cuáles son las coordenadas del punto B(−2, 7) al reflejarlo respecto del "
-        "eje X?",
-        "(−2, −7)",
-        "En una reflexión respecto del eje X la coordenada x se conserva y la y cambia "
-        "de signo.\n\n"
-        "1) La coordenada x se mantiene en −2.\n"
-        "2) La coordenada y pasa de 7 a −7.\n"
-        "3) El punto reflejado es (−2, −7).\n\n"
-        "Respecto del eje Y, en cambio, el que cambiaría de signo sería el −2.",
+        "Una figura está dibujada completamente en el primer cuadrante. ¿En qué cuadrante queda después de reflejarla respecto del eje Y?",
+        "En el segundo",
+        "Reflejar respecto del eje Y cambia el signo de la coordenada x.\n\n"
+        "1) En el primer cuadrante las dos coordenadas son positivas.\n"
+        "2) Al cambiar el signo de la x, esta queda negativa y la y sigue "
+        "positiva.\n"
+        "3) Coordenada x negativa con y positiva es exactamente el segundo "
+        "cuadrante.\n"
+        "4) Comprueba con el punto (3, 5): se refleja en (−3, 5).",
         [
-            ("(2, 7)", "Reflejó respecto del eje Y en lugar del eje X."),
-            ("(2, −7)", "Cambió el signo de ambas coordenadas, que corresponde a una rotación en 180°."),
-            ("(7, −2)", "Intercambió las coordenadas en vez de reflejar."),
+            ("En el tercero", "Ahí ambas coordenadas son negativas, y la y no cambia de signo."),
+            ("En el cuarto", "Ese sería el resultado de reflejar respecto del eje X."),
+            ("Sigue en el primero", "La coordenada x pasa a ser negativa, así que la figura cruza al otro lado."),
         ],
     ),
     _q(
         "geo_transformaciones", "medio",
-        "El punto B(2, 0) se rota 90° en sentido antihorario en torno al origen. "
-        "¿Cuáles son sus nuevas coordenadas?",
-        "(0, 2)",
-        "Una rotación de 90° antihoraria en torno al origen transforma el punto (x, y) "
-        "en (−y, x).\n\n"
-        "1) Aplica la regla con x = 2 e y = 0: el nuevo punto es (−0, 2).\n"
-        "2) Como −0 es 0, queda (0, 2).\n\n"
-        "Tiene sentido geométrico: el punto estaba sobre el eje X a distancia 2 del "
-        "origen, y al girar un cuarto de vuelta hacia arriba queda sobre el eje Y a la "
-        "misma distancia.",
+        "¿Cuántas rotaciones de 90° en el mismo sentido hay que aplicar a una figura para que vuelva exactamente a su posición inicial?",
+        "Cuatro",
+        "Cada rotación de 90° es un cuarto de vuelta.\n\n"
+        "1) Una vuelta completa son 360°.\n"
+        "2) Como cada rotación aporta 90°, hacen falta 360 ÷ 90 = 4.\n"
+        "3) Compruébalo con el punto (1, 0) girando en sentido antihorario: "
+        "pasa a (0, 1), después a (−1, 0), después a (0, −1) y finalmente vuelve "
+        "a (1, 0).\n"
+        "4) Con dos rotaciones queda en la posición opuesta, que es lo mismo que "
+        "una rotación de 180°.",
         [
-            ("(0, −2)", "Rotó en sentido horario en lugar de antihorario."),
-            ("(−2, 0)", "Rotó 180° en vez de 90°."),
-            ("(2, 0)", "Dejó el punto sin cambios."),
+            ("Dos", "Dos rotaciones suman 180°: la figura queda invertida, no en su lugar."),
+            ("Tres", "Tres suman 270°, que equivale a un cuarto de vuelta en el sentido contrario."),
+            ("Ocho", "Ocho equivalen a dos vueltas completas: también vuelve, pero no es la menor cantidad."),
         ],
     ),
     _q(
@@ -3676,18 +3696,20 @@ QUESTIONS += [
     ),
     _q(
         "geo_transformaciones", "facil",
-        "¿Cuáles son las coordenadas del punto C(−6, 2) al reflejarlo respecto del "
-        "eje Y?",
-        "(6, 2)",
-        "En una reflexión respecto del eje Y cambia el signo de la coordenada x y la y "
-        "se conserva.\n\n"
-        "1) La coordenada x pasa de −6 a 6.\n"
-        "2) La coordenada y se mantiene en 2.\n"
-        "3) El punto reflejado es (6, 2).",
+        "Al reflejar el punto (−6, 2) respecto del eje Y, un estudiante responde (−6, −2). ¿Qué error cometió?",
+        "Cambió el signo de la y, cuando la reflexión respecto del eje Y cambia el de la x",
+        "Cada eje actúa como espejo en su propia dirección.\n\n"
+        "1) El eje Y es un espejo vertical: los puntos cruzan de izquierda a "
+        "derecha, así que cambia la coordenada x.\n"
+        "2) La respuesta correcta es (6, 2).\n"
+        "3) Lo que el estudiante hizo —cambiar el signo de la y— corresponde a "
+        "reflejar respecto del eje X.\n"
+        "4) Truco para no confundirse: el eje que da nombre a la reflexión es el "
+        "que se queda quieto, y la coordenada que cambia es la OTRA.",
         [
-            ("(−6, −2)", "Reflejó respecto del eje X en lugar del eje Y."),
-            ("(6, −2)", "Cambió el signo de ambas coordenadas."),
-            ("(2, −6)", "Intercambió las coordenadas en vez de reflejar."),
+            ("Cambió el signo de la x cuando no correspondía", "Justamente eso era lo que había que hacer; no lo hizo."),
+            ("Debía intercambiar las dos coordenadas", "Intercambiarlas corresponde a reflejar respecto de la recta y = x."),
+            ("No hay error: el resultado es (−6, −2)", "Ese es el reflejo respecto del eje X, no del eje Y."),
         ],
     ),
 ]
@@ -3753,18 +3775,20 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "facil",
-        "¿Cuántas aristas tiene un cubo?",
-        "12",
-        "Conviene contarlas por grupos según su dirección.\n\n"
-        "1) Un cubo tiene 4 aristas verticales.\n"
-        "2) Tiene 4 aristas en la cara superior.\n"
-        "3) Tiene 4 aristas en la cara inferior.\n"
-        "4) En total: 4 + 4 + 4 = 12 aristas.\n\n"
-        "Además tiene 6 caras y 8 vértices.",
+        "¿Cuál de las siguientes afirmaciones sobre un cubo es siempre verdadera?",
+        "Todas sus caras son cuadrados iguales entre sí",
+        "El cubo es el caso particular del paralelepípedo con las tres "
+        "dimensiones iguales.\n\n"
+        "1) Como largo, ancho y alto miden lo mismo, cada cara es un cuadrado de "
+        "ese lado.\n"
+        "2) Las seis caras son iguales entre sí.\n"
+        "3) Tiene además 12 aristas y 8 vértices.\n"
+        "4) Su volumen es la arista al cubo y su área total es seis veces el "
+        "cuadrado de la arista.",
         [
-            ("6", "Contó las caras en lugar de las aristas."),
-            ("8", "Contó los vértices en lugar de las aristas."),
-            ("4", "Contó solo las aristas de una cara."),
+            ("Su volumen es igual a su área total", "Solo coinciden numéricamente con arista 6, y aun así son magnitudes distintas."),
+            ("Tiene 8 aristas y 12 vértices", "Está invertido: tiene 12 aristas y 8 vértices."),
+            ("Todas sus caras son rectángulos distintos", "En un cubo las seis caras son cuadrados idénticos."),
         ],
     ),
 
@@ -10512,17 +10536,20 @@ QUESTIONS += [
     ),
     _q(
         "geo_transformaciones", "facil",
-        "¿Cuáles son las coordenadas del punto (−5, 4) al reflejarlo respecto del eje X?",
-        "(−5, −4)",
-        "Al reflejar respecto del eje X, la coordenada vertical cambia de signo.\n\n"
-        "1) El eje X es la línea horizontal: la reflexión invierte arriba con abajo.\n"
-        "2) La primera coordenada se mantiene: −5.\n"
-        "3) La segunda cambia de signo: 4 pasa a −4.\n"
-        "4) El punto reflejado es (−5, −4).",
+        "¿Cuál de las siguientes afirmaciones sobre las isometrías es siempre verdadera?",
+        "Conservan las medidas de los lados y de los ángulos de la figura",
+        "Isometría significa literalmente 'misma medida'.\n\n"
+        "1) Traslación, rotación y reflexión mueven la figura sin deformarla: "
+        "los lados miden lo mismo y los ángulos también.\n"
+        "2) Por eso la figura resultante es congruente con la original.\n"
+        "3) Lo que sí puede cambiar es la ORIENTACIÓN: la reflexión invierte la "
+        "figura como un espejo, aunque conserve todas sus medidas.\n"
+        "4) Y la posición cambia siempre, salvo en los puntos fijos de la "
+        "transformación.",
         [
-            ("(5, 4)", "Cambió de signo la coordenada equivocada: eso corresponde al eje Y."),
-            ("(5, −4)", "Cambió el signo de ambas coordenadas, equivalente a una rotación de 180°."),
-            ("(4, −5)", "Intercambió las coordenadas."),
+            ("Conservan la posición de todos los puntos", "Si nada se moviera, no habría transformación."),
+            ("Conservan la orientación de la figura", "La reflexión la invierte, y sigue siendo una isometría."),
+            ("Solo se pueden aplicar a figuras simétricas", "Se aplican a cualquier figura, sea simétrica o no."),
         ],
     ),
     _q(
@@ -10790,17 +10817,20 @@ QUESTIONS += [
     # ---------- geo_solidos ----------
     _q(
         "geo_solidos", "facil",
-        "¿Cuál es el volumen de un cubo de arista 3 cm?",
-        "27 cm³",
-        "El volumen de un cubo es la arista elevada al cubo.\n\n"
-        "1) Aplica V = arista³.\n"
-        "2) Calcula: 3 · 3 · 3 = 27.\n"
-        "3) El volumen es 27 cm³. Las unidades van al cubo porque se multiplican "
-        "tres longitudes.",
+        "Al calcular el volumen de un cubo de 3 cm de arista, un estudiante responde 9 cm³. ¿Qué error cometió?",
+        "Elevó al cuadrado en vez de al cubo: el volumen es 27 cm³",
+        "El volumen ocupa tres dimensiones, no dos.\n\n"
+        "1) El volumen de un cubo es arista³ = 3 · 3 · 3 = 27 centímetros "
+        "cúbicos.\n"
+        "2) Los 9 que calculó corresponden a 3², que es el área de UNA cara.\n"
+        "3) Las unidades lo delatan: un volumen va en centímetros cúbicos, y "
+        "para llegar ahí hay que multiplicar tres medidas.\n"
+        "4) Un chequeo mental rápido: en ese cubo caben 27 cubitos de 1 cm de "
+        "arista, tres de largo por tres de ancho por tres de alto.",
         [
-            ("9 cm³", "Elevó al cuadrado en lugar de al cubo: eso da el área de una cara."),
-            ("54 cm³", "Calculó el área total de las seis caras, no el volumen."),
-            ("12 cm³", "Multiplicó la arista por 4, como si fuera un perímetro."),
+            ("Multiplicó mal 3 por 3", "3 · 3 sí es 9; el problema es que faltaba multiplicar una vez más."),
+            ("Debía sumar las tres dimensiones", "El volumen multiplica las medidas, nunca las suma."),
+            ("No hay error: el volumen es 9 cm³", "9 cm² es el área de una cara; el volumen es 27 cm³."),
         ],
     ),
     _q(
@@ -10822,31 +10852,36 @@ QUESTIONS += [
     ),
     _q(
         "geo_solidos", "facil",
-        "¿Cuántas caras tiene un cubo?",
-        "6",
-        "Conviene contarlas por pares opuestos.\n\n"
-        "1) Hay una cara arriba y una abajo: 2.\n"
-        "2) Hay una al frente y una atrás: 2 más.\n"
-        "3) Hay una a cada lado: 2 más.\n"
-        "4) En total, 6 caras, todas cuadradas e iguales.",
+        "Se quiere pintar por fuera una caja cúbica de arista a. ¿Cuál de las siguientes expresiones representa la superficie a pintar?",
+        "6a²",
+        "Un cubo tiene seis caras cuadradas iguales.\n\n"
+        "1) Cada cara es un cuadrado de lado a, con área a².\n"
+        "2) Como hay seis, la superficie total es 6a².\n"
+        "3) Comprueba con arista 4: 6 · 16 = 96 centímetros cuadrados.\n"
+        "4) Fíjate en las unidades: pintar cubre superficie, así que el "
+        "resultado va en unidades cuadradas y no cúbicas.",
         [
-            ("8", "Contó los vértices en lugar de las caras."),
-            ("12", "Contó las aristas en lugar de las caras."),
-            ("4", "Contó solo las caras laterales, omitiendo la base y la tapa."),
+            ("a³", "Ese es el volumen: lo que cabe adentro, no lo que se pinta afuera."),
+            ("6a", "Multiplica una sola longitud por 6 y queda en unidades de longitud."),
+            ("4a²", "Cuenta cuatro caras y olvida la de arriba y la de abajo."),
         ],
     ),
     _q(
-        "geo_solidos", "facil",
-        "¿Cuántos vértices tiene un cubo?",
-        "8",
-        "Los vértices son las esquinas donde se juntan tres aristas.\n\n"
-        "1) La cara de abajo es un cuadrado, con 4 esquinas.\n"
-        "2) La cara de arriba es otro cuadrado, con otras 4.\n"
-        "3) En total, 4 + 4 = 8 vértices.",
+        "geo_solidos", "medio",
+        "Un cubo de arista a se corta en cubitos de arista a/3. ¿Cuál de las siguientes expresiones representa cuántos cubitos se obtienen?",
+        "3³",
+        "Conviene contar cuántos cubitos caben en cada dirección.\n\n"
+        "1) A lo largo de cada arista del cubo grande caben 3 cubitos, porque "
+        "cada uno mide un tercio de la arista.\n"
+        "2) Como el cubo tiene tres direcciones: 3 · 3 · 3 = 3³ = 27 cubitos.\n"
+        "3) Comprobación por volumen: el cubo grande mide a³ y cada cubito "
+        "(a/3)³ = a³/27, así que caben 27.\n"
+        "4) El error frecuente es responder 3 o 9, que corresponden a una y dos "
+        "direcciones en lugar de las tres.",
         [
-            ("6", "Contó las caras en lugar de los vértices."),
-            ("12", "Contó las aristas en lugar de los vértices."),
-            ("4", "Contó las esquinas de una sola cara."),
+            ("3²", "Cuenta solo dos direcciones: eso da los cubitos de una capa."),
+            ("3", "Cuenta cuántos caben a lo largo de una sola arista."),
+            ("3 · a", "Mezcla la cantidad de cortes con la medida de la arista; el resultado debe ser un número puro."),
         ],
     ),
     _q(
@@ -10886,20 +10921,21 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_solidos", "medio",
-        "Un envase de 1 litro tiene forma de cubo. Sabiendo que 1 litro equivale a 1.000 cm³, ¿cuánto mide su arista?",
-        "10 cm",
-        "La arista es la raíz cúbica del volumen.\n\n"
-        "1) El volumen del cubo es arista³ = 1.000 centímetros cúbicos.\n"
-        "2) Se busca el número que multiplicado tres veces por sí mismo da "
-        "1.000: es 10, porque 10 · 10 · 10 = 1.000.\n"
-        "3) La arista mide 10 centímetros.\n"
-        "4) Es un dato útil de recordar: un cubo de 10 cm de lado contiene "
-        "exactamente un litro.",
+        "geo_solidos", "dificil",
+        "Un estanque cilíndrico se llena en 20 minutos con un caudal constante. Si se usara otro cilindro del doble de radio y la misma altura, ¿cuánto demoraría con el mismo caudal?",
+        "80 minutos",
+        "Al doblar el radio, el volumen se cuadruplica.\n\n"
+        "1) El volumen es π · r² · h, y el radio entra al cuadrado.\n"
+        "2) Con el doble de radio y la misma altura, el volumen queda "
+        "multiplicado por 4.\n"
+        "3) Con el mismo caudal, llenar cuatro veces más volumen demora cuatro "
+        "veces más: 20 · 4 = 80 minutos.\n"
+        "4) El error típico es responder 40, duplicando el tiempo junto con el "
+        "radio.",
         [
-            ("100 cm", "Un cubo de un metro de arista contendría mil litros, no uno."),
-            ("333,3 cm", "Dividió el volumen por 3 en lugar de sacarle raíz cúbica."),
-            ("31,6 cm", "Sacó la raíz cuadrada en vez de la cúbica; eso serviría para un área."),
+            ("40 minutos", "Duplicó el tiempo junto con el radio, pero el volumen crece al cuadrado."),
+            ("20 minutos", "Un estanque de mayor volumen no puede llenarse en el mismo tiempo con igual caudal."),
+            ("160 minutos", "Multiplicó por 8, que sería el caso si también se duplicara la altura."),
         ],
     ),
     _q(
@@ -12447,17 +12483,20 @@ QUESTIONS += [
     ),
     _q(
         "geo_semejanza", "medio",
-        "En un plano a escala 1 : 100, una sala aparece como un rectángulo de 5 cm por 4 cm. ¿Cuál es la superficie real de la sala?",
-        "20 m²",
-        "La escala se aplica a las medidas lineales, y recién después se calcula la superficie.\n\n"
-        "1) Escala 1 : 100 significa que 1 cm del plano equivale a 100 cm reales, o sea 1 m.\n"
-        "2) Entonces el largo real es 5 · 100 = 500 cm = 5 m, y el ancho real es 4 · 100 = 400 cm = 4 m.\n"
-        "3) Superficie real: 5 · 4 = 20 m².\n"
-        "4) Ojo con el atajo tentador: multiplicar los 20 cm² del plano por 100 da 2.000, que no es la respuesta. Al pasar a superficies el factor se aplica dos veces, una por cada dimensión.",
+        "En un plano a escala 1 : 100, una sala aparece como un rectángulo. Un estudiante calcula su superficie real multiplicando la del plano por 100. ¿Qué error cometió?",
+        "Las áreas van con el cuadrado de la escala: hay que multiplicar por 10.000",
+        "La escala relaciona longitudes, y el área depende de dos de ellas.\n\n"
+        "1) Cada centímetro del plano equivale a 100 centímetros reales.\n"
+        "2) Pero un centímetro CUADRADO del plano equivale a 100 · 100 = 10.000 "
+        "centímetros cuadrados reales.\n"
+        "3) Por eso la superficie real se obtiene multiplicando por 100², no por "
+        "100.\n"
+        "4) Es el mismo principio de siempre: longitudes en k, áreas en k², "
+        "volúmenes en k³.",
         [
-            ("2 m²", "Multiplicó la superficie del plano por 100 una sola vez, en vez de aplicar la escala a cada dimensión."),
-            ("200 m²", "Aplicó el factor a las dos dimensiones pero se corrió un cero en la conversión final."),
-            ("20 cm²", "Se quedó con la superficie medida en el plano, sin aplicar la escala."),
+            ("Debía dividir por 100 en lugar de multiplicar", "La realidad es mayor que el plano: hay que multiplicar."),
+            ("Debía multiplicar por 200, porque son dos dimensiones", "Dos dimensiones significa elevar al cuadrado, no duplicar el factor."),
+            ("No hay error: la superficie real es 100 veces la del plano", "Con esa cuenta una sala de 20 cm² del plano mediría solo 2 m², cuando en realidad mide 200."),
         ],
     ),
     _q(
@@ -12588,17 +12627,19 @@ QUESTIONS += [
     ),
     _q(
         "geo_semejanza", "dificil",
-        "En un plano a escala 1 : 50, una bodega ocupa una superficie de 30 cm². ¿Cuál es su superficie real?",
-        "7,5 m²",
-        "La escala se aplica a las longitudes; para las superficies el factor va al cuadrado.\n\n"
-        "1) Escala 1 : 50 significa que cada longitud real es 50 veces la del plano.\n"
-        "2) Como una superficie tiene dos dimensiones y cada una se multiplica por 50, la superficie real es 50² = 2.500 veces la del plano.\n"
-        "3) Superficie real en centímetros cuadrados: 30 · 2.500 = 75.000 cm².\n"
-        "4) Pasa a metros cuadrados sabiendo que 1 m² = 10.000 cm²: 75.000 ÷ 10.000 = 7,5 m².",
+        "Un plano está a escala 1 : k. ¿Cuál de las siguientes expresiones representa la superficie real S de una figura que en el plano ocupa p unidades cuadradas?",
+        "S = p · k²",
+        "La escala multiplica longitudes; el área multiplica dos longitudes.\n\n"
+        "1) Cada unidad de longitud del plano equivale a k unidades reales.\n"
+        "2) Una unidad cuadrada del plano equivale a k · k = k² unidades "
+        "cuadradas reales.\n"
+        "3) Entonces S = p · k².\n"
+        "4) Comprueba con escala 1 : 50 y 30 cm² de plano: la superficie real es "
+        "30 · 2.500 = 75.000 cm², o sea 7,5 metros cuadrados.",
         [
-            ("0,15 m²", "Multiplicó por 50 una sola vez, sin elevar el factor al cuadrado."),
-            ("75 m²", "Aplicó bien el factor pero se corrió un cero al pasar de centímetros cuadrados a metros cuadrados."),
-            ("1.500 m²", "Multiplicó por 50 y trató los centímetros cuadrados como si ya fueran metros cuadrados."),
+            ("S = p · k", "Aplica la escala una sola vez, como si el área fuera una longitud."),
+            ("S = p · k³", "Ese es el factor de los volúmenes, no el de las áreas."),
+            ("S = p / k²", "Divide en vez de multiplicar: la realidad quedaría más chica que el plano."),
         ],
     ),
     _q(
@@ -18328,58 +18369,71 @@ QUESTIONS += [
 QUESTIONS += [
     _q(
         "geo_semejanza", "facil",
-        "En un plano a escala 1 : 200, un muro aparece dibujado con 4 cm de largo. ¿Cuánto mide el muro en la realidad?",
-        "8 m",
-        "La escala 1 : 200 dice que cada centímetro del plano representa 200 cm reales.\n\n"
-        "1) Multiplica la medida del plano por 200: 4 · 200 = 800 cm.\n"
-        "2) Pasa a metros dividiendo por 100: 800 ÷ 100 = 8 m.\n"
-        "3) El muro mide 8 m. Fíjate en el sentido: de plano a realidad se multiplica, porque lo real es más grande.",
+        "Dos figuras son semejantes. ¿Cuál de las siguientes afirmaciones es siempre verdadera?",
+        "Sus ángulos correspondientes son iguales",
+        "Semejanza significa misma forma, posible distinto tamaño.\n\n"
+        "1) Los ángulos no cambian al agrandar o achicar una figura: son los "
+        "que definen su forma.\n"
+        "2) Los lados sí cambian, pero todos en la misma razón.\n"
+        "3) Las áreas cambian en el cuadrado de esa razón, así que no son "
+        "iguales salvo que la razón sea 1.\n"
+        "4) Por eso el criterio más usado para triángulos es el de los ángulos: "
+        "con dos ángulos iguales basta.",
         [
-            ("0,02 m", "Dividió por la escala en lugar de multiplicar, achicando algo que ya era el dibujo."),
-            ("800 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
-            ("204 m", "Sumó la escala a la medida en vez de multiplicar."),
+            ("Sus lados correspondientes son iguales", "Eso sería congruencia; en semejanza los lados guardan una razón, no son iguales."),
+            ("Tienen la misma área", "El área cambia con el cuadrado de la razón de semejanza."),
+            ("Tienen el mismo perímetro", "El perímetro cambia en la misma razón que los lados."),
         ],
     ),
     _q(
         "geo_semejanza", "facil",
-        "En un plano a escala 1 : 50, una ventana aparece con 6 cm de ancho. ¿Cuál es su ancho real?",
-        "3 m",
-        "Cada centímetro del plano equivale a 50 cm reales.\n\n"
-        "1) Multiplica: 6 · 50 = 300 cm.\n"
-        "2) Pasa a metros: 300 ÷ 100 = 3 m.\n"
-        "3) La ventana mide 3 m de ancho.",
+        "En un plano a escala 1 : 50, una ventana aparece con 6 cm de ancho. ¿Cuál de las siguientes expresiones permite calcular su ancho real en centímetros?",
+        "6 · 50",
+        "La escala 1 : 50 dice que el objeto real es 50 veces el dibujo.\n\n"
+        "1) Cada centímetro del plano representa 50 centímetros reales.\n"
+        "2) Los 6 centímetros del dibujo representan 6 · 50 = 300 centímetros, "
+        "o sea 3 metros.\n"
+        "3) Control de sentido: la realidad tiene que ser MAYOR que el plano, "
+        "así que la operación es una multiplicación.",
         [
-            ("0,12 m", "Dividió por la escala en lugar de multiplicar."),
-            ("300 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
-            ("56 m", "Sumó la escala a la medida del plano."),
+            ("6 / 50", "Daría 0,12 cm: una ventana más chica que su dibujo."),
+            ("50 / 6", "Invierte los papeles y entrega un número sin significado en el problema."),
+            ("6 + 50", "Sumar una escala a una medida mezcla cosas distintas: la escala es un factor."),
+        ],
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Una maqueta está hecha a escala 1 : 20. ¿Cuánto material de superficie necesita respecto del edificio real?",
+        "La cuatrocientosava parte",
+        "Las áreas van con el cuadrado de la razón de semejanza.\n\n"
+        "1) La razón de longitudes es 1 : 20.\n"
+        "2) La razón de áreas es su cuadrado: 1 : 400.\n"
+        "3) Por eso la maqueta necesita 1/400 del material de superficie del "
+        "edificio.\n"
+        "4) Y si se tratara de volumen —por ejemplo, cuánto relleno lleva "
+        "adentro— la razón sería 1 : 8.000, el cubo de 20.",
+        [
+            ("La veinteava parte", "Esa es la razón de las LONGITUDES; las áreas van en su cuadrado."),
+            ("La ochomilésima parte", "Ese es el cubo de la razón, que corresponde a volúmenes."),
+            ("La cuarentava parte", "Duplicó la razón en vez de elevarla al cuadrado."),
         ],
     ),
     _q(
         "geo_semejanza", "facil",
-        "Una maqueta está hecha a escala 1 : 20. Si la torre real mide 40 m de alto, ¿cuánto mide en la maqueta?",
-        "2 m",
-        "Acá el camino es el inverso: de la realidad a la maqueta se divide.\n\n"
-        "1) La escala 1 : 20 significa que lo real es 20 veces la maqueta.\n"
-        "2) Divide la medida real por 20: 40 ÷ 20 = 2.\n"
-        "3) En la maqueta la torre mide 2 m. El resultado tiene que ser MENOR que lo real, y 2 es menor que 40 ✓.",
+        "Dos triángulos son semejantes con razón de semejanza 1 : 3. ¿Cuál de las siguientes afirmaciones es correcta?",
+        "El perímetro del segundo es el triple que el del primero",
+        "El perímetro es una suma de longitudes, así que va en la razón simple.\n\n"
+        "1) Cada lado del segundo triángulo mide el triple del correspondiente "
+        "del primero.\n"
+        "2) Al sumar los tres lados, el total también queda triplicado.\n"
+        "3) El área, en cambio, queda multiplicada por 9, que es el cuadrado de "
+        "la razón.\n"
+        "4) Comprueba con un triángulo de lados 3, 4 y 5: el semejante mide "
+        "9, 12 y 15, con perímetros 12 y 36.",
         [
-            ("800 m", "Multiplicó por la escala, agrandando algo que debía achicarse."),
-            ("20 m", "Dividió por 2 en lugar de por 20."),
-            ("40 m", "Dejó la medida real sin aplicar la escala."),
-        ],
-    ),
-    _q(
-        "geo_semejanza", "facil",
-        "Dos triángulos son semejantes con razón de semejanza 1 : 3. Si un lado del triángulo menor mide 5 cm, ¿cuánto mide el lado correspondiente del mayor?",
-        "15 cm",
-        "En figuras semejantes los lados correspondientes están en la razón de semejanza.\n\n"
-        "1) La razón 1 : 3 significa que cada lado del mayor es 3 veces el del menor.\n"
-        "2) Multiplica: 5 · 3 = 15.\n"
-        "3) El lado correspondiente mide 15 cm.",
-        [
-            ("8 cm", "Sumó 3 al lado en lugar de multiplicarlo por 3."),
-            ("1,67 cm", "Dividió por 3, achicando en vez de agrandar."),
-            ("45 cm", "Multiplicó por 9, que es la razón entre las áreas y no entre los lados."),
+            ("El área del segundo es el triple que la del primero", "El área va con el cuadrado de la razón: es nueve veces mayor."),
+            ("Los ángulos del segundo son el triple de los del primero", "Los ángulos no cambian en figuras semejantes."),
+            ("El perímetro del segundo es nueve veces el del primero", "Nueve veces corresponde al área, no al perímetro."),
         ],
     ),
     _q(
@@ -18401,17 +18455,20 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_semejanza", "facil",
-        "Una sala mide 7 m de largo en la realidad. ¿Con cuántos centímetros se dibuja en un plano a escala 1 : 100?",
-        "7 cm",
-        "De la realidad al plano se divide por la escala, cuidando las unidades.\n\n"
-        "1) Pasa la medida real a centímetros: 7 m = 700 cm.\n"
-        "2) Divide por 100: 700 ÷ 100 = 7 cm.\n"
-        "3) Se dibuja con 7 cm. La escala 1 : 100 es cómoda justamente por esto: cada metro real es un centímetro del plano.",
+        "geo_semejanza", "medio",
+        "¿Qué significa que un plano esté a escala 1 : 100?",
+        "Que cada unidad medida en el plano corresponde a 100 unidades reales",
+        "La escala se lee siempre como dibujo : realidad.\n\n"
+        "1) El 1 corresponde al plano y el 100 a lo real.\n"
+        "2) Por eso 1 centímetro del plano representa 100 centímetros, o sea un "
+        "metro.\n"
+        "3) Para ir de la realidad al plano se divide por 100; para ir del plano "
+        "a la realidad se multiplica.\n"
+        "4) Las áreas, en cambio, van con 100² = 10.000.",
         [
-            ("70 cm", "Dividió por 10 en lugar de por 100."),
-            ("700 cm", "Pasó a centímetros pero no aplicó la escala."),
-            ("0,07 cm", "Dividió dos veces por 100."),
+            ("Que el plano es 100 veces más grande que la realidad", "Un plano reduce: es 100 veces más chico."),
+            ("Que cada 100 unidades del plano equivalen a una real", "Eso sería una escala 100 : 1, o sea una ampliación."),
+            ("Que las áreas del plano son 100 veces menores que las reales", "Las áreas van con el cuadrado: son 10.000 veces menores."),
         ],
     ),
     _q(
@@ -18432,17 +18489,21 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_semejanza", "facil",
-        "En un mapa a escala 1 : 500.000, dos ciudades aparecen separadas por 3 cm. ¿Cuál es la distancia real entre ellas?",
-        "15 km",
-        "Se multiplica por la escala y después se convierte a kilómetros.\n\n"
-        "1) Multiplica: 3 · 500.000 = 1.500.000 cm.\n"
-        "2) Pasa a kilómetros. Como 1 km son 100.000 cm, divide: 1.500.000 ÷ 100.000 = 15.\n"
-        "3) La distancia real es 15 km.",
+        "geo_semejanza", "medio",
+        "Dos mapas muestran la misma región, uno a escala 1 : 100.000 y otro a 1 : 500.000. ¿Cuál de las siguientes afirmaciones es correcta?",
+        "En el mapa 1 : 100.000 la región se ve más grande",
+        "Mientras menor es el segundo número de la escala, menos se reduce la "
+        "realidad.\n\n"
+        "1) A escala 1 : 100.000, un centímetro representa 1 kilómetro.\n"
+        "2) A escala 1 : 500.000, un centímetro representa 5 kilómetros.\n"
+        "3) Entonces la misma distancia real ocupa cinco veces más espacio en el "
+        "primer mapa.\n"
+        "4) Regla práctica: escala más chica en el denominador significa mapa "
+        "más detallado y más grande.",
         [
-            ("1,5 km", "Se equivocó en un factor 10 al convertir centímetros a kilómetros."),
-            ("150 km", "Convirtió como si 1 km fueran 10.000 cm."),
-            ("15.000 km", "No convirtió las unidades y dejó el resultado en una escala imposible."),
+            ("En el mapa 1 : 500.000 la región se ve más grande", "Ese mapa reduce más, así que la región se ve más pequeña."),
+            ("En ambos se ve del mismo tamaño", "Las escalas son distintas, así que el tamaño del dibujo también."),
+            ("El mapa 1 : 500.000 cubre menos territorio", "Al reducir más, ese mapa alcanza a mostrar MÁS territorio en la misma hoja."),
         ],
     ),
     _q(
@@ -18502,17 +18563,17 @@ QUESTIONS += [
     ),
     _q(
         "geo_semejanza", "facil",
-        "Un rectángulo de 3 cm por 5 cm se amplía al triple. ¿Cuáles son las dimensiones de la ampliación?",
-        "9 cm por 15 cm",
-        "Para que la figura ampliada sea semejante, las dos dimensiones se multiplican por el mismo factor.\n\n"
-        "1) Nuevo largo: 5 · 3 = 15 cm.\n"
-        "2) Nuevo ancho: 3 · 3 = 9 cm.\n"
-        "3) Las dimensiones son 9 cm por 15 cm.\n"
-        "4) Si solo se multiplicara una de las dos, la figura quedaría deformada y ya no sería semejante a la original.",
+        "Un rectángulo de 3 cm por 5 cm se amplía al triple. ¿Qué ocurre con su perímetro y con su área?",
+        "El perímetro se triplica y el área queda multiplicada por 9",
+        "Cada magnitud crece según cuántas dimensiones la componen.\n\n"
+        "1) El rectángulo original mide 3 por 5: perímetro 16 y área 15.\n"
+        "2) El ampliado mide 9 por 15: perímetro 48 y área 135.\n"
+        "3) 48 es el triple de 16, y 135 es nueve veces 15.\n"
+        "4) Es la regla de siempre: longitudes en k, áreas en k².",
         [
-            ("6 cm por 8 cm", "Sumó 3 a cada dimensión en lugar de multiplicarlas por 3."),
-            ("9 cm por 5 cm", "Amplió solo una dimensión, deformando la figura."),
-            ("27 cm por 45 cm", "Multiplicó por 9, que es el factor de las áreas y no el de los lados."),
+            ("Ambos se triplican", "El área depende de dos dimensiones y ambas se triplican: queda nueve veces mayor."),
+            ("El perímetro se multiplica por 9 y el área por 3", "Están invertidos: el que va al cuadrado es el área."),
+            ("Ambos quedan multiplicados por 9", "El perímetro es una suma de longitudes, así que solo se triplica."),
         ],
     ),
     _q(
@@ -18533,17 +18594,21 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "geo_semejanza", "facil",
-        "En un plano a escala 1 : 1.000, un terreno aparece con 12 cm de frente. ¿Cuánto mide el frente real?",
-        "120 m",
-        "Se multiplica por la escala y se convierte a metros.\n\n"
-        "1) Multiplica: 12 · 1.000 = 12.000 cm.\n"
-        "2) Divide por 100 para pasar a metros: 12.000 ÷ 100 = 120 m.\n"
-        "3) El frente real mide 120 m.",
+        "geo_semejanza", "dificil",
+        "Un terreno real de 600 m² debe dibujarse en un plano a escala 1 : 100. ¿Qué superficie ocupa en el plano?",
+        "600 cm²",
+        "Conviene pasar todo a las mismas unidades antes de aplicar la escala al "
+        "cuadrado.\n\n"
+        "1) La razón de áreas es 1 : 100² = 1 : 10.000.\n"
+        "2) El terreno mide 600 metros cuadrados, que son 6.000.000 de "
+        "centímetros cuadrados.\n"
+        "3) En el plano ocupa 6.000.000 ÷ 10.000 = 600 centímetros cuadrados.\n"
+        "4) Control: son 600 cm², o sea un cuadrado de unos 24,5 cm de lado, "
+        "que cabe en una hoja grande. Tiene sentido.",
         [
-            ("12 m", "Dividió por 1.000 en lugar de multiplicar."),
-            ("1.200 m", "Se equivocó en un factor 10 al convertir a metros."),
-            ("12.000 m", "Multiplicó bien pero no convirtió los centímetros a metros."),
+            ("6 cm²", "Dividió por la escala al cubo en vez de al cuadrado."),
+            ("60.000 cm²", "Dividió por 100 en lugar de por 10.000: aplicó la escala una sola vez."),
+            ("6 m²", "Dividió los metros cuadrados por 100 sin convertir unidades ni elevar la escala al cuadrado."),
         ],
     ),
     _q(

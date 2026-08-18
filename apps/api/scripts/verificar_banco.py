@@ -321,15 +321,12 @@ COMPROBACIONES: dict[str, str] = {
     "vértice de la parábola y = x² − 6x + 5": f"({6 // 2}, {3**2 - 6 * 3 + 5})",
     "f(x) = 2x + b cumple f(3) = 11": str(11 - 2 * 3),
     # --- geometría ---
-    "triángulo de base 12 cm y altura 7 cm": f"{12 * 7 // 2} cm²",
-    "circunferencia tiene radio 5 cm": f"{3.14 * 5**2:.1f} cm²".replace(".", ","),
-    "perímetro 36 cm y su largo mide 11 cm": f"{(36 // 2 - 11) * 11} cm²",
+    "Se conocen el perímetro P y el largo L": "(P / 2) − L",
     "plancha cuadrada de 10 cm de lado se recorta el círculo": f"{100 - 3.14 * 5**2:.1f}%".replace(".", ","),
-    "rectángulo de 9 cm de largo y 4 cm de ancho": f"{2 * (9 + 4)} cm",
+    "dejando un portón de 3 metros sin cerca": "2a + 2b − 3",
     "pantalla mide 60 cm de ancho y 80 cm de alto": f"{int((60**2 + 80**2) ** 0.5)} cm",
     "catetos miden 3 cm y 4 cm": f"({3} · {4}) / 2",
     "cubo de arista a se pinta completamente": "6a²",
-    "cilindro de radio 3 cm y altura 10 cm": f"{3.14 * 9 * 10:.1f} cm³".replace(".", ","),
     "P(3, −2) una homotecia": f"({3 * 4}, {-2 * 4})",
     "triángulo de área 12 cm² se somete": f"{12 * 3**2} cm²",
     "8 cm y su correspondiente en la imagen mide 20": str(20 / 8).replace(".", ","),
@@ -429,8 +426,7 @@ COMPROBACIONES: dict[str, str] = {
     "borde decorativo de 10 cm de ancho hacia adentro": str(round((3 - 2 * 0.1) * (2 - 2 * 0.1), 2)).replace(".", ","),
     # Escala y semejanza: el factor lineal va al cuadrado para las superficies.
     # Los fragmentos llevan el objeto porque hay varias preguntas por escala.
-    "1 : 100, una sala aparece": str(5 * 4),
-    "1 : 50, una bodega ocupa": str(30 * 50**2 / 10_000).replace(".", ","),
+    "plano está a escala 1 : k": "S = p · k²",
     "figuras son semejantes con razón de semejanza 2 : 5": f"{2**2} : {5**2}",
     # Ecuación previa antes de poder calcular el área.
     "perímetro de 70 m y su largo mide 5 m más": str((70 // 2 - 5) // 2 * ((70 // 2 - 5) // 2 + 5)),
@@ -930,17 +926,13 @@ COMPROBACIONES: dict[str, str] = {
     "vértice de la parábola de ecuación y = 2x² + 8x + 5": f"({-8 // (2 * 2)}, {2 * (-2) ** 2 + 8 * -2 + 5})",
     # --- semejanza y proporcionalidad de figuras (nodo nuevo) ---
     # De plano a realidad se MULTIPLICA por la escala.
-    "escala 1 : 200, un muro aparece dibujado con 4 cm": f"{4 * 200 // 100} m",
-    "1 : 50, una ventana aparece con 6 cm": f"{6 * 50 // 100} m",
-    "1 : 1.000, un terreno aparece con 12 cm de frente": f"{12 * 1_000 // 100} m",
+    "1 : 50, una ventana aparece con 6 cm": f"{6} · {50}",
+    "terreno real de 600 m² debe dibujarse": f"{600 * 10000 // 10000} cm²",
     "1 : 80, un pasillo aparece con 5 cm": f"{5 * 80 // 100} m",
     "1 : 150, dos puntos aparecen separados por 8 cm": f"{8 * 150 // 100} m",
-    "1 : 500.000, dos ciudades aparecen separadas por 3 cm": f"{3 * 500_000 // 100_000} km",
     "1 : 400.000, una ruta aparece con 3,5 cm": f"{round(3.5 * 400_000 / 100_000)} km",
     "1 cm representa 2 km": f"{7 * 2} km",
     # De realidad a plano o maqueta se DIVIDE.
-    "maqueta está hecha a escala 1 : 20. Si la torre": f"{40 // 20} m",
-    "sala mide 7 m de largo en la realidad": f"{7 * 100 // 100} cm",
     "aristas están en razón 1 : 3": f"1 : {3**3}",
     "pared mide 6 m de largo": f"{6 * 100 // 150} cm",
     "auto mide 4,8 m de largo": f"{round(4.8 * 100) // 40} cm",
@@ -951,7 +943,6 @@ COMPROBACIONES: dict[str, str] = {
     "5 cm representan 10 m": f"1 : {10 * 100 // 5}",
     "terreno de 40 m de frente": f"1 : {40 * 100 // 20}",
     # Razón de semejanza aplicada a lados y perímetros (misma razón).
-    "razón de semejanza 1 : 3. Si un lado del triángulo menor mide 5 cm": f"{5 * 3} cm",
     "mapa está a escala 1 : 50.000": "R = 50.000 · d",
     "primero tiene 300 m² de superficie": f"{300 * 2**2:,} m²".replace(",", "."),
     "razón de semejanza 5 : 2. Si un lado de la figura mayor mide 35 cm": f"{35 * 2 // 5} cm",
@@ -967,7 +958,6 @@ COMPROBACIONES: dict[str, str] = {
     "círculos tienen radios de 2 cm y 6 cm": f"1 : {(6 // 2) ** 2}",
     "perímetros de 20 cm y 50 cm": f"{20 // 10} : {50 // 10}",
     # Ampliaciones y reducciones: las dos dimensiones por el mismo factor.
-    "rectángulo de 3 cm por 5 cm se amplía al triple": f"{3 * 3} cm por {5 * 3} cm",
     "fotografía de 10 cm por 15 cm se reduce a la mitad": f"{10 // 2} cm por "
     + str(15 / 2).replace(".", ",")
     + " cm",
@@ -1392,7 +1382,7 @@ COMPROBACIONES: dict[str, str] = {
     "área de 36 cm² y su altura mide 9 cm": f"{2 * 36 // 9} cm",
     "círculo tiene un diámetro de 10 cm": f"{3.14 * (10 / 2) ** 2:.1f} cm²".replace(".", ","),
     "perímetro de 44 m y su largo mide 4 m más": f"{9 * (9 + 4)} m²",
-    "radio de un círculo se duplica": str(2**2),
+    "Si el radio de un círculo se duplica, ¿qué ocurre con su área?": str(2**2),
     "cuadrado de lado 8 cm tiene inscrito": f"{8**2 - 3.14 * 4**2:.2f} cm²".replace(".", ","),
     "paralelogramo de base 9 cm y altura 5 cm": f"{9 * 5} cm²",
     "piscina rectangular mide 12 m por 5 m": f"{(12 + 2) * (5 + 2) - 12 * 5} m²",
@@ -1418,7 +1408,6 @@ COMPROBACIONES: dict[str, str] = {
     "diagonales que miden 16 cm y 12 cm": f"{int(sqrt(8**2 + 6**2))} cm",
     # --- transformaciones isométricas ---
     "punto (x, y) se refleja respecto del eje Y": "(−x, y)",
-    "(−5, 4) al reflejarlo respecto del eje X": f"({-5}, {-4})",
     "(3, 0) se rota 90° en sentido antihorario": f"(0, {3})",
     "(0, 5) se rota 180°": f"(0, {-5})",
     "(2, 5) se rota 180°": f"({-2}, {-5})",
@@ -1434,12 +1423,11 @@ COMPROBACIONES: dict[str, str] = {
     "(−3, −2) se traslada según el vector (0, 6)": f"({-3}, {-2 + 6})",
     "(6, 8) se refleja respecto del origen": f"({-6 + 2}, {-8 - 3})",
     # --- cuerpos geométricos ---
-    "volumen de un cubo de arista 3 cm": f"{3**3} cm³",
     "cuánto cabe dentro de ella": "x · y · z",
-    "caras tiene un cubo": str(6),
-    "vértices tiene un cubo": str(8),
+    "pintar por fuera una caja cúbica de arista a": "6a²",
+    "cubitos de arista a/3": "3³",
     "estanque cilíndrico tiene radio r y altura h": "π · r² · h",
-    "envase de 1 litro tiene forma de cubo": f"{round(1000 ** (1 / 3))} cm",
+    "otro cilindro del doble de radio y la misma altura": f"{20 * 2**2} minutos",
     "caja cúbica tiene un área total de 216 cm²": f"{round((216 / 6) ** 0.5)} cm",
     "paralelepípedo mide 6 cm, 4 cm y 3 cm": f"{2 * (6 * 4 + 6 * 3 + 4 * 3)} cm²",
     "estanque cilíndrico tiene 2 m de radio": f"{3.14 * 2**2 * 3:.2f} m³".replace(".", ","),
