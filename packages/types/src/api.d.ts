@@ -802,6 +802,54 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/carreras/catalogo": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Catalogo
+         * @description El catálogo entero, para el sitemap y el índice navegable.
+         *
+         *     Límite generoso pero presente: la respuesta es de ~1.855 filas y el
+         *     consumidor legítimo (el build del front) la pide una vez cada tanto, no
+         *     treinta veces por minuto.
+         */
+        get: operations["listar_catalogo_api_carreras_catalogo_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/carreras/{codigo}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Ver Carrera
+         * @description La ficha pública de una carrera.
+         *
+         *     404 explícito cuando el código no existe: la página de carrera se genera
+         *     bajo demanda, y un código inventado en la URL tiene que dar "no existe" y
+         *     no un 500.
+         */
+        get: operations["ver_carrera_api_carreras__codigo__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/metrics/pageview": {
         parameters: {
             query?: never;
@@ -1076,10 +1124,69 @@ export interface components {
             /** Codigo */
             codigo: string;
         };
+        /**
+         * CarreraCatalogoOut
+         * @description Lo mínimo para armar el sitemap y el índice navegable.
+         *
+         *     Sin ponderaciones a propósito: son 1.855 filas y el índice solo necesita
+         *     nombrarlas y enlazarlas. La ficha completa se pide por carrera.
+         */
+        CarreraCatalogoOut: {
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+        };
         /** CarreraOut */
         CarreraOut: {
             /** Id */
             id: number;
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+            /** Nem */
+            nem?: number | null;
+            /** Ranking */
+            ranking?: number | null;
+            /** Lectora */
+            lectora?: number | null;
+            /** M1 */
+            m1?: number | null;
+            /** Historia */
+            historia?: number | null;
+            /** Ciencias */
+            ciencias?: number | null;
+            /** M2 */
+            m2?: number | null;
+            /** Prueba Especial */
+            prueba_especial?: number | null;
+            /** Electivo Alternativo */
+            electivo_alternativo: boolean;
+            /** Ponderado Min */
+            ponderado_min?: number | null;
+            /** Promedio Min */
+            promedio_min?: number | null;
+            /** Vacantes */
+            vacantes?: number | null;
+            /** Proceso */
+            proceso: number;
+            /** Fuente */
+            fuente: string;
+        };
+        /**
+         * CarreraPublicaOut
+         * @description Ficha completa de una carrera para su página pública.
+         */
+        CarreraPublicaOut: {
             /** Codigo */
             codigo: string;
             /** Universidad */
@@ -3562,6 +3669,57 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["DemoGradeOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_catalogo_api_carreras_catalogo_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CarreraCatalogoOut"][];
+                };
+            };
+        };
+    };
+    ver_carrera_api_carreras__codigo__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                codigo: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CarreraPublicaOut"];
                 };
             };
             /** @description Validation Error */

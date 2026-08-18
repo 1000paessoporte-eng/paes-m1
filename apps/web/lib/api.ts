@@ -455,3 +455,38 @@ export function gradeDemo(
     body: JSON.stringify({ answers }),
   });
 }
+
+export type CarreraPublica =
+  paths["/api/carreras/{codigo}"]["get"]["responses"][200]["content"]["application/json"];
+
+export type CarreraCatalogo =
+  paths["/api/carreras/catalogo"]["get"]["responses"][200]["content"]["application/json"][number];
+
+/**
+ * El catálogo entero de carreras.
+ *
+ * Lo piden el sitemap y el índice navegable, o sea las dos páginas que existen
+ * para que Google encuentre las 1.855 fichas. Se cachea un día: las
+ * ponderaciones las publica el DEMRE una vez por proceso de admisión, no
+ * cambian dentro de la jornada.
+ */
+export function getCarrerasCatalogo(): Promise<CarreraCatalogo[]> {
+  return apiFetch<CarreraCatalogo[]>("/api/carreras/catalogo", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 86400 },
+  });
+}
+
+/**
+ * La ficha pública de una carrera por su código del DEMRE.
+ *
+ * Lanza `ApiError` con 404 cuando el código no existe, que es lo que convierte
+ * la página en un notFound() en vez de un error 500 — la URL la puede escribir
+ * cualquiera.
+ */
+export function getCarrera(codigo: string): Promise<CarreraPublica> {
+  return apiFetch<CarreraPublica>(`/api/carreras/${encodeURIComponent(codigo)}`, undefined, {
+    cache: "force-cache",
+    next: { revalidate: 86400 },
+  });
+}

@@ -1,0 +1,56 @@
+"""Lo que ve un visitante sin cuenta.
+
+Deliberadamente NO reusa `CarreraOut` de goals: ese schema sirve al buscador
+del alumno autenticado y puede crecer con campos de su meta personal. Este
+viaja a páginas indexables por Google, así que su superficie tiene que poder
+revisarse sola.
+"""
+
+from pydantic import BaseModel, ConfigDict
+
+
+class CarreraPublicaOut(BaseModel):
+    """Ficha completa de una carrera para su página pública."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    codigo: str
+    universidad: str
+    nombre: str
+    sede: str
+
+    #: Ponderaciones en porcentaje. Suman 100 entre todas.
+    nem: float | None = None
+    ranking: float | None = None
+    lectora: float | None = None
+    m1: float | None = None
+    historia: float | None = None
+    ciencias: float | None = None
+    m2: float | None = None
+    prueba_especial: float | None = None
+    electivo_alternativo: bool
+
+    #: Requisitos oficiales de POSTULACIÓN. No son puntajes de corte: el corte
+    #: se publica recién al cerrar cada proceso y no lo tenemos. La página
+    #: tiene que decirlo con esas palabras para no prometer lo que no sabe.
+    ponderado_min: float | None = None
+    promedio_min: float | None = None
+    vacantes: int | None = None
+
+    proceso: int
+    fuente: str
+
+
+class CarreraCatalogoOut(BaseModel):
+    """Lo mínimo para armar el sitemap y el índice navegable.
+
+    Sin ponderaciones a propósito: son 1.855 filas y el índice solo necesita
+    nombrarlas y enlazarlas. La ficha completa se pide por carrera.
+    """
+
+    model_config = ConfigDict(from_attributes=True)
+
+    codigo: str
+    universidad: str
+    nombre: str
+    sede: str
