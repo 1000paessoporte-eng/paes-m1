@@ -33,3 +33,13 @@ pnpm-debug.log*
 
 # Handoff privado con credenciales — NUNCA se commitea (repo publico)
 HANDOFF-PRIVADO.md
+
+# Credenciales locales. `.env.prod.local` guarda el connection string directo
+# de la Neon de produccion, la unica copia recuperable: en Vercel la variable
+# es Sensitive y no se puede volver a leer. Los .gitignore de apps/api y
+# apps/web ya cubrian lo suyo; a la raiz le faltaba.
+.env*
+!.env.example
+
+# Enlace local de la CLI de Vercel (project.json trae los ids del proyecto).
+.vercel
