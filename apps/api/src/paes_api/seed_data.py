@@ -125,21 +125,17 @@ QUESTIONS = [
     # ---------- NÚMEROS ----------
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de 3/4 + 1/6?",
+        "Una persona dedica 3/4 de hora a estudiar y 1/6 de hora a ordenar. ¿Qué fracción de hora ocupó en total?",
         "11/12",
-        "Para sumar fracciones necesitas que tengan el mismo denominador.\n\n"
-        "1) Busca el mínimo común múltiplo de 4 y 6. Los múltiplos de 4 son 4, 8, 12… "
-        "y los de 6 son 6, 12… El primero que comparten es 12.\n"
-        "2) Lleva cada fracción a doceavos. Como 12 ÷ 4 = 3, multiplicas arriba y abajo "
-        "por 3: 3/4 = 9/12. Como 12 ÷ 6 = 2, multiplicas por 2: 1/6 = 2/12.\n"
-        "3) Ahora que los denominadores son iguales, sumas solo los numeradores y "
-        "mantienes el denominador: 9/12 + 2/12 = 11/12.\n"
-        "4) Verifica si se puede simplificar: 11 es primo y no divide a 12, así que "
-        "11/12 ya está en su forma más simple.",
+        "Para sumar fracciones hay que llevarlas al mismo denominador.\n\n"
+        "1) El mínimo común múltiplo de 4 y 6 es 12.\n"
+        "2) Convierte: 3/4 = 9/12 y 1/6 = 2/12.\n"
+        "3) Suma los numeradores: 9 + 2 = 11, o sea 11/12 de hora.\n"
+        "4) Control: es un poco menos de una hora completa, lo que calza.",
         [
-            ("4/10", "Sumó los numeradores entre sí y los denominadores entre sí, sin buscar un denominador común."),
-            ("7/12", "Restó las fracciones en lugar de sumarlas."),
-            ("1/8", "Multiplicó las fracciones en lugar de sumarlas."),
+            ("4/10", "Sumó numeradores por un lado y denominadores por otro, que no es cómo se suman fracciones."),
+            ("7/12", "Restó en lugar de sumar los numeradores ya convertidos."),
+            ("1/8", "Multiplicó las fracciones en vez de sumarlas."),
         ],
     ),
     _q(
@@ -341,21 +337,17 @@ QUESTIONS = [
     ),
     _q(
         "alg_sistemas", "medio",
-        "Resuelve el sistema: x + y = 10 ; x − y = 4",
-        "x = 7, y = 3",
-        "Conviene el método de reducción, porque el término y aparece con signos "
-        "opuestos en cada ecuación.\n\n"
-        "1) Suma las dos ecuaciones lado a lado. Los términos +y y −y se cancelan: "
-        "(x + y) + (x − y) = 10 + 4, lo que da 2x = 14.\n"
-        "2) Despeja: x = 7.\n"
-        "3) Reemplaza ese valor en cualquiera de las ecuaciones originales. Usando la "
-        "primera: 7 + y = 10, entonces y = 3.\n\n"
-        "Verifica en la ecuación que no usaste para despejar: 7 − 3 = 4. Se cumple, "
-        "así que el par de valores resuelve el sistema completo.",
+        "Dos cajas pesan juntas 10 kilos, y la más pesada supera a la otra en 4 kilos. ¿Cuánto pesa cada caja?",
+        "7 kg y 3 kg",
+        "El enunciado entrega la suma y la diferencia, que es el caso más directo.\n\n"
+        "1) Llama x a la caja pesada e y a la liviana: x + y = 10 y x − y = 4.\n"
+        "2) Suma las dos ecuaciones: 2x = 14, de donde x = 7.\n"
+        "3) Reemplaza en la primera: 7 + y = 10, así que y = 3.\n"
+        "4) Comprueba: 7 + 3 = 10 y 7 − 3 = 4.",
         [
-            ("x = 3, y = 7", "Intercambió los valores de x e y al finalizar la resolución."),
-            ("x = 14, y = 4", "Sumó las ecuaciones para eliminar y, pero olvidó dividir el resultado (2x=14) por 2."),
-            ("x = 5, y = 5", "Asumió que ambas incógnitas eran iguales usando solo la ecuación de la suma, ignorando la de la diferencia."),
+            ("6 kg y 4 kg", "Suman 10 pero se diferencian en 2, no en los 4 kilos que pide el enunciado."),
+            ("5 kg y 5 kg", "Cumple la suma pero no la diferencia: dos cajas iguales no se diferencian en nada."),
+            ("14 kg y 4 kg", "Se quedó en el paso 2x = 14 sin dividir por 2."),
         ],
     ),
     _q(
@@ -428,21 +420,18 @@ QUESTIONS = [
     ),
     _q(
         "alg_funciones", "facil",
-        "¿Cuál es el eje de simetría de la parábola y = x² − 6x + 8?",
+        "La trayectoria de un salto se modela con y = x² − 6x + 8. ¿Cuál es el eje de simetría de esa parábola?",
         "x = 3",
-        "El eje de simetría es la recta vertical que parte la parábola en dos mitades "
-        "iguales, y pasa siempre por el vértice.\n\n"
-        "1) Identifica los coeficientes en y = ax² + bx + c: a = 1, b = −6, c = 8.\n"
-        "2) Aplica la fórmula del eje: x = −b / (2a).\n"
-        "3) Reemplaza cuidando el signo: x = −(−6) / (2 × 1) = 6 / 2 = 3.\n"
-        "4) El eje de simetría es la recta x = 3.\n\n"
-        "Otra forma de verlo: las raíces de esta parábola son x = 2 y x = 4, y el eje "
-        "queda justo al medio de ambas, en x = 3. El término independiente c = 8 no "
-        "influye en la posición del eje, solo desplaza la curva hacia arriba o abajo.",
+        "El eje de simetría pasa por el vértice y es una recta vertical.\n\n"
+        "1) Su ecuación es x = −b/(2a).\n"
+        "2) Con a = 1 y b = −6: x = −(−6)/(2 · 1) = 3.\n"
+        "3) El eje de simetría es la recta x = 3.\n"
+        "4) Compruébalo: la parábola corta el eje X en 2 y en 4, y el 3 está justo "
+        "al medio.",
         [
-            ("x = −3", "Usó el signo equivocado de b al calcular x=−b/2a (usó b en lugar de −b)."),
-            ("x = 6", "Usó directamente el valor de b como eje de simetría, sin dividir por 2a."),
-            ("x = 8", "Confundió el término independiente (8) con el eje de simetría de la parábola."),
+            ("x = −3", "Perdió el signo: −b con b = −6 da +6, no −6."),
+            ("x = 6", "Usó b directamente sin dividir por 2a."),
+            ("x = 8", "Tomó el término independiente, que no interviene en el eje de simetría."),
         ],
     ),
     _q(
@@ -800,39 +789,36 @@ QUESTIONS = [
     # ---------- NÚMEROS ----------
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de 2/5 × 3/4?",
+        "De un terreno, 2/5 está cultivado, y de esa parte cultivada 3/4 tiene maíz. ¿Qué fracción del terreno total tiene maíz?",
         "3/10",
-        "Para multiplicar fracciones se multiplican los numeradores entre sí y "
-        "los denominadores entre sí, sin necesidad de buscar un denominador "
-        "común.\n\n"
-        "1) Multiplica los numeradores: 2 × 3 = 6.\n"
-        "2) Multiplica los denominadores: 5 × 4 = 20.\n"
-        "3) El resultado es 6/20. Simplifica dividiendo ambos por 2: 3/10.\n\n"
-        "A diferencia de la suma, en la multiplicación de fracciones nunca hace "
-        "falta igualar los denominadores primero.",
+        "Una fracción DE otra fracción se obtiene multiplicando.\n\n"
+        "1) Se calcula 3/4 de 2/5, o sea (2/5) · (3/4).\n"
+        "2) Multiplica numeradores y denominadores: 6/20.\n"
+        "3) Simplifica por 2: 3/10 del terreno total.\n"
+        "4) Control: debe ser menos que 2/5, porque es solo una parte de lo "
+        "cultivado, y 3/10 es menor que 4/10.",
         [
-            ("23/20", "Sumó las fracciones (buscando denominador común) en lugar de multiplicarlas."),
-            ("6/5", "Multiplicó los numeradores correctamente pero olvidó multiplicar los denominadores."),
-            ("8/15", "Trató la multiplicación como si fuera una división e invirtió la segunda fracción."),
+            ("23/20", "Sumó las fracciones en lugar de multiplicarlas; el resultado ni siquiera puede superar el terreno completo."),
+            ("6/5", "Multiplicó mal los denominadores y obtuvo más que el terreno entero."),
+            ("8/15", "Multiplicó en cruz, como si fuera una división."),
         ],
     ),
     _q(
         "num_racionales", "dificil",
-        "¿Cuál es el resultado de 5/6 − 1/3 + 1/4?",
+        "Un depósito parte con 5/6 de su capacidad, se consume 1/3 y después se agrega 1/4. ¿Con qué fracción de su capacidad queda?",
         "3/4",
-        "Con tres fracciones se buscan primero el denominador común de todas, y "
-        "luego se opera de izquierda a derecha en el orden en que aparecen.\n\n"
-        "1) El mínimo común múltiplo de 6, 3 y 4 es 12. Convierte cada fracción: "
-        "5/6 = 10/12, 1/3 = 4/12, 1/4 = 3/12.\n"
-        "2) Resta y suma los numeradores en el orden del enunciado: "
-        "10 − 4 + 3 = 9.\n"
-        "3) El resultado es 9/12, que simplificado por 3 da 3/4.\n\n"
-        "El orden importa: la resta y la suma tienen la misma prioridad, así que "
-        "se resuelven de izquierda a derecha, no agrupando la suma primero.",
+        "Las operaciones se resuelven en el orden en que aparecen, de izquierda a "
+        "derecha.\n\n"
+        "1) El mínimo común múltiplo de 6, 3 y 4 es 12.\n"
+        "2) Convierte: 5/6 = 10/12, 1/3 = 4/12 y 1/4 = 3/12.\n"
+        "3) Opera en orden: 10 − 4 + 3 = 9, o sea 9/12.\n"
+        "4) Simplifica por 3: 3/4 de la capacidad.\n"
+        "5) Ojo con agrupar la suma primero: restar 1/3 + 1/4 de una vez daría "
+        "1/4, que es otro resultado.",
         [
-            ("1/4", "Sumó 1/3+1/4 antes de restar 5/6, alterando el orden de izquierda a derecha de las operaciones."),
-            ("17/12", "Sumó los tres términos en lugar de restar el segundo, ignorando el signo menos antes de 1/3."),
-            ("5/6", "Convirtió mal 1/4 a doceavos: usó 4/12 en lugar de 3/12, y el numerador le quedó 10."),
+            ("1/4", "Agrupó la suma antes de la resta, cuando ambas tienen la misma prioridad y van de izquierda a derecha."),
+            ("17/12", "Sumó los tres términos ignorando el signo menos del consumo."),
+            ("5/6", "Convirtió mal 1/4 a doceavos y las operaciones se le anularon."),
         ],
     ),
     _q(
@@ -1050,19 +1036,17 @@ QUESTIONS = [
     ),
     _q(
         "alg_funciones", "facil",
-        "¿Cuál es el valor de y cuando x = 3 en la función y = 2x − 4?",
+        "La ganancia diaria de un puesto, en miles de pesos, se modela con y = 2x − 4, donde x es la cantidad de productos vendidos. ¿Cuál es la ganancia si vende 3 productos?",
         "y = 2",
-        "Evaluar una función es reemplazar la variable por el valor dado y "
-        "calcular el resultado, respetando el orden de las operaciones.\n\n"
-        "1) Reemplaza x por 3: y = 2 × 3 − 4.\n"
-        "2) Multiplica primero: 2 × 3 = 6.\n"
-        "3) Resta: 6 − 4 = 2.\n\n"
-        "La multiplicación se resuelve antes que la resta, porque en "
-        "y = 2x − 4 el 2 multiplica solo a la x, no a toda la expresión.",
+        "Evaluar una función es reemplazar la variable por el valor dado.\n\n"
+        "1) Reemplaza x = 3: y = 2 · 3 − 4.\n"
+        "2) Calcula: 6 − 4 = 2 mil pesos de ganancia.\n"
+        "3) El −4 representa un costo fijo que hay que cubrir antes de ganar: con "
+        "menos de 2 productos la ganancia sería negativa.",
         [
-            ("y = 10", "Sumó en lugar de restar: calculó 2×3+4 en vez de 2×3−4."),
-            ("y = -1", "Olvidó multiplicar x por 2, calculando solo x−4."),
-            ("y = -2", "Aplicó la resta antes de multiplicar, como si la función fuera y=2(x−4) en lugar de y=2x−4."),
+            ("y = 10", "Sumó el 4 en lugar de restarlo."),
+            ("y = 6", "Se quedó en 2 · 3 sin descontar el costo fijo."),
+            ("y = −1", "Restó el 4 antes de multiplicar, alterando el orden de las operaciones."),
         ],
     ),
     _q(
@@ -1358,17 +1342,17 @@ QUESTIONS = [
     ),
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de 5/6 − 1/3?",
+        "Un estanque tiene 5/6 de su capacidad con agua y se consume 1/3 de la capacidad total. ¿Qué fracción del estanque queda con agua?",
         "1/2",
-        "Para restar fracciones necesitas el mismo denominador en ambas.\n\n"
-        "1) El mínimo común múltiplo de 6 y 3 es 6, así que solo hay que convertir "
-        "1/3: como 6 ÷ 3 = 2, multiplicas arriba y abajo por 2, y 1/3 = 2/6.\n"
-        "2) Resta los numeradores manteniendo el denominador: 5/6 − 2/6 = 3/6.\n"
-        "3) Simplifica dividiendo ambos por 3: 3/6 = 1/2.",
+        "Se restan las fracciones con denominador común.\n\n"
+        "1) El mínimo común múltiplo de 6 y 3 es 6.\n"
+        "2) Convierte: 1/3 = 2/6.\n"
+        "3) Resta: 5/6 − 2/6 = 3/6, que simplificado es 1/2.\n"
+        "4) Control: quedó la mitad del estanque, menos que los 5/6 iniciales.",
         [
-            ("4/3", "Restó los numeradores entre sí y los denominadores entre sí, sin buscar un denominador común."),
-            ("7/6", "Sumó las fracciones en lugar de restarlas."),
-            ("2/3", "No convirtió 1/3 a sextos antes de restar: usó 1/6 en su lugar."),
+            ("4/3", "Sumó en lugar de restar, y el resultado supera la capacidad del estanque."),
+            ("7/6", "Sumó las fracciones y además dejó un resultado mayor que el estanque lleno."),
+            ("2/3", "Restó los numeradores sin convertir 1/3 a sextos."),
         ],
     ),
     _q(
@@ -2676,19 +2660,18 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "medio",
-        "¿Cuál es el resultado de 2 + (1/2) ÷ (2/3)?",
+        "Una obra lleva 2 semanas terminadas y además se completó 1/2 de semana de un tramo que dura 2/3 de semana. Expresado como fracción, ¿cuánto avance total hay?",
         "11/4",
-        "Se respeta la prioridad de operaciones: primero la división, después la suma.\n\n"
-        "1) Resuelve la división. Dividir por 2/3 es multiplicar por su recíproco 3/2: "
-        "(1/2) × (3/2) = 3/4.\n"
-        "2) Ahora suma: 2 + 3/4. Escribe el 2 como fracción de denominador 4: "
-        "2 = 8/4.\n"
-        "3) Suma los numeradores: 8/4 + 3/4 = 11/4.\n\n"
-        "Como referencia, 11/4 = 2,75, coherente con sumarle algo menor que 1 al 2.",
+        "La división se resuelve antes que la suma, por prioridad de operaciones.\n\n"
+        "1) Primero (1/2) ÷ (2/3) = (1/2) · (3/2) = 3/4.\n"
+        "2) Después se suma el 2: 2 + 3/4.\n"
+        "3) Llevando a cuartos: 8/4 + 3/4 = 11/4.\n"
+        "4) El orden importa: sumar primero el 2 daría un resultado distinto y "
+        "equivocado.",
         [
-            ("15/4", "Sumó primero (2 + 1/2) y después dividió, sin respetar la prioridad de la división."),
-            ("2/3", "Resolvió solo la división y olvidó sumar el 2."),
-            ("7/3", "Multiplicó las fracciones en vez de dividir, obteniendo 1/3, y luego sumó 2."),
+            ("15/4", "Sumó el 2 antes de dividir, alterando el orden de las operaciones."),
+            ("7/3", "Multiplicó en lugar de dividir las dos fracciones."),
+            ("3/4", "Resolvió bien la división pero olvidó sumar las 2 semanas."),
         ],
     ),
     _q(
@@ -3122,17 +3105,17 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: sistemas 2x2 ----------
     _q(
         "alg_sistemas", "facil",
-        "¿Cuál es la solución del sistema x + y = 12 ; x − y = 2?",
-        "x = 7 , y = 5",
-        "Con una incógnita de signos opuestos, sumar las ecuaciones la elimina.\n\n"
-        "1) Suma ambas: (x + y) + (x − y) = 12 + 2, o sea 2x = 14.\n"
-        "2) Despeja: x = 7.\n"
-        "3) Reemplaza en la primera: 7 + y = 12, entonces y = 5.\n\n"
-        "Verifica en la segunda: 7 − 5 = 2.",
+        "Dos personas juntan 12 mil pesos, y una aportó 2 mil más que la otra. ¿Cuánto aportó cada una, en miles de pesos?",
+        "7 y 5",
+        "Con la suma y la diferencia, sumar las ecuaciones elimina una incógnita.\n\n"
+        "1) x + y = 12 y x − y = 2.\n"
+        "2) Sumando ambas: 2x = 14, de donde x = 7.\n"
+        "3) Reemplazando: 7 + y = 12, así que y = 5.\n"
+        "4) Comprueba: 7 + 5 = 12 y 7 − 5 = 2.",
         [
-            ("x = 5 , y = 7", "Intercambió los valores de las incógnitas."),
-            ("x = 6 , y = 6", "Repartió el 12 en partes iguales sin usar la segunda ecuación."),
-            ("x = 14 , y = 2", "Sumó las ecuaciones pero no dividió por 2 al despejar x."),
+            ("8 y 4", "Suman 12 pero se diferencian en 4, no en 2."),
+            ("6 y 6", "Cumple la suma pero no la diferencia."),
+            ("14 y 2", "Confundió el resultado intermedio 2x = 14 con el aporte de una persona."),
         ],
     ),
     _q(
@@ -3173,19 +3156,20 @@ QUESTIONS += [
     ),
     _q(
         "alg_sistemas", "dificil",
-        "¿Cuál es el valor de x + y si 3x + 2y = 16 y 2x + 3y = 14?",
+        "Tres cuadernos y dos lápices cuestan 16 mil pesos, y dos cuadernos y tres lápices cuestan 14 mil. ¿Cuánto cuestan juntos un cuaderno y un lápiz, en miles?",
         "6",
-        "No hace falta resolver el sistema completo: sumar ambas ecuaciones entrega "
-        "directamente lo que se pide.\n\n"
-        "1) Suma las dos ecuaciones: (3x + 2x) + (2y + 3y) = 16 + 14, "
-        "o sea 5x + 5y = 30.\n"
-        "2) Factoriza el 5: 5(x + y) = 30.\n"
-        "3) Divide por 5: x + y = 6.\n\n"
-        "Si quieres comprobar, los valores son x = 4 e y = 2, cuya suma es 6.",
+        "No hace falta resolver el sistema completo: basta sumar las dos "
+        "ecuaciones.\n\n"
+        "1) Sumando: (3x + 2y) + (2x + 3y) = 16 + 14, o sea 5x + 5y = 30.\n"
+        "2) Dividiendo por 5: x + y = 6.\n"
+        "3) Un cuaderno y un lápiz cuestan 6 mil pesos juntos.\n"
+        "4) Este atajo sirve siempre que la pregunta pida la suma y no cada valor "
+        "por separado. Resolviendo entero se obtiene cuaderno 4 y lápiz 2, que "
+        "también suman 6.",
         [
-            ("30", "Sumó las ecuaciones pero no dividió por 5 al despejar."),
-            ("2", "Restó las ecuaciones en lugar de sumarlas, obteniendo x − y."),
-            ("4", "Resolvió el sistema y entregó solo el valor de x."),
+            ("30", "Se quedó en 5x + 5y = 30 sin dividir por 5."),
+            ("15", "Promedió los dos totales, que no equivale a la suma de un cuaderno y un lápiz."),
+            ("2", "Restó las ecuaciones en lugar de sumarlas, lo que da la diferencia y no la suma."),
         ],
     ),
     _q(
@@ -3331,16 +3315,17 @@ QUESTIONS += [
     # ---------- ÁLGEBRA: funciones ----------
     _q(
         "alg_funciones", "facil",
-        "Si f(x) = 3x − 4, ¿cuál es el valor de f(6)?",
+        "El costo de un servicio, en miles de pesos, es f(x) = 3x − 4, donde x son las horas contratadas. ¿Cuánto cuesta contratar 6 horas?",
         "14",
-        "Evaluar una función es reemplazar la x por el valor indicado.\n\n"
-        "1) Sustituye x por 6: f(6) = 3 · 6 − 4.\n"
-        "2) Multiplica primero: 3 · 6 = 18.\n"
-        "3) Resta: 18 − 4 = 14.",
+        "Se reemplaza la cantidad de horas en la función.\n\n"
+        "1) f(6) = 3 · 6 − 4.\n"
+        "2) Calcula: 18 − 4 = 14 mil pesos.\n"
+        "3) El −4 es un descuento fijo que se aplica una sola vez, sin importar "
+        "cuántas horas se contraten.",
         [
-            ("6", "Entregó el valor que se reemplaza en lugar del resultado de la función."),
-            ("18", "Multiplicó pero olvidó restar el 4."),
-            ("2", "Restó antes de multiplicar: 3 · (6 − 4)."),
+            ("22", "Sumó el descuento en lugar de restarlo."),
+            ("18", "Olvidó aplicar el descuento fijo."),
+            ("6", "Entregó las horas contratadas en vez del costo."),
         ],
     ),
     _q(
@@ -3361,17 +3346,18 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "¿En qué punto la recta y = 2x − 6 corta al eje X?",
-        "(3, 0)",
-        "Un punto está sobre el eje X cuando su coordenada y vale cero.\n\n"
-        "1) Iguala la función a cero: 2x − 6 = 0.\n"
-        "2) Despeja: 2x = 6, entonces x = 3.\n"
-        "3) El punto de corte es (3, 0).\n\n"
-        "No confundir con el corte en el eje Y, que se obtiene con x = 0 y da (0, −6).",
+        "La ganancia de un negocio, en miles de pesos, es y = 2x − 6, donde x son las unidades vendidas. ¿Cuántas unidades hay que vender para no ganar ni perder?",
+        "3",
+        "No ganar ni perder significa ganancia cero, que es donde la recta corta el "
+        "eje X.\n\n"
+        "1) Se plantea y = 0: 2x − 6 = 0.\n"
+        "2) Despejando: 2x = 6, o sea x = 3 unidades.\n"
+        "3) El punto de corte es (3, 0). Con menos de 3 unidades hay pérdida y con "
+        "más, ganancia.",
         [
-            ("(0, −6)", "Calculó el corte con el eje Y en vez de con el eje X."),
-            ("(−3, 0)", "Se equivocó en el signo al despejar x."),
-            ("(6, 0)", "Despejó sin dividir por el coeficiente 2."),
+            ("6", "Tomó el término independiente como respuesta sin despejar la ecuación."),
+            ("−6", "Es el valor de la ganancia con cero unidades vendidas, no las unidades buscadas."),
+            ("2", "Ese es el aporte de cada unidad a la ganancia, no la cantidad que equilibra el negocio."),
         ],
     ),
     _q(
@@ -3391,19 +3377,18 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "facil",
-        "Una recta tiene pendiente 4 y pasa por el punto (0, −3). ¿Cuál es su ecuación?",
+        "Un taller cobra 4 mil pesos por hora y aplica un descuento fijo de 3 mil al total. ¿Cuál de las siguientes expresiones representa el cobro y, en miles, por x horas?",
         "y = 4x − 3",
-        "El punto (0, −3) está sobre el eje Y, así que entrega directamente el "
-        "coeficiente de posición.\n\n"
-        "1) La forma principal de la recta es y = mx + n, donde m es la pendiente y n "
-        "el valor de y cuando x = 0.\n"
-        "2) La pendiente dada es m = 4.\n"
-        "3) Como la recta pasa por (0, −3), el coeficiente de posición es n = −3.\n"
-        "4) La ecuación es y = 4x − 3.",
+        "Lo que se cobra por hora es la pendiente y el descuento fijo es el "
+        "intercepto.\n\n"
+        "1) Por x horas se cobran 4x miles.\n"
+        "2) El descuento se aplica una sola vez al total: se resta 3.\n"
+        "3) El modelo es y = 4x − 3, que corta el eje Y en −3.\n"
+        "4) Comprueba con 2 horas: 4 · 2 − 3 = 5 mil pesos.",
         [
-            ("y = 4x + 3", "Copió el 3 sin su signo negativo."),
-            ("y = −3x + 4", "Intercambió la pendiente con el coeficiente de posición."),
-            ("y = 4x", "Ignoró el punto por el que pasa la recta."),
+            ("y = 4x + 3", "Suma el descuento en lugar de restarlo."),
+            ("y = −3x + 4", "Cambia los papeles: cobraría un descuento por hora y 4 mil fijos."),
+            ("y = 4x", "Ignora el descuento fijo que se aplica al total."),
         ],
     ),
 
@@ -5028,22 +5013,18 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "medio",
-        "¿Cuál es el resultado de (3/4) ÷ (9/8)?",
+        "Un depósito tiene 3/4 de su capacidad ocupada y se quiere trasladar todo a bidones que caben 9/8 de esa misma capacidad. ¿Qué fracción de un bidón se llena?",
         "2/3",
-        "Dividir por una fracción equivale a multiplicar por su recíproco: la misma "
-        "fracción dada vuelta.\n\n"
-        "1) El divisor es 9/8, así que su recíproco es 8/9. La división se transforma en "
-        "3/4 × 8/9.\n"
-        "2) Multiplica numeradores entre sí y denominadores entre sí: "
-        "(3 × 8)/(4 × 9) = 24/36.\n"
-        "3) Simplifica dividiendo ambos términos por 12: 24 ÷ 12 = 2 y 36 ÷ 12 = 3, "
-        "o sea 2/3.\n\n"
-        "Control rápido: 9/8 es mayor que 1, así que dividir por él tiene que achicar "
-        "el 3/4 original. Y 2/3 es menor que 3/4.",
+        "Se divide lo que hay por lo que cabe en cada bidón.\n\n"
+        "1) Se calcula (3/4) ÷ (9/8).\n"
+        "2) Multiplica por el inverso: (3/4) · (8/9) = 24/36.\n"
+        "3) Simplifica por 12: 2/3 de un bidón.\n"
+        "4) Control: el bidón es más grande que lo que hay, así que el resultado "
+        "tiene que ser menor que 1.",
         [
-            ("27/32", "Multiplicó las fracciones directamente, sin invertir el divisor."),
-            ("3/2", "Invirtió el dividendo en lugar del divisor al aplicar la regla del recíproco."),
-            ("15/8", "Sumó las fracciones en lugar de dividirlas."),
+            ("27/32", "Multiplicó directamente sin invertir el divisor."),
+            ("3/2", "Invirtió el resultado final; el bidón quedaría más que lleno."),
+            ("4/3", "Invirtió el dividendo en lugar del divisor."),
         ],
     ),
     _q(
@@ -6922,66 +6903,63 @@ QUESTIONS += [
     # ---------- alg_sistemas ----------
     _q(
         "alg_sistemas", "facil",
-        "¿Cuál es la solución del sistema x + y = 9 ; x − y = 3?",
-        "x = 6, y = 3",
-        "Cuando una incógnita aparece sumando en una ecuación y restando en la otra, "
-        "conviene sumar ambas ecuaciones.\n\n"
-        "1) Suma las dos ecuaciones término a término: (x + y) + (x − y) = 9 + 3. "
-        "Las y se cancelan y queda 2x = 12.\n"
-        "2) Divide por 2: x = 6.\n"
-        "3) Reemplaza en la primera ecuación: 6 + y = 9, entonces y = 3.\n"
-        "4) Verifica en la segunda: 6 − 3 = 3. Correcto.",
+        "Dos estantes tienen juntos 9 libros, y uno tiene 3 libros más que el otro. ¿Cuántos libros hay en cada estante?",
+        "6 y 3",
+        "La suma y la diferencia permiten despejar de inmediato.\n\n"
+        "1) x + y = 9 y x − y = 3.\n"
+        "2) Sumando: 2x = 12, de donde x = 6.\n"
+        "3) Reemplazando: 6 + y = 9, así que y = 3.\n"
+        "4) Comprueba: 6 + 3 = 9 y 6 − 3 = 3.",
         [
-            ("x = 3, y = 6", "Intercambió los valores de las incógnitas al final."),
-            ("x = 12, y = 3", "Sumó las ecuaciones pero no dividió por 2 al despejar."),
-            ("x = 4,5, y = 4,5", "Repartió el 9 en partes iguales, ignorando la segunda ecuación."),
+            ("5 y 4", "Suman 9 pero se diferencian en 1, no en 3."),
+            ("4,5 y 4,5", "Cumple la suma pero ignora la diferencia, y además no se pueden tener medios libros."),
+            ("12 y 3", "Tomó el 2x = 12 como si fuera el valor de x."),
         ],
     ),
     _q(
         "alg_sistemas", "facil",
-        "¿Cuál es la solución del sistema x + y = 20 ; x = 3y?",
-        "x = 15, y = 5",
-        "Cuando una incógnita ya está despejada, lo más rápido es sustituir.\n\n"
-        "1) La segunda ecuación dice que x vale 3y. Reemplázalo en la primera: "
-        "3y + y = 20.\n"
-        "2) Reduce: 4y = 20.\n"
-        "3) Divide por 4: y = 5.\n"
-        "4) Vuelve a la sustitución: x = 3 · 5 = 15. Verifica: 15 + 5 = 20.",
+        "En un taller hay 20 herramientas entre martillos y alicates, y los martillos triplican a los alicates. ¿Cuántos hay de cada uno?",
+        "15 martillos y 5 alicates",
+        "Como una incógnita ya está despejada, conviene sustituir.\n\n"
+        "1) Martillos x, alicates y: x + y = 20 y x = 3y.\n"
+        "2) Sustituye la segunda en la primera: 3y + y = 20, o sea 4y = 20.\n"
+        "3) Entonces y = 5 alicates, y x = 3 · 5 = 15 martillos.\n"
+        "4) Comprueba: 15 + 5 = 20 y 15 es el triple de 5.",
         [
-            ("x = 5, y = 15", "Intercambió los valores: x debe ser el triple, no la tercera parte."),
-            ("x = 10, y = 10", "Repartió el total en partes iguales, ignorando la relación de triple."),
-            ("x = 6,7, y = 13,3", "Dividió 20 por 3 en lugar de por la suma de las partes."),
+            ("5 martillos y 15 alicates", "Invirtió los papeles: son los martillos los que triplican a los alicates."),
+            ("10 martillos y 10 alicates", "Cumple el total pero no la condición del triple."),
+            ("16 martillos y 4 alicates", "Suman 20, pero 16 es cuatro veces 4 y no tres veces."),
         ],
     ),
     _q(
         "alg_sistemas", "facil",
-        "¿Cuál es la solución del sistema x + y = 8 ; 2x + y = 13?",
-        "x = 5, y = 3",
-        "Como la y tiene el mismo coeficiente en ambas ecuaciones, conviene "
-        "restarlas.\n\n"
-        "1) Resta la primera de la segunda: (2x + y) − (x + y) = 13 − 8. Las y se "
-        "cancelan y queda x = 5.\n"
-        "2) Reemplaza en la primera: 5 + y = 8, entonces y = 3.\n"
-        "3) Verifica en la segunda: 2 · 5 + 3 = 13. Correcto.",
+        "Un cliente compra 1 café y 1 jugo por 8 mil pesos, y otro compra 2 cafés y 1 jugo por 13 mil. ¿Cuánto cuesta cada producto, en miles?",
+        "Café 5 y jugo 3",
+        "Restar una ecuación de la otra elimina el producto repetido.\n\n"
+        "1) Café x, jugo y: x + y = 8 y 2x + y = 13.\n"
+        "2) Resta la primera de la segunda: (2x + y) − (x + y) = 13 − 8, o sea "
+        "x = 5.\n"
+        "3) Reemplaza: 5 + y = 8, así que y = 3.\n"
+        "4) Comprueba: 2 · 5 + 3 = 13.",
         [
-            ("x = 3, y = 5", "Intercambió los valores de las incógnitas."),
-            ("x = 21, y = −13", "Sumó las ecuaciones en lugar de restarlas, sin cancelar nada."),
-            ("x = 5, y = 8", "Encontró bien la x pero no la reemplazó para calcular la y."),
+            ("Café 3 y jugo 5", "Invirtió los precios: al reemplazar en la segunda compra daría 11 y no 13."),
+            ("Café 6,5 y jugo 1,5", "Dividió la segunda compra por 2 sin usar la primera para despejar."),
+            ("Café 5 y jugo 8", "Tomó el total de la primera compra como precio del jugo."),
         ],
     ),
     _q(
         "alg_sistemas", "facil",
-        "¿Cuál es la solución del sistema y = 2x ; x + y = 15?",
-        "x = 5, y = 10",
-        "La primera ecuación entrega la y ya despejada, así que se sustituye.\n\n"
-        "1) Reemplaza y por 2x en la segunda: x + 2x = 15.\n"
-        "2) Reduce: 3x = 15.\n"
-        "3) Divide por 3: x = 5.\n"
-        "4) Calcula la y: y = 2 · 5 = 10. Verifica: 5 + 10 = 15.",
+        "Un padre y su hijo tienen juntos 15 años de antigüedad en un club, y el padre duplica al hijo. ¿Cuántos años tiene cada uno en el club?",
+        "Padre 10 y hijo 5",
+        "Con una incógnita despejada, la sustitución es directa.\n\n"
+        "1) Hijo x, padre y: y = 2x y x + y = 15.\n"
+        "2) Sustituyendo: x + 2x = 15, o sea 3x = 15.\n"
+        "3) Entonces x = 5 años el hijo, y el padre 2 · 5 = 10.\n"
+        "4) Comprueba: 5 + 10 = 15 y 10 es el doble de 5.",
         [
-            ("x = 10, y = 5", "Intercambió los valores: la y debe ser el doble de la x."),
-            ("x = 7,5, y = 15", "Repartió el total en dos partes iguales, ignorando la relación de doble."),
-            ("x = 15, y = 30", "Usó el total como valor de x sin resolver el sistema."),
+            ("Padre 5 e hijo 10", "Invirtió los papeles: es el padre quien duplica al hijo."),
+            ("Padre 7,5 e hijo 7,5", "Cumple el total pero no la condición del doble."),
+            ("Padre 30 e hijo 15", "Duplicó el total en lugar de repartirlo."),
         ],
     ),
     _q(
@@ -7001,65 +6979,67 @@ QUESTIONS += [
     ),
     _q(
         "alg_sistemas", "medio",
-        "¿Cuál es la solución del sistema 3x + y = 14 ; x + y = 6?",
-        "x = 4, y = 2",
-        "La y tiene el mismo coeficiente en ambas ecuaciones, así que se eliminan "
-        "restando.\n\n"
-        "1) Resta la segunda de la primera: (3x + y) − (x + y) = 14 − 6. Queda "
-        "2x = 8.\n"
-        "2) Divide por 2: x = 4.\n"
-        "3) Reemplaza en la segunda: 4 + y = 6, entonces y = 2.\n"
-        "4) Verifica en la primera: 3 · 4 + 2 = 14. Correcto.",
+        "Tres poleras y un gorro cuestan 14 mil pesos, y una polera y un gorro cuestan 6 mil. ¿Cuánto cuesta cada prenda, en miles?",
+        "Polera 4 y gorro 2",
+        "Restar las ecuaciones elimina el gorro, que aparece una vez en cada una.\n\n"
+        "1) Polera x, gorro y: 3x + y = 14 y x + y = 6.\n"
+        "2) Resta la segunda de la primera: 2x = 8, de donde x = 4.\n"
+        "3) Reemplaza: 4 + y = 6, así que y = 2.\n"
+        "4) Comprueba: 3 · 4 + 2 = 14.",
         [
-            ("x = 8, y = −2", "Restó las ecuaciones pero no dividió por el coeficiente resultante."),
-            ("x = 2, y = 4", "Intercambió los valores de las incógnitas."),
-            ("x = 5, y = 1", "Sumó las ecuaciones en lugar de restarlas."),
+            ("Polera 2 y gorro 4", "Invirtió los precios: tres poleras y un gorro darían 10 y no 14."),
+            ("Polera 4,67 y gorro 1,33", "Dividió la primera compra por 3 sin usar la segunda ecuación."),
+            ("Polera 8 y gorro 2", "Se quedó en 2x = 8 y tomó el 8 como precio de la polera."),
         ],
     ),
     _q(
         "alg_sistemas", "medio",
-        "¿Cuál es la solución del sistema 2x + 3y = 16 ; x − y = 3?",
-        "x = 5, y = 2",
-        "Conviene despejar de la ecuación más simple y sustituir.\n\n"
-        "1) De la segunda ecuación: x = y + 3.\n"
-        "2) Reemplaza en la primera: 2(y + 3) + 3y = 16.\n"
-        "3) Distribuye y reduce: 2y + 6 + 3y = 16, o sea 5y = 10, entonces y = 2.\n"
-        "4) Calcula la x: x = 2 + 3 = 5. Verifica: 2 · 5 + 3 · 2 = 16.",
+        "Dos entradas de adulto y tres de niño cuestan 16 mil pesos, y una de adulto cuesta 3 mil más que una de niño. ¿Cuánto vale cada entrada, en miles?",
+        "Adulto 5 y niño 2",
+        "Conviene despejar de la ecuación simple y sustituir en la otra.\n\n"
+        "1) Adulto x, niño y: 2x + 3y = 16 y x − y = 3.\n"
+        "2) De la segunda: x = y + 3.\n"
+        "3) Sustituyendo: 2(y + 3) + 3y = 16, o sea 2y + 6 + 3y = 16.\n"
+        "4) Reduciendo: 5y = 10, de donde y = 2, y entonces x = 5.\n"
+        "5) Comprueba: 2 · 5 + 3 · 2 = 10 + 6 = 16.",
         [
-            ("x = 2, y = 5", "Intercambió los valores de las incógnitas."),
-            ("x = 8, y = 5", "Despejó x = y − 3 en vez de x = y + 3, cambiando el signo."),
-            ("x = 3, y = 0", "Tomó la diferencia de la segunda ecuación como valor directo de x."),
+            ("Adulto 2 y niño 5", "Invirtió los valores: la entrada de adulto debe ser la más cara."),
+            ("Adulto 6,5 y niño 1", "Cumple la primera ecuación pero la diferencia sería 5,5 y no 3."),
+            ("Adulto 8 y niño 5", "Usó la diferencia al revés y no verifica el total de la compra."),
         ],
     ),
     _q(
         "alg_sistemas", "medio",
-        "¿Cuál es la solución del sistema 4x − y = 10 ; 2x + y = 8?",
-        "x = 3, y = 2",
-        "La y aparece restando en una ecuación y sumando en la otra: se suman.\n\n"
-        "1) Suma las dos ecuaciones: (4x − y) + (2x + y) = 10 + 8. Las y se cancelan "
-        "y queda 6x = 18.\n"
-        "2) Divide por 6: x = 3.\n"
-        "3) Reemplaza en la segunda: 2 · 3 + y = 8, entonces y = 2.\n"
-        "4) Verifica en la primera: 4 · 3 − 2 = 10. Correcto.",
+        "En una tienda, 4 lápices menos un cuaderno equivalen a 10 unidades de valor, y 2 lápices más un cuaderno equivalen a 8. ¿Cuál de los siguientes pasos resuelve el sistema de una sola vez?",
+        "Sumar las dos ecuaciones, porque así se elimina el cuaderno",
+        "Cuando una incógnita aparece con signos opuestos, sumar las ecuaciones la "
+        "elimina.\n\n"
+        "1) El sistema es 4x − y = 10 y 2x + y = 8.\n"
+        "2) La y aparece como −y en una y como +y en la otra: al sumar, se "
+        "cancela.\n"
+        "3) Sumando: 6x = 18, de donde x = 3.\n"
+        "4) Reemplazando en la segunda: 6 + y = 8, así que y = 2.\n"
+        "5) Comprueba: 4 · 3 − 2 = 10.",
         [
-            ("x = 18, y = 2", "Sumó las ecuaciones pero no dividió por el coeficiente resultante."),
-            ("x = 1, y = 6", "Restó las ecuaciones en lugar de sumarlas, sin cancelar la y."),
-            ("x = 2, y = 3", "Intercambió los valores de las incógnitas."),
+            ("Restar las dos ecuaciones, porque así se elimina el cuaderno", "Al restar, los términos con y quedarían −y − y = −2y: en vez de eliminarse, se duplican."),
+            ("Multiplicar la segunda por 2 y después restar", "Funciona, pero da un rodeo: los signos opuestos ya permiten eliminar sumando directamente."),
+            ("Dividir la primera por 4 para despejar el lápiz", "Deja fracciones y no elimina ninguna incógnita; complica en vez de simplificar."),
         ],
     ),
     _q(
         "alg_sistemas", "medio",
-        "¿Cuál es la solución del sistema x + 2y = 11 ; 3x − 2y = 9?",
-        "x = 5, y = 3",
-        "Los términos en y son opuestos, así que sumando se eliminan.\n\n"
-        "1) Suma ambas ecuaciones: (x + 2y) + (3x − 2y) = 11 + 9. Queda 4x = 20.\n"
-        "2) Divide por 4: x = 5.\n"
-        "3) Reemplaza en la primera: 5 + 2y = 11, entonces 2y = 6 e y = 3.\n"
-        "4) Verifica en la segunda: 3 · 5 − 2 · 3 = 9. Correcto.",
+        "Un pedido de 1 caja grande y 2 chicas pesa 11 kilos, y otro de 3 grandes menos 2 chicas equivale a 9 kilos. ¿Cuánto pesa cada tipo de caja?",
+        "Grande 5 kg y chica 3 kg",
+        "Los términos con la caja chica tienen signos opuestos, así que sumar "
+        "elimina esa incógnita.\n\n"
+        "1) Grande x, chica y: x + 2y = 11 y 3x − 2y = 9.\n"
+        "2) Sumando ambas: 4x = 20, de donde x = 5.\n"
+        "3) Reemplaza en la primera: 5 + 2y = 11, o sea 2y = 6 e y = 3.\n"
+        "4) Comprueba: 3 · 5 − 2 · 3 = 15 − 6 = 9.",
         [
-            ("x = 20, y = 3", "Sumó las ecuaciones pero olvidó dividir por 4."),
-            ("x = 5, y = 6", "Despejó 2y = 6 y no dividió por 2 para obtener la y."),
-            ("x = 3, y = 5", "Intercambió los valores de las incógnitas."),
+            ("Grande 3 kg y chica 5 kg", "Invirtió los pesos: al reemplazar en la segunda daría −1 y no 9."),
+            ("Grande 20 kg y chica 3 kg", "Se quedó en 4x = 20 sin dividir por 4."),
+            ("Grande 5 kg y chica 6 kg", "Olvidó dividir por 2 al despejar la caja chica."),
         ],
     ),
     _q(
@@ -7194,17 +7174,18 @@ QUESTIONS += [
     ),
     _q(
         "alg_sistemas", "dificil",
-        "¿Cuál es la solución del sistema 4x + 3y = 27 ; 2x − y = 1?",
-        "x = 3, y = 5",
-        "La segunda ecuación permite despejar la y con facilidad.\n\n"
-        "1) De la segunda: y = 2x − 1.\n"
-        "2) Reemplaza en la primera: 4x + 3(2x − 1) = 27.\n"
-        "3) Distribuye y reduce: 4x + 6x − 3 = 27, o sea 10x = 30, entonces x = 3.\n"
-        "4) Calcula la y: y = 2 · 3 − 1 = 5. Verifica: 4 · 3 + 3 · 5 = 27.",
+        "Cuatro kilos de manzanas y tres de peras cuestan 27 mil pesos, y dos kilos de manzanas cuestan 1 mil más que un kilo de peras. ¿Cuánto vale cada kilo, en miles?",
+        "Manzanas 3 y peras 5",
+        "Conviene despejar de la ecuación simple y sustituir.\n\n"
+        "1) Manzanas x, peras y: 4x + 3y = 27 y 2x − y = 1.\n"
+        "2) De la segunda: y = 2x − 1.\n"
+        "3) Sustituyendo: 4x + 3(2x − 1) = 27, o sea 4x + 6x − 3 = 27.\n"
+        "4) Reduciendo: 10x = 30, de donde x = 3, y entonces y = 2 · 3 − 1 = 5.\n"
+        "5) Comprueba: 4 · 3 + 3 · 5 = 12 + 15 = 27.",
         [
-            ("x = 5, y = 3", "Intercambió los valores de las incógnitas."),
-            ("x = 2,4, y = 3,8", "Despejó y = 2x + 1, cambiando el signo del término independiente."),
-            ("x = 3, y = 7", "Calculó la y reemplazando en la ecuación equivocada."),
+            ("Manzanas 5 y peras 3", "Invirtió los precios: al reemplazar en la primera daría 29 y no 27."),
+            ("Manzanas 3 y peras 7", "Despejó mal la segunda ecuación, sumando el 1 en lugar de restarlo."),
+            ("Manzanas 6 y peras 1", "Cumple la segunda condición pero no el total de la compra."),
         ],
     ),
     _q(
@@ -8213,16 +8194,17 @@ QUESTIONS += [
     # ---------- alg_funciones ----------
     _q(
         "alg_funciones", "facil",
-        "Si f(x) = 4x + 1, ¿cuál es el valor de f(3)?",
+        "Una empresa de despachos cobra f(x) = 4x + 1 miles de pesos por x paquetes. ¿Cuánto cobra por 3 paquetes?",
         "13",
-        "Evaluar una función es reemplazar la x por el valor indicado.\n\n"
-        "1) Sustituye x por 3: f(3) = 4 · 3 + 1.\n"
-        "2) Multiplica primero: 4 · 3 = 12.\n"
-        "3) Suma: 12 + 1 = 13.",
+        "Se evalúa la función en el valor pedido.\n\n"
+        "1) f(3) = 4 · 3 + 1.\n"
+        "2) Calcula: 12 + 1 = 13 mil pesos.\n"
+        "3) El 1 es un cargo fijo por despacho, independiente de la cantidad de "
+        "paquetes.",
         [
-            ("16", "Sumó el 1 antes de multiplicar, alterando el orden de las operaciones."),
-            ("7", "Sumó el 3 al coeficiente en lugar de multiplicarlos."),
-            ("12", "Multiplicó correctamente pero olvidó sumar el término independiente."),
+            ("11", "Restó el cargo fijo en lugar de sumarlo."),
+            ("12", "Olvidó el cargo fijo."),
+            ("15", "Sumó el 3 dos veces, una al multiplicar y otra al final."),
         ],
     ),
     _q(
@@ -8256,49 +8238,50 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "facil",
-        "¿Cuál es la pendiente de la recta y = 5x − 2?",
-        "5",
-        "En la forma y = mx + n, la pendiente es el número que acompaña a la x.\n\n"
-        "1) Compara y = 5x − 2 con y = mx + n.\n"
-        "2) El coeficiente de x es 5, así que m = 5.\n"
-        "3) El −2 es el coeficiente de posición: indica dónde corta el eje Y, no la "
-        "inclinación.",
+        "El saldo de una cuenta, en miles de pesos, sigue el modelo y = 5x − 2, donde x son las semanas transcurridas. ¿Qué representa el 5 en ese modelo?",
+        "Que el saldo aumenta 5 mil pesos por semana",
+        "En y = mx + n, el número que acompaña a la variable es la pendiente, y "
+        "mide cuánto cambia y por cada unidad de x.\n\n"
+        "1) Aquí la pendiente es 5, así que por cada semana el saldo sube 5 mil.\n"
+        "2) El −2 es el intercepto: el saldo al comienzo, cuando x = 0.\n"
+        "3) Compruébalo con dos semanas seguidas: en x = 1 el saldo es 3 y en "
+        "x = 2 es 8, con una diferencia de 5.",
         [
-            ("−2", "Confundió la pendiente con el coeficiente de posición."),
-            ("3", "Restó los dos números de la ecuación."),
-            ("−10", "Multiplicó los dos números de la ecuación."),
+            ("Que el saldo inicial es de 5 mil pesos", "El saldo inicial es el término independiente: con x = 0 la cuenta parte en −2."),
+            ("Que la cuenta se cierra en la semana 5", "El 5 multiplica a la variable; no señala ningún momento en particular."),
+            ("Que el saldo se multiplica por 5 cada semana", "Multiplicarse por 5 sería un crecimiento exponencial; aquí el aumento es de 5 unidades fijas."),
         ],
     ),
     _q(
         "alg_funciones", "facil",
-        "¿En qué punto corta al eje Y la recta y = 3x + 7?",
-        "(0, 7)",
-        "Sobre el eje Y todos los puntos tienen x = 0.\n\n"
-        "1) Reemplaza x por 0: y = 3 · 0 + 7.\n"
-        "2) Calcula: y = 7.\n"
-        "3) El punto de corte es (0, 7).\n"
-        "4) Atajo: en y = mx + n, el corte con el eje Y es siempre (0, n).",
+        "El costo total de un pedido, en miles de pesos, es y = 3x + 7, donde x son las unidades pedidas. ¿Cuánto se paga aunque no se pida ninguna unidad?",
+        "7",
+        "El valor con cero unidades es el punto donde la recta corta el eje Y.\n\n"
+        "1) Reemplaza x = 0: y = 3 · 0 + 7 = 7.\n"
+        "2) Ese punto es (0, 7), y en el modelo representa un cargo fijo de 7 mil "
+        "pesos.\n"
+        "3) El 3 es lo que se suma por cada unidad pedida, aparte de ese cargo.",
         [
-            ("(7, 0)", "Intercambió las coordenadas: ese punto está sobre el eje X."),
-            ("(0, 3)", "Usó la pendiente en lugar del coeficiente de posición."),
-            ("(−7/3, 0)", "Calculó el corte con el eje X en lugar del eje Y."),
+            ("3", "Ese es el costo por unidad, no el cargo que se paga sin pedir nada."),
+            ("10", "Sumó el costo por unidad al cargo fijo, como si se pidiera una unidad."),
+            ("0", "Confundió el valor de x con el de y: con cero unidades el costo no es cero."),
         ],
     ),
     _q(
         "alg_funciones", "medio",
-        "¿Cuál es el vértice de la parábola y = x² − 8x + 12?",
-        "(4, −4)",
-        "El vértice se obtiene primero en x y después reemplazando.\n\n"
-        "1) La coordenada x del vértice es −b/(2a). Aquí a = 1 y b = −8, así que "
-        "x = 8/2 = 4.\n"
-        "2) Reemplaza en la función para obtener la y: 4² − 8 · 4 + 12.\n"
-        "3) Calcula: 16 − 32 + 12 = −4.\n"
-        "4) El vértice es (4, −4). Como a es positivo, la parábola se abre hacia "
-        "arriba y ese punto es su mínimo.",
+        "El costo de producción, en miles de pesos, sigue el modelo y = x² − 8x + 12, donde x son las unidades. ¿Con cuántas unidades el costo es mínimo y cuánto vale ese mínimo?",
+        "4 unidades, costo −4",
+        "El mínimo de una parábola que abre hacia arriba está en su vértice.\n\n"
+        "1) La coordenada x del vértice es −b/(2a): −(−8)/(2 · 1) = 4.\n"
+        "2) El valor mínimo se obtiene evaluando: 4² − 8 · 4 + 12 = "
+        "16 − 32 + 12 = −4.\n"
+        "3) El vértice es (4, −4).\n"
+        "4) Como el coeficiente de x² es positivo, la parábola abre hacia arriba y "
+        "ese punto es efectivamente un mínimo.",
         [
-            ("(−4, 60)", "Olvidó el signo negativo en la fórmula −b/(2a)."),
-            ("(4, 12)", "Usó el término independiente como coordenada y en vez de evaluar la función."),
-            ("(8, 12)", "Tomó el coeficiente b directamente, sin dividir por 2a."),
+            ("8 unidades, costo 12", "Usó los coeficientes tal cual en vez de aplicar la fórmula del vértice."),
+            ("−4 unidades, costo 4", "Invirtió las dos coordenadas del vértice."),
+            ("4 unidades, costo 12", "Calculó bien la coordenada x pero entregó el término independiente como valor mínimo."),
         ],
     ),
     _q(
@@ -8352,17 +8335,17 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "medio",
-        "La función f(x) = 4x + b cumple que f(2) = 11. ¿Cuál es el valor de b?",
+        "El cobro de un servicio es f(x) = 4x + b miles de pesos por x horas, y contratar 2 horas cuesta 11 mil. ¿Cuál es el cargo fijo b?",
         "3",
-        "Se reemplaza el dato conocido y se despeja la incógnita.\n\n"
-        "1) Evalúa en x = 2: f(2) = 4 · 2 + b = 8 + b.\n"
-        "2) Como f(2) vale 11: 8 + b = 11.\n"
-        "3) Despeja: b = 11 − 8 = 3.\n"
-        "4) Verifica: f(x) = 4x + 3, y f(2) = 8 + 3 = 11. Correcto.",
+        "Se reemplaza el dato conocido y se despeja el cargo fijo.\n\n"
+        "1) f(2) = 4 · 2 + b = 11.\n"
+        "2) Entonces 8 + b = 11.\n"
+        "3) Despejando: b = 3 mil pesos de cargo fijo.\n"
+        "4) Comprueba: 4 · 2 + 3 = 11.",
         [
             ("19", "Sumó el 8 en lugar de restarlo al despejar."),
-            ("11", "Tomó el valor de la función como si fuera directamente b."),
-            ("2", "Entregó el valor de x en lugar del de b."),
+            ("8", "Entregó el cobro por las horas, no el cargo fijo."),
+            ("5,5", "Dividió el total entre las 2 horas sin separar el cargo fijo."),
         ],
     ),
     _q(
@@ -8413,35 +8396,35 @@ QUESTIONS += [
     ),
     _q(
         "alg_funciones", "dificil",
-        "¿Cuál es el vértice de la parábola y = 2x² − 8x + 5?",
-        "(2, −3)",
-        "Con coeficiente principal distinto de 1, la fórmula del vértice sigue "
-        "siendo la misma.\n\n"
-        "1) La coordenada x es −b/(2a). Aquí a = 2 y b = −8, así que x = 8/4 = 2.\n"
-        "2) Reemplaza en la función: 2 · 2² − 8 · 2 + 5.\n"
-        "3) Calcula: 2 · 4 = 8, luego 8 − 16 + 5 = −3.\n"
-        "4) El vértice es (2, −3), y como a es positivo se trata de un mínimo.",
+        "La altura de un dron, en metros, sigue el modelo y = 2x² − 8x + 5 durante un descenso, donde x son los minutos. ¿En qué minuto alcanza su punto más bajo y a qué altura?",
+        "Minuto 2, altura −3",
+        "El punto más bajo de una parábola que abre hacia arriba es su vértice, y "
+        "el coeficiente 2 no se puede ignorar.\n\n"
+        "1) Coordenada x del vértice: −b/(2a) = −(−8)/(2 · 2) = 8/4 = 2.\n"
+        "2) Evaluando: 2 · 2² − 8 · 2 + 5 = 8 − 16 + 5 = −3.\n"
+        "3) El vértice es (2, −3).\n"
+        "4) El error más común es dividir por 2 en vez de por 2a: con a = 2 el "
+        "denominador es 4, no 2.",
         [
-            ("(4, 5)", "Dividió b por a en lugar de por 2a."),
-            ("(2, 5)", "Usó el término independiente como coordenada y sin evaluar la función."),
-            ("(−2, 29)", "Olvidó el signo negativo en la fórmula −b/(2a)."),
+            ("Minuto 4, altura 5", "Dividió por 2 en lugar de por 2a, y usó el término independiente como altura."),
+            ("Minuto 2, altura 5", "Calculó bien el minuto pero entregó el valor con x = 0 como altura."),
+            ("Minuto −2, altura −3", "Perdió el signo al aplicar la fórmula: −b con b = −8 da +8."),
         ],
     ),
     _q(
         "alg_funciones", "dificil",
-        "¿Cuál es el valor mínimo que alcanza la función y = x² − 6x + 11?",
+        "El costo de un proceso, en miles de pesos, se modela con y = x² − 6x + 11, donde x son las horas empleadas. ¿Cuál es el costo mínimo posible?",
         "2",
-        "El valor mínimo de una parábola que se abre hacia arriba está en su "
-        "vértice.\n\n"
-        "1) Como a = 1 es positivo, la parábola se abre hacia arriba y el vértice es "
-        "un mínimo.\n"
-        "2) La coordenada x del vértice es −b/(2a) = 6/2 = 3.\n"
-        "3) Evalúa la función ahí: 3² − 6 · 3 + 11 = 9 − 18 + 11 = 2.\n"
-        "4) El valor mínimo es 2, y se alcanza cuando x = 3.",
+        "El mínimo está en el vértice de la parábola.\n\n"
+        "1) La coordenada x del vértice es −b/(2a): −(−6)/(2 · 1) = 3 horas.\n"
+        "2) Evaluando el costo ahí: 3² − 6 · 3 + 11 = 9 − 18 + 11 = 2.\n"
+        "3) El costo mínimo es 2 mil pesos, y se alcanza con 3 horas.\n"
+        "4) Como el coeficiente de x² es positivo, la parábola abre hacia arriba y "
+        "no hay ningún valor menor.",
         [
-            ("3", "Entregó la coordenada x del vértice en lugar del valor mínimo de la función."),
-            ("11", "Tomó el término independiente como si fuera el mínimo."),
-            ("−2", "Cambió el signo del resultado al evaluar la función."),
+            ("3", "Entregó la cantidad de horas en la que se alcanza el mínimo, no el costo mínimo."),
+            ("11", "Ese es el costo con cero horas, que no es el mínimo de la función."),
+            ("−2", "Perdió el signo al evaluar: 9 − 18 + 11 da 2, no −2."),
         ],
     ),
     _q(
@@ -8844,32 +8827,32 @@ QUESTIONS += [
     # ==================================================================
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de 1/3 + 2/5?",
+        "En una jornada, 1/3 del tiempo se dedicó a una tarea y 2/5 a otra. ¿Qué fracción de la jornada ocuparon entre las dos?",
         "11/15",
-        "Para sumar fracciones se necesita un denominador común.\n\n"
-        "1) El mínimo común múltiplo de 3 y 5 es 15, porque no tienen factores "
-        "comunes: basta multiplicarlos.\n"
+        "Se busca el denominador común antes de sumar.\n\n"
+        "1) El mínimo común múltiplo de 3 y 5 es 15.\n"
         "2) Convierte: 1/3 = 5/15 y 2/5 = 6/15.\n"
-        "3) Suma los numeradores: 5/15 + 6/15 = 11/15.\n"
-        "4) No se simplifica: 11 es primo y no divide a 15.",
+        "3) Suma: 5 + 6 = 11, o sea 11/15 de la jornada.\n"
+        "4) Control: es menos que la jornada completa, así que queda tiempo libre.",
         [
-            ("3/8", "Sumó numeradores entre sí y denominadores entre sí."),
-            ("2/15", "Multiplicó las fracciones en lugar de sumarlas."),
-            ("1/15", "Restó las fracciones en vez de sumarlas."),
+            ("3/8", "Sumó numeradores y denominadores por separado."),
+            ("2/15", "Multiplicó las fracciones en vez de sumarlas."),
+            ("11/8", "Sumó bien los numeradores pero sumó también los denominadores."),
         ],
     ),
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de 7/10 − 2/5?",
+        "Una cinta tenía 7/10 de metro y se cortaron 2/5 de metro. ¿Cuánta cinta queda?",
         "3/10",
-        "Como 10 es múltiplo de 5, basta convertir una sola fracción.\n\n"
-        "1) Lleva 2/5 a décimos: multiplicas arriba y abajo por 2, quedando 4/10.\n"
-        "2) Resta los numeradores: 7/10 − 4/10 = 3/10.\n"
-        "3) No se simplifica: 3 no divide a 10.",
+        "Se lleva todo a décimos y se resta.\n\n"
+        "1) El denominador común de 10 y 5 es 10.\n"
+        "2) Convierte: 2/5 = 4/10.\n"
+        "3) Resta: 7/10 − 4/10 = 3/10 de metro.\n"
+        "4) Control: quedó menos de lo que había, como corresponde a un corte.",
         [
-            ("5/5", "Restó numeradores entre sí y denominadores entre sí."),
-            ("11/10", "Sumó las fracciones en lugar de restarlas."),
-            ("14/50", "Multiplicó las fracciones en vez de restarlas."),
+            ("5/5", "Restó los numeradores y los denominadores por separado."),
+            ("11/10", "Sumó en lugar de restar, y quedaría más cinta que al principio."),
+            ("1/2", "Convirtió mal 2/5 a décimos, usando 2/10 en vez de 4/10."),
         ],
     ),
     _q(
@@ -8891,32 +8874,35 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de (5/6) ÷ (5/12)?",
+        "Se tienen 5/6 de kilo de harina y cada receta usa 5/12 de kilo. ¿Cuántas recetas completas se pueden preparar?",
         "2",
-        "Dividir por una fracción es multiplicar por su recíproco.\n\n"
-        "1) El divisor es 5/12, cuyo recíproco es 12/5.\n"
-        "2) La operación pasa a ser 5/6 × 12/5 = 60/30.\n"
-        "3) Simplifica: 60 ÷ 30 = 2.\n"
-        "4) Control: como 5/12 es menor que 5/6, el cociente debe ser mayor que 1.",
+        "Repartir una cantidad en porciones es dividir.\n\n"
+        "1) Se calcula (5/6) ÷ (5/12).\n"
+        "2) Dividir es multiplicar por el inverso: (5/6) · (12/5).\n"
+        "3) Resulta 60/30 = 2 recetas.\n"
+        "4) Control: cada receta usa la mitad de lo que hay disponible, así que "
+        "alcanza justo para dos.",
         [
-            ("25/72", "Multiplicó directamente sin invertir el divisor."),
-            ("1/2", "Invirtió el dividendo en lugar del divisor."),
-            ("15/6", "Sumó las fracciones en lugar de dividirlas."),
+            ("25/72", "Multiplicó directamente sin invertir la segunda fracción."),
+            ("1/2", "Invirtió la primera fracción en lugar de la segunda."),
+            ("10/18", "Multiplicó los numeradores entre sí y los denominadores entre sí sin invertir."),
         ],
     ),
     _q(
         "num_racionales", "facil",
-        "¿Cuál es el resultado de 2/3 + 1/6 + 1/2?",
+        "Tres personas aportan a una compra: la primera 2/3 del total, la segunda 1/6 y la tercera 1/2. ¿A cuántas veces el total equivale la suma de los tres aportes?",
         "4/3",
-        "Con tres fracciones se busca un único denominador común para todas.\n\n"
+        "Con tres fracciones se busca un denominador común para todas.\n\n"
         "1) El mínimo común múltiplo de 3, 6 y 2 es 6.\n"
-        "2) Convierte: 2/3 = 4/6, 1/6 queda igual, y 1/2 = 3/6.\n"
-        "3) Suma: 4/6 + 1/6 + 3/6 = 8/6.\n"
-        "4) Simplifica dividiendo por 2: 8/6 = 4/3.",
+        "2) Convierte: 2/3 = 4/6, 1/6 queda igual y 1/2 = 3/6.\n"
+        "3) Suma: 4 + 1 + 3 = 8, o sea 8/6.\n"
+        "4) Simplifica por 2: 4/3.\n"
+        "5) Es mayor que 1, lo que significa que entre los tres aportaron más que "
+        "el total de la compra.",
         [
-            ("4/11", "Sumó numeradores entre sí y denominadores entre sí."),
-            ("1", "Convirtió mal 1/2 a sextos: usó 1/6 en lugar de 3/6, y los numeradores le sumaron 6."),
+            ("4/11", "Sumó numeradores y denominadores por separado."),
             ("1/6", "Multiplicó las tres fracciones en lugar de sumarlas."),
+            ("7/6", "Convirtió mal 1/2 a sextos, usando 2/6 en vez de 3/6."),
         ],
     ),
     _q(
@@ -8936,17 +8922,19 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "medio",
-        "¿Cuál es el resultado de 1 − (2/7 + 1/3)?",
+        "De un presupuesto, 2/7 se gastó en materiales y 1/3 en sueldos. ¿Qué fracción del presupuesto queda disponible?",
         "8/21",
-        "Primero se resuelve el paréntesis y después se resta del entero.\n\n"
-        "1) Denominador común de 7 y 3: 21. Convierte: 2/7 = 6/21 y 1/3 = 7/21.\n"
-        "2) Suma: 6/21 + 7/21 = 13/21.\n"
-        "3) Escribe el 1 como 21/21 para poder restar.\n"
-        "4) Resta: 21/21 − 13/21 = 8/21.",
+        "Primero se suma lo gastado y después se resta del total.\n\n"
+        "1) Denominador común de 7 y 3: 21.\n"
+        "2) Convierte: 2/7 = 6/21 y 1/3 = 7/21.\n"
+        "3) Lo gastado suma 13/21.\n"
+        "4) Lo disponible es 1 − 13/21 = 21/21 − 13/21 = 8/21.\n"
+        "5) Control: se gastó algo más de la mitad, así que queda algo menos de "
+        "la mitad.",
         [
-            ("13/21", "Resolvió el paréntesis pero olvidó restarlo del entero."),
-            ("3/10", "Sumó numeradores entre sí y denominadores entre sí dentro del paréntesis."),
-            ("19/21", "Restó solo una de las dos fracciones del entero."),
+            ("13/21", "Entregó lo gastado en lugar de lo que queda disponible."),
+            ("3/10", "Sumó numeradores y denominadores por separado antes de restar."),
+            ("1/21", "Restó mal el entero: 1 equivale a 21/21, no a 14/21."),
         ],
     ),
     _q(
@@ -8968,18 +8956,18 @@ QUESTIONS += [
     ),
     _q(
         "num_racionales", "medio",
-        "¿Cuál es el resultado de 5/2 ÷ 3/4?",
+        "Un tambor contiene 5/2 litros de pintura y cada muro consume 3/4 de litro. ¿Cuántos muros alcanza a cubrir la pintura?",
         "10/3",
-        "Se multiplica por el recíproco del divisor.\n\n"
-        "1) El recíproco de 3/4 es 4/3.\n"
-        "2) La operación pasa a ser 5/2 × 4/3 = 20/6.\n"
-        "3) Simplifica dividiendo por 2: 10/3.\n"
-        "4) Control: 3/4 es menor que 1, así que dividir por él debe agrandar el "
-        "5/2. Y 10/3 ≈ 3,33 es mayor que 2,5.",
+        "Se divide la cantidad total por lo que consume cada muro.\n\n"
+        "1) Se calcula (5/2) ÷ (3/4).\n"
+        "2) Multiplica por el inverso del divisor: (5/2) · (4/3) = 20/6.\n"
+        "3) Simplifica por 2: 10/3, o sea tres muros y un tercio.\n"
+        "4) En la práctica alcanza para 3 muros completos y sobra pintura para un "
+        "tercio de otro.",
         [
             ("15/8", "Multiplicó directamente sin invertir el divisor."),
-            ("6/10", "Invirtió el dividendo en lugar del divisor."),
-            ("3/10", "Invirtió el resultado final: dividió el denominador por el numerador."),
+            ("3/10", "Invirtió el resultado final."),
+            ("5/6", "Invirtió el dividendo en lugar del divisor."),
         ],
     ),
     _q(
