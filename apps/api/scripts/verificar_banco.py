@@ -374,7 +374,7 @@ COMPROBACIONES: dict[str, str] = {
     "una tras otra y SIN reponer la primera": "(6/10) · (5/9)",
     # Excluyentes: se suman sin descontar nada.
     # Con intersección: la regla aditiva descuenta los contados dos veces.
-    "22 juegan fútbol, 16 juegan vóleibol": str(Fraction(22 + 16 - 8, 40)),
+    "18 juegan fútbol, 14 juegan vóleibol": str(Fraction(18 + 14 - 6, 40)),
     "máquina A esté operativa en un día cualquiera": str(round(0.9 * 0.8, 2)).replace(".", ","),
     # Sin reposición: la segunda extracción cambia numerador y denominador.
     "5 lápices azules y 3 rojos": str(Fraction(3, 8) * Fraction(2, 7)),
@@ -1387,7 +1387,7 @@ COMPROBACIONES: dict[str, str] = {
     "Un cuadrado tiene lado L": "L√2",
     "catetos de 20 cm y 21 cm": f"{int(sqrt(20**2 + 21**2))} cm",
     "hipotenusa mide 15 cm y un cateto mide 9 cm": f"{int(sqrt(15**2 - 9**2))} cm",
-    "cancha rectangular mide 60 m por 80 m": f"{int(sqrt(60**2 + 80**2))} m",
+    "cancha rectangular mide 90 m por 120 m": f"{int(sqrt(90**2 + 120**2))} m",
     "SÍ puede formar un triángulo rectángulo": "9, 40 y 41" if 9**2 + 40**2 == 41**2 else "?",
     "hipotenusa 10 cm y un cateto de 6 cm": f"{6 * int(sqrt(10**2 - 6**2)) // 2} cm²",
     "escalera de 13 m se apoya": f"{int(sqrt(13**2 - 5**2))} m",
@@ -1505,6 +1505,34 @@ def _norm_numero(t: str) -> str:
     return _norm(t).replace(",", ".")
 
 
+def _valor_unico(texto: str) -> Fraction | None:
+    """El valor de una alternativa que es UN número limpio, o None.
+
+    Se le quita el signo peso y la unidad final ("100 m", "28,26 cm²", "40%")
+    y se acepta la fracción "3/4". Cualquier cosa con letras adentro —"x ≥ 7",
+    "2ʰ", una expresión— devuelve None: eso no se ordena.
+    """
+    t = texto.strip()
+    if t.startswith("$"):
+        t = t[1:].strip()
+    while t and not t[-1].isdigit():
+        t = t[:-1]
+    if not t or any(c.isalpha() for c in t):
+        return None
+    partes = t.split("/")
+    try:
+        trozos = [
+            Fraction(p.strip().replace(".", "").replace(",", ".")) for p in partes
+        ]
+    except (ValueError, ZeroDivisionError):
+        return None
+    if len(trozos) == 1:
+        return trozos[0]
+    if len(trozos) == 2 and trozos[1] != 0:
+        return trozos[0] / trozos[1]
+    return None
+
+
 def _valores_del_texto(texto: str) -> set[Fraction]:
     """Todos los números que aparecen en un texto, como valores exactos.
 
@@ -1616,7 +1644,15 @@ def main() -> int:
         numeros = _numeros_del_stem(q["stem"])
         if not numeros:
             continue
-        correcta = next(a["text"] for a in q["alternatives"] if a["is_correct"])
+        texto_correcto = next(
+            a["text"] for a in q["alternatives"] if a["is_correct"]
+        )
+        # Por VALOR y no por texto: "100 cm" y "100 m" son el mismo número, y
+        # así se colaron el televisor y la cancha de 60 x 80.
+        valor_correcto = _valor_unico(texto_correcto)
+        correcta = (
+            str(valor_correcto) if valor_correcto is not None else texto_correcto
+        )
         por_firma.setdefault((q["skill_node"], numeros, correcta), []).append(q["stem"])
     for (nodo, numeros, correcta), stems in por_firma.items():
         if len(stems) > 1:
@@ -1647,6 +1683,55 @@ def main() -> int:
                     f"'{a['text']}'): {q['stem'][:60]}"
                 )
             puros[valor] = a["text"]
+
+    # La respuesta correcta no puede vivir siempre en el medio. Cuando las
+    # cuatro alternativas son números comparables el alumno puede ordenarlas
+    # de cabeza: si la correcta casi nunca es la mayor ni la menor, descartar
+    # los extremos sube un tiro a ciegas de 25% a 36% sin resolver nada. El
+    # banco llegó a tener el 72% de las correctas en el medio.
+    #
+    # ALCANCE: solo entra cuando las cuatro alternativas son números limpios y
+    # distintos. Las de expresiones o texto no se ordenan y no tienen esta
+    # filtración. Hay ítems donde el medio es la posición CORRECTA y forzarlo
+    # sería peor: en "calcula la hipotenusa" el valor está atrapado entre
+    # |a − b| y a + b, así que el umbral es 40% y no 50%.
+    codigos_m1 = {n[0] for n in SKILL_NODES}
+    rangos: dict[str, Counter[int]] = {
+        "M1": Counter(), "M2": Counter()
+    }
+    for q in QUESTIONS:
+        valores = [_valor_unico(a["text"]) for a in q["alternatives"]]
+        if any(v is None for v in valores) or len(set(valores)) != 4:
+            continue
+        correcta_v = next(
+            _valor_unico(a["text"]) for a in q["alternatives"] if a["is_correct"]
+        )
+        prueba = "M1" if q["skill_node"] in codigos_m1 else "M2"
+        rangos[prueba][sorted(valores).index(correcta_v)] += 1
+
+    lineas_reparto = []
+    for prueba, r in rangos.items():
+        total = sum(r.values())
+        if not total:
+            continue
+        extremos = 100 * (r[0] + r[3]) / total
+        lineas_reparto.append(
+            f"  {prueba}: {total} ordenables, {r[0]}/{r[1]}/{r[2]}/{r[3]}, "
+            f"extremos {extremos:.0f}%"
+        )
+        # Solo M1 es exigible hoy. M2 tiene el mismo sesgo sin corregir y es
+        # la prueba de menor prioridad del proyecto; cuando se arregle, sube
+        # el umbral aquí también.
+        if prueba == "M1" and extremos < 40:
+            fallas.append(
+                f"en M1 la correcta queda en el medio demasiado seguido "
+                f"({r[0]}/{r[1]}/{r[2]}/{r[3]}, extremos {extremos:.0f}%); lo "
+                "esperable es 50% y bajo 40% descartar el mayor y el menor se "
+                "vuelve una estrategia rentable"
+            )
+    reparto = "posición de la correcta entre cuatro números:" + chr(10) + chr(10).join(
+        lineas_reparto
+    )
 
     # Una probabilidad vive entre 0 y 1, y eso es lo primero que aprende quien
     # estudia la unidad. Un distractor que se pasa de 1 se descarta sin resolver
@@ -1768,6 +1853,7 @@ def main() -> int:
     )
     print(f"textos y fuentes: {len(TODOS_LOS_PASAJES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
+    print(reparto)
     print(f"lecciones: {len(LESSONS)} ({leidas} con resultado recalculado)")
     por_nodo = Counter(q["skill_node"] for q in todas)
     sin_suficientes = [c for c in CODIGOS if por_nodo[c] < 5]
