@@ -21383,6 +21383,104 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "cielo_oscuro",
+        "title": "El cielo como infraestructura",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir del Decreto Supremo N° 1 de "
+            "2022 del Ministerio del Medio Ambiente."
+        ),
+        "body": (
+            "Hay un recurso natural chileno que no se extrae, no se exporta y no "
+            "aparece en ninguna cuenta nacional, pero que el país lleva dos décadas "
+            "legislando para no perder: la oscuridad del cielo nocturno.\n\n"
+            "Conviene precisar de qué se habla. La contaminación lumínica no es el "
+            "exceso de luz, sino la luz mal dirigida: la que en vez de alumbrar el "
+            "suelo se escapa hacia arriba o hacia los costados, rebota en las "
+            "partículas de la atmósfera y forma sobre las ciudades una cúpula "
+            "difusa que borra las estrellas. Un foco que ilumina bien la vereda no "
+            "contamina; el mismo foco, inclinado unos grados de más, sí. La "
+            "diferencia no está en la potencia, sino en el diseño.\n\n"
+            "Esa distinción explica por qué el asunto importa tanto en el norte del "
+            "país. El desierto de Atacama combina una sequedad extrema, una altura "
+            "considerable y una estabilidad atmosférica poco común, tres "
+            "condiciones que rara vez coinciden en un mismo lugar del planeta. "
+            "Sobre esa base se instalaron los principales observatorios del "
+            "hemisferio sur, y con ellos una comunidad científica que trabaja con "
+            "un insumo que ninguna inversión puede fabricar: noches sin resplandor "
+            "artificial.\n\n"
+            "La primera respuesta regulatoria llegó en 2012, con una norma de "
+            "emisión que fijaba límites al alumbrado, pero solo en las regiones "
+            "donde estaban los telescopios. Diez años después, el Decreto Supremo "
+            "N° 1 de 2022 la reemplazó y extendió la exigencia a todo el territorio "
+            "nacional. La norma entró plenamente en vigencia en octubre de 2024.\n\n"
+            "El cambio técnico más relevante tiene que ver con el color. La luz "
+            "blanca de los focos LED contiene una fracción de luz azul, y esa "
+            "fracción es la que más se dispersa en la atmósfera y la que más "
+            "interfiere con la observación astronómica. La norma anterior toleraba "
+            "hasta un 15% de emisión en esa franja del espectro; la actual lo baja "
+            "a 7% en todo el país y a 1% en las llamadas Áreas de Protección "
+            "Especial. En términos prácticos, eso empuja el alumbrado público hacia "
+            "tonos más cálidos, parecidos a los del sodio antiguo, pero con la "
+            "eficiencia del LED.\n\n"
+            "Hay, sin embargo, un giro en la norma de 2022 que suele pasar "
+            "inadvertido y que es el más interesante. Su objetivo declarado ya no "
+            "es únicamente proteger la calidad astronómica del cielo: incorpora "
+            "también la protección de la biodiversidad y de la salud de las "
+            "personas. El cielo dejó de ser un asunto de astrónomos para volverse "
+            "un asunto ambiental.\n\n"
+            "La razón es que la noche no es un decorado. Muchas especies organizan "
+            "su vida en torno al ciclo de luz y oscuridad: aves que migran "
+            "orientándose por las estrellas, insectos que se congregan alrededor de "
+            "las lámparas hasta agotarse, animales nocturnos que restringen sus "
+            "desplazamientos cuando el terreno queda iluminado. En las personas, la "
+            "exposición nocturna a luz rica en azul altera la producción de "
+            "melatonina, la hormona que ordena el ciclo de sueño y vigilia. Ninguno "
+            "de esos efectos aparece en la factura eléctrica, y por eso durante "
+            "décadas no se contaron.\n\n"
+            "Medir el problema no es sencillo, porque el resplandor no se percibe "
+            "desde dentro: quien nace en una ciudad iluminada no echa de menos las "
+            "estrellas que nunca vio. Un estudio publicado en 2023 en la revista "
+            "Science sorteó esa dificultad con una idea simple. En lugar de "
+            "instalar sensores, pidió a voluntarios de todo el mundo que informaran "
+            "cuántas estrellas alcanzaban a distinguir a simple vista, y reunió más "
+            "de cincuenta mil observaciones entre 2011 y 2022. El resultado fue que "
+            "el brillo del cielo nocturno aumentó, en promedio, cerca de un 9,6% "
+            "cada año. A ese ritmo, un niño que hoy ve doscientas cincuenta "
+            "estrellas sobre su casa verá alrededor de cien cuando cumpla "
+            "dieciocho.\n\n"
+            "Ese hallazgo tuvo además una consecuencia incómoda para quienes "
+            "vigilan el fenómeno: los satélites que miden la luz emitida hacia "
+            "arriba venían mostrando un aumento mucho más lento. La explicación "
+            "probable es que esos instrumentos no registran bien la luz azul de los "
+            "LED, justamente la que más se dispersa. Dicho de otro modo, durante "
+            "años se estuvo midiendo el problema con un instrumento parcialmente "
+            "ciego al cambio que se quería medir.\n\n"
+            "La objeción previsible es económica, y es legítima: cambiar luminarias "
+            "cuesta, y el costo lo asumen municipios que no siempre tienen con qué. "
+            "A eso se suma una preocupación más difícil de discutir, porque no es "
+            "técnica sino intuitiva: la sospecha de que un barrio con menos luz "
+            "será un barrio menos seguro.\n\n"
+            "El argumento merece una respuesta, no un desprecio. Cumplir la norma "
+            "no significa apagar luces, sino apuntarlas hacia abajo y elegir otro "
+            "tono. Una luminaria bien encapsulada entrega al suelo la luz que antes "
+            "se perdía en el aire, de modo que la vereda puede quedar mejor "
+            "iluminada que antes con el mismo consumo o con uno menor. Lo que "
+            "desaparece no es la visibilidad: es el deslumbramiento y el halo.\n\n"
+            "Queda una dificultad de fondo, y es que una norma de emisión regula lo "
+            "que se instala de aquí en adelante, no lo que ya está instalado. El "
+            "parque lumínico de un país se renueva lentamente, y el efecto sobre el "
+            "cielo se medirá recién en la próxima década. Es una apuesta de largo "
+            "plazo, hecha en un país que no siempre legisla pensando tan lejos.\n\n"
+            "Vale la pena decirlo con todas sus letras: la oscuridad del cielo del "
+            "norte es infraestructura. No se construyó, no se puede reponer y se "
+            "degrada silenciosamente, foco a foco, sin que nadie tome una decisión "
+            "que se pueda señalar como culpable. Protegerla no es una concesión a "
+            "la astronomía. Es administrar un patrimonio que ningún otro país del "
+            "mundo tiene en las mismas condiciones."
+        ),
+    },
+    {
         "key": "alma_maquina",
         "title": "El alma de la máquina",
         "kind": "literario",
@@ -22496,6 +22594,163 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El cielo como infraestructura' ----------
+    _ql(
+        "cielo_oscuro", "lec_localizar", "facil",
+        "Según el texto, ¿qué límite de emisión de luz azul fija la norma actual "
+        "para las Áreas de Protección Especial?",
+        "1%",
+        "El texto entrega los tres valores en la misma oración: la norma anterior "
+        "toleraba hasta un 15%, la actual baja a 7% en todo el país «y a 1% en las "
+        "llamadas Áreas de Protección Especial».\n\nEs una pregunta de localizar: "
+        "hay que distinguir cuál de las tres cifras corresponde a lo que se "
+        "pregunta.",
+        [
+            ("7%", "Ese es el límite general para todo el país, no el de las Áreas de Protección Especial."),
+            ("15%", "Ese era el límite que toleraba la norma ANTERIOR, la de 2012."),
+            ("9,6%", "Esa cifra no es un límite normativo: es el aumento anual del brillo del cielo que midió el estudio de 2023."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_localizar", "medio",
+        "De acuerdo con el texto, ¿qué caracteriza a la luz que produce "
+        "contaminación lumínica?",
+        "Que se escapa hacia arriba o hacia los costados en vez de alumbrar el "
+        "suelo",
+        "El segundo párrafo lo define con precisión: «no es el exceso de luz, sino "
+        "la luz mal dirigida: la que en vez de alumbrar el suelo se escapa hacia "
+        "arriba o hacia los costados».\n\nLa información está explícita, pero "
+        "formulada con otras palabras que las de la pregunta, así que hay que "
+        "reconocer la equivalencia.",
+        [
+            ("Que proviene de focos de mayor potencia que la necesaria", "El texto descarta esa idea de forma expresa: «la diferencia no está en la potencia, sino en el diseño»."),
+            ("Que se concentra en las zonas donde hay observatorios astronómicos", "Los observatorios explican por qué el problema importa en el norte, pero no definen qué luz contamina."),
+            ("Que se emite durante las horas en que la mayoría de la gente duerme", "El horario no aparece en la definición: lo que define el problema es la dirección de la luz, no el momento."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_localizar", "medio",
+        "Según el texto, ¿cómo obtuvo sus datos el estudio publicado en 2023?",
+        "Pidiendo a voluntarios de todo el mundo que informaran cuántas estrellas "
+        "veían a simple vista",
+        "El texto lo describe paso a paso: «en lugar de instalar sensores, pidió a "
+        "voluntarios de todo el mundo que informaran cuántas estrellas alcanzaban a "
+        "distinguir a simple vista, y reunió más de cincuenta mil observaciones "
+        "entre 2011 y 2022».\n\nEl dato está dicho con todas sus letras.",
+        [
+            ("Instalando sensores de brillo en más de cincuenta mil puntos del planeta", "El texto dice justamente lo contrario: la idea del estudio fue prescindir de los sensores."),
+            ("Comparando las mediciones que entregan los satélites año a año", "Los satélites aparecen DESPUÉS, y para contrastar: venían mostrando un aumento mucho más lento."),
+            ("Midiendo la cantidad de luminarias instaladas en cada ciudad estudiada", "El estudio no contó luminarias: contó estrellas visibles."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_interpretar", "medio",
+        "¿Qué idea sostiene el ejemplo del foco que ilumina bien la vereda y del "
+        "mismo foco inclinado unos grados de más?",
+        "Que el problema no está en cuánta luz se emite, sino en hacia dónde se "
+        "dirige",
+        "El ejemplo compara dos situaciones idénticas en todo salvo en un detalle: "
+        "la inclinación. Al mantener fija la potencia y variar solo la dirección, "
+        "aísla la causa. Por eso el párrafo cierra concluyendo que «la diferencia "
+        "no está en la potencia, sino en el diseño».\n\nReconocer para qué está "
+        "puesto un ejemplo es una tarea de interpretar: hay que ver qué idea "
+        "general viene a apoyar el caso particular.",
+        [
+            ("Que las veredas de las ciudades están peor iluminadas de lo que se cree", "El ejemplo no evalúa la calidad del alumbrado existente: sirve para definir qué cuenta como contaminación."),
+            ("Que conviene reducir la potencia de los focos del alumbrado público", "Es lo contrario de lo que concluye el párrafo, que descarta la potencia como explicación."),
+            ("Que los focos mal instalados consumen más energía de la necesaria", "El consumo aparece más adelante y como beneficio adicional; el ejemplo apunta a la dirección de la luz, no al gasto."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre la definición de contaminación lumínica "
+        "del comienzo y la respuesta que el texto da a quienes temen por la "
+        "seguridad de los barrios?",
+        "La respuesta se apoya en la definición: como el problema es la dirección y "
+        "no la cantidad de luz, cumplir la norma no obliga a alumbrar menos",
+        "El comienzo establece que contamina la luz mal dirigida y no la luz "
+        "abundante. Esa distinción es la que después permite desarmar la objeción: "
+        "«cumplir la norma no significa apagar luces, sino apuntarlas hacia abajo y "
+        "elegir otro tono», e incluso la vereda «puede quedar mejor iluminada que "
+        "antes».\n\nLa pregunta exige unir dos partes alejadas del texto y "
+        "reconocer que una es el fundamento de la otra.",
+        [
+            ("La respuesta contradice la definición inicial, porque admite que habrá menos luz en las calles", "El texto niega expresamente que vaya a haber menos luz en el suelo: lo que desaparece es el halo, no la visibilidad."),
+            ("La respuesta amplía la definición inicial agregando la luz azul como segundo factor", "El color se trata en otra parte, a propósito de la norma; la respuesta a la objeción se apoya en la dirección de la luz."),
+            ("La respuesta abandona la definición inicial y pasa a un argumento de costos", "El costo se reconoce antes, en la objeción; la respuesta que sigue es técnica, no económica."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_interpretar", "dificil",
+        "¿Con qué propósito el texto menciona que los satélites venían mostrando un "
+        "aumento mucho más lento que el estudio de 2023?",
+        "Para mostrar que el problema estuvo subestimado durante años por un "
+        "instrumento que no capta bien la luz azul",
+        "El texto explica la discrepancia y saca la conclusión él mismo: «durante "
+        "años se estuvo midiendo el problema con un instrumento parcialmente ciego "
+        "al cambio que se quería medir».\n\nEl dato de los satélites no está para "
+        "poner en duda el estudio, sino para explicar por qué el fenómeno había "
+        "pasado inadvertido.",
+        [
+            ("Para poner en duda la confiabilidad de un estudio hecho por voluntarios sin formación", "El texto no cuestiona el estudio: cuestiona los satélites, y llama al hallazgo «incómodo para quienes vigilan el fenómeno»."),
+            ("Para demostrar que la contaminación lumínica es menor de lo que se afirma", "La conclusión va en la dirección contraria: el aumento real resultó ser mayor que el que se venía registrando."),
+            ("Para justificar la necesidad de lanzar satélites con mejores sensores", "El texto no propone nada sobre satélites; usa el contraste para explicar un punto ciego de la medición."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_interpretar", "dificil",
+        "¿Cuál es la tesis que sostiene el texto?",
+        "Que la oscuridad del cielo es un bien público que debe administrarse como "
+        "una infraestructura, y no un interés particular de la astronomía",
+        "El cierre la formula sin rodeos: «la oscuridad del cielo del norte es "
+        "infraestructura […] Protegerla no es una concesión a la astronomía». Todo "
+        "lo anterior prepara esa afirmación: la definición técnica, la norma, los "
+        "efectos en la fauna y en la salud, y la respuesta a las "
+        "objeciones.\n\nDistinguir la tesis de los argumentos que la sostienen "
+        "exige jerarquizar las ideas del texto completo, no quedarse con una parte.",
+        [
+            ("Que el Decreto Supremo N° 1 de 2022 resolvió el problema de la contaminación lumínica en Chile", "El texto dice lo contrario: la norma solo regula lo que se instala de aquí en adelante y su efecto se medirá en la próxima década."),
+            ("Que el norte de Chile ofrece las mejores condiciones del mundo para la observación astronómica", "Eso es un dato de apoyo, del tercer párrafo, no la idea que el texto defiende."),
+            ("Que el alumbrado público debería reemplazarse por luminarias de tono cálido", "Es una consecuencia técnica de la norma, mencionada de paso; la tesis es más amplia y aparece en el cierre."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_evaluar", "medio",
+        "¿Qué actitud adopta el emisor frente a quienes objetan el costo del "
+        "recambio y temen por la seguridad?",
+        "Reconoce que la objeción es razonable y se detiene a responderla con "
+        "argumentos técnicos",
+        "El emisor no descarta la objeción: la llama «legítima», admite que el "
+        "costo «lo asumen municipios que no siempre tienen con qué» y agrega que el "
+        "argumento «merece una respuesta, no un desprecio». Recién entonces explica "
+        "por qué encapsular las luminarias no reduce la visibilidad.\n\nCalificar "
+        "esa actitud exige distinguir entre refutar una objeción y descalificar a "
+        "quien la plantea.",
+        [
+            ("La descarta por considerarla una preocupación sin fundamento técnico", "El texto advierte expresamente lo contrario: «merece una respuesta, no un desprecio»."),
+            ("La acepta y admite que la norma tendrá que flexibilizarse", "En ningún momento propone flexibilizar la norma; responde la objeción y sigue defendiéndola."),
+            ("La menciona al pasar, sin tomar posición sobre ella", "Le dedica dos párrafos completos: uno para exponerla y otro para responderla."),
+        ],
+    ),
+    _ql(
+        "cielo_oscuro", "lec_evaluar", "dificil",
+        "Una municipalidad quiere cumplir la norma sin que sus calles queden más "
+        "oscuras. Según lo planteado en el texto, ¿cuál de las siguientes medidas "
+        "serviría para lograrlo?",
+        "Encapsular las luminarias para que dirijan la luz hacia el suelo y "
+        "reemplazarlas por otras de tono más cálido",
+        "El texto describe exactamente esa salida: «una luminaria bien encapsulada "
+        "entrega al suelo la luz que antes se perdía en el aire, de modo que la "
+        "vereda puede quedar mejor iluminada que antes con el mismo consumo o con "
+        "uno menor», y antes había explicado que la norma empuja «hacia tonos más "
+        "cálidos».\n\nLa pregunta no se responde repitiendo el texto, sino "
+        "aplicándolo a una situación nueva que el texto no menciona.",
+        [
+            ("Reducir la potencia de las luminarias existentes hasta cumplir el límite de luz azul", "El límite de luz azul se refiere al color de la luz, no a su potencia: bajar la potencia sí dejaría las calles más oscuras y no resolvería el problema."),
+            ("Apagar el alumbrado público durante las horas de menor circulación", "El texto es explícito en que cumplir la norma «no significa apagar luces»."),
+            ("Concentrar las luminarias en las avenidas principales y retirarlas de las calles interiores", "Eso dejaría calles más oscuras, que es justo lo que la municipalidad quiere evitar, y el texto no plantea nada parecido."),
+        ],
+    ),
     # ---------- "El alma de la máquina" (Baldomero Lillo, 1907) ----------
     _ql(
         "alma_maquina", "lec_localizar", "facil",
