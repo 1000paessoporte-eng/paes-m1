@@ -21383,6 +21383,109 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "seguro_escolar",
+        "title": "El Seguro Escolar: qué es y cómo se usa",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de información pública de "
+            "la Superintendencia de Seguridad Social (SUSESO) y de ChileAtiende."
+        ),
+        "body": (
+            "**EL SEGURO ESCOLAR: QUÉ ES Y CÓMO SE USA**\n\n"
+            "Todos los estudiantes regulares de Chile están cubiertos por un seguro "
+            "estatal de accidentes desde el momento en que se matriculan. No hay "
+            "que contratarlo, no hay que pagarlo y no depende del tipo de "
+            "establecimiento: cubre por igual a quien estudia en un colegio "
+            "municipal, en uno particular subvencionado, en uno particular pagado o "
+            "en una universidad. Pese a eso, es uno de los beneficios menos "
+            "conocidos del sistema, y buena parte de las familias se entera de que "
+            "existe cuando ya ocurrió el accidente.\n\n"
+            "**A quiénes cubre**\n\n"
+            "La cobertura alcanza a todos los estudiantes regulares, desde la "
+            "educación parvularia hasta la superior. Se pierde solo al dejar de ser "
+            "estudiante regular: no depende de la edad, ni de la nacionalidad, ni "
+            "de la situación previsional de la familia. Un estudiante que no tiene "
+            "ningún sistema de salud está igualmente cubierto.\n\n"
+            "**Qué accidentes cubre**\n\n"
+            "El seguro opera frente a los accidentes ocurridos a causa o con "
+            "ocasión de los estudios, y también frente a los accidentes de "
+            "trayecto, es decir, los que ocurren en el viaje directo entre el "
+            "domicilio y el lugar de estudios o de práctica profesional. La palabra "
+            "que hace todo el trabajo en esa definición es «directo»: el trayecto "
+            "que se interrumpe por un motivo ajeno a los estudios puede quedar "
+            "fuera de la cobertura.\n\n"
+            "| Situación | ¿Está cubierta? |\n"
+            "|---|---|\n"
+            "| Caída en el patio durante el recreo | Sí |\n"
+            "| Accidente en una salida pedagógica organizada por el colegio | Sí |\n"
+            "| Choque de la micro en el viaje directo de la casa al colegio | Sí |\n"
+            "| Lesión durante una práctica profesional | Sí |\n"
+            "| Accidente en el trayecto de vuelta, tras desviarse a otro lugar | Puede quedar fuera |\n\n"
+            "**Qué prestaciones entrega**\n\n"
+            "Las prestaciones son gratuitas y se otorgan en la Red de Salud "
+            "Pública. Incluyen la atención médica, quirúrgica y dental, la "
+            "hospitalización cuando sea necesaria, los medicamentos y productos "
+            "farmacéuticos, las prótesis y aparatos ortopédicos junto con sus "
+            "reparaciones, y los gastos de traslado que la atención requiera. La "
+            "cobertura se extiende hasta la recuperación completa del estudiante, "
+            "no hasta el alta de la primera atención.\n\n"
+            "**Cómo se activa: la denuncia**\n\n"
+            "El seguro no se activa solo. Requiere una denuncia formal del "
+            "accidente, que se hace en un formulario llamado Declaración Individual "
+            "de Accidente Escolar, conocido por su sigla D.I.A.E. Sin ese "
+            "documento, el establecimiento de salud no tiene cómo saber que la "
+            "atención corresponde al seguro, y la familia puede terminar pagando "
+            "una atención que era gratuita.\n\n"
+            "La obligación de denunciar recae en primer lugar sobre el jefe del "
+            "establecimiento educacional, que debe hacerlo tan pronto tenga "
+            "conocimiento del accidente. Pero la norma prevé qué ocurre si eso no "
+            "pasa: si el establecimiento no denuncia dentro de las veinticuatro "
+            "horas siguientes, puede hacerlo el médico tratante, el propio "
+            "accidentado o su representante.\n\n"
+            "Ese detalle es importante y conviene retenerlo, porque invierte la "
+            "situación habitual. Una familia que llega a un servicio de urgencia "
+            "con un estudiante lesionado no depende de que el colegio haya actuado: "
+            "transcurrido el plazo, puede hacer la denuncia por su cuenta. "
+            "Desconocer eso es la causa más frecuente de que un accidente cubierto "
+            "termine pagado del bolsillo.\n\n"
+            "**El caso especial del trayecto**\n\n"
+            "Los accidentes ocurridos dentro del establecimiento suelen quedar "
+            "acreditados por el solo hecho de haber ocurrido ahí, con testigos "
+            "disponibles. Los de trayecto no: nadie del colegio los presenció. Por "
+            "eso se exige acreditarlos por algún medio de prueba, y la cartilla "
+            "oficial menciona tres: el parte de Carabineros, la declaración de "
+            "testigos u otro medio de prueba válido.\n\n"
+            "La recomendación práctica que se desprende de esa exigencia es "
+            "sencilla y rara vez se sigue: ante un accidente de trayecto, conviene "
+            "registrar el lugar y la hora, pedir los datos de quien haya visto lo "
+            "ocurrido y, si interviene Carabineros, guardar el parte. Nada de eso "
+            "se puede reconstruir tres semanas después, que es cuando suele "
+            "aparecer la necesidad de probarlo.\n\n"
+            "**Preguntas frecuentes**\n\n"
+            "*¿Hay que estar en Fonasa para usarlo?* No. La cobertura no depende "
+            "del sistema de salud al que pertenezca la familia ni de que pertenezca "
+            "a alguno. Un estudiante sin previsión está cubierto en los mismos "
+            "términos que uno con isapre.\n\n"
+            "*¿Cubre una salida deportiva en representación del colegio?* Sí. La "
+            "ley habla de accidentes ocurridos a causa o con ocasión de los "
+            "estudios, y una actividad organizada por el establecimiento queda "
+            "comprendida ahí aunque ocurra fuera de sus dependencias.\n\n"
+            "*¿Y si el colegio se niega a hacer la denuncia?* Transcurridas "
+            "veinticuatro horas desde que tuvo conocimiento del accidente, la "
+            "denuncia puede hacerla el médico tratante, el propio accidentado o su "
+            "representante. La inacción del establecimiento no extingue el derecho.\n\n"
+            "**Lo que el seguro no resuelve**\n\n"
+            "Conviene ser claro sobre los límites, para no generar una expectativa "
+            "equivocada. El Seguro Escolar es un seguro de accidentes: no cubre "
+            "enfermedades comunes, ni tratamientos que no se deriven del accidente, "
+            "ni atenciones solicitadas en el sistema privado por decisión de la "
+            "familia. Tampoco reemplaza a Fonasa ni a una isapre para el resto de "
+            "la vida sanitaria del estudiante. Es una cobertura específica, "
+            "gratuita y automática, que existe precisamente para el caso en que "
+            "algo ocurre mientras se estudia o se va a estudiar."
+        ),
+    },
+    {
         "key": "cambiar_opinion",
         "title": "El derecho a cambiar de opinión",
         "kind": "no_literario",
@@ -23173,6 +23276,167 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El Seguro Escolar: qué es y cómo se usa' ----------
+    _ql(
+        "seguro_escolar", "lec_localizar", "facil",
+        "Según la cartilla, ¿a quiénes cubre el Seguro Escolar?",
+        "A todos los estudiantes regulares, desde la educación parvularia hasta la "
+        "superior",
+        "La sección «A quiénes cubre» lo establece sin excepciones por tipo de "
+        "establecimiento: «la cobertura alcanza a todos los estudiantes regulares, "
+        "desde la educación parvularia hasta la superior».\n\nEl texto agrega que "
+        "no depende de la edad, la nacionalidad ni la situación previsional de la "
+        "familia.",
+        [
+            ("Solo a los estudiantes de establecimientos municipales y subvencionados", "La cartilla dice expresamente que cubre por igual a quien estudia en un particular pagado."),
+            ("Solo a los estudiantes menores de dieciocho años", "La cobertura no depende de la edad: llega hasta la educación superior."),
+            ("A los estudiantes que estén afiliados a Fonasa", "Las preguntas frecuentes lo descartan: un estudiante sin previsión está cubierto en los mismos términos."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_localizar", "medio",
+        "De acuerdo con la cartilla, ¿qué medios sirven para acreditar un accidente "
+        "de trayecto?",
+        "El parte de Carabineros, la declaración de testigos u otro medio de prueba "
+        "válido",
+        "La sección sobre el trayecto los enumera: «la cartilla oficial menciona "
+        "tres: el parte de Carabineros, la declaración de testigos u otro medio de "
+        "prueba válido».\n\nLa exigencia se explica en el mismo párrafo: a "
+        "diferencia de lo que ocurre dentro del establecimiento, nadie del colegio "
+        "presenció el accidente.",
+        [
+            ("El certificado de matrícula del estudiante accidentado", "La matrícula acredita la condición de estudiante regular, no las circunstancias del accidente."),
+            ("El formulario D.I.A.E. firmado por el jefe del establecimiento", "El D.I.A.E. es el instrumento de la denuncia, no el medio de prueba de lo ocurrido en el trayecto."),
+            ("Un informe del médico que atendió al estudiante", "El médico puede hacer la denuncia si el establecimiento no la hizo, pero el texto no lo menciona entre los medios de prueba del trayecto."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_localizar", "medio",
+        "Según la cartilla, ¿quién puede denunciar el accidente si el "
+        "establecimiento no lo hace dentro de veinticuatro horas?",
+        "El médico tratante, el propio accidentado o su representante",
+        "El texto lo indica dos veces, en la sección de la denuncia y en las "
+        "preguntas frecuentes: «si el establecimiento no denuncia dentro de las "
+        "veinticuatro horas siguientes, puede hacerlo el médico tratante, el propio "
+        "accidentado o su representante».\n\nLa cartilla remata la idea: «la "
+        "inacción del establecimiento no extingue el derecho».",
+        [
+            ("Solamente el sostenedor del establecimiento educacional", "El texto no menciona al sostenedor: la obligación inicial recae en el jefe del establecimiento."),
+            ("Un funcionario de la Superintendencia de Seguridad Social", "La cartilla no contempla que un tercero externo haga la denuncia."),
+            ("Nadie: transcurrido el plazo, el accidente deja de estar cubierto", "Es exactamente lo contrario: el plazo habilita a otros a denunciar, no extingue la cobertura."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_interpretar", "medio",
+        "¿Por qué la cartilla destaca que en la definición del accidente de "
+        "trayecto «la palabra que hace todo el trabajo es directo»?",
+        "Porque de ese adjetivo depende que un desvío deje el accidente fuera de la "
+        "cobertura",
+        "El texto explica la consecuencia en la misma oración: «el trayecto que se "
+        "interrumpe por un motivo ajeno a los estudios puede quedar fuera de la "
+        "cobertura». La tabla lo confirma con el último caso, que a diferencia de "
+        "los otros cuatro aparece como «puede quedar fuera».\n\nSeñalar el peso de "
+        "una sola palabra dentro de una definición legal es un modo de advertir "
+        "dónde está el límite del beneficio.",
+        [
+            ("Porque el trayecto debe hacerse siempre por la ruta más corta disponible", "El texto no exige la ruta más corta, sino que el viaje no se interrumpa por motivos ajenos a los estudios."),
+            ("Porque solo se cubren los trayectos realizados en transporte público", "El medio de transporte no aparece como condición en ninguna parte de la cartilla."),
+            ("Porque el estudiante debe demostrar que iba efectivamente a estudiar", "La acreditación se refiere a las circunstancias del accidente, y es otro requisito distinto del que introduce «directo»."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre la tabla de situaciones y la definición "
+        "de accidente de trayecto que la antecede?",
+        "La tabla pone a prueba la definición con casos concretos, y el único que "
+        "no queda claramente cubierto es el que la definición excluía",
+        "La definición establece dos condiciones: que el accidente ocurra a causa o "
+        "con ocasión de los estudios, o en el trayecto directo. La tabla ofrece "
+        "cinco casos y cuatro reciben un «sí» inequívoco; el quinto —el desvío— "
+        "recibe «puede quedar fuera», que es justo lo que anticipaba el énfasis en "
+        "la palabra «directo».\n\nLa tabla no agrega información nueva: aplica la "
+        "regla y muestra dónde se quiebra.",
+        [
+            ("La tabla amplía la definición incorporando casos que la norma no contemplaba", "Ninguno de los cinco casos escapa a la definición: todos se resuelven con ella."),
+            ("La tabla contradice la definición al cubrir actividades fuera del establecimiento", "No hay contradicción: la definición cubre lo ocurrido «con ocasión de los estudios», y una salida pedagógica lo es."),
+            ("La tabla reemplaza a la definición por resultar esta demasiado técnica", "La definición se mantiene y la tabla la ilustra; el texto no la sustituye."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_interpretar", "dificil",
+        "¿Cuál es la idea principal de la sección dedicada a la denuncia?",
+        "Que sin el formulario D.I.A.E. el seguro no opera, y que la familia puede "
+        "presentarlo si el establecimiento no lo hace",
+        "La sección abre estableciendo que «el seguro no se activa solo» y que sin "
+        "el D.I.A.E. «la familia puede terminar pagando una atención que era "
+        "gratuita». Luego reparte responsabilidades: primero el jefe del "
+        "establecimiento, y pasadas veinticuatro horas, el médico, el accidentado o "
+        "su representante.\n\nEl texto subraya por qué eso importa: desconocerlo "
+        "«es la causa más frecuente de que un accidente cubierto termine pagado del "
+        "bolsillo».",
+        [
+            ("Que el jefe del establecimiento es el único responsable de activar el seguro", "El texto establece expresamente qué ocurre si él no actúa, así que no es el único."),
+            ("Que la denuncia debe presentarse antes de recibir la atención médica", "La cartilla no fija ese orden: lo que advierte es que sin denuncia la atención puede terminar cobrándose."),
+            ("Que el trámite es engorroso y por eso el beneficio se usa poco", "El texto atribuye el bajo uso al desconocimiento, no a la complejidad del trámite."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_interpretar", "medio",
+        "¿Qué recomendación práctica se desprende, según la cartilla, de la "
+        "exigencia de acreditar el accidente de trayecto?",
+        "Registrar el lugar y la hora, pedir los datos de los testigos y guardar el "
+        "parte si interviene Carabineros",
+        "El texto la formula de manera explícita y explica su urgencia: «nada de "
+        "eso se puede reconstruir tres semanas después, que es cuando suele "
+        "aparecer la necesidad de probarlo».\n\nLa recomendación no está en la "
+        "norma: es una consecuencia que la cartilla deduce del requisito de "
+        "acreditación.",
+        [
+            ("Concurrir siempre a un establecimiento de la Red de Salud Pública", "Eso es donde se otorgan las prestaciones, pero no es la recomendación que surge del requisito de prueba."),
+            ("Avisar al colegio antes de trasladarse a un centro asistencial", "La cartilla no plantea ese orden: la obligación del colegio nace cuando toma conocimiento del hecho."),
+            ("Exigir al establecimiento que emita el D.I.A.E. en el momento", "El D.I.A.E. es la denuncia, no el medio de prueba del trayecto, y además el texto contempla que el colegio no actúe."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_evaluar", "medio",
+        "¿Con qué propósito la cartilla incluye una sección titulada «Lo que el "
+        "seguro no resuelve»?",
+        "Para acotar el alcance del beneficio y evitar que el lector se forme una "
+        "expectativa equivocada",
+        "La sección declara su propósito en la primera línea: «conviene ser claro "
+        "sobre los límites, para no generar una expectativa equivocada». Enumera "
+        "entonces lo que queda fuera —enfermedades comunes, tratamientos ajenos al "
+        "accidente, atenciones en el sistema privado— y aclara que no reemplaza a "
+        "Fonasa ni a una isapre.\n\nUn texto informativo que solo enumerara "
+        "beneficios sería más persuasivo y menos útil: acotar el alcance es parte "
+        "de informar bien.",
+        [
+            ("Para desalentar el uso del seguro en casos de baja gravedad", "La cartilla no distingue por gravedad ni sugiere abstenerse de usarlo."),
+            ("Para justificar por qué el beneficio es gratuito", "La gratuidad no se justifica en ninguna parte: se presenta como un hecho."),
+            ("Para explicar por qué el seguro es poco conocido", "El desconocimiento se menciona al comienzo del texto y se atribuye a otra causa."),
+        ],
+    ),
+    _ql(
+        "seguro_escolar", "lec_evaluar", "dificil",
+        "Un estudiante se lesiona volviendo del colegio, después de desviarse a "
+        "comprar a un almacén. La familia paga la atención porque el colegio no "
+        "denunció el accidente ese mismo día. Según la cartilla, ¿qué se puede "
+        "afirmar de esa situación?",
+        "Que la familia pudo haber hecho la denuncia por su cuenta, aunque la "
+        "cobertura del trayecto era discutible por el desvío",
+        "La cartilla resuelve las dos mitades del caso por separado. Sobre la "
+        "denuncia: pasadas veinticuatro horas, el accidentado o su representante "
+        "pueden presentarla, y «la inacción del establecimiento no extingue el "
+        "derecho». Sobre la cobertura: el trayecto debe ser «directo», y la tabla "
+        "clasifica el desvío como un caso que «puede quedar fuera».\n\nLa respuesta "
+        "correcta es la única que no confunde ambos problemas: uno es de "
+        "procedimiento y el otro es de fondo.",
+        [
+            ("Que el accidente estaba cubierto y la familia solo debió esperar a que el colegio actuara", "Ninguna de las dos cosas se sostiene: el desvío vuelve discutible la cobertura, y la cartilla habilita a la familia a no esperar."),
+            ("Que el accidente no estaba cubierto, porque la denuncia no se presentó el mismo día", "El plazo de veinticuatro horas no extingue la cobertura: habilita a otras personas a denunciar."),
+            ("Que la familia no tenía nada que hacer, porque la denuncia solo puede presentarla el establecimiento", "La cartilla contempla expresamente que la presenten el médico tratante, el accidentado o su representante."),
+        ],
+    ),
     # ---------- 'El derecho a cambiar de opinión' ----------
     _ql(
         "cambiar_opinion", "lec_localizar", "medio",
