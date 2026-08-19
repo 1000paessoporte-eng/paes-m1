@@ -21383,6 +21383,100 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "residuos_hogar",
+        "title": "Los residuos que genera un hogar chileno",
+        "kind": "discontinuo",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de cifras públicas del "
+            "Ministerio del Medio Ambiente sobre residuos municipales."
+        ),
+        "body": (
+            "**Informe: los residuos que genera un hogar chileno**\n\n"
+            "Chile produce alrededor de 19,6 millones de toneladas de residuos al "
+            "año. De ese total, cerca de nueve millones corresponden a residuos "
+            "municipales, es decir, a lo que sale de las casas, los comercios "
+            "pequeños y las oficinas, y que los municipios están obligados a "
+            "recoger. El resto proviene de la industria, la construcción y la "
+            "minería, y se rige por otras reglas.\n\n"
+            "La cifra por sí sola dice poco. Conviene traducirla a la escala de una "
+            "persona.\n\n"
+            "| Indicador | Valor |\n"
+            "|---|---|\n"
+            "| Residuos municipales generados al año | 9 millones de toneladas |\n"
+            "| Generación por habitante al día | 1,27 kilos |\n"
+            "| Generación por habitante al año | 463 kilos |\n"
+            "| Residuos que terminan en disposición final | 86% |\n"
+            "| Reciclaje efectivo de residuos domiciliarios | menos de 10% |\n"
+            "| Meta oficial de valorización al año 2040 | 75% |\n\n"
+            "Cuatrocientos sesenta y tres kilos es, aproximadamente, el peso de un "
+            "caballo adulto. Cada habitante del país produce esa cantidad de basura "
+            "cada doce meses, y la produce sin verla: el camión pasa de madrugada y "
+            "el problema desaparece de la vereda antes de que la mayoría se "
+            "levante.\n\n"
+            "Esa invisibilidad explica buena parte de la inercia. A diferencia del "
+            "humo de una chimenea o del ruido de una faena, los residuos "
+            "domiciliarios no molestan a quien los genera, sino a quien vive cerca "
+            "del lugar donde terminan. El costo se traslada, y quien lo paga rara "
+            "vez es quien lo produce.\n\n"
+            "**Dónde termina lo que botamos**\n\n"
+            "| Destino | Porcentaje aproximado |\n"
+            "|---|---|\n"
+            "| Disposición final (rellenos sanitarios y vertederos) | 86% |\n"
+            "| Valorización (reciclaje, compostaje y otros usos) | 14% |\n\n"
+            "El segundo dato merece una advertencia, porque suele leerse mal. "
+            "«Valorización» no es sinónimo de «reciclaje»: incluye también el "
+            "compostaje, la recuperación de energía y otros destinos que no "
+            "devuelven el material al ciclo productivo. Cuando se aísla el "
+            "reciclaje efectivo de lo que sale de los hogares, la cifra cae por "
+            "debajo del 10%. Es decir, de cada diez envases que una familia separa "
+            "con cuidado, menos de uno vuelve a convertirse en materia prima.\n\n"
+            "**Nota metodológica**\n\n"
+            "Las cifras de residuos municipales no son directamente comparables "
+            "entre estudios. Tres decisiones explican la mayor parte de las "
+            "diferencias. La primera es qué se cuenta como residuo municipal: "
+            "algunos informes incluyen el barrido de calles y las ferias libres, y "
+            "otros no. La segunda es dónde se mide: si el dato proviene de la "
+            "báscula del relleno sanitario, queda fuera todo lo que se recuperó "
+            "antes de llegar allí, incluido el trabajo de los recicladores de base. "
+            "La tercera es cuándo: la generación sube en verano y en diciembre, de "
+            "modo que un promedio anual esconde variaciones importantes. Por eso "
+            "las cifras de este informe se presentan redondeadas y como órdenes de "
+            "magnitud, no como mediciones exactas.\n\n"
+            "**La distancia entre la meta y el punto de partida**\n\n"
+            "Chile se propuso valorizar el 75% de sus residuos hacia el año 2040. "
+            "Enunciada así, la meta parece una cuestión de esfuerzo. Puesta al lado "
+            "del 14% actual, se ve lo que realmente exige: multiplicar por más de "
+            "cinco la fracción que hoy no llega al relleno, y hacerlo en quince "
+            "años.\n\n"
+            "El marco legal existe desde 2016, cuando entró en vigencia la ley de "
+            "responsabilidad extendida del productor, que obliga a las empresas a "
+            "hacerse cargo de los envases que ponen en el mercado. Pero una ley "
+            "establece obligaciones, no capacidad instalada: para reciclar un "
+            "envase hace falta que alguien lo separe en el origen, que un camión lo "
+            "retire sin mezclarlo, que una planta lo procese y, sobre todo, que "
+            "exista un comprador dispuesto a pagar por el material resultante. Si "
+            "cualquiera de esos cuatro eslabones falta, el envase termina en el "
+            "relleno aunque la familia lo haya lavado y separado.\n\n"
+            "Ese último eslabón es el menos discutido y el más determinante. El "
+            "reciclaje no es un gesto moral: es una cadena industrial que funciona "
+            "cuando el material recuperado compite en precio con el material "
+            "virgen. Cuando el petróleo baja, el plástico nuevo se vuelve más "
+            "barato que el reciclado, y las plantas de reciclaje se quedan sin "
+            "negocio. Ninguna campaña de concientización corrige eso.\n\n"
+            "De ahí que las políticas más eficaces no sean las que apelan a la "
+            "conciencia del consumidor, sino las que intervienen antes: envases "
+            "diseñados para poder separarse, sistemas de retorno con incentivo "
+            "económico, y exigencias de contenido reciclado mínimo que garanticen "
+            "demanda por el material recuperado. La responsabilidad individual "
+            "importa, pero llega tarde en la cadena.\n\n"
+            "Queda una pregunta que los datos no responden y que conviene dejar "
+            "planteada: si cada habitante genera 463 kilos al año, ¿el objetivo "
+            "debería ser reciclar mejor esos 463 kilos, o generar menos? La meta de "
+            "valorización responde lo primero. Sobre lo segundo, Chile todavía no "
+            "se ha fijado ninguna meta."
+        ),
+    },
+    {
         "key": "a_la_deriva",
         "title": "A la deriva",
         "kind": "literario",
@@ -22705,6 +22799,159 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Los residuos que genera un hogar chileno' ----------
+    _ql(
+        "residuos_hogar", "lec_localizar", "facil",
+        "Según la primera tabla, ¿cuántos kilos de residuos genera al año cada "
+        "habitante del país?",
+        "463 kilos",
+        "La tabla entrega el dato en una fila propia: «Generación por habitante al "
+        "año | 463 kilos». La fila anterior da la misma información en escala "
+        "diaria, 1,27 kilos.\n\nLa tarea es leer la tabla y elegir la fila que "
+        "corresponde a la unidad que pide la pregunta.",
+        [
+            ("1,27 kilos", "Ese es el dato DIARIO; el anual está en la fila siguiente."),
+            ("9 millones de toneladas", "Ese es el total del país, no lo que corresponde a cada habitante."),
+            ("19,6 millones de toneladas", "Ese total incluye industria, construcción y minería, y aparece en el texto y no en la tabla."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_localizar", "medio",
+        "Según la nota metodológica, ¿qué información queda fuera cuando el dato se "
+        "toma de la báscula del relleno sanitario?",
+        "Todo lo que se recuperó antes de llegar al relleno, incluido el trabajo de "
+        "los recicladores de base",
+        "La nota lo dice de forma directa: «si el dato proviene de la báscula del "
+        "relleno sanitario, queda fuera todo lo que se recuperó antes de llegar "
+        "allí, incluido el trabajo de los recicladores de base».\n\nEl dato está "
+        "explícito; lo que exige la pregunta es haber leído la nota y no solo las "
+        "tablas.",
+        [
+            ("Los residuos generados por la industria y la construcción", "Esos quedan fuera por definición del concepto de residuo municipal, no por dónde se mida."),
+            ("Las variaciones de generación entre el verano y el invierno", "Ese es el tercer problema que menciona la nota, el del CUÁNDO se mide, no el del dónde."),
+            ("El barrido de calles y los residuos de las ferias libres", "Ese es el primer problema, el de qué se cuenta como residuo municipal, y depende del criterio de cada informe."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_localizar", "medio",
+        "De acuerdo con el informe, ¿desde cuándo existe en Chile la ley de "
+        "responsabilidad extendida del productor?",
+        "Desde 2016",
+        "El texto lo sitúa con precisión: «el marco legal existe desde 2016, cuando "
+        "entró en vigencia la ley de responsabilidad extendida del productor, que "
+        "obliga a las empresas a hacerse cargo de los envases que ponen en el "
+        "mercado».\n\nEs un dato explícito, entregado en el cuerpo del texto y no "
+        "en las tablas.",
+        [
+            ("Desde 2040", "Ese es el año de la meta de valorización, no el de la ley."),
+            ("Desde que se fijó la meta del 75% de valorización", "El texto no vincula ambas fechas: la ley es de 2016 y la meta apunta a 2040."),
+            ("El informe no lo precisa", "Sí lo precisa: dice expresamente «desde 2016»."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_interpretar", "medio",
+        "¿Qué función cumple la comparación entre los 463 kilos anuales y el peso "
+        "de un caballo adulto?",
+        "Traducir una cifra abstracta a una magnitud que el lector pueda imaginar",
+        "El texto anuncia esa intención antes de la tabla: «la cifra por sí sola "
+        "dice poco. Conviene traducirla a la escala de una persona». La comparación "
+        "con el caballo remata esa operación: convierte un número en un volumen "
+        "físico reconocible.\n\nReconocer para qué está puesto un recurso es tarea "
+        "de interpretar.",
+        [
+            ("Demostrar que los residuos domiciliarios pesan más de lo que se cree", "La comparación no aporta un dato nuevo: ilustra el que la tabla ya entregó."),
+            ("Comparar la generación de residuos de Chile con la de otros países", "El informe no hace ninguna comparación internacional."),
+            ("Explicar por qué los camiones recolectores pasan de madrugada", "El horario del camión se menciona después y con otro propósito: mostrar que el problema es invisible para quien lo genera."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre la segunda tabla y el párrafo que viene "
+        "inmediatamente después?",
+        "El párrafo advierte que el 14% de la tabla no debe leerse como reciclaje, "
+        "porque la valorización incluye otros destinos",
+        "La tabla presenta un 14% de valorización. El párrafo siguiente corrige de "
+        "inmediato la lectura fácil de ese número: «valorización» no es sinónimo de "
+        "«reciclaje», e incluye compostaje y recuperación de energía. Aislado el "
+        "reciclaje efectivo, la cifra «cae por debajo del 10%».\n\nLa relación es "
+        "de matización: el texto entrega un dato y enseguida acota cómo debe "
+        "entenderse.",
+        [
+            ("El párrafo confirma la cifra de la tabla con un ejemplo de la vida cotidiana", "El ejemplo de los diez envases no confirma el 14%: ilustra que el reciclaje real es bastante menor."),
+            ("El párrafo explica por qué el 86% restante termina en rellenos sanitarios", "Las razones del 86% no se explican ahí, sino más adelante, con la cadena industrial."),
+            ("El párrafo cuestiona la fuente de la que provienen los datos de la tabla", "La discusión sobre las fuentes está en la nota metodológica, y no pone en duda esta cifra en particular."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_interpretar", "dificil",
+        "¿Cuál es la idea principal de la sección que describe los cuatro eslabones "
+        "de la cadena del reciclaje?",
+        "Que reciclar depende de una cadena industrial completa, y que basta con "
+        "que falte un eslabón para que el envase termine en el relleno",
+        "El texto enumera los cuatro requisitos —separar, retirar sin mezclar, "
+        "procesar y encontrar comprador— y saca la conclusión él mismo: «si "
+        "cualquiera de esos cuatro eslabones falta, el envase termina en el relleno "
+        "aunque la familia lo haya lavado y separado».\n\nDeterminar la idea "
+        "principal exige distinguir lo que el texto afirma de los detalles con que "
+        "lo ilustra.",
+        [
+            ("Que la ley de responsabilidad extendida del productor no se ha cumplido", "El texto no dice que se incumpla: dice que una ley establece obligaciones pero no capacidad instalada."),
+            ("Que las familias no separan correctamente sus residuos en el origen", "El texto supone lo contrario en su ejemplo: la familia lava y separa, y aun así el envase se pierde."),
+            ("Que faltan plantas de procesamiento en el país", "El procesamiento es solo uno de los cuatro eslabones, y el texto señala que el más determinante es otro: la demanda."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_interpretar", "dificil",
+        "¿Por qué el informe sostiene que el reciclaje «no es un gesto moral»?",
+        "Porque su funcionamiento depende de que el material recuperado compita en "
+        "precio con el material nuevo",
+        "El texto lo argumenta con un mecanismo económico concreto: «cuando el "
+        "petróleo baja, el plástico nuevo se vuelve más barato que el reciclado, y "
+        "las plantas de reciclaje se quedan sin negocio». Y remata: «ninguna "
+        "campaña de concientización corrige eso».\n\nLa frase no descalifica la "
+        "voluntad de reciclar; sostiene que la voluntad no basta cuando el precio "
+        "juega en contra.",
+        [
+            ("Porque las familias reciclan por obligación legal y no por convicción", "El texto no atribuye motivaciones a las familias ni menciona ninguna obligación para ellas."),
+            ("Porque el compostaje y la recuperación de energía son mejores alternativas", "Esos destinos se mencionan solo para aclarar qué incluye la valorización, no como recomendación."),
+            ("Porque la responsabilidad recae en las empresas y no en los consumidores", "El texto reparte responsabilidades de otro modo: dice que la individual «llega tarde en la cadena», no que no exista."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_evaluar", "medio",
+        "¿Qué función cumple la nota metodológica dentro del informe?",
+        "Advertir sobre los límites de las propias cifras que el informe entrega",
+        "La nota no agrega datos: explica por qué los datos ya entregados no son "
+        "comparables entre estudios, y por eso el informe declara que sus cifras "
+        "van «redondeadas y como órdenes de magnitud, no como mediciones "
+        "exactas».\n\nJuzgar la suficiencia y la consistencia de la información de "
+        "un texto es una tarea de evaluar, y acá el propio emisor la hace sobre sí "
+        "mismo.",
+        [
+            ("Justificar por qué el informe eligió trabajar con residuos municipales", "Esa delimitación se explica en el primer párrafo, y no es lo que la nota discute."),
+            ("Demostrar que los datos oficiales sobre residuos son poco confiables", "La nota no descalifica los datos: explica por qué difieren entre estudios y cómo deben leerse."),
+            ("Detallar el procedimiento con que se recogieron los datos en terreno", "El informe no recogió datos en terreno: trabaja con cifras públicas ya publicadas."),
+        ],
+    ),
+    _ql(
+        "residuos_hogar", "lec_evaluar", "dificil",
+        "¿Qué postura adopta el emisor respecto de las campañas que apelan a la "
+        "conciencia del consumidor?",
+        "Sostiene que no son inútiles, pero que intervienen demasiado tarde en la "
+        "cadena para resolver el problema",
+        "El emisor es explícito en las dos direcciones. Por un lado afirma que "
+        "«ninguna campaña de concientización» corrige el desajuste de precios, y "
+        "que las políticas eficaces «no son las que apelan a la conciencia del "
+        "consumidor». Por otro, cierra reconociendo que «la responsabilidad "
+        "individual importa, pero llega tarde en la cadena».\n\nCalificar esa "
+        "postura exige leer las dos afirmaciones juntas: no es rechazo, es una "
+        "cuestión de orden y de momento.",
+        [
+            ("Sostiene que son la herramienta más eficaz de que se dispone hoy", "Afirma justo lo contrario: las políticas más eficaces son las que intervienen antes en la cadena."),
+            ("Sostiene que son inútiles y deberían dejar de financiarse", "El texto no llega a eso: reconoce que la responsabilidad individual importa, y no propone eliminar nada."),
+            ("No se pronuncia sobre ellas y se limita a exponer los datos", "Se pronuncia dos veces, y en el párrafo final propone qué políticas deberían preferirse."),
+        ],
+    ),
     # ---------- 'A la deriva' ----------
     _ql(
         "a_la_deriva", "lec_localizar", "facil",
