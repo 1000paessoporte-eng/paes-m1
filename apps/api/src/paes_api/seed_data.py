@@ -1788,7 +1788,7 @@ QUESTIONS = [
         [
             ("500 m", "Esa es la distancia en línea recta, no el ahorro respecto del camino largo."),
             ("700 m", "Ese es el camino por las calles: si se ahorrara todo, no habría que caminar nada."),
-            ("100 m", "Restó mal: 700 menos 500 son 200 metros."),
+            ("300 m", "Se quedó con el tramo hacia el norte, que es parte del camino y no el ahorro."),
         ],
     ),
     _q(
@@ -9596,7 +9596,7 @@ QUESTIONS += [
         "4) Vale la pena memorizar las equivalencias más usadas: 50% es 1/2, "
         "25% es 1/4, 20% es 1/5 y 10% es 1/10.",
         [
-            ("1/25", "Esa fracción equivale al 4%, no al 25%."),
+            ("3/4", "Esa fracción equivale al 75%, que es lo que sobra al quitar el 25%."),
             ("2/5", "Esa fracción equivale al 40%."),
             ("1/2", "Esa fracción equivale al 50%."),
         ],
@@ -9627,7 +9627,7 @@ QUESTIONS += [
         "2) Réstalo: 16.000 − 1.600 = 14.400.\n"
         "3) Camino directo: 16.000 · 0,9 = 14.400.",
         [
-            ("$1.600", "Calculó el descuento pero no lo restó del precio."),
+            ("$16.000", "Entregó el precio de lista, sin aplicarle el descuento."),
             ("$17.600", "Sumó el 10% en lugar de restarlo."),
             ("$15.900", "Restó 100 pesos en vez del 10% del precio."),
         ],
@@ -9657,7 +9657,7 @@ QUESTIONS += [
         "3) Multiplica por 100: 3/10 · 100 = 30. El resultado es 30%.",
         [
             ("70%", "Calculó el porcentaje de la parte restante."),
-            ("18%", "Tomó la cantidad como si ya fuera un porcentaje."),
+            ("42%", "Restó la parte del total y usó esa diferencia como si fuera el porcentaje."),
             ("333%", "Dividió el total por la parte en lugar de la parte por el total."),
         ],
     ),
@@ -9671,7 +9671,7 @@ QUESTIONS += [
         "3) Un cuarto equivale al 25%.",
         [
             ("75%", "Calculó el porcentaje de la parte restante."),
-            ("9%", "Tomó la cantidad como si fuera directamente un porcentaje."),
+            ("27%", "Restó la parte del total y usó esa diferencia como si fuera el porcentaje."),
             ("400%", "Dividió el total por la parte."),
         ],
     ),
@@ -9686,7 +9686,7 @@ QUESTIONS += [
         "4) Verifica: el 40% de 15.000 es 6.000, y 15.000 − 6.000 = 9.000.",
         [
             ("$12.600", "Le sumó un 40% al precio final en lugar de deshacer el descuento."),
-            ("$22.500", "Dividió por 0,4 en vez de por 0,6, usando el porcentaje descontado."),
+            ("$9.000", "Entregó el precio ya rebajado, que es el dato del enunciado y no lo que se pregunta."),
             ("$13.000", "Sumó los 4.000 del descuento estimado a ojo."),
         ],
     ),
@@ -9700,7 +9700,7 @@ QUESTIONS += [
         "3) Multiplica por 100: 25%.\n"
         "4) Error frecuente: dividir por el precio final, que daría 20%.",
         [
-            ("20%", "Dividió el aumento por el precio final en lugar del inicial."),
+            ("80%", "Calculó qué porcentaje es el precio inicial del final, no cuánto subió."),
             ("2.000%", "Entregó la diferencia en pesos como si fuera un porcentaje."),
             ("125%", "Dividió el precio final por el inicial sin restar antes."),
         ],
@@ -9746,7 +9746,7 @@ QUESTIONS += [
         [
             ("6,75", "Calculó el 15% de 45 en lugar de despejar el total."),
             ("51,75", "Le sumó un 15% al 45."),
-            ("675", "Multiplicó por 15 en vez de dividir por 0,15."),
+            ("45", "Entregó el 45 del enunciado, que es la parte y no el total."),
         ],
     ),
     _q(
@@ -9874,7 +9874,7 @@ QUESTIONS += [
         [
             ("$19.278", "Restó el 19% del precio con IVA en vez de dividir por 1,19."),
             ("$4.522", "Calculó el 19% del precio con IVA, que tampoco es el impuesto real."),
-            ("$28.322", "Sumó el 19% en lugar de quitarlo."),
+            ("$3.800", "Entregó el monto del IVA en lugar del precio neto."),
         ],
     ),
     _q(
@@ -9890,7 +9890,7 @@ QUESTIONS += [
         [
             ("250", "Supuso que un porcentaje nunca puede superar la cantidad original."),
             ("50", "Calculó solo el 20% adicional, sin sumar el 100%."),
-            ("30.000", "Multiplicó por 120 sin dividir por 100."),
+            ("200", "Restó el 20% en lugar de sumarlo al 100%."),
         ],
     ),
     # ==================================================================
@@ -10430,7 +10430,7 @@ QUESTIONS += [
         [
             ("140 m", "Sumó los lados sin elevarlos al cuadrado."),
             ("4.800 m", "Calculó el área de la cancha en lugar de la diagonal."),
-            ("20 m", "Restó los lados en vez de aplicar el teorema."),
+            ("280 m", "Calculó el perímetro de la cancha en lugar de su diagonal."),
         ],
     ),
     _q(
@@ -10463,7 +10463,7 @@ QUESTIONS += [
         [
             ("30 cm²", "Usó la hipotenusa como si fuera un cateto: (6 · 10)/2."),
             ("48 cm²", "Multiplicó los catetos pero olvidó dividir por 2."),
-            ("8 cm²", "Entregó la medida del cateto faltante en lugar del área."),
+            ("60 cm²", "Multiplicó los dos datos sin dividir por 2."),
         ],
     ),
     _q(
@@ -11410,7 +11410,7 @@ QUESTIONS += [
         "4) Que el resultado coincida con uno de los datos es casualidad; el rango "
         "es una medida de dispersión, no un dato del conjunto.",
         [
-            ("102", "Sumó el máximo y el mínimo en lugar de restarlos."),
+            ("12", "Entregó solo el valor mínimo."),
             ("45", "Entregó la mediana del conjunto."),
             ("90", "Entregó solo el valor máximo."),
         ],
@@ -11443,8 +11443,8 @@ QUESTIONS += [
         "los que quedan sube.",
         [
             ("1", "Restó los dos promedios en lugar de las sumas totales."),
-            ("12", "Supuso que el número eliminado era igual al promedio original."),
-            ("13", "Entregó el nuevo promedio en lugar del dato eliminado."),
+            ("4", "Multiplicó la diferencia de los promedios por 4 en vez de restar las sumas totales."),
+            ("5", "Multiplicó la diferencia de los promedios por 5."),
         ],
     ),
     _q(
@@ -11459,8 +11459,8 @@ QUESTIONS += [
         "4) Verifica: (5,0 + 6,0 + 4,5 + 6,5)/4 = 22/4 = 5,5.",
         [
             ("5,5", "Supuso que basta con obtener exactamente el promedio buscado."),
-            ("7,0", "Sobreestimó la nota necesaria sin plantear la suma total."),
-            ("22", "Entregó la suma total requerida en lugar de la nota que falta."),
+            ("5,2", "Entregó el promedio que lleva hasta ahora."),
+            ("6,0", "Supuso que le basta con repetir su mejor nota."),
         ],
     ),
     _q(
@@ -11504,8 +11504,8 @@ QUESTIONS += [
         "4) Quedan tres datos a cada lado, que es justamente lo que define a la "
         "mediana.",
         [
-            ("19,5", "Promedió dos valores centrales, algo que solo corresponde con cantidad par de datos."),
-            ("22", "Contó desde el extremo equivocado tras ordenar."),
+            ("15", "Tomó el dato anterior al central en la lista ordenada."),
+            ("8", "Entregó el dato mínimo en lugar del central."),
             ("18,7", "Calculó la media en lugar de la mediana."),
         ],
     ),
@@ -11523,8 +11523,8 @@ QUESTIONS += [
         "($400.000) suele describir mejor al grupo.",
         [
             ("$400.000", "Entregó la mediana, que describe mejor al grupo pero no es lo que se pide."),
-            ("$1.200.000", "Promedió los dos valores distintos sin considerar cuántas personas gana cada uno."),
-            ("$3.600.000", "Sumó los sueldos pero no dividió por la cantidad de personas."),
+            ("$480.000", "Sumó un solo sueldo de $400.000 en vez de los cuatro."),
+            ("$600.000", "Dividió el total entre 6 en lugar de entre las 5 personas."),
         ],
     ),
     _q(
@@ -11569,7 +11569,7 @@ QUESTIONS += [
         [
             ("35", "Sumó los datos pero no dividió por la cantidad."),
             ("8", "Calculó el rango dividido por 1 en lugar del promedio."),
-            ("5", "Entregó la cantidad de datos en lugar de su promedio."),
+            ("8,75", "Dividió la suma por 4, olvidando uno de los datos."),
         ],
     ),
     # ---------- prob_combinatoria ----------
@@ -12811,7 +12811,7 @@ QUESTIONS += [
         "4) El sendero mide 20 m. Comprueba que sea razonable: la diagonal siempre es mayor que cada lado y menor que la suma de ambos, y 20 está entre 16 y 28.",
         [
             ("28 m", "Sumó los dos lados en lugar de aplicar el teorema."),
-            ("14 m", "Promedió los dos lados."),
+            ("192 m", "Calculó el área del jardín en lugar del sendero que lo cruza."),
             ("400 m", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
         ],
     ),
@@ -12825,7 +12825,7 @@ QUESTIONS += [
         "3) La rampa mide 25 m.",
         [
             ("31 m", "Sumó la altura y la base en vez de aplicar el teorema."),
-            ("23 m", "Restó los cuadrados en lugar de sumarlos, como si la rampa fuera un cateto."),
+            ("168 m", "Multiplicó la altura por la base en lugar de sumar sus cuadrados."),
             ("625 m", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
         ],
     ),
@@ -12840,7 +12840,7 @@ QUESTIONS += [
         "4) El tirante mide 30 m.",
         [
             ("42 m", "Sumó las dos medidas sin elevarlas al cuadrado."),
-            ("6 m", "Restó las dos medidas."),
+            ("432 m", "Multiplicó las dos medidas en lugar de sumar sus cuadrados."),
             ("900 m", "Se quedó en la suma de los cuadrados sin sacar la raíz."),
         ],
     ),
@@ -12941,7 +12941,7 @@ QUESTIONS += [
         [
             ("240 cm²", "Multiplicó los catetos pero olvidó dividir por 2."),
             ("130 cm²", "Usó la hipotenusa de 26 cm como altura en lugar de un cateto."),
-            ("26 cm²", "Calculó la hipotenusa, que no es lo que se pide."),
+            ("260 cm²", "Multiplicó la hipotenusa de 26 cm por el cateto de 10 cm, sin dividir por 2."),
         ],
     ),
     _q(
@@ -13059,7 +13059,7 @@ QUESTIONS += [
         "4) Saca la raíz: h = √144 = 12 cm.",
         [
             ("8,3 cm", "Usó la base completa de 10 cm como cateto, en vez de su mitad."),
-            ("18 cm", "Sumó el lado igual y la mitad de la base en vez de aplicar el teorema."),
+            ("5 cm", "Tomó la mitad de la base como si fuera la altura."),
             ("6,5 cm", "Tomó la mitad del lado igual en vez de aplicar el teorema."),
         ],
     ),
@@ -13119,7 +13119,7 @@ QUESTIONS += [
         "4) Como son dos cables: 25 · 2 = 50 m en total. Olvidar este último paso es el error más frecuente de esta pregunta.",
         [
             ("25 m", "Calculó bien un cable pero olvidó que son dos."),
-            ("62 m", "Sumó las medidas sin elevarlas al cuadrado y después duplicó."),
+            ("48 m", "Duplicó la altura de la antena en lugar de duplicar la longitud del cable."),
             ("31 m", "Sumó la altura y la distancia de un solo cable, sin aplicar el teorema."),
         ],
     ),
@@ -13223,7 +13223,7 @@ QUESTIONS += [
         "3) El área es L²: 8 · 8 = 64.\n"
         "4) El área es 64 cm². Comprobación: con lado 8, la diagonal sería √(64 + 64) = √128 = 8√2 ✓.",
         [
-            ("128 cm²", "Elevó la diagonal al cuadrado y tomó ese valor como área, sin dividir por 2."),
+            ("8 cm²", "Entregó la medida del lado en lugar del área."),
             ("32 cm²", "Calculó el área del triángulo formado por la diagonal en vez del cuadrado completo."),
             ("16 cm²", "Tomó 4 como lado, dividiendo la diagonal por 2 en lugar de por √2."),
         ],
@@ -13316,7 +13316,7 @@ QUESTIONS += [
         "4) La cuerda completa es el doble: 12 · 2 = 24 cm. Olvidar este último paso es el error más frecuente acá.",
         [
             ("12 cm", "Calculó bien la mitad de la cuerda pero olvidó duplicarla."),
-            ("26 cm", "Usó el diámetro completo como respuesta, sin considerar la distancia al centro."),
+            ("10 cm", "Duplicó la distancia al centro en vez de duplicar la mitad de la cuerda."),
             ("8 cm", "Restó las medidas directamente en lugar de restar sus cuadrados."),
         ],
     ),
@@ -15326,7 +15326,7 @@ QUESTIONS += [
         "2) Multiplica: 350 · 0,4 = 140.\n"
         "3) Otra forma: el 10% de 350 es 35, y el 40% son cuatro veces eso: 4 · 35 = 140 ✓.",
         [
-            ("14", "Calculó el 4% en lugar del 40%."),
+            ("210", "Calculó el 60%, que es la parte que sobra, en lugar del 40% que se pide."),
             ("875", "Dividió por el porcentaje en vez de multiplicar."),
             ("310", "Restó 40 al total en lugar de calcular el porcentaje."),
         ],
@@ -15383,8 +15383,8 @@ QUESTIONS += [
         "3) Comprueba: 200 · 0,75 = 150 ✓.",
         [
             ("50", "Calculó el 25% en lugar del 75%, o sea la parte que sobra."),
-            ("175", "Restó 25 al total en vez de calcular tres cuartos."),
-            ("1.500", "Se corrió un lugar al multiplicar."),
+            ("75", "Tomó el número del porcentaje como si fuera ya la cantidad."),
+            ("100", "Calculó el 50% en lugar del 75%."),
         ],
     ),
     _q(
@@ -15829,9 +15829,9 @@ QUESTIONS += [
         "2) Cuenta los datos: son 6.\n"
         "3) Divide: 42 ÷ 6 = 7.",
         [
-            ("42", "Se quedó en la suma sin dividir por la cantidad de datos."),
+            ("3,5", "Dividió la suma por 12, el dato mayor, en lugar de por la cantidad de datos."),
             ("6", "Dio la cantidad de datos en lugar de la media."),
-            ("10", "Calculó el rango, que es 12 − 2, en vez de la media."),
+            ("4", "Promedió solo los tres primeros datos."),
         ],
     ),
     _q(
@@ -15902,7 +15902,7 @@ QUESTIONS += [
         [
             ("54", "Se quedó en la suma sin dividir."),
             ("27", "Dividió por 2 en lugar de por 3."),
-            ("8", "Calculó el rango en vez de la media."),
+            ("20", "Promedió solo los dos datos mayores."),
         ],
     ),
     _q(
@@ -15930,7 +15930,7 @@ QUESTIONS += [
         "3) Promedia: (4 + 7) ÷ 2 = 11 ÷ 2 = 5,5.\n"
         "4) La mediana no tiene por qué ser uno de los datos del conjunto.",
         [
-            ("4", "Tomó solo el primero de los dos datos centrales."),
+            ("8", "Promedió los dos datos mayores en lugar de los dos centrales."),
             ("7", "Tomó solo el segundo de los dos datos centrales."),
             ("6", "Calculó la media de los cuatro datos en vez de la mediana."),
         ],
@@ -15962,7 +15962,7 @@ QUESTIONS += [
         [
             ("14", "Tomó un dato de la mitad superior en vez de su mediana."),
             ("9", "Calculó la mediana del conjunto completo, que es Q2."),
-            ("16", "Dio el dato máximo en lugar del tercer cuartil."),
+            ("5", "Entregó Q1 en lugar de Q3."),
         ],
     ),
     _q(
@@ -16051,7 +16051,7 @@ QUESTIONS += [
         "4) El error clásico acá es responder 12: esa es la frecuencia, no el dato.",
         [
             ("12", "Dio la frecuencia más alta en lugar del dato al que corresponde."),
-            ("4", "Eligió la nota más baja en vez de la más frecuente."),
+            ("8", "Dio la frecuencia de la nota 4 en lugar de la moda."),
             ("6", "Eligió la nota más alta en vez de la más frecuente."),
         ],
     ),
@@ -16095,8 +16095,8 @@ QUESTIONS += [
         "3) Q3 es la mediana de la mitad superior: (13 + 15) ÷ 2 = 14.\n"
         "4) Rango intercuartílico: 14 − 6 = 8.",
         [
-            ("14", "Dio el valor de Q3 sin restarle Q1."),
-            ("20", "Sumó los dos cuartiles en lugar de restarlos."),
+            ("4", "Restó la mediana a Q3 en lugar de restarle Q1."),
+            ("2", "Restó los dos datos centrales en lugar de los cuartiles."),
             ("6", "Dio el valor de Q1 sin restarlo de Q3."),
         ],
     ),
