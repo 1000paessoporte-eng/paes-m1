@@ -21383,6 +21383,196 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "control_lectura",
+        "title": "El nombre del caballo",
+        "kind": "no_literario",
+        "source_note": (
+            "Columna de opinión original de 1000paes."
+        ),
+        "body": (
+            "Hay una estadística que se repite cada cierto tiempo en los diarios y "
+            "que siempre se comenta con el mismo tono de lamento: los jóvenes leen "
+            "poco. Después vienen las explicaciones de siempre —las pantallas, la "
+            "falta de hábito, la crisis de la atención— y la conversación se cierra "
+            "hasta el año siguiente. Quisiera proponer una explicación menos "
+            "cómoda, porque nos involucra: los jóvenes leen poco, en parte, porque "
+            "les enseñamos a leer de una manera que hace difícil que a alguien le "
+            "guste.\n\n"
+            "Conviene ser preciso, porque la queja general no sirve de nada. No "
+            "estoy diciendo que la lectura no deba enseñarse en el colegio, ni que "
+            "los estudiantes deban leer solo lo que les provoque. Estoy diciendo "
+            "algo más acotado: que el dispositivo con el que se enseña —una lista "
+            "de títulos obligatorios, una fecha, un control de lectura— produce con "
+            "notable eficiencia el resultado contrario al que declara buscar.\n\n"
+            "Pensemos en cómo funciona. A un curso completo se le asigna el mismo "
+            "libro, en la misma semana, para ser respondido en la misma prueba. La "
+            "prueba, casi siempre, verifica que el libro fue leído: qué le dijo tal "
+            "personaje a tal otro, en qué ciudad ocurre el capítulo cuarto, cómo se "
+            "llamaba el caballo. El estudiante entiende rápido cuál es la tarea, y "
+            "la tarea no es leer: es demostrar que leyó. Son cosas distintas, y "
+            "solo una de ellas se puede resolver con un resumen.\n\n"
+            "¿Alguien conoce un lector adulto que funcione así? ¿Alguien elige un "
+            "libro porque le corresponde en el calendario, lo termina en el plazo "
+            "asignado y después rinde una prueba sobre el nombre del caballo? La "
+            "experiencia que le ofrecemos a un adolescente durante doce años no se "
+            "parece en nada a la experiencia que después esperamos que busque por "
+            "su cuenta.\n\n"
+            "Se dirá que la obligación es inevitable, y en parte es cierto. Nadie "
+            "aprende a leer textos difíciles eligiendo siempre lo fácil, y hay "
+            "libros que solo se agradecen después. Un colegio que renunciara a "
+            "exigir estaría renunciando a enseñar. Concedido. Pero una cosa es "
+            "exigir esfuerzo y otra es exigir obediencia, y lo que se evalúa revela "
+            "cuál de las dos se está pidiendo en realidad.\n\n"
+            "El control de lectura tiene además un efecto que rara vez se discute: "
+            "define qué cuenta como haber leído bien. Si la prueba pregunta por "
+            "datos verificables, el alumno que se conmovió con el libro pero olvidó "
+            "el nombre del caballo obtiene peor nota que el que no lo abrió y "
+            "memorizó un resumen. No es un accidente ni un mal diseño ocasional: es "
+            "lo que el instrumento mide. Y todo instrumento de evaluación termina "
+            "enseñando lo que mide, aunque el profesor haya querido enseñar otra "
+            "cosa.\n\n"
+            "Alguien podrá responder que existen formas más ricas de evaluar, y es "
+            "verdad. El problema es que casi todas exigen algo que el sistema no "
+            "entrega: tiempo. Un ensayo breve sobre un libro, leído con atención y "
+            "devuelto con comentarios, es incomparablemente mejor que un "
+            "cuestionario. También es incomparablemente más lento de corregir, y "
+            "quien tiene cuatrocientos estudiantes no puede hacerlo cuarenta veces "
+            "al año. La prueba de alternativas no sobrevive porque nadie haya "
+            "pensado en algo mejor. Sobrevive porque es lo único que cabe en el "
+            "horario.\n\n"
+            "Hay una prueba sencilla para verificar todo esto, y cualquiera puede "
+            "hacerla. Pregúntele a un adulto qué libros leyó en el colegio. Va a "
+            "recordar tres o cuatro títulos y, casi siempre, va a recordarlos con "
+            "el tono con que uno recuerda una operación dental: sin rencor, pero "
+            "sin ganas de repetirla. Pregúntele después qué libro lo marcó de "
+            "verdad. Con una frecuencia que debería avergonzarnos, el segundo no "
+            "estaba en la lista: lo encontró solo, por accidente, y muchas veces en "
+            "contra del calendario escolar. Doce años de mediación cuidadosamente "
+            "planificada y el libro que quedó fue el que nadie le mandó a leer.\n\n"
+            "De ahí que la discusión sobre listas de lectura suela ser estéril. Se "
+            "pelea por los títulos —que si hay que sacar a los clásicos, que si hay "
+            "que poner autores vivos, que si literatura chilena o traducida— y esa "
+            "pelea distrae de lo que de verdad decide el resultado. Un libro "
+            "extraordinario evaluado con un cuestionario de datos produce lectores "
+            "resignados. Un libro mediocre discutido con seriedad puede producir "
+            "uno.\n\n"
+            "Propongo, entonces, un desplazamiento modesto y probablemente "
+            "insuficiente: que la unidad de la evaluación deje de ser el libro y "
+            "pase a ser la lectura. Que se pregunte menos por lo que el texto dice "
+            "y más por lo que el estudiante hizo con él. Que se acepte como "
+            "respuesta válida una lectura discutible siempre que esté fundada en el "
+            "texto, y que no se acepte una correcta que no lo esté. Que el alumno "
+            "pueda escribir que el libro le pareció aburrido y obtener una buena "
+            "nota si logra explicar por qué, con el libro en la mano.\n\n"
+            "No es una idea nueva ni particularmente audaz. Es, de hecho, lo que "
+            "hace cualquier lector cuando comenta un libro con un amigo. Lo "
+            "llamativo es cuánto se parece eso a lo que declaran perseguir los "
+            "programas de estudio, y cuán poco se parece a lo que ocurre el jueves "
+            "a primera hora, cuando se reparte el control de lectura.\n\n"
+            "Los jóvenes leen poco, dice la estadística. Puede ser. Pero antes de "
+            "responsabilizar a las pantallas convendría preguntarse qué versión de "
+            "la lectura conocieron durante doce años, y si alguno de nosotros "
+            "habría seguido leyendo si esa hubiera sido la única que nos tocó."
+        ),
+    },
+    {
+        "key": "olvido_memoria",
+        "title": "Para qué sirve olvidar",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes."
+        ),
+        "body": (
+            "Olvidar tiene mala prensa. Lo tratamos como una falla del sistema: el "
+            "nombre que no aparece, la fecha que se escapa, la materia estudiada en "
+            "marzo que en noviembre ya no está. Nadie se enorgullece de haber "
+            "olvidado algo. Sin embargo, buena parte de la investigación de las "
+            "últimas décadas apunta en una dirección incómoda: el olvido no es el "
+            "defecto de la memoria, sino una de sus operaciones.\n\n"
+            "La primera medición seria del fenómeno la hizo Hermann Ebbinghaus a "
+            "fines del siglo XIX, y la hizo sobre sí mismo. Memorizó largas listas "
+            "de sílabas sin sentido —«dax», «vor», «zeb»— precisamente para que "
+            "ningún significado previo lo ayudara, y después midió cuánto "
+            "conservaba al cabo de una hora, un día, una semana. El resultado "
+            "dibujó una curva que hoy lleva su nombre: la pérdida es brutal al "
+            "comienzo y después se aplana. Lo que sobrevive a los primeros días "
+            "tiende a quedarse.\n\n"
+            "La forma de esa curva ya insinuaba algo importante. Si el olvido fuera "
+            "un desgaste, como el de una pintura expuesta al sol, la pérdida sería "
+            "más o menos constante en el tiempo. No lo es. Hay un periodo crítico "
+            "en que el recuerdo es frágil, y otro posterior en que se vuelve "
+            "estable. Eso sugiere que algo ocurre en el intertanto.\n\n"
+            "Ese algo tiene hoy un nombre: consolidación. Cuando ocurre una "
+            "experiencia, el registro inicial depende de una estructura del cerebro "
+            "llamada hipocampo, que actúa como un cuaderno de apuntes rápido pero "
+            "de capacidad limitada. En los días y semanas siguientes, parte de esa "
+            "información se reorganiza y pasa a depender de la corteza cerebral, "
+            "donde queda integrada junto con lo que ya se sabía. El recuerdo no se "
+            "guarda: se traslada y se reescribe.\n\n"
+            "El sueño resultó ser central en ese traslado. Durante la noche el "
+            "cerebro no se apaga: reactiva patrones de actividad muy parecidos a "
+            "los del día, como si repasara. Los experimentos que interrumpen el "
+            "sueño de manera selectiva muestran que ese repaso no es decorativo, "
+            "porque quien no duerme bien después de aprender algo lo retiene peor, "
+            "incluso cuando el tiempo total de estudio fue el mismo. Estudiar hasta "
+            "tarde y dormir cuatro horas puede rendir menos que estudiar menos y "
+            "dormir siete.\n\n"
+            "Hasta aquí la historia es la conocida: el olvido sería aquello que "
+            "ocurre cuando la consolidación falla. El giro llegó cuando algunos "
+            "investigadores invirtieron la pregunta. En lugar de preguntarse por "
+            "qué olvidamos, se preguntaron para qué serviría olvidar.\n\n"
+            "La respuesta que se abrió camino es que una memoria perfecta sería una "
+            "memoria inútil. Un sistema que conservara cada detalle de cada "
+            "experiencia tendría que recorrer una montaña de casos particulares "
+            "para resolver cualquier situación nueva. Olvidar los detalles y "
+            "quedarse con el patrón es lo que permite reconocer que este perro, al "
+            "que nunca vi, es un perro. La generalización tiene como precio la "
+            "pérdida del caso concreto.\n\n"
+            "Hay además una razón de higiene. La mayor parte de lo que entra por "
+            "los sentidos no vuelve a ser útil nunca: el color del auto estacionado "
+            "ayer, la clave de un casillero que ya se devolvió, la dirección de una "
+            "casa donde no se volverá. Retener todo eso no solo ocuparía espacio, "
+            "sino que interferiría con lo que sí importa. Cuando se buscan las "
+            "llaves, los trescientos lugares donde estuvieron antes son ruido.\n\n"
+            "Los casos excepcionales apuntan en el mismo sentido. Las pocas "
+            "personas documentadas con una capacidad extraordinaria para recordar "
+            "su propia vida día por día no describen esa condición como un don, "
+            "sino como una carga: los recuerdos irrumpen sin ser convocados y las "
+            "heridas antiguas no se apagan con los años. Lo que para el resto es un "
+            "mecanismo de reparación —el tiempo que atenúa— ahí no funciona.\n\n"
+            "Un experimento repetido muchas veces ilustra hasta qué punto la "
+            "intuición nos engaña en este terreno. Se divide a un grupo de "
+            "estudiantes en dos: unos releen un texto varias veces y otros lo leen "
+            "una vez y después intentan recordarlo sin mirarlo. Al terminar, los "
+            "que releyeron se declaran más seguros de haber aprendido. Una semana "
+            "después, son los que peor recuerdan. La sensación de fluidez que "
+            "produce releer se confunde con aprendizaje, y el esfuerzo incómodo de "
+            "recuperar algo de la propia cabeza —que se siente como fracaso "
+            "mientras ocurre— es justamente lo que fija el recuerdo.\n\n"
+            "De todo esto se sigue una consecuencia práctica que contradice el "
+            "hábito más extendido entre estudiantes. Si el recuerdo se debilita "
+            "rápido al comienzo y se estabiliza después, el momento de repasar no "
+            "es la víspera de la prueba, sino los días inmediatamente posteriores "
+            "al primer estudio, cuando la curva todavía está cayendo. Un repaso "
+            "corto al día siguiente, otro a la semana y otro al mes rinde más que "
+            "la misma cantidad de horas concentradas la noche anterior. La razón no "
+            "es la disciplina: es que cada recuperación exitosa vuelve a "
+            "estabilizar el recuerdo.\n\n"
+            "Conviene evitar, eso sí, la conclusión fácil. Que el olvido cumpla una "
+            "función no significa que todo olvido sea beneficioso, ni que las "
+            "enfermedades que destruyen la memoria sean una versión exagerada de un "
+            "proceso sano. Una cosa es que el sistema descarte información con "
+            "criterio y otra muy distinta es que deje de funcionar. La diferencia "
+            "entre podar un árbol y talarlo no es de grado.\n\n"
+            "Queda, con todo, una idea que vale la pena conservar. El estudiante "
+            "que se reprocha haber olvidado la mitad de lo que leyó no está frente "
+            "a un fracaso de su memoria, sino frente a su funcionamiento normal. Lo "
+            "que decide qué se queda no es la intensidad del esfuerzo inicial, sino "
+            "cuántas veces se vuelve sobre lo aprendido mientras todavía es frágil. "
+            "La memoria no premia al que se esfuerza más: premia al que vuelve."
+        ),
+    },
+    {
         "key": "residuos_hogar",
         "title": "Los residuos que genera un hogar chileno",
         "kind": "discontinuo",
@@ -22799,6 +22989,322 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El nombre del caballo' ----------
+    _ql(
+        "control_lectura", "lec_localizar", "facil",
+        "Según la columna, ¿qué es lo que verifican casi siempre los controles de "
+        "lectura?",
+        "Que el libro fue leído, preguntando por datos verificables del relato",
+        "El tercer párrafo lo detalla: la prueba «verifica que el libro fue leído: "
+        "qué le dijo tal personaje a tal otro, en qué ciudad ocurre el capítulo "
+        "cuarto, cómo se llamaba el caballo».\n\nEl dato está explícito y los "
+        "ejemplos que siguen lo confirman.",
+        [
+            ("Que el estudiante haya comprendido el tema central de la obra", "El texto sostiene lo contrario: la prueba mide datos, no comprensión, y por eso premia al que memorizó un resumen."),
+            ("Que el estudiante sea capaz de fundamentar una interpretación propia", "Eso es lo que la columna PROPONE al final, no lo que dice que ocurre hoy."),
+            ("Que el libro asignado corresponda al nivel del curso", "La adecuación del título al curso no es lo que la prueba mide según el texto."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_localizar", "medio",
+        "De acuerdo con la columna, ¿por qué sobreviven las pruebas de alternativas "
+        "pese a existir formas mejores de evaluar?",
+        "Porque son lo único que cabe en el tiempo disponible de un profesor con "
+        "muchos estudiantes",
+        "El texto lo dice sin rodeos: un ensayo breve comentado «es "
+        "incomparablemente mejor», pero también «incomparablemente más lento de "
+        "corregir», y quien tiene cuatrocientos estudiantes no puede hacerlo "
+        "cuarenta veces al año. Por eso «sobrevive porque es lo único que cabe en "
+        "el horario».\n\nLa razón está explícita, y el texto se encarga de "
+        "descartar la alternativa: «no sobrevive porque nadie haya pensado en algo "
+        "mejor».",
+        [
+            ("Porque son la forma más justa de comparar a todos los estudiantes", "La columna no defiende su justicia; al contrario, muestra que premia a quien no leyó."),
+            ("Porque los programas de estudio obligan a usarlas", "El texto no menciona ninguna obligación de ese tipo: la explicación que da es de tiempo."),
+            ("Porque nadie ha diseñado todavía un instrumento mejor", "El texto rechaza esa idea de forma expresa en la misma frase."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_localizar", "medio",
+        "Según la columna, ¿qué suele responder un adulto cuando se le pregunta qué "
+        "libro lo marcó de verdad?",
+        "Nombra uno que no estaba en la lista del colegio y que encontró por su "
+        "cuenta",
+        "El texto describe el resultado de esa pregunta: «con una frecuencia que "
+        "debería avergonzarnos, el segundo no estaba en la lista: lo encontró solo, "
+        "por accidente, y muchas veces en contra del calendario escolar».\n\nEs "
+        "información explícita, aunque presentada como el desenlace de un "
+        "experimento imaginario que el lector puede repetir.",
+        [
+            ("Nombra uno de los tres o cuatro títulos que recuerda del colegio", "El texto separa las dos preguntas justamente para mostrar que las respuestas no coinciden."),
+            ("Reconoce que no recuerda ningún libro en particular", "El adulto sí recuerda: recuerda títulos del colegio con desgano y otro libro con entusiasmo."),
+            ("Menciona un libro que le recomendó un profesor fuera de clases", "El texto dice que lo encontró «solo, por accidente», sin mediación de nadie."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_interpretar", "medio",
+        "¿Qué función cumplen las preguntas «¿Alguien conoce un lector adulto que "
+        "funcione así?» y las que la siguen?",
+        "Hacer evidente, sin afirmarlo directamente, que la lectura escolar no se "
+        "parece a la lectura real",
+        "Son preguntas retóricas: no esperan respuesta porque la respuesta es "
+        "obviamente «no». El párrafo las remata con la afirmación que ellas "
+        "preparan: «la experiencia que le ofrecemos a un adolescente durante doce "
+        "años no se parece en nada a la experiencia que después esperamos que "
+        "busque por su cuenta».\n\nEl recurso deja que el lector saque solo la "
+        "conclusión, que es más persuasivo que declararla.",
+        [
+            ("Reconocer que la emisora no tiene datos para sostener su afirmación", "No hay concesión ahí: las preguntas refuerzan su posición, no la debilitan."),
+            ("Invitar al lector a responder por escrito en la sección de comentarios", "El texto no interpela así al lector; las preguntas están integradas al argumento."),
+            ("Introducir la objeción de quienes defienden la lectura obligatoria", "Esa objeción llega en el párrafo siguiente, con «se dirá que la obligación es inevitable»."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_interpretar", "dificil",
+        "¿Cuál es la tesis que sostiene la columna?",
+        "Que la forma en que se evalúa la lectura escolar produce el resultado "
+        "contrario al que dice buscar",
+        "La emisora la enuncia en el primer párrafo —«les enseñamos a leer de una "
+        "manera que hace difícil que a alguien le guste»— y en el segundo la acota "
+        "para que no se confunda con una queja general: el problema es «el "
+        "dispositivo con el que se enseña», que «produce con notable eficiencia el "
+        "resultado contrario al que declara buscar».\n\nDistinguir la tesis exige "
+        "separar lo que el texto afirma de lo que expresamente aclara que NO está "
+        "afirmando.",
+        [
+            ("Que los jóvenes leen poco porque pasan demasiado tiempo frente a las pantallas", "Esa es la explicación habitual que la columna menciona para dejarla de lado desde el primer párrafo."),
+            ("Que la lectura no debería ser obligatoria en el colegio", "El segundo párrafo descarta esa lectura de forma expresa: «no estoy diciendo que la lectura no deba enseñarse»."),
+            ("Que las listas de lectura deberían incluir autores más contemporáneos", "La columna llama «estéril» justamente esa discusión sobre los títulos."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre la concesión «un colegio que renunciara a "
+        "exigir estaría renunciando a enseñar» y lo que la emisora sostiene "
+        "después?",
+        "La emisora acepta la exigencia y desplaza el desacuerdo hacia qué se "
+        "exige: esfuerzo y no obediencia",
+        "La concesión es real: la emisora admite que nadie aprende textos difíciles "
+        "eligiendo siempre lo fácil, y escribe «concedido». Pero enseguida "
+        "reformula el desacuerdo: «una cosa es exigir esfuerzo y otra es exigir "
+        "obediencia, y lo que se evalúa revela cuál de las dos se está "
+        "pidiendo».\n\nConceder un punto para reubicar la discusión en otro terreno "
+        "es una operación argumentativa, no un retroceso.",
+        [
+            ("La emisora abandona su posición inicial y termina defendiendo la obligación", "No la abandona: sigue criticando el instrumento durante el resto de la columna."),
+            ("La emisora usa la concesión para introducir una propuesta de nuevas lecturas", "Su propuesta final no es sobre qué leer, sino sobre cómo evaluar lo leído."),
+            ("La emisora contradice la concesión al proponer que se acepten lecturas discutibles", "No hay contradicción: propone aceptar lecturas discutibles «siempre que estén fundadas en el texto», que es una exigencia y no su ausencia."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene la afirmación «un libro mediocre discutido con seriedad "
+        "puede producir un lector»?",
+        "Que el modo de evaluar pesa más que el título elegido",
+        "La frase cierra un párrafo dedicado a mostrar que la pelea por las listas "
+        "«distrae de lo que de verdad decide el resultado». Va en pareja con la "
+        "anterior —«un libro extraordinario evaluado con un cuestionario de datos "
+        "produce lectores resignados»—, y el contraste entre ambas aísla la "
+        "variable: cambia el libro, cambia la evaluación, y lo que decide es la "
+        "segunda.\n\nEs la misma operación de un experimento: mantener algo fijo y "
+        "variar lo demás para ver qué manda.",
+        [
+            ("Que la calidad literaria de los libros escolares es irrelevante", "La columna no dice eso: dice que el título no es lo DECISIVO, que es distinto de decir que da lo mismo."),
+            ("Que los profesores deberían elegir libros más breves y sencillos", "No hay ninguna recomendación sobre la extensión ni la dificultad de los libros."),
+            ("Que discutir en clases toma más tiempo del que hay disponible", "El problema del tiempo se plantea antes y a propósito de la corrección, no de la discusión en clases."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_evaluar", "medio",
+        "¿Qué efecto busca la emisora al escribir «los jóvenes leen poco, en parte, "
+        "porque LES ENSEÑAMOS a leer de una manera que hace difícil que a alguien "
+        "le guste»?",
+        "Incluirse entre los responsables, para que la crítica no suene a acusación "
+        "desde afuera",
+        "La emisora anuncia el movimiento antes de hacerlo: «quisiera proponer una "
+        "explicación menos cómoda, porque nos involucra». Y lo sostiene hasta el "
+        "final, cuando escribe «con una frecuencia que debería avergonzarnos» y «si "
+        "alguno de nosotros habría seguido leyendo».\n\nValorar el efecto de esa "
+        "primera persona plural es una tarea de evaluar los recursos con que se "
+        "construye el sentido.",
+        [
+            ("Suavizar una crítica que en el fondo dirige a los estudiantes", "La crítica nunca apunta a los estudiantes: apunta al instrumento con que se los evalúa."),
+            ("Presentarse como especialista en la materia que discute", "El plural no invoca autoridad: reparte responsabilidad, que es lo contrario."),
+            ("Evitar comprometerse con una posición clara sobre el tema", "Su posición es explícita y sostenida; el plural no la atenúa."),
+        ],
+    ),
+    _ql(
+        "control_lectura", "lec_evaluar", "dificil",
+        "Un colegio decide, tras leer la columna, cambiar los títulos de su lista "
+        "de lecturas por otros más recientes y mantener el mismo control de "
+        "lectura. ¿Qué diría la emisora sobre esa decisión?",
+        "Que cambia justamente lo que ella considera secundario y deja intacto lo "
+        "que produce el problema",
+        "La columna califica de «estéril» la discusión sobre los títulos y explica "
+        "por qué: «esa pelea distrae de lo que de verdad decide el resultado». Su "
+        "propuesta apunta a otra cosa, a que «la unidad de la evaluación deje de "
+        "ser el libro y pase a ser la lectura».\n\nLa pregunta pide aplicar la "
+        "columna a un caso que no aparece en ella y distinguir cuál de sus "
+        "afirmaciones es la principal.",
+        [
+            ("Que es un avance parcial, porque los libros nuevos motivan más a los estudiantes", "La emisora no atribuye poder motivador a la novedad de los títulos: dice que el título no es lo decisivo."),
+            ("Que es un error, porque los clásicos son irreemplazables en la formación escolar", "La columna no defiende los clásicos ni toma partido por ningún tipo de título."),
+            ("Que resuelve el problema, siempre que los nuevos títulos sean de mejor calidad", "Ella afirma que un libro extraordinario evaluado con un cuestionario de datos «produce lectores resignados»."),
+        ],
+    ),
+    # ---------- 'Para qué sirve olvidar' ----------
+    _ql(
+        "olvido_memoria", "lec_localizar", "facil",
+        "Según el texto, ¿por qué Ebbinghaus memorizó sílabas sin sentido en lugar "
+        "de palabras corrientes?",
+        "Para que ningún significado previo lo ayudara a recordarlas",
+        "El texto lo explica en la misma oración en que presenta el experimento: "
+        "memorizó sílabas como «dax», «vor» o «zeb» «precisamente para que ningún "
+        "significado previo lo ayudara».\n\nEl dato está explícito y el conector "
+        "«precisamente» marca que ahí viene la razón.",
+        [
+            ("Porque las palabras corrientes eran demasiado largas para su experimento", "El largo no se menciona: lo que le interesaba eliminar era el significado, no la extensión."),
+            ("Porque quería medir cuánto tarda una persona en aprender un idioma nuevo", "El experimento no trata sobre idiomas: mide cuánto se conserva de una lista con el paso del tiempo."),
+            ("Porque las sílabas sin sentido se olvidan más lentamente", "El texto no afirma eso; el propósito era controlar una variable, no obtener un olvido más lento."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_localizar", "medio",
+        "De acuerdo con el texto, ¿qué papel cumple el hipocampo en la formación de "
+        "un recuerdo?",
+        "Sostiene el registro inicial, como un cuaderno de apuntes rápido pero de "
+        "capacidad limitada",
+        "El texto usa esa imagen textualmente: el registro inicial «depende de una "
+        "estructura del cerebro llamada hipocampo, que actúa como un cuaderno de "
+        "apuntes rápido pero de capacidad limitada».\n\nLa información aparece "
+        "formulada con las mismas palabras que la respuesta.",
+        [
+            ("Almacena de forma permanente los recuerdos ya consolidados", "Eso es lo que hace la corteza cerebral: el texto dice que la información «pasa a depender» de ella con el tiempo."),
+            ("Reactiva durante el sueño los patrones de actividad del día", "Esa reactivación se atribuye al cerebro durante la noche, y el texto no la asigna al hipocampo en particular."),
+            ("Decide qué información conviene descartar y cuál conservar", "El texto habla de criterios de descarte, pero nunca los atribuye al hipocampo."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_localizar", "medio",
+        "Según el experimento que compara releer con autoevaluarse, ¿qué ocurre una "
+        "semana después?",
+        "Quienes releyeron el texto son los que peor lo recuerdan",
+        "El texto lo dice sin rodeos: al terminar, los que releyeron «se declaran "
+        "más seguros de haber aprendido», pero «una semana después, son los que "
+        "peor recuerdan».\n\nHay que distinguir los dos momentos: la seguridad se "
+        "mide al terminar y el recuerdo, una semana más tarde.",
+        [
+            ("Ambos grupos recuerdan aproximadamente lo mismo", "El experimento se cita justamente porque los resultados difieren."),
+            ("Quienes releyeron recuerdan más, pero se sienten menos seguros", "Es al revés en las dos mitades: se sienten MÁS seguros y recuerdan MENOS."),
+            ("Quienes se autoevaluaron declaran haber aprendido más", "El texto atribuye la mayor sensación de seguridad a los que releyeron, no a los que se autoevaluaron."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_interpretar", "medio",
+        "¿Qué conclusión extrae el texto de que la curva del olvido caiga "
+        "bruscamente al comienzo y luego se aplane?",
+        "Que el olvido no es un desgaste parejo, sino que hay un periodo en que el "
+        "recuerdo es frágil y otro en que se estabiliza",
+        "El texto razona por contraste: «si el olvido fuera un desgaste, como el de "
+        "una pintura expuesta al sol, la pérdida sería más o menos constante en el "
+        "tiempo. No lo es». Y concluye que existen dos periodos distintos, lo que "
+        "«sugiere que algo ocurre en el intertanto».\n\nLa forma de la curva no es "
+        "el dato: es el indicio del que el texto deduce la existencia de un "
+        "proceso.",
+        [
+            ("Que la mayor parte de lo aprendido se pierde para siempre en las primeras horas", "El texto dice lo contrario sobre el tramo final: «lo que sobrevive a los primeros días tiende a quedarse»."),
+            ("Que memorizar sílabas sin sentido es más difícil que memorizar palabras", "El experimento no compara ambos materiales: usó sílabas justamente para no tener que comparar."),
+            ("Que la memoria funciona igual que una pintura que se decolora con el sol", "Esa comparación aparece en el texto solo para ser descartada."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_interpretar", "dificil",
+        "¿Qué función cumple en el texto la pregunta «para qué serviría olvidar»?",
+        "Marcar el giro del texto: hasta ahí el olvido era una falla, y desde ahí "
+        "pasa a examinarse como una función",
+        "El párrafo dice explícitamente que «hasta aquí la historia es la conocida» "
+        "y que «el giro llegó cuando algunos investigadores invirtieron la "
+        "pregunta». Todo lo que sigue —la generalización, la higiene, los casos "
+        "excepcionales— responde a esa nueva pregunta.\n\nReconocer que una "
+        "pregunta organiza la estructura del texto es una tarea de interpretar la "
+        "jerarquía de las ideas.",
+        [
+            ("Introducir una objeción que el texto rechazará más adelante", "No se rechaza: es la línea que el texto adopta y desarrolla en el resto del artículo."),
+            ("Señalar que la investigación sobre el tema no ha llegado a conclusiones", "El texto sí presenta conclusiones, y bastante firmes, después de esa pregunta."),
+            ("Invitar al lector a responderla con su propia experiencia", "La pregunta se atribuye a investigadores y el texto la responde él mismo en el párrafo siguiente."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene el ejemplo del perro que nunca se había visto antes?",
+        "Que olvidar los detalles de cada caso es lo que permite reconocer un "
+        "patrón general",
+        "El ejemplo aparece dentro del argumento de que «una memoria perfecta sería "
+        "una memoria inútil»: un sistema que guardara todos los casos particulares "
+        "tendría que recorrerlos para resolver una situación nueva. El texto cierra "
+        "la idea diciendo que «la generalización tiene como precio la pérdida del "
+        "caso concreto».\n\nEl ejemplo no está para ilustrar cómo funciona la "
+        "vista, sino para justificar una ventaja del olvido.",
+        [
+            ("Que el cerebro reconoce con más facilidad a los animales que a las personas", "El texto no compara categorías: el perro es solo un caso cualquiera."),
+            ("Que los recuerdos de la infancia son los más resistentes al olvido", "La antigüedad de los recuerdos no se discute en ese párrafo."),
+            ("Que conviene repasar varias veces para reconocer lo aprendido", "El repaso aparece más adelante y responde a otra parte del argumento."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_interpretar", "dificil",
+        "Según el texto, ¿por qué conviene repasar en los días siguientes al primer "
+        "estudio y no la víspera de la prueba?",
+        "Porque el recuerdo es frágil justo en ese tramo, y cada recuperación "
+        "exitosa vuelve a estabilizarlo",
+        "El texto conecta la conclusión práctica con la curva del comienzo: «si el "
+        "recuerdo se debilita rápido al comienzo y se estabiliza después, el "
+        "momento de repasar no es la víspera de la prueba, sino los días "
+        "inmediatamente posteriores», y añade que «cada recuperación exitosa vuelve "
+        "a estabilizar el recuerdo».\n\nLa pregunta exige unir el dato del segundo "
+        "párrafo con la recomendación del penúltimo.",
+        [
+            ("Porque estudiar de noche reduce las horas de sueño disponibles", "El sueño se trata antes y por separado; el argumento del repaso se apoya en la forma de la curva, no en el horario."),
+            ("Porque repartir el estudio permite dedicarle más horas totales a la materia", "El texto compara explícitamente «la misma cantidad de horas», así que el total no es lo que cambia."),
+            ("Porque el hipocampo tiene una capacidad limitada y se satura", "La capacidad limitada explica por qué existe la consolidación, no por qué conviene repasar en un momento y no en otro."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_evaluar", "dificil",
+        "¿Con qué propósito el emisor advierte que no hay que confundir el olvido "
+        "normal con las enfermedades que destruyen la memoria?",
+        "Para impedir que su tesis se lleve más lejos de lo que sostiene",
+        "El emisor anticipa una mala lectura de su propio argumento: «conviene "
+        "evitar, eso sí, la conclusión fácil». Si el olvido cumple una función, "
+        "alguien podría concluir que toda pérdida de memoria es benéfica, y el "
+        "texto cierra esa puerta con una comparación: «la diferencia entre podar un "
+        "árbol y talarlo no es de grado».\n\nEs una precaución argumentativa: el "
+        "emisor delimita el alcance de lo que afirma antes de que otro lo exagere.",
+        [
+            ("Para reconocer que su tesis todavía no cuenta con evidencia suficiente", "No retrocede en la evidencia: acota el alcance de la conclusión, que es distinto."),
+            ("Para introducir un tema nuevo que desarrollará en el párrafo final", "El párrafo final no trata sobre enfermedades: vuelve al estudiante y al repaso."),
+            ("Para refutar a quienes sostienen que el olvido cumple una función", "Él mismo es quien sostiene eso; lo que hace es evitar que su idea se estire de más."),
+        ],
+    ),
+    _ql(
+        "olvido_memoria", "lec_evaluar", "medio",
+        "Un estudiante lee el texto y decide dejar de estudiar la noche anterior a "
+        "sus pruebas para dormir ocho horas, sin cambiar nada más de su rutina. "
+        "¿Qué diría el texto sobre esa decisión?",
+        "Que atiende solo una parte del asunto, porque lo decisivo es haber "
+        "repasado varias veces en los días previos",
+        "El texto respalda dormir: quien no duerme bien después de aprender «lo "
+        "retiene peor». Pero su recomendación central es otra y es anterior: "
+        "repasar «al día siguiente, otro a la semana y otro al mes», porque «la "
+        "memoria no premia al que se esfuerza más: premia al que vuelve».\n\nLa "
+        "pregunta pide aplicar el texto a un caso que no aparece en él, y "
+        "distinguir cuál de sus recomendaciones es la principal.",
+        [
+            ("Que es exactamente lo que el texto recomienda hacer", "El texto recomienda repasar de forma espaciada; dormir bien es una condición, no el consejo central."),
+            ("Que es un error, porque conviene aprovechar la víspera para el último repaso", "El texto desaconseja concentrar el estudio en la víspera, así que no diría eso."),
+            ("Que da lo mismo, porque lo que decide el resultado es la cantidad total de horas", "El texto niega expresamente que el total de horas sea lo decisivo: compara la misma cantidad con distintos resultados."),
+        ],
+    ),
     # ---------- 'Los residuos que genera un hogar chileno' ----------
     _ql(
         "residuos_hogar", "lec_localizar", "facil",
