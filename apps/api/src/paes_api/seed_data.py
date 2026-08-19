@@ -82,9 +82,13 @@ SKILL_NODES_M2 = [
     # Álgebra y funciones
     ("alg_sistemas_casos", "Sistemas 2x2: única, infinitas o ninguna solución", "algebra", 4, ["alg_sistemas"]),
     ("alg_funcion_potencia", "Función potencia", "algebra", 5, ["alg_funciones"]),
+    ("alg_funciones_trig", "Funciones trigonométricas: seno y coseno", "algebra", 5, ["geo_trigonometria"]),
     # Geometría
     ("geo_homotecia", "Homotecia de figuras planas", "geometria", 3, ["geo_transformaciones"]),
     ("geo_trigonometria", "Razones trigonométricas en triángulos rectángulos", "geometria", 3, ["geo_pitagoras"]),
+    ("geo_circunferencia", "Relaciones métricas en la circunferencia", "geometria", 3, ["geo_plana"]),
+    ("geo_esfera", "Esfera: superficie y volumen", "geometria", 3, ["geo_solidos"]),
+    ("geo_rectas", "Rectas en el plano y posiciones relativas", "geometria", 3, ["alg_funciones"]),
     # Probabilidad y estadística
     ("prob_dispersion", "Medidas de dispersión", "probabilidad", 2, ["prob_estadistica_desc"]),
     ("prob_condicional", "Probabilidad condicional", "probabilidad", 4, ["prob_reglas"]),
@@ -20673,6 +20677,706 @@ QUESTIONS += [
             ("$30.000", "Calculó el 25% sobre el costo de compra; el enunciado pide la ganancia sobre el precio de venta."),
             ("$28.800", "Aplicó un 20% sobre el costo en lugar del 25% sobre la venta."),
             ("$18.000", "Descontó el 25% al costo en vez de agregar la ganancia."),
+        ],
+    ),
+]
+
+# ---------------------------------------------------------------------------
+# M2 — las cuatro unidades del temario que no tenían nodo.
+#
+# El temario de M2 lista quince unidades propias además de todo M1, y el árbol
+# cubría once. Estas son las que faltaban, con diez preguntas cada una y el
+# mismo enfoque que se le dio a M1: contexto real y las cuatro habilidades del
+# temario, no solo resolver.
+# ---------------------------------------------------------------------------
+QUESTIONS += [
+    # ===================== Funciones trigonométricas =====================
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Entre qué valores varía siempre la función seno?",
+        "Entre −1 y 1",
+        "El seno de un ángulo es un cociente entre un cateto y la hipotenusa, y "
+        "la hipotenusa es siempre el lado más largo.\n\n"
+        "1) Por eso ese cociente nunca puede pasar de 1 en valor absoluto.\n"
+        "2) En el círculo unitario, el seno es la altura del punto sobre la "
+        "circunferencia de radio 1: como máximo sube a 1 y como mínimo baja a "
+        "−1.\n"
+        "3) La gráfica oscila entre esas dos líneas sin salirse nunca.\n"
+        "4) Un resultado como sen(x) = 1,4 delata siempre un error de cálculo.",
+        [
+            ("Entre 0 y 1", "El seno toma valores negativos: en 270° vale −1."),
+            ("Entre 0 y 360", "Ese es el rango de los ÁNGULOS en grados, no de los valores del seno."),
+            ("Entre −∞ e ∞", "Esa es la tangente, que sí crece sin límite; el seno está acotado."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "La temperatura de una ciudad a lo largo del día se modela con una función de la forma T(h) = 18 + 6 · sen(...), donde h son las horas. ¿Entre qué temperaturas oscila?",
+        "Entre 12 y 24 grados",
+        "El seno oscila entre −1 y 1, y el resto de la expresión lo estira y lo "
+        "desplaza.\n\n"
+        "1) El factor 6 hace que el término oscile entre −6 y 6.\n"
+        "2) El 18 desplaza todo hacia arriba: la función va de 18 − 6 a "
+        "18 + 6.\n"
+        "3) Entonces la temperatura va de 12 a 24 grados.\n"
+        "4) El 18 es la temperatura promedio del día y el 6 es la amplitud, o "
+        "sea cuánto se aleja del promedio.",
+        [
+            ("Entre 0 y 18 grados", "El 18 es el centro de la oscilación, no su máximo."),
+            ("Entre 6 y 18 grados", "Resta la amplitud pero olvida que también se suma hacia arriba."),
+            ("Entre −1 y 1 grados", "Ese es el rango del seno puro, antes de multiplicarlo por 6 y sumarle 18."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál es el valor de sen(90°)?",
+        "1",
+        "Conviene ubicarlo en el círculo unitario.\n\n"
+        "1) El seno corresponde a la altura del punto sobre la circunferencia de "
+        "radio 1.\n"
+        "2) En 90° el punto está justo arriba, en (0, 1): su altura es 1.\n"
+        "3) Ese es el valor máximo que alcanza el seno.\n"
+        "4) El coseno, en cambio, es la coordenada horizontal, que ahí vale 0.",
+        [
+            ("0", "Ese es el valor del COSENO en 90°, o el del seno en 0°."),
+            ("−1", "Ese es el valor del seno en 270°, cuando el punto está abajo."),
+            ("90", "Confunde el ángulo con el valor de la función; el seno nunca pasa de 1."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cuál de las siguientes afirmaciones distingue correctamente las gráficas del seno y del coseno?",
+        "Tienen la misma forma, pero la del coseno está desplazada un cuarto de vuelta respecto de la del seno",
+        "Ambas son la misma onda, corrida.\n\n"
+        "1) En 0° el seno vale 0 y el coseno vale 1: parten en puntos "
+        "distintos.\n"
+        "2) Pero la forma de la onda es idéntica, con la misma amplitud y el "
+        "mismo período.\n"
+        "3) De hecho cos(x) = sen(x + 90°): el coseno es el seno adelantado un "
+        "cuarto de vuelta.\n"
+        "4) Por eso ambas oscilan entre −1 y 1 y se repiten cada 360°.",
+        [
+            ("El coseno oscila entre valores mayores que el seno", "Las dos oscilan exactamente entre −1 y 1."),
+            ("El seno se repite cada 360° y el coseno cada 180°", "Ambas tienen período 360°."),
+            ("El coseno es siempre positivo y el seno no", "El coseno es negativo entre 90° y 270°."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "La altura de una cabina de una rueda de la fortuna se modela con h(t) = 10 + 8 · sen(t). ¿Qué representa el 8 en ese modelo?",
+        "La amplitud: cuánto sube y baja la cabina respecto de su altura media",
+        "Cada número del modelo tiene un significado en la situación.\n\n"
+        "1) El seno oscila entre −1 y 1, así que 8 · sen(t) oscila entre −8 y "
+        "8.\n"
+        "2) Ese 8 es la amplitud: la cabina sube 8 metros sobre la altura media "
+        "y baja 8 bajo ella.\n"
+        "3) El 10 es la altura del centro de la rueda.\n"
+        "4) Entonces la cabina va de 2 a 18 metros de altura.",
+        [
+            ("La altura máxima que alcanza la cabina", "La máxima es 10 + 8 = 18 metros."),
+            ("La cantidad de vueltas que da la rueda", "El modelo no cuenta vueltas: describe la altura en cada instante."),
+            ("La altura del centro de la rueda", "Esa es el 10, el término que desplaza la oscilación."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "¿Cada cuánto se repite la gráfica de la función seno?",
+        "Cada 360°",
+        "El seno describe una vuelta completa a la circunferencia.\n\n"
+        "1) Al dar una vuelta entera se vuelve al mismo punto, así que el valor "
+        "del seno se repite.\n"
+        "2) Ese intervalo se llama período, y para el seno vale 360° (o 2π "
+        "radianes).\n"
+        "3) Comprueba: sen(0°) = 0 y sen(360°) = 0; sen(90°) = 1 y "
+        "sen(450°) = 1.\n"
+        "4) Esa repetición es lo que hace del seno el modelo natural de todo lo "
+        "que es cíclico: mareas, temperaturas, una rueda que gira.",
+        [
+            ("Cada 180°", "En 180° el seno vale 0, pero viene bajando; en 0° venía subiendo. No es el mismo estado."),
+            ("Cada 90°", "En 90° el seno alcanza su máximo, y ese valor no se repite hasta 450°."),
+            ("Nunca se repite", "El seno es periódico por definición: se repite cada vuelta completa."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "Un estudiante afirma que sen(30°) + sen(30°) es igual a sen(60°). ¿Es correcta su afirmación?",
+        "No: sen(30°) + sen(30°) da 1, mientras que sen(60°) es aproximadamente 0,87",
+        "La función seno no reparte sobre la suma de ángulos.\n\n"
+        "1) sen(30°) vale 0,5, así que sumarlo dos veces da 1.\n"
+        "2) sen(60°) vale aproximadamente 0,87.\n"
+        "3) Los valores no coinciden, así que sen(a) + sen(b) no es "
+        "sen(a + b).\n"
+        "4) El error es del mismo tipo que creer que √(a + b) es √a + √b: la "
+        "función se aplica al resultado, no se reparte sobre los sumandos.",
+        [
+            ("Sí: duplicar el ángulo duplica el seno", "Con 30° y 60° los valores son 0,5 y 0,87: no se duplica."),
+            ("Sí, pero solo para ángulos menores que 90°", "El contraejemplo de 30° y 60° está justamente en ese rango."),
+            ("No: sen(30°) + sen(30°) da 0,5", "Sumar 0,5 dos veces da 1, no 0,5."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "En el modelo h(t) = A + B · sen(t), ¿cuál de las siguientes expresiones representa la diferencia entre el valor máximo y el mínimo de la función?",
+        "2B",
+        "El seno recorre todo el intervalo de −1 a 1.\n\n"
+        "1) El valor máximo de la función es A + B, cuando el seno vale 1.\n"
+        "2) El mínimo es A − B, cuando el seno vale −1.\n"
+        "3) La diferencia es (A + B) − (A − B) = 2B.\n"
+        "4) Fíjate en que el A se cancela: desplazar la función hacia arriba o "
+        "hacia abajo no cambia cuánto oscila.",
+        [
+            ("2A", "El A solo desplaza la gráfica; no influye en cuánto oscila."),
+            ("A + B", "Ese es el valor máximo, no la diferencia entre máximo y mínimo."),
+            ("B", "Esa es la amplitud, o sea la mitad del recorrido total."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "¿Cuál es el valor de cos(0°)?",
+        "1",
+        "Se ubica en el círculo unitario.\n\n"
+        "1) El coseno es la coordenada horizontal del punto sobre la "
+        "circunferencia de radio 1.\n"
+        "2) En 0° el punto está en (1, 0): su coordenada horizontal es 1.\n"
+        "3) Ese es el valor máximo del coseno.\n"
+        "4) El seno ahí vale 0, que es la coordenada vertical.",
+        [
+            ("0", "Ese es el valor del SENO en 0°."),
+            ("−1", "Ese es el valor del coseno en 180°."),
+            ("Indefinido", "El coseno está definido para todos los ángulos; la que se indefine en algunos es la tangente."),
+        ],
+    ),
+    _q(
+        "alg_funciones_trig", "dificil",
+        "La profundidad del agua en un puerto se modela con P(t) = 5 + 3 · sen(t) metros. Un barco necesita al menos 3 metros de profundidad para entrar. ¿Puede entrar en cualquier momento?",
+        "No: en marea baja la profundidad baja a 2 metros",
+        "Hay que comparar el mínimo del modelo con lo que el barco necesita.\n\n"
+        "1) El seno baja hasta −1, así que la profundidad mínima es "
+        "5 − 3 = 2 metros.\n"
+        "2) El barco necesita 3 metros, así que en marea baja no alcanza.\n"
+        "3) La profundidad máxima es 5 + 3 = 8 metros, de modo que en marea alta "
+        "entra sin problema.\n"
+        "4) La conclusión es que puede entrar solo durante parte del ciclo, no "
+        "en cualquier momento.",
+        [
+            ("Sí, porque la profundidad promedio es 5 metros", "El promedio no basta: en marea baja el agua llega a 2 metros."),
+            ("No, porque la profundidad nunca llega a 3 metros", "Sí los supera: el máximo es 8 metros."),
+            ("No se puede saber sin conocer el horario de las mareas", "El modelo ya entrega el mínimo y el máximo, que es lo que decide."),
+        ],
+    ),
+]
+
+QUESTIONS += [
+    # ============= Relaciones métricas en la circunferencia =============
+    _q(
+        "geo_circunferencia", "facil",
+        "En una circunferencia, ¿qué relación hay entre un ángulo del centro y un ángulo inscrito que abarcan el mismo arco?",
+        "El ángulo del centro mide el doble que el inscrito",
+        "Es el teorema del ángulo inscrito, y conviene tenerlo de memoria.\n\n"
+        "1) Un ángulo del centro tiene su vértice en el centro de la "
+        "circunferencia.\n"
+        "2) Un ángulo inscrito lo tiene sobre la circunferencia misma.\n"
+        "3) Si ambos abarcan el mismo arco, el del centro mide exactamente el "
+        "doble.\n"
+        "4) Ejemplo: si el arco mide 80°, el ángulo del centro mide 80° y "
+        "cualquier ángulo inscrito que lo abarque mide 40°.",
+        [
+            ("Miden lo mismo", "El del centro siempre duplica al inscrito que abarca el mismo arco."),
+            ("El inscrito mide el doble que el del centro", "Está invertido: el del centro es el mayor."),
+            ("El inscrito mide siempre 90°", "Eso ocurre solo cuando el arco abarcado es media circunferencia."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "Un ángulo del centro abarca un arco de 100°. ¿Cuánto mide un ángulo inscrito que abarca ese mismo arco?",
+        "50°",
+        "Se aplica directamente el teorema del ángulo inscrito.\n\n"
+        "1) El ángulo del centro mide lo mismo que el arco: 100°.\n"
+        "2) El inscrito mide la mitad: 100 ÷ 2 = 50°.\n"
+        "3) Control de sentido: el inscrito siempre es el menor de los dos.",
+        [
+            ("100°", "Ese es el ángulo del centro; el inscrito es su mitad."),
+            ("200°", "Duplicó en vez de dividir: el inscrito es más chico, no más grande."),
+            ("25°", "Dividió dos veces por 2."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "¿Cuánto mide siempre un ángulo inscrito que abarca un diámetro de la circunferencia?",
+        "90°",
+        "Es el teorema de Thales, un caso particular del ángulo inscrito.\n\n"
+        "1) Un diámetro divide la circunferencia en dos arcos de 180° cada "
+        "uno.\n"
+        "2) El ángulo inscrito que lo abarca mide la mitad de ese arco: 90°.\n"
+        "3) Por eso todo triángulo con un lado igual al diámetro y el tercer "
+        "vértice sobre la circunferencia es rectángulo.\n"
+        "4) Ese resultado sirve para construir ángulos rectos sin escuadra.",
+        [
+            ("180°", "Ese es el arco que abarca; el ángulo inscrito es su mitad."),
+            ("45°", "Sería la mitad de 90°, dividiendo una vez de más."),
+            ("Depende del tamaño de la circunferencia", "El resultado es 90° en cualquier circunferencia, sea cual sea su radio."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Dos cuerdas de una circunferencia se cortan dentro de ella. Una queda dividida en segmentos de 4 y 6 cm, y la otra en segmentos de 3 cm y x. ¿Cuánto vale x?",
+        "8 cm",
+        "Se aplica el teorema de las cuerdas: los productos de los segmentos son "
+        "iguales.\n\n"
+        "1) La relación es 4 · 6 = 3 · x.\n"
+        "2) Calculando: 24 = 3x.\n"
+        "3) Despejando: x = 8 centímetros.\n"
+        "4) Control: el producto da 24 por ambos lados, como exige el teorema.",
+        [
+            ("7 cm", "Sumó los segmentos en lugar de multiplicarlos."),
+            ("2 cm", "Dividió 6 entre 3 sin usar el segmento de 4."),
+            ("24 cm", "Se quedó en el producto sin dividirlo por 3."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "¿Cuál de las siguientes afirmaciones sobre una cuerda de la circunferencia es siempre verdadera?",
+        "El diámetro es la cuerda más larga que se puede trazar",
+        "Una cuerda es un segmento que une dos puntos de la circunferencia.\n\n"
+        "1) El diámetro es la cuerda que pasa por el centro.\n"
+        "2) Cualquier otra cuerda queda más cerca del borde y por eso mide "
+        "menos.\n"
+        "3) Su longitud máxima es entonces 2r, alcanzada solo por el diámetro.\n"
+        "4) Y toda cuerda que no sea diámetro deja dos arcos de distinto "
+        "tamaño.",
+        [
+            ("Toda cuerda pasa por el centro", "Solo el diámetro lo hace; el resto de las cuerdas no."),
+            ("Todas las cuerdas miden lo mismo", "Su longitud depende de qué tan cerca del centro pasen."),
+            ("Una cuerda siempre mide más que el radio", "Una cuerda muy cercana al borde puede ser mucho más corta que el radio."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En una circunferencia de radio r, ¿cuál de las siguientes expresiones representa la longitud de un arco de α grados?",
+        "(α / 360) · 2 · π · r",
+        "El arco es una fracción del contorno completo.\n\n"
+        "1) La circunferencia completa mide 2 · π · r y corresponde a 360°.\n"
+        "2) Un arco de α grados es la fracción α/360 de esa vuelta.\n"
+        "3) Su longitud es entonces (α/360) · 2 · π · r.\n"
+        "4) Comprueba con α = 180°: da la mitad del contorno, o sea π · r.",
+        [
+            ("(α / 360) · π · r²", "Esa expresión da el ÁREA del sector circular, no la longitud del arco."),
+            ("α · 2 · π · r", "Multiplica por los grados sin dividir por la vuelta completa."),
+            ("(360 / α) · 2 · π · r", "Está invertida: a mayor ángulo daría un arco más corto."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Un ángulo inscrito mide 35°. ¿Cuánto mide el arco que abarca?",
+        "70°",
+        "Se aplica el teorema del ángulo inscrito, esta vez al revés.\n\n"
+        "1) El ángulo inscrito mide la mitad del arco que abarca.\n"
+        "2) Entonces el arco mide el doble: 35 · 2 = 70°.\n"
+        "3) Control: el ángulo del centro que abarca ese mismo arco también mide "
+        "70°.",
+        [
+            ("35°", "Ese es el ángulo inscrito; el arco es su doble."),
+            ("17,5°", "Dividió en lugar de multiplicar: el arco es mayor que el inscrito."),
+            ("145°", "Restó de 180°, que corresponde a otra relación."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "dificil",
+        "Se afirma que dos ángulos inscritos que abarcan el mismo arco siempre miden lo mismo, aunque sus vértices estén en puntos distintos. ¿Es correcta esa afirmación?",
+        "Sí: ambos miden la mitad del mismo arco",
+        "El teorema del ángulo inscrito no depende de dónde esté el vértice.\n\n"
+        "1) Todo ángulo inscrito mide la mitad del arco que abarca.\n"
+        "2) Si dos ángulos abarcan el MISMO arco, ambos miden la mitad de lo "
+        "mismo.\n"
+        "3) Por eso miden igual, sin importar en qué punto de la circunferencia "
+        "esté cada vértice.\n"
+        "4) Es lo que permite, por ejemplo, ver un mismo objeto bajo el mismo "
+        "ángulo desde distintos puntos de una circunferencia.",
+        [
+            ("No: el que está más cerca del arco mide más", "La distancia al arco no interviene: solo importa el arco abarcado."),
+            ("No: solo miden igual si son simétricos", "La simetría no es necesaria; basta que abarquen el mismo arco."),
+            ("Sí, pero solo si el arco es menor que media circunferencia", "Vale para cualquier arco."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "facil",
+        "En una plaza circular hay un mirador en el borde desde el que se ven dos monumentos, también en el borde, bajo un ángulo de 40°. ¿Cuánto mide el arco de plaza entre ambos monumentos?",
+        "80°",
+        "El mirador y los monumentos están sobre la circunferencia, así que el "
+        "ángulo es inscrito.\n\n"
+        "1) Un ángulo inscrito mide la mitad del arco que abarca.\n"
+        "2) Si el ángulo es 40°, el arco mide 40 · 2 = 80°.\n"
+        "3) Y ese mismo arco se vería bajo 80° desde el centro exacto de la "
+        "plaza.",
+        [
+            ("40°", "Ese es el ángulo desde el mirador; el arco es su doble."),
+            ("20°", "Dividió en vez de multiplicar."),
+            ("140°", "Restó de 180°, que no corresponde a esta relación."),
+        ],
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "Al calcular la longitud de un arco de 90° en una circunferencia de radio 6, un estudiante responde 28,26 usando π · r². ¿Qué error cometió?",
+        "Usó la fórmula del área en lugar de la del arco",
+        "El error es de fórmula: mezcló una superficie con una longitud.\n\n"
+        "1) La longitud del arco es (90/360) · 2 · π · 6, o sea un cuarto del "
+        "contorno.\n"
+        "2) Con π ≈ 3,14: (0,25) · 37,68 = 9,42 unidades.\n"
+        "3) Lo que calculó, π · r², corresponde al área del círculo completo.\n"
+        "4) Las unidades lo delatan: una longitud va en unidades simples y él "
+        "entregó un valor propio de unidades cuadradas.",
+        [
+            ("Se equivocó al elevar el radio al cuadrado", "6² sí es 36; el problema es que ahí no correspondía elevar nada."),
+            ("Debía dividir por 90 en vez de por 360", "La fracción del arco es 90/360, o sea un cuarto de vuelta."),
+            ("No hay error: la longitud del arco es 28,26", "Ese número es el área del círculo de radio 3, no la longitud de un arco."),
+        ],
+    ),
+    # ==================== Esfera: superficie y volumen ====================
+    _q(
+        "geo_esfera", "facil",
+        "¿Cuál de las siguientes expresiones representa el volumen de una esfera de radio r?",
+        "(4/3) · π · r³",
+        "El volumen de la esfera depende del cubo del radio.\n\n"
+        "1) La fórmula es (4/3) · π · r³.\n"
+        "2) El exponente 3 es lo que la hace un volumen: multiplica tres "
+        "longitudes.\n"
+        "3) Comprueba con r = 3 y π ≈ 3,14: (4/3) · 3,14 · 27 ≈ 113 unidades "
+        "cúbicas.\n"
+        "4) La otra fórmula que conviene tener a mano es la del área de su "
+        "superficie: 4 · π · r².",
+        [
+            ("4 · π · r²", "Esa es el ÁREA de la superficie de la esfera, en unidades cuadradas."),
+            ("(4/3) · π · r²", "Mezcla el coeficiente del volumen con el exponente del área."),
+            ("2 · π · r³", "El coeficiente correcto es 4/3, no 2."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "¿Cuál de las siguientes expresiones representa el área de la superficie de una esfera de radio r?",
+        "4 · π · r²",
+        "El área ocupa dos dimensiones, así que el radio va al cuadrado.\n\n"
+        "1) La fórmula es 4 · π · r².\n"
+        "2) Curiosamente equivale a cuatro veces el área de un círculo del mismo "
+        "radio.\n"
+        "3) Comprueba con r = 5 y π ≈ 3,14: 4 · 3,14 · 25 = 314 unidades "
+        "cuadradas.\n"
+        "4) Fíjate en el exponente: si aparece r³, se trata del volumen y no de "
+        "la superficie.",
+        [
+            ("(4/3) · π · r³", "Ese es el VOLUMEN de la esfera, en unidades cúbicas."),
+            ("π · r²", "Esa es el área de un círculo plano, no de la superficie esférica."),
+            ("2 · π · r", "Esa es la longitud de una circunferencia, que es una medida de longitud."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Una pelota tiene 6 cm de radio. ¿Cuál es su volumen aproximado? (usa π ≈ 3)",
+        "864 cm³",
+        "Se aplica la fórmula del volumen con el valor de π que indica el "
+        "enunciado.\n\n"
+        "1) Volumen = (4/3) · π · r³ = (4/3) · 3 · 6³.\n"
+        "2) Calcula la potencia: 6³ = 216.\n"
+        "3) El (4/3) · 3 se simplifica a 4, así que queda 4 · 216 = 864 "
+        "centímetros cúbicos.\n"
+        "4) Control: la pelota tiene 12 cm de diámetro, así que cabe justo en "
+        "un cubo de arista 12, cuyo volumen es 1.728. Y 864 es exactamente su "
+        "mitad, que es la proporción esperable.",
+        [
+            ("216 cm³", "Se quedó en r³ sin multiplicar por (4/3) · π."),
+            ("432 cm³", "Usó un coeficiente 2 en vez de 4."),
+            ("1.728 cm³", "Ese es el volumen del cubo de arista 12 que envuelve la esfera."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Si el radio de una esfera se duplica, ¿qué ocurre con su volumen?",
+        "Queda multiplicado por 8",
+        "El volumen depende del cubo del radio.\n\n"
+        "1) Si el radio pasa de r a 2r, el volumen pasa a (4/3) · π · (2r)³.\n"
+        "2) (2r)³ = 8r³, así que el volumen queda ocho veces mayor.\n"
+        "3) Comprueba con π ≈ 3: radio 1 da 4 y radio 2 da 32.\n"
+        "4) La superficie, en cambio, se multiplica por 4, porque depende del "
+        "cuadrado del radio.",
+        [
+            ("Queda multiplicado por 2", "Solo las longitudes se duplican; el volumen crece con el cubo."),
+            ("Queda multiplicado por 4", "Por 4 crece el ÁREA de la superficie, no el volumen."),
+            ("Queda multiplicado por 6", "No corresponde a ninguna de las dos relaciones."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Un estanque esférico tiene 3 m de radio. ¿Cuál es el área de su superficie? (usa π ≈ 3,14)",
+        "113,04 m²",
+        "Se aplica la fórmula del área de la superficie esférica.\n\n"
+        "1) Área = 4 · π · r² = 4 · 3,14 · 3².\n"
+        "2) Calcula: 3² = 9, y 4 · 3,14 = 12,56.\n"
+        "3) Multiplicando: 12,56 · 9 = 113,04 metros cuadrados.\n"
+        "4) Ese valor es el que sirve para saber cuánta pintura lleva el "
+        "estanque por fuera.",
+        [
+            ("28,26 m²", "Calculó el área de un círculo de radio 3, sin el factor 4."),
+            ("113,04 m³", "El número es correcto pero las unidades no: una superficie va en metros cuadrados."),
+            ("339,12 m²", "Usó el radio al cubo en vez de al cuadrado."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Una esfera cabe justo dentro de un cubo. ¿Qué relación hay entre el radio de la esfera y la arista del cubo?",
+        "El radio es la mitad de la arista",
+        "Que quepa justo significa que la esfera toca las seis caras.\n\n"
+        "1) La esfera atraviesa el cubo de cara a cara, así que su diámetro es "
+        "igual a la arista.\n"
+        "2) El radio es la mitad del diámetro, o sea la mitad de la arista.\n"
+        "3) Con arista 10, el radio es 5.\n"
+        "4) De ahí sale un dato bonito: la esfera ocupa cerca del 52% del "
+        "volumen del cubo que la contiene.",
+        [
+            ("El radio es igual a la arista", "Entonces la esfera tendría el doble de diámetro que el cubo y no cabría."),
+            ("El radio es el doble de la arista", "Sería todavía más grande que el caso anterior."),
+            ("El radio es un tercio de la arista", "Entonces la esfera quedaría suelta, sin tocar las caras."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "Dos esferas tienen radios en razón 1 : 2. ¿En qué razón están sus volúmenes?",
+        "1 : 8",
+        "En cuerpos semejantes, los volúmenes van con el cubo de la razón.\n\n"
+        "1) La razón de radios es 1 : 2.\n"
+        "2) La razón de volúmenes es su cubo: 1³ : 2³ = 1 : 8.\n"
+        "3) Comprueba con la fórmula: (4/3)π · 1³ frente a (4/3)π · 8, y el "
+        "coeficiente se cancela.\n"
+        "4) Sus superficies, en cambio, están en razón 1 : 4.",
+        [
+            ("1 : 2", "Esa es la razón de los RADIOS, que son longitudes."),
+            ("1 : 4", "Ese es el cuadrado de la razón, que corresponde a las superficies."),
+            ("1 : 6", "No corresponde a ninguna de las relaciones de semejanza."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Al calcular el volumen de una esfera de 4 cm de radio, un estudiante usa 4 · π · r² y responde 200,96 cm³. ¿Qué error cometió?",
+        "Usó la fórmula del área de la superficie en lugar de la del volumen",
+        "Las dos fórmulas de la esfera se parecen y se confunden con "
+        "facilidad.\n\n"
+        "1) El área de la superficie es 4 · π · r², que con r = 4 y π ≈ 3,14 da "
+        "efectivamente 200,96.\n"
+        "2) El volumen es (4/3) · π · r³ = (4/3) · 3,14 · 64 ≈ 267,95 "
+        "centímetros cúbicos.\n"
+        "3) La diferencia clave es el exponente: r² para la superficie, r³ para "
+        "el volumen.\n"
+        "4) Y las unidades avisan: el resultado que buscaba iba en centímetros "
+        "cúbicos.",
+        [
+            ("Se equivocó al elevar 4 al cuadrado", "4² sí es 16; el problema es que el volumen pide el cubo."),
+            ("Debía usar un coeficiente 2 en vez de 4", "El coeficiente del volumen es 4/3, no 2."),
+            ("No hay error: el volumen es 200,96 cm³", "Ese valor es el área de la superficie; el volumen es cercano a 268."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "facil",
+        "Una pelota de radio r se guarda en una caja cúbica de arista 2r. ¿Cuál de las siguientes expresiones representa el espacio que queda vacío dentro de la caja?",
+        "(2r)³ − (4/3) · π · r³",
+        "El espacio vacío es lo que sobra al restar la pelota de la caja.\n\n"
+        "1) El volumen de la caja es (2r)³ = 8r³.\n"
+        "2) El volumen de la pelota es (4/3) · π · r³.\n"
+        "3) El vacío es la resta de ambos.\n"
+        "4) Con π ≈ 3,14 ese vacío resulta cerca del 48% de la caja: casi la "
+        "mitad del espacio se desperdicia.",
+        [
+            ("(2r)³ + (4/3) · π · r³", "Suma los dos volúmenes en vez de restarlos."),
+            ("(4/3) · π · r³ − (2r)³", "Resta al revés y da un valor negativo."),
+            ("(2r)³ − 4 · π · r²", "Resta una superficie a un volumen: no se pueden restar magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "Un tanque esférico de 2 m de radio se llena de agua. Sabiendo que 1 m³ equivale a 1.000 litros, ¿cuántos litros contiene aproximadamente? (usa π ≈ 3)",
+        "32.000 litros",
+        "Primero el volumen en metros cúbicos y después la conversión.\n\n"
+        "1) Volumen = (4/3) · 3 · 2³ = 4 · 8 = 32 metros cúbicos.\n"
+        "2) Cada metro cúbico son 1.000 litros.\n"
+        "3) Entonces el tanque contiene 32 · 1.000 = 32.000 litros.\n"
+        "4) El (4/3) · π se simplifica a 4 cuando π vale 3, lo que hace la "
+        "cuenta muy rápida.",
+        [
+            ("8.000 litros", "Se quedó en r³ sin aplicar el coeficiente (4/3) · π."),
+            ("32 litros", "Olvidó convertir metros cúbicos a litros."),
+            ("48.000 litros", "Usó el área de la superficie en vez del volumen."),
+        ],
+    ),
+    # ==================== Rectas en el plano ====================
+    _q(
+        "geo_rectas", "facil",
+        "¿Qué relación hay entre las pendientes de dos rectas paralelas?",
+        "Son iguales",
+        "La pendiente mide la inclinación, y dos paralelas están igual de "
+        "inclinadas.\n\n"
+        "1) Si dos rectas nunca se cruzan, tienen exactamente la misma "
+        "inclinación.\n"
+        "2) Por eso sus pendientes coinciden.\n"
+        "3) Lo que las distingue es el intercepto: cortan el eje Y en puntos "
+        "distintos.\n"
+        "4) Ejemplo: y = 2x + 1 e y = 2x − 5 son paralelas.",
+        [
+            ("Son opuestas", "Pendientes opuestas dan rectas que se cruzan, no paralelas."),
+            ("Su producto es −1", "Esa es la condición de las rectas PERPENDICULARES."),
+            ("Una es el doble de la otra", "Con pendientes distintas las rectas se cruzan en algún punto."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Qué relación hay entre las pendientes de dos rectas perpendiculares?",
+        "Su producto es −1",
+        "Las perpendiculares se cruzan formando un ángulo recto, y eso fija la "
+        "relación entre sus pendientes.\n\n"
+        "1) Si una tiene pendiente m, la otra tiene −1/m.\n"
+        "2) Su producto es m · (−1/m) = −1.\n"
+        "3) Ejemplo: y = 2x + 3 es perpendicular a y = −0,5x + 1, porque "
+        "2 · (−0,5) = −1.\n"
+        "4) El único caso que se escapa es el de una recta horizontal con una "
+        "vertical: ahí la vertical no tiene pendiente definida.",
+        [
+            ("Son iguales", "Pendientes iguales dan rectas paralelas, no perpendiculares."),
+            ("Su suma es 0", "Eso daría pendientes opuestas, que no son perpendiculares: 2 y −2 se cruzan sin ángulo recto."),
+            ("Su producto es 1", "Con producto 1, como 2 y 0,5, las rectas se cruzan pero no en ángulo recto."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Cuál es la pendiente de una recta paralela a y = 3x − 7?",
+        "3",
+        "Las paralelas comparten pendiente.\n\n"
+        "1) En y = mx + n, la pendiente es el número que multiplica a la x.\n"
+        "2) Acá vale 3.\n"
+        "3) Cualquier recta paralela tendrá también pendiente 3, cambiando solo "
+        "el término independiente.\n"
+        "4) Por ejemplo y = 3x + 100 es paralela a la del enunciado.",
+        [
+            ("−7", "Ese es el intercepto, no la pendiente."),
+            ("−3", "Esa sería una recta que baja; la del enunciado sube."),
+            ("−1/3", "Esa es la pendiente de una recta PERPENDICULAR a la dada."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál es la pendiente de una recta perpendicular a y = 4x + 1?",
+        "−1/4",
+        "La perpendicular tiene la pendiente inversa y cambiada de signo.\n\n"
+        "1) La recta dada tiene pendiente 4.\n"
+        "2) La perpendicular tiene −1/4, porque su producto debe dar −1.\n"
+        "3) Comprueba: 4 · (−1/4) = −1.\n"
+        "4) Los dos pasos son invertir y cambiar el signo; olvidar uno de los "
+        "dos es el error más común.",
+        [
+            ("4", "Esa es la pendiente de una PARALELA."),
+            ("−4", "Solo cambió el signo, sin invertir: su producto da −16."),
+            ("1/4", "Solo invirtió, sin cambiar el signo: su producto da 1."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Dos rectas tienen pendientes distintas. ¿Qué se puede afirmar sobre ellas?",
+        "Se cortan exactamente en un punto",
+        "La pendiente decide cómo se ubican dos rectas entre sí.\n\n"
+        "1) Si las pendientes son distintas, las rectas tienen inclinaciones "
+        "distintas y necesariamente se cruzan.\n"
+        "2) Y se cruzan una sola vez: dos rectas distintas no pueden compartir "
+        "dos puntos.\n"
+        "3) Ese punto de corte es la solución del sistema formado por sus "
+        "ecuaciones.\n"
+        "4) Si las pendientes fueran iguales, serían paralelas —sin corte— o la "
+        "misma recta.",
+        [
+            ("Son paralelas", "Las paralelas tienen la MISMA pendiente."),
+            ("No se cortan nunca", "Con inclinaciones distintas el cruce es inevitable."),
+            ("Se cortan en dos puntos", "Dos rectas distintas comparten a lo más un punto."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "¿Cuál de las siguientes expresiones representa la ecuación de una recta que pasa por el punto (0, n) y tiene pendiente m?",
+        "y = mx + n",
+        "Es la forma principal de la ecuación de la recta.\n\n"
+        "1) La pendiente m indica cuánto sube y por cada unidad que avanza x.\n"
+        "2) El n es el valor de y cuando x vale 0, o sea justo el punto "
+        "(0, n).\n"
+        "3) Comprueba: reemplazando x = 0 queda y = n.\n"
+        "4) Esa forma es la que permite leer de un vistazo la inclinación y el "
+        "punto de partida.",
+        [
+            ("y = nx + m", "Intercambia los papeles: el que multiplica a la x es la pendiente."),
+            ("y = m + n", "No hay variable x: esa expresión describe un número, no una recta."),
+            ("y = m(x + n)", "Esa recta corta el eje Y en m · n, no en n."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "Un estudiante afirma que las rectas y = 2x + 1 e y = −2x + 1 son perpendiculares porque sus pendientes tienen signos opuestos. ¿Es correcta su afirmación?",
+        "No: para ser perpendiculares el producto de las pendientes debe ser −1, y acá da −4",
+        "Cambiar el signo no basta: también hay que invertir.\n\n"
+        "1) El producto de las pendientes es 2 · (−2) = −4, no −1.\n"
+        "2) Para que fueran perpendiculares, la segunda debería tener pendiente "
+        "−1/2.\n"
+        "3) Las dos rectas del enunciado sí se cruzan —en el punto (0, 1)— pero "
+        "no en ángulo recto.\n"
+        "4) La condición completa es invertir Y cambiar el signo.",
+        [
+            ("Sí: signos opuestos garantizan perpendicularidad", "El producto debe dar exactamente −1, y aquí da −4."),
+            ("No: en realidad son paralelas", "Tienen pendientes distintas, así que se cruzan."),
+            ("No: nunca se cruzan", "Se cruzan en (0, 1), donde ambas valen 1."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "dificil",
+        "¿Cuál de las siguientes afirmaciones sobre una recta vertical es correcta?",
+        "No tiene pendiente definida, porque avanzaría 0 en horizontal",
+        "La pendiente es la subida dividida por el avance.\n\n"
+        "1) En una recta vertical todos los puntos tienen la misma x: el avance "
+        "horizontal entre dos puntos es 0.\n"
+        "2) La pendiente exigiría dividir por 0, y esa división no está "
+        "definida.\n"
+        "3) Por eso una recta vertical no se puede escribir como y = mx + n; se "
+        "escribe x = k.\n"
+        "4) La horizontal, en cambio, sí tiene pendiente: vale 0.",
+        [
+            ("Su pendiente es 0", "Esa es la pendiente de una recta HORIZONTAL."),
+            ("Su pendiente es 1", "Pendiente 1 corresponde a una recta inclinada 45°."),
+            ("Se puede escribir siempre como y = mx + n", "Esa forma no puede representar una vertical, justamente porque no tiene pendiente."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "Dos calles de una ciudad se representan con las rectas y = 0,5x + 2 e y = 0,5x − 3. ¿Se cruzan en algún punto?",
+        "No: son paralelas porque tienen la misma pendiente",
+        "Basta comparar las pendientes.\n\n"
+        "1) Ambas tienen pendiente 0,5, o sea la misma inclinación.\n"
+        "2) Los interceptos son distintos (2 y −3), así que no son la misma "
+        "recta.\n"
+        "3) Dos rectas con igual pendiente e interceptos distintos son paralelas "
+        "y nunca se cruzan.\n"
+        "4) Algebraicamente: igualar las ecuaciones lleva a 2 = −3, que es "
+        "falso. El sistema no tiene solución.",
+        [
+            ("Sí, en el punto (0, 2)", "Ese punto está solo en la primera recta; en la segunda, con x = 0, y vale −3."),
+            ("Sí, en el origen", "Ninguna de las dos pasa por el origen."),
+            ("Sí, pero solo si se prolongan lo suficiente", "Las paralelas no se cruzan por más que se prolonguen."),
+        ],
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "Una recta pasa por los puntos (2, 3) y (6, 11). ¿Cuál es la pendiente de cualquier recta perpendicular a ella?",
+        "−1/2",
+        "Primero se obtiene la pendiente de la recta dada y después se "
+        "transforma.\n\n"
+        "1) Pendiente de la recta: (11 − 3)/(6 − 2) = 8/4 = 2.\n"
+        "2) La perpendicular tiene la inversa cambiada de signo: −1/2.\n"
+        "3) Comprueba: 2 · (−1/2) = −1.\n"
+        "4) El error frecuente es quedarse en el paso 1 y responder 2, que es la "
+        "pendiente de una paralela.",
+        [
+            ("2", "Esa es la pendiente de la recta dada, y también la de cualquier PARALELA."),
+            ("−2", "Solo cambió el signo sin invertir: el producto daría −4."),
+            ("1/2", "Solo invirtió sin cambiar el signo: el producto daría 1."),
         ],
     ),
 ]
