@@ -10,7 +10,11 @@ peso venga del temario y no se mueva cuando el banco crezca.
 from collections import Counter
 from dataclasses import dataclass
 
-from paes_api.modules.exam_focus.service import UNIDADES_POR_EJE, _select_questions
+from paes_api.modules.exam_focus.service import (
+    MINIMO_POR_TEXTO,
+    UNIDADES_POR_EJE,
+    _select_questions,
+)
 from paes_api.modules.skill_tree.models import SkillAxis, Subject
 
 
@@ -203,3 +207,65 @@ def test_si_a_m2_le_falta_banco_propio_lo_completa_con_m1() -> None:
     pool = _banco_m1_y_m2(por_m1=300, por_m2=1)
     elegidas = _select_questions(pool, [], 65, Subject.M2)
     assert len(elegidas) == 65
+
+
+# --- Competencia Lectora: el ensayo se arma por TEXTO ---------------------
+# La prueba real son 7 textos de mil y tantas palabras con 8 a 11 preguntas
+# cada uno. Antes el armador elegía 65 preguntas sueltas y las barajaba, así
+# que podía montar un texto largo para una sola pregunta.
+
+
+@dataclass
+class _PreguntaTexto:
+    id: int
+    passage_id: int | None
+
+
+def _banco_de_lectura(textos: int, por_texto: int) -> list[_PreguntaTexto]:
+    return [
+        _PreguntaTexto(id=t * 100 + k, passage_id=t)
+        for t in range(1, textos + 1)
+        for k in range(por_texto)
+    ]
+
+
+def _bloques(elegidas: list[_PreguntaTexto]) -> list[tuple[int | None, int]]:
+    """(texto, cuántas seguidas) recorriendo el ensayo en orden."""
+    out: list[tuple[int | None, int]] = []
+    for q in elegidas:
+        if out and out[-1][0] == q.passage_id:
+            out[-1] = (q.passage_id, out[-1][1] + 1)
+        else:
+            out.append((q.passage_id, 1))
+    return out
+
+
+def test_las_preguntas_de_un_texto_llegan_juntas() -> None:
+    """Si se barajan, el alumno tiene que releer el texto en cada pregunta."""
+    elegidas = _select_questions(_banco_de_lectura(12, 9), [], 63, Subject.LECTORA)
+    bloques = _bloques(elegidas)
+    # Cada texto aparece en UN solo bloque, no repartido por el ensayo.
+    assert len(bloques) == len({t for t, _ in bloques})
+
+
+def test_ningun_texto_entra_por_menos_preguntas_que_el_minimo() -> None:
+    """Mil palabras para dos preguntas es tiempo regalado."""
+    elegidas = _select_questions(_banco_de_lectura(12, 9), [], 65, Subject.LECTORA)
+    assert all(n >= MINIMO_POR_TEXTO for _, n in _bloques(elegidas))
+
+
+def test_un_ensayo_de_lectura_se_parece_a_la_prueba_oficial() -> None:
+    """7 textos y 65 preguntas es la forma que declara el temario."""
+    elegidas = _select_questions(_banco_de_lectura(20, 9), [], 65, Subject.LECTORA)
+    bloques = _bloques(elegidas)
+    assert 6 <= len(bloques) <= 9
+    assert 60 <= len(elegidas) <= 65
+
+
+def test_dos_ensayos_no_traen_siempre_los_mismos_textos() -> None:
+    """Con banco de sobra, repetir el mismo ensayo no sirve para practicar."""
+    banco = _banco_de_lectura(20, 9)
+    a = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
+    b = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
+    c = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
+    assert not (a == b == c)

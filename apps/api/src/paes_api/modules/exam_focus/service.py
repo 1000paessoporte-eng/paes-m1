@@ -202,6 +202,50 @@ def duration_for(question_count: int, pace: Pace, subject: Subject = Subject.M1)
     )
 
 
+#: Mínimo de preguntas que justifica montar un texto largo en el ensayo.
+#: Bajo esto conviene cerrar el ensayo antes que pedirle al alumno leer mil
+#: palabras para responder dos preguntas. La prueba oficial nunca baja de 7.
+MINIMO_POR_TEXTO = 6
+
+
+def _seleccionar_por_texto(pool: list[Question], count: int) -> list[Question]:
+    """Arma un ensayo de lectura eligiendo TEXTOS completos.
+
+    Devuelve las preguntas ya agrupadas por texto y en ese orden: el cliente
+    las pagina tal cual las recibe, un texto por página con sus preguntas
+    debajo, que es como se rinde la prueba de papel.
+    """
+    por_texto: dict[int, list[Question]] = defaultdict(list)
+    sueltas: list[Question] = []
+    for q in pool:
+        if q.passage_id is None:
+            sueltas.append(q)
+        else:
+            por_texto[q.passage_id].append(q)
+
+    claves = list(por_texto)
+    random.shuffle(claves)
+    elegidas: list[Question] = []
+    for clave in claves:
+        falta = count - len(elegidas)
+        if falta < MINIMO_POR_TEXTO:
+            break
+        grupo = list(por_texto[clave])
+        # Se barajan DENTRO del texto para que dos ensayos con el mismo texto
+        # no traigan siempre las mismas preguntas; el orden entre textos ya
+        # quedó fijado arriba.
+        random.shuffle(grupo)
+        elegidas.extend(grupo[:falta])
+
+    # Las preguntas sin texto asociado solo se usan para completar, y nunca
+    # deberían existir en esta prueba: una pregunta de lectura sin lectura no
+    # se puede responder. El verificador del banco ya lo prohíbe.
+    if len(elegidas) < count and sueltas:
+        random.shuffle(sueltas)
+        elegidas.extend(sueltas[: count - len(elegidas)])
+    return elegidas
+
+
 def _select_questions(
     pool: list[Question],
     axes: list[str],
@@ -227,6 +271,9 @@ def _select_questions(
     a depender del tamaño del banco por la puerta de atrás: M1 tiene cinco veces
     más preguntas que M2, así que un ensayo de M2 traía 56 de M1 y 9 propias.
     """
+    # Competencia Lectora no se reparte por eje: se reparte por texto.
+    if subject is Subject.LECTORA:
+        return _seleccionar_por_texto(pool, count)
     available = [q for q in pool if not axes or q.skill_node.axis.value in axes]
     if len(available) <= count:
         random.shuffle(available)
@@ -238,6 +285,7 @@ def _select_questions(
 
     # Los ejes sin peso declarado (Lectora, Ciencias, Historia) se reparten
     # parejo entre sí: su temario no se organiza por unidades comparables.
+
     incluidas = SUBJECT_INCLUDES[subject]
     pesos = {
         axis: sum(_unidades(s, axis) for s in incluidas) for axis in by_axis

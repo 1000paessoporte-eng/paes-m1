@@ -92,6 +92,30 @@ export function ExamRunner({
 
   const currentQuestion = questions[currentIndex] as ExamQuestion | undefined;
 
+  /**
+   * Las preguntas agrupadas en páginas.
+   *
+   * Una página es un texto con todas sus preguntas, que es como se rinde
+   * Competencia Lectora. Las preguntas sin texto asociado —matemática,
+   * ciencias, historia sin fuente— quedan cada una en su propia página, o
+   * sea que para esas pruebas nada cambia.
+   */
+  const paginas = useMemo(() => {
+    const out: number[][] = [];
+    questions.forEach((q, i) => {
+      const clave = q.passage?.id ?? null;
+      const anterior = i > 0 ? (questions[i - 1].passage?.id ?? null) : null;
+      if (clave !== null && clave === anterior) out[out.length - 1].push(i);
+      else out.push([i]);
+    });
+    return out;
+  }, [questions]);
+
+  const paginaActual = useMemo(
+    () => Math.max(0, paginas.findIndex((p) => p.includes(currentIndex))),
+    [paginas, currentIndex]
+  );
+
   /** Guarda una respuesta. Los valores se pasan explícitos porque al llamarlo
    *  justo después de un setState el estado todavía no se ha actualizado. */
   const flush = useCallback(
@@ -140,10 +164,44 @@ export function ExamRunner({
     [currentIndex, questions, flush]
   );
 
+  /** Salta al primer enunciado de otra página y sube al texto. */
+  const irAPagina = useCallback(
+    (p: number) => {
+      const destino = paginas[p];
+      if (!destino) return;
+      goToQuestion(destino[0]);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [paginas, goToQuestion]
+  );
+
+  //: Pregunta a la que hay que bajar en cuanto exista en el DOM. Se guarda
+  //: en un ref porque al saltar desde la cuadrícula la pregunta puede estar
+  //: en otra página y todavía no estar montada cuando se pide el scroll.
+  const scrollPendienteRef = useRef<number | null>(null);
+
+  /** Salta a una pregunta concreta desde la cuadrícula y la trae a la vista. */
+  const irAPregunta = useCallback(
+    (index: number) => {
+      scrollPendienteRef.current = index;
+      goToQuestion(index);
+    },
+    [goToQuestion]
+  );
+
+  useEffect(() => {
+    const objetivo = scrollPendienteRef.current;
+    if (objetivo == null) return;
+    scrollPendienteRef.current = null;
+    document
+      .getElementById(`pregunta-${objetivo}`)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [currentIndex]);
+
   const selectAlternative = useCallback(
-    (altId: number) => {
-      if (!currentQuestion) return;
-      const qid = currentQuestion.id;
+    (altId: number, questionId?: number) => {
+      const qid = questionId ?? currentQuestion?.id;
+      if (qid == null) return;
       const actual = answersRef.current[qid] ?? { selected: null, flagged: false };
       // Volver a tocar la alternativa marcada la deselecciona: en la PAES
       // dejar en blanco no penaliza, así que debe ser posible retractarse.
@@ -154,9 +212,9 @@ export function ExamRunner({
     [currentQuestion, flush]
   );
 
-  const toggleFlag = useCallback(() => {
-    if (!currentQuestion) return;
-    const qid = currentQuestion.id;
+  const toggleFlag = useCallback((questionId?: number) => {
+    const qid = questionId ?? currentQuestion?.id;
+    if (qid == null) return;
     const actual = answersRef.current[qid] ?? { selected: null, flagged: false };
     const flagged = !actual.flagged;
     setAnswers((prev) => ({ ...prev, [qid]: { ...actual, flagged } }));
@@ -418,7 +476,9 @@ export function ExamRunner({
   const critico = remainingMs <= 5 * 60 * 1000;
   const aviso = !critico && remainingMs <= 10 * 60 * 1000;
   const sinResponder = questions.length - respondidas;
-  const estado = answers[currentQuestion.id];
+  const indicesPagina = paginas[paginaActual] ?? [currentIndex];
+  const textoPagina = questions[indicesPagina[0]]?.passage ?? null;
+  const variasEnLaPagina = indicesPagina.length > 1;
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -428,7 +488,11 @@ export function ExamRunner({
           <div className="min-w-0 flex-1">
             <p className="truncate text-xs text-muted">{SUBJECT_LABELS[attemptSubject]}</p>
             <p className="font-semibold">
-              Pregunta {currentIndex + 1} de {questions.length}
+              {variasEnLaPagina
+                ? `Texto ${paginaActual + 1} de ${paginas.length} · preguntas ${
+                    indicesPagina[0] + 1
+                  } a ${indicesPagina[indicesPagina.length - 1] + 1}`
+                : `Pregunta ${currentIndex + 1} de ${questions.length}`}
             </p>
           </div>
 
@@ -469,94 +533,106 @@ export function ExamRunner({
           flagged: answers[q.id]?.flagged ?? false,
         }))}
         currentIndex={currentIndex}
-        onSelect={goToQuestion}
+        onSelect={irAPregunta}
       />
 
       {/* ── Pregunta ────────────────────────────────────────────────── */}
       {/* pb generoso: deja aire para que la pastilla flotante del navegador
           no tape el final del contenido. */}
       <main className="py-6 pb-24">
-        <article className="rounded-xl border border-border bg-surface p-5">
-          <div className="mb-3 flex items-start justify-between gap-3">
-            <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-medium text-muted">
-              {currentQuestion.axis || currentQuestion.skill_node_name}
-            </span>
-            <button
-              type="button"
-              onClick={toggleFlag}
-              className={cn(
-                "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
-                estado?.flagged
-                  ? "border-warning/50 bg-warning/10 text-warning"
-                  : "border-border text-muted hover:bg-surface-hover"
-              )}
-            >
-              {estado?.flagged ? "★ Marcada" : "☆ Marcar"}
-            </button>
+        {/* El texto va UNA vez, arriba de todas sus preguntas, como en la
+            prueba de papel. Antes se repetia encima de cada pregunta y
+            obligaba a releerlo nueve veces. */}
+        {textoPagina && (
+          <div className="mb-5">
+            <PassagePanel passage={textoPagina} />
           </div>
+        )}
 
-          {/* En Competencia Lectora la pregunta no se entiende sin su texto:
-              va arriba, dentro del mismo bloque, para que se lean juntos. */}
-          {currentQuestion.passage && (
-            <div className="mb-5">
-              <PassagePanel passage={currentQuestion.passage} />
-            </div>
-          )}
+        <div className="space-y-5">
+          {indicesPagina.map((idx) => {
+            const q = questions[idx];
+            if (!q) return null;
+            const est = answers[q.id];
+            return (
+              <article
+                key={q.id}
+                id={`pregunta-${idx}`}
+                className="scroll-mt-32 rounded-xl border border-border bg-surface p-5"
+              >
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-medium text-muted">
+                    {variasEnLaPagina
+                      ? `Pregunta ${idx + 1}`
+                      : q.axis || q.skill_node_name}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => toggleFlag(q.id)}
+                    className={cn(
+                      "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
+                      est?.flagged
+                        ? "border-warning/50 bg-warning/10 text-warning"
+                        : "border-border text-muted hover:bg-surface-hover"
+                    )}
+                  >
+                    {est?.flagged ? "★ Marcada" : "☆ Marcar"}
+                  </button>
+                </div>
 
-          <TextoRico texto={currentQuestion.stem} className="text-lg" />
+                <TextoRico texto={q.stem} className="text-lg" />
 
-          <div className="mt-5 space-y-2">
-            {currentQuestion.alternatives.map((alt, i) => {
-              const elegida = estado?.selected === alt.id;
-              return (
-                <button
-                  key={alt.id}
-                  type="button"
-                  onClick={() => selectAlternative(alt.id)}
-                  aria-pressed={elegida}
-                  className={cn(
-                    // `active:scale` es el acuse de recibo del toque: en móvil
-                    // no hay hover, y sin esto la única señal de que el dedo
-                    // acertó llega cuando ya se pintó la alternativa.
-                    "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
-                    // La señal de "elegida" la da la burbuja, no la fila: en un
-                    // cartón de respuestas lo que se rellena es el círculo. El
-                    // contenedor solo se firma con un borde de grafito, sin
-                    // fondo de color, para no competir con ella.
-                    elegida
-                      ? "border-grafito bg-surface"
-                      : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
-                  )}
-                >
-                  {/* La burbuja del cartón de respuestas: acá es el uso puro,
-                      porque durante el ensayo nunca se corrige en pantalla.
-                      Ver components/ui/burbuja.tsx. */}
-                  <Burbuja letra={LABELS[i]} marcada={elegida} />
-                  <TextoRico texto={alt.text} inline />
-                </button>
-              );
-            })}
-          </div>
-        </article>
-
+                <div className="mt-5 space-y-2">
+                  {q.alternatives.map((alt, i) => {
+                    const elegida = est?.selected === alt.id;
+                    return (
+                      <button
+                        key={alt.id}
+                        type="button"
+                        onClick={() => selectAlternative(alt.id, q.id)}
+                        aria-pressed={elegida}
+                        className={cn(
+                          // `active:scale` es el acuse de recibo del toque: en
+                          // móvil no hay hover, y sin esto la única señal de que
+                          // el dedo acertó llega cuando ya se pintó la
+                          // alternativa.
+                          "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
+                          // La señal de "elegida" la da la burbuja, no la fila:
+                          // en un cartón de respuestas lo que se rellena es el
+                          // círculo.
+                          elegida
+                            ? "border-grafito bg-surface"
+                            : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
+                        )}
+                      >
+                        <Burbuja letra={LABELS[i]} marcada={elegida} />
+                        <TextoRico texto={alt.text} inline />
+                      </button>
+                    );
+                  })}
+                </div>
+              </article>
+            );
+          })}
+        </div>
         {/* ── Navegación ────────────────────────────────────────────── */}
         <nav className="mt-5 flex items-center gap-3">
           <button
             type="button"
-            onClick={() => goToQuestion(currentIndex - 1)}
-            disabled={currentIndex === 0}
+            onClick={() => irAPagina(paginaActual - 1)}
+            disabled={paginaActual === 0}
             className="rounded-lg border border-border px-4 py-2.5 font-medium transition hover:bg-surface-hover disabled:opacity-40"
           >
             Anterior
           </button>
 
-          {currentIndex < questions.length - 1 ? (
+          {paginaActual < paginas.length - 1 ? (
             <button
               type="button"
-              onClick={() => goToQuestion(currentIndex + 1)}
+              onClick={() => irAPagina(paginaActual + 1)}
               className="btn-glow flex-1 rounded-lg px-4 py-2.5 font-semibold text-accent-foreground"
             >
-              Siguiente
+              {variasEnLaPagina ? "Siguiente texto" : "Siguiente"}
             </button>
           ) : (
             <button
