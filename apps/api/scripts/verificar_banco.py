@@ -1648,6 +1648,37 @@ def main() -> int:
                 )
             puros[valor] = a["text"]
 
+    # Una probabilidad vive entre 0 y 1, y eso es lo primero que aprende quien
+    # estudia la unidad. Un distractor que se pasa de 1 se descarta sin resolver
+    # el ejercicio: deja la pregunta en tres alternativas y regala puntaje al
+    # que no sabe hacerla. El banco llegó a tener doce, varios anunciando su
+    # propia imposibilidad en la justificación ("obtuvo un valor mayor que 1").
+    # Solo se mira cuando el enunciado pide una probabilidad y todas las
+    # alternativas son números limpios: si son expresiones, la comparación no
+    # aplica, y una pregunta de frecuencia ABSOLUTA sí puede pasar de 1.
+    for q in QUESTIONS:
+        if not re.search(r"(?i)\bcu[áa]l es la probabilidad\b", q["stem"]):
+            continue
+        valores = {}
+        for a in q["alternatives"]:
+            texto = _norm(a["text"])
+            if not re.fullmatch(r"-?\d+(?:[.,]\d+)?(?:\s*/\s*-?\d+)?", texto):
+                valores = None
+                break
+            v = _valores_del_texto(texto)
+            if len(v) != 1:
+                valores = None
+                break
+            valores[a["text"]] = next(iter(v))
+        if not valores:
+            continue
+        for texto, v in valores.items():
+            if not 0 <= v <= 1:
+                fallas.append(
+                    f"alternativa '{texto}' no puede ser una probabilidad "
+                    f"(está fuera de 0 a 1): {q['stem'][:60]}"
+                )
+
     # Una plantilla es un enunciado con los números cambiados. Si la tarea es la
     # misma, la dificultad tiene que ser la misma: el ensayo se arma con esa
     # etiqueta. Cuando los números SÍ cambian el procedimiento, la excepción se
