@@ -21383,6 +21383,190 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "cambiar_opinion",
+        "title": "El derecho a cambiar de opinión",
+        "kind": "no_literario",
+        "source_note": (
+            "Ensayo original de 1000paes."
+        ),
+        "body": (
+            "Hay una jugada que se repite en cualquier discusión pública y que casi "
+            "siempre funciona. Alguien defiende una posición y su adversario, en "
+            "lugar de responderle, exhibe una declaración suya de hace cinco años "
+            "en la que sostenía lo contrario. No hace falta agregar nada más. El "
+            "auditorio entiende que la persona quedó desautorizada, y la discusión "
+            "sobre el fondo se suspende sin que nadie la haya resuelto.\n\n"
+            "Vale la pena mirar de cerca ese movimiento, porque es más extraño de "
+            "lo que parece. Lo que se exhibe como falta es haber cambiado de "
+            "opinión. Es decir, haber hecho exactamente aquello que decimos esperar "
+            "de una persona que razona.\n\n"
+            "En casi todos los demás ámbitos, el cambio se celebra. Un médico que "
+            "sigue recetando lo que aprendió en 1990 no es coherente: está "
+            "desactualizado. Una investigadora que abandona su hipótesis ante datos "
+            "que la contradicen no está traicionándose: está haciendo su trabajo. "
+            "La ciencia se organiza entera alrededor de la posibilidad de que lo "
+            "que hoy se cree resulte falso mañana, y esa disposición no se "
+            "considera una debilidad del método, sino su mayor virtud.\n\n"
+            "¿Por qué entonces en la conversación pública ocurre al revés? Sospecho "
+            "que hay una confusión entre dos cosas que se parecen y no son iguales: "
+            "la coherencia y la consistencia. Ser consistente es sostener siempre "
+            "lo mismo. Ser coherente es que las propias afirmaciones se sigan de "
+            "las propias razones. Si las razones cambian —porque aparecieron datos "
+            "nuevos, porque el país cambió, porque uno entendió algo que antes no—, "
+            "la coherencia exige cambiar la conclusión. Quien la mantiene intacta "
+            "pase lo que pase no está siendo coherente: está siendo terco, que es "
+            "una virtud distinta y bastante menor.\n\n"
+            "El costo de esta confusión no es abstracto. Se paga todos los días, y "
+            "lo paga cualquiera que quiera participar en una discusión. Si admitir "
+            "un error equivale a perderla, entonces nadie admite errores, y las "
+            "posiciones se vuelven trincheras que se defienden mucho después de que "
+            "dejaron de ser defendibles. Uno aprende a no decir «me convenciste». "
+            "Aprende, en cambio, a buscar un matiz que le permita sostener lo mismo "
+            "con otras palabras.\n\n"
+            "Se me dirá, y con razón, que no todo cambio de opinión merece respeto. "
+            "Es cierto: hay quienes cambian cuando cambia su conveniencia, y llamar "
+            "a eso apertura intelectual sería una broma de mal gusto. La objeción "
+            "es pertinente y hay que tomarla en serio, porque si toda revisión "
+            "fuera igualmente digna, la palabra de nadie valdría nada.\n\n"
+            "Pero la objeción tiene respuesta, y es más simple de lo que parece. La "
+            "diferencia entre cambiar por razones y cambiar por conveniencia no "
+            "está en el resultado, sino en el relato. Quien cambió por razones "
+            "puede decir cuáles eran, cuándo aparecieron y qué parte de lo que "
+            "sostenía quedó en pie. Quien cambió por conveniencia, no: tiende a "
+            "negar que haya cambiado, a describir su posición anterior como un "
+            "malentendido de los demás, o a descubrir que en el fondo siempre pensó "
+            "lo mismo. Lo que delata a uno y absuelve al otro no es la dirección "
+            "del cambio: es si puede explicarlo.\n\n"
+            "De ahí se sigue una exigencia razonable, y bastante más útil que la "
+            "que usamos hoy. En vez de preguntar «¿usted sostiene lo mismo que "
+            "antes?», que es una pregunta que solo premia la memoria, convendría "
+            "preguntar «¿qué lo hizo cambiar?». La primera se responde con un "
+            "archivo. La segunda obliga a mostrar el razonamiento, que es "
+            "justamente lo que interesa evaluar.\n\n"
+            "Conviene además distinguir qué es lo que cambia. No es lo mismo "
+            "revisar un juicio sobre un hecho —cuánta gente asistió, si una medida "
+            "funcionó, qué dice un informe— que revisar un principio. Lo primero "
+            "debería ocurrir cada vez que aparece mejor información, y sin "
+            "ceremonia. Lo segundo es más lento y más costoso, porque un principio "
+            "organiza muchos juicios a la vez: quien lo abandona tiene que rehacer "
+            "buena parte de lo que pensaba. El error del debate público es tratar "
+            "los dos casos con la misma vara, y reprochar como una traición lo que "
+            "muchas veces no fue más que leer un dato nuevo.\n\n"
+            "Hay una asimetría adicional que conviene notar. A las personas les "
+            "exigimos consistencia a lo largo de décadas, pero a las instituciones "
+            "les toleramos giros completos de un año a otro sin que nadie exhiba "
+            "una declaración antigua. La exigencia, entonces, no parece derivar de "
+            "un principio: parece una herramienta cómoda para descalificar a un "
+            "individuo cuando refutarlo resulta difícil. Nadie le reprocha a un "
+            "partido, a un diario o a un ministerio haber sostenido otra cosa hace "
+            "una década; a una persona, en cambio, se le guarda la cita como quien "
+            "guarda un comprobante.\n\n"
+            "Nada de esto significa que las opiniones den lo mismo o que cualquiera "
+            "pueda sostener hoy una cosa y mañana la contraria sin dar cuenta de "
+            "nada. Significa algo más modesto: que el cambio de opinión no es, por "
+            "sí mismo, un dato en contra de quien lo protagoniza, y que tratarlo "
+            "como si lo fuera tiene un precio que pagamos entre todos. Ese precio "
+            "es una conversación pública donde nadie se mueve, no porque nadie se "
+            "haya convencido, sino porque moverse cuesta caro.\n\n"
+            "Quizás el mejor indicio de que una discusión está funcionando no sea "
+            "que las partes terminen de acuerdo. Basta con algo mucho menor y "
+            "bastante más raro: que alguna de las dos salga pensando algo distinto "
+            "de lo que pensaba al entrar, y que pueda decirlo en voz alta sin que "
+            "eso se registre como una derrota."
+        ),
+    },
+    {
+        "key": "bases_fondo",
+        "title": "Bases del Fondo de Iniciativas Estudiantiles",
+        "kind": "discontinuo",
+        "source_note": (
+            "Texto original de 1000paes."
+        ),
+        "body": (
+            "**FONDO DE INICIATIVAS ESTUDIANTILES 2026 — BASES DE POSTULACIÓN**\n\n"
+            "**1. Objetivo**\n\n"
+            "El Fondo de Iniciativas Estudiantiles financia proyectos ideados y "
+            "ejecutados por estudiantes de enseñanza media, orientados a resolver "
+            "un problema concreto de su establecimiento o de su barrio. No busca "
+            "premiar la mejor idea en abstracto, sino apoyar aquellas que puedan "
+            "estar funcionando antes de diciembre de 2026.\n\n"
+            "**2. Quiénes pueden postular**\n\n"
+            "Pueden postular grupos de entre tres y ocho estudiantes matriculados "
+            "en primero, segundo, tercero o cuarto medio. Cada grupo debe designar "
+            "a un estudiante como responsable y contar con el patrocinio de un "
+            "docente del establecimiento, que no participa en la ejecución y solo "
+            "acredita que el grupo existe. Un mismo estudiante puede integrar un "
+            "solo grupo; un mismo docente puede patrocinar hasta tres.\n\n"
+            "**3. Qué financia y qué no**\n\n"
+            "El Fondo entrega hasta $800.000 por proyecto y cubre materiales, "
+            "insumos, arriendo de equipos y servicios de terceros. No cubre "
+            "remuneraciones para los integrantes del grupo, alimentación, ni la "
+            "compra de equipamiento que quede en propiedad de una persona natural. "
+            "Los bienes durables adquiridos con el Fondo pasan al establecimiento "
+            "una vez terminado el proyecto.\n\n"
+            "**4. Plazos**\n\n"
+            "| Etapa | Fecha límite |\n"
+            "|---|---|\n"
+            "| Envío de la postulación | 15 de abril |\n"
+            "| Publicación de resultados | 20 de mayo |\n"
+            "| Firma del convenio y entrega de fondos | 10 de junio |\n"
+            "| Informe de avance | 30 de agosto |\n"
+            "| Informe final y rendición de gastos | 15 de diciembre |\n\n"
+            "Las postulaciones recibidas después del 15 de abril no se revisan. No "
+            "se consideran atenuantes los problemas técnicos de la plataforma "
+            "ocurridos el último día: por eso se recomienda no dejar el envío para "
+            "la fecha límite.\n\n"
+            "**5. Criterios de evaluación**\n\n"
+            "| Criterio | Ponderación | Qué se observa |\n"
+            "|---|---|---|\n"
+            "| Pertinencia del problema | 30% | Que el problema exista y esté demostrado con evidencia propia |\n"
+            "| Viabilidad | 30% | Que el proyecto pueda ejecutarse con el monto y el plazo disponibles |\n"
+            "| Participación | 20% | Que la comunidad afectada intervenga en el diseño y no solo reciba el resultado |\n"
+            "| Permanencia | 20% | Que algo del proyecto siga funcionando después de terminado el financiamiento |\n\n"
+            "Conviene detenerse en el criterio de pertinencia, porque es donde más "
+            "postulaciones pierden puntaje. No basta con afirmar que existe un "
+            "problema: hay que mostrarlo. Una encuesta breve al curso, un registro "
+            "fotográfico fechado o un conteo hecho por el propio grupo valen más "
+            "que una cita a una estadística nacional, porque acreditan que el "
+            "problema ocurre en ese lugar y no en el país en general.\n\n"
+            "El criterio de permanencia suele entenderse mal en el sentido "
+            "contrario. No exige que el proyecto dure para siempre ni que consiga "
+            "financiamiento futuro. Exige que el grupo haya pensado qué pasa el día "
+            "después: quién se hace cargo, dónde quedan las cosas, qué se necesita "
+            "para que no se desarme. Un proyecto que declara honestamente que "
+            "terminará en diciembre y explica cómo dejará instalado el aprendizaje "
+            "puede puntuar mejor que uno que promete continuidad sin decir de qué "
+            "modo.\n\n"
+            "**6. Causales de inadmisibilidad**\n\n"
+            "Una postulación queda fuera de concurso, sin pasar a evaluación, "
+            "cuando: se recibe fuera de plazo; el grupo tiene menos de tres o más "
+            "de ocho integrantes; falta el patrocinio docente; el presupuesto "
+            "supera los $800.000; o el proyecto consiste únicamente en la compra de "
+            "equipamiento. La inadmisibilidad no se notifica de forma individual: "
+            "el listado se publica junto con los resultados.\n\n"
+            "**7. Preguntas frecuentes**\n\n"
+            "*¿Puede postular un grupo cuyo proyecto ya está en marcha?* Sí, "
+            "siempre que el financiamiento se destine a ampliarlo o a sostenerlo, y "
+            "no a cubrir gastos ya realizados. El Fondo no reembolsa.\n\n"
+            "*¿Puede el docente patrocinante escribir la postulación?* No. El "
+            "patrocinio acredita que el grupo existe y que el establecimiento está "
+            "en conocimiento del proyecto. La postulación redactada por un adulto "
+            "se detecta con facilidad y perjudica al grupo en el criterio de "
+            "participación.\n\n"
+            "*¿Qué pasa si el grupo se reduce a dos integrantes durante la "
+            "ejecución?* El proyecto continúa. El requisito de tres integrantes se "
+            "verifica al postular, no durante la ejecución, aunque el grupo debe "
+            "informar el cambio en el informe de avance.\n\n"
+            "*¿Se puede postular más de un proyecto por establecimiento?* Sí. No "
+            "hay límite por establecimiento, solo por estudiante y por docente "
+            "patrocinante.\n\n"
+            "Las consultas se reciben hasta cinco días hábiles antes del cierre. "
+            "Las respuestas se publican de forma anónima en la misma página de las "
+            "bases, de modo que todos los grupos accedan a la misma información al "
+            "mismo tiempo."
+        ),
+    },
+    {
         "key": "control_lectura",
         "title": "El nombre del caballo",
         "kind": "no_literario",
@@ -22989,6 +23173,316 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El derecho a cambiar de opinión' ----------
+    _ql(
+        "cambiar_opinion", "lec_localizar", "medio",
+        "Según el ensayo, ¿qué diferencia hay entre ser consistente y ser "
+        "coherente?",
+        "Ser consistente es sostener siempre lo mismo; ser coherente es que las "
+        "afirmaciones se sigan de las propias razones",
+        "El texto define ambos términos en oraciones seguidas: «ser consistente es "
+        "sostener siempre lo mismo. Ser coherente es que las propias afirmaciones "
+        "se sigan de las propias razones».\n\nLa definición está explícita, y de "
+        "ella el ensayo deduce enseguida que si las razones cambian, la coherencia "
+        "obliga a cambiar la conclusión.",
+        [
+            ("Ser consistente se refiere a los hechos y ser coherente, a los principios", "Esa distinción entre hechos y principios aparece más adelante y es otra: no define coherencia ni consistencia."),
+            ("Ser consistente es cambiar por razones y ser coherente, cambiar por conveniencia", "La distinción entre razones y conveniencia es otro par del ensayo, y ninguno de los dos se llama consistencia."),
+            ("Son sinónimos, y el ensayo los usa de forma indistinta", "El ensayo los opone expresamente: dice que son «dos cosas que se parecen y no son iguales»."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_localizar", "medio",
+        "De acuerdo con el ensayo, ¿qué hace habitualmente quien cambió de opinión "
+        "por conveniencia?",
+        "Niega haber cambiado, o sostiene que en el fondo siempre pensó lo mismo",
+        "El texto describe tres conductas: «tiende a negar que haya cambiado, a "
+        "describir su posición anterior como un malentendido de los demás, o a "
+        "descubrir que en el fondo siempre pensó lo mismo».\n\nEl dato está "
+        "enumerado de forma explícita.",
+        [
+            ("Explica qué razones aparecieron y cuándo", "Eso es justamente lo que caracteriza a quien cambió POR razones, no por conveniencia."),
+            ("Reconoce abiertamente que su interés cambió", "El ensayo sostiene lo contrario: quien cambia por conveniencia tiende a ocultar el cambio."),
+            ("Vuelve a su posición anterior cuando la conveniencia desaparece", "El texto no describe ese regreso: describe cómo se relata el cambio."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_localizar", "facil",
+        "Según el ensayo, ¿qué ejemplo usa el emisor para mostrar que en otros "
+        "ámbitos el cambio se celebra?",
+        "El de un médico que seguiría recetando lo que aprendió en 1990",
+        "El tercer párrafo abre con esos casos: «un médico que sigue recetando lo "
+        "que aprendió en 1990 no es coherente: está desactualizado», y enseguida el "
+        "de la investigadora que abandona su hipótesis.\n\nLa pregunta pide "
+        "identificar un ejemplo que el texto entrega de forma directa.",
+        [
+            ("El de un político que sostiene la misma posición durante décadas", "El político aparece como el caso criticado, no como ejemplo de un ámbito donde el cambio se celebre."),
+            ("El de un diario que cambia de línea editorial de un año a otro", "Las instituciones aparecen más adelante y para otra cosa: mostrar una asimetría en lo que se tolera."),
+            ("El de un estudiante que corrige un error en una prueba", "Ese ejemplo no aparece en el ensayo."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_interpretar", "dificil",
+        "¿Cuál es la tesis del ensayo?",
+        "Que cambiar de opinión no es en sí mismo un dato en contra de quien lo "
+        "hace, y tratarlo así empobrece la discusión pública",
+        "El penúltimo párrafo la enuncia acotándola: «significa algo más modesto: "
+        "que el cambio de opinión no es, por sí mismo, un dato en contra de quien "
+        "lo protagoniza, y que tratarlo como si lo fuera tiene un precio que "
+        "pagamos entre todos».\n\nReconocerla exige distinguirla de lo que el "
+        "emisor expresamente aclara que NO está sosteniendo: que las opiniones den "
+        "lo mismo.",
+        [
+            ("Que todas las opiniones tienen el mismo valor mientras se sostengan con convicción", "El ensayo descarta esa lectura de forma explícita: «nada de esto significa que las opiniones den lo mismo»."),
+            ("Que quienes cambian de opinión suelen hacerlo por conveniencia personal", "El texto reconoce que esos casos existen, pero justamente para distinguirlos de los demás, no para generalizarlos."),
+            ("Que la ciencia debería ser el modelo de toda discusión pública", "La ciencia aparece como un ejemplo contrastante, no como un modelo que el ensayo proponga imitar en todo."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_interpretar", "dificil",
+        "¿Qué función cumple en la argumentación el párrafo que empieza «se me "
+        "dirá, y con razón, que no todo cambio de opinión merece respeto»?",
+        "Introducir la objeción más fuerte contra la tesis para responderla en el "
+        "párrafo siguiente",
+        "El emisor no la menciona al pasar: la reconoce como «pertinente» y admite "
+        "que «si toda revisión fuera igualmente digna, la palabra de nadie valdría "
+        "nada». Recién entonces responde, con el criterio del relato: quien cambió "
+        "por razones puede explicar cuáles.\n\nAnticipar la objeción del adversario "
+        "y hacerse cargo de ella es una operación argumentativa: fortalece la tesis "
+        "en vez de debilitarla.",
+        [
+            ("Reconocer que la tesis del ensayo tiene una excepción que no puede resolver", "Sí la resuelve: el párrafo siguiente ofrece un criterio para distinguir los dos casos."),
+            ("Cambiar de tema hacia el problema de la corrupción en la política", "El ensayo no trata sobre corrupción: usa el caso de la conveniencia para afinar su propia distinción."),
+            ("Suavizar la tesis para que resulte aceptable a quienes piensan distinto", "La tesis no se suaviza: después de la objeción el emisor la sostiene igual y agrega una exigencia concreta."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_interpretar", "dificil",
+        "Según el ensayo, ¿por qué la pregunta «¿qué lo hizo cambiar?» es mejor que "
+        "«¿usted sostiene lo mismo que antes?»",
+        "Porque obliga a exponer el razonamiento, mientras que la otra solo premia "
+        "la memoria",
+        "El texto lo dice con esa misma oposición: «la primera se responde con un "
+        "archivo. La segunda obliga a mostrar el razonamiento, que es justamente lo "
+        "que interesa evaluar».\n\nLa preferencia no es de estilo: se apoya en qué "
+        "información entrega cada pregunta sobre la calidad del pensamiento de "
+        "quien responde.",
+        [
+            ("Porque es más respetuosa con la persona a la que se interroga", "El ensayo no argumenta por cortesía: argumenta por lo que cada pregunta permite evaluar."),
+            ("Porque impide que el adversario recurra a declaraciones antiguas", "El texto no busca impedir el uso del archivo: busca que la discusión no termine ahí."),
+            ("Porque supone que la persona efectivamente cambió de opinión", "Esa objeción no aparece, y el ensayo no la trata como un problema de la pregunta."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_interpretar", "medio",
+        "¿Qué idea sostiene la distinción entre revisar un juicio sobre un hecho y "
+        "revisar un principio?",
+        "Que no todos los cambios de opinión tienen el mismo peso, y que el debate "
+        "público los confunde",
+        "El ensayo explica que revisar un hecho «debería ocurrir cada vez que "
+        "aparece mejor información, y sin ceremonia», mientras que abandonar un "
+        "principio «es más lento y más costoso, porque un principio organiza muchos "
+        "juicios a la vez». Y concluye que «el error del debate público es tratar "
+        "los dos casos con la misma vara».\n\nLa distinción sirve para afinar la "
+        "tesis: no todo cambio merece el mismo escrutinio.",
+        [
+            ("Que solo los cambios de principio merecen ser explicados públicamente", "El ensayo sostiene lo contrario respecto de los hechos: deberían revisarse sin ceremonia, no que no deban explicarse."),
+            ("Que cambiar de principios es siempre señal de falta de convicción", "El texto no lo condena: dice que es más costoso, no que sea reprochable."),
+            ("Que los hechos son más importantes que los principios en una discusión", "No los jerarquiza por importancia, sino por la facilidad con que puede revisarse cada uno."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al señalar que a las instituciones se les "
+        "toleran giros que a las personas no?",
+        "Sugerir que la exigencia de consistencia no responde a un principio, sino "
+        "a su utilidad para descalificar",
+        "El emisor saca la conclusión él mismo: la exigencia «no parece derivar de "
+        "un principio: parece una herramienta cómoda para descalificar a un "
+        "individuo cuando refutarlo resulta difícil». Y cierra con la imagen de la "
+        "cita guardada «como quien guarda un comprobante».\n\nMostrar que una regla "
+        "se aplica de forma desigual es un modo de discutir su fundamento sin negar "
+        "el caso particular.",
+        [
+            ("Defender que también habría que exigirles consistencia a las instituciones", "El ensayo no pide extender la exigencia: cuestiona que la exigencia sea legítima."),
+            ("Demostrar que las instituciones cambian de opinión con más frecuencia", "La frecuencia no es el punto: lo es la diferencia en cómo se juzga cada caso."),
+            ("Justificar que las personas cambien de opinión sin dar explicaciones", "El ensayo pide justamente lo contrario: que expliquen qué las hizo cambiar."),
+        ],
+    ),
+    _ql(
+        "cambiar_opinion", "lec_evaluar", "medio",
+        "En un debate, una candidata reconoce que hace tres años se oponía a una "
+        "medida que hoy defiende, y explica qué informe la hizo cambiar y qué parte "
+        "de su posición anterior mantiene. Según el ensayo, ¿cómo debería valorarse "
+        "esa intervención?",
+        "Como un cambio respaldado por razones, porque puede explicar qué cambió y "
+        "qué se mantuvo",
+        "El ensayo entrega el criterio exacto para este caso: «quien cambió por "
+        "razones puede decir cuáles eran, cuándo aparecieron y qué parte de lo que "
+        "sostenía quedó en pie». La candidata hace las tres cosas.\n\nLa pregunta "
+        "pide aplicar a una situación nueva el criterio que el texto propone, y no "
+        "repetir su conclusión general.",
+        [
+            ("Como una incoherencia, porque sostiene hoy lo contrario de lo que sostenía antes", "Esa es precisamente la lectura que el ensayo discute: sostener lo contrario no es, por sí solo, una falta."),
+            ("Como un cambio por conveniencia, porque ocurre en el contexto de una campaña", "El ensayo no juzga por el contexto sino por el relato: lo que delata la conveniencia es no poder explicar el cambio."),
+            ("Como irrelevante, porque el ensayo sostiene que las opiniones dan lo mismo", "El ensayo niega expresamente esa idea en su penúltimo párrafo."),
+        ],
+    ),
+    # ---------- 'Bases del Fondo de Iniciativas Estudiantiles' ----------
+    _ql(
+        "bases_fondo", "lec_localizar", "facil",
+        "Según las bases, ¿cuántos integrantes puede tener un grupo postulante?",
+        "Entre tres y ocho estudiantes",
+        "La sección «Quiénes pueden postular» lo fija de entrada: «pueden postular "
+        "grupos de entre tres y ocho estudiantes matriculados en primero, segundo, "
+        "tercero o cuarto medio».\n\nEl rango vuelve a aparecer entre las causales "
+        "de inadmisibilidad, que excluyen a los grupos «con menos de tres o más de "
+        "ocho integrantes».",
+        [
+            ("Entre dos y ocho estudiantes", "Dos integrantes no alcanzan: un grupo con menos de tres queda inadmisible."),
+            ("Hasta tres estudiantes por establecimiento", "El tres es el mínimo por grupo, no un máximo, y no hay límite por establecimiento."),
+            ("No hay límite, siempre que todos estén matriculados en enseñanza media", "Sí hay límite: los grupos de más de ocho quedan fuera de concurso."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_localizar", "medio",
+        "De acuerdo con las bases, ¿cuál de los siguientes gastos NO puede "
+        "financiarse con el Fondo?",
+        "La alimentación de los integrantes del grupo",
+        "La sección 3 separa lo que se cubre de lo que no: el Fondo «cubre "
+        "materiales, insumos, arriendo de equipos y servicios de terceros» y «no "
+        "cubre remuneraciones para los integrantes del grupo, alimentación, ni la "
+        "compra de equipamiento que quede en propiedad de una persona "
+        "natural».\n\nLa tarea es ubicar el gasto consultado en la lista correcta.",
+        [
+            ("El arriendo de equipos necesarios para ejecutar el proyecto", "Está expresamente entre los gastos que sí se cubren."),
+            ("La contratación de un servicio prestado por un tercero", "Los servicios de terceros aparecen en la lista de gastos financiables."),
+            ("La compra de materiales e insumos", "Es el primer gasto que las bases declaran cubierto."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_localizar", "medio",
+        "Según la tabla de criterios, ¿qué se observa en el criterio de "
+        "participación?",
+        "Que la comunidad afectada intervenga en el diseño y no solo reciba el "
+        "resultado",
+        "La tabla lo describe en su tercera fila, junto a la ponderación de 20%: "
+        "«que la comunidad afectada intervenga en el diseño y no solo reciba el "
+        "resultado».\n\nHay que leer la fila correcta: las cuatro filas tienen la "
+        "misma estructura y dos comparten la misma ponderación.",
+        [
+            ("Que el problema esté demostrado con evidencia recogida por el grupo", "Eso corresponde al criterio de pertinencia, que pondera 30%."),
+            ("Que algo del proyecto siga funcionando al terminar el financiamiento", "Ese es el criterio de permanencia, que también pondera 20%."),
+            ("Que el proyecto pueda ejecutarse con el monto y el plazo disponibles", "Ese es el criterio de viabilidad, con 30% de ponderación."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_interpretar", "medio",
+        "¿Por qué las bases sostienen que una encuesta al propio curso vale más que "
+        "una cita a una estadística nacional?",
+        "Porque acredita que el problema ocurre en ese lugar y no solo en el país "
+        "en general",
+        "El texto lo explica al comentar el criterio de pertinencia: la evidencia "
+        "propia «vale más que una cita a una estadística nacional, porque acreditan "
+        "que el problema ocurre en ese lugar y no en el país en general».\n\nNo se "
+        "trata de la calidad de la fuente, sino de que el dato pruebe lo que el "
+        "proyecto necesita probar: que el problema existe ahí.",
+        [
+            ("Porque las estadísticas nacionales suelen estar desactualizadas", "Las bases no cuestionan su vigencia ni su exactitud: cuestionan que sirvan para acreditar un problema local."),
+            ("Porque el grupo demuestra así que sabe diseñar instrumentos de investigación", "Lo que se evalúa en pertinencia es que el problema exista, no la técnica con que se levantó el dato."),
+            ("Porque las bases exigen que toda la información provenga del establecimiento", "No hay tal exigencia: se admite la estadística nacional, solo que pesa menos."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre el objetivo declarado en la sección 1 y "
+        "el criterio de viabilidad?",
+        "El criterio traduce el objetivo en una exigencia evaluable: si el proyecto "
+        "debe estar funcionando en diciembre, tiene que ser ejecutable con el monto "
+        "y el plazo disponibles",
+        "El objetivo dice que el Fondo «no busca premiar la mejor idea en "
+        "abstracto, sino apoyar aquellas que puedan estar funcionando antes de "
+        "diciembre de 2026». El criterio de viabilidad observa exactamente eso: "
+        "«que el proyecto pueda ejecutarse con el monto y el plazo disponibles», y "
+        "pondera 30%.\n\nLa pregunta exige unir dos secciones alejadas y ver que "
+        "una es la aplicación práctica de la otra.",
+        [
+            ("El criterio contradice el objetivo, porque privilegia proyectos pequeños por sobre las buenas ideas", "Las bases no oponen tamaño y calidad: piden que la idea sea realizable, que es distinto de pedir que sea modesta."),
+            ("El criterio amplía el objetivo agregando una exigencia de continuidad futura", "La continuidad es materia del criterio de permanencia, que es otro y pondera 20%."),
+            ("No hay relación: el objetivo es una declaración general y los criterios se refieren a la ejecución", "El propio objetivo anuncia el estándar —proyectos funcionando antes de diciembre— que el criterio después mide."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_interpretar", "dificil",
+        "Según las bases, ¿qué significa exactamente el criterio de permanencia?",
+        "Que el grupo haya previsto qué ocurre una vez terminado el financiamiento, "
+        "aunque el proyecto no continúe",
+        "El texto corrige de forma expresa el malentendido habitual: el criterio "
+        "«no exige que el proyecto dure para siempre ni que consiga financiamiento "
+        "futuro», sino que el grupo «haya pensado qué pasa el día después: quién se "
+        "hace cargo, dónde quedan las cosas, qué se necesita para que no se "
+        "desarme».\n\nY agrega el caso decisivo: un proyecto que declara que "
+        "terminará en diciembre puede puntuar mejor que uno que promete continuidad "
+        "sin explicar cómo.",
+        [
+            ("Que el proyecto siga funcionando al menos un año después del financiamiento", "Las bases descartan expresamente esa lectura: no exigen duración indefinida."),
+            ("Que el grupo consiga otra fuente de financiamiento antes de que termine el Fondo", "También se descarta: «ni que consiga financiamiento futuro»."),
+            ("Que los bienes comprados queden en poder del establecimiento", "Eso ya está resuelto en la sección de gastos y no es lo que mide este criterio."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_interpretar", "dificil",
+        "¿Qué función cumple la advertencia sobre los problemas técnicos de la "
+        "plataforma el último día?",
+        "Dejar claro que el riesgo de postular sobre la hora lo asume el grupo, y "
+        "no el concurso",
+        "La frase viene inmediatamente después de establecer que «las postulaciones "
+        "recibidas después del 15 de abril no se revisan», y precisa que esos "
+        "problemas «no se consideran atenuantes». De ahí la recomendación: «no "
+        "dejar el envío para la fecha límite».\n\nNo es un consejo amable: es la "
+        "asignación explícita de una responsabilidad, puesta ahí para que después "
+        "nadie la discuta.",
+        [
+            ("Anunciar que la plataforma suele fallar y conviene usar otra vía de envío", "Las bases no ofrecen ninguna vía alternativa ni admiten que la plataforma falle habitualmente."),
+            ("Justificar por qué el plazo de postulación es tan breve", "El texto no discute la extensión del plazo, sino qué ocurre si se llega tarde a él."),
+            ("Ofrecer una prórroga a quienes acrediten un problema técnico", "Es exactamente lo contrario: declara que no habrá atenuantes."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_evaluar", "medio",
+        "¿Con qué propósito las respuestas a las consultas se publican de forma "
+        "anónima en la página de las bases?",
+        "Para que todos los grupos dispongan de la misma información al mismo "
+        "tiempo",
+        "El texto entrega el propósito en la misma oración: las respuestas se "
+        "publican así «de modo que todos los grupos accedan a la misma información "
+        "al mismo tiempo».\n\nDetrás hay una decisión de equidad: si las respuestas "
+        "se enviaran solo a quien pregunta, ese grupo quedaría con una ventaja que "
+        "no depende de la calidad de su proyecto.",
+        [
+            ("Para proteger la identidad de los grupos que compiten entre sí", "El anonimato es un medio, no el fin: el texto explicita que el objetivo es igualar el acceso a la información."),
+            ("Para reducir la cantidad de consultas repetidas que recibe el Fondo", "Podría ser un efecto secundario, pero las bases no lo mencionan como propósito."),
+            ("Para dejar constancia de las decisiones ante una eventual apelación", "Las bases no contemplan apelaciones ni mencionan ese uso."),
+        ],
+    ),
+    _ql(
+        "bases_fondo", "lec_evaluar", "dificil",
+        "Un grupo de cinco estudiantes, con patrocinio docente, envía el 14 de "
+        "abril un proyecto de $780.000 destinado íntegramente a comprar tres "
+        "computadores para la sala de computación. ¿Qué ocurre con esa postulación?",
+        "Queda inadmisible, porque el proyecto consiste únicamente en la compra de "
+        "equipamiento",
+        "El caso cumple plazo (14 de abril), tamaño de grupo (cinco), patrocinio y "
+        "monto ($780.000, bajo el tope). Pero las causales de inadmisibilidad "
+        "incluyen una más: que «el proyecto consista únicamente en la compra de "
+        "equipamiento», que es exactamente lo que ocurre.\n\nLa pregunta obliga a "
+        "revisar todas las causales y no detenerse en la primera que se cumple.",
+        [
+            ("Se evalúa normalmente, porque cumple el plazo, el tamaño del grupo y el monto máximo", "Cumple esas tres, pero basta con incurrir en una causal para quedar fuera de concurso, y este proyecto incurre en la última."),
+            ("Queda inadmisible, porque el equipamiento quedaría en poder del establecimiento", "Eso no es una causal: las bases establecen justamente que los bienes durables pasan al establecimiento."),
+            ("Se evalúa, pero obtiene el puntaje mínimo en el criterio de permanencia", "No llega a evaluarse: la inadmisibilidad se resuelve antes, «sin pasar a evaluación»."),
+        ],
+    ),
     # ---------- 'El nombre del caballo' ----------
     _ql(
         "control_lectura", "lec_localizar", "facil",
