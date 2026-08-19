@@ -245,6 +245,20 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
+    # --- M2: las cuatro unidades que no tenian nodo ---
+    "¿Cuál es el valor de sen(90°)?": "1",
+    "¿Cuál es el valor de cos(0°)?": "1",
+    "T(h) = 18 + 6 · sen": f"Entre {18 - 6} y {18 + 6} grados",
+    "ángulo del centro abarca un arco de 100°": str(100 // 2),
+    "segmentos de 4 y 6 cm, y la otra en segmentos de 3 cm": f"{4 * 6 // 3} cm",
+    "Un ángulo inscrito mide 35°": f"{35 * 2}°",
+    "se ven dos monumentos, también en el borde, bajo un ángulo de 40°": f"{40 * 2}°",
+    "Una pelota tiene 6 cm de radio": f"{round(4 / 3 * 3 * 6**3)} cm³",
+    "estanque esférico tiene 3 m de radio": f"{4 * 3.14 * 3**2:.2f} m²".replace(".", ","),
+    "Dos esferas tienen radios en razón 1 : 2": f"1 : {2**3}",
+    "tanque esférico de 2 m de radio": f"{round(4 / 3 * 3 * 2**3 * 1000):,} litros".replace(",", "."),
+    "recta paralela a y = 3x − 7": "3",
+    "recta perpendicular a y = 4x + 1": "−1/4",
     # --- Proporcionalidad (alg_proporcionalidad) ---
     # Directa: la constante es el cociente. Inversa: es el producto.
     "Tres kilos de pan cuestan $4.500": f"P = {4500 // 3:,}".replace(",", ".") + " · k",
@@ -1234,7 +1248,7 @@ COMPROBACIONES: dict[str, str] = {
     # --- funciones lineales y cuadráticas ---
     "f(x) = 4x + 1": str(4 * 3 + 1),
     "f(x) = x² − 2": str(4**2 - 2),
-    "(2, 3) y (6, 11)": str((11 - 3) // (6 - 2)),
+    "pendiente de la recta que pasa por los puntos (2, 3) y (6, 11)?": str((11 - 3) // (6 - 2)),
     "¿Qué representa el 5 en ese modelo?": f"aumenta {5} mil pesos por semana",
     "aunque no se pida ninguna unidad": str(7),
     "y = x² − 8x + 12, donde x son las unidades": f"{8 // 2} unidades, costo {(8 // 2) ** 2 - 8 * (8 // 2) + 12}",
