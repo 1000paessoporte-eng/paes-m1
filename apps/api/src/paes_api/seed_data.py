@@ -1272,7 +1272,7 @@ QUESTIONS = [
         "conviene calcular el complemento y restarlo de 1.",
         [
             ("3/5", "Esa es la probabilidad de que SÍ ocurra."),
-            ("5/3", "Supera 1, y ninguna probabilidad puede hacerlo."),
+            ("1/2", "Supuso que ocurrir y no ocurrir son igualmente probables, ignorando el 3/5 del enunciado."),
             ("1/5", "3/5 más 1/5 da 4/5, no 1: falta una parte."),
         ],
     ),
@@ -4889,7 +4889,7 @@ QUESTIONS += [
         [
             ("0,24", "Entregó la probabilidad conjunta sin dividir por la del suceso conocido."),
             ("0,84", "Sumó ambas probabilidades en lugar de dividirlas."),
-            ("2,5", "Invirtió la división: dividió 0,6 por 0,24."),
+            ("0,144", "Multiplicó las dos probabilidades dadas en lugar de dividir la conjunta por la del suceso conocido."),
         ],
     ),
     _q(
@@ -12068,7 +12068,7 @@ QUESTIONS += [
         "3) Entonces: 0,9 · 0,8 = 0,72.\n"
         "4) Verifica que tenga sentido: exigir dos condiciones a la vez siempre da una probabilidad menor que cada una por separado, y 0,72 es menor que 0,8 y que 0,9.",
         [
-            ("1,7", "Sumó las probabilidades y obtuvo un valor mayor que 1, imposible para una probabilidad."),
+            ("0,98", "Calculó la probabilidad de que al menos una esté operativa, no de que lo estén las dos."),
             ("0,85", "Promedió las dos probabilidades en lugar de multiplicarlas."),
             ("0,1", "Calculó la diferencia entre ambas probabilidades."),
         ],
@@ -12098,7 +12098,7 @@ QUESTIONS += [
         "3) Al multiplicar: 0,6 · 0,6 = 0,36.\n"
         "4) Tiene sentido que baje: acertar dos veces seguidas es más difícil que acertar una sola.",
         [
-            ("1,2", "Sumó las probabilidades de los dos disparos y obtuvo un valor mayor que 1."),
+            ("0,84", "Calculó la probabilidad de acertar en al menos uno de los dos disparos, no en ambos."),
             ("0,6", "Se quedó con la probabilidad de un solo disparo."),
             ("0,3", "Dividió la probabilidad por 2 en lugar de multiplicarla por sí misma."),
         ],
@@ -12143,7 +12143,7 @@ QUESTIONS += [
         "3) La probabilidad es 230/300.\n"
         "4) Simplifica dividiendo arriba y abajo por 10: 230/300 = 23/30.",
         [
-            ("16/15", "Sumó 180 y 140 sin descontar los 90 repetidos, y obtuvo un valor mayor que 1."),
+            ("7/15", "Descontó los 90 dos veces, una por cada grupo, cuando basta descontarlos una sola vez."),
             ("3/10", "Calculó la probabilidad de que haga ambas cosas."),
             ("7/30", "Calculó la probabilidad de que no haga ninguna de las dos."),
         ],
@@ -15787,8 +15787,8 @@ QUESTIONS += [
         "4) Toda frecuencia relativa está entre 0 y 1: si te da un número mayor que 1, algo salió mal.",
         [
             ("20", "Dio la frecuencia absoluta en lugar de la relativa."),
-            ("2,5", "Dividió el total por la frecuencia en vez de al revés."),
-            ("30", "Calculó cuántas personas NO eligieron cine."),
+            ("0,04", "Corrió la coma tres lugares en vez de dos al pasar el 40% a frecuencia relativa."),
+            ("0,6", "Calculó la frecuencia relativa de quienes NO eligieron cine."),
         ],
     ),
     _q(
@@ -15874,7 +15874,7 @@ QUESTIONS += [
         [
             ("0,5", "Usó la edad de 20 años como frecuencia, en vez de las 10 personas."),
             ("10", "Dio la frecuencia absoluta en lugar de la relativa."),
-            ("4", "Dividió el total por la frecuencia en vez de al revés."),
+            ("0,75", "Calculó la frecuencia relativa de quienes NO tienen 20 años."),
         ],
     ),
     _q(
@@ -16233,7 +16233,7 @@ QUESTIONS += [
         "4) Si la suma te diera más de 1, es señal de que hay un error en los datos.",
         [
             ("0,85", "Dio la suma de las tres conocidas en lugar de lo que falta."),
-            ("1,15", "Sumó las tres a 1 en vez de restarlas."),
+            ("0,1", "Sumó mal las tres conocidas, obtuvo 0,9, y restó eso de 1."),
             ("0,25", "Supuso que las cuatro categorías se reparten por igual, sin usar las frecuencias dadas."),
         ],
     ),
@@ -16877,7 +16877,7 @@ QUESTIONS += [
         [
             ("0,45", "Repitió la probabilidad de ganar en lugar de calcular la contraria."),
             ("0,65", "Restó a 1,1 en vez de a 1."),
-            ("1,45", "Sumó en lugar de restar, y obtuvo un valor mayor que 1."),
+            ("0,9", "Duplicó la probabilidad de ganar en lugar de restarla de 1."),
         ],
     ),
     _q(
@@ -16921,7 +16921,7 @@ QUESTIONS += [
         [
             ("1", "Confundió \"seguro que pasa\" con \"es uno de dos resultados\"."),
             ("1/4", "Calculó la probabilidad de sacar sello dos veces seguidas."),
-            ("2", "Dio la cantidad de resultados posibles en lugar de la probabilidad."),
+            ("0", "Le asignó probabilidad 0 por no poder anticipar el resultado; el 0 significa que nunca ocurre, no que sea incierto."),
         ],
     ),
     _q(
@@ -16950,7 +16950,7 @@ QUESTIONS += [
         "4) Simplifica dividiendo por 9: 27/36 = 3/4.",
         [
             ("1/4", "Calculó la probabilidad de que el estudiante haya reprobado."),
-            ("3", "Se quedó con la simplificación del numerador sin escribir la fracción."),
+            ("1/12", "Simplificó el numerador por 9 pero dejó el denominador intacto: 27/36 se le convirtió en 3/36."),
             ("1/36", "Consideró un solo estudiante favorable."),
         ],
     ),
@@ -16980,7 +16980,7 @@ QUESTIONS += [
         [
             ("1/4", "Repitió la probabilidad de que llueva."),
             ("1/2", "Supuso que llover y no llover son igualmente probables, ignorando el dato."),
-            ("4/3", "Invirtió la fracción en lugar de restarla de 1."),
+            ("0", "Restó solo los numeradores (1 − 1 = 0) sin escribir antes el 1 como 4/4."),
         ],
     ),
     _q(
@@ -17039,7 +17039,7 @@ QUESTIONS += [
         [
             ("1/3", "Aplicó la fórmula sin reposición, reduciendo la caja en la segunda extracción."),
             ("6/10", "Se quedó con la probabilidad de la primera extracción."),
-            ("6/5", "Sumó las probabilidades en lugar de multiplicarlas, y obtuvo un valor mayor que 1."),
+            ("4/25", "Calculó la probabilidad de que las dos sean verdes en vez de rojas."),
         ],
     ),
     _q(
@@ -17142,7 +17142,7 @@ QUESTIONS += [
         [
             ("9/25", "Usó 12/20 dos veces, como si hubiera reposición."),
             ("3/5", "Se quedó con la probabilidad de la primera elección."),
-            ("112/95", "Sumó las probabilidades en lugar de multiplicarlas, y obtuvo un valor mayor que 1."),
+            ("33/100", "Descontó al estudiante ya elegido solo del numerador y dejó el total en 20."),
         ],
     ),
     _q(
@@ -17154,7 +17154,7 @@ QUESTIONS += [
         "2) Multiplica: 0,7 · 0,6 = 0,42.\n"
         "3) Verifica que tenga sentido: exigir dos condiciones a la vez siempre da menos que cada una por separado, y 0,42 es menor que 0,6 y que 0,7.",
         [
-            ("1,3", "Sumó las probabilidades y obtuvo un valor mayor que 1, imposible."),
+            ("0,88", "Calculó la probabilidad de que ocurra al menos uno de los dos, no de que ocurran ambos."),
             ("0,65", "Promedió las dos probabilidades."),
             ("0,1", "Restó una probabilidad de la otra."),
         ],
@@ -17230,7 +17230,7 @@ QUESTIONS += [
         "3) Calcula: 1,1 − 0,2 = 0,9.\n"
         "4) Fíjate en que sin descontar la intersección el resultado habría sido 1,1, un valor imposible para una probabilidad. Ese absurdo es la señal de que hay que restar.",
         [
-            ("1,1", "Sumó las dos probabilidades sin descontar la intersección, y obtuvo un valor imposible."),
+            ("0,8", "Descontó el producto de las probabilidades en vez de la intersección dada; eso solo valdría si los sucesos fueran independientes, y con estos datos no lo son."),
             ("0,3", "Multiplicó las probabilidades en lugar de aplicar la regla aditiva."),
             ("0,7", "Restó la intersección dos veces."),
         ],
@@ -17261,7 +17261,7 @@ QUESTIONS += [
         [
             ("0,8", "Se quedó con la probabilidad de perder una sola partida."),
             ("0,008", "Multiplicó las probabilidades de GANAR las tres en lugar de las de perder."),
-            ("2,4", "Multiplicó 0,8 por 3 en vez de elevarlo al cubo."),
+            ("0,992", "Calculó la probabilidad de NO ganar las tres, que no es lo mismo que perder las tres."),
         ],
     ),
     _q(
@@ -17762,7 +17762,7 @@ QUESTIONS += [
         [
             ("7", "Incluyó el 7, cuando la desigualdad es estricta y no lo admite."),
             ("5", "Dejó fuera alguno de los extremos al contar."),
-            ("14", "Se quedó en el paso intermedio sin dividir por 2."),
+            ("14", "Se quedó en 2x < 14 y respondió con el 14, sin despejar la x ni contar los enteros."),
         ],
     ),
     _q(
