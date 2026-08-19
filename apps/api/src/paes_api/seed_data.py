@@ -21383,6 +21383,117 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "a_la_deriva",
+        "title": "A la deriva",
+        "kind": "literario",
+        "source_note": (
+            "Cuento de Horacio Quiroga, publicado el año 1912 y recogido en el libro "
+            "Cuentos de amor de locura y de muerte (1917). Obra en dominio público."
+        ),
+        "body": (
+            "El hombre pisó algo blanduzco, y enseguida sintió la mordedura en el "
+            "pie. Saltó adelante, y al volverse con un juramento vio una yararacusú "
+            "que, arrollada sobre sí misma, esperaba otro ataque.\n\n"
+            "El hombre echó una veloz ojeada a su pie, donde dos gotitas de sangre "
+            "engrosaban dificultosamente, y sacó el machete de la cintura. La "
+            "víbora vio la amenaza y hundió más la cabeza en el centro mismo de su "
+            "espiral; pero el machete cayó de plano, dislocándole las vértebras.\n\n"
+            "El hombre se bajó hasta la mordedura, quitó las gotitas de sangre y "
+            "durante un instante contempló. Un dolor agudo nacía de los dos "
+            "puntitos violetas y comenzaba a invadir todo el pie. Apresuradamente "
+            "se ligó el tobillo con su pañuelo y siguió por la picada hacia su "
+            "rancho.\n\n"
+            "El dolor en el pie aumentaba, con sensación de tirante abultamiento, y "
+            "de pronto el hombre sintió dos o tres fulgurantes puntadas que, como "
+            "relámpagos, habían irradiado desde la herida hasta la mitad de la "
+            "pantorrilla. Movía la pierna con dificultad; una metálica sequedad de "
+            "garganta, seguida de sed quemante, le arrancó un nuevo juramento.\n\n"
+            "Llegó por fin al rancho y se echó de brazos sobre la rueda de un "
+            "trapiche. Los dos puntitos violeta desaparecían ahora en la monstruosa "
+            "hinchazón del pie entero. La piel parecía adelgazada y a punto de "
+            "ceder, de tensa. Quiso llamar a su mujer, y la voz se quebró en un "
+            "ronco arrastre de garganta reseca. La sed lo devoraba.\n\n"
+            "—¡Dorotea! —alcanzó a lanzar en un estertor—. ¡Dame caña!\n\n"
+            "Su mujer corrió con un vaso lleno, que el hombre sorbió en tres "
+            "tragos. Pero no había sentido gusto alguno.\n\n"
+            "—¡Te pedí caña, no agua! —rugió de nuevo—. ¡Dame caña!\n\n"
+            "—¡Pero es caña, Paulino! —protestó la mujer, espantada.\n\n"
+            "—¡No, me diste agua! ¡Quiero caña, te digo!\n\n"
+            "La mujer corrió otra vez, volviendo con la damajuana. El hombre tragó "
+            "uno tras otro dos vasos, pero no sintió nada en la garganta.\n\n"
+            "—Bueno; esto se pone feo —murmuró entonces, mirando su pie lívido y ya "
+            "con lustre gangrenoso. Sobre la honda ligadura del pañuelo, la carne "
+            "desbordaba como una monstruosa morcilla.\n\n"
+            "Los dolores fulgurantes se sucedían en continuos relampagueos y "
+            "llegaban ahora a la ingle. La atroz sequedad de garganta, que el "
+            "aliento parecía caldear más, aumentaba a la par. Cuando pretendió "
+            "incorporarse, un fulminante vómito lo mantuvo medio minuto con la "
+            "frente apoyada en la rueda de palo.\n\n"
+            "Pero el hombre no quería morir, y descendiendo hasta la costa subió a "
+            "su canoa. Se sentó en la popa y comenzó a palear hasta el centro del "
+            "Paraná. Allí la corriente del río, que en las inmediaciones del Iguazú "
+            "corre seis millas, lo llevaría antes de cinco horas a Tacurú-Pucú.\n\n"
+            "El hombre, con sombría energía, pudo efectivamente llegar hasta el "
+            "medio del río; pero allí sus manos dormidas dejaron caer la pala en la "
+            "canoa, y tras un nuevo vómito —de sangre esta vez— dirigió una mirada "
+            "al sol que ya trasponía el monte.\n\n"
+            "La pierna entera, hasta medio muslo, era ya un bloque deforme y "
+            "durísimo que reventaba la ropa. El hombre cortó la ligadura y abrió el "
+            "pantalón con su cuchillo: el bajo vientre desbordó hinchado, con "
+            "grandes manchas lívidas y terriblemente doloroso. El hombre pensó que "
+            "no podría jamás llegar él solo a Tacurú-Pucú, y se decidió a pedir "
+            "ayuda a su compadre Alves, aunque hacía mucho tiempo que estaban "
+            "disgustados.\n\n"
+            "La corriente del río se precipitaba ahora hacia la costa brasileña, y "
+            "el hombre pudo fácilmente atracar. Se arrastró por la picada en cuesta "
+            "arriba, pero a los veinte metros, exhausto, quedó tendido de pecho.\n\n"
+            "—¡Alves! —gritó con cuanta fuerza pudo; y prestó oído en vano—. "
+            "¡Compadre Alves! ¡No me niegue este favor! —clamó de nuevo, alzando la "
+            "cabeza del suelo. En el silencio de la selva no se oyó un solo rumor. "
+            "El hombre tuvo aún valor para llegar hasta su canoa, y la corriente, "
+            "cogiéndola de nuevo, la llevó velozmente a la deriva.\n\n"
+            "El Paraná corre allí en el fondo de una inmensa hoya, cuyas paredes, "
+            "altas de cien metros, encajonan fúnebremente el río. Desde las orillas "
+            "bordeadas de negros bloques de basalto asciende el bosque, negro "
+            "también. Adelante, a los costados, atrás, la eterna muralla lúgubre, "
+            "en cuyo fondo el río arremolinado se precipita en incesantes "
+            "borbollones de agua fangosa. El paisaje es agresivo, y reina en él un "
+            "silencio de muerte. Al atardecer, sin embargo, su belleza sombría y "
+            "calma cobra una majestad única.\n\n"
+            "El sol había caído ya cuando el hombre, semitendido en el fondo de la "
+            "canoa, tuvo un violento escalofrío. Y de pronto, con asombro, enderezó "
+            "pesadamente la cabeza: se sentía mejor. La pierna le dolía apenas, la "
+            "sed disminuía y su pecho, libre ya, se abría en lenta inspiración.\n\n"
+            "El veneno comenzaba a irse, no había duda. Se hallaba casi bien, y "
+            "aunque no tenía fuerzas para mover la mano, contaba con la caída del "
+            "rocío para reponerse del todo. Calculó que antes de tres horas estaría "
+            "en Tacurú-Pucú.\n\n"
+            "El bienestar avanzaba, y con él una somnolencia llena de recuerdos. No "
+            "sentía ya nada ni en la pierna ni en el vientre. ¿Viviría aún su "
+            "compadre Gaona en Tacurú-Pucú? Acaso viera también a su ex patrón "
+            "mister Dougald, y al recibidor del obraje.\n\n"
+            "¿Llegaría pronto? El cielo, al poniente, se abría ahora en pantalla de "
+            "oro, y el río se había coloreado también. Desde la costa paraguaya, ya "
+            "entenebrecida, el monte dejaba caer sobre el río su frescura "
+            "crepuscular, en penetrantes efluvios de azahar y miel silvestre. Una "
+            "pareja de guacamayos cruzó muy alto y en silencio hacia el Paraguay.\n\n"
+            "Allá abajo, sobre el río de oro, la canoa derivaba velozmente, girando "
+            "a ratos sobre sí misma ante el borbollón de un remolino. El hombre que "
+            "iba en ella se sentía cada vez mejor, y pensaba entretanto en el "
+            "tiempo justo que había pasado sin ver a su ex patrón Dougald. ¿Tres "
+            "años? Tal vez no, no tanto. ¿Dos años y nueve meses? Acaso. ¿Ocho "
+            "meses y medio? Eso sí, seguramente.\n\n"
+            "De pronto sintió que estaba helado hasta el pecho. ¿Qué sería? Y la "
+            "respiración también...\n\n"
+            "Al recibidor de maderas de mister Dougald, Lorenzo Cubilla, lo había "
+            "conocido en Puerto Esperanza un viernes santo... ¿Viernes? Sí, o "
+            "jueves...\n\n"
+            "El hombre estiró lentamente los dedos de la mano.\n\n"
+            "—Un jueves...\n\n"
+            "Y cesó de respirar."
+        ),
+    },
+    {
         "key": "cielo_oscuro",
         "title": "El cielo como infraestructura",
         "kind": "no_literario",
@@ -22594,6 +22705,160 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'A la deriva' ----------
+    _ql(
+        "a_la_deriva", "lec_localizar", "facil",
+        "Según el relato, ¿qué hace el hombre inmediatamente después de sentir la "
+        "mordedura?",
+        "Salta hacia adelante y mata a la víbora con su machete",
+        "Los dos primeros párrafos lo cuentan en orden: «saltó adelante», vio a la "
+        "yararacusú lista para atacar de nuevo, «sacó el machete de la cintura» y "
+        "el golpe cayó de plano, «dislocándole las vértebras».\n\nEs una pregunta "
+        "de localizar: la secuencia está narrada tal cual.",
+        [
+            ("Se liga el tobillo con su pañuelo y camina hacia el rancho", "Eso ocurre DESPUÉS, en el tercer párrafo, una vez que ya mató a la víbora y examinó la herida."),
+            ("Sube a su canoa para buscar ayuda río abajo", "La canoa aparece mucho más tarde, cuando la caña no le hace efecto y decide ir a Tacurú-Pucú."),
+            ("Llama a gritos a su mujer para que le traiga auxilio", "Llama a Dorotea recién al llegar al rancho, y con la voz ya quebrada por la sequedad de la garganta."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_localizar", "facil",
+        "De acuerdo con el relato, ¿qué le reclama el hombre a su mujer cuando ella "
+        "le acerca un vaso?",
+        "Que le haya dado agua en lugar de la caña que pidió",
+        "El diálogo es explícito: «—¡Te pedí caña, no agua! —rugió de nuevo—. ¡Dame "
+        "caña!», y ella responde «¡Pero es caña, Paulino!».\n\nEl dato está en el "
+        "texto; lo que el relato deja implícito, y la pregunta no pide, es que el "
+        "veneno ya le había quitado el gusto.",
+        [
+            ("Que haya tardado demasiado en traerle el vaso", "El texto dice que la mujer «corrió» las dos veces: la demora nunca aparece."),
+            ("Que el vaso esté demasiado caliente para su sed", "La temperatura no se menciona; lo que él reclama es el contenido del vaso."),
+            ("Que no haya ido a buscar ayuda al pueblo vecino", "El hombre no le pide eso a su mujer: decide él mismo bajar a la canoa."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_localizar", "medio",
+        "Según el relato, ¿por qué el hombre decide atracar en la costa brasileña?",
+        "Porque comprende que no llegará solo a Tacurú-Pucú y quiere pedirle ayuda "
+        "a su compadre Alves",
+        "El texto encadena las dos cosas: «el hombre pensó que no podría jamás "
+        "llegar él solo a Tacurú-Pucú, y se decidió a pedir ayuda a su compadre "
+        "Alves, aunque hacía mucho tiempo que estaban disgustados».\n\nLa "
+        "información aparece formulada casi igual que en la pregunta.",
+        [
+            ("Porque la corriente lo arrastró contra su voluntad hacia esa orilla", "La corriente facilita la maniobra, pero la decisión es suya: primero piensa que no llegará solo y por eso atraca."),
+            ("Porque necesita agua para calmar la sed que lo devora", "La sed aparece antes, en el rancho, y se calma sola más adelante; no es el motivo de atracar."),
+            ("Porque quiere descansar antes de seguir remando río abajo", "Para entonces ya había dejado caer la pala: no está en condiciones de seguir remando."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_interpretar", "medio",
+        "¿Qué función cumple en el relato la descripción del Paraná encajonado "
+        "entre paredes de cien metros?",
+        "Construir un espacio cerrado y hostil que subraya lo solo que está el "
+        "hombre",
+        "La descripción llega justo después del grito sin respuesta a Alves. El río "
+        "aparece «encajonado fúnebremente», rodeado por «la eterna muralla "
+        "lúgubre», y el párrafo cierra con que «reina en él un silencio de "
+        "muerte».\n\nNo es un adorno: el espacio repite en el paisaje lo que le "
+        "está pasando al personaje, que acaba de comprobar que nadie va a "
+        "auxiliarlo.",
+        [
+            ("Explicar por qué la corriente arrastra la canoa con tanta velocidad", "La velocidad de la corriente ya se había explicado antes, con las seis millas cerca del Iguazú."),
+            ("Situar geográficamente al lector para que ubique Tacurú-Pucú", "La descripción no orienta: no da distancias ni direcciones, sino altura, color y silencio."),
+            ("Mostrar la riqueza natural de la región donde transcurre la historia", "El paisaje se presenta como «agresivo» y en tonos negros, no como una riqueza."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_interpretar", "dificil",
+        "¿Cómo debe entenderse la mejoría que el hombre siente después de la caída "
+        "del sol?",
+        "Como una sensación engañosa que anuncia el desenlace, y no como una "
+        "recuperación real",
+        "El hombre la interpreta como curación —«el veneno comenzaba a irse, no "
+        "había duda»— y hasta calcula que en tres horas llegará. Pero el relato "
+        "muestra al mismo tiempo que ya «no tenía fuerzas para mover la mano», y "
+        "poco después el frío le sube hasta el pecho y cesa de respirar.\n\nLa "
+        "distancia entre lo que el personaje cree y lo que ocurre es el eje del "
+        "final: el lector entiende antes que él.",
+        [
+            ("Como el efecto tardío de la caña que bebió en el rancho", "El texto es claro en que la caña no le produjo efecto alguno: «no sintió nada en la garganta»."),
+            ("Como la prueba de que la mordedura era menos grave de lo que parecía", "La pierna llegó a ser «un bloque deforme y durísimo que reventaba la ropa»: el relato nunca atenúa la gravedad."),
+            ("Como el resultado de haber cortado a tiempo la ligadura del tobillo", "Cortar la ligadura ocurre mucho antes y no detiene nada: el vientre sigue hinchándose después."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_interpretar", "dificil",
+        "¿Qué le ocurre a la percepción del tiempo del protagonista en los párrafos "
+        "finales?",
+        "Se vuelve confusa: intenta precisar fechas y plazos, pero las cifras se le "
+        "desordenan",
+        "Al principio calcula con exactitud: cinco horas hasta Tacurú-Pucú, luego "
+        "tres. Al final la misma operación se descompone: «¿Tres años? Tal vez no, "
+        "no tanto. ¿Dos años y nueve meses? Acaso. ¿Ocho meses y medio? Eso sí, "
+        "seguramente», y enseguida duda entre viernes y jueves.\n\nEse desorden es "
+        "el modo que elige el relato para mostrar la conciencia apagándose, sin "
+        "decirlo nunca de forma directa.",
+        [
+            ("Se detiene por completo, y el hombre deja de pensar en el pasado", "Ocurre lo contrario: los párrafos finales están llenos de recuerdos de Dougald, Gaona y Cubilla."),
+            ("Se acelera, y el hombre siente que las horas pasan más rápido", "El texto no plantea que el tiempo corra más rápido, sino que sus cálculos dejan de cuadrar."),
+            ("Se ordena, y por fin logra recordar con precisión cuándo vio a su patrón", "La supuesta precisión final —«ocho meses y medio»— llega después de descartar tres cifras muy distintas, y enseguida vuelve a dudar."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre el título del cuento y lo que le sucede "
+        "al protagonista?",
+        "El hombre deja de gobernar su rumbo y queda entregado a la corriente, "
+        "igual que su propia vida al veneno",
+        "El título nombra literalmente lo que pasa con la canoa: al soltar la pala, "
+        "«la corriente, cogiéndola de nuevo, la llevó velozmente a la deriva». Pero "
+        "el relato hace que esa pérdida de gobierno coincida con la del cuerpo: "
+        "desde ese punto el hombre ya no decide nada, solo le ocurren "
+        "cosas.\n\nReconocer que la frase funciona en los dos planos —el del río y "
+        "el de la vida— es lo que la pregunta pide.",
+        [
+            ("El título anuncia el viaje río abajo que el hombre planificó desde el comienzo", "El viaje no fue a la deriva: lo planificó remando y calculando horas. A la deriva queda cuando ya no puede remar."),
+            ("El título alude a que el hombre se había distanciado de su compadre Alves", "La pelea con Alves es un detalle del camino, no lo que da nombre al relato."),
+            ("El título se refiere a la víbora, que queda arrastrada por la corriente", "La víbora muere en tierra, de un machetazo, y no vuelve a aparecer."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_evaluar", "medio",
+        "¿Qué actitud adopta el narrador frente al sufrimiento del protagonista?",
+        "Lo registra con distancia, describiendo el cuerpo sin compadecerse ni "
+        "comentar",
+        "El narrador consigna la hinchazón, el vómito de sangre y la carne que "
+        "«desbordaba como una monstruosa morcilla» con el mismo tono con que "
+        "describe la corriente del río. Nunca lo llama pobre hombre, nunca culpa a "
+        "nadie y nunca anticipa el final: se limita a decir «y cesó de "
+        "respirar».\n\nCalificar ese tono exige notar lo que el narrador NO hace, "
+        "que es tomar partido.",
+        [
+            ("Se conmueve y acompaña al personaje en su agonía", "No hay una sola expresión de compasión: ni un adjetivo que valore al hombre ni un comentario sobre su suerte."),
+            ("Lo juzga por haberse internado solo en la selva", "El relato no atribuye culpa ni imprudencia: la mordedura ocurre sin más, en el primer renglón."),
+            ("Lo idealiza presentándolo como un héroe que lucha contra la naturaleza", "Se lo describe con «sombría energía», pero también vomitando y arrastrándose: no hay heroísmo, hay cuerpo."),
+        ],
+    ),
+    _ql(
+        "a_la_deriva", "lec_evaluar", "dificil",
+        "Una lectora sostiene que el cuento muestra a una naturaleza indiferente "
+        "ante la muerte humana. ¿Qué elemento del relato permite fundamentar esa "
+        "lectura?",
+        "Que el paisaje alcance su mayor belleza —el cielo de oro, los efluvios de "
+        "azahar, los guacamayos— justo mientras el hombre agoniza",
+        "La interpretación no dice que la naturaleza sea hostil, sino que le da lo "
+        "mismo. Lo que la sostiene es la coincidencia entre el atardecer más "
+        "hermoso del cuento y la muerte del protagonista: el río «coloreado», el "
+        "monte soltando «penetrantes efluvios de azahar y miel silvestre» y una "
+        "pareja de guacamayos que cruza «muy alto y en silencio».\n\nEsa belleza no "
+        "se altera por lo que está ocurriendo abajo, y ahí está la indiferencia.",
+        [
+            ("Que la yararacusú ataque al hombre sin que él la haya provocado", "Eso mostraría una naturaleza peligrosa, que no es lo mismo que una naturaleza indiferente."),
+            ("Que el Paraná esté encajonado entre paredes de basalto y bosque negro", "Ese paisaje se describe como «agresivo»: sostiene la hostilidad del entorno, no su indiferencia."),
+            ("Que el hombre logre matar a la víbora de un solo machetazo", "Ese episodio muestra que el hombre puede defenderse, y no dice nada sobre la actitud de la naturaleza ante su muerte."),
+        ],
+    ),
     # ---------- 'El cielo como infraestructura' ----------
     _ql(
         "cielo_oscuro", "lec_localizar", "facil",
