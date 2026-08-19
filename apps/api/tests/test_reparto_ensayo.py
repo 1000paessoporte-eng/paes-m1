@@ -11,7 +11,7 @@ from collections import Counter
 from dataclasses import dataclass
 
 from paes_api.modules.exam_focus.service import UNIDADES_POR_EJE, _select_questions
-from paes_api.modules.skill_tree.models import SkillAxis
+from paes_api.modules.skill_tree.models import SkillAxis, Subject
 
 
 @dataclass
@@ -47,14 +47,21 @@ def _reparto(elegidas: list[_Pregunta]) -> Counter:
 
 
 def test_las_unidades_por_eje_calzan_con_el_temario() -> None:
-    """El temario 2027 de M1 lista 16 unidades temáticas repartidas así."""
-    assert UNIDADES_POR_EJE == {
+    """Los temarios 2027: M1 lista 16 unidades y M2 quince PROPIAS más."""
+    assert UNIDADES_POR_EJE[Subject.M1] == {
         "numeros": 3,
         "algebra": 6,
         "geometria": 4,
         "probabilidad": 3,
     }
-    assert sum(UNIDADES_POR_EJE.values()) == 16
+    assert sum(UNIDADES_POR_EJE[Subject.M1].values()) == 16
+    assert UNIDADES_POR_EJE[Subject.M2] == {
+        "numeros": 3,
+        "algebra": 3,
+        "geometria": 5,
+        "probabilidad": 4,
+    }
+    assert sum(UNIDADES_POR_EJE[Subject.M2].values()) == 15
 
 
 def test_un_ensayo_de_65_sigue_el_reparto_del_temario() -> None:
@@ -131,3 +138,68 @@ def test_el_equilibrio_de_dificultad_aguanta_un_banco_desparejo() -> None:
     ]
     elegidas = _select_questions(pool, ["algebra"], 30)
     assert len(elegidas) == 30
+
+
+@dataclass
+class _NodoPrueba:
+    axis: SkillAxis
+    subject: Subject
+
+
+@dataclass
+class _PreguntaPrueba:
+    id: int
+    skill_node: _NodoPrueba
+    difficulty: _Dif
+
+
+def _banco_m1_y_m2(por_m1: int, por_m2: int) -> list[_PreguntaPrueba]:
+    """Un banco desbalanceado a propósito, como el real: M1 tiene mucho más."""
+    preguntas, i = [], 0
+    for subject, cuantas in ((Subject.M1, por_m1), (Subject.M2, por_m2)):
+        for eje in ("numeros", "algebra", "geometria", "probabilidad"):
+            for k in range(cuantas):
+                i += 1
+                nivel = ("facil", "medio", "dificil")[k % 3]
+                preguntas.append(
+                    _PreguntaPrueba(i, _NodoPrueba(SkillAxis(eje), subject), _Dif(nivel))
+                )
+    return preguntas
+
+
+def test_un_ensayo_de_m2_reparte_mitad_y_mitad_con_m1() -> None:
+    """M2 evalúa 31 unidades: las 16 de M1 más 15 propias. Casi mitad y mitad.
+
+    Antes el reparto salía del tamaño del banco y un ensayo de M2 traía 56
+    preguntas de M1 y 9 propias, porque M1 tiene cinco veces más banco.
+    """
+    pool = _banco_m1_y_m2(por_m1=300, por_m2=300)
+    elegidas = _select_questions(pool, [], 65, Subject.M2)
+    reparto = Counter(q.skill_node.subject for q in elegidas)
+    assert sum(reparto.values()) == 65
+    # 16 unidades de M1 y 15 de M2 sobre 31: el reparto queda parejo.
+    assert abs(reparto[Subject.M1] - reparto[Subject.M2]) <= 3
+
+
+def test_el_reparto_entre_pruebas_no_depende_del_tamano_del_banco() -> None:
+    """Este es el bug: M1 tenía cinco veces más banco y se llevaba el ensayo."""
+    parejo = _banco_m1_y_m2(por_m1=300, por_m2=300)
+    real = _banco_m1_y_m2(por_m1=300, por_m2=60)
+    a = Counter(q.skill_node.subject for q in _select_questions(parejo, [], 65, Subject.M2))
+    b = Counter(q.skill_node.subject for q in _select_questions(real, [], 65, Subject.M2))
+    assert a == b
+
+
+def test_un_ensayo_de_m1_no_trae_nada_de_m2() -> None:
+    """M1 no evalúa el temario de M2, así que su ensayo es exclusivo."""
+    pool = _banco_m1_y_m2(por_m1=300, por_m2=300)
+    solo_m1 = [q for q in pool if q.skill_node.subject is Subject.M1]
+    elegidas = _select_questions(solo_m1, [], 65, Subject.M1)
+    assert {q.skill_node.subject for q in elegidas} == {Subject.M1}
+
+
+def test_si_a_m2_le_falta_banco_propio_lo_completa_con_m1() -> None:
+    """Sin banco propio suficiente, el ensayo se completa en vez de fallar."""
+    pool = _banco_m1_y_m2(por_m1=300, por_m2=1)
+    elegidas = _select_questions(pool, [], 65, Subject.M2)
+    assert len(elegidas) == 65
