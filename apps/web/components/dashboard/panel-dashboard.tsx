@@ -107,10 +107,18 @@ export function PanelDashboard({
     <main className="min-h-[calc(100vh-3.5rem)] flex-1 bg-surface/70">
       {/* El cuestionario tiene prioridad sobre cualquier otro aviso: es lo
           primero que ve alguien que acaba de entrar, y con sus respuestas se
-          configura el resto. */}
+          configura el resto.
+
+          Y si todavía no ha rendido nada, no ve ningún aviso. Su primera
+          sesión es para probar la plataforma, no para recibir ofertas: el
+          premio exige plan Pro y seis meses de constancia, así que a alguien
+          con cero ensayos solo le dice que esto no es para él todavía. Además
+          cubre el caso en que no sabemos si respondió el cuestionario (la
+          llamada se degrada a null en panel/page.tsx): antes, no saberlo
+          significaba mostrarle la promo del premio a un recién llegado. */}
       {onboarding && !onboarding.respondido ? (
         <Cuestionario nombre={nombre} />
-      ) : (
+      ) : rendidos.length === 0 ? null : (
         <AnunciosDiarios
           ofrecerPro={plan != null && plan.plan === "gratis"}
           premio={
