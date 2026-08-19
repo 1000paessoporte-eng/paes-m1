@@ -21383,6 +21383,98 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "alma_maquina",
+        "title": "El alma de la máquina",
+        "kind": "literario",
+        "source_note": (
+            "Cuento de Baldomero Lillo, publicado en el libro Sub sole el año 1907. "
+            "Obra en dominio público; se modernizó la ortografía del original."
+        ),
+        "body": (
+            "La silueta del maquinista, con su traje de dril azul, se destaca desde "
+            "el amanecer hasta la noche en lo alto de la plataforma de la máquina. "
+            "Su turno es de doce horas consecutivas.\n\n"
+            "Los obreros que extraen de los ascensores los carros de carbón lo "
+            "miran con envidia no exenta de encono. Envidia, porque mientras ellos, "
+            "abrasados por el sol en el verano y calados por la lluvia en el "
+            "invierno, forcejean sin tregua desde el brocal del pique hasta la "
+            "cancha de depósito, empujando las pesadas vagonetas, él, bajo la "
+            "techumbre de zinc, no da un paso ni gasta más energía que la "
+            "indispensable para manejar la rienda de la máquina.\n\n"
+            "Y cuando, vaciado el mineral, los tumbadores corren y jadean con la "
+            "vaga esperanza de obtener algunos segundos de respiro, a la envidia se "
+            "añade el encono, viendo cómo el ascensor los aguarda ya con una nueva "
+            "carga de repletas carretillas, mientras el maquinista, desde lo alto "
+            "de su puesto, parece decirles con su severa mirada:\n\n"
+            "—¡Más aprisa, holgazanes, más aprisa!\n\n"
+            "Esta decepción, que se repite en cada viaje, les hace pensar que si la "
+            "tarea los aniquila, culpa es de aquel que para abrumarlos de fatiga no "
+            "necesita sino alargar y encoger el brazo.\n\n"
+            "Jamás podrán comprender que esa labor, que les parece tan "
+            "insignificante, es más agobiadora que la del galeote atado a su banco. "
+            "El maquinista, al asir con la diestra el mango de acero del gobierno "
+            "de la máquina, pasa instantáneamente a formar parte del enorme y "
+            "complicado organismo de hierro. Su ser pensante se convierte en "
+            "autómata. Su cerebro se paraliza. A la vista del cuadrante pintado de "
+            "blanco donde se mueve la aguja indicadora, el presente, el pasado y el "
+            "porvenir son reemplazados por la idea fija. Sus nervios en tensión, su "
+            "pensamiento todo se reconcentra en las cifras que, en el cuadrante, "
+            "representan las vueltas de la gigantesca bobina que enrolla dieciséis "
+            "metros de cable en cada revolución.\n\n"
+            "Como las catorce vueltas necesarias para que el ascensor recorra su "
+            "trayecto vertical se efectúan en menos de veinte segundos, un segundo "
+            "de distracción significa una revolución más, y una revolución más, "
+            "demasiado lo sabe el maquinista, es: el ascensor estrellándose, "
+            "arriba, contra las poleas; la bobina, arrancada de su centro, "
+            "precipitándose como un alud que nada detiene, mientras los émbolos, "
+            "locos, rompen las bielas y hacen saltar las tapas de los cilindros. "
+            "Todo esto puede ser la consecuencia de la más pequeña distracción de "
+            "su parte, de un segundo de olvido.\n\n"
+            "Por eso sus pupilas, su rostro, su pensamiento se inmovilizan. Nada "
+            "ve, nada oye de lo que pasa a su alrededor, sino la aguja que gira y "
+            "el martillo de señales que golpea encima de su cabeza. Y esa atención "
+            "no tiene tregua. Apenas asoma por el brocal del pique uno de los "
+            "ascensores, cuando un doble campanillazo le avisa que, abajo, el otro "
+            "espera ya con su carga completa. Estira el brazo, el vapor empuja los "
+            "émbolos y silba al escaparse por las empaquetaduras, la bobina enrolla "
+            "acelerada el hilo de metal y la aguja del cuadrante gira aproximándose "
+            "velozmente a la flecha de parada. Antes que la cruce atrae hacia sí la "
+            "manivela y la máquina se detiene sin ruido, sin sacudidas, como un "
+            "caballo blando de boca.\n\n"
+            "Y cuando aún vibra en la placa metálica el tañido de la última señal, "
+            "el martillo la hiere de nuevo con un golpe seco y estridente a la vez. "
+            "A su mandato imperioso el brazo del maquinista se alarga, los "
+            "engranajes rechinan, los cables oscilan y la bobina voltea con "
+            "vertiginosa rapidez. Y las horas suceden a las horas, el sol sube al "
+            "cenit, desciende; la tarde llega, declina, y el crepúsculo, surgiendo "
+            "al ras del horizonte, alza y extiende cada vez más aprisa su penumbra "
+            "inmensa.\n\n"
+            "De pronto un silbido ensordecedor llena el espacio. Los tumbadores "
+            "sueltan las carretillas y se yerguen briosos. La tarea del día ha "
+            "terminado. De las distintas secciones anexas a la mina salen los "
+            "obreros en confuso tropel. En su prisa por abandonar los talleres se "
+            "chocan y se estrujan, mas no se levanta una voz de queja o de "
+            "protesta: los rostros están radiantes.\n\n"
+            "Poco a poco el rumor de sus pasos sonoros se aleja y se desvanece en "
+            "la calzada sumida en las sombras. La mina ha quedado desierta.\n\n"
+            "Solo en el departamento de la máquina se distingue una confusa silueta "
+            "humana. Es el maquinista. Sentado en su alto sitial, con la diestra "
+            "apoyada en la manivela, permanece inmóvil en la semioscuridad que lo "
+            "rodea. Al concluir la tarea, cuando bruscamente cesó la tensión de sus "
+            "nervios, se ha desplomado en el banco como una masa inerte.\n\n"
+            "Un proceso lento de reintegración al estado normal se opera en su "
+            "cerebro embotado. Recobra penosamente sus facultades anuladas, "
+            "atrofiadas por doce horas de obsesión, de idea fija. El autómata "
+            "vuelve a ser otra vez una criatura de carne y hueso que ve, que oye, "
+            "que piensa, que sufre.\n\n"
+            "El enorme mecanismo yace paralizado. Sus miembros potentes, caldeados "
+            "por el movimiento, se enfrían produciendo leves chasquidos. Es el alma "
+            "de la máquina que se escapa por los poros del metal, para encender en "
+            "las tinieblas que cubren el alto sitial de hierro las fulguraciones "
+            "trágicas de una aurora toda roja desde el orto hasta el cenit."
+        ),
+    },
+    {
         "key": "vinchuca",
         "title": "El insecto que cambió de casa",
         "kind": "no_literario",
@@ -22404,6 +22496,161 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- "El alma de la máquina" (Baldomero Lillo, 1907) ----------
+    _ql(
+        "alma_maquina", "lec_localizar", "facil",
+        "Según el texto, ¿por qué los obreros envidian al maquinista?",
+        "Porque trabaja bajo techo y gasta apenas la energía necesaria para mover "
+        "la máquina",
+        "El segundo párrafo lo dice con todas sus letras: los obreros están "
+        "«abrasados por el sol en el verano y calados por la lluvia en el invierno» "
+        "y empujan vagonetas, mientras el maquinista, «bajo la techumbre de zinc, "
+        "no da un paso ni gasta más energía que la indispensable».\n\nEs una "
+        "pregunta de localizar: el motivo de la envidia está escrito, no hay que "
+        "deducirlo.",
+        [
+            ("Porque su turno dura menos horas que el de ellos", "El primer párrafo dice que su turno es de doce horas consecutivas; el texto nunca compara la duración de las jornadas."),
+            ("Porque recibe un pago mayor por un esfuerzo menor", "El relato no menciona sueldos en ningún momento: la envidia es por el esfuerzo físico, no por el dinero."),
+            ("Porque puede descansar cada vez que el ascensor sube", "Es justo lo contrario: el texto insiste en que «esa atención no tiene tregua»."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_localizar", "facil",
+        "De acuerdo con el texto, ¿qué debe vigilar el maquinista para evitar un "
+        "accidente?",
+        "La aguja del cuadrante, que marca las vueltas de la bobina",
+        "El texto explica que su pensamiento «se reconcentra en las cifras que, en "
+        "el cuadrante, representan las vueltas de la gigantesca bobina», y que "
+        "basta una vuelta de más para que el ascensor se estrelle contra las "
+        "poleas.\n\nEl dato está explícito: lo que vigila es la aguja, y lo que "
+        "cuenta son las vueltas.",
+        [
+            ("La presión del vapor dentro de los cilindros", "El vapor aparece empujando los émbolos, pero el texto nunca lo presenta como algo que el maquinista deba controlar."),
+            ("El peso de las carretillas que suben en el ascensor", "La carga es asunto de los tumbadores; el maquinista solo recibe la señal de que el ascensor está completo."),
+            ("El estado de los cables que sostienen el ascensor", "Los cables se mencionan al oscilar, pero no como algo que él revise: su atención está fija en el cuadrante."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_localizar", "medio",
+        "Según el relato, ¿cómo reaccionan los obreros cuando suena el silbido que "
+        "termina la jornada?",
+        "Salen apurados y se empujan entre sí, pero ninguno protesta",
+        "El texto describe la salida: «se chocan y se estrujan, mas no se levanta "
+        "una voz de queja o de protesta: los rostros están radiantes».\n\nLa "
+        "pregunta pide identificar esa información, que aparece formulada casi con "
+        "las mismas palabras.",
+        [
+            ("Se quedan descansando un rato antes de dejar los talleres", "El texto dice lo opuesto: salen «en confuso tropel», con prisa por abandonar los talleres."),
+            ("Reclaman por lo extenso del turno que acaban de cumplir", "El relato subraya que NO se levanta ninguna voz de queja, y que los rostros están radiantes."),
+            ("Esperan a que el maquinista detenga la máquina para poder salir", "Los tumbadores sueltan las carretillas apenas suena el silbido; no esperan a nadie."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_interpretar", "medio",
+        "¿Qué relación se establece entre lo que los obreros piensan del maquinista "
+        "y lo que el narrador cuenta a continuación sobre su trabajo?",
+        "El narrador desmiente esa impresión: explica que esa labor es todavía más "
+        "agobiadora que la de ellos",
+        "Los obreros creen que el maquinista los agota «sin necesitar sino alargar "
+        "y encoger el brazo». El narrador introduce entonces la frase «jamás podrán "
+        "comprender» y dedica el resto del relato a mostrar por qué se equivocan: "
+        "esa labor «es más agobiadora que la del galeote atado a su banco».\n\nLa "
+        "relación es de contraste, y hay que reconstruirla uniendo dos partes del "
+        "texto: el juicio de los obreros y la explicación posterior.",
+        [
+            ("El narrador confirma esa impresión aportando datos técnicos de la máquina", "Los datos técnicos están al servicio de lo contrario: sirven para mostrar la tensión que exige el puesto."),
+            ("El narrador la matiza señalando que los dos trabajos cansan por igual", "El texto no los iguala: dice que el del maquinista es MÁS agobiador que el del galeote."),
+            ("El narrador la deja sin comentar y pasa a describir el final de la jornada", "Entre una cosa y otra hay tres párrafos dedicados justamente a comentarla."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_interpretar", "medio",
+        "¿Qué sugiere la comparación «la máquina se detiene sin ruido, sin "
+        "sacudidas, como un caballo blando de boca»?",
+        "Que la máquina obedece dócilmente al menor movimiento de quien la conduce",
+        "«Blando de boca» se dice del caballo que responde a la más leve presión de "
+        "las riendas. Aplicada a la máquina, la comparación traslada esa docilidad: "
+        "se detiene apenas el maquinista atrae hacia sí la manivela.\n\nLa imagen "
+        "encaja con el resto del relato, que ya había llamado «rienda de la "
+        "máquina» al mando que él maneja.",
+        [
+            ("Que la máquina es lenta y cuesta ponerla en movimiento", "La comparación se aplica al momento de DETENERSE, y el texto insiste en la rapidez con que arranca."),
+            ("Que la máquina se detiene sola cuando el recorrido termina", "No se detiene sola: el texto precisa que el maquinista «atrae hacia sí la manivela» antes de que la aguja cruce la marca."),
+            ("Que la máquina es impredecible y en cualquier momento puede desbocarse", "Ese peligro existe en el relato, pero nace del descuido del maquinista; la comparación dice lo contrario: que responde con docilidad."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_interpretar", "dificil",
+        "¿Qué función cumple en el relato la enumeración del ascensor "
+        "estrellándose, la bobina arrancada de su centro y los émbolos rompiendo "
+        "las bielas?",
+        "Hacer sentir el peso de la responsabilidad que carga el maquinista en cada "
+        "segundo",
+        "La enumeración no narra un hecho: enumera lo que PODRÍA pasar. Está "
+        "encabezada por «un segundo de distracción significa una revolución más» y "
+        "cerrada por «todo esto puede ser la consecuencia de la más pequeña "
+        "distracción de su parte».\n\nSu función es convertir en imágenes concretas "
+        "una amenaza abstracta, para que el lector entienda por qué ese trabajo "
+        "aparentemente cómodo resulta agotador.",
+        [
+            ("Anticipar el accidente con que termina el relato", "En el relato no ocurre ningún accidente: la jornada termina con el silbido y la mina queda desierta."),
+            ("Describir un desperfecto que la mina ya había sufrido antes", "Nada indica que haya ocurrido: la enumeración se presenta como posibilidad, no como recuerdo."),
+            ("Explicar al lector cómo funciona técnicamente la máquina", "El funcionamiento se explica antes, con la bobina y el cuadrante; acá lo que se enumera es la catástrofe, no el mecanismo."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_interpretar", "dificil",
+        "¿Qué transformación experimenta el maquinista a lo largo de la jornada?",
+        "Pasa de ser un hombre que piensa a funcionar como autómata, y al terminar "
+        "el turno recupera lentamente su condición humana",
+        "El relato marca las dos direcciones del cambio. Al tomar el mando, «su ser "
+        "pensante se convierte en autómata» y «su cerebro se paraliza». Al "
+        "terminar, «el autómata vuelve a ser otra vez una criatura de carne y hueso "
+        "que ve, que oye, que piensa, que sufre».\n\nReconocer esa curva completa "
+        "exige unir el comienzo y el final del texto: es la evolución del "
+        "personaje, no un rasgo suyo.",
+        [
+            ("Pasa de aceptar su tarea con resignación a rebelarse contra ella", "El maquinista nunca se rebela ni opina sobre su trabajo: el relato muestra lo que le ocurre, no lo que él reclama."),
+            ("Pasa de estar atento a distraerse, y por eso ocurre el accidente", "No se distrae ni ocurre accidente alguno; el texto plantea esa posibilidad solo como amenaza permanente."),
+            ("Pasa de ser envidiado por sus compañeros a ser despreciado por ellos", "La envidia de los obreros está al comienzo y nunca cambia: ellos se van sin enterarse de lo que le pasa."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_evaluar", "medio",
+        "¿Qué actitud adopta el narrador frente a los obreros que envidian al "
+        "maquinista?",
+        "Explica el origen de su envidia, pero deja claro que están equivocados",
+        "El narrador dedica dos párrafos a mostrar por qué los obreros piensan lo "
+        "que piensan —el sol, la lluvia, las vagonetas, la mirada severa desde lo "
+        "alto—, así que no los ridiculiza. Pero después escribe «jamás podrán "
+        "comprender», y con eso los corrige.\n\nCalificar esa posición exige "
+        "distinguir entre entender un error y compartirlo, que es la tarea de "
+        "evaluar el tono del emisor.",
+        [
+            ("Se burla de ellos por no entender en qué consiste el trabajo del maquinista", "No hay burla: el narrador se toma el trabajo de explicar sus razones antes de corregirlos."),
+            ("Comparte su juicio y también responsabiliza al maquinista del agotamiento", "El narrador responsabiliza a la faena, no al maquinista, a quien presenta como otra víctima."),
+            ("Se mantiene al margen y no toma posición sobre lo que ellos piensan", "La frase «jamás podrán comprender» es una toma de posición explícita."),
+        ],
+    ),
+    _ql(
+        "alma_maquina", "lec_evaluar", "dificil",
+        "Un lector sostiene que el cuento critica la manera en que el trabajo "
+        "industrial convierte a las personas en piezas de una máquina. ¿Qué "
+        "elemento del relato permite fundamentar esa lectura?",
+        "Que al tomar el mando el maquinista «pasa a formar parte del enorme y "
+        "complicado organismo de hierro» y su cerebro se paraliza",
+        "La interpretación no habla de que el trabajo sea duro, sino de que "
+        "deshumaniza. Lo que la sostiene es el momento en que el hombre se integra "
+        "literalmente al mecanismo: deja de ser «ser pensante» y pasa a ser una "
+        "pieza más del organismo de hierro.\n\nEl título mismo apunta ahí: el alma "
+        "que el relato le atribuye a la máquina es la que el maquinista pierde "
+        "durante su turno.",
+        [
+            ("Que los obreros empujen vagonetas bajo el sol del verano y la lluvia del invierno", "Eso sostiene que el trabajo es duro, que no es lo mismo que sostener que deshumaniza."),
+            ("Que el turno del maquinista dure doce horas consecutivas", "La extensión de la jornada muestra dureza, pero no que la persona se vuelva parte del mecanismo."),
+            ("Que la mina quede desierta y en sombras al terminar la jornada", "Es el cierre de la escena y prepara la imagen final, pero no dice nada sobre la condición del trabajador."),
+        ],
+    ),
     # ---------- "El insecto que cambió de casa" ----------
     _ql(
         "vinchuca", "lec_localizar", "facil",
