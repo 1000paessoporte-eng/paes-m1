@@ -21383,6 +21383,98 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "el_pasaje",
+        "title": "El pasaje",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes."
+        ),
+        "body": (
+            "El terminal de Coyanco tiene cuatro andenes y solo se usan dos. En el "
+            "mío vendo pasajes desde las seis de la mañana, detrás de un vidrio con "
+            "un agujero redondo por donde pasan los billetes y las conversaciones. "
+            "En invierno el agujero deja entrar el frío y yo lo tapo con una "
+            "bufanda cuando no hay nadie.\n\n"
+            "Al viejo lo empecé a notar en abril, aunque después caí en la cuenta "
+            "de que llevaba meses viniendo. Los viernes, a las cinco y veinte, "
+            "compraba un pasaje a Nuevo Amanecer. Siempre el mismo, siempre el de "
+            "las cinco cuarenta, siempre pagando con billetes doblados en cuatro "
+            "que sacaba del bolsillo interior de la chaqueta.\n\n"
+            "Lo raro no era eso. Lo raro era que a las seis, cuando yo salía a "
+            "botar la basura, él seguía sentado en el banco del andén, con el "
+            "pasaje en la mano y el bus ya perdido detrás del cerro.\n\n"
+            "La primera vez pensé que se había quedado dormido. La segunda, que se "
+            "había arrepentido. A la quinta dejé de buscar explicaciones y empecé a "
+            "buscarlo a él: cada viernes, mientras le daba el vuelto, le miraba las "
+            "manos, la chaqueta, los zapatos, como si ahí estuviera escrito lo que "
+            "no me atrevía a preguntar.\n\n"
+            "Doña Marta, que lleva veinte años en la boletería del andén dos, me "
+            "dijo que no me metiera. Que en un pueblo chico uno aprende a no "
+            "preguntar, porque las respuestas después hay que cargarlas. Le hice "
+            "caso durante todo el invierno.\n\n"
+            "Yo también tenía mi propio asunto con los buses. Cuando entré a "
+            "trabajar acá le dije a mi mamá que era por un año, mientras juntaba "
+            "para irme a estudiar a Chillán. Ese año se cumplió en marzo y nadie lo "
+            "mencionó, ni ella ni yo. Vender pasajes que uno no usa resulta ser un "
+            "oficio más común de lo que parece.\n\n"
+            "En septiembre llegó el aviso. Lo pegaron en el vidrio, del lado de "
+            "afuera, así que yo lo leía al revés todo el día: la empresa evaluaba "
+            "suspender el recorrido a Nuevo Amanecer por baja demanda. Se pedía a "
+            "los usuarios considerar rutas alternativas. No había ninguna ruta "
+            "alternativa.\n\n"
+            "Ese viernes el viejo llegó a las cinco y veinte, como siempre. Leyó el "
+            "aviso desde afuera, sin acercarse, moviendo los labios. Después vino a "
+            "la ventanilla y pidió su pasaje.\n\n"
+            "—¿Usted sabe que puede que lo suspendan? —le dije.\n\n"
+            "—Sé.\n\n"
+            "—¿Y va a seguir comprando?\n\n"
+            "Se quedó mirando el billete doblado antes de pasármelo por el agujero.\n\n"
+            "—¿Cuántos pasajes hay que vender para que no lo suspendan?\n\n"
+            "No supe qué contestarle. En la pantalla del sistema los recorridos "
+            "aparecen con un número de ocupación promedio, pero nadie me había "
+            "explicado nunca desde qué número una ruta deja de existir.\n\n"
+            "—No sé —le dije—. Creo que no depende de uno.\n\n"
+            "Asintió despacio, como quien recibe una noticia que ya sabía, y se fue "
+            "a sentar al banco.\n\n"
+            "Esa tarde salí a botar la basura antes de la hora. El bus a Nuevo "
+            "Amanecer estaba saliendo con cuatro pasajeros. El viejo lo miró irse, "
+            "igual que siempre, con el pasaje en la mano.\n\n"
+            "—Mi hija vive allá —dijo, sin que yo le preguntara. No me estaba "
+            "mirando a mí; miraba el polvo que había dejado el bus—. Viene una vez "
+            "al año, en enero. Si sacan el recorrido, no viene.\n\n"
+            "Me quedé con la bolsa de basura en la mano.\n\n"
+            "—Podría ir usted —le dije, y me arrepentí antes de terminar la frase.\n\n"
+            "—Podría —dijo.\n\n"
+            "Y no agregó nada más. Se levantó, se guardó el pasaje en el bolsillo "
+            "interior, junto a los billetes doblados, y caminó hacia la salida con "
+            "esa manera de andar de la gente que no tiene apuro porque no la espera "
+            "nadie.\n\n"
+            "El recorrido no se suspendió. En diciembre llegó una circular que "
+            "decía que se mantendría con frecuencia reducida, dos veces por semana, "
+            "y que se agradecía la preferencia de los usuarios. Yo pegué la "
+            "circular en el mismo vidrio, del lado de adentro, para poder leerla al "
+            "derecho.\n\n"
+            "El viejo siguió viniendo los viernes hasta enero. Después dejó de "
+            "venir tres semanas seguidas, y una tarde apareció en el andén con una "
+            "mujer de unos cuarenta años que llevaba un bolso grande y le hablaba "
+            "fuerte, como se le habla a alguien que uno cree que no oye bien. Él no "
+            "compró pasaje ese día. Se sentaron los dos en el banco y esperaron.\n\n"
+            "Cuando pasaron frente a la ventanilla, él levantó apenas la mano. No "
+            "sé si me saludaba a mí o si me estaba mostrando algo.\n\n"
+            "Doña Marta dice que la empresa mantuvo el recorrido porque le convenía "
+            "por otro lado, no por los pasajes del viejo. Tiene razón, seguramente. "
+            "Un pasaje a la semana no sostiene una ruta, y en la pantalla del "
+            "sistema no hay ninguna columna donde figure por qué alguien compró. "
+            "Pero también es cierto que durante todos esos viernes la ocupación "
+            "promedio del recorrido incluyó, cada semana, un asiento que nadie "
+            "ocupó.\n\n"
+            "Ahora, cuando alguien compra un pasaje y no se sube, no pregunto nada. "
+            "Anoto la venta, entrego el vuelto y miro el andén hasta que el bus "
+            "desaparece detrás del cerro. En la pantalla del sistema esa venta se "
+            "ve exactamente igual que todas las demás."
+        ),
+    },
+    {
         "key": "seguro_escolar",
         "title": "El Seguro Escolar: qué es y cómo se usa",
         "kind": "no_literario",
@@ -23276,6 +23368,159 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El pasaje' ----------
+    _ql(
+        "el_pasaje", "lec_localizar", "facil",
+        "Según el relato, ¿qué hacía el viejo todos los viernes en el terminal?",
+        "Compraba un pasaje a Nuevo Amanecer y después no se subía al bus",
+        "El texto lo establece al comienzo: los viernes «a las cinco y veinte, "
+        "compraba un pasaje a Nuevo Amanecer», y a las seis, cuando la narradora "
+        "salía a botar la basura, «él seguía sentado en el banco del andén, con el "
+        "pasaje en la mano y el bus ya perdido detrás del cerro».\n\nLos dos datos "
+        "están explícitos, en párrafos consecutivos.",
+        [
+            ("Viajaba a Nuevo Amanecer a visitar a su hija", "Nunca viaja: el relato insiste en que se queda en el andén después de que el bus se va."),
+            ("Esperaba la llegada del bus que traía a su hija", "El bus que compra es el de salida, y su hija viaja una vez al año, en enero."),
+            ("Vendía pasajes que le sobraban a otros pasajeros", "El viejo compra, no vende; el relato no menciona que revenda nada."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_localizar", "medio",
+        "De acuerdo con el relato, ¿qué decía el aviso que la empresa pegó en el "
+        "vidrio en septiembre?",
+        "Que se evaluaba suspender el recorrido a Nuevo Amanecer por baja demanda",
+        "El texto lo transcribe: «la empresa evaluaba suspender el recorrido a "
+        "Nuevo Amanecer por baja demanda. Se pedía a los usuarios considerar rutas "
+        "alternativas».\n\nLa narradora agrega enseguida el detalle que vuelve "
+        "absurda esa recomendación: «no había ninguna ruta alternativa».",
+        [
+            ("Que el recorrido pasaría a tener frecuencia reducida dos veces por semana", "Eso lo dice la circular de diciembre, que es posterior y de contenido distinto."),
+            ("Que se agradecía la preferencia de los usuarios del recorrido", "Esa frase también pertenece a la circular de diciembre."),
+            ("Que se suspendía el recorrido a partir de esa fecha", "El aviso decía que se EVALUABA suspenderlo, no que ya estuviera suspendido."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_localizar", "medio",
+        "Según el relato, ¿qué le aconsejó doña Marta a la narradora?",
+        "Que no preguntara, porque en un pueblo chico las respuestas después hay "
+        "que cargarlas",
+        "El consejo aparece textual: «que no me metiera. Que en un pueblo chico uno "
+        "aprende a no preguntar, porque las respuestas después hay que "
+        "cargarlas».\n\nLa narradora precisa además cuánto duró su obediencia: «le "
+        "hice caso durante todo el invierno».",
+        [
+            ("Que hablara con el viejo antes de que suspendieran el recorrido", "Doña Marta aconseja lo contrario: no meterse."),
+            ("Que informara a la empresa sobre el comportamiento del pasajero", "Nada de eso aparece en el relato."),
+            ("Que se fuera de Coyanco mientras todavía era joven", "La idea de irse es de la narradora y de su propio plan, no un consejo de doña Marta."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_interpretar", "dificil",
+        "¿Por qué el viejo compra cada semana un pasaje que no usa?",
+        "Para que la ruta registre demanda y no la suspendan, porque su hija viaja "
+        "en ese bus una vez al año",
+        "Él lo explica sin que se lo pregunten: «mi hija vive allá. Viene una vez "
+        "al año, en enero. Si sacan el recorrido, no viene». Antes había preguntado "
+        "«¿cuántos pasajes hay que vender para que no lo suspendan?», que es la "
+        "pregunta de alguien que está intentando sostener algo.\n\nEl sentido de "
+        "todo el cuento depende de unir esas dos frases, que están separadas por "
+        "varios párrafos.",
+        [
+            ("Porque espera reunir el valor para viajar a ver a su hija algún día", "Cuando la narradora le propone viajar, él responde «podría» y no agrega nada: el relato no plantea que junte valor, sino que sostiene la ruta."),
+            ("Porque es una costumbre que mantiene desde hace años sin motivo claro", "El relato entrega el motivo de forma explícita en el diálogo del andén."),
+            ("Porque quiere que la empresa lo reconozca como pasajero frecuente", "Nada en el texto sugiere un beneficio personal: lo que le preocupa es que el recorrido exista."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_interpretar", "dificil",
+        "¿Qué función cumple en el relato el párrafo en que la narradora cuenta que "
+        "entró a trabajar «por un año» y que ese año se cumplió en marzo?",
+        "Establecer un paralelo entre ella y el viejo, que la propia narradora "
+        "reconoce al final del párrafo",
+        "El párrafo cierra con una frase que vuelve explícito el paralelo: «vender "
+        "pasajes que uno no usa resulta ser un oficio más común de lo que parece». "
+        "Ella también tiene un viaje pendiente que no hace, y por eso puede "
+        "reconocer el caso del viejo.\n\nNo es una digresión: es lo que explica por "
+        "qué esta historia le llama la atención a ella y no a doña Marta.",
+        [
+            ("Justificar por qué la narradora necesita conservar su empleo en el terminal", "El relato no plantea una necesidad económica: plantea un viaje postergado."),
+            ("Explicar por qué la narradora conoce bien el sistema de venta de pasajes", "Su conocimiento del sistema no se atribuye a ese dato, y aparece en otros párrafos."),
+            ("Introducir a la madre como un personaje que influirá en el desenlace", "La madre se menciona una sola vez y no vuelve a aparecer."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_interpretar", "dificil",
+        "¿Qué se puede inferir de la escena final, en que el viejo aparece con una "
+        "mujer de unos cuarenta años y no compra pasaje?",
+        "Que su hija llegó, y que por eso ese viernes ya no necesitaba sostener la "
+        "ruta",
+        "El relato entrega todas las piezas y ninguna conclusión. La mujer tiene la "
+        "edad que corresponde, llega en enero —el mes que él había mencionado—, "
+        "trae un bolso grande, y él «no compró pasaje ese día».\n\nLa narradora no "
+        "confirma nada: incluso duda de lo que significa el gesto final, «no sé si "
+        "me saludaba a mí o si me estaba mostrando algo». El cuento deja que el "
+        "lector arme el sentido.",
+        [
+            ("Que el viejo consiguió que la empresa lo trasladara a otro recorrido", "El recorrido no cambió: la circular de diciembre dice que se mantiene con frecuencia reducida."),
+            ("Que la mujer es una funcionaria de la empresa que fue a explicarle la situación", "Se sientan juntos en el banco a esperar el bus, que no es lo que haría una funcionaria."),
+            ("Que el viejo se irá a vivir a Nuevo Amanecer con su hija", "El bolso lo lleva ella, no él, y el relato lo muestra esperando en el andén, no partiendo."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_interpretar", "medio",
+        "¿Qué sentido adquiere el pasaje sin usar a lo largo del relato?",
+        "Deja de ser una rareza inexplicable y pasa a ser la forma en que el viejo "
+        "sostiene la posibilidad de ver a su hija",
+        "Al comienzo el pasaje es un enigma: la narradora busca explicaciones y no "
+        "encuentra ninguna. Después del diálogo del andén, el mismo objeto "
+        "significa otra cosa, y el cierre lo confirma: «durante todos esos viernes "
+        "la ocupación promedio del recorrido incluyó, cada semana, un asiento que "
+        "nadie ocupó».\n\nQue un objeto cambie de sentido sin cambiar de forma es "
+        "lo que lo vuelve un símbolo dentro del relato.",
+        [
+            ("Representa el viaje que el viejo nunca se atrevió a hacer", "El relato no plantea falta de valor: cuando ella le sugiere viajar, él contesta «podría» y el tema se cierra ahí."),
+            ("Simboliza el dinero que el viejo desperdicia cada semana", "El relato nunca lo presenta como un gasto inútil; al contrario, muestra para qué sirve."),
+            ("Representa la rutina que ordena la vida de un pueblo pequeño", "La rutina es el marco del relato, pero el pasaje tiene un sentido más preciso, que el propio viejo explica."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_evaluar", "dificil",
+        "¿Qué efecto produce que la narradora cierre el relato diciendo que ahora "
+        "no pregunta nada?",
+        "Muestra que terminó adoptando el consejo de doña Marta, aunque por una "
+        "razón distinta de la que ella le dio",
+        "Doña Marta le había advertido que no preguntara porque «las respuestas "
+        "después hay que cargarlas». La narradora sí preguntó, sí cargó con la "
+        "respuesta, y su conclusión es la misma que la de doña Marta pero por "
+        "experiencia propia y no por prudencia heredada.\n\nEl cierre no es "
+        "resignación: la última frase —«en la pantalla del sistema esa venta se ve "
+        "exactamente igual que todas las demás»— indica que ahora sabe que detrás "
+        "de cada venta puede haber una historia como esa.",
+        [
+            ("Indica que la narradora perdió el interés por las personas que atiende", "Es lo contrario: sigue mirando el andén «hasta que el bus desaparece detrás del cerro»."),
+            ("Sugiere que la narradora fue reprendida por preguntar y aprendió la lección", "Nadie la reprende en el relato: doña Marta la aconseja antes, no después."),
+            ("Revela que la narradora decidió finalmente irse de Coyanco", "El relato la deja trabajando en la ventanilla, y su viaje sigue pendiente."),
+        ],
+    ),
+    _ql(
+        "el_pasaje", "lec_evaluar", "dificil",
+        "Un lector sostiene que el cuento trata sobre cómo los números "
+        "administrativos no alcanzan a registrar lo que de verdad ocurre. ¿Qué "
+        "elemento del relato permite fundamentar esa lectura?",
+        "Que el sistema muestre la ocupación promedio del recorrido pero no tenga "
+        "ninguna columna donde figure por qué alguien compró un pasaje",
+        "La narradora lo señala dos veces. Primero cuando no puede responderle al "
+        "viejo: «nadie me había explicado nunca desde qué número una ruta deja de "
+        "existir». Y después, de forma más directa: «en la pantalla del sistema no "
+        "hay ninguna columna donde figure por qué alguien compró».\n\nEl cierre "
+        "remata la idea: esa venta «se ve exactamente igual que todas las demás», "
+        "aunque el lector ya sabe que no lo es.",
+        [
+            ("Que la empresa haya evaluado suspender el recorrido por baja demanda", "Eso muestra que la ruta era poco rentable, que es un hecho del relato y no una falla del registro."),
+            ("Que el viejo no pueda viajar a Nuevo Amanecer a ver a su hija", "El relato no dice que no pueda: cuando ella se lo propone, él responde «podría»."),
+            ("Que doña Marta aconseje no preguntar en un pueblo chico", "Ese consejo trata sobre el costo de saber, no sobre lo que los registros dejan fuera."),
+        ],
+    ),
     # ---------- 'El Seguro Escolar: qué es y cómo se usa' ----------
     _ql(
         "seguro_escolar", "lec_localizar", "facil",
