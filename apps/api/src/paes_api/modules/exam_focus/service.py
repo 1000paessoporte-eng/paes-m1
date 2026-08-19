@@ -82,12 +82,32 @@ DIFFICULTY_LABELS = {"facil": "Fácil", "medio": "Medio", "dificil": "Difícil"}
 #: un solo nodo cubre dos unidades de estadística. Contar unidades corrige las
 #: dos distorsiones y, sobre todo, deja el reparto declarado en vez de
 #: emergente: hoy da 19% / 37% / 25% / 19%.
-UNIDADES_POR_EJE: dict[str, int] = {
-    SkillAxis.NUMEROS.value: 3,
-    SkillAxis.ALGEBRA.value: 6,
-    SkillAxis.GEOMETRIA.value: 4,
-    SkillAxis.PROBABILIDAD.value: 3,
+UNIDADES_POR_EJE: dict[Subject, dict[str, int]] = {
+    Subject.M1: {
+        SkillAxis.NUMEROS.value: 3,
+        SkillAxis.ALGEBRA.value: 6,
+        SkillAxis.GEOMETRIA.value: 4,
+        SkillAxis.PROBABILIDAD.value: 3,
+    },
+    #: Unidades PROPIAS de M2, sin contar las de M1 que también evalúa.
+    #: Números: reales, matemática financiera y logaritmos. Álgebra: casos de
+    #: sistemas 2x2, función potencia/exponencial/logarítmica y funciones
+    #: trigonométricas. Geometría: homotecia, razones trigonométricas,
+    #: relaciones métricas en la circunferencia, esfera y rectas en el plano.
+    #: Probabilidad: dispersión, condicional, permutación y combinatoria, y
+    #: modelos probabilísticos.
+    Subject.M2: {
+        SkillAxis.NUMEROS.value: 3,
+        SkillAxis.ALGEBRA.value: 3,
+        SkillAxis.GEOMETRIA.value: 5,
+        SkillAxis.PROBABILIDAD.value: 4,
+    },
 }
+
+
+def _unidades(subject: Subject, axis: str) -> int:
+    """Unidades temáticas que el temario de `subject` asigna a ese eje."""
+    return UNIDADES_POR_EJE.get(subject, {}).get(axis, 1)
 
 #: Qué subjects entran al banco de una prueba. M2 evalúa "todos los
 #: conocimientos de M1, además de" contenido propio (temario DEMRE), así que
@@ -183,7 +203,10 @@ def duration_for(question_count: int, pace: Pace, subject: Subject = Subject.M1)
 
 
 def _select_questions(
-    pool: list[Question], axes: list[str], count: int
+    pool: list[Question],
+    axes: list[str],
+    count: int,
+    subject: Subject = Subject.M1,
 ) -> list[Question]:
     """Reparte la cantidad pedida entre los ejes según el temario oficial.
 
@@ -197,6 +220,12 @@ def _select_questions(
     tenía dos problemas: sobrerrepresentaba Geometría (5 nodos para 4 unidades)
     y subrepresentaba Probabilidad (2 nodos para 3 unidades), y además el
     reparto se movía solo cada vez que el banco crecía.
+
+    Cuando una prueba evalúa el temario de otra —M2 evalúa todo M1 además de lo
+    suyo— el peso del eje suma las unidades de ambas, y dentro del eje la cuota
+    se reparte entre las dos en la misma proporción. Sin eso, el reparto volvía
+    a depender del tamaño del banco por la puerta de atrás: M1 tiene cinco veces
+    más preguntas que M2, así que un ensayo de M2 traía 56 de M1 y 9 propias.
     """
     available = [q for q in pool if not axes or q.skill_node.axis.value in axes]
     if len(available) <= count:
@@ -209,7 +238,10 @@ def _select_questions(
 
     # Los ejes sin peso declarado (Lectora, Ciencias, Historia) se reparten
     # parejo entre sí: su temario no se organiza por unidades comparables.
-    pesos = {axis: UNIDADES_POR_EJE.get(axis, 1) for axis in by_axis}
+    incluidas = SUBJECT_INCLUDES[subject]
+    pesos = {
+        axis: sum(_unidades(s, axis) for s in incluidas) for axis in by_axis
+    }
     total_peso = sum(pesos.values())
     quota = {
         axis: min(int(pesos[axis] / total_peso * count), len(group))
@@ -231,10 +263,52 @@ def _select_questions(
 
     chosen: list[Question] = []
     for axis, group in by_axis.items():
-        chosen.extend(_repartir_por_dificultad(group, quota[axis]))
+        chosen.extend(
+            _repartir_por_prueba(group, quota[axis], axis, incluidas)
+        )
 
     random.shuffle(chosen)
     return chosen
+
+
+def _repartir_por_prueba(
+    grupo: list[Question], cuantas: int, axis: str, incluidas: list[Subject]
+) -> list[Question]:
+    """Dentro de un eje, reparte la cuota entre las pruebas que lo alimentan.
+
+    Solo hace algo cuando una prueba evalúa el temario de otra. Para M1, que se
+    alimenta únicamente de sí misma, devuelve el reparto por dificultad de
+    siempre.
+    """
+    if len(incluidas) < 2:
+        return _repartir_por_dificultad(grupo, cuantas)
+
+    por_prueba: dict[Subject, list[Question]] = defaultdict(list)
+    for q in grupo:
+        por_prueba[q.skill_node.subject].append(q)
+
+    presentes = [s for s in incluidas if por_prueba[s]]
+    if len(presentes) < 2:
+        return _repartir_por_dificultad(grupo, cuantas)
+
+    pesos = {s: _unidades(s, axis) for s in presentes}
+    total = sum(pesos.values())
+    cupos = {
+        s: min(round(pesos[s] / total * cuantas), len(por_prueba[s]))
+        for s in presentes
+    }
+    # El redondeo puede dejar plazas sueltas: van a la prueba de mayor peso que
+    # todavía tenga banco disponible.
+    for s in sorted(presentes, key=lambda x: pesos[x], reverse=True):
+        falta = cuantas - sum(cupos.values())
+        if falta <= 0:
+            break
+        cupos[s] = min(cupos[s] + falta, len(por_prueba[s]))
+
+    elegidas: list[Question] = []
+    for s in presentes:
+        elegidas.extend(_repartir_por_dificultad(por_prueba[s], cupos[s]))
+    return elegidas
 
 
 def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Question]:
@@ -281,7 +355,9 @@ def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Questi
 def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
     pool = _all_questions(db, config.subject)
     valid_axes = [a for a in config.axes if a in AXIS_LABELS]
-    chosen = _select_questions(pool, valid_axes, config.question_count)
+    chosen = _select_questions(
+        pool, valid_axes, config.question_count, config.subject
+    )
 
     attempt = ExamAttempt(
         user_id=user.id,
