@@ -25,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Las lecciones son el otro contenido que existe para ser encontrado
     // buscando: la teoría de cada tema del temario, legible sin cuenta.
     { url: `${BASE_URL}/aprender`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/simulador`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/demo`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/planes`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/registro`, changeFrequency: "monthly", priority: 0.8 },
