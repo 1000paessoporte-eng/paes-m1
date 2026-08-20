@@ -21383,6 +21383,103 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "microplasticos",
+        "title": "El plástico que dejó de verse",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes."
+        ),
+        "body": (
+            "La imagen que asociamos a la contaminación por plásticos es una bolsa "
+            "flotando en el mar o una tortuga enredada en una red. Son imágenes "
+            "verdaderas y son, al mismo tiempo, el motivo por el que el problema se "
+            "entiende mal. Lo que hoy preocupa a quienes lo estudian no es el "
+            "plástico que se ve, sino el que dejó de verse.\n\n"
+            "Un envase abandonado a la intemperie no desaparece: se fragmenta. La "
+            "luz del sol quiebra sus cadenas moleculares, el oleaje y la arena lo "
+            "muelen, y en cuestión de años lo que era una botella se convierte en "
+            "miles de partículas. Cuando esos fragmentos bajan del medio centímetro "
+            "reciben el nombre de microplásticos. Bajo la micra, se los llama "
+            "nanoplásticos. El material sigue siendo el mismo; lo que cambia es que "
+            "ya no se puede recoger.\n\n"
+            "**Un problema de tamaño, no de cantidad**\n\n"
+            "Ese cambio de escala trae consecuencias que el objeto original no "
+            "tenía. La primera es de superficie: una botella entera ofrece unos "
+            "pocos centímetros cuadrados al ambiente, mientras que los miles de "
+            "fragmentos en que se convierte ofrecen cientos. Sobre esa superficie "
+            "se adhieren compuestos químicos presentes en el agua, de modo que la "
+            "partícula viaja acompañada.\n\n"
+            "La segunda consecuencia es de acceso. Un fragmento de medio milímetro "
+            "cabe en la boca de un organismo que jamás habría podido tragarse una "
+            "botella. Entra así en la cadena alimentaria por su base, que es el "
+            "punto desde el cual todo lo demás depende. El plancton lo confunde con "
+            "alimento; los peces pequeños comen plancton; y el recorrido sigue "
+            "hacia arriba.\n\n"
+            "**Dónde se han encontrado**\n\n"
+            "Durante la última década los estudios fueron desplazando el mapa del "
+            "problema desde el océano hacia todas partes. Se han detectado "
+            "partículas en el hielo del Ártico, en sedimentos de fosas oceánicas "
+            "profundas, en el aire de ciudades y de zonas rurales, en agua "
+            "embotellada y de la llave, en sal de mesa, en cerveza y en miel. "
+            "También en tejidos humanos.\n\n"
+            "Conviene ser preciso sobre lo que ese último hallazgo significa y lo "
+            "que no. Que una partícula esté presente en un tejido no demuestra que "
+            "produzca daño: la presencia es una observación, y el daño es una "
+            "relación causal que hay que establecer aparte. La investigación sobre "
+            "los efectos en la salud humana está en curso y todavía no permite "
+            "conclusiones firmes. Decir lo contrario, en cualquiera de las dos "
+            "direcciones, es adelantarse a la evidencia.\n\n"
+            "**Una dificultad de medición**\n\n"
+            "Las cifras sobre microplásticos deben leerse con cuidado, y no porque "
+            "sean poco confiables, sino porque cuentan cosas distintas. Un estudio "
+            "puede informar partículas por litro y otro, masa por litro. Ambos son "
+            "correctos y no son comparables: mil fragmentos diminutos pesan menos "
+            "que uno grande, de modo que un mismo lugar puede parecer muy "
+            "contaminado bajo una métrica y poco contaminado bajo la otra.\n\n"
+            "A eso se suma el límite del instrumento. Cada método de detección "
+            "tiene un tamaño mínimo por debajo del cual no ve nada, y ese umbral ha "
+            "ido bajando con los años. Parte del aumento que muestran las series "
+            "históricas puede deberse, entonces, a que hoy detectamos partículas "
+            "que antes estaban ahí y no registrábamos. Distinguir cuánto del "
+            "aumento es contaminación nueva y cuánto es mejor vista es una de las "
+            "discusiones abiertas del área.\n\n"
+            "**Por qué el reciclaje no lo resuelve**\n\n"
+            "La respuesta intuitiva es reciclar más, y es insuficiente por una "
+            "razón técnica. El reciclaje actúa sobre el envase completo, es decir, "
+            "sobre el objeto que todavía se puede identificar y recoger. El "
+            "microplástico ya pasó ese punto: está disperso en el agua, en el suelo "
+            "y en el aire, y ninguna tecnología de recolección existente opera a "
+            "esa escala sin capturar, junto con las partículas, el ecosistema que "
+            "las rodea.\n\n"
+            "Hay además una fuente que el reciclaje no toca en absoluto, porque no "
+            "nace de un envase. Cada lavado de ropa sintética libera fibras que "
+            "atraviesan las plantas de tratamiento; el desgaste de los neumáticos "
+            "deja partículas en el pavimento que la lluvia arrastra; las pinturas y "
+            "los revestimientos se degradan. Esa fracción se genera durante el uso "
+            "normal de objetos que nadie botó.\n\n"
+            "**Qué sí funciona**\n\n"
+            "De ese diagnóstico se sigue una conclusión que ordena las prioridades. "
+            "Si el problema aparece cuando el fragmento ya es irrecuperable, "
+            "entonces toda medida eficaz tiene que actuar antes: reducir la "
+            "cantidad de plástico que entra al sistema, rediseñar productos para "
+            "que no liberen fibras, capturar las partículas en el punto donde "
+            "todavía están concentradas —el filtro de una lavadora, la salida de "
+            "una planta de tratamiento— y no en el mar, donde ya se diluyeron.\n\n"
+            "Es una lógica parecida a la de la salud pública. Nadie propone curar "
+            "una epidemia persiguiendo al virus por la ciudad; se actúa sobre las "
+            "condiciones que permiten su circulación. El microplástico exige el "
+            "mismo desplazamiento: del rescate a la prevención.\n\n"
+            "Queda una advertencia sobre el tono con que suele discutirse esto. La "
+            "magnitud del hallazgo —partículas en el Ártico, en la lluvia, en el "
+            "cuerpo— se presta para el catastrofismo, y el catastrofismo tiene un "
+            "efecto contraproducente bien documentado: cuando un problema se "
+            "presenta como irreversible, la reacción más común no es la acción sino "
+            "la resignación. El plástico tardó setenta años en llegar a todas "
+            "partes. Ninguna de las decisiones que lo llevaron ahí fue irreversible "
+            "cuando se tomó, y varias de las que faltan tampoco lo son."
+        ),
+    },
+    {
         "key": "discurso_licenciatura",
         "title": "Discurso de licenciatura",
         "kind": "no_literario",
@@ -22739,6 +22836,195 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El plástico que dejó de verse' ----------
+    _ql(
+        "microplasticos", "lec_localizar", "facil",
+        "Según el texto, ¿desde qué tamaño una partícula de plástico recibe el "
+        "nombre de microplástico?",
+        "Desde medio centímetro hacia abajo",
+        "El texto lo precisa al describir la fragmentación: «cuando esos fragmentos "
+        "bajan del medio centímetro reciben el nombre de microplásticos».\n\nY "
+        "agrega el escalón siguiente: «bajo la micra, se los llama nanoplásticos».",
+        [
+            ("Desde una micra hacia abajo", "Ese es el umbral de los nanoplásticos, que es el escalón siguiente."),
+            ("Desde un milímetro hacia abajo", "El texto fija el límite en medio centímetro, no en un milímetro."),
+            ("El texto no fija un tamaño", "Lo fija de forma explícita, y además da el del nanoplástico."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_localizar", "medio",
+        "De acuerdo con el texto, ¿qué fuentes de microplásticos no provienen de un "
+        "envase abandonado?",
+        "El lavado de ropa sintética, el desgaste de los neumáticos y la "
+        "degradación de pinturas y revestimientos",
+        "El texto las enumera como la fracción «que el reciclaje no toca en "
+        "absoluto, porque no nace de un envase», y cierra: «esa fracción se genera "
+        "durante el uso normal de objetos que nadie botó».\n\nLas tres aparecen "
+        "explícitas en el mismo párrafo.",
+        [
+            ("Los fragmentos hallados en el hielo del Ártico y en fosas oceánicas", "Esos son lugares donde se han detectado partículas, no fuentes que las originen."),
+            ("Las partículas presentes en el agua embotellada y en la sal de mesa", "También son hallazgos, no fuentes: el texto los menciona en la sección sobre dónde se han encontrado."),
+            ("Los envases que se fragmentan por acción del sol y del oleaje", "Ese es justamente el caso del envase abandonado, que el texto contrasta con esta otra fracción."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_localizar", "medio",
+        "Según el texto, ¿por qué dos estudios sobre un mismo lugar pueden dar "
+        "impresiones distintas?",
+        "Porque uno puede informar partículas por litro y el otro, masa por litro",
+        "El texto explica que ambas métricas «son correctas y no son comparables», "
+        "y da la razón: «mil fragmentos diminutos pesan menos que uno grande, de "
+        "modo que un mismo lugar puede parecer muy contaminado bajo una métrica y "
+        "poco contaminado bajo la otra».\n\nEl texto es explícito en que la "
+        "diferencia no viene de que alguno sea poco confiable.",
+        [
+            ("Porque uno mide en el agua y el otro en el aire", "El texto no plantea esa diferencia de medio como fuente de discrepancia."),
+            ("Porque las mediciones antiguas eran menos confiables que las actuales", "El texto no las llama menos confiables: dice que los instrumentos tenían otro umbral de detección."),
+            ("Porque algunos estudios incluyen los nanoplásticos y otros no", "Esa distinción no se menciona como causa de las diferencias entre estudios."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_interpretar", "medio",
+        "¿Qué idea sostiene la afirmación de que el problema «no es el plástico que "
+        "se ve, sino el que dejó de verse»?",
+        "Que la contaminación grave empieza cuando el material se fragmenta y ya no "
+        "se puede recoger",
+        "El texto desarrolla esa idea de inmediato: un envase «no desaparece: se "
+        "fragmenta», y al llegar a cierto tamaño «ya no se puede recoger». Toda la "
+        "sección siguiente explica qué consecuencias trae ese cambio de "
+        "escala.\n\nLa frase invierte la imagen habitual —la bolsa flotando, la "
+        "tortuga enredada— para desplazar la atención hacia lo invisible.",
+        [
+            ("Que las imágenes de animales enredados en plásticos son exageradas", "El texto las llama «verdaderas»: lo que critica es que hagan entender mal el problema, no que sean falsas."),
+            ("Que la cantidad de plástico en el mar es menor de lo que se cree", "El texto no discute la cantidad total, sino el tamaño de las partículas."),
+            ("Que el plástico visible ya fue retirado de los océanos", "Nada en el texto sugiere que se haya retirado."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_interpretar", "dificil",
+        "¿Por qué el texto sostiene que la fragmentación multiplica la superficie "
+        "del plástico, y qué consecuencia le atribuye?",
+        "Porque los miles de fragmentos exponen mucha más superficie que el objeto "
+        "entero, y sobre ella se adhieren compuestos químicos del agua",
+        "El texto lo cuantifica de forma comparativa: «una botella entera ofrece "
+        "unos pocos centímetros cuadrados al ambiente, mientras que los miles de "
+        "fragmentos en que se convierte ofrecen cientos». Y saca la consecuencia: "
+        "«sobre esa superficie se adhieren compuestos químicos presentes en el "
+        "agua, de modo que la partícula viaja acompañada».\n\nLa idea es que el "
+        "fragmento transporta algo más que a sí mismo.",
+        [
+            ("Porque las partículas pequeñas flotan mejor y se dispersan más lejos", "La flotabilidad no se menciona: la consecuencia que el texto deriva de la superficie es química, no de transporte."),
+            ("Porque una mayor superficie acelera la degradación del plástico restante", "El texto no plantea que la degradación se acelere por esa vía."),
+            ("Porque los fragmentos pequeños son más difíciles de detectar con los instrumentos", "La dificultad de detección aparece en otra sección y no se deriva de la superficie."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre la sección sobre la dificultad de "
+        "medición y el resto del texto?",
+        "Matiza las cifras que el propio texto maneja, advirtiendo que parte del "
+        "aumento observado puede deberse a que hoy se detecta mejor",
+        "La sección no aporta datos nuevos: explica cómo leer los existentes. "
+        "Señala que cada método tiene un umbral mínimo que «ha ido bajando con los "
+        "años», y que por eso «parte del aumento que muestran las series históricas "
+        "puede deberse a que hoy detectamos partículas que antes estaban ahí y no "
+        "registrábamos».\n\nEl texto deja además la cuestión abierta, sin "
+        "resolverla a su favor: distinguir cuánto es contaminación nueva y cuánto "
+        "es mejor vista «es una de las discusiones abiertas del área».",
+        [
+            ("Refuta los hallazgos presentados antes, mostrando que las cifras están infladas", "El texto no afirma que estén infladas: dice que una parte del aumento podría explicarse así, y deja la pregunta abierta."),
+            ("Justifica por qué el texto no entrega cifras concretas de contaminación", "La sección explica un problema de comparabilidad, no una decisión editorial del texto."),
+            ("Introduce el argumento de que se necesitan mejores instrumentos de medición", "El texto no reclama mejores instrumentos: describe el efecto que tuvo su mejora."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_interpretar", "dificil",
+        "Según el texto, ¿por qué el reciclaje resulta insuficiente frente a los "
+        "microplásticos?",
+        "Porque actúa sobre el objeto completo, y el microplástico ya está disperso "
+        "y fuera del alcance de cualquier recolección",
+        "El texto lo explica en términos técnicos: «el reciclaje actúa sobre el "
+        "envase completo, es decir, sobre el objeto que todavía se puede "
+        "identificar y recoger. El microplástico ya pasó ese punto».\n\nY agrega el "
+        "problema de recolectar a esa escala: hacerlo implicaría capturar «el "
+        "ecosistema que las rodea».",
+        [
+            ("Porque las tasas de reciclaje son demasiado bajas en la mayoría de los países", "El texto no discute tasas: su argumento es que el reciclaje no puede alcanzar el material una vez fragmentado."),
+            ("Porque el plástico reciclado se degrada más rápido que el nuevo", "Esa afirmación no aparece en el texto."),
+            ("Porque reciclar libera partículas durante el proceso industrial", "El texto menciona fuentes de liberación durante el uso, no durante el reciclaje."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_interpretar", "medio",
+        "¿Qué idea sostiene la comparación con la salud pública que aparece hacia "
+        "el final?",
+        "Que conviene actuar sobre las condiciones que originan el problema en vez "
+        "de perseguir sus efectos ya dispersos",
+        "El texto la formula así: «nadie propone curar una epidemia persiguiendo al "
+        "virus por la ciudad; se actúa sobre las condiciones que permiten su "
+        "circulación». Y traduce la analogía al caso: «el microplástico exige el "
+        "mismo desplazamiento: del rescate a la prevención».\n\nLa comparación "
+        "resume la conclusión que el texto venía construyendo desde la sección "
+        "anterior.",
+        [
+            ("Que los microplásticos representan un riesgo sanitario comparable al de una epidemia", "El texto compara ESTRATEGIAS de intervención, no niveles de riesgo; de hecho advierte que el daño en humanos no está establecido."),
+            ("Que las autoridades sanitarias deberían hacerse cargo del problema", "No hay ninguna propuesta sobre qué organismo debe intervenir."),
+            ("Que la contaminación se propaga entre organismos como lo hace un virus", "La analogía no es sobre el modo de propagación, sino sobre dónde conviene intervenir."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_evaluar", "dificil",
+        "¿Qué actitud adopta el emisor frente al hallazgo de partículas en tejidos "
+        "humanos?",
+        "Es cauteloso: señala que la presencia no demuestra daño y que la evidencia "
+        "todavía no permite concluir",
+        "El emisor separa expresamente las dos cosas: «la presencia es una "
+        "observación, y el daño es una relación causal que hay que establecer "
+        "aparte». Y advierte en ambas direcciones: «decir lo contrario, en "
+        "cualquiera de las dos direcciones, es adelantarse a la evidencia».\n\nEsa "
+        "última precisión es la que define su actitud: no minimiza ni dramatiza, "
+        "delimita lo que se sabe.",
+        [
+            ("Es alarmista: presenta el hallazgo como la prueba definitiva del daño", "El texto niega expresamente que la presencia demuestre daño."),
+            ("Es escéptico: pone en duda que las partículas estén realmente en los tejidos", "No cuestiona el hallazgo; cuestiona la conclusión que suele sacarse de él."),
+            ("Es indiferente: menciona el hallazgo sin comentarlo", "Le dedica un párrafo completo a precisar cómo debe interpretarse."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_evaluar", "dificil",
+        "¿Con qué propósito el texto advierte sobre el efecto del catastrofismo en "
+        "el párrafo final?",
+        "Para evitar que la magnitud del problema lleve a la resignación en vez de "
+        "a la acción",
+        "El emisor explicita el mecanismo: «cuando un problema se presenta como "
+        "irreversible, la reacción más común no es la acción sino la "
+        "resignación».\n\nY cierra con el argumento que sostiene su optimismo, que "
+        "no es un deseo sino una observación histórica: «ninguna de las decisiones "
+        "que lo llevaron ahí fue irreversible cuando se tomó, y varias de las que "
+        "faltan tampoco lo son».",
+        [
+            ("Para reconocer que el problema efectivamente es irreversible", "El texto sostiene lo contrario en la última frase."),
+            ("Para criticar a los medios de comunicación que cubren el tema", "No hay ninguna referencia a la prensa: la advertencia es sobre el tono del propio debate."),
+            ("Para restar importancia a los hallazgos presentados antes", "El emisor no los relativiza: advierte sobre cómo se los comunica."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_evaluar", "medio",
+        "Un municipio quiere reducir los microplásticos que llegan a un río "
+        "cercano. Según el texto, ¿qué medida se ajusta mejor a su planteamiento?",
+        "Exigir filtros en las lavadoras y en la salida de la planta de "
+        "tratamiento, donde las partículas aún están concentradas",
+        "El texto ordena las prioridades con ese criterio: toda medida eficaz debe "
+        "actuar antes de la dispersión, «capturar las partículas en el punto donde "
+        "todavía están concentradas —el filtro de una lavadora, la salida de una "
+        "planta de tratamiento— y no en el mar, donde ya se diluyeron».\n\nLa "
+        "pregunta aplica el texto a un caso que no aparece en él.",
+        [
+            ("Instalar redes de recolección de plásticos flotantes en el río", "Eso actúa sobre el plástico visible, que el texto identifica como la parte que se entiende mal del problema."),
+            ("Realizar campañas para que los vecinos reciclen más envases", "El texto explica por qué el reciclaje no alcanza al microplástico ya fragmentado."),
+            ("Medir periódicamente la cantidad de partículas por litro en el río", "Medir no reduce; y el texto además advierte que esa métrica es difícil de comparar entre estudios."),
+        ],
+    ),
     # ---------- 'Discurso de licenciatura' ----------
     _ql(
         "discurso_licenciatura", "lec_localizar", "facil",
