@@ -11,7 +11,11 @@ from sqlalchemy.orm import Session
 from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
 from paes_api.modules.carreras import service
-from paes_api.modules.carreras.schemas import CarreraCatalogoOut, CarreraPublicaOut
+from paes_api.modules.carreras.schemas import (
+    CarreraCatalogoOut,
+    CarreraPublicaOut,
+    UniversidadOut,
+)
 from paes_api.modules.goals.models import Carrera
 
 router = APIRouter(prefix="/carreras", tags=["carreras"])
@@ -27,6 +31,17 @@ def listar_catalogo(request: Request, db: Session = Depends(get_db)) -> list[Car
     treinta veces por minuto.
     """
     return service.catalogo(db)
+
+
+@router.get("/universidades", response_model=list[UniversidadOut])
+@limiter.limit("60/minute")
+def listar_universidades(request: Request, db: Session = Depends(get_db)) -> list[UniversidadOut]:
+    """Las 47 universidades con su número de carreras.
+
+    Va ANTES de `/{codigo}`: si no, FastAPI intentaría leer
+    "universidades" como el código de una carrera.
+    """
+    return service.universidades(db)
 
 
 @router.get("/{codigo}", response_model=CarreraPublicaOut)

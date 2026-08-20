@@ -113,3 +113,19 @@ def test_el_catalogo_viene_ordenado_estable(client: TestClient, carreras) -> Non
     datos = client.get("/api/carreras/catalogo").json()
 
     assert [c["nombre"] for c in datos] == ["ARTE", "INGENIERÍA CIVIL"]
+
+
+def test_universidades_agrupa_sin_bajar_el_catalogo(
+    client: TestClient, carreras: list[Carrera]
+) -> None:
+    """El índice y la portada solo necesitan las universidades: pedir las 1.855
+    filas para contar 47 números es mover un megabyte de más."""
+    resp = client.get("/api/carreras/universidades")
+    assert resp.status_code == 200
+    assert resp.json() == [{"universidad": "UNIVERSIDAD DE PRUEBA", "carreras": 2}]
+
+
+def test_universidades_no_se_confunde_con_un_codigo_de_carrera(client: TestClient) -> None:
+    """La ruta va antes que /{codigo}; si se registrara después, FastAPI leería
+    "universidades" como el código de una carrera y contestaría 404."""
+    assert client.get("/api/carreras/universidades").status_code == 200

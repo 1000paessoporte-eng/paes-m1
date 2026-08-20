@@ -22,12 +22,14 @@ from sqlalchemy.orm import Session, selectinload
 from paes_api.modules.content.models import Alternative, Question
 from paes_api.modules.exam_focus.models import ExamAnswer
 from paes_api.modules.skill_tree.models import (
+    AXIS_LABELS,
     ProgressStatus,
     SkillNode,
     Subject,
     UserSkillProgress,
 )
 from paes_api.modules.skill_tree.schemas import (
+    LeccionIndiceOut,
     LessonOut,
     LessonStepOut,
     SkillNodeProgressOut,
@@ -279,3 +281,31 @@ def get_lesson(db: Session, code: str) -> LessonOut | None:
         example_steps=[LessonStepOut(**paso) for paso in leccion.example_steps],
         common_error=leccion.common_error,
     )
+
+
+def listar_lecciones(db: Session) -> list[LeccionIndiceOut]:
+    """Los nodos que YA tienen lección escrita, para el índice público.
+
+    Solo los que la tienen: un índice que promete 47 temas y entrega 17
+    lecciones manda a Google a 30 redirecciones y a la persona a un tema vacío.
+    """
+    nodos = (
+        db.execute(
+            select(SkillNode)
+            .join(SkillNode.lesson)
+            .options(selectinload(SkillNode.lesson))
+            .order_by(SkillNode.subject, SkillNode.display_order, SkillNode.name)
+        )
+        .scalars()
+        .all()
+    )
+    return [
+        LeccionIndiceOut(
+            node_code=n.code,
+            node_name=n.name,
+            subject=n.subject.value,
+            axis=n.axis.value,
+            axis_label=AXIS_LABELS.get(n.axis.value, n.axis.value),
+        )
+        for n in nodos
+    ]

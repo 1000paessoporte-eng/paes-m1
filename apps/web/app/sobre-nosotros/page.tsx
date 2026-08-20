@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Quiénes somos",
   description:
     "Qué es 1000paes, en qué creemos y cómo construimos una plataforma de preparación PAES basada en los datos oficiales del DEMRE.",
+  alternates: { canonical: "/sobre-nosotros" },
 };
 
 /**

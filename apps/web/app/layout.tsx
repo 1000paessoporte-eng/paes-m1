@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { DatosEstructurados } from "@/components/datos-estructurados";
 import { PageViewTracker } from "@/components/metrics/page-view-tracker";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -55,6 +56,40 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Quiénes somos, para Google.
+ *
+ * Va en el layout y no en la portada porque describe al sitio entero: es lo
+ * que le permite a Google saber que 1000paes es una organización con un sitio,
+ * y no una página suelta.
+ *
+ * NO lleva `SearchAction`: declararía una caja de búsqueda del sitio que no
+ * existe (el buscador de carreras hoy vive detrás del login). Anunciar una
+ * acción que no funciona es exactamente el tipo de dato inventado que este
+ * proyecto no publica. Cuando haya búsqueda pública de carreras, se agrega.
+ */
+const DATOS_DEL_SITIO = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organizacion`,
+      name: "1000paes",
+      url: BASE_URL,
+      description: DESCRIPTION,
+      areaServed: { "@type": "Country", name: "Chile" },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#sitio`,
+      url: BASE_URL,
+      name: "1000paes",
+      inLanguage: "es-CL",
+      publisher: { "@id": `${BASE_URL}/#organizacion` },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -80,6 +115,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         {children}
         <PageViewTracker />
+        <DatosEstructurados datos={DATOS_DEL_SITIO} />
         <Analytics />
         <SpeedInsights />
       </body>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
-import { getCarrerasCatalogo, type CarreraCatalogo } from "@/lib/api";
+import { getUniversidades, type Universidad } from "@/lib/api";
 import { nombreLegible, slugUniversidad } from "@/lib/carreras";
 
 /**
@@ -34,19 +34,18 @@ export default async function CarrerasPage() {
   // Ver el comentario de `revalidate`: un build no puede caerse porque la API
   // no conteste, así que el error se traga y la página lo dice en vez de
   // mostrar un índice vacío como si no hubiera carreras.
-  let catalogo: CarreraCatalogo[] = [];
+  //
+  // El conteo por universidad lo hace Postgres con un GROUP BY. Antes esta
+  // página se bajaba las 1.855 filas del catálogo para terminar contándolas en
+  // un Map y escribir 47 números.
+  let universidades: Universidad[] = [];
   try {
-    catalogo = await getCarrerasCatalogo();
+    universidades = await getUniversidades();
   } catch {
-    catalogo = [];
+    universidades = [];
   }
 
-  // Una entrada por universidad, con cuántas carreras tiene. El orden lo trae
-  // la API ya resuelto, así que basta con recorrer una vez.
-  const universidades = new Map<string, number>();
-  for (const c of catalogo) {
-    universidades.set(c.universidad, (universidades.get(c.universidad) ?? 0) + 1);
-  }
+  const totalCarreras = universidades.reduce((suma, u) => suma + u.carreras, 0);
 
   return (
     <>
@@ -58,8 +57,8 @@ export default async function CarrerasPage() {
               Datos oficiales del DEMRE
             </span>
             <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              {catalogo.length > 0
-                ? `Ponderaciones de ${catalogo.length.toLocaleString("es-CL")} carreras`
+              {totalCarreras > 0
+                ? `Ponderaciones de ${totalCarreras.toLocaleString("es-CL")} carreras`
                 : "Carreras y ponderaciones PAES"}
             </h1>
             <p className="mt-3 text-lg text-muted-foreground">
@@ -71,7 +70,7 @@ export default async function CarrerasPage() {
 
         <section className="px-6 pb-20">
           <div className="mx-auto max-w-3xl">
-            {universidades.size === 0 && (
+            {universidades.length === 0 && (
               <p className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
                 No pudimos cargar el listado en este momento. Vuelve a intentarlo en unos
                 minutos: los datos están, es la conexión la que falló.
@@ -79,7 +78,7 @@ export default async function CarrerasPage() {
             )}
 
             <ul className="grid gap-2 sm:grid-cols-2">
-              {[...universidades.entries()].map(([universidad, total]) => (
+              {universidades.map(({ universidad, carreras }) => (
                 <li key={universidad}>
                   <Link
                     href={`/carreras/${slugUniversidad(universidad)}`}
@@ -87,7 +86,7 @@ export default async function CarrerasPage() {
                   >
                     <span className="min-w-0 flex-1 text-sm">{nombreLegible(universidad)}</span>
                     <span className="shrink-0 text-xs text-muted-foreground tabular-nums">
-                      {total}
+                      {carreras}
                     </span>
                   </Link>
                 </li>

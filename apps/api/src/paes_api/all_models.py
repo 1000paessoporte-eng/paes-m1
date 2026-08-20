@@ -20,6 +20,7 @@ from paes_api.modules.exam_focus.models import (
     ExamAttemptQuestion,
 )
 from paes_api.modules.goals.models import Carrera, MetaUsuario
+from paes_api.modules.leads.models import Lead
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.skill_tree.models import SkillNode, UserSkillProgress
@@ -31,6 +32,7 @@ __all__ = [
     "ExamAnswer",
     "ExamAttempt",
     "ExamAttemptQuestion",
+    "Lead",
     "Lesson",
     "LoginEvent",
     "MetaUsuario",

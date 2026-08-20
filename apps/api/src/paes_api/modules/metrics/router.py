@@ -1,13 +1,16 @@
 from urllib.parse import urlparse
 
 from fastapi import APIRouter, Depends, Request, status
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
+from paes_api.modules.exam_focus.models import AttemptStatus, ExamAnswer, ExamAttempt
 from paes_api.modules.metrics.models import PageView
-from paes_api.modules.metrics.schemas import PageViewIn
+from paes_api.modules.metrics.schemas import PageViewIn, UsoPublicoOut
 from paes_api.modules.metrics.user_agent import clasificar, es_robot
+from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.users.deps import get_current_user_optional
 from paes_api.modules.users.models import User
 
@@ -77,3 +80,31 @@ def registrar_visita(
         )
     )
     db.commit()
+
+
+@router.get("/uso", response_model=UsoPublicoOut)
+def uso_publico(db: Session = Depends(get_db)) -> UsoPublicoOut:
+    """Uso real de la plataforma. Público: la portada lo usa.
+
+    No expone a nadie: son tres totales agregados, sin nombres ni correos.
+    """
+    return UsoPublicoOut(
+        ensayos_rendidos=db.execute(
+            select(func.count(ExamAttempt.id)).where(
+                ExamAttempt.status == AttemptStatus.SUBMITTED
+            )
+        ).scalar_one(),
+        preguntas_respondidas=(
+            db.execute(
+                select(func.count(ExamAnswer.id)).where(
+                    ExamAnswer.selected_alternative_id.is_not(None)
+                )
+            ).scalar_one()
+            + db.execute(select(func.count(PracticeAnswer.id))).scalar_one()
+        ),
+        alumnos=db.execute(
+            select(func.count(func.distinct(ExamAttempt.user_id))).where(
+                ExamAttempt.status == AttemptStatus.SUBMITTED
+            )
+        ).scalar_one(),
+    )

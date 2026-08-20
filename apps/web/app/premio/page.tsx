@@ -4,6 +4,7 @@ export const metadata = {
   title: "Premio Puntaje Nacional",
   description:
     "Bases del premio de $500.000 para estudiantes con plan Pro que obtengan puntaje nacional en la PAES.",
+  alternates: { canonical: "/premio" },
 };
 
 /**

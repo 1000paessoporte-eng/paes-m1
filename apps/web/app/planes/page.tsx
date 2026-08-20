@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata = {
   title: "Planes",
   description: "Qué incluye cada plan de 1000paes y cuánto cuesta.",
+  alternates: { canonical: "/planes" },
 };
 
 /**

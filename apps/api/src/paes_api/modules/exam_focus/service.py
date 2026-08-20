@@ -41,28 +41,13 @@ from paes_api.modules.exam_focus.schemas import (
     ReviewQuestionOut,
 )
 from paes_api.modules.skill_tree import service as skill_tree_service
-from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
+from paes_api.modules.skill_tree.models import (
+    AXIS_LABELS,
+    SkillAxis,
+    SkillNode,
+    Subject,
+)
 from paes_api.modules.users.models import User
-
-#: Nombre legible de cada eje, como aparece en el temario DEMRE.
-AXIS_LABELS: dict[str, str] = {
-    # Competencia Lectora se organiza por habilidades, no por ejes de contenido.
-    SkillAxis.LOCALIZAR.value: "Localizar información",
-    SkillAxis.INTERPRETAR.value: "Interpretar y relacionar",
-    SkillAxis.EVALUAR.value: "Evaluar y reflexionar",
-    # Ciencias: los ejes son las tres disciplinas del temario.
-    SkillAxis.BIOLOGIA.value: "Biología",
-    SkillAxis.FISICA.value: "Física",
-    SkillAxis.QUIMICA.value: "Química",
-    # Historia y Ciencias Sociales.
-    SkillAxis.HISTORIA.value: "Historia",
-    SkillAxis.CIUDADANIA.value: "Formación ciudadana",
-    SkillAxis.ECONOMIA.value: "Economía y sociedad",
-    SkillAxis.NUMEROS.value: "Números",
-    SkillAxis.ALGEBRA.value: "Álgebra y Funciones",
-    SkillAxis.GEOMETRIA.value: "Geometría",
-    SkillAxis.PROBABILIDAD.value: "Probabilidad y Estadística",
-}
 
 DIFFICULTY_LABELS = {"facil": "Fácil", "medio": "Medio", "dificil": "Difícil"}
 

@@ -39,6 +39,32 @@ class SkillAxis(StrEnum):
     ECONOMIA = "economia"
 
 
+#: Nombre legible de cada eje, como aparece en el temario DEMRE.
+#:
+#: Vive junto al enum que describe y no en `exam_focus`, donde estaba: el
+#: examen es solo uno de sus consumidores (también lo usan el panel de
+#: administración, la demo y el índice de lecciones), y desde `skill_tree`
+#: lo puede importar cualquiera sin ciclos.
+AXIS_LABELS: dict[str, str] = {
+    # Competencia Lectora se organiza por habilidades, no por ejes de contenido.
+    SkillAxis.LOCALIZAR.value: "Localizar información",
+    SkillAxis.INTERPRETAR.value: "Interpretar y relacionar",
+    SkillAxis.EVALUAR.value: "Evaluar y reflexionar",
+    # Ciencias: los ejes son las tres disciplinas del temario.
+    SkillAxis.BIOLOGIA.value: "Biología",
+    SkillAxis.FISICA.value: "Física",
+    SkillAxis.QUIMICA.value: "Química",
+    # Historia y Ciencias Sociales.
+    SkillAxis.HISTORIA.value: "Historia",
+    SkillAxis.CIUDADANIA.value: "Formación ciudadana",
+    SkillAxis.ECONOMIA.value: "Economía y sociedad",
+    SkillAxis.NUMEROS.value: "Números",
+    SkillAxis.ALGEBRA.value: "Álgebra y Funciones",
+    SkillAxis.GEOMETRIA.value: "Geometría",
+    SkillAxis.PROBABILIDAD.value: "Probabilidad y Estadística",
+}
+
+
 class Subject(StrEnum):
     """Prueba PAES a la que pertenece un nodo. M2 evalúa "todos los
     conocimientos de M1, además de" contenido propio (ver temario DEMRE), por

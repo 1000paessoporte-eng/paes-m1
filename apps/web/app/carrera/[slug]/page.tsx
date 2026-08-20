@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SimuladorCarrera } from "@/components/carreras/simulador-carrera";
+import { DatosEstructurados } from "@/components/datos-estructurados";
 import { SiteFooter } from "@/components/site-footer";
 import { ApiError, getCarrera, type CarreraPublica } from "@/lib/api";
 import { codigoDesdeSlug, nombreLegible, slugCarrera } from "@/lib/carreras";
@@ -215,20 +216,17 @@ export default async function CarreraPage({ params }: Props) {
 
       {/* Datos estructurados: es lo que permite que el resultado de Google
           muestre la carrera y la universidad, no solo el título de la página. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "EducationalOccupationalProgram",
-            name: nombre,
-            provider: { "@type": "CollegeOrUniversity", name: nombreLegible(carrera.universidad) },
-            educationalProgramMode: "full-time",
-            occupationalCategory: nombre,
-            offers: carrera.vacantes
-              ? { "@type": "Offer", availability: `${carrera.vacantes} vacantes` }
-              : undefined,
-          }),
+      <DatosEstructurados
+        datos={{
+          "@context": "https://schema.org",
+          "@type": "EducationalOccupationalProgram",
+          name: nombre,
+          provider: { "@type": "CollegeOrUniversity", name: nombreLegible(carrera.universidad) },
+          educationalProgramMode: "full-time",
+          occupationalCategory: nombre,
+          offers: carrera.vacantes
+            ? { "@type": "Offer", availability: `${carrera.vacantes} vacantes` }
+            : undefined,
         }}
       />
     </>

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getCarrerasCatalogo } from "@/lib/api";
+import { getCarrerasCatalogo, getLecciones } from "@/lib/api";
 import { slugCarrera, slugUniversidad } from "@/lib/carreras";
 
 const BASE_URL = "https://1000paes.cl";
@@ -22,7 +22,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const estaticas: MetadataRoute.Sitemap = [
     { url: BASE_URL, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE_URL}/carreras`, changeFrequency: "monthly", priority: 0.9 },
+    // Las lecciones son el otro contenido que existe para ser encontrado
+    // buscando: la teoría de cada tema del temario, legible sin cuenta.
+    { url: `${BASE_URL}/aprender`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/demo`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/planes`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/registro`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/sobre-nosotros`, changeFrequency: "monthly", priority: 0.7 },
     {
@@ -39,6 +43,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/privacidad`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
+  // Cada índice cae por su cuenta: que el catálogo no responda no puede dejar
+  // las lecciones fuera del sitemap, ni al revés.
+  let lecciones: MetadataRoute.Sitemap = [];
+  try {
+    lecciones = (await getLecciones()).map((l) => ({
+      url: `${BASE_URL}/aprender/${l.node_code}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }));
+  } catch {
+    lecciones = [];
+  }
+
   let catalogo;
   try {
     catalogo = await getCarrerasCatalogo();
@@ -46,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Si la API no responde, un sitemap con las páginas estáticas es mucho
     // mejor que un 500: Google reintenta, pero un error repetido le enseña a
     // pedirlo menos seguido.
-    return estaticas;
+    return [...estaticas, ...lecciones];
   }
 
   const universidades = [...new Set(catalogo.map((c) => c.universidad))].map(
@@ -63,5 +80,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...estaticas, ...universidades, ...carreras];
+  return [...estaticas, ...lecciones, ...universidades, ...carreras];
 }

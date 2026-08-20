@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ContentStats } from "@/lib/api";
+import type { ContentStats, Universidad, UsoPublico } from "@/lib/api";
 import { GoogleButton } from "@/components/auth/google-button";
 import { TituloRotativo } from "@/components/home/titulo-rotativo";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
@@ -7,10 +7,33 @@ import { Reveal } from "@/components/motion/reveal";
 import { Planes } from "@/components/home/planes";
 import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
+import { nombreLegible, slugUniversidad } from "@/lib/carreras";
 
 /** Portada para visitantes sin sesión: nombre, entrada y qué ofrece el sitio. */
 
-const FEATURES = [
+/**
+ * Lo que ofrece la plataforma.
+ *
+ * Es una función y no una constante porque dos de las tarjetas llevan cifras
+ * —cuántos nodos tiene el árbol, cuántas carreras trae el catálogo— y esas
+ * cifras se cuentan en la base. Escritas a mano envejecían en silencio: la
+ * tarjeta del árbol decía "47 nodos" justo encima de la franja que mostraba el
+ * número real contado en la base. Cuando el dato no está, la frase se dice sin
+ * número en vez de inventarlo (regla 1 del proyecto).
+ */
+function features(stats: ContentStats | null, totalCarreras: number | null) {
+  const nodos = stats ? `${stats.skill_nodes} nodos` : "los nodos";
+  const carreras = totalCarreras
+    ? `${totalCarreras.toLocaleString("es-CL")} carreras`
+    : "las carreras del sistema";
+
+  return FEATURES_BASE.map((f) => ({
+    ...f,
+    description: f.description.replace("{nodos}", nodos).replace("{carreras}", carreras),
+  }));
+}
+
+const FEATURES_BASE = [
   {
     title: "Modo Ensayo",
     description:
@@ -28,21 +51,21 @@ const FEATURES = [
   {
     title: "Primero aprender, después practicar",
     description:
-      "Cada tema de Matemática M1 trae su lección: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
+      "Cada tema trae su lección, y se lee sin cuenta: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
     icon: TreeIcon,
     badgeClass: "bg-accent/10 text-accent",
   },
   {
     title: "Mi meta: la carrera, no el puntaje",
     description:
-      "Arma tu lista de hasta 10 preferencias y mira cuánto te falta en cada una, con las ponderaciones oficiales del DEMRE de 1.855 carreras. Sabes dónde rinde más cada hora de estudio.",
+      "Arma tu lista de hasta 10 preferencias y mira cuánto te falta en cada una, con las ponderaciones oficiales del DEMRE de {carreras}. Sabes dónde rinde más cada hora de estudio.",
     icon: TargetIcon,
     badgeClass: "bg-accent-warm/10 text-accent-warm-strong",
   },
   {
     title: "Árbol de Habilidades",
     description:
-      "El temario como nodos que desbloqueas a medida que dominas cada tema, con los prerrequisitos dibujados: 47 nodos entre las cinco pruebas.",
+      "El temario como nodos que desbloqueas a medida que dominas cada tema, con los prerrequisitos dibujados: {nodos} entre las cinco pruebas.",
     icon: TreeIcon,
     badgeClass: "bg-warning/10 text-warning",
   },
@@ -112,11 +135,19 @@ const CONFIANZA = [
 
 export function LandingPublica({
   stats,
+  uso,
+  universidades,
   pagoDisponible = false,
 }: {
   stats: ContentStats | null;
+  uso: UsoPublico | null;
+  universidades: Universidad[];
   pagoDisponible?: boolean;
 }) {
+  const totalCarreras = universidades.length
+    ? universidades.reduce((suma, u) => suma + u.carreras, 0)
+    : null;
+
   return (
     <main className="flex flex-1 flex-col">
       <section className="hero-glow relative overflow-hidden px-6 pt-24 pb-24 sm:pt-28">
@@ -195,6 +226,8 @@ export function LandingPublica({
 
       <FranjaCifras stats={stats} />
 
+      <FranjaUso uso={uso} />
+
       <section id="como-funciona" className="border-t border-border px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto max-w-lg text-center">
@@ -237,13 +270,13 @@ export function LandingPublica({
               Lo que ofrecemos
             </h2>
             <p className="mt-3 text-sm text-muted">
-              Cuatro herramientas que trabajan juntas para convertir cada
-              pregunta que respondes en una decisión sobre qué estudiar después.
+              Herramientas que trabajan juntas para convertir cada pregunta que
+              respondes en una decisión sobre qué estudiar después.
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {FEATURES.map((feature) => (
+            {features(stats, totalCarreras).map((feature) => (
               <div
                 key={feature.title}
                 className="card-hover rounded-xl border border-border bg-surface p-6"
@@ -264,9 +297,12 @@ export function LandingPublica({
           </div>
 
           <p className="mt-10 text-center text-sm text-muted">
-            Para rendir un ensayo necesitas una cuenta.{" "}
+            <Link href="/aprender" className="font-medium text-accent hover:underline">
+              Las lecciones se leen sin cuenta
+            </Link>
+            . Para rendir un ensayo sí necesitas una:{" "}
             <Link href="/registro" className="font-medium text-accent hover:underline">
-              Créala en un minuto
+              créala en un minuto
             </Link>
             .
           </p>
@@ -376,6 +412,8 @@ export function LandingPublica({
           </p>
         </div>
       </section>
+
+      <SeccionCarreras universidades={universidades} totalCarreras={totalCarreras} />
 
       {/* ── Cierre motivacional ─────────────────────────────────────── */}
       <CierreMotivacional />
@@ -526,6 +564,121 @@ function FranjaCifras({ stats }: { stats: ContentStats | null }) {
           ))}
         </dl>
       </Reveal>
+    </section>
+  );
+}
+
+/**
+ * Cuánto se usa la plataforma.
+ *
+ * La única prueba social que este proyecto puede mostrar: no hay testimonios
+ * ni logos de colegios porque no existen, y la regla 1 prohíbe inventarlos.
+ *
+ * Por debajo del umbral la franja NO se dibuja. Con cifras chicas el dato
+ * juega en contra —"3 ensayos rendidos" espanta en vez de convencer— y esa es
+ * una decisión de portada, no del endpoint, que devuelve el número real
+ * siempre. Cuando la plataforma se use de verdad, la franja aparece sola.
+ */
+const MINIMO_ENSAYOS_PARA_PRESUMIR = 50;
+
+function FranjaUso({ uso }: { uso: UsoPublico | null }) {
+  if (!uso || uso.ensayos_rendidos < MINIMO_ENSAYOS_PARA_PRESUMIR) return null;
+
+  const cifras = [
+    { valor: uso.ensayos_rendidos, etiqueta: "ensayos rendidos" },
+    { valor: uso.preguntas_respondidas, etiqueta: "preguntas respondidas" },
+    { valor: uso.alumnos, etiqueta: "alumnos preparándose" },
+  ];
+
+  return (
+    <section
+      className="border-t border-border px-6 py-10"
+      aria-label="Uso de la plataforma"
+    >
+      <Reveal>
+        <dl className="mx-auto grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
+          {cifras.map((c) => (
+            <div key={c.etiqueta} className="text-center">
+              <dt className="sr-only">{c.etiqueta}</dt>
+              <dd>
+                <span className="block text-3xl font-bold tracking-tight tabular-nums text-accent sm:text-4xl">
+                  <NumeroAnimado valor={c.valor} />
+                </span>
+                <span className="mt-1 block text-xs text-muted sm:text-sm">
+                  {c.etiqueta}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </Reveal>
+    </section>
+  );
+}
+
+/** Cuántas universidades se nombran en la portada. El resto está en /carreras. */
+const UNIVERSIDADES_EN_PORTADA = 8;
+
+/**
+ * La puerta al catálogo de carreras.
+ *
+ * Las 1.855 fichas con las ponderaciones oficiales del DEMRE existían desde
+ * antes, pero no había un solo enlace hacia ellas: ni en el menú, ni en el pie,
+ * ni en la portada. Google solo las conocía por el sitemap y una persona no
+ * llegaba nunca. Esta sección es ese enlace, y de paso es lo que la gente
+ * busca de verdad: cuánto puntaje necesita para la carrera que quiere.
+ *
+ * Si la API no responde, la sección no se dibuja, igual que la franja de
+ * cifras: mejor una sección menos que una lista vacía que parezca un error.
+ */
+function SeccionCarreras({
+  universidades,
+  totalCarreras,
+}: {
+  universidades: Universidad[];
+  totalCarreras: number | null;
+}) {
+  if (universidades.length === 0) return null;
+
+  return (
+    <section className="border-t border-border bg-surface/50 px-6 py-20">
+      <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+            ¿Qué puntaje necesitas para tu carrera?
+          </h2>
+          <p className="mt-3 text-sm text-muted">
+            {totalCarreras
+              ? `Las ponderaciones oficiales del DEMRE de ${totalCarreras.toLocaleString("es-CL")} carreras en ${universidades.length} universidades: cuánto pesa cada prueba, el ponderado mínimo de postulación y las vacantes.`
+              : "Las ponderaciones oficiales del DEMRE: cuánto pesa cada prueba, el ponderado mínimo de postulación y las vacantes."}
+          </p>
+        </div>
+
+        <ul className="mt-10 grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {universidades.slice(0, UNIVERSIDADES_EN_PORTADA).map((u) => (
+            <li key={u.universidad}>
+              <Link
+                href={`/carreras/${slugUniversidad(u.universidad)}`}
+                className="card-hover flex items-center justify-between gap-3 rounded-xl border border-border bg-background px-4 py-3"
+              >
+                <span className="min-w-0 flex-1 text-sm text-foreground">
+                  {nombreLegible(u.universidad)}
+                </span>
+                <span className="shrink-0 text-xs text-muted tabular-nums">
+                  {u.carreras} carreras
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-8 text-center text-sm text-muted">
+          <Link href="/carreras" className="font-medium text-accent hover:underline">
+            Ver todas las universidades
+          </Link>{" "}
+          · No necesitas cuenta para consultarlas.
+        </p>
+      </div>
     </section>
   );
 }

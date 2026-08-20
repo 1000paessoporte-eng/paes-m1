@@ -76,6 +76,22 @@ export function SiteFooter() {
             <ul className="mt-3 flex flex-col gap-2 text-sm text-muted">
               <li>
                 <Link
+                  href="/carreras"
+                  className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline"
+                >
+                  Carreras y ponderaciones
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/aprender"
+                  className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline"
+                >
+                  Lecciones del temario
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/preguntas-frecuentes"
                   className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline"
                 >

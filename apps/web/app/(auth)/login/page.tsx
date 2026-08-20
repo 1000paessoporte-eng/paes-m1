@@ -17,6 +17,7 @@ async function conSesion(): Promise<boolean> {
 export const metadata = {
   title: "Iniciar sesión",
   description: "Entra a tu cuenta para continuar tus ensayos.",
+  alternates: { canonical: "/login" },
 };
 
 

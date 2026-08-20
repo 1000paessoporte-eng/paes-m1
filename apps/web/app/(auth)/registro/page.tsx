@@ -17,6 +17,7 @@ async function conSesion(): Promise<boolean> {
 export const metadata = {
   title: "Crear cuenta",
   description: "Crea tu cuenta gratis y empieza a practicar para la PAES.",
+  alternates: { canonical: "/registro" },
 };
 
 
