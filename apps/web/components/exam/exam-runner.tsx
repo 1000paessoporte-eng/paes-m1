@@ -519,11 +519,14 @@ export function ExamRunner({
     <div className="mx-auto max-w-3xl">
       {/* ── Barra superior ──────────────────────────────────────────── */}
       <header className="glass sticky top-14 z-20 -mx-4 px-4 sm:-mx-6 sm:px-6">
-        <div className="flex items-center gap-3 py-3">
+        {/* Dos relojes y un contador juntos no se explican solos: quien entra
+            por primera vez no tiene cómo saber cuál es cuál. Cada uno lleva su
+            etiqueta encima.
+
+            En el teléfono van en su propia fila bajo el número de pregunta:
+            con etiquetas ya no caben los cuatro en una sola. */}
+        <div className="flex flex-col gap-2 py-3 sm:flex-row sm:items-start sm:gap-3">
           <div className="min-w-0 flex-1">
-            {/* En el teléfono la cabecera lleva cuatro cosas y el nombre de
-                la prueba es la menos útil: se acaba de elegir hace un minuto.
-                Sale para que el resto no se trunque. */}
             <p className="hidden truncate text-xs text-muted sm:block">
               {SUBJECT_LABELS[attemptSubject]}
             </p>
@@ -536,38 +539,52 @@ export function ExamRunner({
             </p>
           </div>
 
-          <div
-            className={cn(
-              "rounded-lg px-3 py-1.5 font-mono text-lg font-bold tabular-nums transition-colors duration-700",
-              critico && "bg-danger/10 text-danger pulso-reloj",
-              aviso && "bg-warning/10 text-warning",
-              !critico && !aviso && "bg-surface-hover"
-            )}
-            role="timer"
-            aria-live={critico ? "polite" : "off"}
-            aria-label="Tiempo restante"
-          >
-            {formatearReloj(remainingMs)}
+          <div className="flex items-start gap-2 sm:gap-3">
+            <Medidor
+              etiqueta="Tiempo restante de la prueba"
+              detalle="Cuánto queda para que se cierre el ensayo completo."
+            >
+              <span
+                className={cn(
+                  "block rounded-lg px-2.5 py-1 font-mono text-lg font-bold tabular-nums transition-colors duration-700",
+                  critico && "bg-danger/10 text-danger pulso-reloj",
+                  aviso && "bg-warning/10 text-warning",
+                  !critico && !aviso && "bg-surface-hover"
+                )}
+                role="timer"
+                aria-live={critico ? "polite" : "off"}
+                aria-label="Tiempo restante del ensayo completo"
+              >
+                {formatearReloj(remainingMs)}
+              </span>
+            </Medidor>
+
+            {/* El presupuesto lo calcula el servidor POR PREGUNTA: una difícil
+                pesa más que una fácil, y en Lectora la primera de cada texto
+                carga con leerlo. Si viniera en cero --un intento anterior a
+                esta función-- se cae al reparto plano, que es lo que había. */}
+            <Medidor
+              etiqueta="Tiempo en esta pregunta"
+              detalle="Cuánto llevas en la pregunta que tienes al frente, y cuánto debería tomarte."
+            >
+              <RelojPregunta
+                msGastados={msEnPregunta}
+                msPresupuesto={
+                  (questions[currentIndex]?.suggested_seconds ||
+                    (questions.length > 0 ? duracionMs / questions.length / 1000 : 0)) * 1000
+                }
+              />
+            </Medidor>
+
+            <Medidor
+              etiqueta="Preguntas respondidas"
+              detalle="Cuántas llevas contestadas del total del ensayo."
+            >
+              <span className="block rounded-lg border border-border px-2.5 py-1 text-lg font-medium tabular-nums">
+                {respondidas}/{questions.length}
+              </span>
+            </Medidor>
           </div>
-
-          {/* El presupuesto por pregunta sale del intento, no de la prueba
-              oficial: si eligió ritmo exigente, el número que ve es el
-              exigente. */}
-          {/* El presupuesto lo calcula el servidor POR PREGUNTA: una difícil
-              pesa más que una fácil, y en Lectora la primera de cada texto
-              carga con leerlo. Si viniera en cero --un intento anterior a esta
-              función-- se cae al reparto plano, que es lo que había. */}
-          <RelojPregunta
-            msGastados={msEnPregunta}
-            msPresupuesto={
-              (questions[currentIndex]?.suggested_seconds ||
-                (questions.length > 0 ? duracionMs / questions.length / 1000 : 0)) * 1000
-            }
-          />
-
-          <span className="rounded-lg border border-border px-3 py-2 text-sm font-medium tabular-nums">
-            {respondidas}/{questions.length}
-          </span>
         </div>
 
         <div className="-mx-4 h-1 w-[calc(100%+2rem)] bg-surface-hover sm:-mx-6 sm:w-[calc(100%+3rem)]">
@@ -764,6 +781,39 @@ export function ExamRunner({
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+
+/** Un número de la cabecera con su nombre debajo.
+ *
+ *  Existe porque tres medidores juntos y sin nombre no se entienden: quien
+ *  entra por primera vez no tiene cómo saber si "2:09" es lo que queda, lo que
+ *  lleva o lo que debería. El nombre se ve siempre y no es un tooltip: en un
+ *  teléfono no hay dónde posar el dedo para descubrirlo.
+ *
+ *  Va DEBAJO del número, no encima. Son nombres de largo distinto y en un
+ *  teléfono se parten en dos líneas; con la etiqueta arriba, cada reloj
+ *  arrancaba a una altura distinta y la cabecera quedaba en escalera.
+ *
+ *  `detalle` es la frase completa, para quien pase el cursor o use lector de
+ *  pantalla. El nombre corto responde "qué es"; el detalle, "para qué sirve". */
+function Medidor({
+  etiqueta,
+  detalle,
+  children,
+}: {
+  etiqueta: string;
+  detalle: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-1" title={detalle}>
+      {children}
+      <span className="max-w-[6.5rem] text-center text-[10px] leading-tight font-medium text-muted">
+        {etiqueta}
+      </span>
     </div>
   );
 }
