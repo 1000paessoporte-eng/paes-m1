@@ -21383,6 +21383,174 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "planes_internet",
+        "title": "Comparador de planes de internet hogar",
+        "kind": "discontinuo",
+        "source_note": (
+            "Ficha comparativa original de 1000paes, con fines educativos. Los planes, "
+            "precios y condiciones son inventados y no corresponden a ninguna empresa "
+            "real."
+        ),
+        "body": (
+            "**COMPARADOR DE PLANES DE INTERNET HOGAR**\n\n"
+            "*Ficha elaborada con fines educativos. Los tres planes y sus precios "
+            "son inventados; ninguna empresa real está siendo comparada.*\n\n"
+            "**1. Los tres planes**\n\n"
+            "| | Plan A | Plan B | Plan C |\n"
+            "|---|---|---|---|\n"
+            "| Precio mensual | $12.990 | $19.990 | $24.990 |\n"
+            "| Velocidad ofrecida | hasta 100 Mbps | hasta 400 Mbps | 600 Mbps |\n"
+            "| Datos incluidos | 300 GB al mes | ilimitados | ilimitados |\n"
+            "| Permanencia mínima | 18 meses | 12 meses | sin permanencia |\n"
+            "| Costo de instalación | $25.000 | $0 | $0 |\n"
+            "| Atención de fallas | 72 horas hábiles | 48 horas hábiles | 24 horas hábiles |\n\n"
+            "**2. Letra chica**\n\n"
+            "*(a)* El precio del Plan A corresponde a los primeros seis meses. A "
+            "partir del séptimo, el valor sube a $18.990 mensuales.\n\n"
+            "*(b)* «Hasta 100 Mbps» y «hasta 400 Mbps» indican la velocidad máxima "
+            "teórica del enlace. La velocidad efectiva depende de la hora, del "
+            "número de dispositivos conectados y de la distancia al nodo. El Plan C "
+            "es el único que compromete una velocidad mínima garantizada, de 480 "
+            "Mbps en el 80 % de las mediciones mensuales.\n\n"
+            "*(c)* Superados los 300 GB, el Plan A no se corta ni cobra un "
+            "adicional: reduce la velocidad a 10 Mbps hasta el término del ciclo de "
+            "facturación.\n\n"
+            "*(d)* Terminar el contrato antes del plazo de permanencia tiene un "
+            "costo equivalente al valor de las mensualidades que falten, con un "
+            "tope de tres.\n\n"
+            "*(e)* Los tiempos de atención de fallas se cuentan desde que la "
+            "empresa registra el reclamo, no desde que el servicio se cae.\n\n"
+            "**3. Tres hogares, tres respuestas**\n\n"
+            "*Caso 1.* Una persona que vive sola, trabaja fuera todo el día y usa "
+            "internet para leer correo y ver televisión en línea por las noches. Su "
+            "consumo ronda los 120 GB mensuales y no necesita velocidad alta. El "
+            "Plan A le sirve, incluso considerando la subida del séptimo mes, y el "
+            "tope de datos nunca la va a alcanzar.\n\n"
+            "*Caso 2.* Una familia de cinco personas: dos adultos que trabajan a "
+            "distancia con videollamadas simultáneas y tres estudiantes con clases "
+            "en línea y juegos. El consumo supera los 700 GB al mes. Aquí el Plan A "
+            "queda descartado no por el precio, sino por la nota *(c)*: a mitad de "
+            "mes quedaría en 10 Mbps, que no sostiene dos videollamadas.\n\n"
+            "*Caso 3.* Un arriendo de seis meses mientras dura una obra. Lo "
+            "decisivo no es el precio ni la velocidad, sino la permanencia: con el "
+            "Plan A o el B habría que pagar la multa de la nota *(d)*. El Plan C "
+            "cuesta más al mes y termina siendo el más barato del período.\n\n"
+            "**4. Qué no está en esta ficha**\n\n"
+            "La comparación no incluye la calidad real del servicio en cada barrio, "
+            "que puede variar dentro de una misma comuna y que ninguna de las tres "
+            "empresas informa por dirección. Tampoco incluye la atención al cliente "
+            "más allá del plazo comprometido, ni la estabilidad de la conexión, que "
+            "es lo que más se reclama y lo que ninguna cifra de esta tabla mide. "
+            "Una velocidad alta con cortes diarios se lee muy bien en la ficha y se "
+            "sufre mucho en la casa.\n\n"
+            "**5. Dos dudas frecuentes**\n\n"
+            "*¿Conviene siempre el plan sin permanencia?* No necesariamente. La "
+            "permanencia solo cobra importancia si existe la posibilidad de mudarse "
+            "o de cambiar de empresa antes del plazo; quien va a quedarse tres años "
+            "en la misma casa paga de más por una libertad que no usará.\n\n"
+            "*¿La velocidad ofrecida es la que se recibe?* Solo el Plan C "
+            "compromete un mínimo. En los otros dos, la palabra «hasta» significa "
+            "que la empresa cumple su oferta aunque el enlace entregue bastante "
+            "menos, y esa diferencia no da derecho a reclamo.\n\n"
+            "**6. Cómo usarla**\n\n"
+            "Antes de comparar planes, revise su propio consumo de los últimos tres "
+            "meses: casi todas las cuentas lo informan. Elegir por la velocidad más "
+            "alta disponible es el error más común y el más caro, porque esa "
+            "velocidad solo se aprovecha si hay varios dispositivos exigiendo el "
+            "enlace al mismo tiempo. Y lea siempre las notas al pie antes que la "
+            "fila del precio: en esta ficha, las cinco notas cambian la respuesta "
+            "en al menos uno de los tres casos."
+        ),
+    },
+    {
+        "key": "hora_de_entrada",
+        "title": "La primera hora",
+        "kind": "no_literario",
+        "source_note": (
+            "Columna de opinión original de 1000paes, elaborada a partir de literatura "
+            "pública sobre el atraso del ritmo circadiano en la adolescencia y sobre "
+            "los efectos medidos de retrasar la hora de entrada a clases."
+        ),
+        "body": (
+            "**La primera hora**\n\n"
+            "Todos los días, en miles de salas del país, ocurre lo mismo entre las "
+            "ocho y las nueve de la mañana: un profesor explica materia nueva a un "
+            "curso que no está ahí del todo. Hay cabezas apoyadas en la mesa, "
+            "miradas en el vacío, respuestas de una palabra. La interpretación "
+            "habitual es que los adolescentes se acuestan tarde por indisciplina, y "
+            "que el remedio consiste en quitarles el teléfono a las once. Quiero "
+            "proponer otra lectura, que no exculpa a nadie pero explica más.\n\n"
+            "En la pubertad, el reloj biológico se atrasa. No es una manera de "
+            "hablar: la hormona que induce el sueño empieza a liberarse entre una y "
+            "tres horas más tarde que en la niñez, de modo que un adolescente que "
+            "se acuesta a las diez de la noche puede quedarse mirando el techo sin "
+            "ninguna posibilidad de dormirse. El cambio es fisiológico, ocurre en "
+            "todas partes y revierte solo, alrededor de los veinte años. Mientras "
+            "dura, dormir temprano no es una decisión que dependa enteramente de la "
+            "voluntad.\n\n"
+            "Póngase eso junto a la otra cifra. Las recomendaciones de sueño para "
+            "esa edad van de ocho a diez horas. Si el sueño no llega antes de las "
+            "once y la alarma suena a las seis y media para alcanzar a tomar dos "
+            "micros, la cuenta no da: quedan siete horas en el mejor de los casos, "
+            "y eso los días en que todo sale bien. La deuda se acumula de lunes a "
+            "viernes y se paga el fin de semana durmiendo hasta el mediodía, lo que "
+            "a su vez corre el reloj todavía más y hace que el lunes duela más que "
+            "el martes.\n\n"
+            "Por eso hay sociedades médicas que recomiendan que la enseñanza media "
+            "no empiece antes de las ocho y media de la mañana. La recomendación es "
+            "más modesta de lo que parece: no pide reducir las horas de clase ni "
+            "cambiar el currículum. Pide correr el bloque completo. Y donde se ha "
+            "probado, los resultados apuntan en la misma dirección: los estudiantes "
+            "duermen más —no se acuestan más tarde para compensar, que es la "
+            "objeción intuitiva—, faltan menos y llegan menos atrasados.\n\n"
+            "Ahora la parte incómoda, porque una columna que solo enumera ventajas "
+            "no sirve de nada. Correr el horario tiene costos que no son menores y "
+            "que recaen sobre quienes menos margen tienen. Una madre que entra a "
+            "trabajar a las ocho necesita dejar a sus hijos antes de esa hora, y si "
+            "el colegio abre a las ocho y media, ese cuidado tiene que resolverlo "
+            "alguien. El transporte escolar y el público están diseñados alrededor "
+            "de los horarios actuales. Las actividades de la tarde —talleres, "
+            "deporte, el trabajo de algunos estudiantes de cuarto medio— se "
+            "correrían también, y en invierno eso significa volver a casa de noche. "
+            "Nada de esto es un detalle administrativo: es la vida de las familias.\n\n"
+            "Lo que sí puede decirse es que ninguno de esos costos es un argumento "
+            "sobre el sueño. Son argumentos sobre la organización del día, y "
+            "admiten soluciones parciales: abrir la sala más temprano aunque la "
+            "clase empiece después, correr solo la enseñanza media y no la básica, "
+            "ajustar los recorridos escolares. Confundir las dos discusiones —si el "
+            "atraso del reloj biológico existe y si el cambio es factible— es lo "
+            "que mantiene el debate dando vueltas. La primera pregunta está "
+            "bastante resuelta; la segunda es la difícil, y es la que habría que "
+            "estar discutiendo.\n\n"
+            "Conviene además no prometer de más. Nadie ha demostrado que correr la "
+            "hora de entrada suba los puntajes de una prueba nacional, y quien lo "
+            "sostenga está estirando la evidencia disponible. Lo que muestran los "
+            "estudios es más acotado y, a mi juicio, igual de valioso: más horas de "
+            "sueño, menos inasistencia, menos atrasos y mejor ánimo declarado. Que "
+            "eso se traduzca o no en aprendizaje depende de muchas otras cosas que "
+            "ocurren dentro de la sala y que ningún horario arregla.\n\n"
+            "Hay además una decisión más barata que correr el horario y que casi "
+            "nunca se discute: qué se pone en la primera hora. En muchos "
+            "establecimientos el bloque de las ocho lo ocupa la asignatura que más "
+            "concentración exige, porque históricamente se ha creído que la mañana "
+            "rinde más. Para un curso que todavía está despertando, esa costumbre "
+            "pone la materia más difícil en el peor momento del día. Reordenar el "
+            "horario semanal no requiere cambiar el transporte, ni negociar con las "
+            "familias, ni modificar una sola norma: se decide dentro del colegio.\n\n"
+            "Hay, por último, una asimetría que vale la pena mirar de frente. "
+            "Cuando un adulto rinde poco en la mañana, la conversación es sobre "
+            "condiciones de trabajo: turnos, descansos, iluminación, colación. "
+            "Cuando un adolescente rinde poco en la mañana, la conversación es "
+            "sobre su carácter. La misma conducta recibe dos explicaciones "
+            "distintas según quién la protagonice, y no porque haya más evidencia "
+            "en un caso que en el otro.\n\n"
+            "No propongo un decreto. Propongo que el horario de entrada deje de "
+            "tratarse como un dato de la naturaleza —siempre ha sido así, siempre "
+            "será así— y pase a discutirse como lo que es: una decisión que alguien "
+            "tomó hace mucho tiempo, con supuestos que hoy podemos revisar."
+        ),
+    },
+    {
         "key": "mar_frio",
         "title": "Por qué el mar de Chile es frío",
         "kind": "no_literario",
@@ -23641,6 +23809,340 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Comparador de planes de internet hogar' ----------
+    _ql(
+        "planes_internet", "lec_localizar", "facil",
+        "Según la tabla, ¿cuál es la permanencia mínima del Plan B?",
+        "Doce meses",
+        "La fila «Permanencia mínima» marca 18 meses para el Plan A, 12 meses para "
+        "el Plan B y ninguna para el Plan C.\n\nLa nota *(d)* explica qué implica "
+        "ese plazo: terminar antes cuesta las mensualidades que falten, con un tope "
+        "de tres.",
+        [
+            ("Dieciocho meses", "Esa es la permanencia del Plan A, no la del Plan B."),
+            ("Seis meses", "Seis meses es la duración del precio promocional del Plan A."),
+            ("No tiene permanencia mínima", "El que no tiene permanencia es el Plan C."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_localizar", "facil",
+        "Según la letra chica, ¿qué ocurre si el Plan A supera los 300 GB?",
+        "La velocidad baja a 10 Mbps hasta que termina el ciclo",
+        "La nota *(c)* lo precisa: superados los 300 GB «no se corta ni cobra un "
+        "adicional: reduce la velocidad a 10 Mbps hasta el término del ciclo de "
+        "facturación».\n\nEs la nota que decide el caso 2, donde una familia "
+        "consume más de 700 GB al mes.",
+        [
+            ("El servicio se corta hasta el mes siguiente", "La nota descarta el corte de forma expresa."),
+            ("Se cobra un adicional por cada GB de exceso", "La nota descarta también el cobro adicional."),
+            ("La velocidad sube para compensar el consumo", "Ningún plan de la ficha ofrece algo así."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_localizar", "facil",
+        "Según la ficha, ¿cuál es el único plan con velocidad mínima garantizada?",
+        "El Plan C, con 480 Mbps en el 80% de las mediciones",
+        "La nota *(b)* lo dice: el Plan C «es el único que compromete una velocidad "
+        "mínima garantizada, de 480 Mbps en el 80 % de las mediciones "
+        "mensuales».\n\nEn los otros dos la palabra «hasta» indica un máximo "
+        "teórico, y la sección de dudas frecuentes agrega que la diferencia no da "
+        "derecho a reclamo.",
+        [
+            ("El Plan B, porque ofrece hasta 400 Mbps", "«Hasta 400» es un máximo teórico, no un mínimo."),
+            ("El Plan A, porque tiene un tope de datos", "El tope de datos no garantiza ninguna velocidad."),
+            ("Los tres, porque la ley obliga a garantizarla", "La ficha no menciona ninguna obligación legal."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_localizar", "medio",
+        "Según la ficha, ¿desde cuándo se cuentan los plazos de atención de fallas?",
+        "Desde que la empresa registra el reclamo del cliente",
+        "La nota *(e)* lo aclara: los plazos «se cuentan desde que la empresa "
+        "registra el reclamo, no desde que el servicio se cae».\n\nEs una precisión "
+        "importante, porque el tiempo sin servicio puede empezar bastante antes de "
+        "que ese registro exista.",
+        [
+            ("Desde el momento en que el servicio deja de funcionar", "La nota descarta expresamente ese punto de partida."),
+            ("Desde que el técnico llega al domicilio del cliente", "La visita del técnico no se menciona en la ficha."),
+            ("Desde el primer día del ciclo de facturación", "El ciclo de facturación se relaciona con los datos, no con las fallas."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_interpretar", "medio",
+        "¿Por qué el caso 2 descarta el Plan A?",
+        "Porque el consumo supera el tope y la velocidad caería a 10 Mbps",
+        "El texto lo explica y señala además cuál era la razón equivocada: el Plan "
+        "A «queda descartado no por el precio, sino por la nota *(c)*: a mitad de "
+        "mes quedaría en 10 Mbps, que no sostiene dos videollamadas».\n\nLa familia "
+        "del caso 2 consume más de 700 GB, muy por encima de los 300 GB incluidos.",
+        [
+            ("Porque su precio sube a partir del séptimo mes", "Esa nota existe, pero el texto aclara que no es lo que decide el caso."),
+            ("Porque exige una permanencia mínima de 18 meses", "La permanencia decide el caso 3, no el caso 2."),
+            ("Porque su instalación cuesta veinticinco mil pesos", "El costo de instalación no se menciona al resolver ese caso."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_interpretar", "medio",
+        "¿Qué muestran los tres casos tomados en conjunto?",
+        "Que el plan conveniente depende del uso de cada hogar",
+        "Cada caso se resuelve con un criterio distinto: el caso 1 por el consumo "
+        "bajo, el caso 2 por el tope de datos y el caso 3 por la permanencia, donde "
+        "«el Plan C cuesta más al mes y termina siendo el más barato del "
+        "período».\n\nNinguno de los tres planes gana en los tres casos, que es "
+        "exactamente lo que la ficha quiere mostrar.",
+        [
+            ("Que el Plan C es el mejor de los tres en cualquier caso", "En el caso 1 no lo es: una persona sola no aprovecha esa velocidad."),
+            ("Que el precio mensual es el criterio más importante", "El caso 3 muestra que el plan más caro al mes puede ser el más barato."),
+            ("Que conviene siempre contratar el plan sin permanencia", "Las dudas frecuentes responden que no: depende de cuánto se quede."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_interpretar", "dificil",
+        "¿Cuál es la relación entre la tabla y la sección de letra chica?",
+        "La letra chica corrige la impresión que deja la tabla",
+        "Cada nota cambia el sentido de una fila: el precio del Plan A es "
+        "promocional, «hasta 100 Mbps» no compromete nada, el tope de datos no "
+        "cobra pero frena, la permanencia tiene multa y los plazos de falla se "
+        "cuentan desde otro momento.\n\nPor eso el cierre recomienda leer «las "
+        "notas al pie antes que la fila del precio»: sin ellas, la tabla induce a "
+        "error.",
+        [
+            ("La letra chica repite en detalle lo que la tabla resume", "No lo repite: agrega condiciones que la tabla no deja ver."),
+            ("La letra chica se refiere a planes distintos de los comparados", "Cada nota remite a una fila de la misma tabla."),
+            ("La letra chica justifica los precios que cobra cada empresa", "Las notas no explican cómo se fijan los precios."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_evaluar", "medio",
+        "¿Con qué propósito la ficha incluye la sección «Qué no está en esta "
+        "ficha»?",
+        "Para advertir los límites de la propia comparación",
+        "La sección nombra tres cosas que la tabla no mide: la calidad del servicio "
+        "por barrio, la atención al cliente más allá del plazo y la estabilidad de "
+        "la conexión, «que es lo que más se reclama».\n\nY resume el riesgo en una "
+        "frase: «Una velocidad alta con cortes diarios se lee muy bien en la ficha "
+        "y se sufre mucho en la casa».",
+        [
+            ("Para recomendar que se contrate el plan más económico", "La ficha no recomienda un plan: muestra que depende del uso."),
+            ("Para explicar por qué los planes son inventados", "Eso se declara al comienzo y por una razón distinta."),
+            ("Para señalar que las empresas ocultan información", "La ficha dice que ninguna informa por dirección, sin acusar a nadie."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_evaluar", "dificil",
+        "Una persona que arrienda por ocho meses elige el Plan B por su precio "
+        "intermedio. Según la ficha, ¿qué le conviene revisar?",
+        "La multa por terminar antes de los doce meses de permanencia",
+        "El Plan B exige doce meses y la nota *(d)* fija el costo de salir antes: "
+        "las mensualidades que falten, con un tope de tres.\n\nEs el mismo "
+        "razonamiento del caso 3, donde el plan sin permanencia termina siendo el "
+        "más barato del período aunque cueste más al mes.",
+        [
+            ("El tope de datos incluido en el Plan B cada mes", "El Plan B tiene datos ilimitados: el tope es del Plan A."),
+            ("El costo de instalación que cobra el Plan B", "La instalación del Plan B es gratuita según la tabla."),
+            ("La velocidad mínima garantizada del Plan B", "El Plan B no garantiza un mínimo: solo el Plan C lo hace."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_evaluar", "dificil",
+        "Según la ficha, ¿cuál es el error más común y más caro al elegir un plan?",
+        "Contratar la velocidad más alta sin necesitarla",
+        "El cierre lo señala así: «Elegir por la velocidad más alta disponible es "
+        "el error más común y el más caro», y explica por qué: esa velocidad «solo "
+        "se aprovecha si hay varios dispositivos exigiendo el enlace al mismo "
+        "tiempo».\n\nDe ahí el consejo previo: revisar el propio consumo de los "
+        "últimos tres meses antes de comparar.",
+        [
+            ("Fijarse en el precio antes que en la velocidad ofrecida", "La ficha recomienda justamente desconfiar de la fila del precio."),
+            ("Contratar un plan con permanencia mínima muy larga", "La permanencia importa solo si se piensa terminar antes del plazo."),
+            ("Elegir la empresa con mejor atención de fallas", "El plazo de atención es un criterio más, no el error señalado."),
+        ],
+    ),
+    _ql(
+        "planes_internet", "lec_evaluar", "facil",
+        "Según las dudas frecuentes, ¿a quién no le conviene pagar por un plan sin "
+        "permanencia?",
+        "A quien piensa quedarse varios años en la misma casa",
+        "La respuesta lo dice sin rodeos: «quien va a quedarse tres años en la "
+        "misma casa paga de más por una libertad que no usará».\n\nLa permanencia "
+        "«solo cobra importancia si existe la posibilidad de mudarse o de cambiar "
+        "de empresa antes del plazo».",
+        [
+            ("A quien arrienda por pocos meses mientras dura una obra", "Ese es justamente el caso 3, donde el plan sin permanencia conviene."),
+            ("A quien consume más de 700 GB de datos cada mes", "El consumo alto se resuelve con datos ilimitados, no con la permanencia."),
+            ("A quien necesita que le atiendan las fallas en 24 horas", "El plazo de atención es independiente de la permanencia del contrato."),
+        ],
+    ),
+    # ---------- 'La primera hora' ----------
+    _ql(
+        "hora_de_entrada", "lec_localizar", "facil",
+        "Según la columna, ¿qué le ocurre al reloj biológico en la pubertad?",
+        "Se atrasa, y la hormona del sueño se libera más tarde",
+        "El texto lo precisa: «la hormona que induce el sueño empieza a liberarse "
+        "entre una y tres horas más tarde que en la niñez».\n\nAgrega dos rasgos "
+        "del fenómeno: es fisiológico, ocurre en todas partes y «revierte solo, "
+        "alrededor de los veinte años».",
+        [
+            ("Se adelanta, y por eso el sueño llega antes de las diez", "El texto describe el movimiento contrario: el sueño llega más tarde."),
+            ("Se detiene hasta que termina el desarrollo de la persona", "No se detiene: se corre, y después vuelve solo a su lugar."),
+            ("Se vuelve irregular por el uso del teléfono de noche", "El teléfono aparece como la explicación habitual que la columna discute."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_localizar", "facil",
+        "Según la columna, ¿qué recomiendan algunas sociedades médicas?",
+        "Que la enseñanza media no empiece antes de las ocho y media",
+        "El texto lo enuncia y de inmediato acota su alcance: la recomendación «no "
+        "pide reducir las horas de clase ni cambiar el currículum. Pide correr el "
+        "bloque completo».\n\nEs decir, la misma cantidad de clases, empezando más "
+        "tarde.",
+        [
+            ("Que se reduzcan las horas de clase de la enseñanza media", "El texto descarta esa lectura: la cantidad de clases no cambia."),
+            ("Que los estudiantes se acuesten antes de las once de la noche", "Justamente eso es lo que la fisiología del sueño vuelve difícil."),
+            ("Que se prohíba el uso del teléfono después de cierta hora", "Esa es la medida habitual que la columna considera insuficiente."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_localizar", "facil",
+        "Según la columna, ¿qué resultados se observan donde se corrió el horario?",
+        "Duermen más, faltan menos y llegan menos atrasados",
+        "El texto enumera esos tres efectos y descarta de paso la objeción más "
+        "común: los estudiantes «no se acuestan más tarde para compensar, que es la "
+        "objeción intuitiva».\n\nMás adelante agrega un cuarto efecto declarado: "
+        "mejor ánimo.",
+        [
+            ("Suben sus puntajes en las pruebas nacionales", "El texto niega expresamente que eso se haya demostrado."),
+            ("Se acuestan más tarde y el efecto se anula solo", "Esa es la objeción intuitiva, y los resultados no la confirman."),
+            ("Aumentan las actividades deportivas de la tarde", "El texto advierte lo contrario: las actividades de la tarde se correrían."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_interpretar", "medio",
+        "¿Qué función cumple el párrafo que enumera los costos de correr el "
+        "horario?",
+        "Hacerse cargo de la objeción más fuerte contra la propuesta",
+        "El emisor lo anuncia al empezar: «Ahora la parte incómoda, porque una "
+        "columna que solo enumera ventajas no sirve de nada».\n\nY toma en serio "
+        "esos costos: el cuidado de los hijos, el transporte, las actividades de la "
+        "tarde. «Nada de esto es un detalle administrativo: es la vida de las "
+        "familias».",
+        [
+            ("Retirar la propuesta al comprobar que es inviable", "No la retira: el párrafo siguiente distingue el sueño de la logística."),
+            ("Culpar a las familias por los horarios que eligen", "El texto señala que esos costos recaen sobre quienes menos margen tienen."),
+            ("Explicar por qué el reloj biológico se atrasa en la pubertad", "Eso se explica antes y no tiene relación con los costos del cambio."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_interpretar", "facil",
+        "¿Qué distinción propone el emisor para ordenar el debate?",
+        "Separar si el atraso del reloj existe de si el cambio es factible",
+        "El texto lo dice con esas palabras: confundir «si el atraso del reloj "
+        "biológico existe y si el cambio es factible» es «lo que mantiene el debate "
+        "dando vueltas».\n\nY toma partido sobre cuál está resuelta: «La primera "
+        "pregunta está bastante resuelta; la segunda es la difícil, y es la que "
+        "habría que estar discutiendo».",
+        [
+            ("Separar a los estudiantes que duermen mal de los demás", "La columna no propone distinguir entre tipos de estudiantes."),
+            ("Separar la enseñanza básica de la enseñanza media", "Eso aparece como una solución parcial, no como la distinción central."),
+            ("Separar el uso del teléfono del rendimiento en clases", "El teléfono se menciona al comienzo y no vuelve como distinción."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_interpretar", "medio",
+        "¿Qué propone el emisor que un colegio puede decidir por su cuenta?",
+        "Cambiar qué asignatura ocupa el bloque de la primera hora",
+        "El texto presenta esa medida como «más barata que correr el horario»: "
+        "reordenar el horario semanal «no requiere cambiar el transporte, ni "
+        "negociar con las familias, ni modificar una sola norma: se decide dentro "
+        "del colegio».\n\nSu razón es que hoy suele ponerse en la primera hora la "
+        "asignatura que más concentración exige.",
+        [
+            ("Retrasar media hora el ingreso de todos los cursos", "Esa es la medida que sí depende del transporte y de las familias."),
+            ("Prohibir las actividades deportivas después de clases", "El texto no propone eliminar actividades, sino reordenar el horario."),
+            ("Aumentar las horas de clase para recuperar el tiempo", "La propuesta no agrega horas: mueve las que ya existen."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene el emisor al comparar cómo se explica el bajo "
+        "rendimiento de un adulto y el de un adolescente?",
+        "Que la misma conducta se explica por el carácter solo en un caso",
+        "El texto expone la asimetría con dos ejemplos paralelos: cuando un adulto "
+        "rinde poco «la conversación es sobre condiciones de trabajo»; cuando un "
+        "adolescente rinde poco, «la conversación es sobre su carácter».\n\nY "
+        "cierra señalando que esa diferencia no se apoya en evidencia: ocurre «no "
+        "porque haya más evidencia en un caso que en el otro».",
+        [
+            ("Que los adultos rinden mejor por la mañana que los jóvenes", "El texto no compara rendimientos: compara cómo se los explica."),
+            ("Que los adolescentes exageran su cansancio en la mañana", "La columna sostiene que el cansancio tiene una base fisiológica."),
+            ("Que las condiciones de trabajo importan más que el sueño", "El párrafo no jerarquiza causas: señala una asimetría en el trato."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor respecto de los efectos del cambio de "
+        "horario?",
+        "Prudente, pues acota lo demostrado y descarta prometer más",
+        "El texto marca el límite de la evidencia: «Nadie ha demostrado que correr "
+        "la hora de entrada suba los puntajes de una prueba nacional, y quien lo "
+        "sostenga está estirando la evidencia disponible».\n\nY describe lo que sí "
+        "se observa: más sueño, menos inasistencia, menos atrasos y mejor ánimo "
+        "declarado.",
+        [
+            ("Entusiasta, pues anuncia una mejora en los aprendizajes", "Es justamente lo que se niega a prometer en ese párrafo."),
+            ("Escéptica, pues duda de los estudios que cita antes", "No los pone en duda: acota qué muestran y qué no."),
+            ("Neutral, pues no toma posición sobre la propuesta", "Defiende la propuesta durante toda la columna."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_evaluar", "dificil",
+        "Un lector sostiene que la columna pide reducir las horas de clase. ¿Qué "
+        "responde el texto?",
+        "Que la propuesta corre el bloque completo sin quitar clases",
+        "El texto se adelanta a esa lectura al presentar la recomendación: «no pide "
+        "reducir las horas de clase ni cambiar el currículum. Pide correr el bloque "
+        "completo».\n\nDe hecho, las consecuencias que enumera después —actividades "
+        "de la tarde que se corren, vuelta a casa de noche— suponen que la jornada "
+        "mantiene su duración.",
+        [
+            ("Que reducir horas es aceptable si mejora el sueño", "En ninguna parte se admite recortar la jornada escolar."),
+            ("Que la propuesta se aplica solo a la enseñanza básica", "La recomendación citada se refiere a la enseñanza media."),
+            ("Que la duración de la jornada la decide cada colegio", "Lo que el texto deja en manos del colegio es el orden de las asignaturas."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al cerrar diciendo que el horario «no es un dato "
+        "de la naturaleza»?",
+        "Presentarlo como una decisión revisable y no como algo dado",
+        "El cierre nombra el supuesto que quiere remover —«siempre ha sido así, "
+        "siempre será así»— y ofrece en cambio una descripción distinta: «una "
+        "decisión que alguien tomó hace mucho tiempo, con supuestos que hoy podemos "
+        "revisar».\n\nPor eso aclara antes que no propone un decreto: lo que pide "
+        "es abrir la discusión, no imponer un resultado.",
+        [
+            ("Exigir que el Ministerio dicte una norma sobre el horario", "El texto empieza el párrafo aclarando que no propone un decreto."),
+            ("Sostener que cualquier horario da lo mismo para aprender", "La columna argumenta lo contrario durante todo su desarrollo."),
+            ("Anunciar que el cambio ya está resuelto en otros países", "Menciona resultados donde se probó, sin declararlo resuelto."),
+        ],
+    ),
+    _ql(
+        "hora_de_entrada", "lec_evaluar", "medio",
+        "Un colegio decide correr el horario y no ajustar nada más. Según la "
+        "columna, ¿qué queda sin resolver?",
+        "El cuidado de los hijos y el transporte de las familias",
+        "El texto identifica esos costos y advierte que recaen «sobre quienes menos "
+        "margen tienen»: una madre que entra a trabajar a las ocho, los recorridos "
+        "escolares diseñados para el horario actual, las actividades de la "
+        "tarde.\n\nY ofrece salidas parciales que ese colegio no estaría tomando: "
+        "abrir la sala antes aunque la clase empiece después, o correr solo la "
+        "media.",
+        [
+            ("El atraso del reloj biológico de los estudiantes", "Eso es lo que el cambio de horario sí atiende, según la columna."),
+            ("La cantidad de horas de clase que exige el currículum", "La jornada mantiene su duración: solo se desplaza en el día."),
+            ("La distribución de las asignaturas durante la semana", "Esa es otra medida posible, independiente del horario de entrada."),
+        ],
+    ),
     # ---------- 'Por qué el mar de Chile es frío' ----------
     _ql(
         "mar_frio", "lec_localizar", "facil",
