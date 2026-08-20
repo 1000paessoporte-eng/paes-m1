@@ -769,8 +769,13 @@ export interface paths {
         /**
          * Get Demo Questions
          * @description Preguntas de prueba SIN cuenta: pública, sin auth, sin persistir nada.
+         *
          *     Solo fácil/medio -- la demo busca enganchar, no frustrar en el primer
          *     contacto con la plataforma.
+         *
+         *     El sorteo se acota a la prueba pedida (`subject`). Antes salía de TODO el
+         *     banco: quien entraba a "probar M1" podía recibir una pregunta de Historia,
+         *     y la pantalla igual le decía "Competencia Matemática M1".
          */
         get: operations["get_demo_questions_api_demo_questions_get"];
         put?: never;
@@ -826,6 +831,29 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/carreras/universidades": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Universidades
+         * @description Las 47 universidades con su número de carreras.
+         *
+         *     Va ANTES de `/{codigo}`: si no, FastAPI intentaría leer
+         *     "universidades" como el código de una carrera.
+         */
+        get: operations["listar_universidades_api_carreras_universidades_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/carreras/{codigo}": {
         parameters: {
             query?: never;
@@ -850,6 +878,30 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/leads": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Crear Lead
+         * @description Guarda un correo de alguien sin cuenta.
+         *
+         *     Público y sin auth (esa es la gracia: se deja antes de registrarse), así
+         *     que va con límite por IP. Repetir el mismo correo no es un error: la
+         *     respuesta es idéntica y no se crea una fila nueva.
+         */
+        post: operations["crear_lead_api_leads_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/metrics/pageview": {
         parameters: {
             query?: never;
@@ -867,6 +919,28 @@ export interface paths {
          *     Nunca falla hacia el usuario: medir no puede romper la navegación.
          */
         post: operations["registrar_visita_api_metrics_pageview_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/metrics/uso": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Uso Publico
+         * @description Uso real de la plataforma. Público: la portada lo usa.
+         *
+         *     No expone a nadie: son tres totales agregados, sin nombres ni correos.
+         */
+        get: operations["uso_publico_api_metrics_uso_get"];
+        put?: never;
+        post?: never;
         delete?: never;
         options?: never;
         head?: never;
@@ -1343,6 +1417,27 @@ export interface components {
             /** Total */
             total: number;
         };
+        /**
+         * DemoPassageOut
+         * @description Texto base de una pregunta de Competencia Lectora.
+         *
+         *     Va en la demo por la misma razón que en el examen: la pregunta de lectora
+         *     no se puede responder sin el texto. Antes la demo sorteaba entre todas las
+         *     preguntas del banco y podía mostrar una de lectora huérfana, imposible de
+         *     contestar.
+         */
+        DemoPassageOut: {
+            /** Id */
+            id: number;
+            /** Title */
+            title: string;
+            /** Body */
+            body: string;
+            /** Kind */
+            kind: string;
+            /** Source Note */
+            source_note?: string | null;
+        };
         /** DemoQuestionOut */
         DemoQuestionOut: {
             /** Id */
@@ -1350,6 +1445,15 @@ export interface components {
             difficulty: components["schemas"]["Difficulty"];
             /** Stem */
             stem: string;
+            subject: components["schemas"]["Subject"];
+            axis: components["schemas"]["SkillAxis"];
+            /** Axis Label */
+            axis_label: string;
+            /** Node Name */
+            node_name: string;
+            /** Node Code */
+            node_code: string;
+            passage?: components["schemas"]["DemoPassageOut"] | null;
             /** Alternatives */
             alternatives: components["schemas"]["DemoAlternativeOut"][];
         };
@@ -1370,6 +1474,8 @@ export interface components {
         EmbudoOut: {
             /** Visitantes */
             visitantes: number;
+            /** Correos Dejados */
+            correos_dejados: number;
             /** Registrados */
             registrados: number;
             /** Con Ensayo */
@@ -1640,6 +1746,45 @@ export interface components {
             /** Detail */
             detail?: components["schemas"]["ValidationError"][];
         };
+        /** LeadIn */
+        LeadIn: {
+            /**
+             * Email
+             * Format: email
+             */
+            email: string;
+            /** @default demo */
+            source: components["schemas"]["LeadSource"];
+        };
+        /**
+         * LeadOut
+         * @description Respuesta deliberadamente pobre.
+         *
+         *     No devuelve el id ni si el correo ya estaba: el endpoint es público y sin
+         *     autenticación, así que cualquier diferencia observable entre "nuevo" y "ya
+         *     existía" convierte esto en un oráculo para averiguar quién está en la
+         *     lista.
+         */
+        LeadOut: {
+            /**
+             * Ok
+             * @default true
+             */
+            ok: boolean;
+        };
+        /**
+         * LeadSource
+         * @description De dónde salió el correo.
+         *
+         *     Cerrado a propósito: si fuera texto libre, cada pantalla nueva inventaría
+         *     su propia etiqueta y el conteo por origen dejaría de significar algo.
+         *
+         *     Hoy solo la demo pide el correo, así que hay un valor. Se agrega el que
+         *     corresponda cuando una segunda pantalla empiece a pedirlo -- declarar
+         *     ahora orígenes que nadie produce solo ensucia el conteo.
+         * @enum {string}
+         */
+        LeadSource: "demo";
         /**
          * LessonOut
          * @description La teoría del nodo: lo que se estudia antes de practicar.
@@ -2233,6 +2378,21 @@ export interface components {
             token_type: string;
             user: components["schemas"]["UserOut"];
         };
+        /**
+         * UniversidadOut
+         * @description Una universidad y cuántas carreras suyas hay en el catálogo.
+         *
+         *     Existe para no bajar las 1.855 filas cuando lo único que se necesita son
+         *     las 47 universidades: la portada y el índice las listan, y traerse el
+         *     catálogo entero para contarlas es mover un megabyte para escribir un
+         *     número.
+         */
+        UniversidadOut: {
+            /** Universidad */
+            universidad: string;
+            /** Carreras */
+            carreras: number;
+        };
         /** UpdateMeIn */
         UpdateMeIn: {
             /** Recordatorios Email */
@@ -2285,6 +2445,27 @@ export interface components {
             terminados: number;
             /** Puntaje Promedio */
             puntaje_promedio: number | null;
+        };
+        /**
+         * UsoPublicoOut
+         * @description Cuánto se usa la plataforma, en tres números.
+         *
+         *     Es la única prueba social que este proyecto puede mostrar: no hay
+         *     testimonios ni logos de colegios porque no existen (regla 1 del CLAUDE.md).
+         *     Lo que sí existe es el uso real, y se cuenta en la base cada vez que se
+         *     pide.
+         *
+         *     Quién decide MOSTRARLO es la portada, no este endpoint: con cifras chicas
+         *     la franja no se dibuja, porque "3 ensayos rendidos" espanta en vez de
+         *     convencer. El endpoint devuelve el dato real y punto.
+         */
+        UsoPublicoOut: {
+            /** Ensayos Rendidos */
+            ensayos_rendidos: number;
+            /** Preguntas Respondidas */
+            preguntas_respondidas: number;
+            /** Alumnos */
+            alumnos: number;
         };
         /** UsuarioResumen */
         UsuarioResumen: {
@@ -3631,7 +3812,9 @@ export interface operations {
     };
     get_demo_questions_api_demo_questions_get: {
         parameters: {
-            query?: never;
+            query?: {
+                subject?: components["schemas"]["Subject"];
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -3645,6 +3828,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["DemoQuestionOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -3702,6 +3894,26 @@ export interface operations {
             };
         };
     };
+    listar_universidades_api_carreras_universidades_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["UniversidadOut"][];
+                };
+            };
+        };
+    };
     ver_carrera_api_carreras__codigo__get: {
         parameters: {
             query?: never;
@@ -3720,6 +3932,39 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["CarreraPublicaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    crear_lead_api_leads_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["LeadIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["LeadOut"];
                 };
             };
             /** @description Validation Error */
@@ -3760,6 +4005,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    uso_publico_api_metrics_uso_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["UsoPublicoOut"];
                 };
             };
         };
