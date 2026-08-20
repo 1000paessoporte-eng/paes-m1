@@ -290,6 +290,7 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
     from paes_api.modules.goals.models import MetaUsuario
     from paes_api.modules.metrics.models import PageView
     from paes_api.modules.practice.models import PracticeAnswer
+    from paes_api.modules.repaso.models import RepasoItem
     from paes_api.modules.skill_tree.models import UserSkillProgress
 
     intentos = [
@@ -306,6 +307,7 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
     for tabla in (
         UserSkillProgress,
         PracticeAnswer,
+        RepasoItem,
         MetaUsuario,
         StudyStreak,
         LoginEvent,
