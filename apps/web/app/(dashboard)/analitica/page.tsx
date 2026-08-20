@@ -1,10 +1,12 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getAnalyticsSummary } from "@/lib/api";
+import { ApiError, getAnalyticsSummary, getDiagnostico, type Diagnostico } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { StatTile } from "@/components/analytics/stat-tile";
 import { TimeInvestedChart } from "@/components/analytics/time-invested-chart";
 import { AccuracyChart } from "@/components/analytics/accuracy-chart";
+import { DiagnosticoErrores } from "@/components/analytics/diagnostico-errores";
+import { DiagnosticoRitmo } from "@/components/analytics/diagnostico-ritmo";
 import { EstadoVacio } from "@/components/estado-vacio";
 
 export const metadata = {
@@ -22,6 +24,16 @@ export default async function DashboardAnaliticoPage() {
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/analitica");
     throw err;
+  }
+
+  // El diagnóstico es lo nuevo de esta pantalla, pero no es lo único: si
+  // falla, la analítica de siempre se muestra igual. Un dato de más no puede
+  // llevarse por delante a los que ya funcionaban.
+  let diagnostico: Diagnostico | null = null;
+  try {
+    diagnostico = await getDiagnostico(token);
+  } catch {
+    diagnostico = null;
   }
 
   if (summary.total_questions_answered === 0) {
@@ -48,6 +60,11 @@ export default async function DashboardAnaliticoPage() {
       <p className="mt-1 text-sm text-muted">
         Tiempo invertido vs. tasa de acierto, y rachas de práctica diaria.
       </p>
+
+      {/* El diagnóstico va ARRIBA de los gráficos: los gráficos dicen cuánto
+          hiciste, esto dice qué arreglar. Lo segundo es lo accionable. */}
+      {diagnostico && <DiagnosticoErrores errores={diagnostico.errores} />}
+      {diagnostico?.ritmo && <DiagnosticoRitmo ritmo={diagnostico.ritmo} />}
 
       <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
         <StatTile
