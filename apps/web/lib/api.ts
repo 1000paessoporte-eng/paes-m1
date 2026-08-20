@@ -400,16 +400,24 @@ export function getAdminMetrics(token?: string): Promise<AdminMetrics> {
  * Registra una visita. Silencia cualquier error a propósito: medir nunca debe
  * romper la navegación de quien está usando el sitio.
  */
+export type Utm = {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+};
+
 export function trackPageView(
   path: string,
   visitorId: string,
   token?: string,
-  referrer?: string
+  referrer?: string,
+  utm?: Utm
 ): void {
   apiFetch<void>("/api/metrics/pageview", token, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ path, visitor_id: visitorId, referrer }),
+    body: JSON.stringify({ path, visitor_id: visitorId, referrer, ...utm }),
   }).catch(() => {});
 }
 
