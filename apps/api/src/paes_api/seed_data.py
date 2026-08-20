@@ -21383,6 +21383,93 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "mar_frio",
+        "title": "Por qué el mar de Chile es frío",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo de divulgación original de 1000paes, elaborado a partir de "
+            "fuentes públicas sobre el sistema de la corriente de Humboldt y la "
+            "surgencia costera. La cifra de participación en la pesca mundial se "
+            "presenta como estimación citada."
+        ),
+        "body": (
+            "Cualquiera que haya pasado un enero en la costa central de Chile "
+            "conoce la escena: treinta grados en la arena, un mar que invita, y a "
+            "los diez segundos de entrar al agua la certeza de haber cometido un "
+            "error. El mar chileno es frío en pleno verano, y lo es de una manera "
+            "que no calza con la intuición. En la costa atlántica de Sudamérica, a "
+            "la misma latitud, el agua está varios grados más templada. La "
+            "diferencia no la explica el sol, que llega igual a ambos lados del "
+            "continente.\n\n"
+            "La respuesta que suele darse en la escuela es que el frío viene de la "
+            "corriente de Humboldt, que sube desde el sur trayendo agua antártica. "
+            "Esa explicación no es falsa, pero se queda corta, y por una razón "
+            "interesante: el agua más fría que se encuentra frente a la costa no "
+            "llega desde el sur, sino desde abajo.\n\n"
+            "El mecanismo se llama surgencia y funciona así. Frente al litoral "
+            "chileno soplan vientos del sur durante gran parte del año. Ese viento "
+            "empuja el agua de la superficie, pero el agua no se mueve en la "
+            "dirección en que sopla: por efecto de la rotación de la Tierra, la "
+            "capa superficial termina desplazándose hacia mar adentro, alejándose "
+            "de la costa. Y como el mar no deja huecos, ese lugar tiene que ser "
+            "ocupado por algo. Lo que sube a llenarlo es agua profunda, que estaba "
+            "a cientos de metros y que es mucho más fría que la que se fue.\n\n"
+            "Ese ascenso trae de paso algo que no se ve. El agua profunda está "
+            "cargada de nitratos y fosfatos, los nutrientes que las plantas "
+            "microscópicas del mar necesitan para crecer y que en la superficie "
+            "escasean, porque ahí ya fueron consumidos. Cuando esa agua llega "
+            "arriba y se encuentra con la luz del sol, ocurre una floración: el "
+            "fitoplancton se multiplica, detrás aparecen los pequeños peces que se "
+            "alimentan de él, y detrás de ellos todo lo demás, desde el jurel hasta "
+            "los lobos marinos y las aves.\n\n"
+            "De ahí viene la desproporción que hace famosa a esta franja de mar. El "
+            "sistema de la corriente de Humboldt ocupa una porción diminuta de la "
+            "superficie de los océanos y suele citarse que de él sale alrededor del "
+            "quince por ciento de la pesca mundial. La cifra varía según qué se "
+            "mida y en qué año, pero el orden de magnitud se repite en todas las "
+            "estimaciones: ninguna otra región del planeta rinde tanto por "
+            "kilómetro cuadrado de mar.\n\n"
+            "El agua fría no se queda en el agua. Un mar frío enfría el aire que "
+            "tiene encima, y el aire frío pesa y no sube; queda pegado a la "
+            "superficie, estable, sin producir las nubes de tormenta que traen "
+            "lluvia. A eso se debe buena parte del clima costero chileno: la "
+            "nubosidad baja que amanece todos los días en la zona central y se "
+            "disipa a mediodía, la camanchaca que humedece el norte sin que caiga "
+            "una gota, y la extrema aridez de la costa de Atacama, donde el "
+            "desierto llega hasta el borde del mar. Un océano al lado no garantiza "
+            "lluvia; depende de si el aire de encima puede subir.\n\n"
+            "El sistema, además, puede fallar. Cada cierto número de años los "
+            "vientos del sur se debilitan y la capa de agua tibia superficial se "
+            "engruesa. Aunque la surgencia siga operando, lo que sube deja de ser "
+            "agua profunda cargada de nutrientes: es agua tibia y pobre. Ese es el "
+            "fenómeno de El Niño visto desde la costa, y sus efectos se notan "
+            "primero abajo en la cadena, con menos fitoplancton, y después arriba, "
+            "con capturas que se desploman y aves marinas que abandonan sus "
+            "colonias. Al mismo tiempo, en la zona central suele llover más de lo "
+            "habitual. Un mismo fenómeno perjudica a la pesca y alivia a la "
+            "agricultura de secano, lo que explica que en Chile se lo espere con "
+            "sentimientos encontrados.\n\n"
+            "Conviene, eso sí, no explicarlo todo con El Niño. No cada mala "
+            "temporada de pesca tiene esa causa: la sobreexplotación de un banco, "
+            "un cambio en la regulación o una migración local pueden producir el "
+            "mismo resultado en las cifras. Y la pregunta de qué le ocurrirá a la "
+            "surgencia en un planeta más caliente todavía no tiene respuesta firme. "
+            "Hay una hipótesis que predice vientos más intensos y, por lo tanto, "
+            "surgencia más fuerte; hay otra que predice un océano más "
+            "estratificado, donde cueste más hacer subir el agua profunda. Las dos "
+            "son razonables y no se puede elegir entre ellas con lo que hoy se "
+            "sabe.\n\n"
+            "Queda una lección de método en todo esto. La explicación escolar —el "
+            "agua es fría porque la corriente viene del sur— es del tipo que "
+            "resulta fácil de recordar y difícil de aprovechar: no permite predecir "
+            "nada. La explicación por surgencia sí: si el frío depende del viento, "
+            "entonces cuando el viento del sur amaine el agua debería entibiarse en "
+            "pocos días, y eso es exactamente lo que ocurre. Una buena explicación "
+            "no solo dice por qué pasó algo; también dice qué habría que observar "
+            "para saber si está equivocada."
+        ),
+    },
+    {
         "key": "sellos_advertencia",
         "title": "Los sellos de advertencia: qué dicen y qué no dicen",
         "kind": "discontinuo",
@@ -23554,6 +23641,174 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Por qué el mar de Chile es frío' ----------
+    _ql(
+        "mar_frio", "lec_localizar", "facil",
+        "Según la lectura, ¿en qué consiste la surgencia?",
+        "En el ascenso de agua profunda que reemplaza a la de superficie",
+        "El texto describe el mecanismo en dos pasos: el viento del sur desplaza la "
+        "capa superficial hacia mar adentro y, «como el mar no deja huecos», sube "
+        "agua profunda a ocupar ese lugar.\n\nEsa agua «estaba a cientos de metros» "
+        "y es «mucho más fría que la que se fue», lo que explica la temperatura de "
+        "la costa.",
+        [
+            ("En el avance de una corriente fría que viene desde el sur", "Esa es la explicación escolar que el texto considera incompleta."),
+            ("En el enfriamiento del agua superficial durante el invierno", "La surgencia no depende de la estación: depende del viento del sur."),
+            ("En la mezcla de aguas de distinta salinidad frente al litoral", "El texto no menciona la salinidad en ningún momento."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_localizar", "facil",
+        "Según la lectura, ¿qué trae el agua profunda además de frío?",
+        "Nitratos y fosfatos, que escasean en la superficie",
+        "El texto lo precisa: el agua profunda «está cargada de nitratos y "
+        "fosfatos, los nutrientes que las plantas microscópicas del mar necesitan "
+        "para crecer y que en la superficie escasean, porque ahí ya fueron "
+        "consumidos».\n\nAl encontrarse esa agua con la luz del sol se produce la "
+        "floración de fitoplancton que sostiene toda la cadena.",
+        [
+            ("Oxígeno, que permite la respiración de los peces grandes", "El oxígeno no aparece entre lo que el agua profunda aporta."),
+            ("Sedimentos del fondo, que dan color oscuro al agua", "El texto no menciona sedimentos ni cambios de color del mar."),
+            ("Fitoplancton, que crece en el fondo y sube con la corriente", "El fitoplancton no sube: se multiplica arriba, donde llega la luz."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurre en la costa durante El Niño?",
+        "Los vientos del sur se debilitan y sube agua tibia y pobre",
+        "El texto lo describe con precisión: los vientos «se debilitan y la capa de "
+        "agua tibia superficial se engruesa», de modo que «aunque la surgencia siga "
+        "operando, lo que sube deja de ser agua profunda cargada de "
+        "nutrientes».\n\nLos efectos aparecen primero abajo, con menos "
+        "fitoplancton, y después arriba, con capturas que se desploman.",
+        [
+            ("La surgencia se detiene por completo frente a la costa", "El texto dice que sigue operando: lo que cambia es el agua que sube."),
+            ("El agua profunda sube más fría y más cargada de nutrientes", "Ocurre lo contrario: sube agua tibia y pobre en nutrientes."),
+            ("Los vientos del sur se intensifican durante todo el verano", "El fenómeno se caracteriza justamente por el debilitamiento del viento."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué la costa chilena amanece nublada y casi no "
+        "llueve?",
+        "Porque el mar frío enfría el aire y ese aire no logra subir",
+        "El texto lo encadena así: «Un mar frío enfría el aire que tiene encima, y "
+        "el aire frío pesa y no sube; queda pegado a la superficie, estable, sin "
+        "producir las nubes de tormenta que traen lluvia».\n\nDe ahí la nubosidad "
+        "baja de la zona central, la camanchaca del norte y la aridez de la costa "
+        "de Atacama.",
+        [
+            ("Porque los vientos del sur arrastran las nubes mar adentro", "El viento desplaza agua superficial, y el texto no le atribuye ese efecto."),
+            ("Porque la cordillera detiene la humedad antes de la costa", "La cordillera no se menciona en el artículo en ningún momento."),
+            ("Porque el desierto de Atacama seca el aire de toda la costa", "La aridez de Atacama es una consecuencia que el texto explica, no la causa."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_interpretar", "medio",
+        "Según el emisor, ¿por qué la explicación escolar del frío «se queda "
+        "corta»?",
+        "Porque el agua más fría no llega desde el sur, sino desde abajo",
+        "El texto acepta parte de esa explicación y marca su límite: «no es falsa, "
+        "pero se queda corta, y por una razón interesante: el agua más fría que se "
+        "encuentra frente a la costa no llega desde el sur, sino desde "
+        "abajo».\n\nEl resto del artículo desarrolla ese mecanismo vertical, que es "
+        "el que permite entender también los nutrientes y El Niño.",
+        [
+            ("Porque la corriente de Humboldt en realidad no existe", "El texto la nombra como un sistema real y muy productivo."),
+            ("Porque el sol calienta por igual las dos costas del continente", "Ese dato aparece antes, para descartar al sol como explicación."),
+            ("Porque el agua antártica no alcanza a llegar hasta Chile", "El texto no discute hasta dónde llega esa agua, sino de dónde viene el frío."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_interpretar", "medio",
+        "¿Con qué finalidad se compara la costa chilena con la costa atlántica?",
+        "Para descartar que la diferencia de temperatura la explique el sol",
+        "La comparación es entre dos lugares en la misma latitud: en el Atlántico "
+        "«el agua está varios grados más templada», y el texto concluye que «la "
+        "diferencia no la explica el sol, que llega igual a ambos lados del "
+        "continente».\n\nEs un modo de dejar el problema en pie antes de ofrecer la "
+        "explicación correcta.",
+        [
+            ("Para mostrar que el mar chileno es el más frío del mundo", "El texto no hace esa afirmación ni compara con todos los mares."),
+            ("Para explicar por qué en el Atlántico hay menos pesca", "La productividad del Atlántico no se discute en el artículo."),
+            ("Para indicar que ambas costas comparten el mismo clima", "La comparación sirve justamente para marcar una diferencia."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_interpretar", "medio",
+        "¿Qué relación establece la lectura entre los nutrientes y la pesca?",
+        "Los nutrientes alimentan al fitoplancton y este sostiene la cadena",
+        "El texto describe la cadena completa: el agua profunda sube con "
+        "nutrientes, con la luz «el fitoplancton se multiplica, detrás aparecen los "
+        "pequeños peces que se alimentan de él, y detrás de ellos todo lo "
+        "demás».\n\nEsa cadena explica la desproporción del párrafo siguiente: una "
+        "porción diminuta de océano que rinde como ninguna otra.",
+        [
+            ("Los nutrientes atraen a los peces grandes desde otras zonas", "El texto no habla de peces que migren atraídos por los nutrientes."),
+            ("Los nutrientes aumentan el oxígeno disponible para los peces", "El artículo no menciona el oxígeno en ninguna parte."),
+            ("Los nutrientes enfrían el agua y eso favorece a las especies", "El frío viene de la profundidad del agua, no de los nutrientes."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene la afirmación «un océano al lado no garantiza lluvia»?",
+        "Que llueve si el aire puede ascender, no por tener mar cerca",
+        "La frase cierra el párrafo del clima costero y resume su argumento: el "
+        "aire enfriado por el mar «queda pegado a la superficie, estable, sin "
+        "producir las nubes de tormenta que traen lluvia».\n\nPor eso el texto "
+        "agrega enseguida la condición que decide: «depende de si el aire de encima "
+        "puede subir». La cercanía del agua no basta.",
+        [
+            ("Que la lluvia depende de la cantidad de agua que haya en el mar", "El texto no relaciona el volumen del océano con las precipitaciones."),
+            ("Que la camanchaca reemplaza a la lluvia en la costa del norte", "La camanchaca humedece sin que caiga una gota: no es un reemplazo."),
+            ("Que las zonas costeras son siempre más secas que las interiores", "El artículo no compara la costa con el interior del país."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_evaluar", "medio",
+        "¿Con qué propósito el emisor advierte que no hay que explicarlo todo con "
+        "El Niño?",
+        "Para evitar que se le atribuya cualquier mala temporada de pesca",
+        "El párrafo entrega tres causas alternativas para el mismo resultado en las "
+        "cifras: «la sobreexplotación de un banco, un cambio en la regulación o una "
+        "migración local».\n\nLa advertencia no niega el fenómeno —que el texto "
+        "acaba de explicar—, sino que impide usarlo como explicación de todo.",
+        [
+            ("Para sostener que El Niño no afecta realmente a la pesca", "El texto acaba de describir cómo la afecta: menos fitoplancton y menos capturas."),
+            ("Para responsabilizar a la industria pesquera de la escasez", "La sobreexplotación se menciona como una causa posible entre varias."),
+            ("Para anunciar que dejará de hablar de fenómenos climáticos", "El párrafo siguiente sigue tratando el clima y el futuro de la surgencia."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor frente al futuro de la surgencia?",
+        "Cauta, pues expone dos hipótesis y no elige entre ellas",
+        "El texto reconoce que la pregunta «todavía no tiene respuesta firme» y "
+        "presenta las dos posibilidades: vientos más intensos y surgencia más "
+        "fuerte, o un océano más estratificado donde cueste más subir el agua "
+        "profunda.\n\nY explica por qué se detiene ahí: «Las dos son razonables y "
+        "no se puede elegir entre ellas con lo que hoy se sabe».",
+        [
+            ("Alarmista, pues anuncia el colapso de la pesca chilena", "El texto no anuncia ningún colapso: deja la pregunta abierta."),
+            ("Optimista, pues confía en que los vientos se intensifiquen", "Esa es solo una de las dos hipótesis, y no la respalda."),
+            ("Escéptica, pues duda de que el clima esté cambiando", "El cambio del clima se da por supuesto: lo discutido es su efecto."),
+        ],
+    ),
+    _ql(
+        "mar_frio", "lec_evaluar", "dificil",
+        "Según el cierre de la lectura, ¿qué hace que una explicación sea buena?",
+        "Que permita predecir y que diga cómo podría comprobarse su error",
+        "El último párrafo compara las dos explicaciones por lo que permiten hacer: "
+        "la escolar «no permite predecir nada», mientras que la de la surgencia "
+        "anticipa que «cuando el viento del sur amaine el agua debería entibiarse "
+        "en pocos días».\n\nY agrega el criterio general: una buena explicación "
+        "«también dice qué habría que observar para saber si está equivocada».",
+        [
+            ("Que sea fácil de recordar y de enseñar en la escuela", "El texto usa la explicación fácil de recordar como contraejemplo."),
+            ("Que provenga de científicos que estudian el fenómeno", "El origen de la explicación no aparece como criterio en el cierre."),
+            ("Que describa el fenómeno con la mayor cantidad de datos", "El cierre no pide más datos: pide capacidad de predecir y de fallar."),
+        ],
+    ),
     # ---------- 'Los sellos de advertencia: qué dicen y qué no dicen' ----------
     _ql(
         "sellos_advertencia", "lec_localizar", "facil",
