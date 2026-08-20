@@ -123,6 +123,54 @@ export default async function AdminPage() {
         );
       })()}
 
+      {/* ── Embudo por campaña ───────────────────────────────────────── */}
+      {/* Es la pantalla que decide dónde se gasta la plata de publicidad.
+          Se dibuja solo si la API ya trae el dato, como el resto del panel. */}
+      {p.campanas && p.campanas.length > 0 && (
+        <Seccion titulo="Por campaña (30 días)">
+          <p className="mb-3 text-xs leading-relaxed text-muted">
+            Cada visitante le cuenta a la <strong>primera</strong> campaña que
+            lo trajo, aunque después vuelva por otra. &quot;Pagaron&quot; son
+            órdenes confirmadas, no planes regalados con código: si no, una
+            campaña parecería rentable con dinero que nadie pagó.
+          </p>
+          <Tabla
+            titulo="Visitas, registros, ensayos y pagos"
+            cabeceras={[
+              "Campaña",
+              "Creatividad",
+              "Fuente",
+              "Visitantes",
+              "Registros",
+              "Ensayo",
+              "Pagaron",
+              "% registro",
+              "% pago",
+            ]}
+            vacio="Todavía no llega tráfico con campaña etiquetada."
+            filas={p.campanas.map((c) => [
+              c.campaign ?? (
+                <span className="text-muted">Sin campaña (directo u orgánico)</span>
+              ),
+              c.content ?? <span className="text-muted">—</span>,
+              c.source ?? <span className="text-muted">—</span>,
+              <span key="v" className="tabular-nums">{c.visitantes}</span>,
+              <span key="r" className="tabular-nums">{c.registrados}</span>,
+              <span key="e" className="tabular-nums">{c.con_ensayo_terminado}</span>,
+              <span key="p" className="tabular-nums font-semibold">{c.pagaron}</span>,
+              <span key="tr" className="tabular-nums">{porcentaje(c.tasa_registro)}</span>,
+              <span key="tp" className="tabular-nums">{porcentaje(c.tasa_pago)}</span>,
+            ])}
+          />
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            Para que un anuncio aparezca acá, su enlace tiene que llevar los
+            parámetros: <code>?utm_source=instagram&amp;utm_medium=cpc&amp;utm_campaign=lanzamiento&amp;utm_content=video-15s</code>.
+            Un enlace sin etiquetar cae en la fila de &quot;sin campaña&quot; y
+            no se puede distinguir de nada.
+          </p>
+        </Seccion>
+      )}
+
       {p.retencion && (() => {
         const retencion = p.retencion;
         return (
