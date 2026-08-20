@@ -48,3 +48,19 @@ class LessonOut(BaseModel):
     example_statement: str
     example_steps: list[LessonStepOut]
     common_error: str | None = None
+
+
+class LeccionIndiceOut(BaseModel):
+    """Una lección en el índice público.
+
+    Sin el cuerpo de la lección a propósito: el índice solo necesita nombrarlas
+    y enlazarlas, y son 17 filas que se piden en cada build del sitemap y de la
+    página índice.
+    """
+
+    node_code: str
+    node_name: str
+    subject: str
+    axis: str
+    #: El eje ya escrito para mostrar ("Álgebra y Funciones").
+    axis_label: str

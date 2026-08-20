@@ -188,6 +188,30 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/skill-tree/lecciones": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Lecciones
+         * @description Los temas que ya tienen lección escrita. Público.
+         *
+         *     Lo piden el índice de /aprender y el sitemap, o sea las dos piezas que
+         *     hacen que Google llegue a las lecciones. Va ANTES de `/{code}`: si no,
+         *     FastAPI leería "lecciones" como el código de un nodo.
+         */
+        get: operations["listar_lecciones_api_skill_tree_lecciones_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/skill-tree/{code}/leccion": {
         parameters: {
             query?: never;
@@ -198,6 +222,16 @@ export interface paths {
         /**
          * Get Lesson
          * @description La teoría del nodo. 404 si el nodo todavía no tiene lección escrita.
+         *
+         *     PÚBLICO, sin sesión. Es contenido de enseñanza —qué propiedades hay que
+         *     saber, un ejercicio resuelto, el error típico—: no contiene ninguna
+         *     pregunta del banco ni ninguna respuesta correcta, así que exigir cuenta no
+         *     protegía nada y dejaba fuera de Google lo único que este proyecto tiene
+         *     para que lo encuentren buscando. Lo que sigue pidiendo cuenta es practicar
+         *     y medirse, que es el producto.
+         *
+         *     El servicio ya asumía esto: nunca miró el progreso del usuario para decidir
+         *     si entregaba la lección (ver `service.get_lesson`).
          */
         get: operations["get_lesson_api_skill_tree__code__leccion_get"];
         put?: never;
@@ -1786,6 +1820,26 @@ export interface components {
          */
         LeadSource: "demo";
         /**
+         * LeccionIndiceOut
+         * @description Una lección en el índice público.
+         *
+         *     Sin el cuerpo de la lección a propósito: el índice solo necesita nombrarlas
+         *     y enlazarlas, y son 17 filas que se piden en cada build del sitemap y de la
+         *     página índice.
+         */
+        LeccionIndiceOut: {
+            /** Node Code */
+            node_code: string;
+            /** Node Name */
+            node_name: string;
+            /** Subject */
+            subject: string;
+            /** Axis */
+            axis: string;
+            /** Axis Label */
+            axis_label: string;
+        };
+        /**
          * LessonOut
          * @description La teoría del nodo: lo que se estudia antes de practicar.
          */
@@ -2926,6 +2980,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SkillNodeProgressOut"] | null;
+                };
+            };
+        };
+    };
+    listar_lecciones_api_skill_tree_lecciones_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["LeccionIndiceOut"][];
                 };
             };
         };

@@ -7,8 +7,32 @@ paso del ejemplo traiga su porqué.
 
 import pytest
 from fastapi.testclient import TestClient
+from sqlalchemy.orm import Session
 
+from paes_api.modules.content.models import Lesson
+from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
 from paes_api.seed_data import LESSONS, SKILL_NODES
+
+
+def _sembrar_leccion(db_session: Session, code: str) -> SkillNode:
+    """Un nodo con su lección escrita."""
+    node = SkillNode(
+        code=code, name=f"Tema {code}", axis=SkillAxis.NUMEROS, tier=1, unlock_threshold=0.75
+    )
+    db_session.add(node)
+    db_session.flush()
+    db_session.add(
+        Lesson(
+            skill_node_id=node.id,
+            intro="Para qué sirve.",
+            theory="Lo que hay que saber.",
+            example_statement="Calcula 2 + 2.",
+            example_steps=[{"accion": "Suma", "porque": "Es una suma"}],
+            common_error="Confundirlo con 2 x 2.",
+        )
+    )
+    db_session.commit()
+    return node
 
 
 def test_todo_nodo_de_m1_tiene_leccion() -> None:
@@ -41,5 +65,41 @@ def test_leccion_de_nodo_sin_teoria_da_404(client: TestClient, register_user) ->
     assert resp.status_code == 404
 
 
-def test_leccion_exige_sesion(client: TestClient) -> None:
-    assert client.get("/api/skill-tree/num_racionales/leccion").status_code == 401
+def test_leccion_se_lee_sin_sesion(client: TestClient, db_session: Session) -> None:
+    """La lección es contenido de enseñanza: no trae ninguna pregunta del banco
+    ni ninguna respuesta correcta. Exigir cuenta no protegía nada y dejaba
+    fuera de Google lo único que se puede encontrar buscando. Lo que sigue
+    pidiendo cuenta es practicar."""
+    _sembrar_leccion(db_session, "num_publico")
+
+    resp = client.get("/api/skill-tree/num_publico/leccion")
+    assert resp.status_code == 200
+    assert resp.json()["node_code"] == "num_publico"
+
+
+def test_indice_de_lecciones_solo_trae_las_escritas(
+    client: TestClient, db_session: Session
+) -> None:
+    """Un índice que promete todos los temas y entrega las lecciones que
+    existen manda a Google a una ristra de 404."""
+    _sembrar_leccion(db_session, "con_leccion")
+    db_session.add(
+        SkillNode(
+            code="sin_leccion",
+            name="Tema sin lección",
+            axis=SkillAxis.NUMEROS,
+            tier=1,
+            unlock_threshold=0.75,
+        )
+    )
+    db_session.commit()
+
+    body = client.get("/api/skill-tree/lecciones").json()
+    assert [item["node_code"] for item in body] == ["con_leccion"]
+    assert body[0]["axis_label"] == "Números"
+
+
+def test_indice_no_se_confunde_con_el_codigo_de_un_nodo(client: TestClient) -> None:
+    """La ruta va antes que /{code}; registrada después, FastAPI leería
+    "lecciones" como el código de un nodo."""
+    assert client.get("/api/skill-tree/lecciones").status_code == 200
