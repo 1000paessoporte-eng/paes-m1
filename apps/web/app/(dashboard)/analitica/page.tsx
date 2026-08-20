@@ -7,6 +7,8 @@ import { TimeInvestedChart } from "@/components/analytics/time-invested-chart";
 import { AccuracyChart } from "@/components/analytics/accuracy-chart";
 import { DiagnosticoErrores } from "@/components/analytics/diagnostico-errores";
 import { DiagnosticoRitmo } from "@/components/analytics/diagnostico-ritmo";
+import { Constancia } from "@/components/analytics/constancia";
+import { MejoraPrecision } from "@/components/analytics/mejora-precision";
 import { EstadoVacio } from "@/components/estado-vacio";
 
 export const metadata = {
@@ -58,24 +60,34 @@ export default async function DashboardAnaliticoPage() {
     <div>
       <h1 className="text-2xl font-semibold">Analítica</h1>
       <p className="mt-1 text-sm text-muted">
-        Tiempo invertido vs. tasa de acierto, y rachas de práctica diaria.
+        Cuánto has sostenido, cuánto has mejorado y qué te conviene corregir.
       </p>
+
+      {/* Constancia y precisión van PRIMERO, antes del diagnóstico y de los
+          gráficos. Los tres bloques de abajo dicen qué corregir, y abrir una
+          pantalla de progreso con una lista de errores es la forma más rápida
+          de que alguien la cierre. Lo que sostuvo hasta acá se ve antes que lo
+          que le falta. */}
+      <div className="mt-6 grid grid-cols-1 gap-4 xl:grid-cols-2">
+        <Constancia
+          dias={summary.daily}
+          rachaActual={summary.exam_streak_days || summary.current_streak_days}
+          mejorRacha={summary.best_exam_streak_days}
+          diasActivos={summary.active_days}
+        />
+        <MejoraPrecision dias={summary.daily} />
+      </div>
 
       {/* El diagnóstico va ARRIBA de los gráficos: los gráficos dicen cuánto
           hiciste, esto dice qué arreglar. Lo segundo es lo accionable. */}
-      {diagnostico && <DiagnosticoErrores errores={diagnostico.errores} />}
-      {diagnostico?.ritmo && <DiagnosticoRitmo ritmo={diagnostico.ritmo} />}
+      <div className="mt-6">
+        {diagnostico && <DiagnosticoErrores errores={diagnostico.errores} />}
+        {diagnostico?.ritmo && <DiagnosticoRitmo ritmo={diagnostico.ritmo} />}
+      </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <StatTile
-          label="Racha actual"
-          value={`${summary.current_streak_days} ${summary.current_streak_days === 1 ? "día" : "días"}`}
-          icon={
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-1-.5-2-1-2.5.5 3 3 4 3 6.5a5 5 0 0 1-10 0c0-5.5 5-6 5-13Z" />
-            </svg>
-          }
-        />
+      {/* Los totales de siempre. Van DESPUÉS de lo que se mueve: son el
+          respaldo del relato, no el relato. */}
+      <div className="mt-6 grid grid-cols-3 gap-4">
         <StatTile
           label="Precisión global"
           value={accuracyPct}

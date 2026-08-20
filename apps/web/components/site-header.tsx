@@ -13,6 +13,7 @@ const NAV_ITEMS = [
   { href: "/panel", label: "Inicio" },
   { href: "/arbol", label: "Árbol" },
   { href: "/examen", label: "Ensayos" },
+  { href: "/repaso", label: "Repaso" },
   { href: "/meta", label: "Mi meta" },
   { href: "/historial", label: "Progreso" },
   { href: "/analitica", label: "Analítica" },

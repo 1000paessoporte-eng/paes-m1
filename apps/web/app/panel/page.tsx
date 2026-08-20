@@ -8,6 +8,7 @@ import {
   getMiPlan,
   getOnboarding,
   getRecommendedNode,
+  getRepasoResumen,
   getSkillTree,
   listExamAttempts,
   type BreakdownItem,
@@ -44,7 +45,8 @@ export default async function PanelPage() {
   // la tarjeta correspondiente se degrada a su estado vacío en vez de tumbar
   // toda la página.
   const ultimoRendido = attempts.find((a) => a.status === "submitted");
-  const [nodos, recomendado, analytics, meta, onboarding, plan, porEje] = await Promise.all([
+  const [nodos, recomendado, analytics, meta, onboarding, plan, repaso, porEje] =
+    await Promise.all([
     getSkillTree(token).catch(() => []),
     getRecommendedNode(token).catch(() => null),
     getAnalyticsSummary(token).catch(() => null),
@@ -53,6 +55,7 @@ export default async function PanelPage() {
     // Si falla, el panel se dibuja sin el bloque de Pro. Un aviso comercial no
     // vale romper la pantalla principal del alumno.
     getMiPlan(token).catch(() => null),
+    getRepasoResumen(token).catch(() => null),
     ultimoRendido
       ? getExamResult(ultimoRendido.attempt_id, token)
           .then((r): BreakdownItem[] => r.by_axis)
@@ -72,6 +75,7 @@ export default async function PanelPage() {
       meta={meta}
       onboarding={onboarding}
       plan={plan}
+      repaso={repaso}
     />
   );
 }

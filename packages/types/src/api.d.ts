@@ -648,6 +648,61 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/repaso/resumen": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Resumen
+         * @description Qué toca hoy. Lo consulta el panel, así que corre en cada visita: por eso
+         *     la puesta al día de la cola vive acá y no en el cierre del ensayo.
+         */
+        get: operations["resumen_api_repaso_resumen_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/repaso/sesion": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Sesion */
+        get: operations["sesion_api_repaso_sesion_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/repaso/responder": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Responder */
+        post: operations["responder_api_repaso_responder_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/reminders/run": {
         parameters: {
             query?: never;
@@ -2457,6 +2512,15 @@ export interface components {
             /** Name */
             name: string;
         };
+        /** RepasoAlternativaOut */
+        RepasoAlternativaOut: {
+            /** Id */
+            id: number;
+            /** Label */
+            label: string;
+            /** Text */
+            text: string;
+        };
         /**
          * RepasoOut
          * @description Sugerencia para el boton "Ensayo de repaso": los ejes de los nodos
@@ -2471,6 +2535,78 @@ export interface components {
             axes: string[];
             /** Axis Labels */
             axis_labels: string[];
+        };
+        /**
+         * RepasoPreguntaOut
+         * @description Una pregunta de la sesión. Sin `is_correct` en las alternativas: la
+         *     corrección la hace el servidor al responder, como en práctica.
+         */
+        RepasoPreguntaOut: {
+            /** Question Id */
+            question_id: number;
+            difficulty: components["schemas"]["Difficulty"];
+            /** Stem */
+            stem: string;
+            /** Image Url */
+            image_url?: string | null;
+            /** Passage */
+            passage?: string | null;
+            /** Node Name */
+            node_name: string;
+            /** Alternatives */
+            alternatives: components["schemas"]["RepasoAlternativaOut"][];
+            /** Veces Fallada */
+            veces_fallada: number;
+            /** Nivel */
+            nivel: number;
+        };
+        /** RepasoRespuestaIn */
+        RepasoRespuestaIn: {
+            /** Question Id */
+            question_id: number;
+            /** Selected Alternative Id */
+            selected_alternative_id: number;
+        };
+        /** RepasoRespuestaOut */
+        RepasoRespuestaOut: {
+            /** Is Correct */
+            is_correct: boolean;
+            /** Correct Alternative Id */
+            correct_alternative_id: number;
+            /** Explanation */
+            explanation?: string | null;
+            /** Distractor Justification */
+            distractor_justification?: string | null;
+            /** Proxima Fecha */
+            proxima_fecha?: string | null;
+            /**
+             * Dominada
+             * @default false
+             */
+            dominada: boolean;
+            /** Nivel */
+            nivel: number;
+        };
+        /**
+         * RepasoResumenOut
+         * @description Los tres números de la tarjeta del panel.
+         */
+        RepasoResumenOut: {
+            /** Pendientes Hoy */
+            pendientes_hoy: number;
+            /** En Repaso */
+            en_repaso: number;
+            /** Dominadas */
+            dominadas: number;
+            /** Proxima Fecha */
+            proxima_fecha?: string | null;
+        };
+        /** RepasoSesionOut */
+        RepasoSesionOut: {
+            /** Preguntas */
+            preguntas: components["schemas"]["RepasoPreguntaOut"][];
+            /** Pendientes Totales */
+            pendientes_totales: number;
         };
         /** ResetPasswordIn */
         ResetPasswordIn: {
@@ -3958,6 +4094,79 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["PracticeAnswerOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    resumen_api_repaso_resumen_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RepasoResumenOut"];
+                };
+            };
+        };
+    };
+    sesion_api_repaso_sesion_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RepasoSesionOut"];
+                };
+            };
+        };
+    };
+    responder_api_repaso_responder_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["RepasoRespuestaIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RepasoRespuestaOut"];
                 };
             };
             /** @description Validation Error */

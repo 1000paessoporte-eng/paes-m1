@@ -7,6 +7,7 @@ import type {
   Meta,
   MiPlan,
   Onboarding,
+  RepasoResumen,
   SkillNode,
 } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
@@ -19,6 +20,7 @@ import { Cuestionario } from "@/components/onboarding/cuestionario";
 import { MetaModulo } from "@/components/dashboard/meta-modulo";
 import { ProModulo } from "@/components/dashboard/pro-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
+import { RepasoModulo } from "@/components/dashboard/repaso-modulo";
 import { Insignias, Racha } from "@/components/gamificacion/logros";
 import { calcularLogros } from "@/lib/logros";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
@@ -49,6 +51,8 @@ interface Props {
   ejesDe: string | null;
   //: Plan del alumno, para decidir si corresponde ofrecerle Pro.
   plan?: MiPlan | null;
+  //: Qué le toca repasar hoy. Null si el endpoint falló.
+  repaso?: RepasoResumen | null;
 }
 
 export function PanelDashboard({
@@ -62,6 +66,7 @@ export function PanelDashboard({
   onboarding,
   ejesDe,
   plan,
+  repaso,
 }: Props) {
   const rendidos = attempts.filter((a) => a.status === "submitted");
   const puntajes = rendidos.map((a) => a.estimated_score ?? 0);
@@ -156,6 +161,17 @@ export function PanelDashboard({
               tiempoTotal={tiempoTotalSegundos}
             />
           </div>
+
+          {/* El repaso va ANTES que el progreso: de todo el panel, es lo
+              único que propone una tarea cerrada --"estas ocho preguntas"-- en
+              vez de otra decisión que tomar. Los días de quince minutos es lo
+              que salva la sesión. Solo aparece cuando hay algo real que hacer:
+              una tarjeta que dice "0" es una tarjeta que sobra. */}
+          {repaso && (repaso.pendientes_hoy > 0 || repaso.en_repaso > 0) && (
+            <Reveal delay={0.04}>
+              <RepasoModulo resumen={repaso} />
+            </Reveal>
+          )}
 
           {/* Progreso y analítica */}
           <Reveal delay={0.05}>

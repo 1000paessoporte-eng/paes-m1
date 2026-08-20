@@ -5,6 +5,10 @@ import { usePathname, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { ProgressChart } from "@/components/history/progress-chart";
+import { AvancePanel } from "@/components/history/avance-panel";
+import { HitosPanel } from "@/components/history/hitos-panel";
+import { avancePorPrueba, hitos } from "@/lib/progreso";
+import { NOMBRE_CORTO } from "@/lib/colores-prueba";
 import { ApiError, deleteExamAttempt, type ExamAttemptSummary } from "@/lib/api";
 import { getClientToken, loginHref } from "@/lib/auth";
 import { formatearTiempo } from "@/lib/tiempo";
@@ -15,40 +19,40 @@ const FECHA_FMT = new Intl.DateTimeFormat("es-CL", {
   year: "numeric",
 });
 
-interface ResumenProgreso {
-  totalEnsayos: number;
-  mejorPuntaje: number;
-  puntajePromedio: number;
-  ultimoPuntaje: number;
-  /** Diferencia entre el último puntaje y el anterior. */
-  variacion: number;
-}
-
-function resumirProgreso(intentos: ExamAttemptSummary[]): ResumenProgreso | null {
-  if (intentos.length === 0) return null;
-  const puntajes = intentos.map((i) => i.estimated_score ?? 0);
-  const suma = puntajes.reduce((a, b) => a + b, 0);
-  return {
-    totalEnsayos: intentos.length,
-    mejorPuntaje: Math.max(...puntajes),
-    puntajePromedio: Math.round(suma / intentos.length),
-    ultimoPuntaje: puntajes[0],
-    variacion: puntajes.length > 1 ? puntajes[0] - puntajes[1] : 0,
-  };
+/** Lo que la analítica aporta acá y el historial no sabe por su cuenta. */
+export interface ContextoAnalitica {
+  preguntasRespondidas: number;
+  mejorRacha: number;
 }
 
 interface Props {
   intentos: ExamAttemptSummary[];
+  /** Puede faltar: si la analítica falla, el historial se muestra igual. */
+  analitica?: ContextoAnalitica | null;
 }
 
-export function HistoryView({ intentos }: Props) {
+export function HistoryView({ intentos, analitica }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const [borrando, setBorrando] = useState<number | null>(null);
   const [confirmarBorrado, setConfirmarBorrado] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const resumen = useMemo(() => resumirProgreso(intentos), [intentos]);
+  const avances = useMemo(() => avancePorPrueba(intentos), [intentos]);
+
+  const logros = useMemo(() => {
+    const puntajes = intentos.map((i) => i.estimated_score ?? 0);
+    return hitos({
+      ensayos: intentos.length,
+      // Si la analítica no respondió, las respuestas de los propios ensayos
+      // son una cota inferior honesta: cuenta de menos, nunca de más.
+      preguntasRespondidas:
+        analitica?.preguntasRespondidas ??
+        intentos.reduce((total, i) => total + i.answered, 0),
+      mejorPuntaje: puntajes.length > 0 ? Math.max(...puntajes) : 0,
+      mejorRacha: analitica?.mejorRacha ?? 0,
+    });
+  }, [intentos, analitica]);
 
   async function borrar(id: number) {
     setBorrando(id);
@@ -127,18 +131,31 @@ export function HistoryView({ intentos }: Props) {
         </p>
       ) : (
         <>
-          {resumen && (
-            <section className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <Tarjeta etiqueta="Mejor puntaje" valor={resumen.mejorPuntaje} destacado />
-              <Tarjeta etiqueta="Promedio" valor={resumen.puntajePromedio} />
-              <Tarjeta
-                etiqueta="Último"
-                valor={resumen.ultimoPuntaje}
-                variacion={resumen.variacion}
-              />
-              <Tarjeta etiqueta="Ensayos" valor={resumen.totalEnsayos} />
+          <AvancePanel avances={avances} />
+
+          {/* Con un solo ensayo de cada prueba todavía no hay avance que medir.
+              En vez de una tarjeta vacía, se nombra el punto de partida: es el
+              número contra el que va a compararse el resto del año. */}
+          {avances.length === 0 && (
+            <section className="mb-6 rounded-2xl border border-border bg-surface p-5 sm:p-6">
+              <p className="text-xs font-medium tracking-wide text-muted uppercase">
+                Tu punto de partida
+              </p>
+              <p className="mt-1 text-5xl leading-none font-bold sm:text-6xl">
+                {intentos[0].estimated_score ?? "—"}
+                <span className="ml-2 align-middle text-lg font-semibold text-muted">
+                  puntos
+                </span>
+              </p>
+              <p className="mt-2.5 text-sm text-muted">
+                Es tu primer ensayo de {NOMBRE_CORTO[intentos[0].subject]}. Rinde
+                uno más y esta pantalla empieza a mostrarte cuánto subiste desde
+                acá.
+              </p>
             </section>
           )}
+
+          <HitosPanel logrados={logros.logrados} siguientes={logros.siguientes} />
 
           {intentos.length >= 2 && (
             <section className="mb-6 rounded-xl border border-border bg-surface p-4">
@@ -228,40 +245,6 @@ export function HistoryView({ intentos }: Props) {
             </div>
           </div>
         </div>
-      )}
-    </div>
-  );
-}
-
-function Tarjeta({
-  etiqueta,
-  valor,
-  variacion,
-  destacado = false,
-}: {
-  etiqueta: string;
-  valor: number;
-  variacion?: number;
-  destacado?: boolean;
-}) {
-  return (
-    <div
-      className={cn(
-        "rounded-xl border p-3",
-        destacado ? "border-accent/40 bg-accent/5" : "border-border bg-surface"
-      )}
-    >
-      <p className="text-xs text-muted">{etiqueta}</p>
-      <p className="mt-0.5 text-2xl font-bold tabular-nums">{valor}</p>
-      {variacion !== undefined && variacion !== 0 && (
-        <p
-          className={cn(
-            "text-xs font-medium tabular-nums",
-            variacion > 0 ? "text-success" : "text-danger"
-          )}
-        >
-          {variacion > 0 ? "↑" : "↓"} {Math.abs(variacion)} vs. anterior
-        </p>
       )}
     </div>
   );
