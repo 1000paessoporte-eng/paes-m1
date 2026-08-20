@@ -21383,6 +21383,104 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "estilos_aprendizaje",
+        "title": "El estilo que nadie encontró",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes."
+        ),
+        "body": (
+            "En muchos establecimientos se pide a los profesores identificar el "
+            "«estilo de aprendizaje» de cada estudiante —visual, auditivo o "
+            "kinestésico— y adaptar la clase a esa clasificación. La idea lleva más "
+            "de cuatro décadas circulando por capacitaciones, manuales y fichas "
+            "fotocopiadas, y las encuestas a docentes muestran que la mayoría la da "
+            "por cierta. Es, probablemente, la creencia más extendida sobre cómo se "
+            "aprende. También es una de las peor sostenidas por la evidencia "
+            "disponible.\n\n"
+            "Conviene separar dos afirmaciones que suelen viajar juntas. La primera "
+            "es que las personas tienen preferencias sobre cómo recibir "
+            "información: hay quien prefiere un esquema y quien prefiere que se lo "
+            "expliquen en voz alta. Eso está bien documentado y nadie lo discute. "
+            "La segunda es distinta y mucho más ambiciosa: sostiene que se aprende "
+            "más cuando el modo de enseñar coincide con la preferencia de quien "
+            "aprende. Es esta segunda afirmación —la hipótesis de correspondencia— "
+            "la que está en cuestión, y es también la única que justificaría "
+            "cambiar la manera de hacer clases.\n\n"
+            "Ponerla a prueba no es complicado de imaginar. Se clasifica a un grupo "
+            "de estudiantes según su preferencia declarada, se los reparte al azar "
+            "en dos condiciones, se enseña el mismo contenido a unos con material "
+            "visual y a otros con material auditivo, y se evalúa a todos con la "
+            "misma prueba. La predicción de la hipótesis es específica y exigente: "
+            "tiene que aparecer un cruce. Los clasificados como visuales deben "
+            "rendir mejor con el material visual, y los clasificados como auditivos "
+            "deben rendir mejor con el auditivo. No basta con que a alguien le vaya "
+            "bien con imágenes; hace falta que el orden entre los grupos se "
+            "invierta al cambiar de formato. Si no se invierte, lo que explica el "
+            "resultado es el material, no la persona.\n\n"
+            "Cuando se han hecho estudios con ese diseño, el cruce no aparece. "
+            "Ambos grupos rinden de manera parecida, y lo que predice el resultado "
+            "es la calidad del material y la dificultad de la tarea. Los "
+            "estudiantes sí declaran su preferencia con seguridad y sí reportan "
+            "sentirse más cómodos cuando reciben el formato que eligieron; esa "
+            "comodidad, sin embargo, no se tradujo en más aprendizaje. Las "
+            "revisiones que fueron a buscar investigaciones con este diseño "
+            "encontraron pocas, y entre las que lo cumplían, la mayoría no halló el "
+            "efecto.\n\n"
+            "Un ejemplo inventado ayuda a ver la diferencia. Imaginemos un curso "
+            "donde los declarados visuales obtienen 70 puntos con el material "
+            "visual y 68 con el auditivo, y los declarados auditivos obtienen 69 "
+            "con el visual y 67 con el auditivo. Todos rindieron algo mejor con el "
+            "material visual, incluidos los auditivos: eso no es correspondencia, "
+            "es simplemente un material mejor hecho. La hipótesis solo quedaría en "
+            "pie si los auditivos hubieran superado a los visuales precisamente en "
+            "la condición auditiva. Es esa inversión, y no el puntaje alto de "
+            "nadie, lo que hay que ir a buscar.\n\n"
+            "Vale la pena decir con precisión qué no se está afirmando aquí. No se "
+            "sostiene que todos aprendan igual ni que dé lo mismo enseñar con "
+            "imágenes que con palabras. Al contrario: el formato importa, y mucho. "
+            "Lo que ocurre es que lo determina el contenido y no la persona. Un "
+            "mapa se entiende mirándolo, la pronunciación de una lengua se aprende "
+            "oyéndola y andar en bicicleta se aprende andando. A nadie se le "
+            "ocurriría enseñar geografía dictando coordenadas por muy auditivo que "
+            "se declare el curso.\n\n"
+            "Si la evidencia es tan poco favorable, cabe preguntarse por qué la "
+            "idea sigue viva. Tiene varias virtudes que no dependen de ser "
+            "verdadera. Explica las diferencias entre estudiantes sin culpar a "
+            "nadie: nadie es malo para el ramo, cada uno tiene su canal. Le entrega "
+            "al docente un plan concreto en un oficio donde casi nunca los hay. Y "
+            "encaja con la experiencia cotidiana de que a cada cual le resulta más "
+            "cómoda una manera de estudiar. A eso se suma un problema del "
+            "instrumento: la ficha se responde sola, porque quien la contesta ya "
+            "llega convencido de tener un estilo y elige las alternativas que lo "
+            "confirman.\n\n"
+            "El costo de creerla no es cero. Una etiqueta que empieza siendo una "
+            "descripción termina funcionando como un límite: «yo soy visual, por "
+            "eso no entiendo cuando explican», «no soy de números». Se invierten "
+            "horas y presupuesto en clasificar cursos y en preparar tres versiones "
+            "del mismo material. Y, sobre todo, se desplaza el tiempo que podría "
+            "dedicarse a prácticas que sí tienen respaldo.\n\n"
+            "Porque las hay. Distribuir el estudio en el tiempo en lugar de "
+            "acumularlo la víspera; ponerse a prueba tratando de recordar sin mirar "
+            "el cuaderno, en vez de releerlo; explicar el contenido con palabras "
+            "propias; alternar problemas de distinto tipo en lugar de hacer veinte "
+            "iguales seguidos. Ninguna de estas prácticas es popular, y hay una "
+            "razón: mientras se hacen se sienten más difíciles y dan la impresión "
+            "de que uno está aprendiendo menos. Ese esfuerzo es justamente parte "
+            "del motivo por el que funcionan.\n\n"
+            "Queda por decir hasta dónde llega lo anterior. No se ha demostrado que "
+            "los estilos «no existan», ni que las preferencias sean irrelevantes "
+            "para la motivación o para el ánimo con que alguien se sienta a "
+            "estudiar. Lo que se puso a prueba es una afirmación precisa —que "
+            "enseñar en el formato preferido mejora el aprendizaje— y esa "
+            "afirmación no se sostuvo en los estudios que la midieron bien. Es "
+            "posible que en algún dominio todavía no estudiado el efecto aparezca. "
+            "Pero mientras eso no ocurra, apoyar la práctica escolar en una "
+            "hipótesis que falló las pruebas que se le hicieron es una decisión que "
+            "alguien toma, no una consecuencia de la evidencia."
+        ),
+    },
+    {
         "key": "version_hermano",
         "title": "La versión de mi hermano",
         "kind": "literario",
@@ -23007,6 +23105,195 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El estilo que nadie encontró' ----------
+    _ql(
+        "estilos_aprendizaje", "lec_localizar", "facil",
+        "Según el texto, ¿qué sostiene exactamente la hipótesis de correspondencia?",
+        "Que se aprende más cuando el modo de enseñar coincide con la preferencia "
+        "de quien aprende",
+        "El segundo párrafo separa dos afirmaciones y nombra la hipótesis con "
+        "precisión: sostiene «que se aprende más cuando el modo de enseñar coincide "
+        "con la preferencia de quien aprende».\n\nEl texto insiste en que esa es "
+        "«la única que justificaría cambiar la manera de hacer clases», a "
+        "diferencia de la simple existencia de preferencias.",
+        [
+            ("Que las personas tienen preferencias sobre cómo recibir información", "Esa es la primera afirmación, la que el texto da por bien documentada y no discute."),
+            ("Que cada contenido se entiende mejor en un formato determinado", "Eso es lo que el texto afirma por su cuenta al delimitar la crítica, no la hipótesis cuestionada."),
+            ("Que las preferencias de estudio influyen en la motivación", "El cierre admite eso como posible, y es distinto de aprender más por recibir el formato preferido."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_localizar", "facil",
+        "¿Cuáles de estas prácticas menciona el texto como respaldadas por la "
+        "evidencia?",
+        "Distribuir el estudio en el tiempo y ponerse a prueba recordando sin mirar "
+        "el cuaderno",
+        "El párrafo que empieza «Porque las hay» las enumera: distribuir el estudio "
+        "en vez de acumularlo la víspera, ponerse a prueba tratando de recordar sin "
+        "mirar, explicar con palabras propias y alternar problemas de distinto "
+        "tipo.\n\nEl texto agrega que no son populares porque «mientras se hacen se "
+        "sienten más difíciles».",
+        [
+            ("Releer el cuaderno varias veces y subrayar lo más importante", "Releer es justamente la práctica que el texto contrapone a ponerse a prueba."),
+            ("Preparar tres versiones del mismo material, una por cada canal", "Eso es lo que el texto describe como gasto de horas y presupuesto sin respaldo."),
+            ("Resolver muchos problemas del mismo tipo seguidos hasta automatizarlos", "El texto recomienda lo contrario: alternar problemas de distinto tipo."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_localizar", "facil",
+        "¿Qué reportaron los estudiantes en los estudios que menciona el texto?",
+        "Que se sentían más cómodos con el formato que habían elegido, aunque eso "
+        "no se tradujo en más aprendizaje",
+        "El cuarto párrafo lo dice en esos términos: los estudiantes «sí reportan "
+        "sentirse más cómodos cuando reciben el formato que eligieron; esa "
+        "comodidad, sin embargo, no se tradujo en más aprendizaje».\n\nTambién "
+        "declaran su preferencia «con seguridad», detalle que el texto aprovecha "
+        "después para hablar del instrumento.",
+        [
+            ("Que les costaba reconocer cuál era su formato preferido", "El texto dice lo contrario: declaran su preferencia con seguridad."),
+            ("Que rendían mejor cuando el material coincidía con su preferencia", "Ese es el resultado que la hipótesis predice y que los estudios no encontraron."),
+            ("Que preferían que el profesor combinara los tres canales en cada clase", "El texto no recoge ninguna preferencia de los estudiantes por combinar canales."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_interpretar", "medio",
+        "¿Qué función cumple en el texto la mención al mapa, a la pronunciación de "
+        "una lengua y a andar en bicicleta?",
+        "Delimitar la crítica, mostrando que el formato sí importa pero lo fija el "
+        "contenido y no la persona",
+        "Esos tres ejemplos aparecen en el párrafo que empieza «Vale la pena decir "
+        "con precisión qué no se está afirmando aquí», y sirven para acotar el "
+        "alcance de la crítica: «el formato importa, y mucho. Lo que ocurre es que "
+        "lo determina el contenido y no la persona».\n\nSin ese párrafo, el lector "
+        "podría concluir que al autor le da lo mismo cómo se enseñe, que es "
+        "exactamente lo contrario de lo que dice.",
+        [
+            ("Demostrar que los estilos de aprendizaje sí existen en ciertas materias", "Los ejemplos hablan del contenido que se enseña, no de rasgos de quien aprende."),
+            ("Ilustrar cómo se clasifica a un estudiante como visual, auditivo o kinestésico", "Ninguno de los tres describe un procedimiento de clasificación de personas."),
+            ("Reconocer que en algunas asignaturas la hipótesis de correspondencia se cumple", "El texto no concede eso en ningún momento: sostiene que el formato lo pide la materia."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_evaluar", "medio",
+        "De acuerdo con el texto, ¿qué tendría que mostrar un estudio para que la "
+        "hipótesis de correspondencia quedara respaldada?",
+        "Que al cambiar de formato se invierte el orden de rendimiento entre los "
+        "dos grupos",
+        "El tercer párrafo fija la exigencia: «tiene que aparecer un cruce». Los "
+        "visuales deben rendir mejor con material visual y los auditivos mejor con "
+        "el auditivo.\n\nY advierte por qué no basta menos que eso: «No basta con "
+        "que a alguien le vaya bien con imágenes; hace falta que el orden entre los "
+        "grupos se invierta al cambiar de formato. Si no se invierte, lo que "
+        "explica el resultado es el material, no la persona».",
+        [
+            ("Que los estudiantes clasificados como visuales obtengan buenos puntajes con material visual", "El texto descarta expresamente ese resultado: sin la inversión, lo explica la calidad del material."),
+            ("Que los estudiantes declaren sentirse más cómodos con el formato que prefieren", "Eso ya ocurre en los estudios y el texto lo distingue del aprendizaje."),
+            ("Que la mayoría de los docentes encuestados considere útil la clasificación", "La opinión de los docentes es lo que el texto pone en duda, no una prueba de la hipótesis."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_interpretar", "dificil",
+        "En el ejemplo inventado del texto, los visuales obtienen 70 puntos con "
+        "material visual y 68 con auditivo, y los auditivos obtienen 69 con el "
+        "visual y 67 con el auditivo. ¿Por qué ese resultado no apoya la hipótesis?",
+        "Porque los dos grupos rindieron mejor con el mismo material, así que la "
+        "diferencia se explica por el material y no por la preferencia",
+        "En esas cifras todos rinden mejor en la condición visual, incluidos los "
+        "declarados auditivos (69 contra 67). El texto lo interpreta así: «eso no "
+        "es correspondencia, es simplemente un material mejor hecho».\n\nPara que "
+        "la hipótesis quedara en pie, «los auditivos hubieran superado a los "
+        "visuales precisamente en la condición auditiva», y aquí no ocurre.",
+        [
+            ("Porque las diferencias entre 70, 69, 68 y 67 puntos son demasiado pequeñas para ser reales", "El texto no discute el tamaño de las diferencias, sino el patrón: falta la inversión."),
+            ("Porque los visuales obtuvieron el puntaje más alto de los cuatro", "Que un grupo tenga el mejor puntaje no decide nada; el texto pide comparar cada grupo entre condiciones."),
+            ("Porque el estudio no midió a los estudiantes kinestésicos", "El ejemplo compara dos condiciones a propósito, y su problema no es a quién dejó fuera."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_interpretar", "dificil",
+        "¿Qué quiere decir el texto con que «la ficha se responde sola»?",
+        "Que quien la contesta ya cree tener un estilo, de modo que el instrumento "
+        "confirma esa creencia en vez de ponerla a prueba",
+        "La frase cierra el párrafo sobre por qué la idea sigue viva, y el propio "
+        "texto la explica: «quien la contesta ya llega convencido de tener un "
+        "estilo y elige las alternativas que lo confirman».\n\nEl reproche es al "
+        "instrumento: un cuestionario que solo puede devolver lo que el encuestado "
+        "ya suponía no aporta evidencia sobre si el estilo predice algo.",
+        [
+            ("Que las preguntas de la ficha son tan fáciles que cualquiera las responde rápido", "La crítica no es a la dificultad de responderla, sino a que el resultado viene decidido de antemano."),
+            ("Que los resultados de la ficha se calculan automáticamente sin intervención del docente", "El texto no dice nada sobre cómo se corrige o se procesa la ficha."),
+            ("Que los estudiantes copian sus respuestas de las de sus compañeros", "No hay ninguna alusión a copia entre estudiantes en el párrafo."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_interpretar", "medio",
+        "El texto afirma que ciertas prácticas «se sienten más difíciles y dan la "
+        "impresión de que uno está aprendiendo menos. Ese esfuerzo es justamente "
+        "parte del motivo por el que funcionan». ¿Qué se sigue de esa afirmación?",
+        "Que la sensación de facilidad mientras se estudia no es una buena señal de "
+        "cuánto se está aprendiendo",
+        "El texto opone dos cosas que solemos confundir: cómo se siente el estudio "
+        "mientras ocurre y cuánto queda después. Si el esfuerzo es parte de lo que "
+        "hace funcionar la práctica, entonces sentirse cómodo no indica que se esté "
+        "aprendiendo más.\n\nEs la misma distinción con que el texto desarma la "
+        "comodidad reportada por los estudiantes en el formato que prefieren.",
+        [
+            ("Que conviene elegir siempre el método de estudio más incómodo posible", "El texto no propone buscar incomodidad: menciona prácticas concretas que además tienen respaldo."),
+            ("Que los estudiantes no son capaces de juzgar qué contenidos les cuestan más", "La afirmación es sobre juzgar el aprendizaje mientras se estudia, no sobre reconocer contenidos difíciles."),
+            ("Que las prácticas eficaces son impopulares porque exigen más horas de estudio", "Lo que el texto señala no es la cantidad de horas, sino el esfuerzo dentro de cada sesión."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_evaluar", "dificil",
+        "Un lector resume el texto diciendo: «sostiene que enseñar con imágenes no "
+        "sirve». ¿Es adecuado ese resumen?",
+        "No, porque el texto afirma que el formato importa mucho y solo discute que "
+        "deba elegirse según la preferencia del estudiante",
+        "El resumen atribuye al texto lo contrario de lo que dice. El párrafo de la "
+        "delimitación es explícito: «no se sostiene que todos aprendan igual ni que "
+        "dé lo mismo enseñar con imágenes que con palabras. Al contrario: el "
+        "formato importa, y mucho».\n\nLo que el texto rechaza es un criterio de "
+        "elección —la preferencia de la persona— y propone otro: el contenido que "
+        "se enseña.",
+        [
+            ("Sí, porque el texto muestra que los estudiantes visuales no rinden mejor con imágenes", "Ese dato refuta la correspondencia, no la utilidad del material visual, que en el ejemplo rinde más para todos."),
+            ("Sí, porque el texto recomienda reemplazar los materiales por prácticas como distribuir el estudio", "Esas prácticas se proponen frente a clasificar cursos, no frente a usar imágenes."),
+            ("No, porque el texto sostiene que las imágenes sirven solo para los estudiantes clasificados como visuales", "Esa es precisamente la hipótesis que el texto considera sin respaldo."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_evaluar", "medio",
+        "¿Qué limitación de la evidencia disponible reconoce el propio texto?",
+        "Que las investigaciones hechas con el diseño adecuado son pocas",
+        "Al describir el resultado, el texto no exagera lo que hay: «las revisiones "
+        "que fueron a buscar investigaciones con este diseño encontraron pocas, y "
+        "entre las que lo cumplían, la mayoría no halló el efecto».\n\nReconocer "
+        "que la base es escasa es distinto de conceder que la hipótesis funcione: "
+        "el texto mantiene la conclusión, pero deja a la vista sobre qué se apoya.",
+        [
+            ("Que los estudios se hicieron solo con estudiantes universitarios", "El texto no menciona en ningún momento la edad ni el nivel de los participantes."),
+            ("Que ningún estudio logró clasificar a los estudiantes de manera confiable", "La clasificación por preferencia declarada se da por hecha en el diseño que describe."),
+            ("Que las revisiones disponibles se contradicen entre sí", "El texto señala que la mayoría de los estudios válidos coincide en no hallar el efecto."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_evaluar", "dificil",
+        "¿Qué actitud adopta el emisor en el párrafo final?",
+        "Acota lo que la evidencia permite concluir y aun así sostiene que apoyar "
+        "la práctica escolar en esa hipótesis es una decisión discutible",
+        "El cierre hace las dos cosas a la vez. Primero limita: «no se ha "
+        "demostrado que los estilos no existan», y admite que el efecto podría "
+        "aparecer «en algún dominio todavía no estudiado».\n\nDespués mantiene la "
+        "posición: apoyar la práctica escolar en «una hipótesis que falló las "
+        "pruebas que se le hicieron es una decisión que alguien toma, no una "
+        "consecuencia de la evidencia». Esa última frase traslada la "
+        "responsabilidad a quien decide.",
+        [
+            ("Se retracta de la crítica al admitir que la hipótesis podría ser cierta", "Admitir que un efecto podría aparecer en el futuro no es retirar la conclusión, que el párrafo repite."),
+            ("Deja la conclusión abierta para que cada establecimiento decida sin criterios", "El texto entrega un criterio explícito: la hipótesis falló las pruebas que se le hicieron."),
+            ("Sostiene que la evidencia obliga a prohibir la clasificación por estilos", "El texto habla de una decisión de quien la adopta, y en ningún momento propone prohibirla."),
+        ],
+    ),
     # ---------- 'La versión de mi hermano' ----------
     _ql(
         "version_hermano", "lec_localizar", "facil",
