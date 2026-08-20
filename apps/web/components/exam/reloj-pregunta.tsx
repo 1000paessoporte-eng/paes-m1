@@ -34,7 +34,7 @@ export function RelojPregunta({
   return (
     <div
       className={cn(
-        "flex items-baseline gap-1.5 rounded-lg px-2.5 py-1 text-xs tabular-nums transition-colors duration-700",
+        "flex items-baseline gap-1.5 rounded-lg px-2.5 py-1 text-sm tabular-nums leading-7 transition-colors duration-700",
         muyExcedido
           ? "bg-accent-warm/10 text-accent-warm-strong"
           : excedido
