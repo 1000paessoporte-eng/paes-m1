@@ -23,9 +23,13 @@ const NAV_ITEMS = [
 // login.
 const NAV_PUBLICO = [
   { href: "/", label: "Inicio" },
-  { href: "/sobre-nosotros", label: "Sobre nosotros" },
+  // El catálogo va segundo a propósito: son 1.855 fichas con las ponderaciones
+  // oficiales del DEMRE, y hasta ahora solo se llegaba a ellas por el sitemap.
+  // Sin un enlace desde el menú no las encontraba ni Google ni una persona.
+  { href: "/carreras", label: "Carreras" },
   { href: "/demo", label: "Probar sin cuenta" },
   { href: "/preguntas-frecuentes", label: "Preguntas frecuentes" },
+  { href: "/sobre-nosotros", label: "Sobre nosotros" },
 ] as const;
 
 export function SiteHeader() {

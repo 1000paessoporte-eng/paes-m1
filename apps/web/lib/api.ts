@@ -452,8 +452,8 @@ export type DemoQuestion =
 export type DemoGradeResult =
   paths["/api/demo/grade"]["post"]["responses"][200]["content"]["application/json"];
 
-export function getDemoQuestions(): Promise<DemoQuestion[]> {
-  return apiFetch<DemoQuestion[]>("/api/demo/questions");
+export function getDemoQuestions(subject: Subject = "m1"): Promise<DemoQuestion[]> {
+  return apiFetch<DemoQuestion[]>(`/api/demo/questions?subject=${subject}`);
 }
 
 export function gradeDemo(
@@ -463,6 +463,56 @@ export function gradeDemo(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ answers }),
+  });
+}
+
+export type Universidad =
+  paths["/api/carreras/universidades"]["get"]["responses"][200]["content"]["application/json"][number];
+
+/**
+ * Las universidades del catálogo, con cuántas carreras tiene cada una.
+ *
+ * Son 47 filas: se puede pedir desde la portada sin el costo de bajarse las
+ * 1.855 del catálogo completo. Mismo día de caché que el catálogo, porque el
+ * dato cambia una vez por proceso de admisión.
+ */
+export function getUniversidades(): Promise<Universidad[]> {
+  return apiFetch<Universidad[]>("/api/carreras/universidades", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 86400 },
+  });
+}
+
+export type LeadSource = components["schemas"]["LeadSource"];
+
+/**
+ * Deja el correo de alguien que todavía no tiene cuenta.
+ *
+ * Nunca lanza hacia arriba por un correo repetido: la API responde igual haya
+ * o no una fila nueva, así que quien lo deja dos veces no ve un error por algo
+ * que para él es la misma acción.
+ */
+export function dejarCorreo(email: string, source: LeadSource): Promise<{ ok: boolean }> {
+  return apiFetch<{ ok: boolean }>("/api/leads", undefined, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, source }),
+  });
+}
+
+export type UsoPublico =
+  paths["/api/metrics/uso"]["get"]["responses"][200]["content"]["application/json"];
+
+/**
+ * Cuánto se usa la plataforma. La portada lo muestra como prueba social.
+ *
+ * Se cachea diez minutos: es un dato que cambia de a poco y la portada es la
+ * página más visitada, así que no tiene sentido contar la base en cada visita.
+ */
+export function getUsoPublico(): Promise<UsoPublico> {
+  return apiFetch<UsoPublico>("/api/metrics/uso", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 600 },
   });
 }
 
