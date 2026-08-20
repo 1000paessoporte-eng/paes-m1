@@ -39,6 +39,12 @@ export default async function RepasoPage() {
 
   return (
     <RepasoRunner
+      // La identidad de la sesión son sus preguntas. Al terminar una tanda y
+      // pedir la siguiente, `router.refresh()` trae preguntas nuevas pero el
+      // componente conservaba su estado y se quedaba en la pantalla final:
+      // el botón no hacía nada visible. Con la key cambiando, React lo monta
+      // de nuevo y la tanda empieza en la primera.
+      key={sesion.preguntas.map((p) => p.question_id).join("-")}
       preguntas={sesion.preguntas}
       pendientesTotales={sesion.pendientes_totales}
     />

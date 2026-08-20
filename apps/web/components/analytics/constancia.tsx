@@ -18,6 +18,10 @@ const FECHA_LARGA = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "l
  * La racha se muestra junto a la MEJOR racha a propósito. La actual castiga
  * para siempre a quien se enfermó un martes; ver que alguna vez llegó a nueve
  * días es lo que hace que valga la pena empezar la siguiente.
+ *
+ * Las dos cuentan LO MISMO --días seguidos terminando un ensayo--. Mezclarlas
+ * con la racha de práctica dejaba pares imposibles en pantalla, del tipo
+ * "5 días seguidos / tu mejor racha: 2", que se leen como un error.
  */
 export function Constancia({
   dias,
@@ -48,7 +52,7 @@ export function Constancia({
             {rachaActual}
           </p>
           <p className="mt-1 text-xs text-muted">
-            {rachaActual === 1 ? "día seguido" : "días seguidos"}
+            {rachaActual === 1 ? "día seguido" : "días seguidos"} con ensayo
           </p>
         </div>
         <div>
