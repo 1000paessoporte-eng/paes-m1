@@ -94,6 +94,15 @@ const PRUEBAS_ROTATIVAS = [
   "Historia",
 ];
 
+/** Las cinco pruebas, para entrar directo a la demo de cada una. */
+const PRUEBAS_DEMO = [
+  { id: "lectora", corto: "Lectora" },
+  { id: "m1", corto: "Matemática M1" },
+  { id: "m2", corto: "Matemática M2" },
+  { id: "ciencias", corto: "Ciencias" },
+  { id: "historia", corto: "Historia" },
+] as const;
+
 const PASOS = [
   {
     title: "Elige tu ensayo",
@@ -200,14 +209,29 @@ export function LandingPublica({
                 <span className="h-px flex-1 bg-border" />
               </div>
               <GoogleButton redirectTo="/examen" />
+              {/* La demo era un enlace de texto bajo el botón de Google, y la
+                  usaron 3 de cada 60 visitantes. Acá se entra directo a la
+                  prueba elegida, sin cuenta y sin pasar por una pantalla
+                  intermedia a decidir. */}
+              <div className="flex flex-col items-center gap-2 lg:items-start">
+                <p className="text-sm text-muted">
+                  O prueba 5 preguntas ahora, sin crear cuenta:
+                </p>
+                <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
+                  {PRUEBAS_DEMO.map((p) => (
+                    <li key={p.id}>
+                      <Link
+                        href={`/demo?prueba=${p.id}`}
+                        className="inline-flex rounded-full border border-accent/40 bg-accent/5 px-3.5 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent/10"
+                      >
+                        {p.corto}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <p className="text-sm text-muted">
-                <Link
-                  href="/demo"
-                  className="font-medium text-accent underline-offset-4 hover:underline"
-                >
-                  Pruébalo sin cuenta
-                </Link>
-                {" · "}
                 <Link
                   href="/login"
                   className="underline-offset-4 hover:text-foreground hover:underline"

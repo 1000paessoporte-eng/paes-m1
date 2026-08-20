@@ -37,8 +37,8 @@ type Phase = "loading" | "error" | "ready" | "done";
  * iba sin haber recibido nada, y saber en qué eje falló es justamente lo que
  * vino a buscar. Debajo del desglose se puede dejar el correo sin crear cuenta.
  */
-export function DemoRunner() {
-  const [subject, setSubject] = useState<Subject>("m1");
+export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
+  const [subject, setSubject] = useState<Subject>(inicial);
   const [phase, setPhase] = useState<Phase>("loading");
   const [questions, setQuestions] = useState<DemoQuestion[]>([]);
   const [index, setIndex] = useState(0);
