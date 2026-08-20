@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Política de privacidad",
+  alternates: { canonical: "/privacidad" },
 };
 
 export default function PrivacidadPage() {
@@ -31,6 +32,12 @@ export default function PrivacidadPage() {
                 Tus respuestas, resultados y tiempos en los ensayos, y tu
                 avance en el árbol de habilidades — es lo que permite mostrar
                 tu puntaje estimado, tu historial y qué reforzar.
+              </li>
+              <li>
+                Tu correo, si nos lo dejas desde la demo sin crear cuenta. Solo
+                guardamos el correo y desde qué pantalla lo dejaste; lo usamos
+                para avisarte de material y funciones nuevas, y puedes pedir
+                que lo borremos cuando quieras.
               </li>
             </ul>
           </section>
@@ -106,8 +113,8 @@ export default function PrivacidadPage() {
             <p>
               Puedes editar tu nombre y contraseña desde tu perfil, y borrar
               intentos de ensayo individuales desde tu historial. Para acceder
-              a una copia de tus datos, corregirlos o eliminar tu cuenta por
-              completo, escríbenos a{" "}
+              a una copia de tus datos, corregirlos, eliminar tu cuenta por
+              completo o sacar tu correo de la lista de avisos, escríbenos a{" "}
               <a href="mailto:hola@1000paes.cl" className="text-accent hover:underline">
                 hola@1000paes.cl
               </a>

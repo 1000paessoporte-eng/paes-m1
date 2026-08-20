@@ -99,6 +99,18 @@ export default async function AdminPage() {
             nota={`${porcentaje(embudo.tasa_finalizacion)} de quienes lo empezaron`}
           />
         </div>
+        {/* Misma regla que el resto del panel: si la API todavía no despliega
+            este campo, la línea no se dibuja en vez de escribir "undefined". */}
+        {embudo.correos_dejados !== undefined && (
+          <p className="mt-3 text-xs leading-relaxed text-muted">
+            {embudo.correos_dejados}{" "}
+            {embudo.correos_dejados === 1
+              ? "persona dejó su correo"
+              : "personas dejaron su correo"}{" "}
+            sin crear cuenta. Es el paso intermedio entre mirar y registrarse:
+            ya no son visitas anónimas irrecuperables.
+          </p>
+        )}
         <p className="mt-3 text-xs leading-relaxed text-muted">
           Además, {embudo.visitantes_convertidos}{" "}
           {embudo.visitantes_convertidos === 1 ? "navegador estuvo" : "navegadores estuvieron"}{" "}
