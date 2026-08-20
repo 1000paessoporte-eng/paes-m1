@@ -216,14 +216,27 @@ def test_si_a_m2_le_falta_banco_propio_lo_completa_con_m1() -> None:
 
 
 @dataclass
+class _Texto:
+    kind: str
+
+
+@dataclass
 class _PreguntaTexto:
     id: int
     passage_id: int | None
+    passage: _Texto | None = None
 
 
-def _banco_de_lectura(textos: int, por_texto: int) -> list[_PreguntaTexto]:
+def _banco_de_lectura(
+    textos: int, por_texto: int, literarios: int = 1
+) -> list[_PreguntaTexto]:
+    """Los primeros `literarios` textos son literarios; el resto, no."""
     return [
-        _PreguntaTexto(id=t * 100 + k, passage_id=t)
+        _PreguntaTexto(
+            id=t * 100 + k,
+            passage_id=t,
+            passage=_Texto("literario" if t <= literarios else "no_literario"),
+        )
         for t in range(1, textos + 1)
         for k in range(por_texto)
     ]
@@ -269,3 +282,13 @@ def test_dos_ensayos_no_traen_siempre_los_mismos_textos() -> None:
     b = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
     c = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
     assert not (a == b == c)
+
+
+def test_todo_ensayo_de_lectura_trae_al_menos_un_texto_literario() -> None:
+    """El temario dedica trece conocimientos exclusivos a los literarios."""
+    banco = _banco_de_lectura(20, 9, literarios=2)
+    for _ in range(20):
+        elegidas = _select_questions(banco, [], 65, Subject.LECTORA)
+        tipos = {q.passage.kind for q in elegidas if q.passage}
+        assert "literario" in tipos
+

@@ -147,10 +147,7 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "500 mL de una disolución 0,4": str(0.4 * 0.5),
     "diluye una disolución de 100 mL y 2 mol/L": str(2 * 100 / 400),
     # Competencia Lectora: la tabla de residuos
-    "aumentaron los plásticos": str(22 - 12),
     # Competencia Lectora: la campaña del agua
-    "aplica las dos primeras medidas": str(30 + 15),
-    "gasta 150 litros al día": str(150 * 4),
     # Historia y Cs. Sociales: economía y cálculo temporal
     "4.500.000 personas ocupadas": str(round(500_000 / (4_500_000 + 500_000) * 100)),
     "IPC de un país pasa de 100 a 106": str(round((106 - 100) / 100 * 100)),
@@ -223,7 +220,6 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "a $500 los consumidores demandan 900": str(900 - 400),
     "vende 500 unidades a $2.000": f"{2_000 * 500 - 700_000:,}".replace(",", "."),
     "sector terciario entre 1960 y 2000": str(52 - 25),
-    "aumentaron los plásticos entre 2015": str(22 - 12),
     # Fuentes nuevas de Historia
     "mujeres rurales entre 1930 y 2020": str(96 - 19),
     "plebiscito de 2020 que en la municipal de 2016": f"{23_000 - 15_400:,}".replace(",", "."),
@@ -1590,13 +1586,33 @@ def main() -> int:
     for clave in CLAVES_PASAJE - usados:
         fallas.append(f"el texto '{clave}' no tiene ninguna pregunta asociada")
 
-    # Un texto continuo corto no da para preguntar; una tabla o infografía sí,
-    # porque su densidad está en los datos y no en la extensión.
-    for p in TODOS_LOS_PASAJES:
+    # La PAES usa textos de entre 915 y 1.416 palabras. El banco llegó a tener
+    # 31 de entre 83 y 369, y con esa extensión no se puede preguntar por
+    # relación entre párrafos, jerarquía de ideas ni fallas en la
+    # argumentación: la mitad del temario queda fuera y las preguntas se
+    # quedan en lo literal. El mínimo se mide en PALABRAS, que es la unidad en
+    # que está definida la prueba.
+    #
+    # A un discontinuo se le pide menos porque carga información en tablas: la
+    # densidad por palabra es mayor y estirarlo con prosa de relleno lo
+    # empeoraría.
+    # Solo se le exige a Competencia Lectora. Una fuente de Historia es otra
+    # cosa: un fragmento documental, una tabla electoral o un artículo de la
+    # Constitución, que cumplen su función en pocas líneas y que la prueba de
+    # Historia presenta así. A esas se les sigue pidiendo lo mínimo de antes.
+    for p in PASSAGES:
+        minimo = 600 if p["kind"] == "discontinuo" else 800
+        palabras = len(p["body"].split())
+        if palabras < minimo:
+            fallas.append(
+                f"lectura '{p['key']}' demasiado corta para su tipo "
+                f"({palabras} palabras, mínimo {minimo})"
+            )
+    for p in PASSAGES_HISTORIA:
         minimo = 150 if p["kind"] == "discontinuo" else 400
         if len(p["body"]) < minimo:
             fallas.append(
-                f"texto '{p['key']}' demasiado corto para su tipo "
+                f"fuente '{p['key']}' demasiado corta para su tipo "
                 f"({len(p['body'])} caracteres, mínimo {minimo})"
             )
         if not p.get("source_note"):

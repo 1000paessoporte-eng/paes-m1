@@ -225,6 +225,19 @@ def _seleccionar_por_texto(pool: list[Question], count: int) -> list[Question]:
 
     claves = list(por_texto)
     random.shuffle(claves)
+
+    # La prueba oficial siempre trae al menos un texto literario, y el temario
+    # dedica trece conocimientos exclusivos a ese tipo de lectura. Se adelanta
+    # uno al comienzo de la fila para que ningún ensayo se quede sin él.
+    literarias = [
+        c for c in claves
+        if (por_texto[c][0].passage is not None
+            and por_texto[c][0].passage.kind == "literario")
+    ]
+    if literarias:
+        primera = literarias[0]
+        claves.remove(primera)
+        claves.insert(0, primera)
     elegidas: list[Question] = []
     for clave in claves:
         falta = count - len(elegidas)
