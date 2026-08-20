@@ -247,6 +247,49 @@ class AlumnosOut(BaseModel):
     detalle: list[AlumnoDetalle]
 
 
+class EmbudoCampanaOut(BaseModel):
+    """El embudo de UNA campaña, en los últimos 30 días.
+
+    Es la pregunta que motivó todo esto: antes de gastar el primer peso en
+    publicidad hay que poder responder qué anuncio trajo a quien terminó
+    pagando. El referrer no alcanza —el navegador interno de Instagram muchas
+    veces no manda ninguno, y cuando manda "instagram.com" todos los anuncios
+    se ven iguales—, así que la campaña viaja en la URL y se guarda en la
+    visita.
+
+    ATRIBUCIÓN DE PRIMER TOQUE: cada visitante cuenta para la PRIMERA campaña
+    que lo trajo, aunque después vuelva por otra. No es la única forma de
+    repartir el crédito, pero es la única que se puede sostener sin inventar
+    pesos entre toques.
+
+    `campaign` en null es el tráfico que llegó sin campaña: directo, orgánico o
+    un enlace sin etiquetar. Va como una fila más para que la tabla sume el
+    total real y se vea qué parte del tráfico está atribuida.
+    """
+
+    source: str | None
+    medium: str | None
+    campaign: str | None
+    #: La creatividad concreta. Dos filas con la misma campaign y distinto
+    #: content son dos anuncios de la misma campaña.
+    content: str | None
+
+    #: Navegadores distintos que entraron por esta campaña.
+    visitantes: int
+    #: De esos, cuántos aparecieron después con una cuenta iniciada.
+    registrados: int
+    #: De esos, cuántos terminaron al menos un ensayo.
+    con_ensayo_terminado: int
+    #: De esos, cuántos pagaron de verdad. Cuenta órdenes confirmadas, no
+    #: suscripciones: un plan regalado con código no es plata que entró.
+    pagaron: int
+
+    tasa_registro: float | None
+    #: Sobre visitantes, no sobre registrados: la pregunta del anuncio es
+    #: cuánto cuesta traer a alguien que paga, no cuánto convierte el producto.
+    tasa_pago: float | None
+
+
 class AdminMetricsOut(BaseModel):
     generado_en: datetime
     usuarios: UsuariosOut
@@ -254,6 +297,7 @@ class AdminMetricsOut(BaseModel):
     visitas: VisitasOut
     contenido: ContenidoOut
     embudo: EmbudoOut
+    campanas: list[EmbudoCampanaOut]
     retencion: RetencionOut
     ensayos: EnsayosOut
     banco: BancoOut

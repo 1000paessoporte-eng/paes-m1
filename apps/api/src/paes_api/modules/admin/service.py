@@ -20,6 +20,7 @@ from paes_api.modules.admin.schemas import (
     CoberturaPrueba,
     ContenidoOut,
     ConteoPeriodo,
+    EmbudoCampanaOut,
     EmbudoOut,
     EnsayosOut,
     NodoFlojo,
@@ -36,6 +37,7 @@ from paes_api.modules.admin.schemas import (
     VisitantesOut,
     VisitasOut,
 )
+from paes_api.modules.billing.models import Pago, PagoStatus
 from paes_api.modules.content.models import Alternative, Question
 from paes_api.modules.exam_focus.models import AttemptStatus, ExamAnswer, ExamAttempt
 from paes_api.modules.exam_focus.scoring import SCORING_BY_SUBJECT
@@ -421,6 +423,139 @@ def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
         tasa_activacion=_tasa(con_ensayo, registrados),
         tasa_finalizacion=_tasa(terminado, con_ensayo),
         visitantes_convertidos=convertidos,
+    )
+
+
+def _campanas(db: Session, ahora: datetime) -> list[EmbudoCampanaOut]:
+    """El embudo partido por campaña: visitas, registros, ensayos y pagos.
+
+    ATRIBUCIÓN DE PRIMER TOQUE. Cada visitante cuenta para la primera campaña
+    que lo trajo. Repartir el crédito entre varios toques exige inventar pesos,
+    y un número inventado en la pantalla que decide dónde gastar la plata es
+    peor que no tenerlo.
+
+    El primer toque se arma en Python y no en SQL a propósito: la consulta se
+    acota antes a las visitas CON campaña, que son los clics de anuncios y no
+    el tráfico entero, y una función de ventana sobre toda la tabla sería más
+    difícil de leer para ganar nada a este volumen. Si algún día las visitas
+    con campaña dejan de caber cómodas en memoria, este es el lugar a mirar.
+
+    La ventana son 30 días, como el resto del panel: un clic de hace 40 días
+    que paga hoy no aparece. Es un sesgo conocido y consciente, no un error.
+    """
+    _, _, hace_30 = _ventanas(ahora)
+
+    # ── Primer toque por visitante ──────────────────────────────────────
+    filas = db.execute(
+        select(
+            PageView.visitor_id,
+            PageView.utm_source,
+            PageView.utm_medium,
+            PageView.utm_campaign,
+            PageView.utm_content,
+        )
+        .where(
+            PageView.created_at >= hace_30,
+            PageView.utm_campaign.is_not(None),
+            _humanas(),
+        )
+        .order_by(PageView.created_at)
+    ).all()
+
+    primer_toque: dict[str, tuple[str | None, str | None, str | None, str | None]] = {}
+    for visitor_id, fuente, medio, campana, contenido in filas:
+        primer_toque.setdefault(visitor_id, (fuente, medio, campana, contenido))
+
+    # ── El tráfico sin campaña, como una fila más ───────────────────────
+    # Sin esta fila la tabla no suma el total y no se ve qué parte del tráfico
+    # está atribuida, que es justo lo que hay que saber antes de leer el resto.
+    sin_campana = set(
+        db.execute(
+            select(func.distinct(PageView.visitor_id)).where(
+                PageView.created_at >= hace_30, _humanas()
+            )
+        )
+        .scalars()
+        .all()
+    ) - set(primer_toque)
+
+    # ── Qué cuenta terminó usando cada navegador ────────────────────────
+    # El visitor_id une la visita anónima con la sesión posterior: si el mismo
+    # navegador vuelve con cuenta iniciada, la visita queda con user_id.
+    usuarios_por_visitante: dict[str, set[int]] = defaultdict(set)
+    for visitor_id, user_id in db.execute(
+        select(PageView.visitor_id, PageView.user_id).where(
+            PageView.created_at >= hace_30, PageView.user_id.is_not(None), _humanas()
+        )
+    ).all():
+        usuarios_por_visitante[visitor_id].add(user_id)
+
+    todos = {u for ids in usuarios_por_visitante.values() for u in ids}
+    con_ensayo = _usuarios_con_ensayo_terminado(db, todos)
+    pagaron = _usuarios_que_pagaron(db, todos)
+
+    grupos: dict[tuple[str | None, ...], list[str]] = defaultdict(list)
+    for visitor_id, clave in primer_toque.items():
+        grupos[clave].append(visitor_id)
+    if sin_campana:
+        grupos[(None, None, None, None)] = list(sin_campana)
+
+    salida: list[EmbudoCampanaOut] = []
+    for (fuente, medio, campana, contenido), visitantes in grupos.items():
+        cuentas = {u for v in visitantes for u in usuarios_por_visitante.get(v, ())}
+        salida.append(
+            EmbudoCampanaOut(
+                source=fuente,
+                medium=medio,
+                campaign=campana,
+                content=contenido,
+                visitantes=len(visitantes),
+                registrados=len(cuentas),
+                con_ensayo_terminado=len(cuentas & con_ensayo),
+                pagaron=len(cuentas & pagaron),
+                tasa_registro=_tasa(len(cuentas), len(visitantes)),
+                tasa_pago=_tasa(len(cuentas & pagaron), len(visitantes)),
+            )
+        )
+
+    # Lo que más paga primero; a igualdad, lo que más trae. El tráfico sin
+    # campaña va al final: es el contexto, no la respuesta.
+    salida.sort(key=lambda c: (c.campaign is None, -c.pagaron, -c.visitantes))
+    return salida
+
+
+def _usuarios_con_ensayo_terminado(db: Session, user_ids: set[int]) -> set[int]:
+    if not user_ids:
+        return set()
+    return set(
+        db.execute(
+            select(func.distinct(ExamAttempt.user_id)).where(
+                ExamAttempt.user_id.in_(user_ids),
+                ExamAttempt.status == AttemptStatus.SUBMITTED,
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+
+def _usuarios_que_pagaron(db: Session, user_ids: set[int]) -> set[int]:
+    """Órdenes confirmadas, no suscripciones activas.
+
+    Un plan otorgado con código promocional o a mano es una suscripción real,
+    pero no es plata que entró: contarla como conversión de un anuncio haría
+    que la campaña parezca rentable con dinero que nadie pagó.
+    """
+    if not user_ids:
+        return set()
+    return set(
+        db.execute(
+            select(func.distinct(Pago.user_id)).where(
+                Pago.user_id.in_(user_ids), Pago.status == PagoStatus.PAGADO
+            )
+        )
+        .scalars()
+        .all()
     )
 
 
@@ -835,6 +970,7 @@ def build_metrics(db: Session) -> AdminMetricsOut:
         visitas=_visitas(db, ahora),
         contenido=_contenido(db, ahora),
         embudo=_embudo(db, ahora),
+        campanas=_campanas(db, ahora),
         retencion=_retencion(db, ahora),
         ensayos=_ensayos(db, ahora),
         banco=_banco(db),
