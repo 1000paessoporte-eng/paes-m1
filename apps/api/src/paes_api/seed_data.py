@@ -21383,6 +21383,177 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "version_hermano",
+        "title": "La versión de mi hermano",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes."
+        ),
+        "body": (
+            "La historia que voy a contar la conté muchas veces antes de descubrir "
+            "que podía no ser cierta.\n\n"
+            "Tenía nueve años y mi hermano doce. Vivíamos en una casa con un patio "
+            "largo que terminaba en una reja, y detrás de la reja había un sitio "
+            "baldío donde no nos dejaban entrar. Una tarde de enero encontramos un "
+            "perro echado ahí, flaco, con una herida en la pata. Mi hermano dijo "
+            "que había que sacarlo. Yo dije que nos iban a retar.\n\n"
+            "Eso es lo primero que siempre cuento: que yo dije que nos iban a "
+            "retar.\n\n"
+            "Nos metimos igual. Yo pasé por debajo de la reja y él por encima, "
+            "porque él era más grande y porque siempre hacía las cosas de la manera "
+            "más difícil. El perro no se movió cuando nos acercamos. Mi hermano lo "
+            "levantó en brazos y volvió con él hasta la reja, y ahí se dio cuenta "
+            "de que no podía saltar cargándolo.\n\n"
+            "Me lo pasó por el hueco de abajo. Recuerdo el peso del animal, que era "
+            "menos del que yo esperaba, y el olor, que era peor. Recuerdo que pensé "
+            "que se iba a morir en mis brazos y que yo no iba a saber qué hacer con "
+            "eso.\n\n"
+            "No se murió. Mi mamá le limpió la herida con un algodón y agua con "
+            "sal, lo dejamos dormir en el lavadero, y a los cuatro días caminaba. "
+            "Le pusimos Nueve, por la edad que yo tenía, aunque después nadie se "
+            "acordaba del motivo y todos creían que era por otra cosa.\n\n"
+            "Esa es la historia. La conté en el colegio, la conté en almuerzos "
+            "familiares, la conté en una entrevista de trabajo cuando me "
+            "preguntaron por un momento en que hubiera hecho algo difícil. La fui "
+            "puliendo con los años, como se pulen las historias que uno cuenta "
+            "seguido: le saqué lo que sobraba, le agregué el detalle del olor, "
+            "aprendí en qué parte hacer la pausa.\n\n"
+            "El invierno pasado, en el cumpleaños de mi mamá, la conté otra vez. "
+            "Estaba mi hermano. Cuando terminé, se quedó mirando el mantel un rato "
+            "y después dijo:\n\n"
+            "—Yo lo pasé por abajo. Tú estabas afuera.\n\n"
+            "Le dije que no, que él había saltado la reja. Me dijo que la reja "
+            "tenía puntas y que nunca en su vida la había saltado. Le dije que yo "
+            "me acordaba del peso del perro en mis brazos. Me dijo que claro, que "
+            "yo lo había recibido, pero del otro lado, sin haber entrado nunca al "
+            "sitio.\n\n"
+            "Discutimos como se discute en un cumpleaños: bajito, sonriendo, para "
+            "que no se note. Mi mamá no se acordaba de la reja. Nadie más había "
+            "estado ahí.\n\n"
+            "Lo que me sacó el piso no fue que él tuviera otra versión. Fue darme "
+            "cuenta de que yo no tenía cómo saber. Revisé mi recuerdo buscando algo "
+            "que lo sostuviera —la tierra del sitio, el ruido de la reja, la "
+            "posición del sol— y encontré todo eso perfectamente nítido. También "
+            "encontré, con la misma nitidez, la escena de mí mismo mirando desde "
+            "afuera. Las dos imágenes estaban ahí, igual de firmes, y una de las "
+            "dos la fabriqué yo.\n\n"
+            "Esa noche, cuando todos se fueron, busqué a mi mamá en la cocina y le "
+            "pregunté por la reja. Me dijo que la habían sacado cuando yo tenía "
+            "once, que era de fierro y que sí, que tenía puntas arriba. Le pregunté "
+            "si alguna vez nos había visto entrar al sitio. Me dijo que no, que "
+            "ella se habría muerto de susto, y después se rió y agregó que a esa "
+            "edad nosotros hacíamos cosas peores sin que ella supiera. No sirvió de "
+            "nada. Confirmó las puntas y no confirmó nada más.\n\n"
+            "Estuve semanas volviendo sobre eso. Llegué a una conclusión que no me "
+            "gusta: es más probable que la versión falsa sea la mía. No porque él "
+            "recuerde mejor, sino porque yo conté esa historia cien veces y él no "
+            "la contó nunca. Cada vez que uno cuenta algo, lo vuelve a armar. Y lo "
+            "que uno arma cien veces termina pareciéndose más a lo que uno quiere "
+            "que a lo que pasó.\n\n"
+            "Hay un detalle que me delata, además, y es el que menos me gusta. En "
+            "mi versión, la frase que yo dije fue «nos van a retar». Es la frase "
+            "del que tiene miedo. Nadie inventa un recuerdo en el que queda mal. "
+            "Pero si uno mira con cuidado, esa frase también cumple otra función: "
+            "hace que entrar igual sea un acto de valentía. Puse el miedo ahí para "
+            "poder vencerlo.\n\n"
+            "No le he dicho a mi hermano que creo que tiene razón. Cuando alguien "
+            "pregunta por la historia del perro, la sigo contando como siempre, "
+            "porque a esta altura contarla de otra manera sería contar una historia "
+            "que no sé narrar. Le agregué eso sí un final nuevo, para los que me "
+            "conocen bien: cuento la discusión del cumpleaños y digo que no sé cuál "
+            "de los dos recuerda bien.\n\n"
+            "Es mentira. Sí sé. Pero el otro final es mejor, y a mí las historias "
+            "se me dan mejor que la verdad. Eso también lo aprendí ese día."
+        ),
+    },
+    {
+        "key": "reglamento_biblioteca_liceo",
+        "title": "Reglamento de la biblioteca del liceo",
+        "kind": "discontinuo",
+        "source_note": (
+            "Texto original de 1000paes."
+        ),
+        "body": (
+            "**REGLAMENTO DE LA BIBLIOTECA DEL LICEO — VIGENTE DESDE MARZO**\n\n"
+            "**Artículo 1. Quiénes pueden usarla**\n\n"
+            "Pueden usar la biblioteca todos los estudiantes matriculados, el "
+            "personal del establecimiento y los apoderados que lo soliciten en "
+            "secretaría. El préstamo a domicilio, en cambio, está reservado a "
+            "estudiantes y personal: los apoderados pueden leer y fotocopiar en "
+            "sala, pero no llevarse material.\n\n"
+            "**Artículo 2. Qué se presta y por cuánto tiempo**\n\n"
+            "| Tipo de material | Ejemplares por vez | Plazo |\n"
+            "|---|---|---|\n"
+            "| Literatura y lectura general | 3 | 14 días |\n"
+            "| Textos de estudio y manuales | 2 | 7 días |\n"
+            "| Revistas y publicaciones periódicas | 2 | 3 días |\n"
+            "| Material de referencia (diccionarios, atlas, enciclopedias) | — | solo en sala |\n"
+            "| Material audiovisual | 1 | 3 días |\n\n"
+            "El material de referencia no sale de la biblioteca bajo ninguna "
+            "circunstancia, ni siquiera por una hora y ni siquiera con autorización "
+            "de un docente. La razón es sencilla: es el material que más personas "
+            "necesitan consultar en un mismo día, y basta con que uno solo se lo "
+            "lleve para que el resto se quede sin él.\n\n"
+            "**Artículo 3. Renovaciones**\n\n"
+            "Un préstamo puede renovarse una sola vez, por el mismo plazo original, "
+            "siempre que ningún otro usuario haya reservado ese ejemplar. La "
+            "renovación debe pedirse antes de la fecha de devolución: un préstamo "
+            "ya atrasado no se puede renovar, hay que devolverlo y volver a "
+            "pedirlo, y en ese caso el ejemplar pasa al final de la lista de espera "
+            "si alguien más lo reservó.\n\n"
+            "**Artículo 4. Atrasos**\n\n"
+            "| Días de atraso | Consecuencia |\n"
+            "|---|---|\n"
+            "| 1 a 5 | Suspensión del préstamo por el doble de los días de atraso |\n"
+            "| 6 a 15 | Suspensión por un mes |\n"
+            "| Más de 15 | Suspensión por un semestre y aviso al apoderado |\n\n"
+            "Las suspensiones no se acumulan entre sí: si un usuario incurre en un "
+            "nuevo atraso mientras está suspendido, rige la sanción mayor de las "
+            "dos y no la suma. Los días en que el establecimiento no funciona "
+            "—fines de semana, feriados y vacaciones— no se cuentan como atraso.\n\n"
+            "**Artículo 5. Pérdida o daño**\n\n"
+            "Quien pierda o dañe un ejemplar debe reponerlo con otro de la misma "
+            "obra, en edición igual o posterior y en buen estado. No se aceptan "
+            "pagos en dinero: la biblioteca no vende libros ni administra fondos. "
+            "Si la obra está descatalogada y no es posible conseguirla, la "
+            "encargada puede aceptar un título equivalente en materia y extensión, "
+            "decisión que se registra por escrito y que no queda a criterio del "
+            "usuario.\n\n"
+            "Mientras la reposición esté pendiente, el usuario mantiene el derecho "
+            "a usar la biblioteca en sala, pero no puede llevarse material a "
+            "domicilio. Esta restricción no es una sanción y por eso no tiene "
+            "plazo: termina el día en que se repone el ejemplar.\n\n"
+            "**Artículo 6. Reservas**\n\n"
+            "Cualquier usuario habilitado puede reservar un ejemplar que esté "
+            "prestado. Al devolverse, la biblioteca lo mantiene apartado durante "
+            "dos días hábiles y avisa a quien reservó. Si en ese plazo no lo "
+            "retira, la reserva caduca y el ejemplar pasa a quien siga en la lista "
+            "o vuelve a estantería.\n\n"
+            "**Artículo 7. Comportamiento en sala**\n\n"
+            "La biblioteca es un espacio de estudio y consulta. Se permite "
+            "conversar en voz baja en la mesa de trabajo grupal, señalizada al "
+            "fondo de la sala, y se pide silencio en el resto. Está prohibido "
+            "consumir alimentos y bebidas, con la sola excepción del agua en "
+            "botella cerrada. La razón no es formal: una mancha de bebida arruina "
+            "un ejemplar de manera irreversible y sin que nadie lo note hasta que "
+            "el siguiente lector lo abre.\n\n"
+            "**Artículo 8. Sugerencias de compra**\n\n"
+            "Cualquier usuario puede proponer la compra de un título mediante el "
+            "formulario disponible en el mesón. Las sugerencias se revisan dos "
+            "veces al año, en abril y en septiembre, y se priorizan según tres "
+            "criterios, en este orden: que el título esté pedido por más de un "
+            "usuario, que se relacione con asignaturas del plan de estudios, y que "
+            "la biblioteca no tenga ya una obra equivalente. No se compran títulos "
+            "disponibles en formato digital gratuito, salvo que se justifique la "
+            "necesidad del ejemplar físico.\n\n"
+            "**Disposición final**\n\n"
+            "Este reglamento se aplica por igual a todos los usuarios. La encargada "
+            "de biblioteca puede autorizar excepciones fundadas en los artículos 3 "
+            "y 6, dejando constancia escrita del motivo. Los artículos 2, en lo "
+            "relativo al material de referencia, y 5 no admiten excepción."
+        ),
+    },
+    {
         "key": "microplasticos",
         "title": "El plástico que dejó de verse",
         "kind": "no_literario",
@@ -22836,6 +23007,379 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La versión de mi hermano' ----------
+    _ql(
+        "version_hermano", "lec_localizar", "facil",
+        "Según el relato, ¿en qué se diferencian las dos versiones sobre lo "
+        "ocurrido con el perro?",
+        "En quién entró al sitio baldío: el narrador dice que entraron los dos y su "
+        "hermano dice que él estuvo afuera",
+        "El diálogo del cumpleaños lo establece: el hermano afirma «yo lo pasé por "
+        "abajo. Tú estabas afuera», mientras que el narrador sostiene que ambos "
+        "entraron y que él recibió al perro por el hueco de la reja.\n\nAmbos "
+        "coinciden en el resto: el perro, la herida, el rescate.",
+        [
+            ("En si el perro sobrevivió o no a la herida de la pata", "En eso no hay desacuerdo: el relato cuenta que a los cuatro días caminaba."),
+            ("En quién le puso el nombre al perro", "El origen del nombre se cuenta sin discusión, aunque después nadie lo recordara."),
+            ("En el año en que ocurrieron los hechos", "La fecha no se discute en ningún momento del relato."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_localizar", "medio",
+        "De acuerdo con el relato, ¿qué le confirmó la madre al narrador esa noche?",
+        "Que la reja era de fierro y tenía puntas arriba",
+        "El narrador lo cuenta con precisión y también dice qué NO obtuvo: "
+        "«confirmó las puntas y no confirmó nada más». Sobre haberlos visto entrar "
+        "al sitio, la madre respondió que no.\n\nEse dato es importante porque las "
+        "puntas son justamente el argumento del hermano para no haber saltado.",
+        [
+            ("Que había visto a los dos hermanos entrar al sitio baldío", "Dijo lo contrario: que nunca los vio y que se habría muerto de susto."),
+            ("Que fue ella quien encontró al perro y lo llevó a la casa", "El relato cuenta que la madre solo le limpió la herida una vez que el perro estaba en la casa."),
+            ("Que la reja se sacó cuando el narrador tenía nueve años", "Dijo que la sacaron cuando tenía once."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_localizar", "medio",
+        "Según el relato, ¿en qué situaciones había contado el narrador esta "
+        "historia?",
+        "En el colegio, en almuerzos familiares y en una entrevista de trabajo",
+        "El texto las enumera: «la conté en el colegio, la conté en almuerzos "
+        "familiares, la conté en una entrevista de trabajo cuando me preguntaron "
+        "por un momento en que hubiera hecho algo difícil».\n\nEse detalle de la "
+        "entrevista importa: muestra que la historia se usaba para presentarse a sí "
+        "mismo de cierta manera.",
+        [
+            ("Solo dentro de su familia, en reuniones y cumpleaños", "El texto menciona además el colegio y una entrevista de trabajo."),
+            ("En un taller de escritura al que asistía", "Ningún taller aparece en el relato."),
+            ("Nunca antes del cumpleaños de su madre", "La había contado tantas veces que dice haberla ido puliendo con los años."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_interpretar", "dificil",
+        "¿Por qué el narrador concluye que la versión falsa probablemente sea la "
+        "suya?",
+        "Porque él contó la historia cien veces y su hermano ninguna, y cada relato "
+        "vuelve a armar el recuerdo",
+        "El narrador entrega el razonamiento completo: «no porque él recuerde "
+        "mejor, sino porque yo conté esa historia cien veces y él no la contó "
+        "nunca. Cada vez que uno cuenta algo, lo vuelve a armar».\n\nY cierra la "
+        "idea: «lo que uno arma cien veces termina pareciéndose más a lo que uno "
+        "quiere que a lo que pasó». El argumento no es sobre la memoria del "
+        "hermano, sino sobre el desgaste de la propia.",
+        [
+            ("Porque su madre confirmó la versión del hermano", "La madre solo confirmó las puntas de la reja y explícitamente «no confirmó nada más»."),
+            ("Porque su hermano era mayor y por eso recordaría mejor", "El narrador descarta esa explicación de forma expresa."),
+            ("Porque su propio recuerdo del sitio baldío era borroso", "Dice lo contrario: encontró el recuerdo «perfectamente nítido», y por eso el hallazgo lo desconcierta."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_interpretar", "dificil",
+        "¿Qué descubre el narrador al revisar su propio recuerdo en busca de "
+        "pruebas?",
+        "Que las dos escenas contradictorias están igual de nítidas en su memoria, "
+        "y que por eso la nitidez no prueba nada",
+        "El texto lo describe paso a paso: buscó detalles que sostuvieran su "
+        "versión —«la tierra del sitio, el ruido de la reja, la posición del sol»— "
+        "y los encontró todos. «También encontré, con la misma nitidez, la escena "
+        "de mí mismo mirando desde afuera».\n\nY saca la conclusión que lo desarma: "
+        "«las dos imágenes estaban ahí, igual de firmes, y una de las dos la "
+        "fabriqué yo».",
+        [
+            ("Que no recuerda nada del episodio y lo había reconstruido entero", "Recuerda demasiado, no demasiado poco: ese es justamente el problema."),
+            ("Que su hermano aparece en su recuerdo saltando la reja con el perro", "En su versión el hermano no puede saltar cargando al perro, y por eso se lo pasa por abajo."),
+            ("Que el episodio ocurrió en otra estación del año de la que creía", "La fecha nunca se pone en duda en el relato."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_interpretar", "dificil",
+        "¿Qué papel cumple en el relato la frase «nos van a retar», que el narrador "
+        "dice haber pronunciado?",
+        "Es el detalle que lo delata, porque construye el miedo que después el "
+        "relato muestra vencido",
+        "El narrador lo analiza él mismo: «es la frase del que tiene miedo. Nadie "
+        "inventa un recuerdo en el que queda mal». Pero enseguida se corrige: «esa "
+        "frase también cumple otra función: hace que entrar igual sea un acto de "
+        "valentía».\n\nY remata con la confesión más dura del cuento: «puse el "
+        "miedo ahí para poder vencerlo».",
+        [
+            ("Muestra que el narrador era el más prudente de los dos hermanos", "El narrador desmonta esa lectura: la frase está puesta al servicio de su propia imagen, no como rasgo de carácter."),
+            ("Explica por qué finalmente no entraron al sitio baldío", "En su versión sí entran; en la del hermano, el que no entra es él."),
+            ("Indica que la historia le fue contada por otra persona", "El relato nunca sugiere que la historia venga de un tercero."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_interpretar", "dificil",
+        "¿Qué sentido tiene que el relato comience diciendo «la conté muchas veces "
+        "antes de descubrir que podía no ser cierta»?",
+        "Advierte desde el inicio que lo que se va a leer es una versión puesta en "
+        "duda, y no un hecho",
+        "La primera línea instala la sospecha antes de que exista el relato, de "
+        "modo que el lector lee toda la escena del perro sabiendo que puede no "
+        "haber ocurrido así.\n\nEl efecto es deliberado: cuando llega el diálogo "
+        "del cumpleaños, el lector no se sorprende por la contradicción, porque ya "
+        "estaba avisado. Lo que queda por resolver no es qué pasó, sino por qué el "
+        "narrador recuerda como recuerda.",
+        [
+            ("Anuncia que el narrador va a confesar una mentira deliberada", "El narrador no miente a propósito: sostiene que fabricó el recuerdo sin darse cuenta."),
+            ("Sugiere que la historia se la contaron y él la repitió sin verificarla", "El relato la presenta como recuerdo propio en primera persona."),
+            ("Indica que la historia es un cuento inventado por completo", "El relato no plantea eso: discute cuál de dos versiones es la correcta, no si el perro existió."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_interpretar", "medio",
+        "¿Qué significa que el narrador diga que fue «puliendo» la historia con los "
+        "años?",
+        "Que la fue modificando para que funcionara mejor al contarla: quitó lo que "
+        "sobraba, agregó detalles y calculó las pausas",
+        "El texto lo detalla: «le saqué lo que sobraba, le agregué el detalle del "
+        "olor, aprendí en qué parte hacer la pausa».\n\nEse trabajo, que suena "
+        "inocente, es el que sostiene su conclusión posterior: una historia contada "
+        "cien veces «termina pareciéndose más a lo que uno quiere que a lo que "
+        "pasó».",
+        [
+            ("Que fue recordando cada vez más detalles del episodio", "No se trata de recordar más, sino de ajustar el relato para que funcione mejor."),
+            ("Que fue acortándola porque a nadie le interesaba", "El narrador la contaba con frecuencia y en contextos donde le servía."),
+            ("Que la fue corrigiendo con la ayuda de su hermano", "El hermano nunca la contó ni la corrigió hasta el cumpleaños."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_evaluar", "dificil",
+        "¿Qué efecto produce el último párrafo, en que el narrador admite que sí "
+        "sabe cuál versión es la verdadera?",
+        "Vuelve a poner en duda su honestidad justo cuando parecía estar siendo "
+        "sincero",
+        "El narrador acababa de contar que agrega un final donde dice no saber cuál "
+        "de los dos recuerda bien. Y entonces confiesa: «es mentira. Sí sé. Pero el "
+        "otro final es mejor».\n\nEl cierre muestra que la costumbre que el relato "
+        "denunció sigue operando mientras se cuenta el relato mismo: «a mí las "
+        "historias se me dan mejor que la verdad».",
+        [
+            ("Confirma que su versión del episodio era la correcta después de todo", "No dice cuál es la verdadera: dice que sabe, y antes había concluido que la falsa probablemente sea la suya."),
+            ("Cierra el conflicto con su hermano al reconocerle la razón", "Al hermano nunca se lo dice: el narrador aclara que no se lo ha dicho."),
+            ("Indica que el narrador dejó de contar la historia", "Dice que la sigue contando «como siempre»."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_evaluar", "dificil",
+        "Un lector sostiene que el cuento trata sobre cómo las personas construyen "
+        "su propia imagen al recordar. ¿Qué elemento del relato permite fundamentar "
+        "esa lectura?",
+        "Que el narrador descubra que puso el miedo en su recuerdo precisamente "
+        "para poder mostrarse venciéndolo",
+        "La interpretación no habla de memoria defectuosa, sino de memoria "
+        "interesada. Lo que la sostiene es el análisis que el propio narrador hace "
+        "de la frase «nos van a retar»: cumple la función de «hacer que entrar "
+        "igual sea un acto de valentía», y él concluye «puse el miedo ahí para "
+        "poder vencerlo».\n\nEl otro indicio es la entrevista de trabajo: contaba "
+        "esa historia cuando le pedían un momento en que hubiera hecho algo "
+        "difícil.",
+        [
+            ("Que el perro haya sobrevivido gracias al cuidado de la madre", "Ese desenlace no dice nada sobre cómo el narrador se construye a sí mismo."),
+            ("Que el hermano recuerde el episodio de otra manera", "Eso establece el conflicto, pero por sí solo indicaría un error de memoria, no una construcción interesada."),
+            ("Que la madre no recordara la reja en el momento de la discusión", "Ese detalle solo muestra que no había testigos que zanjaran la disputa."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_evaluar", "medio",
+        "¿Qué actitud mantiene el narrador hacia su hermano a lo largo del relato?",
+        "No lo confronta ni le reconoce la razón, y evita el tema aunque en privado "
+        "le crea",
+        "El relato muestra las dos cosas. En el cumpleaños discuten «bajito, "
+        "sonriendo, para que no se note», y después el narrador admite: «no le he "
+        "dicho a mi hermano que creo que tiene razón».\n\nNo hay resentimiento ni "
+        "acusación: hay una omisión sostenida, que el propio narrador registra sin "
+        "justificarla del todo.",
+        [
+            ("Lo acusa de haber inventado su versión para quedar mejor", "El narrador dirige esa sospecha hacia sí mismo, no hacia su hermano."),
+            ("Le agradece haberlo hecho revisar su recuerdo", "No hay ningún agradecimiento: el hallazgo lo describe como algo que le «sacó el piso»."),
+            ("Rompe la relación con él tras la discusión del cumpleaños", "Nada en el relato indica un quiebre: la discusión ocurre en voz baja y no vuelve a mencionarse un conflicto."),
+        ],
+    ),
+    # ---------- 'Reglamento de la biblioteca del liceo' ----------
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_localizar", "facil",
+        "Según el reglamento, ¿cuántos ejemplares de literatura puede llevarse un "
+        "estudiante por vez y por cuánto tiempo?",
+        "Tres ejemplares por catorce días",
+        "La tabla del artículo 2 lo indica en su primera fila: literatura y lectura "
+        "general, tres ejemplares, catorce días.\n\nLas otras filas corresponden a "
+        "textos de estudio (2 por 7 días), revistas (2 por 3 días) y audiovisual (1 "
+        "por 3 días).",
+        [
+            ("Dos ejemplares por siete días", "Esas son las condiciones de los textos de estudio y manuales."),
+            ("Dos ejemplares por tres días", "Esas son las de las revistas y publicaciones periódicas."),
+            ("Un ejemplar por tres días", "Esas son las del material audiovisual."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_localizar", "medio",
+        "De acuerdo con el reglamento, ¿qué pueden hacer los apoderados en la "
+        "biblioteca?",
+        "Leer y fotocopiar en sala, pero no llevarse material a domicilio",
+        "El artículo 1 lo delimita expresamente: el préstamo a domicilio «está "
+        "reservado a estudiantes y personal: los apoderados pueden leer y "
+        "fotocopiar en sala, pero no llevarse material».\n\nDeben, además, "
+        "solicitar el acceso en secretaría.",
+        [
+            ("Usar la biblioteca en las mismas condiciones que los estudiantes", "El reglamento los excluye del préstamo a domicilio, que es la diferencia principal."),
+            ("Llevarse material solo si lo autoriza un docente", "La autorización docente no aparece como vía para el préstamo a apoderados."),
+            ("Solo consultar material de referencia dentro de la sala", "Pueden leer y fotocopiar cualquier material en sala, no solo el de referencia."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_localizar", "medio",
+        "Según el reglamento, ¿cuánto tiempo se mantiene apartado un ejemplar "
+        "reservado?",
+        "Dos días hábiles desde que se devuelve",
+        "El artículo 6 lo fija: al devolverse, «la biblioteca lo mantiene apartado "
+        "durante dos días hábiles y avisa a quien reservó».\n\nY precisa la "
+        "consecuencia: «si en ese plazo no lo retira, la reserva caduca y el "
+        "ejemplar pasa a quien siga en la lista o vuelve a estantería».",
+        [
+            ("Tres días corridos", "El plazo son dos días y son hábiles, no corridos."),
+            ("Hasta que el usuario lo retire, sin plazo", "La reserva caduca si no se retira en el plazo fijado."),
+            ("Catorce días, igual que el préstamo de literatura", "El plazo de la reserva es independiente del plazo de préstamo."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_interpretar", "medio",
+        "¿Qué razón entrega el reglamento para que el material de referencia no "
+        "salga de la biblioteca?",
+        "Que es el material que más personas necesitan consultar en un mismo día",
+        "El texto no se limita a prohibirlo: explica el criterio. «Es el material "
+        "que más personas necesitan consultar en un mismo día, y basta con que uno "
+        "solo se lo lleve para que el resto se quede sin él».\n\nEse razonamiento "
+        "es el que justifica que la regla sea absoluta: «ni siquiera por una hora y "
+        "ni siquiera con autorización de un docente».",
+        [
+            ("Que son ejemplares caros y difíciles de reponer", "El costo no se menciona en ninguna parte del reglamento."),
+            ("Que se dañan con facilidad al transportarlos", "El deterioro por transporte no aparece como argumento."),
+            ("Que la biblioteca tiene un solo ejemplar de cada uno", "El reglamento no afirma que haya un único ejemplar: su argumento es sobre la demanda simultánea."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "Un estudiante devuelve un libro con tres días de atraso y, estando "
+        "suspendido, se atrasa otra vez en ocho días. ¿Cuál es su situación según "
+        "el reglamento?",
+        "Queda suspendido un mes, porque rige la sanción mayor y no la suma de "
+        "ambas",
+        "La tabla del artículo 4 asigna al primer atraso una suspensión del doble "
+        "de los días —seis— y al segundo, que cae en el tramo de 6 a 15 días, un "
+        "mes. El texto resuelve el concurso de sanciones: «las suspensiones no se "
+        "acumulan entre sí: si un usuario incurre en un nuevo atraso mientras está "
+        "suspendido, rige la sanción mayor de las dos y no la suma».\n\nLa pregunta "
+        "exige aplicar la tabla dos veces y después la regla que resuelve el "
+        "choque.",
+        [
+            ("Queda suspendido un mes y seis días, sumando ambas sanciones", "El reglamento descarta la suma de forma expresa."),
+            ("Queda suspendido seis días, porque esa sanción ya estaba corriendo", "Rige la mayor de las dos, y un mes es mayor que seis días."),
+            ("Queda suspendido un semestre, por reincidir estando sancionado", "El semestre corresponde a atrasos de más de quince días; la reincidencia no agrava el tramo."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "Un préstamo vence un viernes y el estudiante lo devuelve el martes "
+        "siguiente, habiendo sido lunes feriado. ¿Cuántos días de atraso registra?",
+        "Un día, porque el fin de semana y el feriado no se cuentan",
+        "El artículo 4 lo resuelve: «los días en que el establecimiento no funciona "
+        "—fines de semana, feriados y vacaciones— no se cuentan como "
+        "atraso».\n\nEntre el viernes y el martes hay cuatro días corridos, pero "
+        "sábado, domingo y el lunes feriado quedan fuera del cómputo. Solo el "
+        "martes cuenta.",
+        [
+            ("Cuatro días, contando desde el sábado hasta el martes", "Ese es el conteo en días corridos, que el reglamento descarta expresamente."),
+            ("Ningún día, porque devolvió el primer día hábil disponible", "El martes sí es día hábil y sí se cuenta: la devolución debió hacerse el viernes."),
+            ("Dos días, contando el lunes y el martes", "El lunes feriado está excluido del cómputo por ser día en que el establecimiento no funciona."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "¿Qué diferencia establece el reglamento entre la restricción por "
+        "reposición pendiente y una suspensión por atraso?",
+        "Que la restricción no es una sanción y no tiene plazo: termina cuando se "
+        "repone el ejemplar",
+        "El artículo 5 lo distingue con claridad: mientras la reposición esté "
+        "pendiente el usuario puede seguir usando la sala pero no llevarse "
+        "material, y aclara que «esta restricción no es una sanción y por eso no "
+        "tiene plazo: termina el día en que se repone el ejemplar».\n\nLa "
+        "suspensión por atraso, en cambio, tiene una duración fijada por tabla y "
+        "corre sola hasta cumplirse.",
+        [
+            ("Que la restricción impide usar la biblioteca incluso en sala", "El texto conserva expresamente el derecho a usarla en sala."),
+            ("Que la restricción dura un semestre, igual que el atraso más grave", "No tiene duración fijada: depende de cuándo se reponga el ejemplar."),
+            ("Que la restricción solo se aplica si el daño fue intencional", "El reglamento no distingue según la intención: se aplica por pérdida o daño."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_interpretar", "medio",
+        "Según el artículo 8, ¿cuál es el primer criterio para priorizar una "
+        "sugerencia de compra?",
+        "Que el título esté pedido por más de un usuario",
+        "El reglamento enumera los tres criterios «en este orden», y el primero es "
+        "«que el título esté pedido por más de un usuario». Los otros dos son la "
+        "relación con el plan de estudios y que no exista ya una obra "
+        "equivalente.\n\nLa palabra «orden» es la que hace la pregunta contestable: "
+        "sin ella los tres criterios pesarían igual.",
+        [
+            ("Que se relacione con asignaturas del plan de estudios", "Es el segundo criterio, no el primero."),
+            ("Que la biblioteca no tenga ya una obra equivalente", "Es el tercero de la lista."),
+            ("Que el título no esté disponible en formato digital gratuito", "Eso es una exclusión aparte, no uno de los tres criterios de prioridad."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_evaluar", "medio",
+        "¿Qué se propone el reglamento al explicar por qué prohíbe consumir bebidas "
+        "en la sala?",
+        "Justificar la regla con su consecuencia concreta, en lugar de imponerla "
+        "sin explicación",
+        "El texto lo dice de forma expresa: «la razón no es formal: una mancha de "
+        "bebida arruina un ejemplar de manera irreversible y sin que nadie lo note "
+        "hasta que el siguiente lector lo abre».\n\nEs el mismo procedimiento que "
+        "usa con el material de referencia: en vez de prohibir a secas, muestra qué "
+        "daño evita la prohibición.",
+        [
+            ("Advertir que quien manche un libro deberá reponerlo", "La reposición es materia del artículo 5 y no se invoca aquí como argumento."),
+            ("Señalar que la limpieza de la sala es responsabilidad de los usuarios", "El reglamento no menciona la limpieza de la sala."),
+            ("Justificar por qué se permite el agua en botella cerrada", "La excepción del agua se enuncia, pero el argumento explica la prohibición general."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_evaluar", "dificil",
+        "Un docente pide llevarse un atlas por una hora para una clase, y la "
+        "encargada se niega. ¿Qué respalda esa decisión en el reglamento?",
+        "Que el material de referencia no admite excepción, y la disposición final "
+        "lo declara expresamente",
+        "El artículo 2 ya lo había anticipado —«ni siquiera por una hora y ni "
+        "siquiera con autorización de un docente»— y la disposición final lo "
+        "confirma al listar qué puede exceptuarse: la encargada puede autorizar "
+        "excepciones fundadas «en los artículos 3 y 6», y «los artículos 2, en lo "
+        "relativo al material de referencia, y 5 no admiten excepción».\n\nLa "
+        "pregunta obliga a cruzar dos artículos: uno que fija la regla y otro que "
+        "define qué es exceptuable.",
+        [
+            ("Que el personal del establecimiento no tiene derecho a préstamo a domicilio", "Sí lo tiene: el artículo 1 incluye al personal entre quienes pueden llevarse material."),
+            ("Que la encargada puede negar cualquier préstamo a su criterio", "Sus facultades de excepción están acotadas a los artículos 3 y 6, y no incluyen negar préstamos discrecionalmente."),
+            ("Que el atlas estaba reservado por otro usuario", "El caso no menciona ninguna reserva, y la prohibición del material de referencia opera con independencia de ella."),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_evaluar", "dificil",
+        "Una estudiante con un préstamo atrasado quiere renovarlo para no perder el "
+        "libro, que alguien más reservó. Según el reglamento, ¿qué ocurre?",
+        "No puede renovarlo: debe devolverlo, y si vuelve a pedirlo queda al final "
+        "de la lista de espera",
+        "El artículo 3 resuelve las dos cosas. Sobre la renovación: «un préstamo ya "
+        "atrasado no se puede renovar, hay que devolverlo y volver a pedirlo». Y "
+        "sobre la consecuencia: «en ese caso el ejemplar pasa al final de la lista "
+        "de espera si alguien más lo reservó».\n\nAdemás, la renovación exige que "
+        "nadie haya reservado el ejemplar, condición que aquí tampoco se cumple.",
+        [
+            ("Puede renovarlo una vez, porque es su primera renovación", "La primera renovación está permitida solo si el préstamo está al día y nadie reservó el ejemplar."),
+            ("Puede renovarlo si la encargada lo autoriza por escrito", "La encargada puede exceptuar el artículo 3, pero el reglamento no la habilita a saltarse la reserva de otro usuario."),
+            ("Debe devolverlo y queda automáticamente primera en la lista de espera", "El texto dice lo contrario: pasa al FINAL de la lista."),
+        ],
+    ),
     # ---------- 'El plástico que dejó de verse' ----------
     _ql(
         "microplasticos", "lec_localizar", "facil",
