@@ -10,6 +10,7 @@ import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config"
 import { ExamResults } from "@/components/exam/exam-results";
 import { LimiteAlcanzado } from "@/components/exam/limite-alcanzado";
 import { QuestionNavigator } from "@/components/exam/question-navigator";
+import { RelojPregunta } from "@/components/exam/reloj-pregunta";
 import {
   ApiError,
   answerExamQuestion,
@@ -68,6 +69,10 @@ export function ExamRunner({
   const [attemptSubject, setAttemptSubject] = useState<Subject>("m1");
   const [questions, setQuestions] = useState<ExamQuestion[]>([]);
   const [deadline, setDeadline] = useState<number>(0);
+  //: Milisegundos gastados en la pregunta que está a la vista.
+  const [msEnPregunta, setMsEnPregunta] = useState(0);
+  //: Duración total concedida al intento, para repartirla entre preguntas.
+  const [duracionMs, setDuracionMs] = useState(0);
   const [remainingMs, setRemainingMs] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, AnswerState>>({});
@@ -282,6 +287,7 @@ export function ExamRunner({
       setDeadline(
         new Date(state.started_at).getTime() + state.duration_limit_seconds * 1000
       );
+      setDuracionMs(state.duration_limit_seconds * 1000);
       const next: Record<number, AnswerState> = {};
       const elap: Record<number, number> = {};
       for (const [qid, ans] of Object.entries(state.answers)) {
@@ -352,6 +358,28 @@ export function ExamRunner({
     return () => clearInterval(interval);
   }, [phase, deadline, doSubmit]);
 
+  // Cuánto lleva el alumno en la pregunta que está mirando.
+  //
+  // Va aparte del countdown general porque depende de la pregunta actual: si
+  // viviera dentro de aquel efecto, cuyas dependencias son otras, leería un
+  // índice viejo y el reloj se quedaría marcando la pregunta anterior.
+  //
+  // El acumulado sale del ref (visitas anteriores a esta misma pregunta) más
+  // el segmento en curso. Es exactamente el número que se guarda al responder,
+  // así que lo que ve en pantalla es lo que después le cuenta el diagnóstico.
+  useEffect(() => {
+    if (phase !== "in_progress") return;
+    const actual = questions[currentIndex]?.id;
+    if (actual == null) return;
+    const tick = () =>
+      setMsEnPregunta(
+        (elapsedRef.current[actual] ?? 0) + Math.max(0, Date.now() - segmentStartRef.current)
+      );
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [phase, currentIndex, questions]);
+
   // Atajos: A-D (o 1-4) para responder, flechas para navegar.
   useEffect(() => {
     if (phase !== "in_progress") return;
@@ -394,6 +422,7 @@ export function ExamRunner({
       setAttemptSubject(data.config.subject);
       setQuestions(data.questions);
       setDeadline(new Date(data.started_at).getTime() + data.duration_limit_seconds * 1000);
+      setDuracionMs(data.duration_limit_seconds * 1000);
       setRemainingMs(data.duration_limit_seconds * 1000);
       setCurrentIndex(0);
       setAnswers({});
@@ -492,7 +521,12 @@ export function ExamRunner({
       <header className="glass sticky top-14 z-20 -mx-4 px-4 sm:-mx-6 sm:px-6">
         <div className="flex items-center gap-3 py-3">
           <div className="min-w-0 flex-1">
-            <p className="truncate text-xs text-muted">{SUBJECT_LABELS[attemptSubject]}</p>
+            {/* En el teléfono la cabecera lleva cuatro cosas y el nombre de
+                la prueba es la menos útil: se acaba de elegir hace un minuto.
+                Sale para que el resto no se trunque. */}
+            <p className="hidden truncate text-xs text-muted sm:block">
+              {SUBJECT_LABELS[attemptSubject]}
+            </p>
             <p className="font-semibold">
               {variasEnLaPagina
                 ? `Texto ${paginaActual + 1} de ${paginas.length} · preguntas ${
@@ -515,6 +549,14 @@ export function ExamRunner({
           >
             {formatearReloj(remainingMs)}
           </div>
+
+          {/* El presupuesto por pregunta sale del intento, no de la prueba
+              oficial: si eligió ritmo exigente, el número que ve es el
+              exigente. */}
+          <RelojPregunta
+            msGastados={msEnPregunta}
+            msPresupuesto={questions.length > 0 ? duracionMs / questions.length : 0}
+          />
 
           <span className="rounded-lg border border-border px-3 py-2 text-sm font-medium tabular-nums">
             {respondidas}/{questions.length}
