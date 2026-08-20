@@ -14,7 +14,6 @@ class MiPlanOut(BaseModel):
     ensayos_usados: int
     ensayos_limite: int | None
     carreras_limite: int
-    analisis_avanzado: bool
     #: False mientras los límites se informen pero no bloqueen, porque todavía
     #: no se puede contratar el plan Pro.
     limites_activos: bool

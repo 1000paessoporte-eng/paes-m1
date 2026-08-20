@@ -13,7 +13,7 @@ def test_sin_suscripcion_el_plan_es_gratis(client: TestClient, register_user) ->
     assert datos["plan"] == "gratis"
     assert datos["ensayos_limite"] == 4
     assert datos["carreras_limite"] == 1
-    assert datos["analisis_avanzado"] is False
+    assert "analisis_avanzado" not in datos, "un limite que nadie aplica no se informa"
 
 
 def test_un_codigo_valido_deja_el_plan_pro(

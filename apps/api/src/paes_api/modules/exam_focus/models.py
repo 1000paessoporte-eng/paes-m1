@@ -2,7 +2,16 @@ from datetime import datetime
 from enum import StrEnum
 from typing import TYPE_CHECKING
 
-from sqlalchemy import Boolean, DateTime, Enum, ForeignKey, Integer, String, func
+from sqlalchemy import (
+    Boolean,
+    DateTime,
+    Enum,
+    ForeignKey,
+    Integer,
+    String,
+    UniqueConstraint,
+    func,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from paes_api.modules.skill_tree.models import Subject
@@ -97,9 +106,20 @@ class ExamAttemptQuestion(Base):
 
 
 class ExamAnswer(Base):
-    """Tracking silencioso: time_spent_ms mide ritmo/fatiga por pregunta."""
+    """Tracking silencioso: time_spent_ms mide ritmo/fatiga por pregunta.
+
+    Una pregunta tiene UNA respuesta dentro de un intento, y eso lo garantiza
+    la base. Sin esa restricción, dos guardados simultáneos de la misma
+    pregunta creaban dos filas: a partir de ahí el propio guardado reventaba al
+    leerlas (`scalar_one_or_none` sobre dos filas), así que esa pregunta ya no
+    se podía volver a responder en lo que quedaba del ensayo y terminaba
+    contada como omitida.
+    """
 
     __tablename__ = "exam_answers"
+    __table_args__ = (
+        UniqueConstraint("attempt_id", "question_id", name="uq_exam_answer_intento_pregunta"),
+    )
 
     id: Mapped[int] = mapped_column(primary_key=True)
     attempt_id: Mapped[int] = mapped_column(ForeignKey("exam_attempts.id"), index=True)

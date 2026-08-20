@@ -33,7 +33,6 @@ def _armar(db: Session, user_id: int) -> MiPlanOut:
         ensayos_usados=service.ensayos_del_mes(db, user_id),
         ensayos_limite=limites.ensayos_por_mes,
         carreras_limite=limites.carreras_en_meta,
-        analisis_avanzado=limites.analisis_avanzado,
         limites_activos=service.limites_activos(),
     )
 

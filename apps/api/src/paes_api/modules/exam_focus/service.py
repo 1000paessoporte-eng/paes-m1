@@ -12,6 +12,7 @@ from collections import defaultdict
 from datetime import UTC, datetime
 
 from sqlalchemy import delete, select
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, selectinload
 
 from paes_api.modules.content.models import Question
@@ -485,30 +486,64 @@ def get_answers_map(db: Session, attempt_id: int) -> dict[int, ExamAnswerState]:
 
 
 def upsert_answer(db: Session, attempt_id: int, payload: ExamAnswerIn) -> None:
-    existing = db.execute(
-        select(ExamAnswer).where(
-            ExamAnswer.attempt_id == attempt_id,
-            ExamAnswer.question_id == payload.question_id,
-        )
-    ).scalar_one_or_none()
+    """Guarda o actualiza la respuesta de una pregunta dentro del intento.
+
+    Esto se llama MUCHO: cada vez que el alumno marca una alternativa, la
+    cambia, marca la pregunta para revisar o navega. En un teléfono con red
+    lenta las peticiones se solapan, y dos guardados de la misma pregunta
+    llegaban a la vez.
+
+    Antes era leer-comprobar-insertar sin nada que lo impidiera, y la carrera
+    dejaba DOS filas para la misma pregunta. A partir de ahí la lectura de la
+    siguiente llamada encontraba dos y reventaba, así que esa pregunta quedaba
+    inservible por el resto del ensayo y terminaba contada como omitida aunque
+    el alumno la hubiera respondido. Un ensayo de prueba llegó a 28 fallos de
+    113 guardados.
+
+    Ahora la base impide el duplicado y el insert que pierde la carrera se
+    reintenta como actualización, que es lo que el segundo guardado quería
+    hacer desde el principio.
+    """
     now = datetime.now(UTC)
-    if existing is not None:
-        existing.selected_alternative_id = payload.selected_alternative_id
-        existing.time_spent_ms = payload.time_spent_ms
-        existing.flagged = payload.flagged
-        existing.answered_at = now
-    else:
-        db.add(
-            ExamAnswer(
-                attempt_id=attempt_id,
-                question_id=payload.question_id,
-                selected_alternative_id=payload.selected_alternative_id,
-                time_spent_ms=payload.time_spent_ms,
-                flagged=payload.flagged,
-                answered_at=now,
+
+    def _actualizar() -> bool:
+        fila = db.execute(
+            select(ExamAnswer).where(
+                ExamAnswer.attempt_id == attempt_id,
+                ExamAnswer.question_id == payload.question_id,
             )
+        ).scalar_one_or_none()
+        if fila is None:
+            return False
+        fila.selected_alternative_id = payload.selected_alternative_id
+        fila.time_spent_ms = payload.time_spent_ms
+        fila.flagged = payload.flagged
+        fila.answered_at = now
+        db.commit()
+        return True
+
+    if _actualizar():
+        return
+
+    db.add(
+        ExamAnswer(
+            attempt_id=attempt_id,
+            question_id=payload.question_id,
+            selected_alternative_id=payload.selected_alternative_id,
+            time_spent_ms=payload.time_spent_ms,
+            flagged=payload.flagged,
+            answered_at=now,
         )
-    db.commit()
+    )
+    try:
+        db.commit()
+    except IntegrityError:
+        # Otro guardado de la misma pregunta llegó primero. No es un error que
+        # el alumno tenga que ver: su respuesta es la más reciente y es la que
+        # tiene que quedar, así que se aplica encima de la fila que ganó.
+        db.rollback()
+        if not _actualizar():
+            raise
 
 
 def _correct_alternative_ids(db: Session, questions: list[Question]) -> set[int]:

@@ -135,7 +135,7 @@ export function PanelDashboard({
               <AnuncioPlanes
                 usados={plan.ensayos_usados}
                 limite={plan.ensayos_limite}
-                precio="$15.000 al mes"
+                precio="$9.990 al mes"
               />
             ) : null
           }
