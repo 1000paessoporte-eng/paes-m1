@@ -3,6 +3,11 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import {
+  NOMBRE_CORTO,
+  QUE_MIDE,
+  estiloPrueba,
+} from "@/lib/colores-prueba";
 import type { ExamConfig, ExamOptions, Pace, Repaso, Subject } from "@/lib/api";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 
@@ -24,8 +29,8 @@ const PRUEBAS: { id: Subject; nombre: string; disponible: boolean }[] = [
   { id: "lectora", nombre: "Competencia Lectora", disponible: true },
   { id: "m1", nombre: "Competencia Matemática M1", disponible: true },
   { id: "m2", nombre: "Competencia Matemática M2", disponible: true },
-  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: true },
   { id: "ciencias", nombre: "Ciencias", disponible: true },
+  { id: "historia", nombre: "Historia y Ciencias Sociales", disponible: true },
 ];
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
@@ -151,7 +156,13 @@ export function ExamConfigScreen({
   return (
     // El pb en móvil reserva el alto de la barra de resumen, que va fija
     // sobre el contenido. En escritorio la barra no es fija y no hace falta.
-    <div className="mx-auto max-w-3xl pb-36 sm:pb-0">
+    <div
+      // Una sola definición para todo el formulario: los pasos 3 y 4 heredan
+      // el color de la prueba elegida en el paso 1. Las tarjetas del paso 1
+      // sí llevan el suyo propio, porque cada una muestra SU color.
+      style={estiloPrueba(subject)}
+      className="mx-auto max-w-3xl pb-36 sm:pb-0"
+    >
       <header className="mb-10">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-sm font-medium text-accent">
@@ -232,10 +243,9 @@ export function ExamConfigScreen({
           hay que elegir una prueba, mirar más abajo y volver, para descubrir
           que su banco no alcanzaba. */}
       <Paso numero={1} titulo="¿Qué prueba?">
-        <div className="flex flex-wrap gap-2">
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {PRUEBAS.map((prueba) => {
             const activa = prueba.disponible && prueba.id === subject;
-            const disponibles = optionsBySubject[prueba.id].total_available;
             return (
               <button
                 key={prueba.id}
@@ -248,17 +258,33 @@ export function ExamConfigScreen({
                     setEjes([]);
                   }
                 }}
+                style={estiloPrueba(prueba.id)}
                 className={cn(
-                  "rounded-full border px-3.5 py-1.5 text-sm transition disabled:cursor-not-allowed",
+                  "flex flex-col items-start gap-1 rounded-xl border-2 p-4 text-left transition disabled:cursor-not-allowed disabled:opacity-40",
                   activa
-                    ? "border-accent bg-accent text-accent-foreground"
+                    ? "border-(--color-prueba) bg-(--color-prueba)/10"
                     : "border-border bg-surface hover:border-border-strong"
                 )}
               >
-                {prueba.nombre}
-                <span className={activa ? "opacity-80" : "text-muted"}>
-                  {" "}
-                  ({disponibles})
+                <span className="flex items-center gap-2">
+                  {/* El punto de color es la única marca que se repite igual
+                      en el árbol: es lo que permite reconocer la prueba sin
+                      leer. */}
+                  <span
+                    aria-hidden
+                    className="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-prueba)"
+                  />
+                  <span
+                    className={cn(
+                      "text-sm font-semibold",
+                      activa ? "text-(--color-prueba)" : "text-foreground"
+                    )}
+                  >
+                    {NOMBRE_CORTO[prueba.id]}
+                  </span>
+                </span>
+                <span className="text-xs leading-snug text-muted">
+                  {QUE_MIDE[prueba.id]}
                 </span>
               </button>
             );
@@ -279,18 +305,15 @@ export function ExamConfigScreen({
             type="button"
             onClick={() => setEjes([])}
             aria-pressed={ejes.length === 0}
+            style={estiloPrueba(subject)}
             className={cn(
               "rounded-full border px-3.5 py-1.5 text-sm font-medium transition",
               ejes.length === 0
-                ? "border-accent bg-accent text-accent-foreground"
+                ? "border-(--color-prueba) bg-(--color-prueba) text-on-fill"
                 : "border-border bg-surface hover:border-border-strong"
             )}
           >
             Todos los temas
-            <span className={ejes.length === 0 ? "opacity-80" : "text-muted"}>
-              {" "}
-              ({options.total_available})
-            </span>
           </button>
           {options.axes.map((eje) => {
             const activo = ejes.includes(eje.axis);
@@ -301,18 +324,15 @@ export function ExamConfigScreen({
                 onClick={() => alternarEje(eje.axis)}
                 disabled={eje.available === 0}
                 aria-pressed={activo}
+                style={estiloPrueba(subject)}
                 className={cn(
                   "rounded-full border px-3.5 py-1.5 text-sm transition disabled:cursor-not-allowed disabled:opacity-40",
                   activo
-                    ? "border-accent bg-accent text-accent-foreground"
+                    ? "border-(--color-prueba) bg-(--color-prueba) text-on-fill"
                     : "border-border bg-surface hover:border-border-strong"
                 )}
               >
                 {eje.label}
-                <span className={activo ? "opacity-80" : "text-muted"}>
-                  {" "}
-                  ({eje.available})
-                </span>
               </button>
             );
           })}
@@ -334,7 +354,7 @@ export function ExamConfigScreen({
                 className={cn(
                   "rounded-lg border p-3 text-left transition disabled:cursor-not-allowed disabled:opacity-50",
                   cantidad === f.cantidad && alcanza
-                    ? "border-accent bg-accent/5 ring-1 ring-accent"
+                    ? "border-(--color-prueba) bg-(--color-prueba)/5 ring-1 ring-(--color-prueba)"
                     : "border-border bg-surface hover:border-border-strong"
                 )}
               >
@@ -364,7 +384,7 @@ export function ExamConfigScreen({
             className={cn(
               "mt-2 w-full rounded-lg border p-3 text-left transition",
               cantidad === maxDisponible
-                ? "border-accent bg-accent/5 ring-1 ring-accent"
+                ? "border-(--color-prueba) bg-(--color-prueba)/5 ring-1 ring-(--color-prueba)"
                 : "border-border bg-surface hover:border-border-strong"
             )}
           >
@@ -401,7 +421,7 @@ export function ExamConfigScreen({
                 className={cn(
                   "rounded-lg border p-3 text-left text-sm transition",
                   ritmo === r
-                    ? "border-accent bg-accent/5 ring-1 ring-accent"
+                    ? "border-(--color-prueba) bg-(--color-prueba)/5 ring-1 ring-(--color-prueba)"
                     : "border-border bg-surface hover:border-border-strong"
                 )}
               >
