@@ -651,6 +651,33 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/analytics/diagnostico": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Diagnostico
+         * @description Qué hace mal el alumno, y por qué.
+         *
+         *     Dos cosas que ninguna otra pantalla responde: los errores de razonamiento
+         *     en que cae repetidamente --con el texto que ya está escrito en el banco
+         *     para cada distractor-- y su ritmo contra el que exige la prueba real.
+         *
+         *     Las dos partes pueden venir vacías, y eso es correcto: con pocos datos no
+         *     se dice nada en vez de decir algo falso.
+         */
+        get: operations["get_diagnostico_api_analytics_diagnostico_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/plan": {
         parameters: {
             query?: never;
@@ -1518,6 +1545,15 @@ export interface components {
             alternatives: components["schemas"]["DemoAlternativeOut"][];
         };
         /**
+         * DiagnosticoOut
+         * @description Lo que el alumno hace mal, y por qué.
+         */
+        DiagnosticoOut: {
+            /** Errores */
+            errores: components["schemas"]["ErrorRepetido"][];
+            ritmo: components["schemas"]["RitmoOut"] | null;
+        };
+        /**
          * Difficulty
          * @enum {string}
          */
@@ -1610,6 +1646,32 @@ export interface components {
             duracion_mediana_min: number | null;
             /** Por Prueba */
             por_prueba: components["schemas"]["UsoPrueba"][];
+        };
+        /**
+         * ErrorRepetido
+         * @description Un error conceptual que el alumno cometió más de una vez.
+         *
+         *     No es "fallaste geometría". Es el razonamiento exacto que lo llevó a la
+         *     alternativa incorrecta, escrito pregunta por pregunta en el banco: "sumó
+         *     los exponentes en vez de multiplicarlos". Ese texto existe para las 5.586
+         *     alternativas incorrectas y hasta ahora no se mostraba en ninguna parte.
+         *
+         *     Es lo que separa "te equivocaste" de "sé por qué te equivocaste", y es la
+         *     única forma de que el alumno arregle la causa en vez de repetir ejercicios.
+         */
+        ErrorRepetido: {
+            /** Descripcion */
+            descripcion: string;
+            /** Pregunta */
+            pregunta: string;
+            /** Veces */
+            veces: number;
+            /** Node Code */
+            node_code: string;
+            /** Node Name */
+            node_name: string;
+            /** Axis Label */
+            axis_label: string;
         };
         /**
          * ExamAlternativeOut
@@ -1973,8 +2035,6 @@ export interface components {
             ensayos_limite: number | null;
             /** Carreras Limite */
             carreras_limite: number;
-            /** Analisis Avanzado */
-            analisis_avanzado: boolean;
             /** Limites Activos */
             limites_activos: boolean;
         };
@@ -2408,6 +2468,38 @@ export interface components {
             answered_correctly: boolean | null;
             /** Alternatives */
             alternatives: components["schemas"]["ReviewAlternativeOut"][];
+        };
+        /**
+         * RitmoEje
+         * @description Cuánto se demora el alumno por pregunta en un eje.
+         */
+        RitmoEje: {
+            /** Axis Label */
+            axis_label: string;
+            /** Segundos Por Pregunta */
+            segundos_por_pregunta: number;
+            /** Respuestas */
+            respuestas: number;
+        };
+        /**
+         * RitmoOut
+         * @description El ritmo del alumno contra el que exige la prueba real.
+         *
+         *     En la PAES mucha gente no falla por no saber: falla porque no alcanza. Esto
+         *     es lo que nadie entrena, y el dato para medirlo ya se estaba guardando
+         *     (mal: ver el arreglo de time_spent_ms) desde el primer día.
+         */
+        RitmoOut: {
+            /** Segundos Oficiales */
+            segundos_oficiales: number;
+            /** Segundos Alumno */
+            segundos_alumno: number | null;
+            /** Por Eje */
+            por_eje: components["schemas"]["RitmoEje"][];
+            /** Preguntas Sin Alcanzar */
+            preguntas_sin_alcanzar: number | null;
+            /** Respuestas Medidas */
+            respuestas_medidas: number;
         };
         /** RutaVisitas */
         RutaVisitas: {
@@ -3795,6 +3887,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AnalyticsSummaryOut"];
+                };
+            };
+        };
+    };
+    get_diagnostico_api_analytics_diagnostico_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DiagnosticoOut"];
                 };
             };
         };
