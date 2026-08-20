@@ -21383,6 +21383,96 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "resena_sub_terra",
+        "title": "Volver a Sub terra",
+        "kind": "no_literario",
+        "source_note": (
+            "Reseña original de 1000paes sobre Sub terra (1904), de Baldomero Lillo. "
+            "Los datos de publicación y de contenido del libro son verificables; las "
+            "valoraciones literarias son del emisor."
+        ),
+        "body": (
+            "**Volver a Sub terra**\n\n"
+            "*A ciento veinte años de su publicación, el libro de Baldomero Lillo "
+            "sigue siendo el que más se lee en los colegios chilenos y, quizá por "
+            "eso mismo, el que peor se lee.*\n\n"
+            "Hay libros a los que la escuela les hace un favor ambiguo. Los "
+            "mantiene vivos, los pone cada año en manos de miles de personas que si "
+            "no jamás los abrirían y, al mismo tiempo, los convierte en una tarea. "
+            "Sub terra, que Baldomero Lillo publicó en julio de 1904, lleva más de "
+            "un siglo en esa situación incómoda: todo el mundo sabe de qué se trata "
+            "—los mineros del carbón, el niño de la compuerta, la mina que se traga "
+            "a los hombres— y muy poca gente recuerda haberlo leído de verdad. "
+            "Conviene volver a él sin esa nube encima.\n\n"
+            "El libro reunió en su primera edición ocho cuentos, casi todos "
+            "ambientados en las minas de carbón de Lota. Lillo, nacido allí mismo "
+            "en 1867, no llegó al tema por documentación: creció en ese mundo y "
+            "trabajó en la pulpería de la compañía. Eso explica una particularidad "
+            "del volumen que a veces se pasa por alto. La mina no funciona como "
+            "escenario, del modo en que un cuento de aventuras usa una selva. "
+            "Funciona como un sistema con reglas propias: hay una jerarquía, hay "
+            "una manera de calcular el riesgo, hay un lenguaje técnico, y los "
+            "personajes no pueden salirse de ahí porque de eso comen.\n\n"
+            "Lo mejor del libro es una decisión de método: Lillo muestra en vez de "
+            "explicar. En el cuento más conocido, un padre lleva a su hijo de ocho "
+            "años a trabajar como portero de una galería, y la escena no está "
+            "construida sobre la crueldad de nadie. El capataz no grita; el padre "
+            "no es un monstruo; el niño no dice una frase memorable. Lo que hay es "
+            "un trámite: se firma, se explica la tarea, se deja al niño en su "
+            "puesto. El horror aparece precisamente porque todo transcurre como "
+            "algo normal, y el lector termina de leer con la incomodidad de haber "
+            "presenciado una rutina y no un crimen. Esa es una operación literaria "
+            "difícil, y a Lillo le sale.\n\n"
+            "Hay una segunda virtud, menos comentada. El narrador casi nunca pide "
+            "lástima. Describe cuerpos, herramientas, temperaturas, distancias; se "
+            "guarda los adjetivos compasivos. Al lector no se le indica qué debe "
+            "sentir, y esa contención es lo que hace que sienta algo. Cuando el "
+            "libro abandona ese registro, se nota.\n\n"
+            "El otro cuento que todo el mundo nombra funciona con el mismo "
+            "procedimiento y llega más lejos. Un hombre es enviado a trabajar a una "
+            "galería que en la mina todos saben peligrosa, y la historia avanza "
+            "mientras el lector ya sabe lo que va a pasar y los personajes discuten "
+            "cosas pequeñas: un cambio de cuadrilla, una orden que nadie discute, "
+            "una madre que espera. Lillo no acelera. Deja que la maquinaria "
+            "administrativa haga su trabajo con la lentitud de siempre, y esa "
+            "lentitud es la que termina de apretar. Cuando el desastre ocurre, "
+            "ocupa pocas líneas: lo que el cuento había estado contando, en "
+            "realidad, era todo lo anterior.\n\n"
+            "Porque también hay que decirlo: no todos los cuentos están a la misma "
+            "altura. Varios cierran con una moraleja explícita, como si el autor no "
+            "confiara del todo en la escena que acaba de construir y necesitara "
+            "subrayarla. Algunos antagonistas —el capataz cruel, el patrón "
+            "indiferente— son figuras de una sola pieza, sin nada que las "
+            "complique. Y en dos o tres relatos el desenlace llega con una "
+            "fatalidad tan bien anunciada que el efecto se apaga antes de ocurrir. "
+            "Son objeciones de lector, no defectos que arruinen el libro; pero "
+            "quien llegue esperando ocho obras maestras se va a encontrar con "
+            "cuatro muy buenas, tres correctas y una que se sostiene apenas.\n\n"
+            "Queda la pregunta de por qué seguir leyéndolo. La respuesta habitual "
+            "—que documenta las condiciones de trabajo en las minas de comienzos "
+            "del siglo XX— es cierta y es insuficiente. Si el valor de Sub terra "
+            "fuera documental, hoy lo reemplazaría cualquier informe histórico, que "
+            "además sería más exacto. Lo que un informe no puede hacer es lo que "
+            "hace el libro: poner al lector adentro de una decisión imposible y "
+            "obligarlo a mirarla de cerca. El padre de la compuerta no es un mal "
+            "padre. Está eligiendo entre dos cosas malas con la información y el "
+            "margen que tiene, que es la situación en que la mayoría de la gente "
+            "toma la mayoría de sus decisiones. Ese cuento no envejeció porque esa "
+            "situación no ha desaparecido.\n\n"
+            "Una advertencia para quien lo lea por primera vez. Conviene no empezar "
+            "por el principio ni leerlo de corrido: son cuentos que se parecen "
+            "entre sí en clima y en desenlace, y leídos uno tras otro se anulan. "
+            "Mejor espaciarlos. Y conviene no confundir el libro con la leyenda que "
+            "lo rodea: «El alma de la máquina», que muchos recuerdan como parte de "
+            "Sub terra, pertenece en realidad a Sub sole, publicado en 1907. La "
+            "confusión es menor, pero dice algo sobre cómo circula este autor: más "
+            "por fragmentos escolares que por libros.\n\n"
+            "Sub terra está en dominio público y se consigue completo y gratis en "
+            "las bibliotecas digitales del país, de modo que la única barrera para "
+            "leerlo es la idea de que ya se leyó. Vale la pena sacársela de encima."
+        ),
+    },
+    {
         "key": "hora_ferrocarril",
         "title": "La hora que inventaron los trenes",
         "kind": "no_literario",
@@ -23294,6 +23384,176 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Volver a Sub terra' ----------
+    _ql(
+        "resena_sub_terra", "lec_localizar", "facil",
+        "Según la reseña, ¿qué reunió Sub terra en su primera edición?",
+        "Ocho cuentos, casi todos ambientados en las minas de Lota",
+        "El tercer párrafo lo dice con esas dos precisiones: «reunió en su primera "
+        "edición ocho cuentos, casi todos ambientados en las minas de carbón de "
+        "Lota».\n\nLa reseña agrega el dato biográfico que explica esa "
+        "ambientación: Lillo nació allí mismo en 1867 y trabajó en la pulpería de "
+        "la compañía.",
+        [
+            ("Trece cuentos sobre distintos oficios del sur de Chile", "La reseña no menciona esa cifra ni presenta el libro como un muestrario de oficios."),
+            ("Ocho cuentos escritos a partir de documentos de la época", "El texto descarta esa vía: Lillo «no llegó al tema por documentación»."),
+            ("Cuatro cuentos que la crítica considera obras maestras", "Cuatro es la cantidad que la emisora califica de muy buenas, no el total."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_localizar", "facil",
+        "Según la reseña, ¿a qué libro pertenece «El alma de la máquina»?",
+        "A Sub sole, que Lillo publicó en el año 1907",
+        "El penúltimo párrafo corrige esa confusión frecuente: el cuento «que "
+        "muchos recuerdan como parte de Sub terra, pertenece en realidad a Sub "
+        "sole, publicado en 1907».\n\nLa emisora usa el error para señalar algo más "
+        "amplio: que este autor circula «más por fragmentos escolares que por "
+        "libros».",
+        [
+            ("A Sub terra, que Lillo publicó en el año 1904", "Es justamente la confusión que el párrafo viene a corregir."),
+            ("A una antología escolar preparada después de su muerte", "El texto no menciona ninguna antología póstuma del autor."),
+            ("A un libro que la reseña no llega a identificar nunca", "Lo identifica con título y año: Sub sole, de 1907."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_localizar", "facil",
+        "Según la reseña, ¿cómo conviene leer el libro por primera vez?",
+        "Espaciando los cuentos, sin leerlos uno tras otro",
+        "La advertencia es explícita: «Conviene no empezar por el principio ni "
+        "leerlo de corrido», y da la razón: «son cuentos que se parecen entre sí en "
+        "clima y en desenlace, y leídos uno tras otro se anulan».\n\nDe ahí la "
+        "recomendación final: «Mejor espaciarlos».",
+        [
+            ("Empezando por el primero y siguiendo el orden del libro", "La reseña desaconseja precisamente empezar por el principio."),
+            ("Leyendo antes un informe histórico sobre las minas", "El informe se menciona para compararlo con el libro, no como preparación."),
+            ("Saltándose los cuentos que cierran con una moraleja", "La emisora objeta esos cierres, pero no propone omitir ningún cuento."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_interpretar", "medio",
+        "¿Qué quiere decir la emisora con que la escuela les hace a ciertos libros "
+        "«un favor ambiguo»?",
+        "Que los mantiene vivos y a la vez los convierte en una tarea",
+        "El párrafo desarrolla las dos caras del favor: la escuela «los mantiene "
+        "vivos, los pone cada año en manos de miles de personas que si no jamás los "
+        "abrirían» y, en la misma frase, «los convierte en una tarea».\n\nEl efecto "
+        "de esa segunda cara se enuncia enseguida: mucha gente sabe de qué se trata "
+        "Sub terra y casi nadie recuerda haberlo leído de verdad.",
+        [
+            ("Que la escuela elige libros demasiado difíciles para la edad", "La reseña no discute en ningún momento la dificultad de los libros."),
+            ("Que los profesores enseñan mal los libros que asignan", "El reproche no recae sobre los profesores, sino sobre lo que la tarea hace."),
+            ("Que los libros escolares envejecen más rápido que el resto", "La emisora sostiene lo contrario sobre este libro: que no envejeció."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_interpretar", "medio",
+        "¿Con qué finalidad la reseña señala que el capataz no grita y el padre no "
+        "es un monstruo?",
+        "Para mostrar que el horror nace de la normalidad de la escena",
+        "La enumeración prepara la conclusión del párrafo: «Lo que hay es un "
+        "trámite», y por eso «el horror aparece precisamente porque todo transcurre "
+        "como algo normal».\n\nEl lector queda con la incomodidad «de haber "
+        "presenciado una rutina y no un crimen», que es lo que la emisora considera "
+        "el logro del cuento.",
+        [
+            ("Para señalar que los personajes del libro son poco creíbles", "Esa objeción la hace sobre otros cuentos, no sobre esta escena."),
+            ("Para explicar por qué el cuento se lee en todos los colegios", "La reseña no atribuye a esa escena la presencia del libro en las aulas."),
+            ("Para sugerir que la mina no era tan peligrosa como se dice", "El texto no relativiza el peligro: describe cómo está contado."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_interpretar", "dificil",
+        "¿Qué anticipa la frase «cuando el libro abandona ese registro, se nota»?",
+        "La objeción a los cuentos que cierran con una moraleja explícita",
+        "La frase cierra el párrafo sobre la contención del narrador y sirve de "
+        "bisagra: el párrafo siguiente empieza con «Porque también hay que decirlo» "
+        "y enumera los cierres subrayados, los antagonistas de una pieza y los "
+        "desenlaces demasiado anunciados.\n\nEs decir, la virtud y el defecto que "
+        "la emisora señala son la misma cosa vista al derecho y al revés.",
+        [
+            ("El elogio a la manera en que Lillo describe los cuerpos", "Ese elogio está en el mismo párrafo, antes de la frase, y no después."),
+            ("La comparación entre el libro y un informe histórico", "Esa comparación llega mucho más adelante y responde a otra pregunta."),
+            ("La advertencia sobre el orden en que conviene leerlo", "La advertencia de lectura aparece en el penúltimo párrafo."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre el párrafo del segundo cuento y el que lo "
+        "antecede?",
+        "Ilustra con un caso el procedimiento que el párrafo anterior describe",
+        "El párrafo anterior sostiene que el narrador «casi nunca pide lástima» y "
+        "se guarda los adjetivos compasivos. El siguiente muestra ese método "
+        "trabajando en un cuento entero: una orden que nadie discute, un cambio de "
+        "cuadrilla, una madre que espera, y un desastre que «ocupa pocas "
+        "líneas».\n\nPor eso la emisora dice que ese cuento «funciona con el mismo "
+        "procedimiento y llega más lejos».",
+        [
+            ("Corrige el elogio anterior mostrando un cuento fallido", "No lo corrige: dice que ese cuento llega todavía más lejos."),
+            ("Cambia de tema hacia la estructura general del libro", "No hay cambio de tema: sigue analizando el mismo procedimiento."),
+            ("Introduce la comparación con otros autores de la época", "La reseña no compara a Lillo con ningún otro autor."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_evaluar", "medio",
+        "¿Qué postura adopta la emisora frente al valor documental del libro?",
+        "Lo admite, pero lo considera insuficiente para explicar su vigencia",
+        "El texto acepta el dato y lo relativiza en la misma frase: la respuesta "
+        "habitual «es cierta y es insuficiente».\n\nEl argumento que sigue lo "
+        "aclara: si el valor fuera documental, «hoy lo reemplazaría cualquier "
+        "informe histórico, que además sería más exacto», y lo que el informe no "
+        "puede hacer es poner al lector dentro de la decisión.",
+        [
+            ("Lo rechaza, porque los datos del libro son poco exactos", "Quien sería más exacto es el informe; el libro no se acusa de inexacto."),
+            ("Lo acepta y lo considera la razón principal para leerlo", "Es la lectura que la emisora llama insuficiente en ese mismo párrafo."),
+            ("No se pronuncia, porque prefiere hablar de literatura", "Se pronuncia con claridad y dedica un párrafo entero al asunto."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_evaluar", "dificil",
+        "¿Qué actitud asume la emisora respecto del libro que reseña?",
+        "Matizada, pues elogia el método y objeta algunos desenlaces",
+        "La reseña sostiene las dos cosas sin contradecirse: llama al método de "
+        "Lillo «una operación literaria difícil» que le sale bien, y en el párrafo "
+        "siguiente enumera moralejas explícitas, antagonistas de una pieza y "
+        "finales demasiado anunciados.\n\nElla misma marca el estatuto de esos "
+        "reparos: «son objeciones de lector, no defectos que arruinen el libro».",
+        [
+            ("Reverente, pues considera intocable a un clásico chileno", "Le hace tres reparos concretos y calibra el libro cuento por cuento."),
+            ("Severa, pues concluye que el libro no resiste una relectura", "Concluye lo contrario: invita a leerlo y explica por qué sigue vigente."),
+            ("Indiferente, pues describe el libro sin valorarlo nunca", "Valora todo el tiempo: distingue cuentos muy buenos, correctos y flojos."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_evaluar", "dificil",
+        "¿Cuál de estas afirmaciones de la reseña es un hecho verificable y no un "
+        "juicio?",
+        "Que el libro se publicó en julio de 1904 con ocho cuentos",
+        "Esa afirmación puede comprobarse consultando la edición: es un dato de "
+        "publicación, del mismo tipo que la pertenencia de «El alma de la máquina» "
+        "a Sub sole.\n\nLas otras tres son valoraciones de la emisora: dependen de "
+        "su lectura, y el texto las presenta como tales.",
+        [
+            ("Que la contención del narrador es lo mejor del libro", "Es una valoración: otro lector podría destacar otra cosa del libro."),
+            ("Que hay antagonistas de una sola pieza y sin complejidad", "Es un juicio literario sobre cómo están construidos los personajes."),
+            ("Que cuatro cuentos son muy buenos y uno se sostiene apenas", "Es la calificación personal de la emisora, no un dato comprobable."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_evaluar", "medio",
+        "Un lector concluye que la reseña desaconseja leer Sub terra. ¿Qué responde "
+        "el texto?",
+        "Que invita a leerlo y solo advierte que hay cuentos desparejos",
+        "El cierre no deja dudas: el libro «se consigue completo y gratis en las "
+        "bibliotecas digitales del país», y «la única barrera para leerlo es la "
+        "idea de que ya se leyó. Vale la pena sacársela de encima».\n\nLas "
+        "objeciones que la emisora hace están acotadas por ella misma: advierten "
+        "sobre qué esperar, no desaconsejan la lectura.",
+        [
+            ("Que efectivamente lo desaconseja para lectores primerizos", "A ese lector le dedica una recomendación de cómo leerlo, no una negativa."),
+            ("Que su juicio es tan negativo como el de la crítica habitual", "La reseña no cita ninguna crítica habitual con la cual comparar su juicio."),
+            ("Que prefiere recomendar el informe histórico sobre las minas", "El informe aparece para mostrar lo que un informe NO puede hacer."),
+        ],
+    ),
     # ---------- 'La hora que inventaron los trenes' ----------
     _ql(
         "hora_ferrocarril", "lec_localizar", "facil",
