@@ -21383,6 +21383,180 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "antibiotico_resfrio",
+        "title": "El remedio que no era para eso",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Los datos citados —la obligación de receta "
+            "médica en Chile desde 1999 y las estimaciones de mortalidad por "
+            "resistencia bacteriana publicadas en 2022 y 2024— se verificaron antes de "
+            "escribir el texto. El artículo es material de lectura y no reemplaza la "
+            "indicación de un profesional de la salud."
+        ),
+        "body": (
+            "**El remedio que no era para eso**\n\n"
+            "En el mueble del baño de casi cualquier casa hay una caja de "
+            "antibióticos empezada. Sobraron cuatro comprimidos de la vez pasada, "
+            "la caja quedó ahí, y al tercer día de un resfrío que no cede alguien "
+            "la mira y piensa lo mismo que pensaría cualquiera: por probar no se "
+            "pierde nada. Se pierde bastante, en realidad, y no solo quien se los "
+            "toma.\n\n"
+            "El punto de partida es una distinción que se enseña temprano y se "
+            "olvida rápido: los antibióticos actúan sobre bacterias, y el resfrío "
+            "común lo producen virus. No son dos versiones del mismo problema. Una "
+            "bacteria es un organismo completo, con su pared y su maquinaria para "
+            "reproducirse, y el antibiótico funciona porque interfiere en alguna de "
+            "esas piezas. Un virus no tiene ninguna de ellas: entra en nuestras "
+            "células y las usa. Tomar un antibiótico para un resfrío es llevar la "
+            "llave correcta a una puerta que no existe.\n\n"
+            "Entonces, ¿por qué tanta gente jura que le sirvió?\n\n"
+            "Porque un resfrío común dura lo que dura: entre siete y diez días, con "
+            "o sin remedios, y la tos puede quedar dando vueltas un par de semanas "
+            "más. Quien empieza el antibiótico al cuarto día se va a sentir mejor "
+            "al sexto o al séptimo, y va a atribuirle la mejoría a lo último que "
+            "hizo. Es un error de razonamiento tan común que tiene nombre desde "
+            "hace siglos: confundir «vino después» con «fue por causa de». "
+            "Cualquier cosa que uno se tome cuando la enfermedad ya está en su "
+            "curva de bajada va a parecer milagrosa, incluida la sopa de la abuela, "
+            "que al menos no tiene efectos adversos.\n\n"
+            "Hay una creencia relacionada que conviene desmontar de paso: la idea "
+            "de que el mucus verde o amarillo indica que ya hay bacterias y que "
+            "llegó la hora del antibiótico. El color no viene del germen. Viene de "
+            "las células de defensa del propio cuerpo, que se acumulan y tiñen las "
+            "secreciones, y aparece igual en cuadros virales corrientes. Es un dato "
+            "tan visible y tan poco informativo que resulta un buen ejemplo de cómo "
+            "una señal llamativa puede no significar nada.\n\n"
+            "Conviene decir también lo que este artículo no afirma. No dice que los "
+            "antibióticos sean malos: son uno de los inventos que más vidas han "
+            "salvado, y hay cuadros en que no tomarlos a tiempo es el error grave. "
+            "Tampoco dice que uno pueda distinguir por su cuenta un resfrío de algo "
+            "que sí necesita tratamiento; esa es precisamente la parte que le "
+            "corresponde a quien examina al paciente. Lo que dice es más acotado: "
+            "que la decisión de tomarlos no puede salir del mueble del baño.\n\n"
+            "El costo de equivocarse tiene dos capas. La primera es individual: un "
+            "antibiótico no distingue entre las bacterias que molestan y las muchas "
+            "que conviven con nosotros sin causar problemas, y puede traer diarrea, "
+            "reacciones alérgicas y otros efectos que nadie eligió correr sin "
+            "motivo.\n\n"
+            "La segunda capa es la que casi nunca se ve, porque no le ocurre a "
+            "quien toma el remedio. Cada vez que un antibiótico se usa, las "
+            "bacterias que resultaban menos sensibles a él tienen una ventaja: "
+            "sobreviven y se multiplican. El proceso es selección natural en "
+            "versión acelerada, y trabaja en contra de todos. Un análisis publicado "
+            "en 2022 estimó que en 2019 hubo cerca de un millón trescientas mil "
+            "muertes directamente atribuibles a infecciones por bacterias "
+            "resistentes, y casi cinco millones asociadas a ellas. Un trabajo "
+            "posterior del mismo grupo proyecta del orden de treinta y nueve "
+            "millones de muertes acumuladas por esa causa de aquí a 2050.\n\n"
+            "Son cifras grandes y por eso mismo resbalan. Puestas en escala "
+            "doméstica dicen algo más incómodo: la persona que se toma cuatro "
+            "comprimidos sobrantes no está arriesgando su recuperación, que "
+            "probablemente ocurrirá igual. Está gastando un poquito de un recurso "
+            "común, el mismo que va a necesitar si alguna vez tiene una infección "
+            "de verdad, o si la tiene alguien de su familia.\n\n"
+            "En Chile, la venta de antibióticos sin receta está prohibida desde "
+            "septiembre de 1999, cuando el Ministerio de Salud impulsó la política "
+            "de uso racional. La medida cambió el mostrador de la farmacia, pero no "
+            "el mueble del baño: la principal fuente de antibióticos sin indicación "
+            "hoy no es la venta libre, sino lo que quedó de tratamientos "
+            "anteriores, lo que prestó un vecino y lo que se recomienda en un grupo "
+            "familiar con la mejor intención del mundo.\n\n"
+            "De ahí que las recomendaciones sensatas sean aburridas y caseras. Un "
+            "antibiótico indicado se toma completo, aunque uno se sienta bien al "
+            "tercer día, porque cortar antes deja vivas justo a las bacterias más "
+            "difíciles. No se guardan sobras: si sobraron, es que algo se hizo "
+            "distinto de lo indicado. No se comparte ni se hereda una receta, "
+            "porque estaba escrita para una persona, una bacteria y un momento. Y "
+            "si un cuadro empeora o se prolonga, lo que corresponde es consultar, "
+            "no adivinar en el pasillo del baño.\n\n"
+            "Cuesta aceptarlo, porque «espere y descanse» suena a que el sistema no "
+            "hizo nada. Pero en la mayoría de los resfríos no hacer nada es "
+            "exactamente lo que hay que hacer, y esa también es una indicación "
+            "médica, aunque venga sin caja."
+        ),
+    },
+    {
+        "key": "cuenta_nibaldo",
+        "title": "La cuenta de don Nibaldo",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes y el "
+            "pasaje donde ocurre son ficticios."
+        ),
+        "body": (
+            "**La cuenta de don Nibaldo**\n\n"
+            "La casa olía a encierro y a papel. Mi mamá abrió las cortinas y la luz "
+            "entró sobre una mesa con hule, una estufa a parafina sin usar y tres "
+            "bolsas de nailon dobladas en cuadrados perfectos, como servilletas. "
+            "Era el lunes siguiente al funeral. Habíamos ido a ver qué se hacía con "
+            "las cosas, que es una manera educada de decir que fuimos a mirar.\n\n"
+            "Al velorio fuimos siete personas, contando a la señora que atendía la "
+            "sala. Alguien comentó, sin bajar mucho la voz, que era lo que pasaba "
+            "cuando uno se dedicaba toda la vida a no darle nada a nadie. Los demás "
+            "asintieron. Yo también asentí, y esa es la parte que me acuerdo mejor.\n\n"
+            "En el barrio, la fama de don Nibaldo era una sola y no admitía "
+            "matices: era el viejo más agarrado de la calle Los Naranjos. Los "
+            "adultos lo decían riéndose y los niños lo repetíamos sin entender del "
+            "todo, como se repiten las cosas que a uno le enseñan antes de tener "
+            "opinión.\n\n"
+            "Y había con qué. No prendía la estufa ni en junio: andaba con dos "
+            "chalecos y decía que el frío era cosa de estar quieto. Lavaba las "
+            "bolsas del pan y las colgaba en el alambre. Cuando arrendó la pieza "
+            "del fondo, le cobró a la señora Berta el mes completo aunque se fuera "
+            "el día veintiocho, y todo el pasaje lo supo esa misma tarde. Si "
+            "alguien pedía prestado algo, don Nibaldo lo anotaba. Un martillo, una "
+            "manguera, dos huevos: lo anotaba.\n\n"
+            "Yo tenía quince años la vez que le llevé el pan y me pasé de vuelto. "
+            "Me había dado mil pesos y le devolví trescientos cuando eran "
+            "doscientos ochenta. Me miró, sacó del bolsillo del delantal una moneda "
+            "de veinte y me la puso en la mano. Después abrió un cuaderno de tapa "
+            "dura que tenía sobre la mesa, escribió algo y lo cerró. Me acuerdo de "
+            "haber pensado: este viejo anota hasta las monedas de veinte.\n\n"
+            "El cuaderno estaba en el primer cajón, ese lunes, arriba de todo.\n\n"
+            "Mi mamá lo abrió pensando que era la libreta de las deudas del pasaje, "
+            "y medio en broma dijo que ahora íbamos a saber quién le debía qué a "
+            "quién. Pero no era eso. Eran columnas de números, ordenadas por mes, "
+            "desde octubre de 2009 hasta el mes anterior. La misma cifra casi "
+            "siempre, subiendo de a poco con los años. Al lado de cada monto, una "
+            "letra: una B.\n\n"
+            "Nos quedamos un rato mirándolo sin entender. Después mi mamá dijo un "
+            "nombre y se sentó.\n\n"
+            "La señora Berta —la del mes completo, la del día veintiocho— llevaba "
+            "quince años con un tratamiento que en el consultorio no siempre "
+            "estaba, y que ella iba a comprar a una farmacia de la avenida. Todo el "
+            "pasaje sabía que lo compraba. Nadie se había preguntado nunca con qué.\n\n"
+            "Aquí me gustaría escribir que el barrio entero cambió de idea, que "
+            "pedimos perdón, que alguien dijo unas palabras bonitas. No pasó nada "
+            "de eso. Mi mamá cerró el cuaderno, lo puso en su cartera y dijo que "
+            "era mejor que la señora Berta no se enterara, porque a lo mejor él lo "
+            "había querido así, y porque una cosa es recibir ayuda y otra es "
+            "enterarse quince años después de que uno la estaba recibiendo. "
+            "Discutimos eso una semana entera. Todavía no sé si tenía razón.\n\n"
+            "Lo que sí sé es que don Nibaldo no dejó de ser el viejo agarrado de la "
+            "calle Los Naranjos. Siguió siendo el que cobró el mes completo, el que "
+            "anotaba los huevos prestados, el que no prendía la estufa. El cuaderno "
+            "no borra nada de eso. Solamente lo pone al lado de otra cosa, y a mí "
+            "me obliga a tener dos ideas al mismo tiempo sobre la misma persona, "
+            "que resulta ser una cosa bastante más difícil de lo que parece.\n\n"
+            "Porque además queda la pregunta incómoda, la que nadie hizo en voz "
+            "alta durante el velorio ni después. ¿Le cobró el mes completo a la "
+            "señora Berta para poder pagarle el tratamiento a la señora Berta? "
+            "Puesto así suena absurdo, y sin embargo cuadra: el viejo llevaba la "
+            "cuenta de todo, y una cuenta que cuadra no distingue de dónde salió "
+            "cada peso. A lo mejor no hubo generosidad, sino un sistema. A lo "
+            "mejor, para él, eran la misma cosa.\n\n"
+            "Han pasado nueve años. La casa la vendieron, la señora Berta se fue a "
+            "vivir donde una hija en Rancagua y el pasaje ahora tiene reja "
+            "eléctrica. De don Nibaldo se sigue hablando igual que antes: el viejo "
+            "más agarrado de la calle. Yo no corrijo a nadie, en parte porque me da "
+            "lata explicar todo esto, y en parte porque no estoy seguro de qué "
+            "habría que corregir.\n\n"
+            "Guardé el cuaderno. Está en una caja, con las tapas gastadas y las "
+            "columnas prolijas, y de vez en cuando lo abro y le miro las cifras, "
+            "que no dicen nada más de lo que dicen: una fecha, un monto, una letra."
+        ),
+    },
+    {
         "key": "cinco_grados",
         "title": "Cinco grados de diferencia",
         "kind": "no_literario",
@@ -24503,6 +24677,340 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El remedio que no era para eso' ----------
+    _ql(
+        "antibiotico_resfrio", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánto dura un resfrío común?",
+        "Entre siete y diez días, con o sin remedios",
+        "El dato es la base del razonamiento del texto: si el cuadro dura eso por "
+        "sí solo, quien empieza un antibiótico al cuarto día mejorará dentro de ese "
+        "plazo de todas maneras.\n\nEl emisor agrega que la tos «puede quedar dando "
+        "vueltas un par de semanas más».",
+        [
+            ("Entre siete y diez días, si se trata a tiempo", "El texto subraya que ese plazo no depende del tratamiento."),
+            ("Un par de semanas, contando desde el cuarto día", "Las dos semanas corresponden a la tos que queda después."),
+            ("Tres días, cuando el cuadro es de origen viral", "El tercer día es cuando alguien mira la caja, no el final."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_localizar", "facil",
+        "Según la lectura, ¿desde cuándo está prohibida en Chile la venta de "
+        "antibióticos sin receta?",
+        "Desde septiembre de 1999",
+        "La medida la impulsó el Ministerio de Salud como parte de su política de "
+        "uso racional de antibióticos.\n\nEl texto la menciona para marcar una "
+        "diferencia: la regulación alcanzó al mostrador de la farmacia, no al "
+        "botiquín de las casas.",
+        [
+            ("Desde el año 2022, tras el estudio citado", "En 2022 se publicó el análisis de mortalidad, no la norma."),
+            ("Desde 2050, según la proyección mencionada", "2050 es el horizonte de una proyección, no una fecha pasada."),
+            ("Desde 2019, año de las cifras del análisis", "2019 es el año que estimó el estudio, no el de la norma."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_localizar", "medio",
+        "Según la lectura, ¿de dónde proviene el color verde o amarillo del mucus?",
+        "De las células de defensa del propio cuerpo",
+        "El texto lo dice sin rodeos: «el color no viene del germen». Son las "
+        "células de defensa las que se acumulan y tiñen las secreciones, y eso "
+        "ocurre igual en cuadros virales corrientes.\n\nDe ahí que el emisor lo use "
+        "como ejemplo de una señal muy visible que no informa nada.",
+        [
+            ("De las bacterias que ya colonizaron las vías respiratorias", "Es justamente la creencia que el texto se propone desmontar."),
+            ("Del antibiótico, cuando se toma durante varios días", "El color aparece antes de cualquier tratamiento."),
+            ("De la duración del cuadro, que va oscureciendo el mucus", "El texto no relaciona el color con el paso de los días."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_interpretar", "facil",
+        "¿Qué explica la comparación con una llave llevada a una puerta que no "
+        "existe?",
+        "Que en un virus no hay sobre qué actuar",
+        "El párrafo describe primero las piezas de una bacteria —su pared, su "
+        "maquinaria para reproducirse— y aclara que el antibiótico funciona porque "
+        "interfiere en alguna de ellas.\n\nUn virus no tiene ninguna: entra en "
+        "nuestras células y las usa. La llave no está mala; falta la cerradura.",
+        [
+            ("Que el antibiótico pierde eficacia con el paso del tiempo", "La comparación no trata sobre la caducidad del remedio."),
+            ("Que hace falta una dosis mayor para que el remedio actúe", "El texto no plantea un problema de cantidad, sino de blanco."),
+            ("Que cada infección necesita un antibiótico distinto", "La elección entre antibióticos no es lo que ilustra la imagen."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué tanta gente jura que el antibiótico le sirvió?",
+        "Porque lo toma cuando el cuadro ya iba de bajada",
+        "El texto reconstruye la secuencia: el resfrío dura entre siete y diez "
+        "días, el antibiótico empieza al cuarto y la mejoría llega al sexto o al "
+        "séptimo.\n\nLa mejoría iba a ocurrir igual, pero se le atribuye a lo "
+        "último que se hizo. El emisor lo nombra como un error con nombre antiguo: "
+        "confundir «vino después» con «fue por causa de».",
+        [
+            ("Porque el antibiótico alivia algunos síntomas del resfrío", "El texto no le atribuye ningún efecto sobre un cuadro viral."),
+            ("Porque quienes lo toman suelen descansar más esos días", "El reposo no aparece entre las explicaciones del texto."),
+            ("Porque muchos resfríos terminan en infecciones bacterianas", "El artículo no sostiene que ese desenlace sea frecuente."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_interpretar", "medio",
+        "¿Qué quiere decir que la medida de 1999 cambió el mostrador pero no el "
+        "mueble del baño?",
+        "Que reguló la venta y no lo que quedó guardado",
+        "El emisor sostiene que hoy la principal fuente de antibióticos sin "
+        "indicación no es la venta libre, sino las sobras de tratamientos "
+        "anteriores, lo que presta un vecino y lo que recomienda la familia.\n\nLa "
+        "frase contrapone dos lugares: la farmacia, que la norma alcanzó, y la "
+        "casa, donde la decisión sigue tomándose sin control.",
+        [
+            ("Que la norma se aplicó solo en algunas farmacias del país", "El texto no denuncia incumplimiento en los locales de venta."),
+            ("Que las farmacias siguen vendiendo antibióticos sin receta", "Precisamente eso es lo que la medida logró cambiar."),
+            ("Que la gente compra más antibióticos que antes de 1999", "El texto no compara volúmenes de venta entre esas fechas."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_interpretar", "dificil",
+        "¿Qué función cumple el párrafo que sigue a las cifras de mortalidad?",
+        "Traduce esos números a una decisión de una persona",
+        "El emisor admite que las cifras grandes «resbalan»: un millón trescientas "
+        "mil muertes es un dato que no se siente.\n\nPor eso lo baja a escala "
+        "doméstica: quien se toma cuatro comprimidos sobrantes no arriesga su "
+        "recuperación —que ocurrirá igual—, sino que gasta un poco de un recurso "
+        "común, el mismo que necesitará después él o su familia.",
+        [
+            ("Corrige las cifras del estudio con datos más recientes", "El trabajo de 2024 amplía la proyección, no corrige el dato."),
+            ("Explica cómo se calcularon las muertes atribuibles", "El texto no describe la metodología de esas estimaciones."),
+            ("Demuestra que el problema es mayor de lo que se cree", "Su objetivo es hacerlo tangible, no aumentar su tamaño."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor aclara lo que su artículo no afirma?",
+        "Para evitar que se lea como un rechazo al antibiótico",
+        "El párrafo es explícito: los antibióticos son «uno de los inventos que más "
+        "vidas han salvado» y hay cuadros en que no tomarlos a tiempo es el error "
+        "grave.\n\nUn texto que solo enumerara riesgos podría llevar a alguien a "
+        "suspender un tratamiento indicado, que es exactamente el daño contrario al "
+        "que el artículo quiere evitar.",
+        [
+            ("Para reconocer que no está seguro de los datos citados", "Los datos se presentan con fuente y año, sin reservas."),
+            ("Para anunciar los temas que tratará más adelante", "El párrafo delimita el alcance, no adelanta contenidos."),
+            ("Para responder a las críticas de otros artículos", "No hay ninguna discusión con otros textos ni autores."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_evaluar", "medio",
+        "¿Qué falla de razonamiento describe el emisor al hablar de «vino después» "
+        "y «fue por causa de»?",
+        "Atribuir a un remedio una mejoría que igual ocurriría",
+        "El error consiste en tomar el orden de los hechos como prueba de su causa. "
+        "Si algo se toma justo antes de mejorar, parece haber producido la "
+        "mejoría.\n\nEl texto lo aplica a un caso donde el lector probablemente lo "
+        "cometió, y por eso funciona mejor que un ejemplo abstracto.",
+        [
+            ("Creer que una enfermedad frecuente es siempre leve", "La gravedad del cuadro no interviene en el razonamiento descrito."),
+            ("Suponer que lo que le sirve a otro también servirá a uno", "Ese es otro problema del texto: heredar recetas ajenas."),
+            ("Pensar que un remedio antiguo es mejor que uno nuevo", "El artículo no compara remedios según su antigüedad."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_evaluar", "dificil",
+        "¿Con qué finalidad se menciona la sopa de la abuela?",
+        "Para mostrar con humor que cualquier cosa parecería eficaz",
+        "El ejemplo lleva el razonamiento al absurdo: si la mejoría llega sola, "
+        "también la sopa quedaría como responsable del alivio.\n\nEl chiste tiene "
+        "además un remate que no es chiste: «al menos no tiene efectos adversos». "
+        "En una línea, el emisor separa lo que es inofensivo de lo que no lo es, "
+        "que es toda la diferencia que le interesa marcar.",
+        [
+            ("Para recomendar los remedios caseros ante un resfrío", "No los recomienda: los usa como término de comparación."),
+            ("Para criticar la confianza excesiva en la medicina", "El texto defiende la indicación médica en todo su desarrollo."),
+            ("Para señalar que el reposo es el mejor tratamiento", "La sopa aparece por lo que parece hacer, no por su efecto."),
+        ],
+    ),
+    _ql(
+        "antibiotico_resfrio", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor hacia quien se automedica con lo que le "
+        "sobró?",
+        "Comprensiva, pues reconoce que es lo que pensaría cualquiera",
+        "Desde la primera escena el emisor se pone del lado de esa persona: mirar "
+        "la caja y pensar que «por probar no se pierde nada» es «lo mismo que "
+        "pensaría cualquiera».\n\nMás adelante atribuye las recomendaciones "
+        "familiares a «la mejor intención del mundo». El artículo discute con una "
+        "creencia extendida, no con la gente que la tiene, y por eso cierra en "
+        "consejos y no en reproches.",
+        [
+            ("Severa, pues considera que se trata de una imprudencia grave", "Aclara que esa persona no arriesga su propia recuperación."),
+            ("Irónica, pues se burla de quienes guardan cajas empezadas", "La caja empezada abre el texto sin ninguna burla hacia su dueño."),
+            ("Neutral, pues se limita a exponer los datos disponibles", "Toma partido con claridad: dice qué conviene hacer y qué no."),
+        ],
+    ),
+    # ---------- 'La cuenta de don Nibaldo' ----------
+    _ql(
+        "cuenta_nibaldo", "lec_localizar", "facil",
+        "Según el relato, ¿qué encuentra la familia en el primer cajón de la casa?",
+        "Un cuaderno de tapa dura con columnas de números",
+        "Es el mismo cuaderno que el narrador había visto nueve años antes, cuando "
+        "don Nibaldo anotó una moneda de veinte pesos.\n\nEstaba «arriba de todo», "
+        "y esa frase corta y sola en su párrafo marca el punto en que el relato "
+        "cambia de dirección.",
+        [
+            ("Las boletas de la pieza que arrendaba al fondo", "El arriendo se menciona antes, pero no aparece ningún comprobante."),
+            ("Una libreta con las deudas de los vecinos del pasaje", "Es lo que la madre supone al abrirlo, y resulta no serlo."),
+            ("Recetas y remedios de la farmacia de la avenida", "Los remedios son de la señora Berta y no están en la casa."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_localizar", "facil",
+        "Según el relato, ¿qué decide la madre del narrador después de leer el "
+        "cuaderno?",
+        "Que es mejor que la señora Berta no se entere",
+        "Da dos razones: que a lo mejor don Nibaldo lo había querido así, y que "
+        "«una cosa es recibir ayuda y otra es enterarse quince años después de que "
+        "uno la estaba recibiendo».\n\nLa familia discutió esa decisión una semana "
+        "y el narrador dice que todavía no sabe si ella tenía razón.",
+        [
+            ("Que hay que devolverle el dinero a la señora Berta", "Nadie plantea devolver nada: lo que se discute es contarlo o no."),
+            ("Que el cuaderno debe quedarse en la casa que se vendió", "El narrador aclara al final que se lo llevó y lo guarda."),
+            ("Que conviene avisarle al resto de los vecinos del pasaje", "Ocurre lo contrario: el barrio sigue hablando igual que antes."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_localizar", "medio",
+        "Según el relato, ¿qué contienen exactamente las columnas del cuaderno?",
+        "Montos por mes desde 2009, cada uno con una letra B",
+        "El relato es preciso con ese registro: van ordenados por mes desde octubre "
+        "de 2009 hasta el mes anterior a la muerte, con «la misma cifra casi "
+        "siempre, subiendo de a poco con los años».\n\nLa letra al costado es lo "
+        "único que permite relacionarlos con una persona, y aun así el relato nunca "
+        "lo confirma.",
+        [
+            ("Los nombres de todos los vecinos que le debían algo", "En el cuaderno no hay nombres: hay una sola letra por monto."),
+            ("Los gastos de la casa, anotados uno por uno cada día", "Los montos son mensuales y casi siempre de la misma cifra."),
+            ("Las cuentas del arriendo de la pieza del fondo", "El arriendo no aparece registrado en las columnas."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_interpretar", "facil",
+        "¿Qué muestra la escena en que don Nibaldo devuelve una moneda de veinte "
+        "pesos?",
+        "Que anotaba todo, hasta las cantidades más pequeñas",
+        "El gesto tiene dos partes y las dos importan: primero corrige el vuelto a "
+        "su favor, y enseguida abre el cuaderno y lo escribe.\n\nPara el narrador "
+        "de quince años era la prueba definitiva de que el viejo era un tacaño; "
+        "leída después, es la primera aparición del cuaderno.",
+        [
+            ("Que desconfiaba de los niños que le hacían los mandados", "Le entrega la moneda en la mano: no lo acusa de nada."),
+            ("Que prefería pagar de más antes que quedar debiendo", "La moneda no es un pago extra: es la diferencia exacta."),
+            ("Que había empezado a olvidar las cuentas más simples", "El relato lo muestra calculando el vuelto con exactitud."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_interpretar", "medio",
+        "¿Qué aporta al relato que la fama del vecino «no admitiera matices»?",
+        "Instala la única idea que el hallazgo pondrá en duda",
+        "El relato subraya cómo se transmitía esa fama: los adultos la decían "
+        "riéndose y los niños la repetían «sin entender del todo, como se repiten "
+        "las cosas que a uno le enseñan antes de tener opinión».\n\nPresentarla "
+        "así, cerrada y heredada, es lo que le da peso al cuaderno cuando aparece.",
+        [
+            ("Explica por qué al velorio asistieron solamente siete personas", "La asistencia ilustra esa fama, pero no es lo que la fama aporta."),
+            ("Anticipa que el vecino terminará siendo un personaje querido", "El relato termina con el barrio hablando de él igual que antes."),
+            ("Justifica que la madre decidiera guardar silencio con Berta", "Ese silencio se funda en otras razones, dichas en su momento."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_interpretar", "medio",
+        "¿Qué efecto tiene que el narrador cuente que él también asintió en el "
+        "velorio?",
+        "Se incluye entre quienes repitieron ese juicio",
+        "El narrador podría haberse presentado como el único que dudaba, y hace lo "
+        "contrario: recuerda ese gesto mejor que ningún otro de ese día.\n\nAl "
+        "ponerse dentro del grupo, la historia deja de ser un reproche al barrio y "
+        "pasa a ser algo que también le ocurrió a él.",
+        [
+            ("Muestra que en ese momento no conocía al vecino", "Sí lo conocía: le hacía los mandados desde los quince años."),
+            ("Indica que estaba de acuerdo con lo que se decía", "El punto no es su acuerdo, sino que lo recuerde con incomodidad."),
+            ("Señala que en un velorio nadie discute lo que se dice", "El relato no comenta ninguna regla sobre los velorios."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre el orden en que se cuentan los hechos y el efecto "
+        "del hallazgo?",
+        "El lector recorre el mismo cambio de idea que el narrador",
+        "El relato entrega primero el estereotipo completo —el velorio, la fama, la "
+        "estufa apagada, el mes cobrado, la moneda de veinte— y solo después abre "
+        "el cuaderno.\n\nSi las columnas aparecieran al principio, cada anécdota se "
+        "leería ya sabiendo el final. Puestas después, obligan a releer hacia atrás "
+        "todo lo que uno acaba de dar por sabido.",
+        [
+            ("El orden esconde datos para sorprender al lector al final", "Nada se oculta: los hechos se cuentan cuando el narrador los supo."),
+            ("El orden separa la parte real del relato de la imaginada", "Todo lo narrado se presenta como ocurrido, sin partes supuestas."),
+            ("El orden permite contar dos historias que nunca se cruzan", "Las dos líneas se cruzan: el cuaderno explica a la señora Berta."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_evaluar", "facil",
+        "¿Con qué propósito el narrador dice que le gustaría escribir que el barrio "
+        "cambió de idea?",
+        "Para rechazar el final consolador que se esperaría",
+        "El narrador enumera ese final posible —el barrio cambia, alguien pide "
+        "perdón, se dicen palabras bonitas— y lo desmiente en la frase "
+        "siguiente.\n\nAl nombrarlo antes de negarlo deja en evidencia que lo "
+        "eligió: el relato podía terminar así y no quiso.",
+        [
+            ("Para reprochar al barrio que no haya reaccionado nunca", "No reprocha: se incluye entre quienes no reaccionaron."),
+            ("Para anunciar que más adelante alguien pedirá perdón", "Aclara de inmediato que no pasó nada parecido."),
+            ("Para explicar que no recuerda bien lo que ocurrió", "Recuerda los hechos con detalle, incluido su propio gesto."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_evaluar", "medio",
+        "¿De qué manera el relato trabaja con la figura del viejo avaro?",
+        "La arma completa y después la deja junto a otro dato",
+        "El relato reúne todos los rasgos del tipo —el frío, las bolsas lavadas, el "
+        "mes cobrado, las cosas anotadas— y no los desmiente ni uno.\n\nLo que hace "
+        "es negarse a reemplazar una etiqueta por otra: «el cuaderno no borra nada "
+        "de eso», dice, y obliga a sostener dos ideas a la vez sobre la misma "
+        "persona.",
+        [
+            ("La desmiente por completo apenas aparece el cuaderno", "El narrador insiste en que el vecino siguió siendo el mismo."),
+            ("La reemplaza por la figura contraria, la del benefactor", "Rechaza expresamente convertirlo en un personaje generoso."),
+            ("La usa para explicar el carácter de todo el vecindario", "El tipo se aplica a un solo personaje, no al barrio entero."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al preguntar si le cobró el mes para pagarle el "
+        "tratamiento?",
+        "Impide leer la historia como una generosidad escondida",
+        "La pregunta se presenta como incómoda y absurda, y enseguida el narrador "
+        "admite que «sin embargo cuadra».\n\nCon eso el relato bloquea su propia "
+        "salida sentimental: si el dinero del arriendo financiaba los remedios, no "
+        "hay dos personajes —el tacaño y el benefactor— sino uno solo que llevaba "
+        "una contabilidad. El relato deja las dos lecturas en pie sin elegir.",
+        [
+            ("Demuestra que el vecino actuó de mala fe todos esos años", "El relato considera esa posibilidad, pero no la afirma."),
+            ("Aclara de dónde salía el dinero que aparece en el cuaderno", "Es justamente lo que queda sin aclarar: es una conjetura."),
+            ("Explica por qué la señora Berta terminó dejando la pieza", "El relato no cuenta los motivos por los que ella se fue."),
+        ],
+    ),
+    _ql(
+        "cuenta_nibaldo", "lec_evaluar", "dificil",
+        "¿Qué hipótesis sobre el relato se sostiene mejor con lo ocurrido nueve "
+        "años después?",
+        "Que una sola idea sobre alguien resulta cómoda y dura",
+        "Nueve años después nada cambió: de don Nibaldo «se sigue hablando igual "
+        "que antes» y el narrador no corrige a nadie, en parte por lata y en parte "
+        "porque no sabe qué habría que corregir.\n\nEl cuaderno existe, está "
+        "guardado y no sirvió para nada: la etiqueta sobrevivió a la prueba que la "
+        "complicaba, que es exactamente lo que el relato se propone mostrar.",
+        [
+            ("Que la generosidad verdadera es siempre la que se oculta", "El relato duda de que haya habido generosidad, y no la elogia."),
+            ("Que los prejuicios se corrigen cuando aparecen las pruebas", "Aquí apareció la prueba y el juicio del barrio siguió igual."),
+            ("Que el narrador se arrepiente de haber guardado el cuaderno", "Lo conserva y lo abre de vez en cuando, sin señal de arrepentirse."),
+        ],
+    ),
     # ---------- 'Cinco grados de diferencia' ----------
     _ql(
         "cinco_grados", "lec_localizar", "facil",
