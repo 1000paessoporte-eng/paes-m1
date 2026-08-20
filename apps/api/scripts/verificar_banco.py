@@ -1749,6 +1749,54 @@ def main() -> int:
         lineas_reparto
     )
 
+    # Las cuatro alternativas de una pregunta de lectura tienen que medir mas o
+    # menos lo mismo. Si la correcta es siempre la mas desarrollada —porque es
+    # la unica que puede permitirse matices— quien no leyo el texto acierta
+    # eligiendo la mas larga. El banco llego a tener 146 de 170 correctas como
+    # la alternativa mas extensa (86%; por azar seria 25%), midiendo 1,30 veces
+    # el largo promedio de las cuatro.
+    #
+    # El estandar sale de MEDIR las dos pruebas oficiales que tenemos: en ellas
+    # la alternativa mas larga de cada pregunta mide 1,12 a 1,17 veces el
+    # promedio, y una alternativa ronda los 65 caracteres.
+    #
+    # ALCANCE: el umbral cae sobre la CORRECTA y no sobre la mas larga. Que un
+    # distractor sea largo no delata nada, y hay preguntas de cifras donde la
+    # correcta es la mas corta de las cuatro ("463 kilos" frente a "19,6
+    # millones de toneladas"): ahi emparejar los largos obligaria a cambiar los
+    # datos y no arreglaria ninguna filtracion.
+    correctas_largas = 0
+    for q in QUESTIONS_LECTORA:
+        largos = [len(a["text"]) for a in q["alternatives"]]
+        largo_correcta = next(
+            len(a["text"]) for a in q["alternatives"] if a["is_correct"]
+        )
+        promedio = sum(largos) / len(largos)
+        if largo_correcta == max(largos):
+            correctas_largas += 1
+        if largo_correcta / promedio > 1.35:
+            fallas.append(
+                f"la correcta mide {largo_correcta / promedio:.2f} veces el "
+                f"promedio de las cuatro y se delata por larga: "
+                f"{q['stem'][:60]}"
+            )
+    total_lectora = len(QUESTIONS_LECTORA)
+    proporcion_larga = 100 * correctas_largas / total_lectora if total_lectora else 0
+    largos_lectora = (
+        f"largo de las alternativas de lectora: la correcta es la mas larga en "
+        f"{correctas_largas} de {total_lectora} ({proporcion_larga:.0f}%)"
+    )
+    # Por azar seria 25%. Aun cumpliendo el umbral por pregunta, si la correcta
+    # gana el largo casi siempre —aunque sea por un caracter— conviene revisar:
+    # es sintoma de que se sigue escribiendo primero la correcta y despues los
+    # distractores.
+    if proporcion_larga > 55:
+        fallas.append(
+            f"la correcta es la alternativa mas larga en {proporcion_larga:.0f}% "
+            "de las preguntas de lectora; por azar seria 25% y sobre 55% "
+            "elegir la mas larga se vuelve una estrategia rentable"
+        )
+
     # Una probabilidad vive entre 0 y 1, y eso es lo primero que aprende quien
     # estudia la unidad. Un distractor que se pasa de 1 se descarta sin resolver
     # el ejercicio: deja la pregunta en tres alternativas y regala puntaje al
@@ -1870,6 +1918,7 @@ def main() -> int:
     print(f"textos y fuentes: {len(TODOS_LOS_PASAJES)}")
     print(f"comprobaciones aritméticas ejecutadas: {comprobadas}")
     print(reparto)
+    print(largos_lectora)
     print(f"lecciones: {len(LESSONS)} ({leidas} con resultado recalculado)")
     por_nodo = Counter(q["skill_node"] for q in todas)
     sin_suficientes = [c for c in CODIGOS if por_nodo[c] < 5]
