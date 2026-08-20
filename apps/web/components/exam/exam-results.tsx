@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { CompartirResultado } from "@/components/exam/compartir-resultado";
 import { TextoRico } from "@/components/texto-rico";
 import type { BreakdownItem, ExamResult, ExamReview, ReviewQuestion } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
@@ -33,9 +34,11 @@ interface Props {
   result: ExamResult;
   review: ExamReview | null;
   onNuevoEnsayo: () => void;
+  /** Cómo se llama la prueba rendida. Va en la imagen que se comparte. */
+  prueba: string;
 }
 
-export function ExamResults({ result, review, onNuevoEnsayo }: Props) {
+export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
   const [expandidas, setExpandidas] = useState<Set<number>>(new Set());
   const [filtro, setFiltro] = useState<Filtro>("todas");
 
@@ -93,6 +96,19 @@ export function ExamResults({ result, review, onNuevoEnsayo }: Props) {
           Tiempo usado: {formatearTiempo(result.elapsed_seconds)} de{" "}
           {formatearTiempo(result.duration_limit_seconds)}
         </p>
+
+        {/* Terminar un ensayo es el único momento del producto que da ganas de
+            mostrarle a alguien. La imagen se arma en el navegador: el puntaje
+            es dato privado y no tiene por qué existir en una URL. */}
+        <div className="mt-5 flex justify-center">
+          <CompartirResultado
+            puntaje={result.estimated_score}
+            prueba={prueba}
+            correctas={result.correct}
+            total={result.total_questions}
+            ejes={result.by_axis}
+          />
+        </div>
       </section>
 
       {/* ── Sugerencia de refuerzo ──────────────────────────────────── */}
