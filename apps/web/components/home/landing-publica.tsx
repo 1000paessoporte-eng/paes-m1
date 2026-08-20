@@ -5,6 +5,7 @@ import { TituloRotativo } from "@/components/home/titulo-rotativo";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 import { Reveal } from "@/components/motion/reveal";
 import { Planes } from "@/components/home/planes";
+import { PuntajeMockup } from "@/components/home/puntaje-mockup";
 import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 import { nombreLegible, slugUniversidad } from "@/lib/carreras";
@@ -279,7 +280,10 @@ export function LandingPublica({
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {PASOS.map((paso, i) => (
-              <div key={paso.title} className="flex flex-col items-center text-center sm:items-start sm:text-left">
+              // Acá el escalonado SÍ dice algo: son tres pasos en orden, y
+              // entran en ese orden.
+              <Reveal key={paso.title} delay={i * 0.12}>
+              <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
                 <span
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-accent-foreground"
                   style={{
@@ -295,6 +299,7 @@ export function LandingPublica({
                   {paso.description}
                 </p>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -313,10 +318,13 @@ export function LandingPublica({
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {features(stats, totalCarreras).map((feature) => (
+            {features(stats, totalCarreras).map((feature, i) => (
+              // El escalonado es corto y por posición: acompaña al ojo bajando
+              // la lista sin convertirse en una espera. Se corta en la sexta
+              // para que la última no llegue medio segundo tarde.
+              <Reveal key={feature.title} delay={Math.min(i, 5) * 0.06}>
               <div
-                key={feature.title}
-                className="card-hover rounded-xl border border-border bg-surface p-6"
+                className="card-hover h-full rounded-xl border border-border bg-surface p-6"
               >
                 <div
                   className={`flex h-10 w-10 items-center justify-center rounded-lg ${feature.badgeClass}`}
@@ -330,6 +338,7 @@ export function LandingPublica({
                   {feature.description}
                 </p>
               </div>
+              </Reveal>
             ))}
           </div>
 
@@ -393,11 +402,9 @@ export function LandingPublica({
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {PRUEBAS_INFO.map((prueba) => (
-              <div
-                key={prueba.nombre}
-                className="card-hover rounded-xl border border-border bg-surface p-6"
-              >
+            {PRUEBAS_INFO.map((prueba, i) => (
+              <Reveal key={prueba.nombre} delay={Math.min(i, 4) * 0.06}>
+              <div className="card-hover h-full rounded-xl border border-border bg-surface p-6">
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="font-semibold text-foreground">{prueba.nombre}</h3>
                   <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
@@ -418,6 +425,7 @@ export function LandingPublica({
                   </div>
                 </dl>
               </div>
+              </Reveal>
             ))}
           </div>
 
@@ -553,14 +561,6 @@ function CierreMotivacional() {
   );
 }
 
-const EJES_EJEMPLO = [
-  { nombre: "Números", valor: 82, colorVar: "var(--accent)" },
-  { nombre: "Álgebra y funciones", valor: 74, colorVar: "var(--accent-2)" },
-  { nombre: "Geometría", valor: 65, colorVar: "var(--success)" },
-  { nombre: "Probabilidad", valor: 58, colorVar: "var(--warning)" },
-] as const;
-
-/** Vista previa ilustrativa del resultado de un ensayo (no son datos reales). */
 /**
  * Cifras del banco, contadas en la base al momento de servir la página.
  *
@@ -720,71 +720,6 @@ function SeccionCarreras({
   );
 }
 
-function PuntajeMockup() {
-  const radio = 46;
-  const circunferencia = 2 * Math.PI * radio;
-  const progreso = 0.78;
-
-  return (
-    <div className="relative">
-      <div className="float-chip absolute -top-4 -right-3 z-10 flex items-center gap-1.5 rounded-full border border-success/30 bg-background px-3 py-1.5 text-xs font-semibold text-success shadow-lg shadow-foreground/5 sm:-right-6">
-        <UpIcon />
-        +38 pts vs. tu último ensayo
-      </div>
-
-      <div className="rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-foreground/5">
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-muted">
-            Resultado de ejemplo
-          </span>
-          <span className="rounded-full bg-surface-hover px-2 py-0.5 text-[11px] text-muted">
-            Ensayo #4
-          </span>
-        </div>
-
-        <div className="mt-5 flex items-center gap-5">
-          <svg width="104" height="104" viewBox="0 0 104 104" className="shrink-0 -rotate-90">
-            <circle cx="52" cy="52" r={radio} fill="none" stroke="var(--border)" strokeWidth="8" />
-            <circle
-              cx="52"
-              cy="52"
-              r={radio}
-              fill="none"
-              stroke="var(--accent)"
-              strokeWidth="8"
-              strokeLinecap="round"
-              strokeDasharray={circunferencia}
-              strokeDashoffset={circunferencia * (1 - progreso)}
-            />
-          </svg>
-          <div>
-            <p className="text-3xl font-bold tracking-tight text-foreground">
-              780<span className="text-base font-medium text-muted">/1000</span>
-            </p>
-            <p className="text-xs text-muted">Puntaje estimado</p>
-          </div>
-        </div>
-
-        <div className="mt-6 flex flex-col gap-3">
-          {EJES_EJEMPLO.map((eje) => (
-            <div key={eje.nombre}>
-              <div className="mb-1 flex items-center justify-between text-xs">
-                <span className="text-foreground">{eje.nombre}</span>
-                <span className="text-muted">{eje.valor}%</span>
-              </div>
-              <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-hover">
-                <div
-                  className="h-full rounded-full"
-                  style={{ width: `${eje.valor}%`, background: eje.colorVar }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function TreeIcon() {
   return (
@@ -843,10 +778,3 @@ function SparkIcon({ className }: { className?: string }) {
   );
 }
 
-function UpIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 15l6-6 6 6" />
-    </svg>
-  );
-}

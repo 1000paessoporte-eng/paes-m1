@@ -11,6 +11,11 @@ import { motion, useReducedMotion } from "framer-motion";
  *
  * El largo lo da `width` y la animación solo escala horizontalmente, así que
  * si el JavaScript falla la barra igual queda del tamaño correcto.
+ *
+ * Por defecto se llena al entrar en pantalla, que es lo que corresponde a una
+ * barra que vive más abajo. Con `alCargar` se llena apenas se monta: una barra
+ * que ya está sobre el pliegue no tiene ningún scroll que esperar, y esperarlo
+ * la dejaba vacía para siempre.
  */
 export function BarraProgreso({
   porcentaje,
@@ -18,12 +23,15 @@ export function BarraProgreso({
   etiqueta,
   alto = "h-2",
   delay = 0,
+  alCargar = false,
 }: {
   porcentaje: number;
   color?: string;
   etiqueta: string;
   alto?: string;
   delay?: number;
+  /** Llenarse al montar en vez de al entrar en pantalla. */
+  alCargar?: boolean;
 }) {
   const quieto = useReducedMotion();
   const valor = Math.max(0, Math.min(100, porcentaje));
@@ -45,9 +53,12 @@ export function BarraProgreso({
           transformOrigin: "left center",
         }}
         initial={quieto ? false : { scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+        {...(alCargar
+          ? { animate: { scaleX: 1 } }
+          : { whileInView: { scaleX: 1 }, viewport: { once: true } })}
+        transition={
+          quieto ? { duration: 0 } : { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }
+        }
       />
     </div>
   );
