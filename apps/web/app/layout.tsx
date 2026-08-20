@@ -63,10 +63,11 @@ export const metadata: Metadata = {
  * que le permite a Google saber que 1000paes es una organización con un sitio,
  * y no una página suelta.
  *
- * NO lleva `SearchAction`: declararía una caja de búsqueda del sitio que no
- * existe (el buscador de carreras hoy vive detrás del login). Anunciar una
- * acción que no funciona es exactamente el tipo de dato inventado que este
- * proyecto no publica. Cuando haya búsqueda pública de carreras, se agrega.
+ * Lleva `SearchAction` desde que existe el buscador público de carreras: es lo
+ * que permite que Google ofrezca esa caja dentro del propio resultado de
+ * búsqueda. Apunta a /carreras?q=, que es una búsqueda real y sin sesión; si
+ * ese buscador desapareciera, esto tiene que salir con él, porque anunciar una
+ * acción que no funciona es un dato inventado como cualquier otro.
  */
 const DATOS_DEL_SITIO = {
   "@context": "https://schema.org",
@@ -86,6 +87,14 @@ const DATOS_DEL_SITIO = {
       name: "1000paes",
       inLanguage: "es-CL",
       publisher: { "@id": `${BASE_URL}/#organizacion` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${BASE_URL}/carreras?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
     },
   ],
 };
