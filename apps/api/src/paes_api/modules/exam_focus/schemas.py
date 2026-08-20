@@ -38,6 +38,13 @@ class ExamQuestionOut(BaseModel):
     #: Solo en Competencia Lectora: el texto sobre el que trata la pregunta.
     #: Varias preguntas del mismo ensayo comparten el mismo pasaje.
     passage: PassageOut | None = None
+    #: Cuántos segundos conviene dedicarle a ESTA pregunta.
+    #:
+    #: No todas valen lo mismo: una difícil pesa más que una fácil, y en
+    #: Competencia Lectora la primera de cada texto carga con leerlo. La suma
+    #: de todos los sugeridos es exactamente la duración del intento, así que
+    #: no se promete tiempo que la prueba no da.
+    suggested_seconds: int = 0
     alternatives: list[ExamAlternativeOut]
 
 

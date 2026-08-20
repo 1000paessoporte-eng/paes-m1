@@ -1813,6 +1813,11 @@ export interface components {
             /** Image Url */
             image_url?: string | null;
             passage?: components["schemas"]["PassageOut"] | null;
+            /**
+             * Suggested Seconds
+             * @default 0
+             */
+            suggested_seconds: number;
             /** Alternatives */
             alternatives: components["schemas"]["ExamAlternativeOut"][];
         };

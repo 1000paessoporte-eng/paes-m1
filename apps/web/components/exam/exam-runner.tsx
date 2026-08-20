@@ -553,9 +553,16 @@ export function ExamRunner({
           {/* El presupuesto por pregunta sale del intento, no de la prueba
               oficial: si eligió ritmo exigente, el número que ve es el
               exigente. */}
+          {/* El presupuesto lo calcula el servidor POR PREGUNTA: una difícil
+              pesa más que una fácil, y en Lectora la primera de cada texto
+              carga con leerlo. Si viniera en cero --un intento anterior a esta
+              función-- se cae al reparto plano, que es lo que había. */}
           <RelojPregunta
             msGastados={msEnPregunta}
-            msPresupuesto={questions.length > 0 ? duracionMs / questions.length : 0}
+            msPresupuesto={
+              (questions[currentIndex]?.suggested_seconds ||
+                (questions.length > 0 ? duracionMs / questions.length / 1000 : 0)) * 1000
+            }
           />
 
           <span className="rounded-lg border border-border px-3 py-2 text-sm font-medium tabular-nums">
