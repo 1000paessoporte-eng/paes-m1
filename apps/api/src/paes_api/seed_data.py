@@ -21383,6 +21383,177 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "libro_no_devuelto",
+        "title": "El libro que no devolviste",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes y el "
+            "pueblo son ficticios."
+        ),
+        "body": (
+            "**El libro que no devolviste**\n\n"
+            "Bajas del bus a las cuatro de la tarde y lo primero que notas es que "
+            "el polvo ya no es polvo: pavimentaron. La calle que llegaba hasta el "
+            "canal ahora sigue de largo y se pierde entre casas nuevas, todas "
+            "iguales, todas con la misma reja verde. Te quedas parado con el bolso "
+            "al hombro, esperando reconocer algo, y lo que reconoces es el olor: "
+            "eucaliptos calientes, ese olor que no cambió.\n\n"
+            "En el bolso llevas un libro. Lo has llevado a cuatro mudanzas, a dos "
+            "ciudades y a una casa que ya no es tuya, y en cada una de esas veces "
+            "abriste la caja, lo viste ahí y volviste a cerrarla.\n\n"
+            "El verano del noventa y ocho tenías catorce años y te mandaron dos "
+            "meses donde tu tía porque en la casa había problemas que nadie te "
+            "explicó. Llegaste con una maleta, un walkman y la certeza de que ibas "
+            "a aburrirte. Te aburriste, sí, pero después. Primero estuvo el canal, "
+            "que en enero bajaba turbio y helado y era el único lugar del pueblo "
+            "donde había gente de tu edad. Ahí conociste a Sofía, que se tiraba "
+            "desde el murito de cemento y salía escupiendo agua y riéndose, y que "
+            "hablaba de libros como otros hablaban de partidos.\n\n"
+            "La casa de tu tía está donde siempre. Reconoces la ventana, el marco "
+            "torcido, la misma pandereta. Lo que hay adentro es un almacén: "
+            "cortinas de plástico en la puerta, un letrero escrito a mano, una "
+            "señora que te mira desde el mostrador con la paciencia de quien lleva "
+            "años mirando a desconocidos.\n\n"
+            "—Buenas —dices, y te oyes la voz rara.\n\n"
+            "Miras por sobre su hombro y calculas: el mostrador está donde estaba "
+            "la mesa del comedor, y la pieza en que dormiste dos meses debe ser "
+            "ahora esa bodega con cajas de fideos apiladas hasta el techo. Es raro "
+            "que un lugar siga existiendo y no sea el mismo lugar. Es más raro "
+            "todavía que a nadie más en el mundo le importe esa diferencia.\n\n"
+            "Fue la última semana de febrero cuando Sofía te pasó el libro. Estaban "
+            "sentados en el murito, con los pies colgando, y ella lo sacó de la "
+            "mochila como quien entrega algo que pesa más de lo que pesa. Dijo: "
+            "léelo y me contai. Dijiste que sí. Dijiste, además, otra cosa, y esa "
+            "es la que recuerdas completa: te lo devuelvo el próximo verano.\n\n"
+            "No hubo próximo verano. En marzo tu tía se enfermó, en julio se vendió "
+            "la casa, y para el verano siguiente el pueblo era un lugar del que tu "
+            "familia hablaba en pasado. Nadie te prohibió volver. Simplemente no "
+            "volviste, que es una forma más lenta y más cómoda de no hacer las "
+            "cosas.\n\n"
+            "—¿Usted sabe si vive por acá una familia Cárdenas? —preguntas—. Tenían "
+            "una hija, Sofía.\n\n"
+            "La señora lo piensa. Dice que los Cárdenas vendieron hace como quince "
+            "años, que se fueron todos a Concepción, que el papá murió el año "
+            "pasado, que la hija cree que trabaja en un colegio, o en una "
+            "municipalidad, no está segura. Habla sin drama, como se habla de cosas "
+            "sabidas. Después te pregunta si vas a llevar algo y compras una bebida "
+            "que no tienes ganas de tomar, porque te parece que no se puede entrar "
+            "a un lugar solo a preguntar por el pasado.\n\n"
+            "Sales. Caminas hasta donde estaba el canal y encuentras un canal más "
+            "angosto, con las paredes de concreto nuevas y sin agua: es agosto. El "
+            "murito sigue ahí. Te sientas, sacas el libro del bolso y lo abres, y "
+            "ahí está lo que no habías mirado en veinticuatro años.\n\n"
+            "En la primera página hay dos nombres. Abajo, con lápiz pasta azul y "
+            "letra redonda, dice Sofía Cárdenas, 1996. Más arriba hay otro nombre, "
+            "escrito a lápiz mina y tachado con dos rayas, tan tachado que no se "
+            "lee entero: se distingue una eme, una hache y el año, 1991.\n\n"
+            "Te quedas con eso un rato largo. Todo este tiempo cargaste el libro "
+            "como si fuera una deuda tuya, una deuda con nombre y apellido, y "
+            "resulta que antes de ser tuya fue de otro, y que Sofía te lo prestó "
+            "sabiendo o sin saber que estaba prestando algo que tampoco había "
+            "devuelto. La cadena es más larga que tú. Eso no te libera de nada. "
+            "Pero cambia el tamaño de la cosa: lo que llevabas en el bolso no era "
+            "tu falta, era una costumbre antigua que alguien te pasó junto con el "
+            "libro.\n\n"
+            "Podrías buscarla. En una municipalidad de Concepción no debe haber "
+            "tantas Sofía Cárdenas. Podrías escribir el nombre en el teléfono ahora "
+            "mismo, aquí sentado, y averiguar en dos minutos lo que te tomó "
+            "veinticuatro años no averiguar. Sabes que no lo vas a hacer, y no "
+            "sabes exactamente por qué, y esa es la parte que te gustaría poder "
+            "explicarle a alguien.\n\n"
+            "El bus de vuelta pasa a las siete. Guardas el libro en el bolso, con "
+            "cuidado, como se guarda lo que uno ya decidió seguir cargando, y te "
+            "quedas mirando el canal seco hasta que el sol se pone detrás de los "
+            "eucaliptos, que siguen oliendo igual, que es lo único que en este "
+            "pueblo te esperó."
+        ),
+    },
+    {
+        "key": "audio_tres_minutos",
+        "title": "El audio de tres minutos",
+        "kind": "no_literario",
+        "source_note": (
+            "Columna de opinión original de 1000paes, escrita para esta prueba. Las "
+            "cifras de velocidad del habla y de la lectura se presentan como "
+            "estimaciones aproximadas, que es lo que son."
+        ),
+        "body": (
+            "**El audio de tres minutos**\n\n"
+            "Son las once de la noche. El teléfono se ilumina y aparece, en el "
+            "centro de la pantalla, esa barra gris con un triángulo a la izquierda "
+            "y un número a la derecha: 4:12. Cuatro minutos y doce segundos. Nadie "
+            "ha muerto, nadie necesita ayuda, nadie está perdido en la carretera. "
+            "Es un compañero de curso que quiere saber si la entrega es el jueves o "
+            "el viernes.\n\n"
+            "Antes de indignarse conviene hacer una cuenta. Una persona conversando "
+            "produce alrededor de ciento treinta palabras por minuto, y un adulto "
+            "que lee en silencio suele ir cerca del doble. Eso significa que ese "
+            "audio de cuatro minutos contiene, con suerte, unas quinientas "
+            "palabras: dos párrafos largos que se leerían en poco más de dos "
+            "minutos, y que se leerían saltando lo que no interesa, que es la "
+            "mitad. El audio no ahorra tiempo. Lo traslada.\n\n"
+            "Ahí está, me parece, el punto que se discute poco. La molestia no "
+            "viene del formato: viene de quién paga la cuenta. Grabar es cómodo "
+            "para quien graba —se habla mientras se camina, mientras se cocina, "
+            "mientras se espera la micro— y escuchar es incómodo para quien "
+            "escucha, que tiene que detener lo que hacía, buscar audífonos o irse a "
+            "un rincón silencioso, y no puede adelantar sin perder el hilo. El "
+            "emisor ahorra treinta segundos y el receptor gasta cuatro minutos. Es "
+            "un préstamo que nadie pidió.\n\n"
+            "Y la operación se multiplica. Un audio de tres minutos enviado a un "
+            "grupo de doce personas consume treinta y seis minutos de atención "
+            "ajena: una reunión completa, sin sala, sin citación y sin acta. Si "
+            "alguien propusiera en voz alta juntar al curso media hora para "
+            "preguntar una fecha, la sala entera se reiría. Enviado como audio, en "
+            "cambio, parece un gesto de confianza.\n\n"
+            "Hay además un costo que no se ve el primer día, sino el mes siguiente. "
+            "Un chat escrito es un archivo: se busca una palabra y aparece la "
+            "dirección que alguien mandó en marzo. Un chat de audios es un pasillo "
+            "donde todos hablaron y nadie tomó nota; para encontrar un dato hay que "
+            "volver a escuchar, uno por uno, mensajes que ya se escucharon. Las "
+            "transcripciones automáticas ayudan, aunque conviene no confiarles nada "
+            "importante: cualquiera que las use ha leído alguna vez que la reunión "
+            "es «en el cerro» cuando lo que se dijo era «a las cero».\n\n"
+            "Hasta aquí la parte fácil. Ahora la parte incómoda, que es la que "
+            "suele faltar en estas columnas.\n\n"
+            "Hay cosas que un mensaje escrito no transmite. El tono, la duda, la "
+            "ternura, el chiste que necesita ser dicho para no sonar agresivo: todo "
+            "eso vive en la voz y muere en el teclado. Quien ha recibido un «ya» "
+            "escrito sabe que puede significar cinco cosas distintas y que ninguna "
+            "de las cinco es evidente. Un audio de veinte segundos resuelve en el "
+            "acto lo que tres mensajes escritos habrían enredado.\n\n"
+            "Y hay algo más serio. Escribir en un teléfono no es igual de fácil "
+            "para todo el mundo. Hay personas con dificultades motrices, personas "
+            "con dislexia, personas que aprendieron a escribir tarde o nunca, "
+            "personas con la vista cansada y personas que sencillamente tienen las "
+            "manos ocupadas porque están trabajando. Para ellas el audio no es una "
+            "comodidad: es la única puerta. Cualquier argumento que las deje afuera "
+            "es un mal argumento, por elegante que suene.\n\n"
+            "De modo que la regla no puede ser «no manden audios». Podría ser otra, "
+            "más aburrida y más útil: distinguir para qué sirve cada cosa. El "
+            "mensaje escrito informa, porque se relee, se busca, se copia y se "
+            "cita; el audio acompaña, porque lleva el tono que el texto pierde. Una "
+            "fecha, una dirección, un monto, una instrucción: escritos. Un pésame, "
+            "una disculpa, una noticia grande: dichos. Nadie quiere recibir por "
+            "escrito el «te felicito» de su abuela, y nadie quiere buscar la "
+            "dirección de la reunión dentro de un audio de seis minutos, "
+            "retrocediendo de a quince segundos como quien busca una llave en un "
+            "bolso.\n\n"
+            "¿Y cómo se sabe cuál es cuál? Hay una prueba casera que funciona "
+            "bastante bien: si el audio necesitaría un índice, era un texto. Si se "
+            "puede resumir en una línea, era un texto. Si lo que se quiere decir "
+            "cabe en una línea pero se dice en cuatro minutos, lo que se está "
+            "enviando no es información: es compañía, y conviene avisarlo.\n\n"
+            "Debo confesar, para terminar, que escribo esto con la autoridad moral "
+            "de quien mandó ayer un audio de dos minutos y medio para explicar que "
+            "iba a llegar tarde. La costumbre es más fuerte que la aritmética. Pero "
+            "la cortesía, en un teléfono como en cualquier otra parte, consiste más "
+            "o menos en lo mismo de siempre: hacerse cargo uno del costo en vez de "
+            "repartirlo entre los demás, aunque nadie se dé cuenta y aunque el "
+            "costo sean, apenas, cuatro minutos."
+        ),
+    },
+    {
         "key": "megasequia",
         "title": "Quince años sin llover como antes",
         "kind": "no_literario",
@@ -24150,6 +24321,337 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El libro que no devolviste' ----------
+    _ql(
+        "libro_no_devuelto", "lec_localizar", "facil",
+        "Según el relato, ¿qué funciona hoy en la casa donde vivía la tía?",
+        "Un almacén, con cortinas de plástico en la puerta",
+        "El personaje reconoce la ventana, el marco torcido y la pandereta, pero lo "
+        "que hay adentro es un negocio.\n\nEl detalle sirve al relato: la casa "
+        "sigue en pie y ya no es la misma casa, que es lo que el personaje irá "
+        "comprobando con todo el pueblo.",
+        [
+            ("Una bodega de la municipalidad del pueblo", "La bodega es una pieza del almacén, no el destino de la casa."),
+            ("Una casa nueva igual a las del final de la calle", "Las casas nuevas están en otra parte, donde termina la calle."),
+            ("Un colegio, según lo que cuenta la señora", "El colegio aparece como posible trabajo de Sofía, en Concepción."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_localizar", "facil",
+        "Según el relato, ¿qué le informa la señora del almacén sobre los Cárdenas?",
+        "Que vendieron hace unos quince años y se fueron a Concepción",
+        "La señora entrega cuatro datos: la venta, el traslado a Concepción, la "
+        "muerte del padre el año anterior y un trabajo de Sofía del que no está "
+        "segura.\n\nLos dice «sin drama, como se habla de cosas sabidas», y ese "
+        "tono es parte de lo que descoloca al personaje.",
+        [
+            ("Que siguen viviendo en el pueblo, en las casas nuevas", "La señora dice justamente que la familia completa se fue."),
+            ("Que Sofía volvió al pueblo después de la muerte del padre", "Nada en la respuesta de la señora indica un regreso de Sofía."),
+            ("Que no recuerda a ninguna familia con ese apellido", "Sí los recuerda: da fechas, destino y noticias de cada uno."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_localizar", "medio",
+        "Según el relato, ¿qué alcanza a distinguirse del nombre tachado del libro?",
+        "Una eme, una hache y el año 1991",
+        "El nombre está escrito a lápiz mina y tachado con dos rayas, «tan tachado "
+        "que no se lee entero».\n\nLo que sí queda legible —dos letras y una fecha "
+        "cinco años anterior a la de Sofía— basta para que el personaje entienda "
+        "que hubo un dueño antes.",
+        [
+            ("Un apellido completo y el año 1996", "1996 es el año que acompaña al nombre de Sofía, que sí se lee."),
+            ("Dos letras iniciales, sin ninguna fecha", "Junto a las letras se distingue con claridad un año."),
+            ("Una firma hecha con lápiz pasta azul", "El lápiz pasta azul corresponde a la anotación de Sofía."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_interpretar", "facil",
+        "¿Qué muestra que el personaje haya llevado el libro a cuatro mudanzas sin "
+        "sacarlo de la caja?",
+        "Que carga el asunto sin decidirse a resolverlo",
+        "El gesto se repite igual en cada mudanza: abrir la caja, ver el libro y "
+        "volver a cerrarla.\n\nNo es olvido —lo ve cada vez— ni decisión, y por eso "
+        "el relato lo pone antes de contar cualquier cosa del pasado.",
+        [
+            ("Que perdió el interés por lo que ocurrió ese verano", "Si lo hubiera perdido, no conservaría el libro en cada mudanza."),
+            ("Que esperaba una ocasión concreta para devolverlo", "El relato no menciona ninguna ocasión que estuviera esperando."),
+            ("Que el libro tenía para él un valor de lectura", "Nunca se dice que lo haya releído ni que le importe su contenido."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_interpretar", "medio",
+        "¿Qué aporta al relato que el canal aparezca al principio seco y con "
+        "paredes nuevas?",
+        "Mide la distancia entre el verano recordado y el presente",
+        "En el recuerdo el canal «bajaba turbio y helado» y reunía a los jóvenes "
+        "del pueblo; en el presente es más angosto, de concreto y sin agua.\n\nEl "
+        "murito, en cambio, sigue ahí: el relato conserva el asiento y le quita "
+        "todo lo demás, y ahí es donde el personaje abre el libro.",
+        [
+            ("Anuncia que el personaje no encontrará a nadie conocido", "El estado del canal no adelanta nada sobre las personas del pueblo."),
+            ("Explica por qué la familia Cárdenas terminó vendiendo", "El relato no relaciona la venta con el estado del canal."),
+            ("Indica que el pueblo atraviesa una crisis económica", "Las obras nuevas y el pavimento sugieren lo contrario."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_interpretar", "medio",
+        "¿Qué sentido tiene que el olor a eucaliptos aparezca al comienzo y al "
+        "final del relato?",
+        "Señala lo único que se mantuvo igual en el pueblo",
+        "Al bajar del bus, el personaje espera reconocer algo y lo que reconoce es "
+        "el olor; en la última línea vuelve a él y agrega que es «lo único que en "
+        "este pueblo te esperó».\n\nEl relato se cierra sobre el mismo detalle con "
+        "que se abrió, y esa vuelta subraya todo lo que entremedio cambió.",
+        [
+            ("Muestra que el personaje conserva intacta su memoria del lugar", "Su memoria falla: no reconoce ni la calle ni el canal ni la casa."),
+            ("Sugiere que el pueblo es indiferente a quienes se van de él", "El olor se presenta como lo que sí lo esperó, no como indiferencia."),
+            ("Anticipa que el personaje decidirá quedarse un tiempo más", "El relato termina con él esperando el bus de vuelta."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_interpretar", "dificil",
+        "¿Qué cambia para el personaje cuando descubre el nombre tachado?",
+        "La deuda deja de ser solo suya y pasa a ser heredada",
+        "El personaje lo dice sin adornos: «Eso no te libera de nada. Pero cambia "
+        "el tamaño de la cosa».\n\nLo que descubre no es una excusa sino una "
+        "escala: lo que cargaba como falta propia era «una costumbre antigua que "
+        "alguien te pasó junto con el libro», y aun así la sigue cargando.",
+        [
+            ("Descubre que Sofía lo engañó al prestarle un libro ajeno", "El relato deja abierto si ella misma lo sabía o no."),
+            ("Entiende que ya no tiene sentido devolver ese libro", "Sigue considerándose parte de la cadena: no queda liberado."),
+            ("Comprende que el libro era mucho más valioso de lo que creía", "El hallazgo no cambia el valor del objeto, sino el de la deuda."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_evaluar", "facil",
+        "¿Con qué propósito el narrador señala que «nadie te prohibió volver»?",
+        "Para dejar la omisión enteramente a cargo del personaje",
+        "La frase aparece justo después de las razones que sí existieron: la "
+        "enfermedad de la tía y la venta de la casa.\n\nAl agregar que nadie se lo "
+        "prohibió, el narrador impide que esas razones funcionen como excusa y "
+        "remata con una definición incómoda: no volver es «una forma más lenta y "
+        "más cómoda de no hacer las cosas».",
+        [
+            ("Para culpar a la familia de haberlo alejado del pueblo", "La frase descarta expresamente que alguien se lo impidiera."),
+            ("Para mostrar que la enfermedad de la tía lo justificaba", "El narrador presenta esos hechos y luego los desestima como excusa."),
+            ("Para explicar que el viaje era demasiado caro entonces", "El relato no menciona dificultades económicas para viajar."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el relato esté narrado en segunda persona?",
+        "Suena como un repaso que el personaje se hace a sí mismo",
+        "El «tú» no se dirige al lector para pedirle nada: enumera lo que el "
+        "personaje hizo y dejó de hacer, incluso lo que preferiría no recordar "
+        "(«sabes que no lo vas a hacer»).\n\nEsa voz permite que el relato juzgue "
+        "al personaje sin que aparezca nadie más juzgándolo.",
+        [
+            ("Indica que hay un testigo que acompañó todo el viaje", "Ningún personaje acompaña al protagonista en el relato."),
+            ("Convierte el relato en una serie de instrucciones al lector", "No hay órdenes ni pasos que el lector deba seguir."),
+            ("Permite conocer los pensamientos de todos los personajes", "De Sofía y de la señora solo se sabe lo que se ve y se oye."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_evaluar", "dificil",
+        "¿Cómo influye la perspectiva del narrador en lo que el lector sabe de "
+        "Sofía?",
+        "Solo la conoce por el recuerdo de él, nunca por ella misma",
+        "Sofía aparece en dos escenas del pasado y en el resumen que hace una "
+        "vecina. Nunca sabemos qué pensó del préstamo, si esperó el regreso ni si "
+        "el libro le importaba.\n\nPor eso la pregunta central del relato —si esto "
+        "le pesa a alguien más que al personaje— queda deliberadamente sin "
+        "respuesta.",
+        [
+            ("La muestra tal como era, porque el narrador fue testigo directo", "El narrador solo dispone del recuerdo de un verano, hace décadas."),
+            ("Le da voz propia en los diálogos que sostiene con el personaje", "De ella se cita una sola frase, dentro de un recuerdo del personaje."),
+            ("La presenta a través de lo que la señora del almacén opina", "La señora entrega datos, no una caracterización de Sofía."),
+        ],
+    ),
+    _ql(
+        "libro_no_devuelto", "lec_evaluar", "dificil",
+        "¿Qué hipótesis sobre el sentido del relato sostiene mejor su final?",
+        "Que hay deudas que se prefieren conservar antes que saldar",
+        "El personaje comprueba que buscarla tomaría dos minutos, reconoce que no "
+        "lo va a hacer y guarda el libro «como se guarda lo que uno ya decidió "
+        "seguir cargando».\n\nEl relato no explica esa decisión —él mismo no sabe "
+        "por qué— y esa renuncia deliberada a explicarla es lo que sostiene la "
+        "hipótesis.",
+        [
+            ("Que el hallazgo del nombre tachado le sirvió para no buscarla", "El personaje descarta ese alivio: dice que no lo libera de nada."),
+            ("Que el paso del tiempo termina por borrar cualquier culpa", "Veinticuatro años después la culpa sigue viajando en el bolso."),
+            ("Que volver al lugar de origen permite cerrar las heridas", "El viaje no cierra nada: lo deja con el libro y con más preguntas."),
+        ],
+    ),
+    # ---------- 'El audio de tres minutos' ----------
+    _ql(
+        "audio_tres_minutos", "lec_localizar", "facil",
+        "Según la lectura, ¿cuántas palabras por minuto produce una persona "
+        "conversando?",
+        "Alrededor de ciento treinta",
+        "El segundo párrafo entrega las dos velocidades que sostienen la cuenta: "
+        "quien conversa produce alrededor de ciento treinta palabras por minuto y "
+        "quien lee en silencio suele ir cerca del doble.\n\nDe ahí sale la "
+        "estimación de quinientas palabras para un audio de cuatro minutos.",
+        [
+            ("Alrededor de doscientas sesenta", "Esa es, aproximadamente, la velocidad de lectura silenciosa."),
+            ("Alrededor de quinientas", "Quinientas son las palabras que cabrían en el audio completo."),
+            ("Alrededor de cuarenta", "El texto no menciona esa cifra en ningún momento."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué para algunas personas el audio es «la única "
+        "puerta»?",
+        "Porque escribir en un teléfono no les resulta igual de fácil",
+        "El emisor enumera dificultades motrices, dislexia, alfabetización tardía, "
+        "vista cansada y manos ocupadas por el trabajo, y concluye que para esas "
+        "personas el audio no es una comodidad.\n\nEs el punto que lo obliga a "
+        "descartar la regla que prohíbe los audios.",
+        [
+            ("Porque no tienen acceso a un teclado en sus teléfonos", "El texto habla de dificultades para escribir, no de falta de equipos."),
+            ("Porque los mensajes escritos se pierden dentro del chat", "Ese problema el texto se lo atribuye a los audios, no a lo escrito."),
+            ("Porque prefieren el tono de la voz antes que el teclado", "El tono aparece antes, como otra razón distinta de la accesibilidad."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_localizar", "medio",
+        "Según la lectura, ¿qué ejemplo se da de un error de las transcripciones "
+        "automáticas?",
+        "Leer «en el cerro» donde se había dicho «a las cero»",
+        "El emisor admite que las transcripciones ayudan, pero recomienda no "
+        "confiarles nada importante, y sostiene esa advertencia con un solo "
+        "ejemplo.\n\nEl ejemplo es además un chiste: confunde un lugar con una "
+        "hora, que es justo el tipo de dato que la columna manda escribir.",
+        [
+            ("Leer «a las cero» donde se había dicho «en el cerro»", "El error del ejemplo va en el sentido contrario: de la hora al lugar."),
+            ("Cortar el mensaje cuando alguien habla demasiado rápido", "El texto no menciona cortes ni problemas de velocidad al transcribir."),
+            ("Confundir los nombres propios de quienes participan del grupo", "El ejemplo del texto no trata sobre nombres de personas."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al afirmar que el audio no ahorra tiempo, sino "
+        "que lo traslada?",
+        "Que el tiempo que ahorra quien graba lo gasta quien escucha",
+        "La frase cierra la cuenta del segundo párrafo y anuncia la idea central "
+        "del tercero: el formato no elimina el costo, solo cambia de "
+        "bolsillo.\n\nPor eso el emisor lo llama después un préstamo que nadie "
+        "pidió.",
+        [
+            ("Que escuchar un audio toma exactamente el mismo tiempo que leerlo", "El texto sostiene lo contrario: escucharlo toma bastante más."),
+            ("Que los audios se acumulan y se terminan escuchando más tarde", "El traslado del que habla es de una persona a otra, no de un día a otro."),
+            ("Que el tiempo perdido se recupera cuando la respuesta es corta", "Ninguna parte del texto plantea que ese tiempo se recupere."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_interpretar", "medio",
+        "¿Con qué finalidad se menciona una reunión «sin sala, sin citación y sin "
+        "acta»?",
+        "Para mostrar que un audio grupal cuesta lo mismo que una reunión",
+        "El cálculo previo es explícito: tres minutos por doce personas son treinta "
+        "y seis minutos de atención ajena.\n\nLa imagen de la reunión invisible "
+        "sirve para que ese número se sienta como lo que es, y por eso el párrafo "
+        "agrega que nadie aceptaría la misma propuesta hecha en voz alta.",
+        [
+            ("Para criticar las reuniones que se convocan sin ningún aviso previo", "Las reuniones son el término de comparación, no el tema de la columna."),
+            ("Para proponer que los grupos de curso acuerden un reglamento", "El emisor no propone reglamentos, sino una distinción de usos."),
+            ("Para explicar por qué los grupos numerosos funcionan mal", "El tamaño del grupo multiplica el costo, pero no es lo que se discute."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_interpretar", "medio",
+        "¿Qué función cumple la comparación entre un chat de audios y un pasillo?",
+        "Subrayar que ahí lo dicho no queda registrado ni se puede buscar",
+        "El párrafo opone dos imágenes: el chat escrito es un archivo donde se "
+        "busca una palabra, y el de audios es un pasillo donde todos hablaron y "
+        "nadie tomó nota.\n\nLa comparación introduce un costo distinto del tiempo: "
+        "el de no poder recuperar después lo que se dijo.",
+        [
+            ("Señalar que en los grupos grandes las conversaciones se cruzan", "El texto no trata sobre conversaciones simultáneas ni sobre desorden."),
+            ("Indicar que las conversaciones informales son las más frecuentes", "La frecuencia de los mensajes informales no se discute en la columna."),
+            ("Sugerir que los audios se envían de paso y sin pensarlos demasiado", "El descuido del emisor se critica antes, y no con esta imagen."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre la primera parte de la columna y la que se anuncia "
+        "como «la parte incómoda»?",
+        "La segunda pone objeciones que obligan a acotar lo afirmado antes",
+        "La primera mitad construye un caso contra el audio: la aritmética, la "
+        "asimetría y el costo multiplicado. La segunda introduce el tono, la "
+        "ternura y sobre todo la accesibilidad.\n\nEl resultado no es una "
+        "contradicción, sino un límite: por eso el emisor descarta la prohibición y "
+        "la reemplaza por una distinción entre informar y acompañar.",
+        [
+            ("La segunda repite con otros ejemplos lo que ya se había demostrado", "Los ejemplos nuevos van en contra de la tesis inicial, no a favor."),
+            ("La segunda abandona el tema y se ocupa de la escritura en general", "Sigue tratando el mismo tema: cuándo conviene cada formato."),
+            ("La segunda anticipa objeciones para luego demostrar que son falsas", "El emisor no las refuta: las acepta y cambia su conclusión."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor cuenta que él mismo mandó ayer un audio de "
+        "dos minutos y medio?",
+        "Para admitir que su propia conducta no sigue lo que argumenta",
+        "La confesión llega en el último párrafo, después de la regla práctica, y "
+        "el emisor la comenta con ironía: escribe con la autoridad moral de quien "
+        "acaba de hacer lo contrario.\n\nAl reconocer que la costumbre es más "
+        "fuerte que la aritmética baja el tono de reproche y deja la conclusión "
+        "como una recomendación.",
+        [
+            ("Para demostrar que la costumbre puede corregirse con esfuerzo", "El emisor dice justamente que la costumbre le ganó a la aritmética."),
+            ("Para justificar los audios largos cuando existe un apuro real", "Su ejemplo no se presenta como una excepción justificada."),
+            ("Para mostrar que la regla propuesta funciona en casos concretos", "El caso que cuenta es un incumplimiento de esa regla, no un ejemplo."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_evaluar", "medio",
+        "¿Qué efecto busca el emisor al escribir «Nadie ha muerto, nadie necesita "
+        "ayuda, nadie está perdido»?",
+        "Exagerar la urgencia del formato frente a lo menor del asunto",
+        "La enumeración pone tres emergencias que nadie había mencionado y las "
+        "descarta una a una, para revelar recién después que el asunto era una "
+        "fecha de entrega.\n\nEl humor de la escena viene de esa distancia entre el "
+        "tamaño del envase y el del contenido, y prepara la cuenta que el texto "
+        "hará enseguida.",
+        [
+            ("Advertir que los audios largos suelen anunciar malas noticias", "La escena muestra lo contrario: un asunto completamente menor."),
+            ("Reprochar a quien escribe de noche sin considerar el horario", "El horario ambienta la escena, pero no es lo que se critica."),
+            ("Mostrar que el emisor se alarmó al ver la duración del mensaje", "El emisor no describe alarma propia, sino que descarta motivos graves."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_evaluar", "dificil",
+        "¿Cómo se hace cargo el emisor de la objeción sobre accesibilidad?",
+        "La acepta y cambia su regla por una distinción entre usos",
+        "El emisor no responde la objeción con un matiz menor: sostiene que "
+        "cualquier argumento que deje afuera a esas personas es un mal argumento, y "
+        "descarta la prohibición que su propia cuenta parecía justificar.\n\nLo que "
+        "queda en su lugar es otra regla —lo que informa se escribe, lo que "
+        "acompaña se dice— que sigue en pie aunque para alguien el audio sea la "
+        "única vía posible.",
+        [
+            ("La menciona brevemente y vuelve enseguida a su argumento inicial", "El argumento inicial no vuelve: es reemplazado por otra regla."),
+            ("La rechaza porque afecta a una parte pequeña de los usuarios", "El emisor no discute cuántas personas son ni resta importancia."),
+            ("La usa para sostener que ninguna regla sobre audios es posible", "Descarta una regla concreta, pero propone otra inmediatamente."),
+        ],
+    ),
+    _ql(
+        "audio_tres_minutos", "lec_evaluar", "dificil",
+        "¿Cuál de las siguientes afirmaciones de la lectura es una opinión del "
+        "emisor y no un dato?",
+        "Que la cortesía consiste en hacerse cargo uno mismo del costo",
+        "Las otras tres son verificables por quien las quiera comprobar: dos son "
+        "estimaciones de velocidad y la tercera es una multiplicación.\n\nLa "
+        "afirmación sobre la cortesía, en cambio, es una valoración: define qué "
+        "conducta es correcta, y el propio emisor la introduce como cierre de su "
+        "argumento y no como evidencia.",
+        [
+            ("Que un audio de tres minutos enviado a doce personas ocupa media hora", "Es una multiplicación que cualquiera puede rehacer con los datos dados."),
+            ("Que quien lee en silencio avanza cerca del doble que quien habla", "Se presenta como una estimación de velocidad, comprobable en principio."),
+            ("Que una persona conversando produce unas ciento treinta palabras", "Es también una estimación cuantitativa, no una valoración del emisor."),
+        ],
+    ),
     # ---------- 'Quince años sin llover como antes' ----------
     _ql(
         "megasequia", "lec_localizar", "facil",
