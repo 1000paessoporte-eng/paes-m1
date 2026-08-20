@@ -1,15 +1,17 @@
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from sqlalchemy.orm import Session
 
+from paes_api.core import email
 from paes_api.core.config import get_settings
 from paes_api.core.database import get_db
 from paes_api.core.limiter import limiter
 from paes_api.core.security import create_access_token
 from paes_api.modules.users import service
-from paes_api.modules.users.deps import get_current_user
+from paes_api.modules.users.deps import get_current_admin, get_current_user
 from paes_api.modules.users.models import User
 from paes_api.modules.users.schemas import (
     AuthConfigOut,
+    EliminarCuentaIn,
     ForgotPasswordIn,
     GoogleLoginIn,
     LoginIn,
@@ -123,3 +125,38 @@ def update_me(
     except service.WrongPasswordError as exc:
         raise HTTPException(status_code=401, detail="Contraseña actual incorrecta") from exc
     return UserOut.model_validate(updated)
+
+
+@router.get("/diagnostico-correo")
+def diagnostico_correo(user: User = Depends(get_current_admin)) -> dict[str, object]:
+    """Si el correo saldría o no, y por qué.
+
+    Existe porque "olvidé mi contraseña" responde 204 exista o no la cuenta:
+    ese silencio protege la privacidad, pero también esconde una configuración
+    rota. Sin esto, la única forma de enterarse de que el correo no sale es que
+    alguien se quede fuera de su cuenta y lo reporte.
+
+    Solo admin, y nunca devuelve la contraseña del SMTP: solo si está puesta.
+    """
+    return email.diagnostico()
+
+
+@router.delete("/me", status_code=status.HTTP_204_NO_CONTENT)
+def eliminar_mi_cuenta(
+    payload: EliminarCuentaIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> None:
+    """Borra la cuenta y todo lo que cuelga de ella.
+
+    Estaba solo en la política de privacidad como "escríbenos a hola@": pedirle
+    a alguien que mande un correo para ejercer un derecho sobre sus datos es
+    ponerle un trámite a lo que debería ser un botón, y este producto guarda
+    datos de estudio de menores de edad.
+
+    Pide la contraseña actual, salvo en las cuentas de Google, que no tienen.
+    Borrar es irreversible y no puede depender solo de una sesión abierta en un
+    computador prestado.
+    """
+    if not service.eliminar_cuenta(db, user, payload.password):
+        raise HTTPException(status_code=401, detail="La contraseña no es correcta")

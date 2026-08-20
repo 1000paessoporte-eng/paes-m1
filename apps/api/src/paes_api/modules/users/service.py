@@ -1,4 +1,5 @@
 import hashlib
+import logging
 import secrets
 from datetime import UTC, datetime, timedelta
 
@@ -8,10 +9,12 @@ from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
-from paes_api.core.email import send_email
+from paes_api.core.email import CorreoNoEnviado, send_email
 from paes_api.core.security import hash_password, verify_password
 from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 from paes_api.modules.users.schemas import RegisterIn, UpdateMeIn
+
+logger = logging.getLogger(__name__)
 
 RESET_TOKEN_TTL_MINUTES = 30
 
@@ -169,17 +172,24 @@ def request_password_reset(db: Session, email: str) -> None:
     db.commit()
 
     reset_url = f"{get_settings().frontend_url}/restablecer-contrasena?token={raw_token}"
-    send_email(
-        to=user.email,
-        subject="Recupera tu contraseña en 1000paes",
-        body=(
-            f"Hola {user.name},\n\n"
-            "Recibimos una solicitud para restablecer tu contraseña en 1000paes.\n"
-            f"Este link es válido por {RESET_TOKEN_TTL_MINUTES} minutos y solo se puede usar una vez:\n\n"
-            f"{reset_url}\n\n"
-            "Si no fuiste tú, ignora este correo: tu contraseña actual sigue funcionando."
-        ),
-    )
+    # El envío puede fallar, y la respuesta NO puede cambiar por eso: este
+    # endpoint contesta igual exista o no la cuenta, y un 500 solo cuando el
+    # correo existe delataría cuáles están registradas. El fallo queda en el
+    # log y en /api/auth/diagnostico-correo, que es donde sirve.
+    try:
+        send_email(
+            to=user.email,
+            subject="Recupera tu contraseña en 1000paes",
+            body=(
+                f"Hola {user.name},\n\n"
+                "Recibimos una solicitud para restablecer tu contraseña en 1000paes.\n"
+                f"Este link es válido por {RESET_TOKEN_TTL_MINUTES} minutos y solo se puede usar una vez:\n\n"
+                f"{reset_url}\n\n"
+                "Si no fuiste tú, ignora este correo: tu contraseña actual sigue funcionando."
+            ),
+        )
+    except CorreoNoEnviado:
+        logger.exception("No se pudo enviar el correo de recuperación a %s", user.email)
 
 
 def reset_password(db: Session, raw_token: str, new_password: str) -> bool:
@@ -251,3 +261,67 @@ def onboarding_de(user: User) -> dict:
         "horas_semana": user.horas_semana,
         "respondido": user.onboarding_at is not None,
     }
+
+
+def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
+    """Borra la cuenta y todo lo suyo. False si la contraseña no calza.
+
+    Se BORRA, no se marca como inactiva: la política de privacidad promete
+    eliminar los datos personales, y una fila escondida con el correo dentro
+    sigue siendo el dato.
+
+    Las visitas de la persona pierden el vínculo con la cuenta pero no se
+    borran: son estadística agregada del sitio, y sin user_id ya no la
+    identifican. Contarlas de menos falsearía el tráfico histórico.
+    """
+    if user.hashed_password is not None and (
+        not password or not verify_password(password, user.hashed_password)
+    ):
+        return False
+
+    import paes_api.all_models  # noqa: F401 -- registra los modelos que se borran
+    from paes_api.modules.analytics.models import StudyStreak
+    from paes_api.modules.billing.models import Pago, Subscription
+    from paes_api.modules.exam_focus.models import (
+        ExamAnswer,
+        ExamAttempt,
+        ExamAttemptQuestion,
+    )
+    from paes_api.modules.goals.models import MetaUsuario
+    from paes_api.modules.metrics.models import PageView
+    from paes_api.modules.practice.models import PracticeAnswer
+    from paes_api.modules.skill_tree.models import UserSkillProgress
+
+    intentos = [
+        a.id
+        for a in db.execute(
+            select(ExamAttempt).where(ExamAttempt.user_id == user.id)
+        ).scalars()
+    ]
+    if intentos:
+        for tabla in (ExamAnswer, ExamAttemptQuestion):
+            db.execute(delete(tabla).where(tabla.attempt_id.in_(intentos)))
+    db.execute(delete(ExamAttempt).where(ExamAttempt.user_id == user.id))
+
+    for tabla in (
+        UserSkillProgress,
+        PracticeAnswer,
+        MetaUsuario,
+        StudyStreak,
+        LoginEvent,
+        PasswordResetToken,
+        Pago,
+        Subscription,
+    ):
+        db.execute(delete(tabla).where(tabla.user_id == user.id))
+
+    # La visita se conserva, sin dueño: deja de identificar y sigue contando.
+    db.execute(
+        PageView.__table__.update()
+        .where(PageView.user_id == user.id)
+        .values(user_id=None)
+    )
+
+    db.execute(delete(User).where(User.id == user.id))
+    db.commit()
+    return True
