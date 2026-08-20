@@ -36,7 +36,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import psycopg
 
-from paes_api.seed_data import QUESTIONS, SKILL_NODES, SKILL_NODES_M2
+from paes_api.seed_data import (
+    PASSAGES,
+    PASSAGES_HISTORIA,
+    QUESTIONS,
+    QUESTIONS_LECTORA,
+    SKILL_NODES,
+    SKILL_NODES_M2,
+)
 
 APLICAR = '--aplicar' in sys.argv
 url = os.environ['DATABASE_URL'].replace('postgresql+psycopg://', 'postgresql://')
@@ -47,14 +54,16 @@ SUBJECT = {c: 'M1' for c in M1} | {c: 'M2' for c in M2}
 
 # estado deseado, tomado del repo
 deseado = {}
-for q in QUESTIONS:
+# Lectora entra en la misma comparacion: sus preguntas tienen la misma forma
+# y su banco tambien cambia.
+for q in QUESTIONS + QUESTIONS_LECTORA:
     alts = tuple(sorted((a['text'], a['is_correct']) for a in q['alternatives']))
     deseado[q['stem']] = (q['skill_node'], q['difficulty'].upper(), alts)
 
 with psycopg.connect(url, connect_timeout=30) as c, c.cursor() as cur:
     cur.execute("""select q.id, q.stem, s.code, q.difficulty::text
                    from questions q join skill_nodes s on s.id = q.skill_node_id
-                   where s.subject in ('M1','M2')""")
+                   where s.subject in ('M1','M2','LECTORA')""")
     filas = cur.fetchall()
     cur.execute("select question_id, text, is_correct from alternatives")
     porq = {}
@@ -77,11 +86,17 @@ with psycopg.connect(url, connect_timeout=30) as c, c.cursor() as cur:
     nodos_mal = [(cod, sub, SUBJECT[cod]) for cod, sub in cur.fetchall()
                  if cod in SUBJECT and sub != SUBJECT[cod]]
 
-    print(f"preguntas de matematica en produccion: {len(filas)}")
+    print(f"preguntas de matematica y lectora en produccion: {len(filas)}")
     print(f"  sobran (ya no estan en seed_data):        {len(sobran)}")
     print(f"  con alternativas distintas (se rehacen):  {len(difieren_alt)}")
     print(f"  solo nodo o dificultad distinta:          {len(difieren_meta)}")
     print(f"  nodos con subject equivocado:             {len(nodos_mal)} {nodos_mal}")
+    # Los textos se identifican por titulo, que es como los busca seed.py.
+    titulos_ok = {p["title"] for p in PASSAGES + PASSAGES_HISTORIA}
+    cur.execute("select id, title from reading_passages")
+    textos_sobran = [(i, t) for i, t in cur.fetchall() if t not in titulos_ok]
+    print(f"  textos que ya no estan en seed_data:      {len(textos_sobran)}")
+
     faltan = set(deseado) - {f[1] for f in filas}
     print(f"  faltan por insertar:                      {len(faltan)}")
 
@@ -119,6 +134,18 @@ with psycopg.connect(url, connect_timeout=30) as c, c.cursor() as cur:
         print(f"  {t}: {cur.rowcount} filas borradas")
     cur.execute("delete from questions where id = any(%s)", (borrar,))
     print(f"  questions: {cur.rowcount} borradas")
+
+    # Los textos van DESPUES de las preguntas: mientras exista una pregunta
+    # apuntando al texto, la clave foranea impide borrarlo.
+    if textos_sobran:
+        ids = [i for i, _ in textos_sobran]
+        cur.execute(
+            "delete from questions where passage_id = any(%s)", (ids,)
+        )
+        if cur.rowcount:
+            print(f"  questions huerfanas de esos textos: {cur.rowcount}")
+        cur.execute("delete from reading_passages where id = any(%s)", (ids,))
+        print(f"  reading_passages: {cur.rowcount} borrados")
 
     for qid, _, _, code_ok, dif_ok, _ in difieren_meta:
         cur.execute("""update questions set difficulty=%s,
