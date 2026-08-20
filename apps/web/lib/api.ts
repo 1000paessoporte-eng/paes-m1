@@ -506,6 +506,16 @@ export function gradeDemo(
   });
 }
 
+/**
+ * Busca carreras sin sesión. La usa el buscador público de /carreras.
+ *
+ * Sin cachear: cada búsqueda es distinta y el resultado se pide desde el
+ * navegador mientras la persona escribe.
+ */
+export function buscarCarrerasPublico(q: string): Promise<CarreraCatalogo[]> {
+  return apiFetch<CarreraCatalogo[]>(`/api/carreras/buscar?q=${encodeURIComponent(q)}`);
+}
+
 export type Universidad =
   paths["/api/carreras/universidades"]["get"]["responses"][200]["content"]["application/json"][number];
 

@@ -129,3 +129,34 @@ def test_universidades_no_se_confunde_con_un_codigo_de_carrera(client: TestClien
     """La ruta va antes que /{codigo}; si se registrara después, FastAPI leería
     "universidades" como el código de una carrera y contestaría 404."""
     assert client.get("/api/carreras/universidades").status_code == 200
+
+
+def test_buscar_sin_sesion_encuentra_por_palabras_sueltas(
+    client: TestClient, carreras: list[Carrera]
+) -> None:
+    """La pregunta con la que la gente llega es "cuánto necesito para X", y el
+    buscador vivía detrás del login."""
+    resp = client.get("/api/carreras/buscar", params={"q": "ingenieria prueba"})
+    assert resp.status_code == 200
+    assert [c["codigo"] for c in resp.json()] == ["99001"]
+
+
+def test_buscar_ignora_tildes(client: TestClient, carreras: list[Carrera]) -> None:
+    """Nadie escribe "INGENIERÍA" con tilde en un buscador."""
+    assert client.get("/api/carreras/buscar", params={"q": "INGENIERÍA"}).json()[0][
+        "codigo"
+    ] == "99001"
+
+
+def test_buscar_con_menos_de_tres_letras_no_devuelve_ruido(
+    client: TestClient, carreras: list[Carrera]
+) -> None:
+    """"me" está dentro de medicina, comercio e ingeniería comercial: un
+    resultado que no discrimina nada es peor que ninguno."""
+    assert client.get("/api/carreras/buscar", params={"q": "in"}).json() == []
+    assert client.get("/api/carreras/buscar", params={"q": ""}).json() == []
+
+
+def test_buscar_no_se_confunde_con_un_codigo(client: TestClient) -> None:
+    """La ruta va antes que /{codigo}."""
+    assert client.get("/api/carreras/buscar", params={"q": "algo"}).status_code == 200

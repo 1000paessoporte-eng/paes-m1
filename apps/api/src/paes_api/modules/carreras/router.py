@@ -5,7 +5,7 @@ piden sesión, así que llevan límite por IP como el resto de lo público
 (ver modules/demo/router.py y modules/users/router.py).
 """
 
-from fastapi import APIRouter, Depends, HTTPException, Request, status
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
 from sqlalchemy.orm import Session
 
 from paes_api.core.database import get_db
@@ -31,6 +31,22 @@ def listar_catalogo(request: Request, db: Session = Depends(get_db)) -> list[Car
     treinta veces por minuto.
     """
     return service.catalogo(db)
+
+
+@router.get("/buscar", response_model=list[CarreraCatalogoOut])
+@limiter.limit("30/minute")
+def buscar_carreras(
+    request: Request,
+    q: str = Query(default="", max_length=120),
+    db: Session = Depends(get_db),
+) -> list[Carrera]:
+    """Busca carreras por nombre, universidad o sede. Público.
+
+    Es la pregunta con la que la gente llega de verdad —cuánto puntaje
+    necesita para la carrera que quiere—, y hasta ahora el buscador vivía
+    detrás del login. Va ANTES de `/{codigo}`, como el resto.
+    """
+    return service.buscar(db, q)
 
 
 @router.get("/universidades", response_model=list[UniversidadOut])

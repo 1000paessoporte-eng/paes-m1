@@ -442,6 +442,7 @@ export function ExamRunner({
       <ExamResults
         result={result}
         review={review}
+        prueba={SUBJECT_LABELS[attemptSubject]}
         onNuevoEnsayo={() => {
           setResult(null);
           setReview(null);

@@ -865,6 +865,30 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/carreras/buscar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Buscar Carreras
+         * @description Busca carreras por nombre, universidad o sede. Público.
+         *
+         *     Es la pregunta con la que la gente llega de verdad —cuánto puntaje
+         *     necesita para la carrera que quiere—, y hasta ahora el buscador vivía
+         *     detrás del login. Va ANTES de `/{codigo}`, como el resto.
+         */
+        get: operations["buscar_carreras_api_carreras_buscar_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/carreras/universidades": {
         parameters: {
             query?: never;
@@ -4016,6 +4040,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["CarreraCatalogoOut"][];
+                };
+            };
+        };
+    };
+    buscar_carreras_api_carreras_buscar_get: {
+        parameters: {
+            query?: {
+                q?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CarreraCatalogoOut"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

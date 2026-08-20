@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
+import {
+  BuscadorConParams,
+  BuscadorEsqueleto,
+} from "@/components/carreras/buscador-carreras";
 import { SiteFooter } from "@/components/site-footer";
 import { getUniversidades, type Universidad } from "@/lib/api";
 import { nombreLegible, slugUniversidad } from "@/lib/carreras";
@@ -63,13 +68,30 @@ export default async function CarrerasPage() {
             </h1>
             <p className="mt-3 text-lg text-muted-foreground">
               Cuánto pesa cada prueba en cada carrera, el ponderado mínimo para postular y
-              las vacantes. Elige tu universidad y simula tu puntaje.
+              las vacantes. Busca la tuya o elige tu universidad, y simula tu puntaje.
             </p>
+
+            {/* El buscador va arriba de todo: "cuánto necesito para Enfermería
+                en la UdeC" es la pregunta con la que la gente llega, y el
+                índice por universidad obliga a saber la respuesta antes de
+                preguntarla. */}
+            <div className="mt-6">
+              {/* Suspense obligatorio: useSearchParams obliga a renderizar en
+                  el cliente todo lo que lo contenga, y el índice de
+                  universidades tiene que seguir siendo estático. */}
+              <Suspense fallback={<BuscadorEsqueleto />}>
+                <BuscadorConParams />
+              </Suspense>
+            </div>
           </div>
         </section>
 
         <section className="px-6 pb-20">
           <div className="mx-auto max-w-3xl">
+            <h2 className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">
+              O elige tu universidad
+            </h2>
+
             {universidades.length === 0 && (
               <p className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
                 No pudimos cargar el listado en este momento. Vuelve a intentarlo en unos
