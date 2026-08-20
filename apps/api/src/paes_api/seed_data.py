@@ -21383,6 +21383,186 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "piscina_salitrera",
+        "title": "La piscina",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. La oficina "
+            "salitrera Santa Adela y sus habitantes son ficticios; el contexto "
+            "histórico del ciclo del salitre se describe en términos generales."
+        ),
+        "body": (
+            "**La piscina**\n\n"
+            "La visita de las tres de la tarde es la peor y le toca a ella. A esa "
+            "hora el suelo devuelve el calor que juntó toda la mañana y los "
+            "turistas caminan despacio, con esa lentitud de la gente que empieza a "
+            "arrepentirse. Hoy son ocho: una pareja joven, un matrimonio con dos "
+            "niños y tres señoras que vinieron juntas y que se fotografían en cada "
+            "puerta.\n\n"
+            "Camila los junta en lo que fue la plaza y dice lo que dice siempre. "
+            "Que la oficina Santa Adela funcionó durante casi medio siglo. Que "
+            "llegó a tener escuela, teatro, pulpería y equipo de fútbol. Que el "
+            "salitre se sacaba de acá y salía en tren al puerto, y que cuando el "
+            "mundo aprendió a fabricarlo más barato, la oficina se apagó como se "
+            "apaga una casa: primero un ala, después la otra, hasta que quedó el "
+            "silencio que están escuchando ahora.\n\n"
+            "Lo dice bien. Lo ha dicho seiscientas veces y lo dice bien, con las "
+            "pausas en el lugar correcto, y todavía se le nota algo cuando llega a "
+            "lo del equipo de fútbol.\n\n"
+            "Después vienen el teatro, con las butacas comidas por el sol; la "
+            "pulpería, donde alguien pregunta siempre si de verdad les pagaban con "
+            "fichas y ella responde que sí, que en algunas oficinas y en algunas "
+            "épocas, y que las fichas servían solamente ahí; y las casas de la "
+            "calle principal, con las puertas abiertas a piezas donde no queda "
+            "nada, ni una silla, ni un clavo.\n\n"
+            "Y al final, la piscina.\n\n"
+            "La piscina está al fondo, después de las casas, y siempre produce el "
+            "mismo efecto: la gente se calla. Es grande, rectangular, y está hecha "
+            "con planchas de fierro remachadas, porque cuando la construyeron no "
+            "había cómo traer otra cosa y sí había un barco desguazado en el "
+            "puerto. Un barco convertido en piscina en mitad del desierto más seco "
+            "del mundo. Camila explica eso y espera los tres segundos que tarda "
+            "cada grupo en entender que están mirando un casco.\n\n"
+            "—¿Y le echaban agua? —pregunta uno de los niños.\n\n"
+            "—Los domingos —dice ella—. La traían en tren.\n\n"
+            "El niño mira el fondo seco, con su capa de arena fina y una lagartija "
+            "que cruza sin apuro, y se le nota que no logra ponerle agua adentro. A "
+            "Camila tampoco le sale, y lleva cuatro años trabajando aquí.\n\n"
+            "Una de las señoras se acerca mientras los demás sacan fotos.\n\n"
+            "—¿Y usted es de acá? ¿Tiene familia que haya vivido en la oficina?\n\n"
+            "Es la pregunta de todos los grupos y tiene su respuesta ensayada.\n\n"
+            "—Mi abuela nació en la calle Baquedano —dice, y señala hacia atrás sin "
+            "mirar—. La tercera casa.\n\n"
+            "La señora hace un gesto de emoción, dice qué lindo, dice qué "
+            "importante lo que usted hace, y vuelve con las otras a fotografiar el "
+            "trampolín.\n\n"
+            "Lo que Camila no cuenta, porque no cabe en el recorrido, es que su "
+            "abuela nunca habló de la oficina. Ni una vez. Que cuando la trajeron, "
+            "hace muchos años, con toda la familia y con torta, la vieja se quedó "
+            "sentada en el auto con la puerta abierta y los pies afuera, mirando el "
+            "camino por donde habían llegado, y que cuando le insistieron dijo "
+            "solamente que hacía mucho calor. Volvieron temprano. Nadie preguntó "
+            "nada, ni ese día ni después, y hoy ya no queda a quién preguntarle.\n\n"
+            "Hay una foto de esa visita. Salen todos apoyados en el auto, con la "
+            "torta en las manos de alguien, y al fondo se ve la esquina de la calle "
+            "Baquedano. La abuela sale también, con lentes oscuros, mirando hacia "
+            "otro lado. Camila la tuvo pegada en el espejo del velador hasta que se "
+            "cambió de casa; ahora no sabe en cuál caja quedó.\n\n"
+            "Camila se sienta en el borde, en el punto donde el fierro todavía "
+            "conserva un resto de pintura celeste, y deja que el grupo se demore. "
+            "Es la parte del trabajo que le gusta: los diez minutos en que no tiene "
+            "que explicar nada.\n\n"
+            "Piensa, como piensa siempre a esta hora, que hay algo raro en su "
+            "oficio. Cada mañana ordena una historia que no le contaron, la cuenta "
+            "con gracia, responde preguntas y recibe propinas. Cuida el lugar, eso "
+            "es cierto: si nadie lo mostrara, esto sería un montón de fierros y en "
+            "diez años no quedaría ni el trampolín. Pero también lo entrega, todos "
+            "los días, a las once y a las tres, ordenado y con las pausas en el "
+            "lugar correcto.\n\n"
+            "No sabe cuál de las dos cosas pesa más. Se lo ha preguntado seguido y "
+            "nunca llega al final de la pregunta, porque siempre hay un grupo que "
+            "ya terminó de sacar fotos y que la está esperando para volver.\n\n"
+            "El sol baja un poco. La sombra del trampolín se estira despacio sobre "
+            "el fondo de la piscina, avanza hacia el otro extremo y se detiene en "
+            "la escalerilla, que sigue ahí, atornillada, con sus tres peldaños "
+            "hacia abajo. Es lo único que se mueve en la piscina.\n\n"
+            "—Vamos —dice Camila, y se pone de pie—. El bus sale a las cinco."
+        ),
+    },
+    {
+        "key": "lengua_senas",
+        "title": "No es español con las manos",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. El contenido y la fecha de la Ley 21.303, "
+            "así como la recomendación del congreso de Milán de 1880, se verificaron "
+            "antes de escribir el texto."
+        ),
+        "body": (
+            "**No es español con las manos**\n\n"
+            "En la esquina inferior de la pantalla, durante la cadena nacional, hay "
+            "un recuadro con una persona que mueve las manos. Casi todos la hemos "
+            "visto y casi nadie sabe bien qué está haciendo. La suposición más "
+            "común —que va traduciendo, palabra por palabra, lo que dice quien "
+            "habla— es falsa, y para entender por qué conviene desarmarla por "
+            "partes.\n\n"
+            "Primero: no existe una lengua de señas universal. La idea suena "
+            "razonable —si son gestos, deberían servir en todas partes— y es "
+            "exactamente al revés. Las lenguas de señas nacieron donde había "
+            "comunidades de personas sordas conviviendo, y cada una desarrolló la "
+            "suya, con su historia y sus préstamos. Una persona sorda chilena y una "
+            "argentina no se entienden de inmediato, igual que no se entienden de "
+            "inmediato un hablante de español y uno de portugués: se las arreglan, "
+            "con esfuerzo y con paciencia, porque son lenguas distintas.\n\n"
+            "Segundo: no es español codificado con las manos. Tiene gramática "
+            "propia, y esa gramática usa recursos que el español no tiene y no "
+            "puede tener. El espacio delante del cuerpo, por ejemplo, funciona como "
+            "un tablero: quien señalea ubica ahí a las personas de las que habla y "
+            "después vuelve a apuntar a esos lugares para referirse a ellas, de "
+            "modo que el espacio cumple el trabajo que en español hacen los "
+            "pronombres.\n\n"
+            "La cara hace algo todavía menos evidente. Levantar las cejas o "
+            "inclinar la cabeza no es expresividad ni énfasis: son marcas "
+            "gramaticales. Distinguen una pregunta de una afirmación, marcan una "
+            "negación o abren una condición, y la misma seña con otra expresión "
+            "facial dice otra cosa. Por eso a un intérprete no se le puede pedir "
+            "que se quede quieto y mueva solo las manos: sería como pedirle a "
+            "alguien que hable en español sin usar los verbos.\n\n"
+            "Existe además un alfabeto manual, una seña para cada letra, y a mucha "
+            "gente le sorprende saber que se usa poco: sirve para deletrear nombres "
+            "propios y palabras prestadas, no para construir frases. Confundir el "
+            "deletreo con la lengua es como creer que el español consiste en decir "
+            "letras.\n\n"
+            "Nada de esto es un descubrimiento reciente, pero durante casi un siglo "
+            "se enseñó lo contrario. En 1880, un congreso internacional de "
+            "educadores reunido en Milán recomendó el método oral y dejó las señas "
+            "fuera de la educación de las personas sordas, con una idea que hoy "
+            "resulta difícil de leer: que las señas les impedían integrarse y que "
+            "lo que correspondía era enseñarles a hablar. La recomendación se "
+            "siguió en buena parte del mundo. El resultado fueron generaciones de "
+            "personas sordas educadas para pronunciar palabras que no oían, con "
+            "acceso incompleto al español y con la lengua que sí podían adquirir "
+            "sin esfuerzo prohibida en la sala de clases. Las señas no "
+            "desaparecieron: siguieron transmitiéndose en los patios, entre "
+            "estudiantes, fuera del programa.\n\n"
+            "En Chile, el reconocimiento legal llegó en enero de 2021 con la Ley "
+            "21.303, que modificó la ley de inclusión vigente. Su formulación es "
+            "deliberadamente fuerte: declara que la lengua de señas chilena es la "
+            "lengua natural, originaria y patrimonio intangible de las personas "
+            "sordas, elemento esencial de su cultura y de su identidad individual y "
+            "colectiva, y reconoce su carácter de lengua oficial de las personas "
+            "sordas. La misma ley incorporó tres conceptos que antes no existían en "
+            "el texto legal: persona sorda, persona con discapacidad auditiva y "
+            "comunidad sorda.\n\n"
+            "Ahora bien, una ley que reconoce una lengua no forma intérpretes. Y "
+            "ahí está la parte difícil: el reconocimiento obliga al Estado a "
+            "garantizar acceso en salud, educación, trabajo y servicios, y esos "
+            "accesos dependen de que haya personas capacitadas donde se necesitan, "
+            "que es un problema de formación y de presupuesto, no de redacción. Una "
+            "consulta médica sin intérprete deja a alguien explicando un dolor por "
+            "señas improvisadas o por medio de un familiar que hace de traductor, "
+            "con todo lo que eso significa cuando lo que se está conversando es "
+            "privado.\n\n"
+            "Hay un punto que se pasa por alto y que ordena todo lo anterior: para "
+            "la mayoría de las personas sordas, el español es una segunda lengua. "
+            "Se aprende leyendo y escribiendo, sin haberlo escuchado nunca, y eso "
+            "explica algo que suele malinterpretarse. Cuando una persona sorda "
+            "escribe con una sintaxis que a un oyente le parece extraña, no está "
+            "escribiendo mal su lengua: está escribiendo en un idioma que no es el "
+            "suyo, con la desventaja adicional de haberlo aprendido sin oírlo. "
+            "Pedirle que «escriba bien» en vez de ofrecerle un intérprete es "
+            "confundir el problema con la solución.\n\n"
+            "Vale la pena terminar con la razón por la que la palabra importa. "
+            "Llamar «lengua» a la lengua de señas no es un gesto de amabilidad "
+            "hacia una minoría, ni una manera elegante de nombrar un sistema de "
+            "apoyo. Es una descripción: cumple las condiciones que los lingüistas "
+            "exigen de cualquier lengua, se adquiere en la infancia como se "
+            "adquiere cualquier otra y permite decir cualquier cosa, incluidos los "
+            "chistes y las mentiras. Y de una descripción correcta se siguen "
+            "obligaciones que de una cortesía no se seguirían."
+        ),
+    },
+    {
         "key": "azar_rachas",
         "title": "El azar no se ve como azar",
         "kind": "no_literario",
@@ -24857,6 +25037,338 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La piscina' ----------
+    _ql(
+        "piscina_salitrera", "lec_localizar", "facil",
+        "Según el relato, ¿con qué material está construida la piscina?",
+        "Con planchas de fierro de un barco desguazado",
+        "El relato explica la razón: cuando la construyeron no había cómo traer "
+        "otra cosa y sí había un barco desarmado en el puerto.\n\nDe ahí la imagen "
+        "que detiene a cada grupo: un casco de barco convertido en piscina en mitad "
+        "del desierto más seco del mundo.",
+        [
+            ("Con concreto traído en tren desde el puerto", "En tren llegaba el agua de los domingos, no el material."),
+            ("Con piedra de la zona, cortada en la misma oficina", "El relato no menciona ninguna cantera ni trabajo en piedra."),
+            ("Con los fierros que sobraron del teatro y la pulpería", "Esos edificios se describen, pero no como fuente de material."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_localizar", "facil",
+        "Según el relato, ¿qué hizo la abuela el día que la llevaron a la oficina?",
+        "Se quedó en el auto y dijo que hacía mucho calor",
+        "La familia había ido con torta, de visita, y ella se quedó sentada con la "
+        "puerta abierta y los pies afuera, mirando el camino de "
+        "vuelta.\n\nVolvieron temprano y nadie preguntó nada, «ni ese día ni "
+        "después».",
+        [
+            ("Recorrió la calle Baquedano buscando su casa", "Nunca bajó del auto: no recorrió nada del lugar."),
+            ("Contó a la familia cómo era la oficina en su época", "El relato subraya que jamás habló de la oficina."),
+            ("Se negó a subir al auto cuando quisieron volver", "Ocurre al revés: es la familia la que decide volver temprano."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_localizar", "medio",
+        "Según lo que explica Camila, ¿por qué dejó de funcionar la oficina?",
+        "Porque el salitre se empezó a fabricar más barato",
+        "En su relato, la oficina «se apagó como se apaga una casa: primero un ala, "
+        "después la otra».\n\nAntes de eso llegó a tener escuela, teatro, pulpería "
+        "y equipo de fútbol, y el salitre salía en tren hacia el puerto.",
+        [
+            ("Porque el ferrocarril al puerto dejó de funcionar", "El tren aparece en el relato, pero no como causa del cierre."),
+            ("Porque se agotó el mineral que se extraía en la zona", "Camila no menciona agotamiento del yacimiento."),
+            ("Porque sus habitantes se fueron a trabajar al puerto", "El relato no cuenta hacia dónde se fue la gente."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_interpretar", "facil",
+        "¿Qué sugiere que el niño no logre imaginar la piscina con agua?",
+        "Lo lejos que queda hoy lo que ese lugar llegó a ser",
+        "El niño mira un fondo seco, con arena fina y una lagartija cruzando, y no "
+        "consigue ponerle agua adentro.\n\nEl relato agrega enseguida el dato que "
+        "le da peso: a Camila «tampoco le sale», y lleva cuatro años trabajando "
+        "ahí.",
+        [
+            ("Que los niños se aburren durante la visita guiada", "El niño es el único que pregunta: está atento, no aburrido."),
+            ("Que Camila explicó mal cómo funcionaba la piscina", "Su explicación es precisa: agua los domingos, traída en tren."),
+            ("Que el relato pone en duda que la piscina se usara", "El uso dominical se afirma sin ninguna reserva."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_interpretar", "medio",
+        "¿Qué función cumple la piscina dentro del relato?",
+        "Concentra el contraste entre lo que hubo y lo que queda",
+        "Es el punto final del recorrido y el único ante el cual «la gente se "
+        "calla». Reúne todo lo que el relato viene diciendo: un barco sin mar, una "
+        "piscina sin agua, un lugar construido para el domingo en el desierto más "
+        "seco del mundo.\n\nY es también donde Camila se sienta cuando deja de "
+        "hablar.",
+        [
+            ("Sirve para explicar cómo se abastecía de agua la oficina", "El abastecimiento se menciona de paso, en una sola línea."),
+            ("Muestra que la oficina era más rica de lo que se cree", "El relato no compara su riqueza con la de otras oficinas."),
+            ("Permite que los turistas descansen antes de volver", "Nadie descansa ahí: el grupo se dedica a sacar fotos."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_interpretar", "medio",
+        "¿Qué revela que Camila diga su relato «con las pausas en el lugar "
+        "correcto»?",
+        "Que su historia es un trabajo ensayado muchas veces",
+        "La frase aparece dos veces y no por descuido. La primera elogia su oficio: "
+        "lo ha dicho seiscientas veces y lo dice bien.\n\nLa segunda la repite "
+        "cuando Camila piensa que entrega el lugar «ordenado y con las pausas en el "
+        "lugar correcto». Lo que era una virtud vuelve convertido en incomodidad.",
+        [
+            ("Que ha perdido todo interés por lo que cuenta", "El relato dice que todavía se le nota algo al hablar del fútbol."),
+            ("Que aprendió el guion sin entender bien la historia", "Responde con precisión incluso las preguntas del público."),
+            ("Que le molesta trabajar en la visita de las tres", "La molestia del horario es por el calor, no por el relato."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_interpretar", "dificil",
+        "¿Qué relación establece el relato entre el silencio de la abuela y el "
+        "oficio de Camila?",
+        "Ella cuenta a diario un lugar del que su abuela calló",
+        "La abuela no habló nunca de la oficina y, llevada hasta ahí, se quedó en "
+        "el auto mirando el camino de vuelta. Su nieta hace el recorrido dos veces "
+        "al día y responde preguntas sobre esa misma calle.\n\nEl relato no explica "
+        "el silencio —ya no queda a quién preguntarle— y esa falta es la que vuelve "
+        "incómoda la respuesta ensayada: «mi abuela nació en la calle Baquedano».",
+        [
+            ("Camila repite las historias que su abuela le contó de niña", "No hay tales historias: la abuela nunca contó nada."),
+            ("Camila trabaja ahí para averiguar qué le pasó a su abuela", "El relato no le atribuye esa motivación en ningún momento."),
+            ("Camila evita mencionar a su familia durante el recorrido", "Sí la menciona: es parte de su respuesta a cada grupo."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_evaluar", "facil",
+        "¿Qué actitud tiene Camila hacia su propio trabajo?",
+        "Ambivalente, pues lo defiende y a la vez sospecha de él",
+        "Reconoce que cuida el lugar: si nadie lo mostrara, «esto sería un montón "
+        "de fierros y en diez años no quedaría ni el trampolín».\n\nEn la misma "
+        "frase admite que también lo entrega, a las once y a las tres, a cambio de "
+        "propinas. Piensa las dos cosas al mismo tiempo y no elige.",
+        [
+            ("Orgullosa, pues considera que preserva un patrimonio", "Ese orgullo es el que la señora le atribuye, no el suyo."),
+            ("Resignada, pues lo hace solo por necesidad económica", "El relato menciona partes del trabajo que le gustan."),
+            ("Molesta, pues los turistas no respetan el lugar", "No hay ningún reproche del relato hacia los visitantes."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_evaluar", "medio",
+        "¿Qué efecto produce que la señora le diga «qué importante lo que usted "
+        "hace»?",
+        "Le entrega un elogio que el relato acaba de complicar",
+        "La señora responde a la respuesta ensayada y se va enseguida a fotografiar "
+        "el trampolín, satisfecha.\n\nEl lector, en cambio, va a enterarse en el "
+        "párrafo siguiente de lo que Camila no cuenta, de modo que ese elogio queda "
+        "flotando sobre algo que nadie del grupo alcanza a ver.",
+        [
+            ("Muestra que los turistas valoran el trabajo de los guías", "El relato usa el comentario para otra cosa, no para eso."),
+            ("Confirma que Camila eligió bien lo que responde", "Justamente después se ve todo lo que esa respuesta deja fuera."),
+            ("Anuncia que la señora hará más preguntas personales", "La señora se retira de inmediato a sacar fotografías."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_evaluar", "dificil",
+        "¿Qué sentido tiene la imagen final de la sombra del trampolín?",
+        "Que en ese lugar lo único que se mueve es el tiempo",
+        "El relato lo dice sin explicarlo: la sombra se estira, avanza, se detiene "
+        "en la escalerilla y «es lo único que se mueve en la piscina».\n\nTodo lo "
+        "demás está fijo desde hace décadas —el fierro, los peldaños, la arena—, de "
+        "modo que el movimiento que queda no lo produce nadie: lo produce el sol al "
+        "pasar. Es la última vuelta de tuerca a un lugar donde el agua se fue y la "
+        "gente también.",
+        [
+            ("Que la visita ha terminado y el grupo debe retirarse", "El aviso del bus viene después y es de Camila, no de la imagen."),
+            ("Que la piscina volverá a llenarse en algún momento", "Nada en el relato sugiere un futuro para el lugar."),
+            ("Que Camila ha permanecido demasiado tiempo sentada", "El relato presenta esos minutos como la parte que le gusta."),
+        ],
+    ),
+    _ql(
+        "piscina_salitrera", "lec_evaluar", "dificil",
+        "¿Qué deja el relato deliberadamente sin resolver?",
+        "Si mostrar el lugar lo conserva o lo va entregando",
+        "Camila se lo pregunta seguido y «nunca llega al final de la pregunta», "
+        "porque siempre hay un grupo esperando.\n\nEl relato podría haber elegido: "
+        "presentarla como guardiana de una memoria o como alguien que vende la "
+        "pérdida de su familia. Deja las dos descripciones en pie, verdaderas al "
+        "mismo tiempo, y termina con ella volviendo al trabajo.",
+        [
+            ("Si la abuela llegó a nacer realmente en esa oficina", "El relato no pone en duda ese dato en ningún momento."),
+            ("Si los turistas comprenden lo que están visitando", "Lo que piensan los visitantes no es el asunto del relato."),
+            ("Si la oficina será restaurada por alguna institución", "No aparece ninguna posibilidad de restauración."),
+        ],
+    ),
+    # ---------- 'No es español con las manos' ----------
+    _ql(
+        "lengua_senas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué estableció la Ley 21.303?",
+        "Que es la lengua oficial de las personas sordas",
+        "El texto detalla la formulación de la ley: declara que la lengua de señas "
+        "chilena es la lengua natural, originaria y patrimonio intangible de las "
+        "personas sordas, elemento esencial de su cultura e identidad.\n\nLa misma "
+        "ley incorporó tres conceptos que antes no estaban en el texto legal: "
+        "persona sorda, persona con discapacidad auditiva y comunidad sorda.",
+        [
+            ("Que el Estado formará intérpretes en salud y educación", "El texto señala justamente que la ley no forma intérpretes."),
+            ("Que la lengua de señas se enseñará en todos los colegios", "El artículo no menciona ninguna obligación de ese tipo."),
+            ("Que se prohíbe el uso del método oral en la enseñanza", "El método oral aparece en el congreso de 1880, no en la ley."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_localizar", "facil",
+        "Según la lectura, ¿para qué se usa el alfabeto manual?",
+        "Para deletrear nombres propios y palabras prestadas",
+        "El texto aclara que se usa poco y que no sirve para construir frases: es "
+        "un recurso auxiliar dentro de la lengua.\n\nPor eso agrega que confundir "
+        "el deletreo con la lengua «es como creer que el español consiste en decir "
+        "letras».",
+        [
+            ("Para reemplazar las señas cuando el intérprete no las sabe", "El texto no lo presenta como un sustituto de la lengua."),
+            ("Para marcar las preguntas y las negaciones de una frase", "Esa función la cumplen las marcas faciales, no el deletreo."),
+            ("Para comunicarse con personas sordas de otros países", "El artículo no le atribuye ningún papel entre lenguas."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_localizar", "medio",
+        "Según la lectura, ¿qué recomendó el congreso reunido en Milán en 1880?",
+        "El método oral, dejando las señas fuera de clases",
+        "La recomendación se apoyaba en una idea que el emisor califica de difícil "
+        "de leer hoy: que las señas impedían integrarse y que correspondía enseñar "
+        "a hablar.\n\nEl texto agrega que se siguió en buena parte del mundo y "
+        "describe su resultado sobre generaciones completas de personas sordas.",
+        [
+            ("Crear escuelas especiales en cada país participante", "El congreso no aparece en el texto creando establecimientos."),
+            ("Unificar las lenguas de señas en un sistema común", "El artículo no atribuye al congreso ningún plan de unificación."),
+            ("Enseñar simultáneamente el método oral y las señas", "Precisamente dejó las señas fuera de la sala de clases."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_interpretar", "facil",
+        "¿Qué quiere decir que el espacio delante del cuerpo funcione «como un "
+        "tablero»?",
+        "Que ubicar ahí a alguien permite volver a referirse a él",
+        "Quien señalea sitúa en ese espacio a las personas de las que habla y "
+        "después apunta a esos lugares.\n\nEl texto lo compara con una función del "
+        "español: ese uso del espacio cumple el trabajo que en español hacen los "
+        "pronombres.",
+        [
+            ("Que las señas se ordenan en filas, como en un pizarrón", "El texto no describe ninguna disposición en filas."),
+            ("Que cada zona del cuerpo corresponde a una letra distinta", "Las letras corresponden al alfabeto manual, que es otra cosa."),
+            ("Que el intérprete necesita un espacio amplio para trabajar", "La comparación es gramatical, no sobre las condiciones de trabajo."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_interpretar", "medio",
+        "¿Con qué finalidad se compara pedirle a un intérprete que no mueva la cara "
+        "con hablar sin usar los verbos?",
+        "Para mostrar que la expresión facial cumple función gramatical",
+        "Levantar las cejas o inclinar la cabeza distingue una pregunta de una "
+        "afirmación, marca la negación o abre una condición, y la misma seña con "
+        "otra expresión dice otra cosa.\n\nLa comparación traduce eso a algo que un "
+        "lector oyente puede medir: sin verbos no queda una frase pobre, queda una "
+        "frase imposible.",
+        [
+            ("Para explicar por qué el trabajo de un intérprete es agotador", "El texto no discute el esfuerzo físico de la interpretación."),
+            ("Para señalar que los intérpretes exageran sus gestos", "El artículo sostiene que esos movimientos no son énfasis."),
+            ("Para indicar que las señas se acompañan de palabras habladas", "No se menciona ningún uso simultáneo del habla."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_interpretar", "medio",
+        "Según la lectura, ¿qué se sigue de que el español sea una segunda lengua "
+        "para la mayoría de las personas sordas?",
+        "Que una sintaxis extraña al escribir no es un error propio",
+        "El emisor explica que ese español se aprende leyendo y escribiendo, sin "
+        "haberlo escuchado nunca.\n\nDe ahí su conclusión: quien escribe con una "
+        "sintaxis que a un oyente le parece rara está escribiendo en un idioma "
+        "ajeno, y pedirle que «escriba bien» en lugar de darle un intérprete «es "
+        "confundir el problema con la solución».",
+        [
+            ("Que conviene reforzar la enseñanza del español escrito", "El texto propone intérpretes, no más ejercitación del español."),
+            ("Que las personas sordas deberían aprender ambas lenguas", "El artículo no plantea ese objetivo en ningún momento."),
+            ("Que la lengua de señas no cuenta con una forma escrita propia", "La escritura de la lengua de señas no se discute en el texto."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_interpretar", "dificil",
+        "¿Cómo están organizadas las tres primeras aclaraciones del artículo?",
+        "Desarman por partes la suposición enunciada al comienzo",
+        "El primer párrafo formula la creencia común —que el intérprete traduce "
+        "palabra por palabra— y anuncia que conviene «desarmarla por partes».\n\nLo "
+        "que sigue son esas partes: que no es universal, que no es español "
+        "codificado y que el deletreo no es la lengua. Recién después de ese "
+        "trabajo el texto puede hablar de la ley sin que el lector la entienda como "
+        "una concesión.",
+        [
+            ("Van de lo más reciente a lo más antiguo en el tiempo", "La historia aparece después, y no ordena esas aclaraciones."),
+            ("Presentan primero las ventajas y luego las dificultades", "Las tres aclaraciones son descripciones, no ventajas."),
+            ("Comparan la lengua de señas chilena con la de otros países", "La comparación con Argentina ilustra solo la primera parte."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor señala que una ley que reconoce una lengua no "
+        "forma intérpretes?",
+        "Para advertir que el reconocimiento no basta por sí solo",
+        "El texto precisa dónde queda el problema: el acceso en salud, educación, "
+        "trabajo y servicios depende de que haya personas capacitadas, «que es un "
+        "problema de formación y de presupuesto, no de redacción».\n\nEl ejemplo de "
+        "la consulta médica sin intérprete muestra lo que eso significa para una "
+        "persona concreta.",
+        [
+            ("Para criticar la redacción con que se escribió la ley", "Del texto legal dice que su formulación es deliberadamente fuerte."),
+            ("Para sostener que la ley debería haberse aprobado antes", "El artículo no discute el momento en que se dictó la norma."),
+            ("Para proponer que se derogue la ley y se dicte otra", "En ningún momento sugiere reemplazar la legislación vigente."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor frente a la recomendación de 1880?",
+        "Crítica, pues describe lo que produjo en generaciones",
+        "El emisor no se limita a informarla: dice que su idea de base «hoy resulta "
+        "difícil de leer» y detalla su consecuencia.\n\nPersonas educadas para "
+        "pronunciar palabras que no oían, con acceso incompleto al español y con la "
+        "lengua que podían adquirir sin esfuerzo prohibida en la sala de clases.",
+        [
+            ("Comprensiva, pues era el conocimiento disponible entonces", "El texto señala que nada de esto es un descubrimiento reciente."),
+            ("Neutral, pues se limita a informar lo que allí se acordó", "Califica la idea y describe el daño: no es una exposición neutra."),
+            ("Irónica, pues se burla de los educadores que participaron", "No hay burla: hay una descripción severa de las consecuencias."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_evaluar", "dificil",
+        "¿Por qué el emisor insiste en que llamarla «lengua» no es una cortesía?",
+        "Porque de una descripción correcta se siguen obligaciones",
+        "El cierre distingue dos cosas que se confunden: un gesto de amabilidad "
+        "hacia una minoría y una constatación.\n\nEl emisor sostiene lo segundo, y "
+        "lo funda: cumple las condiciones que los lingüistas exigen de cualquier "
+        "lengua, se adquiere en la infancia como cualquier otra y permite decir "
+        "cualquier cosa, «incluidos los chistes y las mentiras». De una cortesía "
+        "nadie deriva un deber; de una descripción, sí.",
+        [
+            ("Porque la palabra aparece en el texto de la ley vigente", "El argumento es lingüístico y no depende de la norma."),
+            ("Porque la comunidad sorda pidió expresamente ese término", "El texto no atribuye la elección a una petición."),
+            ("Porque las demás denominaciones resultan ofensivas", "El emisor no discute qué otros nombres serían ofensivos."),
+        ],
+    ),
+    _ql(
+        "lengua_senas", "lec_evaluar", "dificil",
+        "¿Qué muestra el emisor al contar que las señas siguieron transmitiéndose "
+        "en los patios?",
+        "Que la lengua sobrevivió fuera de donde estaba prohibida",
+        "El dato aparece justo después de describir un siglo de enseñanza orientada "
+        "a suprimirla: «Las señas no desaparecieron».\n\nQue la transmisión "
+        "ocurriera entre estudiantes y fuera del programa refuerza el argumento "
+        "central del artículo. Una lengua que se adquiere sola, entre pares y "
+        "contra la institución, se comporta como una lengua viva y no como un "
+        "sistema de apoyo que alguien diseñó.",
+        [
+            ("Que los educadores de la época terminaron cambiando de opinión", "El texto no informa ningún cambio de posición de su parte."),
+            ("Que las escuelas nunca llegaron a aplicar el método oral", "Señala lo contrario: la recomendación se siguió ampliamente."),
+            ("Que las señas de los patios eran distintas de las actuales", "El artículo no compara esas señas con las de hoy."),
+        ],
+    ),
     # ---------- 'El azar no se ve como azar' ----------
     _ql(
         "azar_rachas", "lec_localizar", "facil",
