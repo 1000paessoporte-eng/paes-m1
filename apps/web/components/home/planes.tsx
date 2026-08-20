@@ -92,9 +92,10 @@ const PLANES = [
     facturacion: "No requiere tarjeta",
     duracion: "Acceso permanente",
     incluye: [
-      "4 ensayos al mes, con el banco de preguntas actual",
+      "4 ensayos al mes, con el banco completo",
       "Puntaje PAES estimado y resolución de cada ejercicio",
-      "Historial de tu progreso con gráfico de evolución",
+      "Qué nodo reforzar, recomendado según tus errores",
+      "Historial y analítica de tu progreso",
       "Árbol de habilidades y lecciones completas",
       "Una carrera en Mi meta, con su puntaje ponderado",
     ],
@@ -104,23 +105,30 @@ const PLANES = [
   {
     nombre: "Pro",
     resumen: "Para preparar en serio",
-    precio: "$15.000",
-    // Sin precio tachado: el "normal $9.990" nunca se cobró, y presentar como
-    // rebaja algo que no lo es sería justamente lo que prohíbe la Ley 19.496.
-    // Si algún día se sube el precio de verdad, ahí sí podrá mostrarse el
-    // anterior.
+    precio: "$9.990",
+    // Sin precio tachado: no hubo un precio anterior efectivamente cobrado, y
+    // presentar como rebaja algo que no lo es sería justamente lo que prohíbe
+    // la Ley 19.496.
     precioNormal: null,
     periodo: "al mes",
-    alternativa: "También por 3 días, una semana o un año completo",
-    facturacion: "Sin permanencia: pagas el período que elijas",
+    alternativa: "O el año completo por $89.900: nueve meses, no doce",
+    facturacion: "Sin permanencia: cancelas cuando quieras",
     duracion: "Mientras la suscripción esté activa",
+    // SOLO lo que el código realmente entrega a cambio del dinero.
+    //
+    // La lista anterior tenía seis puntos y cinco eran falsos: prometía un
+    // "banco ampliado" que no existe (Gratis y Pro leen el mismo banco), la
+    // recomendación de nodo y la comparación de puntajes que el plan Gratis ya
+    // tiene, y un tope de 10 carreras que no aplicaba nadie. Cobrar $9.990 por
+    // cinco cosas que ya se entregan gratis es la peor forma de cobrar, y en
+    // la única página del sitio donde se pide dinero.
+    //
+    // Si mañana Pro suma algo, se agrega ACÁ el mismo día que el código lo
+    // hace cumplir, no antes.
     incluye: [
       "Todo lo del plan Gratis",
-      "Banco de preguntas ampliado y actualizado cada mes",
-      "Recomendación automática de qué nodo reforzar",
-      "Ensayos sin límite, filtrados por eje temático",
-      "Comparación de tu puntaje entre ensayos y por eje",
-      "Hasta 10 preferencias en Mi meta, con simulador",
+      "Ensayos sin límite: se acaba el tope de 4 al mes",
+      "Hasta 10 carreras en Mi meta, con el simulador comparándolas",
     ],
     destacado: true,
     disponible: false,
@@ -129,7 +137,7 @@ const PLANES = [
     nombre: "Colegios",
     resumen: "Para cursos completos",
     // El precio se recalculó contra el individual: un año de Pro cuesta
-    // $119.000, así que un colegio paga cerca de un sexto por alumno. El valor
+    // $89.900, así que un colegio paga cerca de un cuarto por alumno. El valor
     // anterior —$3.500— dejaba un curso completo de 30 alumnos en $105.000,
     // menos que UNA suscripción individual: no era descuento por volumen, era
     // regalar el producto justo en el plan que más ingreso puede generar.
@@ -159,32 +167,32 @@ const PLANES = [
  * ofrecer un botón que lleva a un error.
  */
 /**
- * Las cuatro duraciones de Pro, de la más corta a la más larga.
+ * Las dos duraciones de Pro.
  *
- * Se muestran juntas y con el precio POR DÍA a la vista porque es el único
- * número que hace comparable un plan de tres días con uno de un año. Sin él,
- * $3.990 parece más barato que $15.000 y la decisión se toma mirando la cifra
- * equivocada.
+ * Eran cuatro. Los planes de 3 días y de una semana se quitaron: preparar la
+ * PAES no es algo que se haga en tres días, así que vendían una promesa que el
+ * producto no puede cumplir, y convertían la compra en una comparación de
+ * cuatro columnas justo donde hay que decidir UNA cosa. Menos opciones, menos
+ * gente que se va sin elegir ninguna.
  *
- * El orden va de menor a mayor plazo y el mensual queda destacado: es el que
- * conviene a la mayoría, y el que sirve de referencia para leer los otros.
+ * El mensual queda destacado: es el que conviene a la mayoría y el que sirve
+ * de referencia para leer el otro. El anual dice cuánto se ahorra en meses,
+ * que es como lo piensa un estudiante, y no solo el porcentaje.
  */
 function EscalaPro() {
   const opciones = [
-    { id: "pro_3dias", nombre: "3 días", precio: "$3.990", porDia: "$1.330 por día" },
-    { id: "pro_semana", nombre: "1 semana", precio: "$6.990", porDia: "$999 por día" },
     {
       id: "pro_mensual",
       nombre: "1 mes",
-      precio: "$15.000",
-      porDia: "$500 por día",
+      precio: "$9.990",
+      porDia: "Cancelas cuando quieras",
       destacado: true,
     },
     {
       id: "pro_anual",
       nombre: "1 año",
-      precio: "$119.000",
-      porDia: "$326 por día · ahorras 4 meses",
+      precio: "$89.900",
+      porDia: "$7.492 al mes · pagas 9 meses, no 12",
     },
   ];
 
