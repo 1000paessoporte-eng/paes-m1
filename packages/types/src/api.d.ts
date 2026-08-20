@@ -2551,6 +2551,8 @@ export interface components {
             image_url?: string | null;
             /** Passage */
             passage?: string | null;
+            /** Passage Title */
+            passage_title?: string | null;
             /** Node Name */
             node_name: string;
             /** Alternatives */

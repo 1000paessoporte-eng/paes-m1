@@ -147,8 +147,11 @@ export function RepasoRunner({
       )}
 
       {pregunta.passage && (
-        <div className="mb-5 max-h-72 overflow-y-auto rounded-xl border border-border bg-surface p-4 text-sm leading-relaxed whitespace-pre-line">
-          {pregunta.passage}
+        <div className="mb-5 max-h-72 overflow-y-auto rounded-xl border border-border bg-surface p-4">
+          {pregunta.passage_title && (
+            <p className="mb-2 font-semibold">{pregunta.passage_title}</p>
+          )}
+          <p className="text-sm leading-relaxed whitespace-pre-line">{pregunta.passage}</p>
         </div>
       )}
 
