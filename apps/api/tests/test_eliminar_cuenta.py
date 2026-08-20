@@ -68,3 +68,80 @@ def test_la_visita_se_conserva_sin_dueno(
 
 def test_sin_sesion_no_se_borra_nada(client: TestClient) -> None:
     assert client.request("DELETE", "/api/auth/me", json={"password": "x"}).status_code == 401
+
+
+def test_borra_tambien_la_cola_de_repaso(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """Una tabla nueva con FK a users rompe el borrado sin avisar.
+
+    Pasó con `repaso_items`: se agregó después de escribir `eliminar_cuenta`,
+    y sin estar en su lista la baja de cuenta habría reventado con violación de
+    clave foránea. La política de privacidad promete que el borrado funciona,
+    así que el que falle no es un detalle.
+    """
+    from paes_api.modules.content.models import Difficulty, Question
+    from paes_api.modules.repaso.models import RepasoItem
+    from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+
+    headers, _ = register_user(email="conrepaso@milpaes.cl", password="clave1234")
+    user = db_session.execute(
+        select(User).where(User.email == "conrepaso@milpaes.cl")
+    ).scalar_one()
+
+    node = SkillNode(
+        code="nodo_borrado", name="Tema", axis=SkillAxis.NUMEROS, tier=1, unlock_threshold=0.75
+    )
+    db_session.add(node)
+    db_session.flush()
+    pregunta = Question(skill_node_id=node.id, difficulty=Difficulty.FACIL, stem="1 + 1")
+    db_session.add(pregunta)
+    db_session.flush()
+    db_session.add(RepasoItem(user_id=user.id, question_id=pregunta.id))
+    db_session.commit()
+
+    resp = client.request(
+        "DELETE", "/api/auth/me", headers=headers, json={"password": "clave1234"}
+    )
+    assert resp.status_code == 204, resp.text
+    assert db_session.execute(select(func.count(RepasoItem.id))).scalar_one() == 0
+
+
+def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
+    """El guardia general: si alguien agrega una tabla que cuelga de `users` y
+    no la suma a `eliminar_cuenta`, este test cae y dice exactamente dónde.
+
+    Sin esto, el error solo aparece cuando un usuario real intenta darse de
+    baja, que es el peor momento posible para descubrirlo.
+    """
+    import paes_api.all_models  # noqa: F401 -- puebla Base.metadata
+    from paes_api.shared.base import Base
+
+    apuntan_a_users = {
+        tabla.name
+        for tabla in Base.metadata.tables.values()
+        for fk in tabla.foreign_keys
+        if fk.column.table.name == "users"
+    }
+
+    # Las que `eliminar_cuenta` borra o desvincula hoy. Si agregas una tabla,
+    # agrégala también allá y acá.
+    cubiertas = {
+        "exam_attempts",
+        "login_events",
+        "page_views",  # no se borra: se le quita el dueño
+        "pagos",
+        "password_reset_tokens",
+        "practice_answers",
+        "repaso_items",
+        "study_streaks",
+        "user_goals",  # el modelo se llama MetaUsuario
+        "subscriptions",
+        "user_skill_progress",
+    }
+
+    faltan = apuntan_a_users - cubiertas
+    assert faltan == set(), (
+        f"Estas tablas cuelgan de users y no las borra eliminar_cuenta: {sorted(faltan)}. "
+        "Agrégalas en users/service.py o el borrado de cuenta va a fallar."
+    )
