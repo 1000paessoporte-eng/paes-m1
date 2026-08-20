@@ -40,6 +40,7 @@ from paes_api.modules.content.models import Alternative, Question
 from paes_api.modules.exam_focus.models import AttemptStatus, ExamAnswer, ExamAttempt
 from paes_api.modules.exam_focus.scoring import SCORING_BY_SUBJECT
 from paes_api.modules.exam_focus.service import SUBJECT_INCLUDES
+from paes_api.modules.leads.models import Lead
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.skill_tree.models import SkillNode, Subject
@@ -368,6 +369,13 @@ def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
         or 0
     )
 
+    correos_dejados = (
+        db.execute(
+            select(func.count(Lead.id)).where(Lead.created_at >= hace_30)
+        ).scalar_one()
+        or 0
+    )
+
     nuevos = select(User.id).where(User.created_at >= hace_30).scalar_subquery()
     registrados = (
         db.execute(select(func.count()).select_from(User).where(User.created_at >= hace_30)).scalar_one()
@@ -405,6 +413,7 @@ def _embudo(db: Session, ahora: datetime) -> EmbudoOut:
 
     return EmbudoOut(
         visitantes=visitantes,
+        correos_dejados=correos_dejados,
         registrados=registrados,
         con_ensayo=con_ensayo,
         con_ensayo_terminado=terminado,

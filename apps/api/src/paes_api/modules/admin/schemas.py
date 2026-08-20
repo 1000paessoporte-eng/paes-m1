@@ -91,6 +91,10 @@ class EmbudoOut(BaseModel):
     """
 
     visitantes: int
+    #: Correos dejados por gente sin cuenta (tabla `leads`). Es el paso
+    #: intermedio entre mirar y registrarse: quien lo deja todavía no es un
+    #: usuario, pero ya dejó de ser un visitante anónimo irrecuperable.
+    correos_dejados: int
     registrados: int
     #: Cuentas creadas en la ventana que además iniciaron al menos un ensayo.
     con_ensayo: int
