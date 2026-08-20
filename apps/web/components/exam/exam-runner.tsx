@@ -71,7 +71,15 @@ export function ExamRunner({
   const [remainingMs, setRemainingMs] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, AnswerState>>({});
-  const [, setElapsedByQuestion] = useState<Record<number, number>>({});
+  // El tiempo acumulado por pregunta vive en un ref y no en estado, y no es
+  // un detalle: estaba en estado, se asignaba DENTRO del updater de setState y
+  // se leía justo después, fuera. Como el updater es asíncrono, lo que viajaba
+  // a la API era siempre el valor inicial: las 132 respuestas de producción
+  // tenían time_spent_ms = 0. Nadie había medido nunca el ritmo de nadie.
+  //
+  // Un ref es además la herramienta correcta: este valor no se pinta en
+  // ninguna parte, así que no tiene por qué provocar un render.
+  const elapsedRef = useRef<Record<number, number>>({});
   const [result, setResult] = useState<ExamResult | null>(null);
   const [review, setReview] = useState<ExamReview | null>(null);
   const [confirmingSubmit, setConfirmingSubmit] = useState(false);
@@ -126,11 +134,8 @@ export function ExamRunner({
       const id = attemptIdRef.current;
       if (id == null) return Promise.resolve();
 
-      let total = 0;
-      setElapsedByQuestion((prev) => {
-        total = (prev[questionId] ?? 0) + Math.max(0, delta);
-        return { ...prev, [questionId]: total };
-      });
+      const total = (elapsedRef.current[questionId] ?? 0) + Math.max(0, delta);
+      elapsedRef.current[questionId] = total;
 
       return answerExamQuestion(
         id,
@@ -287,7 +292,7 @@ export function ExamRunner({
         elap[Number(qid)] = ans.time_spent_ms ?? 0;
       }
       setAnswers(next);
-      setElapsedByQuestion(elap);
+      elapsedRef.current = elap;
       setCurrentIndex(0);
       segmentStartRef.current = Date.now();
       setPhase("in_progress");
@@ -392,7 +397,7 @@ export function ExamRunner({
       setRemainingMs(data.duration_limit_seconds * 1000);
       setCurrentIndex(0);
       setAnswers({});
-      setElapsedByQuestion({});
+      elapsedRef.current = {};
       segmentStartRef.current = Date.now();
       setPhase("in_progress");
     } catch (err) {
