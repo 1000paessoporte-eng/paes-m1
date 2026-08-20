@@ -21383,6 +21383,186 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "azar_rachas",
+        "title": "El azar no se ve como azar",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las probabilidades de racha en veinte "
+            "lanzamientos se calcularon para este texto; el cambio de algoritmo de 2014 "
+            "y el análisis estadístico de los bombardeos sobre Londres se verificaron "
+            "antes de escribirlo."
+        ),
+        "body": (
+            "**El azar no se ve como azar**\n\n"
+            "Hay un ejercicio que se usa en los primeros cursos de estadística y "
+            "que casi nunca falla. Se le pide a una persona que escriba en un papel "
+            "veinte resultados de cara o sello, inventados, tratando de imitar lo "
+            "que haría una moneda. En otro papel se anotan veinte lanzamientos de "
+            "verdad. Después basta con mirar los dos papeles unos segundos para "
+            "saber cuál es cuál.\n\n"
+            "La pista es siempre la misma: la secuencia inventada alterna "
+            "demasiado. Casi nunca tiene cuatro caras seguidas, porque a quien la "
+            "escribe eso le parece poco creíble. La moneda, en cambio, produce "
+            "rachas sin ningún esfuerzo. Los números son claros: en veinte "
+            "lanzamientos de una moneda justa, la probabilidad de que aparezca una "
+            "racha de al menos tres resultados iguales es de casi el 98 %; la de "
+            "una racha de al menos cuatro, cerca del 77 %; y la de una racha de "
+            "cinco o más, casi el 46 %. Es decir que en una serie corriente de "
+            "veinte tiros lo raro, lo verdaderamente improbable, sería no ver "
+            "ninguna racha.\n\n"
+            "El error tiene una raíz sencilla. Sabemos que a la larga la moneda cae "
+            "mitad y mitad, y trasladamos esa propiedad a tramos donde no rige: "
+            "esperamos que cada pedacito de la secuencia se parezca al total. Pero "
+            "el equilibrio aparece en el largo plazo por dilución, no por "
+            "compensación. Después de cuatro caras seguidas la moneda no queda "
+            "«debiendo» sellos: la moneda no se acuerda de nada, y el quinto "
+            "lanzamiento vuelve a ser mitad y mitad, exactamente como el primero.\n\n"
+            "Esa confusión tiene nombre propio, la falacia del jugador, y es la que "
+            "sostiene a quien anota los últimos veinte resultados de una ruleta "
+            "para decidir a qué color apostar. Está apostando a que un objeto sin "
+            "memoria se acuerde de lo que hizo.\n\n"
+            "El caso más elocuente, sin embargo, no viene de un casino sino de una "
+            "aplicación de música. Durante años, la función de reproducción "
+            "aleatoria de Spotify fue efectivamente aleatoria, y la empresa recibía "
+            "reclamos constantes de usuarios convencidos de que no lo era: "
+            "aparecían dos canciones del mismo artista seguidas, tres del mismo "
+            "disco, y eso «no podía ser casualidad». Por supuesto que podía; era "
+            "exactamente lo que se espera de un sorteo sin restricciones. En 2014 "
+            "la empresa cambió el algoritmo, según ha explicado públicamente un "
+            "ingeniero que trabajó ahí, para repartir los temas de un mismo artista "
+            "a lo largo de la lista. El resultado es un mecanismo menos aleatorio "
+            "que el anterior y que la gente percibe como más aleatorio. Fue "
+            "necesario falsificar el azar para que pareciera azar.\n\n"
+            "Lo mismo ocurre cuando miramos puntos en un mapa. Un reparto "
+            "verdaderamente al azar produce grumos: zonas vacías al lado de zonas "
+            "apretadas. Nuestra vista lee esos grumos como intención. Durante la "
+            "Segunda Guerra Mundial, en Londres se difundió la idea de que los "
+            "bombardeos apuntaban a barrios determinados, porque en el mapa se "
+            "veían áreas castigadas y áreas intactas; un análisis estadístico "
+            "posterior mostró que esa distribución era perfectamente compatible con "
+            "impactos repartidos al azar. La gente había encontrado un patrón real "
+            "en los datos y una causa inexistente detrás de él.\n\n"
+            "Hay una consecuencia práctica que se desprende de esto y que suele "
+            "sorprender: cuanto más chica es la muestra, más extremos son sus "
+            "resultados. En un curso de diez estudiantes es fácil que siete sean "
+            "hombres; en un liceo de mil, que el 70 % lo sea resulta casi "
+            "imposible. Por eso las listas breves —los mejores puntajes de una "
+            "comuna pequeña, los resultados de un colegio con un curso por nivel— "
+            "aparecen una y otra vez en los extremos de cualquier ranking, tanto "
+            "arriba como abajo, sin que eso diga demasiado sobre lo que ahí se "
+            "hace.\n\n"
+            "Vale la pena decir por qué esto importa fuera de los ejemplos. La vida "
+            "está llena de rachas que interpretamos: el jugador que «está "
+            "encendido», el remedio que funcionó justo esta vez, tres accidentes en "
+            "la misma esquina en un mes, dos apellidos repetidos en una lista de "
+            "seleccionados. Cada una de esas rachas puede ser ruido, y cada una "
+            "puede ser una señal. El problema es que se ven igual.\n\n"
+            "Y aquí conviene evitar el entusiasmo, porque existe el error contrario "
+            "y es igual de caro. Quien aprende que el azar produce rachas puede "
+            "acostumbrarse a explicarlo todo con la casualidad y desestimar "
+            "patrones que sí tienen causa: tres accidentes en la misma esquina "
+            "pueden ser coincidencia, y también pueden ser un cruce mal diseñado. "
+            "Concluir «es azar» sin mirar es tan perezoso como concluir «alguien lo "
+            "hizo».\n\n"
+            "La pregunta que sirve para los dos casos es cuántas oportunidades "
+            "hubo. Una coincidencia asombrosa entre dos personas es rarísima si se "
+            "piensa en esas dos personas, y es esperable si se piensa en los "
+            "millones de pares de personas que conversan cada día. Una racha de "
+            "cinco aciertos es extraordinaria en un solo jugador y es inevitable si "
+            "se observan cientos de jugadores durante una temporada completa. El "
+            "azar no produce orden, pero sí produce, con toda seguridad, algunas de "
+            "las cosas que nos parecen demasiado ordenadas para ser azar."
+        ),
+    },
+    {
+        "key": "ley_1920",
+        "title": "Dieciocho años para cuatro años",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las fechas y el contenido de la Ley 3.654 "
+            "de Instrucción Primaria Obligatoria, las ampliaciones posteriores de la "
+            "escolaridad obligatoria y la cifra de alfabetización del censo de 1920, se "
+            "verificaron antes de escribir el texto."
+        ),
+        "body": (
+            "**Dieciocho años para cuatro años**\n\n"
+            "Esta semana se cumplen ciento seis años de una ley chilena que hoy "
+            "parece obvia y que en su momento no lo era. El 26 de agosto de 1920 se "
+            "publicó la Ley 3.654, de Instrucción Primaria Obligatoria. Su "
+            "contenido cabe en una frase: los padres o guardadores quedaban "
+            "obligados a asegurar que sus hijos asistieran, por al menos cuatro "
+            "años y antes de cumplir los trece, a una escuela primaria fiscal, "
+            "municipal o particular. La instrucción primaria fiscal, además, sería "
+            "gratuita. La misma ley dispuso la creación de escuelas primarias de "
+            "adultos, señal de que el problema no era únicamente de los niños que "
+            "estaban por entrar.\n\n"
+            "Cuatro años. Puesto al lado de los doce que son obligatorios hoy, "
+            "suena a poco. Lo que impresiona no es la cifra, sino lo que costó "
+            "llegar a ella: el proyecto había entrado al Congreso en 1902 y se "
+            "aprobó en 1920. Dieciocho años de tramitación para exigir cuatro años "
+            "de escuela.\n\n"
+            "Para dimensionar el problema que la ley venía a enfrentar sirve un "
+            "dato del censo de ese mismo año: cerca de la mitad de la población del "
+            "país declaró no saber leer, y en el campo la proporción era bastante "
+            "peor. No se legislaba sobre una minoría rezagada, sino sobre la mitad "
+            "de Chile.\n\n"
+            "Conviene preguntarse qué se discutía en esas dos décadas, porque las "
+            "razones que se dieron no fueron todas del mismo tipo y meterlas en un "
+            "solo saco impide entender el episodio.\n\n"
+            "Una parte del argumento era doctrinaria: quién decide sobre la "
+            "formación de un niño, su familia o el Estado. Quienes se oponían "
+            "sostenían que obligar a un padre a mandar a su hijo a la escuela era "
+            "invadir un terreno que no le correspondía al poder público, y que una "
+            "cosa era ofrecer escuelas y otra distinta era imponer la asistencia "
+            "bajo apercibimiento.\n\n"
+            "Otra parte del argumento era económica y bastante menos elevada: en "
+            "muchísimos hogares el trabajo de los niños era parte del ingreso "
+            "familiar. Un niño en la escuela era un niño que no estaba en el campo, "
+            "en el taller ni cuidando a sus hermanos. Quien defendía la "
+            "obligatoriedad tenía que responder a eso, y la respuesta honesta —que "
+            "la familia iba a perder ingresos durante años a cambio de un beneficio "
+            "futuro e incierto— no es la clase de respuesta que gana votaciones.\n\n"
+            "Y había un tercer argumento, el más incómodo, porque era materialmente "
+            "cierto: no había escuelas suficientes, ni maestros suficientes, ni "
+            "presupuesto para tenerlos. Obligar a asistir a un lugar que no existe "
+            "es una declaración, no una política. Ese reparo no venía solamente de "
+            "los adversarios de la ley; lo compartían quienes la apoyaban y temían "
+            "que naciera muerta.\n\n"
+            "Aquí es donde el caso deja de ser una efeméride y se vuelve "
+            "interesante. La ley se aprobó igual, con el tercer problema sin "
+            "resolver. Lo que vino después fue una carrera desigual entre una "
+            "obligación ya vigente y una red escolar que tardó décadas en "
+            "alcanzarla, con enormes diferencias entre la ciudad y el campo. Se "
+            "puede leer eso de dos maneras opuestas, y ambas se han sostenido con "
+            "seriedad: como la prueba de que declarar un derecho antes de poder "
+            "cumplirlo es lo que empuja a construirlo, o como la prueba de que una "
+            "obligación sin escuelas se convierte en letra muerta y en un reproche "
+            "a las familias que no pueden cumplirla.\n\n"
+            "Lo que ocurrió después de 1920 es más fácil de contar. En 1929 la "
+            "exigencia subió de cuatro a seis años. Con la reforma de 1965 la "
+            "educación básica quedó en ocho. Y en 2003 la obligatoriedad se "
+            "extendió a la enseñanza media, con lo que Chile pasó a exigir doce "
+            "años de escolaridad. En ochenta y tres años, el mínimo legal se "
+            "triplicó.\n\n"
+            "Vale la pena notar qué cambió y qué no en esa discusión. Hoy "
+            "prácticamente nadie sostiene que la escuela deba ser voluntaria, de "
+            "modo que el primer argumento, el doctrinario, desapareció del debate "
+            "público. El segundo se transformó: ya casi no se discute el trabajo "
+            "infantil, pero sí las razones por las que un estudiante deja de "
+            "asistir, que suelen tener que ver con el dinero de la casa, con el "
+            "cuidado de otros y con embarazos adolescentes. El tercero sigue "
+            "exactamente donde estaba, con otro vocabulario: qué tan lejos queda la "
+            "escuela, cuántos profesores hay y qué ocurre cuando la obligación "
+            "existe y la capacidad no.\n\n"
+            "Puesto así, la ley de 1920 no es un episodio cerrado que se conmemora "
+            "una vez al año. Es la primera vez que en Chile se decidió que la "
+            "educación de un niño era un asunto de todos y no solo de su familia, y "
+            "esa decisión trajo consigo una pregunta que no se ha ido: quién se "
+            "hace cargo de la diferencia entre lo que la ley obliga y lo que el "
+            "país puede."
+        ),
+    },
+    {
         "key": "antibiotico_resfrio",
         "title": "El remedio que no era para eso",
         "kind": "no_literario",
@@ -24677,6 +24857,339 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El azar no se ve como azar' ----------
+    _ql(
+        "azar_rachas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué probabilidad hay de que en veinte lanzamientos "
+        "aparezca una racha de al menos cuatro resultados iguales?",
+        "Cerca del 77 %",
+        "El texto entrega tres cifras para la misma serie de veinte lanzamientos: "
+        "casi 98 % para una racha de al menos tres, cerca de 77 % para una de al "
+        "menos cuatro y casi 46 % para una de cinco o más.\n\nCon esos números, el "
+        "emisor concluye que lo improbable sería no ver ninguna racha.",
+        [
+            ("Casi el 98 %", "Ese valor corresponde a una racha de al menos tres."),
+            ("Casi el 46 %", "Ese valor corresponde a una racha de cinco o más."),
+            ("Alrededor del 50 %", "El texto no entrega esa cifra para ninguna racha."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué cambió Spotify en su función de reproducción "
+        "aleatoria?",
+        "La modificó para repartir los temas de un mismo artista",
+        "Hasta ese momento la función era efectivamente aleatoria, y por eso podían "
+        "salir dos canciones del mismo artista seguidas.\n\nEl cambio de 2014 "
+        "introdujo una restricción que el sorteo puro no tenía, de modo que el "
+        "resultado es menos aleatorio y se percibe como más aleatorio.",
+        [
+            ("La reemplazó por un sorteo sin ninguna restricción", "Ese sorteo era el mecanismo anterior, no el nuevo."),
+            ("La eliminó porque los usuarios reclamaban demasiado", "La función se conservó: lo que cambió fue su algoritmo."),
+            ("La ajustó para repetir los discos más escuchados", "El texto no menciona ninguna preferencia por lo más escuchado."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_localizar", "medio",
+        "Según la lectura, ¿qué mostró el análisis posterior de los bombardeos "
+        "sobre Londres?",
+        "Que el reparto era compatible con impactos al azar",
+        "En su momento se difundió la idea de que los ataques apuntaban a barrios "
+        "determinados, porque el mapa mostraba zonas castigadas junto a zonas "
+        "intactas.\n\nEl emisor usa el caso para su idea central: la gente encontró "
+        "«un patrón real en los datos y una causa inexistente detrás de él».",
+        [
+            ("Que efectivamente se apuntaba a barrios determinados", "El análisis mostró lo contrario de esa sospecha."),
+            ("Que los impactos se repartieron de manera pareja", "Un reparto al azar produce grumos, no uniformidad."),
+            ("Que los mapas de la época tenían errores de registro", "El texto no cuestiona la calidad de esos mapas."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_interpretar", "facil",
+        "¿Por qué se reconoce a simple vista cuál de los dos papeles escribió una "
+        "persona?",
+        "Porque la secuencia inventada alterna demasiado",
+        "Quien inventa la serie evita las rachas largas: cuatro caras seguidas le "
+        "parecen poco creíbles y las corta.\n\nLa moneda no tiene ese prejuicio y "
+        "produce rachas «sin ningún esfuerzo», de modo que la serie sin rachas es "
+        "justamente la falsa.",
+        [
+            ("Porque la secuencia real reparte parejo cara y sello", "Es la inventada la que busca ese reparto parejo."),
+            ("Porque la persona escribe más caras que sellos", "El desequilibrio entre ambas no es lo que delata la copia."),
+            ("Porque la moneda produce siempre las mismas rachas", "Las rachas varían: lo predecible es que aparezca alguna."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_interpretar", "medio",
+        "¿Qué quiere decir que el equilibrio aparezca «por dilución, no por "
+        "compensación»?",
+        "Que los desvíos no se corrigen: pierden peso en el total",
+        "El texto lo aclara con la moneda: después de cuatro caras seguidas no "
+        "queda «debiendo» sellos, porque no se acuerda de nada, y el quinto "
+        "lanzamiento es otra vez mitad y mitad.\n\nLo que hace que la proporción se "
+        "acerque a la mitad es la cantidad de tiros posteriores, que vuelve pequeño "
+        "el desvío inicial.",
+        [
+            ("Que a la larga el número de caras y sellos se empareja exacto", "El texto habla de acercarse a la mitad, no de igualarlas."),
+            ("Que cada lanzamiento depende un poco del anterior", "Justamente niega esa dependencia: la moneda no tiene memoria."),
+            ("Que las rachas largas terminan por volverse imposibles", "Las rachas siguen siendo esperables en cualquier serie."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_interpretar", "medio",
+        "¿Con qué finalidad se menciona un curso de diez estudiantes y un liceo de "
+        "mil?",
+        "Para mostrar que las muestras chicas dan resultados extremos",
+        "Que siete de diez estudiantes sean hombres es fácil; que el 70 % de mil lo "
+        "sea resulta casi imposible.\n\nDe ahí la advertencia que sigue: las listas "
+        "breves aparecen en los extremos de cualquier ranking, arriba y abajo, sin "
+        "que eso informe demasiado sobre lo que ahí se hace.",
+        [
+            ("Para comparar la composición de los establecimientos del país", "Los dos números son un ejemplo, no un dato sobre colegios."),
+            ("Para explicar cómo se elige una muestra representativa", "El texto no trata sobre métodos de selección de muestras."),
+            ("Para demostrar que los cursos pequeños obtienen mejores logros", "Precisamente advierte que el lugar en el ranking no lo indica."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_interpretar", "dificil",
+        "¿Qué lugar ocupa el caso de la aplicación de música dentro del argumento?",
+        "Es el caso extremo: se redujo el azar para que se notara",
+        "Los ejemplos anteriores muestran a personas equivocándose sobre el azar. "
+        "Este muestra a una empresa tomando una decisión a partir de ese "
+        "error.\n\nEl emisor lo remata con la frase que resume el artículo entero: "
+        "«fue necesario falsificar el azar para que pareciera azar». No es un "
+        "ejemplo más, sino la consecuencia práctica de todo lo anterior.",
+        [
+            ("Es una excepción que el texto no logra explicar del todo", "El texto lo explica con el mismo mecanismo que los otros casos."),
+            ("Es una comparación con un caso que no tiene relación", "El caso ilustra exactamente la percepción que se viene describiendo."),
+            ("Es la prueba de que las empresas manipulan a sus usuarios", "El cambio se presenta como respuesta a los reclamos recibidos."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor advierte que existe «el error contrario»?",
+        "Para evitar que se explique todo con la casualidad",
+        "Quien aprende que el azar produce rachas puede empezar a descartar "
+        "cualquier patrón sin mirarlo.\n\nEl emisor lo dice con un ejemplo que ya "
+        "había usado: tres accidentes en la misma esquina pueden ser coincidencia y "
+        "también pueden ser un cruce mal diseñado. Concluir «es azar» sin mirar es "
+        "«tan perezoso como concluir 'alguien lo hizo'».",
+        [
+            ("Para reconocer que sus cálculos podrían estar equivocados", "Las probabilidades no se ponen en duda en ningún momento."),
+            ("Para señalar que la estadística no sirve en la vida diaria", "El texto propone justamente una herramienta para usarla."),
+            ("Para anticipar la objeción de quienes creen en la suerte", "No discute con esa creencia, sino con el uso excesivo del azar."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_evaluar", "medio",
+        "Según la lectura, ¿en qué se equivoca quien anota los últimos resultados "
+        "de una ruleta?",
+        "Supone que un objeto sin memoria compensará lo ocurrido",
+        "El texto llama a eso falacia del jugador y la explica en una línea: está "
+        "apostando a que un objeto sin memoria «se acuerde de lo que hizo».\n\nEl "
+        "error no está en observar los resultados, sino en creer que obligan a algo "
+        "respecto del siguiente.",
+        [
+            ("Confía en un mecanismo que no reparte los colores parejo", "El reparto de la ruleta no se cuestiona en el texto."),
+            ("Toma una muestra demasiado pequeña de lanzamientos", "El problema no es el tamaño: veinte tiros más no ayudarían."),
+            ("Cree que las rachas largas son señal de un desperfecto", "El texto sostiene que las rachas son perfectamente normales."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_evaluar", "dificil",
+        "¿Qué se sigue, según la lectura, de que una lista breve aparezca en el "
+        "extremo de un ranking?",
+        "Que su lugar puede deberse al tamaño y no al desempeño",
+        "El emisor no dice que esos resultados sean falsos ni que estén mal "
+        "medidos: dice que las muestras chicas producen valores extremos con "
+        "facilidad, «tanto arriba como abajo».\n\nLa consecuencia es de lectura, no "
+        "de cálculo: encabezar la lista deja de ser, por sí solo, evidencia de que "
+        "ahí se hace algo mejor.",
+        [
+            ("Que los rankings deberían excluir a los establecimientos chicos", "El texto no propone dejarlos fuera de ninguna medición."),
+            ("Que sus resultados fueron calculados de manera incorrecta", "No hay ninguna objeción al cálculo, sino a su interpretación."),
+            ("Que su desempeño es peor de lo que la lista deja ver", "El efecto empuja hacia los dos extremos, no solo hacia abajo."),
+        ],
+    ),
+    _ql(
+        "azar_rachas", "lec_evaluar", "dificil",
+        "¿Qué criterio propone el emisor para decidir si una racha es ruido o "
+        "señal?",
+        "Preguntarse cuántas oportunidades hubo de que ocurriera",
+        "Es la única herramienta que el texto entrega, y sirve para los dos errores "
+        "que describió.\n\nSus ejemplos lo muestran: una coincidencia entre dos "
+        "personas es rarísima si se piensa en esas dos, y esperable frente a los "
+        "millones de pares que conversan cada día; una racha de cinco aciertos es "
+        "extraordinaria en un jugador e inevitable si se observan cientos durante "
+        "una temporada.",
+        [
+            ("Repetir la observación hasta que el patrón desaparezca", "El texto no propone repetir nada, sino cambiar la pregunta."),
+            ("Comparar el caso con lo que ocurre en muestras grandes", "El tamaño aparece antes y no es el criterio del cierre."),
+            ("Confiar en la impresión que produce el patrón observado", "La impresión es precisamente lo que el artículo desaconseja."),
+        ],
+    ),
+    # ---------- 'Dieciocho años para cuatro años' ----------
+    _ql(
+        "ley_1920", "lec_localizar", "facil",
+        "Según la lectura, ¿qué exigía la Ley 3.654 a los padres o guardadores?",
+        "Cuatro años de escuela primaria antes de los trece",
+        "El texto resume el contenido de la ley en una frase: la asistencia debía "
+        "cumplirse por al menos cuatro años y antes de cumplir los trece, en un "
+        "establecimiento fiscal, municipal o particular.\n\nLa misma ley declaró "
+        "gratuita la instrucción primaria fiscal.",
+        [
+            ("Seis años de escuela primaria, según el censo", "Los seis años llegaron en 1929, casi una década después."),
+            ("Doce años de escolaridad, incluida la media", "Los doce años son el mínimo actual, fijado el año 2003."),
+            ("Ocho años de educación básica en escuela fiscal", "Los ocho años provienen de la reforma de 1965."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánto tiempo estuvo el proyecto en el Congreso?",
+        "Dieciocho años: entró en 1902 y se aprobó en 1920",
+        "Ese contraste da el título al artículo: dieciocho años de tramitación para "
+        "exigir cuatro años de escuela.\n\nEl emisor lo usa para señalar que lo "
+        "llamativo del caso no es la cifra de la ley, sino lo que costó llegar a "
+        "ella.",
+        [
+            ("Cuatro años, los mismos que la ley exigía", "Los cuatro años son la exigencia de asistencia, no el trámite."),
+            ("Ochenta y tres años, hasta llegar a la media", "Ese período va desde 1920 hasta la reforma de 2003."),
+            ("Nueve años, entre su ingreso y el censo", "El texto no menciona ese plazo en ninguna parte."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_localizar", "medio",
+        "Según la lectura, ¿qué mostraba el censo del mismo año de la ley?",
+        "Que cerca de la mitad del país declaró no saber leer",
+        "El emisor agrega que en el campo la proporción era bastante peor.\n\nEl "
+        "dato cumple una función precisa dentro del artículo: mostrar que no se "
+        "legislaba «sobre una minoría rezagada, sino sobre la mitad de Chile».",
+        [
+            ("Que la mitad de los niños no asistía a ninguna escuela", "El censo citado mide alfabetización, no asistencia escolar."),
+            ("Que faltaban escuelas en casi todas las zonas rurales", "La falta de escuelas se discute aparte, sin cifras del censo."),
+            ("Que la población del país se había duplicado desde 1902", "El texto no entrega ningún dato de crecimiento poblacional."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_interpretar", "facil",
+        "¿Por qué el emisor llama «el más incómodo» al tercer argumento?",
+        "Porque era cierto y también lo sostenían los partidarios",
+        "Los dos primeros argumentos se podían discutir: uno era doctrinario y el "
+        "otro, económico.\n\nEl tercero —que no había escuelas, maestros ni "
+        "presupuesto— era «materialmente cierto», y el texto subraya que el reparo "
+        "venía además de quienes apoyaban la ley y temían que naciera muerta.",
+        [
+            ("Porque nadie se atrevía a plantearlo en el Congreso", "El texto dice que se planteó, y desde los dos lados."),
+            ("Porque provenía de quienes usaban a los niños para trabajar", "Ese es el segundo argumento, el económico, y es distinto."),
+            ("Porque obligaba a discutir el papel de las familias", "Ese asunto corresponde al primer argumento, el doctrinario."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_interpretar", "medio",
+        "¿Con qué finalidad el emisor distingue tres tipos de argumentos?",
+        "Para impedir que se lean como una sola oposición",
+        "El texto lo anuncia antes de enumerarlos: las razones «no fueron todas del "
+        "mismo tipo y meterlas en un solo saco impide entender el episodio».\n\nLa "
+        "distinción permite después mostrar que cada uno tuvo un destino distinto: "
+        "uno desapareció, otro se transformó y el tercero sigue igual.",
+        [
+            ("Para demostrar que ninguno de los tres tenía fundamento", "Del tercero afirma expresamente que era cierto."),
+            ("Para ordenar los argumentos según el año en que surgieron", "No los fecha: los clasifica por su naturaleza."),
+            ("Para explicar por qué finalmente la ley resultó aprobada", "El texto no atribuye la aprobación a ninguno de ellos."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_interpretar", "medio",
+        "¿Qué quiere decir que obligar a asistir a un lugar inexistente sea «una "
+        "declaración, no una política»?",
+        "Que sin escuelas la obligación no produce ningún efecto",
+        "La frase distingue dos cosas que suelen confundirse: enunciar un deber y "
+        "poner los medios para que pueda cumplirse.\n\nEs la formulación más breve "
+        "del tercer argumento, y explica por qué algunos partidarios de la ley "
+        "temían que naciera muerta.",
+        [
+            ("Que las leyes deberían escribirse con menos solemnidad", "La objeción es sobre los medios, no sobre la redacción."),
+            ("Que el Congreso no tenía facultades para aprobarla", "El texto no discute las atribuciones del Congreso."),
+            ("Que la asistencia debía quedar en manos de las familias", "Esa es la posición del primer argumento, no de este."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_interpretar", "dificil",
+        "¿Cómo está organizado el párrafo sobre qué cambió y qué no en la "
+        "discusión?",
+        "Retoma los tres argumentos en el mismo orden anterior",
+        "El emisor vuelve sobre cada uno y le asigna un destino: el doctrinario "
+        "desapareció del debate público, el económico se transformó —del trabajo "
+        "infantil a las razones actuales de la inasistencia— y el tercero «sigue "
+        "exactamente donde estaba, con otro vocabulario».\n\nEsa simetría es la que "
+        "convierte una efeméride en un argumento sobre el presente.",
+        [
+            ("Compara la situación de 1920 con la de otros países", "No hay ninguna comparación internacional en el artículo."),
+            ("Presenta primero los avances y después los retrocesos", "No clasifica los cambios en avances ni en retrocesos."),
+            ("Ordena los hechos desde el más reciente al más antiguo", "El recorrido de las fechas avanza de 1920 hacia 2003."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_evaluar", "facil",
+        "¿Qué actitud asume el emisor hacia quienes se opusieron a la ley?",
+        "Ecuánime, pues separa razones de distinta naturaleza",
+        "El texto podría haber presentado a los opositores como un solo bloque "
+        "equivocado, y hace lo contrario.\n\nReconoce que uno de sus argumentos era "
+        "«materialmente cierto» y que lo compartían quienes apoyaban la ley, aunque "
+        "del argumento económico diga que era «bastante menos elevado».",
+        [
+            ("Admirativa, pues considera acertadas todas sus razones", "Del argumento económico dice que era poco elevado."),
+            ("Despectiva, pues los describe como enemigos del progreso", "En ningún momento los califica de esa manera."),
+            ("Distante, pues evita pronunciarse sobre lo que sostuvieron", "Sí se pronuncia: valora cada argumento por separado."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_evaluar", "medio",
+        "¿Qué hace el emisor con las dos lecturas opuestas de lo ocurrido después "
+        "de 1920?",
+        "Expone las dos y advierte que ambas se han sostenido",
+        "Una sostiene que declarar un derecho antes de poder cumplirlo es lo que "
+        "empuja a construirlo; la otra, que una obligación sin escuelas se vuelve "
+        "letra muerta y un reproche a las familias.\n\nEl emisor las presenta como "
+        "igualmente serias y no elige entre ellas, lo que deja al lector con la "
+        "decisión y no con la conclusión.",
+        [
+            ("Adopta la primera y descarta la segunda como injusta", "No adopta ninguna: dice que las dos se han sostenido con seriedad."),
+            ("Las presenta como versiones de una misma explicación", "El texto las presenta expresamente como opuestas."),
+            ("Las atribuye a los dos bandos del debate parlamentario", "Son lecturas posteriores del resultado, no posiciones de 1902."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_evaluar", "dificil",
+        "¿Cuál de las siguientes afirmaciones del texto corresponde a una opinión "
+        "del emisor?",
+        "Que el caso de 1920 no es un episodio cerrado",
+        "Las otras tres se pueden comprobar en el registro: la fecha de "
+        "publicación, la exigencia de asistencia y la ampliación de 1929 constan en "
+        "la propia legislación.\n\nSostener que el episodio sigue abierto, en "
+        "cambio, es una interpretación del presente, y el emisor la construye a lo "
+        "largo del artículo en vez de presentarla como un dato.",
+        [
+            ("Que la ley se publicó el 26 de agosto de 1920", "Es una fecha verificable en el registro legal."),
+            ("Que la exigencia era de cuatro años antes de los trece", "Corresponde al contenido de la ley, comprobable en su texto."),
+            ("Que en 1929 la exigencia subió a seis años", "Es un hecho legislativo posterior, igualmente verificable."),
+        ],
+    ),
+    _ql(
+        "ley_1920", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al cerrar preguntando quién se hace cargo de la "
+        "diferencia entre lo que la ley obliga y lo que el país puede?",
+        "Dejar abierto el problema que la ley no llegó a resolver",
+        "El cierre no resume el artículo: lo prolonga. Después de mostrar que el "
+        "argumento sobre la capacidad sigue vigente con otro vocabulario, el emisor "
+        "no propone una solución ni reparte responsabilidades.\n\nFormular la "
+        "pregunta es su manera de sostener que el episodio de 1920 no se conmemora, "
+        "se sigue discutiendo.",
+        [
+            ("Responsabilizar al Estado por las escuelas que faltaron", "El texto plantea la pregunta sin atribuirle la falta a nadie."),
+            ("Sugerir que la escolaridad obligatoria debería reducirse", "Nada en el artículo propone rebajar la exigencia actual."),
+            ("Anunciar que el debate volverá a abrirse en el Congreso", "No se menciona ninguna discusión legislativa en curso."),
+        ],
+    ),
     # ---------- 'El remedio que no era para eso' ----------
     _ql(
         "antibiotico_resfrio", "lec_localizar", "facil",
