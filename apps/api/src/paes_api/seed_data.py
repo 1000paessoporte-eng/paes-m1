@@ -21383,6 +21383,178 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "discurso_licenciatura",
+        "title": "Discurso de licenciatura",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes."
+        ),
+        "body": (
+            "Autoridades, colegas, apoderados, y sobre todo ustedes, que están "
+            "sentados en las primeras filas con una incomodidad que reconozco "
+            "porque yo también la tuve:\n\n"
+            "Me pidieron diez minutos para decirles que este es el comienzo de una "
+            "nueva etapa, que el esfuerzo siempre se recompensa y que el futuro les "
+            "pertenece. Voy a usar los diez minutos, pero no en eso. Ustedes llevan "
+            "cuatro años aguantando mis clases; sería injusto que la última vez que "
+            "me escuchen les mienta.\n\n"
+            "Empiezo por lo que esta ceremonia no muestra. En marzo de 2022 "
+            "entramos a primero medio treinta y ocho personas a esa sala. Hoy están "
+            "recibiendo su licenciatura veintinueve. Los nueve que faltan no "
+            "fracasaron: se cambiaron de comuna, entraron a trabajar, tuvieron "
+            "hijos, se enfermaron, se cansaron. Ninguno de ellos aparece en las "
+            "fotos de hoy, y sin embargo estuvieron en esa sala tanto como ustedes. "
+            "Me parece que una ceremonia que celebra a los que llegaron debería, al "
+            "menos una vez, nombrar a los que no.\n\n"
+            "Digo esto porque durante cuatro años les repetimos una frase que "
+            "conviene revisar antes de que salgan de aquí: que el esfuerzo se "
+            "recompensa. Es verdad a medias, y las verdades a medias son las que "
+            "más daño hacen, porque no se pueden refutar del todo.\n\n"
+            "El esfuerzo, en efecto, mejora las probabilidades. Lo he visto en esta "
+            "sala más veces de las que puedo contar. Pero el esfuerzo no reparte "
+            "los resultados de manera pareja, y ustedes lo saben mejor que yo. "
+            "Algunos estudiaron con conexión estable y una pieza propia; otros "
+            "estudiaron con el celular del hermano, después de las diez de la "
+            "noche, cuando la casa por fin se quedaba en silencio. Si los "
+            "resultados de este año fueran solamente el reflejo del esfuerzo, la "
+            "lista estaría ordenada de otra manera. No lo está.\n\n"
+            "Y conviene decir por qué importa la diferencia. Si el mérito lo "
+            "explicara todo, entonces cada resultado sería un veredicto sobre la "
+            "persona: el que llegó valdría más y el que no llegó habría fallado. "
+            "Esa aritmética es cómoda para el que ganó y devastadora para el resto, "
+            "y además es falsa. Lo que un resultado mide es un resultado. No mide "
+            "cuánto vale nadie.\n\n"
+            "Alguien pensará que este no es el tono adecuado para una licenciatura, "
+            "y tiene razón. Pero prefiero que salgan de aquí con una idea incómoda "
+            "y verdadera antes que con una cómoda y falsa, porque la primera se "
+            "puede usar y la segunda se rompe al primer golpe.\n\n"
+            "¿Y para qué sirve, entonces, saber esto? Sirve para dos cosas, y "
+            "ninguna es resignarse.\n\n"
+            "La primera: cuando algo no les resulte, van a tener a mano una "
+            "explicación que no es «no me esforcé lo suficiente». Esa frase, "
+            "repetida, destruye gente. He visto a estudiantes brillantes "
+            "convencerse de que son mediocres porque midieron su valor con una "
+            "regla que no medía lo que creían. No hagan eso. Revisen el esfuerzo, "
+            "sí, pero revisen también la regla.\n\n"
+            "La segunda: si alguno de ustedes llega lejos —y algunos van a llegar—, "
+            "no confundan haber llegado con merecerlo más que los demás. La "
+            "distancia entre el que llegó y el que no muchas veces cabe en cosas "
+            "tan chicas como una conexión que no se caía. Recordar eso no le quita "
+            "mérito a nadie; le quita arrogancia, que es distinto.\n\n"
+            "Les debo, eso sí, una advertencia sobre mi propio discurso. Es fácil "
+            "pararse aquí, con un sueldo y un trabajo estable, a explicarles que el "
+            "mundo es injusto. Yo no tengo que rendir la prueba el lunes; ustedes "
+            "sí. Así que tomen lo que les sirva y descarten lo demás, incluida esta "
+            "parte.\n\n"
+            "Hay una tercera cosa, más difícil de decir en una ceremonia. Varios de "
+            "ustedes no van a entrar donde quieren. Lo sé porque las cifras de "
+            "todos los años son parecidas y este no va a ser distinto. A esos les "
+            "digo, con el respeto que se le debe a alguien que va a pasar un mal "
+            "rato: eso no los define, y el país tiene la fea costumbre de tratar "
+            "una lista de resultados publicada en enero como si fuera una sentencia "
+            "sobre lo que alguien puede llegar a hacer con su vida. No lo es.\n\n"
+            "Quiero terminar con algo que sí depende de ustedes, porque sería una "
+            "estafa dejarlos solo con lo que no depende.\n\n"
+            "En estos cuatro años los vi hacer cosas que no estaban en el programa. "
+            "Vi a un curso completo esperar a alguien que corría lento para cruzar "
+            "juntos la meta. Vi a una alumna explicarle una materia a un compañero "
+            "durante tres semanas, en los recreos, sabiendo que él iba a subir de "
+            "promedio y ella no. Vi a un grupo pedir permiso para que un compañero "
+            "pudiera dar una prueba en otra fecha, sin que él lo supiera. Nada de "
+            "eso apareció en un certificado. Todo eso fue decisión de ustedes.\n\n"
+            "El futuro no les pertenece: eso es una frase de afiche. Lo que les "
+            "pertenece es bastante más modesto y bastante más valioso: la manera en "
+            "que van a tratar a la gente cuando les vaya bien, y la manera en que "
+            "se van a tratar a ustedes mismos cuando les vaya mal. En cuatro años "
+            "no logré enseñarles a factorizar. Ojalá haya alcanzado a decirles "
+            "esto.\n\n"
+            "Gracias, y suerte el lunes."
+        ),
+    },
+    {
+        "key": "retencion_superior",
+        "title": "Cuántos siguen después del primer año",
+        "kind": "discontinuo",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de cifras públicas del "
+            "Servicio de Información de Educación Superior (SIES) del Ministerio de "
+            "Educación."
+        ),
+        "body": (
+            "**Informe: cuántos siguen después del primer año**\n\n"
+            "De cada cien personas que entran a la educación superior en Chile, "
+            "cerca de veinticuatro no están matriculadas al año siguiente. La cifra "
+            "es conocida en el sistema y poco conocida fuera de él, en parte porque "
+            "contradice la manera en que solemos hablar del acceso: se discute "
+            "mucho quién entra y bastante menos quién sigue.\n\n"
+            "**Retención de primer año, por tipo de institución**\n\n"
+            "| Tipo de institución | Retención de primer año |\n"
+            "|---|---|\n"
+            "| Universidades | 82,7% |\n"
+            "| Institutos profesionales | 72,1% |\n"
+            "| Centros de formación técnica | 71,0% |\n"
+            "| Sistema completo | 76,5% |\n\n"
+            "La brecha entre universidades y el resto del sistema supera los diez "
+            "puntos porcentuales. Conviene resistir la lectura apresurada de ese "
+            "dato, porque no dice que unas instituciones enseñen mejor que otras: "
+            "los tres tipos reciben poblaciones distintas, con trayectorias "
+            "escolares, cargas familiares y situaciones laborales que no son "
+            "comparables. Un estudiante que trabaja de noche y estudia de día "
+            "abandona por razones que no dependen de la calidad de su instituto.\n\n"
+            "**El segundo filtro: la titulación**\n\n"
+            "La retención mide solo el primer tramo. Al mirar el recorrido completo "
+            "aparece un segundo estrechamiento, y es mayor: alrededor del 55% de "
+            "quienes ingresan no se titula dentro del plazo oportuno, entendido "
+            "como la duración formal de la carrera más tres años.\n\n"
+            "| Momento del recorrido | Proporción aproximada |\n"
+            "|---|---|\n"
+            "| Ingresan a primer año | 100% |\n"
+            "| Siguen matriculados al segundo año | 76,5% |\n"
+            "| Se titulan dentro del plazo oportuno | 45% |\n\n"
+            "Puesto en esos términos, el sistema se parece menos a una puerta que a "
+            "un embudo. Y el tramo más angosto no está en la entrada, que es donde "
+            "se concentra la conversación pública, sino en el medio.\n\n"
+            "**Nota metodológica: por qué circulan cifras distintas**\n\n"
+            "Quien busque estos datos encontrará porcentajes de deserción que van "
+            "desde el 22% hasta cerca del 29%. La diferencia no se debe a que "
+            "alguna fuente esté equivocada, sino a que miden cosas distintas. Vale "
+            "la pena detallarlo, porque afecta cualquier conclusión que se saque.\n\n"
+            "Primero, el año: cada cohorte tiene su propio resultado, y comparar la "
+            "de 2015 con la de 2023 es comparar dos sistemas diferentes. Segundo, "
+            "la unidad de análisis: la retención suele calcularse sobre la misma "
+            "carrera y la misma institución, de modo que un estudiante que se "
+            "cambia de carrera aparece como deserción aunque siga estudiando. "
+            "Tercero, qué se cuenta como abandono: algunas mediciones excluyen a "
+            "quienes se reincorporan más tarde y otras no.\n\n"
+            "Ese segundo punto merece atención especial, porque es contraintuitivo. "
+            "Una parte de la deserción que muestran las estadísticas no es abandono "
+            "del sistema, sino movilidad dentro de él: alguien que entró a una "
+            "carrera, descubrió que no era lo suyo y se cambió a otra. Medido desde "
+            "la institución, eso es una pérdida. Medido desde la persona, puede ser "
+            "una corrección a tiempo.\n\n"
+            "**Lo que las cifras no muestran**\n\n"
+            "Ningún indicador de este informe distingue entre quien se retira "
+            "porque no puede pagar, quien se retira porque eligió mal y quien se "
+            "retira porque encontró trabajo. Son tres fenómenos distintos, con "
+            "soluciones distintas, y aparecen sumados en el mismo porcentaje. Una "
+            "política diseñada sobre el número agregado corre el riesgo de tratar "
+            "los tres casos como si fueran uno.\n\n"
+            "Tampoco aparece el costo. Quien abandona en segundo año arrastra con "
+            "frecuencia una deuda por los semestres cursados y no obtiene la "
+            "certificación que habría permitido recuperarla. En ese sentido, el "
+            "peor resultado del sistema no es no haber entrado: es haber entrado, "
+            "haber pagado y haberse ido sin título.\n\n"
+            "**Cómo leer esto si se está postulando**\n\n"
+            "Para quien está por elegir una carrera, la conclusión práctica no es "
+            "desconfiar de las instituciones con menor retención. Es preguntar lo "
+            "que esos números no responden: cuántos estudiantes de la carrera "
+            "específica siguen en segundo año, qué apoyos existen para quien llega "
+            "con vacíos previos, y cuánto dura realmente la carrera para el "
+            "estudiante promedio, que rara vez coincide con lo que dice el plan de "
+            "estudios."
+        ),
+    },
+    {
         "key": "cambio_lengua",
         "title": "Sobre el supuesto deterioro del idioma",
         "kind": "no_literario",
@@ -23565,6 +23737,325 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Discurso de licenciatura' ----------
+    _ql(
+        "discurso_licenciatura", "lec_localizar", "facil",
+        "Según el discurso, ¿cuántas personas entraron a primero medio y cuántas "
+        "reciben hoy su licenciatura?",
+        "Entraron treinta y ocho y reciben la licenciatura veintinueve",
+        "El emisor entrega ambas cifras seguidas: «en marzo de 2022 entramos a "
+        "primero medio treinta y ocho personas a esa sala. Hoy están recibiendo su "
+        "licenciatura veintinueve».\n\nY precisa qué pasó con los nueve restantes: "
+        "«se cambiaron de comuna, entraron a trabajar, tuvieron hijos, se "
+        "enfermaron, se cansaron».",
+        [
+            ("Entraron veintinueve y se licencian treinta y ocho", "Las cifras están invertidas: el curso se redujo, no creció."),
+            ("Entraron treinta y ocho y se licencian nueve", "Nueve es la cantidad de los que faltan, no la de los que se licencian."),
+            ("El discurso no entrega esas cifras", "Las entrega ambas, en el tercer párrafo."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_localizar", "medio",
+        "De acuerdo con el discurso, ¿qué le pidieron al emisor que dijera en la "
+        "ceremonia?",
+        "Que este es el comienzo de una nueva etapa, que el esfuerzo siempre se "
+        "recompensa y que el futuro les pertenece",
+        "El emisor lo enumera al comienzo, justo antes de anunciar que no lo hará: "
+        "«me pidieron diez minutos para decirles que este es el comienzo de una "
+        "nueva etapa, que el esfuerzo siempre se recompensa y que el futuro les "
+        "pertenece».\n\nLas tres frases reaparecen después: la del esfuerzo se "
+        "discute en el cuerpo del discurso y la del futuro se descarta en el "
+        "cierre.",
+        [
+            ("Que agradeciera a las autoridades y a los apoderados presentes", "El saludo inicial los menciona, pero no es lo que le pidieron decir."),
+            ("Que recordara a los estudiantes que no alcanzaron a terminar", "Eso es precisamente lo que el emisor decide agregar por su cuenta."),
+            ("Que explicara los resultados obtenidos por el curso durante el año", "El discurso no informa resultados del curso."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_localizar", "medio",
+        "Según el emisor, ¿qué ejemplos da de cosas que vio hacer al curso y que "
+        "«no estaban en el programa»?",
+        "Esperar a un compañero que corría lento, explicarle la materia a otro en "
+        "los recreos y pedir permiso para que alguien rindiera en otra fecha",
+        "El emisor los enumera en el penúltimo tramo del discurso, y remata: «nada "
+        "de eso apareció en un certificado. Todo eso fue decisión de "
+        "ustedes».\n\nLos tres ejemplos comparten un rasgo: nadie obtuvo un "
+        "beneficio propio.",
+        [
+            ("Estudiar de noche con el celular del hermano", "Ese ejemplo aparece antes y con otro propósito: mostrar la desigualdad de condiciones."),
+            ("Organizar la ceremonia de licenciatura por su cuenta", "El discurso no menciona nada sobre la organización de la ceremonia."),
+            ("Mejorar el promedio del curso durante los cuatro años", "El emisor dice justamente que esas acciones no aparecieron en ningún certificado."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que «el esfuerzo se recompensa» es "
+        "«una verdad a medias»?",
+        "Que el esfuerzo mejora las probabilidades, pero no reparte los resultados "
+        "de manera pareja",
+        "El emisor desarrolla exactamente esa distinción: «el esfuerzo, en efecto, "
+        "mejora las probabilidades […] Pero el esfuerzo no reparte los resultados "
+        "de manera pareja». Y lo ilustra con la diferencia entre estudiar con "
+        "conexión estable y una pieza propia, o con el celular del hermano después "
+        "de las diez.\n\nAgrega por qué le preocupa esta frase en particular: «las "
+        "verdades a medias son las que más daño hacen, porque no se pueden refutar "
+        "del todo».",
+        [
+            ("Que el esfuerzo no sirve de nada frente a las condiciones de cada estudiante", "El emisor afirma lo contrario: dice que el esfuerzo mejora las probabilidades y que lo ha visto muchas veces."),
+            ("Que la recompensa del esfuerzo llega mucho después de lo que se cree", "El discurso no discute el plazo de la recompensa, sino su distribución."),
+            ("Que solo se recompensa el esfuerzo que se puede demostrar con notas", "Esa idea aparece al final y sobre otro asunto: las acciones que no figuran en ningún certificado."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_interpretar", "dificil",
+        "¿Qué función cumple en el discurso la pregunta «¿y para qué sirve, "
+        "entonces, saber esto?»",
+        "Marcar el giro entre el diagnóstico y su utilidad, para que la crítica no "
+        "se lea como una invitación a resignarse",
+        "El emisor responde su propia pregunta acotando de inmediato: «sirve para "
+        "dos cosas, y ninguna es resignarse». Y enumera las dos: no explicarse cada "
+        "fracaso con «no me esforcé lo suficiente», y no confundir haber llegado "
+        "con merecerlo más que los demás.\n\nLa pregunta funciona como bisagra: "
+        "cierra la parte que describe un problema y abre la que indica qué hacer "
+        "con él.",
+        [
+            ("Reconocer que el emisor no tiene una respuesta para el problema que planteó", "Entrega dos respuestas concretas en los párrafos siguientes."),
+            ("Invitar a los estudiantes a responderla durante la ceremonia", "Es una pregunta retórica: el emisor la formula para contestarla él mismo."),
+            ("Introducir la advertencia sobre su propia posición privilegiada", "Esa advertencia llega después y tiene otra función: relativizar su autoridad para hablar del tema."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene el emisor al decir que «lo que un resultado mide es un "
+        "resultado. No mide cuánto vale nadie»?",
+        "Que un resultado no equivale a un veredicto sobre la persona que lo obtuvo",
+        "La frase cierra un razonamiento que el emisor construye por reducción: si "
+        "el mérito lo explicara todo, «cada resultado sería un veredicto sobre la "
+        "persona», y esa aritmética sería «cómoda para el que ganó y devastadora "
+        "para el resto, y además es falsa».\n\nLa misma idea reaparece más "
+        "adelante, cuando advierte que una lista publicada en enero no es «una "
+        "sentencia sobre lo que alguien puede llegar a hacer con su vida».",
+        [
+            ("Que los resultados académicos no son un indicador confiable de aprendizaje", "El emisor no cuestiona qué tan bien miden los resultados: cuestiona qué se concluye de ellos sobre las personas."),
+            ("Que las evaluaciones deberían considerar las condiciones de cada estudiante", "El discurso no propone modificar las evaluaciones; habla de cómo interpretarlas."),
+            ("Que el valor de una persona depende de su esfuerzo y no de sus resultados", "El emisor tampoco sustituye una vara por otra: sostiene que el resultado no mide el valor de nadie."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre el comienzo del discurso —los nueve que "
+        "no están— y su cierre?",
+        "El comienzo muestra a quienes el sistema dejó fuera y el cierre entrega lo "
+        "que sí dependió del curso, para no dejarlos solo con lo que no controlan",
+        "El emisor hace explícita esa articulación: «quiero terminar con algo que "
+        "sí depende de ustedes, porque sería una estafa dejarlos solo con lo que no "
+        "depende».\n\nPor eso el cierre no habla de resultados sino de decisiones: "
+        "esperar al que corría lento, explicar la materia en los recreos, pedir "
+        "permiso por un compañero que ni siquiera lo supo.",
+        [
+            ("El comienzo describe un problema y el cierre propone una solución institucional", "El cierre no propone ninguna medida ni le pide nada al colegio: habla de conducta personal."),
+            ("El comienzo y el cierre repiten la misma idea para reforzarla", "Son ideas complementarias y opuestas: lo que no se controla y lo que sí."),
+            ("El cierre corrige el pesimismo del comienzo admitiendo que el esfuerzo sí basta", "El emisor nunca vuelve a esa idea: en el cierre cambia de terreno, no de posición."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_evaluar", "dificil",
+        "¿Qué efecto busca el emisor al advertir que «es fácil pararse aquí, con un "
+        "sueldo y un trabajo estable, a explicarles que el mundo es injusto»?",
+        "Reconocer los límites de su propia autoridad para hablar del tema, y dejar "
+        "que los oyentes decidan qué tomar de lo dicho",
+        "El emisor lo formula como una deuda con su auditorio: «les debo, eso sí, "
+        "una advertencia sobre mi propio discurso», y la cierra invitándolos a "
+        "«tomen lo que les sirva y descarten lo demás, incluida esta parte».\n\nEl "
+        "movimiento es poco habitual en una ceremonia: en vez de reforzar su "
+        "posición, la relativiza. Y al hacerlo gana credibilidad, porque muestra "
+        "que no está exento del examen que aplica a los demás.",
+        [
+            ("Pedir disculpas por haber elegido un tono inadecuado para la ocasión", "Ya se había hecho cargo del tono antes y sin disculparse: dijo que prefería una idea incómoda y verdadera."),
+            ("Subrayar que su experiencia lo autoriza a hablar sobre la desigualdad", "Hace lo contrario: señala que su situación le quita autoridad para hablar de lo que él no tendrá que enfrentar el lunes."),
+            ("Justificar por qué no puede ayudar a los estudiantes después de la ceremonia", "El discurso no aborda qué hará el emisor después ni promete ninguna ayuda."),
+        ],
+    ),
+    _ql(
+        "discurso_licenciatura", "lec_evaluar", "dificil",
+        "Un apoderado sale de la ceremonia diciendo que el discurso desanima a los "
+        "jóvenes, porque les dice que esforzarse no sirve. ¿Qué se puede responder "
+        "desde el propio texto?",
+        "Que el emisor afirma expresamente que el esfuerzo mejora las "
+        "probabilidades, y que su punto es otro: que los resultados no se reparten "
+        "parejo",
+        "El texto contiene la refutación en varios lugares. Afirma que «el "
+        "esfuerzo, en efecto, mejora las probabilidades» y que lo ha visto «más "
+        "veces de las que puedo contar». Anticipa además el malentendido al aclarar "
+        "que lo que dice «sirve para dos cosas, y ninguna es resignarse».\n\nLa "
+        "lectura del apoderado confunde discutir cómo se reparten los resultados "
+        "con negar que el esfuerzo influya.",
+        [
+            ("Que el emisor efectivamente sostiene eso, pero lo hace para ser honesto", "El emisor no sostiene que el esfuerzo no sirva: lo afirma de forma explícita en sentido contrario."),
+            ("Que el discurso está dirigido a los profesores y no a los estudiantes", "Está dirigido a los estudiantes desde el saludo inicial, que interpela a quienes están en las primeras filas."),
+            ("Que el emisor se retracta de esa idea en el cierre del discurso", "No hay retractación: el cierre cambia de tema hacia lo que sí depende de ellos, sin corregir lo anterior."),
+        ],
+    ),
+    # ---------- 'Cuántos siguen después del primer año' ----------
+    _ql(
+        "retencion_superior", "lec_localizar", "facil",
+        "Según la primera tabla, ¿cuál es la retención de primer año en los centros "
+        "de formación técnica?",
+        "71,0%",
+        "La tabla entrega los cuatro valores y el de los centros de formación "
+        "técnica es el más bajo: 71,0%, frente a 72,1% de los institutos "
+        "profesionales, 82,7% de las universidades y 76,5% del sistema "
+        "completo.\n\nLa tarea es leer la fila correcta entre cuatro que tienen la "
+        "misma estructura.",
+        [
+            ("72,1%", "Ese valor corresponde a los institutos profesionales."),
+            ("76,5%", "Ese es el promedio del sistema completo, no el de un tipo de institución."),
+            ("82,7%", "Ese es el valor más alto de la tabla y corresponde a las universidades."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_localizar", "medio",
+        "De acuerdo con el informe, ¿qué se entiende por titulación dentro del "
+        "plazo oportuno?",
+        "Titularse dentro de la duración formal de la carrera más tres años",
+        "El texto define el término al introducirlo: «alrededor del 55% de quienes "
+        "ingresan no se titula dentro del plazo oportuno, entendido como la "
+        "duración formal de la carrera más tres años».\n\nLa definición está "
+        "explícita y es necesaria para leer bien la segunda tabla.",
+        [
+            ("Titularse exactamente en la duración que indica el plan de estudios", "El plazo oportuno admite tres años adicionales sobre la duración formal."),
+            ("Titularse antes de cumplir tres años desde el ingreso", "Los tres años se suman a la duración de la carrera, no la reemplazan."),
+            ("Seguir matriculado hasta el último año de la carrera", "Eso es permanencia, no titulación: el informe las distingue como dos tramos distintos."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_localizar", "medio",
+        "Según la nota metodológica, ¿por qué un estudiante que se cambia de "
+        "carrera aparece como deserción?",
+        "Porque la retención suele calcularse sobre la misma carrera y la misma "
+        "institución",
+        "La nota lo explica al enumerar las tres razones por las que circulan "
+        "cifras distintas: «la retención suele calcularse sobre la misma carrera y "
+        "la misma institución, de modo que un estudiante que se cambia de carrera "
+        "aparece como deserción aunque siga estudiando».\n\nEl informe insiste "
+        "después en ese punto por considerarlo contraintuitivo.",
+        [
+            ("Porque las instituciones no comparten información entre sí", "El informe no menciona ningún problema de intercambio de datos."),
+            ("Porque el estudiante pierde los créditos cursados al cambiarse", "El texto no trata la convalidación de créditos."),
+            ("Porque las mediciones excluyen a quienes se reincorporan más tarde", "Esa es la tercera razón que enumera la nota, y se refiere a otro caso: el de quien vuelve, no el de quien se cambia."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_interpretar", "dificil",
+        "¿Qué relación se establece entre las dos tablas del informe?",
+        "La segunda extiende la primera: muestra que después del filtro del primer "
+        "año hay otro más angosto, el de la titulación",
+        "La primera tabla se detiene en la retención de primer año. La segunda "
+        "retoma ese 76,5% y agrega el tramo siguiente: solo un 45% se titula dentro "
+        "del plazo oportuno. El texto lo interpreta enseguida: «el sistema se "
+        "parece menos a una puerta que a un embudo. Y el tramo más angosto no está "
+        "en la entrada».\n\nLa segunda tabla no repite información: la prolonga en "
+        "el tiempo.",
+        [
+            ("La segunda tabla desglosa por tipo de institución los datos de la primera", "El desglose por institución está en la PRIMERA tabla; la segunda ordena el recorrido por momentos."),
+            ("La segunda tabla corrige las cifras de la primera con datos más recientes", "No hay corrección: el 76,5% aparece igual en ambas."),
+            ("La segunda tabla compara la situación chilena con la de otros países", "El informe no incluye ninguna comparación internacional."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_interpretar", "dificil",
+        "¿Por qué el informe advierte que hay que «resistir la lectura apresurada» "
+        "de la brecha entre universidades y el resto del sistema?",
+        "Porque las tres clases de institución reciben poblaciones distintas, y la "
+        "diferencia no permite concluir que unas enseñen mejor",
+        "El texto lo explica de inmediato: «no dice que unas instituciones enseñen "
+        "mejor que otras: los tres tipos reciben poblaciones distintas, con "
+        "trayectorias escolares, cargas familiares y situaciones laborales que no "
+        "son comparables». Y cierra con un caso: «un estudiante que trabaja de "
+        "noche y estudia de día abandona por razones que no dependen de la calidad "
+        "de su instituto».\n\nLa advertencia es sobre qué se puede inferir de una "
+        "diferencia: comparar poblaciones distintas no permite atribuir el "
+        "resultado a la institución.",
+        [
+            ("Porque los datos de institutos y centros de formación técnica son menos confiables", "El informe no cuestiona la calidad de ningún dato: cuestiona la inferencia que se hace con ellos."),
+            ("Porque la diferencia de diez puntos es demasiado pequeña para ser relevante", "El texto la presenta como una brecha considerable; lo que discute es cómo interpretarla."),
+            ("Porque las universidades tienen requisitos de ingreso más exigentes", "El informe menciona diferencias de población, pero no atribuye la brecha a los requisitos de admisión."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene la distinción entre lo que se mide «desde la "
+        "institución» y lo que se mide «desde la persona»?",
+        "Que un mismo hecho puede contarse como pérdida o como acierto según desde "
+        "dónde se lo registre",
+        "El informe la aplica al cambio de carrera: «medido desde la institución, "
+        "eso es una pérdida. Medido desde la persona, puede ser una corrección a "
+        "tiempo».\n\nLa distinción no niega el dato: señala que el indicador "
+        "incorpora un punto de vista, y que ese punto de vista determina si el "
+        "mismo hecho aparece como problema o como solución.",
+        [
+            ("Que las estadísticas oficiales están sesgadas a favor de las instituciones", "El informe no denuncia un sesgo deliberado: explica una consecuencia de cómo se define la unidad de medida."),
+            ("Que los estudiantes deberían evitar cambiarse de carrera", "El texto sugiere lo contrario al llamar al cambio «una corrección a tiempo»."),
+            ("Que conviene medir la deserción solo a nivel del sistema completo", "El informe no propone reemplazar un indicador por otro: advierte cómo leer el que existe."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_interpretar", "medio",
+        "Según el informe, ¿por qué una política diseñada sobre el porcentaje "
+        "agregado de deserción corre un riesgo?",
+        "Porque suma en un mismo número a quien no puede pagar, a quien eligió mal "
+        "y a quien encontró trabajo",
+        "El texto lo plantea con esos tres casos: «son tres fenómenos distintos, "
+        "con soluciones distintas, y aparecen sumados en el mismo porcentaje. Una "
+        "política diseñada sobre el número agregado corre el riesgo de tratar los "
+        "tres casos como si fueran uno».\n\nEl problema no es la exactitud del "
+        "porcentaje, sino que un solo número esconde causas que exigen respuestas "
+        "diferentes.",
+        [
+            ("Porque el porcentaje agregado suele estar desactualizado", "La vigencia del dato se discute en la nota metodológica y por otra razón: las cohortes."),
+            ("Porque las instituciones reportan sus cifras con criterios distintos", "Ese problema aparece en la nota metodológica, y no es el que fundamenta esta advertencia."),
+            ("Porque no distingue entre universidades, institutos y centros de formación técnica", "Esa distinción sí existe, y está en la primera tabla."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_evaluar", "dificil",
+        "¿Qué se propone el informe al incluir una nota que explica por qué "
+        "circulan cifras de deserción entre el 22% y el 29%?",
+        "Advertir que las diferencias vienen de qué se mide, y no de que alguna "
+        "fuente esté equivocada",
+        "La nota lo declara en su primera línea: «la diferencia no se debe a que "
+        "alguna fuente esté equivocada, sino a que miden cosas distintas». Y "
+        "enumera las tres decisiones que explican la discrepancia: el año de la "
+        "cohorte, la unidad de análisis y qué se cuenta como abandono.\n\nJuzgar la "
+        "consistencia de la información de un texto es una tarea de evaluar, y acá "
+        "el emisor la ejerce sobre las fuentes que él mismo usa.",
+        [
+            ("Poner en duda la confiabilidad de las estadísticas oficiales del sistema", "El informe hace lo contrario: sostiene expresamente que ninguna fuente está equivocada."),
+            ("Justificar por qué el informe eligió la cifra más baja de las disponibles", "El texto no defiende ninguna cifra en particular ni explica su elección de ese modo."),
+            ("Explicar cómo se calcula la tasa de titulación oportuna", "La titulación se define antes, en otro párrafo, y no es lo que la nota discute."),
+        ],
+    ),
+    _ql(
+        "retencion_superior", "lec_evaluar", "medio",
+        "Una estudiante está eligiendo entre dos instituciones y descarta una "
+        "porque su retención de primer año es diez puntos menor. Según el informe, "
+        "¿qué se puede decir de esa decisión?",
+        "Que usa un indicador que el informe advierte que no permite comparar "
+        "instituciones, y que además no responde lo que ella necesita saber",
+        "El informe desaconseja esa lectura dos veces. Al comentar la brecha, "
+        "advierte que no indica que unas instituciones enseñen mejor, porque "
+        "reciben poblaciones distintas. Y en el cierre lo dice para este caso "
+        "exacto: la conclusión práctica «no es desconfiar de las instituciones con "
+        "menor retención», sino preguntar por la carrera específica, los apoyos "
+        "disponibles y la duración real.\n\nLa pregunta pide aplicar el texto a una "
+        "decisión concreta que él mismo anticipa.",
+        [
+            ("Que es correcta, porque la retención es el mejor indicador disponible para comparar", "El informe niega que sirva para comparar instituciones entre sí."),
+            ("Que es correcta si además revisa la tasa de titulación oportuna de cada una", "Agregar un segundo indicador agregado no corrige el problema que el informe señala."),
+            ("Que da lo mismo, porque la retención depende solo de la situación personal del estudiante", "El informe no dice que dependa solo de eso: dice que las poblaciones no son comparables."),
+        ],
+    ),
     # ---------- 'Sobre el supuesto deterioro del idioma' ----------
     _ql(
         "cambio_lengua", "lec_localizar", "medio",
