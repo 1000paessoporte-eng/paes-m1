@@ -50,6 +50,26 @@
   --accent-warm: #ea580c;
   --accent-warm-strong: #c2410c;
 
+  /* ── Color por prueba ─────────────────────────────────────────────
+     Cada prueba PAES tiene su color, y es el MISMO en el selector de
+     ensayo y en el árbol: así el estudiante reconoce dónde está sin leer
+     el título. Matemática M1 y M2 comparten familia fría porque M2
+     contiene a M1; las otras tres se separan en el círculo cromático.
+
+     REGLA: estos colores son IDENTIDAD, nunca ESTADO. No se usan donde
+     ya significan algo el verde (correcto), el rojo (incorrecto) o el
+     ámbar (atención) --el resultado de un ensayo, la corrección de una
+     pregunta--, porque ahí el color ES el dato y no la etiqueta.
+
+     Todos medidos: >=4.5:1 como texto sobre la superficie y con el texto
+     de --on-fill encima del relleno, en los dos temas. */
+  --prueba-lectora: #b45309;
+  --prueba-m1: #1d4ed8;
+  --prueba-m2: #7e22ce;
+  --prueba-ciencias: #0f766e;
+  --prueba-historia: #9f1239;
+
+
   /* Hoja de cuaderno del fondo. Violeta lavado, no gris: el gris sobre blanco
      se lee como suciedad de pantalla. */
   --cuaderno-fino: color-mix(in srgb, var(--accent) 6%, transparent);
@@ -84,6 +104,14 @@
     --accent-2: #22d3ee;
     --accent-foreground: #0b0b12;
     --on-fill: #0b0b12;
+    /* En oscuro los colores de prueba son CLAROS: encima va --on-fill,
+       que es casi negro. Ver la regla en el bloque claro. */
+    --prueba-lectora: #fbbf24;
+    --prueba-m1: #60a5fa;
+    --prueba-m2: #c084fc;
+    --prueba-ciencias: #5eead4;
+    --prueba-historia: #fda4af;
+
     --grafito: #d4d4dd;
 
     --success: #34d399;
@@ -125,6 +153,14 @@
   --accent-2: #22d3ee;
   --accent-foreground: #0b0b12;
   --on-fill: #0b0b12;
+  /* En oscuro los colores de prueba son CLAROS: encima va --on-fill,
+     que es casi negro. Ver la regla en el bloque claro. */
+  --prueba-lectora: #fbbf24;
+  --prueba-m1: #60a5fa;
+  --prueba-m2: #c084fc;
+  --prueba-ciencias: #5eead4;
+  --prueba-historia: #fda4af;
+
   --grafito: #d4d4dd;
 
   --success: #34d399;

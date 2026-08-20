@@ -1,6 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { COLOR_PRUEBA } from "@/lib/colores-prueba";
+import type { Subject } from "@/lib/api";
 import Link from "next/link";
 import { useCallback, useLayoutEffect, useRef, useState, type ReactElement } from "react";
 import { cn } from "@paes-m1/utils";
@@ -162,6 +164,14 @@ interface SkillTreeViewProps {
 export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   const nameByCode = new Map(nodes.map((n) => [n.code, n.name]));
 
+  // El color sale de los propios nodos, no de una prop: el árbol de una prueba
+  // solo trae nodos de esa prueba, y así ninguna pantalla puede pasarle un
+  // color que no le corresponda. Es el MISMO color que el selector de ensayo,
+  // que es lo que permite reconocer dónde se está sin leer el título.
+  const colorPrueba = nodes.length
+    ? COLOR_PRUEBA[nodes[0].subject as Subject]
+    : "var(--accent)";
+
   // Solo los ejes que existen en esta prueba, en el orden canónico.
   const ejesPresentes = AXIS_ORDER.filter((axis) =>
     nodes.some((n) => n.axis === axis)
@@ -189,6 +199,7 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
           axis={column.axis}
           nodes={column.nodes}
           nameByCode={nameByCode}
+          colorPrueba={colorPrueba}
         />
       ))}
     </div>
@@ -206,12 +217,16 @@ function TreeColumn({
   axis,
   nodes,
   nameByCode,
+  colorPrueba,
 }: {
   axis: SkillNode["axis"];
   nodes: SkillNode[];
   nameByCode: Map<string, string>;
+  /** El color de la prueba a la que pertenece este árbol. */
+  colorPrueba: string;
 }) {
   const meta = AXIS_META[axis];
+  const quieto = useReducedMotion();
   const listRef = useRef<HTMLOListElement>(null);
   const dotRefs = useRef<Map<string, HTMLSpanElement>>(new Map());
   const [edges, setEdges] = useState<Edge[]>([]);
@@ -265,17 +280,28 @@ function TreeColumn({
 
       <ol ref={listRef} className="relative flex flex-col gap-3">
         <svg className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
-          {edges.map((e) => (
-            <line
+          {/* Los conectores se DIBUJAN de arriba abajo, en el mismo orden en
+              que se desbloquean los nodos. Es el único lugar del árbol donde
+              el movimiento explica algo: muestra que hay un camino y hacia
+              dónde va, que es justo lo que una lista de tarjetas no dice. */}
+          {edges.map((e, i) => (
+            <motion.line
               key={e.id}
               x1={GUTTER_X}
               y1={e.y1}
               x2={GUTTER_X}
               y2={e.y2}
-              stroke={e.active ? "var(--accent)" : "var(--border-strong)"}
+              stroke={e.active ? colorPrueba : "var(--border-strong)"}
               strokeWidth={2}
               strokeDasharray={e.active ? undefined : "4 4"}
               strokeLinecap="round"
+              initial={quieto ? false : { pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={
+                quieto
+                  ? { duration: 0 }
+                  : { delay: 0.15 + i * 0.08, duration: 0.4, ease: "easeOut" }
+              }
             />
           ))}
         </svg>
@@ -284,8 +310,11 @@ function TreeColumn({
           const locked = node.status === "locked";
           const mastered = node.status === "mastered";
           const pct = Math.round(node.accuracy * 100);
+          // "Dominado" usa el color de la prueba porque es identidad --este
+          // árbol--, mientras que "Desbloqueado" conserva el verde, que ahí
+          // sí es estado. Es la regla de no mezclar identidad con estado.
           const badge = mastered
-            ? { label: "Dominado", cls: "bg-accent/15 text-accent" }
+            ? { label: "Dominado", cls: "bg-(--color-prueba)/15 text-(--color-prueba)" }
             : locked
               ? { label: "Bloqueado", cls: "bg-surface-hover text-muted" }
               : { label: "Desbloqueado", cls: "bg-success/15 text-success" };
@@ -295,6 +324,7 @@ function TreeColumn({
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.06, duration: 0.35, ease: "easeOut" }}
+              style={{ "--color-prueba": colorPrueba } as React.CSSProperties}
               className="flex gap-3"
             >
               <div className="flex w-6 shrink-0 justify-center pt-4">
