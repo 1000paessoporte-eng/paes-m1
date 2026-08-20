@@ -107,3 +107,44 @@ def test_los_limites_no_bloquean_todavia() -> None:
     corta: mandar a alguien a una pantalla que dice "disponible pronto" es
     frustración sin salida."""
     assert service.limites_activos() is False
+
+
+def test_cancelar_apaga_la_renovacion_sin_quitar_lo_pagado(
+    client: TestClient, db_session, register_user
+) -> None:
+    """Cancelar no es cortar el acceso: el período pagado se respeta entero.
+    Cortarlo el día que cancela sería cobrarle días que no puede usar."""
+    from datetime import UTC, datetime, timedelta
+
+    from paes_api.modules.billing.models import (
+        Origen,
+        Plan,
+        Subscription,
+        SubscriptionStatus,
+    )
+    from paes_api.modules.users.models import User
+    from sqlalchemy import select
+
+    headers, _ = register_user(email="cancela@milpaes.cl")
+    user = db_session.execute(select(User).where(User.email == "cancela@milpaes.cl")).scalar_one()
+    vence = datetime.now(UTC) + timedelta(days=20)
+    db_session.add(
+        Subscription(
+            user_id=user.id, plan=Plan.PRO, status=SubscriptionStatus.ACTIVE,
+            origen=Origen.PAGO, expires_at=vence,
+        )
+    )
+    db_session.commit()
+
+    resp = client.post("/api/plan/cancelar", headers=headers)
+    assert resp.status_code == 200
+
+    sub = db_session.execute(select(Subscription)).scalar_one()
+    assert sub.status == SubscriptionStatus.CANCELED
+    # SQLite no guarda la zona horaria, así que se comparan los instantes.
+    assert sub.expires_at.replace(tzinfo=UTC) == vence, "la fecha de término no se toca"
+
+
+def test_cancelar_sin_suscripcion_no_finge(client: TestClient, register_user) -> None:
+    headers, _ = register_user(email="sinplan@milpaes.cl")
+    assert client.post("/api/plan/cancelar", headers=headers).status_code == 409

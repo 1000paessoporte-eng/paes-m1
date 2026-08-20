@@ -207,3 +207,17 @@ def diagnostico(user: User = Depends(get_current_admin)) -> dict[str, object]:
     info["resultado"] = "ok: Flow aceptó una orden de prueba"
     info["tardo_segundos"] = round(time.monotonic() - inicio, 1)
     return info
+
+
+@router.post("/cancelar", response_model=MiPlanOut)
+def cancelar(
+    db: Session = Depends(get_db), user: User = Depends(get_current_user)
+) -> MiPlanOut:
+    """Apaga la renovación de la suscripción activa.
+
+    No corta el acceso: lo ya pagado se respeta hasta su fecha de término. Si
+    no hay nada activo responde 409 en vez de fingir que hizo algo.
+    """
+    if not service.cancelar_suscripcion(db, user.id):
+        raise HTTPException(status_code=409, detail="No tienes una suscripción activa")
+    return _armar(db, user.id)
