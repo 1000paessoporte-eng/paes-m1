@@ -21383,6 +21383,183 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "terremoto_saber",
+        "title": "Lo que se sabe y lo que no de un terremoto",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo de divulgación original de 1000paes, elaborado a partir de "
+            "fuentes públicas sobre la sismicidad chilena: el terremoto de Valdivia de "
+            "1960 (magnitud 9,5), el del Maule de 2010 (8,8), la velocidad de "
+            "convergencia de la placa de Nazca y la creación del Sistema Nacional de "
+            "Alarma de Maremotos en 1964."
+        ),
+        "body": (
+            "El terremoto más grande jamás registrado por instrumentos ocurrió en "
+            "Chile. Fue el 22 de mayo de 1960, alcanzó magnitud 9,5 y rompió una "
+            "franja de unos novecientos kilómetros, más o menos la distancia que "
+            "separa a Santiago de Puerto Montt. El tsunami que provocó cruzó el "
+            "océano Pacífico y causó muertes en Hawái, Japón y Filipinas, al otro "
+            "lado del mundo, muchas horas después. Ese récord no es una casualidad "
+            "geográfica: es la consecuencia previsible de dónde está puesto el "
+            "país.\n\n"
+            "Frente a la costa chilena, una placa oceánica llamada Nazca se hunde "
+            "por debajo de la placa Sudamericana a unos seis centímetros y medio "
+            "por año. Es una velocidad ridícula —lo que crece una uña— y ahí está "
+            "justamente el problema: las dos placas no se deslizan suavemente, sino "
+            "que se traban. Mientras siguen empujando, la roca se deforma como se "
+            "deforma un resorte al que se comprime, y acumula energía durante "
+            "décadas o siglos. Cuando la traba cede, todo eso se libera de una vez. "
+            "Un terremoto no es un golpe que venga de afuera: es la vuelta "
+            "repentina de una región entera a su forma anterior.\n\n"
+            "Conviene entender qué significan los números que se dicen después. La "
+            "escala de magnitud no es aritmética sino logarítmica, de modo que las "
+            "diferencias pequeñas engañan. Entre el terremoto del Maule, de 2010, y "
+            "el de Valdivia hay 0,7 puntos de diferencia —8,8 contra 9,5— y eso "
+            "suena a poco. En energía liberada, el de 1960 fue cerca de once veces "
+            "más grande. Cada unidad completa de magnitud equivale a unas treinta y "
+            "dos veces más energía. Por eso decir que un sismo fue «casi tan fuerte "
+            "como» otro, cuando hay un punto de diferencia, es decir algo bastante "
+            "inexacto.\n\n"
+            "El otro fenómeno, el que mata más gente, viene después. Cuando el "
+            "fondo del mar se levanta de golpe, levanta con él toda la columna de "
+            "agua que tiene encima, y esa deformación viaja hacia la costa. En mar "
+            "abierto es una ola larguísima y baja, que un barco puede no notar. Al "
+            "llegar a aguas poco profundas se frena y se apila: la energía que "
+            "venía repartida en cientos de metros de profundidad se concentra en "
+            "pocos metros de altura. Chile creó su Sistema Nacional de Alarma de "
+            "Maremotos en 1964, cuatro años después de Valdivia, y la "
+            "institucionalidad de emergencia que hoy lo acompaña nació en 1974.\n\n"
+            "Ese sistema, sin embargo, tiene un límite que conviene conocer. Sirve "
+            "para avisar a Hawái que en doce horas llegará una ola originada en "
+            "Chile; no alcanza a avisarle a alguien que está en la playa a "
+            "cincuenta kilómetros del epicentro. Ahí no hay tiempo para que una "
+            "autoridad evalúe, decida y comunique. Por eso la instrucción oficial "
+            "no depende de ningún aviso: si el sismo es tan fuerte que cuesta "
+            "mantenerse en pie, o si dura mucho, hay que subir a una zona segura de "
+            "inmediato. El propio terremoto es la alarma.\n\n"
+            "Queda la pregunta que todo el mundo hace: ¿se puede saber cuándo va a "
+            "ocurrir el próximo? La respuesta honesta es no. No existe hoy ningún "
+            "método capaz de anunciar fecha, lugar y magnitud con la precisión que "
+            "haría falta para evacuar una ciudad. Cada cierto tiempo circulan "
+            "supuestos indicios —comportamiento raro de los animales, luces en el "
+            "cielo, patrones en el clima— y ninguno ha resistido la prueba de "
+            "comprobarse por adelantado y en muchos casos, que es lo único que "
+            "distinguiría a un método de una coincidencia bien contada.\n\n"
+            "Lo que sí puede hacerse es distinto, y es mucho. Se puede estimar "
+            "dónde el peligro es mayor, identificando segmentos de la costa donde "
+            "hace mucho no ocurre un terremoto grande y donde, por lo tanto, la "
+            "energía lleva tiempo acumulándose. Se pueden fijar normas de "
+            "construcción que obliguen a que un edificio se deforme sin caerse. Se "
+            "puede tener alerta temprana: como las ondas destructivas viajan más "
+            "lento que las primeras ondas, existen sistemas que detectan estas "
+            "últimas y entregan unos segundos de aviso, suficientes para detener un "
+            "tren, cerrar una válvula de gas o alejarse de una ventana.\n\n"
+            "La diferencia entre predecir y prepararse no es un tecnicismo. "
+            "Predecir supone saber cuándo; prepararse supone aceptar que no se "
+            "sabrá y actuar igual. La segunda es la que ha salvado vidas en Chile. "
+            "Un sismo de la misma magnitud puede dejar cientos de muertos o decenas "
+            "de miles, y lo que hace esa diferencia no es la sorpresa: es cómo "
+            "están construidas las casas y si la gente del borde costero sube el "
+            "cerro sin esperar que se lo pidan.\n\n"
+            "Vale la pena, con todo, no convertir la preparación en una promesa "
+            "excesiva. Ninguna norma garantiza que un edificio quede intacto: "
+            "garantiza que no se desplome con la gente adentro, que es otra cosa y "
+            "es la que importa. Ninguna evacuación es perfecta. Y el país seguirá "
+            "teniendo terremotos grandes, porque la placa de Nazca no va a dejar de "
+            "moverse. Lo que está en discusión no es cómo evitarlos, sino cuánto "
+            "daño estamos dispuestos a aceptar de antemano."
+        ),
+    },
+    {
+        "key": "dos_turnos",
+        "title": "Cuatro minutos",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes."
+        ),
+        "body": (
+            "**1**\n\n"
+            "A las cuatro y veinte de la mañana Marisol Quiroga terminó de barrer "
+            "el andén número tres y se sentó a esperar. Llevaba once años en la "
+            "estación y conocía el orden de las cosas: primero pasaba el tren de "
+            "carga sin detenerse, después llegaban los primeros pasajeros con la "
+            "cara todavía dormida, y a las cinco y cuarto abría el quiosco de la "
+            "señora Elba. Entre una cosa y la otra había veinticinco minutos que "
+            "eran suyos. Los usaba para tomar té y para mirar el reloj de la "
+            "estación, que estaba adelantado cuatro minutos desde antes de que ella "
+            "entrara a trabajar y que nadie había arreglado nunca.\n\n"
+            "**2**\n\n"
+            "A las cuatro y veinte de la mañana, a catorce cuadras de ahí, Julián "
+            "Andrade decidió que no iba a ir. Lo decidió acostado, mirando el "
+            "techo, con el uniforme ya planchado colgando de la puerta del clóset. "
+            "Era su tercer día en el trabajo nuevo y no lograba explicarse por qué "
+            "le costaba tanto: el sueldo era mejor, la jefa parecía razonable, el "
+            "turno empezaba a las seis. Se sentó en la cama, se puso los "
+            "calcetines, se quedó así media hora con los codos en las rodillas.\n\n"
+            "**3**\n\n"
+            "El tren de carga pasó a las cuatro y treinta y cinco, tres minutos "
+            "tarde. Marisol lo anotó mentalmente, como anotaba todo, y pensó que a "
+            "alguien le iba a ir mal por esos tres minutos aunque el tren no "
+            "llevara a nadie adentro. Después se acordó de que su hijo tenía prueba "
+            "de matemáticas y de que ella no había alcanzado a preguntarle si había "
+            "estudiado. Le mandó un mensaje que él iba a leer cuatro horas más "
+            "tarde: «suerte hoy». Nada más. Con los años había aprendido que los "
+            "mensajes largos a esa edad no se leen.\n\n"
+            "**4**\n\n"
+            "Julián se puso el uniforme a las cinco menos veinte, no porque hubiera "
+            "cambiado de opinión sino porque el cuerpo hizo el trámite solo "
+            "mientras la cabeza seguía en otra cosa. Bajó, caminó las catorce "
+            "cuadras. Iba pensando en su padre, que había trabajado treinta y un "
+            "años en la misma bodega y que una vez, una sola, le había dicho que "
+            "ese trabajo no le gustaba. Julián tenía nueve años cuando escuchó eso "
+            "y no supo qué hacer con la información. La había guardado como se "
+            "guardan las llaves de una casa en la que uno ya no vive.\n\n"
+            "**5**\n\n"
+            "A las cinco y diez Marisol vio entrar a un muchacho de uniforme azul "
+            "que se quedó parado frente al mapa de recorridos, mirándolo demasiado "
+            "rato para alguien que sabe adónde va. Estuvo a punto de preguntarle si "
+            "necesitaba ayuda. No lo hizo, porque en ese momento llegó la señora "
+            "Elba con las cajas del quiosco y hubo que ayudarla a subir la reja. "
+            "Cuando volvió a mirar, el muchacho seguía ahí.\n\n"
+            "**6**\n\n"
+            "Julián no estaba mirando el mapa. Estaba mirando el reloj de la "
+            "estación, que marcaba las cinco y catorce, y estaba haciendo la cuenta "
+            "de cuánto le faltaba para las seis, y la cuenta le daba una cifra que "
+            "no le servía. Detrás del vidrio del quiosco una señora acomodaba "
+            "paquetes de galletas. En el andén, una mujer con overol azul apoyaba "
+            "la escoba contra un banco. Todo el mundo, pensó, sabe exactamente lo "
+            "que tiene que hacer a esta hora.\n\n"
+            "**7**\n\n"
+            "El reloj estaba adelantado cuatro minutos. Eran las cinco y diez.\n\n"
+            "**7 bis**\n\n"
+            "Una vez, hacía años, Marisol había avisado en la oficina que el reloj "
+            "estaba adelantado. El jefe de turno de entonces anotó el dato en una "
+            "hoja y le dijo que lo iban a ver. No lo vieron. Con el tiempo ella "
+            "dejó de considerarlo un error y empezó a considerarlo una "
+            "característica del lugar, como la gotera del techo del andén dos o "
+            "como el hecho de que la máquina de café diera vuelto solo los martes. "
+            "Cuando alguien le preguntaba la hora, ella miraba el reloj y restaba "
+            "cuatro minutos antes de contestar. Nunca se le ocurrió que a alguien "
+            "esos cuatro minutos pudieran servirle.\n\n"
+            "**8**\n\n"
+            "Marisol terminó su turno a las siete, pasó por la feria y llegó a la "
+            "casa a las ocho y media. Su hijo ya se había ido al colegio y había "
+            "dejado la taza sin lavar, como siempre. Ella la lavó, se acostó y no "
+            "volvió a pensar en el muchacho del uniforme azul, que para entonces "
+            "llevaba una hora y media trabajando y no había vuelto a pensar en ella "
+            "tampoco.\n\n"
+            "**9**\n\n"
+            "De los dos, el único que recordó ese día muchos años después fue "
+            "Julián, y no por lo que ocurrió sino por lo que estuvo a punto de "
+            "ocurrir. Contaba que a los veintitrés había estado a diez minutos de "
+            "no entrar a un trabajo en el que después estuvo diecinueve años, y que "
+            "lo que lo hizo entrar no fue una decisión sino un reloj mal puesto. La "
+            "historia le quedó redonda. Nunca se enteró de que el reloj llevaba "
+            "adelantado más de una década, ni de que la mujer que barría el andén "
+            "sabía perfectamente qué hora era."
+        ),
+    },
+    {
         "key": "planes_internet",
         "title": "Comparador de planes de internet hogar",
         "kind": "discontinuo",
@@ -23809,6 +23986,341 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Lo que se sabe y lo que no de un terremoto' ----------
+    _ql(
+        "terremoto_saber", "lec_localizar", "facil",
+        "Según la lectura, ¿a qué velocidad se hunde la placa de Nazca?",
+        "A unos seis centímetros y medio por año",
+        "El texto entrega la cifra y una comparación para dimensionarla: es «una "
+        "velocidad ridícula —lo que crece una uña—».\n\nY explica por qué eso "
+        "importa: las placas no se deslizan suavemente, sino que se traban y "
+        "acumulan energía «durante décadas o siglos».",
+        [
+            ("A unos novecientos kilómetros por año", "Novecientos kilómetros fue el largo de la ruptura de 1960."),
+            ("A unos cuarenta metros por año", "El texto no entrega esa cifra como velocidad anual."),
+            ("A unos treinta y dos centímetros por año", "El treinta y dos corresponde a las veces que crece la energía por unidad."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurre con una ola de tsunami al llegar a la costa?",
+        "Se frena y se apila, ganando altura en aguas poco profundas",
+        "El texto describe el cambio: en mar abierto es «una ola larguísima y baja, "
+        "que un barco puede no notar», y al llegar a aguas someras «la energía que "
+        "venía repartida en cientos de metros de profundidad se concentra en pocos "
+        "metros de altura».\n\nEl origen está antes: el fondo marino se levanta de "
+        "golpe y levanta con él toda la columna de agua.",
+        [
+            ("Se divide en varias olas más pequeñas y separadas", "El texto no describe ninguna división de la ola al acercarse."),
+            ("Pierde energía y llega más baja que en mar abierto", "Ocurre lo contrario: la energía se concentra y la ola crece."),
+            ("Avanza más rápido que en mar abierto por el desnivel", "El texto dice que se frena al llegar a aguas poco profundas."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_localizar", "facil",
+        "Según la lectura, ¿cuál es la instrucción para quien está en la costa "
+        "durante un sismo fuerte?",
+        "Subir a una zona segura de inmediato, sin esperar aviso",
+        "El texto lo formula así: «si el sismo es tan fuerte que cuesta mantenerse "
+        "en pie, o si dura mucho, hay que subir a una zona segura de "
+        "inmediato».\n\nY explica por qué la regla no depende de ninguna alerta: en "
+        "un sismo cercano «no hay tiempo para que una autoridad evalúe, decida y "
+        "comunique». El propio terremoto es la alarma.",
+        [
+            ("Esperar la alerta oficial antes de moverse del lugar", "El texto descarta esa opción: no alcanza a llegar en un sismo cercano."),
+            ("Alejarse del mar solo si el agua comienza a retirarse", "El artículo no menciona el retiro del agua como señal para evacuar."),
+            ("Permanecer en un lugar abierto hasta que termine el sismo", "La instrucción es subir a una zona segura, no quedarse abajo."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_localizar", "medio",
+        "Según la lectura, ¿cuándo se creó el Sistema Nacional de Alarma de "
+        "Maremotos?",
+        "En 1964, cuatro años después del terremoto de Valdivia",
+        "El texto da la fecha y la relaciona con lo ocurrido: Chile creó ese "
+        "sistema «en 1964, cuatro años después de Valdivia», y la institucionalidad "
+        "de emergencia que hoy lo acompaña «nació en 1974».\n\nSon dos fechas "
+        "distintas que conviene no confundir.",
+        [
+            ("En 1960, inmediatamente después del terremoto", "1960 es el año del terremoto; el sistema llegó cuatro años más tarde."),
+            ("En 1974, junto con la institucionalidad de emergencia", "En 1974 nació la institucionalidad, no el sistema de alarma."),
+            ("En 2010, después del terremoto del Maule", "El texto menciona 2010 solo para comparar magnitudes."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_interpretar", "medio",
+        "¿Por qué la lectura advierte que las diferencias de magnitud «engañan»?",
+        "Porque la escala es logarítmica y una décima esconde mucha energía",
+        "El texto lo muestra con el caso chileno: entre 8,8 y 9,5 hay 0,7 puntos y "
+        "eso «suena a poco», pero el terremoto de 1960 liberó «cerca de once veces "
+        "más» energía.\n\nY entrega la regla general: «Cada unidad completa de "
+        "magnitud equivale a unas treinta y dos veces más energía».",
+        [
+            ("Porque los instrumentos antiguos medían con menos precisión", "El texto no discute la precisión de las mediciones de 1960."),
+            ("Porque la magnitud no tiene relación con el daño causado", "El artículo no niega esa relación: explica cómo crece la energía."),
+            ("Porque cada país usa una escala de magnitud distinta", "No se mencionan escalas distintas entre países."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_interpretar", "medio",
+        "¿Qué idea sostiene la comparación del terremoto con un resorte que se "
+        "comprime?",
+        "Que la energía se acumula lentamente y se libera de una vez",
+        "La imagen aparece al explicar la traba entre placas: la roca «se deforma "
+        "como se deforma un resorte al que se comprime, y acumula energía durante "
+        "décadas o siglos».\n\nDe ahí la definición que el texto propone: un "
+        "terremoto «es la vuelta repentina de una región entera a su forma "
+        "anterior», y no un golpe que venga de afuera.",
+        [
+            ("Que los terremotos ocurren siempre con la misma frecuencia", "El texto no atribuye periodicidad fija a los terremotos."),
+            ("Que la corteza terrestre es más elástica de lo que se cree", "La comparación explica la acumulación, no una propiedad del material."),
+            ("Que el movimiento de las placas es rápido y visible", "La velocidad descrita es de seis centímetros y medio por año."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_interpretar", "dificil",
+        "¿Qué límite del sistema de alarma señala la lectura?",
+        "Que no alcanza a avisar cuando el sismo ocurre cerca de la costa",
+        "El texto lo plantea con dos casos opuestos: el sistema «sirve para avisar "
+        "a Hawái que en doce horas llegará una ola originada en Chile; no alcanza a "
+        "avisarle a alguien que está en la playa a cincuenta kilómetros del "
+        "epicentro».\n\nEse límite es el que justifica la instrucción de evacuar "
+        "sin esperar aviso, que el párrafo entrega enseguida.",
+        [
+            ("Que solo funciona para los tsunamis originados en otros países", "Funciona también para los locales; lo que falta en esos casos es tiempo."),
+            ("Que depende de instrumentos instalados en mar abierto", "El texto no describe los instrumentos del sistema."),
+            ("Que fue diseñado en 1964 y no se ha actualizado desde entonces", "El artículo no afirma nada sobre su actualización."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_interpretar", "dificil",
+        "Según la lectura, ¿qué distingue a un método de predicción de una "
+        "coincidencia?",
+        "Que anuncie por adelantado y acierte en muchos casos",
+        "El texto exige esas dos condiciones al descartar los supuestos indicios: "
+        "ninguno «ha resistido la prueba de comprobarse por adelantado y en muchos "
+        "casos, que es lo único que distinguiría a un método de una coincidencia "
+        "bien contada».\n\nPor eso responde que no a la pregunta de si puede "
+        "saberse cuándo ocurrirá el próximo terremoto.",
+        [
+            ("Que lo propongan instituciones científicas reconocidas", "El texto no apela a la autoridad de quien propone el método."),
+            ("Que explique por qué ocurrió cada terremoto del pasado", "Explicar lo ocurrido no basta: la exigencia es anunciar antes."),
+            ("Que use instrumentos más sensibles que los actuales", "La sensibilidad de los instrumentos no aparece como criterio."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_evaluar", "medio",
+        "¿Con qué propósito la lectura distingue entre predecir y prepararse?",
+        "Para mostrar que se puede actuar sin saber cuándo ocurrirá",
+        "El texto define las dos actitudes: «Predecir supone saber cuándo; "
+        "prepararse supone aceptar que no se sabrá y actuar igual», y sostiene que "
+        "«la segunda es la que ha salvado vidas en Chile».\n\nLo respalda con lo "
+        "que sí puede hacerse: estimar peligro, exigir normas de construcción y dar "
+        "segundos de alerta temprana.",
+        [
+            ("Para sostener que la ciencia sísmica ha fracasado", "El texto enumera varias cosas que la ciencia sísmica sí permite hacer."),
+            ("Para explicar por qué existen dos organismos distintos", "La distinción es conceptual y no se refiere a instituciones."),
+            ("Para justificar que no se invierta en predicción", "El artículo no discute en qué conviene invertir."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor al hablar de lo que la preparación puede "
+        "lograr?",
+        "Mesurada, pues aclara qué garantiza una norma y qué no",
+        "El cierre acota las promesas: «Ninguna norma garantiza que un edificio "
+        "quede intacto: garantiza que no se desplome con la gente adentro, que es "
+        "otra cosa y es la que importa».\n\nEn la misma línea admite que «ninguna "
+        "evacuación es perfecta» y que el país seguirá teniendo terremotos grandes.",
+        [
+            ("Optimista, pues afirma que el daño puede evitarse del todo", "El texto descarta esa idea: la placa no dejará de moverse."),
+            ("Resignada, pues sostiene que prepararse cambia poco", "Afirma lo contrario: la preparación es lo que ha salvado vidas."),
+            ("Técnica, pues evita pronunciarse sobre lo que conviene hacer", "Se pronuncia: sostiene qué hace la diferencia en las muertes."),
+        ],
+    ),
+    _ql(
+        "terremoto_saber", "lec_evaluar", "facil",
+        "Un lector concluye que Chile podría evitar los terremotos con mejor "
+        "tecnología. ¿Qué responde la lectura?",
+        "Que seguirán ocurriendo, porque la placa no dejará de moverse",
+        "El cierre lo dice sin rodeos: «el país seguirá teniendo terremotos "
+        "grandes, porque la placa de Nazca no va a dejar de moverse».\n\nY "
+        "reformula cuál es la discusión real: «no es cómo evitarlos, sino cuánto "
+        "daño estamos dispuestos a aceptar de antemano».",
+        [
+            ("Que la tecnología permitirá predecirlos en pocos años", "El texto sostiene que hoy no existe un método capaz de anunciarlos."),
+            ("Que los terremotos podrían evitarse con mejores normas", "Las normas reducen el daño; no impiden que el sismo ocurra."),
+            ("Que Chile dejará de ser sísmico cuando cambie la placa", "Nada en el artículo plantea esa posibilidad."),
+        ],
+    ),
+    # ---------- 'Cuatro minutos' ----------
+    _ql(
+        "dos_turnos", "lec_localizar", "facil",
+        "Según el relato, ¿cuánto tiempo lleva Marisol trabajando en la estación?",
+        "Once años, y conoce de memoria el orden del turno",
+        "El primer bloque lo dice y lo ilustra: «Llevaba once años en la estación y "
+        "conocía el orden de las cosas», con el tren de carga, los primeros "
+        "pasajeros y la apertura del quiosco.\n\nEl reloj adelantado está ahí desde "
+        "antes de que ella entrara a trabajar.",
+        [
+            ("Cuatro años, desde que se arregló el andén tres", "Cuatro es el número de minutos que el reloj adelanta, no de años."),
+            ("Diecinueve años, los mismos que trabajó Julián", "Diecinueve años son los que Julián estuvo en su trabajo nuevo."),
+            ("Treinta y un años, igual que el padre de Julián", "Ese es el tiempo que el padre de Julián trabajó en una bodega."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_localizar", "facil",
+        "Según el relato, ¿qué sabe Julián sobre su trabajo nuevo?",
+        "Que el sueldo es mejor, la jefa razonable y el turno empieza a las seis",
+        "El segundo bloque enumera esas tres cosas justamente para marcar el "
+        "contraste: son las razones por las que él «no lograba explicarse por qué "
+        "le costaba tanto».\n\nEra su tercer día, y aun así esa mañana había "
+        "decidido no ir.",
+        [
+            ("Que el sueldo es peor, pero el horario le acomoda más", "El relato dice que el sueldo del trabajo nuevo es mejor."),
+            ("Que su jefa es exigente y el turno empieza muy temprano", "La jefa le parece razonable, y el turno empieza a las seis."),
+            ("Que se trata del mismo trabajo que tuvo su padre", "El padre trabajó en una bodega; nada indica que sea el mismo lugar."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_localizar", "medio",
+        "Según el relato, ¿qué pasó cuando Marisol avisó que el reloj estaba "
+        "adelantado?",
+        "Anotaron el dato en una hoja y nunca lo arreglaron",
+        "El bloque «7 bis» lo cuenta así: el jefe de turno «anotó el dato en una "
+        "hoja y le dijo que lo iban a ver. No lo vieron».\n\nDesde entonces ella "
+        "dejó de tratarlo como un error y pasó a tratarlo como una característica "
+        "del lugar, restando cuatro minutos cada vez que alguien le preguntaba la "
+        "hora.",
+        [
+            ("Cambiaron el reloj por uno nuevo a la semana siguiente", "El reloj sigue adelantado al final del relato, más de una década después."),
+            ("Le dijeron que ella misma debía ajustarlo cada mañana", "Nadie le encarga ajustarlo: ella solo resta los minutos al responder."),
+            ("Nunca avisó, porque le pareció un detalle sin importancia", "Sí avisó: el relato cuenta el episodio con el jefe de turno."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_interpretar", "facil",
+        "¿Cómo está organizado el relato?",
+        "Alterna dos historias de personajes que no se conocen",
+        "Los bloques impares siguen a Marisol en la estación y los pares siguen a "
+        "Julián en su casa y en el camino, con las mismas horas repitiéndose desde "
+        "un lado y desde el otro.\n\nLas dos líneas se tocan una sola vez, en la "
+        "estación, y ninguno de los dos personajes llega a saber quién era el otro.",
+        [
+            ("Cuenta la misma historia dos veces, con distinto final", "No hay dos versiones de una historia: hay dos historias distintas."),
+            ("Sigue a un personaje y luego salta veinte años al futuro", "El salto final existe, pero el relato entero alterna dos líneas."),
+            ("Presenta un relato dentro de otro, contado por un tercero", "Nadie cuenta una historia dentro del relato: el narrador es externo."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_interpretar", "medio",
+        "¿Qué relación hay entre los bloques 5 y 6?",
+        "Muestran la misma escena desde el punto de vista de cada personaje",
+        "En el bloque 5, Marisol ve a un muchacho que mira demasiado rato el mapa "
+        "de recorridos. En el 6 se aclara que Julián no miraba el mapa: miraba el "
+        "reloj y hacía una cuenta.\n\nEl mismo instante, entonces, se lee de dos "
+        "maneras, y ninguno de los dos acierta del todo respecto del otro: para él, "
+        "esa mujer con overol es alguien que «sabe exactamente lo que tiene que "
+        "hacer».",
+        [
+            ("Cuentan dos momentos distintos separados por una hora", "Ambos ocurren en el mismo minuto: las cinco y diez de la mañana."),
+            ("El bloque 6 corrige un error que el narrador cometió antes", "No hay error del narrador: hay dos percepciones de la misma escena."),
+            ("El bloque 6 explica lo que Marisol le dijo al muchacho", "Ella estuvo a punto de hablarle, pero no llegó a hacerlo."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_interpretar", "medio",
+        "¿Qué función cumple el bloque 7, que tiene solo dos frases?",
+        "Revelar el desfase que explica lo que acaba de ocurrir",
+        "Las dos frases —«El reloj estaba adelantado cuatro minutos. Eran las cinco "
+        "y diez»— llegan justo después de que Julián haya hecho su cuenta con la "
+        "hora equivocada.\n\nSu brevedad es parte del efecto: el dato ya había "
+        "aparecido en el primer bloque y aquí solo hace falta recordarlo para que "
+        "el lector entienda sobre qué está decidiendo Julián.",
+        [
+            ("Marcar el paso del tiempo entre una escena y la siguiente", "No marca un paso de tiempo: precisa la hora del mismo momento."),
+            ("Introducir a un nuevo personaje que observa la estación", "En ese bloque no aparece ningún personaje nuevo."),
+            ("Cerrar la historia de Marisol antes de volver a Julián", "La historia de Marisol continúa en los bloques siguientes."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_interpretar", "dificil",
+        "¿Qué sugiere el recuerdo del padre que aparece mientras Julián camina?",
+        "Que teme repetir una vida entera en un trabajo que no le gusta",
+        "El recuerdo es preciso: treinta y un años en la misma bodega y una sola "
+        "confesión de que ese trabajo no le gustaba, escuchada cuando Julián tenía "
+        "nueve años.\n\nEl relato agrega qué hizo con eso: «La había guardado como "
+        "se guardan las llaves de una casa en la que uno ya no vive», una imagen de "
+        "algo conservado sin uso y que ahora, camino al turno, vuelve a aparecer.",
+        [
+            ("Que su padre le prohibió trabajar en ese tipo de empleo", "El padre no le prohibió nada: solo hizo una confesión, una vez."),
+            ("Que quiere conseguir el mismo trabajo que tuvo su padre", "El relato no plantea ninguna intención de seguir sus pasos."),
+            ("Que su padre lo acompañó los primeros días de trabajo", "El padre aparece únicamente en el recuerdo de una frase antigua."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_evaluar", "medio",
+        "¿Qué actitud mantiene el narrador respecto de los dos personajes?",
+        "Ecuánime, pues los sigue por igual y no juzga a ninguno",
+        "El relato dedica bloques equivalentes a cada uno, entra en lo que ambos "
+        "piensan y no califica sus decisiones: ni la desgana de Julián ni la "
+        "resignación de Marisol reciben un comentario.\n\nIncluso el desenlace se "
+        "cuenta sin moraleja: cada uno sigue su día y ninguno se entera de lo que "
+        "el lector sí sabe.",
+        [
+            ("Compasiva, pues lamenta la rutina en que viven ambos", "No hay lamento: la rutina se describe con detalle y sin adjetivos."),
+            ("Irónica, pues se burla de la ilusión de Julián al final", "El cierre expone lo que él ignora, pero no lo ridiculiza."),
+            ("Cercana a Marisol, pues cuenta más cosas de su vida", "Los dos personajes reciben un espacio equivalente en el relato."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_evaluar", "dificil",
+        "¿Qué pone en duda el último bloque del relato?",
+        "Que la explicación con que Julián ordena su vida sea completa",
+        "El cierre muestra a Julián contando su historia con una causa clara —«no "
+        "fue una decisión sino un reloj mal puesto»— y agrega de inmediato lo que "
+        "él ignora: que el reloj llevaba adelantado más de una década y que la "
+        "mujer del andén sabía perfectamente qué hora era.\n\nLa frase «La historia "
+        "le quedó redonda» es el aviso: lo redondo es el relato, no necesariamente "
+        "lo ocurrido.",
+        [
+            ("Que Julián haya trabajado realmente diecinueve años ahí", "El relato no pone en duda ese dato en ningún momento."),
+            ("Que el reloj de la estación estuviera efectivamente adelantado", "El desfase se afirma dos veces y nadie lo discute."),
+            ("Que Marisol y Julián hayan estado en la estación a la vez", "El cruce ocurre y el relato lo narra desde los dos lados."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_evaluar", "dificil",
+        "¿Qué elemento permite sostener que el cuento trata sobre las explicaciones "
+        "que las personas se dan a sí mismas?",
+        "Que Julián atribuya su vida laboral a un reloj mal puesto",
+        "El relato construye ese contraste con cuidado: el lector conoce el "
+        "desfase, la historia del aviso que nadie atendió y la rutina de Marisol, "
+        "mientras el personaje se queda con una sola causa, ordenada y "
+        "memorable.\n\nEl propio narrador subraya el punto al final: nunca se "
+        "enteró del resto.",
+        [
+            ("Que Marisol le mande un mensaje breve a su hijo", "Ese detalle muestra su manera de comunicarse, no una explicación."),
+            ("Que el tren de carga pase con tres minutos de atraso", "El atraso del tren es parte de la rutina, y nadie lo interpreta."),
+            ("Que la señora Elba llegue con las cajas del quiosco", "Su llegada solo impide que Marisol se acerque al muchacho."),
+        ],
+    ),
+    _ql(
+        "dos_turnos", "lec_evaluar", "facil",
+        "¿Qué muestra que Marisol no vuelva a acordarse del muchacho de uniforme "
+        "azul?",
+        "Que el encuentro fue decisivo solo para uno de los dos",
+        "El relato lo dice de manera simétrica y fría: ella «no volvió a pensar en "
+        "el muchacho del uniforme azul, que para entonces llevaba una hora y media "
+        "trabajando y no había vuelto a pensar en ella tampoco».\n\nRecién en el "
+        "último bloque se sabe que para Julián ese día terminó siendo una historia "
+        "que contaría durante años.",
+        [
+            ("Que Marisol tiene mala memoria para las caras", "El relato la presenta como alguien que anota mentalmente todo."),
+            ("Que los dos personajes se conocían de antes", "Nada en el cuento indica que se conocieran."),
+            ("Que Marisol se molestó por no haber podido ayudarlo", "No hay molestia: la interrupción se cuenta sin comentario."),
+        ],
+    ),
     # ---------- 'Comparador de planes de internet hogar' ----------
     _ql(
         "planes_internet", "lec_localizar", "facil",
