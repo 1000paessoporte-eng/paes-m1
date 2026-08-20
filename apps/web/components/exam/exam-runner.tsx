@@ -540,7 +540,10 @@ export function ExamRunner({
           </div>
 
           <div className="flex items-start gap-2 sm:gap-3">
-            <Medidor etiqueta="Queda del ensayo">
+            <Medidor
+              etiqueta="Tiempo restante de la prueba"
+              detalle="Cuánto queda para que se cierre el ensayo completo."
+            >
               <span
                 className={cn(
                   "block rounded-lg px-2.5 py-1 font-mono text-lg font-bold tabular-nums transition-colors duration-700",
@@ -560,7 +563,10 @@ export function ExamRunner({
                 pesa más que una fácil, y en Lectora la primera de cada texto
                 carga con leerlo. Si viniera en cero --un intento anterior a
                 esta función-- se cae al reparto plano, que es lo que había. */}
-            <Medidor etiqueta="En esta pregunta">
+            <Medidor
+              etiqueta="Tiempo en esta pregunta"
+              detalle="Cuánto llevas en la pregunta que tienes al frente, y cuánto debería tomarte."
+            >
               <RelojPregunta
                 msGastados={msEnPregunta}
                 msPresupuesto={
@@ -570,7 +576,10 @@ export function ExamRunner({
               />
             </Medidor>
 
-            <Medidor etiqueta="Respondidas">
+            <Medidor
+              etiqueta="Preguntas respondidas"
+              detalle="Cuántas llevas contestadas del total del ensayo."
+            >
               <span className="block rounded-lg border border-border px-2.5 py-1 text-lg font-medium tabular-nums">
                 {respondidas}/{questions.length}
               </span>
@@ -777,19 +786,34 @@ export function ExamRunner({
 }
 
 
-/** Un número de la cabecera con su etiqueta encima.
+/** Un número de la cabecera con su nombre debajo.
  *
  *  Existe porque tres medidores juntos y sin nombre no se entienden: quien
  *  entra por primera vez no tiene cómo saber si "2:09" es lo que queda, lo que
- *  lleva o lo que debería. La etiqueta va ARRIBA y no como tooltip, porque en
- *  un teléfono no hay dónde posar el dedo para descubrirla. */
-function Medidor({ etiqueta, children }: { etiqueta: string; children: React.ReactNode }) {
+ *  lleva o lo que debería. El nombre se ve siempre y no es un tooltip: en un
+ *  teléfono no hay dónde posar el dedo para descubrirlo.
+ *
+ *  Va DEBAJO del número, no encima. Son nombres de largo distinto y en un
+ *  teléfono se parten en dos líneas; con la etiqueta arriba, cada reloj
+ *  arrancaba a una altura distinta y la cabecera quedaba en escalera.
+ *
+ *  `detalle` es la frase completa, para quien pase el cursor o use lector de
+ *  pantalla. El nombre corto responde "qué es"; el detalle, "para qué sirve". */
+function Medidor({
+  etiqueta,
+  detalle,
+  children,
+}: {
+  etiqueta: string;
+  detalle: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex flex-col gap-0.5">
-      <span className="text-[10px] leading-none font-medium tracking-wide text-muted uppercase">
+    <div className="flex flex-col items-center gap-1" title={detalle}>
+      {children}
+      <span className="max-w-[6.5rem] text-center text-[10px] leading-tight font-medium text-muted">
         {etiqueta}
       </span>
-      {children}
     </div>
   );
 }
