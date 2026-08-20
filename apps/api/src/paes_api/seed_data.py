@@ -21383,6 +21383,88 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "carta_cerrada",
+        "title": "La carta que no se abre",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes."
+        ),
+        "body": (
+            "En mi familia la carta llegó antes que yo, y sigue cerrada.\n\n"
+            "Es un sobre café, de papel grueso, con una dirección escrita a mano y "
+            "un sello que ya no existe. Vivió casi noventa años dentro de una caja "
+            "de madera que huele a alcanfor, junto a un dedal, dos botones "
+            "distintos y una fotografía de gente que nadie sabe nombrar. Cuatro "
+            "mujeres la tuvieron en sus manos. Ninguna la abrió.\n\n"
+            "La primera vez que supe de ella yo tenía nueve años y estábamos "
+            "pelando arvejas en la cocina de mi abuela, en Talca. Ella contaba las "
+            "cosas así, mientras las manos hacían otra cosa, como si el relato "
+            "fuera un trabajo menor que se podía hacer al mismo tiempo.\n\n"
+            "«Cuando yo tenía tu edad —me dijo—, mi abuela me sentó donde estás "
+            "sentada tú y me contó que en el treinta y ocho llegó una carta a la "
+            "casa. El que la mandaba se había ido al norte tres años antes y no "
+            "había vuelto a escribir. Ella la dejó arriba del aparador toda una "
+            "tarde, mirándola. Y después la guardó. Me dijo: si la abro, tengo que "
+            "hacer algo con lo que diga. Si dice que viene, lo espero. Si dice que "
+            "no viene, lo dejo de esperar. Cerrada, todavía puedo elegir».\n\n"
+            "Esa era la versión de la cocina. Años después escuché a mi abuela "
+            "contar la misma historia en un almuerzo con visitas, y en esa la "
+            "bisabuela aparecía riéndose, decía que la carta seguramente traía una "
+            "cuenta impaga y que abrirla era gastar la ilusión en algo que no valía "
+            "la pena. Las dos versiones podían ser ciertas. Mi abuela sostenía las "
+            "dos sin ninguna incomodidad, y si alguien se lo hacía notar contestaba "
+            "que la gente cambia de razones y no por eso cambia de decisión.\n\n"
+            "La casa de Talca se vendió el año que yo cumplí trece. En el desarme "
+            "aparecieron cosas que nadie recordaba haber guardado: una máquina de "
+            "coser sin pedal, un cajón entero de recetas escritas en el reverso de "
+            "boletas, la caja de madera. Mi madre la envolvió en un chaleco y la "
+            "puso en el bolso de mano, no en el camión de la mudanza. Ese fue el "
+            "único gesto con que reconoció que ahí había algo importante. En los "
+            "años siguientes nunca la mencionó.\n\n"
+            "Yo intenté abrirla a los quince, con el método que había visto en una "
+            "película: la tetera hirviendo, el vapor, el sobre encima. Alcancé a "
+            "levantar una punta de la solapa y me detuve. No fue por respeto. Fue "
+            "porque en ese segundo entendí que si la abría, la historia que me "
+            "habían contado se iba a convertir en otra cosa —en un dato— y que el "
+            "dato iba a ser, con toda probabilidad, decepcionante. Pegué la solapa "
+            "con un poco de saliva y devolví el sobre a la caja.\n\n"
+            "Mi madre se dio cuenta igual. Esa noche me dijo, sin enojo, una frase "
+            "que todavía repito: «No es un secreto. Un secreto es algo que alguien "
+            "esconde. Esto es un acuerdo».\n\n"
+            "A cada edad le inventé un contenido distinto. A los diez la carta "
+            "decía que el hombre venía en el tren del jueves y que había que ir a "
+            "buscarlo a la estación. A los quince decía que se había casado en "
+            "Antofagasta y que pedía perdón, porque a los quince uno necesita que "
+            "las historias tengan culpables. A los veinte dejé de imaginar que "
+            "decía algo y empecé a sospechar que no decía nada: una hoja doblada en "
+            "blanco, o tres líneas de cortesía sobre el clima del norte. Esa última "
+            "posibilidad me pareció, y todavía me parece, la más triste de todas, y "
+            "también la más probable.\n\n"
+            "Mi abuela murió en marzo, un martes, sin decir nada sobre la carta. En "
+            "julio, ordenando, mi madre me pasó la caja como quien pasa una fuente "
+            "en la mesa, sin ceremonia. Ahora es tuya, dijo, y se fue a lavar las "
+            "tazas. Por primera vez en noventa años el sobre estaba en manos de "
+            "alguien que podía abrirlo sin desobedecer a nadie.\n\n"
+            "Lo tuve tres semanas sobre el escritorio. Y entonces encontré algo que "
+            "no buscaba. En la misma caja hay un cuaderno de cuentas de la "
+            "bisabuela, con sumas de almacén y algunas anotaciones. La letra de "
+            "esas anotaciones y la letra del sobre son la misma letra. La misma "
+            "manera de cerrar la ge, la misma inclinación, el mismo modo raro de "
+            "cruzar la te.\n\n"
+            "Hay explicaciones razonables. Pudo copiar la dirección para que el "
+            "sobre llegara bien. Pudo escribirla ella y pedirle a alguien que la "
+            "despachara. Pudo, también, haberse escrito la carta a sí misma y haber "
+            "inventado después una espera que le organizara los años. Cualquiera de "
+            "las tres deja intacto lo esencial: durante noventa años, cuatro "
+            "mujeres tuvieron a mano una respuesta y prefirieron seguir teniendo "
+            "una pregunta.\n\n"
+            "No la abrí. La devolví a la caja, entre el dedal y los botones, y "
+            "cerré la tapa. Después me senté a escribir esto, que es lo que hacemos "
+            "en mi familia con las cosas que no resolvemos.\n\n"
+            "Ahora hay una versión más."
+        ),
+    },
+    {
         "key": "resena_sub_terra",
         "title": "Volver a Sub terra",
         "kind": "no_literario",
@@ -23384,6 +23466,174 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La carta que no se abre' ----------
+    _ql(
+        "carta_cerrada", "lec_localizar", "facil",
+        "Según el relato, ¿qué otras cosas guarda la caja de madera?",
+        "Un dedal, dos botones distintos y una fotografía antigua",
+        "El segundo párrafo enumera el contenido de la caja: el sobre convive con "
+        "«un dedal, dos botones distintos y una fotografía de gente que nadie sabe "
+        "nombrar».\n\nMás adelante aparece un elemento más, el cuaderno de cuentas "
+        "de la bisabuela, que es el que desencadena el hallazgo final.",
+        [
+            ("Una máquina de coser sin pedal y recetas escritas atrás", "Esas cosas aparecen en el desarme de la casa, no dentro de la caja."),
+            ("Cartas anteriores del mismo hombre que se fue al norte", "El relato dice que él no había vuelto a escribir en tres años."),
+            ("Una fotografía de la bisabuela tomada en la estación", "La fotografía es de gente que nadie sabe nombrar, sin lugar indicado."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_localizar", "facil",
+        "En la versión de la cocina, ¿por qué la bisabuela no abrió la carta?",
+        "Porque cerrada todavía podía elegir qué hacer",
+        "La abuela reproduce las palabras de su propia abuela: «si la abro, tengo "
+        "que hacer algo con lo que diga. Si dice que viene, lo espero. Si dice que "
+        "no viene, lo dejo de esperar. Cerrada, todavía puedo elegir».\n\nEsa es la "
+        "versión que se cuenta en la cocina; en el almuerzo con visitas la abuela "
+        "daba otra razón distinta.",
+        [
+            ("Porque suponía que la carta traía una cuenta impaga", "Esa es la razón de la otra versión, la que contaba con visitas."),
+            ("Porque no sabía leer y no quiso pedirle ayuda a nadie", "El relato no dice nada sobre si la bisabuela sabía leer o no."),
+            ("Porque el hombre le había pedido que no la abriera", "Nadie le pidió eso: la decisión la explica ella misma."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_localizar", "facil",
+        "Según el relato, ¿qué hizo la madre con la caja cuando se vendió la casa?",
+        "La envolvió en un chaleco y la llevó en el bolso de mano",
+        "El párrafo del desarme lo cuenta así: «Mi madre la envolvió en un chaleco "
+        "y la puso en el bolso de mano, no en el camión de la mudanza».\n\nLa "
+        "narradora interpreta ese gesto: fue «el único gesto con que reconoció que "
+        "ahí había algo importante», porque después no volvió a mencionarla.",
+        [
+            ("La guardó en el camión, junto con el resto de las cosas", "El relato marca justamente lo contrario: no la mandó en el camión."),
+            ("Se la entregó de inmediato a la narradora, que tenía trece", "La caja le llega a la narradora mucho después, tras la muerte de la abuela."),
+            ("La dejó en la casa de Talca junto a la máquina de coser", "La máquina apareció en el desarme; la caja se la llevó su madre."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_interpretar", "medio",
+        "¿Qué recurso emplea el relato cuando la abuela cuenta lo que su propia "
+        "abuela le dijo?",
+        "Un relato dentro del relato, con una historia enmarcada en otra",
+        "La narradora cuenta una escena en la cocina; dentro de esa escena, la "
+        "abuela cuenta otra escena —«mi abuela me sentó donde estás sentada tú»— y "
+        "dentro de esta última se citan las palabras de la bisabuela.\n\nEl cuento "
+        "queda armado como una caja dentro de otra caja, que es exactamente lo que "
+        "ocurre con el sobre dentro del cajón.",
+        [
+            ("Una historia paralela que avanza junto con la principal", "No hay dos líneas simultáneas: hay una escena contenida en otra."),
+            ("Un narrador en tercera persona que observa desde afuera", "Todo el relato está narrado en primera persona por la bisnieta."),
+            ("Un salto al futuro que adelanta el final de la historia", "El relato retrocede al pasado familiar; no adelanta su desenlace."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_interpretar", "medio",
+        "¿Qué revela que la abuela contara dos versiones distintas de la misma "
+        "historia?",
+        "Que la decisión se mantuvo aunque cambiaran las razones",
+        "La narradora lo explica cuando presenta las dos versiones: la abuela «las "
+        "sostenía sin ninguna incomodidad», y contestaba «que la gente cambia de "
+        "razones y no por eso cambia de decisión».\n\nLa contradicción, entonces, "
+        "es solo aparente: lo que se transmite de una generación a otra no es el "
+        "motivo, sino el gesto de no abrir.",
+        [
+            ("Que la abuela mentía sobre lo que le habían contado", "El relato no la acusa de mentir: presenta las dos versiones como posibles."),
+            ("Que la bisabuela nunca le explicó por qué la guardó", "Sí se lo explicó: la versión de la cocina reproduce sus palabras."),
+            ("Que la familia discutía sobre el contenido de la carta", "No hay discusión familiar: hay un acuerdo que nadie rompe."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_interpretar", "dificil",
+        "¿Por qué la narradora se detiene cuando intenta abrir el sobre a los "
+        "quince años?",
+        "Porque abrirlo convertiría la historia en un dato decepcionante",
+        "Ella misma descarta la explicación piadosa —«No fue por respeto»— y "
+        "entrega la verdadera: entendió que «la historia que me habían contado se "
+        "iba a convertir en otra cosa —en un dato— y que el dato iba a ser, con "
+        "toda probabilidad, decepcionante».\n\nEs la misma sospecha que años "
+        "después la lleva a imaginar una hoja en blanco o tres líneas sobre el "
+        "clima del norte.",
+        [
+            ("Porque temía que su madre la sorprendiera abriéndolo", "La madre se entera igual, y el relato dice que no hubo enojo."),
+            ("Porque el vapor de la tetera dañaba el papel del sobre", "El método funcionaba: alcanzó a levantar una punta de la solapa."),
+            ("Porque prefería respetar la voluntad de su bisabuela", "El relato descarta esa lectura de forma expresa en la misma frase."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_interpretar", "dificil",
+        "¿Qué sentido va tomando el sobre a lo largo del relato?",
+        "Deja de ser un objeto heredado y pasa a ser una pregunta conservada",
+        "Al principio el sobre es una cosa entre otras cosas de una caja. Al final "
+        "la narradora lo define de otro modo: durante noventa años, cuatro mujeres "
+        "«tuvieron a mano una respuesta y prefirieron seguir teniendo una "
+        "pregunta».\n\nLo que se hereda, entonces, no es el papel: es la decisión "
+        "de no cambiarlo por una certeza.",
+        [
+            ("Se convierte en la prueba de una mentira familiar antigua", "El relato no concluye que haya mentira: ofrece tres explicaciones posibles."),
+            ("Pasa de ser un recuerdo íntimo a ser un objeto de valor", "Nadie le atribuye valor material al sobre en ningún momento."),
+            ("Se transforma en la carga que obliga a la narradora a abrirlo", "Al final no lo abre, y describe esa decisión sin sentirla como una carga."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_evaluar", "medio",
+        "¿Qué actitud asume la narradora frente al hallazgo de la letra del "
+        "cuaderno?",
+        "Prudente, pues enumera explicaciones posibles sin elegir ninguna",
+        "En vez de anunciar un descubrimiento, abre el abanico: «Pudo copiar la "
+        "dirección», «Pudo escribirla ella y pedirle a alguien que la despachara», "
+        "«Pudo, también, haberse escrito la carta a sí misma».\n\nY explica por qué "
+        "no necesita decidir: «Cualquiera de las tres deja intacto lo esencial».",
+        [
+            ("Triunfal, pues cree haber resuelto por fin el misterio", "No lo da por resuelto: deja las tres explicaciones abiertas."),
+            ("Escéptica, pues duda de que las dos letras se parezcan", "Describe tres coincidencias concretas y no pone en duda el parecido."),
+            ("Indignada, pues se siente engañada por su bisabuela", "No hay reproche: ni siquiera afirma que haya habido engaño."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_evaluar", "dificil",
+        "¿Qué elemento permite sostener que el cuento trata sobre lo que una "
+        "familia elige no saber?",
+        "Que cuatro mujeres tuvieran la respuesta a mano y no la usaran",
+        "Esa es la formulación que el propio relato entrega al cerrar el episodio "
+        "del cuaderno: durante noventa años «cuatro mujeres tuvieron a mano una "
+        "respuesta y prefirieron seguir teniendo una pregunta».\n\nLa frase de la "
+        "madre apunta a lo mismo desde otro ángulo: no hay nadie escondiendo nada, "
+        "hay un acuerdo sostenido por varias generaciones.",
+        [
+            ("Que el hombre que escribió la carta nunca regresara del norte", "Su ausencia origina la espera, pero no dice nada sobre elegir no saber."),
+            ("Que la casa de Talca se vendiera cuando la narradora tenía trece", "La venta explica cómo viajó la caja, no la decisión de no abrirla."),
+            ("Que la abuela contara la historia mientras pelaba arvejas", "Ese detalle describe su manera de narrar, no el acuerdo familiar."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_evaluar", "dificil",
+        "¿Qué efecto produce que el relato termine con «Ahora hay una versión más»?",
+        "Muestra que la narradora se suma a la cadena que venía contando",
+        "Durante todo el cuento la narradora ha registrado versiones ajenas: la de "
+        "la cocina, la del almuerzo, las que ella misma imaginó a cada edad. El "
+        "cierre convierte su propio texto en una de ellas.\n\nEncaja con la frase "
+        "anterior —escribir es «lo que hacemos en mi familia con las cosas que no "
+        "resolvemos»—: en vez de terminar la historia, la continúa.",
+        [
+            ("Anuncia que la narradora terminará abriendo el sobre", "El relato acaba con el sobre de vuelta en la caja y la tapa cerrada."),
+            ("Revela que las versiones anteriores eran todas falsas", "Nunca se declara falsa ninguna: se las presenta como igualmente posibles."),
+            ("Sugiere que la familia dejará de contar esta historia", "Ocurre lo contrario: la narradora acaba de agregar un relato más."),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_evaluar", "medio",
+        "¿Qué distingue un secreto de un acuerdo, según la frase que dice la madre?",
+        "Que en el acuerdo nadie esconde nada y todos lo sostienen",
+        "La madre lo formula así: «Un secreto es algo que alguien esconde. Esto es "
+        "un acuerdo».\n\nEl relato lo confirma con los hechos: la existencia de la "
+        "carta se cuenta de una generación a otra, y lo que se transmite no es una "
+        "ocultación sino una decisión compartida de no abrirla.",
+        [
+            ("Que el secreto se hereda y el acuerdo se firma por escrito", "En el relato no hay nada escrito: el acuerdo se sostiene con gestos."),
+            ("Que el secreto lo conoce la familia entera y el acuerdo no", "Es al revés: lo que la familia entera conoce es el acuerdo."),
+            ("Que el acuerdo obliga a la narradora a no abrir el sobre", "Cuando la caja llega a sus manos, el relato subraya que ya nadie la obliga."),
+        ],
+    ),
     # ---------- 'Volver a Sub terra' ----------
     _ql(
         "resena_sub_terra", "lec_localizar", "facil",
