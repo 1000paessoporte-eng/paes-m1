@@ -81,7 +81,10 @@ const FEATURES_BASE = [
 const DATOS = [
   { label: "Tiempo real de la prueba", icon: ClockIcon },
   { label: "Puntaje en escala 100–1000", icon: TargetIcon },
-  { label: "Gratis mientras estamos en beta", icon: SparkIcon },
+  // Decía "Gratis mientras estamos en beta", y dejó de ser cierto el día que
+  // Pro pasó a cobrarse: prometía que TODO era gratis. Lo que sí es verdad, y
+  // es lo que importa para entrar, es que se empieza sin pagar ni dar tarjeta.
+  { label: "Empiezas gratis, sin tarjeta", icon: SparkIcon },
 ] as const;
 
 // Las cinco pruebas, en el orden en que las rinde un postulante. Rotan dentro
@@ -168,7 +171,9 @@ export function LandingPublica({
               PAES · Las cinco pruebas · Admisión 2027
             </span>
 
-            <h1 className="text-5xl font-bold tracking-tight text-balance sm:text-6xl">
+            {/* text-4xl en móvil: a 48px la palabra más larga del titular no cabe
+                en un teléfono. */}
+            <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Ensayos de{" "}
               <TituloRotativo palabras={PRUEBAS_ROTATIVAS} />
             </h1>

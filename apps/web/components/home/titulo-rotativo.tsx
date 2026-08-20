@@ -14,6 +14,15 @@ import { useEffect, useState } from "react";
  * La primera palabra se pinta en el servidor, así que el titular está completo
  * y legible aunque el JavaScript no llegue nunca. Para quien pidió menos
  * movimiento, se queda fija en esa primera.
+ *
+ * NO lleva `whitespace-nowrap`. Lo llevaba, y en un teléfono de 390px el
+ * titular medía 440: "Competencia Lectora" no cabe en una línea a ese tamaño y
+ * salía cortado por los dos lados. Era lo PRIMERO que veía cualquiera que
+ * llegara desde el teléfono, que es de donde va a llegar la publicidad.
+ *
+ * Dejarlas envolver no reintroduce el salto que el nowrap evitaba: el ancho y
+ * el alto los sigue fijando el duplicado invisible de la palabra más larga, y
+ * ninguna otra ocupa más líneas que ella.
  */
 
 const INTERVALO_MS = 2400;
@@ -37,14 +46,14 @@ export function TituloRotativo({ palabras }: { palabras: string[] }) {
 
   return (
     <span className="relative inline-grid align-bottom">
-      <span aria-hidden className="invisible col-start-1 row-start-1 whitespace-nowrap">
+      <span aria-hidden className="invisible col-start-1 row-start-1">
         {masLarga}
       </span>
       <span className="col-start-1 row-start-1 overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={palabras[i]}
-            className="texto-marca inline-block whitespace-nowrap"
+            className="texto-marca inline-block"
             initial={quieto ? false : { y: "0.9em", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={quieto ? undefined : { y: "-0.9em", opacity: 0 }}
