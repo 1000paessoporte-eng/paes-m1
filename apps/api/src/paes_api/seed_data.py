@@ -21383,6 +21383,103 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "energia_vertida",
+        "title": "La energía que sobra al mediodía",
+        "kind": "no_literario",
+        "source_note": (
+            "Reportaje original de 1000paes, elaborado a partir de cifras públicas del "
+            "sector eléctrico chileno correspondientes al año 2025."
+        ),
+        "body": (
+            "Hay una hora del día, en algún punto entre las once de la mañana y las "
+            "tres de la tarde, en que Chile produce más electricidad limpia de la "
+            "que puede usar. No es una figura retórica ni una proyección optimista: "
+            "es una operación concreta que ocurre casi todos los días del año. En "
+            "esa franja, el sistema eléctrico le ordena a decenas de plantas "
+            "solares del norte que produzcan menos de lo que podrían, o "
+            "directamente que dejen de inyectar. La operación tiene un nombre "
+            "técnico y poco conocido: vertimiento.\n\n"
+            "Durante 2025 se vertieron alrededor de 6.200 gigawatts-hora de "
+            "generación renovable. Es una cifra difícil de imaginar, así que "
+            "conviene una referencia: equivale a varias veces el consumo eléctrico "
+            "anual de una ciudad grande. Y creció respecto del año anterior, en "
+            "torno a un 8%, pese a que el país lleva una década instalando "
+            "capacidad para producir exactamente esa energía.\n\n"
+            "La primera reacción ante el dato suele ser la sospecha. Si la energía "
+            "existe, si es limpia y si su costo de producción es prácticamente cero "
+            "una vez instalado el panel, ¿por qué se bota? La respuesta no está en "
+            "la generación, sino en dos cosas que rara vez aparecen en la "
+            "conversación pública: dónde está el sol y a qué hora ocurre.\n\n"
+            "**El problema del dónde**\n\n"
+            "El desierto de Atacama recibe más de 3.000 kilowatts-hora por metro "
+            "cuadrado al año, una radiación que no tiene comparación en el planeta. "
+            "Ahí se instaló la mayor parte de los cerca de treinta por ciento de "
+            "capacidad solar del sistema, concentrada en las regiones de "
+            "Antofagasta y Atacama. El problema es que la electricidad se consume "
+            "donde vive y trabaja la gente, y eso ocurre unos mil quinientos "
+            "kilómetros más al sur.\n\n"
+            "Entre un punto y otro hay cables, pero no los suficientes. Cuando la "
+            "generación del norte supera lo que las líneas pueden transportar, el "
+            "excedente no tiene a dónde ir: la electricidad no se puede acumular en "
+            "el cable como el agua en una represa. Si nadie la consume en ese "
+            "instante, hay que dejar de producirla. La obra llamada a resolver ese "
+            "cuello de botella —una línea de mil cuatrocientos kilómetros entre "
+            "Kimal y Lo Aguirre— no entrará en servicio antes de 2029.\n\n"
+            "**El problema del cuándo**\n\n"
+            "El segundo obstáculo es más simple de entender y más difícil de "
+            "resolver. El sol produce cuando el sol está, y el consumo eléctrico de "
+            "un país no sigue esa curva: sube al final de la tarde, cuando la gente "
+            "vuelve a su casa, prende luces, cocina y carga aparatos. Justo "
+            "entonces la generación solar cae a cero. El resultado es una paradoja "
+            "diaria: sobra energía al mediodía y falta a las nueve de la noche.\n\n"
+            "Ese desajuste tiene una consecuencia económica que suena absurda la "
+            "primera vez que se escucha. En las horas de máxima generación, el "
+            "precio de la electricidad en el mercado puede caer a cero, y en "
+            "ocasiones ponerse negativo. Es decir, hay momentos en que producir "
+            "energía cuesta dinero en vez de rendirlo. Para una planta solar, la "
+            "consecuencia práctica es que buena parte de sus horas de sol no genera "
+            "ingreso alguno.\n\n"
+            "**Lo que ya está cambiando**\n\n"
+            "La solución técnica al problema del cuándo se llama almacenamiento, y "
+            "en Chile ya empezó a operar. Los sistemas de baterías guardan energía "
+            "en las horas de exceso y la devuelven al final de la tarde, que es "
+            "exactamente donde el sistema la necesita. Su efecto se puede medir: "
+            "sin las baterías que ya funcionaban en 2025, el vertimiento de ese año "
+            "no habría crecido un 8% sino cerca de un 43%, y habría llegado a unos "
+            "8.000 gigawatts-hora en lugar de 6.200.\n\n"
+            "Vale la pena detenerse en ese cálculo, porque cambia por completo la "
+            "lectura de la cifra inicial. Un titular que informe que el vertimiento "
+            "aumentó está diciendo la verdad. Pero el mismo dato, puesto junto al "
+            "escenario sin baterías, dice algo bastante distinto: que el problema "
+            "creció mucho menos de lo que habría crecido sin intervención. Son dos "
+            "interpretaciones legítimas del mismo número, y la diferencia entre "
+            "ambas es el punto de comparación que se elige.\n\n"
+            "El almacenamiento, con todo, no resuelve el problema del dónde. Una "
+            "batería instalada en el desierto puede correr la energía desde el "
+            "mediodía hasta la noche, pero no puede moverla mil quinientos "
+            "kilómetros al sur: si la línea está saturada, seguirá estándolo a las "
+            "nueve de la tarde. Por eso los dos remedios no son intercambiables ni "
+            "compiten entre sí. Uno mueve la energía en el tiempo y el otro en el "
+            "espacio, y el sistema necesita ambos.\n\n"
+            "**Un problema de éxito**\n\n"
+            "Conviene, por último, no confundir la naturaleza del asunto. El "
+            "vertimiento no es la señal de que la transición energética fracasó. Es "
+            "la señal de que una parte de ella avanzó mucho más rápido que la otra: "
+            "se construyeron plantas a una velocidad que la red de transmisión y el "
+            "almacenamiento no alcanzaron a seguir. Un país sin energía solar no "
+            "vierte nada, y eso no lo convierte en un mejor ejemplo.\n\n"
+            "La pregunta que queda abierta no es si conviene seguir instalando "
+            "paneles, sino en qué orden se hacen las cosas cuando un sistema se "
+            "transforma. Construir generación es rápido, barato y visible. "
+            "Construir líneas de transmisión es lento, caro y conflictivo: "
+            "atraviesa territorios, requiere permisos y enfrenta oposiciones "
+            "locales que la instalación de un panel en el desierto no enfrenta. Que "
+            "lo primero haya corrido más rápido que lo segundo no es un accidente. "
+            "Es lo que ocurre cuando cada parte del sistema avanza a la velocidad "
+            "que le permiten sus propios obstáculos."
+        ),
+    },
+    {
         "key": "el_pasaje",
         "title": "El pasaje",
         "kind": "literario",
@@ -23368,6 +23465,160 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La energía que sobra al mediodía' ----------
+    _ql(
+        "energia_vertida", "lec_localizar", "facil",
+        "Según el reportaje, ¿qué es el vertimiento?",
+        "La orden que recibe una planta de producir menos energía de la que podría, "
+        "o de dejar de inyectarla",
+        "El texto define el término al final del primer párrafo, después de "
+        "describir la operación: el sistema «le ordena a decenas de plantas solares "
+        "del norte que produzcan menos de lo que podrían, o directamente que dejen "
+        "de inyectar. La operación tiene un nombre técnico y poco conocido: "
+        "vertimiento».\n\nLa definición está explícita y llega justo después del "
+        "ejemplo.",
+        [
+            ("La pérdida de energía que se produce al transportarla por líneas muy largas", "El texto habla de líneas saturadas, no de pérdidas en el transporte."),
+            ("La caída del precio de la electricidad en las horas de mayor generación", "Ese es un efecto económico que el reportaje trata aparte, en la sección del cuándo."),
+            ("El almacenamiento de energía en baterías para usarla más tarde", "Eso es justamente lo contrario: el almacenamiento es uno de los remedios al vertimiento."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_localizar", "medio",
+        "De acuerdo con el reportaje, ¿cuándo entrará en servicio la línea entre "
+        "Kimal y Lo Aguirre?",
+        "No antes de 2029",
+        "El dato cierra la sección sobre el problema del dónde: la obra «no entrará "
+        "en servicio antes de 2029».\n\nEl texto la describe además como la obra "
+        "«llamada a resolver ese cuello de botella», de mil cuatrocientos "
+        "kilómetros.",
+        [
+            ("En 2025, junto con los primeros sistemas de baterías", "En 2025 ya operaban baterías, pero la línea no: el texto las presenta como remedios distintos y en tiempos distintos."),
+            ("Ya está en servicio y por eso el vertimiento creció solo un 8%", "El crecimiento moderado se atribuye a las baterías, no a la línea, que aún no existe."),
+            ("El reportaje no lo precisa", "Sí lo precisa: entrega el año de forma explícita."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_localizar", "medio",
+        "Según el reportaje, ¿qué habría ocurrido en 2025 si no hubieran existido "
+        "las baterías ya instaladas?",
+        "El vertimiento habría crecido cerca de un 43% y habría llegado a unos "
+        "8.000 gigawatts-hora",
+        "El texto entrega el contrafactual con sus dos cifras: «el vertimiento de "
+        "ese año no habría crecido un 8% sino cerca de un 43%, y habría llegado a "
+        "unos 8.000 gigawatts-hora en lugar de 6.200».\n\nHay que distinguir el "
+        "escenario real del hipotético, porque el párrafo presenta ambos.",
+        [
+            ("El vertimiento habría sido de 6.200 gigawatts-hora igualmente", "Esa es la cifra que efectivamente ocurrió, con baterías en operación."),
+            ("El precio de la electricidad no habría llegado a ser negativo", "El texto no vincula las baterías con el precio negativo en esa parte."),
+            ("La línea Kimal-Lo Aguirre habría entrado en servicio antes", "El reportaje no relaciona las baterías con el calendario de la línea."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_interpretar", "medio",
+        "¿Cómo se organiza la explicación que el reportaje da sobre las causas del "
+        "vertimiento?",
+        "Distingue dos causas —dónde está el sol y a qué hora produce— y les dedica "
+        "una sección a cada una",
+        "El texto anuncia la estructura antes de desarrollarla: la respuesta está "
+        "en «dos cosas que rara vez aparecen en la conversación pública: dónde está "
+        "el sol y a qué hora ocurre». Enseguida vienen los subtítulos «El problema "
+        "del dónde» y «El problema del cuándo».\n\nReconocer cómo se ordenan las "
+        "ideas de un texto es una tarea de interpretar, y acá el propio reportaje "
+        "entrega el índice.",
+        [
+            ("Presenta las causas en orden de importancia, de la más grave a la menos grave", "El texto nunca las jerarquiza: las presenta como dos problemas distintos, y al final dice que el sistema necesita resolver ambos."),
+            ("Expone primero las soluciones y después los problemas que las originaron", "El orden es el inverso: las soluciones aparecen en la sección «Lo que ya está cambiando»."),
+            ("Compara la situación de Chile con la de otros países que enfrentan lo mismo", "No hay ninguna comparación internacional en el reportaje."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_interpretar", "dificil",
+        "¿Qué idea sostiene la afirmación de que «la electricidad no se puede "
+        "acumular en el cable como el agua en una represa»?",
+        "Que la energía debe consumirse en el mismo instante en que se produce, y "
+        "por eso el excedente obliga a dejar de generar",
+        "La comparación explica por qué la saturación de las líneas se traduce en "
+        "vertimiento y no en simple espera. El texto lo remata: «si nadie la "
+        "consume en ese instante, hay que dejar de producirla».\n\nLa imagen de la "
+        "represa está elegida por contraste: sirve justamente para señalar lo que "
+        "la electricidad NO permite hacer.",
+        [
+            ("Que las represas son una forma de almacenamiento más eficiente que las baterías", "El reportaje no compara tecnologías de almacenamiento: usa la represa solo como término de contraste."),
+            ("Que las líneas de transmisión chilenas están en mal estado", "El problema que plantea el texto es de capacidad y de cantidad, no de estado de conservación."),
+            ("Que conviene construir represas en el norte para aprovechar el excedente", "El reportaje no propone nada parecido; sus remedios son la transmisión y las baterías."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_interpretar", "dificil",
+        "Según el reportaje, ¿por qué el almacenamiento no reemplaza a las líneas "
+        "de transmisión?",
+        "Porque una batería mueve la energía en el tiempo, pero no en el espacio",
+        "El texto lo formula con esa distinción exacta: una batería «puede correr "
+        "la energía desde el mediodía hasta la noche, pero no puede moverla mil "
+        "quinientos kilómetros al sur: si la línea está saturada, seguirá estándolo "
+        "a las nueve de la tarde». Y concluye: «uno mueve la energía en el tiempo y "
+        "el otro en el espacio».\n\nLa pregunta exige conectar cada remedio con el "
+        "problema que resuelve, que es la estructura completa del reportaje.",
+        [
+            ("Porque las baterías son mucho más caras que una línea de transmisión", "El texto no compara costos entre ambas soluciones."),
+            ("Porque las baterías todavía no están instaladas en cantidad suficiente", "El reportaje muestra que las existentes ya tuvieron un efecto grande; el punto no es la cantidad sino qué problema resuelven."),
+            ("Porque la línea Kimal-Lo Aguirre volverá innecesario el almacenamiento", "El texto sostiene lo contrario: «el sistema necesita ambos»."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_interpretar", "dificil",
+        "¿Qué se propone el reportaje al señalar que un titular sobre el aumento "
+        "del vertimiento «está diciendo la verdad» pero el mismo dato junto al "
+        "escenario sin baterías «dice algo bastante distinto»?",
+        "Mostrar que un dato admite lecturas opuestas según el punto de comparación "
+        "que se elija",
+        "El texto lo dice de forma explícita: «son dos interpretaciones legítimas "
+        "del mismo número, y la diferencia entre ambas es el punto de comparación "
+        "que se elige».\n\nNo acusa a nadie de mentir: distingue entre la exactitud "
+        "de un dato y la conclusión que se saca de él, que son cosas separables.",
+        [
+            ("Denunciar que la prensa manipula deliberadamente las cifras del sector", "El reportaje reconoce que el titular «está diciendo la verdad»: no imputa manipulación."),
+            ("Sostener que la cifra de 6.200 gigawatts-hora está mal calculada", "En ningún momento discute la exactitud del dato, solo su interpretación."),
+            ("Demostrar que el vertimiento en realidad disminuyó durante 2025", "El texto afirma que creció; lo que discute es cuánto habría crecido sin baterías."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_evaluar", "dificil",
+        "¿Qué postura adopta el reportaje frente a la idea de que el vertimiento "
+        "demuestra el fracaso de la transición energética?",
+        "La rechaza: sostiene que es la señal de que una parte avanzó más rápido "
+        "que la otra",
+        "El texto la enfrenta de forma directa: «el vertimiento no es la señal de "
+        "que la transición energética fracasó. Es la señal de que una parte de ella "
+        "avanzó mucho más rápido que la otra». Y cierra el argumento con una frase "
+        "que desarma la lectura contraria: «un país sin energía solar no vierte "
+        "nada, y eso no lo convierte en un mejor ejemplo».\n\nCalificar la posición "
+        "del emisor frente a una interpretación ajena es una tarea de evaluar.",
+        [
+            ("La comparte, y por eso propone frenar la instalación de nuevas plantas", "El reportaje aclara al final que la pregunta abierta «no es si conviene seguir instalando paneles»."),
+            ("La considera un asunto técnico sobre el que no corresponde opinar", "Opina con claridad: dedica una sección completa a refutarla."),
+            ("La acepta parcialmente, reconociendo que la transición debió ser más lenta", "No plantea que debió ser más lenta, sino que sus partes avanzan a velocidades distintas por razones estructurales."),
+        ],
+    ),
+    _ql(
+        "energia_vertida", "lec_evaluar", "medio",
+        "Según el reportaje, ¿por qué la construcción de líneas de transmisión "
+        "avanza más lento que la de plantas solares?",
+        "Porque atraviesa territorios, requiere permisos y enfrenta oposiciones "
+        "locales que instalar un panel en el desierto no enfrenta",
+        "El cierre entrega la explicación completa: construir generación «es "
+        "rápido, barato y visible», mientras que construir transmisión «es lento, "
+        "caro y conflictivo: atraviesa territorios, requiere permisos y enfrenta "
+        "oposiciones locales».\n\nY agrega la conclusión que da sentido al "
+        "reportaje entero: «que lo primero haya corrido más rápido que lo segundo "
+        "no es un accidente».",
+        [
+            ("Porque el Estado ha priorizado la inversión en generación por sobre la transmisión", "El texto no atribuye el desfase a una decisión de prioridades, sino a los obstáculos propios de cada obra."),
+            ("Porque la tecnología de transmisión es más reciente y está menos desarrollada", "El reportaje no plantea ningún problema tecnológico: los obstáculos que menciona son territoriales y administrativos."),
+            ("Porque las empresas obtienen mayores ganancias construyendo plantas solares", "La rentabilidad comparada no se discute; de hecho el texto señala que muchas horas de sol no generan ingreso alguno."),
+        ],
+    ),
     # ---------- 'El pasaje' ----------
     _ql(
         "el_pasaje", "lec_localizar", "facil",
