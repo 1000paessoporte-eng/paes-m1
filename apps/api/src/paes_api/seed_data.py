@@ -21383,6 +21383,183 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "al_reves",
+        "title": "Al revés",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes son "
+            "ficticios."
+        ),
+        "body": (
+            "**Al revés**\n\n"
+            "**Hoy**\n\n"
+            "Se encuentran en el pasillo tres de un supermercado, frente a los "
+            "detergentes. Rubén alcanza a verlo primero y tiene tiempo de decidir. "
+            "Lo que decide es mirar la etiqueta de un envase que ya conoce, con "
+            "mucha atención, hasta que el otro carro pasa por detrás. No fue un "
+            "desaire: fue un cálculo de cuatro segundos sobre lo que costaría "
+            "saludar. Después, en la fila de la caja, se pregunta si Simón lo vio y "
+            "llega a la conclusión de que sí. Guarda el pan y no lo comenta con "
+            "nadie.\n\n"
+            "Después piensa, empujando el carro, que hace nueve años ese mismo "
+            "cálculo habría sido imposible. Que si en ese entonces alguien le "
+            "hubiera contado esta escena —el pasillo, el envase, los cuatro "
+            "segundos— él habría dicho que no, que jamás, con la seguridad "
+            "tranquila con que uno descarta las cosas que todavía no le pasan.\n\n"
+            "**Ocho meses antes**\n\n"
+            "La conversación dura veinte minutos y no se levanta la voz en ningún "
+            "momento, lo que después les parecerá a los dos la parte más rara. "
+            "Simón dice que el problema no es la plata. Rubén responde que si el "
+            "problema no es la plata, entonces que le explique cuál es. Simón lo "
+            "intenta dos veces y en la segunda usa la palabra «siempre», que es la "
+            "palabra que arruina estas conversaciones, y ahí Rubén deja de escuchar "
+            "y empieza a preparar lo que va a decir. Se despiden en la puerta. Los "
+            "dos piensan que van a hablar la próxima semana.\n\n"
+            "Ninguno de los dos dice, en esos veinte minutos, la única frase que "
+            "habría servido, que es que se echan de menos. Rubén la piensa dos "
+            "veces y las dos veces le parece que no viene al caso, porque están "
+            "discutiendo un asunto concreto y esa frase suena a otra conversación. "
+            "Efectivamente era otra conversación. Era la que había que tener.\n\n"
+            "**Un año y medio antes**\n\n"
+            "Rubén pide el préstamo un martes, por teléfono, con esa voz demasiado "
+            "liviana de quien ensayó la frase. Simón dice que sí antes de que "
+            "termine de explicarle para qué. No firman nada, porque firmar habría "
+            "sido ofensivo, y esa decisión —que en ese momento los dos sienten como "
+            "una muestra de confianza— es la que después va a permitir que cada uno "
+            "recuerde una cifra distinta y un plazo distinto, y que ninguno de los "
+            "dos esté mintiendo.\n\n"
+            "Esa noche Simón le cuenta a su mujer que prestó plata y ella pregunta "
+            "cuánto y él lo dice, y hay un silencio corto que él decide no "
+            "interpretar. Rubén, en su casa, hace una lista de los meses en que va "
+            "a poder devolverlo. La lista es optimista y él lo sabe mientras la "
+            "escribe, pero la escribe igual, porque escribirla lo tranquiliza y "
+            "porque en ese momento le parece imposible fallarle a Simón.\n\n"
+            "**Cuatro años antes**\n\n"
+            "El taller funciona en una bodega arrendada, con dos mesones y una "
+            "estufa que no da abasto. Trabajan sábados. Rubén tiene la mano para el "
+            "trabajo fino y Simón tiene la paciencia para los clientes, y esa "
+            "división ocurre sola, sin que la conversen, como ocurren las cosas que "
+            "funcionan. En el peor invierno, cuando llevan tres meses sin entregar "
+            "un solo pedido, Simón vende su moto y no se lo dice a nadie. Rubén lo "
+            "sabe igual, porque un día deja de escuchar la moto en la calle y no "
+            "pregunta.\n\n"
+            "Es la época en que se creen invencibles, aunque ninguno de los dos "
+            "usaría esa palabra. Almuerzan lo mismo todos los días, se pelean por "
+            "asuntos sin importancia y se arreglan solos en el camino de vuelta. "
+            "Cuando por fin entregan el pedido grande, en septiembre, se toman una "
+            "foto adelante de la bodega con las manos sucias. Esa foto va a seguir "
+            "existiendo después, en el teléfono de los dos, y ninguno la va a "
+            "borrar.\n\n"
+            "**Nueve años antes**\n\n"
+            "Es el primer día del curso de soldadura y hay veintidós inscritos. A "
+            "Rubén le toca al lado de un tipo que llegó tarde, que no trajo lápiz y "
+            "que le pide uno con una sonrisa que hace imposible negárselo. Al final "
+            "de la clase, el tipo le devuelve el lápiz y le dice que se lo va a "
+            "pagar con una cerveza. Rubén le contesta que un lápiz no vale una "
+            "cerveza. El otro dice que por eso mismo, que salgan ganando los dos, y "
+            "se ríen, y salen a la calle donde ya está oscuro y hace frío, y "
+            "caminan hacia el paradero hablando de nada, con toda la cosa por "
+            "delante.\n\n"
+            "En el paradero resulta que toman micros distintas y que ninguno de los "
+            "dos vive cerca del otro. Se dan la mano antes de subir, con esa "
+            "formalidad rara de los primeros días. Rubén se sienta al fondo, mira "
+            "por la ventana y no piensa absolutamente nada sobre lo que acaba de "
+            "ocurrir, porque no acaba de ocurrir nada: un tipo le pidió un lápiz."
+        ),
+    },
+    {
+        "key": "origen_escritura",
+        "title": "La escritura no se inventó para escribir",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La antigüedad y el carácter administrativo "
+            "de las tablillas mesopotámicas, la hipótesis de las fichas de arcilla y "
+            "las invenciones independientes de la escritura se presentan según lo "
+            "establecido por la investigación, señalando los puntos en que existe "
+            "discusión."
+        ),
+        "body": (
+            "**La escritura no se inventó para escribir**\n\n"
+            "Si a alguien le preguntan para qué se inventó la escritura, la "
+            "respuesta más probable tiene que ver con contar historias, transmitir "
+            "sabiduría o dejar constancia de grandes hechos. La respuesta que dan "
+            "las tablillas más antiguas es bastante menos elevada: la escritura se "
+            "inventó para llevar la cuenta de cuánta cebada había en un depósito.\n\n"
+            "Los documentos escritos más antiguos que se conocen provienen del sur "
+            "de Mesopotamia y datan de alrededor del año 3300 antes de nuestra era. "
+            "No son poemas ni oraciones ni leyes. Son listas: cantidades de grano, "
+            "cabezas de ganado, raciones entregadas a trabajadores, nombres de "
+            "funcionarios responsables. Inventarios. La primera literatura conocida "
+            "es mucho posterior, y eso significa que durante siglos la humanidad "
+            "tuvo escritura y la usó, casi exclusivamente, para administrar "
+            "bodegas.\n\n"
+            "La explicación más difundida sobre cómo se llegó ahí es igual de "
+            "prosaica. Mucho antes de las tablillas, en esa misma región se usaban "
+            "pequeñas fichas de arcilla con formas distintas para representar "
+            "mercancías: una forma para una medida de grano, otra para una oveja. "
+            "Para cerrar un envío, las fichas se guardaban dentro de una bola de "
+            "arcilla sellada, de modo que quien recibía la carga podía romperla y "
+            "comprobar que coincidiera con lo entregado. El problema evidente es "
+            "que, para saber qué había adentro, había que destruir el envoltorio. "
+            "La solución fue marcar en la superficie de la bola una impresión de "
+            "cada ficha que llevaba dentro.\n\n"
+            "Y ahí ocurrió el paso decisivo, que fue un paso de pura pereza. Si las "
+            "marcas de afuera ya dicen lo que hay adentro, las fichas dejan de ser "
+            "necesarias. Y si las fichas no son necesarias, tampoco hace falta que "
+            "el soporte sea una bola: basta una tablilla plana con las marcas. Lo "
+            "que quedó fue un objeto que representa cantidades y cosas mediante "
+            "signos convencionales sobre una superficie. Eso es escritura.\n\n"
+            "Conviene subrayar lo que este relato tiene de raro. Nadie se propuso "
+            "inventar la escritura. No hay un inventor, ni un momento, ni un "
+            "propósito declarado. Hay un procedimiento contable que se fue "
+            "simplificando durante generaciones hasta convertirse, sin que nadie lo "
+            "decidiera, en otra cosa más poderosa que el problema que venía a "
+            "resolver.\n\n"
+            "Un detalle refuerza el punto: los signos más antiguos no anotan "
+            "sonidos, anotan cosas y cantidades. La posibilidad de escribir el "
+            "nombre de una persona, o cualquier palabra, llegó después, cuando "
+            "alguien empezó a usar los signos por cómo sonaban y no por lo que "
+            "significaban. Recién en ese momento la escritura pudo registrar una "
+            "lengua completa, con sus verbos y sus dudas, en vez de una lista de "
+            "existencias.\n\n"
+            "Escribir, además, se volvió un oficio. Manejar aquellos signos exigía "
+            "años de entrenamiento, y siglos más tarde existieron escuelas "
+            "dedicadas a formar escribas. De esas escuelas se conservan tablillas "
+            "de estudiantes: ejercicios de copia, listas de palabras repetidas una "
+            "y otra vez, y también quejas sobre el maestro y sobre lo mucho que "
+            "había que memorizar. Es una de las pocas rendijas por las que se cuela "
+            "algo que no es administración, y llegó hasta nosotros por una razón "
+            "banal: eran las planas de un alumno, hechas en el mismo barro que todo "
+            "lo demás.\n\n"
+            "Vale la pena agregar que esto ocurrió más de una vez. La escritura se "
+            "inventó de manera independiente al menos tres veces en la historia "
+            "humana: en Mesopotamia, en China y en Mesoamérica, en momentos y "
+            "lugares sin contacto entre sí. El caso egipcio se discute, porque no "
+            "está claro si fue independiente o si conoció el ejemplo mesopotámico. "
+            "Que el invento haya aparecido varias veces por separado sugiere que no "
+            "fue una casualidad afortunada, sino la respuesta razonable a un "
+            "problema que aparece siempre que una sociedad crece: administrar más "
+            "de lo que una persona puede recordar.\n\n"
+            "Hay, por último, una consecuencia incómoda para quien estudia el "
+            "pasado. Lo que conservamos de aquellas sociedades está enormemente "
+            "sesgado hacia lo que se escribía en materiales duros y sobre asuntos "
+            "administrativos. Sabemos cuántas medidas de cebada recibió un "
+            "trabajador de Uruk y no sabemos casi nada de lo que cantaba mientras "
+            "trabajaba, porque las canciones no se guardaban en arcilla. La imagen "
+            "que tenemos de esos siglos no es la imagen de lo que ocurrió: es la "
+            "imagen de lo que se registró, y se registró aquello que a alguien le "
+            "convenía verificar después.\n\n"
+            "Es un buen recordatorio, y no solo para la arqueología. La cantidad de "
+            "cosas que hoy quedan documentadas —transacciones, ubicaciones, "
+            "mensajes, recorridos— es incomparablemente mayor, y sigue valiendo la "
+            "misma advertencia: lo que queda registrado no es lo que importó, sino "
+            "lo que alguien tuvo motivos para anotar. Dentro de cinco mil años, "
+            "quien estudie este siglo va a tener a mano una cantidad asombrosa de "
+            "datos sobre lo que compramos y por dónde anduvimos, y las mismas "
+            "dificultades de siempre para saber de qué nos reíamos."
+        ),
+    },
+    {
         "key": "noticias_falsas",
         "title": "Lo falso viaja liviano",
         "kind": "no_literario",
@@ -25213,6 +25390,340 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Al revés' ----------
+    _ql(
+        "al_reves", "lec_localizar", "facil",
+        "Según el relato, ¿qué hace Rubén al ver a Simón en el supermercado?",
+        "Mira la etiqueta de un envase hasta que el otro pasa",
+        "El relato precisa que alcanzó a verlo primero y que tuvo tiempo de "
+        "decidir, y llama a esa decisión «un cálculo de cuatro segundos sobre lo "
+        "que costaría saludar».\n\nDespués, en la fila de la caja, concluye que "
+        "Simón sí lo vio, y no lo comenta con nadie.",
+        [
+            ("Lo saluda de lejos y sigue con sus compras", "El relato dice expresamente que evita el saludo."),
+            ("Cambia de pasillo antes de que Simón lo vea", "No cambia de pasillo: se queda y espera que el otro pase."),
+            ("Se acerca a conversar sobre el dinero prestado", "No hay ninguna conversación entre ellos en esta escena."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_localizar", "facil",
+        "Según el relato, ¿por qué no firmaron nada al hacer el préstamo?",
+        "Porque firmar les habría parecido ofensivo entre ellos",
+        "El relato subraya que en ese momento los dos sintieron esa decisión como "
+        "una muestra de confianza.\n\nY señala de inmediato su consecuencia: es lo "
+        "que después permite que cada uno recuerde una cifra y un plazo distintos "
+        "«y que ninguno de los dos esté mintiendo».",
+        [
+            ("Porque se trataba de una cantidad demasiado pequeña", "El monto no se menciona, y el relato lo trata como importante."),
+            ("Porque Rubén se negó a poner las condiciones por escrito", "La decisión no se le atribuye a ninguno de los dos en particular."),
+            ("Porque acordaron devolverlo en un plazo muy corto", "El plazo es justamente lo que después nadie recuerda igual."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_localizar", "medio",
+        "Según el relato, ¿cómo se entera Rubén de que Simón vendió su moto?",
+        "Porque un día deja de oírla en la calle y no pregunta",
+        "Simón la vendió durante el peor invierno del taller, cuando llevaban tres "
+        "meses sin entregar un pedido, y no se lo dijo a nadie.\n\nEl relato une "
+        "los dos silencios en una sola frase: él no lo cuenta y Rubén no pregunta.",
+        [
+            ("Porque Simón se lo cuenta cuando entregan el pedido grande", "El relato dice que no se lo contó a nadie."),
+            ("Porque lo ve llegando a pie al taller durante el invierno", "Lo que nota es la ausencia del ruido, no su llegada."),
+            ("Porque se lo comenta la mujer de Simón esa misma noche", "Esa conversación ocurre años después y trata del préstamo."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_interpretar", "facil",
+        "¿Qué efecto tiene que la última escena del relato sea la primera en el "
+        "tiempo?",
+        "El lector lee el comienzo sabiendo cómo terminará",
+        "La escena del curso de soldadura es la más alegre del relato: un lápiz "
+        "prestado, una broma, dos personas caminando al paradero «con toda la cosa "
+        "por delante».\n\nPuesta al final, esa alegría se lee desde el pasillo del "
+        "supermercado, y el relato no necesita comentar nada para que pese.",
+        [
+            ("Permite ocultar el desenlace hasta el último párrafo", "El desenlace se entrega en la primera escena, no se oculta."),
+            ("Muestra que la amistad podría volver a empezar", "Nada en el relato sugiere una reconciliación posible."),
+            ("Indica que los hechos ocurrieron en ese mismo orden", "El relato marca las fechas: el orden es exactamente el inverso."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_interpretar", "medio",
+        "¿Qué sugiere que la conversación del quiebre transcurra sin gritos?",
+        "Que el distanciamiento ya estaba hecho antes de hablar",
+        "El relato apunta que a los dos les parecerá después «la parte más rara». "
+        "Nadie levanta la voz porque nadie está peleando: están administrando algo "
+        "que ya ocurrió.\n\nLo confirma el final de la escena: se despiden en la "
+        "puerta y los dos piensan que van a hablar la próxima semana.",
+        [
+            ("Que ninguno de los dos le daba importancia al asunto", "Ambos vuelven sobre esa conversación durante años."),
+            ("Que la discusión se resolvió de manera satisfactoria", "No se resolvió: fue la última vez que se hablaron."),
+            ("Que Simón evitó decir lo que realmente pensaba", "Lo intenta dos veces; el problema es que no encuentra cómo."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_interpretar", "medio",
+        "¿Qué función cumple la frase que ninguno de los dos llega a decir?",
+        "Señala que discutían un asunto distinto del que importaba",
+        "El narrador cuenta que Rubén pensó dos veces en decir que se echaban de "
+        "menos y las dos veces le pareció que no venía al caso, porque estaban "
+        "tratando un asunto concreto.\n\nY agrega el comentario que ordena la "
+        "escena: «efectivamente era otra conversación. Era la que había que tener».",
+        [
+            ("Muestra que Rubén era el único interesado en arreglarlo", "El relato no compara la disposición de uno y de otro."),
+            ("Explica por qué el préstamo terminó sin devolverse", "El relato nunca informa si el dinero fue devuelto."),
+            ("Anticipa el encuentro que tendrán en el supermercado", "Esa escena ya fue narrada al comienzo del relato."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_interpretar", "dificil",
+        "¿Qué aporta que el relato entregue lo que cada personaje hizo por separado "
+        "esa noche?",
+        "Muestra que los dos actuaban de buena fe al mismo tiempo",
+        "Simón le cuenta a su mujer y decide no interpretar un silencio; Rubén "
+        "escribe una lista de meses que sabe optimista y la escribe igual, porque "
+        "«le parece imposible fallarle a Simón».\n\nNinguno de los dos está "
+        "calculando nada contra el otro. El relato construye así un quiebre sin "
+        "culpable, que es lo que después vuelve imposible repartir la "
+        "responsabilidad.",
+        [
+            ("Revela cuál de los dos provocó realmente el conflicto", "El relato evita en todo momento designar un responsable."),
+            ("Demuestra que el préstamo era una mala idea desde el inicio", "El relato no lo juzga: muestra cómo lo vivió cada uno."),
+            ("Explica que sus familias influyeron en el distanciamiento", "La única aparición de una familia es un silencio corto."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_evaluar", "facil",
+        "¿Qué sentido tiene que el relato lleve por título «Al revés»?",
+        "Nombra el orden en que están contados los hechos",
+        "Las cinco escenas van del presente hacia atrás, y cada una lleva su marca: "
+        "hoy, ocho meses antes, un año y medio antes, cuatro años antes, nueve años "
+        "antes.\n\nEl título anuncia el único recurso que el relato usa, y que es "
+        "también su argumento: mirar una amistad empezando por su final.",
+        [
+            ("Señala que los personajes actuaron de manera equivocada", "El relato no califica de errada la conducta de ninguno."),
+            ("Indica que lo narrado no ocurrió como se lo cuenta", "Todo lo narrado se presenta como ocurrido."),
+            ("Alude a que ambos recuerdan los hechos de modo distinto", "Ese desacuerdo existe, pero es solo sobre el préstamo."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_evaluar", "medio",
+        "¿Qué actitud tiene el narrador hacia los dos personajes?",
+        "Imparcial, pues no atribuye la culpa a ninguno",
+        "El narrador da acceso a lo que piensan los dos, en la misma medida y con "
+        "el mismo tono: el cálculo de Rubén en el pasillo, el silencio que Simón "
+        "prefiere no interpretar.\n\nIncluso en el punto donde sería más fácil "
+        "tomar partido —quién recuerda bien el préstamo— aclara que ninguno está "
+        "mintiendo.",
+        [
+            ("Compasiva, pues lamenta abiertamente lo que ocurrió", "El relato no comenta lo ocurrido ni expresa pena."),
+            ("Severa, pues considera que ambos se comportaron mal", "No hay reproche hacia ninguna de las dos conductas."),
+            ("Distante, pues no accede a lo que los personajes piensan", "Accede a los pensamientos de ambos en varias escenas."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al ubicar el préstamo en el centro de la "
+        "secuencia?",
+        "Lo muestra como un hecho más y no como la causa",
+        "Antes del préstamo hay cuatro años de un taller que funcionaba solo, y "
+        "después hay una conversación donde Simón dice que el problema no es la "
+        "plata.\n\nPuesto entremedio, el dinero deja de ser el origen del quiebre y "
+        "pasa a ser el lugar donde el quiebre se hizo visible. El relato entrega el "
+        "dato que cualquiera usaría como explicación y se encarga de que no "
+        "alcance.",
+        [
+            ("Revela el momento exacto en que la amistad se rompió", "El propio Simón niega que el problema fuera el dinero."),
+            ("Sugiere que Rubén se aprovechó de la confianza de Simón", "El relato lo muestra decidido a devolverlo y preocupado."),
+            ("Prueba que las deudas entre amigos terminan siempre mal", "El relato cuenta un caso, sin extraer ninguna regla."),
+        ],
+    ),
+    _ql(
+        "al_reves", "lec_evaluar", "dificil",
+        "¿Qué efecto produce cerrar con Rubén sin pensar «absolutamente nada» en la "
+        "micro?",
+        "Recuerda que ese día no había nada que notar",
+        "El relato remata la escena con una frase deliberadamente chata: «un tipo "
+        "le pidió un lápiz».\n\nDespués de haber leído nueve años hacia atrás, el "
+        "lector sabe todo lo que empezó ahí, y el personaje no sabe nada. Ese "
+        "desnivel es el efecto que buscaba la inversión completa del relato: los "
+        "comienzos no se reconocen mientras ocurren.",
+        [
+            ("Muestra que Rubén nunca valoró demasiado esa amistad", "Las escenas siguientes lo muestran completamente involucrado."),
+            ("Sugiere que el personaje ya presentía cómo terminaría", "El relato dice justamente que no pensó nada sobre eso."),
+            ("Indica que ese día ocurrió algo que él prefirió olvidar", "No hay nada que olvidar: fue un día común y corriente."),
+        ],
+    ),
+    # ---------- 'La escritura no se inventó para escribir' ----------
+    _ql(
+        "origen_escritura", "lec_localizar", "facil",
+        "Según la lectura, ¿qué contienen las tablillas escritas más antiguas que "
+        "se conocen?",
+        "Inventarios de grano, ganado y raciones entregadas",
+        "El texto es explícito: no son poemas, ni oraciones, ni leyes. Son listas "
+        "de cantidades, con los nombres de los funcionarios responsables.\n\nDe ahí "
+        "sale la tesis del artículo: la literatura conocida es muy posterior, de "
+        "modo que durante siglos la escritura sirvió casi solo para administrar "
+        "bodegas.",
+        [
+            ("Relatos sobre el origen del mundo y de los dioses", "El texto descarta expresamente que sean oraciones o relatos."),
+            ("Las primeras leyes escritas de la región", "Las leyes también quedan fuera de esa enumeración."),
+            ("Ejercicios de estudiantes de las escuelas de escribas", "Esas tablillas escolares son de siglos posteriores."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_localizar", "facil",
+        "Según la lectura, ¿para qué se usaban las fichas de arcilla?",
+        "Para representar mercancías dentro de un envío",
+        "Cada forma correspondía a un producto: una para una medida de grano, otra "
+        "para una oveja.\n\nSe guardaban dentro de una bola de arcilla sellada, de "
+        "modo que quien recibía la carga podía romperla y comprobar que coincidiera "
+        "con lo entregado.",
+        [
+            ("Para enseñar a contar a los futuros escribas", "La enseñanza aparece siglos después y con otro material."),
+            ("Para marcar la propiedad de las tierras de cultivo", "El texto no vincula las fichas con la tierra."),
+            ("Para reemplazar el dinero en los intercambios", "Representaban mercancías; no funcionaban como pago."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_localizar", "medio",
+        "Según la lectura, ¿cuántas veces se inventó la escritura de manera "
+        "independiente?",
+        "Al menos tres, en regiones sin contacto entre sí",
+        "El texto nombra Mesopotamia, China y Mesoamérica, y usa la fórmula «al "
+        "menos» por una razón que explica enseguida: el caso egipcio se discute, "
+        "porque no está claro si fue independiente o si conoció el ejemplo "
+        "mesopotámico.\n\nEsa repetición es la que sugiere que no fue una "
+        "casualidad.",
+        [
+            ("Una sola vez, y desde ahí se difundió al resto", "El artículo sostiene justamente lo contrario."),
+            ("Cuatro veces, incluyendo con certeza el caso egipcio", "El caso egipcio se presenta como discutido, no como cierto."),
+            ("Dos veces, en Mesopotamia y en Egipto", "Egipto es el caso dudoso; los seguros son otros tres."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_interpretar", "facil",
+        "¿Por qué el emisor llama «paso de pura pereza» al momento decisivo?",
+        "Porque el invento surgió de suprimir un trabajo de más",
+        "Si las marcas de la superficie ya dicen lo que hay adentro, las fichas "
+        "dejan de ser necesarias; y sin fichas tampoco hace falta que el soporte "
+        "sea una bola.\n\nLo que queda es una tablilla plana con signos, es decir, "
+        "escritura. Nadie agregó nada: alguien dejó de hacer algo.",
+        [
+            ("Porque los escribas se negaban a memorizar las listas", "Los escribas aparecen mucho después en el artículo."),
+            ("Porque las fichas de arcilla eran difíciles de fabricar", "El texto no menciona ninguna dificultad de fabricación."),
+            ("Porque quienes lo hicieron no entendían lo que inventaban", "Eso es cierto, pero no es lo que la expresión describe."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_interpretar", "medio",
+        "¿Qué distingue a los signos más antiguos de una escritura capaz de "
+        "registrar una lengua completa?",
+        "Los primeros anotaban cosas y cantidades, no sonidos",
+        "El texto marca ese límite con precisión: mientras los signos valen por lo "
+        "que significan, sirven para una lista de existencias.\n\nEl cambio llega "
+        "cuando alguien empieza a usarlos por cómo suenan. Recién ahí se puede "
+        "escribir el nombre de una persona o cualquier palabra, «con sus verbos y "
+        "sus dudas».",
+        [
+            ("Los primeros se grababan en arcilla y no en otro soporte", "El material no es lo que separa una etapa de la otra."),
+            ("Los primeros solo podían ser leídos por su autor", "El texto no plantea ninguna limitación de ese tipo."),
+            ("Los primeros usaban muchos menos signos distintos", "La cantidad de signos no se discute en el artículo."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_interpretar", "medio",
+        "¿Con qué finalidad se mencionan las tablillas escolares con quejas sobre "
+        "el maestro?",
+        "Para mostrar una rendija por donde asoma otra cosa",
+        "El emisor la presenta como una excepción dentro de un registro dominado "
+        "por inventarios.\n\nY agrega el detalle que le da sentido dentro del "
+        "artículo: llegaron hasta nosotros por una razón banal, porque eran planas "
+        "de un alumno hechas «en el mismo barro que todo lo demás».",
+        [
+            ("Para demostrar que la enseñanza no ha cambiado nunca", "El texto no compara esa escuela con las actuales."),
+            ("Para explicar cómo se formaban los escribas del período", "La formación se menciona antes y no es lo que ilustran."),
+            ("Para probar que la escritura ya servía para la literatura", "Copias y quejas no son literatura, y el texto no lo afirma."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_interpretar", "dificil",
+        "¿Qué relación establece el emisor entre lo que se conservó y lo que "
+        "ocurrió?",
+        "Lo conservado depende de qué convenía anotar y dónde",
+        "El artículo lo formula sin rodeos: sabemos cuántas medidas de cebada "
+        "recibió un trabajador y no sabemos qué cantaba mientras trabajaba, «porque "
+        "las canciones no se guardaban en arcilla».\n\nLa imagen del período, "
+        "entonces, no es la del pasado sino la del registro, y ese registro lo "
+        "produjo alguien que quería poder verificar algo después.",
+        [
+            ("Lo conservado es una muestra pequeña pero representativa", "El texto sostiene que está fuertemente sesgada."),
+            ("Lo conservado corresponde a lo más valioso de esa cultura", "Justamente advierte que no es lo que importaba."),
+            ("Lo conservado se perdió por la fragilidad de los soportes", "La arcilla aparece como el material que sí resistió."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_evaluar", "facil",
+        "¿Con qué propósito el artículo empieza preguntando para qué se inventó la "
+        "escritura?",
+        "Para enfrentar la respuesta esperable con la documentada",
+        "El emisor enuncia primero lo que casi cualquiera contestaría —contar "
+        "historias, transmitir sabiduría, dejar constancia— y enseguida entrega la "
+        "respuesta que dan las tablillas.\n\nEl contraste entre lo elevado y "
+        "«cuánta cebada había en un depósito» es el que sostiene el interés del "
+        "texto y anuncia su tesis.",
+        [
+            ("Para reconocer que la respuesta se desconoce hasta hoy", "El artículo entrega una respuesta y la documenta."),
+            ("Para invitar al lector a que formule su propia hipótesis", "No hay ninguna invitación a conjeturar: responde de inmediato."),
+            ("Para señalar que la pregunta está mal planteada", "La pregunta se responde tal como fue formulada."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_evaluar", "medio",
+        "¿Qué significa, según el emisor, que la escritura no tenga un inventor?",
+        "Que resultó de un procedimiento que se fue simplificando",
+        "El texto niega tres cosas a la vez: no hay un inventor, ni un momento, ni "
+        "un propósito declarado.\n\nLo que hubo fue un método contable que "
+        "generaciones sucesivas fueron aliviando, hasta convertirse «sin que nadie "
+        "lo decidiera» en algo mucho más poderoso que el problema que resolvía.",
+        [
+            ("Que su origen se perdió y hoy resulta imposible de rastrear", "El artículo rastrea ese origen paso a paso."),
+            ("Que varias personas llegaron al mismo invento a la vez", "La simultaneidad no es lo que el texto describe."),
+            ("Que se trata de un invento menos importante de lo que parece", "El emisor lo presenta como extraordinariamente poderoso."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor ante la hipótesis de las fichas de arcilla?",
+        "Prudente, pues la presenta como la explicación más difundida",
+        "El artículo no la enuncia como un hecho establecido: dice que es «la "
+        "explicación más difundida sobre cómo se llegó ahí».\n\nLa misma cautela "
+        "aparece con el caso egipcio, que declara discutido, y con la fórmula «al "
+        "menos tres veces». El texto distingue en todo momento lo que está "
+        "documentado de lo que está propuesto.",
+        [
+            ("Escéptica, pues advierte que carece de respaldo material", "No pone en duda su respaldo: solo evita darla por cerrada."),
+            ("Entusiasta, pues la presenta como un hallazgo definitivo", "La palabra «difundida» hace lo contrario de cerrar el asunto."),
+            ("Indiferente, pues no toma posición sobre su plausibilidad", "Sí toma posición: la desarrolla y la considera convincente."),
+        ],
+    ),
+    _ql(
+        "origen_escritura", "lec_evaluar", "dificil",
+        "¿Qué agrega al artículo la advertencia final sobre los datos de este "
+        "siglo?",
+        "Traslada al presente el sesgo que describió en el pasado",
+        "El emisor no cierra con una conclusión sobre Mesopotamia, sino con una "
+        "aplicación: hoy queda registrado muchísimo más —transacciones, "
+        "ubicaciones, mensajes, recorridos— y sigue valiendo que lo registrado no "
+        "es lo que importó.\n\nCon eso convierte un dato arqueológico en un "
+        "criterio de lectura sobre cualquier archivo, incluido el que estamos "
+        "produciendo ahora.",
+        [
+            ("Anuncia que los registros actuales se perderán igual", "El artículo no predice la pérdida de esos registros."),
+            ("Critica la cantidad de datos que las empresas recopilan", "No hay ningún reproche sobre quién reúne esa información."),
+            ("Compara la arcilla con los soportes digitales actuales", "Los soportes de hoy no se comparan con la arcilla."),
+        ],
+    ),
     # ---------- 'Lo falso viaja liviano' ----------
     _ql(
         "noticias_falsas", "lec_localizar", "facil",
