@@ -21383,6 +21383,170 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "megasequia",
+        "title": "Quince años sin llover como antes",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes, elaborado a partir del Informe a la Nación "
+            "sobre la megasequía del Centro de Ciencia del Clima y la Resiliencia (CR2) "
+            "y de material público posterior. Las cifras de déficit y de atribución "
+            "corresponden a esa literatura."
+        ),
+        "body": (
+            "En 2010 empezó a llover menos en la zona central de Chile, y no ha "
+            "vuelto a llover como antes. Dicho así suena a queja de sobremesa, pero "
+            "es una descripción técnica: entre las regiones de Coquimbo y La "
+            "Araucanía el déficit de precipitaciones ronda el treinta por ciento y "
+            "se ha sostenido año tras año, sin la alternancia de temporadas buenas "
+            "y malas que caracteriza a una sequía corriente. Por su duración y por "
+            "la extensión del territorio afectado, no tiene comparación en el "
+            "registro instrumental chileno. De ahí el nombre con que se la conoce: "
+            "megasequía.\n\n"
+            "Conviene separar tres cosas que suelen decirse juntas. La sequía "
+            "meteorológica es la falta de lluvia. La sequía hidrológica es lo que "
+            "ocurre después en ríos, embalses y napas subterráneas, y llega con "
+            "retraso, porque un sistema hídrico tiene inercia: primero se gasta lo "
+            "acumulado y solo entonces se nota. La escasez de agua es otra cosa "
+            "todavía: es la relación entre lo que hay disponible y lo que se "
+            "demanda. Un mismo caudal puede ser abundante o insuficiente según "
+            "cuánta gente y cuántas hectáreas dependan de él. Confundir las tres "
+            "explica buena parte de las discusiones que no llegan a ninguna parte.\n\n"
+            "El calor agrava lo que la falta de lluvia empieza. El periodo coincide "
+            "con la década más cálida de los últimos cien años, y un grado "
+            "adicional no solo se siente: evapora. Se evapora el agua de los "
+            "embalses, la de los suelos agrícolas y la que las plantas transpiran "
+            "para seguir vivas. Es decir, aunque cayera la misma lluvia de siempre, "
+            "quedaría menos disponible que antes. Por eso la megasequía se describe "
+            "como un problema de dos variables y no de una.\n\n"
+            "Sobre las causas, hay una cifra que conviene entender bien porque "
+            "suele citarse mal. Los estudios de atribución concluyen que al menos "
+            "un veinticinco por ciento del déficit se explica por el cambio "
+            "climático de origen humano. Esa afirmación no dice que la megasequía "
+            "sea artificial ni que sin actividad humana no habría ocurrido: dice "
+            "que una parte identificable del déficit no se explica por la "
+            "variabilidad natural del clima, y que esa parte es de al menos un "
+            "cuarto. El resto corresponde a fenómenos de variabilidad que existen "
+            "desde siempre y que en este periodo jugaron en contra. La diferencia "
+            "entre «al menos un cuarto es atribuible» y «fue causada por el cambio "
+            "climático» no es una sutileza de especialistas: es la diferencia entre "
+            "lo que la evidencia sostiene y lo que no.\n\n"
+            "Las consecuencias no se reparten parejo, y ese es el punto que la "
+            "palabra «sequía» tiende a esconder. Una empresa agrícola con derechos "
+            "de agua y un pozo profundo atraviesa el mismo déficit que una familia "
+            "rural que depende de una vertiente o de un camión aljibe, pero no lo "
+            "atraviesa de la misma manera. La cantidad de localidades abastecidas "
+            "por camiones creció durante estos años en varias regiones, mientras la "
+            "superficie plantada de algunos cultivos de exportación seguía "
+            "aumentando. Nada de esto contradice los datos climáticos: los "
+            "complementa. Cuando el agua escasea, el reparto deja de ser un asunto "
+            "técnico y pasa a ser una decisión.\n\n"
+            "También conviene desconfiar de dos relatos simples que circulan. El "
+            "primero sostiene que todo se arregla lloviendo: un año lluvioso alivia "
+            "los embalses, pero no recupera napas que tardan décadas en recargarse, "
+            "así que el alivio puede ser menos profundo de lo que parece. El "
+            "segundo sostiene que la culpa es enteramente de un cultivo o de una "
+            "industria en particular. Los cultivos de alto consumo pesan, y "
+            "bastante, pero un déficit sostenido de treinta por ciento en la lluvia "
+            "no lo produce nadie regando. Ambas explicaciones tienen la ventaja de "
+            "ser fáciles de repetir y el defecto de dejar afuera la mitad del "
+            "problema.\n\n"
+            "Queda una pregunta incómoda que no es científica sino de organización: "
+            "qué se hace cuando lo que era excepcional deja de serlo. Buena parte "
+            "de la institucionalidad del agua en Chile fue diseñada suponiendo que "
+            "las sequías son episodios pasajeros, con medidas de emergencia que se "
+            "activan y luego se levantan. Quince años seguidos de déficit ponen a "
+            "prueba ese supuesto. Si el clima que viene se parece más a esta década "
+            "que a la anterior, entonces lo que hoy llamamos emergencia es en "
+            "realidad el nuevo punto de partida, y las decisiones que se tomen "
+            "deberían tomarse con esa idea encima de la mesa.\n\n"
+            "Nada de lo anterior autoriza a pronosticar el año que viene. La "
+            "variabilidad sigue existiendo y habrá inviernos generosos; ya los ha "
+            "habido dentro de este mismo periodo. Lo que la evidencia permite decir "
+            "es más modesto y más útil: que la tendencia de fondo apunta hacia "
+            "menos agua, que una parte de esa tendencia es de origen humano y que "
+            "el resto no depende de nosotros, pero el reparto sí."
+        ),
+    },
+    {
+        "key": "senderos_parque",
+        "title": "Guía de senderos del parque Quebrada de los Maitenes",
+        "kind": "discontinuo",
+        "source_note": (
+            "Guía original de 1000paes, de uso educativo. El parque, sus senderos, sus "
+            "horarios y sus reglas son ficticios y no corresponden a ningún área "
+            "protegida real."
+        ),
+        "body": (
+            "**GUÍA DE SENDEROS — PARQUE QUEBRADA DE LOS MAITENES**\n\n"
+            "*Documento de uso educativo. El parque, sus senderos y sus horarios "
+            "son ficticios.*\n\n"
+            "**1. Horarios y acceso**\n\n"
+            "El parque abre todos los días a las 8:30. El ingreso a senderos se "
+            "cierra a las 15:00 en invierno (mayo a agosto) y a las 17:00 en el "
+            "resto del año. El parque completo se desaloja a las 19:00. La entrada "
+            "es gratuita para estudiantes con credencial y para mayores de 60 años; "
+            "el resto paga $3.000. No se admiten mascotas en ningún sendero.\n\n"
+            "**2. Los cuatro senderos**\n\n"
+            "| Sendero | Distancia (ida y vuelta) | Duración estimada | Dificultad | Desnivel |\n"
+            "|---|---|---|---|---|\n"
+            "| El Estero | 2,4 km | 1 hora | baja | 60 m |\n"
+            "| Mirador Norte | 6,0 km | 3 horas | media | 340 m |\n"
+            "| Cascada Escondida | 9,2 km | 5 horas | media | 420 m |\n"
+            "| Filo del Cóndor | 14,5 km | 8 horas | alta | 1.100 m |\n\n"
+            "**3. Reglas de seguridad**\n\n"
+            "*(a)* La duración estimada supone paso constante y no incluye "
+            "detenciones. Sume al menos un 20 % si va con niños, si lleva mochila "
+            "pesada o si el grupo es de más de seis personas.\n\n"
+            "*(b)* El ingreso a un sendero se autoriza solo si la duración estimada "
+            "permite regresar antes del desalojo. La administración aplica esta "
+            "regla sin excepciones, incluso si el visitante declara que caminará "
+            "más rápido.\n\n"
+            "*(c)* Filo del Cóndor exige registro previo en la portería, agua "
+            "suficiente para ocho horas y grupo de al menos dos personas. Está "
+            "cerrado entre mayo y agosto.\n\n"
+            "*(d)* El agua de los esteros del parque no es potable en ningún tramo. "
+            "No hay puntos de recarga después de la portería.\n\n"
+            "*(e)* La señal de telefonía llega hasta el primer tercio de Mirador "
+            "Norte y no existe más arriba. En caso de emergencia, la única vía es "
+            "descender hasta la portería.\n\n"
+            "**4. Preguntas frecuentes**\n\n"
+            "*¿Puedo entrar a Cascada Escondida a las 13:30 en julio?* No. En "
+            "invierno el ingreso cierra a las 15:00, pero la regla que decide es la "
+            "*(b)*: cinco horas desde las 13:30 son las 18:30, y con el 20 % de "
+            "holgura de la regla *(a)* el regreso quedaría después del desalojo.\n\n"
+            "*¿Puedo hacer Filo del Cóndor solo, si tengo experiencia?* No. La "
+            "regla *(c)* exige un grupo de al menos dos personas y no admite "
+            "excepciones por experiencia declarada.\n\n"
+            "*¿Sirve la credencial de estudiante vencida?* No. La gratuidad se "
+            "aplica contra credencial vigente; en caso contrario corresponde la "
+            "entrada general.\n\n"
+            "**5. Recomendaciones**\n\n"
+            "Lleve más agua de la que cree que va a necesitar: la regla *(d)* "
+            "significa que todo lo que tome debe entrar con usted. Use zapatillas "
+            "con suela firme; el desnivel de los senderos de media dificultad se "
+            "concentra en tramos cortos con piedra suelta. Y evite planificar la "
+            "vuelta con el horario justo: la razón por la que la administración es "
+            "estricta con la regla *(b)* no es administrativa, sino que un rescate "
+            "nocturno en la quebrada puede tomar varias horas y expone a quienes lo "
+            "realizan.\n\n"
+            "**6. Cómo llegar**\n\n"
+            "El acceso es por un camino de ripio de once kilómetros que se "
+            "desprende de la ruta principal y que no cuenta con transporte público. "
+            "El último tramo no es apto para vehículos bajos después de una lluvia. "
+            "Quien llegue en bus hasta el cruce debe caminar esos once kilómetros o "
+            "coordinar traslado con la administración, que dispone de una camioneta "
+            "y de dos horarios diarios: 9:00 y 15:30. Los cupos son cuatro por "
+            "viaje y se piden por teléfono con un día de anticipación.\n\n"
+            "**7. Lo que esta guía no informa**\n\n"
+            "Las duraciones y dificultades son promedios de personas adultas sin "
+            "condiciones de salud particulares; no reemplazan el criterio propio. "
+            "La guía tampoco informa el estado del tiempo, que en la quebrada "
+            "cambia con rapidez y que en invierno puede cerrar tramos sin aviso, ni "
+            "la presencia de fauna, que es habitual y no requiere aviso especial "
+            "mientras se mantenga distancia."
+        ),
+    },
+    {
         "key": "terremoto_saber",
         "title": "Lo que se sabe y lo que no de un terremoto",
         "kind": "no_literario",
@@ -23986,6 +24150,339 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Quince años sin llover como antes' ----------
+    _ql(
+        "megasequia", "lec_localizar", "facil",
+        "Según la lectura, ¿de cuánto es el déficit de precipitaciones de la "
+        "megasequía?",
+        "De cerca de un treinta por ciento",
+        "El primer párrafo lo precisa: entre Coquimbo y La Araucanía «el déficit de "
+        "precipitaciones ronda el treinta por ciento y se ha sostenido año tras "
+        "año».\n\nEsa persistencia, y no solo la magnitud, es lo que distingue al "
+        "fenómeno de una sequía corriente.",
+        [
+            ("De cerca de un veinticinco por ciento", "El veinticinco por ciento es la parte atribuida al cambio climático."),
+            ("De cerca de un cincuenta por ciento", "Esa cifra no aparece en ninguna parte del texto."),
+            ("De cerca de un diez por ciento", "El texto describe un déficit mucho mayor y sostenido en el tiempo."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_localizar", "facil",
+        "Según la lectura, ¿qué distingue a la sequía hidrológica de la "
+        "meteorológica?",
+        "Que ocurre después, en ríos, embalses y napas subterráneas",
+        "El texto separa las dos: la meteorológica «es la falta de lluvia» y la "
+        "hidrológica «es lo que ocurre después en ríos, embalses y napas "
+        "subterráneas».\n\nY explica su retraso: «un sistema hídrico tiene inercia: "
+        "primero se gasta lo acumulado y solo entonces se nota».",
+        [
+            ("Que se mide en las zonas agrícolas y no en las ciudades", "La distinción no es geográfica: es entre lluvia y agua disponible."),
+            ("Que depende de cuánta agua demanda la población", "Eso corresponde a la escasez, que el texto define como una tercera cosa."),
+            ("Que solo ocurre cuando la sequía dura más de diez años", "El texto no fija ninguna duración para distinguirlas."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué el calor agrava la situación?",
+        "Porque evapora el agua de embalses, suelos y plantas",
+        "El texto lo detalla: el periodo coincide con la década más cálida de los "
+        "últimos cien años, y «un grado adicional no solo se siente: "
+        "evapora».\n\nDe ahí su conclusión: «aunque cayera la misma lluvia de "
+        "siempre, quedaría menos disponible que antes».",
+        [
+            ("Porque derrite antes la nieve acumulada en la cordillera", "El texto no menciona la nieve ni el deshielo en ese párrafo."),
+            ("Porque aumenta el consumo de agua de las ciudades", "El consumo se trata al hablar de escasez, no del efecto del calor."),
+            ("Porque impide que se formen nubes sobre la zona central", "El artículo no atribuye al calor la falta de nubes."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_interpretar", "medio",
+        "Según la lectura, ¿qué significa que al menos un 25% del déficit sea "
+        "atribuible al cambio climático?",
+        "Que esa parte no se explica por la variabilidad natural",
+        "El texto lo aclara punto por punto: la afirmación «no dice que la "
+        "megasequía sea artificial ni que sin actividad humana no habría ocurrido», "
+        "sino «que una parte identificable del déficit no se explica por la "
+        "variabilidad natural del clima».\n\nEl resto corresponde a fenómenos que "
+        "«existen desde siempre y que en este periodo jugaron en contra».",
+        [
+            ("Que sin actividad humana la megasequía no habría ocurrido", "El texto descarta expresamente esa lectura de la cifra."),
+            ("Que el 75% restante se debe a decisiones de riego y consumo", "Ese resto se atribuye a variabilidad natural, no al uso del agua."),
+            ("Que la cifra podría bajar cuando haya mejores mediciones", "El «al menos» indica un piso, no una estimación provisoria."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_interpretar", "medio",
+        "¿Qué idea sostiene el emisor al comparar a una empresa agrícola con una "
+        "familia rural?",
+        "Que un mismo déficit se vive de manera muy distinta",
+        "El texto lo formula así: ambas «atraviesan el mismo déficit», pero una "
+        "tiene derechos de agua y un pozo profundo y la otra depende «de una "
+        "vertiente o de un camión aljibe».\n\nDe ahí la conclusión del párrafo: "
+        "cuando el agua escasea, «el reparto deja de ser un asunto técnico y pasa a "
+        "ser una decisión».",
+        [
+            ("Que la agricultura de exportación causó la megasequía", "El texto niega que el riego pueda producir un déficit de lluvia."),
+            ("Que las familias rurales consumen menos agua que las empresas", "La comparación es sobre el acceso al agua, no sobre el consumo."),
+            ("Que los camiones aljibe resolvieron el problema del campo", "El texto los menciona como señal del problema, no como solución."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_interpretar", "medio",
+        "¿Qué defecto comparten los dos relatos simples que el emisor descarta?",
+        "Que cada uno explica solo la mitad del problema",
+        "El texto lo dice al cerrar ese párrafo: ambas explicaciones «tienen la "
+        "ventaja de ser fáciles de repetir y el defecto de dejar afuera la mitad "
+        "del problema».\n\nUno confía todo a que vuelva a llover; el otro culpa a "
+        "un solo cultivo o industria. El texto concede algo a cada uno y rechaza "
+        "que basten.",
+        [
+            ("Que ninguno de los dos se apoya en datos verificables", "El emisor reconoce que ambos tienen una parte cierta."),
+            ("Que los dos culpan a las autoridades del país", "Ninguno de los dos relatos descritos apunta a las autoridades."),
+            ("Que ambos exageran la gravedad de la megasequía", "El primero la minimiza; no es un defecto común a los dos."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_interpretar", "dificil",
+        "Según la lectura, ¿por qué un año lluvioso puede aliviar menos de lo que "
+        "parece?",
+        "Porque las napas subterráneas tardan décadas en recargarse",
+        "El texto separa dos plazos distintos: un año lluvioso «alivia los "
+        "embalses, pero no recupera napas que tardan décadas en recargarse».\n\nEs "
+        "la misma inercia que explicaba antes el retraso de la sequía hidrológica, "
+        "ahora operando en el sentido contrario: la recuperación también llega "
+        "tarde.",
+        [
+            ("Porque el agua de lluvia se evapora antes de llegar al suelo", "La evaporación se menciona por el calor, no como pérdida de la lluvia."),
+            ("Porque los embalses no alcanzan a almacenar toda el agua caída", "El texto no plantea un problema de capacidad de los embalses."),
+            ("Porque un año lluvioso aumenta de inmediato el consumo agrícola", "El artículo no vincula un año lluvioso con más consumo."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_evaluar", "medio",
+        "¿Con qué propósito el emisor distingue sequía meteorológica, hidrológica y "
+        "escasez?",
+        "Para evitar discusiones que confunden tres cosas distintas",
+        "El párrafo cierra con esa justificación: «Confundir las tres explica buena "
+        "parte de las discusiones que no llegan a ninguna parte».\n\nLa distinción "
+        "le sirve además para lo que viene: la escasez depende de la demanda, y por "
+        "eso el reparto del agua es una decisión y no solo un dato climático.",
+        [
+            ("Para demostrar que la megasequía no existe como fenómeno", "El texto la documenta con cifras desde el primer párrafo."),
+            ("Para explicar cómo se miden las precipitaciones en Chile", "No hay ninguna explicación sobre métodos de medición."),
+            ("Para justificar las medidas de emergencia vigentes", "El texto discute esas medidas, y no las respalda sin más."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor respecto de lo que vendrá?",
+        "Prudente, pues descarta pronosticar el próximo año",
+        "El cierre marca ese límite: «Nada de lo anterior autoriza a pronosticar el "
+        "año que viene», y recuerda que la variabilidad sigue existiendo y que ya "
+        "ha habido inviernos generosos dentro del periodo.\n\nA la vez sostiene lo "
+        "que sí puede decirse: la tendencia de fondo apunta hacia menos agua y una "
+        "parte es de origen humano.",
+        [
+            ("Alarmista, pues anuncia que no volverá a llover como antes", "El texto admite que habrá inviernos generosos y descarta pronosticar."),
+            ("Escéptica, pues duda de los estudios de atribución que cita", "No los pone en duda: precisa qué afirman exactamente."),
+            ("Optimista, pues confía en que la tendencia se revierta sola", "La tendencia de fondo que describe apunta en sentido contrario."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al señalar que la institucionalidad supone "
+        "sequías pasajeras?",
+        "Mostrar que quince años de déficit ponen a prueba ese supuesto",
+        "El texto plantea el problema como de organización y no de ciencia: las "
+        "medidas de emergencia «se activan y luego se levantan», y «quince años "
+        "seguidos de déficit ponen a prueba ese supuesto».\n\nDe ahí su conclusión "
+        "condicional: si el clima que viene se parece a esta década, «lo que hoy "
+        "llamamos emergencia es en realidad el nuevo punto de partida».",
+        [
+            ("Culpar a las autoridades por no haber previsto la megasequía", "El texto discute un supuesto de diseño, sin atribuir responsabilidades."),
+            ("Proponer que se eliminen las medidas de emergencia vigentes", "No propone eliminarlas: cuestiona que se las siga tratando como transitorias."),
+            ("Sostener que la megasequía terminará en los próximos años", "El cierre descarta expresamente cualquier pronóstico de ese tipo."),
+        ],
+    ),
+    _ql(
+        "megasequia", "lec_evaluar", "facil",
+        "¿Qué precisión hace el emisor sobre el peso del cambio climático en el "
+        "déficit?",
+        "Que solo una parte del déficit se atribuye a causas humanas",
+        "El texto acota esa lectura al presentar la cifra: al menos un cuarto del "
+        "déficit se explica por el cambio climático de origen humano, y «el resto "
+        "corresponde a fenómenos de variabilidad que existen desde siempre».\n\nY "
+        "advierte que la diferencia entre ambas formulaciones «es la diferencia "
+        "entre lo que la evidencia sostiene y lo que no».",
+        [
+            ("Que el cambio climático no tiene relación con el déficit", "El texto le atribuye al menos un cuarto del déficit."),
+            ("Que la causa principal es el riego de los cultivos del valle", "El texto niega que regar pueda producir un déficit de lluvia."),
+            ("Que aún no existen estudios capaces de estimar ese peso", "Los estudios de atribución existen y el texto cita su resultado."),
+        ],
+    ),
+    # ---------- 'Guía de senderos del parque Quebrada de los Maitenes' ----------
+    _ql(
+        "senderos_parque", "lec_localizar", "facil",
+        "Según la tabla, ¿cuánto dura el sendero Cascada Escondida?",
+        "Cinco horas ida y vuelta",
+        "La fila «Cascada Escondida» marca 9,2 km, cinco horas de duración "
+        "estimada, dificultad media y 420 m de desnivel.\n\nLa regla *(a)* recuerda "
+        "que esa estimación «supone paso constante y no incluye detenciones».",
+        [
+            ("Tres horas ida y vuelta", "Tres horas es la duración de Mirador Norte."),
+            ("Ocho horas ida y vuelta", "Ocho horas corresponden a Filo del Cóndor."),
+            ("Cinco horas solo de subida", "La columna de duración corresponde al recorrido completo, ida y vuelta."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_localizar", "facil",
+        "Según la guía, ¿a qué hora se desaloja el parque?",
+        "A las 19:00, todos los días del año",
+        "El punto 1 distingue tres horarios: apertura a las 8:30, cierre de ingreso "
+        "a senderos a las 15:00 en invierno o 17:00 el resto del año, y desalojo "
+        "del parque completo a las 19:00.\n\nEl desalojo es el único de los tres "
+        "que no cambia con la estación.",
+        [
+            ("A las 17:00 durante todo el año", "Las 17:00 son el cierre de ingreso fuera del invierno."),
+            ("A las 15:00 durante el invierno", "Las 15:00 son el cierre de ingreso en invierno."),
+            ("A las 8:30, cuando termina la jornada", "Las 8:30 corresponden a la apertura del parque."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_localizar", "facil",
+        "Según la guía, ¿qué exige el sendero Filo del Cóndor?",
+        "Registro previo, agua para ocho horas y grupo de dos",
+        "La regla *(c)* enumera esas tres exigencias y agrega una restricción de "
+        "temporada: el sendero «está cerrado entre mayo y agosto».\n\nLas preguntas "
+        "frecuentes confirman que el requisito del grupo no admite excepciones por "
+        "experiencia declarada.",
+        [
+            ("Credencial de estudiante vigente y pago de la entrada", "La credencial se relaciona con la gratuidad, no con ese sendero."),
+            ("Contratar el traslado en la camioneta de la administración", "El traslado es para llegar al parque, no un requisito del sendero."),
+            ("Llevar teléfono con señal durante todo el recorrido", "La guía advierte que más arriba de Mirador Norte no hay señal."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_localizar", "medio",
+        "Según la guía, ¿hasta dónde llega la señal de telefonía?",
+        "Hasta el primer tercio del sendero Mirador Norte",
+        "La regla *(e)* lo precisa: la señal «llega hasta el primer tercio de "
+        "Mirador Norte y no existe más arriba».\n\nPor eso agrega cuál es la única "
+        "vía en una emergencia: «descender hasta la portería».",
+        [
+            ("Hasta la mitad del sendero Cascada Escondida", "La guía no menciona cobertura en ese sendero."),
+            ("Hasta la cumbre del sendero Filo del Cóndor", "Es el punto más alejado y la guía advierte que no hay señal arriba."),
+            ("Hasta la portería del parque, y desde ahí no hay cobertura", "La cobertura se extiende algo más allá: hasta el primer tercio."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_interpretar", "medio",
+        "¿Por qué la guía rechaza el ingreso a Cascada Escondida a las 13:30 en "
+        "julio?",
+        "Porque con la holgura el regreso sería después del desalojo",
+        "Las preguntas frecuentes muestran el cálculo: cinco horas desde las 13:30 "
+        "son las 18:30, y sumando el 20 % de la regla *(a)* el regreso quedaría "
+        "después de las 19:00.\n\nLa guía aclara además cuál regla decide: no es el "
+        "cierre de ingreso de las 15:00, sino la regla *(b)*, que exige poder "
+        "volver antes del desalojo.",
+        [
+            ("Porque en invierno el ingreso a senderos cierra a las 15:00", "A las 13:30 el ingreso todavía está abierto: no es esa la regla que decide."),
+            ("Porque ese sendero está cerrado entre mayo y agosto", "El cerrado en invierno es Filo del Cóndor, no Cascada Escondida."),
+            ("Porque no hay cupos disponibles en la camioneta de traslado", "Los cupos afectan el traslado hasta el parque, no el ingreso al sendero."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_interpretar", "medio",
+        "¿Qué razón entrega la guía para aplicar la regla (b) sin excepciones?",
+        "Que un rescate nocturno toma horas y expone a quien lo hace",
+        "El punto de recomendaciones lo explica: la estrictez «no es "
+        "administrativa», sino que «un rescate nocturno en la quebrada puede tomar "
+        "varias horas y expone a quienes lo realizan».\n\nPor eso la regla se "
+        "aplica «incluso si el visitante declara que caminará más rápido».",
+        [
+            ("Que el parque necesita ordenar el flujo de visitantes", "La guía descarta que la razón sea administrativa."),
+            ("Que después del desalojo se cierra el camino de acceso", "El texto no menciona ningún cierre del camino de ripio."),
+            ("Que de noche los senderos son ocupados por la fauna", "La fauna se menciona al final y sin relación con el horario."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre la tabla de senderos y las reglas de seguridad?",
+        "Las reglas condicionan lo que la tabla parece permitir",
+        "La tabla entrega duraciones limpias; las reglas les agregan condiciones: "
+        "hay que sumar 20 % en varios casos *(a)*, el ingreso depende de poder "
+        "volver antes del desalojo *(b)* y un sendero exige requisitos propios y "
+        "está cerrado media temporada *(c)*.\n\nPor eso las preguntas frecuentes se "
+        "resuelven con las reglas y no con la tabla.",
+        [
+            ("Las reglas repiten en palabras los datos de la tabla", "No los repiten: agregan condiciones que la tabla no muestra."),
+            ("La tabla reemplaza a las reglas para los senderos fáciles", "Las reglas se aplican a todos los senderos por igual."),
+            ("Las reglas explican cómo se midieron las distancias", "Ninguna regla trata sobre cómo se obtuvieron los datos."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_evaluar", "medio",
+        "¿Con qué propósito la guía incluye el punto «Lo que esta guía no informa»?",
+        "Para advertir que sus datos no reemplazan el criterio propio",
+        "La sección aclara que las duraciones y dificultades «son promedios de "
+        "personas adultas sin condiciones de salud particulares» y que la guía no "
+        "informa el estado del tiempo, que «puede cerrar tramos sin aviso».\n\nEs "
+        "la contrapartida honesta de una tabla que, por su formato, invita a "
+        "planificar con precisión.",
+        [
+            ("Para deslindar responsabilidad ante cualquier accidente", "La guía no habla de responsabilidades legales en ningún punto."),
+            ("Para anunciar que la información se actualizará pronto", "No hay ningún anuncio de actualización del documento."),
+            ("Para recomendar contratar un guía en la portería", "La guía no ofrece ni sugiere acompañamiento de un guía."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_evaluar", "dificil",
+        "Un grupo de ocho personas con niños quiere hacer Mirador Norte entrando a "
+        "las 15:30 en noviembre. Según la guía, ¿qué corresponde?",
+        "No pueden entrar: con el 20 % de holgura vuelven pasado el desalojo",
+        "En noviembre el ingreso cierra a las 17:00, así que la hora de llegada no "
+        "es el problema: la regla que decide es la *(b)*. Mirador Norte estima tres "
+        "horas, y la regla *(a)* obliga a sumar al menos un 20 % porque el grupo va "
+        "con niños y es de más de seis personas: tres horas treinta y seis minutos. "
+        "Entrando a las 15:30, el regreso queda cerca de las 19:06 y el desalojo es "
+        "a las 19:00.\n\nLa guía advierte que esa regla se aplica sin excepciones, "
+        "incluso si el grupo declara que caminará más rápido.",
+        [
+            ("Pueden entrar, porque el ingreso a senderos aún no cierra a esa hora", "El horario de ingreso se cumple, pero la regla que decide es la del regreso."),
+            ("Pueden entrar sin holgura, porque el sendero es de dificultad media", "La regla (a) suma el 20 % por los niños y el tamaño del grupo, no por la dificultad."),
+            ("No pueden entrar, porque el grupo supera las seis personas", "Ser más de seis obliga a sumar tiempo, no impide el ingreso por sí solo."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_evaluar", "dificil",
+        "¿Qué criterio ordena las advertencias de la guía?",
+        "Anticipar lo que el visitante daría por supuesto y no es así",
+        "Cada advertencia corrige una suposición razonable: que la duración de la "
+        "tabla sirve para cualquiera *(a)*, que se puede compensar caminando más "
+        "rápido *(b)*, que el agua del estero sirve *(d)* y que el teléfono "
+        "funcionará arriba *(e)*.\n\nEl mismo criterio explica el punto final, que "
+        "enumera lo que la guía deliberadamente no informa.",
+        [
+            ("Ordenar los senderos de menor a mayor dificultad", "Ese orden aparece en la tabla, no en las advertencias."),
+            ("Explicar cómo funciona por dentro la administración del parque", "Las reglas se dirigen al visitante, no describen la gestión del parque."),
+            ("Justificar el cobro de la entrada general del parque", "El valor de la entrada aparece una sola vez y sin justificación."),
+        ],
+    ),
+    _ql(
+        "senderos_parque", "lec_evaluar", "facil",
+        "Según la guía, ¿qué debe hacer quien llega en bus hasta el cruce?",
+        "Caminar once kilómetros o pedir traslado el día anterior",
+        "El punto sobre el acceso lo explica: no hay transporte público en el "
+        "camino de ripio, y la administración dispone de una camioneta con dos "
+        "horarios diarios, cuatro cupos por viaje, que «se piden por teléfono con "
+        "un día de anticipación».\n\nLa otra opción es caminar los once kilómetros "
+        "del camino.",
+        [
+            ("Esperar en el cruce hasta que pase la camioneta del parque", "Los cupos se reservan por teléfono el día anterior, no en el camino."),
+            ("Ingresar por otro acceso habilitado para peatones", "La guía menciona un solo acceso al parque."),
+            ("Solicitar el traslado al llegar a la portería del parque", "La portería está dentro del parque: hay que llegar antes."),
+        ],
+    ),
     # ---------- 'Lo que se sabe y lo que no de un terremoto' ----------
     _ql(
         "terremoto_saber", "lec_localizar", "facil",
