@@ -5,9 +5,10 @@ Solo consultas de lectura: nada de lo que hay acá escribe en la base. Es el
 la entrada viene de internet y la valida antes de tocar la base.
 """
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from paes_api.modules.carreras.schemas import UniversidadOut
 from paes_api.modules.goals.models import Carrera
 
 
@@ -37,3 +38,17 @@ def por_codigo(db: Session, codigo: str) -> Carrera | None:
     if not codigo or len(codigo) > 10:
         return None
     return db.execute(select(Carrera).where(Carrera.codigo == codigo)).scalars().first()
+
+
+def universidades(db: Session) -> list[UniversidadOut]:
+    """Las universidades del catálogo, con cuántas carreras tiene cada una.
+
+    Lo agrupa Postgres, no el front: contar en Python obligaba a traerse las
+    1.855 filas enteras para terminar con 47 números.
+    """
+    filas = db.execute(
+        select(Carrera.universidad, func.count(Carrera.id))
+        .group_by(Carrera.universidad)
+        .order_by(func.count(Carrera.id).desc(), Carrera.universidad)
+    ).all()
+    return [UniversidadOut(universidad=nombre, carreras=total) for nombre, total in filas]

@@ -54,3 +54,16 @@ class CarreraCatalogoOut(BaseModel):
     universidad: str
     nombre: str
     sede: str
+
+
+class UniversidadOut(BaseModel):
+    """Una universidad y cuántas carreras suyas hay en el catálogo.
+
+    Existe para no bajar las 1.855 filas cuando lo único que se necesita son
+    las 47 universidades: la portada y el índice las listan, y traerse el
+    catálogo entero para contarlas es mover un megabyte para escribir un
+    número.
+    """
+
+    universidad: str
+    carreras: int
