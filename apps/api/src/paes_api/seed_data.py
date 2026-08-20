@@ -21383,6 +21383,93 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "uso_tiempo_liceo",
+        "title": "¿En qué se nos va la semana?",
+        "kind": "discontinuo",
+        "source_note": (
+            "Texto original de 1000paes. La encuesta y sus cifras son ficticias."
+        ),
+        "body": (
+            "**¿EN QUÉ SE NOS VA LA SEMANA? — INFORME DE LA ENCUESTA DE USO DEL "
+            "TIEMPO**\n\n"
+            "*Elaborado por el Centro de Estudiantes. Aplicada la primera semana de "
+            "junio.*\n\n"
+            "**1. Qué preguntamos y a quiénes**\n\n"
+            "El liceo tiene 412 estudiantes de primero a cuarto medio. La encuesta "
+            "se aplicó en sala, en papel y de forma anónima, durante la primera "
+            "semana de junio, y la respondieron 287 personas: el 70 % de la "
+            "matrícula. Se preguntó cuántas horas de una semana corriente se "
+            "dedican a seis actividades fuera del horario de clases. Cada quien "
+            "anotó su propia estimación; no medimos nada con reloj.\n\n"
+            "**2. Promedio de horas semanales, por nivel**\n\n"
+            "| Actividad | 1º y 2º medio | 3º y 4º medio |\n"
+            "|---|---|---|\n"
+            "| Estudiar o hacer tareas | 5,1 | 8,4 |\n"
+            "| Trabajo remunerado | 1,8 | 4,2 |\n"
+            "| Cuidado de hermanos o familiares | 4,6 | 4,1 |\n"
+            "| Tareas domésticas | 6,2 | 6,0 |\n"
+            "| Pantallas por entretención | 21,3 | 18,7 |\n"
+            "| Deporte o actividad física | 3,4 | 2,2 |\n\n"
+            "**3. Horas de estudio semanal según si se tiene o no trabajo "
+            "remunerado**\n\n"
+            "| Horas de estudio | Sin trabajo remunerado | Con trabajo remunerado |\n"
+            "|---|---|---|\n"
+            "| Menos de 2 horas | 12 % | 26 % |\n"
+            "| Entre 2 y 5 horas | 31 % | 38 % |\n"
+            "| Entre 5 y 10 horas | 38 % | 27 % |\n"
+            "| Más de 10 horas | 19 % | 9 % |\n\n"
+            "*Cómo leer la tabla 3: cada columna suma 100 %. De quienes tienen "
+            "trabajo remunerado, 26 de cada 100 estudian menos de dos horas a la "
+            "semana; de quienes no lo tienen, 12 de cada 100.*\n\n"
+            "**4. Lo que encontramos**\n\n"
+            "Lo esperable apareció: en tercero y cuarto medio se estudia más que en "
+            "los cursos menores —tres horas más por semana, en promedio— y también "
+            "se trabaja más del doble. Menos esperable fue el resto. Las horas de "
+            "entretención frente a pantallas son, por lejos, la actividad que más "
+            "tiempo ocupa en los cuatro niveles, y superan al estudio en una "
+            "proporción de cuatro a uno en los cursos menores. El cuidado de "
+            "hermanos o familiares casi no varía entre niveles: no es una "
+            "responsabilidad que se abandone al crecer. Y el deporte es la única "
+            "actividad que baja de forma marcada al avanzar en el liceo.\n\n"
+            "La tabla 3 muestra algo que conviene leer con cuidado. Entre quienes "
+            "trabajan hay más del doble de estudiantes que estudian menos de dos "
+            "horas semanales, y menos de la mitad de quienes estudian más de diez. "
+            "Pero la brecha no es un abismo: dos tercios de quienes trabajan "
+            "estudian dos horas o más, y hay un 9 % que sostiene ambas cosas por "
+            "encima de las diez horas.\n\n"
+            "**5. Lo que esta encuesta no puede decir**\n\n"
+            "Tres advertencias, y las tres importan.\n\n"
+            "La primera es a quiénes no alcanzamos. El 30 % que no respondió no es "
+            "un grupo cualquiera: son, sobre todo, quienes estaban ausentes ese "
+            "día. Si la inasistencia se relaciona con trabajar, cuidar a alguien o "
+            "estar pasando un mal momento, entonces justamente las situaciones más "
+            "difíciles quedaron subrepresentadas, y las cifras de arriba son más "
+            "optimistas que la realidad del liceo.\n\n"
+            "La segunda es cómo se obtuvo el dato. Nadie midió nada: cada persona "
+            "estimó. Y las estimaciones no se equivocan al azar. Es razonable "
+            "suponer que las horas de estudio están algo infladas y las de "
+            "pantallas algo recortadas, porque una respuesta se siente más "
+            "presentable que la otra. Eso no invalida la comparación entre grupos "
+            "—el sesgo afecta parecido a todos—, pero sí desaconseja tomar cada "
+            "número como una medición.\n\n"
+            "La tercera es qué tipo de afirmación permite. La encuesta describe lo "
+            "que ocurre al mismo tiempo; no muestra qué causa qué. Que quienes "
+            "trabajan estudien menos no prueba que el trabajo les quite horas de "
+            "estudio: podría ocurrir que quienes ya estudiaban poco busquen trabajo "
+            "antes, o que una misma situación familiar empuje las dos cosas a la "
+            "vez. Distinguir eso exigiría seguir a las mismas personas durante un "
+            "tiempo, que es algo que no hicimos.\n\n"
+            "**6. Qué proponemos**\n\n"
+            "Pedimos dos cosas concretas al equipo directivo. Que la coordinación "
+            "de evaluaciones publique el calendario con tres semanas de "
+            "anticipación, porque quien trabaja no puede reorganizar su turno la "
+            "noche anterior. Y que la sala de estudio abra también en el horario de "
+            "almuerzo, que en esta encuesta apareció como la única hora libre común "
+            "a todos los niveles. Ninguna de las dos medidas resuelve lo que "
+            "muestra la tabla 3; las dos están al alcance del liceo este semestre."
+        ),
+    },
+    {
         "key": "estilos_aprendizaje",
         "title": "El estilo que nadie encontró",
         "kind": "no_literario",
@@ -23108,6 +23195,172 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- '¿En qué se nos va la semana?' ----------
+    _ql(
+        "uso_tiempo_liceo", "lec_localizar", "facil",
+        "Según la primera tabla, ¿cuántas horas semanales dedican a pantallas los "
+        "cursos menores?",
+        "21,3 horas",
+        "La fila «Pantallas por entretención» de la tabla del punto 2 marca 21,3 "
+        "horas para 1º y 2º medio.\n\nLas otras cifras de la columna corresponden a "
+        "tareas domésticas (6,2), estudio (5,1) y cuidado de familiares (4,6).",
+        [
+            ("18,7 horas", "Esa es la cifra de pantallas, pero de 3º y 4º medio."),
+            ("6,2 horas", "Esas son las horas de tareas domésticas de los cursos menores."),
+            ("5,1 horas", "Esas son las horas de estudio de los cursos menores."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_localizar", "facil",
+        "Según el informe, ¿cuántas personas respondieron la encuesta?",
+        "287, que son el 70% de la matrícula del liceo",
+        "El punto 1 lo dice con las dos cifras: «El liceo tiene 412 estudiantes» y "
+        "«la respondieron 287 personas: el 70 % de la matrícula».\n\nEsa diferencia "
+        "es la que después retoma la nota sobre a quiénes no se alcanzó.",
+        [
+            ("412, es decir, la matrícula completa del liceo", "412 es el total de estudiantes, no el número de respuestas obtenidas."),
+            ("287, que son el 30% de la matrícula del liceo", "El 30% es la parte que NO respondió; 287 corresponde al 70%."),
+            ("100, elegidos al azar entre los cuatro niveles", "La encuesta no trabajó con una muestra al azar: se aplicó en sala."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_localizar", "facil",
+        "Según la segunda tabla, ¿qué proporción de quienes trabajan estudia menos "
+        "de dos horas?",
+        "26 de cada 100 estudiantes que trabajan",
+        "La primera fila de la tabla del punto 3 marca 26 % en la columna «Con "
+        "trabajo remunerado».\n\nEl recuadro que la acompaña lo enuncia igual: «De "
+        "quienes tienen trabajo remunerado, 26 de cada 100 estudian menos de dos "
+        "horas a la semana».",
+        [
+            ("12 de cada 100 estudiantes que trabajan", "El 12 % corresponde a la columna de quienes NO tienen trabajo remunerado."),
+            ("38 de cada 100 estudiantes que trabajan", "El 38 % es el tramo de entre dos y cinco horas, no el de menos de dos."),
+            ("9 de cada 100 estudiantes que trabajan", "El 9 % es el tramo de más de diez horas de estudio semanal."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_interpretar", "medio",
+        "¿Qué concluye el informe de que el cuidado de familiares casi no varíe "
+        "entre niveles?",
+        "Que no es una responsabilidad que se abandone al crecer",
+        "El punto 4 lo dice con esas palabras: «El cuidado de hermanos o familiares "
+        "casi no varía entre niveles: no es una responsabilidad que se abandone al "
+        "crecer».\n\nEs el contraste con el trabajo remunerado, que sí se duplica, "
+        "y con el deporte, que baja de forma marcada.",
+        [
+            ("Que los cursos mayores dedican más horas a cuidar familiares", "Las cifras van al revés: 4,6 horas en los menores y 4,1 en los mayores."),
+            ("Que el liceo debería organizar apoyo para quienes cuidan", "Esa propuesta no aparece: las dos que se piden son de calendario y sala."),
+            ("Que cuidar familiares impide dedicar horas al estudio", "La encuesta no cruza esas dos actividades ni afirma esa relación."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_interpretar", "medio",
+        "¿Qué función cumple el recuadro que explica cómo leer la segunda tabla?",
+        "Enseñar a interpretar los porcentajes para evitar una lectura errada",
+        "El recuadro traduce la tabla a lenguaje corriente: «cada columna suma 100 "
+        "%», y después convierte el porcentaje en una frecuencia comparable: «26 de "
+        "cada 100 estudian menos de dos horas».\n\nSin esa aclaración es fácil leer "
+        "los porcentajes en la dirección equivocada, comparando filas en vez de "
+        "columnas.",
+        [
+            ("Resumir el hallazgo principal que arrojó la segunda tabla", "El hallazgo se comenta después, en el punto 4; el recuadro solo explica."),
+            ("Justificar por qué la encuesta usó porcentajes y no horas", "El recuadro no discute la elección de la unidad en ningún momento."),
+            ("Advertir que las cifras de esa tabla son menos confiables", "La confiabilidad se discute en el punto 5, y no solo para esa tabla."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "¿Cuál es la relación entre el punto 4 y el punto 5 del informe?",
+        "El punto 5 acota hasta dónde llega lo que el punto 4 afirma",
+        "El punto 4 presenta los hallazgos y el punto 5 se titula «Lo que esta "
+        "encuesta no puede decir»: a quiénes no alcanzó, cómo se obtuvo el dato y "
+        "qué tipo de afirmación permite.\n\nNo retira los hallazgos: los deja en "
+        "pie con su alcance a la vista, que es distinto de desmentirlos.",
+        [
+            ("El punto 5 desmiente los hallazgos que presentó el punto 4", "No los desmiente: los mantiene y advierte hasta dónde pueden leerse."),
+            ("El punto 5 repite los hallazgos del punto 4 con otras palabras", "El punto 5 no vuelve sobre las cifras: habla de cómo se obtuvieron."),
+            ("El punto 5 explica el método con que se calcularon los promedios", "No hay ningún cálculo explicado allí: hay tres advertencias de lectura."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "¿Qué agrega al informe la observación de que «la brecha no es un abismo»?",
+        "Impide leer la tabla como si trabajar dejara sin estudiar a nadie",
+        "La frase llega después de constatar la diferencia, y trae dos datos que la "
+        "limitan: «dos tercios de quienes trabajan estudian dos horas o más» y «hay "
+        "un 9 % que sostiene ambas cosas por encima de las diez horas».\n\nEl "
+        "informe sostiene la diferencia y a la vez impide llevarla más lejos de lo "
+        "que las cifras permiten.",
+        [
+            ("Reconoce que la diferencia entre los dos grupos es insignificante", "El informe la presenta como real: más del doble en el tramo más bajo."),
+            ("Anuncia que la tabla se corregirá con datos de otro semestre", "No hay ningún anuncio de corrección ni de una segunda medición."),
+            ("Atribuye la diferencia al modo en que se hizo la encuesta", "El problema del método se trata aparte, en el punto 5."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_evaluar", "medio",
+        "Según el informe, ¿por qué quienes no respondieron no son «un grupo "
+        "cualquiera»?",
+        "Porque son los ausentes, y faltar se liga a las situaciones difíciles",
+        "El punto 5 razona así: el 30 % que faltó «son, sobre todo, quienes estaban "
+        "ausentes ese día», y si la inasistencia se relaciona con trabajar o cuidar "
+        "a alguien, entonces «las situaciones más difíciles quedaron "
+        "subrepresentadas».\n\nDe ahí la conclusión que el propio informe saca: sus "
+        "cifras «son más optimistas que la realidad del liceo».",
+        [
+            ("Porque son en su mayoría estudiantes de los cursos menores", "El informe no dice en qué nivel están quienes no respondieron."),
+            ("Porque se negaron a contestar un cuestionario que era anónimo", "No hubo negativa: el informe explica que estaban ausentes ese día."),
+            ("Porque el cuestionario no alcanzó a aplicarse en todas las salas", "La encuesta se aplicó en sala a todo el liceo, no a algunas salas."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_evaluar", "dificil",
+        "Según el informe, ¿por qué el autorreporte no invalida la comparación "
+        "entre grupos?",
+        "Porque el error empuja en la misma dirección en todos los que responden",
+        "El informe reconoce el sesgo y acota su efecto: las horas de estudio "
+        "estarían «algo infladas» y las de pantallas «algo recortadas», pero «el "
+        "sesgo afecta parecido a todos».\n\nPor eso concluye que lo que no conviene "
+        "es tomar «cada número como una medición», y no que haya que descartar la "
+        "comparación.",
+        [
+            ("Porque las estimaciones de los estudiantes resultaron muy exactas", "El informe supone lo contrario: que se equivocan, y no al azar."),
+            ("Porque las horas se verificaron después con un registro del liceo", "Nadie midió nada: el propio informe subraya que no usó reloj."),
+            ("Porque el cuestionario era anónimo y nadie tenía por qué mentir", "El anonimato se menciona al describir la aplicación, no como garantía."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_evaluar", "dificil",
+        "Un lector concluye que el trabajo remunerado les quita horas de estudio. "
+        "¿Qué responde el informe?",
+        "Que la encuesta describe lo que ocurre junto, no qué causa qué",
+        "El punto 5 lo dice sin rodeos: «no muestra qué causa qué», y ofrece dos "
+        "explicaciones alternativas para el mismo dato: que quienes ya estudiaban "
+        "poco busquen trabajo antes, o que una misma situación familiar empuje las "
+        "dos cosas.\n\nY precisa qué haría falta para decidirlo: «seguir a las "
+        "mismas personas durante un tiempo», que es lo que no se hizo.",
+        [
+            ("Que la conclusión es correcta y la tabla 3 la demuestra", "La tabla muestra dos cosas ocurriendo juntas, que no es una demostración."),
+            ("Que el trabajo remunerado no influye en las horas de estudio", "El informe no afirma eso: dice que no puede decidir la dirección."),
+            ("Que haría falta preguntar a los apoderados para confirmarlo", "Lo que propone es seguir a las mismas personas en el tiempo."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_evaluar", "medio",
+        "¿Cuál de las dos medidas propuestas se apoya directamente en un dato de la "
+        "encuesta?",
+        "Abrir la sala de estudio al almuerzo, única hora libre común",
+        "El punto 6 presenta esa medida citando el resultado en que se apoya: el "
+        "horario de almuerzo «apareció como la única hora libre común a todos los "
+        "niveles».\n\nLa otra medida, publicar el calendario con anticipación, se "
+        "justifica con un argumento —quien trabaja no reorganiza su turno la noche "
+        "anterior— y no con una cifra del propio estudio.",
+        [
+            ("Publicar el calendario de evaluaciones con tres semanas de anticipación", "Esa se apoya en un argumento sobre los turnos, no en un dato medido."),
+            ("Reducir las horas de pantallas de los estudiantes más jóvenes", "Esa medida no se propone: el informe no pide intervenir ahí."),
+            ("Repartir las tareas domésticas de manera más pareja en la casa", "El informe no propone ninguna medida sobre las tareas domésticas."),
+        ],
+    ),
     # ---------- 'El estilo que nadie encontró' ----------
     _ql(
         "estilos_aprendizaje", "lec_localizar", "facil",
