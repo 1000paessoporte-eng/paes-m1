@@ -8,6 +8,7 @@ import { Planes } from "@/components/home/planes";
 import { PuntajeMockup } from "@/components/home/puntaje-mockup";
 import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
+import { CuentaRegresiva } from "@/components/home/cuenta-regresiva";
 import { nombreLegible, slugUniversidad } from "@/lib/carreras";
 
 /** Portada para visitantes sin sesión: nombre, entrada y qué ofrece el sitio. */
@@ -535,8 +536,19 @@ function CierreMotivacional() {
     <section className="hero-glow relative overflow-hidden border-t border-border px-6 py-20">
       <div className="relative mx-auto max-w-2xl text-center">
         {dias !== null && (
-          <span className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-            Faltan {dias} {dias === 1 ? "día" : "días"} para la PAES
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5 text-sm font-medium text-accent">
+            <span aria-hidden className="pulso-reloj">
+              <RelojIcon />
+            </span>
+            Para la PAES faltan{" "}
+            {/* El servidor pinta los días; el reloj completo llega con el
+                JavaScript. Ver el comentario de CuentaRegresiva. */}
+            <span className="hidden sm:inline">
+              <CuentaRegresiva />
+            </span>
+            <span className="sm:hidden tabular-nums">
+              {dias} {dias === 1 ? "día" : "días"}
+            </span>
           </span>
         )}
         <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance sm:text-4xl">
@@ -757,6 +769,15 @@ function ChartIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 20V10M12 20V4M20 20v-7" />
+    </svg>
+  );
+}
+
+function RelojIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
     </svg>
   );
 }

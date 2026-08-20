@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { buscarCarrerasPublico, getCarrera, type CarreraPublica } from "@/lib/api";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
 import { nombreLegible, slugCarrera } from "@/lib/carreras";
 import { calcularPonderado, ETIQUETAS, type Factor, type Puntajes } from "@/lib/ponderado";
 
@@ -216,25 +217,33 @@ function Veredicto({
     return (
       <span className="text-muted">
         Tu ponderado es{" "}
-        <strong className="text-foreground tabular-nums">{ponderado}</strong>. El
-        DEMRE no publicó puntaje mínimo para esta carrera, así que no hay contra
-        qué compararlo.
+        <strong className="text-foreground tabular-nums">
+          <NumeroAnimado valor={ponderado} duracion={0.6} />
+        </strong>
+        . El DEMRE no publicó puntaje mínimo para esta carrera, así que no hay
+        contra qué compararlo.
       </span>
     );
   }
   if (diferencia != null && diferencia >= 0) {
     return (
       <span className="text-success">
-        Tu ponderado es <strong className="tabular-nums">{ponderado}</strong> y el
-        mínimo del proceso anterior fue {minimo}:{" "}
+        Tu ponderado es{" "}
+        <strong className="tabular-nums">
+          <NumeroAnimado valor={ponderado} duracion={0.6} />
+        </strong>{" "}
+        y el mínimo del proceso anterior fue {minimo}:{" "}
         <strong>te sobran {diferencia} puntos</strong>.
       </span>
     );
   }
   return (
     <span className="text-accent-warm-strong">
-      Tu ponderado es <strong className="tabular-nums">{ponderado}</strong> y el
-      mínimo del proceso anterior fue {minimo}:{" "}
+      Tu ponderado es{" "}
+      <strong className="tabular-nums">
+        <NumeroAnimado valor={ponderado} duracion={0.6} />
+      </strong>{" "}
+      y el mínimo del proceso anterior fue {minimo}:{" "}
       <strong>te faltan {Math.abs(diferencia ?? 0)} puntos</strong>.
     </span>
   );
