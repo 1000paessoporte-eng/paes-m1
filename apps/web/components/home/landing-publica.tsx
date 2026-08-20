@@ -51,7 +51,7 @@ const FEATURES_BASE = [
   {
     title: "Primero aprender, después practicar",
     description:
-      "Cada tema de Matemática M1 trae su lección: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
+      "Cada tema trae su lección, y se lee sin cuenta: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
     icon: TreeIcon,
     badgeClass: "bg-accent/10 text-accent",
   },
@@ -297,9 +297,12 @@ export function LandingPublica({
           </div>
 
           <p className="mt-10 text-center text-sm text-muted">
-            Para rendir un ensayo necesitas una cuenta.{" "}
+            <Link href="/aprender" className="font-medium text-accent hover:underline">
+              Las lecciones se leen sin cuenta
+            </Link>
+            . Para rendir un ensayo sí necesitas una:{" "}
             <Link href="/registro" className="font-medium text-accent hover:underline">
-              Créala en un minuto
+              créala en un minuto
             </Link>
             .
           </p>

@@ -122,6 +122,23 @@ export function getContentStats(): Promise<ContentStats> {
   });
 }
 
+export type LeccionIndice =
+  paths["/api/skill-tree/lecciones"]["get"]["responses"][200]["content"]["application/json"][number];
+
+/**
+ * Los temas que ya tienen lección escrita.
+ *
+ * Público y cacheado un día: lo piden el índice de /aprender, el sitemap y el
+ * prerenderizado de cada lección, y el contenido cambia cuando alguien escribe
+ * una lección nueva, no cada minuto.
+ */
+export function getLecciones(): Promise<LeccionIndice[]> {
+  return apiFetch<LeccionIndice[]>("/api/skill-tree/lecciones", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 86400 },
+  });
+}
+
 export type Lesson =
   paths["/api/skill-tree/{code}/leccion"]["get"]["responses"][200]["content"]["application/json"];
 
@@ -257,8 +274,23 @@ export function getSkillNode(code: string, token?: string): Promise<SkillNode> {
 }
 
 /** La teoría de un nodo. Lanza ApiError 404 si el tema aún no tiene lección. */
-export function getLesson(code: string, token?: string): Promise<Lesson> {
-  return apiFetch<Lesson>(`/api/skill-tree/${code}/leccion`, token);
+/**
+ * La teoría de un tema. Pública, y por eso cacheada.
+ *
+ * Sin `force-cache` la página de la lección no se puede prerenderizar: una
+ * ruta que hace un fetch sin cachear pasa a renderizarse en cada visita, que
+ * es justo lo contrario de lo que necesitan 17 páginas idénticas para todo el
+ * mundo y pensadas para que Google las visite.
+ *
+ * No lleva token a propósito: el contenido es el mismo con sesión o sin ella,
+ * y una petición cacheada que arrastre una cabecera de autorización es la
+ * forma de servirle a alguien la respuesta de otro.
+ */
+export function getLesson(code: string): Promise<Lesson> {
+  return apiFetch<Lesson>(`/api/skill-tree/${code}/leccion`, undefined, {
+    cache: "force-cache",
+    next: { revalidate: 86400 },
+  });
 }
 
 export function getRecommendedNode(token?: string): Promise<RecommendedNode> {

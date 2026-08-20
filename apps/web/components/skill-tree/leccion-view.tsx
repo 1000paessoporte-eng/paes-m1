@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import type { Lesson } from "@/lib/api";
+import { getSkillNode, type Lesson } from "@/lib/api";
+import { getClientToken } from "@/lib/auth";
 import { TextoRico } from "@/components/texto-rico";
 
 /**
@@ -18,17 +19,39 @@ import { TextoRico } from "@/components/texto-rico";
  * qué viene, que es donde se aprende. Igual está el botón para verlos todos,
  * porque quien vuelve a repasar no necesita el ejercicio de nuevo.
  */
-export function LeccionView({
-  leccion,
-  yaPracticado,
-}: {
-  leccion: Lesson;
-  yaPracticado: boolean;
-}) {
+export function LeccionView({ leccion }: { leccion: Lesson }) {
   const quieto = useReducedMotion();
   const total = leccion.example_steps.length;
-  // Quien ya practicó este nodo viene de vuelta: se le muestra todo.
-  const [visibles, setVisibles] = useState(yaPracticado ? total : 1);
+  const [visibles, setVisibles] = useState(1);
+
+  // La sesión se lee acá y no en el servidor a propósito: sin eso la página
+  // tendría que consultar la cookie al renderizar, y una página que lee la
+  // cookie no se puede prerenderizar. Estas 17 lecciones existen sobre todo
+  // para quien llega de Google sin cuenta, así que se sirven estáticas y lo
+  // único que depende de la sesión —el botón de practicar y el atajo de saltar
+  // los pasos— se resuelve en el navegador.
+  const [conSesion, setConSesion] = useState(false);
+
+  useEffect(() => {
+    const token = getClientToken();
+    if (!token) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setConSesion(true);
+    // Quien ya practicó este nodo viene de vuelta: se le muestra todo.
+    let vigente = true;
+    getSkillNode(leccion.node_code, token)
+      .then((nodo) => {
+        if (vigente && nodo.attempts > 0) setVisibles(total);
+      })
+      .catch(() => {
+        // Que no se pueda saber si ya practicó no es motivo para romper la
+        // lección: se queda con el paso a paso, que es el comportamiento
+        // normal de quien la lee por primera vez.
+      });
+    return () => {
+      vigente = false;
+    };
+  }, [leccion.node_code, total]);
 
   const faltan = total - visibles;
 
@@ -135,17 +158,26 @@ export function LeccionView({
       )}
 
       {/* ── A practicar ─────────────────────────────────────────────── */}
+      {/* Leer no basta: el paso siguiente es responder. Con sesión se va
+          derecho al tema; sin ella hay que crear cuenta, y la promesa dice
+          exactamente eso para que nadie llegue al login por sorpresa. */}
       <section className="card-panel mt-5 flex flex-wrap items-center justify-between gap-4 p-6">
         <div>
           <h2 className="font-semibold tracking-tight">
             Ahora practica lo que acabas de leer
           </h2>
           <p className="mt-1 text-sm text-muted">
-            Preguntas de este mismo tema, una a una y con corrección inmediata.
+            {conSesion
+              ? "Preguntas de este mismo tema, una a una y con corrección inmediata."
+              : "Preguntas de este mismo tema, una a una y con corrección inmediata. Crear la cuenta es gratis y toma un minuto."}
           </p>
         </div>
         <Link
-          href={`/practicar/${leccion.node_code}`}
+          href={
+            conSesion
+              ? `/practicar/${leccion.node_code}`
+              : `/registro?next=/practicar/${leccion.node_code}`
+          }
           className="btn-warm shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
         >
           Practicar este tema →
@@ -154,10 +186,10 @@ export function LeccionView({
 
       <p className="mt-6 text-center text-sm">
         <Link
-          href="/arbol"
+          href={conSesion ? "/arbol" : "/aprender"}
           className="text-muted underline-offset-4 hover:text-foreground hover:underline"
         >
-          ← Volver al árbol
+          {conSesion ? "← Volver al árbol" : "← Ver todas las lecciones"}
         </Link>
       </p>
     </article>
