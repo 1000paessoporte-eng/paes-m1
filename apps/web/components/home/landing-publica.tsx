@@ -178,30 +178,18 @@ export function LandingPublica({
               <TituloRotativo palabras={PRUEBAS_ROTATIVAS} />
             </h1>
 
+            {/* UNA línea antes de la acción.
+                De 60 visitantes que llegaron a la portada, 53 se fueron sin
+                abrir nada más. En un teléfono había que leer el titular, dos
+                párrafos y tres chips antes de encontrar un botón: la acción
+                quedaba fuera de la primera pantalla. El detalle no se pierde,
+                baja debajo del bloque de entrada. */}
             <p className="max-w-xl text-balance text-lg font-medium text-foreground sm:text-xl">
-              La PAES se acerca. Prepárate con datos reales, no con
-              suposiciones.
+              Rinde un ensayo cronometrado como el real y descubre tu puntaje
+              estimado.
             </p>
 
-            <p className="max-w-xl text-balance text-muted">
-              Con el tiempo real de cada prueba, tu puntaje estimado según las
-              tablas oficiales del DEMRE y la resolución paso a paso de cada
-              ejercicio. Practica, mide y mejora.
-            </p>
-
-            <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
-              {DATOS.map((dato) => (
-                <li
-                  key={dato.label}
-                  className="flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
-                >
-                  <dato.icon className="text-accent" />
-                  {dato.label}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-2 flex flex-col items-center gap-3 lg:items-start">
+            <div className="flex flex-col items-center gap-3 lg:items-start">
               <Link
                 href="/registro"
                 className="btn-glow rounded-xl px-8 py-3.5 text-base font-semibold text-accent-foreground"
@@ -245,6 +233,26 @@ export function LandingPublica({
                 </Link>
               </p>
             </div>
+
+            {/* El detalle, después de la acción: quien ya decidió no lo
+                necesita, y a quien duda le sigue estando ahí. */}
+            <p className="max-w-xl text-balance text-muted">
+              Con el tiempo real de cada prueba, tu puntaje estimado según las
+              tablas oficiales del DEMRE y la resolución paso a paso de cada
+              ejercicio. Practica, mide y mejora.
+            </p>
+
+            <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
+              {DATOS.map((dato) => (
+                <li
+                  key={dato.label}
+                  className="flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
+                >
+                  <dato.icon className="text-accent" />
+                  {dato.label}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="relative mx-auto w-full max-w-sm lg:mx-0">
