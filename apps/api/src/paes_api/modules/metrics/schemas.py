@@ -13,6 +13,16 @@ class PageViewIn(BaseModel):
     #: solo con el host y descarta el resto.
     referrer: str | None = Field(default=None, max_length=500)
 
+    #: Los cuatro UTM de la URL de entrada, solo en la primera vista. Vienen de
+    #: la URL, o sea de fuera: se acotan acá y se vuelven a acotar al guardar.
+    #: Un valor demasiado largo no es un error que valga la pena devolverle a
+    #: nadie —medir no puede romper la navegación—, así que el router recorta
+    #: en vez de rechazar.
+    utm_source: str | None = Field(default=None, max_length=300)
+    utm_medium: str | None = Field(default=None, max_length=300)
+    utm_campaign: str | None = Field(default=None, max_length=300)
+    utm_content: str | None = Field(default=None, max_length=300)
+
 
 class UsoPublicoOut(BaseModel):
     """Cuánto se usa la plataforma, en tres números.

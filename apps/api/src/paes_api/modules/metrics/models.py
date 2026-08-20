@@ -54,6 +54,29 @@ class PageView(Base):
     #: descartarse: un bot que entra igual es información sobre el sitio, y
     #: borrarlo impediría notar después que la heurística estaba mal.
     es_bot: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false")
+
+    # ── Campaña de origen ───────────────────────────────────────────────
+    # Los cuatro parámetros UTM tal como venían en la URL de entrada, y solo
+    # en la vista de entrada: en las navegaciones internas quedan NULL porque
+    # no los hay.
+    #
+    # Existen para una pregunta concreta que el referrer no puede responder:
+    # qué anuncio trajo a quien terminó pagando. El navegador interno de
+    # Instagram muchas veces no manda referrer, así que esas visitas caían en
+    # el mismo balde que un amigo pasando el link; y aunque llegara
+    # "instagram.com", todos los anuncios se veían iguales.
+    #
+    # Son etiquetas de campaña que escribe quien arma el anuncio, no datos de
+    # la persona. Se acotan a 100 caracteres al guardar: vienen de la URL, o
+    # sea de fuera, y una etiqueta legítima no pasa de unas pocas palabras.
+    utm_source: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    utm_medium: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    #: El nombre de la campaña. Indexado: el panel agrupa por él.
+    utm_campaign: Mapped[str | None] = mapped_column(
+        String(100), nullable=True, index=True
+    )
+    #: La creatividad o variante concreta del anuncio.
+    utm_content: Mapped[str | None] = mapped_column(String(100), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True
     )

@@ -43,6 +43,25 @@ def _host_de(referrer: str | None) -> str | None:
     return host[:120]
 
 
+#: Largo máximo de una etiqueta UTM en la base. Una campaña real se nombra con
+#: unas pocas palabras; lo que pase de acá es relleno o un intento de escribir
+#: en la tabla por la vía de la URL.
+MAX_UTM = 100
+
+
+def _etiqueta(valor: str | None) -> str | None:
+    """Una etiqueta de campaña lista para guardar, o None.
+
+    Recorta en vez de rechazar: el registro de una visita no puede fallar hacia
+    el usuario por una etiqueta mal armada. Y una cadena en blanco se guarda
+    como NULL, porque "?utm_campaign=" no es una campaña llamada "".
+    """
+    if valor is None:
+        return None
+    limpio = valor.strip()[:MAX_UTM]
+    return limpio or None
+
+
 @router.post("/pageview", status_code=status.HTTP_204_NO_CONTENT)
 @limiter.limit("60/minute")
 def registrar_visita(
@@ -77,6 +96,10 @@ def registrar_visita(
             browser=navegador,
             referrer=_host_de(payload.referrer),
             es_bot=es_robot(ua),
+            utm_source=_etiqueta(payload.utm_source),
+            utm_medium=_etiqueta(payload.utm_medium),
+            utm_campaign=_etiqueta(payload.utm_campaign),
+            utm_content=_etiqueta(payload.utm_content),
         )
     )
     db.commit()
