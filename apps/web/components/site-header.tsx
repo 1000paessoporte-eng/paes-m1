@@ -27,6 +27,7 @@ const NAV_PUBLICO = [
   // oficiales del DEMRE, y hasta ahora solo se llegaba a ellas por el sitemap.
   // Sin un enlace desde el menú no las encontraba ni Google ni una persona.
   { href: "/carreras", label: "Carreras" },
+  { href: "/simulador", label: "Simulador" },
   // Las 17 lecciones del temario: el otro contenido que se lee sin cuenta.
   { href: "/aprender", label: "Lecciones" },
   { href: "/demo", label: "Probar sin cuenta" },

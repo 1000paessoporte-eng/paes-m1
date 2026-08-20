@@ -84,6 +84,14 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
+                  href="/simulador"
+                  className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline"
+                >
+                  Simulador de puntaje
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/aprender"
                   className="-my-1.5 inline-block py-2 hover:text-foreground hover:underline"
                 >
