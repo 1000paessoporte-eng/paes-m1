@@ -21383,6 +21383,188 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "cinco_grados",
+        "title": "Cinco grados de diferencia",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las magnitudes citadas (diferencias de "
+            "temperatura dentro del Gran Santiago, efecto de la sombra y de la "
+            "evapotranspiración, y el estudio de 2026 sobre zonas frías) se verificaron "
+            "antes de escribir el texto."
+        ),
+        "body": (
+            "**Cinco grados de diferencia**\n\n"
+            "Una tarde de enero, dos personas que viven en la misma ciudad pueden "
+            "estar sintiendo temperaturas que no se parecen. No hablamos de una "
+            "sensación: las mediciones dentro del Gran Santiago muestran "
+            "diferencias de hasta unos seis grados en la exposición al calor entre "
+            "unos sectores y otros, y el área construida puede superar en torno a "
+            "cuatro grados a los campos que la rodean. La ciudad no tiene un clima. "
+            "Tiene varios, repartidos desigualmente.\n\n"
+            "El fenómeno se llama isla de calor urbana y su explicación es física "
+            "antes que social. El asfalto, el hormigón y las techumbres absorben "
+            "radiación durante el día y la devuelven durante la noche, de modo que "
+            "la ciudad no alcanza a enfriarse antes del amanecer siguiente. Donde "
+            "no hay superficies que evaporen agua ni copas que intercepten el sol, "
+            "el calor se acumula. Donde las hay, se disipa.\n\n"
+            "Un árbol enfría de dos maneras distintas, y conviene no confundirlas. "
+            "La primera es la sombra: la copa intercepta la radiación antes de que "
+            "llegue al suelo, y por eso el pavimento bajo un árbol puede estar "
+            "entre once y veinticinco grados más fresco que el mismo pavimento a "
+            "pleno sol. Es una diferencia enorme, aunque solo afecta a la "
+            "superficie y a quien camina por ella.\n\n"
+            "La segunda es menos visible y más interesante. El árbol saca agua del "
+            "suelo y la libera por las hojas, y evaporar agua consume energía: esa "
+            "energía sale del aire que rodea al árbol, que queda algo más frío. El "
+            "efecto sobre la temperatura del aire es más modesto —entre uno y cinco "
+            "grados, según el tamaño de la copa y la humedad disponible—, pero es "
+            "el que enfría el barrio y no solo la vereda.\n\n"
+            "Sumados, los dos mecanismos convierten a un parque en algo parecido a "
+            "una instalación de refrigeración. Un estudio dado a conocer este año "
+            "identificó setenta y siete «zonas frías» en el Gran Santiago —parques "
+            "y áreas verdes que, durante episodios de calor extremo, bajan hasta "
+            "cinco grados y medio la temperatura de la superficie a su alrededor—. "
+            "Es infraestructura, aunque no lo parezca: cumple una función medible, "
+            "se deteriora si no se mantiene y cuesta dinero.\n\n"
+            "El problema es cómo está repartida. Las comunas que aparecen una y "
+            "otra vez entre las más expuestas al calor —Quilicura, Renca, Pudahuel, "
+            "Cerro Navia, Conchalí, Lo Prado, Estación Central, Lo Espejo, "
+            "Cerrillos, Pedro Aguirre Cerda— no son las que concentran el arbolado "
+            "maduro. El mapa del calor y el mapa del ingreso se parecen demasiado "
+            "como para atribuirlo al azar, y la consecuencia es concreta: una ola "
+            "de calor no llega igual a todos los domicilios de una misma ciudad.\n\n"
+            "Aquí conviene detenerse en un detalle que perjudica a quienes "
+            "defienden esta causa. Es común leer que «la Organización Mundial de la "
+            "Salud recomienda nueve metros cuadrados de área verde por habitante». "
+            "La cifra circula en columnas, en programas de gobierno y en "
+            "presentaciones municipales. El problema es que nadie ha logrado dar "
+            "con el documento. Distintas verificaciones han buscado el origen de "
+            "esa recomendación —en la propia OMS y en otros organismos "
+            "internacionales— sin encontrarla: lo que hay es una repetición larga y "
+            "de buena fe, no una fuente.\n\n"
+            "Podría parecer un detalle menor, y no lo es. Un argumento que se apoya "
+            "en una autoridad inexistente queda a merced de la primera persona que "
+            "revise la cita: basta con desmentir el número para que parezca "
+            "desmentido todo el planteamiento, aunque las mediciones de temperatura "
+            "sigan intactas. Y son las mediciones, no la cifra, lo que sostiene el "
+            "caso. Renunciar a un dato que no se puede rastrear no debilita el "
+            "argumento: lo deja parado sobre lo que sí se puede comprobar.\n\n"
+            "La objeción seria es otra, y viene del agua. Enfriar por "
+            "evapotranspiración significa, literalmente, evaporar agua en una zona "
+            "que lleva más de una década con déficit de precipitaciones. Plantar "
+            "árboles en una ciudad semiárida y sedienta parece, a primera vista, "
+            "una contradicción.\n\n"
+            "La respuesta no es negar el costo, sino ponerlo en escala. Una especie "
+            "adaptada al clima local consume una fracción de lo que consume un "
+            "árbol traído de otro sitio, y el césped —que da sombra a nadie— suele "
+            "beber más que los árboles que lo rodean. Un ejemplar grande y viejo "
+            "entrega mucha más sombra por litro de agua que tres ejemplares recién "
+            "plantados, de modo que cuidar los árboles existentes rinde más que "
+            "celebrar plantaciones nuevas. La pregunta útil no es si regar o no "
+            "regar, sino qué se riega, dónde y con qué agua.\n\n"
+            "Queda una dificultad que ningún estudio resuelve: el tiempo. Un árbol "
+            "plantado hoy no da sombra útil hoy. Da sombra en quince o veinte años, "
+            "cuando quien firmó la ordenanza ya no esté en el cargo y quien reclamó "
+            "por el calor tal vez se haya cambiado de comuna. Es una inversión cuyo "
+            "beneficio recibe otra persona, más adelante, y esa es exactamente la "
+            "clase de decisión que las ciudades postergan mejor.\n\n"
+            "Mientras tanto, los cinco grados siguen ahí, esperando en la vereda de "
+            "enfrente."
+        ),
+    },
+    {
+        "key": "restauradora_papel",
+        "title": "«Restaurar no es dejarlo como nuevo»",
+        "kind": "no_literario",
+        "source_note": (
+            "Entrevista ficticia escrita por 1000paes como ejercicio de lectura. La "
+            "entrevistada es un personaje y no reproduce declaraciones de ninguna "
+            "persona real; las recomendaciones de conservación son generales y no "
+            "reemplazan la evaluación de un especialista."
+        ),
+        "body": (
+            "**«Restaurar no es dejarlo como nuevo»**\n\n"
+            "*Entrevista a Elisa Torreblanca, restauradora de papel. La "
+            "entrevistada es un personaje: esta entrevista fue escrita como "
+            "ejercicio de lectura y no reproduce las palabras de ninguna persona "
+            "real.*\n\n"
+            "Trabaja en una sala sin ventanas, con guantes finos y una espátula que "
+            "parece de repostería. Sobre la mesa hay un cuaderno de contabilidad de "
+            "1932 que llegó, dice, «como llegan casi todos: dentro de una bolsa "
+            "plástica y con la mejor de las intenciones».\n\n"
+            "**—Empecemos por lo obvio. ¿Qué hace exactamente una restauradora de "
+            "papel?**\n\n"
+            "—Menos de lo que la gente imagina. La mayor parte de mi trabajo es "
+            "detener un deterioro, no revertirlo. Limpio, estabilizo, refuerzo un "
+            "borde, guardo el documento de manera que dure otros cien años. "
+            "Restaurar no es dejarlo como nuevo. Un papel de 1932 que se ve como "
+            "recién comprado no está restaurado: está falsificado.\n\n"
+            "**—Suena a que le molesta la palabra.**\n\n"
+            "—Me molesta lo que la gente entiende con ella. Llegan con una "
+            "fotografía manchada y quieren que quede impecable, y uno tiene que "
+            "explicar que la mancha también es parte de la historia del objeto. Hay "
+            "una regla que aprendimos todos: intervenir lo mínimo, y que todo lo "
+            "que uno haga se pueda deshacer. Si mi trabajo no se puede deshacer, es "
+            "un daño más, aunque se vea bonito.\n\n"
+            "**—¿Cuál es el peor enemigo del papel?**\n\n"
+            "—El más común, la cinta adhesiva. Esa que uno usa para pegar una hoja "
+            "rota. El adhesivo se oxida con los años, atraviesa la fibra y deja una "
+            "mancha café que ya no se saca sin llevarse el papel. He visto cartas "
+            "familiares perfectamente conservadas durante ochenta años y arruinadas "
+            "en una tarde por un rollo de cinta.\n\n"
+            "**—¿Y la humedad?**\n\n"
+            "—La humedad es más discutida de lo que parece. Todo el mundo sabe que "
+            "la humedad alta trae hongos, y es verdad. Pero el daño grave lo hacen "
+            "los cambios: guardar algo en una pieza que en la mañana está fría y a "
+            "mediodía tibia, un invierno atrás de otro. El papel absorbe agua, se "
+            "hincha, se seca, se encoge, y esa gimnasia repetida es la que quiebra "
+            "la fibra. Una humedad medianamente alta y estable hace menos daño que "
+            "una que sube y baja todos los días.\n\n"
+            "**—Mucha gente guarda sus documentos en bolsas plásticas selladas.**\n\n"
+            "—Y lo hace pensando que los protege. Una bolsa sellada no deja salir "
+            "la humedad que el papel ya tiene adentro; en el peor caso uno "
+            "construye un invernadero. Prefiero mil veces una caja de cartón en un "
+            "lugar oscuro y seco, con las hojas planas, sin dobleces nuevos y sin "
+            "clips metálicos. Los clips oxidados dejan una marca con forma de clip "
+            "que dura para siempre.\n\n"
+            "**—¿La luz también?**\n\n"
+            "—La luz es el daño invisible, porque es lento y es acumulativo. Nadie "
+            "ve que una acuarela se destiñe, hasta que se compara con la parte que "
+            "estaba tapada por el marco. Y eso no se recupera: no existe manera de "
+            "devolverle el color a una tinta que se fue. Por eso los museos tienen "
+            "las salas oscuras y a la gente le parece un capricho estético.\n\n"
+            "**—¿Es cierto que el papel antiguo dura más que el moderno?**\n\n"
+            "—Es cierto y suena a chiste. Un documento del siglo XVII hecho con "
+            "trapos de lino puede estar en mejor estado que un diario de 1970. "
+            "Cuando la industria empezó a fabricar papel con pasta de madera, y con "
+            "procesos que dejaban residuos ácidos, el papel quedó con un problema "
+            "adentro: se acidifica solo, se pone amarillo y se vuelve quebradizo. "
+            "Uno lo toca y se parte en el borde. Ese es el trabajo que más me pesa, "
+            "porque no hay manera de devolverle la flexibilidad; se puede frenar, "
+            "no deshacer.\n\n"
+            "**—¿No se soluciona todo escaneando y guardando los archivos?**\n\n"
+            "—Escanear es una gran idea y no soluciona todo. Salva la información, "
+            "que no es poco: si mañana se quema la casa, el contenido de la carta "
+            "sobrevive. Pero un escaneo no es el documento; es una fotografía del "
+            "documento. Y los archivos digitales tampoco son eternos: hay que "
+            "copiarlos cada cierto tiempo, en más de un lugar, y en formatos que se "
+            "sigan abriendo. Yo he recuperado cartas de 1890 que estaban en un "
+            "cajón. Todavía no consigo abrir unos discos que grabé el año 2003.\n\n"
+            "**—¿Qué le diría a alguien que tiene una caja de fotos y cartas de su "
+            "familia?**\n\n"
+            "—Tres cosas, y ninguna cuesta plata. Primero, nada de cinta, ni clips, "
+            "ni plastificado, que es irreversible. Segundo, sáquelas del suelo y de "
+            "la pieza más húmeda de la casa; el fondo de un clóset interior es "
+            "mejor que cualquier lugar bonito. Tercero, y esto es lo que nadie "
+            "hace: escriba quién aparece en cada fotografía. En veinte años más va "
+            "a haber alguien mirando esa caja, y el papel va a estar entero, pero "
+            "nadie va a saber quiénes son.\n\n"
+            "**—Suena a que lo más frágil no es el papel.**\n\n"
+            "—Nunca lo es. El papel bien guardado aguanta siglos. Lo que se pierde "
+            "primero es el nombre de la gente."
+        ),
+    },
+    {
         "key": "libro_no_devuelto",
         "title": "El libro que no devolviste",
         "kind": "literario",
@@ -24321,6 +24503,348 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Cinco grados de diferencia' ----------
+    _ql(
+        "cinco_grados", "lec_localizar", "facil",
+        "Según la lectura, ¿cuántas «zonas frías» identificó el estudio dado a "
+        "conocer este año?",
+        "Setenta y siete parques y áreas verdes",
+        "El estudio se cita para mostrar que un parque funciona como una "
+        "instalación de refrigeración: esas setenta y siete zonas bajan hasta cinco "
+        "grados y medio la temperatura de la superficie a su alrededor durante "
+        "episodios de calor extremo.\n\nEs el dato que justifica llamar "
+        "«infraestructura» a un área verde.",
+        [
+            ("Cinco parques, uno por cada grado de diferencia", "Los cinco grados y medio son la baja de temperatura, no una cantidad."),
+            ("Diez comunas del Gran Santiago con calor extremo", "Las comunas enumeradas son las más expuestas, no zonas frías."),
+            ("Veinticinco áreas verdes de la zona semiárida", "El veinticinco del texto corresponde a grados de superficie."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánto más fresco puede estar el pavimento bajo la copa "
+        "de un árbol?",
+        "Entre once y veinticinco grados",
+        "Esa cifra corresponde al primero de los dos mecanismos: la sombra, que "
+        "intercepta la radiación antes de que llegue al suelo.\n\nEl texto advierte "
+        "enseguida que esa diferencia enorme «solo afecta a la superficie y a quien "
+        "camina por ella».",
+        [
+            ("Entre uno y cinco grados", "Ese rango corresponde al efecto sobre la temperatura del aire."),
+            ("Cerca de cuatro grados", "Los cuatro grados comparan el área construida con los campos."),
+            ("Cinco grados y medio", "Esa es la baja que producen las zonas frías identificadas."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_localizar", "medio",
+        "Según la lectura, ¿por qué la ciudad no alcanza a enfriarse durante la "
+        "noche?",
+        "Porque el asfalto devuelve de noche el calor que absorbió",
+        "El texto describe la isla de calor como un fenómeno «físico antes que "
+        "social»: el asfalto, el hormigón y las techumbres acumulan radiación "
+        "durante el día y la liberan cuando baja el sol.\n\nPor eso el calor llega "
+        "al amanecer siguiente sin haberse disipado.",
+        [
+            ("Porque durante la noche el aire deja de circular por la ciudad", "El texto no menciona el viento ni la circulación del aire."),
+            ("Porque las áreas verdes liberan de noche el agua acumulada", "La evapotranspiración enfría el aire; no lo calienta de noche."),
+            ("Porque las olas de calor se prolongan por varios días seguidos", "La duración de las olas no explica el fenómeno que describe."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_interpretar", "facil",
+        "¿Qué distingue a los dos mecanismos con que un árbol enfría?",
+        "Uno refresca la superficie y el otro, el aire del barrio",
+        "La sombra intercepta la radiación y produce una diferencia grande, pero "
+        "acotada al suelo y a quien pasa por ahí.\n\nLa evapotranspiración baja "
+        "menos grados —entre uno y cinco— y en cambio actúa sobre el aire, que es "
+        "lo que el texto llama enfriar «el barrio y no solo la vereda».",
+        [
+            ("Uno actúa de día y el otro, durante la noche", "El texto no reparte los dos mecanismos según la hora."),
+            ("Uno depende del árbol y el otro, del tipo de suelo", "Ambos dependen del árbol: su copa y el agua que evapora."),
+            ("Uno ocurre en los parques y el otro, en las veredas", "Los dos mecanismos operan donde haya un árbol."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_interpretar", "medio",
+        "¿Con qué finalidad el emisor llama «infraestructura» a un parque?",
+        "Para atribuirle una función medible que exige mantención",
+        "El texto lo explicita: cumple una función que se puede medir, se deteriora "
+        "si no se mantiene y cuesta dinero.\n\nAl ponerlo en la misma categoría que "
+        "una instalación técnica, el emisor saca el área verde del terreno del "
+        "adorno y la mete en el del presupuesto, que es donde se decide.",
+        [
+            ("Para señalar que los parques deberían ser administrados por el Estado", "El texto no discute quién debe hacerse cargo de los parques."),
+            ("Para advertir que su construcción es más cara de lo que parece", "Menciona el costo de mantenerlos, no el de construirlos."),
+            ("Para comparar su tamaño con el de las obras viales de la ciudad", "No hay ninguna comparación de superficie con otras obras."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_interpretar", "medio",
+        "¿Qué sostiene el emisor al señalar que el mapa del calor y el del ingreso "
+        "se parecen?",
+        "Que la exposición al calor sigue la desigualdad de la ciudad",
+        "El emisor enumera las comunas que aparecen «una y otra vez» entre las más "
+        "expuestas y observa que no son las que concentran el arbolado "
+        "maduro.\n\nEl parecido entre los dos mapas es «demasiado como para "
+        "atribuirlo al azar», y de ahí la consecuencia concreta: una ola de calor "
+        "no llega igual a todos los domicilios.",
+        [
+            ("Que las comunas más pobres tienen un clima naturalmente distinto", "El texto explica la diferencia por las superficies y el arbolado."),
+            ("Que la ciudad creció sin ningún tipo de planificación previa", "El emisor no discute cómo se planificó el crecimiento urbano."),
+            ("Que los estudios de temperatura se concentran en pocas comunas", "Las mediciones citadas abarcan el conjunto del Gran Santiago."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_interpretar", "dificil",
+        "¿Qué lugar ocupa en el texto el párrafo sobre los nueve metros cuadrados "
+        "por habitante?",
+        "Retira del propio argumento un dato que no se puede rastrear",
+        "El emisor introduce ese párrafo diciendo que el detalle «perjudica a "
+        "quienes defienden esta causa», es decir, a su propio bando.\n\nNo es una "
+        "digresión ni una concesión al adversario: es una limpieza. Saca de "
+        "circulación una cifra sin fuente para dejar el planteamiento apoyado "
+        "únicamente en las mediciones de temperatura.",
+        [
+            ("Introduce el argumento principal que el texto venía preparando", "El argumento principal son las mediciones, expuestas antes."),
+            ("Presenta la posición de quienes se oponen a plantar árboles", "La cifra la repiten quienes defienden las áreas verdes."),
+            ("Explica por qué las áreas verdes están mal distribuidas", "El reparto desigual se explica en el párrafo anterior."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_evaluar", "facil",
+        "¿Qué actitud asume el emisor ante la cifra atribuida a la Organización "
+        "Mundial de la Salud?",
+        "Exigente, pues la descarta aunque favorezca su posición",
+        "El emisor podría haberse quedado con una cifra redonda que sirve a su "
+        "causa y que circula en columnas, programas de gobierno y presentaciones "
+        "municipales.\n\nEn cambio informa que las verificaciones no encontraron el "
+        "documento y propone renunciar a ella. Aplica el mismo criterio a los datos "
+        "que le convienen y a los que no.",
+        [
+            ("Indulgente, pues acepta la cifra mientras nadie la desmienta", "Propone lo contrario: renunciar a ella desde ya."),
+            ("Indiferente, pues considera que las cifras no deciden nada", "Todo su caso descansa en cifras: las de temperatura medida."),
+            ("Desconfiada, pues sospecha de todos los organismos citados", "No cuestiona a los organismos: cuestiona una cita sin origen."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_evaluar", "medio",
+        "Según la lectura, ¿qué debilita a un argumento que se apoya en una "
+        "autoridad inexistente?",
+        "Que al caerse la cita parece caerse todo el planteamiento",
+        "El texto describe el mecanismo con precisión: basta desmentir el número "
+        "para que parezca desmentido todo lo demás, «aunque las mediciones de "
+        "temperatura sigan intactas».\n\nEl daño no está en el dato falso, sino en "
+        "que arrastra consigo a los datos verdaderos que lo acompañaban.",
+        [
+            ("Que quienes lo sostienen suelen actuar de mala fe", "El emisor habla de una repetición «de buena fe»."),
+            ("Que las cifras redondas resultan siempre sospechosas", "Lo que objeta no es la forma del número, sino su falta de origen."),
+            ("Que ninguna organización internacional fija esos límites", "El texto no afirma que no existan estándares de ese tipo."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_evaluar", "dificil",
+        "¿Cómo se hace cargo el emisor de la objeción del agua?",
+        "Reconoce el costo y cambia la pregunta por qué se riega",
+        "El emisor llama a esa objeción «la seria» y admite que enfriar por "
+        "evapotranspiración es, literalmente, evaporar agua en una zona con "
+        "déficit.\n\nSu respuesta no la niega: la pone en escala —una especie "
+        "adaptada consume menos, el césped bebe más y un árbol viejo rinde más "
+        "sombra por litro— y reemplaza la disyuntiva entre regar y no regar por "
+        "tres preguntas: qué, dónde y con qué agua.",
+        [
+            ("Sostiene que el consumo de los árboles es prácticamente nulo", "Admite que consumen agua: por eso compara especies y tamaños."),
+            ("Responde que el déficit de lluvias terminará en pocos años", "El texto no hace ningún pronóstico sobre las precipitaciones."),
+            ("Propone reemplazar los árboles por superficies que reflejen", "No menciona esa alternativa en ninguna parte del artículo."),
+        ],
+    ),
+    _ql(
+        "cinco_grados", "lec_evaluar", "dificil",
+        "¿Por qué el emisor considera que plantar árboles es una decisión fácil de "
+        "postergar?",
+        "Porque el beneficio llega cuando ya decidieron otros",
+        "El texto llama a esto «una dificultad que ningún estudio resuelve»: un "
+        "árbol plantado hoy da sombra útil en quince o veinte años.\n\nPara "
+        "entonces quien firmó la ordenanza no estará en el cargo y quien reclamó "
+        "por el calor puede haberse cambiado de comuna, de modo que el costo y el "
+        "beneficio caen sobre personas distintas. El emisor no propone solución: "
+        "deja el problema planteado y cierra con los cinco grados esperando en la "
+        "vereda del frente.",
+        [
+            ("Porque las mediciones de temperatura todavía son insuficientes", "Las mediciones son el punto firme del texto, no su debilidad."),
+            ("Porque los municipios carecen de atribuciones para plantar", "El texto no discute qué facultades tienen los municipios."),
+            ("Porque el efecto de un árbol joven es imposible de estimar", "Lo que dice es que tarda, no que no pueda estimarse."),
+        ],
+    ),
+    # ---------- '«Restaurar no es dejarlo como nuevo»' ----------
+    _ql(
+        "restauradora_papel", "lec_localizar", "facil",
+        "Según la entrevistada, ¿qué daño produce la cinta adhesiva en el papel?",
+        "Su adhesivo se oxida, cruza la fibra y deja una mancha",
+        "La entrevistada la señala como «el más común» de los enemigos del papel: "
+        "el adhesivo se oxida con los años, atraviesa la fibra y deja una mancha "
+        "café.\n\nLo grave es que ese daño ya no se saca «sin llevarse el papel», "
+        "es decir, sin destruir aquello que se quería reparar.",
+        [
+            ("Endurece la hoja y le impide volver a doblarse", "La rigidez del papel viene de la acidez, no de la cinta."),
+            ("Atrae hongos que terminan extendiéndose por toda la hoja", "Los hongos se relacionan en el texto con la humedad alta."),
+            ("Destiñe la tinta de la zona que queda cubierta", "El desteñido es el daño que la entrevistada atribuye a la luz."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_localizar", "facil",
+        "Según la entrevistada, ¿qué conviene usar en vez de una bolsa plástica "
+        "sellada?",
+        "Una caja de cartón, en un lugar oscuro y seco",
+        "Su objeción a la bolsa sellada es que no deja salir la humedad que el "
+        "papel ya tiene adentro, de modo que «en el peor caso uno construye un "
+        "invernadero».\n\nA la caja le agrega tres condiciones: hojas planas, sin "
+        "dobleces nuevos y sin clips metálicos.",
+        [
+            ("Un marco con vidrio, colgado en una pared interior", "El marco aparece en el texto asociado al daño de la luz."),
+            ("Una carpeta plastificada que aísle cada documento", "El plastificado es justamente lo que ella prohíbe, por irreversible."),
+            ("Un cajón cerrado en la pieza más fresca de la casa", "Advierte contra la pieza húmeda, y no propone medir el frescor."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_localizar", "medio",
+        "Según la entrevistada, ¿por qué un diario de 1970 puede estar peor que un "
+        "documento del siglo XVII?",
+        "Porque el papel industrial se acidifica por sí solo",
+        "El documento antiguo estaba hecho con trapos de lino; el papel industrial "
+        "se fabricó con pasta de madera y con procesos que dejaban residuos "
+        "ácidos.\n\nPor eso ella dice que ese papel «quedó con un problema "
+        "adentro»: el daño no viene de afuera y solo se puede frenar, no deshacer.",
+        [
+            ("Porque los diarios se manipulan mucho más que un documento", "El uso no aparece entre las causas que la entrevistada menciona."),
+            ("Porque en 1970 se imprimía con tintas de peor calidad", "El problema que describe está en el papel, no en la tinta."),
+            ("Porque el papel de lino fue tratado para durar siglos", "No se dice que se lo tratara: duró por cómo estaba hecho."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_interpretar", "facil",
+        "¿Qué quiere decir la entrevistada al afirmar que un papel de 1932 que se "
+        "ve nuevo «está falsificado»?",
+        "Que borrar las marcas del tiempo altera el documento",
+        "La idea vuelve enseguida con la fotografía manchada: «la mancha también es "
+        "parte de la historia del objeto».\n\nDevolverle al papel un aspecto que no "
+        "le corresponde no lo repara: le quita información sobre lo que le pasó.",
+        [
+            ("Que muchos documentos antiguos son copias recientes", "No habla de copias, sino del aspecto de un original."),
+            ("Que la restauración es un oficio poco confiable", "Defiende el oficio: lo que critica es una idea equivocada de él."),
+            ("Que el papel de 1932 no puede conservarse entero", "Sí puede: su trabajo consiste precisamente en lograrlo."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_interpretar", "medio",
+        "¿Con qué finalidad la entrevistada menciona unos discos que grabó el año "
+        "2003?",
+        "Para mostrar que lo digital también exige cuidado",
+        "El ejemplo cierra un contraste que ella misma arma: recuperó cartas de "
+        "1890 que estaban en un cajón y no consigue abrir unos discos de hace "
+        "veinte años.\n\nNo sirve para descartar el escaneo —dice que es «una gran "
+        "idea»— sino para agregarle condiciones: copiar cada cierto tiempo, en "
+        "varios lugares y en formatos que sigan abriéndose.",
+        [
+            ("Para desaconsejar el escaneo de los documentos familiares", "Lo recomienda expresamente: salva la información del documento."),
+            ("Para explicar por qué los formatos antiguos eran mejores", "No compara formatos digitales entre sí, sino soportes distintos."),
+            ("Para probar que los documentos en papel nunca se pierden", "El texto entero trata sobre cómo el papel sí se deteriora."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_interpretar", "medio",
+        "¿Qué idea comparten lo que la entrevistada dice sobre la humedad, la luz y "
+        "la acidez?",
+        "Que el peor daño es lento y no se nota mientras ocurre",
+        "Los tres casos se describen igual: la humedad quiebra la fibra con una "
+        "«gimnasia repetida», la luz es «el daño invisible, porque es lento y es "
+        "acumulativo», y la acidez actúa desde adentro del propio papel.\n\nNinguno "
+        "es un accidente: los tres avanzan mientras el documento parece estar "
+        "guardado y a salvo.",
+        [
+            ("Que los tres se pueden revertir con un buen tratamiento", "De los tres dice lo contrario: se frenan, no se deshacen."),
+            ("Que los tres afectan sobre todo a los documentos antiguos", "La acidez perjudica justamente al papel más moderno."),
+            ("Que los tres provienen de errores de quien los guarda", "La acidez viene de fábrica y no depende de quien guarda."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre la regla de intervenir lo mínimo y su molestia con "
+        "la palabra «restaurar»?",
+        "La regla explica por qué rechaza que restaurar sea dejar nuevo",
+        "La regla profesional que enuncia tiene dos partes: intervenir lo mínimo y "
+        "que todo lo hecho se pueda deshacer.\n\nDejar un documento «como nuevo» "
+        "viola las dos, porque exige intervenir mucho y produce un resultado "
+        "irreversible. De ahí que remate con una frase incómoda: si su trabajo no "
+        "se puede deshacer, «es un daño más, aunque se vea bonito».",
+        [
+            ("La regla es una norma del oficio y su molestia es personal", "Ella funda su molestia en la regla, no la presenta como un gusto."),
+            ("La regla se aplica al papel antiguo y la palabra al moderno", "El criterio que describe no distingue según la edad del papel."),
+            ("La regla impide reparar y por eso prefiere no usar la palabra", "La regla no impide reparar: fija cómo hacerlo y hasta dónde."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_evaluar", "facil",
+        "¿Con qué propósito se advierte en la bajada que la entrevistada es un "
+        "personaje?",
+        "Para que nadie atribuya lo dicho a una persona real",
+        "La advertencia aparece dos veces, en la bajada y en la nota de fuente, y "
+        "usa una fórmula precisa: el texto «no reproduce las palabras de ninguna "
+        "persona real».\n\nSin ese aviso, una entrevista inventada se leería como "
+        "el registro de una conversación que efectivamente ocurrió.",
+        [
+            ("Para señalar que los consejos que entrega son inventados", "La nota separa a la entrevistada de sus recomendaciones generales."),
+            ("Para indicar que la entrevista fue traducida de otro idioma", "Nada en el texto sugiere que provenga de otra lengua."),
+            ("Para explicar que la conversación se editó por su extensión", "La advertencia no trata sobre cortes ni sobre edición."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_evaluar", "medio",
+        "¿Qué actitud asume la entrevistada hacia quienes dañan sus documentos sin "
+        "saberlo?",
+        "Comprensiva, pues atribuye el daño a la buena intención",
+        "Las dos veces que describe un error grave lo hace del mismo modo: el "
+        "cuaderno llegó «con la mejor de las intenciones», y quien sella una bolsa "
+        "plástica «lo hace pensando que los protege».\n\nEl reproche recae sobre "
+        "las creencias equivocadas, no sobre las personas, y por eso la entrevista "
+        "termina en consejos y no en advertencias.",
+        [
+            ("Irónica, pues se burla de quienes plastifican sus fotos", "Rechaza el plastificado por irreversible, sin burlarse de nadie."),
+            ("Indiferente, pues considera que el daño ya está hecho", "Dedica la respuesta más larga a explicar cómo evitarlo."),
+            ("Severa, pues exige que se consulte antes a un especialista", "Sus tres consejos son caseros y, subraya, no cuestan dinero."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_evaluar", "dificil",
+        "¿Cómo corrige la entrevistada la idea de que el problema es la humedad "
+        "alta?",
+        "Sostiene que daña más la que sube y baja que la estable",
+        "Ella no niega el dato conocido: reconoce que la humedad alta trae hongos y "
+        "que «es verdad».\n\nLo que hace es cambiar la variable que importa. El "
+        "daño estructural viene de los ciclos de hinchazón y encogimiento, de modo "
+        "que un valor alto y constante resulta menos dañino que uno moderado que "
+        "fluctúa a diario.",
+        [
+            ("Afirma que la humedad no tiene efecto alguno sobre el papel", "Le reconoce dos efectos: los hongos y el quiebre de la fibra."),
+            ("Explica que los hongos aparecen solo en ambientes cerrados", "El texto no vincula los hongos con la ventilación del lugar."),
+            ("Recomienda medir la humedad antes de guardar un documento", "No propone medirla: propone evitar los cambios bruscos."),
+        ],
+    ),
+    _ql(
+        "restauradora_papel", "lec_evaluar", "dificil",
+        "¿Qué sentido tiene que la entrevista termine diciendo que lo primero que "
+        "se pierde es el nombre de la gente?",
+        "Amplía qué se conserva: no solo el objeto, su sentido",
+        "El cierre recoge el tercer consejo, el único que no trata sobre "
+        "materiales: escribir quién aparece en cada fotografía.\n\nCon eso la "
+        "entrevista desplaza su propio tema. Un papel intacto cuyo contenido nadie "
+        "puede identificar está conservado y, a la vez, perdido: la fragilidad "
+        "mayor no está en la fibra sino en la información que le da valor.",
+        [
+            ("Sugiere que el trabajo de conservación tiene poco sentido", "Toda la entrevista defiende ese trabajo y explica cómo hacerlo."),
+            ("Advierte que las fotografías antiguas terminan por borrarse", "Dice que el papel bien guardado aguanta siglos."),
+            ("Propone que los archivos registren a sus propios donantes", "El consejo se dirige a las familias, no a las instituciones."),
+        ],
+    ),
     # ---------- 'El libro que no devolviste' ----------
     _ql(
         "libro_no_devuelto", "lec_localizar", "facil",
