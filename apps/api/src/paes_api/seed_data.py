@@ -21383,6 +21383,106 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "cambio_lengua",
+        "title": "Sobre el supuesto deterioro del idioma",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo de divulgación original de 1000paes."
+        ),
+        "body": (
+            "Pocas discusiones públicas se repiten con tanta regularidad y tan poca "
+            "variación como la del deterioro del idioma. Cada generación de "
+            "hablantes descubre, con alarma, que la siguiente dice cosas que no "
+            "corresponden: acorta palabras, importa términos extranjeros, confunde "
+            "formas verbales. La queja tiene una antigüedad considerable. Se la "
+            "encuentra formulada en términos casi idénticos en textos del siglo "
+            "XVIII, del XIX y del XX, siempre referida al presente de quien escribe "
+            "y siempre con el mismo diagnóstico: antes se hablaba mejor.\n\n"
+            "La persistencia de la queja es en sí misma un dato interesante. Si el "
+            "castellano viniera degradándose sin pausa desde hace tres siglos, como "
+            "sostienen sucesivamente todos esos textos, hoy sería incomprensible. "
+            "No lo es. Algo falla, entonces, en el modo en que se describe el "
+            "fenómeno.\n\n"
+            "**Cambio no es deterioro**\n\n"
+            "La lingüística contemporánea parte de una constatación elemental: "
+            "todas las lenguas vivas cambian, y lo hacen en todos sus niveles. "
+            "Cambian los sonidos, el vocabulario, la sintaxis y hasta las reglas de "
+            "cortesía. Una lengua que dejara de cambiar sería una lengua sin "
+            "hablantes, y de hecho eso es lo que caracteriza al latín: no se "
+            "degradó, se dejó de usar. Sus descendientes —el castellano, el "
+            "francés, el italiano, el rumano— son precisamente el resultado de que "
+            "el cambio no se detuviera.\n\n"
+            "Conviene precisar el punto, porque suele malentenderse. Sostener que "
+            "el cambio no es deterioro no equivale a sostener que todo da lo mismo, "
+            "ni que no existan usos más adecuados que otros según la situación. "
+            "Equivale a algo más limitado: que la dirección del cambio no puede "
+            "evaluarse con criterios de mejor o peor, del mismo modo que no tiene "
+            "sentido preguntar si el castellano actual es superior al del Siglo de "
+            "Oro. Son estados distintos de un sistema que nunca estuvo quieto.\n\n"
+            "**El caso del voseo chileno**\n\n"
+            "El español de Chile ofrece un ejemplo útil para observar cómo funciona "
+            "esto en la práctica. En el registro informal, muchos hablantes usan "
+            "formas verbales como «vení», «querís» o «tenís», que provienen "
+            "históricamente del trato de «vos» y conviven hoy con el pronombre "
+            "«tú». El resultado es una combinación —«tú venís»— que no aparece en "
+            "las gramáticas normativas y que, sin embargo, cualquier hablante "
+            "chileno reconoce y produce sin dificultad.\n\n"
+            "Durante mucho tiempo esas formas fueron descritas como incorrectas y "
+            "asociadas a hablantes con menos escolaridad. La descripción no "
+            "resistió el examen: los estudios sociolingüísticos mostraron que su "
+            "uso no distingue tanto por nivel educativo como por situación "
+            "comunicativa. Un mismo hablante universitario dice «querís» a un amigo "
+            "y «quieres» en una entrevista de trabajo, sin equivocarse en ninguno "
+            "de los dos casos. Lo que parecía un déficit resultó ser un repertorio.\n\n"
+            "El fenómeno tampoco es exclusivo de Chile ni reciente. El propio "
+            "castellano peninsular perdió el uso de «vos» como trato de respeto "
+            "entre los siglos XVI y XVII, y esa pérdida —que un hablante de la "
+            "época pudo vivir como una degradación— es hoy simplemente la historia "
+            "de la lengua. Lo que en una generación se percibe como error, en la "
+            "siguiente puede ser una variante aceptada y, tres después, la única "
+            "forma disponible. El problema del observador es que siempre mira desde "
+            "adentro de ese proceso.\n\n"
+            "**Norma y uso**\n\n"
+            "De ahí se sigue una distinción que la disciplina considera básica y "
+            "que la discusión pública rara vez incorpora: la que existe entre la "
+            "norma y el uso. La norma es un conjunto de convenciones seleccionadas "
+            "y codificadas, asociadas históricamente a los registros escritos y a "
+            "los sectores que los controlan. El uso es lo que los hablantes "
+            "efectivamente hacen. Ambas cosas son objeto legítimo de estudio, pero "
+            "responden preguntas distintas: la norma responde qué conviene escribir "
+            "en un informe; el uso responde cómo funciona una lengua.\n\n"
+            "Confundirlas produce dos errores simétricos. El primero consiste en "
+            "tratar la norma como si describiera la lengua, y concluir que millones "
+            "de hablantes hablan mal. El segundo consiste en tratar el uso como si "
+            "eliminara la norma, y concluir que enseñar registros formales es una "
+            "imposición arbitraria. Ninguna de las dos conclusiones se sigue de la "
+            "evidencia disponible.\n\n"
+            "**Qué se juega en esto**\n\n"
+            "La cuestión no es meramente terminológica. Las creencias sobre la "
+            "lengua tienen consecuencias sobre las personas. Un estudiante al que "
+            "se le enseña que su manera de hablar es defectuosa aprende, junto con "
+            "la gramática, algo sobre el lugar que ocupa. Y un sistema escolar que "
+            "confunde corregir un registro con corregir a una persona obtiene, "
+            "previsiblemente, hablantes que prefieren callar antes que exponerse.\n\n"
+            "La alternativa que la investigación sugiere no es abandonar la "
+            "enseñanza de la norma, sino cambiar su fundamento. Enseñar la variedad "
+            "formal como una herramienta que amplía el repertorio —y no como la "
+            "corrección de un defecto— produce el mismo aprendizaje sin el costo. "
+            "La diferencia entre decir «así no se dice» y decir «en este contexto "
+            "se espera esto otro» parece menor, y no lo es: la primera formulación "
+            "descalifica a quien habla; la segunda le entrega una opción más.\n\n"
+            "Queda pendiente una advertencia. Nada de lo anterior implica que el "
+            "lingüista deba abstenerse de toda evaluación, ni que la escuela pueda "
+            "prescindir de enseñar a escribir con precisión. Implica algo más "
+            "acotado: que la evaluación se haga sobre criterios explícitos "
+            "—claridad, adecuación al destinatario, precisión— y no sobre la "
+            "suposición de que existe una manera correcta de hablar que algunos "
+            "poseen por nacimiento y otros deben adquirir por corrección. Esa "
+            "suposición, y no el uso de «querís», es lo que la investigación de las "
+            "últimas décadas ha ido dejando sin sustento."
+        ),
+    },
+    {
         "key": "energia_vertida",
         "title": "La energía que sobra al mediodía",
         "kind": "no_literario",
@@ -23465,6 +23565,165 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Sobre el supuesto deterioro del idioma' ----------
+    _ql(
+        "cambio_lengua", "lec_localizar", "medio",
+        "Según el artículo, ¿qué distingue a la norma del uso?",
+        "La norma es un conjunto de convenciones codificadas; el uso es lo que los "
+        "hablantes efectivamente hacen",
+        "El texto define ambos términos en oraciones consecutivas: la norma es «un "
+        "conjunto de convenciones seleccionadas y codificadas, asociadas "
+        "históricamente a los registros escritos», y «el uso es lo que los "
+        "hablantes efectivamente hacen».\n\nEl artículo agrega que ambas responden "
+        "preguntas distintas: la norma, qué conviene escribir en un informe; el "
+        "uso, cómo funciona una lengua.",
+        [
+            ("La norma se refiere a la lengua escrita y el uso, a la lengua hablada", "El artículo asocia la norma a los registros escritos, pero no define el uso como lo oral: lo define como lo que los hablantes hacen, en cualquier registro."),
+            ("La norma la fijan los lingüistas y el uso lo fijan los hablantes", "El texto no atribuye la norma a los lingüistas: la describe como convenciones codificadas históricamente."),
+            ("La norma cambia con el tiempo y el uso permanece estable", "El artículo sostiene que lo que cambia es la lengua entera, en todos sus niveles."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_localizar", "medio",
+        "De acuerdo con el artículo, ¿qué mostraron los estudios sociolingüísticos "
+        "sobre formas como «querís» o «tenís»?",
+        "Que su uso depende más de la situación comunicativa que del nivel "
+        "educativo del hablante",
+        "El texto lo señala con un ejemplo: «un mismo hablante universitario dice "
+        "querís a un amigo y quieres en una entrevista de trabajo, sin equivocarse "
+        "en ninguno de los dos casos».\n\nY saca la conclusión de forma explícita: "
+        "«lo que parecía un déficit resultó ser un repertorio».",
+        [
+            ("Que su uso está retrocediendo entre los hablantes más jóvenes", "El artículo no discute la evolución reciente de esas formas: discute qué explica su uso."),
+            ("Que provienen de un error de conjugación extendido en Chile", "El texto las presenta como formas con origen histórico en el trato de «vos», no como errores."),
+            ("Que solo aparecen entre hablantes con menor escolaridad", "Esa es justamente la descripción que, según el artículo, «no resistió el examen»."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_localizar", "facil",
+        "Según el artículo, ¿qué ocurrió con el latín?",
+        "Dejó de usarse, y de él descienden el castellano, el francés, el italiano "
+        "y el rumano",
+        "El texto lo plantea como contraejemplo: «una lengua que dejara de cambiar "
+        "sería una lengua sin hablantes, y de hecho eso es lo que caracteriza al "
+        "latín: no se degradó, se dejó de usar».\n\nY remata: sus descendientes "
+        "«son precisamente el resultado de que el cambio no se detuviera».",
+        [
+            ("Se degradó hasta volverse incomprensible para sus hablantes", "El artículo niega expresamente esa lectura: «no se degradó, se dejó de usar»."),
+            ("Se mantuvo estable durante siglos gracias a su norma escrita", "El texto no atribuye su permanencia a la norma: explica que dejó de tener hablantes."),
+            ("Cambió más lentamente que las lenguas que descienden de él", "La velocidad del cambio no se compara en ninguna parte del artículo."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_interpretar", "dificil",
+        "¿Qué argumento construye el artículo al señalar que la queja por el "
+        "deterioro del idioma se repite desde el siglo XVIII?",
+        "Que si la degradación fuera real y sostenida, la lengua actual sería "
+        "incomprensible, y no lo es",
+        "El texto desarrolla ese razonamiento en el segundo párrafo: «si el "
+        "castellano viniera degradándose sin pausa desde hace tres siglos, como "
+        "sostienen sucesivamente todos esos textos, hoy sería incomprensible. No lo "
+        "es. Algo falla, entonces, en el modo en que se describe el "
+        "fenómeno».\n\nEs una refutación por consecuencia: se acepta la premisa del "
+        "adversario, se sigue hasta el final y se muestra que lleva a algo falso.",
+        [
+            ("Que las quejas sobre el idioma siempre las formulan las generaciones mayores", "El texto lo menciona como rasgo del fenómeno, pero el argumento no descansa en quién se queja sino en adónde lleva la queja."),
+            ("Que el castellano cambió menos de lo que esos textos suponían", "El artículo sostiene que las lenguas cambian en todos sus niveles: no minimiza el cambio, discute cómo se lo califica."),
+            ("Que los hablantes del siglo XVIII tenían razón en su diagnóstico", "El artículo va en la dirección contraria: usa la repetición de la queja para mostrar que el diagnóstico está mal formulado."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_interpretar", "dificil",
+        "¿Cuál es la función del párrafo que precisa que «sostener que el cambio no "
+        "es deterioro no equivale a sostener que todo da lo mismo»?",
+        "Acotar el alcance de la tesis para impedir que se la lleve a una "
+        "conclusión que el artículo no defiende",
+        "El párrafo anticipa una objeción previsible y la desactiva antes de que "
+        "aparezca. Aclara que la tesis «equivale a algo más limitado: que la "
+        "dirección del cambio no puede evaluarse con criterios de mejor o "
+        "peor».\n\nEse movimiento se repite al final del texto, cuando advierte que "
+        "nada de lo dicho implica que la escuela pueda prescindir de enseñar a "
+        "escribir con precisión. Es una marca del registro académico: delimitar lo "
+        "que se afirma.",
+        [
+            ("Introducir una excepción a la tesis que el artículo no logra explicar", "No es una excepción: es una precisión sobre qué afirma exactamente la tesis."),
+            ("Reconocer que la posición contraria tiene mejores argumentos en ese punto", "El artículo no concede terreno: aclara su propio alcance y sigue sosteniendo lo mismo."),
+            ("Anticipar la distinción entre norma y uso que desarrollará después", "Esa distinción aparece más adelante y tiene otra función: separar dos objetos de estudio."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_interpretar", "dificil",
+        "Según el artículo, ¿cuáles son los dos errores simétricos que produce "
+        "confundir la norma con el uso?",
+        "Creer que millones de hablantes hablan mal, o creer que enseñar registros "
+        "formales es una imposición arbitraria",
+        "El texto los enuncia como un par: el primero «consiste en tratar la norma "
+        "como si describiera la lengua, y concluir que millones de hablantes hablan "
+        "mal»; el segundo, «en tratar el uso como si eliminara la norma, y concluir "
+        "que enseñar registros formales es una imposición arbitraria».\n\nLos llama "
+        "simétricos porque cada uno reduce uno de los dos términos al otro, en "
+        "direcciones opuestas.",
+        [
+            ("Enseñar solo la norma, o enseñar solo el uso", "El artículo no plantea los errores como decisiones pedagógicas, sino como confusiones conceptuales."),
+            ("Corregir demasiado a los estudiantes, o no corregirlos nunca", "Esa es una consecuencia posible, pero no es cómo el texto formula los dos errores."),
+            ("Suponer que la lengua se degrada, o suponer que no cambia en absoluto", "Ese par pertenece a la discusión del comienzo, no a la distinción entre norma y uso."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_interpretar", "medio",
+        "¿Qué idea sostiene la comparación entre decir «así no se dice» y decir «en "
+        "este contexto se espera esto otro»?",
+        "Que se puede enseñar el registro formal sin descalificar la manera de "
+        "hablar del estudiante",
+        "El artículo explica la diferencia y advierte que no es menor: «la primera "
+        "formulación descalifica a quien habla; la segunda le entrega una opción "
+        "más».\n\nLa comparación sirve para mostrar que el cambio propuesto no es "
+        "renunciar a enseñar la norma, sino cambiar el fundamento con que se la "
+        "enseña.",
+        [
+            ("Que corregir a los estudiantes resulta siempre contraproducente", "El artículo no propone dejar de corregir: propone hacerlo sobre criterios explícitos."),
+            ("Que ambas formulaciones producen el mismo efecto en el estudiante", "El texto afirma lo contrario: la diferencia «parece menor, y no lo es»."),
+            ("Que la norma debería adaptarse a como hablan los estudiantes", "En ningún momento se propone modificar la norma: se propone cambiar cómo se la enseña."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_evaluar", "dificil",
+        "¿Qué posición adopta el emisor respecto de la enseñanza de la norma en la "
+        "escuela?",
+        "Sostiene que debe seguir enseñándose, pero presentándola como una "
+        "ampliación del repertorio y no como la corrección de un defecto",
+        "El emisor lo dice sin ambigüedad: «la alternativa que la investigación "
+        "sugiere no es abandonar la enseñanza de la norma, sino cambiar su "
+        "fundamento», y precisa que enseñar la variedad formal como herramienta "
+        "«produce el mismo aprendizaje sin el costo».\n\nEl cierre lo confirma al "
+        "advertir que nada de lo dicho implica «que la escuela pueda prescindir de "
+        "enseñar a escribir con precisión».",
+        [
+            ("Sostiene que enseñar la norma reproduce desigualdades y debería suspenderse", "El artículo rechaza esa conclusión de forma expresa: la llama uno de los dos errores simétricos."),
+            ("Sostiene que la norma debe enseñarse tal como se hace hoy, corrigiendo los usos incorrectos", "Es justamente la práctica que el artículo cuestiona, por sus efectos sobre el estudiante."),
+            ("No toma posición, porque considera que es un asunto pedagógico ajeno a la lingüística", "Dedica dos párrafos a proponer un cambio concreto en cómo enseñarla."),
+        ],
+    ),
+    _ql(
+        "cambio_lengua", "lec_evaluar", "dificil",
+        "Un profesor lee el artículo y decide dejar de corregir por completo la "
+        "redacción de sus estudiantes, para no descalificarlos. ¿Qué diría el "
+        "artículo sobre esa decisión?",
+        "Que incurre en el segundo de los errores que el propio texto advierte, "
+        "porque confunde cambiar el fundamento de la corrección con eliminarla",
+        "El artículo previene exactamente ese desenlace en dos momentos. Al "
+        "describir los errores simétricos, señala que tratar el uso «como si "
+        "eliminara la norma» lleva a concluir que enseñar registros formales es una "
+        "imposición arbitraria. Y en el cierre advierte que nada implica «que la "
+        "escuela pueda prescindir de enseñar a escribir con precisión».\n\nLo que "
+        "propone es corregir sobre criterios explícitos —claridad, adecuación al "
+        "destinatario, precisión—, no dejar de corregir.",
+        [
+            ("Que es la aplicación correcta de su tesis sobre el cambio lingüístico", "El artículo dedica un párrafo entero a impedir esa lectura de su tesis."),
+            ("Que es aceptable mientras el profesor enseñe igualmente la norma escrita", "Dejar de corregir por completo es incompatible con enseñar a escribir con precisión, que el texto considera irrenunciable."),
+            ("Que es indiferente, porque el artículo trata sobre la lengua oral y no sobre la escritura", "El artículo se refiere expresamente a la escuela, a la escritura de informes y a la enseñanza de registros formales."),
+        ],
+    ),
     # ---------- 'La energía que sobra al mediodía' ----------
     _ql(
         "energia_vertida", "lec_localizar", "facil",
