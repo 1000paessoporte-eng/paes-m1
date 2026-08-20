@@ -23,6 +23,7 @@ from paes_api.modules.goals.models import Carrera, MetaUsuario
 from paes_api.modules.leads.models import Lead
 from paes_api.modules.metrics.models import PageView
 from paes_api.modules.practice.models import PracticeAnswer
+from paes_api.modules.repaso.models import RepasoItem
 from paes_api.modules.skill_tree.models import SkillNode, UserSkillProgress
 from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 
@@ -42,6 +43,7 @@ __all__ = [
     "PromoCode",
     "Question",
     "ReadingPassage",
+    "RepasoItem",
     "SkillNode",
     "StudyStreak",
     "Subscription",

@@ -117,6 +117,17 @@ export type PracticeQuestion = PracticeStart["questions"][number];
 export type PracticeAnswerResult =
   paths["/api/practice/{code}/answer"]["post"]["responses"][200]["content"]["application/json"];
 
+export type RepasoSesion =
+  paths["/api/repaso/sesion"]["get"]["responses"][200]["content"]["application/json"];
+
+export type RepasoPregunta = RepasoSesion["preguntas"][number];
+
+export type RepasoRespuesta =
+  paths["/api/repaso/responder"]["post"]["responses"][200]["content"]["application/json"];
+
+export type RepasoResumen =
+  paths["/api/repaso/resumen"]["get"]["responses"][200]["content"]["application/json"];
+
 export type ContentStats =
   paths["/api/questions/stats"]["get"]["responses"][200]["content"]["application/json"];
 
@@ -321,6 +332,30 @@ export function answerPractice(
   token?: string
 ): Promise<PracticeAnswerResult> {
   return apiFetch<PracticeAnswerResult>(`/api/practice/${code}/answer`, token, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      question_id: questionId,
+      selected_alternative_id: selectedAlternativeId,
+    }),
+  });
+}
+
+/** Qué le toca repasar hoy. Lo usa el panel, así que nunca se cachea. */
+export function getRepasoResumen(token?: string): Promise<RepasoResumen> {
+  return apiFetch<RepasoResumen>("/api/repaso/resumen", token, { cache: "no-store" });
+}
+
+export function getRepasoSesion(token?: string): Promise<RepasoSesion> {
+  return apiFetch<RepasoSesion>("/api/repaso/sesion", token, { cache: "no-store" });
+}
+
+export function responderRepaso(
+  questionId: number,
+  selectedAlternativeId: number,
+  token?: string
+): Promise<RepasoRespuesta> {
+  return apiFetch<RepasoRespuesta>("/api/repaso/responder", token, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
