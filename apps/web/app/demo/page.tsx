@@ -3,6 +3,7 @@ import { DemoRunner } from "@/components/demo/demo-runner";
 
 export const metadata: Metadata = {
   title: "Prueba sin cuenta",
+  alternates: { canonical: "/demo" },
 };
 
 export default function DemoPage() {

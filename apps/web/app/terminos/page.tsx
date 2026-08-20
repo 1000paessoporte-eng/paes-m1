@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Términos y condiciones",
+  alternates: { canonical: "/terminos" },
 };
 
 export default function TerminosPage() {

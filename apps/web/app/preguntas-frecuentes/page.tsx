@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DatosEstructurados } from "@/components/datos-estructurados";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes",
   description:
     "Cómo funciona 1000paes: qué pruebas cubre, cómo se calcula el puntaje estimado, si es gratis y qué necesitas para empezar.",
+  alternates: { canonical: "/preguntas-frecuentes" },
 };
 
 /**
@@ -20,7 +22,7 @@ const PREGUNTAS = [
   },
   {
     q: "¿Qué pruebas de la PAES puedo practicar?",
-    a: "Hoy están disponibles Competencia Matemática M1 y Competencia Matemática M2. Competencia Lectora, Historia y Ciencias Sociales, y Ciencias aparecen en el selector como \"Próximamente\": la plataforma está pensada para cubrir las cinco pruebas, y las vamos habilitando a medida que su banco de preguntas está listo.",
+    a: "Las cinco: Competencia Lectora, Competencia Matemática M1, Competencia Matemática M2, Ciencias e Historia y Ciencias Sociales. Todas se pueden rendir hoy. El banco no es del mismo tamaño en todas —matemática es la más completa— y sigue creciendo cada semana.",
   },
   {
     q: "¿Cómo se calcula el puntaje estimado?",
@@ -103,6 +105,21 @@ export default function PreguntasFrecuentesPage() {
         </article>
       </main>
       <SiteFooter />
+
+      {/* Datos estructurados: con FAQPage, Google puede desplegar las
+          preguntas y respuestas dentro del propio resultado de búsqueda en
+          vez de mostrar solo el título de la página. */}
+      <DatosEstructurados
+        datos={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: PREGUNTAS.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }}
+      />
     </>
   );
 }
