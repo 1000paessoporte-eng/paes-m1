@@ -24,17 +24,33 @@ import { NumeroAnimado } from "@/components/motion/numero-animado";
  * alcanzo, y qué hago con lo que falta?".
  */
 
-const MAX = 10;
+/**
+ * Cuántas preferencias admite el sistema de admisión chileno. NO es el tope
+ * del usuario: el suyo depende de su plan y llega por props.
+ */
+const MAX_SISTEMA = 10;
 
 function token() {
   return getClientToken() ?? undefined;
 }
 
-export function MetaView({ inicial }: { inicial: Meta }) {
+export function MetaView({
+  inicial,
+  tope = MAX_SISTEMA,
+}: {
+  inicial: Meta;
+  /**
+   * Cuántas carreras admite SU plan. Venía fijo en 10 y el plan Gratis permite
+   * una: el alumno agregaba la primera, apretaba "Agregar carrera" otra vez y
+   * se comía un 409 sin explicación después de haber buscado la carrera.
+   */
+  tope?: number;
+}) {
   const [meta, setMeta] = useState<Meta>(inicial);
   const [agregando, setAgregando] = useState(inicial.postulaciones.length === 0);
 
   const alcanzadas = meta.postulaciones.filter((p) => p.alcanza === true).length;
+  const enElTope = meta.postulaciones.length >= tope;
 
   return (
     <div className="mx-auto w-full max-w-3xl">
@@ -46,11 +62,13 @@ export function MetaView({ inicial }: { inicial: Meta }) {
           </h1>
           <p className="mt-1 text-sm text-muted">
             {meta.postulaciones.length === 0
-              ? "Agrega hasta 10 carreras en el orden que las quieres."
-              : `${meta.postulaciones.length} de ${MAX} preferencias · ${alcanzadas} con el mínimo alcanzado`}
+              ? tope === 1
+                ? "Agrega la carrera que quieres y mira cuánto te falta."
+                : `Agrega hasta ${tope} carreras en el orden que las quieres.`
+              : `${meta.postulaciones.length} de ${tope} ${tope === 1 ? "preferencia" : "preferencias"} · ${alcanzadas} con el mínimo alcanzado`}
           </p>
         </div>
-        {!agregando && meta.postulaciones.length < MAX && (
+        {!agregando && !enElTope && (
           <button
             type="button"
             onClick={() => setAgregando(true)}
@@ -60,6 +78,21 @@ export function MetaView({ inicial }: { inicial: Meta }) {
           </button>
         )}
       </header>
+
+      {/* En el tope y con plan Gratis, el botón "Agregar carrera" desaparecía
+          sin decir por qué. Desaparecer sin explicación se lee como que algo
+          se rompió; esto dice cuál es el límite y qué lo levanta. */}
+      {enElTope && tope < MAX_SISTEMA && (
+        <p className="mt-4 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted">
+          Tu plan incluye{" "}
+          {tope === 1 ? "una carrera" : `${tope} carreras`} en Mi meta. Con Pro
+          armas la lista completa de hasta {MAX_SISTEMA} preferencias y las
+          comparas entre sí.{" "}
+          <Link href="/planes" className="font-medium text-accent hover:underline">
+            Ver planes
+          </Link>
+        </p>
+      )}
 
       {agregando && (
         <Buscador

@@ -71,7 +71,7 @@ export default async function DashboardAnaliticoPage() {
       <div className="mt-6 grid grid-cols-1 gap-4 xl:grid-cols-2">
         <Constancia
           dias={summary.daily}
-          rachaActual={summary.exam_streak_days || summary.current_streak_days}
+          rachaActual={summary.exam_streak_days}
           mejorRacha={summary.best_exam_streak_days}
           diasActivos={summary.active_days}
         />

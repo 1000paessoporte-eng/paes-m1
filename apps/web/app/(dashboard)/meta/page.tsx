@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { ApiError, getMeta, type Meta } from "@/lib/api";
+import { ApiError, getMeta, getMiPlan, type Meta } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { MetaView } from "@/components/meta/meta-view";
 
@@ -22,6 +22,11 @@ export default async function MetaPage() {
   }
   if (sinSesion) redirect("/login?next=/meta");
 
+  // Cuántas carreras admite SU plan. Si falla, se asume el tope del sistema:
+  // que la pantalla ofrezca de más y la API corrija es mejor que esconderle
+  // carreras a quien sí las tiene pagadas.
+  const plan = await getMiPlan(token).catch(() => null);
+
   if (meta === null) {
     return (
       <p className="mx-auto max-w-lg text-center text-sm text-muted">
@@ -30,5 +35,5 @@ export default async function MetaPage() {
     );
   }
 
-  return <MetaView inicial={meta} />;
+  return <MetaView inicial={meta} tope={plan?.carreras_limite ?? 10} />;
 }
