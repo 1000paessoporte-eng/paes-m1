@@ -21383,6 +21383,105 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "hora_ferrocarril",
+        "title": "La hora que inventaron los trenes",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de fuentes públicas sobre "
+            "la historia de la hora oficial: la hora del ferrocarril británica (1840), "
+            "el Standard Railway Time de América del Norte (1883), la Conferencia "
+            "Internacional del Meridiano (Washington, 1884) y las disposiciones "
+            "chilenas de 1910, 1916 y 1918."
+        ),
+        "body": (
+            "Durante casi toda la historia humana, la respuesta a la pregunta «¿qué "
+            "hora es?» dependió de dónde estuviera parado quien preguntaba. El "
+            "mediodía era el instante en que el sol alcanzaba su punto más alto "
+            "sobre ese lugar, y como el sol no llega a todas partes al mismo "
+            "tiempo, cada ciudad tenía su propio mediodía. Entre dos pueblos "
+            "separados por unos pocos kilómetros la diferencia era de minutos; "
+            "entre dos ciudades distantes, de media hora o más. A nadie le "
+            "importaba demasiado. Mientras nada se moviera más rápido que un "
+            "caballo, la hora del pueblo vecino era un dato sin consecuencias.\n\n"
+            "El ferrocarril terminó con esa comodidad en pocos años. Un horario de "
+            "trenes es una promesa que se hace en dos lugares a la vez: el tren "
+            "sale a una hora de una ciudad y llega a otra hora a otra, y las dos "
+            "horas tienen que ser medidas con la misma vara. Si cada estación "
+            "conservaba su propio mediodía, el itinerario impreso decía cosas "
+            "distintas según dónde se lo leyera. En vías de un solo riel, donde dos "
+            "trenes se cruzan porque uno espera al otro en un desvío, el problema "
+            "dejó de ser una molestia administrativa: un error de minutos podía "
+            "terminar en choque.\n\n"
+            "La solución llegó desde las propias empresas. En noviembre de 1840, el "
+            "Great Western Railway inglés dispuso que todas sus estaciones usaran "
+            "una hora única, la del observatorio de Greenwich, sin importar el "
+            "mediodía local de cada pueblo. Fue la primera vez que se sincronizaron "
+            "horas locales distintas bajo un mismo patrón. La práctica se llamó "
+            "«hora del ferrocarril» y en pocos años la adoptaron casi todas las "
+            "compañías británicas.\n\n"
+            "El cambio no fue pacífico ni inmediato. Una ciudad podía tener su "
+            "campanario marcando el mediodía del sol y la estación marcando otro, y "
+            "durante años convivieron las dos horas: en algunos relojes públicos se "
+            "instaló un segundo minutero para que cada cual leyera la que "
+            "necesitaba. La discusión no era menor. Los horarios de los tribunales, "
+            "los contratos y las jornadas de trabajo estaban escritos en la hora "
+            "del lugar, y aceptar la del ferrocarril significaba admitir que una "
+            "empresa privada fijara el reloj de todos.\n\n"
+            "En Estados Unidos el desorden era mayor por una razón de tamaño: un "
+            "país que se extiende miles de kilómetros de este a oeste acumula "
+            "muchas horas locales, y cada compañía ferroviaria había resuelto el "
+            "problema por su cuenta, con la hora de su ciudad de origen. Una "
+            "estación grande podía exhibir varios relojes, uno por cada empresa que "
+            "pasaba por ahí. El 18 de noviembre de 1883 los ferrocarriles de "
+            "América del Norte acordaron repartir el territorio en cuatro franjas "
+            "horarias y cambiar todos sus relojes el mismo día. La jornada quedó en "
+            "la memoria como «el día de los dos mediodías», porque en muchas "
+            "ciudades el mediodía del sol y el mediodía nuevo ocurrieron con "
+            "minutos de diferencia. La ley federal confirmaría ese sistema recién "
+            "décadas más tarde: el país funcionó primero con la hora que habían "
+            "acordado unas empresas entre sí.\n\n"
+            "Once meses después, en octubre de 1884, una conferencia internacional "
+            "reunida en Washington llevó el arreglo al mundo entero. Se acordó "
+            "tomar el meridiano de Greenwich como origen y dividir el planeta en "
+            "husos, cada uno con una hora de diferencia respecto del anterior. Lo "
+            "que había nacido como una necesidad de las empresas de trenes terminó "
+            "convertido en la cuadrícula con que hoy se ordena el tiempo en todas "
+            "partes.\n\n"
+            "Chile entró a esa cuadrícula en 1910, cuando adoptó como hora oficial "
+            "la del meridiano 75° oeste, cinco horas menos que Greenwich, por ser "
+            "la que más se acercaba a la hora del meridiano de Santiago que regía "
+            "hasta entonces. La decisión no quedó fija: en 1916 la hora oficial "
+            "pasó a definirse por el meridiano del observatorio astronómico de "
+            "Quinta Normal —cuatro horas, cuarenta y dos minutos y algunos segundos "
+            "menos que Greenwich, un número incómodo pero exacto para el lugar— y "
+            "en 1918 el país adoptó el huso de cuatro horas menos que Greenwich, "
+            "más redondo y más fácil de coordinar con el resto del mundo.\n\n"
+            "Ese vaivén es lo más interesante del asunto, porque muestra qué clase "
+            "de cosa es la hora oficial. No es un dato que se observe en el cielo: "
+            "es una decisión que alguien toma y que puede volver a tomarse. El sol "
+            "sigue saliendo cuando sale, y ninguna de estas resoluciones movió un "
+            "minuto la salida del sol. Lo que se decide es otra cosa: qué número le "
+            "ponemos a ese momento y, en consecuencia, a qué hora del sol abrimos "
+            "las escuelas y empezamos a trabajar.\n\n"
+            "Conviene no exagerar en ninguna de las dos direcciones. Que la hora "
+            "sea una convención no significa que dé lo mismo cuál se elija: una "
+            "franja horaria mal ajustada al territorio deja a una parte del país "
+            "desayunando de noche, y de eso se discute cada año en Chile cuando "
+            "llega el momento de cambiar los relojes. Pero tampoco significa que "
+            "exista una hora natural que estemos traicionando. Entre el mediodía "
+            "del sol de cada pueblo y una hora común para todos, lo que hubo no fue "
+            "el descubrimiento de una verdad, sino un intercambio: se perdió la "
+            "coincidencia exacta entre el reloj y el cielo, y se ganó la "
+            "posibilidad de que dos personas que están lejos puedan acordar un "
+            "horario y cumplirlo.\n\n"
+            "Vale la pena mirar un horario de buses con esa historia encima. Que la "
+            "hora que marca el teléfono en Arica sea la misma que marca en Punta "
+            "Arenas, aunque el sol esté en posiciones distintas, no es un hecho de "
+            "la naturaleza ni una casualidad: es el resultado de una discusión que "
+            "empezó en las estaciones de tren y que todavía no termina."
+        ),
+    },
+    {
         "key": "uso_tiempo_liceo",
         "title": "¿En qué se nos va la semana?",
         "kind": "discontinuo",
@@ -23195,6 +23294,178 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La hora que inventaron los trenes' ----------
+    _ql(
+        "hora_ferrocarril", "lec_localizar", "facil",
+        "Según la lectura, ¿qué dispuso el Great Western Railway en 1840?",
+        "Que todas sus estaciones usaran la hora de Greenwich",
+        "El tercer párrafo lo precisa: dispuso «que todas sus estaciones usaran una "
+        "hora única, la del observatorio de Greenwich, sin importar el mediodía "
+        "local de cada pueblo».\n\nEl texto agrega por qué el hecho importa: «fue "
+        "la primera vez que se sincronizaron horas locales distintas bajo un mismo "
+        "patrón».",
+        [
+            ("Que cada estación conservara el mediodía de su ciudad", "Eso es justamente lo que la medida vino a reemplazar."),
+            ("Que el país entero se dividiera en cuatro franjas", "Las cuatro franjas son de 1883 y en América del Norte."),
+            ("Que los relojes públicos llevaran un segundo minutero", "El segundo minutero fue una respuesta de algunas ciudades, no una orden."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_localizar", "facil",
+        "Según la lectura, ¿qué hora oficial adoptó Chile en 1910?",
+        "La del meridiano 75° oeste, cinco horas menos que Greenwich",
+        "El párrafo dedicado a Chile lo dice con esas cifras, y agrega el motivo: "
+        "era «la que más se acercaba a la hora del meridiano de Santiago que regía "
+        "hasta entonces».\n\nLas otras fechas del mismo párrafo corresponden a "
+        "1916, con el observatorio de Quinta Normal, y a 1918, con el huso de "
+        "cuatro horas.",
+        [
+            ("La del observatorio de Quinta Normal de Santiago", "Esa definición es de 1916, seis años posterior a la de 1910."),
+            ("La del huso de cuatro horas menos que Greenwich", "Ese huso se adoptó en 1918, y el texto lo llama «más redondo»."),
+            ("La del meridiano de Greenwich, sin diferencia horaria", "Chile nunca adoptó la hora de Greenwich: entró con cinco horas menos."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué el 18 de noviembre de 1883 se recuerda como «el "
+        "día de los dos mediodías»?",
+        "Porque el mediodía del sol y el nuevo ocurrieron con minutos de diferencia",
+        "El texto lo explica al describir el cambio: los ferrocarriles movieron "
+        "todos sus relojes el mismo día, y «en muchas ciudades el mediodía del sol "
+        "y el mediodía nuevo ocurrieron con minutos de diferencia».\n\nEl nombre "
+        "nombra esa coincidencia rara: dos mediodías el mismo día.",
+        [
+            ("Porque ese día hubo dos cambios de hora en la misma jornada", "El cambio fue uno solo: los relojes se ajustaron una vez."),
+            ("Porque las cuatro franjas horarias entraron en días distintos", "El texto dice lo contrario: los relojes cambiaron el mismo día."),
+            ("Porque la ley federal y las empresas fijaron horas distintas", "La ley confirmó el sistema recién décadas después, sin fijar otra hora."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué el ferrocarril hizo insostenible la hora local?",
+        "Porque un horario mide con la misma vara dos lugares distintos",
+        "El segundo párrafo lo razona así: «un horario de trenes es una promesa que "
+        "se hace en dos lugares a la vez», de modo que las dos horas «tienen que "
+        "ser medidas con la misma vara».\n\nY muestra la consecuencia práctica: si "
+        "cada estación conservaba su mediodía, «el itinerario impreso decía cosas "
+        "distintas según dónde se lo leyera».",
+        [
+            ("Porque los trenes viajaban más rápido que la luz del sol", "La velocidad importa, pero el problema es de medida común, no de rapidez."),
+            ("Porque los pasajeros no sabían leer los relojes de sol", "El texto no menciona ninguna dificultad de los pasajeros para leer la hora."),
+            ("Porque las empresas querían imponer su hora a las ciudades", "Esa disputa aparece después, como resistencia, y no como el origen."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_interpretar", "medio",
+        "¿Con qué finalidad se menciona el segundo minutero en algunos relojes "
+        "públicos?",
+        "Para mostrar que las dos horas convivieron durante años",
+        "El dato aparece en el párrafo sobre la resistencia al cambio, "
+        "inmediatamente después de decir que el campanario y la estación podían "
+        "marcar horas distintas.\n\nEl detalle hace visible una situación que de "
+        "otro modo sonaría abstracta: durante un tiempo hubo que leer dos horas en "
+        "un mismo reloj.",
+        [
+            ("Para explicar cómo funcionaban los relojes del siglo XIX", "El texto no describe el mecanismo de los relojes en ninguna parte."),
+            ("Para señalar que la hora del ferrocarril era imprecisa", "La precisión no está en juego: lo que convivía eran dos horas distintas."),
+            ("Para probar que las ciudades rechazaron la hora común", "No la rechazaron del todo: el texto muestra convivencia, no rechazo."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_interpretar", "dificil",
+        "¿Cuál es la relación entre el párrafo sobre los ferrocarriles de 1883 y el "
+        "de la conferencia de 1884?",
+        "El segundo lleva a escala mundial el acuerdo que unas empresas tomaron",
+        "El párrafo de 1883 termina con un hecho llamativo: «el país funcionó "
+        "primero con la hora que habían acordado unas empresas entre sí». El de "
+        "1884 empieza con «once meses después» y cuenta cómo esa solución privada "
+        "se convirtió en la cuadrícula de husos.\n\nLa relación es de continuidad y "
+        "de escala: lo mismo, pero para el mundo entero y por acuerdo entre países.",
+        [
+            ("El segundo corrige los errores que había dejado el sistema de 1883", "El texto no señala errores: describe la extensión del mismo criterio."),
+            ("El segundo explica por qué la ley federal tardó décadas en llegar", "La demora de la ley se menciona antes y no se explica por la conferencia."),
+            ("El segundo presenta una alternativa que compitió con las franjas", "No hubo competencia: la conferencia adoptó el mismo principio."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_interpretar", "dificil",
+        "Según la lectura, ¿qué muestra que Chile cambiara su hora oficial en 1910, "
+        "1916 y 1918?",
+        "Que la hora oficial es una decisión revisable y no un dato del cielo",
+        "El texto saca esa conclusión de inmediato: «Ese vaivén es lo más "
+        "interesante del asunto, porque muestra qué clase de cosa es la hora "
+        "oficial. No es un dato que se observe en el cielo: es una decisión que "
+        "alguien toma y que puede volver a tomarse».\n\nY remata precisando qué no "
+        "cambió con ninguna de las tres resoluciones: «ninguna de estas "
+        "resoluciones movió un minuto la salida del sol».",
+        [
+            ("Que el país tardó en encontrar la hora que le corresponde", "El texto no habla de una hora correcta a la que el país debiera llegar."),
+            ("Que los astrónomos de Quinta Normal midieron mal el meridiano", "El texto llama a esa medida «exacta para el lugar», solo que incómoda."),
+            ("Que Chile siguió con retraso los acuerdos internacionales", "Entró a la cuadrícula en 1910 y el texto no lo presenta como un retraso."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor en el penúltimo párrafo?",
+        "Ponderada, pues acota los excesos de las dos lecturas posibles",
+        "El párrafo empieza pidiendo «no exagerar en ninguna de las dos "
+        "direcciones» y cumple lo que anuncia: por un lado, que la hora sea una "
+        "convención «no significa que dé lo mismo cuál se elija»; por otro, "
+        "«tampoco significa que exista una hora natural que estemos "
+        "traicionando».\n\nSostiene su tesis y a la vez impide las dos conclusiones "
+        "apresuradas que podrían sacarse de ella.",
+        [
+            ("Vacilante, pues no logra decidirse entre las dos posiciones", "No duda: fija su posición y descarta dos lecturas extremas de ella."),
+            ("Polémica, pues acusa a quienes discuten el cambio de hora", "Menciona esa discusión sin descalificar a ninguna de las partes."),
+            ("Distante, pues evita pronunciarse sobre un asunto discutido", "Se pronuncia: sostiene que la hora es una convención administrada."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_evaluar", "dificil",
+        "¿Cuál de estas afirmaciones sobre la hora oficial es coherente con el "
+        "emisor?",
+        "Elegir bien la hora importa, aunque ninguna hora sea la natural",
+        "Es la posición del penúltimo párrafo, que sostiene las dos cosas a la vez: "
+        "una franja mal ajustada «deja a una parte del país desayunando de noche», "
+        "y aun así no hay «una hora natural que estemos traicionando».\n\nLas demás "
+        "alternativas se quedan con una mitad del razonamiento y descartan la otra.",
+        [
+            ("Como la hora es una convención, da lo mismo cuál se adopte", "El texto niega expresamente esa consecuencia en el penúltimo párrafo."),
+            ("La hora del sol de cada lugar es la verdadera y hay que volver a ella", "El texto rechaza la idea de una hora natural traicionada."),
+            ("La hora común fue un error que impusieron las empresas de trenes", "El texto la presenta como un intercambio con ganancias, no como un error."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_evaluar", "dificil",
+        "Según el emisor, ¿qué se perdió y qué se ganó al adoptar una hora común?",
+        "Se perdió el calce entre reloj y cielo, y se ganó poder coordinarse",
+        "El texto lo plantea como un intercambio explícito: «se perdió la "
+        "coincidencia exacta entre el reloj y el cielo, y se ganó la posibilidad de "
+        "que dos personas que están lejos puedan acordar un horario y "
+        "cumplirlo».\n\nEs la frase que impide leer el episodio como un progreso "
+        "sin costo o como una pérdida sin compensación.",
+        [
+            ("Se perdió precisión horaria y se ganó seguridad en las vías", "La seguridad aparece antes, como motivo del cambio, no como lo ganado."),
+            ("Se perdió autonomía local y se ganó independencia de las empresas", "El texto muestra lo contrario: la hora la fijaron primero las empresas."),
+            ("Se perdió la hora solar y se ganó una jornada laboral más corta", "La duración de la jornada no se discute en ninguna parte del texto."),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_evaluar", "medio",
+        "Alguien propone que cada ciudad vuelva a regirse por el mediodía del sol. "
+        "Según la lectura, ¿qué costo tendría?",
+        "Que dos personas distantes ya no podrían acordar un horario común",
+        "El texto identifica esa ganancia como lo que se obtuvo a cambio de la hora "
+        "solar: «la posibilidad de que dos personas que están lejos puedan acordar "
+        "un horario y cumplirlo».\n\nDeshacer la convención devolvería el problema "
+        "que el ferrocarril hizo visible: un itinerario que dice cosas distintas "
+        "según dónde se lea.",
+        [
+            ("Que la salida del sol se adelantaría en las ciudades del sur", "El texto recuerda que ninguna resolución mueve la salida del sol."),
+            ("Que las ciudades tendrían que instalar relojes más precisos", "La precisión de los relojes no es el problema que el texto plantea."),
+            ("Que se acabaría la discusión anual sobre el cambio de hora", "Esa discusión aparece como ejemplo de que la elección importa."),
+        ],
+    ),
     # ---------- '¿En qué se nos va la semana?' ----------
     _ql(
         "uso_tiempo_liceo", "lec_localizar", "facil",
