@@ -21383,6 +21383,94 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "sellos_advertencia",
+        "title": "Los sellos de advertencia: qué dicen y qué no dicen",
+        "kind": "discontinuo",
+        "source_note": (
+            "Cartilla original de 1000paes, elaborada a partir de la ley 20.606 sobre "
+            "composición nutricional de los alimentos y su publicidad y del decreto N° "
+            "13 de 2015 del Ministerio de Salud. Los límites citados son los de la "
+            "tercera etapa, vigente desde el 27 de junio de 2019, y los sellos alcanzan "
+            "solo a los nutrientes añadidos. Los tres productos de la segunda tabla son "
+            "inventados."
+        ),
+        "body": (
+            "**LOS SELLOS DE ADVERTENCIA: QUÉ DICEN Y QUÉ NO DICEN**\n\n"
+            "*Cartilla informativa. Los límites corresponden a la tercera etapa de "
+            "la ley, vigente desde junio de 2019.*\n\n"
+            "**1. De dónde salen los sellos**\n\n"
+            "Los octógonos negros que aparecen en los envases no son una "
+            "advertencia de una empresa ni una campaña publicitaria: los ordena la "
+            "ley 20.606, sobre composición nutricional de los alimentos y su "
+            "publicidad, reglamentada por un decreto del Ministerio de Salud de "
+            "2015. La primera etapa empezó a regir el 26 de junio de 2016 y la "
+            "tercera, con límites más estrictos, el 27 de junio de 2019. Cada etapa "
+            "bajó el umbral: un producto que en 2016 pasaba sin sello puede "
+            "llevarlo hoy sin que su receta haya cambiado en nada.\n\n"
+            "**2. Cuándo un producto lleva sello**\n\n"
+            "El sello se pone cuando el alimento alcanza o supera el límite del "
+            "nutriente, medido siempre por 100 gramos si es sólido o por 100 "
+            "mililitros si es líquido. Un producto puede llevar cero sellos, uno, "
+            "dos, tres o los cuatro.\n\n"
+            "| Nutriente | Sólidos (por 100 g) | Líquidos (por 100 ml) |\n"
+            "|---|---|---|\n"
+            "| Energía | 275 kcal | 70 kcal |\n"
+            "| Sodio | 400 mg | 100 mg |\n"
+            "| Azúcares totales | 10 g | 5 g |\n"
+            "| Grasas saturadas | 4 g | 3 g |\n\n"
+            "**3. Tres casos para practicar**\n\n"
+            "*Los productos siguientes son inventados. Sus cifras están expresadas "
+            "por 100 g o 100 ml, que es la unidad en que se aplica la regla.*\n\n"
+            "| Producto | Energía | Sodio | Azúcares | Grasas sat. |\n"
+            "|---|---|---|---|---|\n"
+            "| Galleta de avena (sólido) | 430 kcal | 310 mg | 22 g | 3,5 g |\n"
+            "| Bebida de fantasía (líquido) | 42 kcal | 12 mg | 10,5 g | 0 g |\n"
+            "| Nueces sin nada añadido (sólido) | 654 kcal | 4 mg | 2,6 g | 6 g |\n\n"
+            "La galleta lleva dos sellos: supera el límite de energía y el de "
+            "azúcares, pero no alcanza los 400 mg de sodio ni los 4 g de grasas "
+            "saturadas. La bebida lleva uno: sus 10,5 g de azúcares pasan el límite "
+            "de 5 g de los líquidos, mientras su aporte de energía queda por debajo "
+            "de 70 kcal.\n\n"
+            "Las nueces son el caso instructivo. Por sus cifras deberían llevar dos "
+            "sellos, porque 654 kcal y 6 g de grasas saturadas superan con holgura "
+            "los límites de los sólidos. No llevan ninguno, y la razón no está en "
+            "la tabla sino en la ley: los límites se aplican a los alimentos a los "
+            "que se les han añadido azúcares, miel, jarabes, sodio o grasas "
+            "saturadas. Lo que un alimento trae por su propia naturaleza queda "
+            "fuera del cálculo. Por eso unas nueces al natural no llevan sello y "
+            "unas nueces confitadas o con sal agregada sí pueden llevarlo, aunque "
+            "en el envase se parezcan.\n\n"
+            "**4. Lo que el sello no dice**\n\n"
+            "El sello informa una sola cosa: que ese alimento es alto en un "
+            "nutriente que le fue añadido, medido por 100 gramos o 100 mililitros. "
+            "De ahí no se sigue que esté prohibido, ni que enferme, ni que un "
+            "producto sin sellos sea saludable. Un envase puede no tener ningún "
+            "sello porque aporta poco de todo, porque sus nutrientes son propios "
+            "del alimento, o porque quedó apenas por debajo del umbral.\n\n"
+            "Hay una segunda cosa que el sello no dice: cuánto. La regla mira 100 "
+            "gramos y no la porción que alguien se sirve, y responde una pregunta "
+            "de sí o no —¿pasa el umbral?— que esconde la distancia. Un producto "
+            "con 11 g de azúcares por 100 g y otro con 45 g llevan exactamente el "
+            "mismo octógono, y no son lo mismo.\n\n"
+            "**5. Lo que la ley hace además de rotular**\n\n"
+            "La misma ley prohíbe vender productos con sellos dentro de los "
+            "establecimientos de educación prebásica, básica y media, y restringe "
+            "la publicidad de esos productos cuando está dirigida a menores de "
+            "catorce años. Por eso desaparecieron de varios envases los personajes "
+            "de dibujos animados, los juguetes de regalo y las promociones pensadas "
+            "para niños. Esa parte de la ley es menos comentada que los octógonos, "
+            "y es la que más cambió lo que se ve dentro de una escuela.\n\n"
+            "**6. Cómo usar la cartilla**\n\n"
+            "Un consejo práctico: al comparar dos envases, mire primero la tabla "
+            "nutricional y después la cantidad de sellos. El octógono sirve para "
+            "mirar rápido en el pasillo del supermercado; la tabla, para decidir. Y "
+            "conviene recordar que los cuatro sellos no agotan lo que hay adentro: "
+            "no existe octógono para los aditivos, para el grado de procesamiento "
+            "ni para el aporte de fibra, que también importan y que ninguna "
+            "advertencia frontal está obligada a informar."
+        ),
+    },
+    {
         "key": "carta_cerrada",
         "title": "La carta que no se abre",
         "kind": "literario",
@@ -23466,6 +23554,171 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Los sellos de advertencia: qué dicen y qué no dicen' ----------
+    _ql(
+        "sellos_advertencia", "lec_localizar", "facil",
+        "Según la cartilla, ¿desde cuándo rige la tercera etapa de la ley?",
+        "Desde el 27 de junio de 2019",
+        "El punto 1 entrega las dos fechas: la primera etapa empezó a regir el 26 "
+        "de junio de 2016 y la tercera, «con límites más estrictos», el 27 de junio "
+        "de 2019.\n\nEl decreto que reglamenta la ley es de 2015, un año anterior a "
+        "la primera etapa.",
+        [
+            ("Desde el 26 de junio de 2016", "Esa es la fecha de la primera etapa, no de la tercera."),
+            ("Desde el 16 de abril de 2015", "Ese es el año del decreto que reglamenta la ley."),
+            ("Desde junio del año 2015", "En 2015 se dictó el decreto; los límites llegaron después."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_localizar", "facil",
+        "Según la tabla de límites, ¿desde cuántos gramos de azúcares lleva sello "
+        "un líquido?",
+        "Desde 5 gramos por cada 100 mililitros",
+        "La fila «Azúcares totales» de la primera tabla marca 10 g para los sólidos "
+        "y 5 g para los líquidos.\n\nEl punto 2 aclara además cómo se aplica: «por "
+        "100 gramos si es sólido o por 100 mililitros si es líquido».",
+        [
+            ("Desde 10 gramos por cada 100 mililitros", "Los 10 g son el límite de los sólidos, no el de los líquidos."),
+            ("Desde 5 gramos por cada 100 gramos", "Los líquidos se miden por 100 mililitros, no por 100 gramos."),
+            ("Desde 3 gramos por cada 100 mililitros", "Los 3 g son el límite de grasas saturadas en líquidos."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_localizar", "facil",
+        "Según la cartilla, ¿qué prohíbe la ley además de poner sellos?",
+        "Vender productos con sellos dentro de los establecimientos escolares",
+        "El punto 5 lo dice así: la ley «prohíbe vender productos con sellos dentro "
+        "de los establecimientos de educación prebásica, básica y media», y además "
+        "restringe la publicidad dirigida a menores de catorce años.\n\nLa cartilla "
+        "agrega que esa parte es «la que más cambió lo que se ve dentro de una "
+        "escuela».",
+        [
+            ("Fabricar alimentos que superen los límites de la tabla", "La ley no prohíbe fabricarlos: obliga a rotularlos con el octógono."),
+            ("Vender alimentos con sellos a los menores de catorce años", "Lo que se restringe respecto de esa edad es la publicidad, no la venta."),
+            ("Usar tablas nutricionales en la parte trasera del envase", "La tabla nutricional sigue existiendo: la cartilla recomienda mirarla."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_localizar", "facil",
+        "Según la cartilla, ¿cuántos sellos lleva la galleta de avena del ejemplo?",
+        "Dos: energía y azúcares",
+        "El texto lo explica caso por caso: la galleta «supera el límite de energía "
+        "y el de azúcares, pero no alcanza los 400 mg de sodio ni los 4 g de grasas "
+        "saturadas».\n\nSus cifras lo confirman: 430 kcal contra un límite de 275, "
+        "y 22 g de azúcares contra un límite de 10.",
+        [
+            ("Tres: energía, azúcares y sodio", "Sus 310 mg de sodio no alcanzan el límite de 400 mg."),
+            ("Uno: solo el de azúcares", "También supera el de energía, con 430 kcal por 100 g."),
+            ("Cuatro, porque supera todos los límites", "No supera ni el de sodio ni el de grasas saturadas."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_interpretar", "medio",
+        "Según la cartilla, ¿por qué las nueces del ejemplo no llevan ningún sello?",
+        "Porque sus nutrientes no le fueron añadidos al alimento",
+        "La cartilla lo explica al comentar el caso: «los límites se aplican a los "
+        "alimentos a los que se les han añadido azúcares, miel, jarabes, sodio o "
+        "grasas saturadas. Lo que un alimento trae por su propia naturaleza queda "
+        "fuera del cálculo».\n\nPor eso agrega que unas nueces confitadas o con sal "
+        "agregada sí pueden llevar sello, «aunque en el envase se parezcan».",
+        [
+            ("Porque sus cifras quedan por debajo de todos los límites", "Sus 654 kcal y 6 g de grasas saturadas superan los dos límites."),
+            ("Porque los frutos secos están excluidos de la ley", "Lo excluido no es el producto, sino los nutrientes que no fueron añadidos."),
+            ("Porque se venden a granel y no llevan envase sellado", "La cartilla no menciona la forma de venta en ninguna parte."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_interpretar", "medio",
+        "¿Qué explica que un producto sin sello en 2016 lleve sello hoy con la "
+        "misma receta?",
+        "Que los límites bajaron en cada una de las tres etapas",
+        "El punto 1 lo enuncia como consecuencia directa del diseño por etapas: "
+        "«Cada etapa bajó el umbral: un producto que en 2016 pasaba sin sello puede "
+        "llevarlo hoy sin que su receta haya cambiado en nada».\n\nLo que cambió, "
+        "entonces, no es el alimento: es la vara con que se lo mide.",
+        [
+            ("Que la tabla nutricional se empezó a medir por 100 gramos", "La medida por 100 gramos rige desde el comienzo, no es un cambio."),
+            ("Que los fabricantes agregaron nutrientes a sus productos", "El ejemplo supone justamente que la receta no cambió."),
+            ("Que los sellos pasaron de cuatro a más categorías", "Los nutrientes con sello siguen siendo los mismos cuatro."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_interpretar", "medio",
+        "¿Qué quiere decir la cartilla con que el sello «esconde la distancia»?",
+        "Que no informa por cuánto el producto pasa el límite",
+        "El punto 4 lo desarrolla: la regla «responde una pregunta de sí o no "
+        "—¿pasa el umbral?—», y esa respuesta no distingue entre estar apenas "
+        "encima y estar muy por encima.\n\nEl ejemplo lo hace evidente: «Un "
+        "producto con 11 g de azúcares por 100 g y otro con 45 g llevan exactamente "
+        "el mismo octógono, y no son lo mismo».",
+        [
+            ("Que los envases ocultan parte de la información nutricional", "La cartilla no acusa a los envases de ocultar nada: describe qué mide el sello."),
+            ("Que el sello no señala en qué lugar del envase debe leerse", "La ubicación del sello no se discute en ningún momento del texto."),
+            ("Que la tabla nutricional está impresa en letra muy pequeña", "El tamaño de la letra no aparece entre los reparos de la cartilla."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_interpretar", "dificil",
+        "¿Cuál es la relación entre la tabla de límites y la tabla de los tres "
+        "productos?",
+        "La segunda aplica a casos concretos la regla que fija la primera",
+        "La tabla de límites entrega los umbrales; la de productos trae cifras "
+        "reales para contrastarlas con esos umbrales, y el párrafo siguiente "
+        "resuelve cada caso.\n\nEl tercer caso hace algo más: muestra que la "
+        "primera tabla no basta, porque la ley exige además que el nutriente haya "
+        "sido añadido.",
+        [
+            ("La segunda corrige los límites que la primera había fijado", "Los límites no se corrigen: se usan para resolver los tres casos."),
+            ("La segunda entrega los datos con que se calcularon los límites", "Los límites vienen de la ley, no de los tres productos inventados."),
+            ("La segunda reemplaza a la primera con información más reciente", "Ambas tablas son de la misma cartilla y cumplen funciones distintas."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_evaluar", "medio",
+        "¿Con qué propósito la cartilla incluye el punto «Lo que el sello no dice»?",
+        "Para acotar qué se puede concluir a partir de un octógono",
+        "La sección corrige tres lecturas apresuradas de una sola vez: que el "
+        "producto esté prohibido, que enferme, o que un envase sin sellos sea "
+        "saludable.\n\nEs coherente con el cierre, que recuerda que no existe "
+        "octógono para los aditivos, para el grado de procesamiento ni para la "
+        "fibra.",
+        [
+            ("Para sostener que los sellos no cumplen ninguna función", "La cartilla les reconoce una: mirar rápido en el pasillo del supermercado."),
+            ("Para explicar por qué la ley se aplicó en tres etapas", "Las etapas se explican en el punto 1 y por otra razón."),
+            ("Para advertir que los fabricantes esquivan la norma", "El texto no atribuye ninguna maniobra a los fabricantes."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_evaluar", "dificil",
+        "Una bebida azucarada declara 80 kcal, 90 mg de sodio, 6 g de azúcares y 2 "
+        "g de grasas saturadas por 100 ml. ¿Cuántos sellos lleva?",
+        "Dos, porque supera el límite de energía y el de azúcares",
+        "Se aplican los límites de líquidos: 80 kcal pasa las 70 kcal y 6 g de "
+        "azúcares pasan los 5 g, así que corresponden esos dos sellos.\n\nLos otros "
+        "dos no: 90 mg de sodio quedan bajo los 100 mg y 2 g de grasas saturadas "
+        "quedan bajo los 3 g. Usar por error la columna de los sólidos daría cero "
+        "sellos.",
+        [
+            ("Ninguno, porque no supera ninguno de los cuatro límites", "Eso resultaría de aplicar la columna de sólidos a un producto líquido."),
+            ("Uno, porque solo supera el límite de los azúcares", "También supera el de energía: 80 kcal contra un límite de 70 kcal."),
+            ("Tres, porque solo queda bajo el límite de grasas saturadas", "El sodio también queda bajo el límite, con 90 mg contra 100 mg."),
+        ],
+    ),
+    _ql(
+        "sellos_advertencia", "lec_evaluar", "dificil",
+        "Un lector concluye que un producto sin sellos es siempre una opción "
+        "saludable. ¿Qué responde la cartilla?",
+        "Que puede no tenerlos por tres razones distintas de ser saludable",
+        "El punto 4 las enumera: un envase puede no llevar sellos «porque aporta "
+        "poco de todo, porque sus nutrientes son propios del alimento, o porque "
+        "quedó apenas por debajo del umbral».\n\nY el cierre agrega lo que ningún "
+        "sello mide: aditivos, grado de procesamiento y aporte de fibra.",
+        [
+            ("Que la ausencia de sellos sí garantiza un producto saludable", "La cartilla niega esa conclusión de forma expresa en el punto 4."),
+            ("Que ningún producto envasado puede considerarse saludable", "El texto no descalifica a los envasados: acota qué informa el sello."),
+            ("Que hay que revisar si el producto se vende en los colegios", "La venta en colegios es una prohibición legal, no un criterio de salud."),
+        ],
+    ),
     # ---------- 'La carta que no se abre' ----------
     _ql(
         "carta_cerrada", "lec_localizar", "facil",
