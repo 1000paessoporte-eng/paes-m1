@@ -15,7 +15,7 @@ from sqlalchemy import delete, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, selectinload
 
-from paes_api.modules.content.models import Question
+from paes_api.modules.content.models import Difficulty, Question
 from paes_api.modules.exam_focus import scoring
 from paes_api.modules.exam_focus.models import (
     PACE_FACTOR,
@@ -782,3 +782,76 @@ def get_review(db: Session, attempt: ExamAttempt) -> ExamReviewOut:
         questions=review_questions,
         node_diagnosis=node_diagnosis,
     )
+
+
+#: Cuánto pesa cada dificultad al repartir el tiempo del ensayo.
+#:
+#: No son minutos: son PESOS RELATIVOS. El total que se reparte sigue siendo el
+#: tiempo real del intento --el oficial del DEMRE, o el que eligió el alumno si
+#: pidió ritmo exigente o relajado--, así que esto no inventa tiempo, lo
+#: distribuye. La suma de los tiempos sugeridos es exactamente la duración del
+#: ensayo, y hay un test que lo fija.
+#:
+#: Dividir en partes iguales trataba igual una pregunta de operatoria directa
+#: que una de geometría con figura, y esa es justamente la decisión que un
+#: alumno tiene que aprender a tomar dentro de la prueba.
+PESO_DIFICULTAD: dict[Difficulty, float] = {
+    Difficulty.FACIL: 0.75,
+    Difficulty.MEDIO: 1.0,
+    Difficulty.DIFICIL: 1.4,
+}
+
+#: Palabras por minuto de lectura atenta que se asumen para los textos de
+#: Competencia Lectora.
+#:
+#: Es un SUPUESTO declarado, no un dato del DEMRE: sirve para repartir el
+#: tiempo, no para prometer nada. Se eligió por lo bajo a propósito --leer un
+#: texto para responderlo no es leerlo de corrido--, porque quedarse corto en
+#: el presupuesto de lectura es el error que deja preguntas sin responder.
+PALABRAS_POR_MINUTO = 180
+
+
+def _peso_de(pregunta: Question, abre_pasaje: bool) -> float:
+    """El peso de una pregunta al repartir el tiempo del ensayo.
+
+    Dos cosas la hacen cara: la dificultad, y en Competencia Lectora, ser la
+    PRIMERA de su texto. Esa carga con la lectura completa; las siguientes ya
+    la tienen leída y solo vuelven a mirarla.
+    """
+    peso = PESO_DIFICULTAD.get(pregunta.difficulty, 1.0)
+    if abre_pasaje and pregunta.passage is not None:
+        palabras = len(pregunta.passage.body.split())
+        # El peso extra se expresa en las mismas unidades: cuántas preguntas
+        # "medias" cuesta leer ese texto.
+        peso += (palabras / PALABRAS_POR_MINUTO) * 60 / scoring.segundos_por_pregunta()
+    return peso
+
+
+def tiempos_sugeridos(
+    preguntas: list[Question], duracion_total_s: int
+) -> dict[int, int]:
+    """Cuántos segundos conviene dedicarle a cada pregunta del intento.
+
+    Reparte el tiempo REAL del ensayo entre sus preguntas según lo que cuesta
+    cada una. La suma da la duración del intento, así que el alumno que respeta
+    todos los presupuestos termina justo a tiempo.
+
+    Las preguntas de un mismo pasaje se detectan por orden: la primera que trae
+    un pasaje nuevo es la que carga con leerlo.
+    """
+    if not preguntas or duracion_total_s <= 0:
+        return {}
+
+    vistos: set[int] = set()
+    pesos: dict[int, float] = {}
+    for q in preguntas:
+        abre = q.passage_id is not None and q.passage_id not in vistos
+        if q.passage_id is not None:
+            vistos.add(q.passage_id)
+        pesos[q.id] = _peso_de(q, abre)
+
+    total_peso = sum(pesos.values())
+    return {
+        qid: max(1, round(duracion_total_s * peso / total_peso))
+        for qid, peso in pesos.items()
+    }

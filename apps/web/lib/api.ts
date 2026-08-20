@@ -56,6 +56,19 @@ export type AuthUserOut =
 export type TokenOut =
   paths["/api/auth/login"]["post"]["responses"][200]["content"]["application/json"];
 
+export type Diagnostico =
+  paths["/api/analytics/diagnostico"]["get"]["responses"][200]["content"]["application/json"];
+
+/**
+ * Qué hace mal el alumno y por qué.
+ *
+ * Sin cachear: cambia con cada respuesta que da, y es la pantalla que mira
+ * justo después de rendir.
+ */
+export function getDiagnostico(token?: string): Promise<Diagnostico> {
+  return apiFetch<Diagnostico>("/api/analytics/diagnostico", token);
+}
+
 export type AdminMetrics =
   paths["/api/admin/metrics"]["get"]["responses"][200]["content"]["application/json"];
 

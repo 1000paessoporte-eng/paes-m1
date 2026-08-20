@@ -26,7 +26,16 @@ from paes_api.modules.users.models import User
 router = APIRouter(prefix="/exam", tags=["exam-focus"])
 
 
-def _to_question_out(questions: list[Question]) -> list[ExamQuestionOut]:
+def _to_question_out(
+    questions: list[Question], duracion_s: int = 0
+) -> list[ExamQuestionOut]:
+    """Las preguntas tal como las ve el alumno, con su tiempo sugerido.
+
+    El reparto se calcula sobre la lista COMPLETA y no pregunta por pregunta,
+    porque el peso de cada una depende de las otras: es una repartición del
+    tiempo del intento, no un número absoluto.
+    """
+    sugeridos = service.tiempos_sugeridos(questions, duracion_s)
     return [
         ExamQuestionOut(
             id=q.id,
@@ -38,6 +47,7 @@ def _to_question_out(questions: list[Question]) -> list[ExamQuestionOut]:
                 else ""
             ),
             difficulty=q.difficulty,
+            suggested_seconds=sugeridos.get(q.id, 0),
             stem=q.stem,
             image_url=q.image_url,
             passage=(
@@ -117,7 +127,7 @@ def start_exam(
         started_at=attempt.started_at,
         duration_limit_seconds=attempt.duration_limit_seconds,
         config=service.attempt_config(attempt, len(questions)),
-        questions=_to_question_out(questions),
+        questions=_to_question_out(questions, attempt.duration_limit_seconds),
     )
 
 
@@ -136,7 +146,7 @@ def get_exam_state(
         duration_limit_seconds=attempt.duration_limit_seconds,
         status=attempt.status,
         config=service.attempt_config(attempt, len(questions)),
-        questions=_to_question_out(questions),
+        questions=_to_question_out(questions, attempt.duration_limit_seconds),
         answers=answers,
     )
 
