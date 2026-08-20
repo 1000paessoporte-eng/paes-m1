@@ -400,3 +400,29 @@ def confirmar_pago(db: Session, token: str) -> Pago:
     db.commit()
     db.refresh(pago)
     return pago
+
+
+def cancelar_suscripcion(db: Session, user_id: int) -> bool:
+    """Cancela la renovación, sin quitar lo ya pagado. False si no había nada.
+
+    Cancelar NO es cortar el acceso: el alumno pagó un período y ese período se
+    respeta entero. Lo que se apaga es la renovación. Cortarle el acceso el día
+    que cancela sería cobrarle por días que después no puede usar.
+
+    Existía solo como "escríbenos a hola@": pedir un correo para dejar de pagar,
+    cuando pagar son dos clics, es una fricción puesta a propósito y no algo que
+    este producto quiera hacer.
+    """
+    suscripcion = db.execute(
+        select(Subscription)
+        .where(Subscription.user_id == user_id)
+        .where(Subscription.status == SubscriptionStatus.ACTIVE)
+        .order_by(Subscription.started_at.desc())
+    ).scalars().first()
+
+    if suscripcion is None:
+        return False
+
+    suscripcion.status = SubscriptionStatus.CANCELED
+    db.commit()
+    return True

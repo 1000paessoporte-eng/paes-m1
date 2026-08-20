@@ -12,6 +12,7 @@ import {
 } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { ProfileForm } from "@/components/profile/profile-form";
+import { ZonaPeligro } from "@/components/profile/zona-peligro";
 import { MiPlanPanel } from "@/components/plan/mi-plan";
 import { MisDatos } from "@/components/onboarding/mis-datos";
 
@@ -87,6 +88,16 @@ export default async function PerfilPage() {
           initialName={user.name}
           email={user.email}
           initialRecordatorios={user.recordatorios_email ?? true}
+        />
+
+        {/* Cancelar y borrar viven acá, al final y con el borde de aviso: son
+            las dos acciones que nadie debería tocar por accidente, y hasta hoy
+            solo existían como "escríbenos a hola@". */}
+        <ZonaPeligro
+          tienePlanActivo={plan.plan !== "gratis"}
+          // has_password es el dato exacto: una cuenta de Google no tiene
+          // contraseña que confirmar.
+          usaGoogle={!user.has_password}
         />
       </div>
     </div>

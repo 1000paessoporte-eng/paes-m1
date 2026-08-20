@@ -405,6 +405,30 @@ export function getAnalyticsSummary(token?: string): Promise<AnalyticsSummary> {
   return apiFetch<AnalyticsSummary>("/api/analytics/summary", token);
 }
 
+/**
+ * Cancela la renovación de la suscripción.
+ *
+ * No corta el acceso: lo ya pagado se respeta hasta su fecha de término.
+ */
+export function cancelarSuscripcion(token?: string): Promise<MiPlan> {
+  return apiFetch<MiPlan>("/api/plan/cancelar", token, { method: "POST" });
+}
+
+/**
+ * Borra la cuenta y todo lo que cuelga de ella. Irreversible.
+ *
+ * La contraseña va aunque haya sesión: borrar no puede depender solo de que
+ * alguien dejó la sesión abierta. Las cuentas de Google no tienen, así que
+ * ahí se manda sin ella.
+ */
+export function eliminarCuenta(password: string | null, token?: string): Promise<void> {
+  return apiFetch<void>("/api/auth/me", token, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ password }),
+  });
+}
+
 export function getAdminMetrics(token?: string): Promise<AdminMetrics> {
   return apiFetch<AdminMetrics>("/api/admin/metrics", token);
 }

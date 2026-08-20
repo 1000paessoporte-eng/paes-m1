@@ -33404,6 +33404,181 @@ QUESTIONS_HISTORIA = [
 # ---------------------------------------------------------------------------
 
 LESSONS: dict[str, dict] = {
+    # ── Competencia Lectora ─────────────────────────────────────────────
+    #
+    # La rinden TODOS los postulantes y era la única prueba con banco y sin
+    # ninguna lección escrita. Sus tres nodos no son temas de contenido sino
+    # HABILIDADES: el temario DEMRE organiza la prueba por lo que hay que saber
+    # hacer con un texto, no por qué textos hay que haber leído. Por eso el
+    # ejemplo resuelto de cada una trae su propio texto corto y trabaja sobre
+    # él: no se puede practicar "interpretar" en abstracto.
+    #
+    # Los textos son originales, como el resto del banco: los del DEMRE tienen
+    # derechos de la Universidad de Chile.
+    "lec_localizar": {
+        "intro": (
+            "Localizar es encontrar en el texto algo que el texto YA dice. "
+            "Suena fácil y es donde más puntos se pierden por confianza: se "
+            "responde de memoria, con lo que uno cree haber leído, en vez de "
+            "volver a mirar."
+        ),
+        "theory": (
+            "**La respuesta está escrita.** En estas preguntas no hay que "
+            "deducir nada: el dato aparece en el texto, a veces con otras "
+            "palabras. Tu trabajo es encontrarlo, no reconstruirlo.\n\n"
+            "**Lee primero la pregunta, después busca.** Saber qué buscas "
+            "convierte una relectura completa en una búsqueda dirigida. Es la "
+            "diferencia entre releer cuatro párrafos y mirar solo el que "
+            "importa.\n\n"
+            "**Las palabras de la pregunta rara vez son las del texto.** Si la "
+            "pregunta dice \"principal motivo\", el texto puede decir \"lo que "
+            "explica\" o \"la razón de fondo\". Busca la idea, no la palabra.\n\n"
+            "**Los distractores suelen ser verdaderos.** Casi siempre son cosas "
+            "que el texto sí dice, pero que no responden lo que se preguntó. "
+            "Que una alternativa sea cierta no la hace correcta."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*El alerce es el árbol más longevo de Chile: hay ejemplares de más "
+            "de tres mil años en la cordillera de los Andes. Su madera resiste "
+            "la humedad como pocas, y por eso durante el siglo XIX se usó para "
+            "tejuelas y embarcaciones. Esa misma resistencia casi lo extingue: "
+            "la tala fue tan intensa que en 1976 se le declaró Monumento "
+            "Natural, lo que prohibió cortarlo.*\n\n"
+            "Según el texto, ¿por qué se explotó tanto la madera de alerce?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Subrayo qué pide exactamente la pregunta: POR QUÉ se explotó su madera. No pide cuándo, ni qué pasó después.",
+                "porque": "El texto tiene cuatro datos —edad, resistencia, usos, protección— y solo uno responde a un porqué. Tener clara la pregunta evita quedarse con el primer dato que suene relacionado.",
+            },
+            {
+                "accion": "Busco en el texto la parte que explica una causa. La encuentro en: «Su madera resiste la humedad como pocas, y por eso durante el siglo XIX se usó para tejuelas y embarcaciones».",
+                "porque": "«Por eso» es un conector de consecuencia: lo que viene antes es la causa. Los conectores son las señales que marcan dónde está la respuesta.",
+            },
+            {
+                "accion": "Respondo con esa causa: porque su madera resiste la humedad. No porque sea longevo, aunque el texto también lo diga.",
+                "porque": "Que el alerce viva tres mil años es verdadero y está en el texto, pero no es lo que se preguntó. Ese es el distractor típico de estas preguntas.",
+            },
+        ],
+        "common_error": (
+            "Responder de memoria sin volver al texto. Después de leerlo una "
+            "vez uno cree recordarlo, y la alternativa que \"suena\" a lo que "
+            "leíste casi siempre es la que pusieron para eso. Vuelve y "
+            "ubica la línea exacta: si no la encuentras, no es la respuesta."
+        ),
+    },
+    "lec_interpretar": {
+        "intro": (
+            "Interpretar es entender lo que el texto dice sin decirlo con esas "
+            "palabras: qué significa una expresión en su contexto, qué relación "
+            "hay entre dos partes, qué se concluye de lo leído."
+        ),
+        "theory": (
+            "**Inferir no es inventar.** Una inferencia se sostiene con lo que "
+            "está escrito. Si para llegar a una alternativa necesitas un dato "
+            "que el texto no da, esa alternativa está mal aunque suene "
+            "razonable.\n\n"
+            "**El contexto define el significado.** La misma palabra cambia de "
+            "sentido según dónde esté. Para saber qué significa acá, mira la "
+            "oración completa y la anterior, no el diccionario.\n\n"
+            "**Los conectores dicen la relación.** «Sin embargo» anuncia un "
+            "contraste, «por lo tanto» una consecuencia, «es decir» una "
+            "reformulación. Son el mapa de cómo se conectan las ideas.\n\n"
+            "**Distingue la idea principal del ejemplo.** Un texto suele "
+            "afirmar algo y después ilustrarlo. El ejemplo es lo más concreto y "
+            "por eso lo más memorable, pero no es la idea."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*La ciudad amaneció con la micro llena a las seis. No es que la "
+            "gente madrugue por gusto: vive lejos de donde trabaja. Cada hora "
+            "de viaje es una hora que no se duerme, no se estudia y no se pasa "
+            "con nadie. Hablamos del transporte como un problema de calles y "
+            "buses, y es sobre todo un problema de tiempo.*\n\n"
+            "¿Qué quiere decir la última oración?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Leo la última oración completa: «Hablamos del transporte como un problema de calles y buses, y es sobre todo un problema de tiempo».",
+                "porque": "La pregunta apunta a una oración concreta, pero su sentido depende de lo que vino antes. Aislarla es lo que lleva a interpretarla mal.",
+            },
+            {
+                "accion": "Miro qué venía antes: que la gente vive lejos y que cada hora de viaje es una hora que no se duerme, no se estudia y no se comparte.",
+                "porque": "Esa enumeración es la que le da contenido a la palabra «tiempo». Sin ella, «problema de tiempo» podría significar cualquier cosa, incluso que los buses atrasan.",
+            },
+            {
+                "accion": "Identifico el contraste: «como... y es sobre todo» opone dos formas de ver lo mismo. La primera (calles y buses) se presenta como insuficiente.",
+                "porque": "El autor no niega que existan problemas de infraestructura: dice que el costo real se mide en horas de vida, no en kilómetros.",
+            },
+            {
+                "accion": "Concluyo: quiere decir que lo más grave del transporte no es la infraestructura sino las horas de vida que le quita a la gente.",
+                "porque": "Esa conclusión se sostiene enteramente con lo escrito. Una que dijera «hay que comprar más buses» agregaría algo que el texto nunca propone.",
+            },
+        ],
+        "common_error": (
+            "Elegir la alternativa que uno cree cierta en vez de la que el "
+            "texto sostiene. En preguntas sobre temas conocidos —transporte, "
+            "medioambiente, educación— es fácil responder con la propia opinión. "
+            "La pregunta no es qué piensas tú: es qué dice ese texto."
+        ),
+    },
+    "lec_evaluar": {
+        "intro": (
+            "Evaluar es dar un paso atrás y mirar el texto como objeto: para "
+            "qué fue escrito, desde qué posición, con qué recursos. Es la "
+            "habilidad que más se parece a lo que uno hace todos los días al "
+            "leer algo en internet y decidir si le cree."
+        ),
+        "theory": (
+            "**Todo texto tiene un propósito.** Informar, convencer, "
+            "entretener, instruir. Reconocerlo explica las decisiones del "
+            "autor: un texto que busca convencer elige adjetivos que uno "
+            "informativo no usaría.\n\n"
+            "**Quién habla importa.** No es lo mismo que sobre una empresa "
+            "escriba un periodista, un trabajador o la propia empresa. La "
+            "posición desde donde se escribe condiciona qué se cuenta y qué se "
+            "omite.\n\n"
+            "**Distingue hecho de opinión.** Un hecho se puede verificar: «la "
+            "tala se prohibió en 1976». Una opinión se puede discutir: «la "
+            "prohibición llegó tarde». Los textos mezclan los dos, y esa mezcla "
+            "suele ser la pregunta.\n\n"
+            "**Evaluar no es opinar.** Que te parezca bien o mal lo que dice el "
+            "texto no entra. Lo que se evalúa es cómo está construido y si sus "
+            "afirmaciones se sostienen con lo que él mismo presenta."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Nuestro plan de estudio es la mejor forma de preparar la prueba. "
+            "Miles de estudiantes ya lo usan y muchos han mejorado su puntaje. "
+            "Ningún otro método entrega resultados tan rápido.*\n\n"
+            "¿Cuál es el principal problema de este texto como argumento?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Determino el propósito: no informa, convence. Quiere que el lector contrate algo.",
+                "porque": "«La mejor forma», «ningún otro método»: son afirmaciones de superioridad, típicas de un texto persuasivo y no de uno informativo.",
+            },
+            {
+                "accion": "Separo lo verificable de lo que no lo es. «Miles de estudiantes lo usan» se podría comprobar. «Muchos han mejorado» no dice cuántos ni cuánto.",
+                "porque": "Una cifra vaga parece un dato y no lo es. «Muchos» puede ser cinco o cinco mil, y sin la comparación no se sabe si mejoraron por el plan o por estudiar.",
+            },
+            {
+                "accion": "Reviso la afirmación más fuerte: «ningún otro método entrega resultados tan rápido». El texto no presenta ninguna comparación con otro método.",
+                "porque": "Es la afirmación que más pesa y la que menos respaldo tiene. Un argumento se evalúa por su punto más débil, no por el más convincente.",
+            },
+            {
+                "accion": "Concluyo: el problema es que sus afirmaciones no están respaldadas con datos que se puedan comprobar.",
+                "porque": "No se evalúa si el plan es bueno o malo —eso no se puede saber leyendo esto—, sino si el texto sostiene lo que afirma. No lo sostiene.",
+            },
+        ],
+        "common_error": (
+            "Confundir evaluar el texto con estar de acuerdo con él. Un texto "
+            "puede defender algo con lo que coincides y estar mal argumentado, "
+            "y al revés. La pregunta es cómo está construido, no si tiene "
+            "razón."
+        ),
+    },
     "num_racionales": {
         "intro": (
             "Sumar, restar, multiplicar y dividir fracciones aparece dentro de "

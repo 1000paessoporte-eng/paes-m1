@@ -1,4 +1,15 @@
+import os
 from collections.abc import Generator
+
+# La suite NO puede heredar el entorno de la máquina de quien la corre.
+#
+# El .env local de este proyecto trae ENVIRONMENT=production, y con eso los
+# tests corrían como si fueran producción: el envío de correo, que en
+# producción exige SMTP configurado, fallaba en un test que solo quería
+# comprobar a quién se le escribe. Se fija ANTES de importar nada de la app,
+# porque get_settings() está cacheado con lru_cache y se resuelve en el primer
+# import.
+os.environ["ENVIRONMENT"] = "test"
 
 import pytest
 from fastapi.testclient import TestClient

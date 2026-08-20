@@ -147,11 +147,51 @@ export interface paths {
         get: operations["me_api_auth_me_get"];
         put?: never;
         post?: never;
-        delete?: never;
+        /**
+         * Eliminar Mi Cuenta
+         * @description Borra la cuenta y todo lo que cuelga de ella.
+         *
+         *     Estaba solo en la política de privacidad como "escríbenos a hola@": pedirle
+         *     a alguien que mande un correo para ejercer un derecho sobre sus datos es
+         *     ponerle un trámite a lo que debería ser un botón, y este producto guarda
+         *     datos de estudio de menores de edad.
+         *
+         *     Pide la contraseña actual, salvo en las cuentas de Google, que no tienen.
+         *     Borrar es irreversible y no puede depender solo de una sesión abierta en un
+         *     computador prestado.
+         */
+        delete: operations["eliminar_mi_cuenta_api_auth_me_delete"];
         options?: never;
         head?: never;
         /** Update Me */
         patch: operations["update_me_api_auth_me_patch"];
+        trace?: never;
+    };
+    "/api/auth/diagnostico-correo": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Diagnostico Correo
+         * @description Si el correo saldría o no, y por qué.
+         *
+         *     Existe porque "olvidé mi contraseña" responde 204 exista o no la cuenta:
+         *     ese silencio protege la privacidad, pero también esconde una configuración
+         *     rota. Sin esto, la única forma de enterarse de que el correo no sale es que
+         *     alguien se quede fuera de su cuenta y lo reporte.
+         *
+         *     Solo admin, y nunca devuelve la contraseña del SMTP: solo si está puesta.
+         */
+        get: operations["diagnostico_correo_api_auth_diagnostico_correo_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
         trace?: never;
     };
     "/api/skill-tree": {
@@ -814,6 +854,29 @@ export interface paths {
         get: operations["diagnostico_api_plan_flow_diagnostico_get"];
         put?: never;
         post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/plan/cancelar": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Cancelar
+         * @description Apaga la renovación de la suscripción activa.
+         *
+         *     No corta el acceso: lo ya pagado se respeta hasta su fecha de término. Si
+         *     no hay nada activo responde 409 en vez de fingir que hizo algo.
+         */
+        post: operations["cancelar_api_plan_cancelar_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -1558,6 +1621,18 @@ export interface components {
          * @enum {string}
          */
         Difficulty: "facil" | "medio" | "dificil";
+        /**
+         * EliminarCuentaIn
+         * @description Confirmación para borrar la cuenta.
+         *
+         *     La contraseña va aunque haya sesión iniciada: borrar es irreversible y no
+         *     puede depender solo de que alguien dejó su sesión abierta. Las cuentas de
+         *     Google no tienen contraseña, así que ahí llega en None y se omite.
+         */
+        EliminarCuentaIn: {
+            /** Password */
+            password?: string | null;
+        };
         /**
          * EmbudoCampanaOut
          * @description El embudo de UNA campaña, en los últimos 30 días.
@@ -3072,6 +3147,37 @@ export interface operations {
             };
         };
     };
+    eliminar_mi_cuenta_api_auth_me_delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["EliminarCuentaIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     update_me_api_auth_me_patch: {
         parameters: {
             query?: never;
@@ -3101,6 +3207,28 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    diagnostico_correo_api_auth_diagnostico_correo_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: unknown;
+                    };
                 };
             };
         };
@@ -4073,6 +4201,26 @@ export interface operations {
                     "application/json": {
                         [key: string]: unknown;
                     };
+                };
+            };
+        };
+    };
+    cancelar_api_plan_cancelar_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MiPlanOut"];
                 };
             };
         };

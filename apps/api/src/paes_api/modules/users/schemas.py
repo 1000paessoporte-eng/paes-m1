@@ -92,3 +92,14 @@ class ForgotPasswordIn(BaseModel):
 class ResetPasswordIn(BaseModel):
     token: str
     new_password: str = Field(min_length=8, max_length=128)
+
+
+class EliminarCuentaIn(BaseModel):
+    """Confirmación para borrar la cuenta.
+
+    La contraseña va aunque haya sesión iniciada: borrar es irreversible y no
+    puede depender solo de que alguien dejó su sesión abierta. Las cuentas de
+    Google no tienen contraseña, así que ahí llega en None y se omite.
+    """
+
+    password: str | None = None

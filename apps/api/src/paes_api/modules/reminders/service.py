@@ -13,15 +13,18 @@ A quién se le escribe, cuándo, y qué dice. Tres reglas ordenan todo:
    solo daña la reputación del remitente.
 """
 
+import logging
 from datetime import UTC, datetime, timedelta
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.config import get_settings
-from paes_api.core.email import send_email
+from paes_api.core.email import CorreoNoEnviado, send_email
 from paes_api.modules.exam_focus.models import ExamAttempt
 from paes_api.modules.users.models import User
+
+logger = logging.getLogger(__name__)
 
 #: Días mínimos entre dos recordatorios a la misma persona.
 DESCANSO_DIAS = 2
@@ -93,9 +96,15 @@ def enviar_recordatorios(db: Session, limite: int = 200) -> dict[str, int]:
     """Recorre las cuentas y manda los recordatorios que correspondan.
 
     Devuelve el recuento para que el cron deje rastro de lo que hizo. Sin SMTP
-    configurado, `send_email` deja el mensaje en el log y el resultado dice
-    cuántos se habrían mandado — así el sistema se puede probar entero antes de
-    contratar un proveedor.
+    configurado en desarrollo, `send_email` deja el mensaje en el log y el
+    resultado dice cuántos se habrían mandado — así el sistema se puede probar
+    entero antes de contratar un proveedor.
+
+    Un correo que falla NO detiene la tanda: se cuenta aparte y se sigue con
+    los demás. Es un recorrido de hasta 200 cuentas, y que una dirección
+    rebotada deje sin recordatorio a las otras 199 sería un error caro y
+    silencioso. A quien falló no se le marca la fecha, así que entra de nuevo
+    en la pasada siguiente.
     """
     ajustes = get_settings()
     ahora = datetime.now(UTC)
@@ -107,7 +116,7 @@ def enviar_recordatorios(db: Session, limite: int = 200) -> dict[str, int]:
         .limit(limite)
     ).scalars().all()
 
-    resultado = {"revisados": 0, "enviados": 0, "omitidos": 0}
+    resultado = {"revisados": 0, "enviados": 0, "omitidos": 0, "fallidos": 0}
 
     for user in candidatos:
         resultado["revisados"] += 1
@@ -146,7 +155,12 @@ def enviar_recordatorios(db: Session, limite: int = 200) -> dict[str, int]:
 
         nombre = user.name.split(" ")[0]
         asunto, cuerpo = _mensaje(nombre, dias_sin_rendir, racha, ajustes.frontend_url)
-        send_email(user.email, asunto, cuerpo)
+        try:
+            send_email(user.email, asunto, cuerpo)
+        except CorreoNoEnviado:
+            logger.exception("No se pudo enviar el recordatorio a %s", user.email)
+            resultado["fallidos"] += 1
+            continue
 
         user.ultimo_recordatorio = ahora
         resultado["enviados"] += 1
