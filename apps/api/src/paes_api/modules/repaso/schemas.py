@@ -19,8 +19,10 @@ class RepasoPreguntaOut(BaseModel):
     difficulty: Difficulty
     stem: str
     image_url: str | None = None
-    #: El texto base, cuando la pregunta es de Competencia Lectora.
+    #: El texto base, cuando la pregunta es de Competencia Lectora. Sin él la
+    #: pregunta no se entiende: en Lectora la respuesta está en el texto.
     passage: str | None = None
+    passage_title: str | None = None
     node_name: str
     alternatives: list[RepasoAlternativaOut]
     #: Cuántas veces la ha fallado. Se muestra: saber que es la tercera vez es

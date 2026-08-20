@@ -50,7 +50,8 @@ def sesion(
                 difficulty=pregunta.difficulty,
                 stem=pregunta.stem,
                 image_url=pregunta.image_url,
-                passage=pregunta.passage.content if pregunta.passage else None,
+                passage=pregunta.passage.body if pregunta.passage else None,
+                passage_title=pregunta.passage.title if pregunta.passage else None,
                 node_name=pregunta.skill_node.name,
                 alternatives=[
                     RepasoAlternativaOut(id=a.id, label=a.label, text=a.text)

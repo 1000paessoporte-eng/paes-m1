@@ -215,3 +215,42 @@ def test_la_sesion_se_corta_en_el_limite(
     body = client.get("/api/repaso/sesion", headers=headers).json()
     assert len(body["preguntas"]) == service.LIMITE_SESION
     assert body["pendientes_totales"] == service.LIMITE_SESION + 5
+
+
+def test_la_pregunta_de_lectora_trae_su_texto(
+    client: TestClient, register_user, db_session: Session
+) -> None:
+    """En Competencia Lectora la respuesta está EN el texto: servir la pregunta
+    sin él la vuelve imposible de responder.
+
+    Este test existe porque el router leía `passage.content` y el campo se
+    llama `body`: cualquier alumno con una pregunta de Lectora fallada recibía
+    un 500 en toda la sesión, no solo en esa pregunta.
+    """
+    from paes_api.modules.content.models import ReadingPassage
+
+    headers, user = register_user()
+    node = SkillNode(
+        code="nodo_lectora", name="Localizar", axis=SkillAxis.NUMEROS, tier=1,
+        unlock_threshold=0.75,
+    )
+    db_session.add(node)
+    db_session.flush()
+    texto = ReadingPassage(title="El faro", body="Un texto de prueba con dos líneas.")
+    db_session.add(texto)
+    db_session.flush()
+    q = Question(
+        skill_node_id=node.id, difficulty=Difficulty.MEDIO,
+        stem="¿Qué dice el texto?", passage_id=texto.id,
+    )
+    db_session.add(q)
+    db_session.flush()
+    db_session.add(Alternative(question_id=q.id, label="A", text="Algo", is_correct=True))
+    db_session.commit()
+    _fallar(db_session, user["id"], q)
+
+    resp = client.get("/api/repaso/sesion", headers=headers)
+    assert resp.status_code == 200, resp.text
+    pregunta = resp.json()["preguntas"][0]
+    assert pregunta["passage"] == "Un texto de prueba con dos líneas."
+    assert pregunta["passage_title"] == "El faro"
