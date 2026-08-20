@@ -266,3 +266,37 @@ def test_con_muy_poco_tiempo_el_ensayo_va_primero() -> None:
     plan = _plan_semanal(horas=1, temas_disponibles=4)
     assert plan.alcanza_un_ensayo is True
     assert plan.temas_que_caben == 0
+
+
+def test_el_plan_gratis_topa_en_una_carrera(client: TestClient, db_session, register_user) -> None:
+    """El tope por plan es lo que la página de planes lleva anunciando desde
+    siempre, y no lo aplicaba nadie: cualquiera podía agregar diez. Cobrar por
+    algo que ya se entrega gratis es la peor forma de cobrar."""
+    headers, _ = register_user(email="tope@milpaes.cl")
+    carreras = []
+    for i in range(2):
+        c = Carrera(
+            codigo=f"9800{i}",
+            universidad="UNIVERSIDAD DE PRUEBA",
+            nombre=f"CARRERA {i}",
+            sede="SANTIAGO",
+            nem=20, ranking=20, lectora=20, m1=40,
+            historia=None, ciencias=None, m2=None, prueba_especial=None,
+            electivo_alternativo=False,
+            proceso=2026,
+            fuente="https://demre.cl/",
+        )
+        db_session.add(c)
+        carreras.append(c)
+    db_session.commit()
+
+    primera = client.post(
+        "/api/meta/postulaciones", json={"carrera_id": carreras[0].id}, headers=headers
+    )
+    assert primera.status_code == 201
+
+    segunda = client.post(
+        "/api/meta/postulaciones", json={"carrera_id": carreras[1].id}, headers=headers
+    )
+    assert segunda.status_code == 409
+    assert "Pro" in segunda.json()["detail"]

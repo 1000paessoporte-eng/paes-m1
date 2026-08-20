@@ -43,12 +43,17 @@ def limites_activos() -> bool:
 
 @dataclass(frozen=True)
 class Limites:
-    """Lo que cada plan permite. `None` es sin límite."""
+    """Lo que cada plan permite. `None` es sin límite.
+
+    Solo entra acá lo que ALGUIEN aplica de verdad. Hubo un tercer campo,
+    `analisis_avanzado`, que se declaraba, se informaba en la respuesta de
+    /api/plan y no cerraba nada: el alumno del plan Gratis veía la analítica
+    completa mientras la API le decía que no la tenía. Un límite que nadie
+    comprueba no es un límite, es una promesa falsa en las dos direcciones.
+    """
 
     ensayos_por_mes: int | None
     carreras_en_meta: int
-    #: Si ve el detalle de sus errores por tipo y la curva de fatiga.
-    analisis_avanzado: bool
 
 
 def limites_de(plan: Plan) -> Limites:
@@ -68,9 +73,8 @@ def limites_de(plan: Plan) -> Limites:
         return Limites(
             ensayos_por_mes=get_settings().ensayos_gratis_por_mes,
             carreras_en_meta=1,
-            analisis_avanzado=False,
         )
-    return Limites(ensayos_por_mes=None, carreras_en_meta=10, analisis_avanzado=True)
+    return Limites(ensayos_por_mes=None, carreras_en_meta=10)
 
 
 
@@ -93,48 +97,39 @@ class Producto:
     asunto: str
 
 
-#: Los planes que se pueden comprar, del más corto al más largo.
+#: Los dos planes que se pueden comprar.
+#:
+#: Antes había cuatro (3 días, semana, mes, año). Los dos cortos se quitaron:
+#: preparar la PAES no es algo que se haga en tres días, así que vendían una
+#: promesa que el producto no puede cumplir, y de paso convertían la decisión
+#: de compra en una comparación de cuatro columnas justo en el momento en que
+#: hay que decidir una sola cosa.
 #:
 #: La regla que ordena la escala: a MENOR plazo, MAYOR precio por día. Quien
-#: compra tres días paga la comodidad de no comprometerse; quien compra un año
-#: entrega el efectivo por adelantado y recibe descuento. Si el precio diario
-#: fuera parejo nadie compraría el plan largo, y si el corto fuera barato
-#: canibalizaría al mensual: cuatro semanas sueltas tienen que salir más caras
-#: que un mes, y diez compras de tres días más caras todavía.
+#: paga mes a mes conserva la libertad de irse; quien paga el año entrega el
+#: efectivo por adelantado y recibe descuento. Si el precio diario fuera parejo
+#: nadie compraría el plan largo.
 #:
-#: El anual no cuesta doce meses porque el producto es estacional: nadie
-#: prepara la PAES un año entero, el ciclo real son ocho o nueve meses. Cobrar
-#: la lista completa sería pedir por meses que el estudiante no va a usar.
+#: El anual no cuesta doce meses porque el producto es ESTACIONAL: nadie
+#: prepara la PAES un año entero, el ciclo real son ocho o nueve meses. Por eso
+#: sale exactamente nueve mensualidades (9 x 9.990 = 89.910, redondeado a
+#: 89.900): se paga lo que se va a usar y los meses muertos no se cobran.
 #:
 #: Un test verifica que la escala se mantenga coherente si alguien cambia un
 #: precio: ningún plan puede salir más barato por día que uno más largo.
 PRODUCTOS: dict[str, Producto] = {
-    "pro_3dias": Producto(
-        id="pro_3dias",
-        plan=Plan.PRO,
-        dias=3,
-        monto=3990,
-        asunto="1000paes Pro - 3 días",
-    ),
-    "pro_semana": Producto(
-        id="pro_semana",
-        plan=Plan.PRO,
-        dias=7,
-        monto=6990,
-        asunto="1000paes Pro - 7 días",
-    ),
     "pro_mensual": Producto(
         id="pro_mensual",
         plan=Plan.PRO,
         dias=30,
-        monto=15000,
+        monto=9990,
         asunto="1000paes Pro - 1 mes",
     ),
     "pro_anual": Producto(
         id="pro_anual",
         plan=Plan.PRO,
         dias=365,
-        monto=119000,
+        monto=89900,
         asunto="1000paes Pro - 1 año",
     ),
 }

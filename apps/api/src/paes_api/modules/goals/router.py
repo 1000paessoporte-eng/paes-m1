@@ -3,6 +3,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.core.database import get_db
+from paes_api.modules.billing import service as billing
 from paes_api.modules.goals import service
 from paes_api.modules.goals.models import Carrera, MetaUsuario
 from paes_api.modules.goals.schemas import (
@@ -50,10 +51,23 @@ def agregar_postulacion(
 
     if any(m.carrera_id == payload.carrera_id for m in actuales):
         raise HTTPException(status_code=409, detail="Esa carrera ya está en tu lista")
-    if len(actuales) >= service.MAX_PREFERENCIAS:
+
+    # El tope de carreras es la diferencia entre Gratis y Pro que la página de
+    # planes lleva anunciando desde siempre. Estaba definido en
+    # `billing.limites_de()` y no lo aplicaba nadie: cualquiera podía agregar
+    # diez. Cobrar por algo que ya se entrega gratis es la peor forma de
+    # cobrar.
+    plan_actual, _ = billing.plan_actual(db, user.id)
+    tope = billing.limites_de(plan_actual).carreras_en_meta
+    if len(actuales) >= tope:
         raise HTTPException(
             status_code=409,
-            detail=f"El sistema admite hasta {service.MAX_PREFERENCIAS} preferencias",
+            detail=(
+                f"Tu plan permite {tope} "
+                + ("carrera" if tope == 1 else "carreras")
+                + " en Mi meta. Con Pro puedes seguir hasta "
+                + f"{service.MAX_PREFERENCIAS}."
+            ),
         )
 
     db.add(
