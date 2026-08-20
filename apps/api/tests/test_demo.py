@@ -1,8 +1,13 @@
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
-from paes_api.modules.content.models import Alternative, Difficulty, Question
-from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+from paes_api.modules.content.models import (
+    Alternative,
+    Difficulty,
+    Question,
+    ReadingPassage,
+)
+from paes_api.modules.skill_tree.models import SkillAxis, SkillNode, Subject
 
 
 def _make_node_with_question(db_session: Session, code: str) -> tuple[Question, Alternative, Alternative]:
@@ -65,3 +70,66 @@ def test_demo_grade_scores_without_persisting_anything(
         json={"answers": [{"question_id": question.id, "selected_alternative_id": wrong.id}]},
     )
     assert resp_wrong.json()["correct"] == 0
+
+
+def test_demo_questions_solo_de_la_prueba_pedida(
+    client: TestClient, db_session: Session
+) -> None:
+    """Antes el sorteo salía de todo el banco: quien probaba M1 podía recibir
+    una pregunta de Historia con el rótulo de matemática encima."""
+    _make_node_with_question(db_session, "demo_m1")
+    nodo_historia = SkillNode(
+        code="demo_hist",
+        name="Demo Historia",
+        axis=SkillAxis.HISTORIA,
+        subject=Subject.HISTORIA,
+        tier=1,
+        unlock_threshold=0.75,
+    )
+    db_session.add(nodo_historia)
+    db_session.flush()
+    db_session.add(
+        Question(
+            skill_node_id=nodo_historia.id,
+            difficulty=Difficulty.FACIL,
+            stem="¿En qué año fue la independencia?",
+        )
+    )
+    db_session.commit()
+
+    m1 = client.get("/api/demo/questions").json()
+    assert m1, "la demo por defecto debe traer preguntas de M1"
+    assert all(q["subject"] == "m1" for q in m1)
+
+    historia = client.get("/api/demo/questions", params={"subject": "historia"}).json()
+    assert [q["subject"] for q in historia] == ["historia"]
+
+
+def test_demo_lectora_viaja_con_su_texto(client: TestClient, db_session: Session) -> None:
+    """Una pregunta de lectora sin su pasaje es incontestable: la demo la
+    mostraba igual porque el pasaje no viajaba en la respuesta."""
+    pasaje = ReadingPassage(title="Texto de prueba", body="Cuerpo del texto.", kind="no_literario")
+    nodo = SkillNode(
+        code="demo_lectora",
+        name="Localizar información",
+        axis=SkillAxis.LOCALIZAR,
+        subject=Subject.LECTORA,
+        tier=1,
+        unlock_threshold=0.75,
+    )
+    db_session.add_all([pasaje, nodo])
+    db_session.flush()
+    db_session.add(
+        Question(
+            skill_node_id=nodo.id,
+            difficulty=Difficulty.FACIL,
+            stem="¿Qué dice el texto?",
+            passage_id=pasaje.id,
+        )
+    )
+    db_session.commit()
+
+    body = client.get("/api/demo/questions", params={"subject": "lectora"}).json()
+    assert body[0]["passage"]["title"] == "Texto de prueba"
+    assert body[0]["node_name"] == "Localizar información"
+    assert body[0]["axis"] == "localizar"
