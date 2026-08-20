@@ -21383,6 +21383,92 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "suelo_centimetro",
+        "title": "Un centímetro cada mil años",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las estimaciones citadas —el tiempo de "
+            "formación del suelo, la proporción de alimentos que depende de él y la "
+            "proyección de pérdida de producción hacia 2050— corresponden a la FAO y se "
+            "verificaron antes de escribir el texto."
+        ),
+        "body": (
+            "**Un centímetro cada mil años**\n\n"
+            "Casi todo lo que comemos empieza en los primeros veinte centímetros de "
+            "la corteza terrestre. Es una capa delgada, más delgada que casi "
+            "cualquier otra cosa de la que dependamos, y la tratamos con la "
+            "despreocupación que se le tiene a lo que parece infinito. La "
+            "Organización de las Naciones Unidas para la Alimentación y la "
+            "Agricultura estima que el noventa y cinco por ciento de los alimentos "
+            "que consume la humanidad depende, directa o indirectamente, de esa "
+            "capa.\n\n"
+            "Conviene empezar por una precisión que no es de diccionario. El suelo "
+            "no es tierra. Tierra es lo que queda en una maceta cuando uno la "
+            "vacía; suelo es un sistema. Tiene minerales que vienen de la roca "
+            "madre, materia orgánica de lo que murió encima, agua, aire entre las "
+            "partículas y una cantidad de organismos difícil de imaginar: "
+            "bacterias, hongos, lombrices, insectos, raíces que no son del todo "
+            "pasajeras. Esa combinación es la que permite que una semilla se "
+            "convierta en una planta. Sin ella queda un polvo que sostiene pero no "
+            "alimenta.\n\n"
+            "Y aquí viene el dato que ordena todo lo demás. Según las estimaciones "
+            "de esa misma organización, formar un centímetro de suelo toma entre "
+            "cien y mil años. No hay error de tipeo: un centímetro, y el rango va "
+            "de un siglo a un milenio, según el clima, la roca de abajo y la "
+            "vegetación de arriba. Los veinte centímetros que dan de comer al mundo "
+            "llevan, en el peor de los casos, veinte mil años formándose.\n\n"
+            "Compárese eso con lo que tarda en irse. Un episodio de lluvia intensa "
+            "sobre una ladera arada y sin cubierta vegetal puede arrastrar en una "
+            "tarde lo que tomó siglos acumular. El viento hace lo suyo donde el "
+            "suelo quedó descubierto y seco. Y la lentitud de la formación no "
+            "compensa nada, porque la reposición sigue avanzando al mismo ritmo de "
+            "siempre mientras la pérdida se acelera.\n\n"
+            "De esa asimetría se sigue una conclusión que suele enunciarse mal. A "
+            "veces se dice que el suelo es un recurso no renovable, como el "
+            "petróleo, y no es exactamente así: el suelo se renueva, solo que en "
+            "una escala de tiempo que no es la nuestra. La formulación correcta es "
+            "un poco más larga y bastante más útil: en escala humana, y solo en "
+            "escala humana, el suelo se comporta como un recurso no renovable. "
+            "Quien pierde diez centímetros de suelo no los va a recuperar, ni sus "
+            "hijos tampoco, aunque el planeta esté trabajando en ello.\n\n"
+            "La misma organización proyecta que, de mantenerse la tendencia actual "
+            "de erosión, la producción agrícola anual podría caer alrededor de un "
+            "diez por ciento hacia 2050. Es una proyección, con todo lo que eso "
+            "significa: supone que las prácticas siguen como están y que nada las "
+            "corrige, de modo que su valor no está en acertar la cifra sino en "
+            "mostrar la dirección.\n\n"
+            "Y las prácticas se pueden corregir, que es la parte esperanzadora de "
+            "este asunto. Dejar rastrojos en vez de quemarlos, arar menos o no "
+            "arar, sembrar cultivos de cobertura entre temporadas, plantar en "
+            "curvas de nivel en las laderas: son medidas conocidas desde hace "
+            "décadas, que funcionan y que no requieren ninguna tecnología nueva. El "
+            "obstáculo no suele ser técnico. Es que sus beneficios llegan tarde, a "
+            "veces después de que el arriendo del campo terminó, y sus costos "
+            "llegan de inmediato.\n\n"
+            "Chile tiene además una geografía que agrava el asunto. Buena parte de "
+            "la agricultura ocurre en laderas y en valles estrechos, donde el agua "
+            "corre rápido y encuentra poco que la frene, y el clima mediterráneo de "
+            "la zona central concentra las lluvias en pocos meses. Un suelo "
+            "descubierto en pendiente, en un invierno con dos temporales seguidos, "
+            "pierde en dos semanas lo que en una planicie con cubierta vegetal "
+            "habría tardado años en irse.\n\n"
+            "Hay algo más, y es un problema de percepción. La erosión no se ve. Un "
+            "campo que perdió tres centímetros de suelo en diez años se ve igual "
+            "que hace diez años; lo que cambia es cuánto produce, y esa baja se "
+            "puede tapar durante bastante tiempo agregando fertilizante. La "
+            "agricultura tiene así la posibilidad de no enterarse: el rendimiento "
+            "se sostiene, la cuenta de insumos sube y el problema queda oculto "
+            "detrás de una solución que lo compensa sin resolverlo.\n\n"
+            "Nada de esto autoriza a hablar de catástrofe inminente, y conviene "
+            "decirlo, porque el tema se presta para el énfasis. Los suelos del "
+            "mundo no van a desaparecer, y hay regiones donde la degradación se ha "
+            "revertido con trabajo constante. Lo que la aritmética sí autoriza a "
+            "decir es algo más acotado y menos discutible: que estamos gastando "
+            "algo que se repone a un centímetro por siglo, y que cualquier decisión "
+            "sobre ese recurso compromete a gente que todavía no nace."
+        ),
+    },
+    {
         "key": "al_reves",
         "title": "Al revés",
         "kind": "literario",
@@ -25390,6 +25476,177 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Un centímetro cada mil años' ----------
+    _ql(
+        "suelo_centimetro", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánto tarda en formarse un centímetro de suelo?",
+        "Entre cien y mil años",
+        "El rango depende del clima, de la roca que hay debajo y de la vegetación "
+        "que crece encima.\n\nEl emisor lo usa para una cuenta que ordena todo el "
+        "artículo: los veinte centímetros de los que dependen los alimentos llevan, "
+        "en el peor de los casos, veinte mil años formándose.",
+        [
+            ("Entre diez y cien años", "El texto entrega un rango diez veces mayor."),
+            ("Alrededor de veinte mil años", "Ese es el tiempo estimado para veinte centímetros."),
+            ("Cerca de una década", "Ninguna estimación del artículo se acerca a ese plazo."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_localizar", "facil",
+        "Según la lectura, ¿qué proporción de los alimentos depende del suelo?",
+        "El noventa y cinco por ciento",
+        "La estimación corresponde a la Organización de las Naciones Unidas para la "
+        "Alimentación y la Agricultura, y el texto precisa que esa dependencia "
+        "puede ser directa o indirecta.\n\nAparece en el primer párrafo porque es "
+        "el dato que justifica ocuparse del asunto.",
+        [
+            ("El diez por ciento", "Ese porcentaje corresponde a la caída proyectada a 2050."),
+            ("Cerca de la mitad", "El texto no menciona esa proporción en ningún punto."),
+            ("Alrededor de un tercio", "Tampoco aparece esa cifra en el artículo."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_localizar", "medio",
+        "Según la lectura, ¿qué distingue al suelo de la tierra?",
+        "El suelo es un sistema con organismos, agua y aire",
+        "El artículo lo formula con una imagen: tierra es lo que queda en una "
+        "maceta cuando uno la vacía.\n\nEl suelo, en cambio, combina minerales de "
+        "la roca madre, materia orgánica, agua, aire entre las partículas y "
+        "organismos, y es esa combinación la que permite que una semilla se "
+        "transforme en planta.",
+        [
+            ("El suelo se encuentra siempre a mayor profundidad", "La diferencia que plantea el texto no es de profundidad."),
+            ("El suelo contiene minerales y la tierra no los tiene", "Los minerales son uno de los componentes, no la distinción."),
+            ("El suelo se forma en pocos años y la tierra, en siglos", "El texto no atribuye ningún tiempo de formación a la tierra."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_interpretar", "facil",
+        "¿Qué corrección propone el emisor a la idea de que el suelo es un recurso "
+        "no renovable?",
+        "Que se renueva, pero en una escala que no es la nuestra",
+        "El texto sostiene que compararlo con el petróleo no es exacto: el suelo sí "
+        "se repone.\n\nSu formulación es más larga y, según dice, más útil: en "
+        "escala humana, y solo en escala humana, se comporta como no renovable. "
+        "Quien pierde diez centímetros no los recupera, «ni sus hijos tampoco».",
+        [
+            ("Que en realidad se renueva a la misma velocidad que se pierde", "El artículo describe justamente la asimetría entre ambas."),
+            ("Que la comparación con el petróleo se queda corta", "El emisor la considera excesiva, no insuficiente."),
+            ("Que solo algunos suelos pueden volver a formarse", "El texto no distingue entre suelos recuperables y otros."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_interpretar", "medio",
+        "¿Qué explica el emisor sobre la proyección de caída de producción hacia "
+        "2050?",
+        "Que su valor está en la dirección y no en la cifra exacta",
+        "El texto aclara qué supone esa proyección: que las prácticas siguen como "
+        "están y que nada las corrige.\n\nBajo ese supuesto, acertar el número deja "
+        "de ser lo relevante. Lo que la proyección informa es hacia dónde apunta la "
+        "tendencia si nadie interviene, y el párrafo siguiente muestra que sí se "
+        "puede intervenir.",
+        [
+            ("Que la cifra fue calculada con métodos poco confiables", "El emisor no cuestiona la metodología en ningún momento."),
+            ("Que la caída probablemente será mayor a la estimada", "El texto evita corregir la cifra hacia arriba o hacia abajo."),
+            ("Que corresponde solo a los países con más erosión", "La proyección se presenta como global, sin distinguir países."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué no se aplican las medidas que evitan la "
+        "erosión?",
+        "Porque sus beneficios llegan tarde y sus costos, de inmediato",
+        "El emisor descarta expresamente la explicación técnica: son medidas "
+        "conocidas desde hace décadas, que funcionan y que no requieren tecnología "
+        "nueva.\n\nEl obstáculo es de calendario. Los beneficios pueden llegar "
+        "«después de que el arriendo del campo terminó», mientras que el costo se "
+        "paga en la temporada en curso.",
+        [
+            ("Porque exigen tecnologías que aún no están disponibles", "El texto afirma que no requieren ninguna tecnología nueva."),
+            ("Porque su efectividad todavía se encuentra en discusión", "El emisor sostiene sin reservas que funcionan."),
+            ("Porque los suelos degradados ya no responden a ellas", "Menciona regiones donde la degradación se ha revertido."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_interpretar", "dificil",
+        "¿Qué relación establece el emisor entre el fertilizante y la percepción "
+        "del problema?",
+        "Permite sostener el rendimiento mientras el suelo se pierde",
+        "La erosión no se ve: un campo que perdió tres centímetros en diez años «se "
+        "ve igual que hace diez años».\n\nLo que cambia es cuánto produce, y esa "
+        "baja se puede tapar agregando fertilizante. Así el problema queda "
+        "escondido detrás de algo que lo compensa sin resolverlo, y la única señal "
+        "visible pasa a ser la cuenta de insumos, que sube.",
+        [
+            ("El fertilizante acelera la pérdida de suelo en las laderas", "El texto no le atribuye ningún efecto sobre la erosión."),
+            ("El fertilizante repone los nutrientes que el suelo perdió", "Sostiene el rendimiento, pero el texto no dice que reponga el suelo."),
+            ("El fertilizante encarece las medidas de conservación", "No se establece ninguna relación de costo entre ambos."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor aclara que no corresponde hablar de "
+        "catástrofe inminente?",
+        "Para no sostener más de lo que sus datos permiten",
+        "El texto reconoce que «el tema se presta para el énfasis» y pone dos "
+        "límites: los suelos del mundo no van a desaparecer y hay regiones donde la "
+        "degradación se revirtió con trabajo constante.\n\nLo que queda es una "
+        "afirmación acotada y difícil de discutir: se está gastando algo que se "
+        "repone a un centímetro por siglo.",
+        [
+            ("Para restar importancia a la erosión de los suelos", "El artículo entero está dedicado a mostrar su importancia."),
+            ("Para responder a quienes exageran el problema", "No discute con nadie: se aplica el límite a sí mismo."),
+            ("Para anunciar que la situación ya fue revertida", "Menciona regiones donde ocurrió, no el conjunto."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_evaluar", "medio",
+        "¿Qué efecto busca el emisor al comparar lo que tarda el suelo en formarse "
+        "con lo que tarda en irse?",
+        "Mostrar que la pérdida y la reposición no se equilibran",
+        "Un episodio de lluvia intensa sobre una ladera arada puede arrastrar en "
+        "una tarde lo que tomó siglos acumular.\n\nEl emisor agrega la parte que "
+        "cierra el razonamiento: la lentitud de la formación no compensa nada, "
+        "porque la reposición sigue al mismo ritmo de siempre mientras la pérdida "
+        "se acelera.",
+        [
+            ("Advertir que las lluvias intensas son cada vez más frecuentes", "El texto no afirma nada sobre la frecuencia de las lluvias."),
+            ("Explicar por qué conviene arar las laderas antes del invierno", "El arado sin cubierta aparece como parte del problema."),
+            ("Demostrar que el viento causa más daño que el agua", "No se comparan las magnitudes de uno y otro efecto."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_evaluar", "dificil",
+        "¿Qué agrega al artículo el párrafo sobre la geografía de Chile?",
+        "Baja a un caso concreto un problema descrito en general",
+        "Hasta ese punto la erosión se explicaba con condiciones abstractas: "
+        "ladera, cubierta vegetal, intensidad de la lluvia.\n\nEl párrafo reúne "
+        "esas condiciones en un lugar determinado —agricultura en laderas y valles "
+        "estrechos, lluvias concentradas en pocos meses— y convierte el riesgo en "
+        "algo verificable para el lector, que puede mirar por la ventana.",
+        [
+            ("Sostiene que Chile es el país más afectado del mundo", "El texto no compara a Chile con ningún otro país."),
+            ("Explica por qué las medidas de conservación fracasaron aquí", "No se informa ningún fracaso de esas medidas en Chile."),
+            ("Introduce el clima mediterráneo como causa de la erosión", "El clima concentra las lluvias, pero la causa sigue siendo la misma."),
+        ],
+    ),
+    _ql(
+        "suelo_centimetro", "lec_evaluar", "dificil",
+        "¿Qué idea sostiene el emisor al cerrar hablando de gente que todavía no "
+        "nace?",
+        "Que el costo de estas decisiones lo pagan otros después",
+        "El cierre recoge dos hilos del artículo. Por un lado, la aritmética: un "
+        "centímetro por siglo significa que lo perdido no vuelve dentro de una "
+        "vida.\n\nPor otro, el problema de calendario que impide aplicar las "
+        "medidas conocidas: los beneficios llegan cuando quien decidió ya no está. "
+        "El emisor no propone una solución; deja planteado que la decisión no le "
+        "pertenece del todo a quien la toma.",
+        [
+            ("Que las generaciones futuras dispondrán de mejores técnicas", "El texto sostiene que las técnicas ya existen hoy."),
+            ("Que el problema se resolverá cuando el suelo se recupere", "La recuperación natural excede cualquier plazo humano."),
+            ("Que conviene legislar sobre el uso agrícola de las laderas", "El artículo no propone ninguna medida legal."),
+        ],
+    ),
     # ---------- 'Al revés' ----------
     _ql(
         "al_reves", "lec_localizar", "facil",
