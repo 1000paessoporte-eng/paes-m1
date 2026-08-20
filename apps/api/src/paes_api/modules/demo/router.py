@@ -15,8 +15,8 @@ from paes_api.modules.demo.schemas import (
     DemoPassageOut,
     DemoQuestionOut,
 )
-from paes_api.modules.exam_focus.service import AXIS_LABELS, SUBJECT_INCLUDES
-from paes_api.modules.skill_tree.models import SkillNode, Subject
+from paes_api.modules.exam_focus.service import SUBJECT_INCLUDES
+from paes_api.modules.skill_tree.models import AXIS_LABELS, SkillNode, Subject
 
 router = APIRouter(prefix="/demo", tags=["demo"])
 
