@@ -21383,6 +21383,182 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "noticias_falsas",
+        "title": "Lo falso viaja liviano",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las cifras y los resultados del estudio de "
+            "2018 sobre difusión de noticias verdaderas y falsas se verificaron antes "
+            "de escribir el texto."
+        ),
+        "body": (
+            "**Lo falso viaja liviano**\n\n"
+            "En 2018 se publicó un estudio que revisó algo que hasta entonces se "
+            "afirmaba de oído. Sus autores siguieron alrededor de ciento veintiséis "
+            "mil historias que circularon en una red social entre 2006 y 2017, "
+            "difundidas por unos tres millones de personas más de cuatro millones y "
+            "medio de veces, y compararon el recorrido de las que organizaciones de "
+            "verificación habían calificado como verdaderas con el de las "
+            "calificadas como falsas.\n\n"
+            "El resultado fue más contundente de lo que muchos esperaban. Las "
+            "historias falsas llegaron más lejos, más rápido, más hondo y a más "
+            "gente que las verdaderas, y no en una categoría sino en todas: "
+            "política, ciencia, desastres naturales, leyendas urbanas, información "
+            "financiera. La diferencia era mayor en las noticias políticas. Para "
+            "dar una idea de la escala: el uno por ciento más difundido de las "
+            "cadenas falsas alcanzó entre mil y cien mil personas, mientras que las "
+            "verdaderas rara vez pasaban de mil.\n\n"
+            "La primera explicación que a cualquiera se le ocurre es que detrás hay "
+            "cuentas automáticas. Los autores la pusieron a prueba y no resistió. "
+            "Al identificar y sacar de la muestra las cuentas automatizadas, la "
+            "diferencia se mantuvo: los bots empujaban lo verdadero y lo falso más "
+            "o menos por igual. Lo que hacía la diferencia eran las personas, "
+            "apretando el botón de compartir.\n\n"
+            "Queda entonces la pregunta incómoda: ¿por qué? La respuesta que ofrece "
+            "el estudio es menos moral de lo que uno querría. Las historias falsas "
+            "resultaron ser, en promedio, más novedosas que las verdaderas, en un "
+            "sentido medible: se parecían menos a lo que esa persona había visto en "
+            "los meses anteriores. Y lo novedoso se comparte, porque compartirlo "
+            "dice algo de quien lo comparte: que sabe algo que los demás no saben "
+            "todavía.\n\n"
+            "Los autores midieron además las reacciones. Las respuestas a las "
+            "historias falsas expresaban sorpresa y asco; las respuestas a las "
+            "verdaderas, tristeza, alegría y confianza. Nada de eso describe a un "
+            "grupo de malvados: describe a gente reaccionando a lo que la "
+            "sorprende, que es lo que hacemos todos.\n\n"
+            "Esa es la parte del asunto que suele contarse mal. La imagen popular "
+            "del problema tiene villanos —fábricas de mentiras, ejércitos de "
+            "robots, campañas pagadas—, y esas cosas existen. Pero la maquinaria "
+            "más eficiente que encontró este estudio es enteramente voluntaria, "
+            "gratuita y de buena fe: una persona que lee algo asombroso, siente el "
+            "impulso de contarlo y lo reenvía a un grupo. No hace falta creerlo del "
+            "todo para mandarlo. Basta con que valga la pena contarlo.\n\n"
+            "Conviene decir también lo que el estudio no muestra, porque leerlo de "
+            "más es otra manera de difundir algo falso. Trabajó sobre una sola "
+            "plataforma y un solo período, de modo que no se puede extender sin más "
+            "a un grupo familiar de mensajería, donde las cosas circulan entre "
+            "personas que se conocen. Clasificó las historias según lo que "
+            "dictaminaron organizaciones de verificación, que es un criterio "
+            "razonable y no infalible. Y midió difusión, no creencia: mostró que lo "
+            "falso se comparte más, no que la gente lo crea más.\n\n"
+            "Aun con esos límites, lo que queda en pie es incómodo y útil. Si la "
+            "novedad es lo que empuja a compartir, entonces la sensación de estar "
+            "frente a algo asombroso —justamente eso que se siente como una buena "
+            "razón para reenviarlo— es, estadísticamente, una señal de alarma y no "
+            "una credencial. Cuanto más increíble parece, más motivos hay para "
+            "revisarlo antes.\n\n"
+            "Las plataformas han probado sus propias respuestas, y una de las más "
+            "usadas —marcar con una etiqueta las publicaciones que la verificación "
+            "declaró falsas— trae un efecto lateral que conviene conocer. Si "
+            "algunas publicaciones aparecen etiquetadas y otras no, el lector "
+            "tiende a interpretar la ausencia de etiqueta como un certificado, "
+            "cuando en realidad solo significa que nadie alcanzó a revisar esa "
+            "publicación. Verificar es lento y publicar es instantáneo, de modo que "
+            "lo no revisado será siempre la enorme mayoría.\n\n"
+            "De ahí salen dos preguntas caseras que cuestan poco. La primera es la "
+            "obvia: de dónde salió esto, quién lo publicó primero, en qué fecha. La "
+            "segunda es menos obvia y probablemente más eficaz: por qué me dieron "
+            "ganas de mandarlo. Si la respuesta honesta es «porque nadie lo sabe "
+            "todavía», conviene detenerse, porque esa es exactamente la sensación "
+            "que el estudio encontró en el arranque de las cadenas más largas.\n\n"
+            "Nada de esto exige desconfiar de todo, que es un estado agotador y "
+            "bastante inútil, ni convertirse en verificador de oficio, que es un "
+            "trabajo que requiere tiempo y formación. Exige algo bastante más "
+            "barato: una demora. Unos segundos entre leer y reenviar bastan para "
+            "que la novedad deje de ser un motivo y vuelva a ser lo que era, una "
+            "impresión. El estudio no midió eso, conviene decirlo. Pero de todo lo "
+            "que midió se desprende que el punto donde una cadena se detiene es "
+            "siempre el mismo: alguien que leyó algo asombroso y no lo mandó."
+        ),
+    },
+    {
+        "key": "mapas_proyeccion",
+        "title": "Todos los mapas mienten",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las superficies de África y Groenlandia, la "
+            "fecha y el propósito de la proyección de Mercator y las propiedades de la "
+            "proyección de Gall-Peters se verificaron antes de escribir el texto."
+        ),
+        "body": (
+            "**Todos los mapas mienten**\n\n"
+            "En el planisferio que cuelga en casi cualquier sala de clases, "
+            "Groenlandia es un continente. Se ve enorme, comparable a África, y esa "
+            "impresión acompaña a mucha gente por el resto de su vida. La realidad "
+            "es que África tiene alrededor de treinta millones de kilómetros "
+            "cuadrados y Groenlandia algo más de dos: África cabe catorce veces en "
+            "el espacio que el mapa les asigna como parecido.\n\n"
+            "Antes de acusar a nadie conviene entender por qué ocurre, porque la "
+            "razón no es un error ni una trampa: es un teorema. Una superficie "
+            "curva como la de una esfera no se puede desplegar sobre un plano sin "
+            "deformarla. No es que todavía no se haya inventado la técnica; es que "
+            "no puede existir. Quien haya intentado envolver una pelota con una "
+            "hoja de papel sabe de qué se trata: siempre sobra papel en alguna "
+            "parte y falta en otra.\n\n"
+            "De ahí se sigue algo que cambia la manera de mirar un mapa. Toda "
+            "proyección tiene que elegir qué conserva y qué sacrifica. Puede "
+            "conservar las áreas, o los ángulos, o las distancias desde un punto, "
+            "pero no todo a la vez. No existe la proyección correcta: existen "
+            "proyecciones adecuadas para una tarea determinada.\n\n"
+            "La que cuelga en la sala es, casi siempre, la de Mercator, publicada "
+            "en 1569. Fue diseñada para un trabajo muy concreto: navegar. Conserva "
+            "los ángulos, y eso significa que un rumbo constante —mantener el mismo "
+            "ángulo respecto del norte durante días— se dibuja en el mapa como una "
+            "línea recta. Para alguien que gobierna un barco con brújula, eso es "
+            "extraordinario: convierte un problema de geometría esférica en una "
+            "regla apoyada sobre una carta. El precio es que las áreas se estiran a "
+            "medida que uno se aleja del ecuador, y cerca de los polos ese "
+            "estiramiento se vuelve descomunal.\n\n"
+            "Es decir que Mercator no se equivocó. Resolvió el problema que quería "
+            "resolver, y lo resolvió tan bien que su mapa se siguió usando durante "
+            "siglos para tareas que nada tienen que ver con navegar: enseñar, "
+            "ilustrar noticias, imaginarse el mundo.\n\n"
+            "En los años setenta esa costumbre entró en discusión pública. Se "
+            "promovió otra proyección, la de Gall-Peters, con un argumento "
+            "sencillo: si la de uso corriente agranda a Europa y a América del "
+            "Norte y achica a África, a la India y a América del Sur, entonces la "
+            "imagen mental que produce no es inocente. La alternativa conserva las "
+            "áreas, de modo que cada país ocupa en el papel la proporción que le "
+            "corresponde.\n\n"
+            "Aquí conviene separar dos afirmaciones que suelen ir pegadas. La "
+            "primera es que el uso escolar de Mercator produce una idea "
+            "distorsionada del tamaño de los continentes, y esa afirmación es "
+            "correcta y comprobable: basta con preguntarle a cualquiera cuántas "
+            "veces cabe Groenlandia en África. La segunda es que la proyección fue "
+            "diseñada con ese propósito, y esa es bastante más difícil de sostener: "
+            "se publicó en el siglo XVI para orientar barcos, tres siglos antes del "
+            "reparto colonial que se le suele atribuir como intención. Criticar un "
+            "efecto no requiere inventarle un motivo.\n\n"
+            "Y la alternativa tampoco es neutra, porque ninguna lo es. Al conservar "
+            "las áreas, la proyección de Gall-Peters estira las formas: los "
+            "continentes quedan alargados, con un aspecto que a mucha gente le "
+            "parece desagradable. Cambió una distorsión por otra, que es lo único "
+            "que se puede hacer. Existen además proyecciones de compromiso, que no "
+            "conservan nada del todo y reparten el error para que ninguna zona "
+            "quede demasiado mal, y son las que suelen usar hoy los atlas.\n\n"
+            "Hay una decisión todavía más invisible que la proyección, y es cuál "
+            "lado va arriba. Que el norte ocupe la parte superior de la hoja no se "
+            "deduce de nada: en el espacio no hay arriba ni abajo, y hubo mapas "
+            "medievales orientados hacia el este y mapas árabes orientados hacia el "
+            "sur. La costumbre se impuso y hoy un planisferio dado vuelta, con el "
+            "sur arriba, produce una sensación de error que no corresponde a ningún "
+            "error. Es la misma imagen, girada.\n\n"
+            "La conclusión útil no es cuál mapa hay que colgar. Es que la pregunta "
+            "«¿cuál dice la verdad?» está mal planteada, y que la buena es «¿para "
+            "qué sirve este?». Un mapa de rumbos no sirve para comparar "
+            "superficies; uno de áreas no sirve para navegar; uno del metro de "
+            "Santiago no sirve para calcular cuántas cuadras hay entre dos "
+            "estaciones, y sin embargo es excelente en lo suyo, precisamente porque "
+            "miente sobre las distancias.\n\n"
+            "Lo interesante es que esto no vale solo para los mapas. Un gráfico "
+            "descarta información para hacer visible una tendencia, un resumen deja "
+            "afuera lo que no cabe y un texto ordena los hechos en una secuencia "
+            "que los hechos no traían. En todos esos casos la pregunta razonable es "
+            "la misma que frente a un planisferio: qué eligió conservar quien lo "
+            "hizo, y qué tuvo que sacrificar para lograrlo."
+        ),
+    },
+    {
         "key": "piscina_salitrera",
         "title": "La piscina",
         "kind": "literario",
@@ -25037,6 +25213,341 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Lo falso viaja liviano' ----------
+    _ql(
+        "noticias_falsas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué comparó el estudio de 2018?",
+        "El recorrido de historias verdaderas y de historias falsas",
+        "Siguió alrededor de ciento veintiséis mil historias difundidas entre 2006 "
+        "y 2017 por unos tres millones de personas, más de cuatro millones y medio "
+        "de veces.\n\nLa clasificación entre verdaderas y falsas provino de "
+        "organizaciones de verificación, no de los propios autores.",
+        [
+            ("La cantidad de cuentas automáticas de una red social", "Los bots fueron una hipótesis puesta a prueba, no el objeto."),
+            ("Las reacciones de los usuarios ante distintos temas", "Las reacciones se midieron, pero como parte de la explicación."),
+            ("El número de personas que llegan a creer las noticias falsas", "El texto aclara que midió difusión y no creencia."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurrió al sacar de la muestra las cuentas "
+        "automatizadas?",
+        "La diferencia se mantuvo igual que antes",
+        "Los bots empujaban lo verdadero y lo falso más o menos por igual, de modo "
+        "que no explicaban la ventaja de las historias falsas.\n\nEl texto extrae "
+        "de ahí una conclusión que ordena todo el artículo: la diferencia la hacían "
+        "las personas.",
+        [
+            ("La diferencia entre lo falso y lo verdadero desapareció", "Si hubiera desaparecido, los bots serían la explicación."),
+            ("Las historias verdaderas pasaron a difundirse más rápido", "El estudio no reporta ninguna inversión del resultado."),
+            ("El número de historias analizadas se redujo a la mitad", "El texto no informa cuántas publicaciones se retiraron."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_localizar", "medio",
+        "Según la lectura, ¿qué emociones aparecían en las respuestas a las "
+        "historias falsas?",
+        "Sorpresa y asco",
+        "Las respuestas a las historias verdaderas, en cambio, expresaban tristeza, "
+        "alegría y confianza.\n\nEl emisor usa ese contraste para reforzar su idea "
+        "central: no describe a un grupo de malvados, sino a gente reaccionando a "
+        "lo que la sorprende.",
+        [
+            ("Tristeza y confianza", "Esas aparecían en las respuestas a lo verdadero."),
+            ("Miedo y vergüenza", "El texto no menciona la vergüenza en ningún caso."),
+            ("Alegría y anticipación", "La alegría corresponde a las historias verdaderas."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_interpretar", "facil",
+        "Según el estudio, ¿por qué las historias falsas se comparten más?",
+        "Porque resultan más novedosas que las verdaderas",
+        "La novedad se midió: esas historias se parecían menos a lo que la persona "
+        "había visto en los meses anteriores.\n\nY el emisor explica por qué la "
+        "novedad empuja a compartir: hacerlo dice algo de quien comparte, «que sabe "
+        "algo que los demás no saben todavía».",
+        [
+            ("Porque quienes las difunden buscan deliberadamente hacer daño", "El texto describe una difusión de buena fe, sin villanos."),
+            ("Porque suelen tratar sobre temas políticos", "La política es donde el efecto es mayor, no su causa."),
+            ("Porque son más breves y fáciles de reenviar", "La extensión de las publicaciones no se menciona."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que no hace falta creer algo del "
+        "todo para mandarlo?",
+        "Que basta con que la historia valga la pena de contar",
+        "El párrafo describe la maquinaria más eficiente que encontró el estudio: "
+        "voluntaria, gratuita y de buena fe.\n\nUna persona lee algo asombroso, "
+        "siente el impulso de contarlo y lo reenvía. La convicción no es un "
+        "requisito del reenvío, y por eso el problema no se resuelve solo con "
+        "desmentir.",
+        [
+            ("Que la gente difunde información en la que desconfía", "El punto es que la creencia ni siquiera entra en juego."),
+            ("Que las historias falsas resultan más entretenidas", "El texto habla de novedad, no de entretención."),
+            ("Que quienes comparten no leen lo que están enviando", "El emisor supone que sí lo leyeron: por eso les asombró."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_interpretar", "medio",
+        "¿Qué problema describe el emisor a propósito de las etiquetas de "
+        "verificación?",
+        "Que la falta de etiqueta se lee como un certificado",
+        "El texto explica el desajuste que lo produce: verificar es lento y "
+        "publicar es instantáneo, de modo que lo no revisado será siempre la enorme "
+        "mayoría.\n\nAsí, una medida pensada para advertir termina dando garantías "
+        "que nadie otorgó, sobre todo el material que nadie alcanzó a mirar.",
+        [
+            ("Que las etiquetas llegan siempre demasiado tarde", "El retraso se menciona como causa, no como el problema."),
+            ("Que las organizaciones de verificación se equivocan", "El texto las considera razonables aunque no infalibles."),
+            ("Que los usuarios ignoran por completo las etiquetas", "Ocurre lo contrario: les prestan demasiada atención."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_interpretar", "dificil",
+        "¿Qué función cumple el párrafo sobre lo que el estudio «no muestra»?",
+        "Fija hasta dónde alcanzan sus conclusiones",
+        "El emisor delimita tres cosas: se trabajó sobre una plataforma y un "
+        "período, la clasificación dependió de organizaciones de verificación, y lo "
+        "medido fue difusión y no creencia.\n\nEl propio texto explica para qué lo "
+        "hace: «leerlo de más es otra manera de difundir algo falso». Es "
+        "coherencia, no modestia: aplica al estudio el cuidado que el artículo "
+        "entero recomienda.",
+        [
+            ("Anticipa las objeciones de quienes rechazan el estudio", "No hay ningún adversario en el texto que las plantee."),
+            ("Reconoce que sus resultados podrían ser incorrectos", "Los resultados no se ponen en duda: se acota su alcance."),
+            ("Explica por qué el estudio debería repetirse hoy", "El artículo no propone replicar la investigación."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor menciona a las «fábricas de mentiras» y los "
+        "«ejércitos de robots»?",
+        "Para reconocer que existen y que no explican lo medido",
+        "El texto no niega esos fenómenos; dice expresamente que esas cosas "
+        "existen.\n\nLo que hace es corregir la escala: la maquinaria más eficiente "
+        "que encontró el estudio no es esa, sino una persona de buena fe reenviando "
+        "algo asombroso a un grupo.",
+        [
+            ("Para demostrar que ese tipo de campañas no existe", "El emisor afirma lo contrario de manera explícita."),
+            ("Para señalar quiénes son los responsables del problema", "El artículo evita justamente atribuir el problema a un culpable."),
+            ("Para comparar su alcance con el de las cuentas automáticas", "No se compara el alcance de unos y otros actores."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_evaluar", "medio",
+        "¿Qué conclusión práctica extrae el emisor del hallazgo sobre la novedad?",
+        "Que el asombro es una señal de alarma y no una garantía",
+        "El razonamiento es directo: si lo que empuja a compartir es la novedad, "
+        "entonces la sensación de estar frente a algo asombroso deja de funcionar "
+        "como buena razón para reenviar.\n\nDe ahí la formulación del texto: "
+        "«cuanto más increíble parece, más motivos hay para revisarlo antes».",
+        [
+            ("Que conviene desconfiar de toda la información recibida", "El cierre descarta esa actitud por agotadora e inútil."),
+            ("Que las historias novedosas suelen resultar falsas", "El estudio muestra que se difunden más, no que sean falsas."),
+            ("Que hay que verificar cada publicación antes de leerla", "El texto reconoce que verificar es un trabajo especializado."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_evaluar", "dificil",
+        "¿Por qué el emisor propone preguntarse por qué le dieron ganas de mandar "
+        "algo?",
+        "Porque apunta al impulso que el estudio encontró detrás",
+        "La primera pregunta que sugiere —de dónde salió, quién lo publicó, en qué "
+        "fecha— es la habitual y exige información externa.\n\nLa segunda no "
+        "requiere buscar nada y llega antes: si la respuesta honesta es «porque "
+        "nadie lo sabe todavía», el lector acaba de reconocer en sí mismo la "
+        "novedad que, según el estudio, está en el arranque de las cadenas más "
+        "largas.",
+        [
+            ("Porque revisar el origen de una publicación es imposible", "Propone hacerlo: es la primera de sus dos preguntas."),
+            ("Porque las emociones son mejores indicios que los datos", "El artículo se apoya en datos durante todo su desarrollo."),
+            ("Porque quien comparte suele hacerlo con mala intención", "El texto insiste en que la difusión es de buena fe."),
+        ],
+    ),
+    _ql(
+        "noticias_falsas", "lec_evaluar", "dificil",
+        "¿Qué actitud adopta el emisor hacia quienes reenvían historias falsas?",
+        "Indulgente, pues describe una conducta que cualquiera tiene",
+        "El texto no reserva ningún reproche para esas personas: sostiene que "
+        "reaccionar ante lo que sorprende es «lo que hacemos todos» y llama a esa "
+        "difusión voluntaria, gratuita y de buena fe.\n\nPor eso la solución que "
+        "ofrece tampoco es moral. No pide honestidad ni responsabilidad: pide unos "
+        "segundos de demora entre leer y reenviar.",
+        [
+            ("Severa, pues los considera responsables de la desinformación", "El emisor descarta expresamente buscar responsables ahí."),
+            ("Escéptica, pues duda de que puedan cambiar de conducta", "Propone una medida concreta y la presenta como alcanzable."),
+            ("Distante, pues se excluye a sí mismo de esa conducta", "Habla de lo que «hacemos todos», sin ponerse aparte."),
+        ],
+    ),
+    # ---------- 'Todos los mapas mienten' ----------
+    _ql(
+        "mapas_proyeccion", "lec_localizar", "facil",
+        "Según la lectura, ¿cuántas veces cabe Groenlandia en África?",
+        "Unas catorce veces",
+        "África tiene alrededor de treinta millones de kilómetros cuadrados y "
+        "Groenlandia algo más de dos.\n\nEn el planisferio escolar, en cambio, "
+        "ambas se ven de un tamaño comparable, y esa impresión es la que abre el "
+        "artículo.",
+        [
+            ("Alrededor de treinta veces", "Treinta millones son los km² de África, no una razón."),
+            ("Un poco más de dos veces", "Los dos millones son los km² de Groenlandia."),
+            ("Cerca de cinco veces", "El texto no menciona esa proporción en ningún punto."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_localizar", "facil",
+        "Según la lectura, ¿para qué fue diseñada la proyección de Mercator?",
+        "Para navegar, porque conserva los ángulos",
+        "Publicada en 1569, permite que un rumbo constante se dibuje como una línea "
+        "recta sobre la carta.\n\nEl texto subraya lo que eso significaba para "
+        "alguien que gobernaba un barco con brújula: convertía un problema de "
+        "geometría esférica en una regla apoyada sobre el papel.",
+        [
+            ("Para enseñar geografía en las salas de clases", "Ese uso vino siglos después y es el que el texto discute."),
+            ("Para comparar la superficie de los continentes", "Es justamente la tarea para la que no sirve."),
+            ("Para medir distancias entre dos puertos cualesquiera", "Conserva ángulos, no distancias entre puntos."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_localizar", "medio",
+        "Según la lectura, ¿qué conserva y qué sacrifica la proyección de Gall- "
+        "Peters?",
+        "Conserva las áreas y a cambio estira las formas",
+        "Fue promovida en los años setenta con el argumento de que la proyección de "
+        "uso corriente agrandaba unas regiones y achicaba otras.\n\nEl texto "
+        "reconoce que cada país ocupa ahí la proporción que le corresponde, y "
+        "agrega que los continentes quedan alargados: «cambió una distorsión por "
+        "otra, que es lo único que se puede hacer».",
+        [
+            ("Conserva las formas y a cambio deforma las áreas", "Es la descripción inversa: eso hace la de Mercator."),
+            ("Conserva los ángulos y a cambio acorta las distancias", "Los ángulos son lo que preserva la proyección de Mercator."),
+            ("Conserva las distancias desde un punto y deforma el resto", "Ese tipo de proyección se menciona solo como posibilidad."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al afirmar que la distorsión de los mapas «es "
+        "un teorema»?",
+        "Que no hay técnica capaz de evitarla, ni ahora ni nunca",
+        "El texto lo distingue con cuidado de un error o de una limitación "
+        "temporal: una superficie curva no se puede desplegar sobre un plano sin "
+        "deformarla.\n\nEl ejemplo casero lo hace evidente: al envolver una pelota "
+        "con una hoja de papel siempre sobra papel en un lado y falta en otro.",
+        [
+            ("Que la distorsión se puede calcular con exactitud", "El punto no es medirla, sino que resulta inevitable."),
+            ("Que solo los matemáticos pueden diseñar proyecciones", "El texto no dice nada sobre quién puede diseñarlas."),
+            ("Que los mapas antiguos eran menos precisos que los actuales", "No compara la precisión de mapas de distintas épocas."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_interpretar", "medio",
+        "¿Con qué finalidad se menciona el mapa del metro de Santiago?",
+        "Para mostrar que un mapa útil puede deformar a propósito",
+        "El texto reconoce que ese mapa «miente sobre las distancias» y afirma en "
+        "la misma frase que es excelente en lo suyo.\n\nEs el ejemplo que cierra el "
+        "argumento: la calidad de una representación no se mide por su fidelidad "
+        "total, sino por su utilidad para la tarea que se propone resolver.",
+        [
+            ("Para comparar el transporte de distintas ciudades", "No hay ninguna comparación entre sistemas de transporte."),
+            ("Para señalar que sus distancias deberían corregirse", "El emisor lo considera acertado tal como está."),
+            ("Para explicar cómo se calcula la distancia entre estaciones", "El texto dice justamente que ese mapa no sirve para eso."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_interpretar", "medio",
+        "¿Qué agrega al argumento el párrafo sobre cuál lado del mapa va arriba?",
+        "Que hasta la orientación del mapa es una convención",
+        "El emisor observa que en el espacio no hay arriba ni abajo, y recuerda que "
+        "hubo mapas medievales orientados hacia el este y mapas árabes orientados "
+        "hacia el sur.\n\nEl detalle refuerza la tesis desde otro ángulo: incluso "
+        "una decisión que nadie percibe como decisión —el norte arriba— fue una "
+        "elección, y por eso un planisferio girado «produce una sensación de error "
+        "que no corresponde a ningún error».",
+        [
+            ("Que los mapas antiguos contenían errores de orientación", "El texto los presenta como orientados de otro modo, no errados."),
+            ("Que conviene colgar los planisferios al revés en las salas", "El emisor no propone cambiar cómo se cuelgan los mapas."),
+            ("Que el norte se eligió porque facilita la navegación", "No se atribuye la costumbre a ninguna ventaja técnica."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre el último párrafo y el resto del artículo?",
+        "Extiende a otras representaciones lo probado con los mapas",
+        "Hasta ese punto el texto había demostrado algo acotado: toda proyección "
+        "elige qué conserva y qué sacrifica, porque no puede conservarlo "
+        "todo.\n\nEl cierre traslada esa conclusión a un gráfico, a un resumen y a "
+        "cualquier texto, y transforma el artículo en una regla de lectura: "
+        "preguntar qué eligió conservar quien lo hizo y qué tuvo que sacrificar.",
+        [
+            ("Introduce un tema nuevo que el artículo no alcanza a tratar", "No es un tema nuevo: es la misma conclusión, aplicada."),
+            ("Corrige lo afirmado antes sobre los mapas escolares", "Nada de lo dicho sobre los mapas se retira ni se matiza."),
+            ("Resume los distintos tipos de proyección mencionados", "El párrafo no vuelve sobre ninguna proyección concreta."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor afirma que Mercator «no se equivocó»?",
+        "Para separar una herramienta de los usos que se le dieron",
+        "La proyección resolvió bien el problema para el que fue creada, y el "
+        "propio texto explica cuál era.\n\nLo que el emisor cuestiona viene "
+        "después: que ese mapa se haya seguido usando durante siglos para tareas "
+        "que nada tienen que ver con navegar, como enseñar o imaginarse el mundo.",
+        [
+            ("Para defender la exactitud de los mapas del siglo XVI", "No discute su exactitud, sino el uso que se les da hoy."),
+            ("Para descartar las críticas al planisferio escolar", "Acepta expresamente la crítica sobre su efecto."),
+            ("Para sostener que la proyección debería seguir usándose", "El texto evita pronunciarse sobre cuál mapa colgar."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_evaluar", "medio",
+        "¿Qué distingue el emisor entre las dos afirmaciones que «suelen ir "
+        "pegadas»?",
+        "Una describe un efecto y la otra le atribuye una intención",
+        "Que el uso escolar de Mercator produzca una idea distorsionada del tamaño "
+        "de los continentes es comprobable, y el texto propone cómo: basta "
+        "preguntarle a cualquiera cuántas veces cabe Groenlandia en África.\n\nQue "
+        "la proyección haya sido diseñada con ese propósito choca con su fecha, "
+        "tres siglos anterior al reparto colonial. De ahí el remate: «criticar un "
+        "efecto no requiere inventarle un motivo».",
+        [
+            ("Una se refiere a Mercator y la otra a Gall-Peters", "Ambas afirmaciones tratan sobre la misma proyección."),
+            ("Una proviene de geógrafos y la otra del debate público", "El texto no atribuye cada afirmación a un grupo distinto."),
+            ("Una es antigua y la otra apareció en los años setenta", "Las dos aparecen en la misma discusión pública."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_evaluar", "dificil",
+        "¿Por qué el emisor señala que la proyección alternativa «tampoco es "
+        "neutra»?",
+        "Porque ninguna puede serlo: solo cambia qué se deforma",
+        "El artículo aplica a la alternativa el mismo criterio con que evaluó a "
+        "Mercator, y no le concede una excepción por venir de una crítica "
+        "justa.\n\nAl conservar las áreas, Gall-Peters estira las formas. Como no "
+        "existe manera de conservarlo todo, adoptarla no es corregir una "
+        "distorsión: es elegir cuál se prefiere.",
+        [
+            ("Porque fue promovida con una intención política declarada", "El texto no descalifica la propuesta por su motivación."),
+            ("Porque su aspecto le resulta desagradable a mucha gente", "Ese rechazo se menciona, pero no es la razón del reparo."),
+            ("Porque los atlas actuales dejaron de utilizarla", "Lo que usan hoy los atlas aparece como otro dato, no como juicio."),
+        ],
+    ),
+    _ql(
+        "mapas_proyeccion", "lec_evaluar", "dificil",
+        "¿Qué cambio propone el emisor en la manera de evaluar un mapa?",
+        "Dejar de preguntar cuál es verdadero y preguntar para qué sirve",
+        "El texto sostiene que la primera pregunta «está mal planteada», porque "
+        "supone que existe una representación sin pérdidas.\n\nLa segunda, en "
+        "cambio, se puede responder: un mapa de rumbos no sirve para comparar "
+        "superficies, uno de áreas no sirve para navegar y el del metro sirve mucho "
+        "aunque deforme las distancias. La calidad pasa a ser una relación entre el "
+        "mapa y la tarea, no una propiedad del mapa.",
+        [
+            ("Comparar cada proyección con una fotografía del planeta", "El artículo no propone ningún patrón de comparación."),
+            ("Preferir siempre las proyecciones que reparten el error", "Las de compromiso se mencionan sin recomendarlas."),
+            ("Revisar en qué siglo y en qué país fue confeccionado", "El origen aparece para discutir un argumento, no como criterio."),
+        ],
+    ),
     # ---------- 'La piscina' ----------
     _ql(
         "piscina_salitrera", "lec_localizar", "facil",
