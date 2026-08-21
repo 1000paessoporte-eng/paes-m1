@@ -21383,6 +21383,277 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "leer_pantalla",
+        "title": "Leer en pantalla",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La magnitud y las condiciones del efecto "
+            "—pequeño, mayor en textos expositivos y bajo presión de tiempo, casi nulo "
+            "en narrativos—, la explicación por los hábitos de lectura y el hallazgo "
+            "sobre la sobrestimación de la propia comprensión se describen en términos "
+            "generales, sin atribuir cifras a estudios concretos."
+        ),
+        "body": (
+            "**Leer en pantalla**\n\n"
+            "Es una de esas afirmaciones que todo el mundo repite y casi nadie ha "
+            "revisado: que se lee peor en pantalla que en papel. La afirmación "
+            "tiene respaldo, tiene bastantes matices y, sobre todo, tiene una "
+            "explicación distinta de la que suele darse.\n\n"
+            "Lo primero, la magnitud. Cuando se comparan grupos que leen el mismo "
+            "texto en papel y en pantalla, las revisiones encuentran una ventaja "
+            "del papel en comprensión. Es una ventaja pequeña. No es que unos "
+            "entiendan y otros no: es una diferencia modesta que aparece de manera "
+            "consistente, lo que la vuelve interesante para investigar y bastante "
+            "menos espectacular de lo que sugieren los titulares.\n\n"
+            "Lo segundo, y más útil: la diferencia no aparece siempre. Es mayor en "
+            "textos expositivos —los que hay que estudiar, con argumentos y datos— "
+            "y casi desaparece en textos narrativos. También crece cuando hay "
+            "presión de tiempo y se reduce cuando el lector puede tomarse los "
+            "minutos que quiera. Ese patrón es una pista: si el soporte por sí solo "
+            "dañara la comprensión, el efecto debería aparecer igual en todos los "
+            "casos.\n\n"
+            "La explicación más aceptada no tiene que ver con la pantalla sino con "
+            "lo que traemos hacia ella. En una pantalla, la mayor parte de lo que "
+            "uno lee durante el día está hecho para leerse rápido: mensajes, "
+            "titulares, publicaciones breves, resultados de búsqueda. Uno aprende a "
+            "mirar en diagonal, a saltar, a buscar la parte que interesa. Y esa "
+            "manera de leer se activa por el contexto, de modo que llega también "
+            "cuando lo que hay en la pantalla es un texto que exigía otra cosa.\n\n"
+            "Hay un segundo hallazgo, y es el que más debería importarle a alguien "
+            "que estudia. En pantalla, la gente tiende a creer que entendió más de "
+            "lo que efectivamente entendió. La comprensión baja un poco y la "
+            "confianza no baja con ella, o incluso sube. Esa combinación es peor "
+            "que el déficit original: quien se sobrestima deja de repasar, cierra "
+            "el archivo antes y no vuelve sobre lo que no quedó claro.\n\n"
+            "Se han propuesto además explicaciones más concretas. Una tiene que ver "
+            "con la memoria del lugar: en un libro, uno recuerda vagamente que "
+            "cierta idea estaba abajo a la izquierda, en las primeras páginas, y "
+            "esa referencia espacial ayuda a reconstruir la estructura del texto. "
+            "Un documento que se desplaza hacia arriba y hacia abajo no ofrece ese "
+            "mapa: todo ocurre en el mismo rectángulo. Otra tiene que ver con las "
+            "interrupciones, que en un dispositivo conectado están a un toque de "
+            "distancia y llegan solas.\n\n"
+            "Vale la pena agregar un dato que suele sorprender: el efecto no ha ido "
+            "desapareciendo con las generaciones. Se podría suponer que quienes "
+            "crecieron leyendo en pantalla ya no tendrían la desventaja, y las "
+            "revisiones no muestran eso. Es una razón más para dudar de la "
+            "explicación técnica —que sería cosa de acostumbrarse al aparato— y "
+            "para tomar en serio la otra: si lo que interfiere es un hábito de "
+            "lectura, la práctica en pantalla lo refuerza en vez de corregirlo.\n\n"
+            "Conviene ahora decir lo que este conjunto de resultados no autoriza a "
+            "concluir. No dice que haya que imprimirlo todo, y sería una "
+            "recomendación cara, poco práctica y desproporcionada frente a un "
+            "efecto de ese tamaño. Tampoco dice que quien estudia en pantalla vaya "
+            "a rendir mal: hay muchísimas personas que lo hacen y les resulta. Y no "
+            "dice nada, prácticamente, sobre leer novelas, donde la diferencia se "
+            "desvanece.\n\n"
+            "Lo que sí se sigue es más modesto y bastante más accionable. Si el "
+            "problema no es la pantalla sino el modo de leer que traemos hacia "
+            "ella, entonces lo que hay que cambiar es el modo. Leer un texto de "
+            "estudio exige lo mismo en cualquier soporte: ir más lento de lo que "
+            "uno querría, volver atrás cuando algo no calzó, detenerse a resumir "
+            "sin mirar, preguntarse qué se está afirmando y con qué. Nada de eso "
+            "depende del papel.\n\n"
+            "Y hay una precaución que sale directamente del segundo hallazgo, el de "
+            "la confianza. La sensación de haber entendido es un mal indicador, y "
+            "en pantalla es peor todavía. La única manera de saber si un texto "
+            "quedó claro es probarlo: cerrar el archivo e intentar explicarlo, o "
+            "responder preguntas sobre él. Quien hace eso está midiendo su "
+            "comprensión en vez de estimarla, y esa diferencia importa mucho más "
+            "que el soporte.\n\n"
+            "Queda una observación sobre cómo se discute este tema, que vale para "
+            "otros. El hallazgo es pequeño, condicionado y explicable, y sin "
+            "embargo circula convertido en una sentencia sobre una generación "
+            "entera. Entre lo que dice un conjunto de estudios y lo que dice una "
+            "frase repetida suele haber esta misma distancia, y reconocerla es, en "
+            "el fondo, la destreza que cualquier texto de estudio está tratando de "
+            "entrenar."
+        ),
+    },
+    {
+        "key": "residuos_electronicos",
+        "title": "La mina que está en el cajón",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La composición de los aparatos, los riesgos "
+            "del reciclaje informal, la existencia en Chile de una ley de "
+            "responsabilidad extendida del productor que incluye a los aparatos "
+            "eléctricos y electrónicos, y las prácticas que dificultan la reparación se "
+            "describen en términos generales, sin atribuir cifras a estudios concretos."
+        ),
+        "body": (
+            "**La mina que está en el cajón**\n\n"
+            "En el cajón de cualquier casa hay dos o tres teléfonos que ya no se "
+            "usan y que nadie botó. No están ahí por descuido: están ahí porque "
+            "botarlos parece mal, porque quizás sirvan, porque tienen fotos adentro "
+            "y porque no está del todo claro dónde se dejan. Esa acumulación de "
+            "aparatos guardados sin decisión es, en escala nacional, una cantidad "
+            "enorme de material.\n\n"
+            "Y es material valioso. Un teléfono contiene cobre, aluminio, y "
+            "cantidades pequeñas de metales que en la naturaleza son escasos y "
+            "difíciles de extraer. La expresión que se usa a veces, «minería "
+            "urbana», describe bien el asunto: recuperar esos metales de aparatos "
+            "usados puede ser, para algunos materiales, más eficiente que sacarlos "
+            "de una mina.\n\n"
+            "El problema es la concentración. En un aparato, cada uno de esos "
+            "metales aparece en cantidades minúsculas y mezclado con plástico, "
+            "vidrio y pegamento. Separarlos exige un proceso industrial que cuesta "
+            "dinero y que solo resulta viable si llegan muchos aparatos juntos y en "
+            "condiciones razonables. Un teléfono suelto en un cajón no es una mina: "
+            "es basura valiosa que nadie puede procesar.\n\n"
+            "Los mismos aparatos contienen, además, sustancias que no conviene "
+            "liberar. Por eso el modo en que se los desarma importa tanto como el "
+            "hecho de desarmarlos. En varias partes del mundo el reciclaje ocurre "
+            "de manera informal, y una de sus prácticas más extendidas es quemar "
+            "cables al aire libre para recuperar el cobre que llevan dentro. Es un "
+            "método efectivo para separar el metal y también una manera de liberar "
+            "contaminantes sobre quien lo hace, que suele trabajar sin protección.\n\n"
+            "Chile tiene desde hace algunos años una ley de responsabilidad "
+            "extendida del productor, que incluye a los aparatos eléctricos y "
+            "electrónicos entre los productos cuyo manejo posterior debe quedar a "
+            "cargo de quien los pone en el mercado. La idea que hay detrás es "
+            "sencilla y bastante razonable: si el costo de deshacerse de un "
+            "producto recae sobre quien lo fabrica, entonces al fabricante empieza "
+            "a convenirle que ese producto sea más fácil de desarmar.\n\n"
+            "Aquí aparece la palabra que domina cualquier conversación sobre el "
+            "tema y que conviene usar con cuidado: obsolescencia programada. Hay "
+            "dos versiones de esa idea y no valen lo mismo.\n\n"
+            "La versión fuerte sostiene que los aparatos están diseñados para "
+            "fallar en una fecha determinada. Es una afirmación difícil de sostener "
+            "en general y que, salvo casos puntuales documentados, no describe cómo "
+            "se fabrican hoy los equipos electrónicos.\n\n"
+            "La versión débil es la interesante, y esa sí está bien documentada: no "
+            "hace falta programar una falla si se dificulta la reparación. Baterías "
+            "pegadas en vez de atornilladas, tornillos que requieren herramientas "
+            "especiales, repuestos que no se venden al público, manuales de "
+            "servicio que no se publican, y actualizaciones de software que dejan "
+            "de llegar mientras el aparato funciona perfectamente. Ninguna de esas "
+            "decisiones hace que el equipo se rompa; todas hacen que arreglarlo "
+            "cueste casi lo mismo que reemplazarlo.\n\n"
+            "Conviene no atribuirlo todo a la mala fe, porque parte de esas "
+            "decisiones tiene otra explicación. Un aparato más delgado, más liviano "
+            "y más barato es, casi inevitablemente, un aparato más pegado y menos "
+            "modular. El consumidor que elige el modelo más delgado está eligiendo, "
+            "sin saberlo, el más difícil de reparar. Eso no exime al fabricante de "
+            "nada, y sí cambia dónde está el punto de decisión.\n\n"
+            "Hay además una asimetría que conviene nombrar. Reparar un aparato es "
+            "trabajo local: alguien en un taller, en una comuna, cobrando por su "
+            "tiempo. Reemplazarlo es una compra que casi siempre ocurre en otra "
+            "parte y que se paga a un fabricante lejano. De modo que la decisión "
+            "entre arreglar y cambiar no solo mueve residuos: mueve también dónde "
+            "queda el dinero y quién conserva un oficio.\n\n"
+            "De ahí que la discusión más productiva no sea sobre intenciones sino "
+            "sobre reglas: exigir que los repuestos estén disponibles por un plazo "
+            "mínimo, que existan manuales, que las baterías se puedan cambiar, que "
+            "las actualizaciones tengan una duración comprometida. Son medidas "
+            "aburridas, verificables y bastante más eficaces que sospechar de un "
+            "plan.\n\n"
+            "Queda por decir algo sobre la culpa, que en estos temas suele hacer de "
+            "sustituto de la acción. Nadie compra un teléfono pensando en lo que "
+            "ocurrirá con él siete años después, y sentirse mal por eso no recupera "
+            "un gramo de cobre. La pregunta práctica es otra y es más corta: cuánto "
+            "dura el aparato que estoy comprando, si se le puede cambiar la batería "
+            "y adónde va cuando deje de servir.\n\n"
+            "Mientras tanto, queda el cajón. Y ahí la única decisión que "
+            "efectivamente está en manos de cualquiera es bastante modesta: "
+            "averiguar dónde recibe aparatos electrónicos la municipalidad o alguna "
+            "campaña cercana, borrar los datos, y llevarlos. Un teléfono en un "
+            "cajón no le hace daño a nadie, pero tampoco vuelve al circuito, y ese "
+            "metal escaso que lleva adentro sigue teniendo que salir de alguna "
+            "parte, casi siempre de un cerro que queda lejos de quien lo compró."
+        ),
+    },
+    {
+        "key": "ansiedad_pruebas",
+        "title": "La cabeza ocupada",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Los mecanismos y las estrategias se "
+            "describen en términos generales y el propio texto distingue lo que cuenta "
+            "con respaldo firme de lo que está en estudio. Es material de lectura y no "
+            "reemplaza la orientación de un profesional de la salud."
+        ),
+        "body": (
+            "**La cabeza ocupada**\n\n"
+            "Casi todo el mundo ha vivido alguna versión de esto: uno estudió, sabe "
+            "la materia, entra a la sala y de pronto no puede recuperar algo que "
+            "sabía perfectamente el día anterior. Después, al salir, la respuesta "
+            "aparece sola en el pasillo. Es una experiencia tan común que suele "
+            "explicarse con una frase inútil —«me puse nervioso»— que describe el "
+            "estado y no explica nada.\n\n"
+            "Lo primero que conviene entender es que los nervios, en cierta "
+            "cantidad, ayudan. Un poco de activación mejora el rendimiento: el "
+            "pulso sube, la atención se estrecha sobre la tarea y uno rinde mejor "
+            "que completamente relajado. El problema aparece cuando esa activación "
+            "sigue subiendo. La relación entre activación y rendimiento suele "
+            "describirse como una curva y no como una recta: hay un punto a partir "
+            "del cual más nervios empeoran, y ese punto existe para cualquiera.\n\n"
+            "El mecanismo más citado para explicar la caída es bastante concreto y "
+            "vale la pena conocerlo. Resolver un problema exige mantener "
+            "información disponible en la cabeza mientras se opera con ella: el "
+            "enunciado, los datos, el paso que uno acaba de dar. Ese espacio es "
+            "limitado. Y los pensamientos sobre el propio desempeño —«voy a quedar "
+            "mal», «me está yendo pésimo», «no me va a alcanzar el tiempo»— ocupan "
+            "exactamente el mismo espacio.\n\n"
+            "Dicho de otro modo: la ansiedad no borra lo que uno sabe. Compite con "
+            "ello. Por eso el efecto es mayor en las tareas que exigen sostener "
+            "varias cosas a la vez, como un problema de varios pasos, y menor en "
+            "las que se resuelven de manera casi automática, como reconocer una "
+            "palabra.\n\n"
+            "Eso explica también algo que suele desconcertar: que la respuesta "
+            "aparezca en el pasillo. Al salir de la sala, el espacio que estaba "
+            "ocupado por la preocupación queda libre, y lo que estaba ahí desde el "
+            "principio vuelve a estar disponible. No es que uno haya aprendido algo "
+            "en el pasillo. Es que dejó de estar usando la cabeza en otra cosa.\n\n"
+            "A partir de ahí se han ensayado varios procedimientos, y aquí conviene "
+            "ser cuidadoso con lo que se promete. Uno de los más conocidos consiste "
+            "en escribir durante unos minutos, justo antes de la prueba, sobre lo "
+            "que a uno le preocupa de ella. La idea es sacar esos pensamientos de "
+            "la memoria de trabajo y dejarlos en el papel. Se han reportado "
+            "resultados prometedores y también intentos de replicación con efectos "
+            "menores, de modo que la descripción honesta es que se trata de un "
+            "procedimiento en estudio, barato y sin riesgo, y no de una técnica "
+            "establecida.\n\n"
+            "Hay otras cosas con respaldo bastante más firme, y ninguna es un truco "
+            "de última hora. Estudiar poniéndose a prueba —cerrar el cuaderno e "
+            "intentar recuperar lo que uno leyó— produce recuerdos más resistentes "
+            "que releer, y esa resistencia importa justamente cuando la cabeza está "
+            "ocupada. Dormir antes de una evaluación rinde más que estudiar las "
+            "últimas horas, porque el material recién leído es el más frágil. Y "
+            "haber rendido pruebas de práctica en condiciones parecidas reduce la "
+            "novedad de la situación, que es una parte importante de lo que activa.\n\n"
+            "Vale la pena agregar algo sobre el momento mismo de la prueba, porque "
+            "ahí la ocupación de la cabeza tiene una forma reconocible. Quien lleva "
+            "cuatro minutos atascado en una pregunta suele estar haciendo dos cosas "
+            "a la vez: intentar resolverla y calcular cuánto le está costando. La "
+            "segunda tarea no aporta nada y consume el mismo espacio que la "
+            "primera. Saltarse una pregunta y volver después no es una derrota; es "
+            "liberar el lugar donde hay que pensar.\n\n"
+            "Conviene además desarmar una creencia que circula y que hace daño: que "
+            "ponerse nervioso indica falta de preparación. No hay tal "
+            "correspondencia. Hay personas muy preparadas que se activan mucho y "
+            "personas mal preparadas que entran tranquilas, precisamente porque no "
+            "dimensionan lo que se están jugando. Interpretar los propios nervios "
+            "como una señal de que uno no estudió agrega una preocupación más al "
+            "espacio que ya estaba lleno.\n\n"
+            "Y hay un límite que este artículo no puede cruzar. Todo lo anterior "
+            "describe una experiencia común y manejable. Cuando la ansiedad ante "
+            "las evaluaciones se vuelve incapacitante —cuando impide presentarse, "
+            "cuando se extiende semanas antes, cuando aparece con síntomas físicos "
+            "intensos— deja de ser un asunto de técnicas de estudio y pasa a ser "
+            "algo que conviene conversar con un profesional. Esa frontera no la "
+            "puede trazar un texto: la traza quien la está viviendo, y pedir ayuda "
+            "ahí no es un signo de debilidad sino de haber reconocido bien un "
+            "problema.\n\n"
+            "Queda, para terminar, una idea que ordena todo lo demás. La pregunta "
+            "útil no es cómo dejar de ponerse nervioso, que es un objetivo poco "
+            "realista y además no del todo deseable. Es cómo evitar que los nervios "
+            "ocupen el lugar donde uno necesita pensar. Puesto así, el problema "
+            "deja de ser un defecto de carácter y se vuelve una cuestión de "
+            "espacio."
+        ),
+    },
+    {
         "key": "abejas_simbolo",
         "title": "Las abejas equivocadas",
         "kind": "no_literario",
@@ -27144,6 +27415,515 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Leer en pantalla' ----------
+    _ql(
+        "leer_pantalla", "lec_localizar", "facil",
+        "Según la lectura, ¿en qué tipo de textos aparece la diferencia entre papel "
+        "y pantalla?",
+        "En los expositivos, con argumentos y datos",
+        "El texto precisa que en los narrativos la diferencia «casi "
+        "desaparece».\n\nTambién indica que el efecto crece bajo presión de tiempo "
+        "y se reduce cuando el lector puede tomarse los minutos que quiera.",
+        [
+            ("En todos por igual, sin importar su tipo", "El artículo usa esa desigualdad como pista de la explicación."),
+            ("Sobre todo en las novelas y los cuentos", "En los narrativos la diferencia prácticamente se desvanece."),
+            ("Solo en los textos que incluyen tablas y gráficos", "El texto no distingue por la presencia de elementos visuales."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurre con la confianza de quien lee en pantalla?",
+        "Se mantiene o sube aunque la comprensión baje",
+        "El texto describe esa combinación como peor que el déficit "
+        "original.\n\nQuien se sobrestima deja de repasar, cierra el archivo antes "
+        "y no vuelve sobre lo que no quedó claro, de modo que el problema se agrava "
+        "por una decisión y no solo por el soporte.",
+        [
+            ("Baja junto con la comprensión, en la misma medida", "Justamente esa correspondencia es la que no se produce."),
+            ("Se mantiene alta solo entre los lectores expertos", "El texto no distingue por nivel de experiencia."),
+            ("Depende del tiempo disponible para leer", "El tiempo afecta la comprensión, no la calibración."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_localizar", "medio",
+        "Según la lectura, ¿qué explicación se da sobre la memoria del lugar?",
+        "Que en un libro la posición ayuda a recordar las ideas",
+        "El texto lo describe así: uno recuerda vagamente que cierta idea estaba "
+        "abajo a la izquierda, en las primeras páginas, y esa referencia espacial "
+        "ayuda a reconstruir la estructura del texto.\n\nUn documento que se "
+        "desplaza no ofrece ese mapa, porque «todo ocurre en el mismo rectángulo».",
+        [
+            ("Que las pantallas cansan más la vista al leer seguido", "La fatiga visual no se menciona en el artículo."),
+            ("Que en papel se lee más despacio y por eso se recuerda", "La velocidad no aparece en esa explicación."),
+            ("Que los libros permiten subrayar con mayor facilidad", "El subrayado no se menciona en el texto."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_interpretar", "facil",
+        "Según el emisor, ¿por qué el problema no es la pantalla en sí?",
+        "Porque lo que interfiere es el modo de leer que se trae",
+        "En una pantalla, casi todo lo que uno lee durante el día está hecho para "
+        "leerse rápido: mensajes, titulares, publicaciones breves, resultados de "
+        "búsqueda.\n\nEse modo de leer —mirar en diagonal, saltar, buscar la parte "
+        "que interesa— «se activa por el contexto» y llega también cuando el texto "
+        "exigía otra cosa.",
+        [
+            ("Porque las pantallas actuales tienen buena resolución", "El texto no discute la calidad de los dispositivos."),
+            ("Porque el problema desaparece si se lee sin conexión", "Las interrupciones son un factor más, no la explicación."),
+            ("Porque la diferencia se debe únicamente al cansancio", "El cansancio no figura entre las explicaciones dadas."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_interpretar", "medio",
+        "¿Qué muestra que la diferencia varíe según el tipo de texto y el tiempo "
+        "disponible?",
+        "Que el soporte por sí solo no explica el resultado",
+        "El emisor lo razona explícitamente: si la pantalla dañara la comprensión "
+        "por sí misma, el efecto tendría que aparecer igual en todos los "
+        "casos.\n\nQue sea mayor en textos expositivos y bajo presión de tiempo, y "
+        "casi nulo en narrativos, apunta a que interviene algo más que el "
+        "dispositivo.",
+        [
+            ("Que los estudios se hicieron con métodos distintos entre sí", "El texto no cuestiona la metodología de las revisiones."),
+            ("Que la diferencia probablemente se deba al azar", "El artículo la describe como consistente."),
+            ("Que leer en papel conviene solo para estudiar", "Esa es una recomendación posible, no lo que la variación muestra."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_interpretar", "medio",
+        "¿Qué se sigue, según el emisor, de que el efecto no haya desaparecido con "
+        "las nuevas generaciones?",
+        "Que no es cuestión de acostumbrarse al aparato",
+        "Cabría esperar que quienes crecieron leyendo en pantalla ya no tuvieran la "
+        "desventaja, y las revisiones no muestran eso.\n\nEl emisor extrae la "
+        "consecuencia: si lo que interfiere es un hábito de lectura, entonces la "
+        "práctica en pantalla «lo refuerza en vez de corregirlo».",
+        [
+            ("Que las pantallas empeoraron respecto de las antiguas", "El texto no compara dispositivos de distintas épocas."),
+            ("Que los estudios antiguos deben repetirse con jóvenes", "Las revisiones citadas ya incluyen a esas generaciones."),
+            ("Que la lectura en papel se enseña mejor en la escuela", "La enseñanza no aparece en el argumento."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_interpretar", "dificil",
+        "¿Qué recomendación concreta se sigue del hallazgo sobre la confianza?",
+        "Comprobar la comprensión en vez de estimarla",
+        "El texto sostiene que la sensación de haber entendido es un mal indicador, "
+        "y en pantalla es peor todavía.\n\nDe ahí la única manera de saberlo: "
+        "cerrar el archivo e intentar explicarlo, o responder preguntas sobre él. "
+        "El emisor remata señalando que esa diferencia «importa mucho más que el "
+        "soporte», con lo que subordina todo el tema del papel a una práctica de "
+        "estudio.",
+        [
+            ("Leer siempre en papel cuando se trate de materia de estudio", "El texto descarta imprimirlo todo como recomendación."),
+            ("Confiar en la propia impresión y avanzar al texto siguiente", "Es exactamente lo que el artículo desaconseja."),
+            ("Repetir la lectura del texto una segunda vez completa", "Releer no aparece como la solución propuesta."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor insiste en que la ventaja del papel es "
+        "pequeña?",
+        "Para evitar que un efecto modesto se lea como enorme",
+        "El texto aclara que no es que unos entiendan y otros no: es una diferencia "
+        "modesta que aparece de manera consistente.\n\nEsa precisión sostiene "
+        "después su rechazo a la recomendación de imprimirlo todo, que sería "
+        "«desproporcionada frente a un efecto de ese tamaño».",
+        [
+            ("Para sugerir que el hallazgo podría ser falso", "El emisor lo considera consistente y bien establecido."),
+            ("Para justificar que se siga estudiando en pantalla", "El artículo no defiende ninguno de los dos soportes."),
+            ("Para señalar que hacen falta estudios más grandes", "No plantea ninguna insuficiencia de las revisiones."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_evaluar", "medio",
+        "¿Qué precauciones toma el emisor al enumerar lo que los resultados «no "
+        "autorizan a concluir»?",
+        "Acota el alcance del hallazgo en tres direcciones",
+        "Descarta que haya que imprimirlo todo, aclara que quien estudia en "
+        "pantalla no va a rendir mal por eso —«hay muchísimas personas que lo hacen "
+        "y les resulta»— y recuerda que sobre leer novelas el hallazgo no dice "
+        "prácticamente nada.\n\nLas tres limitaciones se enuncian antes de la "
+        "recomendación final, no después.",
+        [
+            ("Reconoce que la evidencia disponible es todavía escasa", "El texto no cuestiona la cantidad de evidencia."),
+            ("Admite que sus conclusiones podrían estar equivocadas", "Acota el alcance sin poner en duda el hallazgo."),
+            ("Señala que el efecto varía mucho de una persona a otra", "La variación individual no es lo que el párrafo discute."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_evaluar", "dificil",
+        "¿Por qué el emisor sostiene que lo que hay que cambiar «es el modo» y no "
+        "el soporte?",
+        "Porque el hábito de lectura viaja con el lector",
+        "Si la explicación principal es que traemos a la pantalla una manera de "
+        "leer aprendida en mensajes y titulares, entonces cambiar de papel no toca "
+        "la causa.\n\nPor eso la lista que propone —ir más lento, volver atrás, "
+        "resumir sin mirar, preguntarse qué se afirma y con qué— vale para "
+        "cualquier soporte, y el emisor lo remata en una frase: «nada de eso "
+        "depende del papel».",
+        [
+            ("Porque imprimir textos resulta demasiado caro", "El costo se menciona de paso, no como razón central."),
+            ("Porque en papel también se lee de manera superficial", "El texto no afirma que ocurra igual en ambos soportes."),
+            ("Porque la mayoría de los textos ya solo existen en pantalla", "La disponibilidad de los textos no se discute."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_evaluar", "dificil",
+        "¿Qué observación deja el emisor sobre la manera en que se discute este "
+        "tema?",
+        "Que un hallazgo acotado circula como sentencia general",
+        "El texto describe el hallazgo con precisión —pequeño, condicionado y "
+        "explicable— y observa que sin embargo se repite convertido en un juicio "
+        "sobre una generación entera.\n\nY cierra dándole a esa distancia el "
+        "estatus de destreza: reconocer la diferencia entre lo que dice un conjunto "
+        "de estudios y lo que dice una frase repetida es «la destreza que cualquier "
+        "texto de estudio está tratando de entrenar».",
+        [
+            ("Que los medios inventan resultados que no existen", "El emisor no acusa a nadie de inventar el hallazgo."),
+            ("Que conviene desconfiar de los estudios sobre lectura", "El artículo se apoya en ellos durante todo su desarrollo."),
+            ("Que la discusión debería quedar en manos de especialistas", "El texto no propone excluir a nadie de la discusión."),
+        ],
+    ),
+    # ---------- 'La mina que está en el cajón' ----------
+    _ql(
+        "residuos_electronicos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué describe la expresión «minería urbana»?",
+        "Recuperar metales de los aparatos ya usados",
+        "El texto agrega la comparación que le da sentido: para algunos materiales, "
+        "obtenerlos de aparatos usados puede ser más eficiente que sacarlos de una "
+        "mina.\n\nUn teléfono contiene cobre, aluminio y cantidades pequeñas de "
+        "metales escasos y difíciles de extraer.",
+        [
+            ("Instalar faenas mineras dentro de las ciudades", "La expresión es figurada: no hay faenas urbanas."),
+            ("Almacenar aparatos en desuso hasta que suba su precio", "El texto no plantea ninguna espera especulativa."),
+            ("Extraer metales de los residuos domiciliarios en general", "Se refiere específicamente a los aparatos electrónicos."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué práctica del reciclaje informal se menciona?",
+        "Quemar cables al aire libre para sacar el cobre",
+        "El texto la describe con precisión: es un método efectivo para separar el "
+        "metal y, a la vez, «una manera de liberar contaminantes sobre quien lo "
+        "hace, que suele trabajar sin protección».\n\nPor eso sostiene que el modo "
+        "de desarmar los aparatos importa tanto como el hecho de desarmarlos.",
+        [
+            ("Vender los aparatos usados en ferias libres", "El texto no menciona la reventa de equipos."),
+            ("Enterrar los residuos en vertederos sin control", "El artículo no describe esa práctica."),
+            ("Desarmar los equipos con herramientas especiales", "Las herramientas especiales aparecen en otro contexto."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_localizar", "medio",
+        "Según la lectura, ¿qué establece la ley de responsabilidad extendida del "
+        "productor?",
+        "Que el manejo posterior queda a cargo de quien vende",
+        "El texto precisa que los aparatos eléctricos y electrónicos están "
+        "incluidos entre los productos alcanzados por esa obligación.\n\nY explica "
+        "la idea de fondo: si el costo de deshacerse de un producto recae sobre el "
+        "fabricante, «entonces al fabricante empieza a convenirle que ese producto "
+        "sea más fácil de desarmar».",
+        [
+            ("Que los aparatos deben durar un mínimo de años", "La ley descrita no fija duraciones mínimas."),
+            ("Que las municipalidades deben instalar puntos de acopio", "El texto no le atribuye ese mandato a la ley."),
+            ("Que se prohíbe exportar residuos electrónicos", "La exportación no se menciona en el artículo."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_interpretar", "facil",
+        "¿Por qué el emisor dice que un teléfono suelto en un cajón «no es una "
+        "mina»?",
+        "Porque procesarlo solo conviene si llegan muchos juntos",
+        "En cada aparato los metales aparecen en cantidades minúsculas y mezclados "
+        "con plástico, vidrio y pegamento.\n\nSepararlos exige un proceso "
+        "industrial que cuesta dinero y que resulta viable solo con volumen, de "
+        "modo que un equipo aislado es «basura valiosa que nadie puede procesar».",
+        [
+            ("Porque los metales que contiene no son realmente escasos", "El texto los describe como escasos y difíciles de extraer."),
+            ("Porque su batería impide recuperar el resto del material", "La batería no se menciona como obstáculo del reciclaje."),
+            ("Porque el valor de sus metales es menor al de una mina", "La comparación del texto es sobre eficiencia, no sobre valor total."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_interpretar", "medio",
+        "¿Qué distingue el emisor entre las dos versiones de la obsolescencia "
+        "programada?",
+        "Una supone una falla planificada y la otra, reparación difícil",
+        "La versión fuerte sostiene que los aparatos están diseñados para fallar en "
+        "una fecha determinada, y el texto la considera difícil de sostener en "
+        "general.\n\nLa versión débil está bien documentada y es más simple: «no "
+        "hace falta programar una falla si se dificulta la reparación». Baterías "
+        "pegadas, tornillos especiales, repuestos que no se venden, manuales que no "
+        "se publican.",
+        [
+            ("Una se aplica a los teléfonos y la otra, a los electrodomésticos", "La distinción no depende del tipo de aparato."),
+            ("Una la denuncian los consumidores y la otra, los fabricantes", "El texto no atribuye cada versión a un grupo."),
+            ("Una ocurría antes y la otra corresponde a la industria actual", "El artículo no las ordena históricamente."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_interpretar", "medio",
+        "Según el emisor, ¿qué explica en parte que los aparatos sean difíciles de "
+        "reparar?",
+        "Que hacerlos delgados y baratos los vuelve menos modulares",
+        "El texto no lo presenta como excusa: aclara que «eso no exime al "
+        "fabricante de nada».\n\nLo que hace es mover el punto de decisión. Quien "
+        "elige el modelo más delgado está eligiendo, sin saberlo, el más difícil de "
+        "reparar, de modo que parte de la responsabilidad ocurre en el momento de "
+        "la compra.",
+        [
+            ("Que los talleres de reparación han ido desapareciendo", "El taller aparece después y con otro propósito."),
+            ("Que los usuarios no saben usar herramientas especiales", "El texto no atribuye el problema a la habilidad del usuario."),
+            ("Que reparar resulta más caro que fabricar de nuevo", "Ese es el efecto descrito, no la explicación del diseño."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_interpretar", "dificil",
+        "¿Qué asimetría señala el emisor entre reparar y reemplazar?",
+        "Reparar deja el dinero cerca y reemplazar lo manda lejos",
+        "El texto lo formula en términos de trabajo: reparar es trabajo local, "
+        "«alguien en un taller, en una comuna, cobrando por su "
+        "tiempo».\n\nReemplazar, en cambio, es una compra que ocurre en otra parte "
+        "y que se paga a un fabricante lejano. Con eso la decisión deja de ser solo "
+        "ambiental: «mueve también dónde queda el dinero y quién conserva un "
+        "oficio».",
+        [
+            ("Reparar contamina menos que fabricar un aparato nuevo", "Es cierto en el texto, pero no es la asimetría de ese párrafo."),
+            ("Reparar exige conocimientos que casi nadie tiene ya", "El artículo no discute la disponibilidad de esos saberes."),
+            ("Reemplazar resulta más caro a largo plazo que reparar", "El texto señala que arreglar cuesta casi lo mismo que cambiar."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor explica por qué los teléfonos quedan en el "
+        "cajón?",
+        "Para mostrar que no se trata de un descuido",
+        "El texto enumera razones concretas: botarlos parece mal, quizás sirvan, "
+        "tienen fotos adentro y no está claro dónde se dejan.\n\nPresentar la "
+        "acumulación como una decisión pendiente y no como negligencia es lo que le "
+        "permite después proponer algo concreto en vez de un reproche.",
+        [
+            ("Para criticar la falta de información de las campañas", "El texto no responsabiliza a ninguna campaña."),
+            ("Para demostrar que la gente no valora esos aparatos", "Ocurre lo contrario: los guarda porque les asigna valor."),
+            ("Para explicar por qué los aparatos dejan de funcionar", "El párrafo no trata sobre fallas de los equipos."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_evaluar", "medio",
+        "¿Qué tipo de discusión considera más productiva el emisor?",
+        "La que fija reglas verificables en vez de discutir intenciones",
+        "El texto propone cuatro: repuestos disponibles por un plazo mínimo, "
+        "manuales existentes, baterías reemplazables y actualizaciones con duración "
+        "comprometida.\n\nY las califica con una franqueza que es parte del "
+        "argumento: son medidas «aburridas, verificables y bastante más eficaces "
+        "que sospechar de un plan».",
+        [
+            ("La que denuncia públicamente a los fabricantes responsables", "El emisor prefiere reglas antes que señalar culpables."),
+            ("La que estudia si existe realmente un plan de obsolescencia", "El texto considera esa discusión menos productiva."),
+            ("La que promueve dejar de comprar aparatos nuevos", "El artículo no propone reducir el consumo."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_evaluar", "dificil",
+        "¿Qué hace el emisor con la culpa del consumidor?",
+        "La descarta y la reemplaza por tres preguntas concretas",
+        "El texto observa que en estos temas la culpa «suele hacer de sustituto de "
+        "la acción», y agrega el argumento decisivo: sentirse mal «no recupera un "
+        "gramo de cobre».\n\nEn su lugar propone lo que sí depende de la persona en "
+        "el momento de comprar: cuánto dura el aparato, si se le puede cambiar la "
+        "batería y adónde va cuando deje de servir.",
+        [
+            ("La refuerza para que la gente cambie de conducta", "El texto sostiene que la culpa no produce ningún cambio."),
+            ("La traslada por completo hacia los fabricantes", "Deja en manos del comprador tres decisiones concretas."),
+            ("La considera justificada aunque poco eficaz", "No discute si es justa: discute si sirve de algo."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_evaluar", "dificil",
+        "¿Qué sugiere el cierre al mencionar «un cerro que queda lejos de quien lo "
+        "compró»?",
+        "Que el costo de no reciclar lo paga otro lugar",
+        "El artículo había explicado que el metal escaso de un teléfono guardado "
+        "«sigue teniendo que salir de alguna parte».\n\nEl cierre nombra esa parte "
+        "sin desarrollarla: una faena minera situada lejos de la casa donde está el "
+        "cajón. Con eso el problema deja de ser un asunto de orden doméstico y pasa "
+        "a ser una decisión cuyo efecto ocurre donde el comprador no lo ve.",
+        [
+            ("Que los metales escasos se agotarán en pocos años", "El texto no anticipa ningún agotamiento."),
+            ("Que la minería debería prohibirse en esas zonas", "El artículo no propone ninguna prohibición."),
+            ("Que reciclar resulta más barato que extraer el mineral", "Esa comparación aparece antes y con otro alcance."),
+        ],
+    ),
+    # ---------- 'La cabeza ocupada' ----------
+    _ql(
+        "ansiedad_pruebas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué efecto tiene una cantidad moderada de activación?",
+        "Mejora el rendimiento respecto de estar muy relajado",
+        "El texto describe qué ocurre: el pulso sube y la atención se estrecha "
+        "sobre la tarea.\n\nEl problema aparece cuando la activación sigue "
+        "subiendo, porque la relación entre activación y rendimiento «suele "
+        "describirse como una curva y no como una recta».",
+        [
+            ("Deteriora el rendimiento desde el primer momento en que aparece", "El deterioro aparece recién pasado cierto punto."),
+            ("No produce ningún efecto sobre el rendimiento", "El texto le atribuye una mejora concreta."),
+            ("Ayuda solo a quienes estudiaron lo suficiente", "El artículo niega esa correspondencia más adelante."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocupa el mismo espacio que los datos del problema?",
+        "Los pensamientos sobre el propio desempeño",
+        "El texto los cita textualmente: «voy a quedar mal», «me está yendo "
+        "pésimo», «no me va a alcanzar el tiempo».\n\nResolver un problema exige "
+        "mantener disponibles el enunciado, los datos y el paso recién dado, y ese "
+        "espacio es limitado.",
+        [
+            ("El cansancio acumulado de los días previos", "El texto no menciona el cansancio como factor."),
+            ("El ruido y las interrupciones de la sala", "El artículo no trata sobre las condiciones del lugar."),
+            ("Las preguntas que quedaron sin responder antes", "Lo que ocupa espacio son los pensamientos, no las preguntas."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_localizar", "medio",
+        "Según la lectura, ¿qué estrategias de estudio tienen respaldo más firme?",
+        "Ponerse a prueba, dormir y haber practicado antes",
+        "El texto detalla cada una: cerrar el cuaderno e intentar recuperar lo "
+        "leído produce recuerdos más resistentes que releer; dormir rinde más que "
+        "estudiar las últimas horas, porque el material recién leído es el más "
+        "frágil; y haber rendido pruebas de práctica reduce la novedad de la "
+        "situación.\n\nNinguna, subraya, es un truco de última hora.",
+        [
+            ("Escribir las preocupaciones justo antes de la prueba", "Esa es la que el texto presenta como todavía en estudio."),
+            ("Releer la materia varias veces la noche anterior", "El artículo señala que releer rinde menos que autoevaluarse."),
+            ("Practicar técnicas de respiración durante la prueba", "La respiración no se menciona en el texto."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_interpretar", "facil",
+        "¿Por qué la respuesta aparece «en el pasillo», según el emisor?",
+        "Porque al salir se libera el espacio que estaba ocupado",
+        "El texto lo explica sin misterio: lo que estaba desde el principio vuelve "
+        "a estar disponible cuando la preocupación deja de ocupar la memoria de "
+        "trabajo.\n\nY agrega la conclusión precisa: «no es que uno haya aprendido "
+        "algo en el pasillo. Es que dejó de estar usando la cabeza en otra cosa».",
+        [
+            ("Porque el recuerdo se consolida después del esfuerzo", "El texto no plantea ninguna consolidación posterior."),
+            ("Porque conversar con los compañeros ayuda a recuperar el dato", "No se menciona ninguna conversación al salir."),
+            ("Porque la presión del tiempo bloquea la memoria", "El bloqueo se atribuye a la ocupación, no al reloj."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que la ansiedad «no borra lo que "
+        "uno sabe»?",
+        "Que compite con ese conocimiento por el mismo espacio",
+        "De ahí se sigue una predicción que el texto hace explícita: el efecto es "
+        "mayor en tareas que exigen sostener varias cosas a la vez, como un "
+        "problema de varios pasos, y menor en las casi automáticas, como reconocer "
+        "una palabra.\n\nSi la ansiedad borrara el conocimiento, esa diferencia "
+        "entre tareas no existiría.",
+        [
+            ("Que el conocimiento se recupera siempre más tarde", "El texto no garantiza que se recupere en toda ocasión."),
+            ("Que estudiar bastante más evita por completo ese efecto", "El artículo niega esa relación entre preparación y nervios."),
+            ("Que la ansiedad afecta por igual a todas las tareas", "Se afirma justamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_interpretar", "medio",
+        "¿Por qué el emisor recomienda saltarse una pregunta y volver después?",
+        "Porque calcular cuánto cuesta ocupa el mismo espacio",
+        "El texto describe lo que hace quien lleva cuatro minutos atascado: dos "
+        "tareas a la vez, intentar resolver el problema y medir cuánto le está "
+        "costando.\n\nLa segunda no aporta nada y consume el mismo recurso que la "
+        "primera. Por eso concluye que saltarse una pregunta «no es una derrota; es "
+        "liberar el lugar donde hay que pensar».",
+        [
+            ("Porque las preguntas fáciles suelen venir después", "El texto no dice nada sobre el orden de dificultad."),
+            ("Porque conviene repartir bien el tiempo entre todas ellas", "La administración del tiempo no es el argumento."),
+            ("Porque volver más tarde permite recordar mejor", "Lo que se busca es liberar espacio, no mejorar el recuerdo."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_interpretar", "dificil",
+        "¿Qué reformulación propone el emisor en el cierre?",
+        "Dejar de buscar calma y evitar que ocupe el lugar de pensar",
+        "El texto descarta el objetivo habitual por dos motivos: es poco realista y "
+        "«además no del todo deseable», ya que cierta activación mejora el "
+        "rendimiento.\n\nCon eso el problema cambia de categoría: deja de ser un "
+        "defecto de carácter, que sugiere que hay algo malo en la persona, y pasa a "
+        "ser «una cuestión de espacio», que es algo sobre lo que se puede actuar.",
+        [
+            ("Aceptar los nervios y no intentar hacer nada con ellos", "El artículo propone varias medidas concretas."),
+            ("Estudiar más para reducir la ansiedad en la prueba", "El texto niega que la preparación elimine los nervios."),
+            ("Considerar que el problema es de carácter y no de método", "El cierre sostiene exactamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor califica de «inútil» la frase «me puse "
+        "nervioso»?",
+        "Porque describe el estado sin explicar qué ocurrió",
+        "El texto la presenta como la explicación habitual de una experiencia que "
+        "casi todos han tenido: saber la materia y no poder recuperarla en la "
+        "sala.\n\nDescartarla de entrada es lo que obliga a buscar un mecanismo, y "
+        "ese mecanismo —la ocupación de la memoria de trabajo— es lo que el "
+        "artículo desarrolla enseguida.",
+        [
+            ("Porque los nervios no tienen relación con lo ocurrido", "Todo el texto sostiene que sí la tienen."),
+            ("Porque quienes la usan no reconocen su ansiedad", "El emisor no cuestiona la sinceridad de nadie."),
+            ("Porque es una expresión demasiado coloquial", "Su objeción es de contenido, no de registro."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_evaluar", "medio",
+        "¿Cómo presenta el emisor el procedimiento de escribir las preocupaciones "
+        "antes de la prueba?",
+        "Como algo en estudio, barato y sin resultados firmes",
+        "El texto informa las dos caras: se han reportado resultados prometedores y "
+        "también intentos de replicación con efectos menores.\n\nY saca la "
+        "conclusión con precisión: «la descripción honesta es que se trata de un "
+        "procedimiento en estudio, barato y sin riesgo, y no de una técnica "
+        "establecida». Lo recomienda sin prometer nada.",
+        [
+            ("Como la estrategia con mejor respaldo de todas", "El texto reserva ese lugar para otras tres estrategias."),
+            ("Como una técnica desacreditada por la investigación", "No la desacredita: reporta resultados mixtos."),
+            ("Como un método que solo funciona en el laboratorio", "El artículo no restringe su uso a ese contexto."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_evaluar", "dificil",
+        "¿Por qué el emisor sostiene que creer que los nervios indican falta de "
+        "preparación «hace daño»?",
+        "Porque agrega una preocupación al espacio que ya está lleno",
+        "El texto niega primero la correspondencia: hay personas muy preparadas que "
+        "se activan mucho y personas mal preparadas que entran tranquilas, "
+        "«precisamente porque no dimensionan lo que se están jugando».\n\nEl daño "
+        "viene después. Quien interpreta su propio nerviosismo como prueba de que "
+        "no estudió suma una preocupación más, y esa preocupación consume el mismo "
+        "recurso que necesitaba para resolver.",
+        [
+            ("Porque desanima a quienes efectivamente no estudiaron", "El reproche del texto no se dirige a ese grupo."),
+            ("Porque impide reconocer una ansiedad que requiere ayuda", "Ese límite se trata aparte, en el párrafo siguiente."),
+            ("Porque lleva a estudiar más de lo que resulta necesario", "El artículo no discute cuánto conviene estudiar."),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_evaluar", "dificil",
+        "¿Qué límite se pone el propio artículo?",
+        "No opinar cuando la ansiedad se vuelve incapacitante",
+        "El texto enumera las señales que marcan esa frontera —impedir presentarse, "
+        "extenderse semanas antes, aparecer con síntomas físicos intensos— y "
+        "declara que ahí el asunto deja de ser de técnicas de estudio.\n\nY agrega "
+        "quién decide: «esa frontera no la puede trazar un texto: la traza quien la "
+        "está viviendo». El artículo reconoce que su alcance termina antes de donde "
+        "empieza el problema serio.",
+        [
+            ("No entregar estrategias que no tengan respaldo científico", "Sí entrega una que declara todavía en estudio."),
+            ("No referirse a lo que ocurre durante la prueba misma", "Dedica un párrafo completo a ese momento."),
+            ("No explicar los mecanismos fisiológicos involucrados", "Describe la activación y sus efectos sin ese reparo."),
+        ],
+    ),
     # ---------- 'Las abejas equivocadas' ----------
     _ql(
         "abejas_simbolo", "lec_localizar", "facil",
