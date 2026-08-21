@@ -72,7 +72,7 @@ export function MetaView({
           <button
             type="button"
             onClick={() => setAgregando(true)}
-            className="btn-warm rounded-lg px-4 py-2 text-sm font-semibold text-on-fill"
+            className="btn-glow rounded-lg px-4 py-2 text-sm font-semibold text-accent-foreground"
           >
             Agregar carrera
           </button>

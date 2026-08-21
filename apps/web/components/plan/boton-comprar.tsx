@@ -63,7 +63,7 @@ export function BotonComprar({
           "w-full rounded-lg font-semibold disabled:opacity-60 " +
           (compacto
             ? "border border-border px-3 py-1.5 text-xs transition-colors hover:bg-surface-hover"
-            : "btn-warm px-4 py-2.5 text-sm text-on-fill")
+            : "btn-glow px-4 py-2.5 text-sm text-accent-foreground")
         }
       >
         {cargando ? "Llevándote a Flow…" : etiqueta}

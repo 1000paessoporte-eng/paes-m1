@@ -135,7 +135,7 @@ export function Cuestionario({ nombre }: { nombre: string }) {
               type="button"
               disabled={pruebas.length === 0 || guardando}
               onClick={terminar}
-              className="btn-warm rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill disabled:opacity-40"
+              className="btn-glow rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground disabled:opacity-40"
             >
               {guardando ? "Guardando…" : "Empezar"}
             </button>

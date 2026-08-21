@@ -31,7 +31,7 @@ export function EstadoVacio({
       {accion && (
         <Link
           href={accion.href}
-          className="btn-warm mt-6 rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
+          className="btn-glow mt-6 rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground"
         >
           {accion.label}
         </Link>

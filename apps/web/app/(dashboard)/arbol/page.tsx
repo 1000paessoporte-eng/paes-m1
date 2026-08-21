@@ -122,7 +122,7 @@ export default async function ArbolHabilidadesPage({
           </p>
           <Link
             href="/arbol?prueba=m1"
-            className="btn-warm mt-4 inline-block rounded-lg px-4 py-2 text-sm font-semibold text-on-fill"
+            className="btn-glow mt-4 inline-block rounded-lg px-4 py-2 text-sm font-semibold text-accent-foreground"
           >
             Ir al árbol de M1 →
           </Link>

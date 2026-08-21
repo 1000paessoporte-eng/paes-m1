@@ -264,7 +264,7 @@ function Bienvenida({
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Link
             href="/examen"
-            className="btn-warm rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
+            className="btn-glow rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground"
           >
             {enCurso
               ? "Reanudar ensayo"
