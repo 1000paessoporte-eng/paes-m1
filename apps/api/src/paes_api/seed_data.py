@@ -21383,6 +21383,184 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "cuadro_falso",
+        "title": "Lo que delata a un cuadro falso",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Los métodos descritos —datación por "
+            "pigmentos, radiografía e infrarrojo, estudio del craquelado, "
+            "dendrocronología del soporte y análisis de procedencia— se presentan en "
+            "términos generales, sin atribuir casos concretos a personas ni "
+            "instituciones."
+        ),
+        "body": (
+            "**Lo que delata a un cuadro falso**\n\n"
+            "Una falsificación de arte no se descubre casi nunca mirando el cuadro. "
+            "Se descubre por los materiales, por los papeles o por una torpeza "
+            "administrativa, y esa es la primera sorpresa para quien imagina a un "
+            "experto entrecerrando los ojos frente a una pincelada. El ojo "
+            "entrenado sirve para sospechar. Para probar hace falta otra cosa.\n\n"
+            "El método más limpio es el de los pigmentos, porque funciona como un "
+            "calendario. Cada color industrial tiene una fecha de invención, y esa "
+            "fecha es un límite duro: si un cuadro atribuido al siglo XVII contiene "
+            "un pigmento que se empezó a fabricar en el siglo XIX, no hay discusión "
+            "posible. No importa cuán buena sea la pintura ni qué diga el "
+            "certificado. El anacronismo material cierra el caso.\n\n"
+            "Conviene entender por qué esta prueba es tan poderosa y, al mismo "
+            "tiempo, tan limitada. Es poderosa porque descarta: encontrar un "
+            "pigmento imposible demuestra que la obra no es de esa época. Pero no "
+            "funciona al revés. Que todos los pigmentos sean compatibles con el "
+            "siglo XVII no prueba que el cuadro sea del siglo XVII: prueba que "
+            "quien lo pintó usó materiales compatibles, cosa que un falsificador "
+            "cuidadoso hace a propósito, comprando pigmentos antiguos o "
+            "fabricándolos con recetas de la época.\n\n"
+            "Hay otros exámenes que operan igual. La radiografía y la luz "
+            "infrarroja muestran lo que hay debajo de la capa visible: "
+            "correcciones, dibujos previos, otra pintura reaprovechada. Un artista "
+            "suele dejar rastros de sus arrepentimientos; un copista que trabaja "
+            "sobre una imagen ya resuelta no tiene por qué arrepentirse de nada, y "
+            "esa ausencia de dudas es en sí misma un indicio.\n\n"
+            "El craquelado —esa red de grietas finas que aparece con las décadas— "
+            "también se estudia. Se forma por la contracción de las capas y por los "
+            "movimientos del soporte, y sigue patrones que dependen del material y "
+            "del tiempo. Se puede imitar, y se imita: hay quien hornea el cuadro o "
+            "lo enrolla para provocar grietas. Pero las grietas fabricadas suelen "
+            "ser demasiado parejas, o cortan en lugares donde una grieta natural no "
+            "cortaría, y bajo aumento la diferencia se nota.\n\n"
+            "Cuando la pintura está sobre madera aparece una herramienta distinta y "
+            "bastante elegante: contar los anillos del panel. Los anillos de "
+            "crecimiento de los árboles forman secuencias características por "
+            "región y período, y comparándolas se puede establecer cuándo se cortó "
+            "esa madera. El dato que entrega es de un tipo particular: dice que el "
+            "cuadro no puede ser anterior a cierta fecha. No dice cuándo se pintó. "
+            "Una tabla del siglo XVI puede recibir una pintura hecha ayer, y de "
+            "hecho es exactamente lo que hace un falsificador competente cuando "
+            "compra un cuadro viejo sin valor para reutilizar el soporte.\n\n"
+            "Vale la pena notar que casi todos estos exámenes exigen intervenir la "
+            "obra o, al menos, moverla: llevarla a un laboratorio, tomar una "
+            "muestra mínima de pintura, exponerla a radiación. Eso tiene un costo y "
+            "un riesgo, y explica algo que de otro modo resultaría incomprensible: "
+            "que muchas obras valiosas nunca hayan sido analizadas a fondo. No es "
+            "descuido. Es que analizar cuesta caro y, sobre todo, que el resultado "
+            "puede no convenirle a quien encarga el examen.\n\n"
+            "Con todo esto sobre la mesa aparece el punto incómodo de este oficio. "
+            "El criterio que más pesa en el mercado del arte no es ninguno de los "
+            "anteriores: es la procedencia, es decir, la cadena documentada de "
+            "quienes fueron dueños de la obra desde que salió del taller. Una "
+            "procedencia sólida vale más que cualquier análisis, porque responde la "
+            "pregunta que los análisis no responden, que es de dónde salió esto.\n\n"
+            "Y ahí está la vulnerabilidad. Un documento es infinitamente más fácil "
+            "de falsificar que una pincelada. Las falsificaciones más costosas de "
+            "la historia reciente no destacaron por su calidad pictórica sino por "
+            "sus papeles: catálogos alterados, cartas insertadas en archivos "
+            "reales, inventarios de colecciones que efectivamente existieron y en "
+            "los que se agregó una línea. Quien logra plantar una obra en un "
+            "archivo confiable no necesita pintar tan bien, porque cambió la "
+            "pregunta: ya no hay que probar que el cuadro es auténtico, hay que "
+            "probar que el archivo miente.\n\n"
+            "De ahí se sigue una asimetría que conviene tener presente, y que "
+            "excede al arte. Los métodos técnicos son buenos para refutar y malos "
+            "para confirmar. Pueden establecer que algo es falso con una certeza "
+            "cercana a la total, y no pueden establecer que algo es auténtico: solo "
+            "pueden informar que no encontraron nada incompatible, que es una "
+            "afirmación mucho más modesta y que suena parecida.\n\n"
+            "Por eso, cuando un museo retira una obra de exhibición, casi nunca lo "
+            "hace porque un análisis probó que es auténtica en otro sitio. Lo hace "
+            "porque apareció un pigmento imposible, un anillo que no calza o una "
+            "carta que no existía. La autenticidad no se demuestra: se sostiene "
+            "mientras nadie logre encontrarle una grieta, que es una manera "
+            "bastante más frágil de estar seguro de algo."
+        ),
+    },
+    {
+        "key": "primer_trabajo",
+        "title": "El primer trabajo",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La edad mínima, la autorización requerida, "
+            "la exigencia de escolaridad, los topes de jornada, la regla de las doce "
+            "horas diarias combinadas y la prohibición de trabajar entre las 21 y las 8 "
+            "horas se verificaron antes de escribir el texto. El artículo es material "
+            "de lectura e informa de manera general: no reemplaza una consulta a la "
+            "Dirección del Trabajo."
+        ),
+        "body": (
+            "**El primer trabajo**\n\n"
+            "En la vitrina de un local hay un cartel escrito a mano: «se necesita "
+            "ayudante, part time, de 16 en adelante». Cientos de estudiantes en "
+            "Chile van a leer un cartel parecido este año, y muy pocos van a saber "
+            "que existe un conjunto de reglas bastante preciso sobre lo que ese "
+            "trabajo puede y no puede pedirles.\n\n"
+            "Empecemos por la edad. En Chile puede trabajar quien tiene quince años "
+            "cumplidos o más, y la ley llama a esa situación «trabajo adolescente "
+            "protegido». La palabra protegido no es decorativa: significa que ese "
+            "trabajo está permitido bajo condiciones, y que las condiciones son "
+            "parte del permiso.\n\n"
+            "La primera condición es la autorización. Hace falta un permiso escrito "
+            "del padre, de la madre o de quien tenga el cuidado personal del "
+            "adolescente; a falta de ellos, de quien tenga su representación legal, "
+            "y en último término del Inspector del Trabajo que corresponda. La "
+            "segunda condición es escolar: hay que acreditar que se terminó la "
+            "Educación Media o que se está cursando la media o la básica. Es decir, "
+            "la ley no exige haber terminado el colegio para trabajar, pero sí "
+            "exige estar en él.\n\n"
+            "Después vienen los topes de jornada, que conviene aprenderse porque "
+            "son los que más se pasan a llevar. La jornada no puede superar las "
+            "treinta horas a la semana. Dentro del año escolar, el máximo diario es "
+            "de seis horas; durante la interrupción del año escolar y en "
+            "vacaciones, sube a ocho. Y no procede la jornada extraordinaria: no "
+            "hay horas extra, ni pagadas ni compensadas con tiempo libre.\n\n"
+            "Hay además una regla que casi nadie conoce y que es, probablemente, la "
+            "más interesante de todas. Durante el año escolar, la suma del tiempo "
+            "diario dedicado a las actividades educativas y a la jornada de trabajo "
+            "no puede superar las doce horas. Es una regla de suma, no de partes: "
+            "si alguien pasa nueve horas entre clases y traslados, le quedan tres, "
+            "aunque el máximo diario del trabajo sea seis.\n\n"
+            "Vale la pena detenerse en esa regla, porque revela el criterio con que "
+            "todo lo demás está construido. La ley no está tratando de que el "
+            "adolescente trabaje poco: está tratando de que el trabajo no desplace "
+            "al colegio. Los topes no miran la faena, miran el día completo de una "
+            "persona que además estudia. Por eso el mismo trabajo tiene un límite "
+            "en junio y otro en enero.\n\n"
+            "Queda una prohibición de horario que es tajante: no se puede trabajar "
+            "entre las nueve de la noche y las ocho de la mañana. Cualquier turno "
+            "que termine después de las veintiuna horas, o que empiece antes de las "
+            "ocho, está fuera de la ley, sin importar cuántas horas semanales se "
+            "lleven acumuladas ni qué tan de acuerdo estén las partes.\n\n"
+            "Hay también un conjunto de labores que quedan fuera por su naturaleza, "
+            "y no por su horario: las que resultan peligrosas para la salud o el "
+            "desarrollo de una persona de esa edad. Es la parte de la regulación "
+            "que más varía según el rubro, y también la que más se discute caso a "
+            "caso, porque una misma tarea puede ser inofensiva en un local y "
+            "riesgosa en otro según con qué se trabaje y con qué supervisión.\n\n"
+            "Ahora bien, conviene decir con franqueza qué es lo que este conjunto "
+            "de reglas puede y no puede hacer. Todo lo anterior rige para el "
+            "trabajo formal, con contrato. Un adolescente que reparte pedidos sin "
+            "contrato, que atiende un local «ayudando» a un familiar o que hace "
+            "turnos pagados en efectivo no está protegido por ninguno de estos "
+            "topes, no porque la ley lo excluya, sino porque nadie registró que esa "
+            "relación existe. De ahí que la pregunta más útil frente al cartel de "
+            "la vitrina no sea cuánto pagan, sino si va a haber contrato.\n\n"
+            "Y conviene evitar dos exageraciones simétricas. La primera es tratar "
+            "cualquier trabajo adolescente como un problema: hay quienes trabajan "
+            "en vacaciones, con horarios acotados, y obtienen de ahí ingresos "
+            "propios, experiencia y una idea bastante concreta de cómo funciona el "
+            "mundo. La segunda es la contraria, y suele venir con nostalgia: la "
+            "idea de que trabajar desde chico forma el carácter y que las reglas "
+            "sobran. Lo que las reglas atienden no es el trabajo en sí, sino su "
+            "combinación con la escolaridad: el problema documentado aparece cuando "
+            "las horas se acumulan sobre un día que ya estaba lleno.\n\n"
+            "Si algo de esto no calza —un turno que termina a las once de la noche, "
+            "una semana de cuarenta horas, un empleo sin contrato—, quien recibe "
+            "consultas y fiscaliza es la Dirección del Trabajo, y hacerlo no "
+            "requiere que un adulto acompañe al adolescente ni que este renuncie "
+            "primero.\n\n"
+            "El cartel de la vitrina, en todo caso, no dice nada de esto. Nunca lo "
+            "dice. Esa es la razón de que estas cosas convenga saberlas antes de "
+            "entrar a preguntar, y no después."
+        ),
+    },
+    {
         "key": "dominio_publico",
         "title": "El día en que un libro deja de tener dueño",
         "kind": "no_literario",
@@ -26441,6 +26619,339 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Lo que delata a un cuadro falso' ----------
+    _ql(
+        "cuadro_falso", "lec_localizar", "facil",
+        "Según la lectura, ¿qué revela la radiografía o la luz infrarroja de un "
+        "cuadro?",
+        "Lo que hay bajo la capa visible de pintura",
+        "El texto enumera qué aparece ahí: correcciones, dibujos previos y hasta "
+        "otra pintura reaprovechada.\n\nSu interés no es decorativo. Un artista "
+        "deja rastros de sus arrepentimientos, y un copista que trabaja sobre una "
+        "imagen ya resuelta no tiene de qué arrepentirse.",
+        [
+            ("La fecha exacta en que se aplicó cada pigmento", "La datación por pigmentos es otro método, distinto de este."),
+            ("El estado de conservación del marco y del soporte", "El soporte se estudia contando anillos, no con radiografía."),
+            ("Las firmas ocultas que dejó el autor original", "El texto no menciona firmas en ninguna parte."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_localizar", "facil",
+        "Según la lectura, ¿qué permite establecer el conteo de anillos del panel "
+        "de madera?",
+        "Cuándo se cortó esa madera",
+        "Los anillos de crecimiento forman secuencias características por región y "
+        "período, y al compararlas se obtiene la fecha de corte.\n\nEl texto "
+        "insiste en qué tipo de dato es ese: dice que el cuadro no puede ser "
+        "anterior a cierta fecha, y no dice cuándo se pintó.",
+        [
+            ("Cuándo se pintó el cuadro sobre ese panel", "Es justamente lo que el método no puede determinar."),
+            ("De qué taller provenía el soporte utilizado", "El texto no atribuye los paneles a talleres."),
+            ("Si la madera fue tratada con productos modernos", "El artículo no menciona tratamientos de la madera."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_localizar", "medio",
+        "Según la lectura, ¿qué es la procedencia de una obra?",
+        "La cadena documentada de quienes fueron sus dueños",
+        "Se cuenta desde que la obra salió del taller.\n\nEl texto explica por qué "
+        "pesa tanto en el mercado: responde la pregunta que los análisis técnicos "
+        "no responden, que es de dónde salió esa obra.",
+        [
+            ("El taller y el país donde la obra fue pintada", "El origen geográfico no es lo que define la procedencia."),
+            ("El conjunto de análisis técnicos que se le hicieron", "Los análisis son justamente el otro camino."),
+            ("El precio que alcanzó en cada una de sus ventas", "El texto no se refiere al historial de precios."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_interpretar", "facil",
+        "¿Por qué el análisis de pigmentos «funciona como un calendario»?",
+        "Porque cada color tiene una fecha de invención",
+        "Esa fecha opera como un límite duro: un cuadro atribuido al siglo XVII no "
+        "puede contener un pigmento que se empezó a fabricar en el siglo XIX.\n\nEl "
+        "emisor subraya que ese anacronismo cierra el caso, sin importar la calidad "
+        "de la pintura ni lo que diga el certificado.",
+        [
+            ("Porque los colores se degradan a un ritmo constante", "El texto no usa la degradación como método de datación."),
+            ("Porque cada época prefería una paleta reconocible", "El criterio es la existencia del pigmento, no el gusto."),
+            ("Porque los pigmentos cambian de tono cada cierto tiempo", "El artículo no menciona cambios de tono con los años."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_interpretar", "medio",
+        "¿Por qué el emisor dice que la prueba de los pigmentos «no funciona al "
+        "revés»?",
+        "Porque no encontrar anacronismos no prueba la autenticidad",
+        "El texto lo formula con precisión: que todos los pigmentos sean "
+        "compatibles con el siglo XVII prueba solo que quien pintó usó materiales "
+        "compatibles.\n\nY eso es exactamente lo que hace un falsificador "
+        "cuidadoso, comprando pigmentos antiguos o fabricándolos con recetas de la "
+        "época.",
+        [
+            ("Porque los pigmentos antiguos ya no se pueden analizar", "El texto describe ese análisis como perfectamente posible."),
+            ("Porque algunos pigmentos se siguieron usando siglos después", "El problema planteado es el inverso: pigmentos demasiado nuevos."),
+            ("Porque el análisis destruye la muestra que se examina", "El costo de intervenir la obra se discute en otro párrafo."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_interpretar", "medio",
+        "¿Qué explica, según el emisor, que muchas obras valiosas nunca se hayan "
+        "analizado a fondo?",
+        "Que el examen cuesta caro y el resultado puede incomodar",
+        "El texto señala que casi todos estos exámenes exigen intervenir la obra o "
+        "moverla: llevarla a un laboratorio, tomar una muestra mínima, exponerla a "
+        "radiación.\n\nY agrega la razón que vuelve comprensible la omisión: el "
+        "resultado «puede no convenirle a quien encarga el examen».",
+        [
+            ("Que los métodos actuales son demasiado recientes", "El artículo no los presenta como novedosos."),
+            ("Que los museos prefieren confiar en el ojo experto", "El texto sostiene que el ojo sirve para sospechar, no para probar."),
+            ("Que las obras más valiosas rara vez se prestan", "El préstamo entre instituciones no se menciona."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_interpretar", "dificil",
+        "¿Por qué la procedencia es a la vez el criterio más decisivo y el más "
+        "vulnerable?",
+        "Porque un documento se falsifica más fácil que una pincelada",
+        "Pesa más que cualquier análisis, porque responde de dónde salió la "
+        "obra.\n\nY por eso mismo es el blanco preferido: catálogos alterados, "
+        "cartas insertadas en archivos reales, una línea agregada al inventario de "
+        "una colección que efectivamente existió. Quien logra eso cambia la "
+        "pregunta: ya no hay que probar que el cuadro es auténtico, sino que el "
+        "archivo miente.",
+        [
+            ("Porque los archivos antiguos suelen estar incompletos", "El problema no es la falta de datos, sino los datos falsos insertados."),
+            ("Porque los propietarios prefieren mantener el anonimato", "El texto no menciona reservas de identidad."),
+            ("Porque las obras cambian de dueño demasiadas veces", "La cantidad de traspasos no es lo que la vuelve frágil."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor empieza afirmando que una falsificación casi "
+        "nunca se descubre mirando el cuadro?",
+        "Para corregir la imagen habitual de cómo se detecta",
+        "El texto nombra esa imagen —un experto entrecerrando los ojos frente a una "
+        "pincelada— y la desplaza de inmediato.\n\nLo que la reemplaza es una "
+        "distinción que ordena todo el artículo: el ojo entrenado sirve para "
+        "sospechar, y para probar hace falta otra cosa.",
+        [
+            ("Para sostener que los expertos suelen equivocarse", "El texto les asigna un papel, no un error."),
+            ("Para anunciar que hablará de robos y no de copias", "El artículo trata sobre falsificaciones en todo momento."),
+            ("Para restar importancia a la calidad de la pintura", "La calidad sí importa: por eso hace falta otro método."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_evaluar", "medio",
+        "¿Qué indicio representa, según el texto, la ausencia de correcciones bajo "
+        "la pintura?",
+        "Que quien pintó no tuvo que resolver nada",
+        "Un artista suele dejar rastros de sus arrepentimientos: dibujos previos, "
+        "cambios de posición, capas reaprovechadas.\n\nUn copista trabaja sobre una "
+        "imagen ya resuelta y no tiene de qué arrepentirse. Esa falta de dudas es, "
+        "dice el emisor, un indicio en sí misma.",
+        [
+            ("Que la obra fue restaurada en algún momento", "El texto no relaciona la ausencia de capas con restauraciones."),
+            ("Que el artista trabajó con mucha rapidez", "La velocidad de ejecución no se menciona."),
+            ("Que el soporte fue reutilizado de otro cuadro", "La reutilización aparece, pero como rastro visible."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_evaluar", "dificil",
+        "¿En qué consiste la asimetría que el emisor considera aplicable más allá "
+        "del arte?",
+        "Los métodos técnicos refutan bien y confirman mal",
+        "Pueden establecer que algo es falso con una certeza cercana a la total: "
+        "basta un pigmento imposible.\n\nNo pueden establecer lo contrario. Lo "
+        "máximo que informan es que no encontraron nada incompatible, «que es una "
+        "afirmación mucho más modesta y que suena parecida». El emisor advierte que "
+        "esas dos frases se confunden con facilidad.",
+        [
+            ("Los métodos técnicos son más confiables que los documentales", "El texto muestra que ambos tienen puntos débiles distintos."),
+            ("Los métodos técnicos sirven para la pintura y no para el papel", "La asimetría no depende del material examinado."),
+            ("Los métodos técnicos requieren siempre dañar la obra", "El costo de intervenirla se discute en otro párrafo."),
+        ],
+    ),
+    _ql(
+        "cuadro_falso", "lec_evaluar", "dificil",
+        "¿Qué sostiene el emisor al afirmar que la autenticidad «no se demuestra»?",
+        "Que se mantiene mientras nadie encuentre una grieta",
+        "El cierre explica por qué un museo retira una obra: apareció un pigmento "
+        "imposible, un anillo que no calza o una carta que no existía.\n\nNunca la "
+        "retira porque un análisis probó que la auténtica está en otro lugar. La "
+        "autenticidad, entonces, no es una propiedad demostrada sino un estado que "
+        "dura mientras resiste, «una manera bastante más frágil de estar seguro de "
+        "algo».",
+        [
+            ("Que ningún museo puede confiar en sus propias obras", "El texto no plantea una desconfianza generalizada."),
+            ("Que solo la procedencia permite demostrarla", "La procedencia se presenta como el criterio más falsificable."),
+            ("Que los peritajes deberían repetirse cada cierto tiempo", "El artículo no propone repetir los análisis."),
+        ],
+    ),
+    # ---------- 'El primer trabajo' ----------
+    _ql(
+        "primer_trabajo", "lec_localizar", "facil",
+        "Según la lectura, ¿desde qué edad se puede trabajar en Chile?",
+        "Desde los quince años cumplidos",
+        "La ley llama a esa situación «trabajo adolescente protegido», y el texto "
+        "subraya que la palabra protegido no es decorativa.\n\nSignifica que el "
+        "trabajo está permitido bajo condiciones y que esas condiciones son parte "
+        "del permiso.",
+        [
+            ("Desde los dieciséis años cumplidos", "El cartel del ejemplo pide dieciséis, pero la ley parte antes."),
+            ("Desde los dieciocho, salvo autorización especial", "A los dieciocho ya no rigen las reglas de este artículo."),
+            ("Desde que se termina la Educación Media", "El texto aclara que no se exige haberla terminado."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_localizar", "facil",
+        "Según la lectura, ¿cuál es el tope semanal de la jornada?",
+        "Treinta horas a la semana",
+        "Dentro de ese tope, el máximo diario es de seis horas durante el año "
+        "escolar y sube a ocho durante la interrupción del año escolar y las "
+        "vacaciones.\n\nAdemás, no procede la jornada extraordinaria: no hay horas "
+        "extra, ni pagadas ni compensadas con tiempo libre.",
+        [
+            ("Cuarenta horas a la semana", "Esa cifra aparece como ejemplo de una situación irregular."),
+            ("Doce horas a la semana", "Las doce horas son un tope diario que suma colegio y trabajo."),
+            ("Seis horas a la semana", "Las seis horas son el máximo diario durante el año escolar."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_localizar", "medio",
+        "Según la lectura, ¿en qué horario no se puede trabajar?",
+        "Entre las nueve de la noche y las ocho de la mañana",
+        "El texto describe esa prohibición como tajante: cualquier turno que "
+        "termine después de las veintiuna horas o que empiece antes de las ocho "
+        "queda fuera de la ley.\n\nY agrega que no admite excepciones por acuerdo "
+        "entre las partes ni por tener pocas horas acumuladas en la semana.",
+        [
+            ("Entre las once de la noche y las seis de la mañana", "Las once de la noche aparecen como ejemplo de irregularidad."),
+            ("Durante los fines de semana del año escolar", "El texto no restringe días, sino horarios."),
+            ("Durante las horas de clases del establecimiento", "La regla que atiende ese punto es la de las doce horas."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_interpretar", "facil",
+        "¿Por qué la regla de las doce horas es «una regla de suma, no de partes»?",
+        "Porque junta el tiempo de estudio con el de trabajo",
+        "El texto lo explica con un caso: si alguien pasa nueve horas entre clases "
+        "y traslados, le quedan tres, aunque el máximo diario del trabajo sea "
+        "seis.\n\nLos dos límites operan a la vez, y el que manda es el que se "
+        "alcance primero.",
+        [
+            ("Porque se calcula sumando los días de la semana", "El tope es diario, no semanal."),
+            ("Porque incluye también las horas extraordinarias", "El texto señala que la jornada extraordinaria no procede."),
+            ("Porque considera el tiempo de descanso entre turnos", "El descanso no aparece en el cálculo descrito."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_interpretar", "medio",
+        "Según el emisor, ¿qué criterio revela la regla de las doce horas?",
+        "Que el trabajo no debe desplazar al colegio",
+        "El texto lo dice sin rodeos: la ley no busca que el adolescente trabaje "
+        "poco, sino que el trabajo no ocupe el lugar del estudio.\n\nPor eso los "
+        "topes «no miran la faena, miran el día completo de una persona que además "
+        "estudia», y por eso el mismo trabajo tiene un límite en junio y otro en "
+        "enero.",
+        [
+            ("Que el trabajo adolescente debería estar prohibido", "El artículo rechaza expresamente esa lectura."),
+            ("Que las jornadas largas dañan la salud de cualquiera", "El criterio que describe es escolar, no sanitario."),
+            ("Que los empleadores tienden a exigir demasiado", "El texto no atribuye intenciones a los empleadores."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_interpretar", "medio",
+        "¿Por qué el emisor dice que la pregunta útil no es cuánto pagan sino si "
+        "habrá contrato?",
+        "Porque sin contrato ninguna de estas reglas se aplica",
+        "El texto precisa el motivo: no es que la ley excluya esos casos, sino que "
+        "«nadie registró que esa relación existe».\n\nQuien reparte pedidos sin "
+        "contrato, ayuda en un local de un familiar o hace turnos pagados en "
+        "efectivo queda fuera de todos los topes anteriores.",
+        [
+            ("Porque los trabajos informales pagan bastante menos", "El artículo no compara remuneraciones."),
+            ("Porque el contrato garantiza un sueldo mínimo mayor", "El texto no trata sobre montos ni sobre el sueldo mínimo."),
+            ("Porque sin contrato el empleo puede terminar en cualquier momento", "La estabilidad del empleo no es lo que discute el pasaje."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_interpretar", "dificil",
+        "¿Qué distingue a las labores que quedan fuera «por su naturaleza»?",
+        "Que se excluyen por el riesgo y no por el horario",
+        "El texto las separa del resto de la regulación, que trabaja con topes "
+        "horarios: aquí lo que decide es el peligro para la salud o el desarrollo "
+        "de una persona de esa edad.\n\nY agrega por qué esa parte se discute caso "
+        "a caso: una misma tarea puede ser inofensiva en un local y riesgosa en "
+        "otro, según con qué se trabaje y con qué supervisión.",
+        [
+            ("Que solo pueden realizarse durante las vacaciones", "La restricción no se levanta en ningún período del año."),
+            ("Que requieren una autorización adicional del empleador", "El texto no menciona ninguna autorización de ese tipo."),
+            ("Que están permitidas si el adolescente ya terminó el colegio", "La exclusión no depende de la situación escolar."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor abre y cierra con el cartel de la vitrina?",
+        "Para mostrar que el aviso no informa nada de esto",
+        "El cartel dice la edad y el tipo de jornada, y nada más.\n\nEl emisor lo "
+        "retoma al final para extraer la consecuencia práctica de todo el artículo: "
+        "estas cosas conviene saberlas «antes de entrar a preguntar, y no después», "
+        "porque nadie las va a ofrecer en el mostrador.",
+        [
+            ("Para denunciar que ese aviso incumple la ley", "El cartel no infringe nada: simplemente no informa."),
+            ("Para explicar cómo se busca un primer empleo", "El artículo no entrega consejos de búsqueda de trabajo."),
+            ("Para señalar que la edad indicada está equivocada", "Pedir dieciséis años es perfectamente legal."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor frente al trabajo adolescente en sí mismo?",
+        "Equilibrada, pues rechaza las dos exageraciones",
+        "El texto las describe como simétricas. La primera trata cualquier trabajo "
+        "adolescente como un problema, y el emisor reconoce que hay quienes "
+        "trabajan en vacaciones y obtienen ingresos, experiencia y una idea "
+        "concreta del mundo.\n\nLa segunda sostiene que trabajar desde chico forma "
+        "el carácter y que las reglas sobran, y a esa le responde que lo regulado "
+        "no es el trabajo sino su combinación con la escolaridad.",
+        [
+            ("Crítica, pues considera que a esa edad no se debe trabajar", "Menciona beneficios concretos del trabajo acotado."),
+            ("Entusiasta, pues destaca lo que se aprende trabajando", "También describe el problema de acumular horas."),
+            ("Prescindente, pues se limita a exponer la normativa", "Toma posición sobre las dos exageraciones que describe."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_evaluar", "dificil",
+        "¿Por qué el emisor precisa que el trabajo informal no queda fuera «porque "
+        "la ley lo excluya»?",
+        "Porque la protección depende de que exista un registro",
+        "La distinción importa: la ley alcanza en principio a cualquier relación "
+        "laboral, y lo que falla es otra cosa.\n\nSin contrato no hay nada que "
+        "fiscalizar ni con qué comparar los topes, de modo que la desprotección no "
+        "viene de una exclusión legal sino de una ausencia de registro. Por eso la "
+        "solución que el texto sugiere no es cambiar la ley, sino preguntar por el "
+        "contrato.",
+        [
+            ("Porque la ley solo se aplica a los mayores de dieciocho", "Toda la regulación descrita trata sobre menores de esa edad."),
+            ("Porque los trabajos informales suelen ser de pocas horas", "El texto no atribuye menos horas al trabajo informal."),
+            ("Porque la Dirección del Trabajo no fiscaliza ese tipo de empleos", "El artículo indica que ahí se puede consultar y denunciar."),
+        ],
+    ),
+    _ql(
+        "primer_trabajo", "lec_evaluar", "dificil",
+        "¿Qué aclara el emisor sobre cómo recurrir a la Dirección del Trabajo?",
+        "Que no hace falta ir con un adulto ni renunciar antes",
+        "El texto entrega esas dos precisiones justo después de enumerar las "
+        "situaciones irregulares —un turno que termina a las once, una semana de "
+        "cuarenta horas, un empleo sin contrato—.\n\nAmbas atienden los obstáculos "
+        "reales que enfrenta un adolescente para reclamar: creer que necesita "
+        "permiso de alguien y temer que reclamar signifique quedarse sin el "
+        "trabajo.",
+        [
+            ("Que conviene reunir pruebas antes de presentar el caso", "El artículo no menciona ningún requisito de prueba."),
+            ("Que el trámite debe hacerlo el propio empleador", "El texto se dirige a quien trabaja, no a quien contrata."),
+            ("Que la consulta solo procede si existe contrato firmado", "Menciona expresamente el empleo sin contrato como motivo."),
+        ],
+    ),
     # ---------- 'El día en que un libro deja de tener dueño' ----------
     _ql(
         "dominio_publico", "lec_localizar", "facil",
