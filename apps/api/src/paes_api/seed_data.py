@@ -21383,6 +21383,183 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "nueve_tonos",
+        "title": "Nueve tonos",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes son "
+            "ficticios."
+        ),
+        "body": (
+            "**Nueve tonos**\n\n"
+            "El teléfono empieza a sonar a las seis cuarenta de la mañana y Marisol "
+            "está despierta antes del segundo tono. No se levanta. Se queda mirando "
+            "el techo, en esa oscuridad azul que hay a esa hora en agosto, y lo "
+            "primero que piensa no es quién llama sino que este es el llamado.\n\n"
+            "**Primer tono.**\n\n"
+            "Cualquiera que tenga padres viejos sabe de qué se trata. Hay un "
+            "teléfono que suena a mediodía y hay un teléfono que suena a las seis "
+            "cuarenta, y son dos aparatos distintos aunque sean el mismo. Uno lleva "
+            "años esperándolo sin decírselo a nadie, con la misma naturalidad con "
+            "que uno revisa el gas antes de acostarse.\n\n"
+            "**Segundo tono.**\n\n"
+            "Su mamá tiene ochenta y siete y vive en Rancagua, con la Ely, que la "
+            "acompaña de día. En marzo se cayó en el baño y no se rompió nada, y "
+            "esa vez el teléfono sonó a las dos de la tarde y Marisol contestó al "
+            "primer timbre, ya en el auto antes de colgar. A las dos de la tarde "
+            "uno contesta rápido. A las seis cuarenta uno se queda mirando el "
+            "techo.\n\n"
+            "**Tercer tono.**\n\n"
+            "Piensa en la última conversación, que fue el domingo y que fue sobre "
+            "nada. Sobre unas plantas. Su mamá le explicó, con detalle, por qué el "
+            "malvón del pasillo se estaba poniendo amarillo, y ella escuchó a "
+            "medias, mientras hacía otra cosa, diciendo que sí, que claro, que "
+            "había que cambiarlo de lugar. Duró once minutos. Once minutos sobre un "
+            "malvón.\n\n"
+            "Piensa además en las cosas que le iba a preguntar y que fue "
+            "postergando porque siempre iba a haber tiempo. Cómo se llamaba la "
+            "calle donde vivían cuando ella era chica. Por qué su mamá dejó de "
+            "hablarse con la tía Nora. Si alguna vez pensó en irse. Son tres "
+            "preguntas y las tres caben en una tarde, y sin embargo llevan cuarenta "
+            "años sin hacerse, esperando una tarde que parecía garantizada.\n\n"
+            "**Cuarto tono.**\n\n"
+            "Y ahora, en esta oscuridad, esos once minutos le parecen lo más "
+            "extraordinario que le ha pasado en la vida.\n\n"
+            "**Quinto tono.**\n\n"
+            "Debería levantarse. Está pensando estas cosas para no levantarse, lo "
+            "sabe perfectamente, con esa parte de la cabeza que sigue funcionando "
+            "aunque uno no quiera. Mientras el teléfono suene, la noticia todavía "
+            "no existe. Suena en el living, sobre la mesa del arrimo, y en ese "
+            "living la mamá de Marisol está viva, con sus ochenta y siete años y su "
+            "malvón amarillo, porque nadie le ha dicho todavía lo contrario.\n\n"
+            "Hay una cosa rara con el miedo a esta hora, y es que no se parece al "
+            "miedo. Marisol no está temblando ni llorando. Está haciendo cálculos, "
+            "con una frialdad que después va a recordar con desconcierto, como si "
+            "otra persona más práctica se hubiera hecho cargo del cuerpo mientras "
+            "ella termina de entender.\n\n"
+            "**Sexto tono.**\n\n"
+            "Piensa —y esto le da vergüenza incluso mientras lo está pensando— en "
+            "si alcanzará a llegar. Piensa en la carretera a esta hora. Piensa en "
+            "el trabajo, en que hoy era la reunión de las nueve, y se odia un "
+            "segundo por haber pensado en la reunión de las nueve.\n\n"
+            "**Séptimo tono.**\n\n"
+            "Después piensa en su hermano, que vive a seis cuadras de la mamá y que "
+            "seguramente es quien está llamando. Y piensa, con una claridad que no "
+            "esperaba, que si es él quien llama entonces él ya lo sabe, y que lleva "
+            "sabiéndolo un rato, y que en algún momento de este último rato tomó el "
+            "teléfono y decidió a quién llamar primero. Le da una pena enorme su "
+            "hermano marcando ese número.\n\n"
+            "Piensa también, y esto le sorprende, en la Ely: en que si es lo que "
+            "ella cree, la Ely lleva doce años llegando a esa casa a las ocho y hoy "
+            "va a llegar a las ocho igual, sin saber, con su bolso y su termo, y "
+            "alguien va a tener que salir a la puerta a decírselo. Marisol no la ha "
+            "llamado nunca por teléfono. No tiene idea de si tiene su número.\n\n"
+            "**Octavo tono.**\n\n"
+            "Se levanta. La casa está helada. Camina por el pasillo pisando el "
+            "borde de las tablas que no suenan, una costumbre de cuando los niños "
+            "eran chicos y que nunca perdió, y en esos cinco metros le pasa por "
+            "encima algo que no es un recuerdo sino todos los recuerdos a la vez, "
+            "mal ordenados: una mano en la frente para ver si tenía fiebre, un "
+            "delantal, la voz de su mamá diciéndole que se apurara, el olor de la "
+            "casa de Rancagua en invierno.\n\n"
+            "**Noveno tono.**\n\n"
+            "Levanta el teléfono. Se lo lleva a la oreja y no dice nada, porque no "
+            "se acuerda de cómo se empieza.\n\n"
+            "Y al otro lado su hermano dice, rápido, casi atropellándose:\n\n"
+            "—No es lo que estái pensando."
+        ),
+    },
+    {
+        "key": "perros_calle",
+        "title": "El problema no son los perros",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. El año, las obligaciones y los objetivos "
+            "declarados de la Ley 21.020 se verificaron antes de escribir el texto; el "
+            "efecto de los perros sobre la fauna nativa se describe en términos "
+            "generales, sin atribuir cifras a estudios concretos."
+        ),
+        "body": (
+            "**El problema no son los perros**\n\n"
+            "En la esquina hay un perro durmiendo al sol. Tiene collar, está gordo "
+            "y todo el mundo en la cuadra sabe cómo se llama. Nadie sabe de quién "
+            "es. Si uno preguntara, tres o cuatro vecinos dirían que le dan comida, "
+            "y ninguno diría que es suyo. Esa escena, que se repite en casi "
+            "cualquier barrio del país, contiene casi todo lo que hay que entender "
+            "del asunto.\n\n"
+            "Conviene empezar por una distinción que casi nunca se hace, porque las "
+            "conversaciones sobre el tema mezclan tres situaciones distintas. Está "
+            "el perro sin dueño ni cuidados, que vive de la basura. Está el perro "
+            "comunitario, como el de la esquina: tiene nombre, comida y varios "
+            "responsables parciales, ninguno de los cuales lo lleva al veterinario. "
+            "Y está el perro con casa, con dueño y con plato, que sale por la "
+            "mañana, anda todo el día en la calle y vuelve a dormir.\n\n"
+            "El tercer caso es el que más sorprende cuando se lo señala, y es "
+            "probablemente el más numeroso. Buena parte de los perros que uno ve "
+            "sueltos no son perros abandonados: son perros que tienen a alguien que "
+            "los quiere y que los deja salir. Eso cambia por completo el problema, "
+            "porque una política dirigida a recoger animales sin dueño no toca a "
+            "ese grupo, y porque quienes los dejan salir no se sienten aludidos por "
+            "ninguna campaña sobre abandono.\n\n"
+            "Chile tiene desde 2017 una ley sobre el asunto: la Ley 21.020 de "
+            "tenencia responsable de mascotas y animales de compañía, más conocida "
+            "por el nombre de un perro. Obliga a registrar e identificar a los "
+            "animales con un dispositivo electrónico, prohíbe el abandono y declara "
+            "entre sus objetivos proteger la salud pública, la seguridad de las "
+            "personas, el medio ambiente y las áreas silvestres protegidas.\n\n"
+            "Es una ley razonable y no es una solución completa, por un motivo "
+            "simple: registrar no es esterilizar. Un perro identificado que sigue "
+            "saliendo y sigue reproduciéndose produce exactamente los mismos "
+            "cachorros que antes, con la diferencia de que ahora sabemos de quién "
+            "es. La identificación sirve para atribuir responsabilidad, que no es "
+            "poco, pero no interviene en el número. Y la aplicación quedó en manos "
+            "de los municipios, que tienen presupuestos muy distintos entre sí, de "
+            "modo que la misma ley funciona de maneras muy distintas según la "
+            "comuna.\n\n"
+            "Hay además una consecuencia de la que casi no se habla en las "
+            "ciudades, y que aparece con fuerza apenas uno se aleja de ellas. Los "
+            "perros cazan. No por hambre, no por maldad y no solo los abandonados: "
+            "cazar es parte de su conducta, y un perro alimentado en su casa "
+            "persigue igual a un pudú, a un zorro o a las aves que anidan en el "
+            "suelo. En zonas rurales y en los bordes de áreas protegidas, ese "
+            "comportamiento es un problema serio de conservación, y proviene en "
+            "buena medida de animales con dueño que salen a andar.\n\n"
+            "Este es el punto donde la conversación suele descarrilar, porque suena "
+            "a acusación contra la gente que quiere a su perro. No lo es. Es una "
+            "constatación sobre lo que un perro hace cuando está suelto, y no tiene "
+            "nada que ver con cuánto lo quieren en su casa. Un perro puede ser "
+            "excelente compañía, dormir adentro, comer bien y matar un pudú el "
+            "mismo martes.\n\n"
+            "Conviene decir además que el problema no se reparte parejo. Un perro "
+            "suelto en un condominio con reja produce molestias; el mismo perro "
+            "suelto en una población sin veredas, donde los niños juegan en la "
+            "calle, produce mordeduras. Las cifras de atenciones por mordedura no "
+            "se distribuyen al azar por la ciudad, y tampoco se distribuyen al azar "
+            "los operativos de esterilización. Quien vive donde hay más perros "
+            "sueltos suele ser quien tiene menos acceso a la medida que los "
+            "reduciría.\n\n"
+            "¿Qué funciona, entonces? La esterilización masiva y gratuita es la "
+            "medida con mejor respaldo, y tiene dos problemas prácticos que "
+            "conviene decir de frente: es cara y es lenta. Sus efectos se ven en "
+            "años, no en meses, y durante ese tiempo la situación en la calle se ve "
+            "igual, lo que la vuelve políticamente poco atractiva frente a "
+            "soluciones que se notan de inmediato.\n\n"
+            "El retiro de animales, en cambio, se nota de inmediato y no resuelve. "
+            "Donde queda espacio y comida disponible, aparecen otros perros: el "
+            "problema no era el individuo que se retiró, sino las condiciones que "
+            "permitían que hubiera uno ahí. Es el mismo error de quien limpia una "
+            "fuga de agua en vez de cerrar la llave.\n\n"
+            "Vale la pena terminar por el lenguaje, que en este tema hace daño. "
+            "Hablar de «perros callejeros» pone el problema del lado del animal, "
+            "como si fuera una categoría natural, algo que ciertos perros son. No "
+            "lo es. Cada perro en la calle llegó ahí por una decisión humana "
+            "concreta: alguien no esterilizó, alguien regaló una camada sin "
+            "preguntar, alguien abrió la puerta en la mañana. La frase correcta es "
+            "más larga y bastante menos cómoda, porque no permite mirar la esquina "
+            "y sentir lástima sin sentir nada más."
+        ),
+    },
+    {
         "key": "presentacion_martes",
         "title": "Presentación de «Los martes»",
         "kind": "no_literario",
@@ -26090,6 +26267,339 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Nueve tonos' ----------
+    _ql(
+        "nueve_tonos", "lec_localizar", "facil",
+        "Según el relato, ¿de qué habló Marisol con su madre en la última "
+        "conversación?",
+        "De un malvón que se estaba poniendo amarillo",
+        "Fue el domingo y duró once minutos. Su madre le explicó con detalle por "
+        "qué la planta del pasillo se ponía amarilla, y ella escuchó a medias, "
+        "haciendo otra cosa.\n\nEl relato vuelve sobre ese dato enseguida: en la "
+        "oscuridad de esa mañana, esos once minutos le parecen «lo más "
+        "extraordinario que le ha pasado en la vida».",
+        [
+            ("De la caída que había tenido en el baño", "Esa caída ocurrió en marzo y se cuenta aparte."),
+            ("De la mujer que la acompaña durante el día", "La Ely aparece en los pensamientos de Marisol, no en esa charla."),
+            ("De un viaje que Marisol pensaba hacer a Rancagua", "El relato no menciona ningún viaje planeado."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_localizar", "facil",
+        "Según el relato, ¿qué ocurrió en marzo?",
+        "Su madre se cayó en el baño y no se rompió nada",
+        "Ese día el teléfono sonó a las dos de la tarde y Marisol contestó al "
+        "primer timbre, «ya en el auto antes de colgar».\n\nEl episodio está en el "
+        "relato para contrastar con el de ahora: a las dos de la tarde uno contesta "
+        "rápido, a las seis cuarenta uno se queda mirando el techo.",
+        [
+            ("Su madre dejó de hablarse con la tía Nora", "Ese distanciamiento es antiguo y ella nunca supo por qué."),
+            ("Su hermano se cambió a seis cuadras de la casa", "El relato no fecha el cambio de casa del hermano."),
+            ("La Ely empezó a acompañarla durante el día", "La Ely lleva doce años llegando a esa casa."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_localizar", "medio",
+        "Según el relato, ¿qué recuerda Marisol al caminar por el pasillo?",
+        "Muchos recuerdos a la vez, mal ordenados",
+        "El relato precisa que no es un recuerdo sino «todos los recuerdos a la "
+        "vez»: una mano en la frente para ver si tenía fiebre, un delantal, la voz "
+        "de su madre diciéndole que se apurara, el olor de la casa de Rancagua en "
+        "invierno.\n\nTodo eso ocurre en cinco metros de pasillo.",
+        [
+            ("La conversación del domingo sobre el malvón", "Ese recuerdo aparece antes, en el tercer tono."),
+            ("El día en que su madre se cayó en el baño", "La caída se recuerda en un momento anterior del relato."),
+            ("Las preguntas que nunca alcanzó a hacerle", "Esas preguntas aparecen en otro momento del relato."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_interpretar", "facil",
+        "¿Qué quiere decir el relato al afirmar que hay dos teléfonos distintos "
+        "«aunque sean el mismo»?",
+        "Que la hora del llamado cambia lo que uno espera oír",
+        "Un teléfono que suena a mediodía y uno que suena a las seis cuarenta no "
+        "anuncian lo mismo, y el relato sostiene que cualquiera con padres viejos "
+        "lo sabe.\n\nPor eso agrega que uno lleva años esperando ese llamado sin "
+        "decírselo a nadie, «con la misma naturalidad con que uno revisa el gas "
+        "antes de acostarse».",
+        [
+            ("Que Marisol tiene dos aparatos telefónicos en la casa", "El teléfono es uno solo, sobre la mesa del arrimo."),
+            ("Que su madre y su hermano la llaman a horas distintas", "La comparación no distingue entre quiénes llaman."),
+            ("Que de noche las llamadas se escuchan más fuerte", "El relato no comenta el volumen del timbre."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_interpretar", "medio",
+        "¿Por qué Marisol no se levanta durante los primeros tonos?",
+        "Porque mientras suena, la noticia todavía no existe",
+        "El relato lo dice sin rodeos, y precisa que ella lo sabe: «está pensando "
+        "estas cosas para no levantarse».\n\nMientras el teléfono suena en el "
+        "living, en ese living su madre sigue viva, con sus ochenta y siete años y "
+        "su malvón amarillo, «porque nadie le ha dicho todavía lo contrario».",
+        [
+            ("Porque no logra despertarse del todo a esa hora", "El relato aclara que estaba despierta antes del segundo tono."),
+            ("Porque supone que se trata de un número equivocado", "Desde el primer momento piensa que este es el llamado."),
+            ("Porque espera que su hermano vuelva a llamar más tarde", "No hay ninguna expectativa de un segundo llamado."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_interpretar", "medio",
+        "¿Qué revela que Marisol piense en la reunión de las nueve?",
+        "Que la cabeza sigue funcionando aunque ella no quiera",
+        "El relato marca su reacción inmediata: se odia un segundo por haber "
+        "pensado en eso.\n\nMás adelante lo formula de manera más precisa, cuando "
+        "describe su propia frialdad «como si otra persona más práctica se hubiera "
+        "hecho cargo del cuerpo mientras ella termina de entender».",
+        [
+            ("Que le importa más su trabajo que su familia", "El relato presenta ese pensamiento como involuntario."),
+            ("Que todavía no ha comprendido lo que ocurre", "Lo comprendió desde el primer tono: por eso no se levanta."),
+            ("Que necesita organizar el día antes de viajar", "No hay ninguna planificación: hay un pensamiento suelto."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_interpretar", "dificil",
+        "¿Qué relación hay entre la duración de lo narrado y la extensión del "
+        "relato?",
+        "Nueve tonos ocupan casi todas sus páginas",
+        "Lo que sucede afuera cabe en unos segundos: un teléfono suena y alguien "
+        "termina por contestar.\n\nEl relato ocupa ese lapso con una vida entera: "
+        "una caída en marzo, una conversación sobre una planta, tres preguntas que "
+        "nunca se hicieron, un hermano marcando el número, doce años de la Ely "
+        "llegando a las ocho. La desproporción es la estructura, y muestra cuánto "
+        "puede caber en el instante previo a saber algo.",
+        [
+            ("El relato resume varios años en unos pocos párrafos", "Los años aparecen dentro de un lapso de segundos, no como resumen."),
+            ("El relato avanza más rápido a medida que se acerca el final", "Los tonos mantienen el mismo ritmo hasta el noveno."),
+            ("El relato ocurre durante toda una mañana de agosto", "Termina antes de que Marisol alcance a decir una palabra."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_evaluar", "facil",
+        "¿Con qué propósito el relato numera los tonos como si fueran títulos?",
+        "Para marcar cuánto tiempo real está transcurriendo",
+        "Sin esas marcas, la extensión de los pensamientos haría suponer que pasan "
+        "minutos u horas.\n\nCada tono recuerda al lector que sigue siendo la misma "
+        "llamada, y convierte el conteo en una cuenta regresiva: el noveno es el "
+        "último que el relato le concede.",
+        [
+            ("Para separar los distintos recuerdos de la protagonista", "Los recuerdos no se reparten uno por tono."),
+            ("Para indicar que la llamada se cortó varias veces", "Es un solo llamado, que suena sin interrupción."),
+            ("Para señalar que el hermano llamó nueve veces", "Son nueve tonos de una misma llamada."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_evaluar", "medio",
+        "¿Qué aporta que Marisol piense en la Ely?",
+        "Muestra que ya está organizando lo que vendrá después",
+        "Ese pensamiento no es un recuerdo ni un temor: es un problema práctico que "
+        "aún no ocurre. La Ely va a llegar a las ocho igual, con su bolso y su "
+        "termo, y alguien tendrá que salir a decírselo.\n\nEl relato agrega un "
+        "detalle que remata el punto: Marisol no la ha llamado nunca por teléfono y "
+        "no sabe si tiene su número.",
+        [
+            ("Revela que la Ely es responsable de lo ocurrido", "El relato no atribuye responsabilidad a nadie."),
+            ("Indica que Marisol confía poco en esa mujer", "Nada sugiere desconfianza: solo distancia."),
+            ("Anticipa que la Ely será quien dé la noticia", "Ocurre al revés: alguien tendrá que dársela a ella."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al terminar antes de que se conozca la noticia?",
+        "Deja claro que su asunto eran los segundos previos",
+        "Si el relato continuara, pasaría a tratar sobre lo que ocurrió, y todo lo "
+        "anterior se leería como una antesala.\n\nAl cortar en la frase del "
+        "hermano, lo que queda en pie es lo que el texto estuvo describiendo "
+        "durante nueve tonos: el estado de alguien que ya sabe que algo pasó y "
+        "todavía no sabe qué. La noticia habría cerrado ese estado, y el relato "
+        "prefiere sostenerlo.",
+        [
+            ("Sugiere que la noticia no era tan grave como parecía", "La frase final abre esa posibilidad sin confirmarla."),
+            ("Muestra que Marisol se equivocó al preocuparse tanto", "El relato no descalifica lo que ella pensó."),
+            ("Indica que la conversación continuó fuera del relato", "Que siga o no fuera del texto no explica el corte."),
+        ],
+    ),
+    _ql(
+        "nueve_tonos", "lec_evaluar", "dificil",
+        "¿Qué efecto tiene la frase con que el hermano interrumpe el silencio?",
+        "Reabre todo lo que el relato había dado por sabido",
+        "Durante nueve tonos, Marisol y el lector construyeron la misma "
+        "certeza.\n\nAl decir «no es lo que estái pensando», el hermano no informa "
+        "nada: solo avisa que la certeza estaba equivocada, o al menos apurada. "
+        "Todo lo que la protagonista pensó sigue siendo verdadero sobre ella, y "
+        "deja de ser verdadero sobre lo ocurrido.",
+        [
+            ("Confirma que la madre de Marisol acaba de morir", "La frase apunta expresamente en la dirección contraria."),
+            ("Revela que el hermano llamaba por un asunto suyo", "El relato no informa el motivo de la llamada."),
+            ("Muestra que el hermano no sabía cómo dar la noticia", "Habla rápido y directo, sin rodeos."),
+        ],
+    ),
+    # ---------- 'El problema no son los perros' ----------
+    _ql(
+        "perros_calle", "lec_localizar", "facil",
+        "Según la lectura, ¿qué tres situaciones distintas se suelen mezclar?",
+        "Perro sin dueño, perro comunitario y perro con casa",
+        "El texto describe cada una: el que vive de la basura, el que tiene nombre "
+        "y varios responsables parciales pero ninguno que lo lleve al veterinario, "
+        "y el que tiene dueño y plato y sale a andar todo el día.\n\nLa distinción "
+        "importa porque cada situación exige una medida distinta.",
+        [
+            ("Perro urbano, perro rural y perro de áreas protegidas", "El texto distingue por su relación con las personas, no por lugar."),
+            ("Perro abandonado, perro perdido y perro robado", "Ni los perdidos ni los robados aparecen en el artículo."),
+            ("Perro con microchip, perro sin registrar y perro esterilizado", "Esas categorías provienen de la ley, no de la distinción inicial."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_localizar", "facil",
+        "Según la lectura, ¿qué obliga a hacer la Ley 21.020?",
+        "Registrar e identificar a los animales de compañía",
+        "La identificación se realiza con un dispositivo electrónico, y la misma "
+        "ley prohíbe el abandono.\n\nEntre sus objetivos declarados figuran "
+        "proteger la salud pública, la seguridad de las personas, el medio ambiente "
+        "y las áreas silvestres protegidas.",
+        [
+            ("Esterilizar a todos los animales de compañía", "El texto subraya que registrar no es esterilizar."),
+            ("Mantener a los perros dentro de la vivienda", "La ley citada no impone esa obligación en el artículo."),
+            ("Entregar los animales sueltos a los municipios", "El retiro se discute aparte, y no como mandato legal."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_localizar", "medio",
+        "Según la lectura, ¿por qué el retiro de animales no resuelve el problema?",
+        "Porque donde queda espacio y comida aparecen otros",
+        "El texto lo formula con precisión: el problema no era el individuo que se "
+        "retiró, sino las condiciones que permitían que hubiera uno ahí.\n\nY lo "
+        "compara con limpiar una fuga de agua en vez de cerrar la llave. Es una "
+        "medida que se nota de inmediato y no cambia nada de fondo.",
+        [
+            ("Porque los municipios no cuentan con lugares donde llevarlos", "El texto no menciona falta de recintos."),
+            ("Porque la ley prohíbe retirar animales de la vía pública", "La ley citada no contiene esa prohibición."),
+            ("Porque los animales retirados vuelven al mismo lugar", "Lo que aparecen son otros perros, no los mismos."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_interpretar", "facil",
+        "¿Por qué el emisor dice que el tercer caso «cambia por completo el "
+        "problema»?",
+        "Porque esos perros tienen dueño y nadie se siente aludido",
+        "Una política dirigida a recoger animales sin dueño no toca a ese grupo, "
+        "que probablemente es el más numeroso.\n\nY las campañas contra el abandono "
+        "tampoco los alcanzan, porque quienes dejan salir a su perro no se "
+        "consideran parte del problema que esas campañas describen.",
+        [
+            ("Porque esos perros son más agresivos que los demás", "El texto no atribuye más agresividad a ningún grupo."),
+            ("Porque son los que menos aparecen en los registros", "El registro no es lo que distingue a ese tercer grupo."),
+            ("Porque suelen vivir en zonas rurales y no en ciudades", "El caso descrito es urbano: salen en la mañana y vuelven."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que «registrar no es esterilizar»?",
+        "Que identificar permite atribuir culpa, no reducir el número",
+        "Un perro identificado que sigue saliendo y reproduciéndose produce los "
+        "mismos cachorros que antes, «con la diferencia de que ahora sabemos de "
+        "quién es».\n\nEl emisor reconoce que atribuir responsabilidad no es poco. "
+        "Lo que sostiene es que esa medida no interviene en la variable que "
+        "importa.",
+        [
+            ("Que la ley fue redactada sin asesoría técnica", "El texto la califica de razonable, no de mal hecha."),
+            ("Que el registro obligatorio resulta demasiado caro", "El costo se discute a propósito de la esterilización."),
+            ("Que los microchips no permiten ubicar al animal", "El artículo no trata sobre la utilidad técnica del chip."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_interpretar", "medio",
+        "¿Qué desigualdad describe el emisor entre distintos sectores de la ciudad?",
+        "Donde hay más perros sueltos hay menos operativos",
+        "El texto contrapone dos escenarios: un perro suelto en un condominio con "
+        "reja produce molestias, y el mismo perro en una población sin veredas, "
+        "donde los niños juegan en la calle, produce mordeduras.\n\nY agrega que ni "
+        "las mordeduras ni los operativos de esterilización se reparten al azar por "
+        "la ciudad.",
+        [
+            ("En los sectores con reja hay menos perros con dueño", "El texto no compara la tenencia entre sectores."),
+            ("La ley se aplica solo en las comunas más pobladas", "Lo que varía es el presupuesto municipal, no la cobertura legal."),
+            ("Las mordeduras se registran solo en algunos servicios", "El artículo no discute cómo se registran las atenciones."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_interpretar", "dificil",
+        "¿Por qué el emisor insiste en que la caza no depende de cuánto quieran al "
+        "perro?",
+        "Porque es una conducta del animal, no una falta de cuidado",
+        "El texto separa dos cosas que la conversación mezcla: el trato que recibe "
+        "un perro en su casa y lo que hace cuando anda suelto.\n\nPor eso cierra el "
+        "párrafo con una frase deliberadamente incómoda: un perro puede ser "
+        "excelente compañía, dormir adentro, comer bien y matar un pudú el mismo "
+        "martes. El emisor sabe que suena a acusación y aclara que no lo es.",
+        [
+            ("Porque los perros hambrientos cazan más que los alimentados", "El texto dice justamente que no depende del hambre."),
+            ("Porque quienes tienen perros no suelen visitar áreas protegidas", "El problema descrito ocurre con perros que salen de sus casas."),
+            ("Porque la conducta se corrige con un adiestramiento adecuado", "El artículo no menciona el adiestramiento como solución."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor abre el texto con el perro de la esquina?",
+        "Porque esa escena contiene el problema completo",
+        "El perro tiene collar, está gordo y todos saben su nombre, y sin embargo "
+        "nadie diría que es suyo.\n\nEl emisor lo dice explícitamente: esa escena, "
+        "repetida en casi cualquier barrio, «contiene casi todo lo que hay que "
+        "entender del asunto». Es el caso intermedio que la distinción posterior "
+        "viene a nombrar.",
+        [
+            ("Para mostrar que los vecinos se hacen cargo del animal", "Precisamente ninguno lo lleva al veterinario."),
+            ("Para denunciar el abandono de animales en las ciudades", "El perro de la esquina no está abandonado."),
+            ("Para explicar cómo se aplica la ley en los barrios", "La ley aparece varios párrafos después."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_evaluar", "medio",
+        "¿Por qué el emisor advierte que la esterilización masiva es «políticamente "
+        "poco atractiva»?",
+        "Porque sus efectos tardan años en poder verse",
+        "El texto la presenta como la medida con mejor respaldo y no le esconde las "
+        "dos objeciones prácticas: es cara y es lenta.\n\nDurante ese tiempo la "
+        "calle se ve igual, mientras que el retiro de animales se nota de inmediato "
+        "aunque no resuelva. El problema no es que la medida funcione mal, sino "
+        "cuándo se nota que funcionó.",
+        [
+            ("Porque la población se opone a que esterilicen a sus perros", "El texto no menciona ninguna resistencia de la gente."),
+            ("Porque los municipios prefieren no intervenir en el asunto", "El artículo alude a sus presupuestos, no a su voluntad."),
+            ("Porque los resultados dependen de cada comuna", "Esa variación se atribuye a la aplicación de la ley."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_evaluar", "dificil",
+        "¿Qué objeta el emisor a la expresión «perros callejeros»?",
+        "Que presenta como natural algo que decidieron personas",
+        "La expresión sugiere una categoría propia del animal, «algo que ciertos "
+        "perros son».\n\nEl emisor lo niega y enumera decisiones concretas detrás "
+        "de cada caso: alguien no esterilizó, alguien regaló una camada sin "
+        "preguntar, alguien abrió la puerta en la mañana. La palabra corta el "
+        "vínculo entre el perro de la esquina y quien lo puso ahí.",
+        [
+            ("Que resulta ofensiva para los animales que viven en la calle", "La objeción es de precisión, no de respeto hacia el animal."),
+            ("Que confunde a los perros comunitarios con los abandonados", "Esa confusión se trata antes, con otra finalidad."),
+            ("Que fue reemplazada por otro término en la legislación", "El texto no informa qué términos usa la ley."),
+        ],
+    ),
+    _ql(
+        "perros_calle", "lec_evaluar", "dificil",
+        "¿Qué anuncia el título respecto de lo que hará el artículo?",
+        "Que va a mover el problema desde el animal a las personas",
+        "Todo el texto trabaja ese desplazamiento. Distingue tres situaciones según "
+        "quién se hace cargo, muestra que la ley atribuye responsabilidad sin "
+        "reducir el número, señala que la caza no depende del perro sino de que "
+        "esté suelto, y termina objetando una expresión que vuelve el asunto una "
+        "propiedad del animal.\n\nEl último párrafo lo confirma: la formulación "
+        "correcta «no permite mirar la esquina y sentir lástima sin sentir nada "
+        "más».",
+        [
+            ("Que los perros de la calle no representan un problema real", "El texto documenta varios problemas concretos."),
+            ("Que la responsabilidad recae por completo en los municipios", "Los municipios aparecen como un factor entre varios."),
+            ("Que el asunto se resolverá con una ley mejor redactada", "El emisor no propone modificar la legislación vigente."),
+        ],
+    ),
     # ---------- 'Presentación de «Los martes»' ----------
     _ql(
         "presentacion_martes", "lec_localizar", "facil",
