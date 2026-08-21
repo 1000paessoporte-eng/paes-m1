@@ -268,11 +268,44 @@ def test_ningun_texto_entra_por_menos_preguntas_que_el_minimo() -> None:
 
 
 def test_un_ensayo_de_lectura_se_parece_a_la_prueba_oficial() -> None:
-    """7 textos y 65 preguntas es la forma que declara el temario."""
+    """7 u 8 textos y 65 preguntas es la forma que declara el temario."""
     elegidas = _select_questions(_banco_de_lectura(20, 9), [], 65, Subject.LECTORA)
     bloques = _bloques(elegidas)
-    assert 6 <= len(bloques) <= 9
-    assert 60 <= len(elegidas) <= 65
+    assert 7 <= len(bloques) <= 8
+    assert len(elegidas) == 65
+
+
+def test_un_ensayo_de_lectura_entrega_las_preguntas_que_promete() -> None:
+    """El botón "Completo" dice "la prueba oficial entera": tiene que darla.
+
+    Este control existe porque el armador entregaba de menos y nadie lo notaba.
+    Cuando tomaba textos ENTEROS y cortaba al quedar menos preguntas que el
+    mínimo, un banco con textos de nueve y once preguntas hacía que pedir 65
+    devolviera entre 60 y 65 —y solo un cuarto de las veces las 65— en 6
+    lecturas en vez de 7 u 8. El test recorre los tres formatos que ofrece la
+    aplicación y varios bancos, porque el defecto dependía de cómo se mezclaban
+    los tamaños de los textos.
+    """
+    for por_texto in (9, 10, 11):
+        banco = _banco_de_lectura(20, por_texto)
+        for pedidas in (20, 34, 65):
+            for _ in range(20):
+                elegidas = _select_questions(banco, [], pedidas, Subject.LECTORA)
+                assert len(elegidas) == pedidas, (
+                    f"pidió {pedidas} con textos de {por_texto} "
+                    f"y entregó {len(elegidas)}"
+                )
+
+
+def test_un_ensayo_de_lectura_no_apila_las_preguntas_en_pocos_textos() -> None:
+    """Un texto con doce preguntas no existe en la prueba oficial.
+
+    El rango medido en las pruebas del DEMRE va de 7 a 11 preguntas por
+    lectura. Repartir de a nueve mantiene los bloques dentro de esa forma
+    aunque el banco tenga textos más largos.
+    """
+    elegidas = _select_questions(_banco_de_lectura(20, 11), [], 65, Subject.LECTORA)
+    assert all(n <= 11 for _, n in _bloques(elegidas))
 
 
 def test_dos_ensayos_no_traen_siempre_los_mismos_textos() -> None:
