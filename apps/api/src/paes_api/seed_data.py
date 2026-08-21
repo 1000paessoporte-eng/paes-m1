@@ -21383,6 +21383,183 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "aburrimiento_horas",
+        "title": "En defensa de las horas vacías",
+        "kind": "no_literario",
+        "source_note": (
+            "Ensayo original de 1000paes. El estado de la discusión sobre aburrimiento "
+            "y creatividad se describe en términos generales y el propio texto advierte "
+            "que la evidencia disponible es acotada; no se atribuyen cifras ni "
+            "resultados a estudios concretos."
+        ),
+        "body": (
+            "**En defensa de las horas vacías**\n\n"
+            "Hay una frase que circula desde hace algunos años y que suena bien: el "
+            "aburrimiento estimula la creatividad. Aparece en columnas sobre "
+            "crianza, en charlas y en consejos para dejar el teléfono, casi siempre "
+            "acompañada de una escena de infancia rural donde alguien se aburría "
+            "mirando el techo y de ahí salía una novela. Vale la pena mirarla de "
+            "cerca, porque es un buen ejemplo de una idea probablemente cierta que "
+            "se está defendiendo con malos argumentos.\n\n"
+            "Empecemos por definir. El aburrimiento no es cansancio ni tristeza ni "
+            "falta de cosas que hacer. Es un estado bastante específico: uno quiere "
+            "estar haciendo algo que le importe y no encuentra qué, y esa mezcla de "
+            "energía disponible y ausencia de destino produce una incomodidad "
+            "característica. Por eso se puede estar aburrido en una fiesta y no "
+            "estarlo solo en una pieza.\n\n"
+            "Visto así, el aburrimiento se parece menos a un vacío que a una señal. "
+            "Avisa que lo que uno está haciendo no vale la pena, del mismo modo que "
+            "el hambre avisa otra cosa. Y como toda señal, su función no es ser "
+            "agradable: es ser lo bastante molesta como para que uno cambie de "
+            "actividad. Quien elimina la molestia sin cambiar nada silenció una "
+            "alarma.\n\n"
+            "Ahí aparece la relación con el teléfono, que es la parte que a todos "
+            "interesa. Un teléfono resuelve el aburrimiento en cuatro segundos y "
+            "sin esfuerzo, y lo hace con algo que casi siempre es más entretenido "
+            "que lo que uno estaba haciendo. Eso no es un defecto del aparato: es "
+            "exactamente para lo que está diseñado. El resultado, sin embargo, es "
+            "que la señal se apaga sin haber informado nada, y la actividad que la "
+            "disparó queda intacta, esperando.\n\n"
+            "Hasta aquí, un argumento razonable. El problema empieza cuando se lo "
+            "estira. Decir que el aburrimiento «estimula la creatividad» sugiere "
+            "una relación bastante más directa de la que nadie ha logrado "
+            "establecer. Lo que existe son estudios acotados, con tareas de "
+            "laboratorio y resultados modestos, de esos que muestran una diferencia "
+            "pequeña entre dos grupos en una prueba de usos alternativos de un "
+            "objeto. Es un punto de partida razonable para investigar y es muy poco "
+            "para sostener una filosofía de crianza.\n\n"
+            "Conviene además notar la trampa de la escena nostálgica. Quien "
+            "recuerda haberse aburrido en las tardes de su infancia y haber "
+            "inventado juegos está recordando, casi siempre, las tardes en que "
+            "inventó algo. Las otras —las que pasó dando vueltas, peleando con sus "
+            "hermanos o mirando la pared sin que ocurriera nada— no dejaron "
+            "recuerdo, porque no hubo nada que recordar. La memoria selecciona los "
+            "casos exitosos y después uno los usa como si fueran la regla.\n\n"
+            "Y hay un contraejemplo incómodo del que casi no se habla. El "
+            "aburrimiento crónico no aparece asociado a nada bueno: se lo encuentra "
+            "en contextos de encierro, en trabajos sin sentido y en situaciones de "
+            "escaso control sobre el propio tiempo, y ahí no produce novelas. Quien "
+            "defiende las virtudes del aburrimiento suele estar pensando en una "
+            "tarde de sábado, no en un turno de ocho horas vigilando una pantalla "
+            "que no cambia. La misma palabra está nombrando dos experiencias muy "
+            "distintas.\n\n"
+            "Hay todavía otra confusión que conviene separar, y es entre aburrirse "
+            "y estar solo con los propios pensamientos. No son lo mismo, y a mucha "
+            "gente la segunda le resulta bastante más difícil que la primera. Una "
+            "parte del atractivo del teléfono no está en lo entretenido que sea, "
+            "sino en que ocupa el lugar donde, si no, aparecerían asuntos "
+            "pendientes. Cualquier recomendación que ignore eso está subestimando "
+            "lo que efectivamente pide: no diez minutos de aburrimiento, sino diez "
+            "minutos a solas con uno.\n\n"
+            "¿Qué queda en pie, entonces? Algo más modesto y probablemente más "
+            "útil. No que el aburrimiento sea valioso, sino que el hueco donde "
+            "ocurre lo es: cierta cantidad de tiempo sin destino asignado, sin "
+            "estímulo entrante, es la condición para que aparezcan las cosas que "
+            "uno no fue a buscar. Las ideas que llegan en la ducha o caminando no "
+            "llegan porque uno estuviera aburrido, sino porque ese rato no estaba "
+            "ocupado por nadie más.\n\n"
+            "Puesto así, la recomendación cambia de forma. No es «abúrrete», que es "
+            "una instrucción rara, sino algo bastante más simple: no llenar cada "
+            "intersticio del día. Los ocho minutos en la fila, los veinte del "
+            "trayecto, la media hora antes de dormir. Nadie tiene que padecerlos; "
+            "basta con no cubrirlos automáticamente.\n\n"
+            "Vale la pena terminar reconociendo lo que este texto no puede "
+            "demostrar. No hay aquí una prueba de que quien deje el teléfono en el "
+            "bolsillo vaya a tener ideas mejores, y quien la ofrezca está "
+            "prometiendo más de lo que sabe. Lo único que se sostiene es una "
+            "observación sobre el mecanismo: una señal que se apaga sin ser "
+            "atendida deja de cumplir su función, y eso vale para el aburrimiento "
+            "igual que para cualquier otra alarma de la casa."
+        ),
+    },
+    {
+        "key": "la_que_firma",
+        "title": "La que firma",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes son "
+            "ficticios."
+        ),
+        "body": (
+            "**La que firma**\n\n"
+            "A los once años, Javiera aprendió que su abuela firmaba con la mano "
+            "izquierda apoyada en la mesa, muy despacio, como quien dibuja. Que "
+            "hacía las letras separadas. Y que después de firmar se quedaba un "
+            "segundo mirando el papel, comprobando algo.\n\n"
+            "Fue esa vez del formulario del consultorio. La señora de la ventanilla "
+            "explicó tres cosas seguidas, rápido, y la abuela dijo que sí a las "
+            "tres, y cuando salieron a la calle le preguntó a Javiera qué había "
+            "dicho. Javiera se lo repitió completo, sin equivocarse en nada, y "
+            "sintió por primera vez una cosa nueva y agradable en el pecho.\n\n"
+            "Desde entonces fue ella.\n\n"
+            "A los trece ya tenía sistema. Una carpeta azul con separadores: salud, "
+            "colegio, casa, otros. Sabía que en el consultorio conviene ir un "
+            "martes, que los papeles de la beca se piden en marzo aunque digan "
+            "abril, y que a los funcionarios hay que decirles buenos días primero y "
+            "el problema después, porque si uno parte por el problema se ponen a la "
+            "defensiva. Lo aprendió sola, equivocándose.\n\n"
+            "Su abuela la llevaba a todas partes y no decía casi nada. En las salas "
+            "de espera se sentaba derecha, con la cartera en la falda, mientras "
+            "Javiera hablaba. Al salir le decía siempre lo mismo: «qué buena eres "
+            "para esto». Y Javiera, a los trece, se lo creía entero, y era cierto, "
+            "y le gustaba.\n\n"
+            "A los quince empezó a notar otra cosa, que no supo nombrar hasta mucho "
+            "después.\n\n"
+            "Fue el año en que llegó la carta de la deuda del agua. Javiera la leyó "
+            "dos veces, entendió el monto, entendió el plazo, y entendió también "
+            "que no había manera de pagarlo ese mes. Y se dio cuenta de que ella "
+            "era la única persona en esa casa que lo sabía. Su abuela estaba en la "
+            "cocina, tranquila, porque la carta estaba en manos de Javiera y las "
+            "cosas en manos de Javiera se resolvían.\n\n"
+            "Esa noche no durmió. No por la deuda, que se arregló después con un "
+            "convenio. Por otra cosa: por la sospecha de que ser buena para esto "
+            "significaba, en la práctica, ser la única que se preocupaba.\n\n"
+            "A los dieciséis dejó de contarle todo a su abuela. No por ocultarle "
+            "nada grave: por eficiencia. Para qué explicarle un trámite que ella "
+            "igual iba a hacer sola. Empezó a decir «ya está» en vez de contar el "
+            "problema, y su abuela empezó a preguntar menos, y las dos se "
+            "acomodaron a eso con una facilidad que ninguna comentó.\n\n"
+            "En ese tiempo Javiera tenía la carpeta azul en la mochila, todo el "
+            "día, todos los días. La llevaba al colegio. Alguna vez, en una clase, "
+            "sacó un papel de ahí para anotar y una compañera le preguntó qué era "
+            "eso, y ella dijo que cosas de la casa, y la conversación se murió "
+            "sola, porque a los dieciséis nadie tiene una carpeta con separadores.\n\n"
+            "Hubo una tarde, ese mismo año, en que su abuela quiso ir sola a pagar "
+            "la luz. Javiera le dijo que la acompañaba y ella dijo que no, que era "
+            "ahí mismo. Volvió cuarenta minutos después con el comprobante y lo "
+            "dejó sobre la mesa sin decir nada, y Javiera lo revisó de reojo antes "
+            "de guardarlo, y después se quedó pensando en por qué lo había "
+            "revisado.\n\n"
+            "A los diecisiete la aceptaron en una universidad en Concepción.\n\n"
+            "La abuela lloró de orgullo, llamó a las vecinas, contó la historia "
+            "cuatro veces esa semana y una quinta el domingo. Y Javiera, que "
+            "llevaba seis años resolviendo todo, hizo lo que sabía hacer: se sentó "
+            "a calcular. Pasajes. Arriendo. Cuánto costaría venir un fin de semana "
+            "al mes. Qué pasa con las horas de consultorio si ella no está. A quién "
+            "se le pide el favor de acompañarla, y cuántas veces se puede pedir ese "
+            "favor antes de que incomode.\n\n"
+            "Y llegó a una conclusión que la dejó sentada un rato largo con la "
+            "calculadora en la mano: que el problema no era el dinero.\n\n"
+            "El problema era que ella se había vuelto una parte del funcionamiento "
+            "de esa casa. No una ayuda: una pieza. Y que irse no significaba dejar "
+            "de ayudar, sino sacar una pieza de un mecanismo que llevaba seis años "
+            "armándose alrededor de ella, sin que nadie lo decidiera, un formulario "
+            "a la vez.\n\n"
+            "El sábado antes de irse ordenó la carpeta azul completa, hoja por "
+            "hoja. Puso los convenios adelante, con las fechas escritas con plumón "
+            "en el borde. Agregó una hoja nueva al principio, con los teléfonos y "
+            "con una instrucción corta para cada trámite, en frases de una línea. "
+            "Le dejó dos separadores en blanco por si aparecía algo.\n\n"
+            "El domingo se la pasó a su abuela, sobre la mesa del comedor, y le "
+            "explicó las primeras cuatro hojas.\n\n"
+            "Su abuela la escuchó hasta el final, con las manos quietas. Después se "
+            "puso los lentes, se acercó la carpeta, y empezó a leer la primera "
+            "página en voz baja, despacio, moviendo un poco los labios, como quien "
+            "vuelve a algo que hizo hace mucho tiempo y quiere asegurarse de que "
+            "todavía sabe."
+        ),
+    },
+    {
         "key": "cuadro_falso",
         "title": "Lo que delata a un cuadro falso",
         "kind": "no_literario",
@@ -26619,6 +26796,338 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'En defensa de las horas vacías' ----------
+    _ql(
+        "aburrimiento_horas", "lec_localizar", "facil",
+        "Según la lectura, ¿en qué consiste el aburrimiento?",
+        "En querer hacer algo que importe y no encontrar qué",
+        "El emisor lo distingue del cansancio, de la tristeza y de la falta de "
+        "cosas que hacer.\n\nEs esa mezcla de energía disponible y ausencia de "
+        "destino la que produce la incomodidad característica, y por eso se puede "
+        "estar aburrido en una fiesta y no estarlo solo en una pieza.",
+        [
+            ("En no tener a mano ninguna actividad que hacer ahora", "El texto separa expresamente el aburrimiento de esa situación."),
+            ("En sentir cansancio después de un día largo", "El cansancio es una de las cosas de las que lo distingue."),
+            ("En estar solo durante mucho tiempo seguido", "El texto aclara que estar solo y aburrirse no son lo mismo."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué tipo de evidencia respalda la relación entre "
+        "aburrimiento y creatividad?",
+        "Estudios acotados con resultados modestos",
+        "El texto los describe como investigaciones de laboratorio que muestran una "
+        "diferencia pequeña entre dos grupos en pruebas del tipo «usos alternativos "
+        "de un objeto».\n\nSu juicio es preciso: un punto de partida razonable para "
+        "investigar y muy poco para sostener una filosofía de crianza.",
+        [
+            ("Estudios amplios y de resultados contundentes", "El texto describe justamente lo contrario."),
+            ("Testimonios de personas que crearon obras importantes", "Esas escenas son las que el emisor cuestiona."),
+            ("No existe ninguna investigación sobre el asunto", "El artículo menciona estudios, aunque acotados."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_localizar", "medio",
+        "Según la lectura, ¿en qué contextos aparece el aburrimiento crónico?",
+        "En el encierro y en trabajos sin sentido",
+        "El texto agrega un tercer contexto: las situaciones de escaso control "
+        "sobre el propio tiempo.\n\nY observa que ahí «no produce novelas», de modo "
+        "que quien elogia las virtudes del aburrimiento suele estar pensando en una "
+        "tarde de sábado y no en un turno de ocho horas frente a una pantalla que "
+        "no cambia.",
+        [
+            ("En las tardes de infancia sin actividades", "Ese es el caso favorable que el emisor discute."),
+            ("En las esperas breves de la vida diaria", "Esos intersticios aparecen al final y con otro sentido."),
+            ("En quienes pasan mucho tiempo con el teléfono", "El teléfono se presenta como lo que apaga el aburrimiento."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al comparar el aburrimiento con una alarma?",
+        "Que su molestia cumple la función de hacer cambiar algo",
+        "El texto sostiene que el aburrimiento avisa que lo que uno hace no vale la "
+        "pena, «del mismo modo que el hambre avisa otra cosa».\n\nComo toda señal, "
+        "no está hecha para ser agradable sino para resultar molesta, y de ahí la "
+        "conclusión: quien elimina la molestia sin cambiar nada silenció una "
+        "alarma.",
+        [
+            ("Que resulta más ruidoso de lo que la gente cree", "La comparación no trata sobre su intensidad."),
+            ("Que anuncia algún problema de salud que conviene atender", "El texto no le atribuye ningún significado médico."),
+            ("Que se activa por error la mayoría de las veces", "El emisor le reconoce una función informativa real."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_interpretar", "medio",
+        "Según el emisor, ¿qué falla tiene la escena nostálgica de la infancia?",
+        "Que solo se recuerdan las tardes en que se inventó algo",
+        "El texto describe las otras: las que se pasaron dando vueltas, peleando "
+        "con los hermanos o mirando la pared sin que ocurriera nada.\n\nEsas no "
+        "dejaron recuerdo «porque no hubo nada que recordar». La memoria guarda los "
+        "casos exitosos, y después esos casos se usan como si fueran la regla.",
+        [
+            ("Que ocurrió en un mundo rural que ya no existe", "El emisor no objeta el contexto de esas escenas."),
+            ("Que quienes la cuentan exageran bastante lo que les pasó", "No los acusa de exagerar, sino de recordar de manera sesgada."),
+            ("Que los niños de hoy no podrían aburrirse igual", "El texto no compara a los niños de una época y otra."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_interpretar", "medio",
+        "¿Qué distinción plantea el emisor entre aburrirse y estar a solas con los "
+        "propios pensamientos?",
+        "Que la segunda es más difícil para mucha gente",
+        "El texto sugiere que parte del atractivo del teléfono no está en lo "
+        "entretenido que sea, sino en que «ocupa el lugar donde, si no, aparecerían "
+        "asuntos pendientes».\n\nDe ahí su advertencia: cualquier recomendación que "
+        "ignore eso subestima lo que realmente está pidiendo, que no son diez "
+        "minutos de aburrimiento sino diez minutos a solas con uno.",
+        [
+            ("Que estar solo produce siempre más ideas nuevas", "El texto no atribuye más ideas a la soledad."),
+            ("Que aburrirse acompañado resulta prácticamente imposible", "El propio texto menciona aburrirse en una fiesta."),
+            ("Que ambas experiencias terminan por confundirse", "El emisor las separa para no confundirlas."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_interpretar", "dificil",
+        "¿Qué conclusión más acotada propone el emisor en reemplazo de la frase "
+        "inicial?",
+        "Que lo valioso es el hueco, no el aburrimiento en sí",
+        "El texto lo formula con cuidado: cierta cantidad de tiempo sin destino "
+        "asignado y sin estímulo entrante es la condición para que aparezcan «las "
+        "cosas que uno no fue a buscar».\n\nPor eso agrega que las ideas que llegan "
+        "en la ducha o caminando no llegan porque uno estuviera aburrido, sino "
+        "porque ese rato no estaba ocupado por nadie más.",
+        [
+            ("Que el aburrimiento debería buscarse a propósito", "El emisor llama «instrucción rara» al mandato de aburrirse."),
+            ("Que la creatividad depende de tener horarios libres", "El texto habla de intersticios, no de tiempo libre planificado."),
+            ("Que el teléfono impide por completo tener ideas", "El artículo evita hacer esa afirmación."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor dice que examina «una idea probablemente "
+        "cierta»?",
+        "Para separar la idea de los argumentos que la defienden",
+        "El emisor no anuncia que va a refutar la frase inicial: anuncia que va a "
+        "revisar cómo se la sostiene.\n\nEsa distinción ordena el ensayo completo, "
+        "que primero explica el mecanismo con simpatía y después desarma la escena "
+        "nostálgica, la evidencia disponible y el uso del término.",
+        [
+            ("Para reconocer que no está del todo seguro de su propia tesis", "Su tesis final se enuncia con claridad."),
+            ("Para anticipar que terminará descartando la frase", "No la descarta: la reformula en términos más acotados."),
+            ("Para evitar discutir con quienes la repiten", "Discute con ellos durante todo el ensayo."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor frente al teléfono?",
+        "Ecuánime, pues no lo trata como un defecto ni un culpable",
+        "El texto afirma que resolver el aburrimiento en cuatro segundos «no es un "
+        "defecto del aparato: es exactamente para lo que está diseñado».\n\nLo que "
+        "describe no es una acusación sino una consecuencia: la señal se apaga sin "
+        "haber informado nada y la actividad que la disparó queda intacta.",
+        [
+            ("Alarmada, pues considera que está dañando a una generación", "El ensayo no hace ninguna afirmación de ese tipo."),
+            ("Indiferente, pues cree que su uso no cambia nada", "Describe un efecto concreto sobre el mecanismo."),
+            ("Nostálgica, pues prefiere el mundo anterior a su aparición", "El texto desconfía justamente de las escenas nostálgicas."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_evaluar", "dificil",
+        "¿Por qué el emisor sostiene que la palabra «aburrimiento» nombra dos "
+        "experiencias distintas?",
+        "Porque una tarde libre y un turno vigilando no se parecen",
+        "El texto contrapone los dos casos y observa que las virtudes del "
+        "aburrimiento se defienden pensando siempre en el primero.\n\nEn contextos "
+        "de encierro, de trabajo sin sentido o de poco control sobre el propio "
+        "tiempo, el mismo estado no produce nada bueno. Usar una sola palabra para "
+        "ambos permite atribuirle al segundo los beneficios que alguien observó en "
+        "el primero.",
+        [
+            ("Porque la definición del término ha cambiado con los años", "El texto no discute la historia de la palabra."),
+            ("Porque cada persona experimenta el aburrimiento distinto", "La distinción es entre situaciones, no entre personas."),
+            ("Porque el aburrimiento breve no llega a ser aburrimiento", "El emisor no niega ese carácter a las esperas cortas."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_evaluar", "dificil",
+        "¿Qué reconoce el emisor en el último párrafo del ensayo?",
+        "Que no puede probar lo que muchos prometen con este tema",
+        "El texto declara que aquí no hay ninguna demostración de que dejar el "
+        "teléfono en el bolsillo produzca mejores ideas, y agrega que «quien la "
+        "ofrezca está prometiendo más de lo que sabe».\n\nLo único que sostiene es "
+        "una observación sobre el mecanismo, y esa modestia final es coherente con "
+        "el reproche que el ensayo le hizo a la frase del comienzo.",
+        [
+            ("Que su tesis contradice lo que muestran los estudios", "El texto no se opone a los estudios: acota su alcance."),
+            ("Que la recomendación final es imposible de cumplir", "La presenta como simple: no llenar cada intersticio."),
+            ("Que el aburrimiento no cumple ninguna función real", "Toda la argumentación sostiene que sí cumple una."),
+        ],
+    ),
+    # ---------- 'La que firma' ----------
+    _ql(
+        "la_que_firma", "lec_localizar", "facil",
+        "Según el relato, ¿cómo organizaba Javiera la carpeta azul a los trece "
+        "años?",
+        "Con separadores: salud, colegio, casa y otros",
+        "El relato la presenta como parte de un sistema completo que ella misma "
+        "armó: sabía que en el consultorio conviene ir un martes, que los papeles "
+        "de la beca se piden en marzo aunque digan abril, y que a los funcionarios "
+        "hay que saludarlos antes de plantear el problema.\n\nTodo eso lo aprendió "
+        "sola, equivocándose.",
+        [
+            ("Por orden de llegada de cada documento", "El relato describe una clasificación por tema, no por fecha."),
+            ("Separando lo urgente de lo que podía esperar", "Ese criterio no aparece en el relato."),
+            ("Con una sección para cada integrante de la familia", "Los separadores corresponden a ámbitos, no a personas."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_localizar", "facil",
+        "Según el relato, ¿qué le decía siempre la abuela al salir de los trámites?",
+        "Que era muy buena para esas cosas",
+        "Lo decía cada vez, al salir, mientras Javiera tenía trece años y se lo "
+        "creía entero.\n\nEl relato agrega dos precisiones que después pesan: que "
+        "era cierto y que a ella le gustaba.",
+        [
+            ("Que algún día tendría que aprender a hacerlo sola", "El relato no menciona ninguna advertencia de ese tipo."),
+            ("Que se lo agradecía y que la ayudaría a estudiar", "La abuela no aparece ofreciendo nada a cambio."),
+            ("Que la próxima vez iría ella misma a la ventanilla", "Durante años la abuela se mantiene en silencio en las salas."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_localizar", "medio",
+        "Según el relato, ¿qué hizo Javiera con la carpeta antes de irse?",
+        "La ordenó y le agregó una hoja con instrucciones",
+        "Puso los convenios adelante, con las fechas escritas con plumón en el "
+        "borde, y sumó al principio una hoja con los teléfonos y una instrucción de "
+        "una línea para cada trámite.\n\nTambién dejó dos separadores en blanco "
+        "«por si aparecía algo».",
+        [
+            ("La guardó para llevársela a Concepción", "Ocurre lo contrario: se la entrega a su abuela."),
+            ("La dejó tal como estaba, sin modificarla", "Dedicó un sábado completo a reordenarla."),
+            ("La reemplazó por una carpeta nueva y más grande", "El relato no menciona ninguna carpeta nueva."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_interpretar", "facil",
+        "¿Qué sintió Javiera la primera vez, al repetirle a su abuela lo que dijo "
+        "la ventanilla?",
+        "Algo nuevo y agradable, que la dejó a cargo",
+        "El relato lo describe como «una cosa nueva y agradable en el pecho», y de "
+        "inmediato anota la consecuencia en una sola línea: «desde entonces fue "
+        "ella».\n\nEl comienzo del arreglo, entonces, no fue una imposición: fue "
+        "algo que a ella le gustó.",
+        [
+            ("Miedo de equivocarse frente a los funcionarios", "El relato subraya que no se equivocó en nada."),
+            ("Vergüenza por la dificultad de su abuela", "No hay ningún indicio de vergüenza en esa escena."),
+            ("Rabia porque nadie más se hacía cargo", "Esa incomodidad aparece recién a los quince años."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_interpretar", "medio",
+        "¿Qué descubre Javiera a los quince, con la carta de la deuda del agua?",
+        "Que era la única en la casa que sabía del problema",
+        "El relato precisa que no perdió el sueño por la deuda, que después se "
+        "arregló con un convenio.\n\nLo que la desveló fue la sospecha que la "
+        "acompañaría desde entonces: que ser buena para esto significaba, en la "
+        "práctica, ser la única que se preocupaba.",
+        [
+            ("Que su abuela le ocultaba las cuentas de la casa hacía rato", "La abuela está tranquila porque confía en ella, no porque oculte."),
+            ("Que no podía resolver todos los problemas sola", "La deuda se resolvió: el problema era otro."),
+            ("Que su abuela no entendía lo que decían las cartas", "Eso ya lo sabía desde los once años."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_interpretar", "medio",
+        "¿Qué muestra que a los dieciséis empezara a decir «ya está» en vez de "
+        "contar el problema?",
+        "Que el arreglo se profundizó sin que nadie lo decidiera",
+        "El relato aclara que no lo hacía por ocultar nada grave, sino por "
+        "eficiencia: para qué explicar un trámite que igual iba a hacer sola.\n\nY "
+        "describe el otro lado del movimiento: su abuela empezó a preguntar menos, "
+        "«y las dos se acomodaron a eso con una facilidad que ninguna comentó».",
+        [
+            ("Que Javiera había perdido la paciencia con su abuela", "El relato no muestra ninguna irritación entre las dos."),
+            ("Que los trámites se habían vuelto bastante más complicados", "La dificultad de los trámites no cambia en el relato."),
+            ("Que la abuela le pidió que no la molestara con eso", "No hay ninguna petición de su parte."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_interpretar", "dificil",
+        "¿Qué distinción hace Javiera entre ser «una ayuda» y ser «una pieza»?",
+        "Que sin ella el mecanismo de la casa deja de funcionar",
+        "Una ayuda se puede suspender: lo que se hacía antes vuelve a "
+        "hacerse.\n\nUna pieza no, y por eso el relato dice que irse «no "
+        "significaba dejar de ayudar, sino sacar una pieza de un mecanismo». Ese "
+        "mecanismo, agrega, se armó alrededor de ella durante seis años, sin que "
+        "nadie lo decidiera, «un formulario a la vez».",
+        [
+            ("Que su aporte era mucho más valioso de lo que creía", "El relato no plantea una cuestión de valoración."),
+            ("Que su abuela no le agradecía todo lo que hacía", "El agradecimiento aparece varias veces en el relato."),
+            ("Que otras personas podrían reemplazarla sin problema", "El cálculo sobre los favores muestra lo contrario."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_evaluar", "facil",
+        "¿Qué efecto tiene que el relato avance por edades: once, trece, quince, "
+        "diecisiete?",
+        "Deja ver el cambio sin que nadie lo explique",
+        "Cada salto entrega una escena y el lector tiene que reconstruir lo que "
+        "pasó entremedio.\n\nNadie declara que Javiera se cansó ni que el arreglo "
+        "se volvió pesado: se ve en los gestos, en la carpeta que va a todas "
+        "partes, en el «ya está» que reemplaza a la conversación.",
+        [
+            ("Muestra que el problema se resolvió con los años", "El problema se agrava en cada etapa, no se resuelve."),
+            ("Indica que los trámites cambiaron con el tiempo", "Los trámites siguen siendo los mismos a lo largo del relato."),
+            ("Permite comparar a Javiera con otras jóvenes de su edad", "Solo hay una comparación breve, con una compañera de curso."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_evaluar", "medio",
+        "¿Qué revela el episodio del comprobante de la luz?",
+        "Que Javiera ya no confía en que su abuela lo resuelva",
+        "La abuela va sola, vuelve con el comprobante y lo deja sobre la mesa sin "
+        "decir nada.\n\nJaviera lo revisa de reojo antes de guardarlo, y el relato "
+        "deja el gesto en suspenso con una sola frase: «después se quedó pensando "
+        "en por qué lo había revisado». El propio personaje se sorprende de lo que "
+        "se volvió automático.",
+        [
+            ("Que la abuela intentaba demostrarle que podía hacerlo sola", "El relato no le atribuye ninguna intención a ese gesto."),
+            ("Que el pago se había hecho de manera incorrecta", "Nada indica que hubiera un error en el comprobante."),
+            ("Que Javiera había dejado de ocuparse de esos trámites", "Sigue guardando el comprobante en su carpeta."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_evaluar", "dificil",
+        "¿Qué sentido tiene que Javiera le entregue la carpeta a su abuela?",
+        "Traspasa el sistema, no solamente los papeles",
+        "Lo que le entrega no es un archivo: son los convenios adelante con las "
+        "fechas marcadas, los teléfonos, una instrucción de una línea por trámite y "
+        "dos separadores en blanco.\n\nEs decir, seis años de aprendizaje "
+        "convertidos en algo que otra persona puede usar. Y los separadores vacíos "
+        "dicen lo que ninguna de las dos dice: que van a aparecer cosas nuevas y "
+        "que ya no va a estar ella.",
+        [
+            ("Se desliga de la responsabilidad antes de irse", "El sábado entero dedicado a ordenarla apunta a lo contrario."),
+            ("Le devuelve algo que en realidad siempre fue suyo", "La carpeta la armó Javiera desde los trece años."),
+            ("Le demuestra que los trámites eran más simples de lo que parecían", "Las instrucciones muestran justamente su complejidad."),
+        ],
+    ),
+    _ql(
+        "la_que_firma", "lec_evaluar", "dificil",
+        "¿Qué sugiere la imagen final de la abuela leyendo en voz baja?",
+        "Que puede hacerlo, y que llevaba mucho sin intentarlo",
+        "El relato la describe con precisión: se pone los lentes, acerca la carpeta "
+        "y lee moviendo un poco los labios, «como quien vuelve a algo que hizo hace "
+        "mucho tiempo y quiere asegurarse de que todavía sabe».\n\nLa escena reabre "
+        "todo el relato. Durante seis años nadie se preguntó qué podía hacer la "
+        "abuela, porque Javiera lo hacía mejor y más rápido, y esa eficiencia fue "
+        "ocupando un espacio que quizá no estaba vacío.",
+        [
+            ("Que nunca aprendió realmente a leer y escribir", "La escena muestra lo contrario: está leyendo."),
+            ("Que no entiende las instrucciones que le dejaron", "El relato no informa ninguna dificultad de comprensión."),
+            ("Que se despide de su nieta a través de ese gesto", "El gesto se dirige a la carpeta, no a la despedida."),
+        ],
+    ),
     # ---------- 'Lo que delata a un cuadro falso' ----------
     _ql(
         "cuadro_falso", "lec_localizar", "facil",
