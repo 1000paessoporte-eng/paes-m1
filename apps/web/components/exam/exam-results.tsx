@@ -7,6 +7,19 @@ import { CompartirResultado } from "@/components/exam/compartir-resultado";
 import { TextoRico } from "@/components/texto-rico";
 import type { BreakdownItem, ExamResult, ExamReview, ReviewQuestion } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
+import { BarraProgreso } from "@/components/ui/barra-progreso";
+
+/** El piso de la escala PAES. Un puntaje nunca baja de acá. */
+const PUNTAJE_MINIMO = 100;
+const PUNTAJE_MAXIMO = 1000;
+
+/** Dónde cae un puntaje dentro de la escala, en porcentaje. */
+function porcentajeEnLaEscala(puntaje: number | null | undefined): number {
+  if (puntaje == null) return 0;
+  const acotado = Math.min(PUNTAJE_MAXIMO, Math.max(PUNTAJE_MINIMO, puntaje));
+  return ((acotado - PUNTAJE_MINIMO) / (PUNTAJE_MAXIMO - PUNTAJE_MINIMO)) * 100;
+}
 
 type Filtro = "todas" | "incorrectas" | "omitidas";
 
@@ -67,27 +80,61 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
   return (
     <div className="mx-auto max-w-3xl">
       {/* ── Puntaje ─────────────────────────────────────────────────── */}
+      {/* Terminar un ensayo es el momento del producto: son dos horas y veinte
+          de trabajo y el número que sale decide cómo se siente el resto del
+          día. Aparecía de golpe, sin ceremonia. Ahora el puntaje sube por la
+          escala y las cifras lo acompañan.
+
+          Sube DESDE 100 y no desde 0: la escala PAES empieza en 100, así que
+          contar desde cero muestra durante un segundo puntajes que no existen. */}
       <section className="rounded-2xl border border-border bg-surface p-6 text-center">
         <p className="text-sm text-muted">Puntaje estimado</p>
-        <p className={cn("mt-1 text-6xl font-bold tabular-nums", nivel.clase)}>
-          {result.estimated_score}
+        <p className={cn("font-display mt-1 text-6xl font-bold", nivel.clase)}>
+          <NumeroAnimado
+            valor={result.estimated_score ?? PUNTAJE_MINIMO}
+            desde={PUNTAJE_MINIMO}
+            duracion={1.4}
+          />
         </p>
         <p className={cn("mt-1 font-semibold", nivel.clase)}>{nivel.etiqueta}</p>
-        <p className="mt-3 text-sm text-muted">
+
+        {/* La escala entera, dibujada. "780" no significa nada para quien no
+            sabe que el máximo es 1000: verlo sobre el rango lo ubica sin una
+            palabra de explicación. */}
+        <div className="mx-auto mt-4 max-w-sm">
+          <BarraProgreso
+            porcentaje={porcentajeEnLaEscala(result.estimated_score)}
+            color="var(--color-prueba-actual, var(--accent))"
+            etiqueta={`Puntaje ${result.estimated_score ?? "—"} en la escala de 100 a 1000`}
+            alCargar
+          />
+          <div className="mt-1.5 flex justify-between text-[11px] text-muted tabular-nums">
+            <span>100</span>
+            <span>1000</span>
+          </div>
+        </div>
+
+        <p className="mt-4 text-sm text-muted">
           {result.correct} de {result.total_questions} correctas ({logro}%)
         </p>
 
         <div className="mt-5 grid grid-cols-3 gap-2 text-sm">
           <div className="rounded-lg bg-success/10 p-3">
-            <p className="text-2xl font-bold tabular-nums text-success">{result.correct}</p>
+            <p className="font-display text-2xl font-bold text-success">
+              <NumeroAnimado valor={result.correct} duracion={1} />
+            </p>
             <p className="text-success">correctas</p>
           </div>
           <div className="rounded-lg bg-danger/10 p-3">
-            <p className="text-2xl font-bold tabular-nums text-danger">{result.incorrect}</p>
+            <p className="font-display text-2xl font-bold text-danger">
+              <NumeroAnimado valor={result.incorrect} duracion={1} />
+            </p>
             <p className="text-danger">incorrectas</p>
           </div>
           <div className="rounded-lg bg-surface-hover p-3">
-            <p className="text-2xl font-bold tabular-nums">{result.omitted}</p>
+            <p className="font-display text-2xl font-bold">
+              <NumeroAnimado valor={result.omitted} duracion={1} />
+            </p>
             <p className="text-muted">omitidas</p>
           </div>
         </div>
@@ -357,7 +404,7 @@ function Desglose({ titulo, items }: { titulo: string; items: BreakdownItem[] })
     <section className="rounded-xl border border-border bg-surface p-4">
       <h2 className="mb-3 text-sm font-semibold">{titulo}</h2>
       <ul className="space-y-2.5">
-        {ordenar(items).map((item) => (
+        {ordenar(items).map((item, i) => (
           <li key={item.name}>
             <div className="mb-1 flex items-baseline justify-between gap-2 text-sm">
               <span className="truncate">{item.name}</span>
@@ -365,19 +412,22 @@ function Desglose({ titulo, items }: { titulo: string; items: BreakdownItem[] })
                 {item.correct}/{item.total}
               </span>
             </div>
-            <div className="h-2 w-full overflow-hidden rounded-full bg-surface-hover">
-              <div
-                className={cn(
-                  "h-full rounded-full",
-                  item.percentage >= 70
-                    ? "bg-success"
-                    : item.percentage >= 40
-                      ? "bg-warning"
-                      : "bg-danger"
-                )}
-                style={{ width: `${item.percentage}%` }}
-              />
-            </div>
+            {/* Se llenan al entrar, una detrás de otra: el orden ya es
+                significativo --el eje más flojo va primero-- y verlas crecer
+                en ese orden es la lectura que queremos que haga. */}
+            <BarraProgreso
+              porcentaje={item.percentage}
+              color={
+                item.percentage >= 70
+                  ? "var(--success)"
+                  : item.percentage >= 40
+                    ? "var(--warning)"
+                    : "var(--danger)"
+              }
+              etiqueta={`${item.name}: ${item.correct} de ${item.total}`}
+              delay={i * 0.08}
+              alCargar
+            />
           </li>
         ))}
       </ul>
