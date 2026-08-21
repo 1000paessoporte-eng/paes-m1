@@ -14,6 +14,8 @@ import {
   type PracticeQuestion,
 } from "@/lib/api";
 import { getClientToken, loginHref } from "@/lib/auth";
+import { AvisoDesbloqueo } from "@/components/skill-tree/aviso-desbloqueo";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
 
 const LABELS = ["A", "B", "C", "D", "E"];
 
@@ -39,6 +41,8 @@ export function PracticeRunner({ code }: { code: string }) {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [sessionCorrect, setSessionCorrect] = useState(0);
   const [unlockedThisSession, setUnlockedThisSession] = useState<string[]>([]);
+  /** Lo que se acaba de abrir, para avisarlo EN EL MOMENTO y no al final. */
+  const [reciénAbiertos, setReciénAbiertos] = useState<string[]>([]);
   const [lastResult, setLastResult] = useState<PracticeAnswerResult | null>(null);
 
   const load = useCallback(async () => {
@@ -89,6 +93,7 @@ export function PracticeRunner({ code }: { code: string }) {
           ...prev,
           ...res.newly_unlocked.filter((n) => !prev.includes(n)),
         ]);
+        setReciénAbiertos(res.newly_unlocked);
       }
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) router.push(loginHref(pathname));
@@ -159,7 +164,10 @@ export function PracticeRunner({ code }: { code: string }) {
       : 0;
     return (
       <div className="mx-auto flex max-w-lg flex-col items-center rounded-2xl border border-border bg-surface px-6 py-16 text-center">
-        <span className="text-5xl font-semibold tracking-tight text-accent">{pct}%</span>
+        <AvisoDesbloqueo nodos={reciénAbiertos} />
+        <span className="font-display text-5xl font-semibold tracking-tight">
+          <NumeroAnimado valor={pct} duracion={1} sufijo="%" />
+        </span>
         <p className="mt-2 text-sm text-muted">
           {sessionCorrect} de {questions.length} correctas en esta ronda de{" "}
           {nodeName}
@@ -230,6 +238,7 @@ export function PracticeRunner({ code }: { code: string }) {
 
   return (
     <div className="flex flex-col gap-6">
+      <AvisoDesbloqueo nodos={reciénAbiertos} />
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3">
         <div>
           <p className="text-xs font-medium text-muted">Practicando</p>

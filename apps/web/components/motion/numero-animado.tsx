@@ -16,11 +16,17 @@ import { useEffect, useRef, useState } from "react";
  */
 export function NumeroAnimado({
   valor,
+  desde = 0,
   duracion = 1,
   sufijo = "",
   className,
 }: {
   valor: number;
+  /**
+   * Desde dónde cuenta. Existe por el puntaje PAES: su escala empieza en 100,
+   * así que contar desde 0 muestra durante un segundo cifras que no existen.
+   */
+  desde?: number;
   duracion?: number;
   sufijo?: string;
   className?: string;
@@ -45,13 +51,13 @@ export function NumeroAnimado({
   useEffect(() => {
     if (quieto || !visible) return;
     // `animate` actualiza en cada cuadro, fuera del ciclo de render.
-    const controles = animate(0, valor, {
+    const controles = animate(desde, valor, {
       duration: duracion,
       ease: [0.16, 1, 0.3, 1],
       onUpdate: (v) => setMostrado(Math.round(v)),
     });
     return () => controles.stop();
-  }, [valor, visible, quieto, duracion]);
+  }, [valor, desde, visible, quieto, duracion]);
 
   return (
     <span ref={ref} className={className}>
