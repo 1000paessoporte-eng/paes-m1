@@ -21383,6 +21383,179 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "abejas_simbolo",
+        "title": "Las abejas equivocadas",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. El carácter manejado de la abeja de miel, "
+            "la diversidad de especies silvestres, su papel en la polinización, las "
+            "causas documentadas del declive y la competencia por recursos florales se "
+            "describen en términos generales, sin atribuir cifras a estudios concretos."
+        ),
+        "body": (
+            "**Las abejas equivocadas**\n\n"
+            "Hay una frase que aparece en afiches, en camisetas y en publicaciones "
+            "compartidas por millones de personas: hay que salvar a las abejas. La "
+            "causa es buena y la frase apunta al animal equivocado, lo que la "
+            "convierte en un caso interesante para cualquiera que quiera entender "
+            "cómo se pierde un buen argumento.\n\n"
+            "La abeja que aparece en esos afiches, con rayas amarillas y negras, es "
+            "casi siempre la abeja de miel. Y la abeja de miel es, en términos "
+            "prácticos, ganado. Es una especie manejada por personas: vive en "
+            "colmenas que alguien construyó, se alimenta y se medica cuando hace "
+            "falta, se compra, se vende y se traslada en camión de un cultivo a "
+            "otro según la temporada. Su número no depende de la naturaleza, sino "
+            "de cuántas colmenas decidan mantener los apicultores.\n\n"
+            "Eso no significa que a las abejas de miel no les pase nada. Les pasan "
+            "cosas serias: enfermedades, parásitos, pérdidas invernales "
+            "importantes. Significa otra cosa, más precisa: que su situación se "
+            "parece a la de una actividad productiva con problemas y no a la de una "
+            "especie en riesgo de desaparecer. Cuando muere un rebaño, el ganadero "
+            "compra otro. Es un problema económico grave y no es una extinción.\n\n"
+            "Mientras tanto, las abejas que sí están en problemas casi no aparecen "
+            "en las campañas, en buena parte porque no se les parecen. En el mundo "
+            "existen miles de especies de abejas, y la enorme mayoría no vive en "
+            "colmenas, no produce miel y no tiene reina. Son solitarias: una hembra "
+            "excava un túnel en el suelo o aprovecha un hueco en la madera, pone "
+            "sus huevos, deja polen para las crías y muere. Muchas son pequeñas, "
+            "oscuras y pasan por moscas a los ojos de cualquiera.\n\n"
+            "Esas especies hacen buena parte del trabajo de polinización, y en "
+            "varios cultivos lo hacen mejor que la abeja de miel, porque visitan "
+            "flores que a esta no le interesan o porque vibran para soltar el polen "
+            "de ciertas plantas. No se pueden trasladar en camión, no se pueden "
+            "comprar y no se reponen cuando desaparecen de un lugar: dependen de "
+            "que ese lugar siga teniendo dónde anidar y qué comer.\n\n"
+            "Y ahí está el punto más incómodo del asunto. Instalar muchas colmenas "
+            "de abejas de miel en una zona no ayuda a las abejas silvestres: "
+            "compite con ellas. Miles de individuos manejados recorriendo las "
+            "mismas flores reducen el alimento disponible para las especies "
+            "locales, que son bastante menos numerosas y que no tienen quien las "
+            "alimente en invierno. Una campaña que termina con la instalación de "
+            "colmenas urbanas puede estar produciendo, con toda la buena intención, "
+            "el efecto contrario al que anuncia.\n\n"
+            "Conviene decir con claridad qué sí está documentado como causa del "
+            "declive de los polinizadores silvestres, porque no es una sola cosa: "
+            "la pérdida de hábitat cuando desaparecen los bordes, los cercos vivos "
+            "y los terrenos sin uso; el uso de pesticidas; las enfermedades, que a "
+            "veces saltan desde las colmenas manejadas; y el cambio en el clima, "
+            "que desacopla el momento en que florece una planta del momento en que "
+            "aparece el insecto que la visitaba.\n\n"
+            "Que sean varias causas a la vez explica por qué las soluciones simples "
+            "decepcionan. Un hotel de insectos en un balcón es simpático y no "
+            "reemplaza a un metro cuadrado de suelo desnudo donde una abeja "
+            "excavadora pueda anidar. Sembrar flores ayuda si son especies que los "
+            "insectos locales reconocen, y sirve bastante menos si son ornamentales "
+            "importadas elegidas por su color.\n\n"
+            "Nada de esto es un argumento contra la apicultura, que es una "
+            "actividad legítima y que produce alimento. Es un argumento contra usar "
+            "a la abeja de miel como símbolo de un problema que no es el suyo. El "
+            "símbolo importa: orienta las donaciones, las políticas y el entusiasmo "
+            "de la gente, y cuando apunta mal, todo eso llega a un lugar donde no "
+            "hacía tanta falta.\n\n"
+            "Hay, con todo, una versión razonable de la campaña, y conviene decirla "
+            "para no dejar al lector sin nada que hacer. Es la que traduce "
+            "«salvemos a las abejas» por algo bastante menos épico: dejar florecer "
+            "un pedazo de pasto, no barrer hasta el último rincón de tierra "
+            "desnuda, preferir especies locales al elegir qué plantar y usar menos "
+            "veneno en el patio. Ninguna de esas cosas cabe en un afiche, y todas "
+            "se refieren a los insectos que efectivamente lo necesitan.\n\n"
+            "Queda una lección que excede a las abejas. Una causa correcta puede "
+            "sostenerse sobre un ejemplo equivocado durante años, sobre todo si el "
+            "ejemplo es fotogénico y el correcto no lo es. Las abejas solitarias no "
+            "tienen afiche porque son grises, no pican y no producen nada que se "
+            "pueda vender en un frasco. La atención pública tiene sus propios "
+            "criterios, y casi nunca coinciden con los de la biología."
+        ),
+    },
+    {
+        "key": "micros_juntas",
+        "title": "Por qué las micros se juntan",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. El fenómeno descrito y las medidas que se "
+            "emplean para corregirlo corresponden a lo establecido en el estudio del "
+            "transporte público y se presentan en términos generales, sin atribuir "
+            "cifras a estudios concretos."
+        ),
+        "body": (
+            "**Por qué las micros se juntan**\n\n"
+            "Uno espera veinte minutos en el paradero y después pasan tres "
+            "seguidas. La primera viene repleta, la segunda a medias y la tercera "
+            "casi vacía. Es tan universal que se ha vuelto un chiste, y su "
+            "explicación no tiene nada que ver con la flojera de los conductores ni "
+            "con la mala suerte de quien espera. Es un problema de sistema, y lo "
+            "interesante es que ocurre incluso cuando todos hacen su trabajo "
+            "perfectamente.\n\n"
+            "Imaginemos una línea donde los buses salen cada diez minutos exactos, "
+            "con conductores puntuales y sin tacos. Todo funciona hasta que ocurre "
+            "cualquier cosa mínima: un semáforo que se pone en rojo, un pasajero "
+            "que demora en pagar, una silla de ruedas que hay que subir. Ese bus "
+            "pierde dos minutos.\n\n"
+            "Y aquí empieza el mecanismo. Ese bus llega dos minutos tarde al "
+            "paradero siguiente, y en el paradero siguiente lo esperan doce minutos "
+            "de pasajeros en vez de diez. Como hay más gente subiendo, la detención "
+            "dura un poco más. Entonces sale con tres minutos de atraso en vez de "
+            "dos. En el paradero siguiente encontrará trece minutos de pasajeros "
+            "acumulados, se demorará todavía más, y así sucesivamente.\n\n"
+            "Mientras tanto, al bus que viene detrás le pasa exactamente lo "
+            "contrario. Encuentra paraderos que acaban de ser barridos por el bus "
+            "anterior, con poca gente esperando, de modo que se detiene menos y "
+            "avanza más rápido. Está acercándose al primero mientras el primero se "
+            "aleja del que va adelante.\n\n"
+            "El resultado es inevitable: el segundo alcanza al primero y los dos "
+            "terminan viajando juntos, uno lleno y el otro vacío, hasta el final "
+            "del recorrido. Y detrás de ellos queda un hueco enorme, que es el que "
+            "uno pasó esperando en el paradero.\n\n"
+            "Lo que este ejemplo muestra, y que vale bastante más que el ejemplo, "
+            "es que la situación ordenada —buses repartidos parejo— es un "
+            "equilibrio inestable. No es que el sistema tienda a mantenerse "
+            "ordenado y a veces falle: es que cualquier desviación mínima se "
+            "amplifica sola. Un lápiz parado sobre su punta también está en "
+            "equilibrio, y por eso mismo dura poco.\n\n"
+            "De ahí se sigue algo que suele sorprender. Agregar más buses a la "
+            "línea no resuelve el problema. Con el doble de buses hay el doble de "
+            "oportunidades de que uno se atrase, y lo que se obtiene son varios "
+            "grupos de buses pegados en vez de uno. La frecuencia sube y la "
+            "regularidad, que es lo que uno experimenta en el paradero, no mejora.\n\n"
+            "Lo que sí funciona es más aburrido y bastante menos intuitivo: "
+            "retener. Se eligen algunos puntos del recorrido y ahí se le ordena a "
+            "un bus que espere si viene adelantado respecto del que lo precede. Es "
+            "decir, se empeora deliberadamente el viaje de quienes ya van arriba de "
+            "ese bus para que el intervalo se mantenga parejo y nadie tenga que "
+            "esperar veinte minutos en el paradero.\n\n"
+            "Conviene mirar de frente lo incómodo de esa medida, porque explica por "
+            "qué cuesta aplicarla. Quien va sentado en un bus detenido sin motivo "
+            "aparente ve un servicio malo: está parado, la calle está libre y nadie "
+            "le explica nada. El beneficio, en cambio, es invisible y le ocurre a "
+            "otras personas, más adelante, que nunca sabrán que su espera fue más "
+            "corta gracias a eso. Es una medida cuyo costo tiene rostro y cuyo "
+            "beneficio es anónimo.\n\n"
+            "Vale la pena notar además que el problema empeora justo cuando más "
+            "molesta. En hora punta hay más pasajeros esperando en cada paradero, "
+            "de modo que dos minutos de atraso se traducen en muchos más pasajeros "
+            "adicionales que a mediodía, y la bola de nieve crece más rápido. El "
+            "sistema es más frágil precisamente en el momento en que más gente "
+            "depende de él, y eso no es una coincidencia desafortunada: es la misma "
+            "ecuación con números más grandes.\n\n"
+            "Hay otras cosas que ayudan, y todas apuntan al mismo punto del "
+            "mecanismo: acortar y estabilizar el tiempo de detención. Pagar antes "
+            "de subir, tener más de una puerta, andenes a la altura del piso del "
+            "bus, pistas exclusivas que impidan que el tránsito sume atrasos "
+            "aleatorios. Ninguna elimina la inestabilidad, pero todas reducen el "
+            "tamaño de los golpes que la disparan.\n\n"
+            "Vale la pena quedarse con la forma general del asunto, porque aparece "
+            "en otras partes. Cuando la demora de un servicio depende de cuánta "
+            "gente se acumuló esperándolo, cada retraso se paga con un retraso "
+            "mayor. Ocurre en un paradero y ocurre en una fila de banco, en un "
+            "policlínico y en una mesa de atención. La primera reacción suele ser "
+            "pedir más buses, más cajas o más funcionarios; muchas veces lo que "
+            "hace falta es que el sistema deje de premiar al que llegó tarde con "
+            "más trabajo. Es una corrección barata y poco vistosa, y por eso "
+            "mismo suele postergarse frente a la promesa de comprar más "
+            "máquinas o contratar a más gente."
+        ),
+    },
+    {
         "key": "tabla_nutricional",
         "title": "Cómo comparar dos productos con la tabla nutricional",
         "kind": "discontinuo",
@@ -26971,6 +27144,338 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Las abejas equivocadas' ----------
+    _ql(
+        "abejas_simbolo", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué la abeja de miel se describe como ganado?",
+        "Porque vive en colmenas que las personas manejan",
+        "El texto detalla ese manejo: se alimenta y se medica cuando hace falta, se "
+        "compra, se vende y se traslada en camión de un cultivo a otro según la "
+        "temporada.\n\nDe ahí la conclusión que ordena el artículo: su número no "
+        "depende de la naturaleza sino de cuántas colmenas decidan mantener los "
+        "apicultores.",
+        [
+            ("Porque se alimenta de cultivos sembrados por personas", "Lo que la define como manejada es la colmena, no su dieta."),
+            ("Porque fue introducida desde otro continente", "El texto no discute su origen geográfico."),
+            ("Porque produce un alimento que se vende en el mercado", "La miel se menciona, pero no es lo que define el manejo."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_localizar", "facil",
+        "Según la lectura, ¿cómo viven la mayoría de las especies de abejas?",
+        "Solitarias, sin colmena y sin reina",
+        "El texto describe su ciclo: una hembra excava un túnel en el suelo o "
+        "aprovecha un hueco en la madera, pone sus huevos, deja polen para las "
+        "crías y muere.\n\nAgrega además por qué pasan inadvertidas: muchas son "
+        "pequeñas, oscuras y cualquiera las confundiría con moscas.",
+        [
+            ("En colmenas más pequeñas que las de la abeja de miel", "El texto señala que la mayoría no vive en colmenas."),
+            ("En grupos que cambian de lugar cada temporada", "El traslado corresponde a las colmenas manejadas."),
+            ("Junto a las abejas de miel, en las mismas estructuras", "No comparten estructura: compiten por las flores."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_localizar", "medio",
+        "Según la lectura, ¿cuáles son las causas documentadas del declive de los "
+        "polinizadores silvestres?",
+        "Pérdida de hábitat, pesticidas, enfermedades y clima",
+        "El texto detalla la primera: la desaparición de los bordes, los cercos "
+        "vivos y los terrenos sin uso.\n\nY precisa la última: el cambio en el "
+        "clima desacopla el momento en que florece una planta del momento en que "
+        "aparece el insecto que la visitaba.",
+        [
+            ("Únicamente el uso creciente de pesticidas agrícolas", "El texto insiste en que no es una sola causa."),
+            ("La competencia con otras especies de insectos nativos", "La competencia que menciona es con colmenas manejadas."),
+            ("La disminución del número de colmenas en el país", "Las colmenas manejadas no son el factor protector."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_interpretar", "facil",
+        "¿Qué distinción hace el emisor sobre los problemas de la abeja de miel?",
+        "Que son productivos y no un riesgo de extinción",
+        "El texto reconoce que le pasan cosas serias: enfermedades, parásitos, "
+        "pérdidas invernales importantes.\n\nY agrega la comparación que fija la "
+        "escala: cuando muere un rebaño, el ganadero compra otro. «Es un problema "
+        "económico grave y no es una extinción».",
+        [
+            ("Que son menos graves de lo que suele decirse", "El emisor los califica de serios sin restarles peso."),
+            ("Que se resolverán solos con mejores tratamientos", "El texto no anticipa ninguna solución."),
+            ("Que afectan solo a las colmenas mal manejadas", "No se distingue entre colmenas según su manejo."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_interpretar", "medio",
+        "¿Por qué instalar colmenas de abejas de miel puede perjudicar a las abejas "
+        "silvestres?",
+        "Porque compiten por las mismas flores disponibles",
+        "El texto explica la asimetría: miles de individuos manejados recorriendo "
+        "las mismas flores reducen el alimento disponible para especies locales que "
+        "son bastante menos numerosas y que «no tienen quien las alimente en "
+        "invierno».\n\nDe ahí su advertencia: una campaña que termina instalando "
+        "colmenas urbanas puede producir, con buena intención, el efecto contrario "
+        "al que anuncia.",
+        [
+            ("Porque les transmiten parásitos al compartir los nidos", "Las abejas silvestres del texto no comparten nido con ellas."),
+            ("Porque ocupan los huecos donde las silvestres anidarían", "La competencia descrita es por alimento, no por refugio."),
+            ("Porque las desplazan de los cultivos hacia la ciudad", "El texto no describe ningún desplazamiento de ese tipo."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_interpretar", "medio",
+        "¿Por qué el emisor dice que las soluciones simples decepcionan?",
+        "Porque el declive tiene varias causas a la vez",
+        "El texto lo ilustra con dos ejemplos concretos. Un hotel de insectos en un "
+        "balcón es simpático y no reemplaza un metro cuadrado de suelo desnudo "
+        "donde una abeja excavadora pueda anidar.\n\nY sembrar flores ayuda si son "
+        "especies que los insectos locales reconocen, mucho menos si son "
+        "ornamentales importadas elegidas por su color.",
+        [
+            ("Porque las medidas caseras no tienen ningún efecto", "El texto propone después varias medidas caseras útiles."),
+            ("Porque las causas del declive todavía se desconocen", "El artículo enumera cuatro causas documentadas."),
+            ("Porque la gente pierde el interés al poco tiempo", "El entusiasmo del público no se pone en duda."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_interpretar", "dificil",
+        "¿Qué versión de la campaña considera razonable el emisor?",
+        "La que pide dejar florecer, no barrer y usar menos veneno",
+        "El texto la incluye expresamente «para no dejar al lector sin nada que "
+        "hacer», y la resume en cuatro gestos: dejar florecer un pedazo de pasto, "
+        "no barrer hasta el último rincón de tierra desnuda, preferir especies "
+        "locales y usar menos veneno en el patio.\n\nY anota lo que las distingue "
+        "de la campaña que critica: ninguna cabe en un afiche, y todas se refieren "
+        "a los insectos que efectivamente lo necesitan.",
+        [
+            ("La que promueve instalar colmenas en las ciudades", "Es justamente la que el texto identifica como contraproducente."),
+            ("La que financia investigación sobre las enfermedades", "El artículo no propone destinar recursos a investigación."),
+            ("La que prohíbe la apicultura cerca de zonas silvestres", "El emisor aclara que no argumenta contra la apicultura."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor aclara que no argumenta contra la apicultura?",
+        "Para que su crítica no se lea como un ataque al rubro",
+        "El texto la califica de actividad legítima que produce alimento.\n\nLo que "
+        "objeta es otra cosa y lo dice con precisión: usar a la abeja de miel «como "
+        "símbolo de un problema que no es el suyo». Sin esa aclaración, el artículo "
+        "se leería como una acusación a quienes trabajan con colmenas.",
+        [
+            ("Para reconocer que los apicultores cuidan a las silvestres", "El texto describe competencia, no cuidado."),
+            ("Para sugerir que la actividad debería reducirse un poco", "No propone reducir la apicultura en ninguna medida."),
+            ("Para justificar el traslado de colmenas entre cultivos", "Ese traslado se menciona solo como prueba del manejo."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_evaluar", "medio",
+        "Según el emisor, ¿por qué importa que el símbolo de una causa esté "
+        "equivocado?",
+        "Porque orienta donaciones, políticas y entusiasmo",
+        "El texto lo formula sin rodeos: cuando el símbolo apunta mal, todo eso "
+        "«llega a un lugar donde no hacía tanta falta».\n\nEl error, entonces, no "
+        "es una imprecisión de vocabulario: desvía recursos reales desde el "
+        "problema documentado hacia una actividad que ya cuenta con quien la "
+        "sostenga.",
+        [
+            ("Porque confunde a quienes estudian a los insectos", "El texto se refiere al efecto sobre el público y las políticas."),
+            ("Porque desprestigia a quienes participan de la campaña", "El emisor no cuestiona a quienes la difunden."),
+            ("Porque impide reconocer a las especies en las fotografías", "La identificación visual no es lo que está en juego."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_evaluar", "dificil",
+        "¿Qué explicación da el emisor de que las abejas solitarias no aparezcan en "
+        "las campañas?",
+        "Que no son fotogénicas ni producen nada vendible",
+        "El cierre lo enuncia con una franqueza incómoda: son grises, no pican y no "
+        "producen nada que se pueda vender en un frasco.\n\nDe ahí la lección "
+        "general que el emisor extrae, y que excede a las abejas: la atención "
+        "pública tiene sus propios criterios de selección, y «casi nunca coinciden "
+        "con los de la biología».",
+        [
+            ("Que los especialistas todavía no las han estudiado", "El texto describe con detalle lo que se sabe de ellas."),
+            ("Que su declive es más reciente que el de la abeja de miel", "El artículo no compara las fechas de ambos procesos."),
+            ("Que resultan peligrosas y por eso no se las promueve", "Señala expresamente que no pican."),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_evaluar", "dificil",
+        "¿Qué le reprocha el emisor a la frase «hay que salvar a las abejas»?",
+        "Que defiende una causa correcta con un ejemplo errado",
+        "El artículo es explícito desde el primer párrafo: la causa es buena y la "
+        "frase apunta al animal equivocado.\n\nPor eso lo presenta como un caso "
+        "para entender «cómo se pierde un buen argumento»: no hay aquí un error de "
+        "hecho sobre la polinización ni una mentira, sino una elección de símbolo "
+        "que termina desviando el esfuerzo de quienes tienen razón.",
+        [
+            ("Que exagera la magnitud del problema de los polinizadores", "El texto documenta ese problema en vez de minimizarlo."),
+            ("Que fue creada por la industria apícola para promocionarse", "No se atribuye la campaña a ningún interés comercial."),
+            ("Que propone medidas imposibles de cumplir en una ciudad", "El artículo termina proponiendo medidas urbanas simples."),
+        ],
+    ),
+    # ---------- 'Por qué las micros se juntan' ----------
+    _ql(
+        "micros_juntas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué le ocurre al bus que se atrasa dos minutos?",
+        "Encuentra más pasajeros y se atrasa todavía más",
+        "En el paradero siguiente lo esperan doce minutos de pasajeros en vez de "
+        "diez, de modo que la detención dura un poco más y sale con tres minutos de "
+        "atraso.\n\nEn el paradero que sigue encontrará trece minutos acumulados, y "
+        "así sucesivamente.",
+        [
+            ("Recupera el tiempo perdido en el tramo siguiente", "El texto describe exactamente el efecto contrario."),
+            ("Se salta paraderos hasta volver a su horario", "El artículo no menciona ningún salto de paraderos."),
+            ("Mantiene el atraso constante hasta el final", "El atraso no se mantiene: crece en cada parada."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué le pasa al bus que viene detrás?",
+        "Encuentra menos gente y avanza más rápido",
+        "Los paraderos que recorre «acaban de ser barridos por el bus anterior», de "
+        "modo que se detiene menos.\n\nEl resultado es que se acerca al primero "
+        "mientras el primero se aleja del que va adelante, hasta que los dos "
+        "terminan viajando juntos.",
+        [
+            ("Recibe a los pasajeros que el primero dejó abajo", "El texto no menciona pasajeros que queden sin subir."),
+            ("Se atrasa por tener que esperar al de adelante", "La retención aparece después, y como medida deliberada."),
+            ("Mantiene su distancia sin que nada lo altere", "El relato del mecanismo muestra que la pierde."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_localizar", "medio",
+        "Según la lectura, ¿en qué consiste la medida de retener?",
+        "Detener en ciertos puntos al bus que viene adelantado",
+        "Se eligen algunos puntos del recorrido y ahí se le ordena esperar al bus "
+        "que va adelantado respecto del que lo precede.\n\nCon eso se empeora "
+        "deliberadamente el viaje de quienes ya van a bordo, a cambio de que el "
+        "intervalo se mantenga parejo y nadie espere veinte minutos en el paradero.",
+        [
+            ("Reducir la cantidad de paraderos del recorrido", "El texto no propone eliminar paraderos."),
+            ("Detener al bus que viene con más pasajeros", "Lo que decide no es la carga sino el intervalo."),
+            ("Aumentar el tiempo de espera en el terminal", "La medida se aplica durante el recorrido."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al comparar la situación ordenada con un lápiz "
+        "parado sobre su punta?",
+        "Que es un equilibrio que cualquier golpe destruye",
+        "El texto lo precisa antes de la imagen: no es que el sistema tienda a "
+        "mantenerse ordenado y a veces falle, sino que cualquier desviación mínima "
+        "se amplifica sola.\n\nUn lápiz sobre su punta está efectivamente en "
+        "equilibrio, «y por eso mismo dura poco».",
+        [
+            ("Que el sistema es más frágil de lo que parece a la vista", "La fragilidad es cierta, pero la imagen dice algo más preciso."),
+            ("Que el orden depende de que los conductores sean cuidadosos", "El texto aclara que ocurre aunque todos hagan bien su trabajo."),
+            ("Que basta con un golpe fuerte para desordenar el recorrido", "El punto es que basta una desviación mínima."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué agregar más buses no resuelve el problema?",
+        "Porque también multiplica las ocasiones de atrasarse",
+        "Con el doble de buses hay el doble de oportunidades de que uno se atrase, "
+        "y lo que se obtiene son varios grupos de buses pegados en vez de "
+        "uno.\n\nEl texto distingue entonces dos cosas: la frecuencia sube y la "
+        "regularidad, «que es lo que uno experimenta en el paradero», no mejora.",
+        [
+            ("Porque el presupuesto no alcanza para tantos buses", "El costo no aparece entre los argumentos del texto."),
+            ("Porque las calles no soportan más vehículos circulando", "La congestión se menciona solo como fuente de atrasos."),
+            ("Porque los pasajeros se reparten entre más recorridos", "El texto no plantea un reparto entre distintas líneas."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_interpretar", "medio",
+        "¿Por qué el problema empeora en hora punta, según el emisor?",
+        "Porque cada minuto de atraso suma más pasajeros",
+        "Con más gente esperando en cada paradero, dos minutos de atraso se "
+        "traducen en muchos más pasajeros adicionales que a mediodía, y la bola de "
+        "nieve crece más rápido.\n\nEl emisor subraya que eso no es mala suerte: "
+        "«es la misma ecuación con números más grandes».",
+        [
+            ("Porque hay más congestión vehicular en las calles", "El texto atribuye el empeoramiento a los pasajeros, no al tránsito."),
+            ("Porque los conductores tienen menos tiempo de descanso", "El artículo no menciona las condiciones de los conductores."),
+            ("Porque se agregan buses adicionales al recorrido", "El refuerzo de flota se discute en otro párrafo."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_interpretar", "dificil",
+        "¿Qué tienen en común las medidas que el emisor considera útiles?",
+        "Todas acortan o estabilizan el tiempo de detención",
+        "Pagar antes de subir, tener más de una puerta, andenes a la altura del "
+        "piso del bus, pistas exclusivas: cada una interviene en el mismo punto del "
+        "mecanismo.\n\nY el texto acota su alcance con precisión: ninguna elimina "
+        "la inestabilidad, todas reducen el tamaño de los golpes que la disparan.",
+        [
+            ("Todas aumentan la cantidad de buses disponibles", "El artículo descarta el refuerzo de flota como solución."),
+            ("Todas reducen la cantidad de pasajeros por recorrido", "Ninguna de las medidas apunta a llevar menos gente."),
+            ("Todas dependen de la conducta de los conductores", "Son medidas de infraestructura y de sistema de pago."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor descarta la flojera de los conductores y la "
+        "mala suerte?",
+        "Para instalar que se trata de un problema de sistema",
+        "El texto lo dice en el primer párrafo y agrega el detalle que lo vuelve "
+        "interesante: el fenómeno ocurre «incluso cuando todos hacen su trabajo "
+        "perfectamente».\n\nDescartar a los culpables habituales es lo que obliga a "
+        "buscar la explicación en el funcionamiento del conjunto y no en las "
+        "personas.",
+        [
+            ("Para defender a los conductores de las críticas del público", "El artículo no se plantea como una defensa gremial."),
+            ("Para señalar que el azar no interviene en el recorrido", "El texto sí menciona atrasos aleatorios del tránsito."),
+            ("Para anunciar que la solución dependerá de la autoridad", "El párrafo no adelanta quién debe resolverlo."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_evaluar", "medio",
+        "¿Por qué el emisor dice que la retención tiene «costo con rostro y "
+        "beneficio anónimo»?",
+        "Porque perjudica a quien lo ve y ayuda a quien no lo sabrá",
+        "Quien va sentado en un bus detenido sin motivo aparente ve un servicio "
+        "malo: está parado, la calle está libre y nadie le explica nada.\n\nEl "
+        "beneficio, en cambio, le ocurre a personas que están más adelante y que "
+        "nunca sabrán que su espera fue más corta gracias a eso. Esa asimetría "
+        "explica por qué la medida cuesta tanto de aplicar.",
+        [
+            ("Porque el costo es económico y el beneficio es social", "El costo que describe es de tiempo, no de dinero."),
+            ("Porque solo los conductores saben por qué se detienen", "El texto no discute quién conoce el motivo del alto."),
+            ("Porque la medida se aplica sin avisar a los usuarios", "La falta de explicación es un detalle, no el argumento."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_evaluar", "dificil",
+        "¿Qué generalización propone el emisor en el cierre del artículo?",
+        "Que todo servicio así castiga el atraso con más atraso",
+        "La forma general es la que aparece «cuando la demora de un servicio "
+        "depende de cuánta gente se acumuló esperándolo».\n\nEl emisor la reconoce "
+        "en una fila de banco, en un policlínico y en una mesa de atención, y "
+        "remata con una observación que resume el razonamiento: muchas veces lo que "
+        "falta no es más personal, sino que el sistema «deje de premiar al que "
+        "llegó tarde con más trabajo».",
+        [
+            ("Que los servicios públicos funcionan peor que los privados", "El texto no compara servicios según quién los administre."),
+            ("Que agregar personal siempre resuelve las esperas largas", "El cierre sostiene justamente lo contrario."),
+            ("Que las filas se ordenan solas si nadie interviene", "Todo el artículo muestra que el desorden se amplifica solo."),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_evaluar", "dificil",
+        "¿Qué hace el emisor con la reacción intuitiva de pedir más buses?",
+        "La nombra, la explica y muestra por qué no funciona",
+        "El texto no la ridiculiza: la presenta como la primera reacción de "
+        "cualquiera, tanto en un paradero como en una fila de banco.\n\nDespués "
+        "muestra por qué falla —más buses son más ocasiones de atraso, y lo que "
+        "aparece son varios grupos pegados— y distingue lo que sí mejoraría, que es "
+        "la regularidad y no la frecuencia. Es un caso donde la medida obvia "
+        "atiende la variable equivocada.",
+        [
+            ("La descarta sin explicar por qué resulta insuficiente", "Le dedica un párrafo completo a explicarlo."),
+            ("La acepta como una solución parcial al problema", "Sostiene que no mejora lo que el pasajero experimenta."),
+            ("La atribuye a quienes administran el transporte", "La presenta como la reacción de cualquier persona."),
+        ],
+    ),
     # ---------- 'Cómo comparar dos productos con la tabla nutricional' ----------
     _ql(
         "tabla_nutricional", "lec_localizar", "facil",
