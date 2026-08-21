@@ -45,6 +45,14 @@ class ExamQuestionOut(BaseModel):
     #: de todos los sugeridos es exactamente la duración del intento, así que
     #: no se promete tiempo que la prueba no da.
     suggested_seconds: int = 0
+    #: Si el alumno YA respondió mal esta pregunta antes, en otro ensayo o
+    #: practicando.
+    #:
+    #: Con un banco de miles de preguntas sorteadas al azar, reencontrarse con
+    #: una que uno falló es la mejor oportunidad de aprendizaje que da la
+    #: plataforma, y pasaba completamente desapercibida. Se avisa DENTRO del
+    #: ensayo, que es el único momento en que el alumno la tiene al frente.
+    fallada_antes: bool = False
     alternatives: list[ExamAlternativeOut]
 
 

@@ -27,7 +27,9 @@ router = APIRouter(prefix="/exam", tags=["exam-focus"])
 
 
 def _to_question_out(
-    questions: list[Question], duracion_s: int = 0
+    questions: list[Question],
+    duracion_s: int = 0,
+    falladas_antes: set[int] | None = None,
 ) -> list[ExamQuestionOut]:
     """Las preguntas tal como las ve el alumno, con su tiempo sugerido.
 
@@ -36,6 +38,7 @@ def _to_question_out(
     tiempo del intento, no un número absoluto.
     """
     sugeridos = service.tiempos_sugeridos(questions, duracion_s)
+    ya_falladas = falladas_antes or set()
     return [
         ExamQuestionOut(
             id=q.id,
@@ -48,6 +51,7 @@ def _to_question_out(
             ),
             difficulty=q.difficulty,
             suggested_seconds=sugeridos.get(q.id, 0),
+            fallada_antes=q.id in ya_falladas,
             stem=q.stem,
             image_url=q.image_url,
             passage=(
@@ -127,7 +131,13 @@ def start_exam(
         started_at=attempt.started_at,
         duration_limit_seconds=attempt.duration_limit_seconds,
         config=service.attempt_config(attempt, len(questions)),
-        questions=_to_question_out(questions, attempt.duration_limit_seconds),
+        questions=_to_question_out(
+            questions,
+            attempt.duration_limit_seconds,
+            service.preguntas_falladas_antes(
+                db, user.id, [q.id for q in questions], attempt.id
+            ),
+        ),
     )
 
 
@@ -146,7 +156,13 @@ def get_exam_state(
         duration_limit_seconds=attempt.duration_limit_seconds,
         status=attempt.status,
         config=service.attempt_config(attempt, len(questions)),
-        questions=_to_question_out(questions, attempt.duration_limit_seconds),
+        questions=_to_question_out(
+            questions,
+            attempt.duration_limit_seconds,
+            service.preguntas_falladas_antes(
+                db, user.id, [q.id for q in questions], attempt.id
+            ),
+        ),
         answers=answers,
     )
 
