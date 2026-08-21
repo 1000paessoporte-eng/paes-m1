@@ -513,6 +513,14 @@ html {
   animation: pulso-reloj 1.6s ease-out infinite;
 }
 
+/* El último minuto late al doble.
+   El reloj tenía dos estados --aviso a los 10 minutos, alarma a los 5-- y
+   después nada: los últimos sesenta segundos, que son los que deciden si
+   alcanzas a marcar las que dejaste, se veían igual que el minuto cuatro. */
+.pulso-reloj-final {
+  animation: pulso-reloj 0.8s ease-out infinite;
+}
+
 /* Barra de progreso que se llena al aparecer. El ancho final lo pone el
    componente con una variable, así el mismo keyframe sirve para cualquier
    porcentaje. */
