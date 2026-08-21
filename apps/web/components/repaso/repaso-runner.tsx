@@ -228,6 +228,14 @@ export function RepasoRunner({
             </p>
           )}
 
+          {/* Desbloquear un tema es la mejor noticia que puede dar esta
+              pantalla, y hasta ahora el árbol se movía en silencio. */}
+          {resultado.newly_unlocked.length > 0 && (
+            <p className="mt-3 rounded-lg border border-success/30 bg-success/10 px-3 py-2 text-sm font-medium text-success">
+              Desbloqueaste {resultado.newly_unlocked.join(", ")} en el árbol.
+            </p>
+          )}
+
           <p className="mt-3 text-xs text-muted">
             {resultado.dominada
               ? "La dominaste: no vuelve a aparecer."

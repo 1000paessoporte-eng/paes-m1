@@ -54,6 +54,10 @@ class RepasoRespuestaOut(BaseModel):
     #: True cuando acaba de salir de la cola para siempre.
     dominada: bool = False
     nivel: int
+    #: Nodos del árbol que esta respuesta acaba de desbloquear. Repasar mueve
+    #: el árbol igual que practicar, y desbloquear un tema es la mejor noticia
+    #: que puede dar esta pantalla.
+    newly_unlocked: list[str] = []
 
 
 class RepasoResumenOut(BaseModel):

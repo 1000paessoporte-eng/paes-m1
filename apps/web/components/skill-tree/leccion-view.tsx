@@ -19,7 +19,24 @@ import { TextoRico } from "@/components/texto-rico";
  * qué viene, que es donde se aprende. Igual está el botón para verlos todos,
  * porque quien vuelve a repasar no necesita el ejercicio de nuevo.
  */
-export function LeccionView({ leccion }: { leccion: Lesson }) {
+/** Un tema vecino en el índice, para seguir leyendo. */
+export interface LeccionVecina {
+  node_code: string;
+  node_name: string;
+  /** El eje al que pertenece. El índice avanza por nivel del árbol y no por
+   *  eje, así que sin esto "el tema siguiente" parece un salto arbitrario. */
+  axis_label: string;
+}
+
+export function LeccionView({
+  leccion,
+  anterior,
+  siguiente,
+}: {
+  leccion: Lesson;
+  anterior?: LeccionVecina | null;
+  siguiente?: LeccionVecina | null;
+}) {
   const quieto = useReducedMotion();
   const total = leccion.example_steps.length;
   const [visibles, setVisibles] = useState(1);
@@ -183,6 +200,43 @@ export function LeccionView({ leccion }: { leccion: Lesson }) {
           Practicar este tema →
         </Link>
       </section>
+
+      {/* Las lecciones no se enlazaban entre sí: se terminaba una y el único
+          camino era volver al índice. Para quien estudia, el paso natural es
+          el tema que sigue en el árbol; para Google, veinte páginas sueltas
+          sin enlaces internos valen menos que veinte encadenadas.
+
+          El orden es el del índice, que ya viene por prueba y por posición en
+          el árbol: el "siguiente" es el que de verdad viene después. */}
+      {(anterior || siguiente) && (
+        <nav
+          aria-label="Otras lecciones"
+          className="mt-10 grid gap-3 border-t border-border pt-6 sm:grid-cols-2"
+        >
+          {anterior ? (
+            <Link
+              href={`/aprender/${anterior.node_code}`}
+              className="rounded-xl border border-border p-4 transition hover:bg-surface-hover"
+            >
+              <span className="text-xs text-muted">← Tema anterior</span>
+              <span className="mt-0.5 block font-medium">{anterior.node_name}</span>
+              <span className="mt-0.5 block text-xs text-muted">{anterior.axis_label}</span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {siguiente && (
+            <Link
+              href={`/aprender/${siguiente.node_code}`}
+              className="rounded-xl border border-border p-4 text-right transition hover:bg-surface-hover sm:col-start-2"
+            >
+              <span className="text-xs text-muted">Tema siguiente →</span>
+              <span className="mt-0.5 block font-medium">{siguiente.node_name}</span>
+              <span className="mt-0.5 block text-xs text-muted">{siguiente.axis_label}</span>
+            </Link>
+          )}
+        </nav>
+      )}
 
       <p className="mt-6 text-center text-sm">
         <Link

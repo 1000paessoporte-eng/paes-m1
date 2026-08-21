@@ -14,6 +14,7 @@ from paes_api.modules.repaso.schemas import (
     RepasoResumenOut,
     RepasoSesionOut,
 )
+from paes_api.modules.skill_tree import service as skill_tree_service
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
 
@@ -106,7 +107,14 @@ def responder(
             is_correct=elegida.is_correct,
         )
     )
-    db.commit()
+
+    # Y mueve el árbol, igual que Modo Práctica. Es la misma pregunta del mismo
+    # nodo respondida por el mismo alumno: que contara en un lado y no en el
+    # otro dejaba el árbol congelado a quien estudia repasando, que es
+    # justamente a quien más le está costando. Hace commit por dentro.
+    desbloqueados = skill_tree_service.apply_single_answer(
+        db, user.id, pregunta.skill_node_id, elegida.is_correct
+    )
 
     return RepasoRespuestaOut(
         is_correct=elegida.is_correct,
@@ -116,4 +124,5 @@ def responder(
         proxima_fecha=item.proxima_fecha,
         dominada=item.proxima_fecha is None,
         nivel=item.nivel,
+        newly_unlocked=[n.name for n in desbloqueados],
     )

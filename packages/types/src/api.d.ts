@@ -2588,6 +2588,11 @@ export interface components {
             dominada: boolean;
             /** Nivel */
             nivel: number;
+            /**
+             * Newly Unlocked
+             * @default []
+             */
+            newly_unlocked: string[];
         };
         /**
          * RepasoResumenOut

@@ -9,6 +9,7 @@ from datetime import UTC, datetime, timedelta
 
 import pytest
 from fastapi.testclient import TestClient
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from paes_api.modules.content.models import Alternative, Difficulty, Question
@@ -254,3 +255,34 @@ def test_la_pregunta_de_lectora_trae_su_texto(
     pregunta = resp.json()["preguntas"][0]
     assert pregunta["passage"] == "Un texto de prueba con dos líneas."
     assert pregunta["passage_title"] == "El faro"
+
+
+def test_repasar_mueve_el_arbol(
+    client: TestClient, register_user, db_session: Session, pregunta: Question
+) -> None:
+    """Es la misma pregunta del mismo nodo respondida por el mismo alumno.
+
+    Que contara en Modo Práctica y no acá dejaba el árbol congelado a quien
+    estudia repasando, que es justamente a quien más le está costando.
+    """
+    from paes_api.modules.skill_tree.models import UserSkillProgress
+
+    headers, user = register_user()
+    _fallar(db_session, user["id"], pregunta)
+    client.get("/api/repaso/sesion", headers=headers)
+
+    correcta = next(a for a in pregunta.alternatives if a.is_correct)
+    client.post(
+        "/api/repaso/responder",
+        headers=headers,
+        json={"question_id": pregunta.id, "selected_alternative_id": correcta.id},
+    )
+
+    progreso = db_session.execute(
+        select(UserSkillProgress).where(
+            UserSkillProgress.user_id == user["id"],
+            UserSkillProgress.skill_node_id == pregunta.skill_node_id,
+        )
+    ).scalar_one()
+    assert progreso.attempts == 1
+    assert progreso.correct == 1
