@@ -2555,6 +2555,8 @@ export interface components {
             passage_title?: string | null;
             /** Node Name */
             node_name: string;
+            /** Subject */
+            subject: string;
             /** Alternatives */
             alternatives: components["schemas"]["RepasoAlternativaOut"][];
             /** Veces Fallada */

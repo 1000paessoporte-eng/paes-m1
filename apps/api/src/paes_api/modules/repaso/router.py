@@ -54,6 +54,7 @@ def sesion(
                 passage=pregunta.passage.body if pregunta.passage else None,
                 passage_title=pregunta.passage.title if pregunta.passage else None,
                 node_name=pregunta.skill_node.name,
+                subject=pregunta.skill_node.subject.value,
                 alternatives=[
                     RepasoAlternativaOut(id=a.id, label=a.label, text=a.text)
                     for a in pregunta.alternatives
