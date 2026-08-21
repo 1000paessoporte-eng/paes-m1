@@ -12,13 +12,21 @@ import type { ExamConfig, ExamOptions, Pace, Repaso, Subject } from "@/lib/api";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 
 /**
- * Formatos de ensayo. 65 es la prueba oficial completa, 34 la mitad y 20 un
- * ensayo corto de entrenamiento.
+ * Formatos de ensayo. 65 es la prueba oficial completa, 34 la mitad, 20 un
+ * ensayo corto y 10 la primera vez.
+ *
+ * El relámpago existe por el embudo: de cada tres personas que abren la
+ * configuración, una empieza. Pedirle dos horas y veinte a alguien que llegó
+ * hace cuarenta segundos es pedirle que decida hoy si este producto le sirve,
+ * y la respuesta por defecto a eso es cerrar la pestaña. Diez preguntas caben
+ * en un recreo y ya devuelven puntaje estimado y desglose por eje, que es lo
+ * que hay que mostrarle para que vuelva.
  */
 const FORMATOS = [
   { cantidad: 65, nombre: "Completo", detalle: "La prueba oficial entera" },
   { cantidad: 34, nombre: "Medio", detalle: "La mitad de la prueba" },
   { cantidad: 20, nombre: "Corto", detalle: "Para una sesión rápida" },
+  { cantidad: 10, nombre: "Relámpago", detalle: "Para probar en un recreo" },
 ] as const;
 
 /**
@@ -123,7 +131,9 @@ export function ExamConfigScreen({
   onContinuar,
 }: Props) {
   const [subject, setSubject] = useState<Subject>("m1");
-  const [cantidad, setCantidad] = useState(20);
+  // Quien nunca ha rendido arranca en el relámpago: la primera pantalla no
+  // debería ofrecerle un compromiso de dos horas como opción marcada.
+  const [cantidad, setCantidad] = useState(ensayosRendidos === 0 ? 10 : 20);
   const [ritmo, setRitmo] = useState<Pace>("oficial");
   const [ejes, setEjes] = useState<string[]>([]);
   const dias = diasHastaPaes();
@@ -341,7 +351,7 @@ export function ExamConfigScreen({
 
       {/* ── Formato del ensayo ──────────────────────────────────────── */}
       <Paso numero={3} titulo="¿Cuántas preguntas?">
-        <div className="grid gap-2 sm:grid-cols-3">
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {FORMATOS.map((f) => {
             const alcanza = f.cantidad <= maxDisponible;
             return (
@@ -358,6 +368,13 @@ export function ExamConfigScreen({
                     : "border-border bg-surface hover:border-border-strong"
                 )}
               >
+                {/* El distintivo va en su propia línea: al lado del nombre no
+                    cabe en el ancho de la tarjeta y se salía del borde. */}
+                {ensayosRendidos === 0 && f.cantidad === 10 && (
+                  <span className="mb-1 inline-block rounded-full bg-(--color-prueba)/10 px-2 py-0.5 text-[10px] font-semibold whitespace-nowrap text-(--color-prueba)">
+                    Empieza acá
+                  </span>
+                )}
                 <span className="flex items-baseline gap-1.5">
                   <span className="text-2xl font-bold tabular-nums">{f.cantidad}</span>
                   <span className="text-sm font-semibold">{f.nombre}</span>
@@ -407,7 +424,7 @@ export function ExamConfigScreen({
           minutos que va a durar su ensayo, que es la decisión real. El nombre
           del ritmo pasa a ser la explicación, no la etiqueta. */}
       <Paso numero={4} titulo="¿Con cuánto tiempo?">
-        <div className="grid gap-2 sm:grid-cols-3">
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {RITMOS.map((r) => {
             const minutos = formatearDuracionLarga(
               options.seconds_per_question * cantidadEfectiva * FACTOR_RITMO[r]

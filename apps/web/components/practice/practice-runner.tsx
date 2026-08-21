@@ -17,6 +17,14 @@ import { getClientToken, loginHref } from "@/lib/auth";
 
 const LABELS = ["A", "B", "C", "D", "E"];
 
+/**
+ * Bajo este porcentaje, la sesión manda a la teoría antes que a más ejercicios.
+ *
+ * Es el mismo umbral con el que el árbol desbloquea un nodo (75%): por debajo
+ * de eso el tema no está, y seguir haciendo ejercicios es practicar el error.
+ */
+const UMBRAL_TEORIA = 75;
+
 type Phase = "loading" | "locked" | "error" | "ready" | "done";
 
 export function PracticeRunner({ code }: { code: string }) {
@@ -24,6 +32,7 @@ export function PracticeRunner({ code }: { code: string }) {
   const pathname = usePathname();
   const [phase, setPhase] = useState<Phase>("loading");
   const [nodeName, setNodeName] = useState("");
+  const [tieneLeccion, setTieneLeccion] = useState(false);
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [index, setIndex] = useState(0);
   const [answered, setAnswered] = useState<PracticeAnswerResult | null>(null);
@@ -42,6 +51,7 @@ export function PracticeRunner({ code }: { code: string }) {
     try {
       const data = await getPracticeQuestions(code, getClientToken() ?? undefined);
       setNodeName(data.node_name);
+      setTieneLeccion(data.has_lesson);
       setQuestions(data.questions);
       setPhase(data.questions.length > 0 ? "ready" : "error");
     } catch (err) {
@@ -170,6 +180,28 @@ export function PracticeRunner({ code }: { code: string }) {
           </div>
         )}
 
+        {/* Antes esto terminaba en "de nuevo" o "volver al árbol": dos formas
+            de quedarse donde estaba. Lo que sigue después de practicar un tema
+            depende de cómo le fue, y decirlo es la diferencia entre una sesión
+            suelta y un plan. */}
+        {pct < UMBRAL_TEORIA && tieneLeccion && (
+          <div className="mt-6 w-full rounded-xl border border-accent-warm/40 bg-accent-warm/5 px-4 py-3 text-left">
+            <p className="text-sm font-semibold text-accent-warm-strong">
+              Menos de {UMBRAL_TEORIA}% en {nodeName}
+            </p>
+            <p className="mt-1 text-sm text-muted">
+              Antes de seguir ejercitando conviene volver a la teoría: repetir
+              ejercicios sin entender el método fija el error, no lo corrige.
+            </p>
+            <Link
+              href={`/aprender/${code}`}
+              className="mt-2 inline-flex text-sm font-semibold text-accent-warm-strong hover:underline"
+            >
+              Leer la lección de este tema →
+            </Link>
+          </div>
+        )}
+
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <button
             onClick={load}
@@ -178,10 +210,16 @@ export function PracticeRunner({ code }: { code: string }) {
             Practicar de nuevo
           </button>
           <Link
+            href="/examen"
+            className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium hover:bg-surface-hover"
+          >
+            Medirme en un ensayo
+          </Link>
+          <Link
             href="/arbol"
             className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium hover:bg-surface-hover"
           >
-            Volver al Árbol de Habilidades
+            Volver al árbol
           </Link>
         </div>
       </div>
