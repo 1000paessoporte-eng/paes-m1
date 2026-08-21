@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { ApiError, getOnboarding, getRecommendedNode, getSkillTree } from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
 import { SkillTreeView } from "@/components/skill-tree/skill-tree-view";
+import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 
 export const metadata = {
   title: "Árbol de Habilidades",
@@ -61,6 +62,9 @@ export default async function ArbolHabilidadesPage({
   }
 
   const conLeccion = nodes.filter((n) => n.has_lesson).length;
+  // El color de la prueba que se está mirando: el mismo del árbol, del
+  // selector de ensayo y del titular de la portada.
+  const colorPrueba = COLOR_PRUEBA[prueba as keyof typeof COLOR_PRUEBA];
 
   // Una prueba sin ningún nodo practicable es un callejón sin salida: el
   // estudiante ve una pantalla de tarjetas grises y ninguna explicación. Pasa
@@ -129,26 +133,52 @@ export default async function ArbolHabilidadesPage({
         </div>
       )}
 
+      {/* LO QUE HAY QUE HACER AHORA.
+          Era una barra gris del mismo peso que todo lo demás. Es la única
+          decisión que la pantalla toma POR el alumno --entre quince temas,
+          cuál conviene ahora-- y es lo que evita el "no sé por dónde empezar"
+          que hace que la gente cierre la pestaña. Ahora manda: nombre grande,
+          el porqué en una línea, y la acción al lado. */}
       {recommended && (
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/10 px-5 py-4">
-          <div>
-            <p className="text-xs font-medium text-accent">Recomendado para ti</p>
-            <p className="mt-1 text-sm text-foreground">
-              {recommended.attempts === 0
-                ? `Aún no has practicado "${recommended.name}". Es un buen próximo paso.`
-                : `Tu punto más débil ahora es "${recommended.name}" (${Math.round(recommended.accuracy * 100)}% de acierto).`}
-            </p>
+        <div
+          className="mt-6 overflow-hidden rounded-2xl border-2 bg-surface"
+          style={{ borderColor: `color-mix(in srgb, ${colorPrueba} 45%, transparent)` }}
+        >
+          <div className="flex flex-wrap items-end justify-between gap-5 p-5 sm:p-6">
+            <div className="min-w-0">
+              <p
+                className="text-xs font-semibold tracking-wide uppercase"
+                style={{ color: colorPrueba }}
+              >
+                Empieza por acá
+              </p>
+              <p className="font-display mt-1.5 text-2xl leading-tight font-bold text-balance sm:text-3xl">
+                {recommended.name}
+              </p>
+              <p className="mt-2 max-w-xl text-sm text-muted">
+                {recommended.attempts === 0
+                  ? "Todavía no lo practicas, y es el que abre más temas del árbol."
+                  : `Es tu punto más débil ahora: ${Math.round(recommended.accuracy * 100)}% de acierto en ${recommended.attempts} ${recommended.attempts === 1 ? "respuesta" : "respuestas"}.`}
+              </p>
+            </div>
+            <div className="flex shrink-0 flex-wrap gap-2">
+              <Link
+                href={`/practicar/${recommended.code}`}
+                className="rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill transition hover:opacity-90"
+                style={{ backgroundColor: colorPrueba }}
+              >
+                Practicar ahora
+              </Link>
+              {recommended.has_lesson && (
+                <Link
+                  href={`/aprender/${recommended.code}`}
+                  className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium transition hover:bg-surface-hover"
+                >
+                  Leer la teoría
+                </Link>
+              )}
+            </div>
           </div>
-          <Link
-            href={
-              recommended.has_lesson
-                ? `/aprender/${recommended.code}`
-                : `/practicar/${recommended.code}`
-            }
-            className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
-          >
-            {recommended.has_lesson ? "Estudiar este tema" : "Practicar"}
-          </Link>
         </div>
       )}
 
