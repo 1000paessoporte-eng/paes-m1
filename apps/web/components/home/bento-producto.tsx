@@ -1,5 +1,8 @@
 import Link from "next/link";
 import type { ContentStats } from "@/lib/api";
+import { Reveal } from "@/components/motion/reveal";
+import { NumeroAnimado } from "@/components/motion/numero-animado";
+import { BarraProgreso } from "@/components/ui/barra-progreso";
 
 /**
  * Lo que pasa cuando terminas un ensayo, mostrado en vez de contado.
@@ -35,7 +38,8 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {/* ── Puntaje: el bloque grande ────────────────────────────── */}
-          <article className="rounded-2xl border border-border bg-surface p-6 sm:col-span-2 lg:col-span-4">
+          <Reveal delay={0.0} className="sm:col-span-2 lg:col-span-4">
+            <article className="rounded-2xl border border-border bg-surface p-6 h-full">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="font-semibold">Tu puntaje en la escala real</h3>
               <span className="rounded-full bg-surface-hover px-2 py-0.5 text-[11px] text-muted">
@@ -50,19 +54,11 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
             {/* La escala, dibujada: es el rango que el alumno conoce de memoria
                 y verlo entero ubica su resultado sin explicar nada. */}
             <div className="mt-6">
-              <div className="relative h-2 rounded-full bg-surface-hover">
-                <div
-                  className="absolute inset-y-0 left-0 rounded-full"
-                  style={{
-                    width: "75.5%",
-                    backgroundColor: "var(--prueba-m1)",
-                  }}
-                />
-                <span
-                  className="absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-surface"
-                  style={{ left: "75.5%", backgroundColor: "var(--prueba-m1)" }}
-                />
-              </div>
+              <BarraProgreso
+                porcentaje={75.5}
+                color="var(--prueba-m1)"
+                etiqueta="Puntaje 780 sobre la escala de 100 a 1000"
+              />
               <div className="mt-2 flex justify-between text-[11px] text-muted tabular-nums">
                 <span>100</span>
                 <span>1000</span>
@@ -71,12 +67,14 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
 
             <div className="mt-5 flex flex-wrap items-end gap-x-8 gap-y-4">
               <div>
-                <p className="font-display text-5xl leading-none font-bold">780</p>
+                <p className="font-display text-5xl leading-none font-bold">
+                  <NumeroAnimado valor={780} duracion={1.1} />
+                </p>
                 <p className="mt-1 text-xs text-muted">Puntaje estimado</p>
               </div>
               <div>
                 <p className="font-display text-2xl leading-none font-semibold text-success">
-                  +38
+                  <NumeroAnimado valor={38} duracion={0.9} />
                 </p>
                 <p className="mt-1 text-xs text-muted">vs. tu ensayo anterior</p>
               </div>
@@ -87,10 +85,12 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
                 <p className="mt-1 text-xs text-muted">de 2 h 20 disponibles</p>
               </div>
             </div>
-          </article>
+            </article>
+          </Reveal>
 
           {/* ── El porqué del error: la columna alta ─────────────────── */}
-          <article className="rounded-2xl border border-accent-warm/30 bg-accent-warm/5 p-6 sm:col-span-2 lg:col-span-2">
+          <Reveal delay={0.07} className="sm:col-span-2 lg:col-span-2">
+            <article className="rounded-2xl border border-accent-warm/30 bg-accent-warm/5 p-6 h-full">
             <h3 className="font-semibold">Por qué te equivocaste</h3>
             <p className="mt-1 text-sm text-muted">
               No «fallaste geometría». El razonamiento exacto que te llevó a la
@@ -119,10 +119,12 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
               </strong>
               , no para las preguntas en general.
             </p>
-          </article>
+            </article>
+          </Reveal>
 
           {/* ── Árbol ─────────────────────────────────────────────────── */}
-          <article className="rounded-2xl border border-border bg-surface p-6 sm:col-span-1 lg:col-span-2">
+          <Reveal delay={0.14} className="sm:col-span-1 lg:col-span-2">
+            <article className="rounded-2xl border border-border bg-surface p-6 h-full">
             <h3 className="font-semibold">Qué estudiar después</h3>
             <p className="mt-1 text-sm text-muted">
               {stats
@@ -157,10 +159,12 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
                 </li>
               ))}
             </ul>
-          </article>
+            </article>
+          </Reveal>
 
           {/* ── Ritmo ─────────────────────────────────────────────────── */}
-          <article className="rounded-2xl border border-border bg-surface p-6 sm:col-span-1 lg:col-span-2">
+          <Reveal delay={0.21} className="sm:col-span-1 lg:col-span-2">
+            <article className="rounded-2xl border border-border bg-surface p-6 h-full">
             <h3 className="font-semibold">Si te va a alcanzar el tiempo</h3>
             <p className="mt-1 text-sm text-muted">
               En la PAES mucha gente no falla por no saber: falla porque no
@@ -180,10 +184,12 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
                 <p className="mt-1 text-xs text-muted">te da la prueba</p>
               </div>
             </div>
-          </article>
+            </article>
+          </Reveal>
 
           {/* ── Carrera ───────────────────────────────────────────────── */}
-          <article className="rounded-2xl border border-border bg-surface p-6 sm:col-span-2 lg:col-span-2">
+          <Reveal delay={0.28} className="sm:col-span-2 lg:col-span-2">
+            <article className="rounded-2xl border border-border bg-surface p-6 h-full">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="min-w-0">
                 <h3 className="font-semibold">Cuánto te falta para tu carrera</h3>
@@ -222,7 +228,8 @@ export function BentoProducto({ stats }: { stats: ContentStats | null }) {
                 </div>
               ))}
             </div>
-          </article>
+            </article>
+          </Reveal>
         </div>
       </div>
     </section>

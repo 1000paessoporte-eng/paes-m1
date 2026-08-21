@@ -390,8 +390,28 @@ html {
     box-shadow var(--dur-rapida) var(--ease-suave);
 }
 
+/* El gesto de rellenarla.
+   La burbuja se pintaba de golpe, y rellenar una burbuja NO es instantáneo:
+   es apretar el lápiz al centro y abrirse hacia el borde. Se anima el TAMAÑO
+   del relleno, no la burbuja: escalar el elemento entero estiraría también la
+   letra que va encima.
+
+   Dura 220 ms y no medio segundo: es la animación de marca que el alumno va a
+   ver cientos de veces en un ensayo, y a la tercera lo que se celebra estorba. */
+@keyframes rellenar-burbuja {
+  from {
+    background-size: 22% 22%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
 .burbuja-marcada {
   border-color: var(--grafito);
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: rellenar-burbuja 0.22s var(--ease-salida);
   /* Denso al centro y algo más suelto en el borde, como la mina apretada
      contra el papel. El segundo gradiente, descentrado, evita el relleno
      perfectamente uniforme que delataría un círculo de CSS. */

@@ -6,6 +6,8 @@ import { Reveal } from "@/components/motion/reveal";
 import { Planes } from "@/components/home/planes";
 import { HeroPregunta } from "@/components/home/hero-pregunta";
 import { BentoProducto } from "@/components/home/bento-producto";
+import { TrazoLapiz } from "@/components/home/trazo-lapiz";
+import { EntradaHero } from "@/components/home/entrada-hero";
 import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 import { CuentaRegresiva } from "@/components/home/cuenta-regresiva";
@@ -89,7 +91,12 @@ export function LandingPublica({
         <div className="bg-dot-grid pointer-events-none absolute inset-0 top-0 h-[26rem]" />
 
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-          <div className="flex flex-col items-center gap-5 text-center lg:items-start lg:text-left">
+          {/* La entrada del hero es UNA secuencia, no cinco animaciones sueltas:
+              el reloj, el titular, el trazo, la bajada y la acción entran en
+              ese orden con 90 ms entre medio. Es el orden en que se leen, y
+              acompañarlo hace que la primera pantalla se sienta armada en vez
+              de aparecida de golpe. */}
+          <EntradaHero className="flex flex-col items-center gap-5 text-center lg:items-start lg:text-left">
             {/* El reloj solo no dice nada: "100 d 08 h" suelto parece un número
                 perdido. Con el marco es lo primero que un tercero medio quiere
                 saber, y pone el resto de la página en contexto. */}
@@ -104,7 +111,14 @@ export function LandingPublica({
             <h1 className="text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-[3.5rem]">
               Rinde la PAES
               <br />
-              antes de la PAES
+              {/* El trazo se dibuja bajo estas dos palabras y va cambiando por
+                  los cinco colores de prueba. Es lo que hacía la palabra que
+                  rotaba --moverse y decir que acá están las cinco-- pero sin
+                  tocar el texto, así que nada se reacomoda. */}
+              <span className="relative inline-block">
+                antes de la PAES
+                <TrazoLapiz />
+              </span>
             </h1>
 
             <p className="max-w-md text-balance text-lg text-muted">
@@ -128,7 +142,7 @@ export function LandingPublica({
                 </Link>
               </p>
             </div>
-          </div>
+          </EntradaHero>
 
           <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
             <HeroPregunta />
