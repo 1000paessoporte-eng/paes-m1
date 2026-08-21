@@ -20,6 +20,10 @@ class PracticeQuestionOut(BaseModel):
 class PracticeStartOut(BaseModel):
     node_code: str
     node_name: str
+    #: Si el nodo tiene teoría escrita. Al terminar una ronda floja la pantalla
+    #: manda a leerla, y sin este dato el enlace apuntaría a un 404 en los nodos
+    #: que todavía no la tienen.
+    has_lesson: bool = False
     questions: list[PracticeQuestionOut]
 
 

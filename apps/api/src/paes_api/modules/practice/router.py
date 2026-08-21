@@ -54,6 +54,7 @@ def get_practice_questions(
     return PracticeStartOut(
         node_code=node.code,
         node_name=node.name,
+        has_lesson=node.lesson is not None,
         questions=[
             PracticeQuestionOut(
                 id=q.id,

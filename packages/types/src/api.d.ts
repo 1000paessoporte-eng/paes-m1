@@ -2428,6 +2428,11 @@ export interface components {
             node_code: string;
             /** Node Name */
             node_name: string;
+            /**
+             * Has Lesson
+             * @default false
+             */
+            has_lesson: boolean;
             /** Questions */
             questions: components["schemas"]["PracticeQuestionOut"][];
         };

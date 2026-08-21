@@ -161,13 +161,28 @@ function NodoRuta({
           )}
         </p>
 
+        {/* Dos caminos, no uno. Cuando el nodo tenía lección, el panel mandaba
+            SIEMPRE a leerla y practicar quedaba a dos clics: en toda la vida de
+            la plataforma se respondieron 4 preguntas en Modo Práctica. Quien ya
+            sabe el tema y solo quiere ejercitar no debería tener que pasar por
+            la teoría para llegar. */}
         {sugerido && !bloqueado && (
-          <Link
-            href={nodo.has_lesson ? `/aprender/${nodo.code}` : `/practicar/${nodo.code}`}
-            className="mt-2 inline-flex rounded-lg border border-accent-warm/40 px-3 py-1.5 text-xs font-semibold text-accent-warm-strong transition-colors hover:bg-accent-warm/5"
-          >
-            {nodo.has_lesson ? "Estudiar este tema →" : "Practicar este tema →"}
-          </Link>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {nodo.has_lesson && (
+              <Link
+                href={`/aprender/${nodo.code}`}
+                className="inline-flex rounded-lg border border-border px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-surface-hover"
+              >
+                Estudiar la teoría
+              </Link>
+            )}
+            <Link
+              href={`/practicar/${nodo.code}`}
+              className="inline-flex rounded-lg border border-accent-warm/40 px-3 py-1.5 text-xs font-semibold text-accent-warm-strong transition-colors hover:bg-accent-warm/5"
+            >
+              Practicar este tema →
+            </Link>
+          </div>
         )}
       </div>
     </li>
