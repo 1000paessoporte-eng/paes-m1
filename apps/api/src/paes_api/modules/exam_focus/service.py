@@ -189,17 +189,42 @@ def duration_for(question_count: int, pace: Pace, subject: Subject = Subject.M1)
 
 
 #: Mínimo de preguntas que justifica montar un texto largo en el ensayo.
-#: Bajo esto conviene cerrar el ensayo antes que pedirle al alumno leer mil
+#: Bajo esto conviene dejar el texto fuera antes que pedirle al alumno leer mil
 #: palabras para responder dos preguntas. La prueba oficial nunca baja de 7.
 MINIMO_POR_TEXTO = 6
 
+#: Preguntas por texto a las que apunta el reparto. Sale de medir las pruebas
+#: oficiales: 65 preguntas repartidas en 7 u 8 lecturas, o sea entre 7 y 11 por
+#: texto, con un promedio cercano a nueve.
+OBJETIVO_POR_TEXTO = 9
+
+
+def _cuotas(total: int, partes: int) -> list[int]:
+    """Reparte `total` entre `partes` lo más parejo posible.
+
+    El sobrante del redondeo se entrega de a uno a los primeros, de modo que
+    las cuotas nunca difieren en más de una pregunta entre sí.
+    """
+    base, resto = divmod(total, partes)
+    return [base + (1 if i < resto else 0) for i in range(partes)]
+
 
 def _seleccionar_por_texto(pool: list[Question], count: int) -> list[Question]:
-    """Arma un ensayo de lectura eligiendo TEXTOS completos.
+    """Arma un ensayo de lectura repartiendo las preguntas entre varios TEXTOS.
 
     Devuelve las preguntas ya agrupadas por texto y en ese orden: el cliente
     las pagina tal cual las recibe, un texto por página con sus preguntas
     debajo, que es como se rinde la prueba de papel.
+
+    El reparto imita la estructura oficial: 65 preguntas en 7 u 8 lecturas, con
+    entre 7 y 11 preguntas cada una. Por eso primero se decide CUÁNTOS textos
+    entran —apuntando a `OBJETIVO_POR_TEXTO` preguntas por texto— y recién
+    después se toma de cada uno el subconjunto que le toca.
+
+    Antes se tomaban textos enteros hasta que faltaran menos de
+    `MINIMO_POR_TEXTO` preguntas, y ahí el ensayo se cerraba corto: con textos
+    de nueve y once preguntas, pedir 65 entregaba entre 60 y 65 —y solo un
+    cuarto de las veces las 65— repartidas en 6 lecturas en vez de 7 u 8.
     """
     por_texto: dict[int, list[Question]] = defaultdict(list)
     sueltas: list[Question] = []
@@ -224,17 +249,60 @@ def _seleccionar_por_texto(pool: list[Question], count: int) -> list[Question]:
         primera = literarias[0]
         claves.remove(primera)
         claves.insert(0, primera)
-    elegidas: list[Question] = []
-    for clave in claves:
-        falta = count - len(elegidas)
+
+    # Se barajan las preguntas DENTRO de cada texto para que dos ensayos con el
+    # mismo texto no traigan siempre las mismas; el orden entre textos ya quedó
+    # fijado arriba.
+    grupos = {c: list(por_texto[c]) for c in claves}
+    for grupo in grupos.values():
+        random.shuffle(grupo)
+
+    # Cuántos textos entran. Se apunta al promedio oficial y se acota por los
+    # textos disponibles y por el mínimo que justifica montar una lectura.
+    if not claves:
+        cuantos = 0
+    else:
+        cuantos = max(1, round(count / OBJETIVO_POR_TEXTO))
+        cuantos = min(cuantos, len(claves), max(1, count // MINIMO_POR_TEXTO))
+
+    # Los textos del banco no traen todos la misma cantidad de preguntas, así
+    # que el promedio no basta: hay que comprobar que los textos elegidos
+    # ALCANCEN para lo pedido. Con lecturas de nueve preguntas, siete textos
+    # llegan a 63 y no a 65, y el ensayo salía corto por eso. Mientras la
+    # capacidad no cubra el total, entra un texto más.
+    while cuantos < len(claves) and sum(len(grupos[c]) for c in claves[:cuantos]) < count:
+        cuantos += 1
+
+    elegidos = list(claves[:cuantos])
+    reserva = list(claves[cuantos:])
+
+    tomado: dict[int, int] = dict(zip(elegidos, _cuotas(count, cuantos))) if cuantos else {}
+
+    # Un texto no puede aportar más preguntas de las que tiene. Lo que quede
+    # sin cubrir se reparte entre los textos que todavía tengan de sobra, y si
+    # aun así falta, entra un texto más de la fila.
+    for clave in elegidos:
+        tomado[clave] = min(tomado[clave], len(grupos[clave]))
+
+    def _faltante() -> int:
+        return count - sum(tomado.values())
+
+    for clave in elegidos:
+        if _faltante() <= 0:
+            break
+        libre = len(grupos[clave]) - tomado[clave]
+        tomado[clave] += min(libre, _faltante())
+
+    for clave in list(reserva):
+        falta = _faltante()
         if falta < MINIMO_POR_TEXTO:
             break
-        grupo = list(por_texto[clave])
-        # Se barajan DENTRO del texto para que dos ensayos con el mismo texto
-        # no traigan siempre las mismas preguntas; el orden entre textos ya
-        # quedó fijado arriba.
-        random.shuffle(grupo)
-        elegidas.extend(grupo[:falta])
+        elegidos.append(clave)
+        tomado[clave] = min(falta, len(grupos[clave]))
+
+    elegidas: list[Question] = []
+    for clave in elegidos:
+        elegidas.extend(grupos[clave][: tomado[clave]])
 
     # Las preguntas sin texto asociado solo se usan para completar, y nunca
     # deberían existir en esta prueba: una pregunta de lectura sin lectura no
