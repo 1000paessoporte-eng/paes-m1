@@ -247,7 +247,7 @@ function Bienvenida({
         </div>
 
         <h1 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
-          Hola, <span className="texto-marca">{nombre}</span>
+          Hola, <span className="font-display">{nombre}</span>
         </h1>
 
         <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted">

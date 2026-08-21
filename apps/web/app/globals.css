@@ -13,18 +13,28 @@
 
 /* --- Tema claro (por defecto) ------------------------------------------- */
 :root {
+  /* PAPEL. El fondo se queda blanco porque el trabajo de esta pantalla es
+     leer enunciados contra reloj y ahí el contraste manda. Las superficies,
+     en cambio, dejan de tirar al azul --que se lee como "panel de software"--
+     y toman un gris neutro tibio, que es el color de una hoja de prueba. */
   --background: #ffffff;
-  --surface: #f8f9fc;
-  --surface-hover: #f1f2f8;
-  --border: #e4e5ee;
-  --border-strong: #c9cbdb;
-  --foreground: #0f1120;
-  --muted: #576076;
+  --surface: #f7f6f4;
+  --surface-hover: #efeeea;
+  --border: #e4e2dc;
+  --border-strong: #c4c1b8;
+  --foreground: #17171c;
+  --muted: #5c5b63;
 
-  /* Violeta eléctrico: es la marca. 5.7:1 sobre blanco. */
-  --accent: #7c3aed;
-  /* Cian: acompaña al violeta en degradados y series de gráficos. */
-  --accent-2: #0e7490;
+  /* GRAFITO: la marca.
+     Era un violeta eléctrico (#7c3aed) que chocaba de frente con el color de
+     identidad de Matemática M2 (#7e22ce): la marca y una de las cinco pruebas
+     eran el mismo color, así que el violeta no podía significar las dos cosas.
+     Resuelto por el lado correcto: la marca se vuelve acromática y el color
+     queda reservado para lo que SÍ significa algo --qué prueba estás rindiendo
+     y si acertaste--. Es el mismo lápiz con que se rinde la PAES. */
+  --accent: #2b2b33;
+  /* El grafito claro, para estados apagados y series secundarias. */
+  --accent-2: #6b6a72;
   --accent-foreground: #ffffff;
   /* Texto sobre un relleno de color saturado (éxito, error, aviso, CTA). En
      claro esos rellenos son oscuros y el texto va blanco; en oscuro son claros
@@ -70,13 +80,13 @@
   --prueba-historia: #9f1239;
 
 
-  /* Hoja de cuaderno del fondo. Violeta lavado, no gris: el gris sobre blanco
-     se lee como suciedad de pantalla. */
-  --cuaderno-fino: color-mix(in srgb, var(--accent) 6%, transparent);
-  --cuaderno-grueso: color-mix(in srgb, var(--accent) 12%, transparent);
+  /* Hoja de cuaderno del fondo. Ahora que la marca es grafito, la cuadrícula
+     es de lápiz de verdad y no un violeta lavado. */
+  --cuaderno-fino: color-mix(in srgb, var(--accent) 5%, transparent);
+  --cuaderno-grueso: color-mix(in srgb, var(--accent) 10%, transparent);
 
   /* Sombra y realce. En claro la profundidad la da una sombra proyectada. */
-  --sombra-color: 15 17 32;
+  --sombra-color: 23 23 28;
   --sombra-card: 0 1px 2px rgb(var(--sombra-color) / 0.04),
     0 8px 24px -16px rgb(var(--sombra-color) / 0.12);
   --sombra-card-hover: 0 12px 32px -16px rgb(var(--sombra-color) / 0.18);
@@ -90,19 +100,21 @@
    manual gane por sobre el sistema. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --background: #0b0b12;
-    --surface: #13131c;
-    --surface-hover: #1c1c28;
-    --border: #262633;
-    --border-strong: #3a3a4c;
-    --foreground: #f1f2f6;
-    --muted: #a5a6bd;
+    /* De noche el papel se da vuelta: pizarra en vez de hoja, y el grafito
+       pasa a ser tiza. Los grises mantienen el tinte neutro tibio para que no
+       se lea como azul apagado. */
+    --background: #0d0d10;
+    --surface: #17171b;
+    --surface-hover: #212127;
+    --border: #2b2b31;
+    --border-strong: #45454e;
+    --foreground: #f4f3f0;
+    --muted: #a9a8a4;
 
-    /* De noche los acentos suben de luminosidad en vez de bajar: sobre fondo
-       oscuro un violeta saturado se apaga, uno claro brilla. */
-    --accent: #a78bfa;
-    --accent-2: #22d3ee;
-    --accent-foreground: #0b0b12;
+    /* La marca de noche es la tiza: sobre pizarra, un trazo oscuro no existe. */
+    --accent: #e8e7e3;
+    --accent-2: #9b9a96;
+    --accent-foreground: #0d0d10;
     --on-fill: #0b0b12;
     /* En oscuro los colores de prueba son CLAROS: encima va --on-fill,
        que es casi negro. Ver la regla en el bloque claro. */
@@ -112,7 +124,7 @@
     --prueba-ciencias: #5eead4;
     --prueba-historia: #fda4af;
 
-    --grafito: #d4d4dd;
+    --grafito: #dedcd6;
 
     --success: #34d399;
     --success-bright: #34d399;
@@ -141,17 +153,17 @@
    Mismos valores, pero ganando siempre: quien apretó el botón manda por
    sobre el sistema, en los dos sentidos. */
 :root[data-theme="dark"] {
-  --background: #0b0b12;
-  --surface: #13131c;
-  --surface-hover: #1c1c28;
-  --border: #262633;
-  --border-strong: #3a3a4c;
-  --foreground: #f1f2f6;
-  --muted: #a5a6bd;
+  --background: #0d0d10;
+  --surface: #17171b;
+  --surface-hover: #212127;
+  --border: #2b2b31;
+  --border-strong: #45454e;
+  --foreground: #f4f3f0;
+  --muted: #a9a8a4;
 
-  --accent: #a78bfa;
-  --accent-2: #22d3ee;
-  --accent-foreground: #0b0b12;
+  --accent: #e8e7e3;
+  --accent-2: #9b9a96;
+  --accent-foreground: #0d0d10;
   --on-fill: #0b0b12;
   /* En oscuro los colores de prueba son CLAROS: encima va --on-fill,
      que es casi negro. Ver la regla en el bloque claro. */
@@ -161,7 +173,7 @@
   --prueba-ciencias: #5eead4;
   --prueba-historia: #fda4af;
 
-  --grafito: #d4d4dd;
+  --grafito: #dedcd6;
 
   --success: #34d399;
   --success-bright: #34d399;
@@ -202,9 +214,12 @@
   --color-warning: var(--warning);
   --color-accent-warm: var(--accent-warm);
   --color-accent-warm-strong: var(--accent-warm-strong);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-jakarta);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--fuente-ui);
+  --font-display: var(--fuente-display);
+  --font-lectura: var(--fuente-lectura);
+  /* Queda apuntando a la de interfaz: lo que antes pedía monoespaciada eran
+     relojes y puntajes, y esos se alinean con `tabular-nums`. */
+  --font-mono: var(--fuente-ui);
 }
 
 /* ===========================================================================
@@ -300,29 +315,37 @@ html {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-color: var(--border-strong);
   box-shadow: var(--sombra-card-hover);
 }
 
-/* Botón de marca: degradado violeta→cian y un resplandor que crece al pasar
-   por encima. El brillo es sombra, no relleno, así el contraste del texto no
-   depende de dónde caiga el degradado. */
+/* Acción principal: grafito macizo.
+   Era un degradado violeta→cian con resplandor, o sea el botón que tiene medio
+   internet. Un CTA de color competía además con los cinco colores de prueba,
+   que son el único lugar donde el color debería significar algo. En grafito el
+   botón manda por CONTRASTE y no por saturación, y deja el color libre.
+
+   La profundidad la da una sombra corta y dura, como un sello sobre papel: sin
+   desenfoque grande, sin brillo de neón. */
 .btn-glow {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
+  background: var(--accent);
+  color: var(--accent-foreground);
+  box-shadow: 0 1px 0 0 color-mix(in srgb, var(--accent) 70%, transparent),
+    0 2px 6px -2px rgb(var(--sombra-color) / 0.25);
   transition:
-    box-shadow 0.25s ease,
-    transform 0.15s var(--ease-salida);
+    box-shadow 0.2s var(--ease-suave),
+    transform 0.12s var(--ease-salida);
 }
 
 .btn-glow:hover {
-  box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--accent) 60%, transparent),
-    0 8px 28px -6px color-mix(in srgb, var(--accent) 70%, transparent);
+  box-shadow: 0 1px 0 0 color-mix(in srgb, var(--accent) 70%, transparent),
+    0 6px 16px -4px rgb(var(--sombra-color) / 0.35);
 }
 
+/* Se hunde, no se encoge: el gesto de apretar un lápiz contra el papel. */
 .btn-glow:active {
-  transform: translateY(1px) scale(0.99);
+  transform: translateY(1px);
+  box-shadow: 0 0 0 0 transparent, 0 1px 3px -1px rgb(var(--sombra-color) / 0.3);
 }
 
 /* Acción principal del panel y del hero. Relleno sólido (no degradado) para
@@ -337,13 +360,13 @@ html {
 }
 
 .btn-warm:hover {
-  box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--accent-warm) 50%, transparent),
-    0 10px 30px -8px color-mix(in srgb, var(--accent-warm) 80%, transparent);
+  box-shadow: 0 1px 0 0 color-mix(in srgb, var(--accent-warm-strong) 70%, transparent),
+    0 6px 16px -4px rgb(var(--sombra-color) / 0.3);
 }
 
 .btn-warm:active {
-  transform: translateY(1px) scale(0.99);
+  transform: translateY(1px);
+  box-shadow: 0 0 0 0 transparent, 0 1px 3px -1px rgb(var(--sombra-color) / 0.3);
 }
 
 /* ===========================================================================
@@ -554,12 +577,31 @@ html {
   );
 }
 
-/* Texto con el degradado de la marca. */
-.texto-marca {
-  background-image: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* ===========================================================================
+   ENLACES: el subrayado es la señal, no el color
+   ---------------------------------------------------------------------------
+   Cuando la marca era violeta, un enlace se reconocía porque era violeta. Con
+   la marca en grafito ese truco se acabó: un enlace del color del texto es
+   texto. La respuesta correcta para esta identidad no es inventarle un color
+   —volveríamos a competir con los cinco de las pruebas— sino subrayarlo, que
+   es lo que se hace en papel y lo que además nunca depende de distinguir
+   colores.
+
+   El subrayado arranca tenue y se afirma al pasar por encima, así que la
+   página no se llena de líneas duras. Va con `:where()` para no sumar
+   especificidad: cualquier utilidad de Tailwind sigue ganando.
+   =========================================================================== */
+
+a:where(.text-accent) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: color-mix(in srgb, currentColor 32%, transparent);
+  transition: text-decoration-color var(--dur-rapida) var(--ease-suave);
+}
+
+a:where(.text-accent):hover {
+  text-decoration-color: currentColor;
 }
 
 /* ===========================================================================
