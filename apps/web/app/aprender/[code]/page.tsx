@@ -74,10 +74,19 @@ export default async function AprenderNodoPage({
   // 404 lo dice, en vez de dejar a Google indexando una cáscara.
   if (leccion === null) notFound();
 
+  // Los vecinos en el índice, que ya viene ordenado por prueba y por posición
+  // en el árbol. Si la API no responde, la lección se muestra sin la
+  // navegación: es un extra, no puede tumbar la página.
+  const indice = await getLecciones().catch(() => []);
+  const posicion = indice.findIndex((l) => l.node_code === code);
+  const anterior = posicion > 0 ? indice[posicion - 1] : null;
+  const siguiente =
+    posicion >= 0 && posicion < indice.length - 1 ? indice[posicion + 1] : null;
+
   return (
     <>
       <main className="flex-1 px-6 py-12">
-        <LeccionView leccion={leccion} />
+        <LeccionView leccion={leccion} anterior={anterior} siguiente={siguiente} />
       </main>
       <SiteFooter />
 

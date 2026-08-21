@@ -404,6 +404,18 @@ export function getExamState(attemptId: number, token?: string): Promise<ExamSta
   return apiFetch<ExamState>(`/api/exam/${attemptId}`, token);
 }
 
+/**
+ * Cuánto se espera por un autoguardado antes de darlo por perdido.
+ *
+ * Sin límite, una conexión que acepta la conexión pero no responde --un portal
+ * cautivo de wifi, una red que se cayó a medias-- deja la promesa colgada:
+ * medido, tardó 30 segundos en fallar. Durante el ensayo eso solo retrasa el
+ * reintento, pero al enviar el alumno se queda mirando "Enviando..." sin saber
+ * si su ensayo se fue. Ocho segundos es de sobra para un POST de cuatro
+ * campos, y fallar rápido es lo que permite reintentar.
+ */
+const TIMEOUT_AUTOGUARDADO_MS = 8000;
+
 export function answerExamQuestion(
   attemptId: number,
   questionId: number,
@@ -414,6 +426,7 @@ export function answerExamQuestion(
 ): Promise<{ ok: boolean }> {
   return apiFetch<{ ok: boolean }>(`/api/exam/${attemptId}/answer`, token, {
     method: "POST",
+    signal: AbortSignal.timeout(TIMEOUT_AUTOGUARDADO_MS),
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       question_id: questionId,

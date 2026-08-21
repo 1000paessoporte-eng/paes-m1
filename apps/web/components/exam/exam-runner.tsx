@@ -94,6 +94,16 @@ export function ExamRunner({
   //: literal para que el alumno vea el número real, no una frase genérica.
   const [limiteMotivo, setLimiteMotivo] = useState<string | null>(null);
 
+  /** Preguntas cuya respuesta NO alcanzó a llegar al servidor.
+   *
+   *  El autoguardado era best-effort y su error se tragaba en silencio: si
+   *  fallaba la red justo al contestar la 5 y el alumno seguía a la 6, esa
+   *  respuesta no se reintentaba nunca. La veía marcada en pantalla --el
+   *  estado es local-- y el ensayo se corregía sin ella. Puntaje perdido sin
+   *  ningún aviso, que en un celular con señal intermitente no es raro. */
+  const pendientesRef = useRef<Set<number>>(new Set());
+  const [sinGuardar, setSinGuardar] = useState(0);
+
   const segmentStartRef = useRef(0);
   const attemptIdRef = useRef<number | null>(null);
   const answersRef = useRef(answers);
@@ -129,6 +139,60 @@ export function ExamRunner({
     [paginas, currentIndex]
   );
 
+  /** Manda una respuesta al servidor y anota si no llegó.
+   *
+   *  Separado de `flush` porque un reintento NO debe volver a sumar tiempo:
+   *  reenvía el acumulado que ya se calculó la primera vez. */
+  const enviar = useCallback(
+    (
+      questionId: number,
+      selected: number | null,
+      flagged: boolean,
+      totalMs: number
+    ): Promise<void> => {
+      const id = attemptIdRef.current;
+      if (id == null) return Promise.resolve();
+      return answerExamQuestion(
+        id,
+        questionId,
+        selected,
+        totalMs,
+        flagged,
+        getClientToken() ?? undefined
+      ).then(
+        () => {
+          pendientesRef.current.delete(questionId);
+          setSinGuardar(pendientesRef.current.size);
+        },
+        (err) => {
+          if (err instanceof ApiError && err.status === 401) {
+            router.push(loginHref(pathname));
+            return;
+          }
+          pendientesRef.current.add(questionId);
+          setSinGuardar(pendientesRef.current.size);
+        }
+      );
+    },
+    [router, pathname]
+  );
+
+  /** Reintenta todo lo que quedó sin guardar. */
+  const reintentarPendientes = useCallback(async () => {
+    const ids = [...pendientesRef.current];
+    await Promise.all(
+      ids.map((qid) => {
+        const estado = answersRef.current[qid];
+        return enviar(
+          qid,
+          estado?.selected ?? null,
+          estado?.flagged ?? false,
+          elapsedRef.current[qid] ?? 0
+        );
+      })
+    );
+  }, [enviar]);
+
   /** Guarda una respuesta. Los valores se pasan explícitos porque al llamarlo
    *  justo después de un setState el estado todavía no se ha actualizado. */
   const flush = useCallback(
@@ -142,23 +206,9 @@ export function ExamRunner({
       const total = (elapsedRef.current[questionId] ?? 0) + Math.max(0, delta);
       elapsedRef.current[questionId] = total;
 
-      return answerExamQuestion(
-        id,
-        questionId,
-        selected,
-        total,
-        flagged,
-        getClientToken() ?? undefined
-      ).then(
-        () => {},
-        (err) => {
-          // Autosave best-effort: si falla, el próximo flush reintenta con el
-          // tiempo acumulado.
-          if (err instanceof ApiError && err.status === 401) router.push(loginHref(pathname));
-        }
-      );
+      return enviar(questionId, selected, flagged, total);
     },
-    [router, pathname]
+    [enviar]
   );
 
   const goToQuestion = useCallback(
@@ -184,6 +234,18 @@ export function ExamRunner({
     },
     [paginas, goToQuestion]
   );
+
+  // Reintenta solo, mientras rinde. Una caída de señal en el metro dura
+  // segundos: si se recupera sola, el alumno nunca se entera de que pasó algo,
+  // que es como debe ser. El aviso de la cabecera es para cuando NO se
+  // recupera.
+  useEffect(() => {
+    if (phase !== "in_progress" || sinGuardar === 0) return;
+    const t = setInterval(() => {
+      void reintentarPendientes();
+    }, 15000);
+    return () => clearInterval(t);
+  }, [phase, sinGuardar, reintentarPendientes]);
 
   //: Pregunta a la que hay que bajar en cuanto exista en el DOM. Se guarda
   //: en un ref porque al saltar desde la cuadrícula la pregunta puede estar
@@ -259,6 +321,21 @@ export function ExamRunner({
         const estado = answersRef.current[currentQuestion.id];
         await flush(currentQuestion.id, estado?.selected ?? null, estado?.flagged ?? false);
       }
+
+      // Última oportunidad para lo que quedó sin guardar. Si sigue sin subir,
+      // NO se envía: corregir el ensayo sin esas respuestas le baja el puntaje
+      // por un problema de red, y encima quedaría como si las hubiera omitido.
+      await reintentarPendientes();
+      if (pendientesRef.current.size > 0) {
+        setErrorMsg(
+          `No pudimos guardar ${pendientesRef.current.size} ${
+            pendientesRef.current.size === 1 ? "respuesta" : "respuestas"
+          }. Revisa tu conexión y vuelve a enviar: tus respuestas siguen acá.`
+        );
+        setConfirmingSubmit(false);
+        return;
+      }
+
       await loadResult(id);
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) {
@@ -269,7 +346,7 @@ export function ExamRunner({
     } finally {
       setSubmitting(false);
     }
-  }, [currentQuestion, flush, loadResult, router, pathname, submitting]);
+  }, [currentQuestion, flush, reintentarPendientes, loadResult, router, pathname, submitting]);
 
   const resumeAttempt = useCallback(async (id: number) => {
     setPhase("loading");
@@ -586,6 +663,20 @@ export function ExamRunner({
             </Medidor>
           </div>
         </div>
+
+        {/* Que se sepa mientras pasa, no al enviar. Si se recupera solo, esto
+            desaparece y el alumno nunca supo que hubo un problema. */}
+        {sinGuardar > 0 && (
+          <p
+            role="status"
+            className="mb-2 rounded-lg border border-warning/40 bg-warning/10 px-3 py-1.5 text-xs text-warning"
+          >
+            {sinGuardar === 1
+              ? "Una respuesta no se ha guardado"
+              : `${sinGuardar} respuestas no se han guardado`}
+            . Estamos reintentando; sigue respondiendo.
+          </p>
+        )}
 
         <div className="-mx-4 h-1 w-[calc(100%+2rem)] bg-surface-hover sm:-mx-6 sm:w-[calc(100%+3rem)]">
           <div
