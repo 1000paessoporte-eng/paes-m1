@@ -21383,6 +21383,181 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "tabla_nutricional",
+        "title": "Cómo comparar dos productos con la tabla nutricional",
+        "kind": "discontinuo",
+        "source_note": (
+            "Ficha elaborada por 1000paes para ejercitar la lectura de tablas. Los dos "
+            "productos son ficticios; los límites de los sellos citados corresponden a "
+            "los vigentes para alimentos sólidos y se verificaron antes de escribir el "
+            "documento."
+        ),
+        "body": (
+            "**CÓMO COMPARAR DOS PRODUCTOS CON LA TABLA NUTRICIONAL**\n\n"
+            "*Ficha de uso educativo. Los dos cereales de este ejercicio son "
+            "ficticios; los límites de los sellos que se citan sí corresponden a "
+            "los vigentes para alimentos sólidos.*\n\n"
+            "**1. Los dos productos**\n\n"
+            "| Por 100 gramos | Cereal A | Cereal B |\n"
+            "|---|---|---|\n"
+            "| Energía | 380 kcal | 350 kcal |\n"
+            "| Azúcares totales | 22 g | 8 g |\n"
+            "| Sodio | 380 mg | 520 mg |\n"
+            "| Grasas saturadas | 2,5 g | 1,0 g |\n"
+            "| **Porción declarada** | **30 g** | **45 g** |\n\n"
+            "**2. Los mismos productos, por porción**\n\n"
+            "| Por porción declarada | Cereal A (30 g) | Cereal B (45 g) |\n"
+            "|---|---|---|\n"
+            "| Energía | 114 kcal | 157,5 kcal |\n"
+            "| Azúcares totales | 6,6 g | 3,6 g |\n"
+            "| Sodio | 114 mg | 234 mg |\n"
+            "| Grasas saturadas | 0,75 g | 0,45 g |\n\n"
+            "**3. La trampa**\n\n"
+            "Mirando solo la segunda tabla, el Cereal A parece la mejor opción en "
+            "energía: 114 contra 157,5. Pero esa comparación no es válida, porque "
+            "no compara la misma cantidad de alimento. Una porción de A pesa 30 "
+            "gramos y una de B pesa 45. Se están comparando dos cosas de distinto "
+            "tamaño.\n\n"
+            "La regla es simple y sirve siempre: **para comparar dos productos hay "
+            "que usar la columna de 100 gramos**. Es la única cifra que ambos "
+            "fabricantes están obligados a calcular sobre la misma base. La porción "
+            "declarada, en cambio, la define cada fabricante.\n\n"
+            "**4. Qué se ve al comparar por 100 gramos**\n\n"
+            "| Comparación | Resultado |\n"
+            "|---|---|\n"
+            "| Energía | A tiene 30 kcal más que B |\n"
+            "| Azúcares | A casi triplica a B |\n"
+            "| Sodio | B tiene 140 mg más que A |\n"
+            "| Grasas saturadas | A tiene más del doble que B |\n\n"
+            "En resumen: A es más dulce y más energético; B es más salado. Ninguno "
+            "es «el bueno». Cuál conviene depende de qué se está tratando de "
+            "reducir.\n\n"
+            "**5. Los sellos, y por qué no bastan**\n\n"
+            "Los límites vigentes para alimentos sólidos son, por cada 100 gramos: "
+            "275 kcal de energía, 400 mg de sodio, 10 g de azúcares totales y 4 g "
+            "de grasas saturadas. Superar un límite obliga a llevar el sello "
+            "correspondiente.\n\n"
+            "| Producto | Supera | Sellos |\n"
+            "|---|---|---|\n"
+            "| Cereal A | energía y azúcares | 2 |\n"
+            "| Cereal B | energía y sodio | 2 |\n\n"
+            "Los dos llevan la misma cantidad de sellos y no son equivalentes: uno "
+            "excede en azúcares y el otro en sodio. El sello informa que se pasó un "
+            "límite; no informa por cuánto. El Cereal A tiene más del doble del "
+            "azúcar permitido, y eso el envase no lo dice.\n\n"
+            "**6. Tres precauciones al leer una tabla**\n\n"
+            "*(a)* Revisar siempre el peso de la porción declarada antes de "
+            "comparar cualquier cifra por porción.\n\n"
+            "*(b)* No confundir azúcares totales con azúcares añadidos: la tabla "
+            "suele informar el total, que incluye los que el alimento ya traía.\n\n"
+            "*(c)* Recordar que la porción declarada no es una recomendación de "
+            "cuánto comer: es la cantidad que el fabricante eligió para presentar "
+            "sus cifras.\n\n"
+            "**7. Un ejercicio para comprobarlo**\n\n"
+            "Tome cualquier producto envasado de la casa y compare dos cifras: la "
+            "energía por 100 gramos y la energía por porción. Divida la segunda por "
+            "la primera y multiplique por cien. El resultado es el peso de la "
+            "porción declarada, en gramos, y muchas veces sorprende: hay envases "
+            "donde la porción declarada corresponde a bastante menos de lo que "
+            "cualquiera se sirve. Ese número es el que hay que tener a la vista "
+            "antes de creerle a una comparación por porción.\n\n"
+            "**8. Lo que esta ficha no resuelve**\n\n"
+            "La tabla no dice nada sobre la calidad de los ingredientes, sobre la "
+            "cantidad de fibra o de proteína que aporta el producto, ni sobre "
+            "cuánto se come realmente de él. Un cereal con buenas cifras del que "
+            "alguien sirve tres porciones entrega más de todo que uno con peores "
+            "cifras servido una vez. La tabla informa sobre cien gramos de "
+            "producto; sobre el desayuno completo, no informa nada."
+        ),
+    },
+    {
+        "key": "agua_embotellada",
+        "title": "Seiscientas veces",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La diferencia de precio entre el agua de la "
+            "red y la embotellada se presenta como orden de magnitud comprobable en una "
+            "boleta, y los efectos ambientales y los límites del reciclaje se describen "
+            "en términos generales, sin atribuir cifras a estudios concretos."
+        ),
+        "body": (
+            "**Seiscientas veces**\n\n"
+            "Un litro de agua de la llave cuesta, en Chile, una fracción de peso. "
+            "Un litro de agua embotellada cuesta varios cientos de pesos. La "
+            "diferencia no es del diez ni del cien por ciento: es de dos o tres "
+            "órdenes de magnitud, y cualquiera puede comprobarla dividiendo el "
+            "total de su boleta del agua por los metros cúbicos consumidos. Es "
+            "probablemente el sobreprecio más grande que la mayoría de la gente "
+            "paga sin discutir.\n\n"
+            "Lo interesante no es el dato, que se sabe, sino que saberlo no cambie "
+            "casi nada. Quien compra una botella en el kiosco no ignora que el agua "
+            "de la llave es más barata. La compra igual, por razones que conviene "
+            "tomarse en serio antes de dar consejos.\n\n"
+            "La primera es práctica: tener sed en la calle y no andar trayendo "
+            "nada. Contra eso no hay argumento ambiental que valga, y la solución "
+            "tampoco es moral: es tener dónde llenar una botella. Una ciudad con "
+            "bebederos públicos que funcionan resuelve el problema; una ciudad sin "
+            "ellos convierte la sed en una compra obligatoria.\n\n"
+            "La segunda razón es el sabor, y aquí conviene ser exacto. El agua "
+            "potable de la red lleva cloro, porque desinfectarla es justamente lo "
+            "que la vuelve segura, y ese cloro se nota. En varias zonas del país el "
+            "agua además es dura, con más minerales disueltos, y eso también se "
+            "percibe. Nada de esto la hace insalubre y todo esto la hace menos "
+            "agradable, que son dos cosas distintas y que el argumento ambiental "
+            "suele confundir.\n\n"
+            "La tercera razón es la más seria y la que menos se menciona en las "
+            "campañas: hay lugares donde el agua de la llave efectivamente no es "
+            "confiable. Localidades con abastecimiento intermitente, redes "
+            "antiguas, episodios de turbiedad o problemas puntuales de calidad. "
+            "Para una familia que vivió un corte prolongado o que recibió agua "
+            "turbia el mes pasado, comprar botellas no es un capricho: es una "
+            "decisión razonable tomada con la información que tiene.\n\n"
+            "Dicho todo eso, el costo ambiental existe y no es pequeño. Cada "
+            "botella implica fabricar un envase de plástico, llenarlo, "
+            "transportarlo —el agua pesa, de modo que mover agua envasada es mover "
+            "peso por carretera— y después disponer del envase. Y ahí aparece la "
+            "parte incómoda: el reciclaje del plástico es mucho más parcial de lo "
+            "que sugiere el símbolo impreso en el fondo. Una parte se recicla, otra "
+            "se convierte en un producto de menor calidad que ya no se podrá "
+            "reciclar otra vez, y otra parte simplemente no entra al circuito.\n\n"
+            "Conviene decirlo sin exagerar en ninguna dirección. Ni el reciclaje es "
+            "un trámite que anula el problema, ni es un engaño completo: es un "
+            "sistema que funciona a medias y cuya eficacia depende de cosas "
+            "bastante aburridas —cuánto se separa en el hogar, qué tan lejos queda "
+            "la planta, si el material está limpio— y no de la buena intención de "
+            "quien deposita la botella.\n\n"
+            "Hay además una comparación que casi nunca se hace y que ordena "
+            "bastante el asunto: la botella reutilizable tampoco es gratis en "
+            "términos ambientales. Fabricarla cuesta más energía y más material que "
+            "fabricar una botella desechable, de modo que su ventaja no existe el "
+            "primer día: aparece recién después de bastantes usos. Una botella de "
+            "acero comprada y olvidada en un cajón es peor que las tres botellas "
+            "plásticas que habría reemplazado. Lo que importa no es el objeto, es "
+            "cuántas veces se usa.\n\n"
+            "Ahora bien, aquí el argumento suele descarrilar, y vale la pena ver "
+            "cómo. Casi todas las campañas terminan en el mismo lugar: una "
+            "recomendación dirigida a la persona. Anda con tu botella. Deja de "
+            "comprar. Sé consecuente. Y esa recomendación es correcta y es "
+            "insuficiente, porque atribuye a una decisión individual algo que en "
+            "buena medida es un problema de infraestructura. Quien no tiene un "
+            "bebedero en veinte cuadras, o quien recibe agua turbia dos veces al "
+            "año, no está eligiendo mal: está eligiendo dentro de lo que hay.\n\n"
+            "Puesto en esos términos, la pregunta útil cambia. No es cuánta gente "
+            "debería cambiar de hábito, sino qué haría falta para que el hábito "
+            "resultara fácil: bebederos que funcionen y estén limpios, información "
+            "clara y verificable sobre la calidad del agua de cada zona, y "
+            "respuestas rápidas cuando esa calidad falla. Las tres cosas son caras, "
+            "ninguna es espectacular y todas hacen más que un afiche.\n\n"
+            "Queda un detalle final que resume bien el asunto. En la mayoría de los "
+            "casos, el agua embotellada que se vende en Chile proviene de fuentes "
+            "sometidas a controles de calidad, igual que la de la red. Es decir: "
+            "buena parte de la discusión no es sobre agua más segura contra agua "
+            "menos segura, sino sobre cuánto estamos dispuestos a pagar por no "
+            "tener que confiar. Y la confianza, a diferencia del agua, no se puede "
+            "embotellar: se construye con años de un servicio que no falle."
+        ),
+    },
+    {
         "key": "aburrimiento_horas",
         "title": "En defensa de las horas vacías",
         "kind": "no_literario",
@@ -26796,6 +26971,339 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Cómo comparar dos productos con la tabla nutricional' ----------
+    _ql(
+        "tabla_nutricional", "lec_localizar", "facil",
+        "Según la ficha, ¿cuánto azúcar tiene el Cereal A por cada 100 gramos?",
+        "22 gramos",
+        "La primera tabla entrega los cuatro valores del Cereal A por 100 gramos: "
+        "380 kcal, 22 g de azúcares totales, 380 mg de sodio y 2,5 g de grasas "
+        "saturadas.\n\nLos 6,6 gramos que aparecen después corresponden a su "
+        "porción declarada de 30 gramos.",
+        [
+            ("6,6 gramos", "Ese es el azúcar de una porción de 30 gramos."),
+            ("8 gramos", "Corresponde al Cereal B por 100 gramos."),
+            ("3,6 gramos", "Es el azúcar de una porción de 45 gramos del Cereal B."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_localizar", "facil",
+        "Según la ficha, ¿qué porción declara cada producto?",
+        "30 gramos el Cereal A y 45 gramos el Cereal B",
+        "Esa diferencia es el centro del documento: las cifras «por porción» de los "
+        "dos productos no describen la misma cantidad de alimento.\n\nLa ficha "
+        "agrega quién define esa cantidad: cada fabricante.",
+        [
+            ("45 gramos el Cereal A y 30 gramos el Cereal B", "Los valores están invertidos respecto de la tabla."),
+            ("100 gramos ambos productos", "Los 100 gramos son la base común, no la porción declarada."),
+            ("30 gramos ambos productos", "Solo el Cereal A declara una porción de ese tamaño."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_localizar", "medio",
+        "Según la ficha, ¿cuáles son los límites que obligan a llevar sello en "
+        "alimentos sólidos?",
+        "275 kcal, 400 mg de sodio, 10 g de azúcar y 4 de grasas",
+        "Todos esos límites se miden por cada 100 gramos de producto, y superar "
+        "cualquiera de ellos obliga a llevar el sello correspondiente.\n\nCon esos "
+        "valores, el Cereal A supera energía y azúcares, y el Cereal B supera "
+        "energía y sodio.",
+        [
+            ("380 kcal, 520 mg de sodio, 22 g de azúcar y 2,5 de grasas", "Esas son cifras de los productos, no los límites."),
+            ("Los mismos valores, pero medidos por porción declarada", "Los límites se aplican por 100 gramos."),
+            ("114 kcal, 234 mg de sodio, 6,6 g de azúcar y 0,75 de grasas", "Son valores por porción de los dos cereales."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_interpretar", "facil",
+        "¿Por qué no sirve comparar los dos cereales usando las cifras por porción?",
+        "Porque las porciones declaradas tienen distinto peso",
+        "Una porción de A pesa 30 gramos y una de B pesa 45, de modo que la "
+        "comparación pone lado a lado cantidades distintas de alimento.\n\nPor eso "
+        "el Cereal A parece mejor en energía —114 contra 157,5— sin que eso "
+        "signifique nada: está aportando menos porque es menos comida.",
+        [
+            ("Porque las cifras por porción vienen redondeadas", "La ficha no menciona ningún redondeo."),
+            ("Porque los sellos se calculan sobre otra base", "Es cierto, pero no es lo que invalida la comparación."),
+            ("Porque los fabricantes no están obligados a informarlas", "Ambas tablas incluyen las cifras por porción."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_interpretar", "medio",
+        "Según la ficha, ¿por qué la columna de 100 gramos es la que sirve para "
+        "comparar?",
+        "Porque es la única base igual para los dos productos",
+        "La ficha lo dice sin rodeos: es la cifra que ambos fabricantes están "
+        "obligados a calcular sobre la misma base.\n\nLa porción declarada, en "
+        "cambio, la define cada fabricante, y por eso no puede usarse para comparar "
+        "dos envases distintos.",
+        [
+            ("Porque cien gramos es lo que una persona come habitualmente", "La ficha advierte que la porción no es una recomendación."),
+            ("Porque las cifras por 100 gramos son siempre más exactas", "No es un asunto de exactitud sino de base común."),
+            ("Porque los sellos se calculan con esa misma columna", "Es cierto, pero la razón que da la ficha es la base común."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_interpretar", "medio",
+        "Según la ficha, ¿qué significa que ambos cereales lleven dos sellos?",
+        "Que superan dos límites cada uno, pero no los mismos",
+        "El Cereal A excede en energía y azúcares; el Cereal B, en energía y "
+        "sodio.\n\nLa ficha concluye que la misma cantidad de sellos no los vuelve "
+        "equivalentes: uno es más dulce y el otro más salado, y cuál conviene "
+        "depende de qué se esté tratando de reducir.",
+        [
+            ("Que los dos productos son igualmente poco recomendables", "La ficha rechaza expresamente esa equivalencia."),
+            ("Que ambos superan los cuatro límites establecidos", "Cada uno supera dos de los cuatro."),
+            ("Que uno de los sellos es el mismo por error", "Ambos comparten el sello de energía, y no por error."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_interpretar", "dificil",
+        "Según la ficha, ¿qué información no entrega el sello aunque el producto lo "
+        "lleve?",
+        "Por cuánto se superó el límite correspondiente",
+        "El sello informa que se pasó un límite y nada más.\n\nLa ficha lo ilustra "
+        "con el caso más notorio del ejercicio: el Cereal A tiene 22 gramos de "
+        "azúcar por 100, es decir más del doble del límite de 10, y el envase no "
+        "distingue eso de un producto que hubiera llegado a 11.",
+        [
+            ("Cuál de los cuatro límites fue superado", "Cada sello indica precisamente cuál se superó."),
+            ("Cuántos gramos pesa la porción declarada", "Ese dato aparece en la tabla, no en el sello."),
+            ("Si el producto contiene azúcares añadidos", "La ficha trata ese punto en sus precauciones, aparte."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_evaluar", "facil",
+        "¿Con qué propósito la ficha presenta las dos tablas en ese orden?",
+        "Para que la comparación por porción se vea antes de refutarla",
+        "Primero entrega los valores por 100 gramos, después los mismos productos "
+        "por porción y recién entonces explica la trampa.\n\nEl orden importa: el "
+        "lector alcanza a formarse la impresión equivocada —que el Cereal A rinde "
+        "mejor en energía— antes de que la ficha le muestre por qué esa impresión "
+        "no vale.",
+        [
+            ("Para mostrar que ambas tablas entregan la misma información", "La ficha sostiene que llevan a conclusiones distintas."),
+            ("Para que el lector calcule por sí mismo las porciones", "Los valores por porción vienen ya calculados."),
+            ("Para comparar la extensión de las dos presentaciones", "El formato de las tablas no es lo que se discute."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_evaluar", "medio",
+        "¿Qué advierte la ficha sobre la porción declarada?",
+        "Que no es una recomendación de cuánto conviene comer",
+        "Es, dice la ficha, «la cantidad que el fabricante eligió para presentar "
+        "sus cifras».\n\nPor eso el ejercicio del punto siete propone calcularla a "
+        "partir de la tabla, y anticipa que muchas veces sorprende: hay envases "
+        "donde esa porción corresponde a bastante menos de lo que cualquiera se "
+        "sirve.",
+        [
+            ("Que suele coincidir con lo que una persona se sirve", "La ficha señala que a menudo es bastante menor."),
+            ("Que la fija la autoridad sanitaria para cada categoría", "El documento la atribuye al fabricante."),
+            ("Que debe ser siempre de cien gramos o más", "Los dos ejemplos declaran porciones menores."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_evaluar", "dificil",
+        "¿Qué permite calcular el ejercicio que propone el punto siete?",
+        "El peso real de la porción que declara el envase",
+        "El procedimiento es una regla de tres: dividir la energía por porción "
+        "entre la energía por 100 gramos y multiplicar por cien.\n\nEl resultado es "
+        "el peso en gramos de esa porción, un dato que la ficha considera "
+        "imprescindible «antes de creerle a una comparación por porción», y que "
+        "muchos envases entregan en letra chica.",
+        [
+            ("La cantidad de sellos que debería llevar el producto", "Los sellos se determinan con la columna de 100 gramos."),
+            ("Cuántas porciones vienen dentro del envase", "Para eso haría falta el contenido total, que no se entrega."),
+            ("El azúcar añadido que contiene cada porción", "La ficha advierte que la tabla informa azúcares totales."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_evaluar", "dificil",
+        "Según la ficha, ¿por qué un producto con buenas cifras puede terminar "
+        "aportando más?",
+        "Porque la tabla no informa cuánto se come realmente",
+        "El documento cierra con ese límite: un cereal de buenas cifras del que "
+        "alguien sirve tres porciones entrega más de todo que uno de peores cifras "
+        "servido una vez.\n\nLa tabla describe cien gramos de producto y no "
+        "describe una comida. Es la misma lógica que atraviesa toda la ficha: cada "
+        "cifra vale solo para aquello que efectivamente mide.",
+        [
+            ("Porque las cifras por 100 gramos pueden estar mal calculadas", "La ficha no pone en duda la exactitud de las tablas."),
+            ("Porque los sellos no consideran todos los nutrientes", "Ese punto se trata antes y es distinto del cierre."),
+            ("Porque la calidad de los ingredientes cambia el resultado", "Es otra de las limitaciones, pero no la que explica el caso."),
+        ],
+    ),
+    # ---------- 'Seiscientas veces' ----------
+    _ql(
+        "agua_embotellada", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué el agua de la red lleva un sabor reconocible?",
+        "Por el cloro con que se la desinfecta",
+        "El emisor precisa que desinfectarla «es justamente lo que la vuelve "
+        "segura», de modo que ese sabor viene del procedimiento que la hace "
+        "potable.\n\nAgrega que en varias zonas del país el agua es además dura, "
+        "con más minerales disueltos, y que eso también se percibe.",
+        [
+            ("Por la antigüedad de las cañerías de la red", "Las redes antiguas se mencionan por otra razón, la confiabilidad."),
+            ("Por los minerales que se le agregan al tratarla", "Los minerales están en el agua: no se agregan."),
+            ("Por el tiempo que permanece almacenada", "El texto no menciona el almacenamiento."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurre con el plástico que se recicla?",
+        "Parte se recicla, parte se degrada y parte queda fuera",
+        "El texto describe tres destinos: una parte se recicla, otra se convierte "
+        "en un producto de menor calidad que ya no podrá reciclarse otra vez, y "
+        "otra simplemente no entra al circuito.\n\nPor eso advierte que el "
+        "reciclaje es «mucho más parcial de lo que sugiere el símbolo impreso en el "
+        "fondo».",
+        [
+            ("Se recicla completo si el envase está limpio", "La limpieza ayuda, pero el texto no promete reciclaje total."),
+            ("No se recicla nada: el símbolo es solo publicidad", "El emisor rechaza expresamente esa lectura extrema."),
+            ("Se transforma siempre en envases nuevos iguales", "Parte se convierte en productos de menor calidad."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_localizar", "medio",
+        "Según la lectura, ¿cuándo empieza a tener ventaja ambiental una botella "
+        "reutilizable?",
+        "Después de bastantes usos, no el primer día",
+        "El texto explica por qué: fabricarla cuesta más energía y más material que "
+        "fabricar una botella desechable.\n\nDe ahí su ejemplo: una botella de "
+        "acero comprada y olvidada en un cajón es peor que las tres botellas "
+        "plásticas que habría reemplazado. «Lo que importa no es el objeto, es "
+        "cuántas veces se usa».",
+        [
+            ("Desde el primer uso, porque evita un desecho", "El texto niega expresamente esa ventaja inicial."),
+            ("Solo si está fabricada con material reciclado", "El material de fabricación no es lo que discute el pasaje."),
+            ("Nunca, porque su fabricación contamina demasiado", "El emisor reconoce que la ventaja llega con el uso."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_interpretar", "facil",
+        "¿Qué distinción hace el emisor sobre el sabor del agua de la red?",
+        "Que menos agradable no significa menos segura",
+        "El texto lo formula como dos cosas distintas que el argumento ambiental "
+        "suele confundir.\n\nEl cloro y la dureza afectan cómo sabe el agua y no "
+        "afectan su carácter potable, de modo que quien la rechaza por sabor no "
+        "está equivocándose sobre su seguridad.",
+        [
+            ("Que el sabor mejora si se la deja reposar un rato", "El texto no propone ninguna manera de mejorarlo."),
+            ("Que el sabor depende del envase en que se sirve", "El envase no interviene en esa explicación."),
+            ("Que quienes notan el sabor son una minoría", "El emisor no discute cuánta gente lo percibe."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_interpretar", "medio",
+        "¿Por qué el emisor considera «la más seria» la tercera razón para comprar "
+        "agua embotellada?",
+        "Porque en algunos lugares la red no es confiable",
+        "El texto enumera situaciones concretas: abastecimiento intermitente, redes "
+        "antiguas, episodios de turbiedad, problemas puntuales de calidad.\n\nY "
+        "saca la conclusión que la vuelve seria: para una familia que vivió un "
+        "corte prolongado o recibió agua turbia, comprar botellas «no es un "
+        "capricho: es una decisión razonable tomada con la información que tiene».",
+        [
+            ("Porque afecta a la mayor parte del país", "El texto la sitúa en localidades determinadas."),
+            ("Porque el agua embotellada es más segura en general", "El cierre sostiene que ambas pasan controles de calidad."),
+            ("Porque las campañas ambientales la mencionan siempre", "El emisor dice que es la que menos se menciona."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que quien compra botellas «está "
+        "eligiendo dentro de lo que hay»?",
+        "Que la decisión depende de la infraestructura disponible",
+        "El texto lo aplica a dos casos: quien no tiene un bebedero en veinte "
+        "cuadras y quien recibe agua turbia dos veces al año.\n\nNinguno de los dos "
+        "está eligiendo mal. Lo que ocurre es que el menú de opciones que tienen "
+        "delante no incluye la alternativa que la campaña recomienda.",
+        [
+            ("Que la gente elige sin informarse lo suficiente", "El emisor supone que sí conoce la diferencia de precio."),
+            ("Que las botellas son la única opción realmente segura", "El texto no atribuye mayor seguridad a las botellas."),
+            ("Que conviene aceptar el hábito y dejar de discutirlo", "El artículo propone cambiar las condiciones, no rendirse."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_interpretar", "dificil",
+        "¿Cómo reformula el emisor la pregunta que suele hacerse sobre este tema?",
+        "Pasa de quién debe cambiar a qué haría fácil el cambio",
+        "El texto sostiene que la recomendación dirigida a la persona —anda con tu "
+        "botella, deja de comprar— «es correcta y es insuficiente», porque atribuye "
+        "a una decisión individual algo que en buena medida es de "
+        "infraestructura.\n\nEn su lugar propone tres condiciones concretas: "
+        "bebederos que funcionen y estén limpios, información verificable sobre la "
+        "calidad del agua de cada zona y respuestas rápidas cuando esa calidad "
+        "falla.",
+        [
+            ("Pasa del costo económico al costo ambiental del envase", "Ambos se tratan antes, y no son el giro del argumento."),
+            ("Pasa de la responsabilidad del Estado a la de las empresas", "Las empresas embotelladoras no reciben ningún reproche."),
+            ("Pasa de discutir el precio a discutir la calidad del agua", "La calidad aparece como una de las tres condiciones."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor enumera las razones por las que la gente "
+        "compra agua embotellada?",
+        "Para tomarlas en serio antes de dar cualquier consejo",
+        "El texto lo anuncia de manera explícita al presentarlas.\n\nY descarta de "
+        "entrada la explicación más cómoda: quien compra una botella en el kiosco "
+        "«no ignora que el agua de la llave es más barata». Si el problema no es la "
+        "falta de información, entonces informar más no lo va a resolver.",
+        [
+            ("Para demostrar que ninguna de ellas se sostiene", "El emisor considera razonables las tres."),
+            ("Para justificar el consumo de agua embotellada", "Reconoce a la vez que su costo ambiental no es pequeño."),
+            ("Para comparar los hábitos de distintas comunas", "El texto no compara comportamientos por sector."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor frente al reciclaje del plástico?",
+        "Mesurada, pues no lo presenta como solución ni como engaño",
+        "El texto se cuida de las dos exageraciones: ni el reciclaje anula el "
+        "problema, ni es un fraude completo.\n\nLo describe como un sistema que "
+        "funciona a medias y cuya eficacia depende de cosas «bastante aburridas» "
+        "—cuánto se separa en el hogar, la distancia a la planta, la limpieza del "
+        "material— y no de la buena intención de quien deposita la botella.",
+        [
+            ("Escéptica, pues considera que el símbolo engaña al consumidor", "Rechaza expresamente calificarlo de engaño completo."),
+            ("Optimista, pues confía en que el sistema irá mejorando", "El texto no hace ninguna proyección sobre su futuro."),
+            ("Indiferente, pues cree que el envase no es el problema", "Sostiene que el costo ambiental del envase no es pequeño."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_evaluar", "dificil",
+        "¿Qué agrega al argumento el párrafo sobre la botella reutilizable?",
+        "Aplica el mismo criterio a la solución que se recomienda",
+        "Hasta ese punto el texto había cuestionado el costo de la botella "
+        "desechable.\n\nEl párrafo somete al mismo examen a su alternativa: "
+        "fabricar una botella reutilizable cuesta más energía y más material, de "
+        "modo que su ventaja depende de cuántas veces se use. El emisor no exceptúa "
+        "a la opción que cualquiera esperaría que defendiera, y con eso desplaza la "
+        "conclusión desde el objeto hacia la conducta.",
+        [
+            ("Desaconseja comprar botellas reutilizables de acero", "El texto no desaconseja comprarlas: pide usarlas."),
+            ("Muestra que el problema ambiental es imposible de resolver", "El artículo propone medidas concretas más adelante."),
+            ("Compara el costo económico de las dos alternativas", "La comparación del párrafo es ambiental, no de precio."),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_evaluar", "dificil",
+        "¿Qué sostiene el emisor al afirmar que la confianza «no se puede "
+        "embotellar»?",
+        "Que buena parte del gasto paga no tener que confiar",
+        "El cierre recuerda que el agua embotellada que se vende proviene, en la "
+        "mayoría de los casos, de fuentes sometidas a controles de calidad, igual "
+        "que la de la red.\n\nSi ambas son seguras, entonces la discusión no es "
+        "sobre seguridad sino sobre confianza, y esa no se compra: «se construye "
+        "con años de un servicio que no falle». La conclusión devuelve el problema "
+        "a las instituciones sin culpar a quien compra.",
+        [
+            ("Que el agua embotellada tiene mejores controles de calidad", "El texto señala que ambas están sometidas a controles."),
+            ("Que la gente desconfía sin ningún motivo real", "El artículo describe motivos concretos para desconfiar."),
+            ("Que ninguna campaña puede modificar este hábito", "El emisor propone medidas que sí podrían hacerlo."),
+        ],
+    ),
     # ---------- 'En defensa de las horas vacías' ----------
     _ql(
         "aburrimiento_horas", "lec_localizar", "facil",
