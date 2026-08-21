@@ -21383,6 +21383,181 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "presentacion_martes",
+        "title": "Presentación de «Los martes»",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, escrito para esta prueba como ejemplo del "
+            "género. El libro «Los martes», su autora y la presentación son ficticios."
+        ),
+        "body": (
+            "**Presentación de «Los martes»**\n\n"
+            "*Texto leído en el lanzamiento del libro de fotografías «Los martes», "
+            "de Carmen Riquelme.*\n\n"
+            "Buenas tardes. Voy a tratar de no hacer lo que se hace siempre en "
+            "estas presentaciones, que es contar el libro. El libro está ahí, en "
+            "esa mesa, y se defiende solo. Prefiero explicar por qué me costó tanto "
+            "escribir estas páginas, que creo que dice algo sobre el trabajo que "
+            "estamos presentando.\n\n"
+            "«Los martes» son ciento veinte fotografías tomadas durante seis años "
+            "en una misma feria libre, siempre el mismo día de la semana, siempre "
+            "en las mismas cuatro cuadras. No hay ninguna tomada un domingo, "
+            "ninguna en otra comuna, ninguna en otra feria. Esa restricción es la "
+            "primera decisión del libro y, me parece, la más importante.\n\n"
+            "Porque una feria libre es un tema fotográfico peligroso. Es "
+            "agradecido: hay colores, hay caras, hay montones de fruta ordenados "
+            "con una prolijidad que nadie enseñó y que todos los feriantes "
+            "practican. Cualquiera con una cámara puede ir un sábado y volver con "
+            "veinte fotografías bonitas. Yo lo he hecho, y tengo esas fotografías "
+            "guardadas donde corresponde, que es en ninguna parte.\n\n"
+            "Lo que hace Carmen es lo contrario de eso. Al volver seis años al "
+            "mismo lugar, deja de tener acceso a lo pintoresco, porque lo "
+            "pintoresco se gasta. En la fotografía número quince uno ya vio los "
+            "cajones de tomates. En la número setenta empieza a ver otra cosa: que "
+            "el señor del puesto de verduras aparece en cuarenta imágenes, y que en "
+            "la primera tiene el pelo negro.\n\n"
+            "Ahí está el libro. No es un libro sobre una feria. Es un libro sobre "
+            "lo que le pasa a la gente mientras uno la fotografía.\n\n"
+            "Quiero detenerme en dos maneras de leerlo que me parecen equivocadas, "
+            "y que digo aquí porque las dos van a aparecer en las reseñas.\n\n"
+            "La primera es la nostálgica. Es fácil mirar estas fotos y decir que "
+            "muestran un mundo que se pierde, que las ferias están desapareciendo, "
+            "que antes la gente conversaba. El libro no dice eso en ninguna parte. "
+            "Las ferias de este libro no están agonizando: están funcionando, con "
+            "clientes, con ruido y con tarjeta de débito. Hay una fotografía de "
+            "2023, la de la página noventa y uno, donde una señora paga con el "
+            "teléfono y el feriante espera con la misma cara con que habría "
+            "esperado un billete. La nostalgia es un filtro que le pondríamos "
+            "nosotros, y le quitaría al libro lo mejor que tiene, que es estar "
+            "mirando el presente.\n\n"
+            "La segunda lectura equivocada es la denuncia. Estas fotografías "
+            "registran trabajo duro: gente que se levanta a las cuatro, que arma y "
+            "desarma una estructura de fierro dos veces al día, que trabaja bajo el "
+            "sol y bajo la lluvia. Sería fácil ordenarlas como un alegato. Carmen "
+            "no lo hace, y creo que su decisión es correcta, porque un alegato "
+            "exige que sus personajes sean solo víctimas, y estas fotos no lo "
+            "permiten: la gente que aparece aquí también se ríe, discute, se "
+            "aburre, mira el teléfono y hace negocios. Mostrar a alguien completo "
+            "es más difícil que mostrarlo sufriendo, y es más respetuoso.\n\n"
+            "Hay una fotografía que quiero mencionar, y voy a ser breve porque está "
+            "en la página cuarenta y tres y ustedes la van a ver igual. Es un "
+            "puesto vacío a las tres de la tarde: la lona doblada, el suelo mojado, "
+            "tres hojas de lechuga aplastadas. No hay nadie. Es la única fotografía "
+            "del libro sin personas, y está puesta exactamente en la mitad. Uno la "
+            "mira y entiende que el libro no trata sobre lo que ocurre en la feria, "
+            "sino sobre las horas que la feria le saca a la semana de alguien.\n\n"
+            "Termino con lo que le dije a Carmen cuando vi las pruebas de imprenta, "
+            "y que ella no quiso poner en la contratapa. Le dije que este libro va "
+            "a envejecer muy bien, y que ese es un elogio incómodo, porque "
+            "significa que va a valer más cuando ella no esté para explicarlo. "
+            "Dentro de cuarenta años, alguien va a abrir «Los martes» buscando cómo "
+            "eran las ferias en esta década, y se va a encontrar con lo que Carmen "
+            "realmente estuvo fotografiando durante seis años, que es la cara del "
+            "señor de las verduras cambiando despacio.\n\n"
+            "Una última cosa, ya sin solemnidad. En estas presentaciones se espera "
+            "que quien habla diga que el libro es imprescindible, que llegó en el "
+            "momento justo y que no se puede dejar de mirar. Yo no sé si es "
+            "imprescindible; casi nada lo es. Sé que lo he abierto seis o siete "
+            "veces desde que me lo pasaron y que las últimas tres no fui a buscar "
+            "ninguna foto en particular. Eso, para un libro de fotografías, me "
+            "parece bastante más difícil de conseguir que cualquiera de las tres "
+            "frases anteriores.\n\n"
+            "El libro está en la mesa. Gracias."
+        ),
+    },
+    {
+        "key": "futbol_prohibido",
+        "title": "Muy inapropiado para mujeres",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las fechas y el contenido de la prohibición "
+            "de la federación inglesa de 1921, su levantamiento en 1971, la asistencia "
+            "al partido de diciembre de 1920 y el decreto ley brasileño de 1941 se "
+            "verificaron antes de escribir el texto."
+        ),
+        "body": (
+            "**Muy inapropiado para mujeres**\n\n"
+            "El 26 de diciembre de 1920, en un estadio de Liverpool, se jugó un "
+            "partido de fútbol entre dos equipos de mujeres. Fueron alrededor de "
+            "cincuenta y tres mil personas, y varios miles más se quedaron afuera. "
+            "No era una rareza aislada: en esos años los equipos formados por "
+            "obreras de fábricas inglesas llenaban canchas y recaudaban sumas "
+            "importantes para obras de beneficencia.\n\n"
+            "Un año menos diez días después, el 5 de diciembre de 1921, la "
+            "federación inglesa de fútbol prohibió que esos partidos se jugaran en "
+            "los estadios de sus clubes afiliados. La declaración es breve y vale "
+            "la pena leerla completa, porque ahorra explicaciones: el juego de "
+            "fútbol, dijo, «es muy inapropiado para mujeres y no debe ser "
+            "fomentado».\n\n"
+            "La prohibición se mantuvo cincuenta años. Recién en 1971 la federación "
+            "la levantó.\n\n"
+            "Conviene detenerse en la secuencia, porque el orden importa. La "
+            "prohibición no llegó cuando el fútbol de mujeres era marginal y nadie "
+            "lo miraba. Llegó justo después de su mejor temporada, cuando llenaba "
+            "estadios que pertenecían a los clubes de la propia federación. Sea "
+            "cual sea la explicación que uno prefiera, cualquiera que empiece por "
+            "«no había interés» choca con la fecha.\n\n"
+            "Brasil hizo algo parecido veinte años más tarde y por otra vía. Un "
+            "decreto ley de abril de 1941 estableció que no se permitiría a las "
+            "mujeres «la práctica de deportes incompatibles con las condiciones de "
+            "su naturaleza». La norma no nombraba al fútbol, y no hacía falta: "
+            "quedaba a criterio de un consejo definir cuáles eran esos deportes. La "
+            "restricción se mantuvo hasta mediados de los años setenta.\n\n"
+            "Las dos decisiones se justificaron con el mismo tipo de argumento, y "
+            "ese es el aspecto que interesa aquí. No se dijo que las mujeres "
+            "jugaran mal, ni que nadie quisiera verlas, ni que faltara dinero. Se "
+            "dijo que el deporte era inadecuado para ellas por razones de salud, "
+            "con afirmaciones sobre daños a los órganos reproductivos que no se "
+            "apoyaban en evidencia alguna y que hoy se sabe falsas.\n\n"
+            "Un argumento así tiene una forma reconocible: apela a la naturaleza. "
+            "En vez de sostener que algo es indeseable —lo que obligaría a "
+            "discutirlo— afirma que es imposible, o dañino, o contrario a cómo son "
+            "las cosas. La ventaja retórica es enorme, porque una preferencia se "
+            "discute y una ley natural no. Y la desventaja aparece con el tiempo: "
+            "cuando el impedimento se levanta y ocurre exactamente lo que se "
+            "declaraba imposible, no queda nada del argumento.\n\n"
+            "Conviene además desconfiar de la explicación fácil, que sería "
+            "atribuirlo todo a la ignorancia médica de la época. Contra eso juega "
+            "un detalle del propio caso: la preocupación por el esfuerzo físico de "
+            "esas mujeres no aparece cuando trabajaban jornadas largas en fábricas "
+            "durante la guerra, sino cuando sus partidos empezaron a llenar "
+            "estadios. Un argumento que se invoca en una sola dirección, y solo "
+            "cuando algo se vuelve visible, suele estar sosteniendo algo distinto "
+            "de lo que dice sostener. Eso no prueba mala fe de nadie en particular; "
+            "sí obliga a mirar el argumento con más cuidado del que pedía en su "
+            "momento.\n\n"
+            "Vale la pena notar una asimetría. Durante esos cincuenta años, la "
+            "prohibición no necesitó defenderse: bastaba con existir. Quien "
+            "quisiera cambiarla tenía que probar algo, y no podía probarlo, porque "
+            "para producir la evidencia habría que haber jugado los partidos que "
+            "estaban prohibidos. Es un círculo bastante eficiente, y no es "
+            "exclusivo del deporte: cada vez que una regla impide generar la "
+            "información que permitiría evaluarla, esa regla queda protegida de su "
+            "propia revisión.\n\n"
+            "Ahora bien, la historia no termina con un final feliz automático, y "
+            "conviene decirlo para no reemplazar una simplificación por otra. En "
+            "1971 no volvió la situación de 1920. Medio siglo sin campeonatos, sin "
+            "canchas, sin escuelas de formación y sin dinero no se recupera con un "
+            "acta que deroga un acuerdo: lo que se perdió no fueron cincuenta "
+            "temporadas, sino la infraestructura que se habría construido durante "
+            "esas cincuenta temporadas.\n\n"
+            "Y también hay que evitar el atajo contrario, que consiste en "
+            "explicarlo todo por la prohibición. La diferencia actual de recursos "
+            "entre el fútbol masculino y el femenino tiene causas que siguen "
+            "operando hoy —cómo se reparten los derechos de transmisión, cuánto se "
+            "invierte en categorías formativas, qué se paga— y ninguna de ellas se "
+            "resuelve señalando una decisión de 1921. La prohibición explica el "
+            "punto de partida. No explica por sí sola el presente.\n\n"
+            "Lo que sí queda del episodio es una advertencia sobre cómo suenan "
+            "ciertos argumentos mientras están vigentes. En 1921, la frase «muy "
+            "inapropiado para mujeres» no le pareció escandalosa a casi nadie: era "
+            "la manera corriente de decir las cosas, escrita por una institución "
+            "seria, con abogados y actas. Cien años después se lee sola. Lo "
+            "incómodo es suponer que nosotros no estamos escribiendo, ahora mismo, "
+            "alguna frase que se va a leer igual."
+        ),
+    },
+    {
         "key": "musica_gusto",
         "title": "La música que ya no se mueve",
         "kind": "no_literario",
@@ -25915,6 +26090,338 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Presentación de «Los martes»' ----------
+    _ql(
+        "presentacion_martes", "lec_localizar", "facil",
+        "Según el texto, ¿qué restricción se impuso la autora del libro?",
+        "Fotografiar siempre la misma feria y el mismo día",
+        "Son ciento veinte fotografías tomadas durante seis años, siempre un martes "
+        "y siempre en las mismas cuatro cuadras.\n\nEl presentador la llama «la "
+        "primera decisión del libro y la más importante», porque es la que le "
+        "impide acceder a lo pintoresco.",
+        [
+            ("Fotografiar solo a las personas que trabajan en la feria", "También aparecen clientes, y hay una imagen sin nadie."),
+            ("Trabajar únicamente durante los meses de invierno", "El texto no menciona ninguna restricción estacional."),
+            ("Tomar una sola fotografía en cada una de las visitas", "Son ciento veinte imágenes tomadas en seis años."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_localizar", "facil",
+        "Según el texto, ¿qué muestra la fotografía de la página cuarenta y tres?",
+        "Un puesto vacío a las tres de la tarde",
+        "El presentador describe la lona doblada, el suelo mojado y tres hojas de "
+        "lechuga aplastadas.\n\nY entrega los dos datos que le dan peso: es la "
+        "única imagen del libro sin personas y está puesta exactamente en la mitad.",
+        [
+            ("Una señora pagando con el teléfono", "Esa es la fotografía de la página noventa y uno."),
+            ("Al señor del puesto de verduras con el pelo negro", "Esa imagen es la primera de las cuarenta en que aparece."),
+            ("Los cajones de tomates ordenados al amanecer", "Los cajones se mencionan como ejemplo de lo pintoresco."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_localizar", "medio",
+        "Según el texto, ¿qué ocurre en la fotografía de 2023 que se cita?",
+        "Una clienta paga con el teléfono y él la espera",
+        "El presentador destaca que el feriante espera «con la misma cara con que "
+        "habría esperado un billete».\n\nLa imagen le sirve para descartar la "
+        "lectura nostálgica: las ferias del libro no están agonizando, están "
+        "funcionando, con clientes, con ruido y con medios de pago actuales.",
+        [
+            ("Una clienta discute el precio con el feriante", "El texto no describe ninguna discusión de precios."),
+            ("Un feriante arma su puesto antes del amanecer", "El armado se menciona, pero no en esa fotografía."),
+            ("Una feria vacía después del cierre del día", "Esa es la imagen de la página cuarenta y tres."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_interpretar", "facil",
+        "¿Por qué el presentador dice que una feria es «un tema fotográfico "
+        "peligroso»?",
+        "Porque es fácil volver con imágenes bonitas y vacías",
+        "Su argumento es que el tema resulta agradecido: hay colores, caras y "
+        "montones de fruta ordenados con prolijidad.\n\nY lo prueba con su propio "
+        "caso: él fue con una cámara, volvió con veinte fotografías bonitas y las "
+        "tiene guardadas «donde corresponde, que es en ninguna parte».",
+        [
+            ("Porque los feriantes no aceptan que los fotografíen", "El texto no menciona ninguna resistencia de los feriantes."),
+            ("Porque las condiciones de luz cambian todo el tiempo", "No se menciona ninguna dificultad técnica."),
+            ("Porque ya existen demasiados libros sobre ferias", "El presentador no compara este libro con otros."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_interpretar", "medio",
+        "¿Qué consigue la autora al volver seis años al mismo lugar?",
+        "Que lo pintoresco se gaste y aparezca otra cosa",
+        "El presentador lo describe como una progresión: en la fotografía quince el "
+        "lector ya vio los cajones de tomates, y en la setenta empieza a notar que "
+        "el señor del puesto de verduras aparece en cuarenta imágenes.\n\nDe ahí su "
+        "definición del libro: no trata sobre una feria, sino sobre lo que le pasa "
+        "a la gente mientras uno la fotografía.",
+        [
+            ("Que los personajes se acostumbren a ser fotografiados", "El texto no comenta la relación de la autora con ellos."),
+            ("Que la feria cambie de aspecto a lo largo del libro", "Lo que cambia son las personas, no el lugar."),
+            ("Que las imágenes puedan ordenarse cronológicamente", "El orden del libro no se discute en esos términos."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_interpretar", "medio",
+        "¿Qué sostiene el presentador al decir que un alegato «exige que sus "
+        "personajes sean solo víctimas»?",
+        "Que denunciar obliga a recortar a las personas retratadas",
+        "El texto reconoce que las fotografías registran trabajo duro y que sería "
+        "fácil ordenarlas como denuncia.\n\nSu objeción es que las imágenes no lo "
+        "permiten: la gente que aparece ahí también se ríe, discute, se aburre y "
+        "hace negocios. Y remata que mostrar a alguien completo «es más difícil que "
+        "mostrarlo sufriendo, y es más respetuoso».",
+        [
+            ("Que las condiciones de trabajo en esa feria no serían duras", "El presentador afirma expresamente lo contrario."),
+            ("Que la fotografía no sirve para denunciar nada", "Su reparo es sobre este libro, no sobre el género."),
+            ("Que la autora quiso evitarse problemas con los feriantes", "No se atribuye esa motivación a la autora."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_interpretar", "dificil",
+        "¿Qué relación establece el presentador entre la fotografía sin personas y "
+        "el tema del libro?",
+        "El puesto vacío muestra las horas que la feria consume",
+        "El dato que usa no es la imagen en sí, sino su ubicación: es la única sin "
+        "personas y está puesta exactamente en la mitad del libro.\n\nAl mirarla, "
+        "dice, uno entiende que el libro «no trata sobre lo que ocurre en la feria, "
+        "sino sobre las horas que la feria le saca a la semana de alguien». Una "
+        "imagen sin nadie termina explicando de qué hablan las otras ciento "
+        "diecinueve.",
+        [
+            ("El puesto vacío anuncia que las ferias van a desaparecer", "Esa es la lectura nostálgica que el texto rechaza."),
+            ("El puesto vacío separa las dos partes del libro", "Su posición central no se presenta como una división."),
+            ("El puesto vacío muestra el desorden que queda al final", "El presentador no interpreta la imagen como desorden."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_evaluar", "facil",
+        "¿Con qué propósito el presentador anuncia que no va a contar el libro?",
+        "Para explicar más bien por qué le costó escribirlo",
+        "Empieza diciendo que el libro «está ahí, en esa mesa, y se defiende "
+        "solo».\n\nCon eso se libera de la obligación habitual del género y anuncia "
+        "lo que sí va a hacer, que según él dice algo sobre el trabajo que se está "
+        "presentando.",
+        [
+            ("Para señalar que el público ya conoce las fotografías", "El texto supone que aún no las han visto: las verán después."),
+            ("Para justificar que su presentación sea breve", "No anuncia brevedad, y de hecho desarrolla varios puntos."),
+            ("Para dejar que sea la autora quien lo explique", "La autora no interviene en ningún momento del texto."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_evaluar", "medio",
+        "¿Por qué el presentador anticipa las dos lecturas que considera "
+        "equivocadas?",
+        "Porque espera que aparezcan en las reseñas del libro",
+        "Lo dice expresamente antes de enumerarlas.\n\nNo está discutiendo con "
+        "alguien presente, sino adelantándose a interpretaciones probables, y en "
+        "los dos casos explica qué le quitarían al libro: la nostalgia lo sacaría "
+        "del presente y la denuncia recortaría a sus personajes.",
+        [
+            ("Porque la autora le pidió que las descartara", "El texto no atribuye esa petición a la autora."),
+            ("Porque ya fueron publicadas por otros críticos", "Las anticipa: aún no han aparecido."),
+            ("Porque el público del lanzamiento las mencionó antes", "No hay ninguna intervención del público."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_evaluar", "dificil",
+        "¿Por qué el presentador llama «elogio incómodo» a decir que el libro "
+        "envejecerá bien?",
+        "Porque significa que valdrá más cuando ella no esté",
+        "El elogio se apoya en el paso del tiempo, y el paso del tiempo también "
+        "corre para la autora.\n\nEl presentador lo dice sin suavizarlo, y agrega "
+        "el detalle que lo vuelve significativo dentro del texto: ella no quiso "
+        "ponerlo en la contratapa. El único juicio realmente favorable del discurso "
+        "es uno que la autora prefirió no publicar.",
+        [
+            ("Porque insinúa que el libro no interesará de inmediato", "El presentador no dice nada sobre su recepción actual."),
+            ("Porque compara este libro con obras de otras épocas", "No hay comparación con ninguna otra obra."),
+            ("Porque la autora consideró que era un elogio exagerado", "El texto no informa por qué ella lo rechazó."),
+        ],
+    ),
+    _ql(
+        "presentacion_martes", "lec_evaluar", "dificil",
+        "¿Qué hace el presentador con las frases que el género espera de él?",
+        "Las enuncia y las cambia por algo que sí puede afirmar",
+        "El párrafo final nombra las tres fórmulas de rigor —imprescindible, llegó "
+        "en el momento justo, no se puede dejar de mirar— y las descarta sin "
+        "ceremonia: «yo no sé si es imprescindible; casi nada lo es».\n\nEn su "
+        "lugar pone un dato comprobable sobre su propia conducta: abrió el libro "
+        "seis o siete veces y las últimas tres sin buscar ninguna foto en "
+        "particular. Cambia una valoración solemne por una observación verificable.",
+        [
+            ("Las repite porque el momento y el público las exigen", "Las nombra justamente para no usarlas."),
+            ("Las evita para no comprometerse con una opinión", "Sí entrega una valoración, apoyada en otra clase de razón."),
+            ("Las atribuye a otros críticos que ya escribieron sobre él", "Las presenta como fórmulas del género, no como citas."),
+        ],
+    ),
+    # ---------- 'Muy inapropiado para mujeres' ----------
+    _ql(
+        "futbol_prohibido", "lec_localizar", "facil",
+        "Según la lectura, ¿qué decidió la federación inglesa en diciembre de 1921?",
+        "Prohibir esos partidos en los estadios de sus clubes",
+        "El texto reproduce la formulación de la declaración: el juego de fútbol "
+        "«es muy inapropiado para mujeres y no debe ser fomentado».\n\nLa "
+        "prohibición alcanzaba a los estadios de los clubes afiliados y se mantuvo "
+        "durante cincuenta años.",
+        [
+            ("Prohibir que las mujeres practicaran cualquier otro deporte", "Esa formulación amplia corresponde al decreto brasileño."),
+            ("Organizar un campeonato femenino bajo su control", "No hubo ningún campeonato: hubo una prohibición."),
+            ("Cobrar una tarifa por el uso de los estadios afiliados", "El texto no menciona ningún cobro."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánta gente asistió al partido de diciembre de 1920?",
+        "Alrededor de cincuenta y tres mil personas",
+        "El texto agrega que varios miles más se quedaron afuera, y que no era una "
+        "rareza aislada: los equipos de obreras llenaban canchas y recaudaban "
+        "dinero para obras de beneficencia.\n\nEse dato es el que vuelve "
+        "significativa la fecha de la prohibición, dictada menos de un año después.",
+        [
+            ("Alrededor de cinco mil personas", "La cifra del texto es diez veces mayor."),
+            ("Cerca de mil personas, según los registros", "El artículo no entrega esa cifra en ningún punto."),
+            ("No se conoce el número de asistentes", "El texto sí entrega una cifra aproximada."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_localizar", "medio",
+        "Según la lectura, ¿qué estableció el decreto ley brasileño de 1941?",
+        "Que no se permitirían deportes contrarios a su condición",
+        "El texto subraya que la norma no nombraba al fútbol y que no hacía falta: "
+        "quedaba a criterio de un consejo definir cuáles eran esos deportes.\n\nLa "
+        "restricción se mantuvo hasta mediados de los años setenta.",
+        [
+            ("Que el fútbol quedaba prohibido para las mujeres", "El decreto no nombraba ningún deporte en particular."),
+            ("Que los estadios públicos no podrían recibir esos partidos", "La norma no trataba sobre el uso de los recintos."),
+            ("Que se creaba un campeonato femenino paralelo", "El decreto restringía; no organizaba ninguna competencia."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_interpretar", "facil",
+        "¿Por qué el emisor sostiene que la secuencia de los hechos importa?",
+        "Porque la prohibición llegó tras la mejor temporada",
+        "No apareció cuando el fútbol de mujeres era marginal, sino cuando llenaba "
+        "estadios pertenecientes a los clubes de la propia federación.\n\nDe ahí la "
+        "conclusión del párrafo: cualquier explicación que empiece por «no había "
+        "interés» choca con la fecha.",
+        [
+            ("Porque las dos prohibiciones ocurrieron el mismo año", "Están separadas por veinte años y por dos países."),
+            ("Porque la federación actuó antes que el gobierno inglés", "El texto no menciona ninguna intervención del gobierno."),
+            ("Porque el levantamiento en 1971 fue igual de repentino", "El artículo no describe cómo se produjo ese cambio."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_interpretar", "medio",
+        "Según la lectura, ¿en qué consiste apelar a la naturaleza?",
+        "En declararlo imposible en vez de discutir si conviene",
+        "El texto explica la ventaja retórica de esa maniobra: una preferencia se "
+        "discute y una ley natural no.\n\nY describe también su costo diferido: "
+        "cuando el impedimento se levanta y ocurre exactamente lo que se declaraba "
+        "imposible, del argumento no queda nada.",
+        [
+            ("En apoyarse en estudios científicos poco confiables", "El texto señala que no había evidencia alguna, ni buena ni mala."),
+            ("En defender las costumbres heredadas de otra época", "La apelación no es a la tradición sino a lo que sería natural."),
+            ("En sostener que un deporte resulta poco entretenido", "El gusto del público no es lo que ese argumento invoca."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_interpretar", "medio",
+        "¿Qué observación hace el emisor sobre cuándo apareció la preocupación por "
+        "el esfuerzo físico?",
+        "Que no apareció mientras esas mujeres trabajaban en fábricas",
+        "El artículo usa ese contraste para descartar la explicación más benévola, "
+        "la de la ignorancia médica de la época.\n\nSi el riesgo hubiera sido la "
+        "preocupación real, habría aparecido antes. Surge, en cambio, cuando los "
+        "partidos empiezan a llenar estadios, y el emisor concluye que un argumento "
+        "invocado en una sola dirección suele sostener algo distinto de lo que "
+        "dice.",
+        [
+            ("Que los médicos de la época no llegaron a pronunciarse", "El texto no informa qué dijeron o no los médicos."),
+            ("Que la guerra hizo que se ignoraran todos los riesgos", "El artículo no atribuye esa omisión al contexto bélico."),
+            ("Que el esfuerzo del fútbol resultaba mayor que el de la fábrica", "El emisor no compara la exigencia de ambas actividades."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_interpretar", "dificil",
+        "¿Qué círculo describe el emisor al hablar de la asimetría de esos "
+        "cincuenta años?",
+        "La regla impedía producir la evidencia que la refutaría",
+        "La prohibición no necesitaba defenderse: le bastaba con existir. Quien "
+        "quisiera cambiarla tenía que probar algo, y para producir esa prueba "
+        "habría que haber jugado los partidos prohibidos.\n\nEl emisor generaliza "
+        "el mecanismo más allá del deporte: cada vez que una regla impide generar "
+        "la información que permitiría evaluarla, queda protegida de su propia "
+        "revisión.",
+        [
+            ("La federación cambiaba de argumento apenas alguien la refutaba", "El texto no describe ningún cambio de argumento."),
+            ("Los clubes eran a la vez dueños de los estadios y jueces", "La propiedad de los estadios se menciona con otro fin."),
+            ("Cada país esperaba que el otro levantara la prohibición", "No se plantea ninguna relación entre ambos casos."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor advierte que en 1971 «no volvió la situación "
+        "de 1920»?",
+        "Para evitar leer el levantamiento como un final feliz",
+        "El texto precisa qué fue lo que se perdió: no cincuenta temporadas, sino "
+        "la infraestructura que se habría construido durante esas cincuenta "
+        "temporadas.\n\nCampeonatos, canchas, escuelas de formación y dinero no se "
+        "recuperan «con un acta que deroga un acuerdo».",
+        [
+            ("Para sostener que la prohibición nunca se levantó del todo", "El texto afirma con claridad que en 1971 se levantó."),
+            ("Para criticar la decisión de la federación en 1971", "El emisor no cuestiona ese levantamiento en ningún momento."),
+            ("Para explicar por qué el público perdió el interés", "El interés del público no aparece entre las consecuencias."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor al advertir contra «el atajo contrario»?",
+        "Exigente, pues también acota su propio argumento",
+        "Después de dedicar el artículo a mostrar el peso de la prohibición, el "
+        "emisor niega que ella explique el presente por sí sola.\n\nEnumera causas "
+        "que siguen operando hoy —el reparto de los derechos de transmisión, la "
+        "inversión en categorías formativas, los sueldos— y concluye que ninguna se "
+        "resuelve señalando una decisión de 1921.",
+        [
+            ("Conciliadora, pues busca no incomodar a ninguna posición", "El texto incomoda a varias, empezando por la suya."),
+            ("Escéptica, pues duda de que la prohibición haya influido", "Sostiene que explica el punto de partida."),
+            ("Indiferente, pues considera zanjada la discusión actual", "Deja abiertas las causas que operan en el presente."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al recordar que en 1921 esa frase no escandalizó "
+        "a casi nadie?",
+        "Advertir que un argumento vigente no se ve como suena después",
+        "El texto subraya de qué institución venía: una entidad seria, con abogados "
+        "y actas, escribiendo la manera corriente de decir las cosas en su "
+        "época.\n\nY cierra con la incomodidad que se sigue de ahí: suponer que hoy "
+        "nadie está escribiendo alguna frase que dentro de cien años se leerá sola. "
+        "El episodio deja de ser sobre 1921 y pasa a ser sobre el lector.",
+        [
+            ("Justificar a quienes tomaron aquella decisión", "El texto explica su contexto sin excusar la decisión."),
+            ("Mostrar que el lenguaje de las instituciones no cambia", "El contraste que plantea es justamente que cambió."),
+            ("Sostener que toda época comete los mismos errores", "No afirma que los errores se repitan, sino que no se ven."),
+        ],
+    ),
+    _ql(
+        "futbol_prohibido", "lec_evaluar", "dificil",
+        "¿Cuál de las siguientes afirmaciones del texto es una interpretación del "
+        "emisor y no un hecho documentado?",
+        "Que el argumento sanitario sostenía otra cosa",
+        "Las otras tres constan en registros: la fecha y el texto de la declaración "
+        "inglesa, su levantamiento en 1971 y el contenido del decreto brasileño de "
+        "1941.\n\nEn cambio, sostener que ese argumento encubría otra cosa es una "
+        "lectura que el emisor construye a partir de cuándo apareció, y él mismo la "
+        "matiza aclarando que no prueba mala fe de nadie en particular.",
+        [
+            ("Que la federación inglesa prohibió esos partidos en 1921", "Es un hecho con fecha y declaración registrada."),
+            ("Que la prohibición inglesa se levantó recién en 1971", "Corresponde a un hecho verificable en el registro."),
+            ("Que el decreto brasileño no nombraba ningún deporte", "Es una constatación sobre el texto de la norma."),
+        ],
+    ),
     # ---------- 'La música que ya no se mueve' ----------
     _ql(
         "musica_gusto", "lec_localizar", "facil",
