@@ -21387,11 +21387,10 @@ PASSAGES = [
         "title": "Leer en pantalla",
         "kind": "no_literario",
         "source_note": (
-            "Artículo original de 1000paes. La magnitud y las condiciones del efecto "
-            "—pequeño, mayor en textos expositivos y bajo presión de tiempo, casi nulo "
-            "en narrativos—, la explicación por los hábitos de lectura y el hallazgo "
-            "sobre la sobrestimación de la propia comprensión se describen en términos "
-            "generales, sin atribuir cifras a estudios concretos."
+            "Artículo original de 1000paes. La magnitud y las condiciones del "
+            "efecto —pequeño, mayor en textos expositivos y bajo presión de tiempo, "
+            "casi nulo en narrativos— y su explicación por los hábitos de lectura "
+            "van en términos generales, sin cifras atribuidas a estudios."
         ),
         "body": (
             "**Leer en pantalla**\n\n"
@@ -21475,11 +21474,10 @@ PASSAGES = [
         "title": "La mina que está en el cajón",
         "kind": "no_literario",
         "source_note": (
-            "Artículo original de 1000paes. La composición de los aparatos, los riesgos "
-            "del reciclaje informal, la existencia en Chile de una ley de "
-            "responsabilidad extendida del productor que incluye a los aparatos "
-            "eléctricos y electrónicos, y las prácticas que dificultan la reparación se "
-            "describen en términos generales, sin atribuir cifras a estudios concretos."
+            "Artículo original de 1000paes. La composición de los aparatos, los "
+            "riesgos del reciclaje informal, la ley chilena de responsabilidad "
+            "extendida del productor y las prácticas que dificultan la reparación "
+            "van en términos generales, sin cifras atribuidas a estudios."
         ),
         "body": (
             "**La mina que está en el cajón**\n\n"
@@ -22273,12 +22271,10 @@ PASSAGES = [
         "title": "El primer trabajo",
         "kind": "no_literario",
         "source_note": (
-            "Artículo original de 1000paes. La edad mínima, la autorización requerida, "
-            "la exigencia de escolaridad, los topes de jornada, la regla de las doce "
-            "horas diarias combinadas y la prohibición de trabajar entre las 21 y las 8 "
-            "horas se verificaron antes de escribir el texto. El artículo es material "
-            "de lectura e informa de manera general: no reemplaza una consulta a la "
-            "Dirección del Trabajo."
+            "Artículo original de 1000paes. La edad mínima, la autorización, la "
+            "exigencia de escolaridad, los topes de jornada y el horario prohibido "
+            "se verificaron antes de escribir. Informa de manera general y no "
+            "reemplaza una consulta a la Dirección del Trabajo."
         ),
         "body": (
             "**El primer trabajo**\n\n"
@@ -22887,11 +22883,10 @@ PASSAGES = [
         "title": "La música que ya no se mueve",
         "kind": "no_literario",
         "source_note": (
-            "Artículo original de 1000paes. Los efectos que describe —el aumento del "
-            "agrado por exposición repetida y la concentración de los recuerdos "
-            "autobiográficos en la adolescencia y la primera adultez— se presentan en "
-            "términos generales, tal como están establecidos, sin atribuir cifras a "
-            "estudios concretos."
+            "Artículo original de 1000paes. Los efectos que describe —el agrado que "
+            "aumenta con la exposición repetida y la concentración de los recuerdos "
+            "en la adolescencia y la primera adultez— van en términos generales, "
+            "sin cifras atribuidas a estudios."
         ),
         "body": (
             "**La música que ya no se mueve**\n\n"
@@ -24125,10 +24120,9 @@ PASSAGES = [
         "title": "El remedio que no era para eso",
         "kind": "no_literario",
         "source_note": (
-            "Artículo original de 1000paes. Los datos citados —la obligación de receta "
-            "médica en Chile desde 1999 y las estimaciones de mortalidad por "
-            "resistencia bacteriana publicadas en 2022 y 2024— se verificaron antes de "
-            "escribir el texto. El artículo es material de lectura y no reemplaza la "
+            "Artículo original de 1000paes. La obligación de receta médica en Chile "
+            "desde 1999 y las estimaciones de mortalidad por resistencia bacteriana "
+            "de 2022 y 2024 se verificaron antes de escribir. No reemplaza la "
             "indicación de un profesional de la salud."
         ),
         "body": (
@@ -24816,11 +24810,10 @@ PASSAGES = [
         "title": "Lo que se sabe y lo que no de un terremoto",
         "kind": "no_literario",
         "source_note": (
-            "Artículo de divulgación original de 1000paes, elaborado a partir de "
-            "fuentes públicas sobre la sismicidad chilena: el terremoto de Valdivia de "
-            "1960 (magnitud 9,5), el del Maule de 2010 (8,8), la velocidad de "
-            "convergencia de la placa de Nazca y la creación del Sistema Nacional de "
-            "Alarma de Maremotos en 1964."
+            "Artículo original de 1000paes, a partir de fuentes públicas sobre "
+            "sismicidad chilena: Valdivia 1960 (magnitud 9,5), Maule 2010 (8,8), la "
+            "convergencia de la placa de Nazca y el Sistema Nacional de Alarma de "
+            "Maremotos, de 1964."
         ),
         "body": (
             "El terremoto más grande jamás registrado por instrumentos ocurrió en "
@@ -25248,12 +25241,10 @@ PASSAGES = [
         "title": "Los sellos de advertencia: qué dicen y qué no dicen",
         "kind": "discontinuo",
         "source_note": (
-            "Cartilla original de 1000paes, elaborada a partir de la ley 20.606 sobre "
-            "composición nutricional de los alimentos y su publicidad y del decreto N° "
-            "13 de 2015 del Ministerio de Salud. Los límites citados son los de la "
-            "tercera etapa, vigente desde el 27 de junio de 2019, y los sellos alcanzan "
-            "solo a los nutrientes añadidos. Los tres productos de la segunda tabla son "
-            "inventados."
+            "Cartilla original de 1000paes, a partir de la ley 20.606 y del decreto "
+            "N° 13 de 2015 del Ministerio de Salud. Los límites son los de la "
+            "tercera etapa, vigente desde el 27 de junio de 2019, y alcanzan solo a "
+            "los nutrientes añadidos. Los productos de la tabla son inventados."
         ),
         "body": (
             "**LOS SELLOS DE ADVERTENCIA: QUÉ DICEN Y QUÉ NO DICEN**\n\n"
@@ -25508,11 +25499,10 @@ PASSAGES = [
         "title": "La hora que inventaron los trenes",
         "kind": "no_literario",
         "source_note": (
-            "Texto original de 1000paes, elaborado a partir de fuentes públicas sobre "
-            "la historia de la hora oficial: la hora del ferrocarril británica (1840), "
-            "el Standard Railway Time de América del Norte (1883), la Conferencia "
-            "Internacional del Meridiano (Washington, 1884) y las disposiciones "
-            "chilenas de 1910, 1916 y 1918."
+            "Texto original de 1000paes, a partir de fuentes públicas sobre la hora "
+            "oficial: la hora del ferrocarril británica (1840), el Standard Railway "
+            "Time (1883), la Conferencia del Meridiano (Washington, 1884) y las "
+            "disposiciones chilenas de 1910, 1916 y 1918."
         ),
         "body": (
             "Durante casi toda la historia humana, la respuesta a la pregunta «¿qué "
