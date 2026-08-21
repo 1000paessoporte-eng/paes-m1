@@ -19,7 +19,6 @@ from paes_api.modules.leads.router import router as leads_router
 from paes_api.modules.metrics.router import router as metrics_router
 from paes_api.modules.practice.router import router as practice_router
 from paes_api.modules.reminders.router import router as reminders_router
-from paes_api.modules.repaso.router import router as repaso_router
 from paes_api.modules.skill_tree.router import router as skill_tree_router
 from paes_api.modules.users.router import router as users_router
 
@@ -45,7 +44,6 @@ app.include_router(content_router, prefix="/api")
 app.include_router(exam_router, prefix="/api")
 app.include_router(goals_router, prefix="/api")
 app.include_router(practice_router, prefix="/api")
-app.include_router(repaso_router, prefix="/api")
 app.include_router(reminders_router, prefix="/api")
 app.include_router(analytics_router, prefix="/api")
 app.include_router(billing_router, prefix="/api")

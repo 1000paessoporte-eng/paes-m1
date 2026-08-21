@@ -200,39 +200,7 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
         </section>
       )}
 
-      {/* El momento de mandar a repasar es este, no el panel de mañana: acaba
-          de ver cuáles falló y todavía se acuerda de por qué. La cola se arma
-          sola al abrir /repaso, así que el enlace basta: no hay nada que
-          registrar acá.
-
-          Cuenta las FALLADAS, no las omitidas: al repaso solo entran las que
-          respondió mal, que son las que tienen un error que corregir. */}
-      {result.incorrect > 0 && (
-        <Link
-          href="/repaso"
-          className="mt-8 flex items-center gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4 transition hover:bg-accent/10"
-        >
-          <span className="text-2xl font-bold text-accent tabular-nums">
-            {result.incorrect}
-          </span>
-          <span className="min-w-0 flex-1 text-sm">
-            <strong className="block">
-              {result.incorrect === 1
-                ? "La que fallaste ya está en tu repaso"
-                : "Las que fallaste ya están en tu repaso"}
-            </strong>
-            <span className="text-muted">
-              Vuelven con esperas cada vez más largas hasta que te salgan sin
-              pensarlo.
-            </span>
-          </span>
-          <span aria-hidden="true" className="shrink-0 text-accent">
-            →
-          </span>
-        </Link>
-      )}
-
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <button
           type="button"
           onClick={onNuevoEnsayo}

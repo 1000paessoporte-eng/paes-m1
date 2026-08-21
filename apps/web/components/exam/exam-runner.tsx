@@ -743,6 +743,39 @@ export function ExamRunner({
                   </button>
                 </div>
 
+                {/* La segunda oportunidad. Con miles de preguntas sorteadas al
+                    azar, reencontrarse con una que uno falló es la mejor
+                    ocasión de aprender que da la plataforma, y pasaba
+                    completamente desapercibida.
+
+                    Va ANTES del enunciado y no después: sirve para leer con
+                    más cuidado, no para lamentarse. Y no dice qué se respondió
+                    ni cuál era la correcta —eso sería regalar la respuesta—,
+                    solo que en algún momento esta pregunta se le escapó. */}
+                {q.fallada_antes && (
+                  <p className="mb-3 flex items-center gap-2 rounded-lg border border-accent-warm/40 bg-accent-warm/5 px-3 py-2 text-sm text-accent-warm-strong">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      className="shrink-0"
+                    >
+                      <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                      <path d="M3 3v5h5" />
+                    </svg>
+                    <span>
+                      <strong className="font-semibold">Ya te equivocaste en esta pregunta.</strong>{" "}
+                      Léela con calma: es tu oportunidad de corregirlo.
+                    </span>
+                  </p>
+                )}
+
                 <TextoRico texto={q.stem} className="text-lg" />
 
                 <div className="mt-5 space-y-2">

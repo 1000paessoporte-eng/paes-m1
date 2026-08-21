@@ -15,7 +15,7 @@ from sqlalchemy import delete, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, selectinload
 
-from paes_api.modules.content.models import Difficulty, Question
+from paes_api.modules.content.models import Alternative, Difficulty, Question
 from paes_api.modules.exam_focus import scoring
 from paes_api.modules.exam_focus.models import (
     PACE_FACTOR,
@@ -41,6 +41,7 @@ from paes_api.modules.exam_focus.schemas import (
     ReviewAlternativeOut,
     ReviewQuestionOut,
 )
+from paes_api.modules.practice.models import PracticeAnswer
 from paes_api.modules.skill_tree import service as skill_tree_service
 from paes_api.modules.skill_tree.models import (
     AXIS_LABELS,
@@ -923,3 +924,57 @@ def tiempos_sugeridos(
         qid: max(1, round(duracion_total_s * peso / total_peso))
         for qid, peso in pesos.items()
     }
+
+
+def preguntas_falladas_antes(
+    db: Session, user_id: int, question_ids: list[int], excluir_intento: int
+) -> set[int]:
+    """De estas preguntas, cuáles el alumno ya respondió MAL alguna vez.
+
+    Es el reemplazo del módulo de repaso: en vez de una cola aparte a la que
+    hay que entrar, la señal aparece donde sirve, con la pregunta al frente.
+    Con miles de preguntas sorteadas al azar, reencontrarse con una que uno
+    falló es la mejor oportunidad de aprendizaje que da la plataforma, y hasta
+    ahora pasaba desapercibida.
+
+    "Alguna vez" y no "la última vez": lo que se le avisa al alumno es que en
+    algún momento esta pregunta se le escapó. Si después la acertó, saberlo
+    igual le sirve para no repetir el mismo razonamiento.
+
+    Se EXCLUYE el intento en curso: dentro del mismo ensayo la pregunta se
+    responde una sola vez, y marcarla con lo que acaba de contestar sería
+    decirle la respuesta.
+
+    Junta ensayo y práctica porque para el alumno son la misma pregunta.
+    """
+    if not question_ids:
+        return set()
+
+    falladas = set(
+        db.execute(
+            select(ExamAnswer.question_id)
+            .join(ExamAttempt, ExamAttempt.id == ExamAnswer.attempt_id)
+            .join(Alternative, Alternative.id == ExamAnswer.selected_alternative_id)
+            .where(
+                ExamAttempt.user_id == user_id,
+                ExamAnswer.attempt_id != excluir_intento,
+                ExamAnswer.question_id.in_(question_ids),
+                Alternative.is_correct.is_(False),
+            )
+        )
+        .scalars()
+        .all()
+    )
+
+    falladas.update(
+        db.execute(
+            select(PracticeAnswer.question_id).where(
+                PracticeAnswer.user_id == user_id,
+                PracticeAnswer.question_id.in_(question_ids),
+                PracticeAnswer.is_correct.is_(False),
+            )
+        )
+        .scalars()
+        .all()
+    )
+    return falladas
