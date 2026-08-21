@@ -21383,6 +21383,180 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "dominio_publico",
+        "title": "El día en que un libro deja de tener dueño",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. El plazo de protección vigente en Chile —la "
+            "vida del autor y setenta años tras su muerte— y el paso posterior de la "
+            "obra al patrimonio cultural común, conservando el reconocimiento de "
+            "autoría, se verificaron antes de escribir el texto."
+        ),
+        "body": (
+            "**El día en que un libro deja de tener dueño**\n\n"
+            "Cada primero de enero, en varios países, ocurre algo que casi nadie "
+            "celebra y que cambia el estado legal de miles de obras: un conjunto de "
+            "libros, canciones, películas y fotografías deja de estar protegido por "
+            "derechos de autor y pasa a lo que la ley chilena llama el patrimonio "
+            "cultural común. Desde ese momento cualquiera puede reeditarlos, "
+            "traducirlos, musicalizarlos o subirlos a internet sin pedir permiso ni "
+            "pagar nada.\n\n"
+            "El plazo no es arbitrario, aunque a primera vista lo parezca. En "
+            "Chile, la ley sobre propiedad intelectual protege la obra durante toda "
+            "la vida del autor y setenta años después de su muerte. Cumplido ese "
+            "tiempo, la protección patrimonial se extingue. Lo que no se extingue "
+            "es el reconocimiento de la autoría: una obra en dominio público sigue "
+            "siendo de quien la escribió, en el sentido de que nadie puede "
+            "atribuírsela ni deformarla, y hay que seguir citando su nombre.\n\n"
+            "La pregunta razonable es por qué existe un plazo, en vez de una "
+            "propiedad permanente como la de una casa. La respuesta está en para "
+            "qué se creó este derecho. No se concibió como un premio moral al "
+            "talento, sino como un incentivo: se le entrega al autor un monopolio "
+            "temporal sobre su obra para que escribirla sea económicamente "
+            "sostenible, y a cambio la sociedad recibe, pasado ese tiempo, una obra "
+            "que puede usar libremente. Es un trato, con dos partes y con fecha de "
+            "término.\n\n"
+            "Visto así, se entiende también por qué el largo del plazo se discute. "
+            "Un monopolio corto desincentiva; uno demasiado largo encarece el "
+            "acceso sin producir más obras. El argumento más incómodo contra las "
+            "extensiones es aritmético: prolongar la protección setenta u ochenta "
+            "años después de la muerte del autor no puede motivar a ese autor a "
+            "escribir, porque ya no está. El incentivo, si opera sobre alguien, "
+            "opera sobre sus herederos o sobre quien compró los derechos.\n\n"
+            "Del otro lado hay razones que no conviene despachar. Una obra puede "
+            "tardar décadas en encontrar público, y hay familias cuyo sustento "
+            "depende de regalías. La armonización internacional también pesa: si "
+            "los países vecinos tienen plazos largos, uno corto deja a los autores "
+            "locales en desventaja para negociar. La discusión, en suma, no es "
+            "entre gente generosa y gente avara: es sobre dónde poner una línea que "
+            "necesariamente deja a alguien insatisfecho.\n\n"
+            "Hay un efecto lateral de los plazos largos del que se habla poco y que "
+            "vale la pena entender: las obras huérfanas. Son aquellas que siguen "
+            "protegidas pero cuyo titular no se puede identificar ni ubicar —una "
+            "fotografía de prensa de 1955, la grabación de una radio, el archivo de "
+            "una editorial que quebró—. Nadie puede autorizar su uso, porque no hay "
+            "a quién preguntarle, y nadie se atreve a usarlas por si aparece "
+            "alguien reclamando. El resultado es peculiar: obras que no le producen "
+            "ingresos a nadie y que tampoco están disponibles para nadie. Se quedan "
+            "quietas, esperando que corra el reloj.\n\n"
+            "Cuando una obra entra al dominio público, en cambio, suele ocurrir lo "
+            "contrario de lo que se teme. No desaparece de las librerías: aparece "
+            "en más ediciones, más baratas, con más traducciones y en más formatos, "
+            "porque cualquiera puede publicarla. Y se vuelve materia prima: se "
+            "adapta, se versiona, se cita, se convierte en película. Buena parte de "
+            "las historias que hoy consideramos clásicas circulan porque nadie tuvo "
+            "que pedir permiso para volver a contarlas.\n\n"
+            "Conviene aclarar algo que se confunde a diario. Que una obra esté "
+            "disponible en internet no significa que esté en dominio público, y que "
+            "algo sea gratis no significa que sea libre de usar. Una fotografía que "
+            "aparece en un buscador tiene autor y tiene plazo, exactamente igual "
+            "que un libro en una vitrina. La facilidad técnica para copiar algo no "
+            "dice nada sobre el permiso para hacerlo, y esa confusión explica la "
+            "mayoría de los problemas cotidianos con este tema.\n\n"
+            "Hay un caso donde todo esto deja de ser abstracto y es el escolar. Un "
+            "material de estudio que quiera usar textos protegidos debe pagarlos o "
+            "pedir autorización, y por eso muchos materiales terminan trabajando "
+            "con obras del patrimonio cultural común o con textos escritos "
+            "especialmente para ellos. No es una decisión estética: es la única "
+            "manera de repartir algo sin quitarle a nadie lo suyo.\n\n"
+            "Queda una pregunta que el plazo no resuelve y que probablemente sea la "
+            "importante. La ley fija cuándo una obra deja de tener dueño; no fija "
+            "cuándo empieza a importarle a alguien. Miles de obras entran cada año "
+            "al dominio público y siguen tan olvidadas como el día anterior, porque "
+            "la libertad de copiar no produce lectores. Que algo esté disponible "
+            "para todos y que alguien efectivamente lo lea son dos cosas distintas, "
+            "y solo de la primera se encarga la ley."
+        ),
+    },
+    {
+        "key": "toponimia_nombres",
+        "title": "Los nombres que ya estaban",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Las etimologías citadas corresponden a las "
+            "lecturas más establecidas y el propio texto advierte que en este terreno "
+            "muchas son discutidas."
+        ),
+        "body": (
+            "**Los nombres que ya estaban**\n\n"
+            "Cualquiera que haya mirado un mapa de Chile ha leído decenas de "
+            "palabras que no son castellanas y que nadie le explicó. Temuco, "
+            "Pichilemu, Calbuco, Antuco, Curanilahue, Llanquihue. Se pronuncian sin "
+            "problema, se usan todos los días para dar direcciones y comprar "
+            "pasajes, y casi nadie se pregunta qué significan, del mismo modo que "
+            "nadie se pregunta qué significa «Santiago» mientras espera la micro.\n\n"
+            "Buena parte de esos nombres viene del mapudungun, y muchos comparten "
+            "piezas. La más reconocible es «ko», que significa agua. Está en "
+            "Temuco, que se asocia al agua o al estero donde crecen los temus, un "
+            "árbol de la familia del arrayán. Está en Antuco, que se vincula al sol "
+            "y al agua. Está en Calbuco, que se relaciona con el azul y el agua. Y "
+            "en decenas de lugares más, la mayoría de los cuales, en efecto, tienen "
+            "agua.\n\n"
+            "Otras piezas se repiten con la misma insistencia. «Pichi» quiere decir "
+            "pequeño, y por eso Pichilemu se entiende como bosque pequeño, con "
+            "«lemu» por bosque. Una vez que uno reconoce dos o tres de esas "
+            "partículas, el mapa deja de ser una lista de sonidos y empieza a "
+            "parecerse a lo que efectivamente es: un inventario descriptivo, hecho "
+            "por gente que necesitaba orientarse y que nombraba lo que había.\n\n"
+            "Conviene decir de inmediato que este terreno exige prudencia. Muchas "
+            "etimologías de topónimos son discutidas: hay nombres registrados por "
+            "cronistas que no hablaban la lengua, transcritos de oído y "
+            "castellanizados varias veces antes de llegar al mapa actual. Otros "
+            "admiten dos lecturas razonables y no hay manera de decidir. Quien "
+            "afirme con seguridad absoluta el significado de cualquier topónimo "
+            "probablemente esté simplificando, y esa advertencia vale también para "
+            "los ejemplos de este artículo.\n\n"
+            "Con esa cautela por delante, lo interesante es el patrón. Estos "
+            "nombres casi nunca conmemoran personas. No hay un equivalente antiguo "
+            "de «avenida del General tal» ni de «población Presidente cual». "
+            "Describen: agua negra, bosque pequeño, tierra de greda, lugar de "
+            "zorros. Son instrucciones prácticas antes que homenajes, y esa "
+            "diferencia dice bastante sobre para qué servía nombrar un lugar.\n\n"
+            "Compárese con la capa siguiente. Sobre esos nombres se depositó otra "
+            "hecha de santos y de apellidos: San Fernando, Los Ángeles, Villa "
+            "Alegre, Puerto Montt. Ahí ya no se describe el lugar, se lo dedica. Un "
+            "mapa chileno tiene entonces dos lógicas de nombrar superpuestas, y se "
+            "puede leer más o menos como se lee un muro con dos capas de pintura: "
+            "por dónde aparece una y por dónde la otra.\n\n"
+            "Chile tiene además nombres de otras lenguas, y el mapa lo muestra por "
+            "tramos. En el norte aparecen topónimos de origen aimara y quechua, "
+            "asociados a los altos, a las aguadas y a las rutas de caravana; en el "
+            "extremo sur quedan nombres de las lenguas de los pueblos australes, "
+            "muchas veces transcritos por navegantes que pasaron una vez. Leído "
+            "completo, el mapa no registra una lengua anterior al castellano: "
+            "registra varias, con densidades muy distintas y con historias muy "
+            "distintas de contacto.\n\n"
+            "Y hay un punto que suele pasarse por alto. Estos nombres son, hoy, uno "
+            "de los usos más extendidos del mapudungun en Chile: una lengua que "
+            "retrocedió durante generaciones sigue pronunciándose todos los días, "
+            "en el noticiario, en los letreros de carretera y en la boleta del bus, "
+            "por millones de personas que no la hablan y que en su mayoría no saben "
+            "que la están usando. Un topónimo es más resistente que una lengua, "
+            "porque no necesita hablantes para sobrevivir: le basta con que alguien "
+            "tenga que llegar a ese lugar.\n\n"
+            "Esa resistencia tiene un límite, y es que un nombre sin significado "
+            "conocido termina funcionando como un ruido cualquiera. Cuando nadie "
+            "sabe ya qué decía «Curanilahue», la palabra sigue funcionando como "
+            "dirección postal y deja de funcionar como información. El lugar "
+            "conserva su etiqueta y pierde su descripción, que era justamente lo "
+            "que el nombre había venido a hacer.\n\n"
+            "De ahí que el trabajo de recuperar esos significados no sea solo un "
+            "asunto de curiosidad. Un nombre de lugar es un dato doble: dice algo "
+            "del lugar —que ahí había agua, o un tipo de árbol, o una piedra "
+            "reconocible— y dice algo de quien lo nombró, de en qué se fijaba y de "
+            "qué necesitaba distinguir. Perder eso equivale a quedarse con un "
+            "archivo cuyos títulos ya nadie puede leer.\n\n"
+            "Vale la pena terminar sin exagerar el punto, porque es fácil convertir "
+            "todo esto en una lamentación sobre lo que se perdió. Los nombres "
+            "siguen ahí, la mayoría bien documentados, y averiguar qué significa el "
+            "de la ciudad donde uno vive toma cinco minutos. Lo llamativo no es que "
+            "la información se haya perdido: es que esté disponible, sea gratis, y "
+            "que aun así casi nadie la busque. Hay una comuna entera de gente que "
+            "dice cada día el nombre del lugar donde nació sin haber preguntado "
+            "nunca qué dice ese nombre."
+        ),
+    },
+    {
         "key": "nueve_tonos",
         "title": "Nueve tonos",
         "kind": "literario",
@@ -26267,6 +26441,343 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El día en que un libro deja de tener dueño' ----------
+    _ql(
+        "dominio_publico", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánto dura en Chile la protección patrimonial de una "
+        "obra?",
+        "La vida del autor y setenta años tras su muerte",
+        "Cumplido ese plazo, la obra pasa a lo que la ley llama el patrimonio "
+        "cultural común y cualquiera puede reeditarla, traducirla o difundirla sin "
+        "pedir permiso ni pagar.\n\nLo que no se extingue es el reconocimiento de "
+        "la autoría.",
+        [
+            ("Setenta años contados desde la primera publicación", "El plazo se cuenta desde la muerte del autor, no desde la edición."),
+            ("Toda la vida del autor, y no más", "La protección continúa siete décadas después."),
+            ("Cincuenta años tras la muerte del autor", "El texto menciona setenta, tras una ampliación posterior."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_localizar", "facil",
+        "Según la lectura, ¿qué sigue vigente cuando una obra entra al dominio "
+        "público?",
+        "El reconocimiento de quién la escribió",
+        "El texto precisa qué implica: nadie puede atribuirse la obra ni "
+        "deformarla, y hay que seguir citando el nombre del autor.\n\nLo que se "
+        "extingue es la protección patrimonial, es decir, el derecho exclusivo a "
+        "explotarla económicamente.",
+        [
+            ("El derecho de los herederos a cobrar regalías", "Ese es justamente el derecho que se extingue."),
+            ("La obligación de pedir permiso para reeditarla", "Desde ese momento no hace falta ningún permiso."),
+            ("El derecho exclusivo de la editorial que la publicó", "Ninguna exclusividad de explotación sobrevive al plazo."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_localizar", "medio",
+        "Según la lectura, ¿qué es una obra huérfana?",
+        "Una obra protegida cuyo titular no se puede ubicar",
+        "El texto da ejemplos concretos: una fotografía de prensa de 1955, la "
+        "grabación de una radio, el archivo de una editorial que quebró.\n\nNadie "
+        "puede autorizar su uso porque no hay a quién preguntarle, y nadie se "
+        "atreve a usarla por si aparece alguien reclamando.",
+        [
+            ("Una obra que ya entró al patrimonio cultural común", "Las huérfanas siguen protegidas: ese es el problema."),
+            ("Una obra publicada sin el nombre de su autor", "El texto habla de titulares imposibles de ubicar, no de anonimato."),
+            ("Una obra cuyo autor renunció a sus derechos", "No hay renuncia: hay imposibilidad de identificarlo."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_interpretar", "facil",
+        "Según la lectura, ¿por qué el derecho de autor tiene un plazo y no es "
+        "permanente?",
+        "Porque se creó como un incentivo y no como un premio",
+        "El texto lo describe como un trato: se le entrega al autor un monopolio "
+        "temporal para que escribir sea económicamente sostenible, y a cambio la "
+        "sociedad recibe después una obra que puede usar libremente.\n\nUn trato "
+        "tiene dos partes y tiene fecha de término.",
+        [
+            ("Porque las obras pierden valor con el paso del tiempo", "El texto no vincula el plazo con el valor de la obra."),
+            ("Porque resulta difícil administrar derechos tan antiguos", "La dificultad administrativa aparece con las obras huérfanas."),
+            ("Porque los herederos rara vez reclaman esos derechos", "El artículo menciona familias que dependen de esas regalías."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_interpretar", "medio",
+        "¿Cuál es el argumento aritmético contra extender los plazos?",
+        "Que no puede incentivar a alguien que ya murió",
+        "El texto lo llama el argumento más incómodo, y lo formula sin adornos: "
+        "prolongar la protección setenta u ochenta años después de la muerte del "
+        "autor no puede motivarlo a escribir, porque ya no está.\n\nSi el incentivo "
+        "opera sobre alguien, opera sobre los herederos o sobre quien compró los "
+        "derechos.",
+        [
+            ("Que las obras antiguas ya no generan ingresos", "El texto menciona familias que viven de esas regalías."),
+            ("Que setenta años son más de lo que dura una obra", "El artículo no discute la duración del interés en una obra."),
+            ("Que los plazos largos favorecen a los países ricos", "La armonización internacional aparece como argumento a favor."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_interpretar", "medio",
+        "¿Qué razones presenta el emisor a favor de los plazos largos?",
+        "El sustento de las familias y los plazos de otros países",
+        "El texto reconoce que una obra puede tardar décadas en encontrar público y "
+        "que hay familias cuyo ingreso depende de las regalías.\n\nY agrega la "
+        "armonización internacional: si los países vecinos tienen plazos largos, "
+        "uno corto deja a los autores locales en desventaja para negociar. Por eso "
+        "concluye que la discusión no es entre gente generosa y gente avara.",
+        [
+            ("La necesidad de proteger a las editoriales pequeñas", "Las editoriales no aparecen entre las razones dadas."),
+            ("El costo administrativo de liberar tantas obras", "El texto no menciona ningún costo de ese tipo."),
+            ("La mayor calidad de las obras cuando están protegidas", "Nada en el artículo relaciona el plazo con la calidad."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_interpretar", "dificil",
+        "¿Qué situación paradójica describe el emisor con las obras huérfanas?",
+        "No le dan ingresos a nadie y tampoco están disponibles",
+        "Siguen protegidas, de modo que usarlas requiere una autorización que nadie "
+        "puede otorgar, porque no se sabe a quién pedírsela.\n\nEl resultado es que "
+        "fallan los dos objetivos a la vez: no cumplen la función de retribuir a un "
+        "autor ni la de estar al alcance del público. «Se quedan quietas, esperando "
+        "que corra el reloj».",
+        [
+            ("Circulan con libertad aunque todavía estén protegidas por ley", "Ocurre lo contrario: nadie se atreve a usarlas."),
+            ("Sus autores renunciaron a cobrar por ellas", "No hay renuncia: hay imposibilidad de ubicarlos."),
+            ("Entraron al dominio público antes de tiempo", "Su problema es precisamente que siguen protegidas."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor aclara que estar en internet no es estar en "
+        "dominio público?",
+        "Para corregir una confusión que se comete a diario",
+        "El texto lo dice sin rodeos: que algo sea gratis no significa que sea "
+        "libre de usar.\n\nUna fotografía que aparece en un buscador tiene autor y "
+        "tiene plazo, «exactamente igual que un libro en una vitrina». La facilidad "
+        "técnica para copiar algo no dice nada sobre el permiso para hacerlo.",
+        [
+            ("Para desaconsejar el uso de imágenes de internet", "El texto explica la distinción, no prohíbe usarlas."),
+            ("Para señalar que las obras digitales no están protegidas", "Afirma lo contrario: están protegidas igual que las demás."),
+            ("Para advertir que los buscadores publican obras sin permiso", "El artículo no acusa a ninguna plataforma."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_evaluar", "medio",
+        "¿Qué sostiene el emisor sobre lo que ocurre cuando una obra entra al "
+        "dominio público?",
+        "Que aparece en más ediciones y no en menos",
+        "El texto señala que suele ocurrir lo contrario de lo que se teme: la obra "
+        "no desaparece de las librerías sino que se multiplica en ediciones más "
+        "baratas, traducciones y formatos, porque cualquiera puede publicarla.\n\nY "
+        "se vuelve materia prima: se adapta, se versiona, se cita, se convierte en "
+        "película.",
+        [
+            ("Que su valor comercial se pierde por completo", "El texto describe más ediciones, no menos comercio."),
+            ("Que las editoriales dejan de interesarse en ella", "Ocurre al revés: cualquiera puede publicarla."),
+            ("Que se conserva solo en bibliotecas públicas", "El artículo no plantea ninguna restricción de ese tipo."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_evaluar", "dificil",
+        "¿Qué explica el emisor sobre los materiales de estudio?",
+        "Que trabajan con obras libres porque no pueden pagar permisos",
+        "El texto lo presenta como el caso donde el asunto deja de ser abstracto: "
+        "usar textos protegidos obliga a pagarlos o a pedir autorización.\n\nPor "
+        "eso muchos materiales recurren a obras del patrimonio cultural común o a "
+        "textos escritos especialmente para ellos, y el emisor subraya que no es "
+        "una decisión estética sino «la única manera de repartir algo sin quitarle "
+        "a nadie lo suyo».",
+        [
+            ("Que los materiales escolares están exentos de pagar derechos", "El texto dice justamente que deben pagarlos o pedir permiso."),
+            ("Que las obras antiguas resultan más adecuadas para enseñar", "La elección se explica por su situación legal, no pedagógica."),
+            ("Que las editoriales educativas suelen infringir la ley", "No se atribuye ninguna infracción a nadie."),
+        ],
+    ),
+    _ql(
+        "dominio_publico", "lec_evaluar", "dificil",
+        "¿Qué distinción plantea el emisor en el cierre del artículo?",
+        "Entre estar disponible para todos y ser leído",
+        "El texto sostiene que la ley fija cuándo una obra deja de tener dueño, "
+        "pero no cuándo empieza a importarle a alguien.\n\nMiles de obras entran "
+        "cada año al dominio público «y siguen tan olvidadas como el día anterior, "
+        "porque la libertad de copiar no produce lectores». El cierre reconoce así "
+        "un límite del propio mecanismo que el artículo estuvo defendiendo.",
+        [
+            ("Entre las obras protegidas y las que ya son libres", "Esa distinción atraviesa el texto, pero no es la del cierre."),
+            ("Entre lo que la ley permite y lo que la ley prohíbe", "El cierre no trata sobre permisos ni prohibiciones."),
+            ("Entre el interés de los autores y el de sus herederos", "Esa diferencia se discute antes, con los plazos."),
+        ],
+    ),
+    # ---------- 'Los nombres que ya estaban' ----------
+    _ql(
+        "toponimia_nombres", "lec_localizar", "facil",
+        "Según la lectura, ¿qué significa la partícula «ko» en mapudungun?",
+        "Agua",
+        "El texto la presenta como la pieza más reconocible de los topónimos "
+        "chilenos y la rastrea en varios nombres: Temuco se asocia al agua donde "
+        "crecen los temus, Antuco al sol y al agua, Calbuco al azul y al agua.\n\nY "
+        "agrega la comprobación que la vuelve interesante: la mayoría de esos "
+        "lugares, en efecto, tiene agua.",
+        [
+            ("Bosque", "El bosque corresponde a «lemu», como en Pichilemu."),
+            ("Pequeño", "«Pichi» es la partícula que significa pequeño."),
+            ("Tierra", "El texto no atribuye ese significado a «ko»."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_localizar", "facil",
+        "Según la lectura, ¿qué caracteriza a los nombres de lugar de origen "
+        "mapudungun?",
+        "Que describen el lugar en vez de dedicarlo a alguien",
+        "El texto lo formula como un patrón: no existe un equivalente antiguo de "
+        "«avenida del General tal» ni de «población Presidente cual».\n\nLo que hay "
+        "son descripciones: agua negra, bosque pequeño, tierra de greda, lugar de "
+        "zorros. Son «instrucciones prácticas antes que homenajes».",
+        [
+            ("Que provienen todos de una misma zona del país", "El artículo los sitúa en buena parte del territorio."),
+            ("Que conmemoran a los jefes de cada comunidad", "El texto dice justamente que casi nunca conmemoran personas."),
+            ("Que fueron traducidos al castellano en el siglo XIX", "Lo que describe es una castellanización fonética, no una traducción."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_localizar", "medio",
+        "Según la lectura, ¿qué otras lenguas aparecen en el mapa chileno?",
+        "El aimara y el quechua en el norte, y lenguas australes",
+        "El texto describe la distribución por tramos: en el norte, topónimos "
+        "asociados a los altos, las aguadas y las rutas de caravana; en el extremo "
+        "sur, nombres de los pueblos australes, muchas veces transcritos por "
+        "navegantes que pasaron una sola vez.\n\nDe ahí su conclusión: el mapa no "
+        "registra una lengua anterior al castellano, sino varias.",
+        [
+            ("Solo el mapudungun, en todo el territorio", "El texto describe expresamente otras lenguas."),
+            ("Lenguas europeas traídas por los colonos del sur", "El artículo no menciona topónimos de ese origen."),
+            ("El quechua en el sur y el aimara en la zona central", "El texto sitúa ambas en el norte del país."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al comparar el mapa con «un muro con dos capas "
+        "de pintura»?",
+        "Que hay dos maneras de nombrar superpuestas",
+        "La primera capa describe el lugar; la segunda, hecha de santos y apellidos "
+        "—San Fernando, Los Ángeles, Villa Alegre, Puerto Montt—, se lo dedica a "
+        "alguien.\n\nLa comparación permite leer el mapa observando por dónde asoma "
+        "una y por dónde la otra.",
+        [
+            ("Que los nombres antiguos fueron borrados por completo", "El texto muestra que siguen usándose a diario."),
+            ("Que los mapas se han rehecho en dos oportunidades", "La comparación no trata sobre la confección de los mapas."),
+            ("Que existen dos versiones del mapa según la región", "Las dos capas conviven en el mismo mapa."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_interpretar", "medio",
+        "¿Por qué el emisor afirma que un topónimo es más resistente que una "
+        "lengua?",
+        "Porque sigue usándose aunque nadie hable esa lengua",
+        "El texto observa que estos nombres son hoy uno de los usos más extendidos "
+        "del mapudungun: se pronuncian en el noticiario, en los letreros de "
+        "carretera y en la boleta del bus, por millones de personas que no lo "
+        "hablan.\n\nY explica por qué sobrevive: «no necesita hablantes; le basta "
+        "con que alguien tenga que llegar a ese lugar».",
+        [
+            ("Porque se escribe siempre de la misma manera", "El texto describe justamente varias castellanizaciones."),
+            ("Porque las lenguas originarias están protegidas por ley", "El artículo no menciona ninguna protección legal."),
+            ("Porque los nombres se enseñan en las escuelas", "La enseñanza no aparece entre las razones dadas."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_interpretar", "medio",
+        "¿Qué límite tiene esa resistencia, según la lectura?",
+        "Que un nombre sin significado conocido deja de informar",
+        "El texto lo ejemplifica: cuando nadie sabe ya qué decía «Curanilahue», la "
+        "palabra sigue funcionando como dirección postal.\n\nEl lugar conserva su "
+        "etiqueta y pierde su descripción, «que era justamente lo que el nombre "
+        "había venido a hacer».",
+        [
+            ("Que los nombres terminan cambiando de pronunciación", "Ese proceso se menciona antes y con otro propósito."),
+            ("Que algunos lugares reciben nombres nuevos en castellano", "El texto no informa reemplazos de nombres."),
+            ("Que las etimologías se pierden en los archivos oficiales", "El artículo señala que la mayoría está bien documentada."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_interpretar", "dificil",
+        "¿En qué sentido el emisor sostiene que un nombre de lugar es «un dato "
+        "doble»?",
+        "Informa sobre el lugar y sobre quien lo nombró",
+        "Del lugar dice que ahí había agua, un tipo de árbol o una piedra "
+        "reconocible.\n\nDe quien lo nombró dice en qué se fijaba y qué necesitaba "
+        "distinguir, que es una información distinta y no menos valiosa. Por eso el "
+        "emisor compara la pérdida de esos significados con quedarse «con un "
+        "archivo cuyos títulos ya nadie puede leer».",
+        [
+            ("Se puede leer en mapudungun y también en castellano", "La duplicidad no es de idiomas sino de información."),
+            ("Aparece tanto en los mapas como en los documentos", "El texto no trata sobre dónde están registrados."),
+            ("Sirve para ubicarse y también para recordar a alguien", "El artículo señala que casi nunca conmemoran personas."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor advierte que este terreno «exige prudencia»?",
+        "Para acotar el alcance de sus propios ejemplos",
+        "El texto explica por qué muchas etimologías son discutidas: nombres "
+        "registrados por cronistas que no hablaban la lengua, transcritos de oído y "
+        "castellanizados varias veces.\n\nY aplica la advertencia a sí mismo: quien "
+        "afirme con seguridad absoluta el significado de un topónimo «probablemente "
+        "esté simplificando, y esa advertencia vale también para los ejemplos de "
+        "este artículo».",
+        [
+            ("Para señalar que los topónimos carecen de significado real", "El artículo sostiene lo contrario y entrega ejemplos."),
+            ("Para criticar a los cronistas que los transcribieron", "Explica su limitación sin reprochársela."),
+            ("Para justificar que no entregará ninguna etimología", "Entrega varias, con las cautelas del caso."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor frente a la pérdida de esos significados?",
+        "Mesurada, pues evita convertir el asunto en un lamento",
+        "El texto reconoce que es fácil transformar esto en una lamentación y "
+        "decide no hacerlo.\n\nRecuerda que los nombres siguen ahí, que la mayoría "
+        "está bien documentada y que averiguar el significado del propio toma cinco "
+        "minutos. Lo llamativo, dice, no es que la información se haya perdido, "
+        "sino que esté disponible y nadie la busque.",
+        [
+            ("Alarmada, pues considera que esos nombres desaparecerán", "Sostiene que los topónimos son especialmente resistentes."),
+            ("Indiferente, pues cree que el significado no hace falta", "Dedica dos párrafos a explicar por qué sí importa."),
+            ("Optimista, pues supone que la gente empezará a averiguarlo", "Su observación final apunta en el sentido contrario."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_evaluar", "dificil",
+        "¿Qué agrega al argumento el párrafo sobre las lenguas del norte y del "
+        "extremo sur?",
+        "Corrige la idea de una sola lengua anterior al castellano",
+        "Hasta ese punto el artículo había trabajado casi solo con el "
+        "mapudungun.\n\nEl párrafo amplía el cuadro y precisa la conclusión: el "
+        "mapa registra varias lenguas, «con densidades muy distintas y con "
+        "historias muy distintas de contacto». La diferencia entre un topónimo "
+        "repetido en decenas de lugares y otro transcrito por alguien que pasó una "
+        "sola vez es, ella misma, un dato histórico.",
+        [
+            ("Demuestra que el mapudungun fue la lengua más extendida", "El texto compara densidades sin establecer un ranking."),
+            ("Explica por qué el norte tiene menos topónimos originarios", "No se afirma que el norte tenga menos."),
+            ("Sostiene que los navegantes registraron mejor esos nombres", "Al contrario: transcribieron de paso y una sola vez."),
+        ],
+    ),
+    _ql(
+        "toponimia_nombres", "lec_evaluar", "dificil",
+        "¿Qué observación deja el emisor en la última línea del artículo?",
+        "Que se dice a diario un nombre sin saber qué dice",
+        "El cierre concentra el argumento en una escena mínima: una comuna entera "
+        "de gente que pronuncia cada día el nombre del lugar donde nació sin haber "
+        "preguntado nunca qué significa.\n\nNo es un reproche a nadie. Es la "
+        "constatación con que el texto viene trabajando: el nombre sobrevivió "
+        "intacto y la información que llevaba adentro se quedó afuera del uso.",
+        [
+            ("Que los habitantes deberían aprender la lengua original", "El artículo no propone aprender mapudungun."),
+            ("Que las comunas deberían recuperar sus nombres antiguos", "Los nombres no se perdieron: siguen en uso."),
+            ("Que la escuela no enseña el significado de esos nombres", "El texto no atribuye responsabilidad a la escuela."),
+        ],
+    ),
     # ---------- 'Nueve tonos' ----------
     _ql(
         "nueve_tonos", "lec_localizar", "facil",
