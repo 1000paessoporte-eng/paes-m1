@@ -24,6 +24,10 @@ class RepasoPreguntaOut(BaseModel):
     passage: str | None = None
     passage_title: str | None = None
     node_name: str
+    #: A qué prueba pertenece. La pantalla pinta sus acentos con el color de la
+    #: prueba, igual que el árbol y el selector de ensayo: el alumno reconoce
+    #: en qué está sin leer el encabezado.
+    subject: str
     alternatives: list[RepasoAlternativaOut]
     #: Cuántas veces la ha fallado. Se muestra: saber que es la tercera vez es
     #: lo que convierte "otra pregunta" en "esta es la que se me resiste".
