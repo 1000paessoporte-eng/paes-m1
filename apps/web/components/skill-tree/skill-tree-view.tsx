@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { COLOR_PRUEBA } from "@/lib/colores-prueba";
+import { BarraProgreso } from "@/components/ui/barra-progreso";
 import type { Subject } from "@/lib/api";
 import Link from "next/link";
 import { useCallback, useLayoutEffect, useRef, useState, type ReactElement } from "react";
@@ -184,25 +185,63 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
       .sort((a, b) => a.tier - b.tier || a.display_order - b.display_order),
   }));
 
+  const dominados = nodes.filter((n) => n.status === "mastered").length;
+  const disponibles = nodes.filter(
+    (n) => n.status !== "locked" && n.status !== "mastered"
+  ).length;
+
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 gap-8 sm:grid-cols-2",
+    <>
+      {/* CUÁNTO LLEVAS DEL ÁRBOL ENTERO.
+          La página no lo decía en ninguna parte: había que contar tarjetas
+          verdes a ojo entre cuatro columnas. Un árbol de habilidades sin un
+          marcador de avance es un menú, y lo que engancha de estos árboles es
+          justamente ver la barra subir. */}
+      <div className="mb-8 rounded-2xl border border-border bg-surface p-5">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <p className="font-display text-3xl leading-none font-bold">
+            {dominados}
+            <span className="text-lg font-semibold text-muted">/{nodes.length}</span>
+            <span className="ml-2 align-middle text-sm font-medium text-muted">
+              temas dominados
+            </span>
+          </p>
+          {disponibles > 0 && (
+            <p className="text-sm text-muted">
+              <strong className="text-foreground tabular-nums">{disponibles}</strong>{" "}
+              {disponibles === 1 ? "disponible ahora" : "disponibles ahora"}
+            </p>
+          )}
+        </div>
+        <div className="mt-3">
+          <BarraProgreso
+            porcentaje={nodes.length ? (dominados / nodes.length) * 100 : 0}
+            color={colorPrueba}
+            etiqueta={`${dominados} de ${nodes.length} temas dominados`}
+            alCargar
+          />
+        </div>
+      </div>
+
+      <div
+        className={cn(
+          "grid grid-cols-1 gap-8 sm:grid-cols-2",
         // Tres ejes (Lectora, Ciencias, Historia) o cuatro (matemática): la
         // grilla se ajusta para que no queden columnas huérfanas.
         columns.length === 3 ? "xl:grid-cols-3" : "xl:grid-cols-4"
       )}
     >
-      {columns.map((column) => (
-        <TreeColumn
-          key={column.axis}
-          axis={column.axis}
-          nodes={column.nodes}
-          nameByCode={nameByCode}
-          colorPrueba={colorPrueba}
-        />
-      ))}
-    </div>
+        {columns.map((column) => (
+          <TreeColumn
+            key={column.axis}
+            axis={column.axis}
+            nodes={column.nodes}
+            nameByCode={nameByCode}
+            colorPrueba={colorPrueba}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -265,17 +304,26 @@ function TreeColumn({
 
   return (
     <div className="flex flex-col gap-4">
+      {/* El ícono va en el color de la PRUEBA, no en un color propio del eje.
+          Los cuatro ejes llevaban turquesa, violeta, verde y ámbar quemados a
+          mano, que son --literalmente-- los colores de identidad de Ciencias,
+          M2 y Lectora: el árbol de Matemática M1 estaba pintado con los
+          colores de las otras pruebas. Los ejes se distinguen por su ícono y
+          su nombre, que es información; el color acá significa qué prueba. */}
       <div className="flex items-center gap-2.5">
         <span
-          className={cn(
-            "flex h-7 w-7 items-center justify-center rounded-md",
-            meta.iconBg,
-            meta.iconColor
-          )}
+          className="flex h-7 w-7 items-center justify-center rounded-md"
+          style={{
+            backgroundColor: `color-mix(in srgb, ${colorPrueba} 12%, transparent)`,
+            color: colorPrueba,
+          }}
         >
           <meta.icon />
         </span>
-        <h2 className="text-sm font-medium text-foreground">{meta.label}</h2>
+        <h2 className="text-sm font-semibold">{meta.label}</h2>
+        <span className="ml-auto text-xs text-muted tabular-nums">
+          {nodes.filter((n) => n.status === "mastered").length}/{nodes.length}
+        </span>
       </div>
 
       <ol ref={listRef} className="relative flex flex-col gap-3">
@@ -313,11 +361,6 @@ function TreeColumn({
           // "Dominado" usa el color de la prueba porque es identidad --este
           // árbol--, mientras que "Desbloqueado" conserva el verde, que ahí
           // sí es estado. Es la regla de no mezclar identidad con estado.
-          const badge = mastered
-            ? { label: "Dominado", cls: "bg-(--color-prueba)/15 text-(--color-prueba)" }
-            : locked
-              ? { label: "Bloqueado", cls: "bg-surface-hover text-muted" }
-              : { label: "Desbloqueado", cls: "bg-success/15 text-success" };
           return (
             <motion.li
               key={node.code}
@@ -344,100 +387,144 @@ function TreeColumn({
                 />
               </div>
 
-              <div
-                className={cn(
-                  "card-hover flex-1 overflow-hidden rounded-xl border border-border bg-surface transition-colors",
-                  meta.border,
-                  locked && "opacity-80"
-                )}
-              >
-                <div className="flex">
-                  <span className={cn("w-1 shrink-0", meta.bar, locked && "opacity-40")} />
-                  <div className="flex-1 p-4">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-xs font-medium text-muted">
-                        Nivel {node.tier}
-                      </span>
-                      <span
-                        className={cn(
-                          "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium",
-                          badge.cls
-                        )}
-                      >
-                        {locked ? <LockIcon /> : <UnlockIcon />}
-                        {badge.label}
-                      </span>
-                    </div>
+              {/* LA TARJETA CAMBIA DE TAMAÑO SEGÚN EL ESTADO.
+                  Antes las tres se veían igual: un nodo bloqueado pesaba lo
+                  mismo que el que puedes hacer ahora, y con doce nodos por
+                  columna eso es un muro parejo donde no se distingue nada. En
+                  un árbol de habilidades lo que puedes hacer TIENE que mandar.
 
-                    <p className="mt-2 text-sm font-medium text-foreground">{node.name}</p>
-
-                    {!locked && node.attempts > 0 && (
-                      <div className="mt-3 flex items-center gap-2">
-                        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-surface-hover">
-                          <div
-                            className={cn(
-                              "h-full rounded-full",
-                              mastered ? "bg-accent" : "bg-success"
-                            )}
-                            style={{ width: `${pct}%` }}
-                          />
-                        </div>
-                        <span className="shrink-0 text-[10px] text-muted">
-                          {pct}% · {node.attempts} resp.
-                        </span>
-                      </div>
-                    )}
-
-                    {node.prerequisite_codes.length > 0 && (
-                      <p className="mt-2 text-xs text-muted">
-                        Requiere:{" "}
-                        {/* El nombre viene con el nodo: los prerrequisitos de
-                            M2 son nodos de M1 y no están en esta respuesta, así
-                            que el mapa local no alcanza. */}
-                        {(node.prerequisite_names?.length
-                          ? node.prerequisite_names
-                          : node.prerequisite_codes.map(
-                              (code) => nameByCode.get(code) ?? code
-                            )
-                        ).join(", ")}{" "}
-                        · ≥{Math.round(node.unlock_threshold * 100)}% acierto
-                      </p>
-                    )}
-
-                    {/* Aprender aparece aunque el nodo esté bloqueado: lo que
-                        se gana practicando es el derecho a practicar, no el
-                        derecho a estudiar. Negarle la explicación a quien
-                        todavía no domina el prerrequisito es exactamente al
-                        revés de lo que sirve. */}
-                    <div className="mt-3 flex flex-wrap items-center gap-3">
+                  · Dominado: se encoge a una línea. Ya está, no necesita
+                    espacio; solo la marca de que lo lograste.
+                  · Disponible: la tarjeta completa, con el anillo de avance y
+                    las dos acciones. Es a lo que viniste.
+                  · Bloqueado: apagado y compacto, con el requisito en UNA
+                    línea corta en vez del párrafo que había. */}
+              {mastered ? (
+                <div className="flex flex-1 items-center gap-2.5 rounded-xl border border-success/30 bg-success/5 px-3.5 py-2.5">
+                  <svg
+                    width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="var(--success)" strokeWidth="3" strokeLinecap="round"
+                    strokeLinejoin="round" className="shrink-0" aria-hidden="true"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span className="min-w-0 flex-1 truncate text-sm font-medium">
+                    {node.name}
+                  </span>
+                  <span className="shrink-0 text-xs font-semibold text-success tabular-nums">
+                    {pct}%
+                  </span>
+                </div>
+              ) : locked ? (
+                <div className="flex-1 rounded-xl border border-dashed border-border bg-transparent px-3.5 py-3">
+                  <div className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-muted">
+                      <LockIcon />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-muted">{node.name}</p>
+                      {node.prerequisite_codes.length > 0 && (
+                        <p className="mt-0.5 text-xs leading-snug text-muted">
+                          Se abre al dominar{" "}
+                          <span className="font-medium">
+                            {(node.prerequisite_names?.length
+                              ? node.prerequisite_names
+                              : node.prerequisite_codes.map(
+                                  (code) => nameByCode.get(code) ?? code
+                                )
+                            ).join(" y ")}
+                          </span>
+                        </p>
+                      )}
                       {node.has_lesson && (
                         <Link
                           href={`/aprender/${node.code}`}
-                          className="text-xs font-medium text-accent hover:underline"
+                          className="mt-1.5 inline-block text-xs font-medium text-accent"
                         >
-                          Aprender →
-                        </Link>
-                      )}
-                      {!locked && (
-                        <Link
-                          href={`/practicar/${node.code}`}
-                          className={
-                            "text-xs font-medium hover:underline " +
-                            (node.has_lesson ? "text-muted" : "text-accent")
-                          }
-                        >
-                          Practicar →
+                          Leer la teoría igual
                         </Link>
                       )}
                     </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div
+                  className="card-hover flex-1 overflow-hidden rounded-xl border-2 bg-surface transition-colors"
+                  style={{ borderColor: `color-mix(in srgb, ${colorPrueba} 35%, transparent)` }}
+                >
+                  {/* El nombre ocupa el ancho COMPLETO y el anillo baja a la
+                      fila de abajo. Con el anillo al lado, en una columna de
+                      cuatro el título quedaba en una canaleta de 150 px y se
+                      partía en tres líneas, y los dos botones se apilaban uno
+                      sobre otro. */}
+                  <div className="p-4">
+                    <p className="text-sm leading-snug font-semibold text-balance">
+                      {node.name}
+                    </p>
+
+                    <div className="mt-3 flex items-center gap-3">
+                      {/* El anillo dice de un vistazo cuánto llevas en ESTE
+                          tema. Una barra fina de 4 px no se veía; un anillo sí. */}
+                      <AnilloAvance porcentaje={pct} color={colorPrueba} />
+                      <p className="min-w-0 text-xs leading-snug text-muted">
+                        {node.attempts > 0
+                          ? `de acierto en ${node.attempts} ${node.attempts === 1 ? "respuesta" : "respuestas"}`
+                          : "Todavía sin practicar"}
+                      </p>
+                    </div>
+
+                    <div className="mt-3 flex items-center gap-2">
+                      <Link
+                        href={`/practicar/${node.code}`}
+                        className="flex-1 rounded-lg px-3 py-2 text-center text-xs font-semibold text-on-fill transition hover:opacity-90"
+                        style={{ backgroundColor: colorPrueba }}
+                      >
+                        Practicar
+                      </Link>
+                      {node.has_lesson && (
+                        <Link
+                          href={`/aprender/${node.code}`}
+                          className="rounded-lg border border-border px-3 py-2 text-xs font-medium transition hover:bg-surface-hover"
+                        >
+                          Teoría
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
             </motion.li>
           );
         })}
       </ol>
     </div>
+  );
+}
+
+/**
+ * El avance de un tema, como anillo.
+ *
+ * Era una barra de 4 píxeles que se perdía dentro de la tarjeta. Un anillo
+ * alrededor del porcentaje se lee de una pasada y aguanta estar repetido doce
+ * veces en la misma pantalla sin volverse ruido, que es lo que le pasa a doce
+ * barras horizontales apiladas.
+ */
+function AnilloAvance({ porcentaje, color }: { porcentaje: number; color: string }) {
+  const r = 17;
+  const circunferencia = 2 * Math.PI * r;
+  const avance = circunferencia * (1 - Math.min(100, Math.max(0, porcentaje)) / 100);
+  return (
+    <span className="relative flex h-11 w-11 shrink-0 items-center justify-center">
+      <svg viewBox="0 0 40 40" className="absolute inset-0 -rotate-90">
+        <circle cx="20" cy="20" r={r} fill="none" stroke="var(--surface-hover)" strokeWidth="4" />
+        <circle
+          cx="20" cy="20" r={r} fill="none" stroke={color} strokeWidth="4"
+          strokeLinecap="round" strokeDasharray={circunferencia}
+          strokeDashoffset={avance}
+        />
+      </svg>
+      <span className="relative text-[10px] font-bold tabular-nums">{porcentaje}%</span>
+    </span>
   );
 }
 
@@ -484,15 +571,6 @@ function LockIcon() {
     <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
       <rect x="5" y="11" width="14" height="9" rx="2" />
       <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-    </svg>
-  );
-}
-
-function UnlockIcon() {
-  return (
-    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="5" y="11" width="14" height="9" rx="2" />
-      <path d="M8 11V7a4 4 0 0 1 7.5-2" />
     </svg>
   );
 }
