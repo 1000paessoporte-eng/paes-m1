@@ -21383,6 +21383,176 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "historia_cero",
+        "title": "El número que empezó siendo un espacio en blanco",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La distinción entre el cero posicional y el "
+            "cero como número, las reglas de Brahmagupta, la difusión europea a partir "
+            "del *Liber Abaci* de 1202 y la prohibición del gremio de cambistas de "
+            "Florencia en 1299 se verificaron antes de escribir el texto."
+        ),
+        "body": (
+            "**El número que empezó siendo un espacio en blanco**\n\n"
+            "Escriba el número ciento cinco sin usar el cero. No se puede: queda "
+            "«15», o queda «1 5» con un hueco que el lector tendrá que adivinar. "
+            "Esa dificultad, que hoy parece una curiosidad, fue durante siglos un "
+            "problema práctico serio para quien llevaba cuentas, y su solución "
+            "tardó mucho más de lo que uno esperaría de algo tan simple.\n\n"
+            "Conviene separar dos cosas que suelen ir juntas y que no son la misma. "
+            "Una es el cero como marcador de posición: un signo que ocupa el lugar "
+            "vacío para que se entienda que hay centenas y unidades pero no "
+            "decenas. La otra es el cero como número: una cantidad con la que se "
+            "puede operar, que se suma, se resta y se multiplica igual que el tres "
+            "o el siete. La primera es una solución de escritura. La segunda es una "
+            "idea, y bastante incómoda: obliga a aceptar que la nada es una "
+            "cantidad.\n\n"
+            "El marcador de posición apareció varias veces. Los babilonios usaron "
+            "un signo para indicar el hueco en su sistema de numeración, y en "
+            "Mesoamérica los mayas tuvieron también un símbolo para el cero dentro "
+            "del suyo. Eran soluciones a un problema de notación, y funcionaban.\n\n"
+            "El paso siguiente está documentado en la India. En el siglo VII, el "
+            "matemático Brahmagupta escribió reglas explícitas para operar con el "
+            "cero y con cantidades negativas, que él explicaba en términos de "
+            "fortunas y deudas. Sumar cero deja el número igual; restar un número "
+            "de sí mismo da cero; una deuda restada de nada se convierte en "
+            "fortuna. Ahí el cero deja de ser un hueco tipográfico y entra a la "
+            "aritmética como un número más.\n\n"
+            "Vale la pena notar que ese mismo trabajo dejó abierta una pregunta que "
+            "todavía se enseña: qué ocurre al dividir por cero. Brahmagupta la "
+            "abordó y no dio con una respuesta consistente, y no la dio porque no "
+            "existe. La matemática posterior no resolvió ese caso: decidió "
+            "declararlo indefinido, que es una manera distinta y más honesta de "
+            "cerrarlo.\n\n"
+            "La notación viajó desde la India al mundo islámico, donde se estudió y "
+            "se amplió, y de ahí llegó a Europa. Su difusión europea suele "
+            "asociarse a un libro de 1202, el *Liber Abaci*, que explicaba con "
+            "ejemplos comerciales cómo calcular con esas nueve cifras y el cero. El "
+            "autor, un comerciante que había aprendido el sistema en el norte de "
+            "África, escribió el manual para gente que llevaba libros de cuentas, "
+            "no para matemáticos.\n\n"
+            "Y aquí empieza la parte interesante, que es la resistencia. En 1299, "
+            "el gremio de cambistas de Florencia prohibió a sus miembros usar esas "
+            "cifras en los libros. El argumento no era místico ni religioso, como a "
+            "veces se cuenta: era operativo y bastante razonable. Un cero se puede "
+            "convertir en un seis o en un nueve con un trazo, y un uno en un siete; "
+            "las cifras romanas, en cambio, son difíciles de alterar sin que se "
+            "note. En una época sin auditorías, esa diferencia importaba.\n\n"
+            "De modo que durante casi dos siglos convivieron los dos sistemas, "
+            "repartidos por función: las cifras nuevas para calcular en borrador, "
+            "las romanas para escribir el resultado en el registro oficial. Es una "
+            "solución de compromiso que se parece bastante a las que se toman hoy "
+            "cuando aparece una tecnología que sirve y que nadie sabe todavía cómo "
+            "controlar.\n\n"
+            "Hubo además un obstáculo que hoy cuesta imaginar: no existía una "
+            "manera única de escribir las cifras. Los signos variaban de una región "
+            "a otra y de un copista a otro, de modo que un libro de cuentas llevado "
+            "con el sistema nuevo podía resultar ilegible para quien lo revisara en "
+            "otra ciudad. Una notación sirve solo si la comparten los dos lados de "
+            "la transacción, y esa coincidencia tardó en producirse.\n\n"
+            "Lo que finalmente inclinó la balanza no fue un argumento, sino una "
+            "ventaja imposible de ignorar. Con numeración posicional se puede "
+            "sumar, restar, multiplicar y dividir sobre el papel, siguiendo un "
+            "procedimiento que se aprende y se repite. Con numeración romana hay "
+            "que usar un ábaco, y el ábaco exige un especialista: el resultado "
+            "aparece sin que quede rastro de cómo se llegó a él. La imprenta, y el "
+            "aumento del volumen de comercio, hicieron el resto.\n\n"
+            "Vista así, la historia del cero dice poco sobre el cero y bastante "
+            "sobre cómo se adoptan las ideas. La dificultad no estuvo en "
+            "entenderlo: cualquier comerciante florentino podía aprender a usar las "
+            "cifras nuevas en una tarde, y muchos lo hicieron. Estuvo en que el "
+            "sistema anterior funcionaba, en que había gente cuyo oficio dependía "
+            "de él y en que el cambio traía un riesgo real que nadie había resuelto "
+            "todavía. Ninguna de esas tres cosas es una tontería, y las tres siguen "
+            "apareciendo cada vez que algo nuevo pretende reemplazar a algo que "
+            "anda."
+        ),
+    },
+    {
+        "key": "ipc_canasta",
+        "title": "La canasta que no es de nadie",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. La periodicidad de actualización de la "
+            "canasta del IPC, su origen en la Encuesta de Presupuestos Familiares y las "
+            "fechas del levantamiento vigente se verificaron antes de escribir el "
+            "texto."
+        ),
+        "body": (
+            "**La canasta que no es de nadie**\n\n"
+            "Cada mes, cuando se publica la variación del índice de precios, ocurre "
+            "la misma conversación. El número dice que los precios subieron un cero "
+            "coma algo, y alguien contesta que a él se le duplicó la cuenta del "
+            "supermercado. Las dos afirmaciones pueden ser ciertas al mismo tiempo, "
+            "y entender por qué es más útil que discutir cuál de las dos miente.\n\n"
+            "El índice de precios al consumidor no mide «los precios». Mide el "
+            "precio de una canasta determinada de bienes y servicios, y sigue mes a "
+            "mes cuánto cuesta comprar exactamente esa misma canasta. Si el mes "
+            "pasado costaba cien y este mes cuesta ciento cero coma cuatro, la "
+            "variación es de cero coma cuatro por ciento. Todo el asunto está, "
+            "entonces, en qué hay dentro de la canasta y cuánto pesa cada cosa.\n\n"
+            "En Chile eso lo determina el Instituto Nacional de Estadísticas a "
+            "partir de una encuesta específica: la Encuesta de Presupuestos "
+            "Familiares, que registra en qué gastan efectivamente los hogares. Con "
+            "esa información se arma la lista de productos y, sobre todo, se les "
+            "asigna un peso. La canasta se actualiza cada cinco años; la que rige "
+            "actualmente se construyó con la encuesta levantada entre octubre de "
+            "2021 y septiembre de 2022, y el manual metodológico correspondiente se "
+            "publicó a fines de 2023.\n\n"
+            "El peso es la parte que casi nadie tiene presente y la que explica la "
+            "mitad de los malentendidos. Los productos no entran todos por igual: "
+            "cada uno pesa según cuánto representa dentro del gasto de los hogares. "
+            "De modo que si el pan sube diez por ciento y los pasajes de avión "
+            "bajan diez por ciento, el efecto sobre el índice no se cancela, porque "
+            "las familias gastan mucho más en pan que en pasajes de avión. Un "
+            "índice no es un promedio de porcentajes: es un promedio ponderado.\n\n"
+            "Con eso ya se puede responder la pregunta del comienzo. La canasta "
+            "representa el gasto de los hogares chilenos en promedio, y ese "
+            "promedio no es el gasto de ninguna familia real. Un hogar sin "
+            "automóvil no siente las alzas de la bencina, que sí están en el "
+            "índice. Un hogar que arrienda siente el arriendo con una intensidad "
+            "que el promedio suaviza. Una familia con tres hijos en edad escolar "
+            "tiene una canasta que no se parece a la de una persona que vive sola. "
+            "El índice describe algo real, pero describe un país, no un living.\n\n"
+            "A eso se suma un asunto de atención, y este ya no es estadístico sino "
+            "humano. Registramos mejor los precios que vemos seguido: el pan, la "
+            "bencina, el pasaje. Un producto que se compra todos los días entrega "
+            "muchas ocasiones de notar que subió. La cuota del colegio, el seguro "
+            "del auto o el pasaje aéreo se pagan pocas veces al año, y su variación "
+            "pasa casi inadvertida aunque el monto sea mucho mayor. Así, la "
+            "inflación sentida se arma con los precios que uno mira, no con los que "
+            "uno paga.\n\n"
+            "Vale la pena señalar lo que el índice no pretende ser, porque muchas "
+            "discusiones nacen de exigirle algo que no ofrece. No mide el costo de "
+            "vida de un hogar en particular. No mide si la gente vive mejor o peor. "
+            "Y no mide cuánto alcanza un sueldo, que depende de cuánto es ese "
+            "sueldo. Es un instrumento con un propósito acotado: comparar el precio "
+            "de lo mismo, en dos momentos distintos.\n\n"
+            "Ese propósito acotado, sin embargo, mueve cantidades enormes de "
+            "dinero. Con la variación del índice se reajustan pensiones, contratos "
+            "de arriendo, pagos de créditos y una unidad de cuenta que sigue a los "
+            "precios. De ahí que las decisiones metodológicas que hay detrás no "
+            "sean un asunto de especialistas: cambiar cómo se pesa un producto "
+            "cambia lo que miles de personas van a pagar o a recibir.\n\n"
+            "Y hay una decisión especialmente discutible, que conviene conocer. "
+            "Cuando un producto mejora sin cambiar de precio —un teléfono que vale "
+            "lo mismo que el del año pasado pero funciona mejor—, los organismos de "
+            "estadística aplican ajustes para separar el cambio de calidad del "
+            "cambio de precio. La operación es razonable en teoría y difícil en la "
+            "práctica: obliga a estimar cuánto vale una mejora, y esa estimación se "
+            "puede hacer de más de una manera. Quien sostiene que los índices "
+            "subestiman la inflación suele apuntar precisamente ahí, y no es un "
+            "reproche sin fundamento: es una discusión técnica abierta.\n\n"
+            "La conclusión razonable no es desconfiar del índice ni tomarlo como la "
+            "descripción de la propia vida. Es más modesta: el índice mide bien lo "
+            "que se propuso medir, que es una canasta promedio, y la distancia "
+            "entre esa canasta y la de uno explica por sí sola la mayor parte del "
+            "desacuerdo. Quien quiera saber cuánto subieron sus precios tiene que "
+            "mirar su propio gasto. El índice le dirá, en cambio, algo que su gasto "
+            "no puede decirle: qué está pasando en el país donde compra."
+        ),
+    },
+    {
         "key": "boleta_luz",
         "title": "Cómo leer una boleta de electricidad",
         "kind": "discontinuo",
@@ -25566,6 +25736,348 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El número que empezó siendo un espacio en blanco' ----------
+    _ql(
+        "historia_cero", "lec_localizar", "facil",
+        "Según la lectura, ¿qué escribió Brahmagupta en el siglo VII?",
+        "Reglas para operar con el cero y con los negativos",
+        "El texto precisa que las explicaba en términos de fortunas y deudas: sumar "
+        "cero deja el número igual, restar un número de sí mismo da cero, una deuda "
+        "restada de nada se convierte en fortuna.\n\nEse es el momento en que el "
+        "cero deja de ser un hueco tipográfico y entra a la aritmética.",
+        [
+            ("El primer sistema de numeración posicional conocido", "El marcador posicional es anterior y aparece en otras culturas."),
+            ("Un manual de cálculo dirigido a los comerciantes", "Ese manual es el *Liber Abaci*, de seis siglos después."),
+            ("La demostración de que no se puede dividir por cero", "El texto dice que abordó el caso y no dio con una respuesta."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_localizar", "facil",
+        "Según la lectura, ¿qué prohibió el gremio de cambistas de Florencia en "
+        "1299?",
+        "Usar las cifras nuevas en los libros de cuentas",
+        "El texto aclara que el motivo no era místico ni religioso, «como a veces "
+        "se cuenta», sino operativo.\n\nUn cero se puede transformar en un seis o "
+        "en un nueve con un trazo, y un uno en un siete, mientras que las cifras "
+        "romanas son difíciles de alterar sin que se note.",
+        [
+            ("Enseñar el sistema posicional a los aprendices", "La prohibición recaía sobre los libros, no sobre la enseñanza."),
+            ("Calcular con ábaco en las operaciones del gremio", "El ábaco era el método tradicional, no el prohibido."),
+            ("Importar manuales de aritmética del norte de África", "El texto no menciona ninguna restricción a los libros."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_localizar", "medio",
+        "Según la lectura, ¿qué diferencia hay entre el cero posicional y el cero "
+        "como número?",
+        "Uno ocupa un lugar vacío y el otro es una cantidad",
+        "El marcador de posición resuelve un problema de escritura: indica que hay "
+        "centenas y unidades pero no decenas.\n\nEl cero como número es otra cosa, "
+        "y el texto la llama incómoda: una cantidad con la que se opera igual que "
+        "con el tres o el siete, lo que obliga a aceptar que la nada es una "
+        "cantidad.",
+        [
+            ("Uno se usaba en Asia y el otro llegó desde Europa", "La distinción del texto no es geográfica sino conceptual."),
+            ("Uno se escribe con un signo y el otro con un espacio", "El espacio en blanco es justamente lo que el signo vino a resolver."),
+            ("Uno servía para contar y el otro para medir", "El artículo no plantea esa diferencia de uso."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_interpretar", "facil",
+        "¿Qué muestra el emisor al pedir que se escriba ciento cinco sin usar el "
+        "cero?",
+        "Que sin ese signo el número queda ambiguo",
+        "Sin cero queda «15», o bien «1 5» con un hueco que el lector tendría que "
+        "adivinar.\n\nEl emisor usa ese ejercicio para mostrar que lo que hoy "
+        "parece una curiosidad fue durante siglos un problema práctico para quien "
+        "llevaba cuentas.",
+        [
+            ("Que los sistemas antiguos no permitían números grandes", "El tamaño de los números no es lo que ilustra el ejemplo."),
+            ("Que la numeración romana resultaba más clara de leer", "El texto valora las cifras romanas por otra razón, la seguridad."),
+            ("Que el cero se inventó para simplificar la escritura", "El artículo distingue esa función de la del cero como número."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_interpretar", "medio",
+        "¿Por qué el emisor dice que declarar indefinida la división por cero es "
+        "«más honesto»?",
+        "Porque reconoce que no existe una respuesta consistente",
+        "El texto cuenta que Brahmagupta abordó el problema y no dio con una "
+        "solución, «y no la dio porque no existe».\n\nLa matemática posterior no "
+        "encontró después el resultado que faltaba: decidió dejar el caso fuera de "
+        "la operación, que es una manera distinta de cerrarlo y no un resultado "
+        "disfrazado.",
+        [
+            ("Porque la respuesta correcta se descubrió mucho después", "El texto afirma que esa respuesta no llegó a existir."),
+            ("Porque evita que los estudiantes cometan ese error", "La decisión no se justifica por razones de enseñanza."),
+            ("Porque Brahmagupta reconoció públicamente su fracaso", "El artículo no informa ninguna declaración suya al respecto."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_interpretar", "medio",
+        "¿Qué explica que durante casi dos siglos convivieran los dos sistemas de "
+        "numeración?",
+        "Que cada uno servía para una etapa distinta del trabajo",
+        "El reparto que describe el texto es funcional: las cifras nuevas para "
+        "calcular en borrador, las romanas para escribir el resultado en el "
+        "registro oficial.\n\nEl emisor compara esa convivencia con las soluciones "
+        "de compromiso que se toman hoy «cuando aparece una tecnología que sirve y "
+        "que nadie sabe todavía cómo controlar».",
+        [
+            ("Que los comerciantes no lograban aprender el sistema nuevo", "El texto sostiene que se aprendía en una tarde."),
+            ("Que la prohibición del gremio se cumplió solo a medias", "El artículo no informa incumplimientos de esa norma."),
+            ("Que ambos sistemas daban resultados diferentes", "Nunca se plantea que los resultados discreparan."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_interpretar", "dificil",
+        "¿Qué ventaja de la numeración posicional terminó imponiéndola?",
+        "Que permite calcular en el papel dejando el rastro",
+        "Con numeración romana hay que usar un ábaco, y el ábaco «exige un "
+        "especialista: el resultado aparece sin que quede rastro de cómo se llegó a "
+        "él».\n\nCon la notación posicional se suma, se resta, se multiplica y se "
+        "divide siguiendo un procedimiento que se aprende y se repite, y que queda "
+        "escrito. La imprenta y el aumento del comercio hicieron el resto.",
+        [
+            ("Que reducía la posibilidad de alterar las cifras", "El texto señala lo contrario: alterarlas era más fácil."),
+            ("Que fue adoptada antes por el mundo islámico", "Ese antecedente explica su llegada, no su adopción europea."),
+            ("Que permitía escribir números mucho más grandes", "El artículo no menciona esa capacidad como argumento."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor aclara que la prohibición de 1299 no fue "
+        "religiosa?",
+        "Para corregir una versión repetida del episodio",
+        "El texto lo dice expresamente: el argumento no era místico ni religioso, "
+        "«como a veces se cuenta».\n\nEn su lugar ofrece una explicación operativa "
+        "y verificable, y hasta razonable para la época: en un mundo sin "
+        "auditorías, la facilidad de alterar una cifra era un riesgo concreto.",
+        [
+            ("Para defender la actuación del gremio de cambistas", "El texto explica su motivo, sin defender la prohibición."),
+            ("Para señalar que la Iglesia no intervino en el asunto", "El artículo no menciona a ninguna autoridad religiosa."),
+            ("Para mostrar que la superstición retrasó el progreso", "Sostiene justamente que el motivo no fue supersticioso."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor hacia quienes se resistieron al sistema "
+        "nuevo?",
+        "Comprensiva, pues reconoce que sus razones eran reales",
+        "El emisor enumera tres motivos y los valida: el sistema anterior "
+        "funcionaba, había gente cuyo oficio dependía de él y el cambio traía un "
+        "riesgo que nadie había resuelto.\n\nY remata sin ironía: «ninguna de esas "
+        "tres cosas es una tontería».",
+        [
+            ("Crítica, pues considera que frenaron el avance del cálculo", "El texto no les atribuye responsabilidad por ninguna demora."),
+            ("Irónica, pues se burla del temor a las cifras nuevas", "El temor se explica como un riesgo concreto, sin burla."),
+            ("Distante, pues no se pronuncia sobre sus argumentos", "Se pronuncia con claridad: los considera razonables."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_evaluar", "dificil",
+        "Según el emisor, ¿en qué consistió la verdadera dificultad para adoptar el "
+        "cero?",
+        "En que el sistema en uso funcionaba y sostenía oficios",
+        "El texto descarta la explicación intelectual: cualquier comerciante "
+        "florentino podía aprender las cifras nuevas en una tarde, «y muchos lo "
+        "hicieron».\n\nLa demora se explica por tres cosas de otro orden: la "
+        "numeración anterior servía, había especialistas cuyo trabajo dependía de "
+        "ella y el cambio traía un riesgo de fraude sin resolver.",
+        [
+            ("En que la idea de la nada como cantidad era inaceptable", "El texto la llama incómoda, pero no la presenta como el obstáculo."),
+            ("En que los cálculos con el sistema nuevo eran más lentos", "Sostiene lo contrario: la ventaja de cálculo fue decisiva."),
+            ("En que el conocimiento llegó a Europa demasiado tarde", "El artículo se ocupa de lo ocurrido después de su llegada."),
+        ],
+    ),
+    _ql(
+        "historia_cero", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al cerrar diciendo que esas tres cosas «siguen "
+        "apareciendo»?",
+        "Convertir el episodio en un criterio sobre lo nuevo",
+        "El artículo lo anuncia una línea antes: la historia del cero «dice poco "
+        "sobre el cero y bastante sobre cómo se adoptan las ideas».\n\nAl señalar "
+        "que la inercia de lo que funciona, los oficios comprometidos y los riesgos "
+        "sin resolver reaparecen cada vez que algo nuevo pretende reemplazar a algo "
+        "que anda, el emisor deja de hablar del siglo XIII sin haber cambiado de "
+        "tema.",
+        [
+            ("Advertir que las resistencias siempre terminan cediendo", "El texto no promete ningún desenlace para casos futuros."),
+            ("Sostener que las innovaciones actuales son más veloces", "No compara la velocidad de adopción entre épocas."),
+            ("Recomendar que se acepten más rápido las tecnologías", "El artículo no formula ninguna recomendación de ese tipo."),
+        ],
+    ),
+    # ---------- 'La canasta que no es de nadie' ----------
+    _ql(
+        "ipc_canasta", "lec_localizar", "facil",
+        "Según la lectura, ¿qué mide el índice de precios al consumidor?",
+        "El precio de una canasta determinada, mes a mes",
+        "El texto lo aclara desde el comienzo: el índice no mide «los precios» en "
+        "general, sino cuánto cuesta comprar exactamente la misma canasta en dos "
+        "momentos distintos.\n\nPor eso todo el asunto se juega en qué contiene esa "
+        "canasta y en cuánto pesa cada producto dentro de ella.",
+        [
+            ("El gasto mensual promedio de los hogares del país", "La canasta se arma con ese gasto, pero el índice mide precios."),
+            ("Cuánto alcanza a comprar un sueldo cada mes", "El texto descarta expresamente que el índice mida eso."),
+            ("La diferencia entre el precio de un país y otro", "La comparación del índice es en el tiempo, no entre países."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_localizar", "facil",
+        "Según la lectura, ¿de dónde sale la canasta que se usa en Chile?",
+        "De la Encuesta de Presupuestos Familiares",
+        "Esa encuesta registra en qué gastan efectivamente los hogares, y con esa "
+        "información el Instituto Nacional de Estadísticas arma la lista de "
+        "productos y les asigna su peso.\n\nLa canasta vigente se construyó con el "
+        "levantamiento realizado entre octubre de 2021 y septiembre de 2022.",
+        [
+            ("De los registros de venta de los supermercados", "El texto no menciona esa fuente para armar la canasta."),
+            ("De un acuerdo entre el Banco Central y el Gobierno", "El artículo no atribuye la canasta a ninguna negociación."),
+            ("De la lista de productos con precio regulado", "No se menciona ningún criterio de regulación de precios."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_localizar", "medio",
+        "Según la lectura, ¿cada cuánto se actualiza la canasta?",
+        "Cada cinco años",
+        "El texto entrega además la fecha del ciclo vigente: el levantamiento de la "
+        "encuesta va de octubre de 2021 a septiembre de 2022 y el manual "
+        "metodológico correspondiente se publicó a fines de 2023.\n\nQue se "
+        "actualice explica por qué la canasta puede incorporar productos que antes "
+        "no existían o que nadie compraba.",
+        [
+            ("Cada mes, junto con la publicación del índice", "Lo que se publica cada mes es la variación, no la canasta."),
+            ("Cada año, al cerrar el ejercicio", "El texto indica un plazo cinco veces mayor."),
+            ("Cada vez que la inflación supera cierto nivel", "La actualización no depende del nivel de inflación."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_interpretar", "facil",
+        "¿Por qué un alza del pan de diez por ciento no se cancela con una baja "
+        "igual en pasajes de avión?",
+        "Porque cada producto pesa según cuánto se gasta en él",
+        "El índice no promedia porcentajes: promedia porcentajes ponderados por la "
+        "importancia de cada producto dentro del gasto de los hogares.\n\nComo las "
+        "familias gastan mucho más en pan que en pasajes de avión, el alza del "
+        "primero mueve el índice bastante más que la baja del segundo.",
+        [
+            ("Porque el pan se compra con mucha más frecuencia", "Lo que decide es cuánto se gasta, no cuántas veces se compra."),
+            ("Porque los pasajes de avión no forman parte de la canasta", "El texto los usa justamente como ejemplo de algo que sí está."),
+            ("Porque las bajas de precio se registran con retraso", "El artículo no plantea ninguna demora en el registro."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que el índice «describe un país, no "
+        "un living»?",
+        "Que retrata un promedio que no es el gasto de nadie",
+        "El texto da tres ejemplos de esa distancia: un hogar sin automóvil no "
+        "siente el alza de la bencina, uno que arrienda siente el arriendo más de "
+        "lo que el promedio refleja y una familia con hijos en edad escolar tiene "
+        "otra canasta.\n\nEl índice describe algo real; lo que no describe es una "
+        "casa en particular.",
+        [
+            ("Que el índice se calcula con datos de todo el territorio", "La cobertura geográfica no es lo que la frase distingue."),
+            ("Que las cifras nacionales suelen esconder desigualdades", "El punto no es la desigualdad, sino la diferencia de canastas."),
+            ("Que el índice pierde precisión en los hogares pequeños", "No se atribuye ninguna pérdida de precisión al tamaño del hogar."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué la inflación sentida se arma «con los precios "
+        "que uno mira»?",
+        "Porque lo que se compra a diario ofrece más ocasiones de notarlo",
+        "El pan, la bencina y el pasaje se pagan seguido, de modo que cada compra "
+        "es una oportunidad de comprobar que subieron.\n\nLa cuota del colegio, el "
+        "seguro del auto o un pasaje aéreo se pagan pocas veces al año y su "
+        "variación pasa casi inadvertida, aunque el monto involucrado sea mucho "
+        "mayor.",
+        [
+            ("Porque los precios más visibles suben más que los demás", "El texto no afirma que esos precios suban más rápido."),
+            ("Porque los productos baratos varían con mayor frecuencia", "La distinción es por frecuencia de compra, no por precio."),
+            ("Porque la gente desconfía de las cifras oficiales", "La desconfianza no aparece entre las explicaciones dadas."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_interpretar", "dificil",
+        "¿Qué relación establece el emisor entre las decisiones metodológicas y el "
+        "dinero de las personas?",
+        "Cambiar cómo se pesa un producto cambia lo que se paga",
+        "El texto recuerda que con la variación del índice se reajustan pensiones, "
+        "arriendos, créditos y una unidad de cuenta que sigue a los precios.\n\nDe "
+        "ahí su conclusión: lo que podría parecer un asunto interno de "
+        "especialistas define cuánto van a recibir o a pagar miles de personas, y "
+        "por eso merece discutirse en público.",
+        [
+            ("Las decisiones metodológicas se toman según la coyuntura", "El texto no sugiere que respondan a intereses del momento."),
+            ("Los reajustes obligan a mantener la canasta sin cambios", "La canasta se actualiza cada cinco años, precisamente."),
+            ("El índice se corrige cuando afecta demasiado a los hogares", "No se menciona ninguna corrección de ese tipo."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor enumera lo que el índice «no pretende ser»?",
+        "Para evitar que se le exija algo que no ofrece",
+        "El texto sostiene que muchas discusiones nacen de pedirle al índice "
+        "respuestas que no puede dar: el costo de vida de un hogar concreto, si la "
+        "gente vive mejor o peor, o cuánto alcanza un sueldo.\n\nDelimitar su "
+        "propósito —comparar el precio de lo mismo en dos momentos— es lo que "
+        "permite después evaluar si cumple.",
+        [
+            ("Para demostrar que el índice resulta poco confiable", "El emisor sostiene que mide bien lo que se propuso medir."),
+            ("Para proponer que se reemplace por otro indicador", "En ningún momento sugiere sustituirlo."),
+            ("Para justificar que la gente desconfíe de las cifras", "El artículo explica el desacuerdo, no lo respalda."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor frente a quien dice que el índice no refleja "
+        "su realidad?",
+        "Conciliadora, pues admite que las dos cosas son ciertas",
+        "El artículo empieza planteando esa discusión y responde que ambas "
+        "afirmaciones pueden ser verdaderas al mismo tiempo, y que entender por qué "
+        "«es más útil que discutir cuál de las dos miente».\n\nNi acusa a esa "
+        "persona de equivocarse ni concede que el índice esté mal calculado: "
+        "muestra que miden cosas distintas.",
+        [
+            ("Correctiva, pues demuestra que esa persona se equivoca", "El texto reconoce que su percepción tiene fundamento."),
+            ("Escéptica, pues duda de que el índice sirva de algo", "Sostiene que mide bien aquello que se propuso medir."),
+            ("Neutral, pues se limita a describir el procedimiento", "Toma posición sobre cómo debe leerse el desacuerdo."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_evaluar", "dificil",
+        "¿Por qué el emisor califica de discutible el ajuste por calidad?",
+        "Porque obliga a estimar cuánto vale una mejora",
+        "El caso que plantea es concreto: un teléfono que cuesta lo mismo que el "
+        "del año pasado y funciona mejor.\n\nSeparar la parte de precio de la parte "
+        "de calidad es razonable en teoría y difícil en la práctica, porque esa "
+        "estimación admite más de un método. El emisor agrega que quien sostiene "
+        "que los índices subestiman la inflación apunta ahí, y que «no es un "
+        "reproche sin fundamento».",
+        [
+            ("Porque los organismos de estadística lo aplican sin avisar", "El texto no denuncia falta de transparencia en su aplicación."),
+            ("Porque los productos rara vez mejoran sin subir de precio", "El artículo presenta ese caso como habitual, no como raro."),
+            ("Porque exagera el efecto de la tecnología en la canasta", "No se discute el peso de la tecnología dentro de la canasta."),
+        ],
+    ),
+    _ql(
+        "ipc_canasta", "lec_evaluar", "dificil",
+        "¿Qué propone el emisor para quien quiera saber cuánto subieron sus propios "
+        "precios?",
+        "Mirar su gasto, porque el índice responde otra pregunta",
+        "El cierre distingue dos preguntas que se confunden. Una es personal y se "
+        "responde con el gasto propio; la otra es sobre el conjunto, y ahí el "
+        "índice entrega algo que ningún presupuesto doméstico puede "
+        "entregar.\n\nPor eso la conclusión no es desconfiar del índice ni leerlo "
+        "como una descripción de la vida propia: es saber qué pregunta contesta "
+        "cada cosa.",
+        [
+            ("Ajustar el índice oficial según su propia canasta", "El texto no propone corregir el índice a escala personal."),
+            ("Esperar la actualización siguiente de la canasta", "La actualización no resuelve la distancia con un hogar."),
+            ("Comparar su gasto con el promedio de los hogares", "La comparación con el promedio es justamente el problema."),
+        ],
+    ),
     # ---------- 'Cómo leer una boleta de electricidad' ----------
     _ql(
         "boleta_luz", "lec_localizar", "facil",
