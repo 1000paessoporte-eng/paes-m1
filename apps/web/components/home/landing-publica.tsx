@@ -1,11 +1,11 @@
 import Link from "next/link";
 import type { ContentStats, Universidad, UsoPublico } from "@/lib/api";
 import { GoogleButton } from "@/components/auth/google-button";
-import { TituloRotativo } from "@/components/home/titulo-rotativo";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 import { Reveal } from "@/components/motion/reveal";
 import { Planes } from "@/components/home/planes";
-import { PuntajeMockup } from "@/components/home/puntaje-mockup";
+import { HeroPregunta } from "@/components/home/hero-pregunta";
+import { BentoProducto } from "@/components/home/bento-producto";
 import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 import { CuentaRegresiva } from "@/components/home/cuenta-regresiva";
@@ -24,88 +24,12 @@ import { COLOR_PRUEBA } from "@/lib/colores-prueba";
  * número real contado en la base. Cuando el dato no está, la frase se dice sin
  * número en vez de inventarlo (regla 1 del proyecto).
  */
-function features(stats: ContentStats | null, totalCarreras: number | null) {
-  const nodos = stats ? `${stats.skill_nodes} nodos` : "los nodos";
-  const carreras = totalCarreras
-    ? `${totalCarreras.toLocaleString("es-CL")} carreras`
-    : "las carreras del sistema";
 
-  return FEATURES_BASE.map((f) => ({
-    ...f,
-    description: f.description.replace("{nodos}", nodos).replace("{carreras}", carreras),
-  }));
-}
 
-const FEATURES_BASE = [
-  {
-    title: "Modo Ensayo",
-    description:
-      "Arma el ensayo a tu medida: elige los ejes, cuántas preguntas y el ritmo. El tiempo es proporcional al de la prueba real, y tus respuestas se guardan solas.",
-    icon: TimerIcon,
-    badgeClass: "bg-accent/10 text-accent",
-  },
-  {
-    title: "Puntaje estimado y resolución",
-    description:
-      "Al terminar ves tu puntaje en escala 100-1000, el desglose por eje y dificultad, y el desarrollo paso a paso de cada ejercicio.",
-    icon: TargetIcon,
-    badgeClass: "bg-success/10 text-success",
-  },
-  {
-    title: "Primero aprender, después practicar",
-    description:
-      "Cada tema trae su lección, y se lee sin cuenta: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo.",
-    icon: TreeIcon,
-    badgeClass: "bg-accent/10 text-accent",
-  },
-  {
-    title: "Mi meta: la carrera, no el puntaje",
-    description:
-      "Arma tu lista de hasta 10 preferencias y mira cuánto te falta en cada una, con las ponderaciones oficiales del DEMRE de {carreras}. Sabes dónde rinde más cada hora de estudio.",
-    icon: TargetIcon,
-    badgeClass: "bg-accent-warm/10 text-accent-warm-strong",
-  },
-  {
-    title: "Árbol de Habilidades",
-    description:
-      "El temario como nodos que desbloqueas a medida que dominas cada tema, con los prerrequisitos dibujados: {nodos} entre las cinco pruebas.",
-    icon: TreeIcon,
-    badgeClass: "bg-warning/10 text-warning",
-  },
-  {
-    title: "Tu progreso en el tiempo",
-    description:
-      "Historial de todos tus ensayos con la evolución del puntaje, tu mejor marca, el promedio y cuánto subiste respecto del ensayo anterior.",
-    icon: ChartIcon,
-    badgeClass: "bg-accent-2/10 text-accent-2",
-  },
-] as const;
-
-const DATOS = [
-  { label: "Tiempo real de la prueba", icon: ClockIcon },
-  { label: "Puntaje en escala 100–1000", icon: TargetIcon },
-  // Decía "Gratis mientras estamos en beta", y dejó de ser cierto el día que
-  // Pro pasó a cobrarse: prometía que TODO era gratis. Lo que sí es verdad, y
-  // es lo que importa para entrar, es que se empieza sin pagar ni dar tarjeta.
-  { label: "Empiezas gratis, sin tarjeta", icon: SparkIcon },
-] as const;
 
 // Las cinco pruebas, en el orden en que las rinde un postulante. Rotan dentro
 // del titular; la primera es la que ve quien no tiene JavaScript.
-/* Los nombres van CORTOS, como los dice cualquiera en un tercero medio.
-   "Competencia Lectora" ocupaba dos líneas en un teléfono de 390px, y como el
-   alto del titular lo reserva la palabra más larga, las otras cuatro dejaban
-   una línea en blanco debajo: un hueco de 40px en lo primero que ve quien
-   llega. Con todas de una línea, el hueco desaparece.
 
-   Cada una lleva su color, el mismo que usa el árbol y el selector de ensayo. */
-const PRUEBAS_ROTATIVAS = [
-  { palabra: "Lectora", color: "var(--prueba-lectora)" },
-  { palabra: "Matemática M1", color: "var(--prueba-m1)" },
-  { palabra: "Matemática M2", color: "var(--prueba-m2)" },
-  { palabra: "Ciencias", color: "var(--prueba-ciencias)" },
-  { palabra: "Historia", color: "var(--prueba-historia)" },
-];
 
 /** Las cinco pruebas, para entrar directo a la demo de cada una. */
 const PRUEBAS_DEMO = [
@@ -116,23 +40,6 @@ const PRUEBAS_DEMO = [
   { id: "historia", corto: "Historia" },
 ] as const;
 
-const PASOS = [
-  {
-    title: "Elige tu ensayo",
-    description:
-      "Qué prueba, qué ejes practicar, cuántas preguntas y a qué ritmo. Tú decides el formato.",
-  },
-  {
-    title: "Ríndelo con tiempo real",
-    description:
-      "El cronómetro respeta la misma proporción minutos/pregunta que la prueba oficial DEMRE.",
-  },
-  {
-    title: "Revisa y refuerza",
-    description:
-      "Puntaje estimado, desglose por eje y la resolución paso a paso de cada pregunta que fallaste.",
-  },
-] as const;
 
 const CONFIANZA = [
   {
@@ -172,86 +79,82 @@ export function LandingPublica({
 
   return (
     <main className="flex flex-1 flex-col">
-      <section className="hero-glow relative overflow-hidden px-6 pt-24 pb-24 sm:pt-28">
+      {/* ── HERO ─────────────────────────────────────────────────────
+          La pregunta ES el hero. Antes acá había una tarjeta de puntaje
+          inventada: se veía bien y no probaba nada, así que quien llegaba
+          tenía que creernos. De 65 personas que llegaron a la portada en un
+          mes, 10 abrieron un ensayo; el resto se fue sin ver jamás una
+          pregunta, que es lo único que este producto tiene para mostrar. */}
+      <section className="relative overflow-hidden px-6 pt-16 pb-20 sm:pt-20">
         <div className="bg-dot-grid pointer-events-none absolute inset-0 top-0 h-[26rem]" />
 
-        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-            <span className="rounded-full border border-accent/30 bg-accent/5 px-3 py-1 text-xs font-medium text-accent">
-              PAES · Las cinco pruebas · Admisión 2027
-            </span>
-
-            {/* text-4xl en móvil: a 48px la palabra más larga del titular no cabe
-                en un teléfono. */}
-            <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Ensayos de{" "}
-              <TituloRotativo palabras={PRUEBAS_ROTATIVAS} />
-            </h1>
-
-            {/* UNA línea antes de la acción.
-                De 60 visitantes que llegaron a la portada, 53 se fueron sin
-                abrir nada más. En un teléfono había que leer el titular, dos
-                párrafos y tres chips antes de encontrar un botón: la acción
-                quedaba fuera de la primera pantalla. El detalle no se pierde,
-                baja debajo del bloque de entrada. */}
-            <p className="max-w-xl text-balance text-lg font-medium text-foreground sm:text-xl">
-              Rinde un ensayo cronometrado como el real y descubre tu puntaje
-              estimado.
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+          <div className="flex flex-col items-center gap-5 text-center lg:items-start lg:text-left">
+            {/* El reloj solo no dice nada: "100 d 08 h" suelto parece un número
+                perdido. Con el marco es lo primero que un tercero medio quiere
+                saber, y pone el resto de la página en contexto. */}
+            <p className="flex flex-wrap items-baseline justify-center gap-x-2 text-sm text-muted lg:justify-start">
+              <span>Faltan</span>
+              <span className="font-display text-base font-semibold text-foreground">
+                <CuentaRegresiva />
+              </span>
+              <span>para la PAES</span>
             </p>
 
-            <div className="flex flex-col items-center gap-3 lg:items-start">
+            <h1 className="text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-[3.5rem]">
+              Rinde la PAES
+              <br />
+              antes de la PAES
+            </h1>
+
+            <p className="max-w-md text-balance text-lg text-muted">
+              Ensayos cronometrados con el tiempo real de cada prueba, puntaje
+              estimado en escala 100–1000 y la resolución paso a paso de cada
+              ejercicio.
+            </p>
+
+            <div className="flex w-full flex-col items-center gap-3 lg:items-start">
               <Link
                 href="/registro"
-                className="btn-glow rounded-xl px-8 py-3.5 text-base font-semibold text-accent-foreground"
+                className="btn-glow w-full rounded-xl px-8 py-3.5 text-center text-base font-semibold text-accent-foreground sm:w-auto"
               >
                 Empezar mi primer ensayo →
               </Link>
-              <div className="flex items-center gap-3 self-stretch text-xs text-muted">
-                <span className="h-px flex-1 bg-border" />
-                o
-                <span className="h-px flex-1 bg-border" />
-              </div>
               <GoogleButton redirectTo="/examen" />
-              {/* La demo era un enlace de texto bajo el botón de Google, y la
-                  usaron 3 de cada 60 visitantes. Acá se entra directo a la
-                  prueba elegida, sin cuenta y sin pasar por una pantalla
-                  intermedia a decidir. */}
-              <div className="flex flex-col items-center gap-2 lg:items-start">
-                <p className="text-sm text-muted">
-                  O prueba 5 preguntas ahora, sin crear cuenta:
-                </p>
-                <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
-                  {PRUEBAS_DEMO.map((p) => (
-                    <li key={p.id}>
-                      {/* Cada prueba con su color, el mismo del titular que
-                          rota, del árbol y del selector de ensayo. Eran cinco
-                          píldoras grises idénticas: el código de color del
-                          producto entero se enseña acá, en el primer contacto,
-                          sin una sola palabra de explicación. */}
-                      <Link
-                        href={`/demo?prueba=${p.id}`}
-                        style={{ "--c": COLOR_PRUEBA[p.id] } as React.CSSProperties}
-                        className="inline-flex rounded-full border border-(--c)/45 bg-(--c)/6 px-3.5 py-1.5 text-xs font-semibold text-(--c) transition-colors hover:bg-(--c)/12"
-                      >
-                        {p.corto}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               <p className="text-sm text-muted">
+                Gratis, sin tarjeta ·{" "}
                 <Link href="/login" className="text-accent">
-                  Ya tengo cuenta
+                  ya tengo cuenta
                 </Link>
               </p>
             </div>
-
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm lg:mx-0">
-            <PuntajeMockup />
+          <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
+            <HeroPregunta />
           </div>
+        </div>
+
+        {/* Las cinco pruebas con su color y su entrada directa a la demo: es el
+            código de color del producto entero, enseñado en el primer contacto
+            y sin una sola palabra de explicación. */}
+        <div className="relative mx-auto mt-14 max-w-6xl">
+          <p className="text-center text-sm text-muted">
+            O prueba cualquiera de las cinco, sin crear cuenta:
+          </p>
+          <ul className="mt-3 flex flex-wrap justify-center gap-2">
+            {PRUEBAS_DEMO.map((p) => (
+              <li key={p.id}>
+                <Link
+                  href={`/demo?prueba=${p.id}`}
+                  style={{ "--c": COLOR_PRUEBA[p.id] } as React.CSSProperties}
+                  className="inline-flex rounded-full border border-(--c)/45 bg-(--c)/6 px-4 py-2 text-sm font-semibold text-(--c) transition-colors hover:bg-(--c)/12"
+                >
+                  {p.corto}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -259,94 +162,7 @@ export function LandingPublica({
 
       <FranjaUso uso={uso} />
 
-      <section id="como-funciona" className="border-t border-border px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Así funciona
-            </h2>
-            <p className="mt-3 text-sm text-muted">
-              Sin vueltas: armas tu ensayo, lo rindes y sabes exactamente qué
-              reforzar.
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {PASOS.map((paso, i) => (
-              // Acá el escalonado SÍ dice algo: son tres pasos en orden, y
-              // entran en ese orden.
-              <Reveal key={paso.title} delay={i * 0.12}>
-              <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
-                <span
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-accent-foreground"
-                  style={{
-                    background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
-                  }}
-                >
-                  {i + 1}
-                </span>
-                <h3 className="mt-4 text-sm font-semibold text-foreground">
-                  {paso.title}
-                </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                  {paso.description}
-                </p>
-              </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="ofrecemos" className="border-t border-border px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Lo que ofrecemos
-            </h2>
-            <p className="mt-3 text-sm text-muted">
-              Herramientas que trabajan juntas para convertir cada pregunta que
-              respondes en una decisión sobre qué estudiar después.
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {features(stats, totalCarreras).map((feature, i) => (
-              // El escalonado es corto y por posición: acompaña al ojo bajando
-              // la lista sin convertirse en una espera. Se corta en la sexta
-              // para que la última no llegue medio segundo tarde.
-              <Reveal key={feature.title} delay={Math.min(i, 5) * 0.06}>
-              <div
-                className="card-hover h-full rounded-xl border border-border bg-surface p-6"
-              >
-                <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-lg ${feature.badgeClass}`}
-                >
-                  <feature.icon />
-                </div>
-                <h3 className="mt-4 text-sm font-semibold text-foreground">
-                  {feature.title}
-                </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                  {feature.description}
-                </p>
-              </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <p className="mt-10 text-center text-sm text-muted">
-            <Link href="/aprender" className="font-medium text-accent hover:underline">
-              Las lecciones se leen sin cuenta
-            </Link>
-            . Para rendir un ensayo sí necesitas una:{" "}
-            <Link href="/registro" className="font-medium text-accent hover:underline">
-              créala en un minuto
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
+      <BentoProducto stats={stats} />
 
       <section className="border-t border-border bg-surface/50 px-6 py-20">
         <div className="mx-auto max-w-5xl">
@@ -725,42 +541,12 @@ function SeccionCarreras({
 }
 
 
-function TreeIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="4" r="2" />
-      <circle cx="6" cy="14" r="2" />
-      <circle cx="18" cy="14" r="2" />
-      <circle cx="6" cy="20.5" r="1.5" />
-      <circle cx="18" cy="20.5" r="1.5" />
-      <path d="M12 6v4M12 10L6 12M12 10l6 2M6 16v2.5M18 16v2.5" />
-    </svg>
-  );
-}
-
-function TimerIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="13" r="8" />
-      <path d="M12 9v4l3 2M9 2h6M12 2v2" />
-    </svg>
-  );
-}
-
 function TargetIcon({ className }: { className?: string }) {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <circle cx="12" cy="12" r="9" />
       <circle cx="12" cy="12" r="5" />
       <circle cx="12" cy="12" r="1" fill="currentColor" />
-    </svg>
-  );
-}
-
-function ChartIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 20V10M12 20V4M20 20v-7" />
     </svg>
   );
 }
