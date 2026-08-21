@@ -12,6 +12,7 @@ import {
   reordenarPostulaciones,
 } from "@/lib/api";
 import { getClientToken } from "@/lib/auth";
+import { ReglaPuntaje } from "@/components/meta/regla-puntaje";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 
@@ -103,6 +104,46 @@ export function MetaView({
           }}
           onCerrar={meta.postulaciones.length > 0 ? () => setAgregando(false) : undefined}
         />
+      )}
+
+      {/* SIN NINGUNA CARRERA la página quedaba en blanco: un buscador y una
+          caja de notas flotando. Lo que este módulo promete --cuánto te falta
+          para tu carrera-- no se veía hasta después de buscar, y para buscar
+          hay que saber ya qué se busca. Acá se muestra con un ejemplo. */}
+      {meta.postulaciones.length === 0 && (
+        <section className="mt-6 rounded-2xl border border-border bg-surface p-5 sm:p-6">
+          <h2 className="font-semibold tracking-tight">Así se va a ver</h2>
+          <p className="mt-1 max-w-xl text-sm text-muted">
+            Cada carrera pondera las cinco pruebas distinto, así que tu puntaje
+            de postulación cambia según a cuál apuntes. Elige una y verás dónde
+            estás respecto de su mínimo.
+          </p>
+          <ul className="mt-4 divide-y divide-border opacity-70">
+            <ReglaPuntaje
+              nombre="Medicina"
+              detalle="ejemplo"
+              puntaje={812}
+              minimo={780}
+              color="var(--accent-2)"
+            />
+            <ReglaPuntaje
+              nombre="Ingeniería Civil"
+              detalle="ejemplo"
+              puntaje={704}
+              minimo={745}
+              color="var(--accent-2)"
+            />
+          </ul>
+          {!agregando && (
+            <button
+              type="button"
+              onClick={() => setAgregando(true)}
+              className="btn-glow mt-5 rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground"
+            >
+              Elegir mi carrera →
+            </button>
+          )}
+        </section>
       )}
 
       <Notas meta={meta} onGuardado={setMeta} />
@@ -469,32 +510,21 @@ function Simulador({ meta }: { meta: Meta }) {
             </span>
           </p>
 
-          <ul className="mt-3 flex flex-col gap-1.5">
-            {meta.postulaciones.map((p) => {
-              const s = simular(p);
-              const min = p.carrera.ponderado_min;
-              return (
-                <li
-                  key={p.carrera.id}
-                  className="flex items-baseline justify-between gap-3 text-xs"
-                >
-                  <span className="min-w-0 truncate text-muted">
-                    {p.preferencia}. {p.carrera.nombre}
-                  </span>
-                  <span className="shrink-0 tabular-nums">
-                    {s ?? "—"}
-                    {min != null && (
-                      <span
-                        className={s != null && s >= min ? "text-success" : "text-muted"}
-                      >
-                        {" "}
-                        / {min}
-                      </span>
-                    )}
-                  </span>
-                </li>
-              );
-            })}
+          {/* Cada preferencia sobre la escala real, no en una línea de texto.
+              Al mover un deslizador los puntos se desplazan y cruzan la marca
+              del mínimo: ver una carrera pasar de gris a verde es el momento
+              de esta pantalla, y estaba ocurriendo en un texto de 12 px. */}
+          <ul className="mt-4 divide-y divide-border">
+            {meta.postulaciones.map((p) => (
+              <ReglaPuntaje
+                key={p.carrera.id}
+                nombre={`${p.preferencia}. ${p.carrera.nombre}`}
+                detalle={p.carrera.universidad}
+                puntaje={simular(p)}
+                minimo={p.carrera.ponderado_min ?? null}
+                color="var(--accent-2)"
+              />
+            ))}
           </ul>
         </div>
       )}

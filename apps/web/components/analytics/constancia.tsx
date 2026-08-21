@@ -1,3 +1,7 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
+
 interface Dia {
   date: string;
   questions_answered: number;
@@ -34,6 +38,7 @@ export function Constancia({
   mejorRacha: number;
   diasActivos: number;
 }) {
+  const quieto = useReducedMotion();
   const activos = dias.filter((d) => d.questions_answered > 0).length;
   const maxMinutos = Math.max(...dias.map((d) => d.minutes_practiced), 1);
 
@@ -65,7 +70,7 @@ export function Constancia({
           medida --cuánto practicaste-- con más o menos intensidad. Pintarlos de
           colores distintos inventaría una diferencia de tipo que no existe. */}
       <ul className="mt-5 flex gap-1.5" aria-label="Últimos 14 días">
-        {dias.map((d) => {
+        {dias.map((d, i) => {
           const fecha = new Date(`${d.date}T12:00:00`);
           const practico = d.questions_answered > 0;
           const intensidad = practico
@@ -73,8 +78,15 @@ export function Constancia({
             : 0;
           return (
             <li key={d.date} className="flex flex-1 flex-col items-center gap-1">
-              <div
-                className="h-8 w-full rounded-md border border-border"
+              {/* Los catorce días se llenan en cascada, de izquierda a derecha:
+                  es el orden del tiempo, y verlo avanzar es lo que convierte
+                  catorce cuadraditos grises en una racha. */}
+              <motion.div
+                className="h-8 w-full origin-bottom rounded-md border border-border"
+                initial={quieto ? false : { scaleY: 0.15, opacity: 0.3 }}
+                whileInView={{ scaleY: 1, opacity: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.35, delay: i * 0.035, ease: [0.16, 1, 0.3, 1] }}
                 style={{
                   backgroundColor: practico
                     ? `color-mix(in srgb, var(--accent) ${Math.round(intensidad * 100)}%, transparent)`

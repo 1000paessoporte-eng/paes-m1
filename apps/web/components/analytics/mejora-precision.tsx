@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Dia {
   questions_answered: number;
   correct: number;
@@ -26,8 +28,63 @@ export function MejoraPrecision({ dias }: { dias: Dia[] }) {
   const antes = agregar(dias.slice(0, mitad));
   const ahora = agregar(dias.slice(mitad));
 
+  // Sin datos suficientes NO se devuelve null. Devolver null dejaba media
+  // pantalla en blanco al lado de "Tu constancia", y un hueco se lee como algo
+  // que se cayó, no como algo que todavía no existe. Se dice qué falta para
+  // que aparezca, que además es una razón concreta para volver.
+  // Sin datos suficientes NO se devuelve null. Devolver null dejaba media
+  // pantalla en blanco al lado de "Tu constancia", y un hueco se lee como algo
+  // que se cayó, no como algo que todavía no existe.
   if (antes.preguntas < MINIMO_POR_MITAD || ahora.preguntas < MINIMO_POR_MITAD) {
-    return null;
+    // A la semana PASADA ya no se le pueden agregar respuestas: si el déficit
+    // está ahí, esto no se desbloquea practicando hoy sino dejando pasar los
+    // días. Decir "te faltan N" en ese caso sería mandar a alguien a hacer
+    // algo que no sirve.
+    const faltanEstaSemana = MINIMO_POR_MITAD - ahora.preguntas;
+    const esperandoLaSemana = faltanEstaSemana <= 0;
+
+    return (
+      <section className="rounded-xl border border-dashed border-border bg-transparent p-5">
+        <h2 className="text-sm font-semibold">Cómo va tu precisión</h2>
+        <p className="mt-2 text-sm text-muted">
+          Acá vas a ver si estás acertando más que la semana pasada. Para
+          compararlo hacen falta al menos{" "}
+          <strong className="text-foreground">{MINIMO_POR_MITAD} respuestas</strong>{" "}
+          en cada una de las dos semanas: con menos, acertar una de más mueve el
+          porcentaje veinte puntos y estaríamos celebrando azar.
+        </p>
+
+        <div className="mt-4 flex items-end gap-8">
+          <div>
+            <p className="font-display text-3xl leading-none font-bold tabular-nums">
+              {antes.preguntas}
+            </p>
+            <p className="mt-1 text-xs text-muted">semana anterior</p>
+          </div>
+          <div>
+            <p className="font-display text-3xl leading-none font-bold tabular-nums">
+              {ahora.preguntas}
+            </p>
+            <p className="mt-1 text-xs text-muted">esta semana</p>
+          </div>
+        </div>
+
+        <p className="mt-4 text-sm">
+          {esperandoLaSemana ? (
+            <span className="text-muted">
+              Esta semana ya la tienes. La comparación aparece sola cuando la
+              semana anterior también junte {MINIMO_POR_MITAD}: sigue
+              practicando y en unos días se desbloquea.
+            </span>
+          ) : (
+            <Link href="/examen" className="text-accent font-medium">
+              Te faltan {faltanEstaSemana}{" "}
+              {faltanEstaSemana === 1 ? "respuesta" : "respuestas"} esta semana →
+            </Link>
+          )}
+        </p>
+      </section>
+    );
   }
 
   const pctAntes = Math.round((antes.correctas / antes.preguntas) * 100);
