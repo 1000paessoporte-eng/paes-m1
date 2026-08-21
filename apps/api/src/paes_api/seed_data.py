@@ -21383,6 +21383,185 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "musica_gusto",
+        "title": "La música que ya no se mueve",
+        "kind": "no_literario",
+        "source_note": (
+            "Artículo original de 1000paes. Los efectos que describe —el aumento del "
+            "agrado por exposición repetida y la concentración de los recuerdos "
+            "autobiográficos en la adolescencia y la primera adultez— se presentan en "
+            "términos generales, tal como están establecidos, sin atribuir cifras a "
+            "estudios concretos."
+        ),
+        "body": (
+            "**La música que ya no se mueve**\n\n"
+            "Casi todo el mundo tiene un pariente que escucha lo mismo desde hace "
+            "treinta años. No es que no sepa que existe música nueva; es que la "
+            "escucha, dice que está bien y vuelve a lo suyo. Y casi todo el mundo, "
+            "si es honesto, sospecha que va a terminar igual. La pregunta "
+            "interesante no es por qué le gusta lo que le gusta, sino por qué dejó "
+            "de moverse.\n\n"
+            "La primera pieza del asunto es tan simple que decepciona: nos gusta "
+            "más lo que ya conocemos. La exposición repetida a algo, en igualdad de "
+            "otras condiciones, tiende a hacerlo más agradable. Funciona con caras, "
+            "con palabras, con sabores y funciona muy bien con canciones. Una "
+            "melodía que uno escucha por décima vez suena mejor que la primera, no "
+            "porque haya mejorado, sino porque el cerebro dejó de gastar esfuerzo "
+            "en anticiparla y empezó a acertar.\n\n"
+            "Eso, por sí solo, ya explica bastante. Una canción nueva compite en "
+            "desventaja frente a una que uno tiene aprendida hace veinte años, y la "
+            "competencia es desigual desde el primer segundo. Pero no explica lo "
+            "principal, que es por qué las canciones de un período determinado —más "
+            "o menos entre los quince y los veinticinco años— quedan con una "
+            "etiqueta distinta a las de cualquier otra época.\n\n"
+            "Para eso hay que traer otra pieza. Cuando se le pide a una persona "
+            "mayor que recuerde episodios de su vida, los recuerdos no se reparten "
+            "parejo por las décadas: se acumulan de manera notoria en la "
+            "adolescencia y la primera adultez. Esa concentración es un hallazgo "
+            "bastante robusto, y su explicación más aceptada tiene que ver con que "
+            "en esos años ocurren muchas cosas por primera vez, y con que en esos "
+            "años uno está ocupado decidiendo quién es.\n\n"
+            "Ahí se juntan las dos cosas. La música de esos años no es solo música "
+            "escuchada muchas veces: es música pegada a los recuerdos que más "
+            "recordamos. Cuando alguien dice que una canción «lo transporta», la "
+            "descripción es bastante literal. No está evaluando una obra: está "
+            "recuperando un verano, una micro, una persona.\n\n"
+            "De paso, eso aclara una discusión doméstica frecuente. Cuando un "
+            "adolescente y un adulto discuten sobre si tal canción es buena, muchas "
+            "veces no están discutiendo lo mismo. Uno habla de la canción. El otro "
+            "habla, sin saberlo, de una época a la que esa canción da acceso, y "
+            "ninguna canción nueva puede competir con eso, porque no le "
+            "corresponde: todavía no tiene nada adentro.\n\n"
+            "Hay una consecuencia práctica que suele pasarse por alto, y es que el "
+            "asunto se puede intervenir. Si el mecanismo es la familiaridad, "
+            "entonces escuchar algo nuevo tres veces no basta y escucharlo quince "
+            "veces sí cambia las cosas. Quien dice «no me gusta este disco» después "
+            "de una audición está describiendo, en rigor, la primera audición de un "
+            "disco, que es un dato bastante pobre. La gente que sigue descubriendo "
+            "música a los cincuenta no suele tener un oído distinto: tiene una "
+            "paciencia distinta.\n\n"
+            "Hay además un factor que no está en la cabeza de nadie y que conviene "
+            "nombrar: el tiempo disponible. A los diecisiete, buscar música es una "
+            "actividad con la que se llena una tarde; a los cuarenta, con trabajo y "
+            "gente a cargo, escuchar un disco entero sin hacer otra cosa se vuelve "
+            "un lujo raro. Parte de lo que se atribuye al gusto es, en realidad, "
+            "agenda.\n\n"
+            "Conviene, eso sí, no llevar el argumento más lejos de donde llega, "
+            "porque es tentador. Explicar por qué a alguien le gusta algo no "
+            "equivale a decidir si ese algo es bueno. Que una canción esté pegada a "
+            "un recuerdo no la vuelve mala, y que otra sea nueva no la vuelve "
+            "buena. Y sobre todo: estos mecanismos describen tendencias en muchas "
+            "personas, no un destino individual. Hay quien a los sesenta escucha "
+            "cosas que no existían el año pasado, y no está desafiando ninguna ley "
+            "de la naturaleza.\n\n"
+            "Vale la pena decir también lo que estos hallazgos no autorizan a "
+            "hacer, que es usarlos como excusa. «Es que uno a esta edad ya no "
+            "cambia» es una frase que ahora suena respaldada por la ciencia y no lo "
+            "está: lo que está documentado es que la mayoría no cambia, no que no "
+            "pueda hacerlo. La diferencia entre esas dos frases es la misma que hay "
+            "entre una tendencia y una condena, y confundirlas es una manera "
+            "bastante común de usar mal un dato verdadero.\n\n"
+            "Queda una pregunta que el asunto no resuelve y que es la más "
+            "interesante. Si la música que uno ama está hecha en parte de los "
+            "recuerdos que lleva adentro, entonces alguien que empieza hoy a "
+            "escuchar algo por primera vez está, sin saberlo, eligiendo el envase "
+            "de un recuerdo que todavía no existe. Nadie puede saber cuál canción "
+            "de este año va a ser, dentro de veinte, la que le devuelva esta semana "
+            "entera. Eso solo se sabe después, y solo si uno escuchó lo suficiente "
+            "como para que alguna alcance a quedarse."
+        ),
+    },
+    {
+        "key": "el_barco",
+        "title": "El barco",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes son "
+            "ficticios; la tradición del barco iluminado pertenece al folclor chilote y "
+            "en el relato se alude a ella sin reproducirla."
+        ),
+        "body": (
+            "**El barco**\n\n"
+            "La abuela tenía noventa y un años y una sola historia que le importara "
+            "contar, y la contaba siempre igual, con las mismas pausas, como si "
+            "fuera un rezo.\n\n"
+            "Antonia había llegado el jueves con la mochila llena de ropa que no "
+            "iba a servirle. En Santiago hacía calor. Aquí llovía de lado y el agua "
+            "entraba por debajo de la puerta de la cocina, donde su abuela había "
+            "puesto un paño enrollado hacía tantos años que ya nadie lo movía.\n\n"
+            "—Estaban los tres arriba de la lancha —empezó la abuela esa noche, sin "
+            "que nadie le preguntara—. Mi papá, el Chelo Cárcamo y el otro, que no "
+            "me acuerdo cómo se llamaba.\n\n"
+            "Antonia sabía el resto de memoria. Se lo sabía desde los siete años. "
+            "Una noche de julio, sin luna, los tres habían visto luces en el canal, "
+            "a media distancia entre la punta y la isla chica. No las luces de un "
+            "pueblo, porque no hay pueblo ahí. No las de otra lancha, porque no se "
+            "movían como se mueve una lancha. Un barco entero, iluminado, con "
+            "música, y ninguno de los tres había vuelto a hablar del asunto por "
+            "casi veinte años.\n\n"
+            "—Y usted por qué cree que no hablaron —preguntó Antonia, que ya había "
+            "hecho esa pregunta otras veces.\n\n"
+            "—Porque no se habla —dijo la abuela.\n\n"
+            "Antonia estaba en cuarto año de biología marina y llevaba dos semanas "
+            "trabajando en el fiordo, midiendo algo que a su abuela le había "
+            "explicado tres veces sin conseguir que le interesara. Sabía lo que "
+            "sabe cualquiera que haya estudiado un poco: que en el mar hay "
+            "organismos que emiten luz, que ciertas noches el agua se enciende "
+            "cuando se la agita, que un banco de esos organismos puede alcanzar un "
+            "tamaño considerable y que a cierta distancia, sin luna, sobre agua "
+            "quieta, eso puede parecer muchas cosas.\n\n"
+            "Se lo había explicado una vez, a los diecinueve años, con esa claridad "
+            "insoportable que uno tiene a los diecinueve años. La abuela la había "
+            "escuchado hasta el final, con las manos en la falda, y después había "
+            "dicho: «Puede ser». Y había cambiado de tema. No se enojó, que habría "
+            "sido más fácil. Dijo puede ser, con una amabilidad que a Antonia le "
+            "dolió durante meses.\n\n"
+            "Ahora, a los veinticuatro, la escuchaba distinto.\n\n"
+            "Porque había en la historia cosas que su explicación no explicaba. Que "
+            "su bisabuelo, que salía a pescar de noche desde los doce años y "
+            "conocía ese canal como su cocina, hubiera vuelto ese día y no hubiera "
+            "salido más de noche. Que los tres hubieran callado veinte años sin "
+            "ponerse de acuerdo. Que la abuela contara la historia deteniéndose "
+            "siempre en el mismo lugar —«y la música se oía clarita»— y bajando la "
+            "voz siempre en la misma palabra. Eso también era un dato, aunque no "
+            "fuera un dato sobre luces.\n\n"
+            "Había pensado bastante en eso durante el año. En la universidad, "
+            "cuando alguien contaba una historia parecida, el curso entero se reía, "
+            "y ella se reía también, y después caminaba hasta el paradero con una "
+            "incomodidad que no sabía dónde poner. No era que creyera. Era que la "
+            "risa le parecía un atajo: descartar el relato completo por su parte "
+            "menos verificable, y quedarse tranquilo, y no preguntar nada más. En "
+            "el laboratorio eso mismo tenía un nombre feo cuando se hacía con un "
+            "dato que no calzaba.\n\n"
+            "—Abuela, ¿usted lo vio alguna vez?\n\n"
+            "—No —dijo la abuela—. Yo no. Mi papá.\n\n"
+            "—¿Y le cree?\n\n"
+            "La vieja se quedó pensando más de lo que Antonia esperaba. Afuera el "
+            "viento hacía sonar una plancha suelta del techo, un sonido que en "
+            "Santiago no existe.\n\n"
+            "—Yo le creo a mi papá —dijo—. Es distinto.\n\n"
+            "Antonia anotó esa frase en el cuaderno de campo esa misma noche, entre "
+            "dos columnas de temperaturas, y todavía la tiene ahí. No es un dato "
+            "científico y no está en ninguna parte del informe que entregó en "
+            "marzo. Pero es la única línea de ese cuaderno que ha vuelto a leer.\n\n"
+            "Los últimos días de esa visita Antonia salió a medir de madrugada, con "
+            "la lancha del vecino, y su abuela le dejaba el termo listo sobre la "
+            "mesa antes de acostarse, sin decir nada. Nunca le preguntó qué medía. "
+            "Pero el termo estaba ahí todas las noches, con el azúcar aparte en un "
+            "frasco, como se le deja algo a alguien que va a salir al canal de "
+            "noche.\n\n"
+            "La abuela murió en septiembre. Antonia volvió para el funeral, con la "
+            "misma mochila y ropa un poco más adecuada, y la noche antes de irse "
+            "salió a la punta con una linterna que no encendió.\n\n"
+            "El canal estaba negro y quieto. No había nada, por supuesto. Estuvo "
+            "ahí como media hora, con frío, mirando el lugar exacto donde deberían "
+            "haber estado las luces, y en algún momento se sorprendió a sí misma "
+            "pensando que si aparecían no se lo iba a contar a nadie.\n\n"
+            "Después se rio sola, en voz alta, porque se dio cuenta de lo que "
+            "acababa de pensar y de con qué palabras lo había pensado."
+        ),
+    },
+    {
         "key": "historia_cero",
         "title": "El número que empezó siendo un espacio en blanco",
         "kind": "no_literario",
@@ -25736,6 +25915,342 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La música que ya no se mueve' ----------
+    _ql(
+        "musica_gusto", "lec_localizar", "facil",
+        "Según la lectura, ¿qué efecto tiene escuchar una canción muchas veces?",
+        "Tiende a volverla más agradable",
+        "El texto presenta ese efecto como general: la exposición repetida a algo, "
+        "en igualdad de otras condiciones, lo hace más agradable, y funciona con "
+        "caras, palabras y sabores además de canciones.\n\nLa explicación que "
+        "ofrece es que el cerebro deja de gastar esfuerzo en anticipar la melodía y "
+        "empieza a acertar.",
+        [
+            ("Hace que se note mejor su calidad musical", "El texto aclara que la canción no mejoró: cambió el oyente."),
+            ("Provoca cansancio y termina por aburrir", "El artículo describe el efecto contrario."),
+            ("Facilita recordar la letra completa", "La memoria de la letra no se menciona en el texto."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_localizar", "facil",
+        "Según la lectura, ¿en qué etapa de la vida se concentran los recuerdos "
+        "autobiográficos?",
+        "En la adolescencia y la primera adultez",
+        "El texto señala que cuando se le pide a una persona mayor que recuerde "
+        "episodios de su vida, los recuerdos no se reparten parejo por las "
+        "décadas.\n\nLa explicación más aceptada tiene que ver con que en esos años "
+        "ocurren muchas cosas por primera vez y con que uno está ocupado decidiendo "
+        "quién es.",
+        [
+            ("En la infancia, antes de entrar al colegio", "El texto no menciona la primera infancia."),
+            ("En los años inmediatamente anteriores al presente", "Justamente lo que describe es que no se reparten parejo."),
+            ("En la vejez, cuando hay tiempo para recordar", "El artículo no relaciona el recuerdo con el tiempo libre."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_localizar", "medio",
+        "Según la lectura, ¿qué distingue a quien sigue descubriendo música a los "
+        "cincuenta?",
+        "Una paciencia distinta, no un oído distinto",
+        "El texto lo deduce del mecanismo que describió: si lo que produce el "
+        "agrado es la familiaridad, entonces una sola audición no alcanza para "
+        "decidir nada.\n\nQuien dice que un disco no le gusta después de escucharlo "
+        "una vez está describiendo, en rigor, la primera audición de un disco.",
+        [
+            ("Un oído más entrenado que el del resto", "El texto niega expresamente que se trate del oído."),
+            ("Menos recuerdos asociados a la música antigua", "El artículo no plantea esa diferencia entre personas."),
+            ("Mayor acceso a la música que se publica hoy", "El acceso no aparece entre las explicaciones dadas."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al afirmar que una canción nueva «todavía no "
+        "tiene nada adentro»?",
+        "Que aún no está unida a ningún recuerdo",
+        "La frase cierra la comparación entre un adolescente y un adulto que "
+        "discuten sobre una canción.\n\nEl adulto no está evaluando la obra: habla "
+        "de una época a la que esa canción da acceso. Una canción recién publicada "
+        "no puede competir con eso, y el emisor agrega que tampoco le corresponde.",
+        [
+            ("Que su letra carece de contenido interesante", "El texto no evalúa la calidad de ninguna canción."),
+            ("Que fue compuesta sin experiencia de vida", "No se dice nada sobre quién compone las canciones."),
+            ("Que no ha sido escuchada por suficiente gente", "Lo que falta es el recuerdo personal, no la audiencia."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_interpretar", "medio",
+        "¿Cómo se combinan las dos explicaciones que entrega el artículo?",
+        "La música de esos años se repite y además queda en la memoria",
+        "Por sí sola, la familiaridad explica que lo conocido gane a lo nuevo, pero "
+        "no explica por qué un período determinado queda con una etiqueta "
+        "distinta.\n\nLa concentración de recuerdos en la adolescencia agrega esa "
+        "pieza: son canciones muy escuchadas y, además, pegadas a los recuerdos que "
+        "más se recuerdan.",
+        [
+            ("Una corrige a la otra, porque no pueden ser ciertas a la vez", "El texto las presenta como complementarias, no rivales."),
+            ("La segunda reemplaza a la primera, que resultó insuficiente", "La familiaridad sigue en pie: se le suma la memoria."),
+            ("Ambas describen el mismo fenómeno con otras palabras", "Son mecanismos distintos: repetición y memoria."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_interpretar", "medio",
+        "¿Qué agrega el párrafo sobre el tiempo disponible?",
+        "Una causa que no está en la cabeza de nadie",
+        "Hasta ese punto todas las explicaciones eran mentales: la familiaridad, la "
+        "memoria, los recuerdos.\n\nEl párrafo introduce una circunstancia externa "
+        "—a los cuarenta, con trabajo y gente a cargo, escuchar un disco entero es "
+        "un lujo raro— y concluye que «parte de lo que se atribuye al gusto es, en "
+        "realidad, agenda».",
+        [
+            ("Una excusa para quienes dejaron de buscar música", "El texto rechaza expresamente el uso de estos datos como excusa."),
+            ("Una crítica al ritmo de vida de los adultos", "El párrafo describe una situación, sin criticarla."),
+            ("Una prueba de que el gusto no cambia con la edad", "El artículo sostiene que sí puede cambiar."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_interpretar", "dificil",
+        "¿Qué distinción sostiene el emisor entre explicar un gusto y evaluarlo?",
+        "Saber por qué gusta algo no decide si ese algo es bueno",
+        "El texto lo dice con dos ejemplos simétricos: que una canción esté pegada "
+        "a un recuerdo no la vuelve mala, y que otra sea nueva no la vuelve "
+        "buena.\n\nLa aclaración importa porque el propio artículo acaba de "
+        "explicar el gusto de mucha gente, y sin esa distinción se leería como si "
+        "lo estuviera descalificando.",
+        [
+            ("Los gustos se explican, pero no se pueden discutir", "El texto no renuncia a discutir sobre música."),
+            ("Solo se puede evaluar la música que uno no conoce", "El artículo no propone ese criterio en ningún momento."),
+            ("Explicar un gusto exige antes conocer al oyente", "La explicación que ofrece es general, no individual."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_evaluar", "facil",
+        "¿Con qué propósito el emisor advierte contra la frase «uno a esta edad ya "
+        "no cambia»?",
+        "Para impedir que un dato verdadero se use como excusa",
+        "El emisor señala que esa frase suena respaldada por la ciencia y no lo "
+        "está.\n\nLo documentado es que la mayoría no cambia, no que no pueda "
+        "hacerlo, y él llama a esa diferencia la misma que hay «entre una tendencia "
+        "y una condena».",
+        [
+            ("Para corregir a quienes citan mal los estudios", "No discute con quienes citan estudios, sino con un uso corriente."),
+            ("Para sostener que la ciencia no debería opinar de gustos", "El artículo se apoya en hallazgos científicos todo el tiempo."),
+            ("Para anunciar que el gusto musical cambia con la edad", "Lo que sostiene es lo contrario: tiende a estabilizarse."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor hacia el pariente que escucha lo mismo hace "
+        "treinta años?",
+        "Comprensiva, pues incluye al lector en ese destino",
+        "El primer párrafo no lo presenta como alguien atrasado ni cerrado: aclara "
+        "que sabe que existe música nueva, la escucha y vuelve a lo suyo.\n\nY "
+        "agrega enseguida que casi cualquiera, «si es honesto, sospecha que va a "
+        "terminar igual», con lo que el artículo deja de tener un objeto de burla "
+        "desde su primera línea.",
+        [
+            ("Irónica, pues se ríe de su falta de curiosidad", "El texto evita presentarlo como alguien poco curioso."),
+            ("Crítica, pues considera que dejó de esforzarse", "El esfuerzo aparece después, y como algo que cualquiera puede hacer."),
+            ("Admirativa, pues valora que mantenga sus gustos", "El emisor no elogia esa fidelidad en ningún momento."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_evaluar", "dificil",
+        "¿Por qué el emisor dice que una sola audición es «un dato bastante pobre»?",
+        "Porque el agrado depende de una repetición que aún no ocurrió",
+        "Si el mecanismo que produce el gusto es la familiaridad, entonces la "
+        "primera vez que se escucha algo es justamente el momento en que ese "
+        "mecanismo no ha operado.\n\nDe ahí la conclusión: quien rechaza un disco "
+        "después de una audición no está describiendo el disco, sino su primera "
+        "audición, que es otra cosa.",
+        [
+            ("Porque nadie logra prestar atención completa la primera vez", "El texto no habla de atención sino de repetición."),
+            ("Porque una canción suelta no representa al disco entero", "El argumento no trata sobre la parte y el todo."),
+            ("Porque el gusto solo se forma junto a un recuerdo", "El recuerdo explica un período, no cada audición."),
+        ],
+    ),
+    _ql(
+        "musica_gusto", "lec_evaluar", "dificil",
+        "¿Qué plantea el emisor al cerrar hablando del «envase de un recuerdo que "
+        "todavía no existe»?",
+        "Que lo que hoy se escucha se vuelve memoria más tarde",
+        "El cierre invierte la perspectiva del artículo: hasta ahí se explicaba por "
+        "qué la música vieja pesa tanto, y al final se mira desde el otro "
+        "lado.\n\nNadie puede saber cuál canción de este año será, dentro de "
+        "veinte, la que le devuelva esta semana. Y el emisor agrega la única "
+        "condición que depende del oyente: que haya escuchado lo suficiente como "
+        "para que alguna alcance a quedarse.",
+        [
+            ("Que conviene elegir con cuidado lo que uno escucha", "El texto sostiene que no se puede saber cuál quedará."),
+            ("Que los recuerdos futuros ya están determinados", "El cierre subraya que eso solo se sabe después."),
+            ("Que la música nueva terminará reemplazando a la antigua", "El artículo no plantea ningún reemplazo."),
+        ],
+    ),
+    # ---------- 'El barco' ----------
+    _ql(
+        "el_barco", "lec_localizar", "facil",
+        "Según el relato, ¿qué estudia Antonia?",
+        "Biología marina, y está en cuarto año",
+        "El relato lo menciona junto con lo que la trajo al sur: lleva dos semanas "
+        "trabajando en el fiordo, midiendo algo que a su abuela le explicó tres "
+        "veces sin conseguir interesarla.\n\nEsa formación es la que le permite "
+        "ofrecer una explicación alternativa a las luces del canal.",
+        [
+            ("Biología marina, y ya terminó la carrera", "El relato la sitúa en cuarto año, todavía estudiando."),
+            ("Historia, y vino a recoger relatos de la zona", "No llegó a recopilar relatos: llegó a tomar mediciones."),
+            ("No estudia: trabaja en la lancha de un vecino", "La lancha del vecino le sirve para salir a medir."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_localizar", "facil",
+        "Según el relato, ¿qué contestó la abuela cuando le preguntaron si le creía "
+        "a su papá?",
+        "Que le cree a su papá, y que eso es distinto",
+        "La respuesta llega después de una pausa más larga de lo que Antonia "
+        "esperaba, con el viento moviendo una plancha del techo.\n\nLa abuela no "
+        "afirma que el barco exista: afirma otra cosa, y el relato deja que esa "
+        "distinción quede sin explicar.",
+        [
+            ("Que ella también alcanzó a ver las luces esa noche", "Responde expresamente que no las vio: las vio su papá."),
+            ("Que ya no está segura de lo que ocurrió", "No expresa ninguna duda sobre el relato de su padre."),
+            ("Que prefiere no responder esa pregunta", "Sí responde, después de pensarlo un rato."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_localizar", "medio",
+        "Según el relato, ¿qué explicación conoce Antonia para unas luces así?",
+        "Organismos marinos que emiten luz en el agua",
+        "El relato precisa lo que ella sabe: que ciertas noches el agua se enciende "
+        "al agitarse, que un banco de esos organismos puede alcanzar un tamaño "
+        "considerable y que a cierta distancia, sin luna y sobre agua quieta, eso "
+        "puede parecer muchas cosas.\n\nEs la explicación que le ofreció a su "
+        "abuela a los diecinueve años.",
+        [
+            ("El reflejo de las luces de un pueblo cercano", "El relato descarta esa posibilidad: no hay pueblo ahí."),
+            ("Otra lancha que pescaba en el canal esa noche", "También se descarta: no se movían como se mueve una lancha."),
+            ("Una confusión provocada por la falta de luna", "La ausencia de luna es una condición del episodio, no la causa."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_interpretar", "facil",
+        "¿Qué muestra que la abuela respondiera «puede ser» a la explicación de "
+        "Antonia?",
+        "Que no discutió, y que tampoco cambió de idea",
+        "El relato subraya que no se enojó, «que habría sido más fácil», y que "
+        "enseguida cambió de tema.\n\nEsa amabilidad sin discusión es lo que le "
+        "dolió a Antonia durante meses: no hubo pelea, y por lo tanto tampoco hubo "
+        "nada que ganar.",
+        [
+            ("Que aceptó la explicación de su nieta", "Cambió de tema de inmediato: no la incorporó."),
+            ("Que no entendió lo que su nieta le decía", "El relato dice que la escuchó hasta el final."),
+            ("Que se molestó bastante con la actitud de su nieta", "Se destaca justamente que no se enojó."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_interpretar", "medio",
+        "¿Por qué Antonia considera un dato la manera en que su abuela cuenta la "
+        "historia?",
+        "Porque las pausas se repiten siempre en el mismo lugar",
+        "Ella misma lo formula: la abuela se detiene siempre en la misma frase y "
+        "baja la voz siempre en la misma palabra.\n\nEl relato agrega la conclusión "
+        "que le interesa: «eso también era un dato, aunque no fuera un dato sobre "
+        "luces». Es información sobre el relato, no sobre el fenómeno.",
+        [
+            ("Porque coincide con lo que contaron los otros dos testigos", "Los otros dos callaron veinte años y no aparecen contando nada."),
+            ("Porque la abuela la cuenta distinto cada vez que la repite", "El relato insiste en que la cuenta siempre igual."),
+            ("Porque confirma la explicación que ella misma tiene", "Es justamente lo que su explicación no explica."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_interpretar", "medio",
+        "¿Qué función cumple el termo que la abuela deja preparado cada noche?",
+        "Muestra un acuerdo que ninguna de las dos dice en voz alta",
+        "La abuela nunca le pregunta qué mide y nunca acepta su explicación; sin "
+        "embargo le deja el termo listo, con el azúcar aparte, «como se le deja "
+        "algo a alguien que va a salir al canal de noche».\n\nEl gesto ocurre en el "
+        "terreno donde las dos sí se entienden, que no es el de las razones.",
+        [
+            ("Indica que la abuela terminó aceptando el trabajo científico", "El relato aclara que nunca le preguntó siquiera qué medía."),
+            ("Señala que Antonia dejó de discutir con su abuela", "El detalle habla de la abuela, no de un cambio en Antonia."),
+            ("Anticipa que la abuela morirá poco tiempo después", "El gesto no funciona como anuncio de nada."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_interpretar", "dificil",
+        "¿Qué le incomoda a Antonia de la risa de sus compañeros de universidad?",
+        "Que descartar el relato entero le parece un atajo",
+        "Ella misma se ríe, y después camina al paradero «con una incomodidad que "
+        "no sabía dónde poner».\n\nLo que objeta no es la incredulidad —el relato "
+        "aclara que no es que ella crea—, sino el procedimiento: dar por resuelto "
+        "un asunto completo a partir de su parte menos verificable, y dejar de "
+        "preguntar. Y anota que en el laboratorio eso «tenía un nombre feo».",
+        [
+            ("Que se burlen de una tradición que no conocen", "Su reparo es de método, no de respeto por la tradición."),
+            ("Que ella se ría también, contra su propia opinión", "El relato dice que no es que ella creyera lo contrario."),
+            ("Que nadie tenga una explicación mejor que la suya", "La explicación científica no se pone en duda en ese pasaje."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_evaluar", "facil",
+        "¿Qué actitud toma el relato frente a las dos maneras de explicar las "
+        "luces?",
+        "Imparcial, pues no declara cuál de las dos acierta",
+        "El relato entrega la explicación de Antonia con precisión y sin ironía, y "
+        "entrega la de su abuela con el mismo cuidado.\n\nEn ningún momento un "
+        "narrador interviene para corregir a alguna de las dos, y el final tampoco "
+        "resuelve: no aparece ninguna luz.",
+        [
+            ("Crítica, pues muestra que la creencia de la abuela es falsa", "El relato nunca declara falsa la versión de la abuela."),
+            ("Nostálgica, pues lamenta que se pierdan esos relatos", "No hay ningún lamento por la desaparición de la tradición."),
+            ("Escéptica, pues desconfía también de la ciencia", "La explicación científica se expone sin ponerla en duda."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_evaluar", "medio",
+        "¿Qué sentido tiene que Antonia salga a la punta con una linterna que no "
+        "enciende?",
+        "Va a mirar, no a comprobar nada con instrumentos",
+        "La linterna es lo único que lleva y decide no usarla: encenderla "
+        "arruinaría justamente lo que fue a hacer, que es mirar el canal "
+        "oscuro.\n\nEl detalle marca en qué papel va esa noche. No lleva equipo de "
+        "medición ni cuaderno; va al lugar exacto donde deberían haber estado las "
+        "luces.",
+        [
+            ("Teme que la luz espante lo que pueda aparecer", "El relato no le atribuye esa creencia en ningún momento."),
+            ("Quiere evitar que la vean desde las casas del sector", "No hay ninguna preocupación por ser vista."),
+            ("Lleva la linterna por si necesita volver de noche", "El relato la presenta como algo que decide no encender."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_evaluar", "dificil",
+        "¿De qué se da cuenta Antonia al final, cuando se ríe sola?",
+        "De que pensó como su abuela, y con sus mismas palabras",
+        "Lo que se sorprende pensando es que, si las luces aparecieran, no se lo "
+        "iba a contar a nadie.\n\nEsa es exactamente la conducta que ella había "
+        "interrogado dos veces sin obtener respuesta —por qué los tres hombres "
+        "callaron veinte años—, y cuya explicación su abuela había resuelto con "
+        "tres palabras: «porque no se habla».",
+        [
+            ("De que estuvo media hora esperando algo imposible", "La risa no viene del absurdo de esperar, sino de su pensamiento."),
+            ("De que ya no cree en la explicación científica", "Nada indica que haya abandonado su explicación."),
+            ("De que vino a despedirse de su abuela y no del lugar", "El relato no plantea esa distinción en el cierre."),
+        ],
+    ),
+    _ql(
+        "el_barco", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al no mostrar ninguna luz en el canal?",
+        "Deja el conflicto donde estaba, sin darle la razón a nadie",
+        "Si aparecieran las luces, el relato sería sobre lo que la ciencia no "
+        "alcanza; si el final subrayara que no hay nada, sería sobre una creencia "
+        "que se cae.\n\nAl dejar el canal «negro y quieto» y poner el "
+        "descubrimiento en otra parte —en lo que Antonia se sorprende pensando—, el "
+        "relato traslada su asunto: no discute qué había esa noche, sino qué se "
+        "hace con lo que otro cuenta.",
+        [
+            ("Confirma que la explicación de Antonia era la correcta", "Una noche sin luces no confirma nada sobre aquella."),
+            ("Sugiere que el fenómeno dejó de ocurrir hace décadas", "El relato no plantea que algo haya dejado de ocurrir."),
+            ("Muestra que el viaje de Antonia fue en vano", "De ese viaje sale el hallazgo con que termina el relato."),
+        ],
+    ),
     # ---------- 'El número que empezó siendo un espacio en blanco' ----------
     _ql(
         "historia_cero", "lec_localizar", "facil",
