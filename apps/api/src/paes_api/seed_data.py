@@ -21383,6 +21383,96 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "boleta_luz",
+        "title": "Cómo leer una boleta de electricidad",
+        "kind": "discontinuo",
+        "source_note": (
+            "Documento de ejemplo elaborado por 1000paes para ejercitar la lectura de "
+            "una liquidación de cuentas. La empresa, el cliente y los valores unitarios "
+            "son ficticios y no corresponden a tarifas vigentes."
+        ),
+        "body": (
+            "**CÓMO LEER UNA BOLETA DE ELECTRICIDAD**\n\n"
+            "*Documento de uso educativo. La empresa, el cliente y los valores "
+            "unitarios de esta boleta son ficticios: sirven para practicar la "
+            "lectura del documento, no para estimar el costo real del servicio.*\n\n"
+            "**1. Identificación**\n\n"
+            "| Campo | Dato |\n"
+            "|---|---|\n"
+            "| Cliente | R. Ortiz Bahamondes |\n"
+            "| N° de cliente | 8842-1 |\n"
+            "| Dirección del suministro | Los Almendros 1450, depto. 32 |\n"
+            "| Período facturado | 12 de junio al 11 de julio |\n"
+            "| Fecha de emisión | 14 de julio |\n"
+            "| Vencimiento | 28 de julio |\n"
+            "| Tarifa | Residencial simple |\n\n"
+            "**2. Cómo se determinó el consumo**\n\n"
+            "El consumo no se estima: se obtiene restando dos lecturas del medidor.\n\n"
+            "| Concepto | Valor |\n"
+            "|---|---|\n"
+            "| Lectura anterior (12 de junio) | 14.238 kWh |\n"
+            "| Lectura actual (11 de julio) | 14.451 kWh |\n"
+            "| **Consumo del período** | **213 kWh** |\n"
+            "| Mismo mes del año anterior | 198 kWh |\n\n"
+            "**3. Detalle de cobros**\n\n"
+            "| Concepto | Cálculo | Monto |\n"
+            "|---|---|---|\n"
+            "| Cargo fijo | por mes, independiente del consumo | $1.150 |\n"
+            "| Energía | 213 kWh × $145,60 | $31.013 |\n"
+            "| Transporte de electricidad | 213 kWh × $12,40 | $2.641 |\n"
+            "| Cargo por servicio público | 213 kWh × $1,10 | $234 |\n"
+            "| **Subtotal** | | **$35.038** |\n"
+            "| IVA | 19 % del subtotal | $6.657 |\n"
+            "| **TOTAL A PAGAR** | | **$41.695** |\n\n"
+            "**4. Qué significa cada línea**\n\n"
+            "*Cargo fijo.* Cubre los costos que existen aunque el cliente no "
+            "consuma nada durante el mes: mantener la conexión, leer el medidor, "
+            "emitir la boleta. Es el mismo monto para todos los clientes de esta "
+            "tarifa y no cambia si el consumo sube o baja.\n\n"
+            "*Energía.* Es el único cobro proporcional a lo que efectivamente se "
+            "usó. Multiplica los kilowatt-hora del período por el valor unitario "
+            "vigente.\n\n"
+            "*Transporte de electricidad.* Paga el traslado de la energía desde "
+            "donde se genera hasta el domicilio. También se calcula por kilowatt- "
+            "hora, de modo que sube y baja con el consumo, aunque su valor unitario "
+            "es mucho menor.\n\n"
+            "*Cargo por servicio público.* Financia la operación del sistema "
+            "eléctrico en su conjunto. Es el más pequeño de los cuatro.\n\n"
+            "**5. Preguntas frecuentes**\n\n"
+            "*Consumí lo mismo que el mes pasado y la boleta salió distinta. ¿Por "
+            "qué?* Porque los períodos no siempre tienen la misma cantidad de días "
+            "y porque los valores unitarios se actualizan. Para comparar dos meses "
+            "conviene mirar los kilowatt-hora, no el total en pesos.\n\n"
+            "*¿Me conviene bajar el cargo fijo?* No se puede: no depende del "
+            "cliente. Lo único que el consumo modifica son las tres líneas que se "
+            "multiplican por kilowatt-hora.\n\n"
+            "*¿Qué pasa si no se puede leer el medidor?* En ese caso la boleta "
+            "indica que el consumo fue estimado, y la diferencia se ajusta en la "
+            "lectura siguiente. Esta boleta no está en esa situación: trae las dos "
+            "lecturas.\n\n"
+            "**6. Lo que esta boleta no informa**\n\n"
+            "No indica cuánto consumió cada artefacto del domicilio: el medidor "
+            "registra el total y no distingue entre una estufa y un refrigerador. "
+            "Tampoco informa si el consumo es alto o bajo para una vivienda de este "
+            "tamaño, porque eso depende de cuántas personas viven ahí, de la "
+            "estación del año y de con qué se calefaccionan. Y no incluye deudas de "
+            "períodos anteriores, que de existir aparecerían en una sección aparte.\n\n"
+            "**7. Dónde mirar primero si el monto sorprende**\n\n"
+            "Casi siempre el aumento viene de una de tres cosas: un período más "
+            "largo que el anterior, un cambio en los valores unitarios o un consumo "
+            "efectivamente mayor. Las dos primeras se comprueban en esta misma "
+            "boleta, comparando las fechas del período y los precios por kilowatt- "
+            "hora. La tercera se comprueba con la línea del año anterior, que en "
+            "este caso muestra 198 kWh contra los 213 de ahora.\n\n"
+            "**8. Antes de reclamar**\n\n"
+            "Si el monto parece equivocado, el primer paso es comprobar las dos "
+            "lecturas contra el número que marca hoy el medidor: si la lectura "
+            "actual de la boleta es mayor que la del medidor, hay un error de "
+            "registro. Si coinciden, el consumo ocurrió, y la pregunta pasa a ser "
+            "en qué se fue."
+        ),
+    },
+    {
         "key": "suelo_centimetro",
         "title": "Un centímetro cada mil años",
         "kind": "no_literario",
@@ -25476,6 +25566,169 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Cómo leer una boleta de electricidad' ----------
+    _ql(
+        "boleta_luz", "lec_localizar", "facil",
+        "Según la boleta, ¿cuál fue el consumo del período?",
+        "213 kWh",
+        "El consumo no se estima: sale de restar la lectura anterior a la actual, "
+        "14.451 menos 14.238.\n\nEse mismo número es el que multiplica a tres de "
+        "los cuatro cobros del detalle.",
+        [
+            ("198 kWh", "Ese es el consumo del mismo mes del año anterior."),
+            ("14.451 kWh", "Es la lectura del medidor, no el consumo del mes."),
+            ("14.238 kWh", "Es la lectura anterior, con la que se calcula el consumo."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_localizar", "facil",
+        "Según la boleta, ¿cuál es la fecha de vencimiento?",
+        "El 28 de julio",
+        "El documento distingue tres fechas que suelen confundirse: el período "
+        "facturado va del 12 de junio al 11 de julio, la emisión es del 14 de julio "
+        "y el vencimiento, del 28.\n\nSolo la última indica hasta cuándo hay plazo "
+        "para pagar.",
+        [
+            ("El 14 de julio", "Esa es la fecha en que se emitió el documento."),
+            ("El 11 de julio", "Ese día termina el período facturado."),
+            ("El 12 de junio", "Ese día empieza el período facturado."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_localizar", "medio",
+        "Según la boleta, ¿qué financia el cargo por servicio público?",
+        "La operación del sistema eléctrico en su conjunto",
+        "Es el menor de los cuatro cobros del detalle y también se calcula por "
+        "kilowatt-hora.\n\nConviene no confundirlo con el transporte de "
+        "electricidad, que paga el traslado de la energía desde donde se genera "
+        "hasta el domicilio.",
+        [
+            ("El traslado de la energía hasta el domicilio", "Eso lo paga la línea de transporte de electricidad."),
+            ("La lectura del medidor y la emisión de la boleta", "Esos costos los cubre el cargo fijo."),
+            ("La energía que efectivamente se consumió en el mes", "Ese es el cobro de energía, el mayor del detalle."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_interpretar", "facil",
+        "¿Por qué el cargo fijo es igual aunque el consumo cambie?",
+        "Porque cubre costos que existen igual si no se consume",
+        "El documento enumera cuáles: mantener la conexión, leer el medidor y "
+        "emitir la boleta.\n\nPor eso las preguntas frecuentes aclaran que no se "
+        "puede bajar: lo único que el consumo modifica son las tres líneas que se "
+        "multiplican por kilowatt-hora.",
+        [
+            ("Porque es el cobro más pequeño de los cuatro", "El más pequeño es el cargo por servicio público."),
+            ("Porque el IVA se calcula por separado sobre él", "El IVA se aplica al subtotal completo, no a una línea."),
+            ("Porque se calcula con el promedio de los meses anteriores", "El documento no lo relaciona con ningún promedio."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_interpretar", "medio",
+        "Según el documento, ¿por qué conviene comparar dos meses en kilowatt-hora "
+        "y no en pesos?",
+        "Porque cambian los días del período y los precios",
+        "La respuesta está en las preguntas frecuentes, y explica un caso concreto: "
+        "alguien que consumió lo mismo puede recibir una boleta distinta.\n\nEl "
+        "total en pesos mezcla tres cosas —cuánto se usó, cuántos días duró el "
+        "período y cuánto vale la unidad—, mientras que los kilowatt-hora aíslan la "
+        "primera.",
+        [
+            ("Porque el cargo fijo distorsiona el total de la boleta", "El cargo fijo es idéntico todos los meses y no distorsiona."),
+            ("Porque el IVA no siempre se aplica de la misma manera", "El documento lo presenta como un 19 % constante del subtotal."),
+            ("Porque el medidor puede registrar cifras equivocadas", "Ese caso se trata aparte, en la sección final."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_interpretar", "medio",
+        "¿Qué relación hay entre las dos lecturas del medidor y el detalle de "
+        "cobros?",
+        "Su diferencia es el número que multiplica a tres cobros",
+        "La resta entre 14.451 y 14.238 da los 213 kilowatt-hora del "
+        "período.\n\nEse valor aparece después en la columna de cálculo de la "
+        "energía, del transporte de electricidad y del cargo por servicio público. "
+        "El único cobro que no depende de él es el cargo fijo.",
+        [
+            ("Su diferencia determina el monto total antes de aplicar el IVA", "El total incluye además el cargo fijo, que no depende del consumo."),
+            ("Su diferencia se compara con la del año anterior", "Esa comparación existe, pero no interviene en los cobros."),
+            ("La lectura actual fija el valor unitario del período", "Los valores unitarios no dependen de la lectura del medidor."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_interpretar", "dificil",
+        "Si el consumo del período hubiera sido de cero kilowatt-hora, ¿qué habría "
+        "cobrado esta boleta?",
+        "Solo el cargo fijo, más el IVA correspondiente",
+        "Tres de los cuatro cobros se calculan multiplicando por los kilowatt-hora, "
+        "de modo que con cero consumo esas tres líneas quedan en cero.\n\nEl cargo "
+        "fijo, en cambio, se cobra «por mes, independiente del consumo», según la "
+        "propia tabla. Sobre ese subtotal se seguiría aplicando el 19 % de IVA.",
+        [
+            ("Nada, porque no hubo consumo que facturar", "El cargo fijo se cobra aunque el consumo sea nulo."),
+            ("El cargo fijo y el transporte de electricidad", "El transporte también se calcula por kilowatt-hora."),
+            ("El cargo fijo, sin agregar impuesto alguno", "El IVA se aplica sobre el subtotal, sea cual sea su monto."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_evaluar", "facil",
+        "¿Con qué propósito el documento advierte que los valores son ficticios?",
+        "Para que no se use para estimar el costo real del servicio",
+        "La advertencia aparece dos veces, en la bajada y en la nota de fuente, y "
+        "es precisa sobre qué sí sirve: practicar la lectura del documento.\n\nSin "
+        "ese aviso, alguien podría tomar los precios unitarios de esta boleta como "
+        "referencia de lo que cuesta la electricidad.",
+        [
+            ("Para señalar que algunos de los cálculos podrían estar errados", "Las operaciones del detalle son correctas y comprobables."),
+            ("Para indicar que la empresa no existe en el país", "Lo relevante del aviso son los valores, no la empresa."),
+            ("Para explicar por qué faltan datos en algunas líneas", "El documento no deja ninguna línea sin completar."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_evaluar", "medio",
+        "¿Qué permite concluir la línea que compara con el mismo mes del año "
+        "anterior?",
+        "Que el consumo subió, sin que se explique por qué",
+        "La boleta entrega los dos números —198 kilowatt-hora entonces y 213 ahora— "
+        "y en la sección final los ofrece como una de las tres comprobaciones "
+        "posibles ante un monto que sorprende.\n\nPero el documento aclara en otra "
+        "parte que no informa si un consumo es alto o bajo, ni a qué artefacto "
+        "corresponde. La causa del aumento queda fuera.",
+        [
+            ("Que la vivienda incorporó algún artefacto nuevo", "El documento advierte que no distingue entre artefactos."),
+            ("Que los valores unitarios aumentaron en ese período", "La comparación está en kilowatt-hora, no en pesos."),
+            ("Que el consumo del hogar es alto para su tamaño", "La boleta declara expresamente que no informa eso."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_evaluar", "dificil",
+        "¿Qué función cumple la sección «Lo que esta boleta no informa»?",
+        "Evitar conclusiones que los datos entregados no sostienen",
+        "La sección desactiva tres lecturas tentadoras: cuánto consumió cada "
+        "artefacto, si el consumo es alto o bajo para la vivienda y si hay deudas "
+        "anteriores.\n\nNinguna de esas cosas se puede saber con un medidor que "
+        "registra un total, y decirlo por adelantado le ahorra al lector una "
+        "inferencia equivocada sobre su propia cuenta.",
+        [
+            ("Anticipar los reclamos más frecuentes de los clientes", "Los reclamos se tratan en la sección siguiente, aparte."),
+            ("Justificar por qué el documento no incluye un gráfico", "El documento no menciona gráficos en ninguna parte."),
+            ("Señalar los datos que la empresa se niega a entregar", "No hay negativa: son datos que el medidor no registra."),
+        ],
+    ),
+    _ql(
+        "boleta_luz", "lec_evaluar", "dificil",
+        "Según el documento, ¿cómo se distingue un error de registro de un consumo "
+        "efectivamente ocurrido?",
+        "Contrastando la lectura de la boleta con la del medidor hoy",
+        "El criterio es concreto: si la lectura actual que trae la boleta es mayor "
+        "que el número que marca hoy el medidor, hay un error de registro.\n\nY el "
+        "documento cierra con la consecuencia del caso contrario: si coinciden, el "
+        "consumo ocurrió y la pregunta deja de ser si el cobro está bien para pasar "
+        "a ser en qué se fue.",
+        [
+            ("Revisando si el período facturado tuvo más días que el anterior", "Eso explica un alza del monto, no un error de registro."),
+            ("Comprobando si el consumo aparece marcado como estimado", "Esa marca solo aparece si no se pudo leer el medidor."),
+            ("Comparando el total en pesos con el del mes anterior", "El documento desaconseja comparar en pesos entre meses."),
+        ],
+    ),
     # ---------- 'Un centímetro cada mil años' ----------
     _ql(
         "suelo_centimetro", "lec_localizar", "facil",
