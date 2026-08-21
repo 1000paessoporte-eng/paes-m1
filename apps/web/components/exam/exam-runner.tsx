@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "@paes-m1/utils";
 import { PassagePanel } from "@/components/exam/passage-panel";
 import { Burbuja } from "@/components/ui/burbuja";
@@ -586,6 +587,9 @@ export function ExamRunner({
   // descubrir el apuro cuando ya no puede hacer nada. Son umbrales absolutos
   // y no proporcionales porque lo que importa es cuánto queda, no qué
   // fracción: cinco minutos son cinco minutos en un ensayo de 20 o de 65.
+  // El último minuto es su propio estado: es el que decide si alcanzas a
+  // marcar las que dejaste pendientes, y se veía igual que el minuto cuatro.
+  const ultimoMinuto = remainingMs <= 60 * 1000;
   const critico = remainingMs <= 5 * 60 * 1000;
   const aviso = !critico && remainingMs <= 10 * 60 * 1000;
   const sinResponder = questions.length - respondidas;
@@ -633,7 +637,8 @@ export function ExamRunner({
               <span
                 className={cn(
                   "block rounded-lg px-2.5 py-1 font-mono text-lg font-bold tabular-nums transition-colors duration-700",
-                  critico && "bg-danger/10 text-danger pulso-reloj",
+                  critico && !ultimoMinuto && "bg-danger/10 text-danger pulso-reloj",
+                  ultimoMinuto && "bg-danger/15 text-danger pulso-reloj-final",
                   aviso && "bg-warning/10 text-warning",
                   !critico && !aviso && "bg-surface-hover"
                 )}
@@ -748,7 +753,18 @@ export function ExamRunner({
                         : "border-border text-muted hover:bg-surface-hover"
                     )}
                   >
-                    {est?.flagged ? "★ Marcada" : "☆ Marcar"}
+                    {/* La estrella rebota al marcarse. Es una microacción que
+                        se repite decenas de veces en un ensayo y era muda: el
+                        único acuse de recibo era el cambio de color. */}
+                    <motion.span
+                      key={est?.flagged ? "si" : "no"}
+                      initial={{ scale: est?.flagged ? 0.6 : 1 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: "spring", stiffness: 500, damping: 15 }}
+                      className="inline-block"
+                    >
+                      {est?.flagged ? "★ Marcada" : "☆ Marcar"}
+                    </motion.span>
                   </button>
                 </div>
 

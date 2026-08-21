@@ -69,7 +69,8 @@ export function HitosPanel({
                     <span className="font-medium">{h.titulo}</span>
                     <span className="shrink-0 text-xs text-muted tabular-nums">
                       te {falta === 1 ? "falta" : "faltan"}{" "}
-                      {falta.toLocaleString("es-CL")} {h.unidad}
+                      {falta.toLocaleString("es-CL")}{" "}
+                      {falta === 1 ? h.unidadSingular : h.unidad}
                     </span>
                   </div>
                   <div

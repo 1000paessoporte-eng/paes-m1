@@ -82,8 +82,10 @@ export interface Hito {
   meta: number;
   /** Dónde va hoy. Si `>= meta`, está conseguido. */
   actual: number;
-  /** La unidad, para escribir "3 de 5 ensayos". */
+  /** La unidad en plural, para escribir "faltan 3 ensayos". */
   unidad: string;
+  /** La misma en singular. Sin esto salía "te falta 1 ensayos". */
+  unidadSingular: string;
 }
 
 interface DatosHitos {
@@ -94,29 +96,39 @@ interface DatosHitos {
 }
 
 /** Los peldaños de cada serie. Cortos al principio: el primero se cruza el día uno. */
-const SERIES: { unidad: string; titulo: (n: number) => string; metas: number[]; clave: keyof DatosHitos }[] =
+const SERIES: {
+  unidad: string;
+  unidadSingular: string;
+  titulo: (n: number) => string;
+  metas: number[];
+  clave: keyof DatosHitos;
+}[] =
   [
     {
       clave: "ensayos",
       unidad: "ensayos",
+      unidadSingular: "ensayo",
       titulo: (n) => (n === 1 ? "Rendiste tu primer ensayo" : `Rendiste ${n} ensayos`),
       metas: [1, 3, 5, 10, 25, 50],
     },
     {
       clave: "preguntasRespondidas",
       unidad: "preguntas",
+      unidadSingular: "pregunta",
       titulo: (n) => `Respondiste ${n.toLocaleString("es-CL")} preguntas`,
       metas: [50, 250, 1000, 2500],
     },
     {
       clave: "mejorPuntaje",
       unidad: "puntos",
+      unidadSingular: "punto",
       titulo: (n) => `Pasaste los ${n} puntos`,
       metas: [450, 550, 650, 750, 850],
     },
     {
       clave: "mejorRacha",
       unidad: "días",
+      unidadSingular: "día",
       titulo: (n) => `${n} días seguidos rindiendo`,
       metas: [2, 5, 10, 20],
     },
@@ -143,7 +155,13 @@ export function hitos(datos: DatosHitos): { logrados: Hito[]; siguientes: Hito[]
 
     const ultima = conseguidas[conseguidas.length - 1];
     if (ultima !== undefined) {
-      logrados.push({ titulo: serie.titulo(ultima), meta: ultima, actual, unidad: serie.unidad });
+      logrados.push({
+        titulo: serie.titulo(ultima),
+        meta: ultima,
+        actual,
+        unidad: serie.unidad,
+        unidadSingular: serie.unidadSingular,
+      });
     }
     if (pendiente !== undefined) {
       siguientes.push({
@@ -151,6 +169,7 @@ export function hitos(datos: DatosHitos): { logrados: Hito[]; siguientes: Hito[]
         meta: pendiente,
         actual,
         unidad: serie.unidad,
+        unidadSingular: serie.unidadSingular,
       });
     }
   }

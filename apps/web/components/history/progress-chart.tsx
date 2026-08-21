@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import type { ExamAttemptSummary } from "@/lib/api";
 
 /**
@@ -22,6 +23,7 @@ const ALTO = 220;
 const MARGEN = { top: 18, right: 52, bottom: 28, left: 44 };
 
 export function ProgressChart({ intentos }: Props) {
+  const quieto = useReducedMotion();
   const [activo, setActivo] = useState<number | null>(null);
   const idGradiente = useId();
 
@@ -108,15 +110,27 @@ export function ProgressChart({ intentos }: Props) {
             </g>
           ))}
 
-          <path d={area} fill={`url(#${idGradiente})`} />
+          <motion.path
+            d={area}
+            fill={`url(#${idGradiente})`}
+            initial={quieto ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          />
 
-          <path
+          {/* La línea se DIBUJA de izquierda a derecha, que es la dirección
+              del tiempo. Es tu historia de puntajes: verla trazarse dice
+              "esto pasó, en este orden" mejor que aparecer completa. */}
+          <motion.path
             d={linea}
             fill="none"
             className="stroke-[var(--serie)]"
             strokeWidth={2}
             strokeLinejoin="round"
             strokeLinecap="round"
+            initial={quieto ? false : { pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           />
 
           {/* Anillo del color de la superficie para separar los puntos de la línea */}
