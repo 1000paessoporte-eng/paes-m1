@@ -29,7 +29,8 @@ const NAV_PUBLICO = [
   // Sin un enlace desde el menú no las encontraba ni Google ni una persona.
   { href: "/carreras", label: "Carreras" },
   { href: "/simulador", label: "Simulador" },
-  // Las 17 lecciones del temario: el otro contenido que se lee sin cuenta.
+  // Las lecciones del temario: el otro contenido que se lee sin cuenta.
+  // Son una por nodo del árbol, en las cinco pruebas.
   { href: "/aprender", label: "Lecciones" },
   { href: "/demo", label: "Probar sin cuenta" },
   { href: "/preguntas-frecuentes", label: "Preguntas frecuentes" },

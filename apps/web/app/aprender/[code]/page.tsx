@@ -31,7 +31,7 @@ async function leccionDe(code: string): Promise<Lesson | null> {
 }
 
 export async function generateStaticParams() {
-  // Se prerenderizan las 17 en el build. Si la API no responde, el build no se
+  // Se prerenderizan todas en el build. Si la API no responde, el build no se
   // cae: las páginas se sirven bajo demanda y se cachean igual.
   try {
     return (await getLecciones()).map((l) => ({ code: l.node_code }));
