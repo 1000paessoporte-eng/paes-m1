@@ -47809,4 +47809,1576 @@ LESSONS: dict[str, dict] = {
             "parte de una bolsa distinta."
         ),
     },
+
+    # ── Ciencias ────────────────────────────────────────────────────────
+    #
+    # Doce nodos que hasta ahora medían sin enseñar: la prueba de Ciencias
+    # tenía banco y cero teoría. El temario DEMRE la organiza en tres módulos
+    # --Biología, Física y Química-- y el alumno rinde uno como electivo, así
+    # que cada lección se sostiene sola.
+    #
+    # Los ejemplos usan números redondos a propósito: lo que se entrena acá es
+    # el método, y una aritmética fea esconde el razonamiento detrás de la
+    # calculadora.
+    "cie_celula": {
+        "intro": (
+            "Todo lo vivo está hecho de células, y casi todo lo que una célula "
+            "hace depende de qué deja entrar y qué deja salir. Esta unidad es "
+            "la puerta: sin ella no se entiende ni la digestión, ni el riñón, "
+            "ni por qué una planta se marchita."
+        ),
+        "theory": (
+            "**La membrana es selectiva, no un colador.** Es una doble capa de "
+            "lípidos con proteínas incrustadas. Lo que es pequeño y sin carga "
+            "(oxígeno, dióxido de carbono) la cruza solo; lo que tiene carga o "
+            "es grande necesita una proteína que lo pase.\n\n"
+            "**Transporte pasivo: no gasta energía.** La sustancia va de donde "
+            "hay MÁS a donde hay MENOS, a favor del gradiente. Incluye la "
+            "difusión simple, la difusión facilitada (con proteína) y la "
+            "ósmosis, que es el caso del agua.\n\n"
+            "**Transporte activo: gasta ATP.** Va en contra del gradiente, de "
+            "donde hay menos a donde hay más. El ejemplo clásico es la bomba "
+            "sodio-potasio, que saca sodio y mete potasio aunque afuera ya haya "
+            "más sodio.\n\n"
+            "**Ósmosis: se mueve el AGUA, no el soluto.** El agua pasa hacia "
+            "donde hay más soluto. Un medio hipertónico tiene más soluto que la "
+            "célula y la deshidrata; uno hipotónico tiene menos y la hincha; uno "
+            "isotónico está en equilibrio y no la cambia."
+        ),
+        "example_statement": (
+            "Se colocan glóbulos rojos humanos en tres vasos: uno con agua "
+            "destilada, uno con suero fisiológico (isotónico) y uno con una "
+            "solución concentrada de sal. ¿Qué le ocurre a las células del "
+            "primer vaso?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Comparo la concentración de soluto dentro y fuera. El agua destilada no tiene soluto; el interior del glóbulo sí.",
+                "porque": "La ósmosis no depende de cuánta agua hay, sino de la diferencia de soluto entre los dos lados. Ese es el dato que hay que buscar siempre primero.",
+            },
+            {
+                "accion": "Como afuera hay MENOS soluto que adentro, el medio es hipotónico respecto de la célula.",
+                "porque": "Los nombres se asignan mirando el medio EXTERNO en relación con la célula. Confundir la referencia invierte la respuesta completa.",
+            },
+            {
+                "accion": "El agua entra a la célula, que se hincha y puede reventar (hemólisis).",
+                "porque": "El agua siempre viaja hacia donde hay más soluto, es decir hacia adentro. Y el glóbulo rojo no tiene pared celular que lo contenga, por eso estalla en vez de quedar turgente como una célula vegetal.",
+            },
+        ],
+        "common_error": (
+            "Creer que en la ósmosis se mueve el soluto para igualar las "
+            "concentraciones. Se mueve el AGUA. La sal no sale del vaso hacia "
+            "la célula: es el agua de la célula la que se va hacia la sal."
+        ),
+    },
+    "cie_atomo": {
+        "intro": (
+            "Casi toda la química se deduce de dónde están los electrones de un "
+            "átomo. Configuración electrónica, tabla periódica y enlaces son la "
+            "misma idea contada tres veces."
+        ),
+        "theory": (
+            "**Tres partículas, dos lugares.** Protones (carga +) y neutrones "
+            "(sin carga) están en el núcleo; los electrones (carga −) giran "
+            "alrededor. El número atómico $Z$ es la cantidad de protones y es lo "
+            "que define al elemento: cambiarlo cambia el elemento.\n\n"
+            "**Número másico y isótopos.** El número másico $A$ es protones más "
+            "neutrones. Dos átomos del mismo elemento con distinto número de "
+            "neutrones son isótopos: mismo $Z$, distinto $A$.\n\n"
+            "**Iones: se ganan o pierden ELECTRONES, nunca protones.** Un catión "
+            "perdió electrones y queda positivo; un anión ganó y queda negativo. "
+            "El número de protones no se toca.\n\n"
+            "**Los electrones de valencia mandan.** Son los del último nivel y "
+            "explican con quién se une el átomo. En los grupos principales, el "
+            "número de grupo coincide con los electrones de valencia, y por eso "
+            "los elementos de una misma columna reaccionan parecido."
+        ),
+        "example_statement": (
+            "Un ion tiene 16 protones, 18 neutrones y 18 electrones. Determina "
+            "su número atómico, su número másico y su carga."
+        ),
+        "example_steps": [
+            {
+                "accion": "El número atómico es la cantidad de protones: $Z = 16$.",
+                "porque": "El número atómico se define por los protones y solo por ellos. Que sea un ion no lo altera.",
+            },
+            {
+                "accion": "El número másico suma protones y neutrones: $A = 16 + 18 = 34$.",
+                "porque": "Los electrones tienen una masa despreciable frente a protones y neutrones, así que no entran en el número másico.",
+            },
+            {
+                "accion": "Comparo cargas: 16 positivas y 18 negativas, así que sobran 2 negativas. La carga es $2-$.",
+                "porque": "Hay más electrones que protones, lo que significa que el átomo GANÓ dos electrones: es un anión. Con 16 protones se trata del azufre, y el ion es el sulfuro.",
+            },
+        ],
+        "common_error": (
+            "Restar mal la carga y decir $2+$. Más electrones que protones "
+            "significa carga NEGATIVA, porque el electrón es el que aporta la "
+            "carga negativa. La regla corta: si ganó electrones, se vuelve más "
+            "negativo."
+        ),
+    },
+    "cie_movimiento": {
+        "intro": (
+            "Describir un movimiento es responder tres cosas: dónde está, qué "
+            "tan rápido va y si está cambiando de rapidez. Con eso se resuelve "
+            "casi todo lo que la PAES pregunta de cinemática."
+        ),
+        "theory": (
+            "**Distancia y desplazamiento no son lo mismo.** La distancia es "
+            "todo el camino recorrido; el desplazamiento es la diferencia entre "
+            "la posición final y la inicial. Si vas y vuelves, recorriste "
+            "distancia pero tu desplazamiento es cero.\n\n"
+            "**Velocidad media.** Es el desplazamiento dividido por el tiempo: "
+            "$v = \\frac{\\Delta x}{\\Delta t}$. No es el promedio de las "
+            "velocidades salvo que los tramos duren lo mismo.\n\n"
+            "**MRU: velocidad constante.** La posición avanza parejo: "
+            "$x = x_0 + v\\,t$. En un gráfico posición-tiempo es una recta, y su "
+            "pendiente es la velocidad.\n\n"
+            "**MRUA: aceleración constante.** La velocidad cambia parejo: "
+            "$v = v_0 + a\\,t$ y $x = x_0 + v_0 t + \\frac{1}{2}a t^2$. En un "
+            "gráfico velocidad-tiempo es una recta cuya pendiente es la "
+            "aceleración, y el ÁREA bajo esa recta es el desplazamiento."
+        ),
+        "example_statement": (
+            "Un auto parte del reposo y acelera de manera constante hasta "
+            "alcanzar 20 m/s en 5 segundos. ¿Cuál es su aceleración y qué "
+            "distancia recorrió en esos 5 segundos?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Anoto los datos: $v_0 = 0$ (parte del reposo), $v = 20$ m/s, $t = 5$ s.",
+                "porque": "\"Parte del reposo\" es la forma en que el enunciado entrega $v_0 = 0$. Es el dato que más se pasa por alto y el que más simplifica las fórmulas.",
+            },
+            {
+                "accion": "Uso $v = v_0 + a\\,t$: $20 = 0 + a \\cdot 5$, entonces $a = 4$ m/s².",
+                "porque": "Con velocidad inicial, final y tiempo, esta es la única fórmula que despeja la aceleración sin necesitar la distancia.",
+            },
+            {
+                "accion": "Para la distancia uso $x = v_0 t + \\frac{1}{2} a t^2 = 0 + \\frac{1}{2}\\cdot 4 \\cdot 25 = 50$ m.",
+                "porque": "También sirve el área del gráfico velocidad-tiempo: un triángulo de base 5 s y altura 20 m/s da $\\frac{5 \\cdot 20}{2} = 50$ m. Llegar por los dos caminos es una buena forma de comprobar.",
+            },
+        ],
+        "common_error": (
+            "Calcular la distancia como $v \\cdot t = 20 \\cdot 5 = 100$ m. Esa "
+            "fórmula sirve solo si la velocidad es CONSTANTE. Acá el auto pasó "
+            "de 0 a 20, así que en promedio fue a 10 m/s y recorrió la mitad."
+        ),
+    },
+    "cie_estequiometria": {
+        "intro": (
+            "La estequiometría es contar partículas usando la balanza. Nadie "
+            "puede contar átomos de a uno, así que la química inventó una "
+            "unidad de conteo —el mol— y una tabla para convertir gramos en "
+            "moles."
+        ),
+        "theory": (
+            "**El mol es un número, como la docena.** Un mol son "
+            "$6{,}02 \\times 10^{23}$ partículas (número de Avogadro). Se usa "
+            "porque las reacciones ocurren entre CANTIDADES de partículas, no "
+            "entre gramos.\n\n"
+            "**La masa molar convierte gramos en moles.** Es la masa de un mol, "
+            "en g/mol, y sale de sumar las masas atómicas de la tabla: "
+            "$n = \\frac{m}{M}$.\n\n"
+            "**La ecuación debe estar balanceada antes de calcular.** Los "
+            "coeficientes son la receta: dicen cuántos moles de cada cosa "
+            "participan. Usar una ecuación sin balancear da siempre un "
+            "resultado incorrecto.\n\n"
+            "**Los coeficientes son proporción de MOLES, no de gramos.** En "
+            "$2\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\mathrm{H_2O}$, dos "
+            "moles de hidrógeno reaccionan con uno de oxígeno; en gramos esa "
+            "proporción es completamente distinta."
+        ),
+        "example_statement": (
+            "¿Cuántos gramos de agua se forman al reaccionar completamente 4 g "
+            "de hidrógeno molecular con oxígeno suficiente? "
+            "(Masas molares: H₂ = 2 g/mol, H₂O = 18 g/mol)"
+        ),
+        "example_steps": [
+            {
+                "accion": "Escribo la ecuación balanceada: $2\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\mathrm{H_2O}$.",
+                "porque": "Sin balancear parecería que un mol de H₂ da un mol de agua, y aunque acá la proporción termina siendo 1 a 1, en la mayoría de los ejercicios no lo es. Balancear primero es el hábito que evita el error.",
+            },
+            {
+                "accion": "Paso los gramos de hidrógeno a moles: $n = \\frac{4}{2} = 2$ moles de H₂.",
+                "porque": "Los coeficientes de la ecuación hablan en moles. Mientras el dato esté en gramos no se puede usar la proporción de la receta.",
+            },
+            {
+                "accion": "La proporción es 2 : 2, o sea 1 : 1, así que se forman 2 moles de agua. Los paso a gramos: $m = 2 \\cdot 18 = 36$ g.",
+                "porque": "El resultado se pide en gramos, así que hay que volver con la masa molar del agua. El camino siempre es el mismo: gramos → moles → moles → gramos.",
+            },
+        ],
+        "common_error": (
+            "Aplicar la proporción de la ecuación directamente sobre los "
+            "gramos: \"4 g de H₂ dan 4 g de agua\". Los coeficientes cuentan "
+            "moles, no masa. Sin pasar por moles, el resultado no significa "
+            "nada."
+        ),
+    },
+    "cie_ecosistemas": {
+        "intro": (
+            "Un ecosistema se entiende siguiendo dos cosas: por dónde va la "
+            "energía y por dónde va la materia. La energía se pierde en el "
+            "camino; la materia da vueltas y vuelve."
+        ),
+        "theory": (
+            "**Los productores hacen la energía disponible.** Las plantas y "
+            "algas capturan energía luminosa y la convierten en materia "
+            "orgánica mediante la fotosíntesis. Todo lo demás del ecosistema "
+            "depende de eso.\n\n"
+            "**Niveles tróficos.** Productores, consumidores primarios "
+            "(herbívoros), secundarios (carnívoros que comen herbívoros), "
+            "terciarios, y descomponedores, que devuelven la materia al "
+            "suelo.\n\n"
+            "**La regla del 10%.** Solo alrededor de una décima parte de la "
+            "energía de un nivel pasa al siguiente; el resto se va en "
+            "respiración, movimiento y calor. Por eso las cadenas tróficas son "
+            "cortas y hay muchos menos depredadores que presas.\n\n"
+            "**La energía FLUYE, la materia CICLA.** La energía entra como luz "
+            "y sale como calor: no vuelve. El carbono, el nitrógeno y el agua, "
+            "en cambio, se reciclan una y otra vez entre los seres vivos y el "
+            "ambiente."
+        ),
+        "example_statement": (
+            "En un ecosistema, los productores fijan 20.000 kJ de energía. "
+            "Aplicando la regla del 10%, ¿cuánta energía llega aproximadamente "
+            "a los consumidores secundarios?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico en qué nivel están los consumidores secundarios: son el TERCER nivel trófico (productores → primarios → secundarios).",
+                "porque": "El error más caro acá es contar mal los saltos. Los consumidores secundarios están a dos saltos de los productores, no a uno.",
+            },
+            {
+                "accion": "Primer salto: $20.000 \\times 0{,}10 = 2.000$ kJ llegan a los consumidores primarios.",
+                "porque": "Cada flecha de la cadena trófica es una multiplicación por 0,1. Conviene hacerlas de a una para no perder la cuenta.",
+            },
+            {
+                "accion": "Segundo salto: $2.000 \\times 0{,}10 = 200$ kJ llegan a los secundarios.",
+                "porque": "De los 20.000 kJ iniciales queda el 1%. Ese desplome es justamente la razón de que casi ningún ecosistema tenga cinco o seis niveles tróficos.",
+            },
+        ],
+        "common_error": (
+            "Aplicar el 10% una sola vez y responder 2.000 kJ. Hay que contar "
+            "los SALTOS entre niveles, no los niveles: de productores a "
+            "secundarios hay dos flechas, así que se multiplica dos veces."
+        ),
+    },
+    "cie_fuerzas": {
+        "intro": (
+            "Las tres leyes de Newton explican por qué las cosas se mueven como "
+            "se mueven. Casi todo ejercicio de dinámica se resuelve dibujando "
+            "las fuerzas y sumándolas bien."
+        ),
+        "theory": (
+            "**Primera ley (inercia).** Si la fuerza neta es cero, el cuerpo "
+            "sigue como estaba: quieto, o moviéndose en línea recta a velocidad "
+            "constante. Moverse NO requiere fuerza; cambiar el movimiento sí.\n\n"
+            "**Segunda ley.** $F_{neta} = m\\,a$. La aceleración va en la misma "
+            "dirección que la fuerza neta y es proporcional a ella. Ojo con "
+            "\"neta\": es la SUMA de todas las fuerzas, no una sola.\n\n"
+            "**Tercera ley (acción y reacción).** Toda fuerza viene de a pares: "
+            "si A empuja a B, B empuja a A con la misma intensidad y sentido "
+            "contrario. Las dos fuerzas actúan sobre CUERPOS DISTINTOS, y por "
+            "eso no se anulan entre sí.\n\n"
+            "**Peso y masa son cosas distintas.** La masa (kg) es cuánta "
+            "materia hay y no cambia de lugar en lugar. El peso (N) es la "
+            "fuerza con que el planeta te atrae: $P = m\\,g$, y en la Luna es "
+            "menor aunque la masa sea la misma."
+        ),
+        "example_statement": (
+            "Sobre un bloque de 5 kg apoyado en una superficie horizontal sin "
+            "roce se aplican dos fuerzas horizontales: 30 N hacia la derecha y "
+            "10 N hacia la izquierda. ¿Cuál es la aceleración del bloque?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la fuerza neta horizontal: $30 - 10 = 20$ N hacia la derecha.",
+                "porque": "Las fuerzas en la misma línea se suman con signo según su sentido. La segunda ley usa la NETA, no la mayor de las dos.",
+            },
+            {
+                "accion": "El peso y la normal son verticales y se cancelan, así que no afectan el movimiento horizontal.",
+                "porque": "El bloque no sube ni baja, luego la fuerza neta vertical es cero. Separar las direcciones evita mezclar fuerzas que no compiten entre sí.",
+            },
+            {
+                "accion": "Aplico $F = m\\,a$: $20 = 5a$, entonces $a = 4$ m/s² hacia la derecha.",
+                "porque": "La aceleración apunta siempre en la misma dirección que la fuerza neta. Dar la dirección es parte de la respuesta, no un adorno.",
+            },
+        ],
+        "common_error": (
+            "Creer que la acción y la reacción se anulan y que entonces nada se "
+            "movería nunca. Actúan sobre cuerpos DISTINTOS: el suelo empuja al "
+            "bloque y el bloque empuja al suelo. Para saber si el bloque "
+            "acelera solo se suman las fuerzas que actúan SOBRE EL BLOQUE."
+        ),
+    },
+    "cie_genetica": {
+        "intro": (
+            "La genética mendeliana predice qué van a heredar los hijos a "
+            "partir de lo que tienen los padres. Con un cuadro de Punnett y "
+            "orden se resuelven casi todas las preguntas de la prueba."
+        ),
+        "theory": (
+            "**Gen y alelo.** El gen es la instrucción para una característica; "
+            "los alelos son sus versiones. Cada persona tiene dos alelos de cada "
+            "gen, uno de cada progenitor.\n\n"
+            "**Genotipo y fenotipo.** El genotipo son los alelos que se tienen "
+            "(AA, Aa, aa); el fenotipo es lo que se ve. Dos genotipos distintos "
+            "pueden dar el mismo fenotipo.\n\n"
+            "**Dominante y recesivo.** El alelo dominante (mayúscula) se expresa "
+            "aunque venga solo; el recesivo (minúscula) necesita estar en las "
+            "DOS copias. Por eso un rasgo recesivo puede saltarse generaciones "
+            "sin desaparecer.\n\n"
+            "**El cuadro de Punnett cruza gametos.** Cada progenitor aporta un "
+            "alelo por gameto. Se ponen los del padre en las columnas, los de la "
+            "madre en las filas, y cada casilla es una combinación igual de "
+            "probable."
+        ),
+        "example_statement": (
+            "En arvejas, el color amarillo de la semilla (A) domina sobre el "
+            "verde (a). Se cruzan dos plantas heterocigotas (Aa × Aa). ¿Qué "
+            "proporción de la descendencia se espera que sea verde?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Determino los gametos de cada progenitor: cada Aa produce gametos A y a.",
+                "porque": "Cada gameto lleva UN alelo, no los dos: los alelos se separan al formarse los gametos. Ese es el contenido de la primera ley de Mendel.",
+            },
+            {
+                "accion": "Armo el cuadro de Punnett: las cuatro casillas son AA, Aa, Aa y aa.",
+                "porque": "Las cuatro combinaciones son igual de probables, así que cada una vale un cuarto del total.",
+            },
+            {
+                "accion": "El fenotipo verde requiere aa, que aparece en una de las cuatro casillas: 1/4, es decir el 25%.",
+                "porque": "El verde es recesivo, y un recesivo solo se ve cuando están las dos copias. Las tres casillas con al menos una A salen amarillas: proporción fenotípica 3 : 1.",
+            },
+        ],
+        "common_error": (
+            "Confundir la proporción de genotipos con la de fenotipos. Los "
+            "genotipos salen 1 : 2 : 1 (AA : Aa : aa), pero lo que se VE es "
+            "3 : 1, porque AA y Aa se ven igual. Lee siempre si la pregunta "
+            "pide genotipo o fenotipo."
+        ),
+    },
+    "cie_ondas": {
+        "intro": (
+            "Una onda transporta energía sin transportar materia. El sonido, la "
+            "luz y las olas comparten el mismo puñado de relaciones, y con esas "
+            "se responde casi todo."
+        ),
+        "theory": (
+            "**Los cuatro datos de una onda.** Amplitud (qué tan grande es la "
+            "oscilación), longitud de onda $\\lambda$ (distancia entre dos "
+            "crestas), frecuencia $f$ (oscilaciones por segundo, en hertz) y "
+            "período $T$ (lo que dura una oscilación). Frecuencia y período son "
+            "inversos: $T = \\frac{1}{f}$.\n\n"
+            "**La ecuación fundamental.** $v = \\lambda f$. La velocidad la pone "
+            "el MEDIO, no la fuente: en un mismo medio, si sube la frecuencia "
+            "baja la longitud de onda.\n\n"
+            "**Transversales y longitudinales.** En las transversales la "
+            "oscilación es perpendicular al avance (una cuerda, la luz). En las "
+            "longitudinales es paralela, con compresiones y rarefacciones: el "
+            "sonido es longitudinal.\n\n"
+            "**Qué se oye.** La frecuencia determina el TONO —más frecuencia, "
+            "más agudo— y la amplitud determina la INTENSIDAD, o sea el "
+            "volumen. El sonido necesita un medio material: en el vacío no se "
+            "propaga."
+        ),
+        "example_statement": (
+            "Una onda sonora se propaga en el aire a 340 m/s con una frecuencia "
+            "de 170 Hz. ¿Cuál es su longitud de onda? ¿Y qué le ocurre a esa "
+            "longitud si la fuente emite un sonido más agudo?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Despejo la longitud de onda de $v = \\lambda f$: $\\lambda = \\frac{v}{f} = \\frac{340}{170} = 2$ m.",
+                "porque": "Es la relación que conecta los tres datos de cualquier onda. Con dos conocidos, el tercero sale siempre.",
+            },
+            {
+                "accion": "Un sonido más agudo significa MAYOR frecuencia.",
+                "porque": "El tono lo fija la frecuencia, no la amplitud. Un sonido más fuerte no es más agudo: es de mayor amplitud.",
+            },
+            {
+                "accion": "Como la velocidad en el aire no cambia, si $f$ aumenta entonces $\\lambda$ disminuye.",
+                "porque": "En $v = \\lambda f$ con $v$ fija, frecuencia y longitud de onda son inversamente proporcionales. La velocidad la pone el medio, y el medio sigue siendo el mismo aire.",
+            },
+        ],
+        "common_error": (
+            "Pensar que gritar más fuerte hace que el sonido viaje más rápido o "
+            "que suba de tono. Gritar aumenta la AMPLITUD. La velocidad depende "
+            "del medio, y el tono depende de la frecuencia: son tres cosas "
+            "independientes."
+        ),
+    },
+    "cie_electricidad": {
+        "intro": (
+            "Un circuito es un camino cerrado por donde circula carga. Con la "
+            "ley de Ohm y saber distinguir serie de paralelo se resuelve la "
+            "mayor parte de lo que se pregunta."
+        ),
+        "theory": (
+            "**Ley de Ohm.** $V = I\\,R$: el voltaje es el empuje, la corriente "
+            "$I$ es cuánta carga pasa por segundo (amperes) y la resistencia $R$ "
+            "es cuánto se le opone el material (ohms).\n\n"
+            "**En serie: un solo camino.** La corriente es la MISMA en todos los "
+            "elementos y los voltajes se reparten. Las resistencias se suman: "
+            "$R_{eq} = R_1 + R_2$. Si se corta un punto, se apaga todo.\n\n"
+            "**En paralelo: varios caminos.** El voltaje es el MISMO en cada "
+            "rama y la corriente se reparte. La resistencia equivalente es menor "
+            "que la más pequeña: $\\frac{1}{R_{eq}} = \\frac{1}{R_1} + "
+            "\\frac{1}{R_2}$. Si se corta una rama, las otras siguen.\n\n"
+            "**Potencia.** $P = V\\,I$, y se mide en watts. Es la energía que el "
+            "circuito entrega por segundo, y es lo que determina cuánto consume "
+            "un aparato."
+        ),
+        "example_statement": (
+            "Dos resistencias de 6 Ω cada una se conectan en paralelo a una "
+            "batería de 12 V. Calcula la resistencia equivalente y la corriente "
+            "total que entrega la batería."
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la resistencia equivalente: $\\frac{1}{R_{eq}} = \\frac{1}{6} + \\frac{1}{6} = \\frac{2}{6}$, entonces $R_{eq} = 3\\ \\Omega$.",
+                "porque": "En paralelo se suman los INVERSOS. Un atajo útil: con dos resistencias iguales en paralelo, la equivalente es la mitad de una.",
+            },
+            {
+                "accion": "Verifico que el resultado tenga sentido: 3 Ω es menor que 6 Ω.",
+                "porque": "En paralelo la equivalente SIEMPRE es menor que la más pequeña, porque agregar caminos facilita el paso de la corriente. Si el resultado sale mayor, hay un error.",
+            },
+            {
+                "accion": "Aplico la ley de Ohm al circuito completo: $I = \\frac{V}{R_{eq}} = \\frac{12}{3} = 4$ A.",
+                "porque": "La batería ve la resistencia equivalente. Esos 4 A se reparten en 2 A por cada rama, porque las dos ramas son iguales.",
+            },
+        ],
+        "common_error": (
+            "Sumar las resistencias en paralelo como si fueran en serie y "
+            "responder 12 Ω. En paralelo la resistencia BAJA, no sube: hay más "
+            "caminos disponibles para la corriente."
+        ),
+    },
+    "cie_soluciones": {
+        "intro": (
+            "Una disolución es un soluto repartido en un disolvente. Casi todo "
+            "lo que se pregunta es una regla de tres bien puesta: cuánto soluto "
+            "hay en cuánta disolución."
+        ),
+        "theory": (
+            "**Soluto, disolvente y disolución.** El soluto es lo que se "
+            "disuelve; el disolvente, lo que disuelve. La disolución es la suma "
+            "de los dos, y ese total es lo que casi siempre va en el "
+            "denominador.\n\n"
+            "**Porcentaje masa/masa.** $\\%\\,m/m = \\frac{m_{soluto}}"
+            "{m_{disolución}} \\times 100$. Ojo: en el denominador va la masa "
+            "TOTAL, no la del disolvente solo.\n\n"
+            "**Molaridad.** $M = \\frac{n_{soluto}}{V_{disolución}}$, con el "
+            "volumen en LITROS y la cantidad de soluto en moles. Es la unidad "
+            "que más se usa porque las reacciones ocurren entre moles.\n\n"
+            "**Diluir agrega disolvente y no cambia el soluto.** Por eso vale "
+            "$C_1 V_1 = C_2 V_2$: la cantidad de soluto antes y después es la "
+            "misma, solo está repartida en más volumen."
+        ),
+        "example_statement": (
+            "Se disuelven 20 g de sal en 180 g de agua. ¿Cuál es la "
+            "concentración porcentual masa/masa de la disolución?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la masa de la DISOLUCIÓN: $20 + 180 = 200$ g.",
+                "porque": "La disolución es soluto más disolvente. Este es el paso que decide el ejercicio, y es justo el que se salta la mayoría.",
+            },
+            {
+                "accion": "Aplico la fórmula: $\\frac{20}{200} \\times 100 = 10\\%$.",
+                "porque": "El porcentaje masa/masa compara el soluto con el total, no con el disolvente.",
+            },
+            {
+                "accion": "Interpreto el resultado: en cada 100 g de esta disolución hay 10 g de sal.",
+                "porque": "Saber leer qué significa el número permite comprobar si es razonable y responder preguntas derivadas sin recalcular todo.",
+            },
+        ],
+        "common_error": (
+            "Dividir por la masa del agua en vez de por la masa total: "
+            "$\\frac{20}{180}$ da 11,1%, que no es la respuesta. El denominador "
+            "es siempre la DISOLUCIÓN completa."
+        ),
+    },
+    "cie_energia": {
+        "intro": (
+            "La energía no se crea ni se destruye, solo cambia de forma. Esa "
+            "sola idea resuelve problemas que por fuerzas serían mucho más "
+            "largos."
+        ),
+        "theory": (
+            "**Trabajo.** $W = F\\,d\\,\\cos\\theta$: es la energía que "
+            "transfiere una fuerza al desplazar un cuerpo. Si la fuerza es "
+            "perpendicular al desplazamiento, el trabajo es CERO por más grande "
+            "que sea la fuerza.\n\n"
+            "**Energía cinética.** $E_c = \\frac{1}{2}m v^2$. Depende del "
+            "CUADRADO de la velocidad: al doble de rapidez, cuatro veces la "
+            "energía. Por eso los choques a alta velocidad son "
+            "desproporcionadamente más destructivos.\n\n"
+            "**Energía potencial gravitatoria.** $E_p = m\\,g\\,h$, donde $h$ se "
+            "mide desde el nivel que uno elija como referencia.\n\n"
+            "**Conservación.** Sin roce, $E_c + E_p$ se mantiene constante: lo "
+            "que se pierde de altura se gana en rapidez. Con roce, parte de la "
+            "energía se disipa como calor, pero el total sigue conservándose."
+        ),
+        "example_statement": (
+            "Se deja caer un objeto de 2 kg desde 20 m de altura. Sin considerar "
+            "el roce con el aire y con $g = 10$ m/s², ¿con qué rapidez llega al "
+            "suelo?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la energía potencial inicial: $E_p = m g h = 2 \\cdot 10 \\cdot 20 = 400$ J.",
+                "porque": "Arriba el objeto está en reposo, así que toda su energía es potencial. Ese es el total con el que se va a trabajar.",
+            },
+            {
+                "accion": "Al llegar al suelo la altura es cero, así que toda esa energía es ahora cinética: $E_c = 400$ J.",
+                "porque": "Sin roce no se pierde nada por el camino: la energía solo cambió de forma. Esto es la conservación aplicada, y evita tener que usar las fórmulas de caída libre.",
+            },
+            {
+                "accion": "Despejo la rapidez de $\\frac{1}{2}m v^2 = 400$: $v^2 = \\frac{800}{2} = 400$, entonces $v = 20$ m/s.",
+                "porque": "No hay que olvidar la raíz al final. Y nota que la masa termina no importando: cualquier objeto soltado desde 20 m llega a la misma rapidez.",
+            },
+        ],
+        "common_error": (
+            "Olvidar que la velocidad está al CUADRADO y responder 400 m/s, o "
+            "dividir mal el $\\frac{1}{2}$. Conviene despejar en dos pasos: "
+            "primero $v^2$, después la raíz."
+        ),
+    },
+    "cie_acidobase": {
+        "intro": (
+            "El pH mide qué tan ácida o básica es una disolución. Es una escala "
+            "logarítmica, y entender eso evita la mayoría de los errores que se "
+            "cometen con ella."
+        ),
+        "theory": (
+            "**Ácidos y bases.** Un ácido libera iones $\\mathrm{H^+}$ en "
+            "disolución; una base libera $\\mathrm{OH^-}$. Cuando reaccionan se "
+            "neutralizan y forman sal y agua.\n\n"
+            "**La escala de pH.** Va de 0 a 14. Bajo 7 es ácido, 7 es neutro y "
+            "sobre 7 es básico. Se define como $\\mathrm{pH} = "
+            "-\\log[\\mathrm{H^+}]$: a MÁS concentración de $\\mathrm{H^+}$, "
+            "MENOR pH.\n\n"
+            "**Es logarítmica, no lineal.** Cada unidad de pH es un factor 10. "
+            "Un pH 3 es diez veces más ácido que un pH 4 y cien veces más que un "
+            "pH 5. Ese salto es lo que hace que una diferencia \"pequeña\" en "
+            "pH sea enorme en la práctica.\n\n"
+            "**pH y pOH se complementan.** $\\mathrm{pH} + \\mathrm{pOH} = 14$ a "
+            "25 °C, así que conocer uno da el otro de inmediato."
+        ),
+        "example_statement": (
+            "Una disolución A tiene pH 2 y otra disolución B tiene pH 5. "
+            "¿Cuántas veces más concentrada en iones H⁺ está A respecto de B?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la diferencia de pH: $5 - 2 = 3$ unidades.",
+                "porque": "Lo que importa no es cada valor por separado sino la DISTANCIA entre ambos, porque la escala es logarítmica.",
+            },
+            {
+                "accion": "Cada unidad de pH equivale a un factor 10, así que 3 unidades son $10^3 = 1.000$ veces.",
+                "porque": "En una escala logarítmica las diferencias se convierten en multiplicaciones. Restar los pH y elevar 10 a esa diferencia es el procedimiento completo.",
+            },
+            {
+                "accion": "Como A tiene MENOR pH, es la más ácida: A está 1.000 veces más concentrada en H⁺ que B.",
+                "porque": "El signo menos de la definición invierte la relación: menor pH significa mayor concentración de H⁺. Comprobar el sentido evita entregar la respuesta al revés.",
+            },
+        ],
+        "common_error": (
+            "Tratar la escala como lineal y responder que A es \"3 veces más "
+            "ácida\" o \"2,5 veces\". Cada unidad multiplica por 10: tres "
+            "unidades son mil veces, no tres."
+        ),
+    },
+
+    # ── Historia y Ciencias Sociales ────────────────────────────────────
+    #
+    # Seis nodos, tres áreas: Historia, Formación Ciudadana y Economía. Como
+    # en Competencia Lectora, buena parte de lo que mide esta prueba son
+    # HABILIDADES --leer una fuente, situar un proceso en el tiempo-- y no
+    # fechas de memoria. Las lecciones enseñan el procedimiento.
+    #
+    # Nada de datos inventados: donde se nombra una institución chilena, es la
+    # que existe y con la atribución que tiene.
+    "his_fuentes": {
+        "intro": (
+            "La prueba casi nunca pregunta \"¿en qué año pasó?\". Pregunta qué "
+            "se puede concluir de un documento, un gráfico o una caricatura. "
+            "Analizar fuentes es la habilidad central, y se entrena."
+        ),
+        "theory": (
+            "**Primaria o secundaria.** Una fuente primaria se produjo en la "
+            "época estudiada: una carta, una ley, una fotografía, un discurso. "
+            "Una secundaria la escribió alguien después analizando el período: "
+            "un libro de historia, un artículo. Ninguna es \"mejor\": sirven "
+            "para cosas distintas.\n\n"
+            "**Toda fuente tiene un autor con una posición.** Quién la escribió, "
+            "para quién y con qué intención cambia lo que dice. Un discurso "
+            "oficial y un panfleto opositor sobre el mismo hecho no se "
+            "contradicen por error: cada uno defiende algo.\n\n"
+            "**Distingue el HECHO de la INTERPRETACIÓN.** \"La producción "
+            "aumentó un 20%\" es un hecho. \"La política económica fue un "
+            "éxito\" es una interpretación de ese hecho. Las preguntas suelen "
+            "jugar exactamente con esa diferencia.\n\n"
+            "**Responde con la fuente, no con lo que sabes.** Aunque conozcas el "
+            "tema, la alternativa correcta es la que se sostiene en lo que el "
+            "documento muestra. Si necesitas un dato que la fuente no da, esa "
+            "alternativa está mal."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n\n"
+            "*«Los obreros de esta ciudad trabajan doce horas diarias y viven "
+            "hacinados en conventillos sin agua potable. Mientras tanto, los "
+            "salones del centro se iluminan con electricidad. Es urgente que el "
+            "Estado intervenga antes de que la situación estalle.»*\n"
+            "Artículo de un periódico obrero, 1905.\n\n"
+            "¿Cuál de las siguientes afirmaciones se puede sostener con esta "
+            "fuente?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico qué tipo de fuente es: un periódico obrero de 1905, es decir una fuente PRIMARIA escrita desde la posición de los trabajadores.",
+                "porque": "Saber quién habla ordena la lectura. Un periódico obrero va a describir la desigualdad de forma directa y a pedir una solución: eso no la invalida, pero sí explica su tono.",
+            },
+            {
+                "accion": "Separo los hechos de las opiniones. Hechos: jornadas de doce horas, conventillos sin agua potable, electricidad en el centro. Opinión: que es urgente que el Estado intervenga.",
+                "porque": "Una alternativa que diga \"el Estado debía intervenir\" está repitiendo la OPINIÓN del autor como si fuera un dato. La fuente prueba las condiciones, no la urgencia.",
+            },
+            {
+                "accion": "Elijo la afirmación que describe el contraste de condiciones de vida entre sectores sociales, porque es lo que el texto efectivamente muestra.",
+                "porque": "La fuente contrapone dos realidades en la misma ciudad. Esa desigualdad es lo que se puede sostener sin agregar nada de fuera del documento.",
+            },
+        ],
+        "common_error": (
+            "Descartar una fuente por \"sesgada\". Todas las fuentes tienen un "
+            "punto de vista, y el sesgo es información: dice qué le importaba a "
+            "quien escribió. Lo que no se puede hacer es tomar su opinión como "
+            "si fuera un hecho comprobado."
+        ),
+    },
+    "his_temporal": {
+        "intro": (
+            "Pensar históricamente es ubicar los procesos en el tiempo y "
+            "entender que casi nada cambia de un día para otro. Duración, "
+            "continuidad y cambio son las herramientas."
+        ),
+        "theory": (
+            "**Hecho y proceso.** Un hecho ocurre en una fecha; un proceso dura "
+            "décadas. La independencia se declara un día, pero la construcción "
+            "del Estado toma generaciones. Confundirlos lleva a respuestas "
+            "equivocadas sobre causas.\n\n"
+            "**Continuidad y cambio conviven.** En todo período hay cosas que "
+            "cambian y cosas que siguen igual. Las preguntas suelen pedir "
+            "identificar justamente cuál es cuál, no describir el período "
+            "entero.\n\n"
+            "**Causas y consecuencias son múltiples.** Un proceso histórico rara "
+            "vez tiene una sola causa. Suelen distinguirse causas estructurales "
+            "—de fondo y de larga data— y coyunturales, que son el detonante "
+            "inmediato.\n\n"
+            "**No juzgues el pasado con los valores de hoy.** Es el anacronismo, "
+            "y es el error de razonamiento más frecuente en esta prueba. Para "
+            "entender por qué alguien actuó como actuó hay que mirar lo que era "
+            "pensable en SU época."
+        ),
+        "example_statement": (
+            "Un historiador afirma: «La urbanización de Chile no comenzó con la "
+            "migración campo-ciudad del siglo XX, sino que esa migración "
+            "aceleró un proceso que ya venía en curso». ¿Qué distinción "
+            "histórica está aplicando?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico que el historiador está discutiendo el INICIO de un proceso, no un hecho puntual.",
+                "porque": "La palabra clave es \"proceso\": algo que se despliega en el tiempo y por lo tanto no tiene una fecha de partida única.",
+            },
+            {
+                "accion": "Reconozco los dos elementos que contrapone: algo que ya venía ocurriendo (continuidad) y algo que lo intensificó (aceleración del cambio).",
+                "porque": "La afirmación no niega la migración: niega que sea el ORIGEN. Está separando el detonante que se ve de la tendencia de fondo que no se ve.",
+            },
+            {
+                "accion": "Concluyo que aplica la distinción entre causas estructurales y coyunturales, y la noción de continuidad dentro del cambio.",
+                "porque": "Es la forma en que la historiografía evita explicar procesos largos por un solo acontecimiento. Reconocer ese movimiento es lo que la pregunta evalúa.",
+            },
+        ],
+        "common_error": (
+            "Buscar UNA causa y una fecha exacta para todo. Los procesos "
+            "históricos se superponen: cuando uno empieza, el anterior todavía "
+            "no termina. Las alternativas que ofrecen una causa única y "
+            "categórica suelen ser las incorrectas."
+        ),
+    },
+    "civ_democracia": {
+        "intro": (
+            "La democracia no es solo votar cada cuatro años. Es un conjunto de "
+            "reglas e instituciones que reparten el poder y lo limitan, y esta "
+            "unidad es sobre cómo funciona ese reparto en Chile."
+        ),
+        "theory": (
+            "**Soberanía popular y representación.** El poder reside en la "
+            "ciudadanía, que lo ejerce a través de representantes elegidos. Por "
+            "eso las elecciones periódicas y competitivas son el mínimo de "
+            "cualquier democracia.\n\n"
+            "**Separación de poderes.** El Ejecutivo administra y gobierna, el "
+            "Legislativo hace las leyes y el Judicial las aplica y resuelve "
+            "conflictos. Que sean independientes es lo que impide que el poder "
+            "se concentre en una sola mano.\n\n"
+            "**En Chile el sistema es presidencial y el Congreso bicameral.** "
+            "Existe la Cámara de Diputadas y Diputados y el Senado; ambas "
+            "participan en la formación de la ley.\n\n"
+            "**Participar es más que votar.** También son participación los "
+            "plebiscitos, las organizaciones sociales, los sindicatos, las "
+            "juntas de vecinos y la deliberación pública. Una democracia con "
+            "alta participación electoral y nula vida asociativa es una "
+            "democracia débil."
+        ),
+        "example_statement": (
+            "Un proyecto de ley es aprobado por el Congreso, pero el Presidente "
+            "de la República lo veta y lo devuelve con observaciones. ¿Qué "
+            "principio del sistema democrático se está expresando?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico qué órganos intervienen: el Congreso (Legislativo) y el Presidente (Ejecutivo).",
+                "porque": "La pregunta describe una interacción ENTRE poderes, así que la respuesta tiene que ver con cómo se relacionan y no con lo que hace cada uno por separado.",
+            },
+            {
+                "accion": "Reconozco que un poder está limitando la decisión de otro dentro de las reglas.",
+                "porque": "El veto no es un bloqueo arbitrario: es una facultad establecida, con un procedimiento para que el Congreso pueda insistir. Está reglado, y eso es lo que lo hace democrático.",
+            },
+            {
+                "accion": "Concluyo que se expresa la separación de poderes con controles recíprocos entre ellos.",
+                "porque": "El diseño busca que ningún poder decida solo. La pregunta apunta a esa lógica de frenos mutuos, no al contenido del proyecto.",
+            },
+        ],
+        "common_error": (
+            "Reducir la democracia al acto de votar. Votar es necesario pero no "
+            "suficiente: sin separación de poderes, sin libertad de prensa y sin "
+            "respeto a las minorías, una elección puede existir y el sistema no "
+            "ser democrático."
+        ),
+    },
+    "civ_derechos": {
+        "intro": (
+            "Los derechos definen qué puede exigir una persona y qué le debe el "
+            "Estado. Vienen siempre acompañados de deberes, y esa relación es "
+            "lo que sostiene la convivencia."
+        ),
+        "theory": (
+            "**Los derechos humanos son universales, inalienables e "
+            "indivisibles.** Universales porque los tiene toda persona por serlo; "
+            "inalienables porque no se pueden ceder ni quitar; indivisibles "
+            "porque no se pueden respetar unos y desconocer otros.\n\n"
+            "**Se suelen agrupar en generaciones.** Los civiles y políticos "
+            "(vida, libertad, voto), los económicos, sociales y culturales "
+            "(educación, salud, trabajo) y los colectivos (medio ambiente sano, "
+            "desarrollo). La agrupación es didáctica: ninguno vale menos que "
+            "otro.\n\n"
+            "**A cada derecho corresponde un deber.** El derecho de uno se "
+            "sostiene en la obligación de los demás y del Estado de respetarlo. "
+            "La libertad de expresión convive con el deber de no calumniar.\n\n"
+            "**Los derechos tienen límites y garantías.** Casi ninguno es "
+            "absoluto: se limitan cuando chocan con los de otros. Y para "
+            "hacerlos valer existen mecanismos: en Chile, el recurso de "
+            "protección y el recurso de amparo ante los tribunales."
+        ),
+        "example_statement": (
+            "Una persona publica en redes sociales acusaciones falsas contra un "
+            "vecino y le causa un daño concreto. Al ser demandada, alega que "
+            "tiene libertad de expresión. ¿Cómo se analiza este caso desde los "
+            "derechos?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico que hay DOS derechos en juego: la libertad de expresión de quien publica y la honra del vecino afectado.",
+                "porque": "Los casos difíciles casi nunca son \"un derecho contra ninguno\". Reconocer el choque es el primer paso, y es lo que la pregunta evalúa.",
+            },
+            {
+                "accion": "Recuerdo que ningún derecho es absoluto: el ejercicio de uno termina donde vulnera el de otro.",
+                "porque": "Si la libertad de expresión fuera ilimitada, cualquier daño quedaría amparado por ella y el derecho a la honra no existiría en la práctica.",
+            },
+            {
+                "accion": "Concluyo que la libertad de expresión no ampara la difusión de acusaciones falsas que dañan a un tercero, y que corresponde ponderar ambos derechos.",
+                "porque": "No se trata de que un derecho \"gane\" siempre, sino de resolver el conflicto concreto atendiendo al daño causado y a la falsedad de lo publicado.",
+            },
+        ],
+        "common_error": (
+            "Tratar los derechos como permisos ilimitados: \"tengo derecho, "
+            "entonces puedo\". Todos los derechos conviven con los de los demás, "
+            "y esa convivencia es justamente lo que las preguntas de esta unidad "
+            "ponen a prueba."
+        ),
+    },
+    "eco_indicadores": {
+        "intro": (
+            "Los indicadores económicos son las cifras con que se mide cómo le "
+            "va a un país. Leerlos bien —y saber qué NO dicen— es lo que se "
+            "evalúa acá."
+        ),
+        "theory": (
+            "**PIB.** Es el valor de todos los bienes y servicios FINALES "
+            "producidos dentro de un país en un período. Mide producción, no "
+            "bienestar: no dice cómo se reparte ni cuenta el trabajo no "
+            "remunerado ni el daño ambiental.\n\n"
+            "**PIB per cápita.** Es el PIB dividido por la población. Sirve para "
+            "comparar países de distinto tamaño, pero es un PROMEDIO: puede "
+            "subir mientras la mayoría no mejora.\n\n"
+            "**Inflación.** Es el alza sostenida y generalizada de los precios. "
+            "En Chile la mide el IPC, que calcula el Instituto Nacional de "
+            "Estadísticas (INE) siguiendo una canasta de bienes y servicios "
+            "representativa. Si hay inflación, el dinero pierde poder "
+            "adquisitivo.\n\n"
+            "**Desempleo.** Es el porcentaje de la fuerza de trabajo que busca "
+            "empleo y no lo encuentra. Clave: quien no está buscando trabajo NO "
+            "cuenta como desempleado, sino que queda fuera de la fuerza de "
+            "trabajo. Por eso la tasa puede bajar sin que se hayan creado "
+            "empleos."
+        ),
+        "example_statement": (
+            "En un país el PIB creció 4% durante el año, pero la población "
+            "creció 5% en el mismo período. ¿Qué ocurrió con el PIB per cápita?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Recuerdo la definición: el PIB per cápita es el PIB dividido por la población.",
+                "porque": "Es una división, así que lo que importa no es cuánto creció cada término por separado, sino cuál creció MÁS.",
+            },
+            {
+                "accion": "Comparo los crecimientos: el denominador (población, 5%) creció más que el numerador (PIB, 4%).",
+                "porque": "Cuando el denominador crece más rápido que el numerador, el cociente baja. Ese es todo el razonamiento del ejercicio.",
+            },
+            {
+                "accion": "Concluyo que el PIB per cápita DISMINUYÓ, aunque el PIB total haya crecido.",
+                "porque": "Es exactamente el caso que estas preguntas quieren evaluar: crecimiento agregado no significa mejora por persona.",
+            },
+        ],
+        "common_error": (
+            "Confundir crecimiento del PIB con mejora en el bienestar de la "
+            "gente. El PIB puede crecer con toda la ganancia concentrada en unos "
+            "pocos, o incluso a costa del medio ambiente. Es una medida de "
+            "producción, y nada más."
+        ),
+    },
+    "eco_mercado": {
+        "intro": (
+            "El mercado es el lugar donde se encuentran quienes quieren comprar "
+            "y quienes quieren vender. De ese encuentro salen el precio y la "
+            "cantidad, y ese es todo el modelo."
+        ),
+        "theory": (
+            "**Ley de la demanda.** A mayor precio, los consumidores compran "
+            "MENOS. La curva de demanda tiene pendiente negativa.\n\n"
+            "**Ley de la oferta.** A mayor precio, los productores quieren "
+            "vender MÁS. La curva de oferta tiene pendiente positiva.\n\n"
+            "**Equilibrio.** Es donde las dos curvas se cruzan: la cantidad que "
+            "se quiere comprar es igual a la que se quiere vender. Si el precio "
+            "está por sobre el de equilibrio sobra producto; si está por debajo, "
+            "falta.\n\n"
+            "**Distingue moverse SOBRE la curva de MOVER la curva.** Un cambio "
+            "de precio mueve a lo largo de la curva. Un cambio en otra cosa "
+            "—ingreso, moda, costo de producción, cantidad de vendedores— "
+            "DESPLAZA la curva entera. Esta distinción es la que más se pregunta."
+        ),
+        "example_statement": (
+            "Una sequía destruye buena parte de la cosecha de trigo de un país. "
+            "¿Qué ocurre con la curva de oferta y con el precio de equilibrio "
+            "del trigo?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico a quién afecta el hecho: la sequía golpea a los PRODUCTORES, no a las ganas de comprar de la gente.",
+                "porque": "Lo primero siempre es decidir si el shock es de oferta o de demanda. Equivocarse acá invierte la respuesta completa.",
+            },
+            {
+                "accion": "Como es un factor distinto del precio, DESPLAZA la curva de oferta hacia la izquierda: a cualquier precio ahora hay menos trigo disponible.",
+                "porque": "La sequía no es un cambio de precio, así que no se mueve sobre la curva: mueve la curva entera. Menos disponibilidad significa desplazamiento a la izquierda.",
+            },
+            {
+                "accion": "Con la demanda sin cambios y menos oferta, el nuevo equilibrio queda con MAYOR precio y MENOR cantidad.",
+                "porque": "El cruce de las dos curvas se desplaza hacia arriba y a la izquierda. Es el resultado típico de un shock negativo de oferta.",
+            },
+        ],
+        "common_error": (
+            "Decir que \"bajó la oferta porque subió el precio\". Es al revés: "
+            "primero cayó la oferta por la sequía, y ESO hizo subir el precio. "
+            "El precio es el resultado del modelo, no su causa."
+        ),
+    },
+
+    # ── Matemática M2 ───────────────────────────────────────────────────
+    #
+    # Quince nodos que estaban sin teoría. M2 no reemplaza a M1: la supone. El
+    # temario suma 3° y 4° medio, y la rinden quienes postulan a ingeniería,
+    # ciencias y salud, así que el nivel de los ejemplos es más alto que en M1.
+    #
+    # `prob_combinatoria` ya tenía lección y no se toca.
+    "num_reales": {
+        "intro": (
+            "Los reales son todos los números de la recta numérica. Saber en "
+            "qué subconjunto vive cada uno evita errores que después arrastran "
+            "todo el ejercicio."
+        ),
+        "theory": (
+            "**Los conjuntos están encajados.** Naturales $\\subset$ enteros "
+            "$\\subset$ racionales $\\subset$ reales. Cada uno contiene al "
+            "anterior, así que todo natural es también entero, racional y real.\n\n"
+            "**Racional o irracional.** Un racional se puede escribir como "
+            "fracción de enteros; su decimal termina o se repite "
+            "periódicamente. Un irracional no: su decimal es infinito y sin "
+            "período. Son irracionales $\\pi$, $e$ y las raíces no exactas como "
+            "$\\sqrt{2}$.\n\n"
+            "**Cuidado con las raíces.** $\\sqrt{9} = 3$ es racional; "
+            "$\\sqrt{10}$ es irracional. Que aparezca una raíz no hace "
+            "irracional al número: hay que ver si es exacta.\n\n"
+            "**Las operaciones pueden cambiar de conjunto.** La suma de dos "
+            "irracionales puede ser racional: $(2+\\sqrt{2}) + (2-\\sqrt{2}) = 4$. "
+            "Por eso no se puede afirmar el resultado sin calcular."
+        ),
+        "example_statement": (
+            "Clasifica cada número como racional o irracional: "
+            "$\\sqrt{16}$, $\\;0{,}\\overline{27}$, $\\;\\sqrt{5}$, "
+            "$\\;\\frac{\\pi}{2}$."
+        ),
+        "example_steps": [
+            {
+                "accion": "$\\sqrt{16} = 4$, que es entero y por lo tanto racional.",
+                "porque": "La raíz es exacta, así que el número no tiene nada de irracional. Siempre conviene resolver la raíz antes de clasificar.",
+            },
+            {
+                "accion": "$0{,}\\overline{27}$ es un decimal periódico, así que es racional: equivale a $\\frac{27}{99} = \\frac{3}{11}$.",
+                "porque": "Todo decimal periódico se puede escribir como fracción de enteros, que es la definición de racional. Infinitos decimales no implica irracional.",
+            },
+            {
+                "accion": "$\\sqrt{5}$ es irracional porque 5 no es cuadrado perfecto, y $\\frac{\\pi}{2}$ también, porque dividir un irracional por un racional distinto de cero sigue dando irracional.",
+                "porque": "Un irracional no deja de serlo al multiplicarlo o dividirlo por un racional no nulo. Solo puede \"perder\" su irracionalidad al combinarse con otro irracional.",
+            },
+        ],
+        "common_error": (
+            "Creer que todo decimal infinito es irracional. $0{,}333\\ldots$ "
+            "tiene infinitos decimales y es $\\frac{1}{3}$, perfectamente "
+            "racional. Lo que define al irracional es que NO tenga período."
+        ),
+    },
+    "prob_dispersion": {
+        "intro": (
+            "El promedio dice dónde está el centro; la dispersión dice qué tan "
+            "lejos está todo lo demás. Dos grupos con el mismo promedio pueden "
+            "ser completamente distintos."
+        ),
+        "theory": (
+            "**Rango.** Es el máximo menos el mínimo. Es la medida más simple y "
+            "la más frágil: un solo dato extremo la dispara.\n\n"
+            "**Varianza.** Es el promedio de los cuadrados de las desviaciones "
+            "respecto de la media: $\\sigma^2 = \\frac{\\sum (x_i - "
+            "\\bar{x})^2}{n}$. Se elevan al cuadrado para que las desviaciones "
+            "negativas no cancelen a las positivas.\n\n"
+            "**Desviación estándar.** Es la raíz de la varianza. Se usa porque "
+            "queda en las MISMAS unidades que los datos, y por eso se puede "
+            "comparar directamente con el promedio.\n\n"
+            "**Cómo se lee.** A mayor desviación estándar, más dispersos los "
+            "datos. Si es cero, todos los datos son idénticos. Sumar una "
+            "constante a todos los datos NO cambia la dispersión; multiplicarlos "
+            "por una constante sí."
+        ),
+        "example_statement": (
+            "Calcula la desviación estándar del conjunto: 2, 4, 4, 4, 5, 5, 7, 9."
+        ),
+        "example_steps": [
+            {
+                "accion": "Calculo la media: $\\bar{x} = \\frac{2+4+4+4+5+5+7+9}{8} = \\frac{40}{8} = 5$.",
+                "porque": "Toda la dispersión se mide respecto de la media, así que es el primer dato y tiene que estar bien.",
+            },
+            {
+                "accion": "Calculo las desviaciones y sus cuadrados: $(-3)^2, (-1)^2, (-1)^2, (-1)^2, 0^2, 0^2, 2^2, 4^2$, que son $9, 1, 1, 1, 0, 0, 4, 16$. Suman 32.",
+                "porque": "Sin elevar al cuadrado la suma daría cero siempre, porque las desviaciones negativas cancelan a las positivas. Ese es el motivo del cuadrado.",
+            },
+            {
+                "accion": "La varianza es $\\frac{32}{8} = 4$ y la desviación estándar es $\\sqrt{4} = 2$.",
+                "porque": "Falta la raíz para volver a las unidades originales. Quedarse en 4 es responder la varianza, que es otra cosa.",
+            },
+        ],
+        "common_error": (
+            "Entregar la varianza cuando se pidió la desviación estándar. Son "
+            "el mismo cálculo con un paso de diferencia, y las alternativas casi "
+            "siempre incluyen las dos para que caigas ahí."
+        ),
+    },
+    "geo_esfera": {
+        "intro": (
+            "La esfera aparece en la prueba con dos fórmulas y una trampa: casi "
+            "siempre entregan el diámetro y la fórmula pide el radio."
+        ),
+        "theory": (
+            "**Las dos fórmulas.** Superficie: $A = 4\\pi r^2$. Volumen: "
+            "$V = \\frac{4}{3}\\pi r^3$. La superficie va con el cuadrado del "
+            "radio y el volumen con el cubo.\n\n"
+            "**Radio y diámetro.** $d = 2r$, así que $r = \\frac{d}{2}$. Si el "
+            "enunciado da el diámetro, dividir antes de reemplazar no es "
+            "opcional.\n\n"
+            "**Cómo escalan.** Si el radio se duplica, la superficie se "
+            "cuadruplica ($2^2$) y el volumen se hace ocho veces mayor ($2^3$). "
+            "Es la razón por la que las preguntas de comparación se resuelven "
+            "sin calcular nada.\n\n"
+            "**Las unidades delatan el error.** La superficie va en unidades "
+            "cuadradas y el volumen en cúbicas. Si el resultado quedó en cm² "
+            "cuando se pedía volumen, el procedimiento estaba equivocado."
+        ),
+        "example_statement": (
+            "Una esfera tiene 12 cm de diámetro. Calcula su volumen en términos "
+            "de $\\pi$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Obtengo el radio: $r = \\frac{12}{2} = 6$ cm.",
+                "porque": "La fórmula del volumen usa el RADIO. Reemplazar el diámetro directamente da un resultado ocho veces mayor.",
+            },
+            {
+                "accion": "Reemplazo en $V = \\frac{4}{3}\\pi r^3$: $V = \\frac{4}{3}\\pi \\cdot 6^3 = \\frac{4}{3}\\pi \\cdot 216$.",
+                "porque": "Conviene calcular la potencia antes de multiplicar: $6^3 = 216$, no $6 \\cdot 3$. Elevar al cubo no es multiplicar por tres.",
+            },
+            {
+                "accion": "Simplifico: $\\frac{4 \\cdot 216}{3} = 4 \\cdot 72 = 288$, entonces $V = 288\\pi$ cm³.",
+                "porque": "Dividir 216 por 3 antes de multiplicar por 4 evita trabajar con números grandes. Y el resultado va en cm³, que confirma que es un volumen.",
+            },
+        ],
+        "common_error": (
+            "Usar el diámetro como si fuera el radio. Como el volumen depende "
+            "de $r^3$, el error no duplica el resultado: lo multiplica por ocho. "
+            "Anota el radio aparte antes de reemplazar."
+        ),
+    },
+    "geo_homotecia": {
+        "intro": (
+            "Una homotecia agranda o achica una figura desde un punto fijo, "
+            "conservando la forma. Es la transformación que explica por qué una "
+            "sombra o una fotocopia ampliada sigue siendo \"la misma\" figura."
+        ),
+        "theory": (
+            "**Centro y razón.** Una homotecia queda definida por un centro $O$ "
+            "y una razón $k$. Cada punto $P$ va a $P'$ sobre la recta $OP$, de "
+            "modo que $\\overline{OP'} = k \\cdot \\overline{OP}$.\n\n"
+            "**Qué hace la razón.** Si $|k| > 1$ la figura se agranda; si "
+            "$0 < |k| < 1$ se achica. Si $k$ es NEGATIVO, la imagen queda al "
+            "otro lado del centro, invertida.\n\n"
+            "**Qué se conserva y qué no.** Se conservan los ángulos y el "
+            "paralelismo: la figura resultante es SEMEJANTE a la original. No se "
+            "conservan las longitudes, que se multiplican por $|k|$.\n\n"
+            "**Áreas y volúmenes.** Las longitudes se multiplican por $k$, las "
+            "áreas por $k^2$ y los volúmenes por $k^3$. Es el error más caro de "
+            "esta unidad."
+        ),
+        "example_statement": (
+            "Un triángulo de área 12 cm² se somete a una homotecia de razón "
+            "$k = 3$. ¿Cuál es el área del triángulo resultante?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico que se pide un ÁREA, no una longitud.",
+                "porque": "La razón $k$ multiplica longitudes. Para áreas hay que usar $k^2$, y el enunciado está construido para que quien no lo note responda 36.",
+            },
+            {
+                "accion": "Aplico el factor correspondiente: el área se multiplica por $k^2 = 3^2 = 9$.",
+                "porque": "El área depende de dos dimensiones, y cada una se multiplicó por 3: $3 \\times 3 = 9$. Por eso el factor va al cuadrado.",
+            },
+            {
+                "accion": "Calculo: $12 \\cdot 9 = 108$ cm².",
+                "porque": "Si se hubiera pedido el volumen de un cuerpo homotético, el factor habría sido $3^3 = 27$. La regla es siempre la misma: una dimensión, un exponente.",
+            },
+        ],
+        "common_error": (
+            "Multiplicar el área directamente por $k$ y responder 36 cm². La "
+            "razón vale para longitudes. Para área va $k^2$ y para volumen $k^3$."
+        ),
+    },
+    "num_logaritmos": {
+        "intro": (
+            "Un logaritmo responde una sola pregunta: ¿a qué exponente hay que "
+            "elevar la base para obtener este número? Todo lo demás son "
+            "propiedades que salen de ahí."
+        ),
+        "theory": (
+            "**La definición.** $\\log_b a = c$ significa exactamente "
+            "$b^c = a$. Pasar de una forma a la otra resuelve la mayoría de los "
+            "ejercicios.\n\n"
+            "**Las tres propiedades.** $\\log(xy) = \\log x + \\log y$; "
+            "$\\log\\frac{x}{y} = \\log x - \\log y$; "
+            "$\\log x^n = n\\log x$. El logaritmo convierte multiplicaciones en "
+            "sumas y potencias en productos: para eso se inventó.\n\n"
+            "**Dos valores que hay que saber de memoria.** $\\log_b 1 = 0$ "
+            "porque $b^0 = 1$, y $\\log_b b = 1$ porque $b^1 = b$.\n\n"
+            "**Restricciones.** La base debe ser positiva y distinta de 1, y el "
+            "argumento debe ser ESTRICTAMENTE positivo. No existe el logaritmo "
+            "de cero ni de un número negativo."
+        ),
+        "example_statement": (
+            "Si $\\log 2 = 0{,}30$ y $\\log 3 = 0{,}48$, calcula $\\log 12$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Descompongo 12 usando solo los números que conozco: $12 = 2^2 \\cdot 3$.",
+                "porque": "Los datos son los logaritmos de 2 y de 3, así que hay que escribir 12 en función de ellos. Ese es todo el truco de estos ejercicios.",
+            },
+            {
+                "accion": "Aplico la propiedad del producto: $\\log 12 = \\log(2^2) + \\log 3$.",
+                "porque": "El logaritmo de un producto es la suma de los logaritmos. Es lo que permite partir el problema en pedazos conocidos.",
+            },
+            {
+                "accion": "Aplico la del exponente y reemplazo: $2\\log 2 + \\log 3 = 2(0{,}30) + 0{,}48 = 0{,}60 + 0{,}48 = 1{,}08$.",
+                "porque": "El exponente baja como factor multiplicando. Reemplazar recién al final evita arrastrar decimales por todo el desarrollo.",
+            },
+        ],
+        "common_error": (
+            "Inventar propiedades que no existen, como $\\log(x+y) = \\log x + "
+            "\\log y$. El logaritmo convierte PRODUCTOS en sumas, no sumas en "
+            "sumas. Para el logaritmo de una suma no hay ninguna regla."
+        ),
+    },
+    "num_financiera": {
+        "intro": (
+            "Interés simple, interés compuesto y porcentajes encadenados. Es la "
+            "unidad más aplicable de toda la prueba: son las cuentas de un "
+            "crédito, un ahorro o una liquidación."
+        ),
+        "theory": (
+            "**Interés simple.** El interés se calcula siempre sobre el capital "
+            "inicial: $I = C \\cdot i \\cdot t$, y el monto final es $C + I$. "
+            "Crece de forma lineal.\n\n"
+            "**Interés compuesto.** El interés se suma al capital y desde ahí "
+            "genera más interés: $M = C(1 + i)^t$. Crece de forma exponencial, y "
+            "por eso a largo plazo la diferencia con el simple es enorme.\n\n"
+            "**Aumentos y descuentos sucesivos NO se suman.** Un alza del 20% "
+            "seguida de una baja del 20% no deja el precio igual: queda en "
+            "$1{,}20 \\cdot 0{,}80 = 0{,}96$, un 4% MENOS que al principio.\n\n"
+            "**Los factores multiplicativos son el atajo.** Aumentar un 15% es "
+            "multiplicar por 1,15; descontar un 15% es multiplicar por 0,85. "
+            "Encadenar operaciones se vuelve una sola multiplicación."
+        ),
+        "example_statement": (
+            "Un producto cuesta $10.000. Primero sube un 20% y después el nuevo "
+            "precio se rebaja un 25%. ¿Cuál es el precio final?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Convierto cada cambio en un factor: subir 20% es $\\times 1{,}20$ y rebajar 25% es $\\times 0{,}75$.",
+                "porque": "Trabajar con factores evita calcular el monto intermedio y equivocarse en la resta. Un aumento del $p\\%$ es $1 + \\frac{p}{100}$; un descuento, $1 - \\frac{p}{100}$.",
+            },
+            {
+                "accion": "Multiplico en cadena: $10.000 \\cdot 1{,}20 \\cdot 0{,}75$.",
+                "porque": "El segundo porcentaje se aplica sobre el precio YA aumentado, no sobre el original. Por eso van encadenados y no sumados.",
+            },
+            {
+                "accion": "Calculo: $10.000 \\cdot 1{,}20 = 12.000$ y $12.000 \\cdot 0{,}75 = 9.000$. El precio final es $9.000.",
+                "porque": "El factor total es $1{,}20 \\cdot 0{,}75 = 0{,}90$, o sea una baja neta del 10%: no del 5% que daría restar 25 menos 20.",
+            },
+        ],
+        "common_error": (
+            "Sumar y restar los porcentajes: \"subió 20 y bajó 25, entonces bajó "
+            "5%\". Los porcentajes sucesivos se MULTIPLICAN, porque cada uno se "
+            "aplica sobre una base distinta."
+        ),
+    },
+    "prob_permutacion": {
+        "intro": (
+            "Contar de cuántas formas puede ocurrir algo. Toda la unidad se "
+            "reduce a una pregunta: ¿importa el ORDEN o no?"
+        ),
+        "theory": (
+            "**Principio multiplicativo.** Si una decisión se toma en etapas "
+            "independientes, el total es el producto de las opciones de cada "
+            "etapa.\n\n"
+            "**Permutación: el orden IMPORTA.** Ordenar $n$ elementos distintos "
+            "da $n!$ formas. Si se eligen $r$ de $n$ y el orden importa: "
+            "$P(n,r) = \\frac{n!}{(n-r)!}$.\n\n"
+            "**Combinación: el orden NO importa.** "
+            "$C(n,r) = \\frac{n!}{r!\\,(n-r)!}$. Se divide por $r!$ justamente "
+            "para descontar todos los órdenes de un mismo grupo.\n\n"
+            "**Cómo decidir.** Pregúntate si al cambiar el orden cambia el "
+            "resultado. Un podio (oro, plata, bronce) es permutación; un comité "
+            "de tres personas es combinación. Y recuerda $0! = 1$."
+        ),
+        "example_statement": (
+            "De un curso de 10 estudiantes hay que elegir un comité de 3 "
+            "personas, sin cargos. ¿De cuántas formas distintas se puede hacer?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Decido si el orden importa: el comité no tiene cargos, así que elegir a Ana, Bruno y Carla es lo mismo en cualquier orden.",
+                "porque": "Es la única decisión real del ejercicio. Si hubiera presidente, secretario y tesorero, la respuesta sería otra.",
+            },
+            {
+                "accion": "Como el orden NO importa, uso combinación: $C(10,3) = \\frac{10!}{3!\\,7!}$.",
+                "porque": "Dividir por $3!$ elimina las 6 maneras de ordenar cada grupo de tres, que en este problema son el mismo comité.",
+            },
+            {
+                "accion": "Simplifico: $\\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = \\frac{720}{6} = 120$.",
+                "porque": "No hace falta calcular $10!$ completo: basta tomar tres factores desde 10 hacia abajo. Con cargos habrían sido 720, seis veces más.",
+            },
+        ],
+        "common_error": (
+            "Usar permutación cuando el orden no importa, y contar seis veces "
+            "cada comité. Antes de escribir cualquier fórmula, responde en voz "
+            "alta: ¿cambia algo si los ordeno distinto?"
+        ),
+    },
+    "geo_trigonometria": {
+        "intro": (
+            "Seno, coseno y tangente relacionan los ángulos de un triángulo "
+            "rectángulo con sus lados. Con eso se calculan alturas y distancias "
+            "que no se pueden medir directamente."
+        ),
+        "theory": (
+            "**Las tres razones.** Respecto de un ángulo agudo $\\alpha$: "
+            "$\\sin\\alpha = \\frac{\\text{cateto opuesto}}{\\text{hipotenusa}}$, "
+            "$\\cos\\alpha = \\frac{\\text{cateto adyacente}}{\\text{hipotenusa}}$, "
+            "$\\tan\\alpha = \\frac{\\text{opuesto}}{\\text{adyacente}}$.\n\n"
+            "**Opuesto y adyacente dependen del ángulo.** El mismo cateto es "
+            "opuesto para un ángulo y adyacente para el otro. Marcar el ángulo "
+            "antes de nombrar los lados evita casi todos los errores.\n\n"
+            "**Valores que conviene saber.** $\\sin 30° = \\frac{1}{2}$, "
+            "$\\cos 60° = \\frac{1}{2}$, "
+            "$\\sin 45° = \\cos 45° = \\frac{\\sqrt{2}}{2}$, "
+            "$\\tan 45° = 1$, $\\sin 60° = \\cos 30° = \\frac{\\sqrt{3}}{2}$.\n\n"
+            "**Identidad fundamental.** $\\sin^2\\alpha + \\cos^2\\alpha = 1$. "
+            "Sale del teorema de Pitágoras y permite obtener una razón "
+            "conociendo la otra."
+        ),
+        "example_statement": (
+            "Desde un punto en el suelo, a 20 m de la base de un edificio, se "
+            "ve su parte más alta con un ángulo de elevación de 60°. ¿Cuál es "
+            "la altura del edificio? (Usa $\\tan 60° = \\sqrt{3}$)"
+        ),
+        "example_steps": [
+            {
+                "accion": "Dibujo el triángulo rectángulo: la altura del edificio es el cateto OPUESTO al ángulo de 60°, y los 20 m son el cateto ADYACENTE.",
+                "porque": "El ángulo de elevación se mide desde el suelo, así que el observador está en el vértice del ángulo. Ubicarlo bien define qué razón usar.",
+            },
+            {
+                "accion": "Con opuesto y adyacente, la razón que corresponde es la tangente: $\\tan 60° = \\frac{h}{20}$.",
+                "porque": "La tangente es la única de las tres que relaciona los dos catetos sin involucrar la hipotenusa, que acá no se conoce ni se pide.",
+            },
+            {
+                "accion": "Despejo: $h = 20 \\cdot \\tan 60° = 20\\sqrt{3} \\approx 34{,}6$ m.",
+                "porque": "El resultado tiene sentido: el edificio es más alto que la distancia al punto de observación, tal como se espera con un ángulo mayor que 45°.",
+            },
+        ],
+        "common_error": (
+            "Usar seno o coseno cuando no se conoce la hipotenusa. Si el "
+            "problema entrega los dos catetos —o pide uno teniendo el otro—, la "
+            "razón es la TANGENTE."
+        ),
+    },
+    "geo_rectas": {
+        "intro": (
+            "Una recta en el plano queda descrita por su pendiente y un punto. "
+            "De ahí salen el paralelismo, la perpendicularidad y los puntos de "
+            "intersección."
+        ),
+        "theory": (
+            "**Forma principal.** $y = mx + n$, donde $m$ es la pendiente y $n$ "
+            "el coeficiente de posición, que es donde la recta corta al eje "
+            "$y$.\n\n"
+            "**Pendiente entre dos puntos.** "
+            "$m = \\frac{y_2 - y_1}{x_2 - x_1}$. Si $m > 0$ la recta sube; si "
+            "$m < 0$ baja; si $m = 0$ es horizontal. Una recta vertical no tiene "
+            "pendiente definida.\n\n"
+            "**Paralelas y perpendiculares.** Dos rectas son paralelas si "
+            "$m_1 = m_2$, y perpendiculares si $m_1 \\cdot m_2 = -1$, es decir "
+            "si una pendiente es el inverso multiplicativo negativo de la otra.\n\n"
+            "**Intersección.** El punto donde se cruzan dos rectas es la "
+            "solución del sistema formado por sus ecuaciones. Si son paralelas "
+            "distintas, no hay solución."
+        ),
+        "example_statement": (
+            "Determina la ecuación de la recta perpendicular a "
+            "$y = 2x + 5$ que pasa por el punto $(4, 1)$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Leo la pendiente de la recta dada: $m_1 = 2$.",
+                "porque": "En la forma $y = mx + n$ la pendiente es el número que acompaña a $x$. Es el punto de partida de todo el ejercicio.",
+            },
+            {
+                "accion": "Calculo la pendiente perpendicular: $m_2 = -\\frac{1}{2}$, porque $2 \\cdot \\left(-\\frac{1}{2}\\right) = -1$.",
+                "porque": "Se invierte la fracción Y se cambia el signo. Hacer solo una de las dos cosas es el error más frecuente.",
+            },
+            {
+                "accion": "Reemplazo el punto en $y = -\\frac{1}{2}x + n$: $1 = -\\frac{1}{2}(4) + n$, entonces $1 = -2 + n$ y $n = 3$. La recta es $y = -\\frac{1}{2}x + 3$.",
+                "porque": "La pendiente sola define infinitas rectas paralelas entre sí; el punto es lo que elige una. Por eso hacen falta los dos datos.",
+            },
+        ],
+        "common_error": (
+            "Usar $-2$ como pendiente perpendicular en vez de $-\\frac{1}{2}$. "
+            "La condición es que el PRODUCTO sea $-1$: hay que invertir la "
+            "fracción además de cambiarle el signo."
+        ),
+    },
+    "geo_circunferencia": {
+        "intro": (
+            "Ángulos, cuerdas, tangentes y secantes. Un puñado de teoremas que "
+            "se aplican una y otra vez, y que se reconocen por el dibujo."
+        ),
+        "theory": (
+            "**Ángulo del centro y ángulo inscrito.** Un ángulo del centro mide "
+            "lo mismo que su arco. Un ángulo inscrito mide la MITAD de su arco, "
+            "y por lo tanto la mitad del ángulo del centro que abarca el mismo "
+            "arco.\n\n"
+            "**Consecuencia clásica.** Todo ángulo inscrito en una "
+            "semicircunferencia es recto, porque abarca un arco de 180° y mide "
+            "su mitad.\n\n"
+            "**La tangente es perpendicular al radio** en el punto de contacto. "
+            "Es la propiedad que convierte muchos problemas de circunferencia en "
+            "problemas de triángulo rectángulo.\n\n"
+            "**Cuerdas que se cortan.** Si dos cuerdas se intersecan dentro de "
+            "la circunferencia, los productos de sus segmentos son iguales: "
+            "$a \\cdot b = c \\cdot d$."
+        ),
+        "example_statement": (
+            "En una circunferencia, un ángulo del centro mide 80°. ¿Cuánto mide "
+            "un ángulo inscrito que abarca el mismo arco?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico que los dos ángulos abarcan el MISMO arco.",
+                "porque": "La relación entre ángulo del centro e inscrito solo vale cuando comparten arco. Si abarcan arcos distintos, no hay nada que comparar.",
+            },
+            {
+                "accion": "El ángulo del centro mide igual que su arco, así que el arco mide 80°.",
+                "porque": "Es la definición del ángulo del centro, y sirve de puente: se pasa del ángulo al arco y del arco al ángulo inscrito.",
+            },
+            {
+                "accion": "El ángulo inscrito mide la mitad del arco: $\\frac{80°}{2} = 40°$.",
+                "porque": "Todos los ángulos inscritos que abarcan ese mismo arco miden 40°, sin importar dónde esté su vértice sobre la circunferencia.",
+            },
+        ],
+        "common_error": (
+            "Invertir la relación y duplicar en vez de dividir. El del CENTRO "
+            "es el grande y el INSCRITO es la mitad. La regla mnemotécnica: el "
+            "que está en el centro ve más."
+        ),
+    },
+    "prob_binomial": {
+        "intro": (
+            "El modelo binomial responde cuántos éxitos esperar cuando se "
+            "repite muchas veces el mismo experimento con dos resultados "
+            "posibles."
+        ),
+        "theory": (
+            "**Cuándo aplica.** Se necesitan cuatro condiciones: número FIJO de "
+            "repeticiones $n$, solo dos resultados por repetición (éxito o "
+            "fracaso), probabilidad $p$ constante, y repeticiones "
+            "independientes.\n\n"
+            "**La fórmula.** $P(X = k) = C(n,k)\\, p^k (1-p)^{n-k}$. El "
+            "combinatorio cuenta en cuántos ÓRDENES distintos pueden ocurrir "
+            "esos $k$ éxitos.\n\n"
+            "**Esperanza y varianza.** $E(X) = n\\,p$ y "
+            "$\\mathrm{Var}(X) = n\\,p\\,(1-p)$. La esperanza es el número de "
+            "éxitos que se espera en promedio.\n\n"
+            "**Éxito es lo que uno defina.** Puede ser sacar cara, fallar un "
+            "tiro o que una pieza salga defectuosa. Lo importante es fijar qué "
+            "es éxito ANTES de escribir $p$, y no cambiarlo a mitad de camino."
+        ),
+        "example_statement": (
+            "Se lanza una moneda equilibrada 5 veces. ¿Cuál es la probabilidad "
+            "de obtener exactamente 3 caras?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Verifico las condiciones y anoto los parámetros: $n = 5$, éxito = cara, $p = 0{,}5$, $k = 3$.",
+                "porque": "Los lanzamientos son independientes y la probabilidad no cambia entre uno y otro, así que el modelo binomial es aplicable.",
+            },
+            {
+                "accion": "Calculo en cuántos órdenes pueden salir 3 caras en 5 lanzamientos: $C(5,3) = \\frac{5 \\cdot 4}{2} = 10$.",
+                "porque": "Las 3 caras pueden caer en distintas posiciones y cada disposición es un resultado diferente. Sin este factor se cuenta una sola de las diez.",
+            },
+            {
+                "accion": "Aplico la fórmula: $P = 10 \\cdot (0{,}5)^3 \\cdot (0{,}5)^2 = 10 \\cdot 0{,}03125 = 0{,}3125$, es decir 31,25%.",
+                "porque": "Con $p = 0{,}5$ los exponentes se juntan en $(0{,}5)^5 = \\frac{1}{32}$, así que la probabilidad es $\\frac{10}{32}$. Comprobarlo como fracción confirma el resultado.",
+            },
+        ],
+        "common_error": (
+            "Olvidar el combinatorio y calcular solo $(0{,}5)^5$. Eso da la "
+            "probabilidad de UNA secuencia específica, como cara-cara-cara-sello-sello. "
+            "La pregunta admite las diez secuencias posibles."
+        ),
+    },
+    "prob_condicional": {
+        "intro": (
+            "La probabilidad condicional responde qué tan probable es algo "
+            "SABIENDO que ya ocurrió otra cosa. Esa información cambia el "
+            "cálculo, y ese es todo el asunto."
+        ),
+        "theory": (
+            "**La definición.** $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$, con "
+            "$P(B) > 0$. Se lee \"probabilidad de A dado B\".\n\n"
+            "**Saber algo reduce el espacio muestral.** Al condicionar, ya no se "
+            "considera todo lo posible sino solo los casos donde ocurrió $B$. "
+            "Por eso $B$ pasa al denominador.\n\n"
+            "**Independencia.** $A$ y $B$ son independientes si "
+            "$P(A|B) = P(A)$, es decir si saber que ocurrió $B$ no cambia nada. "
+            "En ese caso $P(A \\cap B) = P(A)\\cdot P(B)$.\n\n"
+            "**El orden importa.** $P(A|B)$ y $P(B|A)$ son cosas distintas y "
+            "rara vez coinciden. Confundirlas es un error clásico, y las "
+            "alternativas de la prueba suelen incluir las dos."
+        ),
+        "example_statement": (
+            "En un curso, el 60% practica algún deporte, el 30% toca un "
+            "instrumento y el 20% hace ambas cosas. Si se elige a una persona "
+            "que practica deporte, ¿cuál es la probabilidad de que también "
+            "toque un instrumento?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Traduzco la pregunta: se pide $P(\\text{instrumento} \\mid \\text{deporte})$.",
+                "porque": "El dato \"se elige a una persona que practica deporte\" es la condición. Identificar cuál de los dos eventos va después de la barra decide el denominador.",
+            },
+            {
+                "accion": "Anoto los datos: $P(D) = 0{,}60$, $P(I) = 0{,}30$, $P(D \\cap I) = 0{,}20$.",
+                "porque": "El 20% que hace ambas cosas es la intersección, no un tercer grupo aparte. Ya está incluido dentro del 60% y dentro del 30%.",
+            },
+            {
+                "accion": "Aplico la fórmula: $P(I|D) = \\frac{0{,}20}{0{,}60} = \\frac{1}{3} \\approx 33{,}3\\%$.",
+                "porque": "El denominador es la probabilidad de la CONDICIÓN, porque el universo ahora son solo quienes practican deporte. Nota que $P(D|I) = \\frac{0{,}20}{0{,}30} = 66{,}7\\%$: distinto, como se anticipaba.",
+            },
+        ],
+        "common_error": (
+            "Dividir por el evento equivocado. En $P(A|B)$ el denominador es "
+            "SIEMPRE $P(B)$, lo que está después de la barra: es la información "
+            "que ya se tiene y define el nuevo universo."
+        ),
+    },
+    "alg_sistemas_casos": {
+        "intro": (
+            "Un sistema de dos ecuaciones lineales puede tener una solución, "
+            "infinitas o ninguna. Distinguir el caso sin resolverlo completo es "
+            "lo que esta unidad entrena."
+        ),
+        "theory": (
+            "**Interpretación geométrica.** Cada ecuación es una recta. Una "
+            "solución = las rectas se cortan; infinitas = son la MISMA recta; "
+            "ninguna = son paralelas distintas.\n\n"
+            "**El criterio de los coeficientes.** Para "
+            "$a_1x + b_1y = c_1$ y $a_2x + b_2y = c_2$: si "
+            "$\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}$ hay solución única. Si "
+            "las tres razones son iguales, hay infinitas. Si las de $a$ y $b$ "
+            "coinciden pero la de $c$ no, no hay solución.\n\n"
+            "**Qué significa cada caso.** Solución única: las pendientes son "
+            "distintas. Infinitas: una ecuación es múltiplo de la otra, así que "
+            "no aporta información nueva. Ninguna: mismas pendientes, distinto "
+            "corte con el eje.\n\n"
+            "**Cómo se ve al resolver.** Si al eliminar una incógnita queda "
+            "$0 = 0$, hay infinitas soluciones. Si queda algo imposible como "
+            "$0 = 5$, no hay ninguna."
+        ),
+        "example_statement": (
+            "Determina para qué valor de $k$ el sistema "
+            "$\\begin{cases} 2x + 3y = 7 \\\\ 4x + ky = 14 \\end{cases}$ "
+            "tiene infinitas soluciones."
+        ),
+        "example_steps": [
+            {
+                "accion": "Para infinitas soluciones, las tres razones deben ser iguales: $\\frac{2}{4} = \\frac{3}{k} = \\frac{7}{14}$.",
+                "porque": "Infinitas soluciones significa que las dos ecuaciones describen la misma recta, es decir que una es múltiplo exacto de la otra, incluido el término independiente.",
+            },
+            {
+                "accion": "Calculo la razón conocida: $\\frac{2}{4} = \\frac{1}{2}$, y compruebo que $\\frac{7}{14} = \\frac{1}{2}$ también.",
+                "porque": "Que la razón de los términos independientes coincida es lo que separa \"infinitas soluciones\" de \"ninguna\". Si $\\frac{7}{14}$ hubiera dado otra cosa, no existiría ningún $k$ que sirviera.",
+            },
+            {
+                "accion": "Igualo la razón de $y$: $\\frac{3}{k} = \\frac{1}{2}$, entonces $k = 6$.",
+                "porque": "Con $k = 6$ la segunda ecuación es exactamente el doble de la primera, así que no aporta información nueva y el sistema queda indeterminado.",
+            },
+        ],
+        "common_error": (
+            "Revisar solo los coeficientes de $x$ e $y$ y olvidar el término "
+            "independiente. Esa comparación distingue infinitas soluciones de "
+            "ninguna, que son casos opuestos con los mismos coeficientes."
+        ),
+    },
+    "alg_funciones_trig": {
+        "intro": (
+            "Seno y coseno como funciones: no un número para un triángulo, sino "
+            "una curva que se repite. Sirven para modelar todo lo que oscila."
+        ),
+        "theory": (
+            "**Son periódicas.** $\\sin x$ y $\\cos x$ se repiten cada $2\\pi$. "
+            "Ambas toman valores entre $-1$ y $1$, nunca fuera de ese rango.\n\n"
+            "**La forma general.** En $y = a\\sin(bx) + d$: $|a|$ es la "
+            "AMPLITUD (qué tanto sube y baja desde el eje), $b$ afecta el "
+            "PERÍODO según $T = \\frac{2\\pi}{|b|}$, y $d$ desplaza la curva "
+            "verticalmente.\n\n"
+            "**La diferencia entre ambas.** $\\sin 0 = 0$ y $\\cos 0 = 1$: son "
+            "la misma curva desfasada en $\\frac{\\pi}{2}$.\n\n"
+            "**Cómo leer un gráfico.** La amplitud es la mitad de la distancia "
+            "entre el máximo y el mínimo. El período es lo que la curva demora "
+            "en volver a empezar. Con esos dos datos se reconstruye la función."
+        ),
+        "example_statement": (
+            "Determina la amplitud y el período de la función "
+            "$y = 3\\sin(2x)$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Comparo con la forma general $y = a\\sin(bx)$: acá $a = 3$ y $b = 2$.",
+                "porque": "Cada parámetro controla una cosa distinta, así que identificarlos bien es la mitad del ejercicio.",
+            },
+            {
+                "accion": "La amplitud es $|a| = 3$, así que la función oscila entre $-3$ y $3$.",
+                "porque": "La amplitud multiplica los valores del seno, que van de $-1$ a $1$. No cambia dónde está centrada la curva, solo cuánto se aleja.",
+            },
+            {
+                "accion": "El período es $T = \\frac{2\\pi}{|b|} = \\frac{2\\pi}{2} = \\pi$.",
+                "porque": "Un $b$ mayor que 1 COMPRIME la curva: se repite más seguido. Es contraintuitivo, porque el número es más grande y el período más chico.",
+            },
+        ],
+        "common_error": (
+            "Creer que $b$ es el período. $b$ es la frecuencia angular: el "
+            "período se obtiene dividiendo $2\\pi$ por él. Con $b = 2$ el "
+            "período es $\\pi$, no $2$."
+        ),
+    },
+    "alg_funcion_potencia": {
+        "intro": (
+            "Una función potencia es $f(x) = a\\,x^n$. Todo su comportamiento "
+            "depende de si el exponente es par o impar, y de qué signo tiene el "
+            "coeficiente."
+        ),
+        "theory": (
+            "**Exponente par.** La curva es simétrica respecto del eje $y$ "
+            "(función par): $f(-x) = f(x)$. Ambos extremos apuntan en la misma "
+            "dirección, como en la parábola $y = x^2$.\n\n"
+            "**Exponente impar.** La curva es simétrica respecto del origen "
+            "(función impar): $f(-x) = -f(x)$. Los extremos apuntan en "
+            "direcciones opuestas, como en $y = x^3$.\n\n"
+            "**El signo de $a$ refleja.** Si $a < 0$ la curva se da vuelta "
+            "verticalmente. Si $|a| > 1$ se estira; si $0 < |a| < 1$ se "
+            "aplasta.\n\n"
+            "**Todas pasan por el origen** cuando no hay término constante, y a "
+            "mayor exponente el crecimiento es más brusco para $|x| > 1$ y más "
+            "aplanado para $|x| < 1$."
+        ),
+        "example_statement": (
+            "Sin graficar, determina si $f(x) = -2x^4$ es par o impar, y hacia "
+            "dónde apuntan sus extremos."
+        ),
+        "example_steps": [
+            {
+                "accion": "Evalúo en $-x$: $f(-x) = -2(-x)^4 = -2x^4 = f(x)$.",
+                "porque": "Un exponente PAR convierte cualquier signo en positivo, así que $(-x)^4 = x^4$. La función es par y su gráfico es simétrico respecto del eje $y$.",
+            },
+            {
+                "accion": "Como el exponente es par, ambos extremos van en la misma dirección.",
+                "porque": "En las funciones pares el comportamiento en $x$ muy grande y en $x$ muy negativo es idéntico, porque el signo de $x$ deja de importar.",
+            },
+            {
+                "accion": "El coeficiente es negativo ($a = -2$), así que la curva está reflejada: ambos extremos apuntan hacia ABAJO.",
+                "porque": "Sin el signo menos los dos extremos subirían, como en $y = x^4$. El $-2$ invierte la curva y además la estira verticalmente.",
+            },
+        ],
+        "common_error": (
+            "Aplicar mal el exponente al signo: escribir $(-x)^4 = -x^4$. El "
+            "paréntesis incluye el signo, y elevado a una potencia par siempre "
+            "queda positivo. Sin paréntesis, $-x^4$ significa otra cosa."
+        ),
+    },
 }

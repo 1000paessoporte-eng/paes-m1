@@ -11,7 +11,23 @@ from sqlalchemy.orm import Session
 
 from paes_api.modules.content.models import Lesson
 from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
-from paes_api.seed_data import LESSONS, SKILL_NODES
+from paes_api.seed_data import (
+    LESSONS,
+    SKILL_NODES,
+    SKILL_NODES_CIENCIAS,
+    SKILL_NODES_HISTORIA,
+    SKILL_NODES_LECTORA,
+    SKILL_NODES_M2,
+)
+
+#: Todos los nodos del árbol, de las cinco pruebas.
+TODOS_LOS_NODOS = (
+    SKILL_NODES
+    + SKILL_NODES_M2
+    + SKILL_NODES_LECTORA
+    + SKILL_NODES_CIENCIAS
+    + SKILL_NODES_HISTORIA
+)
 
 
 def _sembrar_leccion(db_session: Session, code: str) -> SkillNode:
@@ -35,11 +51,26 @@ def _sembrar_leccion(db_session: Session, code: str) -> SkillNode:
     return node
 
 
-def test_todo_nodo_de_m1_tiene_leccion() -> None:
-    """M1 es la prueba con el banco más grande y la que más se rinde: su
-    temario tiene que estar cubierto entero, sin nodos huérfanos."""
-    faltan = [n[0] for n in SKILL_NODES if n[0] not in LESSONS]
-    assert faltan == [], f"nodos de M1 sin lección: {faltan}"
+def test_todo_nodo_tiene_leccion() -> None:
+    """Ningún nodo del árbol mide sin enseñar.
+
+    Antes esta exigencia valía solo para M1, porque era la única prueba con
+    teoría escrita: Ciencias e Historia tenían doce y seis nodos con cero
+    lecciones, y un alumno que elegía esas pruebas encontraba un árbol que lo
+    evaluaba y no le explicaba nada. Ahora las cinco están cubiertas, así que
+    el test cubre las cinco: agregar un nodo sin su lección vuelve a romper
+    acá y no en producción.
+    """
+    faltan = sorted(n[0] for n in TODOS_LOS_NODOS if n[0] not in LESSONS)
+    assert faltan == [], f"nodos sin lección: {faltan}"
+
+
+def test_ninguna_leccion_apunta_a_un_nodo_inexistente() -> None:
+    """Una lección con un código mal escrito no se sube y nadie se entera:
+    `seed.py` la salta en silencio porque no encuentra su nodo."""
+    codigos = {n[0] for n in TODOS_LOS_NODOS}
+    huerfanas = sorted(c for c in LESSONS if c not in codigos)
+    assert huerfanas == [], f"lecciones sin nodo: {huerfanas}"
 
 
 @pytest.mark.parametrize("codigo", sorted(LESSONS))
