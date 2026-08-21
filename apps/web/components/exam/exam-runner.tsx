@@ -28,6 +28,7 @@ import {
   type Subject,
 } from "@/lib/api";
 import { getClientToken, loginHref } from "@/lib/auth";
+import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 import { formatearReloj } from "@/lib/tiempo";
 
 const STORAGE_KEY = "paes_exam_attempt_id";
@@ -595,7 +596,15 @@ export function ExamRunner({
   return (
     <div className="mx-auto max-w-3xl">
       {/* ── Barra superior ──────────────────────────────────────────── */}
-      <header className="glass sticky top-14 z-20 -mx-4 px-4 sm:-mx-6 sm:px-6">
+      {/* La franja de arriba dice de qué prueba es este ensayo sin ocupar una
+          palabra, con el mismo color que usan el titular de la portada, el
+          selector y el árbol. Dentro del ensayo el color no puede hacer más
+          que esto: lo demás es papel y grafito, porque acá el verde y el rojo
+          están reservados para la corrección. */}
+      <header
+        className="glass sticky top-14 z-20 -mx-4 border-t-2 px-4 sm:-mx-6 sm:px-6"
+        style={{ borderTopColor: COLOR_PRUEBA[attemptSubject] }}
+      >
         {/* Dos relojes y un contador juntos no se explican solos: quien entra
             por primera vez no tiene cómo saber cuál es cuál. Cada uno lleva su
             etiqueta encima.

@@ -30,7 +30,11 @@ export function PassagePanel({ passage }: { passage: Passage }) {
         </span>
       </div>
 
-      <div className="flex flex-col gap-3 text-sm leading-relaxed">
+      {/* En serif y no en la sans de la interfaz. No es adorno: este es el
+          único bloque del ensayo que se lee de corrido, y una serif lo separa
+          del cromo que lo rodea --enunciado, alternativas, relojes-- además de
+          sostener mejor varios párrafos seguidos en pantalla. */}
+      <div className="font-lectura flex flex-col gap-3 text-[0.95rem] leading-[1.7]">
         {passage.body.split("\n\n").map((parrafo, i) => (
           <TextoRico key={i} texto={parrafo} />
         ))}

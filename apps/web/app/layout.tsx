@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Sans, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { DatosEstructurados } from "@/components/datos-estructurados";
@@ -7,25 +7,44 @@ import { PageViewTracker } from "@/components/metrics/page-view-tracker";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
-// Dos fuentes con trabajos distintos: la geométrica para titulares y números
-// grandes, la de lectura para todo lo demás. `display: swap` deja el texto
-// visible mientras cargan, que en móvil con red mala es la diferencia entre
-// leer y esperar.
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+/* Tres fuentes, tres trabajos. Ninguna está por gusto.
+ *
+ * BRICOLAGE GROTESQUE para titulares y números. Es una grotesca variable con
+ * carácter: ancha, con remates cortados y un eje óptico que aprieta las
+ * mayúsculas cuando el tamaño sube. Reemplaza a Plus Jakarta, que es la fuente
+ * con la que se ve la mitad de internet y no decía nada de esta prueba.
+ *
+ * INSTRUMENT SANS para la interfaz y el texto corriente. Altura de x grande
+ * --clave para leer enunciados en un teléfono-- y figuras tabulares para los
+ * relojes y los puntajes.
+ *
+ * SOURCE SERIF para los textos de Competencia Lectora y la teoría de las
+ * lecciones. No es decoración: son los dos lugares donde se lee de corrido y
+ * en pantalla, y una serif marca "esto es un texto para leer", distinto del
+ * cromo de la interfaz que lo rodea.
+ *
+ * Se fue la monoespaciada: `tabular-nums` alinea el reloj igual de bien y sin
+ * una cuarta familia que descargar en un 4G chileno.
+ *
+ * `display: swap` deja el texto visible mientras cargan, que en móvil con red
+ * mala es la diferencia entre leer y esperar.
+ */
+const bricolage = Bricolage_Grotesque({
+  variable: "--fuente-display",
   subsets: ["latin"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const instrument = Instrument_Sans({
+  variable: "--fuente-ui",
   subsets: ["latin"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sourceSerif = Source_Serif_4({
+  variable: "--fuente-lectura",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const BASE_URL = "https://1000paes.cl";
@@ -103,7 +122,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${jakarta.variable} ${inter.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${bricolage.variable} ${instrument.variable} ${sourceSerif.variable} h-full antialiased`}
       // El scroll suave es nuestro y deliberado; sin este atributo Next avisa
       // en cada carga que podría interferir con sus transiciones de ruta.
       data-scroll-behavior="smooth"

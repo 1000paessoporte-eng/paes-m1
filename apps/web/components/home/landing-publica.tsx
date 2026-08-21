@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { diasHastaPaes } from "@/lib/paes-fecha";
 import { CuentaRegresiva } from "@/components/home/cuenta-regresiva";
 import { nombreLegible, slugUniversidad } from "@/lib/carreras";
+import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 
 /** Portada para visitantes sin sesión: nombre, entrada y qué ofrece el sitio. */
 
@@ -91,12 +92,19 @@ const DATOS = [
 
 // Las cinco pruebas, en el orden en que las rinde un postulante. Rotan dentro
 // del titular; la primera es la que ve quien no tiene JavaScript.
+/* Los nombres van CORTOS, como los dice cualquiera en un tercero medio.
+   "Competencia Lectora" ocupaba dos líneas en un teléfono de 390px, y como el
+   alto del titular lo reserva la palabra más larga, las otras cuatro dejaban
+   una línea en blanco debajo: un hueco de 40px en lo primero que ve quien
+   llega. Con todas de una línea, el hueco desaparece.
+
+   Cada una lleva su color, el mismo que usa el árbol y el selector de ensayo. */
 const PRUEBAS_ROTATIVAS = [
-  "Competencia Lectora",
-  "Matemática M1",
-  "Matemática M2",
-  "Ciencias",
-  "Historia",
+  { palabra: "Lectora", color: "var(--prueba-lectora)" },
+  { palabra: "Matemática M1", color: "var(--prueba-m1)" },
+  { palabra: "Matemática M2", color: "var(--prueba-m2)" },
+  { palabra: "Ciencias", color: "var(--prueba-ciencias)" },
+  { palabra: "Historia", color: "var(--prueba-historia)" },
 ];
 
 /** Las cinco pruebas, para entrar directo a la demo de cada una. */
@@ -215,9 +223,15 @@ export function LandingPublica({
                 <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
                   {PRUEBAS_DEMO.map((p) => (
                     <li key={p.id}>
+                      {/* Cada prueba con su color, el mismo del titular que
+                          rota, del árbol y del selector de ensayo. Eran cinco
+                          píldoras grises idénticas: el código de color del
+                          producto entero se enseña acá, en el primer contacto,
+                          sin una sola palabra de explicación. */}
                       <Link
                         href={`/demo?prueba=${p.id}`}
-                        className="inline-flex rounded-full border border-accent/40 bg-accent/5 px-3.5 py-1.5 text-xs font-medium text-accent transition-colors hover:bg-accent/10"
+                        style={{ "--c": COLOR_PRUEBA[p.id] } as React.CSSProperties}
+                        className="inline-flex rounded-full border border-(--c)/45 bg-(--c)/6 px-3.5 py-1.5 text-xs font-semibold text-(--c) transition-colors hover:bg-(--c)/12"
                       >
                         {p.corto}
                       </Link>
@@ -227,34 +241,12 @@ export function LandingPublica({
               </div>
 
               <p className="text-sm text-muted">
-                <Link
-                  href="/login"
-                  className="underline-offset-4 hover:text-foreground hover:underline"
-                >
+                <Link href="/login" className="text-accent">
                   Ya tengo cuenta
                 </Link>
               </p>
             </div>
 
-            {/* El detalle, después de la acción: quien ya decidió no lo
-                necesita, y a quien duda le sigue estando ahí. */}
-            <p className="max-w-xl text-balance text-muted">
-              Con el tiempo real de cada prueba, tu puntaje estimado según las
-              tablas oficiales del DEMRE y la resolución paso a paso de cada
-              ejercicio. Practica, mide y mejora.
-            </p>
-
-            <ul className="flex flex-wrap justify-center gap-2 lg:justify-start">
-              {DATOS.map((dato) => (
-                <li
-                  key={dato.label}
-                  className="flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
-                >
-                  <dato.icon className="text-accent" />
-                  {dato.label}
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div className="relative mx-auto w-full max-w-sm lg:mx-0">

@@ -27,7 +27,13 @@ import { useEffect, useState } from "react";
 
 const INTERVALO_MS = 2400;
 
-export function TituloRotativo({ palabras }: { palabras: string[] }) {
+export interface PruebaRotativa {
+  palabra: string;
+  /** El token de color de esa prueba. */
+  color: string;
+}
+
+export function TituloRotativo({ palabras }: { palabras: PruebaRotativa[] }) {
   const quieto = useReducedMotion();
   const [i, setI] = useState(0);
 
@@ -42,7 +48,10 @@ export function TituloRotativo({ palabras }: { palabras: string[] }) {
 
   // El ancho lo fija la palabra más larga, medida con un duplicado invisible:
   // sin esto el resto del título se corre en cada cambio y el bloque "salta".
-  const masLarga = palabras.reduce((a, b) => (a.length >= b.length ? a : b), "");
+  const masLarga = palabras.reduce(
+    (a, b) => (a.palabra.length >= b.palabra.length ? a : b),
+    palabras[0]
+  ).palabra;
 
   return (
     <span className="relative inline-grid align-bottom">
@@ -52,14 +61,20 @@ export function TituloRotativo({ palabras }: { palabras: string[] }) {
       <span className="col-start-1 row-start-1 overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
-            key={palabras[i]}
-            className="texto-marca inline-block"
+            key={palabras[i].palabra}
+            className="inline-block"
+            /* Cada prueba se dice en SU color, el mismo del árbol y del
+               selector de ensayo. Antes el titular llevaba el degradado de
+               marca, que no significaba nada; ahora el color del titular es
+               un dato: te está mostrando las cinco pruebas y su código de
+               color al mismo tiempo. */
+            style={{ color: palabras[i].color }}
             initial={quieto ? false : { y: "0.9em", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={quieto ? undefined : { y: "-0.9em", opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            {palabras[i]}
+            {palabras[i].palabra}
           </motion.span>
         </AnimatePresence>
       </span>

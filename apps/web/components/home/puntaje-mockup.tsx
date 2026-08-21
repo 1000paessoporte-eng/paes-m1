@@ -23,11 +23,21 @@ import { BarraProgreso } from "@/components/ui/barra-progreso";
  * final. La animación ocurre encima de algo que ya está correcto.
  */
 
+/* Los cuatro ejes van del MISMO color, el de la prueba a la que pertenecen.
+   Llevaban cuatro colores distintos --violeta, cian, verde, naranjo-- y eso
+   dice algo falso: sugiere que cada eje es una categoría de otra naturaleza,
+   cuando son la misma medida (porcentaje de acierto) sobre cuatro temas. Lo
+   que se compara es el LARGO de la barra, y con cuatro colores el ojo compara
+   colores. Peor: el verde y el naranjo ya significan "bien" y "atención" en
+   el resto del producto, así que Geometría parecía aprobada y Probabilidad
+   parecía una alerta.
+
+   El ejemplo es de Matemática M1, así que el color es el de M1. */
 const EJES = [
-  { nombre: "Números", valor: 82, color: "var(--accent)" },
-  { nombre: "Álgebra y funciones", valor: 74, color: "var(--accent-2)" },
-  { nombre: "Geometría", valor: 65, color: "var(--success)" },
-  { nombre: "Probabilidad", valor: 58, color: "var(--warning)" },
+  { nombre: "Números", valor: 82 },
+  { nombre: "Álgebra y funciones", valor: 74 },
+  { nombre: "Geometría", valor: 65 },
+  { nombre: "Probabilidad", valor: 58 },
 ] as const;
 
 const PUNTAJE = 780;
@@ -68,7 +78,7 @@ export function PuntajeMockup() {
               cy="52"
               r={radio}
               fill="none"
-              stroke="var(--accent)"
+              stroke="var(--prueba-m1)"
               strokeWidth="8"
               strokeLinecap="round"
               strokeDasharray={circunferencia}
@@ -100,7 +110,7 @@ export function PuntajeMockup() {
                   el desglose, que es el orden en que se lee un resultado. */}
               <BarraProgreso
                 porcentaje={eje.valor}
-                color={eje.color}
+                color="var(--prueba-m1)"
                 etiqueta={`${eje.nombre}: ${eje.valor}%`}
                 alto="h-1.5"
                 delay={0.75 + i * 0.12}

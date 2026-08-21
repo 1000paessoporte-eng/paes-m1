@@ -90,7 +90,11 @@ export function LeccionView({
           Lo que hay que saber
         </h2>
         <div className="mt-4 leading-relaxed">
-          <TextoRico texto={leccion.theory} />
+          {/* La teoría en serif: junto con los textos de Lectora, son los dos
+              lugares del producto donde se lee de corrido. */}
+          <div className="font-lectura text-[1.02rem] leading-[1.65]">
+            <TextoRico texto={leccion.theory} />
+          </div>
         </div>
       </section>
 
