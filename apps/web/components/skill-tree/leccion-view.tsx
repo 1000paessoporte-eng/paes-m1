@@ -43,7 +43,7 @@ export function LeccionView({
 
   // La sesión se lee acá y no en el servidor a propósito: sin eso la página
   // tendría que consultar la cookie al renderizar, y una página que lee la
-  // cookie no se puede prerenderizar. Estas 17 lecciones existen sobre todo
+  // cookie no se puede prerenderizar. Estas lecciones existen sobre todo
   // para quien llega de Google sin cuenta, así que se sirven estáticas y lo
   // único que depende de la sesión —el botón de practicar y el atajo de saltar
   // los pasos— se resuelve en el navegador.
