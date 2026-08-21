@@ -199,7 +199,7 @@ export function LeccionView({
               ? `/practicar/${leccion.node_code}`
               : `/registro?next=/practicar/${leccion.node_code}`
           }
-          className="btn-warm shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold text-on-fill"
+          className="btn-glow shrink-0 rounded-lg px-5 py-2.5 text-sm font-semibold text-accent-foreground"
         >
           Practicar este tema →
         </Link>
