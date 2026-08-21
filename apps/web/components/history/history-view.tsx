@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import { cn } from "@paes-m1/utils";
 import { ProgressChart } from "@/components/history/progress-chart";
 import { AvancePanel } from "@/components/history/avance-panel";
 import { HitosPanel } from "@/components/history/hitos-panel";
