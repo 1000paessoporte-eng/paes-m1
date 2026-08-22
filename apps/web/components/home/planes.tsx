@@ -273,24 +273,26 @@ export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean })
                 </p>
               )}
               <p className={plan.precioNormal ? "mt-1 flex items-baseline gap-1.5" : "mt-4 flex items-baseline gap-1.5"}>
-                <span
-                  className={
-                    plan.disponible
-                      ? "text-3xl font-bold tracking-tight text-success"
-                      : "text-3xl font-bold tracking-tight"
-                  }
-                >
+                {/* El precio NO va en verde. En este producto el verde
+                    significa "correcto" --una respuesta acertada, un mínimo
+                    alcanzado--; usarlo para decir "gratis" es gastar un color
+                    de estado en decoración, que es justo lo que el resto del
+                    sistema evita. */}
+                <span className="font-display text-3xl font-bold tracking-tight">
                   {plan.precio}
                 </span>
                 {plan.periodo && (
                   <span className="text-sm text-muted">{plan.periodo}</span>
                 )}
               </p>
-              {plan.alternativa && (
-                <p className="mt-1 text-xs leading-relaxed text-muted">
-                  {plan.alternativa}
-                </p>
-              )}
+              {/* La ranura se reserva SIEMPRE, tenga o no texto. Una tabla de
+                  precios existe para comparar en horizontal, y como solo el
+                  plan Pro traía esta línea, "Cobro" y "Duración" caían a
+                  distinta altura en cada tarjeta y había que buscar cada dato
+                  en vez de leerlo de corrido. */}
+              <p className="mt-1 min-h-[2.5rem] text-xs leading-relaxed text-muted">
+                {plan.alternativa ?? ""}
+              </p>
 
               <dl className="mt-4 flex flex-col gap-1.5 border-y border-border py-3 text-xs">
                 <div className="flex justify-between gap-2">

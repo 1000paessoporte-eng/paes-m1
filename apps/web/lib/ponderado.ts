@@ -55,6 +55,31 @@ export const ETIQUETAS: Record<Factor, string> = {
   prueba_especial: "Prueba especial",
 };
 
+/**
+ * El color de cada factor.
+ *
+ * Las cinco pruebas PAES llevan SU color, el mismo del árbol, del ensayo y del
+ * titular de la portada. NEM, ranking y la prueba especial van en grafito, y
+ * esa diferencia no es estética: separa lo que el alumno RINDE de lo que trae
+ * de su colegio, que es la distinción más importante de esta pantalla y no se
+ * veía por ninguna parte.
+ */
+export const COLOR_FACTOR: Record<Factor, string> = {
+  nem: "var(--accent-2)",
+  ranking: "var(--accent-2)",
+  lectora: "var(--prueba-lectora)",
+  m1: "var(--prueba-m1)",
+  m2: "var(--prueba-m2)",
+  historia: "var(--prueba-historia)",
+  ciencias: "var(--prueba-ciencias)",
+  prueba_especial: "var(--accent-2)",
+};
+
+/** Si el factor es una de las cinco pruebas PAES. */
+export function esPruebaPaes(factor: Factor): boolean {
+  return ["lectora", "m1", "m2", "historia", "ciencias"].includes(factor);
+}
+
 /** El orden en que se muestran: NEM y ranking primero, como en el DEMRE. */
 const ORDEN: Factor[] = [
   "nem",

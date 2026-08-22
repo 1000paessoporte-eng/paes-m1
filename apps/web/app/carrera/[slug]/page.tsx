@@ -6,7 +6,7 @@ import { DatosEstructurados } from "@/components/datos-estructurados";
 import { SiteFooter } from "@/components/site-footer";
 import { ApiError, getCarrera, type CarreraPublica } from "@/lib/api";
 import { codigoDesdeSlug, nombreLegible, slugCarrera } from "@/lib/carreras";
-import { factoresDe } from "@/lib/ponderado";
+import { COLOR_FACTOR, esPruebaPaes, factoresDe } from "@/lib/ponderado";
 
 /**
  * La ficha pública de una carrera.
@@ -82,7 +82,7 @@ export default async function CarreraPage({ params }: Props) {
         <section className="hero-glow relative overflow-hidden px-6 pt-16 pb-10">
           <div className="bg-dot-grid pointer-events-none absolute inset-0 top-0 h-[16rem]" />
           <div className="relative mx-auto max-w-3xl">
-            <nav aria-label="Migas" className="text-sm text-muted-foreground">
+            <nav aria-label="Migas" className="text-sm text-muted">
               <Link href="/carreras" className="hover:text-accent">
                 Carreras
               </Link>
@@ -91,7 +91,7 @@ export default async function CarreraPage({ params }: Props) {
             </nav>
 
             <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">{nombre}</h1>
-            <p className="mt-2 text-lg text-muted-foreground">
+            <p className="mt-2 text-lg text-muted">
               {nombreLegible(carrera.universidad)} · sede {nombreLegible(carrera.sede)}
             </p>
 
@@ -127,7 +127,7 @@ export default async function CarreraPage({ params }: Props) {
             {/* Decir qué NO es este número importa tanto como el número: un
                 puntaje de corte y un mínimo de postulación son cosas distintas
                 y confundirlos hace que alguien no postule pudiendo. */}
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-sm text-muted">
               Son los requisitos oficiales de <strong>postulación</strong> del proceso{" "}
               {carrera.proceso}, no los puntajes de corte. El corte depende de quiénes
               postulen ese año y se conoce recién al cerrar el proceso.
@@ -138,32 +138,53 @@ export default async function CarreraPage({ params }: Props) {
         <section className="px-6 pb-12">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-xl font-semibold">Cómo se pondera</h2>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-sm text-muted">
               Cada factor pesa lo que fija la universidad. Suman 100%.
             </p>
 
-            <ul className="mt-4 space-y-2">
+            {/* Cada prueba PAES con SU color; NEM y ranking en grafito.
+                Antes todo era del mismo gris, en una pantalla que lista
+                literalmente las cinco pruebas. Y la diferencia de color no es
+                adorno: separa lo que el alumno RINDE de lo que trae de su
+                colegio, que es la distinción más importante de esta ficha.
+
+                La barra arranca pegada al nombre y ocupa el ancho: medía 128px
+                alineada a la derecha, así que distinguir un 30% de un 20% --el
+                trabajo entero de esta tabla-- costaba. */}
+            <ul className="mt-4 space-y-2.5">
               {factores.map(({ factor, etiqueta, peso }) => (
-                <li
-                  key={factor}
-                  className="flex items-center gap-4 rounded-lg border border-border bg-card p-3"
-                >
-                  <span className="min-w-0 flex-1 truncate text-sm">{etiqueta}</span>
+                <li key={factor} className="rounded-lg border border-border bg-surface p-3">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="min-w-0 truncate text-sm font-medium">
+                      {etiqueta}
+                      {!esPruebaPaes(factor) && (
+                        <span className="ml-2 text-xs font-normal text-muted">
+                          lo trae tu colegio
+                        </span>
+                      )}
+                    </span>
+                    <span className="shrink-0 text-sm font-semibold tabular-nums">
+                      {peso}%
+                    </span>
+                  </div>
                   <div
-                    className="h-2 w-32 overflow-hidden rounded-full bg-muted"
+                    className="mt-2 h-2 overflow-hidden rounded-full bg-surface-hover"
                     role="presentation"
                   >
-                    <div className="h-full bg-accent" style={{ width: `${peso}%` }} />
+                    <div
+                      className="h-full rounded-full"
+                      style={{
+                        width: `${peso}%`,
+                        backgroundColor: COLOR_FACTOR[factor],
+                      }}
+                    />
                   </div>
-                  <span className="w-12 text-right text-sm font-semibold tabular-nums">
-                    {peso}%
-                  </span>
                 </li>
               ))}
             </ul>
 
             {carrera.electivo_alternativo && (
-              <p className="mt-3 text-sm text-muted-foreground">
+              <p className="mt-3 text-sm text-muted">
                 Esta carrera acepta <strong>Historia ó Ciencias</strong>: ambas pesan lo
                 mismo y solo cuenta la mejor de las dos, así que basta con dar una.
               </p>
@@ -182,7 +203,7 @@ export default async function CarreraPage({ params }: Props) {
             <h2 className="text-lg font-semibold">
               ¿Te falta puntaje para {nombre}?
             </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="mt-2 text-sm text-muted">
               Rinde un ensayo con preguntas reales y mira exactamente qué temas te están
               costando. Gratis y sin tarjeta.
             </p>
@@ -202,7 +223,7 @@ export default async function CarreraPage({ params }: Props) {
             </div>
           </div>
 
-          <p className="mx-auto mt-6 max-w-3xl text-xs text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-3xl text-xs text-muted">
             Ponderaciones del proceso de admisión {carrera.proceso}, publicadas por el
             DEMRE. Código de carrera {carrera.codigo}.{" "}
             <a href={carrera.fuente} className="underline" rel="nofollow noopener">
@@ -246,8 +267,8 @@ function Dato({
   destacado?: boolean;
 }) {
   return (
-    <div className="rounded-xl border border-border bg-card p-4">
-      <p className="text-xs font-medium text-muted-foreground uppercase">{etiqueta}</p>
+    <div className="rounded-xl border border-border bg-surface p-4">
+      <p className="text-xs font-medium text-muted uppercase">{etiqueta}</p>
       {valor ? (
         <p
           className={
@@ -257,9 +278,9 @@ function Dato({
           {valor}
         </p>
       ) : (
-        <p className="mt-1 text-2xl font-semibold text-muted-foreground">—</p>
+        <p className="mt-1 text-2xl font-semibold text-muted">—</p>
       )}
-      <p className="mt-1 text-xs text-muted-foreground">{nota}</p>
+      <p className="mt-1 text-xs text-muted">{nota}</p>
     </div>
   );
 }
