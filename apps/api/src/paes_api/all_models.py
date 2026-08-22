@@ -8,12 +8,14 @@ importar modelos individuales."""
 
 from paes_api.modules.analytics.models import StudyStreak
 from paes_api.modules.billing.models import PromoCode, Subscription
+from paes_api.modules.colegios.models import Colegio, EnsayoProgramado
 from paes_api.modules.content.models import (
     Alternative,
     Lesson,
     Question,
     ReadingPassage,
 )
+from paes_api.modules.errores.models import ErrorCliente
 from paes_api.modules.exam_focus.models import (
     ExamAnswer,
     ExamAttempt,
@@ -29,6 +31,9 @@ from paes_api.modules.users.models import LoginEvent, PasswordResetToken, User
 __all__ = [
     "Alternative",
     "Carrera",
+    "Colegio",
+    "EnsayoProgramado",
+    "ErrorCliente",
     "ExamAnswer",
     "ExamAttempt",
     "ExamAttemptQuestion",

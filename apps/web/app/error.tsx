@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import { reportarError } from "@/lib/reportar-error";
 
 export default function Error({
   error,
@@ -12,6 +13,9 @@ export default function Error({
 }) {
   useEffect(() => {
     console.error(error);
+    // Sin esto, la pantalla de error solo la veía la persona a la que se le
+    // rompió la página: nosotros nunca nos enterábamos.
+    reportarError(error);
   }, [error]);
 
   return (

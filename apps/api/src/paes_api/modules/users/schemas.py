@@ -17,6 +17,10 @@ class UserOut(BaseModel):
     #: La web solo lo usa para mostrar u ocultar el enlace al panel. Quien
     #: manda es la API: /api/admin exige el rol en cada llamada.
     is_admin: bool = False
+    #: Si la cuenta pertenece a un curso. Solo sirve para decidir si el menú
+    #: muestra "Mi curso": enlazarlo para todo el mundo pondría en la barra una
+    #: sección que casi nadie tiene.
+    tiene_colegio: bool = False
 
 
 class RegisterIn(BaseModel):

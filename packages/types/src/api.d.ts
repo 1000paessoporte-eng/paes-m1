@@ -655,15 +655,47 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        get?: never;
+        /**
+         * Correr Recordatorios
+         * @description Manda los recordatorios del día. La llama el cron, no una persona.
+         *
+         *     ACEPTA GET, y ese es el arreglo. Los cron de Vercel disparan un GET con la
+         *     cabecera `Authorization: Bearer $CRON_SECRET`; este endpoint solo aceptaba
+         *     POST con una cabecera propia, así que la tarea programada respondía 405
+         *     todos los días a las 22:00 desde que se creó. Resultado: cero recordatorios
+         *     enviados en toda la vida del producto, con los siete usuarios teniéndolos
+         *     activados y siendo este el único mecanismo de retención que existe.
+         *
+         *     Se aceptan las dos formas --el Bearer de Vercel y la cabecera propia-- para
+         *     poder dispararlo a mano desde una terminal sin depender del formato del
+         *     proveedor.
+         *
+         *     Va protegido por un secreto compartido y no por sesión: quien la ejecuta es
+         *     una tarea programada, no un usuario. Sin el secreto configurado el endpoint
+         *     queda cerrado --404-- en vez de abierto: un disparador de correos masivos
+         *     accesible por internet es exactamente la clase de puerta que no se deja
+         *     entornada por comodidad.
+         */
+        get: operations["correr_recordatorios_api_reminders_run_get"];
         put?: never;
         /**
          * Correr Recordatorios
          * @description Manda los recordatorios del día. La llama el cron, no una persona.
          *
+         *     ACEPTA GET, y ese es el arreglo. Los cron de Vercel disparan un GET con la
+         *     cabecera `Authorization: Bearer $CRON_SECRET`; este endpoint solo aceptaba
+         *     POST con una cabecera propia, así que la tarea programada respondía 405
+         *     todos los días a las 22:00 desde que se creó. Resultado: cero recordatorios
+         *     enviados en toda la vida del producto, con los siete usuarios teniéndolos
+         *     activados y siendo este el único mecanismo de retención que existe.
+         *
+         *     Se aceptan las dos formas --el Bearer de Vercel y la cabecera propia-- para
+         *     poder dispararlo a mano desde una terminal sin depender del formato del
+         *     proveedor.
+         *
          *     Va protegido por un secreto compartido y no por sesión: quien la ejecuta es
          *     una tarea programada, no un usuario. Sin el secreto configurado el endpoint
-         *     queda cerrado —404— en vez de abierto: un disparador de correos masivos
+         *     queda cerrado --404-- en vez de abierto: un disparador de correos masivos
          *     accesible por internet es exactamente la clase de puerta que no se deja
          *     entornada por comodidad.
          */
@@ -1116,6 +1148,209 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/colegio": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Mi Colegio
+         * @description El curso al que pertenezco, o `null` si no pertenezco a ninguno.
+         */
+        get: operations["mi_colegio_api_colegio_get"];
+        put?: never;
+        /** Crear */
+        post: operations["crear_api_colegio_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/unirse": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Unirse */
+        post: operations["unirse_api_colegio_unirse_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/salir": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Salir
+         * @description Salir del curso. No borra nada de lo que la persona haya estudiado.
+         */
+        post: operations["salir_api_colegio_salir_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/alumnos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Alumnos */
+        get: operations["alumnos_api_colegio_alumnos_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/ejes": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Ejes */
+        get: operations["ejes_api_colegio_ejes_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/ensayos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Ensayos
+         * @description La agenda del curso: lo que viene, y lo reciente que ya pasó.
+         */
+        get: operations["listar_ensayos_api_colegio_ensayos_get"];
+        put?: never;
+        /** Agendar Ensayo */
+        post: operations["agendar_ensayo_api_colegio_ensayos_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/ensayos/{ensayo_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** Borrar Ensayo */
+        delete: operations["borrar_ensayo_api_colegio_ensayos__ensayo_id__delete"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/admin/todos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Listar Colegios */
+        get: operations["listar_colegios_api_colegio_admin_todos_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/colegio/admin/{colegio_id}/plan": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Fijar Plan
+         * @description Activa (o corta) el plan de un curso hasta una fecha.
+         *
+         *     Mientras esté al día, cada alumno del curso tiene los límites del plan Pro
+         *     sin suscripción propia: eso es lo que el colegio compró.
+         */
+        put: operations["fijar_plan_api_colegio_admin__colegio_id__plan_put"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/errores": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Listar Errores
+         * @description Los errores de las últimas dos semanas, el más repetido primero.
+         *
+         *     Se agrupan por mensaje y ruta: lo que hay que arreglar es el error, no cada
+         *     una de sus apariciones. Y se cuenta a cuántas CUENTAS distintas les pasó,
+         *     que es lo que separa un caso raro de algo que hay que soltar todo y mirar.
+         */
+        get: operations["listar_errores_api_errores_get"];
+        put?: never;
+        /**
+         * Registrar Error
+         * @description Guarda un error del navegador. Público: la mayoría revienta antes de
+         *     que haya sesión, y de esos justamente no nos enterábamos nunca.
+         *
+         *     NUNCA falla hacia el usuario: reportar que algo se rompió no puede ser lo
+         *     segundo que se rompe. Y está limitado por IP porque un error en bucle
+         *     dispara un reporte por cuadro.
+         */
+        post: operations["registrar_error_api_errores_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/health": {
         parameters: {
             query?: never;
@@ -1205,6 +1440,27 @@ export interface components {
             dias_activos: number;
             /** Por Prueba */
             por_prueba: components["schemas"]["ResultadoPrueba"][];
+        };
+        /** AlumnoOut */
+        AlumnoOut: {
+            /** User Id */
+            user_id: number;
+            /** Nombre */
+            nombre: string;
+            /** Email */
+            email: string;
+            /** Ensayos */
+            ensayos: number;
+            /** Mejor Puntaje */
+            mejor_puntaje: number | null;
+            /** Promedio */
+            promedio: number | null;
+            /** Ultimo Ensayo */
+            ultimo_ensayo: string | null;
+            /** Dias Sin Rendir */
+            dias_sin_rendir: number | null;
+            /** Respuestas Practica */
+            respuestas_practica: number;
         };
         /**
          * AlumnosOut
@@ -1461,6 +1717,40 @@ export interface components {
             /** Nunca Respondidas */
             nunca_respondidas: number;
         };
+        /**
+         * ColegioAdminOut
+         * @description Un curso visto desde el panel de administración.
+         */
+        ColegioAdminOut: {
+            /** Id */
+            id: number;
+            /** Nombre */
+            nombre: string;
+            /** Codigo */
+            codigo: string;
+            /** Alumnos */
+            alumnos: number;
+            /** Plan Hasta */
+            plan_hasta: string | null;
+            /**
+             * Creado En
+             * Format: date-time
+             */
+            creado_en: string;
+        };
+        /** ColegioOut */
+        ColegioOut: {
+            /** Id */
+            id: number;
+            /** Nombre */
+            nombre: string;
+            /** Codigo */
+            codigo?: string | null;
+            /** Es Profesor */
+            es_profesor: boolean;
+            /** Alumnos */
+            alumnos: number;
+        };
         /** ContenidoOut */
         ContenidoOut: {
             ensayos: components["schemas"]["ConteoPeriodo"];
@@ -1506,6 +1796,29 @@ export interface components {
             ultimos_30: number;
             /** Total */
             total: number;
+        };
+        /** CrearColegioIn */
+        CrearColegioIn: {
+            /** Nombre */
+            nombre: string;
+        };
+        /** CrearEnsayoIn */
+        CrearEnsayoIn: {
+            /** Titulo */
+            titulo: string;
+            subject: components["schemas"]["Subject"];
+            /**
+             * Fecha
+             * Format: date
+             */
+            fecha: string;
+            /**
+             * Question Count
+             * @default 65
+             */
+            question_count: number;
+            /** @default oficial */
+            pace: components["schemas"]["Pace"];
         };
         /** DailyStat */
         DailyStat: {
@@ -1622,6 +1935,20 @@ export interface components {
          */
         Difficulty: "facil" | "medio" | "dificil";
         /**
+         * EjeCursoOut
+         * @description Cómo va el curso completo en un eje del temario.
+         */
+        EjeCursoOut: {
+            /** Eje */
+            eje: string;
+            /** Nombre */
+            nombre: string;
+            /** Porcentaje */
+            porcentaje: number;
+            /** Respuestas */
+            respuestas: number;
+        };
+        /**
          * EliminarCuentaIn
          * @description Confirmación para borrar la cuenta.
          *
@@ -1704,6 +2031,26 @@ export interface components {
             /** Visitantes Convertidos */
             visitantes_convertidos: number;
         };
+        /** EnsayoProgramadoOut */
+        EnsayoProgramadoOut: {
+            /** Id */
+            id: number;
+            /** Titulo */
+            titulo: string;
+            subject: components["schemas"]["Subject"];
+            pace: components["schemas"]["Pace"];
+            /** Question Count */
+            question_count: number;
+            /**
+             * Fecha
+             * Format: date
+             */
+            fecha: string;
+            /** Rendido Por */
+            rendido_por?: number | null;
+            /** Lo Rendi */
+            lo_rendi?: boolean | null;
+        };
         /**
          * EnsayosOut
          * @description Qué se rinde y qué se abandona.
@@ -1721,6 +2068,41 @@ export interface components {
             duracion_mediana_min: number | null;
             /** Por Prueba */
             por_prueba: components["schemas"]["UsoPrueba"][];
+        };
+        /**
+         * ErrorClienteIn
+         * @description Lo que manda el navegador cuando algo revienta.
+         *
+         *     Todo viene acotado: el payload llega de internet sin sesión y no puede
+         *     servir para escribir megabytes en la base.
+         */
+        ErrorClienteIn: {
+            /** Mensaje */
+            mensaje: string;
+            /** Ruta */
+            ruta: string;
+            /** Pila */
+            pila?: string | null;
+        };
+        /** ErrorClienteOut */
+        ErrorClienteOut: {
+            /** Mensaje */
+            mensaje: string;
+            /** Ruta */
+            ruta: string;
+            /** Pila */
+            pila: string | null;
+            /** Navegador */
+            navegador: string | null;
+            /** Veces */
+            veces: number;
+            /**
+             * Ocurrido En
+             * Format: date-time
+             */
+            ocurrido_en: string;
+            /** Usuarios */
+            usuarios: number;
         };
         /**
          * ErrorRepetido
@@ -2285,6 +2667,11 @@ export interface components {
          * @enum {string}
          */
         Plan: "gratis" | "pro" | "colegios";
+        /** PlanColegioIn */
+        PlanColegioIn: {
+            /** Plan Hasta */
+            plan_hasta?: string | null;
+        };
         /**
          * PlanSemanalOut
          * @description El plan dimensionado con las horas que el estudiante declaró tener.
@@ -2690,6 +3077,11 @@ export interface components {
             token_type: string;
             user: components["schemas"]["UserOut"];
         };
+        /** UnirseIn */
+        UnirseIn: {
+            /** Codigo */
+            codigo: string;
+        };
         /**
          * UniversidadOut
          * @description Una universidad y cuántas carreras suyas hay en el catálogo.
@@ -2746,6 +3138,11 @@ export interface components {
              * @default false
              */
             is_admin: boolean;
+            /**
+             * Tiene Colegio
+             * @default false
+             */
+            tiene_colegio: boolean;
         };
         /** UsoPrueba */
         UsoPrueba: {
@@ -3981,10 +4378,45 @@ export interface operations {
             };
         };
     };
+    correr_recordatorios_api_reminders_run_get: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string;
+                "x-cron-secret"?: string;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: number;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     correr_recordatorios_api_reminders_run_post: {
         parameters: {
             query?: never;
             header?: {
+                authorization?: string;
                 "x-cron-secret"?: string;
             };
             path?: never;
@@ -4501,6 +4933,338 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["AdminMetricsOut"];
+                };
+            };
+        };
+    };
+    mi_colegio_api_colegio_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ColegioOut"] | null;
+                };
+            };
+        };
+    };
+    crear_api_colegio_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CrearColegioIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ColegioOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    unirse_api_colegio_unirse_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UnirseIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ColegioOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    salir_api_colegio_salir_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    alumnos_api_colegio_alumnos_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AlumnoOut"][];
+                };
+            };
+        };
+    };
+    ejes_api_colegio_ejes_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EjeCursoOut"][];
+                };
+            };
+        };
+    };
+    listar_ensayos_api_colegio_ensayos_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EnsayoProgramadoOut"][];
+                };
+            };
+        };
+    };
+    agendar_ensayo_api_colegio_ensayos_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CrearEnsayoIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EnsayoProgramadoOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    borrar_ensayo_api_colegio_ensayos__ensayo_id__delete: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                ensayo_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_colegios_api_colegio_admin_todos_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ColegioAdminOut"][];
+                };
+            };
+        };
+    };
+    fijar_plan_api_colegio_admin__colegio_id__plan_put: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                colegio_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PlanColegioIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ColegioAdminOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    listar_errores_api_errores_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ErrorClienteOut"][];
+                };
+            };
+        };
+    };
+    registrar_error_api_errores_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ErrorClienteIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            204: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
