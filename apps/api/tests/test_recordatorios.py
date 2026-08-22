@@ -71,3 +71,41 @@ def test_el_endpoint_del_cron_esta_cerrado_sin_secreto(client: TestClient) -> No
     """Un disparador de correos masivos accesible por internet es la clase de
     puerta que no se deja entornada por comodidad."""
     assert client.post("/api/reminders/run").status_code == 404
+
+
+def test_el_cron_de_vercel_dispara_un_get_con_bearer(
+    client: TestClient, monkeypatch
+) -> None:
+    """El cron de Vercel manda GET con `Authorization: Bearer $CRON_SECRET`.
+
+    El endpoint solo aceptaba POST con una cabecera propia, así que la tarea
+    programada respondía 405 todos los días desde que se creó: cero
+    recordatorios enviados en la vida del producto, con este siendo el único
+    mecanismo de retención que existe. Este test es el que impide que vuelva a
+    pasar en silencio.
+    """
+    from paes_api.core.config import get_settings
+
+    get_settings.cache_clear()
+    monkeypatch.setenv("CRON_SECRET", "secreto-de-prueba")
+
+    resp = client.get(
+        "/api/reminders/run",
+        headers={"Authorization": "Bearer secreto-de-prueba"},
+    )
+    assert resp.status_code == 200, resp.text
+    assert "enviados" in resp.json()
+
+    # Y la cabecera propia sigue sirviendo, para dispararlo a mano.
+    otra = client.post(
+        "/api/reminders/run", headers={"x-cron-secret": "secreto-de-prueba"}
+    )
+    assert otra.status_code == 200
+
+    # Con el secreto equivocado, no.
+    mal = client.get(
+        "/api/reminders/run", headers={"Authorization": "Bearer otra-cosa"}
+    )
+    assert mal.status_code == 401
+
+    get_settings.cache_clear()

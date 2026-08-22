@@ -44,11 +44,19 @@ export function SiteHeader() {
 
   const items = user ? NAV_ITEMS : NAV_PUBLICO;
 
+  // "Mi curso" solo aparece si la persona pertenece a uno. Es una sección que
+  // casi nadie tiene, y enlazarla para todo el mundo llenaría la barra con
+  // algo que la mayoría abriría una vez para encontrar un formulario que no le
+  // sirve. Quien tiene un código lo escribe en /colegio, que sigue existiendo.
+  const conCurso = user?.tiene_colegio
+    ? [...items, { href: "/colegio", label: "Mi curso" } as const]
+    : items;
+
   // El panel de admin solo se enlaza para admins. Ocultarlo es comodidad, no
   // seguridad: /api/admin exige el rol en cada llamada.
   const navItems = user?.is_admin
-    ? [...items, { href: "/admin", label: "Admin" } as const]
-    : items;
+    ? [...conCurso, { href: "/admin", label: "Admin" } as const]
+    : conCurso;
 
   useEffect(() => {
     // Lectura de cookie (estado externo al DOM) tras montar: evita mismatch

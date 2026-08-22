@@ -147,12 +147,25 @@ const PLANES = [
     alternativa: "Desde un curso (30 alumnos). Sobre 200, conversemos",
     facturacion: "Por año escolar, con factura",
     duracion: "Todo el periodo contratado",
+    // Cada línea de acá corresponde a algo que el código hace hoy:
+    //
+    // - El plan Pro del curso: `plan_actual` mira el colegio y devuelve
+    //   COLEGIOS mientras esté pagado, con los mismos límites que Pro.
+    // - El código: seis letras que el profesor reparte. NO se prometen
+    //   "cuentas para el curso" porque el profesor no crea cuentas ajenas:
+    //   cada alumno hace la suya y se suma con el código.
+    // - Panel, informe por eje y agenda: /colegio.
+    //
+    // El punto que decía "fecha y hora de aplicación" pasó a decir solo fecha,
+    // porque es lo que hay: un ensayo que se cierra a una hora exacta no
+    // existe y prometerlo sería vender algo que el profesor descubriría el
+    // día de la prueba.
     incluye: [
-      "Todo lo del plan Pro para cada estudiante",
-      "Cuentas para el curso completo",
+      "Todo lo del plan Pro para cada estudiante del curso",
+      "Un código de seis letras: cada alumno entra con su propia cuenta",
       "Panel del profesor con el avance de cada alumno",
-      "Informes por estudiante, por curso y por eje temático",
-      "Ensayos programados con fecha y hora de aplicación",
+      "El curso por eje del temario: en qué están fallando todos",
+      "Ensayos programados con fecha, y quién los rindió",
     ],
     destacado: false,
     disponible: false,

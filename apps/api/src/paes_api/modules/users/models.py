@@ -31,6 +31,20 @@ class User(Base):
     #: `scripts/make_admin.py`: no hay forma de volverse admin desde la web,
     #: porque el panel expone datos de todas las cuentas.
     is_admin: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false")
+
+    #: El colegio al que pertenece, si entró con un código. NULL para quien usa
+    #: la plataforma por su cuenta, que es el caso normal.
+    #:
+    #: Va en el usuario y no en una tabla aparte porque una persona pertenece a
+    #: un curso a la vez: una tabla de membresías habilitaría estados que no
+    #: existen --dos colegios, o ninguno con fila-- sin comprar nada.
+    colegio_id: Mapped[int | None] = mapped_column(
+        ForeignKey("colegios.id"), nullable=True, index=True
+    )
+    #: True si es profesor de ese colegio. El resto son alumnos.
+    es_profesor: Mapped[bool] = mapped_column(
+        Boolean, default=False, server_default="false"
+    )
     #: Última entrada exitosa. Sirve para "quién sigue activo" sin recorrer
     #: toda la tabla de eventos.
     last_login_at: Mapped[datetime | None] = mapped_column(
@@ -92,6 +106,14 @@ class User(Base):
     def has_password(self) -> bool:
         """False en cuentas de Google que aún no definen una contraseña."""
         return self.hashed_password is not None
+
+    @property
+    def tiene_colegio(self) -> bool:
+        """Si la cuenta pertenece a un curso.
+
+        Existe para que /api/auth/me pueda decidir si el menú muestra
+        "Mi curso" sin una consulta aparte."""
+        return self.colegio_id is not None
 
 
 class LoginEvent(Base):

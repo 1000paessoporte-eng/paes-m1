@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { ApiError, getAdminMetrics, type AdminMetrics } from "@/lib/api";
+import {
+  ApiError,
+  getAdminMetrics,
+  getColegiosAdmin,
+  getErroresCliente,
+  type AdminMetrics,
+  type ColegioAdmin,
+  type ErrorCliente,
+} from "@/lib/api";
 import { TOKEN_COOKIE } from "@/lib/auth";
+import { ColegiosPanel } from "@/components/admin/colegios-panel";
+import { ErroresPanel } from "@/components/admin/errores-panel";
 import { SerieChart } from "@/components/admin/serie-chart";
 import { StatTile } from "@/components/analytics/stat-tile";
 
@@ -46,6 +56,20 @@ export default async function AdminPage() {
   // y lanzaba, dejando al admin sin ninguna métrica, ni siquiera las que sí
   // habían llegado. Cada sección nueva se dibuja solo si su dato existe.
   const p = m as Partial<AdminMetrics>;
+
+  // Los dos paneles nuevos van fuera del try de arriba y con su propio
+  // fallback: si la API todavía no tiene estos endpoints --el front y la API se
+  // despliegan por separado-- el panel de métricas debe seguir cargando.
+  let errores: ErrorCliente[] = [];
+  let colegios: ColegioAdmin[] = [];
+  try {
+    [errores, colegios] = await Promise.all([
+      getErroresCliente(token),
+      getColegiosAdmin(token),
+    ]);
+  } catch {
+    // Sin datos, las dos secciones se dibujan vacías.
+  }
 
   return (
     <div>
@@ -567,6 +591,16 @@ export default async function AdminPage() {
           vacio="Faltan respuestas para armar el ranking."
         />
       </Seccion>
+
+      {/* ── Errores del navegador ───────────────────────────────────── */}
+      <Seccion titulo="Errores en el navegador · últimas 2 semanas">
+        <ErroresPanel errores={errores} />
+      </Seccion>
+
+      {/* ── Colegios ────────────────────────────────────────────────── */}
+      <Seccion titulo="Colegios">
+        <ColegiosPanel colegios={colegios} />
+      </Seccion>
     </div>
   );
 }
@@ -681,6 +715,7 @@ function Tabla({
           </table>
         </div>
       )}
+
     </div>
   );
 }

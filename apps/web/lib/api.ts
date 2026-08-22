@@ -650,3 +650,99 @@ export function getCarrera(codigo: string): Promise<CarreraPublica> {
     next: { revalidate: 86400 },
   });
 }
+
+// --- Plan Colegios --------------------------------------------------------
+
+export type MiColegio =
+  paths["/api/colegio"]["get"]["responses"][200]["content"]["application/json"];
+export type AlumnoDelCurso =
+  paths["/api/colegio/alumnos"]["get"]["responses"][200]["content"]["application/json"][number];
+export type EjeDelCurso =
+  paths["/api/colegio/ejes"]["get"]["responses"][200]["content"]["application/json"][number];
+export type EnsayoProgramado =
+  paths["/api/colegio/ensayos"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export function getMiColegio(token?: string): Promise<MiColegio> {
+  return apiFetch<MiColegio>("/api/colegio", token);
+}
+
+export function crearColegio(nombre: string, token?: string): Promise<MiColegio> {
+  return apiFetch<MiColegio>("/api/colegio", token, {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ nombre }),
+  });
+}
+
+export function unirseAColegio(codigo: string, token?: string): Promise<MiColegio> {
+  return apiFetch<MiColegio>("/api/colegio/unirse", token, {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ codigo }),
+  });
+}
+
+export function salirDelColegio(token?: string): Promise<void> {
+  return apiFetch<void>("/api/colegio/salir", token, { method: "POST" });
+}
+
+export function getAlumnosDelCurso(token?: string): Promise<AlumnoDelCurso[]> {
+  return apiFetch<AlumnoDelCurso[]>("/api/colegio/alumnos", token);
+}
+
+export function getEjesDelCurso(token?: string): Promise<EjeDelCurso[]> {
+  return apiFetch<EjeDelCurso[]>("/api/colegio/ejes", token);
+}
+
+export function getEnsayosDelCurso(token?: string): Promise<EnsayoProgramado[]> {
+  return apiFetch<EnsayoProgramado[]>("/api/colegio/ensayos", token);
+}
+
+export function agendarEnsayo(
+  payload: {
+    titulo: string;
+    subject: Subject;
+    fecha: string;
+    question_count?: number;
+    pace?: Pace;
+  },
+  token?: string
+): Promise<EnsayoProgramado> {
+  return apiFetch<EnsayoProgramado>("/api/colegio/ensayos", token, {
+    method: "POST",
+    headers: JSON_HEADERS,
+    body: JSON.stringify(payload),
+  });
+}
+
+export function borrarEnsayoProgramado(id: number, token?: string): Promise<void> {
+  return apiFetch<void>(`/api/colegio/ensayos/${id}`, token, { method: "DELETE" });
+}
+
+export type ColegioAdmin =
+  paths["/api/colegio/admin/todos"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export function getColegiosAdmin(token?: string): Promise<ColegioAdmin[]> {
+  return apiFetch<ColegioAdmin[]>("/api/colegio/admin/todos", token);
+}
+
+export function fijarPlanColegio(
+  id: number,
+  plan_hasta: string | null,
+  token?: string
+): Promise<ColegioAdmin> {
+  return apiFetch<ColegioAdmin>(`/api/colegio/admin/${id}/plan`, token, {
+    method: "PUT",
+    headers: JSON_HEADERS,
+    body: JSON.stringify({ plan_hasta }),
+  });
+}
+
+// --- Errores del navegador ------------------------------------------------
+
+export type ErrorCliente =
+  paths["/api/errores"]["get"]["responses"][200]["content"]["application/json"][number];
+
+export function getErroresCliente(token?: string): Promise<ErrorCliente[]> {
+  return apiFetch<ErrorCliente[]>("/api/errores", token);
+}

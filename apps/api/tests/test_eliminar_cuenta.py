@@ -92,6 +92,8 @@ def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
     # Las que `eliminar_cuenta` borra o desvincula hoy. Si agregas una tabla,
     # agrégala también allá y acá.
     cubiertas = {
+        "colegios",  # no se borra: el curso pierde a su creador y sigue vivo
+        "errores_cliente",  # no se borra: se le quita el dueño
         "exam_attempts",
         "login_events",
         "page_views",  # no se borra: se le quita el dueño
@@ -102,6 +104,7 @@ def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
         "user_goals",  # el modelo se llama MetaUsuario
         "subscriptions",
         "user_skill_progress",
+        "users",  # users.colegio_id apunta a colegios, no a users
     }
 
     faltan = apuntan_a_users - cubiertas
@@ -109,3 +112,36 @@ def test_ninguna_tabla_apunta_a_users_sin_estar_en_el_borrado() -> None:
         f"Estas tablas cuelgan de users y no las borra eliminar_cuenta: {sorted(faltan)}. "
         "Agrégalas en users/service.py o el borrado de cuenta va a fallar."
     )
+
+
+def test_el_profesor_se_borra_y_el_curso_sigue_en_pie(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """Adentro del curso hay alumnos que no pidieron nada.
+
+    La política de privacidad promete borrar la cuenta cuando se pide, así que
+    negarse no es opción; borrar el curso con sus treinta alumnos adentro,
+    tampoco. El colegio pierde a su creador y sigue funcionando.
+    """
+    from paes_api.modules.colegios.models import Colegio
+
+    profe, _ = register_user(email="profe@milpaes.cl", password="clave1234")
+    codigo = client.post(
+        "/api/colegio", json={"nombre": "Liceo A-1"}, headers=profe
+    ).json()["codigo"]
+
+    alumno, _ = register_user(email="alumna@milpaes.cl", password="clave1234")
+    client.post("/api/colegio/unirse", json={"codigo": codigo}, headers=alumno)
+
+    resp = client.request(
+        "DELETE", "/api/auth/me", headers=profe, json={"password": "clave1234"}
+    )
+    assert resp.status_code == 204, resp.text
+
+    colegio = db_session.execute(select(Colegio)).scalars().one()
+    assert colegio.creado_por is None
+    # Y la alumna sigue adentro, con su curso intacto.
+    alumna = db_session.execute(
+        select(User).where(User.email == "alumna@milpaes.cl")
+    ).scalar_one()
+    assert alumna.colegio_id == colegio.id
