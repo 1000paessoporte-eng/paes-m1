@@ -77,7 +77,7 @@ export default async function UniversidadPage({ params }: Props) {
         <section className="hero-glow relative overflow-hidden px-6 pt-16 pb-10">
           <div className="bg-dot-grid pointer-events-none absolute inset-0 top-0 h-[14rem]" />
           <div className="relative mx-auto max-w-3xl">
-            <nav aria-label="Migas" className="text-sm text-muted-foreground">
+            <nav aria-label="Migas" className="text-sm text-muted">
               <Link href="/carreras" className="hover:text-accent">
                 Carreras
               </Link>
@@ -85,7 +85,7 @@ export default async function UniversidadPage({ params }: Props) {
             <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
               {nombreLegible(datos.nombre)}
             </h1>
-            <p className="mt-2 text-muted-foreground">
+            <p className="mt-2 text-muted">
               {datos.carreras.length} carreras con ponderaciones oficiales
             </p>
           </div>
@@ -95,7 +95,7 @@ export default async function UniversidadPage({ params }: Props) {
           <div className="mx-auto max-w-3xl space-y-8">
             {[...porSede.entries()].map(([sede, carreras]) => (
               <div key={sede}>
-                <h2 className="text-sm font-semibold text-muted-foreground uppercase">
+                <h2 className="text-sm font-semibold text-muted uppercase">
                   {nombreLegible(sede)}
                 </h2>
                 <ul className="mt-3 grid gap-2">
@@ -103,7 +103,7 @@ export default async function UniversidadPage({ params }: Props) {
                     <li key={c.codigo}>
                       <Link
                         href={`/carrera/${slugCarrera(c)}`}
-                        className="block rounded-lg border border-border bg-card p-3 text-sm transition-colors hover:border-accent/40"
+                        className="block rounded-lg border border-border bg-surface p-3 text-sm transition-colors hover:border-accent/40"
                       >
                         {nombreLegible(c.nombre)}
                       </Link>

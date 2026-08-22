@@ -51,6 +51,8 @@ export default async function CarrerasPage() {
   }
 
   const totalCarreras = universidades.reduce((suma, u) => suma + u.carreras, 0);
+  // La universidad más grande fija la escala de las barras del listado.
+  const maxCarreras = universidades.reduce((m, u) => Math.max(m, u.carreras), 1);
 
   return (
     <>
@@ -66,7 +68,7 @@ export default async function CarrerasPage() {
                 ? `Ponderaciones de ${totalCarreras.toLocaleString("es-CL")} carreras`
                 : "Carreras y ponderaciones PAES"}
             </h1>
-            <p className="mt-3 text-lg text-muted-foreground">
+            <p className="mt-3 text-lg text-muted">
               Cuánto pesa cada prueba en cada carrera, el ponderado mínimo para postular y
               las vacantes. Busca la tuya o elige tu universidad, y simula tu puntaje.
             </p>
@@ -93,22 +95,38 @@ export default async function CarrerasPage() {
             </h2>
 
             {universidades.length === 0 && (
-              <p className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
+              <p className="rounded-lg border border-border bg-surface p-4 text-sm text-muted">
                 No pudimos cargar el listado en este momento. Vuelve a intentarlo en unos
                 minutos: los datos están, es la conexión la que falló.
               </p>
             )}
 
+            {/* Eran 47 rectángulos idénticos con un número suelto al lado:
+                "126" no dice qué cuenta, y sin nada que distinga una fila de
+                otra la lista no se puede recorrer con la vista. La barra es
+                proporcional al total de carreras, así que el mismo dato que ya
+                estaba ahí ahora se lee sin leerlo. */}
             <ul className="grid gap-2 sm:grid-cols-2">
               {universidades.map(({ universidad, carreras }) => (
                 <li key={universidad}>
                   <Link
                     href={`/carreras/${slugUniversidad(universidad)}`}
-                    className="flex items-center justify-between gap-3 rounded-lg border border-border bg-card p-3 transition-colors hover:border-accent/40"
+                    className="block rounded-lg border border-border bg-surface p-3 transition-colors hover:border-border-strong"
                   >
-                    <span className="min-w-0 flex-1 text-sm">{nombreLegible(universidad)}</span>
-                    <span className="shrink-0 text-xs text-muted-foreground tabular-nums">
-                      {carreras}
+                    <span className="flex items-baseline justify-between gap-3">
+                      <span className="min-w-0 flex-1 truncate text-sm">
+                        {nombreLegible(universidad)}
+                      </span>
+                      <span className="shrink-0 text-xs text-muted">
+                        <strong className="text-foreground tabular-nums">{carreras}</strong>{" "}
+                        {carreras === 1 ? "carrera" : "carreras"}
+                      </span>
+                    </span>
+                    <span className="mt-2 block h-1 rounded-full bg-surface-hover">
+                      <span
+                        className="block h-full rounded-full bg-accent-2"
+                        style={{ width: `${Math.max(3, (carreras / maxCarreras) * 100)}%` }}
+                      />
                     </span>
                   </Link>
                 </li>

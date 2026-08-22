@@ -29,9 +29,9 @@ export function SimuladorCarrera({ carrera }: { carrera: CarreraPublica }) {
       : null;
 
   return (
-    <div className="rounded-xl border border-border bg-card p-6">
+    <div className="rounded-xl border border-border bg-surface p-6">
       <h2 className="text-xl font-semibold">Simula tu puntaje ponderado</h2>
-      <p className="mt-1 text-sm text-muted-foreground">
+      <p className="mt-1 text-sm text-muted">
         Escribe los puntajes que tienes o que crees que puedes sacar. El cálculo es el
         oficial y no se guarda nada.
       </p>
@@ -49,14 +49,14 @@ export function SimuladorCarrera({ carrera }: { carrera: CarreraPublica }) {
       </div>
 
       {carrera.electivo_alternativo && (
-        <p className="mt-3 text-xs text-muted-foreground">
+        <p className="mt-3 text-xs text-muted">
           Solo cuenta la mejor entre Historia y Ciencias: basta con que llenes una.
         </p>
       )}
 
       <div className="mt-6 border-t border-border pt-5">
         {ponderado == null ? (
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted">
             Completa los puntajes de arriba para ver tu ponderado. Dejamos el resultado en
             blanco a propósito mientras falte alguno: un ponderado a medias es un número
             creíble y equivocado.
@@ -64,7 +64,7 @@ export function SimuladorCarrera({ carrera }: { carrera: CarreraPublica }) {
         ) : (
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-medium text-muted-foreground uppercase">
+              <p className="text-xs font-medium text-muted uppercase">
                 Tu ponderado
               </p>
               {/* Figuras proporcionales, no tabulares: es una cifra hero, no
@@ -74,7 +74,7 @@ export function SimuladorCarrera({ carrera }: { carrera: CarreraPublica }) {
 
             {minimo != null && (
               <div className="text-right">
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-muted">
                   Mínimo de postulación: {minimo}
                 </p>
                 {alcanza ? (
@@ -92,7 +92,7 @@ export function SimuladorCarrera({ carrera }: { carrera: CarreraPublica }) {
         )}
 
         {minimo == null && ponderado != null && (
-          <p className="mt-3 text-sm text-muted-foreground">
+          <p className="mt-3 text-sm text-muted">
             Esta carrera no publicó un ponderado mínimo, así que no podemos decirte si
             alcanzas. El número de arriba es tu ponderado con estas ponderaciones.
           </p>

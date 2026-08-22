@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DatosEstructurados } from "@/components/datos-estructurados";
 import { SiteFooter } from "@/components/site-footer";
-import { getLecciones, type LeccionIndice } from "@/lib/api";
+import { getLecciones, type LeccionIndice, type Subject } from "@/lib/api";
+import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 
 /**
  * El índice de lecciones.
@@ -81,8 +82,21 @@ export default async function AprenderIndicePage() {
             )}
 
             {[...porPrueba.entries()].map(([subject, ejes]) => (
+              // Cada prueba con SU color, el mismo del árbol, del ensayo y
+              // del titular de la portada. Las cinco secciones eran títulos
+              // negros idénticos sobre listas grises idénticas: con 53
+              // lecciones en una sola página, saber de un vistazo dónde
+              // empieza y termina cada prueba es la mitad del trabajo.
               <div key={subject} className="mt-10 first:mt-0">
-                <h2 className="text-xl font-semibold tracking-tight">
+                <h2 className="flex items-center gap-2.5 text-xl font-semibold tracking-tight">
+                  <span
+                    aria-hidden
+                    className="h-5 w-1.5 shrink-0 rounded-full"
+                    style={{
+                      backgroundColor:
+                        COLOR_PRUEBA[subject as Subject] ?? "var(--accent)",
+                    }}
+                  />
                   {NOMBRE_PRUEBA[subject] ?? subject}
                 </h2>
                 {[...ejes.entries()].map(([eje, items]) => (
@@ -98,7 +112,14 @@ export default async function AprenderIndicePage() {
                             className="card-hover flex items-center justify-between gap-3 rounded-lg border border-border bg-surface p-3 text-sm"
                           >
                             <span className="min-w-0 flex-1">{l.node_name}</span>
-                            <span aria-hidden className="shrink-0 text-muted">
+                            <span
+                              aria-hidden
+                              className="shrink-0"
+                              style={{
+                                color:
+                                  COLOR_PRUEBA[subject as Subject] ?? "var(--muted)",
+                              }}
+                            >
                               →
                             </span>
                           </Link>
