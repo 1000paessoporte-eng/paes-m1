@@ -34,6 +34,8 @@ export interface AuthUser {
   /** Solo decide si se muestra el enlace al panel. La API vuelve a comprobarlo
    *  en cada llamada, así que editar la cookie no da acceso a nada. */
   is_admin?: boolean;
+  /** Si pertenece a un curso. Solo decide si el menú enlaza "Mi curso". */
+  tiene_colegio?: boolean;
 }
 
 function readCookie(name: string): string | null {
@@ -74,6 +76,21 @@ export function getClientToken(): string | null {
 export function loginHref(next?: string | null): string {
   if (!next) return "/login";
   return `/login?next=${encodeURIComponent(next)}`;
+}
+
+/**
+ * Corrige la copia local del usuario sin volver a iniciar sesión.
+ *
+ * La cookie con los datos del usuario se escribe al entrar y no se vuelve a
+ * tocar. Eso está bien para el nombre y el correo, pero no para pertenecer a
+ * un curso: alguien que se suma con el código lo hace a mitad de sesión, y sin
+ * esto el menú no mostraría "Mi curso" hasta el siguiente login.
+ */
+export function actualizarUsuarioLocal(cambios: Partial<AuthUser>) {
+  const actual = getClientUser();
+  const token = getClientToken();
+  if (!actual || !token) return;
+  setClientAuth(token, { ...actual, ...cambios });
 }
 
 export function getClientUser(): AuthUser | null {

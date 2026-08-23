@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { reportarError } from "@/lib/reportar-error";
 import "./globals.css";
 
 export default function GlobalError({
@@ -12,6 +13,9 @@ export default function GlobalError({
 }) {
   useEffect(() => {
     console.error(error);
+    // Sin esto, la pantalla de error solo la veía la persona a la que se le
+    // rompió la página: nosotros nunca nos enterábamos.
+    reportarError(error);
   }, [error]);
 
   return (

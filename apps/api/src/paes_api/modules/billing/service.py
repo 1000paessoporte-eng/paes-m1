@@ -189,7 +189,30 @@ def plan_actual(db: Session, user_id: int) -> tuple[Plan, Subscription | None]:
     if cambios:
         db.commit()
 
-    return (vigente.plan if vigente else Plan.GRATIS), vigente
+    if vigente is not None:
+        return vigente.plan, vigente
+
+    # Sin suscripción propia, el plan puede venir del colegio: eso es
+    # exactamente lo que compra un establecimiento. Se devuelve sin
+    # suscripción porque la suscripción no es de esta persona --el colegio
+    # pagó por el curso-- y no hay nada que esta cuenta pueda cancelar.
+    if _colegio_con_plan(db, user_id):
+        return Plan.COLEGIOS, None
+
+    return Plan.GRATIS, None
+
+
+def _colegio_con_plan(db: Session, user_id: int) -> bool:
+    """Si la persona pertenece a un curso con el plan al día."""
+    from paes_api.modules.colegios.models import Colegio
+    from paes_api.modules.users.models import User
+
+    hasta = db.execute(
+        select(Colegio.plan_hasta)
+        .join(User, User.colegio_id == Colegio.id)
+        .where(User.id == user_id)
+    ).scalar_one_or_none()
+    return hasta is not None and hasta >= datetime.now(UTC).date()
 
 
 def ensayos_del_mes(db: Session, user_id: int) -> int:

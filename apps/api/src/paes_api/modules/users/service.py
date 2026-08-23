@@ -282,6 +282,8 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
     import paes_api.all_models  # noqa: F401 -- registra los modelos que se borran
     from paes_api.modules.analytics.models import StudyStreak
     from paes_api.modules.billing.models import Pago, Subscription
+    from paes_api.modules.colegios.models import Colegio
+    from paes_api.modules.errores.models import ErrorCliente
     from paes_api.modules.exam_focus.models import (
         ExamAnswer,
         ExamAttempt,
@@ -314,6 +316,23 @@ def eliminar_cuenta(db: Session, user: User, password: str | None) -> bool:
         Subscription,
     ):
         db.execute(delete(tabla).where(tabla.user_id == user.id))
+
+    # El curso que esta persona haya creado NO se borra: adentro hay alumnos
+    # que no pidieron nada. Pierde a su creador y sigue en pie, administrado
+    # por los profesores que queden.
+    db.execute(
+        Colegio.__table__.update()
+        .where(Colegio.creado_por == user.id)
+        .values(creado_por=None)
+    )
+
+    # Los errores de JavaScript se conservan sin dueño: son diagnóstico del
+    # producto, y sin user_id ya no dicen de quién eran.
+    db.execute(
+        ErrorCliente.__table__.update()
+        .where(ErrorCliente.user_id == user.id)
+        .values(user_id=None)
+    )
 
     # La visita se conserva, sin dueño: deja de identificar y sigue contando.
     db.execute(

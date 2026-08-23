@@ -116,6 +116,13 @@ modules/users/         Auth (registro, login, Google, reset de contraseña, perf
 modules/metrics/       Ingesta pública de visitas (POST /metrics/pageview)
 modules/admin/         Panel: agregados de usuarios, sesiones, visitas y contenido
 modules/content/       Preguntas, alternativas
+modules/colegios/      Plan Colegios: curso, código de seis letras, panel del
+                       profesor, ejes del curso y ensayos agendados. El plan se
+                       activa por fecha desde /admin (se vende con factura, no
+                       con tarjeta) y mientras esté al día cada alumno del curso
+                       tiene los límites del plan Pro.
+modules/errores/       Errores de JavaScript reportados por el navegador,
+                       agrupados por mensaje y ruta. Se ven en /admin.
 all_models.py          Import único de TODOS los modelos SQLAlchemy. Necesario
                        para resolver relaciones declaradas por string; lo usan
                        alembic/env.py, scripts/seed.py y main.py.
@@ -374,8 +381,11 @@ logos de instituciones ni testimonios porque no los tenemos.
 
 Ordenado por impacto:
 
-1. **Pasarela de pago** (Webpay/Transbank, Flow o MercadoPago). Sin esto los
-   planes Pro y Colegios no pueden existir de verdad.
+1. **Cobro del plan Colegios.** El producto ya existe (`modules/colegios`) y el
+   acceso se activa a mano desde `/admin` poniendo la fecha hasta la que quedó
+   pagado. Falta el circuito comercial: factura, orden de compra y renovación.
+   Se decidió así a propósito —un colegio no compra con tarjeta— pero significa
+   que alguien tiene que acordarse de renovar la fecha cada año.
 2. **Seguir ampliando el banco de preguntas**, sobre todo Lectora, Ciencias e
    Historia: entre las tres suman 32 preguntas y cada ensayo oficial pide 60 o
    más. Matemática está mejor (282), pero un ensayo M1 son 65.
