@@ -35,7 +35,7 @@ class ErrorCliente(Base):
     #: La pila, recortada. Es lo que permite ubicar la línea.
     pila: Mapped[str | None] = mapped_column(Text, nullable=True)
     #: Navegador y sistema, en las tres categorías gruesas que ya usa métricas.
-    navegador: Mapped[str | None] = mapped_column(String(40), nullable=True)
+    navegador: Mapped[str | None] = mapped_column(String(60), nullable=True)
     ocurrido_en: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), index=True
     )

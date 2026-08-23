@@ -403,3 +403,29 @@ def test_la_tabla_dice_cuantos_dias_lleva_sin_rendir(
     assert fila["ensayos"] == 1
     assert fila["mejor_puntaje"] == 620
     assert fila["dias_sin_rendir"] == 9
+
+
+def test_el_profesor_que_se_sale_recupera_su_curso(
+    client: TestClient, register_user
+) -> None:
+    """Salirse del curso propio no puede ser una puerta sin retorno.
+
+    El código solo se le muestra al profesor, así que un curso cuyo creador se
+    sale y vuelve como alumno queda sin nadie que pueda repartir el código,
+    agendar ensayos ni mirar el avance de los treinta que están adentro.
+    """
+    profe, _ = register_user(email="profe@milpaes.cl")
+    codigo = client.post(
+        "/api/colegio", json={"nombre": "Liceo A-1"}, headers=profe
+    ).json()["codigo"]
+
+    assert client.post("/api/colegio/salir", headers=profe).status_code == 204
+    assert client.get("/api/colegio", headers=profe).json() is None
+
+    vuelta = client.post("/api/colegio/unirse", json={"codigo": codigo}, headers=profe)
+    assert vuelta.status_code == 200, vuelta.text
+    assert vuelta.json()["es_profesor"] is True
+    assert vuelta.json()["codigo"] == codigo
+
+    # Y con el rol de vuelta, el panel del curso vuelve a abrirse.
+    assert client.get("/api/colegio/alumnos", headers=profe).status_code == 200

@@ -94,7 +94,10 @@ export default async function PerfilPage() {
             las dos acciones que nadie debería tocar por accidente, y hasta hoy
             solo existían como "escríbenos a hola@". */}
         <ZonaPeligro
-          tienePlanActivo={plan.plan !== "gratis"}
+          // Solo Pro: el plan Colegios lo paga el establecimiento y esta
+          // cuenta no tiene ninguna suscripción que cancelar. Ofrecérselo
+          // llevaba a un 409 "No tienes una suscripción activa".
+          tienePlanActivo={plan.plan === "pro"}
           // has_password es el dato exacto: una cuenta de Google no tiene
           // contraseña que confirmar.
           usaGoogle={!user.has_password}

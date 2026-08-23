@@ -68,7 +68,13 @@ def crear_colegio(db: Session, user: User, nombre: str) -> Colegio:
 
 
 def unirse(db: Session, user: User, codigo: str) -> Colegio:
-    """Mete a un alumno al curso con el código que le dio su profesor."""
+    """Mete a un alumno al curso con el código que le dio su profesor.
+
+    Quien creó el curso vuelve a entrar como PROFESOR y no como alumno. Sin
+    eso, salirse era una puerta sin retorno: el panel es lo único que muestra
+    el código, así que un curso cuyo profesor se sale queda sin nadie que
+    pueda administrarlo ni recuperar el código para repartirlo de nuevo.
+    """
     if user.colegio_id is not None:
         raise YaTieneColegio
 
@@ -80,7 +86,7 @@ def unirse(db: Session, user: User, codigo: str) -> Colegio:
         raise CodigoInvalido
 
     user.colegio_id = colegio.id
-    user.es_profesor = False
+    user.es_profesor = colegio.creado_por == user.id
     db.commit()
     return colegio
 
