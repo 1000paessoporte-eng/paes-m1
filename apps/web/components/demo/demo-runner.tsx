@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { CapturaCorreo } from "@/components/demo/captura-correo";
 import { PassagePanel } from "@/components/exam/passage-panel";
-import { TextoRico } from "@/components/texto-rico";
+import { Resolucion } from "@/components/exam/resolucion";
 import { Burbuja } from "@/components/ui/burbuja";
 import {
   gradeDemo,
@@ -145,9 +145,12 @@ export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
           {/* El rótulo sale de la pregunta, no de una constante: antes decía
               "Competencia Matemática M1" siempre, incluso cuando el sorteo
               devolvía una pregunta de otra prueba. */}
-          <p className="text-sm text-foreground">
+          {/* h1 y no <p>: era la otra página pública sin encabezado
+              principal, y es la que convierte. Se ve igual; lo que cambia es
+              que ahora Google y un lector de pantalla saben de qué va. */}
+          <h1 className="text-sm font-medium text-foreground">
             {PRUEBAS.find((p) => p.id === subject)?.nombre ?? current.node_name}
-          </p>
+          </h1>
         </div>
         <span className="text-sm text-muted">
           Pregunta <span className="text-foreground">{index + 1}</span> de {questions.length}
@@ -232,24 +235,11 @@ export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
           </div>
         )}
 
-        {/* La autopsia del error va ANTES de la resolución, y a propósito:
-            es lo que la portada promete ("el razonamiento exacto que te llevó
-            a la alternativa incorrecta") y lo que separa esto de un PDF de
-            ejercicios. La demo la tenía escrita en la base para las 7.335
-            alternativas incorrectas y no la mostraba: quien probaba sin cuenta
-            veía la resolución genérica y se iba sin ver lo que nos diferencia. */}
-        {result && !result.is_correct && result.distractor_justification && (
-          <div className="mt-3 rounded-lg border border-border bg-surface-hover px-4 py-3 text-sm">
-            <h3 className="mb-2 font-semibold">Por qué te equivocaste</h3>
-            <TextoRico texto={result.distractor_justification} className="text-foreground" />
-          </div>
-        )}
-
-        {result?.explanation && (
-          <div className="mt-3 rounded-lg border border-border bg-surface-hover px-4 py-3 text-sm">
-            <h3 className="mb-2 font-semibold">Cómo se resuelve</h3>
-            <TextoRico texto={result.explanation} className="text-foreground" />
-          </div>
+        {result && (
+          <Resolucion
+            explicacion={result.explanation}
+            errorPropio={result.distractor_justification}
+          />
         )}
 
         <div className="mt-6 flex items-center justify-end">

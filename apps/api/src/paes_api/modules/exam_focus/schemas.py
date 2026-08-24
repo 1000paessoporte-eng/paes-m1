@@ -151,6 +151,10 @@ class ExamResultOut(BaseModel):
     estimated_score: int
     elapsed_seconds: int
     duration_limit_seconds: int
+    #: False si se contestó tan rápido que no da tiempo ni de leer. El ensayo
+    #: vale igual --se corrige y se revisa igual-- pero no entra al mejor
+    #: puntaje ni a los promedios, porque ahí un número falso engaña.
+    representativo: bool = True
     by_axis: list[BreakdownItemOut]
     by_difficulty: list[BreakdownItemOut]
     by_node: list[BreakdownItemOut]
@@ -168,6 +172,10 @@ class ExamAttemptSummary(BaseModel):
     estimated_score: int | None = None
     elapsed_seconds: int
     duration_limit_seconds: int
+    #: False si se contestó tan rápido que no da tiempo ni de leer. El ensayo
+    #: vale igual --se corrige y se revisa igual-- pero no entra al mejor
+    #: puntaje ni a los promedios, porque ahí un número falso engaña.
+    representativo: bool = True
     pace: Pace
     axes: list[str]
 

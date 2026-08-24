@@ -29,11 +29,15 @@ export function ArbolModulo({ nodos, recomendado }: Props) {
   const pctDominado = total > 0 ? Math.round((dominados.length / total) * 100) : 0;
 
   // La ruta que se dibuja: los dos últimos dominados, el sugerido, y lo que
-  // viene después. Si no hay sugerido (todo dominado o nada desbloqueado), se
-  // rellena con lo que haya para que el módulo nunca quede vacío.
+  // viene después. Si no hay sugerido (todo dominado), se rellena con lo que
+  // haya para que el módulo nunca quede vacío.
   const siguiente =
     recomendado ?? disponibles[0] ?? bloqueados[0] ?? null;
-  const posteriores = bloqueados
+  // "Lo que viene después" salía de los BLOQUEADOS, y desde que el árbol dejó
+  // de bloquear no queda ninguno: la ruta se cortaba en el tema sugerido. Ahora
+  // sale de lo que falta por dominar, que es lo que siempre quiso decir.
+  const porDominar = [...disponibles, ...bloqueados];
+  const posteriores = porDominar
     .filter((n) => n.code !== siguiente?.code)
     .slice(0, 2);
   const ruta = [

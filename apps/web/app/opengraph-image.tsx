@@ -1,6 +1,18 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "1000paes — Prepara tu PAES";
+/**
+ * La imagen que se ve al compartir el enlace en WhatsApp, Instagram o X.
+ *
+ * Estaba con la paleta ANTERIOR --violeta #7c3aed y cian, con degradado en el
+ * título-- y ese violeta se retiró en el rediseño justo porque era casi el
+ * mismo color de identidad de Matemática M2: la marca y una de las cinco
+ * pruebas eran el mismo color. Compartir el sitio mostraba una identidad que
+ * ya no existe en ninguna otra pantalla del producto.
+ *
+ * Ahora es papel y grafito, como el resto: el color queda reservado para decir
+ * qué prueba es y para corregir.
+ */
+export const alt = "1000paes — Ensayos PAES con puntaje oficial";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,8 +28,6 @@ export default function Image() {
           alignItems: "center",
           justifyContent: "center",
           background: "#ffffff",
-          backgroundImage:
-            "radial-gradient(circle at 22% 20%, rgba(124,58,237,0.18), transparent 55%), radial-gradient(circle at 78% 75%, rgba(34,211,238,0.16), transparent 55%)",
         }}
       >
         <div
@@ -27,9 +37,9 @@ export default function Image() {
             gap: 20,
             padding: "10px 24px",
             borderRadius: 999,
-            border: "2px solid #e4e5ee",
+            border: "2px solid #e4e2dc",
             fontSize: 28,
-            color: "#7c3aed",
+            color: "#5b5b66",
             fontWeight: 600,
           }}
         >
@@ -42,14 +52,12 @@ export default function Image() {
             fontSize: 160,
             fontWeight: 800,
             letterSpacing: -4,
-            backgroundImage: "linear-gradient(135deg, #7c3aed, #0e7490)",
-            backgroundClip: "text",
-            color: "transparent",
+            color: "#2b2b33",
           }}
         >
           1000paes
         </div>
-        <div style={{ display: "flex", marginTop: 20, fontSize: 34, color: "#576076" }}>
+        <div style={{ display: "flex", marginTop: 20, fontSize: 34, color: "#5b5b66" }}>
           Ensayos con tiempo real, puntaje estimado y resolución paso a paso
         </div>
       </div>

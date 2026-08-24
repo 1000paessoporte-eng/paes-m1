@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { getCarrera } from "@/lib/api";
-import { codigoDesdeSlug, nombreLegible } from "@/lib/carreras";
+import { codigoDesdeSlug, nombreCarrera, nombreLegible } from "@/lib/carreras";
 
 export const alt = "Ponderaciones PAES de la carrera";
 export const size = { width: 1200, height: 630 };
@@ -30,7 +30,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
   return new ImageResponse(
     (
       <Tarjeta
-        titulo={nombreLegible(carrera.nombre)}
+        titulo={nombreCarrera(carrera.nombre)}
         universidad={nombreLegible(carrera.universidad)}
         minimo={carrera.ponderado_min}
         proceso={carrera.proceso}

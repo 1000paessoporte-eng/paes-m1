@@ -75,6 +75,21 @@ class ExamAttempt(Base):
     axes: Mapped[str | None] = mapped_column(String(200), nullable=True)
     #: Puntaje PAES estimado, calculado al finalizar. NULL mientras esté en curso.
     estimated_score: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    #: Si el ensayo se rindió en un tiempo compatible con haberlo leído.
+    #:
+    #: Un ensayo de veinte preguntas contestado en veintiún segundos entra hoy
+    #: al historial, al mejor puntaje, a la analítica, a las preguntas más
+    #: falladas del panel y --desde el plan Colegios-- a la tabla que el
+    #: profesor mira para saber cómo va su curso. No es trampa ni un agujero:
+    #: es alguien haciendo clic sin leer, que es un comportamiento normal y
+    #: frecuente. Pero sus 260 puntos no dicen nada de lo que esa persona sabe,
+    #: y contarlos ensucia sus propias estadísticas y las de todos.
+    #:
+    #: No bloquea nada: el ensayo se rinde igual, se corrige igual y se puede
+    #: revisar igual. Solo deja de contar donde un número falso haría daño.
+    representativo: Mapped[bool] = mapped_column(
+        Boolean, default=True, server_default="true", nullable=False
+    )
 
     user: Mapped["User"] = relationship(back_populates="exam_attempts")
     answers: Mapped[list["ExamAnswer"]] = relationship(back_populates="attempt")
