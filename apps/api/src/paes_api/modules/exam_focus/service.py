@@ -735,10 +735,46 @@ def _tally(
     )
 
 
+def _con_zona(momento: datetime) -> datetime:
+    """Fecha comparable, venga de donde venga.
+
+    Postgres devuelve estas columnas con zona horaria y SQLite --el motor de la
+    suite-- sin ella, así que restar una de otra revienta. Pasa incluso dentro
+    de una misma resta: al entregar un ensayo, `finished_at` se acaba de
+    asignar en memoria (con zona) mientras `started_at` todavía viene de la
+    base. Se asume UTC, que es lo único que la aplicación escribe.
+    """
+    return momento if momento.tzinfo else momento.replace(tzinfo=UTC)
+
+
 def _elapsed_seconds(attempt: ExamAttempt) -> int:
-    end = attempt.finished_at or datetime.now(UTC)
-    elapsed = int((end - attempt.started_at).total_seconds())
+    end = _con_zona(attempt.finished_at or datetime.now(UTC))
+    elapsed = int((end - _con_zona(attempt.started_at)).total_seconds())
     return max(0, min(elapsed, attempt.duration_limit_seconds))
+
+
+#: Por debajo de esta fracción del ritmo oficial, el ensayo no se leyó.
+#:
+#: El ritmo oficial sale del DEMRE y es distinto en cada prueba: 129 segundos
+#: por pregunta en M1, y por eso el umbral es relativo y no un número fijo.
+#: Un décimo de eso son 13 segundos en M1 -- menos de lo que toma leer un
+#: enunciado con un gráfico, y muy por debajo de lo que tarda alguien que va
+#: rápido de verdad. Se prefiere pecar de permisivo: marcar de más un ensayo
+#: legítimo es peor que dejar pasar uno hecho al azar.
+FRACCION_MINIMA_DE_RITMO = 0.10
+
+
+def _es_representativo(attempt: ExamAttempt, respondidas: int) -> bool:
+    """Si el tiempo empleado da para haber leído lo que se respondió.
+
+    Se mide contra las preguntas RESPONDIDAS y no contra el total: quien
+    contesta tres y abandona no rindió rápido, rindió poco, y ese ensayo sí
+    dice algo de esas tres. Sin respuestas no hay nada que juzgar.
+    """
+    if respondidas <= 0:
+        return True
+    minimo = scoring.segundos_por_pregunta(attempt.subject) * FRACCION_MINIMA_DE_RITMO
+    return (_elapsed_seconds(attempt) / respondidas) >= minimo
 
 
 def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
@@ -763,6 +799,9 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
         attempt.status = AttemptStatus.SUBMITTED
         attempt.finished_at = datetime.now(UTC)
         attempt.estimated_score = score
+        # El orden importa: `finished_at` tiene que estar puesto antes, porque
+        # es de donde sale el tiempo empleado.
+        attempt.representativo = _es_representativo(attempt, correct + incorrect)
         db.commit()
         db.refresh(attempt)
         # El árbol de habilidades se alimenta del resultado del ensayo.
@@ -779,6 +818,7 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
         estimated_score=attempt.estimated_score or score,
         elapsed_seconds=_elapsed_seconds(attempt),
         duration_limit_seconds=attempt.duration_limit_seconds,
+        representativo=attempt.representativo,
         by_axis=_tally(
             questions, answers, correct_ids, lambda q: AXIS_LABELS[q.skill_node.axis.value]
         ),
@@ -836,6 +876,7 @@ def list_attempts(db: Session, user: User) -> list[ExamAttemptSummary]:
                 estimated_score=score,
                 elapsed_seconds=_elapsed_seconds(a),
                 duration_limit_seconds=a.duration_limit_seconds,
+                representativo=a.representativo,
                 pace=a.pace,
                 axes=a.axes.split(",") if a.axes else [],
             )

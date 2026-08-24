@@ -48,6 +48,7 @@ export function AuthPanel({ initialTab }: Props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [verClave, setVerClave] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -165,8 +166,15 @@ export function AuthPanel({ initialTab }: Props) {
             />
           </label>
 
-          <label className="flex flex-col gap-1.5 text-left">
-            <span className="flex items-center justify-between text-xs font-medium text-muted">
+          {/* No es un <label> envolviéndolo todo: el botón de ver la clave
+              quedaba DENTRO del label, y el label se comía su activación --
+              se pulsaba "Ver" y no pasaba nada. Un label envuelve su control,
+              no otros controles. Ahora se asocia por htmlFor. */}
+          <div className="flex flex-col gap-1.5 text-left">
+            <label
+              htmlFor="clave"
+              className="flex items-center justify-between text-xs font-medium text-muted"
+            >
               Contraseña
               {!esRegistro && (
                 <Link
@@ -176,18 +184,33 @@ export function AuthPanel({ initialTab }: Props) {
                   ¿Olvidaste tu contraseña?
                 </Link>
               )}
-            </span>
-            <input
-              type="password"
-              required
-              minLength={esRegistro ? 8 : undefined}
-              autoComplete={esRegistro ? "new-password" : "current-password"}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder={esRegistro ? "Mínimo 8 caracteres" : "••••••••"}
-              className="rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted/60"
-            />
-          </label>
+            </label>
+            {/* Se puede ver lo que se escribe. En un celular, con teclado
+                predictivo y un mínimo de 8 caracteres que cumplir, escribir
+                una clave a ciegas es fricción cara justo antes de crear la
+                cuenta: el que se equivoca no se entera hasta que falla. */}
+            <div className="relative">
+              <input
+                id="clave"
+                type={verClave ? "text" : "password"}
+                required
+                minLength={esRegistro ? 8 : undefined}
+                autoComplete={esRegistro ? "new-password" : "current-password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder={esRegistro ? "Mínimo 8 caracteres" : "••••••••"}
+                className="w-full rounded-lg border border-border bg-background px-3 py-2 pr-12 text-sm text-foreground placeholder:text-muted/60"
+              />
+              <button
+                type="button"
+                onClick={() => setVerClave((v) => !v)}
+                aria-label={verClave ? "Ocultar la contraseña" : "Ver la contraseña"}
+                className="absolute inset-y-0 right-0 px-3 text-xs font-medium text-muted transition-colors hover:text-foreground"
+              >
+                {verClave ? "Ocultar" : "Ver"}
+              </button>
+            </div>
+          </div>
 
           {error && (
             <p className="rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-xs text-danger">

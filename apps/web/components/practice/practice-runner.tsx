@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
-import { TextoRico } from "@/components/texto-rico";
+import { Resolucion } from "@/components/exam/resolucion";
 import { Burbuja } from "@/components/ui/burbuja";
 import {
   answerPractice,
@@ -318,11 +318,11 @@ export function PracticeRunner({ code }: { code: string }) {
           </div>
         )}
 
-        {answered?.explanation && (
-          <div className="mt-3 rounded-lg border border-border bg-surface-hover px-4 py-3 text-sm">
-            <h3 className="mb-2 font-semibold">Cómo se resuelve</h3>
-            <TextoRico texto={answered.explanation} className="text-foreground" />
-          </div>
+        {answered && (
+          <Resolucion
+            explicacion={answered.explanation}
+            errorPropio={answered.distractor_justification}
+          />
         )}
 
         {answered && answered.newly_unlocked.length > 0 && (
