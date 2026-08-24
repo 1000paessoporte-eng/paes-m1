@@ -36500,11 +36500,11 @@ QUESTIONS_LECTORA = [
         "ejemplo.",
         [
             ("Para reprochar al colegio no haber retenido a esos nueve",
-             "El emisor dice expresamente que no fracasaron y enumera causas —cambios "
-             "de comuna, trabajo, hijos, enfermedad— sin culpar a nadie."),
+             ("El emisor dice expresamente que no fracasaron y enumera causas —cambios "
+             "de comuna, trabajo, hijos, enfermedad— sin culpar a nadie.")),
             ("Para demostrar que el esfuerzo de los presentes fue mayor",
-             "Sostiene justo lo contrario: si los resultados reflejaran solo el "
-             "esfuerzo, «la lista estaría ordenada de otra manera»."),
+             ("Sostiene justo lo contrario: si los resultados reflejaran solo el "
+             "esfuerzo, «la lista estaría ordenada de otra manera».")),
             ("Para explicar por qué el curso bajó su promedio general",
              "El discurso no menciona en ningún momento los promedios del curso."),
         ],
@@ -36523,14 +36523,14 @@ QUESTIONS_LECTORA = [
         "el discurso les atribuye por completo.",
         [
             ("Probar que el curso obtuvo mejores resultados de lo esperado",
-             "Ninguno de los tres episodios se refiere a resultados académicos; en "
-             "dos de ellos alguien se resta ventaja a sí mismo."),
+             ("Ninguno de los tres episodios se refiere a resultados académicos; en "
+             "dos de ellos alguien se resta ventaja a sí mismo.")),
             ("Ilustrar que el esfuerzo individual termina siendo recompensado",
-             "Es exactamente la idea que el discurso viene desarmando: la llama una "
-             "verdad a medias, de las que «más daño hacen»."),
+             ("Es exactamente la idea que el discurso viene desarmando: la llama una "
+             "verdad a medias, de las que «más daño hacen».")),
             ("Recordar las normas de convivencia que el colegio les enseñó",
-             "El emisor subraya que nada de eso estaba en el programa, y que por eso "
-             "mismo cuenta como decisión de ellos."),
+             ("El emisor subraya que nada de eso estaba en el programa, y que por eso "
+             "mismo cuenta como decisión de ellos.")),
         ],
     ),
     # ---------- 'Cuántos siguen después del primer año' ----------
@@ -36698,11 +36698,11 @@ QUESTIONS_LECTORA = [
         "embudo».",
         [
             ("Para recomendar que se restrinja el ingreso a la educación superior",
-             "El informe no propone limitar el acceso en ninguna parte; propone mirar "
-             "el tramo que la conversación pública deja fuera."),
+             ("El informe no propone limitar el acceso en ninguna parte; propone mirar "
+             "el tramo que la conversación pública deja fuera.")),
             ("Para responsabilizar al estudiante por haber elegido mal la carrera",
-             "Distingue expresamente entre quien no puede pagar, quien eligió mal y "
-             "quien encontró trabajo, y advierte que aparecen sumados."),
+             ("Distingue expresamente entre quien no puede pagar, quien eligió mal y "
+             "quien encontró trabajo, y advierte que aparecen sumados.")),
             ("Para demostrar que los centros de formación técnica cobran de más",
              "El costo se menciona sin atribuirlo a ningún tipo de institución."),
         ],
@@ -36721,14 +36721,14 @@ QUESTIONS_LECTORA = [
         "distintas.",
         [
             ("Que las cifras de deserción están mal calculadas por las fuentes",
-             "El informe dice lo contrario: ninguna fuente está equivocada, miden "
-             "cosas distintas y por eso los porcentajes difieren."),
+             ("El informe dice lo contrario: ninguna fuente está equivocada, miden "
+             "cosas distintas y por eso los porcentajes difieren.")),
             ("Que cambiarse de carrera es la principal causa de abandono",
-             "Solo afirma que explica una parte de lo que las estadísticas muestran, "
-             "sin cuantificarla ni llamarla la principal."),
+             ("Solo afirma que explica una parte de lo que las estadísticas muestran, "
+             "sin cuantificarla ni llamarla la principal.")),
             ("Que conviene elegir la carrera definitiva desde el primer año",
-             "El texto llama a ese cambio «una corrección a tiempo», no un error que "
-             "hubiera que evitar."),
+             ("El texto llama a ese cambio «una corrección a tiempo», no un error que "
+             "hubiera que evitar.")),
         ],
     ),
     # ---------- 'Sobre el supuesto deterioro del idioma' ----------
@@ -36894,14 +36894,14 @@ QUESTIONS_LECTORA = [
         "uso— se apoya en esa constatación.",
         [
             ("Para probar que el castellano cambió más rápido en el siglo XX",
-             "El artículo no compara la velocidad del cambio entre un siglo y otro; "
-             "le interesa que la queja se repita igual en los tres."),
+             ("El artículo no compara la velocidad del cambio entre un siglo y otro; "
+             "le interesa que la queja se repita igual en los tres.")),
             ("Para atribuir la queja a hablantes de menor escolaridad",
-             "Esa asociación aparece después y referida al voseo, y el emisor la "
-             "menciona justamente para desmentirla."),
+             ("Esa asociación aparece después y referida al voseo, y el emisor la "
+             "menciona justamente para desmentirla.")),
             ("Para sostener que las lenguas antiguas eran más precisas",
-             "El emisor rechaza expresamente evaluar un estado de la lengua como "
-             "superior a otro: no tiene sentido preguntarlo."),
+             ("El emisor rechaza expresamente evaluar un estado de la lengua como "
+             "superior a otro: no tiene sentido preguntarlo.")),
         ],
     ),
     _ql(
@@ -36917,14 +36917,14 @@ QUESTIONS_LECTORA = [
         "giro: «lo que parecía un déficit resultó ser un repertorio».",
         [
             ("Demostrar que el voseo chileno reemplazó al uso de «tú»",
-             "El artículo dice que conviven, y que de esa convivencia sale una "
-             "combinación como «tú venís»."),
+             ("El artículo dice que conviven, y que de esa convivencia sale una "
+             "combinación como «tú venís».")),
             ("Ilustrar que la escolaridad determina cómo habla una persona",
-             "Los estudios citados muestran lo contrario: el uso distingue por "
-             "situación comunicativa más que por nivel educativo."),
+             ("Los estudios citados muestran lo contrario: el uso distingue por "
+             "situación comunicativa más que por nivel educativo.")),
             ("Advertir que hablar de manera informal perjudica en el trabajo",
-             "El ejemplo señala que el hablante acierta en los dos contextos, "
-             "incluida la entrevista."),
+             ("El ejemplo señala que el hablante acierta en los dos contextos, "
+             "incluida la entrevista.")),
         ],
     ),
     # ---------- 'La energía que sobra al mediodía' ----------
@@ -37086,14 +37086,14 @@ QUESTIONS_LECTORA = [
         "muestra que elegir el punto de comparación ya es parte de lo que se afirma.",
         [
             ("Para desmentir la cifra de 6.200 gigawatts-hora vertidos en 2025",
-             "El reportaje sostiene esa cifra como propia; lo que discute es cómo se "
-             "la interpreta, no si es correcta."),
+             ("El reportaje sostiene esa cifra como propia; lo que discute es cómo se "
+             "la interpreta, no si es correcta.")),
             ("Para probar que las baterías resuelven el problema del vertimiento",
-             "Aclara enseguida que no resuelven el problema del dónde: una batería no "
-             "mueve la energía mil quinientos kilómetros al sur."),
+             ("Aclara enseguida que no resuelven el problema del dónde: una batería no "
+             "mueve la energía mil quinientos kilómetros al sur.")),
             ("Para responsabilizar a los titulares de prensa por exagerar",
-             "Dice expresamente que un titular que informe el aumento «está diciendo "
-             "la verdad»."),
+             ("Dice expresamente que un titular que informe el aumento «está diciendo "
+             "la verdad».")),
         ],
     ),
     _ql(
@@ -37110,14 +37110,14 @@ QUESTIONS_LECTORA = [
         "parecerían la solución completa.",
         [
             ("Ordenar los hechos según el año en que fueron ocurriendo",
-             "Las dos secciones no siguen una cronología: describen obstáculos "
-             "simultáneos que ocurren el mismo día."),
+             ("Las dos secciones no siguen una cronología: describen obstáculos "
+             "simultáneos que ocurren el mismo día.")),
             ("Indicar cuál de los dos problemas es más urgente de resolver",
-             "El reportaje evita jerarquizarlos y afirma que los dos remedios no "
-             "compiten entre sí."),
+             ("El reportaje evita jerarquizarlos y afirma que los dos remedios no "
+             "compiten entre sí.")),
             ("Explicar por qué el precio de la electricidad se pone negativo",
-             "Ese efecto se explica dentro de una de las secciones y es una "
-             "consecuencia del desfase, no la razón de dividir el texto."),
+             ("Ese efecto se explica dentro de una de las secciones y es una "
+             "consecuencia del desfase, no la razón de dividir el texto.")),
         ],
     ),
     # ---------- 'El pasaje' ----------
@@ -37278,14 +37278,14 @@ QUESTIONS_LECTORA = [
         "final —dejar de preguntar— no es indiferencia sino reconocimiento.",
         [
             ("Explicar por qué conoce de memoria el horario del recorrido",
-             "Ese conocimiento se explica por su trabajo en la ventanilla, no por el "
-             "plan de irse a estudiar."),
+             ("Ese conocimiento se explica por su trabajo en la ventanilla, no por el "
+             "plan de irse a estudiar.")),
             ("Justificar que no se atreviera a preguntarle nada al viejo",
-             "La narradora atribuye ese silencio al consejo de doña Marta, no a su "
-             "propia situación."),
+             ("La narradora atribuye ese silencio al consejo de doña Marta, no a su "
+             "propia situación.")),
             ("Anticipar que se irá a estudiar a Chillán al final del relato",
-             "El relato termina con ella en la misma ventanilla, mirando salir los "
-             "buses."),
+             ("El relato termina con ella en la misma ventanilla, mirando salir los "
+             "buses.")),
         ],
     ),
     _ql(
@@ -37301,14 +37301,14 @@ QUESTIONS_LECTORA = [
         "mano y sin nada que ofrecer.",
         [
             ("Indiferente, pues el viejo no le importa en absoluto",
-             "Su consejo nace de la experiencia de vivir en un pueblo chico, no del "
-             "desinterés por lo que le ocurra al viejo."),
+             ("Su consejo nace de la experiencia de vivir en un pueblo chico, no del "
+             "desinterés por lo que le ocurra al viejo.")),
             ("Autoritaria, pues es la funcionaria con más antigüedad",
-             "Aconseja y no ordena: es la narradora la que decide hacerle caso, y "
-             "solo durante un invierno."),
+             ("Aconseja y no ordena: es la narradora la que decide hacerle caso, y "
+             "solo durante un invierno.")),
             ("Optimista, pues confía en que el asunto se resolverá solo",
-             "No hace ningún pronóstico sobre el desenlace; advierte sobre lo que "
-             "cuesta preguntar."),
+             ("No hace ningún pronóstico sobre el desenlace; advierte sobre lo que "
+             "cuesta preguntar.")),
         ],
     ),
     # ---------- 'El Seguro Escolar: qué es y cómo se usa' ----------
@@ -37476,14 +37476,14 @@ QUESTIONS_LECTORA = [
         "inacción del colegio no extingue el derecho.",
         [
             ("Para advertir que el plazo para denunciar vence a las veinticuatro horas",
-             "El plazo no cierra nada: al cumplirse, habilita a otras personas a "
-             "hacer la denuncia."),
+             ("El plazo no cierra nada: al cumplirse, habilita a otras personas a "
+             "hacer la denuncia.")),
             ("Para trasladar a la familia la obligación que tiene el colegio",
-             "La obligación sigue recayendo en primer lugar sobre el jefe del "
-             "establecimiento; lo que se agrega es una vía alternativa."),
+             ("La obligación sigue recayendo en primer lugar sobre el jefe del "
+             "establecimiento; lo que se agrega es una vía alternativa.")),
             ("Para explicar por qué el seguro no cubre los accidentes de trayecto",
-             "La cartilla dice que sí los cubre, con la exigencia adicional de "
-             "acreditarlos por algún medio de prueba."),
+             ("La cartilla dice que sí los cubre, con la exigencia adicional de "
+             "acreditarlos por algún medio de prueba.")),
         ],
     ),
     _ql(
@@ -37501,14 +37501,14 @@ QUESTIONS_LECTORA = [
         "de probarlo.",
         [
             ("Que el seguro exige un parte de Carabineros en todos los casos",
-             "El parte es uno de los tres medios de prueba que menciona la cartilla, "
-             "y solo si Carabineros intervino."),
+             ("El parte es uno de los tres medios de prueba que menciona la cartilla, "
+             "y solo si Carabineros intervino.")),
             ("Que los accidentes de trayecto están excluidos de la cobertura",
-             "Están cubiertos, siempre que se trate del viaje directo entre el "
-             "domicilio y el lugar de estudios."),
+             ("Están cubiertos, siempre que se trate del viaje directo entre el "
+             "domicilio y el lugar de estudios.")),
             ("Que la denuncia debe presentarse tres semanas después del hecho",
-             "Las tres semanas son el ejemplo de cuándo ya es tarde para reconstruir "
-             "la prueba, no un plazo de la norma."),
+             ("Las tres semanas son el ejemplo de cuándo ya es tarde para reconstruir "
+             "la prueba, no un plazo de la norma.")),
         ],
     ),
     # ---------- 'El derecho a cambiar de opinión' ----------
@@ -37672,14 +37672,14 @@ QUESTIONS_LECTORA = [
         "ocurre exactamente al revés.",
         [
             ("Probar que la ciencia comete menos errores que la política",
-             "El artículo no compara cuántos errores comete cada ámbito, sino cómo "
-             "cada uno juzga el hecho de cambiar de opinión."),
+             ("El artículo no compara cuántos errores comete cada ámbito, sino cómo "
+             "cada uno juzga el hecho de cambiar de opinión.")),
             ("Sugerir que el debate público debería quedar en manos de expertos",
-             "Nada en el texto propone restringir quién participa de la discusión; lo "
-             "que discute es con qué vara se la evalúa."),
+             ("Nada en el texto propone restringir quién participa de la discusión; lo "
+             "que discute es con qué vara se la evalúa.")),
             ("Ilustrar que la formación profesional envejece con los años",
-             "El caso del médico ilustra cómo se lee el cambio, no el paso del tiempo "
-             "sobre lo aprendido."),
+             ("El caso del médico ilustra cómo se lee el cambio, no el paso del tiempo "
+             "sobre lo aprendido.")),
         ],
     ),
     _ql(
@@ -37697,14 +37697,14 @@ QUESTIONS_LECTORA = [
         "haya cambiado.",
         [
             ("Para reconocer que su propia tesis no tiene respuesta posible",
-             "Sostiene lo contrario: la objeción «tiene respuesta, y es más simple de "
-             "lo que parece»."),
+             ("Sostiene lo contrario: la objeción «tiene respuesta, y es más simple de "
+             "lo que parece».")),
             ("Para acusar a un grupo determinado de cambiar por interés",
-             "No señala a nadie en particular: formula el caso en abstracto para "
-             "poder distinguirlo del otro."),
+             ("No señala a nadie en particular: formula el caso en abstracto para "
+             "poder distinguirlo del otro.")),
             ("Para concluir que conviene desconfiar de todo cambio de opinión",
-             "La conclusión es la contraria: el cambio no es, por sí mismo, un dato "
-             "en contra de quien lo protagoniza."),
+             ("La conclusión es la contraria: el cambio no es, por sí mismo, un dato "
+             "en contra de quien lo protagoniza.")),
         ],
     ),
     # ---------- 'Bases del Fondo de Iniciativas Estudiantiles' ----------
@@ -37867,14 +37867,14 @@ QUESTIONS_LECTORA = [
         "lugar: «no basta con afirmar que existe un problema: hay que mostrarlo».",
         [
             ("Que las estadísticas nacionales suelen estar desactualizadas",
-             "Las bases no cuestionan su vigencia ni su calidad, sino que no "
-             "acreditan lo que ocurre en ese establecimiento."),
+             ("Las bases no cuestionan su vigencia ni su calidad, sino que no "
+             "acreditan lo que ocurre en ese establecimiento.")),
             ("Que el criterio de participación premia encuestar al curso",
-             "La exigencia de evidencia propia pertenece al criterio de pertinencia; "
-             "participación mide otra cosa."),
+             ("La exigencia de evidencia propia pertenece al criterio de pertinencia; "
+             "participación mide otra cosa.")),
             ("Que una encuesta es más barata de producir que un estudio",
-             "El costo de conseguir la evidencia no figura entre los criterios de "
-             "evaluación."),
+             ("El costo de conseguir la evidencia no figura entre los criterios de "
+             "evaluación.")),
         ],
     ),
     _ql(
@@ -37892,14 +37892,14 @@ QUESTIONS_LECTORA = [
         "de qué modo».",
         [
             ("Para advertir que el Fondo no renovará el financiamiento",
-             "Eso ya queda claro en los plazos; la aclaración apunta a cómo se evalúa "
-             "la postulación, no a cuánto dura el dinero."),
+             ("Eso ya queda claro en los plazos; la aclaración apunta a cómo se evalúa "
+             "la postulación, no a cuánto dura el dinero.")),
             ("Para exigir que cada proyecto consiga financiamiento futuro",
-             "Las bases dicen expresamente que el criterio no exige conseguir "
-             "financiamiento futuro."),
+             ("Las bases dicen expresamente que el criterio no exige conseguir "
+             "financiamiento futuro.")),
             ("Para justificar que la permanencia pondere menos que la viabilidad",
-             "La aclaración no discute las ponderaciones, sino qué se entiende por "
-             "permanencia."),
+             ("La aclaración no discute las ponderaciones, sino qué se entiende por "
+             "permanencia.")),
         ],
     ),
     # ---------- 'El nombre del caballo' ----------
@@ -38071,14 +38071,14 @@ QUESTIONS_LECTORA = [
         "las dos se está pidiendo en realidad».",
         [
             ("Para admitir que su propuesta final es impracticable",
-             "La propuesta viene después y la presenta como un desplazamiento "
-             "posible, aunque lo llame modesto."),
+             ("La propuesta viene después y la presenta como un desplazamiento "
+             "posible, aunque lo llame modesto.")),
             ("Para proponer que las listas de lectura se eliminen",
-             "La emisora sostiene que la discusión sobre las listas es estéril, no "
-             "que haya que suprimirlas."),
+             ("La emisora sostiene que la discusión sobre las listas es estéril, no "
+             "que haya que suprimirlas.")),
             ("Para atribuir el problema a la falta de esfuerzo del alumno",
-             "El artículo responsabiliza al instrumento de evaluación, y describe al "
-             "estudiante entendiendo con precisión cuál es la tarea."),
+             ("El artículo responsabiliza al instrumento de evaluación, y describe al "
+             "estudiante entendiendo con precisión cuál es la tarea.")),
         ],
     ),
     _ql(
@@ -38096,14 +38096,14 @@ QUESTIONS_LECTORA = [
         "de pedirle que le crea.",
         [
             ("Aportar un estudio que respalda la tesis con cifras",
-             "No hay cifras ni estudio: es una experiencia que cada lector puede "
-             "repetir por su cuenta."),
+             ("No hay cifras ni estudio: es una experiencia que cada lector puede "
+             "repetir por su cuenta.")),
             ("Demostrar que los adultos olvidan lo que leyeron de niños",
-             "Lo que subraya es lo contrario: sí recuerdan tres o cuatro títulos, y "
-             "lo que importa es con qué tono los recuerdan."),
+             ("Lo que subraya es lo contrario: sí recuerdan tres o cuatro títulos, y "
+             "lo que importa es con qué tono los recuerdan.")),
             ("Justificar que se enseñen solo libros contemporáneos",
-             "La emisora sostiene que el título importa menos que la manera de "
-             "evaluarlo: un libro mediocre discutido con seriedad puede servir."),
+             ("La emisora sostiene que el título importa menos que la manera de "
+             "evaluarlo: un libro mediocre discutido con seriedad puede servir.")),
         ],
     ),
     # ---------- 'Para qué sirve olvidar' ----------
@@ -38267,14 +38267,14 @@ QUESTIONS_LECTORA = [
         "después.",
         [
             ("Probar que releer un texto no sirve absolutamente de nada",
-             "El experimento compara el rendimiento de dos métodos; no descarta "
-             "releer, muestra que rinde menos de lo que aparenta."),
+             ("El experimento compara el rendimiento de dos métodos; no descarta "
+             "releer, muestra que rinde menos de lo que aparenta.")),
             ("Explicar por qué el sueño consolida lo aprendido durante el día",
-             "El papel del sueño se explica antes, con otros experimentos, y no "
-             "depende de este."),
+             ("El papel del sueño se explica antes, con otros experimentos, y no "
+             "depende de este.")),
             ("Demostrar que los estudiantes prefieren el método más cómodo",
-             "Lo que muestra es que se equivocan al evaluar cuánto aprendieron, no "
-             "cuál método eligen."),
+             ("Lo que muestra es que se equivocan al evaluar cuánto aprendieron, no "
+             "cuál método eligen.")),
         ],
     ),
     _ql(
@@ -38292,14 +38292,14 @@ QUESTIONS_LECTORA = [
         "funciona.",
         [
             ("Para ilustrar hasta dónde puede entrenarse la memoria",
-             "No se presentan como el resultado de un entrenamiento, sino como casos "
-             "documentados de una condición excepcional."),
+             ("No se presentan como el resultado de un entrenamiento, sino como casos "
+             "documentados de una condición excepcional.")),
             ("Para advertir que esa condición anuncia una enfermedad",
-             "El texto distingue expresamente el olvido normal de las enfermedades "
-             "que destruyen la memoria, y estos casos no son eso."),
+             ("El texto distingue expresamente el olvido normal de las enfermedades "
+             "que destruyen la memoria, y estos casos no son eso.")),
             ("Para explicar cómo el hipocampo traslada los recuerdos",
-             "Ese mecanismo se explica antes, al describir la consolidación, y no se "
-             "apoya en estos casos."),
+             ("Ese mecanismo se explica antes, al describir la consolidación, y no se "
+             "apoya en estos casos.")),
         ],
     ),
     # ---------- 'Los residuos que genera un hogar chileno' ----------
@@ -38465,13 +38465,13 @@ QUESTIONS_LECTORA = [
         "basura termina, no quien la generó.",
         [
             ("Para advertir que la cifra por habitante está sobrestimada",
-             "El informe presenta sus cifras como órdenes de magnitud confiables, no "
-             "como una exageración que haya que corregir."),
+             ("El informe presenta sus cifras como órdenes de magnitud confiables, no "
+             "como una exageración que haya que corregir.")),
             ("Para comparar la basura chilena con la de otros países",
              "No hay ninguna comparación internacional en el informe."),
             ("Para explicar por qué el camión recolector pasa de madrugada",
-             "El horario se menciona como una de las causas de la invisibilidad, no "
-             "como algo que la comparación venga a explicar."),
+             ("El horario se menciona como una de las causas de la invisibilidad, no "
+             "como algo que la comparación venga a explicar.")),
         ],
     ),
     _ql(
@@ -38488,14 +38488,14 @@ QUESTIONS_LECTORA = [
         "de ellos.",
         [
             ("Sugerir que la meta de valorización al 2040 es inalcanzable",
-             "El informe muestra lo que esa meta exige —multiplicar por más de cinco "
-             "en quince años— sin declararla imposible."),
+             ("El informe muestra lo que esa meta exige —multiplicar por más de cinco "
+             "en quince años— sin declararla imposible.")),
             ("Recomendar que cada familia reduzca su consumo a la mitad",
-             "No formula ninguna recomendación dirigida a las familias; sostiene que "
-             "la responsabilidad individual llega tarde en la cadena."),
+             ("No formula ninguna recomendación dirigida a las familias; sostiene que "
+             "la responsabilidad individual llega tarde en la cadena.")),
             ("Cerrar la discusión respondiendo cuál de las dos vías conviene",
-             "La deja expresamente planteada como «una pregunta que los datos no "
-             "responden»."),
+             ("La deja expresamente planteada como «una pregunta que los datos no "
+             "responden».")),
         ],
     ),
     # ---------- 'A la deriva' ----------
@@ -38658,14 +38658,14 @@ QUESTIONS_LECTORA = [
         "final —«y cesó de respirar»— llegue sin necesidad de anunciarse.",
         [
             ("Confirma que el veneno se estaba retirando del cuerpo",
-             "Es lo que el hombre concluye, y el desenlace lo desmiente pocas líneas "
-             "después."),
+             ("Es lo que el hombre concluye, y el desenlace lo desmiente pocas líneas "
+             "después.")),
             ("Muestra que el compadre Alves llegó finalmente a auxiliarlo",
-             "Alves nunca responde: el hombre grita dos veces y «en el silencio de la "
-             "selva no se oyó un solo rumor»."),
+             ("Alves nunca responde: el hombre grita dos veces y «en el silencio de la "
+             "selva no se oyó un solo rumor».")),
             ("Anticipa que alcanzará Tacurú-Pucú antes de tres horas",
-             "Ese cálculo es del propio personaje, y el relato termina antes de que "
-             "pueda cumplirse."),
+             ("Ese cálculo es del propio personaje, y el relato termina antes de que "
+             "pueda cumplirse.")),
         ],
     ),
     _ql(
@@ -38682,11 +38682,11 @@ QUESTIONS_LECTORA = [
         "que dice no es sobre su vida: es «un jueves».",
         [
             ("Revela que el protagonista había perdido la memoria",
-             "Recuerda con precisión creciente; lo que se apaga no es la memoria sino "
-             "la conciencia."),
+             ("Recuerda con precisión creciente; lo que se apaga no es la memoria sino "
+             "la conciencia.")),
             ("Explica por qué decidió pedirle ayuda a su compadre Alves",
-             "Esa decisión ocurre mucho antes y por otra razón: comprende que no "
-             "llegaría solo a Tacurú-Pucú."),
+             ("Esa decisión ocurre mucho antes y por otra razón: comprende que no "
+             "llegaría solo a Tacurú-Pucú.")),
             ("Indica que el hombre ya había llegado a Tacurú-Pucú",
              "La canoa sigue derivando cuando el relato termina."),
         ],
@@ -38854,14 +38854,14 @@ QUESTIONS_LECTORA = [
         "inicial, esa respuesta sonaría a una concesión de última hora.",
         [
             ("Para demostrar que los focos actuales tienen demasiada potencia",
-             "El texto afirma justo lo contrario: «la diferencia no está en la "
-             "potencia, sino en el diseño»."),
+             ("El texto afirma justo lo contrario: «la diferencia no está en la "
+             "potencia, sino en el diseño».")),
             ("Para explicar por qué el desierto de Atacama es un buen lugar",
-             "Esa ventaja se atribuye a la sequedad, la altura y la estabilidad "
-             "atmosférica, no a cómo se define la contaminación."),
+             ("Esa ventaja se atribuye a la sequedad, la altura y la estabilidad "
+             "atmosférica, no a cómo se define la contaminación.")),
             ("Para introducir el estudio publicado en 2023 por la revista Science",
-             "El estudio aparece mucho después y responde a otro problema: cómo medir "
-             "un resplandor que nadie percibe desde dentro."),
+             ("El estudio aparece mucho después y responde a otro problema: cómo medir "
+             "un resplandor que nadie percibe desde dentro.")),
         ],
     ),
     _ql(
@@ -38878,14 +38878,14 @@ QUESTIONS_LECTORA = [
         "nacional.",
         [
             ("Demostrar que el estudio de 2023 se hizo observando a niños",
-             "Los voluntarios del estudio no eran niños: la cifra es una proyección "
-             "hecha a partir del promedio medido."),
+             ("Los voluntarios del estudio no eran niños: la cifra es una proyección "
+             "hecha a partir del promedio medido.")),
             ("Advertir que la norma de 2022 llegó demasiado tarde para servir",
-             "El emisor sostiene lo contrario: es una apuesta de largo plazo cuyo "
-             "efecto se medirá en la próxima década."),
+             ("El emisor sostiene lo contrario: es una apuesta de largo plazo cuyo "
+             "efecto se medirá en la próxima década.")),
             ("Explicar por qué los satélites no detectaron bien el aumento",
-             "Esa explicación viene después y apunta a otra causa: los instrumentos "
-             "no registran bien la luz azul de los LED."),
+             ("Esa explicación viene después y apunta a otra causa: los instrumentos "
+             "no registran bien la luz azul de los LED.")),
         ],
     ),
     # ---------- "El alma de la máquina" (Baldomero Lillo, 1907) ----------
@@ -39051,14 +39051,14 @@ QUESTIONS_LECTORA = [
         "agobiadora que la del galeote atado a su banco».",
         [
             ("Para demostrar que la máquina es más veloz que los obreros",
-             "La comparación con los obreros pasa por el esfuerzo que exige cada "
-             "trabajo, no por la velocidad."),
+             ("La comparación con los obreros pasa por el esfuerzo que exige cada "
+             "trabajo, no por la velocidad.")),
             ("Para explicar cómo funciona el sistema de señales del pique",
-             "Las señales se describen aparte, y su funcionamiento no depende de ese "
-             "cálculo."),
+             ("Las señales se describen aparte, y su funcionamiento no depende de ese "
+             "cálculo.")),
             ("Para elogiar la precisión con que fue construida la bobina",
-             "El detalle apunta al riesgo que corre el maquinista, no a la calidad "
-             "con que se fabricó el equipo."),
+             ("El detalle apunta al riesgo que corre el maquinista, no a la calidad "
+             "con que se fabricó el equipo.")),
         ],
     ),
     _ql(
@@ -39075,11 +39075,11 @@ QUESTIONS_LECTORA = [
         "carne y hueso que ve, que oye, que piensa, que sufre».",
         [
             ("Sugiere que sufrió un accidente en el último viaje",
-             "Nada indica un accidente: el relato describe el final normal de una "
-             "jornada, anunciado por el silbido."),
+             ("Nada indica un accidente: el relato describe el final normal de una "
+             "jornada, anunciado por el silbido.")),
             ("Muestra que el maquinista dormía durante su jornada",
-             "Su trabajo se describe como una tensión de los nervios que «no tiene "
-             "tregua» durante doce horas."),
+             ("Su trabajo se describe como una tensión de los nervios que «no tiene "
+             "tregua» durante doce horas.")),
             ("Anuncia que la mina cerrará al día siguiente",
              "La mina queda desierta porque terminó el turno, no por un cierre."),
         ],
