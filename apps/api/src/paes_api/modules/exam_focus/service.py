@@ -373,7 +373,22 @@ def _seleccionar_por_texto(
 
     elegidas: list[Question] = []
     for clave in elegidos:
-        elegidas.extend(grupos[clave][: tomado[clave]])
+        # Dentro del texto, la cuota se reparte entre las tres dificultades en
+        # vez de tomar las primeras del montón.
+        #
+        # Sin esto el ensayo hereda la mezcla del banco: si un texto tiene seis
+        # preguntas difíciles de trece, un ensayo que le pida nueve saca cerca
+        # de cuatro difíciles, y el promedio del ensayo completo termina siendo
+        # el promedio del banco. Eso importa porque el puntaje estimado se
+        # calcula con las tablas de transformación del DEMRE, que suponen la
+        # dificultad de la prueba real: un ensayo más duro que la PAES le
+        # devuelve al alumno un puntaje más bajo del que sacaría.
+        #
+        # Es la misma regla que ya rige en matemática, y por la misma razón por
+        # la que el reparto por eje dejó de depender del tamaño del banco: lo
+        # que define un ensayo tiene que estar declarado, no emerger de cómo
+        # quedó el banco.
+        elegidas.extend(_repartir_por_dificultad(grupos[clave], tomado[clave]))
 
     # Las preguntas sin texto asociado solo se usan para completar, y nunca
     # deberían existir en esta prueba: una pregunta de lectura sin lectura no
