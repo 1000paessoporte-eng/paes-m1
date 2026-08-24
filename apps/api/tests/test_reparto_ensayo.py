@@ -13,6 +13,7 @@ from dataclasses import dataclass
 from paes_api.modules.exam_focus.service import (
     MINIMO_POR_TEXTO,
     UNIDADES_POR_EJE,
+    VENTANA_SIN_REPETIR,
     _select_questions,
 )
 from paes_api.modules.skill_tree.models import SkillAxis, Subject
@@ -363,6 +364,73 @@ def test_dos_ensayos_no_traen_siempre_los_mismos_textos() -> None:
     b = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
     c = {q.passage_id for q in _select_questions(banco, [], 65, Subject.LECTORA)}
     assert not (a == b == c)
+
+
+def _textos_de(elegidas: list[_PreguntaTexto]) -> set[int | None]:
+    return {q.passage_id for q in elegidas}
+
+
+def test_un_texto_recien_leido_no_vuelve_en_los_dos_ensayos_siguientes() -> None:
+    """Releer el mismo texto no entrena: el alumno responde de memoria.
+
+    Un texto de Competencia Lectora son novecientas palabras. Si vuelve a salir
+    en el ensayo siguiente, el estudiante ya sabe lo que dice y contesta sin
+    leer, que es exactamente lo contrario de lo que la prueba mide.
+    """
+    # Cinco literarios de veinte, la proporción del banco real (13 de 67). Con
+    # uno solo, la regla de "todo ensayo trae un literario" lo haría entrar
+    # siempre y el enfriamiento no tendría nada que hacer.
+    banco = _banco_de_lectura(20, 11, literarios=5)
+
+    primero = _select_questions(banco, [], 20, Subject.LECTORA)
+    recientes = {t: 1 for t in _textos_de(primero)}
+
+    segundo = _select_questions(banco, [], 20, Subject.LECTORA, recientes)
+    assert not _textos_de(primero) & _textos_de(segundo)
+
+    # Y en el que le sigue tampoco: el primero pasa a antigüedad 2.
+    recientes = {t: 1 for t in _textos_de(segundo)}
+    recientes |= {t: 2 for t in _textos_de(primero)}
+    tercero = _select_questions(banco, [], 20, Subject.LECTORA, recientes)
+    assert not _textos_de(tercero) & (_textos_de(primero) | _textos_de(segundo))
+
+
+def test_un_texto_viejo_vuelve_a_competir_de_igual_a_igual() -> None:
+    """La penalización se apaga sola: no es una lista negra.
+
+    Pasada la ventana, el texto vuelve a valer lo mismo que uno que nunca
+    salió. Sin eso, un estudiante constante terminaría con la mitad del banco
+    vetada para siempre.
+    """
+    # Sin literarios, para mirar el orden del enfriamiento y nada más: la regla
+    # de "todo ensayo trae un literario" tiene precedencia y adelantaría un
+    # texto aunque estuviera recién leído.
+    banco = _banco_de_lectura(3, 11, literarios=0)
+    # Dos textos recién leídos y uno visto justo en el borde de la ventana.
+    recientes = {1: 1, 2: 1, 3: VENTANA_SIN_REPETIR}
+
+    for _ in range(20):
+        elegidas = _select_questions(banco, [], 20, Subject.LECTORA, recientes)
+        # El que salió de la ventana entra primero, antes que los dos recientes.
+        assert _bloques(elegidas)[0][0] == 3
+
+
+def test_sin_banco_suficiente_el_ensayo_igual_se_arma_completo() -> None:
+    """Es una postergación, no una exclusión, y esa diferencia importa.
+
+    Un estudiante que rinde muchos ensayos seguidos puede dejar todo el banco
+    dentro de la ventana. Si la regla fuera excluir, el armador se quedaría sin
+    textos y entregaría un ensayo corto; posponer significa que igual lo arma,
+    empezando por lo más antiguo.
+    """
+    banco = _banco_de_lectura(4, 11)
+    recientes = {1: 1, 2: 1, 3: 2, 4: 3}
+
+    elegidas = _select_questions(banco, [], 34, Subject.LECTORA, recientes)
+    assert len(elegidas) == 34
+    # Se prefirió lo más antiguo: el texto del ensayo recién pasado queda fuera
+    # mientras haya con qué reemplazarlo.
+    assert 4 in _textos_de(elegidas)
 
 
 def test_todo_ensayo_de_lectura_trae_al_menos_un_texto_literario() -> None:
