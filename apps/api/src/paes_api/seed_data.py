@@ -21391,6 +21391,364 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "plan_evacuacion",
+        "title": "Plan de evacuación de un edificio",
+        "kind": "discontinuo",
+        "source_note": (
+            "Plan original de 1000paes, de uso educativo. El edificio, sus dependencias "
+            "y su organización son ficticios y no corresponden a ningún inmueble real."
+        ),
+        "body": (
+            "**PLAN DE EVACUACIÓN — EDIFICIO ALTAMIRA, CALLE LOS OLIVOS 340**\n\n"
+            "*Documento de uso educativo. El edificio, sus dependencias y su "
+            "organización son ficticios. Este plan no reemplaza al de ningún "
+            "inmueble real ni a las instrucciones de la autoridad.*\n\n"
+            "**1. Dos emergencias, dos conductas distintas**\n\n"
+            "La confusión más frecuente en los simulacros es tratar todas las "
+            "emergencias igual. No lo son, y la diferencia decide qué hay que hacer "
+            "en los primeros segundos.\n\n"
+            "| | Sismo | Incendio o amago |\n"
+            "|---|---|---|\n"
+            "| Durante el evento | **No evacuar.** Protegerse en el lugar, lejos de ventanas | **Evacuar de inmediato** por la escalera más cercana |\n"
+            "| Después | Evacuar cuando cese el movimiento, si se indica | No corresponde: la evacuación ya ocurrió |\n"
+            "| Ascensor | Prohibido | Prohibido |\n"
+            "| Zona de reunión | Plaza Los Olivos, frente al 340 | Plaza Los Olivos, frente al 340 |\n\n"
+            "La razón de que en un sismo no se evacúe durante el movimiento es "
+            "sencilla: la escalera es el peor lugar para estar mientras el edificio "
+            "se mueve, y la mayoría de las lesiones se producen al intentar salir, "
+            "no al quedarse.\n\n"
+            "**2. Quién hace qué**\n\n"
+            "| Rol | Quién es | Qué hace |\n"
+            "|---|---|---|\n"
+            "| Líder de piso | Un residente por piso, designado en asamblea | Recorre el pasillo, avisa puerta por puerta y baja último |\n"
+            "| Suplente de piso | Otro residente del mismo piso | Asume si el líder no está en el edificio |\n"
+            "| Encargado de corte | Conserje de turno | Corta gas y electricidad generales antes de salir |\n"
+            "| Encargado de nómina | Administración | Toma la carpeta de residentes y pasa lista en la zona de reunión |\n\n"
+            "Ningún rol implica combatir el fuego. El plan asigna esa tarea "
+            "exclusivamente a Bomberos, y el uso de extintores por parte de "
+            "residentes se limita a un amago en su propio departamento y solo si la "
+            "puerta de salida queda a la espalda.\n\n"
+            "**3. Las cuatro reglas que no admiten excepción**\n\n"
+            "*(a)* **Nunca usar el ascensor**, en ninguna emergencia y aunque esté "
+            "funcionando. Un corte de energía lo detiene entre pisos.\n\n"
+            "*(b)* **No volver por nada.** Ni documentos, ni mascotas, ni el "
+            "teléfono. Quien regresa entra a un edificio que los demás ya evacuaron "
+            "y del que nadie sabe que él está adentro.\n\n"
+            "*(c)* **No estacionar frente al número 340.** Ese frente es el acceso "
+            "de los carros de Bomberos y debe quedar despejado las veinticuatro "
+            "horas.\n\n"
+            "*(d)* **No abandonar la zona de reunión** hasta que se pase lista. "
+            "Irse sin avisar obliga a buscar adentro a alguien que ya está a salvo, "
+            "y esa búsqueda es la parte más peligrosa del trabajo de rescate.\n\n"
+            "**4. Personas que requieren asistencia**\n\n"
+            "Los residentes que no pueden usar la escalera por sí mismos se "
+            "registran voluntariamente en la administración y aparecen en la nómina "
+            "con una marca. El plan **no les pide bajar**: deben dirigirse al punto "
+            "de espera asistida, señalizado en cada descanso de escalera, que es un "
+            "espacio protegido con puerta cortafuego.\n\n"
+            "El líder de piso confirma que la persona llegó a ese punto e informa "
+            "su ubicación al encargado de nómina apenas llega a la plaza. Bomberos "
+            "los retira desde ahí. Bajar cargando a alguien por una escalera con "
+            "gente descendiendo es la maniobra que este plan busca evitar.\n\n"
+            "**5. Simulacros**\n\n"
+            "Se realizan dos al año, uno de sismo y uno de incendio, sin aviso "
+            "previo de fecha. El registro de cada simulacro anota tres datos: el "
+            "tiempo total de evacuación, cuántos residentes no llegaron a la zona "
+            "de reunión y qué fallas se detectaron. El objetivo del simulacro no es "
+            "obtener un buen tiempo, sino encontrar esas fallas mientras no hay "
+            "emergencia.\n\n"
+            "**6. Lo que este plan no cubre**\n\n"
+            "No incluye instrucciones médicas: la atención de una persona lesionada "
+            "corresponde al SAMU y a Bomberos. No cubre emergencias en los "
+            "estacionamientos subterráneos, que tienen un procedimiento aparte "
+            "publicado en conserjería. Y no reemplaza a la señalética: si una vía "
+            "está bloqueada, manda la indicación del personal de emergencia por "
+            "sobre cualquier ruta escrita acá."
+        ),
+    },
+    {
+        "key": "afinador_piano",
+        "title": "El afinador",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes y "
+            "los lugares son ficticios."
+        ),
+        "body": (
+            "**El afinador**\n\n"
+            "Sergio Maldonado afina pianos desde 1984 y nunca ha usado aparatos. "
+            "Los lleva en el bolso, eso sí, porque hay clientes que se quedan más "
+            "tranquilos si ven uno encima del piano, y él aprendió hace mucho que "
+            "tranquilizar al cliente también es parte del trabajo. Pero afinar, lo "
+            "que se dice afinar, lo hace igual que le enseñó don Efraín: apoyando "
+            "la llave, tocando dos notas juntas y esperando a que dejen de temblar.\n\n"
+            "El temblor es lo que uno escucha cuando dos cuerdas no están del todo "
+            "de acuerdo. Suena como un latido dentro del sonido, y se va haciendo "
+            "más lento a medida que uno se acerca, hasta que desaparece. Ahí está. "
+            "Cincuenta años oyendo eso lo convierten a uno en una persona incapaz "
+            "de escuchar una radio en un almacén sin darse cuenta de que el aparato "
+            "está medio tono abajo.\n\n"
+            "El colegio de la calle Recabarren lo llama dos veces al año. Es un "
+            "piano de pared, viejo, honesto, que se desafina siempre por el mismo "
+            "lado porque la sala tiene una ventana que da al poniente. Sergio llega "
+            "a las nueve, saca la tapa, pone la llave y trabaja tres horas sin "
+            "hablar con nadie.\n\n"
+            "Esta vez había una niña sentada en la última silla de la sala, con el "
+            "estuche de un violín entre las piernas, esperando a que la fueran a "
+            "buscar. Tendría quince años. Estuvo casi una hora ahí sin decir nada, "
+            "mirando el teléfono, y cuando él bajó del registro agudo al medio, "
+            "levantó la vista.\n\n"
+            "—Perdón —dijo—. El la de arriba quedó bajo.\n\n"
+            "Sergio no se dio vuelta de inmediato. Terminó lo que estaba haciendo, "
+            "soltó la llave y recién ahí la miró.\n\n"
+            "—¿Cuál de todos?\n\n"
+            "Ella se paró, se acercó al piano y tocó una tecla del registro más "
+            "alto. Después tocó la misma nota dos octavas más abajo. Las tocó "
+            "juntas.\n\n"
+            "—Ahí —dijo.\n\n"
+            "Él las tocó también. Las tocó una vez, y otra, y una tercera vez "
+            "aguantando el pedal para que el sonido durara. No escuchó ningún "
+            "temblor. Escuchó dos notas afinadas, limpias, sin nada raro adentro.\n\n"
+            "—Está bien esa —dijo.\n\n"
+            "La niña no discutió. Se encogió de hombros con esa cortesía que tienen "
+            "los adolescentes cuando deciden que no vale la pena, volvió a su silla "
+            "y siguió mirando el teléfono. Eso fue lo que a él lo dejó incómodo: "
+            "que no discutiera.\n\n"
+            "Trabajó veinte minutos más. Después, sin decidirlo del todo, abrió el "
+            "bolso, sacó el aparato que lleva para tranquilizar clientes, lo "
+            "encendió y tocó la nota.\n\n"
+            "El número que apareció en la pantalla le dio la razón a la niña.\n\n"
+            "No fue un susto. Fue algo más lento que un susto. Sergio se quedó "
+            "mirando la pantalla el tiempo suficiente como para tocar la nota una "
+            "vez más y comprobar que el aparato no se había equivocado, y después "
+            "la corrigió, guardó el aparato y siguió con el resto del piano, que le "
+            "tomó otra hora.\n\n"
+            "Cuando terminó, la niña ya no estaba.\n\n"
+            "Esa noche, en su casa, hizo algo que no había hecho nunca: se sentó "
+            "frente a su propio piano con el aparato encendido y fue subiendo nota "
+            "por nota, comparando lo que oía con lo que decía la pantalla. Hasta la "
+            "mitad del teclado iban de acuerdo. Más arriba, empezaron a separarse. "
+            "Encontró el punto exacto: desde cierta tecla en adelante, él ya no "
+            "escuchaba el temblor. No es que lo escuchara mal. No estaba.\n\n"
+            "Se quedó ahí sentado un rato largo, con las manos en las rodillas, "
+            "haciendo una cuenta que no tenía ganas de hacer. Cuántos pianos al "
+            "mes. Cuántos meses. Desde cuándo.\n\n"
+            "Porque eso es lo que no se puede saber: cuándo empezó. Un oído no se "
+            "apaga un martes. Se va yendo de a poco, y lo hace en el único lugar "
+            "donde uno no puede notarlo, que es adentro de la propia cabeza. Todos "
+            "esos pianos que dejó impecables durante los últimos años quedaron como "
+            "él los escuchaba, y él los escuchaba bien.\n\n"
+            "Lo otro que pensó, y que le costó más, fue que en cuarenta años nadie "
+            "le había dicho nunca que una nota estuviera mal. Ni un profesor, ni un "
+            "director de orquesta, ni una señora que tocaba valses los domingos. "
+            "Cuarenta años de nadie contradiciéndolo. Durante mucho tiempo eso le "
+            "había parecido una medida de su trabajo, y esa noche entendió que "
+            "también podía ser otra cosa: que a un afinador con cincuenta años de "
+            "oficio no se le corrige, aunque uno escuche algo raro. Que la niña del "
+            "violín fue la primera persona en la historia de su carrera que no "
+            "sabía todavía que eso no se hace.\n\n"
+            "Sergio sigue afinando. Compró un aparato mejor que el que tenía y lo "
+            "usa del registro medio hacia arriba, sin esconderlo, arriba del piano, "
+            "donde los clientes lo ven y se quedan tranquilos. La primera parte del "
+            "teclado la sigue haciendo a mano, y la hace bien, y va a seguir "
+            "haciéndola bien durante un buen tiempo.\n\n"
+            "En noviembre volvió al colegio de la calle Recabarren. La niña estaba "
+            "en el pasillo con el estuche del violín y lo saludó de lejos, con esa "
+            "media sonrisa de quien no está seguro de que lo vayan a reconocer.\n\n"
+            "Él dejó el bolso en el suelo y le dijo que había revisado la nota, que "
+            "ella tenía razón, y que gracias. La niña dijo que ya, que de nada, y "
+            "se fue a clases.\n\n"
+            "Sergio se quedó en el pasillo pensando que le habría gustado "
+            "explicarle todo lo demás, y que no habría sabido cómo, y que a lo "
+            "mejor tampoco hacía falta."
+        ),
+    },
+    {
+        "key": "fila_unica",
+        "title": "Una sola fila",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes. Los resultados sobre filas provienen de la "
+            "teoría de colas, y los establecimientos mencionados son genéricos."
+        ),
+        "body": (
+            "**Una sola fila**\n\n"
+            "En el banco hay una sola fila y varios ejecutivos: uno espera su turno "
+            "y el primero que se desocupa lo llama. En el supermercado de al lado "
+            "hay una fila por caja y cada cliente elige la suya. Las dos "
+            "disposiciones parecen equivalentes —la misma gente, la misma cantidad "
+            "de personas atendiendo— y no lo son. Una de las dos es mejor, y no por "
+            "poco.\n\n"
+            "Conviene empezar por la intuición que hay que desarmar, porque es "
+            "razonable. Si hay cinco cajas y cien personas, alguien podría pensar "
+            "que da lo mismo cómo se ordenen: las cien van a pasar por las cinco "
+            "cajas de todos modos, así que el tiempo total tendría que ser "
+            "parecido. El razonamiento suena impecable y falla en un punto.\n\n"
+            "Falla en que las cajas pueden quedar desocupadas mientras todavía hay "
+            "gente esperando. En un sistema de filas separadas eso ocurre "
+            "constantemente: una caja termina con su último cliente, se queda vacía "
+            "unos segundos o unos minutos, y al mismo tiempo hay tres personas "
+            "paradas frente a la caja de al lado. Ese tiempo de caja vacía con "
+            "gente esperando no se recupera nunca. Es capacidad de atención que se "
+            "perdió mientras la demanda estaba ahí, a dos metros.\n\n"
+            "En una fila única eso no puede pasar. Mientras quede una persona "
+            "esperando, ninguna caja está libre, porque la siguiente en la fila "
+            "entra de inmediato a la que se desocupe. La fila única no atiende más "
+            "rápido a cada persona; lo que hace es no desperdiciar a nadie que esté "
+            "atendiendo.\n\n"
+            "**Cuánto se gana**\n\n"
+            "La diferencia no es simbólica. Los modelos de teoría de colas la "
+            "miden, y el resultado sorprende a mucha gente: con el sistema "
+            "funcionando cerca de su capacidad, separar la fila en varias puede "
+            "aproximadamente **duplicar** el tiempo promedio de espera respecto de "
+            "una fila única con la misma cantidad de servidores. Y la ventaja de "
+            "juntar las filas crece justamente cuando el lugar está más lleno, que "
+            "es cuando la espera importa.\n\n"
+            "Vale la pena detenerse en eso, porque contradice la sensación de estar "
+            "eligiendo bien. Quien mira las cinco filas y se mete en la más corta "
+            "cree estar optimizando su espera, y en cierto sentido lo hace. Lo que "
+            "no puede hacer desde ahí es evitar que el sistema completo funcione "
+            "peor.\n\n"
+            "**La otra razón, que es la que se siente**\n\n"
+            "Hay un segundo efecto, y es probablemente el que explica que la fila "
+            "única se haya impuesto en bancos, aeropuertos y oficinas públicas. "
+            "Tiene que ver con el orden.\n\n"
+            "En una fila única, el orden de salida es el orden de llegada. Quien "
+            "llegó primero sale primero, sin excepciones y sin suerte de por medio. "
+            "En filas separadas, en cambio, es perfectamente normal que alguien que "
+            "llegó cinco minutos después salga antes, porque eligió la caja donde "
+            "nadie estaba pagando con cheque.\n\n"
+            "Y ahí aparece algo que las encuestas de satisfacción muestran una y "
+            "otra vez: la molestia de esperar no crece de manera pareja con los "
+            "minutos. Ser adelantado por alguien que llegó después irrita mucho más "
+            "que esperar un rato largo en un orden que se percibe justo. La fila "
+            "única no solo reduce la espera promedio; además elimina la única forma "
+            "de espera que la gente considera ofensiva.\n\n"
+            "**Entonces, ¿por qué el supermercado no lo hace?**\n\n"
+            "La pregunta es buena y tiene respuestas concretas, ninguna de las "
+            "cuales es la terquedad.\n\n"
+            "La primera es física. Una fila única para diez cajas necesita un "
+            "pasillo donde quepan treinta personas con carros, y ese pasillo "
+            "tendría que estar en el único lugar del local donde no hay góndolas. "
+            "En un banco la gente espera de pie y ocupa medio metro cuadrado; con "
+            "un carro ocupa cuatro.\n\n"
+            "La segunda es que en el supermercado la caja no es solo el punto de "
+            "pago: es donde el cliente empaca. Eso alarga y vuelve impredecible el "
+            "tiempo de atención, y hace que la fila avance a saltos.\n\n"
+            "Y hay una tercera, menos amable, que conviene mencionar: al "
+            "supermercado no le molesta del todo que uno espere junto a un "
+            "exhibidor de dulces y pilas. Esa mercadería está ahí precisamente "
+            "porque hay una fila, y cualquier rediseño que la acorte también reduce "
+            "lo que se vende en ella.\n\n"
+            "**Lo que se hace cuando no se puede juntar**\n\n"
+            "Donde la fila única no cabe, el diseño trabaja sobre otra cosa: la "
+            "incertidumbre. Un número impreso que indica cuántos van adelante, un "
+            "letrero con el tiempo estimado, una pantalla que muestra el turno en "
+            "curso. Nada de eso hace la espera más corta, y sin embargo la vuelve "
+            "notoriamente más llevadera, porque el que espera deja de tener que "
+            "adivinar.\n\n"
+            "Conviene no exagerar el punto. La fila única tiene sus propios costos "
+            "y hay que decirlos. Se ve larga, y una fila que se ve larga espanta a "
+            "clientes que en realidad habrían esperado poco. Necesita espacio "
+            "ordenado, muchas veces separadores. Y requiere que alguien administre "
+            "el reparto —un número, una pantalla, una persona que dirija—, cosa que "
+            "las filas separadas no necesitan porque se administran solas.\n\n"
+            "Queda, con todo, una observación que excede a las filas. Medimos la "
+            "espera en minutos porque es lo que se puede medir, y decidimos si fue "
+            "aceptable por algo que no aparece en ese número: si el turno se "
+            "respetó. Dos personas que esperaron exactamente veinte minutos salen "
+            "del mismo local con dos opiniones distintas, y la diferencia entre "
+            "ellas no está en el reloj sino en quién pasó adelante."
+        ),
+    },
+    {
+        "key": "condiciones_vuelo",
+        "title": "Condiciones de un pasaje aéreo",
+        "kind": "discontinuo",
+        "source_note": (
+            "Ficha original de 1000paes, de uso educativo. La aerolínea, el vuelo, las "
+            "tarifas y las condiciones son ficticios y no corresponden a ninguna "
+            "empresa real."
+        ),
+        "body": (
+            "**CONDICIONES DE SU PASAJE — TARIFA LIVIANA**\n\n"
+            "*Documento de uso educativo. La aerolínea, el itinerario y las tarifas "
+            "de esta ficha son inventados: sirven para practicar la lectura de "
+            "condiciones, no para orientar una compra real.*\n\n"
+            "**1. Datos del pasaje**\n\n"
+            "| Campo | Dato |\n"
+            "|---|---|\n"
+            "| Pasajero | C. Alarcón Pizarro |\n"
+            "| Código de reserva | KTQ4WM |\n"
+            "| Vuelo | AV 218 |\n"
+            "| Origen y destino | Santiago (SCL) → Puerto Montt (PMC) |\n"
+            "| Fecha | martes 14 de octubre |\n"
+            "| Sale | 07:40 |\n"
+            "| Llega | 09:35 |\n"
+            "| Tarifa | Liviana |\n"
+            "| Total pagado | $58.400 |\n\n"
+            "**2. Qué incluye esta tarifa**\n\n"
+            "| Concepto | Tarifa Liviana | Tarifa Full |\n"
+            "|---|---|---|\n"
+            "| Equipaje de mano (bajo el asiento) | incluido, hasta 6 kg | incluido, hasta 6 kg |\n"
+            "| Equipaje de mano en compartimento | no incluido | incluido, hasta 10 kg |\n"
+            "| Equipaje en bodega | no incluido | 1 pieza de 23 kg |\n"
+            "| Selección de asiento | con costo | incluida |\n"
+            "| Cambio de fecha | con costo y diferencia de tarifa | sin costo, solo diferencia |\n"
+            "| Devolución del dinero | no aplica | hasta 24 h antes |\n\n"
+            "**3. Letra chica**\n\n"
+            "*(a)* El equipaje de mano incluido es **uno solo** y debe caber bajo "
+            "el asiento delantero (máximo 40 × 30 × 20 cm). Una cartera o mochila "
+            "cuenta como esa pieza y no se suma aparte.\n\n"
+            "*(b)* Los cargos por equipaje comprados **en el sitio web, hasta seis "
+            "horas antes del vuelo**, tienen un valor; comprados en el aeropuerto, "
+            "cuestan aproximadamente el doble. La diferencia no es una multa: es "
+            "una tarifa distinta y así está publicada.\n\n"
+            "*(c)* **Cambio de fecha** significa mover el mismo trayecto a otro "
+            "día. Tiene un cargo fijo de $22.000 más la diferencia de tarifa si el "
+            "vuelo nuevo cuesta más. Si cuesta menos, la diferencia **no se "
+            "devuelve**.\n\n"
+            "*(d)* Esta tarifa **no admite devolución del dinero** por decisión del "
+            "pasajero. Sí se devuelven, en cualquier tarifa, los impuestos y tasas "
+            "de embarque no utilizados, que en este pasaje suman $9.100.\n\n"
+            "*(e)* **No presentarse al vuelo** sin haber avisado deja el pasaje sin "
+            "valor: no se puede cambiar después ni se conserva saldo. Avisar antes "
+            "de la hora de salida, en cambio, mantiene la opción de cambio con el "
+            "cargo de la nota (c).\n\n"
+            "*(f)* La aerolínea puede modificar el itinerario. Si adelanta el vuelo "
+            "más de una hora o lo atrasa más de tres, el pasajero puede elegir "
+            "entre aceptar el cambio, tomar otro vuelo disponible sin cargo o pedir "
+            "la devolución del total pagado, incluida esta tarifa.\n\n"
+            "**4. Tres situaciones para practicar**\n\n"
+            "*Caso 1.* La pasajera llega al aeropuerto con una mochila que no cabe "
+            "bajo el asiento. Deberá pagar el equipaje de mano en compartimento a "
+            "valor de aeropuerto, que es cerca del doble del valor web. Comprarlo "
+            "la noche anterior por el sitio habría costado la mitad.\n\n"
+            "*Caso 2.* Se enferma y avisa a las 05:00 del martes, dos horas y media "
+            "antes de la salida. No pierde el pasaje: puede cambiarlo pagando "
+            "$22.000 más la diferencia de tarifa. La devolución del dinero, en "
+            "cambio, no está disponible en esta tarifa.\n\n"
+            "*Caso 3.* La aerolínea mueve el vuelo de las 07:40 a las 11:20. Son "
+            "tres horas y cuarenta minutos de atraso, sobre el límite de la nota "
+            "(f), así que la decisión pasa a ser suya: puede aceptar, cambiarse a "
+            "otro vuelo sin pagar nada o pedir que le devuelvan los $58.400.\n\n"
+            "**5. Lo que esta ficha no dice**\n\n"
+            "No informa si el vuelo suele salir a tiempo, que es un dato de "
+            "cumplimiento y no de contrato. Tampoco informa qué ocurre si el atraso "
+            "lo provoca el clima, situación que se rige por normas distintas de las "
+            "condiciones comerciales. Y no incluye los servicios comprados aparte "
+            "—asiento, equipaje, transporte al centro—, que tienen cada uno sus "
+            "propias reglas de devolución.\n\n"
+            "**6. Cómo leerla antes de comprar**\n\n"
+            "Compare tarifas por el **total** que va a pagar y no por el precio que "
+            "aparece primero. Una Liviana a $58.400 más un equipaje de bodega "
+            "comprado aparte puede terminar costando más que una Full que ya lo "
+            "incluye. Y revise la nota (e) antes que ninguna otra: es la única de "
+            "esta ficha cuyo efecto es perder el pasaje completo, y la única que se "
+            "activa sin hacer nada."
+        ),
+    },
+    {
         "key": "color_redundancia",
         "title": "La información que se pierde en el color",
         "kind": "no_literario",
@@ -27609,6 +27967,871 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Plan de evacuación de un edificio' ----------
+    _ql(
+        "plan_evacuacion", "lec_localizar", "facil",
+        "Según el plan, ¿dónde queda la zona de reunión?",
+        "En la plaza Los Olivos, frente al 340",
+        "La tabla del punto 1 la señala en su última fila, y con el mismo lugar "
+        "para las dos emergencias.\nQue sismo e incendio compartan zona de reunión "
+        "es coherente con el resto del plan: lo que cambia entre una y otra es "
+        "cuándo se sale, no adónde se llega.\nEse frente, además, es el que la "
+        "regla (c) manda mantener despejado las veinticuatro horas.",
+        [
+            ("En el descanso de escalera de cada piso", "Ahí está el punto de espera asistida, que es otra cosa."),
+            ("En los estacionamientos subterráneos", "Tienen un procedimiento aparte y quedan fuera de este plan."),
+            ("En la conserjería del edificio", "En la conserjería se publica el otro procedimiento, no se reúne a nadie."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_localizar", "facil",
+        "Según el plan, ¿cuál es la tarea del encargado de corte?",
+        "Cortar el gas y la electricidad",
+        "El rol lo cumple el conserje de turno y consiste en cortar los suministros "
+        "generales antes de salir.\nEs la única tarea del plan que se ejecuta sobre "
+        "el edificio y no sobre las personas.\nLos otros tres roles se reparten el "
+        "resto: avisar piso por piso, reemplazar al líder ausente y pasar lista en "
+        "la plaza.",
+        [
+            ("Pasar lista en la zona de reunión", "Esa tarea corresponde al encargado de nómina."),
+            ("Avisar puerta por puerta en cada piso", "Eso lo hace el líder de piso, que además baja último."),
+            ("Retirar a quienes esperan asistencia", "De los puntos de espera asistida los retira Bomberos."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_localizar", "medio",
+        "Según la tabla, ¿qué corresponde hacer mientras dura un sismo?",
+        "Protegerse en el lugar, lejos de ventanas",
+        "La tabla es explícita: durante un sismo **no** se evacúa.\nLa evacuación "
+        "viene después, cuando cesa el movimiento y si se indica, y por eso la "
+        "columna del incendio dice lo contrario en esa misma fila: evacuar de "
+        "inmediato.\nLo único que las dos emergencias comparten desde el primer "
+        "segundo es la prohibición del ascensor.",
+        [
+            ("Bajar de inmediato por la escalera más cercana", "Esa es la conducta ante un incendio, no ante un sismo."),
+            ("Esperar en el punto de espera asistida", "Ese punto es para quienes no pueden usar la escalera."),
+            ("Usar el ascensor únicamente si está funcionando", "La regla (a) lo prohíbe en toda emergencia, aunque funcione."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_localizar", "medio",
+        "Según el plan, ¿qué datos anota el registro de cada simulacro?",
+        "El tiempo, los ausentes y las fallas detectadas",
+        "Son tres y están enumerados en el punto 5: el tiempo total de evacuación, "
+        "cuántos residentes no llegaron a la zona de reunión y qué fallas se "
+        "detectaron.\nEl orden en que aparecen no es el de su importancia. El "
+        "propio plan aclara enseguida que el objetivo «no es obtener un buen "
+        "tiempo».\nLos tres datos se registran dos veces al año, en un simulacro de "
+        "sismo y uno de incendio.",
+        [
+            ("El tiempo de evacuación de cada piso por separado", "El registro anota el tiempo total, no uno por piso."),
+            ("La cantidad de extintores usados en el ejercicio", "El plan no contempla el uso de extintores en los simulacros."),
+            ("Los nombres de quienes usaron el ascensor", "El ascensor está prohibido y su uso no forma parte del registro."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_interpretar", "facil",
+        "Según el plan, ¿por qué durante un sismo no se evacúa?",
+        "Porque la escalera es el peor lugar ahí",
+        "El plan entrega la razón inmediatamente debajo de la tabla, y es una razón "
+        "física antes que reglamentaria.\nMientras el edificio se mueve, la "
+        "escalera concentra el riesgo: «la mayoría de las lesiones se producen al "
+        "intentar salir, no al quedarse».\nDe ahí que el plan invierta el orden "
+        "respecto del incendio. Quedarse quieto no es esperar a que pase el "
+        "peligro, es evitar el lugar donde el peligro está.",
+        [
+            ("Porque el ascensor podría detenerse entre pisos", "Ese es el motivo de la regla (a), y rige en las dos emergencias."),
+            ("Porque hay que esperar la orden de Bomberos", "El plan no condiciona la evacuación a que Bomberos llegue."),
+            ("Porque primero debe cortarse el gas del edificio", "El corte es tarea del conserje y no antecede a la protección personal."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_interpretar", "medio",
+        "Según la regla (d), ¿por qué no se puede abandonar la zona de reunión?",
+        "Porque hacen buscar adentro a quien está a salvo",
+        "El razonamiento de la regla no es de disciplina sino de "
+        "consecuencias.\nQuien se va sin avisar figura como ausente en la lista, y "
+        "esa ausencia obliga a entrar a buscarlo. El plan lo dice sin rodeos: esa "
+        "búsqueda «es la parte más peligrosa del trabajo de rescate».\nEs la misma "
+        "lógica de la regla (b): el problema no es la persona que se salvó, sino "
+        "los que arriesgan la vida buscándola.",
+        [
+            ("Porque la nómina se firma recién al día siguiente", "La lista se pasa en la plaza, durante la evacuación."),
+            ("Porque el edificio queda sin vigilancia", "El plan no menciona la vigilancia del inmueble."),
+            ("Porque hay que esperar el corte de energía", "El corte lo hace el conserje antes de salir, no en la plaza."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_interpretar", "facil",
+        "Una residente no puede bajar la escalera por sí misma. Según el plan, ¿qué "
+        "debe hacer?",
+        "Ir al punto de espera asistida del descanso",
+        "El plan es enfático en lo que **no** le pide: bajar.\nDebe dirigirse al "
+        "punto de espera asistida señalizado en cada descanso de escalera, que es "
+        "un espacio protegido con puerta cortafuego, y desde ahí la retira "
+        "Bomberos.\nEl líder de piso confirma que llegó e informa su ubicación al "
+        "encargado de nómina apenas llega a la plaza, de modo que su posición queda "
+        "registrada antes de que empiece el rescate.",
+        [
+            ("Bajar acompañada por el líder de su piso", "El plan busca evitar esa maniobra por la escalera."),
+            ("Esperar en su departamento con la puerta cerrada", "El punto de espera está en el descanso, no en el departamento."),
+            ("Usar el ascensor, que para eso está autorizado", "El ascensor está prohibido sin excepciones."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_interpretar", "dificil",
+        "¿Qué condiciones fija el plan para que un residente use un extintor?",
+        "Solo un amago propio, con la salida atrás",
+        "El plan separa dos cosas que se confunden: usar un extintor y combatir el "
+        "fuego.\nLo segundo queda «exclusivamente» en manos de Bomberos, y ningún "
+        "rol del punto 2 lo incluye. Lo primero se admite con dos límites "
+        "simultáneos: que sea un amago en el propio departamento y que la puerta de "
+        "salida quede a la espalda.\nLa segunda condición es la que define el "
+        "alcance: quien apunta al fuego conserva la salida detrás, así que en "
+        "cualquier momento puede dejar de intentarlo.",
+        [
+            ("Solo el conserje puede usar un extintor", "El conserje tiene asignado el corte de suministros, no el fuego."),
+            ("Los extintores se usan al bajar la escalera", "El plan no contempla usarlos durante la evacuación."),
+            ("El líder de piso combate el fuego del pasillo", "Su tarea es avisar puerta por puerta y bajar último."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_interpretar", "dificil",
+        "¿Qué supone el plan al establecer que los simulacros se hagan sin aviso de "
+        "fecha?",
+        "Que un ensayo avisado no muestra las fallas",
+        "Un simulacro anunciado se prepara: la gente está lista, las vías "
+        "despejadas y los roles presentes.\nEso mejora el resultado y arruina el "
+        "propósito, porque lo que el ejercicio busca son justamente las fallas, y "
+        "las fallas aparecen en condiciones normales.\nEs coherente con lo que el "
+        "plan declara enseguida: el objetivo «no es obtener un buen tiempo, sino "
+        "encontrar esas fallas mientras no hay emergencia».",
+        [
+            ("Que así se obtiene un mejor tiempo de evacuación", "Sin aviso el tiempo empeora, y el plan acepta ese costo."),
+            ("Que los residentes deben estar siempre en casa", "El plan prevé ausencias: para eso existe el suplente de piso."),
+            ("Que Bomberos exige dos simulacros cada año", "El documento fija esa frecuencia sin atribuirla a una exigencia."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_evaluar", "medio",
+        "¿Con qué finalidad el plan abre comparando el sismo con el incendio?",
+        "Para corregir la idea de que se actúa igual",
+        "El plan nombra el error antes de corregirlo: «la confusión más frecuente "
+        "en los simulacros es tratar todas las emergencias igual».\nLa tabla que "
+        "sigue muestra que en lo esencial las conductas se oponen. En una hay que "
+        "quedarse y en la otra hay que salir, y esa diferencia se juega «en los "
+        "primeros segundos», que es cuando nadie alcanza a consultar un "
+        "documento.\nPor eso ocupa el punto 1 y no un anexo: es lo que hay que "
+        "tener aprendido de antemano.",
+        [
+            ("Para enumerar las emergencias más probables", "No las ordena por probabilidad: contrasta dos conductas."),
+            ("Para indicar dónde queda la zona de reunión", "Ese dato aparece en la tabla, pero no es el motivo de la comparación."),
+            ("Para asignar un rol distinto a cada residente", "Los roles se reparten en el punto 2, y son los mismos en ambos casos."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_evaluar", "medio",
+        "¿Qué función cumple el punto 6 del plan?",
+        "Delimitar qué queda fuera de este documento",
+        "El punto 6 marca tres bordes: la atención médica, que corresponde al SAMU "
+        "y a Bomberos; los estacionamientos subterráneos, con procedimiento aparte; "
+        "y la señalética, que manda por sobre cualquier ruta escrita.\nLos tres "
+        "apuntan a lo mismo: un plan sirve mientras se sepa hasta dónde llega. "
+        "Confiar en él fuera de ese límite es más peligroso que no tenerlo.\nEl "
+        "tercero es el más exigente, porque el propio documento acepta ser "
+        "desplazado por la instrucción de quien está en el lugar.",
+        [
+            ("Recordar que los simulacros son obligatorios", "La frecuencia de los simulacros está en el punto 5."),
+            ("Enumerar las cuatro reglas sin excepción", "Esas reglas ocupan el punto 3."),
+            ("Explicar cómo se elige al líder de piso", "Ese dato aparece en la tabla de roles: se designa en asamblea."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_evaluar", "dificil",
+        "¿Qué revela que el plan aclare que el objetivo del simulacro no es un buen "
+        "tiempo?",
+        "Que el ejercicio sirve para encontrar errores",
+        "Un simulacro con buen tiempo es el que se luce, y el plan renuncia "
+        "expresamente a esa medida de éxito.\nLo que declara valioso es lo "
+        "contrario: encontrar las fallas «mientras no hay emergencia», que es el "
+        "único momento en que descubrirlas no cuesta nada.\nEsa decisión explica "
+        "hacia atrás las dos anteriores: que los simulacros no se avisen y que el "
+        "registro anote fallas y ausentes junto al tiempo, en vez de anotar solo el "
+        "tiempo.",
+        [
+            ("Que el tiempo de evacuación no se mide nunca", "Sí se mide: es el primero de los tres datos del registro."),
+            ("Que los simulacros pueden hacerse a medias", "Se hacen completos: lo que cambia es qué se considera un buen resultado."),
+            ("Que el edificio ya evacúa con la rapidez debida", "El plan no afirma nada sobre el desempeño alcanzado."),
+        ],
+    ),
+    _ql(
+        "plan_evacuacion", "lec_evaluar", "dificil",
+        "¿Por qué el plan termina diciendo que la indicación del personal de "
+        "emergencia manda sobre la ruta escrita?",
+        "Porque el plan no puede prever cada situación",
+        "Un plan se escribe antes y con el edificio en calma. La emergencia real "
+        "puede traer una vía bloqueada, humo en una escalera o un acceso "
+        "inutilizado, y ninguna de esas cosas cabe en una ruta impresa.\nQuien está "
+        "en el lugar ve lo que el documento no vio, y por eso su instrucción "
+        "desplaza a la del papel.\nEs una advertencia poco común en un instructivo, "
+        "porque limita su propia autoridad: el plan reconoce que su utilidad "
+        "termina donde empieza lo que no pudo anticipar.",
+        [
+            ("Porque la señalética del edificio está incompleta", "El plan no denuncia ninguna falta de señalización."),
+            ("Porque el plan solo rige durante los simulacros", "Rige en emergencias reales; los simulacros sirven para ensayarlo."),
+            ("Porque Bomberos redactó las rutas de este plan", "El documento no atribuye su redacción a Bomberos."),
+        ],
+    ),
+    # ---------- 'El afinador' ----------
+    _ql(
+        "afinador_piano", "lec_localizar", "facil",
+        "Según el relato, ¿cómo afina Sergio los pianos?",
+        "De oído, esperando que el temblor desaparezca",
+        "Es el método que le enseñó don Efraín y el que usa desde 1984: apoyar la "
+        "llave, tocar dos notas juntas y esperar a que dejen de temblar.\nEl relato "
+        "lo dice con una distinción precisa: los aparatos los lleva en el bolso, "
+        "«pero afinar, lo que se dice afinar», lo hace a mano.\nEse método es "
+        "también lo que está en juego después, cuando descubre hasta dónde le "
+        "alcanza el oído.",
+        [
+            ("Con un aparato electrónico apoyado sobre el piano", "El aparato viaja en el bolso y, hasta esa mañana, no lo usa."),
+            ("Comparando el piano con un violín afinado", "El violín es de la niña y nunca sale del estuche."),
+            ("Siguiendo un manual que le dejó don Efraín", "Don Efraín le enseñó el oficio, no le dejó ningún manual."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_localizar", "facil",
+        "Según el relato, ¿por qué Sergio lleva un aparato en el bolso?",
+        "Porque tranquiliza a los clientes que lo ven",
+        "Hay clientes que se quedan más tranquilos si ven uno encima del piano, y "
+        "él «aprendió hace mucho que tranquilizar al cliente también es parte del "
+        "trabajo».\nO sea que el aparato cumplía una función y no era afinar: "
+        "estaba ahí para ser visto.\nEse detalle es el que vuelve significativa la "
+        "escena en que por fin lo enciende, y también el cierre, donde el aparato "
+        "nuevo queda arriba del piano y ahora sí se usa.",
+        [
+            ("Porque su oído ya no distingue las notas altas", "Eso lo descubre esa misma mañana; hasta entonces el aparato no se usaba."),
+            ("Porque don Efraín le enseñó a usarlo así", "Don Efraín le enseñó a afinar de oído, con la llave."),
+            ("Porque el colegio se lo exige dos veces al año", "El colegio lo llama dos veces al año; no le exige instrumentos."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_localizar", "medio",
+        "Según el relato, ¿qué hizo la niña para mostrarle cuál era la nota?",
+        "Tocó la misma nota en dos octavas distintas",
+        "Se acercó al piano, tocó una tecla del registro más alto y después la "
+        "misma nota dos octavas más abajo. Enseguida las tocó juntas y dijo "
+        "«ahí».\nEl procedimiento es el mismo que usa Sergio para trabajar: dos "
+        "notas a la vez, y el temblor entre ellas como señal.\nPor eso el desenlace "
+        "de la escena es tan claro. Ella le mostró el problema en su propio "
+        "lenguaje, y él, tocando exactamente lo mismo, no oyó nada.",
+        [
+            ("Le mostró el número que marcaba la pantalla del teléfono", "El teléfono aparece antes y después, pero ella no lo usa para eso."),
+            ("Tocó el la con su violín para compararlo", "El violín está en su estuche durante toda la escena."),
+            ("Le pidió que revisara todo el registro agudo", "Le señaló una nota puntual, no un registro completo."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_localizar", "facil",
+        "Según el relato, ¿qué descubrió Sergio esa noche frente a su propio piano?",
+        "Que desde cierta tecla ya no oía el temblor",
+        "Fue subiendo nota por nota, comparando lo que oía con lo que marcaba el "
+        "aparato.\nHasta la mitad del teclado los dos coincidían. Más arriba "
+        "empezaron a separarse, y encontró «el punto exacto» desde el cual el "
+        "temblor desaparece.\nEl relato precisa la diferencia que importa: «No es "
+        "que lo escuchara mal. No estaba».",
+        [
+            ("Que su propio piano estaba peor que el del colegio", "El estado de su piano no es lo que estaba comprobando."),
+            ("Que el aparato se equivocaba en el registro alto", "Ya había comprobado en el colegio que el aparato no se equivocaba."),
+            ("Que todo el teclado le sonaba distinto que antes", "Hasta la mitad del teclado su oído seguía coincidiendo con el aparato."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_interpretar", "facil",
+        "Según el relato, ¿qué es el «temblor» con que Sergio trabaja?",
+        "Lo que se oye cuando dos cuerdas no coinciden",
+        "El relato lo define con cuidado, porque de ese fenómeno depende todo el "
+        "cuento.\n«Suena como un latido dentro del sonido, y se va haciendo más "
+        "lento a medida que uno se acerca, hasta que desaparece».\nAfinar, "
+        "entonces, es hacer desaparecer ese latido. Y no oírlo puede significar dos "
+        "cosas distintas: que la nota está bien, o que uno dejó de escucharlo.",
+        [
+            ("El movimiento de la llave sobre la clavija", "La llave es la herramienta con que se tensa la cuerda."),
+            ("El eco que deja el pedal al sostenerse", "El pedal solo alarga el sonido para poder escucharlo mejor."),
+            ("La vibración que produce la ventana del poniente", "Esa ventana explica por qué el piano se desafina, no qué es el temblor."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_interpretar", "medio",
+        "¿Por qué a Sergio lo dejó incómodo que la niña no discutiera?",
+        "Porque cedió por respeto y no por convencimiento",
+        "Si ella hubiera insistido, habría sido una diferencia de opiniones entre "
+        "dos personas que escuchan.\nLo que hizo, en cambio, fue encogerse de "
+        "hombros «con esa cortesía que tienen los adolescentes cuando deciden que "
+        "no vale la pena», y volver a su silla. No se retractó: se retiró.\nEl "
+        "relato lo subraya sin explicarlo: «Eso fue lo que a él lo dejó incómodo: "
+        "que no discutiera». Y esa incomodidad es la que lo lleva, veinte minutos "
+        "después, a abrir el bolso.",
+        [
+            ("Porque no le explicó cómo había notado la falla", "Se lo mostró tocando las dos notas juntas, antes de callarse."),
+            ("Porque interrumpió su trabajo sin pedir permiso", "Ella empezó pidiendo perdón, y él no muestra molestia por eso."),
+            ("Porque volvió a mirar el teléfono en vez de insistir", "Eso es lo que hace, y el reparo no es de modales sino de lo que revela."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_interpretar", "medio",
+        "¿Qué quiere decir el relato al afirmar que «un oído no se apaga un "
+        "martes»?",
+        "Que la pérdida fue gradual e imposible de notar",
+        "La frase responde a la pregunta que Sergio no quiere hacerse: desde "
+        "cuándo.\nUn cambio brusco tendría fecha y se habría notado. Este «se va "
+        "yendo de a poco, y lo hace en el único lugar donde uno no puede notarlo, "
+        "que es adentro de la propia cabeza».\nDe ahí la conclusión más incómoda "
+        "del párrafo: los pianos que dejó impecables los últimos años «quedaron "
+        "como él los escuchaba, y él los escuchaba bien».",
+        [
+            ("Que el daño ocurrió por trabajar demasiadas horas", "El relato no atribuye la pérdida a la cantidad de trabajo."),
+            ("Que se apagó justo el día que fue al colegio", "La frase dice exactamente lo contrario: no hay un día."),
+            ("Que la culpa es de la sala con ventana al poniente", "Esa ventana desafina el piano del colegio, no el oído de Sergio."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_interpretar", "dificil",
+        "¿Qué comprende Sergio sobre los cuarenta años en que nadie lo corrigió?",
+        "Que pudo ser deferencia y no acierto",
+        "Durante mucho tiempo ese silencio le había parecido «una medida de su "
+        "trabajo»: nadie reclamaba porque no había nada que reclamar.\nEsa noche le "
+        "aparece la otra lectura posible: «a un afinador con cincuenta años de "
+        "oficio no se le corrige, aunque uno escuche algo raro».\nY con eso, la "
+        "ausencia de reclamos deja de ser una prueba. Un oficio prestigioso puede "
+        "dejar de recibir correcciones justamente cuando más falta le hacen.",
+        [
+            ("Que su oído funcionó perfecto hasta esa mañana", "El relato descarta esa idea: la pérdida fue gradual."),
+            ("Que sus clientes no sabían distinguir las notas", "Entre ellos hubo profesores y un director de orquesta."),
+            ("Que nadie escuchó nunca los pianos que afinó", "Los escucharon durante cuarenta años; lo que no hicieron fue corregirlo."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_interpretar", "dificil",
+        "¿Qué significa que la niña «no sabía todavía que eso no se hace»?",
+        "Que aún no aprendía a callar ante un experto",
+        "La frase no la trata de ignorante: la trata de nueva.\nLo que ella no ha "
+        "aprendido todavía es una regla social, no una musical. Corregir a alguien "
+        "con cincuenta años de oficio es algo que la mayoría evita, y por eso el "
+        "relato la llama «la primera persona en la historia de su carrera» que lo "
+        "hizo.\nPuesto así, su ventaja sobre los profesores y los directores de "
+        "orquesta que pasaron antes no fue el oído. Fue no saber todavía que había "
+        "que quedarse callada.",
+        [
+            ("Que no conocía las reglas de cortesía del colegio", "La regla que ignora no es del colegio: es la del trato a un experto."),
+            ("Que no sabía que el piano estaba recién afinado", "Lo estaba viendo trabajar hacía una hora."),
+            ("Que ignoraba cómo se afina un piano de pared", "Su reparo fue sobre el resultado, no sobre el procedimiento."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el relato detalle los tres intentos de Sergio con "
+        "la nota?",
+        "Muestra que no descartó el reparo a la ligera",
+        "El relato podría haber resuelto la escena en una línea. En vez de eso "
+        "cuenta que tocó las notas «una vez, y otra, y una tercera vez aguantando "
+        "el pedal para que el sonido durara».\nCon eso queda claro que Sergio hizo "
+        "bien su parte: escuchó, insistió y hasta se dio más tiempo del "
+        "necesario.\nY por eso su respuesta —«Está bien esa»— no es soberbia sino "
+        "sincera, que es lo que vuelve inquietante todo lo que viene después.",
+        [
+            ("Revela que dudaba de su oído desde antes", "Nada indica que dudara: por eso el hallazgo lo desconcierta."),
+            ("Indica que el piano estaba muy desafinado", "Se trata de una nota, y él la escuchaba limpia."),
+            ("Marca que la niña lo puso nervioso de inmediato", "Su reacción es pausada: termina lo que hacía y recién ahí la mira."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_evaluar", "medio",
+        "¿Qué actitud asume Sergio al comprobar que la niña tenía razón?",
+        "Serena, pues corrige la nota y sigue",
+        "El relato descarta expresamente la reacción dramática: «No fue un susto. "
+        "Fue algo más lento que un susto».\nLo que hace es comprobar una vez más "
+        "que el aparato no se equivocaba, corregir la nota, guardar el aparato y "
+        "seguir con el resto del piano, «que le tomó otra hora».\nLa conmoción "
+        "llega después, en su casa y a solas. Durante el trabajo se comporta como "
+        "alguien que resuelve un problema, no como alguien que recibe una mala "
+        "noticia.",
+        [
+            ("Furiosa, pues culpa al aparato de su error", "Usa el aparato para confirmar y le da crédito de inmediato."),
+            ("Evasiva, pues abandona el trabajo a medias", "Termina el piano completo antes de irse."),
+            ("Triunfal, pues confirma lo que ya sospechaba", "No sospechaba nada: acababa de afirmar que la nota estaba bien."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al contar que Sergio compró un aparato mejor y lo "
+        "deja a la vista?",
+        "Cierra el conflicto sin volverlo derrota",
+        "El desenlace no es dejar el oficio ni fingir que nada pasó.\nSergio "
+        "reparte el trabajo según lo que su oído todavía puede hacer: usa el "
+        "aparato del registro medio hacia arriba y sigue afinando a mano la primera "
+        "parte del teclado, que hace bien «y va a seguir haciéndola bien durante un "
+        "buen tiempo».\nEl detalle de dejarlo a la vista completa el sentido. El "
+        "mismo objeto que antes servía para aparentar dominio ahora está ahí porque "
+        "se usa, y él ya no necesita esconder para qué.",
+        [
+            ("Muestra que dejó de confiar en su propio oído", "Sigue afinando a oído la mitad del teclado."),
+            ("Anuncia que va a retirarse del oficio pronto", "El relato dice que sigue afinando y por un buen tiempo."),
+            ("Confirma que el aparato reemplazó al afinador", "Lo reemplaza en un tramo; el resto del trabajo sigue siendo suyo."),
+        ],
+    ),
+    _ql(
+        "afinador_piano", "lec_evaluar", "dificil",
+        "¿Qué deja deliberadamente sin resolver el final del relato?",
+        "Lo que no alcanzó a explicarle a la niña",
+        "La escena de noviembre entrega lo que se podía entregar: él le dice que "
+        "revisó la nota, que ella tenía razón y que gracias.\nLo que queda afuera "
+        "es todo lo demás —la noche frente a su propio piano, los cuarenta años sin "
+        "correcciones, la cuenta que no quiso terminar—, y el relato lo deja "
+        "escrito como una imposibilidad: le habría gustado explicárselo «y no "
+        "habría sabido cómo».\nLa última frase se niega incluso a resolver si era "
+        "necesario: «y que a lo mejor tampoco hacía falta».",
+        [
+            ("Si el piano del colegio quedó bien afinado", "Eso quedó resuelto: corrigió la nota y terminó el trabajo."),
+            ("Si la niña volverá a corregirlo el próximo año", "El relato no plantea esa posibilidad en ningún momento."),
+            ("Si el aparato que compró funciona mejor que él", "Lo usa para un tramo del teclado y no para competir con su oído."),
+        ],
+    ),
+    # ---------- 'Una sola fila' ----------
+    _ql(
+        "fila_unica", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurre con las filas separadas y no con la fila "
+        "única?",
+        "Que una caja quede vacía habiendo gente esperando",
+        "Es el desperdicio que el emisor pone en el centro del texto.\nEn filas "
+        "separadas «una caja termina con su último cliente, se queda vacía unos "
+        "segundos o unos minutos, y al mismo tiempo hay tres personas paradas "
+        "frente a la caja de al lado».\nEn la fila única eso es imposible: mientras "
+        "quede alguien esperando, la caja que se desocupa recibe de inmediato al "
+        "siguiente.",
+        [
+            ("Que todas las cajas atiendan al mismo ritmo", "El ritmo de cada caja no es lo que distingue a los dos sistemas."),
+            ("Que el primero en llegar sea el primero en salir", "Eso es propio de la fila única, no de las separadas."),
+            ("Que la espera se reparta parejo entre los clientes", "El reparto parejo es una virtud de la fila única."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_localizar", "facil",
+        "Según la lectura, ¿cuánto puede crecer la espera promedio con filas "
+        "separadas?",
+        "Puede llegar a duplicarse",
+        "El dato viene de los modelos de teoría de colas y el emisor lo entrega con "
+        "una condición: ocurre «con el sistema funcionando cerca de su "
+        "capacidad».\nEse es justamente el momento en que la espera pesa, y el "
+        "texto lo subraya: la ventaja de juntar las filas «crece justamente cuando "
+        "el lugar está más lleno».\nEl emisor lo llama una diferencia que «no es "
+        "simbólica», y por eso la compara con la intuición de que daría lo mismo.",
+        [
+            ("Aumenta cerca de un diez por ciento", "La lectura habla de duplicar, que es un orden de magnitud distinto."),
+            ("Se mantiene prácticamente igual", "Esa es la intuición que el texto se propone desarmar."),
+            ("Se reduce cuando el local está lleno", "Al revés: con el local lleno la diferencia se agranda."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_localizar", "medio",
+        "Según la lectura, ¿cuál es la primera razón por la que un supermercado no "
+        "usa fila única?",
+        "Porque una fila con carros necesita mucho espacio",
+        "El emisor la llama «física» y la explica con una comparación de "
+        "superficie: en un banco la gente espera de pie y ocupa medio metro "
+        "cuadrado; con un carro ocupa cuatro.\nUna fila única para diez cajas "
+        "exigiría un pasillo para treinta personas con carros, y ese pasillo "
+        "tendría que ir donde no hay góndolas.\nLas otras dos razones vienen "
+        "después: que la caja es también donde se empaca, y que la fila misma "
+        "vende.",
+        [
+            ("Porque sus cajas atienden mucho más rápido que un banco", "El texto dice lo contrario: ahí la atención es más larga e impredecible."),
+            ("Porque los clientes prefieren elegir su caja", "La preferencia de los clientes no aparece entre las razones."),
+            ("Porque no puede instalar pantallas de turno", "Las pantallas son parte de la solución cuando no se puede juntar."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_localizar", "facil",
+        "Según la lectura, ¿qué se hace donde la fila única no cabe?",
+        "Se informa el turno y el tiempo estimado",
+        "Cuando no se puede reducir la espera, el diseño trabaja sobre otra cosa: "
+        "la incertidumbre.\nLas medidas que enumera el emisor son un número impreso "
+        "con cuántos van adelante, un letrero con el tiempo estimado y una pantalla "
+        "con el turno en curso.\nY es honesto sobre su alcance: «Nada de eso hace "
+        "la espera más corta», pero la vuelve más llevadera porque el que espera "
+        "deja de tener que adivinar.",
+        [
+            ("Se contratan más personas para atender", "Sumar personal es otra vía, y no es la que el texto describe."),
+            ("Se acorta el horario de mayor demanda", "La lectura no propone modificar los horarios de atención."),
+            ("Se instalan separadores entre una fila y otra", "Los separadores aparecen como un costo de la fila única."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_interpretar", "facil",
+        "¿Por qué falla la intuición de que da lo mismo cómo se ordene la gente?",
+        "Porque una caja libre no siempre está atendiendo",
+        "La intuición supone que las cien personas van a pasar igual por las cinco "
+        "cajas, así que el total no debería cambiar. El emisor concede que «suena "
+        "impecable».\nEl punto donde se rompe es que las cajas no trabajan todo el "
+        "tiempo: pueden quedar desocupadas mientras alguien espera en otra "
+        "fila.\nEse tiempo «no se recupera nunca. Es capacidad de atención que se "
+        "perdió mientras la demanda estaba ahí, a dos metros».",
+        [
+            ("Porque el número de cajas abiertas cambia durante el día", "El razonamiento falla incluso con la cantidad de cajas fija."),
+            ("Porque unas cajas son más rápidas que otras", "La diferencia de ritmo no es lo que el emisor señala."),
+            ("Porque no todos los clientes llegan a la vez", "El problema aparece justamente cuando hay clientes esperando."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que la fila única «no desperdicia a "
+        "nadie que esté atendiendo»?",
+        "Que ninguna caja queda ociosa mientras haya cola",
+        "La frase distingue con cuidado dos cosas que se confunden.\nLa fila única "
+        "«no atiende más rápido a cada persona»: el cajero hace lo mismo y demora "
+        "lo mismo. Lo que cambia es que nunca queda sin trabajo habiendo alguien "
+        "esperando.\nEl desperdicio, entonces, no es de velocidad sino de capacidad "
+        "instalada, y es lo que explica que el promedio de espera baje sin que "
+        "nadie apure el trámite.",
+        [
+            ("Que cada caja atiende a más clientes por hora", "El ritmo de atención por cliente no cambia."),
+            ("Que los cajeros trabajan sin pausas durante el día", "Nada se dice sobre las pausas del personal."),
+            ("Que se necesitan menos cajas abiertas en el local", "El texto compara los dos sistemas con la misma cantidad de cajas."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_interpretar", "medio",
+        "¿Qué distinción establece el emisor entre la espera y el orden?",
+        "Que ser adelantado molesta más que esperar",
+        "El emisor separa cuánto se espera de cómo se espera, y sostiene que la "
+        "molestia «no crece de manera pareja con los minutos».\nSer adelantado por "
+        "alguien que llegó después irrita más que esperar un rato largo en un orden "
+        "que se percibe justo. Y en filas separadas eso es normal, porque basta "
+        "elegir la caja donde nadie paga con cheque.\nDe ahí que la fila única "
+        "aporte dos cosas distintas: baja la espera promedio y, además, «elimina la "
+        "única forma de espera que la gente considera ofensiva».",
+        [
+            ("Que el orden de llegada alarga la espera total", "Respetar el orden de llegada no alarga nada: la fila única es más rápida."),
+            ("Que la espera solo se mide en filas separadas", "Se mide igual en los dos sistemas; lo que cambia es cómo se vive."),
+            ("Que quien espera de pie tolera menos el atraso", "La postura aparece al comparar el espacio, no la molestia."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_interpretar", "dificil",
+        "Según la lectura, ¿por qué la ventaja de juntar las filas crece cuando el "
+        "local está más lleno?",
+        "Porque hay más momentos en que se pierde capacidad",
+        "La pérdida que describe el emisor ocurre cada vez que una caja se desocupa "
+        "mientras alguien espera en otra fila.\nCon el local vacío eso casi no "
+        "pasa, porque no hay cola que aprovechar. Con el local lleno pasa todo el "
+        "tiempo, y cada episodio suma espera para alguien.\nPor eso el texto "
+        "entrega el dato del duplicado con esa condición puesta: «con el sistema "
+        "funcionando cerca de su capacidad».",
+        [
+            ("Porque con más clientes las cajas atienden más rápido", "El ritmo de atención no depende de cuánta gente haya esperando."),
+            ("Porque la gente elige peor cuando hay mucha gente", "La ventaja no viene de los errores al elegir fila."),
+            ("Porque los clientes llegan de a grupos y no de a uno", "La lectura no atribuye la diferencia a cómo llegan los clientes."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_interpretar", "dificil",
+        "¿Qué supone el emisor al señalar que los dulces y las pilas están junto a "
+        "la caja «precisamente porque hay una fila»?",
+        "Que acortar la espera reduciría esa venta",
+        "El emisor presenta esa razón como «menos amable», y por eso la deja al "
+        "final de las tres.\nLo que sostiene es una dependencia: esa mercadería se "
+        "vende porque hay alguien detenido mirándola, de modo que «cualquier "
+        "rediseño que la acorte también reduce lo que se vende en ella».\nNo dice "
+        "que el supermercado alargue la fila a propósito. Dice algo más incómodo y "
+        "más difícil de refutar: que acortarla tiene un costo para quien decidiría "
+        "hacerlo.",
+        [
+            ("Que esos productos se venden más que los demás", "No los compara con el resto del local."),
+            ("Que el supermercado alarga la fila a propósito", "El texto no le atribuye esa intención: solo señala un costo."),
+            ("Que la fila existe para vender esos productos", "La fila existe por las otras dos razones; la venta viene después."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor compara el banco con el supermercado al "
+        "comienzo?",
+        "Para enfrentar dos maneras de ordenar lo mismo",
+        "Las dos escenas son deliberadamente vecinas —un local al lado del otro— y "
+        "tienen los mismos ingredientes: gente que espera y varias personas "
+        "atendiendo.\nPuestas juntas, hacen visible que la disposición de la fila "
+        "es una decisión y no un hecho dado, que es lo que el resto del texto va a "
+        "discutir.\nEl emisor cierra el párrafo adelantando su tesis sin "
+        "desarrollarla: «Una de las dos es mejor, y no por poco».",
+        [
+            ("Para mostrar que los bancos atienden mejor", "Lo que compara son los sistemas de fila, no la calidad de la atención."),
+            ("Para explicar por qué el supermercado es más barato", "Los precios no entran en ningún momento del texto."),
+            ("Para comparar la rapidez de sus empleados", "El emisor aclara después que el ritmo de cada persona no cambia."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor al enumerar los costos de la fila única?",
+        "Ponderada, pues reconoce lo que su propuesta cuesta",
+        "Viene de mostrar que la fila única gana en las dos dimensiones que "
+        "discutió, y en vez de cerrar ahí abre un párrafo en su contra.\nLos costos "
+        "que enumera son concretos: se ve larga y espanta a clientes que habrían "
+        "esperado poco, necesita espacio ordenado y separadores, y requiere que "
+        "alguien administre el reparto.\nEl comentario que lo introduce dice cómo "
+        "hay que leerlo: «Conviene no exagerar el punto».",
+        [
+            ("Escéptica, pues pone en duda los datos que dio antes", "No retira ningún dato: agrega costos que conviven con ellos."),
+            ("Neutral, pues no toma partido por ningún sistema", "Sí toma partido; lo que hace es admitir el precio de su posición."),
+            ("Crítica, pues descarta la fila única al final", "No la descarta: la sostiene con sus desventajas a la vista."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_evaluar", "dificil",
+        "¿Qué consigue el emisor al aclarar que ninguna de las razones del "
+        "supermercado «es la terquedad»?",
+        "Explicar una decisión en vez de reprocharla",
+        "El texto acaba de sostener que la fila única es mejor, así que lo natural "
+        "sería leer al supermercado como el que lo hace mal.\nEsa frase corta esa "
+        "lectura antes de que empiece, y lo que sigue son tres razones "
+        "verificables: el espacio que ocupan los carros, el empaque en la caja y la "
+        "venta que depende de la espera.\nEl resultado es un argumento más "
+        "resistente. Una tesis que además explica por qué en algunos lugares no se "
+        "aplica es más difícil de refutar que una que solo denuncia.",
+        [
+            ("Reconocer que el supermercado se equivoca igual", "Lo contrario: muestra que su decisión tiene fundamentos."),
+            ("Sostener que las dos soluciones son idénticas", "El texto sostiene desde el principio que una es mejor."),
+            ("Anticipar que el supermercado va a cambiarla", "No anuncia ningún cambio: explica por qué se mantiene."),
+        ],
+    ),
+    _ql(
+        "fila_unica", "lec_evaluar", "dificil",
+        "¿Qué plantea el emisor en el párrafo final de la lectura?",
+        "Que lo medible y lo que molesta no coinciden",
+        "El cierre separa dos cosas que el texto venía tratando juntas: la espera "
+        "que se mide y la espera que se resiente.\nMedimos minutos «porque es lo "
+        "que se puede medir», y decidimos si la espera fue aceptable por algo que "
+        "no aparece en ese número: si el turno se respetó.\nEl ejemplo lo deja "
+        "cerrado sin necesidad de conclusión: dos personas que esperaron "
+        "exactamente lo mismo salen con opiniones distintas, «y la diferencia entre "
+        "ellas no está en el reloj sino en quién pasó adelante».",
+        [
+            ("Que veinte minutos son siempre demasiado tiempo", "El texto no fija ningún umbral de espera aceptable."),
+            ("Que conviene dejar de medir la espera en minutos", "No pide dejar de medirla: señala qué queda fuera de esa medida."),
+            ("Que dos personas nunca esperan lo mismo", "El ejemplo parte justamente de dos personas que esperaron igual."),
+        ],
+    ),
+    # ---------- 'Condiciones de un pasaje aéreo' ----------
+    _ql(
+        "condiciones_vuelo", "lec_localizar", "facil",
+        "Según la ficha, ¿qué equipaje incluye la tarifa Liviana?",
+        "Un equipaje de mano bajo el asiento, hasta 6 kg",
+        "La tabla de la sección 2 lo entrega en la primera fila: equipaje de mano "
+        "bajo el asiento, hasta 6 kilos, incluido en las dos tarifas.\nLas tres "
+        "filas siguientes marcan «no incluido» o «con costo» para la Liviana: "
+        "compartimento superior, bodega y selección de asiento.\nLa nota (a) agrega "
+        "el detalle que más se pasa por alto: esa pieza es una sola y una cartera o "
+        "mochila cuenta como esa pieza.",
+        [
+            ("Una pieza en bodega de hasta 23 kilos", "Eso corresponde a la tarifa Full, no a la Liviana."),
+            ("Un equipaje de mano en el compartimento superior", "En la tarifa Liviana ese aparece como no incluido."),
+            ("Dos piezas de mano, una de ellas una cartera", "La nota (a) precisa que la pieza incluida es una sola."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_localizar", "facil",
+        "Según la nota (c), ¿cuánto cuesta cambiar la fecha del pasaje?",
+        "$22.000, más la diferencia de tarifa",
+        "El cargo fijo es de $22.000 y se suma la diferencia si el vuelo nuevo "
+        "cuesta más.\nLa misma nota cierra la puerta del otro lado: si el vuelo "
+        "nuevo cuesta menos, «la diferencia no se devuelve».\nCambiar de fecha, "
+        "además, significa mover el mismo trayecto a otro día, no cambiar de "
+        "destino.",
+        [
+            ("$9.100, que es lo que suman los impuestos", "Esa cifra es la de impuestos y tasas de embarque de la nota (d)."),
+            ("$58.400, el total pagado por el pasaje", "Ese es el precio del pasaje, no el cargo por cambiarlo."),
+            ("No tiene costo si se avisa antes de salir", "Avisar conserva la opción de cambio, pero el cargo se paga igual."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_localizar", "medio",
+        "Según la ficha, ¿qué se devuelve en cualquiera de las dos tarifas?",
+        "Los impuestos y tasas de embarque no usados",
+        "La nota (d) separa dos cosas que suelen confundirse.\nEl precio del pasaje "
+        "no se devuelve en la tarifa Liviana por decisión del pasajero. Los "
+        "impuestos y tasas de embarque no utilizados sí, «en cualquier tarifa», y "
+        "en este pasaje suman $9.100.\nLa razón de fondo es que esas tasas se "
+        "cobran por usar el aeropuerto: si el pasajero no viaja, no se usaron.",
+        [
+            ("El total pagado, siempre que el pasajero se enferme", "La ficha no contempla la enfermedad como causal de devolución."),
+            ("El cargo por selección de asiento", "Los servicios comprados aparte tienen sus propias reglas, según la sección 5."),
+            ("La diferencia si el vuelo nuevo cuesta menos", "La nota (c) dice expresamente que esa diferencia no se devuelve."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_localizar", "medio",
+        "Según la nota (f), ¿desde qué atraso puede el pasajero elegir qué hacer?",
+        "Desde más de tres horas de atraso",
+        "La nota fija dos umbrales distintos y conviene no mezclarlos: más de una "
+        "hora si el vuelo se ADELANTA, más de tres si se ATRASA.\nSuperado "
+        "cualquiera de los dos, la decisión pasa al pasajero, que puede aceptar el "
+        "cambio, tomar otro vuelo sin cargo o pedir la devolución del total "
+        "pagado.\nEs la única situación de la ficha en que esta tarifa admite "
+        "devolución del dinero.",
+        [
+            ("Desde más de una hora de atraso", "Una hora es el umbral cuando el vuelo se adelanta, no cuando se atrasa."),
+            ("Desde seis horas antes de la salida del vuelo", "Ese plazo es el de la nota (b), para comprar equipaje por el sitio web."),
+            ("Desde veinticuatro horas antes", "Ese plazo pertenece a la devolución de la tarifa Full."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_interpretar", "facil",
+        "¿Por qué conviene comprar el equipaje adicional por el sitio web?",
+        "Porque en el aeropuerto cuesta cerca del doble",
+        "La nota (b) fija el corte en seis horas antes del vuelo: hasta ahí rige el "
+        "valor web; después, el del aeropuerto.\nEl caso 1 lo muestra con la "
+        "pasajera que llega con una mochila que no cabe bajo el asiento: paga a "
+        "valor de aeropuerto, y comprarlo la noche anterior le habría costado la "
+        "mitad.\nLa ficha aclara además que ese valor mayor «no es una multa: es "
+        "una tarifa distinta y así está publicada».",
+        [
+            ("Porque en el aeropuerto se cobra una multa", "La nota (b) sale al paso de esa lectura: es otra tarifa, no una sanción."),
+            ("Porque el sitio web permite elegir asiento gratis", "En la tarifa Liviana la selección de asiento tiene costo."),
+            ("Porque después del vuelo ya no se puede pagar", "El equipaje se paga antes de volar; lo que cambia es el precio."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_interpretar", "medio",
+        "¿Qué diferencia establece la ficha entre cambiar el pasaje y pedir su "
+        "devolución?",
+        "El cambio está disponible; la devolución, no",
+        "En la tarifa Liviana las dos opciones no están al mismo nivel.\nEl cambio "
+        "existe y tiene precio: $22.000 más la diferencia de tarifa. La devolución "
+        "del dinero por decisión del pasajero, en cambio, «no aplica», sin importar "
+        "cuánto esté dispuesto a pagar.\nEs la distinción que ordena el caso 2: la "
+        "pasajera que se enferma no pierde el pasaje, pero tampoco recupera lo que "
+        "pagó.",
+        [
+            ("El cambio es gratis y la devolución tiene cargo", "El cambio tiene un cargo fijo de $22.000."),
+            ("Los dos exigen avisar seis horas antes", "Las seis horas corresponden a la compra de equipaje por el sitio web."),
+            ("La devolución se pide en el aeropuerto el mismo día", "La ficha no fija un lugar: fija que esta tarifa no la admite."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_interpretar", "facil",
+        "Un pasajero no se presenta al vuelo y no avisa. Según la nota (e), ¿qué "
+        "ocurre?",
+        "El pasaje queda sin valor y no admite cambio",
+        "La nota (e) es la más severa de la ficha y la más silenciosa: se aplica "
+        "sin que el pasajero haga nada.\nNo presentarse sin aviso deja el pasaje "
+        "sin valor, no se puede cambiar después y no se conserva saldo.\nAvisar "
+        "antes de la hora de salida cambia por completo el desenlace: mantiene la "
+        "opción de cambio con el cargo de la nota (c). Es la diferencia entre una "
+        "llamada y perder $58.400.",
+        [
+            ("Puede cambiarlo pagando el cargo de $22.000", "Esa opción se conserva solo si avisó antes de la hora de salida."),
+            ("Conserva un saldo a favor por el total pagado", "La nota dice expresamente que no se conserva saldo."),
+            ("Le devuelven los impuestos y el valor del pasaje", "El valor del pasaje se pierde; la ficha solo repone tasas no usadas."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_interpretar", "dificil",
+        "¿Qué distingue la nota (b) al aclarar que el valor de aeropuerto «no es "
+        "una multa»?",
+        "Que el valor mayor está publicado de antemano",
+        "Una multa castiga una conducta y aparece después de cometerla. Una tarifa "
+        "es un precio que se conoce antes y entre los cuales se elige.\nLa nota "
+        "insiste en el segundo caso: «es una tarifa distinta y así está publicada». "
+        "Quien compra en el aeropuerto no está siendo sancionado; está comprando en "
+        "el momento más caro.\nLa distinción tiene consecuencias prácticas, y por "
+        "eso la ficha la hace: una multa se reclama, un precio publicado se "
+        "anticipa.",
+        [
+            ("Que la multa se cobra solo en el aeropuerto", "Lo que se cobra en el aeropuerto es precisamente la tarifa, no una multa."),
+            ("Que la tarifa distinta se paga después del vuelo", "El equipaje se paga antes de embarcar, en cualquiera de los dos momentos."),
+            ("Que una multa sanciona y la otra premia al que llega", "No hay premio: hay dos precios distintos según cuándo se compra."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_interpretar", "dificil",
+        "La aerolínea adelanta el vuelo cuarenta minutos. Según la ficha, ¿qué "
+        "puede hacer el pasajero?",
+        "Nada: el adelanto no llega al límite de la nota (f)",
+        "La nota (f) entrega la facultad de elegir solo cuando la aerolínea "
+        "adelanta el vuelo «más de una hora» o lo atrasa más de tres.\nCuarenta "
+        "minutos quedan por debajo de ese umbral, así que el itinerario modificado "
+        "rige y las opciones de esa nota no se activan.\nConviene comparar con el "
+        "caso 3, donde el atraso de tres horas y cuarenta minutos sí supera el "
+        "límite: ahí la decisión pasa al pasajero y aparece la única devolución que "
+        "esta tarifa admite.",
+        [
+            ("Pedir que le devuelvan el total que pagó por el pasaje", "Esa opción se abre pasado el umbral de la nota (f)."),
+            ("Cambiarse a otro vuelo disponible, y sin cargo", "También depende de que el cambio de itinerario supere el límite."),
+            ("Cambiar la fecha pagando solo la diferencia", "El cambio de fecha por decisión propia incluye siempre el cargo fijo."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_evaluar", "medio",
+        "¿Con qué finalidad la ficha incluye los tres casos de la sección 4?",
+        "Para mostrar cómo se aplican las notas al pie",
+        "Cada caso activa una nota distinta y solo una: el 1 la nota (b), el 2 la "
+        "(c) junto con la (d), y el 3 la (f).\nPuestos después de la letra chica, "
+        "funcionan como su traducción: la nota dice la regla en abstracto y el caso "
+        "muestra a qué monto y a qué decisión conduce.\nEs el mismo procedimiento "
+        "de la sección 2, donde la tabla ordena lo que las notas después precisan.",
+        [
+            ("Para advertir que la tarifa Liviana no conviene", "La ficha no recomienda una tarifa: enseña a comparar el total."),
+            ("Para reemplazar la tabla de la sección 2", "La complementan: los casos usan la tabla, no la sustituyen."),
+            ("Para enumerar los reclamos más frecuentes", "Son situaciones para practicar la lectura, no un registro de reclamos."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_evaluar", "medio",
+        "¿Qué función cumple la sección «Lo que esta ficha no dice»?",
+        "Acotar qué preguntas no se responden acá",
+        "La sección separa lo contractual de lo que no lo es.\nQuedan fuera tres "
+        "cosas: si el vuelo suele salir a tiempo, que es cumplimiento y no "
+        "contrato; qué pasa si el atraso lo provoca el clima, regido por otras "
+        "normas; y los servicios comprados aparte, que tienen sus propias "
+        "reglas.\nCon eso la ficha evita que se le exija algo que no ofrece, que es "
+        "exactamente el uso equivocado que un documento así invita a hacer.",
+        [
+            ("Enumerar los servicios que se venden aparte", "Los menciona, pero para decir que se rigen por otras reglas."),
+            ("Advertir que el vuelo suele salir atrasado", "Dice que ese dato no está en la ficha, no que el vuelo se atrase."),
+            ("Explicar qué ocurre cuando hay mal tiempo", "Señala justamente que esa situación se rige por normas distintas."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_evaluar", "dificil",
+        "¿Por qué la ficha recomienda revisar la nota (e) antes que ninguna otra?",
+        "Porque es la única que actúa sin hacer nada",
+        "Todas las demás notas se activan cuando el pasajero decide algo: comprar "
+        "equipaje, cambiar la fecha, pedir una devolución.\nLa (e) funciona al "
+        "revés. Se cumple sola, por omisión, y su efecto es el más grave de la "
+        "ficha: el pasaje completo queda sin valor.\nDe ahí el criterio con que la "
+        "ficha ordena su consejo final: no por el monto de cada nota, sino por cuál "
+        "puede ocurrirle a alguien que no leyó nada.",
+        [
+            ("Porque es la que tiene el cargo más caro de todas", "No fija un cargo: hace perder el pasaje, que es distinto."),
+            ("Porque las demás notas no afectan al pasajero", "Todas lo afectan; lo que cambia es que las otras se activan al decidir."),
+            ("Porque es la primera que aparece en la sección", "Es la quinta de seis: el orden de la lista no es el del consejo."),
+        ],
+    ),
+    _ql(
+        "condiciones_vuelo", "lec_evaluar", "dificil",
+        "¿Qué supone el consejo de comparar por el total y no por el primer precio?",
+        "Que la tarifa barata puede terminar más cara",
+        "El consejo no dice que la Liviana sea mala, sino que su precio no es "
+        "comparable con el de la Full mientras no se sepa qué va a necesitar el "
+        "pasajero.\nLa propia ficha hace la cuenta: una Liviana a $58.400 más un "
+        "equipaje de bodega comprado aparte «puede terminar costando más que una "
+        "Full que ya lo incluye».\nEl supuesto que hay detrás es que el precio "
+        "inicial de una tarifa no incluye lo mismo en los dos casos, y por eso "
+        "compararlos directamente induce al error.",
+        [
+            ("Que las dos tarifas cuestan finalmente lo mismo", "Dependen de lo que se sume: pueden quedar iguales o no."),
+            ("Que el precio publicado suele estar equivocado", "El precio es correcto; lo que cambia es qué incluye."),
+            ("Que conviene comprar siempre la tarifa más completa", "La ficha no recomienda una tarifa: recomienda comparar totales."),
+        ],
+    ),
     # ---------- 'La información que se pierde en el color' ----------
     _ql(
         "color_redundancia", "lec_localizar", "facil",
