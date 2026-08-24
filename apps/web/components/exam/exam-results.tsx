@@ -44,6 +44,34 @@ function ejesDebiles(items: BreakdownItem[]): BreakdownItem[] {
     .sort((a, b) => a.percentage - b.percentage);
 }
 
+/**
+ * El tema concreto al que mandar al alumno cuando termina el ensayo.
+ *
+ * Un eje ("Geometría") no es accionable: agrupa varios temas y no tiene página
+ * propia. Un nodo sí —tiene lección y tiene práctica—, y es lo que convierte
+ * "te fue mal en Geometría" en algo que se puede pulsar.
+ *
+ * Se elige el de peor porcentaje, y a igual porcentaje el que tuvo MÁS
+ * preguntas: entre dos temas al 0%, el de tres preguntas dice más que el de
+ * una. Quedan fuera los temas donde no se falló nada: mandar a reforzar algo
+ * que salió perfecto es ruido.
+ *
+ * `evidencia` distingue los dos casos, porque la pantalla no puede afirmar lo
+ * mismo con una pregunta que con cinco. En un ensayo Relámpago de 10 preguntas
+ * repartidas entre dieciséis temas, casi todos los temas traen una sola.
+ */
+function temaParaReforzar(
+  items: BreakdownItem[]
+): { item: BreakdownItem; code: string; evidencia: "sola" | "varias" } | null {
+  const candidatos = items
+    .filter((d) => d.code != null && d.correct < d.total)
+    .sort((a, b) => a.percentage - b.percentage || b.total - a.total);
+
+  const peor = candidatos[0];
+  if (!peor || peor.code == null) return null;
+  return { item: peor, code: peor.code, evidencia: peor.total >= 2 ? "varias" : "sola" };
+}
+
 interface Props {
   result: ExamResult;
   review: ExamReview | null;
@@ -61,6 +89,7 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
     ? Math.round((result.correct / result.total_questions) * 100)
     : 0;
   const debiles = ejesDebiles(result.by_axis);
+  const tema = temaParaReforzar(result.by_node);
 
   const preguntas = review?.questions ?? [];
   const preguntasFiltradas = preguntas.filter((p) => {
@@ -159,21 +188,63 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
         </div>
       </section>
 
-      {/* ── Sugerencia de refuerzo ──────────────────────────────────── */}
-      {debiles.length > 0 && (
+      {/* ── Sugerencia de refuerzo ──────────────────────────────────────
+          El ensayo terminaba acá en un consejo que el alumno tenía que
+          ejecutar a mano ("puedes armar un ensayo filtrando por ese eje"). Es
+          el momento de más información y más ganas de todo el producto, y la
+          única salida era volver al historial. Ahora el eje da el diagnóstico
+          y el tema da el siguiente paso, con las dos puertas que ese tema
+          tiene: la teoría y la práctica. */}
+      {(debiles.length > 0 || tema) && (
         <section className="mt-5 rounded-xl border border-warning/40 bg-warning/10 p-4">
           <h2 className="font-semibold text-warning">Qué conviene reforzar</h2>
-          <p className="mt-1 text-sm">
-            Tu rendimiento fue más bajo en{" "}
-            {debiles.map((d, i) => (
-              <span key={d.name}>
-                {i > 0 && (i === debiles.length - 1 ? " y " : ", ")}
-                <strong>{d.name}</strong> ({d.percentage}%)
-              </span>
-            ))}
-            . Puedes armar un ensayo filtrando solo por{" "}
-            {debiles.length === 1 ? "ese eje" : "esos ejes"}.
-          </p>
+
+          {debiles.length > 0 && (
+            <p className="mt-1 text-sm">
+              Tu rendimiento fue más bajo en{" "}
+              {debiles.map((d, i) => (
+                <span key={d.name}>
+                  {i > 0 && (i === debiles.length - 1 ? " y " : ", ")}
+                  <strong>{d.name}</strong> ({d.percentage}%)
+                </span>
+              ))}
+              .
+            </p>
+          )}
+
+          {tema && (
+            <div className="mt-3 rounded-lg border border-warning/30 bg-surface p-3">
+              <p className="text-sm">
+                {/* Con una sola pregunta no se puede hablar de "tu tema más
+                    débil": se dice lo que pasó, que es un hecho, y el alumno
+                    decide. Con dos o más, el porcentaje ya significa algo. */}
+                {tema.evidencia === "sola" ? (
+                  <>
+                    Se te escapó la pregunta de <strong>{tema.item.name}</strong>.
+                  </>
+                ) : (
+                  <>
+                    Donde peor te fue es <strong>{tema.item.name}</strong>:{" "}
+                    {tema.item.correct} de {tema.item.total} preguntas.
+                  </>
+                )}
+              </p>
+              <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                <Link
+                  href={`/aprender/${tema.code}`}
+                  className="flex-1 rounded-lg border border-border px-4 py-2 text-center text-sm font-medium transition hover:bg-surface-hover"
+                >
+                  Estudiar la teoría
+                </Link>
+                <Link
+                  href={`/practicar/${tema.code}`}
+                  className="flex-1 rounded-lg bg-warning px-4 py-2 text-center text-sm font-semibold text-on-fill transition hover:opacity-90"
+                >
+                  Practicar este tema →
+                </Link>
+              </div>
+            </div>
+          )}
         </section>
       )}
 
