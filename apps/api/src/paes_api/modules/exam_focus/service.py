@@ -199,6 +199,51 @@ MINIMO_POR_TEXTO = 6
 #: texto, con un promedio cercano a nueve.
 OBJETIVO_POR_TEXTO = 9
 
+#: Cuántos ensayos de lectura hacia atrás se miran para no repetir un texto.
+#:
+#: Un texto de Competencia Lectora son novecientas palabras: volver a leerlo en
+#: el ensayo siguiente no entrena nada, porque el alumno ya sabe lo que dice y
+#: responde de memoria en vez de leer. Con esta ventana, un texto que acaba de
+#: salir queda al final de la fila y va subiendo a medida que pasan los
+#: ensayos, hasta recuperar su prioridad normal al quinto.
+#:
+#: Cinco es el número que hace que el turno completo tenga sentido con el banco
+#: actual: 67 textos y siete por ensayo alcanzan para nueve ensayos seguidos
+#: sin repetir ninguno, así que la ventana nunca deja al armador sin material.
+VENTANA_SIN_REPETIR = 5
+
+
+def _textos_recientes(db: Session, user_id: int) -> dict[int, int]:
+    """Qué textos vio el estudiante y hace cuántos ensayos.
+
+    Devuelve `passage_id -> antigüedad`, donde 1 es el ensayo más reciente.
+    Los intentos se cuentan aunque hayan quedado abandonados: el texto se
+    mostró igual, que es lo único que importa acá.
+    """
+    filas = db.execute(
+        select(ExamAttempt.id, Question.passage_id)
+        .join(ExamAttemptQuestion, ExamAttemptQuestion.attempt_id == ExamAttempt.id)
+        .join(Question, Question.id == ExamAttemptQuestion.question_id)
+        .where(
+            ExamAttempt.user_id == user_id,
+            ExamAttempt.subject == Subject.LECTORA,
+            Question.passage_id.is_not(None),
+        )
+        .order_by(ExamAttempt.started_at.desc())
+    ).all()
+
+    antiguedad: dict[int, int] = {}
+    intentos: list[int] = []
+    for attempt_id, passage_id in filas:
+        if attempt_id not in intentos:
+            if len(intentos) == VENTANA_SIN_REPETIR:
+                break
+            intentos.append(attempt_id)
+        # Si un texto salió en dos ensayos, manda el más reciente, que es el
+        # primero que aparece en este recorrido.
+        antiguedad.setdefault(passage_id, len(intentos))
+    return antiguedad
+
 
 def _cuotas(total: int, partes: int) -> list[int]:
     """Reparte `total` entre `partes` lo más parejo posible.
@@ -210,7 +255,11 @@ def _cuotas(total: int, partes: int) -> list[int]:
     return [base + (1 if i < resto else 0) for i in range(partes)]
 
 
-def _seleccionar_por_texto(pool: list[Question], count: int) -> list[Question]:
+def _seleccionar_por_texto(
+    pool: list[Question],
+    count: int,
+    recientes: dict[int, int] | None = None,
+) -> list[Question]:
     """Arma un ensayo de lectura repartiendo las preguntas entre varios TEXTOS.
 
     Devuelve las preguntas ya agrupadas por texto y en ese orden: el cliente
@@ -238,9 +287,30 @@ def _seleccionar_por_texto(pool: list[Question], count: int) -> list[Question]:
     claves = list(por_texto)
     random.shuffle(claves)
 
+    # Los textos que el estudiante acaba de leer van al final de la fila.
+    #
+    # No es una exclusión sino una postergación, y esa diferencia importa: si
+    # el banco no alcanzara —un alumno que rinde muchos ensayos seguidos, o un
+    # banco chico—, el armador igual arma el ensayo, empezando por los textos
+    # más antiguos. Una exclusión dura, en cambio, lo dejaría sin material.
+    #
+    # La penalización baja sola con el tiempo: el texto del ensayo anterior
+    # pesa 4, el de dos ensayos atrás pesa 3, y al quinto vuelve a valer lo
+    # mismo que uno que nunca salió. `sorted` es estable, así que dentro de
+    # cada tramo se conserva el orden aleatorio del shuffle de arriba.
+    if recientes:
+        claves.sort(key=lambda c: max(0, VENTANA_SIN_REPETIR - recientes.get(c, 99)))
+
     # La prueba oficial siempre trae al menos un texto literario, y el temario
     # dedica trece conocimientos exclusivos a ese tipo de lectura. Se adelanta
     # uno al comienzo de la fila para que ningún ensayo se quede sin él.
+    #
+    # Esta regla TIENE PRECEDENCIA sobre el enfriamiento de arriba: si todos
+    # los literarios del banco salieron hace poco, igual entra uno repetido
+    # antes que dejar el ensayo sin literario. Como la lista ya viene ordenada
+    # por antigüedad, el que se adelanta es el literario menos reciente, así
+    # que el choque solo ocurre cuando no queda alternativa. Con el banco real
+    # —trece literarios de sesenta y siete— no ocurre.
     literarias = [
         c for c in claves
         if (por_texto[c][0].passage is not None
@@ -319,6 +389,7 @@ def _select_questions(
     axes: list[str],
     count: int,
     subject: Subject = Subject.M1,
+    recientes: dict[int, int] | None = None,
 ) -> list[Question]:
     """Reparte la cantidad pedida entre los ejes según el temario oficial.
 
@@ -341,7 +412,7 @@ def _select_questions(
     """
     # Competencia Lectora no se reparte por eje: se reparte por texto.
     if subject is Subject.LECTORA:
-        return _seleccionar_por_texto(pool, count)
+        return _seleccionar_por_texto(pool, count, recientes)
     available = [q for q in pool if not axes or q.skill_node.axis.value in axes]
     if len(available) <= count:
         random.shuffle(available)
@@ -471,8 +542,15 @@ def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Questi
 def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
     pool = _all_questions(db, config.subject)
     valid_axes = [a for a in config.axes if a in AXIS_LABELS]
+    # Solo Lectora usa el historial: es la única prueba donde repetir cuesta
+    # novecientas palabras de lectura ya conocida.
+    recientes = (
+        _textos_recientes(db, user.id)
+        if config.subject is Subject.LECTORA
+        else None
+    )
     chosen = _select_questions(
-        pool, valid_axes, config.question_count, config.subject
+        pool, valid_axes, config.question_count, config.subject, recientes
     )
 
     attempt = ExamAttempt(
