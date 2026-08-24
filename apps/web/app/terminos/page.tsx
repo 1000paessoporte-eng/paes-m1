@@ -92,8 +92,8 @@ export default function TerminosPage() {
             <p>
               Puedes dejar de usar 1000paes cuando quieras. Para eliminar tu
               cuenta y tus datos, escríbenos a{" "}
-              <a href="mailto:hola@1000paes.cl" className="text-accent hover:underline">
-                hola@1000paes.cl
+              <a href="mailto:1000paessoporte@gmail.com" className="text-accent hover:underline">
+                1000paessoporte@gmail.com
               </a>
               . Podemos suspender o cerrar cuentas que incumplan estos
               términos.
@@ -113,8 +113,8 @@ export default function TerminosPage() {
             <p>
               Estos términos se rigen por las leyes de Chile. Ante cualquier
               duda, contáctanos a{" "}
-              <a href="mailto:hola@1000paes.cl" className="text-accent hover:underline">
-                hola@1000paes.cl
+              <a href="mailto:1000paessoporte@gmail.com" className="text-accent hover:underline">
+                1000paessoporte@gmail.com
               </a>
               .
             </p>
