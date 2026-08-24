@@ -224,7 +224,15 @@ export type Productos =
   paths["/api/plan/productos"]["get"]["responses"][200]["content"]["application/json"];
 
 export function getProductos(): Promise<Productos> {
-  return apiFetch<Productos>("/api/plan/productos");
+  // El catálogo de planes es el mismo para todo el mundo y cambia cuando
+  // cambia un precio, no cuando entra una visita. Sin este `revalidate`,
+  // /planes era —junto a la portada— la única página pública que no se
+  // cacheaba en el CDN: cada visitante pagaba un render entero para leer
+  // cuatro precios fijos.
+  return apiFetch<Productos>("/api/plan/productos", undefined, {
+    cache: "force-cache",
+    next: { revalidate: 3600 },
+  });
 }
 
 /** Devuelve la URL de Flow a la que hay que enviar al usuario. */

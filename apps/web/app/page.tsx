@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import {
   getContentStats,
   getProductos,
@@ -10,7 +8,6 @@ import {
   type Universidad,
   type UsoPublico,
 } from "@/lib/api";
-import { TOKEN_COOKIE } from "@/lib/auth";
 import { LandingPublica } from "@/components/home/landing-publica";
 
 // La portada es la página que más se enlaza desde fuera, y llega con toda
@@ -21,10 +18,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default async function HomePage() {
-  const token = (await cookies()).get(TOKEN_COOKIE)?.value;
-  if (token) redirect("/panel");
+// A quien ya tiene sesión lo manda al panel `proxy.ts`, antes de llegar acá.
+// Vivía en esta función, leyendo la cookie con `cookies()`, y eso obligaba a
+// renderizar la portada en cada visita: era la única página pública que no se
+// cacheaba en el CDN. Ver el comentario de `proxy.ts`.
+//
+// Con la cookie fuera, las cuatro llamadas de abajo ya vienen cacheadas y la
+// página se sirve desde el borde. Se revalida cada diez minutos: las cifras
+// del banco y del uso cambian cuando alguien agrega preguntas o rinde un
+// ensayo, no en el segundo.
+export const revalidate = 600;
 
+export default async function HomePage() {
   // Las cifras del banco salen de la base, no de una constante. Si la API no
   // responde, la portada se dibuja sin ellas: mejor un dato menos que un
   // número inventado, que es la primera regla del proyecto. Lo mismo vale para
