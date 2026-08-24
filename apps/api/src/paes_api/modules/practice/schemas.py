@@ -37,6 +37,14 @@ class PracticeAnswerOut(BaseModel):
     correct_alternative_id: int
     #: Desarrollo de por qué la respuesta correcta lo es.
     explanation: str | None = None
+    #: El error que lleva justo a la alternativa marcada ("Dividió el total
+    #: entre 6 en lugar de entre las 5 personas"). Va solo cuando se falló:
+    #: en la correcta no hay distractor que justificar.
+    #:
+    #: Practicar un nodo es el momento en que alguien está trabajando su
+    #: error a propósito, y era el único de los tres —demo, ensayo y
+    #: práctica— que no lo devolvía.
+    distractor_justification: str | None = None
     node_accuracy: float
     node_attempts: int
     newly_unlocked: list[str] = []

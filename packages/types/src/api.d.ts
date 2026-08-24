@@ -2803,6 +2803,8 @@ export interface components {
             correct_alternative_id: number;
             /** Explanation */
             explanation?: string | null;
+            /** Distractor Justification */
+            distractor_justification?: string | null;
             /** Node Accuracy */
             node_accuracy: number;
             /** Node Attempts */
