@@ -352,7 +352,10 @@ COMPROBACIONES: dict[str, str] = {
     "A y B son independientes, con P(A) = 0,5": str(0.5 * 0.3).replace(".", ","),
     "3 bolitas rojas y 2 verdes": str(Fraction(2, 4)),
     "6! dividido por 4!": str(factorial(6) // factorial(4)),
-    "3 delegados de un grupo de 7": str(comb(7, 3)),
+    # El capitán ya tiene su puesto: se eligen 4 entre los 8 restantes, no 5
+    # entre 9. La comprobación existe justamente para que el dato "juega
+    # siempre" no se pierda al recalcular.
+    "El capitán juega siempre": str(comb(8, 4)),
     "letras de la palabra CASA": str(factorial(4) // factorial(2)),
     "4 personas en una fila": str(factorial(3) * factorial(2)),
     "5 hombres y 4 mujeres": str(comb(5, 2) * comb(4, 1)),
