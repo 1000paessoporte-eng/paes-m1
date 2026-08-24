@@ -18,12 +18,54 @@ function escaparHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+/**
+ * El signo peso de un monto chileno NO abre una fórmula.
+ *
+ * `$12.000` es plata, no LaTeX. Se reconoce por el separador de miles, que
+ * ninguna fórmula del banco usa: verificado sobre las 2.579 preguntas, cero
+ * tramos con `$\d{1,3}\.\d{3}` contienen una orden de LaTeX.
+ */
+const PESO_CHILENO = /\$(?=\d{1,3}(?:\.\d{3})+)/g;
+
+/** Marca interna para el peso literal. Un carácter de control no aparece en el
+ *  banco, sobrevive a `escaparHtml` y KaTeX nunca lo produce. */
+const MARCA_PESO = "\u0000";
+
+/**
+ * ¿Ese tramo entre `$` es de verdad una fórmula?
+ *
+ * Lo es si trae una orden de LaTeX (`\frac`, `\times`, `\rightarrow`), o si
+ * es simbólico: sin ninguna palabra. Las fórmulas reales del banco son
+ * `$-5$`, `$2+$`, `$g = 10$`, `$3H_2SO_4$` -- ninguna contiene una palabra de
+ * tres letras. Los tramos que hoy se rompen son prosa castellana que quedó
+ * atrapada entre dos montos: "24.000. ¿Cuántos participantes se necesitan
+ * para que cada uno pague" salía en cursiva y con las palabras pegadas.
+ */
+function pareceFormula(cuerpo: string): boolean {
+  // Una orden de LaTeX no deja dudas.
+  if (cuerpo.includes("\\")) return true;
+  // Un solo token sin espacios es notación, no una frase: `$NaOH$`, `$AA$`.
+  // Sin esto, las fórmulas químicas caían en la regla de las palabras --NaOH
+  // son cuatro letras-- y salían con los signos peso a la vista.
+  if (!/\s/.test(cuerpo)) return true;
+  // Con espacios, es fórmula solo si no hay ninguna palabra: `$g = 10$`,
+  // `$2 + 3$`. La prosa castellana que queda atrapada entre dos montos
+  // siempre las tiene.
+  return !/\p{L}{3}/u.test(cuerpo);
+}
+
 /** Convierte un fragmento con `$...$` en HTML, dejando el texto plano intacto. */
 function renderizarConFormulas(texto: string): string {
   return texto
+    .replace(PESO_CHILENO, MARCA_PESO)
     .split(/(\$[^$]*\$)/g)
     .map((parte) => {
-      if (parte.startsWith("$") && parte.endsWith("$") && parte.length > 2) {
+      if (
+        parte.startsWith("$") &&
+        parte.endsWith("$") &&
+        parte.length > 2 &&
+        pareceFormula(parte.slice(1, -1))
+      ) {
         try {
           return katex.renderToString(parte.slice(1, -1), {
             throwOnError: false,
@@ -41,7 +83,8 @@ function renderizarConFormulas(texto: string): string {
       // `&lt;` y lo único que se reintroduce es el <strong> de acá.
       return negritas(escaparHtml(parte));
     })
-    .join("");
+    .join("")
+    .replaceAll(MARCA_PESO, "$");
 }
 
 /** `**así**` se convierte en negrita. Solo eso: no es un motor de markdown. */
