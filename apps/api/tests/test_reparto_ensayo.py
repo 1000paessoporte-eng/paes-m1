@@ -222,20 +222,34 @@ class _Texto:
 
 
 @dataclass
+class _Dificultad:
+    """El armador lee `.value`, igual que el enum real."""
+
+    value: str
+
+
+@dataclass
 class _PreguntaTexto:
     id: int
     passage_id: int | None
+    difficulty: _Dificultad
     passage: _Texto | None = None
 
 
 def _banco_de_lectura(
     textos: int, por_texto: int, literarios: int = 1
 ) -> list[_PreguntaTexto]:
-    """Los primeros `literarios` textos son literarios; el resto, no."""
+    """Los primeros `literarios` textos son literarios; el resto, no.
+
+    Las dificultades se reparten en ciclo dentro de cada texto: el armador las
+    usa para que el ensayo no herede la mezcla del banco.
+    """
+    niveles = ("facil", "medio", "dificil")
     return [
         _PreguntaTexto(
             id=t * 100 + k,
             passage_id=t,
+            difficulty=_Dificultad(niveles[k % 3]),
             passage=_Texto("literario" if t <= literarios else "no_literario"),
         )
         for t in range(1, textos + 1)
@@ -368,6 +382,46 @@ def test_dos_ensayos_no_traen_siempre_los_mismos_textos() -> None:
 
 def _textos_de(elegidas: list[_PreguntaTexto]) -> set[int | None]:
     return {q.passage_id for q in elegidas}
+
+
+def test_el_ensayo_de_lectura_no_hereda_la_dificultad_del_banco() -> None:
+    """El puntaje estimado depende de que el ensayo se parezca a la prueba real.
+
+    El armador de lectura tomaba de cada texto las primeras preguntas del
+    montón, así que la mezcla del ensayo era la mezcla del banco. Si el banco
+    se carga de preguntas difíciles —y esta tanda lo carga, porque las
+    preguntas de reserva se escriben difíciles a propósito—, el alumno rinde un
+    ensayo más duro que la PAES y recibe un puntaje estimado más bajo del que
+    sacaría, calculado con las tablas de transformación del DEMRE, que suponen
+    la dificultad de la prueba real.
+
+    Acá cada texto está torcido a propósito —tres fáciles, tres medias y siete
+    difíciles de trece— y la cuota por lectura es de nueve. Tomando las
+    primeras del montón, el ensayo saldría con más de la mitad difíciles;
+    repartiendo, sale parejo, porque hay con qué.
+    """
+    banco = [
+        _PreguntaTexto(
+            id=t * 100 + k,
+            passage_id=t,
+            difficulty=_Dificultad(
+                "facil" if k < 3 else "medio" if k < 6 else "dificil"
+            ),
+            passage=_Texto("no_literario"),
+        )
+        for t in range(1, 21)
+        for k in range(13)
+    ]
+
+    conteo = Counter()
+    for _ in range(30):
+        for q in _select_questions(banco, [], 65, Subject.LECTORA):
+            conteo[q.difficulty.value] += 1
+
+    total = sum(conteo.values())
+    proporciones = {n: conteo[n] / total for n in ("facil", "medio", "dificil")}
+    assert proporciones["dificil"] <= 0.40, proporciones
+    assert all(p >= 0.25 for p in proporciones.values()), proporciones
 
 
 def test_un_texto_recien_leido_no_vuelve_en_los_dos_ensayos_siguientes() -> None:
