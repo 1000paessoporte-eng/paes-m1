@@ -27583,6 +27583,50 @@ QUESTIONS_LECTORA = [
             ("Que la discusión debería quedar en manos de especialistas", "El texto no propone excluir a nadie de la discusión."),
         ],
     ),
+    _ql(
+        "leer_pantalla", "lec_interpretar", "dificil",
+        "¿Qué diferencia establece el emisor entre medir la comprensión y estimarla?",
+        "Estimar es la sensación; medir es probarse con el texto cerrado",
+        "El emisor viene de mostrar que en pantalla la comprensión baja un poco y la "
+        "confianza no baja con ella.@N@Estimar es quedarse con esa sensación, que es "
+        "justamente el indicador que acaba de declarar poco fiable. Medir es "
+        "someterla a una prueba: cerrar el archivo e intentar explicar el texto, o "
+        "responder preguntas sobre él.@N@Por eso cierra diciendo que quien hace eso "
+        "«está midiendo su comprensión en vez de estimarla, y esa diferencia importa "
+        "mucho más que el soporte».",
+        [
+            ("Medir exige un instrumento de laboratorio y estimar, no",
+             ("Lo que el emisor propone es doméstico: cerrar el archivo e intentar "
+             "explicar lo leído.")),
+            ("Estimar sirve para textos narrativos y medir, para los de estudio",
+             ("La distinción no depende del tipo de texto, sino de si la comprensión "
+             "se comprueba o se supone.")),
+            ("Medir la comprensión solo es posible leyendo en papel",
+             "El emisor insiste en que nada de lo que recomienda depende del soporte."),
+        ],
+    ),
+    _ql(
+        "leer_pantalla", "lec_evaluar", "dificil",
+        "¿Con qué finalidad el emisor abre diciendo que es una afirmación que «todo "
+        "el mundo repite y casi nadie ha revisado»?",
+        "Para anunciar que va a revisar una creencia extendida",
+        "La frase no niega la creencia: la pone en observación.@N@El emisor aclara "
+        "enseguida que la afirmación «tiene respaldo, tiene bastantes matices y, "
+        "sobre todo, tiene una explicación distinta de la que suele darse». Ese es el "
+        "programa del texto: no desmentir, sino precisar.@N@Y cierra en el mismo "
+        "lugar donde abrió, señalando la distancia entre lo que dice un conjunto de "
+        "estudios y lo que dice una frase repetida.",
+        [
+            ("Para desmentir de entrada que exista alguna diferencia",
+             ("No la desmiente: sostiene que la ventaja del papel existe, que es "
+             "pequeña y que aparece de manera consistente.")),
+            ("Para culpar a los medios de haber inventado el hallazgo",
+             ("Los menciona al final, y por convertir en sentencia un hallazgo real, "
+             "no por inventarlo.")),
+            ("Para advertir que el tema todavía no se ha investigado",
+             "Cita revisiones de estudios desde el segundo párrafo."),
+        ],
+    ),
     # ---------- 'La mina que está en el cajón' ----------
     _ql(
         "residuos_electronicos", "lec_localizar", "facil",
@@ -27751,6 +27795,53 @@ QUESTIONS_LECTORA = [
             ("Que los metales escasos se agotarán en pocos años", "El texto no anticipa ningún agotamiento."),
             ("Que la minería debería prohibirse en esas zonas", "El artículo no propone ninguna prohibición."),
             ("Que reciclar resulta más barato que extraer el mineral", "Esa comparación aparece antes y con otro alcance."),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_interpretar", "dificil",
+        "¿Qué quiere decir el emisor con que elegir el modelo más delgado «cambia "
+        "dónde está el punto de decisión»?",
+        "Que parte de la decisión ocurre antes, en la compra",
+        "El emisor acaba de conceder que no todo se explica por mala fe: un aparato "
+        "más delgado, más liviano y más barato es «casi inevitablemente» uno más "
+        "pegado y menos modular.@N@Si eso es así, la reparabilidad se juega también "
+        "en la vitrina: quien elige el modelo más delgado está eligiendo, sin "
+        "saberlo, el más difícil de arreglar.@N@El emisor aclara de inmediato que "
+        "esto «no exime al fabricante de nada». No traslada la culpa: agrega un "
+        "momento donde la decisión se toma.",
+        [
+            ("Que el fabricante queda libre de toda responsabilidad",
+             "El emisor dice expresamente que no lo exime de nada."),
+            ("Que reparar un aparato delgado cuesta lo mismo que uno grueso",
+             ("Sostiene lo contrario: más delgado significa más pegado y menos "
+             "modular, y por lo tanto más difícil de arreglar.")),
+            ("Que la ley debería prohibir los aparatos más delgados",
+             ("No propone prohibir modelos, sino exigir repuestos, manuales y baterías "
+             "reemplazables.")),
+        ],
+    ),
+    _ql(
+        "residuos_electronicos", "lec_evaluar", "dificil",
+        "¿Qué logra el emisor al llamar «aburridas» a las medidas que propone?",
+        "Las opone a sospechar de un plan, que rinde menos",
+        "El adjetivo viene acompañado de otros dos que lo corrigen: son medidas "
+        "«aburridas, verificables y bastante más eficaces que sospechar de un "
+        "plan».@N@Con eso el emisor cierra la discusión sobre la obsolescencia "
+        "programada que abrió antes: la versión fuerte —aparatos diseñados para "
+        "fallar— es entretenida de discutir y difícil de sostener; exigir repuestos "
+        "por un plazo mínimo no emociona a nadie y se puede comprobar.@N@Llamarlas "
+        "aburridas es admitir su desventaja retórica para reclamar su ventaja "
+        "práctica.",
+        [
+            ("Reconoce que esas medidas no llegarán a aplicarse nunca",
+             ("Las llama eficaces y verificables; nada dice sobre su viabilidad "
+             "política.")),
+            ("Admite que el tema no tiene ninguna importancia real",
+             ("Todo el texto sostiene lo contrario, empezando por el valor del "
+             "material que queda sin recuperar.")),
+            ("Sugiere que la ley vigente ya las contempla todas",
+             ("Las plantea como lo que habría que exigir, no como lo que la ley actual "
+             "ya exige.")),
         ],
     ),
     # ---------- 'La cabeza ocupada' ----------
@@ -27922,6 +28013,52 @@ QUESTIONS_LECTORA = [
             ("No explicar los mecanismos fisiológicos involucrados", "Describe la activación y sus efectos sin ese reparo."),
         ],
     ),
+    _ql(
+        "ansiedad_pruebas", "lec_interpretar", "dificil",
+        "¿Por qué el efecto de la ansiedad es mayor en un problema de varios pasos "
+        "que al reconocer una palabra?",
+        "Porque solo el primero necesita sostener cosas a la vez",
+        "El emisor explica el mecanismo antes: resolver un problema exige mantener "
+        "disponible el enunciado, los datos y el paso recién dado, y ese espacio es "
+        "limitado.@N@Los pensamientos sobre el propio desempeño ocupan exactamente "
+        "ese mismo espacio, así que compiten con lo que hay que sostener.@N@Reconocer "
+        "una palabra no sostiene nada: se resuelve de manera casi automática. Por eso "
+        "la ansiedad casi no la afecta, aunque el nerviosismo sea el mismo.",
+        [
+            ("Porque los problemas largos se estudian menos que el vocabulario",
+             ("El emisor no compara cuánto se estudia cada cosa: compara cuánto "
+             "espacio ocupa resolverla.")),
+            ("Porque la ansiedad borra los pasos intermedios de la memoria",
+             ("Insiste en que no borra nada: compite por un espacio que es el mismo "
+             "para las dos tareas.")),
+            ("Porque reconocer una palabra no se evalúa en las pruebas",
+             ("Aparece como ejemplo de tarea automática, no como algo que quede fuera "
+             "de una evaluación.")),
+        ],
+    ),
+    _ql(
+        "ansiedad_pruebas", "lec_evaluar", "dificil",
+        "¿Qué gana el emisor al describir la relación entre activación y rendimiento "
+        "como una curva y no como una recta?",
+        "Puede sostener que algo de nervios sirve y demasiados no",
+        "Una recta obligaría a elegir: o los nervios ayudan siempre o perjudican "
+        "siempre.@N@La curva le permite afirmar las dos cosas sin contradecirse. Un "
+        "poco de activación mejora el rendimiento —el pulso sube y la atención se "
+        "estrecha sobre la tarea—, y a partir de cierto punto más nervios "
+        "empeoran.@N@Eso sostiene además el cierre del artículo: si el objetivo fuera "
+        "no ponerse nervioso, se estaría apuntando a la parte de la curva donde "
+        "también se rinde peor.",
+        [
+            ("Puede recomendar entrar a la prueba completamente relajado",
+             ("El emisor dice lo contrario: relajado del todo se rinde peor que con "
+             "algo de activación.")),
+            ("Puede afirmar que cada persona tiene su propia curva",
+             ("Sostiene que el punto a partir del cual empeora «existe para "
+             "cualquiera», sin abrir casos particulares.")),
+            ("Puede medir con precisión cuántos nervios convienen",
+             "No entrega ninguna medida: describe la forma de la relación, no un valor."),
+        ],
+    ),
     # ---------- 'Las abejas equivocadas' ----------
     _ql(
         "abejas_simbolo", "lec_localizar", "facil",
@@ -28090,6 +28227,53 @@ QUESTIONS_LECTORA = [
             ("Que propone medidas imposibles de cumplir en una ciudad", "El artículo termina proponiendo medidas urbanas simples."),
         ],
     ),
+    _ql(
+        "abejas_simbolo", "lec_interpretar", "dificil",
+        "¿Qué consecuencia tiene, según el emisor, que las abejas silvestres no se "
+        "puedan comprar ni trasladar en camión?",
+        "Que si desaparecen de un lugar, no vuelven a reponerse",
+        "El contraste con la abeja de miel es el que ordena todo el texto: cuando "
+        "muere un rebaño, el ganadero compra otro.@N@Las silvestres no tienen ese "
+        "respaldo. Dependen de que el lugar siga teniendo dónde anidar y qué comer, "
+        "así que una desaparición local no se corrige con una compra.@N@De ahí que su "
+        "situación sí se parezca a la de una especie en riesgo, mientras que la de la "
+        "abeja de miel se parece a la de una actividad productiva con problemas.",
+        [
+            ("Que su polinización vale menos que la de la abeja de miel",
+             ("El emisor sostiene que en varios cultivos la hacen mejor, porque "
+             "visitan flores que a la de miel no le interesan.")),
+            ("Que los apicultores deberían hacerse cargo de criarlas",
+             ("El texto explica que no se pueden manejar: no viven en colmenas ni se "
+             "reponen por compra.")),
+            ("Que su número depende de cuántas colmenas se instalen",
+             ("Eso describe a la abeja de miel; el número de las silvestres depende "
+             "del hábitat que les quede.")),
+        ],
+    ),
+    _ql(
+        "abejas_simbolo", "lec_evaluar", "dificil",
+        "¿Qué alcance le da el emisor al cierre, cuando dice que la lección «excede a "
+        "las abejas»?",
+        "Que una causa correcta puede apoyarse en un ejemplo equivocado",
+        "El emisor viene sosteniendo que la causa es buena y que el animal del afiche "
+        "es el que no corresponde.@N@El cierre generaliza esa forma: un ejemplo "
+        "fotogénico puede sostener durante años una causa correcta, y desplazar al "
+        "ejemplo que de verdad la ilustra. Las abejas solitarias no tienen afiche "
+        "porque «son grises, no pican y no producen nada que se pueda vender en un "
+        "frasco».@N@La conclusión no es sobre insectos: «la atención pública tiene "
+        "sus propios criterios, y casi nunca coinciden con los de la biología».",
+        [
+            ("Que la biología debería elegir los símbolos de las campañas",
+             ("El emisor constata que los criterios no coinciden; no propone quién "
+             "debería elegirlos.")),
+            ("Que las campañas ambientales suelen exagerar sus cifras",
+             ("El reproche no es a las cifras, sino al animal que se usa para ilustrar "
+             "el problema.")),
+            ("Que conviene desconfiar de cualquier causa fotogénica",
+             ("No descalifica las causas: separa el argumento del ejemplo con que se "
+             "lo presenta.")),
+        ],
+    ),
     # ---------- 'Por qué las micros se juntan' ----------
     _ql(
         "micros_juntas", "lec_localizar", "facil",
@@ -28254,6 +28438,53 @@ QUESTIONS_LECTORA = [
             ("La atribuye a quienes administran el transporte", "La presenta como la reacción de cualquier persona."),
         ],
     ),
+    _ql(
+        "micros_juntas", "lec_interpretar", "dificil",
+        "¿Qué distingue el emisor entre la frecuencia de una línea y su regularidad?",
+        "Cuántos buses hay frente a cada cuánto pasan de verdad",
+        "La distinción aparece al descartar la solución intuitiva: con el doble de "
+        "buses «la frecuencia sube y la regularidad, que es lo que uno experimenta en "
+        "el paradero, no mejora».@N@La frecuencia es cuántos buses circulan; la "
+        "regularidad es si los intervalos entre ellos son parejos. Tres buses pegados "
+        "y un hueco de veinte minutos pueden ser mucha frecuencia y ninguna "
+        "regularidad.@N@Por eso el emisor mide el servicio desde el paradero y no "
+        "desde la flota: es ahí donde la diferencia se nota.",
+        [
+            ("La velocidad del recorrido frente al tiempo de detención",
+             ("Ninguna de las dos se refiere a la velocidad: las dos hablan de cómo se "
+             "reparten los buses en el tiempo.")),
+            ("El horario planificado frente al que cumple el conductor",
+             ("El emisor descarta desde el comienzo que el fenómeno dependa del "
+             "conductor: ocurre aunque todos sean puntuales.")),
+            ("La cantidad de pasajeros frente a la capacidad del bus",
+             ("Los pasajeros aparecen como causa del atraso, no como la medida del "
+             "servicio.")),
+        ],
+    ),
+    _ql(
+        "micros_juntas", "lec_evaluar", "dificil",
+        "¿Con qué finalidad el emisor imagina una línea con conductores puntuales, "
+        "sin tacos y con buses cada diez minutos exactos?",
+        "Para mostrar que el problema aparece sin que nadie falle",
+        "El ejemplo está construido para dejar sin excusas a las explicaciones "
+        "habituales.@N@Si en una línea perfecta un semáforo en rojo basta para "
+        "desatar el mecanismo, entonces no hacen falta ni la flojera ni la mala "
+        "suerte: el fenómeno está en cómo el sistema responde a una perturbación "
+        "mínima.@N@Eso es lo que le permite al emisor decir, en la primera línea, que "
+        "ocurre «incluso cuando todos hacen su trabajo perfectamente», y sostenerlo "
+        "después con el mecanismo paradero por paradero.",
+        [
+            ("Para señalar que las líneas reales están mal planificadas",
+             ("El ejemplo no se compara con ninguna línea real ni evalúa su "
+             "planificación.")),
+            ("Para proponer que se contraten conductores más puntuales",
+             ("Su conclusión es la contraria: la puntualidad no evita el fenómeno, "
+             "porque el atraso no nace ahí.")),
+            ("Para demostrar que los tacos son la causa principal",
+             ("Los excluye del ejemplo precisamente para que no puedan explicar nada "
+             "de lo que ocurre después.")),
+        ],
+    ),
     # ---------- 'Cómo comparar dos productos con la tabla nutricional' ----------
     _ql(
         "tabla_nutricional", "lec_localizar", "facil",
@@ -28414,6 +28645,50 @@ QUESTIONS_LECTORA = [
             ("Porque las cifras por 100 gramos pueden estar mal calculadas", "La ficha no pone en duda la exactitud de las tablas."),
             ("Porque los sellos no consideran todos los nutrientes", "Ese punto se trata antes y es distinto del cierre."),
             ("Porque la calidad de los ingredientes cambia el resultado", "Es otra de las limitaciones, pero no la que explica el caso."),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_interpretar", "dificil",
+        "¿Por qué la ficha sostiene que ninguno de los dos cereales es «el bueno»?",
+        "Porque cada uno excede en un nutriente distinto",
+        "Comparados por 100 gramos, los dos superan dos límites, pero no los mismos: "
+        "el Cereal A excede en energía y azúcares, el B en energía y sodio.@N@A es "
+        "más dulce y más energético; B es más salado. No hay una columna donde uno "
+        "gane en todo.@N@Por eso la ficha traslada la decisión al lector: «cuál "
+        "conviene depende de qué se está tratando de reducir».",
+        [
+            ("Porque los dos superan exactamente los mismos límites",
+             ("Superan dos límites cada uno, pero coinciden solo en energía: el otro "
+             "es azúcares en A y sodio en B.")),
+            ("Porque las cifras por porción no se pueden comparar",
+             ("Esa advertencia es sobre el método de comparación, no sobre el "
+             "resultado de compararlos bien.")),
+            ("Porque ambos productos son ficticios y no existen",
+             ("Que sean inventados no impide comparar sus cifras, que es exactamente "
+             "el ejercicio que la ficha propone.")),
+        ],
+    ),
+    _ql(
+        "tabla_nutricional", "lec_evaluar", "dificil",
+        "¿Con qué propósito la ficha termina enumerando lo que no resuelve?",
+        "Para acotar hasta dónde llega lo que la tabla informa",
+        "La ficha acaba de enseñar a comparar dos productos, y ese aprendizaje puede "
+        "sonar a más de lo que es.@N@El cierre marca el límite: la tabla no dice nada "
+        "sobre la calidad de los ingredientes, sobre la fibra o la proteína, ni sobre "
+        "cuánto se come realmente. Un cereal con buenas cifras servido tres veces "
+        "entrega más de todo que uno con peores cifras servido una vez.@N@La frase "
+        "final lo deja escrito: «la tabla informa sobre cien gramos de producto; "
+        "sobre el desayuno completo, no informa nada».",
+        [
+            ("Para admitir que los datos entregados son poco confiables",
+             ("Los datos no se ponen en duda en ningún momento: lo que se acota es su "
+             "alcance.")),
+            ("Para recomendar que se lea la lista de ingredientes",
+             ("Menciona la calidad de los ingredientes como algo que la tabla no "
+             "cubre, sin proponer dónde buscarlo.")),
+            ("Para justificar que los dos cereales sean inventados",
+             ("Eso se aclara en la nota inicial y por otra razón: los límites de los "
+             "sellos sí son los vigentes.")),
         ],
     ),
     # ---------- 'Seiscientas veces' ----------
@@ -28587,6 +28862,52 @@ QUESTIONS_LECTORA = [
             ("Que ninguna campaña puede modificar este hábito", "El emisor propone medidas que sí podrían hacerlo."),
         ],
     ),
+    _ql(
+        "agua_embotellada", "lec_interpretar", "dificil",
+        "¿Qué se sigue de que el agua embotellada que se vende en Chile provenga de "
+        "fuentes sometidas a controles de calidad, igual que la de la red?",
+        "Que la discusión no es sobre seguridad sino sobre confianza",
+        "Si las dos aguas están controladas, el sobreprecio no compra seguridad: "
+        "compra otra cosa.@N@El emisor la nombra en la última línea: «cuánto estamos "
+        "dispuestos a pagar por no tener que confiar». La botella resuelve la duda, "
+        "no el riesgo.@N@Y eso reordena todo el texto, porque la confianza «no se "
+        "puede embotellar: se construye con años de un servicio que no falle». Lo que "
+        "faltaba no era un consejo al consumidor sino un servicio predecible.",
+        [
+            ("Que el agua de la red debería costar lo mismo que la envasada",
+             ("El emisor no propone igualar precios: usa la diferencia para mostrar el "
+             "tamaño del sobreprecio.")),
+            ("Que las botellas no tienen ningún costo ambiental",
+             ("Dedica varios párrafos a sostener que sí lo tienen, desde el envase "
+             "hasta el transporte del peso del agua.")),
+            ("Que da lo mismo cuál de las dos se consuma",
+             ("El sobreprecio y el costo ambiental siguen distinguiéndolas; lo que se "
+             "empareja es la seguridad.")),
+        ],
+    ),
+    _ql(
+        "agua_embotellada", "lec_evaluar", "dificil",
+        "¿Qué logra el emisor al señalar que cualquiera puede comprobar el "
+        "sobreprecio dividiendo su boleta del agua por los metros cúbicos?",
+        "Convierte una cifra discutible en algo verificable en casa",
+        "El texto abre con una afirmación grande: la diferencia es «de dos o tres "
+        "órdenes de magnitud».@N@Una cifra así invita a desconfiar, y el emisor no la "
+        "respalda con una fuente sino con una cuenta que el lector puede hacer con un "
+        "papel que ya tiene.@N@Con eso se saca de encima la discusión sobre el dato y "
+        "puede dedicar el resto del texto a lo que de verdad le interesa: por qué "
+        "saberlo no cambia casi nada.",
+        [
+            ("Demuestra que las empresas de agua cobran de más",
+             ("El sobreprecio que calcula es el de la botella; la boleta es la "
+             "referencia barata, no el objeto de la crítica.")),
+            ("Sugiere que la boleta del agua está mal calculada",
+             ("La usa como fuente confiable para hacer la cuenta, no como algo bajo "
+             "sospecha.")),
+            ("Reemplaza el argumento ambiental por uno económico",
+             ("El argumento ambiental aparece completo más adelante, con el envase, el "
+             "transporte y el reciclaje.")),
+        ],
+    ),
     # ---------- 'En defensa de las horas vacías' ----------
     _ql(
         "aburrimiento_horas", "lec_localizar", "facil",
@@ -28752,6 +29073,55 @@ QUESTIONS_LECTORA = [
             ("Que su tesis contradice lo que muestran los estudios", "El texto no se opone a los estudios: acota su alcance."),
             ("Que la recomendación final es imposible de cumplir", "La presenta como simple: no llenar cada intersticio."),
             ("Que el aburrimiento no cumple ninguna función real", "Toda la argumentación sostiene que sí cumple una."),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_interpretar", "dificil",
+        "¿Qué diferencia hay entre decir que el aburrimiento es valioso y decir que "
+        "lo valioso es el hueco donde ocurre?",
+        "La segunda no exige pasarlo mal para que sirva",
+        "El emisor descarta la primera formulación porque promete de más y porque "
+        "convierte una molestia en una virtud.@N@Lo que sostiene es más acotado: "
+        "cierta cantidad de tiempo sin destino asignado y sin estímulo entrante «es "
+        "la condición para que aparezcan las cosas que uno no fue a buscar». Las "
+        "ideas de la ducha no llegan porque uno estuviera aburrido, sino porque ese "
+        "rato no estaba ocupado.@N@Por eso la recomendación deja de ser «abúrrete», "
+        "que es una instrucción rara, y pasa a ser no cubrir cada intersticio del "
+        "día.",
+        [
+            ("La segunda se refiere solo a los niños y no a los adultos",
+             ("Los ejemplos del emisor son adultos: la fila, el trayecto y la media "
+             "hora antes de dormir.")),
+            ("La primera está respaldada por estudios y la segunda no",
+             ("Los estudios que cita respaldan la primera, y el emisor los describe "
+             "como acotados y de resultados modestos.")),
+            ("La segunda propone eliminar el teléfono por completo",
+             ("Su recomendación es no cubrir automáticamente cada hueco, no deshacerse "
+             "del aparato.")),
+        ],
+    ),
+    _ql(
+        "aburrimiento_horas", "lec_evaluar", "dificil",
+        "¿Qué le reprocha el emisor a quien argumenta con la escena nostálgica de su "
+        "infancia?",
+        "Que use como regla los casos que alcanzó a recordar",
+        "El emisor no niega que esas tardes hayan existido: niega que sean "
+        "representativas.@N@Quien recuerda haberse aburrido e inventado juegos "
+        "recuerda «las tardes en que inventó algo». Las otras —dando vueltas, "
+        "peleando con los hermanos, mirando la pared— no dejaron recuerdo porque no "
+        "hubo nada que recordar.@N@El error, entonces, no está en el recuerdo sino en "
+        "el uso: «la memoria selecciona los casos exitosos y después uno los usa como "
+        "si fueran la regla».",
+        [
+            ("Que idealice la vida rural frente a la vida en la ciudad",
+             ("El reproche es a cómo se selecciona el recuerdo, no al lugar donde "
+             "transcurre la escena.")),
+            ("Que no tenga estudios que respalden lo que afirma",
+             ("Los estudios se discuten en otro párrafo, y el emisor reconoce que "
+             "existen aunque sean modestos.")),
+            ("Que confunda el aburrimiento con la falta de cosas que hacer",
+             ("Esa confusión se despeja al comienzo del texto y no es la que comete "
+             "esta escena.")),
         ],
     ),
     # ---------- 'La que firma' ----------
@@ -35110,6 +35480,49 @@ QUESTIONS_LECTORA = [
             ("Que el acuerdo obliga a la narradora a no abrir el sobre", "Cuando la caja llega a sus manos, el relato subraya que ya nadie la obliga."),
         ],
     ),
+    _ql(
+        "carta_cerrada", "lec_interpretar", "dificil",
+        "¿Por qué la narradora sostiene que las tres explicaciones sobre la letra "
+        "dejan «intacto lo esencial»?",
+        "Porque ninguna toca la decisión que se repitió noventa años",
+        "El hallazgo del cuaderno podría haber cambiado la historia entera: la letra "
+        "del sobre es la letra de la bisabuela.@N@La narradora ofrece tres salidas "
+        "—que copiara la dirección, que se la dictara a alguien, que se la escribiera "
+        "a sí misma para organizar los años de espera— y no elige ninguna.@N@No le "
+        "hace falta, porque lo que el relato viene contando no es de dónde vino la "
+        "carta: «durante noventa años, cuatro mujeres tuvieron a mano una respuesta y "
+        "prefirieron seguir teniendo una pregunta».",
+        [
+            ("Porque las tres confirman que la carta vino desde el norte del país",
+             "Una de las tres es que la bisabuela se la escribió a sí misma."),
+            ("Porque ninguna de las tres se puede comprobar ya",
+             "El reparo no es que falte prueba, sino que la prueba no cambiaría nada."),
+            ("Porque las tres explican por qué la letra es la misma",
+             ("Eso es cierto y es lo que las hace razonables, pero no es lo que la "
+             "narradora llama esencial.")),
+        ],
+    ),
+    _ql(
+        "carta_cerrada", "lec_evaluar", "dificil",
+        "¿Qué revela que la narradora le haya inventado a la carta un contenido "
+        "distinto a cada edad?",
+        "Que lo imaginado habla de ella y no del sobre cerrado",
+        "A los diez la carta anunciaba un tren que llegaba el jueves; a los quince, "
+        "un perdón desde Antofagasta, «porque a los quince uno necesita que las "
+        "historias tengan culpables»; a los veinte, tres líneas de cortesía sobre el "
+        "clima del norte.@N@El sobre no cambió en esos años: siguió cerrado sobre el "
+        "mismo papel. Lo que cambió fue quién lo estaba mirando.@N@Por eso la última "
+        "posibilidad le parece «la más triste de todas, y también la más probable»: "
+        "ya no necesita que la historia tenga culpables.",
+        [
+            ("Que con los años fue recordando mejor lo que la carta decía",
+             "Nunca la leyó, así que no hay nada que recordar de su contenido."),
+            ("Que la familia le reveló el contenido de a poco",
+             "Ninguna de las cuatro mujeres lo conoció: el sobre sigue cerrado."),
+            ("Que dejó de importarle la historia al ir creciendo",
+             "Al contrario: termina escribiendo el relato para sumar una versión más."),
+        ],
+    ),
     # ---------- 'Volver a Sub terra' ----------
     _ql(
         "resena_sub_terra", "lec_localizar", "facil",
@@ -35278,6 +35691,50 @@ QUESTIONS_LECTORA = [
             ("Que efectivamente lo desaconseja para lectores primerizos", "A ese lector le dedica una recomendación de cómo leerlo, no una negativa."),
             ("Que su juicio es tan negativo como el de la crítica habitual", "La reseña no cita ninguna crítica habitual con la cual comparar su juicio."),
             ("Que prefiere recomendar el informe histórico sobre las minas", "El informe aparece para mostrar lo que un informe NO puede hacer."),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_interpretar", "dificil",
+        "¿Qué implica que, según la reseña, la mina no funcione como escenario sino "
+        "como un sistema con reglas propias?",
+        "Que lo que los personajes pueden hacer ya viene acotado",
+        "La reseña marca la diferencia con un contraejemplo: «un cuento de aventuras "
+        "usa una selva» como telón de fondo, y ahí el héroe puede hacer cualquier "
+        "cosa.@N@En Sub terra no. Hay una jerarquía, una manera de calcular el riesgo "
+        "y un lenguaje técnico, y los personajes «no pueden salirse de ahí porque de "
+        "eso comen».@N@Por eso el padre de la compuerta «no es un mal padre»: elige "
+        "entre dos cosas malas con el margen que el sistema le deja, que es lo que la "
+        "reseña considera vigente del libro.",
+        [
+            ("Que Lillo emplea un vocabulario técnico y muy preciso",
+             ("Es uno de los rasgos del mundo que describe, no la distinción que la "
+             "reseña plantea.")),
+            ("Que el libro se parece más a una crónica que a una ficción",
+             "La reseña rechaza expresamente que su valor sea documental."),
+            ("Que la mina resulta más memorable que sus personajes",
+             ("La comparación no es entre partes del libro, sino con el modo en que "
+             "otros relatos usan un lugar.")),
+        ],
+    ),
+    _ql(
+        "resena_sub_terra", "lec_evaluar", "dificil",
+        "¿Qué consigue la emisora al terminar recordando que el libro se consigue "
+        "completo y gratis?",
+        "Dejar en evidencia que la barrera ya no es conseguirlo",
+        "El dato del dominio público no está puesto para informar dónde "
+        "bajarlo.@N@Está puesto para cerrar la lista de excusas: si el libro es "
+        "gratis y está completo, no queda ninguna razón material para no leerlo, y "
+        "entonces «la única barrera para leerlo es la idea de que ya se "
+        "leyó».@N@Contra esa idea discute la reseña desde su primera línea, cuando "
+        "dice que es el libro que más se lee en los colegios y «quizá por eso mismo, "
+        "el que peor se lee».",
+        [
+            ("Advertir que las ediciones que circulan están incompletas",
+             "La reseña dice justamente que se consigue completo."),
+            ("Sugerir que el libro perdió valor al quedar sin dueño",
+             "El dominio público aparece como una facilidad, nunca como una pérdida."),
+            ("Reprochar a los colegios que cobren por el ejemplar",
+             "No hay ningún reproche por el precio; el reparo es a cómo se lee."),
         ],
     ),
     # ---------- 'La hora que inventaron los trenes' ----------
@@ -35452,6 +35909,55 @@ QUESTIONS_LECTORA = [
             ("Que se acabaría la discusión anual sobre el cambio de hora", "Esa discusión aparece como ejemplo de que la elección importa."),
         ],
     ),
+    _ql(
+        "hora_ferrocarril", "lec_interpretar", "dificil",
+        "¿Por qué adoptar la hora del ferrocarril fue algo más que un cambio técnico?",
+        "Porque ponía el reloj de todos en manos de una empresa",
+        "El texto dice que el cambio «no fue pacífico ni inmediato», y la razón no es "
+        "que costara ajustar los relojes.@N@Los horarios de los tribunales, los "
+        "contratos y las jornadas de trabajo «estaban escritos en la hora del lugar»: "
+        "cambiar la hora cambiaba lo que decían todos esos documentos.@N@De ahí el "
+        "reparo de fondo, que el texto deja escrito: aceptar la hora del ferrocarril "
+        "«significaba admitir que una empresa privada fijara el reloj de todos». En "
+        "Estados Unidos ocurrió tal cual, y la ley federal confirmó décadas más tarde "
+        "lo que unas compañías habían acordado entre sí.",
+        [
+            ("Porque los relojes de entonces no podían marcar dos horas",
+             ("Convivieron sin problema: en algunos relojes públicos se instaló un "
+             "segundo minutero.")),
+            ("Porque el mediodía del sol era la única hora exacta",
+             ("El emisor sostiene lo contrario: la hora oficial no es un dato que se "
+             "observe en el cielo.")),
+            ("Porque obligaba a mover la salida del sol media hora",
+             ("Ninguna de estas resoluciones movió un minuto la salida del sol, solo "
+             "el número que se le pone.")),
+        ],
+    ),
+    _ql(
+        "hora_ferrocarril", "lec_evaluar", "dificil",
+        "¿Qué muestra el emisor al llamar a la hora que Chile adoptó en 1916 «un "
+        "número incómodo pero exacto para el lugar»?",
+        "Que ser exacto y ser fácil de coordinar no van juntos",
+        "Cuatro horas, cuarenta y dos minutos y algunos segundos menos que Greenwich "
+        "es la hora que de verdad le corresponde al observatorio de Quinta Normal. Es "
+        "exacta y es impracticable para ponerse de acuerdo con nadie.@N@Dos años "
+        "después el país adoptó el huso de cuatro horas, «más redondo y más fácil de "
+        "coordinar con el resto del mundo»: perdió exactitud a propósito.@N@Es el "
+        "mismo intercambio que el texto describe al final. Se pierde la coincidencia "
+        "entre el reloj y el cielo, y se gana que dos personas lejanas puedan acordar "
+        "un horario y cumplirlo.",
+        [
+            ("Que la medición de 1916 estaba mal hecha desde el inicio",
+             ("El texto la llama exacta para el lugar; lo incómodo es el número, no la "
+             "medición.")),
+            ("Que en 1916 se prefirió la comodidad antes que la precisión",
+             ("Fue al revés: se prefirió la precisión, y por eso el número resultó "
+             "incómodo.")),
+            ("Que el cambio de 1918 corrigió un error de cálculo previo",
+             ("No corrigió un error, cambió el criterio: eligió un huso redondo en vez "
+             "del meridiano propio.")),
+        ],
+    ),
     # ---------- '¿En qué se nos va la semana?' ----------
     _ql(
         "uso_tiempo_liceo", "lec_localizar", "facil",
@@ -35616,6 +36122,47 @@ QUESTIONS_LECTORA = [
             ("Publicar el calendario de evaluaciones con tres semanas de anticipación", "Esa se apoya en un argumento sobre los turnos, no en un dato medido."),
             ("Reducir las horas de pantallas de los estudiantes más jóvenes", "Esa medida no se propone: el informe no pide intervenir ahí."),
             ("Repartir las tareas domésticas de manera más pareja en la casa", "El informe no propone ninguna medida sobre las tareas domésticas."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "¿Qué supone el informe al advertir que las estimaciones «no se equivocan al "
+        "azar»?",
+        "Que el error se inclina hacia la respuesta más presentable",
+        "El informe no dice que la gente se equivoque poco: dice que se equivoca "
+        "siempre para el mismo lado.@N@Es razonable suponer «que las horas de estudio "
+        "están algo infladas y las de pantallas algo recortadas, porque una respuesta "
+        "se siente más presentable que la otra».@N@Por eso el punto 5 desaconseja "
+        "leer cada número como una medición, aunque acepte la comparación entre "
+        "grupos.",
+        [
+            ("Que algunos estudiantes respondieron sin leer la pregunta",
+             "El informe no menciona respuestas descuidadas, sino un sesgo parejo."),
+            ("Que las cifras de las seis actividades son poco confiables",
+             ("Las considera utilizables para comparar; lo que descarta es tomarlas "
+             "como medición.")),
+            ("Que quienes trabajan calcularon peor sus horas de estudio",
+             "El sesgo que describe afecta parecido a todos los que responden."),
+        ],
+    ),
+    _ql(
+        "uso_tiempo_liceo", "lec_evaluar", "dificil",
+        "¿Qué logra el informe al reconocer que ninguna de las dos medidas que "
+        "propone resuelve lo que muestra la tabla 3?",
+        "Ajusta lo que promete a lo que el liceo puede hacer",
+        "La tabla 3 muestra una brecha que el liceo no está en condiciones de cerrar: "
+        "quién tiene que trabajar no se decide en el establecimiento.@N@El centro de "
+        "estudiantes podría haber pedido algo grande y quedar bien. Pide dos cosas "
+        "chicas y avisa en la misma frase que no alcanzan, pero que «están al alcance "
+        "del liceo este semestre».@N@Separar lo que se puede pedir de lo que se "
+        "querría cambiar es lo que vuelve atendible la petición.",
+        [
+            ("Admite que las dos medidas propuestas sirven de poco",
+             "Las presenta como útiles y aplicables; lo que acota es su alcance."),
+            ("Traspasa al equipo directivo la culpa del problema",
+             "Le pide dos medidas concretas, sin atribuirle el origen de la brecha."),
+            ("Reconoce que la encuesta se aplicó con fallas de método",
+             "Las advertencias de método están en el punto 5 y son otras tres."),
         ],
     ),
     # ---------- 'El estilo que nadie encontró' ----------
@@ -35794,6 +36341,50 @@ QUESTIONS_LECTORA = [
             ("Tajante, pues exige prohibir la clasificación por estilos", "En ningún momento propone prohibirla: habla de una decisión de quien la adopta."),
         ],
     ),
+    _ql(
+        "estilos_aprendizaje", "lec_interpretar", "dificil",
+        "¿Qué quiere decir el emisor con que una etiqueta «que empieza siendo una "
+        "descripción termina funcionando como un límite»?",
+        "Que pasa a justificar de antemano lo que no se intenta",
+        "La etiqueta nace describiendo una preferencia —a este le acomoda el esquema, "
+        "a aquel que se lo expliquen en voz alta— y en el uso cambia de oficio.@N@Los "
+        "dos ejemplos que da el emisor están puestos en primera persona: «yo soy "
+        "visual, por eso no entiendo cuando explican», «no soy de números». Ya no "
+        "describen cómo alguien estudia mejor; le entregan una razón para no "
+        "intentarlo.@N@De ahí que el costo de creerla «no sea cero», aunque "
+        "clasificar parezca inofensivo.",
+        [
+            ("Que los docentes la aplican sin haberla comprobado antes",
+             "Ese reparo es sobre el instrumento y aparece en otro párrafo."),
+            ("Que clasificar cursos consume horas y presupuesto del liceo",
+             "Es otro de los costos que enumera, distinto del que instala la etiqueta."),
+            ("Que la preferencia declarada cambia con los años de estudio",
+             "El texto no discute si la preferencia se mantiene o cambia con el tiempo."),
+        ],
+    ),
+    _ql(
+        "estilos_aprendizaje", "lec_evaluar", "dificil",
+        "¿Con qué finalidad el emisor separa, al comienzo, dos afirmaciones «que "
+        "suelen viajar juntas»?",
+        "Para dejar en claro cuál de las dos está poniendo en duda",
+        "La primera afirmación —que las personas tienen preferencias sobre cómo "
+        "recibir información— el emisor la concede sin reservas: «está bien "
+        "documentado y nadie lo discute».@N@La segunda es la hipótesis de "
+        "correspondencia, y es la única que discute. Separarlas evita que su crítica "
+        "se lea como una negación de algo evidente, que es como suele "
+        "contestarse.@N@El texto vuelve sobre ese cuidado al final, cuando aclara que "
+        "no se ha demostrado que los estilos no existan ni que dé lo mismo el "
+        "formato.",
+        [
+            ("Para mostrar que las dos carecen de respaldo empírico",
+             "De la primera dice que está bien documentada y que nadie la discute."),
+            ("Para reprochar a los docentes que hayan confundido ambas cosas",
+             ("El emisor explica por qué la idea resulta atractiva; no reparte "
+             "reproches ahí.")),
+            ("Para anunciar que descartará las dos en el mismo orden",
+             "Solo somete a prueba la segunda; la primera queda en pie todo el texto."),
+        ],
+    ),
     # ---------- 'La versión de mi hermano' ----------
     _ql(
         "version_hermano", "lec_localizar", "facil",
@@ -35970,6 +36561,49 @@ QUESTIONS_LECTORA = [
             ("Acusadora, pues lo culpa de inventar su versión para quedar mejor", "El narrador dirige esa sospecha hacia sí mismo, no hacia su hermano."),
             ("Agradecida, pues valora que lo hiciera revisar su recuerdo", "No hay agradecimiento: el hallazgo lo describe como algo que le «sacó el piso»."),
             ("Distante, pues rompe la relación tras la discusión del cumpleaños", "Nada indica un quiebre: la discusión ocurre en voz baja y no vuelve a aparecer."),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_interpretar", "dificil",
+        "¿Por qué el narrador dice que la conversación con su madre «no sirvió de "
+        "nada»?",
+        "Porque confirmó un detalle y no quién entró al sitio",
+        "El narrador va a la cocina a buscar una prueba y vuelve con menos de lo que "
+        "fue a buscar.@N@La madre confirma que la reja era de fierro y que tenía "
+        "puntas arriba, un detalle que ninguna de las dos versiones discute: sirve "
+        "para el decorado, no para el hecho.@N@Sobre lo único que estaba en disputa "
+        "—si él entró o miró desde afuera— la madre nunca los vio, y hasta agrega que "
+        "a esa edad hacían cosas peores sin que ella supiera.",
+        [
+            ("Porque su madre le dio la razón a su hermano esa noche",
+             "La madre no recordaba la reja ni tomó partido por ninguna versión."),
+            ("Porque la madre se rió en vez de responderle en serio",
+             "Responde las dos preguntas; la risa viene después de haberlo hecho."),
+            ("Porque el narrador ya sabía que la reja tenía puntas arriba",
+             ("Ese dato lo sostenía el hermano, y es justamente el que el narrador no "
+             "tenía.")),
+        ],
+    ),
+    _ql(
+        "version_hermano", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al dejar sin resolver cuál de las dos versiones "
+        "ocurrió?",
+        "Traslada el asunto del hecho a cómo se arma un recuerdo",
+        "No hay manera de saber: la madre no los vio, «nadie más había estado ahí» y "
+        "la reja se sacó cuando el narrador tenía once. El relato podría haber "
+        "inventado un testigo y no lo hace.@N@Al cerrar esa puerta, lo que queda en "
+        "pie no es el episodio del perro sino el mecanismo. Contar cien veces una "
+        "historia la vuelve a armar cada vez, y «lo que uno arma cien veces termina "
+        "pareciéndose más a lo que uno quiere que a lo que pasó».@N@La duda no es un "
+        "cabo suelto: es el tema.",
+        [
+            ("Deja al lector la tarea de decidir cuál de los dos miente",
+             "Ninguno miente: el narrador sostiene que fabricó el recuerdo sin saberlo."),
+            ("Sugiere que los dos hermanos recuerdan bien la escena",
+             "El propio narrador concluye que una de las dos imágenes la fabricó él."),
+            ("Evita tomar partido para no ofender a su hermano",
+             ("En privado sí toma partido: dice que es más probable que la versión "
+             "falsa sea la suya.")),
         ],
     ),
     # ---------- 'Reglamento de la biblioteca del liceo' ----------
@@ -36153,6 +36787,51 @@ QUESTIONS_LECTORA = [
             ("Debe devolverlo y queda primera en la lista de espera", "El texto dice lo contrario: pasa al FINAL de la lista."),
         ],
     ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "Un estudiante pierde un ejemplar que ya no se edita y ofrece pagar su valor. "
+        "¿Qué corresponde según el reglamento?",
+        "Que la encargada resuelva si acepta un título equivalente",
+        "El artículo 5 cierra dos caminos y deja uno abierto. No se aceptan pagos en "
+        "dinero, porque «la biblioteca no vende libros ni administra fondos», así que "
+        "el ofrecimiento no procede.@N@Para una obra descatalogada el reglamento sí "
+        "prevé una salida: un título equivalente en materia y extensión.@N@Pero deja "
+        "escrito de quién es la decisión. La toma la encargada, se registra por "
+        "escrito y «no queda a criterio del usuario».",
+        [
+            ("Que pague el valor del ejemplar en la secretaría del liceo",
+             "El artículo 5 dice expresamente que no se aceptan pagos en dinero."),
+            ("Que elija él mismo otro libro de materia y extensión parecidas",
+             "Esa elección no queda a criterio del usuario, sino de la encargada."),
+            ("Que quede suspendido hasta reponer el ejemplar perdido",
+             ("Mientras la reposición está pendiente puede usar la sala, y el "
+             "reglamento aclara que eso no es una sanción.")),
+        ],
+    ),
+    _ql(
+        "reglamento_biblioteca_liceo", "lec_evaluar", "dificil",
+        "¿Qué se consigue al nombrar en la disposición final los artículos que "
+        "admiten excepción y los que no?",
+        "Que la facultad de la encargada quede acotada por escrito",
+        "La disposición final podría haberse limitado a decir que el reglamento se "
+        "aplica a todos por igual. Hace algo más preciso: entrega la facultad de "
+        "autorizar excepciones y en la misma frase la encierra.@N@Solo caben en los "
+        "artículos 3 y 6 —renovaciones y reservas—, con constancia escrita del "
+        "motivo, y quedan fuera el material de referencia y la reposición de un "
+        "ejemplar.@N@Así la excepción deja de depender del criterio del día y pasa a "
+        "ser parte de la regla.",
+        [
+            ("Que la encargada pueda eximir de cualquier artículo si lo funda",
+             ("Solo puede hacerlo en los artículos 3 y 6; los demás no admiten "
+             "excepción.")),
+            ("Que el usuario pueda pedir una excepción cuando la necesite",
+             ("El reglamento entrega la facultad a la encargada, no un derecho al "
+             "usuario.")),
+            ("Que los artículos no mencionados dejen de aplicarse",
+             ("El mismo párrafo empieza diciendo que el reglamento se aplica por igual "
+             "a todos.")),
+        ],
+    ),
     # ---------- 'El plástico que dejó de verse' ----------
     _ql(
         "microplasticos", "lec_localizar", "facil",
@@ -36333,6 +37012,52 @@ QUESTIONS_LECTORA = [
             ("Instalar redes de recolección de plásticos flotantes en el río", "Eso actúa sobre el plástico visible, la parte del problema que se entiende mal."),
             ("Realizar campañas para que los vecinos reciclen más envases", "El texto explica por qué el reciclaje no alcanza al microplástico fragmentado."),
             ("Medir periódicamente la cantidad de partículas por litro en el río", "Medir no reduce, y esa métrica es difícil de comparar entre estudios."),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_interpretar", "dificil",
+        "¿Qué implica, según el emisor, que el microplástico entre a la cadena "
+        "alimentaria «por su base»?",
+        "Que se incorpora donde empieza todo lo que viene después",
+        "El emisor separa dos consecuencias del cambio de escala. La segunda es de "
+        "acceso: un fragmento de medio milímetro cabe en la boca de un organismo que "
+        "jamás habría podido tragarse una botella.@N@Esa boca está abajo del todo. El "
+        "plancton lo confunde con alimento, los peces pequeños comen plancton, «y el "
+        "recorrido sigue hacia arriba».@N@Por eso el texto precisa que la base «es el "
+        "punto desde el cual todo lo demás depende»: no es un eslabón más, es el que "
+        "sostiene a los otros.",
+        [
+            ("Que afecta primero a los animales de mayor tamaño",
+             ("Ocurre al revés: entra por organismos tan pequeños que jamás habrían "
+             "podido tragarse una botella.")),
+            ("Que el plancton lo prefiere por sobre su alimento habitual",
+             ("El texto dice que lo confunde con alimento, que es distinto de "
+             "preferirlo.")),
+            ("Que el recorrido se detiene en los peces pequeños",
+             ("El emisor señala lo contrario: desde ahí «el recorrido sigue hacia "
+             "arriba».")),
+        ],
+    ),
+    _ql(
+        "microplasticos", "lec_evaluar", "dificil",
+        "¿Qué logra el emisor al reconocer, en el primer párrafo, que la bolsa en el "
+        "mar y la tortuga enredada son imágenes verdaderas?",
+        "Concede que son ciertas para objetar lo que hacen entender",
+        "El emisor no discute los hechos: dice que esas imágenes «son verdaderas y "
+        "son, al mismo tiempo, el motivo por el que el problema se entiende "
+        "mal».@N@La concesión le sirve para mover la discusión de lugar. El reparo no "
+        "cae sobre la exactitud de la imagen, sino sobre la idea que deja instalada: "
+        "que la contaminación es aquello que se ve.@N@Sobre ese desplazamiento se "
+        "monta el resto del texto, que trata precisamente del plástico que dejó de "
+        "verse.",
+        [
+            ("Descarta esas imágenes por falsas y propone reemplazarlas",
+             "Las declara verdaderas en la misma frase en que las cuestiona."),
+            ("Reprocha a los medios haberlas difundido sin advertencia",
+             "El emisor no atribuye la confusión a nadie en ese párrafo."),
+            ("Anuncia que el texto tratará sobre la fauna marina afectada",
+             ("El texto se ocupa del material y de su tamaño, no de las especies "
+             "dañadas.")),
         ],
     ),
     # ---------- 'Discurso de licenciatura' ----------
