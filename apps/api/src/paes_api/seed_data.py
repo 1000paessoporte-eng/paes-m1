@@ -21391,6 +21391,202 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "color_redundancia",
+        "title": "La información que se pierde en el color",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes. Las cifras de prevalencia son las que reportan "
+            "habitualmente las fuentes especializadas."
+        ),
+        "body": (
+            "**La información que se pierde en el color**\n\n"
+            "En la reunión alguien proyecta un gráfico y explica que la línea roja "
+            "es el gasto y la verde, el ingreso. Para una de cada doce personas "
+            "presentes —si son hombres— esa frase no dice nada: las dos líneas se "
+            "parecen. Nadie avisa. Lo normal es preguntar por otra cosa y deducir "
+            "cuál es cuál por el contexto, que es lo que esas personas llevan "
+            "haciendo toda la vida.\n\n"
+            "Conviene empezar por deshacer la imagen más común. Quien tiene "
+            "daltonismo no ve en blanco y negro: eso existe, se llama acromatopsia "
+            "y es rarísimo. Lo habitual es otra cosa, mucho más discreta, que "
+            "consiste en confundir ciertos pares de colores entre sí. El caso más "
+            "frecuente es el rojo-verde, y su versión más común no es la ausencia "
+            "total de un tipo de receptor sino su desplazamiento: dos colores que "
+            "para la mayoría son distintos, para esa persona caen prácticamente en "
+            "el mismo lugar.\n\n"
+            "Las cifras que se citan habitualmente son cerca de un 8 % de los "
+            "hombres y alrededor de un 0,5 % de las mujeres. Esa asimetría no es "
+            "cultural ni casual: los genes de los receptores del rojo y del verde "
+            "están en el cromosoma X. Un hombre tiene uno solo, así que si el que "
+            "heredó trae la variante alterada, no hay repuesto. Una mujer tiene "
+            "dos, y le basta con que uno de los dos funcione. De ahí la diferencia "
+            "de proporción entre unos y otras.\n\n"
+            "**Dónde aparece el problema y dónde no**\n\n"
+            "Ahora bien, la mayoría de estas personas conduce, cocina, elige ropa y "
+            "trabaja sin dificultades notorias. Eso obliga a preguntarse en qué "
+            "momento, exactamente, la diferencia se vuelve un problema. La "
+            "respuesta es bastante precisa: cuando la información está codificada "
+            "SOLO en el color y no hay ninguna otra señal que la repita.\n\n"
+            "El semáforo es el mejor ejemplo de lo contrario, y por eso casi nunca "
+            "se menciona en estas discusiones. Sus luces son rojas y verdes, que es "
+            "justamente el par difícil, y aun así funciona para todo el mundo. "
+            "Funciona porque el color no viaja solo: la luz de arriba y la de abajo "
+            "siempre significan lo mismo, en cualquier esquina del país. Quien no "
+            "distingue los dos colores lee la posición, y la posición basta.\n\n"
+            "Los casos que sí fallan comparten esa característica al revés. Un "
+            "gráfico cuyas series solo se distinguen por el color de la línea y una "
+            "leyenda aparte. Un mapa donde las comunas se agrupan por tono. Un "
+            "formulario que marca en rojo los campos con error y no agrega nada "
+            "más. Un tablero donde el estado de cada equipo es un círculo verde, "
+            "amarillo o rojo. En todos esos casos, retirar el color deja el "
+            "documento ilegible, y eso es una manera práctica de detectar el "
+            "problema sin necesitar a nadie: imprimirlo en blanco y negro y ver si "
+            "todavía se entiende.\n\n"
+            "**La solución es aburrida y se llama redundancia**\n\n"
+            "Lo que arregla estos casos no es un color distinto, sino una segunda "
+            "señal que diga lo mismo. Poner el nombre de cada serie al lado de su "
+            "línea, en vez de una leyenda con cuadraditos de color. Distinguir dos "
+            "líneas también por su trazo, una continua y otra segmentada. Acompañar "
+            "el círculo verde con un visto y el rojo con una cruz. Agregar al campo "
+            "con error un texto que diga qué falta.\n\n"
+            "Ninguna de esas medidas es cara ni bonita, y todas tienen la misma "
+            "forma: el color se conserva y se le suma algo. No se trata de dejar de "
+            "usar color, que sería absurdo y además empobrecería el diseño para "
+            "todos los demás; se trata de que el color no sea el único que lleva el "
+            "mensaje.\n\n"
+            "Hay un error frecuente que conviene nombrar, porque parece una "
+            "solución y no lo es: subir la saturación. Poner un rojo más intenso y "
+            "un verde más intenso no ayuda a quien confunde ese par, porque la "
+            "confusión no depende de cuán vivo sea el color. Lo que sí ayuda es que "
+            "los dos tonos se diferencien también en claridad, es decir, que uno "
+            "sea perceptiblemente más oscuro que el otro: esa diferencia sobrevive "
+            "aunque el matiz se pierda.\n\n"
+            "**Dos advertencias, para no exagerar**\n\n"
+            "La primera es que estas personas no son un grupo uniforme. Entre quien "
+            "tiene un desplazamiento leve y quien carece por completo de un tipo de "
+            "receptor hay una distancia enorme, y una misma imagen puede resultarle "
+            "perfectamente legible a uno e imposible al otro. Los simuladores que "
+            "muestran «cómo se ve» una lámina entregan una aproximación útil para "
+            "revisar un diseño, y no una experiencia equivalente.\n\n"
+            "La segunda es que hay tareas donde la discriminación de color es el "
+            "trabajo mismo y no un adorno: identificar cables por su tono, leer una "
+            "tira reactiva, clasificar frutas por su madurez. Ahí la redundancia no "
+            "está disponible del mismo modo y la respuesta pasa por otras vías "
+            "—etiquetas, instrumentos, procedimientos— o, en algunos casos, por "
+            "reconocer que la tarea exige una capacidad que no todos tienen. Fingir "
+            "lo contrario no le sirve a nadie.\n\n"
+            "Queda una observación que suele sorprender y que explica por qué esto "
+            "vale la pena aunque el porcentaje pareciera pequeño. La redundancia "
+            "que se agrega pensando en una persona termina sirviéndole a "
+            "cualquiera. Un gráfico cuyas series están rotuladas al lado se "
+            "entiende igual fotocopiado en blanco y negro, proyectado en una sala "
+            "con sol, mirado en un teléfono con poca batería y el brillo al mínimo, "
+            "o visto por alguien que llegó tarde y no escuchó la explicación. El "
+            "diseño que no depende de una sola señal es, sencillamente, un diseño "
+            "más resistente.\n\n"
+            "Y hay una última razón, menos noble y bastante convincente: agregar "
+            "esa segunda señal mientras se hace el gráfico toma unos segundos, y "
+            "agregársela después, cuando el documento ya se imprimió, se envió o se "
+            "publicó en un sitio con doscientas páginas, cuesta muchísimo más. Es "
+            "la misma lógica de cualquier arreglo estructural, y por eso conviene "
+            "pensarlo al principio y no cuando alguien reclama."
+        ),
+    },
+    {
+        "key": "recreo_largo",
+        "title": "El recreo largo",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes y el "
+            "establecimiento son ficticios."
+        ),
+        "body": (
+            "Ninguno de nosotros preguntó nunca por qué los miércoles el segundo "
+            "recreo duraba cuarenta minutos.\n\n"
+            "Lo sabíamos como se saben las cosas del colegio: sin explicación y sin "
+            "dudas. Lunes, martes, jueves y viernes el recreo de las once duraba "
+            "quince minutos y el timbre sonaba puntual. El miércoles no sonaba "
+            "hasta las once y cuarenta, y en esos veinticinco minutos de más cabía "
+            "una cantidad de vida que el resto de la semana no permitía. Cabía un "
+            "partido completo, con arco y con discusión sobre el arco. Cabía el "
+            "taller de radio, que transmitía por los parlantes del patio y que "
+            "jamás habría existido en quince minutos. Cabía almorzar temprano, que "
+            "era lo que hacían los que trabajaban en la tarde y no alcanzaban a "
+            "comer después. Cabía la fila del quiosco sin que nadie empujara.\n\n"
+            "En marzo llegó un inspector general nuevo. Venía de un colegio del "
+            "norte, hablaba bajo y anotaba todo en un cuaderno de tapa dura. La "
+            "segunda semana nos juntó en el patio y preguntó, sin ningún tono en "
+            "particular, por qué el horario del miércoles era distinto.\n\n"
+            "Contestamos lo que había que contestar: que siempre había sido así.\n\n"
+            "Él dijo que eso no era una razón, y que le parecía bien que existiera, "
+            "pero que necesitaba saber cuál era. Dicho de esa manera sonaba "
+            "razonable. Nos quedamos un rato ahí después de que se fue, porque nos "
+            "dimos cuenta, todos al mismo tiempo, de que no teníamos idea.\n\n"
+            "Empezamos por los profesores, convencidos de que la respuesta iba a "
+            "aparecer de inmediato. No apareció. El profesor de historia dijo que "
+            "ya era así cuando él entró, hace seis años. La profesora de biología "
+            "dijo lo mismo, con ocho. La jefa de UTP contestó que el horario venía "
+            "aprobado desde antes de que ella llegara y que nunca había tenido "
+            "motivo para revisarlo. Todos daban la misma respuesta que habíamos "
+            "dado nosotros, solo que con más años encima.\n\n"
+            "Fue don Óscar, el auxiliar, el que nos mandó al armario del segundo "
+            "piso. Ahí se guardan los horarios impresos de cada año, en carpetas "
+            "con el número escrito con plumón. Estuvimos tres recreos —de los "
+            "cortos— abriendo carpetas hacia atrás. El horario del miércoles con el "
+            "recreo largo aparecía en todas, año tras año, idéntico, hasta que dejó "
+            "de aparecer.\n\n"
+            "En la carpeta de hace once años el recreo del miércoles duraba quince "
+            "minutos, como los demás. En la del año siguiente ya duraba cuarenta. Y "
+            "en esa carpeta, en la esquina de la hoja, alguien había escrito a "
+            "mano: «ajuste horario Sra. Villagra».\n\n"
+            "Adriana Villagra fue profesora de música en este colegio durante "
+            "veintidós años. Hacía clases los miércoles en dos establecimientos, "
+            "este y otro a cuarenta minutos en micro, y para alcanzar a llegar a la "
+            "clase de las once cuarenta necesitaba exactamente ese espacio. "
+            "Alguien, alguna vez, movió el horario de todo el colegio para que una "
+            "profesora pudiera dar su clase. Después ella se jubiló, y el horario "
+            "se quedó.\n\n"
+            "Eso fue lo que nos costó explicarnos. No que la razón fuera pequeña "
+            "—nos gustó que fuera pequeña—, sino que llevara once años muerta sin "
+            "que nadie lo notara. Durante once años el colegio entero organizó su "
+            "miércoles en torno a un viaje en micro que ya nadie hacía.\n\n"
+            "Y sin embargo el recreo largo no había estado vacío ese tiempo. Se "
+            "había ido llenando de otras cosas: la radio, el partido, los que "
+            "almuerzan temprano, la fila sin empujones. Ninguna de esas cosas fue "
+            "el motivo, y todas dependían de él.\n\n"
+            "Discutimos una semana entera qué íbamos a decirle al inspector. Había "
+            "una posición, que defendía sobre todo el Cristóbal, que era "
+            "simplemente no contarle: si nadie sabía, que siguiera sin saberse. "
+            "Perdió, no por honesta sino porque era frágil: bastaba con que él "
+            "abriera el mismo armario.\n\n"
+            "Fuimos un jueves, los cinco del centro de alumnos, con una hoja "
+            "escrita a mano. Le contamos lo de la señora Villagra, que ya no "
+            "trabaja acá, y después le leímos la lista: cuántos participaban en el "
+            "taller de radio, cuántos almorzaban en ese horario porque entraban a "
+            "trabajar a las tres, y qué pasaba con el patio los otros cuatro días, "
+            "cuando quince minutos alcanzan justo para hacer la fila y no para nada "
+            "más.\n\n"
+            "Nos escuchó hasta el final. Después preguntó si esa lista la habíamos "
+            "hecho nosotros o si ya existía. Le dijimos la verdad: la habíamos "
+            "hecho esa semana.\n\n"
+            "Anotó algo en el cuaderno de tapa dura y dijo que el horario se "
+            "mantenía.\n\n"
+            "Salimos contentos y estuvimos casi una cuadra sin hablar. La primera "
+            "en decirlo fue la Fernanda, que es la que siempre dice estas cosas: "
+            "que el recreo largo estuvo once años sin motivo y no se cayó, y que "
+            "bastó que alguien preguntara para que en una semana le apareciera uno. "
+            "Que a lo mejor era eso lo que había que aprender y no lo de la señora "
+            "Villagra.\n\n"
+            "Este año nos vamos y el recreo del miércoles va a seguir durando "
+            "cuarenta minutos. Los que entren el próximo marzo no van a preguntar "
+            "por qué, igual que no preguntamos nosotros, y si alguien les pregunta "
+            "van a contestar que siempre ha sido así. Lo que no van a saber es que "
+            "esta vez sí hay una razón escrita, en una hoja a mano que está en la "
+            "carpeta de este año, en el armario del segundo piso, esperando a que "
+            "alguien la encuentre dentro de once años y no entienda nada."
+        ),
+    },
+    {
         "key": "leer_pantalla",
         "title": "Leer en pantalla",
         "kind": "no_literario",
@@ -27413,6 +27609,437 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La información que se pierde en el color' ----------
+    _ql(
+        "color_redundancia", "lec_localizar", "facil",
+        "Según la lectura, ¿qué proporción de personas presenta daltonismo?",
+        "Un 8 % de los hombres y un 0,5 % de las mujeres",
+        "Son las cifras que el emisor declara como «las que se citan "
+        "habitualmente».\nLa proporción de hombres equivale a la que abre el texto: "
+        "una de cada doce personas presentes en la reunión, si son hombres.\nEl "
+        "propio emisor explica enseguida de dónde sale esa asimetría, y no es de la "
+        "costumbre ni del azar.",
+        [
+            ("Un 8 % de las mujeres y apenas un 0,5 % de los hombres", "Las cifras están invertidas: el 8 % corresponde a los hombres."),
+            ("Un 12 % de los hombres y un 8 % de las mujeres", "Ninguno de esos dos porcentajes aparece en la lectura."),
+            ("Uno de cada doce hombres y uno de cada doce mujeres", "Uno de cada doce es cerca del 8 %, y ese dato no vale para las mujeres."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_localizar", "facil",
+        "Según la lectura, ¿en qué consiste la acromatopsia?",
+        "Ver en blanco y negro, y es muy rara",
+        "El emisor la menciona una sola vez y para sacarla del camino.\nEs la "
+        "condición que la mayoría imagina cuando escucha «daltonismo», y resulta "
+        "ser otra cosa: existe, se llama así y es rarísima.\nLo habitual es «mucho "
+        "más discreto»: confundir entre sí ciertos pares de colores, sobre todo el "
+        "rojo y el verde.",
+        [
+            ("La confusión entre el rojo y el verde", "Ese es el caso frecuente, y el emisor lo distingue de la acromatopsia."),
+            ("El desplazamiento de un tipo de receptor", "Eso describe la forma más común del daltonismo rojo-verde."),
+            ("La pérdida de color por falta de luz", "La lectura no relaciona el fenómeno con las condiciones de iluminación."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_localizar", "medio",
+        "Según la lectura, ¿por qué el daltonismo es mucho más frecuente en "
+        "hombres?",
+        "Porque tienen un solo cromosoma X, sin repuesto",
+        "Los genes de los receptores del rojo y del verde están en el cromosoma "
+        "X.\nUn hombre tiene uno solo: si el que heredó trae la variante alterada, "
+        "no hay otro que compense. Una mujer tiene dos, y le basta con que uno "
+        "funcione.\nEl emisor subraya que esa diferencia «no es cultural ni "
+        "casual», precisamente porque se explica por dónde están los genes.",
+        [
+            ("Porque el gen del color está en el cromosoma Y", "Está en el X, y ahí se origina toda la diferencia."),
+            ("Porque heredan la variante de ambos progenitores", "Ese requisito es el que se aplica a las mujeres, no a los hombres."),
+            ("Porque sus receptores del color son más sensibles", "La lectura no atribuye a los hombres receptores distintos."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_localizar", "facil",
+        "Según la lectura, ¿qué prueba permite detectar el problema en un "
+        "documento?",
+        "Imprimirlo en blanco y negro",
+        "Es la comprobación que el emisor propone como «una manera práctica de "
+        "detectar el problema sin necesitar a nadie».\nRetirar el color deja a la "
+        "vista si el documento se sostiene solo. Si todavía se entiende, la "
+        "información viajaba por más de una señal; si deja de entenderse, viajaba "
+        "únicamente por el color.\nSu ventaja es que no exige buscar a una persona "
+        "con daltonismo ni instalar nada.",
+        [
+            ("Subir la saturación de todos sus colores", "El emisor advierte expresamente que eso no resuelve nada."),
+            ("Compararlo con un simulador de daltonismo", "Los simuladores se mencionan después, y como aproximación útil."),
+            ("Preguntarle a alguien que tenga daltonismo", "La prueba que propone sirve justamente para no depender de nadie."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_interpretar", "facil",
+        "¿Por qué el semáforo funciona aunque use el par de colores difícil?",
+        "Porque la posición repite lo que dice el color",
+        "El semáforo usa rojo y verde, que es exactamente el par que se confunde, y "
+        "aun así no genera problemas.\nLa razón es que el color no viaja solo: «la "
+        "luz de arriba y la de abajo siempre significan lo mismo, en cualquier "
+        "esquina del país».\nQuien no distingue los dos tonos lee la posición, y "
+        "con eso le alcanza. Por eso el emisor lo presenta como el mejor ejemplo de "
+        "lo contrario a los casos que fallan.",
+        [
+            ("Porque sus luces tienen mucha saturación", "La intensidad no interviene: el emisor descarta esa vía más adelante."),
+            ("Porque el rojo y el verde son fáciles de separar", "Son justamente el par más difícil, y el texto lo dice."),
+            ("Porque solo una de sus luces se enciende a la vez", "Lo que resuelve el caso es dónde está la luz encendida, no cuántas hay."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_interpretar", "medio",
+        "¿Qué tienen en común los casos que, según la lectura, sí fallan?",
+        "Que el color es la única señal que lleva el dato",
+        "El gráfico con leyenda aparte, el mapa por tonos, el formulario que marca "
+        "en rojo y el tablero de círculos de colores comparten una sola cosa.\nEn "
+        "todos ellos el mensaje viaja por un único canal, y ese canal es "
+        "precisamente el que puede no llegar. El emisor lo formula antes con "
+        "mayúsculas: el problema aparece cuando la información está codificada SOLO "
+        "en el color.\nDe ahí que la prueba de imprimirlos en blanco y negro los "
+        "deje ilegibles.",
+        [
+            ("Que usan tonos de rojo y verde en la misma imagen", "El tablero incluye amarillo y el mapa usa una escala completa."),
+            ("Que fueron pensados únicamente para la pantalla", "El formulario y el tablero son digitales, pero el gráfico y el mapa se imprimen."),
+            ("Que no incluyen una leyenda que los explique", "El primer ejemplo tiene leyenda, y aun así falla."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que la solución «se llama "
+        "redundancia»?",
+        "Que otra señal repita lo que dice el color",
+        "Redundante, acá, no es un defecto: es decir dos veces lo mismo por caminos "
+        "distintos.\nLos ejemplos que da tienen todos esa forma. El nombre junto a "
+        "la línea, el trazo continuo frente al segmentado, el visto junto al "
+        "círculo verde y la cruz junto al rojo, el texto que acompaña al campo con "
+        "error.\nEl emisor aclara además lo que la redundancia NO es: «el color se "
+        "conserva y se le suma algo», porque dejar de usarlo «sería absurdo y "
+        "además empobrecería el diseño para todos los demás».",
+        [
+            ("Que conviene repetir el mismo gráfico dos veces", "Lo que se repite es el mensaje, no el documento."),
+            ("Que hay que eliminar el color de los documentos", "El emisor descarta esa idea por absurda y empobrecedora."),
+            ("Que el mensaje debe escribirse con más palabras", "Varias de las señales que propone no son texto: trazo, forma, posición."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_interpretar", "dificil",
+        "Según la lectura, ¿por qué subir la saturación no resuelve el problema?",
+        "Porque la confusión no depende de la intensidad",
+        "Un rojo más vivo y un verde más vivo siguen siendo el mismo par para quien "
+        "los confunde: lo que falla es la separación entre los matices, y esa no "
+        "cambia por hacerlos más intensos.\nEl emisor lo llama «un error frecuente "
+        "que parece una solución y no lo es».\nLo que sí funciona es diferenciarlos "
+        "en claridad, que uno sea perceptiblemente más oscuro que el otro, «porque "
+        "esa diferencia sobrevive aunque el matiz se pierda».",
+        [
+            ("Porque un color demasiado intenso cansa la vista", "El reparo no es de comodidad: es que no cambia lo que se confunde."),
+            ("Porque el rojo intenso se confunde con el negro", "El texto no menciona esa confusión en ningún momento."),
+            ("Porque la saturación no se puede medir bien", "El problema no es medirla, sino que no interviene en la distinción."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_interpretar", "dificil",
+        "¿Qué distingue el emisor al hablar de las tareas donde «el color es el "
+        "trabajo mismo»?",
+        "Si el color es el dato o solo lo transporta",
+        "En un gráfico, el color es un vehículo: la información existe antes y "
+        "podría viajar por el trazo o por un rótulo. Ahí la redundancia está "
+        "disponible.\nEn identificar cables por su tono, leer una tira reactiva o "
+        "clasificar frutas por madurez, el color ES el dato. No hay una segunda "
+        "señal que diga lo mismo, porque no hay nada más que decir.\nPor eso el "
+        "emisor cambia de recomendación en ese punto —etiquetas, instrumentos, "
+        "procedimientos— y admite que a veces la tarea exige una capacidad que no "
+        "todos tienen: «Fingir lo contrario no le sirve a nadie».",
+        [
+            ("Si la tarea se hace en pantalla o sobre papel", "El soporte no interviene en esa distinción."),
+            ("Si quien la ejecuta tiene un caso leve o severo", "Esa diferencia es la de la advertencia anterior, no la de esta."),
+            ("Si existe un instrumento capaz de reemplazarla", "Los instrumentos son una de las salidas, no el criterio que separa."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_evaluar", "medio",
+        "¿Con qué finalidad se menciona el semáforo en la lectura?",
+        "Para mostrar un caso donde el color no viaja solo",
+        "El semáforo entra en el texto como contraejemplo, no como problema.\nEl "
+        "emisor incluso señala que «casi nunca se menciona en estas discusiones», y "
+        "esa es la gracia: usa el par de colores difícil y funciona para todo el "
+        "mundo.\nPuesto ahí, antes de la lista de casos que fallan, sirve de "
+        "modelo: la diferencia entre unos y otro no está en el color elegido sino "
+        "en si algo más repite el mensaje.",
+        [
+            ("Para advertir sobre el riesgo de conducir así", "El texto no plantea ningún riesgo al volante."),
+            ("Para criticar el diseño de las señales de tránsito", "Lo presenta como un diseño logrado, no como uno defectuoso."),
+            ("Para probar que el rojo y el verde se distinguen", "Sostiene lo contrario: son el par que se confunde."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_evaluar", "medio",
+        "¿Qué actitud asume el emisor al advertir que estas personas «no son un "
+        "grupo uniforme»?",
+        "Cauta, pues evita tratar los casos como iguales",
+        "Acaba de entregar recomendaciones que funcionan, y en vez de cerrar ahí "
+        "marca sus límites.\nEntre un desplazamiento leve y la ausencia completa de "
+        "un tipo de receptor «hay una distancia enorme», y una misma imagen puede "
+        "resultar legible para uno e imposible para el otro.\nLa misma cautela "
+        "aplica a los simuladores: los acepta como aproximación para revisar un "
+        "diseño y niega que entreguen «una experiencia equivalente».",
+        [
+            ("Escéptica, pues pone en duda las cifras que citó", "No discute las cifras: discute que el grupo sea homogéneo."),
+            ("Alarmista, pues exagera la gravedad del asunto", "Su tono es el opuesto: acota lo que sus consejos pueden lograr."),
+            ("Indiferente, pues el detalle no cambia su consejo", "Lo introduce como advertencia justamente porque lo matiza."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_evaluar", "dificil",
+        "¿Qué agrega al argumento la observación de que la redundancia le sirve a "
+        "cualquiera?",
+        "Que la medida se justifica más allá de ese 8 %",
+        "El texto viene apoyado en un porcentaje que alguien podría considerar "
+        "pequeño, y esa es la objeción que el emisor se adelanta a responder.\nSu "
+        "respuesta no apela a la buena voluntad sino a la utilidad general: un "
+        "gráfico rotulado al lado se entiende fotocopiado, proyectado con sol, en "
+        "un teléfono con el brillo al mínimo «o visto por alguien que llegó tarde y "
+        "no escuchó la explicación».\nDe ahí la conclusión, que ya no habla de "
+        "daltonismo: un diseño que no depende de una sola señal «es, sencillamente, "
+        "un diseño más resistente».",
+        [
+            ("Que el daltonismo es más común de lo que parece", "Las cifras no se corrigen: lo que cambia es a quién beneficia la medida."),
+            ("Que el diseño accesible es siempre más barato", "El costo aparece en el párrafo siguiente y depende de cuándo se haga."),
+            ("Que conviene diseñar pensando en la mayoría", "El argumento parte de una minoría y muestra que el resultado sirve a todos."),
+        ],
+    ),
+    _ql(
+        "color_redundancia", "lec_evaluar", "dificil",
+        "¿Qué se propone el emisor al cerrar comparando lo que cuesta agregar esa "
+        "señal antes y después?",
+        "Mover la decisión al momento en que sale barata",
+        "El emisor presenta esta última razón como «menos noble y bastante "
+        "convincente», y con eso reconoce que ya agotó las otras.\nLa comparación "
+        "es de esfuerzo: unos segundos mientras se hace el gráfico, contra un "
+        "documento ya impreso, enviado o publicado en un sitio de doscientas "
+        "páginas.\nPuesto así, el asunto deja de ser una discusión sobre a quién "
+        "hay que considerar y pasa a ser una sobre cuándo conviene decidirlo: «al "
+        "principio y no cuando alguien reclama».",
+        [
+            ("Reprochar a quienes publicaron esos documentos", "No hay reproche: el texto explica el error y cómo evitarlo."),
+            ("Advertir que corregir un sitio publicado es imposible", "Dice que cuesta muchísimo más, no que no se pueda."),
+            ("Sostener que el argumento moral no convence", "Llama a este menos noble, sin retirar los anteriores."),
+        ],
+    ),
+    # ---------- 'El recreo largo' ----------
+    _ql(
+        "recreo_largo", "lec_localizar", "facil",
+        "Según el relato, ¿cuánto duraba el segundo recreo de los miércoles?",
+        "Cuarenta minutos, y los otros días quince",
+        "El segundo párrafo entrega los dos datos juntos.\n«Lunes, martes, jueves y "
+        "viernes el recreo de las once duraba quince minutos y el timbre sonaba "
+        "puntual. El miércoles no sonaba hasta las once y cuarenta».\nDe ahí salen "
+        "los veinticinco minutos de diferencia que el relato menciona enseguida.",
+        [
+            ("Quince minutos, igual que el resto de la semana", "Esa es la duración de los otros cuatro días, no la del miércoles."),
+            ("Veinticinco minutos, según el horario aprobado", "Veinticinco son los minutos de MÁS que tenía el miércoles."),
+            ("Cuarenta minutos, pero solo en el segundo semestre", "El relato no distingue semestres: el miércoles era así todo el año."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_localizar", "facil",
+        "Según el relato, ¿qué anotación encontraron en la carpeta del armario?",
+        "«ajuste horario Sra. Villagra», a mano",
+        "La encontraron en la carpeta del año en que el recreo pasó de quince a "
+        "cuarenta minutos.\nEstaba «en la esquina de la hoja», escrita a mano por "
+        "alguien que el relato nunca identifica.\nEs el único documento que conecta "
+        "el horario con una persona, y por eso ordena todo lo que viene después.",
+        [
+            ("«recreo largo aprobado por la dirección»", "El relato no menciona ninguna aprobación de la dirección."),
+            ("«taller de radio, miércoles once horas»", "El taller de radio ocupa el recreo, pero no aparece en esa anotación."),
+            ("«cambio provisorio, revisar el próximo año»", "Nada indica que el cambio se anunciara como provisorio."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_localizar", "medio",
+        "Según el relato, ¿por qué la señora Villagra necesitaba ese horario?",
+        "Porque hacía clases el mismo día en dos colegios",
+        "Adriana Villagra fue profesora de música durante veintidós años en el "
+        "establecimiento del relato.\nLos miércoles trabajaba además en otro "
+        "colegio «a cuarenta minutos en micro», y ese viaje es el que no le cabía "
+        "en un recreo de quince.\nEl recreo largo se creó para que alcanzara a "
+        "llegar a su clase de las once cuarenta.",
+        [
+            ("Porque dirigía el taller de radio del colegio", "El taller ocupa ese espacio hoy; no es lo que lo originó."),
+            ("Porque el colegio le pidió alargar sus clases", "Lo que se alargó fue el recreo, no sus clases."),
+            ("Porque debía almorzar antes de entrar a trabajar", "Eso es lo que hacen algunos estudiantes, no la profesora."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_localizar", "facil",
+        "Según el relato, ¿qué contestaron los profesores cuando les preguntaron?",
+        "Que ya era así cuando ellos llegaron al colegio",
+        "El de historia lo dijo con seis años en el establecimiento y la de "
+        "biología con ocho.\nLa jefa de UTP agregó que el horario venía aprobado "
+        "desde antes de que ella llegara y que nunca había tenido motivo para "
+        "revisarlo.\nEl narrador remata la escena: «Todos daban la misma respuesta "
+        "que habíamos dado nosotros, solo que con más años encima».",
+        [
+            ("Que el horario lo había fijado la jefa de UTP", "Ella dice justamente que venía aprobado desde antes de su llegada."),
+            ("Que la señora Villagra lo había pedido en su momento", "Ningún profesor la menciona: eso aparece recién en el armario."),
+            ("Que nunca había existido un recreo distinto", "Todos reconocen que el miércoles es distinto; lo que ignoran es por qué."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_interpretar", "facil",
+        "¿Qué quiere decir el narrador al afirmar que sabían el horario «sin "
+        "explicación y sin dudas»?",
+        "Que lo aceptaban sin preguntarse de dónde venía",
+        "Las dos ausencias van juntas y esa es la idea.\nNo había explicación "
+        "disponible, y tampoco hacía falta: nadie sentía que faltara algo. El "
+        "horario funcionaba como funciona el clima, que se acepta sin pedirle "
+        "motivos.\nPor eso la pregunta del inspector los deja sin respuesta y, "
+        "sobre todo, los sorprende: descubren que nunca se la habían hecho.",
+        [
+            ("Que el colegio nunca les entregó el horario", "Lo conocían de memoria: sabían exactamente a qué hora sonaba el timbre."),
+            ("Que dudaban de la hora exacta en que sonaba el timbre", "El relato dice lo contrario: el timbre del miércoles era igual de previsible."),
+            ("Que la explicación aparecía impresa en el horario", "Los horarios impresos no la traían; solo estaba esa nota a mano."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_interpretar", "medio",
+        "¿Qué función cumple la enumeración de lo que «cabía» en el recreo largo?",
+        "Muestra todo lo que dependía de esos minutos",
+        "La lista es larga a propósito: un partido con discusión incluida, el "
+        "taller de radio, el almuerzo temprano de los que trabajan en la tarde y "
+        "una fila de quiosco sin empujones.\nNinguna de esas cosas explica el "
+        "origen del horario, y todas se caerían con él. El relato lo dice más "
+        "adelante: «Ninguna de esas cosas fue el motivo, y todas dependían de "
+        "él».\nPor eso la enumeración es también el argumento que el centro de "
+        "alumnos usará al final.",
+        [
+            ("Explica por qué el inspector decidió preguntar", "El inspector pregunta por el horario, sin conocer lo que ocurre en ese recreo."),
+            ("Enumera las actividades prohibidas del colegio", "Todas están permitidas: el problema es que no caben en quince minutos."),
+            ("Compara el patio con el de otros colegios", "No hay comparación con ningún otro establecimiento."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_interpretar", "medio",
+        "¿Por qué se descartó la idea de no contarle nada al inspector?",
+        "Porque bastaba que él abriera el mismo armario",
+        "El relato es explícito sobre el motivo del rechazo, y no es el que uno "
+        "esperaría: «Perdió, no por honesta sino porque era frágil».\nLa objeción "
+        "es práctica. Los cinco estudiantes acababan de encontrar la respuesta en "
+        "tres recreos, así que cualquiera podía repetir el camino, empezando por el "
+        "inspector.\nEsa distinción entre lo honesto y lo frágil es parte de la "
+        "franqueza con que el narrador cuenta la historia.",
+        [
+            ("Porque el inspector ya conocía a la señora Villagra", "El inspector es nuevo y viene de un colegio del norte."),
+            ("Porque los profesores se lo habrían contado igual", "Los profesores tampoco sabían: esa fue la primera sorpresa."),
+            ("Porque ocultarlo les pareció deshonesto", "El relato descarta expresamente esa razón: perdió por frágil, no por honesta."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_interpretar", "dificil",
+        "¿Qué distinción establece el relato entre el motivo del recreo largo y lo "
+        "que lo sostenía?",
+        "El motivo se acabó y otras cosas lo sostuvieron",
+        "El motivo fue uno solo y tuvo fecha de término: un viaje en micro que la "
+        "señora Villagra dejó de hacer al jubilarse, once años atrás.\nLo que "
+        "sostiene el horario hoy es otra cosa, y llegó después. El relato lo separa "
+        "con cuidado: «Ninguna de esas cosas fue el motivo, y todas dependían de "
+        "él».\nDe ahí que lo que desconcierta al narrador no sea el tamaño del "
+        "motivo —«nos gustó que fuera pequeño»— sino que llevara once años muerto "
+        "sin que nadie lo notara.",
+        [
+            ("El motivo y las actividades nacieron a la vez", "Las actividades aparecieron después, en un espacio que ya existía."),
+            ("Las actividades explican por qué se creó el recreo", "El recreo se creó por el viaje de una profesora, antes que existieran."),
+            ("El motivo seguía vigente once años después", "Se acabó cuando ella se jubiló; el horario siguió sin él."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_interpretar", "dificil",
+        "¿Qué observación hace la Fernanda al salir de la reunión?",
+        "Que una costumbre sin motivo igual encuentra uno",
+        "Su comentario compara dos plazos que el relato ya puso sobre la mesa: once "
+        "años sin motivo y una semana para conseguir uno.\nLo que le llama la "
+        "atención no es que el horario se salvara, sino la facilidad con que "
+        "apareció una razón «cuando alguien preguntó». Antes de esa pregunta nadie "
+        "la necesitaba.\nPor eso agrega que a lo mejor era eso lo que había que "
+        "aprender, «y no lo de la señora Villagra».",
+        [
+            ("Que el inspector nunca quiso quitar el recreo", "Él dijo que le parecía bien que existiera, pero que necesitaba una razón."),
+            ("Que la señora Villagra tendría que volver al colegio", "Ella se jubiló y el relato no plantea su regreso en ningún momento."),
+            ("Que el horario se sostenía en la lista que hicieron", "La lista fue el motivo nuevo; lo que ella observa es lo rápido que apareció."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el relato esté narrado en primera persona plural?",
+        "Convierte a un curso entero en quien cuenta",
+        "Nadie firma esta historia. El «nosotros» reparte entre todos lo que en "
+        "otro relato tendría un protagonista, y por eso las pocas personas con "
+        "nombre —el Cristóbal, la Fernanda, don Óscar— resaltan cuando "
+        "aparecen.\nTambién hace verosímil lo que se cuenta: la costumbre es de "
+        "todo el colegio, la ignorancia también, y la investigación se hace en "
+        "recreos y entre varios.\nY prepara el cierre, donde ese «nosotros» se va y "
+        "lo reemplaza otro que tampoco va a preguntar.",
+        [
+            ("Deja en claro quién tomó cada decisión", "Ocurre al revés: casi ninguna decisión se atribuye a alguien en particular."),
+            ("Marca que el narrador no estuvo presente", "Estuvo: cuenta desde adentro, incluida la semana de discusión."),
+            ("Indica que hay varios narradores que se turnan", "La voz es una sola, en plural, y no cambia en todo el relato."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el narrador frente al motivo que finalmente descubre?",
+        "Afectuosa, pues le gusta lo pequeño del motivo",
+        "El hallazgo podría haber sido un chiste a costa del colegio: once años de "
+        "horario por un viaje en micro.\nEl narrador elige otra cosa y lo dice sin "
+        "rodeos: «No que la razón fuera pequeña —nos gustó que fuera pequeña—, sino "
+        "que llevara once años muerta sin que nadie lo notara».\nLe parece bien que "
+        "alguna vez se moviera el horario de un colegio entero para que una "
+        "profesora pudiera hacer su clase. Lo que lo inquieta es el olvido, no el "
+        "tamaño.",
+        [
+            ("Indignada, pues acusa al colegio de haber mentido", "No hay engaño en el relato: nadie sabía, empezando por los profesores."),
+            ("Indiferente, pues el hallazgo no le importa", "Le dedican tres recreos, una semana de discusión y una reunión."),
+            ("Burlona, pues considera absurdo el horario", "Lo defiende ante el inspector y celebra el origen que encontró."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_evaluar", "medio",
+        "¿Con qué finalidad el narrador aclara que la lista la hicieron esa misma "
+        "semana?",
+        "Para admitir que el motivo lo construyeron ellos",
+        "El inspector pregunta si la lista ya existía, y podría haberse contestado "
+        "de otra manera.\nEl narrador subraya que dijeron la verdad, y esa verdad "
+        "es incómoda: los datos que salvaron el horario no estaban esperando en "
+        "ninguna parte, se reunieron para la ocasión.\nSin esa aclaración, el final "
+        "de la Fernanda no se sostendría: lo que ella observa es justamente que el "
+        "motivo apareció recién cuando hizo falta.",
+        [
+            ("Para destacar la rapidez con que trabajaron", "No hay orgullo por la rapidez: el dato se entrega como una confesión."),
+            ("Para explicar por qué el inspector desconfió", "El inspector no desconfía: escucha, anota y mantiene el horario."),
+            ("Para justificar que no consultaran a los profesores", "Sí los consultaron, y fue el primer paso de la investigación."),
+        ],
+    ),
+    _ql(
+        "recreo_largo", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al terminar con la hoja guardada en el armario?",
+        "Deja el ciclo listo para repetirse con otros",
+        "El cierre repite la escena inicial con los papeles cambiados. Los que "
+        "entren en marzo tampoco van a preguntar, y si alguien les pregunta van a "
+        "contestar que siempre ha sido así.\nLa diferencia es que esta vez hay una "
+        "razón escrita. Pero está en el mismo armario del segundo piso, en una "
+        "carpeta con el año marcado con plumón, que es exactamente donde nadie "
+        "mira.\nEl relato imagina a alguien encontrándola «dentro de once años y no "
+        "entendiendo nada»: la lista de este año le va a resultar tan enigmática "
+        "como les resultó a ellos el apellido Villagra.",
+        [
+            ("Asegura que el próximo curso sabrá el motivo", "El texto anticipa lo contrario: van a contestar que siempre ha sido así."),
+            ("Muestra que el inspector archivó el asunto y se fue", "El inspector resolvió mantener el horario; la hoja la guardan ellos."),
+            ("Anuncia que el horario volverá a los quince minutos", "El relato dice que el recreo del miércoles va a seguir durando cuarenta."),
+        ],
+    ),
     # ---------- 'Leer en pantalla' ----------
     _ql(
         "leer_pantalla", "lec_localizar", "facil",
