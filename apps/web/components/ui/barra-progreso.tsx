@@ -24,6 +24,7 @@ export function BarraProgreso({
   alto = "h-2",
   delay = 0,
   alCargar = false,
+  secundario,
 }: {
   porcentaje: number;
   color?: string;
@@ -32,6 +33,15 @@ export function BarraProgreso({
   delay?: number;
   /** Llenarse al montar en vez de al entrar en pantalla. */
   alCargar?: boolean;
+  /**
+   * Un segundo tramo, más tenue, detrás del principal. Para cuando lo
+   * empezado también es avance y una barra que solo cuenta lo terminado se
+   * queda en cero durante semanas.
+   *
+   * Es decorativo: el `aria-valuenow` sigue siendo el tramo principal, que es
+   * el que la etiqueta nombra.
+   */
+  secundario?: number;
 }) {
   const quieto = useReducedMotion();
   const valor = Math.max(0, Math.min(100, porcentaje));
@@ -43,10 +53,17 @@ export function BarraProgreso({
       aria-valuemin={0}
       aria-valuemax={100}
       aria-label={etiqueta}
-      className={`w-full overflow-hidden rounded-full bg-surface-hover ${alto}`}
+      className={`relative w-full overflow-hidden rounded-full bg-surface-hover ${alto}`}
     >
+      {secundario != null && secundario > valor && (
+        <div
+          aria-hidden
+          className="absolute inset-y-0 left-0 rounded-full opacity-25"
+          style={{ width: `${Math.min(100, secundario)}%`, backgroundColor: color }}
+        />
+      )}
       <motion.div
-        className="h-full rounded-full"
+        className="relative h-full rounded-full"
         style={{
           width: `${valor}%`,
           background: color,

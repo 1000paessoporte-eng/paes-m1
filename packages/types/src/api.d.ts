@@ -3123,6 +3123,10 @@ export interface components {
              * @default false
              */
             has_lesson: boolean;
+            /** Lesson Intro */
+            lesson_intro?: string | null;
+            /** Min Attempts To Master */
+            min_attempts_to_master: number;
         };
         /**
          * Subject

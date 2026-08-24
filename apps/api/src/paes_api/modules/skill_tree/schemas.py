@@ -29,6 +29,22 @@ class SkillNodeProgressOut(SkillNodeOut):
     #: Si el nodo tiene teoría escrita. La interfaz ofrece "Aprender" solo
     #: cuando la hay; el resto lleva directo a practicar.
     has_lesson: bool = False
+    #: La primera línea de la lección: qué es el tema y para qué sirve.
+    #:
+    #: Viaja con el nodo porque el árbol es donde se ELIGE qué estudiar, y
+    #: hasta ahora la tarjeta solo decía el nombre y el porcentaje de acierto.
+    #: "Transformaciones isométricas" no le dice nada a alguien de tercero
+    #: medio: para saber de qué iba había que abrir la lección, o sea decidir
+    #: antes de tener con qué decidir. El texto ya estaba escrito en
+    #: `lessons.intro` --existe justamente para responder "¿para qué me sirve
+    #: esto?"-- y no lo leía nadie.
+    lesson_intro: str | None = None
+    #: Cuántas respuestas hacen falta, como mínimo, para que un nodo pueda
+    #: contar como dominado. Viaja con el nodo para que la pantalla pueda
+    #: decir qué falta sin recodificar la regla: vive en
+    #: `service.MIN_ATTEMPTS_FOR_UNLOCK`, y duplicarla en TypeScript sería dos
+    #: sitios que cambiar y uno que se olvida.
+    min_attempts_to_master: int
 
 
 class LessonStepOut(BaseModel):

@@ -120,3 +120,65 @@ def test_recommended_returns_none_without_unlocked_candidates(
     resp = client.get("/api/skill-tree/recommended", headers=headers)
     assert resp.status_code == 200
     assert resp.json() is None
+
+
+def test_el_arbol_dice_de_que_se_trata_cada_tema(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """La tarjeta del árbol es donde se ELIGE qué estudiar.
+
+    Traía el nombre y el porcentaje de acierto, nada más. "Transformaciones
+    isométricas" no le dice nada a alguien de tercero medio: para saber de qué
+    iba había que abrir la lección, o sea decidir antes de tener con qué
+    decidir. El texto ya estaba escrito en `lessons.intro` --existe justamente
+    para responder "¿para qué me sirve esto?"-- y no viajaba con el nodo.
+    """
+    from paes_api.modules.content.models import Lesson
+
+    con_leccion = _make_node(db_session, "con_teoria")
+    sin_leccion = _make_node(db_session, "sin_teoria")
+    db_session.add(
+        Lesson(
+            skill_node_id=con_leccion.id,
+            intro="Las potencias son la forma corta de escribir multiplicaciones repetidas.",
+            theory="Propiedades.",
+            example_statement="Calcula 2³.",
+            example_steps=[{"accion": "Multiplica 2·2·2", "porque": "Es la definición"}],
+            common_error="Sumar los exponentes al multiplicar bases distintas.",
+        )
+    )
+    db_session.commit()
+
+    headers, _ = register_user(email="arbol-intro@milpaes.cl")
+    nodos = {n["code"]: n for n in client.get("/api/skill-tree", headers=headers).json()}
+
+    assert nodos["con_teoria"]["has_lesson"] is True
+    assert nodos["con_teoria"]["lesson_intro"].startswith("Las potencias son")
+
+    # Un nodo sin teoría no inventa una: la tarjeta simplemente no la muestra.
+    assert nodos["sin_teoria"]["has_lesson"] is False
+    assert nodos["sin_teoria"]["lesson_intro"] is None
+
+
+def test_el_arbol_dice_cuantas_respuestas_hacen_falta_para_dominar(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """Dominar exige umbral de acierto Y un mínimo de respuestas.
+
+    La segunda condición era invisible y es la que frena: en producción hay 24
+    nodos-alumno en el umbral o por encima y solo 6 dominados, porque la
+    mediana de respuestas por tema es 2 y el mínimo son 4. El estudiante
+    respondía bien y el contador seguía en cero sin decirle cuánto faltaba.
+
+    El mínimo viaja con el nodo para que la pantalla lo diga sin recodificar
+    la regla: tenerla en Python y en TypeScript es tenerla en un sitio que se
+    olvida de cambiar.
+    """
+    _make_node(db_session, "un_nodo")
+    db_session.commit()
+
+    headers, _ = register_user(email="arbol-minimo@milpaes.cl")
+    nodo = client.get("/api/skill-tree", headers=headers).json()[0]
+
+    assert nodo["min_attempts_to_master"] == skill_tree_service.MIN_ATTEMPTS_FOR_UNLOCK
+    assert nodo["unlock_threshold"] == 0.75
