@@ -516,14 +516,30 @@ function TreeColumn({
                           </span>
                         </p>
                       )}
-                      {node.has_lesson && (
+                      {/* El árbol RECOMIENDA un orden; no lo impone. Sin esta
+                          salida, M2 era un callejón: sus dieciséis temas
+                          cuelgan de M1, así que el alumno que iba a rendir M2
+                          abría su árbol y no podía practicar ni una pregunta
+                          —mientras Modo Ensayo sí le dejaba rendir un ensayo
+                          de M2 entero. Practicar acá suma al progreso, pero no
+                          salta la cadena: el nodo sigue bloqueado hasta que su
+                          prerrequisito esté dominado. */}
+                      <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1">
+                        {node.has_lesson && (
+                          <Link
+                            href={`/aprender/${node.code}`}
+                            className="inline-block text-xs font-medium text-accent"
+                          >
+                            Leer la teoría igual
+                          </Link>
+                        )}
                         <Link
-                          href={`/aprender/${node.code}`}
-                          className="mt-1.5 inline-block text-xs font-medium text-accent"
+                          href={`/practicar/${node.code}`}
+                          className="inline-block text-xs font-medium text-muted underline decoration-border underline-offset-4 hover:text-foreground"
                         >
-                          Leer la teoría igual
+                          Practicar igual
                         </Link>
-                      )}
+                      </div>
                     </div>
                   </div>
                 </div>

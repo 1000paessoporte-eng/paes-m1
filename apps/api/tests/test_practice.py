@@ -26,9 +26,16 @@ def _make_node_with_question(db_session: Session, code: str) -> tuple[SkillNode,
     return node, question, correct, wrong
 
 
-def test_practice_questions_403_when_node_locked(
+def test_se_puede_practicar_un_nodo_bloqueado(
     client: TestClient, db_session: Session, register_user
 ) -> None:
+    """El árbol recomienda un orden; dejó de imponerlo.
+
+    Esto respondía 403, y con eso M2 quedaba inaccesible entera: sus dieciséis
+    temas cuelgan de M1, así que quien iba a rendir M2 abría su árbol y no
+    podía practicar ni una de sus preguntas --mientras Modo Ensayo sí le
+    dejaba rendir un ensayo de M2 completo el primer día.
+    """
     locked = SkillNode(code="bloqueado", name="Bloqueado", axis=SkillAxis.NUMEROS, tier=2)
     prereq = SkillNode(code="previo", name="Previo", axis=SkillAxis.NUMEROS, tier=1)
     locked.prerequisites = [prereq]
@@ -37,7 +44,46 @@ def test_practice_questions_403_when_node_locked(
 
     headers, _ = register_user(email="practica-bloqueada@milpaes.cl")
     resp = client.get("/api/practice/bloqueado/questions", headers=headers)
-    assert resp.status_code == 403
+    assert resp.status_code == 200, resp.text
+    assert resp.json()["node_code"] == "bloqueado"
+
+
+def test_practicar_un_nodo_bloqueado_no_saltea_la_cadena(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """Poder entrar no es poder saltarse el árbol.
+
+    Las respuestas cuentan para el progreso del nodo, pero mientras su
+    prerequisito no esté dominado el nodo sigue BLOQUEADO: si acertar acá lo
+    diera por dominado, un alumno abriría toda la rama de abajo sin haber
+    pasado por ninguno de sus temas previos.
+    """
+    prereq = SkillNode(code="previo2", name="Previo", axis=SkillAxis.NUMEROS, tier=1)
+    locked = SkillNode(code="bloqueado2", name="Bloqueado", axis=SkillAxis.NUMEROS, tier=2)
+    locked.prerequisites = [prereq]
+    question = Question(
+        skill_node=locked, difficulty=Difficulty.FACIL, stem="2 + 2 = ?", explanation="Cuatro."
+    )
+    correcta = Alternative(question=question, label="A", text="4", is_correct=True)
+    db_session.add_all([prereq, locked, question, correcta])
+    db_session.commit()
+    db_session.refresh(question)
+    db_session.refresh(correcta)
+
+    headers, _ = register_user(email="practica-sin-saltar@milpaes.cl")
+    for _ in range(5):
+        resp = client.post(
+            "/api/practice/bloqueado2/answer",
+            json={"question_id": question.id, "selected_alternative_id": correcta.id},
+            headers=headers,
+        )
+        assert resp.status_code == 200, resp.text
+        assert resp.json()["is_correct"] is True
+
+    arbol = client.get("/api/skill-tree", headers=headers).json()
+    nodo = next(n for n in arbol if n["code"] == "bloqueado2")
+    assert nodo["attempts"] == 5
+    assert nodo["status"] == "locked"
 
 
 def test_practice_questions_404_for_unknown_node(
