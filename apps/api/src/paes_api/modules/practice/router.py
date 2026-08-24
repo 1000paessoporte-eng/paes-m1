@@ -15,21 +15,30 @@ from paes_api.modules.practice.schemas import (
     PracticeStartOut,
 )
 from paes_api.modules.skill_tree import service as skill_tree_service
-from paes_api.modules.skill_tree.models import ProgressStatus, SkillNode
+from paes_api.modules.skill_tree.models import SkillNode
 from paes_api.modules.users.deps import get_current_user
 from paes_api.modules.users.models import User
 
 router = APIRouter(prefix="/practice", tags=["practice"])
 
 
-def _get_unlocked_node_or_error(db: Session, code: str, user_id: int) -> SkillNode:
+def _get_node_or_404(db: Session, code: str) -> SkillNode:
+    """El nodo que se va a practicar, esté desbloqueado o no.
+
+    El árbol RECOMIENDA un orden; dejó de imponerlo. Un nodo bloqueado se
+    sigue dibujando gris y diciendo qué conviene dominar antes, pero ya no
+    prohíbe entrar.
+
+    El 403 que había acá dejaba las cinco pruebas en pie salvo M2, cuyos
+    dieciséis nodos cuelgan todos de un tema de M1: el alumno que iba a rendir
+    M2 abría su árbol, veía dieciséis tarjetas grises y no podía practicar ni
+    una de las 207 preguntas de esa prueba. Y era incoherente con el propio
+    producto, porque Modo Ensayo nunca bloqueó nada: ese mismo alumno podía
+    rendir un ensayo de M2 completo el primer día.
+    """
     node = db.execute(select(SkillNode).where(SkillNode.code == code)).scalar_one_or_none()
     if node is None:
         raise HTTPException(status_code=404, detail="Nodo no encontrado")
-    tree = skill_tree_service.get_user_skill_tree(db, user_id)
-    progress = next((n for n in tree if n.code == code), None)
-    if progress is None or progress.status == ProgressStatus.LOCKED:
-        raise HTTPException(status_code=403, detail="Este nodo todavía está bloqueado")
     return node
 
 
@@ -37,7 +46,7 @@ def _get_unlocked_node_or_error(db: Session, code: str, user_id: int) -> SkillNo
 def get_practice_questions(
     code: str, db: Session = Depends(get_db), user: User = Depends(get_current_user)
 ) -> PracticeStartOut:
-    node = _get_unlocked_node_or_error(db, code, user.id)
+    node = _get_node_or_404(db, code)
     questions = list(
         db.execute(
             select(Question)
@@ -78,7 +87,7 @@ def answer_practice_question(
     db: Session = Depends(get_db),
     user: User = Depends(get_current_user),
 ) -> PracticeAnswerOut:
-    node = _get_unlocked_node_or_error(db, code, user.id)
+    node = _get_node_or_404(db, code)
     question = db.execute(
         select(Question)
         .where(Question.id == payload.question_id)

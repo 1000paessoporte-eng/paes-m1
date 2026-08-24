@@ -117,12 +117,12 @@ export default async function ArbolHabilidadesPage({
       {nodes.length > 0 && practicables.length === 0 && (
         <div className="mt-5 rounded-xl border border-warning/40 bg-warning/10 p-5">
           <p className="text-sm font-semibold text-warning">
-            Todavía no puedes practicar estos temas
+            Estos temas se construyen sobre otros
           </p>
           <p className="mt-2 text-sm leading-relaxed text-foreground">
             {prerrequisitos.length > 0
-              ? "Esta prueba se construye sobre otra: cada tema de acá exige dominar antes su equivalente en Competencia Matemática M1. Practica M1 hasta llegar al 75% de acierto en esos temas y estos se abren solos."
-              : "Cada tema de esta prueba exige dominar antes el que viene más abajo en el árbol."}
+              ? "Cada tema de acá se apoya en su equivalente de Competencia Matemática M1. Lo recomendable es dominar M1 primero —al 75% de acierto— y estos se abren solos. Pero si vas a rendir esta prueba y quieres entrar ya, cada tarjeta tiene un «Practicar igual»."
+              : "Cada tema de esta prueba se apoya en el que viene más abajo en el árbol. Puedes practicarlos igual desde cada tarjeta, aunque conviene seguir el orden."}
           </p>
           <Link
             href="/arbol?prueba=m1"
