@@ -63,6 +63,16 @@ class DemoGradeItemOut(BaseModel):
     is_correct: bool
     correct_alternative_id: int
     explanation: str | None = None
+    #: La alternativa que marcó quien responde. Viaja de vuelta para que la
+    #: pantalla no tenga que recordarla por su cuenta.
+    selected_alternative_id: int | None = None
+    #: El error conceptual que lleva justo a la alternativa marcada
+    #: ("Entregó el avance horizontal en lugar de la pendiente"). Es lo que la
+    #: portada promete —"el razonamiento exacto que te llevó a la alternativa
+    #: incorrecta"— y hasta ahora la demo no lo devolvía: quien probaba sin
+    #: cuenta veía la resolución genérica y nunca su propio error.
+    #: Va solo cuando se falló; en una respuesta correcta no hay distractor.
+    distractor_justification: str | None = None
 
 
 class DemoGradeOut(BaseModel):

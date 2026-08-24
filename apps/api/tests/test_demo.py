@@ -27,7 +27,16 @@ def _make_node_with_question(db_session: Session, code: str) -> tuple[Question, 
     db_session.flush()
 
     correct = Alternative(question_id=question.id, label="A", text="4", is_correct=True)
-    wrong = Alternative(question_id=question.id, label="B", text="5", is_correct=False)
+    # Toda alternativa incorrecta lleva su justificación: es el contrato del
+    # modelo (ver Alternative en content/models.py) y lo que la demo devuelve
+    # a quien falla.
+    wrong = Alternative(
+        question_id=question.id,
+        label="B",
+        text="5",
+        is_correct=False,
+        distractor_justification="Contó uno de más al sumar.",
+    )
     db_session.add_all([correct, wrong])
     db_session.commit()
     db_session.refresh(question)
@@ -70,6 +79,61 @@ def test_demo_grade_scores_without_persisting_anything(
         json={"answers": [{"question_id": question.id, "selected_alternative_id": wrong.id}]},
     )
     assert resp_wrong.json()["correct"] == 0
+
+
+def test_demo_grade_devuelve_la_justificacion_del_distractor_elegido(
+    client: TestClient, db_session: Session
+) -> None:
+    """Quien falla tiene que ver POR QUÉ falló, no solo la resolución.
+
+    Es lo que promete la portada ("el razonamiento exacto que te llevó a la
+    alternativa incorrecta"). La demo tenía la justificación escrita en la base
+    para todas las alternativas incorrectas del banco y no la devolvía: quien
+    probaba sin cuenta recibía la explicación genérica y se iba sin ver lo
+    único que distingue esto de un PDF de ejercicios.
+    """
+    question, correct, wrong = _make_node_with_question(db_session, "demo_distractor")
+
+    fallada = client.post(
+        "/api/demo/grade",
+        json={"answers": [{"question_id": question.id, "selected_alternative_id": wrong.id}]},
+    ).json()["items"][0]
+    assert fallada["is_correct"] is False
+    assert fallada["selected_alternative_id"] == wrong.id
+    assert fallada["distractor_justification"] == "Contó uno de más al sumar."
+
+    # Al acertar no hay distractor que justificar.
+    acertada = client.post(
+        "/api/demo/grade",
+        json={"answers": [{"question_id": question.id, "selected_alternative_id": correct.id}]},
+    ).json()["items"][0]
+    assert acertada["distractor_justification"] is None
+
+    # Sin responder tampoco: no se marcó ninguna alternativa.
+    en_blanco = client.post(
+        "/api/demo/grade",
+        json={"answers": [{"question_id": question.id, "selected_alternative_id": None}]},
+    ).json()["items"][0]
+    assert en_blanco["is_correct"] is False
+    assert en_blanco["distractor_justification"] is None
+
+
+def test_demo_grade_no_filtra_las_justificaciones_no_elegidas(
+    client: TestClient, db_session: Session
+) -> None:
+    """Solo viaja la justificación de la alternativa marcada.
+
+    Devolverlas todas le regalaría al estudiante el descarte de las otras tres
+    antes de haber pensado, que es justo lo que el ensayo no debe hacer.
+    """
+    question, _correct, wrong = _make_node_with_question(db_session, "demo_no_filtra")
+
+    cuerpo = client.post(
+        "/api/demo/grade",
+        json={"answers": [{"question_id": question.id, "selected_alternative_id": wrong.id}]},
+    ).text
+    assert "Contó uno de más al sumar." in cuerpo
+    assert cuerpo.count("distractor_justification") == 1
 
 
 def test_demo_questions_solo_de_la_prueba_pedida(

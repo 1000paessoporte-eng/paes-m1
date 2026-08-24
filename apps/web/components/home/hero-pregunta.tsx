@@ -51,6 +51,8 @@ interface Correccion {
   is_correct: boolean;
   correct_alternative_id: number;
   explanation: string | null;
+  /** El error que lleva justo a la alternativa marcada. Null si acertó. */
+  distractor_justification?: string | null;
 }
 
 function reloj(segundos: number): string {
@@ -223,6 +225,16 @@ export function HeroPregunta() {
                       ? "Correcta. Así se ve cada una de las 65."
                       : "Incorrecta. Esto es lo que verías en el ensayo:"}
                   </p>
+
+                  {/* El error propio antes de la resolución general. Es la
+                      promesa que hace la sección de más abajo de esta misma
+                      portada ("no «fallaste geometría»"), cumplida acá arriba
+                      en la primera pregunta que alguien responde. */}
+                  {!correccion.is_correct && correccion.distractor_justification && (
+                    <p className="mt-2 text-sm font-medium leading-relaxed text-foreground">
+                      {correccion.distractor_justification}
+                    </p>
+                  )}
 
                   {correccion.explanation && (
                     <div className="mt-2 text-sm leading-relaxed text-muted">
