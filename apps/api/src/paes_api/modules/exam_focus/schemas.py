@@ -133,6 +133,12 @@ class BreakdownItemOut(BaseModel):
     """Desempeño agrupado por eje, nodo o dificultad."""
 
     name: str
+    #: El código del nodo, SOLO en el desglose por nodo. Es lo que convierte el
+    #: desglose en algo que se puede pulsar: con él la pantalla de resultados
+    #: enlaza a la lección (`/aprender/{code}`) y a la práctica
+    #: (`/practicar/{code}`) del tema que salió peor. Los ejes y las
+    #: dificultades no son nodos y no tienen página propia, así que van en None.
+    code: str | None = None
     correct: int
     incorrect: int
     omitted: int

@@ -717,13 +717,23 @@ def _tally(
     answers: dict[int, ExamAnswerState],
     correct_ids: set[int],
     key,
+    code=None,
 ) -> list[BreakdownItemOut]:
-    """Agrupa el desempeño según un criterio (eje, nodo o dificultad)."""
+    """Agrupa el desempeño según un criterio (eje, nodo o dificultad).
+
+    `code` es opcional y solo lo pasa el desglose por nodo: es lo que permite
+    que la pantalla de resultados enlace al tema que salió peor en vez de
+    limitarse a nombrarlo. Un eje o una dificultad no tienen página propia.
+    """
     groups: dict[str, dict[str, int]] = defaultdict(
         lambda: {"correct": 0, "incorrect": 0, "omitted": 0, "total": 0}
     )
+    codigos: dict[str, str] = {}
     for q in questions:
-        item = groups[key(q)]
+        nombre = key(q)
+        if code is not None:
+            codigos.setdefault(nombre, code(q))
+        item = groups[nombre]
         selected = answers.get(q.id)
         selected_id = selected.selected_alternative_id if selected else None
         if selected_id is None:
@@ -738,6 +748,7 @@ def _tally(
         (
             BreakdownItemOut(
                 name=name,
+                code=codigos.get(name),
                 correct=v["correct"],
                 incorrect=v["incorrect"],
                 omitted=v["omitted"],
@@ -843,7 +854,13 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
             correct_ids,
             lambda q: DIFFICULTY_LABELS[q.difficulty.value],
         ),
-        by_node=_tally(questions, answers, correct_ids, lambda q: q.skill_node.name),
+        by_node=_tally(
+            questions,
+            answers,
+            correct_ids,
+            lambda q: q.skill_node.name,
+            code=lambda q: q.skill_node.code,
+        ),
     )
 
 
