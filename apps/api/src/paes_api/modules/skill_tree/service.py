@@ -57,15 +57,26 @@ def _ensure_progress(
     )
     progress_by_node = {p.skill_node_id: p for p in existing}
 
-    for node_id, node in nodes_by_id.items():
+    for node_id in nodes_by_id:
         if node_id in progress_by_node:
             continue
-        status = ProgressStatus.LOCKED if node.prerequisites else ProgressStatus.UNLOCKED
+        # NADIE NACE BLOQUEADO. El árbol pasó de puerta a mapa: muestra en qué
+        # orden conviene estudiar --los prerequisitos siguen ahí, dibujando los
+        # conectores y el "se apoya en"-- pero ya no impide entrar a ningún
+        # tema.
+        #
+        # El caso que lo forzó fue M2: sus dieciséis temas cuelgan de M1, así
+        # que quien iba a rendir M2 abría su árbol y lo encontraba entero gris.
+        # Y era incoherente con Modo Ensayo, que nunca bloqueó nada: ese mismo
+        # alumno podía rendir un ensayo de M2 completo el primer día.
+        #
+        # `MASTERED` sigue existiendo: dominar un tema se sigue reconociendo,
+        # que es la parte del juego que premia en vez de prohibir.
         progress = UserSkillProgress(
             user_id=user_id,
             skill_node_id=node_id,
-            status=status,
-            unlocked_at=datetime.now(UTC) if status == ProgressStatus.UNLOCKED else None,
+            status=ProgressStatus.UNLOCKED,
+            unlocked_at=datetime.now(UTC),
         )
         db.add(progress)
         progress_by_node[node_id] = progress
@@ -84,16 +95,15 @@ def _recompute_unlocks(
         for node_id, node in nodes_by_id.items():
             progress = progress_by_node[node_id]
 
+            # Los nodos ya no nacen bloqueados, pero esto sigue acá para las
+            # cuentas que SÍ tienen filas en LOCKED de antes del cambio: se
+            # abren en cuanto el usuario vuelve a mirar su árbol, sin pedirle
+            # nada. La migración de datos hace lo mismo de una vez; esto cubre
+            # lo que se le escape.
             if progress.status == ProgressStatus.LOCKED:
-                prereqs_ok = all(
-                    progress_by_node[p.id].attempts >= MIN_ATTEMPTS_FOR_UNLOCK
-                    and progress_by_node[p.id].accuracy >= node.unlock_threshold
-                    for p in node.prerequisites
-                )
-                if prereqs_ok:
-                    progress.status = ProgressStatus.UNLOCKED
-                    progress.unlocked_at = datetime.now(UTC)
-                    changed = True
+                progress.status = ProgressStatus.UNLOCKED
+                progress.unlocked_at = datetime.now(UTC)
+                changed = True
 
             if (
                 progress.status == ProgressStatus.UNLOCKED

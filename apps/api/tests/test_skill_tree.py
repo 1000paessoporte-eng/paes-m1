@@ -23,9 +23,17 @@ def _make_node(
     return node
 
 
-def test_root_node_starts_unlocked_and_child_starts_locked(
+def test_todos_los_temas_nacen_abiertos_aunque_tengan_prerequisitos(
     client: TestClient, db_session: Session, register_user
 ) -> None:
+    """El árbol pasó de puerta a mapa.
+
+    Antes un nodo con prerequisitos nacía BLOQUEADO. Eso dejaba M2 entera
+    inaccesible --sus dieciséis temas cuelgan de M1-- mientras Modo Ensayo
+    dejaba rendir un ensayo de M2 completo el primer día. Ahora los
+    prerequisitos siguen ahí, dibujando el orden recomendado, pero no cierran
+    nada.
+    """
     root = _make_node(db_session, "raiz")
     _make_node(db_session, "hijo", prerequisites=[root])
     headers, _ = register_user()
@@ -34,30 +42,36 @@ def test_root_node_starts_unlocked_and_child_starts_locked(
     assert resp.status_code == 200
     by_code = {n["code"]: n for n in resp.json()}
     assert by_code["raiz"]["status"] == "unlocked"
-    assert by_code["hijo"]["status"] == "locked"
+    assert by_code["hijo"]["status"] == "unlocked"
+    # El prerequisito no desaparece: es lo que ordena el árbol en pantalla.
+    assert by_code["hijo"]["prerequisite_codes"] == ["raiz"]
 
 
-def test_child_unlocks_after_prerequisite_meets_threshold(
+def test_dominar_el_prerequisito_ya_no_desbloquea_nada_porque_nada_esta_cerrado(
     client: TestClient, db_session: Session, register_user
 ) -> None:
+    """Ya no hay nada que celebrar como "desbloqueaste un tema".
+
+    El hijo estaba disponible desde el primer día, así que dominar a su padre
+    no le abre nada: `newly_unlocked` viene vacío y el banner de desbloqueo no
+    aparece. Lo que sí sigue pasando es que el padre queda DOMINADO.
+    """
     root = _make_node(db_session, "raiz2")
     _make_node(db_session, "hijo2", prerequisites=[root])
     _, user = register_user(email="unlock@milpaes.cl")
 
-    # 4 respuestas correctas en el nodo raiz (MIN_ATTEMPTS_FOR_UNLOCK=4,
-    # unlock_threshold=0.75) deben desbloquear a su hijo.
-    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
-    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
-    skill_tree_service.apply_single_answer(db_session, user["id"], root.id, True)
-    newly_unlocked = skill_tree_service.apply_single_answer(
-        db_session, user["id"], root.id, True
-    )
+    tree = skill_tree_service.get_user_skill_tree(db_session, user["id"])
+    assert next(n for n in tree if n.code == "hijo2").status == ProgressStatus.UNLOCKED
 
-    assert [n.code for n in newly_unlocked] == ["hijo2"]
+    for _ in range(4):
+        newly_unlocked = skill_tree_service.apply_single_answer(
+            db_session, user["id"], root.id, True
+        )
+        assert newly_unlocked == []
 
     tree = skill_tree_service.get_user_skill_tree(db_session, user["id"])
-    hijo = next(n for n in tree if n.code == "hijo2")
-    assert hijo.status == ProgressStatus.UNLOCKED
+    assert next(n for n in tree if n.code == "raiz2").status == ProgressStatus.MASTERED
+    assert next(n for n in tree if n.code == "hijo2").status == ProgressStatus.UNLOCKED
 
 
 def test_node_masters_when_owner_meets_its_own_threshold(
