@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import type { BreakdownItem } from "@/lib/api";
+import type { BreakdownItem, Subject } from "@/lib/api";
+import { NOMBRE_CORTO } from "@/lib/colores-prueba";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 import { BarraProgreso } from "@/components/ui/barra-progreso";
 
@@ -49,6 +50,8 @@ const NOMBRE_PRUEBA: Record<string, string> = {
 interface Props {
   puntaje: number | null;
   variacion: number | null;
+  /** La prueba del último ensayo. El puntaje no se lee sin ella. */
+  prueba: Subject | null;
   porEje: BreakdownItem[];
   /** Prueba del ensayo del que salen estos ejes. */
   ejesDe?: string | null;
@@ -58,7 +61,7 @@ interface Props {
 // orden, y verlos siempre en la misma secuencia hace comparables dos ensayos.
 const ORDEN_EJES = Object.keys(COLOR_POR_EJE);
 
-export function ProgresoModulo({ puntaje, variacion, porEje, ejesDe }: Props) {
+export function ProgresoModulo({ puntaje, prueba, variacion, porEje, ejesDe }: Props) {
   const ejesOrdenados = [...porEje].sort((a, b) => {
     const ia = ORDEN_EJES.indexOf(a.name);
     const ib = ORDEN_EJES.indexOf(b.name);
@@ -91,7 +94,9 @@ export function ProgresoModulo({ puntaje, variacion, porEje, ejesDe }: Props) {
                 <NumeroAnimado valor={puntaje} />
                 <span className="text-base font-medium text-muted">/1000</span>
               </p>
-              <p className="text-xs text-muted">Puntaje estimado</p>
+              <p className="text-xs text-muted">
+                Puntaje estimado{prueba ? ` · ${NOMBRE_CORTO[prueba]}` : ""}
+              </p>
               {variacion != null && variacion !== 0 && (
                 <p
                   className={`mt-1.5 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold ${
@@ -101,7 +106,7 @@ export function ProgresoModulo({ puntaje, variacion, porEje, ejesDe }: Props) {
                   }`}
                 >
                   {variacion > 0 ? "▲" : "▼"} {variacion > 0 ? "+" : ""}
-                  {variacion} vs. anterior
+                  {variacion} vs. tu ensayo anterior de esta prueba
                 </p>
               )}
             </div>
