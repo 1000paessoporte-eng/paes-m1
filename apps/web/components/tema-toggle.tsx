@@ -1,6 +1,12 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import {
+  IconoAutomatico,
+  IconoLuna,
+  IconoSol,
+  type PropsIcono,
+} from "@/components/ui/iconos";
 
 /**
  * Selector de tema: claro, automático u oscuro.
@@ -20,10 +26,14 @@ import { useSyncExternalStore } from "react";
 
 type Tema = "system" | "light" | "dark";
 
-const OPCIONES: { valor: Tema; etiqueta: string; icono: string }[] = [
-  { valor: "light", etiqueta: "Claro", icono: "☀" },
-  { valor: "system", etiqueta: "Automático", icono: "◐" },
-  { valor: "dark", etiqueta: "Oscuro", icono: "☾" },
+const OPCIONES: {
+  valor: Tema;
+  etiqueta: string;
+  Icono: (props: PropsIcono) => React.ReactElement;
+}[] = [
+  { valor: "light", etiqueta: "Claro", Icono: IconoSol },
+  { valor: "system", etiqueta: "Automático", Icono: IconoAutomatico },
+  { valor: "dark", etiqueta: "Oscuro", Icono: IconoLuna },
 ];
 
 // `localStorage` es estado que vive fuera de React. Leerlo con un efecto y
@@ -86,13 +96,13 @@ export function TemaToggle() {
             title={o.etiqueta}
             onClick={() => aplicar(o.valor)}
             className={
-              "flex h-7 w-7 items-center justify-center rounded-full text-xs transition-colors " +
+              "flex h-7 w-7 items-center justify-center rounded-full transition-colors " +
               (activo
                 ? "bg-accent text-accent-foreground"
                 : "text-muted hover:bg-surface-hover hover:text-foreground")
             }
           >
-            <span aria-hidden>{o.icono}</span>
+            <o.Icono tamano={15} />
           </button>
         );
       })}
