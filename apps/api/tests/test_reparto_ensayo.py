@@ -308,6 +308,54 @@ def test_un_ensayo_de_lectura_no_apila_las_preguntas_en_pocos_textos() -> None:
     assert all(n <= 11 for _, n in _bloques(elegidas))
 
 
+def test_el_ensayo_corto_se_reparte_en_dos_lecturas() -> None:
+    """Veinte preguntas van en DOS textos, no en tres.
+
+    La prueba oficial reparte 65 preguntas en 7 u 8 lecturas: nueve por texto
+    en promedio. Un ensayo de veinte que se abriera en tres lecturas dejaría
+    bloques de siete, y sobre todo obligaría a leer tres textos largos para
+    responder veinte preguntas: pasa a ser más lectura que práctica.
+
+    Con textos de nueve preguntas dos no alcanzaban para veinte y entraba un
+    tercero. Por eso el banco se llevó a once por texto: el faltante se cubre
+    ahora desde los textos ya elegidos, que es justamente lo que el armador
+    intenta antes de sumar otra lectura.
+    """
+    for por_texto in (11, 12, 13):
+        banco = _banco_de_lectura(20, por_texto)
+        for _ in range(20):
+            elegidas = _select_questions(banco, [], 20, Subject.LECTORA)
+            assert len(_bloques(elegidas)) == 2, (
+                f"con textos de {por_texto} preguntas, un ensayo de 20 se abrió "
+                f"en {len(_bloques(elegidas))} lecturas"
+            )
+
+
+def test_el_faltante_sale_de_los_textos_ya_elegidos() -> None:
+    """Completar un ensayo no debe costar una lectura más.
+
+    Si a un ensayo le faltan dos preguntas, el armador tiene dos salidas:
+    pedirle esas dos a un texto que ya está adentro, o montar una lectura
+    entera para sacarle dos preguntas. La segunda es la mala: el alumno tendría
+    que leer novecientas palabras para responder dos veces.
+
+    Con holgura en cada texto —once preguntas y cuotas de nueve o diez— el
+    faltante se cubre sin abrir otra lectura. El test lo comprueba en el
+    formato que más lo tensiona.
+    """
+    banco = _banco_de_lectura(20, 11)
+    for pedidas in (20, 34, 65):
+        for _ in range(20):
+            elegidas = _select_questions(banco, [], pedidas, Subject.LECTORA)
+            bloques = _bloques(elegidas)
+            assert len(elegidas) == pedidas
+            # Ningún bloque queda por debajo del mínimo que justifica montar
+            # una lectura: eso delataría un texto agregado solo para rellenar.
+            assert all(n >= MINIMO_POR_TEXTO for _, n in bloques), (
+                f"pidió {pedidas} y quedó un bloque corto: {bloques}"
+            )
+
+
 def test_dos_ensayos_no_traen_siempre_los_mismos_textos() -> None:
     """Con banco de sobra, repetir el mismo ensayo no sirve para practicar."""
     banco = _banco_de_lectura(20, 9)
