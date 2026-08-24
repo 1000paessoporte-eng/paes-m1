@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CarrerasRelacionadas } from "@/components/carrera/relacionadas";
 import { SimuladorCarrera } from "@/components/carreras/simulador-carrera";
 import { DatosEstructurados } from "@/components/datos-estructurados";
 import { SiteFooter } from "@/components/site-footer";
-import { ApiError, getCarrera, type CarreraPublica } from "@/lib/api";
-import { codigoDesdeSlug, nombreLegible, slugCarrera } from "@/lib/carreras";
+import {
+  ApiError,
+  getCarrera,
+  getCarreraRelacionadas,
+  type CarreraPublica,
+} from "@/lib/api";
+import {
+  codigoDesdeSlug,
+  nombreCarrera,
+  nombreLegible,
+  slugCarrera,
+} from "@/lib/carreras";
 import { COLOR_FACTOR, esPruebaPaes, factoresDe } from "@/lib/ponderado";
 
 /**
@@ -51,14 +62,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const carrera = await carreraDelSlug(slug);
   if (!carrera) return { title: "Carrera no encontrada" };
 
-  const titulo = `${limpiar(carrera.nombre)} en ${nombreLegible(carrera.universidad)}`;
+  const titulo = `${nombreCarrera(carrera.nombre)} en ${nombreLegible(carrera.universidad)}`;
   const minimo = carrera.ponderado_min
     ? `Puntaje ponderado mínimo de postulación: ${carrera.ponderado_min} puntos.`
     : "Consulta las ponderaciones oficiales del proceso.";
 
   return {
     title: titulo,
-    description: `Ponderaciones PAES ${carrera.proceso} de ${limpiar(carrera.nombre)} en ${nombreLegible(carrera.universidad)}, sede ${nombreLegible(carrera.sede)}. ${minimo} Simula tu puntaje gratis.`,
+    description: `Ponderaciones PAES ${carrera.proceso} de ${nombreCarrera(carrera.nombre)} en ${nombreLegible(carrera.universidad)}, sede ${nombreLegible(carrera.sede)}. ${minimo} Simula tu puntaje gratis.`,
     alternates: { canonical: `/carrera/${slugCarrera(carrera)}` },
     openGraph: {
       title: titulo,
@@ -74,7 +85,12 @@ export default async function CarreraPage({ params }: Props) {
   if (!carrera) notFound();
 
   const factores = factoresDe(carrera);
-  const nombre = limpiar(carrera.nombre);
+  const nombre = nombreCarrera(carrera.nombre);
+
+  // Las relacionadas no pueden tumbar la ficha: si la llamada falla, la
+  // página se sirve igual con las ponderaciones, que es a lo que se vino. Es
+  // un bloque para seguir navegando, no el contenido principal.
+  const relacionadas = await getCarreraRelacionadas(carrera.codigo).catch(() => null);
 
   return (
     <>
@@ -223,7 +239,19 @@ export default async function CarreraPage({ params }: Props) {
             </div>
           </div>
 
-          <p className="mx-auto mt-6 max-w-3xl text-xs text-muted">
+        </section>
+
+        {relacionadas && (
+          <CarrerasRelacionadas
+            mismaCarrera={relacionadas.misma_carrera}
+            mismaUniversidad={relacionadas.misma_universidad}
+            nombre={carrera.nombre}
+            universidad={carrera.universidad}
+          />
+        )}
+
+        <section className="px-6 pb-20">
+          <p className="mx-auto max-w-3xl text-xs text-muted">
             Ponderaciones del proceso de admisión {carrera.proceso}, publicadas por el
             DEMRE. Código de carrera {carrera.codigo}.{" "}
             <a href={carrera.fuente} className="underline" rel="nofollow noopener">
@@ -292,6 +320,3 @@ function Dato({
  * número es una nota al pie de la tabla original. Fuera de esa tabla no
  * significa nada y en un título se lee como un error.
  */
-function limpiar(nombre: string): string {
-  return nombreLegible(nombre.replace(/\s*\(\d+\)\s*$/, "")).trim();
-}

@@ -5,6 +5,9 @@ Solo consultas de lectura: nada de lo que hay acá escribe en la base. Es el
 la entrada viene de internet y la valida antes de tocar la base.
 """
 
+from collections.abc import Callable
+from typing import Any
+
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -77,3 +80,89 @@ def buscar(db: Session, texto: str) -> list[Carrera]:
         # dentro de medicina, comercio, ingeniería comercial y otras 300.
         return []
     return _buscar(db, texto, limite=LIMITE_BUSQUEDA)
+
+
+#: Cuántas fichas hermanas acompañan a una carrera. Suficiente para que la
+#: comparación sea real —Derecho se dicta en 22 universidades, Medicina en 17—
+#: y corto para que el bloque siga siendo un vistazo y no un segundo catálogo.
+LIMITE_RELACIONADAS = 12
+
+#: Cuántas filas se traen antes de agrupar por universidad.
+TECHO_CANDIDATAS = 120
+
+
+def relacionadas(db: Session, carrera: Carrera) -> tuple[list[Carrera], list[Carrera]]:
+    """La misma carrera en otras universidades, y otras carreras de la suya.
+
+    Existe porque la ficha de una carrera era un callejón sin salida: 296
+    palabras y ningún enlace a otra. Quien llega desde Google no busca una
+    carrera concreta, busca DÓNDE le alcanza, y tenía que volver al índice y
+    empezar de nuevo para comparar.
+
+    Las mismas por ponderado mínimo ascendente, con las que no lo publican al
+    final: quien compara quiere ver primero dónde entra más fácil, y un `NULL`
+    no es un cero -- el DEMRE no publicó ese dato para 1.153 de las 1.855.
+
+    **Una fila por universidad, no una por sede.** Kinesiología aparece 49
+    veces en el catálogo, pero la Andrés Bello ocupa tres de esas filas con
+    sedes distintas: sin agrupar, media lista era la misma universidad
+    repetida y la comparación no comparaba nada. Se queda la sede de menor
+    ponderado, que es la que responde "dónde entro".
+
+    La deduplicación se hace acá y no con `DISTINCT ON`, que es de Postgres:
+    los tests corren sobre SQLite y el módulo no tiene por qué atarse al motor
+    para algo que son doce filas.
+    """
+    return (
+        _una_por(
+            _consulta_ordenada(
+                db,
+                Carrera.nombre == carrera.nombre,
+                orden=(Carrera.ponderado_min.asc().nullslast(), Carrera.universidad),
+            ),
+            clave=lambda c: c.universidad,
+            excluir=carrera,
+        ),
+        _una_por(
+            _consulta_ordenada(
+                db,
+                Carrera.universidad == carrera.universidad,
+                orden=(Carrera.nombre,),
+            ),
+            clave=lambda c: c.nombre,
+            excluir=carrera,
+        ),
+    )
+
+
+def _consulta_ordenada(db: Session, filtro: Any, orden: tuple[Any, ...]) -> list[Carrera]:
+    """Trae candidatas de sobra para poder agrupar sin quedarse corto.
+
+    El límite se aplica DESPUÉS de agrupar por universidad, así que pedir solo
+    doce filas dejaría la lista en cuatro cuando una universidad ocupa varias
+    sedes. El techo evita traerse las 1.855 por si alguna carrera existiera en
+    todas.
+    """
+    return list(
+        db.execute(select(Carrera).where(filtro).order_by(*orden).limit(TECHO_CANDIDATAS))
+        .scalars()
+        .all()
+    )
+
+
+def _una_por(
+    candidatas: list[Carrera],
+    clave: Callable[[Carrera], str],
+    excluir: Carrera,
+) -> list[Carrera]:
+    """Se queda con la primera de cada clave, respetando el orden que ya trae."""
+    vistas: set[str] = set()
+    salida: list[Carrera] = []
+    for c in candidatas:
+        if c.id == excluir.id or clave(c) in vistas:
+            continue
+        vistas.add(clave(c))
+        salida.append(c)
+        if len(salida) == LIMITE_RELACIONADAS:
+            break
+    return salida

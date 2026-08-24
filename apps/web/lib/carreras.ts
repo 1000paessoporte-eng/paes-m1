@@ -99,3 +99,14 @@ export function nombreLegible(texto: string): string {
     })
     .join("");
 }
+
+/**
+ * El nombre de una carrera como se le muestra a una persona.
+ *
+ * El catálogo del DEMRE numera las variantes de una misma carrera dentro de
+ * una universidad ("ARQUITECTURA (23)"), y ese número no significa nada para
+ * quien lee: es un identificador interno de la oferta.
+ */
+export function nombreCarrera(nombre: string): string {
+  return nombreLegible(nombre.replace(/\s*\(\d+\)\s*$/, "")).trim();
+}
