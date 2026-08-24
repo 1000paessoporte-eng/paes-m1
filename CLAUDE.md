@@ -79,22 +79,34 @@ resuelve conflictos de texto, no de diseño.
 
    **Y `seed.py` solo INSERTA.** Salta cualquier pregunta cuyo enunciado ya
    exista, así que por sí solo no publica lo que cambia sin cambiar el
-   enunciado: dificultades, distractores corregidos, o el paso de un nodo de M1
-   a M2. Peor: al reescribir una pregunta, la versión vieja queda viva, porque
-   la nueva entra como si fuera adicional. Para eso está `scripts/sincronizar.py`,
-   y la secuencia completa es:
+   enunciado: dificultades, distractores corregidos, justificaciones
+   reescritas, o el paso de un nodo de M1 a M2. Peor: al reescribir una
+   pregunta, la versión vieja queda viva, porque la nueva entra como si fuera
+   adicional. Para eso está `scripts/sincronizar.py`, y la secuencia completa
+   son **dos pasos**:
 
    ```bash
    cd apps/api
    DATABASE_URL="<string directo>" uv run python scripts/seed.py
    DATABASE_URL="<string directo>" uv run python scripts/sincronizar.py          # informe
    DATABASE_URL="<string directo>" uv run python scripts/sincronizar.py --aplicar
-   DATABASE_URL="<string directo>" uv run python scripts/seed.py
    ```
 
-   El primer seed crea los nodos nuevos, el sync limpia y corrige dejando
-   respaldo JSON, y el último seed repone lo que el sync borró. Al terminar,
-   `sincronizar.py` sin `--aplicar` debe informar cero en las cinco filas.
+   El seed crea los nodos y textos nuevos e inserta las preguntas nuevas; el
+   sync corrige en su lugar y borra lo que ya no está, dejando respaldo JSON.
+   Al terminar, `sincronizar.py` sin `--aplicar` debe informar cero en todas
+   las filas.
+
+   **Hasta el 2026-08-23 había un tercer paso —otro `seed.py` al final— y era
+   un defecto, no un requisito.** El sync borraba las preguntas cuyas
+   alternativas habían cambiado y ese último seed las reponía con id nuevo: en
+   el intervalo el sitio quedaba varios minutos con el banco incompleto (el
+   2026-08-19 M1 se vio en 991 en vez de 1088, y se notó en el dominio), y los
+   ensayos ya rendidos perdían esas preguntas por la cascada de claves
+   foráneas. Ahora una pregunta que solo cambió de alternativas conserva su id
+   y se repara fila por fila, así que **no hay ninguna ventana con el banco
+   incompleto** y el historial sobrevive. Si alguien vuelve a agregar un seed
+   final, está reintroduciendo eso.
 
 ## 4. Verificar antes de pedir merge
 

@@ -24,17 +24,22 @@ Estás tomando un proyecto en marcha. Contexto mínimo antes de tocar nada:
   el estado de cada feature y las trampas del deploy. Este archivo solo agrega
   lo que no puede ir en un repo público: las credenciales.
 - **Reglas de trabajo que el proyecto ya tiene** (respétalas):
-  1. Cada cambio de código se cierra con **commit → push → deploy**. Pushear a
-     GitHub **no** despliega nada; hay que correr `vercel deploy --prod`.
-  2. El deploy del **frontend se corre desde la raíz del repo**, nunca desde
-     `apps/web` (hacerlo ahí crea un proyecto Vercel roto).
+  1. Cada cambio de código se cierra con **rama `nombre/loquesea` → PR → squash
+     merge**. `main` está protegida y **el deploy es automático desde el
+     2026-08-14**: Vercel está conectado a GitHub, así que un push a una rama
+     con PR levanta un preview con URL propia y el merge a `main` publica
+     producción. Ya no hace falta `vercel deploy --prod` ni ningún token.
+  2. Si alguna vez hay que desplegar a mano, el deploy del **frontend se corre
+     desde la raíz del repo**, nunca desde `apps/web` (hacerlo ahí crea un
+     proyecto Vercel roto).
   3. **Cero datos inventados**. Las tablas de puntaje, los tiempos y la
      cantidad de preguntas salen del DEMRE (demre.cl). Las preguntas nuevas se
      verifican matemáticamente antes de subirlas. La landing no muestra logos
      de instituciones ni testimonios porque no existen.
   4. Las cuentas de servicio del proyecto usan `1000paessoporte@gmail.com`,
-     nunca correos personales. **Excepcion historica:** la cuenta de Vercel
-     Vercel se migro a esa cuenta el 2026-08-14.
+     nunca correos personales. Vercel y GitHub ya están ahí (se migraron el
+     2026-08-14). **La excepción que queda es Neon**: la base de producción
+     sigue viviendo en la cuenta personal de Pablo — ver sección 2.
 
 ---
 
@@ -44,7 +49,7 @@ Estás tomando un proyecto en marcha. Contexto mínimo antes de tocar nada:
 |---|---|---|
 | Vercel | cuenta de servicio `1000paessoporte@gmail.com` — usuario `1000paessoporte-9167` (plan **Hobby**) | Hosting y deploy (`milpaes-web`, `milpaes-api`) |
 | Google / Gmail | `1000paessoporte@gmail.com` | Cuenta raíz del proyecto: entra a Vercel y a Neon |
-| Neon | cuenta Google `1000paessoporte@gmail.com` *(confirmar)* | PostgreSQL de producción |
+| Neon | **cuenta personal de Pablo** (verificado 2026-08-16) | PostgreSQL de producción — endpoint `ep-broad-glade-acd1vxdw` |
 | GitHub | `1000paessoporte-eng/paes-m1` (**público**) | Código |
 | Dominio | `1000paes.cl` | DNS en AWS Route53 (lo administra el papá de Pablo) |
 
@@ -55,19 +60,20 @@ enviar este archivo, o compártela por un gestor de contraseñas)_
 CONTRASEÑA_GMAIL = <pedir a Pablo por canal privado>
 ```
 
-> **Alternativa más segura para el deploy** (recomendada): en vez de compartir
-> la contraseña de la cuenta, Pablo puede generar un **token de Vercel**
-> revocable en https://vercel.com/account/tokens y pegarlo acá. Con eso el
-> socio despliega sin entrar a la cuenta, y si algo sale mal se revoca el token
-> sin cambiar ninguna contraseña. Se usa así:
+> **Para el deploy no hace falta ninguna de las dos cosas.** Desde el
+> 2026-08-14 Vercel despliega solo al mergear a `main`, así que no se necesita
+> ni la contraseña de la cuenta ni un token. La contraseña sigue siendo útil
+> para entrar a la consola de Vercel (variables de entorno, logs, dominios).
+>
+> Si alguna vez hiciera falta desplegar a mano con un token revocable
+> (https://vercel.com/account/tokens), el scope es el del **team de servicio**:
 >
 > ```bash
-> vercel deploy --prod --yes --token=EL_TOKEN --scope=pablos-projects-27637841
+> vercel deploy --prod --yes --token=EL_TOKEN --scope=1000paessoporte-9167s-projects
 > ```
 >
-> ```
-> VERCEL_TOKEN = <pedir a Pablo por canal privado>
-> ```
+> El scope `pablos-projects-27637841` que decía este archivo quedó obsoleto con
+> el traspaso: ahí ya no vive ninguno de los dos proyectos.
 
 ---
 
