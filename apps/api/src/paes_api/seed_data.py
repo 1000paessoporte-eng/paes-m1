@@ -92,9 +92,14 @@ SKILL_NODES_M2 = [
     # Probabilidad y estadística
     ("prob_dispersion", "Medidas de dispersión", "probabilidad", 2, ["prob_estadistica_desc"]),
     ("prob_condicional", "Probabilidad condicional", "probabilidad", 4, ["prob_reglas"]),
-    ("prob_combinatoria", "Técnicas de conteo", "probabilidad", 2, ["prob_estadistica_desc"]),
-    ("prob_permutacion", "Permutación y combinatoria (nivel M2)", "probabilidad", 3, ["prob_combinatoria"]),
-    ("prob_binomial", "Modelos probabilísticos (binomial)", "probabilidad", 4, ["prob_permutacion", "prob_condicional"]),
+    # El temario de M2 tiene UNA unidad para esto, llamada literalmente
+    # "Permutación y combinatoria". Hasta el 2026-08-23 el árbol la partía en
+    # dos nodos —"Técnicas de conteo" con 68 preguntas y este mismo nombre con
+    # 8— y las preguntas eran indistinguibles entre sí: ordenar las letras de
+    # una palabra, formar un comité de 2 hombres y 2 mujeres, o sentar personas
+    # con dos de ellas siempre juntas aparecían en los dos. Se fusionaron.
+    ("prob_combinatoria", "Permutación y combinatoria", "probabilidad", 2, ["prob_estadistica_desc"]),
+    ("prob_binomial", "Modelos probabilísticos (binomial)", "probabilidad", 4, ["prob_combinatoria", "prob_condicional"]),
 ]
 
 
@@ -2543,7 +2548,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "prob_permutacion", "facil",
+        "prob_combinatoria", "facil",
         "¿De cuántas formas distintas se pueden ordenar las letras de la palabra "
         "\"ANA\"? (la letra A se repite 2 veces)",
         "3",
@@ -2560,7 +2565,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "prob_permutacion", "medio",
+        "prob_combinatoria", "medio",
         "¿De cuántas formas distintas se pueden ordenar las letras de la palabra "
         "\"MAMA\"? (la M se repite 2 veces y la A se repite 2 veces)",
         "6",
@@ -2576,7 +2581,7 @@ QUESTIONS = [
         ],
     ),
     _q(
-        "prob_permutacion", "dificil",
+        "prob_combinatoria", "dificil",
         "Un comité de 4 personas se debe formar eligiendo 2 hombres de un grupo de "
         "5 hombres, y 2 mujeres de un grupo de 4 mujeres. ¿De cuántas formas "
         "distintas se puede formar el comité?",
@@ -4945,7 +4950,7 @@ QUESTIONS += [
 
     # ---------- M2 · PROBABILIDAD: permutación y combinatoria ----------
     _q(
-        "prob_permutacion", "facil",
+        "prob_combinatoria", "facil",
         "¿Cuál es el valor de 6! dividido por 4!?",
         "30",
         "Conviene desarrollar el factorial mayor hasta el menor para simplificar.\n\n"
@@ -4960,23 +4965,25 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_permutacion", "medio",
-        "¿De cuántas maneras se pueden elegir 3 delegados de un grupo de 7 personas, "
-        "sin distinguir cargos?",
-        "35",
-        "Como los cargos no se distinguen, el orden no importa: es una combinación.\n\n"
-        "1) Si el orden importara habría 7 · 6 · 5 = 210 formas.\n"
-        "2) Cada grupo de 3 personas se estaría contando 3! = 6 veces, una por cada "
-        "orden posible.\n"
-        "3) Divide: 210 ÷ 6 = 35.",
+        "prob_combinatoria", "dificil",
+        "Un entrenador debe elegir a 5 jugadores de un plantel de 9 para salir a la "
+        "cancha. El capitán juega siempre. ¿De cuántas formas distintas puede quedar "
+        "formado el equipo?",
+        "70",
+        "El capitán no se elige: ya está adentro. Lo que hay que contar son los "
+        "lugares que quedan.\n\n"
+        "1) De los 5 puestos, el capitán ocupa uno. Quedan 4 por llenar.\n"
+        "2) Los candidatos a esos 4 puestos son los 9 − 1 = 8 jugadores restantes.\n"
+        "3) El orden no importa (es el mismo equipo en cualquier orden), así que es "
+        "una combinación: 8 · 7 · 6 · 5 ÷ 4! = 1.680 ÷ 24 = 70.",
         [
-            ("210", "Contó como distintos los grupos con las mismas personas en distinto orden."),
-            ("21", "Calculó las parejas posibles en lugar de los grupos de tres."),
-            ("343", "Elevó 7 al cubo, permitiendo repetir a la misma persona."),
+            ("126", "Eligió los 5 puestos entre los 9 jugadores, sin usar el dato de que el capitán ya tiene el suyo."),
+            ("56", "Sacó al capitán del plantel, pero siguió eligiendo 5 jugadores: ese equipo saldría con 6 a la cancha."),
+            ("1.680", "Contó como distintos los equipos con los mismos jugadores en distinto orden, sin dividir por 4!."),
         ],
     ),
     _q(
-        "prob_permutacion", "medio",
+        "prob_combinatoria", "medio",
         "¿Cuántas palabras distintas, con o sin sentido, se pueden formar con todas "
         "las letras de la palabra CASA?",
         "12",
@@ -4992,7 +4999,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_permutacion", "dificil",
+        "prob_combinatoria", "dificil",
         "¿De cuántas maneras se pueden sentar 4 personas en una fila de 4 asientos si "
         "dos de ellas deben quedar siempre juntas?",
         "12",
@@ -5009,7 +5016,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_permutacion", "dificil",
+        "prob_combinatoria", "dificil",
         "En un grupo de 5 hombres y 4 mujeres se elige un comité de 2 hombres y "
         "1 mujer. ¿Cuántos comités distintos se pueden formar?",
         "40",
@@ -16289,12 +16296,13 @@ QUESTIONS += [
 #
 # Nota de temario para quien venga después: la combinatoria NO aparece como
 # unidad temática propia en el temario de M1, que en este eje solo lista tablas
-# y gráficos, medidas de posición y reglas de las probabilidades. Sí existe como
-# nodo de M2 (`prob_permutacion`). Este nodo se mantiene en M1 porque contar
-# casos es la herramienta con la que se calcula "casos favorables sobre casos
-# posibles", y por eso esta tanda inclina los enunciados hacia ese uso: espacios
-# muestrales de dados y monedas, y conteos que después alimentan una
-# probabilidad.
+# y gráficos, medidas de posición y reglas de las probabilidades. Sí es unidad
+# de M2 ("Permutación y combinatoria"), y por eso este nodo vive en
+# SKILL_NODES_M2 desde el PR #67. Los enunciados de esta tanda se inclinan
+# igual hacia el uso que la combinatoria tiene dentro de la probabilidad
+# —espacios muestrales de dados y monedas, conteos que después alimentan una
+# probabilidad—, porque contar casos es la herramienta con la que se calcula
+# "casos favorables sobre casos posibles".
 #
 # Lo que faltaba en el nodo: conteo con restricciones (que la cifra final sea
 # par, que dos personas vayan juntas, que alguien esté sí o sí en el comité),
@@ -47733,13 +47741,16 @@ LESSONS: dict[str, dict] = {
             "posibilidades.\n\n"
             "**Permutaciones** (importa el orden, se usan todos): $n! = n \\cdot "
             "(n-1) \\cdots 2 \\cdot 1$.\n\n"
-            "**Variaciones** (importa el orden, se eligen $k$ de $n$): "
+            "**Variaciones**, también escritas $P(n,k)$ (importa el orden, se "
+            "eligen $k$ de $n$): "
             "$\\dfrac{n!}{(n-k)!}$.\n\n"
             "**Combinaciones** (NO importa el orden): "
             "$\\binom{n}{k} = \\dfrac{n!}{k!\\,(n-k)!}$.\n\n"
             "**La pregunta que decide todo**: ¿cambia el resultado si altero el "
             "orden? Un podio sí cambia (primero y segundo no son lo mismo); un "
-            "comité de dos personas no."
+            "comité de dos personas no.\n\n"
+            "**Y recuerda que $0! = 1$**, que es lo que hace que las fórmulas "
+            "sigan funcionando cuando se eligen todos los elementos."
         ),
         "example_statement": (
             "De un grupo de 6 personas se debe elegir un comité de 2, sin "
@@ -47762,7 +47773,8 @@ LESSONS: dict[str, dict] = {
         "common_error": (
             "Usar variaciones donde correspondían combinaciones y responder 30. "
             "Ese número cuenta dos veces cada comité, una por cada orden posible "
-            "de las mismas dos personas."
+            "de las mismas dos personas. Antes de escribir cualquier fórmula, "
+            "respóndete en voz alta: ¿cambia algo si los ordeno distinto?"
         ),
     },
     "prob_reglas": {
@@ -48976,49 +48988,6 @@ LESSONS: dict[str, dict] = {
             "Sumar y restar los porcentajes: \"subió 20 y bajó 25, entonces bajó "
             "5%\". Los porcentajes sucesivos se MULTIPLICAN, porque cada uno se "
             "aplica sobre una base distinta."
-        ),
-    },
-    "prob_permutacion": {
-        "intro": (
-            "Contar de cuántas formas puede ocurrir algo. Toda la unidad se "
-            "reduce a una pregunta: ¿importa el ORDEN o no?"
-        ),
-        "theory": (
-            "**Principio multiplicativo.** Si una decisión se toma en etapas "
-            "independientes, el total es el producto de las opciones de cada "
-            "etapa.\n\n"
-            "**Permutación: el orden IMPORTA.** Ordenar $n$ elementos distintos "
-            "da $n!$ formas. Si se eligen $r$ de $n$ y el orden importa: "
-            "$P(n,r) = \\frac{n!}{(n-r)!}$.\n\n"
-            "**Combinación: el orden NO importa.** "
-            "$C(n,r) = \\frac{n!}{r!\\,(n-r)!}$. Se divide por $r!$ justamente "
-            "para descontar todos los órdenes de un mismo grupo.\n\n"
-            "**Cómo decidir.** Pregúntate si al cambiar el orden cambia el "
-            "resultado. Un podio (oro, plata, bronce) es permutación; un comité "
-            "de tres personas es combinación. Y recuerda $0! = 1$."
-        ),
-        "example_statement": (
-            "De un curso de 10 estudiantes hay que elegir un comité de 3 "
-            "personas, sin cargos. ¿De cuántas formas distintas se puede hacer?"
-        ),
-        "example_steps": [
-            {
-                "accion": "Decido si el orden importa: el comité no tiene cargos, así que elegir a Ana, Bruno y Carla es lo mismo en cualquier orden.",
-                "porque": "Es la única decisión real del ejercicio. Si hubiera presidente, secretario y tesorero, la respuesta sería otra.",
-            },
-            {
-                "accion": "Como el orden NO importa, uso combinación: $C(10,3) = \\frac{10!}{3!\\,7!}$.",
-                "porque": "Dividir por $3!$ elimina las 6 maneras de ordenar cada grupo de tres, que en este problema son el mismo comité.",
-            },
-            {
-                "accion": "Simplifico: $\\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = \\frac{720}{6} = 120$.",
-                "porque": "No hace falta calcular $10!$ completo: basta tomar tres factores desde 10 hacia abajo. Con cargos habrían sido 720, seis veces más.",
-            },
-        ],
-        "common_error": (
-            "Usar permutación cuando el orden no importa, y contar seis veces "
-            "cada comité. Antes de escribir cualquier fórmula, responde en voz "
-            "alta: ¿cambia algo si los ordeno distinto?"
         ),
     },
     "geo_trigonometria": {
