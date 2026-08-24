@@ -49,7 +49,13 @@ const sourceSerif = Source_Serif_4({
 });
 
 const BASE_URL = "https://1000paes.cl";
-const TITLE = "1000paes — Prepara tu PAES";
+//: El título es lo que se lee en el resultado de Google, así que nombra lo
+//: que la gente escribe en el buscador —"ensayos PAES", "puntaje"— y no el
+//: nombre del producto, que nadie busca todavía. Antes decía "1000paes —
+//: Prepara tu PAES": correcto y sin una sola palabra por la que alguien
+//: pudiera encontrarnos. La marca va al final, donde no ocupa el espacio que
+//: Google recorta.
+const TITLE = "Ensayos PAES gratis con puntaje oficial — 1000paes";
 const DESCRIPTION =
   "Ensayos PAES cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso. Las cinco pruebas: Competencia Lectora, Matemática M1 y M2, Ciencias, e Historia.";
 
