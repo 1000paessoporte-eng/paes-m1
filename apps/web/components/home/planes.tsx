@@ -234,7 +234,18 @@ function EscalaPro() {
   );
 }
 
-export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean }) {
+export function Planes({
+  pagoDisponible = false,
+  /**
+   * Nivel del encabezado "Planes". En la portada es una sección entre otras
+   * (h2, debajo del titular de la página); en /planes es el titular, así que
+   * la propia página pide h1.
+   */
+  encabezado: Encabezado = "h2",
+}: {
+  pagoDisponible?: boolean;
+  encabezado?: "h1" | "h2";
+}) {
   return (
     <section id="planes" className="border-t border-border px-6 py-20">
       <div className="mx-auto max-w-5xl">
@@ -244,9 +255,13 @@ export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean })
               Próximamente
             </span>
           )}
-          <h2 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+          {/* En la portada esto es una sección más y va como h2, debajo del
+              titular de la página. En /planes es LA página, así que ahí sube a
+              h1: era la única página pública sin encabezado principal, y es la
+              que vende. */}
+          <Encabezado className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
             Planes
-          </h2>
+          </Encabezado>
           <p className="mt-3 text-sm text-muted">
             {pagoDisponible
               ? "El plan Gratis es y seguirá siendo sin costo. Pro agrega ensayos sin límite y el análisis completo de tus errores."

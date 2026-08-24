@@ -4,7 +4,8 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata = {
   title: "Planes",
-  description: "Qué incluye cada plan de 1000paes y cuánto cuesta.",
+  description:
+    "El plan Gratis no tiene costo ni vencimiento: 4 ensayos al mes con el banco completo, el árbol y las lecciones. Pro quita el tope por $9.990 al mes.",
   alternates: { canonical: "/planes" },
 };
 
@@ -25,7 +26,7 @@ export default async function PlanesPage() {
 
   return (
     <main className="flex flex-1 flex-col">
-      <Planes pagoDisponible={pagoDisponible} />
+      <Planes pagoDisponible={pagoDisponible} encabezado="h1" />
       <SiteFooter />
     </main>
   );
