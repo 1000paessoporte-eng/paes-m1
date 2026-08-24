@@ -195,9 +195,15 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   }));
 
   const dominados = nodes.filter((n) => n.status === "mastered").length;
-  const disponibles = nodes.filter(
-    (n) => n.status !== "locked" && n.status !== "mastered"
+  // Empezados: tocados pero todavía no dominados. Es donde está de verdad
+  // casi todo el mundo, y era lo único que la cabecera no contaba: decía
+  // "0 de 16 dominados" y una barra en cero para alguien que llevaba cinco
+  // temas practicados. En producción, 81% de los nodos-alumno están sin
+  // tocar y solo el 1,3% dominados; entre medio no había nada que mirar.
+  const empezados = nodes.filter(
+    (n) => n.status !== "mastered" && n.attempts > 0
   ).length;
+  const sinTocar = nodes.length - dominados - empezados;
 
   // ── Los conectores ──────────────────────────────────────────────────
   // Se miden sobre el CONTENEDOR COMPLETO y no columna por columna. Las
@@ -275,18 +281,32 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
               temas dominados
             </span>
           </p>
-          {disponibles > 0 && (
-            <p className="text-sm text-muted">
-              <strong className="text-foreground tabular-nums">{disponibles}</strong>{" "}
-              {disponibles === 1 ? "disponible ahora" : "disponibles ahora"}
-            </p>
-          )}
+          {/* "N disponibles ahora" era el total menos los dominados --como
+              nada se bloquea, ese número no informaba de nada. Estos tres sí
+              dicen dónde estás. */}
+          <p className="text-sm text-muted tabular-nums">
+            {empezados > 0 && (
+              <>
+                <strong className="text-foreground">{empezados}</strong> empezado
+                {empezados === 1 ? "" : "s"}
+              </>
+            )}
+            {empezados > 0 && sinTocar > 0 && <span className="mx-1.5">·</span>}
+            {sinTocar > 0 && (
+              <>
+                <strong className="text-foreground">{sinTocar}</strong> sin empezar
+              </>
+            )}
+          </p>
         </div>
         <div className="mt-3">
           <BarraProgreso
             porcentaje={nodes.length ? (dominados / nodes.length) * 100 : 0}
+            secundario={
+              nodes.length ? ((dominados + empezados) / nodes.length) * 100 : 0
+            }
             color={colorPrueba}
-            etiqueta={`${dominados} de ${nodes.length} temas dominados`}
+            etiqueta={`${dominados} de ${nodes.length} temas dominados, ${empezados} empezados`}
             alCargar
           />
         </div>
@@ -445,6 +465,7 @@ function TreeColumn({
           const mastered = node.status === "mastered";
           const pct = Math.round(node.accuracy * 100);
           const abre = abreByCode.get(node.code) ?? [];
+          const faltaParaDominar = queFaltaParaDominar(node);
           // "Dominado" usa el color de la prueba porque es identidad --este
           // árbol--, mientras que "Desbloqueado" conserva el verde, que ahí
           // sí es estado. Es la regla de no mezclar identidad con estado.
@@ -614,6 +635,25 @@ function TreeColumn({
                       </p>
                     </div>
 
+                    {/* QUÉ FALTA PARA QUE ESTE TEMA CUENTE.
+                        Dominar exige dos cosas a la vez --el umbral de acierto
+                        Y un mínimo de respuestas-- y ninguna se veía. En
+                        producción hay 24 nodos-alumno en el umbral o por
+                        encima y solo 6 dominados: la diferencia son 18 casos
+                        de alguien que responde bien y al que el árbol no le
+                        reconoce nada, porque lleva dos o tres respuestas y el
+                        mínimo son cuatro. La mediana de respuestas por tema es
+                        2. El estudiante practicaba, acertaba, y el contador
+                        seguía en cero sin decirle por qué ni cuánto faltaba.
+
+                        El umbral y el mínimo salen del nodo, no de constantes
+                        repetidas acá: la regla vive en el servidor. */}
+                    {faltaParaDominar && (
+                      <p className="mt-2 rounded-lg bg-surface-hover px-2.5 py-1.5 text-xs leading-snug text-muted">
+                        {faltaParaDominar}
+                      </p>
+                    )}
+
                     <div className="mt-3 flex items-center gap-2">
                       <Link
                         href={`/practicar/${node.code}`}
@@ -714,4 +754,41 @@ function LockIcon() {
       <path d="M8 11V7a4 4 0 0 1 8 0v4" />
     </svg>
   );
+}
+
+/**
+ * Qué le falta a un tema para contar como dominado.
+ *
+ * Dominar exige dos condiciones a la vez: llegar al umbral de acierto Y haber
+ * respondido un mínimo de preguntas. La segunda es la que nadie ve, y es la
+ * que frena: en producción hay 24 nodos-alumno en el umbral o por encima y
+ * solo 6 dominados. Los 18 restantes son alguien respondiendo bien con dos o
+ * tres respuestas cuando el mínimo son cuatro.
+ *
+ * Los dos números vienen del nodo (`unlock_threshold`, `min_attempts_to_master`)
+ * y no de constantes acá: la regla vive en el servicio, y tenerla en dos
+ * idiomas es tenerla en un sitio que se olvida de cambiar.
+ *
+ * Devuelve null cuando no hay nada que decir: el tema ya está dominado, o
+ * todavía no se ha tocado y el mensaje sería ruido sobre "Todavía sin
+ * practicar".
+ */
+function queFaltaParaDominar(node: SkillNode): string | null {
+  if (node.status === "mastered" || node.attempts === 0) return null;
+
+  const umbral = Math.round(node.unlock_threshold * 100);
+  const faltan = node.min_attempts_to_master - node.attempts;
+
+  // Va bien y solo le falta volumen. Es el caso accionable: se resuelve
+  // respondiendo, y decir cuántas faltan convierte un umbral invisible en un
+  // objetivo a dos clics.
+  if (node.accuracy >= node.unlock_threshold && faltan > 0) {
+    return faltan === 1
+      ? "Vas en el estándar. Una respuesta más a este ritmo y queda dominado."
+      : `Vas en el estándar. ${faltan} respuestas más a este ritmo y queda dominado.`;
+  }
+
+  // Le falta puntería. Decirle "te faltan N respuestas" acá sería mentira:
+  // más respuestas al ritmo actual no lo dominan.
+  return `Se domina con ${umbral}% de acierto en ${node.min_attempts_to_master} respuestas.`;
 }

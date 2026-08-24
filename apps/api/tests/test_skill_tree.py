@@ -158,3 +158,27 @@ def test_el_arbol_dice_de_que_se_trata_cada_tema(
     # Un nodo sin teoría no inventa una: la tarjeta simplemente no la muestra.
     assert nodos["sin_teoria"]["has_lesson"] is False
     assert nodos["sin_teoria"]["lesson_intro"] is None
+
+
+def test_el_arbol_dice_cuantas_respuestas_hacen_falta_para_dominar(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """Dominar exige umbral de acierto Y un mínimo de respuestas.
+
+    La segunda condición era invisible y es la que frena: en producción hay 24
+    nodos-alumno en el umbral o por encima y solo 6 dominados, porque la
+    mediana de respuestas por tema es 2 y el mínimo son 4. El estudiante
+    respondía bien y el contador seguía en cero sin decirle cuánto faltaba.
+
+    El mínimo viaja con el nodo para que la pantalla lo diga sin recodificar
+    la regla: tenerla en Python y en TypeScript es tenerla en un sitio que se
+    olvida de cambiar.
+    """
+    _make_node(db_session, "un_nodo")
+    db_session.commit()
+
+    headers, _ = register_user(email="arbol-minimo@milpaes.cl")
+    nodo = client.get("/api/skill-tree", headers=headers).json()[0]
+
+    assert nodo["min_attempts_to_master"] == skill_tree_service.MIN_ATTEMPTS_FOR_UNLOCK
+    assert nodo["unlock_threshold"] == 0.75

@@ -148,6 +148,7 @@ def get_user_skill_tree(
             attempts=progress_by_node[node.id].attempts,
             has_lesson=node.lesson is not None,
             lesson_intro=node.lesson.intro if node.lesson is not None else None,
+            min_attempts_to_master=MIN_ATTEMPTS_FOR_UNLOCK,
         )
         for node in ordered
     ]

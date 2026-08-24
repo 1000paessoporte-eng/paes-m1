@@ -39,6 +39,12 @@ class SkillNodeProgressOut(SkillNodeOut):
     #: `lessons.intro` --existe justamente para responder "¿para qué me sirve
     #: esto?"-- y no lo leía nadie.
     lesson_intro: str | None = None
+    #: Cuántas respuestas hacen falta, como mínimo, para que un nodo pueda
+    #: contar como dominado. Viaja con el nodo para que la pantalla pueda
+    #: decir qué falta sin recodificar la regla: vive en
+    #: `service.MIN_ATTEMPTS_FOR_UNLOCK`, y duplicarla en TypeScript sería dos
+    #: sitios que cambiar y uno que se olvida.
+    min_attempts_to_master: int
 
 
 class LessonStepOut(BaseModel):
