@@ -109,13 +109,40 @@ def test_el_que_responde_poco_y_abandona_sigue_contando(
     assert service._es_representativo(a, respondidas=3) is True
 
 
-def test_sin_respuestas_no_hay_nada_que_juzgar(
+def test_un_ensayo_sin_ninguna_respuesta_no_cuenta(
     db_session: Session, register_user
 ) -> None:
+    """Un ensayo vacío no es apurado: es vacío, y no dice nada del alumno.
+
+    Este caso devolvía True con el argumento de que "sin respuestas no hay
+    nada que juzgar". Es cierto del RITMO --no hay ritmo que medir-- pero la
+    bandera no responde "¿fue apurado?", responde "¿este ensayo cuenta?".
+
+    De los 42 ensayos entregados en producción, 26 no tenían ni una respuesta
+    (el 62%) y todos entraban al historial, al mejor puntaje, a la analítica y
+    al panel del profesor con un puntaje medio de 160 -- el piso de la escala,
+    no una medición. Para el alumno típico, la mayor parte de su historial
+    eran ensayos que nunca respondió.
+    """
     _headers, user = register_user(email="vacio@milpaes.cl")
     a = _intento(db_session, user["id"], segundos=5)
     a.finished_at = datetime.now(UTC)
-    assert service._es_representativo(a, respondidas=0) is True
+    assert service._es_representativo(a, respondidas=0) is False
+
+    # Y con calma tampoco: el tiempo no arregla la ausencia de respuestas.
+    b = _intento(db_session, user["id"], segundos=3600)
+    b.finished_at = datetime.now(UTC)
+    assert service._es_representativo(b, respondidas=0) is False
+
+
+def test_una_sola_respuesta_con_calma_si_cuenta(
+    db_session: Session, register_user
+) -> None:
+    """El corte está en cero, no en "pocas": una respuesta pensada dice algo."""
+    _headers, user = register_user(email="una-sola@milpaes.cl")
+    a = _intento(db_session, user["id"], segundos=300)
+    a.finished_at = datetime.now(UTC)
+    assert service._es_representativo(a, respondidas=1) is True
 
 
 def test_el_umbral_es_relativo_al_ritmo_de_cada_prueba(
