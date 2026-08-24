@@ -8,6 +8,7 @@ import type {
   MiPlan,
   Onboarding,
   SkillNode,
+  Subject,
 } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
 import { SiteFooter } from "@/components/site-footer";
@@ -20,6 +21,7 @@ import { MetaModulo } from "@/components/dashboard/meta-modulo";
 import { ProModulo } from "@/components/dashboard/pro-modulo";
 import { ProgresoModulo } from "@/components/dashboard/progreso-modulo";
 import { Insignias, Racha } from "@/components/gamificacion/logros";
+import { NOMBRE_CORTO } from "@/lib/colores-prueba";
 import { calcularLogros } from "@/lib/logros";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
 import { Reveal } from "@/components/motion/reveal";
@@ -64,11 +66,37 @@ export function PanelDashboard({
   plan,
 }: Props) {
   const rendidos = attempts.filter((a) => a.status === "submitted");
-  const puntajes = rendidos.map((a) => a.estimated_score ?? 0);
-  const ultimo = puntajes.length > 0 ? puntajes[0] : null;
-  const anterior = puntajes.length > 1 ? puntajes[1] : null;
-  const mejor = puntajes.length > 0 ? Math.max(...puntajes) : null;
-  const variacion = ultimo != null && anterior != null ? ultimo - anterior : null;
+
+  // El puntaje que encabeza el panel es el del último ensayo, sea de la prueba
+  // que sea. Va CON el nombre de su prueba: un 406 no significa lo mismo en
+  // Historia que en M1, y sin decir de cuál es, el número no se puede leer.
+  const ultimoIntento = rendidos[0] ?? null;
+  const ultimo = ultimoIntento?.estimated_score ?? null;
+
+  // Y se compara contra el ensayo anterior DE LA MISMA PRUEBA. Antes tomaba
+  // el anterior a secas: con un 406 de Historia después de un 378 de M2, el
+  // panel anunciaba "▲ +28 vs. anterior" comparando dos pruebas distintas,
+  // con temarios y tablas de transformación del DEMRE distintas. Esa subida
+  // no le pasó a nadie.
+  const anteriorMismaPrueba =
+    ultimoIntento != null
+      ? (rendidos
+          .slice(1)
+          .find(
+            (a) =>
+              a.subject === ultimoIntento.subject && a.estimated_score != null
+          )?.estimated_score ?? null)
+      : null;
+  const variacion =
+    ultimo != null && anteriorMismaPrueba != null ? ultimo - anteriorMismaPrueba : null;
+
+  // El mejor puntaje también viaja con su prueba, por la misma razón.
+  const mejorIntento = rendidos.reduce<(typeof rendidos)[number] | null>(
+    (mejorHasta, a) =>
+      (a.estimated_score ?? -1) > (mejorHasta?.estimated_score ?? -1) ? a : mejorHasta,
+    null
+  );
+  const mejor = mejorIntento?.estimated_score ?? null;
   const enCurso = attempts.find((a) => a.status === "in_progress");
   // El tiempo practicado sale de analítica, que suma lo que el estudiante tardó
   // en cada pregunta. Sumar `elapsed_seconds` de los intentos, en cambio, cuenta
@@ -150,6 +178,7 @@ export function PanelDashboard({
               enCurso={enCurso != null}
               ensayos={rendidos.length}
               mejor={mejor}
+              mejorPrueba={mejorIntento?.subject ?? null}
               racha={racha}
               rachaEnsayos={analytics?.exam_streak_days ?? 0}
               precision={precision}
@@ -161,6 +190,7 @@ export function PanelDashboard({
           <Reveal delay={0.05}>
             <ProgresoModulo
               puntaje={ultimo}
+              prueba={ultimoIntento?.subject ?? null}
               variacion={variacion}
               porEje={porEje}
               ejesDe={ejesDe}
@@ -210,6 +240,7 @@ function Bienvenida({
   enCurso,
   ensayos,
   mejor,
+  mejorPrueba,
   racha,
   rachaEnsayos,
   precision,
@@ -219,6 +250,7 @@ function Bienvenida({
   enCurso: boolean;
   ensayos: number;
   mejor: number | null;
+  mejorPrueba: Subject | null;
   racha: number;
   rachaEnsayos: number;
   precision: number | null;
@@ -286,7 +318,12 @@ function Bienvenida({
         {ensayos > 0 && (
           <dl className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-border pt-5 sm:grid-cols-4">
             <Metrica etiqueta="Ensayos rendidos" valor={ensayos} />
-            <Metrica etiqueta="Mejor puntaje" valor={mejor} />
+            <Metrica
+              etiqueta={
+                mejorPrueba ? `Mejor puntaje · ${NOMBRE_CORTO[mejorPrueba]}` : "Mejor puntaje"
+              }
+              valor={mejor}
+            />
             <Metrica
               etiqueta="Precisión global"
               valor={precision != null ? Math.round(precision * 100) : null}

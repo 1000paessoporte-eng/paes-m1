@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { CompartirResultado } from "@/components/exam/compartir-resultado";
+import { Resolucion } from "@/components/exam/resolucion";
 import { TextoRico } from "@/components/texto-rico";
 import type { BreakdownItem, ExamResult, ExamReview, ReviewQuestion } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
@@ -280,6 +281,9 @@ function RevisionItem({
   const acertada = pregunta.answered_correctly === true;
   const omitida = pregunta.answered_correctly === null;
   const correcta = pregunta.alternatives.find((a) => a.is_correct);
+  // Solo la que se marcó y estaba mal: en la correcta no hay error que
+  // explicar, y en las que no se tocaron el alumno nunca pensó nada.
+  const elegidaIncorrecta = pregunta.alternatives.find((a) => a.selected && !a.is_correct);
 
   return (
     <li className="overflow-hidden rounded-xl border border-border bg-surface">
@@ -352,23 +356,11 @@ function RevisionItem({
         </button>
 
         {abierta && (
-          <div className="mt-3 rounded-lg border border-border bg-surface-hover p-4 text-sm">
-            <h3 className="mb-2 font-semibold">
-              Cómo se resuelve
-              {correcta && (
-                <span className="ml-2 font-normal text-muted">
-                  Respuesta: {correcta.text}
-                </span>
-              )}
-            </h3>
-            {pregunta.explanation ? (
-              <TextoRico texto={pregunta.explanation} className="text-foreground" />
-            ) : (
-              <p className="text-muted">
-                Esta pregunta todavía no tiene desarrollo escrito.
-              </p>
-            )}
-          </div>
+          <Resolucion
+            explicacion={pregunta.explanation}
+            respuestaCorrecta={correcta?.text}
+            errorPropio={elegidaIncorrecta?.distractor_justification}
+          />
         )}
       </div>
     </li>
