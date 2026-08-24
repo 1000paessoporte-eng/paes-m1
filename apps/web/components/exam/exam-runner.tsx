@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { cn } from "@paes-m1/utils";
 import { PassagePanel } from "@/components/exam/passage-panel";
 import { Burbuja } from "@/components/ui/burbuja";
+import { IconoEstrella } from "@/components/ui/iconos";
 import { TextoRico } from "@/components/texto-rico";
 import { ExamConfigScreen, SUBJECT_LABELS } from "@/components/exam/exam-config";
 import { ExamResults } from "@/components/exam/exam-results";
@@ -761,9 +762,10 @@ export function ExamRunner({
                       initial={{ scale: est?.flagged ? 0.6 : 1 }}
                       animate={{ scale: 1 }}
                       transition={{ type: "spring", stiffness: 500, damping: 15 }}
-                      className="inline-block"
+                      className="inline-flex items-center gap-1.5"
                     >
-                      {est?.flagged ? "★ Marcada" : "☆ Marcar"}
+                      <IconoEstrella tamano={13} marcada={est?.flagged} />
+                      {est?.flagged ? "Marcada" : "Marcar"}
                     </motion.span>
                   </button>
                 </div>

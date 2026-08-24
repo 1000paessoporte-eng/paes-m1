@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { reportarError } from "@/lib/reportar-error";
+import { IconoAdvertencia } from "@/components/ui/iconos";
 
 export default function Error({
   error,
@@ -21,8 +22,8 @@ export default function Error({
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-20">
       <div className="flex max-w-sm flex-col items-center rounded-2xl border border-border bg-surface px-6 py-12 text-center shadow-xl shadow-foreground/5">
-        <span className="text-5xl font-semibold tracking-tight text-accent">
-          ⚠
+        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
+          <IconoAdvertencia tamano={24} />
         </span>
         <h1 className="mt-3 text-lg font-semibold">Algo salió mal</h1>
         <p className="mt-2 text-sm text-muted">

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { reportarError } from "@/lib/reportar-error";
+import { IconoAdvertencia } from "@/components/ui/iconos";
 import "./globals.css";
 
 export default function GlobalError({
@@ -22,8 +23,8 @@ export default function GlobalError({
     <html lang="es" className="h-full antialiased">
       <body className="min-h-full flex flex-1 items-center justify-center bg-background px-6 py-20 text-foreground">
         <div className="flex max-w-sm flex-col items-center rounded-2xl border border-border bg-surface px-6 py-12 text-center shadow-xl shadow-foreground/5">
-          <span className="text-5xl font-semibold tracking-tight text-accent">
-            ⚠
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
+            <IconoAdvertencia tamano={24} />
           </span>
           <h1 className="mt-3 text-lg font-semibold">
             La aplicación no pudo cargar
