@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+/**
+ * Sin esto, la pestaña de una página inexistente decía "Ensayos PAES gratis con
+ * puntaje oficial — 1000paes": el título de la portada, heredado del layout. El
+ * que llega a un enlace roto ve en su pestaña el mismo rótulo que si hubiera
+ * llegado bien, y en el historial le quedan dos entradas idénticas.
+ */
+export const metadata: Metadata = {
+  title: "Esta página no existe",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

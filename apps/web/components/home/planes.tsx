@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BotonComprar } from "@/components/plan/boton-comprar";
+import { EMAIL_CONTACTO } from "@/lib/redes-sociales";
 /*
  * PRECIO DE LANZAMIENTO, NO "ANTES/AHORA"
  * ---------------------------------------
@@ -331,17 +332,33 @@ export function Planes({ pagoDisponible = false }: { pagoDisponible?: boolean })
 
               {pagoDisponible && plan.nombre === "Pro" ? (
                 <EscalaPro />
+              ) : plan.nombre === "Colegios" && !plan.disponible ? (
+                /* Un colegio compra con orden de compra y factura, no con
+                   tarjeta, así que acá no va un botón de pago: va la forma de
+                   empezar la conversación. Y tiene que ser un ENLACE de
+                   verdad. Esto era un <button disabled> que no hacía nada: el
+                   plan se anunciaba a $19.900 por alumno --desde $597.000 por
+                   un curso de treinta-- y quien quería contratarlo hacía clic
+                   y no pasaba absolutamente nada. Tampoco había un correo en
+                   el pie ni en ninguna otra parte del sitio. */
+                <a
+                  href={`mailto:${EMAIL_CONTACTO}?subject=${encodeURIComponent(
+                    "Plan Colegios - quiero contratar"
+                  )}&body=${encodeURIComponent(
+                    "Hola:\n\nMe interesa el plan Colegios para mi establecimiento.\n\n" +
+                      "Colegio:\nCurso o cursos:\nCantidad de alumnos:\nNombre y cargo:\nTeléfono:\n\n"
+                  )}`}
+                  className="btn-glow mt-6 block w-full rounded-lg px-4 py-2.5 text-center text-sm font-medium text-accent-foreground"
+                >
+                  Escríbenos
+                </a>
               ) : (
                 <button
                   type="button"
                   disabled
                   className="mt-6 w-full cursor-not-allowed rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-muted"
                 >
-                  {plan.disponible
-                    ? "Es el plan actual"
-                    : plan.nombre === "Colegios"
-                      ? "Escríbenos"
-                      : "Disponible pronto"}
+                  {plan.disponible ? "Es el plan actual" : "Disponible pronto"}
                 </button>
               )}
             </div>

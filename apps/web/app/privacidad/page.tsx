@@ -115,8 +115,8 @@ export default function PrivacidadPage() {
               intentos de ensayo individuales desde tu historial. Para acceder
               a una copia de tus datos, corregirlos, eliminar tu cuenta por
               completo o sacar tu correo de la lista de avisos, escríbenos a{" "}
-              <a href="mailto:hola@1000paes.cl" className="text-accent hover:underline">
-                hola@1000paes.cl
+              <a href="mailto:1000paessoporte@gmail.com" className="text-accent hover:underline">
+                1000paessoporte@gmail.com
               </a>
               .
             </p>
@@ -143,8 +143,8 @@ export default function PrivacidadPage() {
             <h2>10. Contacto</h2>
             <p>
               Ante cualquier duda sobre tus datos, escríbenos a{" "}
-              <a href="mailto:hola@1000paes.cl" className="text-accent hover:underline">
-                hola@1000paes.cl
+              <a href="mailto:1000paessoporte@gmail.com" className="text-accent hover:underline">
+                1000paessoporte@gmail.com
               </a>
               .
             </p>
