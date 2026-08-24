@@ -3,7 +3,7 @@
 import secrets
 from datetime import UTC, datetime
 
-from sqlalchemy import Integer, func, select
+from sqlalchemy import Integer, case, func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
@@ -108,12 +108,21 @@ def resumen_alumnos(db: Session, colegio_id: int) -> list[dict]:
     Una sola consulta agregada y no una por alumno: con treinta cuentas, el
     bucle serían noventa viajes a la base para dibujar una tabla.
     """
+    # El CONTEO cuenta todos los ensayos entregados, porque rendirlos es
+    # actividad real y el profesor quiere verla. Los PUNTAJES solo miran los
+    # representativos: un ensayo de veinte preguntas contestado en veintiún
+    # segundos daría un "mejor puntaje" y un promedio que no describen a nadie,
+    # y esta tabla es justamente donde el profesor decide a quién ir a buscar.
+    puntaje_valido = case(
+        (ExamAttempt.representativo.is_(True), ExamAttempt.estimated_score),
+        else_=None,
+    )
     ensayos = (
         select(
             ExamAttempt.user_id.label("uid"),
             func.count(ExamAttempt.id).label("ensayos"),
-            func.max(ExamAttempt.estimated_score).label("mejor"),
-            func.avg(ExamAttempt.estimated_score).label("promedio"),
+            func.max(puntaje_valido).label("mejor"),
+            func.avg(puntaje_valido).label("promedio"),
             func.max(ExamAttempt.finished_at).label("ultimo"),
         )
         .where(ExamAttempt.status == AttemptStatus.SUBMITTED)

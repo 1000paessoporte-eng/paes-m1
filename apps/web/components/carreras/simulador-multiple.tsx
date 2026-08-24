@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { buscarCarrerasPublico, getCarrera, type CarreraPublica } from "@/lib/api";
 import { NumeroAnimado } from "@/components/motion/numero-animado";
-import { nombreLegible, slugCarrera } from "@/lib/carreras";
+import { nombreCarrera, nombreLegible, slugCarrera } from "@/lib/carreras";
 import { calcularPonderado, ETIQUETAS, type Factor, type Puntajes } from "@/lib/ponderado";
 
 /** Dónde se guarda la lista entre visitas. No hay cuenta: vive en el navegador. */
@@ -147,7 +147,7 @@ export function SimuladorMultiple() {
                       href={`/carrera/${slugCarrera(carrera)}`}
                       className="text-sm font-medium text-foreground hover:underline"
                     >
-                      {nombreLegible(carrera.nombre)}
+                      {nombreCarrera(carrera.nombre)}
                     </Link>
                     <p className="text-xs text-muted">
                       {nombreLegible(carrera.universidad)}
@@ -158,7 +158,7 @@ export function SimuladorMultiple() {
                     onClick={() =>
                       setCarreras((cs) => cs.filter((x) => x.codigo !== carrera.codigo))
                     }
-                    aria-label={`Quitar ${nombreLegible(carrera.nombre)}`}
+                    aria-label={`Quitar ${nombreCarrera(carrera.nombre)}`}
                     className="shrink-0 text-xs text-muted underline-offset-4 hover:text-foreground hover:underline"
                   >
                     Quitar
@@ -364,7 +364,7 @@ function BuscadorParaAgregar({
                   onClick={() => agregar(o.codigo)}
                   className="w-full rounded-lg border border-border bg-background px-3 py-2 text-left text-sm hover:bg-surface-hover disabled:opacity-50"
                 >
-                  <span className="block text-foreground">{nombreLegible(o.nombre)}</span>
+                  <span className="block text-foreground">{nombreCarrera(o.nombre)}</span>
                   <span className="block text-xs text-muted">
                     {nombreLegible(o.universidad)}
                     {yaEsta ? " · ya está en tu lista" : ""}
