@@ -1768,37 +1768,51 @@ def main() -> int:
     # correcta es la mas corta de las cuatro ("463 kilos" frente a "19,6
     # millones de toneladas"): ahi emparejar los largos obligaria a cambiar los
     # datos y no arreglaria ninguna filtracion.
-    correctas_largas = 0
-    for q in QUESTIONS_LECTORA:
-        largos = [len(a["text"]) for a in q["alternatives"]]
-        largo_correcta = next(
-            len(a["text"]) for a in q["alternatives"] if a["is_correct"]
-        )
-        promedio = sum(largos) / len(largos)
-        if largo_correcta == max(largos):
-            correctas_largas += 1
-        if largo_correcta / promedio > 1.35:
-            fallas.append(
-                f"la correcta mide {largo_correcta / promedio:.2f} veces el "
-                f"promedio de las cuatro y se delata por larga: "
-                f"{q['stem'][:60]}"
+    # ALCANCE 2: entran los tres bancos de alternativas EN PALABRAS. Matematica
+    # queda fuera a proposito: ahi las alternativas son cifras, y el largo de
+    # "1.680" frente a "70" habla de la magnitud del numero, no de cual es la
+    # correcta. La filtracion existe donde el alumno puede comparar redacciones.
+    lineas_largos = []
+    for nombre, banco in (
+        ("lectora", QUESTIONS_LECTORA),
+        ("ciencias", QUESTIONS_CIENCIAS),
+        ("historia", QUESTIONS_HISTORIA),
+    ):
+        correctas_largas = 0
+        for q in banco:
+            largos = [len(a["text"]) for a in q["alternatives"]]
+            largo_correcta = next(
+                len(a["text"]) for a in q["alternatives"] if a["is_correct"]
             )
-    total_lectora = len(QUESTIONS_LECTORA)
-    proporcion_larga = 100 * correctas_largas / total_lectora if total_lectora else 0
-    largos_lectora = (
-        f"largo de las alternativas de lectora: la correcta es la mas larga en "
-        f"{correctas_largas} de {total_lectora} ({proporcion_larga:.0f}%)"
-    )
-    # Por azar seria 25%. Aun cumpliendo el umbral por pregunta, si la correcta
-    # gana el largo casi siempre —aunque sea por un caracter— conviene revisar:
-    # es sintoma de que se sigue escribiendo primero la correcta y despues los
-    # distractores.
-    if proporcion_larga > 55:
-        fallas.append(
-            f"la correcta es la alternativa mas larga en {proporcion_larga:.0f}% "
-            "de las preguntas de lectora; por azar seria 25% y sobre 55% "
-            "elegir la mas larga se vuelve una estrategia rentable"
+            promedio = sum(largos) / len(largos)
+            if largo_correcta == max(largos):
+                correctas_largas += 1
+            if largo_correcta / promedio > 1.35:
+                fallas.append(
+                    f"[{nombre}] la correcta mide {largo_correcta / promedio:.2f} "
+                    f"veces el promedio de las cuatro y se delata por larga: "
+                    f"{q['stem'][:60]}"
+                )
+        total = len(banco)
+        proporcion_larga = 100 * correctas_largas / total if total else 0
+        lineas_largos.append(
+            f"  {nombre}: la correcta es la mas larga en {correctas_largas} de "
+            f"{total} ({proporcion_larga:.0f}%)"
         )
+        # Por azar seria 25%. Aun cumpliendo el umbral por pregunta, si la
+        # correcta gana el largo casi siempre —aunque sea por un caracter—
+        # conviene revisar: es sintoma de que se sigue escribiendo primero la
+        # correcta y despues los distractores.
+        if proporcion_larga > 55:
+            fallas.append(
+                f"[{nombre}] la correcta es la alternativa mas larga en "
+                f"{proporcion_larga:.0f}% de las preguntas; por azar seria 25% "
+                "y sobre 55% elegir la mas larga se vuelve una estrategia "
+                "rentable"
+            )
+    largos_lectora = "largo de las alternativas:" + chr(10) + chr(10).join(
+        lineas_largos
+    )
 
     # Una probabilidad vive entre 0 y 1, y eso es lo primero que aprende quien
     # estudia la unidad. Un distractor que se pasa de 1 se descarta sin resolver
