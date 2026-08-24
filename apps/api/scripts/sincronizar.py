@@ -159,6 +159,8 @@ def main() -> None:
     # apareceran como "no estan en seed_data" y el script se ofreceria a
     # borrarlos: la lista tiene que estar COMPLETA.
     subject_por_nodo = {}
+    #: code -> (nombre, eje, tier) tal como los define seed_data.
+    ficha_por_nodo = {}
     for nodos, prueba in (
         (SKILL_NODES, "M1"),
         (SKILL_NODES_M2, "M2"),
@@ -168,6 +170,7 @@ def main() -> None:
     ):
         for n in nodos:
             subject_por_nodo[n[0]] = prueba
+            ficha_por_nodo[n[0]] = (n[1], n[2], n[3])
 
     titulos_por_clave = {p["key"]: p["title"] for p in PASSAGES + PASSAGES_HISTORIA}
     deseado = estado_deseado(
@@ -210,18 +213,29 @@ def main() -> None:
             ):
                 difieren_meta.append((qid, objetivo, code, dif, titulo))
 
-        cur.execute("select id, code, subject::text from skill_nodes")
+        cur.execute(
+            "select id, code, subject::text, name, axis::text, tier from skill_nodes"
+        )
         nodos_bd = cur.fetchall()
         nodos_mal = [
             (cod, sub, subject_por_nodo[cod])
-            for _, cod, sub in nodos_bd
+            for _, cod, sub, *_ in nodos_bd
             if cod in subject_por_nodo and sub != subject_por_nodo[cod]
+        ]
+        # Nombre, eje y tier tampoco llegaban nunca a produccion: seed.py salta
+        # el nodo si el code ya existe, asi que renombrar un nodo en seed_data
+        # no cambiaba nada de lo que ve el alumno en el arbol.
+        nodos_ficha = [
+            (cod, ficha_por_nodo[cod], (nom, eje.lower(), tier))
+            for _, cod, _sub, nom, eje, tier in nodos_bd
+            if cod in ficha_por_nodo
+            and ficha_por_nodo[cod] != (nom, eje.lower(), tier)
         ]
         # Un nodo que ya no esta en seed_data se fue del arbol (una fusion, un
         # nodo que resulto no ser del temario). Antes esto no se detectaba: el
         # nodo quedaba vivo y vacio, visible en el arbol para siempre.
         nodos_sobran = [
-            (nid, cod) for nid, cod, _ in nodos_bd if cod not in subject_por_nodo
+            (nid, cod) for nid, cod, *_ in nodos_bd if cod not in subject_por_nodo
         ]
 
         titulos_ok = {p["title"] for p in PASSAGES + PASSAGES_HISTORIA}
@@ -243,6 +257,8 @@ def main() -> None:
         )
         print(f"  con nodo, dificultad, explicacion o texto: {len(difieren_meta)}")
         print(f"  nodos con subject equivocado:             {len(nodos_mal)} {nodos_mal}")
+        print(f"  nodos con nombre, eje o tier distinto:    {len(nodos_ficha)} "
+              f"{[c for c, _, _ in nodos_ficha]}")
         print(f"  nodos que ya no estan en seed_data:       {len(nodos_sobran)} "
               f"{[c for _, c in nodos_sobran]}")
         print(f"  textos que ya no estan en seed_data:      {len(textos_sobran)}")
@@ -316,6 +332,14 @@ def main() -> None:
         for cod, _, nuevo in nodos_mal:
             cur.execute("update skill_nodes set subject=%s where code=%s", (nuevo, cod))
             print(f"  nodo {cod} -> subject {nuevo}")
+
+        for cod, (nombre, eje, tier), viejo in nodos_ficha:
+            cur.execute(
+                "update skill_nodes set name=%s, axis=%s, tier=%s, display_order=%s"
+                " where code=%s",
+                (nombre, eje.upper(), tier, tier, cod),
+            )
+            print(f"  nodo {cod}: {viejo} -> {(nombre, eje, tier)}")
 
         for _qid, _stem, corregir, borrar, insertar in difieren_alt:
             for aid, es_correcta, justificacion in corregir:
