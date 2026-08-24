@@ -145,9 +145,12 @@ export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
           {/* El rótulo sale de la pregunta, no de una constante: antes decía
               "Competencia Matemática M1" siempre, incluso cuando el sorteo
               devolvía una pregunta de otra prueba. */}
-          <p className="text-sm text-foreground">
+          {/* h1 y no <p>: era la otra página pública sin encabezado
+              principal, y es la que convierte. Se ve igual; lo que cambia es
+              que ahora Google y un lector de pantalla saben de qué va. */}
+          <h1 className="text-sm font-medium text-foreground">
             {PRUEBAS.find((p) => p.id === subject)?.nombre ?? current.node_name}
-          </p>
+          </h1>
         </div>
         <span className="text-sm text-muted">
           Pregunta <span className="text-foreground">{index + 1}</span> de {questions.length}
