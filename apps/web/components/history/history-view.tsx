@@ -40,7 +40,13 @@ export function HistoryView({ intentos, analitica }: Props) {
   const avances = useMemo(() => avancePorPrueba(intentos), [intentos]);
 
   const logros = useMemo(() => {
-    const puntajes = intentos.map((i) => i.estimated_score ?? 0);
+    // El mejor puntaje solo mira ensayos representativos. Uno contestado tan
+    // rápido que no da tiempo ni de leerlo sigue en la lista --es tuyo y lo
+    // puedes revisar-- pero coronarlo como tu récord convierte el número que
+    // más miras en el menos cierto de todos.
+    const puntajes = intentos
+      .filter((i) => i.representativo !== false)
+      .map((i) => i.estimated_score ?? 0);
     return hitos({
       ensayos: intentos.length,
       // Si la analítica no respondió, las respuestas de los propios ensayos
@@ -180,8 +186,22 @@ export function HistoryView({ intentos, analitica }: Props) {
                       {intento.correct} correctas ·{" "}
                       {formatearTiempo(intento.elapsed_seconds)}
                     </p>
+                    {/* Se dice en vez de esconderlo: el ensayo sigue acá y se
+                        puede revisar, pero si su puntaje no cuenta para el
+                        récord hay que explicar por qué antes de que parezca
+                        un error de la aplicación. */}
+                    {intento.representativo === false && (
+                      <p className="mt-1 text-xs text-warning">
+                        Contestado demasiado rápido: no cuenta para tu mejor puntaje
+                      </p>
+                    )}
                   </div>
-                  <span className="shrink-0 text-xl font-bold tabular-nums">
+                  <span
+                    className={
+                      "shrink-0 text-xl font-bold tabular-nums " +
+                      (intento.representativo === false ? "text-muted" : "")
+                    }
+                  >
                     {intento.estimated_score ?? "—"}
                   </span>
                   <button

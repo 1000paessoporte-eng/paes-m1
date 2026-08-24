@@ -103,10 +103,20 @@ export function nombreLegible(texto: string): string {
 /**
  * El nombre de una carrera como se le muestra a una persona.
  *
- * El catálogo del DEMRE numera las variantes de una misma carrera dentro de
- * una universidad ("ARQUITECTURA (23)"), y ese número no significa nada para
- * quien lee: es un identificador interno de la oferta.
+ * El catálogo del DEMRE cuelga marcas de nota al pie del final del nombre
+ * ("ARQUITECTURA (23)", "DISEÑO (8)(*)"): remiten a las condiciones de
+ * postulación del folleto oficial y no significan nada dentro de una lista.
+ *
+ * Vienen encadenadas y con separación irregular -- `(1)(3)`, `(3) (28)`,
+ * `SALUD(5)` sin espacio --, así que se quitan TODAS las del final y no solo
+ * la última: quitar una dejaba 231 de las 1.855 fichas mostrando un
+ * "Arquitectura (1)" a la vista.
+ *
+ * Los paréntesis con texto se respetan, porque ahí sí hay información: entre
+ * "AGRONOMÍA (CHILLÁN)" y "AGRONOMÍA (CONCEPCIÓN)" el paréntesis es lo único
+ * que distingue una carrera de la otra, y "CONSTRUCCIÓN CIVIL (VESPERTINA)"
+ * se dicta a otra hora. Por eso el patrón exige dígitos o un asterisco.
  */
 export function nombreCarrera(nombre: string): string {
-  return nombreLegible(nombre.replace(/\s*\(\d+\)\s*$/, "")).trim();
+  return nombreLegible(nombre.replace(/(\s*\((?:\d+|\*)\))+\s*$/, "")).trim();
 }

@@ -18,6 +18,11 @@ export const metadata = {
   title: "Iniciar sesión",
   description: "Entra a tu cuenta para continuar tus ensayos.",
   alternates: { canonical: "/login" },
+  // Fuera del índice: es una pantalla de utilidad, no un resultado de
+  // búsqueda. Quien la necesita ya tiene cuenta y llega por el menú, y
+  // estaba compitiendo por presupuesto de rastreo con las 1.855 fichas de
+  // carrera, que es lo que sí queremos que Google recorra.
+  robots: { index: false, follow: true },
 };
 
 

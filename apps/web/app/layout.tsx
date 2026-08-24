@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Instrument_Sans, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -58,6 +58,21 @@ const BASE_URL = "https://1000paes.cl";
 const TITLE = "Ensayos PAES gratis con puntaje oficial — 1000paes";
 const DESCRIPTION =
   "Ensayos PAES cronometrados con puntaje estimado, árbol de habilidades y seguimiento de tu progreso. Las cinco pruebas: Competencia Lectora, Matemática M1 y M2, Ciencias, e Historia.";
+
+/**
+ * El color de la barra del navegador en el teléfono.
+ *
+ * Sin esto, Chrome en Android pinta la barra de un gris propio que no es de la
+ * marca, y en modo oscuro queda un borde claro sobre una página negra. Van los
+ * dos valores porque el sitio tiene tema claro y oscuro: el mismo color en
+ * ambos delataría el corte justo donde termina la página.
+ */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0d0d10" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

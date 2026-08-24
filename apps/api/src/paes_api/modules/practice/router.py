@@ -123,6 +123,9 @@ def answer_practice_question(
         is_correct=selected.is_correct,
         correct_alternative_id=correct_alt.id,
         explanation=question.explanation,
+        distractor_justification=(
+            None if selected.is_correct else selected.distractor_justification
+        ),
         node_accuracy=updated.accuracy,
         node_attempts=updated.attempts,
         newly_unlocked=[n.name for n in newly_unlocked],

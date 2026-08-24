@@ -140,8 +140,12 @@ class UserSkillProgress(Base):
 
     attempts: Mapped[int] = mapped_column(Integer, default=0)
     correct: Mapped[int] = mapped_column(Integer, default=0)
+    #: LOCKED sigue en el enum, pero ya no se asigna: el árbol dejó de impedir
+    #: entrar a un tema y pasó a recomendar en qué orden estudiarlo. Se conserva
+    #: el valor para no reescribir el historial de las cuentas viejas y para
+    #: poder volver atrás cambiando solo el default.
     status: Mapped[ProgressStatus] = mapped_column(
-        Enum(ProgressStatus), default=ProgressStatus.LOCKED
+        Enum(ProgressStatus), default=ProgressStatus.UNLOCKED
     )
     unlocked_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
