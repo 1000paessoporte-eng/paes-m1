@@ -39701,7 +39701,7 @@ QUESTIONS_CIENCIAS = [
         "cie_fuerzas", "medio",
         "Un cuerpo se mueve en línea recta con rapidez constante. ¿Qué se puede "
         "afirmar sobre las fuerzas que actúan sobre él?",
-        "La fuerza neta es cero, aunque puedan actuar varias fuerzas",
+        "La fuerza neta es cero, aunque actúen fuerzas",
         "La primera ley de Newton dice que un cuerpo mantiene su estado de "
         "movimiento mientras la fuerza NETA sea cero.\n\n"
         "Rapidez constante en línea recta significa aceleración cero, y por "
@@ -39889,8 +39889,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_electricidad", "facil",
         "¿Qué diferencia hay entre un material conductor y uno aislante?",
-        "En el conductor los electrones se desplazan con facilidad; en el "
-        "aislante están fuertemente ligados",
+        "En el conductor los electrones se desplazan con facilidad",
         "La diferencia está en la libertad de los electrones dentro del "
         "material.\n\n"
         "En un metal los electrones externos se mueven casi libremente por toda "
@@ -39908,8 +39907,7 @@ QUESTIONS_CIENCIAS = [
         "cie_electricidad", "medio",
         "En un circuito en SERIE con dos ampolletas, ¿qué ocurre si una de ellas "
         "se quema?",
-        "Se apaga también la otra, porque se interrumpe el único camino de la "
-        "corriente",
+        "Se apaga la otra: se interrumpe el único camino",
         "En serie los componentes se conectan uno tras otro, formando un solo "
         "camino cerrado.\n\n"
         "Si una ampolleta se quema, ese camino se corta y la corriente deja de "
@@ -39980,8 +39978,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_atomo", "dificil",
         "¿Por qué los gases nobles son prácticamente inertes?",
-        "Porque tienen su último nivel de energía completo y no necesitan "
-        "ganar ni ceder electrones",
+        "Porque tienen completo su último nivel de energía",
         "La reactividad química se explica por la tendencia de los átomos a "
         "alcanzar un último nivel completo, que es la configuración más "
         "estable.\n\n"
@@ -39999,7 +39996,7 @@ QUESTIONS_CIENCIAS = [
         "cie_atomo", "facil",
         "¿Qué mantiene unidos a los átomos de sodio y cloro en el cloruro de "
         "sodio (sal de mesa)?",
-        "Un enlace iónico: el sodio cede un electrón y el cloro lo recibe",
+        "Un enlace iónico: el sodio cede y el cloro recibe",
         "El sodio tiene un electrón de valencia que le sobra y el cloro tiene "
         "siete, o sea le falta uno para completar su nivel.\n\n"
         "El sodio lo cede y queda como $Na^+$; el cloro lo recibe y queda como "
@@ -40051,8 +40048,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_estequiometria", "medio",
         "¿Por qué debe balancearse una ecuación química?",
-        "Porque la masa se conserva: los átomos de cada elemento deben ser los "
-        "mismos antes y después",
+        "Porque la masa se conserva: los átomos son los mismos",
         "En una reacción química los átomos se reordenan, pero ninguno aparece "
         "ni desaparece.\n\n"
         "Balancear es ajustar los coeficientes hasta que cada elemento tenga la "
@@ -40124,8 +40120,7 @@ QUESTIONS_CIENCIAS = [
         "cie_soluciones", "dificil",
         "¿Por qué el azúcar se disuelve más rápido en agua caliente que en agua "
         "fría?",
-        "Porque a mayor temperatura las moléculas se mueven más rápido y chocan "
-        "con más frecuencia con el soluto",
+        "Porque las moléculas se mueven más rápido y chocan más",
         "La temperatura es una medida de la energía cinética promedio de las "
         "moléculas.\n\n"
         "En agua caliente las moléculas se mueven más rápido, golpean el "
@@ -40231,7 +40226,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_estequiometria", "facil",
         "¿Qué representa el número de Avogadro?",
-        "La cantidad de partículas que contiene un mol de cualquier sustancia",
+        "Las partículas que hay en un mol",
         "El mol es una unidad de cantidad de partículas, igual que una docena "
         "pero muchísimo mayor.\n\n"
         "El número de Avogadro, aproximadamente $6,02 \\times 10^{23}$, es "
@@ -40267,8 +40262,7 @@ QUESTIONS_CIENCIAS = [
         "cie_celula", "facil",
         "¿Cuál es la diferencia fundamental entre una célula procarionte y una "
         "eucarionte?",
-        "La eucarionte tiene el material genético dentro de un núcleo delimitado "
-        "por una membrana",
+        "La eucarionte tiene el material genético en un núcleo",
         "La palabra lo dice: «carionte» viene de núcleo. Eucarionte es "
         "núcleo verdadero; procarionte, antes del núcleo.\n\n"
         "En la procarionte —las bacterias— el ADN flota en el citoplasma sin "
@@ -40357,8 +40351,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_genetica", "facil",
         "¿Qué diferencia hay entre genotipo y fenotipo?",
-        "El genotipo es la información genética; el fenotipo, la característica "
-        "que se manifiesta",
+        "El genotipo es la información; el fenotipo, lo que se ve",
         "El genotipo son los alelos que el individuo posee, por ejemplo $Aa$ o "
         "$AA$. El fenotipo es lo observable: el color, la forma, la altura.\n\n"
         "Genotipos distintos pueden dar el mismo fenotipo: $AA$ y $Aa$ se ven "
@@ -40393,8 +40386,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_genetica", "medio",
         "¿Qué es una mutación?",
-        "Un cambio en la secuencia del ADN, que puede ser perjudicial, neutro o "
-        "beneficioso",
+        "Un cambio en el ADN, no siempre perjudicial",
         "Una mutación es cualquier alteración en la secuencia de bases del ADN, "
         "sea por error al copiarlo o por agentes externos como la radiación."
         "\n\n"
@@ -40448,8 +40440,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "facil",
         "¿Qué papel cumplen los descomponedores en un ecosistema?",
-        "Transforman la materia orgánica muerta en compuestos que los "
-        "productores pueden reutilizar",
+        "Transforman la materia muerta en nutrientes reutilizables",
         "Hongos y bacterias descomponedoras actúan sobre restos y desechos de "
         "todos los niveles tróficos.\n\n"
         "Al degradarlos, liberan al suelo compuestos inorgánicos —nitrógeno, "
@@ -40466,8 +40457,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "medio",
         "¿Qué diferencia hay entre una cadena trófica y una red trófica?",
-        "La cadena muestra una sola secuencia lineal; la red, todas las "
-        "conexiones alimentarias entre sí",
+        "La cadena es una secuencia lineal; la red, todas ellas",
         "La cadena trófica es una simplificación: hierba, conejo, zorro, en "
         "línea recta.\n\n"
         "La red trófica reconoce que en la realidad casi ningún organismo come "
@@ -40542,7 +40532,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_celula", "medio",
         "¿Qué diferencia principal existe entre una célula vegetal y una animal?",
-        "La vegetal tiene pared celular y cloroplastos, que la animal no posee",
+        "La vegetal tiene pared celular y cloroplastos",
         "Ambas son eucariontes y comparten núcleo, membrana, citoplasma, "
         "mitocondrias y ribosomas.\n\n"
         "La vegetal suma dos estructuras propias: una pared rígida de celulosa "
@@ -40856,8 +40846,7 @@ QUESTIONS_CIENCIAS = [
         "cie_fuerzas", "medio",
         "¿Por qué un paracaidista alcanza una velocidad límite y deja de "
         "acelerar?",
-        "Porque la resistencia del aire crece hasta igualar su peso, y la "
-        "fuerza neta se anula",
+        "Porque la resistencia del aire llega a igualar su peso",
         "Al inicio solo actúa el peso y el paracaidista acelera.\n\n"
         "La resistencia del aire aumenta con la rapidez, así que va creciendo "
         "hasta igualar al peso. En ese punto la fuerza neta es cero y, por la "
@@ -40872,8 +40861,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_fuerzas", "medio",
         "¿Cuál es la diferencia entre masa y peso?",
-        "La masa es la cantidad de materia y no cambia; el peso es la fuerza "
-        "con que la gravedad la atrae",
+        "La masa no cambia; el peso es la fuerza de gravedad",
         "La masa se mide en kilogramos y es la misma en cualquier lugar del "
         "universo.\n\n"
         "El peso se mide en newtons y depende de la gravedad local: $P = mg$. "
@@ -41173,7 +41161,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ondas", "medio",
         "Dos ondas idénticas se superponen en fase. ¿Qué ocurre?",
-        "Interferencia constructiva: la amplitud resultante aumenta",
+        "Interferencia constructiva: la amplitud aumenta",
         "Cuando dos ondas coinciden cresta con cresta se dice que están en "
         "fase, y sus amplitudes se suman.\n\n"
         "El resultado es una onda de mayor amplitud, es decir más energía en "
@@ -41206,7 +41194,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_electricidad", "facil",
         "¿Qué mide el amperio?",
-        "La intensidad de corriente, es decir cuánta carga circula por segundo",
+        "La intensidad de corriente: carga por segundo",
         "La corriente eléctrica es un flujo de carga, y el amperio cuantifica "
         "ese flujo: un amperio equivale a un coulomb por segundo.\n\n"
         "No mide fuerza ni energía: mide caudal.\n\n"
@@ -41337,7 +41325,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_electricidad", "medio",
         "¿Qué función cumple un fusible en una instalación eléctrica?",
-        "Interrumpir el circuito cuando la corriente supera un valor seguro",
+        "Interrumpir el circuito si la corriente es excesiva",
         "El fusible contiene un elemento que se funde al pasar una corriente "
         "mayor que la prevista, cortando el paso.\n\n"
         "Así protege los cables y los artefactos de un sobrecalentamiento que "
@@ -41353,8 +41341,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_electricidad", "medio",
         "¿Qué diferencia hay entre corriente continua y corriente alterna?",
-        "En la continua los electrones circulan siempre en el mismo sentido; en "
-        "la alterna cambian de sentido periódicamente",
+        "En la continua el sentido no cambia; en la alterna sí",
         "La corriente continua, como la de una pila, mantiene una dirección "
         "constante de circulación.\n\n"
         "La alterna, que es la de la red domiciliaria, invierte su sentido "
@@ -41403,8 +41390,7 @@ QUESTIONS_CIENCIAS = [
         "cie_atomo", "medio",
         "En la tabla periódica, ¿qué tienen en común los elementos de un mismo "
         "grupo o columna?",
-        "El mismo número de electrones de valencia, y por eso propiedades "
-        "químicas parecidas",
+        "El mismo número de electrones de valencia",
         "Los grupos se ordenan según los electrones del último nivel, que son "
         "los que participan en los enlaces.\n\n"
         "Como esa cantidad es la misma dentro de una columna, los elementos "
@@ -41421,8 +41407,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_atomo", "dificil",
         "¿Por qué el sodio forma iones $Na^+$ y no $Na^-$?",
-        "Porque tiene un solo electrón de valencia y le resulta más fácil "
-        "cederlo que ganar siete",
+        "Porque cede su único electrón de valencia",
         "El sodio tiene un electrón en su último nivel. Cediéndolo queda con el "
         "nivel anterior completo, que es la configuración estable.\n\n"
         "La alternativa sería ganar siete electrones para completar su nivel "
@@ -41539,8 +41524,7 @@ QUESTIONS_CIENCIAS = [
         "cie_atomo", "medio",
         "¿Qué mantiene unidos a los protones en el núcleo, pese a repelerse "
         "entre sí?",
-        "La fuerza nuclear fuerte, que a distancias muy cortas supera a la "
-        "repulsión eléctrica",
+        "La fuerza nuclear fuerte, mayor a distancias cortas",
         "Los protones tienen carga positiva y deberían repelerse con enorme "
         "intensidad a esa distancia.\n\n"
         "Lo que impide que el núcleo se desarme es la fuerza nuclear fuerte, "
@@ -41623,7 +41607,7 @@ QUESTIONS_CIENCIAS = [
         "cie_estequiometria", "medio",
         "¿Qué indica el coeficiente que antecede a una fórmula en una ecuación "
         "química?",
-        "Cuántas moléculas o moles de esa sustancia participan en la reacción",
+        "Cuántas moléculas o moles participan",
         "El coeficiente multiplica a toda la fórmula que le sigue y expresa la "
         "proporción en que las sustancias reaccionan.\n\n"
         "En $2H_2O$ hay dos moléculas de agua, con cuatro hidrógenos y dos "
@@ -41655,7 +41639,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_estequiometria", "facil",
         "En una reacción química, ¿qué le ocurre a la masa total del sistema?",
-        "Se conserva: la masa de los reactivos iguala la de los productos",
+        "Se conserva: es la misma antes y después",
         "La ley de conservación de la masa, formulada por Lavoisier, establece "
         "que en una reacción los átomos se reordenan sin crearse ni "
         "destruirse.\n\n"
@@ -41690,8 +41674,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_estequiometria", "medio",
         "¿Qué diferencia hay entre un cambio físico y uno químico?",
-        "En el químico se forman sustancias nuevas; en el físico la sustancia "
-        "sigue siendo la misma",
+        "En el químico se forman sustancias nuevas",
         "Al derretir hielo cambia el estado, pero sigue siendo agua: es un "
         "cambio físico.\n\n"
         "Al quemar papel se forman gases y cenizas, sustancias distintas de la "
@@ -41773,8 +41756,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_soluciones", "facil",
         "¿Qué es una disolución diluida?",
-        "Aquella que contiene poca cantidad de soluto respecto de lo que podría "
-        "disolver",
+        "La que tiene poco soluto para lo que podría disolver",
         "La concentración describe cuánto soluto hay en relación con el "
         "disolvente.\n\n"
         "Una disolución diluida tiene poco soluto; una concentrada, mucho; y "
@@ -41807,8 +41789,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_soluciones", "medio",
         "¿Por qué el aceite no se disuelve en agua?",
-        "Porque el agua es polar y el aceite no, y las sustancias tienden a "
-        "disolverse en las de polaridad semejante",
+        "Porque el agua es polar y el aceite no",
         "La molécula de agua tiene una distribución desigual de carga: es "
         "polar. Las del aceite son apolares.\n\n"
         "Para disolverse, las moléculas del soluto deben interactuar con las "
@@ -41839,8 +41820,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_soluciones", "medio",
         "¿Qué diferencia hay entre una disolución y una mezcla heterogénea?",
-        "En la disolución los componentes no se distinguen a simple vista; en "
-        "la heterogénea sí",
+        "En la disolución no se distinguen a simple vista",
         "Una disolución es una mezcla homogénea: el soluto se dispersa de forma "
         "tan uniforme que resulta imposible distinguir sus componentes, como el "
         "agua con sal.\n\n"
@@ -41857,7 +41837,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_soluciones", "medio",
         "Al agregar sal al agua, ¿qué ocurre con su punto de ebullición?",
-        "Aumenta: la disolución hierve a una temperatura mayor que el agua pura",
+        "Aumenta: hierve a mayor temperatura",
         "La presencia de un soluto no volátil dificulta que las moléculas de "
         "agua escapen a la fase gaseosa.\n\n"
         "Como consecuencia, se necesita más temperatura para que hierva: el "
@@ -41921,8 +41901,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_acidobase", "dificil",
         "¿Por qué el estómago necesita un pH tan bajo, cercano a 2?",
-        "Porque activa las enzimas digestivas y elimina buena parte de los "
-        "microorganismos ingeridos",
+        "Porque activa las enzimas y elimina microorganismos",
         "El jugo gástrico contiene ácido clorhídrico, que mantiene el pH "
         "alrededor de 2.\n\n"
         "Esa acidez cumple dos funciones: activa la pepsina, la enzima que "
@@ -41987,7 +41966,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_acidobase", "facil",
         "¿Cuál de estas sustancias es una base de uso cotidiano?",
-        "El bicarbonato de sodio",
+        "El bicarbonato",
         "El bicarbonato de sodio es una base débil, y por eso se usa para "
         "neutralizar la acidez estomacal.\n\n"
         "El vinagre, el jugo de limón y las bebidas gaseosas son ácidos: tienen "
@@ -42019,7 +41998,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_acidobase", "medio",
         "¿Qué caracteriza a un ácido fuerte frente a uno débil?",
-        "Que se disocia completamente en agua, liberando todos sus iones $H^+$",
+        "Que se disocia completamente en agua",
         "La fuerza de un ácido no depende de su concentración sino de cuánto se "
         "disocia al disolverse.\n\n"
         "Un ácido fuerte, como el clorhídrico, libera prácticamente todos sus "
@@ -42087,7 +42066,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_celula", "facil",
         "¿Cuál es la función del núcleo celular?",
-        "Contener el material genético y dirigir la actividad de la célula",
+        "Contener el material genético y dirigir la célula",
         "El núcleo guarda el ADN, donde está la información para fabricar todas "
         "las proteínas de la célula.\n\n"
         "Desde ahí se transcribe el ARN mensajero que sale al citoplasma con "
@@ -42103,8 +42082,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_celula", "medio",
         "¿Qué establece la teoría celular?",
-        "Que todos los seres vivos están formados por células y que toda célula "
-        "proviene de otra célula",
+        "Que todo ser vivo está hecho de células que vienen de otras",
         "La teoría celular reúne tres afirmaciones: la célula es la unidad "
         "estructural de los seres vivos, es su unidad funcional, y toda célula "
         "se origina a partir de otra preexistente.\n\n"
@@ -42138,8 +42116,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_celula", "dificil",
         "¿Qué relación existe entre la respiración celular y la fotosíntesis?",
-        "Son procesos complementarios: los productos de uno son los reactivos "
-        "del otro",
+        "Son complementarios: lo que uno produce, el otro lo usa",
         "La fotosíntesis toma $CO_2$ y agua y, con energía luminosa, produce "
         "glucosa y oxígeno.\n\n"
         "La respiración celular hace el camino inverso: consume glucosa y "
@@ -42163,15 +42140,15 @@ QUESTIONS_CIENCIAS = [
         "envían a su destino, dentro o fuera de la célula.\n\n"
         "Funciona como una oficina de despacho: recibe, etiqueta y distribuye.",
         [
-            ("El ribosoma", "El ribosoma fabrica las proteínas; no las distribuye."),
-            ("El lisosoma", "El lisosoma degrada sustancias y desechos."),
-            ("La mitocondria", "La mitocondria produce ATP."),
+            ("Los ribosomas", "El ribosoma fabrica las proteínas; no las distribuye."),
+            ("Los lisosomas", "El lisosoma degrada sustancias y desechos."),
+            ("Las mitocondrias", "La mitocondria produce ATP."),
         ],
     ),
     _q(
         "cie_celula", "medio",
         "¿Qué función cumple la pared celular en las células vegetales?",
-        "Dar sostén y forma, y resistir la presión del agua que entra",
+        "Dar sostén y resistir la presión del agua",
         "La pared celular es una estructura rígida de celulosa que rodea a la "
         "membrana plasmática.\n\n"
         "Aporta forma definida y sostén, y resiste la presión interna cuando "
@@ -42224,8 +42201,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_genetica", "facil",
         "¿Qué es un gen?",
-        "Un segmento de ADN que contiene la información para una característica "
-        "o proteína",
+        "Un segmento de ADN con la información de una característica",
         "El ADN es una molécula larguísima, y un gen es un tramo de ella con "
         "una instrucción determinada.\n\n"
         "Esa instrucción se transcribe y traduce para producir una proteína, "
@@ -42273,8 +42249,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_genetica", "dificil",
         "¿Qué es la codominancia?",
-        "Cuando ambos alelos se expresan simultáneamente en el heterocigoto, "
-        "sin que uno tape al otro",
+        "Cuando ambos alelos se expresan en el heterocigoto",
         "En la herencia dominante clásica, el alelo dominante oculta al "
         "recesivo en el heterocigoto.\n\n"
         "En la codominancia ninguno se impone: ambos se manifiestan a la vez. "
@@ -42291,8 +42266,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_genetica", "medio",
         "¿Qué diferencia hay entre mitosis y meiosis en cuanto a resultado?",
-        "La mitosis produce dos células idénticas; la meiosis, cuatro con la "
-        "mitad de los cromosomas",
+        "La mitosis da dos idénticas; la meiosis, cuatro con la mitad",
         "La mitosis genera dos células hijas genéticamente iguales a la madre, "
         "con el mismo número de cromosomas: sirve al crecimiento y la "
         "reparación.\n\n"
@@ -42309,8 +42283,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_genetica", "medio",
         "¿Qué es el ADN y dónde se encuentra en una célula eucarionte?",
-        "Una molécula de doble hélice que guarda la información genética, "
-        "alojada en el núcleo",
+        "Una doble hélice con la información genética, en el núcleo",
         "El ADN es una doble hélice formada por dos hebras complementarias de "
         "nucleótidos.\n\n"
         "En las células eucariontes se encuentra principalmente en el núcleo, "
@@ -42337,8 +42310,8 @@ QUESTIONS_CIENCIAS = [
         "daltonismo, pero pueden transmitirlo a sus propios hijos. Es la forma "
         "en que la condición salta una generación.",
         [
-            ("Todas daltónicas", "Al recibir un $X^D$ sano de la madre, el alelo dominante se impone."),
-            ("Ninguna portadora", "El padre solo puede transmitirles su X, que lleva el alelo."),
+            ("Todas daltónicas, ninguna sana", "Al recibir un $X^D$ sano de la madre, el alelo dominante se impone."),
+            ("Ninguna portadora ni daltónica", "El padre solo puede transmitirles su X, que lleva el alelo."),
             ("La mitad portadora y la mitad sana", "El padre tiene un solo X, así que todas reciben el mismo alelo."),
         ],
     ),
@@ -42362,8 +42335,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "facil",
         "¿Qué es una población en ecología?",
-        "El conjunto de individuos de una misma especie que habitan un área "
-        "determinada",
+        "Los individuos de una misma especie en un área",
         "La ecología organiza los niveles de manera jerárquica: individuo, "
         "población, comunidad y ecosistema.\n\n"
         "Una población agrupa individuos de la MISMA especie en un mismo "
@@ -42397,8 +42369,7 @@ QUESTIONS_CIENCIAS = [
         "cie_ecosistemas", "medio",
         "En una relación de parasitismo, ¿qué ocurre con las especies "
         "involucradas?",
-        "Una se beneficia y la otra resulta perjudicada, aunque no siempre "
-        "muere",
+        "Una se beneficia y la otra se perjudica",
         "El parásito obtiene alimento o refugio a costa del hospedero, al que "
         "debilita.\n\n"
         "A diferencia de la depredación, no suele matarlo de inmediato: un "
@@ -42414,8 +42385,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "dificil",
         "¿Qué papel cumplen las bacterias en el ciclo del nitrógeno?",
-        "Transforman el nitrógeno atmosférico en compuestos que las plantas "
-        "pueden absorber",
+        "Transforman el nitrógeno del aire en compuestos asimilables",
         "El nitrógeno constituye cerca del 78% del aire, pero en esa forma "
         "gaseosa las plantas no pueden usarlo.\n\n"
         "Bacterias fijadoras, muchas asociadas a las raíces de las leguminosas, "
@@ -42431,8 +42401,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "medio",
         "¿Qué es la biodiversidad y por qué importa en un ecosistema?",
-        "La variedad de especies y genes; a mayor biodiversidad, mayor "
-        "capacidad de resistir perturbaciones",
+        "La variedad de especies y genes de un ecosistema",
         "La biodiversidad abarca la variedad de especies, la diversidad "
         "genética dentro de cada una y la de ecosistemas.\n\n"
         "Un ecosistema diverso resiste mejor una perturbación: si una especie "
@@ -42484,8 +42453,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "medio",
         "¿Qué diferencia hay entre una especie endémica y una introducida?",
-        "La endémica existe naturalmente solo en ese lugar; la introducida "
-        "llegó desde otro por acción humana",
+        "La endémica existe solo ahí; la introducida llegó de fuera",
         "Una especie endémica tiene una distribución natural restringida a una "
         "zona determinada, y por eso es especialmente vulnerable: si "
         "desaparece ahí, desaparece del mundo.\n\n"
@@ -42519,8 +42487,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_celula", "medio",
         "¿Qué es la difusión facilitada?",
-        "El paso de sustancias a favor del gradiente, con ayuda de proteínas "
-        "de la membrana y sin gasto de ATP",
+        "El paso a favor del gradiente con ayuda de proteínas",
         "Algunas moléculas no atraviesan la bicapa de lípidos por sí solas, "
         "como la glucosa o los iones.\n\n"
         "La difusión facilitada les da paso mediante proteínas "
@@ -42555,8 +42522,7 @@ QUESTIONS_CIENCIAS = [
     _q(
         "cie_ecosistemas", "medio",
         "¿Qué es la sucesión ecológica?",
-        "El reemplazo gradual de unas comunidades por otras en un mismo lugar a "
-        "lo largo del tiempo",
+        "El reemplazo gradual de unas comunidades por otras",
         "Tras una perturbación —un incendio, un derrumbe— el terreno no se "
         "repuebla de golpe con el bosque original.\n\n"
         "Primero llegan especies pioneras, resistentes y de crecimiento "
@@ -43301,8 +43267,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "migracion_tabla", "his_temporal", "medio",
         "¿Qué proceso muestra la tabla entre 1990 y 2020?",
-        "Un aumento de la población total acompañado de una migración del campo "
-        "a la ciudad dentro de la comuna",
+        "Un crecimiento urbano acompañado de despoblamiento rural",
         "Hay que leer dos tendencias a la vez y relacionarlas.\n\n"
         "1) La población total sube de 12.400 a 28.700: la comuna crece.\n"
         "2) La población rural baja de 8.100 a 3.800, mientras la urbana sube "
@@ -43345,8 +43310,7 @@ QUESTIONS_HISTORIA = [
         "fuente_participacion", "civ_democracia", "medio",
         "¿En qué se diferencian las dos fuentes respecto de la participación "
         "electoral?",
-        "La primera valora la convicción de quien vota; la segunda se preocupa "
-        "de quiénes quedan fuera",
+        "La primera valora la convicción; la segunda, la exclusión",
         "Ambas hablan de lo mismo pero miden cosas distintas.\n\n"
         "1) La Fuente 1 pone el foco en la calidad del voto: quien acude lo "
         "hace «por convicción», y una participación menor podría indicar un "
@@ -43364,8 +43328,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "fuente_participacion", "civ_derechos", "dificil",
         "¿Qué supuesto sobre la representación política sostiene la Fuente 2?",
-        "Que una autoridad electa por un padrón sesgado responde a una parte "
-        "del país y no al conjunto",
+        "Que un padrón sesgado da autoridades poco representativas",
         "El supuesto no está dicho como tesis, hay que extraerlo del cierre del "
         "texto.\n\n"
         "1) La fuente sostiene que la abstención «se concentra en los sectores "
@@ -43536,8 +43499,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_indicadores", "medio",
         "¿Qué mide el Producto Interno Bruto (PIB) de un país?",
-        "El valor de todos los bienes y servicios finales producidos dentro del "
-        "país en un período",
+        "El valor de los bienes y servicios finales de un período",
         "El PIB suma el valor de la producción FINAL hecha dentro de las "
         "fronteras del país durante un período, normalmente un año.\n\n"
         "Dice 'finales' para no contar dos veces: si se sumara la harina y "
@@ -43565,16 +43527,16 @@ QUESTIONS_HISTORIA = [
         "gente se cansa de buscar y deja de hacerlo, sale del denominador y el "
         "indicador mejora sin que haya más empleo.",
         [
-            ("Como desocupada", "Para ser desocupado hay que estar buscando trabajo activamente."),
-            ("Como ocupada", "No tiene empleo; estudiar no cuenta como ocupación laboral."),
-            ("Como subempleada", "El subempleo describe a quien trabaja menos horas de las que querría, no a quien no trabaja."),
+            ("Como población desocupada", "Para ser desocupado hay que estar buscando trabajo activamente."),
+            ("Como población ocupada", "No tiene empleo; estudiar no cuenta como ocupación laboral."),
+            ("Como población subempleada", "El subempleo describe a quien trabaja menos horas de las que querría, no a quien no trabaja."),
         ],
     ),
     _q(
         "eco_indicadores", "dificil",
         "El PIB de un país creció 8% en valor, pero la inflación del mismo "
         "período fue 8%. ¿Qué pasó con el PIB REAL?",
-        "No creció: se mantuvo prácticamente igual",
+        "No creció",
         "El PIB nominal se mide a precios corrientes, así que sube tanto si se "
         "produce más como si simplemente todo cuesta más.\n\n"
         "Acá el aumento del 8% se explica íntegramente por el alza de precios: "
@@ -43609,8 +43571,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "facil",
         "¿Por qué el Banco Central suele subir la tasa de interés cuando la "
         "inflación es alta?",
-        "Para encarecer el crédito, moderar el consumo y frenar el alza de "
-        "precios",
+        "Para encarecer el crédito y frenar el alza de precios",
         "La inflación alta suele venir de una demanda que corre más rápido que "
         "la producción disponible.\n\n"
         "Al subir la tasa, pedir prestado sale más caro y ahorrar rinde más: "
@@ -43646,7 +43607,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_mercado", "facil",
         "En un mercado, ¿qué define el punto de equilibrio?",
-        "El precio al que la cantidad ofrecida es igual a la cantidad demandada",
+        "El precio al que la oferta iguala a la demanda",
         "El equilibrio es donde las curvas de oferta y demanda se cruzan: a ese "
         "precio, todo lo que los vendedores quieren vender coincide con lo que "
         "los compradores quieren comprar.\n\n"
@@ -43675,8 +43636,8 @@ QUESTIONS_HISTORIA = [
         "equilibrio, no por debajo.",
         [
             ("Un exceso de demanda de 300 unidades, que presiona el precio al alza", "Invirtió la situación: acá se ofrece más de lo que se demanda."),
-            ("El mercado está en equilibrio", "En equilibrio ambas cantidades coinciden, y acá difieren en 300 unidades."),
-            ("Un exceso de oferta de 1.300 unidades", "Sumó ambas cantidades en vez de restarlas."),
+            ("El mercado está en equilibrio a ese precio", "En equilibrio ambas cantidades coinciden, y acá difieren en 300 unidades."),
+            ("Un exceso de oferta de 1.300 unidades, que hunde el precio", "Sumó ambas cantidades en vez de restarlas."),
         ],
     ),
     _q(
@@ -43702,8 +43663,7 @@ QUESTIONS_HISTORIA = [
         "El Estado fija un precio máximo por debajo del precio de equilibrio "
         "para un producto de primera necesidad. ¿Cuál es el efecto más probable "
         "en ese mercado?",
-        "Escasez del producto, porque se demanda más de lo que se ofrece a ese "
-        "precio",
+        "Escasez, porque se demanda más de lo que se ofrece",
         "Un precio máximo por debajo del equilibrio cambia los incentivos de "
         "los dos lados a la vez.\n\n"
         "A ese precio más bajo los consumidores quieren comprar más, pero a los "
@@ -43739,7 +43699,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "medio",
         "Aumenta el ingreso promedio de las familias de una ciudad. ¿Qué ocurre "
         "con la curva de demanda de un bien normal?",
-        "Se desplaza hacia la derecha: se demanda más a cada precio",
+        "Se desplaza hacia la derecha",
         "Hay que distinguir dos cosas que se confunden siempre. Un cambio de "
         "PRECIO mueve el punto A LO LARGO de la curva; un cambio en otro "
         "factor mueve la curva completa.\n\n"
@@ -43757,8 +43717,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_mercado", "facil",
         "¿Qué caracteriza a un mercado de competencia perfecta?",
-        "Muchos compradores y vendedores, producto homogéneo y ninguno puede "
-        "fijar el precio por sí solo",
+        "Muchos vendedores, producto homogéneo y nadie fija el precio",
         "En competencia perfecta ningún participante es lo bastante grande como "
         "para mover el precio: todos lo toman como un dato del mercado.\n\n"
         "Eso exige varias condiciones a la vez: muchos oferentes y demandantes, "
@@ -43795,10 +43754,8 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_poderes",
         "civ_democracia", "facil",
-        "¿Cuáles son los tres poderes del Estado en Chile y qué función "
-        "principal cumple cada uno?",
-        "Ejecutivo (gobierna y administra), Legislativo (elabora las leyes) y "
-        "Judicial (resuelve los conflictos aplicando la ley)",
+        "¿Cuáles son los tres poderes del Estado en Chile?",
+        "Ejecutivo, Legislativo y Judicial",
         "La separación de poderes reparte el poder del Estado en tres órganos "
         "distintos para que ninguno lo concentre todo.\n\n"
         "El Ejecutivo, encabezado por el Presidente de la República, gobierna y "
@@ -43819,7 +43776,7 @@ QUESTIONS_HISTORIA = [
         "civ_democracia", "facil",
         "¿Qué órgano del Estado chileno tiene la función de elaborar y aprobar "
         "las leyes?",
-        "El Congreso Nacional, compuesto por la Cámara de Diputados y el Senado",
+        "El Congreso Nacional",
         "La función legislativa recae en el Congreso Nacional, que en Chile es "
         "bicameral: Cámara de Diputados y Senado.\n\n"
         "Un proyecto debe ser aprobado por ambas cámaras antes de llegar al "
@@ -43838,8 +43795,7 @@ QUESTIONS_HISTORIA = [
         "civ_democracia", "medio",
         "En Chile, el sufragio es universal, personal, igualitario y secreto. "
         "¿Qué significa que sea IGUALITARIO?",
-        "Que el voto de cada persona tiene exactamente el mismo valor que el de "
-        "cualquier otra",
+        "Que el voto de cada persona vale lo mismo",
         "Cada uno de esos cuatro adjetivos resuelve un abuso histórico "
         "distinto.\n\n"
         "Igualitario significa 'una persona, un voto': ningún voto pesa más por "
@@ -43859,8 +43815,7 @@ QUESTIONS_HISTORIA = [
         "civ_democracia", "medio",
         "¿Qué diferencia hay entre una democracia representativa y una "
         "democracia directa?",
-        "En la representativa la ciudadanía elige autoridades que deciden en su "
-        "nombre; en la directa decide ella misma sobre los asuntos",
+        "En la directa la ciudadanía decide sin intermediarios",
         "En la democracia directa el pueblo vota las decisiones mismas, como en "
         "la asamblea ateniense o en un plebiscito.\n\n"
         "En la representativa elige a quienes tomarán esas decisiones durante "
@@ -43880,8 +43835,7 @@ QUESTIONS_HISTORIA = [
         "civ_democracia", "medio",
         "¿Cuál es la función principal de los partidos políticos en una "
         "democracia?",
-        "Organizar y representar corrientes de opinión, y presentar candidatos "
-        "a los cargos de elección popular",
+        "Organizar corrientes de opinión y presentar candidatos",
         "Los partidos agrupan a personas que comparten una visión de sociedad y "
         "la convierten en programas concretos.\n\n"
         "Cumplen dos tareas que ninguna otra organización cubre: canalizan "
@@ -43900,8 +43854,7 @@ QUESTIONS_HISTORIA = [
         "civ_poderes",
         "civ_democracia", "medio",
         "¿Qué caracteriza a un Estado de derecho?",
-        "Que todas las personas e instituciones, incluido el gobierno, están "
-        "sometidas a la ley",
+        "Que todos, incluido el gobierno, están sometidos a la ley",
         "La clave está en el 'incluido el gobierno'. En un Estado de derecho "
         "nadie está por encima de la ley: ni el Presidente, ni un ministro, ni "
         "una mayoría parlamentaria.\n\n"
@@ -43920,7 +43873,7 @@ QUESTIONS_HISTORIA = [
         "civ_poderes",
         "civ_democracia", "facil",
         "¿Qué autoridades encabezan el gobierno de una comuna en Chile?",
-        "El alcalde y el concejo municipal, ambos elegidos por votación popular",
+        "El alcalde y el concejo municipal",
         "La administración de cada comuna corresponde a la municipalidad, "
         "encabezada por el alcalde.\n\n"
         "Junto a él, un concejo municipal elegido por los vecinos cumple "
@@ -43940,8 +43893,7 @@ QUESTIONS_HISTORIA = [
         "civ_democracia", "dificil",
         "¿Por qué se considera que la alternancia en el poder es un indicador "
         "de salud democrática?",
-        "Porque muestra que las reglas permiten que la oposición gane y que el "
-        "poder se entregue pacíficamente",
+        "Porque muestra que la oposición puede ganar y asumir",
         "Lo relevante no es que cambie el gobierno por sí mismo, sino lo que "
         "ese cambio demuestra.\n\n"
         "La alternancia prueba que las elecciones son competitivas de verdad, "
@@ -43961,7 +43913,7 @@ QUESTIONS_HISTORIA = [
         "civ_democracia", "medio",
         "Un grupo de vecinos se organiza en una junta de vecinos para gestionar "
         "mejoras en su barrio. ¿Qué tipo de participación es?",
-        "Participación ciudadana en la sociedad civil organizada",
+        "Participación en la sociedad civil organizada",
         "No toda participación ocurre votando. La sociedad civil organizada "
         "—juntas de vecinos, sindicatos, centros de alumnos, fundaciones— "
         "canaliza demandas y ejerce control social de forma permanente, no solo "
@@ -43981,8 +43933,7 @@ QUESTIONS_HISTORIA = [
         "civ_sufragio",
         "civ_democracia", "medio",
         "¿Qué es un plebiscito?",
-        "Una consulta directa a la ciudadanía para que se pronuncie sobre un "
-        "asunto determinado",
+        "Una consulta directa a la ciudadanía sobre un asunto",
         "El plebiscito interrumpe la lógica representativa: en vez de que la "
         "autoridad electa decida, se le pregunta directamente a la "
         "ciudadanía.\n\n"
@@ -44003,8 +43954,7 @@ QUESTIONS_HISTORIA = [
         "civ_derechos", "facil",
         "Los derechos humanos son universales. ¿Qué significa exactamente esa "
         "característica?",
-        "Que corresponden a todas las personas por el solo hecho de serlo, sin "
-        "distinción alguna",
+        "Que corresponden a todas las personas, sin distinción",
         "Universales quiere decir que no dependen de ninguna condición: ni de "
         "la nacionalidad, ni del sexo, ni de la religión, ni de la situación "
         "migratoria, ni de haber cometido un delito.\n\n"
@@ -44024,7 +43974,7 @@ QUESTIONS_HISTORIA = [
         "civ_derechos", "facil",
         "¿En qué año y en qué organismo se aprobó la Declaración Universal de "
         "los Derechos Humanos?",
-        "En 1948, en la Asamblea General de las Naciones Unidas",
+        "En 1948, en las Naciones Unidas",
         "La Declaración Universal fue aprobada por la Asamblea General de la "
         "ONU en 1948, tres años después del fin de la Segunda Guerra "
         "Mundial.\n\n"
@@ -44044,8 +43994,7 @@ QUESTIONS_HISTORIA = [
         "civ_derechos", "medio",
         "El derecho a la educación y el derecho a la salud pertenecen a los "
         "llamados derechos de segunda generación. ¿Qué los caracteriza?",
-        "Son derechos económicos, sociales y culturales, y exigen del Estado "
-        "prestaciones activas",
+        "Son económicos, sociales y culturales, y exigen prestaciones",
         "Los de primera generación —vida, libertad de expresión, debido "
         "proceso— exigen sobre todo que el Estado NO haga: que no censure, que "
         "no detenga arbitrariamente.\n\n"
@@ -44065,8 +44014,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion",
         "civ_derechos", "medio",
         "¿Qué es el recurso de protección en el ordenamiento jurídico chileno?",
-        "Una acción judicial para pedir amparo cuando un acto arbitrario o "
-        "ilegal amenaza o vulnera ciertos derechos constitucionales",
+        "Una acción judicial para amparar derechos constitucionales",
         "El recurso de protección permite que cualquier persona acuda "
         "directamente a la Corte de Apelaciones cuando un acto u omisión "
         "arbitrario o ilegal la priva, perturba o amenaza en el ejercicio de "
@@ -44106,8 +44054,7 @@ QUESTIONS_HISTORIA = [
         "civ_derechos", "facil",
         "Además de derechos, la ciudadanía implica deberes. ¿Cuál de los "
         "siguientes es un deber ciudadano en Chile?",
-        "Respetar la Constitución y las leyes, y contribuir mediante el pago de "
-        "impuestos",
+        "Respetar la Constitución y pagar los impuestos",
         "Los deberes ciudadanos son la contracara de los derechos: para que el "
         "Estado garantice educación, salud o seguridad necesita recursos y un "
         "marco de convivencia respetado por todos.\n\n"
@@ -44127,7 +44074,7 @@ QUESTIONS_HISTORIA = [
         "civ_derechos", "medio",
         "Un consumidor compra un producto con fallas y el local se niega a "
         "responder. ¿Qué normativa lo ampara en Chile?",
-        "La Ley 19.496 sobre protección de los derechos de los consumidores",
+        "La Ley del Consumidor (19.496)",
         "La Ley 19.496 establece los derechos básicos del consumidor, entre "
         "ellos la garantía legal frente a productos defectuosos: reparación, "
         "cambio o devolución del dinero.\n\n"
@@ -44169,8 +44116,7 @@ QUESTIONS_HISTORIA = [
         "civ_derechos", "medio",
         "¿Cuál es la función del Instituto Nacional de Derechos Humanos (INDH) "
         "en Chile?",
-        "Promover y proteger los derechos humanos de quienes habitan el país, "
-        "de forma autónoma del gobierno",
+        "Promover y proteger los derechos humanos, de forma autónoma",
         "El INDH es una corporación autónoma de derecho público creada para "
         "promover y proteger los derechos humanos de las personas que habitan "
         "en Chile.\n\n"
@@ -44232,8 +44178,7 @@ QUESTIONS_HISTORIA = [
         "fuente_conquista", "his_fuentes", "medio",
         "La Fuente 1 afirma que el capitán actuó «movido por el servicio de "
         "Dios y de Su Majestad». ¿Qué revela esa expresión sobre el autor?",
-        "Que escribe desde la visión del mundo de los conquistadores, para "
-        "quienes la empresa tenía una justificación religiosa y política",
+        "Que comparte la visión de mundo de los conquistadores",
         "Una fuente no solo informa sobre los hechos: informa sobre quien la "
         "escribió.\n\n"
         "Invocar a Dios y al rey como motivos no es un adorno retórico: es el "
@@ -44252,8 +44197,7 @@ QUESTIONS_HISTORIA = [
         "fuente_conquista", "his_fuentes", "dificil",
         "La Fuente 2 fue transmitida oralmente y escrita generaciones después. "
         "¿Cómo debe considerar el historiador esa característica?",
-        "Como un factor que exige cautela sobre los detalles, sin invalidar el "
-        "testimonio",
+        "Como un factor que exige cautela sobre los detalles",
         "La transmisión oral introduce un problema real: los detalles pueden "
         "modificarse con el paso de las generaciones.\n\n"
         "Pero descartar la fuente por eso dejaría la historia escrita "
@@ -44290,8 +44234,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "empleo_sectores", "his_fuentes", "medio",
         "¿Qué proceso muestra la tabla en el conjunto del período 1960-2020?",
-        "Una terciarización de la economía: el empleo se desplaza hacia el "
-        "comercio y los servicios",
+        "Una terciarización: el empleo se desplaza a los servicios",
         "Hay que leer las tres columnas a la vez.\n\n"
         "1) El primario cae sostenidamente: de 55% a 11%.\n"
         "2) El secundario sube hasta 1980 y después retrocede: 20, 28, 26, 19.\n"
@@ -44327,8 +44270,7 @@ QUESTIONS_HISTORIA = [
         "empleo_sectores", "his_fuentes", "dificil",
         "Un estudiante concluye a partir de la tabla que «en 2020 el país "
         "producía menos alimentos que en 1960». ¿Es válida esa conclusión?",
-        "No, porque la tabla informa sobre empleo y no sobre volumen de "
-        "producción",
+        "No, porque la tabla informa sobre empleo, no producción",
         "Es un error de lectura muy frecuente: extraer de una fuente una "
         "conclusión sobre algo que la fuente no mide.\n\n"
         "La tabla muestra en qué sector trabaja la gente, no cuánto se produce. "
@@ -44345,8 +44287,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "fuente_memoria", "his_fuentes", "medio",
         "¿Qué postura sobre el pasado sostiene la Fuente 1?",
-        "Que revisar lo ocurrido reabre conflictos y que conviene dejar que el "
-        "tiempo los cierre",
+        "Que revisar el pasado reabre conflictos ya cerrados",
         "La Fuente 1 reconoce los hechos como «lamentables», pero los presenta "
         "como inevitables dada la crisis.\n\n"
         "Su conclusión es explícita: insistir en revisarlos «solo reabre "
@@ -44364,8 +44305,7 @@ QUESTIONS_HISTORIA = [
         "fuente_memoria", "his_fuentes", "dificil",
         "La Fuente 2 responde: «El tiempo no cierra nada por sí solo: lo que "
         "cierra es la verdad». ¿Qué está discutiendo con la Fuente 1?",
-        "La idea de que el paso del tiempo baste para resolver un conflicto sin "
-        "esclarecer lo ocurrido",
+        "La idea de que el tiempo baste sin esclarecer lo ocurrido",
         "La Fuente 2 toma la metáfora de la Fuente 1 —las heridas que el tiempo "
         "cierra— y la desarma usando sus mismos términos.\n\n"
         "Su tesis es que lo que permite cerrar no es el transcurso del tiempo "
@@ -44383,8 +44323,7 @@ QUESTIONS_HISTORIA = [
         "fuente_memoria", "his_fuentes", "medio",
         "Ambas fuentes fueron escritas con cuarenta años de distancia. ¿Por qué "
         "es relevante ese dato para analizarlas?",
-        "Porque el momento en que se escribe una fuente condiciona lo que se "
-        "puede decir y lo que se busca al decirlo",
+        "Porque el momento en que se escribe condiciona lo que se dice",
         "Una fuente siempre se produce en un contexto, y ese contexto forma "
         "parte de su significado.\n\n"
         "La Fuente 1 se publica al año siguiente, cuando el conflicto está "
@@ -44425,8 +44364,7 @@ QUESTIONS_HISTORIA = [
         "his_temporal", "medio",
         "En el análisis histórico, ¿qué se entiende por procesos de larga "
         "duración?",
-        "Transformaciones lentas que se extienden por siglos, como los cambios "
-        "en las mentalidades o en las estructuras económicas",
+        "Transformaciones lentas que se extienden por siglos",
         "No todos los cambios ocurren a la misma velocidad, y esa es la idea "
         "central de las duraciones históricas.\n\n"
         "El acontecimiento dura días o meses: una batalla, una elección. La "
@@ -44447,8 +44385,7 @@ QUESTIONS_HISTORIA = [
         "his_temporal", "medio",
         "Al estudiar un proceso histórico, ¿qué significa analizar continuidades "
         "y cambios?",
-        "Identificar qué elementos se transformaron y cuáles permanecieron a "
-        "pesar de la transformación",
+        "Identificar qué se transformó y qué permaneció igual",
         "Ningún proceso cambia todo ni deja todo igual: siempre hay una mezcla, "
         "y describirla es el trabajo del análisis histórico.\n\n"
         "Una revolución puede cambiar el régimen político y mantener intacta la "
@@ -44469,8 +44406,7 @@ QUESTIONS_HISTORIA = [
         "Un estudiante afirma que «los campesinos medievales eran ignorantes "
         "porque no sabían que la Tierra giraba alrededor del Sol». ¿Qué error "
         "de razonamiento histórico comete?",
-        "Anacronismo: juzga el pasado con conocimientos y criterios que no "
-        "estaban disponibles entonces",
+        "Anacronismo: juzga el pasado con conocimientos de hoy",
         "El anacronismo consiste en aplicar al pasado categorías, valores o "
         "conocimientos de otra época.\n\n"
         "El modelo heliocéntrico se difundió muy posteriormente: reprochar a "
@@ -44510,8 +44446,7 @@ QUESTIONS_HISTORIA = [
         "his_temporal", "medio",
         "¿Por qué los historiadores sostienen que un mismo proceso puede tener "
         "múltiples causas?",
-        "Porque los fenómenos sociales resultan de la combinación de factores "
-        "políticos, económicos, sociales y culturales",
+        "Porque combinan factores políticos, económicos y culturales",
         "Reducir un proceso histórico a una sola causa casi siempre deja fuera "
         "algo esencial.\n\n"
         "Una revolución no se explica solo por el hambre, ni solo por las "
@@ -44548,8 +44483,7 @@ QUESTIONS_HISTORIA = [
         "his_oficio",
         "his_temporal", "medio",
         "¿Qué se entiende por contexto histórico de un hecho?",
-        "El conjunto de condiciones de la época que permiten comprender por qué "
-        "ese hecho ocurrió y qué significó",
+        "Las condiciones de la época que explican por qué ocurrió",
         "Un hecho aislado dice poco. El contexto es el entramado de "
         "circunstancias políticas, económicas, sociales y culturales en el que "
         "ese hecho se vuelve inteligible.\n\n"
@@ -44568,8 +44502,7 @@ QUESTIONS_HISTORIA = [
         "his_oficio",
         "his_temporal", "dificil",
         "¿Por qué se afirma que la historia se reescribe con cada generación?",
-        "Porque cada época formula preguntas nuevas al pasado y accede a "
-        "fuentes que antes no estaban disponibles",
+        "Porque cada época le hace preguntas nuevas al pasado",
         "El pasado no cambia, pero las preguntas que se le hacen sí.\n\n"
         "Cuando la historiografía empezó a preguntarse por la vida cotidiana, "
         "por el trabajo de las mujeres o por los pueblos sin escritura, "
@@ -44620,8 +44553,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_indicadores", "medio",
         "¿Qué mide la línea de la pobreza?",
-        "El ingreso mínimo necesario para cubrir un conjunto básico de "
-        "necesidades",
+        "El ingreso mínimo para cubrir las necesidades básicas",
         "La línea de la pobreza fija un umbral de ingreso: quien queda por "
         "debajo no alcanza a cubrir una canasta básica de bienes y "
         "servicios.\n\n"
@@ -44723,8 +44655,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_indicadores", "dificil",
         "¿Qué es el presupuesto fiscal y qué ocurre cuando hay déficit?",
-        "Es el plan de ingresos y gastos del Estado; hay déficit cuando gasta "
-        "más de lo que recauda",
+        "El plan de ingresos y gastos; hay déficit si gasta de más",
         "El presupuesto proyecta cuánto recaudará el Estado y en qué lo "
         "gastará durante un período.\n\n"
         "Si el gasto supera a los ingresos hay déficit, y debe financiarse con "
@@ -44742,8 +44673,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_indicadores", "medio",
         "¿Qué diferencia hay entre crecimiento económico y desarrollo?",
-        "El crecimiento mide el aumento de la producción; el desarrollo "
-        "incorpora calidad de vida y distribución",
+        "El crecimiento mide producción; el desarrollo, calidad de vida",
         "El crecimiento se mide con la variación del PIB: es cuantitativo y "
         "responde cuánto más se produjo.\n\n"
         "El desarrollo es más amplio: incluye salud, educación, esperanza de "
@@ -44778,8 +44708,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "dificil",
         "¿Por qué el IPC puede no reflejar el alza de precios que percibe una "
         "familia concreta?",
-        "Porque mide una canasta promedio, y cada hogar consume una "
-        "combinación distinta de bienes",
+        "Porque mide una canasta promedio y cada hogar consume otra",
         "El IPC pondera los productos según el consumo de un hogar "
         "representativo.\n\n"
         "Una familia que gasta buena parte de su ingreso en transporte y "
@@ -44823,8 +44752,8 @@ QUESTIONS_HISTORIA = [
         "equilibrio.",
         [
             ("Hay exceso de oferta de 500 unidades y el precio baja", "Invirtió la situación: se demanda más de lo que se ofrece."),
-            ("El mercado está en equilibrio", "En equilibrio ambas cantidades coinciden."),
-            ("Hay escasez de 1.300 unidades", "Sumó ambas cantidades en vez de restarlas."),
+            ("El mercado está en equilibrio a ese precio", "En equilibrio ambas cantidades coinciden."),
+            ("Hay escasez de 1.300 unidades y el precio sube", "Sumó ambas cantidades en vez de restarlas."),
         ],
     ),
     _q(
@@ -44916,8 +44845,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_mercado", "medio",
         "¿Qué es la colusión y por qué está sancionada?",
-        "Un acuerdo entre competidores para fijar precios, que perjudica a los "
-        "consumidores",
+        "Un acuerdo entre competidores para fijar precios",
         "La colusión ocurre cuando empresas que deberían competir se ponen de "
         "acuerdo en precios, cuotas o zonas de venta.\n\n"
         "El efecto es que los consumidores pagan más de lo que pagarían con "
@@ -44933,7 +44861,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_mercado", "facil",
         "¿Qué rol cumple el dinero en una economía?",
-        "Sirve como medio de intercambio, unidad de cuenta y depósito de valor",
+        "Medio de intercambio, unidad de cuenta y reserva de valor",
         "El dinero cumple tres funciones a la vez.\n\n"
         "Como medio de intercambio evita el trueque, donde cada parte debía "
         "querer justo lo que la otra ofrecía. Como unidad de cuenta permite "
@@ -44968,8 +44896,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "dificil",
         "¿Qué es una externalidad negativa y por qué justifica la intervención "
         "del Estado?",
-        "Un costo que la actividad impone a terceros y que no está incluido en "
-        "el precio",
+        "Un costo que la actividad impone a terceros",
         "Una fábrica que contamina un río traslada un costo a quienes viven "
         "aguas abajo, sin que ese costo aparezca en el precio de su producto."
         "\n\n"
@@ -45005,8 +44932,7 @@ QUESTIONS_HISTORIA = [
         "migracion_tabla", "his_temporal", "medio",
         "¿Qué relación puede establecerse entre las obras mencionadas y los "
         "datos de la tabla?",
-        "El agua potable urbana y el camino pavimentado coinciden con la "
-        "aceleración del crecimiento urbano",
+        "El agua potable y el camino coinciden con el alza urbana",
         "La tabla informa dos obras: agua potable urbana en 1998 y camino "
         "pavimentado en 2005.\n\n"
         "El crecimiento urbano se acelera justamente después: de 4.300 a 8.900 "
@@ -45022,8 +44948,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "migracion_tabla", "his_fuentes", "dificil",
         "¿Qué NO permite concluir esta tabla?",
-        "Si las personas que dejaron el sector rural se quedaron en la comuna o "
-        "emigraron a otra",
+        "Si quienes dejaron el campo se quedaron en la comuna",
         "La tabla entrega totales por sector dentro de la comuna, no "
         "trayectorias individuales.\n\n"
         "Que lo rural caiga y lo urbano suba es compatible con dos historias "
@@ -45041,8 +44966,7 @@ QUESTIONS_HISTORIA = [
         "fuente_participacion", "civ_democracia", "medio",
         "¿Qué supone la primera fuente sobre quienes votan cuando el sufragio "
         "es voluntario?",
-        "Que acuden por convicción, y que por eso el resultado refleja mejor la "
-        "voluntad de quienes quieren decidir",
+        "Que acuden por convicción y no por obligación",
         "La primera fuente sostiene que «quien acude a las urnas lo hace por "
         "convicción».\n\n"
         "De ahí deriva su conclusión: el resultado reflejaría la voluntad de "
@@ -45094,8 +45018,7 @@ QUESTIONS_HISTORIA = [
         "fuente_conquista", "his_fuentes", "medio",
         "¿Qué elemento de la Fuente 2 permite reconstruir la secuencia de los "
         "hechos?",
-        "La sucesión de exigencias: primero alimento, después oro y finalmente "
-        "tierras y trabajo",
+        "El orden de las exigencias: alimento, oro y tierras",
         "El testimonio ordena los hechos de forma acumulativa: «pidieron "
         "alimento, y se lo dimos. Después pidieron el oro, y luego pidieron las "
         "tierras y a nuestra gente para trabajarlas».\n\n"
@@ -45113,8 +45036,7 @@ QUESTIONS_HISTORIA = [
         "fuente_conquista", "his_temporal", "dificil",
         "¿Qué error se cometería al juzgar la Fuente 1 con criterios morales "
         "actuales sin más análisis?",
-        "Un anacronismo: aplicar categorías de hoy a una mentalidad de otra "
-        "época sin intentar comprenderla",
+        "Un anacronismo: juzgar otra época con categorías de hoy",
         "El cronista escribe desde un marco que consideraba legítima la "
         "empresa de conquista y que era compartido en su tiempo.\n\n"
         "Juzgarlo solo con criterios actuales impide entender cómo pensaba, que "
@@ -45131,8 +45053,7 @@ QUESTIONS_HISTORIA = [
         "fuente_conquista", "his_fuentes", "medio",
         "La Fuente 1 menciona que algunos naturales recibieron la paz «de buen "
         "grado». ¿Qué precaución exige esa afirmación?",
-        "Considerar que proviene de una de las partes del conflicto, que tiene "
-        "interés en presentarlo así",
+        "Considerar que proviene de una de las partes del conflicto",
         "El cronista acompañaba la expedición y escribía para autoridades que "
         "evaluarían esa empresa.\n\n"
         "Afirmar que hubo aceptación voluntaria favorece esa versión, y por eso "
@@ -45166,8 +45087,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "empleo_sectores", "his_temporal", "dificil",
         "¿Qué proceso de larga duración refleja la tabla?",
-        "La transformación de la estructura productiva, que se despliega a lo "
-        "largo de sesenta años",
+        "El cambio de la estructura productiva en sesenta años",
         "La tabla cubre seis décadas y muestra un cambio sostenido, sin "
         "retrocesos, en la distribución del empleo.\n\n"
         "Ese tipo de transformación no ocurre por un acontecimiento puntual: "
@@ -45201,8 +45121,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "fuente_memoria", "his_fuentes", "medio",
         "¿Qué argumento usa la Fuente 1 para justificar lo ocurrido?",
-        "Que el país atravesaba una crisis y las autoridades actuaron con los "
-        "medios disponibles",
+        "Que el país vivía una crisis y se actuó con lo disponible",
         "La Fuente 1 califica los hechos como «lamentable pero inevitable»."
         "\n\n"
         "Su justificación es contextual: «El país atravesaba una crisis y las "
@@ -45219,8 +45138,7 @@ QUESTIONS_HISTORIA = [
         "fuente_memoria", "his_temporal", "dificil",
         "¿Qué muestra este par de fuentes sobre la relación entre memoria y "
         "tiempo histórico?",
-        "Que el paso del tiempo no cierra un proceso por sí solo: la "
-        "interpretación de los hechos sigue en disputa",
+        "Que el tiempo no cierra un proceso: la disputa sigue",
         "Cuarenta años separan ambos textos y el desacuerdo persiste intacto."
         "\n\n"
         "La Fuente 1 confiaba en que el tiempo cerraría las heridas; la Fuente "
@@ -45269,8 +45187,7 @@ QUESTIONS_HISTORIA = [
         "civ_poderes", "civ_democracia", "medio",
         "Según el texto, ¿cuál es el papel del Presidente en el proceso de "
         "formación de una ley?",
-        "Puede presentar proyectos, vetarlos y promulgarlos, pero no legisla "
-        "por sí solo",
+        "Puede presentar, vetar y promulgar, pero no legisla",
         "El texto describe una participación acotada: el Presidente interviene "
         "en varias etapas, sin reemplazar al Congreso.\n\n"
         "Un proyecto debe ser aprobado por ambas cámaras antes de llegar a él "
@@ -45287,8 +45204,7 @@ QUESTIONS_HISTORIA = [
         "civ_poderes", "civ_democracia", "dificil",
         "Según el texto, ¿qué implica que el Estado de derecho alcance también "
         "al gobierno?",
-        "Que ni el Presidente, ni un ministro, ni una mayoría parlamentaria "
-        "están por encima de la ley",
+        "Que ni el Presidente está por encima de la ley",
         "El texto lo enuncia con esos tres ejemplos, y no son casuales: cubren "
         "el Ejecutivo y el Legislativo, es decir a quienes tienen el poder."
         "\n\n"
@@ -45305,8 +45221,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_poderes", "civ_democracia", "medio",
         "Según el texto, ¿qué funciones cumple el concejo municipal?",
-        "Normativas, resolutivas y de fiscalización, incluida la aprobación del "
-        "presupuesto comunal",
+        "Normativas, resolutivas y de fiscalización",
         "El texto enumera las tres funciones y agrega dos tareas concretas: "
         "aprueba el presupuesto comunal y controla la gestión del alcalde."
         "\n\n"
@@ -45324,7 +45239,7 @@ QUESTIONS_HISTORIA = [
         "civ_sufragio", "civ_democracia", "medio",
         "Según el texto, ¿qué significa que el sufragio sea secreto y para qué "
         "sirve?",
-        "Que nadie puede saber qué votó una persona y, por lo tanto, presionarla",
+        "Que nadie puede saber qué votó y por lo tanto presionar",
         "El texto liga la característica a su propósito: el secreto existe para "
         "impedir la presión.\n\n"
         "Si el voto fuera conocido, un empleador, un dirigente o un familiar "
@@ -45342,8 +45257,7 @@ QUESTIONS_HISTORIA = [
         "civ_sufragio", "civ_democracia", "dificil",
         "Según el texto, ¿por qué la sociedad civil organizada es un "
         "complemento y no un sustituto de la representación electoral?",
-        "Porque actúa de forma permanente en el territorio, donde el voto no "
-        "llega",
+        "Porque actúa de forma permanente en el territorio",
         "El texto distingue dos temporalidades. El voto se ejerce cada cierto "
         "número de años; la sociedad civil organizada canaliza demandas «de "
         "forma permanente».\n\n"
@@ -45360,8 +45274,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_sufragio", "civ_democracia", "medio",
         "Según el texto, ¿qué demuestra la alternancia en el poder?",
-        "Que las elecciones son competitivas, que quien pierde acepta el "
-        "resultado y que el poder se entrega pacíficamente",
+        "Que quien pierde acepta el resultado y entrega el poder",
         "El texto enumera las tres cosas que la alternancia prueba, y las tres "
         "importan por separado.\n\n"
         "Que las elecciones sean competitivas descarta que estén amarradas; "
@@ -45396,8 +45309,7 @@ QUESTIONS_HISTORIA = [
         "civ_ddhh", "civ_derechos", "dificil",
         "Según el texto, ¿por qué la realización de los derechos de segunda "
         "generación es progresiva?",
-        "Porque exigen prestaciones activas del Estado y dependen de los "
-        "recursos disponibles",
+        "Porque exigen prestaciones y dependen de los recursos",
         "El texto contrasta ambos tipos. Los de primera generación exigen que "
         "el Estado se abstenga: no censurar, no detener arbitrariamente, y eso "
         "puede cumplirse de inmediato.\n\n"
@@ -45415,8 +45327,7 @@ QUESTIONS_HISTORIA = [
         "civ_ddhh", "civ_derechos", "medio",
         "Según el texto, ¿por qué se dice que el Estado no concede los derechos "
         "humanos sino que los reconoce?",
-        "Porque corresponden a las personas por el solo hecho de serlo, antes "
-        "de cualquier decisión estatal",
+        "Porque corresponden a las personas por el hecho de serlo",
         "Si el Estado los concediera, podría también quitarlos: quedarían "
         "sujetos a su voluntad.\n\n"
         "El texto sostiene que existen con anterioridad a esa decisión, y que "
@@ -45434,8 +45345,7 @@ QUESTIONS_HISTORIA = [
         "civ_ddhh", "civ_derechos", "medio",
         "Según el texto, ¿qué relación hay entre los derechos y los deberes "
         "ciudadanos?",
-        "Los deberes son la contracara: sin ellos el Estado no podría "
-        "garantizar los derechos",
+        "Son la contracara: sin ellos no habría cómo garantizarlos",
         "El texto los presenta como dos caras de lo mismo: «Para que el Estado "
         "garantice educación, salud o seguridad necesita recursos y un marco de "
         "convivencia respetado por todos».\n\n"
@@ -45453,8 +45363,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion", "civ_derechos", "medio",
         "Según el texto, ¿qué distingue al recurso de protección de un juicio "
         "ordinario?",
-        "Su rapidez: busca restablecer el imperio del derecho sin esperar un "
-        "juicio completo",
+        "Su rapidez: no espera a que termine un juicio completo",
         "El texto lo señala como su característica definitoria.\n\n"
         "Un juicio ordinario puede tomar años, y hay vulneraciones que no "
         "admiten esa espera: una amenaza a la vida o a la salud requiere "
@@ -45471,8 +45380,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion", "civ_derechos", "dificil",
         "Según el texto, ¿por qué la palabra «arbitraria» es decisiva en la "
         "definición de discriminación?",
-        "Porque no toda distinción es ilegal: lo prohibido es la que carece de "
-        "justificación razonable",
+        "Porque lo prohibido es la distinción sin justificación",
         "El texto entrega dos ejemplos que se contrastan.\n\n"
         "Exigir un título profesional para ejercer medicina es una distinción "
         "razonable: hay una razón directa entre el requisito y la función. "
@@ -45489,8 +45397,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion", "civ_derechos", "medio",
         "Según el texto, ¿por qué existe una ley especial que protege al "
         "consumidor?",
-        "Porque entre un comercio y un consumidor hay un desequilibrio que el "
-        "acuerdo privado no corrige",
+        "Porque hay un desequilibrio que el acuerdo privado no corrige",
         "El texto lo dice de forma directa al cerrar ese párrafo.\n\n"
         "Un comercio conoce el producto, redacta el contrato y tiene asesoría "
         "legal; el consumidor rara vez cuenta con eso.\n\n"
@@ -45507,8 +45414,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion", "civ_derechos", "dificil",
         "Según el texto, ¿por qué exigir al acusado que demuestre su inocencia "
         "sería un problema práctico además de jurídico?",
-        "Porque lo obligaría a probar un hecho negativo, algo por lo general "
-        "imposible",
+        "Porque lo obligaría a probar un hecho negativo",
         "El texto agrega esa razón práctica a la garantía jurídica.\n\n"
         "Probar que algo ocurrió requiere presentar evidencia de ello. Probar "
         "que NO ocurrió exige, en rigor, descartar todas las posibilidades, y "
@@ -45525,8 +45431,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion", "civ_derechos", "medio",
         "Según el texto, ¿por qué la autonomía del INDH es esencial para su "
         "función?",
-        "Porque debe fiscalizar al Estado, que es el principal obligado en "
-        "materia de derechos humanos",
+        "Porque debe fiscalizar al Estado, el principal obligado",
         "El texto lo explica sin rodeos: si dependiera del gobierno de turno, "
         "no podría fiscalizar al Estado.\n\n"
         "El razonamiento es simple y contundente: nadie puede controlar "
@@ -45543,8 +45448,7 @@ QUESTIONS_HISTORIA = [
         "his_duraciones", "his_temporal", "medio",
         "Según el texto, ¿por qué la periodización es una construcción y no un "
         "hecho?",
-        "Porque el historiador la traza según un criterio, y criterios distintos "
-        "producen periodizaciones distintas",
+        "Porque criterios distintos producen periodizaciones distintas",
         "El texto insiste en que el tiempo histórico es continuo: «no viene "
         "cortado en pedazos».\n\n"
         "Los cortes los pone el historiador según lo que quiera analizar: un "
@@ -45579,8 +45483,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_oficio", "his_temporal", "medio",
         "Según el texto, ¿qué distingue una causa estructural de una inmediata?",
-        "La estructural prepara el terreno durante años; la inmediata actúa "
-        "como detonante",
+        "La estructural prepara el terreno; la inmediata detona",
         "El texto introduce la distinción al hablar de multicausalidad.\n\n"
         "Las causas estructurales operan lentamente y crean las condiciones: "
         "desigualdad acumulada, deterioro institucional. Las inmediatas son el "
@@ -45597,8 +45500,7 @@ QUESTIONS_HISTORIA = [
         "his_oficio", "his_temporal", "dificil",
         "Según el texto, ¿por qué reconstruir el contexto «no es un adorno "
         "introductorio»?",
-        "Porque es lo que impide leer el pasado como si hubiera ocurrido en "
-        "nuestra época",
+        "Porque impide leer el pasado como si fuera nuestra época",
         "El texto entrega un ejemplo que lo demuestra: publicar un texto "
         "crítico bajo una dictadura y hacerlo en democracia «no son el mismo "
         "acto».\n\n"
@@ -45616,8 +45518,7 @@ QUESTIONS_HISTORIA = [
         "his_oficio", "his_temporal", "medio",
         "Según el texto, ¿qué NO implica que la historia se reescriba con cada "
         "generación?",
-        "Que la disciplina sea arbitraria: las afirmaciones siguen exigiendo "
-        "evidencia",
+        "Que la disciplina sea arbitraria",
         "El texto se anticipa a la objeción más previsible.\n\n"
         "Reconoce que las preguntas cambian, que se abren archivos y aparecen "
         "técnicas nuevas, pero cierra con una advertencia: «Eso no vuelve "
@@ -45665,8 +45566,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "tabla_alfabetizacion", "his_fuentes", "medio",
         "¿Qué muestra la tabla respecto de la brecha entre hombres y mujeres?",
-        "Que se redujo hasta desaparecer: en 2020 ambos sexos igualan sus "
-        "porcentajes",
+        "Que se redujo hasta desaparecer en 2020",
         "Conviene comparar los pares por zona en cada año.\n\n"
         "En lo urbano la brecha pasa de 14 puntos en 1930 a cero en 2020. En lo "
         "rural, de 15 puntos a cero en el mismo período.\n\n"
@@ -45682,8 +45582,7 @@ QUESTIONS_HISTORIA = [
         "tabla_alfabetizacion", "his_temporal", "dificil",
         "¿Qué relación puede establecerse entre la nota sobre 1965 y los datos "
         "de la tabla?",
-        "La obligatoriedad de la enseñanza básica coincide con el mayor avance "
-        "registrado entre 1960 y 1990",
+        "La obligatoriedad coincide con el mayor avance del período",
         "La nota informa que en 1965 se estableció la obligatoriedad de ocho "
         "años de enseñanza básica.\n\n"
         "El salto más grande de la tabla ocurre justamente entre 1960 y 1990: "
@@ -45718,8 +45617,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "tabla_alfabetizacion", "his_temporal", "medio",
         "¿Qué tipo de proceso histórico refleja esta tabla?",
-        "Un proceso de larga duración: una transformación sostenida a lo largo "
-        "de noventa años",
+        "Larga duración: una transformación sostenida en noventa años",
         "La tabla cubre nueve décadas y muestra un avance continuo, sin "
         "retrocesos, en los cuatro grupos.\n\n"
         "Ese tipo de cambio no responde a un acontecimiento puntual: se "
@@ -45736,7 +45634,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "tabla_alfabetizacion", "his_fuentes", "medio",
         "¿Qué advertencia contiene la última nota de la fuente?",
-        "Que el censo de 1930 no registró a la población menor de 15 años",
+        "Que el censo de 1930 no registró a los menores de 15",
         "La nota delimita a quiénes cubre la medición: población de 15 años o "
         "más.\n\n"
         "Sin esa aclaración, un lector podría suponer que los porcentajes "
@@ -45753,7 +45651,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "fuentes_salitre", "his_fuentes", "facil",
         "¿A quién atribuye la Fuente 1 las quejas de los trabajadores?",
-        "A agitadores venidos de fuera, ajenos a la vida de la pampa",
+        "A agitadores venidos de fuera",
         "El informe lo dice de manera explícita: «Las quejas provienen de "
         "agitadores venidos de fuera, ajenos por completo a la vida de la "
         "pampa».\n\n"
@@ -45788,8 +45686,7 @@ QUESTIONS_HISTORIA = [
         "fuentes_salitre", "his_fuentes", "dificil",
         "La Fuente 2 afirma: «Uno trabaja el mes entero y termina debiendo». "
         "¿Qué mecanismo describe?",
-        "El pago en fichas canjeables solo en la pulpería de la propia oficina, "
-        "que fijaba los precios",
+        "El pago en fichas canjeables solo en la pulpería",
         "El obrero explica el circuito completo: el pago «no viene en dinero "
         "sino en fichas que solo sirven en la pulpería de la misma oficina, y "
         "allí el precio lo ponen ellos».\n\n"
@@ -45808,8 +45705,7 @@ QUESTIONS_HISTORIA = [
         "fuentes_salitre", "his_fuentes", "dificil",
         "¿Qué precaución exige que la Fuente 1 sea un informe dirigido a la "
         "casa matriz?",
-        "Considerar que su autor tenía interés en presentar la situación de "
-        "manera favorable ante sus superiores",
+        "Que su autor escribía para quedar bien con sus superiores",
         "Un administrador que informa a quienes evalúan su gestión no escribe "
         "en el vacío: escribe para alguien que puede juzgarlo.\n\n"
         "Eso no vuelve falso el documento —los servicios que menciona podían "
@@ -45826,8 +45722,7 @@ QUESTIONS_HISTORIA = [
         "fuentes_salitre", "his_temporal", "medio",
         "¿Qué aporta que ambas fuentes estén fechadas con un año de "
         "diferencia?",
-        "Que describen el mismo momento histórico, lo que hace comparables sus "
-        "versiones",
+        "Que describen el mismo momento y son comparables",
         "El informe es de 1907 y la carta de 1908: prácticamente el mismo "
         "contexto.\n\n"
         "Esa cercanía es lo que vuelve productiva la comparación: las "
@@ -45863,8 +45758,7 @@ QUESTIONS_HISTORIA = [
         "his_tipos_fuentes", "his_fuentes", "facil",
         "Según el texto, ¿qué distingue a una fuente primaria de una "
         "secundaria?",
-        "La distancia respecto de los hechos: la primaria se produjo en la "
-        "época estudiada",
+        "La distancia: la primaria se produjo en la época estudiada",
         "El texto define ambas con precisión.\n\n"
         "Las primarias son cartas, actas, fotografías, herramientas, "
         "edificios: material producido en el momento estudiado. Las secundarias "
@@ -45880,8 +45774,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_tipos_fuentes", "his_fuentes", "medio",
         "Según el texto, ¿qué costo tiene privilegiar las fuentes escritas?",
-        "Dejar fuera a las sociedades sin escritura y a la mayoría que no sabía "
-        "leer",
+        "Dejar fuera a las sociedades sin escritura",
         "El texto lo señala al hablar de los soportes.\n\n"
         "Las escritas son las más usadas, pero solo representan a quienes "
         "escribían: en sociedades con altos niveles de analfabetismo, eso es "
@@ -45898,8 +45791,7 @@ QUESTIONS_HISTORIA = [
         "his_tipos_fuentes", "his_fuentes", "dificil",
         "Según el texto, ¿por qué un informe escrito para justificar una "
         "decisión sigue siendo útil?",
-        "Porque su intención forma parte de lo que informa, si se lee sabiendo "
-        "qué buscaba lograr",
+        "Porque su intención es parte de lo que informa",
         "El texto rechaza la idea de descartar una fuente por interesada.\n\n"
         "Sostiene que «toda fuente fue producida por alguien, en un momento, "
         "con un propósito, y esas condiciones forman parte de lo que dice».\n\n"
@@ -45915,8 +45807,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_tipos_fuentes", "his_fuentes", "medio",
         "Según el texto, ¿cuál es el procedimiento básico frente a una fuente?",
-        "Identificar quién la produjo, cuándo, para quién y con qué intención, "
-        "y contrastarla con otras",
+        "Identificar quién la produjo, cuándo y con qué intención",
         "El texto cierra con ese procedimiento de cuatro preguntas más el "
         "contraste.\n\n"
         "Ninguna de las preguntas es sobre el contenido: todas son sobre las "
@@ -45932,8 +45823,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_tipos_fuentes", "his_temporal", "medio",
         "Según el texto, ¿qué son las fuentes materiales y qué permiten?",
-        "Objetos, restos y arquitectura, que permiten acceder a sectores sin "
-        "acceso a la escritura",
+        "Objetos y restos que informan sobre quienes no escribían",
         "El texto las menciona junto a las orales como alternativa a la fuente "
         "escrita.\n\n"
         "Su valor está en que no requieren alfabetización de quien las produjo: "
@@ -45951,8 +45841,7 @@ QUESTIONS_HISTORIA = [
         "his_tipos_fuentes", "his_fuentes", "dificil",
         "Según el texto, ¿qué significa que «dos que coinciden dicen más que "
         "una que afirma»?",
-        "Que el contraste entre fuentes independientes da más solidez que la "
-        "afirmación de una sola",
+        "Que el contraste entre fuentes independientes da solidez",
         "Una fuente aislada entrega una versión, y no hay cómo saber cuánto "
         "pesa en ella el propósito de quien la produjo.\n\n"
         "Cuando dos fuentes independientes coinciden en un punto, esa "
@@ -45970,8 +45859,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_cambio_continuidad", "his_temporal", "facil",
         "Según el texto, ¿qué cambió con las independencias americanas?",
-        "La soberanía, las instituciones políticas, los símbolos y el "
-        "vocabulario público",
+        "La soberanía, las instituciones y los símbolos públicos",
         "El texto enumera los cambios: «el poder dejó de residir en la Corona y "
         "pasó a repúblicas», junto con las instituciones, los símbolos y el "
         "lenguaje público.\n\n"
@@ -45987,8 +45875,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_cambio_continuidad", "his_temporal", "medio",
         "Según el texto, ¿qué permaneció tras las independencias?",
-        "La estructura de propiedad de la tierra y la organización jerárquica "
-        "de la sociedad",
+        "La propiedad de la tierra y la jerarquía social",
         "El texto lo enuncia con precisión: la propiedad de la tierra «se "
         "mantuvo prácticamente intacta» y la sociedad «siguió organizada de "
         "forma jerárquica».\n\n"
@@ -46006,8 +45893,7 @@ QUESTIONS_HISTORIA = [
         "his_cambio_continuidad", "his_temporal", "dificil",
         "Según el texto, ¿por qué distintos planos de la realidad cambian a "
         "ritmos distintos?",
-        "Porque lo político puede transformarse en meses, lo económico en "
-        "décadas y las mentalidades en siglos",
+        "Porque lo político cambia en meses y las mentalidades en siglos",
         "El texto ordena tres velocidades y las asocia a tres planos.\n\n"
         "Un régimen político puede caer en semanas; una estructura productiva "
         "tarda décadas en reconvertirse; las formas de pensar y las jerarquías "
@@ -46024,8 +45910,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "his_cambio_continuidad", "his_temporal", "dificil",
         "¿Qué propone el texto al plantear la pregunta «¿para quién cambió?»",
-        "Que un mismo acontecimiento puede transformar la vida de un grupo y "
-        "casi nada la de otro",
+        "Que un mismo hecho cambia la vida de un grupo y no la de otro",
         "El texto cierra con esa pregunta y su justificación: un mismo hecho "
         "puede significar «una transformación completa para un grupo y "
         "prácticamente nada para otro que vivía en el mismo territorio y en el "
@@ -46044,8 +45929,7 @@ QUESTIONS_HISTORIA = [
         "his_cambio_continuidad", "his_temporal", "medio",
         "Según el texto, ¿por qué describir las independencias solo como "
         "ruptura sería falso?",
-        "Porque convivieron con estructuras sociales y económicas que no "
-        "cambiaron",
+        "Porque convivieron con estructuras que no cambiaron",
         "El texto sostiene que ni «ruptura» ni «continuidad» por sí solas "
         "describen el proceso: ambas serían igualmente falsas.\n\n"
         "Hubo cambio político profundo y permanencia social casi completa, al "
@@ -46095,8 +45979,7 @@ QUESTIONS_HISTORIA = [
         "tabla_electoral", "civ_democracia", "medio",
         "¿Qué relación establece la tabla entre el cambio de 2012 y la caída de "
         "la participación?",
-        "La inscripción automática amplió el padrón, y sobre un padrón mayor el "
-        "mismo número de votantes da un porcentaje menor",
+        "El padrón creció, así que el mismo número de votos pesa menos",
         "Las notas explican que hasta 2012 la inscripción era voluntaria: solo "
         "figuraban en el padrón quienes habían decidido inscribirse, es decir "
         "los más motivados.\n\n"
@@ -46130,8 +46013,7 @@ QUESTIONS_HISTORIA = [
         "tabla_electoral", "civ_democracia", "dificil",
         "¿Por qué la nota advierte que el plebiscito de 2020 fue una consulta "
         "nacional?",
-        "Porque compararlo con elecciones municipales exige cautela: no se vota "
-        "lo mismo ni con la misma motivación",
+        "Porque no se vota lo mismo que en una elección municipal",
         "Un plebiscito nacional decide un asunto de alcance país; una elección "
         "municipal, autoridades comunales.\n\n"
         "La atención pública, la campaña y lo que está en juego son distintos, "
@@ -46182,8 +46064,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_constitucion", "civ_democracia", "medio",
         "Según el texto, ¿qué distingue la función orgánica de la dogmática?",
-        "La orgánica define cómo se estructura el poder; la dogmática establece "
-        "los derechos de las personas",
+        "La orgánica estructura el poder; la dogmática, los derechos",
         "El texto separa ambas con claridad.\n\n"
         "La parte orgánica responde cómo se organiza el Estado: qué órganos "
         "existen, cómo se eligen, qué puede hacer cada uno. La dogmática fija "
@@ -46201,8 +46082,7 @@ QUESTIONS_HISTORIA = [
         "civ_constitucion", "civ_democracia", "dificil",
         "Según el texto, ¿por qué la reforma constitucional exige requisitos "
         "más altos que una ley común?",
-        "Para que una mayoría circunstancial no pueda modificarla como "
-        "cualquier ley",
+        "Para que una mayoría circunstancial no pueda cambiarla",
         "El texto explica que la rigidez «es deliberada»: no es un defecto de "
         "diseño sino su propósito.\n\n"
         "Si una mayoría del momento pudiera cambiarla con facilidad, la "
@@ -46219,8 +46099,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_constitucion", "civ_democracia", "dificil",
         "¿Qué tensión describe el texto en el diseño constitucional?",
-        "Que la rigidez protege mejor los derechos pero dificulta actualizar la "
-        "norma cuando la sociedad cambia",
+        "Que la rigidez protege, pero dificulta actualizar la norma",
         "El texto presenta ambos extremos sin resolverlos.\n\n"
         "Una Constitución muy rígida protege bien y se vuelve difícil de "
         "reformar; una muy flexible se adapta con facilidad y protege menos."
@@ -46238,8 +46117,7 @@ QUESTIONS_HISTORIA = [
         "civ_constitucion", "civ_derechos", "medio",
         "Según el texto, ¿qué relación hay entre la Constitución y los derechos "
         "de las personas?",
-        "La parte dogmática los establece como el límite que el poder no puede "
-        "cruzar",
+        "La parte dogmática los pone como límite al poder",
         "El texto define la función dogmática precisamente así.\n\n"
         "Los derechos constitucionales no son una lista de aspiraciones: "
         "operan como frontera de lo que el Estado puede hacer.\n\n"
@@ -46256,7 +46134,7 @@ QUESTIONS_HISTORIA = [
         "civ_participacion_local", "civ_democracia", "facil",
         "Según el texto, ¿qué puede hacer cualquier persona respecto de la "
         "información pública?",
-        "Solicitarla a un órgano del Estado sin explicar para qué la quiere",
+        "Solicitarla al Estado sin explicar para qué",
         "El texto es explícito: el acceso no exige justificar el motivo, y el "
         "órgano debe entregarla «salvo causal legal de reserva».\n\n"
         "No tener que explicar para qué se pide es lo que hace efectivo el "
@@ -46290,8 +46168,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_participacion_local", "civ_democracia", "medio",
         "Según el texto, ¿qué son los presupuestos participativos?",
-        "Un mecanismo donde los vecinos deciden el destino de una parte de los "
-        "recursos municipales",
+        "Que los vecinos deciden parte de los recursos municipales",
         "El texto los menciona entre los mecanismos comunales, junto a los "
         "consejos de la sociedad civil y las audiencias públicas.\n\n"
         "Reconoce que su alcance «suele ser acotado»: se decide sobre una parte "
@@ -46340,8 +46217,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_igualdad", "civ_derechos", "facil",
         "Según el texto, ¿qué significa la igualdad ante la ley?",
-        "Que la norma se aplica a todos sin distinciones arbitrarias y nadie "
-        "goza de privilegios",
+        "Que se aplica a todos sin distinciones arbitrarias",
         "El texto abre con esa definición y menciona tres criterios que no "
         "pueden generar privilegio: origen, riqueza y posición.\n\n"
         "La palabra clave es «arbitrarias»: no toda distinción está prohibida, "
@@ -46356,8 +46232,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_igualdad", "civ_derechos", "medio",
         "¿Qué muestra el ejemplo de la prueba escrita para una persona ciega?",
-        "Que tratar a todos igual puede ser formalmente igual y materialmente "
-        "injusto",
+        "Que tratar a todos igual puede ser materialmente injusto",
         "El texto lo plantea con precisión: la prueba idéntica «es formalmente "
         "igual y materialmente injusta».\n\n"
         "La razón es simple: una de las dos personas no puede rendirla, así "
@@ -46392,8 +46267,7 @@ QUESTIONS_HISTORIA = [
         "civ_igualdad", "civ_derechos", "dificil",
         "Según el texto, ¿qué criterio ayuda a distinguir un ajuste de un "
         "privilegio?",
-        "Si la medida es temporal y busca cerrar una brecha medible, o si es "
-        "permanente y no se evalúa",
+        "Si es temporal y busca cerrar una brecha medible",
         "El texto ofrece ese criterio para una discusión que reconoce como no "
         "zanjada.\n\n"
         "Una medida temporal, con una brecha identificada y evaluación "
@@ -46410,8 +46284,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_igualdad", "civ_derechos", "medio",
         "Según el texto, ¿qué está fuera de discusión en este debate?",
-        "Que la distinción arbitraria, sin justificación razonable, está "
-        "prohibida en cualquier caso",
+        "Que la distinción arbitraria está prohibida en todo caso",
         "El texto cierra separando lo discutible de lo que no lo es.\n\n"
         "El debate sobre acciones afirmativas sigue abierto, pero el punto de "
         "partida no: la distinción arbitraria está prohibida siempre.\n\n"
@@ -46428,8 +46301,7 @@ QUESTIONS_HISTORIA = [
         "civ_ninez", "civ_derechos", "facil",
         "Según el texto, ¿qué cambio de enfoque introdujo la Convención de "
         "1989?",
-        "Reconocer a niños y niñas como sujetos de derecho y no solo como "
-        "objeto de protección",
+        "Reconocerlos como sujetos de derecho, no como objeto",
         "El texto contrasta ambos enfoques.\n\n"
         "Antes predominaba la idea de que alguien decidía por ellos «en su "
         "nombre y sin consultarlos». La Convención los reconoce como titulares "
@@ -46445,8 +46317,7 @@ QUESTIONS_HISTORIA = [
         "civ_ninez", "civ_derechos", "medio",
         "Según el texto, ¿qué establece el principio del interés superior del "
         "niño?",
-        "Que ante cualquier decisión que le afecte debe primar lo que resulte "
-        "mejor para él",
+        "Que debe primar lo mejor para él en cualquier decisión",
         "El texto lo presenta como el primero de los dos principios "
         "ordenadores.\n\n"
         "Su alcance es amplio: aplica a «cualquier decisión que le afecte», sea "
@@ -46478,8 +46349,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_ninez", "civ_derechos", "medio",
         "Según el texto, ¿qué tipos de derechos abarca la Convención?",
-        "Identidad y nacionalidad, vivir en familia, educación y salud, juego y "
-        "descanso, y protección frente a la violencia",
+        "Derechos de identidad, familia, educación, salud y juego",
         "El texto enumera derechos de naturaleza distinta: civiles, sociales y "
         "de protección.\n\n"
         "La inclusión del juego y el descanso es la más llamativa, porque "
@@ -46495,8 +46365,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_ninez", "civ_derechos", "dificil",
         "Según el texto, ¿por qué ratificar la Convención no basta?",
-        "Porque exige después leyes, instituciones y presupuesto que hagan "
-        "exigible lo que declara",
+        "Porque exige después leyes, instituciones y presupuesto",
         "El texto cierra con esa advertencia sobre Chile, que la ratificó en "
         "1990.\n\n"
         "Ratificar obliga al Estado, pero un tratado no se aplica solo: "
@@ -46532,8 +46401,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "fuente_voto_femenino", "civ_democracia", "facil",
         "¿Qué argumento usa la Fuente 1 para oponerse al proyecto?",
-        "Que la política apartaría a la mujer de una función en el hogar que "
-        "nadie puede reemplazar",
+        "Que la apartaría de una función del hogar irremplazable",
         "La Fuente 1 no cuestiona la capacidad de las mujeres: declara "
         "expresamente que «nadie discute la inteligencia ni las virtudes de la "
         "mujer chilena».\n\n"
@@ -46549,8 +46417,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "fuente_voto_femenino", "civ_democracia", "medio",
         "¿Cómo responde la Fuente 2 al argumento sobre el hogar?",
-        "Sosteniendo que en el hogar ya se toman decisiones políticas, aunque "
-        "sin voz para influir en ellas",
+        "Sosteniendo que en el hogar ya se decide, pero sin voz",
         "La respuesta usa el propio terreno del adversario.\n\n"
         "Enumera lo que se hace en el hogar —administrar el presupuesto, "
         "decidir la educación, enfrentar el precio del pan— y señala que ese "
@@ -46568,8 +46435,7 @@ QUESTIONS_HISTORIA = [
         "fuente_voto_femenino", "civ_democracia", "dificil",
         "¿Qué logra la Fuente 2 al cerrar con «llevamos esperando desde que "
         "existe la República»?",
-        "Desarma el llamado a la prudencia mostrando cuánto tiempo lleva "
-        "postergándose la decisión",
+        "Desarma el llamado a la prudencia mostrando la espera",
         "La Fuente 1 califica de prudente conceder el voto municipal y de "
         "apresurado extenderlo.\n\n"
         "La respuesta no discute si conviene ser prudente: discute desde cuándo "
@@ -46604,8 +46470,7 @@ QUESTIONS_HISTORIA = [
         "fuente_voto_femenino", "his_temporal", "dificil",
         "¿Qué error se cometería al leer la Fuente 1 sin considerar su "
         "contexto?",
-        "Un anacronismo: juzgarla solo con criterios actuales sin comprender la "
-        "mentalidad de su época",
+        "Un anacronismo: juzgarla solo con criterios actuales",
         "El argumento de la Fuente 1 resulta hoy inaceptable, y esa reacción es "
         "comprensible.\n\n"
         "Pero el historiador necesita además entender por qué esa posición "
@@ -46674,8 +46539,7 @@ QUESTIONS_HISTORIA = [
         "civ_ddhh", "civ_derechos", "medio",
         "Según el texto, ¿qué contexto explica el contenido de la Declaración "
         "Universal?",
-        "El fin de la Segunda Guerra Mundial y la constatación de que un Estado "
-        "podía aniquilar legalmente a su población",
+        "El fin de la Segunda Guerra Mundial y el Holocausto",
         "El texto sitúa la Declaración tres años después del fin de la guerra y "
         "explica qué la motivó.\n\n"
         "El Holocausto había mostrado que las atrocidades podían cometerse "
@@ -46778,8 +46642,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_ninez", "civ_derechos", "medio",
         "Según el texto, ¿qué predominaba antes de la Convención de 1989?",
-        "La idea de que niños y niñas eran objeto de protección, y que otros "
-        "decidían por ellos sin consultarlos",
+        "Que eran objeto de protección y otros decidían por ellos",
         "El texto describe el enfoque anterior con precisión: alguien decidía "
         "«en su nombre y sin consultarlos».\n\n"
         "Protección había, pero desde una posición pasiva: el niño era "
@@ -46815,7 +46678,7 @@ QUESTIONS_HISTORIA = [
         "his_oficio", "his_temporal", "medio",
         "Según el texto, ¿qué ejemplo muestra que una misma acción puede "
         "significar cosas opuestas?",
-        "Publicar un texto crítico bajo una dictadura o hacerlo en democracia",
+        "Publicar un texto crítico bajo dictadura o en democracia",
         "El texto lo usa para explicar por qué el contexto es indispensable."
         "\n\n"
         "La acción es idéntica en ambos casos; lo que cambia es lo que "
