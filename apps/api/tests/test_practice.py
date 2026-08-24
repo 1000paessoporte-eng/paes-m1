@@ -163,3 +163,51 @@ def test_practice_answer_invalid_alternative_is_422(
         headers=headers,
     )
     assert resp.status_code == 422
+
+
+def test_practicar_dice_por_que_te_equivocaste(client, db_session, register_user) -> None:
+    """Practicar un nodo es cuando alguien trabaja su error a propósito.
+
+    Era el único de los tres lugares donde se corrige una pregunta —demo,
+    ensayo y práctica— que no devolvía la justificación del distractor, así
+    que el alumno recibía la resolución general y nunca su propio error.
+    """
+    from paes_api.modules.content.models import Alternative, Difficulty, Question
+    from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+
+    nodo = SkillNode(
+        code="prac_distractor", name="Distractores", axis=SkillAxis.NUMEROS,
+        tier=1, unlock_threshold=0.75,
+    )
+    db_session.add(nodo)
+    db_session.flush()
+    pregunta = Question(
+        skill_node_id=nodo.id, difficulty=Difficulty.FACIL,
+        stem="¿Cuánto es 2 + 2?", explanation="2+2=4.",
+    )
+    db_session.add(pregunta)
+    db_session.flush()
+    correcta = Alternative(question_id=pregunta.id, label="A", text="4", is_correct=True)
+    mala = Alternative(
+        question_id=pregunta.id, label="B", text="5", is_correct=False,
+        distractor_justification="Contó uno de más al sumar.",
+    )
+    db_session.add_all([correcta, mala])
+    db_session.commit()
+
+    headers, _ = register_user(email="practica-distractor@milpaes.cl")
+
+    fallada = client.post(
+        f"/api/practice/{nodo.code}/answer",
+        json={"question_id": pregunta.id, "selected_alternative_id": mala.id},
+        headers=headers,
+    ).json()
+    assert fallada["is_correct"] is False
+    assert fallada["distractor_justification"] == "Contó uno de más al sumar."
+
+    acertada = client.post(
+        f"/api/practice/{nodo.code}/answer",
+        json={"question_id": pregunta.id, "selected_alternative_id": correcta.id},
+        headers=headers,
+    ).json()
+    assert acertada["distractor_justification"] is None
