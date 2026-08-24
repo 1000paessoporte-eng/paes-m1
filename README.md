@@ -40,24 +40,45 @@ No es un banco de preguntas plano. Las piezas:
 |---|---|---|
 | **Modo Ensayo** | 🟢 Funcional | Ensayo configurable: prueba (las cinco), ejes, cantidad y ritmo. Tiempo proporcional al oficial. |
 | **Puntaje y revisión** | 🟢 Funcional | Puntaje 100-1000 con tablas oficiales DEMRE, desglose por eje/dificultad/nodo, desarrollo paso a paso de cada pregunta. |
-| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos (`/arbol?prueba=`). Cada nodo de M1 trae su lección en `/aprender/[code]`: teoría, ejemplo resuelto paso a paso y el error típico, antes de practicar. |
+| **Árbol de Habilidades** | 🟢 Funcional | Temario de las cinco pruebas como grafo de nodos con prerrequisitos (`/arbol?prueba=`). Cada nodo trae su lección en `/aprender/[code]` --las cinco pruebas, no solo M1--: teoría, ejemplo resuelto paso a paso y el error típico, antes de practicar. |
 | **Mi meta** | 🟢 Funcional | `/meta`: lista de hasta 10 preferencias con las ponderaciones oficiales del DEMRE, puntaje ponderado, simulador, ritmo contra la fecha de la PAES y plan de práctica. |
 | **Práctica por nodo** | 🟢 Funcional | `/practicar/[code]`: una pregunta a la vez con corrección inmediata. |
 | **Historial** | 🟢 Funcional | Evolución del puntaje, mejor/promedio/último, borrado por intento, respaldo JSON. |
 | **Analítica** | 🟢 Funcional | Racha, precisión global, tiempo invertido, gráficos SVG propios. |
 | **Demo sin cuenta** | 🟢 Funcional | `/demo`: 5 preguntas, sin auth y sin persistir nada. |
 | **Panel de administración** | 🟢 Funcional | `/admin`: usuarios, entradas, visitas (incluidas anónimas) y uso del contenido. Solo cuentas con rol admin. |
-| **Cobros / planes** | 🔴 No implementado | Los planes Pro y Colegios son vitrina. No hay pasarela de pago. |
+| **Cobros / planes** | 🟡 Funciona, sin encender | Pasarela **Flow** integrada (`modules/billing`): catálogo con el precio en el servidor, `/plan/pagar`, confirmación por webhook y diagnóstico para admin. Hay una compra real completada. Los topes del plan Gratis se informan pero **no bloquean** mientras `LIMITES_ACTIVOS` esté apagado -- salvo el de carreras en Mi meta, que sí corta. |
 
 ### Contenido actual
 
-- **47 nodos** de habilidad, repartidos entre las cinco pruebas.
-- **344 preguntas**: 195 de M1, 87 exclusivas de M2, 40 de Lectora, 13 de
-  Ciencias, 9 de Historia.
-- **11 textos fuente** (`reading_passages`): nueve para Competencia Lectora y
-  dos para Historia.
-- **15 lecciones** (`lessons`): el temario completo de M1. Las otras cuatro
-  pruebas todavía no tienen teoría escrita y llevan directo a practicar.
+Cifras verificadas contra la base de producción el **2026-08-24**. Si esta
+sección vuelve a quedar vieja, se consulta con `scripts/verificar_banco.py` o
+directo a la base: es más barato que discutirla.
+
+- **52 nodos** de habilidad y **52 lecciones**, una por nodo. Las cinco
+  pruebas tienen teoría escrita, no solo M1.
+- **2.579 preguntas** con **10.316 alternativas**, y cada alternativa
+  incorrecta trae su `distractor_justification`.
+
+  | Prueba | Preguntas | Un ensayo pide | Nodos |
+  |---|---:|---:|---:|
+  | Matemática M1 | 1.088 | 65 | 16 |
+  | Competencia Lectora | 843 | 65 | 3 |
+  | Ciencias | 240 | 80 | 12 |
+  | Matemática M2 | 213 | 55 | 15 |
+  | Historia y Cs. Sociales | 195 | 65 | 6 |
+
+  Las cinco superan tres veces lo que pide un ensayo completo. **Ampliar el
+  banco ya no es el cuello de botella**; lo era cuando esta sección decía 344
+  preguntas.
+
+- **88 textos fuente** (`reading_passages`): 67 de Competencia Lectora y 21 de
+  Historia.
+
+El desbalance que sí queda es de **nodos**, no de preguntas: Lectora tiene 843
+preguntas colgando de 3 nodos y Historia 195 de 6, contra los 16 de M1. El
+"qué estudiar después" sólo puede recomendar una de tres cosas en Lectora, y
+ahí es donde el árbol rinde menos de lo que promete.
 - **1.855 carreras** con sus ponderaciones oficiales, extraídas del PDF del
   DEMRE con `scripts/extraer_carreras.py`. **Se re-extraen cada proceso de
   admisión**: las ponderaciones cambian todos los años. Varias preguntas comparten un mismo texto, igual que en la
