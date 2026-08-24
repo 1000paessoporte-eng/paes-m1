@@ -791,14 +791,27 @@ FRACCION_MINIMA_DE_RITMO = 0.10
 
 
 def _es_representativo(attempt: ExamAttempt, respondidas: int) -> bool:
-    """Si el tiempo empleado da para haber leído lo que se respondió.
+    """Si el ensayo dice algo del estudiante.
 
     Se mide contra las preguntas RESPONDIDAS y no contra el total: quien
     contesta tres y abandona no rindió rápido, rindió poco, y ese ensayo sí
-    dice algo de esas tres. Sin respuestas no hay nada que juzgar.
+    dice algo de esas tres.
+
+    Un ensayo SIN NINGUNA respuesta no dice nada, y por eso no cuenta. Antes
+    contaba: la regla original decía "sin respuestas no hay nada que juzgar",
+    que es cierto del RITMO --no hay ritmo que medir-- pero esta bandera no
+    responde "¿fue apurado?", responde "¿este ensayo cuenta?". Un ensayo
+    vacío no es apurado: es vacío.
+
+    La diferencia no era teórica. De los 42 ensayos entregados en producción,
+    26 no tenían ni una respuesta --el 62%-- y todos entraban al historial,
+    al mejor puntaje, a la analítica y al panel del profesor con un puntaje
+    medio de 160, que es el piso de la escala y no una medición de nadie. Para
+    el alumno típico, la mayor parte de su historial eran ensayos que nunca
+    respondió.
     """
     if respondidas <= 0:
-        return True
+        return False
     minimo = scoring.segundos_por_pregunta(attempt.subject) * FRACCION_MINIMA_DE_RITMO
     return (_elapsed_seconds(attempt) / respondidas) >= minimo
 

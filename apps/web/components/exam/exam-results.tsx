@@ -117,6 +117,25 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
 
           Sube DESDE 100 y no desde 0: la escala PAES empieza en 100, así que
           contar desde cero muestra durante un segundo puntajes que no existen. */}
+      {/* SIN RESPUESTAS NO HAY PUNTAJE QUE MOSTRAR.
+          El puntaje de un ensayo vacío es 100: el piso de la escala, no una
+          medición de nadie. Presentarlo en rojo y a 60 px como "Puntaje
+          estimado · Por reforzar" le dice a alguien que abandonó que rinde
+          en el mínimo, que es exactamente lo que sus cero respuestas NO
+          demuestran. En producción el 62% de los ensayos entregados estaban
+          así, y hasta ahora todos entraban al historial. */}
+      {result.answered === 0 ? (
+        <section className="rounded-2xl border border-border bg-surface p-6 text-center">
+          <p className="font-display text-2xl font-bold">
+            Este ensayo quedó sin responder
+          </p>
+          <p className="mx-auto mt-2 max-w-md text-sm text-muted">
+            No hay puntaje que estimar con cero respuestas, así que este ensayo
+            no entra en tu progreso. Las {result.total_questions} preguntas
+            siguen abajo con su resolución, por si quieres mirarlas.
+          </p>
+        </section>
+      ) : (
       <section className="rounded-2xl border border-border bg-surface p-6 text-center">
         <p className="text-sm text-muted">Puntaje estimado</p>
         <p className={cn("font-display mt-1 text-6xl font-bold", nivel.clase)}>
@@ -187,6 +206,7 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
           />
         </div>
       </section>
+      )}
 
       {/* ── Sugerencia de refuerzo ──────────────────────────────────────
           El ensayo terminaba acá en un consejo que el alumno tenía que
@@ -194,8 +214,12 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
           el momento de más información y más ganas de todo el producto, y la
           única salida era volver al historial. Ahora el eje da el diagnóstico
           y el tema da el siguiente paso, con las dos puertas que ese tema
-          tiene: la teoría y la práctica. */}
-      {(debiles.length > 0 || tema) && (
+          tiene: la teoría y la práctica.
+
+          Nada de eso aplica sin respuestas: con cero, TODOS los ejes marcan
+          0% y el bloque "diagnosticaba" los tres primeros de la lista, que es
+          consejo sacado de ninguna evidencia. */}
+      {result.answered > 0 && (debiles.length > 0 || tema) && (
         <section className="mt-5 rounded-xl border border-warning/40 bg-warning/10 p-4">
           <h2 className="font-semibold text-warning">Qué conviene reforzar</h2>
 
