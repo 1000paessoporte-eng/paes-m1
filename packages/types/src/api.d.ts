@@ -1058,6 +1058,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/carreras/{codigo}/relacionadas": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Ver Relacionadas
+         * @description Por dónde seguir desde la ficha de una carrera.
+         */
+        get: operations["ver_relacionadas_api_carreras__codigo__relacionadas_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/leads": {
         parameters: {
             query?: never;
@@ -1859,6 +1879,38 @@ export interface components {
         DemoGradeIn: {
             /** Answers */
             answers: components["schemas"]["DemoAnswerIn"][];
+        };
+        /**
+         * CarreraRelacionadaOut
+         * @description Una ficha hermana, con lo justo para compararla de un vistazo.
+         *
+         *     Sin las ponderaciones: el bloque de relacionadas responde "¿dónde más se
+         *     dicta y dónde entro?", no "¿cómo se pondera allá?". Para eso se abre la
+         *     ficha, que es exactamente lo que queremos que pase.
+         */
+        CarreraRelacionadaOut: {
+            /** Codigo */
+            codigo: string;
+            /** Universidad */
+            universidad: string;
+            /** Nombre */
+            nombre: string;
+            /** Sede */
+            sede: string;
+            /** Ponderado Min */
+            ponderado_min?: number | null;
+            /** Vacantes */
+            vacantes?: number | null;
+        };
+        /**
+         * CarreraRelacionadasOut
+         * @description Los dos caminos que se le abren a quien está mirando una ficha.
+         */
+        CarreraRelacionadasOut: {
+            /** Misma Carrera */
+            misma_carrera: components["schemas"]["CarreraRelacionadaOut"][];
+            /** Misma Universidad */
+            misma_universidad: components["schemas"]["CarreraRelacionadaOut"][];
         };
         /** DemoGradeItemOut */
         DemoGradeItemOut: {
@@ -4824,6 +4876,37 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["CarreraPublicaOut"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    ver_relacionadas_api_carreras__codigo__relacionadas_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                codigo: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CarreraRelacionadasOut"];
                 };
             };
             /** @description Validation Error */

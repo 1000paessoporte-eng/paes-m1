@@ -659,6 +659,27 @@ export function getCarrera(codigo: string): Promise<CarreraPublica> {
   });
 }
 
+export type CarreraRelacionada =
+  paths["/api/carreras/{codigo}/relacionadas"]["get"]["responses"][200]["content"]["application/json"]["misma_carrera"][number];
+
+export type CarreraRelacionadas =
+  paths["/api/carreras/{codigo}/relacionadas"]["get"]["responses"][200]["content"]["application/json"];
+
+/**
+ * Por dónde seguir desde la ficha de una carrera: la misma en otras
+ * universidades y otras carreras de la suya.
+ *
+ * Se cachea igual que la ficha (un día): las ponderaciones del proceso no
+ * cambian dentro de la jornada, y estas 1.855 páginas se sirven desde caché.
+ */
+export function getCarreraRelacionadas(codigo: string): Promise<CarreraRelacionadas> {
+  return apiFetch<CarreraRelacionadas>(
+    `/api/carreras/${encodeURIComponent(codigo)}/relacionadas`,
+    undefined,
+    { cache: "force-cache", next: { revalidate: 86400 } }
+  );
+}
+
 // --- Plan Colegios --------------------------------------------------------
 
 export type MiColegio =

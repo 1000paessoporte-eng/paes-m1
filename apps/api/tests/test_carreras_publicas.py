@@ -160,3 +160,83 @@ def test_buscar_con_menos_de_tres_letras_no_devuelve_ruido(
 def test_buscar_no_se_confunde_con_un_codigo(client: TestClient) -> None:
     """La ruta va antes que /{codigo}."""
     assert client.get("/api/carreras/buscar", params={"q": "algo"}).status_code == 200
+
+
+@pytest.fixture()
+def ingenierias_en_otras(db_session, carreras) -> None:
+    """La misma carrera en otras dos universidades, una sin mínimo publicado.
+
+    Es el caso real: INGENIERÍA CIVIL INDUSTRIAL se dicta en 20 universidades
+    y DERECHO en 22, y el DEMRE no publica ponderado mínimo para todas.
+    """
+    db_session.add_all(
+        [
+            Carrera(
+                codigo="99003",
+                universidad="UNIVERSIDAD BARATA",
+                nombre="INGENIERÍA CIVIL",
+                sede="TEMUCO",
+                nem=10, ranking=20, lectora=10, m1=35, ciencias=25,
+                historia=None, m2=None, prueba_especial=None,
+                electivo_alternativo=False,
+                ponderado_min=450, promedio_min=500, vacantes=120,
+                proceso=2026,
+                fuente="https://demre.cl/",
+            ),
+            Carrera(
+                codigo="99004",
+                universidad="UNIVERSIDAD SIN DATO",
+                nombre="INGENIERÍA CIVIL",
+                sede="ARICA",
+                nem=10, ranking=20, lectora=10, m1=35, ciencias=25,
+                historia=None, m2=None, prueba_especial=None,
+                electivo_alternativo=False,
+                ponderado_min=None, promedio_min=520, vacantes=40,
+                proceso=2026,
+                fuente="https://demre.cl/",
+            ),
+        ]
+    )
+    db_session.commit()
+
+
+def test_relacionadas_ordena_por_donde_se_entra_mas_facil(
+    client: TestClient, ingenierias_en_otras
+) -> None:
+    """La comparación que trae a la gente desde Google: dónde más se dicta.
+
+    De menor a mayor ponderado mínimo, y las que no lo publican al final: un
+    `NULL` no es un cero, y ponerlo primero diría que ahí se entra con nada.
+    """
+    res = client.get("/api/carreras/99001/relacionadas")
+
+    assert res.status_code == 200
+    misma = res.json()["misma_carrera"]
+    assert [c["codigo"] for c in misma] == ["99003", "99004"]
+    assert misma[0]["universidad"] == "UNIVERSIDAD BARATA"
+    assert misma[0]["ponderado_min"] == 450
+    assert misma[1]["ponderado_min"] is None
+    # La propia carrera nunca se enlaza a sí misma.
+    assert "99001" not in [c["codigo"] for c in misma]
+
+
+def test_relacionadas_trae_las_otras_carreras_de_la_universidad(
+    client: TestClient, carreras
+) -> None:
+    res = client.get("/api/carreras/99001/relacionadas")
+
+    misma_u = res.json()["misma_universidad"]
+    assert [c["codigo"] for c in misma_u] == ["99002"]
+    assert misma_u[0]["nombre"] == "ARTE"
+    assert misma_u[0]["ponderado_min"] is None
+
+
+def test_relacionadas_de_un_codigo_inventado_da_404(client: TestClient) -> None:
+    """Mismo contrato que la ficha: nunca un 500 por una URL inventada."""
+    assert client.get("/api/carreras/00000/relacionadas").status_code == 404
+
+
+def test_relacionadas_se_ven_sin_iniciar_sesion(client: TestClient, carreras) -> None:
+    res = client.get("/api/carreras/99001/relacionadas")
+    assert res.status_code == 200
+    assert set(res.json()) == {"misma_carrera", "misma_universidad"}

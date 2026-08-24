@@ -14,6 +14,8 @@ from paes_api.modules.carreras import service
 from paes_api.modules.carreras.schemas import (
     CarreraCatalogoOut,
     CarreraPublicaOut,
+    CarreraRelacionadaOut,
+    CarreraRelacionadasOut,
     UniversidadOut,
 )
 from paes_api.modules.goals.models import Carrera
@@ -75,3 +77,29 @@ def ver_carrera(request: Request, codigo: str, db: Session = Depends(get_db)) ->
             status_code=status.HTTP_404_NOT_FOUND, detail="Esa carrera no existe"
         )
     return carrera
+
+
+@router.get("/{codigo}/relacionadas", response_model=CarreraRelacionadasOut)
+@limiter.limit("60/minute")
+def ver_relacionadas(
+    request: Request, codigo: str, db: Session = Depends(get_db)
+) -> CarreraRelacionadasOut:
+    """Por dónde seguir desde la ficha de una carrera.
+
+    Va aparte de `/{codigo}` y no dentro: la ficha es lo que la página
+    necesita para pintar, y esto es lo que necesita para no ser un callejón
+    sin salida. Separadas, la página las pide en paralelo y un fallo acá no
+    deja sin ponderaciones a quien vino a verlas.
+    """
+    carrera = service.por_codigo(db, codigo)
+    if carrera is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="Esa carrera no existe"
+        )
+    misma_carrera, misma_universidad = service.relacionadas(db, carrera)
+    return CarreraRelacionadasOut(
+        misma_carrera=[CarreraRelacionadaOut.model_validate(c) for c in misma_carrera],
+        misma_universidad=[
+            CarreraRelacionadaOut.model_validate(c) for c in misma_universidad
+        ],
+    )

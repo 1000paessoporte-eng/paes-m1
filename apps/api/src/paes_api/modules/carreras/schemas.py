@@ -67,3 +67,33 @@ class UniversidadOut(BaseModel):
 
     universidad: str
     carreras: int
+
+
+class CarreraRelacionadaOut(BaseModel):
+    """Una ficha hermana, con lo justo para compararla de un vistazo.
+
+    Sin las ponderaciones: el bloque de relacionadas responde "¿dónde más se
+    dicta y dónde entro?", no "¿cómo se pondera allá?". Para eso se abre la
+    ficha, que es exactamente lo que queremos que pase.
+    """
+
+    model_config = ConfigDict(from_attributes=True)
+
+    codigo: str
+    universidad: str
+    nombre: str
+    sede: str
+    #: `None` en 1.153 de las 1.855: el DEMRE no publica un mínimo para todas.
+    #: Va igual, y la pantalla decide cómo mostrar la ausencia.
+    ponderado_min: float | None = None
+    vacantes: int | None = None
+
+
+class CarreraRelacionadasOut(BaseModel):
+    """Los dos caminos que se le abren a quien está mirando una ficha."""
+
+    #: La misma carrera en otras universidades, de menor a mayor ponderado
+    #: mínimo. Es la comparación que trae a la gente desde Google.
+    misma_carrera: list[CarreraRelacionadaOut]
+    #: Otras carreras de la misma universidad, alfabéticas.
+    misma_universidad: list[CarreraRelacionadaOut]
