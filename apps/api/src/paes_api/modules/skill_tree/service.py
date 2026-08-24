@@ -147,6 +147,7 @@ def get_user_skill_tree(
             accuracy=progress_by_node[node.id].accuracy,
             attempts=progress_by_node[node.id].attempts,
             has_lesson=node.lesson is not None,
+            lesson_intro=node.lesson.intro if node.lesson is not None else None,
         )
         for node in ordered
     ]

@@ -3123,6 +3123,8 @@ export interface components {
              * @default false
              */
             has_lesson: boolean;
+            /** Lesson Intro */
+            lesson_intro?: string | null;
         };
         /**
          * Subject

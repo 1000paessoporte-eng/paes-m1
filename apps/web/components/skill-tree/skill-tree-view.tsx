@@ -164,6 +164,16 @@ interface SkillTreeViewProps {
 
 export function SkillTreeView({ nodes }: SkillTreeViewProps) {
   const nameByCode = new Map(nodes.map((n) => [n.code, n.name]));
+
+  // El grafo al revés: qué abre cada nodo. Las aristas ya existen --son las
+  // que dibujan los conectores-- pero solo se leían en un sentido, así que la
+  // tarjeta podía decir qué la abre a ella y nunca qué abre ella.
+  const abreByCode = new Map<string, string[]>();
+  for (const n of nodes) {
+    for (const prereq of n.prerequisite_codes) {
+      abreByCode.set(prereq, [...(abreByCode.get(prereq) ?? []), n.name]);
+    }
+  }
   const quieto = useReducedMotion();
 
   // El color sale de los propios nodos, no de una prop: el árbol de una prueba
@@ -341,6 +351,7 @@ export function SkillTreeView({ nodes }: SkillTreeViewProps) {
               axis={column.axis}
               nodes={column.nodes}
               nameByCode={nameByCode}
+              abreByCode={abreByCode}
               colorPrueba={colorPrueba}
               registrarPunto={registrarPunto}
               resaltado={resaltado}
@@ -383,6 +394,7 @@ function TreeColumn({
   axis,
   nodes,
   nameByCode,
+  abreByCode,
   colorPrueba,
   registrarPunto,
   resaltado,
@@ -391,6 +403,8 @@ function TreeColumn({
   axis: SkillNode["axis"];
   nodes: SkillNode[];
   nameByCode: Map<string, string>;
+  /** Qué temas abre cada nodo, derivado de las mismas aristas. */
+  abreByCode: Map<string, string[]>;
   /** El color de la prueba a la que pertenece este árbol. */
   colorPrueba: string;
   /** La columna ya no mide: solo entrega sus puntos al árbol, que es quien
@@ -430,6 +444,7 @@ function TreeColumn({
           const locked = node.status === "locked";
           const mastered = node.status === "mastered";
           const pct = Math.round(node.accuracy * 100);
+          const abre = abreByCode.get(node.code) ?? [];
           // "Dominado" usa el color de la prueba porque es identidad --este
           // árbol--, mientras que "Desbloqueado" conserva el verde, que ahí
           // sí es estado. Es la regla de no mezclar identidad con estado.
@@ -557,6 +572,36 @@ function TreeColumn({
                     <p className="text-sm leading-snug font-semibold text-balance">
                       {node.name}
                     </p>
+
+                    {/* QUÉ ES EL TEMA, en la pantalla donde se elige qué
+                        estudiar. Antes la tarjeta decía el nombre y el
+                        porcentaje de acierto: "Transformaciones isométricas"
+                        no le dice nada a alguien de tercero medio, así que
+                        para saber de qué iba había que abrir la lección --o
+                        sea, decidir antes de tener con qué decidir.
+
+                        El texto ya estaba escrito en `lessons.intro`, que
+                        existe justamente para responder "¿para qué me sirve
+                        esto?", y no lo leía nadie. */}
+                    {node.lesson_intro && (
+                      <p className="mt-1.5 text-xs leading-relaxed text-muted">
+                        {node.lesson_intro}
+                      </p>
+                    )}
+
+                    {/* Y qué ABRE. La tarjeta bloqueada siempre dijo qué la
+                        abre a ella; ninguna decía lo contrario, así que la
+                        mitad del grafo que motiva --"esto te sirve para
+                        cuatro temas más"-- era invisible. Sale de las mismas
+                        aristas que ya dibujan los conectores. */}
+                    {abre.length > 0 && (
+                      <p className="mt-2 text-xs text-muted">
+                        Abre{" "}
+                        <span className="font-medium text-foreground">
+                          {abre.length === 1 ? abre[0] : `${abre.length} temas`}
+                        </span>
+                      </p>
+                    )}
 
                     <div className="mt-3 flex items-center gap-3">
                       {/* El anillo dice de un vistazo cuánto llevas en ESTE
