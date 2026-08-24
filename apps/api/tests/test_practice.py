@@ -48,15 +48,14 @@ def test_se_puede_practicar_un_nodo_bloqueado(
     assert resp.json()["node_code"] == "bloqueado"
 
 
-def test_practicar_un_nodo_bloqueado_no_saltea_la_cadena(
+def test_practicar_un_tema_con_prerequisitos_suma_a_su_progreso(
     client: TestClient, db_session: Session, register_user
 ) -> None:
-    """Poder entrar no es poder saltarse el árbol.
+    """Un tema que se apoya en otro se practica igual, y cuenta igual.
 
-    Las respuestas cuentan para el progreso del nodo, pero mientras su
-    prerequisito no esté dominado el nodo sigue BLOQUEADO: si acertar acá lo
-    diera por dominado, un alumno abriría toda la rama de abajo sin haber
-    pasado por ninguno de sus temas previos.
+    Antes esto respondía 403 y el nodo quedaba en LOCKED por mucho que se
+    acertara. Ahora el árbol solo recomienda un orden: las respuestas suman al
+    progreso del tema desde la primera.
     """
     prereq = SkillNode(code="previo2", name="Previo", axis=SkillAxis.NUMEROS, tier=1)
     locked = SkillNode(code="bloqueado2", name="Bloqueado", axis=SkillAxis.NUMEROS, tier=2)
@@ -83,7 +82,10 @@ def test_practicar_un_nodo_bloqueado_no_saltea_la_cadena(
     arbol = client.get("/api/skill-tree", headers=headers).json()
     nodo = next(n for n in arbol if n["code"] == "bloqueado2")
     assert nodo["attempts"] == 5
-    assert nodo["status"] == "locked"
+    # Cinco aciertos de cinco: el tema queda DOMINADO, sin haber pasado por su
+    # prerequisito. Es la consecuencia buscada de abrir el árbol -- quien va a
+    # rendir M2 puede demostrar que sabe M2.
+    assert nodo["status"] == "mastered"
 
 
 def test_practice_questions_404_for_unknown_node(
@@ -117,7 +119,7 @@ def test_practice_answer_correct_updates_progress(
     assert body["node_accuracy"] == 1.0
 
 
-def test_practice_answer_unlocks_dependent_node(
+def test_practicar_ya_no_desbloquea_nada_porque_nada_esta_cerrado(
     client: TestClient, db_session: Session, register_user
 ) -> None:
     node, question, correct, _wrong = _make_node_with_question(db_session, "raiz_practica")
@@ -142,7 +144,11 @@ def test_practice_answer_unlocks_dependent_node(
         )
         assert resp.status_code == 200
 
-    assert resp.json()["newly_unlocked"] == ["Hijo"]
+    # El hijo estaba disponible desde el principio, así que no hay desbloqueo
+    # que anunciar: el banner de "desbloqueaste X" ya no tiene caso.
+    assert resp.json()["newly_unlocked"] == []
+    arbol = client.get("/api/skill-tree", headers=headers).json()
+    assert next(n for n in arbol if n["code"] == "hijo_practica")["status"] == "unlocked"
 
 
 def test_practice_answer_invalid_alternative_is_422(
