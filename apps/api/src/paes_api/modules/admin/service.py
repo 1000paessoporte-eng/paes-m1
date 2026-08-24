@@ -8,7 +8,7 @@ de mostrar un 0 que se leería como "rindieron y sacaron cero"."""
 from collections import defaultdict
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import Select, func, select
+from sqlalchemy import Select, case, func, select
 from sqlalchemy.orm import Session
 
 from paes_api.modules.admin.schemas import (
@@ -79,6 +79,18 @@ def _tasa(numerador: int, denominador: int) -> float | None:
 def _ventanas(ahora: datetime) -> tuple[datetime, datetime, datetime]:
     inicio_hoy = ahora.replace(hour=0, minute=0, second=0, microsecond=0)
     return inicio_hoy, ahora - timedelta(days=7), ahora - timedelta(days=30)
+
+
+#: Puntaje que cuenta para promedios y máximos.
+#:
+#: Un ensayo contestado tan rápido que no da tiempo ni de leerlo entra igual al
+#: historial del alumno, pero su puntaje no describe a nadie. Colarlo en estas
+#: métricas mueve el promedio del producto entero y ensucia el ranking de
+#: cuentas más activas.
+PUNTAJE_VALIDO = case(
+    (ExamAttempt.representativo.is_(True), ExamAttempt.estimated_score),
+    else_=None,
+)
 
 
 def _contar(db: Session, base: Select[tuple[int]], columna, ahora: datetime) -> ConteoPeriodo:
@@ -274,7 +286,7 @@ def _contenido(db: Session, ahora: datetime) -> ContenidoOut:
     ensayos = _contar(db, rendidos, ExamAttempt.finished_at, ahora)
 
     puntaje_promedio = db.execute(
-        select(func.avg(ExamAttempt.estimated_score)).where(
+        select(func.avg(PUNTAJE_VALIDO)).where(
             ExamAttempt.status == AttemptStatus.SUBMITTED,
             ExamAttempt.estimated_score.is_not(None),
         )
@@ -656,7 +668,7 @@ def _ensayos(db: Session, ahora: datetime) -> EnsayosOut:
             select(
                 func.count().label("iniciados"),
                 func.count(ExamAttempt.finished_at).label("terminados"),
-                func.avg(ExamAttempt.estimated_score).label("promedio"),
+                func.avg(PUNTAJE_VALIDO).label("promedio"),
             ).where(ExamAttempt.subject == subject)
         ).one()
         if not filas.iniciados:
@@ -866,7 +878,7 @@ def _alumnos(db: Session) -> AlumnosOut:
                 ExamAttempt.user_id,
                 func.count().label("iniciados"),
                 func.count(ExamAttempt.finished_at).label("terminados"),
-                func.max(ExamAttempt.estimated_score).label("mejor"),
+                func.max(PUNTAJE_VALIDO).label("mejor"),
             )
             .where(ExamAttempt.user_id.in_(ids))
             .group_by(ExamAttempt.user_id)
@@ -910,7 +922,7 @@ def _alumnos(db: Session) -> AlumnosOut:
             ExamAttempt.user_id,
             ExamAttempt.subject,
             func.count().label("ensayos"),
-            func.max(ExamAttempt.estimated_score).label("mejor"),
+            func.max(PUNTAJE_VALIDO).label("mejor"),
         )
         .where(ExamAttempt.user_id.in_(ids))
         .group_by(ExamAttempt.user_id, ExamAttempt.subject)
