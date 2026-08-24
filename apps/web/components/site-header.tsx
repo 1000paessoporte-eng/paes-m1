@@ -140,29 +140,49 @@ export function SiteHeader() {
           )}
         </div>
 
-        <button
-          type="button"
-          aria-label="Abrir menú"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-surface-hover lg:hidden"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
+        <div className="flex items-center gap-2 lg:hidden">
+          {/* La única puerta sin fricción del producto, fuera del menú.
+              Hasta acá "Probar sin cuenta" solo existía dentro del desplegable:
+              en un celular había que tocar las tres rayitas para descubrir que
+              se podía probar sin registrarse. De 71 personas que vieron la
+              portada en diez días, 4 llegaron al demo. No se le pide nada a
+              nadie para entrar ahí, así que no tiene por qué estar escondido.
+
+              Solo para visitantes: quien ya tiene cuenta rinde ensayos de
+              verdad y no necesita la muestra de cinco preguntas. */}
+          {!user && (
+            <Link
+              href="/demo"
+              className="btn-glow rounded-lg px-3 py-1.5 text-sm font-semibold text-accent-foreground"
+            >
+              Probar gratis
+            </Link>
+          )}
+
+          <button
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="flex h-9 w-9 items-center justify-center rounded-md text-foreground hover:bg-surface-hover"
           >
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" />
-            )}
-          </svg>
-        </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {open && (

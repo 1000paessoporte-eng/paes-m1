@@ -1870,6 +1870,10 @@ export interface components {
             correct_alternative_id: number;
             /** Explanation */
             explanation?: string | null;
+            /** Selected Alternative Id */
+            selected_alternative_id?: number | null;
+            /** Distractor Justification */
+            distractor_justification?: string | null;
         };
         /** DemoGradeOut */
         DemoGradeOut: {

@@ -128,12 +128,25 @@ def grade_demo(request: Request, payload: DemoGradeIn, db: Session = Depends(get
         correct_alt = next(a for a in question.alternatives if a.is_correct)
         is_correct = answer.selected_alternative_id == correct_alt.id
         correct_count += int(is_correct)
+        selected_alt = next(
+            (a for a in question.alternatives if a.id == answer.selected_alternative_id),
+            None,
+        )
         items.append(
             DemoGradeItemOut(
                 question_id=question.id,
                 is_correct=is_correct,
                 correct_alternative_id=correct_alt.id,
                 explanation=question.explanation,
+                selected_alternative_id=answer.selected_alternative_id,
+                # Solo si se falló: en la correcta no hay distractor que
+                # justificar. Y solo de la alternativa marcada, no de todas,
+                # para no regalar el descarte de las otras tres.
+                distractor_justification=(
+                    selected_alt.distractor_justification
+                    if selected_alt is not None and not is_correct
+                    else None
+                ),
             )
         )
 
