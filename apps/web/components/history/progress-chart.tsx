@@ -1,16 +1,30 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import type { ExamAttemptSummary } from "@/lib/api";
+import { cn } from "@paes-m1/utils";
+import type { ExamAttemptSummary, Subject } from "@/lib/api";
+import { COLOR_PRUEBA, NOMBRE_CORTO } from "@/lib/colores-prueba";
 
 /**
- * Evolución del puntaje a lo largo de los ensayos rendidos.
+ * Evolución del puntaje, una prueba a la vez.
  *
- * Es una serie única, por lo que no lleva caja de leyenda: el título nombra la
- * serie. Los ejes y la grilla van en tonos recesivos para que la línea sea lo
- * único prominente, y solo el último punto lleva etiqueta directa: rotular
- * todos los puntos satura el gráfico sin agregar información.
+ * Antes era UNA línea con todos los ensayos mezclados. Eso no era una
+ * evolución: un 823 de Lectora seguido de un 260 de M1 dibujaba una caída que
+ * no le pasó a nadie. Cada prueba tiene su propio temario y su propia tabla de
+ * transformación del DEMRE, así que sus puntajes no se comparan entre sí --
+ * solo consigo mismos a lo largo del tiempo.
+ *
+ * **Una sola serie a la vez, y no cinco superpuestas.** Los colores de prueba
+ * son de identidad y funcionan como chips, pero como cinco líneas de 2px
+ * fallan: entre M1 (#1d4ed8) y M2 (#7e22ce) hay ΔE 14,7 en visión normal --
+ * bajo el mínimo de 15-- y 2,0 en deuteranopía. Son justo las dos pruebas más
+ * parecidas y las más fáciles de confundir. Medido, no supuesto. Aislada, cada
+ * prueba pasa contraste de sobra contra la superficie y conserva su color.
+ *
+ * Los ejes y la grilla van en tonos recesivos para que la línea sea lo único
+ * prominente, y solo el último punto lleva etiqueta directa: rotular todos
+ * satura el gráfico sin agregar información.
  */
 
 interface Props {
@@ -18,19 +32,166 @@ interface Props {
   intentos: ExamAttemptSummary[];
 }
 
-const ANCHO = 640;
+const ANCHO_BASE = 640;
 const ALTO = 220;
 const MARGEN = { top: 18, right: 52, bottom: 28, left: 44 };
+
+/** Orden de las pruebas: el del temario, no el de cuántos ensayos hay. */
+const ORDEN: Subject[] = ["lectora", "m1", "m2", "ciencias", "historia"];
 
 export function ProgressChart({ intentos }: Props) {
   const quieto = useReducedMotion();
   const [activo, setActivo] = useState<number | null>(null);
   const idGradiente = useId();
 
-  // La lista viene del más reciente al más antiguo; el eje temporal necesita
-  // el orden inverso.
-  const serie = [...intentos].reverse();
-  if (serie.length < 2) return null;
+  // Un ensayo sin puntaje estimado no tiene dónde ubicarse en el eje: se queda
+  // fuera de la serie, no en cero.
+  const porPrueba = useMemo(() => {
+    const mapa = new Map<Subject, ExamAttemptSummary[]>();
+    for (const intento of intentos) {
+      if (intento.estimated_score == null) continue;
+      mapa.set(intento.subject, [...(mapa.get(intento.subject) ?? []), intento]);
+    }
+    // La API entrega el más reciente primero; el eje temporal necesita el
+    // orden en que los vivió el alumno.
+    for (const [prueba, lista] of mapa) {
+      mapa.set(
+        prueba,
+        [...lista].sort(
+          (a, b) => new Date(a.started_at).getTime() - new Date(b.started_at).getTime()
+        )
+      );
+    }
+    return mapa;
+  }, [intentos]);
+
+  const disponibles = ORDEN.filter((p) => (porPrueba.get(p)?.length ?? 0) > 0);
+
+  // Arranca en la prueba donde hay más que ver. Abrir en una con un solo
+  // ensayo mostraría el estado vacío teniendo trece puntos al lado.
+  const [prueba, setPrueba] = useState<Subject | null>(null);
+  const elegida =
+    prueba && disponibles.includes(prueba)
+      ? prueba
+      : [...disponibles].sort(
+          (a, b) => (porPrueba.get(b)?.length ?? 0) - (porPrueba.get(a)?.length ?? 0)
+        )[0];
+
+  if (!elegida) return null;
+
+  const serie = porPrueba.get(elegida) ?? [];
+
+  return (
+    <figure
+      className="viz-root m-0"
+      style={{ "--serie": COLOR_PRUEBA[elegida] } as React.CSSProperties}
+    >
+      <figcaption className="mb-1 text-sm font-semibold">
+        Evolución de tu puntaje en {NOMBRE_CORTO[elegida]}
+      </figcaption>
+      <p className="mb-3 text-xs text-muted">
+        Cada prueba se mide con su propia tabla del DEMRE, así que los puntajes
+        solo se comparan dentro de una misma prueba.
+      </p>
+
+      {/* El filtro va sobre el gráfico y en una sola fila. Lleva la cuenta de
+          ensayos porque es la que decide si hay algo que mirar. */}
+      {disponibles.length > 1 && (
+        <div
+          role="tablist"
+          aria-label="Elige la prueba"
+          className="mb-4 flex flex-wrap gap-1.5"
+        >
+          {disponibles.map((p) => {
+            const activa = p === elegida;
+            return (
+              <button
+                key={p}
+                role="tab"
+                aria-selected={activa}
+                onClick={() => {
+                  setPrueba(p);
+                  setActivo(null);
+                }}
+                style={{ "--color-prueba": COLOR_PRUEBA[p] } as React.CSSProperties}
+                className={cn(
+                  "flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs transition-colors",
+                  activa
+                    ? "border-[var(--color-prueba)] bg-[var(--color-prueba)]/10 font-medium text-foreground"
+                    : "border-border text-muted hover:bg-surface-hover hover:text-foreground"
+                )}
+              >
+                {/* El punto de color acompaña al nombre: la identidad nunca
+                    queda solo en el color. */}
+                <span
+                  aria-hidden
+                  className="h-2 w-2 shrink-0 rounded-full bg-[var(--color-prueba)]"
+                />
+                {NOMBRE_CORTO[p]}
+                <span className="text-muted tabular-nums">
+                  {porPrueba.get(p)?.length}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {serie.length < 2 ? (
+        <p className="rounded-lg border border-border bg-surface-hover px-4 py-6 text-center text-sm text-muted">
+          Llevas un ensayo de {NOMBRE_CORTO[elegida]}
+          {serie[0]?.estimated_score != null && (
+            <>
+              , con <strong className="text-foreground">{serie[0].estimated_score} puntos</strong>
+            </>
+          )}
+          . Rinde uno más y acá vas a ver si subiste.
+        </p>
+      ) : (
+        <Grafico
+          serie={serie}
+          activo={activo}
+          setActivo={setActivo}
+          idGradiente={idGradiente}
+          quieto={quieto}
+          prueba={elegida}
+        />
+      )}
+    </figure>
+  );
+}
+
+function Grafico({
+  serie,
+  activo,
+  setActivo,
+  idGradiente,
+  quieto,
+  prueba,
+}: {
+  serie: ExamAttemptSummary[];
+  activo: number | null;
+  setActivo: (i: number | null) => void;
+  idGradiente: string;
+  quieto: boolean | null;
+  prueba: Subject;
+}) {
+  // El viewBox se ajusta al ancho REAL del contenedor para que la escala sea
+  // 1:1. Con un viewBox fijo de 640 el SVG se encogía a 308px en un celular y
+  // arrastraba el texto con él: las etiquetas de los ejes quedaban en 5,3px
+  // efectivos, ilegibles. Medido, no estimado.
+  const contenedor = useRef<HTMLDivElement>(null);
+  const [ancho, setAncho] = useState(ANCHO_BASE);
+  useEffect(() => {
+    const nodo = contenedor.current;
+    if (!nodo) return;
+    const observador = new ResizeObserver(([entrada]) => {
+      const medido = entrada.contentRect.width;
+      if (medido > 0) setAncho(medido);
+    });
+    observador.observe(nodo);
+    return () => observador.disconnect();
+  }, []);
 
   const puntajes = serie.map((i) => i.estimated_score ?? 0);
   const min = Math.min(...puntajes);
@@ -43,7 +204,7 @@ export function ProgressChart({ intentos }: Props) {
   const yMax = Math.min(1000, Math.ceil((max + holgura) / 50) * 50);
   const rango = yMax - yMin || 1;
 
-  const anchoUtil = ANCHO - MARGEN.left - MARGEN.right;
+  const anchoUtil = Math.max(80, ancho - MARGEN.left - MARGEN.right);
   const altoUtil = ALTO - MARGEN.top - MARGEN.bottom;
 
   const x = (i: number) => MARGEN.left + (i / (serie.length - 1)) * anchoUtil;
@@ -62,22 +223,21 @@ export function ProgressChart({ intentos }: Props) {
   const marcasY = [yMin, Math.round((yMin + yMax) / 2), yMax];
   const ultimo = puntos[puntos.length - 1];
   const activoPunto = activo !== null ? puntos[activo] : null;
+  const anchoZona = anchoUtil / (serie.length - 1);
 
   return (
-    <figure className="viz-root m-0">
-      <figcaption className="mb-1 text-sm font-semibold">
-        Evolución de tu puntaje estimado
-      </figcaption>
+    <>
       <p className="mb-3 text-xs text-muted">
-        {serie.length} ensayos, del más antiguo al más reciente
+        {serie.length} ensayos de {NOMBRE_CORTO[prueba]}, del más antiguo al más
+        reciente
       </p>
 
-      <div className="relative">
+      <div ref={contenedor} className="relative">
         <svg
-          viewBox={`0 0 ${ANCHO} ${ALTO}`}
+          viewBox={`0 0 ${ancho} ${ALTO}`}
           className="w-full"
           role="img"
-          aria-label={`Gráfico de línea con la evolución del puntaje en ${serie.length} ensayos. Puntaje inicial ${puntajes[0]}, puntaje más reciente ${puntajes[puntajes.length - 1]}.`}
+          aria-label={`Gráfico de línea con la evolución del puntaje en ${serie.length} ensayos de ${NOMBRE_CORTO[prueba]}. Puntaje inicial ${puntajes[0]}, puntaje más reciente ${puntajes[puntajes.length - 1]}.`}
           onMouseLeave={() => setActivo(null)}
         >
           <defs>
@@ -92,7 +252,7 @@ export function ProgressChart({ intentos }: Props) {
             <g key={valor}>
               <line
                 x1={MARGEN.left}
-                x2={ANCHO - MARGEN.right}
+                x2={ancho - MARGEN.right}
                 y1={y(valor)}
                 y2={y(valor)}
                 className="stroke-[var(--grilla)]"
@@ -120,8 +280,11 @@ export function ProgressChart({ intentos }: Props) {
 
           {/* La línea se DIBUJA de izquierda a derecha, que es la dirección
               del tiempo. Es tu historia de puntajes: verla trazarse dice
-              "esto pasó, en este orden" mejor que aparecer completa. */}
+              "esto pasó, en este orden" mejor que aparecer completa.
+              La clave la reinicia al cambiar de prueba, para que el trazo
+              vuelva a contar la historia de la prueba nueva. */}
           <motion.path
+            key={prueba}
             d={linea}
             fill="none"
             className="stroke-[var(--serie)]"
@@ -158,9 +321,9 @@ export function ProgressChart({ intentos }: Props) {
           {puntos.map((p, i) => (
             <rect
               key={`hit-${p.intento.attempt_id}`}
-              x={p.cx - anchoUtil / (serie.length - 1) / 2}
+              x={p.cx - anchoZona / 2}
               y={MARGEN.top}
-              width={anchoUtil / (serie.length - 1)}
+              width={anchoZona}
               height={altoUtil}
               fill="transparent"
               onMouseEnter={() => setActivo(i)}
@@ -189,7 +352,7 @@ export function ProgressChart({ intentos }: Props) {
           <div
             className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-lg border border-border bg-background px-2.5 py-1.5 text-xs whitespace-nowrap shadow-sm"
             style={{
-              left: `${(activoPunto.cx / ANCHO) * 100}%`,
+              left: `${(activoPunto.cx / ancho) * 100}%`,
               top: `${(activoPunto.cy / ALTO) * 100}%`,
             }}
           >
@@ -202,6 +365,6 @@ export function ProgressChart({ intentos }: Props) {
           </div>
         )}
       </div>
-    </figure>
+    </>
   );
 }
