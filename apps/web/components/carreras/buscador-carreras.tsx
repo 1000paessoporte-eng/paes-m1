@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { buscarCarrerasPublico, type CarreraCatalogo } from "@/lib/api";
-import { nombreLegible, slugCarrera } from "@/lib/carreras";
+import { nombreCarrera, nombreLegible, slugCarrera } from "@/lib/carreras";
 
 type Estado = "quieto" | "buscando" | "listo" | "error";
 
@@ -106,7 +106,7 @@ export function BuscadorCarreras({ inicial = "" }: { inicial?: string }) {
                 className="card-hover flex flex-col gap-0.5 rounded-lg border border-border bg-surface p-3"
               >
                 <span className="text-sm font-medium text-foreground">
-                  {nombreLegible(c.nombre)}
+                  {nombreCarrera(c.nombre)}
                 </span>
                 <span className="text-xs text-muted">
                   {nombreLegible(c.universidad)} · {nombreLegible(c.sede)}

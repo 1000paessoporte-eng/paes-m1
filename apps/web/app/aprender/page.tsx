@@ -18,7 +18,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Lecciones del temario PAES",
   description:
-    "La teoría de cada tema del temario PAES: las propiedades que hay que saber, un ejercicio resuelto donde cada paso explica por qué se hace, y el error en el que cae casi todo el mundo. Gratis y sin cuenta.",
+    "La teoría de los 53 temas del temario PAES, con un ejercicio resuelto paso a paso y el error típico de cada uno. Gratis y sin cuenta.",
   alternates: { canonical: "/aprender" },
 };
 

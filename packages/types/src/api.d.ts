@@ -2257,6 +2257,11 @@ export interface components {
             elapsed_seconds: number;
             /** Duration Limit Seconds */
             duration_limit_seconds: number;
+            /**
+             * Representativo
+             * @default true
+             */
+            representativo: boolean;
             pace: components["schemas"]["Pace"];
             /** Axes */
             axes: string[];
@@ -2360,6 +2365,11 @@ export interface components {
             elapsed_seconds: number;
             /** Duration Limit Seconds */
             duration_limit_seconds: number;
+            /**
+             * Representativo
+             * @default true
+             */
+            representativo: boolean;
             /** By Axis */
             by_axis: components["schemas"]["BreakdownItemOut"][];
             /** By Difficulty */
@@ -2793,6 +2803,8 @@ export interface components {
             correct_alternative_id: number;
             /** Explanation */
             explanation?: string | null;
+            /** Distractor Justification */
+            distractor_justification?: string | null;
             /** Node Accuracy */
             node_accuracy: number;
             /** Node Attempts */
