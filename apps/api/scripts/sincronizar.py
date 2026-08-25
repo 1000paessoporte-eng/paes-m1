@@ -122,6 +122,7 @@ def estado_deseado(questions, titulos_por_clave):
             "nodo": q["skill_node"],
             "dificultad": q["difficulty"].upper(),
             "explicacion": q["explanation"],
+            "imagen": q.get("image_url"),
             "texto_base": titulos_por_clave.get(q.get("passage")),
             "alternativas": [
                 {
@@ -180,7 +181,8 @@ def main() -> None:
 
     with psycopg.connect(url, connect_timeout=30) as c, c.cursor() as cur:
         cur.execute(
-            """select q.id, q.stem, s.code, q.difficulty::text, q.explanation, p.title
+            """select q.id, q.stem, s.code, q.difficulty::text, q.explanation,
+                       q.image_url, p.title
                  from questions q
                  join skill_nodes s on s.id = q.skill_node_id
                  left join reading_passages p on p.id = q.passage_id"""
@@ -195,7 +197,7 @@ def main() -> None:
             porq.setdefault(qid, []).append((aid, label, txt, ok, justif))
 
         sobran, difieren_alt, difieren_meta = [], [], []
-        for qid, stem, code, dif, explicacion, titulo in filas:
+        for qid, stem, code, dif, explicacion, imagen, titulo in filas:
             objetivo = deseado.get(stem)
             if objetivo is None:
                 sobran.append((qid, code, stem))
@@ -205,10 +207,11 @@ def main() -> None:
             )
             if corregir or borrar or insertar:
                 difieren_alt.append((qid, stem, corregir, borrar, insertar))
-            if (code, dif, explicacion, titulo) != (
+            if (code, dif, explicacion, imagen, titulo) != (
                 objetivo["nodo"],
                 objetivo["dificultad"],
                 objetivo["explicacion"],
+                objetivo["imagen"],
                 objetivo["texto_base"],
             ):
                 difieren_meta.append((qid, objetivo, code, dif, titulo))
@@ -255,7 +258,7 @@ def main() -> None:
             f"    -> {alt_corregidas} alternativas corregidas, "
             f"{alt_borradas} borradas, {alt_nuevas} nuevas"
         )
-        print(f"  con nodo, dificultad, explicacion o texto: {len(difieren_meta)}")
+        print(f"  con nodo, dificultad, explicacion, figura o texto: {len(difieren_meta)}")
         print(f"  nodos con subject equivocado:             {len(nodos_mal)} {nodos_mal}")
         print(f"  nodos con nombre, eje o tier distinto:    {len(nodos_ficha)} "
               f"{[c for c, _, _ in nodos_ficha]}")
@@ -380,6 +383,7 @@ def main() -> None:
                 """update questions
                       set difficulty=%s,
                           explanation=%s,
+                          image_url=%s,
                           skill_node_id=(select id from skill_nodes where code=%s),
                           passage_id=(select id from reading_passages
                                        where title=%s)
@@ -387,13 +391,14 @@ def main() -> None:
                 (
                     objetivo["dificultad"],
                     objetivo["explicacion"],
+                    objetivo["imagen"],
                     objetivo["nodo"],
                     objetivo["texto_base"],
                     qid,
                 ),
             )
         print(f"  {len(difieren_meta)} preguntas corregidas en nodo, dificultad, "
-              "explicacion o texto base")
+              "explicacion, figura o texto base")
 
         # --- borrados de verdad ---------------------------------------------
         if borrar_preguntas:

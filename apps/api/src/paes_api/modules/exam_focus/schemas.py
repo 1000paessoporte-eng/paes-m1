@@ -201,6 +201,10 @@ class ReviewAlternativeOut(BaseModel):
 class ReviewQuestionOut(BaseModel):
     id: int
     stem: str
+    #: La figura de la pregunta, si la tiene. Va también en la revisión: sin
+    #: ella, la explicación de una pregunta que se apoya en un gráfico habla de
+    #: algo que ya no está a la vista.
+    image_url: str | None = None
     #: Desarrollo de por qué la respuesta correcta lo es. Es lo que se muestra
     #: al revisar el ensayo.
     explanation: str | None = None

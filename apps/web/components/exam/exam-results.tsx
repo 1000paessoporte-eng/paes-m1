@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { CompartirResultado } from "@/components/exam/compartir-resultado";
+import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { Resolucion } from "@/components/exam/resolucion";
 import { TextoRico } from "@/components/texto-rico";
 import type { BreakdownItem, ExamResult, ExamReview, ReviewQuestion } from "@/lib/api";
@@ -400,6 +401,8 @@ function RevisionItem({
         </div>
 
         <TextoRico texto={pregunta.stem} />
+
+        {pregunta.image_url && <FiguraPregunta src={pregunta.image_url} />}
 
         <div className="mt-3 space-y-1.5">
           {pregunta.alternatives.map((alt) => (

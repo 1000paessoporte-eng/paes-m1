@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@paes-m1/utils";
+import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { PassagePanel } from "@/components/exam/passage-panel";
 import { Burbuja } from "@/components/ui/burbuja";
 import { IconoEstrella } from "@/components/ui/iconos";
@@ -821,6 +822,8 @@ export function ExamRunner({
                     )}
 
                     <TextoRico texto={q.stem} className="text-lg" />
+
+                {q.image_url && <FiguraPregunta src={q.image_url} />}
 
                     <div className="mt-5 space-y-2">
                       {q.alternatives.map((alt, i) => {

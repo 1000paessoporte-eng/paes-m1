@@ -83,9 +83,9 @@ def test_ciencias_ofrece_sus_tres_disciplinas():
 #
 # Para subir un número acá hay que haber leído la pregunta completa.
 BIOLOGIA_REVISADAS = {
-    "cie_celula": 20,
-    "cie_genetica": 20,
-    "cie_ecosistemas": 20,
+    "cie_celula": 22,
+    "cie_genetica": 22,
+    "cie_ecosistemas": 22,
 }
 
 
@@ -196,3 +196,43 @@ def test_lectora_cubre_sus_tres_habilidades_en_cada_dificultad():
     for eje in ejes:
         dificultades = {q["difficulty"] for q in QUESTIONS_LECTORA if q["skill_node"] == eje}
         assert len(dificultades) >= 2, f"{eje} solo tiene preguntas {dificultades}"
+
+
+def test_las_figuras_de_las_preguntas_existen_y_estan_descritas():
+    """Toda figura referida por una pregunta existe y tiene texto alternativo.
+
+    Una `image_url` mal escrita no rompe nada en el servidor: la pregunta se
+    siembra igual y el alumno se encuentra con un recuadro vacío en pleno
+    ensayo, sin forma de contestar. Y una figura sin descripción es una
+    pregunta que no se puede rendir con lector de pantalla.
+
+    Las dos mitades viven en el repositorio del frontend --el archivo en
+    `public/preguntas/` y la descripción en `lib/figuras.ts`--, así que esto se
+    puede comprobar sin base de datos ni navegador.
+    """
+    from pathlib import Path
+
+    from paes_api.seed_data import (
+        QUESTIONS,
+        QUESTIONS_CIENCIAS,
+        QUESTIONS_HISTORIA,
+        QUESTIONS_LECTORA,
+    )
+
+    web = Path(__file__).resolve().parents[3] / "apps" / "web"
+    descripciones = (web / "lib" / "figuras.ts").read_text(encoding="utf-8")
+
+    todas = QUESTIONS + QUESTIONS_LECTORA + QUESTIONS_CIENCIAS + QUESTIONS_HISTORIA
+    con_figura = [q for q in todas if q.get("image_url")]
+    assert con_figura, "el banco ya no tiene ninguna pregunta con figura"
+
+    for q in con_figura:
+        ruta = q["image_url"]
+        assert ruta.startswith("/preguntas/"), (
+            f"{ruta}: las figuras van en /preguntas/, servidas desde public/"
+        )
+        archivo = web / "public" / ruta.lstrip("/")
+        assert archivo.is_file(), f"falta el archivo de la figura: {ruta}"
+        assert f'"{ruta}"' in descripciones, (
+            f"{ruta} no tiene texto alternativo en apps/web/lib/figuras.ts"
+        )

@@ -110,17 +110,26 @@ def _q(
     correct: str,
     explanation: str,
     distractors: list[tuple[str, str]],
+    imagen: str | None = None,
 ):
     """Arma una pregunta con la correcta primero y los distractores después.
 
     `explanation` es lo que ve el estudiante al revisar: el desarrollo de por
     qué la respuesta correcta lo es. No debe mencionar letras de alternativa,
     porque `seed.py` mezcla el orden final A-D.
+
+    `imagen` es la ruta de la figura dentro del sitio ("/preguntas/algo.svg").
+    Son figuras PROPIAS, dibujadas para la pregunta: las de la prueba oficial
+    tienen derechos de la Universidad de Chile igual que sus enunciados, y una
+    figura copiada se reconoce todavía más rápido que un texto. El enunciado
+    debe apoyarse en la figura, no repetirla: si el dato se puede leer en el
+    texto, la figura sobra y la pregunta deja de medir lo que la PAES mide.
     """
     return {
         "skill_node": skill_node,
         "difficulty": difficulty,
         "stem": stem,
+        "image_url": imagen,
         "explanation": explanation,
         "alternatives": [{"text": correct, "is_correct": True, "justification": None}]
         + [
@@ -45587,6 +45596,142 @@ QUESTIONS_CIENCIAS = [
             ("La extinción definitiva de las especies de un lugar", "La sucesión describe recambio, no extinción."),
             ("El aumento de la población de una sola especie", "Involucra el reemplazo de comunidades completas."),
         ],
+    ),
+    # ---------- Biología con figura ----------
+    # Las primeras preguntas del banco que se apoyan en una imagen. La PAES de
+    # Ciencias lo hace en buena parte de sus preguntas: un esquema de célula, un
+    # pedigrí, una curva de población. Las figuras son PROPIAS y viven en
+    # `apps/web/public/preguntas/`; las de la prueba oficial tienen derechos de
+    # la Universidad de Chile igual que sus enunciados.
+    #
+    # El enunciado no describe la figura: si se pudiera contestar sin mirarla,
+    # la imagen sería decoración y la pregunta no mediría lo que mide la PAES.
+    _q(
+        "cie_celula", "medio",
+        "El esquema muestra una célula animal con cinco estructuras numeradas. "
+        "¿Cuál de ellas produce la mayor parte del ATP de la célula?",
+        "La estructura 3",
+        "La 3 es la mitocondria, y se reconoce por los pliegues que recorren su "
+        "interior: son las crestas.\n\n"
+        "Esos pliegues no son un adorno del dibujo. Ahí está anclada la cadena "
+        "transportadora de electrones, y plegar la membrana multiplica la "
+        "superficie disponible para ella. Más superficie es más ATP en el mismo "
+        "volumen.\n\n"
+        "El resto del esquema reparte otras tareas: guardar el material "
+        "genético, sintetizar proteínas y despacharlas. Ninguna de ellas produce "
+        "energía; todas la gastan.",
+        [
+            ("La estructura 1", "Es la membrana plasmática: controla qué entra y qué sale, pero no produce ATP."),
+            ("La estructura 2", "Es el núcleo. Guarda el ADN y dirige la síntesis de proteínas; la energía la consume, no la fabrica."),
+            ("La estructura 4", "Es el aparato de Golgi, la pila de sacos aplanados: modifica y despacha lo que le llega, sin hacer respiración celular."),
+        ],
+        imagen="/preguntas/bio-celula-organelos.svg",
+    ),
+    _q(
+        "cie_celula", "medio",
+        "El recipiente de la figura está dividido por una membrana que deja "
+        "pasar agua pero no soluto. ¿Qué se observa al cabo de un tiempo?",
+        "El nivel sube en el lado B y baja en el lado A",
+        "El agua se mueve por ósmosis hacia donde hay MÁS soluto, que es lo "
+        "mismo que decir hacia donde hay menos agua por cada mililitro de "
+        "disolución.\n\n"
+        "El lado B tiene cuatro veces más soluto que el A, así que el agua pasa "
+        "de A hacia B y el desnivel se hace visible.\n\n"
+        "Conviene fijarse en qué es lo que se mueve. El soluto no puede cruzar: "
+        "la membrana no lo deja. Como el sistema solo puede igualar "
+        "concentraciones moviendo agua, la mueve.",
+        [
+            ("El nivel sube en el lado A y baja en el lado B", "Invierte el sentido: el agua entra donde está más concentrado el soluto, y ese es B."),
+            ("El soluto pasa de B a A hasta igualar las concentraciones", "La membrana no deja pasar soluto. Por eso lo único que se mueve es el agua."),
+            ("No ocurre nada, porque los niveles ya están iguales", "Los niveles iguales no son equilibrio: mientras las concentraciones difieran, el agua sigue cruzando."),
+        ],
+        imagen="/preguntas/bio-osmosis-membrana.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "En el árbol genealógico, los individuos pintados presentan la "
+        "enfermedad. ¿Cuál es el modo de herencia más probable?",
+        "Autosómico recesivo",
+        "Dos datos del árbol bastan para decidirlo.\n\n"
+        "El primero: la pareja de la generación I no tiene la enfermedad y aun "
+        "así una de sus hijas la presenta. Un carácter que aparece de padres "
+        "sanos tiene que ser recesivo, y ellos son portadores.\n\n"
+        "El segundo descarta el cromosoma X. Si fuera recesivo ligado al X, esa "
+        "mujer afectada necesitaría dos copias del alelo, y una de ellas "
+        "tendría que venir de su padre, que sería entonces un hombre afectado. "
+        "Su padre está sano, así que el gen no va en el X.\n\n"
+        "Una mujer afectada hija de padre sano es, por sí sola, la señal que "
+        "descarta la herencia recesiva ligada al X.",
+        [
+            ("Autosómico dominante", "Con un alelo dominante, todo afectado tiene al menos un progenitor afectado. Acá nacen afectados de padres sanos en dos generaciones."),
+            ("Recesivo ligado al cromosoma X", "La mujer afectada tendría que haber recibido el alelo también de su padre, que sería afectado. Su padre está sano."),
+            ("Dominante ligado al cromosoma X", "Sigue siendo dominante: no podría saltarse una generación de padres sanos."),
+        ],
+        imagen="/preguntas/bio-pedigri-autosomico.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "El cuadro de Punnett muestra los cuatro genotipos posibles de la "
+        "descendencia, pero los gametos de los progenitores están tapados. "
+        "¿Cuáles son los genotipos de los progenitores?",
+        "Aa y aa",
+        "El cuadro se lee al revés de como se construye: desde la descendencia "
+        "hacia los gametos.\n\n"
+        "En la descendencia hay dos Aa y dos aa. El alelo A aparece, así que "
+        "alguien tuvo que aportarlo; pero también hay aa, así que ese mismo "
+        "progenitor tiene que poder aportar a. Un progenitor que aporta A en "
+        "unas casillas y a en otras es Aa.\n\n"
+        "El otro aporta a en las cuatro casillas, porque no hay ni una sin al "
+        "menos una a. Ese es aa.\n\n"
+        "El resultado 50% Aa y 50% aa es la marca de este cruce, y por eso se "
+        "usa para averiguar si un individuo de aspecto dominante es AA o Aa.",
+        [
+            ("Aa y Aa", "Ese cruce produciría también un AA, y en el cuadro no hay ninguna casilla AA."),
+            ("AA y aa", "Si un progenitor fuera AA, las cuatro casillas serían Aa. El cuadro tiene dos aa."),
+            ("AA y Aa", "Con un progenitor AA ninguna casilla podría ser aa, y hay dos."),
+        ],
+        imagen="/preguntas/bio-punnett-incognita.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "Según la red trófica de la figura, el águila ocupa dos niveles "
+        "tróficos distintos. ¿Cuál es la razón?",
+        "Porque come al roedor y también a la culebra, que se alimenta del roedor",
+        "El nivel trófico no es una propiedad del animal: es la posición que "
+        "ocupa en cada cadena de la que forma parte.\n\n"
+        "Cuando el águila come al roedor, que se alimenta de pasto, la cadena "
+        "es pasto → roedor → águila y el águila es consumidor secundario.\n\n"
+        "Cuando come a la culebra, la cadena es pasto → roedor → culebra → "
+        "águila, y ahí el águila es consumidor terciario.\n\n"
+        "Por eso las redes tróficas describen mejor un ecosistema que las "
+        "cadenas sueltas: casi ningún animal come en un solo nivel.",
+        [
+            ("Porque come al insecto y también al ave que se alimenta del insecto", "En la red no hay ninguna flecha desde el insecto hacia el águila. Al ave sí la come; al insecto, no."),
+            ("Porque no tiene depredadores y ocupa el extremo de todas las cadenas", "Ser el último eslabón no define el nivel. El nivel lo da de qué se alimenta, no quién se lo come."),
+            ("Porque se alimenta de tres presas distintas dentro de la misma red", "Come tres, es cierto, pero el número de presas no fija el nivel: si las tres fueran consumidores primarios, quedaría en uno solo."),
+        ],
+        imagen="/preguntas/bio-red-trofica.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "El gráfico muestra cómo cambia una población de conejos. ¿En cuál de "
+        "los puntos marcados está creciendo más rápido?",
+        "En Q",
+        "La velocidad de crecimiento es la inclinación de la curva, no su "
+        "altura. Hay que buscar el tramo más empinado, no el punto más "
+        "alto.\n\n"
+        "En Q la curva sube casi en diagonal, y ese punto está justo en la "
+        "mitad de la capacidad de carga: 600 de 1.200. Ahí ya hay bastantes "
+        "individuos reproduciéndose y todavía sobran recursos para todos.\n\n"
+        "Es la trampa clásica de este gráfico: en S la población es la más "
+        "numerosa de las cuatro, pero la curva ya es casi horizontal y el "
+        "crecimiento es prácticamente cero.",
+        [
+            ("En P", "La curva está casi plana: hay muy pocos individuos reproduciéndose y el crecimiento recién comienza."),
+            ("En R", "La población es grande, pero la curva ya empezó a aplanarse: crece menos que en el tramo empinado."),
+            ("En S", "Ahí la curva es casi horizontal. La población llegó a la capacidad de carga y casi no crece."),
+        ],
+        imagen="/preguntas/bio-crecimiento-poblacional.svg",
     ),
 ]
 

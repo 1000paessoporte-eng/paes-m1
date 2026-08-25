@@ -972,6 +972,7 @@ def get_review(db: Session, attempt: ExamAttempt) -> ExamReviewOut:
             ReviewQuestionOut(
                 id=q.id,
                 stem=q.stem,
+                image_url=q.image_url,
                 explanation=q.explanation,
                 difficulty=q.difficulty,
                 skill_node_id=q.skill_node_id,

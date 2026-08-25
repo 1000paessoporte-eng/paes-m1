@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 430" width="660" height="430" role="img">
+  <title>Red trófica de un ecosistema con dos productores, dos consumidores primarios, dos secundarios y un águila</title>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <!-- flechas: apuntan de lo comido a quien lo come -->
+    <g stroke="#475569" stroke-width="2.4" fill="none" marker-end="url(#flecha)">
+      <path d="M148 340 L128 288"/>
+      <path d="M188 336 L346 292"/>
+      <path d="M452 336 L424 292"/>
+      <path d="M120 236 L216 196"/>
+      <path d="M400 236 L482 196"/>
+      <path d="M266 148 L316 100"/>
+      <path d="M498 148 L400 100"/>
+      <path d="M92 240 C 40 150, 140 56, 250 72"/>
+    </g>
+
+    <!-- organismos -->
+    <g font-size="16" font-weight="600" fill="#111827" text-anchor="middle">
+      <rect x="60" y="344" width="160" height="46" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+      <text x="140" y="373">Pasto</text>
+      <rect x="380" y="344" width="160" height="46" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+      <text x="460" y="373">Arbusto</text>
+
+      <rect x="46" y="244" width="150" height="46" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+      <text x="121" y="273">Roedor</text>
+      <rect x="330" y="244" width="150" height="46" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+      <text x="405" y="273">Insecto</text>
+
+      <rect x="166" y="150" width="160" height="46" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+      <text x="246" y="179">Culebra</text>
+      <rect x="424" y="150" width="190" height="46" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+      <text x="519" y="179">Ave insectívora</text>
+
+      <rect x="258" y="52" width="150" height="46" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+      <text x="333" y="81">Águila</text>
+    </g>
+
+    <text x="330" y="422" text-anchor="middle" font-size="14" fill="#4b5563">
+      Cada flecha va desde el organismo que sirve de alimento hacia el que se alimenta de él.
+    </text>
+  </g>
+</svg>

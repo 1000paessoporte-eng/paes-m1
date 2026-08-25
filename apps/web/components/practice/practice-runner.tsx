@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
+import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { Resolucion } from "@/components/exam/resolucion";
 import { Burbuja } from "@/components/ui/burbuja";
 import {
@@ -264,6 +265,8 @@ export function PracticeRunner({ code }: { code: string }) {
           {current.difficulty === "facil" ? "Fácil" : current.difficulty === "medio" ? "Medio" : "Difícil"}
         </span>
         <p className="mt-2 text-base leading-relaxed text-foreground">{current.stem}</p>
+
+        {current.image_url && <FiguraPregunta src={current.image_url} />}
 
         <div className="mt-6 flex flex-col gap-2.5">
           {current.alternatives.map((alt, i) => {
