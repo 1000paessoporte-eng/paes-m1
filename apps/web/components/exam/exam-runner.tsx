@@ -730,9 +730,19 @@ export function ExamRunner({
             —hoja abierta, preguntas al lado— y lo que pedía el ensayo real.
             Bajo lg no hay ancho para dos carriles legibles: el texto vuelve
             arriba, una sola vez, como estaba. */}
+        {/* El reparto no es mitad y mitad: la lectura se lleva algo más que
+            las preguntas. Un texto de mil palabras se lee mejor en un renglón
+            largo, mientras que una alternativa tiene 52 caracteres de mediana
+            y no necesita el mismo ancho. Con el carril de 1.104 px la lectura
+            pasa de 540 a unos 578 px y las preguntas bajan a 502.
+            El límite lo pone el otro lado: cuanto más angosta la columna de
+            preguntas, más alternativas se parten en dos líneas. Con este
+            reparto son cerca del 9% contra el 3% de hoy; con 1,2fr serían 14%,
+            y por eso no se estiró más. */}
         <div
           className={cn(
-            textoPagina && "lg:grid lg:grid-cols-2 lg:items-start lg:gap-6"
+            textoPagina &&
+              "lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-6"
           )}
         >
           {textoPagina && (
