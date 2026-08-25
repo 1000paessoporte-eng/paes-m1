@@ -182,6 +182,33 @@ export default async function ArbolHabilidadesPage({
         </div>
       )}
 
+      {/* HISTORIA ENTRENA HABILIDADES, NO CONTENIDO. Y hay que decirlo.
+          Comparado con el temario oficial de Admisión 2027, el árbol de
+          Historia cubre las tres habilidades que evalúa la prueba —análisis
+          de fuentes, pensamiento temporal, pensamiento crítico— y ninguno de
+          sus temas: Estado-nación del siglo XIX, totalitarismos, Guerra Fría,
+          dictaduras y violación de DD.HH. Medido sobre las 195 preguntas del
+          banco: cero mencionan "siglo XIX", "Guerra Fría" o "totalitarismo".
+
+          Es una decisión tomada, no un olvido: ningún script puede verificar
+          que una afirmación histórica sea cierta, y el banco se verifica
+          entero antes de publicarse. Pero un alumno que abre este árbol
+          asume que está viendo el temario, y llega a la prueba sin haber
+          estudiado la mitad que sí entra. Decírselo le cuesta un párrafo y le
+          ahorra esa sorpresa. */}
+      {prueba === "historia" && (
+        <p className="mt-5 rounded-lg border border-warning/40 bg-warning/10 px-4 py-3 text-sm leading-relaxed">
+          <strong className="font-semibold">
+            Acá entrenas las habilidades, no los contenidos.
+          </strong>{" "}
+          La PAES de Historia evalúa análisis de fuentes, pensamiento temporal
+          y pensamiento crítico, y eso es lo que practicas en este árbol. Los
+          contenidos del temario —el siglo XIX, la Guerra Fría, las dictaduras
+          y los Derechos Humanos— no están en nuestro banco todavía: esos los
+          tienes que estudiar aparte.
+        </p>
+      )}
+
       <div className="mt-8">
         <SkillTreeView nodes={nodes} />
       </div>
