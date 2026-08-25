@@ -604,7 +604,20 @@ export function ExamRunner({
   const hayTextos = questions.some((q) => q.passage);
 
   return (
-    <div className={cn("mx-auto max-w-3xl", hayTextos && "lg:max-w-6xl")}>
+    <div
+      className={cn(
+        "mx-auto max-w-3xl",
+        // Con texto base el ensayo pide más ancho del que da el panel. El tope
+        // del layout —max-w-6xl— está pensado para pantallas de una columna, y
+        // acá hay dos: la lectura y sus preguntas. Los márgenes negativos
+        // recuperan el padding del contenedor y suman cuatro rem por lado, así
+        // que el carril pasa de 1.104 a 1.232 px y cada columna gana unos 64.
+        // Empieza en xl (1280 px) porque es el primer ancho donde eso entra sin
+        // dejar la página pegada al borde de la ventana; más abajo no aplica y
+        // el ensayo se ve como antes.
+        hayTextos && "lg:max-w-6xl xl:-mx-16 xl:max-w-none"
+      )}
+    >
       {/* ── Barra superior ──────────────────────────────────────────── */}
       {/* La franja de arriba dice de qué prueba es este ensayo sin ocupar una
           palabra, con el mismo color que usan el titular de la portada, el
