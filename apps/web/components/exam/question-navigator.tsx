@@ -22,19 +22,28 @@ interface Props {
   items: NavigatorItem[];
   currentIndex: number;
   onSelect: (index: number) => void;
+  /** Ancho de ventana desde el que el panel cabe en el margen sin tapar el
+   *  contenido. Depende de cuánto ocupa el ensayo: con texto base al lado de
+   *  las preguntas el contenido es mucho más ancho y el margen se agota. */
+  abrirDesde?: number;
 }
 
-export function QuestionNavigator({ items, currentIndex, onSelect }: Props) {
+export function QuestionNavigator({
+  items,
+  currentIndex,
+  onSelect,
+  abrirDesde = 1280,
+}: Props) {
   const [open, setOpen] = useState(false);
 
-  // Parte abierto solo desde 1280px, que es el ancho a partir del cual el
-  // panel cabe en el margen sin taparle el enunciado a la columna central
-  // (max-w-3xl). Bajo ese ancho parte plegado como pastilla.
+  // Parte abierto solo desde el ancho en que el panel cabe en el margen sin
+  // taparle el enunciado a la columna de preguntas. Bajo ese ancho parte
+  // plegado como pastilla.
   useEffect(() => {
     // Lectura de estado externo (tamaño de ventana) al montar.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setOpen(window.matchMedia("(min-width: 1280px)").matches);
-  }, []);
+    setOpen(window.matchMedia(`(min-width: ${abrirDesde}px)`).matches);
+  }, [abrirDesde]);
 
   const respondidas = items.filter((i) => i.answered).length;
 
