@@ -3003,6 +3003,8 @@ export interface components {
             id: number;
             /** Stem */
             stem: string;
+            /** Image Url */
+            image_url?: string | null;
             /** Explanation */
             explanation?: string | null;
             difficulty: components["schemas"]["Difficulty"];

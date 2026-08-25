@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 380" width="620" height="380" role="img">
+  <title>Árbol genealógico de tres generaciones con individuos afectados por una enfermedad</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <!-- generaciones -->
+    <g font-size="17" font-weight="700" fill="#6b7280">
+      <text x="26" y="72">I</text>
+      <text x="20" y="192">II</text>
+      <text x="14" y="312">III</text>
+    </g>
+
+    <!-- líneas de parentesco -->
+    <g stroke="#1f2937" stroke-width="2" fill="none">
+      <!-- I-1 x I-2 -->
+      <line x1="200" y1="64" x2="300" y2="64"/>
+      <line x1="250" y1="64" x2="250" y2="104"/>
+      <line x1="150" y1="104" x2="400" y2="104"/>
+      <line x1="150" y1="104" x2="150" y2="164"/>
+      <line x1="270" y1="104" x2="270" y2="164"/>
+      <line x1="400" y1="104" x2="400" y2="164"/>
+      <!-- II-2 x II-3 -->
+      <line x1="290" y1="184" x2="380" y2="184"/>
+      <line x1="335" y1="184" x2="335" y2="224"/>
+      <line x1="230" y1="224" x2="440" y2="224"/>
+      <line x1="230" y1="224" x2="230" y2="284"/>
+      <line x1="335" y1="224" x2="335" y2="284"/>
+      <line x1="440" y1="224" x2="440" y2="284"/>
+    </g>
+
+    <!-- I: padres sanos -->
+    <rect x="170" y="44" width="40" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="320" cy="64" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <g font-size="13" fill="#4b5563" text-anchor="middle">
+      <text x="190" y="100">I-1</text><text x="320" y="100">I-2</text>
+    </g>
+
+    <!-- II: una hija afectada, un hijo sano, una hija sana -->
+    <circle cx="150" cy="184" r="20" fill="#1f2937" stroke="#1f2937" stroke-width="2.5"/>
+    <rect x="250" y="164" width="40" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="400" cy="184" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <g font-size="13" fill="#4b5563" text-anchor="middle">
+      <text x="150" y="220">II-1</text><text x="270" y="220">II-2</text><text x="400" y="220">II-3</text>
+    </g>
+
+    <!-- III: un hijo afectado y dos hijas sanas -->
+    <rect x="210" y="284" width="40" height="40" fill="#1f2937" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="335" cy="304" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="440" cy="304" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <g font-size="13" fill="#4b5563" text-anchor="middle">
+      <text x="230" y="340">III-1</text><text x="335" y="340">III-2</text><text x="440" y="340">III-3</text>
+    </g>
+
+    <!-- leyenda -->
+    <g transform="translate(478,44)">
+      <rect x="0" y="0" width="126" height="96" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="14" y="16" width="18" height="18" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <text x="42" y="30" font-size="13" fill="#111827">hombre</text>
+      <circle cx="23" cy="52" r="9" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <text x="42" y="57" font-size="13" fill="#111827">mujer</text>
+      <rect x="14" y="70" width="18" height="18" fill="#1f2937"/>
+      <text x="42" y="84" font-size="13" fill="#111827">afectado</text>
+    </g>
+  </g>
+</svg>

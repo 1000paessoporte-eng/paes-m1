@@ -110,17 +110,26 @@ def _q(
     correct: str,
     explanation: str,
     distractors: list[tuple[str, str]],
+    imagen: str | None = None,
 ):
     """Arma una pregunta con la correcta primero y los distractores después.
 
     `explanation` es lo que ve el estudiante al revisar: el desarrollo de por
     qué la respuesta correcta lo es. No debe mencionar letras de alternativa,
     porque `seed.py` mezcla el orden final A-D.
+
+    `imagen` es la ruta de la figura dentro del sitio ("/preguntas/algo.svg").
+    Son figuras PROPIAS, dibujadas para la pregunta: las de la prueba oficial
+    tienen derechos de la Universidad de Chile igual que sus enunciados, y una
+    figura copiada se reconoce todavía más rápido que un texto. El enunciado
+    debe apoyarse en la figura, no repetirla: si el dato se puede leer en el
+    texto, la figura sobra y la pregunta deja de medir lo que la PAES mide.
     """
     return {
         "skill_node": skill_node,
         "difficulty": difficulty,
         "stem": stem,
+        "image_url": imagen,
         "explanation": explanation,
         "alternatives": [{"text": correct, "is_correct": True, "justification": None}]
         + [
@@ -45587,6 +45596,404 @@ QUESTIONS_CIENCIAS = [
             ("La extinción definitiva de las especies de un lugar", "La sucesión describe recambio, no extinción."),
             ("El aumento de la población de una sola especie", "Involucra el reemplazo de comunidades completas."),
         ],
+    ),
+    # ---------- Biología con figura ----------
+    # Las primeras preguntas del banco que se apoyan en una imagen. La PAES de
+    # Ciencias lo hace en buena parte de sus preguntas: un esquema de célula, un
+    # pedigrí, una curva de población. Las figuras son PROPIAS y viven en
+    # `apps/web/public/preguntas/`; las de la prueba oficial tienen derechos de
+    # la Universidad de Chile igual que sus enunciados.
+    #
+    # El enunciado no describe la figura: si se pudiera contestar sin mirarla,
+    # la imagen sería decoración y la pregunta no mediría lo que mide la PAES.
+    _q(
+        "cie_celula", "medio",
+        "El esquema muestra una célula animal con cinco estructuras numeradas. "
+        "¿Cuál de ellas produce la mayor parte del ATP de la célula?",
+        "La estructura 3",
+        "La 3 es la mitocondria, y se reconoce por los pliegues que recorren su "
+        "interior: son las crestas.\n\n"
+        "Esos pliegues no son un adorno del dibujo. Ahí está anclada la cadena "
+        "transportadora de electrones, y plegar la membrana multiplica la "
+        "superficie disponible para ella. Más superficie es más ATP en el mismo "
+        "volumen.\n\n"
+        "El resto del esquema reparte otras tareas: guardar el material "
+        "genético, sintetizar proteínas y despacharlas. Ninguna de ellas produce "
+        "energía; todas la gastan.",
+        [
+            ("La estructura 1", "Es la membrana plasmática: controla qué entra y qué sale, pero no produce ATP."),
+            ("La estructura 2", "Es el núcleo. Guarda el ADN y dirige la síntesis de proteínas; la energía la consume, no la fabrica."),
+            ("La estructura 4", "Es el aparato de Golgi, la pila de sacos aplanados: modifica y despacha lo que le llega, sin hacer respiración celular."),
+        ],
+        imagen="/preguntas/bio-celula-organelos.svg",
+    ),
+    _q(
+        "cie_celula", "medio",
+        "El recipiente de la figura está dividido por una membrana que deja "
+        "pasar agua pero no soluto. ¿Qué se observa al cabo de un tiempo?",
+        "El nivel sube en el lado B y baja en el lado A",
+        "El agua se mueve por ósmosis hacia donde hay MÁS soluto, que es lo "
+        "mismo que decir hacia donde hay menos agua por cada mililitro de "
+        "disolución.\n\n"
+        "El lado B tiene cuatro veces más soluto que el A, así que el agua pasa "
+        "de A hacia B y el desnivel se hace visible.\n\n"
+        "Conviene fijarse en qué es lo que se mueve. El soluto no puede cruzar: "
+        "la membrana no lo deja. Como el sistema solo puede igualar "
+        "concentraciones moviendo agua, la mueve.",
+        [
+            ("El nivel sube en el lado A y baja en el lado B", "Invierte el sentido: el agua entra donde está más concentrado el soluto, y ese es B."),
+            ("El soluto pasa de B a A hasta igualar las concentraciones", "La membrana no deja pasar soluto. Por eso lo único que se mueve es el agua."),
+            ("No ocurre nada, porque los niveles ya están iguales", "Los niveles iguales no son equilibrio: mientras las concentraciones difieran, el agua sigue cruzando."),
+        ],
+        imagen="/preguntas/bio-osmosis-membrana.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "En el árbol genealógico, los individuos pintados presentan la "
+        "enfermedad. ¿Cuál es el modo de herencia más probable?",
+        "Autosómico recesivo",
+        "Dos datos del árbol bastan para decidirlo.\n\n"
+        "El primero: la pareja de la generación I no tiene la enfermedad y aun "
+        "así una de sus hijas la presenta. Un carácter que aparece de padres "
+        "sanos tiene que ser recesivo, y ellos son portadores.\n\n"
+        "El segundo descarta el cromosoma X. Si fuera recesivo ligado al X, esa "
+        "mujer afectada necesitaría dos copias del alelo, y una de ellas "
+        "tendría que venir de su padre, que sería entonces un hombre afectado. "
+        "Su padre está sano, así que el gen no va en el X.\n\n"
+        "Una mujer afectada hija de padre sano es, por sí sola, la señal que "
+        "descarta la herencia recesiva ligada al X.",
+        [
+            ("Autosómico dominante", "Con un alelo dominante, todo afectado tiene al menos un progenitor afectado. Acá nacen afectados de padres sanos en dos generaciones."),
+            ("Recesivo ligado al cromosoma X", "La mujer afectada tendría que haber recibido el alelo también de su padre, que sería afectado. Su padre está sano."),
+            ("Dominante ligado al cromosoma X", "Sigue siendo dominante: no podría saltarse una generación de padres sanos."),
+        ],
+        imagen="/preguntas/bio-pedigri-autosomico.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "El cuadro de Punnett muestra los cuatro genotipos posibles de la "
+        "descendencia, pero los gametos de los progenitores están tapados. "
+        "¿Cuáles son los genotipos de los progenitores?",
+        "Aa y aa",
+        "El cuadro se lee al revés de como se construye: desde la descendencia "
+        "hacia los gametos.\n\n"
+        "En la descendencia hay dos Aa y dos aa. El alelo A aparece, así que "
+        "alguien tuvo que aportarlo; pero también hay aa, así que ese mismo "
+        "progenitor tiene que poder aportar a. Un progenitor que aporta A en "
+        "unas casillas y a en otras es Aa.\n\n"
+        "El otro aporta a en las cuatro casillas, porque no hay ni una sin al "
+        "menos una a. Ese es aa.\n\n"
+        "El resultado 50% Aa y 50% aa es la marca de este cruce, y por eso se "
+        "usa para averiguar si un individuo de aspecto dominante es AA o Aa.",
+        [
+            ("Aa y Aa", "Ese cruce produciría también un AA, y en el cuadro no hay ninguna casilla AA."),
+            ("AA y aa", "Si un progenitor fuera AA, las cuatro casillas serían Aa. El cuadro tiene dos aa."),
+            ("AA y Aa", "Con un progenitor AA ninguna casilla podría ser aa, y hay dos."),
+        ],
+        imagen="/preguntas/bio-punnett-incognita.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "Según la red trófica de la figura, el águila ocupa dos niveles "
+        "tróficos distintos. ¿Cuál es la razón?",
+        "Porque come al roedor y también a la culebra, que se alimenta del roedor",
+        "El nivel trófico no es una propiedad del animal: es la posición que "
+        "ocupa en cada cadena de la que forma parte.\n\n"
+        "Cuando el águila come al roedor, que se alimenta de pasto, la cadena "
+        "es pasto → roedor → águila y el águila es consumidor secundario.\n\n"
+        "Cuando come a la culebra, la cadena es pasto → roedor → culebra → "
+        "águila, y ahí el águila es consumidor terciario.\n\n"
+        "Por eso las redes tróficas describen mejor un ecosistema que las "
+        "cadenas sueltas: casi ningún animal come en un solo nivel.",
+        [
+            ("Porque come al insecto y también al ave que se alimenta del insecto", "En la red no hay ninguna flecha desde el insecto hacia el águila. Al ave sí la come; al insecto, no."),
+            ("Porque no tiene depredadores y ocupa el extremo de todas las cadenas", "Ser el último eslabón no define el nivel. El nivel lo da de qué se alimenta, no quién se lo come."),
+            ("Porque se alimenta de tres presas distintas dentro de la misma red", "Come tres, es cierto, pero el número de presas no fija el nivel: si las tres fueran consumidores primarios, quedaría en uno solo."),
+        ],
+        imagen="/preguntas/bio-red-trofica.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "El gráfico muestra cómo cambia una población de conejos. ¿En cuál de "
+        "los puntos marcados está creciendo más rápido?",
+        "En Q",
+        "La velocidad de crecimiento es la inclinación de la curva, no su "
+        "altura. Hay que buscar el tramo más empinado, no el punto más "
+        "alto.\n\n"
+        "En Q la curva sube casi en diagonal, y ese punto está justo en la "
+        "mitad de la capacidad de carga: 600 de 1.200. Ahí ya hay bastantes "
+        "individuos reproduciéndose y todavía sobran recursos para todos.\n\n"
+        "Es la trampa clásica de este gráfico: en S la población es la más "
+        "numerosa de las cuatro, pero la curva ya es casi horizontal y el "
+        "crecimiento es prácticamente cero.",
+        [
+            ("En P", "La curva está casi plana: hay muy pocos individuos reproduciéndose y el crecimiento recién comienza."),
+            ("En R", "La población es grande, pero la curva ya empezó a aplanarse: crece menos que en el tramo empinado."),
+            ("En S", "Ahí la curva es casi horizontal. La población llegó a la capacidad de carga y casi no crece."),
+        ],
+        imagen="/preguntas/bio-crecimiento-poblacional.svg",
+    ),
+    _q(
+        "cie_celula", "facil",
+        "Las dos células del esquema respiran, pero solo la célula A puede "
+        "fabricar su propia materia orgánica a partir de la luz. ¿Cuál de las "
+        "estructuras numeradas se lo permite?",
+        "La estructura 3",
+        "La 3 es el cloroplasto, y por eso aparece varias veces en la célula A y "
+        "ninguna en la B.\n\n"
+        "Ahí ocurre la fotosíntesis: la clorofila captura la energía de la luz y "
+        "con ella se arma glucosa a partir de dióxido de carbono y agua. Eso es "
+        "lo que significa fabricar la propia materia orgánica.\n\n"
+        "El resto de las diferencias entre A y B son reales, pero ninguna "
+        "produce alimento: dan sostén, guardan agua o liberan energía de una "
+        "materia orgánica que ya existe.",
+        [
+            ("La estructura 1", "Es la pared celular: le da rigidez y forma a la célula vegetal, pero no participa en la fotosíntesis."),
+            ("La estructura 2", "Es la vacuola. Almacena agua y sustancias disueltas, y su presión mantiene la planta erguida; no fabrica alimento."),
+            ("La estructura 4", "Es la mitocondria, y está en las dos células. Libera la energía de la materia orgánica en vez de producirla."),
+        ],
+        imagen="/preguntas/bio-celula-vegetal-animal.svg",
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Los tres glóbulos rojos de la figura eran idénticos antes del "
+        "experimento. ¿En qué tipo de solución estuvo el glóbulo I?",
+        "En una solución hipotónica",
+        "El glóbulo I se hinchó, así que entró agua. El agua entra cuando afuera "
+        "hay MENOS soluto que adentro, y esa es la definición de solución "
+        "hipotónica.\n\n"
+        "El III recorrió el camino contrario: perdió agua y quedó arrugado, "
+        "porque afuera había más soluto. Eso es una solución hipertónica.\n\n"
+        "El II conservó su forma: entra tanta agua como sale, y la solución es "
+        "isotónica. Por eso el suero fisiológico que se pone en una vena es "
+        "isotónico y no agua pura: agua pura reventaría los glóbulos rojos, tal "
+        "como iba a pasarle al I.",
+        [
+            ("En una solución hipertónica", "En una hipertónica el glóbulo pierde agua y se arruga, que es lo que le pasó al III."),
+            ("En una solución isotónica", "En una isotónica el glóbulo conserva su forma, como el II."),
+            ("En una solución sin sales disueltas de ningún tipo", "Ese es un caso extremo de hipotónica, pero la figura no permite saber si el líquido tenía sales o no: solo que tenía menos que el interior."),
+        ],
+        imagen="/preguntas/bio-tonicidad-globulos.svg",
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "El gráfico compara la entrada a la célula de dos sustancias, X e Y. "
+        "¿Cuál de las dos necesita proteínas transportadoras y cómo se sabe?",
+        "La Y, porque su velocidad se estanca aunque suba la concentración",
+        "La clave es el aplanamiento de Y, que en biología se llama saturación.\n\n"
+        "Las proteínas transportadoras de la membrana son un número finito. "
+        "Mientras quedan libres, subir la concentración afuera acelera la "
+        "entrada. Cuando ya están todas ocupadas, agregar más sustancia no "
+        "cambia nada: la velocidad topa.\n\n"
+        "X no topa nunca porque cruza directamente entre los lípidos de la "
+        "membrana, sin depender de ninguna proteína. Ahí no hay nada que "
+        "ocupar, así que el doble de concentración da el doble de entrada. Es lo "
+        "que ocurre con el oxígeno o el dióxido de carbono.",
+        [
+            ("La X, porque su velocidad aumenta sin toparse nunca con un límite", "Que no tenga límite es justamente la señal contraria: no hay transportadores que se puedan saturar."),
+            ("La X, porque en el gráfico aparece como una línea perfectamente recta", "La recta indica difusión simple a través de los lípidos. Una proteína transportadora produce una curva que se aplana."),
+            ("Las dos, porque ninguna sustancia cruza la membrana por sí sola", "Muchas sí la cruzan solas: las moléculas pequeñas y sin carga, como el oxígeno, pasan entre los lípidos."),
+        ],
+        imagen="/preguntas/bio-transporte-saturacion.svg",
+    ),
+    _q(
+        "cie_celula", "medio",
+        "El esquema muestra la membrana plasmática. Los iones, por tener carga "
+        "eléctrica, no pueden cruzar la zona ocupada por las colas. ¿Qué "
+        "estructura numerada les permite entrar?",
+        "La estructura 2",
+        "La 2 es una proteína que atraviesa la membrana completa y deja un poro "
+        "abierto de lado a lado.\n\n"
+        "El interior de la membrana es un ambiente de colas grasas, y el agua y "
+        "las cargas eléctricas no lo atraviesan. Un ion que quiera entrar "
+        "necesita un pasadizo revestido de partes que sí toleren la carga, y eso "
+        "es exactamente lo que ofrece un canal proteico.\n\n"
+        "Por eso una membrana es selectiva: lo que entra no depende solo del "
+        "tamaño de la molécula, sino de qué proteínas tiene esa célula.",
+        [
+            ("La estructura 1", "Es la bicapa de lípidos, precisamente la barrera que el ion no puede cruzar."),
+            ("La estructura 3", "Es la cadena de azúcares de la cara externa. Sirve para el reconocimiento entre células, no para el paso de sustancias."),
+            ("La estructura 4", "Es el colesterol, encajado entre las colas. Regula la fluidez de la membrana; no forma ningún poro."),
+        ],
+        imagen="/preguntas/bio-membrana-mosaico.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Las cuatro imágenes muestran etapas de la mitosis de una misma célula, "
+        "en desorden. ¿Cuál es el orden correcto?",
+        "III, I, IV, II",
+        "Cada etapa se reconoce por dónde están los cromosomas.\n\n"
+        "III es la profase: los cromosomas ya se condensaron y se ven "
+        "individualmente, pero todavía están repartidos por la célula.\n\n"
+        "I es la metafase: quedaron todos alineados en una sola fila, en el "
+        "plano del centro de la célula.\n\n"
+        "IV es la anafase: cada cromosoma se partió en dos cromátidas que ya "
+        "viajan hacia extremos opuestos.\n\n"
+        "II es la telofase: los dos grupos llegaron a los polos y el citoplasma "
+        "se estrangula para dar dos células.\n\n"
+        "La forma rápida de ordenarlas es preguntarse cuándo se separan las "
+        "cromátidas: todo lo que pasa antes es preparación, todo lo que pasa "
+        "después es reparto.",
+        [
+            ("I, II, III, IV", "Es el orden en que aparecen dibujadas, no el orden biológico: empezaría por la metafase."),
+            ("III, IV, I, II", "Pone la separación de las cromátidas antes de alinearlas, y no se pueden repartir sin haberlas alineado primero."),
+            ("I, IV, II, III", "Termina en la profase, que es la primera etapa: la célula no vuelve a condensar los cromosomas después de dividirse."),
+        ],
+        imagen="/preguntas/bio-mitosis-fases.svg",
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "En este árbol genealógico ninguna mujer presenta la enfermedad y sí dos "
+        "hombres de la última generación. ¿Cuál es el modo de herencia más "
+        "probable?",
+        "Recesivo ligado al cromosoma X",
+        "El recorrido del alelo por el árbol es la pista.\n\n"
+        "El hombre afectado de la primera generación le pasa su único cromosoma "
+        "X a TODAS sus hijas, así que su hija de la segunda generación es "
+        "portadora obligada aunque esté sana: tiene un X con el alelo y otro "
+        "sano que lo tapa.\n\n"
+        "Ella le pasa ese X a la mitad de sus hijos. Un hombre tiene un solo X, "
+        "de modo que si le toca el alelo no hay segunda copia que lo compense y "
+        "la enfermedad aparece. Sus hijas, en cambio, reciben además el X sano "
+        "del padre y quedan sanas.\n\n"
+        "Ese patrón —hombres afectados, mujeres sanas y el rastro pasando por "
+        "las madres— es la firma de la herencia recesiva ligada al X. Un caso "
+        "autosómico recesivo no es imposible, pero exigiría además que el padre "
+        "de la última generación fuera portador, y eso es bastante menos "
+        "probable.",
+        [
+            ("Autosómico recesivo", "No queda descartado, pero necesitaría que el hombre de la segunda generación también fuera portador. Que solo haya hombres afectados apunta al cromosoma X."),
+            ("Autosómico dominante", "Con un alelo dominante los afectados nacen de padres afectados, y acá los dos últimos nacen de una pareja sana."),
+            ("Dominante ligado al cromosoma X", "Un padre afectado con herencia dominante ligada al X tendría TODAS sus hijas afectadas, y la de la segunda generación está sana."),
+        ],
+        imagen="/preguntas/bio-pedigri-ligado-x.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "A partir de la hebra molde de ADN de la figura, ¿cuál es la secuencia "
+        "del ARN mensajero que se transcribe?",
+        "AUG CCU UAG",
+        "La transcripción copia la hebra molde base por base, con dos reglas: "
+        "cada base se reemplaza por su complementaria y, donde el ADN pondría "
+        "timina, el ARN pone uracilo.\n\n"
+        "Aplicando eso a T A C G G A A T C: la T da A, la A da U, la C da G, la "
+        "G da C, la G da C, la A da U, la A da U, la T da A y la C da G.\n\n"
+        "El resultado es AUG CCU UAG. No es una secuencia cualquiera: AUG es el "
+        "codón de inicio y UAG es uno de los de término, así que este fragmento "
+        "es un gen diminuto completo.",
+        [
+            ("AUG GGA AUC", "Copió la hebra tal cual cambiando solo la T por U. La transcripción usa la base complementaria, no la misma."),
+            ("ATG CCT TAG", "Es la complementaria correcta, pero escrita con timina. El ARN no tiene timina: lleva uracilo."),
+            ("UAC GGA AUC", "Complementó solo la primera base y siguió copiando el resto sin cambiarlo."),
+        ],
+        imagen="/preguntas/bio-transcripcion-arnm.svg",
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué se puede afirmar de la persona cuyo cariotipo aparece en la "
+        "figura?",
+        "Es un hombre y tiene tres cromosomas en el par 21",
+        "Un cariotipo se lee contando. Todos los pares tienen dos cromosomas "
+        "menos el 21, que tiene tres: eso es una trisomía del par 21, la "
+        "alteración conocida como síndrome de Down.\n\n"
+        "El sexo se lee en el último par: hay un cromosoma X y uno Y, así que es "
+        "un hombre. Una mujer tendría dos X.\n\n"
+        "El total es 47 cromosomas en vez de 46. El origen habitual es una "
+        "falla en la separación de ese par durante la formación del óvulo o del "
+        "espermatozoide: los dos cromosomas no se separan y el gameto se lleva "
+        "los dos.",
+        [
+            ("Es una mujer y tiene tres cromosomas en el par 21", "La trisomía está bien leída, pero el último par es X e Y: una mujer tendría dos X."),
+            ("Es un hombre y le falta un cromosoma en el par 21", "Al par 21 le sobra uno, no le falta: tiene tres donde los demás tienen dos."),
+            ("Es un hombre sin ninguna alteración cromosómica", "Los 46 cromosomas de un cariotipo sin alteraciones van en 23 pares exactos, y acá el par 21 tiene tres."),
+        ],
+        imagen="/preguntas/bio-cariotipo.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "Según la pirámide de energía de la figura, ¿cuánta energía queda "
+        "disponible para los consumidores terciarios?",
+        "10 kcal",
+        "Cada nivel de la pirámide conserva la décima parte de lo que tenía el "
+        "anterior: de 10.000 a 1.000, y de 1.000 a 100.\n\n"
+        "Manteniendo esa proporción, el nivel siguiente recibe la décima parte "
+        "de 100, es decir 10 kcal.\n\n"
+        "El otro 90% no desaparece: se gasta en moverse, mantener la "
+        "temperatura y reparar tejidos, y se disipa como calor. Por eso las "
+        "pirámides se angostan tan rápido y casi ninguna cadena alimentaria "
+        "tiene más de cuatro o cinco niveles.",
+        [
+            ("1 kcal", "Aplicó la división por diez dos veces en vez de una: eso sería un nivel más arriba."),
+            ("50 kcal", "Corresponde a quedarse con la mitad. La pirámide muestra que en cada paso se conserva la décima parte."),
+            ("90 kcal", "Es el 90% de 100, que es justamente la parte que se pierde como calor, no la que pasa al nivel siguiente."),
+        ],
+        imagen="/preguntas/bio-piramide-energia.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "En el ciclo del carbono de la figura, ¿cuál de las flechas representa "
+        "el único proceso que RETIRA carbono de la atmósfera?",
+        "La flecha W",
+        "W va desde el dióxido de carbono de la atmósfera hacia las plantas: es "
+        "la fotosíntesis, y es la única flecha del esquema que entra a un ser "
+        "vivo desde el aire.\n\n"
+        "En ella el carbono deja de ser gas y pasa a formar parte de moléculas "
+        "orgánicas. Ese es el único punto del ciclo donde la atmósfera pierde "
+        "carbono.\n\n"
+        "Las otras dos flechas que tocan la atmósfera apuntan hacia ella, no "
+        "hacia afuera: la respiración de los animales y la combustión devuelven "
+        "el carbono al aire. Que hoy haya más dióxido de carbono que hace un "
+        "siglo se explica ahí: la flecha Z aumentó mucho más rápido de lo que la "
+        "W puede compensar.",
+        [
+            ("La flecha X", "Va de las plantas a los animales: mueve carbono entre seres vivos sin tocar la atmósfera."),
+            ("La flecha Y", "Es la respiración de los animales, que devuelve carbono a la atmósfera en vez de retirarlo."),
+            ("La flecha Z", "Es la combustión de los combustibles fósiles, la que más carbono agrega a la atmósfera."),
+        ],
+        imagen="/preguntas/bio-ciclo-carbono.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "dificil",
+        "El gráfico muestra dos poblaciones del mismo ecosistema. ¿Cuál de las "
+        "dos corresponde al depredador y por qué?",
+        "La N, porque sus máximos ocurren después de los de M",
+        "En una relación depredador-presa las dos poblaciones oscilan, pero no "
+        "al mismo tiempo.\n\n"
+        "Cuando abundan las presas hay comida de sobra, así que los depredadores "
+        "se reproducen y su número sube DESPUÉS. Al aumentar los depredadores, "
+        "las presas empiezan a escasear; entonces cae la presa y, con retraso, "
+        "cae también el depredador. Ese desfase es lo que se ve en el gráfico.\n\n"
+        "El otro dato apunta a lo mismo: N es siempre mucho menos numerosa. "
+        "Sostener un depredador exige varias presas, así que su población tiene "
+        "que ser menor. Los dos indicios —el retraso y el número— coinciden en N.",
+        [
+            ("La M, porque es la población más numerosa", "Ocurre al revés: el depredador es siempre menos numeroso, porque cada uno necesita muchas presas para sostenerse."),
+            ("La M, porque sus subidas son más pronunciadas", "La amplitud no distingue a uno de otro. Lo que los distingue es cuál sube primero."),
+            ("La N, porque su población nunca llega a cero", "Ninguna de las dos llega a cero en el gráfico, así que eso no separa una de la otra."),
+        ],
+        imagen="/preguntas/bio-depredador-presa.svg",
+    ),
+    _q(
+        "cie_ecosistemas", "medio",
+        "El gráfico compara dos formas de crecer de una población. ¿Cuál de las "
+        "dos describe mejor lo que ocurre en un ecosistema real y por qué?",
+        "La curva 2, porque los recursos del ambiente son limitados",
+        "La curva 2 sube y después se aplana. Ese techo es la capacidad de "
+        "carga: el número máximo de individuos que el ambiente puede sostener "
+        "con el alimento, el agua y el espacio que tiene.\n\n"
+        "Al acercarse a ese límite la competencia aumenta, mueren más "
+        "individuos y nacen menos, hasta que la población deja de crecer. Es lo "
+        "que efectivamente se observa en la naturaleza.\n\n"
+        "La curva 1 crece cada vez más rápido y no se detiene nunca. Eso solo "
+        "ocurre por un tiempo corto, cuando una especie llega a un ambiente "
+        "nuevo con recursos de sobra, y termina siempre igual: o se estabiliza, "
+        "o agota los recursos y la población se desploma.",
+        [
+            ("La curva 1, porque toda población tiende a crecer sin detenerse", "Ninguna población crece indefinidamente: tarde o temprano el alimento, el agua o el espacio se acaban."),
+            ("La curva 1, porque los organismos se reproducen cada vez más", "La capacidad de reproducirse no es el límite. El límite lo pone el ambiente, y por eso la curva se aplana."),
+            ("La curva 2, porque las poblaciones dejan de reproducirse al llegar a cierto número", "No dejan de reproducirse: siguen naciendo individuos, pero mueren tantos como nacen y el total se mantiene."),
+        ],
+        imagen="/preguntas/bio-curvas-j-y-s.svg",
     ),
 ]
 

@@ -156,12 +156,19 @@ def seed_questions(
             if exists.explanation != q["explanation"]:
                 exists.explanation = q["explanation"]
                 updated += 1
+            # La figura se trata igual que la explicación: se puede agregar a
+            # una pregunta que ya está sembrada sin tocar su enunciado, que es
+            # justamente como se le pone imagen a una pregunta vieja.
+            if exists.image_url != q.get("image_url"):
+                exists.image_url = q.get("image_url")
+                updated += 1
             continue
 
         question = Question(
             skill_node_id=nodes_by_code[q["skill_node"]].id,
             difficulty=Difficulty(q["difficulty"]),
             stem=q["stem"],
+            image_url=q.get("image_url"),
             explanation=q["explanation"],
         )
         clave = q.get("passage")

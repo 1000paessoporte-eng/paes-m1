@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" role="img">
+  <title>Recipiente dividido por una membrana permeable solo al agua, con dos concentraciones de soluto</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <!-- recipiente -->
+    <path d="M60 60 L60 300 Q60 316 76 316 L484 316 Q500 316 500 300 L500 60"
+          fill="none" stroke="#1f2937" stroke-width="3"/>
+    <!-- agua -->
+    <path d="M64 108 L64 300 Q64 312 76 312 L484 312 Q496 312 496 300 L496 108 Z"
+          fill="#dcecf8"/>
+    <line x1="64" y1="108" x2="496" y2="108" stroke="#3b82f6" stroke-width="2"/>
+
+    <!-- membrana semipermeable -->
+    <line x1="280" y1="60" x2="280" y2="314" stroke="#111827" stroke-width="3" stroke-dasharray="9 6"/>
+    <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">membrana</text>
+    <text x="280" y="46" text-anchor="middle" font-size="13" fill="#4b5563">permeable solo al agua</text>
+
+    <!-- lado A: poco soluto -->
+    <text x="172" y="88" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">Lado A</text>
+    <text x="172" y="342" text-anchor="middle" font-size="16" fill="#111827">2 g de soluto por 100 mL</text>
+    <g fill="#b45309">
+      <circle cx="118" cy="160" r="7"/><circle cx="212" cy="188" r="7"/>
+      <circle cx="152" cy="242" r="7"/><circle cx="232" cy="272" r="7"/>
+      <circle cx="106" cy="268" r="7"/>
+    </g>
+
+    <!-- lado B: mucho soluto -->
+    <text x="390" y="88" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">Lado B</text>
+    <text x="390" y="342" text-anchor="middle" font-size="16" fill="#111827">8 g de soluto por 100 mL</text>
+    <g fill="#b45309">
+      <circle cx="316" cy="146" r="7"/><circle cx="360" cy="166" r="7"/>
+      <circle cx="410" cy="140" r="7"/><circle cx="458" cy="168" r="7"/>
+      <circle cx="330" cy="196" r="7"/><circle cx="382" cy="212" r="7"/>
+      <circle cx="436" cy="200" r="7"/><circle cx="470" cy="238" r="7"/>
+      <circle cx="312" cy="248" r="7"/><circle cx="356" cy="262" r="7"/>
+      <circle cx="404" cy="248" r="7"/><circle cx="444" cy="286" r="7"/>
+      <circle cx="330" cy="292" r="7"/><circle cx="382" cy="292" r="7"/>
+      <circle cx="470" cy="120" r="7"/><circle cx="418" cy="292" r="7"/>
+    </g>
+
+  </g>
+</svg>

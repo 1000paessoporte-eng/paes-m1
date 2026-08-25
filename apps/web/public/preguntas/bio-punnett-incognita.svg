@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" width="480" height="380" role="img">
+  <title>Cuadro de Punnett con los cuatro genotipos de la descendencia y los gametos de los progenitores sin identificar</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="240" y="30" text-anchor="middle" font-size="16" font-weight="600" fill="#111827">Progenitor 1</text>
+    <text x="30" y="212" text-anchor="middle" font-size="16" font-weight="600" fill="#111827"
+          transform="rotate(-90 30 212)">Progenitor 2</text>
+
+    <!-- gametos desconocidos: arriba -->
+    <g fill="#fef3c7" stroke="#b45309" stroke-width="2">
+      <rect x="152" y="48" width="104" height="56" rx="8"/>
+      <rect x="272" y="48" width="104" height="56" rx="8"/>
+    </g>
+    <!-- gametos desconocidos: izquierda -->
+    <g fill="#fef3c7" stroke="#b45309" stroke-width="2">
+      <rect x="56" y="120" width="80" height="104" rx="8"/>
+      <rect x="56" y="240" width="80" height="104" rx="8"/>
+    </g>
+    <g font-size="30" font-weight="700" fill="#b45309" text-anchor="middle">
+      <text x="204" y="88">?</text><text x="324" y="88">?</text>
+      <text x="96" y="184">?</text><text x="96" y="304">?</text>
+    </g>
+
+    <!-- descendencia -->
+    <g fill="#ffffff" stroke="#1f2937" stroke-width="2.5">
+      <rect x="152" y="120" width="104" height="104"/>
+      <rect x="272" y="120" width="104" height="104"/>
+      <rect x="152" y="240" width="104" height="104"/>
+      <rect x="272" y="240" width="104" height="104"/>
+    </g>
+    <g font-size="34" font-weight="700" fill="#111827" text-anchor="middle" font-style="italic">
+      <text x="204" y="184">Aa</text><text x="324" y="184">aa</text>
+      <text x="204" y="304">Aa</text><text x="324" y="304">aa</text>
+    </g>
+
+    <text x="240" y="370" text-anchor="middle" font-size="14" fill="#4b5563">
+      Las casillas amarillas son los gametos de cada progenitor.
+    </text>
+  </g>
+</svg>
