@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="700" height="250" role="img">
+  <title>Esquema de la tabla periódica con cuatro casillas marcadas: Q y S en la primera columna, R en la penúltima y T en la última</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <rect x="60" y="60" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="638" y="60" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="60" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="94" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="468" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="502" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="536" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="570" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="604" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="638" y="94" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="60" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="94" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="468" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="502" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="536" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="570" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="604" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="638" y="128" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="60" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="94" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="128" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="162" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="196" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="230" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="264" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="298" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="332" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="366" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="400" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="434" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="468" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="502" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="536" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="570" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="604" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="638" y="162" width="31" height="31" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+    <rect x="60" y="94" width="31" height="31" rx="3" fill="#15803d" fill-opacity="0.22" stroke="#15803d" stroke-width="2.6"/>
+    <text x="76" y="116" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Q</text>
+    <rect x="604" y="94" width="31" height="31" rx="3" fill="#b45309" fill-opacity="0.22" stroke="#b45309" stroke-width="2.6"/>
+    <text x="620" y="116" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">R</text>
+    <rect x="60" y="128" width="31" height="31" rx="3" fill="#15803d" fill-opacity="0.22" stroke="#15803d" stroke-width="2.6"/>
+    <text x="76" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">S</text>
+    <rect x="638" y="94" width="31" height="31" rx="3" fill="#7e22ce" fill-opacity="0.22" stroke="#7e22ce" stroke-width="2.6"/>
+    <text x="654" y="116" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">T</text>
+    <text x="360" y="230" text-anchor="middle" font-size="14" fill="#4b5563">Ubicación de cuatro elementos en la tabla periódica. Las letras no son sus símbolos reales.</text>
+  </g>
+</svg>

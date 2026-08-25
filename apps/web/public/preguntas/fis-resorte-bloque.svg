@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 268" width="600" height="268" role="img">
+  <title>Un resorte comprimido contra un bloque y, al lado, el mismo resorte estirado con el bloque en movimiento</title>
+  <defs>
+    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker>
+    <marker id="flA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+    <marker id="flR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+    <marker id="flV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+    <marker id="flM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7e22ce"/></marker>
+    <marker id="flT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+    <marker id="flG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4b5563"/></marker>
+  </defs>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="160" y="46" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Antes de soltar</text>
+    <line x1="40" y1="200" x2="280" y2="200" stroke="#1f2937" stroke-width="3"/>
+    <rect x="40" y="90" width="10" height="110" fill="#1f2937"/>
+    <path d="M50 140 L56 114 L62 140 L68 114 L74 140 L80 114 L86 140 L92 114 L98 140" fill="none" stroke="#15803d" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="104" y="128" width="56" height="72" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.6"/>
+    <text x="440" y="46" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Después de soltar</text>
+    <line x1="320" y1="200" x2="560" y2="200" stroke="#1f2937" stroke-width="3"/>
+    <rect x="320" y="90" width="10" height="110" fill="#1f2937"/>
+    <path d="M330 140 L344 114 L358 140 L372 114 L386 140 L400 114 L414 140 L428 114 L442 140" fill="none" stroke="#15803d" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="448" y="128" width="56" height="72" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.6"/>
+    <line x1="518" y1="164" x2="578" y2="164" stroke="#1d4ed8" stroke-width="3" marker-end="url(#flA)"/>
+    <text x="548" y="152" text-anchor="middle" font-size="14" fill="#1d4ed8">v</text>
+    <text x="300" y="252" text-anchor="middle" font-size="14" fill="#4b5563">El resorte comprimido empuja al bloque sobre una superficie sin roce.</text>
+  </g>
+</svg>

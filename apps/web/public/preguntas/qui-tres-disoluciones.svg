@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 328" width="620" height="328" role="img">
+  <title>Tres vasos: el primero con doce gramos de sal en cien mililitros, el segundo con seis en cien mililitros y el tercero con seis en cincuenta mililitros</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <path d="M50 50 L50 224 Q50 230 58 230 L172 230 Q180 230 180 224 L180 50" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M52 80 L52 224 Q52 228 60 228 L170 228 Q178 228 178 224 L178 80 Z" fill="#dbeafe"/>
+    <line x1="52" y1="80" x2="178" y2="80" stroke="#1d4ed8" stroke-width="2"/>
+    <circle cx="110" cy="147" r="6" fill="#b45309"/>
+    <circle cx="158" cy="158" r="6" fill="#b45309"/>
+    <circle cx="116" cy="143" r="6" fill="#b45309"/>
+    <circle cx="83" cy="153" r="6" fill="#b45309"/>
+    <circle cx="128" cy="118" r="6" fill="#b45309"/>
+    <circle cx="74" cy="178" r="6" fill="#b45309"/>
+    <circle cx="73" cy="116" r="6" fill="#b45309"/>
+    <circle cx="135" cy="211" r="6" fill="#b45309"/>
+    <circle cx="164" cy="96" r="6" fill="#b45309"/>
+    <circle cx="131" cy="140" r="6" fill="#b45309"/>
+    <circle cx="80" cy="214" r="6" fill="#b45309"/>
+    <circle cx="118" cy="209" r="6" fill="#b45309"/>
+    <text x="115" y="264" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">I</text>
+    <text x="115" y="286" text-anchor="middle" font-size="14" fill="#4b5563">100 mL de agua</text>
+    <path d="M240 50 L240 224 Q240 230 248 230 L362 230 Q370 230 370 224 L370 50" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M242 80 L242 224 Q242 228 250 228 L360 228 Q368 228 368 224 L368 80 Z" fill="#dbeafe"/>
+    <line x1="242" y1="80" x2="368" y2="80" stroke="#1d4ed8" stroke-width="2"/>
+    <circle cx="273" cy="186" r="6" fill="#b45309"/>
+    <circle cx="257" cy="158" r="6" fill="#b45309"/>
+    <circle cx="299" cy="112" r="6" fill="#b45309"/>
+    <circle cx="307" cy="137" r="6" fill="#b45309"/>
+    <circle cx="305" cy="134" r="6" fill="#b45309"/>
+    <circle cx="301" cy="182" r="6" fill="#b45309"/>
+    <text x="305" y="264" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">II</text>
+    <text x="305" y="286" text-anchor="middle" font-size="14" fill="#4b5563">100 mL de agua</text>
+    <path d="M430 50 L430 224 Q430 230 438 230 L552 230 Q560 230 560 224 L560 50" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M432 155 L432 224 Q432 228 440 228 L550 228 Q558 228 558 224 L558 155 Z" fill="#dbeafe"/>
+    <line x1="432" y1="155" x2="558" y2="155" stroke="#1d4ed8" stroke-width="2"/>
+    <circle cx="546" cy="167" r="6" fill="#b45309"/>
+    <circle cx="530" cy="181" r="6" fill="#b45309"/>
+    <circle cx="476" cy="205" r="6" fill="#b45309"/>
+    <circle cx="473" cy="213" r="6" fill="#b45309"/>
+    <circle cx="522" cy="196" r="6" fill="#b45309"/>
+    <circle cx="530" cy="197" r="6" fill="#b45309"/>
+    <text x="495" y="264" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">III</text>
+    <text x="495" y="286" text-anchor="middle" font-size="14" fill="#4b5563">50 mL de agua</text>
+    <text x="320" y="308" text-anchor="middle" font-size="14" fill="#4b5563">Cada punto naranjo es un gramo de la misma sal disuelta.</text>
+  </g>
+</svg>

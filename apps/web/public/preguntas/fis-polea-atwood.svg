@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" role="img">
+  <title>Dos bloques de dos y tres kilos colgando de una polea por la misma cuerda</title>
+  <defs>
+    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7"
+            markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <circle cx="300" cy="70" r="34" fill="#e5e7eb" stroke="#1f2937" stroke-width="3"/>
+    <circle cx="300" cy="70" r="6" fill="#1f2937"/>
+    <line x1="300" y1="20" x2="300" y2="36" stroke="#1f2937" stroke-width="3"/>
+    <line x1="230" y1="14" x2="370" y2="14" stroke="#1f2937" stroke-width="5"/>
+    <path d="M266 70 L266 200" stroke="#1f2937" stroke-width="2.4" fill="none"/>
+    <path d="M334 70 L334 288" stroke="#1f2937" stroke-width="2.4" fill="none"/>
+    <rect x="212" y="200" width="108" height="76" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="2.6"/>
+    <text x="266" y="246" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">2 kg</text>
+    <rect x="280" y="288" width="108" height="76" rx="6" fill="#fee2e2" stroke="#b91c1c" stroke-width="2.6"/>
+    <text x="334" y="334" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">3 kg</text>
+    <text x="300" y="398" text-anchor="middle" font-size="14" fill="#4b5563">La cuerda y la polea no pesan y no hay roce.</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250" role="img">
+  <title>Una molécula de nitrógeno y dos de hidrógeno reaccionando para dar dos moléculas de amoníaco, dibujadas como esferas unidas</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <line x1="97" y1="120" x2="123" y2="120" stroke="#1f2937" stroke-width="3"/>    <circle cx="95" cy="120" r="17" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="95" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">N</text>    <circle cx="125" cy="120" r="17" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="125" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">N</text>
+    <text x="176" y="128" font-size="26" fill="#1f2937">+</text>
+    <line x1="230" y1="96" x2="250" y2="96" stroke="#1f2937" stroke-width="3"/>    <circle cx="229" cy="96" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="229" y="101" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>    <circle cx="251" cy="96" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="251" y="101" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <line x1="230" y1="148" x2="250" y2="148" stroke="#1f2937" stroke-width="3"/>    <circle cx="229" cy="148" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="229" y="153" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>    <circle cx="251" cy="148" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="251" y="153" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <text x="310" y="128" font-size="26" fill="#1f2937">→</text>
+    <line x1="400" y1="110" x2="376" y2="92" stroke="#1f2937" stroke-width="3"/>
+    <line x1="400" y1="110" x2="424" y2="92" stroke="#1f2937" stroke-width="3"/>
+    <line x1="400" y1="110" x2="400" y2="136" stroke="#1f2937" stroke-width="3"/>
+    <circle cx="374" cy="90" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="374" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <circle cx="426" cy="90" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="426" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <circle cx="400" cy="138" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="400" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <circle cx="400" cy="110" r="17" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="400" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">N</text>
+    <line x1="510" y1="110" x2="486" y2="92" stroke="#1f2937" stroke-width="3"/>
+    <line x1="510" y1="110" x2="534" y2="92" stroke="#1f2937" stroke-width="3"/>
+    <line x1="510" y1="110" x2="510" y2="136" stroke="#1f2937" stroke-width="3"/>
+    <circle cx="484" cy="90" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="484" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <circle cx="536" cy="90" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="536" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <circle cx="510" cy="138" r="12" fill="#f8fafc" stroke="#4b5563" stroke-width="2"/><text x="510" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">H</text>
+    <circle cx="510" cy="110" r="17" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="510" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">N</text>
+    <text x="300" y="230" text-anchor="middle" font-size="15" fill="#4b5563">La reacción entre nitrógeno e hidrógeno, dibujada como partículas.</text>
+  </g>
+</svg>

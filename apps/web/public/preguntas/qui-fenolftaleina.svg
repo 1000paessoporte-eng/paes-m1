@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 396" width="600" height="396" role="img">
+  <title>Tres tubos de ensayo con fenolftaleína: el primero incoloro, el segundo rosado y el tercero incoloro</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <path d="M90 60 L90 250 Q90 286 120 286 Q150 286 150 250 L150 60" fill="#f8fafc" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M92 130 L92 250 Q92 284 120 284 Q148 284 148 250 L148 130 Z" fill="#f1f5f9"/>
+    <line x1="92" y1="130" x2="148" y2="130" stroke="#1f2937" stroke-width="1.6"/>
+    <text x="120" y="322" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">I</text>
+    <text x="120" y="346" text-anchor="middle" font-size="14" fill="#4b5563">incolora</text>
+    <path d="M270 60 L270 250 Q270 286 300 286 Q330 286 330 250 L330 60" fill="#f8fafc" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M272 130 L272 250 Q272 284 300 284 Q328 284 328 250 L328 130 Z" fill="#f9a8d4"/>
+    <line x1="272" y1="130" x2="328" y2="130" stroke="#1f2937" stroke-width="1.6"/>
+    <text x="300" y="322" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">II</text>
+    <text x="300" y="346" text-anchor="middle" font-size="14" fill="#4b5563">rosada</text>
+    <path d="M450 60 L450 250 Q450 286 480 286 Q510 286 510 250 L510 60" fill="#f8fafc" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M452 130 L452 250 Q452 284 480 284 Q508 284 508 250 L508 130 Z" fill="#f1f5f9"/>
+    <line x1="452" y1="130" x2="508" y2="130" stroke="#1f2937" stroke-width="1.6"/>
+    <text x="480" y="322" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">III</text>
+    <text x="480" y="346" text-anchor="middle" font-size="14" fill="#4b5563">incolora</text>
+    <text x="300" y="42" text-anchor="middle" font-size="15" fill="#4b5563">Tres muestras después de agregarles unas gotas de fenolftaleína.</text>
+    <text x="300" y="378" text-anchor="middle" font-size="14" fill="#4b5563">La fenolftaleína es incolora hasta pH 8 y rosada desde ahí hacia arriba.</text>
+  </g>
+</svg>

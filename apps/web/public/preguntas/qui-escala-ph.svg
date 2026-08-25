@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 230" width="660" height="230" role="img">
+  <title>Escala de pH del cero al catorce con cinco sustancias ubicadas: jugo de limón en dos, café en cinco, agua pura en siete, bicarbonato en nueve y limpiador en doce</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <rect x="60" y="120" width="540" height="44" rx="6" fill="#f8fafc" stroke="#1f2937" stroke-width="2"/>
+    <text x="78" y="150" text-anchor="middle" font-size="14" fill="#4b5563">0</text>
+    <line x1="96" y1="120" x2="96" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="114" y="150" text-anchor="middle" font-size="14" fill="#4b5563">1</text>
+    <line x1="132" y1="120" x2="132" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="150" y="150" text-anchor="middle" font-size="14" fill="#4b5563">2</text>
+    <line x1="168" y1="120" x2="168" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="186" y="150" text-anchor="middle" font-size="14" fill="#4b5563">3</text>
+    <line x1="204" y1="120" x2="204" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="222" y="150" text-anchor="middle" font-size="14" fill="#4b5563">4</text>
+    <line x1="240" y1="120" x2="240" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="258" y="150" text-anchor="middle" font-size="14" fill="#4b5563">5</text>
+    <line x1="276" y1="120" x2="276" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="294" y="150" text-anchor="middle" font-size="14" fill="#4b5563">6</text>
+    <line x1="312" y1="120" x2="312" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="330" y="150" text-anchor="middle" font-size="14" fill="#4b5563">7</text>
+    <line x1="348" y1="120" x2="348" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="366" y="150" text-anchor="middle" font-size="14" fill="#4b5563">8</text>
+    <line x1="384" y1="120" x2="384" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="402" y="150" text-anchor="middle" font-size="14" fill="#4b5563">9</text>
+    <line x1="420" y1="120" x2="420" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="438" y="150" text-anchor="middle" font-size="14" fill="#4b5563">10</text>
+    <line x1="456" y1="120" x2="456" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="474" y="150" text-anchor="middle" font-size="14" fill="#4b5563">11</text>
+    <line x1="492" y1="120" x2="492" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="510" y="150" text-anchor="middle" font-size="14" fill="#4b5563">12</text>
+    <line x1="528" y1="120" x2="528" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="546" y="150" text-anchor="middle" font-size="14" fill="#4b5563">13</text>
+    <line x1="564" y1="120" x2="564" y2="164" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="582" y="150" text-anchor="middle" font-size="14" fill="#4b5563">14</text>
+    <line x1="60" y1="180" x2="312" y2="180" stroke="#b91c1c" stroke-width="4"/>
+    <text x="186" y="202" text-anchor="middle" font-size="14" font-weight="600" fill="#b91c1c">ácido</text>
+    <line x1="348" y1="180" x2="600" y2="180" stroke="#1d4ed8" stroke-width="4"/>
+    <text x="474" y="202" text-anchor="middle" font-size="14" font-weight="600" fill="#1d4ed8">básico</text>
+    <text x="330" y="202" text-anchor="middle" font-size="14" font-weight="600" fill="#15803d">neutro</text>
+    <line x1="150" y1="100" x2="150" y2="118" stroke="#4b5563" stroke-width="1.4"/>
+    <text x="150" y="92" text-anchor="middle" font-size="14" fill="#111827">jugo de limón</text>
+    <line x1="258" y1="70" x2="258" y2="118" stroke="#4b5563" stroke-width="1.4"/>
+    <text x="258" y="62" text-anchor="middle" font-size="14" fill="#111827">café</text>
+    <line x1="330" y1="100" x2="330" y2="118" stroke="#4b5563" stroke-width="1.4"/>
+    <text x="330" y="92" text-anchor="middle" font-size="14" fill="#111827">agua pura</text>
+    <line x1="402" y1="70" x2="402" y2="118" stroke="#4b5563" stroke-width="1.4"/>
+    <text x="402" y="62" text-anchor="middle" font-size="14" fill="#111827">bicarbonato</text>
+    <line x1="510" y1="100" x2="510" y2="118" stroke="#4b5563" stroke-width="1.4"/>
+    <text x="510" y="92" text-anchor="middle" font-size="14" fill="#111827">limpiador</text>
+  </g>
+</svg>

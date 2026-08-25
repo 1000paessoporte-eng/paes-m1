@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 320" width="580" height="320" role="img">
+  <title>Dos frascos sobre balanzas: uno tapado que marca 120 gramos y otro destapado del que escapa gas, con la masa sin indicar</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="130" y="40" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Frasco I: cerrado</text>
+    <path d="M80 80 L80 190 Q80 208 98 208 L162 208 Q180 208 180 190 L180 80" fill="#e0f2fe" stroke="#1f2937" stroke-width="2.6"/>
+    <rect x="72" y="66" width="116" height="16" rx="4" fill="#1f2937"/>
+    <circle cx="106" cy="178" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <circle cx="136" cy="168" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <circle cx="160" cy="182" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <circle cx="120" cy="150" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <rect x="56" y="212" width="148" height="14" rx="4" fill="#cbd5e1" stroke="#4b5563" stroke-width="1.6"/>
+    <rect x="84" y="226" width="92" height="40" rx="6" fill="#f1f5f9" stroke="#1f2937" stroke-width="2.2"/>
+    <text x="130" y="253" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">120 g</text>
+    <text x="390" y="40" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Frasco II: destapado</text>
+    <path d="M340 80 L340 190 Q340 208 358 208 L422 208 Q440 208 440 190 L440 80" fill="#e0f2fe" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M352 60 q6 -20 14 -6 M386 54 q6 -20 14 -6 M418 60 q6 -20 14 -6" fill="none" stroke="#4b5563" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="366" cy="178" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <circle cx="396" cy="168" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <circle cx="420" cy="182" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <circle cx="380" cy="150" r="9" fill="#b45309" fill-opacity="0.5" stroke="#b45309" stroke-width="1.8"/>
+    <rect x="316" y="212" width="148" height="14" rx="4" fill="#cbd5e1" stroke="#4b5563" stroke-width="1.6"/>
+    <rect x="344" y="226" width="92" height="40" rx="6" fill="#f1f5f9" stroke="#1f2937" stroke-width="2.2"/>
+    <text x="390" y="253" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">?</text>
+    <text x="300" y="300" text-anchor="middle" font-size="14" fill="#4b5563">La misma reacción, que libera un gas, hecha en dos frascos idénticos.</text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" width="600" height="390" role="img">
+  <title>Gráfico de posición contra tiempo de un móvil, con cuatro tramos rotulados P, Q, R y S</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <g stroke="#e2e8f0" stroke-width="1">
+      <line x1="80" y1="260" x2="540" y2="260"/>
+      <line x1="80" y1="200" x2="540" y2="200"/>
+      <line x1="80" y1="140" x2="540" y2="140"/>
+      <line x1="80" y1="80" x2="540" y2="80"/>
+    </g>
+    <path d="M80 40 L80 320 L540 320" fill="none" stroke="#1f2937" stroke-width="2.4"/>
+    <text x="80" y="342" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <text x="195" y="342" text-anchor="middle" font-size="13" fill="#4b5563">2</text>
+    <text x="310" y="342" text-anchor="middle" font-size="13" fill="#4b5563">4</text>
+    <text x="425" y="342" text-anchor="middle" font-size="13" fill="#4b5563">6</text>
+    <text x="540" y="342" text-anchor="middle" font-size="13" fill="#4b5563">8</text>
+    <text x="70" y="325" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <text x="70" y="265" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <text x="70" y="205" text-anchor="end" font-size="13" fill="#4b5563">40</text>
+    <text x="70" y="145" text-anchor="end" font-size="13" fill="#4b5563">60</text>
+    <text x="70" y="85" text-anchor="end" font-size="13" fill="#4b5563">80</text>
+    <text x="310.0" y="368" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Tiempo (s)</text>
+    <text x="22" y="180.0" text-anchor="middle" font-size="15" font-weight="600" fill="#111827" transform="rotate(-90 22 180.0)">Posición (m)</text>
+    <path d="M80 320 L195 260 L310 260 L425 80 L540 140" fill="none" stroke="#1d4ed8" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round"/>
+    <g font-size="17" font-weight="700" fill="#1d4ed8"><text x="132" y="278">P</text><text x="252" y="246">Q</text><text x="348" y="152">R</text><text x="482" y="96">S</text></g>
+  </g>
+</svg>
