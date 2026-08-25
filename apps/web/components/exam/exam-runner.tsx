@@ -604,20 +604,7 @@ export function ExamRunner({
   const hayTextos = questions.some((q) => q.passage);
 
   return (
-    <div
-      className={cn(
-        "mx-auto max-w-3xl",
-        // Con texto base el ensayo pide más ancho del que da el panel. El tope
-        // del layout —max-w-6xl— está pensado para pantallas de una columna, y
-        // acá hay dos: la lectura y sus preguntas. Los márgenes negativos
-        // recuperan el padding del contenedor y suman cuatro rem por lado, así
-        // que el carril pasa de 1.104 a 1.232 px y cada columna gana unos 64.
-        // Empieza en xl (1280 px) porque es el primer ancho donde eso entra sin
-        // dejar la página pegada al borde de la ventana; más abajo no aplica y
-        // el ensayo se ve como antes.
-        hayTextos && "lg:max-w-6xl xl:-mx-16 xl:max-w-none"
-      )}
-    >
+    <div className={cn("mx-auto max-w-3xl", hayTextos && "lg:max-w-6xl")}>
       {/* ── Barra superior ──────────────────────────────────────────── */}
       {/* La franja de arriba dice de qué prueba es este ensayo sin ocupar una
           palabra, con el mismo color que usan el titular de la portada, el
@@ -743,9 +730,19 @@ export function ExamRunner({
             —hoja abierta, preguntas al lado— y lo que pedía el ensayo real.
             Bajo lg no hay ancho para dos carriles legibles: el texto vuelve
             arriba, una sola vez, como estaba. */}
+        {/* El reparto no es mitad y mitad: la lectura se lleva algo más que
+            las preguntas. Un texto de mil palabras se lee mejor en un renglón
+            largo, mientras que una alternativa tiene 52 caracteres de mediana
+            y no necesita el mismo ancho. Con el carril de 1.104 px la lectura
+            pasa de 540 a unos 578 px y las preguntas bajan a 502.
+            El límite lo pone el otro lado: cuanto más angosta la columna de
+            preguntas, más alternativas se parten en dos líneas. Con este
+            reparto son cerca del 9% contra el 3% de hoy; con 1,2fr serían 14%,
+            y por eso no se estiró más. */}
         <div
           className={cn(
-            textoPagina && "lg:grid lg:grid-cols-2 lg:items-start lg:gap-6"
+            textoPagina &&
+              "lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-6"
           )}
         >
           {textoPagina && (
