@@ -21391,6 +21391,288 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "segundo_lugar",
+        "title": "El segundo lugar",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes, el "
+            "colegio y las competencias son ficticios."
+        ),
+        "body": (
+            "**El segundo lugar**\n\n"
+            "Lo reconocí en la fila de la bencinera, veintidós años después, y lo "
+            "reconocí de inmediato. Estaba más pesado y tenía el pelo corto, pero "
+            "la manera de pararse era la misma: el peso en la pierna izquierda, los "
+            "hombros un poco caídos, esa impaciencia contenida de quien siempre "
+            "está a punto de salir corriendo.\n\n"
+            "Iván Sepúlveda. Colegio San Bartolomé. Los mil quinientos metros del "
+            "campeonato intercolegial de 1998, en la pista de tierra del estadio "
+            "municipal, con viento en contra en la recta de vuelta.\n\n"
+            "Yo llegué segundo. Llegué segundo ese año y el siguiente, y también en "
+            "los ochocientos, y en la corrida de aniversario, y en una prueba menor "
+            "de la que probablemente nadie más se acuerde. Cinco veces. Siempre él "
+            "adelante, entre tres y ocho segundos, con esa facilidad insultante de "
+            "los que corren sin gesto.\n\n"
+            "Durante mucho tiempo no supe qué hacer con eso, y después supe "
+            "perfectamente. Empecé a entrenar en serio. Cambié la alimentación, "
+            "compré un cronómetro que mi mamá encontró carísimo, corrí en invierno "
+            "con lluvia. En la universidad seguí corriendo aunque ya nadie me "
+            "cronometraba, y cuando dejé de correr seguí midiéndome: el primer "
+            "trabajo, el segundo, la casa. Nunca dije en voz alta lo que estaba "
+            "haciendo, porque decirlo habría sido ridículo, pero durante veinte "
+            "años hubo una vara en alguna parte de mi cabeza y la vara tenía la "
+            "forma de un muchacho delgado corriendo sin gesto.\n\n"
+            "Le hablé mientras esperábamos el surtidor. Le dije mi nombre y el del "
+            "colegio.\n\n"
+            "Fue amable. Fue muy amable, de hecho: sonrió, me dio la mano, dijo que "
+            "cómo estaba. Y después se quedó un segundo de más mirándome, con esa "
+            "expresión que uno pone cuando trata de sostener una conversación "
+            "mientras busca urgentemente un dato que no tiene.\n\n"
+            "—Perdona —dijo—. ¿Corrías tú también?\n\n"
+            "No lo dijo con maldad. Ahí está lo que me costó procesar después. No "
+            "hubo desprecio, ni ironía, ni siquiera esa vaguedad cortés de quien "
+            "recuerda algo y prefiere no decirlo. Simplemente no estaba. No había "
+            "en su cabeza ningún archivo con mi cara, ninguna carrera con alguien "
+            "pisándole los talones a tres segundos, ningún viento en contra en la "
+            "recta de vuelta.\n\n"
+            "Le dije que sí, que corría los mil quinientos. Él dijo que qué bueno, "
+            "que él lo había dejado a los veinte por una lesión en la rodilla, y se "
+            "rió y dijo que ahora salía a trotar los domingos y que le costaba una "
+            "barbaridad.\n\n"
+            "Hablamos como cuatro minutos. Me contó que trabajaba en una empresa de "
+            "áridos, que tenía dos hijas, que la mayor entraba a la universidad el "
+            "próximo año y que no sabía de dónde iba a sacar la plata. Yo le conté "
+            "algo de lo mío. Fue una conversación agradable entre dos personas que "
+            "no se conocen.\n\n"
+            "Después él pagó, se subió a la camioneta y se fue.\n\n"
+            "Manejé de vuelta pensando en una sola cosa, y no era la que se supone "
+            "que uno debería pensar. No me sentí humillado. Esperé sentirme "
+            "humillado durante todo el camino y no llegó.\n\n"
+            "Lo que sentí fue algo más raro, para lo que no tengo una palabra "
+            "exacta. Algo parecido a lo que uno siente cuando descubre que la casa "
+            "donde pasó la infancia era mucho más chica de lo que recordaba: no es "
+            "decepción, porque la casa está bien; es que uno tiene que hacer un "
+            "ajuste en un lugar donde no sabía que había una medida.\n\n"
+            "Porque el asunto es este, y me tomó semanas ordenarlo. Esa rivalidad "
+            "existió. Fue absolutamente real y produjo efectos verificables: yo "
+            "corrí cientos de kilómetros por ella, aprendí a levantarme temprano, "
+            "aprendí que se puede mejorar en algo si uno insiste lo suficiente. La "
+            "mitad de lo que sé sobre el esfuerzo lo aprendí compitiendo con Iván "
+            "Sepúlveda.\n\n"
+            "Y ocurre que existió en un solo lugar. Todo el tiempo hubo una sola "
+            "persona en esa rivalidad, y era yo. Él estaba corriendo, nada más. "
+            "Corriendo bien, sin gesto, sin saber que a tres segundos y a veintidós "
+            "años de distancia alguien iba a estar organizando su vida alrededor de "
+            "esa espalda.\n\n"
+            "Lo que no logro decidir es si eso la vuelve menos valiosa. Si un "
+            "motivo funciona, si lo hace durante veinte años, si produce todo lo "
+            "que produjo, ¿importa que estuviera hecho de una materia que solo yo "
+            "veía?\n\n"
+            "Me inclino a pensar que no importa, o que importa menos de lo que me "
+            "gustaría. Pero no estoy seguro, y creo que no lo voy a estar.\n\n"
+            "Hay una última cosa, que es la que me dejó incómodo de verdad. "
+            "Mientras hablábamos en la bencinera, cuando me contó lo de la hija y "
+            "la universidad y lo de la empresa de áridos, yo estaba haciendo la "
+            "cuenta. Sin proponérmelo, con la misma naturalidad de siempre, estaba "
+            "comparando su trabajo con el mío, su camioneta con mi auto, sus dos "
+            "hijas con mi hija.\n\n"
+            "Veintidós años, una conversación de cuatro minutos, y la vara seguía "
+            "ahí. Ni siquiera hizo falta que él supiera quién era yo."
+        ),
+    },
+    {
+        "key": "contrato_arriendo",
+        "title": "Cómo leer un contrato de arriendo",
+        "kind": "discontinuo",
+        "source_note": (
+            "Cartilla original de 1000paes, de uso educativo. El contrato del ejemplo y "
+            "sus montos son ficticios; la cartilla explica cláusulas corrientes y no "
+            "constituye asesoría legal."
+        ),
+        "body": (
+            "**CÓMO LEER UN CONTRATO DE ARRIENDO**\n\n"
+            "*Cartilla de uso educativo. El contrato del ejemplo, sus partes y sus "
+            "montos son ficticios. Esta cartilla enseña dónde mirar y qué significa "
+            "cada cláusula; no constituye asesoría legal ni reemplaza al contrato "
+            "que cada persona firme.*\n\n"
+            "**1. El encabezado: quién, qué y para qué**\n\n"
+            "| Campo | En el contrato del ejemplo |\n"
+            "|---|---|\n"
+            "| Arrendador | quien entrega el inmueble |\n"
+            "| Arrendatario | quien lo recibe y paga la renta |\n"
+            "| Inmueble | departamento 704, Los Aromos 1290 |\n"
+            "| Destino | habitacional |\n"
+            "| Renta mensual | $420.000 |\n"
+            "| Día de pago | los primeros cinco días de cada mes |\n\n"
+            "El **destino** parece un formalismo y no lo es: un contrato firmado "
+            "con destino habitacional no habilita a instalar ahí un local ni una "
+            "oficina de atención de público, y hacerlo suele estar entre las "
+            "causales de término anticipado.\n\n"
+            "**2. La renta y su reajuste**\n\n"
+            "Un contrato puede fijar la renta en pesos o en unidades de fomento. Si "
+            "la fija en pesos, casi siempre incluye una cláusula de reajuste que "
+            "indica cada cuánto sube y según qué índice. Conviene leer las tres "
+            "cosas juntas: **cuánto**, **cada cuánto** y **desde cuándo**.\n\n"
+            "Una renta sin cláusula de reajuste no significa que nunca suba: "
+            "significa que no sube durante la vigencia de este contrato, y que la "
+            "conversación se dará al renovarlo.\n\n"
+            "**3. La garantía: la confusión más frecuente**\n\n"
+            "La garantía es un monto que el arrendatario entrega al inicio y que el "
+            "arrendador conserva para responder por daños o deudas al término del "
+            "arriendo. En el contrato del ejemplo equivale a un mes de renta.\n\n"
+            "**No es el último mes.** Descontarla de la última renta es el error "
+            "más común: mientras el arrendatario ocupa el inmueble, la renta se "
+            "debe igual, y la garantía todavía no ha cumplido su función, que es "
+            "responder por lo que aparezca **después** de que se entreguen las "
+            "llaves.\n\n"
+            "Tampoco cubre cualquier cosa. De ella se descuentan los daños que no "
+            "correspondan al uso normal y las cuentas impagas; no se descuenta el "
+            "desgaste esperable de vivir en un lugar, como la pintura opaca de un "
+            "muro que lleva tres años puesto.\n\n"
+            "**4. Plazo y renovación**\n\n"
+            "| Cláusula | Qué significa |\n"
+            "|---|---|\n"
+            "| Plazo fijo de 12 meses | el contrato termina en esa fecha |\n"
+            "| Renovación automática | si nadie avisa, se renueva por igual período |\n"
+            "| Aviso previo de 60 días | plazo para avisar que no se renovará |\n"
+            "| Término anticipado | condiciones para irse antes de la fecha |\n\n"
+            "La combinación de las dos primeras filas es la que sorprende a más "
+            "gente. Un contrato con renovación automática y aviso de sesenta días "
+            "significa que **guardar silencio es una decisión**: quien no avisa a "
+            "tiempo queda obligado por doce meses más.\n\n"
+            "**5. Quién paga qué**\n\n"
+            "| Concepto | Suele pagarlo |\n"
+            "|---|---|\n"
+            "| Gastos comunes | el arrendatario |\n"
+            "| Consumos de luz, agua y gas | el arrendatario |\n"
+            "| Contribuciones del inmueble | el arrendador |\n"
+            "| Reparaciones locativas (chapa, llave que gotea) | el arrendatario |\n"
+            "| Reparaciones estructurales (filtración, techo) | el arrendador |\n\n"
+            "La línea entre las dos últimas filas es la que más discusiones "
+            "produce, y el criterio que suele usarse es el origen: lo que se rompe "
+            "por el uso cotidiano corre por cuenta de quien usa; lo que falla por "
+            "el inmueble mismo, por cuenta de quien lo entrega. Un contrato puede "
+            "repartirlo de otra manera, y por eso hay que leer esa cláusula y no "
+            "suponerla.\n\n"
+            "**6. El acta de entrega**\n\n"
+            "Es el documento que describe el estado del inmueble el día en que se "
+            "recibe, idealmente con fotografías fechadas y con el detalle de lo que "
+            "ya está dañado. Se firma al comienzo y casi nadie le presta atención.\n\n"
+            "Al final del arriendo, esa acta es lo que decide la discusión sobre la "
+            "garantía. Sin ella, arrendador y arrendatario discuten dos recuerdos "
+            "distintos del mismo living, y gana el que tenga mejor memoria o más "
+            "insistencia. Con ella, la comparación es entre dos documentos.\n\n"
+            "**7. Cláusulas que conviene leer dos veces**\n\n"
+            "*Prohibición de subarrendar.* Impide arrendarle a un tercero, en todo "
+            "o en parte, sin autorización escrita. Alcanza también a los arriendos "
+            "por días.\n\n"
+            "*Multa por término anticipado.* Indica cuánto cuesta irse antes de "
+            "tiempo. Conviene compararla con las mensualidades que faltarían: a "
+            "veces la multa es menor, y entonces irse antes es una opción y no una "
+            "catástrofe.\n\n"
+            "*Visitas del arrendador.* Un contrato suele permitirlas con aviso "
+            "previo y en horario razonable. Sin esa cláusula escrita, la regla es "
+            "que el arrendatario tiene el uso exclusivo del inmueble.\n\n"
+            "**8. Lo que esta cartilla no dice**\n\n"
+            "No reemplaza el contrato: cada uno reparte obligaciones a su manera, y "
+            "manda lo que ahí esté escrito. No cubre el arriendo de locales "
+            "comerciales, que se rige por reglas propias. Y no informa qué hacer "
+            "cuando el conflicto ya ocurrió, materia que corresponde a la asesoría "
+            "legal y a los organismos competentes."
+        ),
+    },
+    {
+        "key": "pan_duro",
+        "title": "El pan del día siguiente",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de la descripción corriente "
+            "del fenómeno de retrogradación del almidón en la ciencia de los alimentos."
+        ),
+        "body": (
+            "**El pan del día siguiente**\n\n"
+            "Un pan comprado en la mañana está blando en el desayuno y al día "
+            "siguiente es otra cosa: firme, arenoso, difícil de morder. La "
+            "explicación que todo el mundo da es que se secó, y esa explicación "
+            "tiene el problema de no calzar con dos hechos que cualquiera puede "
+            "comprobar en su cocina.\n\n"
+            "El primero es que un pan guardado en una bolsa plástica bien cerrada, "
+            "donde el agua no tiene por dónde escaparse, se endurece igual. El "
+            "segundo es más elocuente: un pan duro metido al horno unos minutos "
+            "vuelve a estar blando. Si el problema fuera agua perdida, calentarlo "
+            "lo secaría todavía más.\n\n"
+            "**Lo que de verdad ocurre**\n\n"
+            "El responsable es el almidón, que es la mayor parte de la harina. "
+            "Durante el horneado, sus gránulos absorben agua y se hinchan hasta "
+            "perder su estructura ordenada: quedan desarmados, flexibles, con el "
+            "agua atrapada adentro. Eso es la miga blanda de un pan recién hecho.\n\n"
+            "Apenas el pan empieza a enfriarse, esas moléculas comienzan a "
+            "reordenarse de a poco y a volver a una disposición más rígida, "
+            "expulsando en el camino parte del agua que tenían capturada. El "
+            "proceso tiene nombre —retrogradación— y es el que endurece la miga. El "
+            "agua, en buena medida, sigue dentro del pan; lo que cambió es dónde "
+            "está y cómo está organizado el almidón a su alrededor.\n\n"
+            "Dicho de otro modo: el pan del día siguiente no está seco, está "
+            "reordenado.\n\n"
+            "**Tres consecuencias que se pueden comprobar**\n\n"
+            "La primera es la más contraintuitiva y la más útil. La retrogradación "
+            "avanza más rápido a temperaturas de refrigerador que a temperatura "
+            "ambiente, de modo que guardar el pan en el refrigerador lo endurece "
+            "antes que dejarlo sobre la mesa. Es exactamente lo contrario de lo que "
+            "hace el frío con casi todo lo demás, y por eso el consejo suena a "
+            "superstición cuando en realidad es la conclusión de cómo funciona el "
+            "almidón.\n\n"
+            "La segunda explica el horno. El calor deshace parte de esa estructura "
+            "rígida y devuelve la miga a algo parecido a su estado anterior. No es "
+            "un truco ni una ilusión: es el mismo proceso corriendo hacia atrás. "
+            "También explica por qué el efecto dura tan poco. Un pan recalentado se "
+            "endurece de nuevo, y más rápido que la primera vez, porque el "
+            "reordenamiento encuentra el camino ya hecho.\n\n"
+            "La tercera es que el congelador sí sirve. A temperaturas "
+            "suficientemente bajas el reordenamiento prácticamente se detiene, así "
+            "que un pan congelado el mismo día que se compró y calentado una semana "
+            "después queda notoriamente mejor que uno de dos días guardado en la "
+            "cocina.\n\n"
+            "**Dos cosas distintas que llamamos igual**\n\n"
+            "Conviene separar dos palabras que en la conversación se usan como "
+            "sinónimos. La miga se endurece por reordenamiento del almidón. La "
+            "corteza, en cambio, sí se seca, porque está expuesta al aire y pierde "
+            "humedad de verdad.\n\n"
+            "Con el tiempo las dos cosas ocurren a la vez y en direcciones "
+            "opuestas, y el resultado desconcierta a quien espera lo contrario: la "
+            "corteza de un pan viejo se ablanda —absorbe humedad del ambiente y de "
+            "la propia miga— mientras la miga se pone dura. Un pan de dos días "
+            "suele tener la corteza correosa y la miga arenosa, que es el revés "
+            "exacto de cómo estaba al salir del horno.\n\n"
+            "**Por qué importa haberlo entendido mal**\n\n"
+            "Un diagnóstico equivocado no impide actuar: impide que la acción "
+            "sirva. Quien cree que el problema es la sequedad hace lo que "
+            "corresponde a esa creencia, que es agregar humedad, y por eso mete el "
+            "pan en una bolsa plástica cerrada. El resultado es coherente con la "
+            "física y decepcionante para él: la bolsa efectivamente conserva la "
+            "humedad, así que la corteza se ablanda todavía más, y la miga se "
+            "endurece igual, porque el agua nunca fue el problema.\n\n"
+            "Peor le va a quien busca conservarlo y lo pone en el refrigerador, "
+            "convencido de que el frío retrasa lo que sea. Está aplicando una regla "
+            "general —el frío conserva— a un proceso que responde al revés.\n\n"
+            "Vale la pena, eso sí, no convertir esto en una receta única. Hay panes "
+            "y panes: los que llevan más grasa o azúcar se endurecen más lento, "
+            "porque esos ingredientes estorban el reordenamiento del almidón, y por "
+            "eso una marraqueta y un pan de molde envejecen a ritmos distintos. Y "
+            "hay preferencias legítimas: a mucha gente le gusta la corteza blanda, "
+            "y guardar el pan en bolsa es una manera perfectamente razonable de "
+            "conseguirla. Lo que no es razonable es esperar que eso mantenga blanda "
+            "la miga.\n\n"
+            "Queda una lección menor y bastante transferible. Frente a un problema "
+            "cotidiano, la explicación más disponible suele ser la que usa las "
+            "palabras más comunes, y «se secó» es una explicación así: no exige "
+            "saber nada y responde algo. Bastan dos observaciones caseras para "
+            "derribarla, y sin embargo puede sobrevivir décadas en una casa, porque "
+            "nadie tiene motivos para ponerla a prueba mientras el pan siga "
+            "poniéndose duro de todos modos."
+        ),
+    },
+    {
         "key": "sesgo_sobreviviente",
         "title": "Los agujeros que no están",
         "kind": "no_literario",
@@ -28261,6 +28543,652 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'El segundo lugar' ----------
+    _ql(
+        "segundo_lugar", "lec_localizar", "facil",
+        "Según el relato, ¿dónde se encuentran los dos hombres?",
+        "En la fila de una bencinera",
+        "El encuentro ocurre veintidós años después del campeonato, mientras ambos "
+        "esperan el surtidor.\nEl narrador lo reconoce de inmediato por la manera "
+        "de pararse: «el peso en la pierna izquierda, los hombros un poco caídos, "
+        "esa impaciencia contenida de quien siempre está a punto de salir "
+        "corriendo».\nEse detalle importa porque marca la asimetría desde la "
+        "primera línea: uno reconoce al otro al instante, y el otro no.",
+        [
+            ("En el estadio municipal", "Ahí fueron las carreras de 1998, no el encuentro."),
+            ("En una reunión de excompañeros", "El relato no menciona ninguna reunión."),
+            ("En la universidad de su hija", "La hija de Iván entra a la universidad el próximo año."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_localizar", "facil",
+        "Según el relato, ¿cuántas veces llegó segundo el narrador detrás de Iván?",
+        "Cinco veces",
+        "El narrador las enumera con precisión: los mil quinientos de 1998 y del "
+        "año siguiente, los ochocientos, la corrida de aniversario «y una prueba "
+        "menor de la que probablemente nadie más se acuerde».\nCinco derrotas, "
+        "siempre por entre tres y ocho segundos.\nEl detalle de la prueba menor "
+        "anticipa el tema del cuento: él recuerda hasta lo que nadie registró.",
+        [
+            ("Dos veces", "Dos son los años en que corrió los mil quinientos."),
+            ("Veintidós veces", "Veintidós son los años transcurridos hasta el reencuentro."),
+            ("Ninguna: siempre ganó", "El relato entero parte de que llegó segundo."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_localizar", "medio",
+        "Según el relato, ¿por qué Iván dejó de correr?",
+        "Por una lesión en la rodilla",
+        "Se lo cuenta al narrador en la bencinera: lo dejó a los veinte años por "
+        "esa lesión.\nAgrega, riéndose, que ahora sale a trotar los domingos «y que "
+        "le costaba una barbaridad».\nEl dato completa el retrato: aquel corredor "
+        "que ganaba «sin gesto» dejó el atletismo apenas dos años después de la "
+        "última carrera que el narrador recuerda con detalle.",
+        [
+            ("Porque entró a trabajar en una empresa", "Trabaja en una empresa de áridos, pero eso no explica su retiro."),
+            ("Porque el narrador empezó a ganarle", "El narrador nunca le ganó."),
+            ("Porque se cambió de colegio ese año", "El relato no menciona ningún cambio de colegio."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_localizar", "medio",
+        "Según el relato, ¿qué le pregunta Iván al narrador?",
+        "Si él también corría",
+        "La pregunta llega después de un saludo amable y de un segundo de más "
+        "mirándolo: «Perdona. ¿Corrías tú también?».\nEs la frase que da vuelta el "
+        "cuento, porque revela que el narrador no está en su memoria de ninguna "
+        "manera.\nEl propio narrador se detiene en cómo fue dicha: sin maldad, sin "
+        "ironía y sin la vaguedad cortés de quien recuerda algo y prefiere "
+        "callarlo.",
+        [
+            ("Si se acuerda del campeonato", "Iván no menciona ningún campeonato."),
+            ("En qué colegio estudiaba", "El narrador ya le había dicho el nombre del colegio."),
+            ("Cuántos hijos tiene ahora", "De hijos habla Iván, contando los suyos."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_localizar", "facil",
+        "Según el relato, ¿qué hizo el narrador después de aquellas derrotas?",
+        "Se puso a entrenar en serio",
+        "Cambió la alimentación, compró un cronómetro «que mi mamá encontró "
+        "carísimo» y corrió en invierno con lluvia.\nEn la universidad siguió "
+        "corriendo aunque ya nadie lo cronometraba, y cuando dejó de correr siguió "
+        "midiéndose en otras cosas: «el primer trabajo, el segundo, la casa».\nEsa "
+        "continuidad es lo que después le permite decir que la rivalidad «produjo "
+        "efectos verificables».",
+        [
+            ("Abandonó el atletismo por completo", "Siguió corriendo incluso cuando nadie lo cronometraba."),
+            ("Se cambió a otra prueba más corta", "Corrió los mil quinientos y también los ochocientos, sin abandonarlos."),
+            ("Le pidió consejos a Iván Sepúlveda", "Nunca habló con él hasta el encuentro de la bencinera."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_interpretar", "facil",
+        "¿Qué quiere decir el narrador al hablar de «esa facilidad insultante de "
+        "los que corren sin gesto»?",
+        "Que ganaba sin aparentar esfuerzo",
+        "Correr sin gesto es correr sin que se note el sacrificio: la cara "
+        "relajada, el cuerpo suelto.\nLo insultante no es una ofensa de Iván, sino "
+        "el efecto que produce en quien viene atrás esforzándose. El adjetivo dice "
+        "más del narrador que del corredor.\nLa imagen vuelve al final del cuento, "
+        "cuando resume veinte años diciendo que la vara «tenía la forma de un "
+        "muchacho delgado corriendo sin gesto».",
+        [
+            ("Que Iván se burlaba de sus rivales", "El relato descarta cualquier gesto hostil de su parte."),
+            ("Que corría con muy mala técnica", "La expresión alude a su soltura, no a un defecto."),
+            ("Que el público lo aplaudía siempre", "El público no aparece en el relato."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_interpretar", "medio",
+        "¿Qué revela que el narrador nunca dijera en voz alta lo que estaba "
+        "haciendo?",
+        "Que sabía que sonaría ridículo contarlo",
+        "Él mismo entrega la razón: «decirlo habría sido ridículo».\nEl silencio no "
+        "protegía la rivalidad de nadie más; la protegía de la evaluación. Mientras "
+        "no se dijera, no había que explicar por qué un adolescente al que le "
+        "ganaron cinco carreras organizaba su vida en torno a eso.\nY prepara el "
+        "desenlace: si nunca lo dijo, el único lugar donde esa rivalidad existía "
+        "era su propia cabeza, que es exactamente lo que descubre en la bencinera.",
+        [
+            ("Que le avergonzaba haber llegado segundo", "Lo que le parece ridículo es contar la comparación, no el resultado."),
+            ("Que nadie más entrenaba en su colegio", "El relato no informa qué hacían sus compañeros."),
+            ("Que esperaba sorprender a Iván en algún momento", "No hay ningún plan de revancha en el cuento."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_interpretar", "medio",
+        "¿Por qué el narrador insiste en que Iván no fue descortés?",
+        "Porque el olvido fue genuino",
+        "El narrador descarta una por una las lecturas alternativas: «No hubo "
+        "desprecio, ni ironía, ni siquiera esa vaguedad cortés de quien recuerda "
+        "algo y prefiere no decirlo».\nLa distinción es necesaria para lo que "
+        "viene. Un desaire habría confirmado que la rivalidad existía para los dos, "
+        "aunque con desprecio de por medio.\nQue el olvido sea sincero es lo que la "
+        "deja del todo unilateral: «No había en su cabeza ningún archivo con mi "
+        "cara».",
+        [
+            ("Porque Iván lo saludó por su nombre", "Iván no llega a recordar quién es."),
+            ("Porque quería evitarle una vergüenza", "El relato descarta expresamente esa cortesía calculada."),
+            ("Porque conversaron durante cuatro minutos", "La duración no dice nada sobre la intención."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_interpretar", "dificil",
+        "¿Qué explica el narrador al compararlo con volver a la casa de la "
+        "infancia?",
+        "Un ajuste en una medida que ignoraba tener",
+        "La comparación sirve para nombrar un sentimiento que él mismo dice no "
+        "saber nombrar, y funciona por descarte.\nNo es decepción, «porque la casa "
+        "está bien»: nada de lo vivido resultó falso. Lo que ocurre es que una "
+        "referencia que se usaba sin examinar aparece de golpe y hay que "
+        "corregirla.\nEso es lo que le pasa con la rivalidad. No descubre que fuera "
+        "mala ni inútil; descubre que estaba midiendo con una vara cuya existencia "
+        "no compartía nadie más.",
+        [
+            ("La decepción de volver a un lugar muy querido", "El narrador aclara que no es decepción."),
+            ("El paso del tiempo sobre los edificios", "La casa no cambió: cambió la escala con que se la mide."),
+            ("La diferencia entre recordar y olvidar", "La comparación es sobre medidas, no sobre memoria."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_interpretar", "dificil",
+        "¿Qué pregunta deja el narrador expresamente sin resolver?",
+        "Si un motivo imaginado vale menos",
+        "La formula él mismo, después de reconocer que la rivalidad produjo efectos "
+        "reales: cientos de kilómetros corridos, el hábito de levantarse temprano, "
+        "«la mitad de lo que sé sobre el esfuerzo».\nLa pregunta es si eso pierde "
+        "valor por haber existido en un solo lugar: «si produce todo lo que "
+        "produjo, ¿importa que estuviera hecho de una materia que solo yo "
+        "veía?».\nY la respuesta que da no cierra nada: «Me inclino a pensar que no "
+        "importa, o que importa menos de lo que me gustaría. Pero no estoy seguro, "
+        "y creo que no lo voy a estar».",
+        [
+            ("Si Iván lo recordará más adelante", "El relato no vuelve sobre esa posibilidad."),
+            ("Si debió decirle quién era en verdad", "No plantea esa duda en ningún momento."),
+            ("Si su hija correrá como corrió él", "La hija se menciona solo en la comparación final."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el relato detalle la conversación de la bencinera?",
+        "Muestra un encuentro entre desconocidos",
+        "La conversación es del todo corriente: la empresa de áridos, las dos "
+        "hijas, la plata que falta para la universidad, el trote de los "
+        "domingos.\nEse tono neutro es el punto. Para Iván no está ocurriendo nada "
+        "especial, y el relato lo transcribe sin dramatismo: «Fue una conversación "
+        "agradable entre dos personas que no se conocen».\nEl contraste con las "
+        "páginas anteriores hace todo el trabajo: veinte años de una cosa y cuatro "
+        "minutos de la otra, en la misma escena.",
+        [
+            ("Revela que Iván mintió sobre su vida", "Nada en el texto pone en duda lo que cuenta."),
+            ("Anticipa que volverán a encontrarse", "El relato termina con Iván yéndose en su camioneta."),
+            ("Explica por qué el narrador se fue enojado", "El narrador dice expresamente que no se sintió humillado."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el narrador frente a su propia rivalidad?",
+        "Reflexiva, pues la evalúa sin descartarla",
+        "El narrador podría haber cerrado el asunto de dos maneras cómodas, y evita "
+        "las dos.\nNo la ridiculiza: sostiene que «existió» y que «produjo efectos "
+        "verificables». Tampoco la defiende del todo: reconoce que hubo «una sola "
+        "persona en esa rivalidad» y que era él.\nLo que hace es sostener las dos "
+        "cosas a la vez y admitir que no llega a una conclusión, que es lo que "
+        "vuelve creíble el relato.",
+        [
+            ("Amarga, pues culpa a Iván de sus años", "Insiste en que Iván no hizo nada: solo estaba corriendo."),
+            ("Orgullosa, pues celebra haber ganado", "Nunca ganó: el cuento parte de sus cinco segundos lugares."),
+            ("Burlona, pues considera absurdo el esfuerzo", "Reivindica lo que aprendió con ese esfuerzo."),
+        ],
+    ),
+    _ql(
+        "segundo_lugar", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al terminar con la cuenta que el narrador hace en "
+        "la bencinera?",
+        "Muestra que la costumbre no terminó",
+        "El final revela que, mientras descubría que la rivalidad era unilateral, "
+        "estaba haciendo exactamente lo mismo de siempre: comparando el trabajo, la "
+        "camioneta y las hijas.\nY lo hizo «sin proponérmelo, con la misma "
+        "naturalidad de siempre», que es la definición de una costumbre "
+        "instalada.\nCon eso el cuento se niega a entregar la lección que venía "
+        "prometiendo. Entender algo no lo desactiva: «la vara seguía ahí. Ni "
+        "siquiera hizo falta que él supiera quién era yo».",
+        [
+            ("Demuestra que Iván sigue siendo mejor que él", "La comparación es del narrador; el relato no la resuelve."),
+            ("Indica que el narrador quedó en paz consigo", "Termina reconociendo que la costumbre sigue operando."),
+            ("Anuncia que volverá a competir en carreras", "Dejó de correr hace años y no plantea retomarlo."),
+        ],
+    ),
+    # ---------- 'Cómo leer un contrato de arriendo' ----------
+    _ql(
+        "contrato_arriendo", "lec_localizar", "facil",
+        "Según la cartilla, ¿a cuánto equivale la garantía del contrato del "
+        "ejemplo?",
+        "A un mes de renta",
+        "La cartilla lo indica al presentar la garantía: en ese contrato equivale a "
+        "un mes de renta, es decir, $420.000.\nLa garantía se entrega al inicio y "
+        "el arrendador la conserva «para responder por daños o deudas al término "
+        "del arriendo».\nSu monto no la convierte en un pago adelantado: lo que "
+        "define para qué sirve es cuándo se usa, no a cuántas rentas equivale.",
+        [
+            ("A dos meses de renta", "La cartilla fija un mes en el contrato del ejemplo."),
+            ("A la mitad de un mes", "Ese monto no aparece en la cartilla."),
+            ("A los gastos comunes del año", "Los gastos comunes son un concepto aparte, que paga el arrendatario."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_localizar", "facil",
+        "Según la tabla de la cartilla, ¿quién suele pagar las contribuciones del "
+        "inmueble?",
+        "El arrendador",
+        "La tabla del punto 5 reparte los conceptos y deja las contribuciones del "
+        "lado de quien entrega el inmueble.\nDel lado del arrendatario quedan los "
+        "gastos comunes, los consumos de luz, agua y gas, y las reparaciones "
+        "locativas.\nLa cartilla advierte, eso sí, que un contrato puede repartirlo "
+        "de otra manera, y que por eso conviene leer esa cláusula en vez de "
+        "suponerla.",
+        [
+            ("El arrendatario", "A él le corresponden los consumos y los gastos comunes."),
+            ("Se reparten por mitades", "La cartilla no plantea ningún reparto proporcional."),
+            ("La administración del edificio", "La administración cobra los gastos comunes, no las contribuciones."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_localizar", "medio",
+        "Según la cartilla, ¿qué plazo de aviso previo fija el contrato del "
+        "ejemplo?",
+        "Sesenta días antes del vencimiento",
+        "La tabla del punto 4 lo señala como el plazo para avisar que el contrato "
+        "no se renovará.\nEse plazo se combina con la renovación automática, y de "
+        "esa combinación sale la advertencia del párrafo siguiente.\nNo debe "
+        "confundirse con el día de pago —los primeros cinco días de cada mes— ni "
+        "con el plazo del contrato, que es de doce meses.",
+        [
+            ("Treinta días antes del vencimiento", "La cartilla fija sesenta días en el contrato del ejemplo."),
+            ("Los primeros cinco días del mes", "Ese es el plazo para pagar la renta."),
+            ("Doce meses desde la firma", "Doce meses es la duración del contrato, no el aviso."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_localizar", "medio",
+        "Según la cartilla, ¿qué contiene el acta de entrega?",
+        "El estado del inmueble al recibirlo",
+        "Es el documento que describe cómo estaba el inmueble el día en que se "
+        "recibió, «idealmente con fotografías fechadas y con el detalle de lo que "
+        "ya está dañado».\nSe firma al comienzo del arriendo, cuando todavía no hay "
+        "ningún conflicto a la vista.\nLa cartilla anota además el descuido más "
+        "común: «casi nadie le presta atención», y sin embargo es la pieza que "
+        "decide la discusión del final.",
+        [
+            ("El detalle de la renta y su reajuste", "Eso corresponde a la cláusula de renta del contrato."),
+            ("La lista de quienes pueden visitarlo", "Las visitas se regulan en una cláusula aparte."),
+            ("El monto de la multa por término anticipado", "Esa cifra está entre las cláusulas que conviene leer dos veces."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_localizar", "facil",
+        "Según la cartilla, ¿qué no se descuenta de la garantía?",
+        "El desgaste esperable por vivir ahí",
+        "La cartilla acota de qué responde la garantía: de «los daños que no "
+        "correspondan al uso normal y las cuentas impagas».\nY deja fuera lo "
+        "contrario: «el desgaste esperable de vivir en un lugar, como la pintura "
+        "opaca de un muro que lleva tres años puesto».\nLa distinción importa "
+        "porque es el desacuerdo típico del final del arriendo, y es justamente lo "
+        "que el acta de entrega permite zanjar.",
+        [
+            ("Las cuentas de luz y agua impagas", "Esas sí se descuentan, según la cartilla."),
+            ("Los daños que exceden el uso normal", "También se descuentan: es la función principal de la garantía."),
+            ("La última renta del contrato", "La renta se debe igual; ese es el error que la cartilla corrige."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_interpretar", "facil",
+        "¿Por qué la cartilla advierte que la garantía «no es el último mes»?",
+        "Porque la renta se debe igual",
+        "Mientras el arrendatario ocupa el inmueble, la renta se debe, así que "
+        "descontarla de la garantía deja una deuda pendiente.\nY hay una segunda "
+        "razón, de orden: la garantía todavía no ha cumplido su función. Está para "
+        "responder «por lo que aparezca después de que se entreguen las llaves», y "
+        "ese momento aún no llegó.\nPor eso la cartilla lo llama «el error más "
+        "común» y le dedica un párrafo propio.",
+        [
+            ("Porque el arrendador puede quedársela toda", "Solo puede descontar daños y deudas, no quedársela sin causa."),
+            ("Porque se paga al terminar y no al empezar", "Se entrega al inicio del arriendo."),
+            ("Porque cubre solo los gastos comunes", "Cubre daños fuera del uso normal y cuentas impagas."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_interpretar", "medio",
+        "¿Qué significa que, en un contrato con renovación automática, «guardar "
+        "silencio es una decisión»?",
+        "Que no avisar renueva el contrato otro año",
+        "La renovación automática invierte lo que se espera de un plazo: no hay que "
+        "hacer nada para continuar, hay que hacer algo para terminar.\nCombinada "
+        "con el aviso de sesenta días, eso significa que dejar pasar la fecha "
+        "produce un efecto tan concreto como firmar: «quien no avisa a tiempo queda "
+        "obligado por doce meses más».\nDe ahí que la cartilla llame decisión a la "
+        "omisión: no avisar también elige.",
+        [
+            ("Que el arrendador decide por el arrendatario", "Cualquiera de los dos puede avisar dentro del plazo."),
+            ("Que sin aviso el contrato termina solo", "Ocurre lo contrario: sin aviso, se renueva."),
+            ("Que el silencio anula la renovación", "El silencio es justamente lo que la activa."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_interpretar", "medio",
+        "Según la cartilla, ¿qué criterio separa las reparaciones locativas de las "
+        "estructurales?",
+        "El origen del desperfecto",
+        "La cartilla lo formula como una pregunta por la causa: «lo que se rompe "
+        "por el uso cotidiano corre por cuenta de quien usa; lo que falla por el "
+        "inmueble mismo, por cuenta de quien lo entrega».\nUna chapa o una llave "
+        "que gotea caen del primer lado; una filtración o el techo, del segundo.\nY "
+        "agrega una advertencia que vale para toda la tabla: ese es el criterio que "
+        "«suele usarse», pero un contrato puede repartirlo de otra manera y manda "
+        "lo que esté escrito.",
+        [
+            ("El monto: las baratas y las caras", "El precio no interviene en la distinción."),
+            ("El momento: al principio o al final", "La fecha del desperfecto no es el criterio."),
+            ("El lugar: adentro o en el edificio", "Una filtración ocurre adentro y aun así es estructural."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_interpretar", "dificil",
+        "¿Por qué el acta de entrega decide la discusión sobre la garantía?",
+        "Porque cambia recuerdos por documentos",
+        "Al término del arriendo hay que establecer qué daños existían antes y "
+        "cuáles aparecieron durante, y esa es una pregunta sobre el pasado.\nSin "
+        "acta, cada parte responde desde su memoria: «arrendador y arrendatario "
+        "discuten dos recuerdos distintos del mismo living, y gana el que tenga "
+        "mejor memoria o más insistencia».\nCon acta, la discusión cambia de "
+        "naturaleza. Ya no se comparan versiones sino un registro firmado por ambos "
+        "contra el estado actual, y eso convierte un desacuerdo en una "
+        "comprobación.",
+        [
+            ("Porque fija el monto que se devolverá", "El acta describe el estado del inmueble, no montos."),
+            ("Porque la firma un tercero imparcial", "La firman las partes, al inicio del arriendo."),
+            ("Porque reemplaza al contrato al terminar", "El contrato sigue rigiendo: el acta lo complementa."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_interpretar", "dificil",
+        "¿Qué sugiere la cartilla al recomendar comparar la multa por término "
+        "anticipado con las mensualidades restantes?",
+        "Que a veces conviene pagarla e irse",
+        "La cartilla trata la multa como un dato para decidir y no como un castigo "
+        "que clausura la conversación.\nSu recomendación es aritmética: comparar lo "
+        "que cuesta irse con lo que costaría quedarse hasta el final. «A veces la "
+        "multa es menor, y entonces irse antes es una opción y no una "
+        "catástrofe».\nEs coherente con el criterio de toda la cartilla, que "
+        "consiste en traducir cada cláusula a lo que efectivamente implica para "
+        "quien la firma.",
+        [
+            ("Que siempre es más cara que quedarse", "La cartilla dice que a veces resulta menor."),
+            ("Que no puede cobrarse cuando hay aviso previo", "El aviso previo rige para la renovación, no para la multa."),
+            ("Que equivale a la garantía entregada", "Son montos distintos y con funciones distintas."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_evaluar", "medio",
+        "¿Con qué finalidad la cartilla se detiene en el destino del contrato?",
+        "Porque limita el uso que se le puede dar",
+        "El destino aparece en la tabla del encabezado como un campo más, y la "
+        "cartilla advierte que «parece un formalismo y no lo es».\nUn contrato con "
+        "destino habitacional «no habilita a instalar ahí un local ni una oficina "
+        "de atención de público».\nY el dato tiene consecuencias: hacerlo «suele "
+        "estar entre las causales de término anticipado», de modo que un campo de "
+        "una línea puede costar el contrato completo.",
+        [
+            ("Porque determina el monto de la renta", "La renta se fija en su propia cláusula."),
+            ("Porque define quién paga las reparaciones", "Ese reparto está en la tabla del punto 5."),
+            ("Porque fija el plazo mínimo del contrato", "El plazo se establece en el punto 4."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_evaluar", "dificil",
+        "¿Qué actitud asume la cartilla frente a las cláusulas que describe?",
+        "Cauta, pues repite que manda lo escrito",
+        "La cartilla entrega criterios corrientes y en cada punto marca su "
+        "límite.\nDice que las contribuciones «suelen» pagarse de cierto modo, que "
+        "el criterio de las reparaciones es el que «suele usarse», y que un "
+        "contrato «puede repartirlo de otra manera, y por eso hay que leer esa "
+        "cláusula y no suponerla».\nEl punto 8 lo formula como regla general: cada "
+        "contrato reparte obligaciones a su manera «y manda lo que ahí esté "
+        "escrito».",
+        [
+            ("Crítica, pues considera abusivos esos contratos", "No juzga las cláusulas: explica qué significan."),
+            ("Tajante, pues fija de una vez quién paga cada cosa", "Presenta el reparto como habitual y modificable por contrato."),
+            ("Optimista, pues supone acuerdos sin conflicto", "Dedica varios párrafos a anticipar justamente los conflictos."),
+        ],
+    ),
+    _ql(
+        "contrato_arriendo", "lec_evaluar", "dificil",
+        "¿Qué revela que la cartilla dedique una sección a lo que no dice?",
+        "Que reconoce hasta dónde alcanza",
+        "El punto 8 marca tres bordes: no reemplaza al contrato, no cubre locales "
+        "comerciales y no explica qué hacer cuando el conflicto ya ocurrió.\nEs "
+        "coherente con lo que la cartilla se propone desde su bajada: enseñar "
+        "«dónde mirar y qué significa cada cláusula», no resolver casos.\nY protege "
+        "al lector de un uso equivocado. Un documento que explica cláusulas puede "
+        "confundirse fácilmente con uno que aconseja, y esa confusión sería más "
+        "costosa acá que en cualquier otra cartilla.",
+        [
+            ("Que el contrato del ejemplo está incompleto", "El ejemplo cumple su función ilustrativa sin pretender ser exhaustivo."),
+            ("Que desaconseja firmar sin un abogado", "No lo desaconseja: aclara que ella no es asesoría legal."),
+            ("Que los arriendos comerciales son iguales", "Dice lo contrario: se rigen por reglas propias."),
+        ],
+    ),
+    # ---------- 'El pan del día siguiente' ----------
+    _ql(
+        "pan_duro", "lec_localizar", "facil",
+        "Según la lectura, ¿cómo se llama el proceso que endurece la miga?",
+        "Retrogradación del almidón",
+        "El emisor lo nombra al describir qué ocurre cuando el pan se enfría.\nLas "
+        "moléculas del almidón «comienzan a reordenarse de a poco y a volver a una "
+        "disposición más rígida, expulsando en el camino parte del agua que tenían "
+        "capturada».\nEse es el proceso que endurece la miga, y es distinto de la "
+        "pérdida de agua que sí afecta a la corteza.",
+        [
+            ("Evaporación de la humedad interna", "El agua sigue en buena medida dentro del pan."),
+            ("Fermentación tardía de la levadura", "La lectura no menciona la levadura en ningún momento."),
+            ("Oxidación de las grasas de la harina", "Las grasas aparecen al final, y para retardar el endurecimiento."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_localizar", "facil",
+        "Según la lectura, ¿qué le ocurre al pan guardado en el refrigerador?",
+        "Se endurece más rápido que sobre la mesa",
+        "La retrogradación «avanza más rápido a temperaturas de refrigerador que a "
+        "temperatura ambiente».\nEl emisor destaca lo raro que resulta: es "
+        "«exactamente lo contrario de lo que hace el frío con casi todo lo "
+        "demás».\nPor eso el consejo de no refrigerar el pan «suena a superstición "
+        "cuando en realidad es la conclusión de cómo funciona el almidón».",
+        [
+            ("Se conserva blando durante más días", "Ocurre lo contrario, y esa es la consecuencia más contraintuitiva."),
+            ("Pierde el agua que tenía la corteza", "La corteza se seca por estar expuesta al aire, no por el frío."),
+            ("Se mantiene igual que a temperatura ambiente", "El texto señala una diferencia clara entre ambas situaciones."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_localizar", "medio",
+        "Según la lectura, ¿qué le pasa a la corteza de un pan viejo?",
+        "Se ablanda, al revés que la miga",
+        "Las dos partes del pan evolucionan en direcciones opuestas.\nLa miga se "
+        "endurece por el reordenamiento del almidón, mientras la corteza «se "
+        "ablanda —absorbe humedad del ambiente y de la propia miga—».\nDe ahí que "
+        "un pan de dos días tenga «la corteza correosa y la miga arenosa, que es el "
+        "revés exacto de cómo estaba al salir del horno».",
+        [
+            ("Se endurece junto con la miga", "Ambas cambian, pero en sentidos contrarios."),
+            ("Conserva la textura del primer día", "La corteza es justamente la que más cambia de textura."),
+            ("Se separa de la miga por completo", "El texto no describe ninguna separación."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_localizar", "medio",
+        "Según la lectura, ¿qué panes se endurecen más lento?",
+        "Los que llevan más grasa o azúcar",
+        "El emisor lo menciona al advertir que no hay una receta única.\nEsos "
+        "ingredientes «estorban el reordenamiento del almidón», que es justamente "
+        "el proceso responsable del endurecimiento.\nPor eso «una marraqueta y un "
+        "pan de molde envejecen a ritmos distintos», aunque los dos estén sobre la "
+        "misma mesa.",
+        [
+            ("Los que se guardan en bolsa cerrada", "La bolsa ablanda la corteza y no altera la miga."),
+            ("Los que tienen la corteza más gruesa", "El grosor de la corteza no se menciona."),
+            ("Los que se hornean por más tiempo", "El tiempo de horneado no aparece entre los factores."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué conviene congelar el pan?",
+        "Porque ahí el reordenamiento casi se detiene",
+        "A temperaturas suficientemente bajas la retrogradación «prácticamente se "
+        "detiene».\nEl emisor lo traduce en una comparación práctica: un pan "
+        "congelado el mismo día que se compró y calentado una semana después «queda "
+        "notoriamente mejor que uno de dos días guardado en la cocina».\nEs la "
+        "única de las tres consecuencias que ofrece una solución y no solo una "
+        "explicación.",
+        [
+            ("Porque el frío conserva mejor cualquier alimento", "Esa regla general es justamente la que falla con el refrigerador."),
+            ("Porque el congelador le devuelve la humedad", "El agua no es el problema en ningún momento del proceso."),
+            ("Porque endurece la corteza y protege la miga", "La corteza no cumple ninguna función protectora en el texto."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_interpretar", "facil",
+        "¿Qué dos hechos usa el emisor para descartar que el pan simplemente se "
+        "seque?",
+        "La bolsa cerrada y el pan que revive al horno",
+        "El primero cierra la salida del agua y el pan se endurece igual, así que "
+        "la pérdida de humedad no puede ser la causa.\nEl segundo es todavía más "
+        "claro: un pan duro calentado unos minutos vuelve a estar blando, «y si el "
+        "problema fuera agua perdida, calentarlo lo secaría todavía más».\nLos dos "
+        "son observaciones que «cualquiera puede comprobar en su cocina», y esa "
+        "accesibilidad es parte del argumento.",
+        [
+            ("El refrigerador y el congelador", "Esos casos aparecen después, como consecuencias de la explicación."),
+            ("La corteza correosa y la miga arenosa", "Ese contraste sirve para distinguir dos procesos, no para descartar uno."),
+            ("La marraqueta y el pan de molde", "Esa comparación aparece al final y trata de los ingredientes."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor con que el pan del día siguiente «no está "
+        "seco, está reordenado»?",
+        "Que el agua sigue dentro, en otra disposición",
+        "La frase resume toda la explicación en dos palabras opuestas.\nSeco "
+        "significa que el agua se fue; reordenado significa que sigue ahí pero el "
+        "almidón cambió de estructura a su alrededor. El emisor lo precisa antes: "
+        "«El agua, en buena medida, sigue dentro del pan; lo que cambió es dónde "
+        "está y cómo está organizado el almidón».\nLa distinción no es de "
+        "vocabulario: decide qué remedio tiene sentido y cuál no.",
+        [
+            ("Que el pan pierde agua más lento de lo que parece", "No se trata de la velocidad de la pérdida, sino de que no es la causa."),
+            ("Que la miga cambia de sabor antes que de textura", "El sabor no se discute en el texto."),
+            ("Que el almidón se transforma en otra sustancia", "El almidón se reordena; no se convierte en algo distinto."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué un pan recalentado se endurece más rápido la "
+        "segunda vez?",
+        "Porque el reordenamiento ya tiene el camino hecho",
+        "El horno deshace parte de la estructura rígida y devuelve la miga a algo "
+        "parecido a su estado anterior: es «el mismo proceso corriendo hacia "
+        "atrás».\nPero al enfriarse otra vez, el almidón vuelve a ordenarse, y lo "
+        "hace con ventaja.\nPor eso el efecto del horno es real y breve, y no cabe "
+        "esperar que un pan recalentado se comporte como uno recién hecho.",
+        [
+            ("Porque el horno le quita el agua que quedaba", "Si así fuera, el pan no se ablandaría al calentarlo."),
+            ("Porque el calor daña el almidón de forma definitiva", "El calor deshace la estructura rígida, no destruye el almidón."),
+            ("Porque queda expuesto al aire de la cocina", "La exposición al aire afecta a la corteza, no a la miga."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_interpretar", "dificil",
+        "¿Qué explica que la bolsa plástica no resuelva el problema?",
+        "Que conserva agua, y el agua no era el problema",
+        "La bolsa hace exactamente lo que promete: retiene la humedad.\nEl emisor "
+        "destaca que el resultado «es coherente con la física y decepcionante» para "
+        "quien la usa: la corteza se ablanda todavía más y la miga se endurece "
+        "igual.\nEl caso ilustra la idea central del cierre. La medida no falla por "
+        "estar mal ejecutada, sino porque responde a un diagnóstico equivocado, y "
+        "una solución correcta para el problema equivocado no sirve.",
+        [
+            ("Que la bolsa deja pasar aire por los bordes", "El texto plantea el caso con una bolsa bien cerrada."),
+            ("Que el plástico transmite calor a la miga", "La temperatura de la bolsa no interviene en la explicación."),
+            ("Que la humedad acelera la retrogradación", "Lo que la acelera es el frío del refrigerador, no la humedad."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_interpretar", "dificil",
+        "¿Qué error de razonamiento comete, según el emisor, quien refrigera el "
+        "pan?",
+        "Aplicar una regla general a un caso que no la sigue",
+        "Quien lo hace está convencido «de que el frío retrasa lo que sea», y esa "
+        "convicción funciona con casi todos los alimentos.\nEl emisor no la trata "
+        "como una tontería: la trata como «una regla general aplicada a un proceso "
+        "que responde al revés».\nEs un error distinto del de la bolsa. Ahí el "
+        "diagnóstico estaba equivocado; acá el diagnóstico ni siquiera se hace, "
+        "porque una regla que casi siempre sirve reemplaza a la pregunta por lo que "
+        "ocurre en este caso.",
+        [
+            ("Confundir la corteza con la miga del pan", "Esa confusión es la del párrafo anterior y tiene otra consecuencia."),
+            ("Creer que el pan pierde agua en el frío", "Su creencia es sobre la conservación, no sobre la humedad."),
+            ("Suponer que el congelador y el refrigerador son iguales", "El texto los distingue, pero ese no es el error que describe."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor abre con dos observaciones caseras?",
+        "Para desarmar la explicación más común",
+        "El texto no empieza explicando la retrogradación: empieza mostrando que la "
+        "explicación disponible no se sostiene.\nY lo hace con hechos al alcance de "
+        "cualquiera —una bolsa cerrada, un pan al horno—, sin pedirle al lector que "
+        "confíe en ninguna autoridad.\nRecién despejado eso introduce el almidón, "
+        "que es una explicación menos intuitiva y que el lector ya tiene motivos "
+        "para necesitar.",
+        [
+            ("Para demostrar que el pan pierde poca agua", "El agua perdida se discute después, al separar corteza y miga."),
+            ("Para enseñar a conservar mejor el pan", "Los consejos prácticos aparecen más adelante."),
+            ("Para comparar distintos tipos de pan", "La comparación entre panes es del párrafo final."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor hacia quien guarda el pan en bolsa?",
+        "Comprensiva, pues admite que su gusto es válido",
+        "Podría haber cerrado el texto llamando errónea esa costumbre, y hace algo "
+        "más fino.\nDistingue entre la creencia y la preferencia: guardar el pan en "
+        "bolsa es «una manera perfectamente razonable» de conseguir una corteza "
+        "blanda, que a mucha gente le gusta.\nLo que objeta es una expectativa "
+        "concreta y no la conducta: «Lo que no es razonable es esperar que eso "
+        "mantenga blanda la miga».",
+        [
+            ("Severa, pues considera que arruina el pan", "Reconoce que la bolsa consigue justo lo que algunos buscan."),
+            ("Indiferente, pues no evalúa esa costumbre", "La evalúa: la llama razonable y acota qué puede esperarse de ella."),
+            ("Irónica, pues se burla de esa preferencia", "La trata como una preferencia legítima, sin burla."),
+        ],
+    ),
+    _ql(
+        "pan_duro", "lec_evaluar", "dificil",
+        "¿Qué observación deja el emisor al cerrar la lectura?",
+        "Que una mala explicación puede durar décadas",
+        "El cierre se despega del pan para hablar de cómo sobreviven las "
+        "explicaciones.\n«Se secó» triunfa porque «no exige saber nada y responde "
+        "algo», que es exactamente lo que se le pide a una explicación "
+        "cotidiana.\nY el emisor identifica la condición que la protege: nadie "
+        "tiene motivos para ponerla a prueba «mientras el pan siga poniéndose duro "
+        "de todos modos». Una creencia equivocada sobre la causa no molesta si el "
+        "efecto ocurre igual.",
+        [
+            ("Que las explicaciones simples suelen ser correctas", "Sostiene lo contrario en este caso, y con dos pruebas caseras."),
+            ("Que la ciencia de los alimentos es poco divulgada", "No atribuye el problema a la falta de divulgación."),
+            ("Que conviene desconfiar de toda idea heredada", "Su reparo es a una idea puntual, no a lo heredado en general."),
+        ],
+    ),
     # ---------- 'Los agujeros que no están' ----------
     _ql(
         "sesgo_sobreviviente", "lec_localizar", "facil",
