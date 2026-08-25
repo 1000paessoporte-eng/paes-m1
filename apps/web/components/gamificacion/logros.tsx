@@ -1,7 +1,30 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { Logro } from "@/lib/logros";
+import type { IconoLogro, Logro } from "@/lib/logros";
+import {
+  IconoBrote,
+  IconoCorona,
+  IconoCumbre,
+  IconoDiana,
+  IconoLibros,
+  IconoLlama,
+  IconoPunteria,
+  IconoRayo,
+  type PropsIcono,
+} from "@/components/ui/iconos";
+
+/** La clave que guarda `lib/logros.ts` se convierte acá en el dibujo. */
+const ICONOS: Record<IconoLogro, (props: PropsIcono) => React.ReactElement> = {
+  diana: IconoDiana,
+  libros: IconoLibros,
+  llama: IconoLlama,
+  rayo: IconoRayo,
+  punteria: IconoPunteria,
+  brote: IconoBrote,
+  cumbre: IconoCumbre,
+  corona: IconoCorona,
+};
 
 /**
  * Racha e insignias del estudiante.
@@ -23,16 +46,32 @@ export function Racha({ dias }: { dias: number }) {
   return (
     <div className="inline-flex items-center gap-2 rounded-full border border-accent-warm/30 bg-accent-warm/10 px-3 py-1.5">
       <span
-        className={quieto ? "" : "llama"}
-        style={{ fontSize: `${Math.min(1 + dias * 0.04, 1.35)}rem`, lineHeight: 1 }}
+        className={
+          (quieto ? "flex" : "llama flex") + " text-accent-warm-strong"
+        }
         aria-hidden
       >
-        🔥
+        <IconoLlama tamano={Math.round(Math.min(16 + dias * 0.64, 22))} />
       </span>
       <span className="text-sm font-semibold text-accent-warm-strong">
         {dias} {dias === 1 ? "día seguido" : "días seguidos"}
       </span>
     </div>
+  );
+}
+
+/**
+ * El dibujo de una insignia. La conseguida toma el color de acento; la
+ * bloqueada queda apagada, que es lo que antes hacía el `grayscale` sobre el
+ * emoji —y que sobre un emoji nunca funcionó del todo.
+ */
+function IconoDeLogro({ logro }: { logro: Logro }) {
+  const Icono = ICONOS[logro.icono];
+  return (
+    <Icono
+      tamano={22}
+      className={logro.conseguido ? "text-accent" : "text-muted opacity-40"}
+    />
   );
 }
 
@@ -82,12 +121,7 @@ export function Insignias({ logros }: { logros: Logro[] }) {
               {logro.conseguido && !quieto && (
                 <span className="destello pointer-events-none absolute inset-0 opacity-60" />
               )}
-              <span
-                className={"text-xl " + (logro.conseguido ? "" : "opacity-30 grayscale")}
-                aria-hidden
-              >
-                {logro.icono}
-              </span>
+              <IconoDeLogro logro={logro} />
               <span
                 className={
                   "px-0.5 text-[10px] leading-tight " +

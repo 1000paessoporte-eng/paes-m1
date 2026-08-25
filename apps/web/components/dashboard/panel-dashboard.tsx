@@ -11,6 +11,7 @@ import type {
   Subject,
 } from "@/lib/api";
 import { formatearTiempo } from "@/lib/tiempo";
+import { IconoHojaEscrita } from "@/components/ui/iconos";
 import { SiteFooter } from "@/components/site-footer";
 import { ArbolModulo } from "@/components/dashboard/arbol-modulo";
 import { AnuncioPremio } from "@/components/premio/anuncio-premio";
@@ -273,7 +274,8 @@ function Bienvenida({
               haría que alguien creyera que califica cuando no. */}
           {rachaEnsayos > 0 && (
             <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/5 px-3 py-1.5 text-sm font-semibold text-accent">
-              📝 {rachaEnsayos} {rachaEnsayos === 1 ? "día" : "días"} con ensayo
+              <IconoHojaEscrita tamano={15} />
+              {rachaEnsayos} {rachaEnsayos === 1 ? "día" : "días"} con ensayo
             </span>
           )}
         </div>

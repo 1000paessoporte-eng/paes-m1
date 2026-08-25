@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import { IconoAdvertencia } from "@/components/ui/iconos";
 
 export default function DashboardError({
   error,
@@ -16,8 +17,8 @@ export default function DashboardError({
 
   return (
     <div className="flex flex-col items-center rounded-2xl border border-border bg-surface px-6 py-16 text-center">
-      <span className="text-4xl font-semibold tracking-tight text-accent">
-        ⚠
+      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-accent">
+        <IconoAdvertencia tamano={22} />
       </span>
       <h1 className="mt-3 text-lg font-semibold">No se pudo cargar esta sección</h1>
       <p className="mt-2 max-w-md text-sm text-muted">

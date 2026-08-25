@@ -717,13 +717,23 @@ def _tally(
     answers: dict[int, ExamAnswerState],
     correct_ids: set[int],
     key,
+    code=None,
 ) -> list[BreakdownItemOut]:
-    """Agrupa el desempeño según un criterio (eje, nodo o dificultad)."""
+    """Agrupa el desempeño según un criterio (eje, nodo o dificultad).
+
+    `code` es opcional y solo lo pasa el desglose por nodo: es lo que permite
+    que la pantalla de resultados enlace al tema que salió peor en vez de
+    limitarse a nombrarlo. Un eje o una dificultad no tienen página propia.
+    """
     groups: dict[str, dict[str, int]] = defaultdict(
         lambda: {"correct": 0, "incorrect": 0, "omitted": 0, "total": 0}
     )
+    codigos: dict[str, str] = {}
     for q in questions:
-        item = groups[key(q)]
+        nombre = key(q)
+        if code is not None:
+            codigos.setdefault(nombre, code(q))
+        item = groups[nombre]
         selected = answers.get(q.id)
         selected_id = selected.selected_alternative_id if selected else None
         if selected_id is None:
@@ -738,6 +748,7 @@ def _tally(
         (
             BreakdownItemOut(
                 name=name,
+                code=codigos.get(name),
                 correct=v["correct"],
                 incorrect=v["incorrect"],
                 omitted=v["omitted"],
@@ -780,14 +791,27 @@ FRACCION_MINIMA_DE_RITMO = 0.10
 
 
 def _es_representativo(attempt: ExamAttempt, respondidas: int) -> bool:
-    """Si el tiempo empleado da para haber leído lo que se respondió.
+    """Si el ensayo dice algo del estudiante.
 
     Se mide contra las preguntas RESPONDIDAS y no contra el total: quien
     contesta tres y abandona no rindió rápido, rindió poco, y ese ensayo sí
-    dice algo de esas tres. Sin respuestas no hay nada que juzgar.
+    dice algo de esas tres.
+
+    Un ensayo SIN NINGUNA respuesta no dice nada, y por eso no cuenta. Antes
+    contaba: la regla original decía "sin respuestas no hay nada que juzgar",
+    que es cierto del RITMO --no hay ritmo que medir-- pero esta bandera no
+    responde "¿fue apurado?", responde "¿este ensayo cuenta?". Un ensayo
+    vacío no es apurado: es vacío.
+
+    La diferencia no era teórica. De los 42 ensayos entregados en producción,
+    26 no tenían ni una respuesta --el 62%-- y todos entraban al historial,
+    al mejor puntaje, a la analítica y al panel del profesor con un puntaje
+    medio de 160, que es el piso de la escala y no una medición de nadie. Para
+    el alumno típico, la mayor parte de su historial eran ensayos que nunca
+    respondió.
     """
     if respondidas <= 0:
-        return True
+        return False
     minimo = scoring.segundos_por_pregunta(attempt.subject) * FRACCION_MINIMA_DE_RITMO
     return (_elapsed_seconds(attempt) / respondidas) >= minimo
 
@@ -843,7 +867,13 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
             correct_ids,
             lambda q: DIFFICULTY_LABELS[q.difficulty.value],
         ),
-        by_node=_tally(questions, answers, correct_ids, lambda q: q.skill_node.name),
+        by_node=_tally(
+            questions,
+            answers,
+            correct_ids,
+            lambda q: q.skill_node.name,
+            code=lambda q: q.skill_node.code,
+        ),
     )
 
 
