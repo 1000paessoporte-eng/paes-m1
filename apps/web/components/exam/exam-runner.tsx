@@ -597,9 +597,13 @@ export function ExamRunner({
   const indicesPagina = paginas[paginaActual] ?? [currentIndex];
   const textoPagina = questions[indicesPagina[0]]?.passage ?? null;
   const variasEnLaPagina = indicesPagina.length > 1;
+  // El ancho se decide una vez por ensayo, no por página: con texto base el
+  // carril de una sola columna no alcanza para dos. Mirarlo página a página
+  // haría que el ensayo cambiara de ancho al pasar de un texto al siguiente.
+  const hayTextos = questions.some((q) => q.passage);
 
   return (
-    <div className="mx-auto max-w-3xl">
+    <div className={cn("mx-auto max-w-3xl", hayTextos && "lg:max-w-6xl")}>
       {/* ── Barra superior ──────────────────────────────────────────── */}
       {/* La franja de arriba dice de qué prueba es este ensayo sin ocupar una
           palabra, con el mismo color que usan el titular de la portada, el
@@ -712,184 +716,199 @@ export function ExamRunner({
         }))}
         currentIndex={currentIndex}
         onSelect={irAPregunta}
+        abrirDesde={hayTextos ? 1600 : 1280}
       />
 
       {/* ── Pregunta ────────────────────────────────────────────────── */}
       {/* pb generoso: deja aire para que la pastilla flotante del navegador
           no tape el final del contenido. */}
       <main className="py-6 pb-24">
-        {/* El texto va UNA vez, arriba de todas sus preguntas, como en la
-            prueba de papel. Antes se repetia encima de cada pregunta y
-            obligaba a releerlo nueve veces. */}
-        {textoPagina && (
-          <div className="mb-5">
-            <PassagePanel passage={textoPagina} />
-          </div>
-        )}
+        {/* Con texto base, la lectura va en dos columnas: el texto fijo a la
+            izquierda y sus preguntas a la derecha. Así se lee y se responde
+            sin subir y bajar la página, que es como se trabaja en el papel
+            —hoja abierta, preguntas al lado— y lo que pedía el ensayo real.
+            Bajo lg no hay ancho para dos carriles legibles: el texto vuelve
+            arriba, una sola vez, como estaba. */}
+        <div
+          className={cn(
+            textoPagina && "lg:grid lg:grid-cols-2 lg:items-start lg:gap-6"
+          )}
+        >
+          {textoPagina && (
+            <div className="mb-5 lg:sticky lg:top-32 lg:mb-0">
+              <PassagePanel
+                passage={textoPagina}
+                className="lg:max-h-[calc(100vh-9rem)]"
+              />
+            </div>
+          )}
 
-        <div className="space-y-5">
-          {indicesPagina.map((idx) => {
-            const q = questions[idx];
-            if (!q) return null;
-            const est = answers[q.id];
-            return (
-              <article
-                key={q.id}
-                id={`pregunta-${idx}`}
-                className="scroll-mt-32 rounded-xl border border-border bg-surface p-5"
-              >
-                <div className="mb-3 flex items-start justify-between gap-3">
-                  <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-medium text-muted">
-                    {variasEnLaPagina
-                      ? `Pregunta ${idx + 1}`
-                      : q.axis || q.skill_node_name}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => toggleFlag(q.id)}
-                    className={cn(
-                      "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
-                      est?.flagged
-                        ? "border-warning/50 bg-warning/10 text-warning"
-                        : "border-border text-muted hover:bg-surface-hover"
-                    )}
+          <div className="min-w-0">
+            <div className="space-y-5">
+              {indicesPagina.map((idx) => {
+                const q = questions[idx];
+                if (!q) return null;
+                const est = answers[q.id];
+                return (
+                  <article
+                    key={q.id}
+                    id={`pregunta-${idx}`}
+                    className="scroll-mt-32 rounded-xl border border-border bg-surface p-5"
                   >
-                    {/* La estrella rebota al marcarse. Es una microacción que
-                        se repite decenas de veces en un ensayo y era muda: el
-                        único acuse de recibo era el cambio de color. */}
-                    <motion.span
-                      key={est?.flagged ? "si" : "no"}
-                      initial={{ scale: est?.flagged ? 0.6 : 1 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 500, damping: 15 }}
-                      className="inline-flex items-center gap-1.5"
-                    >
-                      <IconoEstrella tamano={13} marcada={est?.flagged} />
-                      {est?.flagged ? "Marcada" : "Marcar"}
-                    </motion.span>
-                  </button>
-                </div>
-
-                {/* La segunda oportunidad. Con miles de preguntas sorteadas al
-                    azar, reencontrarse con una que uno falló es la mejor
-                    ocasión de aprender que da la plataforma, y pasaba
-                    completamente desapercibida.
-
-                    Va ANTES del enunciado y no después: sirve para leer con
-                    más cuidado, no para lamentarse. Y no dice qué se respondió
-                    ni cuál era la correcta —eso sería regalar la respuesta—,
-                    solo que en algún momento esta pregunta se le escapó. */}
-                {q.fallada_antes && (
-                  <p className="mb-3 flex items-center gap-2 rounded-lg border border-accent-warm/40 bg-accent-warm/5 px-3 py-2 text-sm text-accent-warm-strong">
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                      className="shrink-0"
-                    >
-                      <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
-                      <path d="M3 3v5h5" />
-                    </svg>
-                    <span>
-                      <strong className="font-semibold">Ya te equivocaste en esta pregunta.</strong>{" "}
-                      Léela con calma: es tu oportunidad de corregirlo.
-                    </span>
-                  </p>
-                )}
-
-                <TextoRico texto={q.stem} className="text-lg" />
-
-                <div className="mt-5 space-y-2">
-                  {q.alternatives.map((alt, i) => {
-                    const elegida = est?.selected === alt.id;
-                    return (
+                    <div className="mb-3 flex items-start justify-between gap-3">
+                      <span className="rounded-full bg-surface-hover px-2.5 py-1 text-xs font-medium text-muted">
+                        {variasEnLaPagina
+                          ? `Pregunta ${idx + 1}`
+                          : q.axis || q.skill_node_name}
+                      </span>
                       <button
-                        key={alt.id}
                         type="button"
-                        onClick={() => selectAlternative(alt.id, q.id)}
-                        aria-pressed={elegida}
+                        onClick={() => toggleFlag(q.id)}
                         className={cn(
-                          // `active:scale` es el acuse de recibo del toque: en
-                          // móvil no hay hover, y sin esto la única señal de que
-                          // el dedo acertó llega cuando ya se pintó la
-                          // alternativa.
-                          "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
-                          // La señal de "elegida" la da la burbuja, no la fila:
-                          // en un cartón de respuestas lo que se rellena es el
-                          // círculo.
-                          elegida
-                            ? "border-grafito bg-surface"
-                            : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
+                          "shrink-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition",
+                          est?.flagged
+                            ? "border-warning/50 bg-warning/10 text-warning"
+                            : "border-border text-muted hover:bg-surface-hover"
                         )}
                       >
-                        <Burbuja letra={LABELS[i]} marcada={elegida} />
-                        <TextoRico texto={alt.text} inline />
+                        {/* La estrella rebota al marcarse. Es una microacción que
+                            se repite decenas de veces en un ensayo y era muda: el
+                            único acuse de recibo era el cambio de color. */}
+                        <motion.span
+                          key={est?.flagged ? "si" : "no"}
+                          initial={{ scale: est?.flagged ? 0.6 : 1 }}
+                          animate={{ scale: 1 }}
+                          transition={{ type: "spring", stiffness: 500, damping: 15 }}
+                          className="inline-flex items-center gap-1.5"
+                        >
+                          <IconoEstrella tamano={13} marcada={est?.flagged} />
+                          {est?.flagged ? "Marcada" : "Marcar"}
+                        </motion.span>
                       </button>
-                    );
-                  })}
-                </div>
-              </article>
-            );
-          })}
-        </div>
-        {/* ── Navegación ────────────────────────────────────────────── */}
-        <nav className="mt-5 flex items-center gap-3">
-          <button
-            type="button"
-            onClick={() => irAPagina(paginaActual - 1)}
-            disabled={paginaActual === 0}
-            className="rounded-lg border border-border px-4 py-2.5 font-medium transition hover:bg-surface-hover disabled:opacity-40"
-          >
-            Anterior
-          </button>
+                    </div>
 
-          {paginaActual < paginas.length - 1 ? (
-            <button
-              type="button"
-              onClick={() => irAPagina(paginaActual + 1)}
-              className="btn-glow flex-1 rounded-lg px-4 py-2.5 font-semibold text-accent-foreground"
-            >
-              {variasEnLaPagina ? "Siguiente texto" : "Siguiente"}
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={() => setConfirmingSubmit(true)}
-              className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90"
-            >
-              Terminar ensayo
-            </button>
-          )}
-        </nav>
+                    {/* La segunda oportunidad. Con miles de preguntas sorteadas al
+                        azar, reencontrarse con una que uno falló es la mejor
+                        ocasión de aprender que da la plataforma, y pasaba
+                        completamente desapercibida.
 
-        <div className="mt-6 flex justify-between text-sm">
-          <button
-            type="button"
-            onClick={() => setConfirmingSubmit(true)}
-            className="flex items-center gap-2 rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-muted transition hover:border-danger/50 hover:bg-danger/5 hover:text-danger"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="5" y="5" width="14" height="14" rx="2" />
-            </svg>
-            Terminar antes
-          </button>
-        </div>
+                        Va ANTES del enunciado y no después: sirve para leer con
+                        más cuidado, no para lamentarse. Y no dice qué se respondió
+                        ni cuál era la correcta —eso sería regalar la respuesta—,
+                        solo que en algún momento esta pregunta se le escapó. */}
+                    {q.fallada_antes && (
+                      <p className="mb-3 flex items-center gap-2 rounded-lg border border-accent-warm/40 bg-accent-warm/5 px-3 py-2 text-sm text-accent-warm-strong">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                          className="shrink-0"
+                        >
+                          <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                          <path d="M3 3v5h5" />
+                        </svg>
+                        <span>
+                          <strong className="font-semibold">Ya te equivocaste en esta pregunta.</strong>{" "}
+                          Léela con calma: es tu oportunidad de corregirlo.
+                        </span>
+                      </p>
+                    )}
 
-        {errorMsg && (
-          <p className="mt-4 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-sm text-danger">
-            {errorMsg}
-          </p>
-        )}
+                    <TextoRico texto={q.stem} className="text-lg" />
 
-        <p className="mt-4 text-center text-xs text-muted">
-          Atajos: teclas A-D para responder, flechas ← → para navegar.
-        </p>
+                    <div className="mt-5 space-y-2">
+                      {q.alternatives.map((alt, i) => {
+                        const elegida = est?.selected === alt.id;
+                        return (
+                          <button
+                            key={alt.id}
+                            type="button"
+                            onClick={() => selectAlternative(alt.id, q.id)}
+                            aria-pressed={elegida}
+                            className={cn(
+                              // `active:scale` es el acuse de recibo del toque: en
+                              // móvil no hay hover, y sin esto la única señal de que
+                              // el dedo acertó llega cuando ya se pintó la
+                              // alternativa.
+                              "flex w-full items-center gap-3 rounded-lg border p-3 text-left transition duration-150 active:scale-[0.99]",
+                              // La señal de "elegida" la da la burbuja, no la fila:
+                              // en un cartón de respuestas lo que se rellena es el
+                              // círculo.
+                              elegida
+                                ? "border-grafito bg-surface"
+                                : "border-border bg-background hover:border-border-strong hover:bg-surface-hover"
+                            )}
+                          >
+                            <Burbuja letra={LABELS[i]} marcada={elegida} />
+                            <TextoRico texto={alt.text} inline />
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            {/* ── Navegación ────────────────────────────────────────────── */}
+            <nav className="mt-5 flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => irAPagina(paginaActual - 1)}
+                disabled={paginaActual === 0}
+                className="rounded-lg border border-border px-4 py-2.5 font-medium transition hover:bg-surface-hover disabled:opacity-40"
+              >
+                Anterior
+              </button>
+
+              {paginaActual < paginas.length - 1 ? (
+                <button
+                  type="button"
+                  onClick={() => irAPagina(paginaActual + 1)}
+                  className="btn-glow flex-1 rounded-lg px-4 py-2.5 font-semibold text-accent-foreground"
+                >
+                  {variasEnLaPagina ? "Siguiente texto" : "Siguiente"}
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setConfirmingSubmit(true)}
+                  className="flex-1 rounded-lg bg-success px-4 py-2.5 font-semibold text-on-fill transition hover:opacity-90"
+                >
+                  Terminar ensayo
+                </button>
+              )}
+            </nav>
+
+            <div className="mt-6 flex justify-between text-sm">
+              <button
+                type="button"
+                onClick={() => setConfirmingSubmit(true)}
+                className="flex items-center gap-2 rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-muted transition hover:border-danger/50 hover:bg-danger/5 hover:text-danger"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="5" y="5" width="14" height="14" rx="2" />
+                </svg>
+                Terminar antes
+              </button>
+            </div>
+
+            {errorMsg && (
+              <p className="mt-4 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-sm text-danger">
+                {errorMsg}
+              </p>
+            )}
+
+            <p className="mt-4 text-center text-xs text-muted">
+              Atajos: teclas A-D para responder, flechas ← → para navegar.
+            </p>
+      </div>
+    </div>
       </main>
 
       {/* ── Confirmación de término ─────────────────────────────────── */}

@@ -1,3 +1,5 @@
+import { cn } from "@paes-m1/utils";
+
 import { TextoRico } from "@/components/texto-rico";
 import type { ExamQuestion } from "@/lib/api";
 
@@ -17,10 +19,16 @@ const ETIQUETA_TIPO: Record<string, string> = {
  * comparten el mismo pasaje: el componente lo deja fijo mientras el estudiante
  * avanza entre ellas, para que no tenga que volver a buscarlo.
  */
-export function PassagePanel({ passage }: { passage: Passage }) {
+export function PassagePanel({
+  passage,
+  className,
+}: {
+  passage: Passage;
+  className?: string;
+}) {
   return (
     <aside
-      className="card-panel max-h-[70vh] overflow-y-auto p-5"
+      className={cn("card-panel max-h-[70vh] overflow-y-auto p-5", className)}
       aria-label="Texto de lectura"
     >
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2 border-b border-border pb-3">
