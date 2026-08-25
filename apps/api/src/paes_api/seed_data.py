@@ -21391,6 +21391,453 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "talla_ropa",
+        "title": "Una medida sin patrón",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de la descripción corriente "
+            "del sistema de tallas de la industria del vestuario."
+        ),
+        "body": (
+            "**Una medida sin patrón**\n\n"
+            "Una persona se prueba una polera talla M en tres tiendas distintas de "
+            "un mismo mall. En la primera le queda ajustada, en la segunda le queda "
+            "perfecta y en la tercera le sobra tela por todos lados. Las tres dicen "
+            "M. La conclusión que casi todos sacan es que hay un problema con su "
+            "cuerpo o con esas marcas. La conclusión correcta es más incómoda: no "
+            "hay ningún problema, porque la M no mide nada.\n\n"
+            "**De dónde salieron las tallas**\n\n"
+            "Durante casi toda la historia, la ropa se hizo a medida o en casa. "
+            "Alguien tomaba las medidas de una persona concreta y cortaba para "
+            "ella. En ese sistema la pregunta por la talla no existe, porque cada "
+            "prenda tiene una sola destinataria posible.\n\n"
+            "Las tallas aparecen con la producción en serie, y aparecen para "
+            "resolver un problema del fabricante y no del comprador: cómo hacer "
+            "miles de prendas iguales que le sirvan a suficientes personas "
+            "distintas. La solución fue agrupar cuerpos en unas pocas categorías y "
+            "coser para el promedio de cada grupo. La talla, entonces, nació como "
+            "una herramienta de producción a la que después le encontramos un uso "
+            "que no tenía previsto: describirnos.\n\n"
+            "**Por qué la M no coincide con la M**\n\n"
+            "El punto que ordena todo lo demás es que no existe un patrón "
+            "obligatorio que defina qué es una M. Cada marca construye sus tallas "
+            "sobre un molde propio, y ese molde sale de decisiones que le "
+            "pertenecen: a qué público apunta, con qué proporciones trabaja, qué "
+            "holgura considera cómoda.\n\n"
+            "Dos marcas que apuntan a públicos distintos van a tener M distintas, y "
+            "ninguna de las dos está equivocada. Cada una es coherente consigo "
+            "misma, que es lo único que la letra promete. Comparar la M de una con "
+            "la M de otra es comparar dos escalas que nunca se pusieron de acuerdo.\n\n"
+            "**La talla que se mueve sola**\n\n"
+            "Hay un segundo fenómeno que confunde todavía más, porque ocurre dentro "
+            "de una misma marca y a lo largo del tiempo. Las tallas tienden a "
+            "agrandarse: una prenda etiquetada con cierta letra hoy suele ser más "
+            "amplia que una prenda con esa misma letra hace algunas décadas.\n\n"
+            "El motivo es comercial y bastante humano. Una etiqueta más generosa "
+            "hace que el comprador se lleve una talla que le suena mejor, y una "
+            "etiqueta que aprieta produce el efecto contrario. La consecuencia es "
+            "que el número o la letra dejan de funcionar como medida y empiezan a "
+            "funcionar como mensaje.\n\n"
+            "Y ese desplazamiento tiene un costo que se paga en otra parte: alguien "
+            "que compara la talla que usaba hace quince años con la que usa hoy "
+            "está comparando dos etiquetas que no significan lo mismo, y sacando "
+            "conclusiones sobre su cuerpo a partir de una diferencia que puede ser "
+            "enteramente de la ropa.\n\n"
+            "**Lo que sí sirve**\n\n"
+            "Las soluciones disponibles son poco glamorosas y funcionan.\n\n"
+            "La primera es mirar las medidas en centímetros, que muchas marcas "
+            "publican en una tabla junto a la prenda: contorno de pecho, de "
+            "cintura, largo. Un centímetro sí es un patrón, y compararlo con las "
+            "medidas propias entrega información real.\n\n"
+            "La segunda es medir una prenda que ya se tiene y que queda bien, y "
+            "usar esos números como referencia. Es más confiable que recordar una "
+            "letra, porque la letra depende de quién la puso y el centímetro no.\n\n"
+            "La tercera es tratar la devolución como parte normal del proceso y no "
+            "como un fracaso, sobre todo comprando a distancia. En un sistema donde "
+            "las escalas no coinciden, probarse es la única manera de saber.\n\n"
+            "**Una advertencia contra la solución obvia**\n\n"
+            "Podría pensarse que todo se arregla con una norma que obligue a todas "
+            "las marcas a usar las mismas tallas. Ayudaría, y no resolvería el "
+            "problema de fondo, porque el problema no es solo de acuerdo entre "
+            "fabricantes: es que un cuerpo no cabe en un número.\n\n"
+            "Dos personas con el mismo contorno de pecho pueden diferir en el largo "
+            "de los brazos, en el ancho de los hombros, en la proporción entre "
+            "cintura y cadera. Una talla resume varias dimensiones en un solo dato, "
+            "y todo resumen deja algo afuera. Con una norma común, la M "
+            "significaría lo mismo en todas partes y seguiría sin quedarle bien a "
+            "mucha gente, solo que ahora todas las marcas se equivocarían igual.\n\n"
+            "Queda una observación sobre el uso que le damos a esa letra. Una talla "
+            "describe una prenda, no a una persona: dice cuánto mide lo que se está "
+            "vendiendo, no cuánto vale quien se lo prueba. Eso parece obvio escrito "
+            "así y funciona distinto frente a un espejo, en un probador chico, "
+            "cuando algo no cierra. La confusión entre las dos cosas es "
+            "probablemente el único aspecto de este asunto que no depende de la "
+            "industria."
+        ),
+    },
+    {
+        "key": "casa_piloto",
+        "title": "La casa piloto",
+        "kind": "literario",
+        "source_note": (
+            "Cuento original de 1000paes, escrito para esta prueba. Los personajes y "
+            "los proyectos inmobiliarios son ficticios."
+        ),
+        "body": (
+            "**La casa piloto**\n\n"
+            "El verano en que cumplí once años, mi familia visitó dieciséis casas "
+            "piloto. Las conté porque mi hermana llevaba la cuenta en una libreta, "
+            "junto con el nombre del proyecto y una nota del uno al siete que ponía "
+            "ella sola y sin consultarle a nadie.\n\n"
+            "Salíamos los domingos después de almuerzo. Mi papá manejaba, mi mamá "
+            "iba adelante con el diario abierto en la página de propiedades, y "
+            "nosotros atrás, peleando por la ventana. Las casas piloto quedaban "
+            "siempre en el borde de la ciudad, donde todavía había pastizales, y se "
+            "reconocían de lejos por los banderines.\n\n"
+            "Adentro olían a pintura nueva y a alfombra. Eso es lo primero que "
+            "recuerdo de todas: ese olor, que es un olor que no existe en las casas "
+            "donde vive gente.\n\n"
+            "Cada uno tenía su recorrido. Mi papá partía por el patio de servicio y "
+            "hacía preguntas técnicas: el grosor de los muros, si el calefón era a "
+            "gas o eléctrico, cuánto medía el antejardín, si el proyecto "
+            "contemplaba áreas verdes en la segunda etapa. Las hacía en un tono que "
+            "yo entonces encontraba de adulto serio y que ahora reconozco como el "
+            "tono de alguien que estudió el tema durante la semana.\n\n"
+            "Mi mamá medía. No con huincha: con los brazos. Se paraba en medio del "
+            "living, extendía los dos brazos y giraba despacio, y después decía "
+            "«acá cabe el comedor de la abuela» o «acá no». En una casa dijo que el "
+            "dormitorio de atrás tenía la luz de la tarde, y se quedó parada en la "
+            "ventana un rato largo.\n\n"
+            "Nosotros corríamos escaleras arriba a pelear cuál pieza era de cada "
+            "uno. Yo elegía siempre la que tuviera la ventana más chica, porque me "
+            "parecía que las ventanas chicas eran de las piezas importantes.\n\n"
+            "En el camino de vuelta hacíamos siempre lo mismo. Mi hermana leía en "
+            "voz alta las notas del día y nosotros reclamábamos por las bajas. Mi "
+            "papá manejaba callado, con la radio puesta en un partido que no le "
+            "interesaba, y mi mamá miraba por la ventana los terrenos donde decían "
+            "que iba a levantarse la segunda etapa.\n\n"
+            "Nunca compramos ninguna.\n\n"
+            "A los once años eso no me llamó la atención. Yo entendía que estábamos "
+            "eligiendo, y que elegir toma tiempo, y que dieciséis casas eran pocas "
+            "para una decisión así de grande. Mi hermana ponía las notas y yo "
+            "reclamaba cuando le ponía un cinco a una casa que a mí me había "
+            "gustado. Nadie en el auto dijo nunca que no íbamos a comprar, y nadie "
+            "dijo tampoco que sí.\n\n"
+            "En marzo se acabaron los domingos, sin anuncio. Empezaron las clases, "
+            "mi papá cambió de turno, y las casas piloto salieron de la "
+            "conversación con la misma naturalidad con que habían entrado.\n\n"
+            "Hay un domingo que recuerdo entero, y es el número once de la libreta.\n\n"
+            "Una señora del proyecto nos acompañó todo el recorrido, cosa que no "
+            "siempre pasaba. Era amable y hablaba mucho, y en la puerta, cuando ya "
+            "nos íbamos, le preguntó a mi papá si estaban pensando en comprar ahora "
+            "o más adelante.\n\n"
+            "Mi papá se quedó un segundo callado. Después dijo: «Estamos mirando».\n\n"
+            "Lo dijo tranquilo, sin apuro, con la mano en el hombro de mi hermana. "
+            "La señora dijo que claro, que con confianza, y nos dio un folleto que "
+            "mi hermana guardó en la libreta.\n\n"
+            "Yo tenía once años y ese «estamos mirando» me pareció, en ese momento, "
+            "una respuesta cualquiera.\n\n"
+            "Me tomó como veinte años entender esa escena, y el día que la entendí "
+            "estaba haciendo otra cosa, en una notaría, firmando los papeles de un "
+            "departamento chico que compré con un crédito que voy a terminar de "
+            "pagar a los sesenta y dos años.\n\n"
+            "Lo que entendí es que mi papá sabía perfectamente que no íbamos a "
+            "comprar. Lo sabía en la primera casa, en la número once y en la "
+            "dieciséis. Sabía cuánto ganaba, sabía cuánto costaban esas casas y "
+            "sabía restar. Y aun así estudiaba durante la semana para hacer "
+            "preguntas sobre el grosor de los muros.\n\n"
+            "Durante un tiempo eso me pareció triste, y creo que era la lectura "
+            "fácil. Después empecé a verlo de otra manera. Esos domingos no eran un "
+            "simulacro de algo que no ocurrió: eran lo que efectivamente ocurrió. "
+            "Mi mamá midió de verdad esos livings con los brazos, y de verdad supo "
+            "cuál tenía la luz de la tarde. Mi hermana puso notas que todavía están "
+            "escritas en una libreta. Yo elegí piezas.\n\n"
+            "Uno puede decir que estábamos mirando casas que no íbamos a tener. "
+            "También puede decir que pasamos dieciséis domingos juntos, recorriendo "
+            "lugares, imaginando en voz alta, discutiendo por una pieza. Las dos "
+            "descripciones son ciertas y no describen lo mismo.\n\n"
+            "Mi hermana todavía tiene la libreta. Me la mostró hace unos años, en "
+            "un cumpleaños, y estuvimos un rato leyendo los nombres de los "
+            "proyectos, que eran todos nombres de árboles.\n\n"
+            "La casa número once tenía un siete."
+        ),
+    },
+    {
+        "key": "ficha_garantia",
+        "title": "Ficha del producto y garantías",
+        "kind": "discontinuo",
+        "source_note": (
+            "Cartilla original de 1000paes, de uso educativo. El producto y la garantía "
+            "del fabricante son ficticios; lo relativo a la garantía legal corresponde "
+            "a la Ley 21.398."
+        ),
+        "body": (
+            "**FICHA DEL PRODUCTO Y GARANTÍAS**\n\n"
+            "*Cartilla de uso educativo. El producto, la marca y los plazos de la "
+            "garantía del fabricante son ficticios. Lo relativo a la garantía legal "
+            "corresponde a la Ley 21.398, llamada Ley Pro Consumidor.*\n\n"
+            "**1. Ficha técnica**\n\n"
+            "| Campo | Dato |\n"
+            "|---|---|\n"
+            "| Producto | hervidor eléctrico |\n"
+            "| Marca y modelo | Kalten 1.7 |\n"
+            "| Capacidad | 1,7 litros |\n"
+            "| Potencia | 2.000 W |\n"
+            "| Precio | $29.990 |\n"
+            "| Fecha de compra | 3 de abril |\n"
+            "| Fecha de entrega | 8 de abril |\n\n"
+            "**2. Las dos garantías, que no son la misma**\n\n"
+            "| | Garantía legal | Garantía del fabricante |\n"
+            "|---|---|---|\n"
+            "| Origen | la ley | una oferta de la empresa |\n"
+            "| Plazo | 6 meses | 12 meses en este producto |\n"
+            "| Desde cuándo | la entrega del producto | la fecha de compra |\n"
+            "| Quién elige la solución | el consumidor | según sus propias condiciones |\n"
+            "| Se puede recortar | no | sí, la fija quien la ofrece |\n\n"
+            "La distinción es la que más confusión produce en el mostrador. La "
+            "garantía voluntaria del fabricante puede ser más larga, y suele serlo, "
+            "porque es un argumento de venta. Pero **su existencia no reemplaza ni "
+            "reduce la garantía legal**, que corre en paralelo durante los primeros "
+            "seis meses y con sus propias reglas.\n\n"
+            "**3. Qué permite la garantía legal**\n\n"
+            "Si el producto falla o sale defectuoso dentro de los seis meses "
+            "siguientes a su entrega, el consumidor puede elegir entre tres "
+            "soluciones: **la reparación, el cambio por otro producto o la "
+            "devolución del dinero**.\n\n"
+            "La palabra que hace el trabajo es «elegir». El vendedor no puede "
+            "imponer la reparación cuando el consumidor prefiere la devolución, ni "
+            "condicionar el cambio a que primero se intente arreglar el producto.\n\n"
+            "**4. Qué no pueden exigir**\n\n"
+            "*(a)* **La caja ni los accesorios.** La sola boleta basta para "
+            "acreditar la compra.\n\n"
+            "*(b)* **Un pago por ejercer la garantía.** Las empresas no pueden "
+            "cobrar por los derechos propios de la garantía legal.\n\n"
+            "*(c)* **Renunciar a los seis meses** porque el producto tenga una "
+            "garantía voluntaria más larga. Esa oferta se suma; no descuenta.\n\n"
+            "**5. Un detalle de fechas que conviene mirar**\n\n"
+            "En la ficha de arriba, la compra fue el 3 de abril y la entrega el 8. "
+            "Los seis meses de la garantía legal se cuentan **desde la entrega**, "
+            "así que vencen a comienzos de octubre y no de septiembre. La garantía "
+            "del fabricante, en cambio, se cuenta desde la compra, según sus "
+            "propias condiciones.\n\n"
+            "Cinco días parecen poca cosa y dejan de parecerlo cuando una falla "
+            "aparece justo en el límite. Por eso conviene guardar los dos "
+            "comprobantes: el de la compra y el de la entrega.\n\n"
+            "**6. Tres situaciones para practicar**\n\n"
+            "*Caso 1.* El hervidor deja de calentar a los cinco meses de la "
+            "entrega. El vendedor ofrece repararlo en un servicio técnico. El "
+            "consumidor prefiere que le devuelvan el dinero. Corresponde la "
+            "devolución: dentro de los seis meses, la elección es suya.\n\n"
+            "*Caso 2.* La falla aparece a los ocho meses. La garantía legal ya "
+            "venció, pero la del fabricante corre doce meses desde la compra, así "
+            "que sigue vigente. Ahora bien, las condiciones las pone el fabricante: "
+            "si su garantía solo ofrece reparación, esa es la solución disponible.\n\n"
+            "*Caso 3.* El consumidor botó la caja y conserva la boleta. Eso basta. "
+            "Exigirle el embalaje original para ejercer la garantía legal no "
+            "corresponde.\n\n"
+            "**7. Qué hacer, en orden**\n\n"
+            "Primero, reunir la boleta y el comprobante de entrega. Segundo, "
+            "decidir cuál de las tres soluciones se quiere pedir, porque esa "
+            "elección es del consumidor y conviene llegar con ella tomada. Tercero, "
+            "presentarse en el lugar donde se compró. Y si la respuesta es una "
+            "negativa, dejar constancia escrita del reclamo antes de retirarse: sin "
+            "ese registro, la conversación no existió.\n\n"
+            "**8. Lo que esta cartilla no cubre**\n\n"
+            "No trata las compras entre particulares, que se rigen por otras "
+            "reglas. No cubre los daños causados por mal uso, que quedan fuera de "
+            "ambas garantías. Y no reemplaza la información del organismo "
+            "competente ni constituye asesoría legal: es una guía para leer una "
+            "ficha y saber qué preguntar."
+        ),
+    },
+    {
+        "key": "enlaces_perdidos",
+        "title": "El enlace que ya no lleva a ninguna parte",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de la descripción corriente "
+            "del problema de conservación de documentos publicados en línea."
+        ),
+        "body": (
+            "**El enlace que ya no lleva a ninguna parte**\n\n"
+            "Cualquiera que haya buscado una nota de hace diez años conoce la "
+            "escena: el artículo cita un documento, el documento está enlazado, y "
+            "el enlace devuelve un error. No hay aviso, no hay explicación y no hay "
+            "manera de saber qué había ahí. La afirmación del artículo queda en el "
+            "aire, sostenida por una referencia que dejó de existir.\n\n"
+            "El fenómeno tiene nombre —descomposición de enlaces— y es mucho más "
+            "común de lo que sugiere la sensación de que internet lo guarda todo. "
+            "Esa sensación viene de otra cosa: de que lo que uno quiere borrar "
+            "suele seguir circulando. Las dos cosas conviven sin contradecirse, y "
+            "entenderlas juntas es la parte interesante del asunto.\n\n"
+            "**Por qué desaparece una página**\n\n"
+            "Una página web no se sostiene sola. Alguien paga un alojamiento, "
+            "alguien renueva un dominio, alguien mantiene el programa que la "
+            "publica. Cuando cualquiera de esas tres cosas se interrumpe, la página "
+            "se va sin que nadie lo haya decidido en particular.\n\n"
+            "Las causas corrientes son domésticas: un medio que cierra, una "
+            "institución que rediseña su sitio y cambia todas las direcciones, un "
+            "servicio que da de baja los archivos de sus usuarios, un dominio que "
+            "alguien olvida renovar. Ninguna de esas decisiones se toma pensando en "
+            "el artículo de hace diez años que citaba ese material.\n\n"
+            "**El problema que no se nota**\n\n"
+            "Hay una segunda forma de pérdida, más incómoda que la primera, porque "
+            "no deja error visible.\n\n"
+            "A veces la dirección sigue funcionando y lo que hay del otro lado ya "
+            "no es lo mismo: el documento fue actualizado, la cifra se corrigió, el "
+            "párrafo citado desapareció, la página entera cambió de tema. Quien "
+            "sigue el enlace llega a algo que se ve normal y no tiene cómo saber "
+            "que está leyendo una versión posterior a la que se citó.\n\n"
+            "Un enlace roto avisa que algo falta. Un enlace que cambió de contenido "
+            "no avisa nada, y por eso puede sostener durante años una afirmación "
+            "que su fuente ya no respalda.\n\n"
+            "Hay además un agravante silencioso: quien cita casi nunca vuelve a "
+            "revisar sus propios enlaces. Un artículo publicado se da por "
+            "terminado, de modo que el desajuste entre lo que dice y lo que su "
+            "fuente dice hoy puede instalarse sin que el autor llegue a enterarse "
+            "nunca.\n\n"
+            "**Dónde importa**\n\n"
+            "Podría parecer un problema de archivo, interesante para "
+            "bibliotecarios. Es más amplio.\n\n"
+            "Un fallo judicial que cita un informe publicado en un sitio, una "
+            "investigación académica cuyas fuentes son documentos oficiales en "
+            "línea, un reportaje que enlaza los datos en que se apoya: en los tres "
+            "casos, la posibilidad de comprobar lo que se afirma depende de que un "
+            "tercero, sin ninguna obligación, mantenga un archivo disponible. La "
+            "verificación queda colgando de una decisión ajena que puede cambiar "
+            "mañana.\n\n"
+            "**Lo que se hace**\n\n"
+            "Existen archivos que recorren la red tomando copias fechadas de las "
+            "páginas, de modo que una dirección muerta pueda consultarse tal como "
+            "se veía en su momento. Existen identificadores permanentes que se usan "
+            "sobre todo en publicaciones científicas, y que apuntan a un registro "
+            "que se mantiene aunque la dirección concreta cambie. Y existen "
+            "bibliotecas nacionales que recolectan y conservan porciones de la web "
+            "de su país como parte de su labor de siempre.\n\n"
+            "Las tres soluciones funcionan y ninguna alcanza. Un archivo automático "
+            "no puede copiarlo todo, y deja fuera lo que está tras un muro de pago, "
+            "lo que se genera al momento de la consulta y lo que exige iniciar "
+            "sesión. Un identificador permanente solo sirve si alguien lo asigna y "
+            "lo mantiene. Y toda recolección elige: decidir qué se archiva es "
+            "decidir qué va a poder consultarse después, y esa decisión se toma "
+            "hoy, sin saber qué le va a importar a alguien dentro de cuarenta años.\n\n"
+            "**Una advertencia en sentido contrario**\n\n"
+            "Conviene no concluir que todo debería conservarse para siempre. Buena "
+            "parte de lo que se publica es información personal de gente corriente, "
+            "y hay buenas razones para que algunas cosas puedan retirarse de "
+            "circulación: un dato de salud, una dirección, una publicación hecha a "
+            "los quince años.\n\n"
+            "El objetivo razonable no es conservarlo todo sino conservar "
+            "deliberadamente aquello que sostiene afirmaciones públicas, que es una "
+            "categoría bastante más chica y bastante más definible. Un informe "
+            "ministerial citado en un fallo y la foto de un cumpleaños ajeno no "
+            "plantean el mismo problema.\n\n"
+            "Queda una comparación que ordena todo lo anterior. El papel se "
+            "conservó durante siglos en buena medida por inercia: para que un libro "
+            "llegara a la generación siguiente no hacía falta que nadie decidiera "
+            "conservarlo, bastaba con que nadie lo destruyera. Con lo digital "
+            "ocurre exactamente al revés. Para que un documento siga disponible en "
+            "diez años, alguien tiene que estar decidiendo activamente mantenerlo, "
+            "mes a mes, pagando por ello. Lo que antes era el resultado del "
+            "descuido ahora exige una voluntad sostenida, y esa es la razón de "
+            "fondo por la que se pierde tanto."
+        ),
+    },
+    {
+        "key": "orden_apellidos",
+        "title": "El orden que nadie había elegido",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de la Ley 21.334, sobre "
+            "determinación del orden de los apellidos por acuerdo de los padres, "
+            "publicada el 14 de mayo de 2021."
+        ),
+        "body": (
+            "**El orden que nadie había elegido**\n\n"
+            "Casi todos los chilenos llevan dos apellidos y casi ninguno recuerda "
+            "haber decidido cuál va primero. Durante generaciones esa pregunta no "
+            "existió, porque la respuesta parecía venir con el idioma: primero el "
+            "del padre, después el de la madre. Lo interesante de una regla así no "
+            "es su contenido, sino que haya funcionado tanto tiempo sin que nadie "
+            "la enunciara como regla.\n\n"
+            "**Una costumbre, no una ley de la naturaleza**\n\n"
+            "El sistema de dos apellidos no es universal ni obvio. En buena parte "
+            "del mundo se usa uno solo, y en otros países de tradición hispana y "
+            "portuguesa el orden habitual es el inverso al chileno. Eso basta para "
+            "descartar la idea de que exista una manera natural de ordenarlos: lo "
+            "que hay son convenciones, cada una con su historia.\n\n"
+            "La chilena tiene además una particularidad que conviene notar. Un "
+            "apellido paterno se transmite hacia adelante y el materno se detiene "
+            "en una generación: los hijos de una persona reciben su primer "
+            "apellido, no el segundo. Bajo esa regla, el apellido de una abuela "
+            "desaparece del registro de sus bisnietos, mientras el de un abuelo "
+            "sigue viajando. No es una consecuencia buscada; es lo que resulta de "
+            "aplicar la costumbre durante suficientes generaciones.\n\n"
+            "**Lo que estableció la ley**\n\n"
+            "La Ley 21.334, publicada el 14 de mayo de 2021, cambió el "
+            "procedimiento. Desde entonces, al inscribir al primero de los hijos "
+            "comunes, la madre y el padre determinan de común acuerdo el orden en "
+            "que se transmitirán sus respectivos primeros apellidos, y ese orden "
+            "rige después para todos los hijos comunes de esa pareja.\n\n"
+            "La ley agregó también una posibilidad para quienes ya están inscritos: "
+            "cualquier persona mayor de edad puede solicitar ante el Servicio de "
+            "Registro Civil e Identificación, **por una sola vez**, el cambio del "
+            "orden de sus apellidos. Ese cambio alcanza a sus hijos menores de "
+            "edad, y si tiene hijos de entre catorce y dieciocho años, ellos deben "
+            "dar su consentimiento.\n\n"
+            "**La regla que opera cuando nadie decide**\n\n"
+            "Hay un punto que suele quedar fuera del resumen y que probablemente "
+            "sea el más relevante. La ley prevé qué ocurre si los padres no "
+            "manifiestan acuerdo al inscribir al primer hijo: en ese caso se "
+            "entiende que quieren que el primer apellido del padre preceda al de la "
+            "madre.\n\n"
+            "Esa regla supletoria hace bastante más trabajo del que parece. En "
+            "cualquier trámite, la mayoría de las personas no elige entre opciones: "
+            "acepta lo que viene puesto. Una alternativa que exige manifestarse "
+            "expresamente será usada por quienes tienen una razón para hacerlo, "
+            "mientras el resto quedará bajo la regla por defecto sin haberla "
+            "considerado nunca.\n\n"
+            "Dicho de otro modo, la ley abrió una decisión que antes no existía y, "
+            "al mismo tiempo, dejó escrito qué pasa cuando esa decisión no se toma. "
+            "Las dos cosas importan, y la segunda determina el resultado para la "
+            "mayoría.\n\n"
+            "**Por qué un apellido no es un detalle**\n\n"
+            "Podría objetarse que todo esto es una discusión sobre etiquetas. La "
+            "objeción tiene menos fuerza de la que aparenta.\n\n"
+            "Un apellido organiza documentos, herencias, historias clínicas y "
+            "búsquedas genealógicas; es lo que permite que alguien, dentro de "
+            "cincuenta años, siga un rastro familiar en un archivo. Y funciona como "
+            "señal social: en un país chico, un apellido dice cosas sobre el origen "
+            "de quien lo lleva, para bien y para mal. Cambiar cuál de los dos ocupa "
+            "el lugar visible no es un gesto decorativo.\n\n"
+            "**Dos precisiones**\n\n"
+            "La primera es que la ley no obliga a nada. No invierte el orden ni lo "
+            "recomienda: habilita a decidirlo. Quien prefiera mantener la costumbre "
+            "anterior no necesita hacer ningún trámite, y esa es precisamente la "
+            "consecuencia de tener una regla supletoria. Eso vuelve la ley más "
+            "fácil de aplicar y, a la vez, más difícil de advertir: la mayoría "
+            "de las familias no tendrá que enterarse siquiera de que existe una "
+            "alternativa disponible.\n\n"
+            "La segunda es que la ley no resuelve el desacuerdo entre los padres, y "
+            "no podría hacerlo sin arbitrar entre dos personas que no lograron "
+            "ponerse de acuerdo sobre algo que las involucra por igual. Lo que hace "
+            "es fijar qué ocurre si el acuerdo no se manifiesta, que es distinto: "
+            "no dirime la discusión, la reemplaza por un resultado conocido de "
+            "antemano.\n\n"
+            "Queda una observación sobre este tipo de cambios. Lo que la ley "
+            "modificó no fue tanto el orden de los apellidos —que en la mayoría de "
+            "los casos seguirá siendo el mismo— como el estatuto de esa pregunta. "
+            "Antes había una manera de hacer las cosas y ninguna alternativa; ahora "
+            "hay una decisión que se puede tomar y una opción por defecto para "
+            "quien no la tome.\n\n"
+            "Es un cambio menos espectacular que invertir el orden y probablemente "
+            "más duradero. Una costumbre que se sabe elegible ya no es del todo una "
+            "costumbre: es una preferencia, y las preferencias se pueden discutir "
+            "en cada familia, que es un lugar donde antes no había nada que "
+            "discutir."
+        ),
+    },
+    {
         "key": "reventa_entradas",
         "title": "La entrada que valía más de lo que costaba",
         "kind": "no_literario",
@@ -28820,6 +29267,1078 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Una medida sin patrón' ----------
+    _ql(
+        "talla_ropa", "lec_localizar", "facil",
+        "Según la lectura, ¿para resolver qué problema aparecieron las tallas?",
+        "El de fabricar miles de prendas iguales",
+        "Las tallas nacen con la producción en serie, y el emisor precisa a quién "
+        "le servían: «aparecen para resolver un problema del fabricante y no del "
+        "comprador».\nEl problema era cómo hacer miles de prendas iguales «que le "
+        "sirvan a suficientes personas distintas».\nLa solución fue agrupar cuerpos "
+        "en unas pocas categorías «y coser para el promedio de cada grupo».",
+        [
+            ("El de describir el cuerpo de cada cliente", "Ese uso es posterior y no estaba previsto."),
+            ("El de comparar precios entre las marcas", "Los precios no intervienen en el origen de las tallas."),
+            ("El de acortar el tiempo de las pruebas", "El texto no menciona el tiempo de probarse."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué la M de una marca no coincide con la de otra?",
+        "Porque cada marca usa su propio molde",
+        "No existe «un patrón obligatorio que defina qué es una M», así que cada "
+        "marca la construye sobre un molde propio.\nEse molde sale de decisiones "
+        "que le pertenecen: «a qué público apunta, con qué proporciones trabaja, "
+        "qué holgura considera cómoda».\nPor eso el emisor sostiene que ninguna de "
+        "las dos está equivocada: «Cada una es coherente consigo misma, que es lo "
+        "único que la letra promete».",
+        [
+            ("Porque algunas marcas miden mal sus prendas", "El texto descarta que haya un error de medición."),
+            ("Porque la norma cambió en los últimos años", "No existe una norma obligatoria que definir esa letra."),
+            ("Porque las telas se encogen de distinta forma", "El encogimiento no se menciona en la lectura."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_localizar", "medio",
+        "Según la lectura, ¿qué ha ocurrido con las tallas a lo largo del tiempo?",
+        "Tienden a agrandarse dentro de una marca",
+        "Es el segundo fenómeno que el texto describe, y ocurre incluso sin "
+        "comparar marcas entre sí.\n«Una prenda etiquetada con cierta letra hoy "
+        "suele ser más amplia que una prenda con esa misma letra hace algunas "
+        "décadas».\nEl motivo que da el emisor es comercial: una etiqueta más "
+        "generosa hace que el comprador «se lleve una talla que le suena mejor».",
+        [
+            ("Se han achicado por el costo de la tela", "El texto describe el movimiento contrario."),
+            ("Se han mantenido iguales desde su mismo origen", "El desplazamiento es justamente lo que se explica."),
+            ("Se unificaron entre todas las marcas", "El emisor sostiene que no hay patrón común."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_localizar", "medio",
+        "Según la lectura, ¿qué información sí resulta comparable?",
+        "Las medidas en centímetros de la prenda",
+        "El emisor recomienda mirar las tablas que muchas marcas publican junto a "
+        "la prenda: «contorno de pecho, de cintura, largo».\nY explica por qué "
+        "funcionan: «Un centímetro sí es un patrón», así que compararlo con las "
+        "medidas propias «entrega información real».\nLa segunda recomendación "
+        "aplica el mismo criterio: medir una prenda que ya queda bien y usar esos "
+        "números como referencia, porque «la letra depende de quién la puso y el "
+        "centímetro no».",
+        [
+            ("La letra impresa en la etiqueta", "Esa letra es la que no significa lo mismo entre marcas."),
+            ("El precio final de cada prenda", "El precio no aparece como criterio en el texto."),
+            ("El país donde se fabricó cada prenda de ropa", "El origen de fabricación no se menciona."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_localizar", "facil",
+        "Según la lectura, ¿cómo conviene tratar la devolución de una prenda?",
+        "Como parte normal del proceso de compra",
+        "El emisor la propone como tercera solución y con una precisión sobre el "
+        "ánimo: hay que tratarla «como parte normal del proceso y no como un "
+        "fracaso».\nLa recomendación vale sobre todo comprando a distancia, donde "
+        "no hay probador.\nY su fundamento es el mismo del texto entero: «En un "
+        "sistema donde las escalas no coinciden, probarse es la única manera de "
+        "saber».",
+        [
+            ("Como una señal de que la marca se equivocó", "El emisor sostiene que las marcas son coherentes consigo mismas."),
+            ("Como un trámite que conviene evitar", "Lo plantea como parte esperable de la compra."),
+            ("Como un derecho que rara vez se usa", "El texto no discute su frecuencia de uso."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al afirmar que «la M no mide nada»?",
+        "Que la letra no remite a ningún patrón fijo",
+        "Medir supone comparar contra una unidad acordada, y para las tallas no "
+        "existe esa unidad.\nSin un patrón obligatorio, la letra solo informa cómo "
+        "se ubica una prenda dentro del propio sistema de su marca.\nDe ahí la "
+        "corrección que el emisor propone en el primer párrafo: frente a tres M que "
+        "quedan distintas, la conclusión no es que haya «un problema con su cuerpo "
+        "o con esas marcas».",
+        [
+            ("Que las prendas no se miden antes de venderse", "Cada marca mide y corta según su molde."),
+            ("Que la M es siempre más chica de lo que dice", "El texto no atribuye una dirección única al desajuste."),
+            ("Que las etiquetas suelen estar equivocadas", "No hay error de etiquetado: falta un patrón común."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_interpretar", "medio",
+        "¿Qué implica que la talla haya nacido como herramienta de producción?",
+        "Que describirnos nunca fue su función",
+        "El emisor lo dice sin rodeos: la talla nació como una herramienta «a la "
+        "que después le encontramos un uso que no tenía previsto: "
+        "describirnos».\nFue creada para que un fabricante pudiera cortar miles de "
+        "prendas iguales, y para eso agrupó cuerpos en categorías y cosió para el "
+        "promedio de cada una.\nLeerla como un dato sobre la persona que se la "
+        "prueba es, entonces, pedirle algo que nunca estuvo diseñada para entregar.",
+        [
+            ("Que las prendas antiguas eran de mejor calidad", "La calidad no se compara en ningún momento."),
+            ("Que la ropa a medida desapareció por completo", "El texto no afirma que haya dejado de existir."),
+            ("Que los fabricantes se pusieron de acuerdo", "Sostiene lo contrario: cada uno definió su molde."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué la letra funciona «como mensaje» y no como "
+        "medida?",
+        "Porque busca que el comprador se sienta mejor",
+        "El desplazamiento de las tallas responde a un motivo que el emisor llama "
+        "«comercial y bastante humano».\nUna etiqueta más generosa hace que alguien "
+        "«se lleve una talla que le suena mejor», y una que aprieta produce el "
+        "efecto contrario.\nCuando la letra se ajusta para producir una reacción en "
+        "quien la lee, deja de informar sobre la prenda: pasa a ser algo que la "
+        "marca le dice al comprador.",
+        [
+            ("Porque las marcas la escriben en otro idioma", "El idioma de la etiqueta no está en discusión."),
+            ("Porque la letra se imprime en un lugar visible", "El problema no es dónde aparece sino qué informa."),
+            ("Porque el comprador no sabe interpretarla", "El emisor no atribuye el problema a la lectura del comprador."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_interpretar", "dificil",
+        "¿Por qué comparar la talla actual con la de hace quince años puede llevar "
+        "a error?",
+        "Porque las dos etiquetas no significan lo mismo",
+        "El emisor advierte que la comparación parece razonable y no lo es.\nQuien "
+        "la hace «está comparando dos etiquetas que no significan lo mismo», porque "
+        "la letra se desplazó en el intervalo.\nY señala dónde se paga ese error: "
+        "en conclusiones sobre el propio cuerpo sacadas «a partir de una diferencia "
+        "que puede ser enteramente de la ropa».",
+        [
+            ("Porque las tallas antiguas dejaron de fabricarse", "El texto no dice que hayan dejado de producirse."),
+            ("Porque las marcas de entonces desaparecieron", "El fenómeno ocurre incluso dentro de una misma marca."),
+            ("Porque el cuerpo cambia con los años igual", "Puede cambiar, y por eso mismo la comparación no sirve de prueba."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_interpretar", "dificil",
+        "¿Por qué una norma común no resolvería el problema de fondo?",
+        "Porque un cuerpo no cabe en un solo número",
+        "El emisor concede que ayudaría, y niega que alcance.\nDos personas con el "
+        "mismo contorno de pecho «pueden diferir en el largo de los brazos, en el "
+        "ancho de los hombros, en la proporción entre cintura y cadera», y una "
+        "talla resume todas esas dimensiones en un solo dato.\nDe ahí su "
+        "conclusión, que es también una advertencia sobre lo que se puede esperar "
+        "de una norma: la M significaría lo mismo en todas partes «y seguiría sin "
+        "quedarle bien a mucha gente, solo que ahora todas las marcas se "
+        "equivocarían igual».",
+        [
+            ("Porque las marcas no aceptarían llegar a aplicarla", "La resistencia de la industria no es el argumento del emisor."),
+            ("Porque encarecería demasiado la ropa", "El costo no interviene en el razonamiento."),
+            ("Porque las tallas seguirían agrandándose", "Una norma común impediría justamente ese desplazamiento."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor abre con las tres poleras del mismo mall?",
+        "Para instalar un caso que exige otra explicación",
+        "La escena es deliberadamente corriente y elimina las variables que uno "
+        "culparía primero: la misma persona, el mismo día, la misma letra.\nCon eso "
+        "deja sin salida las dos explicaciones habituales, que el emisor nombra "
+        "enseguida: «un problema con su cuerpo o con esas marcas».\nY desde ahí "
+        "puede introducir la afirmación que el resto del texto desarrolla: la "
+        "conclusión correcta «es más incómoda», y es que la letra no mide nada.",
+        [
+            ("Para comparar la calidad de tres marcas", "Las marcas no se evalúan en ningún momento."),
+            ("Para mostrar que siempre conviene probarse la ropa", "Ese consejo aparece después, entre las soluciones."),
+            ("Para criticar el diseño de los probadores", "El probador aparece recién en el cierre y con otro sentido."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor hacia las marcas cuyas tallas no coinciden?",
+        "Ecuánime, pues no las acusa de equivocarse",
+        "Podría haber presentado el desajuste como un descuido o un abuso, y "
+        "sostiene lo contrario: «ninguna de las dos está equivocada».\nCada marca "
+        "es coherente con su propio molde, «que es lo único que la letra promete», "
+        "así que el problema no está en su comportamiento sino en la ausencia de un "
+        "patrón compartido.\nEl único punto donde asoma un reproche es el "
+        "desplazamiento de las tallas, y aun ahí el emisor califica el motivo de "
+        "«comercial y bastante humano».",
+        [
+            ("Severa, pues las culpa de engañar al comprador", "Solo el desplazamiento de tallas roza esa idea, y con matices."),
+            ("Indiferente, pues no evalúa su conducta", "La evalúa: sostiene expresamente que no se equivocan."),
+            ("Admirativa, pues elogia sus decisiones de diseño", "No elogia sus moldes: explica que cada uno responde a su público."),
+        ],
+    ),
+    _ql(
+        "talla_ropa", "lec_evaluar", "dificil",
+        "¿Qué distinción propone el emisor en el cierre de la lectura?",
+        "Entre describir una prenda y juzgar a alguien",
+        "El cierre reduce el asunto a una frase: una talla «dice cuánto mide lo que "
+        "se está vendiendo, no cuánto vale quien se lo prueba».\nEl emisor reconoce "
+        "que esa distinción «parece obvia escrita así y funciona distinto frente a "
+        "un espejo, en un probador chico, cuando algo no cierra».\nY la separa del "
+        "resto del texto por una razón precisa: es «el único aspecto de este asunto "
+        "que no depende de la industria». Todo lo demás —los moldes, el "
+        "desplazamiento, la falta de norma— ocurre afuera; esto ocurre en quien lee "
+        "la etiqueta.",
+        [
+            ("Entre las marcas caras y las más baratas", "El precio no se discute en el texto."),
+            ("Entre comprar en una tienda y comprar a distancia", "Esa diferencia aparece antes, al hablar de devoluciones."),
+            ("Entre las tallas por letra y las numéricas", "El emisor trata ambas como parte del mismo problema."),
+        ],
+    ),
+    # ---------- 'La casa piloto' ----------
+    _ql(
+        "casa_piloto", "lec_localizar", "facil",
+        "Según el relato, ¿cuántas casas piloto visitó la familia ese verano?",
+        "Dieciséis",
+        "El narrador entrega la cifra en la primera línea y explica cómo la sabe: "
+        "su hermana llevaba la cuenta en una libreta.\nEn esa libreta anotaba "
+        "además el nombre de cada proyecto y una nota del uno al siete «que ponía "
+        "ella sola y sin consultarle a nadie».\nLa libreta reaparece al final del "
+        "cuento, y con ella la nota de la casa número once.",
+        [
+            ("Once", "Once es el número del domingo que el narrador recuerda entero."),
+            ("Siete", "Siete es la nota que su hermana le puso a esa casa."),
+            ("Veintiuno, según esa misma libreta", "Esa cifra no aparece en el relato."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_localizar", "facil",
+        "Según el relato, ¿qué hacía la madre en cada casa?",
+        "Medía los espacios con los brazos",
+        "No usaba huincha: se paraba en medio del living, extendía los dos brazos y "
+        "giraba despacio.\nSu medición terminaba siempre en un veredicto práctico: "
+        "«acá cabe el comedor de la abuela» o «acá no».\nEn una de las casas dijo "
+        "que el dormitorio de atrás tenía la luz de la tarde, «y se quedó parada en "
+        "la ventana un rato largo».",
+        [
+            ("Anotaba los precios en la libreta", "La libreta era de la hermana, y anotaba nombres y notas."),
+            ("Preguntaba por los materiales de los muros", "Esas preguntas técnicas las hacía el padre."),
+            ("Elegía cuál sería la pieza de cada hijo", "Eso lo hacían los hijos, corriendo escaleras arriba."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_localizar", "medio",
+        "Según el relato, ¿qué respondió el padre cuando le preguntaron si iban a "
+        "comprar?",
+        "«Estamos mirando»",
+        "La escena ocurre en la puerta, cuando ya se iban, y una señora del "
+        "proyecto hace la pregunta directa.\nEl padre «se quedó un segundo callado» "
+        "y respondió eso, «tranquilo, sin apuro, con la mano en el hombro de mi "
+        "hermana».\nEl narrador subraya cómo la escuchó entonces: a los once años "
+        "esa frase «me pareció una respuesta cualquiera».",
+        [
+            ("Que lo estaban decidiendo entre los cuatro", "No mencionó ninguna decisión familiar en curso."),
+            ("Que volverían con el crédito aprobado", "El crédito aparece mucho después, y es del narrador adulto."),
+            ("Que la casa les quedaba muy chica", "No objetó nada de la casa en esa respuesta."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_localizar", "medio",
+        "Según el relato, ¿cómo terminaron los paseos de los domingos?",
+        "Sin anuncio, al empezar las clases",
+        "El narrador es preciso sobre la ausencia de ceremonia: «En marzo se "
+        "acabaron los domingos, sin anuncio».\nCoincidieron dos cosas corrientes: "
+        "empezaron las clases y el padre cambió de turno.\nY el cierre de la frase "
+        "describe cómo desaparecieron: las casas piloto salieron de la conversación "
+        "«con la misma naturalidad con que habían entrado».",
+        [
+            ("Cuando la familia compró por fin", "El relato insiste en que nunca compraron ninguna."),
+            ("Cuando una vendedora los cuestionó", "Esa escena ocurre antes y no interrumpe las salidas."),
+            ("Cuando la hermana llenó la libreta", "La libreta se conserva completa y sin haberse acabado."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_localizar", "facil",
+        "Según el relato, ¿dónde estaba el narrador cuando entendió aquella escena?",
+        "En una notaría, firmando papeles",
+        "Fueron veinte años hasta entenderla, y el día que ocurrió «estaba haciendo "
+        "otra cosa».\nEstaba firmando los papeles de «un departamento chico que "
+        "compré con un crédito que voy a terminar de pagar a los sesenta y dos "
+        "años».\nEl detalle del crédito no es decorativo: es lo que le permite "
+        "calcular, desde adentro, lo que su padre calculaba entonces.",
+        [
+            ("En la casa piloto número once", "Esa casa la visitó a los once años."),
+            ("En un cumpleaños, con su hermana", "Ahí revisaron la libreta, años después de haber entendido."),
+            ("En el auto, volviendo un domingo", "En el auto tenía once años y no entendía nada."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_interpretar", "facil",
+        "¿Qué comprende el narrador adulto sobre su padre?",
+        "Que sabía desde el principio que no comprarían",
+        "Lo sabía «en la primera casa, en la número once y en la dieciséis»: "
+        "conocía su sueldo, conocía los precios «y sabía restar».\nEso vuelve "
+        "significativo un detalle anterior que el niño había leído de otra manera: "
+        "el padre estudiaba durante la semana para hacer preguntas sobre el grosor "
+        "de los muros.\nEse esfuerzo no era el de alguien evaluando una compra, y "
+        "el cuento deja que el lector saque la conclusión.",
+        [
+            ("Que buscaba una casa más barata", "El relato no plantea que buscara otro precio."),
+            ("Que no le interesaban esas casas", "Estudiaba durante la semana para preguntar sobre ellas."),
+            ("Que esperaba un ascenso en su trabajo ese año", "El cambio de turno se menciona sin ninguna promesa."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_interpretar", "medio",
+        "¿Qué revela que el padre estudiara durante la semana?",
+        "Que se preparaba para un papel que sostenía",
+        "El narrador reconoce el tono recién de adulto: entonces le pareció «de "
+        "adulto serio» y ahora lo identifica como «el tono de alguien que estudió "
+        "el tema durante la semana».\nLas preguntas por el grosor de los muros, el "
+        "calefón o las áreas verdes de la segunda etapa no se improvisan.\nY ese "
+        "esfuerzo ocurría a solas, sin público que lo valorara, para una visita que "
+        "él sabía que no terminaría en ninguna compra.",
+        [
+            ("Que pensaba negociar un descuento importante", "Nunca hay una negociación en el relato."),
+            ("Que desconfiaba de los vendedores", "Sus preguntas son técnicas, no de sospecha."),
+            ("Que trabajaba en la construcción", "Su oficio no se menciona; solo su cambio de turno."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_interpretar", "medio",
+        "¿Por qué el narrador dice que el olor de las casas piloto «no existe en "
+        "las casas donde vive gente»?",
+        "Porque son casas nuevas y deshabitadas",
+        "El olor a pintura nueva y a alfombra pertenece a un lugar que todavía no "
+        "ha sido usado por nadie.\nEs lo primero que el narrador recuerda de todas, "
+        "y funciona como marca de aquello que las casas piloto tienen de irreal: "
+        "están terminadas y vacías, listas para una vida que no ha empezado.\nEsa "
+        "cualidad es la que permite que una familia entre a imaginar en ellas sin "
+        "estorbar a nadie.",
+        [
+            ("Porque estaban recién pintadas para la visita", "El olor es del estreno, no de una preparación puntual."),
+            ("Porque las mantenían cerradas y sin aire", "El relato no menciona encierro ni falta de ventilación."),
+            ("Porque usaban productos de aseo distintos", "El aseo no aparece en la descripción."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_interpretar", "dificil",
+        "¿Qué distingue el narrador al ofrecer dos descripciones de esos domingos?",
+        "Que ambas son ciertas y dicen cosas distintas",
+        "La primera descripción es la de la lectura fácil, que él mismo tuvo "
+        "durante un tiempo: estaban mirando casas que no iban a tener.\nLa segunda "
+        "enumera lo que efectivamente pasó: dieciséis domingos juntos, recorriendo "
+        "lugares, imaginando en voz alta, discutiendo por una pieza.\nEl narrador "
+        "no elige entre ellas y en eso está el punto: «Las dos descripciones son "
+        "ciertas y no describen lo mismo». Los hechos no cambian según cuál se "
+        "adopte; cambia qué se ve en ellos.",
+        [
+            ("Que la segunda descripción es la verdadera", "El narrador sostiene que las dos lo son."),
+            ("Que la primera descripción la inventó su hermana", "La hermana solo llevaba la libreta con las notas."),
+            ("Que ninguna alcanza a explicar lo ocurrido", "No dice que fallen: dice que describen cosas distintas."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_interpretar", "dificil",
+        "¿Por qué el narrador afirma que esos domingos «no eran un simulacro»?",
+        "Porque lo vivido ahí ocurrió de verdad",
+        "Un simulacro imita algo real sin serlo, y el narrador rechaza ese marco "
+        "con pruebas concretas.\n«Mi mamá midió de verdad esos livings con los "
+        "brazos, y de verdad supo cuál tenía la luz de la tarde. Mi hermana puso "
+        "notas que todavía están escritas en una libreta. Yo elegí piezas».\nLo que "
+        "no ocurrió fue la compra. Todo lo demás —la atención, el entusiasmo, las "
+        "discusiones— pasó tal como se recuerda, y por eso el narrador puede decir "
+        "que esos domingos «eran lo que efectivamente ocurrió».",
+        [
+            ("Porque la familia sí llegó a comprar", "El relato insiste en que nunca compraron ninguna."),
+            ("Porque el padre creía que podría lograrlo", "El narrador concluye que su padre sabía que no."),
+            ("Porque las casas eran reales y estaban terminadas", "Lo que reivindica es lo vivido, no el edificio."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_evaluar", "medio",
+        "¿Qué efecto produce que el relato entregue la frase «estamos mirando» sin "
+        "explicarla en ese momento?",
+        "Deja al lector con la lectura del niño",
+        "La frase se cuenta tal como la escuchó un chico de once años, para quien "
+        "fue «una respuesta cualquiera».\nEl relato podría haber intervenido ahí y "
+        "prefiere esperar veinte años de narración antes de volver sobre ella.\nCon "
+        "eso el lector recorre el mismo camino que el narrador: recibe la escena "
+        "sin peso y solo después descubre todo lo que contenía.",
+        [
+            ("Muestra que el padre mintió a la vendedora", "El narrador no la presenta como mentira: era exacta."),
+            ("Sugiere que la vendedora sospechó algo", "Ella responde con naturalidad y les entrega un folleto."),
+            ("Indica que la visita terminó de mal modo", "La escena transcurre con amabilidad de ambas partes."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el narrador hacia lo que hacía su familia?",
+        "Comprensiva, pues corrige su propia lectura triste",
+        "El narrador cuenta que durante un tiempo esos domingos le parecieron "
+        "tristes, y él mismo llama a eso «la lectura fácil».\nLo que hace después "
+        "no es negar la dificultad económica, que reconoce sin adornos: su padre "
+        "sabía cuánto ganaba y sabía restar.\nLo que reivindica es lo que sí hubo, "
+        "y por eso puede sostener las dos descripciones a la vez sin que ninguna "
+        "anule a la otra.",
+        [
+            ("Resentida, pues culpa a su padre del engaño", "No hay reproche: describe lo que su padre sostuvo."),
+            ("Distante, pues evita opinar sobre esos años", "Opina, corrige su opinión anterior y explica por qué."),
+            ("Nostálgica, pues quisiera volver a esa época", "No plantea ningún deseo de regresar."),
+        ],
+    ),
+    _ql(
+        "casa_piloto", "lec_evaluar", "dificil",
+        "¿Qué consigue el relato al terminar con la nota de la casa número once?",
+        "Cierra devolviendo el valor a lo vivido",
+        "El final vuelve a lo más pequeño después del pasaje más grave del cuento: "
+        "la notaría, el crédito, la resta que su padre hacía.\nY elige un dato que "
+        "no prueba nada y lo dice todo: la casa del domingo que el narrador "
+        "recuerda entero, la del «estamos mirando», había recibido la nota máxima "
+        "de su hermana.\nEl cuento se niega así a terminar en la constatación "
+        "económica. Lo último que queda escrito es un siete puesto por una niña en "
+        "una libreta que todavía existe.",
+        [
+            ("Revela que esa casa sí se compró después", "El relato descarta cualquier compra."),
+            ("Demuestra que la hermana calificaba mal", "El narrador no cuestiona sus notas."),
+            ("Anuncia que volverán a visitar el proyecto", "No hay ningún regreso previsto en el cuento."),
+        ],
+    ),
+    # ---------- 'Ficha del producto y garantías' ----------
+    _ql(
+        "ficha_garantia", "lec_localizar", "facil",
+        "Según la cartilla, ¿cuánto dura la garantía legal?",
+        "Seis meses desde la entrega",
+        "La tabla del punto 2 fija el plazo en seis meses y precisa desde cuándo "
+        "corre: la entrega del producto.\nEsa precisión no es un detalle de "
+        "redacción. En la ficha del ejemplo, la compra fue el 3 de abril y la "
+        "entrega el 8, así que el plazo vence «a comienzos de octubre y no de "
+        "septiembre».\nLa garantía del fabricante, en cambio, se cuenta desde la "
+        "compra.",
+        [
+            ("Doce meses desde la compra", "Ese es el plazo de la garantía del fabricante en este producto."),
+            ("Tres meses desde la entrega", "Tres meses era el plazo anterior a la ley que la cartilla cita."),
+            ("Seis meses desde la fecha de compra", "El plazo legal corre desde la entrega, no desde la compra."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_localizar", "facil",
+        "Según la cartilla, ¿entre qué soluciones puede elegir el consumidor?",
+        "Reparación, cambio o devolución del dinero",
+        "Son las tres alternativas que ofrece la garantía legal cuando el producto "
+        "falla dentro del plazo.\nLa cartilla subraya cuál es la palabra decisiva: "
+        "«elegir». El vendedor no puede imponer la reparación cuando el consumidor "
+        "prefiere la devolución.\nTampoco puede condicionar el cambio «a que "
+        "primero se intente arreglar el producto».",
+        [
+            ("Solo la reparación en servicio técnico", "Esa es una de las tres, y no puede imponerse."),
+            ("El cambio, si el producto sigue en stock", "La cartilla no condiciona el cambio a la disponibilidad."),
+            ("Un descuento en una compra futura", "Esa alternativa no figura entre las tres soluciones."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_localizar", "medio",
+        "Según la cartilla, ¿qué basta para acreditar la compra?",
+        "La sola boleta del producto",
+        "El punto 4 lo establece sin condiciones: no pueden exigir «la caja ni los "
+        "accesorios», porque la boleta basta.\nJunto a eso enumera otras dos "
+        "exigencias improcedentes: cobrar por ejercer la garantía y pedir que se "
+        "renuncie a los seis meses porque exista una garantía voluntaria más "
+        "larga.\nEl caso 3 aplica la primera: quien botó la caja y conserva la "
+        "boleta puede ejercer la garantía igual.",
+        [
+            ("La caja original y los accesorios", "La cartilla dice expresamente que no pueden exigirlos."),
+            ("El comprobante de entrega firmado", "Conviene guardarlo por las fechas, pero no es lo exigido."),
+            ("La garantía del fabricante timbrada", "Es un documento aparte y de otra garantía."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_localizar", "medio",
+        "Según la tabla, ¿quién fija las condiciones de la garantía del fabricante?",
+        "La propia empresa que la ofrece",
+        "La tabla del punto 2 separa las dos garantías por su origen: una viene de "
+        "la ley y la otra es «una oferta de la empresa».\nDe ahí se sigue el resto "
+        "de la fila: quien elige la solución en la voluntaria depende «según sus "
+        "propias condiciones», y esa garantía sí «se puede recortar», porque «la "
+        "fija quien la ofrece».\nLa legal, en cambio, no admite recortes.",
+        [
+            ("La ley del consumidor", "La ley fija la garantía legal, no la voluntaria."),
+            ("El vendedor del local", "La ofrece el fabricante, con sus propias condiciones."),
+            ("El consumidor al comprar", "El consumidor elige la solución dentro de la garantía legal."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_localizar", "facil",
+        "Según la cartilla, ¿qué queda fuera de las dos garantías?",
+        "Los daños causados por mal uso",
+        "El punto 8 delimita el alcance del documento y menciona tres cosas que no "
+        "cubre.\nUna de ellas es material: los daños por mal uso «quedan fuera de "
+        "ambas garantías», tanto de la legal como de la del fabricante.\nLas otras "
+        "dos son de alcance: no trata las compras entre particulares y no reemplaza "
+        "la información del organismo competente ni constituye asesoría legal.",
+        [
+            ("Las fallas aparecidas en el primer mes", "Están plenamente cubiertas por la garantía legal."),
+            ("Los productos comprados en oferta", "La cartilla no distingue según el precio pagado."),
+            ("Las compras hechas por internet", "El canal de compra no se menciona como excepción."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_interpretar", "facil",
+        "Un hervidor falla a los cinco meses de la entrega y el vendedor solo "
+        "ofrece repararlo. Según la cartilla, ¿qué corresponde?",
+        "El consumidor elige, y puede pedir devolución",
+        "A los cinco meses de la entrega la garantía legal está plenamente vigente, "
+        "porque el plazo es de seis.\nDentro de ese período la elección entre "
+        "reparación, cambio y devolución es del consumidor, y la cartilla lo dice "
+        "sin matices: el vendedor «no puede imponer la reparación».\nEs exactamente "
+        "el caso 1 del punto 6, y su desenlace es la devolución del dinero.",
+        [
+            ("Debe aceptar la reparación ofrecida", "La cartilla descarta que el vendedor pueda imponerla."),
+            ("Debe recurrir a la garantía del fabricante", "La legal está vigente y es más favorable en este caso."),
+            ("Debe esperar a que venzan los seis meses", "Vencido el plazo perdería justamente ese derecho."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_interpretar", "medio",
+        "¿Qué quiere decir la cartilla al afirmar que la garantía voluntaria «se "
+        "suma y no descuenta»?",
+        "Que las dos corren a la vez los primeros meses",
+        "Una garantía del fabricante más larga podría hacer pensar que reemplaza a "
+        "la otra, y la cartilla sale al paso de esa lectura.\nSu existencia «no "
+        "reemplaza ni reduce la garantía legal, que corre en paralelo durante los "
+        "primeros seis meses y con sus propias reglas».\nPor eso el punto 4 incluye "
+        "entre lo improcedente pedir que se renuncie a los seis meses alegando que "
+        "hay una garantía voluntaria más extensa.",
+        [
+            ("Que la del fabricante empieza al vencer la legal", "Empiezan juntas: se superponen los primeros meses."),
+            ("Que el consumidor debe elegir una de las dos", "No hay que optar: ambas están disponibles."),
+            ("Que la legal se extiende a doce meses", "El plazo legal sigue siendo de seis meses."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_interpretar", "medio",
+        "Según la cartilla, ¿por qué conviene guardar el comprobante de entrega?",
+        "Porque desde ahí corre el plazo legal",
+        "Las dos garantías empiezan a contarse en momentos distintos: la legal "
+        "desde la entrega y la del fabricante desde la compra.\nEn el ejemplo esa "
+        "diferencia es de cinco días, y la cartilla advierte que «parecen poca cosa "
+        "y dejan de parecerlo cuando una falla aparece justo en el límite».\nSin el "
+        "comprobante de entrega no hay cómo demostrar cuándo empezó a correr el "
+        "plazo que más protege al consumidor.",
+        [
+            ("Porque reemplaza a la boleta de compra", "La boleta es la que acredita la compra."),
+            ("Porque lo exige el servicio técnico", "La cartilla no menciona esa exigencia."),
+            ("Porque extiende la garantía del fabricante", "Esa se cuenta desde la compra y no cambia."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_interpretar", "dificil",
+        "Una falla aparece a los ocho meses y la garantía del fabricante solo "
+        "ofrece reparación. Según la cartilla, ¿qué puede pedir el consumidor?",
+        "Solo la reparación que esa garantía ofrece",
+        "A los ocho meses la garantía legal ya venció, y con ella el derecho a "
+        "elegir entre tres soluciones.\nLo que sigue vigente es la del fabricante, "
+        "que corre doce meses desde la compra. Pero esa garantía no funciona con "
+        "las mismas reglas: «las condiciones las pone el fabricante».\nDe ahí el "
+        "desenlace del caso 2: si su garantía solo contempla reparación, «esa es la "
+        "solución disponible». El plazo más largo vino acompañado de menos libertad "
+        "para elegir.",
+        [
+            ("La devolución del dinero, como antes", "Esa elección solo existe mientras corre la garantía legal."),
+            ("El cambio por un producto equivalente", "También depende de lo que ofrezca la garantía voluntaria."),
+            ("Cualquiera de las tres soluciones legales", "Las tres soluciones pertenecen a la garantía ya vencida."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_interpretar", "dificil",
+        "¿Qué supone el consejo de dejar constancia escrita del reclamo?",
+        "Que sin registro la negativa no se puede probar",
+        "El punto 7 ordena los pasos y deja ese para el final, después de una "
+        "negativa.\nLa razón que da es de prueba, y la formula de manera tajante: "
+        "«sin ese registro, la conversación no existió».\nEs la misma lógica que "
+        "atraviesa toda la cartilla, donde cada derecho viene acompañado del "
+        "documento que permite ejercerlo: la boleta para acreditar la compra, el "
+        "comprobante para acreditar la entrega, la constancia para acreditar el "
+        "reclamo.",
+        [
+            ("Que el vendedor cambiará de opinión al verlo", "El consejo apunta a dejar prueba, no a persuadir."),
+            ("Que el reclamo escrito acelera la respuesta", "La cartilla no promete mayor rapidez."),
+            ("Que la garantía legal exige ese trámite", "El registro es una precaución, no un requisito de la garantía."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_evaluar", "medio",
+        "¿Con qué finalidad la cartilla ordena las dos garantías en una misma "
+        "tabla?",
+        "Para mostrar en qué se diferencian punto por punto",
+        "La tabla las enfrenta en cinco filas —origen, plazo, desde cuándo, quién "
+        "elige y si se puede recortar—, de modo que las diferencias quedan "
+        "alineadas y no dispersas en el texto.\nEse formato sirve al problema que "
+        "la cartilla identifica enseguida: es «la distinción que más confusión "
+        "produce en el mostrador».\nY permite ver algo que en prosa costaría notar: "
+        "la garantía más larga es justamente la que ofrece menos derechos.",
+        [
+            ("Para recomendar cuál de las dos conviene usar", "No recomienda una: explica cuándo rige cada una."),
+            ("Para probar que la del fabricante es innecesaria", "El caso 2 muestra que resulta útil pasados los seis meses."),
+            ("Para calcular cuánto dura cada producto", "La duración del producto no es materia de la cartilla."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_evaluar", "dificil",
+        "¿Qué revela que la cartilla dedique un punto completo a lo que no pueden "
+        "exigir?",
+        "Que anticipa las trabas más habituales",
+        "Las tres exigencias que enumera —la caja, un pago, renunciar al plazo— no "
+        "son hipótesis abstractas: son las que un consumidor se encuentra en el "
+        "mostrador.\nPonerlas por escrito cambia la posición de quien reclama. Ya "
+        "no tiene que discutir si le parece justo lo que le piden; puede señalar "
+        "que no corresponde.\nEs coherente con el resto del documento, que en cada "
+        "punto traduce un derecho a lo que hay que decir o mostrar para ejercerlo.",
+        [
+            ("Que las empresas suelen actuar de mala fe", "La cartilla no atribuye intenciones: describe exigencias improcedentes."),
+            ("Que la ley resulta difícil de entender", "Su propósito es aplicarla, no cuestionar su redacción."),
+            ("Que conviene reclamar por escrito siempre", "Ese consejo aparece aparte, y para el caso de una negativa."),
+        ],
+    ),
+    _ql(
+        "ficha_garantia", "lec_evaluar", "dificil",
+        "¿Qué consigue la cartilla al incluir un caso en que la garantía legal ya "
+        "venció?",
+        "Mostrar que su consejo también sirve después",
+        "Los tres casos podrían haber ilustrado situaciones favorables al "
+        "consumidor, y el caso 2 hace lo contrario: la falla aparece a los ocho "
+        "meses y la garantía legal ya no está disponible.\nCon eso la cartilla "
+        "evita convertirse en una lista de derechos y se vuelve una herramienta "
+        "para orientarse en cualquier momento, incluido aquel en que las opciones "
+        "son peores.\nAdemás prueba que la distinción entre ambas garantías no era "
+        "teórica: es exactamente lo que decide qué se puede pedir a los ocho meses.",
+        [
+            ("Advertir que la ley protege poco tiempo", "No cuestiona el plazo legal: explica qué rige después."),
+            ("Recomendar comprar siempre con garantía extendida", "La cartilla no aconseja contratar coberturas adicionales."),
+            ("Demostrar que el fabricante cumple mejor", "Muestra que ofrece menos opciones, aunque por más tiempo."),
+        ],
+    ),
+    # ---------- 'El enlace que ya no lleva a ninguna parte' ----------
+    _ql(
+        "enlaces_perdidos", "lec_localizar", "facil",
+        "Según la lectura, ¿cómo se llama el fenómeno de los enlaces que dejan de "
+        "funcionar?",
+        "Descomposición de enlaces",
+        "El emisor lo nombra después de describir la escena del artículo con el "
+        "enlace roto.\nY advierte enseguida que es «mucho más común de lo que "
+        "sugiere la sensación de que internet lo guarda todo».\nEsa sensación, "
+        "explica, viene de otro lado: de que lo que uno quiere borrar suele seguir "
+        "circulando.",
+        [
+            ("Actualización de contenidos", "Ese es el segundo problema que describe, y no lleva ese nombre."),
+            ("Recolección de la web", "Así se llama la labor de las bibliotecas nacionales."),
+            ("Identificador permanente", "Es una de las soluciones, no el problema."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué se necesita para que una página siga en línea?",
+        "Alojamiento, dominio y programa",
+        "El emisor lo enumera para mostrar que «una página web no se sostiene "
+        "sola».\nAlguien paga un alojamiento, alguien renueva un dominio y alguien "
+        "mantiene el programa que la publica.\nY de ahí saca la consecuencia: "
+        "cuando cualquiera de esas tres cosas se interrumpe, «la página se va sin "
+        "que nadie lo haya decidido en particular».",
+        [
+            ("Un archivo, un identificador y una biblioteca", "Esas son las soluciones que el texto describe después."),
+            ("El autor, el editor y el lector que la visita", "El texto no atribuye la permanencia a esas personas."),
+            ("La cifra, el párrafo citado y la dirección", "Esos elementos aparecen al explicar el cambio de contenido."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_localizar", "medio",
+        "Según la lectura, ¿qué queda fuera de un archivo automático?",
+        "Lo que está tras un muro de pago",
+        "El emisor reconoce que esos archivos funcionan y precisa qué no alcanzan a "
+        "copiar.\nQuedan fuera «lo que está tras un muro de pago, lo que se genera "
+        "al momento de la consulta y lo que exige iniciar sesión».\nSon tres formas "
+        "distintas de la misma limitación: el archivo copia lo que puede ver, y hay "
+        "bastante que no puede ver.",
+        [
+            ("Los documentos oficiales del Estado", "Son justamente el tipo de material que conviene archivar."),
+            ("Las páginas de los medios cerrados", "Esas son las que un archivo permite volver a consultar."),
+            ("Los identificadores permanentes", "No son contenido: son una manera de apuntar a él."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_localizar", "medio",
+        "Según la lectura, ¿dónde se usan sobre todo los identificadores "
+        "permanentes?",
+        "En publicaciones científicas",
+        "El emisor los describe como una solución de alcance acotado: apuntan «a un "
+        "registro que se mantiene aunque la dirección concreta cambie».\nSu límite "
+        "es que dependen de alguien: «solo sirve si alguien lo asigna y lo "
+        "mantiene».\nJunto a los archivos con copias fechadas y a la recolección de "
+        "las bibliotecas nacionales, forman las tres respuestas que el texto "
+        "examina.",
+        [
+            ("En los sitios de los medios", "El texto no atribuye esa práctica a los medios."),
+            ("En las bibliotecas nacionales", "Ellas recolectan y conservan porciones de la web."),
+            ("En los fallos judiciales", "Los fallos aparecen como ejemplo de citas en riesgo."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué causas corrientes hacen desaparecer una página?",
+        "Un medio que cierra o un sitio rediseñado",
+        "El emisor las llama «domésticas» a propósito, para subrayar que no hay "
+        "nada extraordinario detrás.\nEnumera un medio que cierra, una institución "
+        "que rediseña su sitio y cambia todas las direcciones, un servicio que da "
+        "de baja los archivos de sus usuarios y un dominio que alguien olvida "
+        "renovar.\nY agrega lo que las vuelve difíciles de prevenir: «Ninguna de "
+        "esas decisiones se toma pensando en el artículo de hace diez años».",
+        [
+            ("Un error del programa que muestra la página", "Las fallas técnicas puntuales no están entre las causas que enumera."),
+            ("Una decisión judicial que manda a borrarla", "El texto no menciona órdenes de retiro."),
+            ("Un ataque informático contra el servidor", "Los ataques no aparecen en la lectura."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_interpretar", "facil",
+        "¿Por qué el enlace que cambió de contenido resulta más incómodo que el "
+        "enlace roto?",
+        "Porque no avisa de nada",
+        "Un enlace roto «avisa que algo falta»: el error es visible y quien lo "
+        "encuentra sabe que la referencia se perdió.\nEl otro caso no tiene señal. "
+        "La dirección funciona, la página se ve normal y el lector «no tiene cómo "
+        "saber que está leyendo una versión posterior a la que se citó».\nPor eso "
+        "el emisor advierte que puede sostener durante años «una afirmación que su "
+        "fuente ya no respalda».",
+        [
+            ("Porque tarda más en cargarse", "La velocidad no interviene en el problema."),
+            ("Porque exige iniciar sesión", "Ese requisito aparece como límite de los archivos automáticos."),
+            ("Porque nadie lo archiva nunca", "Una página vigente puede archivarse igual."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que la verificación «queda colgando "
+        "de una decisión ajena»?",
+        "Que depende de que un tercero lo mantenga",
+        "Quien cita un documento en línea no controla ese documento.\nSu "
+        "permanencia depende de alguien que «sin ninguna obligación» sigue pagando "
+        "un alojamiento y manteniendo un sitio, y que puede dejar de hacerlo en "
+        "cualquier momento.\nPor eso el emisor dice que la posibilidad de comprobar "
+        "lo afirmado «puede cambiar mañana»: no por un error de quien citó, sino "
+        "por una decisión que él nunca tomó.",
+        [
+            ("Que solo los tribunales pueden comprobarlo", "Los fallos son uno de los ejemplos afectados, no la solución."),
+            ("Que el autor debe guardar copias de todo", "El texto no propone esa obligación individual."),
+            ("Que la fuente original nunca fue confiable", "El problema no es su calidad, sino su permanencia."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué conviven la pérdida de páginas y la sensación "
+        "de que internet lo guarda todo?",
+        "Porque lo que uno querría borrar circula igual",
+        "Las dos experiencias son reales y apuntan a materiales distintos.\nLo que "
+        "se pierde suele ser aquello que nadie tiene un interés particular en "
+        "mantener: un informe, un documento oficial, el archivo de un medio que "
+        "cerró.\nLo que persiste es lo que otros copiaron y comparten. El emisor lo "
+        "formula sin resolverlo: «Las dos cosas conviven sin contradecirse, y "
+        "entenderlas juntas es la parte interesante del asunto».",
+        [
+            ("Porque los archivos guardan copias de todo", "El texto insiste en que un archivo no puede copiarlo todo."),
+            ("Porque las páginas se copian entre sitios", "Esa copia explica la persistencia, no la coexistencia de ambas cosas."),
+            ("Porque los buscadores conservan siempre el original", "Los buscadores no aparecen como custodios en la lectura."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_interpretar", "dificil",
+        "¿Qué implica que decidir qué se archiva sea decidir qué podrá consultarse "
+        "después?",
+        "Que hoy se define lo que sabrá el futuro",
+        "Toda recolección elige, porque copiarlo todo es imposible.\nEsa elección "
+        "no se limita a administrar espacio: fija qué material va a existir para "
+        "quien investigue más adelante, y lo que quedó fuera simplemente no estará "
+        "disponible para ser consultado.\nEl emisor subraya la dificultad que eso "
+        "encierra: la decisión «se toma hoy, sin saber qué le va a importar a "
+        "alguien dentro de cuarenta años».",
+        [
+            ("Que archivar cuesta demasiado presupuesto público", "El costo no es el problema que el emisor plantea ahí."),
+            ("Que los archivos deben copiarlo todo", "El texto sostiene que eso no es posible."),
+            ("Que la elección la hacen los usuarios", "La hacen quienes archivan, no quienes consultan."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_interpretar", "dificil",
+        "¿Qué categoría propone el emisor conservar deliberadamente?",
+        "Lo que sostiene afirmaciones públicas",
+        "El emisor descarta el objetivo máximo —conservarlo todo— por razones que "
+        "no son técnicas sino de privacidad: hay información personal que debe "
+        "poder retirarse de circulación.\nEn su lugar propone un criterio más "
+        "acotado y, dice, «bastante más definible».\nY lo ilustra con un contraste "
+        "que no deja lugar a dudas: «Un informe ministerial citado en un fallo y la "
+        "foto de un cumpleaños ajeno no plantean el mismo problema».",
+        [
+            ("Lo que publican las instituciones", "El criterio no es quién publica, sino qué sostiene lo publicado."),
+            ("Lo que la gente consulta más seguido", "La popularidad no es el criterio que propone."),
+            ("Lo que alcanza a copiar un archivo automático", "Eso describe un límite técnico, no una prioridad."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor menciona el fallo judicial, la investigación "
+        "y el reportaje?",
+        "Para mostrar hasta dónde llega el problema",
+        "El emisor se adelanta a una objeción que él mismo formula: esto «podría "
+        "parecer un problema de archivo, interesante para bibliotecarios».\nLos "
+        "tres ejemplos responden a eso. En los tres, algo que se afirma "
+        "públicamente se apoya en un documento en línea, y comprobarlo depende de "
+        "que ese documento siga ahí.\nCon eso el asunto deja de ser una "
+        "preocupación gremial y pasa a tocar la posibilidad de verificar lo que se "
+        "sostiene en público.",
+        [
+            ("Para comparar tres oficios que citan fuentes", "No los compara entre sí: muestra que comparten un riesgo."),
+            ("Para acusar a los medios de enlazar mal", "No hay reproche a quien enlaza: el enlace era correcto."),
+            ("Para explicar cómo funciona una cita", "El funcionamiento de la cita se da por sabido."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor al advertir que no todo debería conservarse?",
+        "Equilibrada, pues acota su propia propuesta",
+        "Viene de argumentar que se pierde demasiado, y la conclusión cómoda sería "
+        "pedir que se conserve todo.\nEl emisor la descarta con razones que juegan "
+        "en contra de su propio planteamiento: buena parte de lo publicado «es "
+        "información personal de gente corriente», y hay buenas razones para poder "
+        "retirar «un dato de salud, una dirección, una publicación hecha a los "
+        "quince años».\nEl resultado es una propuesta más chica y más defendible "
+        "que la que venía sugiriendo.",
+        [
+            ("Resignada, pues acepta que todo se perderá igual", "Describe soluciones que funcionan y propone un criterio."),
+            ("Alarmista, pues exagera el riesgo del olvido", "Este párrafo modera el alcance de lo que pide."),
+            ("Indiferente, pues no toma partido alguno", "Toma partido: propone qué conservar y por qué."),
+        ],
+    ),
+    _ql(
+        "enlaces_perdidos", "lec_evaluar", "dificil",
+        "¿Qué sostiene el emisor al comparar la conservación del papel con la de lo "
+        "digital?",
+        "Que conservar pasó de inercia a decisión",
+        "Un libro llegaba a la generación siguiente sin que nadie lo decidiera: "
+        "«bastaba con que nadie lo destruyera».\nCon lo digital el punto de partida "
+        "se invierte. Para que un documento siga disponible en diez años «alguien "
+        "tiene que estar decidiendo activamente mantenerlo, mes a mes, pagando por "
+        "ello».\nDe ahí la frase que cierra el texto y que explica la magnitud de "
+        "la pérdida: «Lo que antes era el resultado del descuido ahora exige una "
+        "voluntad sostenida».",
+        [
+            ("Que el papel dura más que lo digital", "La comparación no es de durabilidad de los soportes."),
+            ("Que lo digital se destruye más fácil", "No se destruye: deja de mantenerse."),
+            ("Que en el pasado se conservaba con más cuidado", "Sostiene lo contrario: se conservaba sin cuidado alguno."),
+        ],
+    ),
+    # ---------- 'El orden que nadie había elegido' ----------
+    _ql(
+        "orden_apellidos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué estableció la Ley 21.334?",
+        "Que los padres acuerden el orden de los apellidos",
+        "La ley fue publicada el 14 de mayo de 2021 y cambió el procedimiento de "
+        "inscripción.\nAl inscribir «al primero de los hijos comunes», la madre y "
+        "el padre determinan de común acuerdo el orden en que se transmitirán sus "
+        "respectivos primeros apellidos.\nEse orden no se decide caso a caso: una "
+        "vez fijado, «rige después para todos los hijos comunes de esa pareja».",
+        [
+            ("Que el apellido materno vaya siempre primero", "La ley no invierte el orden: habilita a decidirlo."),
+            ("Que se use un solo apellido en los documentos", "El sistema de dos apellidos se mantiene."),
+            ("Que el Registro Civil elija el orden por sorteo", "El Registro Civil inscribe lo acordado; no sortea nada."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ocurre si los padres no manifiestan acuerdo?",
+        "Se entiende que el del padre precede",
+        "La ley previó ese caso con una regla supletoria: si no hay acuerdo "
+        "manifestado al inscribir al primer hijo, «se entiende que quieren que el "
+        "primer apellido del padre preceda al de la madre».\nNo es una sanción ni "
+        "una decisión provisoria: es el resultado que queda fijado.\nEl emisor "
+        "sostiene que ese punto «probablemente sea el más relevante», porque define "
+        "lo que ocurre con la mayoría de las inscripciones.",
+        [
+            ("La inscripción queda pendiente hasta el acuerdo", "La inscripción se realiza igual, con el orden supletorio."),
+            ("El Registro Civil resuelve el desacuerdo", "El emisor aclara que la ley no dirime la discusión."),
+            ("Se aplica el orden que tenga la madre", "La regla supletoria da precedencia al apellido del padre."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_localizar", "medio",
+        "Según la lectura, ¿qué puede pedir una persona mayor de edad?",
+        "Cambiar el orden, por una sola vez",
+        "La ley agregó esa posibilidad para quienes ya estaban inscritos: "
+        "solicitarlo ante el Servicio de Registro Civil e Identificación.\nEl "
+        "límite es explícito: se puede hacer una sola vez.\nY el cambio no queda "
+        "contenido en una sola persona: alcanza a sus hijos menores de edad, y si "
+        "tiene hijos de entre catorce y dieciocho años, ellos deben dar su "
+        "consentimiento.",
+        [
+            ("Cambiar el orden todas las veces que quiera", "La ley lo permite por una sola vez."),
+            ("Eliminar uno de sus dos apellidos", "El trámite es de orden, no de supresión."),
+            ("Adoptar el apellido de otra familia", "Nada de eso se contempla en el texto."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_localizar", "medio",
+        "Según la lectura, ¿qué le ocurre al apellido materno con las generaciones?",
+        "Se detiene: los hijos reciben el primero",
+        "La regla de transmisión es la que produce el efecto: los hijos de una "
+        "persona reciben su primer apellido, no el segundo.\nAplicada durante "
+        "suficientes generaciones, eso hace que «el apellido de una abuela "
+        "desaparece del registro de sus bisnietos, mientras el de un abuelo sigue "
+        "viajando».\nEl emisor aclara que no es un propósito de nadie: «es lo que "
+        "resulta de aplicar la costumbre durante suficientes generaciones».",
+        [
+            ("Se transmite igual que el paterno", "Solo el primer apellido pasa a la generación siguiente."),
+            ("Desaparece al cabo de una generación", "Llega hasta los nietos y se pierde después."),
+            ("Se conserva solo en las mujeres", "La regla no distingue según el sexo de los descendientes."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_localizar", "facil",
+        "Según la lectura, ¿qué muestra que el sistema chileno no sea universal?",
+        "Que en otros países se usa uno solo",
+        "El emisor entrega dos comparaciones: «en buena parte del mundo se usa uno "
+        "solo, y en otros países de tradición hispana y portuguesa el orden "
+        "habitual es el inverso al chileno».\nCon eso descarta que exista «una "
+        "manera natural de ordenarlos».\nLo que hay, concluye, «son convenciones, "
+        "cada una con su historia», y esa es la premisa que sostiene todo lo que "
+        "viene después.",
+        [
+            ("Que la ley chilena cambió en 2021", "El cambio legal es posterior y no prueba la comparación."),
+            ("Que el Registro Civil admite excepciones", "El texto no menciona excepciones administrativas."),
+            ("Que los apellidos cambian con el matrimonio", "Esa práctica no se discute en la lectura."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al señalar que la regla funcionó «sin que "
+        "nadie la enunciara como regla»?",
+        "Que se cumplía sin necesidad de estar escrita",
+        "Durante generaciones la pregunta por el orden «no existió», porque la "
+        "respuesta «parecía venir con el idioma».\nAhí está lo que al emisor le "
+        "interesa: no el contenido de la regla, sino que se aplicara sin ser "
+        "formulada, discutida ni justificada.\nEs la condición que después la ley "
+        "viene a alterar, al convertir una costumbre silenciosa en una decisión que "
+        "alguien tiene que tomar.",
+        [
+            ("Que la regla se aplicaba de manera desigual", "Se aplicaba de manera uniforme: por eso nadie la notaba."),
+            ("Que nadie sabía cuál apellido iba primero", "Todos lo sabían; lo que faltaba era la pregunta."),
+            ("Que la costumbre venía del idioma español", "El emisor dice que lo parecía, y lo desmiente enseguida."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_interpretar", "medio",
+        "Según el emisor, ¿por qué la regla supletoria «hace bastante más trabajo "
+        "del que parece»?",
+        "Porque la mayoría no elige y queda bajo ella",
+        "El emisor apela a cómo se comportan las personas en cualquier trámite: «la "
+        "mayoría de las personas no elige entre opciones: acepta lo que viene "
+        "puesto».\nPor eso una alternativa que exige manifestarse expresamente "
+        "«será usada por quienes tienen una razón para hacerlo», mientras el resto "
+        "queda bajo el valor por defecto «sin haberla considerado nunca».\nLa "
+        "consecuencia es que la regla supletoria «determina el resultado para la "
+        "mayoría», aunque en el papel sea apenas la salida para un caso "
+        "excepcional.",
+        [
+            ("Porque obliga a los padres a ponerse de acuerdo", "Opera precisamente cuando no hay acuerdo manifestado."),
+            ("Porque el Registro Civil la aplica con frecuencia", "Lo relevante no es la frecuencia del trámite sino la conducta de quienes deciden."),
+            ("Porque contradice lo que la ley se propuso", "El emisor no plantea una contradicción, sino un efecto práctico."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_interpretar", "medio",
+        "¿Con qué argumento responde el emisor a quien diga que esto es una "
+        "discusión sobre etiquetas?",
+        "Que un apellido ordena documentos y señala origen",
+        "El emisor concede que la objeción existe y sostiene que «tiene menos "
+        "fuerza de la que aparenta».\nUn apellido «organiza documentos, herencias, "
+        "historias clínicas y búsquedas genealógicas», y permite que alguien siga "
+        "un rastro familiar en un archivo cincuenta años después.\nY agrega un "
+        "segundo plano, social: en un país chico «un apellido dice cosas sobre el "
+        "origen de quien lo lleva, para bien y para mal».",
+        [
+            ("Que la ley obliga a cambiar los documentos", "La ley no obliga a nadie a hacer ningún trámite."),
+            ("Que el orden afecta el derecho a la herencia", "El apellido organiza el registro; el texto no altera derechos sucesorios."),
+            ("Que los nombres se eligen con más cuidado", "El texto no compara nombres con apellidos."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_interpretar", "dificil",
+        "¿Qué distingue el emisor entre resolver un desacuerdo y fijar qué ocurre "
+        "si no hay acuerdo?",
+        "Que lo segundo no dirime: entrega un resultado",
+        "La ley no podría resolver el desacuerdo «sin arbitrar entre dos personas "
+        "que no lograron ponerse de acuerdo sobre algo que las involucra por "
+        "igual».\nLo que hace es distinto: establece qué pasa si el acuerdo no se "
+        "manifiesta. La discusión no se zanja, queda sin efecto.\nEl emisor lo "
+        "formula con precisión: «no dirime la discusión, la reemplaza por un "
+        "resultado conocido de antemano».",
+        [
+            ("Que lo segundo obliga a los padres a decidir", "Ocurre lo contrario: opera cuando no deciden."),
+            ("Que resolver el desacuerdo le toca al Registro Civil", "El emisor descarta que la ley arbitre entre los padres."),
+            ("Que las dos cosas producen el mismo efecto", "El texto las distingue expresamente."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_interpretar", "dificil",
+        "Según el cierre, ¿qué cambió realmente la ley?",
+        "El estatuto de la pregunta, no el orden",
+        "El emisor admite que el orden «en la mayoría de los casos seguirá siendo "
+        "el mismo», y por eso ubica el cambio en otro lugar.\nAntes «había una "
+        "manera de hacer las cosas y ninguna alternativa»; ahora hay una decisión "
+        "disponible y una opción por defecto para quien no la tome.\nDe ahí la "
+        "conclusión que cierra el texto: «Una costumbre que se sabe elegible ya no "
+        "es del todo una costumbre: es una preferencia», y las preferencias se "
+        "pueden discutir en cada familia.",
+        [
+            ("La proporción de apellidos maternos primero", "El emisor supone que esa proporción cambiará poco."),
+            ("La forma en que se inscriben los nacimientos", "El trámite sigue siendo una inscripción en el Registro Civil."),
+            ("La transmisión del apellido entre generaciones", "Esa regla de transmisión no se modifica."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor menciona a otros países al comienzo?",
+        "Para mostrar que el orden es una convención",
+        "Las comparaciones cumplen una función precisa y limitada: si en otras "
+        "partes se usa un solo apellido o el orden inverso, entonces el chileno no "
+        "puede presentarse como el único posible.\nEl emisor lo dice sin rodeos: "
+        "eso «basta para descartar la idea de que exista una manera natural de "
+        "ordenarlos».\nNo propone imitar a nadie. Usa el contraste para habilitar "
+        "la pregunta, que es lo que el resto del texto necesita.",
+        [
+            ("Para recomendar que Chile adopte otro sistema", "El texto no propone copiar ninguna legislación extranjera."),
+            ("Para explicar el origen histórico del apellido", "La historia de cada convención no se desarrolla."),
+            ("Para criticar la costumbre chilena vigente", "No la critica: sostiene que es una entre varias posibles."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor frente a la ley que describe?",
+        "Analítica, pues explica su alcance sin celebrarla",
+        "El emisor no aplaude la ley ni la objeta. Describe qué habilita, qué no "
+        "resuelve y qué ocurre cuando nadie usa lo que habilita.\nDedica de hecho "
+        "más espacio a la regla supletoria —el mecanismo que opera cuando no se "
+        "ejerce la nueva facultad— que a la facultad misma, y esa elección revela "
+        "dónde considera que está el efecto real.\nSus dos precisiones finales van "
+        "en la misma dirección: aclarar que la ley «no obliga a nada» y que «no "
+        "resuelve el desacuerdo entre los padres».",
+        [
+            ("Entusiasta, pues considera el cambio decisivo", "Sostiene que el orden seguirá siendo el mismo en la mayoría de los casos."),
+            ("Escéptica, pues cree que la ley no servirá", "Reconoce que abrió una decisión que antes no existía."),
+            ("Nostálgica, pues prefiere la costumbre anterior", "No defiende la costumbre: la describe como una convención más."),
+        ],
+    ),
+    _ql(
+        "orden_apellidos", "lec_evaluar", "dificil",
+        "¿Qué sostiene el emisor al afirmar que «una costumbre que se sabe elegible "
+        "ya no es del todo una costumbre»?",
+        "Que saberla optativa cambia lo que significa",
+        "Mientras el orden de los apellidos era lo único disponible, seguirlo no "
+        "decía nada de nadie: no había otra cosa que hacer.\nDesde que existe la "
+        "alternativa, mantenerlo pasa a ser una opción entre dos, aunque no "
+        "requiera trámite. El mismo resultado tiene ahora un sentido distinto.\nPor "
+        "eso el emisor considera ese cambio «menos espectacular que invertir el "
+        "orden y probablemente más duradero»: instala una discusión posible en cada "
+        "familia, «un lugar donde antes no había nada que discutir».",
+        [
+            ("Que las costumbres desaparecen al ser reguladas", "El texto prevé que la costumbre se mantendrá mayoritariamente."),
+            ("Que conviene revisar todas las tradiciones", "El emisor no extiende su conclusión a otras costumbres."),
+            ("Que la ley obliga a justificar cada elección", "Quien mantiene el orden anterior no debe hacer trámite alguno."),
+        ],
+    ),
     # ---------- 'La entrada que valía más de lo que costaba' ----------
     _ql(
         "reventa_entradas", "lec_localizar", "facil",
@@ -33280,7 +34799,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_evaluar", "dificil",
+        "tabla_nutricional", "lec_interpretar", "dificil",
         "Según la ficha, ¿por qué un producto con buenas cifras puede terminar "
         "aportando más?",
         "Porque la tabla no informa cuánto se come realmente",
@@ -36682,7 +38201,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_evaluar", "dificil",
+        "boleta_luz", "lec_localizar", "dificil",
         "Según el documento, ¿cómo se distingue un error de registro de un consumo "
         "efectivamente ocurrido?",
         "Contrastando la lectura de la boleta con la del medidor hoy",
@@ -38351,7 +39870,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_evaluar", "medio",
+        "azar_rachas", "lec_interpretar", "medio",
         "Según la lectura, ¿en qué se equivoca quien anota los últimos resultados "
         "de una ruleta?",
         "Supone que un objeto sin memoria compensará lo ocurrido",
@@ -39199,7 +40718,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_evaluar", "medio",
+        "cinco_grados", "lec_interpretar", "medio",
         "Según la lectura, ¿qué debilita a un argumento que se apoya en una "
         "autoridad inexistente?",
         "Que al caerse la cita parece caerse todo el planteamiento",
@@ -40291,7 +41810,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_evaluar", "facil",
+        "senderos_parque", "lec_localizar", "facil",
         "Según la guía, ¿qué debe hacer quien llega en bus hasta el cruce?",
         "Caminar once kilómetros o pedir traslado el día anterior",
         "El punto sobre el acceso lo explica: no hay transporte público en el "
@@ -40909,7 +42428,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_evaluar", "dificil",
+        "planes_internet", "lec_localizar", "dificil",
         "Según la ficha, ¿cuál es el error más común y más caro al elegir un plan?",
         "Contratar la velocidad más alta sin necesitarla",
         "El cierre lo señala así: «Elegir por la velocidad más alta disponible es "
@@ -40924,7 +42443,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_evaluar", "facil",
+        "planes_internet", "lec_localizar", "facil",
         "Según las dudas frecuentes, ¿a quién no le conviene pagar por un plan sin "
         "permanencia?",
         "A quien piensa quedarse varios años en la misma casa",
@@ -42364,7 +43883,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_evaluar", "medio",
+        "uso_tiempo_liceo", "lec_interpretar", "medio",
         "Según el informe, ¿por qué quienes no respondieron no son «un grupo "
         "cualquiera»?",
         "Porque son los ausentes, y faltar se liga a las situaciones difíciles",
@@ -42380,7 +43899,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_evaluar", "dificil",
+        "uso_tiempo_liceo", "lec_interpretar", "dificil",
         "Según el informe, ¿por qué el autorreporte no invalida la comparación "
         "entre grupos?",
         "Porque el error empuja en la misma dirección en todos los que responden",
@@ -44085,7 +45604,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_evaluar", "medio",
+        "energia_vertida", "lec_localizar", "medio",
         "Según el reportaje, ¿por qué la construcción de líneas de transmisión "
         "avanza más lento que la de plantas solares?",
         "Porque atraviesa territorios, exige permisos y enfrenta oposiciones",
