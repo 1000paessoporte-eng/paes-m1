@@ -47690,11 +47690,22 @@ SKILL_NODES_CIENCIAS = [
     ("cie_electricidad", "Circuitos eléctricos", "fisica", 3, []),
     # Química
     ("cie_atomo", "Estructura atómica", "quimica", 1, []),
+    # "Química orgánica" es una de las tres áreas del eje Química en el temario
+    # 2027 y el banco no tenía ni una pregunta: cero de hidrocarburos, cero de
+    # grupos funcionales, cero de hibridación. Un alumno que rendía Ciencias
+    # con nosotros llegaba a la prueba sin haber visto un tercio del eje.
+    ("cie_organica", "Química orgánica", "quimica", 2, ["cie_atomo"]),
     ("cie_estequiometria", "Cantidad de sustancia y estequiometría", "quimica", 2, ["cie_atomo"]),
     ("cie_soluciones", "Disoluciones y concentración", "quimica", 3, ["cie_estequiometria"]),
     ("cie_acidobase", "Ácido-base y pH", "quimica", 3, ["cie_soluciones"]),
     # Biología: estructura creada, banco pendiente (ver nota de arriba).
     ("cie_celula", "Célula y transporte de membrana", "biologia", 1, []),
+    # "Procesos y funciones biológicas" es otra de las áreas oficiales que
+    # estaba en cero. El DEMRE la AMPLIÓ para Admisión 2027 agregando el
+    # sistema nervioso y sus cuidados. Las preguntas de acá no piden recitar:
+    # piden razonar sobre un caso, que es lo que evalúan las habilidades
+    # científicas del temario.
+    ("cie_procesos", "Procesos y funciones biológicas", "biologia", 2, ["cie_celula"]),
     ("cie_genetica", "Genética y herencia", "biologia", 2, ["cie_celula"]),
     ("cie_ecosistemas", "Ecosistemas y flujo de energía", "biologia", 2, []),
 ]
@@ -58142,6 +58153,141 @@ LESSONS: dict[str, dict] = {
     # Los ejemplos usan números redondos a propósito: lo que se entrena acá es
     # el método, y una aritmética fea esconde el razonamiento detrás de la
     # calculadora.
+    "cie_organica": {
+        "intro": (
+            "Casi todo lo que te rodea —el plástico, los medicamentos, tu "
+            "propio cuerpo— está hecho de compuestos de carbono. La química "
+            "orgánica estudia por qué un solo elemento puede formar millones "
+            "de sustancias distintas."
+        ),
+        "theory": (
+            "**Tetravalencia.** El carbono tiene 4 electrones de valencia y "
+            "forma exactamente 4 enlaces covalentes. Como siempre le quedan "
+            "valencias para seguir uniéndose, arma cadenas de largo casi "
+            "ilimitado.\n\n"
+            "**Hibridación: se cuenta, no se memoriza.** Cuenta las REGIONES "
+            "de electrones alrededor del carbono, contando cada enlace "
+            "múltiple como una sola región:\n\n"
+            "| Regiones | Hibridación | Geometría | Ángulo |\n"
+            "|---|---|---|---|\n"
+            "| 4 | sp³ | tetraédrica | 109,5° |\n"
+            "| 3 | sp² | trigonal plana | 120° |\n"
+            "| 2 | sp | lineal | 180° |\n\n"
+            "**Longitud y energía de enlace van al revés.** Mientras más "
+            "pares de electrones se comparten, más se atraen los núcleos: el "
+            "enlace se acorta y cuesta más romperlo.\n\n"
+            "longitud: C–C > C=C > C≡C  ·  energía: C–C < C=C < C≡C\n\n"
+            "**Series homólogas.** Alcanos $C_nH_{2n+2}$ (solo simples), "
+            "alquenos $C_nH_{2n}$ (un doble), alquinos $C_nH_{2n-2}$ (un "
+            "triple).\n\n"
+            "**Grupos funcionales.** Son el átomo o grupo que le da a la "
+            "molécula sus propiedades: hidroxilo –OH (alcoholes), carbonilo "
+            "C=O entre dos carbonos (cetonas) o en el extremo (aldehídos), "
+            "carboxilo –COOH (ácidos), amino –NH₂ (aminas).\n\n"
+            "**Por qué la fórmula molecular no basta.** C₂H₆O es a la vez el "
+            "etanol y el dimetiléter. Para distinguirlos hace falta una "
+            "fórmula que muestre los enlaces: son isómeros."
+        ),
+        "example_statement": (
+            "Determina la hibridación y el ángulo de enlace de cada carbono "
+            "del propino, $CH_3-C\\equiv CH$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Numero los carbonos: C1 es el del $CH_3$, y C2 y C3 son los del triple enlace.",
+                "porque": "La hibridación es de cada carbono por separado: una misma molécula puede tener varias.",
+            },
+            {
+                "accion": "C1 tiene tres enlaces a hidrógeno y uno a C2: cuatro regiones. Es sp³, con 109,5°.",
+                "porque": "Cuatro nubes de electrones que se repelen por igual se acomodan en un tetraedro.",
+            },
+            {
+                "accion": "C2 tiene el triple enlace (una región) y el enlace a C1 (otra): dos regiones. Es sp, con 180°.",
+                "porque": "Un enlace múltiple cuenta como UNA región, por muchos pares que comparta. Dos regiones se ubican opuestas.",
+            },
+            {
+                "accion": "C3 tiene el triple enlace y un hidrógeno: también dos regiones. Es sp, con 180°.",
+                "porque": "Los dos carbonos del triple enlace quedan sp, y por eso ese tramo de la molécula es rígido y lineal.",
+            },
+        ],
+        "common_error": (
+            "Contar un doble o un triple enlace como dos o tres regiones. Se "
+            "cuenta como UNA: lo que determina la geometría es hacia cuántas "
+            "direcciones apuntan las nubes, no cuántos electrones lleva cada "
+            "una.\n\n"
+            "Y suponer que un enlace más fuerte es más largo. Es al revés: "
+            "más pares compartidos acercan los núcleos, así que el triple es "
+            "a la vez el más corto y el más difícil de romper."
+        ),
+    },
+    "cie_procesos": {
+        "intro": (
+            "Cómo el cuerpo se entera de lo que pasa afuera y responde. El "
+            "temario junta acá el sistema nervioso, la reproducción y las "
+            "infecciones de transmisión sexual: todo lo que coordina al "
+            "organismo consigo mismo y con otros."
+        ),
+        "theory": (
+            "**La neurona transmite en un solo sentido.** Recibe por las "
+            "dendritas, procesa en el cuerpo celular y envía por el axón. El "
+            "impulso nervioso es una señal ELÉCTRICA que recorre el axón.\n\n"
+            "**La sinapsis química cambia el formato de la señal.** Al final "
+            "del axón la señal eléctrica libera neurotransmisores, que cruzan "
+            "la hendidura y se unen a receptores de la neurona siguiente, "
+            "generando ahí una nueva señal eléctrica. Ese cambio de formato es "
+            "lo que impone la dirección única.\n\n"
+            "**El arco reflejo se salta el cerebro.** Receptor → neurona "
+            "sensitiva → médula espinal → neurona motora → músculo. La "
+            "respuesta ocurre ANTES de que la información llegue a la "
+            "conciencia: por eso retiras la mano y solo después duele.\n\n"
+            "**Cuidados.** Las sustancias depresoras —el alcohol entre "
+            "ellas— enlentecen la transmisión sináptica, y con ella el tiempo "
+            "de reacción. Dormir lo necesario consolida lo aprendido y "
+            "elimina desechos metabólicos; no es descanso pasivo.\n\n"
+            "**Gametos y fecundación.** Ovocito y espermatozoide son "
+            "haploides y aportan la mitad de los cromosomas cada uno. El "
+            "ovocito aporta además el citoplasma y las reservas.\n\n"
+            "**Control de la natalidad.** Naturales (Billings, calendario, "
+            "temperatura basal), artificiales reversibles (hormonales y de "
+            "barrera) y parcialmente reversibles (quirúrgicos).\n\n"
+            "**ITS.** Lo que decide el tratamiento es el tipo de agente: el "
+            "VIH es viral (antirretrovirales), la gonorrea y la clamidia son "
+            "bacterianas (antibióticos). La prevención con preservativo sirve "
+            "para todas."
+        ),
+        "example_statement": (
+            "Una persona pisa una chincheta y levanta el pie de inmediato. "
+            "Ordena lo que ocurre y explica por qué el dolor llega después."
+        ),
+        "example_steps": [
+            {
+                "accion": "Los receptores de la piel detectan el estímulo y generan un impulso nervioso.",
+                "porque": "Todo empieza en un receptor: sin detección no hay señal que transmitir.",
+            },
+            {
+                "accion": "La neurona sensitiva lleva el impulso hasta la médula espinal.",
+                "porque": "La médula es el centro de integración del reflejo; ahí se decide la respuesta sin consultar al cerebro.",
+            },
+            {
+                "accion": "En la médula la señal pasa a una neurona motora, que ordena contraerse al músculo de la pierna.",
+                "porque": "Es el circuito corto: dos o tres neuronas en vez del recorrido completo hasta el encéfalo y de vuelta.",
+            },
+            {
+                "accion": "En paralelo, la información sube al cerebro, y recién ahí aparece el dolor consciente.",
+                "porque": "El dolor es una interpretación del cerebro. El pie ya se levantó cuando la persona se entera, y ese adelanto es lo que evita el daño.",
+            },
+        ],
+        "common_error": (
+            "Creer que el cerebro ordena retirar el pie y que el dolor "
+            "simplemente viaja más lento. En un reflejo el cerebro no da la "
+            "orden: la da la médula, y por eso la respuesta es más rápida que "
+            "la conciencia.\n\n"
+            "Y confundir la sinapsis química con un salto eléctrico entre "
+            "neuronas. Las neuronas no se tocan: hay un mensajero químico de "
+            "por medio, y ahí es donde actúan muchos fármacos y muchas "
+            "toxinas."
+        ),
+    },
     "cie_celula": {
         "intro": (
             "Todo lo vivo está hecho de células, y casi todo lo que una célula "
@@ -59661,3 +59807,389 @@ LESSONS: dict[str, dict] = {
         ),
     },
 }
+
+
+# ---------------------------------------------------------------------------
+# QUÍMICA ORGÁNICA — área temática del eje Química del temario 2027 que el
+# banco tenía en CERO. Cubre lo que el temario pide: propiedades del átomo de
+# carbono (tetravalencia, hibridación, tipos de enlace, energía, longitud y
+# ángulo), modelos de representación, y los compuestos orgánicos con sus
+# grupos funcionales.
+#
+# Ninguna pregunta pide recitar una tabla. Todas piden deducir a partir de una
+# regla —contar regiones de electrones, aplicar una fórmula general, comparar
+# órdenes de enlace—, que es lo que evalúan las habilidades científicas del
+# temario y lo que se puede verificar sin un profesor al lado.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_organica", "facil",
+        "El carbono tiene 4 electrones en su capa externa. ¿Cuántos enlaces "
+        "covalentes puede formar como máximo?",
+        "4",
+        "El carbono completa su octeto compartiendo, no cediendo ni captando.\n\n"
+        "1) Con 4 electrones de valencia le faltan 4 para llegar a 8.\n"
+        "2) Cada enlace covalente le aporta uno, así que necesita 4 enlaces.\n"
+        "3) Esa propiedad se llama TETRAVALENCIA, y es la razón de que el "
+        "carbono arme cadenas tan largas: siempre le quedan valencias libres "
+        "para seguir uniéndose.",
+        [
+            ("2", "Serían solo 2 electrones compartidos y su capa externa quedaría en 6, sin completar el octeto."),
+            ("6", "El carbono no tiene 6 valencias: solo dispone de 4 electrones externos para compartir."),
+            ("8", "8 es el número de electrones del octeto COMPLETO, no la cantidad de enlaces que forma."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "En la molécula de metano (CH₄) el carbono forma cuatro enlaces "
+        "simples. ¿Qué hibridación presenta y qué ángulo hay entre sus enlaces?",
+        "sp³, con ángulos de 109,5°",
+        "La hibridación se deduce contando REGIONES de electrones alrededor del "
+        "carbono, no memorizando la molécula.\n\n"
+        "1) El metano tiene 4 enlaces simples y ningún par libre: son 4 "
+        "regiones.\n"
+        "2) Cuatro regiones exigen combinar un orbital s con los tres p: eso es "
+        "sp³.\n"
+        "3) Cuatro nubes que se repelen por igual se acomodan en un tetraedro, "
+        "y el ángulo del tetraedro es 109,5°.",
+        [
+            ("sp², con ángulos de 120°", "sp² son TRES regiones, lo que ocurre cuando hay un doble enlace. El metano tiene cuatro."),
+            ("sp, con ángulos de 180°", "sp son DOS regiones, propio de un triple enlace o de dos dobles. El metano no tiene ninguno."),
+            ("sp³, con ángulos de 90°", "La hibridación es correcta, pero 90° corresponde a orbitales p sin hibridar; al hibridarse se separan hasta 109,5°."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "En el eteno (CH₂=CH₂) cada carbono forma un doble enlace y dos "
+        "enlaces simples. ¿Qué hibridación tiene cada carbono?",
+        "sp², y la molécula es plana",
+        "Se cuentan regiones, y un doble enlace cuenta como UNA sola región.\n\n"
+        "1) Cada carbono tiene: un doble enlace (1 región) y dos enlaces a "
+        "hidrógeno (2 regiones). Total: 3.\n"
+        "2) Tres regiones combinan el orbital s con dos p: sp².\n"
+        "3) Tres nubes se reparten en un plano a 120° una de otra, así que la "
+        "molécula queda plana.",
+        [
+            ("sp³, y la molécula es tetraédrica", "sp³ exige cuatro regiones. Contar el doble enlace como dos es el error habitual: es una sola región."),
+            ("sp, y la molécula es lineal", "sp son dos regiones. Eso ocurre en el etino, que tiene un triple enlace."),
+            ("sp², pero la molécula es tetraédrica", "La hibridación es correcta, pero sp² reparte tres nubes en un plano: la geometría es trigonal plana, no tetraédrica."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Se comparan tres enlaces entre carbonos: simple (C–C), doble (C=C) y "
+        "triple (C≡C). ¿Cuál afirmación es correcta?",
+        "El triple es el más corto y el más fuerte de los tres",
+        "Longitud y energía de enlace van juntas, en sentidos opuestos.\n\n"
+        "1) Un enlace triple comparte tres pares de electrones; el doble, dos; "
+        "el simple, uno.\n"
+        "2) Mientras más pares compartidos, más fuerte es la atracción entre "
+        "los núcleos y más se acercan: el enlace se ACORTA.\n"
+        "3) Y por lo mismo cuesta más romperlo: la energía de enlace SUBE.\n"
+        "4) Entonces el orden de longitud es C–C > C=C > C≡C, y el de energía "
+        "es exactamente el inverso.",
+        [
+            ("El triple es el más largo y el más fuerte", "Fuerte sí, largo no: más pares compartidos acercan los núcleos, no los alejan."),
+            ("El simple es el más corto porque tiene menos electrones", "Al revés: con menos pares la atracción es menor y los núcleos quedan más separados."),
+            ("Los tres miden lo mismo, solo cambia la energía", "Longitud y energía no son independientes: el mismo aumento de pares compartidos explica las dos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "Un hidrocarburo de cadena abierta tiene 4 carbonos y solo enlaces "
+        "simples. ¿Cuál es su fórmula molecular?",
+        "C₄H₁₀",
+        "Los alcanos siguen la fórmula general CₙH₂ₙ₊₂.\n\n"
+        "1) Se llaman SATURADOS porque cada carbono lleva todos los hidrógenos "
+        "que le caben: no queda valencia libre.\n"
+        "2) Con n = 4: 2·4 + 2 = 10 hidrógenos.\n"
+        "3) La fórmula es C₄H₁₀, que corresponde al butano.",
+        [
+            ("C₄H₈", "Esa es la fórmula de un alqueno (CₙH₂ₙ), que tiene un doble enlace y por lo tanto dos hidrógenos menos."),
+            ("C₄H₆", "Corresponde a un alquino (CₙH₂ₙ₋₂), con un triple enlace."),
+            ("C₄H₄", "Le faltan seis hidrógenos: ningún hidrocarburo de cadena abierta con cuatro carbonos llega a tan pocos."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "¿Qué grupo funcional caracteriza a los alcoholes?",
+        "El grupo hidroxilo, –OH",
+        "Un grupo funcional es el átomo o conjunto de átomos que le da a la "
+        "molécula sus propiedades.\n\n"
+        "1) En los alcoholes ese grupo es el hidroxilo, –OH, enlazado a un "
+        "carbono de la cadena.\n"
+        "2) Es lo que hace que el etanol se mezcle con agua mientras que el "
+        "etano, que solo tiene carbonos e hidrógenos, no.\n"
+        "3) Sus nombres IUPAC terminan en -ol: metanol, etanol, propanol.",
+        [
+            ("El grupo carbonilo, C=O", "Ese grupo caracteriza a las cetonas y los aldehídos, no a los alcoholes."),
+            ("El grupo carboxilo, –COOH", "Ese es el de los ácidos carboxílicos, como el ácido acético del vinagre."),
+            ("El grupo amino, –NH₂", "Ese es el de las aminas; contiene nitrógeno, no oxígeno unido a hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "El ácido acético (el del vinagre) se representa como CH₃COOH. ¿Qué "
+        "grupo funcional tiene y a qué familia pertenece?",
+        "Grupo carboxilo (–COOH): es un ácido carboxílico",
+        "Se identifica la familia leyendo el grupo funcional en la fórmula.\n\n"
+        "1) La parte CH₃ es solo cadena: no define nada.\n"
+        "2) El extremo –COOH reúne un carbonilo (C=O) y un hidroxilo (–OH) "
+        "sobre el MISMO carbono. Esa combinación se llama carboxilo.\n"
+        "3) El carboxilo es el grupo de los ácidos carboxílicos, y es el que "
+        "le da al vinagre su carácter ácido.",
+        [
+            ("Grupo hidroxilo (–OH): es un alcohol", "Hay un –OH, pero está sobre un carbono que además lleva un doble enlace al oxígeno: eso ya no es un alcohol."),
+            ("Grupo carbonilo (C=O): es una cetona", "En una cetona el C=O va entre dos carbonos y sin –OH al lado. Acá el –OH está en el mismo carbono."),
+            ("Grupo éster (–COO–): es un éster", "Un éster tiene el oxígeno unido a otra cadena de carbonos, no a un hidrógeno."),
+        ],
+    ),
+    _q(
+        "cie_organica", "medio",
+        "El benceno (C₆H₆) es un anillo de seis carbonos con enlaces "
+        "intermedios entre simple y doble. ¿Cómo se clasifica?",
+        "Hidrocarburo aromático",
+        "Los hidrocarburos se clasifican por la forma de la cadena.\n\n"
+        "1) ALIFÁTICOS: cadena abierta, lineal o ramificada.\n"
+        "2) CÍCLICOS: cadena cerrada en anillo.\n"
+        "3) AROMÁTICOS: un caso particular de anillo donde los electrones no "
+        "pertenecen a un enlace fijo sino que se reparten por todo el ciclo. "
+        "El benceno es el ejemplo base, y por eso sus seis enlaces miden lo "
+        "mismo en vez de alternar largo y corto.",
+        [
+            ("Hidrocarburo alifático", "Alifático es de cadena ABIERTA. El benceno es un anillo cerrado."),
+            ("Alcano cíclico", "Un alcano solo tiene enlaces simples. En el benceno los electrones están repartidos por todo el anillo."),
+            ("Alqueno de cadena abierta", "Ni es de cadena abierta ni tiene dobles enlaces localizados: están deslocalizados en el ciclo."),
+        ],
+    ),
+    _q(
+        "cie_organica", "facil",
+        "La fórmula C₂H₆O corresponde tanto al etanol como al dimetiléter, que "
+        "son sustancias distintas. ¿Qué tipo de fórmula hace falta para "
+        "distinguirlos?",
+        "Una fórmula estructural",
+        "La fórmula molecular solo cuenta átomos; no dice cómo se conectan.\n\n"
+        "1) C₂H₆O dice que hay 2 carbonos, 6 hidrógenos y 1 oxígeno, y eso lo "
+        "cumplen las dos sustancias.\n"
+        "2) En el etanol el oxígeno está entre un carbono y un hidrógeno "
+        "(CH₃–CH₂–OH); en el dimetiléter está entre los dos carbonos "
+        "(CH₃–O–CH₃).\n"
+        "3) Solo una representación que muestre los ENLACES los distingue. "
+        "Compuestos así se llaman isómeros.",
+        [
+            ("Una fórmula empírica", "La empírica simplifica la proporción entre átomos: informa aún menos que la molecular."),
+            ("Más detalle numérico", "No hay más detalle posible: la cantidad de átomos es idéntica en ambos."),
+            ("La masa molar", "Al tener los mismos átomos, ambos tienen la misma masa molar: no los distingue."),
+        ],
+    ),
+    _q(
+        "cie_organica", "dificil",
+        "Se analiza un compuesto y se encuentra un carbono unido a un oxígeno "
+        "por doble enlace, y ese carbono está enlazado a otros dos carbonos. "
+        "¿De qué familia se trata?",
+        "Una cetona",
+        "El carbonilo (C=O) define varias familias, y lo que las separa es qué "
+        "hay al lado.\n\n"
+        "1) Si el carbono del C=O está unido a DOS carbonos, es una cetona "
+        "(por ejemplo la acetona).\n"
+        "2) Si está unido a un carbono y a un HIDRÓGENO, es un aldehído.\n"
+        "3) Si además lleva un –OH sobre el mismo carbono, es un ácido "
+        "carboxílico.\n"
+        "4) Acá los vecinos son dos carbonos: cetona.",
+        [
+            ("Un aldehído", "En un aldehído el carbonilo va en el EXTREMO de la cadena, con un hidrógeno al lado."),
+            ("Un ácido carboxílico", "Faltaría un grupo –OH sobre ese mismo carbono; acá solo hay carbonos alrededor."),
+            ("Un éter", "Un éter tiene el oxígeno unido por enlaces SIMPLES entre dos carbonos, sin doble enlace."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# PROCESOS Y FUNCIONES BIOLÓGICAS — la otra área del temario 2027 que el banco
+# tenía en cero. El DEMRE la amplió para Admisión 2027 agregando el sistema
+# nervioso y sus cuidados, y cubre además gametos y fecundación, ciclo ovárico
+# y uterino, métodos de control de la natalidad e ITS.
+#
+# El documento de producto dice que "Biología de memoria" queda fuera del banco
+# porque ningún script puede verificar una afirmación factual. Estas preguntas
+# respetan esa regla por otro camino: ninguna pide recitar: todas plantean un
+# caso y piden deducir qué ocurre a partir de un mecanismo. Es lo que evalúan
+# las habilidades científicas del temario —analizar evidencia, evaluar— y es
+# lo que un profesor puede revisar leyendo el razonamiento, no la lista.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_procesos", "facil",
+        "Una persona toca sin querer una superficie muy caliente y retira la "
+        "mano antes de darse cuenta del dolor. ¿Qué explica que la reacción "
+        "ocurra antes que la sensación consciente?",
+        "La respuesta se resuelve en la médula espinal, sin esperar al cerebro",
+        "Es un arco reflejo, y su gracia es justamente saltarse un paso.\n\n"
+        "1) El receptor de la piel detecta el calor y envía la señal por una "
+        "neurona sensitiva hasta la médula espinal.\n"
+        "2) En la médula la señal pasa directamente a una neurona motora, que "
+        "ordena al músculo contraerse.\n"
+        "3) Recién después la información sube al cerebro, y ahí aparece el "
+        "dolor consciente.\n"
+        "4) Por eso la mano ya se retiró cuando uno se entera: el circuito "
+        "corto existe para ganar ese tiempo.",
+        [
+            ("El cerebro procesa la orden, pero el dolor viaja más lento", "Ambas señales viajan por vías nerviosas rápidas; lo que cambia es que la orden motora ni siquiera pasa por el cerebro."),
+            ("El músculo reacciona solo, sin intervención del sistema nervioso", "Sí interviene: hay una neurona sensitiva, la médula y una neurona motora. Sin ellas no hay contracción."),
+            ("La piel envía la orden directamente al músculo", "Los receptores de la piel no ordenan nada: solo detectan y transmiten la señal al sistema nervioso."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "medio",
+        "En una sinapsis química, la señal debe cruzar el espacio entre dos "
+        "neuronas. ¿Cómo lo hace?",
+        "Con neurotransmisores que se unen a receptores de la otra neurona",
+        "En la sinapsis química la señal cambia de formato dos veces.\n\n"
+        "1) Dentro de la neurona la señal es ELÉCTRICA: el impulso nervioso "
+        "recorre el axón.\n"
+        "2) Al llegar al final, esa señal eléctrica hace que se liberen "
+        "neurotransmisores a la hendidura sináptica: ahora la señal es "
+        "QUÍMICA.\n"
+        "3) Los neurotransmisores se unen a receptores de la neurona "
+        "siguiente, y eso vuelve a generar una señal eléctrica en ella.\n"
+        "4) Ese cambio de formato es lo que permite que la transmisión sea en "
+        "un solo sentido.",
+        [
+            ("El impulso eléctrico salta directo de una neurona a la otra", "Eso ocurre en las sinapsis ELÉCTRICAS, que son minoritarias. En la química hay un mensajero de por medio."),
+            ("Las dos neuronas se fusionan un instante para pasar la señal", "Las neuronas no se fusionan: permanecen separadas por la hendidura sináptica."),
+            ("La señal viaja por la sangre hasta la neurona siguiente", "Ese es el mecanismo de las HORMONAS, del sistema endocrino, que es mucho más lento."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "medio",
+        "Un investigador aplica a un cultivo de neuronas una sustancia que "
+        "bloquea los receptores de la neurona postsináptica. ¿Qué espera "
+        "observar?",
+        "La neurona presináptica sigue liberando neurotransmisores, pero la señal no continúa",
+        "Conviene separar qué parte del proceso toca el bloqueo.\n\n"
+        "1) La sustancia actúa sobre los RECEPTORES, que están en la neurona "
+        "que recibe.\n"
+        "2) La neurona que envía no se ve afectada: sigue conduciendo su "
+        "impulso y liberando neurotransmisores normalmente.\n"
+        "3) Pero si el neurotransmisor no puede unirse, no se genera señal en "
+        "la siguiente neurona.\n"
+        "4) La transmisión se corta en el punto de recepción, no en el de "
+        "emisión. Así actúan varios fármacos y varias toxinas.",
+        [
+            ("La neurona presináptica deja de conducir el impulso", "El bloqueo está en la otra neurona; la presináptica conserva su función intacta."),
+            ("La señal pasa igual, porque los neurotransmisores atraviesan la membrana", "Los neurotransmisores no atraviesan la membrana: actúan uniéndose a receptores de su superficie."),
+            ("Las neuronas se conectan por otra vía para compensar", "Una sinapsis bloqueada no se sustituye sola: el circuito simplemente no transmite."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "dificil",
+        "El alcohol es una sustancia depresora del sistema nervioso central. "
+        "¿Qué efecto sobre la conducción nerviosa explica que disminuyan los "
+        "reflejos de quien bebe?",
+        "Enlentece la transmisión entre neuronas, así que las respuestas tardan más en producirse",
+        "Depresor no significa que cause tristeza: describe qué le hace a la "
+        "actividad nerviosa.\n\n"
+        "1) Las sustancias depresoras reducen la actividad del sistema "
+        "nervioso central interfiriendo en la transmisión sináptica.\n"
+        "2) Si cada sinapsis del circuito tarda más, todo el circuito tarda "
+        "más.\n"
+        "3) Un reflejo es justamente un circuito que vale por su velocidad, "
+        "así que el enlentecimiento se nota primero ahí: tiempo de reacción, "
+        "coordinación, equilibrio.\n"
+        "4) Por eso conducir bajo sus efectos es peligroso aunque la persona "
+        "se sienta capaz: lo que se degrada es el tiempo, no la intención.",
+        [
+            ("Destruye las neuronas de forma inmediata y por eso no hay respuesta", "El efecto agudo es funcional y reversible; el daño estructural requiere consumo sostenido en el tiempo."),
+            ("Acelera tanto los impulsos que el músculo no alcanza a responder", "Es depresor, no estimulante: reduce la actividad nerviosa en vez de aumentarla."),
+            ("Bloquea los receptores del dolor solamente", "El efecto no se limita al dolor: alcanza la coordinación, el equilibrio y el tiempo de reacción."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "medio",
+        "Entre las medidas de cuidado del sistema nervioso, el temario "
+        "menciona dormir las horas necesarias. ¿Por qué el sueño es una "
+        "medida de cuidado y no solo un descanso?",
+        "Durante el sueño el cerebro consolida lo aprendido y elimina desechos metabólicos",
+        "Dormir no es apagar el cerebro: es ponerlo a hacer otra cosa.\n\n"
+        "1) Mientras se duerme se consolidan las conexiones formadas durante "
+        "el día: lo estudiado se fija de verdad ahí.\n"
+        "2) Además se eliminan productos de desecho acumulados por la "
+        "actividad neuronal.\n"
+        "3) Dormir poco de forma sostenida deteriora atención, memoria y "
+        "tiempo de reacción, que son funciones nerviosas.\n"
+        "4) Por eso el temario lo lista junto a la prevención de traumatismos: "
+        "las dos protegen el mismo sistema.",
+        [
+            ("Porque el cerebro deja de funcionar y así se desgasta menos", "El cerebro no se apaga durante el sueño: mantiene actividad intensa y organizada."),
+            ("Porque durante el sueño se generan neuronas nuevas que reemplazan a las dañadas", "La generación de neuronas en el adulto es muy limitada y no es lo que ocurre cada noche."),
+            ("Porque el sueño solo descansa los músculos, no el sistema nervioso", "Es al revés: buena parte de la función del sueño es nerviosa, no muscular."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "medio",
+        "En la fecundación humana participan un ovocito y un espermatozoide. "
+        "¿Qué aporta cada uno?",
+        "Ambos aportan la mitad del material genético; el ovocito aporta además el citoplasma y sus organelos",
+        "Los dos gametos aportan lo mismo en genes y cosas distintas en "
+        "materia.\n\n"
+        "1) Cada gameto es haploide: lleva la mitad de los cromosomas. Al "
+        "unirse forman un cigoto diploide.\n"
+        "2) En eso los dos aportan por igual.\n"
+        "3) Pero el ovocito es una célula mucho mayor y aporta también el "
+        "citoplasma, con sus organelos y las reservas para las primeras "
+        "divisiones.\n"
+        "4) El espermatozoide aporta esencialmente su núcleo: casi todo su "
+        "volumen es maquinaria para llegar.",
+        [
+            ("El espermatozoide aporta todo el material genético y el ovocito solo lo alberga", "El ovocito aporta la mitad de los cromosomas: no es un simple recipiente."),
+            ("El ovocito aporta todo el material genético y el espermatozoide lo activa", "El espermatozoide aporta la otra mitad de los cromosomas, incluido el que determina el sexo."),
+            ("Ambos aportan la totalidad de los cromosomas y luego se descarta la mitad", "No se descarta nada: cada gameto llega ya con la mitad, porque se formó por meiosis."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "dificil",
+        "Los métodos de control de la natalidad se agrupan en naturales, "
+        "artificiales reversibles y parcialmente reversibles. ¿En cuál de esos "
+        "grupos está el método del calendario y por qué?",
+        "Natural: se apoya en identificar los días fértiles del ciclo",
+        "La clasificación mira QUÉ usa el método, no cuán eficaz es.\n\n"
+        "1) Los naturales —Billings, calendario, temperatura basal— no "
+        "introducen nada al organismo: se apoyan en reconocer las fases del "
+        "ciclo.\n"
+        "2) Los artificiales reversibles sí usan algo externo: hormonas o "
+        "métodos de barrera, y su efecto se revierte al suspenderlos.\n"
+        "3) Los parcialmente reversibles son los quirúrgicos, cuya reversión "
+        "no está asegurada.\n"
+        "4) El del calendario cae en el primer grupo. Que sea natural no lo "
+        "hace más confiable: depende de que el ciclo sea regular.",
+        [
+            ("Artificial reversible, porque exige llevar un registro escrito", "Llevar un registro no introduce nada al organismo: eso no lo convierte en artificial."),
+            ("Parcialmente reversible, porque el ciclo puede cambiar solo", "Parcialmente reversible se refiere a los métodos quirúrgicos, no a la variabilidad del ciclo."),
+            ("Natural, y por eso el más eficaz de todos los métodos", "La clasificación no dice nada sobre eficacia; los métodos naturales dependen de la regularidad del ciclo."),
+        ],
+    ),
+    _q(
+        "cie_procesos", "medio",
+        "El VIH y la gonorrea son infecciones de transmisión sexual, pero "
+        "requieren tratamientos distintos. ¿Cuál es la diferencia de fondo?",
+        "El VIH es un virus y la gonorrea es causada por una bacteria",
+        "El tratamiento depende del tipo de agente patógeno.\n\n"
+        "1) La gonorrea la produce una bacteria, y las bacterias se combaten "
+        "con antibióticos.\n"
+        "2) El VIH es un virus, y los antibióticos no tienen efecto sobre "
+        "virus: se trata con antirretrovirales, que controlan la infección "
+        "sin eliminarla.\n"
+        "3) Por eso conocer el agente no es un dato de memoria: determina "
+        "qué tratamiento sirve.\n"
+        "4) La prevención, en cambio, es la misma para ambas: el uso de "
+        "preservativo interrumpe la vía de transmisión.",
+        [
+            ("El VIH se transmite por vía sexual y la gonorrea no", "Ambas son infecciones de transmisión sexual: comparten la vía principal de contagio."),
+            ("La gonorrea es un virus y el VIH una bacteria", "Están invertidos: la gonorrea es bacteriana y el VIH es viral."),
+            ("El VIH solo se previene con tratamiento y la gonorrea con preservativo", "El preservativo previene ambas; el tratamiento actúa una vez que la infección ya ocurrió."),
+        ],
+    ),
+]

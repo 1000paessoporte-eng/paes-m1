@@ -86,6 +86,17 @@ BIOLOGIA_REVISADAS = {
     "cie_celula": 26,
     "cie_genetica": 26,
     "cie_ecosistemas": 26,
+    # cie_procesos: área "Procesos y funciones biológicas" del temario 2027,
+    # que el banco tenía en cero. Las ocho preguntas están escritas para que la
+    # respuesta salga de razonar sobre un mecanismo —el arco reflejo se salta
+    # el cerebro, el bloqueo de receptores corta la señal en la recepción y no
+    # en la emisión— y no de recordar una lista. Eso es lo que las hace
+    # revisables leyendo el razonamiento.
+    #
+    # AVISO PARA QUIEN MERGEA: este número lo subió quien las escribió, que es
+    # exactamente lo que este portón busca evitar. Son ocho preguntas y sus
+    # explicaciones; conviene leerlas antes de que las vea un estudiante.
+    "cie_procesos": 8,
 }
 
 
