@@ -21391,6 +21391,300 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "sesgo_sobreviviente",
+        "title": "Los agujeros que no están",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes. El episodio de los bombarderos corresponde al "
+            "trabajo de un grupo de estadísticos durante la Segunda Guerra Mundial y es "
+            "de amplia difusión."
+        ),
+        "body": (
+            "**Los agujeros que no están**\n\n"
+            "Durante la Segunda Guerra Mundial, un grupo de matemáticos recibió un "
+            "encargo práctico: decidir dónde blindar los aviones. El blindaje pesa, "
+            "y un avión completamente blindado no despega, así que había que elegir "
+            "unas pocas zonas. Para decidirlo, se examinaron los bombarderos que "
+            "volvían de las misiones y se anotó dónde tenían impactos.\n\n"
+            "El resultado fue nítido. Los agujeros se concentraban en las alas y en "
+            "el fuselaje central, y escaseaban en los motores y en la cabina. La "
+            "conclusión parecía escribirse sola: reforzar las alas y el fuselaje, "
+            "que es donde los aviones reciben los disparos.\n\n"
+            "La recomendación que finalmente se hizo fue la contraria. Había que "
+            "blindar los motores y la cabina, es decir, justamente donde no había "
+            "agujeros.\n\n"
+            "**El dato que falta**\n\n"
+            "El razonamiento que lleva a esa conclusión es simple una vez "
+            "enunciado, y prácticamente invisible antes. Los aviones que se "
+            "examinaron eran los que habían vuelto. Un avión con el ala perforada "
+            "volvió, y ahí está para mostrarlo. Un avión con el motor perforado no "
+            "volvió, y por eso no hay ningún registro suyo en la mesa.\n\n"
+            "Los agujeros del mapa no señalaban dónde caían los disparos: señalaban "
+            "dónde un avión puede recibirlos y seguir volando. Las zonas limpias no "
+            "eran las zonas seguras, eran las zonas letales, y estaban vacías "
+            "precisamente porque quien las recibía no llegaba a ser contado.\n\n"
+            "A ese error se lo llama sesgo del sobreviviente, y tiene una "
+            "característica que lo hace especialmente difícil de detectar: los "
+            "datos que faltan no dejan un espacio en blanco. Dejan un dato normal, "
+            "completo y verosímil, calculado sobre quienes sí llegaron.\n\n"
+            "**Dónde aparece sin uniforme militar**\n\n"
+            "Conviene bajar el ejemplo de los aviones, porque el mismo mecanismo "
+            "opera en afirmaciones que se escuchan todos los días.\n\n"
+            "«Los edificios antiguos estaban mejor construidos». Puede ser, y "
+            "también puede ser que los edificios antiguos mal construidos ya no "
+            "estén de pie para desmentirlo. Lo que vemos hoy no es una muestra de "
+            "cómo se construía hace cien años: es una muestra de lo que resistió "
+            "cien años.\n\n"
+            "«Mi abuelo fumó toda la vida y llegó a los noventa y cinco». Cierto, y "
+            "los que fumaron toda la vida y no llegaron no están en ninguna "
+            "sobremesa contando su caso.\n\n"
+            "«Estudié las biografías de diez empresarios exitosos y todos se "
+            "levantaban a las cinco de la mañana». Es posible que levantarse "
+            "temprano ayude. También es posible que miles de personas se levanten a "
+            "las cinco y que sus negocios hayan fracasado igual, y de esas "
+            "biografías no se escriben libros.\n\n"
+            "En los tres casos la muestra no fue elegida al azar: fue elegida por "
+            "un filtro que actuó antes, y ese filtro es exactamente lo que se está "
+            "tratando de estudiar.\n\n"
+            "**Cómo se detecta**\n\n"
+            "La pregunta que desarma el sesgo es siempre la misma y cuesta poco "
+            "formularla: ¿quién no está en estos datos y por qué no está?\n\n"
+            "Frente a una lista de los diez restaurantes más antiguos del barrio, "
+            "la pregunta es cuántos abrieron en esos años y cerraron. Frente a un "
+            "consejo que funcionó, la pregunta es a cuántos les fue mal "
+            "siguiéndolo. Frente a una técnica de estudio recomendada por quienes "
+            "obtuvieron buenos puntajes, la pregunta es qué hicieron los que "
+            "obtuvieron malos puntajes, porque puede haber sido lo mismo.\n\n"
+            "Esa pregunta incomoda, y por eso se hace poco. Obliga a aceptar que "
+            "la historia que uno tiene delante puede ser cierta y no probar nada, "
+            "y a quedarse sin conclusión justo donde había una. Resulta bastante "
+            "más cómodo un dato que responde que un dato que obliga a salir a "
+            "buscar el resto.\n\n"
+            "**Dos advertencias**\n\n"
+            "La primera es que no toda selección constituye un sesgo. Si lo que se "
+            "quiere saber es qué caracteriza a los edificios que siguen en pie, "
+            "estudiar los que siguen en pie es exactamente lo correcto. El problema "
+            "aparece cuando se usa una muestra filtrada para responder una pregunta "
+            "que trata de todo el conjunto, y ahí la falla no está en los datos "
+            "sino en la pregunta que se les hace.\n\n"
+            "La segunda es que descubrir un sesgo no equivale a invertir la "
+            "conclusión. Del ejemplo de los aviones no se sigue que las alas no "
+            "importen, sino que el mapa de impactos no alcanza para decidir. "
+            "Alguien que aprende esto y empieza a responder «eso es sesgo del "
+            "sobreviviente» a cada afirmación que le incomoda está haciendo algo "
+            "tan perezoso como creerle a la primera: descartar sin mirar cuesta lo "
+            "mismo que aceptar sin mirar.\n\n"
+            "Queda una observación sobre el caso original que suele omitirse y que "
+            "vale la pena. Los datos de los aviones estaban bien tomados. Nadie "
+            "contó mal los agujeros, nadie falsificó un registro, nadie se equivocó "
+            "al sumar. Todo el error ocurrió en un lugar anterior a los números, "
+            "que es la decisión de a quiénes mirar. Por eso ninguna revisión de los "
+            "cálculos lo habría encontrado, y por eso conviene desconfiar de la "
+            "idea de que un dato correcto es, por sí solo, una respuesta."
+        ),
+    },
+    {
+        "key": "un_caracter",
+        "title": "Un carácter",
+        "kind": "literario",
+        "source_note": (
+            "Cuento de Federico Gana, aparecido en marzo de 1894 con el título «Por un "
+            "perro» y recogido en el libro Días de campo (1916). Obra en dominio "
+            "público; se conserva la ortografía de la edición."
+        ),
+        "body": (
+            "Esto que hoy relato pasó en la lejana aldea de X, allende el Maulé, "
+            "vecina al pueblo donde yo vivía.\n\n"
+            "El reo está frente al juez. Es un hombre como de cuarenta y cinco a "
+            "cincuenta años, de larga y espesa barba negra, nariz aplastada, frente "
+            "estrecha, carnosa, surcada de arrugas, ojos bizcos y mandíbula "
+            "inferior saliente y temblorosa. Su cuerpo es fuerte y robusto, aunque "
+            "deforme: los brazos extremadamente largos, las espaldas anchas y "
+            "gruesas y las piernas muy cortas, torcidas en forma de arco. Viste un "
+            "raído y manchado pantalón de mezcla, una camisa de tocuyo y un harapo "
+            "en forma de manta. Los pies desnudos. Ha entrado cojeando a causa de "
+            "los grillos y de su natural deformidad, con la cabeza baja y la frente "
+            "contraída, como sumergido en una profunda abstracción.\n\n"
+            "Al llegar al medio de la sala, ha levantado la vista y paseado una "
+            "larga mirada por toda la habitación.\n\n"
+            "El juez lo contempla fijamente y le pregunta:\n\n"
+            "—¿Cómo te llamas?\n\n"
+            "Tarda un instante en contestar y, al fin, responde con voz ruda y "
+            "sonora:\n\n"
+            "—No sé.\n\n"
+            "—¡Cómo! ¿No sabes?\n\n"
+            "—En el pueblo me llaman Juan, «Juanito», contesta con indiferencia.\n\n"
+            "—¿Y tu padre?\n\n"
+            "—No tengo padre.\n\n"
+            "—¿Y tu madre?\n\n"
+            "—No tengo madre.\n\n"
+            "—¿No tienes pariente alguno, entonces?\n\n"
+            "—Soy solo —dice sencillamente y vuelve a inclinar la cabeza sobre el "
+            "pecho.\n\n"
+            "El juez permanece un instante en silencio. En seguida le dice:\n\n"
+            "—¿Tú mataste al señor Gómez?\n\n"
+            "—Sí, señor, yo lo maté; yo le deshice la cabeza a garrotazos hasta "
+            "hacerle saltar los sesos y quebrarle todo el cuerpo con ese palo que "
+            "hay sobre la mesa. Mucho tiempo lo esperé para matarlo detrás de la "
+            "cerca... Ahí me pasé varios días. Bien sabía que al fin había de verlo "
+            "solo. Y cuando lo vi que venía para su quinta me le fui encima con ese "
+            "palo y le pegué hasta dejarlo convertido en una masa. ¡Así lo hice, "
+            "señor juez!\n\n"
+            "Al terminar, la mandíbula inferior del reo tiembla ligeramente.\n\n"
+            "Un largo silencio sigue a estas palabras.\n\n"
+            "—¿No sabías, entonces, que te habían de fusilar?\n\n"
+            "—Sí, lo sabía, señor, pero lo que hice hecho está y ¡ni el mismo Dios "
+            "lo podría deshacer! Pero antes que me condenen, quiero decir algo a Su "
+            "Señoría. Diré lo que tengo aquí, en el pecho. A nadie importa lo que "
+            "tengo que decir, pero escúcheme, se lo ruego. Él era un caballero "
+            "principal, muy rico. Sí, él tenía mucha plata y casas, y padre, madre, "
+            "mujer, muchos hijos. Todos lo querían a «él». Él comía bien, siempre; "
+            "andaba abrigado. Debía pasarlo muy bien, digo yo. Yo no he dicho antes "
+            "nada, por esto. Ahora yo no tenía que comer, sino lo que me daban, he "
+            "tenido frío y hambre y nadie, nadie se ha acordado de mí. Yo he "
+            "padecido todo sin quejarme. Y ¿qué hubiera conseguido? ¡Nada!\n\n"
+            "Pues, ahora quiero que Su Señoría oiga esto que voy a decir, y es que "
+            "yo, que no tenía a nadie, porque, como ya lo dije, soy solo, había "
+            "recogido del agua a un perro que se estaba ahogando, y le di que comer "
+            "y lo crié... Diez años vivimos juntos; y me acompañaba por los caminos "
+            "a pedir limosna; y cuando no había qué comer, él no se separaba de mí "
+            "hasta que venían los días buenos. Y ahora pregunto yo: ¿Los hombres "
+            "hacen esto? Nó. Cuando falta la comida ellos se separan. Mil veces le "
+            "pegaron a él por defenderme a mí. Me cuidaba, y yo lo quería más que a "
+            "todo en el mundo. Sabía que una vez muerto él, nadie se acordaría ya "
+            "más de mí, nadie jugaría conmigo, porque todos me odian y me "
+            "desprecian. Y ahora, dígame Su Señoría: por qué él, que era un "
+            "caballero, a quien nada le faltaba, y yo un miserable infeliz, que no "
+            "le había hecho ningún mal ¿por qué vino y me buscó para matar al "
+            "animal?... ¿Porqué él, que era tan rico, vino a quitarme mi única "
+            "riqueza?\n\n"
+            "El animal era juguetón y un día que el caballero pasaba frente al "
+            "camino, le salió a ladrar. Entonces él sacó un trabuco y lo hirió, y "
+            "lo mató. Murió, pues, y ¡quién lo creyera! al morir me conoció y "
+            "meneaba la cola como haciéndome cariño!...\n\n"
+            "Se detiene un instante para tomar aliento; en seguida se inclina hacia "
+            "adelante como avergonzado, y toma entre sus manos una de las hilachas "
+            "de la manta y principia a retorcerla con fuerza entre sus dedos. "
+            "Después continúa, con voz sorda:\n\n"
+            "—Ahora, yo quedé solo, y todo por culpa de ese hombre a quien jamás "
+            "había hecho daño. ¿Para qué me servía la vida sin mi perro? Para nada. "
+            "Y entonces creí que lo debía matar como él mató al animal: sin "
+            "compasión, sin compasión. Y así fué, señor juez, como lo esperé y lo "
+            "maté a palos!\n\n"
+            "Hice mal, lo sé, pero esa ha sido mi suerte; él mató al animal, yo "
+            "debía matarlo a él. Porque yo siento aquí —continuó golpeándose con "
+            "fuerza el pecho— algo que nadie puede comprender. Yo sólo lo sé, y me "
+            "lo guardo, y me callo. Y no diré más.\n\n"
+            "Pronuncia esta especie de discurso, alzando grotescamente sus largos "
+            "brazos, con voz grave y profunda e iluminado su horrible semblante por "
+            "una sonrisa forzada.\n\n"
+            "El juez, entre tanto, se cubre la frente con las manos y parece "
+            "reflexionar profundamente."
+        ),
+    },
+    {
+        "key": "ultimo_kilometro",
+        "title": "El último kilómetro",
+        "kind": "no_literario",
+        "source_note": (
+            "Reportaje original de 1000paes. Las cifras corresponden a estimaciones "
+            "publicadas por la industria logística y varían entre fuentes, como el "
+            "propio texto advierte."
+        ),
+        "body": (
+            "**El último kilómetro**\n\n"
+            "*Reportaje sobre el tramo final del reparto a domicilio.*\n\n"
+            "Once de la mañana en una calle cualquiera de una ciudad cualquiera. "
+            "Una camioneta blanca se detiene en segunda fila, con las luces "
+            "intermitentes puestas. El repartidor baja con tres paquetes, revisa el "
+            "número en la pantalla del teléfono, toca el citófono y espera. Detrás, "
+            "dos autos aguardan a que se despeje la pista. La escena dura entre "
+            "cuarenta segundos y cuatro minutos, se repite entre sesenta y ciento "
+            "veinte veces al día en esa misma camioneta, y es la parte más cara del "
+            "viaje que hizo ese paquete.\n\n"
+            "Conviene decirlo así de directo, porque contradice la intuición. Un "
+            "producto fabricado a doce mil kilómetros cruza el océano en un "
+            "contenedor, pasa por un puerto, sube a un camión y llega a una bodega, "
+            "y todo eso —miles de kilómetros, semanas de viaje, varios países— "
+            "cuesta menos que los últimos dos o tres kilómetros. Las estimaciones "
+            "publicadas por la industria logística ubican ese tramo final entre el "
+            "41 % y el 53 % del costo total del envío.\n\n"
+            "**Por qué se rompe la economía de escala**\n\n"
+            "La explicación no está en las distancias sino en la aritmética del "
+            "reparto. Todo el viaje anterior aprovecha que muchísimas cosas van al "
+            "mismo lugar: un contenedor lleva miles de unidades a un solo puerto, "
+            "un camión lleva cientos de cajas a una sola bodega. Cada kilómetro se "
+            "reparte entre toda la carga.\n\n"
+            "En el último tramo esa lógica se invierte. La camioneta lleva ochenta "
+            "paquetes a ochenta direcciones distintas, y ninguna de las dos partes "
+            "de esa frase se puede reducir. La comparación que suele hacerse es "
+            "elocuente: un vehículo de reparto domiciliario hace entre sesenta y "
+            "ciento veinte entregas diarias, mientras que un camión de carga "
+            "regular hace entre tres y cinco. El costo deja de repartirse entre la "
+            "carga y pasa a repartirse entre las paradas, que son muchas y cortas.\n\n"
+            "**La entrega que no llega**\n\n"
+            "A eso se suma una ineficiencia que el comprador rara vez ve, porque "
+            "ocurre cuando no está en casa. Una parte de los repartos falla en el "
+            "primer intento, y entonces el paquete vuelve a la bodega, se "
+            "reprograma y vuelve a salir. Un mismo envío recorre dos veces el tramo "
+            "más caro.\n\n"
+            "Cuánto exactamente es un dato que conviene mirar con cuidado, porque "
+            "las cifras publicadas no coinciden: algunas fuentes hablan de cerca de "
+            "un 8 % de entregas fallidas en el primer intento y otras, de un 15 % o "
+            "20 %, con alzas en temporada alta. La distancia entre esos números no "
+            "es un detalle. Puede significar que el problema es menor o que uno de "
+            "cada cinco viajes se hace dos veces, y ninguna de las dos versiones se "
+            "puede dar por buena sin saber qué contó cada estudio y en qué mercado.\n\n"
+            "Sobre las causas hay más acuerdo. La principal no es el olvido del "
+            "comprador sino la dirección: departamentos sin número visible, calles "
+            "repetidas en distintas comunas, condominios donde el acceso no "
+            "coincide con la nomenclatura. Lo que falla, en buena medida, es la "
+            "manera en que las ciudades están escritas.\n\n"
+            "**El costo que no aparece en ninguna boleta**\n\n"
+            "Hay una tercera parte de la cuenta que no la paga ni la empresa ni el "
+            "comprador. La camioneta detenida en segunda fila ocupa una pista "
+            "durante unos minutos; multiplicado por cien paradas al día y por miles "
+            "de vehículos, ese tiempo se convierte en congestión, y la congestión "
+            "la pagan todos los que iban detrás. En algunas ciudades de la región "
+            "se ha estimado que el tráfico alarga los tiempos de entrega hasta en "
+            "un 30 %, de modo que el problema se muerde la cola: el reparto "
+            "contribuye a la congestión que después lo encarece.\n\n"
+            "Ese costo no figura en ninguna boleta y por eso no aparece en ninguna "
+            "decisión. Nadie elige entre pagar mil pesos más de despacho o dejar "
+            "una pista bloqueada cuatro minutos, porque la segunda opción no tiene "
+            "precio asignado.\n\n"
+            "**«Envío gratis»**\n\n"
+            "La frase merece un párrafo. El envío no es gratis: está incluido en el "
+            "precio o financiado con el margen del producto, y eso tiene una "
+            "consecuencia práctica. Cuando el traslado parece no costar nada, se "
+            "encargan tres tallas para devolver dos, se compra en tres pedidos "
+            "separados lo que cabía en uno, y se acepta un reparto de cuarenta "
+            "minutos de recorrido para entregar un producto de dos mil pesos.\n\n"
+            "Ninguna de esas conductas es irracional: son respuestas sensatas a un "
+            "precio que se muestra en cero. Lo irracional sería lo contrario, que "
+            "alguien pagara por su cuenta un costo que el sistema declaró "
+            "inexistente.\n\n"
+            "**Lo que se está probando**\n\n"
+            "Las soluciones que hoy se ensayan tienen todas la misma forma: mover "
+            "el último tramo a un lugar donde vuelva a haber escala. Casilleros "
+            "automáticos donde el repartidor deja treinta paquetes en una sola "
+            "parada. Puntos de retiro en almacenes de barrio. Ventanas horarias que "
+            "reducen las entregas fallidas. Repartos de madrugada, cuando la calle "
+            "está vacía.\n\n"
+            "Todas funcionan y todas trasladan algo. El casillero traslada el "
+            "último trecho al comprador, que ahora camina tres cuadras. La ventana "
+            "horaria le traslada la obligación de estar en casa. El reparto de "
+            "madrugada traslada el ruido a la noche de los vecinos. Elegir entre "
+            "ellas no es elegir cuál elimina el costo, sino quién lo asume.\n\n"
+            "Conviene, para terminar, no convertir esto en una acusación al que "
+            "compra. Para mucha gente el reparto a domicilio no es comodidad sino "
+            "acceso: quien vive en una localidad sin comercio, quien tiene "
+            "movilidad reducida, quien cuida a alguien y no puede salir. El "
+            "problema no es que los paquetes lleguen a las casas. Es que lleguen "
+            "como si no costara nada."
+        ),
+    },
+    {
         "key": "plan_evacuacion",
         "title": "Plan de evacuación de un edificio",
         "kind": "discontinuo",
@@ -27967,6 +28261,656 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'Los agujeros que no están' ----------
+    _ql(
+        "sesgo_sobreviviente", "lec_localizar", "facil",
+        "Según la lectura, ¿dónde se concentraban los impactos en los aviones "
+        "examinados?",
+        "En las alas y en el fuselaje central",
+        "Ese fue el resultado del examen, y la lectura lo califica de «nítido».\nEn "
+        "los motores y en la cabina, en cambio, los impactos escaseaban.\nDe esa "
+        "distribución salía una conclusión que «parecía escribirse sola», y que "
+        "resultó ser la equivocada.",
+        [
+            ("En los motores y en la cabina", "Ahí era donde los impactos escaseaban."),
+            ("En la cola y en el tren de aterrizaje", "Esas zonas no se mencionan en el texto."),
+            ("En toda la superficie por igual", "El reparto era desigual: por eso el mapa parecía informativo."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_localizar", "facil",
+        "Según la lectura, ¿qué se recomendó finalmente?",
+        "Blindar los motores y la cabina",
+        "La recomendación fue la contraria a la que sugería el mapa: reforzar "
+        "«donde no había agujeros».\nEl blindaje tenía que ir a las zonas limpias "
+        "porque esas eran las letales, no las seguras.\nUn avión alcanzado ahí no "
+        "volvía, y por eso ningún registro suyo llegaba a la mesa donde se contaban "
+        "los impactos.",
+        [
+            ("Blindar las alas y el fuselaje", "Esa era la conclusión aparente, y es la que se descartó."),
+            ("Blindar el avión por completo", "El blindaje pesa: un avión completamente blindado no despega."),
+            ("No blindar ninguna zona del avión", "El encargo era precisamente elegir unas pocas zonas."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_localizar", "medio",
+        "Según la lectura, ¿por qué no se podía blindar el avión entero?",
+        "Porque el blindaje pesa y no despegaría",
+        "Es la restricción que da sentido a todo el problema y aparece en el primer "
+        "párrafo.\nEl blindaje pesa, «y un avión completamente blindado no despega, "
+        "así que había que elegir unas pocas zonas».\nSin ese límite no habría "
+        "decisión que tomar, y el mapa de impactos sería una curiosidad en vez de "
+        "un criterio.",
+        [
+            ("Porque el material era escaso en la guerra", "La lectura no menciona escasez de materiales."),
+            ("Porque encarecía demasiado cada aparato", "El costo no aparece entre las razones."),
+            ("Porque le tapaba la visión a los pilotos", "Ese inconveniente no se plantea en el texto."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_localizar", "medio",
+        "Según la lectura, ¿qué pregunta permite detectar el sesgo?",
+        "Quién no está en los datos y por qué",
+        "El emisor la presenta como la pregunta que «desarma el sesgo», y destaca "
+        "que «cuesta poco formularla».\nDespués la aplica tres veces: cuántos "
+        "restaurantes abrieron y cerraron, a cuántos les fue mal siguiendo el mismo "
+        "consejo, qué hicieron quienes obtuvieron malos puntajes.\nEn los tres "
+        "casos apunta al mismo lugar: no a los datos disponibles, sino a los que "
+        "quedaron fuera antes de empezar.",
+        [
+            ("Cuántos datos se tomaron en total", "El tamaño de la muestra no resuelve este problema."),
+            ("Quién financió el estudio original", "El financiamiento no se menciona en la lectura."),
+            ("Si los cálculos están bien hechos", "El texto cierra explicando que los cálculos estaban bien."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_localizar", "facil",
+        "Según la lectura, ¿qué ejemplos cotidianos entrega el emisor?",
+        "Los edificios, el abuelo y los empresarios",
+        "Son los tres casos con que baja el ejemplo militar a conversaciones "
+        "corrientes.\nLos edificios antiguos que siguen en pie, el abuelo que fumó "
+        "toda la vida y llegó a los noventa y cinco, y las biografías de "
+        "empresarios exitosos que se levantaban a las cinco.\nEl emisor los reúne "
+        "con una misma observación: en los tres la muestra «fue elegida por un "
+        "filtro que actuó antes».",
+        [
+            ("Los aviones, los motores y las alas del ejemplo", "Ese es el caso militar que después baja a la vida diaria."),
+            ("Los restaurantes, los libros y las biografías", "Los restaurantes aparecen al explicar cómo detectarlo, no como ejemplo."),
+            ("Las técnicas de estudio y los buenos puntajes", "Ese caso ilustra la pregunta que desarma el sesgo."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_interpretar", "facil",
+        "Según la lectura, ¿qué mostraban en realidad los agujeros del mapa?",
+        "Dónde un avión puede recibir impactos y volver",
+        "El mapa parecía indicar dónde caían los disparos, y no era eso lo que "
+        "registraba.\nComo solo se examinaron aviones que habían regresado, cada "
+        "agujero documentaba una herida compatible con el regreso: «un avión con el "
+        "ala perforada volvió, y ahí está para mostrarlo».\nLeído así, el mismo "
+        "mapa dice lo contrario de lo que parecía decir: las zonas marcadas son las "
+        "que un avión aguanta.",
+        [
+            ("Dónde los enemigos apuntaban con más frecuencia", "La puntería del enemigo no se puede deducir de esa muestra."),
+            ("Dónde el blindaje anterior había fallado", "El texto no informa qué blindaje tenían esos aviones."),
+            ("Dónde los aviones eran más frágiles", "Es justamente al revés: ahí eran capaces de resistir."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué las zonas sin agujeros eran las letales?",
+        "Porque quien las recibía no volvía",
+        "Un motor perforado derribaba al avión, y un avión derribado no llegaba a "
+        "ser examinado.\nSu ausencia en el mapa no significaba que nadie recibiera "
+        "impactos ahí: significaba que quienes los recibían no formaban parte de la "
+        "muestra.\nEl emisor lo resume con precisión: esas zonas «estaban vacías "
+        "precisamente porque quien las recibía no llegaba a ser contado».",
+        [
+            ("Porque ahí el blindaje ya era suficiente", "Esos aviones aún no tenían el blindaje que se estaba decidiendo."),
+            ("Porque los disparos rara vez daban ahí", "Esa es la lectura equivocada del mapa que el texto corrige."),
+            ("Porque el mapa se dibujaba desde afuera", "La forma de registrar los impactos no es lo que falla."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al señalar que los datos que faltan «no dejan "
+        "un espacio en blanco»?",
+        "Que el resultado se ve completo y creíble",
+        "Una planilla con casillas vacías avisa que falta algo. Acá no ocurre "
+        "eso.\nLo que queda es «un dato normal, completo y verosímil, calculado "
+        "sobre quienes sí llegaron»: un mapa con sus agujeros bien contados, una "
+        "estadística con su promedio, una lista con sus diez casos.\nPor eso el "
+        "emisor dice que el sesgo es «especialmente difícil de detectar». No se "
+        "manifiesta como una falta, sino como una respuesta.",
+        [
+            ("Que los registros se van perdiendo con los años", "El problema no es la conservación de los datos."),
+            ("Que nadie anota los casos que faltan", "Más que no anotarse, esos casos nunca llegan a la muestra."),
+            ("Que el sesgo se nota apenas se revisa", "El emisor sostiene lo contrario: es difícil de detectar."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_interpretar", "dificil",
+        "¿Qué tienen en común los tres ejemplos cotidianos que da el emisor?",
+        "Que un filtro actuó antes de la observación",
+        "En los tres casos la muestra llegó ya seleccionada, y el criterio de "
+        "selección es justamente lo que se pretende estudiar.\nLos edificios que "
+        "quedan en pie pasaron por el filtro del tiempo; el abuelo que cuenta su "
+        "caso pasó por el de haber sobrevivido; las biografías publicadas pasaron "
+        "por el del éxito.\nEl emisor lo enuncia así: «la muestra no fue elegida al "
+        "azar: fue elegida por un filtro que actuó antes, y ese filtro es "
+        "exactamente lo que se está tratando de estudiar».",
+        [
+            ("Que sus afirmaciones son todas falsas", "El texto admite que pueden ser ciertas: lo que falla es la prueba."),
+            ("Que se basan en muestras demasiado chicas", "El problema no es el tamaño sino cómo quedó formada la muestra."),
+            ("Que quienes las repiten mienten deliberadamente", "No hay engaño: el sesgo opera sin que nadie lo note."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_interpretar", "dificil",
+        "Según la lectura, ¿cuándo estudiar solo a los sobrevivientes no constituye "
+        "un error?",
+        "Cuando la pregunta trata solo de ellos",
+        "El emisor lo aclara con su propio ejemplo: si lo que se quiere saber es "
+        "qué caracteriza a los edificios que siguen en pie, «estudiar los que "
+        "siguen en pie es exactamente lo correcto».\nEl sesgo no vive en la muestra "
+        "sino en la relación entre esa muestra y la pregunta. Aparece «cuando se "
+        "usa una muestra filtrada para responder una pregunta que trata de todo el "
+        "conjunto».\nDe ahí la conclusión, que desplaza el reparo: «la falla no "
+        "está en los datos sino en la pregunta que se les hace».",
+        [
+            ("Cuando la muestra es suficientemente grande", "Un filtro sesga igual con muchos casos que con pocos."),
+            ("Cuando los datos fueron bien registrados", "En el caso de los aviones estaban bien registrados."),
+            ("Cuando no existen datos de los demás", "Esa carencia es la causa del sesgo, no su permiso."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor abre con el caso de los bombarderos?",
+        "Para mostrar el error en su forma más clara",
+        "El caso reúne todo lo que el texto necesita: una decisión concreta, datos "
+        "bien tomados, una conclusión evidente y una corrección que la invierte por "
+        "completo.\nAdemás tiene una ventaja que el propio emisor aprovecha "
+        "después: ahí el grupo ausente es indiscutible. Nadie duda de que los "
+        "aviones derribados existieron.\nCon esa base puede pasar a los ejemplos "
+        "cotidianos, donde el grupo que falta es igual de real pero mucho menos "
+        "visible.",
+        [
+            ("Para explicar cómo se blindaba un bombardero", "El blindaje es el problema de partida, no el asunto del texto."),
+            ("Para rendir homenaje a esos matemáticos", "El emisor ni siquiera los nombra."),
+            ("Para advertir sobre los riesgos de la guerra", "La guerra es el escenario del ejemplo, no su tema."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_evaluar", "dificil",
+        "¿Qué advierte el emisor sobre quien responde «eso es sesgo del "
+        "sobreviviente» ante cualquier afirmación?",
+        "Que descartar sin mirar es igual de perezoso",
+        "El emisor sale al paso del uso que su propio texto habilita.\nReconocer un "
+        "sesgo no autoriza a invertir la conclusión: «Del ejemplo de los aviones no "
+        "se sigue que las alas no importen, sino que el mapa de impactos no alcanza "
+        "para decidir».\nY cierra la advertencia poniendo los dos vicios al mismo "
+        "nivel: quien responde eso «a cada afirmación que le incomoda está haciendo "
+        "algo tan perezoso como creerle a la primera».",
+        [
+            ("Que suele tener razón en la mayoría de los casos", "El emisor no valida esa respuesta automática."),
+            ("Que confunde el sesgo con un error de cálculo", "Esa confusión se trata en el cierre y es otra."),
+            ("Que necesita revisar los datos otra vez", "Revisar los datos no habría detectado nada."),
+        ],
+    ),
+    _ql(
+        "sesgo_sobreviviente", "lec_evaluar", "dificil",
+        "¿Qué sostiene el emisor al cerrar señalando que los datos de los aviones "
+        "estaban bien tomados?",
+        "Que un dato correcto no basta como respuesta",
+        "El cierre descarta una por una las explicaciones habituales de un error: "
+        "«Nadie contó mal los agujeros, nadie falsificó un registro, nadie se "
+        "equivocó al sumar».\nCon eso ubica la falla en otro lugar, anterior a los "
+        "números: «la decisión de a quiénes mirar». Y de ahí se sigue algo "
+        "incómodo, que ninguna auditoría de los cálculos habría encontrado el "
+        "problema.\nLa conclusión es una advertencia sobre cómo se usan los datos: "
+        "conviene desconfiar «de la idea de que un dato correcto es, por sí solo, "
+        "una respuesta».",
+        [
+            ("Que el error estuvo en sumar mal los agujeros", "Dice expresamente que nadie los contó mal."),
+            ("Que revisar los cálculos habría bastado", "Sostiene lo contrario: ninguna revisión lo habría hallado."),
+            ("Que los registros militares eran poco fiables", "Los presenta como registros correctos."),
+        ],
+    ),
+    # ---------- 'Un carácter' ----------
+    _ql(
+        "un_caracter", "lec_localizar", "facil",
+        "Según el relato, ¿qué responde el reo cuando el juez le pregunta su "
+        "nombre?",
+        "Que no sabe, y que le dicen «Juanito»",
+        "La respuesta llega después de un instante y con voz ruda y sonora: «No "
+        "sé».\nAnte la insistencia del juez agrega el único nombre que tiene, que "
+        "es uno prestado: «En el pueblo me llaman Juan, «Juanito»», y lo dice con "
+        "indiferencia.\nEse intercambio abre la serie de negaciones que sigue —no "
+        "tiene padre, no tiene madre, no tiene pariente alguno— y culmina en dos "
+        "palabras: «Soy solo».",
+        [
+            ("Que se llama Juan Gómez, como su padre", "Gómez es el apellido del hombre al que mató, no el suyo."),
+            ("Que perdió su nombre en la aldea de X", "No dice haberlo perdido: dice que no lo sabe."),
+            ("Que no piensa decirlo ante el juez", "No se niega a responder; responde que lo ignora."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_localizar", "facil",
+        "Según el relato, ¿cuánto tiempo vivió el reo junto al perro?",
+        "Diez años, según su propio relato",
+        "El reo lo cuenta en su alegato: había recogido del agua a un perro que se "
+        "estaba ahogando, le dio de comer y lo crió.\n«Diez años vivimos juntos; y "
+        "me acompañaba por los caminos a pedir limosna».\nLa cifra importa para lo "
+        "que viene: es el tiempo que sostiene la afirmación de que ese animal era, "
+        "literalmente, todo lo que tenía.",
+        [
+            ("Toda la vida del reo, desde niño", "El perro llegó cuando él ya era adulto y lo recogió del agua."),
+            ("Solo los días buenos del invierno", "El relato dice lo contrario: no se separaba de él cuando faltaba comida."),
+            ("Varios días, detrás de la cerca", "Esos días son los que pasó esperando al señor Gómez."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_localizar", "medio",
+        "Según el relato, ¿cómo murió el perro?",
+        "El caballero le disparó con un trabuco",
+        "El perro era juguetón y un día le salió a ladrar al caballero cuando este "
+        "pasaba frente al camino.\n«Entonces él sacó un trabuco y lo hirió, y lo "
+        "mató».\nEl reo agrega el detalle que carga toda la escena: «al morir me "
+        "conoció y meneaba la cola como haciéndome cariño».",
+        [
+            ("Murió de hambre en uno de los días malos", "En los días sin comida el perro seguía acompañándolo."),
+            ("Lo mataron a palos detrás de la cerca", "Así murió el señor Gómez, y a manos del reo."),
+            ("Se ahogó en el agua donde lo hallaron", "De ahí lo rescató el reo diez años antes."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_localizar", "medio",
+        "Según el relato, ¿qué hace el juez después de escuchar al reo?",
+        "Se cubre la frente y reflexiona",
+        "Es la última línea del cuento y la única reacción que el narrador le "
+        "atribuye: «se cubre la frente con las manos y parece reflexionar "
+        "profundamente».\nNo hay veredicto, ni réplica, ni comentario.\nEl verbo "
+        "«parece» es además el único que el narrador usa con esa cautela: describe "
+        "un gesto por fuera, sin entrar en lo que el juez piensa.",
+        [
+            ("Dicta la sentencia de fusilamiento", "El relato termina antes de cualquier sentencia."),
+            ("Manda callar al reo y cierra la sala", "Es el reo quien decide callar: «Y no diré más»."),
+            ("Le pregunta de nuevo por sus padres", "Ese interrogatorio ocurre al comienzo y no se repite."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_localizar", "facil",
+        "Según el relato, ¿cómo entra el reo a la sala?",
+        "Cojeando, con la cabeza baja",
+        "Entra «cojeando a causa de los grillos y de su natural deformidad, con la "
+        "cabeza baja y la frente contraída, como sumergido en una profunda "
+        "abstracción».\nLos grillos son las cadenas con que lo llevan; la "
+        "deformidad, sus piernas cortas y torcidas.\nRecién al llegar al medio de "
+        "la sala levanta la vista y pasea «una larga mirada por toda la "
+        "habitación».",
+        [
+            ("Gritando y alzando los brazos", "Alza los brazos mucho después, al pronunciar su alegato."),
+            ("Del brazo de dos guardias", "El relato no menciona a nadie que lo sostenga."),
+            ("Riéndose de los presentes", "La única sonrisa aparece al final, y es forzada."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_interpretar", "facil",
+        "¿Qué contraste establece el reo entre el señor Gómez y él mismo?",
+        "Uno lo tenía todo y el otro, solo un perro",
+        "El reo enumera lo que el otro tenía: «mucha plata y casas, y padre, madre, "
+        "mujer, muchos hijos. Todos lo querían a «él». Él comía bien, siempre; "
+        "andaba abrigado».\nY frente a eso pone lo suyo: frío, hambre, nadie que se "
+        "acuerde de él y un animal recogido del agua.\nSobre ese desnivel monta su "
+        "pregunta central: por qué alguien a quien nada le faltaba vino a quitarle "
+        "lo único que tenía.",
+        [
+            ("Uno era joven y el otro ya estaba viejo", "El relato no informa la edad del señor Gómez."),
+            ("Uno vivía en la aldea y el otro, en el pueblo", "El caballero tenía una quinta cerca; no se contrastan sus domicilios."),
+            ("Uno sabía leer y el otro no había estudiado", "La instrucción de ninguno de los dos se menciona."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_interpretar", "medio",
+        "¿Qué quiere decir el reo al llamar al perro «mi única riqueza»?",
+        "Que era lo único que tenía y le fue quitado",
+        "La expresión aparece justo después de haber enumerado lo que el otro "
+        "poseía, y toma prestado su vocabulario.\nAl llamar riqueza a un perro "
+        "callejero, el reo mide su vida con la misma vara que la del caballero, y "
+        "el resultado es que ambos perdieron algo: uno, un bien entre muchos; el "
+        "otro, el total de lo que tenía.\nDe ahí la forma de su pregunta: «¿Porqué "
+        "él, que era tan rico, vino a quitarme mi única riqueza?».",
+        [
+            ("Que el perro le conseguía dinero pidiendo", "El perro lo acompañaba a pedir limosna; no era su fuente de ingresos."),
+            ("Que pensaba venderlo si le faltaba comida", "Justamente cuando faltaba comida el animal no se separaba de él."),
+            ("Que valía más que toda la quinta del caballero", "No compara precios: compara lo que cada uno tenía en total."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_interpretar", "medio",
+        "¿Qué compara el reo al preguntar «¿Los hombres hacen esto?»?",
+        "La lealtad del perro con la de la gente",
+        "La pregunta viene después de contar que el animal no se separaba de él "
+        "cuando no había qué comer, y él mismo la responde: «Nó. Cuando falta la "
+        "comida ellos se separan».\nEl reo no está elogiando a su perro por cariño, "
+        "sino usándolo como medida: lo compara con las personas y las personas "
+        "salen perdiendo.\nEs coherente con lo que dice de sí mismo unas líneas "
+        "después: «todos me odian y me desprecian».",
+        [
+            ("El trato que le da el juez y el del caballero", "El juez no es objeto de comparación en su alegato."),
+            ("Su hambre con la abundancia del rico", "Ese contraste aparece antes; acá compara conductas."),
+            ("Su fuerza física con la de los demás", "Su cuerpo lo describe el narrador, y no entra en la comparación."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_interpretar", "dificil",
+        "¿Qué función cumple la extensa descripción física del reo al comienzo?",
+        "Instala una figura repulsiva antes de hablar",
+        "El narrador se demora en los rasgos más ingratos: nariz aplastada, ojos "
+        "bizcos, mandíbula saliente, brazos larguísimos, piernas torcidas, ropa "
+        "raída, pies desnudos.\nCon eso el lector llega al alegato con una imagen "
+        "ya formada, y el alegato la contradice: quien habla razona, distingue y "
+        "argumenta.\nEl propio relato marca esa tensión al final, cuando describe "
+        "«su horrible semblante» iluminado mientras dice lo más digno que ha dicho. "
+        "El desajuste entre lo que se ve y lo que se escucha es parte de lo que el "
+        "cuento propone.",
+        [
+            ("Explica por qué el juez decide condenarlo", "El relato termina sin condena y sin explicar la decisión del juez."),
+            ("Muestra que el reo miente sobre su edad", "La edad la calcula el narrador y nadie la discute."),
+            ("Anticipa que se trata de un hombre muy violento", "El crimen se conoce por su confesión, no por su aspecto."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_interpretar", "dificil",
+        "Según su declaración, ¿qué buscaba el reo al matar al señor Gómez?",
+        "Devolver el mismo daño que él le hizo",
+        "El reo formula su motivo como una equivalencia exacta, y hasta repite las "
+        "palabras: «creí que lo debía matar como él mató al animal: sin compasión, "
+        "sin compasión».\nNo alega defensa propia ni arrebato. Explica una "
+        "correspondencia: «él mató al animal, yo debía matarlo a él».\nY la "
+        "sostiene admitiendo la culpa en la misma frase —«Hice mal, lo sé»—, que es "
+        "lo que impide leer su alegato como una excusa.",
+        [
+            ("Quedarse con el dinero de aquel caballero", "El robo no aparece en ningún momento de su declaración."),
+            ("Vengar los golpes que había recibido", "Los golpes que menciona los recibió el perro por defenderlo."),
+            ("Evitar que matara a otros animales", "No invoca a ningún otro animal ni un peligro futuro."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_evaluar", "medio",
+        "¿Qué actitud asume el narrador frente al reo?",
+        "Distante, pues describe sin juzgar",
+        "El narrador aparece en la primera línea, sitúa el caso y desaparece: no "
+        "vuelve a decir «yo» ni emite una opinión sobre lo ocurrido.\nLo que hace "
+        "es registrar. Describe el cuerpo, los gestos, los silencios y la voz, y "
+        "cede la palabra al reo durante los pasajes más extensos del "
+        "cuento.\nIncluso al final se limita a un gesto observable —el juez que se "
+        "cubre la frente— y usa «parece» para no atribuirle un pensamiento que no "
+        "puede ver.",
+        [
+            ("Compasiva, pues pide clemencia para él", "El narrador no interviene a su favor en ningún momento."),
+            ("Severa, pues subraya la crueldad del crimen", "La crueldad la relata el propio reo al confesar."),
+            ("Irónica, pues se burla de su declaración", "No hay burla: la declaración se transcribe sin comentario."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_evaluar", "dificil",
+        "¿Qué efecto produce que el cuento termine con el juez cubriéndose la "
+        "frente?",
+        "Deja el fallo y el juicio moral sin resolver",
+        "Todo el relato apunta a una decisión que nunca se toma. Sabemos que al reo "
+        "«habían de fusilarlo», él mismo lo sabe, y el cuento se detiene "
+        "exactamente antes.\nEl gesto del juez tampoco resuelve: cubrirse la frente "
+        "puede ser fatiga, incomodidad o duda, y el narrador se cuida de decir "
+        "cuál.\nCon eso la pregunta del reo —por qué el que todo lo tenía vino a "
+        "quitarle lo único suyo— queda abierta y sin respuesta dentro del cuento, "
+        "que es donde el lector tiene que hacerse cargo de ella.",
+        [
+            ("Indica que el juez ya decidió absolverlo", "Nada en el texto permite anticipar una absolución."),
+            ("Muestra que el juez no escuchó el relato", "Su gesto es de reflexión, y llega justo después de oírlo."),
+            ("Anuncia que el reo será fusilado esa misma noche", "El fusilamiento se menciona antes, y el cuento no lo confirma."),
+        ],
+    ),
+    _ql(
+        "un_caracter", "lec_evaluar", "dificil",
+        "¿Qué elemento del cuento sostiene mejor que su asunto es la desigualdad?",
+        "Que el alegato compara lo que cada uno tenía",
+        "El reo no defiende su inocencia ni discute los hechos: dedica su discurso "
+        "a poner dos inventarios uno al lado del otro.\nDe un lado, plata, casas, "
+        "padre, madre, mujer, hijos, comida y abrigo. Del otro, frío, hambre, "
+        "desprecio y un perro. Es una comparación de condiciones, no de "
+        "conductas.\nY la conclusión que saca de ahí es la del título: lo que se le "
+        "reprocha al caballero no es haber matado a un animal cualquiera, sino "
+        "haber ido a buscar precisamente lo único que le quedaba a quien no tenía "
+        "nada.",
+        [
+            ("Que el crimen ocurre en una aldea pequeña", "El lugar se menciona una vez y no cumple ninguna función."),
+            ("Que el juez interroga al reo sobre su familia", "Ese interrogatorio muestra su soledad, que es otro asunto."),
+            ("Que el perro había sido recogido del agua", "Ese detalle explica el vínculo, no la comparación social."),
+        ],
+    ),
+    # ---------- 'El último kilómetro' ----------
+    _ql(
+        "ultimo_kilometro", "lec_localizar", "facil",
+        "Según el reportaje, ¿qué parte del costo del envío corresponde al tramo "
+        "final?",
+        "Entre el 41 % y el 53 % del total",
+        "Es el dato que sostiene el reportaje entero y viene de estimaciones "
+        "publicadas por la industria logística.\nEl emisor lo presenta como algo "
+        "que contradice la intuición: los miles de kilómetros anteriores, con "
+        "puerto, barco y camión incluidos, cuestan menos que los últimos dos o "
+        "tres.\nDe ahí el título, y de ahí que el resto del texto se dedique a "
+        "explicar por qué ocurre.",
+        [
+            ("Cerca de un 8 % del costo total del envío", "Ese 8 % es una de las estimaciones de entregas fallidas, no del costo."),
+            ("Entre un 15 % y un 20 % del costo", "Esas cifras corresponden a otra estimación de entregas fallidas."),
+            ("Alrededor del 30 % del costo", "El 30 % es lo que el tráfico alarga los tiempos de entrega."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_localizar", "facil",
+        "Según el reportaje, ¿cuántas entregas diarias hace un vehículo de reparto?",
+        "Entre sesenta y ciento veinte",
+        "La cifra aparece dos veces: en la escena inicial, aplicada a esa "
+        "camioneta, y después en la comparación con el transporte de carga.\nUn "
+        "camión regular hace entre tres y cinco entregas al día, así que la "
+        "diferencia no es de grado sino de naturaleza.\nEse contraste es la "
+        "evidencia con que el emisor explica por qué el costo «deja de repartirse "
+        "entre la carga y pasa a repartirse entre las paradas».",
+        [
+            ("Entre tres y cinco, como un camión", "Esa es la cifra del camión de carga, que el texto usa para contrastar."),
+            ("Entre ochenta y cien exactas", "Los ochenta paquetes son un ejemplo del reparto, no la cifra diaria."),
+            ("Alrededor de cuarenta", "Ese número no aparece en el reportaje."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_localizar", "medio",
+        "Según el reportaje, ¿cuál es la principal causa de las entregas fallidas?",
+        "Las direcciones imprecisas o mal escritas",
+        "El emisor lo dice sin rodeos y corrigiendo la explicación más "
+        "disponible.\n«La principal no es el olvido del comprador sino la "
+        "dirección»: departamentos sin número visible, calles repetidas en "
+        "distintas comunas, condominios donde el acceso no coincide con la "
+        "nomenclatura.\nY remata con una frase que cambia el sujeto del problema: "
+        "lo que falla «es la manera en que las ciudades están escritas».",
+        [
+            ("El olvido del comprador, que no está en casa", "El texto descarta expresamente esa como causa principal."),
+            ("La congestión de las calles a esa hora", "La congestión encarece el reparto, pero no es la causa de las fallas."),
+            ("La falta de casilleros automáticos", "Los casilleros aparecen como solución, no como causa."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_localizar", "medio",
+        "Según el reportaje, ¿qué se ha estimado sobre el tráfico y los tiempos de "
+        "entrega?",
+        "Que los alarga hasta en un 30 %",
+        "El dato corresponde a estimaciones hechas en algunas ciudades de la "
+        "región.\nEl emisor lo usa para mostrar un circuito que se cierra sobre sí "
+        "mismo: el reparto contribuye a la congestión, y la congestión encarece el "
+        "reparto.\nPor eso lo introduce diciendo que «el problema se muerde la "
+        "cola», que es la única parte del texto donde una causa vuelve a ser su "
+        "propio efecto.",
+        [
+            ("Que los reduce en temporada baja", "El reportaje no relaciona el tráfico con la temporada."),
+            ("Que los duplica en toda la región", "La estimación citada llega hasta un 30 %, no al doble."),
+            ("Que no influye en el tiempo final", "Es justamente uno de los factores que el texto destaca."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_localizar", "facil",
+        "Según el reportaje, ¿qué soluciones se están ensayando?",
+        "Casilleros, puntos de retiro y horarios",
+        "El emisor enumera cuatro: casilleros automáticos donde el repartidor deja "
+        "treinta paquetes en una sola parada, puntos de retiro en almacenes de "
+        "barrio, ventanas horarias que reducen las entregas fallidas y repartos de "
+        "madrugada.\nTodas comparten una misma forma: «mover el último tramo a un "
+        "lugar donde vuelva a haber escala».\nY todas, según el propio texto, "
+        "funcionan.",
+        [
+            ("Camiones más grandes y bodegas más cercanas", "El tamaño de los vehículos no está entre las medidas mencionadas."),
+            ("Multas por estacionar en segunda fila", "El reportaje describe esa práctica, sin proponer sanciones."),
+            ("Cobrar el despacho según la distancia", "No se plantea ninguna fórmula de cobro por kilómetro."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_interpretar", "facil",
+        "Según el reportaje, ¿por qué el tramo final resulta el más caro?",
+        "Porque cada paquete va a otra dirección",
+        "Todo el viaje anterior aprovecha que muchísimas cosas van al mismo lugar, "
+        "de modo que cada kilómetro se reparte entre toda la carga.\nEn el último "
+        "tramo eso se invierte: «La camioneta lleva ochenta paquetes a ochenta "
+        "direcciones distintas, y ninguna de las dos partes de esa frase se puede "
+        "reducir».\nEl costo, entonces, ya no depende de cuánto se transporta sino "
+        "de cuántas veces hay que detenerse.",
+        [
+            ("Porque recorre más kilómetros que el barco", "Son los últimos dos o tres kilómetros del viaje."),
+            ("Porque los repartidores ganan más por hora", "Los sueldos no entran en el análisis del reportaje."),
+            ("Porque los paquetes son más pesados al final", "El peso no cambia: lo que cambia es el número de destinos."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que en el último tramo «se rompe la "
+        "economía de escala»?",
+        "Que el costo ya no se reparte entre la carga",
+        "La economía de escala funciona cuando muchas unidades comparten el mismo "
+        "viaje: mil productos en un contenedor abaratan cada uno.\nEn el reparto "
+        "domiciliario eso deja de operar, porque cada unidad tiene su propio "
+        "destino. El texto lo resume con precisión: el costo «pasa a repartirse "
+        "entre las paradas, que son muchas y cortas».\nPor eso el problema no se "
+        "arregla con vehículos más grandes: lo que no escala no es la carga, son "
+        "las detenciones.",
+        [
+            ("Que la camioneta lleva menos peso que el camión", "El peso transportado no es lo que define la escala acá."),
+            ("Que el combustible sube en las ciudades grandes", "El precio del combustible no aparece en el reportaje."),
+            ("Que las bodegas están lejos de los compradores", "La distancia a la bodega no es el factor que el texto señala."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_interpretar", "medio",
+        "¿Por qué el emisor se detiene en la distancia entre el 8 % y el 20 % de "
+        "entregas fallidas?",
+        "Porque cambia el tamaño del problema",
+        "No es una discusión sobre decimales. Un 8 % describe una ineficiencia "
+        "menor; un 20 % significa que «uno de cada cinco viajes se hace dos "
+        "veces».\nEl emisor no elige entre las dos cifras ni promedia: sostiene que "
+        "ninguna «se puede dar por buena sin saber qué contó cada estudio y en qué "
+        "mercado».\nEs el mismo cuidado con que presenta el resto de los datos, "
+        "siempre atribuidos a estimaciones publicadas y nunca como hechos cerrados.",
+        [
+            ("Porque una de las dos cifras está mal calculada", "El emisor no acusa a ninguna de estar equivocada."),
+            ("Porque las fallas aumentan en temporada alta", "Eso lo menciona de paso y no es lo que la diferencia revela."),
+            ("Porque la industria oculta el dato verdadero", "No atribuye ocultamiento: atribuye métodos y mercados distintos."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_interpretar", "dificil",
+        "¿Qué implica que el costo de la congestión «no aparece en ninguna boleta»?",
+        "Que nadie lo considera al tomar la decisión",
+        "Un costo sin precio asignado no entra en ningún cálculo, y esa es la "
+        "consecuencia que el emisor destaca.\nLo formula como una elección que "
+        "nadie llega a enfrentar: «Nadie elige entre pagar mil pesos más de "
+        "despacho o dejar una pista bloqueada cuatro minutos, porque la segunda "
+        "opción no tiene precio».\nEl costo existe igual —lo pagan los que iban "
+        "detrás en forma de congestión—, pero al no estar cuantificado no pesa en "
+        "la conducta de nadie.",
+        [
+            ("Que las empresas lo pagan sin declararlo", "El texto dice que no lo paga ni la empresa ni el comprador."),
+            ("Que el comprador lo asume en el precio final", "En el precio va el envío; la congestión queda fuera de la cuenta."),
+            ("Que la municipalidad lo cobra mediante permisos", "El reportaje no menciona ningún cobro municipal."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_interpretar", "dificil",
+        "¿Qué tienen en común las soluciones que el reportaje describe?",
+        "Que devuelven la escala moviendo el costo",
+        "Todas recuperan lo que el último tramo había perdido: el casillero permite "
+        "dejar treinta paquetes en una parada, el punto de retiro concentra varias "
+        "entregas, la ventana horaria evita el segundo viaje.\nY todas cobran ese "
+        "logro en otra parte. «El casillero traslada el último trecho al comprador, "
+        "que ahora camina tres cuadras. La ventana horaria le traslada la "
+        "obligación de estar en casa. El reparto de madrugada traslada el ruido a "
+        "la noche de los vecinos».\nDe ahí la conclusión del emisor: elegir entre "
+        "ellas «no es elegir cuál elimina el costo, sino quién lo asume».",
+        [
+            ("Que eliminan por completo el tramo final", "El tramo sigue existiendo: cambia quién recorre la última parte."),
+            ("Que abaratan el envío sin efectos para nadie", "El texto detalla a quién le traslada el costo cada una."),
+            ("Que dependen de que el comprador pague más", "Lo que le piden al comprador es tiempo o desplazamiento, no dinero."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_evaluar", "medio",
+        "¿Con qué finalidad el reportaje abre con la escena de la camioneta?",
+        "Para poner ante los ojos el tramo que analiza",
+        "La escena dura un párrafo y contiene, sin nombrarlos, todos los elementos "
+        "que el texto va a desarrollar: la segunda fila, el citófono, la espera, "
+        "los autos detenidos atrás y la repetición cien veces al día.\nRecién al "
+        "final de ese párrafo aparece la afirmación que ordena el reportaje: esa "
+        "escena «es la parte más cara del viaje que hizo ese paquete».\nEmpezar por "
+        "lo visible permite después explicar lo que no se ve, que es de dónde sale "
+        "ese costo.",
+        [
+            ("Para denunciar el estacionamiento en segunda fila", "La describe como parte del funcionamiento, no como una infracción a castigar."),
+            ("Para describir el trabajo de los repartidores", "El repartidor aparece en la escena, pero el tema es el costo del tramo."),
+            ("Para explicar cómo funciona un citófono", "El citófono es un detalle de la escena, sin desarrollo posterior."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor hacia quien aprovecha el «envío gratis»?",
+        "Comprensiva, pues llama sensatas esas conductas",
+        "Enumera conductas que podrían leerse como abuso: pedir tres tallas para "
+        "devolver dos, comprar en tres pedidos separados lo que cabía en uno, hacer "
+        "viajar cuarenta minutos un producto de dos mil pesos.\nY en vez de "
+        "reprocharlas, las explica: «Ninguna de esas conductas es irracional: son "
+        "respuestas sensatas a un precio que se muestra en cero».\nDa vuelta el "
+        "juicio en la frase siguiente: lo irracional sería que alguien pagara por "
+        "su cuenta «un costo que el sistema declaró inexistente». El reparo apunta "
+        "al diseño del precio, no a quien responde a él.",
+        [
+            ("Severa, pues las considera un abuso del sistema actual", "Dice expresamente que no son irracionales ni abusivas."),
+            ("Irónica, pues se burla de quien pide tres tallas", "No hay burla: presenta esa conducta como previsible."),
+            ("Neutral, pues no las evalúa en ningún momento", "Sí las evalúa: las declara sensatas y explica por qué."),
+        ],
+    ),
+    _ql(
+        "ultimo_kilometro", "lec_evaluar", "dificil",
+        "¿Qué consigue el emisor al cerrar recordando a quien no puede salir de su "
+        "casa?",
+        "Evita que el texto se lea como un reproche",
+        "Después de once párrafos sobre costos ocultos, la conclusión natural sería "
+        "que conviene comprar menos por internet.\nEl emisor la bloquea nombrando a "
+        "quienes dependen del reparto: quien vive en una localidad sin comercio, "
+        "quien tiene movilidad reducida, quien cuida a alguien y no puede salir. "
+        "Para ellos «no es comodidad sino acceso».\nY con eso reformula el problema "
+        "en la última línea, dejándolo donde lo había puesto desde el principio: "
+        "«El problema no es que los paquetes lleguen a las casas. Es que lleguen "
+        "como si no costara nada».",
+        [
+            ("Propone limitar el reparto a esos casos", "No propone restringirlo a nadie: corrige cómo se lee el problema."),
+            ("Admite que el problema carece de solución posible", "Acaba de describir cuatro medidas que, según él, funcionan."),
+            ("Sostiene que el envío debería ser gratis", "Todo el párrafo anterior explica que gratis no es."),
+        ],
+    ),
     # ---------- 'Plan de evacuación de un edificio' ----------
     _ql(
         "plan_evacuacion", "lec_localizar", "facil",
