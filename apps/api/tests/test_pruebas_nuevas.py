@@ -83,9 +83,9 @@ def test_ciencias_ofrece_sus_tres_disciplinas():
 #
 # Para subir un número acá hay que haber leído la pregunta completa.
 BIOLOGIA_REVISADAS = {
-    "cie_celula": 22,
-    "cie_genetica": 22,
-    "cie_ecosistemas": 22,
+    "cie_celula": 26,
+    "cie_genetica": 26,
+    "cie_ecosistemas": 26,
 }
 
 
@@ -236,3 +236,11 @@ def test_las_figuras_de_las_preguntas_existen_y_estan_descritas():
         assert f'"{ruta}"' in descripciones, (
             f"{ruta} no tiene texto alternativo en apps/web/lib/figuras.ts"
         )
+
+    # Una figura por pregunta. Un ensayo saca preguntas al azar del banco, así
+    # que dos preguntas que compartan dibujo se le pueden repetir al mismo
+    # alumno en dos ensayos seguidos, y lo que recuerda de una prueba a otra es
+    # justamente la imagen.
+    rutas = [q["image_url"] for q in con_figura]
+    repetidas = {r for r in rutas if rutas.count(r) > 1}
+    assert not repetidas, f"figuras usadas por más de una pregunta: {sorted(repetidas)}"

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" width="580" height="300" role="img">
+  <title>Una hebra molde de ADN y el ARN mensajero que se transcribe a partir de ella, con las bases sin completar</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="56" y="34" font-size="15" font-weight="600" fill="#111827">Hebra molde del ADN</text>
+    <text x="28" y="80" font-size="14" fill="#4b5563">3'</text>
+    <text x="540" y="80" font-size="14" fill="#4b5563">5'</text>
+    <rect x="56" y="46" width="44" height="52" rx="7" fill="#ffedd5" stroke="#c2410c" stroke-width="2.4"/>
+    <text x="78" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#c2410c">T</text>
+    <rect x="108" y="46" width="44" height="52" rx="7" fill="#dcfce7" stroke="#15803d" stroke-width="2.4"/>
+    <text x="130" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#15803d">A</text>
+    <rect x="160" y="46" width="44" height="52" rx="7" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.4"/>
+    <text x="182" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#1d4ed8">C</text>
+    <rect x="212" y="46" width="44" height="52" rx="7" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2.4"/>
+    <text x="234" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#7e22ce">G</text>
+    <rect x="264" y="46" width="44" height="52" rx="7" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2.4"/>
+    <text x="286" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#7e22ce">G</text>
+    <rect x="316" y="46" width="44" height="52" rx="7" fill="#dcfce7" stroke="#15803d" stroke-width="2.4"/>
+    <text x="338" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#15803d">A</text>
+    <rect x="368" y="46" width="44" height="52" rx="7" fill="#dcfce7" stroke="#15803d" stroke-width="2.4"/>
+    <text x="390" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#15803d">A</text>
+    <rect x="420" y="46" width="44" height="52" rx="7" fill="#ffedd5" stroke="#c2410c" stroke-width="2.4"/>
+    <text x="442" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#c2410c">T</text>
+    <rect x="472" y="46" width="44" height="52" rx="7" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.4"/>
+    <text x="494" y="82" text-anchor="middle" font-size="25" font-weight="700" fill="#1d4ed8">C</text>
+
+    <g stroke="#475569" stroke-width="2.4" fill="none">
+      <path d="M290 116 L290 168"/>
+      <path d="M280 156 L290 172 L300 156" stroke-linecap="round"/>
+    </g>
+    <text x="306" y="150" font-size="14" fill="#4b5563">transcripción</text>
+
+    <text x="56" y="212" font-size="15" font-weight="600" fill="#111827">ARN mensajero</text>
+    <text x="28" y="258" font-size="14" fill="#4b5563">5'</text>
+    <text x="540" y="258" font-size="14" fill="#4b5563">3'</text>
+    <rect x="56" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="78" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="108" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="130" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="160" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="182" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="212" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="234" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="264" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="286" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="316" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="338" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="368" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="390" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="420" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="442" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+    <rect x="472" y="224" width="44" height="52" rx="7" fill="#f1f5f9" stroke="#64748b" stroke-width="2.4"/>
+    <text x="494" y="260" text-anchor="middle" font-size="25" font-weight="700" fill="#64748b">?</text>
+  </g>
+</svg>

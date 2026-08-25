@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img">
+  <title>Tres glóbulos rojos después de estar en tres soluciones distintas</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <!-- I: hinchado -->
+    <circle cx="112" cy="140" r="76" fill="#f9cdcd" stroke="#b91c1c" stroke-width="3"/>
+    <circle cx="112" cy="140" r="26" fill="#fdeaea" stroke="#e79b9b" stroke-width="1.4"/>
+    <text x="112" y="252" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">I</text>
+    <text x="112" y="278" text-anchor="middle" font-size="14" fill="#4b5563">hinchado, a punto de romperse</text>
+
+    <!-- II: normal, forma de disco bicóncavo -->
+    <circle cx="320" cy="140" r="58" fill="#f9cdcd" stroke="#b91c1c" stroke-width="3"/>
+    <circle cx="320" cy="140" r="26" fill="#fdeaea" stroke="#e79b9b" stroke-width="1.4"/>
+    <text x="320" y="252" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">II</text>
+    <text x="320" y="278" text-anchor="middle" font-size="14" fill="#4b5563">forma normal</text>
+
+    <!-- III: crenado -->
+    <path d="M528 92 l14 12 16-10 6 18 19-2-4 19 17 8-13 14 10 17-19 3-2 19-18-6-11 16-14-13-17 9-5-19-19 1 5-19-17-9 14-13-9-17 19-4 3-19z"
+          fill="#f9cdcd" stroke="#b91c1c" stroke-width="3" stroke-linejoin="round"/>
+    <text x="528" y="252" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">III</text>
+    <text x="528" y="278" text-anchor="middle" font-size="14" fill="#4b5563">arrugado</text>
+
+    <text x="320" y="30" text-anchor="middle" font-size="15" fill="#4b5563">
+      Tres glóbulos rojos iguales, una hora después de ponerlos en tres soluciones distintas.
+    </text>
+  </g>
+</svg>

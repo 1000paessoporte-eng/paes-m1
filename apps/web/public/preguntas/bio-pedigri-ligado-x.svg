@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380" role="img">
+  <title>Árbol genealógico de tres generaciones donde solo los hombres presentan la enfermedad</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <g font-size="17" font-weight="700" fill="#6b7280">
+      <text x="26" y="72">I</text>
+      <text x="20" y="192">II</text>
+      <text x="14" y="312">III</text>
+    </g>
+
+    <g stroke="#1f2937" stroke-width="2" fill="none">
+      <line x1="210" y1="64" x2="300" y2="64"/>
+      <line x1="255" y1="64" x2="255" y2="104"/>
+      <line x1="150" y1="104" x2="290" y2="104"/>
+      <line x1="150" y1="104" x2="150" y2="164"/>
+      <line x1="290" y1="104" x2="290" y2="164"/>
+
+      <line x1="310" y1="184" x2="400" y2="184"/>
+      <line x1="355" y1="184" x2="355" y2="224"/>
+      <line x1="240" y1="224" x2="470" y2="224"/>
+      <line x1="240" y1="224" x2="240" y2="284"/>
+      <line x1="355" y1="224" x2="355" y2="284"/>
+      <line x1="470" y1="224" x2="470" y2="284"/>
+    </g>
+
+    <!-- I: hombre afectado con mujer sana -->
+    <rect x="170" y="44" width="40" height="40" fill="#1f2937" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="320" cy="64" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <g font-size="13" fill="#4b5563" text-anchor="middle">
+      <text x="190" y="100">I-1</text><text x="320" y="100">I-2</text>
+    </g>
+
+    <!-- II: un hijo sano y una hija sana; ella forma pareja con un hombre sano -->
+    <rect x="130" y="164" width="40" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="290" cy="184" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <rect x="400" y="164" width="40" height="40" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <g font-size="13" fill="#4b5563" text-anchor="middle">
+      <text x="150" y="220">II-1</text><text x="290" y="220">II-2</text><text x="420" y="220">II-3</text>
+    </g>
+
+    <!-- III: dos hombres afectados y una mujer sana -->
+    <rect x="220" y="284" width="40" height="40" fill="#1f2937" stroke="#1f2937" stroke-width="2.5"/>
+    <circle cx="355" cy="304" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2.5"/>
+    <rect x="450" y="284" width="40" height="40" fill="#1f2937" stroke="#1f2937" stroke-width="2.5"/>
+    <g font-size="13" fill="#4b5563" text-anchor="middle">
+      <text x="240" y="340">III-1</text><text x="355" y="340">III-2</text><text x="470" y="340">III-3</text>
+    </g>
+
+    <g transform="translate(500,44)">
+      <rect x="0" y="0" width="126" height="96" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="14" y="16" width="18" height="18" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <text x="42" y="30" font-size="13" fill="#111827">hombre</text>
+      <circle cx="23" cy="52" r="9" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+      <text x="42" y="57" font-size="13" fill="#111827">mujer</text>
+      <rect x="14" y="70" width="18" height="18" fill="#1f2937"/>
+      <text x="42" y="84" font-size="13" fill="#111827">afectado</text>
+    </g>
+  </g>
+</svg>

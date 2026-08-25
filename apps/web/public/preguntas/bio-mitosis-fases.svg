@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 300" width="660" height="300" role="img">
+  <title>Cuatro etapas de la mitosis de una misma célula, presentadas en desorden</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <g transform="translate(20,0)">
+      <ellipse cx="80" cy="152" rx="68" ry="92" fill="#f8fafc" stroke="#1f2937" stroke-width="2.4"/>
+      <line x1="16" y1="152" x2="144" y2="152" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="6 5"/>
+      <path d="M41 130 q-3 22 0 44 M55 130 q3 22 0 44" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="48" cy="152" r="4" fill="#b91c1c"/>
+      <path d="M73 126 q-3 26 0 52 M87 126 q3 26 0 52" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="80" cy="152" r="4" fill="#1d4ed8"/>
+      <path d="M105 132 q-3 20 0 40 M119 132 q3 20 0 40" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="112" cy="152" r="4" fill="#b91c1c"/>
+      <text x="80" y="278" text-anchor="middle" font-size="21" font-weight="700" fill="#111827">I</text>
+    </g>
+    <g transform="translate(180,0)">
+      <path d="M12 152 a68 92 0 0 1 136 0 a68 92 0 0 1 -136 0" fill="#f8fafc" stroke="#1f2937" stroke-width="2.4"/><path d="M12 152 q68 -26 136 0 q-68 26 -136 0" fill="none" stroke="#1f2937" stroke-width="2.4"/>
+      <path d="M59 69 q-3 15 0 30 M69 69 q3 15 0 30" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="64" cy="84" r="4" fill="#b91c1c"/>
+      <path d="M93 67 q-3 17 0 34 M103 67 q3 17 0 34" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="98" cy="84" r="4" fill="#1d4ed8"/>
+      <path d="M59 205 q-3 15 0 30 M69 205 q3 15 0 30" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="64" cy="220" r="4" fill="#b91c1c"/>
+      <path d="M93 203 q-3 17 0 34 M103 203 q3 17 0 34" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="98" cy="220" r="4" fill="#1d4ed8"/>
+      <text x="80" y="278" text-anchor="middle" font-size="21" font-weight="700" fill="#111827">II</text>
+    </g>
+    <g transform="translate(340,0)">
+      <ellipse cx="80" cy="152" rx="68" ry="92" fill="#f8fafc" stroke="#1f2937" stroke-width="2.4"/>
+      <path d="M49 82 q-3 18 0 36 M63 82 q3 18 0 36" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="56" cy="100" r="4" fill="#b91c1c"/>
+      <path d="M103 102 q-3 20 0 40 M117 102 q3 20 0 40" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="110" cy="122" r="4" fill="#1d4ed8"/>
+      <path d="M53 170 q-3 16 0 32 M67 170 q3 16 0 32" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="60" cy="186" r="4" fill="#b91c1c"/>
+      <path d="M105 182 q-3 18 0 36 M119 182 q3 18 0 36" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="112" cy="200" r="4" fill="#1d4ed8"/>
+      <text x="80" y="278" text-anchor="middle" font-size="21" font-weight="700" fill="#111827">III</text>
+    </g>
+    <g transform="translate(500,0)">
+      <ellipse cx="80" cy="152" rx="68" ry="92" fill="#f8fafc" stroke="#1f2937" stroke-width="2.4"/>
+      <path d="M50 69 q-3 17 0 34" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M70 69 q-3 17 0 34" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M94 67 q-3 19 0 38" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M114 67 q-3 19 0 38" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M50 203 q-3 17 0 34" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M70 203 q-3 17 0 34" stroke="#b91c1c" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M94 201 q-3 19 0 38" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M114 201 q-3 19 0 38" stroke="#1d4ed8" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M74 132 L74 116 M74 132 L74 148" stroke="#6b7280" stroke-width="2" fill="none"/>
+      <path d="M68 118 L74 108 L80 118" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M68 146 L74 156 L80 146" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="80" y="278" text-anchor="middle" font-size="21" font-weight="700" fill="#111827">IV</text>
+    </g>
+  </g>
+</svg>

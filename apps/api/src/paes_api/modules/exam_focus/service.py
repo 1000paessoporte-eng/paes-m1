@@ -245,6 +245,40 @@ def _textos_recientes(db: Session, user_id: int) -> dict[int, int]:
     return antiguedad
 
 
+def _figuras_recientes(db: Session, user_id: int) -> dict[str, int]:
+    """Qué figuras vio el estudiante y hace cuántos ensayos.
+
+    Devuelve `image_url -> antigüedad`, donde 1 es el ensayo más reciente. Es
+    el mismo enfriamiento que usan los textos de Lectora y por la misma razón:
+    de una prueba a otra, lo que un alumno reconoce al instante es el dibujo.
+    Reencontrarse con el mismo esquema de célula o el mismo pedigrí convierte
+    la pregunta en un ejercicio de memoria.
+
+    Se mira la figura y no la pregunta: dos preguntas distintas sobre el mismo
+    gráfico se le repiten igual.
+    """
+    filas = db.execute(
+        select(ExamAttempt.id, Question.image_url)
+        .join(ExamAttemptQuestion, ExamAttemptQuestion.attempt_id == ExamAttempt.id)
+        .join(Question, Question.id == ExamAttemptQuestion.question_id)
+        .where(
+            ExamAttempt.user_id == user_id,
+            Question.image_url.is_not(None),
+        )
+        .order_by(ExamAttempt.started_at.desc())
+    ).all()
+
+    antiguedad: dict[str, int] = {}
+    intentos: list[int] = []
+    for attempt_id, image_url in filas:
+        if attempt_id not in intentos:
+            if len(intentos) == VENTANA_SIN_REPETIR:
+                break
+            intentos.append(attempt_id)
+        antiguedad.setdefault(image_url, len(intentos))
+    return antiguedad
+
+
 def _cuotas(total: int, partes: int) -> list[int]:
     """Reparte `total` entre `partes` lo más parejo posible.
 
@@ -405,6 +439,7 @@ def _select_questions(
     count: int,
     subject: Subject = Subject.M1,
     recientes: dict[int, int] | None = None,
+    figuras: dict[str, int] | None = None,
 ) -> list[Question]:
     """Reparte la cantidad pedida entre los ejes según el temario oficial.
 
@@ -466,7 +501,7 @@ def _select_questions(
     chosen: list[Question] = []
     for axis, group in by_axis.items():
         chosen.extend(
-            _repartir_por_prueba(group, quota[axis], axis, incluidas)
+            _repartir_por_prueba(group, quota[axis], axis, incluidas, figuras)
         )
 
     random.shuffle(chosen)
@@ -474,7 +509,11 @@ def _select_questions(
 
 
 def _repartir_por_prueba(
-    grupo: list[Question], cuantas: int, axis: str, incluidas: list[Subject]
+    grupo: list[Question],
+    cuantas: int,
+    axis: str,
+    incluidas: list[Subject],
+    figuras: dict[str, int] | None = None,
 ) -> list[Question]:
     """Dentro de un eje, reparte la cuota entre las pruebas que lo alimentan.
 
@@ -483,7 +522,7 @@ def _repartir_por_prueba(
     siempre.
     """
     if len(incluidas) < 2:
-        return _repartir_por_dificultad(grupo, cuantas)
+        return _repartir_por_dificultad(grupo, cuantas, figuras)
 
     por_prueba: dict[Subject, list[Question]] = defaultdict(list)
     for q in grupo:
@@ -491,7 +530,7 @@ def _repartir_por_prueba(
 
     presentes = [s for s in incluidas if por_prueba[s]]
     if len(presentes) < 2:
-        return _repartir_por_dificultad(grupo, cuantas)
+        return _repartir_por_dificultad(grupo, cuantas, figuras)
 
     pesos = {s: _unidades(s, axis) for s in presentes}
     total = sum(pesos.values())
@@ -509,11 +548,40 @@ def _repartir_por_prueba(
 
     elegidas: list[Question] = []
     for s in presentes:
-        elegidas.extend(_repartir_por_dificultad(por_prueba[s], cupos[s]))
+        elegidas.extend(_repartir_por_dificultad(por_prueba[s], cupos[s], figuras))
     return elegidas
 
 
-def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Question]:
+def _tomar(
+    grupo: list[Question], cuantas: int, figuras: dict[str, int] | None
+) -> list[Question]:
+    """Elige `cuantas` del grupo al azar, dejando para el final las preguntas
+    cuya figura el alumno acaba de ver.
+
+    Es una postergación y no una exclusión, igual que con los textos: si el
+    banco de figuras no alcanza, el ensayo se arma igual empezando por las
+    menos recientes. Una pregunta sin figura no arrastra ninguna penalización,
+    así que compite de igual a igual con una cuya figura ya se enfrió.
+    """
+    if cuantas >= len(grupo):
+        return list(grupo)
+
+    barajado = random.sample(grupo, len(grupo))
+    if figuras:
+        # `sorted` es estable: dentro de cada tramo se conserva el azar.
+        barajado.sort(
+            key=lambda q: (
+                max(0, VENTANA_SIN_REPETIR - figuras.get(q.image_url, 99))
+                if q.image_url
+                else 0
+            )
+        )
+    return barajado[:cuantas]
+
+
+def _repartir_por_dificultad(
+    grupo: list[Question], cuantas: int, figuras: dict[str, int] | None = None
+) -> list[Question]:
     """Elige `cuantas` preguntas del grupo con las tres dificultades presentes.
 
     Elegir al azar dentro del eje da el reparto correcto en promedio, pero un
@@ -534,7 +602,7 @@ def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Questi
 
     niveles = [n for n in ("facil", "medio", "dificil") if por_dificultad[n]]
     if not niveles:
-        return random.sample(grupo, cuantas)
+        return _tomar(grupo, cuantas, figuras)
 
     elegidas: list[Question] = []
     base, resto = divmod(cuantas, len(niveles))
@@ -543,13 +611,13 @@ def _repartir_por_dificultad(grupo: list[Question], cuantas: int) -> list[Questi
     orden = sorted(niveles, key=lambda n: ("medio", "facil", "dificil").index(n))
     for i, nivel in enumerate(orden):
         cupo = min(base + (1 if i < resto else 0), len(por_dificultad[nivel]))
-        elegidas.extend(random.sample(por_dificultad[nivel], cupo))
+        elegidas.extend(_tomar(por_dificultad[nivel], cupo, figuras))
 
     # Si alguna dificultad no tenía suficientes, se completa con lo que sobre.
     if len(elegidas) < cuantas:
         ya = {id(q) for q in elegidas}
         sobrantes = [q for q in grupo if id(q) not in ya]
-        elegidas.extend(random.sample(sobrantes, cuantas - len(elegidas)))
+        elegidas.extend(_tomar(sobrantes, cuantas - len(elegidas), figuras))
 
     return elegidas
 
@@ -564,8 +632,12 @@ def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
         if config.subject is Subject.LECTORA
         else None
     )
+    # Las figuras se enfrían en cualquier prueba que las tenga. Hoy solo las
+    # trae biología, pero la consulta no distingue: el día que una pregunta de
+    # física lleve un diagrama, entra sola.
+    figuras = _figuras_recientes(db, user.id)
     chosen = _select_questions(
-        pool, valid_axes, config.question_count, config.subject, recientes
+        pool, valid_axes, config.question_count, config.subject, recientes, figuras
     )
 
     attempt = ExamAttempt(
