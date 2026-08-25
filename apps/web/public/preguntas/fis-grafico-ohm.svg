@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 366" width="580" height="366" role="img">
+  <title>Gráfico de voltaje contra corriente con dos rectas de distinta inclinación</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <g stroke="#e2e8f0" stroke-width="1">
+      <line x1="80" y1="250" x2="520" y2="250"/>
+      <line x1="80" y1="200" x2="520" y2="200"/>
+      <line x1="80" y1="150" x2="520" y2="150"/>
+      <line x1="80" y1="100" x2="520" y2="100"/>
+      <line x1="80" y1="50" x2="520" y2="50"/>
+    </g>
+    <path d="M80 50 L80 300 L520 300" fill="none" stroke="#1f2937" stroke-width="2.4"/>
+    <text x="80" y="322" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <text x="190" y="322" text-anchor="middle" font-size="13" fill="#4b5563">1</text>
+    <text x="300" y="322" text-anchor="middle" font-size="13" fill="#4b5563">2</text>
+    <text x="410" y="322" text-anchor="middle" font-size="13" fill="#4b5563">3</text>
+    <text x="520" y="322" text-anchor="middle" font-size="13" fill="#4b5563">4</text>
+    <text x="70" y="305" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <text x="70" y="255" text-anchor="end" font-size="13" fill="#4b5563">5</text>
+    <text x="70" y="205" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <text x="70" y="155" text-anchor="end" font-size="13" fill="#4b5563">15</text>
+    <text x="70" y="105" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <text x="70" y="55" text-anchor="end" font-size="13" fill="#4b5563">25</text>
+    <text x="300.0" y="348" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Corriente (A)</text>
+    <text x="22" y="175.0" text-anchor="middle" font-size="15" font-weight="600" fill="#111827" transform="rotate(-90 22 175.0)">Voltaje (V)</text>
+    <path d="M80 300 L520 100" fill="none" stroke="#1d4ed8" stroke-width="3.4"/>
+    <path d="M80 300 L520 220" fill="none" stroke="#b91c1c" stroke-width="3.4" stroke-dasharray="10 6"/>
+    <g font-size="17" font-weight="700"><text x="534" y="106" fill="#1d4ed8">X</text><text x="534" y="226" fill="#b91c1c">Y</text></g>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 356" width="580" height="356" role="img">
+  <title>Un vaso con doce gramos de sal en cien mililitros y, tras agregarle cien mililitros de agua, el mismo vaso con los mismos doce gramos en doscientos mililitros</title>
+  <defs>
+    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker>
+    <marker id="flA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+    <marker id="flR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+    <marker id="flV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+    <marker id="flM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7e22ce"/></marker>
+    <marker id="flT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+    <marker id="flG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4b5563"/></marker>
+  </defs>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <path d="M60 100 L60 272 Q60 280 70 280 L190 280 Q200 280 200 272 L200 100" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M62 184 L62 272 Q62 278 72 278 L188 278 Q198 278 198 272 L198 184 Z" fill="#dbeafe"/>
+    <line x1="62" y1="184" x2="198" y2="184" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="130" y="84" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Antes</text>
+    <circle cx="80" cy="264" r="6" fill="#b45309"/>
+    <circle cx="112" cy="261" r="6" fill="#b45309"/>
+    <circle cx="147" cy="263" r="6" fill="#b45309"/>
+    <circle cx="180" cy="257" r="6" fill="#b45309"/>
+    <circle cx="83" cy="228" r="6" fill="#b45309"/>
+    <circle cx="117" cy="235" r="6" fill="#b45309"/>
+    <circle cx="145" cy="236" r="6" fill="#b45309"/>
+    <circle cx="176" cy="231" r="6" fill="#b45309"/>
+    <circle cx="84" cy="207" r="6" fill="#b45309"/>
+    <circle cx="115" cy="208" r="6" fill="#b45309"/>
+    <circle cx="146" cy="206" r="6" fill="#b45309"/>
+    <circle cx="180" cy="202" r="6" fill="#b45309"/>
+    <text x="130" y="312" text-anchor="middle" font-size="15" fill="#4b5563">100 mL</text>
+    <line x1="240" y1="220" x2="340" y2="220" stroke="#1f2937" stroke-width="3" marker-end="url(#fl)"/>
+    <text x="290" y="204" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">se agregan</text>
+    <text x="290" y="248" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">100 mL de agua</text>
+    <path d="M380 100 L380 272 Q380 280 390 280 L510 280 Q520 280 520 272 L520 100" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M382 104 L382 272 Q382 278 392 278 L508 278 Q518 278 518 272 L518 104 Z" fill="#dbeafe"/>
+    <line x1="382" y1="104" x2="518" y2="104" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="450" y="84" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">Después</text>
+    <circle cx="400" cy="264" r="6" fill="#b45309"/>
+    <circle cx="432" cy="261" r="6" fill="#b45309"/>
+    <circle cx="467" cy="263" r="6" fill="#b45309"/>
+    <circle cx="500" cy="257" r="6" fill="#b45309"/>
+    <circle cx="403" cy="188" r="6" fill="#b45309"/>
+    <circle cx="437" cy="195" r="6" fill="#b45309"/>
+    <circle cx="465" cy="196" r="6" fill="#b45309"/>
+    <circle cx="496" cy="191" r="6" fill="#b45309"/>
+    <circle cx="404" cy="127" r="6" fill="#b45309"/>
+    <circle cx="435" cy="128" r="6" fill="#b45309"/>
+    <circle cx="466" cy="126" r="6" fill="#b45309"/>
+    <circle cx="500" cy="122" r="6" fill="#b45309"/>
+    <text x="450" y="312" text-anchor="middle" font-size="15" fill="#4b5563">200 mL</text>
+    <text x="290" y="336" text-anchor="middle" font-size="14" fill="#4b5563">Cada punto naranjo es un gramo de sal disuelta. No se agregó ni se sacó sal.</text>
+  </g>
+</svg>

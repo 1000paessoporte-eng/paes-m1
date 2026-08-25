@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 370" width="600" height="370" role="img">
+  <title>Péndulo dibujado en tres posiciones: los dos extremos de la oscilación y el punto más bajo</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <line x1="200" y1="60" x2="400" y2="60" stroke="#1f2937" stroke-width="5"/>
+    <line x1="300" y1="60" x2="159" y2="229" stroke="#1f2937" stroke-width="2.2" stroke-dasharray="7 6"/>
+    <circle cx="159" cy="229" r="19" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.8"/>
+    <text x="129" y="235" text-anchor="middle" font-size="18" font-weight="700" fill="#1d4ed8">A</text>
+    <line x1="300" y1="60" x2="300" y2="280" stroke="#1f2937" stroke-width="2.2" />
+    <circle cx="300" cy="280" r="19" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.8"/>
+    <text x="300" y="314" text-anchor="middle" font-size="18" font-weight="700" fill="#1d4ed8">B</text>
+    <line x1="300" y1="60" x2="441" y2="229" stroke="#1f2937" stroke-width="2.2" stroke-dasharray="7 6"/>
+    <circle cx="441" cy="229" r="19" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2.8"/>
+    <text x="467" y="235" text-anchor="middle" font-size="18" font-weight="700" fill="#1d4ed8">C</text>
+    <line x1="120" y1="280" x2="480" y2="280" stroke="#4b5563" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="300" y="352" text-anchor="middle" font-size="14" fill="#4b5563">El péndulo se suelta en A y oscila sin roce entre A y C.</text>
+  </g>
+</svg>

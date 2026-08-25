@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 490" width="520" height="490" role="img">
+  <title>Montaje de destilación: matraz con la mezcla sobre un mechero, termómetro en el cuello, tubo refrigerado con agua fría y vaso donde se recoge el líquido</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <circle cx="140" cy="320" r="62" fill="#eff6ff" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M83 344 a62 62 0 0 0 114 0 Z" fill="#93c5fd"/>
+    <path d="M83 344 a62 62 0 0 0 114 0" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+    <path d="M126 262 L126 186 L206 186" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M154 262 L154 200 L206 200" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <line x1="140" y1="240" x2="140" y2="120" stroke="#b91c1c" stroke-width="5" stroke-linecap="round"/>
+    <text x="152" y="116" font-size="14" fill="#4b5563">termómetro</text>
+    <path d="M124 424 q16 -34 32 0 Z" fill="#fdba74" stroke="#b45309" stroke-width="2"/>
+    <rect x="118" y="424" width="44" height="16" rx="3" fill="#4b5563"/>
+    <path d="M206 178 L352 250 L352 282 L206 210 Z" fill="#e0f2fe" stroke="#1d4ed8" stroke-width="2.4"/>
+    <path d="M206 186 L340 252 M206 200 L340 266" fill="none" stroke="#1f2937" stroke-width="2.2"/>
+    <text x="270" y="176" text-anchor="middle" font-size="14" fill="#4b5563">agua fría</text>
+    <path d="M348 262 L392 300" fill="none" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M370 316 L370 400 Q370 414 384 414 L446 414 Q460 414 460 400 L460 316" fill="#eff6ff" stroke="#1f2937" stroke-width="2.6"/>
+    <path d="M372 384 L372 400 Q372 412 384 412 L446 412 Q458 412 458 400 L458 384 Z" fill="#93c5fd"/>
+    <line x1="372" y1="384" x2="458" y2="384" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="415" y="442" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">líquido recogido</text>
+    <text x="140" y="470" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">mezcla inicial</text>
+  </g>
+</svg>

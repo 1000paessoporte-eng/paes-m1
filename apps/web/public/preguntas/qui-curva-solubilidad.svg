@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 384" width="600" height="384" role="img">
+  <title>Curva creciente de solubilidad contra temperatura, que a cincuenta grados pasa por sesenta gramos de sal por cada cien de agua</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <g stroke="#e2e8f0" stroke-width="1">
+      <line x1="80" y1="256" x2="540" y2="256"/>
+      <line x1="80" y1="212" x2="540" y2="212"/>
+      <line x1="80" y1="168" x2="540" y2="168"/>
+      <line x1="80" y1="124" x2="540" y2="124"/>
+      <line x1="80" y1="80" x2="540" y2="80"/>
+    </g>
+    <path d="M80 50 L80 300 L540 300" fill="none" stroke="#1f2937" stroke-width="2.4"/>
+    <text x="80" y="322" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <text x="190" y="322" text-anchor="middle" font-size="13" fill="#4b5563">25</text>
+    <text x="300" y="322" text-anchor="middle" font-size="13" fill="#4b5563">50</text>
+    <text x="410" y="322" text-anchor="middle" font-size="13" fill="#4b5563">75</text>
+    <text x="520" y="322" text-anchor="middle" font-size="13" fill="#4b5563">100</text>
+    <text x="70" y="305" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <text x="70" y="261" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <text x="70" y="217" text-anchor="end" font-size="13" fill="#4b5563">40</text>
+    <text x="70" y="173" text-anchor="end" font-size="13" fill="#4b5563">60</text>
+    <text x="70" y="129" text-anchor="end" font-size="13" fill="#4b5563">80</text>
+    <text x="70" y="85" text-anchor="end" font-size="13" fill="#4b5563">100</text>
+    <text x="310.0" y="348" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Temperatura (°C)</text>
+    <text x="22" y="175.0" text-anchor="middle" font-size="15" font-weight="600" fill="#111827" transform="rotate(-90 22 175.0)">Gramos de sal por 100 g de agua</text>
+    <path d="M80.0 269.2 L84.4 267.3 L88.8 265.3 L93.2 263.4 L97.6 261.4 L102.0 259.5 L106.4 257.5 L110.8 255.6 L115.2 253.6 L119.6 251.6 L124.0 249.7 L128.4 247.7 L132.8 245.7 L137.2 243.7 L141.6 241.8 L146.0 239.8 L150.4 237.8 L154.8 235.8 L159.2 233.8 L163.6 231.8 L168.0 229.8 L172.4 227.8 L176.8 225.8 L181.2 223.7 L185.6 221.7 L190.0 219.7 L194.4 217.7 L198.8 215.6 L203.2 213.6 L207.6 211.6 L212.0 209.5 L216.4 207.5 L220.8 205.4 L225.2 203.4 L229.6 201.3 L234.0 199.3 L238.4 197.2 L242.8 195.2 L247.2 193.1 L251.6 191.0 L256.0 188.9 L260.4 186.9 L264.8 184.8 L269.2 182.7 L273.6 180.6 L278.0 178.5 L282.4 176.4 L286.8 174.3 L291.2 172.2 L295.6 170.1 L300.0 168.0 L304.4 165.9 L308.8 163.8 L313.2 161.6 L317.6 159.5 L322.0 157.4 L326.4 155.3 L330.8 153.1 L335.2 151.0 L339.6 148.8 L344.0 146.7 L348.4 144.6 L352.8 142.4 L357.2 140.2 L361.6 138.1 L366.0 135.9 L370.4 133.8 L374.8 131.6 L379.2 129.4 L383.6 127.2 L388.0 125.1 L392.4 122.9 L396.8 120.7 L401.2 118.5 L405.6 116.3 L410.0 114.1 L414.4 111.9 L418.8 109.7 L423.2 107.5 L427.6 105.3 L432.0 103.1 L436.4 100.8 L440.8 98.6 L445.2 96.4 L449.6 94.2 L454.0 91.9 L458.4 89.7 L462.8 87.4 L467.2 85.2 L471.6 83.0 L476.0 80.7 L480.4 78.4 L484.8 76.2 L489.2 73.9 L493.6 71.7 L498.0 69.4 L502.4 67.1 L506.8 64.8 L511.2 62.6 L515.6 60.3 L520.0 58.0" fill="none" stroke="#7e22ce" stroke-width="3.4"/>
+    <g stroke="#4b5563" stroke-width="1.4" stroke-dasharray="6 5"><line x1="300" y1="300" x2="300" y2="168"/><line x1="80" y1="168" x2="300" y2="168"/></g>
+    <circle cx="300" cy="168" r="7" fill="#fff" stroke="#7e22ce" stroke-width="3"/>
+    <text x="300" y="366" text-anchor="middle" font-size="14" fill="#4b5563">Cuánta sal admite el agua antes de saturarse, según la temperatura.</text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 370" width="560" height="370" role="img">
+  <title>Tres vasos con iones: el primero con ocho iones hidrógeno y uno hidróxido, el segundo con cuatro de cada uno y el tercero con ocho hidróxido y uno hidrógeno</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <path d="M40 60 L40 258 Q40 278 62 278 L150 278 Q172 278 172 258 L172 60" fill="#f8fafc" stroke="#1f2937" stroke-width="2.6"/>
+    <text x="106" y="310" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">I</text>
+    <circle cx="102" cy="110" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="102" y="114" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="74" cy="106" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="74" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="142" cy="110" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="142" y="114" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="69" cy="153" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="69" y="157" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="76" cy="199" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="76" y="203" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="144" cy="158" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="144" y="162" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="104" cy="205" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="104" y="209" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="139" cy="200" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="139" y="204" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="109" cy="153" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="109" y="157" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <path d="M214 60 L214 258 Q214 278 236 278 L324 278 Q346 278 346 258 L346 60" fill="#f8fafc" stroke="#1f2937" stroke-width="2.6"/>
+    <text x="280" y="310" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">II</text>
+    <circle cx="281" cy="208" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="281" y="212" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="318" cy="152" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="318" y="156" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="250" cy="102" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="250" y="106" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="311" cy="210" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="311" y="214" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="277" cy="98" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="277" y="102" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="314" cy="110" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="314" y="114" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="281" cy="149" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="281" y="153" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="249" cy="200" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="249" y="204" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <path d="M388 60 L388 258 Q388 278 410 278 L498 278 Q520 278 520 258 L520 60" fill="#f8fafc" stroke="#1f2937" stroke-width="2.6"/>
+    <text x="454" y="310" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">III</text>
+    <circle cx="488" cy="108" r="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/>
+    <text x="488" y="112" text-anchor="middle" font-size="10" font-weight="700" fill="#b91c1c">H</text>
+    <circle cx="489" cy="159" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="489" y="163" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="418" cy="198" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="418" y="202" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="454" cy="208" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="454" y="212" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="451" cy="103" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="451" y="107" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="416" cy="99" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="416" y="103" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="490" cy="203" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="490" y="207" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="456" cy="160" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="456" y="164" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <circle cx="417" cy="154" r="15" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+    <text x="417" y="158" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">OH</text>
+    <g font-size="14"><circle cx="120" cy="344" r="11" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.8"/><text x="120" y="348" text-anchor="middle" font-size="9" font-weight="700" fill="#b91c1c">H</text><text x="138" y="349" fill="#111827">ion hidrógeno</text><circle cx="310" cy="344" r="13" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/><text x="310" y="348" text-anchor="middle" font-size="9" font-weight="700" fill="#1d4ed8">OH</text><text x="330" y="349" fill="#111827">ion hidróxido</text></g>
+  </g>
+</svg>

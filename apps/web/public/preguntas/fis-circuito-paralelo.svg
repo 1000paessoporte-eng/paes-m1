@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 356" width="600" height="356" role="img">
+  <title>Circuito de una pila con dos lámparas iguales en ramas separadas</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <path d="M120 70 L480 70" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M120 70 L120 120" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M120 200 L120 290 L480 290" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M480 70 L480 290" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M260 70 L260 140" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M260 184 L260 290" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M380 70 L380 140" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M380 184 L380 290" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <circle cx="260" cy="162" r="22" fill="#fffbeb" stroke="#b45309" stroke-width="2.8"/><line x1="244.6" y1="146.6" x2="275.4" y2="177.4" stroke="#b45309" stroke-width="2.2"/><line x1="244.6" y1="177.4" x2="275.4" y2="146.6" stroke="#b45309" stroke-width="2.2"/><text x="260" y="130" text-anchor="middle" font-size="15" font-weight="600" fill="#111827"></text>
+    <circle cx="380" cy="162" r="22" fill="#fffbeb" stroke="#b45309" stroke-width="2.8"/><line x1="364.6" y1="146.6" x2="395.4" y2="177.4" stroke="#b45309" stroke-width="2.2"/><line x1="364.6" y1="177.4" x2="395.4" y2="146.6" stroke="#b45309" stroke-width="2.2"/><text x="380" y="130" text-anchor="middle" font-size="15" font-weight="600" fill="#111827"></text>
+    <line x1="98" y1="146" x2="142" y2="146" stroke="#1f2937" stroke-width="3.4"/><line x1="109" y1="174" x2="131" y2="174" stroke="#1f2937" stroke-width="6"/><line x1="120" y1="120" x2="120" y2="146" stroke="#1f2937" stroke-width="2.6"/><line x1="120" y1="174" x2="120" y2="200" stroke="#1f2937" stroke-width="2.6"/><text x="86" y="166" text-anchor="end" font-size="15" font-weight="600" fill="#111827">9 V</text>
+    <g font-size="16" font-weight="700" fill="#111827"><text x="292" y="168">L1</text><text x="412" y="168">L2</text></g>
+    <text x="300" y="336" text-anchor="middle" font-size="14" fill="#4b5563">Las dos lámparas son idénticas.</text>
+  </g>
+</svg>

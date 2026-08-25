@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img">
+  <title>Circuito de una pila con dos resistencias conectadas una detrás de la otra y un amperímetro</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <path d="M100 80 L200 80" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M278 80 L440 80" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M515 80 L520 80 L520 280" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M520 280 L360 280" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M320 280 L100 280 L100 200" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M100 120 L100 80" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linejoin="round"/>
+    <rect x="201" y="63" width="76" height="34" rx="4" fill="#fff" stroke="#1d4ed8" stroke-width="2.8"/><text x="239" y="53" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">R1 = 20 Ω</text>
+    <rect x="439" y="63" width="76" height="34" rx="4" fill="#fff" stroke="#1d4ed8" stroke-width="2.8"/><text x="477" y="53" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">R2 = 40 Ω</text>
+    <circle cx="340" cy="280" r="20" fill="#fff" stroke="#1f2937" stroke-width="2.8"/><text x="340" y="287" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">A</text>
+    <line x1="78" y1="146" x2="122" y2="146" stroke="#1f2937" stroke-width="3.4"/><line x1="89" y1="174" x2="111" y2="174" stroke="#1f2937" stroke-width="6"/><line x1="100" y1="120" x2="100" y2="146" stroke="#1f2937" stroke-width="2.6"/><line x1="100" y1="174" x2="100" y2="200" stroke="#1f2937" stroke-width="2.6"/><text x="66" y="166" text-anchor="end" font-size="15" font-weight="600" fill="#111827">12 V</text>
+    <text x="300" y="330" text-anchor="middle" font-size="14" fill="#4b5563">Las dos resistencias están conectadas a la misma pila.</text>
+  </g>
+</svg>

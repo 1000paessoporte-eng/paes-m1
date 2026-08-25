@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img">
+  <title>Dos fuerzas perpendiculares de 80 y 60 newton aplicadas al mismo cuerpo</title>
+  <defs>
+    <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1f2937"/></marker>
+    <marker id="flA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/></marker>
+    <marker id="flR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/></marker>
+    <marker id="flV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#15803d"/></marker>
+    <marker id="flM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7e22ce"/></marker>
+    <marker id="flT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0f766e"/></marker>
+    <marker id="flG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4b5563"/></marker>
+  </defs>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <line x1="60" y1="300" x2="560" y2="300" stroke="#e2e8f0" stroke-width="1.5"/>
+    <line x1="180" y1="40" x2="180" y2="330" stroke="#e2e8f0" stroke-width="1.5"/>
+    <line x1="180" y1="300" x2="420" y2="300" stroke="#1d4ed8" stroke-width="3.4" marker-end="url(#flA)"/>
+    <line x1="180" y1="300" x2="180" y2="120" stroke="#b91c1c" stroke-width="3.4" marker-end="url(#flR)"/>
+    <circle cx="180" cy="300" r="7" fill="#1f2937"/>
+    <g font-size="17" font-weight="700">
+      <text x="300" y="330" text-anchor="middle" fill="#1d4ed8">80 N</text>
+      <text x="164" y="200" text-anchor="end" fill="#b91c1c">60 N</text>
+    </g>
+    <text x="300" y="378" text-anchor="middle" font-size="14" fill="#4b5563">Dos fuerzas perpendiculares aplicadas sobre el mismo cuerpo.</text>
+  </g>
+</svg>

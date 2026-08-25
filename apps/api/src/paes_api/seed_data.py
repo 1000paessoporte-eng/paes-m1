@@ -46016,6 +46016,737 @@ QUESTIONS_CIENCIAS = [
         ],
         imagen="/preguntas/bio-curvas-j-y-s.svg",
     ),
+    # ---------- Física con figura ----------
+    # Mismo criterio que en biología: figuras propias, una por pregunta, y
+    # ninguna pregunta contestable sin mirarla.
+    _q(
+        "cie_movimiento", "medio",
+        "El gráfico muestra la posición de un móvil a lo largo de 8 segundos. "
+        "¿En cuál de los cuatro tramos se mueve más rápido?",
+        "En el tramo R",
+        "En un gráfico de posición contra tiempo la rapidez es la INCLINACIÓN de "
+        "la línea, no su altura. Hay que buscar el tramo más empinado.\n\n"
+        "R sube 60 metros en 2 segundos: 30 m/s. P sube 20 metros en 2 segundos: "
+        "10 m/s. S baja 20 metros en 2 segundos, o sea 10 m/s de vuelta. Y en Q "
+        "la línea es horizontal.\n\n"
+        "La confusión típica es mirar la altura: en S el móvil está a 80 metros, "
+        "más lejos que en ninguna otra parte, pero eso dice dónde está, no qué "
+        "tan rápido va.",
+        [
+            ("En el tramo P", "También sube, pero solo 20 metros en 2 segundos: es tres veces menos empinado que R."),
+            ("En el tramo Q", "La línea es horizontal: la posición no cambia, así que ahí el móvil está detenido."),
+            ("En el tramo S", "Es el único donde la línea baja, y su inclinación es menor que la de R."),
+        ],
+        imagen="/preguntas/fis-posicion-tiempo-tramos.svg",
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "El gráfico muestra la velocidad de un auto durante 8 segundos. ¿Qué "
+        "distancia recorrió en total?",
+        "60 metros",
+        "En un gráfico de velocidad contra tiempo, la distancia recorrida es el "
+        "ÁREA bajo la línea. Es la parte sombreada.\n\n"
+        "Esa área es un trapecio: la base de abajo mide 8 segundos, la de arriba "
+        "4 (el tramo plano, del segundo 2 al 6) y la altura son 10 m/s.\n\n"
+        "$\\frac{(8 + 4)}{2} \\times 10 = 60$ metros.\n\n"
+        "Se puede comprobar por partes: el triángulo de subida da 10 m, el "
+        "rectángulo del medio 40 m y el triángulo de bajada otros 10 m.",
+        [
+            ("80 metros", "Corresponde al rectángulo completo de 8 s por 10 m/s, que ignora que al principio y al final el auto iba más lento."),
+            ("30 metros", "Es la mitad del área: cuenta bien los triángulos pero se olvida del tramo a velocidad constante."),
+            ("10 metros", "Es la velocidad máxima que alcanza, en metros por segundo, no la distancia recorrida."),
+        ],
+        imagen="/preguntas/fis-velocidad-tiempo-area.svg",
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "La figura muestra las posiciones de un carrito fotografiado cada un "
+        "segundo. ¿Qué se puede afirmar de su movimiento?",
+        "Va cada vez más rápido",
+        "Como el tiempo entre foto y foto es siempre el mismo, la separación "
+        "entre dos posiciones seguidas es la distancia recorrida en ese "
+        "segundo.\n\n"
+        "Esas separaciones van creciendo: en cada segundo el carrito avanza más "
+        "que en el anterior. Eso es exactamente ir aumentando la rapidez.\n\n"
+        "Si la rapidez fuera constante, las marcas quedarían igualmente "
+        "espaciadas; si estuviera frenando, se irían juntando.",
+        [
+            ("Se mueve con rapidez constante", "Entonces las marcas estarían todas a la misma distancia unas de otras, y acá se van separando."),
+            ("Va frenando hasta detenerse", "Al frenar, cada segundo avanzaría menos y las marcas se juntarían: acá pasa lo contrario."),
+            ("Se detiene entre una foto y otra", "Si se hubiera detenido, dos marcas seguidas coincidirían en el mismo lugar."),
+        ],
+        imagen="/preguntas/fis-fotos-intervalos.svg",
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "El gráfico muestra la posición de dos móviles, A y B, que avanzan por "
+        "la misma carretera. ¿Qué ocurre a los 8 segundos?",
+        "A alcanza a B, y los dos van en los 80 metros",
+        "Que dos curvas se crucen en un gráfico de posición contra tiempo "
+        "significa que en ese instante los dos móviles están en el MISMO lugar. "
+        "Ahí uno alcanza al otro.\n\n"
+        "El cruce ocurre a los 8 segundos y a los 80 metros: basta leer los dos "
+        "ejes desde el punto donde las líneas se juntan.\n\n"
+        "Antes del cruce B va adelante, porque partió de los 40 metros. Después "
+        "del cruce va adelante A, porque su línea es más empinada: avanza 10 m/s "
+        "contra los 5 m/s de B.",
+        [
+            ("Los dos se detienen y quedan en el mismo lugar", "Para detenerse la línea tendría que quedar horizontal, y las dos siguen subiendo después del cruce."),
+            ("A y B pasan a moverse con la misma rapidez", "La rapidez es la inclinación, y las inclinaciones son distintas en todo el gráfico: nunca se igualan."),
+            ("B empieza a retroceder por la misma carretera", "Retroceder sería que su línea bajara. La de B sigue subiendo, solo que más despacio que la de A."),
+        ],
+        imagen="/preguntas/fis-dos-moviles.svg",
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "La figura muestra las cuatro fuerzas que actúan sobre un bloque de 6 kg "
+        "apoyado en el suelo. ¿Cuál es su aceleración?",
+        "5 m/s² hacia la derecha",
+        "Primero se suman las fuerzas. En la vertical, la normal y el peso valen "
+        "60 N cada una y apuntan al revés: se anulan, y por eso el bloque no "
+        "despega ni se hunde.\n\n"
+        "En la horizontal quedan 45 N a la derecha contra 15 N a la izquierda, "
+        "así que la fuerza neta es $45 - 15 = 30$ N hacia la derecha.\n\n"
+        "Con la segunda ley de Newton, $a = F/m = 30/6 = 5$ m/s², en la misma "
+        "dirección que la fuerza neta.",
+        [
+            ("7,5 m/s² hacia la derecha", "Usó los 45 N sin descontar el roce de 15 N que apunta al otro lado."),
+            ("20 m/s² hacia la derecha", "Sumó las cuatro fuerzas como si todas empujaran para el mismo lado."),
+            ("0 m/s², porque las fuerzas se equilibran", "Se equilibran solo en la vertical. En la horizontal sobran 30 N."),
+        ],
+        imagen="/preguntas/fis-cuerpo-libre-roce.svg",
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre el bloque del plano inclinado actúan las tres fuerzas numeradas. "
+        "¿Cuál de ellas es la fuerza normal?",
+        "La fuerza 2",
+        "La normal es la fuerza con que la superficie empuja al cuerpo apoyado, y "
+        "siempre sale PERPENDICULAR a esa superficie. En un plano inclinado eso "
+        "no es hacia arriba: es hacia arriba inclinado, formando el mismo ángulo "
+        "que el plano con la vertical.\n\n"
+        "La 2 es la única que sale perpendicular al plano, así que es la "
+        "normal.\n\n"
+        "La 1 apunta verticalmente hacia abajo: es el peso, que siempre tira "
+        "hacia el centro de la Tierra por muy inclinado que esté el piso. La 3 va "
+        "paralela a la superficie: es el roce.",
+        [
+            ("La fuerza 1", "Es el peso: apunta verticalmente hacia abajo, sin importar la inclinación del plano."),
+            ("La fuerza 3", "Va paralela a la superficie, no perpendicular: es la fuerza de roce."),
+            ("Ninguna: en un plano inclinado no hay normal", "Mientras el bloque esté apoyado hay normal; lo que cambia es su dirección, que deja de ser vertical."),
+        ],
+        imagen="/preguntas/fis-plano-inclinado.svg",
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Los dos bloques de la figura cuelgan de la misma cuerda. Si se sueltan, "
+        "¿con qué aceleración se mueve el sistema? Usa g = 10 m/s².",
+        "2 m/s²",
+        "Los dos bloques están unidos, así que se mueven juntos: hay que tratarlos "
+        "como un solo cuerpo de $2 + 3 = 5$ kg.\n\n"
+        "La fuerza que mueve el sistema es la diferencia entre los dos pesos, "
+        "porque tiran para lados contrarios: $30 - 20 = 10$ N.\n\n"
+        "Entonces $a = 10/5 = 2$ m/s². El de 3 kg baja y el de 2 kg sube con esa "
+        "misma aceleración.\n\n"
+        "Conviene notar que la aceleración es mucho menor que g: el bloque que "
+        "baja tiene que arrastrar al otro hacia arriba.",
+        [
+            ("10 m/s²", "Es la aceleración de gravedad, la que tendría un cuerpo en caída libre sin nada que lo frene."),
+            ("5 m/s²", "Dividió la diferencia de pesos por la masa del bloque más pesado en vez de por la masa total."),
+            ("6 m/s²", "Usó la suma de los pesos en vez de la diferencia: los dos pesos tiran en sentidos opuestos."),
+        ],
+        imagen="/preguntas/fis-polea-atwood.svg",
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre un cuerpo actúan las fuerzas perpendiculares de la figura. "
+        "¿Cuál es la magnitud de la fuerza resultante?",
+        "100 N",
+        "Dos fuerzas perpendiculares no se suman de frente: forman los catetos de "
+        "un triángulo rectángulo y la resultante es la hipotenusa.\n\n"
+        "$\\sqrt{80^2 + 60^2} = \\sqrt{6400 + 3600} = \\sqrt{10.000} = 100$ N.\n\n"
+        "Es el conocido triángulo 3-4-5 multiplicado por 20. Fíjate en que el "
+        "resultado es MENOR que la suma simple (140 N) y mayor que cualquiera de "
+        "las dos por separado: siempre queda entre esos dos valores.",
+        [
+            ("140 N", "Sumó las dos magnitudes de frente, que solo vale cuando las fuerzas apuntan en la misma dirección."),
+            ("20 N", "Restó las magnitudes, que es lo que corresponde cuando apuntan en direcciones opuestas."),
+            ("70 N", "Promedió las dos fuerzas. La resultante no es un promedio: tiene que ser mayor que cada una."),
+        ],
+        imagen="/preguntas/fis-fuerzas-perpendiculares.svg",
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Un carro se suelta desde W y recorre la pista sin roce. ¿En cuál de los "
+        "puntos marcados alcanza su mayor rapidez?",
+        "En Z",
+        "Sin roce, la suma de energía potencial y cinética se mantiene constante. "
+        "Toda la altura que el carro pierde se convierte en rapidez.\n\n"
+        "Z es el punto más bajo de la pista, así que es donde queda menos energía "
+        "potencial y, por lo tanto, donde hay más cinética.\n\n"
+        "Ojo con X: también está abajo, pero no tanto como Z. Y con W: es el punto "
+        "más alto, donde el carro tiene toda la energía potencial y ninguna "
+        "cinética, porque ahí parte del reposo.",
+        [
+            ("En W", "Es el punto más alto y además donde se suelta: ahí la rapidez es cero."),
+            ("En X", "Está bajo, pero no es el más bajo del recorrido: en Z el carro perdió más altura todavía."),
+            ("En Y", "Es la cima del segundo cerro. El carro vuelve a subir, así que ahí recupera energía potencial y pierde rapidez."),
+        ],
+        imagen="/preguntas/fis-rampa-energia.svg",
+    ),
+    _q(
+        "cie_energia", "medio",
+        "Las barras muestran la energía de un cuerpo que cae sin roce en tres "
+        "instantes. ¿Cuánto vale su energía cinética en el instante 3?",
+        "100 J",
+        "Sin roce la energía total se conserva, y el gráfico lo deja ver: en el "
+        "instante 1 hay 0 + 100 = 100 J, y en el instante 2 hay 60 + 40 = 100 J "
+        "otra vez.\n\n"
+        "En el instante 3 la potencial es 0, así que los 100 J tienen que estar "
+        "todos en forma cinética.\n\n"
+        "Es la idea central de la conservación: la energía no se gasta, cambia de "
+        "forma. La barra que baja y la que sube siempre suman lo mismo.",
+        [
+            ("60 J", "Es el valor de la cinética en el instante 2, cuando todavía quedaba energía potencial por convertir."),
+            ("40 J", "Es la potencial que quedaba en el instante 2, no la cinética del instante 3."),
+            ("0 J", "Sería quedarse quieto justo cuando el cuerpo va más rápido: la que vale 0 en ese instante es la potencial."),
+        ],
+        imagen="/preguntas/fis-barras-energia.svg",
+    ),
+    _q(
+        "cie_energia", "facil",
+        "El péndulo de la figura se suelta en A y oscila sin roce. ¿En qué "
+        "posición su rapidez es máxima?",
+        "En B",
+        "B es el punto más bajo del recorrido, y esa es toda la explicación: es "
+        "donde el péndulo perdió más altura desde que lo soltaron.\n\n"
+        "Al bajar, la energía potencial se transforma en cinética. Como en B la "
+        "altura es la mínima, la cinética es la máxima, y la cinética es la "
+        "energía del movimiento.\n\n"
+        "En A y en C ocurre lo contrario: son los extremos de la oscilación, donde "
+        "el péndulo se detiene un instante antes de devolverse. Ahí la rapidez es "
+        "cero.",
+        [
+            ("En A", "Es donde se suelta: parte del reposo, así que ahí su rapidez vale cero."),
+            ("En C", "Es el otro extremo. Llega con lo justo para alcanzar esa altura y se detiene antes de volver."),
+            ("En A y en C por igual", "Es cierto que en las dos la rapidez vale lo mismo, pero ese valor es cero: son los puntos más lentos, no los más rápidos."),
+        ],
+        imagen="/preguntas/fis-pendulo-posiciones.svg",
+    ),
+    _q(
+        "cie_energia", "medio",
+        "La figura muestra un resorte comprimido que empuja un bloque sobre una "
+        "superficie sin roce. ¿Qué transformación de energía ocurre?",
+        "La energía elástica del resorte se transforma en energía cinética del bloque",
+        "Un resorte comprimido guarda energía por estar deformado: es la energía "
+        "elástica, y depende de cuánto se lo comprimió.\n\n"
+        "Al soltarlo, el resorte recupera su forma y empuja al bloque. Esa energía "
+        "guardada pasa al bloque como movimiento, o sea como energía cinética. Por "
+        "eso en la segunda escena el bloque se aleja con cierta velocidad.\n\n"
+        "Sin roce no se pierde nada en el camino: toda la energía que tenía el "
+        "resorte comprimido termina en el bloque.",
+        [
+            ("La energía cinética del resorte se transforma en energía potencial", "El resorte no se estaba moviendo antes de soltarlo: no tenía energía cinética que transformar."),
+            ("La energía potencial gravitatoria se transforma en elástica", "El bloque no cambia de altura en ningún momento: se mueve en horizontal."),
+            ("La energía se pierde por completo al soltar el resorte", "Si se perdiera, el bloque no se movería. Sin roce no se pierde nada: cambia de forma."),
+        ],
+        imagen="/preguntas/fis-resorte-bloque.svg",
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "En la onda de la figura hay cuatro medidas marcadas. ¿Cuál de ellas "
+        "corresponde a la longitud de onda?",
+        "La medida Q",
+        "La longitud de onda es lo que mide un ciclo completo, y la forma más "
+        "simple de reconocerla es como la distancia entre dos puntos que se "
+        "repiten: de una cresta a la cresta siguiente.\n\n"
+        "Eso es exactamente Q.\n\n"
+        "R también es horizontal, pero va de una cresta al valle siguiente, o sea "
+        "MEDIA longitud de onda. P mide desde la cresta hasta la línea central: "
+        "esa es la amplitud. Y S va de cresta a valle en vertical, que es el doble "
+        "de la amplitud.",
+        [
+            ("La medida P", "Va desde una cresta hasta la línea central: eso es la amplitud, que mide altura y no distancia recorrida."),
+            ("La medida R", "Va de una cresta al valle siguiente, que es solo la mitad de un ciclo completo."),
+            ("La medida S", "Mide de cresta a valle en vertical: es el doble de la amplitud, y sigue siendo una altura."),
+        ],
+        imagen="/preguntas/fis-onda-magnitudes.svg",
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Las ondas M y N de la figura están dibujadas en la misma escala de "
+        "tiempo. ¿Qué diferencia se escucha entre los dos sonidos?",
+        "N se escucha más aguda que M",
+        "En el mismo tramo de tiempo, M completa dos ciclos y N completa cinco. "
+        "Más ciclos en el mismo tiempo es más FRECUENCIA.\n\n"
+        "Y la frecuencia es lo que el oído interpreta como altura del sonido: a "
+        "mayor frecuencia, más agudo. Por eso N suena más aguda.\n\n"
+        "El volumen no entra en esto: depende de la amplitud, y las dos ondas "
+        "están dibujadas con la misma altura. Suenan igual de fuerte, pero una es "
+        "más aguda que la otra.",
+        [
+            ("N se escucha más fuerte que M", "El volumen depende de la amplitud, y las dos ondas tienen exactamente la misma altura."),
+            ("M se escucha más aguda que N", "Es al revés: M completa menos ciclos en el mismo tiempo, así que tiene menor frecuencia."),
+            ("Las dos se escuchan igual", "Tienen la misma amplitud, pero distinta frecuencia: eso se nota como una diferencia de altura del sonido."),
+        ],
+        imagen="/preguntas/fis-dos-ondas.svg",
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "La figura muestra una onda que pasa del medio 1 al medio 2 sin que la "
+        "fuente cambie. ¿Qué magnitud de la onda NO cambió al cruzar?",
+        "La frecuencia",
+        "La frecuencia la impone la fuente: cuántas veces por segundo vibra. El "
+        "medio no puede cambiarla, porque a cada vibración que entra le "
+        "corresponde una que sale.\n\n"
+        "Lo que sí cambia es la rapidez, porque depende del medio, y con ella la "
+        "longitud de onda. En el dibujo se ve: las ondulaciones quedan más "
+        "juntas.\n\n"
+        "Las tres magnitudes están amarradas por $v = \\lambda \\cdot f$. Si f se "
+        "mantiene y v baja, entonces $\\lambda$ tiene que bajar en la misma "
+        "proporción. Eso es lo que se ve dibujado.",
+        [
+            ("La longitud de onda", "Es justamente lo que se ve cambiar: en el medio 2 las ondulaciones quedan más juntas."),
+            ("La rapidez de propagación", "Cambia con el medio, y es la causa de que la longitud de onda cambie."),
+            ("Ninguna: al cambiar de medio cambia todo", "La frecuencia se mantiene siempre, porque la fija la fuente y no el medio."),
+        ],
+        imagen="/preguntas/fis-cambio-de-medio.svg",
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "La figura muestra dos ondas iguales llegando al mismo punto en dos "
+        "casos distintos. ¿Qué ocurre en cada uno?",
+        "En I hay interferencia constructiva y en II, destructiva",
+        "Cuando dos ondas coinciden, sus alturas se suman punto por punto.\n\n"
+        "En el caso I las crestas caen sobre las crestas y los valles sobre los "
+        "valles: las ondas van en fase y la suma da una onda del doble de altura. "
+        "Eso es interferencia constructiva.\n\n"
+        "En el caso II una cresta coincide con un valle. Como una sube tanto como "
+        "la otra baja, la suma da cero en todos los puntos y el resultado es una "
+        "línea recta: interferencia destructiva.\n\n"
+        "La energía no desaparece en II: se redistribuye. En otros puntos del "
+        "espacio las mismas dos ondas se suman.",
+        [
+            ("En I destructiva y en II constructiva", "Es al revés: la que da una onda mayor es la constructiva, y esa es la del caso I."),
+            ("En los dos casos hay interferencia constructiva", "En el caso II el resultado es una línea recta: las ondas se cancelan, no se refuerzan."),
+            ("En los dos casos las ondas se cancelan", "En el caso I el resultado es una onda del doble de altura, así que ahí no se cancela nada."),
+        ],
+        imagen="/preguntas/fis-interferencia.svg",
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "En el circuito de la figura, ¿qué corriente marca el amperímetro?",
+        "0,2 A",
+        "Las dos resistencias están una detrás de la otra, en un único camino: "
+        "eso es una conexión en serie, y ahí las resistencias se suman.\n\n"
+        "$R = 20 + 40 = 60$ Ω.\n\n"
+        "Con la ley de Ohm, $I = V/R = 12/60 = 0{,}2$ A.\n\n"
+        "En serie la corriente es la misma en todo el circuito, así que da lo "
+        "mismo dónde esté el amperímetro: mediría 0,2 A en cualquier punto del "
+        "camino.",
+        [
+            ("0,6 A", "Usó solo la resistencia de 20 Ω. La corriente tiene que atravesar las dos, así que la resistencia total es la suma."),
+            ("0,3 A", "Usó solo la resistencia de 40 Ω, sin sumarle la otra que también está en el camino."),
+            ("720 A", "Multiplicó el voltaje por la resistencia. La ley de Ohm divide: I = V/R."),
+        ],
+        imagen="/preguntas/fis-circuito-serie.svg",
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En el circuito de la figura, la lámpara L1 se quema y deja de conducir. "
+        "¿Qué le ocurre a L2?",
+        "Sigue encendida igual que antes",
+        "Las dos lámparas están en paralelo: cada una tiene su propio camino "
+        "entre los mismos dos puntos del circuito.\n\n"
+        "Si L1 se quema, su rama queda cortada, pero la rama de L2 sigue completa "
+        "y conectada a la pila. Además L2 sigue recibiendo el mismo voltaje que "
+        "antes, porque en paralelo cada rama recibe el voltaje completo de la "
+        "fuente. Por eso alumbra igual.\n\n"
+        "Así están conectadas las ampolletas de una casa: si se quema una, las "
+        "demás siguen funcionando. En serie ocurriría lo contrario.",
+        [
+            ("Se apaga también", "Eso pasaría si estuvieran en serie, compartiendo un único camino. Acá cada una tiene el suyo."),
+            ("Alumbra con la mitad del brillo", "El voltaje que recibe no cambió: en paralelo cada rama recibe el de la fuente completo."),
+            ("Alumbra con el doble de brillo", "No recibe la corriente que ya no pasa por L1: cada rama es independiente de la otra."),
+        ],
+        imagen="/preguntas/fis-circuito-paralelo.svg",
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "¿Cuál es la resistencia equivalente del circuito de la figura?",
+        "20 Ω",
+        "El circuito tiene dos partes y hay que resolver primero la de adentro.\n\n"
+        "R2 y R3 están en paralelo. Para dos resistencias IGUALES en paralelo el "
+        "resultado es la mitad de una: $20/2 = 10$ Ω. Tiene sentido, porque abrir "
+        "un segundo camino le facilita el paso a la corriente.\n\n"
+        "Esos 10 Ω quedan en serie con R1, y en serie se suman: $10 + 10 = 20$ Ω.\n\n"
+        "El error clásico es sumar las tres de frente y llegar a 50 Ω: solo se "
+        "suman directamente las que están en serie.",
+        [
+            ("50 Ω", "Sumó las tres resistencias. Solo se suman las que están en serie; R2 y R3 están en paralelo."),
+            ("10 Ω", "Es el resultado del paralelo entre R2 y R3, pero falta sumarle R1, que está en el camino principal."),
+            ("30 Ω", "Sumó R1 con una sola de las resistencias en paralelo, sin combinar antes las dos ramas."),
+        ],
+        imagen="/preguntas/fis-circuito-mixto.svg",
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "El gráfico muestra el voltaje y la corriente medidos en dos "
+        "resistencias, X e Y. ¿Cuál tiene mayor resistencia y cuánto vale?",
+        "X, con 5 Ω",
+        "En un gráfico de voltaje contra corriente, la resistencia es la "
+        "inclinación de la recta: mientras más empinada, más resistencia, porque "
+        "hace falta más voltaje para conseguir la misma corriente.\n\n"
+        "X es la más empinada. Leyendo un punto cómodo: con 4 A alcanza 20 V, así "
+        "que $R = V/I = 20/4 = 5$ Ω.\n\n"
+        "Y llega a 8 V con esos mismos 4 A: $8/4 = 2$ Ω. Que las dos rectas pasen "
+        "por el origen y sean rectas es lo que dice que ambas cumplen la ley de "
+        "Ohm.",
+        [
+            ("Y, con 2 Ω", "El cálculo de Y está bien, pero es la MENOR de las dos: su recta es la menos empinada."),
+            ("X, con 20 Ω", "Tomó el voltaje sin dividirlo por la corriente. La resistencia es V dividido por I."),
+            ("Las dos tienen la misma, porque las dos son rectas", "Que ambas sean rectas dice que las dos cumplen la ley de Ohm, no que valgan lo mismo: sus inclinaciones son distintas."),
+        ],
+        imagen="/preguntas/fis-grafico-ohm.svg",
+    ),
+    # ---------- Química con figura ----------
+    _q(
+        "cie_atomo", "medio",
+        "El esquema muestra un átomo neutro. ¿Cuántos electrones tiene en su "
+        "último nivel y qué ion tiende a formar?",
+        "Uno, y tiende a formar un ion con carga 1+",
+        "Los electrones se dibujan repartidos en tres niveles: 2 en el primero, 8 "
+        "en el segundo y 1 en el tercero. Ese último es el nivel de valencia y "
+        "tiene un solo electrón.\n\n"
+        "Un átomo es más estable cuando su último nivel queda completo. A este le "
+        "sale mucho más barato SOLTAR ese único electrón que capturar los siete "
+        "que le faltarían para llenar el nivel.\n\n"
+        "Al perder un electrón queda con 11 protones y 10 electrones: una carga "
+        "positiva de más. Por eso forma un ion 1+. Es lo que hacen todos los "
+        "metales de la primera columna de la tabla.",
+        [
+            ("Uno, y tiende a formar un ion con carga 1−", "Para quedar negativo tendría que ganar un electrón. Con uno solo en el último nivel, le conviene soltarlo."),
+            ("Ocho, y tiende a formar un ion con carga 2−", "Ocho es lo que hay en el nivel del medio. El de valencia es el más externo, que tiene uno."),
+            ("Once, y no forma iones", "Once es el total de electrones del átomo, no los de su último nivel."),
+        ],
+        imagen="/preguntas/qui-atomo-bohr.svg",
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "En el esquema de la tabla periódica, ¿cuáles de los elementos marcados "
+        "tienen propiedades químicas parecidas entre sí?",
+        "Q y S",
+        "Las propiedades químicas de un elemento las decide su número de "
+        "electrones de valencia, y eso es justamente lo que comparten los "
+        "elementos de una misma COLUMNA.\n\n"
+        "Q y S están uno debajo del otro en la primera columna, así que tienen la "
+        "misma cantidad de electrones en su último nivel y reaccionan de forma "
+        "parecida.\n\n"
+        "R y T están en columnas distintas y en el otro extremo de la tabla: R "
+        "tiende a capturar un electrón y T, que es un gas noble, ya tiene su "
+        "nivel completo y casi no reacciona.",
+        [
+            ("R y T", "Están en columnas vecinas pero distintas, y se comportan de manera opuesta: uno captura electrones y el otro no reacciona."),
+            ("Q y R", "Están en los extremos opuestos de la misma fila: uno cede electrones con facilidad y el otro los captura."),
+            ("Todos, porque están en la misma tabla", "La tabla agrupa a todos los elementos conocidos, y precisamente los ordena según en qué se parecen y en qué no."),
+        ],
+        imagen="/preguntas/qui-tabla-periodica.svg",
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Los tres núcleos de la figura pertenecen a átomos distintos. ¿Cuáles de "
+        "ellos son isótopos entre sí?",
+        "X e Y",
+        "Lo que define de qué elemento se trata es el número de PROTONES. Dos "
+        "átomos son isótopos cuando tienen los mismos protones y distinta "
+        "cantidad de neutrones.\n\n"
+        "X e Y tienen 6 protones los dos, así que son el mismo elemento; se "
+        "diferencian en que Y tiene un neutrón más. Son isótopos.\n\n"
+        "Z tiene 7 protones: es otro elemento distinto, por mucho que tenga la "
+        "misma cantidad total de partículas que Y.\n\n"
+        "Esa es justamente la trampa: Y y Z tienen 13 partículas cada uno en el "
+        "núcleo, pero eso no los hace parientes.",
+        [
+            ("Y y Z", "Tienen el mismo número total de partículas, pero distinto número de protones: son elementos diferentes."),
+            ("X y Z", "Se diferencian en los protones, que es lo único que no puede cambiar entre isótopos."),
+            ("Los tres, porque tienen la misma cantidad de neutrones", "Los neutrones no son iguales en los tres: X tiene 6, y los otros dos tienen 7."),
+        ],
+        imagen="/preguntas/qui-isotopos.svg",
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "Los tres recipientes contienen partículas distintas. ¿Cuál de ellos "
+        "contiene un compuesto?",
+        "El II",
+        "Un compuesto es una sustancia pura formada por átomos de elementos "
+        "DISTINTOS unidos químicamente, siempre en la misma proporción.\n\n"
+        "El II tiene solo moléculas iguales entre sí, y cada una junta un átomo "
+        "azul con uno amarillo. Eso es un compuesto.\n\n"
+        "El I también es una sustancia pura, pero de un solo tipo de átomo: es un "
+        "elemento. El III tiene átomos de los dos tipos sueltos, sin unirse: es "
+        "una mezcla, y por eso se podrían separar por medios físicos.\n\n"
+        "La diferencia entre II y III es la clave: en el compuesto los átomos "
+        "están unidos; en la mezcla solo están juntos.",
+        [
+            ("El I", "Tiene un solo tipo de átomo: es un elemento, no un compuesto."),
+            ("El III", "Tiene dos tipos de átomos, pero sueltos y sin unirse: es una mezcla."),
+            ("El II y el III", "En el III los átomos no están unidos entre sí, y sin unión química no hay compuesto."),
+        ],
+        imagen="/preguntas/qui-elemento-compuesto-mezcla.svg",
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "El dibujo de la reacción no cumple la conservación de los átomos. ¿Qué "
+        "hay que agregar para que quede correcto?",
+        "Una molécula más de hidrógeno entre los reactivos",
+        "Hay que contar átomo por átomo a cada lado.\n\n"
+        "A la izquierda hay 2 átomos de nitrógeno y 4 de hidrógeno. A la derecha, "
+        "en las dos moléculas de amoníaco, hay 2 de nitrógeno y 6 de hidrógeno.\n\n"
+        "El nitrógeno cuadra, pero faltan 2 átomos de hidrógeno del lado "
+        "izquierdo. Como el hidrógeno viene de a dos, con una molécula más queda "
+        "resuelto: la reacción es $N_2 + 3H_2 \\rightarrow 2NH_3$.\n\n"
+        "Balancear no es inventar átomos: es reconocer cuántas partículas de cada "
+        "reactivo hacen falta, porque en una reacción los átomos se reordenan pero "
+        "ninguno aparece ni desaparece.",
+        [
+            ("Una molécula más de nitrógeno entre los reactivos", "El nitrógeno ya está cuadrado: hay 2 átomos a cada lado."),
+            ("Una molécula más de amoníaco entre los productos", "Empeora la diferencia: agregaría otro nitrógeno y tres hidrógenos más al lado que ya sobra."),
+            ("Nada: la reacción ya está balanceada", "No lo está: hay 4 átomos de hidrógeno a la izquierda y 6 a la derecha."),
+        ],
+        imagen="/preguntas/qui-ecuacion-particulas.svg",
+    ),
+    _q(
+        "cie_estequiometria", "dificil",
+        "Con lo que hay en el matraz y la proporción indicada, ¿cuántas moléculas "
+        "de nitrógeno quedan sin reaccionar?",
+        "Una",
+        "Cada molécula de nitrógeno necesita tres de hidrógeno. Con 9 moléculas de "
+        "hidrógeno alcanza para $9 \\div 3 = 3$ moléculas de nitrógeno.\n\n"
+        "En el matraz hay 4, así que reaccionan 3 y sobra 1.\n\n"
+        "El hidrógeno es el reactivo limitante: se acaba primero y por eso decide "
+        "cuánto producto se forma. El nitrógeno es el reactivo en exceso, y lo que "
+        "sobra de él se queda ahí sin reaccionar por más tiempo que uno "
+        "espere.\n\n"
+        "No basta con mirar cuál hay en menor cantidad: hay 4 de nitrógeno y 9 de "
+        "hidrógeno, y aun así el que limita es el hidrógeno, porque se consume de "
+        "a tres.",
+        [
+            ("Ninguna: reaccionan todas", "Para que reaccionaran las 4 harían falta 12 moléculas de hidrógeno, y solo hay 9."),
+            ("Tres", "Tres son las que SÍ alcanzan a reaccionar. La pregunta es por las que sobran."),
+            ("Cuatro", "Sería el caso si no hubiera hidrógeno suficiente para ninguna, pero hay de sobra para tres."),
+        ],
+        imagen="/preguntas/qui-reactivo-limitante.svg",
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "El gráfico muestra cuánto amoníaco se obtiene al agregar cada vez más "
+        "hidrógeno a la misma cantidad de nitrógeno. ¿Por qué la curva se aplana "
+        "después de los 6 gramos?",
+        "Porque ya se consumió todo el nitrógeno disponible",
+        "Mientras hay nitrógeno esperando, cada gramo de hidrógeno que se agrega "
+        "produce más amoníaco: por eso el primer tramo es una recta que sube.\n\n"
+        "A los 6 gramos de hidrógeno se acaba el nitrógeno. Desde ahí, el "
+        "hidrógeno que se siga agregando no tiene con qué reaccionar y queda "
+        "sobrando en el matraz.\n\n"
+        "El nitrógeno pasa a ser el reactivo limitante, y la meseta del gráfico es "
+        "la forma en que eso se ve: da lo mismo cuánto hidrógeno más se eche, la "
+        "cantidad de producto ya no cambia.",
+        [
+            ("Porque el hidrógeno agregado deja de ser puro", "El gráfico no dice nada sobre la pureza; lo que se agota es el otro reactivo."),
+            ("Porque la reacción se vuelve más lenta con el tiempo", "El gráfico no mide tiempo sino cantidad agregada, y la meseta es total, no una demora."),
+            ("Porque el amoníaco producido se empieza a descomponer", "Si se descompusiera, la curva bajaría en vez de mantenerse plana."),
+        ],
+        imagen="/preguntas/qui-masa-producto.svg",
+    ),
+    _q(
+        "cie_estequiometria", "medio",
+        "La misma reacción, que libera un gas, se hace en un frasco cerrado y en "
+        "uno destapado. ¿Qué marcará la balanza del frasco II al terminar?",
+        "Menos de 120 gramos",
+        "La masa se conserva siempre: los átomos no desaparecen. Lo que cambia es "
+        "qué queda DENTRO del frasco.\n\n"
+        "En el frasco I el gas producido no puede salir, así que todo lo que había "
+        "al principio sigue sobre la balanza: 120 gramos.\n\n"
+        "En el II el gas escapa al aire. Se llevó su masa consigo, y la balanza "
+        "solo pesa lo que queda adentro: menos de 120 gramos.\n\n"
+        "Este experimento es el que confundió a la química durante siglos. La "
+        "conservación de la masa solo se ve cuando el sistema está cerrado; con el "
+        "frasco abierto parece que la materia se perdiera.",
+        [
+            ("Exactamente 120 gramos", "Solo si el gas no pudiera escapar. En el frasco destapado se va, y con él su masa."),
+            ("Más de 120 gramos", "Nada entra al frasco: el gas sale. La masa no puede aumentar."),
+            ("Cero, porque todo se transformó en gas", "Solo una parte se convierte en gas, y en el frasco queda el resto de los productos."),
+        ],
+        imagen="/preguntas/qui-conservacion-masa.svg",
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "Los tres vasos contienen la misma sal disuelta en agua. ¿Cuáles "
+        "disoluciones tienen la misma concentración?",
+        "La I y la III",
+        "La concentración no es cuánta sal hay, sino cuánta sal hay POR CADA "
+        "cantidad de disolución. Hay que comparar las dos cosas juntas.\n\n"
+        "La I tiene 12 gramos en 100 mL. La III tiene 6 gramos en 50 mL, que es lo "
+        "mismo que 12 gramos en 100 mL. Las dos van a 12 g por cada 100 mL.\n\n"
+        "La II tiene 6 gramos en 100 mL: la mitad de concentrada que las otras "
+        "dos, aunque tenga la misma cantidad de sal que la III.\n\n"
+        "Por eso la III sabría igual de salada que la I, y la II bastante menos.",
+        [
+            ("La II y la III", "Tienen la misma cantidad de sal, pero disuelta en volúmenes distintos: la III está al doble de concentración."),
+            ("La I y la II", "Están en el mismo volumen de agua, pero la I tiene el doble de sal."),
+            ("Las tres, porque es la misma sal", "Que sea la misma sal no las hace igual de concentradas: lo que cambia es cuánta hay en cada volumen."),
+        ],
+        imagen="/preguntas/qui-tres-disoluciones.svg",
+    ),
+    _q(
+        "cie_soluciones", "dificil",
+        "Según la curva de solubilidad, a 50 °C se disolvieron 45 gramos de sal "
+        "en 100 gramos de agua. ¿Cómo es esa disolución?",
+        "Insaturada, porque todavía admite más sal",
+        "La curva marca el límite: a 50 °C el agua admite hasta 60 gramos de sal "
+        "por cada 100 de agua. Ese es el punto de saturación a esa "
+        "temperatura.\n\n"
+        "Con 45 gramos se está por debajo de la curva, así que todavía cabe más "
+        "sal: 15 gramos más, para ser exactos. Una disolución así se llama "
+        "insaturada.\n\n"
+        "Si tuviera exactamente 60 estaría saturada, y con más de 60 el exceso no "
+        "se disolvería: quedaría en el fondo del vaso.\n\n"
+        "Conviene fijarse en que la respuesta depende de la temperatura: esos "
+        "mismos 45 gramos a 20 °C, donde el límite es más bajo, no alcanzarían a "
+        "disolverse del todo.",
+        [
+            ("Saturada, porque llegó justo al límite", "El límite a 50 °C son 60 gramos, y hay 45: todavía falta para llegar."),
+            ("Sobresaturada, porque tiene sal de más", "Para eso tendría que pasar los 60 gramos, y está por debajo."),
+            ("Saturada, porque a esa temperatura no cabe más sal", "A 50 °C sí cabe más: la curva sube hasta los 60 gramos."),
+        ],
+        imagen="/preguntas/qui-curva-solubilidad.svg",
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "A la disolución del primer vaso se le agregan 100 mL de agua, como "
+        "muestra la figura. ¿Qué ocurre con la sal y con la concentración?",
+        "La masa de sal no cambia y la concentración baja a la mitad",
+        "Agregar disolvente no saca ni pone soluto: los 12 gramos de sal siguen "
+        "siendo 12 gramos. En el dibujo se ve que la cantidad de puntos es la "
+        "misma en los dos vasos.\n\n"
+        "Lo que cambia es el volumen: pasa de 100 a 200 mL. Como la misma sal "
+        "queda repartida en el doble de líquido, la concentración baja a la "
+        "mitad.\n\n"
+        "Eso es diluir. Es lo que se hace al rebajar un jugo concentrado con agua: "
+        "sigue habiendo la misma cantidad de jugo, pero cada sorbo trae menos.",
+        [
+            ("Tanto la masa de sal como la concentración bajan a la mitad", "La sal no se va a ninguna parte: se sigue viendo la misma cantidad de puntos en el segundo vaso."),
+            ("La masa de sal no cambia y la concentración tampoco", "El volumen se duplicó, y la concentración depende del volumen tanto como de la sal."),
+            ("La masa de sal baja a la mitad y la concentración se mantiene", "Al revés: lo que se mantiene es la sal, y lo que baja es la concentración."),
+        ],
+        imagen="/preguntas/qui-dilucion.svg",
+    ),
+    _q(
+        "cie_soluciones", "medio",
+        "El montaje de la figura sirve para separar una mezcla de dos líquidos. "
+        "¿En qué propiedad se basa la separación?",
+        "En que los dos líquidos hierven a temperaturas distintas",
+        "El matraz se calienta hasta la temperatura de ebullición del componente "
+        "más volátil, o sea el que hierve primero. Solo ese pasa a estado gaseoso "
+        "y sube por el cuello.\n\n"
+        "El tubo inclinado va refrigerado con agua fría: ahí el vapor se enfría, "
+        "vuelve a ser líquido y gotea en el vaso. Lo que se recoge es el "
+        "componente que hervía a menor temperatura, ya separado del otro, que se "
+        "queda en el matraz.\n\n"
+        "El termómetro no es un adorno: mientras destila un componente, la "
+        "temperatura se queda quieta. Cuando empieza a subir de nuevo, es señal de "
+        "que ese componente se acabó.",
+        [
+            ("En que uno de los líquidos es más denso que el otro", "Esa diferencia sirve para separar con un embudo de decantación, no calentando."),
+            ("En que uno de los líquidos se disuelve en agua y el otro no", "La destilación no usa un tercer líquido: separa los dos que ya están en el matraz."),
+            ("En que el calor descompone uno de los líquidos", "El líquido no se descompone: cambia de estado y vuelve a ser el mismo al enfriarse."),
+        ],
+        imagen="/preguntas/qui-destilacion.svg",
+    ),
+    _q(
+        "cie_acidobase", "facil",
+        "Según la escala de la figura, ¿cuál de las sustancias es la más ácida?",
+        "El jugo de limón",
+        "En la escala de pH, mientras MENOR es el número, más ácida es la "
+        "sustancia. Es al revés de lo que sugiere la intuición.\n\n"
+        "El jugo de limón está en pH 2, el valor más bajo de los cinco, así que es "
+        "el más ácido.\n\n"
+        "El agua pura, en 7, es neutra: ni ácida ni básica. El bicarbonato (9) y "
+        "el limpiador (12) están del lado básico, y el limpiador es el más básico "
+        "de todos, que no es lo mismo que ser el más ácido.\n\n"
+        "El café, en 5, también es ácido, pero bastante menos que el limón.",
+        [
+            ("El limpiador de pisos", "Está en pH 12, el valor más ALTO: es el más básico de todos, que es lo contrario."),
+            ("El agua destilada", "Está justo en 7: no es ácida ni básica, es el punto neutro de la escala."),
+            ("El café negro", "Es ácido, pero está en pH 5: el jugo de limón, en 2, lo es bastante más."),
+        ],
+        imagen="/preguntas/qui-escala-ph.svg",
+    ),
+    _q(
+        "cie_acidobase", "dificil",
+        "La curva muestra cómo cambia el pH al agregar base a un ácido. ¿Qué "
+        "representa el punto P?",
+        "El punto de equivalencia, donde el ácido quedó neutralizado",
+        "Al principio la curva es casi plana: cada gota de base que entra se "
+        "consume neutralizando ácido, así que el pH casi no se mueve.\n\n"
+        "P está en la mitad del salto brusco, en pH 7 y a los 25 mL. Ahí se agregó "
+        "exactamente la cantidad de base necesaria para consumir todo el ácido: es "
+        "el punto de equivalencia.\n\n"
+        "Después del salto la curva vuelve a aplanarse, pero arriba: ya no queda "
+        "ácido que neutralizar y la base que se sigue agregando solo hace subir el "
+        "pH.\n\n"
+        "El salto es tan vertical porque cerca del final queda poquísimo ácido, y "
+        "las últimas gotas cambian el pH de golpe. Por eso una titulación se hace "
+        "gota a gota justo ahí.",
+        [
+            ("El momento en que se empezó a agregar la base", "Eso es el comienzo de la curva, en el extremo izquierdo, cuando el pH todavía es 1."),
+            ("El punto donde la base agregada es el doble del ácido", "En el punto de equivalencia las cantidades se corresponden exactamente, no van al doble."),
+            ("El momento en que la disolución se vuelve ácida", "La disolución YA era ácida desde el principio: en P deja de serlo."),
+        ],
+        imagen="/preguntas/qui-titulacion.svg",
+    ),
+    _q(
+        "cie_acidobase", "medio",
+        "Los tres vasos muestran los iones presentes en tres disoluciones. ¿Cuál "
+        "de ellas es básica?",
+        "La III",
+        "Lo que decide si una disolución es ácida o básica es cuál de los dos "
+        "iones predomina.\n\n"
+        "En la III hay 8 iones hidróxido y solo 1 de hidrógeno: manda el "
+        "hidróxido, y eso es una disolución básica.\n\n"
+        "En la I ocurre lo contrario, con 8 iones hidrógeno contra 1 de hidróxido: "
+        "es ácida. Y en la II hay 4 de cada uno, así que está equilibrada: es "
+        "neutra, como el agua pura.\n\n"
+        "Fíjate en que en los tres vasos aparecen los dos tipos de ion. Nunca hay "
+        "solo uno: lo que cambia es la proporción entre ellos.",
+        [
+            ("La I", "Tiene ocho iones hidrógeno contra uno de hidróxido: esa es justamente la más ácida."),
+            ("La II", "Tiene la misma cantidad de cada ion, así que es neutra."),
+            ("Ninguna, porque las tres tienen iones hidrógeno", "Todas las disoluciones acuosas tienen los dos iones; lo que define el carácter es cuál predomina."),
+        ],
+        imagen="/preguntas/qui-iones-disoluciones.svg",
+    ),
+    _q(
+        "cie_acidobase", "dificil",
+        "A tres muestras se les agregó fenolftaleína, con el resultado de la "
+        "figura. ¿Qué se puede afirmar con seguridad?",
+        "Que la II tiene pH mayor que 8 y las otras dos, menor",
+        "La fenolftaleína cambia de color a partir de pH 8: bajo ese valor es "
+        "incolora y sobre él se pone rosada.\n\n"
+        "La II está rosada, así que su pH pasó de 8: es básica.\n\n"
+        "Con la I y la III solo se puede afirmar que su pH es menor que 8. Y ahí "
+        "hay que ser cuidadoso: eso incluye tanto a las disoluciones ácidas como "
+        "al agua neutra, que también deja la fenolftaleína incolora. El indicador "
+        "no distingue entre pH 3 y pH 7.\n\n"
+        "Un solo indicador nunca da el pH exacto: da un lado de una frontera. Para "
+        "afinar hace falta otro indicador con un viraje distinto, o un pHmetro.",
+        [
+            ("Que la II es básica y que la I y la III son ácidas", "La I y la III podrían ser neutras: el agua pura también deja la fenolftaleína incolora."),
+            ("Que la II tiene pH 8 exacto y las otras dos, menos", "El rosado aparece de pH 8 hacia arriba, así que podría ser 9, 11 o cualquier valor mayor."),
+            ("Que la I y la III son exactamente la misma sustancia", "Comparten el color con este indicador, pero eso solo dice que las dos están bajo pH 8."),
+        ],
+        imagen="/preguntas/qui-fenolftaleina.svg",
+    ),
 ]
 
 

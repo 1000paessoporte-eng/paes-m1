@@ -108,6 +108,14 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
 # el banco marcó como correcta. Es la única forma de que un error de cálculo no
 # pase silenciosamente a un estudiante que lo va a estudiar como verdad.
 COMPROBACIONES_CIENCIAS: dict[str, str] = {
+    # Preguntas con figura: el dato sale del dibujo, pero la aritmética
+    # que lleva a la respuesta se recalcula igual que en las demás.
+    "¿Qué distancia recorrió en total?": str((8 + 4) // 2 * 10),
+    "cuatro fuerzas que actúan sobre un bloque de 6 kg": str((45 - 15) // 6),
+    "cuelgan de la misma cuerda": str((3 * 10 - 2 * 10) // (3 + 2)),
+    "magnitud de la fuerza resultante": str(int(sqrt(80**2 + 60**2))),
+    "qué corriente marca el amperímetro": str(12 / (20 + 40)),
+    "resistencia equivalente del circuito de la figura": str(10 + 20 // 2),
     # Movimiento
     "Un tren viaja a 90 km/h": str(round(90 / 3.6)),
     "se deja caer desde el reposo": str(10 * 3),
