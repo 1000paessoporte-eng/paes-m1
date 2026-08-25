@@ -62,8 +62,8 @@ export function CodigoCurso({ codigo }: { codigo: string }) {
         className="mt-3 text-sm text-muted"
       >
         Dáselo a tu curso. Cada alumno crea su cuenta, entra en{" "}
-        <span className="text-foreground">Mi curso</span> y escribe estas seis
-        letras.
+        <span className="text-foreground">Mi curso</span> y escribe estos seis
+        caracteres.
       </motion.p>
     </div>
   );

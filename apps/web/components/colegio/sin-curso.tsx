@@ -11,7 +11,11 @@ import { actualizarUsuarioLocal, getClientToken } from "@/lib/auth";
  *
  * El orden importa. Sumarse va primero y ocupa el espacio grande porque por
  * cada profesor que crea un curso hay treinta alumnos que solo tienen que
- * escribir seis letras. Crear un curso es la acción de una persona por
+ * escribir seis caracteres. Se dice "caracteres" y no "letras" porque el
+ * alfabeto incluye los dígitos 2-9: el 83% de los códigos lleva al menos uno,
+ * y un alumno que recibe "9J2SCB" y lee "seis letras" duda justo en el
+ * momento en que se está incorporando un curso entero. Crear un curso es la
+ * acción de una persona por
  * establecimiento, y vive abajo, plegada.
  */
 
@@ -76,7 +80,7 @@ export function SinCurso() {
     <div className="mx-auto max-w-lg">
       <h1 className="text-2xl font-semibold">Mi curso</h1>
       <p className="mt-1 text-sm text-muted">
-        Si tu colegio usa 1000paes, tu profesor tiene un código de seis letras.
+        Si tu colegio usa 1000paes, tu profesor tiene un código de seis caracteres.
       </p>
 
       <form
