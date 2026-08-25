@@ -65,6 +65,15 @@ SKILL_NODES = [
     # medidas de posición y reglas de las probabilidades). Por eso el nodo vive
     # en SKILL_NODES_M2. Sus preguntas siguen visibles para quien practica M2,
     # porque el banco de M2 es M1 ∪ M2.
+    # El eje Probabilidad y Estadística del temario 2027 tiene tres unidades:
+    # "Representación de datos a través de tablas y gráficos", "Medidas de
+    # posición" y "Reglas de las probabilidades". El árbol solo tenía dos
+    # nodos, y las medidas de posición vivían dentro del de tendencia central
+    # y dispersión, que es otra cosa: cuartiles, percentiles y diagrama de
+    # cajón describen DÓNDE cae un dato en la distribución, no cuánto se
+    # aparta del centro. Las once preguntas ya existían; lo que faltaba era el
+    # lugar donde practicarlas.
+    ("prob_posicion", "Medidas de posición", "probabilidad", 2, ["prob_estadistica_desc"]),
     ("prob_reglas", "Reglas de probabilidad", "probabilidad", 2, ["prob_estadistica_desc"]),
 ]
 
@@ -81,7 +90,19 @@ SKILL_NODES_M2 = [
     ("num_logaritmos", "Logaritmos", "numeros", 3, ["num_potencias_raices"]),
     # Álgebra y funciones
     ("alg_sistemas_casos", "Sistemas 2x2: única, infinitas o ninguna solución", "algebra", 4, ["alg_sistemas"]),
-    ("alg_funcion_potencia", "Función potencia", "algebra", 5, ["alg_funciones"]),
+    # El temario 2027 llama a esta unidad "Función potencia, exponencial y
+    # logarítmica" y pide el gráfico y los problemas de las TRES. El nodo se
+    # llamaba solo "Función potencia", así que el alumno no tenía cómo saber
+    # que las otras dos entran en la prueba. El banco todavía no tiene
+    # preguntas de exponencial ni logarítmica: el nombre correcto deja el
+    # hueco a la vista en vez de esconderlo bajo un título más corto.
+    (
+        "alg_funcion_potencia",
+        "Función potencia, exponencial y logarítmica",
+        "algebra",
+        5,
+        ["alg_funciones"],
+    ),
     ("alg_funciones_trig", "Funciones trigonométricas: seno y coseno", "algebra", 5, ["geo_trigonometria"]),
     # Geometría
     ("geo_homotecia", "Homotecia de figuras planas", "geometria", 3, ["geo_transformaciones"]),
@@ -3907,7 +3928,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "En un diagrama de cajón, ¿qué fracción de los datos queda dentro de la caja?",
         "La mitad",
         "Los bordes de la caja son el primer y el tercer cuartil.\n\n"
@@ -11382,7 +11403,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "En un diagrama de cajón, la caja va de 20 a 35 y la línea interior está en 24. ¿Qué se puede afirmar?",
         "El 50% central de los datos está entre 20 y 35, y la mediana es 24",
         "Cada parte del diagrama de cajón representa un cuarto de los datos.\n\n"
@@ -15894,7 +15915,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "facil",
+        "prob_posicion", "facil",
         "En un conjunto de datos, ¿con qué medida coincide siempre el segundo cuartil (Q2)?",
         "Con la mediana",
         "Los cuartiles parten el conjunto ordenado en cuatro grupos con la misma cantidad de datos.\n\n"
@@ -15952,7 +15973,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "¿Cuál es el primer cuartil (Q1) de los datos 2, 4, 6, 8, 10, 12, 14 y 16?",
         "5",
         "Q1 es la mediana de la mitad inferior de los datos.\n\n"
@@ -15967,7 +15988,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "¿Cuál es el tercer cuartil (Q3) de los datos 2, 4, 6, 8, 10, 12, 14 y 16?",
         "13",
         "Q3 es la mediana de la mitad superior de los datos.\n\n"
@@ -15982,7 +16003,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "En un conjunto de datos, el primer cuartil es 12 y el tercer cuartil es 28. ¿Cuál es el rango intercuartílico?",
         "16",
         "El rango intercuartílico mide la dispersión del 50% central de los datos.\n\n"
@@ -15997,7 +16018,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "Un diagrama de cajón muestra estos valores: mínimo 5, Q1 = 10, mediana 15, Q3 = 22 y máximo 30. ¿Qué porcentaje de los datos está entre 10 y 22?",
         "50%",
         "Los cuartiles reparten los datos en cuatro grupos iguales, cada uno con el 25%.\n\n"
@@ -16027,7 +16048,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "medio",
+        "prob_posicion", "medio",
         "En un conjunto de 200 datos, el percentil 30 corresponde al valor 45. ¿Cuántos datos son menores o iguales a 45?",
         "60",
         "El percentil indica qué porcentaje de los datos queda por debajo de un valor.\n\n"
@@ -16132,7 +16153,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "dificil",
+        "prob_posicion", "dificil",
         "Un diagrama de cajón muestra: mínimo 4, Q1 = 9, mediana 14, Q3 = 17 y máximo 28. ¿Qué porcentaje de los datos es mayor que 17?",
         "25%",
         "Cada cuartil marca un corte del 25% de los datos.\n\n"
@@ -16178,7 +16199,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "dificil",
+        "prob_posicion", "dificil",
         "En un conjunto de 20 datos ordenados, ¿cuántos datos son menores o iguales al percentil 25?",
         "5",
         "El percentil 25 deja por debajo la cuarta parte de los datos.\n\n"
@@ -16284,7 +16305,7 @@ QUESTIONS += [
         ],
     ),
     _q(
-        "prob_estadistica_desc", "dificil",
+        "prob_posicion", "dificil",
         "En un diagrama de cajón, el bigote izquierdo va de 2 a 8 y el bigote derecho va de 20 a 35. ¿Qué se puede afirmar sobre la distribución de los datos?",
         "El 25% superior está más disperso que el 25% inferior",
         "Cada bigote representa un cuarto de los datos, y su largo muestra cuánto se estiran.\n\n"
@@ -51006,6 +51027,75 @@ LESSONS: dict[str, dict] = {
             "Elevar al cuadrado todo el producto en vez de solo el radio, o "
             "usar el diámetro como si fuera radio. En $\\pi r^2 h$ el exponente "
             "afecta únicamente a $r$."
+        ),
+    },
+    # Unidad "Medidas de posición" del temario 2027. Va aparte de tendencia
+    # central a propósito: una medida de posición dice DÓNDE cae un dato en la
+    # distribución, no cuánto se aparta del centro, y confundirlas es el error
+    # que la prueba busca.
+    "prob_posicion": {
+        "intro": (
+            "Los cuartiles y los percentiles no resumen los datos en un "
+            "número: los parten en tramos y dicen en qué tramo cae cada uno. "
+            "Es la diferencia entre \"cuánto se gana en promedio\" y \"cuánta "
+            "gente gana menos que yo\"."
+        ),
+        "theory": (
+            "**Los cuartiles parten los datos ordenados en cuatro grupos "
+            "iguales.** $Q_1$ deja por debajo al 25% de los datos, $Q_2$ al "
+            "50% y $Q_3$ al 75%.\n\n"
+            "**$Q_2$ es siempre la mediana.** No es un dato nuevo: es el mismo "
+            "valor con otro nombre, y la prueba lo pregunta.\n\n"
+            "**Cómo se calculan**: se ordenan los datos y se parte por la "
+            "mitad. $Q_1$ es la mediana de la mitad de abajo y $Q_3$ la de la "
+            "mitad de arriba.\n\n"
+            "**Percentiles**: la misma idea con cien tramos. Estar en el "
+            "percentil 80 significa que el 80% de los datos está por debajo. "
+            "Es exactamente lo que dice tu puntaje PAES respecto del resto.\n\n"
+            "**Rango intercuartil** ($Q_3 - Q_1$): cuánto ocupa la mitad "
+            "central de los datos. Sirve para medir dispersión sin que un "
+            "valor extremo la infle.\n\n"
+            "**Diagrama de cajón**: dibuja cinco números —mínimo, $Q_1$, "
+            "mediana, $Q_3$ y máximo—. La caja va de $Q_1$ a $Q_3$, así que "
+            "**dentro de la caja está siempre la mitad de los datos**, sea "
+            "ancha o angosta."
+        ),
+        "example_statement": (
+            "Ocho estudiantes registraron cuántos minutos estudiaron ayer: "
+            "12, 15, 18, 21, 24, 27, 30 y 33. Calcula $Q_1$, la mediana y "
+            "$Q_3$."
+        ),
+        "example_steps": [
+            {
+                "accion": "Compruebo que estén ordenados. Lo están, de 12 a 33, y son ocho datos.",
+                "porque": "Todas las medidas de posición se calculan sobre los datos ORDENADOS: sin ordenar, el valor del medio no es el del medio.",
+            },
+            {
+                "accion": "Mediana: con ocho datos no hay uno central, así que promedio los dos del medio, 21 y 24. $Q_2 = \\frac{21+24}{2} = 22{,}5$.",
+                "porque": "Con una cantidad par de datos la mediana cae entre dos, y se toma el punto medio entre ellos.",
+            },
+            {
+                "accion": "$Q_1$: es la mediana de la mitad de abajo, 12, 15, 18 y 21. $Q_1 = \\frac{15+18}{2} = 16{,}5$.",
+                "porque": "El primer cuartil deja por debajo al 25% de todos los datos, que es la mitad de la mitad de abajo.",
+            },
+            {
+                "accion": "$Q_3$: la mediana de la mitad de arriba, 24, 27, 30 y 33. $Q_3 = \\frac{27+30}{2} = 28{,}5$.",
+                "porque": "El tercer cuartil deja por debajo al 75%: es el mismo procedimiento aplicado a la mitad superior.",
+            },
+            {
+                "accion": "Rango intercuartil: $28{,}5 - 16{,}5 = 12$ minutos.",
+                "porque": "La mitad central del curso estudia dentro de una franja de doce minutos. Es la dispersión sin contar los extremos.",
+            },
+        ],
+        "common_error": (
+            "Confundir una medida de posición con una de tendencia central. "
+            "$Q_2$ y la mediana son el mismo número, pero $Q_1$ y $Q_3$ no "
+            "tienen nada que ver con el promedio: se calculan ordenando y "
+            "partiendo, no sumando y dividiendo.\n\n"
+            "Y en el diagrama de cajón, creer que una caja ancha significa "
+            "\"más datos\". Dentro de la caja está siempre el 50% de los "
+            "datos: lo que cambia con el ancho es cuánto se dispersan, no "
+            "cuántos hay."
         ),
     },
     "prob_estadistica_desc": {
