@@ -21391,6 +21391,283 @@ QUESTIONS += [
 
 PASSAGES = [
     {
+        "key": "reventa_entradas",
+        "title": "La entrada que valía más de lo que costaba",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes. Los mecanismos descritos corresponden a "
+            "prácticas habituales del mercado de espectáculos; los ejemplos son "
+            "genéricos y no aluden a ningún evento real."
+        ),
+        "body": (
+            "**La entrada que valía más de lo que costaba**\n\n"
+            "Un concierto se agota en once minutos. Esa misma tarde aparecen "
+            "entradas en sitios de reventa al triple del precio, y esa misma tarde "
+            "alguien las compra. La reacción habitual es indignarse con el "
+            "revendedor, que es una reacción comprensible y explica poco. Conviene "
+            "preguntarse otra cosa: por qué existe esa diferencia de precio y quién "
+            "la produjo.\n\n"
+            "**La brecha**\n\n"
+            "La reventa aparece cuando hay una distancia entre lo que cuesta una "
+            "entrada y lo que alguien está dispuesto a pagar por ella. Si el precio "
+            "oficial fuera el máximo que alguien pagaría, revender no dejaría "
+            "margen y el negocio no existiría.\n\n"
+            "Esa distancia no aparece por descuido. Los organizadores podrían, en "
+            "muchos casos, cobrar bastante más y vender igual. No lo hacen por "
+            "razones que tienen sentido desde su punto de vista: un precio muy alto "
+            "daña la relación con el público, deja fuera a los seguidores de "
+            "siempre, se ve mal en la prensa y complica la próxima gira. Vender a "
+            "un precio por debajo del máximo posible es, en ese sentido, una "
+            "decisión deliberada.\n\n"
+            "El problema es que esa decisión crea un excedente que queda flotando, "
+            "y un excedente flotando lo toma alguien. La reventa es, antes que un "
+            "delito, el mecanismo por el cual esa diferencia termina en manos "
+            "distintas de las que la crearon.\n\n"
+            "**Por qué se agota en once minutos**\n\n"
+            "A la brecha se suma un problema de velocidad. Cuando la demanda supera "
+            "largamente a la oferta, el reparto lo decide quién llega primero, y "
+            "ahí una persona con un teléfono compite contra sistemas automáticos "
+            "que completan formularios en milésimas de segundo.\n\n"
+            "Esa carrera no la pierde el fanático por falta de interés ni de "
+            "dedicación. La pierde porque no es una carrera entre personas. Y el "
+            "resultado se lee mal desde afuera: parece que las entradas «volaron», "
+            "cuando en buena parte cambiaron de manos antes de que la mayoría "
+            "alcanzara a intentarlo.\n\n"
+            "**Las respuestas y lo que cada una cuesta**\n\n"
+            "Se han ensayado varias soluciones y ninguna es gratis.\n\n"
+            "*Entrada nominativa.* La entrada queda a nombre de quien la compró y "
+            "se exige documento al entrar. Reduce la reventa de manera efectiva y "
+            "trae dos costos: complica regalar una entrada o venderla cuando de "
+            "verdad no se puede asistir, y hace más lento el acceso al recinto.\n\n"
+            "*Reventa oficial con tope.* La plataforma habilita un mercado interno "
+            "donde se puede revender, pero no por encima del precio original. "
+            "Ordena el mercado y elimina el fraude, y no elimina la brecha: si la "
+            "entrada vale más, alguien va a intentar capturar esa diferencia por "
+            "fuera.\n\n"
+            "*Precio dinámico.* El precio sube automáticamente con la demanda hasta "
+            "acercarse a lo que la gente está dispuesta a pagar. Es la única medida "
+            "que ataca la brecha en su origen, y el resultado incomoda a todo el "
+            "mundo: la reventa desaparece porque ya no hay margen, y lo que antes "
+            "ganaba el revendedor ahora lo paga igual el público, solo que a la "
+            "boletería.\n\n"
+            "**Dos precisiones**\n\n"
+            "La primera es que no toda reventa es especulación. Una persona que "
+            "compró y no puede ir necesita vender su entrada, y una regla que lo "
+            "impide del todo convierte un imprevisto en una pérdida. Las soluciones "
+            "que funcionan distinguen entre revender una entrada y comprar "
+            "cincuenta para revenderlas.\n\n"
+            "La segunda es que el fraude es un problema aparte y no debería "
+            "mezclarse con este. Vender una entrada falsa o la misma entrada a tres "
+            "personas no es reventa: es estafa, y se combate con las herramientas "
+            "con que se combate cualquier estafa. Confundir las dos discusiones "
+            "sirve para prohibir la reventa apelando al miedo al fraude, cuando el "
+            "fraude seguiría existiendo igual.\n\n"
+            "**Lo que en realidad se discute**\n\n"
+            "Puesto así, el debate cambia de forma. La pregunta no es si la reventa "
+            "es moralmente aceptable, sino quién se queda con la diferencia entre "
+            "lo que cuesta una entrada y lo que vale.\n\n"
+            "Hay tres candidatos y ninguna respuesta obvia. Puede quedársela el "
+            "organizador, subiendo el precio, y entonces el público paga más pero "
+            "el dinero va a quien produjo el espectáculo. Puede quedársela el "
+            "revendedor, que no aporta nada al evento pero asume el riesgo de "
+            "comprar algo que quizá no venda. O puede quedársela el comprador "
+            "afortunado que alcanzó a entrar al sitio, y en ese caso el reparto lo "
+            "decide la velocidad de conexión, que no es un criterio más justo que "
+            "los otros dos: es solo uno que no se anuncia.\n\n"
+            "Eso último es lo que suele omitirse. Un sistema donde las entradas se "
+            "agotan en minutos ya está repartiendo un beneficio escaso con un "
+            "criterio, aunque nadie lo haya escrito. La discusión sobre la reventa "
+            "es, en el fondo, una discusión sobre si ese criterio es el que "
+            "queremos."
+        ),
+    },
+    {
+        "key": "campeonato_bases",
+        "title": "Bases del campeonato intercursos",
+        "kind": "discontinuo",
+        "source_note": (
+            "Bases originales de 1000paes, de uso educativo. El liceo, los cursos y el "
+            "campeonato son ficticios y no corresponden a ninguna competencia real."
+        ),
+        "body": (
+            "**BASES DEL CAMPEONATO INTERCURSOS DE BABYFÚTBOL**\n\n"
+            "*Documento de uso educativo. El liceo, los cursos y el campeonato son "
+            "ficticios.*\n\n"
+            "**1. Quiénes juegan**\n\n"
+            "Participan los dieciséis cursos de primero a cuarto medio, con un "
+            "equipo por curso. Cada jugador debe ser alumno regular del curso que "
+            "representa y **puede inscribirse en un solo equipo durante todo el "
+            "campeonato**, aunque se cambie de curso a mitad de año.\n\n"
+            "La nómina se entrega antes del primer partido y admite hasta diez "
+            "jugadores. Se puede incorporar un jugador nuevo hasta la tercera "
+            "fecha, siempre que el equipo no haya completado los diez.\n\n"
+            "**2. Cómo se juega**\n\n"
+            "| Etapa | Formato |\n"
+            "|---|---|\n"
+            "| Fase de grupos | cuatro grupos de cuatro, todos contra todos |\n"
+            "| Clasifican | los dos primeros de cada grupo |\n"
+            "| Cuartos, semifinal y final | eliminación directa |\n"
+            "| Duración | dos tiempos de quince minutos |\n"
+            "| Jugadores en cancha | cinco por equipo, incluido el arquero |\n\n"
+            "**3. Puntaje y desempates**\n\n"
+            "| Resultado | Puntos |\n"
+            "|---|---|\n"
+            "| Victoria | 3 |\n"
+            "| Empate | 1 |\n"
+            "| Derrota | 0 |\n"
+            "| No presentarse | 0, y se registra 3-0 en contra |\n\n"
+            "Si dos o más equipos terminan la fase de grupos con los mismos puntos, "
+            "se aplican los siguientes criterios **en este orden y hasta que uno "
+            "los separe**:\n\n"
+            "*(a)* diferencia entre goles a favor y en contra;\n"
+            "*(b)* goles a favor;\n"
+            "*(c)* resultado del partido jugado entre ellos;\n"
+            "*(d)* menor cantidad de tarjetas recibidas;\n"
+            "*(e)* sorteo ante los dos capitanes.\n\n"
+            "El orden importa tanto como la lista. Un equipo que le ganó a otro "
+            "puede quedar abajo si tiene peor diferencia de goles, porque el "
+            "resultado entre ambos recién se mira en el tercer criterio.\n\n"
+            "**4. Disciplina**\n\n"
+            "| Situación | Consecuencia |\n"
+            "|---|---|\n"
+            "| Tarjeta amarilla | advertencia; dos en un mismo partido equivalen a roja |\n"
+            "| Tarjeta roja | expulsión del partido y suspensión de la fecha siguiente |\n"
+            "| Tres amarillas acumuladas en fechas distintas | suspensión de una fecha |\n"
+            "| Agresión física | suspensión del resto del campeonato |\n\n"
+            "Las tarjetas amarillas acumuladas **se borran al terminar la fase de "
+            "grupos**; las suspensiones pendientes, no: si un jugador queda "
+            "suspendido en la última fecha del grupo, cumple esa suspensión en "
+            "cuartos de final.\n\n"
+            "**5. No presentarse**\n\n"
+            "Un equipo que no se presenta con al menos cuatro jugadores dentro de "
+            "los diez minutos posteriores a la hora fijada pierde el partido por "
+            "3-0. Si un mismo equipo no se presenta **dos veces**, queda excluido "
+            "del campeonato y todos sus resultados se anulan, incluidos los "
+            "partidos que haya ganado.\n\n"
+            "Esa anulación es la razón por la que la organización insiste en avisar "
+            "con anticipación cuando un curso no podrá jugar: un equipo excluido a "
+            "mitad del grupo cambia la tabla de los otros tres.\n\n"
+            "**6. Reclamos**\n\n"
+            "Los reclamos se presentan por escrito al profesor a cargo, firmados "
+            "por el capitán, **antes de que termine el día del partido**. Un "
+            "reclamo presentado después no se revisa, aunque tenga razón. No se "
+            "aceptan reclamos sobre decisiones arbitrales de hecho —si la pelota "
+            "entró o no, si hubo falta o no—, solo sobre la aplicación de estas "
+            "bases.\n\n"
+            "**7. Premios**\n\n"
+            "Se premia al campeón, al segundo lugar, al goleador y al equipo con "
+            "menos tarjetas de todo el campeonato. Este último premio no considera "
+            "a los equipos excluidos ni a los que no completaron sus partidos.\n\n"
+            "**8. Lo que estas bases no regulan**\n\n"
+            "No fijan el uso de la cancha fuera del campeonato, que se rige por el "
+            "reglamento del liceo. No regulan la vestimenta más allá de exigir que "
+            "los equipos se distingan entre sí, y para eso la organización dispone "
+            "de petos. Y no contemplan la suspensión por lluvia: si un partido no "
+            "puede jugarse, la organización fija nueva fecha dentro de la misma "
+            "semana, y si eso no es posible, el partido se da por empatado."
+        ),
+    },
+    {
+        "key": "ruido_ciudad",
+        "title": "El único contaminante que se va solo",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto original de 1000paes, elaborado a partir de la descripción corriente "
+            "de los efectos del ruido ambiental y de los criterios con que suele "
+            "regularse."
+        ),
+        "body": (
+            "**El único contaminante que se va solo**\n\n"
+            "Un sábado a las ocho de la mañana, alguien empieza a perforar un muro "
+            "dos departamentos más allá. A la misma hora, en otra casa, una "
+            "autopista deja un zumbido continuo que sus habitantes dejaron de oír "
+            "hace años. Si se midieran las dos situaciones con un instrumento, "
+            "podrían arrojar cifras parecidas. Como experiencias no se parecen en "
+            "nada, y esa distancia entre lo que se mide y lo que se sufre es el "
+            "problema central de este asunto.\n\n"
+            "**Lo que hace el ruido**\n\n"
+            "Conviene empezar por descartar la idea de que el ruido es apenas una "
+            "molestia. La pérdida de audición por exposición prolongada es su "
+            "efecto más conocido y no es el más frecuente. Lo que ocurre mucho "
+            "antes es otra cosa: interrupciones del sueño que la persona no llega a "
+            "recordar, dificultad para sostener la atención en tareas que la "
+            "requieren, y una activación del organismo parecida a la de un "
+            "sobresalto, repetida muchas veces al día.\n\n"
+            "El detalle importante es que el sueño no se defiende. Una persona "
+            "puede acostumbrarse a un ruido en el sentido de dejar de notarlo —el "
+            "zumbido de la autopista— y seguir teniendo, cada noche, los mismos "
+            "despertares breves que fragmentan su descanso. Acostumbrarse, en este "
+            "caso, describe lo que pasa en la conciencia y no lo que pasa en el "
+            "cuerpo.\n\n"
+            "**Por qué medirlo no basta**\n\n"
+            "Las normas sobre ruido fijan límites en niveles sonoros, casi siempre "
+            "promediados durante un período. Es la única manera práctica de "
+            "fiscalizar, y deja afuera justamente lo que más molesta.\n\n"
+            "Un zumbido constante y una sucesión de golpes pueden promediar lo "
+            "mismo y producir efectos muy distintos, porque lo que interrumpe el "
+            "sueño o la concentración no es el nivel sino el cambio: la irrupción, "
+            "el golpe que no se esperaba, el silencio entre uno y otro que impide "
+            "instalarse en ninguna parte. Un promedio, por definición, borra esa "
+            "diferencia.\n\n"
+            "**Un contaminante sin rastro**\n\n"
+            "Hay una segunda dificultad, y es de prueba. Una mancha en un río se "
+            "queda ahí; el humo deja partículas que se pueden recoger. El ruido, en "
+            "cambio, desaparece por completo en el instante en que cesa.\n\n"
+            "Eso convierte cualquier reclamo en una carrera contra el tiempo. Para "
+            "acreditarlo hay que medirlo mientras ocurre, y quien fiscaliza no vive "
+            "en el edificio: llega después, cuando la fiesta terminó, cuando el "
+            "taller cerró, cuando el camión ya pasó. El vecino que reclama queda en "
+            "la posición incómoda de describir algo que ya no existe, y su "
+            "descripción suena, inevitablemente, a exageración.\n\n"
+            "**La parte que no es física**\n\n"
+            "Hay además un componente que las mediciones no capturan y que conviene "
+            "nombrar sin usarlo como excusa. A igual nivel sonoro, un ruido molesta "
+            "más cuando quien lo padece no tiene control sobre él, cuando no puede "
+            "anticiparlo y cuando lo atribuye a un descuido ajeno.\n\n"
+            "Es la razón por la que la propia fiesta no molesta y la del vecino sí, "
+            "aunque el instrumento marque lo mismo. Reconocerlo no le quita "
+            "realidad al problema: la molestia y sus efectos ocurren igual. Lo que "
+            "muestra es que dos situaciones con el mismo número pueden requerir "
+            "respuestas distintas, y que avisar con anticipación —una obra que "
+            "informa sus horarios— cambia efectivamente la experiencia sin bajar un "
+            "solo decibel.\n\n"
+            "**Dónde conviene intervenir**\n\n"
+            "Las medidas que funcionan actúan sobre la fuente o sobre el camino, y "
+            "casi nunca sobre quien recibe.\n\n"
+            "Sobre la fuente: horarios para las faenas ruidosas, exigencias a las "
+            "maquinarias, límites a los sistemas de amplificación. Sobre el camino: "
+            "barreras acústicas junto a las autopistas, pavimentos que reducen el "
+            "ruido de rodadura, ventanas y muros con mejor aislación en las "
+            "edificaciones nuevas. Sobre el receptor solo quedan los tapones para "
+            "los oídos, que sirven para quien los usa y no resuelven nada para el "
+            "resto del barrio.\n\n"
+            "El orden no es casual. Actuar sobre la fuente beneficia a todos los "
+            "afectados a la vez; actuar sobre el receptor traslada el costo y el "
+            "esfuerzo a quien no produjo el problema.\n\n"
+            "**Dos advertencias**\n\n"
+            "La primera es que una ciudad ruidosa no es una ciudad enferma. Las "
+            "ciudades suenan, y exigir silencio en una es tan improductivo como "
+            "exigirle a un río que no lleve sedimento. El objetivo razonable no es "
+            "el silencio sino proteger momentos y lugares determinados: la noche, "
+            "los recintos hospitalarios, las salas de clases. Una norma que "
+            "persigue toda fuente por igual se vuelve inaplicable y termina no "
+            "aplicándose a ninguna.\n\n"
+            "La segunda es que el ruido no se reparte parejo, y ahí conviene mirar "
+            "antes de opinar. Las viviendas más expuestas suelen ser las más "
+            "cercanas a autopistas, terminales y talleres, y son también las que "
+            "menos posibilidades tienen de aislarse: cambiar las ventanas de una "
+            "casa cuesta dinero. Quien puede pagar aislación deja de escuchar el "
+            "problema, lo que reduce, de paso, la cantidad de personas con voz "
+            "pública interesadas en resolverlo.\n\n"
+            "Queda una observación sobre por qué esto avanza tan lento. El ruido no "
+            "deja víctimas identificables ni un antes y un después que se pueda "
+            "fotografiar. Nadie puede señalar qué noche exacta perdió por el "
+            "zumbido de la autopista, aunque hayan sido cientos. Un daño repartido "
+            "en miles de interrupciones diminutas es difícil de contar, y lo que no "
+            "se cuenta bien rara vez llega a discutirse en serio."
+        ),
+    },
+    {
         "key": "segundo_lugar",
         "title": "El segundo lugar",
         "kind": "literario",
@@ -28543,6 +28820,655 @@ def _ql(
 
 
 QUESTIONS_LECTORA = [
+    # ---------- 'La entrada que valía más de lo que costaba' ----------
+    _ql(
+        "reventa_entradas", "lec_localizar", "facil",
+        "Según la lectura, ¿cuándo aparece la reventa?",
+        "Cuando el precio queda bajo lo que alguien pagaría",
+        "La reventa necesita un margen, y ese margen es la distancia «entre lo que "
+        "cuesta una entrada y lo que alguien está dispuesto a pagar por ella».\nEl "
+        "emisor lo comprueba por el lado contrario: si el precio oficial fuera el "
+        "máximo que alguien pagaría, «revender no dejaría margen y el negocio no "
+        "existiría».\nDe ahí que el texto trate la reventa como una consecuencia y "
+        "no como el punto de partida del problema.",
+        [
+            ("Cuando los organizadores cobran demasiado caro", "Ocurre al revés: aparece cuando el precio queda por debajo."),
+            ("Cuando el recinto tiene pocas localidades disponibles", "El tamaño del recinto no es lo que crea el margen."),
+            ("Cuando la venta se hace por internet y no presencial", "El canal de venta no es lo que define su existencia."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_localizar", "facil",
+        "Según la lectura, ¿por qué los organizadores no cobran el máximo posible?",
+        "Por su relación con el público y la prensa",
+        "El emisor enumera razones que «tienen sentido desde su punto de vista»: un "
+        "precio muy alto «daña la relación con el público, deja fuera a los "
+        "seguidores de siempre, se ve mal en la prensa y complica la próxima "
+        "gira».\nPor eso insiste en que la brecha «no aparece por "
+        "descuido».\nVender por debajo del máximo posible es una decisión "
+        "deliberada, y es justamente esa decisión la que crea el excedente que "
+        "después alguien captura.",
+        [
+            ("Porque la ley les impide superar cierto valor", "El texto no menciona ningún tope legal al precio."),
+            ("Porque no saben cuánto está dispuesta a pagar la gente", "El emisor supone que podrían cobrar más y vender igual."),
+            ("Porque los costos del espectáculo son bajos", "Los costos de producción no entran en la explicación."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_localizar", "medio",
+        "Según la lectura, ¿qué costos tiene la entrada nominativa?",
+        "Complica regalarla y hace más lento el acceso",
+        "El emisor reconoce primero su eficacia: reduce la reventa «de manera "
+        "efectiva».\nY enseguida enumera lo que cuesta: dificulta «regalar una "
+        "entrada o venderla cuando de verdad no se puede asistir», y vuelve más "
+        "lento el ingreso al recinto porque hay que revisar documentos.\nEs el "
+        "mismo tratamiento que da a las otras dos medidas: ninguna es gratis.",
+        [
+            ("Aumenta el precio final de cada entrada", "El texto no le atribuye un efecto sobre el precio."),
+            ("Obliga a vender toda la boletería por internet", "El canal de venta no cambia con esta medida."),
+            ("Deja el fraude sin ninguna herramienta de control", "El fraude se trata aparte y con sus propias herramientas."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_localizar", "medio",
+        "Según la lectura, ¿qué distingue al precio dinámico de las otras medidas?",
+        "Que ataca la brecha en su origen",
+        "El precio dinámico sube automáticamente con la demanda «hasta acercarse a "
+        "lo que la gente está dispuesta a pagar».\nEs «la única medida que ataca la "
+        "brecha en su origen»: al desaparecer el margen, desaparece el negocio de "
+        "revender.\nY el emisor no lo presenta como la solución ideal. Su resultado "
+        "«incomoda a todo el mundo», porque lo que antes ganaba el revendedor "
+        "«ahora lo paga igual el público, solo que a la boletería».",
+        [
+            ("Que elimina la reventa sin costo para nadie", "El público termina pagando más, según el propio texto."),
+            ("Que reduce el precio cuando hay poca demanda", "La lectura describe el alza; no menciona rebajas."),
+            ("Que impide comprar más de una entrada por persona", "Ese límite no forma parte de esta medida."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_localizar", "facil",
+        "Según la lectura, ¿qué diferencia hay entre reventa y fraude?",
+        "Vender una entrada falsa ya es una estafa",
+        "El emisor los separa con cuidado porque suelen mezclarse: vender una "
+        "entrada falsa o la misma entrada a tres personas «no es reventa: es "
+        "estafa».\nY el fraude «se combate con las herramientas con que se combate "
+        "cualquier estafa», sin necesidad de discutir la reventa.\nAdvierte además "
+        "para qué sirve confundirlas: permite «prohibir la reventa apelando al "
+        "miedo al fraude, cuando el fraude seguiría existiendo igual».",
+        [
+            ("La reventa siempre incluye entradas falsas", "El texto sostiene exactamente lo contrario."),
+            ("El fraude solo ocurre en la reventa oficial", "La reventa oficial con tope, según el texto, elimina el fraude."),
+            ("La reventa es legal y el fraude también", "El emisor trata la estafa como un delito, no como algo equivalente."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_interpretar", "facil",
+        "¿Qué quiere decir el emisor al afirmar que la carrera por las entradas «no "
+        "es una carrera entre personas»?",
+        "Que compiten sistemas automáticos con compradores",
+        "Cuando la demanda supera largamente a la oferta, el reparto lo decide "
+        "quién llega primero.\nY en esa llegada «una persona con un teléfono "
+        "compite contra sistemas automáticos que completan formularios en milésimas "
+        "de segundo».\nDe ahí que el emisor descarte las explicaciones que culpan "
+        "al comprador: la pierde «porque no es una carrera entre personas», no por "
+        "falta de interés ni de dedicación.",
+        [
+            ("Que el público no se esfuerza lo suficiente", "El emisor descarta expresamente esa lectura."),
+            ("Que las entradas se sortean entre los inscritos", "No hay sorteo: decide quién llega primero."),
+            ("Que los organizadores eligen a los compradores", "El reparto no lo decide el organizador."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_interpretar", "medio",
+        "¿Qué implica que la brecha «no aparece por descuido»?",
+        "Que el excedente lo crea una decisión propia",
+        "Si el precio bajo fuera un error de cálculo, bastaría con corregirlo.\nEl "
+        "emisor sostiene que no lo es: los organizadores «podrían, en muchos casos, "
+        "cobrar bastante más y vender igual», y eligen no hacerlo por razones de "
+        "imagen y de relación con su público.\nEso cambia el reparto de "
+        "responsabilidades. El excedente que el revendedor captura fue creado por "
+        "quien vendió, y por eso el texto puede afirmar que la reventa es «el "
+        "mecanismo por el cual esa diferencia termina en manos distintas de las que "
+        "la crearon».",
+        [
+            ("Que los organizadores calculan mal el precio", "El texto insiste en que es una decisión deliberada."),
+            ("Que la reventa se produce por falta de control", "El control aparece después, al evaluar las medidas."),
+            ("Que el público paga menos de lo que corresponde", "El emisor no fija cuál sería el precio correcto."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué la reventa oficial con tope no elimina el "
+        "problema?",
+        "Porque la brecha sigue estando ahí",
+        "Esa medida ordena el mercado y elimina el fraude, y esos logros el emisor "
+        "los reconoce.\nLo que no toca es el margen: si la entrada vale más que su "
+        "precio, «alguien va a intentar capturar esa diferencia por fuera».\nEs la "
+        "diferencia con el precio dinámico, que sí actúa sobre el origen. Las "
+        "medidas que regulan la reventa administran el síntoma; solo una interviene "
+        "en la causa.",
+        [
+            ("Porque el tope es demasiado alto", "El tope es el precio original: no hay margen sobre él."),
+            ("Porque las plataformas cobran comisiones", "Las comisiones no se mencionan en el texto."),
+            ("Porque nadie revende al precio original", "El texto no afirma que ese mercado quede vacío."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_interpretar", "dificil",
+        "¿Por qué el emisor sostiene que la velocidad de conexión «no es un "
+        "criterio más justo» que los otros?",
+        "Porque reparte lo escaso sin haberlo declarado",
+        "El emisor pone tres candidatos a quedarse con la diferencia: el "
+        "organizador, el revendedor y el comprador que alcanzó a entrar al "
+        "sitio.\nEl tercero suele verse como el resultado natural, y el texto "
+        "muestra que también es un criterio: ahí «el reparto lo decide la velocidad "
+        "de conexión».\nLo que lo distingue de los otros dos no es ser mejor ni "
+        "peor, sino pasar inadvertido: es «solo uno que no se anuncia».",
+        [
+            ("Porque favorece siempre a los revendedores", "Ese es otro de los candidatos, y el texto los separa."),
+            ("Porque los organizadores lo eligieron a propósito", "El emisor señala que nadie lo escribió como criterio."),
+            ("Porque depende del precio que se haya fijado", "Depende de quién llega primero, no del precio."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_interpretar", "dificil",
+        "¿Qué distinción propone el emisor para regular la reventa sin perjudicar a "
+        "cualquiera?",
+        "Entre vender una entrada y comprar cincuenta",
+        "El emisor advierte que «no toda reventa es especulación».\nQuien compró y "
+        "no puede ir necesita vender, y una regla que lo impida del todo «convierte "
+        "un imprevisto en una pérdida».\nPor eso sostiene que las soluciones que "
+        "funcionan distinguen «entre revender una entrada y comprar cincuenta para "
+        "revenderlas»: el criterio no es la operación en sí, sino la escala y el "
+        "propósito con que se hace.",
+        [
+            ("Entre comprar por internet y comprar en boletería", "El canal no es lo que separa un caso del otro."),
+            ("Entre entradas nominativas y entradas al portador", "Eso corresponde a una de las medidas, no a la distinción."),
+            ("Entre espectáculos agotados y espectáculos con cupos", "La distinción es sobre quién revende, no sobre el evento."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor descarta la indignación con el revendedor al "
+        "comienzo?",
+        "Para correr la pregunta hacia el origen del margen",
+        "El emisor no defiende al revendedor: dice que indignarse es «comprensible» "
+        "y que «explica poco».\nCon eso descarta la vía más disponible y abre la "
+        "que le interesa: «por qué existe esa diferencia de precio y quién la "
+        "produjo».\nTodo el texto responde esa pregunta, y por eso puede terminar "
+        "sosteniendo que la discusión de fondo no es moral sino sobre el reparto de "
+        "un excedente.",
+        [
+            ("Para defender la actividad de los revendedores", "No la defiende: la explica y la ubica en un sistema."),
+            ("Para responsabilizar a los compradores del alza", "Los compradores no aparecen como responsables."),
+            ("Para anunciar que la reventa debería prohibirse", "El texto no propone prohibirla."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor al evaluar las tres medidas que describe?",
+        "Ecuánime, pues a cada una le anota su costo",
+        "Ninguna sale ilesa y ninguna queda descartada.\nDe la entrada nominativa "
+        "reconoce que reduce la reventa y anota que complica regalar y demora el "
+        "acceso; de la reventa oficial, que ordena y elimina el fraude pero deja "
+        "intacta la brecha; del precio dinámico, que es el único que ataca el "
+        "origen y que traslada el costo al público.\nLa frase que abre la sección "
+        "fija ese criterio de antemano: «Se han ensayado varias soluciones y "
+        "ninguna es gratis».",
+        [
+            ("Escéptica, pues considera que ninguna sirve", "Reconoce logros concretos en las tres."),
+            ("Entusiasta, pues recomienda el precio dinámico", "Señala que su resultado incomoda a todo el mundo."),
+            ("Neutral, pues se limita a describirlas", "No solo las describe: evalúa qué cuesta cada una."),
+        ],
+    ),
+    _ql(
+        "reventa_entradas", "lec_evaluar", "dificil",
+        "¿Qué sostiene el emisor al cerrar diciendo que ya se reparte «con un "
+        "criterio, aunque nadie lo haya escrito»?",
+        "Que no elegir también es una manera de elegir",
+        "Un sistema donde las entradas se agotan en minutos parece no haber "
+        "decidido nada: simplemente ocurrió.\nEl emisor muestra que ahí ya hay un "
+        "reparto en curso, hecho por la velocidad de conexión, y que el hecho de no "
+        "haberlo declarado no lo vuelve neutral.\nCon eso reformula el asunto por "
+        "última vez: la discusión sobre la reventa es «una discusión sobre si ese "
+        "criterio es el que queremos», y no sobre si conviene tener criterio o no "
+        "tenerlo.",
+        [
+            ("Que las entradas deberían sortearse entre todos", "El sorteo no aparece como propuesta en el texto."),
+            ("Que el criterio actual es el más justo posible", "Sostiene que no es más justo que los otros dos."),
+            ("Que la reventa desaparecerá por sí sola", "El texto explica por qué persiste mientras haya brecha."),
+        ],
+    ),
+    # ---------- 'Bases del campeonato intercursos' ----------
+    _ql(
+        "campeonato_bases", "lec_localizar", "facil",
+        "Según las bases, ¿cuántos puntos otorga un empate?",
+        "Un punto",
+        "La tabla del punto 3 reparte tres puntos por victoria, uno por empate y "
+        "ninguno por derrota.\nHay además una cuarta fila que no corresponde a un "
+        "resultado deportivo: no presentarse deja cero puntos y registra un 3-0 en "
+        "contra.\nEsa distinción importa para la diferencia de goles, que es el "
+        "primer criterio de desempate.",
+        [
+            ("Tres puntos", "Tres son los puntos de una victoria."),
+            ("Ningún punto", "Eso corresponde a la derrota y a no presentarse."),
+            ("Depende del grupo", "El puntaje es el mismo en los cuatro grupos."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_localizar", "facil",
+        "Según las bases, ¿cuántos jugadores admite la nómina de cada equipo?",
+        "Hasta diez jugadores",
+        "La nómina se entrega antes del primer partido y admite hasta diez.\nSe "
+        "puede incorporar a alguien más «hasta la tercera fecha, siempre que el "
+        "equipo no haya completado los diez».\nNo debe confundirse con los cinco "
+        "jugadores en cancha, que es cuántos juegan a la vez, ni con los cuatro "
+        "mínimos para no perder por no presentarse.",
+        [
+            ("Hasta cinco jugadores", "Cinco es la cantidad que juega en cancha, incluido el arquero."),
+            ("Hasta dieciséis jugadores", "Dieciséis son los cursos que participan."),
+            ("No hay tope de jugadores", "Las bases fijan un máximo de diez."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_localizar", "medio",
+        "Según las bases, ¿cuál es el primer criterio de desempate?",
+        "La diferencia de goles",
+        "Los cinco criterios se aplican en orden y hasta que uno separe a los "
+        "equipos.\nEl primero es la diferencia entre goles a favor y en contra; "
+        "después vienen los goles a favor, el resultado del partido entre ellos, la "
+        "menor cantidad de tarjetas y, por último, el sorteo ante los dos "
+        "capitanes.\nLas bases advierten expresamente que ese orden «importa tanto "
+        "como la lista».",
+        [
+            ("El partido entre ellos", "Ese es el tercer criterio, no el primero."),
+            ("Los goles a favor", "Es el segundo, y se aplica solo si la diferencia no separa."),
+            ("El sorteo entre capitanes", "Es el último recurso, cuando los cuatro anteriores fallan."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_localizar", "medio",
+        "Según las bases, ¿qué ocurre si un equipo no se presenta dos veces?",
+        "Queda excluido y se anula todo",
+        "La primera inasistencia cuesta el partido por 3-0. La segunda tiene un "
+        "efecto distinto y mucho mayor.\nEl equipo «queda excluido del campeonato y "
+        "todos sus resultados se anulan, incluidos los partidos que haya "
+        "ganado».\nPor eso la organización pide avisar con anticipación: la "
+        "anulación no castiga solo al ausente, altera la tabla de los tres equipos "
+        "restantes de su grupo.",
+        [
+            ("Pierde ambos partidos por tres a cero", "Eso ocurre con la primera inasistencia; la segunda excluye."),
+            ("Se le descuentan tres puntos de la tabla", "Las bases no contemplan descuentos de puntos."),
+            ("Debe pagar una multa a la organización", "No hay multas de ningún tipo en estas bases."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_localizar", "facil",
+        "Según las bases, ¿hasta cuándo se puede presentar un reclamo?",
+        "Antes de que termine el día del partido",
+        "El plazo es el mismo día y no admite excepciones: «Un reclamo presentado "
+        "después no se revisa, aunque tenga razón».\nAdemás debe ser por escrito, "
+        "dirigido al profesor a cargo y firmado por el capitán.\nEsa combinación de "
+        "plazo corto y forma estricta es lo que permite resolver antes de que se "
+        "juegue la fecha siguiente.",
+        [
+            ("Hasta la fecha siguiente del calendario", "El plazo vence el mismo día del partido."),
+            ("Dentro de los diez minutos posteriores al pitazo", "Los diez minutos son el margen para presentarse a jugar."),
+            ("En cualquier momento del campeonato", "Un reclamo tardío no se revisa aunque tenga razón."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_interpretar", "facil",
+        "Según las bases, ¿por qué el orden de los criterios importa tanto como la "
+        "lista?",
+        "Porque el partido entre ambos se mira tercero",
+        "Los criterios no se ponderan entre sí: se aplican uno tras otro y el "
+        "primero que separa decide.\nEso produce un resultado que a mucha gente le "
+        "parece injusto y las bases anticipan: «Un equipo que le ganó a otro puede "
+        "quedar abajo si tiene peor diferencia de goles».\nEl enfrentamiento "
+        "directo, que suele considerarse la prueba más concluyente, recién entra en "
+        "juego cuando los dos primeros criterios empataron.",
+        [
+            ("Porque los criterios se aplican todos juntos", "Se aplican en secuencia, hasta que uno separe."),
+            ("Porque el sorteo puede adelantarse si hay acuerdo", "El sorteo es siempre el último criterio."),
+            ("Porque la diferencia de goles se calcula al final", "Es justamente lo primero que se mira."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_interpretar", "medio",
+        "Un jugador recibe dos tarjetas amarillas en un mismo partido. Según las "
+        "bases, ¿qué ocurre?",
+        "Equivalen a roja y pierde la fecha siguiente",
+        "La tabla del punto 4 establece que dos amarillas en un mismo partido "
+        "equivalen a una roja.\nY la roja trae dos consecuencias, no una: expulsión "
+        "del partido en curso y suspensión de la fecha siguiente.\nEs un caso "
+        "distinto del de las tres amarillas acumuladas en fechas distintas, que "
+        "también suspende una fecha pero no expulsa de ningún partido.",
+        [
+            ("Solo queda advertido para el resto del torneo", "La advertencia corresponde a una amarilla aislada."),
+            ("Se suma a la cuenta de tres acumuladas", "Esa cuenta es para amarillas en fechas distintas."),
+            ("Queda suspendido el resto del campeonato", "Esa sanción está reservada a la agresión física."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_interpretar", "medio",
+        "Un jugador queda suspendido en la última fecha del grupo. Según las bases, "
+        "¿cuándo cumple la sanción?",
+        "En cuartos de final",
+        "Las bases separan dos cosas que terminan la fase de grupos de manera "
+        "distinta.\nLas amarillas acumuladas se borran; las suspensiones "
+        "pendientes, no: «si un jugador queda suspendido en la última fecha del "
+        "grupo, cumple esa suspensión en cuartos de final».\nLa lógica es que una "
+        "tarjeta acumulada es un aviso, mientras que una suspensión ya es una "
+        "sanción impuesta, y una sanción no caduca por cambiar de etapa.",
+        [
+            ("No la cumple: se borran las tarjetas", "Lo que se borra son las amarillas acumuladas, no las suspensiones."),
+            ("En la primera fecha del año siguiente", "El campeonato no se prolonga al año siguiente."),
+            ("En la final, si su equipo llega", "La cumple en el primer partido posterior, que es cuartos."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_interpretar", "dificil",
+        "Dos equipos terminan con los mismos puntos: A le ganó a B, pero B tiene "
+        "mejor diferencia de goles. Según las bases, ¿quién clasifica?",
+        "B, porque la diferencia se mira antes",
+        "El caso está diseñado para chocar con la intuición, y las bases lo "
+        "resuelven sin ambigüedad.\nEl primer criterio es la diferencia entre goles "
+        "a favor y en contra, y ahí B ya queda arriba. Como el criterio separó a "
+        "los equipos, la lista se detiene y no se llega a mirar el partido entre "
+        "ambos.\nEs exactamente el ejemplo que las propias bases anticipan al "
+        "advertir sobre el orden: ganarle a alguien no garantiza quedar por encima "
+        "de él.",
+        [
+            ("A, porque le ganó en el partido directo", "Ese criterio es el tercero y no llega a aplicarse."),
+            ("Se define por sorteo entre los capitanes", "El sorteo es el quinto criterio, tras agotar los cuatro anteriores."),
+            ("Pasan los dos, por estar empatados", "Solo clasifican los dos primeros de cada grupo."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_interpretar", "dificil",
+        "¿Por qué la organización insiste en avisar cuando un curso no podrá jugar?",
+        "Porque una exclusión cambia la tabla",
+        "La anulación de resultados no afecta solo al equipo excluido.\nSi un "
+        "equipo se va a mitad del grupo, los partidos que ganó y perdió "
+        "desaparecen, y con ellos los puntos y los goles que esos partidos le "
+        "dieron a los demás. Las bases lo dicen así: «un equipo excluido a mitad "
+        "del grupo cambia la tabla de los otros tres».\nAvisar antes permite "
+        "reprogramar o reordenar el grupo, en vez de corregir hacia atrás lo que ya "
+        "se jugó.",
+        [
+            ("Porque el arbitraje se contrata por partido", "Las bases no mencionan la contratación de árbitros."),
+            ("Porque los petos deben repartirse antes", "Los petos aparecen a propósito de la vestimenta."),
+            ("Porque el reclamo vence el mismo día", "Ese plazo rige para los reclamos, no para las inasistencias."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_evaluar", "medio",
+        "¿Con qué finalidad las bases precisan qué reclamos no se aceptan?",
+        "Para separar el arbitraje de las bases",
+        "Las bases distinguen dos tipos de discusión que suelen confundirse en una "
+        "cancha.\nLas decisiones de hecho —«si la pelota entró o no, si hubo falta "
+        "o no»— quedan fuera de revisión. Lo que sí se puede reclamar es «la "
+        "aplicación de estas bases»: una nómina mal inscrita, una suspensión mal "
+        "contada, un desempate mal resuelto.\nCon esa línea, el reclamo se vuelve "
+        "verificable contra un documento y deja de ser la palabra de un capitán "
+        "contra la de un árbitro.",
+        [
+            ("Para desalentar la presentación de reclamos", "Establecen un procedimiento para presentarlos, no para evitarlos."),
+            ("Para exigir que los firme el capitán", "Esa exigencia es de forma y aparece aparte."),
+            ("Para fijar el plazo de presentación", "El plazo se fija en la misma sección, pero es otra regla."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_evaluar", "dificil",
+        "¿Qué revela que el premio al equipo con menos tarjetas excluya a los "
+        "equipos que no completaron sus partidos?",
+        "Que no se premie por haber jugado menos",
+        "El premio mide una conducta sostenida a lo largo del campeonato, y quien "
+        "jugó menos partidos tuvo menos ocasiones de recibir tarjetas.\nSin esa "
+        "exclusión, un equipo excluido por no presentarse dos veces podría terminar "
+        "ganando el premio al juego limpio, que es exactamente el resultado que las "
+        "bases quieren evitar.\nLa regla muestra un cuidado con el diseño del "
+        "incentivo: un criterio razonable puede producir un ganador absurdo si no "
+        "se acota a quiénes se aplica.",
+        [
+            ("Que los excluidos ya fueron sancionados", "La exclusión es una sanción; el premio se acota por otra razón."),
+            ("Que ese premio importa menos que el título", "Las bases no jerarquizan los premios entre sí."),
+            ("Que las tarjetas se borran en la fase final", "Lo que se borra son las amarillas acumuladas de la fase de grupos."),
+        ],
+    ),
+    _ql(
+        "campeonato_bases", "lec_evaluar", "dificil",
+        "¿Qué criterio ordena la sección sobre lo que estas bases no regulan?",
+        "Remitir a otras reglas o resolver por defecto",
+        "Los tres asuntos que quedan fuera no se dejan sueltos: cada uno recibe una "
+        "salida.\nEl uso de la cancha «se rige por el reglamento del liceo»; la "
+        "vestimenta se reduce a una exigencia mínima y la organización dispone de "
+        "petos; y la lluvia tiene una regla de último recurso, que es dar el "
+        "partido por empatado si no hay fecha disponible.\nCon eso la sección "
+        "cumple una función distinta de la de advertir vacíos: cierra el documento "
+        "sin dejar ninguna situación sin respuesta.",
+        [
+            ("Enumerar los vacíos que hay que corregir", "No los presenta como vacíos pendientes: les da salida."),
+            ("Advertir que el campeonato podría suspenderse", "La suspensión por lluvia se resuelve, no se anuncia como amenaza."),
+            ("Recordar quién manda dentro de la cancha", "La autoridad en cancha no se discute en esta sección."),
+        ],
+    ),
+    # ---------- 'El único contaminante que se va solo' ----------
+    _ql(
+        "ruido_ciudad", "lec_localizar", "facil",
+        "Según la lectura, ¿cuál es el efecto más frecuente del ruido?",
+        "Interrupciones del sueño y de la atención",
+        "El emisor pone la pérdida de audición en su lugar: es el efecto «más "
+        "conocido y no es el más frecuente».\nLo que ocurre mucho antes son "
+        "«interrupciones del sueño que la persona no llega a recordar, dificultad "
+        "para sostener la atención» y una activación del organismo parecida a la de "
+        "un sobresalto.\nEsa corrección es la que justifica todo lo que viene: si "
+        "el daño fuera solo auditivo, bastaría con medir la intensidad.",
+        [
+            ("La pérdida de audición permanente", "El texto la señala como el efecto más conocido, no el más frecuente."),
+            ("El aumento de los accidentes de tránsito urbano", "Los accidentes no se mencionan en la lectura."),
+            ("La irritación pasajera mientras dura", "El emisor descarta que el ruido sea apenas una molestia."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_localizar", "facil",
+        "Según la lectura, ¿cómo fijan sus límites las normas sobre ruido?",
+        "En niveles promediados durante un período",
+        "Es la forma habitual y el emisor explica por qué: «Es la única manera "
+        "práctica de fiscalizar».\nEl problema no es que el método sea arbitrario, "
+        "sino que deja fuera precisamente lo que más afecta: la irrupción, el "
+        "cambio, el golpe inesperado.\nUn promedio, dice el texto, «por definición, "
+        "borra esa diferencia».",
+        [
+            ("En la cantidad de reclamos recibidos", "Los reclamos aparecen al hablar de la dificultad de probar el ruido."),
+            ("En el número de fuentes por manzana", "Las normas no se fijan por cantidad de fuentes."),
+            ("En la molestia que declaran los vecinos afectados", "La molestia subjetiva es justamente lo que no se mide."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_localizar", "medio",
+        "Según la lectura, ¿qué medidas actúan sobre el camino del ruido?",
+        "Barreras, pavimentos y mejor aislación",
+        "El emisor separa tres puntos de intervención: la fuente, el camino y el "
+        "receptor.\nSobre el camino enumera «barreras acústicas junto a las "
+        "autopistas, pavimentos que reducen el ruido de rodadura, ventanas y muros "
+        "con mejor aislación en las edificaciones nuevas».\nSobre la fuente van los "
+        "horarios de faenas y las exigencias a las maquinarias; sobre el receptor "
+        "solo quedan los tapones para los oídos.",
+        [
+            ("Horarios de faena y límites de amplificación", "Esas medidas actúan sobre la fuente."),
+            ("Tapones para los oídos de cada vecino", "Eso actúa sobre el receptor, y el texto lo desaconseja."),
+            ("Multas a quienes superan el nivel máximo", "Las sanciones no aparecen entre las medidas que enumera."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_localizar", "medio",
+        "Según la lectura, ¿qué objetivo considera razonable el emisor?",
+        "Proteger ciertos momentos y lugares",
+        "El emisor descarta el silencio como meta: «Las ciudades suenan, y exigir "
+        "silencio en una es tan improductivo como exigirle a un río que no lleve "
+        "sedimento».\nEn su lugar propone proteger «la noche, los recintos "
+        "hospitalarios, las salas de clases».\nY da una razón práctica para "
+        "preferir ese objetivo: una norma que persigue toda fuente por igual «se "
+        "vuelve inaplicable y termina no aplicándose a ninguna».",
+        [
+            ("Alcanzar el silencio en las ciudades", "El emisor lo declara improductivo como meta."),
+            ("Prohibir las faenas en zonas urbanas", "Propone regular sus horarios, no prohibirlas."),
+            ("Aislar todas las viviendas existentes", "Señala que aislarse cuesta dinero y no está al alcance de todos."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_localizar", "facil",
+        "Según la lectura, ¿qué distingue al ruido de una mancha o del humo?",
+        "Que desaparece apenas cesa",
+        "Una mancha en un río se queda ahí y el humo deja partículas que se pueden "
+        "recoger.\nEl ruido «desaparece por completo en el instante en que cesa», "
+        "así que no queda nada que examinar después.\nDe ahí la carrera contra el "
+        "tiempo que describe el texto: hay que medirlo mientras ocurre, y quien "
+        "fiscaliza llega cuando ya terminó.",
+        [
+            ("Que se puede medir con instrumentos", "Todos ellos se miden; el ruido, además, solo mientras suena."),
+            ("Que afecta a más personas a la vez", "El alcance no es lo que el emisor contrasta."),
+            ("Que proviene siempre de una fuente única", "El texto menciona fuentes muy variadas."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_interpretar", "facil",
+        "¿Qué muestra el emisor al comparar la perforación del sábado con el "
+        "zumbido de la autopista?",
+        "Que un mismo número puede esconder dos experiencias",
+        "Las dos situaciones «podrían arrojar cifras parecidas» si se midieran con "
+        "un instrumento, y «como experiencias no se parecen en nada».\nCon eso el "
+        "emisor instala desde el primer párrafo lo que después desarrolla: la "
+        "distancia «entre lo que se mide y lo que se sufre».\nEl ejemplo elige a "
+        "propósito dos casos extremos: uno intermitente e inesperado, y otro "
+        "constante al punto de que sus habitantes «dejaron de oírlo hace años».",
+        [
+            ("Que la autopista es más dañina que la obra", "El texto no jerarquiza las dos fuentes."),
+            ("Que los instrumentos de medición fallan", "Los instrumentos miden bien: el problema es qué miden."),
+            ("Que el sábado en la mañana es el peor día para las faenas", "El día sirve para ambientar la escena, no como argumento."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_interpretar", "medio",
+        "¿Qué quiere decir el emisor al afirmar que «el sueño no se defiende»?",
+        "Que uno deja de oírlo y el efecto continúa",
+        "Acostumbrarse a un ruido significa dejar de notarlo, y el emisor advierte "
+        "que eso ocurre solo en un plano.\nUna persona habituada al zumbido de la "
+        "autopista sigue teniendo «cada noche, los mismos despertares breves que "
+        "fragmentan su descanso».\nDe ahí la precisión con que cierra la idea: "
+        "acostumbrarse «describe lo que pasa en la conciencia y no lo que pasa en "
+        "el cuerpo».",
+        [
+            ("Que dormir con ruido es imposible", "Se duerme, pero el descanso queda fragmentado."),
+            ("Que el cuerpo se adapta con los años", "El texto sostiene justamente que el cuerpo no se adapta."),
+            ("Que conviene dormir siempre con tapones puestos", "Los tapones aparecen como medida sobre el receptor, y limitada."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_interpretar", "medio",
+        "Según la lectura, ¿por qué un promedio deja fuera lo que más molesta?",
+        "Porque lo que interrumpe es el cambio, no el nivel",
+        "Un zumbido constante y una sucesión de golpes «pueden promediar lo mismo y "
+        "producir efectos muy distintos».\nLo que rompe el sueño o la concentración "
+        "es «la irrupción, el golpe que no se esperaba, el silencio entre uno y "
+        "otro que impide instalarse en ninguna parte».\nUn promedio suaviza "
+        "exactamente esa variación: entrega un número correcto que describe mal la "
+        "situación que pretende resumir.",
+        [
+            ("Porque los instrumentos miden con error", "El reparo no es a la precisión de la medición."),
+            ("Porque el período que se promedia es demasiado corto", "El problema no es la duración del período sino promediar."),
+            ("Porque nadie fiscaliza durante la noche", "La fiscalización se discute aparte, como problema de prueba."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_interpretar", "dificil",
+        "¿Por qué el emisor dice que el vecino que reclama «suena a exageración»?",
+        "Porque describe algo que ya no se puede comprobar",
+        "El ruido no deja rastro, así que acreditarlo exige medirlo mientras "
+        "ocurre.\nQuien fiscaliza no vive en el edificio y llega después: «cuando "
+        "la fiesta terminó, cuando el taller cerró, cuando el camión ya pasó».\nEl "
+        "vecino queda entonces en una posición desventajosa que no depende de que "
+        "tenga razón: es el único que sostiene la existencia de algo que nadie más "
+        "puede verificar, y esa asimetría —no su credibilidad— es lo que el emisor "
+        "señala.",
+        [
+            ("Porque suele exagerar lo que le molesta", "El emisor no pone en duda al vecino: describe su desventaja."),
+            ("Porque no sabe usar los instrumentos de medición", "El problema no es quién mide, sino cuándo."),
+            ("Porque reclama por ruidos que la norma permite igual", "El caso que plantea es anterior a discutir si se supera un límite."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_interpretar", "dificil",
+        "¿Qué implica que el ruido afecte más cuando no se puede anticipar ni "
+        "controlar?",
+        "Que dos casos iguales exigen respuestas distintas",
+        "El emisor introduce esa parte «sin usarlo como excusa», y la precisión "
+        "importa: reconocer el componente subjetivo «no le quita realidad al "
+        "problema», porque la molestia y sus efectos ocurren igual.\nLo que agrega "
+        "es otra cosa: dos situaciones con el mismo número pueden necesitar "
+        "soluciones diferentes.\nY de ahí sale una medida que ninguna norma de "
+        "decibeles contempla: una obra que informa sus horarios «cambia "
+        "efectivamente la experiencia sin bajar un solo decibel».",
+        [
+            ("Que la molestia resulta imaginaria en la mayoría de los casos", "El texto insiste en que los efectos ocurren de todos modos."),
+            ("Que conviene medir la opinión de los vecinos", "No propone reemplazar la medición por encuestas."),
+            ("Que el ruido propio también daña la salud", "La propia fiesta es un ejemplo de menor molestia, no de daño igual."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_evaluar", "medio",
+        "¿Con qué finalidad el emisor ordena las medidas en fuente, camino y "
+        "receptor?",
+        "Para mostrar dónde conviene intervenir primero",
+        "El orden no es una clasificación neutra y el emisor lo advierte: «El orden "
+        "no es casual».\nActuar sobre la fuente «beneficia a todos los afectados a "
+        "la vez»; actuar sobre el receptor «traslada el costo y el esfuerzo a quien "
+        "no produjo el problema».\nPuesto así, la única medida disponible para el "
+        "receptor —los tapones— queda expuesta como lo que es: una solución "
+        "individual para un problema compartido.",
+        [
+            ("Para enumerar todas las soluciones que existen hoy", "La enumeración está al servicio de una jerarquía."),
+            ("Para explicar cómo se propaga el sonido", "La física de la propagación no se desarrolla en el texto."),
+            ("Para comparar el costo de cada alternativa", "Los costos aparecen después, y solo al hablar de aislación."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_evaluar", "dificil",
+        "¿Qué actitud asume el emisor al advertir que «una ciudad ruidosa no es una "
+        "ciudad enferma»?",
+        "Realista, pues descarta una meta inalcanzable",
+        "Después de varios párrafos sobre los efectos del ruido, el emisor podría "
+        "haber pedido silencio, y hace lo contrario.\nAcepta que las ciudades "
+        "suenan y compara la exigencia con pedirle a un río «que no lleve "
+        "sedimento», es decir, con desconocer la naturaleza de aquello que se "
+        "pretende corregir.\nSu argumento no es de resignación sino de eficacia: "
+        "una norma que persigue toda fuente por igual «termina no aplicándose a "
+        "ninguna».",
+        [
+            ("Resignada, pues acepta que ya nada puede hacerse", "Propone medidas concretas sobre la fuente y el camino."),
+            ("Alarmista, pues exagera el daño del ruido", "Este párrafo modera el alcance de lo que pide."),
+            ("Indiferente, pues el problema le parece menor", "Le dedica el texto entero y lo trata como un daño real."),
+        ],
+    ),
+    _ql(
+        "ruido_ciudad", "lec_evaluar", "dificil",
+        "¿Qué explica, según el cierre, que este problema avance tan lento?",
+        "Que el daño se reparte y nadie puede señalarlo",
+        "El ruido no deja «víctimas identificables ni un antes y un después que se "
+        "pueda fotografiar».\nEl emisor lo formula con un ejemplo que vuelve "
+        "concreto lo abstracto: nadie puede señalar «qué noche exacta perdió por el "
+        "zumbido de la autopista, aunque hayan sido cientos».\nY saca de ahí una "
+        "conclusión que excede al ruido: «lo que no se cuenta bien rara vez llega a "
+        "discutirse en serio». El obstáculo no es la falta de daño, sino la falta "
+        "de una forma de contarlo.",
+        [
+            ("Que las normas vigentes son demasiado estrictas", "El reparo es que miden mal, no que exijan demasiado."),
+            ("Que los afectados no presentan reclamos", "Los reclamos existen: lo difícil es acreditarlos."),
+            ("Que el ruido molesta solo a quienes lo escuchan", "Esa obviedad no es lo que el cierre plantea."),
+        ],
+    ),
     # ---------- 'El segundo lugar' ----------
     _ql(
         "segundo_lugar", "lec_localizar", "facil",
