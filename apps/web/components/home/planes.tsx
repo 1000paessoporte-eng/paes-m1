@@ -152,7 +152,7 @@ const PLANES = [
     //
     // - El plan Pro del curso: `plan_actual` mira el colegio y devuelve
     //   COLEGIOS mientras esté pagado, con los mismos límites que Pro.
-    // - El código: seis letras que el profesor reparte. NO se prometen
+    // - El código: seis caracteres que el profesor reparte. NO se prometen
     //   "cuentas para el curso" porque el profesor no crea cuentas ajenas:
     //   cada alumno hace la suya y se suma con el código.
     // - Panel, informe por eje y agenda: /colegio.
@@ -163,7 +163,7 @@ const PLANES = [
     // día de la prueba.
     incluye: [
       "Todo lo del plan Pro para cada estudiante del curso",
-      "Un código de seis letras: cada alumno entra con su propia cuenta",
+      "Un código de seis caracteres: cada alumno entra con su propia cuenta",
       "Panel del profesor con el avance de cada alumno",
       "El curso por eje del temario: en qué están fallando todos",
       "Ensayos programados con fecha, y quién los rindió",

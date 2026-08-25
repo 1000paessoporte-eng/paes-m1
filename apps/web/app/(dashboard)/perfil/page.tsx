@@ -22,16 +22,18 @@ export const metadata = {
 };
 
 
+/** Las cinco pruebas, para el alumno que no respondió el cuestionario. */
+const TODAS_LAS_PRUEBAS = ["lectora", "m1", "m2", "ciencias", "historia"];
+
 const DATE_FMT = new Intl.DateTimeFormat("es-CL", { day: "2-digit", month: "long", year: "numeric" });
 
 export default async function PerfilPage() {
   const token = (await cookies()).get(TOKEN_COOKIE)?.value;
 
-  let user, nodes, attempts, summary, plan, onboarding;
+  let user, attempts, summary, plan, onboarding;
   try {
-    [user, nodes, attempts, summary, plan, onboarding] = await Promise.all([
+    [user, attempts, summary, plan, onboarding] = await Promise.all([
       getMe(token ?? ""),
-      getSkillTree(token),
       listExamAttempts(token),
       getAnalyticsSummary(token),
       getMiPlan(token),
@@ -51,8 +53,33 @@ export default async function PerfilPage() {
     productos = undefined;
   }
 
-  const masteredCount = nodes.filter((n) => n.status === "mastered").length;
-  const submittedAttempts = attempts.filter((a) => a.status === "submitted").length;
+  // El árbol de TODAS las pruebas que el alumno va a rendir, no solo de M1.
+  //
+  // `getSkillTree(token)` trae M1 por defecto, así que el perfil decía
+  // "Nodos dominados 1/16" con un denominador de una prueba, rotulado como si
+  // fuera el total. Hay 52 nodos repartidos en las cinco. Y sumar las cinco a
+  // secas tampoco sirve: quien rinde Lectora, M1 y Ciencias vería en el
+  // denominador los temas de M2 e Historia que no va a estudiar nunca.
+  //
+  // Las pruebas salen de lo que el propio alumno declaró en el cuestionario,
+  // que es lo que esta misma página le muestra más abajo en "Pruebas que voy
+  // a rendir". Si no respondió, se cuentan las cinco.
+  const pruebasObjetivo =
+    onboarding?.pruebas_objetivo && onboarding.pruebas_objetivo.length > 0
+      ? onboarding.pruebas_objetivo
+      : TODAS_LAS_PRUEBAS;
+  const arboles = await Promise.all(
+    pruebasObjetivo.map((prueba) => getSkillTree(token, prueba).catch(() => []))
+  );
+  const nodosObjetivo = arboles.flat();
+  const masteredCount = nodosObjetivo.filter((n) => n.status === "mastered").length;
+
+  // Solo los que cuentan. Un ensayo entregado sin responder ninguna pregunta
+  // no es un simulacro completado, y el historial ya los excluye: acá seguían
+  // sumando. Ver `_es_representativo` en exam_focus/service.py.
+  const submittedAttempts = attempts.filter(
+    (a) => a.status === "submitted" && a.representativo !== false
+  ).length;
 
   return (
     <div>
@@ -62,7 +89,10 @@ export default async function PerfilPage() {
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <StatBox label="Nodos dominados" value={`${masteredCount}/${nodes.length}`} />
+        <StatBox
+          label="Nodos dominados"
+          value={`${masteredCount}/${nodosObjetivo.length}`}
+        />
         <StatBox label="Simulacros completados" value={String(submittedAttempts)} />
         <StatBox label="Racha actual" value={`${summary.current_streak_days} d`} />
         <StatBox

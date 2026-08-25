@@ -11,11 +11,27 @@ import { actualizarUsuarioLocal, getClientToken } from "@/lib/auth";
  *
  * El orden importa. Sumarse va primero y ocupa el espacio grande porque por
  * cada profesor que crea un curso hay treinta alumnos que solo tienen que
- * escribir seis letras. Crear un curso es la acción de una persona por
+ * escribir seis caracteres. Se dice "caracteres" y no "letras" porque el
+ * alfabeto incluye los dígitos 2-9: el 83% de los códigos lleva al menos uno,
+ * y un alumno que recibe "9J2SCB" y lee "seis letras" duda justo en el
+ * momento en que se está incorporando un curso entero. Crear un curso es la
+ * acción de una persona por
  * establecimiento, y vive abajo, plegada.
  */
 
 const LARGO_CODIGO = 6;
+
+/**
+ * El alfabeto de los códigos de curso, copiado de `colegios/service.py`.
+ *
+ * No tiene 0/O ni 1/I/L a propósito: el profesor dicta el código en voz alta
+ * o lo escribe en la pizarra, y esos cinco caracteres son los que se
+ * confunden. El campo filtraba con `[^A-Z0-9]`, o sea aceptaba justamente
+ * los cinco: quien oía "o" y escribía O llegaba a los seis caracteres, tocaba
+ * "Entrar al curso" y recibía un error genérico, sin saber que el problema
+ * era esa letra. Ahora no entran, igual que no entra un símbolo.
+ */
+const FUERA_DEL_ALFABETO = /[^ABCDEFGHJKMNPQRSTUVWXYZ23456789]/g;
 
 export function SinCurso() {
   const router = useRouter();
@@ -64,7 +80,7 @@ export function SinCurso() {
     <div className="mx-auto max-w-lg">
       <h1 className="text-2xl font-semibold">Mi curso</h1>
       <p className="mt-1 text-sm text-muted">
-        Si tu colegio usa 1000paes, tu profesor tiene un código de seis letras.
+        Si tu colegio usa 1000paes, tu profesor tiene un código de seis caracteres.
       </p>
 
       <form
@@ -84,13 +100,13 @@ export function SinCurso() {
           value={codigo}
           onChange={(e) =>
             setCodigo(
-              e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, LARGO_CODIGO)
+              e.target.value.toUpperCase().replace(FUERA_DEL_ALFABETO, "").slice(0, LARGO_CODIGO)
             )
           }
           autoComplete="off"
           autoCapitalize="characters"
           spellCheck={false}
-          placeholder="ABC123"
+          placeholder="BQK47M"
           aria-describedby="ayuda-codigo"
           className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-4 text-center font-mono text-3xl tracking-[0.4em] uppercase placeholder:text-muted/40 focus:border-accent focus:outline-none"
         />
