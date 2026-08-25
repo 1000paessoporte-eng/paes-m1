@@ -38,6 +38,13 @@ export function PracticeRunner({ code }: { code: string }) {
   const [questions, setQuestions] = useState<PracticeQuestion[]>([]);
   const [index, setIndex] = useState(0);
   const [answered, setAnswered] = useState<PracticeAnswerResult | null>(null);
+  // Mientras la corrección viaja. Sin esto, entre el clic y la respuesta no
+  // cambiaba nada: la alternativa quedaba marcada, "Siguiente" seguía
+  // apagado y no había ninguna señal de que la aplicación estuviera haciendo
+  // algo. Medido en local, un arranque en frío de la API tardó 13,8 segundos
+  // en ese POST. Catorce segundos sin respuesta se leen como "se colgó", y lo
+  // que hace el alumno es volver a tocar.
+  const [corrigiendo, setCorrigiendo] = useState(false);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [sessionCorrect, setSessionCorrect] = useState(0);
   const [unlockedThisSession, setUnlockedThisSession] = useState<string[]>([]);
@@ -81,8 +88,9 @@ export function PracticeRunner({ code }: { code: string }) {
   const current = questions[index] as PracticeQuestion | undefined;
 
   async function selectAlternative(altId: number) {
-    if (!current || answered) return;
+    if (!current || answered || corrigiendo) return;
     setSelectedId(altId);
+    setCorrigiendo(true);
     try {
       const res = await answerPractice(code, current.id, altId, getClientToken() ?? undefined);
       setAnswered(res);
@@ -97,6 +105,8 @@ export function PracticeRunner({ code }: { code: string }) {
       }
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) router.push(loginHref(pathname));
+    } finally {
+      setCorrigiendo(false);
     }
   }
 
@@ -264,7 +274,7 @@ export function PracticeRunner({ code }: { code: string }) {
               <button
                 key={alt.id}
                 onClick={() => selectAlternative(alt.id)}
-                disabled={!!answered}
+                disabled={!!answered || corrigiendo}
                 className={cn(
                   "flex items-start gap-3 rounded-lg border px-4 py-3 text-left text-sm transition-colors",
                   isCorrectAlt
@@ -316,6 +326,17 @@ export function PracticeRunner({ code }: { code: string }) {
               {answered.is_correct ? "¡Correcto!" : "Incorrecto"}
             </p>
           </div>
+        )}
+
+        {/* La señal de que la corrección viene en camino. Ocupa el mismo
+            lugar donde va a aparecer, así que no hay salto cuando llega. */}
+        {corrigiendo && (
+          <p
+            role="status"
+            className="mt-3 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted"
+          >
+            Corrigiendo tu respuesta…
+          </p>
         )}
 
         {answered && (
