@@ -52949,6 +52949,19 @@ QUESTIONS_CIENCIAS = [
 # ---------------------------------------------------------------------------
 
 SKILL_NODES_HISTORIA = [
+    ("eco_laborales", "El mundo del trabajo y los derechos laborales", "economia", 3, ['eco_estado_mercado']),
+    ("eco_desarrollo", "Desarrollo, sociedad y medio ambiente", "economia", 2, ['eco_estado_mercado']),
+    ("eco_estado_mercado", "Estado y mercado en la economía", "economia", 1, []),
+    ("civ_justicia", "El sistema judicial chileno", "ciudadania", 3, ['civ_institucionalidad']),
+    ("civ_informacion", "La democracia en la sociedad de la información", "ciudadania", 2, ['civ_institucionalidad']),
+    ("civ_institucionalidad", "Institucionalidad política y Estado de derecho", "ciudadania", 1, []),
+    ("his_dictadura", "Dictadura Militar y transición a la democracia", "historia", 6, ['his_chile_xx']),
+    ("his_chile_xx", "La sociedad chilena a mediados del siglo XX", "historia", 5, ['his_crisis_liberal']),
+    ("his_guerra_fria", "La Guerra Fría y América Latina", "historia", 5, ['his_posguerra']),
+    ("his_posguerra", "El nuevo orden mundial tras la Segunda Guerra", "historia", 4, ['his_crisis_liberal']),
+    ("his_crisis_liberal", "La crisis del Estado liberal (1914-1945)", "historia", 3, ['his_chile_xix']),
+    ("his_chile_xix", "Chile en el siglo XIX", "historia", 2, ['his_estado_nacion']),
+    ("his_estado_nacion", "El Estado-nación en el siglo XIX", "historia", 1, []),
     ("his_fuentes", "Análisis de fuentes históricas", "historia", 1, []),
     ("his_temporal", "Pensamiento temporal y cambio histórico", "historia", 2, ["his_fuentes"]),
     ("civ_democracia", "Democracia y participación", "ciudadania", 1, []),
@@ -52958,6 +52971,779 @@ SKILL_NODES_HISTORIA = [
 ]
 
 PASSAGES_HISTORIA = [
+    {
+        "key": "eco_laborales_fte",
+        "title": "El trabajo, sus derechos y sus transformaciones",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "marco laboral vigente y del temario de Sistema económico para "
+            "ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El derecho laboral nace del reconocimiento de que las partes de un "
+            "contrato de trabajo no negocian en igualdad de condiciones. "
+            "Formalmente ambas concurren libremente, pero lo que cada una "
+            "arriesga si el contrato no se celebra es muy distinto: la empresa "
+            "pierde un candidato, el trabajador pierde su sustento. De esa "
+            "asimetría se siguen sus reglas propias.\n"
+            "\n"
+            "La relación debe constar en un contrato escrito, que fija "
+            "funciones, jornada, remuneración y lugar de trabajo. El contrato "
+            "no crea los derechos laborales, que están en la ley: los hace "
+            "verificables en el caso concreto. Esos derechos son además "
+            "irrenunciables mientras dura la relación laboral, porque si "
+            "pudieran renunciarse bastaría incluir la renuncia en el contrato y "
+            "quien necesita el empleo firmaría igual. La ley fija también un "
+            "máximo a la jornada ordinaria, para proteger la salud y el "
+            "descanso; es un tope, no una obligación, y las horas que lo "
+            "excedan tienen carácter extraordinario, con recargo y con límite.\n"
+            "\n"
+            "La negociación colectiva permite compensar la asimetría inicial: "
+            "la empresa no discute con una persona reemplazable sino con el "
+            "grupo del que depende su funcionamiento. Dentro de ese proceso, la "
+            "huelga introduce un costo para ambas partes, y ese costo "
+            "compartido es lo que empuja al acuerdo; su ejercicio está regulado "
+            "y la huelga legal suspende la relación laboral sin extinguirla. La "
+            "seguridad social, por su parte, cubre contingencias como la vejez, "
+            "la enfermedad y los accidentes del trabajo reuniendo aportes de "
+            "muchos para cubrir a quienes efectivamente las enfrentan. Quienes "
+            "se desempeñan sin contrato ni cotizaciones quedan fuera de todo "
+            "eso: sin cobertura de salud, sin seguro de cesantía y sin fondos "
+            "acumulados para la vejez.\n"
+            "\n"
+            "Persisten brechas dentro del mundo laboral. La participación de "
+            "las mujeres es menor y sus remuneraciones promedio también, y en "
+            "esa diferencia incide el reparto desigual del trabajo doméstico y "
+            "de cuidados, que no se remunera ni se contabiliza como trabajo y "
+            "que limita la disponibilidad horaria e interrumpe trayectorias.\n"
+            "\n"
+            "El trabajo también está cambiando. La automatización afecta "
+            "primero a las tareas rutinarias y genera a la vez demanda por "
+            "trabajos de diseño, supervisión y mantenimiento, de modo que "
+            "reduce unas tareas y crea otras: el problema no es el número total "
+            "de empleos sino la transición entre unos y otros. Y el trabajo "
+            "mediante aplicaciones de reparto y transporte obliga a definir si "
+            "existe relación de dependencia, porque el trabajador elige cuándo "
+            "conectarse pero la plataforma fija tarifas, asigna tareas y evalúa "
+            "su desempeño, y de esa calificación depende si le corresponden "
+            "cotizaciones y jornada máxima.\n"
+            "\n"
+            "Muchas de estas protecciones no existían: fueron conquistadas por "
+            "movimientos sociales que, sin facultad de legislar ni "
+            "representación propia, instalaron sus demandas mediante acción "
+            "colectiva sostenida en el tiempo."
+        ),
+    },
+    {
+        "key": "eco_desarrollo_fte",
+        "title": "Crecimiento, desarrollo y sostenibilidad en el caso chileno",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Sistema económico para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El crecimiento económico indica que un país produce más. El "
+            "desarrollo pregunta además qué ocurre con la vida de las personas: "
+            "esperanza de vida, acceso a educación y salud, calidad del empleo, "
+            "distribución del ingreso. Un país puede crecer durante años sin "
+            "que los indicadores sociales se muevan, y de esa diferencia trata "
+            "buena parte de la discusión pública. En esa línea, la medición de "
+            "pobreza multidimensional considera, además del ingreso, el acceso "
+            "a educación, salud, vivienda y trabajo, y detecta así carencias "
+            "que la sola línea de ingreso no muestra.\n"
+            "\n"
+            "La economía chilena exporta principalmente productos derivados de "
+            "recursos naturales, con el cobre a la cabeza. El cobre es un "
+            "recurso no renovable: sus yacimientos se formaron en procesos "
+            "geológicos de millones de años, de modo que cada tonelada extraída "
+            "es una tonelada menos disponible. Esa concentración expone al país "
+            "a precios que se fijan en mercados internacionales y sobre los "
+            "cuales no tiene control: cuando suben, aumentan la inversión y la "
+            "recaudación; cuando caen, el ajuste llega al presupuesto y al "
+            "empleo. Algunos autores advierten, además, que la abundancia de "
+            "recursos no garantiza el desarrollo: la diferencia suele estar en "
+            "qué se hace con esa renta, si financia educación, infraestructura "
+            "y diversificación, o si se consume sin dejar capacidades "
+            "instaladas.\n"
+            "\n"
+            "El desarrollo sostenible se define como aquel que satisface las "
+            "necesidades del presente sin comprometer la capacidad de las "
+            "generaciones futuras de satisfacer las suyas, lo que obliga a "
+            "considerar los efectos de largo plazo de cada decisión. Chile ha "
+            "incorporado energía solar y eólica a su matriz eléctrica: son "
+            "fuentes renovables, es decir, no se agotan con su uso, y su "
+            "operación no emite gases de efecto invernadero. Esas emisiones "
+            "plantean un problema de coordinación particular, porque las "
+            "producidas en un país afectan el clima de todo el planeta y "
+            "ninguno obtiene por sí mismo el beneficio completo del esfuerzo "
+            "que realiza.\n"
+            "\n"
+            "Los efectos del crecimiento no se reparten de manera pareja. En "
+            "Chile han surgido conflictos entre proyectos productivos y "
+            "comunidades locales por el uso del agua o del territorio: el "
+            "empleo y la recaudación benefician al conjunto, mientras el "
+            "consumo de agua o el deterioro del entorno recaen sobre quienes "
+            "viven en el lugar. Tampoco el desarrollo se distribuye igual entre "
+            "regiones, y esas brechas en servicios y empleo alimentan la "
+            "migración interna. La apertura comercial, por su parte, abarata "
+            "los productos para los consumidores y obliga a los productores "
+            "locales a competir con proveedores externos.\n"
+            "\n"
+            "Se discute si es posible seguir aumentando la producción sin "
+            "deteriorar el medio ambiente. Quienes sostienen que sí apuestan a "
+            "que la tecnología reduzca el impacto por unidad producida; quienes "
+            "lo dudan responden que esas mejoras han quedado absorbidas por el "
+            "aumento del consumo total."
+        ),
+    },
+    {
+        "key": "eco_estado_mercado_fte",
+        "title": "Cómo se asignan los recursos: mercado, fallas y Estado",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Sistema económico para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El problema económico básico nace de que los recursos son "
+            "limitados y las necesidades no. Como no alcanza para todo, usar un "
+            "recurso en algo obliga a renunciar a usarlo en otra cosa: a ese "
+            "sacrificio se lo llama costo de oportunidad, y existe aunque no se "
+            "pague dinero por él.\n"
+            "\n"
+            "En un mercado competitivo, los precios coordinan esas decisiones. "
+            "Si aumenta la demanda de un bien y la oferta no varía, su precio "
+            "tiende a subir, y ese aumento indica a los productores que "
+            "conviene producir más y a los consumidores que conviene moderar su "
+            "consumo. Los precios transmiten así información sin que nadie "
+            "tenga que reunirla ni comunicarla deliberadamente.\n"
+            "\n"
+            "El mecanismo tiene límites conocidos. Hay bienes de los que nadie "
+            "puede ser excluido: el alumbrado de una calle beneficia a todo el "
+            "que pasa, haya pagado o no, de modo que a cada uno le conviene no "
+            "pagar y esperar que otros financien. Cuando todos razonan así, el "
+            "bien no se produce aunque todos lo quieran, y por eso lo provee el "
+            "Estado. Hay además efectos que recaen sobre terceros ajenos a la "
+            "transacción: una fábrica que contamina un río traslada parte de "
+            "sus costos a quienes viven aguas abajo, y eso se denomina "
+            "externalidad negativa. Como el precio no recoge esos costos, queda "
+            "artificialmente bajo y se produce más de lo que convendría; de ahí "
+            "que se justifiquen impuestos, normas de emisión o cobros por "
+            "contaminar, que buscan incorporar el costo al precio en lugar de "
+            "reemplazar el mercado.\n"
+            "\n"
+            "El Estado interviene por otras vías. Regula, provee educación y "
+            "salud públicas, invierte en infraestructura y redistribuye "
+            "mediante impuestos. Un impuesto es progresivo cuando quienes "
+            "tienen mayores ingresos pagan una proporción más alta de ellos, "
+            "como ocurre con el impuesto a la renta por tramos. El impuesto al "
+            "valor agregado, en cambio, se aplica con la misma tasa a todos, y "
+            "por eso se lo describe como regresivo: los hogares de menores "
+            "ingresos destinan casi todo lo que reciben al consumo, mientras "
+            "los de mayores ingresos ahorran una parte, de modo que el impuesto "
+            "absorbe una fracción mayor del presupuesto de quien menos tiene.\n"
+            "\n"
+            "La política fiscal también responde al ciclo: durante una recesión "
+            "los gobiernos suelen aumentar el gasto público para sostener la "
+            "demanda y el empleo cuando el sector privado los está retirando. "
+            "Otros fenómenos se vigilan de cerca, como la inflación —el alza "
+            "sostenida y generalizada de los precios, que reduce lo que un "
+            "mismo ingreso permite comprar— y el producto interno bruto, que "
+            "mide el valor de lo producido pero no indica cómo se distribuye. "
+            "Detrás de casi todas estas decisiones aparece una tensión: "
+            "redistribuir puede alterar los incentivos de quienes producen, "
+            "invierten o trabajan."
+        ),
+    },
+    {
+        "key": "civ_justicia_fte",
+        "title": "Cómo se administra justicia en Chile",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "marco institucional vigente para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El Poder Judicial resuelve los conflictos jurídicos que se someten "
+            "a su conocimiento, y lo hace aplicando el derecho vigente: el "
+            "tribunal no decide según lo que le parezca preferible, sino "
+            "conforme a normas dictadas de antemano, y debe fundar su decisión "
+            "en ellas. Esa exigencia de fundamentación permite que un fallo sea "
+            "revisado por un tribunal superior cuando alguna de las partes lo "
+            "solicita, de modo que los errores puedan corregirse antes de que "
+            "la decisión quede firme. La revisión no es indefinida: agotadas "
+            "las instancias, la sentencia queda ejecutoriada.\n"
+            "\n"
+            "Los jueces no son elegidos por votación, y como contrapartida ni "
+            "el Presidente ni el Congreso pueden revisar los fundamentos de una "
+            "resolución judicial ni reabrir causas falladas. Eso es la "
+            "independencia judicial: los tribunales responden ante el derecho y "
+            "ante los tribunales superiores, no ante una autoridad política.\n"
+            "\n"
+            "En materia penal, toda persona imputada se presume inocente "
+            "mientras una sentencia no establezca lo contrario, de manera que "
+            "la carga de probar recae sobre quien acusa. La reforma procesal "
+            "penal separó las funciones que antes reunía un mismo juez: hoy el "
+            "Ministerio Público, órgano autónomo, investiga los delitos y "
+            "formula la acusación; un juez de garantía controla que la "
+            "investigación respete los derechos del imputado; y un tribunal "
+            "distinto dicta sentencia tras un juicio oral y público. La "
+            "oralidad y la publicidad permiten que la prueba se rinda ante "
+            "quienes van a fallar y ante cualquiera que quiera presenciarla, y "
+            "que los testigos sean contrainterrogados en el acto, algo que un "
+            "expediente escrito no permitía. El Estado provee además un "
+            "defensor a quien no designa abogado, porque un proceso penal se "
+            "sigue con reglas técnicas que casi nadie domina sin formación "
+            "jurídica.\n"
+            "\n"
+            "Al conjunto de estas exigencias —prueba lícita, posibilidad de "
+            "controvertirla, fallo fundado, defensa técnica— se lo llama debido "
+            "proceso. No impide condenar: fija cómo debe llegarse a una "
+            "condena. Y como al momento de decidir nadie sabe con certeza quién "
+            "es culpable, esas garantías no pueden reservarse para los "
+            "inocentes.\n"
+            "\n"
+            "Existen también vías rápidas y alternativas. El recurso de "
+            "protección permite acudir a una Corte de Apelaciones cuando un "
+            "acto arbitrario o ilegal amenaza ciertos derechos, con un "
+            "procedimiento breve. Y en materias civiles y de familia, "
+            "mecanismos como la mediación permiten resolver por acuerdo, sin "
+            "suprimir el derecho a demandar si ese acuerdo no se alcanza. Con "
+            "todo, la igualdad ante la ley no basta si el acceso efectivo "
+            "resulta desigual: litigar exige tiempo, dinero y asesoría, y quien "
+            "no dispone de ellos puede tener razón y no llegar nunca a un "
+            "tribunal."
+        ),
+    },
+    {
+        "key": "civ_informacion_fte",
+        "title": "Informarse y deliberar en la sociedad de la información",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Formación ciudadana para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "En democracia, la libertad de expresión permite difundir opiniones "
+            "e informaciones sin censura previa. Sin ese derecho, las "
+            "decisiones colectivas se adoptarían sobre la base de lo que una "
+            "autoridad autoriza a decir. Que no exista censura previa no "
+            "significa que no haya responsabilidad posterior: hay contenidos "
+            "que pueden perseguirse una vez publicados, pero no impedirse de "
+            "antemano. Que existan medios de orientaciones distintas se "
+            "considera deseable por la misma razón: ocurren cada día muchos más "
+            "hechos de los que caben en un noticiario, de modo que informar "
+            "supone siempre elegir, y lo que un medio destaca tiende a "
+            "instalarse en la conversación pública mientras lo que omite "
+            "difícilmente llega a discutirse.\n"
+            "\n"
+            "Se llama desinformación a la difusión deliberada de contenidos "
+            "falsos con el fin de engañar. Lo que la distingue de un error "
+            "periodístico es justamente la intención: el error es involuntario "
+            "y se rectifica; la desinformación se produce sabiendo que el "
+            "contenido es falso. Frente a una noticia de impacto, contrastarla "
+            "con otras fuentes permite detectar afirmaciones sin respaldo, "
+            "porque un hecho real suele aparecer reportado por varias fuentes "
+            "independientes. Y al evaluar una información conviene identificar "
+            "quién la produce y con qué respaldo, porque eso permite estimar su "
+            "confiabilidad: una misma afirmación pesa distinto si proviene de "
+            "un organismo que publica su metodología o de un sitio anónimo.\n"
+            "\n"
+            "Es el mismo procedimiento que aplica un historiador ante cualquier "
+            "documento. Una fuente primaria se produjo en la época estudiada "
+            "—una carta de 1850, por ejemplo— y da acceso directo al lenguaje y "
+            "las preocupaciones de quien la escribió. Una fuente secundaria la "
+            "interpreta desde el presente, con información que su autor "
+            "original no tenía. Ninguna es superior: se cruzan. Y toda fuente "
+            "tiene un punto de vista. Un discurso de un gobernante sobre su "
+            "propia gestión es válido, pero no neutral: sirve para saber qué "
+            "quería proyectar y con qué argumentos, y sirve mal como "
+            "comprobación de los resultados que afirma.\n"
+            "\n"
+            "Las plataformas digitales agregan un problema propio. Sus "
+            "algoritmos tienden a mostrar a cada usuario contenidos similares a "
+            "los que ya consumió, porque lo que más retiene la atención suele "
+            "ser aquello que confirma lo que alguien ya piensa, y así se reduce "
+            "la exposición a posiciones distintas. Regular los contenidos "
+            "falsos plantea a su vez una tensión: alguien debe quedar facultado "
+            "para calificar un contenido como falso, y esa facultad puede "
+            "usarse para suprimir opiniones incómodas. El acceso a la "
+            "información pública, en cambio, es un derecho poco discutido: "
+            "permite decidir con antecedentes verificables sobre asuntos "
+            "comunes."
+        ),
+    },
+    {
+        "key": "civ_estado_derecho",
+        "title": "El Estado de derecho y los límites del poder",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "marco institucional vigente para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El Estado de derecho supone que gobernantes y gobernados están "
+            "sometidos a las mismas normas: el poder no se ejerce por voluntad "
+            "de quien lo tiene, sino dentro de límites fijados de antemano. La "
+            "autoridad solo puede hacer aquello que la ley la faculta a hacer, "
+            "y sus actos pueden ser revisados por otros órganos. Ninguna "
+            "autoridad está por sobre la ley.\n"
+            "\n"
+            "Para que ese principio funcione, las funciones ejecutiva, "
+            "legislativa y judicial se radican en órganos distintos, de modo "
+            "que cada uno quede expuesto al control de los demás. El Congreso, "
+            "además de elaborar las leyes, fiscaliza los actos del Ejecutivo: "
+            "puede pedir antecedentes, citar ministros, formar comisiones "
+            "investigadoras y, en los casos que la Constitución señala, "
+            "formular acusaciones constitucionales, que la Cámara de Diputados "
+            "presenta y el Senado resuelve. Es un control político: lo que se "
+            "determina es si la autoridad debe dejar el cargo, mientras que los "
+            "delitos que pudiera haber cometido los juzgan los tribunales.\n"
+            "\n"
+            "Otros órganos controlan desde dentro del propio Estado. La "
+            "Contraloría General de la República examina si los decretos y "
+            "resoluciones tienen fundamento legal y fiscaliza el uso de los "
+            "recursos públicos; su independencia del gobierno cuyos actos "
+            "revisa es lo que la hace útil. La ley de transparencia, por su "
+            "parte, obliga a los organismos públicos a entregar información "
+            "sobre su gestión, porque sin acceso a ella la fiscalización "
+            "ciudadana queda reducida a lo que las autoridades decidan contar.\n"
+            "\n"
+            "La Constitución es la norma de mayor jerarquía: ninguna ley puede "
+            "contradecir sus disposiciones, y por eso su reforma exige quórums "
+            "más altos que los de una ley común. Dentro de ese marco, las "
+            "autoridades ejecutivas y legislativas se eligen por períodos "
+            "determinados, de manera que la ciudadanía pueda renovar o retirar "
+            "el mandato en una fecha conocida. Desde 2021 los gobernadores "
+            "regionales son elegidos por votación popular y ya no designados "
+            "por el Presidente, de modo que responden ante sus electores y no "
+            "ante el nivel central.\n"
+            "\n"
+            "Participar no se agota en votar. Juntas de vecinos, sindicatos, "
+            "colegios profesionales y agrupaciones diversas permiten incidir "
+            "entre una elección y otra. Y hay derechos que ninguna mayoría "
+            "puede suprimir: se sitúan fuera del alcance de la votación "
+            "ordinaria porque protegen a quienes quedan en minoría. Por eso se "
+            "afirma que el sufragio universal es condición de la democracia, "
+            "pero no basta por sí solo: hacen falta también libertades para "
+            "competir e informarse, y órganos capaces de controlar al gobierno "
+            "electo."
+        ),
+    },
+    {
+        "key": "his_dictadura_fte",
+        "title": "Chile entre 1973 y 1990: dictadura, modelo económico y transición",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes. Los hechos sobre "
+            "violaciones a los derechos humanos corresponden a lo establecido "
+            "por las comisiones oficiales de verdad y por los tribunales "
+            "chilenos."
+        ),
+        "body": (
+            "Tras el golpe de Estado de septiembre de 1973 se instaló en Chile "
+            "una dictadura militar que se extendió hasta 1990. El Congreso "
+            "Nacional fue disuelto, los partidos quedaron proscritos o en "
+            "receso, los registros electorales fueron destruidos y se impuso "
+            "censura sobre la prensa. La Junta de Gobierno asumió a la vez el "
+            "poder ejecutivo y el legislativo, de modo que la separación de "
+            "poderes dejó de operar. A ese conjunto se lo denomina supresión "
+            "del Estado de derecho.\n"
+            "\n"
+            "Las comisiones de verdad creadas en democracia y las "
+            "investigaciones judiciales establecieron que las violaciones a los "
+            "derechos humanos del período no fueron hechos aislados ni excesos "
+            "individuales: existieron organismos creados para esa tarea, con "
+            "recintos de detención, personal y procedimientos regulares, y las "
+            "prácticas de detención sin orden judicial, tortura, ejecución y "
+            "desaparición forzada se aplicaron de manera sostenida a lo largo "
+            "de los diecisiete años. Esas comisiones reunieron antecedentes, "
+            "escucharon testimonios e individualizaron a las víctimas; no "
+            "dictan sentencias, que corresponden a los tribunales, pero su "
+            "trabajo aportó antecedentes a causas judiciales posteriores.\n"
+            "\n"
+            "En materia económica se aplicaron reformas de orientación "
+            "neoliberal: privatización de empresas del Estado, fuerte rebaja de "
+            "los aranceles a las importaciones, desregulación financiera, un "
+            "nuevo plan laboral y el reemplazo del sistema de pensiones de "
+            "reparto por uno de capitalización individual. La apertura dejó a "
+            "la industria nacional expuesta a la competencia externa, y la "
+            "economía se reorientó hacia sectores de ventajas naturales. En "
+            "1982 una severa crisis económica obligó al gobierno a intervenir "
+            "la banca y a asumir sus deudas, pese al principio de no "
+            "intervención que declaraba.\n"
+            "\n"
+            "La Constitución aprobada en 1980 estableció mecanismos que "
+            "restringían lo que una mayoría electa podría decidir después: "
+            "senadores no elegidos por votación popular, un sistema electoral "
+            "que sobrerrepresentaba a la primera minoría, quórums muy altos "
+            "para reformar ciertas leyes y limitaciones a la remoción de los "
+            "mandos militares.\n"
+            "\n"
+            "Desde 1983 se sucedieron jornadas de protesta nacional, agravadas "
+            "por la crisis del año anterior, mientras los partidos proscritos "
+            "se reorganizaban y las organizaciones de derechos humanos y las "
+            "iglesias documentaban y protegían. Esa acumulación explica que en "
+            "1988 existiera una oposición capaz de competir en el plebiscito "
+            "del 5 de octubre, previsto en las disposiciones transitorias de la "
+            "propia Constitución de 1980, en el que se decidía si el gobernante "
+            "continuaba en el cargo. Triunfó el No. En diciembre de 1989 se "
+            "realizaron elecciones presidenciales y parlamentarias, y en marzo "
+            "de 1990 asumió el gobierno electo. Los gobiernos democráticos "
+            "mantuvieron el marco económico heredado y le agregaron políticas "
+            "sociales y reformas laborales."
+        ),
+    },
+    {
+        "key": "his_chile_xx_fte",
+        "title": "La sociedad chilena a mediados del siglo XX",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Entre 1930 y 1970 la sociedad chilena cambió de forma. La "
+            "población urbana creció de manera sostenida, y ese crecimiento se "
+            "explica sobre todo por la migración desde el campo: la "
+            "concentración de la tierra dejaba poco margen a las familias "
+            "campesinas, mientras la industria, la construcción y los servicios "
+            "urbanos ofrecían trabajo asalariado, escuelas y atención de salud. "
+            "El peso de la agricultura en el empleo disminuyó y creció el de la "
+            "industria y los servicios.\n"
+            "\n"
+            "Las ciudades no alcanzaron a alojar a quienes llegaban. Como la "
+            "vivienda disponible no bastaba, muchas familias ocuparon terrenos "
+            "en la periferia y levantaron allí sus casas con materiales "
+            "precarios, sin agua potable, alcantarillado ni electricidad. Esos "
+            "pobladores se organizaron para exigir urbanización y títulos de "
+            "dominio, y se convirtieron en un actor con demandas propias.\n"
+            "\n"
+            "En el mismo período la pobreza dejó de entenderse como una "
+            "desgracia individual, atendida por la caridad, y pasó a tratarse "
+            "como un problema colectivo: el Estado construyó viviendas, creó un "
+            "servicio nacional de salud, extendió la previsión social y "
+            "financió la educación pública. La diferencia es de fondo, porque "
+            "la beneficencia entrega un socorro mientras la política pública "
+            "crea un derecho que se puede exigir.\n"
+            "\n"
+            "La participación política también se amplió. Las mujeres, que "
+            "votaban en elecciones municipales desde la década de 1930, "
+            "obtuvieron a fines de los años cuarenta el derecho a sufragio en "
+            "elecciones parlamentarias y presidenciales, y lo ejercieron por "
+            "primera vez en la presidencial de 1952. En 1958 se estableció la "
+            "cédula única electoral, impresa y distribuida por el Estado: antes "
+            "cada partido imprimía sus propios votos y era posible verificar "
+            "qué papeleta llevaba cada persona a la urna, lo que permitía "
+            "comprar votos o presionar a trabajadores e inquilinos. La "
+            "expansión de la matrícula escolar redujo de manera sostenida el "
+            "analfabetismo, y como saber leer era requisito para votar hasta "
+            "1970, cada avance en alfabetización ampliaba además el electorado.\n"
+            "\n"
+            "El proceso no fue lineal. Entre 1948 y 1958 rigió una ley que "
+            "proscribió al Partido Comunista y excluyó a sus militantes de los "
+            "registros electorales, de modo que en la misma década en que se "
+            "reconoció el sufragio femenino se restringió la participación de "
+            "otros.\n"
+            "\n"
+            "En el campo, la reforma agraria aplicada entre 1962 y 1973 "
+            "permitió expropiar predios y redistribuir la propiedad de la "
+            "tierra, y la ley de sindicalización campesina de 1967 reconoció a "
+            "los trabajadores agrícolas el derecho a organizarse y negociar, "
+            "que hasta entonces estaba severamente restringido. Con todo, "
+            "durante buena parte del período la estructura de la propiedad "
+            "cambió muy poco, y por eso la ampliación de derechos convivió con "
+            "desigualdades profundas."
+        ),
+    },
+    {
+        "key": "his_guerra_fria_fte",
+        "title": "La Guerra Fría y su impacto en América Latina",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Durante la segunda mitad del siglo XX, Estados Unidos y la Unión "
+            "Soviética sostuvieron una confrontación que recibió el nombre de "
+            "Guerra Fría. Su rasgo definitorio es que ambas potencias nunca se "
+            "enfrentaron directamente en el campo de batalla: el conflicto se "
+            "libró por otros medios y, cuando hubo guerra abierta, ocurrió en "
+            "terceros países alineados con uno u otro bloque.\n"
+            "\n"
+            "La confrontación fue también ideológica y se expresó fuera del "
+            "terreno militar. La carrera espacial, con los sucesivos hitos de "
+            "satélites, vuelos tripulados y llegada a la Luna, funcionó como "
+            "demostración pública de la superioridad de cada sistema. En "
+            "Europa, el Muro de Berlín, levantado en 1961, fue la expresión "
+            "material de la división entre ambos bloques.\n"
+            "\n"
+            "América Latina quedó dentro del área de influencia estadounidense, "
+            "y la Revolución Cubana de 1959 alteró ese equilibrio: estimuló en "
+            "toda la región movimientos que buscaban cambios sociales "
+            "profundos, y llevó a Estados Unidos a responder. En la década de "
+            "1960 impulsó la Alianza para el Progreso, un programa de ayuda "
+            "económica y reformas sociales cuyo objetivo declarado era evitar "
+            "que la revolución se extendiera por el continente.\n"
+            "\n"
+            "Durante las décadas de 1960 y 1970, numerosos gobiernos militares "
+            "latinoamericanos justificaron su acción invocando la llamada "
+            "doctrina de seguridad nacional. Su novedad consistió en situar al "
+            "enemigo dentro de la propia sociedad: no en un ejército "
+            "extranjero, sino en compatriotas considerados subversivos por sus "
+            "ideas o su militancia. Esas dictaduras compartieron prácticas "
+            "reconocibles, entre ellas la violación sistemática de los derechos "
+            "humanos, documentada después por comisiones de verdad y por "
+            "tribunales de cada país.\n"
+            "\n"
+            "Entre 1989 y 1991 se produjo el derrumbe del bloque soviético, que "
+            "puso fin al sistema bipolar surgido de la posguerra. En los años "
+            "siguientes se expandieron políticas de apertura comercial, "
+            "privatización y reducción del papel económico del Estado, "
+            "conocidas como neoliberalismo, y se aceleró la globalización, cuyo "
+            "rasgo característico es la integración creciente de los mercados "
+            "de bienes, servicios y capitales.\n"
+            "\n"
+            "Sobre las dictaduras latinoamericanas existen distintas "
+            "interpretaciones historiográficas, que discuten sobre todo el peso "
+            "de los factores internos frente a la intervención externa. "
+            "Evaluarlas exige examinar las fuentes y los argumentos en que cada "
+            "una se apoya."
+        ),
+    },
+    {
+        "key": "his_posguerra_fte",
+        "title": "El orden internacional después de 1945",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes. Las frases entre comillas "
+            "provienen de la Carta de las Naciones Unidas y de la Declaración "
+            "Universal de Derechos Humanos, documentos de libre reproducción."
+        ),
+        "body": (
+            "La Segunda Guerra Mundial terminó con una destrucción sin "
+            "precedentes y con la evidencia del exterminio sistemático de "
+            "poblaciones civiles. El orden que se construyó después buscó "
+            "responder a las dos cosas.\n"
+            "\n"
+            "En 1945 se creó la Organización de las Naciones Unidas, cuyo "
+            "propósito principal es mantener la paz y la seguridad "
+            "internacionales. Sucedía a la Sociedad de Naciones, nacida tras la "
+            "Primera Guerra Mundial y que había fracasado en impedir la "
+            "segunda. La diferencia decisiva que introdujo la ONU fue dotarse "
+            "de un órgano capaz de adoptar decisiones obligatorias para los "
+            "Estados: el Consejo de Seguridad. En él, cinco Estados permanentes "
+            "disponen de un derecho especial, el veto, que les permite impedir "
+            "la aprobación de cualquier resolución del Consejo. Entre los "
+            "propósitos que la Carta declara figura el de «fomentar entre las "
+            "naciones relaciones de amistad basadas en el respeto al principio "
+            "de la igualdad de derechos y al de la libre determinación de los "
+            "pueblos».\n"
+            "\n"
+            "En 1948 la Asamblea General aprobó la Declaración Universal de "
+            "Derechos Humanos, cuyo artículo 1 comienza: «Todos los seres "
+            "humanos nacen libres e iguales en dignidad y derechos». Al afirmar "
+            "derechos que corresponden a toda persona por igual, la Declaración "
+            "introdujo una tensión con la soberanía estatal: el modo en que un "
+            "Estado trata a su propia población dejó de ser un asunto puramente "
+            "interno. Siendo una declaración de la Asamblea General, no creaba "
+            "por sí sola obligaciones jurídicas exigibles; su fuerza vino de "
+            "convertirse en referencia moral y en base de tratados posteriores "
+            "que sí obligan.\n"
+            "\n"
+            "En el mismo período, los juicios de Núremberg introdujeron una "
+            "novedad en el derecho internacional: juzgar a personas concretas "
+            "por crímenes contra la humanidad, y no a los Estados en cuyo "
+            "nombre habían actuado.\n"
+            "\n"
+            "La guerra dejó además debilitadas a las potencias coloniales "
+            "europeas, y sobre esa debilidad avanzó la independencia de "
+            "numerosos territorios de Asia y África. Entre 1955 y 1975 el mapa "
+            "político africano cambió por completo con la independencia de las "
+            "antiguas colonias.\n"
+            "\n"
+            "El nuevo orden se organizó en torno a dos superpotencias, de modo "
+            "que los demás Estados debieron alinearse con uno de los bloques o "
+            "declararse no alineados. En 1955, representantes de países de Asia "
+            "y África reunidos en Bandung buscaron precisamente eso: una "
+            "posición propia frente a ambos bloques."
+        ),
+    },
+    {
+        "key": "his_crisis_liberal_fte",
+        "title": "La crisis del Estado liberal entre las dos guerras",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Entre 1914 y 1945 entró en crisis el modelo de Estado liberal que "
+            "se había consolidado en el siglo XIX: un Estado que garantizaba el "
+            "orden y los contratos, y que se abstenía de intervenir en la "
+            "economía.\n"
+            "\n"
+            "El golpe decisivo fue la crisis económica de 1929, que derrumbó la "
+            "producción, el comercio y el empleo en todo el mundo occidental. "
+            "La idea de que los mercados se equilibraban solos quedó "
+            "debilitada, y abrió paso a Estados dispuestos a intervenir para "
+            "sostener la actividad. En la primera mitad del siglo varios países "
+            "asumieron además responsabilidades permanentes en salud, previsión "
+            "y educación, un modelo que se conoce como Estado de bienestar.\n"
+            "\n"
+            "Chile sufrió la crisis con particular severidad, porque su fisco y "
+            "sus exportaciones dependían del salitre y del comercio exterior, y "
+            "ambos se desplomaron a la vez. Como otros países de la región, "
+            "respondió impulsando la producción interna de bienes que antes "
+            "importaba, estrategia conocida como industrialización por "
+            "sustitución de importaciones. En 1938 llegó al gobierno la "
+            "coalición del Frente Popular, cuyo programa apuntaba a ampliar el "
+            "papel del Estado, y en 1939 se creó la Corporación de Fomento de "
+            "la Producción, a la que se encomendó impulsar la industrialización "
+            "del país. El Estado dejaba así de ser solamente garante del orden "
+            "para convertirse en agente económico.\n"
+            "\n"
+            "En Europa el descontento social acumulado tras la guerra y la "
+            "crisis favoreció el ascenso de los regímenes totalitarios. Estos "
+            "compartieron rasgos reconocibles: un partido único, un líder "
+            "supremo con poder ilimitado, la supresión de la oposición y una "
+            "propaganda estatal destinada a difundir una versión única de la "
+            "realidad. Su rasgo distintivo fue la pretensión de controlar la "
+            "vida entera de la sociedad: la escuela, el trabajo, la prensa, el "
+            "ocio y hasta la vida privada.\n"
+            "\n"
+            "En América Latina surgieron durante el mismo período liderazgos "
+            "como los de Getúlio Vargas en Brasil y Juan Domingo Perón en "
+            "Argentina. También ellos apelaron directamente a los sectores "
+            "populares, por encima de los partidos tradicionales, y ampliaron "
+            "derechos sociales y laborales. La diferencia con el totalitarismo "
+            "europeo es sustancial: los populismos latinoamericanos "
+            "concentraron poder y restringieron a sus opositores, pero no "
+            "intentaron controlar la totalidad de la existencia de sus "
+            "ciudadanos ni suprimir del todo la vida social autónoma."
+        ),
+    },
+    {
+        "key": "his_chile_xix_fte",
+        "title": "Chile durante el siglo XIX: orden político, economía y sociedad",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "La Constitución de 1833 organizó la República de Chile durante "
+            "buena parte del siglo XIX. Estableció un Ejecutivo fuerte, con "
+            "amplias atribuciones sobre el Congreso y sobre la administración, "
+            "y ese diseño dio al país una estabilidad institucional poco "
+            "frecuente en la región. El arreglo duró hasta la guerra civil de "
+            "1891, que lo invirtió: desde entonces y hasta 1925 el Congreso "
+            "pasó a predominar sobre el Ejecutivo.\n"
+            "\n"
+            "La economía se organizó en torno a la exportación de unos pocos "
+            "productos. Hacia mediados de siglo, el descubrimiento de "
+            "yacimientos de oro en California y en Australia disparó la demanda "
+            "de alimentos en el Pacífico y aumentó las exportaciones chilenas "
+            "de trigo y harina. Más tarde, la incorporación de Tarapacá y "
+            "Antofagasta tras la Guerra del Pacífico cambió la estructura "
+            "fiscal del país: los derechos de exportación del salitre pasaron a "
+            "financiar una parte decisiva del presupuesto, y el fisco quedó "
+            "atado a la suerte de ese mineral. Para sostener ese comercio el "
+            "Estado expandió la red ferroviaria, cuyo trazado respondía sobre "
+            "todo a la necesidad de llevar la producción hasta los puertos. Una "
+            "estructura así deja a la economía expuesta a los precios "
+            "internacionales, que se fijan fuera del país y no dependen de lo "
+            "que este haga. Chile ocupaba, en el orden económico del siglo, el "
+            "lugar del proveedor de materias primas para las economías europeas "
+            "que se estaban industrializando, de las que a su vez importaba "
+            "manufacturas y capitales.\n"
+            "\n"
+            "El Estado también amplió su territorio y su autoridad hacia "
+            "dentro. Entre 1861 y 1883 llevó adelante la ocupación de la "
+            "Araucanía, un proceso militar y colonizador que significó para el "
+            "pueblo mapuche la pérdida de gran parte de sus tierras. Y entre "
+            "1883 y 1884 aprobó las llamadas leyes laicas, que traspasaron "
+            "desde la Iglesia al Estado los registros de nacimientos, "
+            "matrimonios y defunciones.\n"
+            "\n"
+            "El crecimiento de las ciudades en el tránsito al siglo XX estuvo "
+            "asociado a la llegada de población rural que buscaba trabajo, y "
+            "produjo hacinamiento en conventillos sin condiciones sanitarias. A "
+            "ese conjunto de problemas —salarios bajos, jornadas extensas, "
+            "vivienda precaria, enfermedad— se lo llamó entonces la cuestión "
+            "social, y aludía a las condiciones de vida de los trabajadores "
+            "urbanos. Frente a ese deterioro, los propios trabajadores crearon "
+            "sociedades de socorros mutuos: organizaciones que reunían aportes "
+            "periódicos de sus miembros para auxiliarlos en caso de enfermedad, "
+            "accidente o muerte, cuando no existía ninguna previsión estatal "
+            "que lo hiciera."
+        ),
+    },
+    {
+        "key": "his_estado_nacion_fte",
+        "title": "La construcción del Estado-nación en el siglo XIX",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Durante el siglo XIX se impuso en Europa y en América una forma de "
+            "organizar el poder político que hoy parece natural y entonces era "
+            "nueva: el Estado-nación. Un Estado nacional ejerce un poder "
+            "soberano sobre un territorio de límites definidos y sobre la "
+            "población que lo habita, sin reconocer por encima de sí ninguna "
+            "autoridad superior.\n"
+            "\n"
+            "Las repúblicas surgidas de las independencias hispanoamericanas "
+            "cambiaron el fundamento mismo del poder. Donde antes la autoridad "
+            "del monarca se justificaba por herencia y por origen divino, las "
+            "nuevas constituciones declararon que la soberanía reside en la "
+            "nación y se ejerce a través de representantes elegidos. Esas "
+            "mismas constituciones separaron las funciones del Estado en "
+            "poderes distintos, con el propósito explícito de impedir que el "
+            "poder volviera a concentrarse en una sola autoridad.\n"
+            "\n"
+            "El principio se aplicó, sin embargo, con límites estrictos. El "
+            "derecho a sufragio quedó restringido por requisitos de renta, "
+            "propiedad o alfabetización, de modo que la vida política se "
+            "resolvió durante décadas entre una elite reducida. Las "
+            "constituciones proclamaron la igualdad de todos ante la ley, y esa "
+            "igualdad fue jurídica: no alteró la distribución de la riqueza ni "
+            "la estructura social heredada. La tierra siguió concentrada en "
+            "pocas manos, como en el orden colonial, y esa continuidad convivió "
+            "sin contradicción aparente con el nuevo lenguaje republicano. En "
+            "varios países, además, la debilidad de instituciones recién "
+            "creadas dejó espacio a liderazgos personales sostenidos en el "
+            "respaldo militar, que ocuparon con autoridad propia el lugar que "
+            "las reglas escritas todavía no lograban llenar.\n"
+            "\n"
+            "Ser una nación exigía que los habitantes se reconocieran como "
+            "parte de una misma comunidad, y eso no venía dado. Los Estados lo "
+            "construyeron deliberadamente: crearon sistemas de instrucción "
+            "pública que, junto con enseñar a leer y escribir, difundían una "
+            "historia, una lengua y una identidad comunes, y promovieron "
+            "himnos, banderas, museos y fechas conmemorativas destinados a "
+            "producir un sentido de pertenencia compartido. Definir quiénes "
+            "formaban parte de esa nación implicó también decidir quiénes no: "
+            "los pueblos indígenas quedaron al margen del proyecto que las "
+            "elites imaginaban, y sus territorios y formas de vida fueron "
+            "tratados como obstáculos que había que remover.\n"
+            "\n"
+            "El ideario liberal tuvo asimismo una expresión económica. Las "
+            "nuevas repúblicas abrieron sus economías al comercio con Europa, a "
+            "la que exportaban materias primas y de la que recibían "
+            "manufacturas y capitales.\n"
+            "\n"
+            "El proceso no fue exclusivo de América. En la segunda mitad del "
+            "siglo, Italia y Alemania alcanzaron su unificación política, de "
+            "manera que a ambos lados del Atlántico el siglo XIX fue el tiempo "
+            "en que se construyeron Estados de base nacional."
+        ),
+    },
     {
         "key": "migracion_tabla",
         "title": "Población de la comuna de San Alberto, 1990-2020",
@@ -53635,6 +54421,2935 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "facil",
+        "En Chile la relación entre trabajador y empleador debe constar en un "
+        "contrato escrito dentro de un plazo determinado. ¿Qué función cumple ese "
+        "documento?",
+        "Fija por escrito los derechos de ambas partes",
+        "El contrato deja establecidas las funciones, la jornada, la remuneración y "
+        "el lugar de trabajo, de modo que ninguna de las partes dependa de lo que "
+        "recuerde o afirme la otra.\nEsa constancia importa sobre todo al "
+        "trabajador: sin documento, acreditar cuánto se pactó o qué horario se "
+        "acordó resulta mucho más difícil ante un conflicto.\nEl contrato no crea "
+        "los derechos laborales, que están en la ley: los hace verificables en el "
+        "caso concreto.",
+        [
+            ("Permite modificar la ley laboral vigente", "Un contrato no puede establecer condiciones inferiores a la ley."),
+            ("Reemplaza las normas del Código del Trabajo", "El Código sigue aplicándose por sobre lo pactado."),
+            ("Establece que el empleo dure toda la vida", "El contrato no garantiza permanencia indefinida."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "facil",
+        "El Código del Trabajo establece que los derechos laborales son "
+        "irrenunciables mientras dure la relación laboral. ¿Qué protege esa regla?",
+        "Evita acuerdos bajo presión del empleador",
+        "Si esos derechos fueran renunciables, bastaría con incluir la renuncia en "
+        "el contrato para dejarlos sin efecto, y quien necesita el empleo firmaría "
+        "igual.\nLa irrenunciabilidad reconoce que ese consentimiento no sería "
+        "enteramente libre, y por eso sustrae ciertos mínimos del alcance de lo que "
+        "puede pactarse.\nEs la misma lógica de otras protecciones jurídicas: "
+        "cuando una parte está en posición más débil, la ley limita lo que puede "
+        "acordarse en su perjuicio.",
+        [
+            ("Impide que se firmen contratos de trabajo", "Los contratos se firman; lo que se limita es su contenido."),
+            ("Prohíbe que existan sindicatos", "La organización sindical es un derecho reconocido."),
+            ("Obliga a trabajar horas extras", "Las horas extraordinarias tienen su propia regulación y límites."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "La negociación colectiva permite a los trabajadores organizados acordar "
+        "condiciones laborales con su empleador. ¿Qué la distingue de una "
+        "negociación individual?",
+        "Equilibra el poder entre las partes",
+        "Un trabajador que negocia solo enfrenta a una empresa que puede prescindir "
+        "de él, mientras él difícilmente puede prescindir del empleo.\nAl negociar "
+        "en conjunto, los trabajadores compensan esa asimetría: la empresa no "
+        "discute con una persona reemplazable sino con el grupo del que depende su "
+        "funcionamiento.\nPor eso la negociación colectiva se considera un "
+        "mecanismo del propio sistema laboral y no una excepción a él: corrige un "
+        "desequilibrio que existe en el punto de partida.",
+        [
+            ("Excluye la participación del empleador", "El empleador es una de las partes que negocia."),
+            ("Se realiza ante un tribunal laboral", "Es un proceso entre las partes, con reglas propias."),
+            ("Fija las remuneraciones por ley", "Las remuneraciones se acuerdan, respetando el mínimo legal."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "La huelga está reconocida como un derecho dentro del proceso de "
+        "negociación colectiva. ¿Qué función cumple en ese proceso?",
+        "Da fuerza a la posición del sindicato",
+        "Sin la posibilidad de suspender el trabajo, la parte trabajadora podría "
+        "presentar demandas pero no sostenerlas, y el empleador no tendría más "
+        "incentivo que su buena voluntad para atenderlas.\nLa huelga introduce un "
+        "costo para ambas partes, y ese costo compartido es lo que empuja a llegar "
+        "a un acuerdo.\nSu ejercicio está regulado: procede dentro de la "
+        "negociación reglada, con plazos y votaciones establecidas, y con "
+        "restricciones en servicios considerados esenciales.",
+        [
+            ("Termina el contrato de los trabajadores", "La huelga legal suspende la relación laboral, no la extingue."),
+            ("Impide que el empleador negocie", "Busca precisamente empujar a la negociación."),
+            ("Reemplaza al Código del Trabajo", "Es un derecho regulado por ese mismo Código."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Una parte de los trabajadores en Chile se desempeña sin contrato ni "
+        "cotizaciones previsionales. ¿Qué consecuencia tiene esa situación para "
+        "ellos?",
+        "Quedan sin protección social ni pensión",
+        "El trabajo informal deja fuera del sistema al trabajador: sin cotizaciones "
+        "no hay cobertura de salud ni seguro de cesantía, y no se acumulan fondos "
+        "para la vejez.\nTampoco operan las protecciones del contrato, como el pago "
+        "de indemnizaciones, la cobertura ante accidentes del trabajo o el derecho "
+        "a reclamar ante la Dirección del Trabajo.\nEl efecto no termina con la "
+        "vida laboral: quien cotizó poco o nada llega a la edad de jubilación con "
+        "pensiones bajas, de modo que la informalidad de hoy se convierte en el "
+        "problema previsional de las décadas siguientes.",
+        [
+            ("Reciben mayores beneficios estatales", "Quedan fuera de la mayoría de las prestaciones contributivas."),
+            ("Acceden a mejores condiciones de salud", "Sin cotización no acceden al sistema por esa vía."),
+            ("Obtienen contratos de mayor duración", "Por definición no cuentan con contrato."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "El sistema de seguridad social cubre contingencias como la vejez, la "
+        "enfermedad y los accidentes del trabajo. ¿Qué principio lo sustenta?",
+        "Repartir riesgos que nadie enfrenta solo",
+        "Ninguna persona puede prever si sufrirá un accidente o cuántos años vivirá "
+        "después de dejar de trabajar, y pocas podrían financiar por sí solas esas "
+        "contingencias si ocurren.\nAl reunir aportes de muchos, el sistema permite "
+        "cubrir a quienes efectivamente enfrentan la contingencia, aunque no se "
+        "sepa de antemano quiénes serán.\nLos sistemas difieren en cómo organizan "
+        "ese aporte —reparto, capitalización individual o esquemas mixtos—, y ese "
+        "es precisamente el eje del debate previsional chileno.",
+        [
+            ("Premiar a quienes no se enferman", "El sistema cubre a quien enfrenta la contingencia."),
+            ("Reducir el número de trabajadores", "No guarda relación con el tamaño de la fuerza de trabajo."),
+            ("Eliminar la necesidad de cotizar", "La cotización es justamente el mecanismo de financiamiento."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "A lo largo del siglo XX y del XXI diversos movimientos sociales chilenos "
+        "han logrado instalar sus demandas en la agenda pública. ¿Qué explica esa "
+        "capacidad?",
+        "La acción colectiva sostenida en el tiempo",
+        "Ninguno de esos movimientos disponía de facultades para legislar ni de "
+        "representación institucional propia: su influencia provino de organizarse "
+        "y sostener la demanda públicamente.\nLa movilización vuelve visible un "
+        "problema, obliga a las autoridades a pronunciarse y desplaza el límite de "
+        "lo que se considera discutible, aunque la respuesta legislativa llegue "
+        "años después.\nEl movimiento obrero de comienzos del siglo XX, el de "
+        "pobladores a mediados, y más tarde los movimientos estudiantiles, "
+        "feministas y ambientales, muestran ese mismo recorrido: primero instalan "
+        "el tema, después se traduce en política pública.",
+        [
+            ("La representación directa en el Congreso", "Los movimientos sociales no ocupan escaños como tales."),
+            ("La facultad de dictar leyes", "Legislar corresponde exclusivamente al Congreso."),
+            ("El control de los medios de comunicación", "No controlan los medios, aunque busquen su cobertura."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "En Chile la participación laboral femenina es menor que la masculina y las "
+        "remuneraciones promedio también difieren. ¿Qué factor incide en esa "
+        "diferencia?",
+        "El reparto desigual del trabajo doméstico",
+        "El cuidado de niños, enfermos y personas mayores, junto con las tareas del "
+        "hogar, recae mayoritariamente en mujeres y no se remunera ni se "
+        "contabiliza como trabajo.\nEsa carga limita la disponibilidad horaria, "
+        "empuja hacia jornadas parciales e interrumpe trayectorias laborales, lo "
+        "que se traduce en menores ingresos y en menores pensiones al final del "
+        "ciclo.\nPor eso las políticas que abordan la brecha combinan medidas "
+        "laborales con provisión de salas cuna y con permisos parentales "
+        "compartidos: el problema no se origina únicamente dentro del mercado del "
+        "trabajo.",
+        [
+            ("La ausencia de mujeres con título profesional", "Las mujeres son mayoría en la matrícula de educación superior."),
+            ("La prohibición legal de contratarlas", "No existe ninguna prohibición de ese tipo."),
+            ("La falta de instituciones educativas", "La oferta educativa está disponible para ambos sexos."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "La incorporación de tecnologías automatizadas modifica la demanda de "
+        "trabajo en distintos sectores. ¿Qué efecto se le atribuye?",
+        "Reduce unas tareas y crea otras nuevas",
+        "La automatización afecta primero a las tareas rutinarias y predecibles, "
+        "sean manuales o administrativas, y genera a la vez demanda por trabajos "
+        "asociados al diseño, la supervisión y el mantenimiento de esos "
+        "sistemas.\nEl problema no es entonces el número total de empleos sino la "
+        "transición: quien pierde su puesto no es necesariamente quien puede ocupar "
+        "el nuevo, y ese desajuste puede durar años.\nDe ahí que el debate se "
+        "concentre en capacitación, reconversión laboral y protección durante el "
+        "cambio, más que en frenar la tecnología.",
+        [
+            ("Elimina por completo el empleo humano", "Transforma la composición del empleo, no lo suprime."),
+            ("Mantiene inalterada la estructura laboral", "La estructura ocupacional cambia de manera apreciable."),
+            ("Solo afecta al sector agrícola", "Alcanza a la industria, el comercio y los servicios."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "facil",
+        "La ley chilena establece un límite máximo a la jornada ordinaria de "
+        "trabajo. ¿Qué justifica esa limitación?",
+        "Proteger la salud y el descanso",
+        "Las jornadas extensas aumentan los accidentes, deterioran la salud y "
+        "reducen el tiempo disponible para la vida familiar y personal.\nLa "
+        "limitación de la jornada fue una de las primeras conquistas del movimiento "
+        "obrero, y su reducción progresiva ha continuado hasta hoy.\nEl límite es "
+        "máximo, no obligatorio: puede pactarse una jornada menor, y las horas que "
+        "lo excedan tienen carácter extraordinario, con recargo y con tope.",
+        [
+            ("Aumentar la producción por cada hora", "La productividad no es el fundamento de la norma."),
+            ("Reducir el número de empleos", "La limitación no busca disminuir el empleo."),
+            ("Impedir el pago de remuneraciones", "La remuneración se paga conforme a la jornada pactada."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "medio",
+        "El trabajo mediante aplicaciones de reparto y transporte ha crecido en los "
+        "últimos años. ¿Qué desafío plantea a la legislación laboral?",
+        "Definir si existe relación de dependencia",
+        "El derecho laboral protege a quien trabaja bajo subordinación: con "
+        "horario, instrucciones y supervisión de un empleador.\nEstas modalidades "
+        "combinan rasgos de ambos mundos —el trabajador elige cuándo conectarse, "
+        "pero la aplicación fija tarifas, asigna tareas y evalúa su desempeño—, y "
+        "de esa calificación depende si le corresponden cotizaciones, jornada "
+        "máxima y demás protecciones.\nChile legisló sobre estas plataformas, y la "
+        "discusión sobre cómo clasificarlas continúa abierta en muchos países.",
+        [
+            ("Prohibir el uso de teléfonos móviles", "El problema no se refiere a los dispositivos utilizados."),
+            ("Fijar el precio de cada servicio", "La tarifa no es el asunto laboral en discusión."),
+            ("Impedir que las aplicaciones operen", "El debate es sobre cómo regularlas, no sobre prohibirlas."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_fte", "eco_laborales", "dificil",
+        "Se afirma que el derecho laboral nace del reconocimiento de que las partes "
+        "de un contrato de trabajo no negocian en igualdad de condiciones. ¿Qué "
+        "justifica esa afirmación?",
+        "El trabajador depende de ese ingreso",
+        "Formalmente ambas partes concurren libremente al contrato, pero lo que "
+        "cada una arriesga si no lo celebra es muy distinto: la empresa pierde un "
+        "candidato, el trabajador pierde su sustento.\nEsa asimetría explica por "
+        "qué el derecho civil, que supone partes equivalentes, resultó "
+        "insuficiente, y por qué surgió una rama con reglas propias: mínimos "
+        "irrenunciables, límites a la jornada y protección frente al "
+        "despido.\nEntender el derecho laboral como respuesta histórica a una "
+        "desigualdad concreta, y no como un conjunto de restricciones sin origen, "
+        "es lo que permite discutir con sentido cualquier reforma que se le "
+        "proponga.",
+        [
+            ("El empleador desconoce la ley vigente", "El fundamento no está en el conocimiento de la ley."),
+            ("Ambas partes tienen el mismo poder", "Esa es justamente la premisa que la afirmación niega."),
+            ("El contrato no puede ser escrito", "El contrato de trabajo debe constar por escrito."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "facil",
+        "En economía se distingue entre crecimiento económico y desarrollo. ¿Qué "
+        "agrega la noción de desarrollo?",
+        "Considera las condiciones de vida",
+        "El crecimiento indica que se produce más; el desarrollo pregunta además "
+        "qué ocurre con la vida de las personas.\nIncorpora la esperanza de vida, "
+        "el acceso a educación y salud, la calidad del empleo y la distribución del "
+        "ingreso, dimensiones que un aumento del producto no garantiza por sí "
+        "mismo.\nLa distinción no es meramente terminológica: un país puede crecer "
+        "durante años y mantener sin cambios los indicadores sociales, y la "
+        "discusión pública suele girar justamente en torno a esa diferencia.",
+        [
+            ("Mide únicamente el aumento del producto total", "Eso es precisamente lo que mide el crecimiento."),
+            ("Se calcula solo cada cinco años", "La periodicidad no distingue ambos conceptos."),
+            ("Se aplica solo a países pequeños", "La distinción vale para cualquier economía."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "facil",
+        "El cobre es un recurso natural no renovable. ¿Qué significa esa "
+        "clasificación?",
+        "Sus reservas no se reponen a escala humana",
+        "Los yacimientos se formaron en procesos geológicos de millones de años, de "
+        "modo que cada tonelada extraída es una tonelada menos disponible.\nEso "
+        "plantea una pregunta que los recursos renovables no plantean del mismo "
+        "modo: qué se hace con los ingresos mientras el recurso dura.\nDe ahí que "
+        "los países mineros discutan sobre fondos de ahorro, diversificación "
+        "productiva e inversión en capital humano, todas formas de convertir un "
+        "recurso que se agota en algo que permanezca.",
+        [
+            ("Puede extraerse en cantidad prácticamente ilimitada", "Las reservas son finitas por definición."),
+            ("Se regenera cada temporada del año", "Eso describiría un recurso renovable."),
+            ("No tiene valor en el mercado externo", "El cobre es el principal producto de exportación de Chile."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "El desarrollo sostenible se define como aquel que satisface las "
+        "necesidades del presente sin comprometer la capacidad de las generaciones "
+        "futuras de satisfacer las suyas. ¿Qué exige ese criterio?",
+        "Considerar los efectos de largo plazo",
+        "La definición introduce en la decisión económica a quienes todavía no "
+        "pueden participar de ella, y obliga a preguntarse qué queda después de "
+        "obtenido el beneficio inmediato.\nEn la práctica significa evaluar si el "
+        "uso de un recurso permite su reposición, si el daño ambiental es "
+        "reversible y si la actividad deja capacidades instaladas o solo ingresos "
+        "transitorios.\nNo supone renunciar a producir, sino incorporar al cálculo "
+        "costos que de otro modo se trasladan al futuro sin registrarse en ninguna "
+        "parte.",
+        [
+            ("Detener toda actividad productiva", "La definición supone seguir satisfaciendo las necesidades presentes."),
+            ("Priorizar el consumo inmediato", "Es exactamente el criterio contrario."),
+            ("Extraer los recursos con rapidez", "La velocidad de extracción es parte del problema, no de la solución."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "Las exportaciones chilenas se concentran en productos derivados de "
+        "recursos naturales, con el cobre a la cabeza. ¿Qué riesgo implica esa "
+        "concentración?",
+        "La economía depende de precios externos",
+        "El precio del cobre se fija en mercados internacionales y responde a la "
+        "demanda mundial, sobre la cual Chile no tiene control.\nCuando ese precio "
+        "sube, aumentan las exportaciones, la inversión y la recaudación fiscal; "
+        "cuando cae, el ajuste se traslada al presupuesto público y al empleo.\nA "
+        "esa exposición se la llama vulnerabilidad externa, y es el argumento "
+        "principal de quienes proponen diversificar la matriz productiva y agregar "
+        "valor a lo que se exporta.",
+        [
+            ("El país no puede importar productos", "Las importaciones no dependen de esa concentración."),
+            ("Las exportaciones dejan de crecer", "Pueden crecer; el problema es su variabilidad."),
+            ("Se prohíbe la actividad industrial", "No existe tal prohibición."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "En Chile han surgido conflictos entre proyectos productivos y comunidades "
+        "locales por el uso del agua o del territorio. ¿Qué tensión expresan esos "
+        "conflictos?",
+        "Los beneficios y los costos no coinciden",
+        "Un proyecto puede generar empleo, exportaciones y recaudación para el "
+        "conjunto del país, mientras el consumo de agua, el ruido o el deterioro "
+        "del paisaje recaen sobre quienes viven en el lugar.\nEl conflicto no se "
+        "explica entonces por desinformación de una de las partes: hay una "
+        "asimetría real entre quién recibe la ganancia y quién asume el costo.\nLos "
+        "mecanismos de evaluación ambiental, consulta y compensación buscan "
+        "corregir esa asimetría, y el debate público suele centrarse en si "
+        "efectivamente lo logran.",
+        [
+            ("El país carece de legislación ambiental", "Existe un sistema de evaluación de impacto ambiental."),
+            ("Los proyectos no generan empleo alguno", "El empleo es justamente uno de los beneficios en disputa."),
+            ("Las comunidades no participan del debate", "Su participación es precisamente lo que hace visible el conflicto."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "La medición de pobreza multidimensional considera, además del ingreso, el "
+        "acceso a educación, salud, vivienda y trabajo. ¿Qué ventaja tiene ese "
+        "enfoque?",
+        "Detecta carencias que el ingreso no muestra",
+        "Un hogar puede superar la línea de ingreso y aun así vivir en una vivienda "
+        "sin saneamiento, sin cotizaciones previsionales o lejos de un centro de "
+        "salud.\nMedir varias dimensiones a la vez permite identificar esas "
+        "situaciones y orientar la política pública hacia la carencia específica de "
+        "cada territorio.\nLa lección metodológica excede la economía: la elección "
+        "del indicador determina qué problemas se vuelven visibles, y por eso "
+        "ningún indicador es una decisión puramente técnica.",
+        [
+            ("Reduce el número de hogares que se miden", "La medición es igualmente representativa."),
+            ("Elimina el uso de encuestas oficiales", "Se basa justamente en encuestas de hogares."),
+            ("Considera solo el gasto en alimentos", "Eso describiría una medición mucho más restringida."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Las emisiones de gases de efecto invernadero producidas en un país afectan "
+        "el clima de todo el planeta. ¿Qué dificultad plantea esa característica?",
+        "Ningún país resuelve el problema por sí solo",
+        "A cada país le conviene que los demás reduzcan sus emisiones, y ninguno "
+        "obtiene por sí mismo el beneficio completo del esfuerzo que realiza.\nEsa "
+        "estructura de incentivos explica por qué el problema no se resuelve "
+        "espontáneamente y por qué requiere acuerdos internacionales, con metas "
+        "verificables y mecanismos de seguimiento.\nEs la misma lógica del bien "
+        "público, trasladada a escala planetaria: el beneficio no puede reservarse "
+        "a quien lo financia, y por eso hace falta coordinación para producirlo.",
+        [
+            ("Las emisiones no pueden ser medidas", "Existen inventarios nacionales de emisiones."),
+            ("El clima solo cambia en un continente", "El efecto es global, con impactos desiguales."),
+            ("Los acuerdos internacionales son obligatorios", "Su cumplimiento depende en gran medida de compromisos voluntarios."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "La apertura comercial permite a los consumidores acceder a productos de "
+        "otros países a menor precio. ¿Qué efecto puede tener sobre los productores "
+        "locales?",
+        "Deben competir con proveedores externos",
+        "El mismo hecho que beneficia al consumidor presiona al productor que antes "
+        "abastecía ese mercado sin competencia.\nAlgunos sectores logran adaptarse "
+        "mejorando su productividad o especializándose; otros no lo consiguen y "
+        "reducen su actividad, con pérdida de empleo en el rubro.\nPor eso la "
+        "evaluación de una apertura comercial no puede quedarse en el saldo "
+        "agregado: importa quién gana, quién pierde y qué políticas acompañan la "
+        "transición de quienes pierden.",
+        [
+            ("Dejan de vender en el mercado interno", "Siguen vendiendo, aunque enfrentando competencia."),
+            ("Reciben subsidios estatales de forma automática", "No existe tal compensación automática."),
+            ("Quedan excluidos de exportar", "La apertura también les abre mercados externos."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Algunos autores sostienen que la abundancia de recursos naturales no "
+        "garantiza por sí sola el desarrollo de un país. ¿Cómo fundamentan esa "
+        "idea?",
+        "Depende de qué se hace con esa renta",
+        "Existen países con enormes reservas y bajos indicadores sociales, y otros "
+        "sin recursos relevantes que alcanzaron altos niveles de desarrollo.\nLa "
+        "diferencia suele estar en el destino de los ingresos: si financian "
+        "educación, infraestructura y diversificación productiva, o si se consumen "
+        "sin dejar capacidades instaladas.\nSe señalan además efectos indirectos, "
+        "como la concentración de la economía en un solo sector y el debilitamiento "
+        "institucional que puede acompañar a una renta abundante y fácil de "
+        "capturar. El recurso es una oportunidad, no un resultado.",
+        [
+            ("Los recursos naturales carecen de valor", "Tienen valor; la discusión es sobre su aprovechamiento."),
+            ("Los países desarrollados no tienen recursos", "Muchos los tienen; no es ese el factor determinante."),
+            ("La extracción no genera ingresos", "Genera ingresos considerables, y de eso trata el problema."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "facil",
+        "Chile ha incorporado energía solar y eólica a su matriz eléctrica. ¿Qué "
+        "característica comparten esas fuentes?",
+        "No se agotan con su uso",
+        "El sol y el viento se consideran recursos renovables: utilizarlos hoy no "
+        "reduce la cantidad disponible mañana.\nA eso se suma que su operación no "
+        "emite gases de efecto invernadero, lo que las vuelve centrales en los "
+        "compromisos de reducción de emisiones.\nTienen también limitaciones "
+        "conocidas, como la variabilidad de la generación según la hora y el clima, "
+        "que obliga a resolver el problema del almacenamiento.",
+        [
+            ("Provienen de combustibles fósiles", "Los combustibles fósiles son un recurso no renovable."),
+            ("Emiten grandes volúmenes de gases", "Su operación no genera emisiones significativas."),
+            ("Solo pueden usarse en el sur del país", "La energía solar se concentra en el norte."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "medio",
+        "El desarrollo económico chileno no se distribuye de manera pareja entre "
+        "las distintas regiones del país. ¿Qué consecuencia tiene esa diferencia?",
+        "Persisten brechas en servicios y empleo",
+        "La concentración de la actividad económica y de los servicios "
+        "especializados en algunas zonas deja a otras con menor oferta de trabajo "
+        "calificado, salud y educación superior.\nEsa desigualdad territorial "
+        "alimenta la migración interna hacia los centros urbanos, que a su vez "
+        "presiona la vivienda y el transporte en las ciudades que reciben a esa "
+        "población.\nEs una de las razones que se invocan a favor de la "
+        "descentralización: acercar las decisiones y los recursos a los territorios "
+        "donde las brechas se producen.",
+        [
+            ("Todas las regiones crecen exactamente igual", "El enunciado describe justamente lo contrario."),
+            ("El país deja de tener regiones", "La división territorial se mantiene."),
+            ("Se elimina la migración interna", "La desigualdad territorial tiende a estimularla."),
+        ],
+    ),
+    _ql(
+        "eco_desarrollo_fte", "eco_desarrollo", "dificil",
+        "Se discute si es posible seguir aumentando la producción sin deteriorar el "
+        "medio ambiente. ¿Qué supone la postura que sostiene que sí es posible?",
+        "Que la tecnología reduzca el impacto",
+        "El argumento es que se puede desacoplar el crecimiento de su huella "
+        "ambiental: producir más usando menos materiales y energía por unidad, "
+        "reciclando y sustituyendo fuentes contaminantes por limpias.\nLa objeción "
+        "sostiene que ese desacople ha sido parcial y más lento que el aumento del "
+        "consumo, de modo que las mejoras por unidad quedan absorbidas por el "
+        "volumen total.\nReconocer qué supuesto sostiene cada postura, y qué "
+        "evidencia la respaldaría o la refutaría, es exactamente el ejercicio de "
+        "pensamiento crítico que el temario propone para este eje.",
+        [
+            ("Que se detenga toda producción", "Esa sería la posición contraria a la descrita."),
+            ("Que el ambiente no tenga límites", "La postura no niega los límites; apuesta a usarlos mejor."),
+            ("Que se prohíba el uso de energía", "El debate es sobre qué energía se usa, no sobre prohibirla."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "facil",
+        "El problema económico básico surge de que los recursos disponibles son "
+        "limitados mientras las necesidades no lo son. ¿Qué consecuencia tiene esa "
+        "situación?",
+        "Obliga a elegir entre usos alternativos",
+        "Como no alcanza para todo, cada decisión de usar un recurso en algo "
+        "implica renunciar a usarlo en otra cosa.\nA ese sacrificio se le llama "
+        "costo de oportunidad, y existe aunque no se pague dinero por él: las horas "
+        "dedicadas a estudiar son horas que no se trabajan, y un terreno destinado "
+        "a vivienda no queda disponible para cultivo.\nToda la economía se ocupa de "
+        "cómo se toman esas decisiones, quién las toma y con qué criterios.",
+        [
+            ("Impide que existan intercambios", "La escasez es justamente lo que da sentido al intercambio."),
+            ("Elimina la necesidad de decidir", "La obliga: si todo abundara, no habría que elegir."),
+            ("Asegura que todos los bienes sean gratuitos", "Los bienes escasos tienen precio precisamente por serlo."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "facil",
+        "En un mercado competitivo aumenta la demanda de un bien mientras su oferta "
+        "se mantiene sin cambios. ¿Qué se espera que ocurra con su precio?",
+        "Que tienda a subir",
+        "Con más compradores dispuestos a adquirir la misma cantidad disponible, "
+        "quienes más valoran el bien están dispuestos a pagar más por él.\nEse "
+        "aumento de precio cumple una función: indica a los productores que "
+        "conviene producir más de ese bien, y a los consumidores que conviene "
+        "moderar su consumo.\nPor eso se dice que los precios transmiten "
+        "información en una economía de mercado, sin que nadie tenga que reunirla "
+        "ni comunicarla deliberadamente.",
+        [
+            ("Que tienda a bajar", "Un precio a la baja se asocia a exceso de oferta, no de demanda."),
+            ("Que permanezca igual", "El desequilibrio entre oferta y demanda mueve el precio."),
+            ("Que desaparezca el bien", "Mayor demanda tiende a incentivar la producción."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "El alumbrado de una calle beneficia a todos quienes pasan por ella, sin "
+        "que sea posible excluir de ese beneficio a quien no pagó. ¿Qué explica que "
+        "sea el Estado quien lo provea?",
+        "El mercado no tiene incentivo a proveerlo",
+        "Si nadie puede ser excluido del beneficio, a cada persona le conviene no "
+        "pagar y aprovechar lo que otros financien.\nCuando todos razonan así, la "
+        "empresa que instalara el alumbrado no lograría cobrar por él, de modo que "
+        "el bien simplemente no se produce aunque todos lo quieran.\nA eso se llama "
+        "bien público, y es una de las razones clásicas por las que el Estado "
+        "provee ciertos servicios: no porque el mercado los haga mal, sino porque "
+        "no llega a hacerlos.",
+        [
+            ("Los privados no saben instalar alumbrado público", "La dificultad no es técnica sino de financiamiento."),
+            ("La ley prohíbe que exista alumbrado", "No existe tal prohibición."),
+            ("Su costo es demasiado bajo", "El costo no es el problema; lo es la imposibilidad de cobrar."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Una fábrica vierte residuos en un río y quienes viven aguas abajo asumen "
+        "los costos de esa contaminación. ¿Cómo se denomina ese efecto?",
+        "Externalidad negativa",
+        "Se llama externalidad al efecto que una actividad económica produce sobre "
+        "terceros que no participaron en ella ni fueron compensados.\nAquí el costo "
+        "de tratar el agua, o el daño a la salud y a la pesca, no aparece en los "
+        "costos de la empresa ni en el precio del producto: lo paga quien vive "
+        "junto al río.\nTambién existen externalidades positivas, como el beneficio "
+        "que la vacunación de unos produce sobre la salud de otros.",
+        [
+            ("Competencia perfecta", "Describe una estructura de mercado, no un efecto sobre terceros."),
+            ("Ventaja comparativa", "Se refiere a los costos relativos en el comercio."),
+            ("Bien de consumo", "Designa un tipo de bien, no un efecto externo."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "Se sostiene que la existencia de externalidades justifica la intervención "
+        "del Estado en ciertos mercados. ¿Cuál es el argumento?",
+        "El precio no refleja todos los costos",
+        "Un mercado asigna bien los recursos cuando el precio recoge lo que "
+        "producir un bien realmente cuesta.\nSi parte de ese costo recae sobre "
+        "terceros, el precio queda artificialmente bajo, se produce y se consume "
+        "más de lo que convendría, y el mercado deja de cumplir la función que se "
+        "le atribuye.\nPor eso las herramientas habituales buscan incorporar ese "
+        "costo al precio mediante impuestos, normas de emisión o cobros por "
+        "contaminar, en lugar de reemplazar el mercado. El argumento es que la "
+        "intervención corrige el mecanismo, no que lo sustituya.",
+        [
+            ("Los mercados no fijan precio alguno", "Los mercados fijan precios; el problema es qué recogen."),
+            ("El Estado produce a menor costo", "El argumento no supone mayor eficiencia estatal."),
+            ("Las empresas no buscan utilidades", "Justamente porque las buscan, ignoran los costos que no pagan."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Un impuesto se denomina progresivo cuando quienes tienen mayores ingresos "
+        "pagan una proporción más alta de ellos. ¿Qué efecto busca ese diseño?",
+        "Reducir la desigualdad de ingresos",
+        "El impuesto a la renta chileno funciona por tramos: la tasa se aplica de "
+        "forma creciente a medida que aumenta el ingreso.\nCon ello el sistema "
+        "tributario recauda proporcionalmente más de quienes más tienen, y ese "
+        "financiamiento sostiene servicios que benefician especialmente a quienes "
+        "menos tienen.\nEl efecto redistributivo depende, por lo tanto, de dos "
+        "cosas: cómo se recauda y en qué se gasta. Un sistema puede ser progresivo "
+        "en un extremo y no serlo en el otro.",
+        [
+            ("Aumentar el consumo de lujo", "El efecto buscado es el contrario en términos distributivos."),
+            ("Igualar lo que paga cada persona", "Eso describiría un impuesto de monto fijo."),
+            ("Eliminar la recaudación fiscal", "El impuesto existe precisamente para recaudar."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "El impuesto al valor agregado se aplica con la misma tasa a todos los "
+        "consumidores, cualquiera sea su ingreso. ¿Por qué se lo describe como "
+        "regresivo?",
+        "Pesa más sobre los ingresos bajos",
+        "La tasa es idéntica, pero su peso relativo no lo es: los hogares de "
+        "menores ingresos destinan casi todo lo que reciben al consumo, mientras "
+        "los de mayores ingresos ahorran una parte.\nComo el impuesto grava el "
+        "consumo y no el ingreso, termina absorbiendo una fracción mayor del "
+        "presupuesto de quien menos tiene.\nEs un buen ejemplo de por qué la "
+        "igualdad formal de una regla no garantiza un efecto igualitario, y de por "
+        "qué los sistemas tributarios se evalúan por su resultado y no solo por su "
+        "enunciado.",
+        [
+            ("Solamente lo pagan los ingresos altos", "Lo paga todo consumidor, sin distinción."),
+            ("Su tasa aumenta con el ingreso", "Eso describiría un impuesto progresivo."),
+            ("No genera recaudación al Estado", "Es una de las principales fuentes de recaudación en Chile."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "La inflación corresponde al aumento sostenido y generalizado del nivel de "
+        "precios. ¿Qué efecto tiene sobre los hogares?",
+        "Reduce lo que se puede comprar",
+        "Si los precios suben y el ingreso no lo hace en la misma proporción, el "
+        "mismo sueldo alcanza para menos: eso es la pérdida de poder "
+        "adquisitivo.\nEl efecto no se reparte de manera pareja. Golpea más a "
+        "quienes tienen ingresos fijos y a quienes no pueden negociar reajustes, y "
+        "castiga a quienes ahorran en dinero.\nPor eso el control de la inflación "
+        "se considera un objetivo de política económica y no un asunto contable: "
+        "distorsiona los precios y traslada recursos entre grupos sin que nadie lo "
+        "haya decidido.",
+        [
+            ("Aumenta el poder adquisitivo", "La inflación lo reduce cuando los ingresos no siguen el ritmo."),
+            ("Congela el precio de los bienes", "Describe justamente lo contrario."),
+            ("Elimina el uso del dinero", "El dinero sigue usándose, aunque pierda valor."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "El producto interno bruto mide el valor de los bienes y servicios "
+        "producidos en un país durante un período. ¿Por qué se afirma que no basta "
+        "para evaluar el bienestar de su población?",
+        "No indica cómo se distribuye lo producido",
+        "Dos países con el mismo producto por habitante pueden tener realidades "
+        "sociales muy distintas según cómo se reparta esa producción.\nEl indicador "
+        "tampoco registra el trabajo doméstico no remunerado, ni descuenta el "
+        "deterioro ambiental que la producción provoca, ni dice nada sobre salud, "
+        "educación o seguridad.\nPor eso se lo complementa con otras mediciones, "
+        "como los índices de desarrollo humano o de pobreza multidimensional. Saber "
+        "qué mide y qué deja fuera un indicador es parte de saber usarlo.",
+        [
+            ("No se puede calcular con ninguna precisión", "Se calcula con metodologías establecidas y comparables."),
+            ("Solo considera la producción agrícola", "Incluye todos los sectores de la economía."),
+            ("Se mide una vez cada diez años", "Se mide y publica de forma periódica y frecuente."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "facil",
+        "Además de dictar regulaciones, el Estado chileno participa en la economía "
+        "de otras maneras. ¿Cuál es un ejemplo?",
+        "Provee educación y salud públicas",
+        "El Estado actúa como proveedor de servicios, financiándolos con impuestos "
+        "y poniéndolos a disposición de la población.\nCumple además otras "
+        "funciones: redistribuye mediante transferencias y subsidios, invierte en "
+        "infraestructura, conduce la política fiscal y mantiene empresas en "
+        "sectores estratégicos, como la minería del cobre.\nRegular, proveer, "
+        "redistribuir y producir son funciones distintas, y el debate económico "
+        "suele girar en torno a cuánto de cada una corresponde.",
+        [
+            ("Fija el precio de todos los bienes", "Los precios se forman en el mercado, salvo excepciones reguladas."),
+            ("Produce la totalidad de los alimentos", "La producción de alimentos es mayoritariamente privada."),
+            ("Prohíbe el comercio internacional", "La economía chilena es abierta al comercio exterior."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "medio",
+        "Durante una recesión los gobiernos suelen aumentar el gasto público en "
+        "lugar de reducirlo. ¿Qué buscan con esa medida?",
+        "Sostener la demanda y el empleo",
+        "En una recesión los hogares consumen menos y las empresas postergan "
+        "inversiones, lo que reduce las ventas y provoca más despidos, que a su vez "
+        "reducen el consumo.\nEl gasto público busca interrumpir esa cadena: obras, "
+        "subsidios y transferencias inyectan demanda cuando el sector privado la "
+        "está retirando.\nA esa lógica se la llama política fiscal contracíclica, y "
+        "su contrapartida es que exige ahorrar en los períodos de expansión para "
+        "tener con qué gastar en los de contracción.",
+        [
+            ("Reducir la cantidad de dinero", "Eso corresponde a la política monetaria y en sentido contrario."),
+            ("Aumentar el desempleo del período", "La medida busca precisamente contenerlo."),
+            ("Suspender el pago de impuestos", "La recaudación se mantiene; lo que varía es el gasto."),
+        ],
+    ),
+    _ql(
+        "eco_estado_mercado_fte", "eco_estado_mercado", "dificil",
+        "En el debate sobre política económica suele plantearse una tensión entre "
+        "eficiencia y equidad. ¿En qué consiste esa tensión?",
+        "Redistribuir puede alterar los incentivos",
+        "Los instrumentos que redistribuyen ingresos modifican también las señales "
+        "que reciben quienes producen, invierten o trabajan, y ese efecto puede "
+        "reducir el tamaño de lo que se reparte.\nEl argumento contrario sostiene "
+        "que una desigualdad muy alta tiene sus propios costos de eficiencia: "
+        "talento que no se desarrolla por falta de acceso a educación, y conflictos "
+        "sociales que desalientan la inversión.\nNo hay una respuesta técnica que "
+        "zanje el asunto, porque la pregunta involucra qué reparto se considera "
+        "aceptable. Reconocer dónde termina el análisis económico y empieza la "
+        "decisión política es parte del pensamiento crítico que el temario pide "
+        "ejercer.",
+        [
+            ("La eficiencia impide cualquier tipo de producción", "La eficiencia se refiere a cómo se usan los recursos disponibles."),
+            ("La equidad elimina el crecimiento", "La discusión es sobre grados y costos, no sobre eliminación."),
+            ("Ambas se logran sin costo alguno", "Si no hubiera costo, no existiría la tensión descrita."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "facil",
+        "En Chile toda persona imputada de un delito se presume inocente mientras "
+        "una sentencia no establezca lo contrario. ¿Qué implica ese principio?",
+        "Que la prueba corresponde a quien acusa",
+        "La carga de probar recae sobre quien afirma, y en el proceso penal quien "
+        "afirma es el Ministerio Público.\nEl imputado no tiene que demostrar que "
+        "no cometió el delito; si la acusación no logra acreditarlo, corresponde "
+        "absolver, aunque queden dudas sin resolver.\nLa razón de fondo es que "
+        "probar que algo no ocurrió suele ser imposible, y un sistema que lo "
+        "exigiera condenaría a quienes no pudieran lograrlo.",
+        [
+            ("Que el imputado debe probar su inocencia", "Es exactamente lo contrario de lo que establece el principio."),
+            ("Que el juez decide antes del juicio", "La decisión se adopta tras conocer la prueba en el juicio."),
+            ("Que la acusación basta para condenar", "Acusar no equivale a probar."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "facil",
+        "El Poder Judicial tiene por función resolver los conflictos jurídicos que "
+        "se someten a su conocimiento. ¿Qué caracteriza esa función?",
+        "Se ejerce aplicando el derecho vigente",
+        "El tribunal no resuelve según lo que le parezca preferible, sino aplicando "
+        "las normas que rigen el caso, y debe fundar su decisión en ellas.\nEsa "
+        "exigencia de fundamentación es lo que permite revisar un fallo: si la "
+        "sentencia expone su razonamiento, otro tribunal puede examinar si el "
+        "derecho fue bien aplicado.\nPor eso la función judicial se distingue de la "
+        "política: no consiste en decidir qué conviene, sino en determinar qué "
+        "corresponde según normas dictadas de antemano.",
+        [
+            ("Se ejerce según la opinión mayoritaria", "Los tribunales no fallan conforme a encuestas ni a mayorías."),
+            ("Depende de las instrucciones del gobierno", "La independencia judicial excluye ese tipo de instrucciones."),
+            ("Se limita a redactar nuevas leyes", "Legislar corresponde al Congreso."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "medio",
+        "La reforma procesal penal separó las funciones de investigar y de juzgar, "
+        "que antes recaían en un mismo juez. ¿Qué buscó con esa separación?",
+        "Que quien juzga sea imparcial",
+        "En el sistema anterior, el mismo juez investigaba, acusaba y fallaba, de "
+        "modo que llegaba al momento de decidir con una hipótesis propia ya "
+        "formada.\nCon la reforma, el Ministerio Público investiga y acusa, un juez "
+        "de garantía controla que la investigación respete los derechos del "
+        "imputado, y un tribunal distinto dicta la sentencia tras el juicio "
+        "oral.\nLa imparcialidad deja así de depender de la disposición personal "
+        "del juez y pasa a estar asegurada por el diseño del procedimiento.",
+        [
+            ("Que los juicios duren más tiempo", "La reforma buscó justamente acortar los procesos."),
+            ("Que el fiscal dicte las sentencias", "El fiscal acusa; sentenciar corresponde al tribunal."),
+            ("Que se eliminen los abogados defensores", "La reforma creó además una defensoría penal pública."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "medio",
+        "En el sistema penal chileno vigente, ¿cuál es la función del Ministerio "
+        "Público?",
+        "Investigar los delitos y acusar",
+        "El Ministerio Público dirige la investigación, reúne la prueba y, si "
+        "estima que hay antecedentes suficientes, formula la acusación ante el "
+        "tribunal.\nEs un organismo autónomo, de modo que no recibe instrucciones "
+        "del gobierno sobre qué casos perseguir, y sus fiscales responden por su "
+        "actuación ante el propio Ministerio.\nSu creación es una de las piezas "
+        "centrales de la reforma: al radicar la investigación en un órgano distinto "
+        "del que juzga, hizo posible la separación de funciones que el sistema "
+        "anterior no tenía.",
+        [
+            ("Dictar sentencia en los juicios", "Sentenciar corresponde a los tribunales."),
+            ("Defender gratuitamente a los imputados", "Esa es la función de la Defensoría Penal Pública."),
+            ("Administrar los recintos penitenciarios", "Los recintos penales dependen de otro servicio."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "dificil",
+        "El Estado chileno provee un defensor a toda persona imputada de un delito "
+        "que no designa abogado. ¿Qué principio garantiza esa institución?",
+        "El acceso a la justicia sin distinción",
+        "Un proceso penal se sigue con reglas técnicas que casi nadie domina sin "
+        "formación jurídica, de modo que enfrentarlo sin abogado equivale a no "
+        "poder defenderse.\nSi esa defensa dependiera de los recursos de cada cual, "
+        "el resultado del juicio pasaría a depender del patrimonio del imputado y "
+        "no de la prueba rendida.\nDe ahí que la defensa gratuita no se entienda "
+        "como una prestación social sino como una condición del debido proceso: sin "
+        "ella, la igualdad ante la ley quedaría enunciada y no realizada.",
+        [
+            ("La rapidez de los procedimientos penales", "La defensa apunta a la calidad del proceso, no a su velocidad."),
+            ("La reducción del número de delitos", "No es una política de prevención del delito."),
+            ("La publicidad de las audiencias orales", "La publicidad es otra garantía, distinta de esta."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "medio",
+        "Desde la reforma, los juicios penales en Chile se desarrollan en "
+        "audiencias orales y públicas. ¿Qué ventaja tiene ese formato?",
+        "Permite controlar lo que se decide",
+        "Cuando el proceso era escrito, se desarrollaba en expedientes que solo "
+        "revisaban las partes, y el resto de la sociedad conocía apenas el "
+        "resultado.\nEn una audiencia pública la prueba se rinde ante quienes van a "
+        "fallar y ante cualquiera que quiera presenciarla, de modo que las "
+        "decisiones quedan expuestas a escrutinio.\nLa oralidad tiene además un "
+        "efecto sobre la calidad de la prueba: los testigos declaran de viva voz y "
+        "pueden ser contrainterrogados en el acto, algo que un expediente escrito "
+        "no permite.",
+        [
+            ("Reduce el número de jueces que se necesitan", "El tribunal oral se integra por varios jueces."),
+            ("Elimina la necesidad de presentar pruebas", "La prueba es justamente lo que se rinde en la audiencia."),
+            ("Impide que el imputado esté presente", "El imputado tiene derecho a estar presente en su juicio."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "dificil",
+        "Se afirma que las garantías del debido proceso protegen también a quien "
+        "resulta finalmente condenado. ¿Cómo se explica esa afirmación?",
+        "Aseguran que la condena se pruebe",
+        "Las garantías no impiden condenar: fijan cómo debe llegarse a una "
+        "condena.\nQue la prueba se haya obtenido lícitamente, que el imputado haya "
+        "podido controvertirla y que el fallo esté fundado son exigencias que hacen "
+        "verificable la decisión, tanto para quien la recibe como para el "
+        "resto.\nAl momento de decidir nadie sabe con certeza quién es culpable, y "
+        "por eso las garantías no pueden reservarse para los inocentes: se aplican "
+        "a todos precisamente porque son el procedimiento que permite "
+        "distinguirlos.",
+        [
+            ("Impiden que se dicten condenas en el país", "Las condenas se dictan; lo que se regula es cómo."),
+            ("Se aplican solamente a los inocentes", "No se sabe quién es inocente antes de terminar el proceso."),
+            ("Reemplazan la investigación del fiscal", "La investigación se realiza igualmente, sujeta a esas garantías."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "medio",
+        "La Constitución prohíbe al Presidente y al Congreso revisar los "
+        "fundamentos de las resoluciones judiciales o reabrir causas ya falladas. "
+        "¿Qué protege esa prohibición?",
+        "La independencia de los tribunales",
+        "Si otro poder pudiera revisar o dejar sin efecto un fallo, la decisión "
+        "judicial dependería en último término de una voluntad política, y el "
+        "tribunal fallaría sabiéndolo.\nLa prohibición es la contrapartida de que "
+        "los jueces no sean elegidos: no responden ante el electorado, y por eso "
+        "deben responder únicamente ante el derecho y ante los tribunales "
+        "superiores.\nIndependencia no significa ausencia de control. Significa que "
+        "el control es jurídico y se ejerce dentro del propio sistema judicial.",
+        [
+            ("La rapidez de la tramitación judicial", "La norma no se refiere a los plazos del proceso."),
+            ("El derecho del Congreso a legislar", "El Congreso conserva plenamente su facultad de dictar leyes."),
+            ("La facultad presidencial de indultar", "El indulto es una atribución distinta, que no revisa el fallo."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "dificil",
+        "El recurso de protección permite a cualquier persona acudir a una Corte de "
+        "Apelaciones cuando un acto arbitrario o ilegal amenaza ciertos derechos "
+        "que la Constitución señala. ¿Qué hace posible ese mecanismo?",
+        "Obtener un amparo judicial rápido",
+        "Un juicio ordinario puede tardar años, y hay derechos cuya vulneración "
+        "produce un daño que no admite esa espera.\nEl recurso opera con un "
+        "procedimiento breve y permite a la Corte adoptar de inmediato las medidas "
+        "necesarias para restablecer el imperio del derecho, mientras el asunto de "
+        "fondo se discute por la vía que corresponda.\nEs un ejemplo de cómo un "
+        "derecho reconocido en el texto constitucional se vuelve exigible: sin una "
+        "acción concreta para reclamarlo ante un tribunal, el reconocimiento "
+        "quedaría en una declaración.",
+        [
+            ("Modificar las leyes que causan el daño", "Derogar o modificar leyes corresponde al Congreso."),
+            ("Sustituir a la autoridad que actuó", "La Corte ordena medidas; no reemplaza a la autoridad."),
+            ("Impedir cualquier acto de la administración", "Solo procede frente a actos arbitrarios o ilegales."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "facil",
+        "Una sentencia dictada por un tribunal puede ser revisada por un tribunal "
+        "superior cuando alguna de las partes lo solicita. ¿Qué finalidad tiene esa "
+        "posibilidad?",
+        "Corregir eventuales errores del fallo",
+        "Los tribunales están integrados por personas y pueden equivocarse al "
+        "apreciar la prueba o al aplicar la norma.\nLa revisión por un tribunal "
+        "distinto permite advertir esos errores antes de que la decisión quede "
+        "firme, y contribuye además a que casos semejantes se resuelvan de modo "
+        "semejante.\nLa posibilidad no es indefinida: agotadas las instancias, la "
+        "sentencia queda ejecutoriada, porque un sistema en que todo pudiera "
+        "discutirse siempre no resolvería nada.",
+        [
+            ("Repetir el juicio todas las veces que se quiera", "Las instancias de revisión son limitadas."),
+            ("Retrasar el cumplimiento de la pena", "Ese no es el propósito del sistema de recursos."),
+            ("Elegir al juez que dictará la sentencia", "Las partes no eligen el tribunal que las juzga."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "medio",
+        "En materias civiles y de familia existen en Chile mecanismos como la "
+        "mediación, previos o alternativos a un juicio. ¿Qué ventaja ofrecen?",
+        "Resolver el conflicto por acuerdo",
+        "En una sentencia una parte gana y la otra pierde; en una mediación son "
+        "ellas las que construyen la solución, con la ayuda de un tercero "
+        "imparcial.\nEso importa especialmente en asuntos de familia, donde las "
+        "partes seguirán vinculadas después del conflicto y un acuerdo propio "
+        "tiende a cumplirse mejor que una decisión impuesta.\nEstos mecanismos no "
+        "sustituyen el derecho a demandar: si no hay acuerdo, la vía judicial "
+        "permanece abierta.",
+        [
+            ("Imponer una sanción más severa", "La mediación no tiene finalidad sancionatoria."),
+            ("Evitar la intervención de abogados", "Las partes pueden asesorarse igualmente."),
+            ("Suprimir el derecho a demandar", "Ese derecho se conserva si la mediación fracasa."),
+        ],
+    ),
+    _ql(
+        "civ_justicia_fte", "civ_justicia", "dificil",
+        "Se sostiene que la igualdad ante la ley no basta si el acceso efectivo a "
+        "los tribunales resulta desigual. ¿Qué explica esa distinción?",
+        "Litigar exige tiempo, dinero y asesoría",
+        "La ley es la misma para todos, pero hacerla valer supone conocer que se "
+        "tiene un derecho, contar con un abogado y sostener un proceso que puede "
+        "extenderse por años.\nQuien no dispone de esos recursos puede tener la "
+        "razón y no llegar nunca a un tribunal, de modo que la igualdad formal "
+        "convive con una desigualdad real en el resultado.\nA cerrar esa brecha "
+        "apuntan la defensa penal pública, las corporaciones de asistencia judicial "
+        "y los procedimientos simplificados. La distinción entre reconocer un "
+        "derecho y hacerlo efectivo es una de las claves para evaluar cualquier "
+        "sistema de justicia.",
+        [
+            ("Las leyes se aplican a unos y no a otros", "La ley rige por igual; el problema está en poder invocarla."),
+            ("Los tribunales atienden solo en la capital", "Existen tribunales en todo el territorio."),
+            ("El derecho a demandar está restringido", "El derecho existe; lo desigual son los medios para ejercerlo."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "facil",
+        "En democracia la libertad de expresión permite difundir opiniones e "
+        "informaciones sin censura previa. ¿Qué función cumple ese derecho?",
+        "Permite el debate público de los asuntos comunes",
+        "Sin ese derecho, las decisiones colectivas se adoptarían sobre la base de "
+        "lo que una autoridad autoriza a decir, y la deliberación perdería "
+        "sentido.\nLa libertad de expresión permite criticar al poder, poner temas "
+        "en la agenda y confrontar versiones distintas de un mismo hecho.\nQue no "
+        "exista censura previa no significa que no haya responsabilidad posterior: "
+        "la calumnia o la injuria pueden perseguirse una vez publicadas, pero no "
+        "impedirse de antemano.",
+        [
+            ("Obliga a los medios a publicar todo lo que reciben", "Cada medio decide su línea editorial y qué publica."),
+            ("Impide que el gobierno sea criticado", "Protege justamente la posibilidad de criticarlo."),
+            ("Garantiza que toda información sea verdadera", "Protege la difusión, no asegura la veracidad de lo difundido."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "facil",
+        "Los medios de comunicación seleccionan qué hechos informan y con qué "
+        "relevancia los presentan. ¿Qué efecto tiene esa selección?",
+        "Influye en qué temas se discuten públicamente",
+        "Ocurren cada día muchos más hechos de los que caben en un noticiario o en "
+        "una portada, de modo que informar supone siempre elegir.\nLo que queda "
+        "destacado tiende a instalarse en la conversación pública, y lo que no "
+        "aparece difícilmente llega a discutirse, aunque haya ocurrido.\nReconocer "
+        "ese efecto no equivale a sostener que los medios manipulan: la selección "
+        "es inevitable, y por eso importa que existan varios criterios "
+        "seleccionando.",
+        [
+            ("Determina el resultado de las elecciones", "La influencia sobre la agenda no equivale a decidir el voto."),
+            ("Elimina las diferencias entre los medios", "Cada medio selecciona con criterios distintos."),
+            ("Impide que existan otras fuentes de información", "Coexisten múltiples fuentes disponibles."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "Se llama desinformación a la difusión deliberada de contenidos falsos con "
+        "el fin de engañar. ¿Qué la distingue de un error periodístico?",
+        "La intención de engañar a quien la recibe",
+        "Un error es una equivocación involuntaria, y los medios que lo cometen "
+        "suelen rectificarlo cuando lo advierten.\nLa desinformación, en cambio, se "
+        "produce sabiendo que el contenido es falso y buscando que otros lo crean, "
+        "habitualmente para obtener algún provecho político o económico.\nLa "
+        "distinción tiene consecuencias prácticas: frente al error corresponde una "
+        "corrección; frente a la desinformación, identificar quién la produce y "
+        "para qué.",
+        [
+            ("El medio en que se publica el contenido", "Un contenido falso puede circular por cualquier medio."),
+            ("La cantidad de personas que la reciben", "El alcance no cambia la naturaleza del contenido."),
+            ("La extensión del texto que la contiene", "La extensión es irrelevante para esta distinción."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "Al evaluar una información encontrada en internet conviene identificar "
+        "quién la produce y con qué respaldo lo hace. ¿Por qué es relevante ese "
+        "paso?",
+        "Permite estimar su confiabilidad",
+        "Saber quién firma un contenido, qué institución lo respalda y en qué datos "
+        "se apoya permite ponderar cuánto crédito darle antes de usarlo.\nUna misma "
+        "afirmación tiene distinto peso si proviene de un organismo que publica su "
+        "metodología o de un sitio anónimo que no cita fuente alguna.\nEs el mismo "
+        "procedimiento que aplica un historiador ante cualquier documento: antes de "
+        "preguntarse qué dice, se pregunta quién lo dijo, cuándo y con qué "
+        "propósito.",
+        [
+            ("Determina si el texto es entretenido", "El interés del texto no dice nada sobre su exactitud."),
+            ("Indica cuántas veces fue compartida", "La difusión no es un indicador de veracidad."),
+            ("Asegura que el contenido sea reciente", "La fecha es otro criterio, distinto de la autoría."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Los algoritmos de las plataformas digitales tienden a mostrar a cada "
+        "usuario contenidos similares a los que ya consumió. ¿Qué riesgo representa "
+        "eso para el debate democrático?",
+        "Reduce la exposición a posiciones distintas",
+        "El criterio con que operan esas plataformas es la permanencia del usuario, "
+        "y lo que más retiene la atención suele ser aquello que confirma lo que "
+        "alguien ya piensa.\nEl resultado es que dos personas con posiciones "
+        "opuestas pueden recibir versiones muy distintas de la realidad y creer, "
+        "cada una, que la suya es evidente y mayoritaria.\nPara la democracia el "
+        "problema es de fondo: deliberar supone considerar argumentos ajenos, y ese "
+        "ejercicio se vuelve difícil cuando los argumentos ajenos simplemente no "
+        "aparecen.",
+        [
+            ("Aumenta el costo de acceder a internet", "El fenómeno no tiene relación con el precio del acceso."),
+            ("Impide que los usuarios publiquen contenidos", "La publicación sigue abierta; lo que se filtra es lo que se ve."),
+            ("Obliga a los medios a cerrar sus sitios web", "No se trata de la existencia de los medios."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "Un historiador distingue entre una carta escrita en 1850 y un libro "
+        "publicado en 2010 que la analiza. ¿En qué se diferencian como fuentes?",
+        "La primera es contemporánea al hecho",
+        "La carta es una fuente primaria: fue producida en el momento y el contexto "
+        "que se estudia, y por eso da acceso directo al lenguaje, las "
+        "preocupaciones y los límites de quien la escribió.\nEl libro es una fuente "
+        "secundaria: interpreta esa carta desde el presente, con información que su "
+        "autor original no tenía y con preguntas que en 1850 no se hacían.\nNinguna "
+        "de las dos es superior: la primaria aporta el testimonio, la secundaria el "
+        "contexto y la crítica, y el trabajo histórico consiste justamente en "
+        "cruzarlas.",
+        [
+            ("La segunda no aporta ninguna información útil", "Las fuentes secundarias aportan interpretación y contexto."),
+            ("La primera carece de valor histórico", "La fuente primaria es un testimonio directo del período."),
+            ("Ambas fueron escritas por testigos", "El autor de 2010 no presenció los hechos."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Al analizar un discurso pronunciado por un gobernante sobre su propia "
+        "gestión, ¿qué precaución debe tomar quien lo usa como fuente?",
+        "Considerar el interés de quien lo emite",
+        "El discurso es una fuente válida, pero no neutral: quien habla busca "
+        "justificar lo que hizo y presentarlo del modo más favorable.\nEso no "
+        "obliga a descartarlo. Sirve muy bien para saber qué quería proyectar el "
+        "gobierno y con qué argumentos, aunque sirve mal como comprobación de los "
+        "resultados que afirma haber obtenido.\nEl procedimiento consiste en usarlo "
+        "para lo que efectivamente prueba y contrastarlo con fuentes de otro origen "
+        "para lo demás. Toda fuente tiene un punto de vista; el análisis empieza "
+        "por reconocer cuál es.",
+        [
+            ("Descartarlo por provenir de una autoridad", "Descartarlo elimina información valiosa sobre el período."),
+            ("Aceptarlo por tratarse de un documento oficial", "El carácter oficial no garantiza imparcialidad."),
+            ("Usarlo solo si coincide con su opinión", "Ese criterio introduce un sesgo en el análisis."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "El acceso a información pública se considera un derecho en las democracias "
+        "contemporáneas. ¿Cómo se relaciona con la participación ciudadana?",
+        "Permite decidir con antecedentes",
+        "Participar supone formarse una opinión, y una opinión sobre asuntos "
+        "públicos requiere datos sobre cómo se gastan los recursos, qué resultados "
+        "obtienen los programas y cómo se adoptan las decisiones.\nCuando esa "
+        "información no está disponible, la participación queda reducida a confiar "
+        "o desconfiar sin elementos para hacer ni una cosa ni la otra.\nDe ahí que "
+        "el derecho de acceso se considere instrumental: no es un fin en sí mismo, "
+        "es la condición que hace posible ejercer otros derechos.",
+        [
+            ("Reemplaza al voto en las elecciones periódicas", "Es un complemento del voto, no un sustituto."),
+            ("Obliga a participar en las consultas", "El derecho habilita a participar; no lo hace obligatorio."),
+            ("Limita la libertad de los medios", "Amplía la información disponible para los medios."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Regular los contenidos falsos que circulan en internet plantea una tensión "
+        "con la libertad de expresión. ¿En qué consiste esa tensión?",
+        "Quien decide qué es falso adquiere poder",
+        "El daño de la desinformación es real y está documentado, de modo que la "
+        "inacción tampoco es neutral.\nPero cualquier regulación exige designar a "
+        "alguien que califique un contenido como falso, y esa facultad puede usarse "
+        "para suprimir opiniones incómodas bajo la apariencia de combatir "
+        "mentiras.\nPor eso el debate se concentra menos en si hay que hacer algo y "
+        "más en quién decide, con qué criterios públicos y con qué posibilidad de "
+        "reclamar de esa decisión. Es un caso donde dos bienes democráticos entran "
+        "en conflicto y ninguna solución los satisface por completo.",
+        [
+            ("La desinformación no afecta a nadie", "Sus efectos sobre el debate público están documentados."),
+            ("Los usuarios no pueden publicar nada", "La publicación sigue siendo posible."),
+            ("Las plataformas carecen de reglas propias", "Las plataformas aplican sus propias normas de contenido."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "facil",
+        "Se considera deseable que en un país existan medios de comunicación de "
+        "distintas orientaciones. ¿Qué justifica esa preferencia?",
+        "Ofrece versiones diversas a la ciudadanía",
+        "Cada medio informa desde una posición, y comparar coberturas distintas de "
+        "un mismo hecho permite advertir qué destaca cada uno y qué deja "
+        "fuera.\nCuando la propiedad y la orientación de los medios se concentran, "
+        "esa comparación deja de ser posible y una sola versión ocupa todo el "
+        "espacio.\nA eso se llama pluralismo informativo, y se lo considera una "
+        "condición del debate democrático más que una virtud del periodismo.",
+        [
+            ("Reduce el costo de producir las noticias diarias", "El pluralismo no se justifica por razones de costo."),
+            ("Garantiza que ningún medio se equivoque", "Los errores pueden ocurrir en cualquier medio."),
+            ("Evita que los medios tengan opinión", "Los medios tienen línea editorial; el pluralismo supone que sean varias."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "medio",
+        "Frente a una noticia de impacto difundida por redes sociales, se "
+        "recomienda contrastarla con otras fuentes antes de compartirla. ¿Qué logra "
+        "ese contraste?",
+        "Detectar afirmaciones sin respaldo",
+        "Si un hecho de importancia ocurrió realmente, es esperable que aparezca "
+        "reportado por más de una fuente independiente y con detalles "
+        "coincidentes.\nCuando la única referencia disponible es la publicación "
+        "original, o cuando todas las supuestas confirmaciones remiten a esa misma "
+        "fuente, hay motivo para dudar.\nEl costo del contraste es bajo y el de "
+        "compartir un contenido falso no lo es: quien lo difunde le presta su "
+        "propia credibilidad ante quienes confían en él.",
+        [
+            ("Aumentar el alcance de la publicación", "El contraste busca verificar, no difundir."),
+            ("Acelerar la difusión del contenido", "Verificar toma tiempo, y ese es precisamente el punto."),
+            ("Confirmar la opinión de quien la lee", "Buscar solo confirmación es el sesgo que el contraste evita."),
+        ],
+    ),
+    _ql(
+        "civ_informacion_fte", "civ_informacion", "dificil",
+        "Se afirma que en la sociedad de la información la ciudadanía requiere "
+        "competencias distintas de las que bastaban hace algunas décadas. ¿Cuáles "
+        "son?",
+        "Seleccionar y evaluar la información",
+        "Cuando la información era escasa y llegaba por pocos canales, la "
+        "dificultad estaba en conseguirla; hoy la dificultad está en decidir qué "
+        "hacer con la que llega sin que nadie la haya pedido.\nEso exige distinguir "
+        "un hecho de una opinión, identificar quién produce un contenido y con qué "
+        "interés, y reconocer cuándo una afirmación carece de respaldo.\nSon las "
+        "mismas operaciones que el análisis histórico aplica a sus fuentes, "
+        "trasladadas a la vida cotidiana: por eso se enseñan como habilidades y no "
+        "como contenidos que se aprenden una vez.",
+        [
+            ("Memorizar todos los datos que se publican", "El volumen disponible hace imposible e inútil esa memorización."),
+            ("Acceder a una única fuente confiable", "Depender de una sola fuente impide el contraste."),
+            ("Difundir rápidamente lo que se recibe", "La difusión sin verificación es parte del problema."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "facil",
+        "El Estado de derecho supone que gobernantes y gobernados están sometidos a "
+        "las mismas normas. ¿Qué implica ese principio?",
+        "Que ninguna autoridad está por sobre la ley",
+        "La idea central es que el poder no se ejerce por voluntad de quien lo "
+        "tiene, sino dentro de límites fijados de antemano y conocidos por "
+        "todos.\nDe ahí que la autoridad solo pueda hacer aquello que la ley la "
+        "faculta a hacer, y que sus actos puedan ser revisados por otros "
+        "órganos.\nEs la diferencia entre un gobierno sujeto a reglas y uno que "
+        "decide caso a caso según su conveniencia.",
+        [
+            ("Que las leyes solo obligan a los ciudadanos", "El Estado de derecho obliga especialmente a quien ejerce el poder."),
+            ("Que el gobierno puede modificar las leyes", "Legislar corresponde al Congreso mediante un procedimiento establecido."),
+            ("Que los tribunales dependen del Ejecutivo", "La independencia judicial es parte del Estado de derecho."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "facil",
+        "En Chile las funciones ejecutiva, legislativa y judicial están radicadas "
+        "en órganos distintos. ¿Cuál es el propósito de esa separación?",
+        "Que cada poder controle a los demás",
+        "Si un mismo órgano dictara las normas, las aplicara y juzgara su "
+        "cumplimiento, nadie estaría en condiciones de corregirlo.\nAl repartir "
+        "esas funciones, cada órgano queda expuesto al control de los otros: el "
+        "Congreso fiscaliza al Ejecutivo, los tribunales revisan la legalidad de "
+        "los actos y el Ejecutivo participa en la formación de las leyes.\nEl "
+        "esquema hace el gobierno más lento a propósito: la demora es el precio de "
+        "que las decisiones pasen por más de un filtro.",
+        [
+            ("Que las decisiones se tomen más rápido", "La separación de poderes busca control, no velocidad."),
+            ("Que el Presidente dicte las sentencias", "Juzgar corresponde exclusivamente a los tribunales."),
+            ("Que el Congreso administre los tribunales", "El Poder Judicial se administra a sí mismo."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "medio",
+        "Además de elaborar las leyes, el Congreso Nacional cumple otra función "
+        "respecto del gobierno. ¿Cuál es?",
+        "Fiscalizar los actos del Ejecutivo",
+        "La Cámara de Diputados puede pedir antecedentes, citar ministros, formar "
+        "comisiones investigadoras y, en los casos que la Constitución señala, "
+        "acusar constitucionalmente a determinadas autoridades.\nEsa función "
+        "explica por qué el Congreso no es solo una fábrica de leyes: es también el "
+        "órgano donde el gobierno debe dar cuenta de lo que hace.\nSin ella, la "
+        "separación de poderes sería una división de tareas sin control recíproco.",
+        [
+            ("Nombrar a los ministros del gabinete", "Los ministros son de la confianza exclusiva del Presidente."),
+            ("Dictar los reglamentos administrativos", "Los reglamentos los dicta el Ejecutivo."),
+            ("Representar al país en el extranjero", "Las relaciones exteriores las conduce el Presidente."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "medio",
+        "Además del voto en elecciones, existen en Chile otras formas de "
+        "participación ciudadana. ¿Cuál es un ejemplo?",
+        "Las organizaciones de la sociedad civil",
+        "Juntas de vecinos, sindicatos, colegios profesionales, agrupaciones "
+        "ambientales o de consumidores permiten incidir en asuntos públicos entre "
+        "una elección y otra.\nA ellas se suman los mecanismos formales de "
+        "consulta, las cuentas públicas participativas y el derecho de petición "
+        "ante los organismos del Estado.\nLa distinción importa: el voto decide "
+        "quién gobierna cada cierto tiempo, mientras estas formas permiten influir "
+        "en qué se decide durante ese tiempo.",
+        [
+            ("La designación de autoridades por sorteo", "No es un mecanismo contemplado en el sistema chileno."),
+            ("La aprobación directa del presupuesto", "El presupuesto lo aprueba el Congreso, no la ciudadanía."),
+            ("El nombramiento de jueces por votación", "Los jueces se nombran mediante un procedimiento reglado, sin elección popular."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "dificil",
+        "En una democracia las decisiones se adoptan por mayoría, pero existen "
+        "derechos que una mayoría no puede suprimir. ¿Cómo se explica esa "
+        "limitación?",
+        "Los derechos protegen a las minorías",
+        "Si todo pudiera decidirse por mayoría, quien queda en minoría dependería "
+        "por completo de la voluntad de los demás, incluso en lo relativo a su "
+        "libertad de expresión, su culto o su participación política.\nPor eso los "
+        "derechos fundamentales se sitúan fuera del alcance de la votación "
+        "ordinaria: funcionan como el piso sobre el cual la mayoría decide, no como "
+        "parte de lo que decide.\nY hay una razón práctica además de una de "
+        "principio: quien hoy es mayoría puede ser minoría mañana, de modo que esa "
+        "protección beneficia finalmente a todos.",
+        [
+            ("La mayoría no participa en las elecciones", "La participación electoral no es lo que está en discusión aquí."),
+            ("Los derechos los define el gobierno de turno", "Precisamente por eso se los sitúa por sobre las decisiones de gobierno."),
+            ("Las minorías tienen más votos en el Congreso", "La representación no funciona de ese modo."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "medio",
+        "La ley de transparencia obliga a los organismos públicos a entregar "
+        "información sobre su gestión cuando se les solicita. ¿Qué finalidad tiene "
+        "esa obligación?",
+        "Permitir el control ciudadano de la gestión",
+        "El control del poder no descansa solo en los órganos del Estado: requiere "
+        "que quienes están fuera de él puedan saber qué se hace con los recursos "
+        "públicos.\nSin acceso a la información, la fiscalización queda reducida a "
+        "lo que las propias autoridades decidan contar, y la rendición de cuentas "
+        "pierde sentido.\nDe ahí que la transparencia se considere una condición de "
+        "la probidad y no un trámite administrativo: hace verificable lo que de "
+        "otro modo habría que creer.",
+        [
+            ("Acelerar los trámites administrativos del Estado", "La transparencia apunta al control, no a la rapidez de los trámites."),
+            ("Reducir el número de funcionarios públicos", "No tiene relación con el tamaño de la administración."),
+            ("Traspasar decisiones a organismos privados", "La ley regula el acceso a información, no la titularidad de las decisiones."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "dificil",
+        "Se afirma que la Constitución es la norma de mayor jerarquía del "
+        "ordenamiento jurídico. ¿Qué consecuencia práctica tiene esa afirmación?",
+        "Ninguna ley puede contradecir sus disposiciones",
+        "La jerarquía normativa no es una descripción decorativa: define qué ocurre "
+        "cuando dos normas chocan.\nSi una ley contradice la Constitución, existe "
+        "un órgano encargado de declararlo y esa ley no puede aplicarse; lo mismo "
+        "vale para los reglamentos respecto de las leyes.\nPor eso la Constitución "
+        "exige quórums más altos para reformarse: es la norma que fija las reglas "
+        "con que se dictan todas las demás, y cambiarla con la misma facilidad que "
+        "una ley cualquiera la dejaría sin función.",
+        [
+            ("Solo puede reformarse mediante una ley simple del Congreso", "Su reforma exige quórums especiales, más exigentes que los de una ley común."),
+            ("Sus normas se aplican únicamente al Ejecutivo", "Obligan a todos los órganos del Estado y a las personas."),
+            ("Los tratados internacionales la reemplazan", "Los tratados se incorporan al ordenamiento, no sustituyen la Constitución."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "facil",
+        "En Chile las autoridades ejecutivas y legislativas se eligen por períodos "
+        "determinados. ¿Qué asegura esa periodicidad?",
+        "Que la ciudadanía pueda renovar el mandato",
+        "Un cargo con plazo obliga a volver a pedir el respaldo de los electores, y "
+        "convierte cada elección en una oportunidad de continuar o cambiar el rumbo "
+        "sin necesidad de una crisis.\nEse mecanismo es lo que hace efectiva la "
+        "responsabilidad política: la autoridad sabe que su gestión será evaluada "
+        "en una fecha conocida.\nPor eso la prolongación indefinida de un mandato "
+        "se considera una señal de deterioro democrático, aun cuando el origen del "
+        "cargo haya sido electoral.",
+        [
+            ("Que los cargos se mantengan sin cambios", "La periodicidad existe justamente para permitir el recambio."),
+            ("Que las leyes no puedan ser modificadas", "Las leyes se modifican por el procedimiento legislativo."),
+            ("Que los tribunales elijan a las autoridades", "Las autoridades políticas se eligen por votación popular."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "medio",
+        "La Contraloría General de la República revisa la legalidad de los actos de "
+        "la administración del Estado. ¿Qué garantiza esa función?",
+        "Que el gasto público se ajuste a la ley",
+        "La Contraloría examina si los decretos y resoluciones tienen fundamento "
+        "legal antes de que produzcan efectos, y fiscaliza el uso de los recursos "
+        "públicos.\nSu independencia es lo que la hace útil: no depende del "
+        "gobierno cuyos actos revisa, de modo que puede representar la ilegalidad "
+        "de una decisión sin quedar expuesta a ser removida por ello.\nEs un "
+        "control interno del propio Estado, distinto del control político que "
+        "ejerce el Congreso y del control jurisdiccional de los tribunales.",
+        [
+            ("Que los proyectos se aprueben más rápido", "El control de legalidad no busca acelerar la gestión."),
+            ("Que el Presidente designe a los jueces", "El nombramiento de jueces sigue otro procedimiento."),
+            ("Que las leyes sean redactadas por expertos", "La Contraloría no participa en la redacción de las leyes."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "dificil",
+        "Desde 2021 los gobernadores regionales son elegidos por votación popular y "
+        "ya no designados por el Presidente de la República. ¿Qué cambio introduce "
+        "esa reforma?",
+        "La autoridad regional responde ante sus electores",
+        "Cuando la autoridad era designada, su permanencia dependía de la confianza "
+        "de quien la nombraba, y por lo tanto respondía hacia el nivel central.\nAl "
+        "provenir de una elección, esa relación se invierte: el mandato viene de "
+        "los habitantes de la región y ante ellos debe rendir cuenta.\nEl cambio en "
+        "el origen del cargo no equivale, sin embargo, a un traspaso automático de "
+        "atribuciones y de recursos, y en esa distancia entre legitimidad electoral "
+        "y competencias efectivas se concentra buena parte del debate chileno sobre "
+        "descentralización.",
+        [
+            ("El gobierno central asume nuevas competencias regionales", "La reforma apunta en el sentido contrario, hacia la descentralización."),
+            ("Las regiones dejan de tener presupuesto propio", "Los gobiernos regionales administran presupuesto."),
+            ("Los municipios pasan a depender de la región", "Las municipalidades conservan su autonomía."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "medio",
+        "La acusación constitucional permite al Congreso hacer efectiva la "
+        "responsabilidad de ciertas autoridades por los actos que la Constitución "
+        "señala. ¿Qué principio expresa ese mecanismo?",
+        "Que quien ejerce el poder debe responder",
+        "El cargo público no otorga inmunidad: quien lo ejerce puede ser llamado a "
+        "responder por cómo lo hizo, mediante un procedimiento reglado que "
+        "establece causales, plazos y quórums.\nLa Cámara de Diputados formula la "
+        "acusación y el Senado resuelve, de modo que la decisión no queda en manos "
+        "de un solo órgano.\nEs un control político, distinto del penal: lo que se "
+        "determina es si la autoridad debe dejar el cargo, mientras que los delitos "
+        "que pudiera haber cometido los juzgan los tribunales.",
+        [
+            ("Que las autoridades son inamovibles en el cargo", "El mecanismo existe precisamente para permitir su destitución."),
+            ("Que el Congreso administra la justicia", "Juzgar delitos corresponde a los tribunales."),
+            ("Que el Ejecutivo controla al Legislativo", "Aquí el control opera en el sentido inverso."),
+        ],
+    ),
+    _ql(
+        "civ_estado_derecho", "civ_institucionalidad", "dificil",
+        "Se afirma que el sufragio universal es una condición de la democracia "
+        "representativa, aunque no basta por sí solo. ¿Qué explica esa afirmación?",
+        "Se requieren además libertades y controles",
+        "Para que una elección signifique algo tienen que existir antes libertad de "
+        "expresión y de prensa, posibilidad real de organizarse y competir, y "
+        "recuento transparente de los votos.\nY tienen que existir después órganos "
+        "capaces de controlar al gobierno electo, junto con derechos que ese "
+        "gobierno no pueda suprimir invocando su mayoría.\nDe ahí que existan "
+        "regímenes que celebran elecciones periódicas sin ser democráticos: "
+        "conservan el procedimiento y han vaciado las condiciones que lo hacían "
+        "significativo. Evaluar una democracia exige mirar ambas cosas.",
+        [
+            ("El voto por sí solo garantiza la democracia", "Esa es justamente la afirmación que el enunciado matiza."),
+            ("Las elecciones eliminan cualquier abuso", "Las elecciones no sustituyen a los mecanismos de control."),
+            ("El sufragio reemplaza a las instituciones", "El sufragio opera dentro de un marco institucional, no en su lugar."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "facil",
+        "Tras el golpe de Estado de septiembre de 1973 se instaló en Chile una "
+        "dictadura militar. ¿Qué ocurrió con las instituciones democráticas?",
+        "El Congreso fue disuelto y los partidos, proscritos",
+        "La supresión no fue parcial ni gradual: el Congreso Nacional fue disuelto, "
+        "los partidos políticos quedaron proscritos o en receso y los registros "
+        "electorales fueron destruidos.\nLa Junta de Gobierno asumió a la vez el "
+        "poder ejecutivo y el legislativo, de modo que la separación de poderes "
+        "dejó de operar, y se impuso censura sobre la prensa.\nEse conjunto es lo "
+        "que se denomina supresión del Estado de derecho: no solo se cambió de "
+        "gobierno, se eliminaron los mecanismos que permiten controlar al poder y "
+        "sustituirlo.",
+        [
+            ("El Congreso mantuvo sus funciones legislativas", "El Congreso fue disuelto y sus funciones pasaron a la Junta."),
+            ("Los partidos continuaron presentándose a elecciones", "No hubo elecciones ni actividad partidaria permitida."),
+            ("El poder judicial asumió el gobierno del país", "El gobierno lo asumió la Junta Militar, no los tribunales."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "medio",
+        "Los informes oficiales elaborados en democracia establecieron que durante "
+        "la dictadura hubo violaciones a los derechos humanos. ¿Qué carácter "
+        "tuvieron?",
+        "Sistemático, a cargo de organismos del Estado",
+        "Las comisiones de verdad y las investigaciones judiciales establecieron "
+        "que no se trató de hechos aislados ni de excesos individuales.\nExistieron "
+        "organismos creados para esa tarea, con recintos de detención, personal y "
+        "procedimientos regulares: detención sin orden judicial, tortura, "
+        "ejecuciones y desaparición forzada, aplicados de manera sostenida durante "
+        "todo el período.\nEsa distinción entre lo aislado y lo sistemático no es "
+        "un matiz: define la responsabilidad del Estado como tal, y no solo la de "
+        "quienes ejecutaron cada hecho.",
+        [
+            ("Aislado, producto de decisiones individuales de agentes", "Los informes descartaron esa explicación: hubo organismos y procedimientos."),
+            ("Accidental, sin víctimas identificadas", "Las víctimas fueron individualizadas en los informes oficiales."),
+            ("Limitado a los primeros días del régimen", "Las violaciones se extendieron a lo largo de los diecisiete años."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "facil",
+        "El 5 de octubre de 1988 se realizó en Chile un plebiscito. ¿Qué se decidía "
+        "en esa votación?",
+        "Si el gobernante continuaba en el cargo",
+        "La consulta ofrecía dos opciones sobre la permanencia de Augusto Pinochet "
+        "por un nuevo período presidencial: el Sí la aprobaba y el No la "
+        "rechazaba.\nTriunfó el No, y ese resultado activó el mecanismo previsto "
+        "para ese caso: convocar a elecciones presidenciales y parlamentarias al "
+        "año siguiente.\nEl plebiscito estaba contemplado en las disposiciones "
+        "transitorias de la Constitución de 1980, de modo que el régimen fue "
+        "derrotado en un procedimiento que él mismo había establecido.",
+        [
+            ("Si se aprobaba una nueva Constitución", "La Constitución se había aprobado en el plebiscito de 1980."),
+            ("Si Chile ingresaba a un organismo internacional", "La consulta no trataba de asuntos internacionales."),
+            ("Quién sería el próximo presidente electo", "El presidente se eligió en las elecciones de 1989."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "medio",
+        "Durante la dictadura se aplicaron en Chile reformas económicas de "
+        "orientación neoliberal. ¿Cuál fue una de sus medidas?",
+        "La privatización de empresas del Estado",
+        "El programa buscaba reducir el tamaño del Estado y ampliar el espacio del "
+        "mercado, y la venta de empresas públicas fue una de sus herramientas "
+        "centrales.\nJunto con ella se aplicaron la apertura comercial mediante la "
+        "rebaja de aranceles, la desregulación financiera, un nuevo plan laboral y "
+        "el reemplazo del sistema de pensiones de reparto por uno de capitalización "
+        "individual.\nEs un giro respecto de lo que Chile venía haciendo desde los "
+        "años treinta, cuando el Estado había asumido un papel activo como "
+        "productor e inversionista.",
+        [
+            ("La estatización de la banca privada", "La orientación fue la contraria, aunque hubo intervención excepcional en 1982."),
+            ("El cierre del comercio con el exterior", "El comercio exterior se abrió mediante la rebaja de aranceles."),
+            ("La creación de nuevas empresas públicas", "El período se caracteriza por la venta de empresas del Estado."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "dificil",
+        "Sobre el golpe de Estado de 1973 existen distintas interpretaciones "
+        "historiográficas. ¿En qué se diferencian principalmente?",
+        "En el peso que dan a cada causa del quiebre",
+        "Los hechos del 11 de septiembre no están en disputa; lo que se discute es "
+        "cómo se llegó a ellos.\nAlgunas interpretaciones acentúan la polarización "
+        "política interna y la crisis económica; otras, la intervención extranjera "
+        "en el marco de la Guerra Fría; otras, la fragilidad de las instituciones "
+        "para procesar un conflicto de esa magnitud, o la decisión de actores que "
+        "optaron por la salida de fuerza.\nAnalizarlas exige revisar en qué fuentes "
+        "se apoya cada una y qué deja fuera, que es distinto de elegir la que "
+        "resulte más cómoda.",
+        [
+            ("En la fecha exacta en que ocurrió el golpe", "La fecha es un hecho establecido y no admite discusión."),
+            ("En si el Congreso fue disuelto o se mantuvo", "Su disolución es un hecho documentado."),
+            ("En quiénes integraron la Junta de Gobierno", "Su composición está registrada y no se disputa."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "medio",
+        "Una de las reformas económicas aplicadas en Chile desde mediados de los "
+        "años setenta fue la fuerte rebaja de los aranceles a las importaciones. "
+        "¿Qué efecto tuvo sobre la industria nacional?",
+        "Quedó expuesta a la competencia externa",
+        "Durante décadas la industria chilena había crecido detrás de aranceles "
+        "altos, que encarecían los productos importados y le aseguraban el mercado "
+        "interno.\nAl bajar esa protección, tuvo que competir en precio y calidad "
+        "con manufacturas extranjeras, y muchos rubros no lograron hacerlo: hubo "
+        "cierres y pérdida de empleos industriales.\nLa economía se reorientó "
+        "entonces hacia los sectores en que el país tenía ventajas naturales "
+        "—minería, agricultura, forestal y pesca—, un perfil exportador que se "
+        "mantiene hasta hoy.",
+        [
+            ("Recibió una protección estatal mucho mayor", "La rebaja de aranceles significó exactamente lo contrario."),
+            ("Aumentó su participación en el empleo", "El empleo industrial se contrajo en ese período."),
+            ("Dejó de exportar hacia otros mercados", "Las exportaciones crecieron, aunque concentradas en otros sectores."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "dificil",
+        "La Constitución aprobada en 1980 incluyó disposiciones que condicionaron "
+        "el período democrático posterior. ¿Qué efecto tuvieron?",
+        "Limitaron el alcance de los gobiernos electos",
+        "El texto estableció mecanismos que restringían lo que una mayoría electa "
+        "podía decidir: senadores no elegidos por votación popular, un sistema "
+        "electoral que sobrerrepresentaba a la primera minoría, quórums muy altos "
+        "para reformar ciertas leyes y limitaciones a la remoción de los mandos "
+        "militares.\nPor eso se habla de enclaves autoritarios: instituciones "
+        "heredadas que sobrevivieron al cambio de régimen y que solo se fueron "
+        "modificando con reformas sucesivas.\nEs un buen ejemplo de continuidad "
+        "dentro de un cambio: el gobierno cambió en 1990, y las reglas bajo las "
+        "cuales gobernaba, solo en parte.",
+        [
+            ("Impidieron que se realizara el plebiscito de 1988", "El plebiscito estaba previsto en sus propias disposiciones transitorias."),
+            ("Suprimieron el Congreso de forma permanente", "El Congreso volvió a funcionar desde 1990."),
+            ("Entregaron el poder constituyente al pueblo", "Las reformas quedaron sujetas a quórums que dificultaban ese ejercicio."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "medio",
+        "Durante la década de 1980 se desarrollaron en Chile procesos que "
+        "incidieron en la recuperación de la democracia. ¿Cuál fue uno de ellos?",
+        "Las protestas y la reorganización opositora",
+        "Desde 1983 se sucedieron jornadas de protesta nacional que rompieron el "
+        "silencio impuesto y mostraron un descontento masivo, agravado por la "
+        "crisis económica del año anterior.\nEn paralelo, los partidos proscritos "
+        "se reorganizaron, las organizaciones de derechos humanos documentaron lo "
+        "ocurrido y las iglesias ofrecieron protección a quienes se "
+        "movilizaban.\nEsa acumulación explica que en 1988 existiera una oposición "
+        "capaz de inscribirse, hacer campaña y competir en el plebiscito, que es lo "
+        "que finalmente permitió derrotar al régimen en su propio procedimiento.",
+        [
+            ("La disolución voluntaria de la Junta de Gobierno", "La Junta se mantuvo hasta el término del período."),
+            ("El retiro del apoyo de las fuerzas armadas en 1983", "Las fuerzas armadas sostuvieron al régimen durante toda la década."),
+            ("La renuncia del gobierno tras la crisis de 1982", "El gobierno no renunció: la crisis alimentó las protestas."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "dificil",
+        "En 1982 Chile enfrentó una severa crisis económica, con caída del producto "
+        "y desempleo muy alto. ¿Qué consecuencia tuvo sobre el modelo entonces "
+        "vigente?",
+        "Obligó al Estado a intervenir la banca",
+        "La crisis puso a prueba el principio de que el Estado no debía intervenir: "
+        "cuando los bancos quedaron al borde del colapso, el gobierno los intervino "
+        "y asumió sus deudas.\nEl episodio se conoce como el rescate de una banca "
+        "privada con recursos públicos, y obligó a corregir la desregulación "
+        "financiera y a introducir una supervisión que antes no existía.\nMuestra "
+        "algo que el análisis histórico suele encontrar: los modelos rara vez se "
+        "aplican en estado puro, y sus propias crisis los modifican.",
+        [
+            ("Provocó el fin definitivo de las privatizaciones", "Las privatizaciones se retomaron y se ampliaron después de la crisis."),
+            ("Restableció los aranceles previos a 1974", "Hubo alzas transitorias, pero no se volvió al esquema anterior."),
+            ("Devolvió las empresas a sus antiguos dueños", "No hubo una devolución de ese tipo."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "facil",
+        "Tras el resultado del plebiscito de 1988 se abrió en Chile un proceso de "
+        "transición. ¿Con qué hecho continuó?",
+        "Con elecciones presidenciales y parlamentarias",
+        "El triunfo del No no significó un cambio inmediato de gobierno: activó el "
+        "calendario previsto para esa situación.\nEn diciembre de 1989 se "
+        "realizaron elecciones presidenciales y parlamentarias, y en marzo de 1990 "
+        "asumió el gobierno electo, junto con un Congreso que volvía a funcionar "
+        "tras dieciséis años.\nEntre el plebiscito y ese traspaso se negociaron "
+        "además reformas constitucionales, aprobadas en 1989, que modificaron parte "
+        "del texto de 1980.",
+        [
+            ("Con la disolución de los partidos políticos", "Los partidos se legalizaron y compitieron en las elecciones."),
+            ("Con la anulación del resultado plebiscitario", "El resultado fue reconocido y se aplicó lo que él disponía."),
+            ("Con la suspensión de la Constitución vigente", "La Constitución siguió rigiendo, con reformas acordadas en 1989."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "medio",
+        "En democracia se crearon en Chile comisiones que investigaron las "
+        "violaciones a los derechos humanos ocurridas durante la dictadura. ¿Qué "
+        "función cumplieron?",
+        "Establecer y registrar los hechos",
+        "Su tarea fue reunir antecedentes, escuchar testimonios y dejar constancia "
+        "oficial de lo ocurrido, con las víctimas individualizadas.\nEse registro "
+        "cumple dos funciones: reconocer a quienes sufrieron esos hechos y fijar "
+        "una base común de verdad, de modo que lo ocurrido deje de depender de la "
+        "palabra de cada parte.\nNo reemplazan a los tribunales, que son los que "
+        "determinan responsabilidades penales, pero su trabajo aportó antecedentes "
+        "a causas judiciales posteriores.",
+        [
+            ("Dictar sentencias contra los responsables", "Sentenciar corresponde a los tribunales de justicia."),
+            ("Reemplazar la labor de los tribunales", "Su trabajo es complementario del judicial, no sustituto."),
+            ("Determinar la validez de la Constitución", "Ese no fue el mandato de estas comisiones."),
+        ],
+    ),
+    _ql(
+        "his_dictadura_fte", "his_dictadura", "dificil",
+        "Al comparar la economía chilena anterior a 1973 con la de comienzos de los "
+        "años noventa, ¿qué cambio de fondo se observa?",
+        "El mercado reemplazó al Estado como asignador",
+        "Antes de 1973 el Estado orientaba la economía: producía a través de "
+        "empresas públicas, protegía a la industria con aranceles, fijaba precios y "
+        "conducía la inversión.\nA comienzos de los noventa esas funciones habían "
+        "pasado en gran medida al mercado, con una economía abierta al comercio "
+        "exterior, empresas privatizadas y un Estado enfocado en regular más que en "
+        "producir.\nEl cambio sobrevivió al cambio de régimen: los gobiernos "
+        "democráticos mantuvieron el marco económico y le agregaron políticas "
+        "sociales y reformas laborales. Distinguir qué cambia y qué permanece a "
+        "través de un quiebre político es una de las tareas propias del análisis "
+        "histórico.",
+        [
+            ("El Estado amplió su papel en la producción nacional", "Su papel productivo se redujo con las privatizaciones."),
+            ("El comercio exterior perdió importancia", "El comercio exterior aumentó fuertemente su peso."),
+            ("La industria sustituyó a las exportaciones", "La economía se reorientó hacia las exportaciones de recursos naturales."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "facil",
+        "Durante la primera mitad del siglo XX aumentó sostenidamente la población "
+        "urbana en Chile. ¿Qué proceso explica ese crecimiento?",
+        "La migración de población desde el campo",
+        "El campo expulsaba y la ciudad atraía, y las dos cosas ocurrieron a la "
+        "vez.\nLa concentración de la tierra dejaba poco margen a las familias "
+        "campesinas, mientras la industria, la construcción y los servicios urbanos "
+        "ofrecían trabajo asalariado, escuelas y atención de salud.\nEl resultado "
+        "fue un traslado masivo y sostenido, que en pocas décadas convirtió a Chile "
+        "en un país mayoritariamente urbano.",
+        [
+            ("La llegada masiva de inmigrantes europeos", "La inmigración europea a Chile fue reducida en comparación con la migración interna."),
+            ("El aumento de la natalidad solo en las ciudades", "La natalidad no era exclusivamente urbana ni explica el cambio."),
+            ("El retorno de chilenos desde el extranjero", "No hubo un retorno de esa magnitud en el período."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "medio",
+        "El crecimiento acelerado de Santiago a mediados del siglo XX superó la "
+        "capacidad de la ciudad para alojar a quienes llegaban. ¿Qué consecuencia "
+        "tuvo?",
+        "La formación de poblaciones en terrenos ocupados",
+        "La vivienda disponible no alcanzaba, y las familias resolvieron el "
+        "problema por su cuenta: ocupaciones de terrenos y construcción con "
+        "materiales precarios en la periferia.\nEsos asentamientos carecían de agua "
+        "potable, alcantarillado y electricidad, y su regularización tomó "
+        "décadas.\nEl fenómeno cambió además la política chilena: los pobladores se "
+        "organizaron para exigir urbanización y títulos de dominio, y se "
+        "convirtieron en un actor con demandas propias.",
+        [
+            ("La construcción suficiente de viviendas sociales", "La construcción estatal existió, pero quedó muy por debajo de la demanda."),
+            ("El regreso de la población a las zonas rurales", "La migración siguió siendo del campo a la ciudad."),
+            ("La expansión de los conventillos del siglo XIX", "El conventillo es la respuesta anterior; ahora predomina la ocupación de terrenos."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "facil",
+        "Las mujeres chilenas votaron por primera vez en una elección presidencial "
+        "en 1952. ¿Qué cambio previo lo hizo posible?",
+        "La ley que les reconoció el sufragio pleno",
+        "El reconocimiento fue por etapas: primero el voto en elecciones "
+        "municipales, en la década de 1930, y recién a fines de los años cuarenta "
+        "el derecho a votar en elecciones parlamentarias y presidenciales.\nDetrás "
+        "de esa ley hay décadas de organización de mujeres que reclamaron ese "
+        "derecho en un sistema político donde no tenían voz.\nSu incorporación "
+        "duplicó el electorado potencial y es uno de los hitos centrales del "
+        "proceso de democratización del período.",
+        [
+            ("La creación de la cédula única electoral", "Esa reforma es posterior y apunta al secreto del voto."),
+            ("La reforma agraria impulsada en el campo", "La reforma agraria es de la década de 1960 y trata de la tierra."),
+            ("La ampliación del voto a los analfabetos", "Ese cambio llegó bastante después, en 1970."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "medio",
+        "En 1958 se estableció en Chile la cédula única electoral, impresa y "
+        "distribuida por el Estado. ¿Qué problema buscaba corregir?",
+        "El control del voto por parte de terceros",
+        "Antes de esa reforma, cada partido imprimía y repartía sus propios votos, "
+        "de modo que era posible verificar qué papeleta llevaba una persona a la "
+        "urna.\nEso permitía el cohecho: comprar votos o presionar a trabajadores e "
+        "inquilinos con la certeza de poder comprobar el resultado.\nCon una cédula "
+        "única, impresa por el Estado y marcada en secreto, esa verificación se "
+        "vuelve imposible. Es un ejemplo preciso de cómo un detalle de "
+        "procedimiento puede cambiar la calidad de una democracia.",
+        [
+            ("La lentitud del conteo de los sufragios", "La reforma apuntaba al secreto del voto, no a la velocidad del escrutinio."),
+            ("La falta de locales de votación en zonas rurales", "La cobertura de locales es otro problema, ajeno a esta medida."),
+            ("El desconocimiento de los candidatos", "La cédula no buscaba informar sobre las candidaturas."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "dificil",
+        "A mediados del siglo XX la pobreza dejó de considerarse en Chile un asunto "
+        "privado y pasó a ser materia de política pública. ¿Qué expresión tuvo ese "
+        "cambio?",
+        "Programas estatales de vivienda y salud",
+        "Mientras la pobreza se entendió como desgracia individual, la respuesta "
+        "fue la caridad y la beneficencia, que dependían de la voluntad de quien "
+        "ayudaba.\nAl concebirse como un problema colectivo, la respuesta cambia de "
+        "naturaleza: el Estado construye viviendas, crea un servicio nacional de "
+        "salud, extiende la previsión social y financia la educación pública.\nLa "
+        "diferencia es de fondo. La beneficencia entrega un socorro; la política "
+        "pública crea un derecho que se puede exigir, y ese desplazamiento es parte "
+        "de lo que se llama democratización social.",
+        [
+            ("El traspaso de la asistencia a las familias", "El movimiento fue el contrario: el Estado asumió lo que antes era privado."),
+            ("La reducción del presupuesto social del Estado", "El gasto social se amplió considerablemente en el período."),
+            ("La entrega de la salud a organismos privados", "En estas décadas se creó y expandió el sistema público de salud."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "medio",
+        "Entre 1962 y 1973 se aplicó en Chile un proceso de reforma agraria. ¿Cuál "
+        "era su propósito?",
+        "Redistribuir la propiedad de la tierra",
+        "La estructura agraria chilena venía prácticamente intacta desde la "
+        "Colonia: pocas haciendas concentraban la tierra productiva y una gran masa "
+        "campesina trabajaba en condiciones de dependencia.\nLa reforma permitió "
+        "expropiar predios que superaban cierto tamaño o estaban mal explotados, y "
+        "entregarlos a los campesinos que los trabajaban.\nFue una de las "
+        "transformaciones más profundas del siglo, y también una de las más "
+        "disputadas: se aplicó bajo tres gobiernos distintos y con ritmos muy "
+        "diferentes.",
+        [
+            ("Aumentar el tamaño de las haciendas", "La reforma apuntaba a dividir los predios más grandes."),
+            ("Trasladar campesinos hacia las ciudades", "Buscaba justamente darles acceso a la tierra donde vivían."),
+            ("Sustituir la agricultura por la minería", "No se trataba de cambiar de actividad económica."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "dificil",
+        "La ley de sindicalización campesina de 1967 modificó la situación de los "
+        "trabajadores agrícolas. ¿Qué cambio introdujo?",
+        "Les permitió organizarse y negociar",
+        "Hasta entonces la organización sindical en el campo estaba severamente "
+        "restringida, de modo que el inquilino negociaba individualmente con el "
+        "dueño de la tierra del que dependía también su vivienda.\nLa ley les "
+        "reconoció el derecho a formar sindicatos y a negociar colectivamente, y el "
+        "número de campesinos sindicalizados creció con enorme rapidez.\nSu alcance "
+        "excede lo laboral: rompió una relación de dependencia personal que se "
+        "sostenía desde el siglo XIX y convirtió al campesinado en un actor "
+        "político con voz propia.",
+        [
+            ("Les entregó la propiedad de las haciendas", "El acceso a la tierra corresponde a la reforma agraria, no a esta ley."),
+            ("Los incorporó al sistema de previsión urbano", "La previsión social se rige por otras normas."),
+            ("Les fijó un salario igual al de la industria", "La ley trata del derecho a organizarse, no de igualar salarios."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "medio",
+        "Durante las décadas de 1950 y 1960 creció fuertemente la matrícula escolar "
+        "en Chile. ¿Qué efecto tuvo ese crecimiento?",
+        "La reducción sostenida del analfabetismo",
+        "La expansión de la matrícula, la construcción de escuelas y la extensión "
+        "de la obligatoriedad hicieron retroceder el analfabetismo de manera "
+        "continua.\nEl efecto no fue solo educativo. Saber leer era requisito para "
+        "votar hasta 1970, de modo que cada avance en alfabetización ampliaba "
+        "también el electorado.\nEs un buen ejemplo de cómo dos procesos del "
+        "período —la expansión educativa y la democratización política— se "
+        "alimentan mutuamente.",
+        [
+            ("El cierre de las escuelas rurales del país", "La red escolar se expandió, incluida la rural."),
+            ("La disminución de la población en edad escolar", "La población en edad escolar crecía en esos años."),
+            ("El traspaso de la educación a la Iglesia", "El período se caracteriza por la expansión de la educación pública."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "dificil",
+        "El período que va de 1930 a 1973 suele describirse como un proceso de "
+        "democratización de la sociedad chilena. ¿Qué justifica esa denominación?",
+        "La incorporación de nuevos sectores a la política",
+        "Democratizar, en este sentido, no significa solo que existan elecciones: "
+        "significa que quienes estaban fuera del sistema entran en él.\nEn esas "
+        "décadas ingresaron las mujeres al padrón, los campesinos al sindicalismo, "
+        "los pobladores a la organización urbana y, hacia el final del período, los "
+        "analfabetos al derecho a voto.\nA esa ampliación política la acompañó una "
+        "social: salud, vivienda, previsión y educación dejaron de ser privilegios "
+        "para convertirse en servicios que el Estado debía proveer.",
+        [
+            ("La reducción del número de partidos políticos existentes", "El sistema de partidos se mantuvo amplio y competitivo."),
+            ("La supresión de las elecciones periódicas", "Las elecciones se realizaron con regularidad durante el período."),
+            ("La concentración del poder en el Ejecutivo", "La democratización alude a la ampliación de quiénes participan."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "facil",
+        "Hacia mediados del siglo XX la mayoría de la población chilena vivía en "
+        "ciudades. ¿Qué actividades económicas se asocian a ese cambio?",
+        "La industria y los servicios",
+        "El traslado de población acompañó un cambio en la estructura del empleo: "
+        "el peso de la agricultura disminuyó y creció el de las actividades "
+        "urbanas.\nLa industria impulsada desde los años cuarenta, el comercio, el "
+        "transporte y la administración pública concentraron la demanda de trabajo "
+        "en las ciudades.\nEse desplazamiento del empleo entre sectores es uno de "
+        "los indicadores con que se estudia la modernización de una economía.",
+        [
+            ("La agricultura de exportación", "La agricultura perdía peso relativo en el empleo del período."),
+            ("La minería del salitre en el norte", "El salitre estaba en decadencia desde la crisis de 1929."),
+            ("La pesca artesanal en el litoral", "No fue una actividad determinante en ese proceso."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "medio",
+        "Entre 1948 y 1958 estuvo vigente en Chile una ley que proscribió al "
+        "Partido Comunista y excluyó a sus militantes de los registros electorales. "
+        "¿Qué muestra ese hecho respecto del proceso de democratización?",
+        "Que avanzó con retrocesos, no de forma lineal",
+        "En la misma década en que se reconoció el sufragio femenino, se excluyó "
+        "del padrón a los militantes de un partido con representación "
+        "parlamentaria.\nLas dos cosas conviven, y por eso el proceso no puede "
+        "describirse como un avance continuo: se amplió la participación por un "
+        "lado y se restringió por otro, según cómo operaba en Chile el clima "
+        "ideológico de la Guerra Fría.\nReconocer esas contramarchas es parte del "
+        "análisis histórico: los procesos rara vez avanzan en una sola dirección, y "
+        "describirlos como si lo hicieran deja fuera lo que explica sus tensiones.",
+        [
+            ("Que las elecciones dejaron de realizarse en el país", "Las elecciones continuaron con normalidad."),
+            ("Que el sufragio femenino fue suspendido", "El voto femenino se ejerció por primera vez justamente en ese período."),
+            ("Que los sindicatos fueron todos disueltos", "Los sindicatos siguieron existiendo, aunque con restricciones."),
+        ],
+    ),
+    _ql(
+        "his_chile_xx_fte", "his_chile_xx", "dificil",
+        "Pese a la ampliación de derechos políticos y sociales entre 1930 y 1970, "
+        "la sociedad chilena mantuvo desigualdades profundas. ¿Qué explica esa "
+        "persistencia?",
+        "La estructura de la propiedad cambió muy poco",
+        "La ampliación de derechos operó sobre la participación y sobre los "
+        "servicios, y durante buena parte del período no tocó la distribución de la "
+        "riqueza.\nLa tierra siguió concentrada hasta que la reforma agraria empezó "
+        "a aplicarse en los años sesenta, y el acceso al ingreso, a la vivienda y a "
+        "la educación de calidad continuó marcado por el origen social.\nDe ahí una "
+        "lección que el período enseña con claridad: extender la ciudadanía "
+        "política es una condición necesaria y no suficiente para reducir la "
+        "desigualdad, porque las dos cosas dependen de mecanismos distintos.",
+        [
+            ("El sufragio siguió restringido a los propietarios", "El sufragio se amplió sostenidamente durante esas décadas."),
+            ("El Estado no creó programas sociales", "Creó y expandió programas de salud, vivienda y previsión."),
+            ("La población urbana dejó de crecer", "La urbanización continuó durante todo el período."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "facil",
+        "La Guerra Fría enfrentó a Estados Unidos y a la Unión Soviética durante la "
+        "segunda mitad del siglo XX. ¿Qué caracterizó ese enfrentamiento?",
+        "Una confrontación sin guerra directa",
+        "Las dos potencias nunca combatieron entre sí, y esa contención es lo que "
+        "da nombre al período.\nLa disuasión nuclear volvía inaceptable el costo de "
+        "un choque abierto, así que la disputa se libró por otras vías: apoyo a "
+        "gobiernos y movimientos afines, espionaje, carrera armamentista, presión "
+        "económica y guerras en terceros países.\nQue no hubiera guerra directa no "
+        "significa que no hubiera muertos: los conflictos periféricos costaron "
+        "millones de vidas.",
+        [
+            ("Una guerra abierta entre las dos potencias", "Ese choque directo es justamente lo que no ocurrió."),
+            ("Una alianza militar entre ambos bloques", "Los bloques se organizaron en alianzas opuestas entre sí."),
+            ("Un conflicto limitado al continente europeo", "Se extendió a Asia, África y América Latina."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "medio",
+        "La confrontación ideológica de la Guerra Fría se expresó también fuera del "
+        "terreno militar. ¿Cuál fue una de esas expresiones?",
+        "La carrera espacial entre ambas potencias",
+        "Cada logro espacial funcionaba como prueba pública de superioridad "
+        "científica, industrial y, por extensión, del sistema político que lo había "
+        "hecho posible.\nPor eso el primer satélite, el primer hombre en el espacio "
+        "y la llegada a la Luna se vivieron como episodios del conflicto y no solo "
+        "como avances científicos.\nLo mismo ocurrió con el deporte olímpico, el "
+        "cine y las exposiciones internacionales: la disputa buscaba demostrar qué "
+        "sistema ofrecía mejor vida a su población.",
+        [
+            ("La supresión de las competencias deportivas", "El deporte se intensificó como escenario de rivalidad, no se suprimió."),
+            ("El cierre de las universidades públicas", "Ambos bloques invirtieron fuertemente en ciencia y educación."),
+            ("La prohibición del cine en ambos bloques", "El cine fue usado como herramienta de propaganda por los dos lados."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "medio",
+        "La Revolución Cubana de 1959 tuvo repercusiones en toda América Latina. "
+        "¿Cuál fue una de ellas?",
+        "Estimuló movimientos que buscaban cambios profundos",
+        "El triunfo cubano mostró que un cambio radical era posible en la región, y "
+        "eso reorganizó el debate político latinoamericano.\nSectores de izquierda "
+        "vieron confirmado el camino de la transformación estructural, mientras "
+        "Estados Unidos y los sectores conservadores reaccionaron con programas de "
+        "reforma —para quitarle base social a la revolución— y con apoyo a "
+        "regímenes dispuestos a contenerla por la fuerza.\nBuena parte de la "
+        "historia latinoamericana de las dos décadas siguientes se explica por esa "
+        "doble reacción.",
+        [
+            ("Puso fin a los conflictos sociales de la región", "Los conflictos sociales se intensificaron en las décadas siguientes."),
+            ("Provocó el retiro de Estados Unidos del continente", "Su presencia e intervención aumentaron tras 1959."),
+            ("Unificó políticamente a los países latinoamericanos", "La región quedó más dividida en torno a esas posiciones."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "facil",
+        "En 1961 se levantó el Muro de Berlín. ¿Qué representó esa construcción?",
+        "La división material entre los dos bloques",
+        "Berlín estaba dividida entre las potencias occidentales y la Unión "
+        "Soviética, y su sector occidental funcionaba como una puerta de salida "
+        "hacia el otro bloque.\nEl muro cerró esa puerta con hormigón y alambre, y "
+        "convirtió en algo visible lo que hasta entonces era una frontera "
+        "política.\nPor eso su caída en 1989 se volvió el símbolo del fin del "
+        "período: el mismo objeto que había materializado la división marcó el "
+        "momento en que esa división dejó de sostenerse.",
+        [
+            ("El fin de la ocupación militar de Alemania", "La ocupación y la división del país continuaron después de 1961."),
+            ("La unificación de las dos Alemanias", "La unificación es de 1990, tras la caída del muro."),
+            ("El acuerdo de paz entre las potencias", "El muro expresó tensión, no acuerdo."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "dificil",
+        "Durante las décadas de 1960 y 1970, varios gobiernos militares "
+        "latinoamericanos justificaron su acción invocando la seguridad nacional. "
+        "¿En qué consistía ese planteamiento?",
+        "Situar al enemigo dentro de la sociedad",
+        "La seguridad nacional se había entendido siempre como defensa frente a una "
+        "amenaza externa. Esta doctrina desplazó el enemigo hacia el interior: la "
+        "amenaza sería la subversión comunista infiltrada en la propia "
+        "población.\nEse desplazamiento tiene consecuencias directas. Si el enemigo "
+        "está adentro y no se distingue a simple vista, cualquier ciudadano puede "
+        "ser sospechoso, y las fuerzas armadas se atribuyen tareas de control sobre "
+        "la sociedad civil.\nSobre ese razonamiento se justificaron la suspensión "
+        "de garantías, la persecución política y la represión sistemática.",
+        [
+            ("Defender las fronteras frente a países vecinos", "Esa es la noción clásica de defensa, que la doctrina desplaza."),
+            ("Reducir el gasto militar en favor del social", "El gasto y el poder militar aumentaron bajo esos regímenes."),
+            ("Someter las fuerzas armadas al poder civil", "Ocurrió lo contrario: las fuerzas armadas asumieron el gobierno."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "medio",
+        "Las dictaduras militares latinoamericanas de la segunda mitad del siglo XX "
+        "compartieron prácticas comunes. ¿Cuál de ellas?",
+        "La violación sistemática de los derechos humanos",
+        "No se trató de excesos aislados, y esa distinción importa: fueron "
+        "prácticas planificadas, con recursos del Estado y organismos creados para "
+        "ejecutarlas.\nDetención sin orden judicial, tortura como método, "
+        "desaparición forzada, ejecuciones y exilio aparecen con la misma lógica en "
+        "países distintos, e incluso con coordinación entre ellos.\nA eso se "
+        "sumaron el cierre del Congreso, la proscripción de partidos y la censura "
+        "de prensa, que eliminaban a la vez la posibilidad de oponerse y la de "
+        "denunciar.",
+        [
+            ("La ampliación de las libertades de expresión y prensa", "La censura fue una de sus características constantes."),
+            ("El fortalecimiento de los partidos políticos", "Los partidos fueron proscritos o suspendidos."),
+            ("La convocatoria periódica a elecciones libres", "Las elecciones libres fueron suprimidas."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "dificil",
+        "Entre 1989 y 1991 se produjo el derrumbe del bloque soviético. ¿Qué "
+        "consecuencia tuvo para el orden internacional?",
+        "El fin del sistema bipolar de posguerra",
+        "Durante cuarenta años cada conflicto se leía en clave de dos bloques, y "
+        "los países definían su posición respecto de ellos.\nCon la desaparición de "
+        "uno de los polos, ese esquema dejó de operar: Estados Unidos quedó como "
+        "única superpotencia, varios Estados nuevos surgieron del espacio soviético "
+        "y la ONU pudo actuar en asuntos que antes quedaban bloqueados por el "
+        "veto.\nEn el terreno económico, la ausencia de una alternativa organizada "
+        "favoreció la expansión de las políticas de mercado y aceleró la "
+        "globalización.",
+        [
+            ("El regreso a los imperios coloniales", "La descolonización ya se había consumado décadas antes."),
+            ("La disolución de las Naciones Unidas", "La ONU continuó y amplió su actividad."),
+            ("El comienzo de una nueva Guerra Fría inmediata", "El período siguiente se caracterizó por la ausencia de un segundo polo."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "medio",
+        "Tras el fin de la Guerra Fría se expandieron políticas de apertura "
+        "comercial, privatización y reducción del papel del Estado. ¿Cómo se "
+        "denomina esa orientación?",
+        "Neoliberalismo",
+        "El término designa un conjunto de políticas que confían la asignación de "
+        "recursos al mercado y reducen la intervención estatal.\nSus medidas "
+        "típicas son la apertura al comercio y a los capitales externos, la "
+        "privatización de empresas públicas, la desregulación y la disciplina "
+        "fiscal.\nEn América Latina se aplicó primero en Chile durante la dictadura "
+        "y se extendió a la región en las décadas siguientes, en un contexto donde "
+        "la alternativa soviética había desaparecido.",
+        [
+            ("Estado de bienestar", "Ese modelo supone justamente un Estado con amplias responsabilidades."),
+            ("Sustitución de importaciones", "Es la estrategia anterior, basada en proteger la industria nacional."),
+            ("Economía planificada", "La planificación central es el modelo del bloque que se derrumbó."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "dificil",
+        "Aunque las dos superpotencias no se enfrentaron directamente, hubo "
+        "conflictos armados durante la Guerra Fría. ¿Dónde se desarrollaron?",
+        "En terceros países alineados con cada bloque",
+        "Corea, Vietnam, Afganistán y varios conflictos africanos y "
+        "centroamericanos funcionaron como escenarios donde las potencias sostenían "
+        "a bandos opuestos sin combatir entre ellas.\nEl mecanismo era el mismo: "
+        "armas, asesores, financiamiento y respaldo diplomático a un bando, "
+        "mientras la otra potencia hacía lo propio con el contrario.\nEsa "
+        "distribución geográfica explica una asimetría del período: la "
+        "confrontación se decidía en Washington y Moscú, y sus consecuencias las "
+        "pagaban poblaciones que no formaban parte de ninguna de las dos.",
+        [
+            ("En el territorio de las dos superpotencias mismas", "Ninguna de las dos fue escenario de combates entre ellas."),
+            ("Exclusivamente en el continente europeo", "Los principales conflictos armados ocurrieron fuera de Europa."),
+            ("En los océanos, sin afectar a la población", "Las guerras periféricas afectaron gravemente a la población civil."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "facil",
+        "En la década de 1960, Estados Unidos impulsó en América Latina un programa "
+        "de ayuda económica y reformas sociales. ¿Qué objetivo perseguía?",
+        "Evitar que se extendiera la revolución",
+        "El programa se lanzó poco después del triunfo de la Revolución Cubana, y "
+        "esa coincidencia no es casual.\nSu apuesta era que la pobreza y la "
+        "desigualdad extremas alimentaban el apoyo a los cambios revolucionarios, "
+        "de modo que reformas moderadas —agraria, tributaria, educacional— podrían "
+        "quitarles base social.\nEs un buen ejemplo de cómo la Guerra Fría "
+        "condicionó las políticas internas de la región: reformas sociales "
+        "impulsadas desde fuera y con un objetivo de contención.",
+        [
+            ("Financiar la industria pesada de la región", "El programa se orientó a reformas sociales y desarrollo, no a la industria pesada."),
+            ("Instalar bases militares en cada país", "No consistía en un despliegue militar de ese tipo."),
+            ("Unificar las monedas del continente", "La integración monetaria no formó parte del programa."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "medio",
+        "El fin de la Guerra Fría coincidió con la aceleración de la globalización. "
+        "¿Qué rasgo la caracteriza?",
+        "La integración creciente de los mercados",
+        "La globalización supone que bienes, capitales, personas e información "
+        "circulan con menos trabas y a mayor velocidad entre países.\nSe apoyó en "
+        "dos condiciones que maduraron a la vez: acuerdos que redujeron aranceles y "
+        "controles, y tecnologías de transporte y comunicación que abarataron las "
+        "distancias.\nSus efectos son disputados. Amplió el acceso a bienes y "
+        "conectó economías antes aisladas, y al mismo tiempo aumentó la exposición "
+        "de cada país a crisis originadas al otro lado del mundo.",
+        [
+            ("El cierre de las economías nacionales", "El proceso avanzó en el sentido contrario, hacia la apertura."),
+            ("La reducción del comercio internacional", "El comercio internacional creció de manera sostenida."),
+            ("La desaparición de las empresas multinacionales", "Las multinacionales se expandieron en este período."),
+        ],
+    ),
+    _ql(
+        "his_guerra_fria_fte", "his_guerra_fria", "dificil",
+        "Sobre las dictaduras latinoamericanas del siglo XX existen distintas "
+        "interpretaciones historiográficas. ¿Qué actitud corresponde al análisis "
+        "histórico frente a esa diversidad?",
+        "Examinar las fuentes y argumentos de cada una",
+        "Que existan interpretaciones distintas no significa que todas valgan lo "
+        "mismo ni que la elección sea de gusto.\nEl trabajo histórico consiste en "
+        "revisar en qué evidencia se apoya cada una, qué preguntas se hace, qué "
+        "deja fuera y si sus conclusiones se siguen de lo que muestra. Una "
+        "interpretación que ignora documentos disponibles es más débil que otra que "
+        "los considera.\nHay además un límite que no es interpretativo: los hechos "
+        "establecidos por investigaciones judiciales y comisiones de verdad —las "
+        "detenciones, las desapariciones, la tortura— no están en disputa. Lo que "
+        "se discute es cómo explicarlos y qué peso dar a sus causas.",
+        [
+            ("Escoger la que esté más difundida entre el público", "La difusión no es un criterio de validez histórica."),
+            ("Descartar todas por tratarse de opiniones", "Las interpretaciones se apoyan en evidencia y se pueden evaluar."),
+            ("Aceptar la más reciente por ser posterior", "Ser posterior no la hace mejor: depende de sus fuentes y argumentos."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "facil",
+        "En 1945 se creó la Organización de las Naciones Unidas. ¿Cuál fue su "
+        "propósito principal?",
+        "Mantener la paz y la seguridad",
+        "La ONU nació de la experiencia de dos guerras mundiales en treinta años, y "
+        "ese origen define su tarea central.\nSu Carta establece un marco para "
+        "resolver las controversias entre Estados sin recurrir a la fuerza, y crea "
+        "órganos con atribuciones para actuar cuando la paz se ve amenazada.\nA eso "
+        "se sumaron después funciones de cooperación económica, social y de "
+        "derechos humanos, pero el propósito fundacional es el primero.",
+        [
+            ("Administrar las colonias europeas en África", "La ONU acompañó la descolonización; no administró colonias."),
+            ("Fijar los precios del comercio mundial", "El comercio internacional se regula por otros acuerdos y organismos."),
+            ("Dirigir los ejércitos de los países miembros", "Los ejércitos siguen bajo mando nacional."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "medio",
+        "En el Consejo de Seguridad de la ONU cinco Estados disponen de un derecho "
+        "especial. ¿En qué consiste?",
+        "Pueden vetar las resoluciones del Consejo",
+        "Los cinco miembros permanentes —las potencias vencedoras de la Segunda "
+        "Guerra— pueden impedir con su voto negativo que una resolución se apruebe, "
+        "aunque el resto la respalde.\nEl diseño buscaba asegurar que ninguna de "
+        "ellas quedara obligada contra su voluntad, para que no abandonaran la "
+        "organización como había ocurrido con la Sociedad de Naciones.\nEl costo de "
+        "esa garantía se vio durante la Guerra Fría: el Consejo quedó bloqueado "
+        "cada vez que el conflicto involucraba a alguna de las dos superpotencias.",
+        [
+            ("Pueden expulsar por sí solos a un país miembro", "La expulsión requiere un procedimiento y no depende de un solo Estado."),
+            ("Pueden modificar por sí solos la Carta", "Reformar la Carta exige mayorías amplias y ratificación."),
+            ("Pueden nombrar a los jueces internacionales", "Los jueces se eligen con participación de otros órganos."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "facil",
+        "El artículo 1 de la Declaración Universal de Derechos Humanos (1948) "
+        "señala: «Todos los seres humanos nacen libres e iguales en dignidad y "
+        "derechos». ¿Qué principio expresa esta formulación?",
+        "La universalidad de los derechos humanos",
+        "Tres palabras del artículo hacen todo el trabajo: «todos», «nacen» e "
+        "«iguales».\nSi los derechos corresponden a todos y se tienen por el hecho "
+        "de nacer, entonces no dependen de la nacionalidad, la religión, el sexo ni "
+        "de que una ley los conceda: no son un privilegio otorgado, sino una "
+        "condición reconocida.\nDe ahí se sigue lo demás que la Declaración afirma, "
+        "incluida la idea de que ningún Estado puede desconocerlos invocando su "
+        "propia legislación.",
+        [
+            ("La soberanía de cada Estado sobre sus leyes", "El artículo afirma derechos anteriores a cualquier legislación nacional."),
+            ("La igualdad económica entre los países", "La igualdad que declara es en dignidad y derechos, no de recursos."),
+            ("La primacía del derecho interno sobre el internacional", "La Declaración apunta en la dirección contraria."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "medio",
+        "Después de la Segunda Guerra Mundial se produjo la independencia de "
+        "numerosos territorios en Asia y África. ¿Qué factor contribuyó a ese "
+        "proceso?",
+        "El debilitamiento de las potencias coloniales",
+        "La guerra dejó a las metrópolis europeas exhaustas: economías destruidas, "
+        "deudas enormes y ejércitos desgastados.\nSostener administraciones "
+        "coloniales en territorios lejanos se volvió caro y difícil, justo cuando "
+        "los movimientos independentistas locales —muchos fortalecidos por su "
+        "participación en la guerra— se organizaban y presionaban.\nA eso se sumó "
+        "un clima internacional favorable: la Carta de la ONU había consagrado la "
+        "libre determinación de los pueblos, y las dos superpotencias no defendían "
+        "el orden colonial europeo.",
+        [
+            ("El fortalecimiento de los imperios europeos", "La guerra los debilitó profundamente."),
+            ("La renuncia de la ONU a intervenir en el tema", "La ONU acompañó el proceso e incorporó a los nuevos Estados."),
+            ("El aumento de la inversión colonial en África", "Las metrópolis no estaban en condiciones de sostener esa inversión."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "dificil",
+        "La Declaración Universal de Derechos Humanos fue aprobada en 1948 como una "
+        "declaración de la Asamblea General. ¿Qué implicó esa forma jurídica?",
+        "No creaba por sí sola obligaciones",
+        "Una declaración de la Asamblea General enuncia principios: no es un "
+        "tratado y no vincula por sí misma a los Estados que la votan.\nPor eso su "
+        "fuerza inicial fue moral y política, y su traducción en obligaciones "
+        "exigibles requirió instrumentos posteriores —pactos, convenciones y "
+        "tribunales— que los Estados debieron ratificar uno por uno.\nReconocer esa "
+        "diferencia evita dos errores: creer que en 1948 los derechos quedaron "
+        "garantizados, y suponer que el documento no tuvo consecuencias. Fue el "
+        "punto de partida de todo el sistema que vino después.",
+        [
+            ("Obligaba de inmediato a todos los Estados", "Una declaración no tiene ese efecto vinculante directo."),
+            ("Reemplazaba a las constituciones nacionales", "Las constituciones siguieron rigiendo en cada país."),
+            ("Solo regía para los países vencedores", "Su formulación es universal, no limitada a un grupo de Estados."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "medio",
+        "Tras la Segunda Guerra Mundial se realizaron los juicios de Núremberg. "
+        "¿Qué novedad introdujeron en el derecho internacional?",
+        "Juzgar a personas por crímenes contra la humanidad",
+        "Hasta entonces el derecho internacional regulaba relaciones entre Estados, "
+        "y la responsabilidad recaía sobre los países, no sobre quienes tomaban las "
+        "decisiones.\nNúremberg estableció que ciertos actos son crímenes con "
+        "independencia de lo que permitiera la ley nacional, y que sus autores "
+        "responden personalmente, sin poder ampararse en el cargo ni en haber "
+        "obedecido órdenes.\nEse principio es el antecedente directo de los "
+        "tribunales internacionales creados décadas después.",
+        [
+            ("Sancionar a los Estados derrotados con multas económicas", "Las reparaciones entre Estados ya existían y no eran la novedad."),
+            ("Prohibir la existencia de ejércitos nacionales", "Los ejércitos nacionales siguieron existiendo."),
+            ("Establecer un tribunal permanente en La Haya", "El tribunal de Núremberg fue creado para ese proceso, no de forma permanente."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "dificil",
+        "El orden internacional surgido después de 1945 se organizó en torno a dos "
+        "superpotencias. ¿Qué consecuencia tuvo esa configuración para los demás "
+        "países?",
+        "Debieron alinearse o declararse no alineados",
+        "En un sistema bipolar casi ningún conflicto quedaba en el plano local: "
+        "cada disputa interna podía leerse como una pieza del enfrentamiento entre "
+        "bloques, y las dos potencias intervenían en consecuencia.\nEso dejó a los "
+        "países tres caminos: integrarse a uno de los bloques con lo que eso "
+        "significaba en ayuda y en tutela, o intentar una posición autónoma, que "
+        "fue el camino del Movimiento de Países No Alineados.\nNinguna de esas "
+        "opciones era ajena al conflicto: incluso declararse no alineado era una "
+        "postura definida frente a él.",
+        [
+            ("Quedaron excluidos de la ONU hasta 1960", "Muchos ingresaron a la ONU a medida que se independizaban."),
+            ("Perdieron por completo el control de sus asuntos", "Conservaron soberanía formal, aunque con presiones externas fuertes."),
+            ("Recibieron idéntico trato de las dos potencias", "El trato dependía de la posición de cada país frente a los bloques."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "facil",
+        "En 1955 se reunieron en Bandung representantes de países de Asia y África. "
+        "¿Qué buscaban esos países?",
+        "Una posición propia frente a los bloques",
+        "La conferencia reunió a Estados recién independizados o en camino de "
+        "serlo, que no querían quedar subordinados a ninguna de las dos "
+        "superpotencias.\nSus acuerdos apuntaron a la cooperación entre ellos, al "
+        "respeto de la soberanía y al rechazo del colonialismo en todas sus "
+        "formas.\nDe ese encuentro surgió la corriente que pocos años después se "
+        "organizaría como Movimiento de Países No Alineados.",
+        [
+            ("Integrarse al bloque occidental de inmediato", "Su propósito era justamente no integrarse a ninguno de los dos bloques."),
+            ("Restablecer los antiguos imperios coloniales", "Varios de esos países acababan de independizarse de ellos."),
+            ("Formar una única federación continental", "No se planteó una unión política de ese tipo."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "medio",
+        "La Declaración de 1948 afirmó derechos que corresponden a toda persona por "
+        "igual. ¿Qué tensión introdujo respecto de la soberanía de los Estados?",
+        "El trato a la propia población deja de ser interno",
+        "Bajo el principio clásico de soberanía, lo que un Estado hacía dentro de "
+        "sus fronteras era asunto suyo y ningún otro podía intervenir.\nSi los "
+        "derechos pertenecen a las personas por el hecho de existir, ese límite se "
+        "vuelve discutible: el maltrato de un gobierno a sus propios habitantes "
+        "pasa a ser materia de interés internacional.\nEsa tensión no se resolvió "
+        "en 1948 y sigue abierta. Está detrás de cada discusión sobre informes, "
+        "sanciones o intervenciones fundadas en derechos humanos.",
+        [
+            ("Los Estados pierden el derecho a dictar sus propias leyes", "Conservan plenamente esa facultad."),
+            ("Las fronteras dejan de tener reconocimiento", "El reconocimiento de fronteras no se puso en cuestión."),
+            ("La ONU pasa a designar a los gobernantes", "La ONU no interviene en la designación de gobiernos."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "dificil",
+        "La ONU sucedió a la Sociedad de Naciones, creada tras la Primera Guerra "
+        "Mundial. ¿Qué diferencia introdujo la nueva organización?",
+        "Un órgano con decisiones obligatorias",
+        "La Sociedad de Naciones dependía de la unanimidad y carecía de medios para "
+        "hacer cumplir lo que acordaba, lo que la dejó impotente frente a las "
+        "agresiones de los años treinta.\nLa ONU corrigió ese punto con un Consejo "
+        "de Seguridad cuyas resoluciones obligan a los miembros y que puede "
+        "autorizar sanciones e incluso el uso de la fuerza.\nEl precio de esa "
+        "capacidad fue el veto de los cinco permanentes: se ganó poder de decisión "
+        "y se aceptó que ese poder pudiera bloquearse.",
+        [
+            ("La participación exclusiva de países europeos", "La ONU nació con vocación universal y se amplió con la descolonización."),
+            ("La renuncia a toda intervención militar", "La Carta contempla el uso de la fuerza autorizado por el Consejo."),
+            ("La supresión de la asamblea de miembros", "La Asamblea General reúne a todos los Estados miembros."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "medio",
+        "El mapa político de África cambió profundamente entre 1955 y 1975. ¿Qué "
+        "proceso explica ese cambio?",
+        "La independencia de los territorios coloniales",
+        "En dos décadas, decenas de territorios administrados por potencias "
+        "europeas se convirtieron en Estados soberanos, con asiento propio en la "
+        "ONU.\nEl mapa resultante conservó en buena medida las fronteras trazadas "
+        "durante el reparto colonial, que no coincidían con la distribución de los "
+        "pueblos que vivían en ellas.\nEsa herencia territorial explica parte de "
+        "los conflictos posteriores, y es un buen ejemplo de cómo una decisión del "
+        "pasado sigue operando mucho después de que su causa desapareció.",
+        [
+            ("La unificación del continente en un solo Estado", "Surgieron numerosos Estados separados, no uno solo."),
+            ("El reparto del continente entre potencias europeas", "Ese reparto es anterior: ocurre a fines del siglo XIX."),
+            ("La expansión territorial de Sudáfrica", "El cambio del mapa no se explica por la expansión de un país."),
+        ],
+    ),
+    _ql(
+        "his_posguerra_fte", "his_posguerra", "dificil",
+        "La Carta de las Naciones Unidas (1945) declara entre sus propósitos "
+        "«fomentar entre las naciones relaciones de amistad basadas en el respeto "
+        "al principio de la igualdad de derechos y al de la libre determinación de "
+        "los pueblos». ¿Qué principio de este texto sirvió de apoyo a los procesos "
+        "de descolonización?",
+        "La libre determinación de los pueblos",
+        "El texto reconoce que cada pueblo puede decidir su propia condición "
+        "política, y eso es incompatible con que su gobierno lo ejerza una "
+        "metrópoli desde otro continente.\nLos movimientos independentistas usaron "
+        "ese principio como argumento en foros internacionales: no pedían un favor, "
+        "invocaban un principio que las propias potencias coloniales habían "
+        "suscrito al firmar la Carta.\nEs un buen ejemplo de análisis de fuentes: "
+        "el documento no menciona la descolonización, y aun así contiene la premisa "
+        "sobre la cual se la exigió.",
+        [
+            ("El mantenimiento de la paz internacional", "Es otro propósito de la Carta, y no es el que funda esas demandas."),
+            ("La igualdad jurídica entre los Estados", "Se refiere a los Estados ya existentes, no a los pueblos colonizados."),
+            ("La cooperación económica entre naciones", "La cooperación económica no fundamenta el derecho a la independencia."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "facil",
+        "Los regímenes totalitarios europeos de la primera mitad del siglo XX "
+        "compartieron rasgos comunes. ¿Cuál de ellos los caracteriza?",
+        "Un partido único y un líder supremo",
+        "El totalitarismo no se limita a gobernar sin oposición: suprime la "
+        "distinción misma entre Estado, partido y sociedad.\nEl partido único ocupa "
+        "la administración, controla los medios y organiza el tiempo libre, y en la "
+        "cúspide se instala un líder cuya voluntad se presenta como expresión "
+        "directa del pueblo o de la raza.\nDe ahí se siguen los demás rasgos: "
+        "policía política, censura, propaganda masiva y eliminación de los cuerpos "
+        "intermedios que pudieran mediar entre el individuo y el Estado.",
+        [
+            ("La alternancia de partidos en el gobierno", "La alternancia supone pluralismo, que es justamente lo que estos regímenes suprimen."),
+            ("La independencia de los tribunales de justicia", "Los tribunales quedaron subordinados al poder político."),
+            ("La libertad de prensa garantizada por ley", "La prensa fue censurada y puesta al servicio de la propaganda."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "medio",
+        "La crisis económica de 1929 golpeó a las economías del mundo occidental. "
+        "¿Qué efecto tuvo sobre la idea de un Estado que no interviene en la "
+        "economía?",
+        "La debilitó y abrió paso a mayor intervención",
+        "El desempleo masivo y la caída de la producción ocurrieron mientras los "
+        "gobiernos aplicaban las recetas de siempre, y la situación no mejoró.\nEsa "
+        "experiencia erosionó la confianza en que el mercado se corrige solo, y dio "
+        "lugar a políticas donde el Estado gasta, invierte y regula para sostener "
+        "la actividad y el empleo.\nSobre esa base se construyeron respuestas muy "
+        "distintas entre sí: desde el Estado de bienestar en las democracias hasta "
+        "las economías dirigidas de los regímenes autoritarios.",
+        [
+            ("La reforzó, al mostrar la eficacia del mercado libre", "La crisis puso en duda esa eficacia; no la confirmó."),
+            ("No tuvo efecto sobre el papel del Estado", "El papel del Estado cambió profundamente en esos años."),
+            ("La convirtió en política oficial de la ONU", "La ONU se crea en 1945, después de este período."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "medio",
+        "Durante la primera mitad del siglo XX surgieron en América Latina "
+        "liderazgos como los de Vargas en Brasil y Perón en Argentina. ¿Qué rasgo "
+        "compartieron estos gobiernos?",
+        "La apelación directa a los sectores populares",
+        "El vínculo entre el líder y las masas se estableció sin pasar por los "
+        "partidos tradicionales: discursos, radio, actos multitudinarios.\nEsa "
+        "relación se apoyó en medidas concretas —legislación laboral, sindicatos "
+        "vinculados al gobierno, ampliación de derechos sociales— que incorporaron "
+        "a sectores hasta entonces marginados de la política.\nEs lo que distingue "
+        "a estos gobiernos de las oligarquías anteriores: no excluyeron a los "
+        "sectores populares, los integraron desde arriba y bajo la conducción del "
+        "líder.",
+        [
+            ("La restauración de las antiguas monarquías", "Ninguno de estos gobiernos planteó volver a la monarquía."),
+            ("El rechazo a toda legislación laboral", "La legislación laboral fue una de sus banderas principales."),
+            ("La entrega del gobierno a las fuerzas armadas", "Aunque varios líderes venían del ejército, gobernaron como civiles con apoyo popular."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "facil",
+        "En la primera mitad del siglo XX varios Estados asumieron "
+        "responsabilidades permanentes en materia de salud, previsión y educación. "
+        "¿Cómo se denomina ese modelo?",
+        "Estado de bienestar",
+        "El nombre alude a un Estado que garantiza un piso de condiciones de vida a "
+        "toda la población, con independencia de sus ingresos.\nSus instrumentos "
+        "son la seguridad social, los sistemas públicos de salud y educación, y los "
+        "seguros de desempleo, financiados con impuestos y cotizaciones.\nSu "
+        "expansión mayor ocurre después de la Segunda Guerra Mundial, pero sus "
+        "orígenes están en las respuestas a la crisis de los años treinta.",
+        [
+            ("Estado liberal clásico", "El Estado liberal clásico limita su acción al orden y la justicia."),
+            ("Estado confesional", "Ese término alude a la relación entre el Estado y una religión oficial."),
+            ("Estado federal", "El federalismo describe cómo se reparte el poder territorial, no estas funciones."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "dificil",
+        "Tanto los totalitarismos europeos como los populismos latinoamericanos "
+        "apelaron a las masas. ¿Qué diferencia sustancial existió entre ambos?",
+        "El totalitarismo buscó controlar toda la vida",
+        "La movilización de masas es un rasgo común y no alcanza para "
+        "identificarlos.\nEl totalitarismo aspira a algo más ambicioso: rehacer la "
+        "sociedad completa según una ideología, y para eso interviene la escuela, "
+        "el trabajo, el ocio y la vida privada, eliminando cualquier esfera "
+        "autónoma.\nLos populismos latinoamericanos concentraron su acción en la "
+        "redistribución y en la incorporación política de los trabajadores, sin "
+        "proponerse esa transformación total de la existencia.",
+        [
+            ("El populismo prescindió de todo liderazgo personal", "El liderazgo personal fuerte es uno de sus rasgos definitorios."),
+            ("El totalitarismo evitó movilizar a las masas", "La movilización permanente fue central en esos regímenes."),
+            ("El populismo rechazó la intervención económica", "Intervino activamente en la economía, con industrialización y empresas públicas."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "medio",
+        "Tras la crisis de 1929, varios países latinoamericanos impulsaron la "
+        "producción interna de bienes que antes importaban. ¿Cómo se conoce esa "
+        "estrategia?",
+        "Industrialización por sustitución de importaciones",
+        "La crisis cortó dos flujos a la vez: cayeron los precios de las materias "
+        "primas exportadas y se hizo difícil pagar las manufacturas importadas.\nLa "
+        "respuesta fue producir localmente lo que antes se compraba afuera, con "
+        "apoyo estatal: aranceles que protegían a la industria naciente, crédito "
+        "público y empresas creadas por el propio Estado.\nEn Chile ese impulso se "
+        "organizó a través de la CORFO, creada en 1939.",
+        [
+            ("Liberalización comercial sin restricciones arancelarias", "La estrategia usó aranceles para proteger la industria naciente."),
+            ("Especialización exclusiva en materias primas", "Es el modelo anterior, que la crisis puso en cuestión."),
+            ("Integración monetaria entre países vecinos", "No hubo integración monetaria en ese período."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "dificil",
+        "La crisis de 1929 tuvo en Chile un efecto particularmente severo. ¿Qué "
+        "explica esa intensidad?",
+        "La dependencia del salitre y del comercio exterior",
+        "Chile había concentrado sus ingresos fiscales y sus divisas en un producto "
+        "vendido a mercados externos.\nCuando el comercio mundial se contrajo y el "
+        "salitre sintético terminó de desplazar al natural, cayeron a la vez las "
+        "exportaciones, la recaudación del fisco y el empleo en el norte, sin otra "
+        "actividad que amortiguara el golpe.\nEs la contracara del modelo "
+        "exportador del siglo XIX: la misma especialización que había financiado "
+        "obras públicas y escuelas dejó al país sin defensas frente a un cambio en "
+        "el mercado mundial.",
+        [
+            ("La ausencia de un sistema bancario en el país", "Chile contaba con banca desde el siglo XIX."),
+            ("El aislamiento respecto de los mercados mundiales", "El problema fue el opuesto: una integración muy concentrada."),
+            ("La falta de tierras agrícolas para el consumo interno", "El país disponía de producción agrícola propia."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "medio",
+        "En 1939 el Estado chileno creó la Corporación de Fomento de la Producción. "
+        "¿Qué papel se le asignó?",
+        "Impulsar la industrialización del país",
+        "La CORFO nació con una tarea que el mercado interno no estaba en "
+        "condiciones de asumir: financiar y organizar industrias de gran "
+        "escala.\nCon su intervención se crearon o impulsaron la producción de "
+        "electricidad, acero y petróleo, sectores que exigían inversiones que "
+        "ningún privado chileno podía enfrentar solo.\nEs el ejemplo más claro del "
+        "giro de la época: el Estado deja de limitarse a regular y pasa a producir.",
+        [
+            ("Administrar las salitreras del norte", "Las salitreras tenían otro régimen y no dependían de la CORFO."),
+            ("Fijar los salarios de todos los trabajadores", "La fijación de salarios corresponde a otras instituciones."),
+            ("Representar a Chile ante la ONU", "La representación internacional es tarea de la Cancillería."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "dificil",
+        "El ascenso de los regímenes totalitarios en Europa se explica por varios "
+        "factores concurrentes. ¿Cuál de los siguientes contribuyó a ese proceso?",
+        "El descontento social tras la crisis económica",
+        "Ningún factor por sí solo explica el fenómeno, y ese es el punto del "
+        "análisis multicausal.\nEl desempleo masivo y la pérdida de ahorros dejaron "
+        "a amplios sectores dispuestos a escuchar propuestas que prometían orden y "
+        "trabajo inmediatos, aunque el precio fuera renunciar a las libertades "
+        "públicas.\nA eso se sumaron las condiciones impuestas tras la Primera "
+        "Guerra Mundial, la debilidad de algunas democracias jóvenes y el temor de "
+        "sectores propietarios frente al avance de la izquierda.",
+        [
+            ("La consolidación de las democracias parlamentarias", "Fue su fragilidad, no su consolidación, lo que abrió el espacio."),
+            ("El fortalecimiento del comercio internacional", "El comercio mundial se contrajo drásticamente en esos años."),
+            ("La ausencia de conflictos entre las potencias", "El período está marcado por tensiones crecientes entre potencias."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "facil",
+        "Los regímenes totalitarios europeos dieron gran importancia a la "
+        "propaganda estatal. ¿Con qué finalidad la utilizaron?",
+        "Difundir una versión única de la realidad",
+        "La propaganda no buscaba convencer en un debate: buscaba que no hubiera "
+        "debate.\nCon el control de la prensa, la radio, el cine y los actos "
+        "públicos, el régimen se aseguraba de que solo circulara su propia "
+        "interpretación de los hechos, del enemigo y del pasado nacional.\nPor eso "
+        "la propaganda va siempre acompañada de censura: una es inútil sin la otra.",
+        [
+            ("Informar de manera plural y verificable", "El pluralismo informativo es exactamente lo que estos regímenes eliminaron."),
+            ("Financiar la reconstrucción de las ciudades", "La propaganda no cumplía funciones de financiamiento."),
+            ("Sustituir por completo al sistema educativo", "La escuela siguió existiendo, y también fue puesta al servicio del régimen."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "medio",
+        "En 1938 llegó al gobierno en Chile la coalición del Frente Popular. ¿Qué "
+        "orientación tuvo su programa?",
+        "Ampliar el papel del Estado",
+        "El Frente Popular reunió a partidos de centro e izquierda en torno a un "
+        "programa de industrialización y de mejoramiento de las condiciones de vida "
+        "de los sectores populares.\nSu instrumento principal fue la CORFO, creada "
+        "al año siguiente, y su impulso alcanzó también a la educación, la salud y "
+        "la vivienda.\nCoincide con lo que ocurría en otras partes: tras la crisis "
+        "de 1929, los Estados asumen tareas económicas y sociales que antes no les "
+        "correspondían.",
+        [
+            ("Restablecer el predominio del Congreso", "El régimen presidencial estaba vigente desde la Constitución de 1925."),
+            ("Reducir el gasto público a su mínimo", "Su programa suponía justamente aumentar la acción estatal."),
+            ("Devolver las salitreras a sus dueños", "Las salitreras ya estaban mayoritariamente en manos privadas."),
+        ],
+    ),
+    _ql(
+        "his_crisis_liberal_fte", "his_crisis_liberal", "dificil",
+        "Al comparar el papel del Estado a comienzos del siglo XX con el que asumió "
+        "tras la crisis de 1929, ¿qué cambio se observa?",
+        "Pasó de garante del orden a agente económico",
+        "El Estado liberal del siglo XIX se ocupaba del orden público, la justicia, "
+        "las relaciones exteriores y poco más; la economía se consideraba un ámbito "
+        "que se regulaba solo.\nDespués de 1929 ese Estado invierte, crea empresas, "
+        "protege industrias, fija condiciones de trabajo y organiza sistemas de "
+        "previsión.\nReconocer ese cambio importa porque no fue transitorio: define "
+        "el modo en que se organizaron las economías occidentales durante casi "
+        "medio siglo, hasta que el giro neoliberal de los años setenta lo puso en "
+        "discusión.",
+        [
+            ("Pasó de intervenir a abstenerse del mercado", "El movimiento fue exactamente el inverso."),
+            ("Dejó de recaudar impuestos sobre el comercio exterior", "Siguió recaudándolos, y además amplió otras fuentes."),
+            ("Abandonó la administración de la educación", "La educación pública se expandió en ese mismo período."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "facil",
+        "La Constitución de 1833 organizó la República de Chile durante buena parte "
+        "del siglo XIX. ¿Cuál fue una de sus características?",
+        "Un Ejecutivo fuerte con amplias atribuciones",
+        "La Constitución de 1833 respondió al desorden de los ensayos "
+        "constitucionales previos con una fórmula clara: concentrar autoridad en el "
+        "Presidente.\nLe entregó mandato de cinco años con reelección inmediata, la "
+        "facultad de declarar estados de excepción, participación en el "
+        "nombramiento de autoridades y un veto sobre las leyes. Sobre esa base se "
+        "sostuvieron los gobiernos de las décadas siguientes.\nEse predominio "
+        "presidencial marcó el orden político chileno hasta la guerra civil de "
+        "1891, cuando el Congreso pasó a imponerse.",
+        [
+            ("Un régimen federal con provincias plenamente autónomas", "El ensayo federal es de 1826 y fracasó; la Constitución de 1833 es centralista."),
+            ("La elección directa del Presidente por sufragio universal", "El sufragio estuvo restringido por requisitos de renta y alfabetización."),
+            ("La separación entre la Iglesia y el Estado", "Esa separación es muy posterior: el catolicismo era la religión del Estado."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "medio",
+        "Hacia mediados del siglo XIX, el descubrimiento de yacimientos de oro en "
+        "California y Australia tuvo efectos en la economía chilena. ¿Cuál fue uno "
+        "de ellos?",
+        "El aumento de las exportaciones de trigo y harina",
+        "Los yacimientos atrajeron a miles de personas a regiones que no producían "
+        "alimentos suficientes, y esa demanda repentina encontró en Chile a un "
+        "proveedor cercano por vía marítima.\nEl resultado fue una expansión de la "
+        "agricultura del valle central y del negocio molinero, con puertos y "
+        "caminos organizados en función de esa exportación.\nFue también una "
+        "lección temprana sobre los ciclos: cuando esas regiones desarrollaron su "
+        "propia producción, la demanda cayó y el auge terminó.",
+        [
+            ("La llegada masiva de capitales mineros a Chile", "El vínculo fue comercial: Chile vendía alimentos, no recibía esos capitales."),
+            ("El cierre de los puertos al comercio extranjero", "Ocurrió lo contrario: el comercio de exportación se intensificó."),
+            ("La sustitución de todas las importaciones industriales", "Chile siguió importando manufacturas durante todo el período."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "medio",
+        "Tras la Guerra del Pacífico, la incorporación de Tarapacá y Antofagasta "
+        "modificó la economía chilena. ¿Qué cambio produjo?",
+        "El fisco pasó a depender del salitre",
+        "Los derechos de exportación del salitre se convirtieron en la principal "
+        "fuente de ingresos del Estado, y con ellos se financiaron obras públicas, "
+        "escuelas y el aparato administrativo.\nEl cambio fue de escala: un Estado "
+        "que antes dependía de aduanas modestas pasó a disponer de recursos "
+        "abundantes ligados a un solo producto y a un solo mercado.\nEsa "
+        "dependencia explica la magnitud de la crisis posterior, cuando el salitre "
+        "sintético desplazó al chileno y los ingresos se derrumbaron.",
+        [
+            ("La economía dejó de exportar materias primas", "El salitre es precisamente una materia prima de exportación."),
+            ("El Estado nacionalizó las oficinas salitreras", "Las oficinas quedaron mayoritariamente en manos privadas y extranjeras."),
+            ("El trigo se convirtió en la principal exportación", "El auge triguero es anterior y fue desplazado por el salitre."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "facil",
+        "Hacia fines del siglo XIX se instaló en Chile el debate sobre la llamada "
+        "cuestión social. ¿A qué problema aludía esa expresión?",
+        "A las condiciones de vida de los trabajadores urbanos",
+        "La expresión nombró un conjunto de problemas que la sociedad chilena ya no "
+        "podía atribuir a la mala suerte individual: vivienda hacinada, jornadas "
+        "extensas, salarios insuficientes, enfermedades y mortalidad infantil "
+        "elevada.\nLo nuevo no fue la pobreza, que existía desde antes, sino su "
+        "concentración visible en las ciudades y en los centros mineros, donde se "
+        "volvió un asunto público.\nDe ese debate salieron las primeras leyes "
+        "sociales del siglo XX y también la organización obrera que las empujó.",
+        [
+            ("A la falta de acuerdo entre los partidos del Congreso", "Ese es el conflicto político del período, no la cuestión social."),
+            ("Al conflicto entre el Presidente y el Congreso", "Esa disputa desembocó en la guerra civil de 1891, y es otro asunto."),
+            ("A la disputa por los límites con los países vecinos", "Las cuestiones limítrofes son un problema distinto del período."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "medio",
+        "El crecimiento de las ciudades chilenas en el tránsito del siglo XIX al XX "
+        "estuvo asociado a la llegada de población rural. ¿Qué consecuencia tuvo "
+        "ese proceso?",
+        "El hacinamiento en conventillos",
+        "La ciudad recibió más gente de la que podía alojar. El conventillo —piezas "
+        "en torno a un patio común, con servicios compartidos— fue la respuesta del "
+        "mercado a esa demanda.\nSus consecuencias fueron sanitarias antes que "
+        "arquitectónicas: agua escasa, ausencia de alcantarillado y contagio fácil, "
+        "en un contexto de mortalidad infantil muy alta.\nEse es el escenario "
+        "concreto sobre el que se discutió la cuestión social, y el que explica que "
+        "las primeras leyes se ocuparan de la vivienda obrera.",
+        [
+            ("La disminución de la mortalidad infantil urbana", "Las condiciones de hacinamiento la mantuvieron alta durante décadas."),
+            ("El despoblamiento de los centros mineros del norte", "Los centros mineros también atraían población en ese período."),
+            ("La expansión de la propiedad agrícola campesina", "La tierra siguió concentrada, y por eso mismo la gente migraba."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "dificil",
+        "Frente al deterioro de sus condiciones de vida, los trabajadores chilenos "
+        "de fines del siglo XIX crearon sociedades de socorros mutuos. ¿Qué función "
+        "cumplían estas organizaciones?",
+        "Reunir aportes ante enfermedad o muerte",
+        "Antes de que existiera cualquier seguro social, la enfermedad o la muerte "
+        "del que sostenía una casa dejaba a la familia sin nada.\nLas mutuales "
+        "funcionaban con una cuota periódica de sus miembros y un fondo común del "
+        "que se giraba para atender esos casos, además de sostener escuelas "
+        "nocturnas y bibliotecas.\nSu importancia excede lo asistencial: fueron la "
+        "primera escuela de organización de los trabajadores chilenos, y sobre esa "
+        "experiencia se construyeron después las sociedades de resistencia y los "
+        "sindicatos.",
+        [
+            ("Representar a los trabajadores en el Congreso", "No tenían representación parlamentaria: eran asociaciones civiles."),
+            ("Administrar las oficinas salitreras del norte", "Las oficinas eran administradas por sus dueños, no por los obreros."),
+            ("Fijar por ley la jornada máxima de trabajo", "Legislar corresponde al Congreso; las mutuales no tenían esa facultad."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "dificil",
+        "Entre 1883 y 1884 el Estado chileno aprobó las llamadas leyes laicas. ¿Qué "
+        "modificaron?",
+        "Traspasaron al Estado registros eclesiásticos",
+        "Hasta entonces la Iglesia católica llevaba los registros de nacimientos, "
+        "matrimonios y defunciones, y administraba los cementerios.\nLas leyes de "
+        "cementerios laicos, matrimonio civil y registro civil trasladaron esas "
+        "funciones a órganos del Estado, de modo que la existencia legal de una "
+        "persona dejó de depender de una institución religiosa.\nEs un episodio del "
+        "proceso de secularización que atraviesa a los Estados liberales del siglo "
+        "XIX, y tuvo un costo político alto: enfrentó duramente al gobierno con la "
+        "jerarquía eclesiástica.",
+        [
+            ("Prohibieron el culto católico en el territorio", "El culto siguió permitido: lo que cambió fue quién lleva los registros."),
+            ("Entregaron la educación pública a la Iglesia", "La tendencia del período fue la contraria, hacia un Estado docente."),
+            ("Establecieron la libertad de prensa en el país", "La libertad de prensa es otra materia, ajena a estas tres leyes."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "medio",
+        "La guerra civil de 1891 marcó un cambio en el funcionamiento del régimen "
+        "político chileno. ¿En qué consistió ese cambio?",
+        "El Congreso pasó a predominar sobre el Ejecutivo",
+        "El conflicto enfrentó al presidente Balmaceda con la mayoría del Congreso, "
+        "y terminó con la derrota del primero.\nDesde entonces y hasta 1925, el "
+        "Congreso ejerció un predominio efectivo: usaba la aprobación de las leyes "
+        "periódicas —presupuesto, contribuciones, fuerzas armadas— como instrumento "
+        "de presión, y los gabinetes se sucedían según las mayorías "
+        "parlamentarias.\nEs un giro respecto del orden de 1833, que había sido "
+        "marcadamente presidencial.",
+        [
+            ("El Ejecutivo concentró las atribuciones legislativas", "El resultado fue el opuesto: el Ejecutivo perdió peso frente al Congreso."),
+            ("Se estableció un régimen de partido único", "El período se caracteriza por la multiplicidad de partidos y coaliciones."),
+            ("Se suprimieron las elecciones parlamentarias", "Las elecciones continuaron y ganaron importancia."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "medio",
+        "Entre 1861 y 1883 el Estado chileno llevó adelante la ocupación de la "
+        "Araucanía. ¿Qué efecto tuvo este proceso sobre el pueblo mapuche?",
+        "La pérdida de gran parte de sus tierras",
+        "La ocupación militar fue seguida de la radicación: al pueblo mapuche se le "
+        "asignaron superficies reducidas mediante títulos de merced, y el resto del "
+        "territorio se remató o entregó a colonos.\nEl cambio no fue solo de "
+        "propiedad. Una sociedad que vivía de la ganadería y del comercio en "
+        "espacios amplios quedó confinada en predios pequeños, con consecuencias "
+        "económicas duraderas.\nEl Estado presentó el proceso como la incorporación "
+        "de un territorio a la soberanía nacional, y esa diferencia entre lo que "
+        "dice la fuente oficial y lo que muestran sus efectos es propia del "
+        "análisis histórico.",
+        [
+            ("El reconocimiento de su autonomía territorial", "El proceso significó justamente el fin de esa autonomía."),
+            ("La incorporación de sus autoridades al Congreso", "No hubo representación mapuche en el Congreso del período."),
+            ("La entrega de títulos sobre todo su territorio", "Los títulos de merced cubrieron una fracción reducida del territorio anterior."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "facil",
+        "Durante la segunda mitad del siglo XIX se expandió en Chile la red "
+        "ferroviaria. ¿A qué necesidad respondió principalmente esa expansión?",
+        "Llevar la producción a los puertos",
+        "El trazado de la red lo dice: líneas que bajan desde las zonas productivas "
+        "hacia los puertos de embarque, y no una malla que conecte ciudades entre "
+        "sí.\nEso responde a una economía organizada para exportar. El ferrocarril "
+        "abarató el transporte del trigo, del carbón y después del salitre, y "
+        "acortó los plazos entre la producción y el barco.\nEs un ejemplo de cómo "
+        "la infraestructura revela el modelo económico de un período: dónde se "
+        "construye dice para qué se construye.",
+        [
+            ("Trasladar tropas hacia la frontera del norte", "Tuvo usos militares, pero no fue la razón de su trazado."),
+            ("Conectar las capitales de los países vecinos", "La red se organizó dentro del territorio nacional."),
+            ("Reemplazar la navegación por los ríos del sur", "La navegación fluvial no tenía en Chile ese peso."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "dificil",
+        "La economía chilena del siglo XIX se organizó en torno a la exportación de "
+        "unos pocos productos. ¿Qué riesgo implicaba esa estructura?",
+        "Quedar expuesta a los precios internacionales",
+        "Cuando los ingresos de un país dependen de dos o tres productos, las "
+        "decisiones que fijan su suerte se toman fuera de sus fronteras.\nUna caída "
+        "del precio, la aparición de un competidor o un sustituto técnico bastan "
+        "para arrastrar al fisco entero, sin que exista otra actividad capaz de "
+        "compensar.\nEl siglo entrega los dos ejemplos: el trigo perdió sus "
+        "mercados cuando California y Australia se abastecieron solas, y el salitre "
+        "se derrumbó ante el sintético alemán.",
+        [
+            ("Perder el control sobre sus fronteras terrestres", "El riesgo era económico, no de soberanía territorial."),
+            ("Depender de la mano de obra extranjera", "La mano de obra de esas actividades era mayoritariamente nacional."),
+            ("Renunciar a los ingresos por aduanas", "Las aduanas eran justamente la vía por la que ese modelo recaudaba."),
+        ],
+    ),
+    _ql(
+        "his_chile_xix_fte", "his_chile_xix", "dificil",
+        "Mientras Chile consolidaba su República durante el siglo XIX, en Europa "
+        "occidental avanzaba la industrialización. ¿Qué relación existió entre "
+        "ambos procesos?",
+        "Chile proveyó materias primas a esas economías",
+        "Los dos procesos son simultáneos y están conectados: la industria europea "
+        "necesitaba materias primas y alimentos, y encontró en América Latina "
+        "proveedores dispuestos a especializarse en ellos.\nChile entró en ese "
+        "circuito con cobre, plata, trigo y más tarde salitre, y compró a cambio "
+        "manufacturas, sobre todo británicas.\nReconocer esa relación evita dos "
+        "errores frecuentes: pensar que la historia de Chile transcurre aislada del "
+        "mundo, y suponer que industrialización y exportación de materias primas "
+        "son etapas sucesivas de un mismo camino en vez de dos posiciones "
+        "simultáneas en un mismo intercambio.",
+        [
+            ("Chile industrializó su producción al mismo ritmo", "La industrialización chilena es muy posterior y de otra escala."),
+            ("Europa financió las guerras de independencia", "Las independencias son anteriores y no dependieron de ese financiamiento."),
+            ("Ambos procesos ocurrieron sin contacto entre sí", "Estuvieron estrechamente ligados por el comercio atlántico."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "facil",
+        "Las repúblicas surgidas en América Latina durante el siglo XIX "
+        "reemplazaron la autoridad del monarca por un nuevo fundamento del poder. "
+        "¿En qué principio se basó ese cambio?",
+        "En la soberanía popular, ejercida por representantes",
+        "El paso de la monarquía a la república no fue solo un cambio de "
+        "gobernante: cambió el origen del poder.\nEn el orden colonial la autoridad "
+        "descendía del rey, que la ejercía por herencia y con fundamento religioso. "
+        "En la república el poder reside en la nación, y quienes gobiernan lo hacen "
+        "porque han sido elegidos para representarla.\nEse principio quedó escrito "
+        "en las constituciones del período, aunque su ejercicio real fue limitado: "
+        "el sufragio estuvo restringido por requisitos de renta, propiedad o "
+        "alfabetización durante buena parte del siglo.",
+        [
+            ("En la autoridad hereditaria de las familias criollas locales", "Las elites criollas concentraron el poder, pero no lo fundaron en un derecho hereditario."),
+            ("En el derecho divino atribuido a los gobernantes", "Ese es el fundamento del poder monárquico que las repúblicas abandonaron."),
+            ("En la designación de las autoridades por la Iglesia", "La Iglesia conservó influencia, pero no designaba a las autoridades republicanas."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "facil",
+        "Durante el siglo XIX se consolidó en Europa y América el Estado-nación "
+        "como forma de organización política. ¿Cuál es una característica de esta "
+        "forma de organización?",
+        "Un poder soberano sobre un territorio delimitado",
+        "El Estado-nación reúne tres elementos: un territorio con fronteras "
+        "definidas, una población a la que se atribuye una identidad común y un "
+        "poder soberano que no reconoce autoridad superior dentro de esos "
+        "límites.\nEs una novedad frente al orden anterior, donde las lealtades "
+        "eran locales o dinásticas y los límites, difusos.\nSobre esa base se "
+        "construyó lo demás: una administración centralizada, un ejército nacional, "
+        "una moneda y un sistema de instrucción pública.",
+        [
+            ("Un gobierno compartido entre varias monarquías", "El Estado-nación afirma un poder único, no uno repartido entre coronas."),
+            ("Una administración a cargo de autoridades locales", "La tendencia del período fue la contraria: centralizar la administración."),
+            ("Una autoridad religiosa por sobre la autoridad civil", "El Estado liberal buscó precisamente separar ambas esferas."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "medio",
+        "En las repúblicas hispanoamericanas del siglo XIX el derecho a sufragio "
+        "estuvo restringido por requisitos de renta, propiedad o alfabetización. "
+        "¿Qué consecuencia tuvo esta restricción?",
+        "La política quedó en manos de una elite reducida",
+        "Los requisitos censitarios no excluían a un grupo pequeño: dejaban fuera a "
+        "la mayoría de la población.\nEn sociedades mayoritariamente rurales, "
+        "pobres y analfabetas, exigir renta o saber leer reducía el electorado a "
+        "una fracción mínima, compuesta por propietarios y profesionales "
+        "urbanos.\nDe ahí la distancia entre el principio de soberanía popular "
+        "declarado en las constituciones y el funcionamiento efectivo de esas "
+        "repúblicas, que operaron como gobiernos de elite durante buena parte del "
+        "siglo.",
+        [
+            ("La participación se amplió a los sectores populares", "Ocurrió lo contrario: esos requisitos los dejaban fuera del padrón."),
+            ("El voto pasó a depender del origen étnico declarado", "Los requisitos eran económicos y educativos, no de origen."),
+            ("Las elecciones dejaron de realizarse con regularidad", "Las elecciones se mantuvieron; lo restringido era quién podía votar."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "medio",
+        "Los nuevos Estados nacionales del siglo XIX impulsaron sistemas de "
+        "instrucción pública. Además de enseñar a leer y escribir, ¿qué función "
+        "cumplió esa política?",
+        "Difundir una identidad nacional común",
+        "La escuela fue una de las herramientas más eficaces de construcción "
+        "nacional.\nA través de ella el Estado difundió una lengua oficial, una "
+        "versión compartida del pasado, los símbolos patrios y las fechas que la "
+        "nación debía conmemorar. Todo eso convertía a habitantes de regiones "
+        "distintas en miembros de una misma comunidad.\nPor eso la instrucción "
+        "pública se expandió junto con el ejército nacional, el registro civil y el "
+        "censo: son los instrumentos con que el Estado llegó a la población.",
+        [
+            ("Reemplazar a las universidades existentes", "La instrucción pública se sumó a las universidades, no las sustituyó."),
+            ("Formar exclusivamente a los futuros militares", "La formación militar era un ámbito aparte y mucho más acotado."),
+            ("Sustituir la administración de las provincias", "La escuela no cumplía funciones administrativas."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "medio",
+        "Mientras en América Latina se consolidaban las repúblicas, en Europa se "
+        "produjeron las unificaciones de Italia y de Alemania. ¿Qué proceso "
+        "compartieron ambas regiones durante el siglo XIX?",
+        "La construcción de Estados de base nacional",
+        "Los caminos fueron distintos y el resultado, comparable.\nEn América "
+        "Latina el punto de partida fue la ruptura con la monarquía española y la "
+        "formación de repúblicas separadas; en Italia y Alemania, la reunión de "
+        "territorios antes fragmentados bajo un mismo Estado.\nEn los dos casos el "
+        "criterio que ordenó el mapa fue el mismo: la idea de que a cada nación le "
+        "corresponde un Estado propio, con un territorio delimitado y una autoridad "
+        "soberana.",
+        [
+            ("La restauración de los antiguos imperios coloniales", "El siglo XIX americano se abre justamente con la ruptura del orden colonial."),
+            ("La expansión de las monarquías absolutas", "El absolutismo retrocedió frente a las constituciones y los parlamentos."),
+            ("La disolución de los ejércitos permanentes", "Los ejércitos nacionales se fortalecieron: eran parte del nuevo Estado."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "dificil",
+        "Las constituciones hispanoamericanas del siglo XIX declararon la igualdad "
+        "ante la ley y, al mismo tiempo, las sociedades mantuvieron profundas "
+        "desigualdades. ¿Cómo se explica esa coexistencia?",
+        "La igualdad fue jurídica y no alcanzó lo social",
+        "Declarar la igualdad ante la ley significa que las personas quedan "
+        "sometidas a las mismas normas y tribunales, sin los fueros y privilegios "
+        "estamentales del orden colonial. Es un cambio real y de gran "
+        "alcance.\nPero no toca la distribución de la tierra, el trabajo ni la "
+        "instrucción, y esas desigualdades siguieron intactas. Un inquilino y un "
+        "hacendado eran iguales ante el juez y desiguales en todo lo demás.\nA eso "
+        "se sumó que el ejercicio de los derechos políticos exigía renta o "
+        "alfabetización, de modo que la igualdad declarada convivió con una "
+        "ciudadanía restringida.",
+        [
+            ("Las constituciones no llegaron a entrar en vigencia", "Estuvieron vigentes y organizaron efectivamente el poder."),
+            ("La desigualdad se debió al retorno de la monarquía", "Las monarquías no volvieron: el período es de consolidación republicana."),
+            ("Los tribunales impidieron aplicar esas constituciones", "Los tribunales formaban parte del orden que las constituciones creaban."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "dificil",
+        "El ideario liberal del siglo XIX tuvo también una expresión económica en "
+        "América Latina. ¿De qué manera se manifestó?",
+        "En la apertura al comercio con Europa",
+        "El liberalismo económico sostiene que la riqueza aumenta cuando el "
+        "intercambio no encuentra trabas, y las nuevas repúblicas aplicaron ese "
+        "principio al abrirse a los mercados atlánticos.\nEl resultado fue una "
+        "inserción como proveedoras de materias primas y compradoras de "
+        "manufacturas europeas, sobre todo británicas.\nEsa apertura trajo ingresos "
+        "fiscales, ferrocarriles y puertos, y también una dependencia de los "
+        "precios internacionales que marcaría la economía de la región durante el "
+        "siglo siguiente.",
+        [
+            ("En la prohibición de exportar materias primas", "Las exportaciones de materias primas fueron el eje de esa inserción."),
+            ("En el control estatal de todas las manufacturas", "El liberalismo económico apuntaba a reducir la intervención del Estado."),
+            ("En el reparto de la tierra entre los campesinos", "La propiedad de la tierra siguió concentrada durante todo el período."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "medio",
+        "Tras las independencias, en varias repúblicas hispanoamericanas emergieron "
+        "liderazgos personales con fuerte respaldo militar. ¿Qué condición "
+        "favoreció su aparición?",
+        "La debilidad de las instituciones recién creadas",
+        "Las guerras de independencia dejaron territorios extensos, economías "
+        "golpeadas y un aparato estatal por construir.\nEn ese vacío, la autoridad "
+        "efectiva quedó en manos de quienes disponían de hombres armados y "
+        "prestigio militar, muchas veces obtenido en las mismas guerras. El "
+        "liderazgo personal reemplazó a instituciones que todavía no existían o no "
+        "lograban imponerse.\nPor eso el caudillismo no fue un accidente de "
+        "carácter, sino la respuesta previsible a un Estado incapaz de controlar su "
+        "propio territorio.",
+        [
+            ("La consolidación temprana de los partidos políticos", "Los partidos se organizaron después y con dificultad."),
+            ("La existencia de una burocracia estatal experimentada", "Justamente esa burocracia estaba por construirse."),
+            ("El respaldo unánime de las potencias europeas", "Las potencias europeas no sostuvieron a esos liderazgos."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "dificil",
+        "Al comparar el orden colonial con las repúblicas hispanoamericanas del "
+        "siglo XIX, ¿qué elemento constituye una continuidad?",
+        "La concentración de la tierra en pocas manos",
+        "La independencia cambió el régimen político y dejó intacta la estructura "
+        "de la propiedad.\nLas grandes haciendas heredadas del período colonial "
+        "siguieron en manos de las mismas familias, y con ellas se mantuvieron las "
+        "relaciones de trabajo que las sostenían: inquilinaje, peonaje y "
+        "dependencia personal.\nDistinguir esto es propio del análisis histórico: "
+        "en un mismo proceso conviven rupturas —el fin del dominio español, la "
+        "república, las constituciones— con continuidades que a veces pesan más que "
+        "los cambios.",
+        [
+            ("La dependencia de un monarca peninsular", "Ese vínculo se rompió precisamente con la independencia."),
+            ("La existencia de tribunales de la Inquisición", "Esos tribunales fueron suprimidos en el proceso independentista."),
+            ("La prohibición de comerciar con otros países", "El monopolio comercial colonial terminó con la apertura al comercio atlántico."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "facil",
+        "Las constituciones liberales del siglo XIX establecieron la separación de "
+        "los poderes del Estado. ¿Cuál era el propósito de esa separación?",
+        "Evitar que el poder se concentre en una autoridad",
+        "La división entre un poder que dicta las leyes, otro que las ejecuta y un "
+        "tercero que las aplica en los casos concretos responde a una desconfianza "
+        "explícita hacia el poder sin contrapeso.\nCada poder limita a los otros: "
+        "el Congreso aprueba las leyes y el presupuesto que el Ejecutivo necesita, "
+        "y los tribunales resuelven con independencia de ambos.\nEs uno de los "
+        "rasgos que distinguen al Estado liberal de la monarquía absoluta, donde "
+        "las tres funciones descansaban en la misma persona.",
+        [
+            ("Acelerar la aprobación de las leyes en el Congreso", "La división de poderes suele hacer más lento, no más rápido, el proceso."),
+            ("Reducir el número de funcionarios del gobierno", "El aparato estatal creció durante el siglo XIX."),
+            ("Entregar al ejército la conducción del Estado", "El principio apunta justamente a someter la fuerza al poder civil."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "medio",
+        "Los Estados nacionales del siglo XIX promovieron himnos, banderas, museos "
+        "y fechas conmemorativas. ¿Qué buscaban con estas iniciativas?",
+        "Crear un sentido de pertenencia compartido",
+        "Una nación no se sostiene solo con fronteras y leyes: necesita que quienes "
+        "viven dentro de ellas se reconozcan como parte de lo mismo.\nLos símbolos "
+        "cumplen esa función. Un himno se canta a la vez en todo el territorio, una "
+        "fecha conmemorada obliga a compartir un relato del pasado y un museo "
+        "nacional decide qué objetos representan a todos.\nSon herramientas "
+        "deliberadas de construcción nacional, y por eso aparecen junto con la "
+        "escuela pública y el servicio militar en el mismo período.",
+        [
+            ("Reemplazar las lenguas habladas en el territorio", "La imposición de una lengua oficial fue otra política, con otros instrumentos."),
+            ("Financiar la expansión de la red ferroviaria", "Los símbolos nacionales no cumplían ninguna función de financiamiento."),
+            ("Sustituir las constituciones por costumbres", "Los símbolos acompañaron a las constituciones; no las reemplazaron."),
+        ],
+    ),
+    _ql(
+        "his_estado_nacion_fte", "his_estado_nacion", "dificil",
+        "La construcción de los Estados nacionales del siglo XIX supuso definir "
+        "quiénes formaban parte de la nación. ¿Qué efecto tuvo esa definición sobre "
+        "los pueblos indígenas?",
+        "Quedaron al margen del proyecto nacional de las elites",
+        "La nación que las elites criollas imaginaron era culturalmente homogénea: "
+        "una lengua, una religión, un relato del pasado.\nLos pueblos indígenas no "
+        "cabían en esa definición, y el Estado respondió con políticas que iban "
+        "desde la incorporación forzada hasta la ocupación militar de sus "
+        "territorios. En ninguna de esas vías fueron reconocidos como parte "
+        "constitutiva de la nación.\nEsa exclusión no fue un descuido: se sigue del "
+        "criterio mismo con que la nación fue definida, y explica que sus "
+        "consecuencias se prolonguen mucho más allá del siglo XIX.",
+        [
+            ("Fueron reconocidos como naciones dentro del Estado", "El reconocimiento de la diversidad nacional es muy posterior."),
+            ("Obtuvieron representación propia en los congresos", "No hubo representación indígena en los congresos del período."),
+            ("Recibieron autonomía sobre sus territorios ancestrales", "El período es de ocupación de esos territorios, no de autonomía."),
+        ],
+    ),
     # ---------- Análisis de fuentes: la tabla ----------
     _ql(
         "migracion_tabla", "his_fuentes", "facil",
@@ -57138,6 +60853,1123 @@ QUESTIONS_HISTORIA = [
 # ---------------------------------------------------------------------------
 
 LESSONS: dict[str, dict] = {
+    "eco_laborales": {
+        "intro": (
+            "Las reglas del trabajo parecen una lista de normas sueltas hasta "
+            "que se ve de dónde vienen: todas responden a la misma asimetría "
+            "entre quien ofrece un empleo y quien lo necesita. Con esa clave se "
+            "entienden también los debates actuales sobre plataformas y "
+            "automatización."
+        ),
+        "theory": (
+            "**Por qué existe el derecho laboral.** Las partes no negocian en "
+            "igualdad: la empresa pierde un candidato, el trabajador pierde su "
+            "sustento. Esa asimetría explica por qué el derecho civil no "
+            "bastaba y por qué hay mínimos que no se pueden pactar a la baja.\n"
+            "**Contrato e irrenunciabilidad.** El contrato no crea los "
+            "derechos, que están en la ley: los hace verificables. Y son "
+            "irrenunciables durante la relación laboral, porque si no bastaría "
+            "con incluir la renuncia en el contrato.\n"
+            "**Organización colectiva.** Negociar en grupo equilibra el poder. "
+            "La huelga da fuerza a esa posición introduciendo un costo para "
+            "ambas partes; suspende la relación laboral, no la termina.\n"
+            "**Seguridad social.** Reúne aportes de muchos para cubrir a "
+            "quienes enfrentan la contingencia. Quien trabaja sin contrato "
+            "queda fuera: sin salud, sin seguro de cesantía y sin fondos para "
+            "la vejez. La informalidad de hoy es el problema previsional de "
+            "mañana.\n"
+            "**Brecha de género.** El trabajo doméstico y de cuidados no "
+            "remunerado recae mayoritariamente en mujeres, limita la "
+            "disponibilidad horaria e interrumpe trayectorias. Por eso las "
+            "políticas combinan medidas laborales con salas cuna y permisos "
+            "compartidos.\n"
+            "**Lo que viene cambiando.** La automatización reduce unas tareas y "
+            "crea otras: el problema es la transición, no el total de empleos. "
+            "Las plataformas obligan a definir si hay dependencia, y de eso "
+            "depende qué protecciones aplican."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«El trabajador declara conocer que su remuneración será inferior "
+            "al mínimo legal y renuncia expresamente a reclamar por esa "
+            "diferencia durante la vigencia del presente contrato.»*\n"
+            "Cláusula de un contrato de trabajo.\n"
+            "¿Qué ocurre con esta cláusula?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico qué pretende la cláusula: que el trabajador "
+                    "renuncie a un derecho establecido por ley mientras dura la "
+                    "relación laboral."
+                ),
+                "porque": (
+                    "El momento importa. La irrenunciabilidad rige justamente "
+                    "durante la vigencia del contrato, que es cuando la presión "
+                    "para aceptar es mayor."
+                ),
+            },
+            {
+                "accion": (
+                    "Descarto que el consentimiento la valide, aunque el "
+                    "trabajador la haya firmado."
+                ),
+                "porque": (
+                    "La ley parte de que ese consentimiento no es enteramente "
+                    "libre: quien necesita el empleo firma igual. Por eso sustrae "
+                    "ciertos mínimos del alcance de lo que puede pactarse."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que la cláusula no produce efecto y que el "
+                    "trabajador conserva su derecho a reclamar la diferencia."
+                ),
+                "porque": (
+                    "Un contrato no puede establecer condiciones inferiores a la "
+                    "ley. Si pudiera, el mínimo legal existiría en el papel y no "
+                    "en la práctica."
+                ),
+            },
+        ],
+        "common_error": (
+            "Tratar el contrato de trabajo como cualquier otro acuerdo entre "
+            "partes libres. Si lo fuera, bastaría con que ambas firmaran para "
+            "que cualquier condición valiera. Casi todas las reglas laborales "
+            "existen precisamente porque esa igualdad de partida no se cumple."
+        ),
+    },
+    "eco_desarrollo": {
+        "intro": (
+            "Crecer y desarrollarse no son lo mismo, y en Chile esa distinción "
+            "tiene nombre propio: una economía que exporta recursos naturales, "
+            "con las oportunidades y los riesgos que eso trae. Este nodo "
+            "entrena a mirar quién gana, quién paga y qué queda después."
+        ),
+        "theory": (
+            "**Crecimiento vs desarrollo.** El primero mide cuánto se produce; "
+            "el segundo pregunta por condiciones de vida y distribución. La "
+            "pobreza multidimensional aplica esa idea: mide ingreso Y acceso a "
+            "educación, salud, vivienda y trabajo.\n"
+            "**Renovable y no renovable.** El cobre no se repone a escala "
+            "humana: cada tonelada extraída es una menos. El sol y el viento no "
+            "se agotan con su uso.\n"
+            "**El riesgo de exportar pocos productos.** El precio se fija "
+            "afuera. Sube y todo mejora; baja y el ajuste llega al presupuesto "
+            "y al empleo. Por eso se discute diversificar y agregar valor.\n"
+            "**Abundancia no es desarrollo.** Hay países con enormes reservas y "
+            "malos indicadores sociales. Lo decisivo es qué se hace con la "
+            "renta: si deja capacidades instaladas o solo ingresos "
+            "transitorios.\n"
+            "**Sostenibilidad.** Satisfacer hoy sin comprometer el mañana. "
+            "Obliga a mirar el largo plazo y a preguntarse si el daño es "
+            "reversible. Las emisiones son un caso especial: afectan a todo el "
+            "planeta, así que ningún país resuelve el problema solo.\n"
+            "**Quién gana y quién paga.** En los conflictos socioambientales el "
+            "beneficio suele ser nacional y el costo, local. Esa asimetría "
+            "explica el conflicto mejor que suponer desinformación de alguna de "
+            "las partes."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«El proyecto aportará empleo y tributos que benefician al "
+            "conjunto del país. Los vecinos, en cambio, señalan que consumirá "
+            "el agua de la que dependen sus cultivos, sin que exista "
+            "compensación por esa pérdida.»*\n"
+            "Reporte sobre un conflicto por uso de agua.\n"
+            "¿Qué tensión expresa el conflicto descrito?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Separo a quién llegan los beneficios y a quién los costos: "
+                    "empleo y tributos al conjunto del país, consumo de agua a "
+                    "los vecinos del lugar."
+                ),
+                "porque": (
+                    "El texto lo plantea con esa estructura de contraste. "
+                    "Reconocerla es lo que permite nombrar la tensión con "
+                    "precisión."
+                ),
+            },
+            {
+                "accion": (
+                    "Registro que la fuente menciona la ausencia de compensación."
+                ),
+                "porque": (
+                    "Si el costo local estuviera compensado, la asimetría se "
+                    "reduciría. Que no lo esté es lo que mantiene el conflicto "
+                    "abierto."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que beneficios y costos recaen sobre actores "
+                    "distintos, y descarto las alternativas que atribuyan el "
+                    "conflicto a falta de información o a inexistencia de normas."
+                ),
+                "porque": (
+                    "Ninguna de las dos aparece en la fuente. Suponer que un "
+                    "conflicto se explica porque una parte no entiende es "
+                    "justamente el atajo que el análisis debe evitar."
+                ),
+            },
+        ],
+        "common_error": (
+            "Evaluar un proyecto o una política solo por su saldo agregado. La "
+            "pregunta que este eje entrena es otra: quién recibe el beneficio, "
+            "quién asume el costo y qué queda instalado cuando el recurso o el "
+            "auge terminen."
+        ),
+    },
+    "eco_estado_mercado": {
+        "intro": (
+            "Este nodo no pide calcular: pide entender por qué existe el "
+            "mercado, en qué casos falla y qué hace el Estado frente a esas "
+            "fallas. Con esos tres elementos se responde la mayoría de las "
+            "preguntas del eje económico."
+        ),
+        "theory": (
+            "**Escasez y costo de oportunidad.** Los recursos son limitados y "
+            "las necesidades no, así que toda elección implica renunciar a "
+            "algo. Ese sacrificio existe aunque no se pague dinero.\n"
+            "**Qué hacen los precios.** En un mercado competitivo, más demanda "
+            "con igual oferta empuja el precio hacia arriba, y esa señal indica "
+            "a unos que produzcan más y a otros que consuman menos. El precio "
+            "transmite información sin que nadie la coordine.\n"
+            "**Cuándo falla el mercado.** Dos casos clásicos. BIEN PÚBLICO: "
+            "nadie puede ser excluido (el alumbrado), así que a todos les "
+            "conviene no pagar y el bien no se produce. EXTERNALIDAD: el costo "
+            "recae sobre terceros (la fábrica que contamina el río), así que el "
+            "precio no lo refleja.\n"
+            "**Qué hace el Estado.** Regula, provee, invierte y redistribuye. "
+            "PROGRESIVO: quien gana más paga una proporción mayor (impuesto a "
+            "la renta). REGRESIVO: misma tasa para todos, pero pesa más sobre "
+            "ingresos bajos porque ellos consumen casi todo lo que reciben "
+            "(IVA).\n"
+            "**Política fiscal y ciclo.** En recesión, más gasto público para "
+            "sostener demanda y empleo. Se llama contracíclica y exige ahorrar "
+            "en las expansiones.\n"
+            "**Cuidado con los indicadores.** El PIB mide cuánto se produce, no "
+            "cómo se reparte, ni el trabajo doméstico, ni el daño ambiental. "
+            "Saber qué deja fuera un indicador es parte de saber usarlo."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«La planta procesadora vierte sus residuos en el estero. Los "
+            "agricultores de la ribera han debido instalar filtros y perforar "
+            "pozos, con un costo que la empresa no asume y que tampoco aparece "
+            "en el precio de sus productos.»*\n"
+            "Informe de una organización local.\n"
+            "¿Qué situación económica describe la fuente?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico quién genera el costo y quién lo paga: lo genera "
+                    "la planta y lo pagan los agricultores, que no participaron "
+                    "en su decisión ni fueron compensados."
+                ),
+                "porque": (
+                    "Esa separación entre quien decide y quien asume el costo es "
+                    "exactamente la definición de externalidad."
+                ),
+            },
+            {
+                "accion": (
+                    "Reparo en la última frase: el costo no aparece en el precio "
+                    "de los productos de la empresa."
+                ),
+                "porque": (
+                    "Es la consecuencia económica del problema. Con un precio que "
+                    "no recoge todos los costos, se produce más de lo que "
+                    "convendría, y el mercado deja de asignar bien los recursos."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que se trata de una externalidad negativa, y "
+                    "descarto alternativas sobre competencia, escasez o bienes "
+                    "públicos."
+                ),
+                "porque": (
+                    "Aquí sí es posible excluir a quien no paga por el producto, "
+                    "así que no es un bien público. El problema es el efecto "
+                    "sobre terceros, no el acceso al bien."
+                ),
+            },
+        ],
+        "common_error": (
+            "Suponer que si un mercado falla, la respuesta es reemplazarlo por "
+            "el Estado. Las herramientas habituales frente a una externalidad "
+            "—impuestos, normas de emisión, cobros por contaminar— buscan que "
+            "el precio incorpore el costo que hoy no recoge. Corrigen el "
+            "mecanismo en vez de sustituirlo."
+        ),
+    },
+    "civ_justicia": {
+        "intro": (
+            "El sistema judicial se estudia por sus garantías, no por su "
+            "organigrama. Lo que la prueba pregunta es para qué sirve cada "
+            "regla: por qué el que acusa debe probar, por qué el juicio es "
+            "público, por qué el Estado paga defensores."
+        ),
+        "theory": (
+            "**Qué hace un tribunal.** Resuelve conflictos aplicando el derecho "
+            "vigente y fundando su decisión. Fundar es lo que permite revisar: "
+            "si la sentencia expone su razonamiento, otro tribunal puede "
+            "examinarlo. Las instancias son limitadas; después el fallo queda "
+            "ejecutoriado.\n"
+            "**Independencia judicial.** Ni el Presidente ni el Congreso pueden "
+            "revisar los fundamentos de un fallo. Es la contrapartida de que "
+            "los jueces no sean elegidos: responden ante el derecho, no ante el "
+            "electorado ni ante el gobierno.\n"
+            "**Presunción de inocencia.** Prueba quien acusa. El imputado no "
+            "tiene que demostrar que no lo hizo, entre otras cosas porque "
+            "probar que algo no ocurrió suele ser imposible.\n"
+            "**La reforma procesal penal.** Antes un mismo juez investigaba, "
+            "acusaba y fallaba. Ahora: Ministerio Público investiga y acusa; "
+            "juez de garantía controla derechos; tribunal oral sentencia. La "
+            "imparcialidad deja de depender del carácter del juez y pasa a "
+            "estar en el diseño.\n"
+            "**Debido proceso.** Prueba lícita, posibilidad de controvertirla, "
+            "fallo fundado, defensa técnica. No impide condenar: fija cómo se "
+            "llega a una condena. Y se aplica a todos porque al decidir nadie "
+            "sabe todavía quién es culpable.\n"
+            "**Igualdad formal y acceso real.** La ley es la misma para todos, "
+            "pero hacerla valer exige tiempo, dinero y abogado. Defensoría "
+            "pública, corporaciones de asistencia judicial y procedimientos "
+            "simplificados apuntan a esa brecha."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«Se absuelve al acusado. Si bien el tribunal ha formado la "
+            "impresión de que su conducta fue reprochable, la prueba rendida "
+            "por el ente persecutor no permite tener por acreditados los hechos "
+            "de la acusación más allá de toda duda razonable.»*\n"
+            "Extracto de una sentencia penal.\n"
+            "¿Qué principio aplica el tribunal en esta decisión?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Noto que el tribunal absuelve pese a declarar una impresión "
+                    "desfavorable sobre la conducta del acusado."
+                ),
+                "porque": (
+                    "La sentencia distingue expresamente entre lo que el tribunal "
+                    "cree y lo que la prueba acredita. Esa distinción es el "
+                    "centro del texto."
+                ),
+            },
+            {
+                "accion": (
+                    "Identifico de quién dice el fallo que era la prueba "
+                    "insuficiente: del ente persecutor, es decir, de quien "
+                    "acusaba."
+                ),
+                "porque": (
+                    "Ahí está la clave. No se absuelve porque el acusado haya "
+                    "demostrado su inocencia, sino porque quien debía probar no "
+                    "lo logró."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que aplica la presunción de inocencia, con la carga "
+                    "de la prueba sobre quien acusa, y descarto las alternativas "
+                    "sobre independencia judicial o publicidad del juicio."
+                ),
+                "porque": (
+                    "Esos principios existen, pero no son los que la sentencia "
+                    "está aplicando aquí. La respuesta debe salir del "
+                    "razonamiento que el propio fallo expone."
+                ),
+            },
+        ],
+        "common_error": (
+            "Pensar que las garantías del debido proceso protegen a los "
+            "culpables y estorban a la justicia. Al momento de juzgar todavía "
+            "no se sabe quién es culpable: las garantías son precisamente el "
+            "procedimiento con que se distingue, y por eso se aplican a todos "
+            "por igual."
+        ),
+    },
+    "civ_informacion": {
+        "intro": (
+            "Antes el problema era conseguir información; hoy es decidir qué "
+            "hacer con la que llega sola. Este nodo enseña las operaciones con "
+            "que se evalúa una fuente, y son las mismas que la prueba pide "
+            "aplicar a un documento histórico."
+        ),
+        "theory": (
+            "**Libertad de expresión y pluralismo.** Sin censura previa, aunque "
+            "con responsabilidad posterior. Y como informar supone elegir qué "
+            "destacar, que existan medios de orientaciones distintas permite "
+            "comparar coberturas del mismo hecho.\n"
+            "**Error no es desinformación.** Lo que las separa es la INTENCIÓN. "
+            "El error se rectifica; la desinformación se produce sabiendo que "
+            "el contenido es falso.\n"
+            "**Cómo se evalúa una fuente.** Quién la produce, con qué respaldo, "
+            "con qué interés, y si otras fuentes independientes dicen lo mismo. "
+            "El alcance y el número de veces que algo se comparte no son "
+            "indicadores de veracidad.\n"
+            "**Primaria y secundaria.** La primaria es contemporánea al hecho "
+            "(carta, ley, fotografía); la secundaria lo interpreta después. "
+            "Ninguna es mejor: se cruzan.\n"
+            "**Toda fuente tiene punto de vista.** Un discurso oficial no se "
+            "descarta por interesado: se usa para lo que prueba (qué quería "
+            "proyectar) y no para lo que no prueba (si los resultados fueron "
+            "los que afirma).\n"
+            "**Algoritmos y regulación.** Las plataformas muestran más de lo "
+            "mismo y reducen la exposición a lo distinto. Y regular lo falso "
+            "obliga a designar a alguien que decida qué es falso: dos bienes "
+            "democráticos en tensión, sin solución que satisfaga a ambos por "
+            "completo."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«Nuestra gestión ha sido la más exitosa de las últimas décadas. "
+            "Las cifras que hoy entregamos lo demuestran, y quienes las "
+            "cuestionan solo buscan desprestigiar el trabajo de este equipo.»*\n"
+            "Declaración pública de una autoridad al término de su mandato.\n"
+            "¿Para qué sirve esta fuente a quien investiga el período?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico quién habla y en qué situación: una autoridad "
+                    "evaluando su propio desempeño al terminar su mandato."
+                ),
+                "porque": (
+                    "Quien evalúa su propia gestión tiene un interés directo en "
+                    "el resultado de esa evaluación. Eso no invalida la fuente, "
+                    "pero determina para qué puede usarse."
+                ),
+            },
+            {
+                "accion": (
+                    "Separo el hecho de la interpretación: que se entregaron "
+                    "cifras es un hecho; que la gestión fue la más exitosa y que "
+                    "los críticos buscan desprestigiar son interpretaciones del "
+                    "propio emisor."
+                ),
+                "porque": (
+                    "La confusión entre ambas cosas es lo que hace que una "
+                    "declaración interesada pase por comprobación. La fuente "
+                    "prueba lo que la autoridad DIJO, no que lo dicho sea exacto."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que sirve para conocer el discurso oficial y su "
+                    "estrategia, y que para evaluar resultados hay que "
+                    "contrastarla con fuentes de otro origen."
+                ),
+                "porque": (
+                    "Usar cada fuente para lo que efectivamente prueba es el "
+                    "núcleo del análisis. Descartarla por interesada perdería "
+                    "información valiosa sobre cómo el gobierno quería ser visto."
+                ),
+            },
+        ],
+        "common_error": (
+            "Creer que una fuente sesgada no sirve. Todas tienen un punto de "
+            "vista, y el sesgo es información: dice qué le importaba a quien "
+            "escribió. Lo que no se puede hacer es tomar la opinión del emisor "
+            "como si fuera un dato comprobado."
+        ),
+    },
+    "civ_institucionalidad": {
+        "intro": (
+            "Una democracia no se define solo por votar cada cierto tiempo. Se "
+            "define por lo que el poder no puede hacer, y por quién está "
+            "encargado de impedírselo. Ese es el contenido de este nodo, y es "
+            "también el criterio con que la prueba pide evaluar situaciones."
+        ),
+        "theory": (
+            "**Estado de derecho.** Gobernantes y gobernados bajo las mismas "
+            "normas. La autoridad solo puede hacer lo que la ley la faculta a "
+            "hacer, y sus actos son revisables. Nadie está por sobre la ley.\n"
+            "**Separación de poderes.** No es una división de tareas: es un "
+            "sistema de controles recíprocos. Hace el gobierno más lento a "
+            "propósito, porque la demora es el precio de que las decisiones "
+            "pasen por más de un filtro.\n"
+            "**Quién controla a quién.** El Congreso fiscaliza al Ejecutivo "
+            "(comisiones investigadoras, acusación constitucional). La "
+            "Contraloría revisa la legalidad de los actos administrativos. Los "
+            "tribunales resuelven conflictos jurídicos. La transparencia "
+            "habilita el control ciudadano.\n"
+            "**Jerarquía normativa.** La Constitución está por sobre las leyes, "
+            "y las leyes por sobre los reglamentos. Por eso reformarla exige "
+            "quórums altos: fija las reglas con que se dictan todas las demás "
+            "normas.\n"
+            "**Los límites de la mayoría.** Hay derechos que una votación no "
+            "puede suprimir, porque protegen a quien queda en minoría. Quien "
+            "hoy es mayoría puede ser minoría mañana.\n"
+            "**Votar no basta.** Hacen falta además libertad de expresión, "
+            "posibilidad real de competir, recuento transparente y órganos que "
+            "controlen al gobierno electo. Hay regímenes con elecciones "
+            "periódicas que no son democráticos."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«El decreto que ordenó el gasto fue devuelto por el organismo "
+            "contralor, que representó su ilegalidad por carecer de una ley que "
+            "autorizara ese desembolso. El Ministerio deberá ajustarse a lo "
+            "observado antes de proceder.»*\n"
+            "Nota de prensa sobre un acto administrativo.\n"
+            "¿Qué principio del Estado de derecho ilustra esta situación?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico qué ocurrió: un órgano distinto del que dictó el "
+                    "decreto lo revisó y lo devolvió por falta de fundamento "
+                    "legal."
+                ),
+                "porque": (
+                    "Lo esencial no es el gasto en sí, sino que exista alguien "
+                    "facultado para revisar la decisión de un ministerio y "
+                    "detenerla."
+                ),
+            },
+            {
+                "accion": (
+                    "Reconozco que el ministerio no puede simplemente insistir: "
+                    "debe ajustarse a lo observado."
+                ),
+                "porque": (
+                    "Si la observación fuera un consejo que la autoridad puede "
+                    "ignorar, el control no existiría. Que sea vinculante es lo "
+                    "que le da sentido."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que ilustra la sujeción de la autoridad a la ley y "
+                    "la existencia de controles, y descarto alternativas sobre "
+                    "separación de poderes entendida como reparto de tareas o "
+                    "sobre independencia judicial."
+                ),
+                "porque": (
+                    "Aquí no interviene ningún tribunal ni se discute quién hace "
+                    "qué. Se discute si un acto tenía respaldo legal, que es "
+                    "precisamente el núcleo del Estado de derecho."
+                ),
+            },
+        ],
+        "common_error": (
+            "Identificar democracia con regla de la mayoría sin más. Si todo "
+            "pudiera decidirse por votación, quien queda en minoría dependería "
+            "por completo de la voluntad ajena. Las preguntas difíciles de este "
+            "tema apuntan casi siempre a los límites de lo que una mayoría "
+            "puede decidir."
+        ),
+    },
+    "his_dictadura": {
+        "intro": (
+            "Diecisiete años que la prueba aborda en tres planos distintos: qué "
+            "pasó con las instituciones y con los derechos humanos, qué cambió "
+            "en la economía, y cómo se salió. Conviene tener claro qué es un "
+            "hecho establecido y qué es una interpretación en disputa."
+        ),
+        "theory": (
+            "**Supresión del Estado de derecho.** Congreso disuelto, partidos "
+            "proscritos, registros electorales destruidos, censura de prensa, "
+            "Ejecutivo y Legislativo en el mismo órgano. No es solo un cambio "
+            "de gobierno: desaparecen los mecanismos para controlarlo y "
+            "sustituirlo.\n"
+            "**Derechos humanos: lo establecido.** Las comisiones de verdad y "
+            "los tribunales determinaron que las violaciones fueron "
+            "SISTEMÁTICAS y ejecutadas por organismos del Estado, no hechos "
+            "aislados. Esa distinción define la responsabilidad del Estado como "
+            "tal.\n"
+            "**El modelo económico.** Privatizaciones, apertura comercial, "
+            "desregulación financiera, plan laboral y capitalización individual "
+            "en pensiones. La industria queda expuesta a la competencia "
+            "externa. En 1982 la crisis obliga a intervenir la banca: ningún "
+            "modelo se aplica en estado puro.\n"
+            "**La Constitución de 1980.** Dejó mecanismos que limitaban a los "
+            "gobiernos electos posteriores: senadores designados, sistema "
+            "electoral desproporcionado, quórums altos. Se los llama enclaves "
+            "autoritarios.\n"
+            "**Cómo se salió.** Protestas desde 1983, reorganización de la "
+            "oposición, documentación de las violaciones. En 1988 el régimen es "
+            "derrotado en el plebiscito previsto por su propia Constitución; "
+            "elecciones en 1989 y traspaso en 1990.\n"
+            "**Lo que se discute.** No los hechos del 11 de septiembre, sino "
+            "sus causas: polarización interna, crisis económica, intervención "
+            "extranjera, fragilidad institucional. Ahí difieren las "
+            "interpretaciones historiográficas."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«Esta Comisión ha individualizado a las víctimas y ha establecido "
+            "que los hechos descritos no obedecieron a excesos aislados de "
+            "agentes, sino a la existencia de organismos con recintos, personal "
+            "y procedimientos destinados a ese fin. La determinación de "
+            "responsabilidades penales corresponde a los tribunales.»*\n"
+            "Informe de una comisión oficial de verdad, Chile.\n"
+            "¿Qué función se atribuye a sí misma esta comisión?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico las dos cosas que la comisión dice haber hecho: "
+                    "individualizar víctimas y establecer el carácter de los "
+                    "hechos."
+                ),
+                "porque": (
+                    "Son afirmaciones sobre su propio trabajo, y por lo tanto lo "
+                    "que la fuente permite sostener con más seguridad."
+                ),
+            },
+            {
+                "accion": (
+                    "Registro el límite que ella misma se pone: las "
+                    "responsabilidades penales quedan para los tribunales."
+                ),
+                "porque": (
+                    "Una fuente que declara sus propios límites está indicando "
+                    "cómo debe usarse. Atribuirle funciones que rechaza es leerla "
+                    "mal."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que su función es establecer y registrar "
+                    "oficialmente los hechos, y descarto las alternativas que "
+                    "hablen de dictar sentencias o de reemplazar a la justicia."
+                ),
+                "porque": (
+                    "Verdad y sanción son tareas distintas y complementarias. El "
+                    "registro fija una base común de hechos; la sanción exige un "
+                    "proceso judicial con sus propias garantías."
+                ),
+            },
+        ],
+        "common_error": (
+            "Confundir lo que está establecido con lo que está en discusión. El "
+            "carácter sistemático de las violaciones a los derechos humanos, la "
+            "disolución del Congreso o el resultado del plebiscito son hechos "
+            "documentados. Lo que las interpretaciones historiográficas debaten "
+            "son las CAUSAS del quiebre de 1973, y ese es el terreno donde la "
+            "prueba pide comparar argumentos y fuentes."
+        ),
+    },
+    "his_chile_xx": {
+        "intro": (
+            "Entre 1930 y 1970 Chile se volvió urbano, amplió quién podía votar "
+            "y empezó a tratar la pobreza como asunto del Estado. Es el período "
+            "que explica de dónde vienen instituciones que hoy damos por "
+            "sentadas, y también por qué la desigualdad no se movió al mismo "
+            "ritmo."
+        ),
+        "theory": (
+            "**Del campo a la ciudad.** El campo expulsaba (tierra concentrada) "
+            "y la ciudad atraía (trabajo asalariado, escuela, salud). El empleo "
+            "se desplazó de la agricultura hacia la industria y los servicios.\n"
+            "**Lo que la ciudad no pudo absorber.** Sin vivienda suficiente, "
+            "las familias ocuparon terrenos en la periferia y construyeron con "
+            "materiales precarios. De ahí nace el movimiento de pobladores, con "
+            "demandas propias de urbanización y títulos.\n"
+            "**La pobreza cambia de estatus.** Deja de ser desgracia privada "
+            "atendida por caridad y pasa a ser materia de política pública: "
+            "vivienda, salud, previsión, educación. Beneficencia entrega un "
+            "socorro; la política pública crea un derecho exigible.\n"
+            "**Democratización política.** Voto femenino pleno a fines de los "
+            "cuarenta, ejercido en la presidencial de 1952. Cédula única en "
+            "1958, que ataca el cohecho al hacer imposible verificar el voto "
+            "ajeno. Alfabetización creciente, que ampliaba el padrón porque "
+            "leer era requisito para votar hasta 1970.\n"
+            "**Pero no fue lineal.** Entre 1948 y 1958 se proscribió al Partido "
+            "Comunista. Se amplió por un lado y se restringió por otro: "
+            "describir el período como un avance continuo deja fuera lo que "
+            "explica sus tensiones.\n"
+            "**El campo.** Reforma agraria desde 1962 y sindicalización "
+            "campesina en 1967. Aun así, la estructura de la propiedad cambió "
+            "poco, y por eso más derechos convivieron con desigualdad profunda."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«Desde hoy el Estado imprime y distribuye una cédula única para "
+            "todos los candidatos. Se acabó la costumbre de recibir el voto de "
+            "manos del patrón la víspera de la elección y devolverle después la "
+            "prueba de haberlo depositado.»*\n"
+            "Comentario editorial de un diario chileno, 1958.\n"
+            "¿Qué problema buscaba corregir la medida que describe la fuente?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico qué existía antes: cada partido imprimía su voto "
+                    "y era posible comprobar cuál llevaba cada persona a la urna."
+                ),
+                "porque": (
+                    "La fuente lo describe en su segunda frase. Sin ese dato la "
+                    "reforma parece un simple trámite administrativo, y no lo es."
+                ),
+            },
+            {
+                "accion": (
+                    "Conecto esa posibilidad de verificación con la relación "
+                    "descrita entre patrón e inquilino."
+                ),
+                "porque": (
+                    "Poder comprobar el voto es lo que hace viable comprarlo o "
+                    "presionarlo. Sin verificación, la promesa o la amenaza "
+                    "pierden fuerza."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que la medida apunta al control del voto por "
+                    "terceros, y descarto las alternativas sobre rapidez del "
+                    "escrutinio o cobertura de locales."
+                ),
+                "porque": (
+                    "Son problemas reales del sistema electoral, pero no los que "
+                    "esta fuente menciona. La respuesta tiene que salir del "
+                    "documento, no del conocimiento general sobre elecciones."
+                ),
+            },
+        ],
+        "common_error": (
+            "Leer la democratización del período como una línea ascendente. En "
+            "los mismos años conviven el primer voto femenino y la proscripción "
+            "de un partido con representación parlamentaria; y la ampliación de "
+            "derechos políticos convive con una estructura de propiedad que "
+            "casi no se mueve. Las preguntas difíciles se apoyan justamente en "
+            "esas convivencias."
+        ),
+    },
+    "his_guerra_fria": {
+        "intro": (
+            "La Guerra Fría no fue una guerra entre las dos potencias que la "
+            "protagonizaron, y ahí está la clave para entenderla. Para América "
+            "Latina, en cambio, sus efectos fueron muy concretos: golpes de "
+            "Estado, programas de ayuda y décadas marcadas por esa "
+            "confrontación ajena."
+        ),
+        "theory": (
+            "**Qué la define.** Confrontación entre Estados Unidos y la URSS "
+            "SIN guerra directa entre ellos. Los enfrentamientos armados "
+            "ocurrieron en terceros países alineados con cada bloque.\n"
+            "**Se peleó también fuera de lo militar.** Carrera espacial, "
+            "propaganda, cultura, deporte: cada logro se exhibía como prueba de "
+            "que un sistema era superior al otro. El Muro de Berlín (1961) es "
+            "la división vuelta hormigón.\n"
+            "**El giro latinoamericano.** La Revolución Cubana (1959) estimuló "
+            "movimientos de cambio profundo en toda la región, y Estados Unidos "
+            "respondió con la Alianza para el Progreso: ayuda y reformas para "
+            "evitar que la revolución se extendiera.\n"
+            "**Doctrina de seguridad nacional.** Su novedad es dónde ubica al "
+            "enemigo: DENTRO de la propia sociedad. Es la justificación que "
+            "invocaron las dictaduras militares de los sesenta y setenta, que "
+            "compartieron la violación sistemática de los derechos humanos.\n"
+            "**El final y lo que vino.** El derrumbe del bloque soviético "
+            "(1989-1991) terminó con el sistema bipolar. Después: apertura "
+            "comercial, privatizaciones y menor papel económico del Estado "
+            "—neoliberalismo—, junto con una globalización que integra los "
+            "mercados."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«La subversión ya no llega con uniforme ni cruza nuestras "
+            "fronteras. Se infiltra en las aulas, en los sindicatos y en la "
+            "prensa. Por eso la defensa de la Nación no puede seguir "
+            "confiándose solo a la vigilancia de sus límites geográficos.»*\n"
+            "Documento de doctrina militar latinoamericano, década de 1970.\n"
+            "¿Qué concepción de la seguridad expresa la fuente?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico el desplazamiento que propone: el enemigo deja de "
+                    "ser un ejército extranjero y pasa a estar dentro del país."
+                ),
+                "porque": (
+                    "Es lo que el texto afirma literalmente al enumerar aulas, "
+                    "sindicatos y prensa. Ese traslado del enemigo hacia dentro "
+                    "es el núcleo de la doctrina de seguridad nacional."
+                ),
+            },
+            {
+                "accion": (
+                    "Reconozco la consecuencia que se sigue: si el enemigo está "
+                    "adentro, la acción militar deja de dirigirse a las fronteras "
+                    "y se dirige a la propia población."
+                ),
+                "porque": (
+                    "La fuente no lo dice con esas palabras, pero es lo que se "
+                    "desprende de su propio razonamiento, y explica lo que esas "
+                    "doctrinas habilitaron en la práctica."
+                ),
+            },
+            {
+                "accion": (
+                    "Descarto las alternativas que hablen de defensa territorial "
+                    "frente a una potencia extranjera, porque son exactamente lo "
+                    "que el documento declara insuficiente."
+                ),
+                "porque": (
+                    "Cuando una fuente dice que algo ya no basta, la alternativa "
+                    "que repite ese algo está contradiciendo el texto en lugar de "
+                    "interpretarlo."
+                ),
+            },
+        ],
+        "common_error": (
+            "Explicar todo lo ocurrido en América Latina como consecuencia "
+            "directa de la Guerra Fría, o negar por completo que influyera. Las "
+            "interpretaciones historiográficas discuten el peso relativo de los "
+            "factores internos y de la intervención externa, y la respuesta "
+            "esperada casi nunca es una de las dos posiciones extremas."
+        ),
+    },
+    "his_posguerra": {
+        "intro": (
+            "Después de 1945 el mundo intentó dos cosas a la vez: evitar otra "
+            "guerra entre potencias y poner límites a lo que un Estado puede "
+            "hacerle a su propia gente. Las instituciones que nacieron entonces "
+            "siguen rigiendo hoy, y la prueba pregunta por su alcance y por sus "
+            "límites."
+        ),
+        "theory": (
+            "**La ONU y su diferencia con lo anterior.** Creada en 1945 para "
+            "mantener la paz y la seguridad. Frente a la Sociedad de Naciones, "
+            "que había fracasado, aportó un órgano con decisiones OBLIGATORIAS: "
+            "el Consejo de Seguridad. Cinco miembros permanentes tienen veto, "
+            "es decir, pueden bloquear cualquier resolución.\n"
+            "**La Declaración de 1948.** Afirma que todos nacen libres e "
+            "iguales en dignidad y derechos: eso es universalidad. Su efecto de "
+            "fondo es que el trato de un Estado a su población deja de ser "
+            "asunto puramente interno. Pero era una declaración, no un tratado: "
+            "por sí sola no creaba obligaciones exigibles.\n"
+            "**Núremberg.** La novedad no fue condenar a un país, sino juzgar a "
+            "PERSONAS por crímenes contra la humanidad.\n"
+            "**Descolonización.** Las potencias europeas salieron debilitadas "
+            "de la guerra, y sobre esa debilidad avanzaron las independencias "
+            "de Asia y África. Entre 1955 y 1975 cambia por completo el mapa "
+            "africano.\n"
+            "**Bipolaridad y no alineados.** Con dos superpotencias, cada "
+            "Estado debía alinearse o buscar una posición propia. Bandung "
+            "(1955) es esa tercera vía."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«La presente Declaración no impone a los Estados firmantes "
+            "obligación jurídica alguna que pueda ser exigida ante un tribunal. "
+            "Su valor reside en fijar un ideal común por el que todos los "
+            "pueblos deben esforzarse.»*\n"
+            "Comentario de un jurista sobre un instrumento internacional de "
+            "1948.\n"
+            "¿Qué se puede concluir de esta fuente?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico lo que el documento niega: que exista obligación "
+                    "jurídica exigible ante un tribunal."
+                ),
+                "porque": (
+                    "Es una afirmación precisa y limitada. No dice que el texto "
+                    "carezca de valor, dice que carece de un tipo determinado de "
+                    "fuerza."
+                ),
+            },
+            {
+                "accion": (
+                    "Identifico lo que afirma: que su valor está en fijar un "
+                    "ideal común, es decir, una fuerza moral y política."
+                ),
+                "porque": (
+                    "Las dos frases se complementan. Quedarse solo con la primera "
+                    "lleva a concluir que la Declaración era irrelevante, y eso "
+                    "la fuente no lo dice."
+                ),
+            },
+            {
+                "accion": (
+                    "Elijo la alternativa que distinga entre fuerza moral y "
+                    "obligación jurídica, y descarto tanto la que afirme que "
+                    "obligaba a los Estados como la que sostenga que no tuvo "
+                    "efecto alguno."
+                ),
+                "porque": (
+                    "Es exactamente lo que el texto permite sostener. Esa "
+                    "distinción entre lo declarado y lo exigible es la que la "
+                    "prueba busca en este tema."
+                ),
+            },
+        ],
+        "common_error": (
+            "Suponer que porque un derecho está declarado en un documento "
+            "internacional, existe un mecanismo que lo hace cumplir. "
+            "Declaración, tratado y tribunal son tres cosas distintas, y buena "
+            "parte de la historia del derecho internacional consiste en el paso "
+            "lento de la primera a las otras dos."
+        ),
+    },
+    "his_crisis_liberal": {
+        "intro": (
+            "Entre las dos guerras mundiales se rompió una idea que parecía "
+            "firme: que la economía se ordena sola y que el Estado solo debe "
+            "cuidar el orden. Lo que la reemplazó fue muy distinto según el "
+            "país, y ahí está lo que la prueba pregunta."
+        ),
+        "theory": (
+            "**Qué entra en crisis.** El Estado liberal del siglo XIX: garante "
+            "del orden y de los contratos, ausente de la economía. La crisis de "
+            "1929 lo dejó sin respuesta frente al desempleo masivo.\n"
+            "**La salida intervencionista.** Estados que sostienen la actividad "
+            "económica y asumen responsabilidades permanentes en salud, "
+            "previsión y educación: el Estado de bienestar.\n"
+            "**La salida latinoamericana.** Como el comercio exterior se "
+            "derrumbó, la región produjo internamente lo que antes importaba: "
+            "industrialización por sustitución de importaciones. En Chile, "
+            "Frente Popular en 1938 y CORFO en 1939. El Estado pasa de garante "
+            "del orden a agente económico.\n"
+            "**La salida totalitaria.** Partido único, líder supremo, "
+            "eliminación de la oposición, propaganda con una versión única de "
+            "la realidad. Su rasgo propio es la ambición TOTAL: controlar "
+            "escuela, trabajo, prensa, ocio y vida privada.\n"
+            "**Totalitarismo y populismo no son lo mismo.** Vargas y Perón "
+            "apelaron a las masas, concentraron poder y ampliaron derechos "
+            "sociales, pero no intentaron controlar la vida entera de la "
+            "sociedad. Esa es la diferencia que suele preguntarse."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«El Estado no puede seguir contemplando la miseria como si fuera "
+            "obra del destino. Hemos creado un organismo que financiará "
+            "industrias, generará energía eléctrica y abrirá caminos, porque la "
+            "iniciativa privada sola no ha bastado para dar trabajo a nuestro "
+            "pueblo.»*\n"
+            "Discurso de un gobernante latinoamericano, 1939.\n"
+            "¿Qué concepción del Estado expresa esta fuente?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Ubico la fecha y la relaciono con el contexto: 1939, diez "
+                    "años después de la crisis de 1929."
+                ),
+                "porque": (
+                    "La fecha no es un dato decorativo. Sitúa el discurso después "
+                    "del derrumbe económico, que es lo que explica el cambio de "
+                    "posición que anuncia."
+                ),
+            },
+            {
+                "accion": (
+                    "Identifico lo que el emisor rechaza: que la iniciativa "
+                    "privada por sí sola resuelva el empleo, y que la miseria sea "
+                    "un hecho natural."
+                ),
+                "porque": (
+                    "Toda fuente que propone algo está discutiendo con una "
+                    "posición previa. Reconocer contra qué habla es la mitad del "
+                    "análisis."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que expresa un Estado que interviene como agente "
+                    "económico, y descarto tanto la alternativa liberal clásica "
+                    "como cualquiera que hable de control total de la sociedad."
+                ),
+                "porque": (
+                    "El texto anuncia financiamiento de industrias y obras "
+                    "públicas, no supresión de la actividad privada ni control de "
+                    "la vida de las personas. Intervenir en la economía no "
+                    "equivale a totalitarismo."
+                ),
+            },
+        ],
+        "common_error": (
+            "Meter en el mismo saco a todo gobierno de los años treinta que "
+            "concentre poder y hable de las masas. Un Estado que interviene la "
+            "economía, uno que amplía derechos sociales con liderazgo personal "
+            "y uno que aspira a controlar la vida entera son tres cosas "
+            "distintas, y la prueba pregunta justamente por esa diferencia."
+        ),
+    },
+    "his_chile_xix": {
+        "intro": (
+            "El Chile del siglo XIX suele contarse como una sucesión de "
+            "presidentes y batallas. La prueba lo pregunta de otro modo: qué "
+            "sostenía la economía, quién quedaba dentro y quién fuera del "
+            "proyecto republicano, y qué problemas nuevos aparecieron al final "
+            "del siglo."
+        ),
+        "theory": (
+            "**El orden portaliano y su vuelco.** La Constitución de 1833 dio a "
+            "Chile un Ejecutivo fuerte y una estabilidad institucional inusual "
+            "en la región. La guerra civil de 1891 invirtió el equilibrio: el "
+            "Congreso pasó a predominar sobre el Presidente.\n"
+            "**Una economía de pocos productos.** Trigo y plata primero, "
+            "salitre después. El auge del oro en California y Australia empujó "
+            "las exportaciones de trigo; la Guerra del Pacífico entregó a Chile "
+            "las salitreras y ató el presupuesto fiscal a ese mineral. Los "
+            "ferrocarriles se trazaron para llevar carga a los puertos, no para "
+            "conectar el país consigo mismo.\n"
+            "**El riesgo de esa estructura.** Cuando un país exporta pocos "
+            "productos, su ingreso depende de precios que se fijan afuera. Toda "
+            "pregunta sobre vulnerabilidad económica del período apunta ahí.\n"
+            "**Expansión del Estado hacia dentro.** La ocupación de la "
+            "Araucanía (1861-1883) incorporó territorio y despojó al pueblo "
+            "mapuche de gran parte de sus tierras. Las leyes laicas (1883-1884) "
+            "traspasaron al Estado los registros civiles que llevaba la "
+            "Iglesia.\n"
+            "**La cuestión social.** No es una guerra ni una ley: es el nombre "
+            "que se dio a las condiciones de vida de los trabajadores urbanos "
+            "—conventillos, jornadas largas, enfermedad—. Ante la ausencia de "
+            "previsión estatal, los trabajadores se organizaron en sociedades "
+            "de socorros mutuos."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«Los ingresos ordinarios de la Nación provienen en más de la "
+            "mitad de los derechos que pagan las exportaciones de salitre. "
+            "Conviene advertir que el precio de este producto se fija en "
+            "mercados extranjeros sobre los cuales el Gobierno no tiene "
+            "influencia alguna.»*\n"
+            "Memoria de un ministro de Hacienda de Chile, 1895.\n"
+            "¿Qué situación advierte el documento?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Identifico el dato: más de la mitad de los ingresos fiscales "
+                    "viene de un solo producto de exportación."
+                ),
+                "porque": (
+                    "Es el hecho que la fuente entrega, y es verificable dentro "
+                    "del propio texto. Todo lo demás debe apoyarse en él."
+                ),
+            },
+            {
+                "accion": (
+                    "Leo la segunda frase como una advertencia sobre el riesgo, "
+                    "no como un dato más: el precio se fija afuera y el Gobierno "
+                    "no puede influir en él."
+                ),
+                "porque": (
+                    "El ministro no está describiendo el mercado por curiosidad. "
+                    "Está diciendo que el presupuesto del país depende de algo "
+                    "que el país no controla."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que la fuente advierte una vulnerabilidad fiscal "
+                    "por dependencia de un producto de exportación, y descarto "
+                    "las alternativas que afirmen prosperidad asegurada o crisis "
+                    "ya ocurrida."
+                ),
+                "porque": (
+                    "El documento habla de un riesgo presente, no de una bonanza "
+                    "garantizada ni de un desplome que ya sucedió. Confundir "
+                    "advertencia con hecho consumado es el error típico en este "
+                    "tipo de fuente."
+                ),
+            },
+        ],
+        "common_error": (
+            "Leer el crecimiento de las exportaciones del siglo XIX como "
+            "desarrollo económico sin más. La prueba suele pedir justamente lo "
+            "contrario: reconocer que un ingreso alto concentrado en un "
+            "producto y en pocas manos convive con la cuestión social y con una "
+            "economía expuesta a los precios internacionales."
+        ),
+    },
+    "his_estado_nacion": {
+        "intro": (
+            "El siglo XIX es el siglo en que aparece el tipo de país en que hoy "
+            "vivimos: con territorio delimitado, constitución, bandera y "
+            "ciudadanos. Entender cómo se construyó ese modelo explica buena "
+            "parte de lo que la prueba pregunta sobre el resto del siglo."
+        ),
+        "theory": (
+            "**Qué es un Estado-nación.** Un poder soberano que manda sobre un "
+            "territorio de límites definidos y sobre quienes lo habitan, sin "
+            "reconocer autoridad por encima de sí. Es la combinación de dos "
+            "cosas: un Estado (el aparato que gobierna) y una nación (una "
+            "comunidad que se piensa a sí misma como una).\n"
+            "**El cambio de fundamento.** La monarquía justificaba el poder por "
+            "herencia y origen divino. La república lo funda en la soberanía "
+            "popular ejercida por representantes elegidos, y reparte las "
+            "funciones del Estado en poderes separados para que no vuelva a "
+            "concentrarse.\n"
+            "**Lo declarado y lo efectivo.** Este es el punto que más se "
+            "pregunta. Las constituciones declararon igualdad ante la ley, y al "
+            "mismo tiempo el voto quedó restringido por renta o alfabetización "
+            "y la tierra siguió concentrada. No es una contradicción que haya "
+            "que resolver: es el rasgo del período. La igualdad fue jurídica y "
+            "no social.\n"
+            "**La nación se construye.** Escuela pública, himno, bandera, "
+            "museos y fiestas patrias no son adorno: son las herramientas con "
+            "que el Estado fabricó un sentido de pertenencia que antes no "
+            "existía. Y definir quién pertenece define también quién queda "
+            "fuera: los pueblos indígenas quedaron al margen de ese proyecto."
+        ),
+        "example_statement": (
+            "Lee la fuente y responde.\n"
+            "*«La Constitución declara a todos los ciudadanos iguales ante la "
+            "ley. Podrán sufragar los varones mayores de veinticinco años que "
+            "sepan leer y escribir y acrediten una renta anual no inferior a la "
+            "suma que fija esta ley.»*\n"
+            "Texto legal de una república hispanoamericana, 1833.\n"
+            "¿Qué se puede concluir sobre la ciudadanía en esta república?"
+        ),
+        "example_steps": [
+            {
+                "accion": (
+                    "Separo las dos afirmaciones del documento: una declara la "
+                    "igualdad de todos ante la ley; la otra fija requisitos de "
+                    "sexo, edad, alfabetización y renta para votar."
+                ),
+                "porque": (
+                    "La fuente dice las dos cosas, no una. Leer solo la primera "
+                    "lleva a concluir que había igualdad plena, y leer solo la "
+                    "segunda, que no se declaraba ninguna."
+                ),
+            },
+            {
+                "accion": (
+                    "Reconozco que ambas conviven sin anularse: la igualdad que "
+                    "el texto proclama es igualdad ANTE LA LEY, y no incluye el "
+                    "derecho a participar en política."
+                ),
+                "porque": (
+                    "Son dos planos distintos. Un mismo documento puede "
+                    "establecer que la ley rige igual para todos y reservar el "
+                    "sufragio a una fracción de la población."
+                ),
+            },
+            {
+                "accion": (
+                    "Concluyo que la ciudadanía política quedó restringida a una "
+                    "elite, y descarto cualquier alternativa que hable de "
+                    "sufragio universal o de igualdad social."
+                ),
+                "porque": (
+                    "Es lo que el documento efectivamente permite sostener. "
+                    "Hablar de desigualdad social exigiría datos de riqueza o de "
+                    "propiedad que esta fuente no entrega."
+                ),
+            },
+        ],
+        "common_error": (
+            "Tomar la palabra igualdad de una constitución del siglo XIX como "
+            "si significara lo mismo que hoy. En esos textos igualdad ante la "
+            "ley convive con voto censitario y con esclavitud recién abolida: "
+            "describe el trato de la ley, no las condiciones de vida ni el "
+            "derecho a participar."
+        ),
+    },
     # ── Competencia Lectora ─────────────────────────────────────────────
     #
     # La rinden TODOS los postulantes y era la única prueba con banco y sin
