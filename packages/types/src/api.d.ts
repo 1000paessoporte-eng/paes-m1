@@ -1971,6 +1971,8 @@ export interface components {
             difficulty: components["schemas"]["Difficulty"];
             /** Stem */
             stem: string;
+            /** Image Url */
+            image_url?: string | null;
             subject: components["schemas"]["Subject"];
             axis: components["schemas"]["SkillAxis"];
             /** Axis Label */
@@ -3755,7 +3757,10 @@ export interface operations {
     };
     get_recommended_node_api_skill_tree_recommended_get: {
         parameters: {
-            query?: never;
+            query?: {
+                /** @description Prueba sobre la que recomendar. La recomendación tiene que salir del mismo árbol que se está mirando: recomendar un nodo de otra prueba saca al alumno de la que está preparando. */
+                subject?: components["schemas"]["Subject"];
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -3769,6 +3774,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SkillNodeProgressOut"] | null;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
