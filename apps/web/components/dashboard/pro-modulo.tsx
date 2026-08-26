@@ -16,12 +16,28 @@ import { BarraProgreso } from "@/components/ui/barra-progreso";
 export function ProModulo({
   usados,
   limite,
+  limitesActivos,
 }: {
   usados: number;
   limite: number | null;
+  /**
+   * Si el tope del plan Gratis de verdad bloquea. Mientras esté apagado, el
+   * límite se informa pero no corta.
+   */
+  limitesActivos: boolean;
 }) {
   const restantes = limite != null ? Math.max(0, limite - usados) : null;
-  const sinCupo = restantes === 0;
+  // "Sin cupo" solo cuando el cupo de verdad se acabó.
+  //
+  // Este módulo no consultaba `limites_activos`, así que anunciaba un bloqueo
+  // que no existe: decía "17 de 4 ensayos este mes · Sin cupo" mientras el
+  // alumno podía seguir rindiendo sin problema. Las otras dos pantallas que
+  // hablan del mismo tope sí lo dicen bien —/examen ("por ahora puedes seguir
+  // rindiendo igual") y /plan ("puedes seguir rindiendo sin límite")—, así
+  // que el producto se contradecía consigo mismo en la pantalla que más se
+  // ve.
+  const sinCupo = restantes === 0 && limitesActivos;
+  const topeInformativo = restantes === 0 && !limitesActivos;
 
   return (
     <section
@@ -48,7 +64,11 @@ export function ProModulo({
                 (sinCupo ? "text-accent-warm-strong" : "text-muted")
               }
             >
-              {sinCupo ? "Sin cupo" : `Te quedan ${restantes}`}
+              {sinCupo
+                ? "Sin cupo"
+                : topeInformativo
+                  ? "Puedes seguir"
+                  : `Te quedan ${restantes}`}
             </span>
           </div>
           <div className="mt-2">
