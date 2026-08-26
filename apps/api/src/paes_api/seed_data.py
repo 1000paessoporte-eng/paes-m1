@@ -54918,6 +54918,62 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "civ_inst_autonomos",
+        "title": "Los órganos que no dependen de nadie y por qué existen",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Formación ciudadana para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El esquema de los tres poderes describe bien el reparto básico del "
+            "poder del Estado, pero deja fuera una parte del diseño "
+            "institucional chileno: un conjunto de órganos que no pertenecen al "
+            "Ejecutivo, al Legislativo ni al Judicial, y cuya independencia "
+            "respecto del gobierno de turno es justamente su razón de ser.\n"
+            "\n"
+            "La Contraloría General de la República fiscaliza la legalidad de "
+            "los actos de la administración y controla el uso de los fondos "
+            "públicos. Antes de que un decreto o una resolución produzca "
+            "efectos, la Contraloría examina si se ajusta a la ley: si no lo "
+            "hace, lo representa y el acto no puede aplicarse sin más. Ese "
+            "control es previo y jurídico, no político: no evalúa si una medida "
+            "es conveniente, sino si la autoridad tenía atribuciones para "
+            "adoptarla.\n"
+            "\n"
+            "El Tribunal Constitucional resuelve si una norma se ajusta a la "
+            "Constitución. Puede intervenir mientras un proyecto se tramita o "
+            "sobre leyes ya vigentes. Su función explica una regla que a "
+            "primera vista sorprende: una ley aprobada por mayoría en ambas "
+            "cámaras puede quedar sin efecto. No es una excepción al principio "
+            "democrático, sino su complemento, porque los derechos que la "
+            "Constitución garantiza son precisamente el límite que ninguna "
+            "mayoría puede cruzar.\n"
+            "\n"
+            "El Servicio Electoral organiza los procesos electorales, mantiene "
+            "los registros y fiscaliza el financiamiento de las campañas. Su "
+            "autonomía responde a un problema evidente: si el gobierno de turno "
+            "administrara las elecciones, sería juez y parte de la competencia "
+            "por el poder.\n"
+            "\n"
+            "El Ministerio Público dirige la investigación penal y decide si "
+            "acusa. Es distinto del tribunal que juzga, y esa separación no es "
+            "un detalle organizativo: quien investiga y acusa se compromete con "
+            "una hipótesis, y por eso no puede ser quien después la evalúe.\n"
+            "\n"
+            "El Banco Central tiene por función velar por la estabilidad de la "
+            "moneda. Su autonomía se justifica por el plazo: la política "
+            "monetaria produce efectos en años, mientras un gobierno enfrenta "
+            "elecciones antes, y esa diferencia de horizontes puede empujar "
+            "decisiones convenientes en el corto plazo y costosas después.\n"
+            "\n"
+            "El rasgo común es el mismo en los cinco casos. Todos ejercen "
+            "funciones que pierden sentido si las controla quien va a ser "
+            "controlado, y por eso el diseño los pone fuera del alcance directo "
+            "del gobierno."
+        ),
+    },
+    {
         "key": "dictadura_ochenta",
         "title": "Un comunicado oficial y una declaración de organizaciones (Chile, 1984)",
         "kind": "no_literario",
@@ -57384,6 +57440,272 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "facil",
+        "Según el texto, ¿qué examina la Contraloría antes de que un decreto "
+        "produzca efectos?",
+        "Si el acto se ajusta a la ley",
+        "El texto describe un control previo: antes de que un decreto o una "
+        "resolución produzca efectos, la Contraloría examina si se ajusta a la ley, "
+        "y si no lo hace, lo representa.\nY precisa el alcance de ese examen: es "
+        "jurídico y no político. No evalúa si la medida es conveniente sino si la "
+        "autoridad tenía atribuciones para adoptarla.",
+        [
+            ("Si la medida resulta conveniente para el país", "El texto descarta expresamente ese tipo de evaluación."),
+            ("Si cuenta con el respaldo de la mayoría del Congreso", "El control de la Contraloría no depende del apoyo parlamentario."),
+            ("Si el gasto asociado estaba previsto en el programa de gobierno", "El examen es de legalidad, no de coherencia programática."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "facil",
+        "Según el texto, ¿cuál es la función del Servicio Electoral?",
+        "Organizar los procesos y fiscalizar las campañas",
+        "El texto enumera tres tareas: organizar los procesos electorales, mantener "
+        "los registros y fiscalizar el financiamiento de las campañas.\nY explica "
+        "por qué debe ser autónomo: si el gobierno de turno administrara las "
+        "elecciones, sería juez y parte de la competencia por el poder.",
+        [
+            ("Resolver los conflictos entre partidos políticos", "El texto no le atribuye funciones de resolución de conflictos."),
+            ("Designar a las autoridades electas en cada período", "Las autoridades se eligen por votación, no por designación."),
+            ("Fiscalizar la legalidad de los actos de la administración", "Esa es la función que el texto atribuye a la Contraloría."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "facil",
+        "Según el texto, ¿qué función cumple el Banco Central?",
+        "Velar por la estabilidad de la moneda",
+        "El texto lo consigna así y explica de inmediato por qué es un órgano "
+        "autónomo.\nEl argumento es de plazos: la política monetaria produce "
+        "efectos en años, mientras un gobierno enfrenta elecciones antes, y esa "
+        "diferencia de horizontes puede empujar decisiones convenientes en el corto "
+        "plazo y costosas después.",
+        [
+            ("Fijar el presupuesto anual del sector público", "El presupuesto se tramita como ley, no lo fija el Banco Central."),
+            ("Recaudar los impuestos que financian el gasto", "La recaudación no figura entre las funciones que el texto le asigna."),
+            ("Dirigir la investigación de los delitos económicos", "Investigar y acusar corresponde al Ministerio Público."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "medio",
+        "Según el texto, ¿por qué el Ministerio Público está separado del tribunal "
+        "que juzga?",
+        "Quien acusa ya se comprometió con una hipótesis",
+        "El texto describe la función: el Ministerio Público dirige la "
+        "investigación penal y decide si acusa.\nY explica la separación con un "
+        "argumento sobre la posición de quien investiga: quien investiga y acusa se "
+        "compromete con una hipótesis, y por eso no puede ser quien después la "
+        "evalúe.\nEl texto aclara además que no se trata de un detalle "
+        "organizativo. Es la condición para que la evaluación de la prueba la haga "
+        "alguien que no tiene nada invertido en el resultado.",
+        [
+            ("Porque el tribunal carece de personal para investigar", "El texto no plantea un problema de recursos ni de dotación."),
+            ("Porque la investigación penal es un acto administrativo", "El texto no la describe en esos términos."),
+            ("Porque el Ministerio Público depende del Poder Ejecutivo", "El texto lo presenta entre los órganos autónomos."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "medio",
+        "Según el texto, ¿por qué una ley aprobada por mayoría puede quedar sin "
+        "efecto?",
+        "Porque los derechos limitan lo que una mayoría decide",
+        "El texto reconoce que la regla sorprende a primera vista y explica por qué "
+        "no es una excepción al principio democrático sino su complemento.\nLos "
+        "derechos que la Constitución garantiza son precisamente el límite que "
+        "ninguna mayoría puede cruzar, y el Tribunal Constitucional existe para "
+        "verificar que ese límite se respete.\nSin ese control, una mayoría "
+        "circunstancial podría suprimir por ley los derechos de quienes no la "
+        "integran, y la garantía constitucional quedaría sujeta al resultado de "
+        "cada elección.",
+        [
+            ("Porque el Ejecutivo puede vetar cualquier ley aprobada", "El veto es otra figura y no es lo que el texto describe aquí."),
+            ("Porque las leyes requieren aprobación de la Contraloría", "La Contraloría controla actos de la administración, no leyes."),
+            ("Porque el Congreso puede revocar sus propias decisiones", "El texto se refiere al control de constitucionalidad, no a la revocación."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "medio",
+        "¿Qué tienen en común los cinco órganos que describe el texto?",
+        "Controlan a quien no debería poder controlarlos",
+        "El texto lo formula al cerrar: todos ejercen funciones que pierden sentido "
+        "si las controla quien va a ser controlado.\nSe ve caso por caso. El Servel "
+        "fiscaliza la competencia por el poder que disputa el gobierno de turno; la "
+        "Contraloría examina los actos de la administración; el Ministerio Público "
+        "investiga y acusa; el Tribunal Constitucional revisa leyes aprobadas por "
+        "la mayoría.\nDe ahí que la autonomía no sea un privilegio de estos órganos "
+        "sino la condición para que su función signifique algo.",
+        [
+            ("Todos dependen del Presidente de la República", "El texto los sitúa fuera del alcance directo del gobierno."),
+            ("Todos forman parte del Poder Judicial", "El texto los distingue expresamente de los tres poderes clásicos."),
+            ("Todos son elegidos por votación popular directa", "El texto no describe ninguna elección popular de estos órganos."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "medio",
+        "El texto llama previo al control de la Contraloría. ¿Qué significa eso?",
+        "Actúa antes de que el acto produzca efectos",
+        "El texto lo describe con precisión: antes de que un decreto o una "
+        "resolución produzca efectos, la Contraloría examina si se ajusta a la "
+        "ley.\nLa diferencia con un control posterior es práctica. Si el examen "
+        "viniera después, el acto ilegal ya habría producido consecuencias que "
+        "muchas veces no se pueden deshacer: dinero gastado, contratos firmados, "
+        "situaciones consolidadas.\nPor eso la representación de un acto no es una "
+        "crítica ni una sanción: es un obstáculo previo a que ese acto exista "
+        "jurídicamente.",
+        [
+            ("Se aplica antes de que la ley entre en vigencia", "La Contraloría controla actos de la administración, no leyes."),
+            ("Se realiza antes de que el Congreso discuta el proyecto", "El control no interviene en la tramitación legislativa."),
+            ("Se ejerce antes de que un tribunal conozca del caso", "El texto no plantea el control como una etapa previa a un juicio."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "medio",
+        "Según el texto, ¿qué problema de plazos justifica la autonomía del Banco "
+        "Central?",
+        "La política monetaria rinde después de la elección siguiente",
+        "El texto describe un desajuste entre dos calendarios. La política "
+        "monetaria produce efectos en años; un gobierno enfrenta elecciones "
+        "antes.\nDe ahí se sigue el riesgo que la autonomía busca evitar: la "
+        "tentación de adoptar decisiones convenientes en el corto plazo y costosas "
+        "después, porque el beneficio llega antes de la votación y el costo, "
+        "después.\nEl argumento no supone mala fe de ningún gobierno. Describe un "
+        "incentivo que opera sobre cualquiera que deba rendir cuentas en un plazo "
+        "más corto que el de sus decisiones.",
+        [
+            ("El Banco Central necesita más tiempo para tramitar sus decisiones", "El texto no plantea un problema de tramitación."),
+            ("Los gobiernos duran más que los ciclos económicos", "El texto describe la relación inversa entre ambos plazos."),
+            ("La estabilidad de precios se logra en pocos meses", "El texto señala que la política monetaria rinde en años."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "dificil",
+        "El texto dice que el control de constitucionalidad complementa el "
+        "principio democrático en vez de contradecirlo. ¿Cómo lo argumenta?",
+        "Sin límites, una mayoría podría suprimir derechos",
+        "La objeción evidente es que un órgano no electo deje sin efecto lo "
+        "aprobado por representantes electos, y el texto la enfrenta en lugar de "
+        "esquivarla.\nSu respuesta es que la democracia no consiste solo en que "
+        "decida la mayoría, sino en un orden donde ciertos derechos están "
+        "garantizados con independencia de quién gane.\nSi una mayoría pudiera "
+        "suprimirlos, quienes no la integran quedarían sin protección alguna, y la "
+        "propia competencia electoral perdería sentido para quien puede ser "
+        "despojado de sus derechos al perderla.",
+        [
+            ("Sostiene que las mayorías suelen equivocarse al legislar", "El texto no argumenta desde la calidad de las decisiones mayoritarias."),
+            ("Afirma que el tribunal representa mejor a la ciudadanía", "El texto no le atribuye ninguna función representativa."),
+            ("Señala que el Congreso carece de competencia para legislar", "El texto reconoce que la ley fue aprobada en ambas cámaras."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "dificil",
+        "Un dirigente propone que el gobierno designe libremente al jefe del "
+        "Servicio Electoral. ¿Qué objeción se sigue del texto?",
+        "Quedaría administrando la elección que disputa",
+        "El texto identifica el problema que la autonomía del Servel viene a "
+        "resolver: si el gobierno de turno administrara las elecciones, sería juez "
+        "y parte de la competencia por el poder.\nLa objeción no supone que ese "
+        "gobierno vaya a manipular el proceso. Basta con que pueda hacerlo para que "
+        "el resultado quede en duda, y una elección cuyo resultado se discute no "
+        "cumple su función.\nEs el mismo razonamiento que el texto aplica a los "
+        "otros cuatro órganos: cada uno pierde sentido si depende de aquello que "
+        "debe controlar.",
+        [
+            ("El Servel dejaría de fiscalizar el financiamiento de campañas", "La objeción no es que abandone funciones sino quién las controla."),
+            ("El gobierno carece de personal técnico para esa tarea", "El texto no plantea un problema de capacidad."),
+            ("Los partidos perderían su derecho a presentar candidatos", "Nada en la propuesta afecta la presentación de candidaturas."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "dificil",
+        "¿Por qué el texto sostiene que el control de la Contraloría es jurídico y "
+        "no político?",
+        "Revisa atribuciones, no la conveniencia de la medida",
+        "La distinción marca el límite del órgano. Que un acto sea legal no "
+        "significa que sea acertado, y que sea inconveniente no lo vuelve "
+        "ilegal.\nEl texto lo formula así: la Contraloría no evalúa si una medida "
+        "es conveniente sino si la autoridad tenía atribuciones para adoptarla.\nEl "
+        "límite protege dos cosas a la vez. Impide que un órgano no electo "
+        "sustituya las decisiones de política de un gobierno electo, y mantiene el "
+        "control dentro de un terreno donde existe un criterio verificable: la ley "
+        "vigente.",
+        [
+            ("Porque sus decisiones pueden ser revisadas por el Congreso", "El texto no describe ninguna revisión parlamentaria de sus dictámenes."),
+            ("Porque solo actúa cuando un partido presenta un reclamo", "El control descrito es previo y no depende de una denuncia."),
+            ("Porque sus funcionarios son designados por el gobierno", "El texto sitúa a la Contraloría fuera del alcance del gobierno."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "dificil",
+        "¿Qué riesgo comparte la autonomía de estos cinco órganos?",
+        "Ejercen poder sin responder ante los electores",
+        "La autonomía resuelve un problema y abre otro. Un órgano que no depende "
+        "del gobierno tampoco puede ser removido por la ciudadanía cuando actúa "
+        "mal.\nEl texto no lo menciona, y advertirlo es parte de leerlo con "
+        "distancia: argumenta con solidez a favor de la independencia y no examina "
+        "qué ocurre cuando esa independencia se ejerce sin contrapeso.\nPor eso los "
+        "diseños institucionales suelen acompañar la autonomía con nombramientos "
+        "que exigen acuerdos amplios, plazos fijos, obligación de rendir cuenta "
+        "pública y control judicial de sus decisiones.",
+        [
+            ("Pierden eficacia por no depender del gobierno", "El texto sostiene lo contrario: su eficacia depende de esa independencia."),
+            ("Duplican funciones que ya cumplen los tres poderes", "El texto las presenta como funciones distintas de las de los tres poderes."),
+            ("Impiden que el Congreso legisle sobre esas materias", "Ninguno de los cinco tiene facultades legislativas."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_institucionalidad", "dificil",
+        "¿Qué tienen en común el argumento del Ministerio Público y el del Banco "
+        "Central en el texto?",
+        "Los dos separan una decisión de quien tiene interés en ella",
+        "En el caso penal, el interés es epistémico: quien investigó y acusó ya se "
+        "comprometió con una hipótesis y no puede evaluarla con imparcialidad.\nEn "
+        "el caso monetario, el interés es electoral: quien enfrenta una elección "
+        "antes de que rindan sus decisiones tiene un incentivo para preferir el "
+        "beneficio inmediato.\nLos dos argumentos comparten la forma. No suponen "
+        "mala fe de nadie: identifican una posición desde la cual cierta decisión "
+        "no puede tomarse bien, y la trasladan a otro que no está en esa posición.",
+        [
+            ("Los dos buscan reducir el gasto público del Estado", "Ninguno de los dos argumentos se refiere al nivel de gasto."),
+            ("Los dos protegen al gobierno de críticas externas", "Ambos órganos existen para controlar, no para proteger al gobierno."),
+            ("Los dos dependen de la aprobación del Congreso para actuar", "El texto no condiciona su actuación a aprobación parlamentaria."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_democracia", "medio",
+        "Según el texto, ¿por qué el esquema de los tres poderes resulta incompleto "
+        "para describir el Estado chileno?",
+        "Deja fuera órganos que no pertenecen a ninguno",
+        "El texto lo plantea en su primera línea: el esquema describe bien el "
+        "reparto básico del poder, pero deja fuera una parte del diseño "
+        "institucional.\nEsa parte son cinco órganos que no pertenecen al "
+        "Ejecutivo, al Legislativo ni al Judicial, y cuya independencia respecto "
+        "del gobierno de turno es su razón de ser.\nEl esquema clásico no queda "
+        "invalidado: sigue explicando cómo se reparte el poder principal. Lo que el "
+        "texto agrega es que el control del poder no se agota en ese reparto.",
+        [
+            ("Porque en Chile solo existen dos poderes del Estado", "El texto reconoce los tres y agrega órganos adicionales."),
+            ("Porque los tres poderes fueron reemplazados por órganos autónomos", "El texto no describe ningún reemplazo."),
+            ("Porque el Poder Judicial no interviene en el control del gobierno", "El texto no excluye al Poder Judicial de esa función."),
+        ],
+    ),
+    _ql(
+        "civ_inst_autonomos", "civ_derechos", "dificil",
+        "Según el texto, ¿qué relación hay entre los derechos garantizados y las "
+        "decisiones de una mayoría?",
+        "Los derechos marcan el límite que la mayoría no cruza",
+        "El texto lo formula al explicar por qué una ley aprobada puede quedar sin "
+        "efecto: los derechos que la Constitución garantiza son precisamente el "
+        "límite que ninguna mayoría puede cruzar.\nLa relación no es de oposición "
+        "entre derechos y democracia. El texto los presenta como complementarios: "
+        "sin ese límite, ganar una elección permitiría suprimir los derechos de "
+        "quienes la perdieron.\nDe ahí que un derecho fundamental no funcione como "
+        "una preferencia que se somete a votación, sino como una condición del "
+        "propio juego electoral.",
+        [
+            ("Los derechos se definen por votación en cada período", "El texto los presenta como un límite previo a cualquier votación."),
+            ("Las mayorías pueden suspender derechos si hay urgencia", "El texto no contempla ninguna excepción de ese tipo."),
+            ("Los derechos y las decisiones mayoritarias no se relacionan", "El texto vincula ambos expresamente."),
+        ],
+    ),
     _ql(
         "dictadura_ochenta", "his_dictadura", "facil",
         "Según la Fuente 1, ¿qué medidas contempla el estado de sitio anunciado?",
