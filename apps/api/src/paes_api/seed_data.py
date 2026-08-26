@@ -54918,6 +54918,286 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "chile_xix_nacion",
+        "title": "Cómo se construyó la nación chilena en el siglo XIX",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Al independizarse, Chile era un territorio con menos de un millón "
+            "de habitantes, mal comunicado y sin ninguna experiencia de "
+            "gobierno propio. La década de 1820 se fue en ensayos "
+            "constitucionales sucesivos —federal, liberal, moralista— que no "
+            "lograron estabilizarse, y el conflicto se resolvió por las armas "
+            "en 1830. El orden que se impuso entonces quedó escrito en la "
+            "Constitución de 1833 y se sostuvo sobre una idea sencilla: antes "
+            "que discutir la mejor forma de gobierno, había que asegurar que "
+            "hubiera gobierno.\n"
+            "\n"
+            "Ese Estado se dedicó enseguida a producir lo que decía "
+            "representar. Creó instituciones destinadas a formar una elite "
+            "letrada y un funcionariado: la Universidad de Chile en 1842 y la "
+            "Escuela Normal de Preceptores en 1842, que preparaba a quienes "
+            "enseñarían en las escuelas públicas. La ley de instrucción "
+            "primaria de 1860 obligó a las municipalidades a sostener escuelas, "
+            "aunque la asistencia siguió siendo voluntaria durante décadas y la "
+            "mayoría de la población continuó sin saber leer.\n"
+            "\n"
+            "También se dedicó a fijar el territorio. En 1843 ocupó el estrecho "
+            "de Magallanes para adelantarse a cualquier reclamo extranjero. "
+            "Desde 1850 promovió la colonización de Valdivia y Llanquihue con "
+            "familias alemanas, a las que entregó tierras y créditos. Y entre "
+            "1861 y 1883 llevó adelante la ocupación de la Araucanía, que la "
+            "prensa de la época llamó pacificación: un proceso militar y "
+            "colonizador que despojó al pueblo mapuche de la mayor parte de sus "
+            "tierras y lo confinó en reducciones.\n"
+            "\n"
+            "El vocabulario importa. Llamar pacificación a una campaña militar "
+            "supone que había un desorden previo que corregir, y llamar "
+            "colonización a la entrega de tierras supone que estaban "
+            "disponibles. En ambos casos el nombre elegido presenta como "
+            "restablecimiento de un orden natural lo que fue la incorporación "
+            "forzada de un territorio con población propia.\n"
+            "\n"
+            "Hacia fines de siglo el conflicto se trasladó a otro terreno. Las "
+            "leyes laicas de 1883 y 1884 traspasaron desde la Iglesia al Estado "
+            "los cementerios y los registros de nacimientos, matrimonios y "
+            "defunciones. No eran trámites menores: definir quién nace, quién "
+            "se casa y quién muere es definir quién forma parte de la nación, y "
+            "esa atribución pasó a manos civiles."
+        ),
+    },
+    {
+        "key": "chile_xix_exportaciones",
+        "title": "Exportaciones y hacienda pública de Chile, 1850-1910",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos, no "
+            "oficiales. Las proporciones reproducen el orden de magnitud que la "
+            "historiografía describe para el período, pero las cifras no "
+            "corresponden a ninguna serie estadística real: el ejercicio es de "
+            "lectura e inferencia."
+        ),
+        "body": (
+            "**Tabla 1. Composición de las exportaciones chilenas (porcentaje "
+            "del valor total).**\n"
+            "\n"
+            "| Año | Trigo y harina | Plata y cobre | Salitre | Otros |\n"
+            "|---|---|---|---|---|\n"
+            "| 1850 | 31 | 49 | 0 | 20 |\n"
+            "| 1870 | 24 | 52 | 3 | 21 |\n"
+            "| 1890 | 9 | 28 | 51 | 12 |\n"
+            "| 1910 | 5 | 17 | 68 | 10 |\n"
+            "\n"
+            "**Tabla 2. Ingresos ordinarios del fisco (porcentaje del total).**\n"
+            "\n"
+            "| Año | Derechos sobre el salitre | Otras aduanas | Impuestos "
+            "internos |\n"
+            "|---|---|---|---|\n"
+            "| 1870 | 2 | 61 | 37 |\n"
+            "| 1890 | 46 | 33 | 21 |\n"
+            "| 1910 | 53 | 29 | 18 |\n"
+            "\n"
+            "Notas:\n"
+            "— Tarapacá y Antofagasta se incorporan al territorio nacional tras "
+            "la Guerra del Pacífico (1879-1883).\n"
+            "— El salitre se vendía casi por completo a mercados europeos, que "
+            "fijaban su precio.\n"
+            "— La red ferroviaria pasó de 700 kilómetros en 1870 a 5.900 en "
+            "1910, trazada principalmente entre zonas productoras y puertos."
+        ),
+    },
+    {
+        "key": "chile_xix_cuestion_social",
+        "title": "Un informe de higiene y una circular obrera (Santiago, 1900-1903)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen documentos "
+            "históricos: son dos piezas ficticias construidas con el "
+            "vocabulario y los argumentos que circularon en la discusión "
+            "chilena sobre la cuestión social, para ejercitar la comparación de "
+            "interpretaciones."
+        ),
+        "body": (
+            "**Fuente 1. Informe de un inspector de higiene al municipio, "
+            "1900.**\n"
+            "\n"
+            "He recorrido durante seis semanas los conventillos del sector "
+            "poniente. Cuento en el más numeroso ciento cuarenta piezas "
+            "dispuestas en torno a un patio de tierra, con una sola llave de "
+            "agua y dos letrinas comunes. En cada pieza duermen entre cuatro y "
+            "siete personas. La mortalidad infantil que registran las "
+            "parroquias del sector es la que cabía esperar de tales "
+            "condiciones. Debo señalar, sin embargo, que el problema no se "
+            "resolverá solo con ordenanzas de construcción. He observado en "
+            "estos vecindarios hábitos de intemperancia y desorden doméstico "
+            "que ninguna obra material corrige, y que a mi juicio explican "
+            "buena parte de la miseria que describo. Recomiendo por tanto, "
+            "junto con exigir agua y desagüe a los propietarios, establecer una "
+            "vigilancia moral sobre estas poblaciones.\n"
+            "\n"
+            "**Fuente 2. Circular de una sociedad de socorros mutuos de obreros "
+            "tipógrafos, 1903.**\n"
+            "\n"
+            "Compañeros: se ha publicado que nuestra miseria proviene de "
+            "nuestros vicios. Respondamos con números. El jornal de un obrero "
+            "de imprenta no alcanza para pagar arriendo, alimento y remedios en "
+            "el mismo mes, y el arriendo de una pieza en el conventillo ha "
+            "subido tres veces en seis años mientras el jornal es el mismo de "
+            "1897. Cuando enfermamos no hay salario, porque se paga por día "
+            "trabajado; cuando morimos no hay entierro, si la sociedad no lo "
+            "costea. Por eso existimos: reunimos una cuota semanal para que "
+            "ningún socio quede sin médico ni sin sepultura. No pedimos caridad "
+            "ni vigilancia. Pedimos que se reconozca que un hombre que trabaja "
+            "doce horas no puede además ser culpado por el cuarto en que lo "
+            "obligan a dormir."
+        ),
+    },
+    {
+        "key": "nacion_impactos",
+        "title": "Lo que el Estado-nación trajo consigo",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El Estado-nación no fue solo una forma de organizar el poder: fue "
+            "también una manera de decidir quién pertenece. Su principio es que "
+            "a cada nación le corresponde un Estado y que los habitantes de ese "
+            "Estado forman una sola comunidad, con una lengua, una historia "
+            "común y unos símbolos compartidos. Formulado así parece "
+            "descriptivo, pero era en realidad un programa: en 1800 casi ningún "
+            "territorio europeo o americano cumplía esas condiciones, y el "
+            "siglo XIX se dedicó a producirlas.\n"
+            "\n"
+            "Los instrumentos fueron sobre todo tres. La escuela primaria "
+            "obligatoria enseñó a leer en una lengua única y transmitió un "
+            "relato del pasado nacional. El servicio militar reunió durante "
+            "meses a jóvenes de regiones distintas bajo la misma disciplina. Y "
+            "el ferrocarril, junto con el telégrafo y el correo, redujo el "
+            "tiempo que separaba a la capital de la periferia. Donde antes "
+            "había comarcas que se entendían a duras penas, quedó una población "
+            "que compartía calendario, medidas, moneda y manuales.\n"
+            "\n"
+            "El proceso tuvo un costo que sus promotores rara vez "
+            "contabilizaron. Producir una comunidad homogénea exige suprimir "
+            "diferencias, y las que se suprimieron fueron las de quienes "
+            "hablaban otra lengua, practicaban otra religión o vivían de otro "
+            "modo. En Europa, minorías enteras quedaron descritas como "
+            "obstáculos a la unidad nacional. En América, el mismo razonamiento "
+            "recayó sobre los pueblos indígenas: las repúblicas los declararon "
+            "ciudadanos en el papel y avanzaron sobre sus territorios en la "
+            "práctica, con campañas militares que se presentaron como "
+            "incorporación de tierras vacías.\n"
+            "\n"
+            "El principio también fabricó conflictos donde no los había. Si a "
+            "cada nación le corresponde un Estado, entonces toda población que "
+            "se considere nación puede reclamar uno, y toda frontera que deje a "
+            "compatriotas del otro lado queda pendiente de corrección. Buena "
+            "parte de las guerras europeas del siglo XIX y de las disputas "
+            "limítrofes americanas se argumentó en esos términos.\n"
+            "\n"
+            "Conviene entonces no leer la nación como un dato previo que el "
+            "Estado vino a reconocer. El orden de los factores fue casi siempre "
+            "el inverso: primero se constituyó el Estado y después este "
+            "construyó la nación que decía representar."
+        ),
+    },
+    {
+        "key": "nacion_cifras_europa",
+        "title": "Construcción del Estado-nación en cuatro países europeos, 1850-1910",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla original de 1000paes con datos ilustrativos, no oficiales. "
+            "Las magnitudes son verosímiles para el período pero no "
+            "corresponden a ninguna serie estadística real: el ejercicio es de "
+            "lectura e inferencia, no de memorización de cifras."
+        ),
+        "body": (
+            "**Tabla 1. Indicadores de construcción estatal (país ficticio A, "
+            "B, C y D).**\n"
+            "\n"
+            "| País | Unificación nacional | Alfabetización 1850 | "
+            "Alfabetización 1910 | Km de vía férrea 1850 | Km de vía férrea "
+            "1910 |\n"
+            "|---|---|---|---|---|---|\n"
+            "| A | anterior a 1800 | 58% | 96% | 9.800 | 37.000 |\n"
+            "| B | 1861 | 25% | 62% | 1.700 | 18.000 |\n"
+            "| C | 1871 | 61% | 98% | 5.900 | 61.000 |\n"
+            "| D | anterior a 1800 | 47% | 87% | 3.100 | 40.000 |\n"
+            "\n"
+            "**Tabla 2. Instrucción primaria obligatoria y servicio militar "
+            "obligatorio.**\n"
+            "\n"
+            "| País | Instrucción primaria obligatoria | Servicio militar "
+            "obligatorio |\n"
+            "|---|---|---|\n"
+            "| A | 1882 | 1872 |\n"
+            "| B | 1877 | 1875 |\n"
+            "| C | 1871 | 1814 |\n"
+            "| D | 1870 | no rige en el período |\n"
+            "\n"
+            "Notas:\n"
+            "— La alfabetización corresponde a la población mayor de diez años.\n"
+            "— El país D mantuvo un ejército profesional voluntario durante "
+            "todo el período.\n"
+            "— Los cuatro Estados reemplazaron en estas décadas las lenguas y "
+            "dialectos regionales por una lengua nacional única en la enseñanza "
+            "pública."
+        ),
+    },
+    {
+        "key": "nacion_debate_1840",
+        "title": "Dos intervenciones sobre quién debe votar (América, 1840)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No son documentos históricos: son "
+            "dos intervenciones ficticias construidas con los argumentos que "
+            "efectivamente circularon en los debates constitucionales "
+            "americanos del siglo XIX, para ejercitar la comparación de "
+            "interpretaciones."
+        ),
+        "body": (
+            "**Fuente 1. Intervención de un diputado durante la discusión de la "
+            "ley electoral.**\n"
+            "\n"
+            "Se nos dice que la República se funda en la voluntad de la nación "
+            "y que esa voluntad debe expresarse por el voto de todos. Yo "
+            "también quiero la República, y por quererla pido prudencia. El "
+            "voto no es un premio que se reparte: es el ejercicio de una "
+            "función pública, y toda función pública exige capacidad en quien "
+            "la ejerce. Pedimos al juez que conozca las leyes y al médico que "
+            "conozca su ciencia; solo al elector le pediríamos nada. Quien no "
+            "posee bienes ni sabe leer no es peor hombre que nosotros, pero "
+            "depende para vivir de quien lo emplea, y quien depende no "
+            "delibera: obedece. Entregarle la papeleta no es darle poder, es "
+            "dársela a su patrón, multiplicada. Yo no excluyo a nadie para "
+            "siempre. Digo que la escuela debe preceder al sufragio, y que la "
+            "ley debe fijar por ahora un censo de renta y la exigencia de saber "
+            "leer.\n"
+            "\n"
+            "**Fuente 2. Respuesta de otro diputado, en la sesión siguiente.**\n"
+            "\n"
+            "El señor diputado ha descrito con exactitud la situación del "
+            "jornalero y de ella ha extraído la conclusión contraria. Es cierto "
+            "que depende de quien lo emplea. Yo pregunto: ¿y de qué modo dejará "
+            "de depender, si la ley le niega el único instrumento con que "
+            "podría hacerse escuchar? Se nos propone que la escuela preceda al "
+            "sufragio. Pero la escuela la decreta este Congreso, y este "
+            "Congreso lo eligen los que ya votan. Se pide al excluido que "
+            "espere una escuela que solo construirán quienes no tienen ningún "
+            "apuro en construirla. En cuanto al censo de renta, observo que no "
+            "mide capacidad alguna: mide fortuna. Si la capacidad fuera el "
+            "criterio, examinaríamos a los propietarios uno por uno y a más de "
+            "uno dejaríamos fuera de esta sala. La verdad más simple es que "
+            "llamamos nación a un país entero y ciudadanos a una fracción, y "
+            "esa distancia no la cierra el tiempo por sí solo."
+        ),
+    },
+    {
         "key": "eco_laborales_fte",
         "title": "El trabajo, sus derechos y sus transformaciones",
         "kind": "no_literario",
@@ -56367,6 +56647,1542 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "facil",
+        "Según el texto, ¿qué ocurrió con los ensayos constitucionales de la década "
+        "de 1820 en Chile?",
+        "No lograron estabilizarse y el conflicto se resolvió por las armas",
+        "El texto describe una sucesión de ensayos —federal, liberal, moralista— y "
+        "señala que ninguno logró estabilizarse.\nEl desenlace lo fija en 1830, "
+        "cuando el conflicto se resuelve por las armas, y el orden resultante queda "
+        "escrito en la Constitución de 1833.",
+        [
+            ("Se combinaron en un único texto aprobado en 1828", "El texto no menciona ninguna síntesis de los ensayos previos."),
+            ("Fueron abandonados por falta de interés de la elite", "El texto describe conflicto, no desinterés."),
+            ("Establecieron un régimen federal que duró hasta 1833", "El ensayo federal es uno de los que no logró estabilizarse."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "facil",
+        "Según el texto, ¿qué dos instituciones se crearon en 1842?",
+        "La Universidad de Chile y la Escuela Normal de Preceptores",
+        "El texto las menciona juntas y con la misma fecha, y precisa la función de "
+        "la segunda: preparar a quienes enseñarían en las escuelas públicas.\nAmbas "
+        "apuntan a lo mismo desde niveles distintos: formar la elite letrada y el "
+        "funcionariado que el Estado necesitaba para operar.",
+        [
+            ("El Instituto Nacional y la Biblioteca Nacional", "No aparecen mencionados en el texto."),
+            ("La Universidad de Chile y la ley de instrucción primaria", "La ley de instrucción primaria es de 1860, según el texto."),
+            ("La Escuela Normal y el Registro Civil", "Los registros civiles se traspasan al Estado en 1883 y 1884."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "facil",
+        "Según el texto, ¿qué hizo el Estado chileno en 1843 en el extremo austral?",
+        "Ocupó el estrecho de Magallanes",
+        "El texto lo presenta dentro de la tarea de fijar el territorio y entrega "
+        "el motivo: adelantarse a cualquier reclamo extranjero.\nEs un tipo de "
+        "acción característico del siglo XIX. Un Estado que quiere que sus límites "
+        "sean reconocidos necesita presencia efectiva en ellos, y no solo un título "
+        "sobre el papel.",
+        [
+            ("Entregó tierras a colonos alemanes", "La colonización de Valdivia y Llanquihue se promueve desde 1850."),
+            ("Firmó un tratado de límites con Argentina", "El texto no menciona ningún tratado limítrofe."),
+            ("Fundó la Escuela Normal de Preceptores", "Esa institución es de 1842 y no tiene relación con el extremo austral."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "El texto afirma que antes de discutir la mejor forma de gobierno había que "
+        "asegurar que hubiera gobierno. ¿Qué justifica esa idea en el Chile de "
+        "1830?",
+        "Una década de ensayos que no lograron dar estabilidad",
+        "El texto encadena las dos cosas. Primero describe la década de 1820 como "
+        "una sucesión de ensayos constitucionales que no se estabilizaron, y luego "
+        "presenta el orden de 1833 como la respuesta a esa experiencia.\nLa fórmula "
+        "resume un criterio de época: frente a la alternativa entre libertad y "
+        "orden, el arreglo institucional chileno privilegió lo segundo.\nEs también "
+        "un argumento que conviene mirar con distancia, porque justifica de "
+        "antemano la concentración de autoridad que ese orden traía consigo.",
+        [
+            ("La amenaza de una invasión extranjera sobre el territorio", "El texto no menciona ninguna amenaza externa en ese momento."),
+            ("La presión de las municipalidades por mayor autonomía", "Las municipalidades aparecen recién a propósito de la ley de 1860."),
+            ("El fracaso de la ocupación del estrecho de Magallanes", "Esa ocupación es posterior, de 1843, y el texto no la presenta como un fracaso."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "Según el texto, ¿por qué la ley de instrucción primaria de 1860 no bastó "
+        "para alfabetizar al país?",
+        "Obligaba a sostener escuelas, pero la asistencia era voluntaria",
+        "El texto distingue con cuidado dos obligaciones distintas: la ley obliga a "
+        "las municipalidades a sostener escuelas, no a las familias a enviar a sus "
+        "hijos.\nY consigna el resultado: la asistencia siguió siendo voluntaria "
+        "durante décadas y la mayoría de la población continuó sin saber leer.\nLa "
+        "distinción es útil frente a cualquier norma: crear la oferta de un "
+        "servicio y garantizar que la población acceda a él son dos decisiones "
+        "separadas.",
+        [
+            ("Porque las municipalidades no existían todavía en 1860", "La ley se dirige justamente a ellas, de modo que existían."),
+            ("Porque no se habían formado profesores para esas escuelas", "La Escuela Normal de Preceptores funcionaba desde 1842."),
+            ("Porque la enseñanza siguió en manos exclusivas de la Iglesia", "El texto describe escuelas públicas sostenidas por las municipalidades."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "¿Qué tienen en común la ocupación del estrecho de Magallanes, la "
+        "colonización de Llanquihue y la ocupación de la Araucanía?",
+        "Son formas de fijar y ocupar efectivamente el territorio",
+        "El texto agrupa las tres bajo una misma tarea: el Estado se dedicó a fijar "
+        "el territorio.\nLos medios difieren —una guarnición en el estrecho, "
+        "familias colonas con tierras y créditos, una campaña militar en la "
+        "Araucanía— pero el objetivo es el mismo: convertir un límite declarado en "
+        "una presencia real.\nEl texto marca además la diferencia decisiva entre "
+        "ellas. En la Araucanía el territorio no estaba vacío, y la ocupación "
+        "significó el despojo de la mayor parte de las tierras del pueblo mapuche.",
+        [
+            ("Son medidas destinadas a aumentar la recaudación aduanera", "El texto no las vincula con los ingresos del fisco."),
+            ("Son respuestas a reclamos de países vecinos ya formulados", "Solo en el estrecho se menciona la anticipación a un reclamo extranjero."),
+            ("Son consecuencia directa de la ley de instrucción de 1860", "No hay relación entre esa ley y la política territorial."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "Según el texto, ¿por qué las leyes laicas de 1883 y 1884 no fueron "
+        "trámites menores?",
+        "Porque definir quién nace o se casa define quién es parte de la nación",
+        "El texto lo argumenta explícitamente. Los registros de nacimientos, "
+        "matrimonios y defunciones no son un archivo administrativo cualquiera: "
+        "establecen quién existe para el Estado y en qué condición.\nTraspasar esa "
+        "función desde la Iglesia a manos civiles significó que fuera el Estado, y "
+        "no una autoridad religiosa, quien definiera la pertenencia a la comunidad "
+        "nacional.\nLos cementerios funcionan en el mismo registro: quién puede ser "
+        "sepultado y dónde era hasta entonces una decisión eclesiástica.",
+        [
+            ("Porque prohibieron el ejercicio del culto católico en Chile", "El texto describe un traspaso de registros, no una prohibición religiosa."),
+            ("Porque redujeron los ingresos fiscales del Estado", "El texto no vincula estas leyes con la hacienda pública."),
+            ("Porque obligaron a las municipalidades a sostener escuelas", "Esa obligación proviene de la ley de instrucción primaria de 1860."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "medio",
+        "El texto señala que la prensa de la época llamó pacificación a la "
+        "ocupación de la Araucanía. ¿Qué supone ese nombre?",
+        "Que existía un desorden previo que había que corregir",
+        "El texto lo explicita: llamar pacificación a una campaña militar supone "
+        "que había un desorden previo que corregir.\nEl nombre hace un trabajo "
+        "argumentativo antes de que nadie argumente. Describe la operación como "
+        "restablecimiento y no como conquista, y convierte a quien habitaba el "
+        "territorio en fuente del problema.\nPor eso el vocabulario de las fuentes "
+        "es material de análisis y no un detalle de estilo: la palabra elegida ya "
+        "contiene una interpretación de los hechos.",
+        [
+            ("Que el proceso se realizó sin intervención militar", "El texto lo describe como un proceso militar y colonizador."),
+            ("Que las tierras fueron compradas a sus ocupantes", "El texto habla de despojo y confinamiento en reducciones."),
+            ("Que el conflicto había comenzado fuera del territorio chileno", "El texto no plantea un origen externo del conflicto."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "El texto sostiene que el Estado se dedicó a producir lo que decía "
+        "representar. ¿Qué evidencia del propio texto sostiene esa afirmación?",
+        "Creó las instituciones que formarían a la nación que invocaba",
+        "La afirmación describe un orden invertido respecto del relato habitual: no "
+        "una nación preexistente que se da un Estado, sino un Estado que fabrica la "
+        "nación en cuyo nombre gobierna.\nLas evidencias que el texto ofrece son "
+        "concretas: universidad y escuela normal en 1842, ley de instrucción "
+        "primaria en 1860, ocupación efectiva de los límites y traspaso de los "
+        "registros civiles.\nTodas ellas producen algo que antes no existía "
+        "—población alfabetizada, territorio delimitado, comunidad definida por el "
+        "Estado— en un país que el propio texto describe al comenzar como mal "
+        "comunicado y sin experiencia de gobierno propio.",
+        [
+            ("Reconoció instituciones que ya funcionaban desde la Colonia", "El texto describe creación de instituciones nuevas, no reconocimiento de las heredadas."),
+            ("Delegó en la Iglesia la formación de la población", "El movimiento descrito va en dirección contraria: del ámbito eclesiástico al civil."),
+            ("Se limitó a administrar un territorio ya integrado", "El texto lo describe como mal comunicado y con límites por fijar."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "¿Qué diferencia decisiva hay entre la colonización de Llanquihue y la "
+        "ocupación de la Araucanía, según el texto?",
+        "En la Araucanía había un pueblo que fue despojado de sus tierras",
+        "El texto describe la colonización de Valdivia y Llanquihue como entrega de "
+        "tierras y créditos a familias alemanas, sin mencionar despojo.\nDe la "
+        "Araucanía dice otra cosa: un proceso militar y colonizador que despojó al "
+        "pueblo mapuche de la mayor parte de sus tierras y lo confinó en "
+        "reducciones.\nAmbas operaciones se presentaron con el mismo vocabulario de "
+        "colonización, y ese es precisamente el punto del párrafo siguiente: llamar "
+        "colonización a la entrega de tierras supone que estaban disponibles, lo "
+        "que en la Araucanía no era el caso.",
+        [
+            ("En Llanquihue el Estado no entregó tierras a los colonos", "El texto señala expresamente que entregó tierras y créditos."),
+            ("La Araucanía se incorporó antes que Valdivia y Llanquihue", "La colonización comienza en 1850 y la ocupación de la Araucanía en 1861."),
+            ("Llanquihue fue ocupada por razones limítrofes con Argentina", "El texto no menciona motivos limítrofes en ese caso."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "Un estudiante concluye que, según el texto, Chile había alfabetizado a su "
+        "población a fines del siglo XIX. ¿Qué falla esa lectura?",
+        "El texto afirma que la mayoría seguía sin saber leer",
+        "El texto menciona instituciones educativas y una ley, pero es explícito "
+        "sobre el resultado: la asistencia siguió siendo voluntaria durante décadas "
+        "y la mayoría de la población continuó sin saber leer.\nLa confusión que "
+        "comete el estudiante es frecuente al leer historia institucional: tomar la "
+        "creación de una institución o la dictación de una ley como prueba de su "
+        "efecto.\nUniversidad, escuela normal y ley de instrucción describen lo que "
+        "el Estado se propuso. Cuánto de eso alcanzó a la población es una pregunta "
+        "distinta, que exige datos de cobertura y no de legislación.",
+        [
+            ("El texto no menciona ninguna política educativa del período", "Menciona tres: universidad, escuela normal y ley de instrucción primaria."),
+            ("El texto sitúa la alfabetización recién en el siglo XX", "No fija ninguna fecha para el logro de la alfabetización."),
+            ("El texto atribuye la enseñanza exclusivamente a la Iglesia", "Describe escuelas públicas sostenidas por las municipalidades."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "El texto dedica un párrafo entero al vocabulario de las fuentes de la "
+        "época. ¿Qué operación de análisis histórico está enseñando ahí?",
+        "Que el nombre dado a un hecho ya contiene su interpretación",
+        "El párrafo toma dos palabras usadas en el período —pacificación y "
+        "colonización— y muestra qué presupone cada una: la primera, un desorden "
+        "anterior; la segunda, tierras disponibles.\nNinguna de las dos describe un "
+        "hecho neutro. Ambas presentan como restablecimiento de un orden natural lo "
+        "que fue la incorporación forzada de un territorio habitado.\nLa operación "
+        "que enseña es aplicable a cualquier fuente: antes de aceptar los términos "
+        "en que un documento describe lo ocurrido, conviene preguntar qué queda "
+        "afirmado de antemano por el solo hecho de usarlos.",
+        [
+            ("Que las fuentes de época deben traducirse al lenguaje actual", "El texto no propone traducirlas sino examinar qué suponen sus términos."),
+            ("Que la prensa del siglo XIX carecía de valor como fuente", "Su valor es justamente lo que el análisis aprovecha."),
+            ("Que conviene datar con precisión cada acontecimiento", "El párrafo no trata de fechas sino de vocabulario."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "El texto describe un Estado que ocupa territorios, funda escuelas y toma "
+        "los registros civiles. ¿Qué proceso más amplio del siglo XIX ilustra el "
+        "caso chileno?",
+        "La construcción del Estado-nación mediante instituciones propias",
+        "Los tres movimientos que el texto describe son los mismos que se observan "
+        "en Europa y en el resto de América durante el siglo: escolarizar en una "
+        "lengua común, ocupar efectivamente el territorio declarado y hacerse cargo "
+        "de definir quién pertenece a la comunidad.\nChile no es entonces una "
+        "excepción sino un caso dentro de un proceso general, con su cronología y "
+        "sus conflictos propios.\nVerlo así permite comparar: la ocupación de la "
+        "Araucanía admite ser leída junto a otras campañas americanas sobre "
+        "territorios indígenas, y las leyes laicas junto a otros procesos de "
+        "secularización del período.",
+        [
+            ("La transición desde la monarquía hacia la república", "El texto sitúa todo el proceso dentro de una república ya constituida."),
+            ("La industrialización de las economías latinoamericanas", "El texto no describe ningún proceso industrial."),
+            ("El fin del orden colonial impuesto por España", "El proceso descrito es posterior a la independencia y de otra naturaleza."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_chile_xix", "dificil",
+        "Si se quisiera evaluar cuánto alcanzó realmente la escuela pública chilena "
+        "del siglo XIX, ¿qué tipo de fuente haría falta además de esta?",
+        "Registros de matrícula y asistencia por comuna y año",
+        "Este texto informa sobre decisiones del Estado: qué instituciones creó y "
+        "qué obligaciones impuso. Es la fuente adecuada para reconstruir el "
+        "propósito.\nMedir el alcance requiere otra cosa: cuántas escuelas "
+        "funcionaron de hecho, cuántos niños se matricularon, cuántos asistieron y "
+        "por cuánto tiempo, y cómo variaba eso entre ciudad y campo.\nLa distinción "
+        "entre la norma y su aplicación es una de las más productivas del oficio, y "
+        "aquí el propio texto la insinúa al advertir que la asistencia siguió "
+        "siendo voluntaria durante décadas.",
+        [
+            ("El texto completo de la ley de instrucción primaria de 1860", "La ley describe la obligación impuesta, no cuánta población alcanzó."),
+            ("Las actas de fundación de la Universidad de Chile", "Documentan la creación de una institución, no la cobertura escolar."),
+            ("Los tratados de límites firmados durante el período", "No tienen relación con la cobertura del sistema educativo."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "facil",
+        "Según la Tabla 1, ¿qué producto encabezaba las exportaciones chilenas en "
+        "1850?",
+        "La plata y el cobre, con 49%",
+        "La fila de 1850 reparte el valor exportado en 31% de trigo y harina, 49% "
+        "de plata y cobre, 0% de salitre y 20% de otros productos.\nLa minería de "
+        "plata y cobre es entonces el rubro mayor, con casi la mitad del total, y "
+        "el salitre todavía no aparece en la serie porque los yacimientos aún no "
+        "formaban parte del territorio nacional.",
+        [
+            ("El trigo y la harina, con 31%", "Es el segundo rubro de ese año, por debajo de la minería."),
+            ("El salitre, con 51%", "El 51% de salitre corresponde a 1890; en 1850 es 0%."),
+            ("Los otros productos, con 20%", "Es la categoría menor de la fila de 1850."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "facil",
+        "Según la Tabla 2, ¿qué porcentaje de los ingresos fiscales aportaban los "
+        "derechos sobre el salitre en 1910?",
+        "El 53%",
+        "La fila de 1910 de la Tabla 2 reparte los ingresos ordinarios en 53% de "
+        "derechos sobre el salitre, 29% de otras aduanas y 18% de impuestos "
+        "internos.\nMás de la mitad del presupuesto ordinario del fisco descansaba "
+        "entonces en un solo producto de exportación, lo que la tabla permite "
+        "seguir desde el 2% de 1870.",
+        [
+            ("El 46%", "Corresponde a 1890, no a 1910."),
+            ("El 68%", "Es la participación del salitre en las exportaciones de 1910, no en los ingresos fiscales."),
+            ("El 29%", "Corresponde a las otras aduanas de 1910."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "facil",
+        "Según la Tabla 1, ¿cuántos puntos porcentuales cayó el trigo y la harina "
+        "entre 1850 y 1910?",
+        "26 puntos porcentuales",
+        "La tabla registra 31% en 1850 y 5% en 1910 para el trigo y la harina.\nLa "
+        "diferencia es 31 − 5 = 26 puntos porcentuales. Conviene notar que se trata "
+        "de una caída en la participación dentro del total exportado, que no es lo "
+        "mismo que una caída en la cantidad de trigo vendida.",
+        [
+            ("5 puntos porcentuales", "Es el valor de 1910, no la variación del período."),
+            ("36 puntos porcentuales", "Sumó ambos valores en lugar de restarlos."),
+            ("31 puntos porcentuales", "Es el valor de 1850, no la diferencia entre ambos años."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "¿Qué transformación de la economía exportadora chilena muestran las cifras "
+        "de 1870 y 1890?",
+        "El salitre pasa de ser marginal a más de la mitad",
+        "En 1870 el salitre representa el 3% del valor exportado; en 1890, el 51%. "
+        "En veinte años pasa de rubro marginal a mayoritario.\nEl resto de la tabla "
+        "se mueve en consecuencia: la minería de plata y cobre cae de 52% a 28% y "
+        "el trigo, de 24% a 9%.\nLa nota entrega el hecho que ordena el cambio: "
+        "Tarapacá y Antofagasta se incorporan al territorio nacional tras la Guerra "
+        "del Pacífico, entre 1879 y 1883, justo en medio de esos dos cortes.",
+        [
+            ("La industrialización del país reemplaza a la exportación", "Las tablas no registran producción industrial ni su peso en el comercio exterior."),
+            ("El trigo desaparece por completo de las exportaciones", "Baja a 9% en 1890 y a 5% en 1910, pero no desaparece."),
+            ("Los ingresos fiscales dejan de depender del comercio exterior", "La Tabla 2 muestra lo contrario: la dependencia aumenta."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "Al comparar ambas tablas entre 1870 y 1910, ¿qué relación aparece entre "
+        "exportaciones e ingresos fiscales?",
+        "El fisco pasa a depender del mismo producto que las exportaciones",
+        "Las dos series se mueven juntas. En 1870 el salitre es 3% de lo exportado "
+        "y 2% de los ingresos fiscales; en 1910, 68% y 53% respectivamente.\nEl "
+        "vínculo es directo y la Tabla 2 lo nombra: lo que el fisco recauda son "
+        "derechos sobre el salitre, es decir un impuesto a su exportación.\nEl "
+        "resultado es una hacienda pública atada a un solo producto: cuando el "
+        "salitre se vende bien hay presupuesto, y cuando no, el problema es "
+        "inmediatamente fiscal.",
+        [
+            ("El fisco se independiza del comercio exterior mediante impuestos internos", "Los impuestos internos caen de 37% a 18% en el período."),
+            ("Los ingresos fiscales crecen sin relación con lo exportado", "Las dos series avanzan a la par entre 1870 y 1910."),
+            ("El fisco reparte su recaudación entre los cuatro rubros de la Tabla 1", "La Tabla 2 solo identifica un producto: el salitre."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "La nota indica que el precio del salitre se fijaba en mercados europeos. "
+        "Junto con la Tabla 2, ¿qué riesgo permite anticipar?",
+        "Una caída del precio golpearía directamente al presupuesto",
+        "La Tabla 2 muestra que en 1910 más de la mitad de los ingresos ordinarios "
+        "provenía de los derechos sobre el salitre. La nota agrega que el precio de "
+        "ese producto se fijaba fuera del país.\nCombinadas, las dos informaciones "
+        "describen una hacienda pública expuesta: una variable que el Estado "
+        "chileno no controla determina la mayor parte de lo que puede gastar.\nEse "
+        "es exactamente el problema que enfrentará el país cuando el salitre "
+        "sintético desplace al natural después de la Primera Guerra Mundial.",
+        [
+            ("El país perdería el control militar sobre Tarapacá", "El riesgo que se sigue de las tablas es fiscal, no territorial."),
+            ("Las exportaciones de trigo volverían a encabezar la serie", "Nada en la fuente permite anticipar ese retorno."),
+            ("Los impuestos internos aumentarían automáticamente", "No hay ningún mecanismo automático de compensación en la fuente."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "La nota señala que la red ferroviaria se trazó entre zonas productoras y "
+        "puertos. ¿Qué revela ese criterio de trazado?",
+        "Que la red se diseñó para servir a la exportación",
+        "Un ferrocarril puede trazarse para conectar ciudades entre sí o para sacar "
+        "carga hacia el mar, y el resultado es una red de forma distinta en cada "
+        "caso.\nLa nota describe el segundo diseño: los 5.900 kilómetros de 1910 "
+        "unen zonas productoras con puertos.\nEso es coherente con lo que muestran "
+        "las tablas. Una economía cuyo ingreso depende de vender afuera invierte en "
+        "la infraestructura que reduce el costo de llegar al embarque, no "
+        "necesariamente en la que integra el mercado interno.",
+        [
+            ("Que el objetivo principal era comunicar las ciudades del interior", "El trazado descrito une producción con puertos, no ciudades entre sí."),
+            ("Que el ferrocarril fue financiado por los países compradores", "La nota no informa sobre el origen del financiamiento."),
+            ("Que la red se construyó después del auge del salitre", "La expansión ocurre entre 1870 y 1910, durante ese auge."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "medio",
+        "Un estudiante concluye de la Tabla 1 que Chile exportó menos trigo en 1910 "
+        "que en 1850. ¿Permite la fuente afirmarlo?",
+        "No, porque la tabla entrega participación y no cantidades",
+        "Las columnas de la Tabla 1 expresan porcentajes del valor total exportado. "
+        "Un rubro puede perder participación mientras crece en términos absolutos, "
+        "si el total crece más rápido que él.\nEso es justamente lo que ocurre en "
+        "el período: la irrupción del salitre multiplica el valor total exportado, "
+        "de modo que el trigo puede haber vendido más y aun así bajar de 31% a "
+        "5%.\nPara responder la pregunta harían falta cifras en toneladas o en "
+        "pesos, que la fuente no entrega.",
+        [
+            ("Sí, porque su participación cayó de 31% a 5%", "La caída de participación no informa sobre la cantidad efectivamente exportada."),
+            ("Sí, porque el salitre reemplazó al trigo en los mismos mercados", "La fuente no indica que compitieran por los mismos compradores."),
+            ("No, porque la tabla no incluye el año 1910", "Sí lo incluye; el problema es la unidad en que están los datos."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "¿Qué lugar ocupaba Chile en la economía atlántica del siglo XIX, según lo "
+        "que muestran estas tablas?",
+        "El de proveedor de materias primas a economías industriales",
+        "Las cuatro filas de la Tabla 1 están compuestas por productos primarios: "
+        "trigo, harina, plata, cobre y salitre. No aparece ningún rubro "
+        "manufacturado.\nLa nota completa el cuadro: el salitre se vendía casi por "
+        "completo a mercados europeos, que además fijaban su precio.\nEse es el "
+        "lugar típico de las economías latinoamericanas en la división "
+        "internacional del trabajo del siglo XIX: exportan lo que la "
+        "industrialización europea necesita —fertilizante, metal, alimento— y "
+        "compran de vuelta manufacturas y capitales.",
+        [
+            ("El de un mercado cerrado al comercio internacional", "Las tablas describen una economía volcada por completo hacia la exportación."),
+            ("El de una potencia industrial que exportaba manufacturas", "Ningún rubro de la Tabla 1 corresponde a productos manufacturados."),
+            ("El de un país que fijaba los precios de sus productos", "La nota señala que el precio del salitre se fijaba en mercados europeos."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "Un texto sostiene que la Guerra del Pacífico explica por sí sola el cambio "
+        "de la estructura exportadora chilena. ¿Qué matiz exigen las tablas?",
+        "La minería y el trigo ya venían perdiendo peso antes de 1879",
+        "La guerra es decisiva: sin la incorporación de Tarapacá y Antofagasta el "
+        "salitre no habría pasado del 3% al 51% del valor exportado.\nPero la serie "
+        "muestra que dos de los tres rubros ya se movían antes. Entre 1850 y 1870 "
+        "el trigo cae de 31% a 24%, y esa caída es previa al conflicto y responde a "
+        "otras causas, como el desarrollo agrícola de los mercados que Chile "
+        "abastecía.\nLa precisión importa: la guerra aceleró y amplificó un "
+        "desplazamiento que en parte estaba en curso, en lugar de originarlo "
+        "entero.",
+        [
+            ("La estructura exportadora no cambió en todo el período", "Cambió profundamente: el salitre pasa de 0% a 68%."),
+            ("El salitre ya representaba la mitad de las exportaciones en 1870", "En 1870 representaba el 3%."),
+            ("El cambio se produjo únicamente después de 1890", "El salto principal ocurre entre 1870 y 1890."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "¿Qué NO permite concluir esta fuente sobre la economía chilena del "
+        "período?",
+        "Si la riqueza del salitre se distribuyó entre la población",
+        "Las tablas informan sobre dos cosas: qué se exportaba y de dónde salían "
+        "los ingresos del fisco. Ambas son magnitudes agregadas.\nNada en ellas "
+        "indica quién percibió las utilidades de las salitreras, qué salarios se "
+        "pagaron en las oficinas, ni en qué se gastaron los derechos recaudados por "
+        "el Estado.\nEs una limitación importante, porque el auge exportador "
+        "convive en Chile con la cuestión social urbana, y las dos cosas no se "
+        "contradicen: un país puede exportar mucho y repartir mal.",
+        [
+            ("Qué proporción del valor exportado aportaba el salitre en 1890", "La Tabla 1 lo entrega directamente: 51%."),
+            ("Cómo evolucionaron los impuestos internos entre 1870 y 1910", "La Tabla 2 los sigue en los tres cortes: 37%, 21% y 18%."),
+            ("En qué década el salitre superó a la minería de plata y cobre", "Se obtiene comparando ambas columnas entre 1870 y 1890."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "La Tabla 2 muestra que los impuestos internos caen de 37% a 18% del "
+        "ingreso fiscal. ¿Qué interpretación de ese dato es coherente con la "
+        "fuente?",
+        "Su peso relativo cae porque otro ingreso creció mucho más",
+        "Una participación puede caer sin que la magnitud disminuya. Basta con que "
+        "otro componente del total crezca más rápido.\nEso es lo que la tabla "
+        "registra: los derechos sobre el salitre pasan de 2% a 53% y desplazan a "
+        "los demás en el reparto del total.\nLa fuente no permite saber si los "
+        "impuestos internos crecieron, se mantuvieron o cayeron en términos "
+        "absolutos: solo muestra que perdieron importancia relativa dentro de un "
+        "presupuesto que cambió de composición.",
+        [
+            ("Que el Estado eliminó progresivamente los impuestos internos", "Siguen aportando el 18% en 1910: no fueron eliminados."),
+            ("Que la población contribuyó cada vez menos en términos absolutos", "La tabla entrega proporciones y no permite afirmar nada sobre montos."),
+            ("Que las aduanas reemplazaron a los impuestos internos", "Las otras aduanas también pierden participación, de 61% a 29%."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_chile_xix", "dificil",
+        "Si estas cifras provinieran de las memorias anuales del Ministerio de "
+        "Hacienda, ¿qué precaución exigiría su uso?",
+        "Son cifras del propio Estado sobre su gestión y su ingreso",
+        "Una memoria ministerial cumple dos funciones a la vez: informa y rinde "
+        "cuenta. Se escribe para el Congreso y para la opinión pública, y su autor "
+        "es el mismo cuya administración se evalúa.\nEso incide en qué se destaca y "
+        "cómo se agrupa. Categorías como otras aduanas o ingresos ordinarios son "
+        "decisiones de clasificación, y cambiarlas puede alterar el aspecto de una "
+        "serie sin que ningún número sea falso.\nLa precaución no es descartar la "
+        "fuente, que suele ser la mejor disponible, sino conocer sus definiciones y "
+        "contrastarla con registros de aduana o con series elaboradas por terceros.",
+        [
+            ("Deberían descartarse por provenir del Estado interesado", "Las estadísticas oficiales son fuente ordinaria del trabajo histórico; se contrastan, no se descartan."),
+            ("Solo serían utilizables si las hubiera publicado un país extranjero", "El origen extranjero no garantiza mejores definiciones ni menos interés."),
+            ("Su carácter numérico las vuelve independientes de toda interpretación", "Toda cifra supone una definición previa de qué se cuenta y cómo se agrupa."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_temporal", "medio",
+        "Entre 1870 y 1890 el salitre pasa de 3% a 51% de las exportaciones "
+        "chilenas. ¿Cómo se clasifica ese cambio según su ritmo?",
+        "Como un cambio de media duración, de dos décadas",
+        "Los ritmos del análisis histórico se ordenan por escala: el acontecimiento "
+        "dura días o meses, la media duración abarca décadas y la larga duración se "
+        "extiende por siglos.\nUna transformación completa de la estructura "
+        "exportadora en veinte años cae en el tramo intermedio: es demasiado "
+        "extensa para ser un acontecimiento y demasiado breve para ser un proceso "
+        "secular.\nDentro de ella hay además un acontecimiento identificable —la "
+        "Guerra del Pacífico, entre 1879 y 1883— que opera como detonante de un "
+        "cambio de escala mayor que él mismo.",
+        [
+            ("Como un acontecimiento, porque lo desencadena una guerra", "La guerra es el acontecimiento; el cambio de estructura que produce se despliega por décadas."),
+            ("Como un proceso de larga duración, porque altera la economía", "La larga duración se mide en siglos, no en veinte años."),
+            ("Como un ciclo que se repite cada veinte años", "La serie no muestra ninguna repetición: el desplazamiento es en una sola dirección."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "facil",
+        "Según la Fuente 1, ¿qué encontró el inspector en el conventillo más "
+        "numeroso que recorrió?",
+        "Ciento cuarenta piezas con una llave de agua y dos letrinas",
+        "El informe entrega la cifra con precisión: ciento cuarenta piezas en torno "
+        "a un patio de tierra, una sola llave de agua y dos letrinas "
+        "comunes.\nAgrega que en cada pieza dormían entre cuatro y siete personas, "
+        "de modo que el número de habitantes por servicio sanitario era muy alto. "
+        "Esas condiciones son las que el texto asocia a la mortalidad infantil "
+        "registrada por las parroquias.",
+        [
+            ("Cuarenta piezas con agua y desagüe en cada una", "El informe describe una sola llave de agua para todo el conventillo."),
+            ("Ciento cuarenta piezas construidas según la ordenanza municipal", "El inspector señala justamente la falta de condiciones, no su cumplimiento."),
+            ("Un patio con dos llaves de agua y catorce letrinas", "Las cifras del informe son una llave y dos letrinas."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "facil",
+        "Según la Fuente 2, ¿para qué reunían una cuota semanal los obreros "
+        "tipógrafos?",
+        "Para que ningún socio quedara sin médico ni sepultura",
+        "La circular lo declara como la razón de existir de la sociedad: reunir una "
+        "cuota semanal para que ningún socio quede sin médico ni sin sepultura.\nEl "
+        "texto explica antes por qué hacía falta: se pagaba por día trabajado, de "
+        "modo que enfermar significaba quedarse sin salario, y no había ninguna "
+        "previsión que cubriera un entierro. Eso es exactamente lo que hacían las "
+        "sociedades de socorros mutuos del período.",
+        [
+            ("Para financiar una huelga de los obreros de imprenta", "La circular no menciona ninguna huelga ni fondo de resistencia."),
+            ("Para comprar en conjunto los alimentos a menor precio", "La compra colectiva no aparece entre los fines que declara."),
+            ("Para pagar el arriendo de los socios sin trabajo", "El destino declarado es médico y sepultura, no el arriendo."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "facil",
+        "¿Qué dato entrega la Fuente 2 sobre la relación entre arriendos y "
+        "salarios?",
+        "El arriendo subió tres veces mientras el jornal no cambió",
+        "La circular contrapone las dos series: el arriendo de una pieza en el "
+        "conventillo ha subido tres veces en seis años, y el jornal es el mismo de "
+        "1897.\nEl argumento no depende de una opinión sino de esa comparación. Si "
+        "el ingreso se mantiene y el gasto en vivienda se multiplica, el deterioro "
+        "no requiere explicarse por la conducta de quien lo sufre.",
+        [
+            ("Ambos subieron al mismo ritmo durante seis años", "La circular sostiene lo contrario: el jornal no se movió."),
+            ("El jornal subió pero no alcanzó a cubrir el arriendo", "El texto afirma que el jornal es el mismo de 1897."),
+            ("El arriendo bajó y aun así el salario no alcanzaba", "El texto indica que el arriendo subió tres veces."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "¿En qué coinciden y en qué difieren las dos fuentes respecto de las "
+        "condiciones del conventillo?",
+        "Coinciden en describirlas y difieren en su causa",
+        "Ninguna de las dos niega los hechos. El inspector cuenta piezas, letrinas "
+        "y mortalidad; la circular habla del cuarto en que a los obreros los "
+        "obligan a dormir.\nLa discrepancia está en la explicación. La Fuente 1 "
+        "atribuye buena parte de la miseria a hábitos de intemperancia y desorden "
+        "doméstico; la Fuente 2 la atribuye a un jornal que no cubre arriendo, "
+        "alimento y remedios en el mismo mes.\nDistinguir el hecho compartido de la "
+        "causa en disputa es lo que permite leer bien un par de fuentes como este.",
+        [
+            ("Coinciden en la causa y difieren en la solución propuesta", "La causa es justamente el punto en disputa entre ambas."),
+            ("La Fuente 2 niega las condiciones que describe la Fuente 1", "La circular no las niega: discute a quién se le atribuyen."),
+            ("Difieren en la descripción de los hechos materiales", "Ambas describen el mismo tipo de vivienda y hacinamiento."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "La Fuente 1 recomienda una vigilancia moral sobre las poblaciones. ¿Qué "
+        "diagnóstico sostiene esa recomendación?",
+        "Que la conducta de los habitantes causa parte de la miseria",
+        "El inspector separa dos causas. Reconoce las materiales —falta de agua y "
+        "desagüe— y por eso pide exigirlas a los propietarios.\nPero agrega que "
+        "ninguna obra material corrige los hábitos de intemperancia y desorden "
+        "doméstico que dice haber observado, y que esos hábitos explican buena "
+        "parte de la miseria. La vigilancia moral es la medida que se sigue de ese "
+        "segundo diagnóstico.\nEs una manera de argumentar frecuente en la época: "
+        "convierte un problema de ingresos y vivienda en un problema de costumbres "
+        "de los pobres.",
+        [
+            ("Que los propietarios incumplen las ordenanzas de construcción", "De ese diagnóstico se sigue exigirles agua y desagüe, no vigilar a los habitantes."),
+            ("Que las parroquias no registran bien la mortalidad infantil", "El inspector usa esos registros como dato válido, no los cuestiona."),
+            ("Que el municipio carece de inspectores suficientes", "El informe no plantea un problema de dotación municipal."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "¿Con qué estrategia responde la Fuente 2 a la acusación de que la miseria "
+        "proviene de los vicios de los obreros?",
+        "Contrapone cifras de arriendo y jornal al juicio moral",
+        "La circular anuncia el método antes de aplicarlo: se ha publicado que "
+        "nuestra miseria proviene de nuestros vicios, respondamos con números.\nY "
+        "los números son los que entrega enseguida: el arriendo subió tres veces en "
+        "seis años, el jornal es el de 1897, y el salario no cubre arriendo, "
+        "alimento y remedios en el mismo mes.\nAl desplazar la discusión de la "
+        "conducta a las cuentas, obliga a su adversario a rebatir hechos "
+        "verificables en lugar de impresiones sobre las costumbres ajenas.",
+        [
+            ("Niega que existan condiciones insalubres en los conventillos", "La circular menciona expresamente el cuarto en que los obligan a dormir."),
+            ("Acusa al inspector de haber falsificado su informe", "No cuestiona la veracidad del informe sino su explicación."),
+            ("Sostiene que la culpa corresponde a otros oficios y no al suyo", "No traslada la responsabilidad a otros trabajadores."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "La Fuente 2 afirma que cuando enferman no hay salario porque se paga por "
+        "día trabajado. ¿Qué rasgo del trabajo de la época describe?",
+        "La ausencia de toda protección frente a la enfermedad",
+        "El pago por día trabajado significa que el riesgo de enfermar recae "
+        "íntegramente sobre el trabajador: no hay licencia, ni subsidio, ni "
+        "continuidad del ingreso.\nLa circular añade el otro extremo de la vida: al "
+        "morir tampoco hay entierro si la sociedad no lo costea.\nEse vacío es "
+        "justamente lo que las sociedades de socorros mutuos vinieron a llenar con "
+        "aportes de los propios trabajadores, décadas antes de que existiera "
+        "legislación social en Chile.",
+        [
+            ("La existencia de un seguro obligatorio de enfermedad", "La circular describe precisamente su ausencia."),
+            ("La preferencia de los obreros por el trabajo a destajo", "No se plantea como una elección sino como la condición impuesta."),
+            ("La obligación del empleador de costear los funerales", "El entierro lo costea la sociedad de socorros mutuos, no el empleador."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "medio",
+        "¿Qué tienen en común la sociedad de socorros mutuos de la Fuente 2 y el "
+        "problema que describe la Fuente 1?",
+        "Ambas remiten a la ausencia de previsión social del Estado",
+        "El inspector describe un vecindario donde la mortalidad infantil es la que "
+        "cabía esperar de tales condiciones, y su única herramienta es exigir obras "
+        "a los propietarios y vigilar costumbres.\nLa circular describe "
+        "trabajadores que costean con su propia cuota semanal lo que hoy cubriría "
+        "un sistema de salud y previsión.\nLas dos fuentes, desde posiciones "
+        "enfrentadas, muestran el mismo vacío: no existía en Chile un aparato "
+        "estatal que se hiciera cargo de la salud, la vivienda y el riesgo de los "
+        "trabajadores urbanos.",
+        [
+            ("Ambas proponen que el Estado asuma la vivienda obrera", "Ninguna de las dos formula esa propuesta."),
+            ("Ambas responsabilizan a los propietarios de conventillos", "La Fuente 1 divide la responsabilidad y la Fuente 2 apunta al salario."),
+            ("Ambas describen una situación que ya estaba mejorando", "Ninguna sugiere una mejora en curso."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "El inspector afirma que la mortalidad infantil del sector era la que cabía "
+        "esperar de tales condiciones. ¿Qué tensión introduce esa frase en su "
+        "propio informe?",
+        "Atribuye a las condiciones lo que después imputa a las costumbres",
+        "La frase establece una relación directa entre las condiciones materiales y "
+        "la mortalidad: dadas esas piezas, esa agua y esas letrinas, el resultado "
+        "era previsible.\nDos párrafos después sostiene que buena parte de la "
+        "miseria se explica por hábitos de intemperancia y desorden doméstico, y "
+        "que ninguna obra material los corrige.\nLas dos afirmaciones no se "
+        "sostienen con la misma fuerza a la vez. Si las condiciones bastan para "
+        "explicar la mortalidad, la vigilancia moral sobra; si el problema son las "
+        "costumbres, la primera frase concede demasiado. La inconsistencia es lo "
+        "que hace interesante la fuente.",
+        [
+            ("Confirma que las ordenanzas de construcción ya se cumplían", "El informe describe la falta de agua y desagüe, no su cumplimiento."),
+            ("Demuestra que los registros parroquiales eran poco confiables", "El inspector los usa como evidencia válida."),
+            ("Indica que la mortalidad infantil venía bajando en el sector", "El informe no entrega ninguna serie ni tendencia."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "La Fuente 2 cierra diciendo que no pide caridad ni vigilancia. ¿Qué "
+        "reclama al rechazar ambas cosas?",
+        "Ser tratada como parte que argumenta y no como objeto de tutela",
+        "Caridad y vigilancia comparten un supuesto: que el obrero es alguien sobre "
+        "quien se decide, sea para socorrerlo o para corregirlo.\nLa circular "
+        "rechaza las dos y pone en su lugar otra cosa: cuentas, comparaciones de "
+        "precios y una exigencia de que se reconozca un hecho. Está reclamando el "
+        "lugar de quien discute, no el de quien es administrado.\nEse "
+        "desplazamiento es lo característico del mutualismo del período. La "
+        "sociedad se financia con cuotas propias, no con limosna, y por eso puede "
+        "presentarse ante la opinión pública como interlocutor.",
+        [
+            ("Que el Estado asuma de inmediato la construcción de viviendas", "La circular no formula esa demanda."),
+            ("Que se prohíba el trabajo de doce horas mediante una ley", "Menciona la jornada como dato, pero no pide su prohibición."),
+            ("Que las parroquias dejen de registrar la mortalidad del sector", "Los registros parroquiales no aparecen en la circular."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "¿Qué precaución exige que la Fuente 1 sea un informe de un funcionario a "
+        "su municipio?",
+        "Fue escrita para fundar una medida que el propio autor propone",
+        "Un informe administrativo no es un registro desinteresado: termina en una "
+        "recomendación, y todo lo anterior está dispuesto para sostenerla.\nAquí la "
+        "recomendación es doble —exigir agua y desagüe a los propietarios y "
+        "establecer una vigilancia moral—, y el diagnóstico sobre los hábitos de "
+        "los habitantes es lo que hace necesaria la segunda parte.\nEso no invalida "
+        "las cifras del informe, que probablemente sean su parte más sólida. Obliga "
+        "a separar lo que el inspector contó de lo que interpretó, y a contrastar "
+        "la interpretación con fuentes de otro origen, como la propia circular "
+        "obrera.",
+        [
+            ("Fue escrita mucho después de los hechos que describe", "El inspector relata un recorrido de seis semanas que acaba de hacer."),
+            ("Debe descartarse por provenir de la autoridad municipal", "Sesgo no equivale a falsedad: una fuente interesada se contrasta, no se descarta."),
+            ("No permite conocer las condiciones materiales del conventillo", "Es justamente lo que mejor documenta: piezas, agua y letrinas."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "Un texto sostiene que la cuestión social chilena fue un problema "
+        "exclusivamente sanitario. ¿Cómo se comporta esa afirmación frente a este "
+        "par de fuentes?",
+        "Queda corta: ambas remiten también a salarios y jornada",
+        "Lo sanitario está presente y es grave: agua, letrinas, hacinamiento, "
+        "mortalidad infantil.\nPero la Fuente 2 introduce dimensiones que ninguna "
+        "ordenanza de higiene alcanza: un jornal congelado desde 1897, arriendos "
+        "que triplican, jornadas de doce horas y pago por día trabajado que deja "
+        "sin ingreso a quien enferma.\nPor eso la expresión cuestión social "
+        "nombraba un conjunto y no un rubro. Reducirla a higiene reproduce, sin "
+        "quererlo, el recorte que hace la propia Fuente 1 al proponer obras y "
+        "vigilancia sin tocar el salario.",
+        [
+            ("La confirma, porque el informe de higiene es la fuente principal", "Ser una de las dos fuentes no la convierte en la descripción completa del problema."),
+            ("La contradice, porque ninguna fuente menciona condiciones sanitarias", "La Fuente 1 está dedicada casi por entero a ellas."),
+            ("No permite evaluarla, porque las fuentes son de años distintos", "Tres años de diferencia no impiden comparar: ambas describen el mismo problema."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_chile_xix", "dificil",
+        "¿Qué explica que trabajadores urbanos crearan sociedades de socorros "
+        "mutuos en el Chile de fines del siglo XIX?",
+        "Que no existía previsión estatal frente a enfermedad o muerte",
+        "La circular describe con exactitud el vacío: se paga por día trabajado, de "
+        "modo que enfermar es quedarse sin ingreso, y morir es quedar sin entierro "
+        "salvo que la sociedad lo costee.\nFrente a ese riesgo sin cobertura, la "
+        "respuesta fue organizar el auxilio entre los propios afectados: una cuota "
+        "periódica que financia médico y sepultura para cualquier socio.\nEs una "
+        "respuesta anterior a la legislación social. En el Chile de esas décadas el "
+        "Estado todavía no asumía esas funciones, y el mutualismo fue la forma en "
+        "que los trabajadores urbanos se dieron una protección que nadie les "
+        "proveía.",
+        [
+            ("Que la ley obligaba a los obreros a afiliarse a una sociedad", "La afiliación era voluntaria y la circular apela a la adhesión, no a una obligación."),
+            ("Que los empleadores financiaban esas sociedades para sus obreros", "El texto es explícito en que el fondo se forma con cuotas de los propios socios."),
+            ("Que buscaban reemplazar a los partidos políticos de la época", "La circular no plantea ninguna aspiración de representación política."),
+        ],
+    ),
+    _ql(
+        "chile_xix_cuestion_social", "his_fuentes", "medio",
+        "Una de estas fuentes es un informe oficial y la otra, una circular "
+        "gremial. ¿Qué aporta al historiador disponer de las dos?",
+        "Acceder a la mirada de quien administra y de quien padece",
+        "Cada documento fue producido desde una posición distinta dentro del mismo "
+        "problema, y eso determina qué registra. El inspector cuenta piezas, "
+        "letrinas y mortalidad, porque su trabajo es medir; la circular cuenta "
+        "jornales, arriendos y horas, porque eso es lo que su experiencia pone "
+        "delante.\nCon una sola quedaría fuera la mitad del cuadro, y además "
+        "quedaría invisible que había disputa: leído solo, el informe da la "
+        "impresión de que su diagnóstico era el único disponible en la "
+        "época.\nContrastar fuentes de distinto origen es el procedimiento que "
+        "permite reconstruir tanto los hechos como la discusión sobre ellos.",
+        [
+            ("Determinar cuál de las dos versiones es la verdadera", "El contraste no arbitra entre versiones: muestra desde dónde habla cada una."),
+            ("Confirmar las cifras de una fuente con las de la otra", "Las dos entregan datos distintos, no las mismas magnitudes."),
+            ("Establecer la fecha exacta en que comenzó la cuestión social", "Ninguna de las dos permite fijar el inicio del proceso."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "facil",
+        "Según el texto, ¿cuáles fueron los tres instrumentos principales con que "
+        "se construyó la nación en el siglo XIX?",
+        "La escuela obligatoria, el servicio militar y el ferrocarril",
+        "El texto los enumera en el segundo párrafo y describe qué hizo cada uno: "
+        "la escuela enseñó a leer en una lengua única y transmitió un relato del "
+        "pasado nacional, el servicio militar reunió a jóvenes de regiones "
+        "distintas y el ferrocarril acortó la distancia entre capital y "
+        "periferia.\nJunto al ferrocarril menciona además el telégrafo y el correo, "
+        "que operan en el mismo sentido.\nEl resultado, dice el texto, fue una "
+        "población que compartía calendario, medidas, moneda y manuales donde antes "
+        "había comarcas que se entendían a duras penas.",
+        [
+            ("El sufragio universal, los partidos y la prensa libre", "El texto no menciona ninguno de los tres entre los instrumentos de construcción nacional."),
+            ("La Iglesia, los gremios y las asambleas regionales", "Son instituciones anteriores al proceso que el texto describe, no sus herramientas."),
+            ("El censo, la aduana y el registro de propiedad", "No aparecen en la enumeración del texto."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "facil",
+        "Según el texto, ¿cuál es el principio del Estado-nación?",
+        "Que a cada nación le corresponde un Estado propio",
+        "El texto lo formula en la primera línea del argumento: a cada nación le "
+        "corresponde un Estado, y los habitantes de ese Estado forman una sola "
+        "comunidad.\nEsa comunidad se define por tres rasgos que el texto enumera: "
+        "una lengua, una historia común y unos símbolos compartidos.\nEl texto "
+        "advierte de inmediato que el enunciado parece descriptivo pero era un "
+        "programa, porque en 1800 casi ningún territorio cumplía esas condiciones.",
+        [
+            ("Que cada Estado debe reconocer a todas sus minorías", "El texto sostiene lo contrario: el modelo tendía a suprimir las diferencias internas."),
+            ("Que las fronteras deben respetarse tal como quedaron en 1800", "El texto describe justamente cómo el principio puso las fronteras en cuestión."),
+            ("Que la soberanía corresponde al monarca de cada territorio", "El principio que describe el texto radica la comunidad en la nación, no en un monarca."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "facil",
+        "Según el texto, ¿cómo se presentaron las campañas militares sobre "
+        "territorios indígenas en América?",
+        "Como la incorporación de tierras que estarían vacías",
+        "El texto lo dice de manera literal al describir el caso americano: las "
+        "campañas se presentaron como incorporación de tierras vacías.\nY marca la "
+        "contradicción que las acompaña: las repúblicas declararon ciudadanos a los "
+        "pueblos indígenas en el papel y avanzaron sobre sus territorios en la "
+        "práctica.\nLa expresión tierras vacías es lo que el historiador debe "
+        "examinar, porque describe como desocupado un territorio que estaba "
+        "habitado por quienes la campaña iba a desplazar.",
+        [
+            ("Como una respuesta a ataques de países vecinos", "El texto no las vincula con conflictos entre Estados."),
+            ("Como el cumplimiento de tratados firmados con esos pueblos", "No se mencionan tratados en el texto."),
+            ("Como misiones religiosas de evangelización", "El texto las describe como campañas militares, no religiosas."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "El texto sostiene que el principio nacional fabricó conflictos donde no "
+        "los había. ¿Cómo explica ese efecto?",
+        "Toda población que se crea nación puede reclamar un Estado",
+        "El texto deriva el efecto del propio principio. Si a cada nación le "
+        "corresponde un Estado, entonces cualquier población que se considere "
+        "nación queda habilitada para reclamar uno.\nY agrega la otra cara: toda "
+        "frontera que deje compatriotas del otro lado queda pendiente de "
+        "corrección, lo que convierte los límites heredados en reclamos "
+        "abiertos.\nSobre esa base, dice el texto, se argumentó buena parte de las "
+        "guerras europeas del siglo XIX y de las disputas limítrofes americanas.",
+        [
+            ("Porque los Estados nuevos carecían de ejércitos organizados", "El texto no atribuye los conflictos a debilidad militar."),
+            ("Porque las potencias europeas repartieron el mundo entre ellas", "El reparto colonial no es el mecanismo que el texto describe aquí."),
+            ("Porque el ferrocarril permitió trasladar tropas más rápido", "El ferrocarril aparece como instrumento de integración interna, no como causa de los conflictos."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "¿Qué quiere decir el texto al afirmar que la homogeneidad nacional exigía "
+        "suprimir diferencias?",
+        "Que quienes vivían de otro modo debían dejar de hacerlo",
+        "El razonamiento del texto es de consecuencia: si la nación se define por "
+        "una lengua, una historia y unos símbolos comunes, todo lo que no encaje en "
+        "ese conjunto se vuelve un problema a resolver.\nEl texto identifica a "
+        "quiénes alcanzó: los que hablaban otra lengua, practicaban otra religión o "
+        "vivían de otro modo.\nY precisa cómo se los describió: en Europa, minorías "
+        "enteras quedaron presentadas como obstáculos a la unidad nacional, lo que "
+        "convierte una diferencia en una amenaza.",
+        [
+            ("Que las minorías obtuvieron autonomía dentro de cada Estado", "El texto describe lo contrario: fueron tratadas como obstáculos."),
+            ("Que cada región conservó su lengua en la enseñanza pública", "La escuela obligatoria enseñó en una lengua única, según el texto."),
+            ("Que los Estados renunciaron a intervenir en la vida privada", "El proceso descrito supone exactamente esa intervención."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "El texto afirma que declarar ciudadanos a los pueblos indígenas y avanzar "
+        "sobre sus territorios ocurrió a la vez. ¿Qué muestra esa simultaneidad?",
+        "Que el reconocimiento legal no impidió el despojo material",
+        "El texto contrapone dos planos con la fórmula en el papel y en la "
+        "práctica: la ciudadanía se declaró y el avance territorial se ejecutó, sin "
+        "que lo primero frenara lo segundo.\nLa contradicción no es un descuido de "
+        "la época. Es lo que el texto viene sosteniendo: el modelo necesitaba una "
+        "comunidad homogénea, y una forma de producirla era incorporar a los "
+        "pueblos indígenas como ciudadanos individuales mientras se disolvía su "
+        "existencia colectiva sobre un territorio.\nDe ahí la utilidad de "
+        "distinguir siempre entre lo que una norma declara y lo que efectivamente "
+        "ocurre.",
+        [
+            ("Que la ciudadanía se les otorgó como compensación por las tierras", "El texto no presenta la ciudadanía como una compensación."),
+            ("Que las campañas militares fueron posteriores a la ciudadanía", "El texto las presenta como simultáneas, no como una secuencia."),
+            ("Que los pueblos indígenas participaron en el diseño del Estado", "Nada en el texto indica esa participación."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "Según el texto, ¿por qué es un error leer la nación como un dato previo "
+        "que el Estado vino a reconocer?",
+        "Porque el Estado se constituyó primero y construyó la nación después",
+        "El texto cierra invirtiendo el orden habitual del relato: primero se "
+        "constituyó el Estado y después este construyó la nación que decía "
+        "representar.\nLa evidencia que ofrece está en todo lo anterior. En 1800 "
+        "casi ningún territorio tenía una lengua, una historia y unos símbolos "
+        "compartidos; eso lo produjeron la escuela, el cuartel y el ferrocarril "
+        "durante el siglo.\nLa consecuencia importa para leer fuentes: cuando un "
+        "documento del siglo XIX invoca a la nación como una realidad antigua, está "
+        "haciendo política y no describiendo un hecho.",
+        [
+            ("Porque las naciones se formaron antes de 1800 en toda Europa", "El texto afirma justamente que casi ningún territorio cumplía esas condiciones en 1800."),
+            ("Porque los Estados del siglo XIX eran demasiado débiles para actuar", "El texto describe Estados capaces de escolarizar, reclutar y tender vías férreas."),
+            ("Porque la nación es un concepto que solo existe en el siglo XX", "El texto lo sitúa operando a lo largo de todo el siglo XIX."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "medio",
+        "¿Qué tienen en común la escuela obligatoria y el servicio militar, según "
+        "la manera en que el texto los describe?",
+        "Reúnen bajo una misma norma a personas de origen distinto",
+        "El texto describe la escuela como el lugar donde se aprende a leer en una "
+        "lengua única y se recibe un relato del pasado nacional, y el cuartel como "
+        "el lugar donde jóvenes de regiones distintas conviven bajo la misma "
+        "disciplina.\nLo común no es el contenido sino la operación: las dos toman "
+        "poblaciones diversas y las hacen pasar por una experiencia idéntica "
+        "durante un período prolongado.\nPor eso el texto las agrupa con el "
+        "ferrocarril. Las tres reducen distancias —culturales las dos primeras, "
+        "físicas la tercera— entre partes de un territorio que antes funcionaban "
+        "por separado.",
+        [
+            ("Ambas seleccionan a quienes tendrán derechos políticos", "El texto no vincula ninguna de las dos con la definición del padrón electoral."),
+            ("Ambas dependen de la iniciativa privada de cada región", "Se describen como instituciones estatales de alcance nacional."),
+            ("Ambas se aplicaron únicamente en las capitales", "Su función descrita es precisamente alcanzar a la periferia."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "El texto llama programa a lo que parecía una descripción. ¿Qué está "
+        "señalando con esa distinción?",
+        "Que el enunciado no constataba una realidad sino que la ordenaba",
+        "Una descripción se limita a registrar lo que hay; un programa fija lo que "
+        "debe llegar a haber. El texto sostiene que el principio nacional se "
+        "enunciaba en la primera forma y funcionaba en la segunda.\nEl dato que usa "
+        "para probarlo es cronológico: en 1800 casi ningún territorio europeo o "
+        "americano cumplía las condiciones que el principio daba por "
+        "existentes.\nLa distinción tiene consecuencias prácticas. Si la nación ya "
+        "existía, escolarizar y reclutar solo la revelaban; si había que "
+        "producirla, esas mismas medidas son las que la crearon, y entonces cabe "
+        "preguntar a costa de quiénes.",
+        [
+            ("Que el principio era falso y sus defensores lo sabían", "El texto no atribuye mala fe: distingue entre describir y prescribir."),
+            ("Que el principio solo se aplicó en Europa y no en América", "El texto lo aplica expresamente a los dos continentes."),
+            ("Que la nación era un asunto cultural sin efectos políticos", "El texto muestra efectos políticos de primer orden: guerras, fronteras y despojos."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "Un estudiante sostiene que, según el texto, el Estado-nación fue "
+        "únicamente un instrumento de opresión. ¿Qué le falta a esa lectura?",
+        "El texto también le atribuye integración, escuela y alfabetización",
+        "El texto dedica un párrafo entero a lo que el modelo produjo: "
+        "alfabetización en una lengua común, integración de territorios antes "
+        "incomunicados y una población que comparte calendario, medidas y "
+        "moneda.\nY otro párrafo a lo que costó: supresión de diferencias, minorías "
+        "tratadas como obstáculo, despojo de los pueblos indígenas y conflictos "
+        "fronterizos.\nQuedarse con una de las dos mitades no es leer el texto sino "
+        "elegir de él. Lo que sostiene es más incómodo: los mismos instrumentos "
+        "produjeron ambas cosas, y por eso no pueden separarse en un balance "
+        "limpio.",
+        [
+            ("El texto no menciona ningún costo del proceso nacional", "Le dedica un párrafo completo, con casos en Europa y en América."),
+            ("El texto sostiene que el proceso fue neutro en sus efectos", "No lo presenta como neutro: describe beneficios y despojos concretos."),
+            ("El texto atribuye la opresión solo a los Estados europeos", "Extiende el mismo razonamiento a las repúblicas americanas."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "El texto describe efectos en Europa y en América con el mismo argumento. "
+        "¿Qué precaución exige extender así una explicación a dos continentes?",
+        "Comprobar que el proceso operó igual en contextos distintos",
+        "El texto usa una misma lógica —producir homogeneidad exige suprimir "
+        "diferencias— para explicar el trato a las minorías europeas y el avance "
+        "sobre territorios indígenas americanos.\nLa analogía es fértil, pero los "
+        "contextos difieren en cosas que importan: en América hay conquista "
+        "colonial previa, poblaciones originarias con territorios propios y "
+        "repúblicas recién fundadas; en Europa, Estados con siglos de existencia y "
+        "minorías dentro de fronteras ya trazadas.\nExtender una explicación no es "
+        "ilegítimo. Lo que exige es mostrar que el mecanismo funcionó de verdad en "
+        "cada caso, en vez de suponerlo porque el resultado se parece.",
+        [
+            ("Descartar la comparación, porque cada país es un caso único", "Renunciar a comparar impediría cualquier explicación de alcance general."),
+            ("Aceptarla sin más, porque ambos continentes son occidentales", "La pertenencia a un mismo ámbito cultural no garantiza que el mecanismo sea el mismo."),
+            ("Comprobar únicamente que las fechas coincidan en ambos casos", "La coincidencia temporal no basta: lo que hay que verificar es el mecanismo."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "¿Qué relación establece el texto entre la construcción del Estado-nación y "
+        "las guerras del siglo XIX?",
+        "El principio nacional dio el argumento con que se justificaron",
+        "El texto es cuidadoso en cómo formula el vínculo: dice que buena parte de "
+        "las guerras europeas y de las disputas limítrofes americanas se argumentó "
+        "en esos términos.\nArgumentar en esos términos no es lo mismo que ser "
+        "causado por ellos. El principio nacional entregó el lenguaje con que se "
+        "planteó el reclamo —compatriotas del otro lado de la frontera, una nación "
+        "sin su Estado—, sin que el texto afirme que fuera el único motor de esos "
+        "conflictos.\nLa distinción es la que separa una causa de una "
+        "justificación, y conviene sostenerla al leer cualquier declaración de "
+        "guerra.",
+        [
+            ("Sostiene que el nacionalismo fue la única causa de esas guerras", "El texto dice que se argumentaron en esos términos, que es una afirmación más acotada."),
+            ("Sostiene que las guerras impidieron la formación de los Estados", "El texto no plantea que hayan obstaculizado el proceso."),
+            ("Sostiene que las disputas limítrofes americanas fueron ajenas al principio nacional", "Las incluye expresamente entre los conflictos argumentados en esos términos."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "Este texto fue escrito hoy sobre procesos del siglo XIX. ¿Qué "
+        "característica suya debe tener presente quien lo usa como fuente?",
+        "Es una interpretación posterior, no un documento de la época",
+        "El texto no es un vestigio del siglo XIX: es una elaboración actual que "
+        "ordena e interpreta lo ocurrido, lo que en el oficio se llama fuente "
+        "secundaria.\nEso se nota en su lenguaje y en sus preguntas. Expresiones "
+        "como el costo que sus promotores rara vez contabilizaron o tierras que "
+        "estarían vacías señalan una distancia crítica que ningún actor del período "
+        "habría escrito.\nNo lo vuelve menos útil. Lo sitúa: sirve para comprender "
+        "cómo se explica hoy el proceso, y para reconstruir cómo lo vivieron sus "
+        "contemporáneos hay que ir además a documentos producidos entonces.",
+        [
+            ("Es una fuente primaria producida durante el proceso descrito", "Fue escrito mucho después de los hechos que analiza."),
+            ("Su carácter posterior lo vuelve inservible para el análisis", "Las fuentes secundarias son parte ordinaria del trabajo histórico."),
+            ("Al ser posterior a los hechos, está libre de interpretación", "Ocurre lo contrario: es enteramente interpretación, y por eso hay que contrastarla."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_estado_nacion", "dificil",
+        "Si el orden fue Estado primero y nación después, ¿qué habría que examinar "
+        "para explicar por qué un Estado del siglo XIX no logró consolidar su "
+        "nación?",
+        "Si sus instrumentos alcanzaron efectivamente a todo el territorio",
+        "El texto identifica los medios concretos del proceso: escuela obligatoria, "
+        "servicio militar, ferrocarril, telégrafo y correo.\nSi la nación es el "
+        "producto de esos instrumentos, un resultado incompleto remite a ellos: "
+        "dónde llegó la escuela y dónde no, qué proporción de jóvenes pasó por el "
+        "cuartel, hasta qué punto de la periferia llegó la vía.\nEl razonamiento "
+        "inverso —atribuirlo a que esa nación no existía de antemano— es el que el "
+        "texto rechaza, porque supone dada justamente la realidad que sostiene que "
+        "hubo que producir.",
+        [
+            ("Si esa nación existía realmente antes de que el Estado se formara", "Es la premisa que el texto descarta: la nación es producto y no antecedente."),
+            ("Si el país había alcanzado antes su independencia política", "El texto no vincula el éxito del proceso con la fecha de independencia."),
+            ("Si el principio nacional era conocido por sus dirigentes", "El texto lo describe como un programa extendido en todo el período, no como un saber escaso."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "facil",
+        "Según la Tabla 1, ¿cuál de los cuatro países tenía la menor alfabetización "
+        "en 1850?",
+        "El país B, con 25%",
+        "La columna de alfabetización de 1850 entrega 58%, 25%, 61% y 47% para A, "
+        "B, C y D respectivamente.\nEl valor más bajo es el 25% del país B, que "
+        "además es el único por debajo del 40%.\nConviene retener el dato porque B "
+        "es también uno de los dos países que se unifican tarde, en 1861, y la "
+        "tabla permite relacionar ambas cosas.",
+        [
+            ("El país D, con 47%", "Es el segundo más bajo de 1850, no el menor."),
+            ("El país A, con 58%", "Está por encima de B y de D en ese año."),
+            ("El país C, con 61%", "Es el valor más alto de la columna de 1850."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "facil",
+        "Según la Tabla 2, ¿qué país estableció el servicio militar obligatorio "
+        "mucho antes que los demás?",
+        "El país C, en 1814",
+        "La Tabla 2 da 1872 para A, 1875 para B y 1814 para C, mientras que en D no "
+        "rige en el período.\nLa diferencia con los otros dos que sí lo tienen es "
+        "de casi sesenta años.\nEl dato es interesante porque C se unifica recién "
+        "en 1871: la conscripción existía en el territorio mucho antes de que "
+        "existiera el Estado nacional que después la heredó.",
+        [
+            ("El país A, en 1872", "Es más de medio siglo posterior al de C."),
+            ("El país B, en 1875", "Es el más tardío de los tres que lo establecen."),
+            ("El país D, junto con la instrucción obligatoria en 1870", "La nota aclara que D mantuvo un ejército voluntario en todo el período."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "facil",
+        "¿Cuántos kilómetros de vía férrea sumó el país C entre 1850 y 1910?",
+        "55.100 kilómetros",
+        "La Tabla 1 registra 5.900 kilómetros en 1850 y 61.000 en 1910 para el país "
+        "C.\nLa diferencia entre ambos valores es 61.000 − 5.900 = 55.100 "
+        "kilómetros construidos en el período.\nEs el mayor crecimiento absoluto de "
+        "la tabla, y coincide con las décadas en que C completa su unificación "
+        "política.",
+        [
+            ("61.000 kilómetros", "Es el total de 1910, no lo construido en el período."),
+            ("66.900 kilómetros", "Sumó ambos valores en lugar de restarlos."),
+            ("37.000 kilómetros", "Corresponde al total de 1910 del país A."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "¿Qué tendencia común a los cuatro países muestra la Tabla 1 entre 1850 y "
+        "1910?",
+        "Sube la alfabetización y se expande la red ferroviaria",
+        "Las cuatro filas se mueven en el mismo sentido en las dos dimensiones "
+        "medidas: la alfabetización sube en todos los casos y los kilómetros de vía "
+        "aumentan en todos.\nNo hay ninguna excepción ni ninguna reversión, lo que "
+        "permite hablar de una tendencia y no de casos sueltos.\nLas dos cosas "
+        "suelen leerse juntas porque son instrumentos del mismo proceso: la escuela "
+        "pública construye una población que comparte lengua y referencias, y el "
+        "ferrocarril integra un territorio que antes funcionaba como un conjunto de "
+        "mercados separados.",
+        [
+            ("La alfabetización sube solo en los países ya unificados en 1800", "También sube en B y en C, que se unifican en 1861 y 1871."),
+            ("La red ferroviaria crece únicamente donde hay servicio militar", "Crece también en D, donde la nota descarta el servicio obligatorio."),
+            ("Ambos indicadores se estancan tras la unificación nacional", "La tabla muestra lo contrario en los cuatro casos."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "El país B parte en 1850 con la alfabetización más baja y en 1910 sigue "
+        "siendo la más baja. ¿Qué agrega la comparación de ambos años?",
+        "Que avanzó 37 puntos y aun así no alcanzó a los demás",
+        "B pasa de 25% a 62%, es decir 37 puntos porcentuales, un avance "
+        "considerable en términos absolutos.\nPero los otros tres también "
+        "avanzaron, y desde puntos de partida más altos: A llega a 96%, C a 98% y D "
+        "a 87%. La brecha de 1910 sigue siendo amplia.\nEl caso ilustra un patrón "
+        "frecuente al leer series: mejorar mucho y seguir último no son "
+        "afirmaciones contradictorias, y sostener solo una de las dos describe mal "
+        "el proceso.",
+        [
+            ("Que su rezago se explica solo por la fecha de unificación", "La tabla no permite atribuir el rezago a una única causa: C también se unifica tarde y termina primero."),
+            ("Que el avance de B fue el menor de los cuatro países", "En puntos porcentuales B avanza 37 y A avanza 38: son magnitudes comparables."),
+            ("Que la alfabetización de B retrocedió respecto de 1850", "Sube de 25% a 62%: no hay retroceso."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "Comparando las dos tablas, ¿qué tienen en común las fechas de instrucción "
+        "primaria obligatoria de los cuatro países?",
+        "Se concentran todas entre 1870 y 1882",
+        "La Tabla 2 registra 1882, 1877, 1871 y 1870: las cuatro caen en un tramo "
+        "de doce años.\nLa coincidencia es llamativa porque los cuatro países "
+        "tienen trayectorias distintas: dos están unificados desde antes de 1800 y "
+        "dos se unifican recién en 1861 y 1871.\nEsa simultaneidad es una de las "
+        "señales del proceso: la escuela primaria obligatoria se generaliza en "
+        "Europa en las mismas décadas, como herramienta con que cada Estado forma "
+        "ciudadanos que comparten lengua, historia y símbolos.",
+        [
+            ("Se dictan siempre después del servicio militar obligatorio", "En A la instrucción es de 1882 y el servicio de 1872, pero en D no hay servicio militar en el período."),
+            ("Coinciden exactamente con el año de unificación de cada país", "Solo C coincide, en 1871; en los demás las fechas difieren."),
+            ("Se dictan antes de que la alfabetización superara el 50%", "En A, C y D la alfabetización de 1850 ya estaba cerca o por encima de esa cifra."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "¿Qué papel cumplían la escuela obligatoria y el servicio militar en la "
+        "construcción del Estado-nación, según lo que sugieren ambas tablas?",
+        "Reunían a la población en instituciones estatales comunes",
+        "Las dos instituciones tienen en común algo que la tabla deja ver por su "
+        "alcance: hacen pasar por una misma experiencia a personas de distintas "
+        "regiones, oficios y dialectos.\nLa nota final entrega la pieza que lo "
+        "confirma: en estas décadas los cuatro Estados reemplazaron las lenguas y "
+        "dialectos regionales por una lengua nacional única en la enseñanza "
+        "pública.\nAhí está el mecanismo. Una nación no se hereda ya formada: se "
+        "construye con instituciones que producen una población homogénea donde "
+        "antes había comunidades locales.",
+        [
+            ("Aumentaban la recaudación de impuestos del Estado central", "Ninguna de las dos tablas informa sobre recaudación fiscal."),
+            ("Reemplazaban a los gobiernos regionales en la administración", "Las tablas no describen la organización administrativa del territorio."),
+            ("Servían para seleccionar a quienes tendrían derecho a voto", "Nada en las tablas vincula estas instituciones con el sufragio."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "medio",
+        "Un estudiante concluye de la Tabla 1 que el país C era el más poblado de "
+        "los cuatro en 1910. ¿Permite la fuente afirmarlo?",
+        "No, porque ninguna columna informa sobre población",
+        "La Tabla 1 entrega fecha de unificación, alfabetización y kilómetros de "
+        "vía. La población no aparece en ninguna de sus columnas.\nEs probable que "
+        "el estudiante razone desde los 61.000 kilómetros de vía de C, el valor más "
+        "alto de la tabla. Pero la extensión de una red ferroviaria depende también "
+        "de la superficie del territorio, de su geografía y de la inversión "
+        "disponible.\nLa regla es la misma frente a cualquier tabla: solo se puede "
+        "concluir sobre las variables que están medidas.",
+        [
+            ("Sí, porque tiene la red ferroviaria más extensa", "La extensión de la red no es un indicador de población."),
+            ("Sí, porque alcanza la mayor alfabetización en 1910", "El porcentaje de alfabetización no dice cuántas personas hay."),
+            ("No, porque la tabla no incluye el año 1910", "Sí lo incluye; el problema es que no mide población."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "dificil",
+        "El país D alcanza 87% de alfabetización en 1910 sin haber tenido servicio "
+        "militar obligatorio. ¿Qué se sigue de ese caso?",
+        "Que la conscripción no era imprescindible para ese resultado",
+        "D es el único de los cuatro sin servicio militar obligatorio y termina el "
+        "período con 87%, muy por encima del 62% de B, que sí lo tuvo desde "
+        "1875.\nEl caso funciona como contraejemplo: si la conscripción fuera "
+        "condición necesaria para alfabetizar, D no podría haber llegado donde "
+        "llegó.\nLo que no permite es la conclusión opuesta. Que no sea "
+        "imprescindible no significa que no haya contribuido donde existió, y con "
+        "cuatro casos la tabla no alcanza para medir ese aporte.",
+        [
+            ("Que el servicio militar obligatorio reducía la alfabetización", "C tuvo conscripción desde 1814 y alcanza el valor más alto de 1910."),
+            ("Que la instrucción obligatoria de D fue la más eficaz de las cuatro", "C parte más abajo que D en 1850 y termina más arriba en 1910."),
+            ("Que la conscripción no tenía relación alguna con la escuela", "El caso muestra que no era imprescindible, no que fuera irrelevante."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "dificil",
+        "Un texto sostiene que la unificación política tardía condena a un país a "
+        "quedarse atrás en alfabetización. ¿Cómo se comporta esa afirmación frente "
+        "a la Tabla 1?",
+        "La contradice: C se unifica en 1871 y encabeza 1910",
+        "Los dos países de unificación tardía son B, en 1861, y C, en 1871. Si la "
+        "afirmación fuera correcta, ambos deberían aparecer rezagados en 1910.\nB "
+        "lo está, con 62%. Pero C alcanza 98%, el valor más alto de la tabla, por "
+        "encima incluso de los dos países unificados desde antes de 1800.\nBasta un "
+        "caso para que la afirmación deje de sostenerse como regla. Lo que la tabla "
+        "sugiere es más modesto: la fecha de unificación no determina por sí sola "
+        "el resultado, y hay que buscar los factores en otra parte.",
+        [
+            ("La confirma: los dos países tardíos terminan últimos en 1910", "C se unifica tarde y termina primero, con 98%."),
+            ("No permite evaluarla, porque no registra fechas de unificación", "La primera columna de la Tabla 1 las entrega para los cuatro países."),
+            ("La confirma en parte, porque B parte del valor más bajo en 1850", "El punto de partida bajo de B es un dato de 1850 y no prueba nada sobre el efecto de la unificación."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "dificil",
+        "¿Qué relación permiten y qué relación NO permiten establecer estas dos "
+        "tablas entre instrucción obligatoria y alfabetización?",
+        "Permiten ver que coinciden en el tiempo, no que una cause la otra",
+        "Las tablas sitúan las leyes de instrucción obligatoria entre 1870 y 1882, "
+        "dentro del período en que la alfabetización sube en los cuatro países. Esa "
+        "coincidencia temporal está a la vista.\nLo que falta para hablar de causa "
+        "es todo lo demás: la tabla no informa cuántas escuelas se construyeron, "
+        "con qué cobertura real, ni qué ocurría con la alfabetización antes y "
+        "después de cada ley por separado.\nEn A, además, la alfabetización de 1850 "
+        "ya era 58% sin ley alguna, lo que muestra que el proceso venía en marcha "
+        "antes de la norma que suele presentarse como su origen.",
+        [
+            ("Permiten establecer que la ley causó el alza de alfabetización", "Coincidir en el tiempo no basta para atribuir causa: faltan datos de cobertura y de evolución previa."),
+            ("No permiten establecer ninguna relación entre ambos fenómenos", "Sí permiten constatar la coincidencia temporal, que es una relación observable."),
+            ("Permiten establecer que la alfabetización causó las leyes", "El orden inverso tampoco puede afirmarse con estos datos."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "dificil",
+        "La nota final señala que los cuatro Estados impusieron una lengua nacional "
+        "única en la enseñanza pública. ¿Qué costo tuvo esa política, que la tabla "
+        "no registra?",
+        "La pérdida de las lenguas y dialectos regionales desplazados",
+        "La nota describe un reemplazo: donde antes se enseñaba en lenguas y "
+        "dialectos regionales, pasa a enseñarse en una lengua única.\nLa tabla mide "
+        "el resultado buscado —cuánta gente lee y escribe— y no mide lo que se "
+        "perdió en el camino: hablantes, transmisión intergeneracional y "
+        "escolarización en la lengua propia de cada región.\nEsa asimetría es "
+        "característica de las estadísticas de Estado. Miden lo que el Estado se "
+        "propuso lograr, y por eso conviene preguntarse siempre qué queda fuera del "
+        "indicador antes de leerlo como un balance del proceso.",
+        [
+            ("El aumento del gasto público destinado a la enseñanza", "El gasto no aparece en la tabla, pero tampoco es un costo del reemplazo de lenguas."),
+            ("La caída de la alfabetización en las regiones periféricas", "La tabla no desagrega por regiones y muestra alzas en todos los países."),
+            ("El retraso de la construcción ferroviaria en zonas rurales", "Nada vincula la política lingüística con el trazado de la red férrea."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_estado_nacion", "dificil",
+        "Si estas cifras provinieran de censos oficiales de cada Estado, ¿qué "
+        "precaución exigiría compararlas entre países?",
+        "Que cada Estado pudo definir la alfabetización de otro modo",
+        "Un censo no registra un hecho neutro: aplica una definición. Alfabetizado "
+        "puede significar firmar el propio nombre, leer un texto sencillo o leer y "
+        "escribir con soltura, y el porcentaje cambia mucho según cuál se use.\nLa "
+        "nota de esta tabla fija al menos un criterio compartido, la población "
+        "mayor de diez años, pero no dice qué se contó como saber leer en cada "
+        "país.\nSin esa equivalencia, una diferencia de diez puntos entre dos "
+        "Estados puede reflejar dos definiciones distintas y no dos realidades "
+        "distintas. Es el problema clásico de toda serie comparada.",
+        [
+            ("Que las cifras de un censo son siempre inventadas por el gobierno", "Sospechar de todo censo por principio no es una precaución metodológica sino su abandono."),
+            ("Que los censos del siglo XIX no cubrían a la población rural", "Nada permite suponerlo, y la tabla no distingue campo y ciudad."),
+            ("Que solo pueden compararse países con la misma fecha de unificación", "La fecha de unificación no afecta la comparabilidad de una definición estadística."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_temporal", "dificil",
+        "Los cuatro países dictan su ley de instrucción obligatoria en un tramo de "
+        "doce años, pese a tener historias distintas. ¿Qué nombre recibe ese "
+        "fenómeno en el análisis histórico?",
+        "Simultaneidad: procesos paralelos en sociedades distintas",
+        "La simultaneidad es una de las nociones temporales básicas del oficio: "
+        "consiste en advertir que fenómenos comparables ocurren al mismo tiempo en "
+        "lugares que no comparten trayectoria.\nAquí la constatación es fuerte "
+        "porque las trayectorias son abiertamente distintas: dos Estados existen "
+        "desde antes de 1800 y dos acaban de formarse, y aun así las cuatro leyes "
+        "caen entre 1870 y 1882.\nAdvertirla no explica nada por sí sola, pero "
+        "cambia la pregunta. Cuando algo ocurre a la vez en varios lugares, la "
+        "explicación difícilmente esté solo dentro de cada país.",
+        [
+            ("Larga duración: un cambio que se extiende por siglos", "El tramo es de doce años, muy por debajo de la escala de la larga duración."),
+            ("Anacronismo: aplicar categorías actuales al pasado", "No hay aquí ningún juicio con criterios de otra época."),
+            ("Periodización: dividir el tiempo según un criterio explícito", "La periodización es una herramienta de análisis, no el nombre de esta coincidencia."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "facil",
+        "Según la Fuente 1, ¿qué dos requisitos debería fijar la ley electoral?",
+        "Un censo de renta y saber leer",
+        "El diputado cierra su intervención con la propuesta concreta: que la ley "
+        "fije por ahora un censo de renta y la exigencia de saber leer.\nLos dos "
+        "requisitos aparecen juntos y en la misma frase, presentados como una "
+        "medida transitoria y no definitiva.\nEse arreglo tiene nombre en la "
+        "historia del siglo XIX: sufragio censitario, es decir, condicionado a la "
+        "fortuna del elector.",
+        [
+            ("Haber cumplido el servicio militar y saber leer", "El servicio militar no aparece mencionado en ninguna de las dos fuentes."),
+            ("Un censo de renta y estar inscrito en un partido", "Los partidos no figuran entre los requisitos que propone la Fuente 1."),
+            ("Saber leer y haber nacido en el territorio de la nación", "El lugar de nacimiento no es uno de los requisitos que plantea."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "facil",
+        "Según la Fuente 2, ¿qué mide realmente el censo de renta?",
+        "La fortuna del elector, no su capacidad",
+        "La Fuente 2 lo dice de manera directa: observa que el censo de renta no "
+        "mide capacidad alguna, sino fortuna.\nCon eso desarma el argumento de la "
+        "Fuente 1 desde adentro, porque acepta el criterio que el otro propuso —la "
+        "capacidad— y muestra que el instrumento elegido no lo mide.\nEl remate "
+        "refuerza la idea: si de verdad se examinara la capacidad, dice, a más de "
+        "un propietario habría que dejarlo fuera de la sala.",
+        [
+            ("El nivel de instrucción alcanzado por el elector", "La instrucción es el otro requisito en discusión, separado del censo de renta."),
+            ("El grado de independencia respecto de un empleador", "Esa dependencia la describe la Fuente 1, y no como algo que el censo mida."),
+            ("El interés del elector por los asuntos públicos", "Ninguna de las dos fuentes plantea que el censo mida interés."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "facil",
+        "¿En qué coinciden ambas fuentes respecto de la situación del jornalero?",
+        "En que depende económicamente de quien lo emplea",
+        "La Fuente 1 sostiene que quien no posee bienes depende para vivir de quien "
+        "lo emplea. La Fuente 2 abre su respuesta reconociéndolo: dice que el "
+        "diputado ha descrito con exactitud la situación del jornalero.\nEl hecho, "
+        "entonces, no está en disputa entre ambos.\nLo que discuten es qué se sigue "
+        "de él: para la Fuente 1 justifica postergar el voto, y para la Fuente 2, "
+        "concederlo cuanto antes.",
+        [
+            ("En que carece de interés por los asuntos públicos", "Ninguna de las dos lo afirma; la Fuente 1 aclara que no lo considera peor hombre."),
+            ("En que debería recibir educación antes que salario", "La escuela se discute en relación con el voto, no con el salario."),
+            ("En que su situación mejorará sin necesidad de leyes", "La Fuente 2 sostiene expresamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "La Fuente 1 sostiene que entregar la papeleta al jornalero es dársela a su "
+        "patrón multiplicada. ¿Qué supuesto sostiene esa afirmación?",
+        "Que quien depende económicamente no vota con libertad",
+        "El argumento encadena dos pasos: quien no posee bienes depende de quien lo "
+        "emplea, y quien depende no delibera sino que obedece.\nDe ahí se sigue la "
+        "conclusión: el voto del dependiente no expresaría su propia voluntad sino "
+        "la de su empleador, de modo que ampliar el padrón aumentaría el peso "
+        "electoral de los patrones.\nEl supuesto es lo que hace funcionar todo el "
+        "razonamiento, y es justamente donde la Fuente 2 va a apoyarse para "
+        "invertirlo.",
+        [
+            ("Que los patrones votarían varias veces en la misma elección", "La multiplicación de que habla es del peso político, no del número de papeletas por persona."),
+            ("Que los jornaleros son incapaces de comprender una elección", "La Fuente 1 aclara expresamente que no los considera peores hombres."),
+            ("Que el voto secreto todavía no estaba garantizado por la ley", "El secreto del voto no se menciona en ninguna de las dos intervenciones."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "¿Cómo responde la Fuente 2 al argumento de que la escuela debe preceder al "
+        "sufragio?",
+        "Señalando que la escuela la decidirían quienes ya votan",
+        "La Fuente 2 no niega que la instrucción sea deseable. Lo que hace es "
+        "mostrar un problema en el orden propuesto.\nSu razonamiento es circular "
+        "por donde se lo mire: la escuela la decreta el Congreso, y el Congreso lo "
+        "eligen quienes ya votan. El excluido queda entonces esperando una decisión "
+        "que depende de un cuerpo del que está excluido.\nEl remate lo dice sin "
+        "rodeos: se le pide esperar una escuela que solo construirán quienes no "
+        "tienen ningún apuro en construirla.",
+        [
+            ("Negando que la instrucción tenga alguna relación con el voto", "No lo niega: cuestiona el orden propuesto, no el valor de la escuela."),
+            ("Afirmando que la mayoría de la población ya sabía leer", "La Fuente 2 no entrega ningún dato sobre alfabetización."),
+            ("Proponiendo que la escuela quede a cargo de los propietarios", "No plantea quién debe hacerse cargo de la instrucción."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "La Fuente 1 compara al elector con el juez y el médico. ¿Con qué propósito "
+        "introduce esa comparación?",
+        "Para presentar el voto como una función que exige capacidad",
+        "La comparación está al servicio de una definición: el voto no es un premio "
+        "que se reparte, dice la Fuente 1, sino el ejercicio de una función "
+        "pública.\nSi es una función pública, sigue el argumento, corresponde "
+        "exigir idoneidad a quien la ejerce, como se le exige al juez que conozca "
+        "las leyes y al médico su ciencia.\nLa comparación hace todo el trabajo del "
+        "argumento: convierte una restricción de derechos en un requisito técnico, "
+        "que es una operación corriente en los debates censitarios del siglo XIX.",
+        [
+            ("Para mostrar que los jueces y médicos deberían gobernar", "No propone que ejerzan el gobierno: los usa como ejemplo de funciones que exigen idoneidad."),
+            ("Para sostener que el voto es un derecho natural de la persona", "Sostiene lo contrario: que es una función y no un atributo de todo hombre."),
+            ("Para reclamar mejores sueldos para los funcionarios públicos", "La remuneración de los funcionarios no aparece en la fuente."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "¿Qué tensión del siglo XIX americano queda expuesta en la frase final de "
+        "la Fuente 2 sobre la nación y los ciudadanos?",
+        "Que la nación proclamada era más amplia que el cuerpo electoral",
+        "La frase señala una distancia: se llama nación a un país entero y "
+        "ciudadanos a una fracción de él.\nEsa distancia es característica de las "
+        "repúblicas americanas del siglo XIX. Las constituciones declaraban que la "
+        "soberanía residía en la nación, y al mismo tiempo las leyes electorales "
+        "entregaban el sufragio a una minoría definida por renta, alfabetización, "
+        "sexo y edad.\nEl argumento de la Fuente 2 es que esa brecha no se cierra "
+        "sola: hace falta que la ley la cierre.",
+        [
+            ("Que la nación todavía no había alcanzado su independencia", "El debate ocurre dentro de una república ya constituida, con Congreso propio."),
+            ("Que la soberanía seguía radicada en una monarquía europea", "Ninguna de las dos fuentes discute la forma de gobierno: ambas la dan por republicana."),
+            ("Que existían dos naciones distintas dentro del mismo territorio", "La fuente habla de un país entero al que se llama nación, no de dos naciones."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "medio",
+        "Un estudiante afirma que la Fuente 1 defiende excluir para siempre a los "
+        "jornaleros del sufragio. ¿Qué precisión exige esa lectura?",
+        "La fuente propone una restricción que declara transitoria",
+        "La Fuente 1 dice explícitamente que no excluye a nadie para siempre y que "
+        "los requisitos rigen por ahora.\nLo que defiende es un orden de "
+        "precedencia: primero la escuela, después el sufragio. Leerla como "
+        "exclusión permanente le atribuye una posición que el texto no "
+        "sostiene.\nEso no vuelve inofensivo el argumento, y la Fuente 2 lo "
+        "muestra: una restricción declarada transitoria puede durar indefinidamente "
+        "si quienes deben levantarla son los mismos que se benefician de ella.",
+        [
+            ("La fuente no se pronuncia sobre la duración de la restricción", "Sí lo hace: dice que no excluye a nadie para siempre y que rige por ahora."),
+            ("La fuente propone extender el voto de inmediato a los alfabetizados", "Exige además el censo de renta, no solo saber leer."),
+            ("La fuente solo se refiere a las elecciones municipales", "El debate es sobre la ley electoral en general, sin distinguir niveles."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "¿Qué estrategia argumentativa emplea la Fuente 2 al abrir su respuesta "
+        "reconociendo que la descripción del adversario es exacta?",
+        "Acepta el hecho y disputa la conclusión que se extrae de él",
+        "La Fuente 2 concede el punto de partida: el jornalero depende de quien lo "
+        "emplea. Al concederlo, se queda discutiendo solo el paso siguiente.\nY ahí "
+        "invierte la inferencia. Si la dependencia es el problema, la pregunta "
+        "pertinente es cómo dejará de depender alguien a quien la ley niega el "
+        "único instrumento con que podría hacerse escuchar.\nEs una operación más "
+        "eficaz que negar el hecho, porque no obliga a sostener nada nuevo: la "
+        "conclusión del adversario queda sin apoyo aunque su descripción sea "
+        "correcta.",
+        [
+            ("Refuta el hecho descrito para invalidar todo el argumento", "No lo refuta: lo califica de exacto en su primera frase."),
+            ("Evita el argumento y cambia el tema hacia la educación", "La escuela entra como parte de la refutación, no como cambio de tema."),
+            ("Apela a la autoridad de la Constitución para zanjar el punto", "No invoca ninguna norma superior: discute el razonamiento del adversario."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "¿Qué límite tiene este par de fuentes para saber cómo se resolvió "
+        "finalmente el debate electoral?",
+        "Registran los argumentos, no el resultado de la votación",
+        "Las dos fuentes son intervenciones dentro de una discusión en curso: una "
+        "propone y la otra responde en la sesión siguiente.\nNada en ellas informa "
+        "qué texto se aprobó, con cuántos votos ni si la ley llegó a aplicarse. "
+        "Para eso haría falta otro tipo de fuente: el acta de votación, el texto "
+        "legal promulgado o los registros electorales posteriores.\nEs una "
+        "distinción útil frente a cualquier debate parlamentario: lo que se dijo en "
+        "la sala y lo que quedó en la ley son dos cosas que hay que establecer por "
+        "separado.",
+        [
+            ("No permiten saber qué argumentos se usaron en la discusión", "Es justamente lo que sí permiten: cada fuente expone su posición por extenso."),
+            ("No indican si el debate ocurrió en una república o una monarquía", "Ambas hablan de la República y de un Congreso electo."),
+            ("No mencionan ninguna propuesta concreta de ley", "La Fuente 1 propone un censo de renta y la exigencia de saber leer."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "Ambas fuentes invocan el ideal republicano y llegan a conclusiones "
+        "opuestas. ¿Qué muestra eso sobre las ideas políticas del siglo XIX?",
+        "Que un mismo principio admitía aplicaciones enfrentadas",
+        "Las dos parten del mismo lugar. La Fuente 1 empieza diciendo que también "
+        "quiere la República y que por quererla pide prudencia; la Fuente 2 razona "
+        "dentro del mismo marco, sin proponer otra forma de gobierno.\nLo que las "
+        "separa es qué exige ese principio en la práctica: para una, que el "
+        "ejercicio de una función pública se reserve a quien es idóneo; para la "
+        "otra, que la nación proclamada coincida con el cuerpo de ciudadanos.\nPor "
+        "eso el siglo XIX no se ordena como un enfrentamiento entre republicanos y "
+        "antirrepublicanos: la disputa decisiva ocurre entre lecturas rivales del "
+        "mismo republicanismo.",
+        [
+            ("Que una de las dos fuentes defiende en realidad la monarquía", "Ninguna la menciona: ambas discuten dentro de un marco republicano."),
+            ("Que las ideas republicanas carecían de contenido definido", "Tienen contenido; lo que ocurre es que admiten desarrollos distintos."),
+            ("Que el debate era formal y las posiciones ya estaban acordadas", "Las posiciones son incompatibles entre sí, no un trámite convenido."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "Si estas dos intervenciones fueran documentos históricos auténticos, ¿qué "
+        "precaución exigiría el hecho de haber sido pronunciadas en el Congreso?",
+        "Que están dirigidas a convencer a quienes van a votar la ley",
+        "Un discurso parlamentario no es un texto donde alguien expone lo que "
+        "piensa en privado: es una pieza destinada a mover el voto de una sala "
+        "concreta en una fecha concreta.\nEso condiciona lo que dice y también lo "
+        "que calla. Un diputado subraya el argumento que le sirve ante ese "
+        "auditorio y omite el que lo debilita, sin que ello lo vuelva "
+        "mentiroso.\nLa precaución no consiste en descartar la fuente sino en "
+        "leerla sabiendo qué buscaba lograr, y en contrastarla con documentos de "
+        "otro tipo: cartas privadas, prensa de la época, registros de votación.",
+        [
+            ("Que ningún discurso parlamentario refleja las ideas de su época", "Sí las refleja; lo que hay que considerar es el propósito con que se pronuncian."),
+            ("Que deberían descartarse por provenir de actores interesados", "Sesgo no equivale a falsedad: una fuente interesada se contrasta, no se descarta."),
+            ("Que su fecha impide compararlas con otras fuentes del período", "La fecha es justamente lo que permite compararlas con documentos contemporáneos."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_estado_nacion", "dificil",
+        "Un manual cita solo la Fuente 1 para sostener que en el siglo XIX nadie "
+        "cuestionaba el sufragio restringido. ¿Qué falla comete?",
+        "Toma una posición del debate como si fuera todo el debate",
+        "El error no está en usar la Fuente 1, que es un documento legítimo de su "
+        "época y expresa una posición real y extendida.\nEstá en el salto: de que "
+        "alguien defendiera el censo de renta no se sigue que nadie lo objetara, y "
+        "la existencia misma de la Fuente 2 lo desmiente.\nEs un caso de selección "
+        "de fuentes al servicio de una conclusión previa. El procedimiento correcto "
+        "es el contrario: reunir las posiciones en disputa y recién entonces "
+        "describir el estado de la discusión.",
+        [
+            ("Confunde una fuente primaria con una secundaria", "La Fuente 1 es primaria y el manual la usa como tal; el problema es otro."),
+            ("Comete un anacronismo al juzgar el pasado con criterios de hoy", "El manual no juzga: describe mal, porque generaliza desde un solo testimonio."),
+            ("Atribuye a la fuente una fecha que no le corresponde", "No hay ningún problema de datación en el ejemplo."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_fuentes", "dificil",
+        "Al comparar dos intervenciones de un mismo debate, ¿qué gana el "
+        "historiador que no obtendría leyendo solo una de ellas?",
+        "Reconocer qué se daba por establecido y qué estaba en disputa",
+        "Puestas una al lado de la otra, las dos fuentes revelan una estructura que "
+        "por separado no se ve: coinciden en la descripción de la dependencia del "
+        "jornalero y discrepan en lo que debe seguirse de ella.\nEse contraste "
+        "separa dos planos que conviene no confundir: lo que en la época se "
+        "aceptaba como un hecho compartido y lo que efectivamente se discutía.\nCon "
+        "una sola fuente ese límite es invisible, porque el autor presenta su "
+        "posición como la única razonable y no tiene ningún motivo para marcar "
+        "dónde termina el acuerdo.",
+        [
+            ("Determinar cuál de las dos fuentes dice la verdad", "El contraste no arbitra entre posiciones: muestra los términos en que se discutía."),
+            ("Verificar los datos numéricos que cada intervención entrega", "Ninguna de las dos aporta cifras que puedan contrastarse."),
+            ("Establecer con precisión la fecha en que se aprobó la ley", "El par de fuentes no informa sobre el desenlace del debate."),
+        ],
+    ),
     _ql(
         "eco_laborales_fte", "eco_laborales", "facil",
         "En Chile la relación entre trabajador y empleador debe constar en un "
