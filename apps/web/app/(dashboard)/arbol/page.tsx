@@ -46,7 +46,7 @@ export default async function ArbolHabilidadesPage({
   try {
     [nodes, recommended] = await Promise.all([
       getSkillTree(token, prueba),
-      getRecommendedNode(token),
+      getRecommendedNode(token, prueba),
     ]);
   } catch (err) {
     if (err instanceof ApiError && err.status === 401) redirect("/login?next=/arbol");

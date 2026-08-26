@@ -165,7 +165,9 @@ def _compute_impact(nodes_by_id: dict[int, SkillNode]) -> dict[int, int]:
     return impact
 
 
-def get_recommended_node(db: Session, user_id: int) -> SkillNodeProgressOut | None:
+def get_recommended_node(
+    db: Session, user_id: int, subject: Subject = Subject.M1
+) -> SkillNodeProgressOut | None:
     """Motor adaptativo v1: ranking analítico con pandas sobre tres señales
     por nodo desbloqueado y no dominado — NO es un modelo de ML entrenado
     (aún no hay suficientes datos de usuarios para eso), es un score
@@ -178,7 +180,13 @@ def get_recommended_node(db: Session, user_id: int) -> SkillNodeProgressOut | No
     None si no hay nada desbloqueado pendiente de dominar."""
 
     nodes_by_id = _load_nodes(db)
-    tree = get_user_skill_tree(db, user_id)
+    # El árbol de la prueba que se está mirando, no el de M1 siempre.
+    # `get_user_skill_tree` sin argumento devuelve M1 por defecto, así que la
+    # tarjeta "Empieza por acá" recomendaba un nodo de M1 en las cinco
+    # pestañas: alguien que abría el árbol de Ciencias leía "Medidas de
+    # posición" y, al tocar "Practicar ahora", terminaba fuera de la prueba
+    # que estaba preparando.
+    tree = get_user_skill_tree(db, user_id, subject=subject)
     candidates = [n for n in tree if n.status == ProgressStatus.UNLOCKED]
     if not candidates:
         return None
