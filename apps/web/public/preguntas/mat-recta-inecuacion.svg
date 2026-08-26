@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" width="540" height="180" role="img">
+  <title>Recta numérica con el tramo a la derecha del 3 marcado con línea gruesa, y el 3 con un círculo sin rellenar</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="62" y1="120" x2="498" y2="120" stroke="#111827" stroke-width="2"/>
+    <path d="M498 120 L486 114 L486 126 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M62 120 L74 114 L74 126 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <line x1="80" y1="113" x2="80" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="80" y="148" text-anchor="middle" font-size="13" fill="#4b5563">-2</text>
+    <line x1="130" y1="113" x2="130" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="130" y="148" text-anchor="middle" font-size="13" fill="#4b5563">-1</text>
+    <line x1="180" y1="113" x2="180" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="180" y="148" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <line x1="230" y1="113" x2="230" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="230" y="148" text-anchor="middle" font-size="13" fill="#4b5563">1</text>
+    <line x1="280" y1="113" x2="280" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="280" y="148" text-anchor="middle" font-size="13" fill="#4b5563">2</text>
+    <line x1="330" y1="113" x2="330" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="330" y="148" text-anchor="middle" font-size="13" fill="#4b5563">3</text>
+    <line x1="380" y1="113" x2="380" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="380" y="148" text-anchor="middle" font-size="13" fill="#4b5563">4</text>
+    <line x1="430" y1="113" x2="430" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="430" y="148" text-anchor="middle" font-size="13" fill="#4b5563">5</text>
+    <line x1="480" y1="113" x2="480" y2="127" stroke="#111827" stroke-width="1.6"/>
+    <text x="480" y="148" text-anchor="middle" font-size="13" fill="#4b5563">6</text>
+    <line x1="330" y1="120" x2="498" y2="120" stroke="#111827" stroke-width="4"/>
+    <circle cx="330" cy="120" r="7" fill="#ffffff" stroke="#111827" stroke-width="2.4"/>
+    <path d="M498 120 L486 113 L486 127 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" width="500" height="360" role="img">
+  <title>Circunferencia con dos cuerdas, AB y CD, que se cortan en un punto interior. En la cuerda AB los dos trozos miden 6 y 4; en la cuerda CD uno mide 8 y el otro está rotulado como x</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <circle cx="250" cy="200" r="130" fill="none" stroke="#111827" stroke-width="2"/>
+    <line x1="121.975" y1="177.426" x2="378.025" y2="222.574" stroke="#111827" stroke-width="2"/>
+    <line x1="195.06" y1="317.82" x2="333.562" y2="100.414" stroke="#111827" stroke-width="2"/>
+    <circle cx="268.087" cy="203.189" r="4.5" fill="#111827"/>
+    <text x="111.975" y="182.426" text-anchor="end" font-size="14" font-weight="700" fill="#111827">A</text>
+    <text x="388.025" y="227.574" text-anchor="start" font-size="14" font-weight="700" fill="#111827">B</text>
+    <text x="189.06" y="337.82" text-anchor="end" font-size="14" font-weight="700" fill="#111827">C</text>
+    <text x="341.562" y="94.4142" text-anchor="start" font-size="14" font-weight="700" fill="#111827">D</text>
+    <text x="195.031" y="178.308" text-anchor="middle" font-size="15" fill="#111827">6</text>
+    <text x="323.056" y="200.882" text-anchor="middle" font-size="15" fill="#111827">4</text>
+    <text x="215.574" y="266.505" text-anchor="middle" font-size="15" fill="#111827">8</text>
+    <text x="316.825" y="157.802" text-anchor="middle" font-size="15" fill="#111827">x</text>
+  </g>
+</svg>

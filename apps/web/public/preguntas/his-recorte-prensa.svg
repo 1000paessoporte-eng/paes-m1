@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img">
+  <title>Recorte de prensa con el nombre del diario, El Diario del Puerto, la fecha —Valparaíso, 14 de marzo de 1907— y el titular «Los obreros del salitre piden ser escuchados», con una bajada que dice que una delegación llegó a exponer sus demandas y que la empresa sostiene que las condiciones son las de costumbre</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M50 40 L550 40 L550 300 L50 300 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="300" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">EL DIARIO DEL PUERTO</text>
+    <line x1="70" y1="92" x2="530" y2="92" stroke="#4b5563" stroke-width="1.2"/>
+    <text x="70" y="116" text-anchor="start" font-size="12" fill="#4b5563">Valparaíso, 14 de marzo de 1907</text>
+    <text x="300" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">LOS OBREROS DEL SALITRE</text>
+    <text x="300" y="188" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">PIDEN SER ESCUCHADOS</text>
+    <text x="300" y="226" text-anchor="middle" font-size="13" fill="#111827">Una delegación llegó ayer a la ciudad para exponer sus</text>
+    <text x="300" y="246" text-anchor="middle" font-size="13" fill="#111827">demandas ante las autoridades. La empresa sostiene que</text>
+    <text x="300" y="266" text-anchor="middle" font-size="13" fill="#111827">las condiciones ofrecidas son las de costumbre.</text>
+    <text x="300" y="330" text-anchor="middle" font-size="11" fill="#4b5563">Recorte de prensa ficticio, escrito para practicar análisis de fuentes.</text>
+  </g>
+</svg>

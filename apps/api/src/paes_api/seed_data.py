@@ -19541,6 +19541,1929 @@ QUESTIONS += [
 ]
 
 
+# ---------- Matemática con figura: geometría ----------
+# Las primeras preguntas de M1 que se apoyan en una imagen. En la PAES de
+# Matemática la geometría casi siempre entra por un dibujo —un terreno acotado,
+# un cuerpo con sus medidas, una figura en la cuadrícula—, y hasta acá el banco
+# entero era texto: el alumno leía las medidas en vez de leerlas de la figura,
+# que es justo la habilidad que la prueba mide.
+#
+# Las figuras son PROPIAS y viven en `apps/web/public/preguntas/`. El enunciado
+# no repite lo que la figura muestra: si el dato se puede leer en el texto, la
+# imagen sobra.
+QUESTIONS += [
+    _q(
+        "geo_plana", "medio",
+        "El plano muestra un terreno con forma de L y sus medidas en metros. ¿Cuál es su área?",
+        "81 m²",
+        "El terreno es un rectángulo al que le falta un pedazo, así que conviene "
+        "completarlo y después descontar lo que sobra.\n\n"
+        "1) Rectángulo completo: 12 · 8 = 96 m².\n"
+        "2) El escalón que falta mide 12 − 7 = 5 m de ancho y 8 − 5 = 3 m de alto.\n"
+        "3) Área del escalón: 5 · 3 = 15 m².\n"
+        "4) Área del terreno: 96 − 15 = 81 m².\n\n"
+        "Las dos medidas del escalón no están escritas en el plano: salen de "
+        "restar las que sí están.",
+        [
+            ("96 m²", "Es el rectángulo completo: no descontó el escalón que le falta al terreno."),
+            ("111 m²", "Sumó el área del escalón en lugar de restarla."),
+            ("56 m²", "Calculó solo la parte alta del terreno, de 7 m por 8 m."),
+        ],
+        imagen="/preguntas/mat-terreno-en-l.svg",
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área del trapecio de la figura?",
+        "32 cm²",
+        "El área de un trapecio es el promedio de sus bases por la altura.\n\n"
+        "1) Bases: 10 cm y 6 cm. Promedio: (10 + 6) ÷ 2 = 8 cm.\n"
+        "2) Altura: 4 cm, la que está marcada perpendicular a las bases.\n"
+        "3) Área: 8 · 4 = 32 cm².\n\n"
+        "La altura es la distancia entre las bases, no la medida del lado "
+        "inclinado: por eso en la figura va con ángulo recto.",
+        [
+            ("64 cm²", "Multiplicó la suma de las bases por la altura sin dividir por 2."),
+            ("20 cm²", "Usó solo la base mayor, como si el trapecio fuera un triángulo."),
+            ("12 cm²", "Usó solo la base menor, como si el trapecio fuera un triángulo."),
+        ],
+        imagen="/preguntas/mat-trapecio-acotado.svg",
+    ),
+    _q(
+        "geo_plana", "medio",
+        "En la figura, la parte sombreada del círculo corresponde a un sector. "
+        "¿Cuál es su área? (usa π = 3,14)",
+        "28,26 cm²",
+        "El sector sombreado abarca 90° de los 360° del círculo, o sea la cuarta "
+        "parte.\n\n"
+        "1) Área del círculo completo: 3,14 · 6² = 3,14 · 36 = 113,04 cm².\n"
+        "2) El sector es un cuarto: 113,04 ÷ 4 = 28,26 cm².\n\n"
+        "Otro camino: (90 ÷ 360) · 113,04 llega al mismo número, y sirve igual "
+        "cuando el ángulo no es un cuarto de vuelta.",
+        [
+            ("113,04 cm²", "Es el área del círculo completo, sin quedarse con el sector."),
+            ("56,52 cm²", "Tomó la mitad del círculo; el sector marcado es un cuarto."),
+            ("9,42 cm²", "Calculó el largo del arco, que es una longitud y no un área."),
+        ],
+        imagen="/preguntas/mat-sector-circular.svg",
+    ),
+    _q(
+        "geo_plana", "medio",
+        "¿Cuál es el área del paralelogramo de la figura?",
+        "60 cm²",
+        "En un paralelogramo el área es base por altura, y la altura es la "
+        "perpendicular entre los dos lados paralelos.\n\n"
+        "1) Base: 10 cm.\n"
+        "2) Altura: 6 cm, la marcada con ángulo recto contra la base.\n"
+        "3) Área: 10 · 6 = 60 cm².\n\n"
+        "El 7 cm de la figura es el lado inclinado. Sirve para el perímetro, no "
+        "para el área: si se usara, se estaría midiendo una diagonal en vez de "
+        "la separación entre las bases.",
+        [
+            ("70 cm²", "Multiplicó la base por el lado inclinado en lugar de por la altura."),
+            ("42 cm²", "Multiplicó el lado inclinado por la altura."),
+            ("30 cm²", "Dividió por 2, como si la figura fuera un triángulo."),
+        ],
+        imagen="/preguntas/mat-paralelogramo-altura.svg",
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Una escalera está apoyada en un muro como muestra la figura. ¿A qué "
+        "altura del muro llega su extremo superior?",
+        "12 m",
+        "La escalera, el muro y el suelo forman un triángulo rectángulo, y la "
+        "escalera es la hipotenusa.\n\n"
+        "1) Pitágoras: 13² = 5² + h².\n"
+        "2) 169 = 25 + h², así que h² = 144.\n"
+        "3) h = 12 m.\n\n"
+        "La hipotenusa es siempre el lado más largo, y acá es la escalera: por "
+        "eso el 13 va solo a un lado de la igualdad.",
+        [
+            ("8 m", "Restó las medidas (13 − 5) en vez de aplicar el teorema."),
+            ("18 m", "Sumó las medidas (13 + 5)."),
+            ("13,9 m", "Sumó los cuadrados en lugar de restarlos, tratando la escalera como cateto."),
+        ],
+        imagen="/preguntas/mat-escalera-muro.svg",
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "El rombo de la figura tiene dibujadas sus dos diagonales. ¿Cuál es su perímetro?",
+        "40 cm",
+        "Las diagonales de un rombo se cortan en su punto medio y son "
+        "perpendiculares, así que parten la figura en cuatro triángulos "
+        "rectángulos iguales.\n\n"
+        "1) Cada triángulo tiene catetos 16 ÷ 2 = 8 cm y 12 ÷ 2 = 6 cm.\n"
+        "2) La hipotenusa de cada uno es un lado del rombo: √(8² + 6²) = √100 = 10 cm.\n"
+        "3) Los cuatro lados son iguales: perímetro = 4 · 10 = 40 cm.\n\n"
+        "El paso clave es partir las diagonales por la mitad. Usarlas enteras da "
+        "un triángulo que no existe en la figura.",
+        [
+            ("10 cm", "Calculó el lado del rombo y se quedó ahí, sin sumar los cuatro."),
+            ("28 cm", "Sumó las dos diagonales, que no son lados del rombo."),
+            ("96 cm", "Calculó el área con las diagonales en vez del perímetro."),
+        ],
+        imagen="/preguntas/mat-rombo-diagonales.svg",
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "¿Cuál es el área del trapecio isósceles de la figura?",
+        "44 cm²",
+        "Falta la altura, y se consigue con Pitágoras antes de poder calcular el área.\n\n"
+        "1) La base mayor sobresale (14 − 8) = 6 cm en total, repartidos en dos "
+        "salientes iguales de 3 cm.\n"
+        "2) Cada lado inclinado es la hipotenusa de un triángulo de catetos 3 cm "
+        "y la altura: 5² = 3² + h², o sea h² = 16 y h = 4 cm.\n"
+        "3) Área: ((14 + 8) ÷ 2) · 4 = 11 · 4 = 44 cm².\n\n"
+        "Que el trapecio sea isósceles es lo que permite repartir los 6 cm en "
+        "dos partes iguales.",
+        [
+            ("55 cm²", "Usó el lado inclinado de 5 cm como si fuera la altura."),
+            ("88 cm²", "Multiplicó la suma de las bases por la altura sin dividir por 2."),
+            ("11 cm²", "Se quedó en el promedio de las bases, sin multiplicar por la altura."),
+        ],
+        imagen="/preguntas/mat-trapecio-isosceles.svg",
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "¿Cuánto mide la diagonal de la cancha rectangular de la figura?",
+        "26 m",
+        "La diagonal divide el rectángulo en dos triángulos rectángulos, y en "
+        "cada uno es la hipotenusa.\n\n"
+        "1) Los catetos son los lados de la cancha: 24 m y 10 m.\n"
+        "2) d² = 24² + 10² = 576 + 100 = 676.\n"
+        "3) d = √676 = 26 m.",
+        [
+            ("34 m", "Sumó los dos lados, que es el camino por el borde y no la diagonal."),
+            ("21,8 m", "Restó los cuadrados en vez de sumarlos."),
+            ("14 m", "Restó los lados (24 − 10)."),
+        ],
+        imagen="/preguntas/mat-cancha-diagonal.svg",
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "En el plano de la figura, el triángulo T se trasladó hasta T'. "
+        "¿Cuál es el vector de esa traslación?",
+        "5 unidades a la derecha y 2 unidades hacia arriba",
+        "La traslación se lee comparando un vértice con el que le corresponde en "
+        "la imagen.\n\n"
+        "1) El vértice de abajo a la izquierda de T está en (1, 1); en T' "
+        "está en (6, 3).\n"
+        "2) De 1 a 6 hay 5 unidades a la derecha; de 1 a 3 hay 2 hacia arriba.\n"
+        "3) Cualquier otro par de vértices correspondientes da el mismo "
+        "desplazamiento: en una traslación todos los puntos se mueven igual.",
+        [
+            ("2 unidades a la derecha y 5 unidades hacia arriba", "Cambió el orden: el 5 es el desplazamiento horizontal y el 2 el vertical."),
+            ("5 unidades a la derecha y 2 unidades hacia abajo", "La imagen quedó más arriba, no más abajo."),
+            ("6 unidades a la derecha y 3 unidades hacia arriba", "Leyó las coordenadas del vértice de la imagen en vez del desplazamiento."),
+        ],
+        imagen="/preguntas/mat-traslacion-cuadricula.svg",
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "La figura P se reflejó respecto del eje y y se obtuvo P'. ¿Cuáles "
+        "son las coordenadas del vértice R'?",
+        "(−3, 5)",
+        "Reflejar respecto del eje y deja la altura intacta y cambia el signo de "
+        "la abscisa: (x, y) pasa a (−x, y).\n\n"
+        "1) En la figura, R está en (3, 5).\n"
+        "2) Su reflejo es (−3, 5).\n"
+        "3) Se comprueba en el dibujo: R y R' están a la misma altura y a "
+        "la misma distancia del eje y, uno a cada lado.",
+        [
+            ("(3, −5)", "Reflejó respecto del eje x: eso cambia la altura, no el lado."),
+            ("(−3, −5)", "Cambió los dos signos, que corresponde a un giro de 180° en torno al origen."),
+            ("(5, −3)", "Intercambió las coordenadas, que es lo que hace un giro, no una reflexión."),
+        ],
+        imagen="/preguntas/mat-reflexion-eje.svg",
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "En el plano de la figura, ¿qué transformación lleva la figura F hasta F'?",
+        "Una rotación de 90° en sentido antihorario en torno al origen",
+        "Conviene seguir un vértice y ver dónde termina.\n\n"
+        "1) El vértice (6, 1) de F aparece en (−1, 6) en F'.\n"
+        "2) Eso es exactamente lo que hace un cuarto de vuelta antihorario en "
+        "torno al origen: (x, y) pasa a (−y, x).\n"
+        "3) Se confirma con otro vértice: (2, 3) pasa a (−3, 2).\n\n"
+        "No puede ser una reflexión: la figura no quedó en espejo, quedó girada, "
+        "y el lado que era horizontal ahora es vertical.",
+        [
+            ("Una rotación de 90° en sentido horario en torno al origen", "Un giro horario habría dejado la figura bajo el eje x."),
+            ("Una reflexión respecto del eje y", "Una reflexión conserva la orientación de los lados: el lado horizontal seguiría horizontal."),
+            ("Una rotación de 180° en torno al origen", "Media vuelta dejaría la figura abajo a la izquierda, con (6, 1) en (−6, −1)."),
+        ],
+        imagen="/preguntas/mat-rotacion-origen.svg",
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "De las cuatro figuras planas de la imagen, ¿cuál tiene exactamente dos "
+        "ejes de simetría?",
+        "La figura I",
+        "Un eje de simetría es una recta que deja la figura calzando consigo "
+        "misma al doblarla.\n\n"
+        "1) El rectángulo tiene dos: la horizontal y la vertical que pasan por "
+        "su centro. Sus diagonales NO lo son: al doblar por ellas los lados "
+        "desiguales no calzan.\n"
+        "2) El triángulo equilátero tiene tres, una por cada vértice.\n"
+        "3) El trapecio isósceles tiene uno solo, el vertical.\n"
+        "4) El cuadrado tiene cuatro: las dos medianas y las dos diagonales.",
+        [
+            ("La figura II", "El triángulo equilátero tiene tres ejes, uno por cada vértice."),
+            ("La figura III", "El trapecio isósceles tiene un único eje, el vertical."),
+            ("La figura IV", "El cuadrado tiene cuatro: sus dos diagonales también lo son."),
+        ],
+        imagen="/preguntas/mat-ejes-simetria.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En el triángulo de la figura, DE es paralela a BC y las medidas están "
+        "en centímetros. ¿Cuánto mide x?",
+        "7,5 cm",
+        "Una paralela a un lado corta a los otros dos en segmentos "
+        "proporcionales.\n\n"
+        "1) La proporción es AD : DB = AE : EC, o sea 4 : 6 = 5 : x.\n"
+        "2) Multiplicando cruzado: 4x = 30.\n"
+        "3) x = 7,5 cm.\n\n"
+        "El error frecuente es mezclar el segmento con el lado completo: el 4 se "
+        "compara con el 6, no con el 10 que mide AB entero.",
+        [
+            ("3 cm", "Comparó con el lado completo AB en lugar del segmento DB."),
+            ("6 cm", "Copió la medida de DB, suponiendo que los dos lados se cortan igual."),
+            ("7 cm", "Sumó y restó las medidas en vez de plantear la proporción."),
+        ],
+        imagen="/preguntas/mat-tales-paralela.svg",
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "A la misma hora del día, un poste y una torre proyectan las sombras que "
+        "muestra la figura. ¿Cuánto mide la torre?",
+        "12 m",
+        "A la misma hora los rayos de sol llegan con la misma inclinación, así "
+        "que el poste y la torre forman triángulos semejantes con sus sombras.\n\n"
+        "1) En el poste, la altura es 2 ÷ 1,5 = 4/3 de su sombra.\n"
+        "2) La torre cumple la misma razón: h = 9 · 4/3.\n"
+        "3) h = 12 m.",
+        [
+            ("6,75 m", "Invirtió la razón: multiplicó por 1,5 y dividió por 2."),
+            ("18 m", "Multiplicó la sombra por la altura del poste sin dividir por su sombra."),
+            ("10,5 m", "Sumó a la sombra de la torre la altura del poste."),
+        ],
+        imagen="/preguntas/mat-sombra-poste.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Los triángulos T y T' de la figura son semejantes, y sus ángulos "
+        "iguales están marcados. ¿Cuánto mide x?",
+        "12 cm",
+        "En figuras semejantes los lados que se corresponden guardan todos la "
+        "misma razón.\n\n"
+        "1) Los lados marcados 6 cm y 9 cm se corresponden: la razón es 9 ÷ 6 = 1,5.\n"
+        "2) El lado de 8 cm se corresponde con x, así que x = 8 · 1,5.\n"
+        "3) x = 12 cm.\n\n"
+        "Qué lado va con cuál lo dicen los ángulos marcados, no la posición en "
+        "el dibujo.",
+        [
+            ("5,3 cm", "Dividió por la razón en vez de multiplicar: achicó el triángulo grande."),
+            ("11 cm", "Le sumó a 8 la diferencia 9 − 6, en vez de aplicar la razón."),
+            ("13,5 cm", "Aplicó la razón al lado equivocado: multiplicó 9 por 1,5."),
+        ],
+        imagen="/preguntas/mat-triangulos-semejantes.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "El plano de la figura está dibujado a escala. ¿Cuál es el área real de la sala?",
+        "48 m²",
+        "La escala 1 : 200 dice que cada centímetro del papel son 200 cm "
+        "reales, o sea 2 m.\n\n"
+        "1) Largo real: 4 · 2 = 8 m.\n"
+        "2) Ancho real: 3 · 2 = 6 m.\n"
+        "3) Área real: 8 · 6 = 48 m².\n\n"
+        "El área no se multiplica por 200 sino por 200²: al agrandar las dos "
+        "dimensiones, la superficie crece con el cuadrado de la escala. Por eso "
+        "conviene pasar primero cada medida y recién después multiplicar.",
+        [
+            ("24 m²", "Multiplicó el área del dibujo por 2, cuando lo que se duplica son los lados."),
+            ("2.400 m²", "Multiplicó el área del dibujo por 200 en lugar de convertir cada lado."),
+            ("12 m²", "Dio el área del dibujo en centímetros cuadrados, sin aplicar la escala."),
+        ],
+        imagen="/preguntas/mat-plano-escala.svg",
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "La figura es el desarrollo plano de una caja. ¿Cuál es el volumen de la "
+        "caja que se arma con él?",
+        "72 cm³",
+        "Del desarrollo salen las tres medidas de la caja.\n\n"
+        "1) Las caras laterales miden 6 cm y 4 cm de ancho: son el largo y el "
+        "ancho de la base.\n"
+        "2) La altura de esa fila de caras, 3 cm, es la altura de la caja.\n"
+        "3) Volumen: 6 · 4 · 3 = 72 cm³.\n\n"
+        "Las dos caras que están arriba y abajo son las tapas, y sus medidas "
+        "repiten las de la base: no agregan una cuarta dimensión.",
+        [
+            ("108 cm³", "Sumó el área de las seis caras: eso es la superficie, no el volumen."),
+            ("24 cm³", "Multiplicó solo el largo por el ancho: le faltó la altura."),
+            ("13 cm³", "Sumó las tres medidas en vez de multiplicarlas."),
+        ],
+        imagen="/preguntas/mat-desarrollo-prisma.svg",
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el volumen del cilindro de la figura? (usa π = 3,14)",
+        "785 cm³",
+        "El volumen de un cilindro es el área de su base por la altura.\n\n"
+        "1) La base es un círculo de 5 cm de radio: 3,14 · 5² = 78,5 cm².\n"
+        "2) Volumen: 78,5 · 10 = 785 cm³.\n\n"
+        "El radio va elevado al cuadrado, no multiplicado: es lo que hace que "
+        "duplicar el radio multiplique el volumen por cuatro.",
+        [
+            ("157 cm³", "No elevó el radio al cuadrado."),
+            ("314 cm²", "Calculó el área lateral, que además es una superficie y no un volumen."),
+            ("3.140 cm³", "Usó el diámetro donde va el radio."),
+        ],
+        imagen="/preguntas/mat-cilindro-cotas.svg",
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el área total de la superficie del paralelepípedo de la figura?",
+        "158 cm²",
+        "La superficie de un paralelepípedo son seis rectángulos, iguales de a "
+        "pares.\n\n"
+        "1) Las dos caras de 8 por 5: 2 · 40 = 80 cm².\n"
+        "2) Las dos caras de 8 por 3: 2 · 24 = 48 cm².\n"
+        "3) Las dos caras de 5 por 3: 2 · 15 = 30 cm².\n"
+        "4) Área total: 80 + 48 + 30 = 158 cm².\n\n"
+        "Cada par de caras opuestas es igual, así que basta calcular tres "
+        "rectángulos y doblar el resultado.",
+        [
+            ("79 cm²", "Calculó las tres caras distintas y olvidó que cada una tiene su opuesta."),
+            ("120 cm²", "Calculó el volumen del cuerpo, que se mide en centímetros cúbicos."),
+            ("16 cm²", "Sumó las tres medidas y las duplicó, en vez de multiplicarlas de a dos."),
+        ],
+        imagen="/preguntas/mat-paralelepipedo-area.svg",
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "El cubo de la figura está dividido en cubitos iguales de 2 cm de "
+        "arista. ¿Cuántos cubitos hay en total?",
+        "27 cubitos",
+        "Cada arista del cubo grande mide 6 cm y cada cubito 2 cm, así que en "
+        "cada dirección caben 6 ÷ 2 = 3.\n\n"
+        "1) A lo largo: 3 cubitos.\n"
+        "2) A lo ancho: 3 cubitos.\n"
+        "3) A lo alto: 3 cubitos.\n"
+        "4) Total: 3 · 3 · 3 = 27 cubitos.\n\n"
+        "Se puede comprobar con volúmenes: 6³ ÷ 2³ = 216 ÷ 8 = 27.",
+        [
+            ("9 cubitos", "Contó los de una sola cara, sin considerar el fondo."),
+            ("18 cubitos", "Contó dos caras y no las tres capas del cubo."),
+            ("3 cubitos", "Contó cuántos caben a lo largo de una arista."),
+        ],
+        imagen="/preguntas/mat-cubo-cubitos.svg",
+    ),
+]
+
+
+# ---------- Matemática con figura: álgebra, datos y azar ----------
+# El otro lugar donde la PAES pregunta por una imagen: un gráfico del que hay
+# que leer una constante o un vértice, un diagrama de cajón, una ruleta. Igual
+# que en geometría, el dato vive en la figura y no en el enunciado.
+QUESTIONS += [
+    _q(
+        "alg_proporcionalidad", "facil",
+        "El gráfico muestra el precio de un producto según los kilos que se "
+        "compran. ¿Cuánto se paga por 8 kg?",
+        "$12.000",
+        "La recta pasa por el origen, así que el precio es proporcional a la "
+        "cantidad y basta con la constante.\n\n"
+        "1) El punto marcado dice que 2 kg cuestan 3 mil pesos.\n"
+        "2) La constante es 3.000 ÷ 2 = 1.500 pesos por kilo.\n"
+        "3) Ocho kilos: 8 · 1.500 = 12.000 pesos.\n\n"
+        "Se puede comprobar en el gráfico: 8 kg cae justo donde el eje vertical "
+        "marca 12 mil.",
+        [
+            ("$24.000", "Tomó los 3 mil como el precio de un kilo, cuando son el precio de dos."),
+            ("$9.000", "Leyó el gráfico en 6 kilos en lugar de 8."),
+            ("$16.000", "Tomó como precio de un kilo el 2 del eje horizontal."),
+        ],
+        imagen="/preguntas/mat-proporcionalidad-directa.svg",
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El gráfico relaciona la cantidad de trabajadores de una obra con los "
+        "días que demoran en terminarla. ¿Cuántos días demoran 12 trabajadores?",
+        "2 días",
+        "La curva no es una recta: al doblar los trabajadores el tiempo se parte "
+        "por la mitad. Eso es proporcionalidad inversa, y lo que se mantiene "
+        "constante es el producto.\n\n"
+        "1) De los puntos marcados: 3 · 8 = 24 y 6 · 4 = 24. La constante es 24.\n"
+        "2) Con 12 trabajadores: 12 · d = 24.\n"
+        "3) d = 2 días.\n\n"
+        "Ese 24 tiene sentido concreto: son los días-trabajador que cuesta la "
+        "obra, y no cambian por repartirla entre más gente.",
+        [
+            ("4 días", "Copió el valor del punto (6 ; 4) sin recalcular para 12 trabajadores."),
+            ("6 días", "Leyó el gráfico con los ejes cambiados."),
+            ("48 días", "Multiplicó la constante por 2 en lugar de dividirla por 12."),
+        ],
+        imagen="/preguntas/mat-proporcionalidad-inversa.svg",
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El gráfico muestra el agua acumulada por dos llaves. Cuando la llave B "
+        "ha echado 24 litros, ¿cuántos litros lleva la llave A?",
+        "40 litros",
+        "Las dos rectas parten del origen, así que cada llave echa un caudal "
+        "constante.\n\n"
+        "1) La llave B llega a 30 litros en 10 minutos: 3 litros por minuto. "
+        "Para 24 litros necesita 24 ÷ 3 = 8 minutos.\n"
+        "2) La llave A llega a 50 litros en 10 minutos: 5 litros por minuto.\n"
+        "3) En esos mismos 8 minutos, A lleva 8 · 5 = 40 litros.\n\n"
+        "La pregunta compara las dos llaves en el mismo instante, no en la misma "
+        "cantidad de agua: el puente entre ambas es el tiempo.",
+        [
+            ("24 litros", "Supuso que las dos llaves echan lo mismo, que es lo que las rectas distintas descartan."),
+            ("30 litros", "Leyó el valor de A a los 6 minutos, no a los 8."),
+            ("48 litros", "Dobló los litros de B, cuando la razón entre los caudales es 5 : 3."),
+        ],
+        imagen="/preguntas/mat-dos-llaves.svg",
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "De los cuatro gráficos de la imagen, ¿cuál representa una "
+        "proporcionalidad directa?",
+        "El gráfico I",
+        "Dos magnitudes son directamente proporcionales cuando su cociente es "
+        "constante, y eso en un gráfico se ve como una recta que pasa por el "
+        "origen.\n\n"
+        "1) El primero es una recta que arranca en el origen: al doblar una "
+        "magnitud se dobla la otra.\n"
+        "2) El segundo también es recto, pero parte por encima del origen: hay "
+        "un valor inicial que se cobra igual con cero unidades, así que el "
+        "cociente cambia.\n"
+        "3) El tercero baja: es una proporcionalidad inversa, donde lo constante "
+        "es el producto.\n"
+        "4) El cuarto sube cada vez más rápido: el cociente crece.",
+        [
+            ("El gráfico II", "Es una recta, pero no pasa por el origen: hay un valor fijo inicial."),
+            ("El gráfico III", "Es una proporcionalidad inversa: cuando una magnitud crece, la otra baja."),
+            ("El gráfico IV", "Crece cada vez más rápido, así que el cociente entre las magnitudes no es constante."),
+        ],
+        imagen="/preguntas/mat-cuatro-graficos.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "El gráfico muestra la parábola de una función cuadrática. ¿Cuál es esa función?",
+        "f(x) = x² − 2x − 3",
+        "La parábola corta el eje x en −1 y en 3, así que esos son los ceros de "
+        "la función.\n\n"
+        "1) Con esos ceros, la función factorizada es (x + 1)(x − 3).\n"
+        "2) Desarrollando: x² − 3x + x − 3 = x² − 2x − 3.\n"
+        "3) Se comprueba con el vértice: en x = 1 la función vale 1 − 2 − 3 = −4, "
+        "que es justo donde el gráfico marca el punto más bajo.\n\n"
+        "Que las ramas suban dice además que el coeficiente de x² es positivo.",
+        [
+            ("f(x) = x² + 2x − 3", "Esa parábola corta el eje x en 1 y en −3, al revés de lo que muestra el gráfico."),
+            ("f(x) = x² − 2x + 3", "No corta el eje x en ningún punto: su valor mínimo es 2."),
+            ("f(x) = −x² + 2x + 3", "Con el coeficiente negativo las ramas irían hacia abajo."),
+        ],
+        imagen="/preguntas/mat-parabola-vertice.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la ecuación de la recta dibujada en el gráfico?",
+        "y = −0,5x + 3",
+        "Una recta queda determinada por dónde corta el eje y y por su "
+        "pendiente.\n\n"
+        "1) Corta el eje y en 3: ese es el término libre.\n"
+        "2) Entre los puntos marcados, de (0 ; 3) a (4 ; 1), x avanza 4 y y baja 2.\n"
+        "3) Pendiente: −2 ÷ 4 = −0,5.\n"
+        "4) La ecuación es y = −0,5x + 3.\n\n"
+        "El signo de la pendiente se ve antes de calcular nada: la recta baja de "
+        "izquierda a derecha, así que tiene que ser negativa.",
+        [
+            ("y = 0,5x + 3", "Con pendiente positiva la recta subiría, y la del gráfico baja."),
+            ("y = −2x + 3", "Invirtió la pendiente: dividió el avance horizontal por el vertical."),
+            ("y = −0,5x − 3", "Corta el eje y en −3, y el gráfico lo corta en 3."),
+        ],
+        imagen="/preguntas/mat-recta-pendiente.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Sobre la parábola del gráfico y la ecuación cuadrática asociada a ella, "
+        "¿cuál de las siguientes afirmaciones es verdadera?",
+        "El coeficiente de x² es negativo y la ecuación tiene dos soluciones reales",
+        "Las dos cosas se leen en el dibujo, sin calcular.\n\n"
+        "1) Las ramas apuntan hacia abajo, y eso solo pasa cuando el coeficiente "
+        "de x² es negativo.\n"
+        "2) Las soluciones de la ecuación son los puntos donde la parábola corta "
+        "el eje x, y en el gráfico lo corta dos veces.\n\n"
+        "Cuántas veces corta el eje x es la lectura gráfica del discriminante: "
+        "dos cortes, dos soluciones reales distintas.",
+        [
+            ("El coeficiente de x² es positivo y la ecuación tiene dos soluciones reales", "Con coeficiente positivo las ramas irían hacia arriba."),
+            ("El coeficiente de x² es negativo y la ecuación no tiene soluciones reales", "Sin soluciones reales la parábola no tocaría el eje x, y acá lo cruza dos veces."),
+            ("El coeficiente de x² es negativo y la ecuación tiene una única solución", "Una sola solución significa que la parábola apenas roza el eje x en su vértice."),
+        ],
+        imagen="/preguntas/mat-parabola-hacia-abajo.svg",
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "El gráfico muestra la altura de un balón lanzado hacia arriba. ¿Cuánto "
+        "tiempo pasa entre el lanzamiento y el momento en que toca el suelo?",
+        "4 segundos",
+        "Tocar el suelo es tener altura cero, así que hay que buscar dónde la "
+        "curva vuelve al eje horizontal.\n\n"
+        "1) La curva parte en el origen: a los 0 segundos el balón está en el suelo.\n"
+        "2) Sube hasta su punto más alto, 20 metros, a los 2 segundos.\n"
+        "3) Vuelve a cortar el eje del tiempo a los 4 segundos.\n\n"
+        "La subida y la bajada demoran lo mismo: la parábola es simétrica "
+        "respecto de la vertical que pasa por su vértice.",
+        [
+            ("2 segundos", "Es el instante en que alcanza la altura máxima, la mitad del recorrido."),
+            ("20 segundos", "Leyó la altura máxima en vez del tiempo."),
+            ("4,5 segundos", "Leyó el borde del gráfico y no el punto donde la curva corta el eje."),
+        ],
+        imagen="/preguntas/mat-trayectoria-balon.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "El gráfico de barras muestra las notas de un curso. ¿Cuál es el "
+        "promedio del curso?",
+        "5,4",
+        "Cada nota pesa según cuántos estudiantes la sacaron, así que el "
+        "promedio es ponderado.\n\n"
+        "1) Estudiantes: 4 + 6 + 8 + 2 = 20.\n"
+        "2) Suma de las notas: 4 · 4 + 5 · 6 + 6 · 8 + 7 · 2 = 16 + 30 + 48 + 14 = 108.\n"
+        "3) Promedio: 108 ÷ 20 = 5,4.\n\n"
+        "Promediar 4, 5, 6 y 7 daría 5,5 y sería otra pregunta: la de qué notas "
+        "existen, no la de cómo se repartió el curso.",
+        [
+            ("5,5", "Promedió las cuatro notas del eje sin considerar cuántos estudiantes sacó cada una."),
+            ("6", "Dio la moda: la nota que más se repite."),
+            ("108", "Sumó todas las notas y no dividió por la cantidad de estudiantes."),
+        ],
+        imagen="/preguntas/mat-barras-notas.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "El gráfico circular muestra cómo llegan al colegio sus 400 estudiantes. "
+        "¿Cuántos de ellos usan metro?",
+        "100 estudiantes",
+        "El gráfico da porcentajes; el total lo da el enunciado.\n\n"
+        "1) El sector del metro es el 25%.\n"
+        "2) El 25% de 400 es 400 · 0,25.\n"
+        "3) Son 100 estudiantes.",
+        [
+            ("25 estudiantes", "Confundió el porcentaje con la cantidad de estudiantes."),
+            ("160 estudiantes", "Usó el 40% de la micro, que es el sector más grande."),
+            ("60 estudiantes", "Usó el 15% de la bicicleta."),
+        ],
+        imagen="/preguntas/mat-circular-transporte.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Según el histograma, ¿cuántas personas del grupo tienen 30 años o más?",
+        "13 personas",
+        "Los intervalos que cumplen la condición son los dos últimos.\n\n"
+        "1) De 30 a 40 años: 9 personas.\n"
+        "2) De 40 a 50 años: 4 personas.\n"
+        "3) Total: 9 + 4 = 13 personas.\n\n"
+        "Cada barra cubre un tramo completo de diez años, así que se suman "
+        "barras enteras: no hay que repartir nada dentro de un intervalo.",
+        [
+            ("9 personas", "Consideró solo el intervalo de 30 a 40 años."),
+            ("17 personas", "Sumó los dos primeros intervalos: los que tienen menos de 30."),
+            ("4 personas", "Consideró solo el último intervalo."),
+        ],
+        imagen="/preguntas/mat-histograma-edades.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "El gráfico muestra las ventas mensuales de dos sucursales. ¿En qué mes "
+        "la diferencia entre ambas fue mayor?",
+        "Mayo",
+        "Hay que mirar la separación vertical entre las dos líneas, mes a mes.\n\n"
+        "1) En mayo A vende 50 y B vende 20: la diferencia es 30.\n"
+        "2) El mes que más se le acerca es abril, con 45 contra 30: diferencia 15.\n"
+        "3) En marzo las líneas se cruzan y en junio B queda 5 por encima.\n\n"
+        "Lo que importa es la distancia entre las curvas, no cuál de las dos "
+        "está más alta ni dónde cada una alcanza su máximo.",
+        [
+            ("Marzo", "Ahí las líneas se cruzan: es el mes en que las ventas son casi iguales."),
+            ("Abril", "La diferencia es 15, la mitad de la de mayo."),
+            ("Junio", "La sucursal B supera a la A, pero solo por 5 unidades."),
+        ],
+        imagen="/preguntas/mat-dos-sucursales.svg",
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "El diagrama de cajón resume los puntajes de un curso. ¿Cuál es el rango "
+        "intercuartil?",
+        "25 puntos",
+        "El rango intercuartil es el largo del cajón: mide la dispersión del 50% "
+        "central de los datos.\n\n"
+        "1) El cajón empieza en el primer cuartil, 35, y termina en el tercero, 60.\n"
+        "2) Rango intercuartil: 60 − 35 = 25 puntos.\n\n"
+        "Los bigotes quedan fuera a propósito: llegan hasta los valores extremos "
+        "y por eso el rango total se estira con un solo dato raro, mientras que "
+        "el cajón no.",
+        [
+            ("60 puntos", "Es el rango total, del mínimo al máximo, no el del cajón."),
+            ("45 puntos", "Es la mediana, la línea de adentro del cajón."),
+            ("15 puntos", "Es la distancia de la mediana al tercer cuartil: media caja."),
+        ],
+        imagen="/preguntas/mat-cajon-puntajes.svg",
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "Los dos diagramas de cajón resumen los puntajes de dos cursos. ¿Cuál de "
+        "las siguientes afirmaciones es correcta?",
+        "La mediana del 4°B es mayor que la del 4°A",
+        "La mediana es la línea de adentro de cada cajón.\n\n"
+        "1) En el 4°A está en 55 y en el 4°B, en 60.\n"
+        "2) La del 4°B es mayor, aunque su bigote llegue menos lejos por la "
+        "derecha.\n\n"
+        "Que un curso tenga el mejor puntaje del conjunto no dice nada de su "
+        "mediana: el máximo es un solo dato y la mediana describe al grupo.",
+        [
+            ("El recorrido de los puntajes del 4°A es menor que el del 4°B", "Los dos recorridos miden 60 puntos: de 30 a 90 y de 20 a 80."),
+            ("El 25% de peor rendimiento del 4°B parte de un puntaje más alto", "El 4°B parte en 20 puntos y el 4°A en 30."),
+            ("Los dos cursos tienen el mismo rango intercuartil", "El cajón del 4°A mide 20 puntos y el del 4°B, 30."),
+        ],
+        imagen="/preguntas/mat-dos-cajones.svg",
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "La ojiva muestra la frecuencia acumulada de los puntajes de 40 "
+        "estudiantes. ¿En qué intervalo se encuentra la mediana?",
+        "Entre 20 y 30 puntos",
+        "La mediana deja la mitad de los datos por debajo, y con 40 estudiantes "
+        "esa mitad son 20.\n\n"
+        "1) En 20 puntos la ojiva marca 8 acumulados: todavía no se llega a 20.\n"
+        "2) En 30 puntos marca 22: ahí ya se pasó.\n"
+        "3) Entonces el estudiante número 20 tiene entre 20 y 30 puntos.\n\n"
+        "La ojiva se lee de izquierda a derecha buscando dónde la curva cruza la "
+        "altura que interesa; acá esa altura es 20.",
+        [
+            ("Entre 10 y 20 puntos", "Ahí se acumulan 8 estudiantes: falta para llegar a la mitad."),
+            ("Entre 30 y 40 puntos", "A los 30 puntos ya van 22 acumulados, o sea la mediana quedó atrás."),
+            ("Entre 40 y 50 puntos", "Ese tramo contiene a los últimos 6 estudiantes, los de mejor puntaje."),
+        ],
+        imagen="/preguntas/mat-ojiva-puntajes.svg",
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "La tabla resume los puntajes de 40 estudiantes. ¿En qué intervalo se "
+        "encuentra el percentil 75?",
+        "En el intervalo [40, 60)",
+        "El percentil 75 deja por debajo al 75% de los datos.\n\n"
+        "1) El 75% de 40 son 30 estudiantes.\n"
+        "2) La frecuencia acumulada llega a 20 al terminar el intervalo [20, 40): "
+        "todavía faltan.\n"
+        "3) En [40, 60) la acumulada llega a 32, así que el estudiante número 30 "
+        "está en ese tramo.\n\n"
+        "La columna acumulada es la que responde: la de frecuencias sueltas "
+        "obligaría a ir sumando de arriba abajo.",
+        [
+            ("En el intervalo [20, 40)", "Ahí la acumulada llega a 20, que corresponde al percentil 50."),
+            ("En el intervalo [60, 80)", "Ese tramo contiene a los 8 estudiantes de más puntaje, del 33 al 40."),
+            ("En el intervalo [0, 20)", "Ahí se acumulan 6 estudiantes: el 15% del total."),
+        ],
+        imagen="/preguntas/mat-tabla-frecuencias.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "El árbol muestra dos extracciones seguidas de una bolsa, sin devolver "
+        "la primera bolita. ¿Cuál es la probabilidad de que las dos sean rojas?",
+        "3/10",
+        "Un camino del árbol se recorre multiplicando las probabilidades de sus "
+        "ramas.\n\n"
+        "1) Primera roja: 3/5.\n"
+        "2) Segunda roja, ya sin esa bolita: 2/4.\n"
+        "3) Las dos: 3/5 · 2/4 = 6/20 = 3/10.\n\n"
+        "Las ramas de la segunda extracción tienen denominador 4 porque queda "
+        "una bolita menos: eso es lo que significa no devolverla.",
+        [
+            ("9/25", "Multiplicó 3/5 por 3/5, que sería el resultado si la bolita se devolviera."),
+            ("5/9", "Sumó por separado los numeradores y los denominadores de las dos ramas."),
+            ("1/2", "Usó solo la segunda rama, dejando fuera la probabilidad de la primera extracción."),
+        ],
+        imagen="/preguntas/mat-arbol-probabilidad.svg",
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "La ruleta de la figura está dividida en ocho sectores iguales. Al "
+        "girarla, ¿cuál es la probabilidad de que se detenga en un sector A?",
+        "3/8",
+        "Como los ocho sectores son iguales, todos tienen la misma probabilidad "
+        "de salir y basta contar.\n\n"
+        "1) Casos favorables: hay 3 sectores marcados con A.\n"
+        "2) Casos posibles: 8 sectores en total.\n"
+        "3) Probabilidad: 3/8.\n\n"
+        "Que los sectores sean iguales es lo que permite contar sectores en vez "
+        "de medir ángulos.",
+        [
+            ("1/4", "Contó dos sectores A en lugar de tres."),
+            ("1/8", "Calculó la probabilidad de un sector cualquiera, como si hubiera un solo A."),
+            ("3/4", "Dividió por la cantidad de letras distintas y no por la de sectores."),
+        ],
+        imagen="/preguntas/mat-ruleta-sectores.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "El diagrama resume qué deportes practica cada estudiante del curso. Si "
+        "se elige uno al azar, ¿cuál es la probabilidad de que no practique "
+        "ninguno de los dos?",
+        "1/6",
+        "El número de afuera de los dos círculos es justo el de los que no "
+        "practican ninguno.\n\n"
+        "1) Casos favorables: 5 estudiantes.\n"
+        "2) Casos posibles: los 30 del curso.\n"
+        "3) Probabilidad: 5/30 = 1/6.\n\n"
+        "Conviene comprobar que las partes suman el total: 11 + 7 + 7 + 5 = 30.",
+        [
+            ("7/30", "Es la probabilidad de que practique los dos deportes."),
+            ("1/5", "Dividió por los 25 que practican algún deporte, en vez de por el curso completo."),
+            ("11/30", "Es la probabilidad de que practique solo fútbol."),
+        ],
+        imagen="/preguntas/mat-venn-deportes.svg",
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De cada una de las urnas de la figura se saca una bolita al azar. ¿Cuál "
+        "es la probabilidad de que las dos sean blancas?",
+        "1/8",
+        "Las dos extracciones son independientes: lo que salga de una urna no "
+        "cambia lo que hay en la otra.\n\n"
+        "1) Urna 1: 3 blancas de 8 bolitas, o sea 3/8.\n"
+        "2) Urna 2: 2 blancas de 6 bolitas, o sea 1/3.\n"
+        "3) Las dos a la vez: 3/8 · 1/3 = 3/24 = 1/8.\n\n"
+        "Multiplicar es lo que corresponde cuando se piden dos cosas juntas; "
+        "sumar respondería a que ocurra una u otra.",
+        [
+            ("5/14", "Juntó todas las bolitas en un solo montón: 5 blancas entre 14."),
+            ("17/24", "Sumó las dos probabilidades en lugar de multiplicarlas."),
+            ("1/4", "Supuso que en cada urna la mitad de las bolitas son blancas."),
+        ],
+        imagen="/preguntas/mat-dos-urnas.svg",
+    ),
+]
+
+
+# ---------- Matemática con figura: segundo lote ----------
+# Cubre las unidades del temario DEMRE (Admisión 2027) que el primer lote dejó
+# sin ninguna figura: los tres nodos de Números, expresiones algebraicas,
+# ecuaciones e inecuaciones, sistemas, y las tablas de frecuencia relativa.
+#
+# Las figuras siguen el lenguaje visual de la prueba oficial: línea negra sobre
+# blanco, la cota escrita junto al lado, el ángulo recto con un cuadradito y la
+# zona sombreada en gris. Nada de color: la lámina de la PAES es en blanco y
+# negro, y el color acá tendría que significar algo.
+QUESTIONS += [
+    _q(
+        "num_racionales", "medio",
+        "En la recta numérica de la figura hay cuatro puntos marcados. ¿Cuál de "
+        "ellos corresponde al número −3/4?",
+        "El punto Q",
+        "Conviene ubicar primero entre qué enteros cae el número.\n\n"
+        "1) −3/4 es negativo y su valor absoluto es menor que 1, así que está "
+        "entre −1 y 0.\n"
+        "2) De los cuatro puntos, el único en ese tramo es el que está pegado a "
+        "−1 por la derecha.\n"
+        "3) Además queda a tres cuartos de camino desde 0 hacia −1, que es "
+        "exactamente lo que dice la fracción.",
+        [
+            ("El punto P", "Está entre −2 y −1: corresponde a un número menor que −1."),
+            ("El punto R", "Es positivo, y −3/4 es negativo."),
+            ("El punto S", "Es positivo y mayor que 1."),
+        ],
+        imagen="/preguntas/mat-recta-racionales.svg",
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Las cuatro barras de la figura son iguales y están divididas en partes "
+        "iguales. ¿En cuál de ellas está sombreada la mayor fracción de la barra?",
+        "En la barra I",
+        "Cada barra muestra una fracción distinta, y para compararlas hay que "
+        "llevarlas a un terreno común.\n\n"
+        "1) Las fracciones sombreadas son 3/4, 5/8, 3/5 y 7/10.\n"
+        "2) En decimales: 0,75; 0,625; 0,6 y 0,7.\n"
+        "3) La mayor es 3/4.\n\n"
+        "Contar cuántas partes están pintadas no sirve: la barra con más partes "
+        "pintadas es la que tiene las partes más chicas.",
+        [
+            ("En la barra II", "Tiene cinco partes pintadas, pero son octavos: 5/8 es menos que 3/4."),
+            ("En la barra III", "Tres quintos es 0,6, la menor de las cuatro."),
+            ("En la barra IV", "Siete partes pintadas, pero de diez: 0,7 queda bajo 0,75."),
+        ],
+        imagen="/preguntas/mat-fracciones-barras.svg",
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "La cuadrícula de la figura está formada por 100 celdas iguales. ¿Qué "
+        "porcentaje de ella está sombreado?",
+        "35%",
+        "Con 100 celdas iguales, el porcentaje se lee contando.\n\n"
+        "1) Hay tres filas completas pintadas: 3 · 10 = 30 celdas.\n"
+        "2) En la cuarta fila hay 5 celdas más: 30 + 5 = 35.\n"
+        "3) Son 35 de 100, o sea el 35%.\n\n"
+        "El porcentaje es, literalmente, cuántas partes de cada cien.",
+        [
+            ("3,5%", "Corrió la coma: 35 de 100 es 35%, no 3,5%."),
+            ("30%", "Contó solo las filas completas y dejó fuera la fila incompleta."),
+            ("65%", "Dio el porcentaje de la parte en blanco."),
+        ],
+        imagen="/preguntas/mat-grilla-porcentaje.svg",
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El gráfico muestra el deporte favorito de un grupo de 200 personas. "
+        "¿Qué porcentaje de ellas prefiere el tenis?",
+        "15%",
+        "El gráfico da la cantidad; el porcentaje sale de compararla con el total.\n\n"
+        "1) Prefieren tenis 30 personas.\n"
+        "2) La fracción es 30/200.\n"
+        "3) En porcentaje: 30 ÷ 200 = 0,15, o sea 15%.\n\n"
+        "Conviene comprobar el total sumando las barras: 60 + 30 + 40 + 70 = 200 ✓.",
+        [
+            ("30%", "Usó la cantidad de personas como si ya fuera un porcentaje."),
+            ("20%", "Usó las 40 personas de natación."),
+            ("7,5%", "Dividió por 400 en lugar de por 200."),
+        ],
+        imagen="/preguntas/mat-barras-encuesta.svg",
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "El cuadrado de la figura tiene un área de 144 cm². ¿Cuánto mide su lado?",
+        "12 cm",
+        "En un cuadrado el área es el lado elevado al cuadrado, así que el lado "
+        "es la raíz del área.\n\n"
+        "1) Si el lado es L, entonces L² = 144.\n"
+        "2) L = √144.\n"
+        "3) L = 12 cm, porque 12 · 12 = 144.",
+        [
+            ("72 cm", "Dividió el área por 2 en lugar de sacarle la raíz."),
+            ("36 cm", "Dividió el área por 4, como si el área fuera el perímetro."),
+            ("14 cm", "Aproximó mal: 14 · 14 = 196, bastante más que 144."),
+        ],
+        imagen="/preguntas/mat-cuadrado-area.svg",
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "El cubo de la figura tiene un volumen de 64 cm³. ¿Cuánto mide su arista?",
+        "4 cm",
+        "En un cubo las tres medidas son iguales, así que el volumen es la "
+        "arista elevada al cubo.\n\n"
+        "1) Si la arista es a, entonces a³ = 64.\n"
+        "2) a = ∛64.\n"
+        "3) a = 4 cm, porque 4 · 4 · 4 = 64.\n\n"
+        "La raíz cúbica deshace el exponente 3, igual que la raíz cuadrada "
+        "deshace el exponente 2.",
+        [
+            ("8 cm", "Sacó la raíz cuadrada: 8² = 64, pero acá el exponente es 3."),
+            ("21,3 cm", "Dividió el volumen por 3 en vez de sacar la raíz cúbica."),
+            ("16 cm", "Dividió el volumen por 4, que no deshace el cubo."),
+        ],
+        imagen="/preguntas/mat-cubo-volumen.svg",
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál de las siguientes expresiones representa el área del rectángulo "
+        "de la figura?",
+        "x² + 5x + 6",
+        "El área de un rectángulo es el producto de sus lados, y acá los lados "
+        "son expresiones.\n\n"
+        "1) Área = (x + 3)(x + 2).\n"
+        "2) Se multiplica término a término: x · x + x · 2 + 3 · x + 3 · 2.\n"
+        "3) Queda x² + 2x + 3x + 6 = x² + 5x + 6.\n\n"
+        "El 5x sale de sumar los dos productos cruzados: es el error más común "
+        "olvidar uno de ellos.",
+        [
+            ("x² + 6", "Multiplicó solo los primeros términos entre sí y los últimos entre sí."),
+            ("2x + 5", "Calculó el semiperímetro en vez del área."),
+            ("x² + 5x + 5", "Sumó los términos libres en lugar de multiplicarlos."),
+        ],
+        imagen="/preguntas/mat-rectangulo-expresion.svg",
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "El cuadrado de la figura está dividido en cuatro regiones. ¿Qué "
+        "igualdad se puede deducir de ella?",
+        "(a + b)² = a² + 2ab + b²",
+        "La figura calcula la misma área de dos maneras.\n\n"
+        "1) Mirada como un solo cuadrado, su lado mide a + b, así que su área es "
+        "(a + b)².\n"
+        "2) Mirada por partes, son cuatro regiones: a², dos rectángulos ab y b².\n"
+        "3) Como es la misma superficie, (a + b)² = a² + 2ab + b².\n\n"
+        "Los dos rectángulos ab son los que explican por qué el desarrollo lleva "
+        "un 2ab, y no solo a² + b².",
+        [
+            ("(a + b)² = a² + b²", "Deja fuera los dos rectángulos, que son la mitad de la figura."),
+            ("(a + b)² = a² + ab + b²", "Cuenta un solo rectángulo, y en la figura hay dos iguales."),
+            ("(a + b)² = 2a + 2b", "Es el perímetro del cuadrado, no su área."),
+        ],
+        imagen="/preguntas/mat-cuadrado-partido.svg",
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "La balanza de la figura está en equilibrio y las pesas están en kilos. "
+        "¿Cuánto pesa cada caja?",
+        "5 kg",
+        "Que la balanza esté equilibrada significa que los dos platillos pesan "
+        "lo mismo, y eso es una ecuación.\n\n"
+        "1) A la izquierda hay dos cajas iguales y una pesa de 2 kg: 2x + 2.\n"
+        "2) A la derecha, 5 + 5 + 2 = 12 kg.\n"
+        "3) La ecuación es 2x + 2 = 12, así que 2x = 10 y x = 5 kg.\n\n"
+        "Quitar los 2 kg de la izquierda es lo mismo que restar 2 a los dos "
+        "lados: la balanza sigue equilibrada si se saca lo mismo en ambos.",
+        [
+            ("6 kg", "Repartió los 12 kg entre las dos cajas sin descontar antes la pesa de 2 kg."),
+            ("7 kg", "Restó 5 en lugar de restar la pesa de 2 kg y dividir por 2."),
+            ("10 kg", "Se quedó en 2x = 10 sin dividir por la cantidad de cajas."),
+        ],
+        imagen="/preguntas/mat-balanza-ecuacion.svg",
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "En la recta numérica de la figura está marcado el conjunto solución de "
+        "una inecuación. ¿Cuál de las siguientes es esa inecuación?",
+        "x > 3",
+        "Hay que leer dos cosas del dibujo: hacia dónde va la marca y qué pasa "
+        "en el extremo.\n\n"
+        "1) La parte marcada se extiende hacia la derecha del 3, o sea son los "
+        "números mayores que 3.\n"
+        "2) El círculo del 3 está sin rellenar, así que el 3 no pertenece a la "
+        "solución.\n"
+        "3) Eso es exactamente x > 3.\n\n"
+        "Un círculo relleno habría incluido al 3 y la inecuación llevaría el "
+        "signo mayor o igual.",
+        [
+            ("x ≥ 3", "El círculo sin rellenar avisa que el 3 queda fuera."),
+            ("x < 3", "Los números menores que 3 están a la izquierda, y ese tramo no está marcado."),
+            ("x ≤ 3", "Invierte el sentido y además incluiría el 3."),
+        ],
+        imagen="/preguntas/mat-recta-inecuacion.svg",
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "En el plano de la figura se representan las rectas L1 y L2, que "
+        "corresponden a las dos ecuaciones de un sistema. ¿Cuál es la solución "
+        "de ese sistema?",
+        "x = 3 e y = 2",
+        "Resolver un sistema de dos ecuaciones lineales es encontrar el par que "
+        "cumple las dos a la vez, y en el gráfico ese par es el punto donde las "
+        "rectas se cruzan.\n\n"
+        "1) Las rectas se cortan en el punto P.\n"
+        "2) Leyendo sus coordenadas: 3 en el eje horizontal y 2 en el vertical.\n"
+        "3) La solución es x = 3, y = 2.\n\n"
+        "Cualquier otro punto está sobre una de las rectas, pero no sobre las "
+        "dos: cumpliría una ecuación y no la otra.",
+        [
+            ("x = 2 e y = 3", "Cambió el orden de las coordenadas del punto de corte."),
+            ("x = 5 e y = 0", "Es donde una de las rectas corta el eje horizontal, no donde se cruzan."),
+            ("x = 0 e y = 5", "Es donde una de las rectas corta el eje vertical."),
+        ],
+        imagen="/preguntas/mat-sistema-rectas.svg",
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "El gráfico muestra lo que cobran dos planes de telefonía según los "
+        "minutos que se consumen. ¿A partir de cuántos minutos conviene "
+        "contratar el plan A?",
+        "A partir de los 200 minutos",
+        "Conviene el plan que en ese tramo quede más abajo en el gráfico, porque "
+        "el eje vertical es el costo.\n\n"
+        "1) Antes del cruce, la recta del plan A va por encima: cobra un cargo "
+        "fijo aunque se hable poco.\n"
+        "2) Las dos rectas se cortan en los 200 minutos, donde ambos planes "
+        "cobran lo mismo.\n"
+        "3) Después de ese punto, el plan A queda por debajo del B, así que "
+        "conviene desde ahí.\n\n"
+        "El plan A parte más caro pero sube más lento; el B parte de cero y sube "
+        "más rápido. Por eso el que conviene depende de cuánto se hable.",
+        [
+            ("A partir de los 100 minutos", "Ahí el plan A todavía cobra más que el B."),
+            ("A partir de los 300 minutos", "Conviene antes: desde el cruce, que ocurre en los 200 minutos."),
+            ("Conviene siempre, desde el primer minuto", "Con pocos minutos el plan B es más barato, porque no cobra el cargo fijo."),
+        ],
+        imagen="/preguntas/mat-dos-planes.svg",
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "La tabla de la figura muestra algunos valores de una función lineal "
+        "afín. ¿Cuál es esa función?",
+        "f(x) = 3x + 5",
+        "Una función afín sube siempre lo mismo por cada unidad de x, y ese "
+        "salto constante es la pendiente.\n\n"
+        "1) De x = 0 a x = 1, y pasa de 5 a 8: sube 3. Y sigue subiendo de 3 en "
+        "3 en el resto de la tabla.\n"
+        "2) Cuando x vale 0, y vale 5: ese es el valor inicial.\n"
+        "3) La función es f(x) = 3x + 5.\n\n"
+        "Se comprueba con cualquier columna: para x = 3, 3 · 3 + 5 = 14 ✓.",
+        [
+            ("f(x) = 5x + 3", "Cambió los papeles: 3 es lo que sube por cada unidad y 5 el valor inicial."),
+            ("f(x) = x + 5", "Con esa función y subiría de 1 en 1, y en la tabla sube de 3 en 3."),
+            ("f(x) = 3x", "Le falta el valor inicial: para x = 0 daría 0 y la tabla dice 5."),
+        ],
+        imagen="/preguntas/mat-tabla-funcion.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "El gráfico muestra tres parábolas de la forma f(x) = ax², todas con "
+        "vértice en el origen. ¿Cuál de ellas tiene el mayor valor de a?",
+        "La parábola I",
+        "El coeficiente a controla cuánto se abren las ramas: mientras más "
+        "grande, más angosta queda la parábola.\n\n"
+        "1) A la misma altura, la parábola I es la que ocupa menos ancho.\n"
+        "2) Eso significa que para un mismo x su valor crece más rápido.\n"
+        "3) Entonces es la que tiene el mayor a.\n\n"
+        "Otra manera de verlo: en x = 1 cada parábola vale exactamente a, así "
+        "que la más alta en ese punto es la de mayor coeficiente.",
+        [
+            ("La parábola II", "Es intermedia: queda más abierta que la I."),
+            ("La parábola III", "Es la más abierta de las tres, o sea la de menor a."),
+            ("Las tres tienen el mismo valor de a", "Con el mismo a las tres se superpondrían en una sola curva."),
+        ],
+        imagen="/preguntas/mat-tres-parabolas.svg",
+    ),
+]
+
+
+# ---------- Matemática con figura: geometría, datos y azar (segundo lote) ----------
+QUESTIONS += [
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área del triángulo de la figura?",
+        "56 cm²",
+        "El área de un triángulo es base por altura dividido en dos.\n\n"
+        "1) Base: 14 cm.\n"
+        "2) Altura: 8 cm, la perpendicular a la base marcada con línea punteada.\n"
+        "3) Área: (14 · 8) ÷ 2 = 112 ÷ 2 = 56 cm².\n\n"
+        "La altura no es ninguno de los lados inclinados: es la distancia desde "
+        "el vértice de arriba hasta la base, medida en perpendicular.",
+        [
+            ("112 cm²", "Multiplicó base por altura y olvidó dividir por 2."),
+            ("22 cm²", "Sumó base y altura en vez de multiplicarlas."),
+            ("28 cm²", "Dividió por 2 dos veces: primero la base y después el producto."),
+        ],
+        imagen="/preguntas/mat-triangulo-altura.svg",
+    ),
+    _q(
+        "geo_plana", "medio",
+        "En la figura se muestra un círculo con su diámetro acotado. ¿Cuál es su "
+        "perímetro? (usa π = 3,14)",
+        "31,4 cm",
+        "El perímetro de un círculo es π por el diámetro, o lo que es lo mismo, "
+        "2 · π · radio.\n\n"
+        "1) El diámetro mide 10 cm.\n"
+        "2) Perímetro: 3,14 · 10 = 31,4 cm.\n\n"
+        "Si se prefiere trabajar con el radio, hay que dividir primero: 10 ÷ 2 = "
+        "5 cm, y entonces 2 · 3,14 · 5 = 31,4 cm ✓. Lo que no se puede es usar "
+        "el diámetro donde va el radio.",
+        [
+            ("62,8 cm", "Usó el diámetro como si fuera el radio."),
+            ("78,5 cm", "Calculó el área del círculo, que además se mide en centímetros cuadrados."),
+            ("15,7 cm", "Calculó π por el radio: eso es la mitad del perímetro."),
+        ],
+        imagen="/preguntas/mat-circulo-diametro.svg",
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "La figura muestra un cuadrado con un círculo inscrito. ¿Cuál es el área "
+        "de la región sombreada? (usa π = 3,14)",
+        "30,96 cm²",
+        "La región sombreada es lo que queda del cuadrado al sacarle el círculo.\n\n"
+        "1) Área del cuadrado: 12 · 12 = 144 cm².\n"
+        "2) El círculo está inscrito, así que su diámetro es el lado del "
+        "cuadrado: 12 cm, y su radio 6 cm.\n"
+        "3) Área del círculo: 3,14 · 6² = 113,04 cm².\n"
+        "4) Región sombreada: 144 − 113,04 = 30,96 cm².\n\n"
+        "El paso que se salta más seguido es el 2: el radio no está en el dibujo "
+        "y hay que deducirlo del lado.",
+        [
+            ("113,04 cm²", "Dio el área del círculo, que es justamente la parte no sombreada."),
+            ("30,96 cm", "El resultado es correcto, pero un área se mide en centímetros cuadrados."),
+            ("144 cm²", "Dio el área del cuadrado completo, sin descontar el círculo."),
+        ],
+        imagen="/preguntas/mat-cuadrado-circulo.svg",
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En el triángulo rectángulo de la figura se conocen la hipotenusa y uno "
+        "de los catetos. ¿Cuánto mide el otro cateto?",
+        "10 cm",
+        "La hipotenusa es el lado opuesto al ángulo recto, y acá es el de 26 cm.\n\n"
+        "1) Pitágoras: 26² = 24² + c².\n"
+        "2) 676 = 576 + c², así que c² = 100.\n"
+        "3) c = 10 cm.\n\n"
+        "Cuando lo que falta es un cateto, los cuadrados se restan. Sumarlos "
+        "daría un lado más largo que la hipotenusa, que es imposible.",
+        [
+            ("50 cm", "Sumó las dos medidas en vez de aplicar el teorema."),
+            ("35,4 cm", "Sumó los cuadrados en lugar de restarlos, y le dio un lado mayor que la hipotenusa."),
+            ("2 cm", "Restó las medidas directamente, sin elevarlas al cuadrado."),
+        ],
+        imagen="/preguntas/mat-triangulo-cateto.svg",
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "La figura es el desarrollo de un cilindro. ¿Cuál es el área total de su "
+        "superficie? (usa π = 3,14)",
+        "188,4 cm²",
+        "El desarrollo muestra las tres piezas: dos tapas circulares y el manto, "
+        "que al enrollarse forma el tubo.\n\n"
+        "1) Cada tapa es un círculo de radio 3: 3,14 · 3² = 28,26 cm². Las dos "
+        "suman 56,52 cm².\n"
+        "2) El manto es un rectángulo. Su alto es la altura del cilindro (7 cm) "
+        "y su largo es el perímetro de la base: 2 · 3,14 · 3 = 18,84 cm.\n"
+        "3) Área del manto: 18,84 · 7 = 131,88 cm².\n"
+        "4) Área total: 56,52 + 131,88 = 188,4 cm².\n\n"
+        "Lo que hace funcionar el desarrollo es que el largo del rectángulo "
+        "calza exactamente con el contorno del círculo.",
+        [
+            ("131,88 cm²", "Calculó solo el manto y dejó fuera las dos tapas."),
+            ("160,14 cm²", "Contó una sola tapa en vez de las dos."),
+            ("197,82 cm²", "Calculó el volumen del cilindro, que no es un área."),
+        ],
+        imagen="/preguntas/mat-desarrollo-cilindro.svg",
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de la piscina de la figura?",
+        "120 m³",
+        "La piscina tiene forma de paralelepípedo, así que su volumen es el "
+        "producto de sus tres medidas.\n\n"
+        "1) Largo por ancho: 10 · 6 = 60 m², que es el área del fondo.\n"
+        "2) Por la profundidad: 60 · 2 = 120 m³.\n\n"
+        "El volumen se puede pensar como el área del fondo repetida a lo alto: "
+        "por eso las tres medidas se multiplican.",
+        [
+            ("60 m³", "Multiplicó solo largo por ancho: eso es el área del fondo."),
+            ("18 m³", "Sumó las tres medidas en lugar de multiplicarlas."),
+            ("184 m³", "Calculó el área de las paredes y el fondo, no el volumen."),
+        ],
+        imagen="/preguntas/mat-piscina-volumen.svg",
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "En el plano de la figura se marcaron los puntos A y B. ¿Cuál es el "
+        "vector que traslada A hasta B?",
+        "(5, 3)",
+        "El vector de traslación se obtiene restando las coordenadas del punto "
+        "de partida a las del de llegada.\n\n"
+        "1) A está en (2, 1) y B en (7, 4).\n"
+        "2) En horizontal: 7 − 2 = 5 unidades a la derecha.\n"
+        "3) En vertical: 4 − 1 = 3 unidades hacia arriba.\n"
+        "4) El vector es (5, 3).",
+        [
+            ("(3, 5)", "Puso primero el desplazamiento vertical: en un vector va primero el horizontal."),
+            ("(7, 4)", "Son las coordenadas de B, no el desplazamiento desde A."),
+            ("(9, 5)", "Sumó las coordenadas de los dos puntos en vez de restarlas."),
+        ],
+        imagen="/preguntas/mat-vector-plano.svg",
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "En el plano de la figura, el punto M se transformó en el punto M'. "
+        "¿Qué transformación se aplicó?",
+        "Una rotación de 180° en torno al origen",
+        "Conviene comparar las coordenadas: M está en (3, 2) y M' en (−3, −2).\n\n"
+        "1) Los dos signos cambiaron, y eso es lo que hace media vuelta en torno "
+        "al origen: (x, y) pasa a (−x, −y).\n"
+        "2) Se confirma en el dibujo: los dos puntos están alineados con el "
+        "origen y a la misma distancia de él, uno a cada lado.\n\n"
+        "Una reflexión respecto de un eje cambiaría un solo signo, y el punto "
+        "quedaría en un cuadrante vecino, no en el opuesto.",
+        [
+            ("Una reflexión respecto del eje x", "Eso daría (3, −2): cambia la altura y deja la abscisa igual."),
+            ("Una reflexión respecto del eje y", "Eso daría (−3, 2): cambia el lado y deja la altura igual."),
+            ("Una traslación", "En una traslación los dos puntos no quedarían alineados con el origen y a la misma distancia."),
+        ],
+        imagen="/preguntas/mat-rotacion-punto.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En el mapa de la figura, la distancia entre las dos localidades está "
+        "medida sobre el papel. ¿Cuál es la distancia real entre ellas?",
+        "50 km",
+        "La barra de escala dice cuántos kilómetros representa cada centímetro "
+        "del mapa.\n\n"
+        "1) La barra mide 2 cm y equivale a 20 km, así que 1 cm son 10 km.\n"
+        "2) Entre las dos localidades hay 5 cm en el mapa.\n"
+        "3) Distancia real: 5 · 10 = 50 km.\n\n"
+        "La barra de escala es la que fija la equivalencia: sin ella el dibujo "
+        "no dice nada del terreno.",
+        [
+            ("20 km", "Copió el valor de la barra de escala, que corresponde a 2 cm y no a 5."),
+            ("100 km", "Usó 20 km por centímetro, cuando la barra de 2 cm es la que vale 20 km."),
+            ("10 km", "Dio cuántos kilómetros representa un solo centímetro."),
+        ],
+        imagen="/preguntas/mat-mapa-escala.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "La tabla de la figura resume el deporte preferido de un grupo de "
+        "personas. ¿Qué porcentaje de ellas prefiere fútbol o básquetbol?",
+        "50%",
+        "La columna de frecuencia relativa ya trae la proporción de cada "
+        "categoría respecto del total.\n\n"
+        "1) Fútbol: 0,30. Básquetbol: 0,20.\n"
+        "2) Como son categorías distintas, las proporciones se suman: 0,30 + "
+        "0,20 = 0,50.\n"
+        "3) En porcentaje, 50%.\n\n"
+        "Se puede comprobar con las frecuencias: 12 + 8 = 20 de un total de 40, "
+        "que es la mitad ✓.",
+        [
+            ("20%", "Sumó las frecuencias 12 y 8 y las leyó como si fueran un porcentaje."),
+            ("35%", "Usó la frecuencia relativa del vóleibol."),
+            ("0,5%", "Corrió la coma: 0,50 es 50%, no medio por ciento."),
+        ],
+        imagen="/preguntas/mat-tabla-relativa.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "El gráfico compara los libros leídos por cada curso en dos años "
+        "seguidos. ¿En qué curso aumentó más la cantidad de libros leídos entre "
+        "2025 y 2026?",
+        "En 4° medio",
+        "Hay que mirar, curso por curso, cuánto cambió la barra de un año al "
+        "otro.\n\n"
+        "1) En 4° medio se pasó de 10 a 25 libros: 15 más.\n"
+        "2) En 3° medio, de 15 a 20: solo 5 más.\n"
+        "3) En 1° y en 2° medio la cantidad bajó, así que no aumentó nada.\n\n"
+        "La pregunta es por el aumento, no por quién leyó más: 2° medio tuvo la "
+        "barra más alta de todo el gráfico y aun así fue el que más cayó.",
+        [
+            ("En 1° medio", "Bajó de 20 a 15 libros."),
+            ("En 2° medio", "Tuvo la barra más alta en 2025, pero cayó de 25 a 10."),
+            ("En 3° medio", "Aumentó 5 libros, un tercio de lo que subió 4° medio."),
+        ],
+        imagen="/preguntas/mat-barras-dobles.svg",
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "El diagrama de cajón de la figura resume el tiempo que tardó un grupo "
+        "de personas en completar un circuito. ¿Qué representa el 24?",
+        "Que el 75% de las personas tardó 24 minutos o menos",
+        "El 24 es el borde derecho del cajón, o sea el tercer cuartil.\n\n"
+        "1) El tercer cuartil deja por debajo al 75% de los datos.\n"
+        "2) Entonces tres de cada cuatro personas terminaron el circuito en 24 "
+        "minutos o menos.\n\n"
+        "El cajón se lee por porcentajes acumulados, no por cantidad de "
+        "personas: el diagrama no dice cuántas son.",
+        [
+            ("Que 24 personas completaron el circuito", "El eje mide minutos, no personas."),
+            ("Que el 24% de las personas terminó antes que el resto", "El 24 es un tiempo, no un porcentaje."),
+            ("Que la mitad de las personas tardó 24 minutos o menos", "Esa es la mediana, que es la línea de adentro del cajón."),
+        ],
+        imagen="/preguntas/mat-cajon-interpretar.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "La tabla de la figura muestra todos los resultados posibles al lanzar "
+        "dos dados y sumar sus puntos. ¿Cuál es la probabilidad de que la suma "
+        "sea 7?",
+        "1/6",
+        "La tabla tiene los casos posibles ordenados, así que basta contar.\n\n"
+        "1) Casos posibles: 6 filas por 6 columnas, o sea 36.\n"
+        "2) Casos favorables: la suma 7 aparece seis veces, una en cada fila, "
+        "formando la diagonal.\n"
+        "3) Probabilidad: 6/36 = 1/6.\n\n"
+        "El 7 es la suma más probable justamente porque es la que más maneras "
+        "tiene de formarse.",
+        [
+            ("1/12", "Contó tres casos favorables en vez de seis, olvidando que el orden de los dados distingue casos."),
+            ("7/36", "Usó el número 7 como si fuera la cantidad de casos favorables."),
+            ("1/11", "Contó las sumas distintas posibles, del 2 al 12, y no los 36 resultados."),
+        ],
+        imagen="/preguntas/mat-tabla-dados.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En una caja hay ocho fichas iguales, numeradas como muestra la figura. "
+        "Si se saca una al azar, ¿cuál es la probabilidad de que el número sea "
+        "par o mayor que 6?",
+        "5/8",
+        "Es la regla aditiva, y hay que cuidar los casos que cumplen las dos "
+        "condiciones a la vez.\n\n"
+        "1) Pares: 2, 4, 6 y 8, o sea 4 fichas.\n"
+        "2) Mayores que 6: 7 y 8, o sea 2 fichas.\n"
+        "3) La ficha 8 está en los dos grupos, así que se cuenta una sola vez: "
+        "4 + 2 − 1 = 5 casos favorables.\n"
+        "4) Probabilidad: 5/8.\n\n"
+        "Sumar sin descontar la ficha repetida es el error clásico de la regla "
+        "aditiva.",
+        [
+            ("6/8", "Sumó 4 y 2 sin descontar la ficha 8, que cumple las dos condiciones."),
+            ("1/2", "Consideró solo los números pares."),
+            ("1/4", "Consideró solo los mayores que 6."),
+        ],
+        imagen="/preguntas/mat-fichas-numeradas.svg",
+    ),
+]
+
+
+# ---------- Matemática M2 con figura ----------
+# M2 evalúa todo M1 y además su propio temario (DEMRE, Admisión 2027), y esas
+# unidades propias son las que más se apoyan en una imagen: el gráfico de una
+# exponencial o de una función trigonométrica, una homotecia, los ángulos de la
+# circunferencia, una tabla de doble entrada. El banco de M2 no tenía ninguna.
+#
+# Mismo lenguaje visual que las figuras de M1: línea negra sobre blanco, la cota
+# junto al lado y el gris reservado para lo que está sombreado.
+QUESTIONS += [
+    _q(
+        "num_reales", "medio",
+        "En la recta numérica de la figura hay cuatro puntos marcados. ¿Cuál de "
+        "ellos está más cerca de √10?",
+        "El punto R",
+        "Para ubicar una raíz sin calculadora, conviene encerrarla entre dos "
+        "cuadrados perfectos.\n\n"
+        "1) 9 < 10 < 16, así que √9 < √10 < √16, o sea 3 < √10 < 4.\n"
+        "2) El único punto marcado entre 3 y 4 es el tercero.\n"
+        "3) Además √10 es apenas mayor que 3 —su valor es cercano a 3,16—, y ese "
+        "punto está justo pasado el 3.",
+        [
+            ("El punto P", "Está entre 1 y 2, y √10 es mayor que 3."),
+            ("El punto Q", "Está entre 2 y 3: ahí caería √4 o √9, no √10."),
+            ("El punto S", "Está entre 4 y 5, donde caen las raíces de números mayores que 16."),
+        ],
+        imagen="/preguntas/mat-recta-real-puntos.svg",
+    ),
+    _q(
+        "num_reales", "dificil",
+        "La figura muestra un cuadrado de lado 1 apoyado sobre una recta "
+        "numérica. Su diagonal se lleva sobre la recta con un arco de "
+        "circunferencia. ¿Qué número queda representado por el punto T?",
+        "√2",
+        "El arco traslada la diagonal del cuadrado hasta la recta, así que T "
+        "queda a esa distancia del 0.\n\n"
+        "1) La diagonal es la hipotenusa de un triángulo rectángulo de catetos 1 "
+        "y 1: d² = 1² + 1², así que d = √2.\n"
+        "2) El arco tiene centro en el 0 y radio igual a esa diagonal, de modo "
+        "que T está a √2 del origen.\n\n"
+        "Esta construcción es la manera clásica de mostrar que √2 tiene un lugar "
+        "exacto en la recta, aunque su escritura decimal no termine nunca: es "
+        "irracional, y aun así se puede señalar con el compás.",
+        [
+            ("1,5", "Es un racional cualquiera entre 1 y 2; la diagonal del cuadrado vale √2 ≈ 1,41."),
+            ("2", "Sería la diagonal si midiera el doble del lado, y en un cuadrado nunca es así."),
+            ("√3", "Aparece como diagonal de un cubo de arista 1, no de un cuadrado."),
+        ],
+        imagen="/preguntas/mat-cuadrado-diagonal-recta.svg",
+    ),
+    _q(
+        "num_financiera", "medio",
+        "El gráfico muestra cómo crece un mismo capital inicial durante diez "
+        "años con dos tipos de interés. ¿Cuál de las dos líneas corresponde al "
+        "interés compuesto?",
+        "La línea I",
+        "La diferencia está en sobre qué se calcula el interés de cada año.\n\n"
+        "1) Con interés simple, el interés se calcula siempre sobre el capital "
+        "inicial: cada año se suma la misma cantidad y el gráfico es una recta.\n"
+        "2) Con interés compuesto, el interés se calcula sobre lo acumulado, "
+        "así que cada año se suma más que el anterior y la curva se empina.\n"
+        "3) La línea I es la que se va empinando: esa es la compuesta.\n\n"
+        "Las dos parten del mismo punto porque el capital inicial es el mismo; "
+        "lo que las separa es el paso del tiempo.",
+        [
+            ("La línea II", "Es una recta: sube lo mismo todos los años, que es lo que hace el interés simple."),
+            ("Las dos, porque parten del mismo capital", "Parten igual, pero solo una crece sobre lo ya ganado."),
+            ("Ninguna, porque el interés compuesto se grafica con una recta", "La recta es el interés simple; el compuesto acelera."),
+        ],
+        imagen="/preguntas/mat-interes-simple-compuesto.svg",
+    ),
+    _q(
+        "num_financiera", "facil",
+        "La tabla de la figura muestra las condiciones de un crédito de "
+        "consumo. ¿Cuánto dinero se termina pagando por sobre el monto prestado?",
+        "$312.000",
+        "Hay que comparar lo que se devuelve con lo que se recibió.\n\n"
+        "1) Total pagado: 18 cuotas de $84.000, o sea 18 · 84.000 = $1.512.000.\n"
+        "2) Monto prestado: $1.200.000.\n"
+        "3) Diferencia: 1.512.000 − 1.200.000 = $312.000.\n\n"
+        "Esa diferencia es el costo del crédito: lo que cuesta disponer del "
+        "dinero antes de tenerlo.",
+        [
+            ("$1.512.000", "Es el total que se paga, no lo que se paga de más."),
+            ("$84.000", "Es el valor de una cuota."),
+            ("$1.200.000", "Es el monto prestado."),
+        ],
+        imagen="/preguntas/mat-tabla-credito.svg",
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿A cuál de las siguientes funciones corresponde el gráfico de la figura?",
+        "y = log x",
+        "Tres rasgos del dibujo la identifican.\n\n"
+        "1) Pasa por (1 ; 0): el logaritmo de 1 es 0 en cualquier base.\n"
+        "2) Pasa por (10 ; 1), y eso fija la base en 10, porque 10¹ = 10.\n"
+        "3) Cae bruscamente cuando x se acerca a cero y no existe para valores "
+        "negativos, que es justo el dominio del logaritmo.\n\n"
+        "Crece cada vez más despacio: para subir de 1 a 2 hay que llegar hasta "
+        "x = 100.",
+        [
+            ("y = 10ˣ", "La exponencial crece cada vez más rápido y pasa por (0 ; 1), no por (1 ; 0)."),
+            ("y = x²", "Una parábola no cae hacia menos infinito cerca del cero ni se aplana al crecer."),
+            ("y = √x", "También crece despacio, pero parte del origen y no se hunde cerca del cero."),
+        ],
+        imagen="/preguntas/mat-grafico-logaritmo.svg",
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "La tabla de la figura relaciona la magnitud de un sismo con la energía "
+        "que libera. ¿Cuántas veces más energía libera un sismo de magnitud 6 "
+        "que uno de magnitud 4?",
+        "100 veces",
+        "La escala es logarítmica: cada punto de magnitud multiplica la energía "
+        "por 10.\n\n"
+        "1) Magnitud 4 libera 10⁴ y magnitud 6 libera 10⁶.\n"
+        "2) La razón es 10⁶ ÷ 10⁴ = 10², o sea 100.\n\n"
+        "Restar magnitudes equivale a dividir energías: eso es exactamente lo "
+        "que hace un logaritmo, convertir productos en sumas.",
+        [
+            ("2 veces", "Restó las magnitudes: en una escala logarítmica esa resta es un exponente, no un factor."),
+            ("10 veces", "Ese es el salto entre dos magnitudes consecutivas, y acá hay dos saltos."),
+            ("1.000 veces", "Corresponde a tres puntos de diferencia, no a dos."),
+        ],
+        imagen="/preguntas/mat-tabla-magnitudes.svg",
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "En el plano de la figura están dibujadas las dos rectas de un sistema "
+        "de ecuaciones lineales. ¿Cuántas soluciones tiene ese sistema?",
+        "Ninguna",
+        "Resolver el sistema es buscar los puntos que están sobre las dos rectas "
+        "a la vez.\n\n"
+        "1) Las rectas de la figura tienen la misma inclinación y nunca se "
+        "juntan: son paralelas.\n"
+        "2) Al no cortarse, no hay ningún par (x, y) que cumpla las dos "
+        "ecuaciones.\n"
+        "3) El sistema no tiene solución.\n\n"
+        "En las ecuaciones esto se ve como dos rectas con la misma pendiente y "
+        "distinto coeficiente libre: una condición que se contradice a sí misma.",
+        [
+            ("Una sola solución", "Eso pasa cuando las rectas se cortan en un punto, y estas no se cortan."),
+            ("Infinitas soluciones", "Eso ocurre si las dos rectas son la misma, y acá están separadas."),
+            ("Dos soluciones", "Dos rectas distintas se cortan una vez o ninguna: nunca dos."),
+        ],
+        imagen="/preguntas/mat-rectas-paralelas.svg",
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Al graficar las dos ecuaciones de un sistema lineal se obtuvo la figura, "
+        "donde ambas rectas quedaron una sobre la otra. ¿Qué se puede afirmar "
+        "del sistema?",
+        "Tiene infinitas soluciones",
+        "Las dos ecuaciones describen la misma recta.\n\n"
+        "1) Si toda la recta sirve, cualquier punto de ella cumple las dos "
+        "ecuaciones.\n"
+        "2) Como una recta tiene infinitos puntos, el sistema tiene infinitas "
+        "soluciones.\n\n"
+        "En las ecuaciones esto aparece cuando una es un múltiplo de la otra: "
+        "dicen lo mismo con números amplificados.",
+        [
+            ("No tiene solución", "Eso corresponde a rectas paralelas y separadas, no superpuestas."),
+            ("Tiene una única solución", "Habría un solo punto en común, y acá comparten todos."),
+            ("Tiene exactamente dos soluciones", "Un sistema lineal 2x2 nunca tiene exactamente dos soluciones."),
+        ],
+        imagen="/preguntas/mat-rectas-coincidentes.svg",
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿A cuál de las siguientes funciones corresponde la curva de la figura?",
+        "f(x) = 2ˣ",
+        "Los dos puntos marcados bastan para decidirlo.\n\n"
+        "1) Pasa por (0 ; 1): toda exponencial de la forma aˣ vale 1 en cero.\n"
+        "2) Pasa por (3 ; 8), y 2³ = 8, lo que fija la base en 2.\n"
+        "3) Hacia la izquierda la curva se acerca al eje horizontal sin tocarlo, "
+        "que es como se comporta una exponencial con valores negativos de x.\n\n"
+        "Una potencia como x³ también pasaría por un punto alto, pero valdría 0 "
+        "en x = 0, no 1.",
+        [
+            ("f(x) = x³", "Valdría 0 en x = 0, y la curva de la figura corta el eje vertical en 1."),
+            ("f(x) = 3ˣ", "En x = 3 daría 27, muy por encima del 8 que muestra el gráfico."),
+            ("f(x) = 2x", "Es una recta; la figura muestra una curva que se dispara."),
+        ],
+        imagen="/preguntas/mat-grafico-exponencial.svg",
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "De los tres gráficos de la figura, ¿cuál corresponde a una función "
+        "logarítmica?",
+        "El gráfico II",
+        "Cada curva delata su familia por cómo cambia su ritmo de crecimiento.\n\n"
+        "1) La II sube rápido al principio y después se va aplanando, sin dejar "
+        "de crecer: así crece un logaritmo.\n"
+        "2) La I parte del origen despacio y luego se empina: es una función "
+        "potencia.\n"
+        "3) La III corta el eje vertical por encima del origen y se dispara: es "
+        "una exponencial.\n\n"
+        "La logarítmica y la exponencial son inversas, y eso se nota en el "
+        "dibujo: una es el reflejo de la otra respecto de la diagonal.",
+        [
+            ("El gráfico I", "Crece cada vez más rápido partiendo del origen: es una función potencia."),
+            ("El gráfico III", "Se dispara hacia arriba y corta el eje vertical sobre el origen: es exponencial."),
+            ("Ninguno de los tres", "El segundo cumple todo lo que caracteriza a un logaritmo."),
+        ],
+        imagen="/preguntas/mat-tres-curvas.svg",
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "El gráfico de la figura corresponde a una función trigonométrica. ¿Cuál de "
+        "las siguientes es?",
+        "y = sen x",
+        "Conviene mirar dónde parte la curva y hasta dónde llega.\n\n"
+        "1) En x = 0 la curva vale 0, y el seno de 0 es 0. El coseno valdría 1.\n"
+        "2) Sube hasta 1 en π/2, vuelve a 0 en π y baja hasta −1 en 3π/2.\n"
+        "3) Completa exactamente un ciclo entre 0 y 2π, que es el período del "
+        "seno.",
+        [
+            ("y = cos x", "El coseno parte en 1 cuando x vale 0, y esta curva parte en 0."),
+            ("y = sen 2x", "Esa función completaría dos ciclos entre 0 y 2π, y acá hay uno solo."),
+            ("y = 2 sen x", "Llegaría hasta 2 y hasta −2; esta curva no pasa de 1."),
+        ],
+        imagen="/preguntas/mat-grafico-seno.svg",
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "El gráfico de la figura corresponde a una función de la forma "
+        "y = a · sen(bx). ¿Cuáles son su amplitud y su período?",
+        "Amplitud 3 y período π",
+        "Las dos cosas se leen directamente del dibujo.\n\n"
+        "1) La curva llega hasta 3 y baja hasta −3: la amplitud es 3, o sea el "
+        "valor de a.\n"
+        "2) Un ciclo completo se cierra en π, porque entre 0 y 2π caben dos "
+        "ciclos.\n"
+        "3) Con b = 2 el período es 2π ÷ 2 = π ✓.\n\n"
+        "La amplitud estira la onda a lo alto y el coeficiente de x la comprime "
+        "a lo ancho: son dos cosas independientes.",
+        [
+            ("Amplitud 3 y período 2π", "En 2π caben dos ciclos completos, así que el período es la mitad."),
+            ("Amplitud 2 y período π", "El 2 es el coeficiente que acompaña a x; la altura de la onda es 3."),
+            ("Amplitud 6 y período π", "El 6 es la distancia entre el punto más alto y el más bajo, y la amplitud es la mitad de eso."),
+        ],
+        imagen="/preguntas/mat-seno-amplitud.svg",
+    ),
+]
+
+
+# ---------- Matemática M2 con figura: geometría, datos y azar ----------
+QUESTIONS += [
+    _q(
+        "geo_homotecia", "medio",
+        "En la figura, el triángulo T' es la imagen del triángulo T por una "
+        "homotecia de centro O. ¿Cuál es la razón de esa homotecia?",
+        "2",
+        "La razón de una homotecia compara cada distancia al centro con la "
+        "distancia original.\n\n"
+        "1) Los vértices de T' están alineados con O y con sus correspondientes "
+        "de T, sobre las líneas punteadas.\n"
+        "2) Cada vértice de T' está al doble de distancia de O que el vértice "
+        "que le corresponde.\n"
+        "3) Como la imagen queda del mismo lado de O y al doble, la razón es 2.\n\n"
+        "Que los lados de T' midan el doble es consecuencia de lo mismo: en una "
+        "homotecia todas las medidas se multiplican por la razón.",
+        [
+            ("1/2", "Esa razón achicaría la figura a la mitad, y acá la imagen es la más grande."),
+            ("−2", "El signo negativo pondría la imagen al otro lado de O, y las dos están del mismo lado."),
+            ("4", "Las áreas sí quedan multiplicadas por 4, pero la razón de homotecia compara longitudes."),
+        ],
+        imagen="/preguntas/mat-homotecia-razon.svg",
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "En la figura, el triángulo T' se obtuvo del triángulo T mediante una "
+        "homotecia de centro O. ¿Cuál es la razón de esa homotecia?",
+        "−1",
+        "Dos datos del dibujo fijan la razón.\n\n"
+        "1) La imagen está al otro lado de O: cada vértice y su imagen quedan en "
+        "lados opuestos del centro, sobre la misma línea punteada. Eso hace "
+        "negativa la razón.\n"
+        "2) T y T' son del mismo tamaño, así que el valor absoluto de la razón "
+        "es 1.\n"
+        "3) La razón es −1.\n\n"
+        "Una homotecia de razón −1 es lo mismo que un giro de 180° en torno al "
+        "centro: conserva el tamaño y da vuelta la figura.",
+        [
+            ("1", "Con razón 1 la imagen quedaría encima de la original, sin moverse."),
+            ("−2", "El tamaño se duplicaría, y las dos figuras son iguales."),
+            ("2", "Además de duplicar el tamaño, dejaría la imagen del mismo lado de O."),
+        ],
+        imagen="/preguntas/mat-homotecia-negativa.svg",
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En el triángulo rectángulo de la figura, ¿cuánto mide el cateto marcado "
+        "con el signo de interrogación?",
+        "5 cm",
+        "El cateto buscado es el opuesto al ángulo de 30°, y la medida conocida "
+        "es la hipotenusa: eso pide seno.\n\n"
+        "1) sen 30° = cateto opuesto ÷ hipotenusa.\n"
+        "2) sen 30° = 0,5, así que 0,5 = c ÷ 10.\n"
+        "3) c = 5 cm.\n\n"
+        "Vale la pena recordar el valor: en cualquier triángulo rectángulo con "
+        "un ángulo de 30°, el cateto opuesto es la mitad de la hipotenusa.",
+        [
+            ("8,7 cm", "Usó coseno: eso da el cateto adyacente al ángulo de 30°."),
+            ("5,8 cm", "Usó tangente, que relaciona los dos catetos y no involucra la hipotenusa."),
+            ("20 cm", "Multiplicó por 2 en vez de dividir: un cateto no puede ser mayor que la hipotenusa."),
+        ],
+        imagen="/preguntas/mat-triangulo-trigonometria.svg",
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "La figura muestra una rampa apoyada en el suelo. ¿Cuál es el valor de "
+        "la tangente del ángulo θ?",
+        "7/24",
+        "La tangente de un ángulo agudo es el cateto opuesto dividido por el "
+        "adyacente.\n\n"
+        "1) El cateto opuesto a θ es la altura: 7 m.\n"
+        "2) El adyacente es el tramo horizontal: 24 m.\n"
+        "3) tan θ = 7/24.\n\n"
+        "La tangente no necesita la hipotenusa, que acá es la rampa misma y no "
+        "está acotada.",
+        [
+            ("24/7", "Invirtió la razón: eso es la tangente del otro ángulo agudo."),
+            ("7/25", "Usó la hipotenusa, que mide 25 m: eso es el seno, no la tangente."),
+            ("24/25", "Es el coseno de θ."),
+        ],
+        imagen="/preguntas/mat-rampa-angulo.svg",
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En la circunferencia de la figura, el ángulo AOB tiene su vértice en el "
+        "centro y mide 80°. ¿Cuánto mide el ángulo x?",
+        "40°",
+        "Los dos ángulos se apoyan en el mismo arco AB.\n\n"
+        "1) El ángulo AOB tiene el vértice en el centro: es un ángulo del "
+        "centro, y mide lo mismo que el arco, 80°.\n"
+        "2) El ángulo x tiene su vértice en la circunferencia: es un ángulo "
+        "inscrito sobre el mismo arco.\n"
+        "3) Todo ángulo inscrito mide la mitad del ángulo del centro que abarca "
+        "su mismo arco: x = 80° ÷ 2 = 40°.\n\n"
+        "Da igual dónde esté P sobre ese arco mayor: cualquier ángulo inscrito "
+        "que se apoye en AB mide lo mismo.",
+        [
+            ("80°", "Es la medida del ángulo del centro; el inscrito es la mitad."),
+            ("160°", "Duplicó en vez de dividir a la mitad."),
+            ("20°", "Dividió por cuatro: la relación entre inscrito y central es de un medio."),
+        ],
+        imagen="/preguntas/mat-angulo-inscrito.svg",
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En la circunferencia de la figura, las cuerdas AB y CD se cortan en un "
+        "punto interior. ¿Cuánto mide x?",
+        "3",
+        "Cuando dos cuerdas se cortan, los productos de los trozos de cada una "
+        "son iguales.\n\n"
+        "1) En la cuerda AB los trozos miden 6 y 4: su producto es 24.\n"
+        "2) En la cuerda CD uno mide 8 y el otro es x.\n"
+        "3) Entonces 8 · x = 24, y x = 3.\n\n"
+        "La igualdad sale de dos triángulos semejantes que se forman al unir los "
+        "extremos de las cuerdas: comparten los ángulos inscritos.",
+        [
+            ("2", "Dividió 8 por 4 en vez de dividir el producto 24 por 8."),
+            ("6", "Copió el otro trozo de la primera cuerda."),
+            ("12", "Multiplicó en lugar de dividir."),
+        ],
+        imagen="/preguntas/mat-cuerdas-circunferencia.svg",
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "¿Cuál es el área de la superficie de la esfera de la figura? "
+        "(usa π = 3,14)",
+        "314 cm²",
+        "El área de la superficie de una esfera es 4 · π · r².\n\n"
+        "1) El radio es 5 cm, así que r² = 25.\n"
+        "2) Área: 4 · 3,14 · 25 = 314 cm².\n\n"
+        "El radio va elevado al cuadrado porque el área es una medida de "
+        "superficie: si el radio se duplicara, el área se multiplicaría por "
+        "cuatro.",
+        [
+            ("62,8 cm²", "Calculó el perímetro de una circunferencia de radio 5, que es una longitud."),
+            ("78,5 cm²", "Calculó el área de un círculo de radio 5: la superficie de la esfera es cuatro veces eso."),
+            ("523,33 cm³", "Es el volumen de la esfera, que además se mide en centímetros cúbicos."),
+        ],
+        imagen="/preguntas/mat-esfera-radio.svg",
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "La cúpula de la figura tiene la forma de media esfera. ¿Cuál es el "
+        "volumen de aire que encierra? (usa π = 3,14)",
+        "452,16 m³",
+        "Media esfera encierra la mitad del volumen de la esfera completa.\n\n"
+        "1) Volumen de la esfera de radio 6: (4/3) · 3,14 · 6³ = (4/3) · 3,14 · "
+        "216 = 904,32 m³.\n"
+        "2) La cúpula es la mitad: 904,32 ÷ 2 = 452,16 m³.\n\n"
+        "También se puede calcular directo con (2/3) · π · r³, que es la misma "
+        "fórmula ya dividida.",
+        [
+            ("904,32 m³", "Es el volumen de la esfera completa; la cúpula es la mitad."),
+            ("226,08 m³", "Dividió por cuatro en vez de por dos."),
+            ("226,08 m²", "Además de dividir de más, un volumen no se mide en metros cuadrados."),
+        ],
+        imagen="/preguntas/mat-cupula-hemisferio.svg",
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "En el plano de la figura, las rectas L1 y L2 son perpendiculares. Si la "
+        "pendiente de L1 es 2, ¿cuál es la pendiente de L2?",
+        "−1/2",
+        "Dos rectas perpendiculares tienen pendientes cuyo producto es −1.\n\n"
+        "1) Si m₁ = 2, entonces m₁ · m₂ = −1.\n"
+        "2) m₂ = −1 ÷ 2 = −1/2.\n\n"
+        "El signo se ve en el dibujo: una recta sube y la otra baja. Y la "
+        "inclinación también: L1 avanza 1 y sube 2, mientras que L2 avanza 2 y "
+        "baja 1.",
+        [
+            ("2", "Esa es la pendiente de L1: rectas con la misma pendiente son paralelas, no perpendiculares."),
+            ("−2", "Tiene el signo correcto, pero su producto con 2 da −4 y no −1."),
+            ("1/2", "Es el recíproco, pero le falta el signo negativo: con esa pendiente L2 subiría."),
+        ],
+        imagen="/preguntas/mat-rectas-perpendiculares.svg",
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Cuál es la pendiente de la recta que aparece en la figura?",
+        "3/4",
+        "La pendiente compara cuánto sube la recta con cuánto avanza.\n\n"
+        "1) Los puntos marcados son A(2 ; 2) y B(6 ; 5).\n"
+        "2) Sube: 5 − 2 = 3. Avanza: 6 − 2 = 4.\n"
+        "3) Pendiente: 3/4.\n\n"
+        "El orden de la resta no importa mientras sea el mismo arriba y abajo: "
+        "(2 − 5) ÷ (2 − 6) da lo mismo.",
+        [
+            ("4/3", "Invirtió la razón: puso el avance horizontal arriba."),
+            ("3", "Usó solo cuánto sube, sin dividir por el avance horizontal."),
+            ("7/8", "Sumó las coordenadas en vez de restarlas."),
+        ],
+        imagen="/preguntas/mat-recta-dos-puntos.svg",
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Los dos gráficos de la figura muestran las notas de dos cursos con la "
+        "misma cantidad de estudiantes. ¿Qué se puede afirmar sobre la "
+        "dispersión de las notas?",
+        "Las notas del curso B están más dispersas que las del A",
+        "La dispersión mide cuánto se apartan los datos de su centro.\n\n"
+        "1) En el curso A casi todos sacaron la nota del medio y muy pocos las "
+        "extremas: las notas están apretadas en torno al promedio.\n"
+        "2) En el curso B las cinco notas se reparten de manera pareja, así que "
+        "hay tantos datos lejos del centro como cerca.\n"
+        "3) Entonces el curso B tiene mayor dispersión, aunque su promedio sea "
+        "parecido.\n\n"
+        "El promedio dice dónde está el centro; la dispersión, cuán confiable es "
+        "ese centro para describir al grupo.",
+        [
+            ("Las notas del curso A están más dispersas que las del B", "En A casi todos están en la misma nota: eso es lo contrario a estar disperso."),
+            ("Las dos tienen la misma dispersión, porque tienen la misma cantidad de estudiantes", "La cantidad de datos no dice nada sobre cuánto se apartan del centro."),
+            ("No se puede comparar sin conocer los promedios", "La forma de los gráficos ya muestra cuál grupo está más repartido."),
+        ],
+        imagen="/preguntas/mat-dos-dispersiones.svg",
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "La tabla de la figura muestra el promedio y la desviación estándar de "
+        "las notas de tres cursos. ¿Cuál de las siguientes afirmaciones es "
+        "correcta?",
+        "Los cursos A y B tienen el mismo promedio, pero en B las notas están más repartidas",
+        "Cada columna responde una pregunta distinta: dónde está el centro y "
+        "cuánto se apartan los datos de él.\n\n"
+        "1) A y B tienen el mismo promedio, 6,0.\n"
+        "2) La desviación estándar de B es 1,4 y la de A es 0,3: en B las notas "
+        "se alejan mucho más del promedio.\n"
+        "3) Dos grupos con el mismo promedio pueden ser muy distintos, y eso es "
+        "justamente lo que agrega la desviación.\n\n"
+        "En A, con desviación 0,3, casi todas las notas caen entre 5,7 y 6,3.",
+        [
+            ("El curso C es el más disperso, porque tiene el promedio más bajo", "El promedio no mide dispersión; C tiene desviación 0,4, casi la misma que A."),
+            ("El curso A es el más disperso de los tres", "Tiene la desviación más baja, o sea las notas más parecidas entre sí."),
+            ("Los tres cursos tienen la misma dispersión", "Las desviaciones son 0,3; 1,4 y 0,4: la de B es más de cuatro veces la de A."),
+        ],
+        imagen="/preguntas/mat-tabla-desviacion.svg",
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "La tabla de la figura resume si 100 personas usan lentes. Si se elige "
+        "al azar una de las mujeres, ¿cuál es la probabilidad de que use lentes?",
+        "0,44",
+        "El enunciado ya restringe el grupo: solo entran las mujeres. Eso es una "
+        "probabilidad condicional.\n\n"
+        "1) Casos posibles: las 50 mujeres, no las 100 personas.\n"
+        "2) Casos favorables: las 22 mujeres que usan lentes.\n"
+        "3) Probabilidad: 22 ÷ 50 = 0,44.\n\n"
+        "La condición cambia el denominador: se calcula dentro de la columna de "
+        "las mujeres y no sobre el total de la tabla.",
+        [
+            ("0,22", "Dividió por las 100 personas: esa es la probabilidad de ser mujer y usar lentes a la vez."),
+            ("0,40", "Es la proporción de personas con lentes en el total, sin restringirse a las mujeres."),
+            ("0,55", "Es la proporción de mujeres entre quienes usan lentes: la condición al revés."),
+        ],
+        imagen="/preguntas/mat-tabla-contingencia.svg",
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "El árbol de la figura muestra la probabilidad de estudiar para una "
+        "prueba y la de aprobarla. ¿Cuál es la probabilidad de que un estudiante "
+        "elegido al azar apruebe?",
+        "0,75",
+        "Hay dos caminos que terminan en aprobar, y hay que sumarlos.\n\n"
+        "1) Estudió y aprobó: 0,7 · 0,9 = 0,63.\n"
+        "2) No estudió y aprobó: 0,3 · 0,4 = 0,12.\n"
+        "3) Como son casos que no pueden ocurrir juntos, se suman: 0,63 + 0,12 = "
+        "0,75.\n\n"
+        "Dentro de cada camino se multiplica, porque los dos pasos tienen que "
+        "ocurrir; entre caminos distintos se suma, porque basta con uno.",
+        [
+            ("0,63", "Es solo el camino de quienes estudiaron: falta sumar el de quienes no lo hicieron."),
+            ("0,9", "Es la probabilidad de aprobar habiendo estudiado, que ya supone la condición cumplida."),
+            ("0,81", "Usó la rama de reprobar de quienes no estudiaron en lugar de la de aprobar."),
+        ],
+        imagen="/preguntas/mat-arbol-condicional.svg",
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "El árbol de la figura muestra las entradas y los platos de fondo que "
+        "ofrece un restaurante. ¿Cuántos menús distintos de entrada y plato de "
+        "fondo se pueden armar?",
+        "6 menús",
+        "Cada menú es una entrada acompañada de un plato de fondo.\n\n"
+        "1) Hay 2 entradas y, para cada una, 3 platos de fondo.\n"
+        "2) Por el principio multiplicativo: 2 · 3 = 6.\n"
+        "3) En el árbol se ven las seis ramas finales, una por menú.\n\n"
+        "Se multiplica porque elegir la entrada no limita los platos "
+        "disponibles: las tres opciones siguen ahí en los dos casos.",
+        [
+            ("5 menús", "Sumó las opciones en lugar de multiplicarlas."),
+            ("3 menús", "Contó solo los platos de fondo."),
+            ("12 menús", "Duplicó de más: cada entrada se combina con tres platos, no con seis."),
+        ],
+        imagen="/preguntas/mat-arbol-menu.svg",
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Con las cifras que muestra la figura, y sin repetir ninguna, ¿cuántos "
+        "números distintos de cuatro cifras se pueden formar?",
+        "120 números",
+        "Se van llenando los casilleros de izquierda a derecha, y cada cifra "
+        "usada deja de estar disponible.\n\n"
+        "1) Para el primer casillero hay 5 cifras posibles.\n"
+        "2) Para el segundo quedan 4, para el tercero 3 y para el cuarto 2.\n"
+        "3) Total: 5 · 4 · 3 · 2 = 120 números.\n\n"
+        "Es una permutación de 5 elementos tomados de a 4: el orden importa, "
+        "porque 1235 y 3215 son números distintos.",
+        [
+            ("625 números", "Es 5 · 5 · 5 · 5: correspondería a poder repetir cifras."),
+            ("20 números", "Multiplicó solo las dos primeras posiciones."),
+            ("24 números", "Es 4 · 3 · 2 · 1: dejó fuera una de las cinco cifras disponibles."),
+        ],
+        imagen="/preguntas/mat-casilleros-cifras.svg",
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "El gráfico de la figura muestra la probabilidad de obtener cada "
+        "cantidad de caras al lanzar cuatro veces una moneda. ¿Cuál es la "
+        "probabilidad de obtener exactamente dos caras?",
+        "0,375",
+        "El gráfico da la probabilidad de cada resultado posible; basta leer la "
+        "barra que corresponde.\n\n"
+        "1) La barra de 2 caras llega a 0,375.\n"
+        "2) Se puede comprobar contando: de los 16 resultados posibles al lanzar "
+        "cuatro veces, 6 tienen exactamente dos caras, y 6 ÷ 16 = 0,375.\n\n"
+        "Es la barra más alta porque hay más maneras de repartir dos caras entre "
+        "cuatro lanzamientos que de obtener todas caras o ninguna.",
+        [
+            ("0,25", "Es la altura de las barras de 1 y de 3 caras."),
+            ("0,5", "Es la probabilidad de cara en un solo lanzamiento, no la de dos caras en cuatro."),
+            ("0,0625", "Es la probabilidad de un extremo: cero caras o cuatro caras."),
+        ],
+        imagen="/preguntas/mat-barras-binomial.svg",
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "La figura muestra la curva de una distribución normal, con la zona "
+        "sombreada entre una desviación estándar bajo la media y una sobre la "
+        "media. ¿Qué porcentaje aproximado de los datos cae en esa zona?",
+        "Cerca del 68%",
+        "En toda distribución normal los porcentajes por tramos son siempre los "
+        "mismos, sin importar la media ni la desviación.\n\n"
+        "1) Entre una desviación bajo la media y una sobre ella cae "
+        "aproximadamente el 68% de los datos.\n"
+        "2) Entre dos desviaciones, cerca del 95%, y entre tres, casi el 100%.\n\n"
+        "Por eso la desviación estándar es una unidad de medida útil: dice qué "
+        "tan lejos del centro está un dato en términos comparables.",
+        [
+            ("Cerca del 50%", "Ese es el porcentaje que queda a un solo lado de la media."),
+            ("Cerca del 95%", "Ese porcentaje corresponde a dos desviaciones a cada lado."),
+            ("Cerca del 34%", "Es lo que cae en la mitad sombreada, de la media hacia un solo lado."),
+        ],
+        imagen="/preguntas/mat-campana-normal.svg",
+    ),
+]
+
+
 # ---------------------------------------------------------------------------
 # Competencia Lectora
 #
@@ -19556,9 +21479,32 @@ QUESTIONS += [
 # ---------------------------------------------------------------------------
 
 SKILL_NODES_LECTORA = [
-    ("lec_localizar", "Localizar información", "localizar", 1, []),
-    ("lec_interpretar", "Interpretar y relacionar", "interpretar", 2, ["lec_localizar"]),
-    ("lec_evaluar", "Evaluar y reflexionar", "evaluar", 3, ["lec_interpretar"]),
+    # El eje sigue siendo la habilidad (localizar / interpretar / evaluar), que
+    # es como agrupa la interfaz. Lo que cambia es que el NODO ya no es la
+    # habilidad completa sino cada tarea lectora que el temario enumera dentro
+    # de ella. Tres nodos para 1.103 preguntas dejaban al recomendador con solo
+    # tres cosas que sugerir, y "practica interpretar" no le dice a nadie qué
+    # estudiar.
+    #
+    # Las tareas f (sintetizar) y g (jerarquia) comparten nodo: son la misma
+    # operacion vista de cerca y de lejos, y por separado sumaban cinco
+    # preguntas cada una.
+
+    # --- Localizar ---
+    ("lec_explicita", "Información explícita", "localizar", 1, []),
+    ("lec_parafrasis", "Sinónimos y paráfrasis", "localizar", 1, ["lec_explicita"]),
+    # --- Interpretar ---
+    ("lec_relacion", "Relaciones entre partes del texto", "interpretar", 2, ["lec_parafrasis"]),
+    ("lec_significado", "Significado en contexto", "interpretar", 2, ["lec_parafrasis"]),
+    ("lec_inferencia", "Inferencias a partir del texto", "interpretar", 2, ["lec_significado"]),
+    ("lec_funcion", "Función de un elemento", "interpretar", 2, ["lec_relacion"]),
+    ("lec_idea_central", "Idea central y jerarquía", "interpretar", 2, ["lec_relacion"]),
+    # --- Evaluar ---
+    ("lec_intencion", "Intención del emisor", "evaluar", 3, ["lec_funcion"]),
+    ("lec_postura", "Postura, actitud y tono", "evaluar", 3, ["lec_inferencia"]),
+    ("lec_forma", "Forma y estructura", "evaluar", 3, ["lec_idea_central"]),
+    ("lec_juicio", "Calidad de la información", "evaluar", 3, ["lec_inferencia"]),
+    ("lec_aplicar", "Aplicar el texto a un caso nuevo", "evaluar", 3, ["lec_juicio"]),
 ]
 
 # ---------------------------------------------------------------------------
@@ -29299,7 +31245,7 @@ def _ql(
 QUESTIONS_LECTORA = [
     # ---------- 'Una medida sin patrón' ----------
     _ql(
-        "talla_ropa", "lec_localizar", "facil",
+        "talla_ropa", "lec_explicita", "facil",
         "Según la lectura, ¿para resolver qué problema aparecieron las tallas?",
         "El de fabricar miles de prendas iguales",
         "Las tallas nacen con la producción en serie, y el emisor precisa a quién "
@@ -29314,7 +31260,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_localizar", "facil",
+        "talla_ropa", "lec_explicita", "facil",
         "Según la lectura, ¿por qué la M de una marca no coincide con la de otra?",
         "Porque cada marca usa su propio molde",
         "No existe «un patrón obligatorio que defina qué es una M», así que cada "
@@ -29330,7 +31276,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_localizar", "medio",
+        "talla_ropa", "lec_explicita", "medio",
         "Según la lectura, ¿qué ha ocurrido con las tallas a lo largo del tiempo?",
         "Tienden a agrandarse dentro de una marca",
         "Es el segundo fenómeno que el texto describe, y ocurre incluso sin "
@@ -29345,7 +31291,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_localizar", "medio",
+        "talla_ropa", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué información sí resulta comparable?",
         "Las medidas en centímetros de la prenda",
         "El emisor recomienda mirar las tablas que muchas marcas publican junto a "
@@ -29362,7 +31308,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_localizar", "facil",
+        "talla_ropa", "lec_explicita", "facil",
         "Según la lectura, ¿cómo conviene tratar la devolución de una prenda?",
         "Como parte normal del proceso de compra",
         "El emisor la propone como tercera solución y con una precisión sobre el "
@@ -29378,7 +31324,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_interpretar", "facil",
+        "talla_ropa", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al afirmar que «la M no mide nada»?",
         "Que la letra no remite a ningún patrón fijo",
         "Medir supone comparar contra una unidad acordada, y para las tallas no "
@@ -29394,7 +31340,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_interpretar", "medio",
+        "talla_ropa", "lec_inferencia", "medio",
         "¿Qué implica que la talla haya nacido como herramienta de producción?",
         "Que describirnos nunca fue su función",
         "El emisor lo dice sin rodeos: la talla nació como una herramienta «a la "
@@ -29410,7 +31356,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_interpretar", "medio",
+        "talla_ropa", "lec_relacion", "medio",
         "Según la lectura, ¿por qué la letra funciona «como mensaje» y no como "
         "medida?",
         "Porque busca que el comprador se sienta mejor",
@@ -29427,7 +31373,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_interpretar", "dificil",
+        "talla_ropa", "lec_relacion", "dificil",
         "¿Por qué comparar la talla actual con la de hace quince años puede llevar "
         "a error?",
         "Porque las dos etiquetas no significan lo mismo",
@@ -29443,7 +31389,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_interpretar", "dificil",
+        "talla_ropa", "lec_relacion", "dificil",
         "¿Por qué una norma común no resolvería el problema de fondo?",
         "Porque un cuerpo no cabe en un solo número",
         "El emisor concede que ayudaría, y niega que alcance.\nDos personas con el "
@@ -29461,7 +31407,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_evaluar", "medio",
+        "talla_ropa", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor abre con las tres poleras del mismo mall?",
         "Para instalar un caso que exige otra explicación",
         "La escena es deliberadamente corriente y elimina las variables que uno "
@@ -29477,7 +31423,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_evaluar", "dificil",
+        "talla_ropa", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor hacia las marcas cuyas tallas no coinciden?",
         "Ecuánime, pues no las acusa de equivocarse",
         "Podría haber presentado el desajuste como un descuido o un abuso, y "
@@ -29494,7 +31440,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "talla_ropa", "lec_evaluar", "dificil",
+        "talla_ropa", "lec_postura", "dificil",
         "¿Qué distinción propone el emisor en el cierre de la lectura?",
         "Entre describir una prenda y juzgar a alguien",
         "El cierre reduce el asunto a una frase: una talla «dice cuánto mide lo que "
@@ -29513,7 +31459,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La casa piloto' ----------
     _ql(
-        "casa_piloto", "lec_localizar", "facil",
+        "casa_piloto", "lec_explicita", "facil",
         "Según el relato, ¿cuántas casas piloto visitó la familia ese verano?",
         "Dieciséis",
         "El narrador entrega la cifra en la primera línea y explica cómo la sabe: "
@@ -29528,7 +31474,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_localizar", "facil",
+        "casa_piloto", "lec_parafrasis", "facil",
         "Según el relato, ¿qué hacía la madre en cada casa?",
         "Medía los espacios con los brazos",
         "No usaba huincha: se paraba en medio del living, extendía los dos brazos y "
@@ -29543,7 +31489,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_localizar", "medio",
+        "casa_piloto", "lec_parafrasis", "medio",
         "Según el relato, ¿qué respondió el padre cuando le preguntaron si iban a "
         "comprar?",
         "«Estamos mirando»",
@@ -29559,7 +31505,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_localizar", "medio",
+        "casa_piloto", "lec_parafrasis", "medio",
         "Según el relato, ¿cómo terminaron los paseos de los domingos?",
         "Sin anuncio, al empezar las clases",
         "El narrador es preciso sobre la ausencia de ceremonia: «En marzo se "
@@ -29574,7 +31520,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_localizar", "facil",
+        "casa_piloto", "lec_parafrasis", "facil",
         "Según el relato, ¿dónde estaba el narrador cuando entendió aquella escena?",
         "En una notaría, firmando papeles",
         "Fueron veinte años hasta entenderla, y el día que ocurrió «estaba haciendo "
@@ -29589,7 +31535,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_interpretar", "facil",
+        "casa_piloto", "lec_inferencia", "facil",
         "¿Qué comprende el narrador adulto sobre su padre?",
         "Que sabía desde el principio que no comprarían",
         "Lo sabía «en la primera casa, en la número once y en la dieciséis»: "
@@ -29605,7 +31551,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_interpretar", "medio",
+        "casa_piloto", "lec_inferencia", "medio",
         "¿Qué revela que el padre estudiara durante la semana?",
         "Que se preparaba para un papel que sostenía",
         "El narrador reconoce el tono recién de adulto: entonces le pareció «de "
@@ -29621,7 +31567,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_interpretar", "medio",
+        "casa_piloto", "lec_significado", "medio",
         "¿Por qué el narrador dice que el olor de las casas piloto «no existe en "
         "las casas donde vive gente»?",
         "Porque son casas nuevas y deshabitadas",
@@ -29638,7 +31584,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_interpretar", "dificil",
+        "casa_piloto", "lec_relacion", "dificil",
         "¿Qué distingue el narrador al ofrecer dos descripciones de esos domingos?",
         "Que ambas son ciertas y dicen cosas distintas",
         "La primera descripción es la de la lectura fácil, que él mismo tuvo "
@@ -29655,7 +31601,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_interpretar", "dificil",
+        "casa_piloto", "lec_significado", "dificil",
         "¿Por qué el narrador afirma que esos domingos «no eran un simulacro»?",
         "Porque lo vivido ahí ocurrió de verdad",
         "Un simulacro imita algo real sin serlo, y el narrador rechaza ese marco "
@@ -29672,7 +31618,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_evaluar", "medio",
+        "casa_piloto", "lec_forma", "medio",
         "¿Qué efecto produce que el relato entregue la frase «estamos mirando» sin "
         "explicarla en ese momento?",
         "Deja al lector con la lectura del niño",
@@ -29688,7 +31634,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_evaluar", "dificil",
+        "casa_piloto", "lec_postura", "dificil",
         "¿Qué actitud asume el narrador hacia lo que hacía su familia?",
         "Comprensiva, pues corrige su propia lectura triste",
         "El narrador cuenta que durante un tiempo esos domingos le parecieron "
@@ -29704,7 +31650,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "casa_piloto", "lec_evaluar", "dificil",
+        "casa_piloto", "lec_intencion", "dificil",
         "¿Qué consigue el relato al terminar con la nota de la casa número once?",
         "Cierra devolviendo el valor a lo vivido",
         "El final vuelve a lo más pequeño después del pasaje más grave del cuento: "
@@ -29722,7 +31668,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Ficha del producto y garantías' ----------
     _ql(
-        "ficha_garantia", "lec_localizar", "facil",
+        "ficha_garantia", "lec_explicita", "facil",
         "Según la cartilla, ¿cuánto dura la garantía legal?",
         "Seis meses desde la entrega",
         "La tabla del punto 2 fija el plazo en seis meses y precisa desde cuándo "
@@ -29738,7 +31684,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_localizar", "facil",
+        "ficha_garantia", "lec_explicita", "facil",
         "Según la cartilla, ¿entre qué soluciones puede elegir el consumidor?",
         "Reparación, cambio o devolución del dinero",
         "Son las tres alternativas que ofrece la garantía legal cuando el producto "
@@ -29753,7 +31699,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_localizar", "medio",
+        "ficha_garantia", "lec_explicita", "medio",
         "Según la cartilla, ¿qué basta para acreditar la compra?",
         "La sola boleta del producto",
         "El punto 4 lo establece sin condiciones: no pueden exigir «la caja ni los "
@@ -29769,7 +31715,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_localizar", "medio",
+        "ficha_garantia", "lec_explicita", "medio",
         "Según la tabla, ¿quién fija las condiciones de la garantía del fabricante?",
         "La propia empresa que la ofrece",
         "La tabla del punto 2 separa las dos garantías por su origen: una viene de "
@@ -29784,7 +31730,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_localizar", "facil",
+        "ficha_garantia", "lec_explicita", "facil",
         "Según la cartilla, ¿qué queda fuera de las dos garantías?",
         "Los daños causados por mal uso",
         "El punto 8 delimita el alcance del documento y menciona tres cosas que no "
@@ -29799,7 +31745,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_interpretar", "facil",
+        "ficha_garantia", "lec_relacion", "facil",
         "Un hervidor falla a los cinco meses de la entrega y el vendedor solo "
         "ofrece repararlo. Según la cartilla, ¿qué corresponde?",
         "El consumidor elige, y puede pedir devolución",
@@ -29815,7 +31761,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_interpretar", "medio",
+        "ficha_garantia", "lec_significado", "medio",
         "¿Qué quiere decir la cartilla al afirmar que la garantía voluntaria «se "
         "suma y no descuenta»?",
         "Que las dos corren a la vez los primeros meses",
@@ -29832,7 +31778,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_interpretar", "medio",
+        "ficha_garantia", "lec_relacion", "medio",
         "Según la cartilla, ¿por qué conviene guardar el comprobante de entrega?",
         "Porque desde ahí corre el plazo legal",
         "Las dos garantías empiezan a contarse en momentos distintos: la legal "
@@ -29848,7 +31794,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_interpretar", "dificil",
+        "ficha_garantia", "lec_relacion", "dificil",
         "Una falla aparece a los ocho meses y la garantía del fabricante solo "
         "ofrece reparación. Según la cartilla, ¿qué puede pedir el consumidor?",
         "Solo la reparación que esa garantía ofrece",
@@ -29866,7 +31812,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_interpretar", "dificil",
+        "ficha_garantia", "lec_inferencia", "dificil",
         "¿Qué supone el consejo de dejar constancia escrita del reclamo?",
         "Que sin registro la negativa no se puede probar",
         "El punto 7 ordena los pasos y deja ese para el final, después de una "
@@ -29883,7 +31829,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_evaluar", "medio",
+        "ficha_garantia", "lec_intencion", "medio",
         "¿Con qué finalidad la cartilla ordena las dos garantías en una misma "
         "tabla?",
         "Para mostrar en qué se diferencian punto por punto",
@@ -29900,7 +31846,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_evaluar", "dificil",
+        "ficha_garantia", "lec_postura", "dificil",
         "¿Qué revela que la cartilla dedique un punto completo a lo que no pueden "
         "exigir?",
         "Que anticipa las trabas más habituales",
@@ -29917,7 +31863,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ficha_garantia", "lec_evaluar", "dificil",
+        "ficha_garantia", "lec_intencion", "dificil",
         "¿Qué consigue la cartilla al incluir un caso en que la garantía legal ya "
         "venció?",
         "Mostrar que su consejo también sirve después",
@@ -29936,7 +31882,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El enlace que ya no lleva a ninguna parte' ----------
     _ql(
-        "enlaces_perdidos", "lec_localizar", "facil",
+        "enlaces_perdidos", "lec_parafrasis", "facil",
         "Según la lectura, ¿cómo se llama el fenómeno de los enlaces que dejan de "
         "funcionar?",
         "Descomposición de enlaces",
@@ -29952,7 +31898,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_localizar", "facil",
+        "enlaces_perdidos", "lec_explicita", "facil",
         "Según la lectura, ¿qué se necesita para que una página siga en línea?",
         "Alojamiento, dominio y programa",
         "El emisor lo enumera para mostrar que «una página web no se sostiene "
@@ -29967,7 +31913,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_localizar", "medio",
+        "enlaces_perdidos", "lec_explicita", "medio",
         "Según la lectura, ¿qué queda fuera de un archivo automático?",
         "Lo que está tras un muro de pago",
         "El emisor reconoce que esos archivos funcionan y precisa qué no alcanzan a "
@@ -29982,7 +31928,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_localizar", "medio",
+        "enlaces_perdidos", "lec_explicita", "medio",
         "Según la lectura, ¿dónde se usan sobre todo los identificadores "
         "permanentes?",
         "En publicaciones científicas",
@@ -29999,7 +31945,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_localizar", "facil",
+        "enlaces_perdidos", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué causas corrientes hacen desaparecer una página?",
         "Un medio que cierra o un sitio rediseñado",
         "El emisor las llama «domésticas» a propósito, para subrayar que no hay "
@@ -30015,7 +31961,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_interpretar", "facil",
+        "enlaces_perdidos", "lec_relacion", "facil",
         "¿Por qué el enlace que cambió de contenido resulta más incómodo que el "
         "enlace roto?",
         "Porque no avisa de nada",
@@ -30032,7 +31978,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_interpretar", "medio",
+        "enlaces_perdidos", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que la verificación «queda colgando "
         "de una decisión ajena»?",
         "Que depende de que un tercero lo mantenga",
@@ -30049,7 +31995,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_interpretar", "medio",
+        "enlaces_perdidos", "lec_relacion", "medio",
         "Según la lectura, ¿por qué conviven la pérdida de páginas y la sensación "
         "de que internet lo guarda todo?",
         "Porque lo que uno querría borrar circula igual",
@@ -30066,7 +32012,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_interpretar", "dificil",
+        "enlaces_perdidos", "lec_inferencia", "dificil",
         "¿Qué implica que decidir qué se archiva sea decidir qué podrá consultarse "
         "después?",
         "Que hoy se define lo que sabrá el futuro",
@@ -30083,7 +32029,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_interpretar", "dificil",
+        "enlaces_perdidos", "lec_significado", "dificil",
         "¿Qué categoría propone el emisor conservar deliberadamente?",
         "Lo que sostiene afirmaciones públicas",
         "El emisor descarta el objetivo máximo —conservarlo todo— por razones que "
@@ -30099,7 +32045,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_evaluar", "medio",
+        "enlaces_perdidos", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor menciona el fallo judicial, la investigación "
         "y el reportaje?",
         "Para mostrar hasta dónde llega el problema",
@@ -30117,7 +32063,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_evaluar", "dificil",
+        "enlaces_perdidos", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor al advertir que no todo debería conservarse?",
         "Equilibrada, pues acota su propia propuesta",
         "Viene de argumentar que se pierde demasiado, y la conclusión cómoda sería "
@@ -30134,7 +32080,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "enlaces_perdidos", "lec_evaluar", "dificil",
+        "enlaces_perdidos", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al comparar la conservación del papel con la de lo "
         "digital?",
         "Que conservar pasó de inercia a decisión",
@@ -30153,7 +32099,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El orden que nadie había elegido' ----------
     _ql(
-        "orden_apellidos", "lec_localizar", "facil",
+        "orden_apellidos", "lec_explicita", "facil",
         "Según la lectura, ¿qué estableció la Ley 21.334?",
         "Que los padres acuerden el orden de los apellidos",
         "La ley fue publicada el 14 de mayo de 2021 y cambió el procedimiento de "
@@ -30168,7 +32114,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_localizar", "facil",
+        "orden_apellidos", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocurre si los padres no manifiestan acuerdo?",
         "Se entiende que el del padre precede",
         "La ley previó ese caso con una regla supletoria: si no hay acuerdo "
@@ -30184,7 +32130,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_localizar", "medio",
+        "orden_apellidos", "lec_explicita", "medio",
         "Según la lectura, ¿qué puede pedir una persona mayor de edad?",
         "Cambiar el orden, por una sola vez",
         "La ley agregó esa posibilidad para quienes ya estaban inscritos: "
@@ -30200,7 +32146,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_localizar", "medio",
+        "orden_apellidos", "lec_explicita", "medio",
         "Según la lectura, ¿qué le ocurre al apellido materno con las generaciones?",
         "Se detiene: los hijos reciben el primero",
         "La regla de transmisión es la que produce el efecto: los hijos de una "
@@ -30216,7 +32162,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_localizar", "facil",
+        "orden_apellidos", "lec_explicita", "facil",
         "Según la lectura, ¿qué muestra que el sistema chileno no sea universal?",
         "Que en otros países se usa uno solo",
         "El emisor entrega dos comparaciones: «en buena parte del mundo se usa uno "
@@ -30232,7 +32178,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_interpretar", "facil",
+        "orden_apellidos", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al señalar que la regla funcionó «sin que "
         "nadie la enunciara como regla»?",
         "Que se cumplía sin necesidad de estar escrita",
@@ -30249,7 +32195,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_interpretar", "medio",
+        "orden_apellidos", "lec_relacion", "medio",
         "Según el emisor, ¿por qué la regla supletoria «hace bastante más trabajo "
         "del que parece»?",
         "Porque la mayoría no elige y queda bajo ella",
@@ -30268,7 +32214,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_interpretar", "medio",
+        "orden_apellidos", "lec_significado", "medio",
         "¿Con qué argumento responde el emisor a quien diga que esto es una "
         "discusión sobre etiquetas?",
         "Que un apellido ordena documentos y señala origen",
@@ -30285,7 +32231,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_interpretar", "dificil",
+        "orden_apellidos", "lec_relacion", "dificil",
         "¿Qué distingue el emisor entre resolver un desacuerdo y fijar qué ocurre "
         "si no hay acuerdo?",
         "Que lo segundo no dirime: entrega un resultado",
@@ -30302,7 +32248,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_interpretar", "dificil",
+        "orden_apellidos", "lec_significado", "dificil",
         "Según el cierre, ¿qué cambió realmente la ley?",
         "El estatuto de la pregunta, no el orden",
         "El emisor admite que el orden «en la mayoría de los casos seguirá siendo "
@@ -30319,7 +32265,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_evaluar", "medio",
+        "orden_apellidos", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor menciona a otros países al comienzo?",
         "Para mostrar que el orden es una convención",
         "Las comparaciones cumplen una función precisa y limitada: si en otras "
@@ -30335,7 +32281,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_evaluar", "dificil",
+        "orden_apellidos", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor frente a la ley que describe?",
         "Analítica, pues explica su alcance sin celebrarla",
         "El emisor no aplaude la ley ni la objeta. Describe qué habilita, qué no "
@@ -30352,7 +32298,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "orden_apellidos", "lec_evaluar", "dificil",
+        "orden_apellidos", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al afirmar que «una costumbre que se sabe elegible "
         "ya no es del todo una costumbre»?",
         "Que saberla optativa cambia lo que significa",
@@ -30371,7 +32317,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La entrada que valía más de lo que costaba' ----------
     _ql(
-        "reventa_entradas", "lec_localizar", "facil",
+        "reventa_entradas", "lec_explicita", "facil",
         "Según la lectura, ¿cuándo aparece la reventa?",
         "Cuando el precio queda bajo lo que alguien pagaría",
         "La reventa necesita un margen, y ese margen es la distancia «entre lo que "
@@ -30387,7 +32333,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_localizar", "facil",
+        "reventa_entradas", "lec_explicita", "facil",
         "Según la lectura, ¿por qué los organizadores no cobran el máximo posible?",
         "Por su relación con el público y la prensa",
         "El emisor enumera razones que «tienen sentido desde su punto de vista»: un "
@@ -30404,7 +32350,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_localizar", "medio",
+        "reventa_entradas", "lec_explicita", "medio",
         "Según la lectura, ¿qué costos tiene la entrada nominativa?",
         "Complica regalarla y hace más lento el acceso",
         "El emisor reconoce primero su eficacia: reduce la reventa «de manera "
@@ -30419,7 +32365,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_localizar", "medio",
+        "reventa_entradas", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué distingue al precio dinámico de las otras medidas?",
         "Que ataca la brecha en su origen",
         "El precio dinámico sube automáticamente con la demanda «hasta acercarse a "
@@ -30435,7 +32381,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_localizar", "facil",
+        "reventa_entradas", "lec_explicita", "facil",
         "Según la lectura, ¿qué diferencia hay entre reventa y fraude?",
         "Vender una entrada falsa ya es una estafa",
         "El emisor los separa con cuidado porque suelen mezclarse: vender una "
@@ -30451,7 +32397,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_interpretar", "facil",
+        "reventa_entradas", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al afirmar que la carrera por las entradas «no "
         "es una carrera entre personas»?",
         "Que compiten sistemas automáticos con compradores",
@@ -30468,7 +32414,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_interpretar", "medio",
+        "reventa_entradas", "lec_inferencia", "medio",
         "¿Qué implica que la brecha «no aparece por descuido»?",
         "Que el excedente lo crea una decisión propia",
         "Si el precio bajo fuera un error de cálculo, bastaría con corregirlo.\nEl "
@@ -30486,7 +32432,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_interpretar", "medio",
+        "reventa_entradas", "lec_relacion", "medio",
         "Según la lectura, ¿por qué la reventa oficial con tope no elimina el "
         "problema?",
         "Porque la brecha sigue estando ahí",
@@ -30503,7 +32449,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_interpretar", "dificil",
+        "reventa_entradas", "lec_significado", "dificil",
         "¿Por qué el emisor sostiene que la velocidad de conexión «no es un "
         "criterio más justo» que los otros?",
         "Porque reparte lo escaso sin haberlo declarado",
@@ -30520,7 +32466,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_interpretar", "dificil",
+        "reventa_entradas", "lec_relacion", "dificil",
         "¿Qué distinción propone el emisor para regular la reventa sin perjudicar a "
         "cualquiera?",
         "Entre vender una entrada y comprar cincuenta",
@@ -30537,7 +32483,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_evaluar", "medio",
+        "reventa_entradas", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor descarta la indignación con el revendedor al "
         "comienzo?",
         "Para correr la pregunta hacia el origen del margen",
@@ -30554,7 +32500,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_evaluar", "dificil",
+        "reventa_entradas", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor al evaluar las tres medidas que describe?",
         "Ecuánime, pues a cada una le anota su costo",
         "Ninguna sale ilesa y ninguna queda descartada.\nDe la entrada nominativa "
@@ -30571,7 +32517,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reventa_entradas", "lec_evaluar", "dificil",
+        "reventa_entradas", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al cerrar diciendo que ya se reparte «con un "
         "criterio, aunque nadie lo haya escrito»?",
         "Que no elegir también es una manera de elegir",
@@ -30590,7 +32536,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Bases del campeonato intercursos' ----------
     _ql(
-        "campeonato_bases", "lec_localizar", "facil",
+        "campeonato_bases", "lec_parafrasis", "facil",
         "Según las bases, ¿cuántos puntos otorga un empate?",
         "Un punto",
         "La tabla del punto 3 reparte tres puntos por victoria, uno por empate y "
@@ -30605,7 +32551,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_localizar", "facil",
+        "campeonato_bases", "lec_explicita", "facil",
         "Según las bases, ¿cuántos jugadores admite la nómina de cada equipo?",
         "Hasta diez jugadores",
         "La nómina se entrega antes del primer partido y admite hasta diez.\nSe "
@@ -30620,7 +32566,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_localizar", "medio",
+        "campeonato_bases", "lec_explicita", "medio",
         "Según las bases, ¿cuál es el primer criterio de desempate?",
         "La diferencia de goles",
         "Los cinco criterios se aplican en orden y hasta que uno separe a los "
@@ -30636,7 +32582,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_localizar", "medio",
+        "campeonato_bases", "lec_explicita", "medio",
         "Según las bases, ¿qué ocurre si un equipo no se presenta dos veces?",
         "Queda excluido y se anula todo",
         "La primera inasistencia cuesta el partido por 3-0. La segunda tiene un "
@@ -30652,7 +32598,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_localizar", "facil",
+        "campeonato_bases", "lec_explicita", "facil",
         "Según las bases, ¿hasta cuándo se puede presentar un reclamo?",
         "Antes de que termine el día del partido",
         "El plazo es el mismo día y no admite excepciones: «Un reclamo presentado "
@@ -30667,7 +32613,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_interpretar", "facil",
+        "campeonato_bases", "lec_relacion", "facil",
         "Según las bases, ¿por qué el orden de los criterios importa tanto como la "
         "lista?",
         "Porque el partido entre ambos se mira tercero",
@@ -30684,7 +32630,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_interpretar", "medio",
+        "campeonato_bases", "lec_relacion", "medio",
         "Un jugador recibe dos tarjetas amarillas en un mismo partido. Según las "
         "bases, ¿qué ocurre?",
         "Equivalen a roja y pierde la fecha siguiente",
@@ -30700,7 +32646,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_interpretar", "medio",
+        "campeonato_bases", "lec_relacion", "medio",
         "Un jugador queda suspendido en la última fecha del grupo. Según las bases, "
         "¿cuándo cumple la sanción?",
         "En cuartos de final",
@@ -30717,7 +32663,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_interpretar", "dificil",
+        "campeonato_bases", "lec_relacion", "dificil",
         "Dos equipos terminan con los mismos puntos: A le ganó a B, pero B tiene "
         "mejor diferencia de goles. Según las bases, ¿quién clasifica?",
         "B, porque la diferencia se mira antes",
@@ -30735,7 +32681,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_interpretar", "dificil",
+        "campeonato_bases", "lec_relacion", "dificil",
         "¿Por qué la organización insiste en avisar cuando un curso no podrá jugar?",
         "Porque una exclusión cambia la tabla",
         "La anulación de resultados no afecta solo al equipo excluido.\nSi un "
@@ -30752,7 +32698,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_evaluar", "medio",
+        "campeonato_bases", "lec_intencion", "medio",
         "¿Con qué finalidad las bases precisan qué reclamos no se aceptan?",
         "Para separar el arbitraje de las bases",
         "Las bases distinguen dos tipos de discusión que suelen confundirse en una "
@@ -30769,7 +32715,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_evaluar", "dificil",
+        "campeonato_bases", "lec_postura", "dificil",
         "¿Qué revela que el premio al equipo con menos tarjetas excluya a los "
         "equipos que no completaron sus partidos?",
         "Que no se premie por haber jugado menos",
@@ -30787,7 +32733,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "campeonato_bases", "lec_evaluar", "dificil",
+        "campeonato_bases", "lec_postura", "dificil",
         "¿Qué criterio ordena la sección sobre lo que estas bases no regulan?",
         "Remitir a otras reglas o resolver por defecto",
         "Los tres asuntos que quedan fuera no se dejan sueltos: cada uno recibe una "
@@ -30805,7 +32751,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El único contaminante que se va solo' ----------
     _ql(
-        "ruido_ciudad", "lec_localizar", "facil",
+        "ruido_ciudad", "lec_explicita", "facil",
         "Según la lectura, ¿cuál es el efecto más frecuente del ruido?",
         "Interrupciones del sueño y de la atención",
         "El emisor pone la pérdida de audición en su lugar: es el efecto «más "
@@ -30821,7 +32767,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_localizar", "facil",
+        "ruido_ciudad", "lec_explicita", "facil",
         "Según la lectura, ¿cómo fijan sus límites las normas sobre ruido?",
         "En niveles promediados durante un período",
         "Es la forma habitual y el emisor explica por qué: «Es la única manera "
@@ -30836,7 +32782,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_localizar", "medio",
+        "ruido_ciudad", "lec_explicita", "medio",
         "Según la lectura, ¿qué medidas actúan sobre el camino del ruido?",
         "Barreras, pavimentos y mejor aislación",
         "El emisor separa tres puntos de intervención: la fuente, el camino y el "
@@ -30852,7 +32798,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_localizar", "medio",
+        "ruido_ciudad", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué objetivo considera razonable el emisor?",
         "Proteger ciertos momentos y lugares",
         "El emisor descarta el silencio como meta: «Las ciudades suenan, y exigir "
@@ -30868,7 +32814,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_localizar", "facil",
+        "ruido_ciudad", "lec_explicita", "facil",
         "Según la lectura, ¿qué distingue al ruido de una mancha o del humo?",
         "Que desaparece apenas cesa",
         "Una mancha en un río se queda ahí y el humo deja partículas que se pueden "
@@ -30883,7 +32829,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_interpretar", "facil",
+        "ruido_ciudad", "lec_inferencia", "facil",
         "¿Qué muestra el emisor al comparar la perforación del sábado con el "
         "zumbido de la autopista?",
         "Que un mismo número puede esconder dos experiencias",
@@ -30900,7 +32846,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_interpretar", "medio",
+        "ruido_ciudad", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que «el sueño no se defiende»?",
         "Que uno deja de oírlo y el efecto continúa",
         "Acostumbrarse a un ruido significa dejar de notarlo, y el emisor advierte "
@@ -30916,7 +32862,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_interpretar", "medio",
+        "ruido_ciudad", "lec_relacion", "medio",
         "Según la lectura, ¿por qué un promedio deja fuera lo que más molesta?",
         "Porque lo que interrumpe es el cambio, no el nivel",
         "Un zumbido constante y una sucesión de golpes «pueden promediar lo mismo y "
@@ -30932,7 +32878,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_interpretar", "dificil",
+        "ruido_ciudad", "lec_significado", "dificil",
         "¿Por qué el emisor dice que el vecino que reclama «suena a exageración»?",
         "Porque describe algo que ya no se puede comprobar",
         "El ruido no deja rastro, así que acreditarlo exige medirlo mientras "
@@ -30949,7 +32895,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_interpretar", "dificil",
+        "ruido_ciudad", "lec_inferencia", "dificil",
         "¿Qué implica que el ruido afecte más cuando no se puede anticipar ni "
         "controlar?",
         "Que dos casos iguales exigen respuestas distintas",
@@ -30967,7 +32913,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_evaluar", "medio",
+        "ruido_ciudad", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor ordena las medidas en fuente, camino y "
         "receptor?",
         "Para mostrar dónde conviene intervenir primero",
@@ -30984,7 +32930,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_evaluar", "dificil",
+        "ruido_ciudad", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor al advertir que «una ciudad ruidosa no es una "
         "ciudad enferma»?",
         "Realista, pues descarta una meta inalcanzable",
@@ -31002,7 +32948,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ruido_ciudad", "lec_evaluar", "dificil",
+        "ruido_ciudad", "lec_forma", "dificil",
         "¿Qué explica, según el cierre, que este problema avance tan lento?",
         "Que el daño se reparte y nadie puede señalarlo",
         "El ruido no deja «víctimas identificables ni un antes y un después que se "
@@ -31020,7 +32966,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El segundo lugar' ----------
     _ql(
-        "segundo_lugar", "lec_localizar", "facil",
+        "segundo_lugar", "lec_parafrasis", "facil",
         "Según el relato, ¿dónde se encuentran los dos hombres?",
         "En la fila de una bencinera",
         "El encuentro ocurre veintidós años después del campeonato, mientras ambos "
@@ -31036,7 +32982,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_localizar", "facil",
+        "segundo_lugar", "lec_parafrasis", "facil",
         "Según el relato, ¿cuántas veces llegó segundo el narrador detrás de Iván?",
         "Cinco veces",
         "El narrador las enumera con precisión: los mil quinientos de 1998 y del "
@@ -31051,7 +32997,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_localizar", "medio",
+        "segundo_lugar", "lec_explicita", "medio",
         "Según el relato, ¿por qué Iván dejó de correr?",
         "Por una lesión en la rodilla",
         "Se lo cuenta al narrador en la bencinera: lo dejó a los veinte años por "
@@ -31066,7 +33012,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_localizar", "medio",
+        "segundo_lugar", "lec_parafrasis", "medio",
         "Según el relato, ¿qué le pregunta Iván al narrador?",
         "Si él también corría",
         "La pregunta llega después de un saludo amable y de un segundo de más "
@@ -31082,7 +33028,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_localizar", "facil",
+        "segundo_lugar", "lec_parafrasis", "facil",
         "Según el relato, ¿qué hizo el narrador después de aquellas derrotas?",
         "Se puso a entrenar en serio",
         "Cambió la alimentación, compró un cronómetro «que mi mamá encontró "
@@ -31098,7 +33044,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_interpretar", "facil",
+        "segundo_lugar", "lec_significado", "facil",
         "¿Qué quiere decir el narrador al hablar de «esa facilidad insultante de "
         "los que corren sin gesto»?",
         "Que ganaba sin aparentar esfuerzo",
@@ -31115,7 +33061,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_interpretar", "medio",
+        "segundo_lugar", "lec_inferencia", "medio",
         "¿Qué revela que el narrador nunca dijera en voz alta lo que estaba "
         "haciendo?",
         "Que sabía que sonaría ridículo contarlo",
@@ -31132,7 +33078,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_interpretar", "medio",
+        "segundo_lugar", "lec_significado", "medio",
         "¿Por qué el narrador insiste en que Iván no fue descortés?",
         "Porque el olvido fue genuino",
         "El narrador descarta una por una las lecturas alternativas: «No hubo "
@@ -31149,7 +33095,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_interpretar", "dificil",
+        "segundo_lugar", "lec_relacion", "dificil",
         "¿Qué explica el narrador al compararlo con volver a la casa de la "
         "infancia?",
         "Un ajuste en una medida que ignoraba tener",
@@ -31167,7 +33113,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_interpretar", "dificil",
+        "segundo_lugar", "lec_significado", "dificil",
         "¿Qué pregunta deja el narrador expresamente sin resolver?",
         "Si un motivo imaginado vale menos",
         "La formula él mismo, después de reconocer que la rivalidad produjo efectos "
@@ -31185,7 +33131,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_evaluar", "medio",
+        "segundo_lugar", "lec_forma", "medio",
         "¿Qué efecto produce que el relato detalle la conversación de la bencinera?",
         "Muestra un encuentro entre desconocidos",
         "La conversación es del todo corriente: la empresa de áridos, las dos "
@@ -31202,7 +33148,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_evaluar", "dificil",
+        "segundo_lugar", "lec_postura", "dificil",
         "¿Qué actitud asume el narrador frente a su propia rivalidad?",
         "Reflexiva, pues la evalúa sin descartarla",
         "El narrador podría haber cerrado el asunto de dos maneras cómodas, y evita "
@@ -31218,7 +33164,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "segundo_lugar", "lec_evaluar", "dificil",
+        "segundo_lugar", "lec_intencion", "dificil",
         "¿Qué consigue el relato al terminar con la cuenta que el narrador hace en "
         "la bencinera?",
         "Muestra que la costumbre no terminó",
@@ -31237,7 +33183,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Cómo leer un contrato de arriendo' ----------
     _ql(
-        "contrato_arriendo", "lec_localizar", "facil",
+        "contrato_arriendo", "lec_explicita", "facil",
         "Según la cartilla, ¿a cuánto equivale la garantía del contrato del "
         "ejemplo?",
         "A un mes de renta",
@@ -31253,7 +33199,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_localizar", "facil",
+        "contrato_arriendo", "lec_explicita", "facil",
         "Según la tabla de la cartilla, ¿quién suele pagar las contribuciones del "
         "inmueble?",
         "El arrendador",
@@ -31270,7 +33216,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_localizar", "medio",
+        "contrato_arriendo", "lec_explicita", "medio",
         "Según la cartilla, ¿qué plazo de aviso previo fija el contrato del "
         "ejemplo?",
         "Sesenta días antes del vencimiento",
@@ -31286,7 +33232,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_localizar", "medio",
+        "contrato_arriendo", "lec_explicita", "medio",
         "Según la cartilla, ¿qué contiene el acta de entrega?",
         "El estado del inmueble al recibirlo",
         "Es el documento que describe cómo estaba el inmueble el día en que se "
@@ -31302,7 +33248,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_localizar", "facil",
+        "contrato_arriendo", "lec_explicita", "facil",
         "Según la cartilla, ¿qué no se descuenta de la garantía?",
         "El desgaste esperable por vivir ahí",
         "La cartilla acota de qué responde la garantía: de «los daños que no "
@@ -31318,7 +33264,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_interpretar", "facil",
+        "contrato_arriendo", "lec_significado", "facil",
         "¿Por qué la cartilla advierte que la garantía «no es el último mes»?",
         "Porque la renta se debe igual",
         "Mientras el arrendatario ocupa el inmueble, la renta se debe, así que "
@@ -31334,7 +33280,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_interpretar", "medio",
+        "contrato_arriendo", "lec_significado", "medio",
         "¿Qué significa que, en un contrato con renovación automática, «guardar "
         "silencio es una decisión»?",
         "Que no avisar renueva el contrato otro año",
@@ -31351,7 +33297,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_interpretar", "medio",
+        "contrato_arriendo", "lec_significado", "medio",
         "Según la cartilla, ¿qué criterio separa las reparaciones locativas de las "
         "estructurales?",
         "El origen del desperfecto",
@@ -31369,7 +33315,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_interpretar", "dificil",
+        "contrato_arriendo", "lec_relacion", "dificil",
         "¿Por qué el acta de entrega decide la discusión sobre la garantía?",
         "Porque cambia recuerdos por documentos",
         "Al término del arriendo hay que establecer qué daños existían antes y "
@@ -31387,7 +33333,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_interpretar", "dificil",
+        "contrato_arriendo", "lec_inferencia", "dificil",
         "¿Qué sugiere la cartilla al recomendar comparar la multa por término "
         "anticipado con las mensualidades restantes?",
         "Que a veces conviene pagarla e irse",
@@ -31405,7 +33351,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_evaluar", "medio",
+        "contrato_arriendo", "lec_intencion", "medio",
         "¿Con qué finalidad la cartilla se detiene en el destino del contrato?",
         "Porque limita el uso que se le puede dar",
         "El destino aparece en la tabla del encabezado como un campo más, y la "
@@ -31421,7 +33367,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_evaluar", "dificil",
+        "contrato_arriendo", "lec_postura", "dificil",
         "¿Qué actitud asume la cartilla frente a las cláusulas que describe?",
         "Cauta, pues repite que manda lo escrito",
         "La cartilla entrega criterios corrientes y en cada punto marca su "
@@ -31438,7 +33384,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "contrato_arriendo", "lec_evaluar", "dificil",
+        "contrato_arriendo", "lec_postura", "dificil",
         "¿Qué revela que la cartilla dedique una sección a lo que no dice?",
         "Que reconoce hasta dónde alcanza",
         "El punto 8 marca tres bordes: no reemplaza al contrato, no cubre locales "
@@ -31456,7 +33402,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El pan del día siguiente' ----------
     _ql(
-        "pan_duro", "lec_localizar", "facil",
+        "pan_duro", "lec_explicita", "facil",
         "Según la lectura, ¿cómo se llama el proceso que endurece la miga?",
         "Retrogradación del almidón",
         "El emisor lo nombra al describir qué ocurre cuando el pan se enfría.\nLas "
@@ -31471,7 +33417,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_localizar", "facil",
+        "pan_duro", "lec_explicita", "facil",
         "Según la lectura, ¿qué le ocurre al pan guardado en el refrigerador?",
         "Se endurece más rápido que sobre la mesa",
         "La retrogradación «avanza más rápido a temperaturas de refrigerador que a "
@@ -31486,7 +33432,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_localizar", "medio",
+        "pan_duro", "lec_explicita", "medio",
         "Según la lectura, ¿qué le pasa a la corteza de un pan viejo?",
         "Se ablanda, al revés que la miga",
         "Las dos partes del pan evolucionan en direcciones opuestas.\nLa miga se "
@@ -31501,7 +33447,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_localizar", "medio",
+        "pan_duro", "lec_explicita", "medio",
         "Según la lectura, ¿qué panes se endurecen más lento?",
         "Los que llevan más grasa o azúcar",
         "El emisor lo menciona al advertir que no hay una receta única.\nEsos "
@@ -31516,7 +33462,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_localizar", "facil",
+        "pan_duro", "lec_explicita", "facil",
         "Según la lectura, ¿por qué conviene congelar el pan?",
         "Porque ahí el reordenamiento casi se detiene",
         "A temperaturas suficientemente bajas la retrogradación «prácticamente se "
@@ -31532,7 +33478,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_interpretar", "facil",
+        "pan_duro", "lec_funcion", "facil",
         "¿Qué dos hechos usa el emisor para descartar que el pan simplemente se "
         "seque?",
         "La bolsa cerrada y el pan que revive al horno",
@@ -31549,7 +33495,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_interpretar", "medio",
+        "pan_duro", "lec_significado", "medio",
         "¿Qué quiere decir el emisor con que el pan del día siguiente «no está "
         "seco, está reordenado»?",
         "Que el agua sigue dentro, en otra disposición",
@@ -31566,7 +33512,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_interpretar", "medio",
+        "pan_duro", "lec_relacion", "medio",
         "Según la lectura, ¿por qué un pan recalentado se endurece más rápido la "
         "segunda vez?",
         "Porque el reordenamiento ya tiene el camino hecho",
@@ -31582,7 +33528,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_interpretar", "dificil",
+        "pan_duro", "lec_relacion", "dificil",
         "¿Qué explica que la bolsa plástica no resuelva el problema?",
         "Que conserva agua, y el agua no era el problema",
         "La bolsa hace exactamente lo que promete: retiene la humedad.\nEl emisor "
@@ -31598,7 +33544,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_interpretar", "dificil",
+        "pan_duro", "lec_significado", "dificil",
         "¿Qué error de razonamiento comete, según el emisor, quien refrigera el "
         "pan?",
         "Aplicar una regla general a un caso que no la sigue",
@@ -31616,7 +33562,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_evaluar", "medio",
+        "pan_duro", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor abre con dos observaciones caseras?",
         "Para desarmar la explicación más común",
         "El texto no empieza explicando la retrogradación: empieza mostrando que la "
@@ -31632,7 +33578,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_evaluar", "dificil",
+        "pan_duro", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor hacia quien guarda el pan en bolsa?",
         "Comprensiva, pues admite que su gusto es válido",
         "Podría haber cerrado el texto llamando errónea esa costumbre, y hace algo "
@@ -31648,7 +33594,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "pan_duro", "lec_evaluar", "dificil",
+        "pan_duro", "lec_postura", "dificil",
         "¿Qué observación deja el emisor al cerrar la lectura?",
         "Que una mala explicación puede durar décadas",
         "El cierre se despega del pan para hablar de cómo sobreviven las "
@@ -31666,7 +33612,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Los agujeros que no están' ----------
     _ql(
-        "sesgo_sobreviviente", "lec_localizar", "facil",
+        "sesgo_sobreviviente", "lec_explicita", "facil",
         "Según la lectura, ¿dónde se concentraban los impactos en los aviones "
         "examinados?",
         "En las alas y en el fuselaje central",
@@ -31681,7 +33627,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_localizar", "facil",
+        "sesgo_sobreviviente", "lec_explicita", "facil",
         "Según la lectura, ¿qué se recomendó finalmente?",
         "Blindar los motores y la cabina",
         "La recomendación fue la contraria a la que sugería el mapa: reforzar "
@@ -31696,7 +33642,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_localizar", "medio",
+        "sesgo_sobreviviente", "lec_parafrasis", "medio",
         "Según la lectura, ¿por qué no se podía blindar el avión entero?",
         "Porque el blindaje pesa y no despegaría",
         "Es la restricción que da sentido a todo el problema y aparece en el primer "
@@ -31711,7 +33657,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_localizar", "medio",
+        "sesgo_sobreviviente", "lec_explicita", "medio",
         "Según la lectura, ¿qué pregunta permite detectar el sesgo?",
         "Quién no está en los datos y por qué",
         "El emisor la presenta como la pregunta que «desarma el sesgo», y destaca "
@@ -31727,7 +33673,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_localizar", "facil",
+        "sesgo_sobreviviente", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué ejemplos cotidianos entrega el emisor?",
         "Los edificios, el abuelo y los empresarios",
         "Son los tres casos con que baja el ejemplo militar a conversaciones "
@@ -31743,7 +33689,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_interpretar", "facil",
+        "sesgo_sobreviviente", "lec_inferencia", "facil",
         "Según la lectura, ¿qué mostraban en realidad los agujeros del mapa?",
         "Dónde un avión puede recibir impactos y volver",
         "El mapa parecía indicar dónde caían los disparos, y no era eso lo que "
@@ -31759,7 +33705,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_interpretar", "medio",
+        "sesgo_sobreviviente", "lec_relacion", "medio",
         "Según la lectura, ¿por qué las zonas sin agujeros eran las letales?",
         "Porque quien las recibía no volvía",
         "Un motor perforado derribaba al avión, y un avión derribado no llegaba a "
@@ -31774,7 +33720,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_interpretar", "medio",
+        "sesgo_sobreviviente", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al señalar que los datos que faltan «no dejan "
         "un espacio en blanco»?",
         "Que el resultado se ve completo y creíble",
@@ -31791,7 +33737,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_interpretar", "dificil",
+        "sesgo_sobreviviente", "lec_relacion", "dificil",
         "¿Qué tienen en común los tres ejemplos cotidianos que da el emisor?",
         "Que un filtro actuó antes de la observación",
         "En los tres casos la muestra llegó ya seleccionada, y el criterio de "
@@ -31808,7 +33754,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_interpretar", "dificil",
+        "sesgo_sobreviviente", "lec_relacion", "dificil",
         "Según la lectura, ¿cuándo estudiar solo a los sobrevivientes no constituye "
         "un error?",
         "Cuando la pregunta trata solo de ellos",
@@ -31826,7 +33772,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_evaluar", "medio",
+        "sesgo_sobreviviente", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor abre con el caso de los bombarderos?",
         "Para mostrar el error en su forma más clara",
         "El caso reúne todo lo que el texto necesita: una decisión concreta, datos "
@@ -31843,7 +33789,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_evaluar", "dificil",
+        "sesgo_sobreviviente", "lec_juicio", "dificil",
         "¿Qué advierte el emisor sobre quien responde «eso es sesgo del "
         "sobreviviente» ante cualquier afirmación?",
         "Que descartar sin mirar es igual de perezoso",
@@ -31860,7 +33806,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sesgo_sobreviviente", "lec_evaluar", "dificil",
+        "sesgo_sobreviviente", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al cerrar señalando que los datos de los aviones "
         "estaban bien tomados?",
         "Que un dato correcto no basta como respuesta",
@@ -31880,7 +33826,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Un carácter' ----------
     _ql(
-        "un_caracter", "lec_localizar", "facil",
+        "un_caracter", "lec_parafrasis", "facil",
         "Según el relato, ¿qué responde el reo cuando el juez le pregunta su "
         "nombre?",
         "Que no sabe, y que le dicen «Juanito»",
@@ -31897,7 +33843,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_localizar", "facil",
+        "un_caracter", "lec_parafrasis", "facil",
         "Según el relato, ¿cuánto tiempo vivió el reo junto al perro?",
         "Diez años, según su propio relato",
         "El reo lo cuenta en su alegato: había recogido del agua a un perro que se "
@@ -31912,7 +33858,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_localizar", "medio",
+        "un_caracter", "lec_explicita", "medio",
         "Según el relato, ¿cómo murió el perro?",
         "El caballero le disparó con un trabuco",
         "El perro era juguetón y un día le salió a ladrar al caballero cuando este "
@@ -31926,7 +33872,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_localizar", "medio",
+        "un_caracter", "lec_parafrasis", "medio",
         "Según el relato, ¿qué hace el juez después de escuchar al reo?",
         "Se cubre la frente y reflexiona",
         "Es la última línea del cuento y la única reacción que el narrador le "
@@ -31941,7 +33887,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_localizar", "facil",
+        "un_caracter", "lec_explicita", "facil",
         "Según el relato, ¿cómo entra el reo a la sala?",
         "Cojeando, con la cabeza baja",
         "Entra «cojeando a causa de los grillos y de su natural deformidad, con la "
@@ -31957,7 +33903,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_interpretar", "facil",
+        "un_caracter", "lec_relacion", "facil",
         "¿Qué contraste establece el reo entre el señor Gómez y él mismo?",
         "Uno lo tenía todo y el otro, solo un perro",
         "El reo enumera lo que el otro tenía: «mucha plata y casas, y padre, madre, "
@@ -31973,7 +33919,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_interpretar", "medio",
+        "un_caracter", "lec_significado", "medio",
         "¿Qué quiere decir el reo al llamar al perro «mi única riqueza»?",
         "Que era lo único que tenía y le fue quitado",
         "La expresión aparece justo después de haber enumerado lo que el otro "
@@ -31989,7 +33935,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_interpretar", "medio",
+        "un_caracter", "lec_funcion", "medio",
         "¿Qué compara el reo al preguntar «¿Los hombres hacen esto?»?",
         "La lealtad del perro con la de la gente",
         "La pregunta viene después de contar que el animal no se separaba de él "
@@ -32005,7 +33951,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_interpretar", "dificil",
+        "un_caracter", "lec_funcion", "dificil",
         "¿Qué función cumple la extensa descripción física del reo al comienzo?",
         "Instala una figura repulsiva antes de hablar",
         "El narrador se demora en los rasgos más ingratos: nariz aplastada, ojos "
@@ -32023,7 +33969,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_interpretar", "dificil",
+        "un_caracter", "lec_inferencia", "dificil",
         "Según su declaración, ¿qué buscaba el reo al matar al señor Gómez?",
         "Devolver el mismo daño que él le hizo",
         "El reo formula su motivo como una equivalencia exacta, y hasta repite las "
@@ -32039,7 +33985,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_evaluar", "medio",
+        "un_caracter", "lec_postura", "medio",
         "¿Qué actitud asume el narrador frente al reo?",
         "Distante, pues describe sin juzgar",
         "El narrador aparece en la primera línea, sitúa el caso y desaparece: no "
@@ -32056,7 +34002,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_evaluar", "dificil",
+        "un_caracter", "lec_forma", "dificil",
         "¿Qué efecto produce que el cuento termine con el juez cubriéndose la "
         "frente?",
         "Deja el fallo y el juicio moral sin resolver",
@@ -32074,7 +34020,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "un_caracter", "lec_evaluar", "dificil",
+        "un_caracter", "lec_juicio", "dificil",
         "¿Qué elemento del cuento sostiene mejor que su asunto es la desigualdad?",
         "Que el alegato compara lo que cada uno tenía",
         "El reo no defiende su inocencia ni discute los hechos: dedica su discurso "
@@ -32093,7 +34039,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El último kilómetro' ----------
     _ql(
-        "ultimo_kilometro", "lec_localizar", "facil",
+        "ultimo_kilometro", "lec_explicita", "facil",
         "Según el reportaje, ¿qué parte del costo del envío corresponde al tramo "
         "final?",
         "Entre el 41 % y el 53 % del total",
@@ -32110,7 +34056,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_localizar", "facil",
+        "ultimo_kilometro", "lec_explicita", "facil",
         "Según el reportaje, ¿cuántas entregas diarias hace un vehículo de reparto?",
         "Entre sesenta y ciento veinte",
         "La cifra aparece dos veces: en la escena inicial, aplicada a esa "
@@ -32126,7 +34072,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_localizar", "medio",
+        "ultimo_kilometro", "lec_explicita", "medio",
         "Según el reportaje, ¿cuál es la principal causa de las entregas fallidas?",
         "Las direcciones imprecisas o mal escritas",
         "El emisor lo dice sin rodeos y corrigiendo la explicación más "
@@ -32142,7 +34088,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_localizar", "medio",
+        "ultimo_kilometro", "lec_explicita", "medio",
         "Según el reportaje, ¿qué se ha estimado sobre el tráfico y los tiempos de "
         "entrega?",
         "Que los alarga hasta en un 30 %",
@@ -32159,7 +34105,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_localizar", "facil",
+        "ultimo_kilometro", "lec_explicita", "facil",
         "Según el reportaje, ¿qué soluciones se están ensayando?",
         "Casilleros, puntos de retiro y horarios",
         "El emisor enumera cuatro: casilleros automáticos donde el repartidor deja "
@@ -32175,7 +34121,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_interpretar", "facil",
+        "ultimo_kilometro", "lec_relacion", "facil",
         "Según el reportaje, ¿por qué el tramo final resulta el más caro?",
         "Porque cada paquete va a otra dirección",
         "Todo el viaje anterior aprovecha que muchísimas cosas van al mismo lugar, "
@@ -32191,7 +34137,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_interpretar", "medio",
+        "ultimo_kilometro", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que en el último tramo «se rompe la "
         "economía de escala»?",
         "Que el costo ya no se reparte entre la carga",
@@ -32209,7 +34155,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_interpretar", "medio",
+        "ultimo_kilometro", "lec_significado", "medio",
         "¿Por qué el emisor se detiene en la distancia entre el 8 % y el 20 % de "
         "entregas fallidas?",
         "Porque cambia el tamaño del problema",
@@ -32226,7 +34172,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_interpretar", "dificil",
+        "ultimo_kilometro", "lec_inferencia", "dificil",
         "¿Qué implica que el costo de la congestión «no aparece en ninguna boleta»?",
         "Que nadie lo considera al tomar la decisión",
         "Un costo sin precio asignado no entra en ningún cálculo, y esa es la "
@@ -32243,7 +34189,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_interpretar", "dificil",
+        "ultimo_kilometro", "lec_relacion", "dificil",
         "¿Qué tienen en común las soluciones que el reportaje describe?",
         "Que devuelven la escala moviendo el costo",
         "Todas recuperan lo que el último tramo había perdido: el casillero permite "
@@ -32261,7 +34207,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_evaluar", "medio",
+        "ultimo_kilometro", "lec_intencion", "medio",
         "¿Con qué finalidad el reportaje abre con la escena de la camioneta?",
         "Para poner ante los ojos el tramo que analiza",
         "La escena dura un párrafo y contiene, sin nombrarlos, todos los elementos "
@@ -32278,7 +34224,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_evaluar", "dificil",
+        "ultimo_kilometro", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor hacia quien aprovecha el «envío gratis»?",
         "Comprensiva, pues llama sensatas esas conductas",
         "Enumera conductas que podrían leerse como abuso: pedir tres tallas para "
@@ -32296,7 +34242,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ultimo_kilometro", "lec_evaluar", "dificil",
+        "ultimo_kilometro", "lec_postura", "dificil",
         "¿Qué consigue el emisor al cerrar recordando a quien no puede salir de su "
         "casa?",
         "Evita que el texto se lea como un reproche",
@@ -32316,7 +34262,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Plan de evacuación de un edificio' ----------
     _ql(
-        "plan_evacuacion", "lec_localizar", "facil",
+        "plan_evacuacion", "lec_explicita", "facil",
         "Según el plan, ¿dónde queda la zona de reunión?",
         "En la plaza Los Olivos, frente al 340",
         "La tabla del punto 1 la señala en su última fila, y con el mismo lugar "
@@ -32331,7 +34277,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_localizar", "facil",
+        "plan_evacuacion", "lec_explicita", "facil",
         "Según el plan, ¿cuál es la tarea del encargado de corte?",
         "Cortar el gas y la electricidad",
         "El rol lo cumple el conserje de turno y consiste en cortar los suministros "
@@ -32346,7 +34292,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_localizar", "medio",
+        "plan_evacuacion", "lec_explicita", "medio",
         "Según la tabla, ¿qué corresponde hacer mientras dura un sismo?",
         "Protegerse en el lugar, lejos de ventanas",
         "La tabla es explícita: durante un sismo **no** se evacúa.\nLa evacuación "
@@ -32361,7 +34307,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_localizar", "medio",
+        "plan_evacuacion", "lec_explicita", "medio",
         "Según el plan, ¿qué datos anota el registro de cada simulacro?",
         "El tiempo, los ausentes y las fallas detectadas",
         "Son tres y están enumerados en el punto 5: el tiempo total de evacuación, "
@@ -32377,7 +34323,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_interpretar", "facil",
+        "plan_evacuacion", "lec_relacion", "facil",
         "Según el plan, ¿por qué durante un sismo no se evacúa?",
         "Porque la escalera es el peor lugar ahí",
         "El plan entrega la razón inmediatamente debajo de la tabla, y es una razón "
@@ -32393,7 +34339,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_interpretar", "medio",
+        "plan_evacuacion", "lec_relacion", "medio",
         "Según la regla (d), ¿por qué no se puede abandonar la zona de reunión?",
         "Porque hacen buscar adentro a quien está a salvo",
         "El razonamiento de la regla no es de disciplina sino de "
@@ -32409,7 +34355,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_interpretar", "facil",
+        "plan_evacuacion", "lec_relacion", "facil",
         "Una residente no puede bajar la escalera por sí misma. Según el plan, ¿qué "
         "debe hacer?",
         "Ir al punto de espera asistida del descanso",
@@ -32426,7 +34372,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_interpretar", "dificil",
+        "plan_evacuacion", "lec_significado", "dificil",
         "¿Qué condiciones fija el plan para que un residente use un extintor?",
         "Solo un amago propio, con la salida atrás",
         "El plan separa dos cosas que se confunden: usar un extintor y combatir el "
@@ -32443,7 +34389,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_interpretar", "dificil",
+        "plan_evacuacion", "lec_inferencia", "dificil",
         "¿Qué supone el plan al establecer que los simulacros se hagan sin aviso de "
         "fecha?",
         "Que un ensayo avisado no muestra las fallas",
@@ -32460,7 +34406,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_evaluar", "medio",
+        "plan_evacuacion", "lec_intencion", "medio",
         "¿Con qué finalidad el plan abre comparando el sismo con el incendio?",
         "Para corregir la idea de que se actúa igual",
         "El plan nombra el error antes de corregirlo: «la confusión más frecuente "
@@ -32477,7 +34423,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_evaluar", "medio",
+        "plan_evacuacion", "lec_forma", "medio",
         "¿Qué función cumple el punto 6 del plan?",
         "Delimitar qué queda fuera de este documento",
         "El punto 6 marca tres bordes: la atención médica, que corresponde al SAMU "
@@ -32494,7 +34440,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_evaluar", "dificil",
+        "plan_evacuacion", "lec_postura", "dificil",
         "¿Qué revela que el plan aclare que el objetivo del simulacro no es un buen "
         "tiempo?",
         "Que el ejercicio sirve para encontrar errores",
@@ -32512,7 +34458,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "plan_evacuacion", "lec_evaluar", "dificil",
+        "plan_evacuacion", "lec_intencion", "dificil",
         "¿Por qué el plan termina diciendo que la indicación del personal de "
         "emergencia manda sobre la ruta escrita?",
         "Porque el plan no puede prever cada situación",
@@ -32531,7 +34477,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El afinador' ----------
     _ql(
-        "afinador_piano", "lec_localizar", "facil",
+        "afinador_piano", "lec_explicita", "facil",
         "Según el relato, ¿cómo afina Sergio los pianos?",
         "De oído, esperando que el temblor desaparezca",
         "Es el método que le enseñó don Efraín y el que usa desde 1984: apoyar la "
@@ -32547,7 +34493,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_localizar", "facil",
+        "afinador_piano", "lec_explicita", "facil",
         "Según el relato, ¿por qué Sergio lleva un aparato en el bolso?",
         "Porque tranquiliza a los clientes que lo ven",
         "Hay clientes que se quedan más tranquilos si ven uno encima del piano, y "
@@ -32563,7 +34509,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_localizar", "medio",
+        "afinador_piano", "lec_explicita", "medio",
         "Según el relato, ¿qué hizo la niña para mostrarle cuál era la nota?",
         "Tocó la misma nota en dos octavas distintas",
         "Se acercó al piano, tocó una tecla del registro más alto y después la "
@@ -32579,7 +34525,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_localizar", "facil",
+        "afinador_piano", "lec_explicita", "facil",
         "Según el relato, ¿qué descubrió Sergio esa noche frente a su propio piano?",
         "Que desde cierta tecla ya no oía el temblor",
         "Fue subiendo nota por nota, comparando lo que oía con lo que marcaba el "
@@ -32594,7 +34540,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_interpretar", "facil",
+        "afinador_piano", "lec_significado", "facil",
         "Según el relato, ¿qué es el «temblor» con que Sergio trabaja?",
         "Lo que se oye cuando dos cuerdas no coinciden",
         "El relato lo define con cuidado, porque de ese fenómeno depende todo el "
@@ -32609,7 +34555,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_interpretar", "medio",
+        "afinador_piano", "lec_relacion", "medio",
         "¿Por qué a Sergio lo dejó incómodo que la niña no discutiera?",
         "Porque cedió por respeto y no por convencimiento",
         "Si ella hubiera insistido, habría sido una diferencia de opiniones entre "
@@ -32626,7 +34572,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_interpretar", "medio",
+        "afinador_piano", "lec_significado", "medio",
         "¿Qué quiere decir el relato al afirmar que «un oído no se apaga un "
         "martes»?",
         "Que la pérdida fue gradual e imposible de notar",
@@ -32643,7 +34589,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_interpretar", "dificil",
+        "afinador_piano", "lec_inferencia", "dificil",
         "¿Qué comprende Sergio sobre los cuarenta años en que nadie lo corrigió?",
         "Que pudo ser deferencia y no acierto",
         "Durante mucho tiempo ese silencio le había parecido «una medida de su "
@@ -32659,7 +34605,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_interpretar", "dificil",
+        "afinador_piano", "lec_significado", "dificil",
         "¿Qué significa que la niña «no sabía todavía que eso no se hace»?",
         "Que aún no aprendía a callar ante un experto",
         "La frase no la trata de ignorante: la trata de nueva.\nLo que ella no ha "
@@ -32676,7 +34622,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_evaluar", "medio",
+        "afinador_piano", "lec_forma", "medio",
         "¿Qué efecto produce que el relato detalle los tres intentos de Sergio con "
         "la nota?",
         "Muestra que no descartó el reparo a la ligera",
@@ -32693,7 +34639,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_evaluar", "medio",
+        "afinador_piano", "lec_postura", "medio",
         "¿Qué actitud asume Sergio al comprobar que la niña tenía razón?",
         "Serena, pues corrige la nota y sigue",
         "El relato descarta expresamente la reacción dramática: «No fue un susto. "
@@ -32710,7 +34656,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_evaluar", "dificil",
+        "afinador_piano", "lec_intencion", "dificil",
         "¿Qué consigue el relato al contar que Sergio compró un aparato mejor y lo "
         "deja a la vista?",
         "Cierra el conflicto sin volverlo derrota",
@@ -32728,7 +34674,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "afinador_piano", "lec_evaluar", "dificil",
+        "afinador_piano", "lec_forma", "dificil",
         "¿Qué deja deliberadamente sin resolver el final del relato?",
         "Lo que no alcanzó a explicarle a la niña",
         "La escena de noviembre entrega lo que se podía entregar: él le dice que "
@@ -32746,7 +34692,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Una sola fila' ----------
     _ql(
-        "fila_unica", "lec_localizar", "facil",
+        "fila_unica", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocurre con las filas separadas y no con la fila "
         "única?",
         "Que una caja quede vacía habiendo gente esperando",
@@ -32763,7 +34709,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_localizar", "facil",
+        "fila_unica", "lec_parafrasis", "facil",
         "Según la lectura, ¿cuánto puede crecer la espera promedio con filas "
         "separadas?",
         "Puede llegar a duplicarse",
@@ -32780,7 +34726,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_localizar", "medio",
+        "fila_unica", "lec_explicita", "medio",
         "Según la lectura, ¿cuál es la primera razón por la que un supermercado no "
         "usa fila única?",
         "Porque una fila con carros necesita mucho espacio",
@@ -32798,7 +34744,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_localizar", "facil",
+        "fila_unica", "lec_explicita", "facil",
         "Según la lectura, ¿qué se hace donde la fila única no cabe?",
         "Se informa el turno y el tiempo estimado",
         "Cuando no se puede reducir la espera, el diseño trabaja sobre otra cosa: "
@@ -32814,7 +34760,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_interpretar", "facil",
+        "fila_unica", "lec_relacion", "facil",
         "¿Por qué falla la intuición de que da lo mismo cómo se ordene la gente?",
         "Porque una caja libre no siempre está atendiendo",
         "La intuición supone que las cien personas van a pasar igual por las cinco "
@@ -32830,7 +34776,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_interpretar", "medio",
+        "fila_unica", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que la fila única «no desperdicia a "
         "nadie que esté atendiendo»?",
         "Que ninguna caja queda ociosa mientras haya cola",
@@ -32847,7 +34793,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_interpretar", "medio",
+        "fila_unica", "lec_relacion", "medio",
         "¿Qué distinción establece el emisor entre la espera y el orden?",
         "Que ser adelantado molesta más que esperar",
         "El emisor separa cuánto se espera de cómo se espera, y sostiene que la "
@@ -32864,7 +34810,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_interpretar", "dificil",
+        "fila_unica", "lec_relacion", "dificil",
         "Según la lectura, ¿por qué la ventaja de juntar las filas crece cuando el "
         "local está más lleno?",
         "Porque hay más momentos en que se pierde capacidad",
@@ -32881,7 +34827,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_interpretar", "dificil",
+        "fila_unica", "lec_inferencia", "dificil",
         "¿Qué supone el emisor al señalar que los dulces y las pilas están junto a "
         "la caja «precisamente porque hay una fila»?",
         "Que acortar la espera reduciría esa venta",
@@ -32899,7 +34845,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_evaluar", "medio",
+        "fila_unica", "lec_intencion", "medio",
         "¿Con qué finalidad el emisor compara el banco con el supermercado al "
         "comienzo?",
         "Para enfrentar dos maneras de ordenar lo mismo",
@@ -32916,7 +34862,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_evaluar", "medio",
+        "fila_unica", "lec_postura", "medio",
         "¿Qué actitud asume el emisor al enumerar los costos de la fila única?",
         "Ponderada, pues reconoce lo que su propuesta cuesta",
         "Viene de mostrar que la fila única gana en las dos dimensiones que "
@@ -32932,7 +34878,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_evaluar", "dificil",
+        "fila_unica", "lec_postura", "dificil",
         "¿Qué consigue el emisor al aclarar que ninguna de las razones del "
         "supermercado «es la terquedad»?",
         "Explicar una decisión en vez de reprocharla",
@@ -32950,7 +34896,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "fila_unica", "lec_evaluar", "dificil",
+        "fila_unica", "lec_postura", "dificil",
         "¿Qué plantea el emisor en el párrafo final de la lectura?",
         "Que lo medible y lo que molesta no coinciden",
         "El cierre separa dos cosas que el texto venía tratando juntas: la espera "
@@ -32968,7 +34914,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Condiciones de un pasaje aéreo' ----------
     _ql(
-        "condiciones_vuelo", "lec_localizar", "facil",
+        "condiciones_vuelo", "lec_explicita", "facil",
         "Según la ficha, ¿qué equipaje incluye la tarifa Liviana?",
         "Un equipaje de mano bajo el asiento, hasta 6 kg",
         "La tabla de la sección 2 lo entrega en la primera fila: equipaje de mano "
@@ -32984,7 +34930,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_localizar", "facil",
+        "condiciones_vuelo", "lec_explicita", "facil",
         "Según la nota (c), ¿cuánto cuesta cambiar la fecha del pasaje?",
         "$22.000, más la diferencia de tarifa",
         "El cargo fijo es de $22.000 y se suma la diferencia si el vuelo nuevo "
@@ -32999,7 +34945,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_localizar", "medio",
+        "condiciones_vuelo", "lec_explicita", "medio",
         "Según la ficha, ¿qué se devuelve en cualquiera de las dos tarifas?",
         "Los impuestos y tasas de embarque no usados",
         "La nota (d) separa dos cosas que suelen confundirse.\nEl precio del pasaje "
@@ -33014,7 +34960,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_localizar", "medio",
+        "condiciones_vuelo", "lec_explicita", "medio",
         "Según la nota (f), ¿desde qué atraso puede el pasajero elegir qué hacer?",
         "Desde más de tres horas de atraso",
         "La nota fija dos umbrales distintos y conviene no mezclarlos: más de una "
@@ -33030,7 +34976,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_interpretar", "facil",
+        "condiciones_vuelo", "lec_relacion", "facil",
         "¿Por qué conviene comprar el equipaje adicional por el sitio web?",
         "Porque en el aeropuerto cuesta cerca del doble",
         "La nota (b) fija el corte en seis horas antes del vuelo: hasta ahí rige el "
@@ -33046,7 +34992,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_interpretar", "medio",
+        "condiciones_vuelo", "lec_relacion", "medio",
         "¿Qué diferencia establece la ficha entre cambiar el pasaje y pedir su "
         "devolución?",
         "El cambio está disponible; la devolución, no",
@@ -33063,7 +35009,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_interpretar", "facil",
+        "condiciones_vuelo", "lec_relacion", "facil",
         "Un pasajero no se presenta al vuelo y no avisa. Según la nota (e), ¿qué "
         "ocurre?",
         "El pasaje queda sin valor y no admite cambio",
@@ -33080,7 +35026,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_interpretar", "dificil",
+        "condiciones_vuelo", "lec_relacion", "dificil",
         "¿Qué distingue la nota (b) al aclarar que el valor de aeropuerto «no es "
         "una multa»?",
         "Que el valor mayor está publicado de antemano",
@@ -33098,7 +35044,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_interpretar", "dificil",
+        "condiciones_vuelo", "lec_relacion", "dificil",
         "La aerolínea adelanta el vuelo cuarenta minutos. Según la ficha, ¿qué "
         "puede hacer el pasajero?",
         "Nada: el adelanto no llega al límite de la nota (f)",
@@ -33116,7 +35062,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_evaluar", "medio",
+        "condiciones_vuelo", "lec_intencion", "medio",
         "¿Con qué finalidad la ficha incluye los tres casos de la sección 4?",
         "Para mostrar cómo se aplican las notas al pie",
         "Cada caso activa una nota distinta y solo una: el 1 la nota (b), el 2 la "
@@ -33131,7 +35077,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_evaluar", "medio",
+        "condiciones_vuelo", "lec_forma", "medio",
         "¿Qué función cumple la sección «Lo que esta ficha no dice»?",
         "Acotar qué preguntas no se responden acá",
         "La sección separa lo contractual de lo que no lo es.\nQuedan fuera tres "
@@ -33147,7 +35093,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_evaluar", "dificil",
+        "condiciones_vuelo", "lec_intencion", "dificil",
         "¿Por qué la ficha recomienda revisar la nota (e) antes que ninguna otra?",
         "Porque es la única que actúa sin hacer nada",
         "Todas las demás notas se activan cuando el pasajero decide algo: comprar "
@@ -33163,7 +35109,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "condiciones_vuelo", "lec_evaluar", "dificil",
+        "condiciones_vuelo", "lec_juicio", "dificil",
         "¿Qué supone el consejo de comparar por el total y no por el primer precio?",
         "Que la tarifa barata puede terminar más cara",
         "El consejo no dice que la Liviana sea mala, sino que su precio no es "
@@ -33181,7 +35127,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La información que se pierde en el color' ----------
     _ql(
-        "color_redundancia", "lec_localizar", "facil",
+        "color_redundancia", "lec_explicita", "facil",
         "Según la lectura, ¿qué proporción de personas presenta daltonismo?",
         "Un 8 % de los hombres y un 0,5 % de las mujeres",
         "Son las cifras que el emisor declara como «las que se citan "
@@ -33196,7 +35142,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_localizar", "facil",
+        "color_redundancia", "lec_explicita", "facil",
         "Según la lectura, ¿en qué consiste la acromatopsia?",
         "Ver en blanco y negro, y es muy rara",
         "El emisor la menciona una sola vez y para sacarla del camino.\nEs la "
@@ -33211,7 +35157,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_localizar", "medio",
+        "color_redundancia", "lec_explicita", "medio",
         "Según la lectura, ¿por qué el daltonismo es mucho más frecuente en "
         "hombres?",
         "Porque tienen un solo cromosoma X, sin repuesto",
@@ -33227,7 +35173,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_localizar", "facil",
+        "color_redundancia", "lec_explicita", "facil",
         "Según la lectura, ¿qué prueba permite detectar el problema en un "
         "documento?",
         "Imprimirlo en blanco y negro",
@@ -33244,7 +35190,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_interpretar", "facil",
+        "color_redundancia", "lec_relacion", "facil",
         "¿Por qué el semáforo funciona aunque use el par de colores difícil?",
         "Porque la posición repite lo que dice el color",
         "El semáforo usa rojo y verde, que es exactamente el par que se confunde, y "
@@ -33260,7 +35206,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_interpretar", "medio",
+        "color_redundancia", "lec_relacion", "medio",
         "¿Qué tienen en común los casos que, según la lectura, sí fallan?",
         "Que el color es la única señal que lleva el dato",
         "El gráfico con leyenda aparte, el mapa por tonos, el formulario que marca "
@@ -33277,7 +35223,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_interpretar", "medio",
+        "color_redundancia", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que la solución «se llama "
         "redundancia»?",
         "Que otra señal repita lo que dice el color",
@@ -33295,7 +35241,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_interpretar", "dificil",
+        "color_redundancia", "lec_relacion", "dificil",
         "Según la lectura, ¿por qué subir la saturación no resuelve el problema?",
         "Porque la confusión no depende de la intensidad",
         "Un rojo más vivo y un verde más vivo siguen siendo el mismo par para quien "
@@ -33311,7 +35257,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_interpretar", "dificil",
+        "color_redundancia", "lec_relacion", "dificil",
         "¿Qué distingue el emisor al hablar de las tareas donde «el color es el "
         "trabajo mismo»?",
         "Si el color es el dato o solo lo transporta",
@@ -33330,7 +35276,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_evaluar", "medio",
+        "color_redundancia", "lec_intencion", "medio",
         "¿Con qué finalidad se menciona el semáforo en la lectura?",
         "Para mostrar un caso donde el color no viaja solo",
         "El semáforo entra en el texto como contraejemplo, no como problema.\nEl "
@@ -33346,7 +35292,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_evaluar", "medio",
+        "color_redundancia", "lec_postura", "medio",
         "¿Qué actitud asume el emisor al advertir que estas personas «no son un "
         "grupo uniforme»?",
         "Cauta, pues evita tratar los casos como iguales",
@@ -33363,7 +35309,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_evaluar", "dificil",
+        "color_redundancia", "lec_juicio", "dificil",
         "¿Qué agrega al argumento la observación de que la redundancia le sirve a "
         "cualquiera?",
         "Que la medida se justifica más allá de ese 8 %",
@@ -33382,7 +35328,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "color_redundancia", "lec_evaluar", "dificil",
+        "color_redundancia", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al cerrar comparando lo que cuesta agregar esa "
         "señal antes y después?",
         "Mover la decisión al momento en que sale barata",
@@ -33401,7 +35347,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El recreo largo' ----------
     _ql(
-        "recreo_largo", "lec_localizar", "facil",
+        "recreo_largo", "lec_explicita", "facil",
         "Según el relato, ¿cuánto duraba el segundo recreo de los miércoles?",
         "Cuarenta minutos, y los otros días quince",
         "El segundo párrafo entrega los dos datos juntos.\n«Lunes, martes, jueves y "
@@ -33415,7 +35361,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_localizar", "facil",
+        "recreo_largo", "lec_explicita", "facil",
         "Según el relato, ¿qué anotación encontraron en la carpeta del armario?",
         "«ajuste horario Sra. Villagra», a mano",
         "La encontraron en la carpeta del año en que el recreo pasó de quince a "
@@ -33429,7 +35375,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_localizar", "medio",
+        "recreo_largo", "lec_explicita", "medio",
         "Según el relato, ¿por qué la señora Villagra necesitaba ese horario?",
         "Porque hacía clases el mismo día en dos colegios",
         "Adriana Villagra fue profesora de música durante veintidós años en el "
@@ -33444,7 +35390,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_localizar", "facil",
+        "recreo_largo", "lec_parafrasis", "facil",
         "Según el relato, ¿qué contestaron los profesores cuando les preguntaron?",
         "Que ya era así cuando ellos llegaron al colegio",
         "El de historia lo dijo con seis años en el establecimiento y la de "
@@ -33459,7 +35405,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_interpretar", "facil",
+        "recreo_largo", "lec_significado", "facil",
         "¿Qué quiere decir el narrador al afirmar que sabían el horario «sin "
         "explicación y sin dudas»?",
         "Que lo aceptaban sin preguntarse de dónde venía",
@@ -33475,7 +35421,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_interpretar", "medio",
+        "recreo_largo", "lec_funcion", "medio",
         "¿Qué función cumple la enumeración de lo que «cabía» en el recreo largo?",
         "Muestra todo lo que dependía de esos minutos",
         "La lista es larga a propósito: un partido con discusión incluida, el "
@@ -33492,7 +35438,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_interpretar", "medio",
+        "recreo_largo", "lec_relacion", "medio",
         "¿Por qué se descartó la idea de no contarle nada al inspector?",
         "Porque bastaba que él abriera el mismo armario",
         "El relato es explícito sobre el motivo del rechazo, y no es el que uno "
@@ -33508,7 +35454,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_interpretar", "dificil",
+        "recreo_largo", "lec_relacion", "dificil",
         "¿Qué distinción establece el relato entre el motivo del recreo largo y lo "
         "que lo sostenía?",
         "El motivo se acabó y otras cosas lo sostuvieron",
@@ -33526,7 +35472,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_interpretar", "dificil",
+        "recreo_largo", "lec_significado", "dificil",
         "¿Qué observación hace la Fernanda al salir de la reunión?",
         "Que una costumbre sin motivo igual encuentra uno",
         "Su comentario compara dos plazos que el relato ya puso sobre la mesa: once "
@@ -33542,7 +35488,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_evaluar", "medio",
+        "recreo_largo", "lec_forma", "medio",
         "¿Qué efecto produce que el relato esté narrado en primera persona plural?",
         "Convierte a un curso entero en quien cuenta",
         "Nadie firma esta historia. El «nosotros» reparte entre todos lo que en "
@@ -33559,7 +35505,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_evaluar", "dificil",
+        "recreo_largo", "lec_postura", "dificil",
         "¿Qué actitud asume el narrador frente al motivo que finalmente descubre?",
         "Afectuosa, pues le gusta lo pequeño del motivo",
         "El hallazgo podría haber sido un chiste a costa del colegio: once años de "
@@ -33576,7 +35522,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_evaluar", "medio",
+        "recreo_largo", "lec_intencion", "medio",
         "¿Con qué finalidad el narrador aclara que la lista la hicieron esa misma "
         "semana?",
         "Para admitir que el motivo lo construyeron ellos",
@@ -33593,7 +35539,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "recreo_largo", "lec_evaluar", "dificil",
+        "recreo_largo", "lec_intencion", "dificil",
         "¿Qué consigue el relato al terminar con la hoja guardada en el armario?",
         "Deja el ciclo listo para repetirse con otros",
         "El cierre repite la escena inicial con los papeles cambiados. Los que "
@@ -33612,7 +35558,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Leer en pantalla' ----------
     _ql(
-        "leer_pantalla", "lec_localizar", "facil",
+        "leer_pantalla", "lec_explicita", "facil",
         "Según la lectura, ¿en qué tipo de textos aparece la diferencia entre papel "
         "y pantalla?",
         "En los expositivos, con argumentos y datos",
@@ -33626,7 +35572,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_localizar", "facil",
+        "leer_pantalla", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocurre con la confianza de quien lee en pantalla?",
         "Se mantiene o sube aunque la comprensión baje",
         "El texto describe esa combinación como peor que el déficit "
@@ -33640,7 +35586,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_localizar", "medio",
+        "leer_pantalla", "lec_explicita", "medio",
         "Según la lectura, ¿qué explicación se da sobre la memoria del lugar?",
         "Que en un libro la posición ayuda a recordar las ideas",
         "El texto lo describe así: uno recuerda vagamente que cierta idea estaba "
@@ -33654,7 +35600,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_interpretar", "facil",
+        "leer_pantalla", "lec_relacion", "facil",
         "Según el emisor, ¿por qué el problema no es la pantalla en sí?",
         "Porque lo que interfiere es el modo de leer que se trae",
         "En una pantalla, casi todo lo que uno lee durante el día está hecho para "
@@ -33669,7 +35615,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_interpretar", "medio",
+        "leer_pantalla", "lec_inferencia", "medio",
         "¿Qué muestra que la diferencia varíe según el tipo de texto y el tiempo "
         "disponible?",
         "Que el soporte por sí solo no explica el resultado",
@@ -33685,7 +35631,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_interpretar", "medio",
+        "leer_pantalla", "lec_inferencia", "medio",
         "¿Qué se sigue, según el emisor, de que el efecto no haya desaparecido con "
         "las nuevas generaciones?",
         "Que no es cuestión de acostumbrarse al aparato",
@@ -33700,7 +35646,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_interpretar", "dificil",
+        "leer_pantalla", "lec_inferencia", "dificil",
         "¿Qué recomendación concreta se sigue del hallazgo sobre la confianza?",
         "Comprobar la comprensión en vez de estimarla",
         "El texto sostiene que la sensación de haber entendido es un mal indicador, "
@@ -33716,7 +35662,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_evaluar", "facil",
+        "leer_pantalla", "lec_intencion", "facil",
         "¿Con qué propósito el emisor insiste en que la ventaja del papel es "
         "pequeña?",
         "Para evitar que un efecto modesto se lea como enorme",
@@ -33731,7 +35677,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_evaluar", "medio",
+        "leer_pantalla", "lec_juicio", "medio",
         "¿Qué precauciones toma el emisor al enumerar lo que los resultados «no "
         "autorizan a concluir»?",
         "Acota el alcance del hallazgo en tres direcciones",
@@ -33747,7 +35693,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_evaluar", "dificil",
+        "leer_pantalla", "lec_forma", "dificil",
         "¿Por qué el emisor sostiene que lo que hay que cambiar «es el modo» y no "
         "el soporte?",
         "Porque el hábito de lectura viaja con el lector",
@@ -33764,7 +35710,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_evaluar", "dificil",
+        "leer_pantalla", "lec_postura", "dificil",
         "¿Qué observación deja el emisor sobre la manera en que se discute este "
         "tema?",
         "Que un hallazgo acotado circula como sentencia general",
@@ -33781,7 +35727,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_interpretar", "dificil",
+        "leer_pantalla", "lec_relacion", "dificil",
         "¿Qué diferencia establece el emisor entre medir la comprensión y estimarla?",
         "Estimar es la sensación; medir es probarse con el texto cerrado",
         "El emisor viene de mostrar que en pantalla la comprensión baja un poco y la "
@@ -33803,7 +35749,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "leer_pantalla", "lec_evaluar", "dificil",
+        "leer_pantalla", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor abre diciendo que es una afirmación que «todo "
         "el mundo repite y casi nadie ha revisado»?",
         "Para anunciar que va a revisar una creencia extendida",
@@ -33826,7 +35772,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La mina que está en el cajón' ----------
     _ql(
-        "residuos_electronicos", "lec_localizar", "facil",
+        "residuos_electronicos", "lec_explicita", "facil",
         "Según la lectura, ¿qué describe la expresión «minería urbana»?",
         "Recuperar metales de los aparatos ya usados",
         "El texto agrega la comparación que le da sentido: para algunos materiales, "
@@ -33840,7 +35786,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_localizar", "facil",
+        "residuos_electronicos", "lec_explicita", "facil",
         "Según la lectura, ¿qué práctica del reciclaje informal se menciona?",
         "Quemar cables al aire libre para sacar el cobre",
         "El texto la describe con precisión: es un método efectivo para separar el "
@@ -33854,7 +35800,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_localizar", "medio",
+        "residuos_electronicos", "lec_explicita", "medio",
         "Según la lectura, ¿qué establece la ley de responsabilidad extendida del "
         "productor?",
         "Que el manejo posterior queda a cargo de quien vende",
@@ -33870,7 +35816,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_interpretar", "facil",
+        "residuos_electronicos", "lec_significado", "facil",
         "¿Por qué el emisor dice que un teléfono suelto en un cajón «no es una "
         "mina»?",
         "Porque procesarlo solo conviene si llegan muchos juntos",
@@ -33885,7 +35831,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_interpretar", "medio",
+        "residuos_electronicos", "lec_relacion", "medio",
         "¿Qué distingue el emisor entre las dos versiones de la obsolescencia "
         "programada?",
         "Una supone una falla planificada y la otra, reparación difícil",
@@ -33902,7 +35848,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_interpretar", "medio",
+        "residuos_electronicos", "lec_relacion", "medio",
         "Según el emisor, ¿qué explica en parte que los aparatos sean difíciles de "
         "reparar?",
         "Que hacerlos delgados y baratos los vuelve menos modulares",
@@ -33918,7 +35864,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_interpretar", "dificil",
+        "residuos_electronicos", "lec_relacion", "dificil",
         "¿Qué asimetría señala el emisor entre reparar y reemplazar?",
         "Reparar deja el dinero cerca y reemplazar lo manda lejos",
         "El texto lo formula en términos de trabajo: reparar es trabajo local, "
@@ -33934,7 +35880,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_evaluar", "facil",
+        "residuos_electronicos", "lec_intencion", "facil",
         "¿Con qué propósito el emisor explica por qué los teléfonos quedan en el "
         "cajón?",
         "Para mostrar que no se trata de un descuido",
@@ -33949,7 +35895,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_evaluar", "medio",
+        "residuos_electronicos", "lec_postura", "medio",
         "¿Qué tipo de discusión considera más productiva el emisor?",
         "La que fija reglas verificables en vez de discutir intenciones",
         "El texto propone cuatro: repuestos disponibles por un plazo mínimo, "
@@ -33964,7 +35910,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_evaluar", "dificil",
+        "residuos_electronicos", "lec_postura", "dificil",
         "¿Qué hace el emisor con la culpa del consumidor?",
         "La descarta y la reemplaza por tres preguntas concretas",
         "El texto observa que en estos temas la culpa «suele hacer de sustituto de "
@@ -33979,7 +35925,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_evaluar", "dificil",
+        "residuos_electronicos", "lec_forma", "dificil",
         "¿Qué sugiere el cierre al mencionar «un cerro que queda lejos de quien lo "
         "compró»?",
         "Que el costo de no reciclar lo paga otro lugar",
@@ -33995,7 +35941,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_interpretar", "dificil",
+        "residuos_electronicos", "lec_significado", "dificil",
         "¿Qué quiere decir el emisor con que elegir el modelo más delgado «cambia "
         "dónde está el punto de decisión»?",
         "Que parte de la decisión ocurre antes, en la compra",
@@ -34018,7 +35964,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_electronicos", "lec_evaluar", "dificil",
+        "residuos_electronicos", "lec_postura", "dificil",
         "¿Qué logra el emisor al llamar «aburridas» a las medidas que propone?",
         "Las opone a sospechar de un plan, que rinde menos",
         "El adjetivo viene acompañado de otros dos que lo corrigen: son medidas "
@@ -34043,7 +35989,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La cabeza ocupada' ----------
     _ql(
-        "ansiedad_pruebas", "lec_localizar", "facil",
+        "ansiedad_pruebas", "lec_explicita", "facil",
         "Según la lectura, ¿qué efecto tiene una cantidad moderada de activación?",
         "Mejora el rendimiento respecto de estar muy relajado",
         "El texto describe qué ocurre: el pulso sube y la atención se estrecha "
@@ -34057,7 +36003,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_localizar", "facil",
+        "ansiedad_pruebas", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocupa el mismo espacio que los datos del problema?",
         "Los pensamientos sobre el propio desempeño",
         "El texto los cita textualmente: «voy a quedar mal», «me está yendo "
@@ -34071,7 +36017,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_localizar", "medio",
+        "ansiedad_pruebas", "lec_explicita", "medio",
         "Según la lectura, ¿qué estrategias de estudio tienen respaldo más firme?",
         "Ponerse a prueba, dormir y haber practicado antes",
         "El texto detalla cada una: cerrar el cuaderno e intentar recuperar lo "
@@ -34086,7 +36032,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_interpretar", "facil",
+        "ansiedad_pruebas", "lec_relacion", "facil",
         "¿Por qué la respuesta aparece «en el pasillo», según el emisor?",
         "Porque al salir se libera el espacio que estaba ocupado",
         "El texto lo explica sin misterio: lo que estaba desde el principio vuelve "
@@ -34100,7 +36046,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_interpretar", "medio",
+        "ansiedad_pruebas", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que la ansiedad «no borra lo que "
         "uno sabe»?",
         "Que compite con ese conocimiento por el mismo espacio",
@@ -34116,7 +36062,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_interpretar", "medio",
+        "ansiedad_pruebas", "lec_significado", "medio",
         "¿Por qué el emisor recomienda saltarse una pregunta y volver después?",
         "Porque calcular cuánto cuesta ocupa el mismo espacio",
         "El texto describe lo que hace quien lleva cuatro minutos atascado: dos "
@@ -34131,7 +36077,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_interpretar", "dificil",
+        "ansiedad_pruebas", "lec_significado", "dificil",
         "¿Qué reformulación propone el emisor en el cierre?",
         "Dejar de buscar calma y evitar que ocupe el lugar de pensar",
         "El texto descarta el objetivo habitual por dos motivos: es poco realista y "
@@ -34146,7 +36092,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_evaluar", "facil",
+        "ansiedad_pruebas", "lec_intencion", "facil",
         "¿Con qué propósito el emisor califica de «inútil» la frase «me puse "
         "nervioso»?",
         "Porque describe el estado sin explicar qué ocurrió",
@@ -34162,7 +36108,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_evaluar", "medio",
+        "ansiedad_pruebas", "lec_forma", "medio",
         "¿Cómo presenta el emisor el procedimiento de escribir las preocupaciones "
         "antes de la prueba?",
         "Como algo en estudio, barato y sin resultados firmes",
@@ -34178,7 +36124,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_evaluar", "dificil",
+        "ansiedad_pruebas", "lec_intencion", "dificil",
         "¿Por qué el emisor sostiene que creer que los nervios indican falta de "
         "preparación «hace daño»?",
         "Porque agrega una preocupación al espacio que ya está lleno",
@@ -34195,7 +36141,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_evaluar", "dificil",
+        "ansiedad_pruebas", "lec_juicio", "dificil",
         "¿Qué límite se pone el propio artículo?",
         "No opinar cuando la ansiedad se vuelve incapacitante",
         "El texto enumera las señales que marcan esa frontera —impedir presentarse, "
@@ -34211,7 +36157,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_interpretar", "dificil",
+        "ansiedad_pruebas", "lec_relacion", "dificil",
         "¿Por qué el efecto de la ansiedad es mayor en un problema de varios pasos "
         "que al reconocer una palabra?",
         "Porque solo el primero necesita sostener cosas a la vez",
@@ -34234,7 +36180,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ansiedad_pruebas", "lec_evaluar", "dificil",
+        "ansiedad_pruebas", "lec_postura", "dificil",
         "¿Qué gana el emisor al describir la relación entre activación y rendimiento "
         "como una curva y no como una recta?",
         "Puede sostener que algo de nervios sirve y demasiados no",
@@ -34258,7 +36204,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Las abejas equivocadas' ----------
     _ql(
-        "abejas_simbolo", "lec_localizar", "facil",
+        "abejas_simbolo", "lec_explicita", "facil",
         "Según la lectura, ¿por qué la abeja de miel se describe como ganado?",
         "Porque vive en colmenas que las personas manejan",
         "El texto detalla ese manejo: se alimenta y se medica cuando hace falta, se "
@@ -34273,7 +36219,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_localizar", "facil",
+        "abejas_simbolo", "lec_parafrasis", "facil",
         "Según la lectura, ¿cómo viven la mayoría de las especies de abejas?",
         "Solitarias, sin colmena y sin reina",
         "El texto describe su ciclo: una hembra excava un túnel en el suelo o "
@@ -34287,7 +36233,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_localizar", "medio",
+        "abejas_simbolo", "lec_explicita", "medio",
         "Según la lectura, ¿cuáles son las causas documentadas del declive de los "
         "polinizadores silvestres?",
         "Pérdida de hábitat, pesticidas, enfermedades y clima",
@@ -34302,7 +36248,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_interpretar", "facil",
+        "abejas_simbolo", "lec_relacion", "facil",
         "¿Qué distinción hace el emisor sobre los problemas de la abeja de miel?",
         "Que son productivos y no un riesgo de extinción",
         "El texto reconoce que le pasan cosas serias: enfermedades, parásitos, "
@@ -34316,7 +36262,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_interpretar", "medio",
+        "abejas_simbolo", "lec_relacion", "medio",
         "¿Por qué instalar colmenas de abejas de miel puede perjudicar a las abejas "
         "silvestres?",
         "Porque compiten por las mismas flores disponibles",
@@ -34333,7 +36279,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_interpretar", "medio",
+        "abejas_simbolo", "lec_significado", "medio",
         "¿Por qué el emisor dice que las soluciones simples decepcionan?",
         "Porque el declive tiene varias causas a la vez",
         "El texto lo ilustra con dos ejemplos concretos. Un hotel de insectos en un "
@@ -34348,7 +36294,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_interpretar", "dificil",
+        "abejas_simbolo", "lec_significado", "dificil",
         "¿Qué versión de la campaña considera razonable el emisor?",
         "La que pide dejar florecer, no barrer y usar menos veneno",
         "El texto la incluye expresamente «para no dejar al lector sin nada que "
@@ -34364,7 +36310,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_evaluar", "facil",
+        "abejas_simbolo", "lec_intencion", "facil",
         "¿Con qué propósito el emisor aclara que no argumenta contra la apicultura?",
         "Para que su crítica no se lea como un ataque al rubro",
         "El texto la califica de actividad legítima que produce alimento.\n\nLo que "
@@ -34378,7 +36324,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_evaluar", "medio",
+        "abejas_simbolo", "lec_postura", "medio",
         "Según el emisor, ¿por qué importa que el símbolo de una causa esté "
         "equivocado?",
         "Porque orienta donaciones, políticas y entusiasmo",
@@ -34394,7 +36340,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_evaluar", "dificil",
+        "abejas_simbolo", "lec_postura", "dificil",
         "¿Qué explicación da el emisor de que las abejas solitarias no aparezcan en "
         "las campañas?",
         "Que no son fotogénicas ni producen nada vendible",
@@ -34410,7 +36356,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_evaluar", "dificil",
+        "abejas_simbolo", "lec_postura", "dificil",
         "¿Qué le reprocha el emisor a la frase «hay que salvar a las abejas»?",
         "Que defiende una causa correcta con un ejemplo errado",
         "El artículo es explícito desde el primer párrafo: la causa es buena y la "
@@ -34425,7 +36371,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_interpretar", "dificil",
+        "abejas_simbolo", "lec_relacion", "dificil",
         "¿Qué consecuencia tiene, según el emisor, que las abejas silvestres no se "
         "puedan comprar ni trasladar en camión?",
         "Que si desaparecen de un lugar, no vuelven a reponerse",
@@ -34448,7 +36394,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "abejas_simbolo", "lec_evaluar", "dificil",
+        "abejas_simbolo", "lec_juicio", "dificil",
         "¿Qué alcance le da el emisor al cierre, cuando dice que la lección «excede a "
         "las abejas»?",
         "Que una causa correcta puede apoyarse en un ejemplo equivocado",
@@ -34473,7 +36419,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Por qué las micros se juntan' ----------
     _ql(
-        "micros_juntas", "lec_localizar", "facil",
+        "micros_juntas", "lec_explicita", "facil",
         "Según la lectura, ¿qué le ocurre al bus que se atrasa dos minutos?",
         "Encuentra más pasajeros y se atrasa todavía más",
         "En el paradero siguiente lo esperan doce minutos de pasajeros en vez de "
@@ -34487,7 +36433,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_localizar", "facil",
+        "micros_juntas", "lec_explicita", "facil",
         "Según la lectura, ¿qué le pasa al bus que viene detrás?",
         "Encuentra menos gente y avanza más rápido",
         "Los paraderos que recorre «acaban de ser barridos por el bus anterior», de "
@@ -34501,7 +36447,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_localizar", "medio",
+        "micros_juntas", "lec_parafrasis", "medio",
         "Según la lectura, ¿en qué consiste la medida de retener?",
         "Detener en ciertos puntos al bus que viene adelantado",
         "Se eligen algunos puntos del recorrido y ahí se le ordena esperar al bus "
@@ -34515,7 +36461,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_interpretar", "facil",
+        "micros_juntas", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al comparar la situación ordenada con un lápiz "
         "parado sobre su punta?",
         "Que es un equilibrio que cualquier golpe destruye",
@@ -34530,7 +36476,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_interpretar", "medio",
+        "micros_juntas", "lec_relacion", "medio",
         "Según la lectura, ¿por qué agregar más buses no resuelve el problema?",
         "Porque también multiplica las ocasiones de atrasarse",
         "Con el doble de buses hay el doble de oportunidades de que uno se atrase, "
@@ -34544,7 +36490,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_interpretar", "medio",
+        "micros_juntas", "lec_relacion", "medio",
         "¿Por qué el problema empeora en hora punta, según el emisor?",
         "Porque cada minuto de atraso suma más pasajeros",
         "Con más gente esperando en cada paradero, dos minutos de atraso se "
@@ -34558,7 +36504,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_interpretar", "dificil",
+        "micros_juntas", "lec_relacion", "dificil",
         "¿Qué tienen en común las medidas que el emisor considera útiles?",
         "Todas acortan o estabilizan el tiempo de detención",
         "Pagar antes de subir, tener más de una puerta, andenes a la altura del "
@@ -34572,7 +36518,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_evaluar", "facil",
+        "micros_juntas", "lec_intencion", "facil",
         "¿Con qué propósito el emisor descarta la flojera de los conductores y la "
         "mala suerte?",
         "Para instalar que se trata de un problema de sistema",
@@ -34588,7 +36534,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_evaluar", "medio",
+        "micros_juntas", "lec_intencion", "medio",
         "¿Por qué el emisor dice que la retención tiene «costo con rostro y "
         "beneficio anónimo»?",
         "Porque perjudica a quien lo ve y ayuda a quien no lo sabrá",
@@ -34604,7 +36550,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_evaluar", "dificil",
+        "micros_juntas", "lec_postura", "dificil",
         "¿Qué generalización propone el emisor en el cierre del artículo?",
         "Que todo servicio así castiga el atraso con más atraso",
         "La forma general es la que aparece «cuando la demora de un servicio "
@@ -34620,7 +36566,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_evaluar", "dificil",
+        "micros_juntas", "lec_postura", "dificil",
         "¿Qué hace el emisor con la reacción intuitiva de pedir más buses?",
         "La nombra, la explica y muestra por qué no funciona",
         "El texto no la ridiculiza: la presenta como la primera reacción de "
@@ -34636,7 +36582,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_interpretar", "dificil",
+        "micros_juntas", "lec_relacion", "dificil",
         "¿Qué distingue el emisor entre la frecuencia de una línea y su regularidad?",
         "Cuántos buses hay frente a cada cuánto pasan de verdad",
         "La distinción aparece al descartar la solución intuitiva: con el doble de "
@@ -34659,7 +36605,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "micros_juntas", "lec_evaluar", "dificil",
+        "micros_juntas", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor imagina una línea con conductores puntuales, "
         "sin tacos y con buses cada diez minutos exactos?",
         "Para mostrar que el problema aparece sin que nadie falle",
@@ -34684,7 +36630,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Cómo comparar dos productos con la tabla nutricional' ----------
     _ql(
-        "tabla_nutricional", "lec_localizar", "facil",
+        "tabla_nutricional", "lec_explicita", "facil",
         "Según la ficha, ¿cuánto azúcar tiene el Cereal A por cada 100 gramos?",
         "22 gramos",
         "La primera tabla entrega los cuatro valores del Cereal A por 100 gramos: "
@@ -34698,7 +36644,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_localizar", "facil",
+        "tabla_nutricional", "lec_explicita", "facil",
         "Según la ficha, ¿qué porción declara cada producto?",
         "30 gramos el Cereal A y 45 gramos el Cereal B",
         "Esa diferencia es el centro del documento: las cifras «por porción» de los "
@@ -34711,7 +36657,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_localizar", "medio",
+        "tabla_nutricional", "lec_explicita", "medio",
         "Según la ficha, ¿cuáles son los límites que obligan a llevar sello en "
         "alimentos sólidos?",
         "275 kcal, 400 mg de sodio, 10 g de azúcar y 4 de grasas",
@@ -34726,7 +36672,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_interpretar", "facil",
+        "tabla_nutricional", "lec_relacion", "facil",
         "¿Por qué no sirve comparar los dos cereales usando las cifras por porción?",
         "Porque las porciones declaradas tienen distinto peso",
         "Una porción de A pesa 30 gramos y una de B pesa 45, de modo que la "
@@ -34740,7 +36686,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_interpretar", "medio",
+        "tabla_nutricional", "lec_relacion", "medio",
         "Según la ficha, ¿por qué la columna de 100 gramos es la que sirve para "
         "comparar?",
         "Porque es la única base igual para los dos productos",
@@ -34755,7 +36701,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_interpretar", "medio",
+        "tabla_nutricional", "lec_significado", "medio",
         "Según la ficha, ¿qué significa que ambos cereales lleven dos sellos?",
         "Que superan dos límites cada uno, pero no los mismos",
         "El Cereal A excede en energía y azúcares; el Cereal B, en energía y "
@@ -34769,7 +36715,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_interpretar", "dificil",
+        "tabla_nutricional", "lec_significado", "dificil",
         "Según la ficha, ¿qué información no entrega el sello aunque el producto lo "
         "lleve?",
         "Por cuánto se superó el límite correspondiente",
@@ -34784,7 +36730,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_evaluar", "facil",
+        "tabla_nutricional", "lec_intencion", "facil",
         "¿Con qué propósito la ficha presenta las dos tablas en ese orden?",
         "Para que la comparación por porción se vea antes de refutarla",
         "Primero entrega los valores por 100 gramos, después los mismos productos "
@@ -34799,7 +36745,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_evaluar", "medio",
+        "tabla_nutricional", "lec_juicio", "medio",
         "¿Qué advierte la ficha sobre la porción declarada?",
         "Que no es una recomendación de cuánto conviene comer",
         "Es, dice la ficha, «la cantidad que el fabricante eligió para presentar "
@@ -34814,7 +36760,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_evaluar", "dificil",
+        "tabla_nutricional", "lec_postura", "dificil",
         "¿Qué permite calcular el ejercicio que propone el punto siete?",
         "El peso real de la porción que declara el envase",
         "El procedimiento es una regla de tres: dividir la energía por porción "
@@ -34829,7 +36775,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_interpretar", "dificil",
+        "tabla_nutricional", "lec_relacion", "dificil",
         "Según la ficha, ¿por qué un producto con buenas cifras puede terminar "
         "aportando más?",
         "Porque la tabla no informa cuánto se come realmente",
@@ -34845,7 +36791,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_interpretar", "dificil",
+        "tabla_nutricional", "lec_significado", "dificil",
         "¿Por qué la ficha sostiene que ninguno de los dos cereales es «el bueno»?",
         "Porque cada uno excede en un nutriente distinto",
         "Comparados por 100 gramos, los dos superan dos límites, pero no los mismos: "
@@ -34866,7 +36812,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "tabla_nutricional", "lec_evaluar", "dificil",
+        "tabla_nutricional", "lec_intencion", "dificil",
         "¿Con qué propósito la ficha termina enumerando lo que no resuelve?",
         "Para acotar hasta dónde llega lo que la tabla informa",
         "La ficha acaba de enseñar a comparar dos productos, y ese aprendizaje puede "
@@ -34890,7 +36836,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Seiscientas veces' ----------
     _ql(
-        "agua_embotellada", "lec_localizar", "facil",
+        "agua_embotellada", "lec_parafrasis", "facil",
         "Según la lectura, ¿por qué el agua de la red lleva un sabor reconocible?",
         "Por el cloro con que se la desinfecta",
         "El emisor precisa que desinfectarla «es justamente lo que la vuelve "
@@ -34904,7 +36850,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_localizar", "facil",
+        "agua_embotellada", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué ocurre con el plástico que se recicla?",
         "Parte se recicla, parte se degrada y parte queda fuera",
         "El texto describe tres destinos: una parte se recicla, otra se convierte "
@@ -34919,7 +36865,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_localizar", "medio",
+        "agua_embotellada", "lec_explicita", "medio",
         "Según la lectura, ¿cuándo empieza a tener ventaja ambiental una botella "
         "reutilizable?",
         "Después de bastantes usos, no el primer día",
@@ -34935,7 +36881,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_interpretar", "facil",
+        "agua_embotellada", "lec_relacion", "facil",
         "¿Qué distinción hace el emisor sobre el sabor del agua de la red?",
         "Que menos agradable no significa menos segura",
         "El texto lo formula como dos cosas distintas que el argumento ambiental "
@@ -34949,7 +36895,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_interpretar", "medio",
+        "agua_embotellada", "lec_significado", "medio",
         "¿Por qué el emisor considera «la más seria» la tercera razón para comprar "
         "agua embotellada?",
         "Porque en algunos lugares la red no es confiable",
@@ -34965,7 +36911,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_interpretar", "medio",
+        "agua_embotellada", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que quien compra botellas «está "
         "eligiendo dentro de lo que hay»?",
         "Que la decisión depende de la infraestructura disponible",
@@ -34980,7 +36926,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_interpretar", "dificil",
+        "agua_embotellada", "lec_significado", "dificil",
         "¿Cómo reformula el emisor la pregunta que suele hacerse sobre este tema?",
         "Pasa de quién debe cambiar a qué haría fácil el cambio",
         "El texto sostiene que la recomendación dirigida a la persona —anda con tu "
@@ -34997,7 +36943,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_evaluar", "facil",
+        "agua_embotellada", "lec_intencion", "facil",
         "¿Con qué propósito el emisor enumera las razones por las que la gente "
         "compra agua embotellada?",
         "Para tomarlas en serio antes de dar cualquier consejo",
@@ -35012,7 +36958,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_evaluar", "medio",
+        "agua_embotellada", "lec_postura", "medio",
         "¿Qué actitud asume el emisor frente al reciclaje del plástico?",
         "Mesurada, pues no lo presenta como solución ni como engaño",
         "El texto se cuida de las dos exageraciones: ni el reciclaje anula el "
@@ -35027,7 +36973,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_evaluar", "dificil",
+        "agua_embotellada", "lec_juicio", "dificil",
         "¿Qué agrega al argumento el párrafo sobre la botella reutilizable?",
         "Aplica el mismo criterio a la solución que se recomienda",
         "Hasta ese punto el texto había cuestionado el costo de la botella "
@@ -35043,7 +36989,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_evaluar", "dificil",
+        "agua_embotellada", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al afirmar que la confianza «no se puede "
         "embotellar»?",
         "Que buena parte del gasto paga no tener que confiar",
@@ -35060,7 +37006,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_interpretar", "dificil",
+        "agua_embotellada", "lec_inferencia", "dificil",
         "¿Qué se sigue de que el agua embotellada que se vende en Chile provenga de "
         "fuentes sometidas a controles de calidad, igual que la de la red?",
         "Que la discusión no es sobre seguridad sino sobre confianza",
@@ -35083,7 +37029,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "agua_embotellada", "lec_evaluar", "dificil",
+        "agua_embotellada", "lec_postura", "dificil",
         "¿Qué logra el emisor al señalar que cualquiera puede comprobar el "
         "sobreprecio dividiendo su boleta del agua por los metros cúbicos?",
         "Convierte una cifra discutible en algo verificable en casa",
@@ -35107,7 +37053,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'En defensa de las horas vacías' ----------
     _ql(
-        "aburrimiento_horas", "lec_localizar", "facil",
+        "aburrimiento_horas", "lec_parafrasis", "facil",
         "Según la lectura, ¿en qué consiste el aburrimiento?",
         "En querer hacer algo que importe y no encontrar qué",
         "El emisor lo distingue del cansancio, de la tristeza y de la falta de "
@@ -35121,7 +37067,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_localizar", "facil",
+        "aburrimiento_horas", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué tipo de evidencia respalda la relación entre "
         "aburrimiento y creatividad?",
         "Estudios acotados con resultados modestos",
@@ -35136,7 +37082,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_localizar", "medio",
+        "aburrimiento_horas", "lec_explicita", "medio",
         "Según la lectura, ¿en qué contextos aparece el aburrimiento crónico?",
         "En el encierro y en trabajos sin sentido",
         "El texto agrega un tercer contexto: las situaciones de escaso control "
@@ -35151,7 +37097,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_interpretar", "facil",
+        "aburrimiento_horas", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al comparar el aburrimiento con una alarma?",
         "Que su molestia cumple la función de hacer cambiar algo",
         "El texto sostiene que el aburrimiento avisa que lo que uno hace no vale la "
@@ -35166,7 +37112,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_interpretar", "medio",
+        "aburrimiento_horas", "lec_significado", "medio",
         "Según el emisor, ¿qué falla tiene la escena nostálgica de la infancia?",
         "Que solo se recuerdan las tardes en que se inventó algo",
         "El texto describe las otras: las que se pasaron dando vueltas, peleando "
@@ -35180,7 +37126,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_interpretar", "medio",
+        "aburrimiento_horas", "lec_relacion", "medio",
         "¿Qué distinción plantea el emisor entre aburrirse y estar a solas con los "
         "propios pensamientos?",
         "Que la segunda es más difícil para mucha gente",
@@ -35196,7 +37142,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_interpretar", "dificil",
+        "aburrimiento_horas", "lec_significado", "dificil",
         "¿Qué conclusión más acotada propone el emisor en reemplazo de la frase "
         "inicial?",
         "Que lo valioso es el hueco, no el aburrimiento en sí",
@@ -35212,7 +37158,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_evaluar", "facil",
+        "aburrimiento_horas", "lec_intencion", "facil",
         "¿Con qué propósito el emisor dice que examina «una idea probablemente "
         "cierta»?",
         "Para separar la idea de los argumentos que la defienden",
@@ -35227,7 +37173,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_evaluar", "medio",
+        "aburrimiento_horas", "lec_postura", "medio",
         "¿Qué actitud asume el emisor frente al teléfono?",
         "Ecuánime, pues no lo trata como un defecto ni un culpable",
         "El texto afirma que resolver el aburrimiento en cuatro segundos «no es un "
@@ -35241,7 +37187,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_evaluar", "dificil",
+        "aburrimiento_horas", "lec_intencion", "dificil",
         "¿Por qué el emisor sostiene que la palabra «aburrimiento» nombra dos "
         "experiencias distintas?",
         "Porque una tarde libre y un turno vigilando no se parecen",
@@ -35258,7 +37204,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_evaluar", "dificil",
+        "aburrimiento_horas", "lec_juicio", "dificil",
         "¿Qué reconoce el emisor en el último párrafo del ensayo?",
         "Que no puede probar lo que muchos prometen con este tema",
         "El texto declara que aquí no hay ninguna demostración de que dejar el "
@@ -35273,7 +37219,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_interpretar", "dificil",
+        "aburrimiento_horas", "lec_relacion", "dificil",
         "¿Qué diferencia hay entre decir que el aburrimiento es valioso y decir que "
         "lo valioso es el hueco donde ocurre?",
         "La segunda no exige pasarlo mal para que sirva",
@@ -35298,7 +37244,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "aburrimiento_horas", "lec_evaluar", "dificil",
+        "aburrimiento_horas", "lec_postura", "dificil",
         "¿Qué le reprocha el emisor a quien argumenta con la escena nostálgica de su "
         "infancia?",
         "Que use como regla los casos que alcanzó a recordar",
@@ -35323,7 +37269,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La que firma' ----------
     _ql(
-        "la_que_firma", "lec_localizar", "facil",
+        "la_que_firma", "lec_explicita", "facil",
         "Según el relato, ¿cómo organizaba Javiera la carpeta azul a los trece "
         "años?",
         "Con separadores: salud, colegio, casa y otros",
@@ -35339,7 +37285,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_localizar", "facil",
+        "la_que_firma", "lec_explicita", "facil",
         "Según el relato, ¿qué le decía siempre la abuela al salir de los trámites?",
         "Que era muy buena para esas cosas",
         "Lo decía cada vez, al salir, mientras Javiera tenía trece años y se lo "
@@ -35352,7 +37298,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_localizar", "medio",
+        "la_que_firma", "lec_explicita", "medio",
         "Según el relato, ¿qué hizo Javiera con la carpeta antes de irse?",
         "La ordenó y le agregó una hoja con instrucciones",
         "Puso los convenios adelante, con las fechas escritas con plumón en el "
@@ -35366,7 +37312,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_interpretar", "facil",
+        "la_que_firma", "lec_inferencia", "facil",
         "¿Qué sintió Javiera la primera vez, al repetirle a su abuela lo que dijo "
         "la ventanilla?",
         "Algo nuevo y agradable, que la dejó a cargo",
@@ -35381,7 +37327,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_interpretar", "medio",
+        "la_que_firma", "lec_inferencia", "medio",
         "¿Qué descubre Javiera a los quince, con la carta de la deuda del agua?",
         "Que era la única en la casa que sabía del problema",
         "El relato precisa que no perdió el sueño por la deuda, que después se "
@@ -35395,7 +37341,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_interpretar", "medio",
+        "la_que_firma", "lec_inferencia", "medio",
         "¿Qué muestra que a los dieciséis empezara a decir «ya está» en vez de "
         "contar el problema?",
         "Que el arreglo se profundizó sin que nadie lo decidiera",
@@ -35410,7 +37356,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_interpretar", "dificil",
+        "la_que_firma", "lec_relacion", "dificil",
         "¿Qué distinción hace Javiera entre ser «una ayuda» y ser «una pieza»?",
         "Que sin ella el mecanismo de la casa deja de funcionar",
         "Una ayuda se puede suspender: lo que se hacía antes vuelve a "
@@ -35425,7 +37371,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_evaluar", "facil",
+        "la_que_firma", "lec_forma", "facil",
         "¿Qué efecto tiene que el relato avance por edades: once, trece, quince, "
         "diecisiete?",
         "Deja ver el cambio sin que nadie lo explique",
@@ -35440,7 +37386,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_evaluar", "medio",
+        "la_que_firma", "lec_postura", "medio",
         "¿Qué revela el episodio del comprobante de la luz?",
         "Que Javiera ya no confía en que su abuela lo resuelva",
         "La abuela va sola, vuelve con el comprobante y lo deja sobre la mesa sin "
@@ -35455,7 +37401,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_evaluar", "dificil",
+        "la_que_firma", "lec_forma", "dificil",
         "¿Qué sentido tiene que Javiera le entregue la carpeta a su abuela?",
         "Traspasa el sistema, no solamente los papeles",
         "Lo que le entrega no es un archivo: son los convenios adelante con las "
@@ -35471,7 +37417,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_evaluar", "dificil",
+        "la_que_firma", "lec_forma", "dificil",
         "¿Qué sugiere la imagen final de la abuela leyendo en voz baja?",
         "Que puede hacerlo, y que llevaba mucho sin intentarlo",
         "El relato la describe con precisión: se pone los lentes, acerca la carpeta "
@@ -35487,7 +37433,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_interpretar", "dificil",
+        "la_que_firma", "lec_inferencia", "dificil",
         "¿Qué sugieren los detalles con que Javiera recuerda a su abuela firmando a "
         "los once años?",
         "Que escribir le costaba y necesitaba comprobarlo",
@@ -35512,7 +37458,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "la_que_firma", "lec_evaluar", "dificil",
+        "la_que_firma", "lec_forma", "dificil",
         "¿Qué señala el título «La que firma»?",
         "Que la firma quedó separada de quien resuelve",
         "Firmar es lo único que la abuela sigue haciendo. Todo el resto —entender lo "
@@ -35535,7 +37481,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Lo que delata a un cuadro falso' ----------
     _ql(
-        "cuadro_falso", "lec_localizar", "facil",
+        "cuadro_falso", "lec_explicita", "facil",
         "Según la lectura, ¿qué revela la radiografía o la luz infrarroja de un "
         "cuadro?",
         "Lo que hay bajo la capa visible de pintura",
@@ -35550,7 +37496,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_localizar", "facil",
+        "cuadro_falso", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué permite establecer el conteo de anillos del panel "
         "de madera?",
         "Cuándo se cortó esa madera",
@@ -35565,7 +37511,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_localizar", "medio",
+        "cuadro_falso", "lec_explicita", "medio",
         "Según la lectura, ¿qué es la procedencia de una obra?",
         "La cadena documentada de quienes fueron sus dueños",
         "Se cuenta desde que la obra salió del taller.\n\nEl texto explica por qué "
@@ -35578,7 +37524,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_interpretar", "facil",
+        "cuadro_falso", "lec_relacion", "facil",
         "¿Por qué el análisis de pigmentos «funciona como un calendario»?",
         "Porque cada color tiene una fecha de invención",
         "Esa fecha opera como un límite duro: un cuadro atribuido al siglo XVII no "
@@ -35592,7 +37538,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_interpretar", "medio",
+        "cuadro_falso", "lec_significado", "medio",
         "¿Por qué el emisor dice que la prueba de los pigmentos «no funciona al "
         "revés»?",
         "Porque no encontrar anacronismos no prueba la autenticidad",
@@ -35608,7 +37554,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_interpretar", "medio",
+        "cuadro_falso", "lec_relacion", "medio",
         "¿Qué explica, según el emisor, que muchas obras valiosas nunca se hayan "
         "analizado a fondo?",
         "Que el examen cuesta caro y el resultado puede incomodar",
@@ -35623,7 +37569,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_interpretar", "dificil",
+        "cuadro_falso", "lec_relacion", "dificil",
         "¿Por qué la procedencia es a la vez el criterio más decisivo y el más "
         "vulnerable?",
         "Porque un documento se falsifica más fácil que una pincelada",
@@ -35640,7 +37586,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_evaluar", "facil",
+        "cuadro_falso", "lec_intencion", "facil",
         "¿Con qué propósito el emisor empieza afirmando que una falsificación casi "
         "nunca se descubre mirando el cuadro?",
         "Para corregir la imagen habitual de cómo se detecta",
@@ -35655,7 +37601,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_evaluar", "medio",
+        "cuadro_falso", "lec_juicio", "medio",
         "¿Qué indicio representa, según el texto, la ausencia de correcciones bajo "
         "la pintura?",
         "Que quien pintó no tuvo que resolver nada",
@@ -35670,7 +37616,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_evaluar", "dificil",
+        "cuadro_falso", "lec_aplicar", "dificil",
         "¿En qué consiste la asimetría que el emisor considera aplicable más allá "
         "del arte?",
         "Los métodos técnicos refutan bien y confirman mal",
@@ -35686,7 +37632,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_evaluar", "dificil",
+        "cuadro_falso", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al afirmar que la autenticidad «no se demuestra»?",
         "Que se mantiene mientras nadie encuentre una grieta",
         "El cierre explica por qué un museo retira una obra: apareció un pigmento "
@@ -35702,7 +37648,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_interpretar", "dificil",
+        "cuadro_falso", "lec_inferencia", "dificil",
         "El conteo de anillos indica que el panel de madera es del siglo XVI. Según "
         "la lectura, ¿qué permite concluir ese dato?",
         "Que el cuadro no puede ser anterior a esa fecha",
@@ -35725,7 +37671,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuadro_falso", "lec_evaluar", "dificil",
+        "cuadro_falso", "lec_juicio", "dificil",
         "¿Qué muestra el emisor al decir que quien planta una obra en un archivo "
         "confiable «cambió la pregunta»?",
         "Que plantar un papel traslada la carga de la prueba",
@@ -35751,7 +37697,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El primer trabajo' ----------
     _ql(
-        "primer_trabajo", "lec_localizar", "facil",
+        "primer_trabajo", "lec_explicita", "facil",
         "Según la lectura, ¿desde qué edad se puede trabajar en Chile?",
         "Desde los quince años cumplidos",
         "La ley llama a esa situación «trabajo adolescente protegido», y el texto "
@@ -35765,7 +37711,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_localizar", "facil",
+        "primer_trabajo", "lec_parafrasis", "facil",
         "Según la lectura, ¿cuál es el tope semanal de la jornada?",
         "Treinta horas a la semana",
         "Dentro de ese tope, el máximo diario es de seis horas durante el año "
@@ -35779,7 +37725,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_localizar", "medio",
+        "primer_trabajo", "lec_explicita", "medio",
         "Según la lectura, ¿en qué horario no se puede trabajar?",
         "Entre las nueve de la noche y las ocho de la mañana",
         "El texto describe esa prohibición como tajante: cualquier turno que "
@@ -35793,7 +37739,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_interpretar", "facil",
+        "primer_trabajo", "lec_relacion", "facil",
         "¿Por qué la regla de las doce horas es «una regla de suma, no de partes»?",
         "Porque junta el tiempo de estudio con el de trabajo",
         "El texto lo explica con un caso: si alguien pasa nueve horas entre clases "
@@ -35807,7 +37753,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_interpretar", "medio",
+        "primer_trabajo", "lec_significado", "medio",
         "Según el emisor, ¿qué criterio revela la regla de las doce horas?",
         "Que el trabajo no debe desplazar al colegio",
         "El texto lo dice sin rodeos: la ley no busca que el adolescente trabaje "
@@ -35822,7 +37768,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_interpretar", "medio",
+        "primer_trabajo", "lec_significado", "medio",
         "¿Por qué el emisor dice que la pregunta útil no es cuánto pagan sino si "
         "habrá contrato?",
         "Porque sin contrato ninguna de estas reglas se aplica",
@@ -35837,7 +37783,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_interpretar", "dificil",
+        "primer_trabajo", "lec_relacion", "dificil",
         "¿Qué distingue a las labores que quedan fuera «por su naturaleza»?",
         "Que se excluyen por el riesgo y no por el horario",
         "El texto las separa del resto de la regulación, que trabaja con topes "
@@ -35852,7 +37798,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_evaluar", "facil",
+        "primer_trabajo", "lec_intencion", "facil",
         "¿Con qué propósito el emisor abre y cierra con el cartel de la vitrina?",
         "Para mostrar que el aviso no informa nada de esto",
         "El cartel dice la edad y el tipo de jornada, y nada más.\n\nEl emisor lo "
@@ -35866,7 +37812,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_evaluar", "medio",
+        "primer_trabajo", "lec_postura", "medio",
         "¿Qué actitud asume el emisor frente al trabajo adolescente en sí mismo?",
         "Equilibrada, pues rechaza las dos exageraciones",
         "El texto las describe como simétricas. La primera trata cualquier trabajo "
@@ -35882,7 +37828,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_evaluar", "dificil",
+        "primer_trabajo", "lec_intencion", "dificil",
         "¿Por qué el emisor precisa que el trabajo informal no queda fuera «porque "
         "la ley lo excluya»?",
         "Porque la protección depende de que exista un registro",
@@ -35899,7 +37845,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_evaluar", "dificil",
+        "primer_trabajo", "lec_juicio", "dificil",
         "¿Qué aclara el emisor sobre cómo recurrir a la Dirección del Trabajo?",
         "Que no hace falta ir con un adulto ni renunciar antes",
         "El texto entrega esas dos precisiones justo después de enumerar las "
@@ -35915,7 +37861,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_interpretar", "dificil",
+        "primer_trabajo", "lec_relacion", "dificil",
         "Un estudiante ocupa nueve horas diarias entre clases y traslados durante el "
         "año escolar. Según la lectura, ¿cuánto puede trabajar ese día?",
         "Tres horas, aunque el tope diario sea de seis",
@@ -35937,7 +37883,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "primer_trabajo", "lec_evaluar", "dificil",
+        "primer_trabajo", "lec_postura", "dificil",
         "¿Qué consigue el emisor al detenerse en que la palabra «protegido» «no es "
         "decorativa»?",
         "Avisa que el permiso viene con condiciones",
@@ -35959,7 +37905,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El día en que un libro deja de tener dueño' ----------
     _ql(
-        "dominio_publico", "lec_localizar", "facil",
+        "dominio_publico", "lec_explicita", "facil",
         "Según la lectura, ¿cuánto dura en Chile la protección patrimonial de una "
         "obra?",
         "La vida del autor y setenta años tras su muerte",
@@ -35974,7 +37920,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_localizar", "facil",
+        "dominio_publico", "lec_explicita", "facil",
         "Según la lectura, ¿qué sigue vigente cuando una obra entra al dominio "
         "público?",
         "El reconocimiento de quién la escribió",
@@ -35989,7 +37935,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_localizar", "medio",
+        "dominio_publico", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué es una obra huérfana?",
         "Una obra protegida cuyo titular no se puede ubicar",
         "El texto da ejemplos concretos: una fotografía de prensa de 1955, la "
@@ -36003,7 +37949,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_interpretar", "facil",
+        "dominio_publico", "lec_relacion", "facil",
         "Según la lectura, ¿por qué el derecho de autor tiene un plazo y no es "
         "permanente?",
         "Porque se creó como un incentivo y no como un premio",
@@ -36018,7 +37964,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_interpretar", "medio",
+        "dominio_publico", "lec_significado", "medio",
         "¿Cuál es el argumento aritmético contra extender los plazos?",
         "Que no puede incentivar a alguien que ya murió",
         "El texto lo llama el argumento más incómodo, y lo formula sin adornos: "
@@ -36033,7 +37979,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_interpretar", "medio",
+        "dominio_publico", "lec_significado", "medio",
         "¿Qué razones presenta el emisor a favor de los plazos largos?",
         "El sustento de las familias y los plazos de otros países",
         "El texto reconoce que una obra puede tardar décadas en encontrar público y "
@@ -36048,7 +37994,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_interpretar", "dificil",
+        "dominio_publico", "lec_significado", "dificil",
         "¿Qué situación paradójica describe el emisor con las obras huérfanas?",
         "No le dan ingresos a nadie y tampoco están disponibles",
         "Siguen protegidas, de modo que usarlas requiere una autorización que nadie "
@@ -36063,7 +38009,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_evaluar", "facil",
+        "dominio_publico", "lec_intencion", "facil",
         "¿Con qué propósito el emisor aclara que estar en internet no es estar en "
         "dominio público?",
         "Para corregir una confusión que se comete a diario",
@@ -36078,7 +38024,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_evaluar", "medio",
+        "dominio_publico", "lec_postura", "medio",
         "¿Qué sostiene el emisor sobre lo que ocurre cuando una obra entra al "
         "dominio público?",
         "Que aparece en más ediciones y no en menos",
@@ -36094,7 +38040,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_evaluar", "dificil",
+        "dominio_publico", "lec_relacion", "dificil",
         "¿Qué explica el emisor sobre los materiales de estudio?",
         "Que trabajan con obras libres porque no pueden pagar permisos",
         "El texto lo presenta como el caso donde el asunto deja de ser abstracto: "
@@ -36110,7 +38056,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_evaluar", "dificil",
+        "dominio_publico", "lec_postura", "dificil",
         "¿Qué distinción plantea el emisor en el cierre del artículo?",
         "Entre estar disponible para todos y ser leído",
         "El texto sostiene que la ley fija cuándo una obra deja de tener dueño, "
@@ -36125,7 +38071,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_interpretar", "dificil",
+        "dominio_publico", "lec_postura", "dificil",
         "Una fotografía de prensa de 1955 no tiene titular identificable. Según la "
         "lectura, ¿qué puede hacerse con ella?",
         "Nada, hasta que se cumpla el plazo de protección",
@@ -36147,7 +38093,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dominio_publico", "lec_evaluar", "dificil",
+        "dominio_publico", "lec_postura", "dificil",
         "¿Qué consigue el emisor al advertir que la discusión sobre los plazos «no es "
         "entre gente generosa y gente avara»?",
         "Saca la discusión del terreno de las intenciones",
@@ -36170,7 +38116,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Los nombres que ya estaban' ----------
     _ql(
-        "toponimia_nombres", "lec_localizar", "facil",
+        "toponimia_nombres", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué significa la partícula «ko» en mapudungun?",
         "Agua",
         "El texto la presenta como la pieza más reconocible de los topónimos "
@@ -36185,7 +38131,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_localizar", "facil",
+        "toponimia_nombres", "lec_explicita", "facil",
         "Según la lectura, ¿qué caracteriza a los nombres de lugar de origen "
         "mapudungun?",
         "Que describen el lugar en vez de dedicarlo a alguien",
@@ -36200,7 +38146,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_localizar", "medio",
+        "toponimia_nombres", "lec_explicita", "medio",
         "Según la lectura, ¿qué otras lenguas aparecen en el mapa chileno?",
         "El aimara y el quechua en el norte, y lenguas australes",
         "El texto describe la distribución por tramos: en el norte, topónimos "
@@ -36215,7 +38161,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_interpretar", "facil",
+        "toponimia_nombres", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al comparar el mapa con «un muro con dos capas "
         "de pintura»?",
         "Que hay dos maneras de nombrar superpuestas",
@@ -36230,7 +38176,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_interpretar", "medio",
+        "toponimia_nombres", "lec_significado", "medio",
         "¿Por qué el emisor afirma que un topónimo es más resistente que una "
         "lengua?",
         "Porque sigue usándose aunque nadie hable esa lengua",
@@ -36246,7 +38192,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_interpretar", "medio",
+        "toponimia_nombres", "lec_relacion", "medio",
         "¿Qué límite tiene esa resistencia, según la lectura?",
         "Que un nombre sin significado conocido deja de informar",
         "El texto lo ejemplifica: cuando nadie sabe ya qué decía «Curanilahue», la "
@@ -36260,7 +38206,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_interpretar", "dificil",
+        "toponimia_nombres", "lec_significado", "dificil",
         "¿En qué sentido el emisor sostiene que un nombre de lugar es «un dato "
         "doble»?",
         "Informa sobre el lugar y sobre quien lo nombró",
@@ -36276,7 +38222,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_evaluar", "facil",
+        "toponimia_nombres", "lec_intencion", "facil",
         "¿Con qué propósito el emisor advierte que este terreno «exige prudencia»?",
         "Para acotar el alcance de sus propios ejemplos",
         "El texto explica por qué muchas etimologías son discutidas: nombres "
@@ -36292,7 +38238,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_evaluar", "medio",
+        "toponimia_nombres", "lec_postura", "medio",
         "¿Qué actitud asume el emisor frente a la pérdida de esos significados?",
         "Mesurada, pues evita convertir el asunto en un lamento",
         "El texto reconoce que es fácil transformar esto en una lamentación y "
@@ -36307,7 +38253,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_evaluar", "dificil",
+        "toponimia_nombres", "lec_juicio", "dificil",
         "¿Qué agrega al argumento el párrafo sobre las lenguas del norte y del "
         "extremo sur?",
         "Corrige la idea de una sola lengua anterior al castellano",
@@ -36324,7 +38270,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_evaluar", "dificil",
+        "toponimia_nombres", "lec_postura", "dificil",
         "¿Qué observación deja el emisor en la última línea del artículo?",
         "Que se dice a diario un nombre sin saber qué dice",
         "El cierre concentra el argumento en una escena mínima: una comuna entera "
@@ -36339,7 +38285,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_interpretar", "dificil",
+        "toponimia_nombres", "lec_inferencia", "dificil",
         "¿Qué se sigue, según el emisor, de que muchos topónimos compartan las mismas "
         "partículas?",
         "Que el mapa funciona como un inventario descriptivo",
@@ -36362,7 +38308,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "toponimia_nombres", "lec_evaluar", "dificil",
+        "toponimia_nombres", "lec_postura", "dificil",
         "¿Qué consigue el emisor al agregar que tampoco nos preguntamos qué significa "
         "«Santiago» mientras esperamos la micro?",
         "Evita que el reparo caiga solo sobre el mapudungun",
@@ -36385,7 +38331,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Nueve tonos' ----------
     _ql(
-        "nueve_tonos", "lec_localizar", "facil",
+        "nueve_tonos", "lec_explicita", "facil",
         "Según el relato, ¿de qué habló Marisol con su madre en la última "
         "conversación?",
         "De un malvón que se estaba poniendo amarillo",
@@ -36401,7 +38347,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_localizar", "facil",
+        "nueve_tonos", "lec_parafrasis", "facil",
         "Según el relato, ¿qué ocurrió en marzo?",
         "Su madre se cayó en el baño y no se rompió nada",
         "Ese día el teléfono sonó a las dos de la tarde y Marisol contestó al "
@@ -36415,7 +38361,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_localizar", "medio",
+        "nueve_tonos", "lec_parafrasis", "medio",
         "Según el relato, ¿qué recuerda Marisol al caminar por el pasillo?",
         "Muchos recuerdos a la vez, mal ordenados",
         "El relato precisa que no es un recuerdo sino «todos los recuerdos a la "
@@ -36429,7 +38375,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_interpretar", "facil",
+        "nueve_tonos", "lec_significado", "facil",
         "¿Qué quiere decir el relato al afirmar que hay dos teléfonos distintos "
         "«aunque sean el mismo»?",
         "Que la hora del llamado cambia lo que uno espera oír",
@@ -36445,7 +38391,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_interpretar", "medio",
+        "nueve_tonos", "lec_relacion", "medio",
         "¿Por qué Marisol no se levanta durante los primeros tonos?",
         "Porque mientras suena, la noticia todavía no existe",
         "El relato lo dice sin rodeos, y precisa que ella lo sabe: «está pensando "
@@ -36459,7 +38405,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_interpretar", "medio",
+        "nueve_tonos", "lec_inferencia", "medio",
         "¿Qué revela que Marisol piense en la reunión de las nueve?",
         "Que la cabeza sigue funcionando aunque ella no quiera",
         "El relato marca su reacción inmediata: se odia un segundo por haber "
@@ -36473,7 +38419,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_interpretar", "dificil",
+        "nueve_tonos", "lec_relacion", "dificil",
         "¿Qué relación hay entre la duración de lo narrado y la extensión del "
         "relato?",
         "Nueve tonos ocupan casi todas sus páginas",
@@ -36490,7 +38436,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_evaluar", "facil",
+        "nueve_tonos", "lec_intencion", "facil",
         "¿Con qué propósito el relato numera los tonos como si fueran títulos?",
         "Para marcar cuánto tiempo real está transcurriendo",
         "Sin esas marcas, la extensión de los pensamientos haría suponer que pasan "
@@ -36504,7 +38450,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_evaluar", "medio",
+        "nueve_tonos", "lec_forma", "medio",
         "¿Qué aporta que Marisol piense en la Ely?",
         "Muestra que ya está organizando lo que vendrá después",
         "Ese pensamiento no es un recuerdo ni un temor: es un problema práctico que "
@@ -36519,7 +38465,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_evaluar", "dificil",
+        "nueve_tonos", "lec_intencion", "dificil",
         "¿Qué consigue el relato al terminar antes de que se conozca la noticia?",
         "Deja claro que su asunto eran los segundos previos",
         "Si el relato continuara, pasaría a tratar sobre lo que ocurrió, y todo lo "
@@ -36535,7 +38481,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_evaluar", "dificil",
+        "nueve_tonos", "lec_forma", "dificil",
         "¿Qué efecto tiene la frase con que el hermano interrumpe el silencio?",
         "Reabre todo lo que el relato había dado por sabido",
         "Durante nueve tonos, Marisol y el lector construyeron la misma "
@@ -36550,7 +38496,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_interpretar", "dificil",
+        "nueve_tonos", "lec_inferencia", "dificil",
         "¿Qué muestra que las tres preguntas de Marisol lleven cuarenta años sin "
         "hacerse, «esperando una tarde que parecía garantizada»?",
         "Que postergó lo importante creyendo que había tiempo",
@@ -36572,7 +38518,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "nueve_tonos", "lec_evaluar", "dificil",
+        "nueve_tonos", "lec_intencion", "dificil",
         "¿Qué consigue el relato al detenerse en la «frialdad» con que Marisol piensa "
         "mientras el teléfono suena?",
         "Muestra un miedo que no se parece al miedo",
@@ -36595,7 +38541,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El problema no son los perros' ----------
     _ql(
-        "perros_calle", "lec_localizar", "facil",
+        "perros_calle", "lec_explicita", "facil",
         "Según la lectura, ¿qué tres situaciones distintas se suelen mezclar?",
         "Perro sin dueño, perro comunitario y perro con casa",
         "El texto describe cada una: el que vive de la basura, el que tiene nombre "
@@ -36609,7 +38555,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_localizar", "facil",
+        "perros_calle", "lec_explicita", "facil",
         "Según la lectura, ¿qué obliga a hacer la Ley 21.020?",
         "Registrar e identificar a los animales de compañía",
         "La identificación se realiza con un dispositivo electrónico, y la misma "
@@ -36623,7 +38569,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_localizar", "medio",
+        "perros_calle", "lec_explicita", "medio",
         "Según la lectura, ¿por qué el retiro de animales no resuelve el problema?",
         "Porque donde queda espacio y comida aparecen otros",
         "El texto lo formula con precisión: el problema no era el individuo que se "
@@ -36637,7 +38583,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_interpretar", "facil",
+        "perros_calle", "lec_significado", "facil",
         "¿Por qué el emisor dice que el tercer caso «cambia por completo el "
         "problema»?",
         "Porque esos perros tienen dueño y nadie se siente aludido",
@@ -36652,7 +38598,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_interpretar", "medio",
+        "perros_calle", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que «registrar no es esterilizar»?",
         "Que identificar permite atribuir culpa, no reducir el número",
         "Un perro identificado que sigue saliendo y reproduciéndose produce los "
@@ -36667,7 +38613,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_interpretar", "medio",
+        "perros_calle", "lec_relacion", "medio",
         "¿Qué desigualdad describe el emisor entre distintos sectores de la ciudad?",
         "Donde hay más perros sueltos hay menos operativos",
         "El texto contrapone dos escenarios: un perro suelto en un condominio con "
@@ -36682,7 +38628,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_interpretar", "dificil",
+        "perros_calle", "lec_significado", "dificil",
         "¿Por qué el emisor insiste en que la caza no depende de cuánto quieran al "
         "perro?",
         "Porque es una conducta del animal, no una falta de cuidado",
@@ -36698,7 +38644,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_evaluar", "facil",
+        "perros_calle", "lec_intencion", "facil",
         "¿Con qué propósito el emisor abre el texto con el perro de la esquina?",
         "Porque esa escena contiene el problema completo",
         "El perro tiene collar, está gordo y todos saben su nombre, y sin embargo "
@@ -36713,7 +38659,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_evaluar", "medio",
+        "perros_calle", "lec_intencion", "medio",
         "¿Por qué el emisor advierte que la esterilización masiva es «políticamente "
         "poco atractiva»?",
         "Porque sus efectos tardan años en poder verse",
@@ -36729,7 +38675,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_evaluar", "dificil",
+        "perros_calle", "lec_postura", "dificil",
         "¿Qué objeta el emisor a la expresión «perros callejeros»?",
         "Que presenta como natural algo que decidieron personas",
         "La expresión sugiere una categoría propia del animal, «algo que ciertos "
@@ -36744,7 +38690,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_evaluar", "dificil",
+        "perros_calle", "lec_forma", "dificil",
         "¿Qué anuncia el título respecto de lo que hará el artículo?",
         "Que va a mover el problema desde el animal a las personas",
         "Todo el texto trabaja ese desplazamiento. Distingue tres situaciones según "
@@ -36761,7 +38707,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_interpretar", "dificil",
+        "perros_calle", "lec_funcion", "dificil",
         "¿Qué idea sostiene la comparación con quien limpia una fuga de agua en vez "
         "de cerrar la llave?",
         "Que actuar sobre el efecto deja intacta la causa",
@@ -36783,7 +38729,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "perros_calle", "lec_evaluar", "dificil",
+        "perros_calle", "lec_postura", "dificil",
         "¿Qué consigue el emisor al cerrar diciendo que la frase correcta «no permite "
         "mirar la esquina y sentir lástima sin sentir nada más»?",
         "Le quita comodidad a la compasión del que mira",
@@ -36806,7 +38752,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Presentación de «Los martes»' ----------
     _ql(
-        "presentacion_martes", "lec_localizar", "facil",
+        "presentacion_martes", "lec_explicita", "facil",
         "Según el texto, ¿qué restricción se impuso la autora del libro?",
         "Fotografiar siempre la misma feria y el mismo día",
         "Son ciento veinte fotografías tomadas durante seis años, siempre un martes "
@@ -36820,7 +38766,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_localizar", "facil",
+        "presentacion_martes", "lec_explicita", "facil",
         "Según el texto, ¿qué muestra la fotografía de la página cuarenta y tres?",
         "Un puesto vacío a las tres de la tarde",
         "El presentador describe la lona doblada, el suelo mojado y tres hojas de "
@@ -36833,7 +38779,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_localizar", "medio",
+        "presentacion_martes", "lec_explicita", "medio",
         "Según el texto, ¿qué ocurre en la fotografía de 2023 que se cita?",
         "Una clienta paga con el teléfono y él la espera",
         "El presentador destaca que el feriante espera «con la misma cara con que "
@@ -36847,7 +38793,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_interpretar", "facil",
+        "presentacion_martes", "lec_relacion", "facil",
         "¿Por qué el presentador dice que una feria es «un tema fotográfico "
         "peligroso»?",
         "Porque es fácil volver con imágenes bonitas y vacías",
@@ -36862,7 +38808,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_interpretar", "medio",
+        "presentacion_martes", "lec_funcion", "medio",
         "¿Qué consigue la autora al volver seis años al mismo lugar?",
         "Que lo pintoresco se gaste y aparezca otra cosa",
         "El presentador lo describe como una progresión: en la fotografía quince el "
@@ -36877,7 +38823,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_interpretar", "medio",
+        "presentacion_martes", "lec_significado", "medio",
         "¿Qué sostiene el presentador al decir que un alegato «exige que sus "
         "personajes sean solo víctimas»?",
         "Que denunciar obliga a recortar a las personas retratadas",
@@ -36893,7 +38839,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_interpretar", "dificil",
+        "presentacion_martes", "lec_relacion", "dificil",
         "¿Qué relación establece el presentador entre la fotografía sin personas y "
         "el tema del libro?",
         "El puesto vacío muestra las horas que la feria consume",
@@ -36910,7 +38856,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_evaluar", "facil",
+        "presentacion_martes", "lec_intencion", "facil",
         "¿Con qué propósito el presentador anuncia que no va a contar el libro?",
         "Para explicar más bien por qué le costó escribirlo",
         "Empieza diciendo que el libro «está ahí, en esa mesa, y se defiende "
@@ -36924,7 +38870,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_evaluar", "medio",
+        "presentacion_martes", "lec_intencion", "medio",
         "¿Por qué el presentador anticipa las dos lecturas que considera "
         "equivocadas?",
         "Porque espera que aparezcan en las reseñas del libro",
@@ -36939,7 +38885,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_evaluar", "dificil",
+        "presentacion_martes", "lec_intencion", "dificil",
         "¿Por qué el presentador llama «elogio incómodo» a decir que el libro "
         "envejecerá bien?",
         "Porque significa que valdrá más cuando ella no esté",
@@ -36955,7 +38901,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_evaluar", "dificil",
+        "presentacion_martes", "lec_postura", "dificil",
         "¿Qué hace el presentador con las frases que el género espera de él?",
         "Las enuncia y las cambia por algo que sí puede afirmar",
         "El párrafo final nombra las tres fórmulas de rigor —imprescindible, llegó "
@@ -36971,7 +38917,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_interpretar", "dificil",
+        "presentacion_martes", "lec_inferencia", "dificil",
         "¿Qué revela el detalle de que el señor del puesto de verduras «en la primera "
         "tiene el pelo negro»?",
         "Que la serie terminó registrando cómo envejece alguien",
@@ -36994,7 +38940,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "presentacion_martes", "lec_evaluar", "dificil",
+        "presentacion_martes", "lec_postura", "dificil",
         "¿Qué consigue el presentador al contar que él mismo tiene fotografías de "
         "feria guardadas «donde corresponde, que es en ninguna parte»?",
         "Se pone él mismo como ejemplo de lo fácil",
@@ -37016,7 +38962,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Muy inapropiado para mujeres' ----------
     _ql(
-        "futbol_prohibido", "lec_localizar", "facil",
+        "futbol_prohibido", "lec_explicita", "facil",
         "Según la lectura, ¿qué decidió la federación inglesa en diciembre de 1921?",
         "Prohibir esos partidos en los estadios de sus clubes",
         "El texto reproduce la formulación de la declaración: el juego de fútbol "
@@ -37030,7 +38976,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_localizar", "facil",
+        "futbol_prohibido", "lec_explicita", "facil",
         "Según la lectura, ¿cuánta gente asistió al partido de diciembre de 1920?",
         "Alrededor de cincuenta y tres mil personas",
         "El texto agrega que varios miles más se quedaron afuera, y que no era una "
@@ -37044,7 +38990,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_localizar", "medio",
+        "futbol_prohibido", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué estableció el decreto ley brasileño de 1941?",
         "Que no se permitirían deportes contrarios a su condición",
         "El texto subraya que la norma no nombraba al fútbol y que no hacía falta: "
@@ -37057,7 +39003,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_interpretar", "facil",
+        "futbol_prohibido", "lec_significado", "facil",
         "¿Por qué el emisor sostiene que la secuencia de los hechos importa?",
         "Porque la prohibición llegó tras la mejor temporada",
         "No apareció cuando el fútbol de mujeres era marginal, sino cuando llenaba "
@@ -37071,7 +39017,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_interpretar", "medio",
+        "futbol_prohibido", "lec_significado", "medio",
         "Según la lectura, ¿en qué consiste apelar a la naturaleza?",
         "En declararlo imposible en vez de discutir si conviene",
         "El texto explica la ventaja retórica de esa maniobra: una preferencia se "
@@ -37085,7 +39031,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_interpretar", "medio",
+        "futbol_prohibido", "lec_significado", "medio",
         "¿Qué observación hace el emisor sobre cuándo apareció la preocupación por "
         "el esfuerzo físico?",
         "Que no apareció mientras esas mujeres trabajaban en fábricas",
@@ -37102,7 +39048,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_interpretar", "dificil",
+        "futbol_prohibido", "lec_relacion", "dificil",
         "¿Qué círculo describe el emisor al hablar de la asimetría de esos "
         "cincuenta años?",
         "La regla impedía producir la evidencia que la refutaría",
@@ -37119,7 +39065,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_evaluar", "facil",
+        "futbol_prohibido", "lec_intencion", "facil",
         "¿Con qué propósito el emisor advierte que en 1971 «no volvió la situación "
         "de 1920»?",
         "Para evitar leer el levantamiento como un final feliz",
@@ -37134,7 +39080,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_evaluar", "medio",
+        "futbol_prohibido", "lec_postura", "medio",
         "¿Qué actitud asume el emisor al advertir contra «el atajo contrario»?",
         "Exigente, pues también acota su propio argumento",
         "Después de dedicar el artículo a mostrar el peso de la prohibición, el "
@@ -37149,7 +39095,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_evaluar", "dificil",
+        "futbol_prohibido", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al recordar que en 1921 esa frase no escandalizó "
         "a casi nadie?",
         "Advertir que un argumento vigente no se ve como suena después",
@@ -37165,7 +39111,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_evaluar", "dificil",
+        "futbol_prohibido", "lec_juicio", "dificil",
         "¿Cuál de las siguientes afirmaciones del texto es una interpretación del "
         "emisor y no un hecho documentado?",
         "Que el argumento sanitario sostenía otra cosa",
@@ -37181,7 +39127,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_interpretar", "dificil",
+        "futbol_prohibido", "lec_inferencia", "dificil",
         "¿Qué implica la distinción entre haber perdido cincuenta temporadas y haber "
         "perdido «la infraestructura que se habría construido» en ellas?",
         "Que el daño siguió después de levantar la prohibición",
@@ -37203,7 +39149,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "futbol_prohibido", "lec_evaluar", "dificil",
+        "futbol_prohibido", "lec_postura", "dificil",
         "¿Qué logra el emisor al detenerse en que el decreto brasileño de 1941 no "
         "nombrara al fútbol?",
         "Muestra que la prohibición quedó a criterio de alguien",
@@ -37227,7 +39173,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La música que ya no se mueve' ----------
     _ql(
-        "musica_gusto", "lec_localizar", "facil",
+        "musica_gusto", "lec_explicita", "facil",
         "Según la lectura, ¿qué efecto tiene escuchar una canción muchas veces?",
         "Tiende a volverla más agradable",
         "El texto presenta ese efecto como general: la exposición repetida a algo, "
@@ -37242,7 +39188,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_localizar", "facil",
+        "musica_gusto", "lec_parafrasis", "facil",
         "Según la lectura, ¿en qué etapa de la vida se concentran los recuerdos "
         "autobiográficos?",
         "En la adolescencia y la primera adultez",
@@ -37258,7 +39204,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_localizar", "medio",
+        "musica_gusto", "lec_explicita", "medio",
         "Según la lectura, ¿qué distingue a quien sigue descubriendo música a los "
         "cincuenta?",
         "Una paciencia distinta, no un oído distinto",
@@ -37273,7 +39219,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_interpretar", "facil",
+        "musica_gusto", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al afirmar que una canción nueva «todavía no "
         "tiene nada adentro»?",
         "Que aún no está unida a ningún recuerdo",
@@ -37288,7 +39234,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_interpretar", "medio",
+        "musica_gusto", "lec_idea_central", "medio",
         "¿Cómo se combinan las dos explicaciones que entrega el artículo?",
         "La música de esos años se repite y además queda en la memoria",
         "Por sí sola, la familiaridad explica que lo conocido gane a lo nuevo, pero "
@@ -37303,7 +39249,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_interpretar", "medio",
+        "musica_gusto", "lec_funcion", "medio",
         "¿Qué agrega el párrafo sobre el tiempo disponible?",
         "Una causa que no está en la cabeza de nadie",
         "Hasta ese punto todas las explicaciones eran mentales: la familiaridad, la "
@@ -37318,7 +39264,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_interpretar", "dificil",
+        "musica_gusto", "lec_relacion", "dificil",
         "¿Qué distinción sostiene el emisor entre explicar un gusto y evaluarlo?",
         "Saber por qué gusta algo no decide si ese algo es bueno",
         "El texto lo dice con dos ejemplos simétricos: que una canción esté pegada "
@@ -37333,7 +39279,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_evaluar", "facil",
+        "musica_gusto", "lec_intencion", "facil",
         "¿Con qué propósito el emisor advierte contra la frase «uno a esta edad ya "
         "no cambia»?",
         "Para impedir que un dato verdadero se use como excusa",
@@ -37348,7 +39294,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_evaluar", "medio",
+        "musica_gusto", "lec_postura", "medio",
         "¿Qué actitud asume el emisor hacia el pariente que escucha lo mismo hace "
         "treinta años?",
         "Comprensiva, pues incluye al lector en ese destino",
@@ -37364,7 +39310,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_evaluar", "dificil",
+        "musica_gusto", "lec_intencion", "dificil",
         "¿Por qué el emisor dice que una sola audición es «un dato bastante pobre»?",
         "Porque el agrado depende de una repetición que aún no ocurrió",
         "Si el mecanismo que produce el gusto es la familiaridad, entonces la "
@@ -37379,7 +39325,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_evaluar", "dificil",
+        "musica_gusto", "lec_postura", "dificil",
         "¿Qué plantea el emisor al cerrar hablando del «envase de un recuerdo que "
         "todavía no existe»?",
         "Que lo que hoy se escucha se vuelve memoria más tarde",
@@ -37396,7 +39342,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_interpretar", "dificil",
+        "musica_gusto", "lec_significado", "dificil",
         "¿Por qué el emisor sostiene que un adolescente y un adulto que discuten "
         "sobre una canción «no están discutiendo lo mismo»?",
         "Porque uno juzga la canción y el otro, una época",
@@ -37420,7 +39366,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "musica_gusto", "lec_evaluar", "dificil",
+        "musica_gusto", "lec_postura", "dificil",
         "¿Qué consigue el emisor al declarar, en el primer párrafo, que la pregunta "
         "interesante no es por qué le gusta lo que le gusta?",
         "Cambia el tema del gusto a cómo deja de cambiar",
@@ -37443,7 +39389,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El barco' ----------
     _ql(
-        "el_barco", "lec_localizar", "facil",
+        "el_barco", "lec_explicita", "facil",
         "Según el relato, ¿qué estudia Antonia?",
         "Biología marina, y está en cuarto año",
         "El relato lo menciona junto con lo que la trajo al sur: lleva dos semanas "
@@ -37457,7 +39403,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_localizar", "facil",
+        "el_barco", "lec_parafrasis", "facil",
         "Según el relato, ¿qué contestó la abuela cuando le preguntaron si le creía "
         "a su papá?",
         "Que le cree a su papá, y que eso es distinto",
@@ -37472,7 +39418,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_localizar", "medio",
+        "el_barco", "lec_explicita", "medio",
         "Según el relato, ¿qué explicación conoce Antonia para unas luces así?",
         "Organismos marinos que emiten luz en el agua",
         "El relato precisa lo que ella sabe: que ciertas noches el agua se enciende "
@@ -37487,7 +39433,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_interpretar", "facil",
+        "el_barco", "lec_inferencia", "facil",
         "¿Qué muestra que la abuela respondiera «puede ser» a la explicación de "
         "Antonia?",
         "Que no discutió, y que tampoco cambió de idea",
@@ -37502,7 +39448,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_interpretar", "medio",
+        "el_barco", "lec_relacion", "medio",
         "¿Por qué Antonia considera un dato la manera en que su abuela cuenta la "
         "historia?",
         "Porque las pausas se repiten siempre en el mismo lugar",
@@ -37517,7 +39463,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_interpretar", "medio",
+        "el_barco", "lec_funcion", "medio",
         "¿Qué función cumple el termo que la abuela deja preparado cada noche?",
         "Muestra un acuerdo que ninguna de las dos dice en voz alta",
         "La abuela nunca le pregunta qué mide y nunca acepta su explicación; sin "
@@ -37531,7 +39477,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_interpretar", "dificil",
+        "el_barco", "lec_inferencia", "dificil",
         "¿Qué le incomoda a Antonia de la risa de sus compañeros de universidad?",
         "Que descartar el relato entero le parece un atajo",
         "Ella misma se ríe, y después camina al paradero «con una incomodidad que "
@@ -37546,7 +39492,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_evaluar", "facil",
+        "el_barco", "lec_postura", "facil",
         "¿Qué actitud toma el relato frente a las dos maneras de explicar las "
         "luces?",
         "Imparcial, pues no declara cuál de las dos acierta",
@@ -37561,7 +39507,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_evaluar", "medio",
+        "el_barco", "lec_forma", "medio",
         "¿Qué sentido tiene que Antonia salga a la punta con una linterna que no "
         "enciende?",
         "Va a mirar, no a comprobar nada con instrumentos",
@@ -37577,7 +39523,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_evaluar", "dificil",
+        "el_barco", "lec_forma", "dificil",
         "¿De qué se da cuenta Antonia al final, cuando se ríe sola?",
         "De que pensó como su abuela, y con sus mismas palabras",
         "Lo que se sorprende pensando es que, si las luces aparecieran, no se lo "
@@ -37592,7 +39538,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_evaluar", "dificil",
+        "el_barco", "lec_intencion", "dificil",
         "¿Qué consigue el relato al no mostrar ninguna luz en el canal?",
         "Deja el conflicto donde estaba, sin darle la razón a nadie",
         "Si aparecieran las luces, el relato sería sobre lo que la ciencia no "
@@ -37608,7 +39554,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_interpretar", "dificil",
+        "el_barco", "lec_relacion", "dificil",
         "¿Qué distingue la abuela al decir «Yo le creo a mi papá. Es distinto»?",
         "Creerle a alguien no es creer en lo que cuenta",
         "Antonia le pregunta si le cree, y la abuela se queda pensando «más de lo que "
@@ -37629,7 +39575,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_barco", "lec_evaluar", "dificil",
+        "el_barco", "lec_postura", "dificil",
         "¿Qué muestra que la frase de la abuela quedara anotada en el cuaderno de "
         "campo, entre dos columnas de temperaturas?",
         "Que lo que la marcó no cabía en su informe",
@@ -37651,7 +39597,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El número que empezó siendo un espacio en blanco' ----------
     _ql(
-        "historia_cero", "lec_localizar", "facil",
+        "historia_cero", "lec_explicita", "facil",
         "Según la lectura, ¿qué escribió Brahmagupta en el siglo VII?",
         "Reglas para operar con el cero y con los negativos",
         "El texto precisa que las explicaba en términos de fortunas y deudas: sumar "
@@ -37665,7 +39611,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_localizar", "facil",
+        "historia_cero", "lec_explicita", "facil",
         "Según la lectura, ¿qué prohibió el gremio de cambistas de Florencia en "
         "1299?",
         "Usar las cifras nuevas en los libros de cuentas",
@@ -37680,7 +39626,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_localizar", "medio",
+        "historia_cero", "lec_explicita", "medio",
         "Según la lectura, ¿qué diferencia hay entre el cero posicional y el cero "
         "como número?",
         "Uno ocupa un lugar vacío y el otro es una cantidad",
@@ -37696,7 +39642,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_interpretar", "facil",
+        "historia_cero", "lec_inferencia", "facil",
         "¿Qué muestra el emisor al pedir que se escriba ciento cinco sin usar el "
         "cero?",
         "Que sin ese signo el número queda ambiguo",
@@ -37711,7 +39657,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_interpretar", "medio",
+        "historia_cero", "lec_significado", "medio",
         "¿Por qué el emisor dice que declarar indefinida la división por cero es "
         "«más honesto»?",
         "Porque reconoce que no existe una respuesta consistente",
@@ -37727,7 +39673,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_interpretar", "medio",
+        "historia_cero", "lec_relacion", "medio",
         "¿Qué explica que durante casi dos siglos convivieran los dos sistemas de "
         "numeración?",
         "Que cada uno servía para una etapa distinta del trabajo",
@@ -37743,7 +39689,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_interpretar", "dificil",
+        "historia_cero", "lec_relacion", "dificil",
         "¿Qué ventaja de la numeración posicional terminó imponiéndola?",
         "Que permite calcular en el papel dejando el rastro",
         "Con numeración romana hay que usar un ábaco, y el ábaco «exige un "
@@ -37758,7 +39704,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_evaluar", "facil",
+        "historia_cero", "lec_intencion", "facil",
         "¿Con qué propósito el emisor aclara que la prohibición de 1299 no fue "
         "religiosa?",
         "Para corregir una versión repetida del episodio",
@@ -37773,7 +39719,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_evaluar", "medio",
+        "historia_cero", "lec_postura", "medio",
         "¿Qué actitud asume el emisor hacia quienes se resistieron al sistema "
         "nuevo?",
         "Comprensiva, pues reconoce que sus razones eran reales",
@@ -37788,7 +39734,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_evaluar", "dificil",
+        "historia_cero", "lec_postura", "dificil",
         "Según el emisor, ¿en qué consistió la verdadera dificultad para adoptar el "
         "cero?",
         "En que el sistema en uso funcionaba y sostenía oficios",
@@ -37804,7 +39750,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_evaluar", "dificil",
+        "historia_cero", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al cerrar diciendo que esas tres cosas «siguen "
         "apareciendo»?",
         "Convertir el episodio en un criterio sobre lo nuevo",
@@ -37821,7 +39767,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_interpretar", "dificil",
+        "historia_cero", "lec_relacion", "dificil",
         "¿Qué problema agregaba que las cifras nuevas no se escribieran igual en "
         "todas partes?",
         "Que un libro podía resultar ilegible en otra ciudad",
@@ -37844,7 +39790,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "historia_cero", "lec_evaluar", "dificil",
+        "historia_cero", "lec_postura", "dificil",
         "¿Qué consigue el emisor al comparar la convivencia de los dos sistemas con "
         "lo que se decide hoy ante una tecnología nueva?",
         "Presenta la convivencia como solución y no como atraso",
@@ -37868,7 +39814,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La canasta que no es de nadie' ----------
     _ql(
-        "ipc_canasta", "lec_localizar", "facil",
+        "ipc_canasta", "lec_explicita", "facil",
         "Según la lectura, ¿qué mide el índice de precios al consumidor?",
         "El precio de una canasta determinada, mes a mes",
         "El texto lo aclara desde el comienzo: el índice no mide «los precios» en "
@@ -37882,7 +39828,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_localizar", "facil",
+        "ipc_canasta", "lec_explicita", "facil",
         "Según la lectura, ¿de dónde sale la canasta que se usa en Chile?",
         "De la Encuesta de Presupuestos Familiares",
         "Esa encuesta registra en qué gastan efectivamente los hogares, y con esa "
@@ -37896,7 +39842,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_localizar", "medio",
+        "ipc_canasta", "lec_explicita", "medio",
         "Según la lectura, ¿cada cuánto se actualiza la canasta?",
         "Cada cinco años",
         "El texto entrega además la fecha del ciclo vigente: el levantamiento de la "
@@ -37911,7 +39857,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_interpretar", "facil",
+        "ipc_canasta", "lec_relacion", "facil",
         "¿Por qué un alza del pan de diez por ciento no se cancela con una baja "
         "igual en pasajes de avión?",
         "Porque cada producto pesa según cuánto se gasta en él",
@@ -37926,7 +39872,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_interpretar", "medio",
+        "ipc_canasta", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que el índice «describe un país, no "
         "un living»?",
         "Que retrata un promedio que no es el gasto de nadie",
@@ -37942,7 +39888,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_interpretar", "medio",
+        "ipc_canasta", "lec_relacion", "medio",
         "Según la lectura, ¿por qué la inflación sentida se arma «con los precios "
         "que uno mira»?",
         "Porque lo que se compra a diario ofrece más ocasiones de notarlo",
@@ -37958,7 +39904,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_interpretar", "dificil",
+        "ipc_canasta", "lec_relacion", "dificil",
         "¿Qué relación establece el emisor entre las decisiones metodológicas y el "
         "dinero de las personas?",
         "Cambiar cómo se pesa un producto cambia lo que se paga",
@@ -37974,7 +39920,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_evaluar", "facil",
+        "ipc_canasta", "lec_intencion", "facil",
         "¿Con qué propósito el emisor enumera lo que el índice «no pretende ser»?",
         "Para evitar que se le exija algo que no ofrece",
         "El texto sostiene que muchas discusiones nacen de pedirle al índice "
@@ -37989,7 +39935,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_evaluar", "medio",
+        "ipc_canasta", "lec_postura", "medio",
         "¿Qué actitud asume el emisor frente a quien dice que el índice no refleja "
         "su realidad?",
         "Conciliadora, pues admite que las dos cosas son ciertas",
@@ -38005,7 +39951,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_evaluar", "dificil",
+        "ipc_canasta", "lec_juicio", "dificil",
         "¿Por qué el emisor califica de discutible el ajuste por calidad?",
         "Porque obliga a estimar cuánto vale una mejora",
         "El caso que plantea es concreto: un teléfono que cuesta lo mismo que el "
@@ -38021,7 +39967,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_evaluar", "dificil",
+        "ipc_canasta", "lec_postura", "dificil",
         "¿Qué propone el emisor para quien quiera saber cuánto subieron sus propios "
         "precios?",
         "Mirar su gasto, porque el índice responde otra pregunta",
@@ -38038,7 +39984,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_interpretar", "dificil",
+        "ipc_canasta", "lec_relacion", "dificil",
         "Un hogar sin automóvil y que paga arriendo revisa la cifra del mes. Según la "
         "lectura, ¿por qué el índice puede alejarse de lo que ese hogar siente?",
         "Porque su canasta pesa distinto que la del promedio",
@@ -38061,7 +40007,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ipc_canasta", "lec_evaluar", "dificil",
+        "ipc_canasta", "lec_forma", "dificil",
         "¿Qué condensa el título «La canasta que no es de nadie»?",
         "Que el promedio no coincide con ningún hogar real",
         "El título nombra el hallazgo que ordena el artículo: la canasta representa "
@@ -38085,7 +40031,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Cómo leer una boleta de electricidad' ----------
     _ql(
-        "boleta_luz", "lec_localizar", "facil",
+        "boleta_luz", "lec_explicita", "facil",
         "Según la boleta, ¿cuál fue el consumo del período?",
         "213 kWh",
         "El consumo no se estima: sale de restar la lectura anterior a la actual, "
@@ -38098,7 +40044,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_localizar", "facil",
+        "boleta_luz", "lec_explicita", "facil",
         "Según la boleta, ¿cuál es la fecha de vencimiento?",
         "El 28 de julio",
         "El documento distingue tres fechas que suelen confundirse: el período "
@@ -38112,7 +40058,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_localizar", "medio",
+        "boleta_luz", "lec_explicita", "medio",
         "Según la boleta, ¿qué financia el cargo por servicio público?",
         "La operación del sistema eléctrico en su conjunto",
         "Es el menor de los cuatro cobros del detalle y también se calcula por "
@@ -38126,7 +40072,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_interpretar", "facil",
+        "boleta_luz", "lec_relacion", "facil",
         "¿Por qué el cargo fijo es igual aunque el consumo cambie?",
         "Porque cubre costos que existen igual si no se consume",
         "El documento enumera cuáles: mantener la conexión, leer el medidor y "
@@ -38140,7 +40086,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_interpretar", "medio",
+        "boleta_luz", "lec_relacion", "medio",
         "Según el documento, ¿por qué conviene comparar dos meses en kilowatt-hora "
         "y no en pesos?",
         "Porque cambian los días del período y los precios",
@@ -38156,7 +40102,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_interpretar", "medio",
+        "boleta_luz", "lec_relacion", "medio",
         "¿Qué relación hay entre las dos lecturas del medidor y el detalle de "
         "cobros?",
         "Su diferencia es el número que multiplica a tres cobros",
@@ -38171,7 +40117,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_interpretar", "dificil",
+        "boleta_luz", "lec_relacion", "dificil",
         "Si el consumo del período hubiera sido de cero kilowatt-hora, ¿qué habría "
         "cobrado esta boleta?",
         "Solo el cargo fijo, más el IVA correspondiente",
@@ -38186,7 +40132,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_evaluar", "facil",
+        "boleta_luz", "lec_intencion", "facil",
         "¿Con qué propósito el documento advierte que los valores son ficticios?",
         "Para que no se use para estimar el costo real del servicio",
         "La advertencia aparece dos veces, en la bajada y en la nota de fuente, y "
@@ -38200,7 +40146,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_evaluar", "medio",
+        "boleta_luz", "lec_juicio", "medio",
         "¿Qué permite concluir la línea que compara con el mismo mes del año "
         "anterior?",
         "Que el consumo subió, sin que se explique por qué",
@@ -38216,7 +40162,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_evaluar", "dificil",
+        "boleta_luz", "lec_forma", "dificil",
         "¿Qué función cumple la sección «Lo que esta boleta no informa»?",
         "Evitar conclusiones que los datos entregados no sostienen",
         "La sección desactiva tres lecturas tentadoras: cuánto consumió cada "
@@ -38231,7 +40177,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_localizar", "dificil",
+        "boleta_luz", "lec_explicita", "dificil",
         "Según el documento, ¿cómo se distingue un error de registro de un consumo "
         "efectivamente ocurrido?",
         "Contrastando la lectura de la boleta con la del medidor hoy",
@@ -38247,7 +40193,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_interpretar", "dificil",
+        "boleta_luz", "lec_relacion", "dificil",
         "El monto de una boleta sube, y el período tuvo los mismos días y los mismos "
         "valores unitarios que el anterior. Según el documento, ¿qué queda?",
         "Que el consumo del período fue efectivamente mayor",
@@ -38270,7 +40216,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "boleta_luz", "lec_evaluar", "dificil",
+        "boleta_luz", "lec_intencion", "dificil",
         "¿Qué consigue el punto 8 al decir que, si las lecturas coinciden, «la "
         "pregunta pasa a ser en qué se fue»?",
         "Separa el reclamo de la pregunta por el gasto propio",
@@ -38292,7 +40238,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Un centímetro cada mil años' ----------
     _ql(
-        "suelo_centimetro", "lec_localizar", "facil",
+        "suelo_centimetro", "lec_explicita", "facil",
         "Según la lectura, ¿cuánto tarda en formarse un centímetro de suelo?",
         "Entre cien y mil años",
         "El rango depende del clima, de la roca que hay debajo y de la vegetación "
@@ -38306,7 +40252,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_localizar", "facil",
+        "suelo_centimetro", "lec_explicita", "facil",
         "Según la lectura, ¿qué proporción de los alimentos depende del suelo?",
         "El noventa y cinco por ciento",
         "La estimación corresponde a la Organización de las Naciones Unidas para la "
@@ -38320,7 +40266,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_localizar", "medio",
+        "suelo_centimetro", "lec_explicita", "medio",
         "Según la lectura, ¿qué distingue al suelo de la tierra?",
         "El suelo es un sistema con organismos, agua y aire",
         "El artículo lo formula con una imagen: tierra es lo que queda en una "
@@ -38335,7 +40281,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_interpretar", "facil",
+        "suelo_centimetro", "lec_significado", "facil",
         "¿Qué corrección propone el emisor a la idea de que el suelo es un recurso "
         "no renovable?",
         "Que se renueva, pero en una escala que no es la nuestra",
@@ -38350,7 +40296,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_interpretar", "medio",
+        "suelo_centimetro", "lec_relacion", "medio",
         "¿Qué explica el emisor sobre la proyección de caída de producción hacia "
         "2050?",
         "Que su valor está en la dirección y no en la cifra exacta",
@@ -38366,7 +40312,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_interpretar", "medio",
+        "suelo_centimetro", "lec_relacion", "medio",
         "Según la lectura, ¿por qué no se aplican las medidas que evitan la "
         "erosión?",
         "Porque sus beneficios llegan tarde y sus costos, de inmediato",
@@ -38382,7 +40328,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_interpretar", "dificil",
+        "suelo_centimetro", "lec_relacion", "dificil",
         "¿Qué relación establece el emisor entre el fertilizante y la percepción "
         "del problema?",
         "Permite sostener el rendimiento mientras el suelo se pierde",
@@ -38398,7 +40344,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_evaluar", "facil",
+        "suelo_centimetro", "lec_intencion", "facil",
         "¿Con qué propósito el emisor aclara que no corresponde hablar de "
         "catástrofe inminente?",
         "Para no sostener más de lo que sus datos permiten",
@@ -38414,7 +40360,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_evaluar", "medio",
+        "suelo_centimetro", "lec_intencion", "medio",
         "¿Qué efecto busca el emisor al comparar lo que tarda el suelo en formarse "
         "con lo que tarda en irse?",
         "Mostrar que la pérdida y la reposición no se equilibran",
@@ -38430,7 +40376,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_evaluar", "dificil",
+        "suelo_centimetro", "lec_juicio", "dificil",
         "¿Qué agrega al artículo el párrafo sobre la geografía de Chile?",
         "Baja a un caso concreto un problema descrito en general",
         "Hasta ese punto la erosión se explicaba con condiciones abstractas: "
@@ -38445,7 +40391,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_evaluar", "dificil",
+        "suelo_centimetro", "lec_postura", "dificil",
         "¿Qué idea sostiene el emisor al cerrar hablando de gente que todavía no "
         "nace?",
         "Que el costo de estas decisiones lo pagan otros después",
@@ -38462,7 +40408,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_interpretar", "dificil",
+        "suelo_centimetro", "lec_relacion", "dificil",
         "Una ladera pierde diez centímetros de suelo en un temporal. Según las cifras "
         "del texto, ¿qué se puede afirmar?",
         "Que tardarán entre mil y diez mil años en volver",
@@ -38484,7 +40430,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "suelo_centimetro", "lec_evaluar", "dificil",
+        "suelo_centimetro", "lec_postura", "dificil",
         "¿Qué logra el emisor al apoyar su conclusión final en lo que «la aritmética "
         "sí autoriza a decir»?",
         "Sostiene el reclamo sin necesitar un pronóstico",
@@ -38508,7 +40454,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Al revés' ----------
     _ql(
-        "al_reves", "lec_localizar", "facil",
+        "al_reves", "lec_explicita", "facil",
         "Según el relato, ¿qué hace Rubén al ver a Simón en el supermercado?",
         "Mira la etiqueta de un envase hasta que el otro pasa",
         "El relato precisa que alcanzó a verlo primero y que tuvo tiempo de "
@@ -38522,7 +40468,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_localizar", "facil",
+        "al_reves", "lec_parafrasis", "facil",
         "Según el relato, ¿por qué no firmaron nada al hacer el préstamo?",
         "Porque firmar les habría parecido ofensivo entre ellos",
         "El relato subraya que en ese momento los dos sintieron esa decisión como "
@@ -38536,7 +40482,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_localizar", "medio",
+        "al_reves", "lec_parafrasis", "medio",
         "Según el relato, ¿cómo se entera Rubén de que Simón vendió su moto?",
         "Porque un día deja de oírla en la calle y no pregunta",
         "Simón la vendió durante el peor invierno del taller, cuando llevaban tres "
@@ -38549,7 +40495,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_interpretar", "facil",
+        "al_reves", "lec_funcion", "facil",
         "¿Qué efecto tiene que la última escena del relato sea la primera en el "
         "tiempo?",
         "El lector lee el comienzo sabiendo cómo terminará",
@@ -38564,7 +40510,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_interpretar", "medio",
+        "al_reves", "lec_inferencia", "medio",
         "¿Qué sugiere que la conversación del quiebre transcurra sin gritos?",
         "Que el distanciamiento ya estaba hecho antes de hablar",
         "El relato apunta que a los dos les parecerá después «la parte más rara». "
@@ -38578,7 +40524,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_interpretar", "medio",
+        "al_reves", "lec_funcion", "medio",
         "¿Qué función cumple la frase que ninguno de los dos llega a decir?",
         "Señala que discutían un asunto distinto del que importaba",
         "El narrador cuenta que Rubén pensó dos veces en decir que se echaban de "
@@ -38592,7 +40538,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_interpretar", "dificil",
+        "al_reves", "lec_funcion", "dificil",
         "¿Qué aporta que el relato entregue lo que cada personaje hizo por separado "
         "esa noche?",
         "Muestra que los dos actuaban de buena fe al mismo tiempo",
@@ -38609,7 +40555,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_evaluar", "facil",
+        "al_reves", "lec_forma", "facil",
         "¿Qué sentido tiene que el relato lleve por título «Al revés»?",
         "Nombra el orden en que están contados los hechos",
         "Las cinco escenas van del presente hacia atrás, y cada una lleva su marca: "
@@ -38623,7 +40569,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_evaluar", "medio",
+        "al_reves", "lec_postura", "medio",
         "¿Qué actitud tiene el narrador hacia los dos personajes?",
         "Imparcial, pues no atribuye la culpa a ninguno",
         "El narrador da acceso a lo que piensan los dos, en la misma medida y con "
@@ -38638,7 +40584,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_evaluar", "dificil",
+        "al_reves", "lec_intencion", "dificil",
         "¿Qué consigue el relato al ubicar el préstamo en el centro de la "
         "secuencia?",
         "Lo muestra como un hecho más y no como la causa",
@@ -38655,7 +40601,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_evaluar", "dificil",
+        "al_reves", "lec_forma", "dificil",
         "¿Qué efecto produce cerrar con Rubén sin pensar «absolutamente nada» en la "
         "micro?",
         "Recuerda que ese día no había nada que notar",
@@ -38671,7 +40617,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_interpretar", "dificil",
+        "al_reves", "lec_significado", "dificil",
         "¿Qué señala el narrador al decir que nueve años antes ese cálculo de cuatro "
         "segundos «habría sido imposible»?",
         "Que entonces saludarlo no habría requerido pensarlo",
@@ -38695,7 +40641,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "al_reves", "lec_evaluar", "dificil",
+        "al_reves", "lec_forma", "dificil",
         "¿Qué efecto produce que el narrador diga de la foto en la bodega que "
         "«ninguno la va a borrar»?",
         "Deja constancia de que ninguno rompió del todo",
@@ -38718,7 +40664,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La escritura no se inventó para escribir' ----------
     _ql(
-        "origen_escritura", "lec_localizar", "facil",
+        "origen_escritura", "lec_explicita", "facil",
         "Según la lectura, ¿qué contienen las tablillas escritas más antiguas que "
         "se conocen?",
         "Inventarios de grano, ganado y raciones entregadas",
@@ -38734,7 +40680,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_localizar", "facil",
+        "origen_escritura", "lec_explicita", "facil",
         "Según la lectura, ¿para qué se usaban las fichas de arcilla?",
         "Para representar mercancías dentro de un envío",
         "Cada forma correspondía a un producto: una para una medida de grano, otra "
@@ -38748,7 +40694,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_localizar", "medio",
+        "origen_escritura", "lec_explicita", "medio",
         "Según la lectura, ¿cuántas veces se inventó la escritura de manera "
         "independiente?",
         "Al menos tres, en regiones sin contacto entre sí",
@@ -38764,7 +40710,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_interpretar", "facil",
+        "origen_escritura", "lec_significado", "facil",
         "¿Por qué el emisor llama «paso de pura pereza» al momento decisivo?",
         "Porque el invento surgió de suprimir un trabajo de más",
         "Si las marcas de la superficie ya dicen lo que hay adentro, las fichas "
@@ -38778,7 +40724,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_interpretar", "medio",
+        "origen_escritura", "lec_relacion", "medio",
         "¿Qué distingue a los signos más antiguos de una escritura capaz de "
         "registrar una lengua completa?",
         "Los primeros anotaban cosas y cantidades, no sonidos",
@@ -38794,7 +40740,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_interpretar", "medio",
+        "origen_escritura", "lec_funcion", "medio",
         "¿Con qué finalidad se mencionan las tablillas escolares con quejas sobre "
         "el maestro?",
         "Para mostrar una rendija por donde asoma otra cosa",
@@ -38809,7 +40755,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_interpretar", "dificil",
+        "origen_escritura", "lec_relacion", "dificil",
         "¿Qué relación establece el emisor entre lo que se conservó y lo que "
         "ocurrió?",
         "Lo conservado depende de qué convenía anotar y dónde",
@@ -38825,7 +40771,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_evaluar", "facil",
+        "origen_escritura", "lec_intencion", "facil",
         "¿Con qué propósito el artículo empieza preguntando para qué se inventó la "
         "escritura?",
         "Para enfrentar la respuesta esperable con la documentada",
@@ -38841,7 +40787,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_evaluar", "medio",
+        "origen_escritura", "lec_postura", "medio",
         "¿Qué significa, según el emisor, que la escritura no tenga un inventor?",
         "Que resultó de un procedimiento que se fue simplificando",
         "El texto niega tres cosas a la vez: no hay un inventor, ni un momento, ni "
@@ -38855,7 +40801,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_evaluar", "dificil",
+        "origen_escritura", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor ante la hipótesis de las fichas de arcilla?",
         "Prudente, pues la presenta como la explicación más difundida",
         "El artículo no la enuncia como un hecho establecido: dice que es «la "
@@ -38870,7 +40816,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_evaluar", "dificil",
+        "origen_escritura", "lec_juicio", "dificil",
         "¿Qué agrega al artículo la advertencia final sobre los datos de este "
         "siglo?",
         "Traslada al presente el sesgo que describió en el pasado",
@@ -38887,7 +40833,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_interpretar", "dificil",
+        "origen_escritura", "lec_inferencia", "dificil",
         "¿Qué concluye el emisor de que la escritura se inventara al menos tres veces "
         "de manera independiente?",
         "Que respondía a un problema que reaparece al crecer",
@@ -38910,7 +40856,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "origen_escritura", "lec_evaluar", "dificil",
+        "origen_escritura", "lec_postura", "dificil",
         "¿Qué sostiene el emisor con el título «La escritura no se inventó para "
         "escribir»?",
         "Que nació como herramienta de cuentas, no de textos",
@@ -38935,7 +40881,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Lo falso viaja liviano' ----------
     _ql(
-        "noticias_falsas", "lec_localizar", "facil",
+        "noticias_falsas", "lec_explicita", "facil",
         "Según la lectura, ¿qué comparó el estudio de 2018?",
         "El recorrido de historias verdaderas y de historias falsas",
         "Siguió alrededor de ciento veintiséis mil historias difundidas entre 2006 "
@@ -38949,7 +40895,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_localizar", "facil",
+        "noticias_falsas", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocurrió al sacar de la muestra las cuentas "
         "automatizadas?",
         "La diferencia se mantuvo igual que antes",
@@ -38964,7 +40910,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_localizar", "medio",
+        "noticias_falsas", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué emociones aparecían en las respuestas a las "
         "historias falsas?",
         "Sorpresa y asco",
@@ -38979,7 +40925,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_interpretar", "facil",
+        "noticias_falsas", "lec_relacion", "facil",
         "Según el estudio, ¿por qué las historias falsas se comparten más?",
         "Porque resultan más novedosas que las verdaderas",
         "La novedad se midió: esas historias se parecían menos a lo que la persona "
@@ -38993,7 +40939,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_interpretar", "medio",
+        "noticias_falsas", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que no hace falta creer algo del "
         "todo para mandarlo?",
         "Que basta con que la historia valga la pena de contar",
@@ -39009,7 +40955,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_interpretar", "medio",
+        "noticias_falsas", "lec_significado", "medio",
         "¿Qué problema describe el emisor a propósito de las etiquetas de "
         "verificación?",
         "Que la falta de etiqueta se lee como un certificado",
@@ -39024,7 +40970,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_interpretar", "dificil",
+        "noticias_falsas", "lec_funcion", "dificil",
         "¿Qué función cumple el párrafo sobre lo que el estudio «no muestra»?",
         "Fija hasta dónde alcanzan sus conclusiones",
         "El emisor delimita tres cosas: se trabajó sobre una plataforma y un "
@@ -39040,7 +40986,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_evaluar", "facil",
+        "noticias_falsas", "lec_intencion", "facil",
         "¿Con qué propósito el emisor menciona a las «fábricas de mentiras» y los "
         "«ejércitos de robots»?",
         "Para reconocer que existen y que no explican lo medido",
@@ -39055,7 +41001,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_evaluar", "medio",
+        "noticias_falsas", "lec_postura", "medio",
         "¿Qué conclusión práctica extrae el emisor del hallazgo sobre la novedad?",
         "Que el asombro es una señal de alarma y no una garantía",
         "El razonamiento es directo: si lo que empuja a compartir es la novedad, "
@@ -39069,7 +41015,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_evaluar", "dificil",
+        "noticias_falsas", "lec_intencion", "dificil",
         "¿Por qué el emisor propone preguntarse por qué le dieron ganas de mandar "
         "algo?",
         "Porque apunta al impulso que el estudio encontró detrás",
@@ -39086,7 +41032,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_evaluar", "dificil",
+        "noticias_falsas", "lec_postura", "dificil",
         "¿Qué actitud adopta el emisor hacia quienes reenvían historias falsas?",
         "Indulgente, pues describe una conducta que cualquiera tiene",
         "El texto no reserva ningún reproche para esas personas: sostiene que "
@@ -39101,7 +41047,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_interpretar", "dificil",
+        "noticias_falsas", "lec_significado", "dificil",
         "¿Qué precisión hace el emisor al señalar que el estudio «midió difusión, no "
         "creencia»?",
         "Que lo falso se comparte más, no que se crea más",
@@ -39123,7 +41069,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "noticias_falsas", "lec_evaluar", "dificil",
+        "noticias_falsas", "lec_postura", "dificil",
         "¿Qué consigue el emisor al cerrar diciendo que la cadena se detiene en "
         "«alguien que leyó algo asombroso y no lo mandó»?",
         "Deja el remedio en manos de cualquier lector",
@@ -39146,7 +41092,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Todos los mapas mienten' ----------
     _ql(
-        "mapas_proyeccion", "lec_localizar", "facil",
+        "mapas_proyeccion", "lec_explicita", "facil",
         "Según la lectura, ¿cuántas veces cabe Groenlandia en África?",
         "Unas catorce veces",
         "África tiene alrededor de treinta millones de kilómetros cuadrados y "
@@ -39160,7 +41106,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_localizar", "facil",
+        "mapas_proyeccion", "lec_explicita", "facil",
         "Según la lectura, ¿para qué fue diseñada la proyección de Mercator?",
         "Para navegar, porque conserva los ángulos",
         "Publicada en 1569, permite que un rumbo constante se dibuje como una línea "
@@ -39174,7 +41120,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_localizar", "medio",
+        "mapas_proyeccion", "lec_explicita", "medio",
         "Según la lectura, ¿qué conserva y qué sacrifica la proyección de Gall- "
         "Peters?",
         "Conserva las áreas y a cambio estira las formas",
@@ -39190,7 +41136,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_interpretar", "facil",
+        "mapas_proyeccion", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al afirmar que la distorsión de los mapas «es "
         "un teorema»?",
         "Que no hay técnica capaz de evitarla, ni ahora ni nunca",
@@ -39205,7 +41151,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_interpretar", "medio",
+        "mapas_proyeccion", "lec_funcion", "medio",
         "¿Con qué finalidad se menciona el mapa del metro de Santiago?",
         "Para mostrar que un mapa útil puede deformar a propósito",
         "El texto reconoce que ese mapa «miente sobre las distancias» y afirma en "
@@ -39219,7 +41165,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_interpretar", "medio",
+        "mapas_proyeccion", "lec_funcion", "medio",
         "¿Qué agrega al argumento el párrafo sobre cuál lado del mapa va arriba?",
         "Que hasta la orientación del mapa es una convención",
         "El emisor observa que en el espacio no hay arriba ni abajo, y recuerda que "
@@ -39235,7 +41181,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_interpretar", "dificil",
+        "mapas_proyeccion", "lec_relacion", "dificil",
         "¿Qué relación hay entre el último párrafo y el resto del artículo?",
         "Extiende a otras representaciones lo probado con los mapas",
         "Hasta ese punto el texto había demostrado algo acotado: toda proyección "
@@ -39250,7 +41196,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_evaluar", "facil",
+        "mapas_proyeccion", "lec_intencion", "facil",
         "¿Con qué propósito el emisor afirma que Mercator «no se equivocó»?",
         "Para separar una herramienta de los usos que se le dieron",
         "La proyección resolvió bien el problema para el que fue creada, y el "
@@ -39264,7 +41210,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_evaluar", "medio",
+        "mapas_proyeccion", "lec_postura", "medio",
         "¿Qué distingue el emisor entre las dos afirmaciones que «suelen ir "
         "pegadas»?",
         "Una describe un efecto y la otra le atribuye una intención",
@@ -39281,7 +41227,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_evaluar", "dificil",
+        "mapas_proyeccion", "lec_intencion", "dificil",
         "¿Por qué el emisor señala que la proyección alternativa «tampoco es "
         "neutra»?",
         "Porque ninguna puede serlo: solo cambia qué se deforma",
@@ -39297,7 +41243,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_evaluar", "dificil",
+        "mapas_proyeccion", "lec_postura", "dificil",
         "¿Qué cambio propone el emisor en la manera de evaluar un mapa?",
         "Dejar de preguntar cuál es verdadero y preguntar para qué sirve",
         "El texto sostiene que la primera pregunta «está mal planteada», porque "
@@ -39313,7 +41259,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_interpretar", "dificil",
+        "mapas_proyeccion", "lec_relacion", "dificil",
         "Un atlas escolar busca que los estudiantes comparen el tamaño de los "
         "continentes. Según el emisor, ¿qué proyección le sirve?",
         "Una que conserve las áreas, aunque estire las formas",
@@ -39338,7 +41284,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mapas_proyeccion", "lec_evaluar", "dificil",
+        "mapas_proyeccion", "lec_forma", "dificil",
         "¿En qué sentido usa el emisor la palabra «mienten» en el título del artículo?",
         "Como deformación inevitable, no como engaño",
         "El título es una provocación que el propio texto desarma enseguida: «la "
@@ -39361,7 +41307,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La piscina' ----------
     _ql(
-        "piscina_salitrera", "lec_localizar", "facil",
+        "piscina_salitrera", "lec_parafrasis", "facil",
         "Según el relato, ¿con qué material está construida la piscina?",
         "Con planchas de fierro de un barco desguazado",
         "El relato explica la razón: cuando la construyeron no había cómo traer "
@@ -39375,7 +41321,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_localizar", "facil",
+        "piscina_salitrera", "lec_explicita", "facil",
         "Según el relato, ¿qué hizo la abuela el día que la llevaron a la oficina?",
         "Se quedó en el auto y dijo que hacía mucho calor",
         "La familia había ido con torta, de visita, y ella se quedó sentada con la "
@@ -39389,7 +41335,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_localizar", "medio",
+        "piscina_salitrera", "lec_parafrasis", "medio",
         "Según lo que explica Camila, ¿por qué dejó de funcionar la oficina?",
         "Porque el salitre se empezó a fabricar más barato",
         "En su relato, la oficina «se apagó como se apaga una casa: primero un ala, "
@@ -39402,7 +41348,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_interpretar", "facil",
+        "piscina_salitrera", "lec_inferencia", "facil",
         "¿Qué sugiere que el niño no logre imaginar la piscina con agua?",
         "Lo lejos que queda hoy lo que ese lugar llegó a ser",
         "El niño mira un fondo seco, con arena fina y una lagartija cruzando, y no "
@@ -39416,7 +41362,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_interpretar", "medio",
+        "piscina_salitrera", "lec_funcion", "medio",
         "¿Qué función cumple la piscina dentro del relato?",
         "Concentra el contraste entre lo que hubo y lo que queda",
         "Es el punto final del recorrido y el único ante el cual «la gente se "
@@ -39431,7 +41377,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_interpretar", "medio",
+        "piscina_salitrera", "lec_inferencia", "medio",
         "¿Qué revela que Camila diga su relato «con las pausas en el lugar "
         "correcto»?",
         "Que su historia es un trabajo ensayado muchas veces",
@@ -39446,7 +41392,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_interpretar", "dificil",
+        "piscina_salitrera", "lec_relacion", "dificil",
         "¿Qué relación establece el relato entre el silencio de la abuela y el "
         "oficio de Camila?",
         "Ella cuenta a diario un lugar del que su abuela calló",
@@ -39462,7 +41408,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_evaluar", "facil",
+        "piscina_salitrera", "lec_postura", "facil",
         "¿Qué actitud tiene Camila hacia su propio trabajo?",
         "Ambivalente, pues lo defiende y a la vez sospecha de él",
         "Reconoce que cuida el lugar: si nadie lo mostrara, «esto sería un montón "
@@ -39476,7 +41422,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_evaluar", "medio",
+        "piscina_salitrera", "lec_forma", "medio",
         "¿Qué efecto produce que la señora le diga «qué importante lo que usted "
         "hace»?",
         "Le entrega un elogio que el relato acaba de complicar",
@@ -39491,7 +41437,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_evaluar", "dificil",
+        "piscina_salitrera", "lec_forma", "dificil",
         "¿Qué sentido tiene la imagen final de la sombra del trampolín?",
         "Que en ese lugar lo único que se mueve es el tiempo",
         "El relato lo dice sin explicarlo: la sombra se estira, avanza, se detiene "
@@ -39507,7 +41453,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_evaluar", "dificil",
+        "piscina_salitrera", "lec_forma", "dificil",
         "¿Qué deja el relato deliberadamente sin resolver?",
         "Si mostrar el lugar lo conserva o lo va entregando",
         "Camila se lo pregunta seguido y «nunca llega al final de la pregunta», "
@@ -39522,7 +41468,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_interpretar", "dificil",
+        "piscina_salitrera", "lec_inferencia", "dificil",
         "¿Qué sugiere que Camila no sepa en cuál caja quedó la foto de aquella visita?",
         "Que ella también deja perderse lo que dice cuidar",
         "La foto es lo único que queda de la única vez que la abuela volvió a la "
@@ -39543,7 +41489,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "piscina_salitrera", "lec_evaluar", "dificil",
+        "piscina_salitrera", "lec_postura", "dificil",
         "¿Qué revela que Camila tenga «una respuesta ensayada» para la pregunta sobre "
         "su familia?",
         "Que lo personal también entró en el guion del recorrido",
@@ -39566,7 +41512,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'No es español con las manos' ----------
     _ql(
-        "lengua_senas", "lec_localizar", "facil",
+        "lengua_senas", "lec_explicita", "facil",
         "Según la lectura, ¿qué estableció la Ley 21.303?",
         "Que es la lengua oficial de las personas sordas",
         "El texto detalla la formulación de la ley: declara que la lengua de señas "
@@ -39581,7 +41527,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_localizar", "facil",
+        "lengua_senas", "lec_explicita", "facil",
         "Según la lectura, ¿para qué se usa el alfabeto manual?",
         "Para deletrear nombres propios y palabras prestadas",
         "El texto aclara que se usa poco y que no sirve para construir frases: es "
@@ -39595,7 +41541,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_localizar", "medio",
+        "lengua_senas", "lec_explicita", "medio",
         "Según la lectura, ¿qué recomendó el congreso reunido en Milán en 1880?",
         "El método oral, dejando las señas fuera de clases",
         "La recomendación se apoyaba en una idea que el emisor califica de difícil "
@@ -39609,7 +41555,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_interpretar", "facil",
+        "lengua_senas", "lec_significado", "facil",
         "¿Qué quiere decir que el espacio delante del cuerpo funcione «como un "
         "tablero»?",
         "Que ubicar ahí a alguien permite volver a referirse a él",
@@ -39624,7 +41570,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_interpretar", "medio",
+        "lengua_senas", "lec_funcion", "medio",
         "¿Con qué finalidad se compara pedirle a un intérprete que no mueva la cara "
         "con hablar sin usar los verbos?",
         "Para mostrar que la expresión facial cumple función gramatical",
@@ -39640,7 +41586,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_interpretar", "medio",
+        "lengua_senas", "lec_inferencia", "medio",
         "Según la lectura, ¿qué se sigue de que el español sea una segunda lengua "
         "para la mayoría de las personas sordas?",
         "Que una sintaxis extraña al escribir no es un error propio",
@@ -39656,7 +41602,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_interpretar", "dificil",
+        "lengua_senas", "lec_idea_central", "dificil",
         "¿Cómo están organizadas las tres primeras aclaraciones del artículo?",
         "Desarman por partes la suposición enunciada al comienzo",
         "El primer párrafo formula la creencia común —que el intérprete traduce "
@@ -39672,7 +41618,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_evaluar", "facil",
+        "lengua_senas", "lec_intencion", "facil",
         "¿Con qué propósito el emisor señala que una ley que reconoce una lengua no "
         "forma intérpretes?",
         "Para advertir que el reconocimiento no basta por sí solo",
@@ -39688,7 +41634,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_evaluar", "medio",
+        "lengua_senas", "lec_postura", "medio",
         "¿Qué actitud asume el emisor frente a la recomendación de 1880?",
         "Crítica, pues describe lo que produjo en generaciones",
         "El emisor no se limita a informarla: dice que su idea de base «hoy resulta "
@@ -39702,7 +41648,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_evaluar", "dificil",
+        "lengua_senas", "lec_intencion", "dificil",
         "¿Por qué el emisor insiste en que llamarla «lengua» no es una cortesía?",
         "Porque de una descripción correcta se siguen obligaciones",
         "El cierre distingue dos cosas que se confunden: un gesto de amabilidad "
@@ -39718,7 +41664,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_evaluar", "dificil",
+        "lengua_senas", "lec_postura", "dificil",
         "¿Qué muestra el emisor al contar que las señas siguieron transmitiéndose "
         "en los patios?",
         "Que la lengua sobrevivió fuera de donde estaba prohibida",
@@ -39735,7 +41681,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_interpretar", "dificil",
+        "lengua_senas", "lec_significado", "dificil",
         "¿Qué señala el emisor al mencionar al familiar que hace de traductor en una "
         "consulta médica?",
         "Que sin intérprete se pierde la privacidad del paciente",
@@ -39756,7 +41702,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "lengua_senas", "lec_evaluar", "dificil",
+        "lengua_senas", "lec_juicio", "dificil",
         "¿Qué agrega al argumento final que la lengua de señas permita decir "
         "cualquier cosa, «incluidos los chistes y las mentiras»?",
         "Que sirve para todo y no solo para lo necesario",
@@ -39779,7 +41725,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El azar no se ve como azar' ----------
     _ql(
-        "azar_rachas", "lec_localizar", "facil",
+        "azar_rachas", "lec_explicita", "facil",
         "Según la lectura, ¿qué probabilidad hay de que en veinte lanzamientos "
         "aparezca una racha de al menos cuatro resultados iguales?",
         "Cerca del 77 %",
@@ -39794,7 +41740,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_localizar", "facil",
+        "azar_rachas", "lec_explicita", "facil",
         "Según la lectura, ¿qué cambió Spotify en su función de reproducción "
         "aleatoria?",
         "La modificó para repartir los temas de un mismo artista",
@@ -39809,7 +41755,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_localizar", "medio",
+        "azar_rachas", "lec_explicita", "medio",
         "Según la lectura, ¿qué mostró el análisis posterior de los bombardeos "
         "sobre Londres?",
         "Que el reparto era compatible con impactos al azar",
@@ -39824,7 +41770,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_interpretar", "facil",
+        "azar_rachas", "lec_relacion", "facil",
         "¿Por qué se reconoce a simple vista cuál de los dos papeles escribió una "
         "persona?",
         "Porque la secuencia inventada alterna demasiado",
@@ -39839,7 +41785,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_interpretar", "medio",
+        "azar_rachas", "lec_significado", "medio",
         "¿Qué quiere decir que el equilibrio aparezca «por dilución, no por "
         "compensación»?",
         "Que los desvíos no se corrigen: pierden peso en el total",
@@ -39855,7 +41801,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_interpretar", "medio",
+        "azar_rachas", "lec_funcion", "medio",
         "¿Con qué finalidad se menciona un curso de diez estudiantes y un liceo de "
         "mil?",
         "Para mostrar que las muestras chicas dan resultados extremos",
@@ -39870,7 +41816,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_interpretar", "dificil",
+        "azar_rachas", "lec_funcion", "dificil",
         "¿Qué lugar ocupa el caso de la aplicación de música dentro del argumento?",
         "Es el caso extremo: se redujo el azar para que se notara",
         "Los ejemplos anteriores muestran a personas equivocándose sobre el azar. "
@@ -39885,7 +41831,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_evaluar", "facil",
+        "azar_rachas", "lec_intencion", "facil",
         "¿Con qué propósito el emisor advierte que existe «el error contrario»?",
         "Para evitar que se explique todo con la casualidad",
         "Quien aprende que el azar produce rachas puede empezar a descartar "
@@ -39900,7 +41846,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_interpretar", "medio",
+        "azar_rachas", "lec_relacion", "medio",
         "Según la lectura, ¿en qué se equivoca quien anota los últimos resultados "
         "de una ruleta?",
         "Supone que un objeto sin memoria compensará lo ocurrido",
@@ -39915,7 +41861,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_evaluar", "dificil",
+        "azar_rachas", "lec_juicio", "dificil",
         "¿Qué se sigue, según la lectura, de que una lista breve aparezca en el "
         "extremo de un ranking?",
         "Que su lugar puede deberse al tamaño y no al desempeño",
@@ -39931,7 +41877,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_evaluar", "dificil",
+        "azar_rachas", "lec_postura", "dificil",
         "¿Qué criterio propone el emisor para decidir si una racha es ruido o "
         "señal?",
         "Preguntarse cuántas oportunidades hubo de que ocurriera",
@@ -39948,7 +41894,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_interpretar", "dificil",
+        "azar_rachas", "lec_relacion", "dificil",
         "¿Qué distingue el emisor al decir que la gente de Londres «había encontrado "
         "un patrón real en los datos y una causa inexistente detrás de él»?",
         "Que ver un patrón no prueba que alguien lo haya causado",
@@ -39970,7 +41916,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "azar_rachas", "lec_evaluar", "dificil",
+        "azar_rachas", "lec_postura", "dificil",
         "¿Qué sostiene el emisor al cerrar diciendo que el azar «no produce orden» "
         "pero sí produce cosas que nos parecen demasiado ordenadas?",
         "Que parecer demasiado ordenado no descarta el azar",
@@ -39996,7 +41942,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Dieciocho años para cuatro años' ----------
     _ql(
-        "ley_1920", "lec_localizar", "facil",
+        "ley_1920", "lec_explicita", "facil",
         "Según la lectura, ¿qué exigía la Ley 3.654 a los padres o guardadores?",
         "Cuatro años de escuela primaria antes de los trece",
         "El texto resume el contenido de la ley en una frase: la asistencia debía "
@@ -40010,7 +41956,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_localizar", "facil",
+        "ley_1920", "lec_parafrasis", "facil",
         "Según la lectura, ¿cuánto tiempo estuvo el proyecto en el Congreso?",
         "Dieciocho años: entró en 1902 y se aprobó en 1920",
         "Ese contraste da el título al artículo: dieciocho años de tramitación para "
@@ -40024,7 +41970,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_localizar", "medio",
+        "ley_1920", "lec_explicita", "medio",
         "Según la lectura, ¿qué mostraba el censo del mismo año de la ley?",
         "Que cerca de la mitad del país declaró no saber leer",
         "El emisor agrega que en el campo la proporción era bastante peor.\n\nEl "
@@ -40037,7 +41983,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_interpretar", "facil",
+        "ley_1920", "lec_significado", "facil",
         "¿Por qué el emisor llama «el más incómodo» al tercer argumento?",
         "Porque era cierto y también lo sostenían los partidarios",
         "Los dos primeros argumentos se podían discutir: uno era doctrinario y el "
@@ -40051,7 +41997,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_interpretar", "medio",
+        "ley_1920", "lec_funcion", "medio",
         "¿Con qué finalidad el emisor distingue tres tipos de argumentos?",
         "Para impedir que se lean como una sola oposición",
         "El texto lo anuncia antes de enumerarlos: las razones «no fueron todas del "
@@ -40065,7 +42011,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_interpretar", "medio",
+        "ley_1920", "lec_significado", "medio",
         "¿Qué quiere decir que obligar a asistir a un lugar inexistente sea «una "
         "declaración, no una política»?",
         "Que sin escuelas la obligación no produce ningún efecto",
@@ -40080,7 +42026,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_interpretar", "dificil",
+        "ley_1920", "lec_idea_central", "dificil",
         "¿Cómo está organizado el párrafo sobre qué cambió y qué no en la "
         "discusión?",
         "Retoma los tres argumentos en el mismo orden anterior",
@@ -40096,7 +42042,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_evaluar", "facil",
+        "ley_1920", "lec_postura", "facil",
         "¿Qué actitud asume el emisor hacia quienes se opusieron a la ley?",
         "Ecuánime, pues separa razones de distinta naturaleza",
         "El texto podría haber presentado a los opositores como un solo bloque "
@@ -40110,7 +42056,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_evaluar", "medio",
+        "ley_1920", "lec_postura", "medio",
         "¿Qué hace el emisor con las dos lecturas opuestas de lo ocurrido después "
         "de 1920?",
         "Expone las dos y advierte que ambas se han sostenido",
@@ -40126,7 +42072,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_evaluar", "dificil",
+        "ley_1920", "lec_juicio", "dificil",
         "¿Cuál de las siguientes afirmaciones del texto corresponde a una opinión "
         "del emisor?",
         "Que el caso de 1920 no es un episodio cerrado",
@@ -40142,7 +42088,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_evaluar", "dificil",
+        "ley_1920", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al cerrar preguntando quién se hace cargo de la "
         "diferencia entre lo que la ley obliga y lo que el país puede?",
         "Dejar abierto el problema que la ley no llegó a resolver",
@@ -40158,7 +42104,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_interpretar", "dificil",
+        "ley_1920", "lec_significado", "dificil",
         "¿Por qué el emisor dice que la respuesta honesta al argumento económico «no "
         "es la clase de respuesta que gana votaciones»?",
         "Porque pedía un costo seguro por un beneficio incierto",
@@ -40179,7 +42125,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "ley_1920", "lec_evaluar", "dificil",
+        "ley_1920", "lec_forma", "dificil",
         "¿Qué logra el título al enfrentar dieciocho años con cuatro años?",
         "Pone a la vista la desproporción entre discutir y exigir",
         "Los dos números son de cosas distintas y por eso chocan. Dieciocho son los "
@@ -40201,7 +42147,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El remedio que no era para eso' ----------
     _ql(
-        "antibiotico_resfrio", "lec_localizar", "facil",
+        "antibiotico_resfrio", "lec_explicita", "facil",
         "Según la lectura, ¿cuánto dura un resfrío común?",
         "Entre siete y diez días, con o sin remedios",
         "El dato es la base del razonamiento del texto: si el cuadro dura eso por "
@@ -40215,7 +42161,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_localizar", "facil",
+        "antibiotico_resfrio", "lec_explicita", "facil",
         "Según la lectura, ¿desde cuándo está prohibida en Chile la venta de "
         "antibióticos sin receta?",
         "Desde septiembre de 1999",
@@ -40230,7 +42176,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_localizar", "medio",
+        "antibiotico_resfrio", "lec_explicita", "medio",
         "Según la lectura, ¿de dónde proviene el color verde o amarillo del mucus?",
         "De las células de defensa del propio cuerpo",
         "El texto lo dice sin rodeos: «el color no viene del germen». Son las "
@@ -40244,7 +42190,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_interpretar", "facil",
+        "antibiotico_resfrio", "lec_relacion", "facil",
         "¿Qué explica la comparación con una llave llevada a una puerta que no "
         "existe?",
         "Que en un virus no hay sobre qué actuar",
@@ -40259,7 +42205,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_interpretar", "medio",
+        "antibiotico_resfrio", "lec_relacion", "medio",
         "Según la lectura, ¿por qué tanta gente jura que el antibiótico le sirvió?",
         "Porque lo toma cuando el cuadro ya iba de bajada",
         "El texto reconstruye la secuencia: el resfrío dura entre siete y diez "
@@ -40274,7 +42220,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_interpretar", "medio",
+        "antibiotico_resfrio", "lec_significado", "medio",
         "¿Qué quiere decir que la medida de 1999 cambió el mostrador pero no el "
         "mueble del baño?",
         "Que reguló la venta y no lo que quedó guardado",
@@ -40290,7 +42236,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_interpretar", "dificil",
+        "antibiotico_resfrio", "lec_funcion", "dificil",
         "¿Qué función cumple el párrafo que sigue a las cifras de mortalidad?",
         "Traduce esos números a una decisión de una persona",
         "El emisor admite que las cifras grandes «resbalan»: un millón trescientas "
@@ -40305,7 +42251,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_evaluar", "facil",
+        "antibiotico_resfrio", "lec_intencion", "facil",
         "¿Con qué propósito el emisor aclara lo que su artículo no afirma?",
         "Para evitar que se lea como un rechazo al antibiótico",
         "El párrafo es explícito: los antibióticos son «uno de los inventos que más "
@@ -40320,7 +42266,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_evaluar", "medio",
+        "antibiotico_resfrio", "lec_juicio", "medio",
         "¿Qué falla de razonamiento describe el emisor al hablar de «vino después» "
         "y «fue por causa de»?",
         "Atribuir a un remedio una mejoría que igual ocurriría",
@@ -40335,7 +42281,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_evaluar", "dificil",
+        "antibiotico_resfrio", "lec_intencion", "dificil",
         "¿Con qué finalidad se menciona la sopa de la abuela?",
         "Para mostrar con humor que cualquier cosa parecería eficaz",
         "El ejemplo lleva el razonamiento al absurdo: si la mejoría llega sola, "
@@ -40350,7 +42296,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_evaluar", "dificil",
+        "antibiotico_resfrio", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor hacia quien se automedica con lo que le "
         "sobró?",
         "Comprensiva, pues reconoce que es lo que pensaría cualquiera",
@@ -40367,7 +42313,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_interpretar", "dificil",
+        "antibiotico_resfrio", "lec_inferencia", "dificil",
         "¿Qué implica la recomendación de no guardar sobras, «porque si sobraron, es "
         "que algo se hizo distinto de lo indicado»?",
         "Que el tratamiento no se completó como estaba indicado",
@@ -40389,7 +42335,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "antibiotico_resfrio", "lec_evaluar", "dificil",
+        "antibiotico_resfrio", "lec_postura", "dificil",
         "¿Qué consigue el emisor al cerrar diciendo que esperar y descansar «también "
         "es una indicación médica, aunque venga sin caja»?",
         "Presenta no medicar como una decisión y no como un vacío",
@@ -40411,7 +42357,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La cuenta de don Nibaldo' ----------
     _ql(
-        "cuenta_nibaldo", "lec_localizar", "facil",
+        "cuenta_nibaldo", "lec_explicita", "facil",
         "Según el relato, ¿qué encuentra la familia en el primer cajón de la casa?",
         "Un cuaderno de tapa dura con columnas de números",
         "Es el mismo cuaderno que el narrador había visto nueve años antes, cuando "
@@ -40425,7 +42371,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_localizar", "facil",
+        "cuenta_nibaldo", "lec_parafrasis", "facil",
         "Según el relato, ¿qué decide la madre del narrador después de leer el "
         "cuaderno?",
         "Que es mejor que la señora Berta no se entere",
@@ -40440,7 +42386,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_localizar", "medio",
+        "cuenta_nibaldo", "lec_parafrasis", "medio",
         "Según el relato, ¿qué contienen exactamente las columnas del cuaderno?",
         "Montos por mes desde 2009, cada uno con una letra B",
         "El relato es preciso con ese registro: van ordenados por mes desde octubre "
@@ -40455,7 +42401,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_interpretar", "facil",
+        "cuenta_nibaldo", "lec_inferencia", "facil",
         "¿Qué muestra la escena en que don Nibaldo devuelve una moneda de veinte "
         "pesos?",
         "Que anotaba todo, hasta las cantidades más pequeñas",
@@ -40470,7 +42416,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_interpretar", "medio",
+        "cuenta_nibaldo", "lec_funcion", "medio",
         "¿Qué aporta al relato que la fama del vecino «no admitiera matices»?",
         "Instala la única idea que el hallazgo pondrá en duda",
         "El relato subraya cómo se transmitía esa fama: los adultos la decían "
@@ -40484,7 +42430,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_interpretar", "medio",
+        "cuenta_nibaldo", "lec_funcion", "medio",
         "¿Qué efecto tiene que el narrador cuente que él también asintió en el "
         "velorio?",
         "Se incluye entre quienes repitieron ese juicio",
@@ -40499,7 +42445,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_interpretar", "dificil",
+        "cuenta_nibaldo", "lec_relacion", "dificil",
         "¿Qué relación hay entre el orden en que se cuentan los hechos y el efecto "
         "del hallazgo?",
         "El lector recorre el mismo cambio de idea que el narrador",
@@ -40515,7 +42461,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_evaluar", "facil",
+        "cuenta_nibaldo", "lec_intencion", "facil",
         "¿Con qué propósito el narrador dice que le gustaría escribir que el barrio "
         "cambió de idea?",
         "Para rechazar el final consolador que se esperaría",
@@ -40530,7 +42476,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_evaluar", "medio",
+        "cuenta_nibaldo", "lec_forma", "medio",
         "¿De qué manera el relato trabaja con la figura del viejo avaro?",
         "La arma completa y después la deja junto a otro dato",
         "El relato reúne todos los rasgos del tipo —el frío, las bolsas lavadas, el "
@@ -40545,7 +42491,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_evaluar", "dificil",
+        "cuenta_nibaldo", "lec_intencion", "dificil",
         "¿Qué consigue el relato al preguntar si le cobró el mes para pagarle el "
         "tratamiento?",
         "Impide leer la historia como una generosidad escondida",
@@ -40561,7 +42507,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_evaluar", "dificil",
+        "cuenta_nibaldo", "lec_juicio", "dificil",
         "¿Qué hipótesis sobre el relato se sostiene mejor con lo ocurrido nueve "
         "años después?",
         "Que una sola idea sobre alguien resulta cómoda y dura",
@@ -40577,7 +42523,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_interpretar", "dificil",
+        "cuenta_nibaldo", "lec_relacion", "dificil",
         "¿Qué distinción hace la madre al decir que «una cosa es recibir ayuda y otra "
         "es enterarse quince años después»?",
         "Que saberlo tarde cambia el sentido de lo recibido",
@@ -40601,7 +42547,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cuenta_nibaldo", "lec_evaluar", "dificil",
+        "cuenta_nibaldo", "lec_forma", "dificil",
         "¿Qué efecto produce que el relato termine diciendo que las cifras «no dicen "
         "nada más de lo que dicen»?",
         "Insiste en que el cuaderno no explica al hombre",
@@ -40626,7 +42572,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Cinco grados de diferencia' ----------
     _ql(
-        "cinco_grados", "lec_localizar", "facil",
+        "cinco_grados", "lec_explicita", "facil",
         "Según la lectura, ¿cuántas «zonas frías» identificó el estudio dado a "
         "conocer este año?",
         "Setenta y siete parques y áreas verdes",
@@ -40642,7 +42588,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_localizar", "facil",
+        "cinco_grados", "lec_explicita", "facil",
         "Según la lectura, ¿cuánto más fresco puede estar el pavimento bajo la copa "
         "de un árbol?",
         "Entre once y veinticinco grados",
@@ -40657,7 +42603,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_localizar", "medio",
+        "cinco_grados", "lec_explicita", "medio",
         "Según la lectura, ¿por qué la ciudad no alcanza a enfriarse durante la "
         "noche?",
         "Porque el asfalto devuelve de noche el calor que absorbió",
@@ -40672,7 +42618,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_interpretar", "facil",
+        "cinco_grados", "lec_relacion", "facil",
         "¿Qué distingue a los dos mecanismos con que un árbol enfría?",
         "Uno refresca la superficie y el otro, el aire del barrio",
         "La sombra intercepta la radiación y produce una diferencia grande, pero "
@@ -40686,7 +42632,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_interpretar", "medio",
+        "cinco_grados", "lec_funcion", "medio",
         "¿Con qué finalidad el emisor llama «infraestructura» a un parque?",
         "Para atribuirle una función medible que exige mantención",
         "El texto lo explicita: cumple una función que se puede medir, se deteriora "
@@ -40700,7 +42646,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_interpretar", "medio",
+        "cinco_grados", "lec_significado", "medio",
         "¿Qué sostiene el emisor al señalar que el mapa del calor y el del ingreso "
         "se parecen?",
         "Que la exposición al calor sigue la desigualdad de la ciudad",
@@ -40716,7 +42662,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_interpretar", "dificil",
+        "cinco_grados", "lec_funcion", "dificil",
         "¿Qué lugar ocupa en el texto el párrafo sobre los nueve metros cuadrados "
         "por habitante?",
         "Retira del propio argumento un dato que no se puede rastrear",
@@ -40732,7 +42678,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_evaluar", "facil",
+        "cinco_grados", "lec_forma", "facil",
         "¿Qué actitud asume el emisor ante la cifra atribuida a la Organización "
         "Mundial de la Salud?",
         "Exigente, pues la descarta aunque favorezca su posición",
@@ -40748,7 +42694,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_interpretar", "medio",
+        "cinco_grados", "lec_relacion", "medio",
         "Según la lectura, ¿qué debilita a un argumento que se apoya en una "
         "autoridad inexistente?",
         "Que al caerse la cita parece caerse todo el planteamiento",
@@ -40763,7 +42709,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_evaluar", "dificil",
+        "cinco_grados", "lec_postura", "dificil",
         "¿Cómo se hace cargo el emisor de la objeción del agua?",
         "Reconoce el costo y cambia la pregunta por qué se riega",
         "El emisor llama a esa objeción «la seria» y admite que enfriar por "
@@ -40779,7 +42725,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_evaluar", "dificil",
+        "cinco_grados", "lec_intencion", "dificil",
         "¿Por qué el emisor considera que plantar árboles es una decisión fácil de "
         "postergar?",
         "Porque el beneficio llega cuando ya decidieron otros",
@@ -40797,7 +42743,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_interpretar", "dificil",
+        "cinco_grados", "lec_significado", "dificil",
         "¿Por qué el emisor sostiene que cuidar los árboles existentes rinde más que "
         "celebrar plantaciones nuevas?",
         "Porque un árbol viejo da más sombra por litro de agua",
@@ -40819,7 +42765,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cinco_grados", "lec_evaluar", "dificil",
+        "cinco_grados", "lec_postura", "dificil",
         "¿Qué consigue el emisor al cerrar diciendo que los cinco grados «siguen ahí, "
         "esperando en la vereda de enfrente»?",
         "Devuelve la cifra al lugar donde la gente la vive",
@@ -40844,7 +42790,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- '«Restaurar no es dejarlo como nuevo»' ----------
     _ql(
-        "restauradora_papel", "lec_localizar", "facil",
+        "restauradora_papel", "lec_explicita", "facil",
         "Según la entrevistada, ¿qué daño produce la cinta adhesiva en el papel?",
         "Su adhesivo se oxida, cruza la fibra y deja una mancha",
         "La entrevistada la señala como «el más común» de los enemigos del papel: "
@@ -40858,7 +42804,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_localizar", "facil",
+        "restauradora_papel", "lec_explicita", "facil",
         "Según la entrevistada, ¿qué conviene usar en vez de una bolsa plástica "
         "sellada?",
         "Una caja de cartón, en un lugar oscuro y seco",
@@ -40873,7 +42819,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_localizar", "medio",
+        "restauradora_papel", "lec_explicita", "medio",
         "Según la entrevistada, ¿por qué un diario de 1970 puede estar peor que un "
         "documento del siglo XVII?",
         "Porque el papel industrial se acidifica por sí solo",
@@ -40888,7 +42834,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_interpretar", "facil",
+        "restauradora_papel", "lec_significado", "facil",
         "¿Qué quiere decir la entrevistada al afirmar que un papel de 1932 que se "
         "ve nuevo «está falsificado»?",
         "Que borrar las marcas del tiempo altera el documento",
@@ -40902,7 +42848,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_interpretar", "medio",
+        "restauradora_papel", "lec_funcion", "medio",
         "¿Con qué finalidad la entrevistada menciona unos discos que grabó el año "
         "2003?",
         "Para mostrar que lo digital también exige cuidado",
@@ -40918,7 +42864,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_interpretar", "medio",
+        "restauradora_papel", "lec_significado", "medio",
         "¿Qué idea comparten lo que la entrevistada dice sobre la humedad, la luz y "
         "la acidez?",
         "Que el peor daño es lento y no se nota mientras ocurre",
@@ -40934,7 +42880,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_interpretar", "dificil",
+        "restauradora_papel", "lec_relacion", "dificil",
         "¿Qué relación hay entre la regla de intervenir lo mínimo y su molestia con "
         "la palabra «restaurar»?",
         "La regla explica por qué rechaza que restaurar sea dejar nuevo",
@@ -40950,7 +42896,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_evaluar", "facil",
+        "restauradora_papel", "lec_intencion", "facil",
         "¿Con qué propósito se advierte en la bajada que la entrevistada es un "
         "personaje?",
         "Para que nadie atribuya lo dicho a una persona real",
@@ -40965,7 +42911,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_evaluar", "medio",
+        "restauradora_papel", "lec_postura", "medio",
         "¿Qué actitud asume la entrevistada hacia quienes dañan sus documentos sin "
         "saberlo?",
         "Comprensiva, pues atribuye el daño a la buena intención",
@@ -40981,7 +42927,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_evaluar", "dificil",
+        "restauradora_papel", "lec_postura", "dificil",
         "¿Cómo corrige la entrevistada la idea de que el problema es la humedad "
         "alta?",
         "Sostiene que daña más la que sube y baja que la estable",
@@ -40997,7 +42943,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_evaluar", "dificil",
+        "restauradora_papel", "lec_forma", "dificil",
         "¿Qué sentido tiene que la entrevista termine diciendo que lo primero que "
         "se pierde es el nombre de la gente?",
         "Amplía qué se conserva: no solo el objeto, su sentido",
@@ -41013,7 +42959,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_interpretar", "dificil",
+        "restauradora_papel", "lec_relacion", "dificil",
         "¿Qué distingue la entrevistada entre salvar la información y conservar el "
         "documento?",
         "Que un escaneo guarda el contenido y no el objeto",
@@ -41037,7 +42983,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "restauradora_papel", "lec_evaluar", "dificil",
+        "restauradora_papel", "lec_forma", "dificil",
         "¿Qué anticipa la frase inicial sobre el cuaderno que llegó «dentro de una "
         "bolsa plástica y con la mejor de las intenciones»?",
         "El error frecuente de quien cree estar protegiendo",
@@ -41060,7 +43006,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El libro que no devolviste' ----------
     _ql(
-        "libro_no_devuelto", "lec_localizar", "facil",
+        "libro_no_devuelto", "lec_parafrasis", "facil",
         "Según el relato, ¿qué funciona hoy en la casa donde vivía la tía?",
         "Un almacén, con cortinas de plástico en la puerta",
         "El personaje reconoce la ventana, el marco torcido y la pandereta, pero lo "
@@ -41074,7 +43020,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_localizar", "facil",
+        "libro_no_devuelto", "lec_explicita", "facil",
         "Según el relato, ¿qué le informa la señora del almacén sobre los Cárdenas?",
         "Que vendieron hace unos quince años y se fueron a Concepción",
         "La señora entrega cuatro datos: la venta, el traslado a Concepción, la "
@@ -41088,7 +43034,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_localizar", "medio",
+        "libro_no_devuelto", "lec_parafrasis", "medio",
         "Según el relato, ¿qué alcanza a distinguirse del nombre tachado del libro?",
         "Una eme, una hache y el año 1991",
         "El nombre está escrito a lápiz mina y tachado con dos rayas, «tan tachado "
@@ -41102,7 +43048,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_interpretar", "facil",
+        "libro_no_devuelto", "lec_inferencia", "facil",
         "¿Qué muestra que el personaje haya llevado el libro a cuatro mudanzas sin "
         "sacarlo de la caja?",
         "Que carga el asunto sin decidirse a resolverlo",
@@ -41116,7 +43062,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_interpretar", "medio",
+        "libro_no_devuelto", "lec_funcion", "medio",
         "¿Qué aporta al relato que el canal aparezca al principio seco y con "
         "paredes nuevas?",
         "Mide la distancia entre el verano recordado y el presente",
@@ -41131,7 +43077,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_interpretar", "medio",
+        "libro_no_devuelto", "lec_significado", "medio",
         "¿Qué sentido tiene que el olor a eucaliptos aparezca al comienzo y al "
         "final del relato?",
         "Señala lo único que se mantuvo igual en el pueblo",
@@ -41146,7 +43092,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_interpretar", "dificil",
+        "libro_no_devuelto", "lec_inferencia", "dificil",
         "¿Qué cambia para el personaje cuando descubre el nombre tachado?",
         "La deuda deja de ser solo suya y pasa a ser heredada",
         "El personaje lo dice sin adornos: «Eso no te libera de nada. Pero cambia "
@@ -41160,7 +43106,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_evaluar", "facil",
+        "libro_no_devuelto", "lec_intencion", "facil",
         "¿Con qué propósito el narrador señala que «nadie te prohibió volver»?",
         "Para dejar la omisión enteramente a cargo del personaje",
         "La frase aparece justo después de las razones que sí existieron: la "
@@ -41175,7 +43121,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_evaluar", "medio",
+        "libro_no_devuelto", "lec_forma", "medio",
         "¿Qué efecto produce que el relato esté narrado en segunda persona?",
         "Suena como un repaso que el personaje se hace a sí mismo",
         "El «tú» no se dirige al lector para pedirle nada: enumera lo que el "
@@ -41189,7 +43135,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_evaluar", "dificil",
+        "libro_no_devuelto", "lec_forma", "dificil",
         "¿Cómo influye la perspectiva del narrador en lo que el lector sabe de "
         "Sofía?",
         "Solo la conoce por el recuerdo de él, nunca por ella misma",
@@ -41205,7 +43151,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_evaluar", "dificil",
+        "libro_no_devuelto", "lec_juicio", "dificil",
         "¿Qué hipótesis sobre el sentido del relato sostiene mejor su final?",
         "Que hay deudas que se prefieren conservar antes que saldar",
         "El personaje comprueba que buscarla tomaría dos minutos, reconoce que no "
@@ -41220,7 +43166,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_interpretar", "dificil",
+        "libro_no_devuelto", "lec_inferencia", "dificil",
         "¿Qué deja ver el contraste entre los veinticuatro años del personaje y los "
         "«dos minutos» que le tomaría buscar a Sofía?",
         "Que la distancia nunca fue la razón de no buscarla",
@@ -41243,7 +43189,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "libro_no_devuelto", "lec_evaluar", "dificil",
+        "libro_no_devuelto", "lec_postura", "dificil",
         "¿Qué revela que el personaje compre en el almacén una bebida que no tiene "
         "ganas de tomar?",
         "Que necesita una excusa para haber entrado ahí",
@@ -41266,7 +43212,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El audio de tres minutos' ----------
     _ql(
-        "audio_tres_minutos", "lec_localizar", "facil",
+        "audio_tres_minutos", "lec_explicita", "facil",
         "Según la lectura, ¿cuántas palabras por minuto produce una persona "
         "conversando?",
         "Alrededor de ciento treinta",
@@ -41281,7 +43227,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_localizar", "facil",
+        "audio_tres_minutos", "lec_explicita", "facil",
         "Según la lectura, ¿por qué para algunas personas el audio es «la única "
         "puerta»?",
         "Porque escribir en un teléfono no les resulta igual de fácil",
@@ -41296,7 +43242,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_localizar", "medio",
+        "audio_tres_minutos", "lec_parafrasis", "medio",
         "Según la lectura, ¿qué ejemplo se da de un error de las transcripciones "
         "automáticas?",
         "Leer «en el cerro» donde se había dicho «a las cero»",
@@ -41311,7 +43257,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_interpretar", "facil",
+        "audio_tres_minutos", "lec_significado", "facil",
         "¿Qué quiere decir el emisor al afirmar que el audio no ahorra tiempo, sino "
         "que lo traslada?",
         "Que el tiempo que ahorra quien graba lo gasta quien escucha",
@@ -41326,7 +43272,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_interpretar", "medio",
+        "audio_tres_minutos", "lec_funcion", "medio",
         "¿Con qué finalidad se menciona una reunión «sin sala, sin citación y sin "
         "acta»?",
         "Para mostrar que un audio grupal cuesta lo mismo que una reunión",
@@ -41341,7 +43287,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_interpretar", "medio",
+        "audio_tres_minutos", "lec_funcion", "medio",
         "¿Qué función cumple la comparación entre un chat de audios y un pasillo?",
         "Subrayar que ahí lo dicho no queda registrado ni se puede buscar",
         "El párrafo opone dos imágenes: el chat escrito es un archivo donde se "
@@ -41355,7 +43301,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_interpretar", "dificil",
+        "audio_tres_minutos", "lec_relacion", "dificil",
         "¿Qué relación hay entre la primera parte de la columna y la que se anuncia "
         "como «la parte incómoda»?",
         "La segunda pone objeciones que obligan a acotar lo afirmado antes",
@@ -41371,7 +43317,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_evaluar", "facil",
+        "audio_tres_minutos", "lec_intencion", "facil",
         "¿Con qué propósito el emisor cuenta que él mismo mandó ayer un audio de "
         "dos minutos y medio?",
         "Para admitir que su propia conducta no sigue lo que argumenta",
@@ -41387,7 +43333,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_evaluar", "medio",
+        "audio_tres_minutos", "lec_intencion", "medio",
         "¿Qué efecto busca el emisor al escribir «Nadie ha muerto, nadie necesita "
         "ayuda, nadie está perdido»?",
         "Exagerar la urgencia del formato frente a lo menor del asunto",
@@ -41403,7 +43349,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_evaluar", "dificil",
+        "audio_tres_minutos", "lec_postura", "dificil",
         "¿Cómo se hace cargo el emisor de la objeción sobre accesibilidad?",
         "La acepta y cambia su regla por una distinción entre usos",
         "El emisor no responde la objeción con un matiz menor: sostiene que "
@@ -41419,7 +43365,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_evaluar", "dificil",
+        "audio_tres_minutos", "lec_juicio", "dificil",
         "¿Cuál de las siguientes afirmaciones de la lectura es una opinión del "
         "emisor y no un dato?",
         "Que la cortesía consiste en hacerse cargo uno mismo del costo",
@@ -41435,7 +43381,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_interpretar", "dificil",
+        "audio_tres_minutos", "lec_inferencia", "dificil",
         "¿Qué implica que el emisor diga que un audio irresumible «no es información: "
         "es compañía, y conviene avisarlo»?",
         "Que enviarlo está bien si el otro sabe qué recibe",
@@ -41457,7 +43403,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "audio_tres_minutos", "lec_evaluar", "dificil",
+        "audio_tres_minutos", "lec_postura", "dificil",
         "¿Qué logra el emisor al llamar «préstamo» al costo que un audio traslada?",
         "Nombra como deuda algo que parecía un favor",
         "La palabra está elegida con cuidado: un préstamo supone dos partes, una "
@@ -41478,7 +43424,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Quince años sin llover como antes' ----------
     _ql(
-        "megasequia", "lec_localizar", "facil",
+        "megasequia", "lec_explicita", "facil",
         "Según la lectura, ¿de cuánto es el déficit de precipitaciones de la "
         "megasequía?",
         "De cerca de un treinta por ciento",
@@ -41493,7 +43439,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_localizar", "facil",
+        "megasequia", "lec_explicita", "facil",
         "Según la lectura, ¿qué distingue a la sequía hidrológica de la "
         "meteorológica?",
         "Que ocurre después, en ríos, embalses y napas subterráneas",
@@ -41508,7 +43454,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_localizar", "facil",
+        "megasequia", "lec_explicita", "facil",
         "Según la lectura, ¿por qué el calor agrava la situación?",
         "Porque evapora el agua de embalses, suelos y plantas",
         "El texto lo detalla: el periodo coincide con la década más cálida de los "
@@ -41522,7 +43468,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_interpretar", "medio",
+        "megasequia", "lec_significado", "medio",
         "Según la lectura, ¿qué significa que al menos un 25% del déficit sea "
         "atribuible al cambio climático?",
         "Que esa parte no se explica por la variabilidad natural",
@@ -41538,7 +43484,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_interpretar", "medio",
+        "megasequia", "lec_significado", "medio",
         "¿Qué idea sostiene el emisor al comparar a una empresa agrícola con una "
         "familia rural?",
         "Que un mismo déficit se vive de manera muy distinta",
@@ -41554,7 +43500,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_interpretar", "medio",
+        "megasequia", "lec_relacion", "medio",
         "¿Qué defecto comparten los dos relatos simples que el emisor descarta?",
         "Que cada uno explica solo la mitad del problema",
         "El texto lo dice al cerrar ese párrafo: ambas explicaciones «tienen la "
@@ -41569,7 +43515,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_interpretar", "dificil",
+        "megasequia", "lec_relacion", "dificil",
         "Según la lectura, ¿por qué un año lluvioso puede aliviar menos de lo que "
         "parece?",
         "Porque las napas subterráneas tardan décadas en recargarse",
@@ -41585,7 +43531,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_evaluar", "medio",
+        "megasequia", "lec_intencion", "medio",
         "¿Con qué propósito el emisor distingue sequía meteorológica, hidrológica y "
         "escasez?",
         "Para evitar discusiones que confunden tres cosas distintas",
@@ -41600,7 +43546,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_evaluar", "dificil",
+        "megasequia", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor respecto de lo que vendrá?",
         "Prudente, pues descarta pronosticar el próximo año",
         "El cierre marca ese límite: «Nada de lo anterior autoriza a pronosticar el "
@@ -41615,7 +43561,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_evaluar", "dificil",
+        "megasequia", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al señalar que la institucionalidad supone "
         "sequías pasajeras?",
         "Mostrar que quince años de déficit ponen a prueba ese supuesto",
@@ -41631,7 +43577,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_evaluar", "facil",
+        "megasequia", "lec_juicio", "facil",
         "¿Qué precisión hace el emisor sobre el peso del cambio climático en el "
         "déficit?",
         "Que solo una parte del déficit se atribuye a causas humanas",
@@ -41647,7 +43593,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_interpretar", "dificil",
+        "megasequia", "lec_relacion", "dificil",
         "Dos valles reciben el mismo caudal y solo uno enfrenta escasez de agua. "
         "Según la lectura, ¿qué lo explica?",
         "Que la demanda sobre ese caudal es distinta en cada valle",
@@ -41671,7 +43617,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "megasequia", "lec_evaluar", "dificil",
+        "megasequia", "lec_postura", "dificil",
         "¿Qué logra el emisor al terminar diciendo que el resto de la tendencia no "
         "depende de nosotros, «pero el reparto sí»?",
         "Deja una parte del problema dentro de lo decidible",
@@ -41693,7 +43639,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Guía de senderos del parque Quebrada de los Maitenes' ----------
     _ql(
-        "senderos_parque", "lec_localizar", "facil",
+        "senderos_parque", "lec_explicita", "facil",
         "Según la tabla, ¿cuánto dura el sendero Cascada Escondida?",
         "Cinco horas ida y vuelta",
         "La fila «Cascada Escondida» marca 9,2 km, cinco horas de duración "
@@ -41706,7 +43652,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_localizar", "facil",
+        "senderos_parque", "lec_explicita", "facil",
         "Según la guía, ¿a qué hora se desaloja el parque?",
         "A las 19:00, todos los días del año",
         "El punto 1 distingue tres horarios: apertura a las 8:30, cierre de ingreso "
@@ -41720,7 +43666,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_localizar", "facil",
+        "senderos_parque", "lec_explicita", "facil",
         "Según la guía, ¿qué exige el sendero Filo del Cóndor?",
         "Registro previo, agua para ocho horas y grupo de dos",
         "La regla *(c)* enumera esas tres exigencias y agrega una restricción de "
@@ -41734,7 +43680,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_localizar", "medio",
+        "senderos_parque", "lec_explicita", "medio",
         "Según la guía, ¿hasta dónde llega la señal de telefonía?",
         "Hasta el primer tercio del sendero Mirador Norte",
         "La regla *(e)* lo precisa: la señal «llega hasta el primer tercio de "
@@ -41747,7 +43693,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_interpretar", "medio",
+        "senderos_parque", "lec_significado", "medio",
         "¿Por qué la guía rechaza el ingreso a Cascada Escondida a las 13:30 en "
         "julio?",
         "Porque con la holgura el regreso sería después del desalojo",
@@ -41763,7 +43709,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_interpretar", "medio",
+        "senderos_parque", "lec_relacion", "medio",
         "¿Qué razón entrega la guía para aplicar la regla (b) sin excepciones?",
         "Que un rescate nocturno toma horas y expone a quien lo hace",
         "El punto de recomendaciones lo explica: la estrictez «no es "
@@ -41777,7 +43723,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_interpretar", "dificil",
+        "senderos_parque", "lec_relacion", "dificil",
         "¿Qué relación hay entre la tabla de senderos y las reglas de seguridad?",
         "Las reglas condicionan lo que la tabla parece permitir",
         "La tabla entrega duraciones limpias; las reglas les agregan condiciones: "
@@ -41792,7 +43738,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_evaluar", "medio",
+        "senderos_parque", "lec_intencion", "medio",
         "¿Con qué propósito la guía incluye el punto «Lo que esta guía no informa»?",
         "Para advertir que sus datos no reemplazan el criterio propio",
         "La sección aclara que las duraciones y dificultades «son promedios de "
@@ -41807,7 +43753,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_evaluar", "dificil",
+        "senderos_parque", "lec_aplicar", "dificil",
         "Un grupo de ocho personas con niños quiere hacer Mirador Norte entrando a "
         "las 15:30 en noviembre. Según la guía, ¿qué corresponde?",
         "No pueden entrar: con el 20 % de holgura vuelven pasado el desalojo",
@@ -41825,7 +43771,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_evaluar", "dificil",
+        "senderos_parque", "lec_postura", "dificil",
         "¿Qué criterio ordena las advertencias de la guía?",
         "Anticipar lo que el visitante daría por supuesto y no es así",
         "Cada advertencia corrige una suposición razonable: que la duración de la "
@@ -41840,7 +43786,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_localizar", "facil",
+        "senderos_parque", "lec_explicita", "facil",
         "Según la guía, ¿qué debe hacer quien llega en bus hasta el cruce?",
         "Caminar once kilómetros o pedir traslado el día anterior",
         "El punto sobre el acceso lo explica: no hay transporte público en el "
@@ -41855,7 +43801,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_interpretar", "dificil",
+        "senderos_parque", "lec_relacion", "dificil",
         "Dos amigos con experiencia quieren hacer Filo del Cóndor un martes de junio. "
         "Según la guía, ¿qué se lo impide?",
         "Que el sendero está cerrado entre mayo y agosto",
@@ -41877,7 +43823,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "senderos_parque", "lec_evaluar", "dificil",
+        "senderos_parque", "lec_juicio", "dificil",
         "¿Qué consigue la guía al contestar cada pregunta frecuente con un «No» "
         "seguido de la regla que lo respalda?",
         "Muestra que la negativa no depende de quién atienda",
@@ -41900,7 +43846,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Lo que se sabe y lo que no de un terremoto' ----------
     _ql(
-        "terremoto_saber", "lec_localizar", "facil",
+        "terremoto_saber", "lec_explicita", "facil",
         "Según la lectura, ¿a qué velocidad se hunde la placa de Nazca?",
         "A unos seis centímetros y medio por año",
         "El texto entrega la cifra y una comparación para dimensionarla: es «una "
@@ -41914,7 +43860,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_localizar", "facil",
+        "terremoto_saber", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocurre con una ola de tsunami al llegar a la costa?",
         "Se frena y se apila, ganando altura en aguas poco profundas",
         "El texto describe el cambio: en mar abierto es «una ola larguísima y baja, "
@@ -41929,7 +43875,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_localizar", "facil",
+        "terremoto_saber", "lec_explicita", "facil",
         "Según la lectura, ¿cuál es la instrucción para quien está en la costa "
         "durante un sismo fuerte?",
         "Subir a una zona segura de inmediato, sin esperar aviso",
@@ -41945,7 +43891,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_localizar", "medio",
+        "terremoto_saber", "lec_explicita", "medio",
         "Según la lectura, ¿cuándo se creó el Sistema Nacional de Alarma de "
         "Maremotos?",
         "En 1964, cuatro años después del terremoto de Valdivia",
@@ -41960,7 +43906,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_interpretar", "medio",
+        "terremoto_saber", "lec_significado", "medio",
         "¿Por qué la lectura advierte que las diferencias de magnitud «engañan»?",
         "Porque la escala es logarítmica y una décima esconde mucha energía",
         "El texto lo muestra con el caso chileno: entre 8,8 y 9,5 hay 0,7 puntos y "
@@ -41974,7 +43920,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_interpretar", "medio",
+        "terremoto_saber", "lec_funcion", "medio",
         "¿Qué idea sostiene la comparación del terremoto con un resorte que se "
         "comprime?",
         "Que la energía se acumula lentamente y se libera de una vez",
@@ -41990,7 +43936,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_interpretar", "dificil",
+        "terremoto_saber", "lec_significado", "dificil",
         "¿Qué límite del sistema de alarma señala la lectura?",
         "Que no alcanza a avisar cuando el sismo ocurre cerca de la costa",
         "El texto lo plantea con dos casos opuestos: el sistema «sirve para avisar "
@@ -42005,7 +43951,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_interpretar", "dificil",
+        "terremoto_saber", "lec_relacion", "dificil",
         "Según la lectura, ¿qué distingue a un método de predicción de una "
         "coincidencia?",
         "Que anuncie por adelantado y acierte en muchos casos",
@@ -42021,7 +43967,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_evaluar", "medio",
+        "terremoto_saber", "lec_intencion", "medio",
         "¿Con qué propósito la lectura distingue entre predecir y prepararse?",
         "Para mostrar que se puede actuar sin saber cuándo ocurrirá",
         "El texto define las dos actitudes: «Predecir supone saber cuándo; "
@@ -42036,7 +43982,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_evaluar", "dificil",
+        "terremoto_saber", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor al hablar de lo que la preparación puede "
         "lograr?",
         "Mesurada, pues aclara qué garantiza una norma y qué no",
@@ -42051,7 +43997,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_evaluar", "facil",
+        "terremoto_saber", "lec_juicio", "facil",
         "Un lector concluye que Chile podría evitar los terremotos con mejor "
         "tecnología. ¿Qué responde la lectura?",
         "Que seguirán ocurriendo, porque la placa no dejará de moverse",
@@ -42066,7 +44012,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_interpretar", "dificil",
+        "terremoto_saber", "lec_relacion", "dificil",
         "Un sismo alcanza magnitud 7,0 y otro, magnitud 8,0. Según la lectura, ¿qué "
         "relación hay entre los dos?",
         "El segundo libera unas treinta y dos veces más energía",
@@ -42089,7 +44035,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "terremoto_saber", "lec_evaluar", "dificil",
+        "terremoto_saber", "lec_intencion", "dificil",
         "¿Qué se consigue al cerrar la lectura diciendo que lo que está en discusión "
         "es «cuánto daño estamos dispuestos a aceptar de antemano»?",
         "Convierte un asunto técnico en una decisión que se toma",
@@ -42113,7 +44059,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Cuatro minutos' ----------
     _ql(
-        "dos_turnos", "lec_localizar", "facil",
+        "dos_turnos", "lec_explicita", "facil",
         "Según el relato, ¿cuánto tiempo lleva Marisol trabajando en la estación?",
         "Once años, y conoce de memoria el orden del turno",
         "El primer bloque lo dice y lo ilustra: «Llevaba once años en la estación y "
@@ -42127,7 +44073,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_localizar", "facil",
+        "dos_turnos", "lec_explicita", "facil",
         "Según el relato, ¿qué sabe Julián sobre su trabajo nuevo?",
         "Que el sueldo es mejor, la jefa razonable y el turno empieza a las seis",
         "El segundo bloque enumera esas tres cosas justamente para marcar el "
@@ -42141,7 +44087,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_localizar", "medio",
+        "dos_turnos", "lec_explicita", "medio",
         "Según el relato, ¿qué pasó cuando Marisol avisó que el reloj estaba "
         "adelantado?",
         "Anotaron el dato en una hoja y nunca lo arreglaron",
@@ -42157,7 +44103,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_interpretar", "facil",
+        "dos_turnos", "lec_idea_central", "facil",
         "¿Cómo está organizado el relato?",
         "Alterna dos historias de personajes que no se conocen",
         "Los bloques impares siguen a Marisol en la estación y los pares siguen a "
@@ -42171,7 +44117,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_interpretar", "medio",
+        "dos_turnos", "lec_relacion", "medio",
         "¿Qué relación hay entre los bloques 5 y 6?",
         "Muestran la misma escena desde el punto de vista de cada personaje",
         "En el bloque 5, Marisol ve a un muchacho que mira demasiado rato el mapa "
@@ -42187,7 +44133,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_interpretar", "medio",
+        "dos_turnos", "lec_funcion", "medio",
         "¿Qué función cumple el bloque 7, que tiene solo dos frases?",
         "Revelar el desfase que explica lo que acaba de ocurrir",
         "Las dos frases —«El reloj estaba adelantado cuatro minutos. Eran las cinco "
@@ -42202,7 +44148,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_interpretar", "dificil",
+        "dos_turnos", "lec_inferencia", "dificil",
         "¿Qué sugiere el recuerdo del padre que aparece mientras Julián camina?",
         "Que teme repetir una vida entera en un trabajo que no le gusta",
         "El recuerdo es preciso: treinta y un años en la misma bodega y una sola "
@@ -42217,7 +44163,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_evaluar", "medio",
+        "dos_turnos", "lec_postura", "medio",
         "¿Qué actitud mantiene el narrador respecto de los dos personajes?",
         "Ecuánime, pues los sigue por igual y no juzga a ninguno",
         "El relato dedica bloques equivalentes a cada uno, entra en lo que ambos "
@@ -42232,7 +44178,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_evaluar", "dificil",
+        "dos_turnos", "lec_juicio", "dificil",
         "¿Qué pone en duda el último bloque del relato?",
         "Que la explicación con que Julián ordena su vida sea completa",
         "El cierre muestra a Julián contando su historia con una causa clara —«no "
@@ -42248,7 +44194,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_evaluar", "dificil",
+        "dos_turnos", "lec_juicio", "dificil",
         "¿Qué elemento permite sostener que el cuento trata sobre las explicaciones "
         "que las personas se dan a sí mismas?",
         "Que Julián atribuya su vida laboral a un reloj mal puesto",
@@ -42264,7 +44210,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_evaluar", "facil",
+        "dos_turnos", "lec_postura", "facil",
         "¿Qué muestra que Marisol no vuelva a acordarse del muchacho de uniforme "
         "azul?",
         "Que el encuentro fue decisivo solo para uno de los dos",
@@ -42280,7 +44226,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_interpretar", "dificil",
+        "dos_turnos", "lec_significado", "dificil",
         "¿Qué significa que Marisol dejara de considerar el reloj «un error» y pasara "
         "a considerarlo «una característica del lugar»?",
         "Que se acostumbró a rodear la falla en vez de insistir",
@@ -42304,7 +44250,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "dos_turnos", "lec_evaluar", "dificil",
+        "dos_turnos", "lec_intencion", "dificil",
         "¿Qué consigue el relato al numerar un bloque como «7 bis» en vez de 8?",
         "Lo presenta como una nota al margen del bloque 7",
         "El bloque 7 son dos frases y contiene el dato que ordena la historia entera: "
@@ -42325,7 +44271,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Comparador de planes de internet hogar' ----------
     _ql(
-        "planes_internet", "lec_localizar", "facil",
+        "planes_internet", "lec_explicita", "facil",
         "Según la tabla, ¿cuál es la permanencia mínima del Plan B?",
         "Doce meses",
         "La fila «Permanencia mínima» marca 18 meses para el Plan A, 12 meses para "
@@ -42339,7 +44285,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_localizar", "facil",
+        "planes_internet", "lec_explicita", "facil",
         "Según la letra chica, ¿qué ocurre si el Plan A supera los 300 GB?",
         "La velocidad baja a 10 Mbps hasta que termina el ciclo",
         "La nota *(c)* lo precisa: superados los 300 GB «no se corta ni cobra un "
@@ -42353,7 +44299,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_localizar", "facil",
+        "planes_internet", "lec_explicita", "facil",
         "Según la ficha, ¿cuál es el único plan con velocidad mínima garantizada?",
         "El Plan C, con 480 Mbps en el 80% de las mediciones",
         "La nota *(b)* lo dice: el Plan C «es el único que compromete una velocidad "
@@ -42368,7 +44314,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_localizar", "medio",
+        "planes_internet", "lec_explicita", "medio",
         "Según la ficha, ¿desde cuándo se cuentan los plazos de atención de fallas?",
         "Desde que la empresa registra el reclamo del cliente",
         "La nota *(e)* lo aclara: los plazos «se cuentan desde que la empresa "
@@ -42382,7 +44328,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_interpretar", "medio",
+        "planes_internet", "lec_relacion", "medio",
         "¿Por qué el caso 2 descarta el Plan A?",
         "Porque el consumo supera el tope y la velocidad caería a 10 Mbps",
         "El texto lo explica y señala además cuál era la razón equivocada: el Plan "
@@ -42396,7 +44342,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_interpretar", "medio",
+        "planes_internet", "lec_inferencia", "medio",
         "¿Qué muestran los tres casos tomados en conjunto?",
         "Que el plan conveniente depende del uso de cada hogar",
         "Cada caso se resuelve con un criterio distinto: el caso 1 por el consumo "
@@ -42411,7 +44357,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_interpretar", "dificil",
+        "planes_internet", "lec_relacion", "dificil",
         "¿Cuál es la relación entre la tabla y la sección de letra chica?",
         "La letra chica corrige la impresión que deja la tabla",
         "Cada nota cambia el sentido de una fila: el precio del Plan A es "
@@ -42427,7 +44373,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_evaluar", "medio",
+        "planes_internet", "lec_intencion", "medio",
         "¿Con qué propósito la ficha incluye la sección «Qué no está en esta "
         "ficha»?",
         "Para advertir los límites de la propia comparación",
@@ -42443,7 +44389,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_evaluar", "dificil",
+        "planes_internet", "lec_aplicar", "dificil",
         "Una persona que arrienda por ocho meses elige el Plan B por su precio "
         "intermedio. Según la ficha, ¿qué le conviene revisar?",
         "La multa por terminar antes de los doce meses de permanencia",
@@ -42458,7 +44404,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_localizar", "dificil",
+        "planes_internet", "lec_explicita", "dificil",
         "Según la ficha, ¿cuál es el error más común y más caro al elegir un plan?",
         "Contratar la velocidad más alta sin necesitarla",
         "El cierre lo señala así: «Elegir por la velocidad más alta disponible es "
@@ -42473,7 +44419,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_localizar", "facil",
+        "planes_internet", "lec_explicita", "facil",
         "Según las dudas frecuentes, ¿a quién no le conviene pagar por un plan sin "
         "permanencia?",
         "A quien piensa quedarse varios años en la misma casa",
@@ -42488,7 +44434,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_interpretar", "dificil",
+        "planes_internet", "lec_relacion", "dificil",
         "Alguien contrata el Plan A y se cambia de casa al quinto mes. Según la letra "
         "chica, ¿cuánto le cobran por terminar antes?",
         "Tres mensualidades, porque la multa tiene ese tope",
@@ -42508,7 +44454,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "planes_internet", "lec_evaluar", "dificil",
+        "planes_internet", "lec_intencion", "dificil",
         "¿Qué consigue la ficha al aclarar que «hasta 400 Mbps» significa que la "
         "empresa cumple aunque entregue bastante menos?",
         "Muestra que la cifra grande no compromete a nada",
@@ -42532,7 +44478,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La primera hora' ----------
     _ql(
-        "hora_de_entrada", "lec_localizar", "facil",
+        "hora_de_entrada", "lec_explicita", "facil",
         "Según la columna, ¿qué le ocurre al reloj biológico en la pubertad?",
         "Se atrasa, y la hormona del sueño se libera más tarde",
         "El texto lo precisa: «la hormona que induce el sueño empieza a liberarse "
@@ -42546,7 +44492,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_localizar", "facil",
+        "hora_de_entrada", "lec_explicita", "facil",
         "Según la columna, ¿qué recomiendan algunas sociedades médicas?",
         "Que la enseñanza media no empiece antes de las ocho y media",
         "El texto lo enuncia y de inmediato acota su alcance: la recomendación «no "
@@ -42560,7 +44506,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_localizar", "facil",
+        "hora_de_entrada", "lec_explicita", "facil",
         "Según la columna, ¿qué resultados se observan donde se corrió el horario?",
         "Duermen más, faltan menos y llegan menos atrasados",
         "El texto enumera esos tres efectos y descarta de paso la objeción más "
@@ -42574,7 +44520,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_interpretar", "medio",
+        "hora_de_entrada", "lec_funcion", "medio",
         "¿Qué función cumple el párrafo que enumera los costos de correr el "
         "horario?",
         "Hacerse cargo de la objeción más fuerte contra la propuesta",
@@ -42590,7 +44536,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_interpretar", "facil",
+        "hora_de_entrada", "lec_relacion", "facil",
         "¿Qué distinción propone el emisor para ordenar el debate?",
         "Separar si el atraso del reloj existe de si el cambio es factible",
         "El texto lo dice con esas palabras: confundir «si el atraso del reloj "
@@ -42605,7 +44551,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_interpretar", "medio",
+        "hora_de_entrada", "lec_significado", "medio",
         "¿Qué propone el emisor que un colegio puede decidir por su cuenta?",
         "Cambiar qué asignatura ocupa el bloque de la primera hora",
         "El texto presenta esa medida como «más barata que correr el horario»: "
@@ -42620,7 +44566,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_interpretar", "dificil",
+        "hora_de_entrada", "lec_significado", "dificil",
         "¿Qué idea sostiene el emisor al comparar cómo se explica el bajo "
         "rendimiento de un adulto y el de un adolescente?",
         "Que la misma conducta se explica por el carácter solo en un caso",
@@ -42636,7 +44582,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_evaluar", "medio",
+        "hora_de_entrada", "lec_postura", "medio",
         "¿Qué actitud asume el emisor respecto de los efectos del cambio de "
         "horario?",
         "Prudente, pues acota lo demostrado y descarta prometer más",
@@ -42652,7 +44598,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_evaluar", "dificil",
+        "hora_de_entrada", "lec_juicio", "dificil",
         "Un lector sostiene que la columna pide reducir las horas de clase. ¿Qué "
         "responde el texto?",
         "Que la propuesta corre el bloque completo sin quitar clases",
@@ -42668,7 +44614,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_evaluar", "dificil",
+        "hora_de_entrada", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al cerrar diciendo que el horario «no es un dato "
         "de la naturaleza»?",
         "Presentarlo como una decisión revisable y no como algo dado",
@@ -42684,7 +44630,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_evaluar", "medio",
+        "hora_de_entrada", "lec_aplicar", "medio",
         "Un colegio decide correr el horario y no ajustar nada más. Según la "
         "columna, ¿qué queda sin resolver?",
         "El cuidado de los hijos y el transporte de las familias",
@@ -42701,7 +44647,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_interpretar", "dificil",
+        "hora_de_entrada", "lec_relacion", "dificil",
         "¿Por qué, según el emisor, el lunes «duele más que el martes»?",
         "Porque dormir hasta tarde el fin de semana atrasa más el reloj",
         "La deuda de sueño se acumula de lunes a viernes, y el fin de semana se paga "
@@ -42724,7 +44670,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_de_entrada", "lec_evaluar", "dificil",
+        "hora_de_entrada", "lec_postura", "dificil",
         "¿Qué gana el emisor al descartar expresamente que correr el horario suba los "
         "puntajes de una prueba nacional?",
         "Credibilidad: renuncia al argumento que más convencería",
@@ -42745,7 +44691,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Por qué el mar de Chile es frío' ----------
     _ql(
-        "mar_frio", "lec_localizar", "facil",
+        "mar_frio", "lec_parafrasis", "facil",
         "Según la lectura, ¿en qué consiste la surgencia?",
         "En el ascenso de agua profunda que reemplaza a la de superficie",
         "El texto describe el mecanismo en dos pasos: el viento del sur desplaza la "
@@ -42760,7 +44706,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_localizar", "facil",
+        "mar_frio", "lec_explicita", "facil",
         "Según la lectura, ¿qué trae el agua profunda además de frío?",
         "Nitratos y fosfatos, que escasean en la superficie",
         "El texto lo precisa: el agua profunda «está cargada de nitratos y "
@@ -42775,7 +44721,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_localizar", "facil",
+        "mar_frio", "lec_explicita", "facil",
         "Según la lectura, ¿qué ocurre en la costa durante El Niño?",
         "Los vientos del sur se debilitan y sube agua tibia y pobre",
         "El texto lo describe con precisión: los vientos «se debilitan y la capa de "
@@ -42790,7 +44736,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_localizar", "facil",
+        "mar_frio", "lec_parafrasis", "facil",
         "Según la lectura, ¿por qué la costa chilena amanece nublada y casi no "
         "llueve?",
         "Porque el mar frío enfría el aire y ese aire no logra subir",
@@ -42806,7 +44752,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_interpretar", "medio",
+        "mar_frio", "lec_relacion", "medio",
         "Según el emisor, ¿por qué la explicación escolar del frío «se queda "
         "corta»?",
         "Porque el agua más fría no llega desde el sur, sino desde abajo",
@@ -42822,7 +44768,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_interpretar", "medio",
+        "mar_frio", "lec_funcion", "medio",
         "¿Con qué finalidad se compara la costa chilena con la costa atlántica?",
         "Para descartar que la diferencia de temperatura la explique el sol",
         "La comparación es entre dos lugares en la misma latitud: en el Atlántico "
@@ -42837,7 +44783,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_interpretar", "medio",
+        "mar_frio", "lec_relacion", "medio",
         "¿Qué relación establece la lectura entre los nutrientes y la pesca?",
         "Los nutrientes alimentan al fitoplancton y este sostiene la cadena",
         "El texto describe la cadena completa: el agua profunda sube con "
@@ -42852,7 +44798,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_interpretar", "dificil",
+        "mar_frio", "lec_significado", "dificil",
         "¿Qué idea sostiene la afirmación «un océano al lado no garantiza lluvia»?",
         "Que llueve si el aire puede ascender, no por tener mar cerca",
         "La frase cierra el párrafo del clima costero y resume su argumento: el "
@@ -42867,7 +44813,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_evaluar", "medio",
+        "mar_frio", "lec_intencion", "medio",
         "¿Con qué propósito el emisor advierte que no hay que explicarlo todo con "
         "El Niño?",
         "Para evitar que se le atribuya cualquier mala temporada de pesca",
@@ -42882,7 +44828,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_evaluar", "dificil",
+        "mar_frio", "lec_postura", "dificil",
         "¿Qué actitud asume el emisor frente al futuro de la surgencia?",
         "Cauta, pues expone dos hipótesis y no elige entre ellas",
         "El texto reconoce que la pregunta «todavía no tiene respuesta firme» y "
@@ -42897,7 +44843,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_evaluar", "dificil",
+        "mar_frio", "lec_forma", "dificil",
         "Según el cierre de la lectura, ¿qué hace que una explicación sea buena?",
         "Que permita predecir y que diga cómo podría comprobarse su error",
         "El último párrafo compara las dos explicaciones por lo que permiten hacer: "
@@ -42912,7 +44858,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_interpretar", "dificil",
+        "mar_frio", "lec_inferencia", "dificil",
         "¿Qué permite afirmar que un cambio en la intensidad del viento termine "
         "afectando a las aves marinas?",
         "Que el viento inicia la cadena que alimenta a todo el sistema",
@@ -42935,7 +44881,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "mar_frio", "lec_evaluar", "dificil",
+        "mar_frio", "lec_postura", "dificil",
         "¿Qué consigue el emisor al decir que la cifra del quince por ciento «varía "
         "según qué se mida y en qué año»?",
         "Sostiene la magnitud sin comprometerse con la cifra",
@@ -42957,7 +44903,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Los sellos de advertencia: qué dicen y qué no dicen' ----------
     _ql(
-        "sellos_advertencia", "lec_localizar", "facil",
+        "sellos_advertencia", "lec_explicita", "facil",
         "Según la cartilla, ¿desde cuándo rige la tercera etapa de la ley?",
         "Desde el 27 de junio de 2019",
         "El punto 1 entrega las dos fechas: la primera etapa empezó a regir el 26 "
@@ -42971,7 +44917,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_localizar", "facil",
+        "sellos_advertencia", "lec_explicita", "facil",
         "Según la tabla de límites, ¿desde cuántos gramos de azúcares lleva sello "
         "un líquido?",
         "Desde 5 gramos por cada 100 mililitros",
@@ -42985,7 +44931,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_localizar", "facil",
+        "sellos_advertencia", "lec_explicita", "facil",
         "Según la cartilla, ¿qué prohíbe la ley además de poner sellos?",
         "Vender productos con sellos dentro de los establecimientos escolares",
         "El punto 5 lo dice así: la ley «prohíbe vender productos con sellos dentro "
@@ -43000,7 +44946,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_localizar", "facil",
+        "sellos_advertencia", "lec_explicita", "facil",
         "Según la cartilla, ¿cuántos sellos lleva la galleta de avena del ejemplo?",
         "Dos: energía y azúcares",
         "El texto lo explica caso por caso: la galleta «supera el límite de energía "
@@ -43014,7 +44960,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_interpretar", "medio",
+        "sellos_advertencia", "lec_relacion", "medio",
         "Según la cartilla, ¿por qué las nueces del ejemplo no llevan ningún sello?",
         "Porque sus nutrientes no le fueron añadidos al alimento",
         "La cartilla lo explica al comentar el caso: «los límites se aplican a los "
@@ -43029,7 +44975,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_interpretar", "medio",
+        "sellos_advertencia", "lec_relacion", "medio",
         "¿Qué explica que un producto sin sello en 2016 lleve sello hoy con la "
         "misma receta?",
         "Que los límites bajaron en cada una de las tres etapas",
@@ -43044,7 +44990,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_interpretar", "medio",
+        "sellos_advertencia", "lec_significado", "medio",
         "¿Qué quiere decir la cartilla con que el sello «esconde la distancia»?",
         "Que no informa por cuánto el producto pasa el límite",
         "El punto 4 lo desarrolla: la regla «responde una pregunta de sí o no "
@@ -43059,7 +45005,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_interpretar", "dificil",
+        "sellos_advertencia", "lec_relacion", "dificil",
         "¿Cuál es la relación entre la tabla de límites y la tabla de los tres "
         "productos?",
         "La segunda aplica a casos concretos la regla que fija la primera",
@@ -43075,7 +45021,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_evaluar", "medio",
+        "sellos_advertencia", "lec_intencion", "medio",
         "¿Con qué propósito la cartilla incluye el punto «Lo que el sello no dice»?",
         "Para acotar qué se puede concluir a partir de un octógono",
         "La sección corrige tres lecturas apresuradas de una sola vez: que el "
@@ -43090,7 +45036,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_evaluar", "dificil",
+        "sellos_advertencia", "lec_aplicar", "dificil",
         "Una bebida azucarada declara 80 kcal, 90 mg de sodio, 6 g de azúcares y 2 "
         "g de grasas saturadas por 100 ml. ¿Cuántos sellos lleva?",
         "Dos, porque supera el límite de energía y el de azúcares",
@@ -43106,7 +45052,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_evaluar", "dificil",
+        "sellos_advertencia", "lec_juicio", "dificil",
         "Un lector concluye que un producto sin sellos es siempre una opción "
         "saludable. ¿Qué responde la cartilla?",
         "Que puede no tenerlos por tres razones distintas de ser saludable",
@@ -43121,7 +45067,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_interpretar", "dificil",
+        "sellos_advertencia", "lec_relacion", "dificil",
         "Dos bolsas de maní declaran las mismas calorías por 100 g, pero solo una "
         "lleva sellos. ¿Qué explica la diferencia según la cartilla?",
         "Que a una de las dos le añadieron sal, azúcar o grasas",
@@ -43143,7 +45089,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "sellos_advertencia", "lec_evaluar", "dificil",
+        "sellos_advertencia", "lec_juicio", "dificil",
         "¿Qué agrega al cierre de la cartilla la mención de los aditivos, el grado de "
         "procesamiento y la fibra?",
         "Que el envase no advierte todo lo que conviene mirar",
@@ -43166,7 +45112,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La carta que no se abre' ----------
     _ql(
-        "carta_cerrada", "lec_localizar", "facil",
+        "carta_cerrada", "lec_explicita", "facil",
         "Según el relato, ¿qué otras cosas guarda la caja de madera?",
         "Un dedal, dos botones distintos y una fotografía antigua",
         "El segundo párrafo enumera el contenido de la caja: el sobre convive con "
@@ -43180,7 +45126,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_localizar", "facil",
+        "carta_cerrada", "lec_explicita", "facil",
         "En la versión de la cocina, ¿por qué la bisabuela no abrió la carta?",
         "Porque cerrada todavía podía elegir qué hacer",
         "La abuela reproduce las palabras de su propia abuela: «si la abro, tengo "
@@ -43195,7 +45141,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_localizar", "facil",
+        "carta_cerrada", "lec_explicita", "facil",
         "Según el relato, ¿qué hizo la madre con la caja cuando se vendió la casa?",
         "La envolvió en un chaleco y la llevó en el bolso de mano",
         "El párrafo del desarme lo cuenta así: «Mi madre la envolvió en un chaleco "
@@ -43209,7 +45155,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_interpretar", "medio",
+        "carta_cerrada", "lec_funcion", "medio",
         "¿Qué recurso emplea el relato cuando la abuela cuenta lo que su propia "
         "abuela le dijo?",
         "Un relato dentro del relato, con una historia enmarcada en otra",
@@ -43225,7 +45171,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_interpretar", "medio",
+        "carta_cerrada", "lec_inferencia", "medio",
         "¿Qué revela que la abuela contara dos versiones distintas de la misma "
         "historia?",
         "Que la decisión se mantuvo aunque cambiaran las razones",
@@ -43241,7 +45187,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_interpretar", "dificil",
+        "carta_cerrada", "lec_relacion", "dificil",
         "¿Por qué la narradora se detiene cuando intenta abrir el sobre a los "
         "quince años?",
         "Porque abrirlo convertiría la historia en un dato decepcionante",
@@ -43258,7 +45204,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_interpretar", "dificil",
+        "carta_cerrada", "lec_significado", "dificil",
         "¿Qué sentido va tomando el sobre a lo largo del relato?",
         "Deja de ser un objeto heredado y pasa a ser una pregunta conservada",
         "Al principio el sobre es una cosa entre otras cosas de una caja. Al final "
@@ -43273,7 +45219,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_evaluar", "medio",
+        "carta_cerrada", "lec_postura", "medio",
         "¿Qué actitud asume la narradora frente al hallazgo de la letra del "
         "cuaderno?",
         "Prudente, pues enumera explicaciones posibles sin elegir ninguna",
@@ -43288,7 +45234,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_evaluar", "dificil",
+        "carta_cerrada", "lec_juicio", "dificil",
         "¿Qué elemento permite sostener que el cuento trata sobre lo que una "
         "familia elige no saber?",
         "Que cuatro mujeres tuvieran la respuesta a mano y no la usaran",
@@ -43304,7 +45250,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_evaluar", "dificil",
+        "carta_cerrada", "lec_forma", "dificil",
         "¿Qué efecto produce que el relato termine con «Ahora hay una versión más»?",
         "Muestra que la narradora se suma a la cadena que venía contando",
         "Durante todo el cuento la narradora ha registrado versiones ajenas: la de "
@@ -43319,7 +45265,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_evaluar", "medio",
+        "carta_cerrada", "lec_postura", "medio",
         "¿Qué distingue un secreto de un acuerdo, según la frase que dice la madre?",
         "Que en el acuerdo nadie esconde nada y todos lo sostienen",
         "La madre lo formula así: «Un secreto es algo que alguien esconde. Esto es "
@@ -43333,7 +45279,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_interpretar", "dificil",
+        "carta_cerrada", "lec_relacion", "dificil",
         "¿Por qué la narradora sostiene que las tres explicaciones sobre la letra "
         "dejan «intacto lo esencial»?",
         "Porque ninguna toca la decisión que se repitió noventa años",
@@ -43355,7 +45301,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "carta_cerrada", "lec_evaluar", "dificil",
+        "carta_cerrada", "lec_postura", "dificil",
         "¿Qué revela que la narradora le haya inventado a la carta un contenido "
         "distinto a cada edad?",
         "Que lo imaginado habla de ella y no del sobre cerrado",
@@ -43377,7 +45323,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Volver a Sub terra' ----------
     _ql(
-        "resena_sub_terra", "lec_localizar", "facil",
+        "resena_sub_terra", "lec_explicita", "facil",
         "Según la reseña, ¿qué reunió Sub terra en su primera edición?",
         "Ocho cuentos, casi todos ambientados en las minas de Lota",
         "El tercer párrafo lo dice con esas dos precisiones: «reunió en su primera "
@@ -43392,7 +45338,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_localizar", "facil",
+        "resena_sub_terra", "lec_explicita", "facil",
         "Según la reseña, ¿a qué libro pertenece «El alma de la máquina»?",
         "A Sub sole, que Lillo publicó en el año 1907",
         "El penúltimo párrafo corrige esa confusión frecuente: el cuento «que "
@@ -43407,7 +45353,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_localizar", "facil",
+        "resena_sub_terra", "lec_explicita", "facil",
         "Según la reseña, ¿cómo conviene leer el libro por primera vez?",
         "Espaciando los cuentos, sin leerlos uno tras otro",
         "La advertencia es explícita: «Conviene no empezar por el principio ni "
@@ -43421,7 +45367,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_interpretar", "medio",
+        "resena_sub_terra", "lec_significado", "medio",
         "¿Qué quiere decir la emisora con que la escuela les hace a ciertos libros "
         "«un favor ambiguo»?",
         "Que los mantiene vivos y a la vez los convierte en una tarea",
@@ -43437,7 +45383,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_interpretar", "medio",
+        "resena_sub_terra", "lec_funcion", "medio",
         "¿Con qué finalidad la reseña señala que el capataz no grita y el padre no "
         "es un monstruo?",
         "Para mostrar que el horror nace de la normalidad de la escena",
@@ -43453,7 +45399,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_interpretar", "dificil",
+        "resena_sub_terra", "lec_significado", "dificil",
         "¿Qué anticipa la frase «cuando el libro abandona ese registro, se nota»?",
         "La objeción a los cuentos que cierran con una moraleja explícita",
         "La frase cierra el párrafo sobre la contención del narrador y sirve de "
@@ -43468,7 +45414,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_interpretar", "dificil",
+        "resena_sub_terra", "lec_relacion", "dificil",
         "¿Qué relación hay entre el párrafo del segundo cuento y el que lo "
         "antecede?",
         "Ilustra con un caso el procedimiento que el párrafo anterior describe",
@@ -43485,7 +45431,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_evaluar", "medio",
+        "resena_sub_terra", "lec_postura", "medio",
         "¿Qué postura adopta la emisora frente al valor documental del libro?",
         "Lo admite, pero lo considera insuficiente para explicar su vigencia",
         "El texto acepta el dato y lo relativiza en la misma frase: la respuesta "
@@ -43500,7 +45446,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_evaluar", "dificil",
+        "resena_sub_terra", "lec_postura", "dificil",
         "¿Qué actitud asume la emisora respecto del libro que reseña?",
         "Matizada, pues elogia el método y objeta algunos desenlaces",
         "La reseña sostiene las dos cosas sin contradecirse: llama al método de "
@@ -43515,7 +45461,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_evaluar", "dificil",
+        "resena_sub_terra", "lec_juicio", "dificil",
         "¿Cuál de estas afirmaciones de la reseña es un hecho verificable y no un "
         "juicio?",
         "Que el libro se publicó en julio de 1904 con ocho cuentos",
@@ -43530,7 +45476,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_evaluar", "medio",
+        "resena_sub_terra", "lec_juicio", "medio",
         "Un lector concluye que la reseña desaconseja leer Sub terra. ¿Qué responde "
         "el texto?",
         "Que invita a leerlo y solo advierte que hay cuentos desparejos",
@@ -43546,7 +45492,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_interpretar", "dificil",
+        "resena_sub_terra", "lec_inferencia", "dificil",
         "¿Qué implica que, según la reseña, la mina no funcione como escenario sino "
         "como un sistema con reglas propias?",
         "Que lo que los personajes pueden hacer ya viene acotado",
@@ -43569,7 +45515,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "resena_sub_terra", "lec_evaluar", "dificil",
+        "resena_sub_terra", "lec_intencion", "dificil",
         "¿Qué consigue la emisora al terminar recordando que el libro se consigue "
         "completo y gratis?",
         "Dejar en evidencia que la barrera ya no es conseguirlo",
@@ -43591,7 +45537,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La hora que inventaron los trenes' ----------
     _ql(
-        "hora_ferrocarril", "lec_localizar", "facil",
+        "hora_ferrocarril", "lec_explicita", "facil",
         "Según la lectura, ¿qué dispuso el Great Western Railway en 1840?",
         "Que todas sus estaciones usaran la hora de Greenwich",
         "El tercer párrafo lo precisa: dispuso «que todas sus estaciones usaran una "
@@ -43606,7 +45552,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_localizar", "facil",
+        "hora_ferrocarril", "lec_explicita", "facil",
         "Según la lectura, ¿qué hora oficial adoptó Chile en 1910?",
         "La del meridiano 75° oeste, cinco horas menos que Greenwich",
         "El párrafo dedicado a Chile lo dice con esas cifras, y agrega el motivo: "
@@ -43621,7 +45567,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_localizar", "facil",
+        "hora_ferrocarril", "lec_explicita", "facil",
         "Según la lectura, ¿por qué el 18 de noviembre de 1883 se recuerda como «el "
         "día de los dos mediodías»?",
         "Porque el mediodía del sol y el nuevo ocurrieron con minutos de diferencia",
@@ -43636,7 +45582,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_interpretar", "medio",
+        "hora_ferrocarril", "lec_relacion", "medio",
         "Según la lectura, ¿por qué el ferrocarril hizo insostenible la hora local?",
         "Porque un horario mide con la misma vara dos lugares distintos",
         "El segundo párrafo lo razona así: «un horario de trenes es una promesa que "
@@ -43651,7 +45597,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_interpretar", "medio",
+        "hora_ferrocarril", "lec_funcion", "medio",
         "¿Con qué finalidad se menciona el segundo minutero en algunos relojes "
         "públicos?",
         "Para mostrar que las dos horas convivieron durante años",
@@ -43667,7 +45613,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_interpretar", "dificil",
+        "hora_ferrocarril", "lec_relacion", "dificil",
         "¿Cuál es la relación entre el párrafo sobre los ferrocarriles de 1883 y el "
         "de la conferencia de 1884?",
         "El segundo lleva a escala mundial el acuerdo que unas empresas tomaron",
@@ -43683,7 +45629,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_interpretar", "dificil",
+        "hora_ferrocarril", "lec_inferencia", "dificil",
         "Según la lectura, ¿qué muestra que Chile cambiara su hora oficial en 1910, "
         "1916 y 1918?",
         "Que la hora oficial es una decisión revisable y no un dato del cielo",
@@ -43700,7 +45646,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_evaluar", "medio",
+        "hora_ferrocarril", "lec_postura", "medio",
         "¿Qué actitud asume el emisor en el penúltimo párrafo?",
         "Ponderada, pues acota los excesos de las dos lecturas posibles",
         "El párrafo empieza pidiendo «no exagerar en ninguna de las dos "
@@ -43716,7 +45662,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_evaluar", "dificil",
+        "hora_ferrocarril", "lec_juicio", "dificil",
         "¿Cuál de estas afirmaciones sobre la hora oficial es coherente con el "
         "emisor?",
         "Elegir bien la hora importa, aunque ninguna hora sea la natural",
@@ -43731,7 +45677,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_evaluar", "dificil",
+        "hora_ferrocarril", "lec_postura", "dificil",
         "Según el emisor, ¿qué se perdió y qué se ganó al adoptar una hora común?",
         "Se perdió el calce entre reloj y cielo, y se ganó poder coordinarse",
         "El texto lo plantea como un intercambio explícito: «se perdió la "
@@ -43746,7 +45692,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_evaluar", "medio",
+        "hora_ferrocarril", "lec_aplicar", "medio",
         "Alguien propone que cada ciudad vuelva a regirse por el mediodía del sol. "
         "Según la lectura, ¿qué costo tendría?",
         "Que dos personas distantes ya no podrían acordar un horario común",
@@ -43762,7 +45708,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_interpretar", "dificil",
+        "hora_ferrocarril", "lec_relacion", "dificil",
         "¿Por qué adoptar la hora del ferrocarril fue algo más que un cambio técnico?",
         "Porque ponía el reloj de todos en manos de una empresa",
         "El texto dice que el cambio «no fue pacífico ni inmediato», y la razón no es "
@@ -43786,7 +45732,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "hora_ferrocarril", "lec_evaluar", "dificil",
+        "hora_ferrocarril", "lec_postura", "dificil",
         "¿Qué muestra el emisor al llamar a la hora que Chile adoptó en 1916 «un "
         "número incómodo pero exacto para el lugar»?",
         "Que ser exacto y ser fácil de coordinar no van juntos",
@@ -43812,7 +45758,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- '¿En qué se nos va la semana?' ----------
     _ql(
-        "uso_tiempo_liceo", "lec_localizar", "facil",
+        "uso_tiempo_liceo", "lec_explicita", "facil",
         "Según la primera tabla, ¿cuántas horas semanales dedican a pantallas los "
         "cursos menores?",
         "21,3 horas",
@@ -43826,7 +45772,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_localizar", "facil",
+        "uso_tiempo_liceo", "lec_explicita", "facil",
         "Según el informe, ¿cuántas personas respondieron la encuesta?",
         "287, que son el 70% de la matrícula del liceo",
         "El punto 1 lo dice con las dos cifras: «El liceo tiene 412 estudiantes» y "
@@ -43839,7 +45785,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_localizar", "facil",
+        "uso_tiempo_liceo", "lec_explicita", "facil",
         "Según la segunda tabla, ¿qué proporción de quienes trabajan estudia menos "
         "de dos horas?",
         "26 de cada 100 estudiantes que trabajan",
@@ -43854,7 +45800,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "medio",
+        "uso_tiempo_liceo", "lec_inferencia", "medio",
         "¿Qué concluye el informe de que el cuidado de familiares casi no varíe "
         "entre niveles?",
         "Que no es una responsabilidad que se abandone al crecer",
@@ -43869,7 +45815,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "medio",
+        "uso_tiempo_liceo", "lec_funcion", "medio",
         "¿Qué función cumple el recuadro que explica cómo leer la segunda tabla?",
         "Enseñar a interpretar los porcentajes para evitar una lectura errada",
         "El recuadro traduce la tabla a lenguaje corriente: «cada columna suma 100 "
@@ -43884,7 +45830,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "uso_tiempo_liceo", "lec_relacion", "dificil",
         "¿Cuál es la relación entre el punto 4 y el punto 5 del informe?",
         "El punto 5 acota hasta dónde llega lo que el punto 4 afirma",
         "El punto 4 presenta los hallazgos y el punto 5 se titula «Lo que esta "
@@ -43898,7 +45844,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "uso_tiempo_liceo", "lec_funcion", "dificil",
         "¿Qué agrega al informe la observación de que «la brecha no es un abismo»?",
         "Impide leer la tabla como si trabajar dejara sin estudiar a nadie",
         "La frase llega después de constatar la diferencia, y trae dos datos que la "
@@ -43913,7 +45859,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "medio",
+        "uso_tiempo_liceo", "lec_relacion", "medio",
         "Según el informe, ¿por qué quienes no respondieron no son «un grupo "
         "cualquiera»?",
         "Porque son los ausentes, y faltar se liga a las situaciones difíciles",
@@ -43929,7 +45875,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "uso_tiempo_liceo", "lec_relacion", "dificil",
         "Según el informe, ¿por qué el autorreporte no invalida la comparación "
         "entre grupos?",
         "Porque el error empuja en la misma dirección en todos los que responden",
@@ -43945,7 +45891,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_evaluar", "dificil",
+        "uso_tiempo_liceo", "lec_juicio", "dificil",
         "Un lector concluye que el trabajo remunerado les quita horas de estudio. "
         "¿Qué responde el informe?",
         "Que la encuesta describe lo que ocurre junto, no qué causa qué",
@@ -43961,7 +45907,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_evaluar", "medio",
+        "uso_tiempo_liceo", "lec_juicio", "medio",
         "¿Cuál de las dos medidas propuestas se apoya directamente en un dato de la "
         "encuesta?",
         "Abrir la sala de estudio al almuerzo, única hora libre común",
@@ -43977,7 +45923,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_interpretar", "dificil",
+        "uso_tiempo_liceo", "lec_inferencia", "dificil",
         "¿Qué supone el informe al advertir que las estimaciones «no se equivocan al "
         "azar»?",
         "Que el error se inclina hacia la respuesta más presentable",
@@ -43998,7 +45944,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "uso_tiempo_liceo", "lec_evaluar", "dificil",
+        "uso_tiempo_liceo", "lec_postura", "dificil",
         "¿Qué logra el informe al reconocer que ninguna de las dos medidas que "
         "propone resuelve lo que muestra la tabla 3?",
         "Ajusta lo que promete a lo que el liceo puede hacer",
@@ -44019,7 +45965,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El estilo que nadie encontró' ----------
     _ql(
-        "estilos_aprendizaje", "lec_localizar", "facil",
+        "estilos_aprendizaje", "lec_explicita", "facil",
         "Según la lectura, ¿qué sostiene la hipótesis de correspondencia?",
         "Que se aprende más cuando la enseñanza coincide con la preferencia",
         "El segundo párrafo separa dos afirmaciones y nombra la hipótesis con "
@@ -44034,7 +45980,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_localizar", "facil",
+        "estilos_aprendizaje", "lec_explicita", "facil",
         "Según la lectura, ¿qué práctica de estudio cuenta con respaldo?",
         "Ponerse a prueba recordando el contenido sin mirar el cuaderno",
         "El párrafo que empieza «Porque las hay» las enumera: distribuir el estudio "
@@ -44049,7 +45995,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_localizar", "facil",
+        "estilos_aprendizaje", "lec_parafrasis", "facil",
         "Según la lectura, ¿qué reportaron los estudiantes en los estudios?",
         "Que se sintieron más cómodos con el formato que ellos eligieron",
         "El cuarto párrafo lo dice en esos términos: los estudiantes «sí reportan "
@@ -44064,7 +46010,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_interpretar", "medio",
+        "estilos_aprendizaje", "lec_funcion", "medio",
         "¿Qué función cumple la mención al mapa, a la pronunciación y a la "
         "bicicleta?",
         "Delimitar la crítica: el formato lo decide el contenido, no la persona",
@@ -44081,7 +46027,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_evaluar", "medio",
+        "estilos_aprendizaje", "lec_juicio", "medio",
         "Según la lectura, ¿qué resultado respaldaría la hipótesis de "
         "correspondencia?",
         "Que el orden entre los grupos se invierta al cambiar de formato",
@@ -44098,7 +46044,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_interpretar", "dificil",
+        "estilos_aprendizaje", "lec_relacion", "dificil",
         "Considerando el ejemplo de puntajes del quinto párrafo, ¿por qué ese "
         "resultado no apoya la hipótesis?",
         "Porque los dos grupos rindieron mejor con el mismo material",
@@ -44114,7 +46060,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_interpretar", "dificil",
+        "estilos_aprendizaje", "lec_significado", "dificil",
         "¿Qué quiere decir el emisor con que «la ficha se responde sola»?",
         "Que confirma una creencia previa en vez de ponerla a prueba",
         "La frase cierra el párrafo sobre por qué la idea sigue viva, y el propio "
@@ -44129,7 +46075,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_interpretar", "medio",
+        "estilos_aprendizaje", "lec_inferencia", "medio",
         "¿Qué implica que las prácticas eficaces «se sientan más difíciles» "
         "mientras se hacen?",
         "Que sentirse cómodo estudiando no indica cuánto se está aprendiendo",
@@ -44145,7 +46091,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_evaluar", "dificil",
+        "estilos_aprendizaje", "lec_juicio", "dificil",
         "¿Cuál de las siguientes afirmaciones es coherente con lo planteado por el "
         "emisor?",
         "El formato importa, pero lo decide el contenido y no el estudiante",
@@ -44162,7 +46108,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_evaluar", "medio",
+        "estilos_aprendizaje", "lec_juicio", "medio",
         "¿Qué limitación de la evidencia reconoce el propio emisor?",
         "Que las investigaciones con el diseño adecuado son pocas",
         "Al describir el resultado, el texto no exagera lo que hay: «las revisiones "
@@ -44177,7 +46123,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_evaluar", "dificil",
+        "estilos_aprendizaje", "lec_forma", "dificil",
         "¿Qué actitud asume el emisor en el párrafo final?",
         "Cauta, pues acota lo demostrado sin retirar su conclusión",
         "El cierre hace las dos cosas a la vez. Primero limita: «no se ha "
@@ -44194,7 +46140,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_interpretar", "dificil",
+        "estilos_aprendizaje", "lec_significado", "dificil",
         "¿Qué quiere decir el emisor con que una etiqueta «que empieza siendo una "
         "descripción termina funcionando como un límite»?",
         "Que pasa a justificar de antemano lo que no se intenta",
@@ -44215,7 +46161,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "estilos_aprendizaje", "lec_evaluar", "dificil",
+        "estilos_aprendizaje", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor separa, al comienzo, dos afirmaciones «que "
         "suelen viajar juntas»?",
         "Para dejar en claro cuál de las dos está poniendo en duda",
@@ -44239,7 +46185,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La versión de mi hermano' ----------
     _ql(
-        "version_hermano", "lec_localizar", "facil",
+        "version_hermano", "lec_parafrasis", "facil",
         "Según el relato, ¿en qué se diferencian las dos versiones sobre lo "
         "ocurrido con el perro?",
         "El narrador dice que entraron los dos; el hermano, que él quedó afuera",
@@ -44254,7 +46200,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_localizar", "medio",
+        "version_hermano", "lec_parafrasis", "medio",
         "De acuerdo con el relato, ¿qué le confirmó la madre al narrador esa noche?",
         "Que la reja era de fierro y tenía puntas de lanza arriba",
         "El narrador lo cuenta con precisión y también dice qué NO obtuvo: "
@@ -44268,7 +46214,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_localizar", "medio",
+        "version_hermano", "lec_parafrasis", "medio",
         "Según el relato, ¿en qué situaciones había contado el narrador esta "
         "historia?",
         "En el colegio, en almuerzos familiares y en una entrevista de trabajo",
@@ -44284,7 +46230,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_interpretar", "dificil",
+        "version_hermano", "lec_relacion", "dificil",
         "¿Por qué el narrador concluye que la versión falsa probablemente sea la "
         "suya?",
         "Porque él la contó cien veces y cada relato vuelve a armar el recuerdo",
@@ -44301,7 +46247,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_interpretar", "dificil",
+        "version_hermano", "lec_inferencia", "dificil",
         "¿Qué descubre el narrador al revisar su propio recuerdo en busca de "
         "pruebas?",
         "Que las dos escenas contradictorias están igual de nítidas en su memoria",
@@ -44318,7 +46264,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_interpretar", "dificil",
+        "version_hermano", "lec_funcion", "dificil",
         "¿Qué papel cumple en el relato la frase «nos van a retar», que el narrador "
         "dice haber pronunciado?",
         "Es el detalle que lo delata: construye el miedo que luego vence",
@@ -44334,7 +46280,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_interpretar", "dificil",
+        "version_hermano", "lec_significado", "dificil",
         "¿Qué sentido tiene que el relato comience diciendo «la conté muchas veces "
         "antes de descubrir que podía no ser cierta»?",
         "Advierte desde el inicio que se leerá una versión puesta en duda",
@@ -44351,7 +46297,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_interpretar", "medio",
+        "version_hermano", "lec_significado", "medio",
         "¿Qué significa que el narrador diga que fue «puliendo» la historia con los "
         "años?",
         "Que la fue ajustando para que funcionara mejor al contarla",
@@ -44367,7 +46313,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_evaluar", "dificil",
+        "version_hermano", "lec_forma", "dificil",
         "¿Qué efecto produce el último párrafo, en que el narrador admite que sí "
         "sabe cuál versión es la verdadera?",
         "Vuelve a poner en duda su honestidad cuando parecía sincero",
@@ -44383,7 +46329,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_evaluar", "dificil",
+        "version_hermano", "lec_juicio", "dificil",
         "¿Qué elemento del relato permite sostener que el cuento trata sobre cómo "
         "se construye la propia imagen?",
         "Que el narrador pusiera el miedo en su recuerdo para vencerlo",
@@ -44401,7 +46347,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_evaluar", "medio",
+        "version_hermano", "lec_postura", "medio",
         "¿Qué actitud mantiene el narrador hacia su hermano a lo largo del relato?",
         "Evasiva, pues ni lo confronta ni le reconoce la razón en voz alta",
         "El relato muestra las dos cosas. En el cumpleaños discuten «bajito, "
@@ -44416,7 +46362,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_interpretar", "dificil",
+        "version_hermano", "lec_significado", "dificil",
         "¿Por qué el narrador dice que la conversación con su madre «no sirvió de "
         "nada»?",
         "Porque confirmó un detalle y no quién entró al sitio",
@@ -44437,7 +46383,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "version_hermano", "lec_evaluar", "dificil",
+        "version_hermano", "lec_intencion", "dificil",
         "¿Qué consigue el relato al dejar sin resolver cuál de las dos versiones "
         "ocurrió?",
         "Traslada el asunto del hecho a cómo se arma un recuerdo",
@@ -44460,7 +46406,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Reglamento de la biblioteca del liceo' ----------
     _ql(
-        "reglamento_biblioteca_liceo", "lec_localizar", "facil",
+        "reglamento_biblioteca_liceo", "lec_explicita", "facil",
         "Según el reglamento, ¿cuántos ejemplares de literatura puede llevarse un "
         "estudiante por vez y por cuánto tiempo?",
         "Tres ejemplares por catorce días",
@@ -44475,7 +46421,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_localizar", "medio",
+        "reglamento_biblioteca_liceo", "lec_explicita", "medio",
         "De acuerdo con el reglamento, ¿qué pueden hacer los apoderados en la "
         "biblioteca?",
         "Leer y fotocopiar en sala, pero no llevarse material a domicilio",
@@ -44490,7 +46436,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_localizar", "medio",
+        "reglamento_biblioteca_liceo", "lec_explicita", "medio",
         "Según el reglamento, ¿cuánto tiempo se mantiene apartado un ejemplar "
         "reservado?",
         "Dos días hábiles desde que se devuelve",
@@ -44505,7 +46451,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_interpretar", "medio",
+        "reglamento_biblioteca_liceo", "lec_relacion", "medio",
         "¿Qué razón entrega el reglamento para que el material de referencia no "
         "salga de la biblioteca?",
         "Que es el material que más gente necesita en un mismo día",
@@ -44521,7 +46467,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_relacion", "dificil",
         "Un estudiante devuelve un libro con tres días de atraso y, estando "
         "suspendido, se atrasa otra vez en ocho días. ¿Cuál es su situación según "
         "el reglamento?",
@@ -44541,7 +46487,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_relacion", "dificil",
         "Un préstamo vence un viernes y el estudiante lo devuelve el martes "
         "siguiente, habiendo sido lunes feriado. ¿Cuántos días de atraso registra?",
         "Un día, porque el fin de semana y el feriado no se cuentan",
@@ -44557,7 +46503,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_relacion", "dificil",
         "¿Qué diferencia establece el reglamento entre la restricción por "
         "reposición pendiente y una suspensión por atraso?",
         "Que no es una sanción y dura hasta que se repone el ejemplar",
@@ -44574,7 +46520,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_interpretar", "medio",
+        "reglamento_biblioteca_liceo", "lec_significado", "medio",
         "Según el artículo 8, ¿cuál es el primer criterio para priorizar una "
         "sugerencia de compra?",
         "Que el título esté pedido por más de un usuario",
@@ -44590,7 +46536,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_evaluar", "medio",
+        "reglamento_biblioteca_liceo", "lec_intencion", "medio",
         "¿Qué se propone el reglamento al explicar por qué prohíbe consumir bebidas "
         "en la sala?",
         "Justificar la prohibición con su consecuencia concreta",
@@ -44606,7 +46552,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_evaluar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_juicio", "dificil",
         "Un docente pide llevarse un atlas por una hora y la encargada se niega. "
         "¿Qué respalda esa decisión?",
         "Que el material de referencia no admite excepción alguna",
@@ -44624,7 +46570,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_evaluar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_aplicar", "dificil",
         "Una estudiante con el préstamo atrasado quiere renovarlo, pero otro "
         "usuario reservó ese libro. ¿Qué ocurre?",
         "Debe devolverlo y, si vuelve a pedirlo, queda al final de la lista",
@@ -44640,7 +46586,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_interpretar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_relacion", "dificil",
         "Un estudiante pierde un ejemplar que ya no se edita y ofrece pagar su valor. "
         "¿Qué corresponde según el reglamento?",
         "Que la encargada resuelva si acepta un título equivalente",
@@ -44661,7 +46607,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "reglamento_biblioteca_liceo", "lec_evaluar", "dificil",
+        "reglamento_biblioteca_liceo", "lec_postura", "dificil",
         "¿Qué se consigue al nombrar en la disposición final los artículos que "
         "admiten excepción y los que no?",
         "Que la facultad de la encargada quede acotada por escrito",
@@ -44686,7 +46632,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El plástico que dejó de verse' ----------
     _ql(
-        "microplasticos", "lec_localizar", "facil",
+        "microplasticos", "lec_explicita", "facil",
         "Según el texto, ¿desde qué tamaño una partícula de plástico recibe el "
         "nombre de microplástico?",
         "Desde medio centímetro hacia abajo",
@@ -44700,7 +46646,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_localizar", "medio",
+        "microplasticos", "lec_explicita", "medio",
         "De acuerdo con el texto, ¿qué fuentes de microplásticos no provienen de un "
         "envase abandonado?",
         "El lavado de ropa sintética y el desgaste de los neumáticos",
@@ -44715,7 +46661,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_localizar", "medio",
+        "microplasticos", "lec_explicita", "medio",
         "Según el texto, ¿por qué dos estudios sobre un mismo lugar pueden dar "
         "impresiones distintas?",
         "Porque uno informa partículas por litro y el otro, masa por litro",
@@ -44731,7 +46677,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_interpretar", "medio",
+        "microplasticos", "lec_significado", "medio",
         "¿Qué idea sostiene la afirmación de que el problema «no es el plástico que "
         "se ve, sino el que dejó de verse»?",
         "Que la contaminación grave empieza cuando ya no se puede recoger",
@@ -44747,7 +46693,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_interpretar", "dificil",
+        "microplasticos", "lec_relacion", "dificil",
         "Según el emisor, ¿qué consecuencia tiene que la fragmentación multiplique "
         "la superficie del plástico?",
         "Porque miles de fragmentos exponen más superficie, donde se adhieren "
@@ -44765,7 +46711,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_interpretar", "dificil",
+        "microplasticos", "lec_relacion", "dificil",
         "¿Qué relación se establece entre la sección sobre la dificultad de "
         "medición y el resto del texto?",
         "Matiza las cifras: parte del aumento puede deberse a que hoy se detecta "
@@ -44784,7 +46730,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_interpretar", "dificil",
+        "microplasticos", "lec_relacion", "dificil",
         "Según el texto, ¿por qué el reciclaje resulta insuficiente frente a los "
         "microplásticos?",
         "Porque actúa sobre el objeto entero y el microplástico ya está disperso",
@@ -44800,7 +46746,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_interpretar", "medio",
+        "microplasticos", "lec_funcion", "medio",
         "¿Qué idea sostiene la comparación con la salud pública que aparece hacia "
         "el final?",
         "Que conviene actuar sobre las condiciones que originan el problema",
@@ -44817,7 +46763,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_evaluar", "dificil",
+        "microplasticos", "lec_postura", "dificil",
         "¿Qué actitud adopta el emisor frente al hallazgo de partículas en tejidos "
         "humanos?",
         "Cauteloso, pues señala que la presencia no demuestra daño",
@@ -44834,7 +46780,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_evaluar", "dificil",
+        "microplasticos", "lec_forma", "dificil",
         "¿Con qué propósito el texto advierte sobre el efecto del catastrofismo en "
         "el párrafo final?",
         "Para evitar que la magnitud del problema lleve a la resignación",
@@ -44851,7 +46797,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_evaluar", "medio",
+        "microplasticos", "lec_aplicar", "medio",
         "Un municipio quiere reducir los microplásticos que llegan a un río "
         "cercano. Según el texto, ¿qué medida se ajusta mejor a su planteamiento?",
         "Exigir filtros en las lavadoras y en la planta de tratamiento",
@@ -44867,7 +46813,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_interpretar", "dificil",
+        "microplasticos", "lec_inferencia", "dificil",
         "¿Qué implica, según el emisor, que el microplástico entre a la cadena "
         "alimentaria «por su base»?",
         "Que se incorpora donde empieza todo lo que viene después",
@@ -44891,7 +46837,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "microplasticos", "lec_evaluar", "dificil",
+        "microplasticos", "lec_postura", "dificil",
         "¿Qué logra el emisor al reconocer, en el primer párrafo, que la bolsa en el "
         "mar y la tortuga enredada son imágenes verdaderas?",
         "Concede que son ciertas para objetar lo que hacen entender",
@@ -44914,7 +46860,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Discurso de licenciatura' ----------
     _ql(
-        "discurso_licenciatura", "lec_localizar", "facil",
+        "discurso_licenciatura", "lec_explicita", "facil",
         "Según el discurso, ¿cuántas personas entraron a primero medio y cuántas "
         "reciben hoy su licenciatura?",
         "Entraron treinta y ocho y reciben la licenciatura veintinueve",
@@ -44930,7 +46876,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_localizar", "medio",
+        "discurso_licenciatura", "lec_explicita", "medio",
         "De acuerdo con el discurso, ¿qué le pidieron al emisor que dijera en la "
         "ceremonia?",
         "Que comienza una etapa nueva y que el esfuerzo siempre se recompensa",
@@ -44947,7 +46893,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_localizar", "medio",
+        "discurso_licenciatura", "lec_explicita", "medio",
         "Según el emisor, ¿qué ejemplos da de cosas que vio hacer al curso y que "
         "«no estaban en el programa»?",
         "Esperar al que corría lento y explicarle la materia a otro",
@@ -44962,7 +46908,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_interpretar", "medio",
+        "discurso_licenciatura", "lec_significado", "medio",
         "¿Qué quiere decir el emisor al afirmar que «el esfuerzo se recompensa» es "
         "«una verdad a medias»?",
         "Que el esfuerzo mejora las probabilidades, pero no reparte parejo",
@@ -44980,7 +46926,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_interpretar", "dificil",
+        "discurso_licenciatura", "lec_funcion", "dificil",
         "¿Qué función cumple en el discurso la pregunta «¿y para qué sirve, "
         "entonces, saber esto?»",
         "Marcar el paso del diagnóstico a lo que sí se puede hacer",
@@ -44997,7 +46943,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_interpretar", "dificil",
+        "discurso_licenciatura", "lec_significado", "dificil",
         "¿Qué idea sostiene el emisor al decir que «lo que un resultado mide es un "
         "resultado. No mide cuánto vale nadie»?",
         "Que un resultado no equivale a un veredicto sobre la persona que lo obtuvo",
@@ -45014,7 +46960,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_interpretar", "dificil",
+        "discurso_licenciatura", "lec_relacion", "dificil",
         "¿Qué relación se establece entre el comienzo del discurso —los nueve que "
         "no están— y su cierre?",
         "El comienzo muestra lo que no dependió del curso y el cierre, lo que sí",
@@ -45030,7 +46976,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_evaluar", "dificil",
+        "discurso_licenciatura", "lec_intencion", "dificil",
         "¿Qué efecto busca el emisor al advertir que «es fácil pararse aquí, con un "
         "sueldo y un trabajo estable, a explicarles que el mundo es injusto»?",
         "Reconocer los límites de su autoridad para hablar del tema",
@@ -45047,7 +46993,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_evaluar", "dificil",
+        "discurso_licenciatura", "lec_juicio", "dificil",
         "Un apoderado sostiene que el discurso desanima, porque dice que esforzarse "
         "no sirve. ¿Qué responde el texto?",
         "Que el emisor afirma que el esfuerzo sí mejora las probabilidades",
@@ -45064,7 +47010,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_evaluar", "dificil",
+        "discurso_licenciatura", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor abre contando que a primero medio entraron "
         "treinta y ocho personas y hoy se licencian veintinueve?",
         "Para instalar desde el comienzo lo que la ceremonia no muestra",
@@ -45087,7 +47033,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "discurso_licenciatura", "lec_evaluar", "dificil",
+        "discurso_licenciatura", "lec_forma", "dificil",
         "¿Qué función cumplen los tres episodios del cierre: esperar al que corría "
         "lento, explicar la materia en los recreos y pedir una prueba en otra fecha?",
         "Mostrar algo que sí dependió de ellos, tras hablar de lo que no",
@@ -45112,7 +47058,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Cuántos siguen después del primer año' ----------
     _ql(
-        "retencion_superior", "lec_localizar", "facil",
+        "retencion_superior", "lec_explicita", "facil",
         "Según la primera tabla, ¿cuál es la retención de primer año en los centros "
         "de formación técnica?",
         "71,0%",
@@ -45128,7 +47074,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_localizar", "medio",
+        "retencion_superior", "lec_explicita", "medio",
         "De acuerdo con el informe, ¿qué se entiende por titulación dentro del "
         "plazo oportuno?",
         "Titularse dentro de la duración formal de la carrera más tres años",
@@ -45143,7 +47089,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_localizar", "medio",
+        "retencion_superior", "lec_explicita", "medio",
         "Según la nota metodológica, ¿por qué un estudiante que se cambia de "
         "carrera aparece como deserción?",
         "Porque la retención se calcula sobre la misma carrera e institución",
@@ -45159,7 +47105,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_interpretar", "dificil",
+        "retencion_superior", "lec_relacion", "dificil",
         "¿Qué relación se establece entre las dos tablas del informe?",
         "La segunda extiende la primera: tras el primer año hay otro filtro",
         "La primera tabla se detiene en la retención de primer año. La segunda "
@@ -45175,7 +47121,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_interpretar", "dificil",
+        "retencion_superior", "lec_significado", "dificil",
         "¿Por qué el informe advierte que hay que «resistir la lectura apresurada» "
         "de la brecha entre universidades y el resto del sistema?",
         "Porque las tres clases de institución reciben poblaciones distintas",
@@ -45194,7 +47140,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_interpretar", "dificil",
+        "retencion_superior", "lec_significado", "dificil",
         "¿Qué idea sostiene la distinción entre lo que se mide «desde la "
         "institución» y lo que se mide «desde la persona»?",
         "Que el mismo hecho es pérdida o acierto según desde dónde se registre",
@@ -45210,7 +47156,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_interpretar", "medio",
+        "retencion_superior", "lec_relacion", "medio",
         "Según el informe, ¿por qué una política diseñada sobre el porcentaje "
         "agregado de deserción corre un riesgo?",
         "Porque suma a quien no puede pagar, a quien eligió mal y a quien trabaja",
@@ -45227,7 +47173,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_evaluar", "dificil",
+        "retencion_superior", "lec_intencion", "dificil",
         "¿Qué se propone el informe al incluir una nota que explica por qué "
         "circulan cifras de deserción entre el 22% y el 29%?",
         "Advertir que las diferencias vienen de qué se mide en cada caso",
@@ -45244,7 +47190,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_evaluar", "medio",
+        "retencion_superior", "lec_juicio", "medio",
         "Una estudiante descarta una institución porque su retención de primer año "
         "es diez puntos menor. ¿Qué cabe decir?",
         "Que usa un indicador que el informe advierte que no sirve para comparar",
@@ -45262,7 +47208,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_evaluar", "dificil",
+        "retencion_superior", "lec_intencion", "dificil",
         "¿Con qué finalidad el informe afirma que el peor resultado del sistema es "
         "«haber entrado, haber pagado y haberse ido sin título»?",
         "Para desplazar la discusión desde el acceso hacia lo que pasa después",
@@ -45285,7 +47231,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "retencion_superior", "lec_evaluar", "dificil",
+        "retencion_superior", "lec_juicio", "dificil",
         "¿Qué advierte el informe al señalar que un estudiante que se cambia de "
         "carrera aparece contado como deserción?",
         "Que el indicador mide a la institución y no a la persona",
@@ -45310,7 +47256,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Sobre el supuesto deterioro del idioma' ----------
     _ql(
-        "cambio_lengua", "lec_localizar", "medio",
+        "cambio_lengua", "lec_explicita", "medio",
         "Según el artículo, ¿qué distingue a la norma del uso?",
         "La norma reúne convenciones codificadas; el uso, lo que se hace",
         "El texto define ambos términos en oraciones consecutivas: la norma es «un "
@@ -45326,7 +47272,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_localizar", "medio",
+        "cambio_lengua", "lec_explicita", "medio",
         "De acuerdo con el artículo, ¿qué mostraron los estudios sociolingüísticos "
         "sobre formas como «querís» o «tenís»?",
         "Que su uso depende de la situación más que del nivel educativo",
@@ -45341,7 +47287,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_localizar", "facil",
+        "cambio_lengua", "lec_parafrasis", "facil",
         "Según el artículo, ¿qué ocurrió con el latín?",
         "Dejó de usarse, y de él descienden el castellano y el francés",
         "El texto lo plantea como contraejemplo: «una lengua que dejara de cambiar "
@@ -45355,7 +47301,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_interpretar", "dificil",
+        "cambio_lengua", "lec_significado", "dificil",
         "¿Qué argumento construye el artículo al señalar que la queja por el "
         "deterioro del idioma se repite desde el siglo XVIII?",
         "Que, si la degradación fuera real y sostenida, hoy no nos entenderíamos",
@@ -45372,7 +47318,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_interpretar", "dificil",
+        "cambio_lengua", "lec_funcion", "dificil",
         "¿Cuál es la función del párrafo que precisa que «sostener que el cambio no "
         "es deterioro no equivale a sostener que todo da lo mismo»?",
         "Acotar la tesis para que no se la lleve más lejos de lo defendido",
@@ -45390,7 +47336,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_interpretar", "dificil",
+        "cambio_lengua", "lec_relacion", "dificil",
         "Según el artículo, ¿cuáles son los dos errores simétricos que produce "
         "confundir la norma con el uso?",
         "Creer que millones hablan mal, o que enseñar registros es imponer",
@@ -45407,7 +47353,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_interpretar", "medio",
+        "cambio_lengua", "lec_funcion", "medio",
         "¿Qué idea sostiene la comparación entre decir «así no se dice» y decir «en "
         "este contexto se espera esto otro»?",
         "Que se puede enseñar el registro formal sin descalificar a nadie",
@@ -45423,7 +47369,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_evaluar", "dificil",
+        "cambio_lengua", "lec_postura", "dificil",
         "¿Qué posición adopta el emisor respecto de la enseñanza de la norma en la "
         "escuela?",
         "Sostiene que debe enseñarse como ampliación del repertorio",
@@ -45440,7 +47386,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_evaluar", "dificil",
+        "cambio_lengua", "lec_aplicar", "dificil",
         "Un profesor decide dejar de corregir la redacción de sus estudiantes para "
         "no descalificarlos. ¿Qué diría el artículo?",
         "Que incurre en el segundo error que el propio texto advierte",
@@ -45458,7 +47404,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_evaluar", "dificil",
+        "cambio_lengua", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor señala que la queja por el deterioro del idioma "
         "aparece en textos del siglo XVIII, del XIX y del XX?",
         "Para mostrar que, de ser cierta, el idioma ya sería incomprensible",
@@ -45482,7 +47428,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambio_lengua", "lec_evaluar", "dificil",
+        "cambio_lengua", "lec_forma", "dificil",
         "¿Qué función cumple el ejemplo del hablante universitario que dice «querís» "
         "a un amigo y «quieres» en una entrevista de trabajo?",
         "Mostrar que lo que se leía como déficit es un repertorio",
@@ -45506,7 +47452,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'La energía que sobra al mediodía' ----------
     _ql(
-        "energia_vertida", "lec_localizar", "facil",
+        "energia_vertida", "lec_parafrasis", "facil",
         "Según el reportaje, ¿qué es el vertimiento?",
         "La orden de producir menos energía de la que se podría generar",
         "El texto define el término al final del primer párrafo, después de "
@@ -45522,7 +47468,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_localizar", "medio",
+        "energia_vertida", "lec_explicita", "medio",
         "De acuerdo con el reportaje, ¿cuándo entrará en servicio la línea entre "
         "Kimal y Lo Aguirre?",
         "No antes de 2029",
@@ -45537,7 +47483,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_localizar", "medio",
+        "energia_vertida", "lec_parafrasis", "medio",
         "Según el reportaje, ¿qué habría ocurrido en 2025 si no hubieran existido "
         "las baterías ya instaladas?",
         "El vertimiento habría crecido cerca de un 43% durante ese año",
@@ -45552,7 +47498,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_interpretar", "medio",
+        "energia_vertida", "lec_idea_central", "medio",
         "¿Cómo se organiza la explicación que el reportaje da sobre las causas del "
         "vertimiento?",
         "Distingue dos causas —dónde está el sol y a qué hora produce—",
@@ -45569,7 +47515,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_interpretar", "dificil",
+        "energia_vertida", "lec_significado", "dificil",
         "¿Qué idea sostiene la afirmación de que «la electricidad no se puede "
         "acumular en el cable como el agua en una represa»?",
         "Que la energía debe consumirse en el mismo instante en que se produce",
@@ -45585,7 +47531,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_interpretar", "dificil",
+        "energia_vertida", "lec_relacion", "dificil",
         "Según el reportaje, ¿por qué el almacenamiento no reemplaza a las líneas "
         "de transmisión?",
         "Porque una batería mueve la energía en el tiempo, pero no en el espacio",
@@ -45602,7 +47548,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_interpretar", "dificil",
+        "energia_vertida", "lec_funcion", "dificil",
         "¿Qué se propone el reportaje al contrastar ese titular con el escenario "
         "sin baterías?",
         "Mostrar que un dato admite lecturas opuestas según con qué se compare",
@@ -45617,7 +47563,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_evaluar", "dificil",
+        "energia_vertida", "lec_postura", "dificil",
         "¿Qué postura adopta el reportaje frente a la idea de que el vertimiento "
         "demuestra el fracaso de la transición energética?",
         "La rechaza: es señal de que una parte avanzó más rápido que la otra",
@@ -45634,7 +47580,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_localizar", "medio",
+        "energia_vertida", "lec_explicita", "medio",
         "Según el reportaje, ¿por qué la construcción de líneas de transmisión "
         "avanza más lento que la de plantas solares?",
         "Porque atraviesa territorios, exige permisos y enfrenta oposiciones",
@@ -45651,7 +47597,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_evaluar", "dificil",
+        "energia_vertida", "lec_intencion", "dificil",
         "¿Con qué finalidad el reportaje contrapone el aumento del 8% del vertimiento "
         "con el 43% que habría habido sin baterías?",
         "Para mostrar que un mismo dato cambia según con qué se compare",
@@ -45674,7 +47620,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "energia_vertida", "lec_evaluar", "dificil",
+        "energia_vertida", "lec_forma", "dificil",
         "¿Qué función cumple que el reportaje separe el problema «del dónde» y el "
         "problema «del cuándo» en dos secciones distintas?",
         "Sostener que los dos remedios no son intercambiables",
@@ -45699,7 +47645,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El pasaje' ----------
     _ql(
-        "el_pasaje", "lec_localizar", "facil",
+        "el_pasaje", "lec_explicita", "facil",
         "Según el relato, ¿qué hacía el viejo todos los viernes en el terminal?",
         "Compraba un pasaje a Nuevo Amanecer y después no se subía al bus",
         "El texto lo establece al comienzo: los viernes «a las cinco y veinte, "
@@ -45714,7 +47660,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_localizar", "medio",
+        "el_pasaje", "lec_explicita", "medio",
         "De acuerdo con el relato, ¿qué decía el aviso que la empresa pegó en el "
         "vidrio en septiembre?",
         "Que se evaluaba suspender el recorrido a Nuevo Amanecer por baja demanda",
@@ -45729,7 +47675,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_localizar", "medio",
+        "el_pasaje", "lec_explicita", "medio",
         "Según el relato, ¿qué le aconsejó doña Marta a la narradora?",
         "Que no preguntara, porque las respuestas después hay que cargarlas",
         "El consejo aparece textual: «que no me metiera. Que en un pueblo chico uno "
@@ -45743,7 +47689,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_interpretar", "dificil",
+        "el_pasaje", "lec_relacion", "dificil",
         "¿Por qué el viejo compra cada semana un pasaje que no usa?",
         "Para que la ruta registre demanda, porque su hija viaja en ese bus",
         "Él lo explica sin que se lo pregunten: «mi hija vive allá. Viene una vez "
@@ -45759,7 +47705,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_interpretar", "dificil",
+        "el_pasaje", "lec_funcion", "dificil",
         "¿Qué función cumple el párrafo en que la narradora cuenta que entró a "
         "trabajar «por un año»?",
         "Establecer un paralelo entre ella y el viejo, que ella misma reconoce",
@@ -45775,7 +47721,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_interpretar", "dificil",
+        "el_pasaje", "lec_inferencia", "dificil",
         "¿Qué se puede inferir de la escena final, en que el viejo llega acompañado "
         "y no compra pasaje?",
         "Que su hija llegó y ese viernes ya no necesitaba sostener la ruta",
@@ -45792,7 +47738,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_interpretar", "medio",
+        "el_pasaje", "lec_significado", "medio",
         "¿Qué sentido adquiere el pasaje sin usar a lo largo del relato?",
         "Pasa de ser una rareza a ser el modo de sostener esa ruta",
         "Al comienzo el pasaje es un enigma: la narradora busca explicaciones y no "
@@ -45808,7 +47754,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_evaluar", "dificil",
+        "el_pasaje", "lec_forma", "dificil",
         "¿Qué efecto produce que la narradora cierre el relato diciendo que ahora "
         "no pregunta nada?",
         "Muestra que adoptó el consejo de doña Marta, pero por otra razón",
@@ -45826,7 +47772,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_evaluar", "dificil",
+        "el_pasaje", "lec_juicio", "dificil",
         "¿Qué elemento del relato permite sostener que los registros no alcanzan a "
         "mostrar lo que ocurre?",
         "Que el sistema registre la ocupación, pero no por qué alguien compra",
@@ -45843,7 +47789,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_evaluar", "dificil",
+        "el_pasaje", "lec_forma", "dificil",
         "¿Qué función cumple que la narradora cuente que entró a trabajar por un año "
         "y que ese año se cumplió en marzo sin que nadie lo mencionara?",
         "Ponerla a ella también entre quienes no toman el bus",
@@ -45866,7 +47812,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "el_pasaje", "lec_evaluar", "dificil",
+        "el_pasaje", "lec_postura", "dificil",
         "¿Qué actitud muestra doña Marta al aconsejarle a la narradora que no se meta?",
         "Precavida, pues sabe que después hay que cargar las respuestas",
         "Doña Marta no opina sobre el viejo ni sobre lo que le pasa: opina sobre el "
@@ -45890,7 +47836,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El Seguro Escolar: qué es y cómo se usa' ----------
     _ql(
-        "seguro_escolar", "lec_localizar", "facil",
+        "seguro_escolar", "lec_explicita", "facil",
         "Según la cartilla, ¿a quiénes cubre el Seguro Escolar?",
         "A todo estudiante regular, desde parvularia hasta la superior",
         "La sección «A quiénes cubre» lo establece sin excepciones por tipo de "
@@ -45905,7 +47851,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_localizar", "medio",
+        "seguro_escolar", "lec_explicita", "medio",
         "De acuerdo con la cartilla, ¿qué medios sirven para acreditar un accidente "
         "de trayecto?",
         "El parte de Carabineros, testigos u otro medio de prueba válido",
@@ -45921,7 +47867,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_localizar", "medio",
+        "seguro_escolar", "lec_explicita", "medio",
         "Según la cartilla, ¿quién puede denunciar el accidente si el "
         "establecimiento no lo hace dentro de veinticuatro horas?",
         "El médico tratante, el propio accidentado o su representante",
@@ -45937,7 +47883,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_interpretar", "medio",
+        "seguro_escolar", "lec_relacion", "medio",
         "¿Por qué la cartilla destaca que en la definición del accidente de "
         "trayecto «la palabra que hace todo el trabajo es directo»?",
         "Porque de ese adjetivo depende que un desvío deje fuera el caso",
@@ -45954,7 +47900,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_interpretar", "dificil",
+        "seguro_escolar", "lec_relacion", "dificil",
         "¿Qué relación se establece entre la tabla de situaciones y la definición "
         "de accidente de trayecto que la antecede?",
         "La tabla prueba la definición: el único caso dudoso es el que excluía",
@@ -45971,7 +47917,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_interpretar", "dificil",
+        "seguro_escolar", "lec_idea_central", "dificil",
         "¿Cuál es la idea principal de la sección dedicada a la denuncia?",
         "Que sin el D.I.A.E. el seguro no opera, y la familia puede presentarlo",
         "La sección abre estableciendo que «el seguro no se activa solo» y que sin "
@@ -45988,7 +47934,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_interpretar", "medio",
+        "seguro_escolar", "lec_inferencia", "medio",
         "¿Qué recomendación práctica se desprende, según la cartilla, de la "
         "exigencia de acreditar el accidente de trayecto?",
         "Registrar el lugar y la hora y pedir los datos de los testigos",
@@ -46004,7 +47950,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_evaluar", "medio",
+        "seguro_escolar", "lec_intencion", "medio",
         "¿Con qué propósito la cartilla incluye una sección titulada «Lo que el "
         "seguro no resuelve»?",
         "Para acotar el alcance y evitar una expectativa equivocada",
@@ -46022,7 +47968,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_evaluar", "dificil",
+        "seguro_escolar", "lec_aplicar", "dificil",
         "Un estudiante se lesiona volviendo del colegio tras desviarse a un "
         "almacén, y el colegio no denuncia. ¿Qué cabe afirmar?",
         "Que la familia pudo denunciar, aunque el desvío vuelve discutible el caso",
@@ -46040,7 +47986,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_evaluar", "dificil",
+        "seguro_escolar", "lec_intencion", "dificil",
         "¿Con qué finalidad la cartilla insiste en que, pasadas veinticuatro horas, "
         "la denuncia puede hacerla el propio accidentado o su representante?",
         "Para que la familia no dependa del colegio cuando este no actúa",
@@ -46064,7 +48010,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "seguro_escolar", "lec_evaluar", "dificil",
+        "seguro_escolar", "lec_juicio", "dificil",
         "¿Qué justifica que la cartilla recomiende registrar el lugar, la hora y los "
         "testigos cuando el accidente ocurre en el trayecto?",
         "Que esos accidentes no tienen testigos del establecimiento",
@@ -46090,7 +48036,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El derecho a cambiar de opinión' ----------
     _ql(
-        "cambiar_opinion", "lec_localizar", "medio",
+        "cambiar_opinion", "lec_explicita", "medio",
         "Según el ensayo, ¿qué diferencia hay entre ser consistente y ser "
         "coherente?",
         "Ser consistente es sostener lo mismo; ser coherente, seguir las razones",
@@ -46106,7 +48052,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_localizar", "medio",
+        "cambiar_opinion", "lec_explicita", "medio",
         "De acuerdo con el ensayo, ¿qué hace habitualmente quien cambió de opinión "
         "por conveniencia?",
         "Niega haber cambiado, o sostiene que siempre pensó lo mismo",
@@ -46121,7 +48067,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_localizar", "facil",
+        "cambiar_opinion", "lec_parafrasis", "facil",
         "Según el ensayo, ¿qué ejemplo usa el emisor para mostrar que en otros "
         "ámbitos el cambio se celebra?",
         "El de un médico que seguiría recetando lo que aprendió en 1990",
@@ -46136,7 +48082,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_interpretar", "dificil",
+        "cambiar_opinion", "lec_idea_central", "dificil",
         "¿Cuál es la tesis del ensayo?",
         "Que cambiar de opinión no es, por sí solo, un dato en contra de nadie",
         "El penúltimo párrafo la enuncia acotándola: «significa algo más modesto: "
@@ -46152,7 +48098,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_interpretar", "dificil",
+        "cambiar_opinion", "lec_funcion", "dificil",
         "¿Qué función cumple en la argumentación el párrafo que empieza «se me "
         "dirá, y con razón, que no todo cambio de opinión merece respeto»?",
         "Introducir la objeción más fuerte para responderla en seguida",
@@ -46169,7 +48115,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_interpretar", "dificil",
+        "cambiar_opinion", "lec_relacion", "dificil",
         "Según el ensayo, ¿por qué la pregunta «¿qué lo hizo cambiar?» es mejor que "
         "«¿usted sostiene lo mismo que antes?»",
         "Porque obliga a exponer el razonamiento y no solo la memoria",
@@ -46185,7 +48131,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_interpretar", "medio",
+        "cambiar_opinion", "lec_significado", "medio",
         "¿Qué idea sostiene la distinción entre revisar un juicio sobre un hecho y "
         "revisar un principio?",
         "Que no todos los cambios pesan igual, y el debate los confunde",
@@ -46202,7 +48148,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_evaluar", "dificil",
+        "cambiar_opinion", "lec_intencion", "dificil",
         "¿Qué se propone el emisor al señalar que a las instituciones se les "
         "toleran giros que a las personas no?",
         "Sugerir que la exigencia de consistencia sirve para descalificar",
@@ -46219,7 +48165,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_evaluar", "medio",
+        "cambiar_opinion", "lec_postura", "medio",
         "Una candidata explica qué informe la hizo cambiar y qué parte de su "
         "posición anterior mantiene. ¿Cómo valorarla?",
         "Como un cambio por razones, porque explica qué cambió y qué se mantuvo",
@@ -46235,7 +48181,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_evaluar", "dificil",
+        "cambiar_opinion", "lec_forma", "dificil",
         "¿Qué función cumplen los ejemplos del médico que sigue recetando lo de 1990 "
         "y de la investigadora que abandona su hipótesis?",
         "Mostrar que en otros ámbitos el cambio se lee al revés",
@@ -46260,7 +48206,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cambiar_opinion", "lec_evaluar", "dificil",
+        "cambiar_opinion", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor admite que hay quienes cambian de opinión "
         "cuando cambia su conveniencia?",
         "Para anticipar la objeción y responderla con un criterio",
@@ -46286,7 +48232,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Bases del Fondo de Iniciativas Estudiantiles' ----------
     _ql(
-        "bases_fondo", "lec_localizar", "facil",
+        "bases_fondo", "lec_explicita", "facil",
         "Según las bases, ¿cuántos integrantes puede tener un grupo postulante?",
         "Entre tres y ocho estudiantes por grupo",
         "La sección «Quiénes pueden postular» lo fija de entrada: «pueden postular "
@@ -46301,7 +48247,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_localizar", "medio",
+        "bases_fondo", "lec_explicita", "medio",
         "De acuerdo con las bases, ¿cuál de los siguientes gastos NO puede "
         "financiarse con el Fondo?",
         "La alimentación de los integrantes del grupo",
@@ -46317,7 +48263,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_localizar", "medio",
+        "bases_fondo", "lec_explicita", "medio",
         "Según la tabla de criterios, ¿qué se observa en el criterio de "
         "participación?",
         "Que la comunidad afectada intervenga en el diseño del proyecto",
@@ -46332,7 +48278,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_interpretar", "medio",
+        "bases_fondo", "lec_relacion", "medio",
         "¿Por qué las bases sostienen que una encuesta al propio curso vale más que "
         "una cita a una estadística nacional?",
         "Porque acredita que el problema ocurre en ese lugar concreto",
@@ -46348,7 +48294,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_interpretar", "dificil",
+        "bases_fondo", "lec_relacion", "dificil",
         "¿Qué relación se establece entre el objetivo declarado en la sección 1 y "
         "el criterio de viabilidad?",
         "Traduce el objetivo en una exigencia evaluable: que sea ejecutable",
@@ -46365,7 +48311,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_interpretar", "dificil",
+        "bases_fondo", "lec_significado", "dificil",
         "Según las bases, ¿qué significa exactamente el criterio de permanencia?",
         "Que el grupo haya previsto qué ocurre al terminar el financiamiento",
         "El texto corrige de forma expresa el malentendido habitual: el criterio "
@@ -46382,7 +48328,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_interpretar", "dificil",
+        "bases_fondo", "lec_funcion", "dificil",
         "¿Qué función cumple la advertencia sobre los problemas técnicos de la "
         "plataforma el último día?",
         "Dejar claro que el riesgo de postular tarde lo asume el grupo",
@@ -46399,7 +48345,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_evaluar", "medio",
+        "bases_fondo", "lec_intencion", "medio",
         "¿Con qué propósito las respuestas a las consultas se publican de forma "
         "anónima en la página de las bases?",
         "Para que todos los grupos tengan la misma información a la vez",
@@ -46415,7 +48361,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_evaluar", "dificil",
+        "bases_fondo", "lec_aplicar", "dificil",
         "Un grupo de cinco estudiantes postula en plazo un proyecto de $780.000 "
         "para comprar tres computadores. ¿Qué ocurre?",
         "Queda inadmisible, porque consiste solo en comprar equipamiento",
@@ -46431,7 +48377,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_evaluar", "dificil",
+        "bases_fondo", "lec_juicio", "dificil",
         "Según las bases, ¿qué justifica que una encuesta al propio curso valga más "
         "que una cita a una estadística nacional?",
         "Que acredita el problema en ese lugar y no en el país",
@@ -46455,7 +48401,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "bases_fondo", "lec_evaluar", "dificil",
+        "bases_fondo", "lec_intencion", "dificil",
         "¿Con qué finalidad las bases aclaran que el criterio de permanencia no exige "
         "que el proyecto dure para siempre?",
         "Para que un grupo honesto no pierda puntaje por decirlo",
@@ -46481,7 +48427,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El nombre del caballo' ----------
     _ql(
-        "control_lectura", "lec_localizar", "facil",
+        "control_lectura", "lec_parafrasis", "facil",
         "Según la columna, ¿qué es lo que verifican casi siempre los controles de "
         "lectura?",
         "Que el libro fue leído, preguntando por datos verificables del relato",
@@ -46496,7 +48442,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_localizar", "medio",
+        "control_lectura", "lec_parafrasis", "medio",
         "De acuerdo con la columna, ¿por qué sobreviven las pruebas de alternativas "
         "pese a existir formas mejores de evaluar?",
         "Porque son lo único que cabe en el tiempo del que dispone",
@@ -46514,7 +48460,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_localizar", "medio",
+        "control_lectura", "lec_explicita", "medio",
         "Según la columna, ¿qué suele responder un adulto cuando se le pregunta qué "
         "libro lo marcó de verdad?",
         "Nombra uno que no estaba en la lista y encontró por su cuenta",
@@ -46530,7 +48476,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_interpretar", "medio",
+        "control_lectura", "lec_funcion", "medio",
         "¿Qué función cumplen las preguntas «¿Alguien conoce un lector adulto que "
         "funcione así?» y las que la siguen?",
         "Hacer evidente que la lectura escolar no se parece a la real",
@@ -46547,7 +48493,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_interpretar", "dificil",
+        "control_lectura", "lec_idea_central", "dificil",
         "¿Cuál es la tesis que sostiene la columna?",
         "Que la forma de evaluar produce el resultado contrario al buscado",
         "La emisora la enuncia en el primer párrafo —«les enseñamos a leer de una "
@@ -46564,7 +48510,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_interpretar", "dificil",
+        "control_lectura", "lec_relacion", "dificil",
         "¿Qué relación se establece entre la concesión «un colegio que renunciara a "
         "exigir estaría renunciando a enseñar» y lo que la emisora sostiene "
         "después?",
@@ -46582,7 +48528,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_interpretar", "dificil",
+        "control_lectura", "lec_significado", "dificil",
         "¿Qué idea sostiene la afirmación «un libro mediocre discutido con seriedad "
         "puede producir un lector»?",
         "Que el modo de evaluar pesa más que el título elegido",
@@ -46600,7 +48546,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_evaluar", "medio",
+        "control_lectura", "lec_intencion", "medio",
         "¿Qué efecto busca la emisora al escribir «los jóvenes leen poco, en parte, "
         "porque LES ENSEÑAMOS a leer de una manera que hace difícil que a alguien "
         "le guste»?",
@@ -46618,7 +48564,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_evaluar", "dificil",
+        "control_lectura", "lec_juicio", "dificil",
         "Un colegio cambia los títulos de su lista por otros más recientes y "
         "mantiene el mismo control. ¿Qué diría la emisora?",
         "Que cambia lo secundario y deja intacto lo que causa el problema",
@@ -46635,7 +48581,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_evaluar", "dificil",
+        "control_lectura", "lec_intencion", "dificil",
         "¿Con qué finalidad la emisora concede que «un colegio que renunciara a "
         "exigir estaría renunciando a enseñar»?",
         "Para separar exigir esfuerzo de exigir obediencia",
@@ -46659,7 +48605,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "control_lectura", "lec_evaluar", "dificil",
+        "control_lectura", "lec_postura", "dificil",
         "¿Qué función cumple la prueba que propone la emisora: preguntarle a un "
         "adulto qué libros leyó en el colegio y cuál lo marcó de verdad?",
         "Ofrecer una comprobación que el lector puede hacer solo",
@@ -46685,7 +48631,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Para qué sirve olvidar' ----------
     _ql(
-        "olvido_memoria", "lec_localizar", "facil",
+        "olvido_memoria", "lec_explicita", "facil",
         "Según el texto, ¿por qué Ebbinghaus memorizó sílabas sin sentido en lugar "
         "de palabras corrientes?",
         "Para que ningún significado previo lo ayudara a recordarlas",
@@ -46700,7 +48646,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_localizar", "medio",
+        "olvido_memoria", "lec_parafrasis", "medio",
         "De acuerdo con el texto, ¿qué papel cumple el hipocampo en la formación de "
         "un recuerdo?",
         "Sostiene el registro inicial, como un cuaderno de apuntes rápido",
@@ -46715,7 +48661,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_localizar", "medio",
+        "olvido_memoria", "lec_explicita", "medio",
         "Según el experimento que compara releer con autoevaluarse, ¿qué ocurre una "
         "semana después?",
         "Quienes releyeron el texto son los que peor lo recuerdan",
@@ -46730,7 +48676,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_interpretar", "medio",
+        "olvido_memoria", "lec_significado", "medio",
         "¿Qué conclusión extrae el texto de que la curva del olvido caiga "
         "bruscamente al comienzo y luego se aplane?",
         "Que el olvido no es parejo: hay un tramo frágil y otro estable",
@@ -46747,7 +48693,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_interpretar", "dificil",
+        "olvido_memoria", "lec_funcion", "dificil",
         "¿Qué función cumple en el texto la pregunta «para qué serviría olvidar»?",
         "Marcar el giro: el olvido deja de ser falla y pasa a ser función",
         "El párrafo dice explícitamente que «hasta aquí la historia es la conocida» "
@@ -46763,7 +48709,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_interpretar", "dificil",
+        "olvido_memoria", "lec_funcion", "dificil",
         "¿Qué idea sostiene el ejemplo del perro que nunca se había visto antes?",
         "Que olvidar los detalles es lo que permite reconocer un patrón",
         "El ejemplo aparece dentro del argumento de que «una memoria perfecta sería "
@@ -46779,7 +48725,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_interpretar", "dificil",
+        "olvido_memoria", "lec_relacion", "dificil",
         "Según el texto, ¿por qué conviene repasar en los días siguientes al primer "
         "estudio y no la víspera de la prueba?",
         "Porque el recuerdo es frágil ahí y cada recuperación lo estabiliza",
@@ -46796,7 +48742,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_evaluar", "dificil",
+        "olvido_memoria", "lec_intencion", "dificil",
         "¿Con qué propósito el emisor advierte que no hay que confundir el olvido "
         "normal con las enfermedades que destruyen la memoria?",
         "Para impedir que su tesis se lleve más lejos de lo que sostiene",
@@ -46813,7 +48759,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_evaluar", "medio",
+        "olvido_memoria", "lec_juicio", "medio",
         "Un estudiante deja de estudiar la víspera para dormir ocho horas, sin "
         "cambiar nada más. ¿Qué diría el texto?",
         "Que atiende solo una parte: lo decisivo es repasar antes, varias veces",
@@ -46830,7 +48776,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_evaluar", "dificil",
+        "olvido_memoria", "lec_forma", "dificil",
         "¿Qué función cumple el experimento en que unos estudiantes releen un texto y "
         "otros intentan recordarlo sin mirarlo?",
         "Mostrar que la sensación de aprender no mide el aprendizaje",
@@ -46855,7 +48801,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "olvido_memoria", "lec_evaluar", "dificil",
+        "olvido_memoria", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor menciona a las personas capaces de recordar su "
         "propia vida día por día?",
         "Para mostrar por dentro el costo de no olvidar",
@@ -46881,7 +48827,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'Los residuos que genera un hogar chileno' ----------
     _ql(
-        "residuos_hogar", "lec_localizar", "facil",
+        "residuos_hogar", "lec_explicita", "facil",
         "Según la primera tabla, ¿cuántos kilos de residuos genera al año cada "
         "habitante del país?",
         "463 kilos",
@@ -46896,7 +48842,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_localizar", "medio",
+        "residuos_hogar", "lec_explicita", "medio",
         "Según la nota metodológica, ¿qué información queda fuera cuando el dato se "
         "toma de la báscula del relleno sanitario?",
         "Todo lo que se recuperó antes de llegar al relleno sanitario",
@@ -46912,7 +48858,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_localizar", "medio",
+        "residuos_hogar", "lec_explicita", "medio",
         "De acuerdo con el informe, ¿desde cuándo existe en Chile la ley de "
         "responsabilidad extendida del productor?",
         "Desde 2016",
@@ -46928,7 +48874,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_interpretar", "medio",
+        "residuos_hogar", "lec_funcion", "medio",
         "¿Qué función cumple la comparación entre los 463 kilos anuales y el peso "
         "de un caballo adulto?",
         "Traducir una cifra abstracta a una magnitud que el lector pueda imaginar",
@@ -46944,7 +48890,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_interpretar", "dificil",
+        "residuos_hogar", "lec_relacion", "dificil",
         "¿Qué relación se establece entre la segunda tabla y el párrafo que viene "
         "inmediatamente después?",
         "Advierte que ese 14% no debe leerse como reciclaje, porque incluye más",
@@ -46961,7 +48907,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_interpretar", "dificil",
+        "residuos_hogar", "lec_idea_central", "dificil",
         "¿Cuál es la idea principal de la sección que describe los cuatro eslabones "
         "de la cadena del reciclaje?",
         "Que reciclar depende de una cadena y basta que falte un eslabón",
@@ -46978,7 +48924,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_interpretar", "dificil",
+        "residuos_hogar", "lec_significado", "dificil",
         "¿Por qué el informe sostiene que el reciclaje «no es un gesto moral»?",
         "Porque depende de que el material recuperado compita en precio",
         "El texto lo argumenta con un mecanismo económico concreto: «cuando el "
@@ -46994,7 +48940,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_evaluar", "medio",
+        "residuos_hogar", "lec_forma", "medio",
         "¿Qué función cumple la nota metodológica dentro del informe?",
         "Advertir sobre los límites de las propias cifras que el informe entrega",
         "La nota no agrega datos: explica por qué los datos ya entregados no son "
@@ -47010,7 +48956,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_evaluar", "dificil",
+        "residuos_hogar", "lec_postura", "dificil",
         "¿Qué postura adopta el emisor respecto de las campañas que apelan a la "
         "conciencia del consumidor?",
         "Sostiene que no son inútiles, pero llegan tarde en la cadena",
@@ -47028,7 +48974,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_evaluar", "dificil",
+        "residuos_hogar", "lec_intencion", "dificil",
         "¿Con qué finalidad el informe traduce los 463 kilos anuales por habitante al "
         "peso de un caballo adulto?",
         "Para volver visible una cantidad que nadie ve salir",
@@ -47052,7 +48998,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "residuos_hogar", "lec_evaluar", "dificil",
+        "residuos_hogar", "lec_intencion", "dificil",
         "¿Qué efecto busca el informe al cerrar preguntando si conviene reciclar "
         "mejor esos 463 kilos o generar menos?",
         "Señalar un objetivo sobre el que no hay meta fijada",
@@ -47077,7 +49023,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'A la deriva' ----------
     _ql(
-        "a_la_deriva", "lec_localizar", "facil",
+        "a_la_deriva", "lec_parafrasis", "facil",
         "Según el relato, ¿qué hace el hombre inmediatamente después de sentir la "
         "mordedura?",
         "Salta hacia adelante y mata a la víbora con su machete",
@@ -47092,7 +49038,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_localizar", "facil",
+        "a_la_deriva", "lec_parafrasis", "facil",
         "De acuerdo con el relato, ¿qué le reclama el hombre a su mujer cuando ella "
         "le acerca un vaso?",
         "Que le haya dado agua en lugar de la caña que pidió",
@@ -47107,7 +49053,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_localizar", "medio",
+        "a_la_deriva", "lec_parafrasis", "medio",
         "Según el relato, ¿por qué el hombre decide atracar en la costa brasileña?",
         "Porque comprende que no llegará solo y busca a su compadre Alves",
         "El texto encadena las dos cosas: «el hombre pensó que no podría jamás "
@@ -47121,7 +49067,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_interpretar", "medio",
+        "a_la_deriva", "lec_funcion", "medio",
         "¿Qué función cumple en el relato la descripción del Paraná encajonado "
         "entre paredes de cien metros?",
         "Construir un espacio cerrado que subraya la soledad del hombre",
@@ -47138,7 +49084,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_interpretar", "dificil",
+        "a_la_deriva", "lec_significado", "dificil",
         "¿Cómo debe entenderse la mejoría que el hombre siente después de la caída "
         "del sol?",
         "Como una sensación engañosa que anuncia el desenlace final",
@@ -47155,7 +49101,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_interpretar", "dificil",
+        "a_la_deriva", "lec_inferencia", "dificil",
         "¿Qué le ocurre a la percepción del tiempo del protagonista en los párrafos "
         "finales?",
         "Se vuelve confusa: intenta precisar fechas y se le desordenan",
@@ -47172,7 +49118,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_interpretar", "dificil",
+        "a_la_deriva", "lec_relacion", "dificil",
         "¿Qué relación se establece entre el título del cuento y lo que le sucede "
         "al protagonista?",
         "Deja de gobernar su rumbo y queda entregado a la corriente y al veneno",
@@ -47189,7 +49135,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_evaluar", "medio",
+        "a_la_deriva", "lec_postura", "medio",
         "¿Qué actitud adopta el narrador frente al sufrimiento del protagonista?",
         "Lo registra con distancia, sin compadecerse ni comentar",
         "El narrador consigna la hinchazón, el vómito de sangre y la carne que "
@@ -47205,7 +49151,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_evaluar", "dificil",
+        "a_la_deriva", "lec_juicio", "dificil",
         "¿Qué elemento del relato permite sostener que la naturaleza se muestra "
         "indiferente ante la muerte?",
         "Que el paisaje alcance su mayor belleza justo mientras el hombre agoniza",
@@ -47222,7 +49168,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_evaluar", "dificil",
+        "a_la_deriva", "lec_forma", "dificil",
         "¿Qué efecto produce que el hombre se sienta cada vez mejor mientras la canoa "
         "deriva río abajo?",
         "El lector entiende antes que él que se está muriendo",
@@ -47246,7 +49192,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "a_la_deriva", "lec_evaluar", "dificil",
+        "a_la_deriva", "lec_forma", "dificil",
         "¿Qué función cumple que el hombre, al final, se ocupe de precisar cuánto "
         "tiempo pasó sin ver a su ex patrón?",
         "Muestra la conciencia apagándose sobre un detalle menor",
@@ -47270,7 +49216,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- 'El cielo como infraestructura' ----------
     _ql(
-        "cielo_oscuro", "lec_localizar", "facil",
+        "cielo_oscuro", "lec_explicita", "facil",
         "Según el texto, ¿qué límite de emisión de luz azul fija la norma actual "
         "para las Áreas de Protección Especial?",
         "1%",
@@ -47286,7 +49232,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_localizar", "medio",
+        "cielo_oscuro", "lec_parafrasis", "medio",
         "De acuerdo con el texto, ¿qué caracteriza a la luz que produce "
         "contaminación lumínica?",
         "Que se escapa hacia arriba o a los costados en vez de al suelo",
@@ -47302,7 +49248,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_localizar", "medio",
+        "cielo_oscuro", "lec_parafrasis", "medio",
         "Según el texto, ¿cómo obtuvo sus datos el estudio publicado en 2023?",
         "Pidiendo a voluntarios que informaran cuántas estrellas veían",
         "El texto lo describe paso a paso: «en lugar de instalar sensores, pidió a "
@@ -47316,7 +49262,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_interpretar", "medio",
+        "cielo_oscuro", "lec_funcion", "medio",
         "¿Qué idea sostiene el ejemplo del foco que ilumina bien la vereda y del "
         "mismo foco inclinado unos grados de más?",
         "Que el problema no es cuánta luz se emite, sino hacia dónde va",
@@ -47333,7 +49279,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_interpretar", "dificil",
+        "cielo_oscuro", "lec_relacion", "dificil",
         "¿Qué relación se establece entre la definición de contaminación lumínica "
         "del comienzo y la respuesta que el texto da a quienes temen por la "
         "seguridad de los barrios?",
@@ -47351,7 +49297,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_interpretar", "dificil",
+        "cielo_oscuro", "lec_funcion", "dificil",
         "¿Con qué propósito el texto menciona que los satélites venían mostrando un "
         "aumento mucho más lento que el estudio de 2023?",
         "Para mostrar que el problema estuvo subestimado durante años",
@@ -47367,7 +49313,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_interpretar", "dificil",
+        "cielo_oscuro", "lec_idea_central", "dificil",
         "¿Cuál es la tesis que sostiene el texto?",
         "Que la oscuridad del cielo es un bien público que hay que administrar",
         "El cierre la formula sin rodeos: «la oscuridad del cielo del norte es "
@@ -47383,7 +49329,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_evaluar", "medio",
+        "cielo_oscuro", "lec_postura", "medio",
         "¿Qué actitud adopta el emisor frente a quienes objetan el costo del "
         "recambio y temen por la seguridad?",
         "Reconoce que la objeción es razonable y la responde con datos",
@@ -47400,7 +49346,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_evaluar", "dificil",
+        "cielo_oscuro", "lec_aplicar", "dificil",
         "Una municipalidad quiere cumplir la norma sin que sus calles queden más "
         "oscuras. ¿Qué medida serviría?",
         "Encapsular las luminarias y cambiarlas por otras de tono cálido",
@@ -47417,7 +49363,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_evaluar", "dificil",
+        "cielo_oscuro", "lec_intencion", "dificil",
         "¿Con qué finalidad el emisor precisa que la contaminación lumínica «no es el "
         "exceso de luz, sino la luz mal dirigida»?",
         "Para sostener después que cumplir la norma no exige apagar luces",
@@ -47442,7 +49388,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "cielo_oscuro", "lec_evaluar", "dificil",
+        "cielo_oscuro", "lec_forma", "dificil",
         "¿Qué función cumple mencionar que un niño que hoy ve doscientas cincuenta "
         "estrellas verá alrededor de cien al cumplir dieciocho?",
         "Traducir una tasa anual en una pérdida que se puede imaginar",
@@ -47467,7 +49413,7 @@ QUESTIONS_LECTORA = [
     ),
     # ---------- "El alma de la máquina" (Baldomero Lillo, 1907) ----------
     _ql(
-        "alma_maquina", "lec_localizar", "facil",
+        "alma_maquina", "lec_parafrasis", "facil",
         "Según el texto, ¿por qué los obreros envidian al maquinista?",
         "Porque trabaja bajo techo y gasta apenas la energía necesaria",
         "El segundo párrafo lo dice con todas sus letras: los obreros están "
@@ -47483,7 +49429,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_localizar", "facil",
+        "alma_maquina", "lec_parafrasis", "facil",
         "De acuerdo con el texto, ¿qué debe vigilar el maquinista para evitar un "
         "accidente?",
         "La aguja del cuadrante, que marca las vueltas de la bobina",
@@ -47499,7 +49445,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_localizar", "medio",
+        "alma_maquina", "lec_parafrasis", "medio",
         "Según el relato, ¿cómo reaccionan los obreros cuando suena el silbido que "
         "termina la jornada?",
         "Salen apurados y se empujan entre sí, pero ninguno protesta",
@@ -47514,7 +49460,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_interpretar", "medio",
+        "alma_maquina", "lec_relacion", "medio",
         "¿Qué relación se establece entre lo que los obreros piensan del maquinista "
         "y lo que el narrador cuenta a continuación sobre su trabajo?",
         "La desmiente: esa labor es todavía más agobiadora que la de ellos",
@@ -47531,7 +49477,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_interpretar", "medio",
+        "alma_maquina", "lec_inferencia", "medio",
         "¿Qué sugiere la comparación «la máquina se detiene sin ruido, sin "
         "sacudidas, como un caballo blando de boca»?",
         "Que la máquina obedece al menor movimiento de quien la conduce",
@@ -47547,7 +49493,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_interpretar", "dificil",
+        "alma_maquina", "lec_funcion", "dificil",
         "¿Qué función cumple en el relato la enumeración del ascensor "
         "estrellándose, la bobina arrancada de su centro y los émbolos rompiendo "
         "las bielas?",
@@ -47565,7 +49511,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_interpretar", "dificil",
+        "alma_maquina", "lec_significado", "dificil",
         "¿Qué transformación experimenta el maquinista a lo largo de la jornada?",
         "Pasa de hombre que piensa a autómata, y al final vuelve en sí",
         "El relato marca las dos direcciones del cambio. Al tomar el mando, «su ser "
@@ -47581,7 +49527,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_evaluar", "medio",
+        "alma_maquina", "lec_postura", "medio",
         "¿Qué actitud adopta el narrador frente a los obreros que envidian al "
         "maquinista?",
         "Explica el origen de su envidia, pero deja claro que están equivocados",
@@ -47598,7 +49544,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_evaluar", "dificil",
+        "alma_maquina", "lec_juicio", "dificil",
         "¿Qué elemento del relato permite sostener que el trabajo industrial "
         "convierte a la persona en pieza de la máquina?",
         "Que al tomar el mando pase a formar parte del organismo de hierro",
@@ -47615,7 +49561,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_evaluar", "dificil",
+        "alma_maquina", "lec_intencion", "dificil",
         "¿Con qué finalidad el narrador detalla que las catorce vueltas del ascensor "
         "ocurren en menos de veinte segundos?",
         "Para medir en segundos lo que cuesta una distracción",
@@ -47639,7 +49585,7 @@ QUESTIONS_LECTORA = [
         ],
     ),
     _ql(
-        "alma_maquina", "lec_evaluar", "dificil",
+        "alma_maquina", "lec_forma", "dificil",
         "¿Qué efecto produce que el maquinista, terminada la jornada, se desplome en "
         "el banco «como una masa inerte»?",
         "Invierte la envidia de los obreros del comienzo",
@@ -60831,6 +62777,494 @@ QUESTIONS_HISTORIA = [
 ]
 
 
+# ---------- Historia con figura ----------
+# El temario DEMRE (Admisión 2027) pide de forma explícita trabajar con
+# representaciones: la habilidad de pensamiento temporal y espacial incluye
+# "interpretar la distribución geográfica y las dinámicas del territorio
+# utilizando representaciones como mapas, gráficos, cartogramas", y la de
+# análisis de fuentes, "utilizar mapas, tablas y otras fuentes de información".
+# Sin figuras esos objetivos no se pueden evaluar, y el banco entero era texto.
+#
+# Las figuras son PROPIAS y viven en `apps/web/public/preguntas/`. Cuando llevan
+# cifras, la figura misma declara que son ficticias: acá no se inventan datos
+# para hacerlos pasar por reales.
+QUESTIONS_HISTORIA += [
+    _q(
+        "his_fuentes", "medio",
+        "La tabla de la figura compara dos fuentes sobre un mismo puerto. ¿Cuál "
+        "de ellas es una fuente primaria y por qué?",
+        "La fuente 1, porque fue producida en la época que se estudia",
+        "Una fuente primaria se produce en el periodo estudiado y forma parte de "
+        "él; una secundaria lo interpreta después.\n\n"
+        "1) La carta es de 1887 y la escribió alguien que vivía ese proceso: es "
+        "un testimonio de la época.\n"
+        "2) El artículo es de 2019 y su autora reconstruye lo ocurrido a partir "
+        "de otras fuentes: es una elaboración posterior.\n\n"
+        "Ser primaria no la hace más confiable. Su propósito declarado era "
+        "contarle a su familia cómo vivía, no describir el puerto con exactitud.",
+        [
+            ("La fuente 2, porque la escribió una historiadora", "La formación de quien escribe habla del rigor, no de si la fuente es de la época."),
+            ("La fuente 2, porque es más reciente", "Ser reciente es lo contrario de ser contemporáneo al hecho estudiado."),
+            ("Las dos, porque hablan del mismo puerto", "Compartir tema no las hace primarias: importa cuándo y desde dónde se escribieron."),
+        ],
+        imagen="/preguntas/his-tabla-fuentes.svg",
+    ),
+    _q(
+        "his_fuentes", "medio",
+        "¿Cuál de las siguientes afirmaciones se puede sostener únicamente con "
+        "el gráfico de exportaciones de la figura?",
+        "Las exportaciones subieron tres décadas y luego cayeron",
+        "Una fuente permite afirmar lo que muestra, no lo que la explica.\n\n"
+        "1) El gráfico muestra un alza sostenida entre 1880 y 1910, un "
+        "descenso leve hacia 1920 y una caída fuerte hacia 1930.\n"
+        "2) Eso es una descripción de la curva, y se puede verificar mirándola.\n"
+        "3) Las causas de esa caída no están en el gráfico: para afirmarlas hay "
+        "que recurrir a otras fuentes.\n\n"
+        "Distinguir lo que la fuente muestra de lo que uno ya sabe es la primera "
+        "regla del análisis de fuentes.",
+        [
+            ("La caída se debió a la aparición de un sustituto sintético", "Puede ser cierto históricamente, pero el gráfico no informa causas."),
+            ("El país exportaba solo este producto durante el periodo", "El gráfico muestra un producto, y de ahí no se deduce que fuera el único."),
+            ("La producción se detuvo por completo hacia 1930", "En 1930 las exportaciones bajan a 8 mil toneladas, que no es cero."),
+        ],
+        imagen="/preguntas/his-grafico-exportaciones.svg",
+    ),
+    _q(
+        "his_fuentes", "dificil",
+        "Un estudiante quiere saber cuáles eran las condiciones reales de "
+        "trabajo en las salitreras. ¿Qué puede establecer con el recorte de "
+        "prensa de la figura?",
+        "Cómo un diario de la época presentó el conflicto",
+        "El recorte es una fuente primaria valiosa, pero de otra cosa.\n\n"
+        "1) Lo que entrega con certeza es cómo se informó el hecho: qué se "
+        "destacó, con qué palabras y a quién se le dio la voz.\n"
+        "2) Sobre las condiciones mismas, el diario solo reproduce dos "
+        "versiones en disputa: la de la delegación y la de la empresa.\n"
+        "3) Para establecer las condiciones reales harían falta otras fuentes: "
+        "registros de la empresa, informes de inspección, testimonios.\n\n"
+        "Toda fuente responde bien una pregunta y mal otras. La tarea es saber "
+        "cuál es cuál.",
+        [
+            ("Que las condiciones eran las de costumbre en la industria", "Eso es lo que sostiene la empresa dentro de la nota, no un hecho establecido."),
+            ("Que los obreros exageraban sus demandas ante la empresa", "El recorte no permite evaluar las demandas: solo informa que existieron."),
+            ("Que el conflicto se resolvió a favor de los trabajadores", "La nota es del día de la llegada de la delegación y no informa desenlace."),
+        ],
+        imagen="/preguntas/his-recorte-prensa.svg",
+    ),
+    _q(
+        "his_fuentes", "medio",
+        "Las dos fuentes de la figura muestran la misma variable, pero dan "
+        "impresiones distintas. ¿A qué se debe la diferencia?",
+        "A que cada gráfico cubre un periodo distinto",
+        "Las dos curvas son compatibles: lo que cambia es el tramo que cada una "
+        "muestra.\n\n"
+        "1) La fuente 1 abarca sesenta años y deja ver un aumento grande, de 20 "
+        "a 80.\n"
+        "2) La fuente 2 abarca solo la última década, donde el aumento fue de 72 "
+        "a 80 y por eso la curva se ve casi plana.\n"
+        "3) Ninguna de las dos miente: el recorte temporal decide qué parte del "
+        "proceso queda a la vista.\n\n"
+        "Por eso, al comparar fuentes cuantitativas, lo primero que hay que "
+        "mirar es el eje: qué periodo cubre y con qué escala.",
+        [
+            ("A que una de las dos fuentes está equivocada", "Los valores coinciden en el tramo que comparten: no se contradicen."),
+            ("A que miden variables diferentes", "La figura indica que las dos muestran la misma variable."),
+            ("A que la fuente 2 usa una escala más grande", "Las dos llegan hasta 100 en el eje vertical; lo que cambia es el periodo."),
+        ],
+        imagen="/preguntas/his-dos-recortes.svg",
+    ),
+    _q(
+        "his_temporal", "facil",
+        "Según la línea de tiempo de la figura, ¿en qué periodo ocurrió la "
+        "Segunda Guerra Mundial?",
+        "En el periodo II",
+        "La Segunda Guerra Mundial se desarrolló entre 1939 y 1945.\n\n"
+        "1) El periodo II va de 1925 a 1950.\n"
+        "2) Los años 1939 y 1945 caen completos dentro de ese tramo.\n\n"
+        "Ubicar un hecho en una periodización es la operación básica del "
+        "pensamiento temporal: primero se fija el tramo, después se discute qué "
+        "lo caracteriza.",
+        [
+            ("En el periodo I", "El primer tramo termina en 1925, catorce años antes del inicio de la guerra."),
+            ("En el periodo III", "Ese tramo parte en 1950, cuando la guerra ya había terminado."),
+            ("En el periodo IV", "Corresponde al último cuarto del siglo XX."),
+        ],
+        imagen="/preguntas/his-linea-tiempo.svg",
+    ),
+    _q(
+        "his_temporal", "medio",
+        "¿Qué proceso histórico representa el esquema de la figura?",
+        "La división del mundo en dos bloques durante la Guerra Fría",
+        "El esquema muestra dos zonas con sistemas opuestos y una frontera "
+        "marcada entre ellas.\n\n"
+        "1) De un lado, economía de mercado y democracias liberales; del otro, "
+        "economía planificada y partido único.\n"
+        "2) Los separa una línea gruesa, y sobre ella hay una ciudad partida en "
+        "dos.\n"
+        "3) Esa oposición entre dos modelos, sin guerra directa entre ellos, es "
+        "lo que caracteriza a la Guerra Fría.\n\n"
+        "La ciudad dividida es el detalle que fija el periodo: la frontera no "
+        "solo separaba países, cortaba una ciudad por la mitad.",
+        [
+            ("La formación de los Estados nacionales en el siglo XIX", "Ese proceso no organiza al mundo en dos bloques con sistemas económicos opuestos."),
+            ("La descolonización de África y Asia", "La descolonización produce nuevos Estados, no una frontera entre dos modelos."),
+            ("La expansión del imperio colonial europeo", "Los imperios coloniales competían entre sí, no se agrupaban en dos bloques ideológicos."),
+        ],
+        imagen="/preguntas/his-esquema-bloques.svg",
+    ),
+    _q(
+        "his_temporal", "medio",
+        "Las dos pirámides de población de la figura corresponden al mismo país "
+        "en dos momentos. ¿Qué cambio muestran?",
+        "Un envejecimiento de la población del país",
+        "La forma de la pirámide cuenta la historia demográfica de un país.\n\n"
+        "1) En 1960 la base es la parte más ancha y cada tramo hacia arriba es "
+        "más angosto: nacían muchos y pocos llegaban a viejos.\n"
+        "2) En 2020 la base se angostó y los tramos de adultos y mayores se "
+        "ensancharon.\n"
+        "3) Eso es envejecimiento: menos nacimientos y más personas que llegan a "
+        "edades avanzadas.\n\n"
+        "Es un cambio de ritmo lento, de los que solo se ven comparando dos "
+        "momentos separados por décadas.",
+        [
+            ("Una caída de la población total del país", "La pirámide de 2020 no es más chica: cambió su forma, no necesariamente su tamaño."),
+            ("Un aumento sostenido de la natalidad", "Con más nacimientos la base sería más ancha en 2020, y es al revés."),
+            ("Una migración masiva de adultos jóvenes hacia otro país", "Los tramos de adultos jóvenes no se vacían: se mantienen y los mayores crecen."),
+        ],
+        imagen="/preguntas/his-piramides-poblacion.svg",
+    ),
+    _q(
+        "his_temporal", "facil",
+        "¿Qué proceso muestra el gráfico de la figura entre 1900 y 2000?",
+        "Una urbanización sostenida de la población",
+        "El gráfico entrega el porcentaje de población que vive en ciudades.\n\n"
+        "1) En 1900 era el 20% y en 2000, el 85%.\n"
+        "2) El aumento no tiene retrocesos: sube en cada tramo medido.\n"
+        "3) Ese traslado sostenido del campo a la ciudad es lo que se llama "
+        "urbanización.\n\n"
+        "El gráfico habla de proporciones, no de cantidades: dice dónde vive la "
+        "gente, no cuánta gente hay.",
+        [
+            ("Un despoblamiento del país", "El gráfico muestra dónde vive la población, no cuántos habitantes hay."),
+            ("Un retorno de la población al campo", "Eso haría bajar la curva, y sube durante todo el siglo."),
+            ("Un crecimiento parejo entre campo y ciudad", "Con un crecimiento parejo el porcentaje urbano se mantendría, y pasa de 20% a 85%."),
+        ],
+        imagen="/preguntas/his-grafico-urbanizacion.svg",
+    ),
+    _q(
+        "civ_democracia", "facil",
+        "¿Qué principio de la organización del Estado representa el esquema de "
+        "la figura?",
+        "La separación de los poderes del Estado",
+        "El esquema muestra tres órganos distintos, cada uno con su función.\n\n"
+        "1) El Ejecutivo gobierna y administra; el Legislativo hace las leyes; "
+        "el Judicial resuelve conflictos.\n"
+        "2) Ninguno depende de los otros: son autónomos entre sí.\n"
+        "3) Repartir el poder en órganos separados que se controlan mutuamente "
+        "es lo que se llama separación de poderes.\n\n"
+        "El sentido de esa separación es evitar que quien dicta las normas sea "
+        "también quien las aplica y quien juzga si se cumplieron.",
+        [
+            ("La concentración del poder en el Ejecutivo", "El esquema muestra tres órganos al mismo nivel, ninguno por sobre los otros."),
+            ("La organización territorial en regiones y comunas", "Eso divide el poder por territorio; acá se divide por función."),
+            ("La existencia de partidos políticos", "Los partidos compiten por ocupar cargos, pero no son poderes del Estado."),
+        ],
+        imagen="/preguntas/his-organigrama-poderes.svg",
+    ),
+    _q(
+        "civ_democracia", "medio",
+        "Según el esquema de la figura, ¿qué ocurre inmediatamente después de "
+        "que la cámara de origen aprueba un proyecto de ley?",
+        "Pasa a la cámara revisora",
+        "El esquema ordena las etapas y hay que seguir la flecha.\n\n"
+        "1) Después de la cámara de origen viene la cámara revisora.\n"
+        "2) Recién cuando las dos cámaras han aprobado el proyecto llega al "
+        "Presidente, que puede promulgarlo o vetarlo.\n"
+        "3) La publicación es el último paso, y es la que pone la ley en "
+        "vigencia.\n\n"
+        "Que el proyecto tenga que pasar por dos cámaras es una salvaguarda: "
+        "obliga a revisarlo dos veces y con composiciones distintas.",
+        [
+            ("Es promulgado de inmediato por el Presidente", "El Presidente actúa después, cuando las dos cámaras ya se pronunciaron."),
+            ("Entra en vigencia apenas termina la votación", "La vigencia llega con la publicación, que es el último paso del esquema."),
+            ("Vuelve a la etapa de iniciativa", "La iniciativa es el punto de partida y no se repite dentro del mismo trámite."),
+        ],
+        imagen="/preguntas/his-flujo-ley.svg",
+    ),
+    _q(
+        "civ_democracia", "medio",
+        "¿Cuál de las siguientes afirmaciones describe mejor lo que muestra el "
+        "gráfico de participación electoral de la figura?",
+        "La participación cayó a cerca de la mitad y después volvió a niveles altos",
+        "Hay que leer las cuatro barras como una secuencia.\n\n"
+        "1) La primera elección registra 87% de participación.\n"
+        "2) En la segunda y la tercera cae a 49% y 47%, casi la mitad.\n"
+        "3) En la cuarta vuelve a 85%, cerca del nivel inicial.\n\n"
+        "El gráfico describe el movimiento; explicarlo —cambios en las reglas "
+        "del voto, interés en la elección— exige otras fuentes.",
+        [
+            ("La participación bajó de forma sostenida durante las cuatro elecciones", "La cuarta elección sube a 85%: la caída no fue sostenida."),
+            ("La participación se mantuvo estable en torno al 60%", "Los valores van de 47% a 87%, y ninguno está cerca del 60%."),
+            ("El voto obligatorio explica el alza de la última elección", "Puede ser una hipótesis razonable, pero el gráfico no informa las reglas del voto."),
+        ],
+        imagen="/preguntas/his-grafico-participacion.svg",
+    ),
+    _q(
+        "civ_democracia", "medio",
+        "El gráfico de la figura muestra por qué medio se informa un grupo de "
+        "500 personas. ¿Cuántas de ellas se informan principalmente por redes "
+        "sociales?",
+        "210 personas",
+        "El gráfico entrega porcentajes y el enunciado, el total.\n\n"
+        "1) Las redes sociales concentran el 42%.\n"
+        "2) El 42% de 500 es 500 · 0,42.\n"
+        "3) Son 210 personas.\n\n"
+        "Conviene comprobar que los sectores sumen el total: 42 + 30 + 16 + 12 = "
+        "100% ✓.",
+        [
+            ("42 personas", "Confundió el porcentaje con la cantidad de personas."),
+            ("150 personas", "Corresponde al 30% de la televisión."),
+            ("290 personas", "Es la cantidad que se informa por los otros tres medios juntos."),
+        ],
+        imagen="/preguntas/his-circular-medios.svg",
+    ),
+    _q(
+        "civ_derechos", "facil",
+        "Una persona no está de acuerdo con la sentencia que dictó un juzgado en "
+        "su causa. Según el esquema de la figura, ¿ante quién puede apelar?",
+        "Ante la Corte de Apelaciones",
+        "Las flechas del esquema indican hacia dónde sube una causa.\n\n"
+        "1) Sobre los juzgados de primera instancia están las Cortes de "
+        "Apelaciones.\n"
+        "2) Ahí es donde se revisa lo resuelto por el juzgado.\n"
+        "3) La Corte Suprema está en el nivel superior, pero se llega a ella "
+        "después, y por recursos específicos.\n\n"
+        "Que exista un tribunal superior que pueda revisar la decisión es parte "
+        "del derecho al debido proceso.",
+        [
+            ("Ante la Corte Suprema", "Es el tribunal más alto, pero no es el que revisa directamente lo resuelto por un juzgado."),
+            ("Ante el mismo juzgado que dictó la sentencia", "Apelar es pedir que revise un tribunal distinto y superior."),
+            ("Ante el Congreso Nacional", "El Congreso hace las leyes; no revisa sentencias judiciales."),
+        ],
+        imagen="/preguntas/his-piramide-judicial.svg",
+    ),
+    _q(
+        "civ_derechos", "medio",
+        "Según la línea de tiempo de la figura, ¿cuántos años pasaron entre la "
+        "Declaración Universal de Derechos Humanos y la Convención sobre los "
+        "Derechos del Niño?",
+        "41 años",
+        "Los dos hitos están marcados con su año en la línea.\n\n"
+        "1) La Declaración Universal de Derechos Humanos es de 1948.\n"
+        "2) La Convención sobre los Derechos del Niño es de 1989.\n"
+        "3) La diferencia es 1989 − 1948 = 41 años.\n\n"
+        "Entre ambos hitos aparecen los pactos internacionales de 1966: la "
+        "protección de los derechos se fue construyendo por etapas, no de una "
+        "vez.",
+        [
+            ("23 años", "Es la distancia entre la Convención de 1989 y los pactos de 1966."),
+            ("18 años", "Es la distancia entre la Declaración de 1948 y los pactos de 1966."),
+            ("52 años", "Excede el tramo: entre los dos hitos hay poco más de cuatro décadas."),
+        ],
+        imagen="/preguntas/his-linea-derechos.svg",
+    ),
+    _q(
+        "civ_derechos", "facil",
+        "Un trabajador constata que su empleador lo hace trabajar por sobre la "
+        "jornada máxima legal. Según la tabla de la figura, ¿ante quién debe "
+        "reclamar?",
+        "Ante la Dirección del Trabajo",
+        "La tabla empareja cada derecho con el organismo que lo resguarda.\n\n"
+        "1) La fila de la jornada máxima apunta a la Dirección del Trabajo.\n"
+        "2) Ese es el organismo que fiscaliza el cumplimiento de las normas "
+        "laborales y puede multar al empleador.\n\n"
+        "Los tribunales laborales aparecen en otra fila, para el cobro de "
+        "remuneraciones: cada mecanismo atiende un tipo distinto de problema.",
+        [
+            ("Ante el sindicato de la empresa", "El sindicato negocia colectivamente, según la tabla, y no fiscaliza la jornada."),
+            ("Ante los tribunales laborales", "La tabla los asocia al pago de las remuneraciones pactadas."),
+            ("Ante la mutualidad", "La tabla la vincula a la seguridad en el lugar de trabajo."),
+        ],
+        imagen="/preguntas/his-tabla-derechos-laborales.svg",
+    ),
+    _q(
+        "civ_derechos", "medio",
+        "¿Cuál de las siguientes afirmaciones se sostiene con el gráfico de "
+        "sindicalización de la figura?",
+        "La tasa de sindicalización de la minería más que triplica la del comercio",
+        "El gráfico entrega el porcentaje de trabajadores sindicalizados por "
+        "sector.\n\n"
+        "1) Minería: 32%. Comercio: 9%.\n"
+        "2) 32 dividido por 9 es algo más de 3,5.\n"
+        "3) Entonces la minería más que triplica al comercio.\n\n"
+        "El gráfico compara proporciones dentro de cada sector, no cantidades de "
+        "personas: un sector con pocos trabajadores puede tener una tasa alta.",
+        [
+            ("La minería tiene más trabajadores sindicalizados que los demás sectores", "El gráfico muestra porcentajes, no cantidad de personas."),
+            ("Más de la mitad de los trabajadores de la minería está sindicalizada", "La barra de minería llega a 32%, bastante por debajo de la mitad."),
+            ("En servicios no existe sindicalización", "La barra de servicios marca 12%, que no es cero."),
+        ],
+        imagen="/preguntas/his-grafico-sindicalizacion.svg",
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Según el gráfico de la figura, ¿qué ocurrió con los precios en abril?",
+        "Bajaron levemente respecto de marzo",
+        "El gráfico muestra la variación mensual del IPC, o sea cuánto cambian "
+        "los precios de un mes al siguiente.\n\n"
+        "1) En abril la variación es −0,1%: es el único mes bajo la línea del "
+        "cero.\n"
+        "2) Una variación negativa significa que el nivel de precios fue menor "
+        "que el del mes anterior.\n\n"
+        "Ojo con lo que mide el eje: en los otros meses la variación baja pero "
+        "sigue siendo positiva, y eso significa que los precios siguen subiendo, "
+        "solo que más despacio.",
+        [
+            ("Subieron más rápido que en marzo", "En marzo la variación fue 0,2% y en abril, −0,1%: el cambio fue a la baja."),
+            ("Se mantuvieron exactamente iguales", "Una variación de −0,1% no es cero, aunque sea pequeña."),
+            ("Subieron un 0,1%", "El valor de abril está bajo el eje: es negativo."),
+        ],
+        imagen="/preguntas/his-grafico-ipc.svg",
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "¿Qué muestra el gráfico de desempleo de la figura a lo largo de los "
+        "cuatro trimestres?",
+        "Un aumento durante tres trimestres y una baja en el último",
+        "Basta seguir la altura de las barras en orden.\n\n"
+        "1) Primer trimestre: 7%. Segundo: 8%. Tercero: 10%.\n"
+        "2) Cuarto: 9%, es decir, un punto menos que el trimestre anterior.\n\n"
+        "Que baje en el último trimestre no significa que haya menos personas "
+        "sin trabajo que al principio del año: 9% sigue siendo más que el 7% "
+        "inicial.",
+        [
+            ("Una baja sostenida del desempleo durante todo el año", "Las tres primeras barras suben."),
+            ("Un desempleo estable en torno al 7%", "Los valores van de 7% a 10%."),
+            ("Un aumento sostenido durante los cuatro trimestres", "El cuarto trimestre baja de 10% a 9%."),
+        ],
+        imagen="/preguntas/his-grafico-desempleo.svg",
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Según la tabla de la figura, ¿en qué porcentaje subió el costo total de "
+        "la canasta entre el año 1 y el año 2?",
+        "20%",
+        "La variación porcentual compara el aumento con el valor de partida.\n\n"
+        "1) Aumento: 4.320 − 3.600 = 720 pesos.\n"
+        "2) Se compara con el total del año 1: 720 ÷ 3.600 = 0,2.\n"
+        "3) En porcentaje, 20%.\n\n"
+        "Así se construye un índice de precios: se sigue el costo de la misma "
+        "canasta a lo largo del tiempo, con los mismos productos y cantidades.",
+        [
+            ("720%", "720 es el aumento en pesos, no el porcentaje."),
+            ("12%", "Corresponde a comparar el aumento con el total del año 2 y redondear mal."),
+            ("83%", "Es la proporción que representa el año 1 dentro del año 2, no el alza."),
+        ],
+        imagen="/preguntas/his-tabla-canasta.svg",
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "El gráfico de la figura muestra cómo se compone el PIB de un país. Si "
+        "ese PIB es de 200.000 millones de dólares, ¿cuánto aporta la minería?",
+        "24.000 millones de dólares",
+        "El gráfico da la participación de cada sector y el enunciado, el total.\n\n"
+        "1) La minería aporta el 12%.\n"
+        "2) El 12% de 200.000 millones es 200.000 · 0,12.\n"
+        "3) Son 24.000 millones de dólares.\n\n"
+        "El gráfico circular sirve justo para eso: muestra cómo se reparte un "
+        "todo, y con el valor del todo se recupera cada parte.",
+        [
+            ("12.000 millones de dólares", "Usó el 12 como si fuera el resultado, dividiendo por diez de más."),
+            ("110.000 millones de dólares", "Corresponde a un 55%, que es la participación de los servicios."),
+            ("50.000 millones de dólares", "Sería un cuarto del PIB, y la minería aporta el 12%."),
+        ],
+        imagen="/preguntas/his-circular-pib.svg",
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "En el gráfico de la figura, ¿qué representa el punto E?",
+        "El precio y la cantidad en que coinciden lo que se ofrece y lo que se demanda",
+        "El punto E es donde se cruzan la curva de oferta y la de demanda.\n\n"
+        "1) A ese precio, la cantidad que los vendedores están dispuestos a "
+        "vender es igual a la que los compradores quieren comprar.\n"
+        "2) Por eso se llama punto de equilibrio: no hay presión para que el "
+        "precio suba ni para que baje.\n"
+        "3) Sus coordenadas son el precio de equilibrio y la cantidad de "
+        "equilibrio, marcadas como p* y q*.\n\n"
+        "Por encima de ese precio sobra producto y por debajo falta, y en los "
+        "dos casos el precio tiende a volver a E.",
+        [
+            ("El precio más alto que los compradores están dispuestos a pagar", "Ese sería el extremo superior de la curva de demanda, no el cruce."),
+            ("La cantidad máxima que las empresas pueden producir", "El gráfico no informa capacidad máxima de producción."),
+            ("El punto donde la oferta supera a la demanda", "En E ambas son iguales: por eso se cruzan justo ahí."),
+        ],
+        imagen="/preguntas/his-oferta-demanda.svg",
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "En el gráfico de la figura, la demanda se desplazó de D1 a D2 y la "
+        "oferta no cambió. ¿Qué ocurre con el precio y la cantidad de "
+        "equilibrio?",
+        "Ambos suben",
+        "Hay que comparar el cruce viejo con el nuevo.\n\n"
+        "1) El equilibrio pasa de E1 a E2.\n"
+        "2) E2 está más arriba: el precio de equilibrio es mayor.\n"
+        "3) E2 también está más a la derecha: la cantidad transada es mayor.\n\n"
+        "Un desplazamiento de la demanda hacia la derecha significa que, a "
+        "cualquier precio, ahora se quiere comprar más: por ejemplo, porque "
+        "subió el ingreso de las familias.",
+        [
+            ("El precio sube y la cantidad baja", "Eso ocurriría si la curva que se desplazara fuera la de oferta, hacia la izquierda."),
+            ("El precio baja y la cantidad sube", "Correspondería a un aumento de la oferta, no de la demanda."),
+            ("Ambos bajan", "Sería el efecto de una caída de la demanda, o sea el desplazamiento contrario."),
+        ],
+        imagen="/preguntas/his-demanda-desplazada.svg",
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "Según el esquema del flujo circular de la figura, ¿qué entregan los "
+        "hogares a las empresas?",
+        "Trabajo y capital, y el gasto en bienes",
+        "El esquema tiene flechas en los dos sentidos, y hay que seguir las que "
+        "salen de los hogares.\n\n"
+        "1) Los hogares aportan trabajo y capital: son los dueños de los "
+        "factores productivos.\n"
+        "2) Los hogares también gastan comprando lo que las empresas producen.\n"
+        "3) En el sentido contrario, las empresas entregan sueldos y rentas, y "
+        "bienes y servicios.\n\n"
+        "El esquema se llama circular porque lo que sale por un lado vuelve por "
+        "el otro: el sueldo que paga la empresa financia la compra que la "
+        "empresa recibe.",
+        [
+            ("Sueldos y rentas por el trabajo aportado", "Esa flecha va en el sentido contrario: la pagan las empresas a los hogares."),
+            ("Bienes y servicios ya producidos", "También es una flecha de las empresas hacia los hogares."),
+            ("Solo el gasto en bienes de consumo", "Los hogares además aportan el trabajo y el capital."),
+        ],
+        imagen="/preguntas/his-flujo-circular.svg",
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "El gráfico de la figura muestra un precio máximo fijado por debajo del "
+        "precio de equilibrio. ¿Qué se produce en ese mercado?",
+        "Escasez, porque a ese precio se demanda más de lo que se ofrece",
+        "A un precio más bajo que el de equilibrio, las dos curvas responden en "
+        "sentidos opuestos.\n\n"
+        "1) Los compradores quieren más: la cantidad demandada aumenta.\n"
+        "2) Los vendedores quieren vender menos: la cantidad ofrecida cae.\n"
+        "3) En el gráfico, la cantidad demandada queda muy a la derecha de la "
+        "ofrecida, y esa diferencia es la escasez.\n\n"
+        "El precio máximo se fija para proteger a los compradores, y el efecto "
+        "no buscado es que a ese precio no alcanza el producto para todos.",
+        [
+            ("Sobra producto, porque a ese precio nadie quiere comprar", "A un precio más bajo la gente quiere comprar más, no menos."),
+            ("Nada, porque el precio máximo no altera el mercado", "El gráfico muestra que a ese precio las cantidades dejan de coincidir."),
+            ("El precio de equilibrio sube hasta alcanzar el máximo fijado", "El precio máximo es un tope: impide que el precio llegue al de equilibrio."),
+        ],
+        imagen="/preguntas/his-precio-maximo.svg",
+    ),
+]
+
+
 # ---------------------------------------------------------------------------
 # Lecciones del Árbol de Habilidades
 #
@@ -61981,7 +64415,15 @@ LESSONS: dict[str, dict] = {
     #
     # Los textos son originales, como el resto del banco: los del DEMRE tienen
     # derechos de la Universidad de Chile.
-    "lec_localizar": {
+    # -----------------------------------------------------------------------
+    # COMPETENCIA LECTORA — una leccion por tarea lectora del temario DEMRE.
+    #
+    # Antes habia tres lecciones, una por habilidad. Eran correctas y
+    # demasiado anchas: "interpretar" cubria desde el significado de una
+    # metafora hasta la jerarquia de las ideas, y una sola leccion no puede
+    # ensenar las dos cosas. Ahora cada leccion cubre exactamente una tarea.
+    # -----------------------------------------------------------------------
+    "lec_explicita": {
         "intro": (
             "Localizar es encontrar en el texto algo que el texto YA dice. "
             "Suena fácil y es donde más puntos se pierden por confianza: se "
@@ -61990,15 +64432,16 @@ LESSONS: dict[str, dict] = {
         ),
         "theory": (
             "**La respuesta está escrita.** En estas preguntas no hay que "
-            "deducir nada: el dato aparece en el texto, a veces con otras "
-            "palabras. Tu trabajo es encontrarlo, no reconstruirlo.\n\n"
+            "deducir nada: el dato aparece en el texto. Tu trabajo es "
+            "encontrarlo, no reconstruirlo.\n\n"
             "**Lee primero la pregunta, después busca.** Saber qué buscas "
             "convierte una relectura completa en una búsqueda dirigida. Es la "
             "diferencia entre releer cuatro párrafos y mirar solo el que "
             "importa.\n\n"
-            "**Las palabras de la pregunta rara vez son las del texto.** Si la "
-            "pregunta dice \"principal motivo\", el texto puede decir \"lo que "
-            "explica\" o \"la razón de fondo\". Busca la idea, no la palabra.\n\n"
+            "**Los conectores te llevan al lugar.** «Por eso» y «así que» "
+            "anuncian una consecuencia; «en cambio» y «sin embargo», un "
+            "contraste; «por ejemplo», un caso. Si la pregunta pide una causa, "
+            "busca el conector que la marca.\n\n"
             "**Los distractores suelen ser verdaderos.** Casi siempre son cosas "
             "que el texto sí dice, pero que no responden lo que se preguntó. "
             "Que una alternativa sea cierta no la hace correcta."
@@ -62019,7 +64462,7 @@ LESSONS: dict[str, dict] = {
                 "porque": "El texto tiene cuatro datos —edad, resistencia, usos, protección— y solo uno responde a un porqué. Tener clara la pregunta evita quedarse con el primer dato que suene relacionado.",
             },
             {
-                "accion": "Busco en el texto la parte que explica una causa. La encuentro en: «Su madera resiste la humedad como pocas, y por eso durante el siglo XIX se usó para tejuelas y embarcaciones».",
+                "accion": "Busco la parte que explica una causa. La encuentro en: «Su madera resiste la humedad como pocas, y por eso durante el siglo XIX se usó para tejuelas y embarcaciones».",
                 "porque": "«Por eso» es un conector de consecuencia: lo que viene antes es la causa. Los conectores son las señales que marcan dónde está la respuesta.",
             },
             {
@@ -62030,119 +64473,580 @@ LESSONS: dict[str, dict] = {
         "common_error": (
             "Responder de memoria sin volver al texto. Después de leerlo una "
             "vez uno cree recordarlo, y la alternativa que \"suena\" a lo que "
-            "leíste casi siempre es la que pusieron para eso. Vuelve y "
-            "ubica la línea exacta: si no la encuentras, no es la respuesta."
+            "leíste casi siempre es la que pusieron para eso. Vuelve y ubica la "
+            "línea exacta: si no la encuentras, no es la respuesta."
         ),
     },
-    "lec_interpretar": {
+    "lec_parafrasis": {
         "intro": (
-            "Interpretar es entender lo que el texto dice sin decirlo con esas "
-            "palabras: qué significa una expresión en su contexto, qué relación "
-            "hay entre dos partes, qué se concluye de lo leído."
+            "Acá el dato también está escrito, pero con otras palabras que las "
+            "de la pregunta. Buscar la palabra exacta no sirve: hay que "
+            "reconocer la misma idea disfrazada de sinónimo."
         ),
         "theory": (
-            "**Inferir no es inventar.** Una inferencia se sostiene con lo que "
-            "está escrito. Si para llegar a una alternativa necesitas un dato "
-            "que el texto no da, esa alternativa está mal aunque suene "
-            "razonable.\n\n"
-            "**El contexto define el significado.** La misma palabra cambia de "
-            "sentido según dónde esté. Para saber qué significa acá, mira la "
-            "oración completa y la anterior, no el diccionario.\n\n"
-            "**Los conectores dicen la relación.** «Sin embargo» anuncia un "
-            "contraste, «por lo tanto» una consecuencia, «es decir» una "
-            "reformulación. Son el mapa de cómo se conectan las ideas.\n\n"
-            "**Distingue la idea principal del ejemplo.** Un texto suele "
-            "afirmar algo y después ilustrarlo. El ejemplo es lo más concreto y "
-            "por eso lo más memorable, pero no es la idea."
+            "**La prueba casi nunca repite las palabras del texto.** Si lo "
+            "hiciera, bastaría con hacer Ctrl+F. La pregunta dice «principal "
+            "motivo» donde el texto dice «lo que explica»; dice «disminuyó» "
+            "donde el texto dice «cayó a la mitad».\n\n"
+            "**Traduce la pregunta antes de buscar.** Cámbiale las palabras por "
+            "otras que signifiquen lo mismo y quédate con la idea. Eso es lo "
+            "que vas a rastrear en el texto.\n\n"
+            "**Ojo con el sinónimo que no lo es.** «Frecuente» no es lo mismo "
+            "que «regular»; «la mayoría» no es «todos»; «puede» no es «debe». "
+            "Los distractores viven justo en esa diferencia.\n\n"
+            "**Verifica en los dos sentidos.** Encontrado el pasaje, léelo y "
+            "pregúntate si dice exactamente lo que afirma la alternativa, ni "
+            "más ni menos. Una paráfrasis correcta no agrega nada."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
-            "*La ciudad amaneció con la micro llena a las seis. No es que la "
-            "gente madrugue por gusto: vive lejos de donde trabaja. Cada hora "
-            "de viaje es una hora que no se duerme, no se estudia y no se pasa "
-            "con nadie. Hablamos del transporte como un problema de calles y "
-            "buses, y es sobre todo un problema de tiempo.*\n\n"
-            "¿Qué quiere decir la última oración?"
+            "*La feria libre no compite con el supermercado por precio: compite "
+            "por rotación. El puestero compra en la madrugada y vende ese mismo "
+            "día, de modo que la lechuga que ofrece lleva horas fuera de la "
+            "tierra, no días. Lo que el cliente percibe como frescura es, en "
+            "rigor, un problema de logística resuelto de otra manera.*\n\n"
+            "Según el texto, ¿qué explica que los productos de la feria se "
+            "perciban más frescos?"
         ),
         "example_steps": [
             {
-                "accion": "Leo la última oración completa: «Hablamos del transporte como un problema de calles y buses, y es sobre todo un problema de tiempo».",
-                "porque": "La pregunta apunta a una oración concreta, pero su sentido depende de lo que vino antes. Aislarla es lo que lleva a interpretarla mal.",
+                "accion": "Traduzco la pregunta: me piden la causa de la frescura percibida. En el texto esa idea puede no aparecer con la palabra «frescura».",
+                "porque": "Si busco literalmente «frescos» encuentro solo la última línea, que dice qué ES la frescura, no qué la produce. La pregunta pide lo segundo.",
             },
             {
-                "accion": "Miro qué venía antes: que la gente vive lejos y que cada hora de viaje es una hora que no se duerme, no se estudia y no se comparte.",
-                "porque": "Esa enumeración es la que le da contenido a la palabra «tiempo». Sin ella, «problema de tiempo» podría significar cualquier cosa, incluso que los buses atrasan.",
+                "accion": "Busco la idea, no la palabra. El texto dice: «compra en la madrugada y vende ese mismo día», y que la lechuga «lleva horas fuera de la tierra, no días».",
+                "porque": "«Horas y no días» es la paráfrasis del tiempo corto entre cosecha y venta. Es el mismo contenido que la pregunta llama frescura, dicho con otras palabras.",
             },
             {
-                "accion": "Identifico el contraste: «como... y es sobre todo» opone dos formas de ver lo mismo. La primera (calles y buses) se presenta como insuficiente.",
-                "porque": "El autor no niega que existan problemas de infraestructura: dice que el costo real se mide en horas de vida, no en kilómetros.",
-            },
-            {
-                "accion": "Concluyo: quiere decir que lo más grave del transporte no es la infraestructura sino las horas de vida que le quita a la gente.",
-                "porque": "Esa conclusión se sostiene enteramente con lo escrito. Una que dijera «hay que comprar más buses» agregaría algo que el texto nunca propone.",
+                "accion": "Confirmo que la alternativa no agregue nada: la causa es el poco tiempo entre compra y venta, no que los productos sean de mejor calidad ni más baratos.",
+                "porque": "El texto dice expresamente que la feria «no compite por precio». Una alternativa que hable de precio usa una palabra del texto para afirmar lo contrario de lo que dice.",
             },
         ],
         "common_error": (
-            "Elegir la alternativa que uno cree cierta en vez de la que el "
-            "texto sostiene. En preguntas sobre temas conocidos —transporte, "
-            "medioambiente, educación— es fácil responder con la propia opinión. "
-            "La pregunta no es qué piensas tú: es qué dice ese texto."
+            "Elegir la alternativa que repite palabras del texto. Cuando una "
+            "opción usa las mismas palabras y las otras no, se siente correcta "
+            "por familiaridad. En estas preguntas suele ser al revés: la "
+            "correcta es la que dice lo mismo con otras palabras."
         ),
     },
-    "lec_evaluar": {
+    "lec_relacion": {
         "intro": (
-            "Evaluar es dar un paso atrás y mirar el texto como objeto: para "
-            "qué fue escrito, desde qué posición, con qué recursos. Es la "
-            "habilidad que más se parece a lo que uno hace todos los días al "
-            "leer algo en internet y decidir si le cree."
+            "Estas preguntas no se responden con un dato suelto sino con dos: "
+            "hay que ver cómo se conectan dos partes del texto. Causa y "
+            "consecuencia, problema y solución, regla y caso, o dos cosas que "
+            "se oponen."
         ),
         "theory": (
-            "**Todo texto tiene un propósito.** Informar, convencer, "
-            "entretener, instruir. Reconocerlo explica las decisiones del "
-            "autor: un texto que busca convencer elige adjetivos que uno "
-            "informativo no usaría.\n\n"
-            "**Quién habla importa.** No es lo mismo que sobre una empresa "
-            "escriba un periodista, un trabajador o la propia empresa. La "
-            "posición desde donde se escribe condiciona qué se cuenta y qué se "
-            "omite.\n\n"
-            "**Distingue hecho de opinión.** Un hecho se puede verificar: «la "
-            "tala se prohibió en 1976». Una opinión se puede discutir: «la "
-            "prohibición llegó tarde». Los textos mezclan los dos, y esa mezcla "
-            "suele ser la pregunta.\n\n"
-            "**Evaluar no es opinar.** Que te parezca bien o mal lo que dice el "
-            "texto no entra. Lo que se evalúa es cómo está construido y si sus "
-            "afirmaciones se sostienen con lo que él mismo presenta."
+            "**Identifica primero qué tipo de relación se pide.** Causa "
+            "(¿por qué ocurre?), consecuencia (¿qué produce?), contraste (¿en "
+            "qué se diferencian?), ejemplo (¿de qué es caso esto?). Cada tipo "
+            "se busca en un lugar distinto.\n\n"
+            "**Los dos extremos están en el texto; el vínculo puede no "
+            "estarlo.** El texto dice A en el párrafo dos y B en el cinco, y la "
+            "pregunta es qué tienen que ver. Tu trabajo es el puente.\n\n"
+            "**Cuidado con el orden y la causa.** Que algo aparezca antes en el "
+            "texto no lo convierte en la causa de lo que viene después. «Vino "
+            "después» y «fue por causa de» son cosas distintas.\n\n"
+            "**Cuando el texto es un reglamento, la relación es regla-caso.** "
+            "Te dan una situación concreta y hay que decidir qué artículo la "
+            "cubre. Lee la regla completa, incluidas sus excepciones, antes de "
+            "aplicarla."
         ),
         "example_statement": (
             "Lee el texto y responde.\n\n"
-            "*Nuestro plan de estudio es la mejor forma de preparar la prueba. "
-            "Miles de estudiantes ya lo usan y muchos han mejorado su puntaje. "
-            "Ningún otro método entrega resultados tan rápido.*\n\n"
-            "¿Cuál es el principal problema de este texto como argumento?"
+            "*El reglamento de la biblioteca fija diez días de préstamo. Si el "
+            "libro está reservado por otro usuario, no se puede renovar. La "
+            "multa por atraso es de cien pesos diarios, salvo que el usuario "
+            "haya avisado antes del vencimiento que no podrá devolverlo, en "
+            "cuyo caso se otorgan tres días adicionales sin costo.*\n\n"
+            "Un estudiante avisa el noveno día que no podrá devolver el libro y "
+            "lo entrega el día trece. ¿Cuánto debe pagar?"
         ),
         "example_steps": [
             {
-                "accion": "Determino el propósito: no informa, convence. Quiere que el lector contrate algo.",
-                "porque": "«La mejor forma», «ningún otro método»: son afirmaciones de superioridad, típicas de un texto persuasivo y no de uno informativo.",
+                "accion": "Ubico la regla general y su excepción: multa de cien pesos diarios, salvo aviso antes del vencimiento, que da tres días sin costo.",
+                "porque": "En un texto normativo la excepción manda sobre la regla. Leer solo la primera parte lleva a cobrar una multa que no corresponde.",
             },
             {
-                "accion": "Separo lo verificable de lo que no lo es. «Miles de estudiantes lo usan» se podría comprobar. «Muchos han mejorado» no dice cuántos ni cuánto.",
-                "porque": "Una cifra vaga parece un dato y no lo es. «Muchos» puede ser cinco o cinco mil, y sin la comparación no se sabe si mejoraron por el plan o por estudiar.",
+                "accion": "Verifico si el caso cae en la excepción: el vencimiento es el día diez y el aviso fue el noveno, o sea antes. La excepción aplica.",
+                "porque": "La condición no es haber avisado, es haber avisado ANTES del vencimiento. Ahí se juega la pregunta, y por eso el enunciado precisa el día.",
             },
             {
-                "accion": "Reviso la afirmación más fuerte: «ningún otro método entrega resultados tan rápido». El texto no presenta ninguna comparación con otro método.",
-                "porque": "Es la afirmación que más pesa y la que menos respaldo tiene. Un argumento se evalúa por su punto más débil, no por el más convincente.",
-            },
-            {
-                "accion": "Concluyo: el problema es que sus afirmaciones no están respaldadas con datos que se puedan comprobar.",
-                "porque": "No se evalúa si el plan es bueno o malo —eso no se puede saber leyendo esto—, sino si el texto sostiene lo que afirma. No lo sostiene.",
+                "accion": "Aplico los tres días adicionales: el plazo se corre al día trece, y el estudiante entrega el trece. No hay atraso, así que no paga nada.",
+                "porque": "Los tres días son «sin costo», no un descuento. Contar los días entre el diez y el trece y multiplicarlos por cien es la trampa que espera la pregunta.",
             },
         ],
         "common_error": (
-            "Confundir evaluar el texto con estar de acuerdo con él. Un texto "
-            "puede defender algo con lo que coincides y estar mal argumentado, "
-            "y al revés. La pregunta es cómo está construido, no si tiene "
-            "razón."
+            "Aplicar la regla general sin leer la excepción. Los reglamentos de "
+            "esta prueba casi siempre traen un «salvo que» o un «excepto» "
+            "después del dato principal, y ahí está la respuesta. Si tu "
+            "resultado sale redondo y rápido, revisa que no te hayas saltado "
+            "una condición."
+        ),
+    },
+    "lec_significado": {
+        "intro": (
+            "Una expresión puede significar en un texto algo distinto de lo que "
+            "significa sola. Estas preguntas piden el sentido que esa frase "
+            "tiene ahí, en ese párrafo, para ese emisor."
+        ),
+        "theory": (
+            "**El contexto manda sobre el diccionario.** «Un problema de "
+            "escritorio» no habla de muebles. La alternativa que traduce la "
+            "expresión palabra por palabra casi nunca es la correcta.\n\n"
+            "**Lee la línea de antes y la de después.** El sentido de una frase "
+            "citada está sostenido por lo que la rodea. Si vuelves solo a la "
+            "frase, te quedas con lo que ya sabías.\n\n"
+            "**Pregúntate qué idea sostiene la frase.** El emisor no la puso "
+            "para adornar: está ahí para decir algo que en lenguaje directo "
+            "habría sido más largo. Reconstruye ese algo.\n\n"
+            "**Las comillas y la cursiva son un aviso.** Cuando el emisor "
+            "entrecomilla una expresión, casi siempre está marcando que no la "
+            "usa en su sentido habitual."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Cada vez que el municipio anuncia un plan de reciclaje, la "
+            "discusión se llena de buenas intenciones y se vacía de camiones. "
+            "Nadie pregunta quién recoge, con qué frecuencia y hacia dónde. "
+            "Sin esa respuesta, separar la basura en casa es un gesto que "
+            "termina en el mismo relleno sanitario de siempre.*\n\n"
+            "¿Qué quiere decir el emisor con que la discusión «se vacía de "
+            "camiones»?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Descarto la lectura literal: el emisor no habla de camiones que se desocupan.",
+                "porque": "La frase está construida en paralelo con «se llena de buenas intenciones». Ese paralelo avisa que ambas mitades son figuradas.",
+            },
+            {
+                "accion": "Leo lo que sigue: «Nadie pregunta quién recoge, con qué frecuencia y hacia dónde». Eso es lo que falta en la discusión.",
+                "porque": "El camión representa el lado concreto del problema: quién hace el trabajo y con qué medios. La frase siguiente lo dice sin figuras.",
+            },
+            {
+                "accion": "Reconstruyo el sentido: la discusión se queda en los propósitos y no aborda cómo se ejecuta el plan.",
+                "porque": "Esa es la idea que la expresión resume. Una alternativa que hable de falta de presupuesto agrega algo que el texto no dice.",
+            },
+        ],
+        "common_error": (
+            "Elegir la alternativa que parafrasea la expresión sin explicarla. "
+            "«Que faltan camiones» repite la frase con otras palabras y no dice "
+            "qué significa. La correcta traduce la figura a la idea que hay "
+            "detrás."
+        ),
+    },
+    "lec_inferencia": {
+        "intro": (
+            "Inferir es concluir algo que el texto no dice, pero que se sigue "
+            "de lo que sí dice. La línea fina está entre inferir y inventar, y "
+            "toda esta tarea consiste en no cruzarla."
+        ),
+        "theory": (
+            "**Toda inferencia se apoya en una marca del texto.** Si no puedes "
+            "señalar la línea que la sostiene, no es una inferencia: es una "
+            "suposición tuya.\n\n"
+            "**Lo razonable no es lo mismo que lo respaldado.** Muchos "
+            "distractores son perfectamente plausibles y no tienen apoyo en el "
+            "texto. La pregunta no es si podría ser cierto, sino si el texto "
+            "obliga a concluirlo.\n\n"
+            "**Los detalles que parecen decorativos suelen ser la marca.** Que "
+            "un personaje mire el reloj dos veces, que una cartilla dedique "
+            "media página a un punto menor: eso está puesto ahí a propósito.\n\n"
+            "**Cuidado con las inferencias demasiado grandes.** Del hecho de "
+            "que alguien no responda no se sigue que esté molesto. Prefiere la "
+            "conclusión más pequeña que el texto permita."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Mi papá revisaba el diario los domingos. Leía primero los avisos "
+            "económicos, después el resto. Nunca lo vi marcar ninguno, pero la "
+            "página quedaba doblada por la esquina, y el lunes el diario ya no "
+            "estaba en la casa.*\n\n"
+            "¿Qué sugiere que el padre doblara la esquina de esa página?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Separo lo que el texto dice de lo que no: dice que leía los avisos primero, que doblaba la esquina y que el diario desaparecía el lunes. No dice para qué.",
+                "porque": "Antes de inferir hay que tener claro el material disponible. Todo lo que concluya tiene que salir de esos tres hechos.",
+            },
+            {
+                "accion": "Junto las marcas: leerlos PRIMERO, marcar la página y llevarse el diario. Las tres apuntan a que esos avisos le importaban más que el resto.",
+                "porque": "Una marca sola no basta: que doblara la esquina podría ser un gesto cualquiera. Tres detalles que apuntan al mismo lado son lo que sostiene la inferencia.",
+            },
+            {
+                "accion": "Me quedo con la conclusión pequeña: le interesaban esos avisos y quería volver a ellos. No concluyo que estuviera cesante.",
+                "porque": "Que buscara trabajo es posible y el texto no lo respalda: también podría vender algo o buscar un arriendo. Esa alternativa mayor es el distractor.",
+            },
+        ],
+        "common_error": (
+            "Completar el texto con una historia propia. El relato deja huecos "
+            "y la cabeza los llena sola, casi siempre con lo más dramático. "
+            "Antes de marcar, pregúntate qué línea exacta te autoriza a "
+            "concluir eso."
+        ),
+    },
+    "lec_funcion": {
+        "intro": (
+            "Acá no se pregunta qué dice un elemento del texto, sino para qué "
+            "está puesto: un ejemplo, una cita, una comparación, un párrafo "
+            "entero. Todo lo que el emisor incluyó cumple un trabajo."
+        ),
+        "theory": (
+            "**Pregúntate qué pasaría si eso no estuviera.** Es la forma más "
+            "rápida de ver su función. Si al sacarlo el argumento queda sin "
+            "apoyo, su función era sostenerlo; si queda igual de claro pero más "
+            "seco, era ilustrarlo.\n\n"
+            "**Función no es contenido.** «Menciona el caso de una feria» "
+            "describe qué dice; «ilustra con un caso cotidiano una idea "
+            "abstracta» dice para qué sirve. La pregunta pide lo segundo.\n\n"
+            "**Los elementos más frecuentes tienen funciones típicas.** El "
+            "ejemplo concreta; la cita da autoridad; la comparación traduce lo "
+            "desconocido a lo conocido; la pregunta retórica instala un tema; "
+            "la objeción anticipada desarma una crítica antes de recibirla.\n\n"
+            "**Mira dónde está puesto.** Un párrafo al principio suele abrir el "
+            "problema; al final, cerrar o abrir una proyección. La posición es "
+            "parte de la función."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*La resistencia a los antibióticos no es un problema del futuro. "
+            "Piense en una llave que abre una puerta: mientras menos cerraduras "
+            "queden de ese modelo, menos sirve la llave, aunque la llave siga "
+            "intacta. Eso es lo que pasa cuando una bacteria deja de responder "
+            "a un medicamento que sigue existiendo y sigue fabricándose.*\n\n"
+            "¿Qué función cumple la comparación con la llave y la cerradura?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico el elemento: la comparación ocupa la segunda oración, entre el planteamiento y su explicación técnica.",
+                "porque": "Estar en medio de esos dos ya sugiere que hace de puente. La posición orienta antes de leer con detalle.",
+            },
+            {
+                "accion": "Pruebo a sacarla: quedaría «no es un problema del futuro» seguido de «cuando una bacteria deja de responder a un medicamento». Se entiende, pero cuesta más.",
+                "porque": "Al desaparecer, lo que se pierde no es información sino claridad. Eso descarta que su función sea aportar un dato.",
+            },
+            {
+                "accion": "Nombro la función: traduce un fenómeno abstracto —perder eficacia sin dejar de existir— a una escena que cualquiera entiende.",
+                "porque": "Ese es el trabajo de la analogía. Una alternativa que diga que «demuestra» el problema confunde ilustrar con probar: una comparación no prueba nada.",
+            },
+        ],
+        "common_error": (
+            "Responder con lo que el elemento dice en vez de con lo que hace. "
+            "Si tu respuesta se puede escribir sin usar un verbo como ilustrar, "
+            "respaldar, matizar, anticipar o contrastar, probablemente estás "
+            "resumiendo en lugar de identificar la función."
+        ),
+    },
+    "lec_idea_central": {
+        "intro": (
+            "La idea central no es el tema ni lo que más se repite: es lo que "
+            "el texto sostiene sobre ese tema. Y para encontrarla hay que ver "
+            "qué ideas mandan y cuáles están al servicio de otras."
+        ),
+        "theory": (
+            "**Tema e idea central son distintos.** El tema se dice en dos "
+            "palabras («el reciclaje»); la idea central es una afirmación "
+            "completa («el reciclaje fracasa porque no hay quién recoja»). Si "
+            "tu respuesta no tiene verbo, es un tema.\n\n"
+            "**La idea central cubre todo el texto.** Pruébala contra cada "
+            "párrafo: si uno queda fuera, era la idea de una sección, no del "
+            "texto. Ese es el distractor más frecuente.\n\n"
+            "**Distingue lo que sostiene de lo que apoya.** Los ejemplos, las "
+            "cifras y las citas están al servicio de una afirmación. Una "
+            "alternativa que resuma un ejemplo está eligiendo una idea "
+            "subordinada.\n\n"
+            "**En una columna, busca la tesis; en un reportaje, el hallazgo.** "
+            "Cada tipo de texto pone su idea principal en otro lugar: la "
+            "columna la declara, muchas veces al cierre; el reportaje la "
+            "reparte entre los datos."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Chile tiene menos de cinco metros cuadrados de área verde por "
+            "habitante en varias comunas y más de veinte en otras. Se suele "
+            "atribuir la diferencia al clima, pero el clima es el mismo dentro "
+            "de una misma ciudad. Tampoco explica todo el presupuesto "
+            "municipal: hay comunas con presupuestos parecidos y parques muy "
+            "distintos. Lo que sí aparece en todos los casos es cuánto suelo se "
+            "reservó para parque cuando el barrio se loteó, hace cincuenta "
+            "años.*\n\n"
+            "¿Cuál es la idea central del texto?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Nombro el tema: la desigualdad de áreas verdes entre comunas. Ahora busco qué afirma el texto sobre eso.",
+                "porque": "Quedarse en el tema es el error clásico. «Las áreas verdes en Chile» describe de qué habla, no qué sostiene.",
+            },
+            {
+                "accion": "Sigo la estructura: descarta el clima, descarta el presupuesto, y termina con lo que sí aparece siempre. Es un texto que elimina explicaciones hasta quedarse con una.",
+                "porque": "Cuando un texto descarta causas una por una, la idea central está en la que sobrevive. Los descartes son el camino, no el destino.",
+            },
+            {
+                "accion": "Formulo la idea completa: la desigualdad de áreas verdes se explica por decisiones de loteo tomadas hace décadas, no por el clima ni por el presupuesto actual.",
+                "porque": "Esta afirmación cubre los cuatro elementos del texto. Una que solo dijera «el clima no explica la diferencia» resume un paso y deja fuera el cierre.",
+            },
+        ],
+        "common_error": (
+            "Elegir la idea del último párrafo. Suele sonar a conclusión y a "
+            "veces lo es, pero muchas veces es solo el ejemplo final o una "
+            "proyección. Comprueba siempre que tu respuesta cubra también el "
+            "primer párrafo."
+        ),
+    },
+    "lec_intencion": {
+        "intro": (
+            "Todo texto se escribió para algo: convencer, advertir, explicar, "
+            "denunciar, entretener. Esta tarea pide reconocer ese para qué, y "
+            "para quién."
+        ),
+        "theory": (
+            "**El propósito se lee en el conjunto, no en una frase.** Una línea "
+            "puede sonar a denuncia dentro de un texto que explica. Decide "
+            "mirando qué hace el texto entero.\n\n"
+            "**Piensa en el destinatario.** El temario lo dice expresamente: la "
+            "intención se determina «en función del destinatario». Una cartilla "
+            "escrita para un consumidor y un informe escrito para una autoridad "
+            "usan los mismos datos con propósitos distintos.\n\n"
+            "**Distingue el propósito del tema.** Informar sobre los "
+            "microplásticos y alertar sobre los microplásticos son propósitos "
+            "distintos con el mismo tema. Fíjate si el texto se limita a "
+            "exponer o si empuja hacia algo.\n\n"
+            "**El cierre suele delatar la intención.** Muchos textos guardan "
+            "para el final la pregunta, la recomendación o el llamado que "
+            "revela para qué se escribieron."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Esta ficha no le dirá qué plan contratar. Le dirá qué preguntar "
+            "antes de firmar: cuánto dura el precio promocional, qué cobro "
+            "aparece si se va antes de tiempo, y si el equipo queda a su nombre "
+            "o arrendado. Un vendedor no está obligado a mencionar nada de eso "
+            "si usted no lo consulta.*\n\n"
+            "¿Con qué propósito se escribió esta ficha?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico al destinatario: alguien que está por contratar un servicio. Le hablan de usted y en presente.",
+                "porque": "El destinatario acota los propósitos posibles. A un consumidor a punto de firmar no se le escribe para entretenerlo ni para informar a la autoridad.",
+            },
+            {
+                "accion": "Miro qué hace el texto: dice expresamente lo que NO hará («no le dirá qué plan contratar») y entrega una lista de preguntas.",
+                "porque": "Ese descarte inicial es una declaración de propósito. El emisor separa recomendar de preparar, y se queda con lo segundo.",
+            },
+            {
+                "accion": "Nombro la intención: darle al lector las preguntas que necesita para decidir por sí mismo, no decidir por él.",
+                "porque": "El cierre lo confirma: «no está obligado a mencionar nada de eso si usted no lo consulta». Todo el texto apunta a que el lector consulte.",
+            },
+        ],
+        "common_error": (
+            "Confundir el propósito con el tema o con la opinión del emisor. "
+            "«Hablar sobre los planes de internet» es el tema; «criticar a las "
+            "empresas» sería una postura que este texto no toma. El propósito "
+            "es lo que el texto quiere lograr en quien lo lee."
+        ),
+    },
+    "lec_postura": {
+        "intro": (
+            "Un emisor rara vez dice «estoy en contra». Lo muestra: con las "
+            "palabras que elige, con lo que concede y con lo que ironiza. Esta "
+            "tarea pide leer esa posición."
+        ),
+        "theory": (
+            "**La postura está en la elección de palabras.** No es lo mismo "
+            "«medida», «ocurrencia» y «política pública» para referirse a lo "
+            "mismo. El adjetivo delata antes que la afirmación.\n\n"
+            "**Conceder no es estar de acuerdo.** Muchos emisores reconocen "
+            "primero lo que tiene de razonable la posición contraria y después "
+            "la rechazan. Si te quedas en la concesión, inviertes su postura.\n\n"
+            "**El tono es distinto de la postura.** Se puede estar a favor con "
+            "tono irónico y en contra con tono respetuoso. Si la pregunta dice "
+            "«actitud» o «tono», pide el cómo; si dice «posición», el qué.\n\n"
+            "**Busca los matices.** Casi nunca la respuesta es un apoyo total o "
+            "un rechazo total. Suele ser «apoya la medida pero desconfía de "
+            "cómo se aplica», y las alternativas extremas están para descartarse."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Que se planten mil árboles en la ciudad es una buena noticia y no "
+            "pienso fingir lo contrario. Dicho eso, plantar es la parte fácil y "
+            "la que sale en la foto. Regar durante tres veranos, reponer los "
+            "que no prenden y podar a los cinco años no sale en ninguna foto, y "
+            "es lo que decide si dentro de veinte años hay un árbol o un "
+            "hoyo.*\n\n"
+            "¿Qué actitud asume el emisor frente a la plantación de árboles?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Ubico la concesión: «es una buena noticia y no pienso fingir lo contrario». El emisor parte reconociendo algo positivo.",
+                "porque": "El «no pienso fingir lo contrario» avisa que viene un pero. Reconocer la concesión evita leerla como si fuera la postura completa.",
+            },
+            {
+                "accion": "Leo lo que viene después del giro: «Dicho eso, plantar es la parte fácil». Todo el resto del texto está en el mantenimiento.",
+                "porque": "El peso del texto está donde el emisor gasta más líneas. Tres de las cuatro oraciones hablan de lo que viene después de plantar.",
+            },
+            {
+                "accion": "Formulo la actitud con su matiz: valora la iniciativa pero la considera insuficiente sin el cuidado posterior.",
+                "porque": "No es rechazo —lo llama buena noticia— ni entusiasmo —dice que es la parte fácil—. Las alternativas que eligen un extremo ignoran la mitad del texto.",
+            },
+        ],
+        "common_error": (
+            "Quedarse con la primera frase. Los textos de opinión suelen abrir "
+            "con la concesión, y quien lee rápido sale convencido de que el "
+            "emisor apoya algo que después matiza o rechaza. Busca siempre el "
+            "«sin embargo», el «dicho eso» o el «ahora bien»."
+        ),
+    },
+    "lec_forma": {
+        "intro": (
+            "Acá se juzga cómo está hecho el texto: cómo se ordena, en qué "
+            "registro habla, por qué termina donde termina. Las decisiones de "
+            "forma también significan."
+        ),
+        "theory": (
+            "**El orden es una decisión.** Empezar por el caso concreto y "
+            "terminar en la regla no es lo mismo que al revés. Pregúntate qué "
+            "gana el texto con el orden que eligió.\n\n"
+            "**El registro indica para quién se escribió.** Un texto que "
+            "explica qué significa cada término está escrito para quien no los "
+            "conoce; uno que los usa sin explicar, para quien ya está adentro.\n\n"
+            "**El cierre es la posición más fuerte.** Lo último que se lee es "
+            "lo que queda. Si un relato termina en un gesto y no en una "
+            "explicación, eso es una decisión sobre qué quiere dejar abierto.\n\n"
+            "**La persona narrativa cambia lo que se puede saber.** Un narrador "
+            "en primera persona solo puede contar lo que él vio, y eso limita "
+            "—a propósito— lo que el lector conoce del resto."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Cuando llegamos, la casa ya estaba vacía. Nos dijeron que se "
+            "habían ido el jueves, aunque mi hermano asegura que el miércoles "
+            "todavía había luz en la cocina. Yo no vi ninguna luz. Tampoco "
+            "estaba mirando.*\n\n"
+            "¿Qué efecto produce que el relato esté narrado en primera persona?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Reviso qué sabe el narrador: lo que le dijeron, lo que su hermano asegura y lo que él mismo no vio. Nada más.",
+                "porque": "La primera persona no es un adorno: define el límite de la información. Todo lo que el lector sabe pasa por ese filtro.",
+            },
+            {
+                "accion": "Noto que el narrador se desmiente a sí mismo: «Yo no vi ninguna luz. Tampoco estaba mirando».",
+                "porque": "Esa segunda frase retira el valor de la primera. Un narrador que reconoce su propia distracción avisa que no es una fuente confiable.",
+            },
+            {
+                "accion": "Nombro el efecto: el lector queda sin manera de saber qué pasó realmente, porque el único acceso al hecho es un testigo que admite no haber estado atento.",
+                "porque": "Ese es el trabajo de la elección formal: la incertidumbre no está en los hechos, está en quién los cuenta. En tercera persona el relato podría haber resuelto el punto.",
+            },
+        ],
+        "common_error": (
+            "Responder con lo que el texto cuenta en lugar de con lo que la "
+            "forma produce. «Muestra que la casa estaba vacía» es contenido. La "
+            "pregunta es qué consigue el texto por estar construido así y no de "
+            "otra manera."
+        ),
+    },
+    "lec_juicio": {
+        "intro": (
+            "Evaluar la información es preguntarse si lo que se afirma está "
+            "bien sostenido: si el dato alcanza, si la fuente sirve, si la "
+            "conclusión se sigue de las pruebas."
+        ),
+        "theory": (
+            "**Separa la afirmación de su respaldo.** Primero identifica qué se "
+            "sostiene; después, con qué. Muchas preguntas van justo al hueco "
+            "entre las dos cosas.\n\n"
+            "**Distingue dato de opinión.** «El consumo subió 12%» se puede "
+            "verificar; «el consumo subió demasiado» es una valoración. Una "
+            "alternativa que presente una opinión como dato es incorrecta "
+            "aunque suene razonable.\n\n"
+            "**Un ejemplo no prueba una regla.** Si el texto sostiene algo "
+            "general y lo apoya en un caso, el apoyo es débil y la pregunta "
+            "suele ir por ahí.\n\n"
+            "**Fíjate en lo que el propio emisor reconoce.** Los textos "
+            "rigurosos avisan sus límites: «el estudio midió difusión, no "
+            "creencia». Esa línea suele ser la respuesta a qué no permite "
+            "concluir el texto."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*Una encuesta a 400 estudiantes de un colegio mostró que quienes "
+            "duermen más de siete horas obtienen mejores promedios. El autor "
+            "concluye que dormir más mejora el rendimiento escolar. La encuesta "
+            "se aplicó en un solo establecimiento y midió las horas de sueño "
+            "que cada estudiante declaró.*\n\n"
+            "Un lector concluye que el estudio prueba que dormir más sube las "
+            "notas. ¿Qué cabe decir?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Separo lo que el estudio muestra de lo que se concluye: muestra que dos cosas van juntas; se concluye que una causa la otra.",
+                "porque": "Ese salto de correlación a causa es el punto débil más común. Podría ser al revés —a quien le va bien duerme más tranquilo— o haber una tercera causa.",
+            },
+            {
+                "accion": "Reviso los límites que el propio texto declara: un solo establecimiento y horas autodeclaradas.",
+                "porque": "Un solo colegio no permite generalizar, y lo que cada uno declara no es lo que cada uno duerme. El texto entrega esos dos límites sin comentarlos.",
+            },
+            {
+                "accion": "Formulo la respuesta: el estudio muestra una asociación en un grupo acotado, y eso no alcanza para afirmar que dormir más suba las notas.",
+                "porque": "No se trata de decir que la conclusión sea falsa, sino que la evidencia presentada no la sostiene. Esa distinción es lo que se evalúa.",
+            },
+        ],
+        "common_error": (
+            "Juzgar si la afirmación es verdadera en vez de si está respaldada. "
+            "Que dormir bien ayude a rendir puede ser cierto y aun así este "
+            "estudio no probarlo. La pregunta es siempre sobre el texto, no "
+            "sobre el mundo."
+        ),
+    },
+    "lec_aplicar": {
+        "intro": (
+            "Estas preguntas te sacan del texto: te dan una situación que el "
+            "texto no menciona y te piden resolverla con lo que leíste. Es la "
+            "prueba de que entendiste, no de que recordaste."
+        ),
+        "theory": (
+            "**Primero extrae el criterio, después aplícalo.** No busques en el "
+            "texto la situación nueva, porque no está. Busca la regla, el "
+            "principio o el hallazgo, y recién ahí mira el caso.\n\n"
+            "**Comprueba que el caso cumpla todas las condiciones.** Si el "
+            "texto exige tres requisitos y el caso cumple dos, la respuesta "
+            "cambia. Las preguntas se construyen sobre el requisito que falta.\n\n"
+            "**No agregues criterios de tu experiencia.** Lo que tú harías o lo "
+            "que te parece razonable no cuenta. Solo cuenta lo que el texto "
+            "permite sostener.\n\n"
+            "**Si el texto marca un límite, respétalo.** Cuando un emisor dice "
+            "que su hallazgo vale para cierto rango, aplicarlo fuera de ese "
+            "rango es exactamente el error que la pregunta busca."
+        ),
+        "example_statement": (
+            "Lee el texto y responde.\n\n"
+            "*El sello «Alto en» se aplica cuando un producto supera el límite "
+            "por cada 100 gramos en azúcares, sodio, grasas saturadas o "
+            "calorías. La cartilla advierte que el sello no dice nada sobre el "
+            "grado de procesamiento, la fibra ni los aditivos: un producto sin "
+            "ningún sello puede estar altamente procesado.*\n\n"
+            "Un lector concluye que un cereal sin sellos es una opción "
+            "saludable. ¿Qué corresponde responder?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Extraigo el criterio: el sello mide cuatro nutrientes por 100 gramos, y nada más.",
+                "porque": "El criterio es lo único que viaja al caso nuevo. Si me quedo con «los sellos indican productos poco saludables» estoy aplicando una versión propia y más ancha.",
+            },
+            {
+                "accion": "Contrasto la conclusión del lector con lo que el texto declara fuera de alcance: procesamiento, fibra y aditivos.",
+                "porque": "El texto dice expresamente que el sello no informa sobre eso. La conclusión del lector usa la ausencia de sello como si informara sobre todo.",
+            },
+            {
+                "accion": "Respondo: la ausencia de sellos indica que no supera esos cuatro límites, no que el producto sea saludable en general.",
+                "porque": "Es la aplicación exacta del alcance que el texto fija. Ni niega el valor del sello ni lo extiende más allá de lo que mide.",
+            },
+        ],
+        "common_error": (
+            "Resolver el caso con sentido común en vez de con el texto. La "
+            "situación nueva suele ser cotidiana y da la impresión de que uno "
+            "ya sabe la respuesta. Vuelve al criterio: la pregunta evalúa si "
+            "puedes aplicarlo, no si tienes una opinión sobre el tema."
         ),
     },
     "num_racionales": {

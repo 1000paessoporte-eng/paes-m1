@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 256.333" width="520" height="256.333" role="img">
+  <title>Gráfico de una función que pasa por el punto (1, 0) y por el punto (10, 1), sube cada vez más despacio y cae bruscamente cuando x se acerca a cero</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="34" y1="34" x2="34" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="71.6667" y1="34" x2="71.6667" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="109.333" y1="34" x2="109.333" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="147" y1="34" x2="147" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="184.667" y1="34" x2="184.667" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="222.333" y1="34" x2="222.333" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="260" y1="34" x2="260" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="297.667" y1="34" x2="297.667" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="335.333" y1="34" x2="335.333" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="373" y1="34" x2="373" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="410.667" y1="34" x2="410.667" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="448.333" y1="34" x2="448.333" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="486" y1="34" x2="486" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="222.333" x2="486" y2="222.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="184.667" x2="486" y2="184.667" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="147" x2="486" y2="147" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="109.333" x2="486" y2="109.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="71.6667" x2="486" y2="71.6667" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="34" x2="486" y2="34" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="24" y1="147" x2="500" y2="147" stroke="#111827" stroke-width="2"/>
+    <line x1="71.6667" y1="232.333" x2="71.6667" y2="20" stroke="#111827" stroke-width="2"/>
+    <path d="M500 147 L490 142 L490 152 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M71.6667 20 L66.6667 30 L76.6667 30 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <text x="498" y="135" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">x</text>
+    <text x="85.6667" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">y</text>
+    <text x="147" y="167" text-anchor="middle" font-size="12" fill="#4b5563">2</text>
+    <text x="222.333" y="167" text-anchor="middle" font-size="12" fill="#4b5563">4</text>
+    <text x="297.667" y="167" text-anchor="middle" font-size="12" fill="#4b5563">6</text>
+    <text x="373" y="167" text-anchor="middle" font-size="12" fill="#4b5563">8</text>
+    <text x="448.333" y="167" text-anchor="middle" font-size="12" fill="#4b5563">10</text>
+    <text x="61.6667" y="227.333" text-anchor="end" font-size="12" fill="#4b5563">-2</text>
+    <text x="61.6667" y="189.667" text-anchor="end" font-size="12" fill="#4b5563">-1</text>
+    <text x="61.6667" y="114.333" text-anchor="end" font-size="12" fill="#4b5563">1</text>
+    <text x="61.6667" y="76.6667" text-anchor="end" font-size="12" fill="#4b5563">2</text>
+    <text x="61.6667" y="39" text-anchor="end" font-size="12" fill="#4b5563">3</text>
+    <path d="M75.4333 184.667 L79.2 173.328 L82.9667 166.695 L86.7333 161.989 L90.5 158.339 L94.2667 155.356 L98.0333 152.835 L101.8 150.65 L105.567 148.724 L109.333 147 L113.1 145.441 L116.867 144.018 L120.633 142.708 L124.4 141.496 L128.167 140.367 L131.933 139.311 L135.7 138.32 L139.467 137.385 L143.233 136.5 L147 135.661 L150.767 134.863 L154.533 134.102 L158.3 133.375 L162.067 132.679 L165.833 132.011 L169.6 131.369 L173.367 130.752 L177.133 130.157 L180.9 129.583 L184.667 129.028 L188.433 128.492 L192.2 127.973 L195.967 127.469 L199.733 126.981 L203.5 126.507 L207.267 126.046 L211.033 125.598 L214.8 125.161 L218.567 124.737 L222.333 124.322 L226.1 123.918 L229.867 123.524 L233.633 123.139 L237.4 122.763 L241.167 122.396 L244.933 122.036 L248.7 121.684 L252.467 121.34 L256.233 121.003 L260 120.672 L263.767 120.348 L267.533 120.031 L271.3 119.719 L275.067 119.413 L278.833 119.113 L282.6 118.818 L286.367 118.529 L290.133 118.244 L293.9 117.965 L297.667 117.69 L301.433 117.419 L305.2 117.153 L308.967 116.892 L312.733 116.634 L316.5 116.38 L320.267 116.131 L324.033 115.885 L327.8 115.642 L331.567 115.403 L335.333 115.168 L339.1 114.936 L342.867 114.707 L346.633 114.482 L350.4 114.259 L354.167 114.039 L357.933 113.823 L361.7 113.609 L365.467 113.398 L369.233 113.189 L373 112.984 L376.767 112.78 L380.533 112.58 L384.3 112.381 L388.067 112.185 L391.833 111.992 L395.6 111.801 L399.367 111.611 L403.133 111.424 L406.9 111.24 L410.667 111.057 L414.433 110.876 L418.2 110.697 L421.967 110.52 L425.733 110.346 L429.5 110.172 L433.267 110.001 L437.033 109.832 L440.8 109.664 L444.567 109.498 L448.333 109.333 L452.1 109.171 L455.867 109.009 L459.633 108.85 L463.4 108.692 L467.167 108.535 L470.933 108.38 L474.7 108.227 L478.467 108.074 L482.233 107.924 L486 107.774" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="109.333" cy="147" r="4.5" fill="#111827"/>
+    <circle cx="448.333" cy="109.333" r="4.5" fill="#111827"/>
+    <text x="460.333" y="99.3333" text-anchor="start" font-size="13" fill="#111827">(10 ; 1)</text>
+  </g>
+</svg>

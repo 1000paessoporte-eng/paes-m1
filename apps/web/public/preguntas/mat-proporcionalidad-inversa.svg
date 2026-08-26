@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" role="img">
+  <title>Gráfico de los días de trabajo según la cantidad de trabajadores</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="318" x2="530" y2="318" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="276.286" x2="530" y2="276.286" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="234.571" x2="530" y2="234.571" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="192.857" x2="530" y2="192.857" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="151.143" x2="530" y2="151.143" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="109.429" x2="530" y2="109.429" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="67.7143" x2="530" y2="67.7143" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="530" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="318" x2="530" y2="318" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="318" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="318" x2="76" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="76" y="342" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <line x1="151.667" y1="318" x2="151.667" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="151.667" y="342" text-anchor="middle" font-size="13" fill="#4b5563">2</text>
+    <line x1="227.333" y1="318" x2="227.333" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="227.333" y="342" text-anchor="middle" font-size="13" fill="#4b5563">4</text>
+    <line x1="303" y1="318" x2="303" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="303" y="342" text-anchor="middle" font-size="13" fill="#4b5563">6</text>
+    <line x1="378.667" y1="318" x2="378.667" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="378.667" y="342" text-anchor="middle" font-size="13" fill="#4b5563">8</text>
+    <line x1="454.333" y1="318" x2="454.333" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="454.333" y="342" text-anchor="middle" font-size="13" fill="#4b5563">10</text>
+    <line x1="530" y1="318" x2="530" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="530" y="342" text-anchor="middle" font-size="13" fill="#4b5563">12</text>
+    <line x1="70" y1="318" x2="76" y2="318" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="323" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="276.286" x2="76" y2="276.286" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="281.286" text-anchor="end" font-size="13" fill="#4b5563">2</text>
+    <line x1="70" y1="234.571" x2="76" y2="234.571" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="239.571" text-anchor="end" font-size="13" fill="#4b5563">4</text>
+    <line x1="70" y1="192.857" x2="76" y2="192.857" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="197.857" text-anchor="end" font-size="13" fill="#4b5563">6</text>
+    <line x1="70" y1="151.143" x2="76" y2="151.143" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="156.143" text-anchor="end" font-size="13" fill="#4b5563">8</text>
+    <line x1="70" y1="109.429" x2="76" y2="109.429" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="114.429" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <line x1="70" y1="67.7143" x2="76" y2="67.7143" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="72.7143" text-anchor="end" font-size="13" fill="#4b5563">12</text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">14</text>
+    <text x="303" y="364" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Trabajadores</text>
+    <text x="20" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 172)">Días de trabajo</text>
+    <path d="M151.667 67.7143 L161.125 95.5238 L170.583 117.771 L180.042 135.974 L189.5 151.143 L198.958 163.978 L208.417 174.98 L217.875 184.514 L227.333 192.857 L236.792 200.218 L246.25 206.762 L255.708 212.617 L265.167 217.886 L274.625 222.653 L284.083 226.987 L293.542 230.944 L303 234.571 L312.458 237.909 L321.917 240.989 L331.375 243.841 L340.833 246.49 L350.292 248.956 L359.75 251.257 L369.208 253.41 L378.667 255.429 L388.125 257.325 L397.583 259.109 L407.042 260.792 L416.5 262.381 L425.958 263.884 L435.417 265.308 L444.875 266.659 L454.333 267.943 L463.792 269.164 L473.25 270.327 L482.708 271.435 L492.167 272.494 L501.625 273.505 L511.083 274.472 L520.542 275.398 L530 276.286" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="189.5" cy="151.143" r="4.5" fill="#111827"/>
+    <text x="201.5" y="143.143" text-anchor="start" font-size="13" fill="#111827">(3 ; 8)</text>
+    <circle cx="303" cy="234.571" r="4.5" fill="#111827"/>
+    <text x="315" y="226.571" text-anchor="start" font-size="13" fill="#111827">(6 ; 4)</text>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 331.273 430" width="331.273" height="430" role="img">
+  <title>Parábola que corta el eje x en dos puntos, con su vértice marcado</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="34" y1="34" x2="34" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="66.9091" y1="34" x2="66.9091" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="99.8182" y1="34" x2="99.8182" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="132.727" y1="34" x2="132.727" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="165.636" y1="34" x2="165.636" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="198.545" y1="34" x2="198.545" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="231.455" y1="34" x2="231.455" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="264.364" y1="34" x2="264.364" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="297.273" y1="34" x2="297.273" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="396" x2="297.273" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="363.091" x2="297.273" y2="363.091" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="330.182" x2="297.273" y2="330.182" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="297.273" x2="297.273" y2="297.273" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="264.364" x2="297.273" y2="264.364" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="231.455" x2="297.273" y2="231.455" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="198.545" x2="297.273" y2="198.545" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="165.636" x2="297.273" y2="165.636" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="132.727" x2="297.273" y2="132.727" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="99.8182" x2="297.273" y2="99.8182" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="66.9091" x2="297.273" y2="66.9091" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="34" x2="297.273" y2="34" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="24" y1="231.455" x2="311.273" y2="231.455" stroke="#111827" stroke-width="2"/>
+    <line x1="132.727" y1="406" x2="132.727" y2="20" stroke="#111827" stroke-width="2"/>
+    <path d="M311.273 231.455 L301.273 226.455 L301.273 236.455 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M132.727 20 L127.727 30 L137.727 30 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <text x="309.273" y="219.455" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">x</text>
+    <text x="146.727" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">y</text>
+    <text x="34" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">-3</text>
+    <text x="66.9091" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">-2</text>
+    <text x="99.8182" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">-1</text>
+    <text x="165.636" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">1</text>
+    <text x="198.545" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">2</text>
+    <text x="231.455" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">3</text>
+    <text x="264.364" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">4</text>
+    <text x="297.273" y="251.455" text-anchor="middle" font-size="12" fill="#4b5563">5</text>
+    <text x="122.727" y="401" text-anchor="end" font-size="12" fill="#4b5563">-5</text>
+    <text x="122.727" y="368.091" text-anchor="end" font-size="12" fill="#4b5563">-4</text>
+    <text x="122.727" y="335.182" text-anchor="end" font-size="12" fill="#4b5563">-3</text>
+    <text x="122.727" y="302.273" text-anchor="end" font-size="12" fill="#4b5563">-2</text>
+    <text x="122.727" y="269.364" text-anchor="end" font-size="12" fill="#4b5563">-1</text>
+    <text x="122.727" y="203.545" text-anchor="end" font-size="12" fill="#4b5563">1</text>
+    <text x="122.727" y="170.636" text-anchor="end" font-size="12" fill="#4b5563">2</text>
+    <text x="122.727" y="137.727" text-anchor="end" font-size="12" fill="#4b5563">3</text>
+    <text x="122.727" y="104.818" text-anchor="end" font-size="12" fill="#4b5563">4</text>
+    <text x="122.727" y="71.9091" text-anchor="end" font-size="12" fill="#4b5563">5</text>
+    <text x="122.727" y="39" text-anchor="end" font-size="12" fill="#4b5563">6</text>
+    <path d="M80.0727 140.625 L83.3636 157.409 L86.6545 173.535 L89.9455 189.002 L93.2364 203.811 L96.5273 217.962 L99.8182 231.455 L103.109 244.289 L106.4 256.465 L109.691 267.984 L112.982 278.844 L116.273 289.045 L119.564 298.589 L122.855 307.475 L126.145 315.702 L129.436 323.271 L132.727 330.182 L136.018 336.435 L139.309 342.029 L142.6 346.965 L145.891 351.244 L149.182 354.864 L152.473 357.825 L155.764 360.129 L159.055 361.775 L162.345 362.762 L165.636 363.091 L168.927 362.762 L172.218 361.775 L175.509 360.129 L178.8 357.825 L182.091 354.864 L185.382 351.244 L188.673 346.965 L191.964 342.029 L195.255 336.435 L198.545 330.182 L201.836 323.271 L205.127 315.702 L208.418 307.475 L211.709 298.589 L215 289.045 L218.291 278.844 L221.582 267.984 L224.873 256.465 L228.164 244.289 L231.455 231.455 L234.745 217.962 L238.036 203.811 L241.327 189.002 L244.618 173.535 L247.909 157.409 L251.2 140.625 L254.491 123.184 L257.782 105.084 L261.073 86.3255 L264.364 66.9091" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="99.8182" cy="231.455" r="4" fill="#111827"/>
+    <circle cx="231.455" cy="231.455" r="4" fill="#111827"/>
+    <circle cx="165.636" cy="363.091" r="4" fill="#111827"/>
+  </g>
+</svg>

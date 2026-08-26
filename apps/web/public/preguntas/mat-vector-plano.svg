@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 408 340" width="408" height="340" role="img">
+  <title>Plano cartesiano con el punto A en (2, 1), el punto B en (7, 4) y una flecha que va de A a B</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="34" y1="34" x2="34" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="68" y1="34" x2="68" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="102" y1="34" x2="102" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="136" y1="34" x2="136" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="170" y1="34" x2="170" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="204" y1="34" x2="204" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="238" y1="34" x2="238" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="272" y1="34" x2="272" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="306" y1="34" x2="306" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="340" y1="34" x2="340" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="374" y1="34" x2="374" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="306" x2="374" y2="306" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="272" x2="374" y2="272" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="238" x2="374" y2="238" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="204" x2="374" y2="204" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="170" x2="374" y2="170" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="136" x2="374" y2="136" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="102" x2="374" y2="102" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="68" x2="374" y2="68" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="34" x2="374" y2="34" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="24" y1="272" x2="388" y2="272" stroke="#111827" stroke-width="2"/>
+    <line x1="68" y1="316" x2="68" y2="20" stroke="#111827" stroke-width="2"/>
+    <path d="M388 272 L378 267 L378 277 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M68 20 L63 30 L73 30 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <text x="386" y="260" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">x</text>
+    <text x="82" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">y</text>
+    <text x="136" y="292" text-anchor="middle" font-size="12" fill="#4b5563">2</text>
+    <text x="204" y="292" text-anchor="middle" font-size="12" fill="#4b5563">4</text>
+    <text x="272" y="292" text-anchor="middle" font-size="12" fill="#4b5563">6</text>
+    <text x="340" y="292" text-anchor="middle" font-size="12" fill="#4b5563">8</text>
+    <text x="58" y="209" text-anchor="end" font-size="12" fill="#4b5563">2</text>
+    <text x="58" y="141" text-anchor="end" font-size="12" fill="#4b5563">4</text>
+    <text x="58" y="73" text-anchor="end" font-size="12" fill="#4b5563">6</text>
+    <circle cx="136" cy="238" r="4.5" fill="#111827"/>
+    <text x="126" y="226" text-anchor="end" font-size="15" font-weight="700" fill="#111827">A</text>
+    <circle cx="306" cy="136" r="4.5" fill="#111827"/>
+    <text x="318" y="126" text-anchor="start" font-size="15" font-weight="700" fill="#111827">B</text>
+    <line x1="136" y1="238" x2="299.2" y2="139.4" stroke="#111827" stroke-width="1.8"/>
+    <path d="M306 136 L290.7 136.68 L299.2 153 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+  </g>
+</svg>

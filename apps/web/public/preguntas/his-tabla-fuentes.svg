@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 370" width="740" height="370" role="img">
+  <title>Tabla que compara dos fuentes. La fuente 1 es una carta personal escrita por un comerciante del puerto en 1887, con el propósito de contar a su familia cómo vive. La fuente 2 es un artículo de investigación escrito por una historiadora en 2019, con el propósito de explicar el auge del puerto</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <rect x="50" y="40" width="640" height="56" fill="#eef0f3" stroke="none"/>
+    <text x="150" y="75" text-anchor="middle" font-size="15" font-weight="700" fill="#111827"></text>
+    <text x="355" y="75" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">FUENTE 1</text>
+    <text x="575" y="75" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">FUENTE 2</text>
+    <text x="150" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Tipo de documento</text>
+    <text x="355" y="130" text-anchor="middle" font-size="13" fill="#111827">Carta personal</text>
+    <text x="575" y="130" text-anchor="middle" font-size="13" fill="#111827">Artículo de investigación</text>
+    <text x="150" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Autoría</text>
+    <text x="355" y="186" text-anchor="middle" font-size="13" fill="#111827">Un comerciante del puerto</text>
+    <text x="575" y="186" text-anchor="middle" font-size="13" fill="#111827">Una historiadora</text>
+    <text x="150" y="242" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Año</text>
+    <text x="355" y="242" text-anchor="middle" font-size="13" fill="#111827">1887</text>
+    <text x="575" y="242" text-anchor="middle" font-size="13" fill="#111827">2019</text>
+    <text x="150" y="298" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Propósito declarado</text>
+    <text x="355" y="290" text-anchor="middle" font-size="13" fill="#111827">Contar a su familia</text>
+    <text x="355" y="308" text-anchor="middle" font-size="13" fill="#111827">cómo vive</text>
+    <text x="575" y="290" text-anchor="middle" font-size="13" fill="#111827">Explicar el auge</text>
+    <text x="575" y="308" text-anchor="middle" font-size="13" fill="#111827">del puerto</text>
+    <line x1="50" y1="40" x2="690" y2="40" stroke="#111827" stroke-width="1.4"/>
+    <line x1="50" y1="96" x2="690" y2="96" stroke="#111827" stroke-width="1.4"/>
+    <line x1="50" y1="152" x2="690" y2="152" stroke="#111827" stroke-width="1.4"/>
+    <line x1="50" y1="208" x2="690" y2="208" stroke="#111827" stroke-width="1.4"/>
+    <line x1="50" y1="264" x2="690" y2="264" stroke="#111827" stroke-width="1.4"/>
+    <line x1="50" y1="320" x2="690" y2="320" stroke="#111827" stroke-width="1.4"/>
+    <line x1="50" y1="40" x2="50" y2="320" stroke="#111827" stroke-width="1.4"/>
+    <line x1="250" y1="40" x2="250" y2="320" stroke="#111827" stroke-width="1.4"/>
+    <line x1="460" y1="40" x2="460" y2="320" stroke="#111827" stroke-width="1.4"/>
+    <line x1="690" y1="40" x2="690" y2="320" stroke="#111827" stroke-width="1.4"/>
+    <text x="370" y="346" text-anchor="middle" font-size="11" fill="#4b5563">Fichas construidas para practicar análisis de fuentes.</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 334" width="600" height="334" role="img">
+  <title>Esquema de la estructura de los tribunales en tres niveles, con flechas que suben: desde los juzgados de primera instancia hacia las Cortes de Apelaciones, y desde estas hacia la Corte Suprema</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M200 40 L400 40 L400 100 L200 100 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="300" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Corte Suprema</text>
+    <line x1="300" y1="130" x2="300" y2="110" stroke="#111827" stroke-width="1.8"/>
+    <path d="M300 100 L304.115 111.272 L295.885 111.272 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M150 130 L450 130 L450 190 L150 190 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="300" y="166" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Cortes de Apelaciones</text>
+    <line x1="300" y1="220" x2="300" y2="200" stroke="#111827" stroke-width="1.8"/>
+    <path d="M300 190 L304.115 201.272 L295.885 201.272 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M120 220 L480 220 L480 280 L120 280 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="300" y="256" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Juzgados de primera instancia</text>
+    <text x="300" y="312" text-anchor="middle" font-size="12" fill="#4b5563">Las flechas indican hacia dónde se apela una sentencia.</text>
+  </g>
+</svg>

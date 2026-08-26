@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 254" width="660" height="254" role="img">
+  <title>Tabla de doble entrada de 100 personas: de los 50 hombres, 18 usan lentes y 32 no; de las 50 mujeres, 22 usan lentes y 28 no. En total 40 usan lentes y 60 no</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <rect x="60" y="40" width="540" height="46" fill="#eef0f3" stroke="none"/>
+    <rect x="60" y="40" width="190" height="184" fill="#eef0f3" stroke="none"/>
+    <text x="155" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827"></text>
+    <text x="310" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Hombres</text>
+    <text x="430" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Mujeres</text>
+    <text x="545" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Total</text>
+    <text x="155" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Usa lentes</text>
+    <text x="310" y="116" text-anchor="middle" font-size="15" fill="#111827">18</text>
+    <text x="430" y="116" text-anchor="middle" font-size="15" fill="#111827">22</text>
+    <text x="545" y="116" text-anchor="middle" font-size="15" fill="#111827">40</text>
+    <text x="155" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">No usa lentes</text>
+    <text x="310" y="162" text-anchor="middle" font-size="15" fill="#111827">32</text>
+    <text x="430" y="162" text-anchor="middle" font-size="15" fill="#111827">28</text>
+    <text x="545" y="162" text-anchor="middle" font-size="15" fill="#111827">60</text>
+    <text x="155" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Total</text>
+    <text x="310" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">50</text>
+    <text x="430" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">50</text>
+    <text x="545" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">100</text>
+    <line x1="60" y1="40" x2="600" y2="40" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="86" x2="600" y2="86" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="132" x2="600" y2="132" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="178" x2="600" y2="178" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="224" x2="600" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="40" x2="60" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="250" y1="40" x2="250" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="370" y1="40" x2="370" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="490" y1="40" x2="490" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="600" y1="40" x2="600" y2="224" stroke="#111827" stroke-width="1.4"/>
+  </g>
+</svg>

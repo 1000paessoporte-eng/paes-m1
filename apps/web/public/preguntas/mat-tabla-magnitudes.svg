@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" width="580" height="300" role="img">
+  <title>Tabla que relaciona la magnitud de un sismo con la energía liberada: magnitud 3 con 10 elevado a 3, magnitud 4 con 10 elevado a 4, magnitud 5 con 10 elevado a 5 y magnitud 6 con 10 elevado a 6</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <rect x="70" y="40" width="440" height="46" fill="#eef0f3" stroke="none"/>
+    <text x="170" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Magnitud</text>
+    <text x="390" y="70" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">Energía liberada</text>
+    <text x="170" y="116" text-anchor="middle" font-size="15" fill="#111827">3</text>
+    <text x="390" y="116" text-anchor="middle" font-size="15" fill="#111827">10³ = 1.000</text>
+    <text x="170" y="162" text-anchor="middle" font-size="15" fill="#111827">4</text>
+    <text x="390" y="162" text-anchor="middle" font-size="15" fill="#111827">10⁴ = 10.000</text>
+    <text x="170" y="208" text-anchor="middle" font-size="15" fill="#111827">5</text>
+    <text x="390" y="208" text-anchor="middle" font-size="15" fill="#111827">10⁵ = 100.000</text>
+    <text x="170" y="254" text-anchor="middle" font-size="15" fill="#111827">6</text>
+    <text x="390" y="254" text-anchor="middle" font-size="15" fill="#111827">10⁶ = 1.000.000</text>
+    <line x1="70" y1="40" x2="510" y2="40" stroke="#111827" stroke-width="1.4"/>
+    <line x1="70" y1="86" x2="510" y2="86" stroke="#111827" stroke-width="1.4"/>
+    <line x1="70" y1="132" x2="510" y2="132" stroke="#111827" stroke-width="1.4"/>
+    <line x1="70" y1="178" x2="510" y2="178" stroke="#111827" stroke-width="1.4"/>
+    <line x1="70" y1="224" x2="510" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="70" y1="270" x2="510" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="70" y1="40" x2="70" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="270" y1="40" x2="270" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="510" y1="40" x2="510" y2="270" stroke="#111827" stroke-width="1.4"/>
+  </g>
+</svg>

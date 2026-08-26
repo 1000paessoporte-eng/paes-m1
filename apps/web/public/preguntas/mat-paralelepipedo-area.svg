@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 306" width="470" height="306" role="img">
+  <title>Paralelepípedo recto con sus tres medidas</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M90 140 L330 140 L330 260 L90 260 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M90 140 L170 70 L410 70 L330 140 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M330 140 L410 70 L410 190 L330 260 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M90 260 L170 190 L410 190" fill="none" stroke="#4b5563" stroke-width="1.2" stroke-linejoin="round" stroke-dasharray="6 5"/>
+    <line x1="170" y1="190" x2="170" y2="70" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="6 5"/>
+    <text x="210" y="286" text-anchor="middle" font-size="15" fill="#111827">8 cm</text>
+    <text x="78" y="206" text-anchor="end" font-size="15" fill="#111827">5 cm</text>
+    <text x="388" y="118" text-anchor="start" font-size="15" fill="#111827">3 cm</text>
+  </g>
+</svg>

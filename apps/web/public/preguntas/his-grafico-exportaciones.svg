@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 410" width="560" height="410" role="img">
+  <title>Gráfico de las exportaciones de un producto entre 1880 y 1930: suben de 5 a 50 mil toneladas hacia 1910, se mantienen altas en 1920 y caen bruscamente a 8 mil en 1930</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="318" x2="530" y2="318" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="245" x2="530" y2="245" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="172" x2="530" y2="172" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="99" x2="530" y2="99" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="530" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="318" x2="530" y2="318" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="318" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="318" x2="76" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="76" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1880</text>
+    <line x1="166.8" y1="318" x2="166.8" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="166.8" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1890</text>
+    <line x1="257.6" y1="318" x2="257.6" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="257.6" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1900</text>
+    <line x1="348.4" y1="318" x2="348.4" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="348.4" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1910</text>
+    <line x1="439.2" y1="318" x2="439.2" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="439.2" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1920</text>
+    <line x1="530" y1="318" x2="530" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="530" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1930</text>
+    <line x1="70" y1="318" x2="76" y2="318" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="323" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="245" x2="76" y2="245" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="250" text-anchor="end" font-size="13" fill="#4b5563">15</text>
+    <line x1="70" y1="172" x2="76" y2="172" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="177" text-anchor="end" font-size="13" fill="#4b5563">30</text>
+    <line x1="70" y1="99" x2="76" y2="99" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="104" text-anchor="end" font-size="13" fill="#4b5563">45</text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">60</text>
+    <text x="303" y="364" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Año</text>
+    <text x="20" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 172)">Exportaciones (miles de toneladas)</text>
+    <path d="M76 293.667 L166.8 230.4 L257.6 162.267 L348.4 74.6667 L439.2 99 L530 279.067" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="76" cy="293.667" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="166.8" cy="230.4" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="257.6" cy="162.267" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="348.4" cy="74.6667" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="439.2" cy="99" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="530" cy="279.067" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <text x="280" y="400" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380" role="img">
+  <title>Altura de un balón contra el tiempo: sube, llega a un máximo y vuelve al suelo</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="318" x2="530" y2="318" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="251.636" x2="530" y2="251.636" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="185.273" x2="530" y2="185.273" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="118.909" x2="530" y2="118.909" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="52.5455" x2="530" y2="52.5455" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="318" x2="530" y2="318" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="318" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="318" x2="76" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="76" y="342" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <line x1="176.889" y1="318" x2="176.889" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="176.889" y="342" text-anchor="middle" font-size="13" fill="#4b5563">1</text>
+    <line x1="277.778" y1="318" x2="277.778" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="277.778" y="342" text-anchor="middle" font-size="13" fill="#4b5563">2</text>
+    <line x1="378.667" y1="318" x2="378.667" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="378.667" y="342" text-anchor="middle" font-size="13" fill="#4b5563">3</text>
+    <line x1="479.556" y1="318" x2="479.556" y2="324" stroke="#111827" stroke-width="1.6"/>
+    <text x="479.556" y="342" text-anchor="middle" font-size="13" fill="#4b5563">4</text>
+    <line x1="70" y1="318" x2="76" y2="318" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="323" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="251.636" x2="76" y2="251.636" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="256.636" text-anchor="end" font-size="13" fill="#4b5563">5</text>
+    <line x1="70" y1="185.273" x2="76" y2="185.273" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="190.273" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <line x1="70" y1="118.909" x2="76" y2="118.909" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="123.909" text-anchor="end" font-size="13" fill="#4b5563">15</text>
+    <line x1="70" y1="52.5455" x2="76" y2="52.5455" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="57.5455" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <text x="303" y="364" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Tiempo (s)</text>
+    <text x="20" y="172" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 172)">Altura (m)</text>
+    <path d="M76 318 L81.0444 304.893 L86.0889 292.118 L91.1333 279.675 L96.1778 267.564 L101.222 255.784 L106.267 244.336 L111.311 233.22 L116.356 222.436 L121.4 211.984 L126.444 201.864 L131.489 192.075 L136.533 182.618 L141.578 173.493 L146.622 164.7 L151.667 156.239 L156.711 148.109 L161.756 140.311 L166.8 132.845 L171.844 125.711 L176.889 118.909 L181.933 112.439 L186.978 106.3 L192.022 100.493 L197.067 95.0182 L202.111 89.875 L207.156 85.0636 L212.2 80.5841 L217.244 76.4364 L222.289 72.6205 L227.333 69.1364 L232.378 65.9841 L237.422 63.1636 L242.467 60.675 L247.511 58.5182 L252.556 56.6932 L257.6 55.2 L262.644 54.0386 L267.689 53.2091 L272.733 52.7114 L277.778 52.5455 L282.822 52.7114 L287.867 53.2091 L292.911 54.0386 L297.956 55.2 L303 56.6932 L308.044 58.5182 L313.089 60.675 L318.133 63.1636 L323.178 65.9841 L328.222 69.1364 L333.267 72.6205 L338.311 76.4364 L343.356 80.5841 L348.4 85.0636 L353.444 89.875 L358.489 95.0182 L363.533 100.493 L368.578 106.3 L373.622 112.439 L378.667 118.909 L383.711 125.711 L388.756 132.845 L393.8 140.311 L398.844 148.109 L403.889 156.239 L408.933 164.7 L413.978 173.493 L419.022 182.618 L424.067 192.075 L429.111 201.864 L434.156 211.984 L439.2 222.436 L444.244 233.22 L449.289 244.336 L454.333 255.784 L459.378 267.564 L464.422 279.675 L469.467 292.118 L474.511 304.893 L479.556 318" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="277.778" y1="318" x2="277.778" y2="52.5455" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <line x1="76" y1="52.5455" x2="277.778" y2="52.5455" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <circle cx="277.778" cy="52.5455" r="4.5" fill="#111827"/>
+    <circle cx="479.556" cy="318" r="4.5" fill="#111827"/>
+  </g>
+</svg>

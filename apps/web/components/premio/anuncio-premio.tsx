@@ -163,9 +163,14 @@ export function AnuncioPremio({ progreso }: { progreso: ProgresoPremio }) {
                   }
                 />
               </div>
+              {/* Decía "cuando los planes estén disponibles", y ya lo están:
+                  /api/plan/productos responde pago_disponible con los dos
+                  precios y hay compras completadas. Dejar esa frase le decía
+                  al alumno que el reloj de los seis meses todavía no parte,
+                  cuando en realidad puede partir hoy. */}
               <p className="mt-3 text-xs leading-relaxed text-muted">
-                Falta además tener plan Pro por 6 meses, que empieza a contar
-                cuando los planes estén disponibles.
+                Falta además tener plan Pro por 6 meses, sumados dentro de los
+                12 meses anteriores a la prueba.
               </p>
             </div>
 

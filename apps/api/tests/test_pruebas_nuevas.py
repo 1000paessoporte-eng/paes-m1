@@ -167,16 +167,25 @@ def test_historia_no_afirma_hechos_sin_fuente():
     """Toda pregunta de los ejes de historia y ciudadanía se apoya en una fuente.
 
     Es la regla que hace verificable este banco: la respuesta se comprueba
-    contra un texto que escribimos, no contra conocimiento histórico que
+    contra una fuente que escribimos, no contra conocimiento histórico que
     ningún script puede validar. Las de economía son de cálculo y no la
     necesitan.
+
+    La fuente puede ser un texto (`passage`) o una figura propia (`image_url`).
+    El temario DEMRE pide trabajar con mapas, gráficos y tablas, y en esas
+    preguntas la fuente ES el dibujo: vive en el repositorio, se revisa en el
+    mismo pull request y viaja con la pregunta, igual que un texto. Lo que la
+    regla prohíbe sigue prohibido: preguntar de memoria, sin nada que
+    contrastar.
     """
     from paes_api.seed_data import QUESTIONS_HISTORIA, SKILL_NODES_HISTORIA
 
     ejes = {n[0]: n[2] for n in SKILL_NODES_HISTORIA}
     for q in QUESTIONS_HISTORIA:
         if ejes[q["skill_node"]] in ("historia", "ciudadania"):
-            assert q.get("passage"), f"sin fuente: {q['stem'][:50]}"
+            assert q.get("passage") or q.get("image_url"), (
+                f"sin fuente: {q['stem'][:50]}"
+            )
 
 
 def test_cada_texto_de_lectora_sostiene_varias_preguntas():
@@ -197,16 +206,36 @@ def test_cada_texto_de_lectora_sostiene_varias_preguntas():
         )
 
 
-def test_lectora_cubre_sus_tres_habilidades_en_cada_dificultad():
-    """El ensayo mezcla dificultades; si un eje solo tiene preguntas fáciles,
-    el alumno que lo domina nunca encuentra dónde equivocarse."""
-    from paes_api.seed_data import QUESTIONS_LECTORA
+def test_lectora_cubre_cada_tarea_lectora_en_mas_de_una_dificultad():
+    """El ensayo mezcla dificultades; si un nodo solo tiene preguntas fáciles,
+    el alumno que lo domina nunca encuentra dónde equivocarse.
 
-    ejes = {q["skill_node"] for q in QUESTIONS_LECTORA}
-    assert ejes == {"lec_localizar", "lec_interpretar", "lec_evaluar"}
-    for eje in ejes:
-        dificultades = {q["difficulty"] for q in QUESTIONS_LECTORA if q["skill_node"] == eje}
-        assert len(dificultades) >= 2, f"{eje} solo tiene preguntas {dificultades}"
+    Antes esto comprobaba las tres habilidades. Ahora los nodos son las tareas
+    lectoras del temario, que son doce, y la exigencia es la misma para cada
+    una: ningún nodo puede quedar con una sola dificultad ni sin preguntas.
+    """
+    from paes_api.seed_data import QUESTIONS_LECTORA, SKILL_NODES_LECTORA
+
+    declarados = {code for code, *_ in SKILL_NODES_LECTORA}
+    usados = {q["skill_node"] for q in QUESTIONS_LECTORA}
+    assert usados == declarados, (
+        f"sin preguntas: {declarados - usados}; sin nodo: {usados - declarados}"
+    )
+    for nodo in sorted(declarados):
+        dificultades = {q["difficulty"] for q in QUESTIONS_LECTORA if q["skill_node"] == nodo}
+        assert len(dificultades) >= 2, f"{nodo} solo tiene preguntas {dificultades}"
+
+
+def test_cada_tarea_lectora_tiene_su_leccion():
+    """Un nodo sin lección manda al alumno a practicar sin haber estudiado.
+
+    En las otras pruebas hay una lección por nodo y en Lectora también debe
+    haberla: es la mitad "aprender" del árbol.
+    """
+    from paes_api.seed_data import LESSONS, SKILL_NODES_LECTORA
+
+    faltan = [code for code, *_ in SKILL_NODES_LECTORA if code not in LESSONS]
+    assert not faltan, f"nodos de Lectora sin lección: {faltan}"
 
 
 def test_las_figuras_de_las_preguntas_existen_y_estan_descritas():

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" width="460" height="360" role="img">
+  <title>Gráfico de precio contra cantidad con dos rectas: la de oferta sube y la de demanda baja. Se cortan en el punto E, del que bajan líneas punteadas hacia p* en el eje de precios y hacia q* en el de cantidades</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="298" x2="430" y2="298" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="298" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <text x="253" y="344" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Cantidad</text>
+    <text x="20" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 162)">Precio</text>
+    <path d="M111.4 53.2 L394.6 243.6" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M111.4 243.6 L394.6 53.2" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="380.44" y="227.28" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">D</text>
+    <text x="380.44" y="53.2" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">O</text>
+    <line x1="253" y1="298" x2="253" y2="148.4" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <line x1="76" y1="148.4" x2="253" y2="148.4" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <circle cx="253" cy="148.4" r="5" fill="#111827"/>
+    <text x="267" y="136.4" text-anchor="start" font-size="15" font-weight="700" fill="#111827">E</text>
+    <text x="253" y="320" text-anchor="middle" font-size="13" fill="#4b5563">q*</text>
+    <text x="64" y="153.4" text-anchor="end" font-size="13" fill="#4b5563">p*</text>
+  </g>
+</svg>

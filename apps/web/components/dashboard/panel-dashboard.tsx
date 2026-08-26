@@ -66,7 +66,29 @@ export function PanelDashboard({
   ejesDe,
   plan,
 }: Props) {
-  const rendidos = attempts.filter((a) => a.status === "submitted");
+  const entregados = attempts.filter((a) => a.status === "submitted");
+
+  // EL PANEL CUENTA SOLO LOS ENSAYOS QUE DICEN ALGO.
+  //
+  // El historial, el perfil y la pantalla de resultado ya distinguen un ensayo
+  // real de uno inutilizable —el que se entregó sin responder, o tan rápido
+  // que no da tiempo ni de leer—. El panel era la única pantalla que no lo
+  // hacía, y es la primera que se ve al entrar.
+  //
+  // Medido en una cuenta de prueba: de 17 ensayos entregados, 15 no eran
+  // representativos. El panel encabezaba con un 100 sacado de un ensayo con
+  // CERO respuestas, y debajo diagnosticaba "0% en los cuatro ejes", que es
+  // un diagnóstico derivado de ninguna evidencia. El mejor puntaje salía de
+  // otro apurado que el historial ya excluía.
+  // Se exige además que tenga al menos una respuesta, y no solo la bandera.
+  // Los ensayos entregados ANTES de que la regla se corrigiera quedaron
+  // marcados como representativos aunque estén vacíos, así que filtrar solo
+  // por la bandera dejaba pasar un "mejor puntaje 100" sacado de un ensayo
+  // sin responder. Un ensayo sin respuestas no tiene puntaje que mostrar, con
+  // bandera o sin ella.
+  const rendidos = entregados.filter(
+    (a) => a.representativo !== false && a.answered > 0
+  );
 
   // El puntaje que encabeza el panel es el del último ensayo, sea de la prueba
   // que sea. Va CON el nombre de su prueba: un 406 no significa lo mismo en
@@ -99,6 +121,12 @@ export function PanelDashboard({
   );
   const mejor = mejorIntento?.estimated_score ?? null;
   const enCurso = attempts.find((a) => a.status === "in_progress");
+
+  // El desglose por eje viene del último ensayo entregado, lo elija quien lo
+  // elija en panel/page.tsx. Si ese ensayo no cuenta, tampoco cuenta su
+  // desglose: todos los ejes marcarían 0% y el panel "diagnosticaría" sin
+  // datos.
+  const porEjeUtil = ultimoIntento != null ? porEje : [];
   // El tiempo practicado sale de analítica, que suma lo que el estudiante tardó
   // en cada pregunta. Sumar `elapsed_seconds` de los intentos, en cambio, cuenta
   // el reloj corriendo de los ensayos abandonados: un intento dejado a medias
@@ -193,7 +221,7 @@ export function PanelDashboard({
               puntaje={ultimo}
               prueba={ultimoIntento?.subject ?? null}
               variacion={variacion}
-              porEje={porEje}
+              porEje={porEjeUtil}
               ejesDe={ejesDe}
             />
           </Reveal>
@@ -220,6 +248,7 @@ export function PanelDashboard({
               <ProModulo
                 usados={plan.ensayos_usados}
                 limite={plan.ensayos_limite}
+                limitesActivos={plan.limites_activos}
               />
             </Reveal>
           )}

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" role="img">
+  <title>Histograma de edades en cuatro intervalos de diez años</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="298" x2="490" y2="298" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="278.571" x2="490" y2="278.571" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="259.143" x2="490" y2="259.143" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="239.714" x2="490" y2="239.714" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="220.286" x2="490" y2="220.286" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="200.857" x2="490" y2="200.857" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="181.429" x2="490" y2="181.429" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="162" x2="490" y2="162" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="142.571" x2="490" y2="142.571" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="123.143" x2="490" y2="123.143" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="103.714" x2="490" y2="103.714" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="84.2857" x2="490" y2="84.2857" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="64.8571" x2="490" y2="64.8571" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="45.4286" x2="490" y2="45.4286" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="490" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="298" x2="490" y2="298" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="298" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="298" x2="76" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="76" y="322" text-anchor="middle" font-size="13" fill="#4b5563">10</text>
+    <line x1="179.5" y1="298" x2="179.5" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="179.5" y="322" text-anchor="middle" font-size="13" fill="#4b5563">20</text>
+    <line x1="283" y1="298" x2="283" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="283" y="322" text-anchor="middle" font-size="13" fill="#4b5563">30</text>
+    <line x1="386.5" y1="298" x2="386.5" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="386.5" y="322" text-anchor="middle" font-size="13" fill="#4b5563">40</text>
+    <line x1="490" y1="298" x2="490" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="490" y="322" text-anchor="middle" font-size="13" fill="#4b5563">50</text>
+    <line x1="70" y1="298" x2="76" y2="298" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="303" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="278.571" x2="76" y2="278.571" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="283.571" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="259.143" x2="76" y2="259.143" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="264.143" text-anchor="end" font-size="13" fill="#4b5563">2</text>
+    <line x1="70" y1="239.714" x2="76" y2="239.714" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="244.714" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="220.286" x2="76" y2="220.286" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="225.286" text-anchor="end" font-size="13" fill="#4b5563">4</text>
+    <line x1="70" y1="200.857" x2="76" y2="200.857" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="205.857" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="181.429" x2="76" y2="181.429" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="186.429" text-anchor="end" font-size="13" fill="#4b5563">6</text>
+    <line x1="70" y1="162" x2="76" y2="162" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="167" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="142.571" x2="76" y2="142.571" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="147.571" text-anchor="end" font-size="13" fill="#4b5563">8</text>
+    <line x1="70" y1="123.143" x2="76" y2="123.143" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="128.143" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="103.714" x2="76" y2="103.714" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="108.714" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <line x1="70" y1="84.2857" x2="76" y2="84.2857" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="89.2857" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="64.8571" x2="76" y2="64.8571" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="69.8571" text-anchor="end" font-size="13" fill="#4b5563">12</text>
+    <line x1="70" y1="45.4286" x2="76" y2="45.4286" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="50.4286" text-anchor="end" font-size="13" fill="#4b5563"></text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">14</text>
+    <text x="283" y="344" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Edad (años)</text>
+    <text x="20" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 162)">Cantidad de personas</text>
+    <rect x="76" y="200.857" width="103.5" height="97.1429" fill="#ffffff" stroke="#111827" stroke-width="1.6"/>
+    <rect x="179.5" y="64.8571" width="103.5" height="233.143" fill="#ffffff" stroke="#111827" stroke-width="1.6"/>
+    <rect x="283" y="123.143" width="103.5" height="174.857" fill="#ffffff" stroke="#111827" stroke-width="1.6"/>
+    <rect x="386.5" y="220.286" width="103.5" height="77.7143" fill="#ffffff" stroke="#111827" stroke-width="1.6"/>
+  </g>
+</svg>

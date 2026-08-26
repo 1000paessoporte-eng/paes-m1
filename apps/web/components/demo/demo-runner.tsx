@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { CapturaCorreo } from "@/components/demo/captura-correo";
+import { FiguraPregunta } from "@/components/exam/figura-pregunta";
 import { PassagePanel } from "@/components/exam/passage-panel";
 import { Resolucion } from "@/components/exam/resolucion";
 import { Burbuja } from "@/components/ui/burbuja";
@@ -173,6 +174,7 @@ export function DemoRunner({ inicial = "m1" }: { inicial?: Subject }) {
           <span className="text-xs text-muted">{current.axis_label}</span>
         </div>
         <p className="mt-2 text-base leading-relaxed text-foreground">{current.stem}</p>
+        {current.image_url ? <FiguraPregunta src={current.image_url} /> : null}
 
         <div className="mt-6 flex flex-col gap-2.5">
           {current.alternatives.map((alt, i) => {

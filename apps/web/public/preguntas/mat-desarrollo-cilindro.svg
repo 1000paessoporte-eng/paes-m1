@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img">
+  <title>Desarrollo de un cilindro: dos círculos iguales de 3 cm de radio y un rectángulo de 7 cm de alto que forma el manto</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <circle cx="120" cy="90" r="50" fill="none" stroke="#111827" stroke-width="2"/>
+    <circle cx="120" cy="330" r="50" fill="none" stroke="#111827" stroke-width="2"/>
+    <line x1="120" y1="90" x2="170" y2="90" stroke="#111827" stroke-width="1.4"/>
+    <circle cx="120" cy="90" r="3" fill="#111827"/>
+    <text x="146" y="80" text-anchor="middle" font-size="13" fill="#111827">3 cm</text>
+    <path d="M200 40 L470 40 L470 380 L200 380 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="490" y="214" text-anchor="start" font-size="14" fill="#111827">7 cm</text>
+    <line x1="482" y1="40" x2="482" y2="380" stroke="#4b5563" stroke-width="1.2"/>
+    <text x="335" y="214" text-anchor="middle" font-size="15" fill="#4b5563">manto</text>
+    <text x="120" y="214" text-anchor="middle" font-size="15" fill="#4b5563">tapas</text>
+  </g>
+</svg>

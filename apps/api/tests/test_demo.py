@@ -197,3 +197,37 @@ def test_demo_lectora_viaja_con_su_texto(client: TestClient, db_session: Session
     assert body[0]["passage"]["title"] == "Texto de prueba"
     assert body[0]["node_name"] == "Localizar información"
     assert body[0]["axis"] == "localizar"
+
+
+def test_demo_pregunta_con_figura_viaja_con_su_figura(
+    client: TestClient, db_session: Session
+) -> None:
+    """Una pregunta que habla de "la figura" es incontestable sin ella.
+
+    El ensayo, la práctica y la revisión ya la entregaban; la demo no, porque
+    se escribió cuando ninguna pregunta de M1 tenía figura. Desde que M1, M2 e
+    Historia las tienen, la demo pública podía mostrar un enunciado que se
+    refiere a un dibujo que nunca llega.
+    """
+    nodo = SkillNode(
+        code="demo_geometria",
+        name="Perímetros y áreas",
+        axis=SkillAxis.GEOMETRIA,
+        subject=Subject.M1,
+        tier=1,
+        unlock_threshold=0.75,
+    )
+    db_session.add(nodo)
+    db_session.flush()
+    db_session.add(
+        Question(
+            skill_node_id=nodo.id,
+            difficulty=Difficulty.FACIL,
+            stem="¿Cuál es el área del trapecio de la figura?",
+            image_url="/preguntas/mat-trapecio-acotado.svg",
+        )
+    )
+    db_session.commit()
+
+    body = client.get("/api/demo/questions", params={"subject": "m1"}).json()
+    assert body[0]["image_url"] == "/preguntas/mat-trapecio-acotado.svg"
