@@ -31,9 +31,16 @@ def list_skill_nodes(
 
 @router.get("/recommended", response_model=SkillNodeProgressOut | None)
 def get_recommended_node(
-    db: Session = Depends(get_db), user: User = Depends(get_current_user)
+    subject: Subject = Query(
+        default=Subject.M1,
+        description="Prueba sobre la que recomendar. La recomendación tiene "
+        "que salir del mismo árbol que se está mirando: recomendar un nodo de "
+        "otra prueba saca al alumno de la que está preparando.",
+    ),
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ) -> SkillNodeProgressOut | None:
-    return service.get_recommended_node(db, user.id)
+    return service.get_recommended_node(db, user.id, subject=subject)
 
 
 @router.get("/lecciones", response_model=list[LeccionIndiceOut])

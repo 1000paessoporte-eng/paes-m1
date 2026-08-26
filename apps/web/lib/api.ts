@@ -314,8 +314,14 @@ export function getLesson(code: string): Promise<Lesson> {
   });
 }
 
-export function getRecommendedNode(token?: string): Promise<RecommendedNode> {
-  return apiFetch<RecommendedNode>("/api/skill-tree/recommended", token);
+export function getRecommendedNode(
+  token?: string,
+  subject: string = "m1"
+): Promise<RecommendedNode> {
+  return apiFetch<RecommendedNode>(
+    `/api/skill-tree/recommended?subject=${subject}`,
+    token
+  );
 }
 
 export function getPracticeQuestions(code: string, token?: string): Promise<PracticeStart> {
