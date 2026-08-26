@@ -164,7 +164,7 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "ofrecen 800 unidades": str(800 - 500),
     "vende 200 unidades a 3.000 pesos": f"{3_000 * 200:,}".replace(",", "."),
     "cayó el sector primario": str(55 - 11),
-    "comienza en 1810 y termina en 1830": str(1830 - 1810),
+    "comienza en 1798 y termina en 1802": str(1802 - 1798),
     # Segunda tanda de Ciencias
     "recorre 300 m en 20 s": str((300 + 100) // (20 + 5)),
     "lanza verticalmente hacia arriba a 30 m/s": str(30 // 10),
