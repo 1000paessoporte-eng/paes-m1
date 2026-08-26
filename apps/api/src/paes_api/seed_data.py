@@ -54918,6 +54918,305 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "posguerra_marco_regulador",
+        "title": "Un mundo con reglas nuevas, 1944-1948",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Entre 1944 y 1948 se construyó buena parte del andamiaje con que "
+            "el mundo sigue funcionando. No fue un plan único: fueron "
+            "respuestas sucesivas a lo que acababa de ocurrir, y cada una lleva "
+            "la marca del problema que intentaba evitar.\n"
+            "\n"
+            "El primer problema era económico. La Depresión de los años treinta "
+            "había mostrado que cuando cada país enfrenta la crisis por su "
+            "cuenta —devaluando su moneda, cerrando su mercado, subiendo "
+            "aranceles— el resultado agregado empeora la situación de todos. En "
+            "1944 una conferencia internacional estableció un sistema de tipos "
+            "de cambio estables y creó organismos destinados a prestar a los "
+            "países con dificultades de balanza de pagos y a financiar la "
+            "reconstrucción. La idea era que un país en apuros tuviera algo que "
+            "hacer distinto de cerrarse.\n"
+            "\n"
+            "El segundo problema era la guerra misma. En 1945 se fundó una "
+            "organización mundial con dos órganos principales: una asamblea "
+            "donde cada Estado dispone de un voto y un consejo reducido, con "
+            "cinco miembros permanentes dotados de veto, encargado de la "
+            "seguridad internacional. El diseño buscaba corregir el defecto de "
+            "la organización anterior, que aprobaba resoluciones que nadie "
+            "ejecutaba. El precio fue una desigualdad escrita en el propio "
+            "tratado, que los Estados pequeños objetaron desde el primer día.\n"
+            "\n"
+            "El tercer problema era más difícil de nombrar. Los crímenes del "
+            "régimen nazi habían sido cometidos en buena parte conforme a las "
+            "leyes que ese mismo régimen dictó. Si la legalidad interna de un "
+            "Estado era el criterio último, no había desde dónde juzgarlos. De "
+            "ahí salieron dos innovaciones que rompían con la tradición "
+            "anterior. Los tribunales de posguerra juzgaron a personas "
+            "concretas por crímenes contra la humanidad, estableciendo que "
+            "obedecer órdenes no exime de responsabilidad. Y en 1948 la "
+            "asamblea aprobó una declaración universal de derechos, que afirma "
+            "que toda persona tiene derechos por el solo hecho de serlo, con "
+            "independencia de lo que disponga la ley del país donde vive.\n"
+            "\n"
+            "Conviene medir bien el alcance de esa declaración. No es un "
+            "tratado obligatorio: no crea tribunales ni sanciones, y su "
+            "cumplimiento quedó entregado a la buena voluntad de cada Estado. "
+            "Su efecto fue de otro orden. Instaló un lenguaje común con el que "
+            "se puede acusar a un gobierno de violar derechos sin que este "
+            "pueda responder que se trata de un asunto interno regulado por su "
+            "propia ley. Ese desplazamiento —de la soberanía absoluta a la "
+            "soberanía con límites— es lo que este período dejó instalado, y "
+            "también lo que desde entonces se discute."
+        ),
+    },
+    {
+        "key": "posguerra_descolonizacion",
+        "title": "Independencias y membresía de la organización mundial, 1945-1975",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos. Los órdenes "
+            "de magnitud reproducen el proceso que la historiografía describe, "
+            "pero las cifras están redondeadas y no corresponden a una serie "
+            "oficial: el ejercicio es de lectura e inferencia."
+        ),
+        "body": (
+            "**Tabla 1. Estados que acceden a la independencia, por región y "
+            "quinquenio.**\n"
+            "\n"
+            "| Quinquenio | Asia | África | Caribe y Oceanía | Total |\n"
+            "|---|---|---|---|---|\n"
+            "| 1945-1949 | 8 | 1 | 0 | 9 |\n"
+            "| 1950-1954 | 3 | 2 | 0 | 5 |\n"
+            "| 1955-1959 | 2 | 5 | 0 | 7 |\n"
+            "| 1960-1964 | 3 | 24 | 3 | 30 |\n"
+            "| 1965-1969 | 2 | 8 | 6 | 16 |\n"
+            "| 1970-1975 | 3 | 7 | 7 | 17 |\n"
+            "\n"
+            "**Tabla 2. Miembros de la organización mundial.**\n"
+            "\n"
+            "| Año | Miembros | Miembros de Asia y África |\n"
+            "|---|---|---|\n"
+            "| 1945 | 51 | 8 |\n"
+            "| 1955 | 76 | 17 |\n"
+            "| 1965 | 117 | 55 |\n"
+            "| 1975 | 144 | 76 |\n"
+            "\n"
+            "Notas:\n"
+            "— En la asamblea general cada Estado miembro dispone de un voto, "
+            "cualquiera sea su población o su territorio.\n"
+            "— El número de miembros permanentes del consejo con derecho a veto "
+            "se mantuvo en cinco durante todo el período.\n"
+            "— La declaración sobre la concesión de la independencia a los "
+            "países coloniales fue aprobada por la asamblea en 1960."
+        ),
+    },
+    {
+        "key": "posguerra_veto_debate",
+        "title": "Dos memorandos sobre el derecho a veto en la nueva organización (1945)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen documentos "
+            "diplomáticos reales ni citan a delegación alguna: reconstruyen los "
+            "argumentos que se esgrimieron a favor y en contra del veto en el "
+            "Consejo de Seguridad, para ejercitar la comparación de "
+            "interpretaciones."
+        ),
+        "body": (
+            "**Fuente 1. Memorando de la delegación de una potencia vencedora, "
+            "1945.**\n"
+            "\n"
+            "La organización anterior fracasó y conviene entender por qué. No "
+            "le faltó buena voluntad: le faltó fuerza. Aprobó resoluciones que "
+            "nadie ejecutó, porque quienes tenían ejércitos no estaban "
+            "obligados a usarlos y quienes votaban no los tenían. Una asamblea "
+            "donde cada Estado pesa lo mismo producirá siempre mayorías que no "
+            "pueden cumplirse. Proponemos, en consecuencia, un Consejo reducido "
+            "con capacidad de decidir el uso de la fuerza, en el que los "
+            "Estados que han de aportar esa fuerza dispongan de un derecho a "
+            "impedir aquello en lo que no participarán. Se objetará que esto "
+            "consagra la desigualdad. Responderemos que la desigualdad ya "
+            "existe y que no la crea el reglamento: ninguna votación puede "
+            "repartir divisiones acorazadas entre quienes no las tienen. "
+            "Preferimos una organización imperfecta que funcione a una perfecta "
+            "que se ignore.\n"
+            "\n"
+            "**Fuente 2. Memorando de la delegación de un Estado pequeño, "
+            "semanas después.**\n"
+            "\n"
+            "Compartimos el diagnóstico y rechazamos la conclusión. Es verdad "
+            "que la organización anterior careció de fuerza. Pero se nos "
+            "propone corregirlo entregando a cinco Estados la facultad de "
+            "detener cualquier decisión, incluida aquella que los tenga por "
+            "objeto. Obsérvese la consecuencia: la organización podrá actuar "
+            "frente a la agresión de un Estado débil y quedará paralizada "
+            "frente a la de un Estado fuerte, que es exactamente el caso para "
+            "el que se la funda. Se nos dice que la desigualdad existe de todos "
+            "modos. Existe, y por eso mismo el derecho internacional tiene "
+            "sentido: para someter a regla lo que de otro modo resolvería la "
+            "sola potencia. Aceptamos firmar. Lo hacemos sabiendo que firmamos "
+            "un tratado desigual y dejando constancia de que la organización "
+            "nace con una puerta que sus propios fundadores podrán cerrar desde "
+            "adentro."
+        ),
+    },
+    {
+        "key": "crisis_bienestar_populismo",
+        "title": "Tres salidas a la crisis del Estado liberal",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El Estado liberal del siglo XIX descansaba en dos supuestos: que "
+            "la economía se corrige sola y que el Estado debe limitarse a "
+            "garantizar orden, propiedad y contratos. La Primera Guerra Mundial "
+            "y la crisis de 1929 golpearon ambos. Millones de desocupados no "
+            "eran un desajuste pasajero, y ningún mecanismo automático los "
+            "reabsorbió. De esa constatación compartida salieron respuestas muy "
+            "distintas.\n"
+            "\n"
+            "La primera fue el Estado de bienestar. Sin abandonar la democracia "
+            "representativa ni la propiedad privada, varios países ampliaron lo "
+            "que el Estado se hace cargo: seguros de desempleo, pensiones, "
+            "salud, educación y obras públicas financiadas con impuestos. La "
+            "idea de fondo es que ciertos riesgos —enfermar, envejecer, quedar "
+            "sin trabajo— no deben depender de la suerte individual, y que "
+            "sostener la demanda con gasto público estabiliza la economía en "
+            "las crisis. El New Deal estadounidense de los años treinta y los "
+            "sistemas europeos de posguerra son sus versiones más conocidas.\n"
+            "\n"
+            "La segunda fue el totalitarismo, que resolvió el problema "
+            "suprimiéndolo: eliminó los partidos, la prensa independiente y las "
+            "elecciones competitivas, y presentó a la nación como un cuerpo "
+            "único sin conflictos legítimos en su interior.\n"
+            "\n"
+            "La tercera fue el populismo latinoamericano, y es la que peor se "
+            "entiende porque el término se usa hoy como insulto. En su sentido "
+            "histórico designa un tipo de gobierno que aparece en América "
+            "Latina entre 1930 y 1955, con rasgos reconocibles: un liderazgo "
+            "personal fuerte que se dirige directamente a las masas urbanas por "
+            "radio y en concentraciones, sin pasar por los partidos "
+            "tradicionales; la incorporación política de trabajadores antes "
+            "excluidos, con derechos laborales y sindicatos ampliados; y una "
+            "política económica de industrialización dirigida por el Estado, "
+            "que sustituye importaciones para depender menos de los mercados "
+            "externos que acababan de derrumbarse.\n"
+            "\n"
+            "Estos gobiernos son difíciles de clasificar porque hicieron a la "
+            "vez dos cosas que solemos poner en veredas opuestas. Ampliaron "
+            "derechos efectivos a sectores que nunca los habían tenido, y al "
+            "mismo tiempo concentraron poder, debilitaron contrapesos "
+            "institucionales y trataron a la oposición como adversario "
+            "ilegítimo. Reducirlos a una sola de esas mitades —solo la "
+            "conquista social o solo el autoritarismo— es la manera más rápida "
+            "de no explicar por qué contaron con apoyo popular real y duradero.\n"
+            "\n"
+            "En Chile el período tuvo su versión propia. El Estado asumió la "
+            "conducción del desarrollo industrial mediante una corporación de "
+            "fomento creada tras el terremoto de 1939, y amplió educación y "
+            "previsión social, en un marco que mantuvo elecciones competitivas "
+            "y alternancia."
+        ),
+    },
+    {
+        "key": "crisis_depresion_cifras",
+        "title": "Efectos de la crisis de 1929 en cinco economías, 1929-1938",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos, no "
+            "oficiales. Las magnitudes reproducen el orden de los efectos que "
+            "la historiografía describe —Chile entre las economías más "
+            "golpeadas por su dependencia de un producto de exportación— pero "
+            "las cifras no corresponden a ninguna serie estadística real."
+        ),
+        "body": (
+            "**Tabla 1. Índice de producción industrial (1929 = 100).**\n"
+            "\n"
+            "| País | 1929 | 1932 | 1935 | 1938 |\n"
+            "|---|---|---|---|---|\n"
+            "| País W | 100 | 54 | 76 | 92 |\n"
+            "| País X | 100 | 61 | 94 | 126 |\n"
+            "| País Y | 100 | 84 | 98 | 114 |\n"
+            "| Chile (ficticio) | 100 | 47 | 88 | 104 |\n"
+            "| País Z | 100 | 89 | 103 | 118 |\n"
+            "\n"
+            "**Tabla 2. Desocupación y comercio exterior.**\n"
+            "\n"
+            "| País | Desocupación 1932 | Valor exportado 1932 (1929 = 100) | "
+            "Gasto público 1938 (1929 = 100) |\n"
+            "|---|---|---|---|\n"
+            "| País W | 24% | 31 | 168 |\n"
+            "| País X | 30% | 39 | 214 |\n"
+            "| País Y | 17% | 52 | 141 |\n"
+            "| Chile (ficticio) | 26% | 22 | 152 |\n"
+            "| País Z | 9% | 64 | 133 |\n"
+            "\n"
+            "Notas:\n"
+            "— El valor exportado de Chile dependía en más de la mitad de un "
+            "solo producto minero cuyo precio se fijaba en mercados "
+            "extranjeros.\n"
+            "— El país Z mantuvo controles de cambio y aranceles altos durante "
+            "todo el período.\n"
+            "— Los cuatro países no chilenos aumentaron el gasto público entre "
+            "1932 y 1938 mediante obras y programas de empleo."
+        ),
+    },
+    {
+        "key": "crisis_totalitarismo",
+        "title": "Un discurso de entreguerras y la respuesta de un periodista (Europa, 1933-1934)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No son documentos históricos ni "
+            "citan a ningún dirigente real: reconstruyen los mecanismos "
+            "argumentativos del discurso totalitario europeo de entreguerras "
+            "para que puedan analizarse, y los contrastan con una crítica "
+            "contemporánea."
+        ),
+        "body": (
+            "**Fuente 1. Discurso de un dirigente ante una concentración, "
+            "1933.**\n"
+            "\n"
+            "Veinte años de charla parlamentaria nos han traído hasta aquí: "
+            "fábricas detenidas, ahorros perdidos, hombres sin trabajo "
+            "mendigando en las calles de la nación más laboriosa de Europa. Se "
+            "nos dijo que el remedio era discutir. Hemos discutido bastante. "
+            "Mientras los partidos negociaban carteras, el pueblo pagaba. Yo no "
+            "vengo a proponer otro partido: vengo a terminar con ellos. La "
+            "nación no es la suma de intereses que se disputan un reparto; es "
+            "un cuerpo único, con una sola voluntad, y un cuerpo no delibera "
+            "consigo mismo. Quien insiste en dividirlo en clases, en fracciones "
+            "o en opiniones no está ejerciendo un derecho: está debilitando al "
+            "organismo desde adentro. A esos les digo que se aparten. El Estado "
+            "recuperará lo que se le arrebató, dará trabajo a cada brazo y pan "
+            "a cada mesa, y no pedirá permiso para hacerlo.\n"
+            "\n"
+            "**Fuente 2. Columna de un periodista exiliado, publicada al año "
+            "siguiente en un diario extranjero.**\n"
+            "\n"
+            "He leído ese discurso muchas veces y creo que su fuerza no está en "
+            "lo que promete sino en lo que da por resuelto. Empieza con una "
+            "descripción exacta: la desocupación es real, la miseria es real, "
+            "el Parlamento fue efectivamente incapaz. Nadie que haya visto las "
+            "colas de las oficinas de empleo podría negarlo, y por eso lo "
+            "escuchan. Pero de ahí salta a una conclusión que no se sigue: que "
+            "la culpa es de la discusión misma. Se presenta a la nación como un "
+            "cuerpo con una sola voluntad, y a quien discrepa como una "
+            "enfermedad de ese cuerpo. Repárese en la palabra: no dice "
+            "adversario, dice organismo debilitado desde adentro. Un adversario "
+            "se derrota en una elección; una enfermedad se extirpa. Ese "
+            "desplazamiento del vocabulario es lo que hay que mirar, porque "
+            "llegará antes que los decretos. Y una advertencia final: prometer "
+            "trabajo sin pedir permiso no es un programa económico. Es el "
+            "anuncio de que las instituciones que podrían negarlo van a dejar "
+            "de existir."
+        ),
+    },
+    {
         "key": "chile_xix_nacion",
         "title": "Cómo se construyó la nación chilena en el siglo XIX",
         "kind": "no_literario",
@@ -56647,6 +56946,1525 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "facil",
+        "Según el texto, ¿qué problema buscaba evitar el sistema económico acordado "
+        "en 1944?",
+        "Que cada país enfrentara la crisis por su cuenta",
+        "El texto describe lo que la Depresión había mostrado: cuando cada país "
+        "devalúa su moneda, cierra su mercado y sube aranceles, el resultado "
+        "agregado empeora la situación de todos.\nFrente a eso, el acuerdo "
+        "estableció tipos de cambio estables y creó organismos para prestar a los "
+        "países con dificultades de balanza de pagos y financiar la reconstrucción. "
+        "La idea, dice el texto, era que un país en apuros tuviera algo que hacer "
+        "distinto de cerrarse.",
+        [
+            ("Que los países aumentaran su gasto público en obras", "El aumento del gasto no aparece como el problema que se buscaba evitar."),
+            ("Que las monedas se mantuvieran fijas frente al oro", "El sistema descrito busca justamente estabilidad cambiaria, no evitarla."),
+            ("Que los organismos internacionales prestaran dinero", "Prestar era la función que se les asignó, no lo que se quería impedir."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "facil",
+        "Según el texto, ¿cuáles son los dos órganos principales de la organización "
+        "fundada en 1945?",
+        "Una asamblea con un voto por Estado y un consejo reducido",
+        "El texto los describe así: una asamblea donde cada Estado dispone de un "
+        "voto y un consejo reducido, con cinco miembros permanentes dotados de "
+        "veto, encargado de la seguridad internacional.\nY explica el propósito del "
+        "diseño: corregir el defecto de la organización anterior, que aprobaba "
+        "resoluciones que nadie ejecutaba.",
+        [
+            ("Una asamblea y un tribunal de crímenes contra la humanidad", "Los tribunales de posguerra son distintos de los órganos de la organización, según el texto."),
+            ("Un consejo económico y un banco de reconstrucción", "Esos organismos provienen del acuerdo de 1944, no de la fundación de 1945."),
+            ("Una asamblea de cinco miembros permanentes", "Los cinco permanentes con veto integran el consejo, no la asamblea."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "facil",
+        "Según el texto, ¿qué estableció la jurisprudencia de los tribunales de "
+        "posguerra respecto de quienes obedecieron órdenes?",
+        "Que obedecer órdenes no exime de responsabilidad",
+        "El texto lo señala como una de las dos innovaciones que rompían con la "
+        "tradición anterior: los tribunales juzgaron a personas concretas por "
+        "crímenes contra la humanidad y establecieron ese principio.\nLa "
+        "consecuencia es que la responsabilidad penal alcanza al individuo y no "
+        "solo al Estado o al superior que dio la orden.",
+        [
+            ("Que solo responde quien dictó la orden original", "El texto establece lo contrario: quien obedece también responde."),
+            ("Que ningún tribunal puede juzgar actos de otro Estado", "El texto describe precisamente tribunales que lo hicieron."),
+            ("Que la responsabilidad recae únicamente sobre el Estado", "Los tribunales juzgaron a personas concretas, según el texto."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿por qué los crímenes del régimen nazi plantearon un "
+        "problema jurídico difícil de resolver?",
+        "Fueron cometidos conforme a las leyes de ese Estado",
+        "El texto lo formula con precisión: los crímenes fueron cometidos en buena "
+        "parte conforme a las leyes que ese mismo régimen dictó.\nDe ahí el "
+        "problema: si la legalidad interna de un Estado es el criterio último de lo "
+        "que está permitido, no queda desde dónde juzgarlos.\nLas dos innovaciones "
+        "del período responden a ese vacío: una establece responsabilidad "
+        "individual por crímenes contra la humanidad, y la otra afirma derechos que "
+        "existen con independencia de lo que disponga la ley del país donde se "
+        "vive.",
+        [
+            ("Habían sido cometidos fuera del territorio de ese Estado", "El texto no plantea el problema en términos de territorio."),
+            ("No existían tribunales en Europa después de la guerra", "El texto describe tribunales de posguerra en funcionamiento."),
+            ("Los responsables habían muerto antes del juicio", "El texto señala que se juzgó a personas concretas."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "El texto advierte que la declaración de 1948 no es un tratado obligatorio. "
+        "¿Qué consecuencia tiene esa naturaleza?",
+        "No crea tribunales ni sanciones para hacerla cumplir",
+        "El texto lo enuncia directamente: no crea tribunales ni sanciones, y su "
+        "cumplimiento quedó entregado a la buena voluntad de cada Estado.\nLa "
+        "precisión importa porque evita atribuirle una fuerza que no tuvo. Una "
+        "declaración de asamblea proclama principios; un tratado obliga a quien lo "
+        "ratifica y suele prever mecanismos de exigencia.\nEl texto sostiene que su "
+        "efecto fue de otro orden, y es ahí donde hay que buscarlo: instaló un "
+        "lenguaje común para acusar a un gobierno.",
+        [
+            ("Perdió toda relevancia en las relaciones internacionales", "El texto le atribuye un efecto importante, aunque de otra naturaleza."),
+            ("Solo obliga a los Estados que la ratificaron después", "El texto no describe ningún mecanismo de ratificación posterior."),
+            ("Reemplazó a los tribunales de posguerra en su función", "Son instrumentos distintos con funciones distintas."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿en qué consistió el efecto real de la declaración de "
+        "1948?",
+        "Instaló un lenguaje con el que se puede acusar a un gobierno",
+        "El texto describe el mecanismo con cuidado. La declaración no sanciona, "
+        "pero permite acusar a un gobierno de violar derechos sin que este pueda "
+        "responder que se trata de un asunto interno regulado por su propia "
+        "ley.\nEse cierre de la salida es lo decisivo. Antes, la respuesta soberana "
+        "bastaba para clausurar la discusión; después, deja de bastar.\nEl texto "
+        "nombra el desplazamiento: de la soberanía absoluta a la soberanía con "
+        "límites, que es lo que el período dejó instalado y también lo que desde "
+        "entonces se discute.",
+        [
+            ("Obligó a los Estados a modificar sus constituciones", "El texto no le atribuye ninguna obligación de ese tipo."),
+            ("Creó un tribunal internacional de derechos humanos", "El texto señala expresamente que no crea tribunales."),
+            ("Estableció sanciones económicas para los Estados infractores", "El texto descarta que contemple sanciones."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "¿Qué tienen en común las tres respuestas que el texto describe para el "
+        "período 1944-1948?",
+        "Cada una responde a un problema que la guerra o la crisis reveló",
+        "El texto lo anuncia al comenzar: no fue un plan único, fueron respuestas "
+        "sucesivas a lo que acababa de ocurrir, y cada una lleva la marca del "
+        "problema que intentaba evitar.\nEl sistema económico responde a la "
+        "Depresión y al cierre de los mercados; la organización mundial, al fracaso "
+        "de la anterior y a la guerra; la declaración y los tribunales, a crímenes "
+        "que la ley interna había amparado.\nVerlo así permite entender por qué el "
+        "andamiaje resultante es dispar: no salió de un diseño coherente sino de la "
+        "sucesión de urgencias.",
+        [
+            ("Las tres fueron aprobadas por la misma conferencia internacional", "El texto las sitúa en instancias y años distintos entre 1944 y 1948."),
+            ("Las tres crearon organismos con capacidad de sancionar", "La declaración de 1948 no crea tribunales ni sanciones."),
+            ("Las tres fueron rechazadas por los Estados pequeños", "El texto solo registra objeciones al diseño del consejo."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "Según el texto, ¿qué precio tuvo el diseño del consejo de seguridad?",
+        "Una desigualdad escrita en el propio tratado fundacional",
+        "El texto reconoce el objetivo del diseño —corregir el defecto de la "
+        "organización anterior, que aprobaba resoluciones que nadie ejecutaba— y "
+        "enseguida nombra su costo.\nEse costo es que cinco Estados quedan con "
+        "veto, lo que introduce una jerarquía formal dentro del mismo instrumento "
+        "que proclama la igualdad de los miembros.\nEl texto agrega que los Estados "
+        "pequeños lo objetaron desde el primer día, de modo que no fue una "
+        "consecuencia advertida más tarde sino una discusión abierta en el momento "
+        "mismo de la fundación.",
+        [
+            ("La imposibilidad de que la organización usara la fuerza", "El diseño buscaba justamente dotarla de capacidad de ejecución."),
+            ("La exclusión de los Estados pequeños de la asamblea", "La asamblea da un voto a cada Estado, según el texto."),
+            ("La renuncia a juzgar crímenes contra la humanidad", "Los tribunales de posguerra son un instrumento distinto y funcionaron."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "El texto sostiene que el período desplazó la soberanía absoluta hacia una "
+        "soberanía con límites. ¿En qué consiste ese cambio?",
+        "El trato a la propia población deja de ser asunto interno",
+        "Bajo el principio de soberanía absoluta, lo que un Estado hace dentro de "
+        "sus fronteras y conforme a su propia ley no admite examen externo.\nLas "
+        "dos innovaciones que el texto describe rompen esa clausura desde ángulos "
+        "distintos: los tribunales establecen responsabilidad individual aunque la "
+        "ley interna amparara el acto, y la declaración afirma derechos que existen "
+        "con independencia de esa ley.\nEl texto es cuidadoso al medirlo: el cambio "
+        "no fue que apareciera una autoridad capaz de imponerse a los Estados, sino "
+        "que dejó de ser aceptable la respuesta de que se trata de un asunto "
+        "interno.",
+        [
+            ("Los Estados perdieron el control de su territorio", "El texto no describe ninguna pérdida de control territorial."),
+            ("Un tribunal mundial pasó a revisar todas las leyes internas", "El texto señala que la declaración no crea tribunales."),
+            ("La soberanía quedó entregada a la organización mundial", "El texto describe límites a la soberanía, no su traspaso."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "¿Por qué el texto insiste en medir bien el alcance de la declaración de "
+        "1948?",
+        "Para no confundir un principio con un mecanismo eficaz",
+        "El riesgo que el texto quiere evitar es de doble filo. Atribuir a la "
+        "declaración fuerza obligatoria lleva a esperar de ella resultados que no "
+        "podía producir; negarle todo efecto por no ser vinculante impide entender "
+        "por qué cambió la discusión internacional.\nPor eso el texto separa las "
+        "dos cosas: no crea tribunales ni sanciones, y sin embargo instaló un "
+        "lenguaje que un gobierno acusado ya no puede esquivar invocando su propia "
+        "ley.\nEsa precisión es la que permite evaluar qué hizo y qué no hizo el "
+        "instrumento, en lugar de discutir sobre una versión inflada o desinflada "
+        "de él.",
+        [
+            ("Para sostener que la declaración fue irrelevante", "El texto le atribuye expresamente un efecto de otro orden."),
+            ("Para demostrar que los tratados obligatorios son inútiles", "El texto no compara la declaración con los tratados en esos términos."),
+            ("Para justificar el derecho a veto del consejo de seguridad", "El veto pertenece a otro punto del texto y no se justifica ahí."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "El texto afirma que el andamiaje de posguerra no fue un plan único. ¿Qué "
+        "evidencia interna sostiene esa afirmación?",
+        "Cada respuesta atiende un problema distinto y en un año distinto",
+        "El texto distribuye tres soluciones en cuatro años y las asocia a "
+        "diagnósticos separados: la Depresión y el cierre de los mercados en 1944, "
+        "el fracaso de la organización anterior en 1945, la impunidad amparada por "
+        "la ley interna en 1946-1948.\nNinguna se deriva de las otras. El sistema "
+        "cambiario no exige un consejo con veto, y la declaración de derechos no se "
+        "sigue de un acuerdo sobre balanza de pagos.\nDe ahí la frase con que el "
+        "texto abre: cada una lleva la marca del problema que intentaba evitar, que "
+        "es la manera de decir que el conjunto se explica por acumulación y no por "
+        "diseño.",
+        [
+            ("Todas las medidas fueron adoptadas en la misma conferencia", "El texto las sitúa en instancias y fechas distintas."),
+            ("Ninguna de las medidas llegó a aplicarse en la práctica", "El texto describe organismos y tribunales que funcionaron."),
+            ("Las tres respuestas fueron propuestas por los Estados pequeños", "El texto registra a los Estados pequeños objetando el diseño del consejo."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "Un estudiante concluye que, según el texto, después de 1948 dejaron de "
+        "violarse los derechos humanos. ¿Qué falla esa lectura?",
+        "El texto describe un cambio de lenguaje, no de conducta",
+        "El texto es explícito sobre lo que la declaración no hace: no crea "
+        "tribunales ni sanciones, y su cumplimiento quedó entregado a la buena "
+        "voluntad de cada Estado.\nLo que sí cambió, según el texto, es que un "
+        "gobierno acusado ya no puede clausurar la discusión respondiendo que se "
+        "trata de un asunto interno regulado por su propia ley.\nConfundir ambas "
+        "cosas es un error frecuente al leer historia institucional: tomar la "
+        "proclamación de un principio como prueba de su vigencia efectiva. El texto "
+        "cierra señalando que ese desplazamiento es también lo que desde entonces "
+        "se discute.",
+        [
+            ("El texto sostiene que la declaración creó sanciones eficaces", "Afirma expresamente lo contrario."),
+            ("El texto sitúa la declaración en 1945 y no en 1948", "La sitúa en 1948, aprobada por la asamblea."),
+            ("El texto no se refiere al cumplimiento de la declaración", "Se refiere a él para señalar que quedó entregado a cada Estado."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "¿Qué relación establece el texto entre el fracaso de la organización "
+        "anterior y el diseño de la nueva?",
+        "El defecto que se quiso corregir explica la concesión del veto",
+        "El texto encadena las dos cosas. La organización anterior aprobaba "
+        "resoluciones que nadie ejecutaba, y el nuevo consejo con cinco permanentes "
+        "dotados de veto busca corregir ese defecto asegurando que quienes deben "
+        "actuar estén de acuerdo antes de decidir.\nEl precio es la desigualdad "
+        "escrita en el tratado, que el propio texto consigna junto a la objeción de "
+        "los Estados pequeños.\nLeer el veto como una imposición arbitraria pierde "
+        "de vista ese razonamiento; leerlo solo como solución técnica pierde de "
+        "vista la objeción. El texto sostiene las dos cosas a la vez.",
+        [
+            ("El fracaso anterior llevó a eliminar el órgano de seguridad", "El texto describe la creación de un consejo, no su supresión."),
+            ("La nueva organización repitió el diseño de la anterior", "El texto la presenta como una corrección de ese diseño."),
+            ("El veto se estableció para satisfacer a los Estados pequeños", "Fueron ellos quienes lo objetaron desde el primer día."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_posguerra", "dificil",
+        "Este texto explica cada institución por el problema que buscaba evitar. "
+        "¿Qué límite tiene esa forma de explicar?",
+        "Supone que el diseño responde solo al problema declarado",
+        "Explicar una institución por el mal que dice remediar es útil y el texto "
+        "lo aplica con provecho, pero no agota las causas de un diseño.\nEn cada "
+        "uno de los tres casos hubo además intereses en juego: qué Estados ganaban "
+        "con tipos de cambio estables, cuáles obtenían el veto, quiénes podían y no "
+        "podían ser juzgados por los tribunales de posguerra.\nEl propio texto deja "
+        "asomar ese plano al mencionar la objeción de los Estados pequeños. "
+        "Completar la explicación exige preguntar, además de qué problema se quiso "
+        "resolver, quién quedó en mejor posición con la solución adoptada.",
+        [
+            ("Que exagera la importancia de la Segunda Guerra Mundial", "El texto no exagera ese peso: las tres respuestas se refieren a hechos verificables del período."),
+            ("Que no menciona ninguna institución concreta del período", "Menciona el sistema cambiario, la organización mundial, los tribunales y la declaración."),
+            ("Que atribuye todas las decisiones a los Estados pequeños", "Los menciona solo como objetores del diseño del consejo."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "facil",
+        "Según la Tabla 1, ¿en qué quinquenio se produjo el mayor número de "
+        "independencias?",
+        "Entre 1960 y 1964, con 30 Estados",
+        "La columna de totales entrega 9, 5, 7, 30, 16 y 17 para los seis "
+        "quinquenios.\nEl máximo es el de 1960-1964, con 30 Estados, y la mayor "
+        "parte de ellos corresponde a África: 24 de los 30. Ese mismo quinquenio "
+        "contiene la declaración de la asamblea sobre la independencia de los "
+        "países coloniales, aprobada en 1960.",
+        [
+            ("Entre 1970 y 1975, con 17 Estados", "Es el segundo total más alto, muy por debajo de 30."),
+            ("Entre 1965 y 1969, con 16 Estados", "Queda por debajo del quinquenio anterior."),
+            ("Entre 1945 y 1949, con 9 Estados", "Es el mayor de la primera etapa, pero no del período completo."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "facil",
+        "Según la Tabla 2, ¿cuántos miembros tenía la organización mundial en 1975?",
+        "144 miembros",
+        "La última fila de la Tabla 2 registra 144 miembros en 1975, de los cuales "
+        "76 corresponden a Asia y África.\nLa comparación con 1945 es la que da la "
+        "medida del proceso: se pasa de 51 a 144 miembros en treinta años, es decir "
+        "casi el triple.",
+        [
+            ("117 miembros", "Corresponde a 1965, no a 1975."),
+            ("76 miembros", "Es el número de miembros de Asia y África en 1975, no el total."),
+            ("51 miembros", "Es el total fundacional de 1945."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "facil",
+        "Según la Tabla 1, ¿qué región concentró la mayor cantidad de "
+        "independencias entre 1960 y 1964?",
+        "África, con 24 Estados",
+        "La fila de 1960-1964 reparte los 30 Estados en 3 de Asia, 24 de África y 3 "
+        "del Caribe y Oceanía.\nÁfrica concentra así el 80% de las independencias "
+        "de ese quinquenio, que es el mayor de toda la serie. Por eso 1960 suele "
+        "llamarse el año de África en las historias del período.",
+        [
+            ("Asia, con 3 Estados", "Asia aporta 3 en ese quinquenio: es la menor de las cifras junto al Caribe y Oceanía."),
+            ("El Caribe y Oceanía, con 6 Estados", "Los 6 corresponden al quinquenio 1965-1969."),
+            ("África, con 8 Estados", "Los 8 de África corresponden a 1965-1969."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "Comparando ambas tablas, ¿qué relación aparece entre las independencias y "
+        "la composición de la organización mundial?",
+        "Cada ola de independencias amplía el número de miembros",
+        "Las dos series avanzan juntas. Entre 1955 y 1965 la Tabla 1 registra 37 "
+        "independencias y la Tabla 2 muestra que los miembros pasan de 76 a 117, y "
+        "los de Asia y África, de 17 a 55.\nEl vínculo es directo: cada Estado que "
+        "accede a la independencia puede incorporarse como miembro, y la nota "
+        "agrega que en la asamblea cada uno dispone de un voto.\nEl resultado es un "
+        "organismo cuya composición cambia por completo en tres décadas sin que su "
+        "tratado fundacional se modifique.",
+        [
+            ("El número de miembros se mantiene pese a las independencias", "Pasa de 51 a 144 en el período que las tablas cubren."),
+            ("La organización incorpora solo Estados europeos y americanos", "Los miembros de Asia y África pasan de 8 a 76."),
+            ("Las independencias son posteriores al ingreso a la organización", "El orden que muestran las tablas es el inverso."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "¿Qué cambio en el peso relativo de Asia y África dentro de la organización "
+        "muestra la Tabla 2?",
+        "Pasan de menos de un sexto a más de la mitad de los miembros",
+        "En 1945 aportan 8 de 51 miembros, es decir alrededor de un sexto. En 1975 "
+        "aportan 76 de 144, o sea algo más de la mitad.\nEl cambio es de naturaleza "
+        "y no solo de escala. Un organismo donde esas regiones eran una minoría "
+        "marginal pasa a tener en ellas a la mayoría de sus miembros.\nY como cada "
+        "Estado dispone de un voto en la asamblea, ese desplazamiento se traduce en "
+        "capacidad efectiva de fijar la agenda de ese órgano.",
+        [
+            ("Se mantienen en la misma proporción durante todo el período", "Pasan de 8 sobre 51 a 76 sobre 144: la proporción cambia por completo."),
+            ("Pasan de ser mayoría a ser minoría dentro del organismo", "El movimiento es exactamente el inverso."),
+            ("Superan a los demás miembros recién después de 1975", "Ya en 1975 son 76 de 144, es decir más de la mitad."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "Según las notas, ¿qué NO cambió mientras la composición de la organización "
+        "se transformaba?",
+        "El número de miembros permanentes con derecho a veto",
+        "La segunda nota lo consigna con precisión: los miembros permanentes del "
+        "consejo con derecho a veto se mantuvieron en cinco durante todo el "
+        "período.\nEl contraste con la Tabla 2 es notable. Los miembros totales "
+        "pasan de 51 a 144 y los de Asia y África de 8 a 76, mientras el órgano que "
+        "decide sobre el uso de la fuerza conserva exactamente la misma estructura "
+        "de 1945.\nAhí está una de las tensiones duraderas del sistema "
+        "internacional: la asamblea refleja el mundo descolonizado y el consejo, el "
+        "mapa de poder del fin de la guerra.",
+        [
+            ("El número total de miembros de la organización", "Casi se triplica entre 1945 y 1975."),
+            ("El número de votos que tiene cada Estado en la asamblea", "La nota confirma que sigue siendo uno, pero eso sí es lo que amplifica el cambio."),
+            ("La cantidad de Estados africanos independientes", "Pasa de 1 en 1945-1949 a decenas hacia 1975."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "¿Qué diferencia de ritmo entre Asia y África muestra la Tabla 1?",
+        "Asia se independiza antes y África concentra el proceso en los sesenta",
+        "Asia aporta 8 de las 9 independencias del primer quinquenio y después "
+        "mantiene un ritmo bajo y constante, entre 2 y 3 por período.\nÁfrica sigue "
+        "la trayectoria opuesta: 1 sola independencia entre 1945 y 1949, y 24 entre "
+        "1960 y 1964.\nLas dos regiones atraviesan el mismo proceso con quince años "
+        "de desfase, lo que impide describir la descolonización como un fenómeno "
+        "simultáneo y obliga a explicar por qué llegó antes a un continente que a "
+        "otro.",
+        [
+            ("Ambas regiones se independizan al mismo ritmo en cada quinquenio", "Los máximos de cada una están separados por quince años."),
+            ("África se independiza antes y Asia después de 1965", "Es exactamente al revés según la tabla."),
+            ("Asia no registra independencias después de 1960", "Registra 3 en 1960-1964, 2 en 1965-1969 y 3 en 1970-1975."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "medio",
+        "Un estudiante concluye de la Tabla 1 que en 1975 ya no quedaban "
+        "territorios coloniales. ¿Permite la fuente afirmarlo?",
+        "No, porque registra independencias y no territorios pendientes",
+        "La tabla cuenta cuántos Estados accedieron a la independencia en cada "
+        "quinquenio. No informa cuántos territorios seguían bajo administración "
+        "colonial al cerrar la serie.\nDe hecho, la última fila registra 17 "
+        "independencias entre 1970 y 1975, lo que sugiere que el proceso continuaba "
+        "y no que estuviera agotado.\nPara responder la pregunta haría falta un "
+        "registro de territorios no autónomos, que es una fuente distinta de esta.",
+        [
+            ("Sí, porque la serie termina en 1975", "Que la tabla termine ahí no significa que el proceso haya terminado."),
+            ("Sí, porque África ya no registra independencias en el último quinquenio", "Registra 7 entre 1970 y 1975."),
+            ("No, porque la tabla no incluye la región africana", "África tiene columna propia en toda la serie."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "dificil",
+        "La nota indica que la declaración sobre la independencia de los países "
+        "coloniales se aprobó en 1960. ¿Qué relación con la Tabla 1 permite "
+        "establecer y cuál no?",
+        "Permite ver que coincide con el máximo, no que lo haya causado",
+        "La coincidencia está a la vista: el quinquenio 1960-1964 concentra 30 "
+        "independencias, el máximo de la serie, y la declaración es de 1960.\nLo "
+        "que no permite la fuente es atribuir causa. Una declaración de asamblea no "
+        "obliga por sí sola, y varios de esos procesos venían negociándose desde "
+        "años antes, como sugiere el alza previa de 1955-1959.\nEs igualmente "
+        "plausible el orden inverso: que la propia ola de independencias, al "
+        "cambiar la composición de la asamblea, haya hecho posible aprobar la "
+        "declaración.",
+        [
+            ("Permite afirmar que la declaración causó las independencias", "Coincidir en el tiempo no basta para establecer causa."),
+            ("No permite establecer ninguna relación entre ambos hechos", "La coincidencia temporal es una relación observable en la fuente."),
+            ("Permite afirmar que las independencias fueron obra de la organización", "La fuente no informa sobre el papel de la organización en cada proceso."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "dificil",
+        "¿Qué consecuencia política tuvo para la asamblea el cambio de composición "
+        "que muestra la Tabla 2?",
+        "Los Estados recién independizados pasaron a tener mayoría de votos",
+        "La nota es la pieza decisiva: en la asamblea cada Estado dispone de un "
+        "voto, cualquiera sea su población o su territorio.\nCon esa regla, pasar "
+        "de 8 a 76 miembros de Asia y África sobre un total que llega a 144 "
+        "significa disponer de la mayoría en cualquier votación de ese órgano.\nEso "
+        "explica que desde los años sesenta la agenda de la asamblea incorpore "
+        "temas que antes no figuraban en ella, como la descolonización pendiente y "
+        "las relaciones económicas entre países ricos y pobres.",
+        [
+            ("Los Estados fundadores perdieron su derecho a voto", "Ninguna nota indica pérdida de derechos: el cambio es de proporción."),
+            ("La asamblea pasó a decidir sobre el uso de la fuerza", "Esa facultad corresponde al consejo, cuya estructura no cambió."),
+            ("El voto pasó a ponderarse según la población de cada Estado", "La nota afirma expresamente que cada Estado tiene un voto."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "dificil",
+        "¿Qué tensión entre los dos órganos de la organización permiten anticipar "
+        "estas tablas?",
+        "La asamblea se transforma y el consejo conserva su diseño de 1945",
+        "Las tablas muestran dos series con comportamientos opuestos. La "
+        "composición de la asamblea cambia radicalmente entre 1945 y 1975; los "
+        "cinco miembros permanentes con veto se mantienen intactos.\nEl resultado "
+        "es un organismo con dos legitimidades distintas dentro de sí: un órgano "
+        "que representa al mundo tal como quedó tras la descolonización y otro que "
+        "representa el reparto de poder del fin de la guerra.\nEsa asimetría es la "
+        "raíz de la discusión sobre la reforma del consejo, que sigue abierta y que "
+        "las tablas permiten ver en su origen.",
+        [
+            ("Ambos órganos se transforman al mismo ritmo entre 1945 y 1975", "El consejo mantiene sus cinco permanentes durante todo el período."),
+            ("El consejo se amplía más rápido que la asamblea", "La nota indica que no se amplió en absoluto."),
+            ("La asamblea pierde miembros mientras el consejo los gana", "La asamblea casi triplica su membresía."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre la descolonización?",
+        "Si cada independencia fue negociada o resultado de una guerra",
+        "Las tablas cuentan Estados y fechas. Registran cuándo y dónde ocurrió cada "
+        "acceso a la independencia, y nada sobre cómo.\nEsa diferencia es central "
+        "para el período, porque los procesos fueron muy distintos entre sí: "
+        "algunos se resolvieron por acuerdo con la potencia administradora y otros "
+        "tras guerras prolongadas con miles de muertos.\nUna tabla que suma "
+        "unidades iguales borra precisamente esa diferencia, y conviene tenerlo "
+        "presente antes de leerla como una descripción completa del proceso.",
+        [
+            ("En qué quinquenio hubo más independencias africanas", "La columna de África lo entrega directamente."),
+            ("Cómo cambió la proporción de miembros asiáticos y africanos", "La Tabla 2 permite calcularla en los cuatro cortes."),
+            ("Cuántos Estados accedieron a la independencia entre 1945 y 1975", "Se obtiene sumando la columna de totales."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_posguerra", "dificil",
+        "La Tabla 1 agrupa por quinquenios y la Tabla 2 por décadas. ¿Qué cuidado "
+        "exige combinar ambas?",
+        "Los cortes no coinciden y el ajuste debe hacerse explícito",
+        "La Tabla 1 entrega tramos de cinco años y la Tabla 2, mediciones puntuales "
+        "cada diez. Para relacionar una con otra hay que sumar dos quinquenios por "
+        "cada intervalo de la segunda.\nEl ajuste es sencillo pero no automático, y "
+        "saltárselo produce errores: comparar directamente las 30 independencias de "
+        "1960-1964 con el salto de miembros entre 1955 y 1965 atribuye a un "
+        "quinquenio lo que corresponde a diez años.\nAdemás hay un desfase real: un "
+        "Estado puede independizarse en un quinquenio e ingresar a la organización "
+        "en el siguiente.",
+        [
+            ("Las dos tablas no pueden combinarse de ninguna manera", "Sí pueden, siempre que los tramos se hagan corresponder de forma explícita."),
+            ("Los datos de una de las dos tablas deben descartarse", "Ambas son necesarias: una cuenta procesos y la otra, membresía."),
+            ("Los quinquenios impiden identificar tendencias de largo plazo", "Un corte más fino permite ver mejor la tendencia, no peor."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_temporal", "medio",
+        "La descolonización se despliega entre 1945 y más allá de 1975 con un pico "
+        "en 1960-1964. ¿Cómo se describe ese patrón temporal?",
+        "Un proceso de varias décadas con una fase de aceleración",
+        "La serie no es uniforme. Hay un primer tramo asiático a fines de los "
+        "cuarenta, una meseta en los cincuenta, una aceleración fuerte en 1960-1964 "
+        "y una continuación sostenida hasta el final de la tabla.\nDescribirlo como "
+        "un acontecimiento sería falso, porque abarca treinta años; describirlo "
+        "como un ritmo constante también, porque un solo quinquenio concentra el "
+        "doble de casos que cualquier otro.\nReconocer fases dentro de un mismo "
+        "proceso es parte de lo que la periodización permite hacer: obliga a "
+        "preguntar qué cambió justo antes del tramo que se acelera.",
+        [
+            ("Un acontecimiento breve concentrado en el año 1960", "El proceso abarca los seis quinquenios de la tabla."),
+            ("Un ritmo constante de independencias en todo el período", "Los totales por quinquenio van de 5 a 30."),
+            ("Un ciclo que se repite cada cinco años", "No hay repetición: la serie tiene un solo pico."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "facil",
+        "Según la Fuente 1, ¿cuál fue la causa del fracaso de la organización "
+        "internacional anterior?",
+        "Le faltó fuerza para hacer cumplir sus resoluciones",
+        "El memorando lo enuncia con precisión: no le faltó buena voluntad, le "
+        "faltó fuerza.\nY explica el mecanismo: aprobó resoluciones que nadie "
+        "ejecutó, porque quienes tenían ejércitos no estaban obligados a usarlos y "
+        "quienes votaban no los tenían.",
+        [
+            ("Le faltó voluntad de sus Estados miembros", "El memorando descarta expresamente esa explicación."),
+            ("Sus resoluciones eran demasiado exigentes", "El problema que describe es de ejecución, no de contenido."),
+            ("Carecía de una asamblea donde todos votaran", "El texto señala que esa asamblea existía y que ahí estaba parte del problema."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "facil",
+        "Según la Fuente 2, ¿ante qué situación quedaría paralizada la nueva "
+        "organización?",
+        "Ante la agresión cometida por un Estado fuerte",
+        "El memorando extrae esa consecuencia del derecho a veto: la organización "
+        "podrá actuar frente a la agresión de un Estado débil y quedará paralizada "
+        "frente a la de un Estado fuerte.\nY remata señalando por qué eso es grave: "
+        "ese es exactamente el caso para el que se la funda, de modo que el "
+        "mecanismo falla justo donde más se lo necesita.",
+        [
+            ("Ante conflictos entre dos Estados pequeños", "El texto sostiene que en ese caso sí podría actuar."),
+            ("Ante desastres naturales de gran magnitud", "El memorando discute agresiones armadas, no catástrofes."),
+            ("Ante disputas comerciales entre potencias", "El texto se refiere a la agresión, no al comercio."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "facil",
+        "¿Qué decisión final anuncia la Fuente 2 respecto del tratado?",
+        "Aceptar firmarlo, dejando constancia de su desigualdad",
+        "El memorando cierra con esa doble declaración: aceptamos firmar, y lo "
+        "hacemos sabiendo que firmamos un tratado desigual.\nLa constancia que deja "
+        "es específica: la organización nace con una puerta que sus propios "
+        "fundadores podrán cerrar desde adentro. Es decir, firma sin renunciar a la "
+        "objeción.",
+        [
+            ("Rechazar el tratado hasta que se elimine el veto", "El texto declara expresamente que acepta firmar."),
+            ("Firmarlo sin formular ninguna objeción", "La objeción queda registrada en el propio memorando."),
+            ("Proponer una organización alternativa entre Estados pequeños", "El memorando no plantea ninguna alternativa de ese tipo."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "¿Qué argumento usa la Fuente 1 para responder a la objeción de que el veto "
+        "consagra la desigualdad?",
+        "Que la desigualdad de poder existe con reglamento o sin él",
+        "El memorando anticipa la objeción y responde que la desigualdad ya existe "
+        "y que no la crea el reglamento.\nLo ilustra con una imagen material: "
+        "ninguna votación puede repartir divisiones acorazadas entre quienes no las "
+        "tienen.\nEl argumento no niega la desigualdad, la da por supuesta, y sobre "
+        "esa base propone un criterio de eficacia: preferimos una organización "
+        "imperfecta que funcione a una perfecta que se ignore.",
+        [
+            ("Que los Estados pequeños tendrán mayoría en la asamblea", "El memorando presenta esa mayoría como parte del problema, no como compensación."),
+            ("Que el veto se eliminará una vez terminada la reconstrucción", "El texto no plantea ningún carácter transitorio."),
+            ("Que todos los Estados aportarán fuerzas por igual", "Sostiene lo contrario: solo algunos pueden aportarlas."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "La Fuente 2 afirma compartir el diagnóstico y rechazar la conclusión. ¿En "
+        "qué consiste esa operación?",
+        "Acepta que faltó fuerza y niega que el veto sea la solución",
+        "El acuerdo es explícito: es verdad que la organización anterior careció de "
+        "fuerza. Ese punto queda fuera de discusión.\nEl desacuerdo empieza en el "
+        "remedio. Para la Fuente 2, entregar a cinco Estados la facultad de detener "
+        "cualquier decisión no corrige la debilidad: la traslada al lugar donde más "
+        "importa.\nConceder el diagnóstico es una estrategia eficaz porque impide "
+        "que la discusión se desvíe hacia si el problema existe, y obliga a "
+        "examinar solo el paso que se quiere impugnar.",
+        [
+            ("Niega los hechos que la Fuente 1 describe", "Los acepta expresamente en su primera línea."),
+            ("Acepta el veto pero pide ampliarlo a más Estados", "No propone extender el veto sino objetar su existencia."),
+            ("Cambia el tema hacia el funcionamiento de la asamblea", "Su objeción se mantiene sobre el Consejo y el veto."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "Según la Fuente 2, ¿por qué la desigualdad de poder es una razón a favor "
+        "del derecho internacional y no en contra?",
+        "Porque somete a regla lo que resolvería la sola potencia",
+        "La Fuente 1 usa la desigualdad como argumento de resignación: existe de "
+        "todos modos, así que el reglamento debe reconocerla.\nLa Fuente 2 invierte "
+        "la conclusión sin negar la premisa: existe, y por eso mismo el derecho "
+        "internacional tiene sentido, para someter a regla lo que de otro modo "
+        "resolvería la sola potencia.\nEl punto es que un orden jurídico que se "
+        "limita a reflejar la relación de fuerzas no agrega nada: su función es "
+        "precisamente introducir un criterio distinto del poder.",
+        [
+            ("Porque los Estados pequeños son mayoría en el mundo", "El argumento no se apoya en el número de Estados."),
+            ("Porque el derecho internacional puede repartir armamento", "Ninguna de las dos fuentes plantea esa posibilidad."),
+            ("Porque las potencias renunciarán voluntariamente a su fuerza", "El memorando no supone ninguna renuncia voluntaria."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "¿Qué tensión del nuevo orden internacional de posguerra queda expuesta en "
+        "este par de memorandos?",
+        "Entre la igualdad jurídica de los Estados y la desigualdad de poder",
+        "Las dos fuentes describen la misma realidad y difieren en qué hacer con "
+        "ella. Todos los Estados son jurídicamente iguales y firman el mismo "
+        "tratado; unos pocos concentran la capacidad material de imponer una "
+        "decisión.\nLa Fuente 1 propone que el reglamento reconozca esa asimetría "
+        "para que la organización funcione; la Fuente 2, que la someta a regla para "
+        "que la organización signifique algo.\nEsa tensión no se resolvió en 1945 y "
+        "sigue siendo el eje de la discusión sobre el sistema internacional "
+        "contemporáneo.",
+        [
+            ("Entre los Estados vencedores y los Estados vencidos de la guerra", "Ninguno de los dos memorandos discute el trato a los vencidos."),
+            ("Entre las organizaciones regionales y las mundiales", "El debate ocurre dentro de una sola organización de alcance mundial."),
+            ("Entre la asamblea general y la corte de justicia", "El memorando discute el Consejo y la asamblea, no los tribunales."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "medio",
+        "La Fuente 1 sostiene que prefiere una organización imperfecta que funcione "
+        "a una perfecta que se ignore. ¿Qué criterio está aplicando?",
+        "Un criterio de eficacia por sobre uno de consistencia",
+        "El memorando plantea la disyuntiva en esos términos: entre una regla "
+        "coherente que nadie cumple y una regla desigual que se ejecuta, prefiere "
+        "la segunda.\nEl criterio se apoya en la experiencia previa que el propio "
+        "texto invoca: la organización anterior aprobó resoluciones que nadie "
+        "ejecutó.\nLa Fuente 2 no discute el criterio sino su aplicación: sostiene "
+        "que el arreglo propuesto tampoco funcionará en los casos decisivos, de "
+        "modo que no compra eficacia a cambio de consistencia.",
+        [
+            ("Un criterio moral sobre la igualdad entre las naciones", "El memorando deja de lado el argumento moral en favor del funcionamiento."),
+            ("Un criterio jurídico sobre la validez de los tratados", "No discute la validez de ningún instrumento."),
+            ("Un criterio militar sobre el tamaño de los ejércitos", "Los ejércitos aparecen como dato del problema, no como criterio de decisión."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "La Fuente 2 advierte que la organización nace con una puerta que sus "
+        "fundadores podrán cerrar desde adentro. ¿Qué está anticipando?",
+        "Que las potencias podrán bloquear decisiones que las afecten",
+        "La imagen sintetiza el argumento anterior. El veto permite a cada uno de "
+        "los cinco Estados detener cualquier decisión, incluida aquella que lo "
+        "tenga por objeto.\nEso significa que ninguno podrá ser objeto de una "
+        "acción de la organización mientras conserve esa facultad, por grave que "
+        "sea el hecho que se le impute.\nLa advertencia describe el problema "
+        "estructural del Consejo de Seguridad durante toda la Guerra Fría y "
+        "después: cuando el conflicto involucra a un miembro permanente, el órgano "
+        "diseñado para actuar queda inmovilizado.",
+        [
+            ("Que los Estados pequeños serán expulsados de la organización", "El memorando no menciona expulsiones."),
+            ("Que la organización dejará de existir en pocos años", "El texto anuncia parálisis en ciertos casos, no disolución."),
+            ("Que la asamblea perderá su facultad de reunirse", "La objeción se refiere al Consejo y su veto, no a la asamblea."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "¿Qué revela sobre la posición de la Fuente 2 el hecho de que acepte firmar "
+        "pese a sus objeciones?",
+        "Que prefiere participar de un orden imperfecto a quedar fuera",
+        "El memorando no retira su objeción ni la modera: sostiene que firma un "
+        "tratado desigual y lo deja por escrito.\nAun así firma, y esa decisión "
+        "informa sobre el margen real de un Estado pequeño en 1945. Fuera de la "
+        "organización quedaría sin el foro donde plantear precisamente ese reclamo, "
+        "y sin ninguna regla que invocar frente a las potencias.\nDejar constancia "
+        "es entonces una estrategia y no un gesto vacío: fija por escrito el "
+        "problema para poder exigir su corrección más adelante desde adentro.",
+        [
+            ("Que sus objeciones eran retóricas y no las sostenía en serio", "Las deja registradas por escrito, que es lo contrario de retirarlas."),
+            ("Que había obtenido para sí el derecho a veto", "El texto describe la facultad entregada a cinco Estados, entre los que no se cuenta."),
+            ("Que la potencia lo obligó militarmente a firmar", "Nada en el memorando indica coacción."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "¿Qué precaución exige que ambos textos sean memorandos internos de "
+        "delegaciones en negociación?",
+        "Fijan una posición para negociar, no un balance desinteresado",
+        "Un memorando de delegación se escribe dentro de una negociación en curso y "
+        "con un objetivo: sostener una posición ante otros y ante el propio "
+        "gobierno.\nEso ordena el texto. Cada uno anticipa las objeciones del "
+        "contrario y prepara su respuesta, de modo que lo que dice está "
+        "seleccionado por utilidad argumentativa antes que por completitud.\nNo los "
+        "vuelve menos valiosos: son la mejor fuente para reconstruir qué estaba en "
+        "discusión. Obliga, eso sí, a contrastarlos con las actas del resultado y "
+        "con documentos posteriores para saber qué se acordó de verdad.",
+        [
+            ("Deberían descartarse por provenir de partes interesadas", "Sesgo no equivale a falsedad: una fuente interesada se contrasta, no se descarta."),
+            ("Su carácter interno garantiza que dicen lo que sus autores piensan", "Un memorando interno también se escribe para persuadir a su propio gobierno."),
+            ("Al ser de 1945 no permiten conocer el debate de esa fecha", "Es justamente el período que documentan."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "Un texto sostiene que el nuevo orden de posguerra estableció la igualdad "
+        "entre todos los Estados. ¿Cómo se comporta esa afirmación frente a estas "
+        "fuentes?",
+        "Queda corta: el propio diseño reconoció una jerarquía",
+        "La igualdad jurídica existe y ninguna de las dos fuentes la discute: todos "
+        "firman el mismo tratado y todos integran la asamblea.\nPero el Consejo con "
+        "derecho a veto introduce una jerarquía formal dentro del mismo "
+        "instrumento, y las dos fuentes lo saben: una la defiende como condición de "
+        "eficacia y la otra la denuncia como tratado desigual.\nDescribir el orden "
+        "de posguerra solo por su principio de igualdad omite justamente lo que sus "
+        "contemporáneos discutieron, que es la excepción incorporada al diseño.",
+        [
+            ("La confirma, porque todos los Estados firman el mismo tratado", "Firmar el mismo texto no equivale a tener las mismas facultades dentro de él."),
+            ("La contradice por completo, porque no hubo ninguna igualdad", "La igualdad jurídica y la asamblea existen: la afirmación es incompleta, no falsa del todo."),
+            ("No permite evaluarla, porque las fuentes no describen el diseño", "Ambas discuten expresamente la estructura del Consejo."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_posguerra", "dificil",
+        "¿Qué aprendizaje del período de entreguerras está operando detrás de ambos "
+        "memorandos?",
+        "Que una organización sin capacidad de ejecutar no evita la guerra",
+        "Los dos textos parten del mismo antecedente y lo dan por establecido: la "
+        "organización anterior aprobó resoluciones que nadie ejecutó, y no impidió "
+        "la guerra.\nEse fracaso es lo que vuelve urgente la pregunta por la "
+        "fuerza. La Fuente 1 concluye que hay que asegurarla aunque cueste "
+        "igualdad; la Fuente 2, que asegurarla de ese modo la anulará donde "
+        "importa.\nEl desacuerdo es sobre la solución, no sobre la lección: ninguno "
+        "de los dos propone volver a un esquema puramente declarativo.",
+        [
+            ("Que las organizaciones internacionales son inútiles por definición", "Ambos están fundando una y discuten cómo hacerla eficaz."),
+            ("Que la desigualdad entre Estados debía eliminarse por tratado", "Ninguno de los dos sostiene que un tratado pueda eliminarla."),
+            ("Que las asambleas amplias garantizan decisiones ejecutables", "La Fuente 1 argumenta precisamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_fuentes", "medio",
+        "Ambos memorandos usan la expresión la desigualdad existe y extraen "
+        "conclusiones opuestas. ¿Qué muestra ese uso compartido?",
+        "Que un mismo hecho admite lecturas políticas distintas",
+        "La frase aparece en las dos fuentes con el mismo contenido: hay Estados "
+        "con capacidad de imponer decisiones y otros sin ella.\nDe ahí una concluye "
+        "que el reglamento debe reconocer esa asimetría para funcionar, y la otra, "
+        "que debe someterla a regla precisamente porque existe.\nEl caso enseña "
+        "algo aplicable a cualquier par de fuentes: constatar el mismo hecho no "
+        "implica coincidir, porque lo que se disputa suele ser qué debe hacerse con "
+        "él y no si ocurrió.",
+        [
+            ("Que una de las dos fuentes está citando mal a la otra", "Ninguna cita a la otra: ambas emplean el argumento por su cuenta."),
+            ("Que el hecho descrito no ocurrió realmente", "Las dos lo dan por establecido sin discusión."),
+            ("Que ambas defienden en el fondo la misma posición", "Sus conclusiones sobre el veto son incompatibles."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "facil",
+        "Según el texto, ¿en qué dos supuestos descansaba el Estado liberal del "
+        "siglo XIX?",
+        "Que la economía se corrige sola y que el Estado debe limitarse",
+        "El texto los enuncia en su primera línea: que la economía se corrige sola "
+        "y que el Estado debe limitarse a garantizar orden, propiedad y "
+        "contratos.\nAmbos supuestos, dice el texto, quedaron golpeados por la "
+        "Primera Guerra Mundial y la crisis de 1929, porque millones de desocupados "
+        "no eran un desajuste pasajero y ningún mecanismo automático los "
+        "reabsorbió.",
+        [
+            ("Que el Estado debe planificar la producción industrial", "Es lo contrario del supuesto liberal que describe el texto."),
+            ("Que los trabajadores deben organizarse en sindicatos", "El texto no atribuye ese principio al Estado liberal."),
+            ("Que las crisis deben enfrentarse con gasto público", "Esa idea aparece recién con el Estado de bienestar."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "facil",
+        "Según el texto, ¿qué riesgos no deberían depender de la suerte individual "
+        "bajo un Estado de bienestar?",
+        "Enfermar, envejecer y quedar sin trabajo",
+        "El texto los enumera exactamente así al explicar la idea de fondo del "
+        "modelo.\nY menciona los instrumentos con que se cubren: seguros de "
+        "desempleo, pensiones, salud, educación y obras públicas financiadas con "
+        "impuestos. El New Deal estadounidense y los sistemas europeos de posguerra "
+        "aparecen como sus versiones más conocidas.",
+        [
+            ("Perder la propiedad, ser demandado y quebrar", "El texto no incluye esos riesgos entre los que el modelo cubre."),
+            ("Emigrar, cambiar de oficio y estudiar", "No figuran en la enumeración del texto."),
+            ("Enfermar, emigrar y perder una elección", "Solo el primero pertenece a la lista del texto."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "facil",
+        "Según el texto, ¿qué hizo el Estado chileno tras el terremoto de 1939?",
+        "Creó una corporación de fomento del desarrollo industrial",
+        "El texto lo señala al describir la versión chilena del período: el Estado "
+        "asumió la conducción del desarrollo industrial mediante una corporación de "
+        "fomento creada tras el terremoto de 1939.\nAgrega que amplió educación y "
+        "previsión social, y precisa el marco: todo eso ocurrió manteniendo "
+        "elecciones competitivas y alternancia, a diferencia de otras experiencias "
+        "del período.",
+        [
+            ("Suprimió los partidos políticos y la prensa independiente", "El texto atribuye esas medidas al totalitarismo, no al caso chileno."),
+            ("Cerró la economía por completo al comercio exterior", "El texto no describe un cierre total del comercio."),
+            ("Entregó la conducción industrial a empresas extranjeras", "El texto describe conducción estatal del desarrollo industrial."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "¿Qué distingue al Estado de bienestar del totalitarismo, según las "
+        "respuestas que el texto describe?",
+        "El bienestar amplía funciones sin suprimir el pluralismo",
+        "El texto es explícito sobre el punto de partida del Estado de bienestar: "
+        "amplía lo que el Estado se hace cargo sin abandonar la democracia "
+        "representativa ni la propiedad privada.\nEl totalitarismo, en cambio, "
+        "resolvió el problema suprimiéndolo: eliminó partidos, prensa independiente "
+        "y elecciones competitivas.\nLa diferencia no está entonces en cuánto "
+        "interviene el Estado en la economía —los dos intervienen— sino en si el "
+        "sistema conserva o no los mecanismos que permiten discrepar y cambiar de "
+        "gobierno.",
+        [
+            ("El bienestar no interviene en la economía y el totalitarismo sí", "El bienestar interviene por definición: seguros, pensiones y obras públicas."),
+            ("El bienestar es europeo y el totalitarismo, latinoamericano", "El texto sitúa el totalitarismo en Europa y el populismo en América Latina."),
+            ("El bienestar surge antes de la crisis de 1929", "El texto lo presenta como una de las respuestas posteriores a ella."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿cuáles son los rasgos reconocibles del populismo "
+        "latinoamericano entre 1930 y 1955?",
+        "Liderazgo directo, incorporación obrera e industrialización estatal",
+        "El texto enumera los tres. Un liderazgo personal fuerte que se dirige "
+        "directamente a las masas urbanas por radio y en concentraciones, sin pasar "
+        "por los partidos tradicionales.\nLa incorporación política de trabajadores "
+        "antes excluidos, con derechos laborales y sindicatos ampliados.\nY una "
+        "política económica de industrialización dirigida por el Estado, que "
+        "sustituye importaciones para depender menos de los mercados externos que "
+        "acababan de derrumbarse.",
+        [
+            ("Gobierno de coalición, libre comercio y federalismo", "Ninguno de los tres figura entre los rasgos que el texto describe."),
+            ("Supresión de sindicatos, apertura comercial y prensa controlada", "El texto describe sindicatos ampliados y sustitución de importaciones."),
+            ("Liderazgo colectivo, partidos fuertes y economía agrícola", "El texto señala liderazgo personal y desplazamiento de los partidos tradicionales."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿por qué la industrialización por sustitución de "
+        "importaciones aparece justo en esos años?",
+        "Porque los mercados externos acababan de derrumbarse",
+        "El texto entrega la razón dentro de la propia definición: la "
+        "industrialización dirigida por el Estado buscaba depender menos de los "
+        "mercados externos que acababan de derrumbarse.\nLa Depresión mostró a las "
+        "economías latinoamericanas exportadoras hasta qué punto su ingreso "
+        "dependía de decisiones y precios ajenos.\nProducir internamente lo que "
+        "antes se importaba fue la respuesta a esa exposición, y explica que la "
+        "medida apareciera en varios países a la vez sin necesidad de que se "
+        "copiaran entre sí.",
+        [
+            ("Porque los países latinoamericanos habían agotado sus recursos naturales", "El texto no menciona agotamiento de recursos."),
+            ("Porque los organismos internacionales lo exigieron a la región", "El texto no atribuye la medida a ninguna exigencia externa."),
+            ("Porque los sindicatos exigieron cerrar las fronteras al comercio", "El texto no vincula la medida con una demanda sindical."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "El texto advierte que el término populismo se usa hoy como insulto. ¿Qué "
+        "problema busca evitar con esa advertencia?",
+        "Que un juicio de valor reemplace a la descripción histórica",
+        "Un concepto que funciona como descalificación deja de servir para "
+        "clasificar. Si populista significa simplemente un gobierno que desapruebo, "
+        "no permite decidir si un gobierno concreto pertenece a esa categoría.\nPor "
+        "eso el texto ofrece a continuación una definición con rasgos verificables: "
+        "liderazgo directo sobre las masas urbanas, incorporación de trabajadores "
+        "excluidos e industrialización dirigida por el Estado, en un período "
+        "acotado entre 1930 y 1955.\nCon esos criterios se puede discutir si un "
+        "caso encaja o no, que es lo que un concepto histórico debe permitir hacer.",
+        [
+            ("Que se estudien gobiernos autoritarios en la escuela", "El texto no propone excluir ningún objeto de estudio."),
+            ("Que se confunda el populismo con el Estado de bienestar", "El riesgo que señala es el uso peyorativo del término, no esa confusión."),
+            ("Que los historiadores usen fuentes de la prensa actual", "El texto no discute qué fuentes emplear."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "Según el texto, ¿en qué se diferenció la experiencia chilena del período "
+        "de otras de la región?",
+        "Mantuvo elecciones competitivas y alternancia mientras ampliaba el Estado",
+        "El texto describe para Chile las mismas dos operaciones del período: "
+        "conducción estatal del desarrollo industrial y ampliación de educación y "
+        "previsión social.\nY agrega el rasgo distintivo en la frase final: todo "
+        "eso ocurrió en un marco que mantuvo elecciones competitivas y "
+        "alternancia.\nEsa combinación es lo que separa el caso chileno de las "
+        "experiencias donde la ampliación de derechos vino acompañada de "
+        "concentración de poder y debilitamiento de los contrapesos.",
+        [
+            ("No amplió la previsión social ni la educación", "El texto afirma expresamente que amplió ambas."),
+            ("Renunció a intervenir en el desarrollo industrial", "Creó una corporación de fomento para conducirlo."),
+            ("Suprimió los partidos políticos durante el período", "El texto describe elecciones competitivas y alternancia."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "El texto sostiene que los gobiernos populistas hicieron a la vez dos cosas "
+        "que solemos poner en veredas opuestas. ¿Cuáles son?",
+        "Ampliar derechos efectivos y concentrar poder a la vez",
+        "El texto las nombra sin atenuar ninguna. Por un lado, derechos efectivos "
+        "para sectores que nunca los habían tenido: derechos laborales, sindicatos "
+        "ampliados, incorporación política de trabajadores urbanos.\nPor otro, "
+        "concentración de poder, debilitamiento de contrapesos institucionales y "
+        "trato a la oposición como adversario ilegítimo.\nEl texto sostiene que "
+        "quedarse con una sola de esas mitades es la manera más rápida de no "
+        "explicar por qué contaron con apoyo popular real y duradero: sin la "
+        "primera no se entiende el apoyo, y sin la segunda no se entiende el "
+        "conflicto que dejaron.",
+        [
+            ("Industrializar el país y abrirlo al comercio internacional", "La industrialización descrita apunta a depender menos de los mercados externos."),
+            ("Ampliar derechos y reducir el tamaño del Estado", "El texto describe un Estado que asume más funciones, no menos."),
+            ("Mantener el pluralismo y suprimir los sindicatos", "El texto señala sindicatos ampliados y contrapesos debilitados."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "¿Qué tienen en común las tres salidas que describe el texto, pese a sus "
+        "diferencias?",
+        "Las tres amplían las funciones económicas del Estado",
+        "El punto de partida es común: los dos supuestos liberales quedaron "
+        "golpeados y ninguna de las tres respuestas propone restaurarlos.\nEl "
+        "Estado de bienestar asume seguros, pensiones, salud y obras públicas; el "
+        "populismo latinoamericano conduce la industrialización y sustituye "
+        "importaciones; el totalitarismo interviene la economía junto con todo lo "
+        "demás.\nLo que las separa no es cuánto interviene el Estado sino qué "
+        "ocurre con el pluralismo político mientras lo hace, y esa distinción es la "
+        "que permite no confundirlas.",
+        [
+            ("Las tres suprimen los partidos políticos existentes", "El Estado de bienestar los conserva, y el caso chileno mantiene elecciones competitivas."),
+            ("Las tres se aplicaron principalmente en América Latina", "El texto sitúa el bienestar y el totalitarismo en Europa y Estados Unidos."),
+            ("Las tres reducen el gasto público para equilibrar presupuestos", "Todas lo aumentan al asumir funciones nuevas."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "Un estudiante concluye que, según el texto, el populismo latinoamericano "
+        "fue una forma de totalitarismo. ¿Qué precisión exige esa lectura?",
+        "El texto describe concentración de poder, no supresión del pluralismo",
+        "Los rasgos que el texto atribuye al populismo son concentración de poder, "
+        "contrapesos debilitados y oposición tratada como adversario "
+        "ilegítimo.\nLos que atribuye al totalitarismo son de otra naturaleza: "
+        "eliminación de los partidos, de la prensa independiente y de las "
+        "elecciones competitivas, más la negación de que existan conflictos "
+        "legítimos dentro de la nación.\nDebilitar contrapesos y suprimir el "
+        "pluralismo no son grados de la misma cosa. El texto además atribuye al "
+        "populismo una ampliación de derechos efectivos que no forma parte de la "
+        "descripción del totalitarismo.",
+        [
+            ("El texto no describe ningún rasgo autoritario en el populismo", "Menciona expresamente concentración de poder y oposición tratada como ilegítima."),
+            ("El texto sostiene que el populismo fue plenamente democrático", "No lo sostiene: por eso lo describe como difícil de clasificar."),
+            ("El texto sitúa ambos fenómenos en el mismo continente", "Sitúa el totalitarismo en Europa y el populismo en América Latina."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "El texto advierte contra reducir el populismo a una sola de sus mitades. "
+        "¿Qué costo de análisis señala en cada reducción?",
+        "Quedar sin explicar el apoyo popular o el conflicto que dejó",
+        "El texto plantea el problema en términos de capacidad explicativa y no de "
+        "equilibrio entre opiniones.\nSi solo se describe el autoritarismo, queda "
+        "sin explicación por qué esos gobiernos contaron con apoyo popular real y "
+        "duradero, que es un hecho a explicar y no una opinión.\nSi solo se "
+        "describe la conquista social, queda sin explicación el conflicto político "
+        "que dejaron tras de sí. Una descripción que no da cuenta de los dos hechos "
+        "está incompleta, con independencia de qué opine quien la escribe.",
+        [
+            ("Ofender a los partidarios o a los detractores de esos gobiernos", "El texto argumenta desde la explicación histórica, no desde la recepción."),
+            ("Perder precisión en las fechas del período 1930-1955", "La cronología no es lo que está en juego en esa advertencia."),
+            ("Confundir el populismo con el Estado de bienestar europeo", "Ese riesgo no es el que la advertencia plantea."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "¿Por qué el texto sostiene que la desocupación de los años treinta no era "
+        "un desajuste pasajero?",
+        "Porque ningún mecanismo automático la reabsorbió",
+        "El supuesto liberal que el texto describe era que la economía se corrige "
+        "sola: los desequilibrios se ajustan y el empleo se recupera sin necesidad "
+        "de intervención.\nLo que el texto constata es que eso no ocurrió. Millones "
+        "de desocupados permanecieron en esa condición y ningún mecanismo "
+        "automático los reabsorbió.\nAhí está el golpe al supuesto, y de ahí sale "
+        "la consecuencia práctica: si el ajuste no llega solo, alguien tiene que "
+        "producirlo, y las tres salidas del texto son maneras distintas de "
+        "responder a esa pregunta.",
+        [
+            ("Porque la Primera Guerra Mundial había destruido las fábricas", "El texto menciona la guerra como antecedente, no como causa de la desocupación persistente."),
+            ("Porque los sindicatos impidieron que los salarios bajaran", "El texto no plantea esa explicación."),
+            ("Porque los gobiernos aumentaron el gasto público desde 1929", "El aumento del gasto es una de las respuestas posteriores, no la causa del problema."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_temporal", "dificil",
+        "El Estado de bienestar y el populismo latinoamericano aparecen en las "
+        "mismas décadas en continentes distintos. ¿Qué se sigue de esa "
+        "coincidencia?",
+        "Que respondían a un problema común más que a una influencia mutua",
+        "El texto no describe copia ni contagio entre experiencias: describe una "
+        "constatación compartida —el ajuste automático no llegó— de la que salieron "
+        "respuestas muy distintas.\nCuando fenómenos comparables aparecen a la vez "
+        "en sociedades que no se imitan, lo razonable es buscar la causa en algo "
+        "que las alcanza a todas. Aquí ese algo tiene nombre y fecha: la crisis de "
+        "1929 y el derrumbe del comercio internacional.\nEso no excluye que hubiera "
+        "circulación de ideas, pero la simultaneidad por sí sola no la prueba, y "
+        "suponerla sin evidencia es un error frecuente al comparar países.",
+        [
+            ("Que una de las dos experiencias copió a la otra", "El texto no aporta ninguna evidencia de influencia entre ambas."),
+            ("Que ambas son en realidad el mismo fenómeno con otro nombre", "El texto las distingue por sus rasgos y por su relación con el pluralismo."),
+            ("Que las fechas de una de las dos están mal establecidas", "No hay ningún problema de datación en el texto."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "facil",
+        "Según la Tabla 1, ¿qué economía sufrió la mayor caída de producción "
+        "industrial en 1932?",
+        "Chile, que baja a 47 puntos del índice",
+        "El índice toma 1929 como base 100 y la columna de 1932 registra 54, 61, "
+        "84, 47 y 89 para W, X, Y, Chile y Z respectivamente.\nEl valor más bajo es "
+        "el 47 de Chile, es decir menos de la mitad de lo que producía tres años "
+        "antes. La nota explica por qué: su valor exportado dependía en más de la "
+        "mitad de un solo producto minero.",
+        [
+            ("El país W, que baja a 54 puntos", "Es la segunda caída más fuerte, no la mayor."),
+            ("El país X, que baja a 61 puntos", "Cae menos que W y que Chile en ese año."),
+            ("El país Z, que baja a 89 puntos", "Es la caída más leve de la tabla."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "facil",
+        "Según la Tabla 2, ¿qué país tenía la desocupación más alta en 1932?",
+        "El país X, con 30%",
+        "La columna de desocupación de 1932 entrega 24%, 30%, 17%, 26% y 9% para W, "
+        "X, Y, Chile y Z.\nEl valor más alto es el 30% del país X: casi un tercio "
+        "de su fuerza de trabajo sin empleo. Conviene notar que ese mismo país es "
+        "el que más aumenta el gasto público hacia 1938, con un índice de 214.",
+        [
+            ("Chile, con 26%", "Es la segunda desocupación más alta de la tabla."),
+            ("El país W, con 24%", "Está por debajo de X y de Chile."),
+            ("El país Y, con 17%", "Es la segunda más baja, después del país Z."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "facil",
+        "Según la Tabla 1, ¿qué economías superaron en 1938 su nivel de producción "
+        "de 1929?",
+        "X, Y, Z y Chile, todas por encima de 100",
+        "El índice de 1938 registra 92 para W, 126 para X, 114 para Y, 104 para "
+        "Chile y 118 para Z.\nCuatro de las cinco superan la base 100, es decir "
+        "producían más que antes de la crisis. La única que no lo logra es W, que "
+        "se queda en 92 pese a haber recuperado buena parte del terreno perdido.",
+        [
+            ("Solo el país X, con 126", "Es el índice más alto, pero X, Y, Z y Chile superan los 100."),
+            ("Solo los países X y Z", "Y llega a 114 y Chile a 104: también están por encima."),
+            ("Ninguna: todas quedaron por debajo de 1929", "Cuatro de las cinco superan el índice base."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "medio",
+        "¿Qué relación aparece entre la caída del valor exportado y la caída de la "
+        "producción industrial en 1932?",
+        "Las economías con mayor caída exportadora caen más en producción",
+        "Las dos columnas se ordenan de manera parecida. Chile combina el peor "
+        "valor exportado —22 sobre base 100— con la peor producción industrial, 47. "
+        "En el otro extremo, Z conserva 64 de exportaciones y 89 de producción.\nLa "
+        "relación es coherente con la naturaleza de la crisis: al desplomarse el "
+        "comercio internacional, las economías más volcadas a exportar pierden "
+        "primero su ingreso y luego su actividad interna.\nLa nota lo explica en el "
+        "caso chileno, cuyo valor exportado dependía en más de la mitad de un solo "
+        "producto minero.",
+        [
+            ("No hay relación: las dos columnas se mueven en sentido opuesto", "Se mueven en el mismo sentido en los cinco casos de la tabla."),
+            ("Los países con mayor desocupación exportaron más en 1932", "X tiene la desocupación más alta y un valor exportado de 39, por debajo de Y y de Z."),
+            ("Todas las economías perdieron la misma proporción de exportaciones", "Van de 22 a 64 sobre base 100: la dispersión es amplia."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "medio",
+        "El país Z presenta la menor caída de la tabla. ¿Qué dato de las notas "
+        "ayuda a explicarlo?",
+        "Mantuvo controles de cambio y aranceles altos en el período",
+        "La nota lo consigna como rasgo distintivo de Z, y es coherente con sus "
+        "cifras: la menor caída de producción, la menor desocupación y el mayor "
+        "valor exportado conservado.\nEl mecanismo es el que la crisis puso de moda "
+        "en los años treinta. Al restringir importaciones y controlar el acceso a "
+        "divisas, una economía queda menos expuesta a lo que ocurre afuera y la "
+        "demanda se vuelca hacia la producción interna.\nLa tabla no permite "
+        "afirmar que esa haya sido la única causa, pero sí señala la coincidencia "
+        "entre la política descrita y el mejor desempeño de la serie.",
+        [
+            ("Aumentó el gasto público más que los demás países", "El mayor aumento de gasto es el del país X, con índice 214."),
+            ("Dependía de un solo producto de exportación", "Esa característica es la que la nota atribuye a Chile."),
+            ("Fue el único que no aumentó su gasto público", "Z lo aumenta a 133 sobre base 100 hacia 1938."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "medio",
+        "Según las notas, ¿qué respuesta común adoptaron los países no chilenos "
+        "entre 1932 y 1938?",
+        "Aumentaron el gasto público con obras y programas de empleo",
+        "La última nota lo señala expresamente, y la Tabla 2 lo confirma: los "
+        "cuatro índices de gasto público de 1938 están por encima de 100, entre 133 "
+        "y 214.\nEsa respuesta es característica de la salida de la Depresión. "
+        "Frente a una demanda privada desplomada, el Estado pasa a sostener la "
+        "actividad contratando directamente y financiando obras.\nEs también el "
+        "punto donde se quiebra el consenso liberal previo, que atribuía al Estado "
+        "un papel acotado en materia económica.",
+        [
+            ("Redujeron el gasto público para equilibrar sus presupuestos", "Los cuatro índices de gasto de 1938 superan la base 100."),
+            ("Abandonaron por completo el comercio internacional", "El valor exportado cae, pero ninguna serie llega a cero."),
+            ("Fijaron por ley el precio de sus exportaciones", "Ninguna nota menciona una medida de ese tipo."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "medio",
+        "Chile cae más que ningún otro país en 1932 y en 1938 ya supera su nivel de "
+        "1929. ¿Qué muestra esa trayectoria?",
+        "Una caída profunda seguida de una recuperación rápida",
+        "Las dos afirmaciones son ciertas a la vez y describen una curva en V: 47 "
+        "puntos en 1932, 88 en 1935 y 104 en 1938.\nNada obliga a que una economía "
+        "muy golpeada se recupere lento. Un punto de partida muy bajo hace que "
+        "cualquier reactivación produzca variaciones porcentuales grandes, y una "
+        "economía puede además reorientarse hacia el mercado interno.\nLa tabla "
+        "registra la trayectoria; explicar por qué ocurrió exige otras fuentes, "
+        "porque estas cifras no informan qué medidas se adoptaron en Chile.",
+        [
+            ("Que la crisis no llegó realmente a afectar a Chile", "El índice de 47 en 1932 es la caída más profunda de la tabla."),
+            ("Que Chile no adoptó ninguna medida durante el período", "La tabla no informa sobre políticas chilenas: no permite afirmarlo."),
+            ("Que su recuperación fue la más lenta de las cinco economías", "Pasa de 47 a 104 en seis años, la mayor recuperación relativa de la serie."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "medio",
+        "Un estudiante concluye que el país Y fue el menos afectado por la crisis. "
+        "¿Qué le responde la Tabla 2?",
+        "Z tuvo menos desocupación y conservó más exportaciones",
+        "Y es en efecto de los menos golpeados en producción industrial, con 84 "
+        "puntos en 1932.\nPero Z queda por encima en las tres columnas relevantes: "
+        "89 de producción, 9% de desocupación frente al 17% de Y, y 64 de valor "
+        "exportado frente a 52.\nEl caso ilustra un cuidado necesario al leer "
+        "varias tablas: una conclusión sostenida en una sola columna puede caerse "
+        "apenas se revisan las demás.",
+        [
+            ("Y no aparece en la Tabla 2, así que no puede compararse", "Y figura en las tres columnas de la Tabla 2."),
+            ("Y tuvo la menor desocupación de las cinco economías", "La menor es la de Z, con 9%."),
+            ("Y fue el país que menos aumentó su gasto público", "Su índice de 141 supera al de Z, que es 133."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "dificil",
+        "¿Por qué la crisis de 1929 golpeó con más fuerza a economías como la "
+        "chilena que a economías más cerradas?",
+        "Su ingreso dependía de mercados y precios que no controlaban",
+        "La primera nota entrega el rasgo decisivo: más de la mitad del valor "
+        "exportado provenía de un solo producto minero cuyo precio se fijaba en "
+        "mercados extranjeros.\nCuando la demanda mundial se contrae, ese ingreso "
+        "desaparece de golpe y sin que ninguna decisión interna pueda evitarlo. La "
+        "tabla lo muestra: el valor exportado chileno cae a 22 sobre base 100, la "
+        "peor cifra de la serie.\nY como ese ingreso financiaba también al fisco y "
+        "a la actividad interna, la caída se propaga al resto de la economía, que "
+        "es lo que registra el índice de producción industrial de 47.",
+        [
+            ("Su industria era más grande que la de los países cerrados", "La tabla no informa sobre el tamaño relativo de cada industria."),
+            ("Tenían una desocupación más alta antes de que empezara la crisis", "Las cifras de desocupación son de 1932, ya iniciada la crisis."),
+            ("Su gasto público era mayor al comenzar el período", "Los índices de gasto son de 1938 y toman 1929 como base."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "dificil",
+        "¿Qué transformación del papel del Estado anticipa el aumento generalizado "
+        "del gasto público que muestra la Tabla 2?",
+        "El Estado asume responsabilidad sobre el empleo y la actividad",
+        "Hasta la crisis, el consenso liberal atribuía al Estado funciones acotadas "
+        "y confiaba en que el mercado corrigiera por sí solo sus "
+        "desequilibrios.\nLos índices de 1938 muestran otra cosa: entre 133 y 214 "
+        "sobre base 1929, sostenidos —dice la nota— en obras y programas de "
+        "empleo.\nEsa es la raíz del Estado de bienestar que se generalizará "
+        "después de la Segunda Guerra. La crisis no solo empobreció economías: "
+        "cambió lo que se esperaba que un gobierno hiciera frente al desempleo.",
+        [
+            ("El Estado se retira de la economía para dejar operar al mercado", "Los índices de gasto muestran el movimiento contrario."),
+            ("El Estado pasa a fijar todos los precios de la economía", "Nada en la fuente describe un control general de precios."),
+            ("El Estado abandona el gasto en obras para pagar deuda externa", "La nota atribuye el aumento del gasto justamente a obras y programas de empleo."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre la crisis de 1929?",
+        "Qué medidas concretas adoptó cada gobierno y con qué efecto",
+        "Las tablas registran resultados: producción, desocupación, exportaciones y "
+        "gasto. Las notas agregan dos datos de política —los controles de Z y el "
+        "aumento de gasto de los cuatro no chilenos— pero sin detalle ni "
+        "cronología.\nFalta lo esencial para evaluar cualquier política: qué se "
+        "hizo, cuándo, con qué monto y qué habría ocurrido sin ello.\nPor eso la "
+        "fuente sirve para describir la magnitud y la forma de la crisis, y no para "
+        "atribuir la recuperación a una receta determinada.",
+        [
+            ("Qué país tuvo la caída de producción más profunda en 1932", "La Tabla 1 lo entrega directamente: Chile, con 47."),
+            ("Cómo evolucionó la producción industrial entre 1929 y 1938", "Es exactamente lo que registra la Tabla 1 en sus cuatro cortes."),
+            ("Qué relación hubo entre exportaciones y producción en 1932", "Puede establecerse comparando ambas tablas."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "dificil",
+        "El país W recupera producción pero sigue en 92 puntos en 1938, y su gasto "
+        "público llega a 168. ¿Qué muestra esa combinación?",
+        "Que aumentar el gasto no garantizaba recuperar el nivel previo",
+        "W aumenta su gasto público un 68% respecto de 1929, por encima de Y y de "
+        "Z, y aun así termina el período por debajo de su producción inicial.\nEl "
+        "caso funciona como advertencia contra una lectura simple de la tabla. Si "
+        "el gasto público explicara por sí solo la recuperación, W debería estar "
+        "entre los mejores y está último.\nLo que faltan son las demás variables: "
+        "cuán profunda fue su caída, qué estructura productiva tenía, qué ocurría "
+        "con sus mercados de destino. Con cinco casos y dos tablas no se puede "
+        "aislar el efecto de una política.",
+        [
+            ("Que el gasto público agravó la caída de la producción", "W recupera de 54 a 92 puntos entre 1932 y 1938: no hay agravamiento."),
+            ("Que W no aplicó ningún programa de empleo", "La nota incluye a los cuatro países no chilenos entre los que los aplicaron."),
+            ("Que la producción industrial no se relaciona con el gasto público", "El caso muestra que la relación no es suficiente, no que sea inexistente."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_crisis_liberal", "dificil",
+        "Estas cifras están construidas sobre índices con base 1929 = 100. ¿Qué "
+        "cuidado exige esa forma de presentar los datos?",
+        "Miden cambio respecto de un año, no el tamaño de cada economía",
+        "Un índice compara cada país consigo mismo. Que Chile llegue a 104 y W a 92 "
+        "informa sobre sus trayectorias, no sobre cuál produce más.\nPuede ocurrir "
+        "perfectamente que W siga siendo la economía más grande de las cinco pese a "
+        "mostrar el índice más bajo, porque partía de un nivel absoluto muy "
+        "superior.\nLa otra advertencia es sobre la base elegida: 1929 fue un año "
+        "de auge previo al desplome, y usar como referencia un máximo hace que toda "
+        "comparación posterior aparezca como pérdida.",
+        [
+            ("Los índices con base 100 no permiten comparar años entre sí", "Es justamente para lo que sirven: siguen a cada país en el tiempo."),
+            ("Un índice solo es válido si todos los países parten del mismo año", "Aquí todos parten de 1929: esa condición se cumple."),
+            ("Los índices ocultan la desocupación de cada economía", "La desocupación se informa aparte, en la Tabla 2."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_temporal", "medio",
+        "La crisis se desata en 1929 y sus efectos se despliegan hasta 1938 y más "
+        "allá. ¿Cómo se ordena esa relación en términos de ritmos históricos?",
+        "Un acontecimiento que abre un proceso de media duración",
+        "El desplome bursátil de 1929 tiene fecha precisa y cabe en la categoría de "
+        "acontecimiento: dura días.\nLo que la tabla registra es otra cosa: una "
+        "década de caída y recuperación, que corresponde a la media duración, la "
+        "escala de las crisis económicas y los ciclos políticos.\nY hay un tercer "
+        "plano que la tabla no alcanza: el cambio en lo que se espera de un Estado "
+        "frente al desempleo, que se instala durante el resto del siglo. Distinguir "
+        "los tres ritmos evita confundir el detonante con el proceso que abre.",
+        [
+            ("Un proceso de larga duración iniciado en un solo día", "La larga duración se mide en siglos; la serie cubre nueve años."),
+            ("Una sucesión de acontecimientos sin relación entre sí", "Las cifras describen una trayectoria encadenada, no hechos sueltos."),
+            ("Un ciclo que se repite cada tres años según la tabla", "Los cortes cada tres años son del diseño de la tabla, no un ciclo del fenómeno."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "facil",
+        "Según la Fuente 1, ¿a qué atribuye el dirigente la situación de fábricas "
+        "detenidas y hombres sin trabajo?",
+        "A veinte años de discusión parlamentaria",
+        "El discurso abre con esa atribución: veinte años de charla parlamentaria "
+        "nos han traído hasta aquí, seguido de la enumeración de la "
+        "crisis.\nInsiste después con la misma idea al decir que mientras los "
+        "partidos negociaban carteras, el pueblo pagaba. El responsable que "
+        "identifica no es una política concreta ni un actor económico, sino la "
+        "deliberación como tal.",
+        [
+            ("A la competencia de otras potencias industriales", "El discurso no menciona ningún factor externo."),
+            ("A la falta de inversión de los empresarios nacionales", "No se atribuye responsabilidad a los empresarios."),
+            ("A la escasez de trabajadores calificados en el país", "El discurso describe hombres sin trabajo, no falta de mano de obra."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "facil",
+        "Según la Fuente 2, ¿qué parte del discurso reconoce el periodista como "
+        "exacta?",
+        "La descripción de la desocupación y la miseria",
+        "La columna concede el punto de partida: la desocupación es real, la "
+        "miseria es real y el Parlamento fue efectivamente incapaz.\nEl periodista "
+        "agrega que nadie que haya visto las colas de las oficinas de empleo podría "
+        "negarlo, y de ahí extrae por qué el discurso encuentra audiencia. Su "
+        "objeción empieza recién en el paso siguiente.",
+        [
+            ("La conclusión de que la discusión es la causa de la crisis", "Es justamente lo que la columna rechaza como un salto injustificado."),
+            ("La idea de que la nación tiene una sola voluntad", "El periodista la señala como el núcleo del problema."),
+            ("La promesa de dar trabajo sin pedir permiso", "La columna la califica de anuncio institucional, no de dato exacto."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "facil",
+        "Según la Fuente 1, ¿qué propone el dirigente respecto de los partidos "
+        "políticos?",
+        "Terminar con ellos, no fundar uno más",
+        "El discurso lo dice de manera directa: yo no vengo a proponer otro "
+        "partido, vengo a terminar con ellos.\nLa frase es coherente con el resto "
+        "de su argumento. Si la nación es un cuerpo único con una sola voluntad, "
+        "los partidos —que existen para representar voluntades distintas— no tienen "
+        "función que cumplir.",
+        [
+            ("Unificarlos en una sola coalición de gobierno", "Una coalición sigue suponiendo partidos, y el discurso los rechaza como tales."),
+            ("Someterlos a elecciones más frecuentes", "El discurso no propone reformar el mecanismo electoral."),
+            ("Devolverles las atribuciones que habían perdido", "Sostiene lo contrario: que deben desaparecer."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "La Fuente 1 sostiene que la nación es un cuerpo único que no delibera "
+        "consigo mismo. ¿Qué consecuencia política tiene esa definición?",
+        "Convierte la discrepancia en un daño y no en un derecho",
+        "Si la nación tiene una sola voluntad, entonces toda posición distinta no "
+        "expresa un interés legítimo sino una desviación.\nEl discurso extrae esa "
+        "consecuencia sin rodeos: quien insiste en dividirla en clases, fracciones "
+        "u opiniones no está ejerciendo un derecho, está debilitando al organismo "
+        "desde adentro.\nAhí se juega la diferencia con cualquier régimen "
+        "pluralista, que se organiza justamente sobre el supuesto contrario: que la "
+        "sociedad contiene intereses distintos y que las instituciones existen para "
+        "procesarlos.",
+        [
+            ("Obliga a que los partidos negocien acuerdos más amplios", "El discurso no busca acuerdos entre partidos: propone suprimirlos."),
+            ("Exige que el Parlamento sesione con mayor frecuencia", "La deliberación parlamentaria es lo que el discurso identifica como el problema."),
+            ("Implica que cada clase social tenga representación propia", "Es lo contrario de lo que sostiene: rechaza dividir la nación en clases."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "¿En qué consiste el salto argumentativo que la Fuente 2 denuncia en el "
+        "discurso?",
+        "Pasar de la crisis del Parlamento a culpar a la discusión misma",
+        "La columna separa dos afirmaciones que el discurso presenta juntas. La "
+        "primera —el Parlamento fue incapaz de resolver la crisis— la considera "
+        "verdadera.\nLa segunda —la causa de la crisis es que se discuta— no se "
+        "sigue de la anterior. Que una institución deliberativa haya fallado no "
+        "prueba que la deliberación sea el problema.\nEse es el mecanismo que el "
+        "periodista quiere hacer visible: un diagnóstico compartido que sirve de "
+        "plataforma para una conclusión que nadie examinó, porque llega arrastrada "
+        "por el acuerdo previo.",
+        [
+            ("Negar que existiera desocupación en el país", "El discurso la afirma, y la columna coincide en que era real."),
+            ("Atribuir la crisis a potencias extranjeras", "Ninguna de las dos fuentes plantea una causa externa."),
+            ("Proponer medidas económicas sin financiamiento", "La objeción de la columna es política y no presupuestaria."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "La Fuente 2 distingue entre llamar adversario y llamar enfermedad a quien "
+        "discrepa. ¿Por qué considera decisiva esa diferencia?",
+        "Un adversario se derrota votando y una enfermedad se extirpa",
+        "La columna formula la distinción con esas palabras exactas y le atribuye "
+        "consecuencias prácticas.\nCada término implica un procedimiento distinto. "
+        "El adversario supone elecciones, plazos y la posibilidad de perder; la "
+        "enfermedad supone eliminación, y ningún procedimiento que la limite.\nPor "
+        "eso el periodista sostiene que el vocabulario llegará antes que los "
+        "decretos: cuando la palabra ya describe al opositor como un mal del "
+        "organismo, la medida que lo suprime aparece después como una consecuencia "
+        "razonable.",
+        [
+            ("Porque revela que el dirigente carece de formación médica", "La metáfora orgánica es un recurso retórico, no una afirmación clínica."),
+            ("Porque muestra que el discurso está dirigido a los enfermos", "La columna analiza a quién se describe así, no a quién se dirige."),
+            ("Porque las enfermedades no pueden mencionarse en política", "El problema no es mencionarlas sino qué autoriza esa descripción."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "¿Qué contexto de entreguerras vuelve verosímil que un discurso como el de "
+        "la Fuente 1 encontrara audiencia?",
+        "Una crisis larga que las instituciones no resolvieron",
+        "Los dos textos coinciden en el diagnóstico material: fábricas detenidas, "
+        "ahorros perdidos, colas en las oficinas de empleo.\nEl periodista lo "
+        "señala como la clave de la eficacia del discurso: lo escuchan porque su "
+        "descripción es exacta.\nEse es el rasgo que define el período de "
+        "entreguerras europeo. La crisis del Estado liberal no consiste solo en que "
+        "hubiera dificultades económicas, sino en que las instituciones "
+        "representativas aparecieron ante amplios sectores como incapaces de "
+        "enfrentarlas, y eso abrió espacio a propuestas que ofrecían resolverlas "
+        "suprimiéndolas.",
+        [
+            ("Una guerra en curso dentro del propio territorio nacional", "Ninguna de las dos fuentes menciona un conflicto armado en marcha."),
+            ("La ausencia de partidos políticos organizados en el país", "El discurso los combate justamente porque existen y negocian."),
+            ("Un aumento sostenido de los salarios industriales", "Las fuentes describen desocupación y miseria, no bonanza."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "medio",
+        "La Fuente 1 promete dar trabajo a cada brazo sin pedir permiso. ¿Cómo "
+        "interpreta esa frase la Fuente 2?",
+        "Como el anuncio de suprimir las instituciones que podrían negarlo",
+        "La columna se detiene en la segunda mitad de la promesa. Dar trabajo es un "
+        "objetivo que cualquier gobierno puede plantearse; no pedir permiso "
+        "describe otra cosa.\nEl periodista lo dice de manera directa: prometer "
+        "trabajo sin pedir permiso no es un programa económico, es el anuncio de "
+        "que las instituciones que podrían negarlo van a dejar de existir.\nLa "
+        "lectura es fina porque no discute la meta sino el procedimiento, que es "
+        "donde el discurso ya declara lo que hará con los contrapesos "
+        "institucionales.",
+        [
+            ("Como una propuesta de inversión pública en obras", "La columna niega expresamente que se trate de un programa económico."),
+            ("Como una promesa imposible por falta de recursos", "El periodista no objeta el financiamiento sino sus implicancias institucionales."),
+            ("Como una crítica a los empresarios que no contratan", "El discurso no dirige su reproche a los empresarios."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "¿Qué explica que un mismo diagnóstico de la crisis pudiera conducir a "
+        "salidas políticas opuestas en la Europa de entreguerras?",
+        "El diagnóstico no determinaba qué hacer con las instituciones",
+        "Las dos fuentes coinciden en los hechos: hay desocupación, hay miseria y "
+        "el Parlamento no supo responder. Ese punto no está en disputa.\nLo que las "
+        "separa es qué se concluye. Para una, la falla del sistema representativo "
+        "prueba que debe ser reemplazado; para la otra, prueba que debe funcionar "
+        "mejor, sin que la incapacidad de un Parlamento autorice a suprimir el "
+        "pluralismo.\nPor eso el período no se explica solo por la Depresión. La "
+        "crisis económica fue común a muchos países y las salidas fueron distintas, "
+        "desde el New Deal hasta los regímenes totalitarios: entre el problema y la "
+        "respuesta hubo una decisión política.",
+        [
+            ("Que la crisis económica afectó a cada país con distinta intensidad", "Las fuentes discuten qué hacer, no cuán profunda fue la crisis en cada lugar."),
+            ("Que solo algunos países contaban con Parlamento en esos años", "El desacuerdo es sobre el valor del Parlamento, no sobre su existencia."),
+            ("Que unos disponían de recursos y otros no para enfrentarla", "Ninguna de las dos fuentes plantea el problema en esos términos."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "La Fuente 2 sostiene que la fuerza del discurso está en lo que da por "
+        "resuelto y no en lo que promete. ¿Qué está señalando?",
+        "Que las premisas pasan sin examen arrastradas por el acuerdo inicial",
+        "El discurso instala varias afirmaciones sin argumentarlas: que la nación "
+        "tiene una sola voluntad, que discutir es lo que produjo la crisis, que "
+        "discrepar equivale a debilitar el organismo.\nNinguna se presenta a "
+        "discusión. Aparecen como el suelo sobre el que se construyen las promesas, "
+        "y el oyente que asiente con la descripción inicial las acepta sin "
+        "advertirlo.\nPor eso la columna dirige su análisis ahí y no a las promesas "
+        "de trabajo y pan, que son verificables y podrán evaluarse después: lo que "
+        "ya está decidido antes de cualquier medida es el marco desde el cual se "
+        "decidirá todo lo demás.",
+        [
+            ("Que las promesas económicas del discurso eran razonables", "La columna las cuestiona expresamente al final."),
+            ("Que el dirigente ocultaba deliberadamente sus verdaderos planes", "La columna sostiene lo contrario: los planes están anunciados en el vocabulario."),
+            ("Que el auditorio no comprendía el contenido del discurso", "El periodista explica por qué lo escuchan: la descripción inicial es exacta."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "¿Qué precaución exige que la Fuente 2 haya sido escrita por un periodista "
+        "exiliado y publicada en un diario extranjero?",
+        "Escribe desde una posición perjudicada por el régimen que analiza",
+        "El exilio no es un dato biográfico neutro: indica que el autor fue "
+        "desplazado por el proceso sobre el que escribe y tiene un interés directo "
+        "en cómo se lo juzgue.\nQue publique fuera del país agrega otra condición: "
+        "escribe para un público extranjero, y eso influye en qué explica, qué "
+        "subraya y qué supone conocido.\nNada de esto invalida su análisis, que se "
+        "sostiene o cae por sus propios argumentos sobre el texto que examina. "
+        "Obliga, eso sí, a contrastarlo con otras fuentes del período y a no leerlo "
+        "como una descripción desinteresada.",
+        [
+            ("Debería descartarse por escribir contra el régimen de su país", "Sesgo no equivale a falsedad: una fuente interesada se contrasta, no se descarta."),
+            ("Su condición de exiliado garantiza mayor objetividad", "Ninguna posición garantiza objetividad por sí misma."),
+            ("Al ser periodista, su texto no sirve como fuente histórica", "El periodismo de época es una de las fuentes más usadas del período."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "Un manual usa solo la Fuente 1 para explicar el ascenso de los "
+        "totalitarismos. ¿Qué queda fuera de esa explicación?",
+        "Que hubo contemporáneos que vieron y advirtieron el mecanismo",
+        "La Fuente 1 explica bien la oferta: qué prometían estos movimientos y con "
+        "qué argumentos.\nLo que desaparece al usarla sola es la existencia de "
+        "crítica contemporánea. La Fuente 2 muestra que el mecanismo fue "
+        "identificado mientras ocurría, con precisión y por escrito.\nLa diferencia "
+        "no es menor para entender el período. Si nadie lo advirtió, el desenlace "
+        "parece inevitable; si fue advertido y aun así ocurrió, la pregunta pasa a "
+        "ser por qué esas advertencias no bastaron, que es una pregunta histórica "
+        "mucho más productiva.",
+        [
+            ("Que el discurso describía correctamente la situación económica", "Eso está en la propia Fuente 1 y no se pierde al usarla sola."),
+            ("Que los totalitarismos surgieron después de la Segunda Guerra", "El período de entreguerras es anterior al conflicto."),
+            ("Que existían partidos políticos en esos países", "El propio discurso lo indica al proponer terminar con ellos."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "¿Qué distingue a un régimen totalitario de un gobierno autoritario "
+        "corriente, según lo que anuncia la Fuente 1?",
+        "No solo controla el poder: niega que existan opiniones legítimas",
+        "Un gobierno autoritario suprime o restringe la competencia por el poder, "
+        "pero suele admitir que existen intereses distintos a los que reprime.\nEl "
+        "discurso de la Fuente 1 va más lejos. No propone ganar la disputa entre "
+        "posiciones: propone que la disputa no debía existir, porque la nación es "
+        "un cuerpo único con una sola voluntad.\nDe esa premisa se sigue lo que la "
+        "Fuente 2 identifica: quien discrepa no es un opositor a controlar sino una "
+        "anomalía a eliminar. Esa pretensión sobre las conciencias, y no solo sobre "
+        "las instituciones, es lo propio del totalitarismo.",
+        [
+            ("Gobierna sin elecciones periódicas para renovar autoridades", "También los regímenes autoritarios suelen prescindir de ellas: no es el rasgo distintivo."),
+            ("Interviene en la economía mediante obras públicas", "La intervención económica no distingue a un régimen totalitario de otros."),
+            ("Concentra el mando en una sola persona", "La concentración personal del mando es común a muchos regímenes autoritarios."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_fuentes", "dificil",
+        "El periodista de la Fuente 2 propone mirar el vocabulario del discurso "
+        "antes que sus promesas. ¿Qué operación de análisis de fuentes está "
+        "aplicando?",
+        "Examinar qué presupone el texto además de lo que afirma",
+        "Toda fuente afirma cosas y, al mismo tiempo, da otras por sentadas en la "
+        "manera de nombrarlas. Lo primero se discute; lo segundo suele pasar "
+        "inadvertido.\nEl periodista trabaja sobre esa segunda capa. Se detiene en "
+        "una palabra —organismo debilitado desde adentro— y muestra qué queda "
+        "establecido por el solo hecho de usarla: que el opositor es una anomalía y "
+        "no una parte.\nEs una operación aplicable a cualquier documento. Preguntar "
+        "qué supone un texto para poder decir lo que dice suele revelar más que "
+        "discutir sus conclusiones, porque ahí está lo que su autor no esperaba "
+        "tener que defender.",
+        [
+            ("Verificar si los datos económicos del discurso son correctos", "El periodista ya concedió que la descripción de la crisis es exacta."),
+            ("Identificar la fecha y el lugar en que fue pronunciado", "Situar la fuente es un paso previo, no la operación que aquí realiza."),
+            ("Comparar el discurso con otros del mismo dirigente", "La columna trabaja sobre este texto, sin recurrir a otros."),
+        ],
+    ),
     _ql(
         "chile_xix_nacion", "his_chile_xix", "facil",
         "Según el texto, ¿qué ocurrió con los ensayos constitucionales de la década "
