@@ -32,6 +32,10 @@ class DemoQuestionOut(BaseModel):
     id: int
     difficulty: Difficulty
     stem: str
+    #: Figura de la pregunta, cuando la tiene. Va por la misma razón que el
+    #: texto de Lectora: hay preguntas que no se pueden contestar sin ella, y
+    #: la demo es la primera pantalla que ve alguien sin cuenta.
+    image_url: str | None = None
     #: Prueba y eje del temario a los que pertenece la pregunta. La demo los
     #: expone para poder cerrar con un desglose por eje —"fallaste 2 de 2 en
     #: Geometría"— en vez de un porcentaje suelto que no dice qué estudiar.

@@ -74,6 +74,7 @@ def _a_salida(question: Question) -> DemoQuestionOut:
         id=question.id,
         difficulty=question.difficulty,
         stem=question.stem,
+        image_url=question.image_url,
         subject=question.skill_node.subject,
         axis=question.skill_node.axis,
         axis_label=AXIS_LABELS.get(
