@@ -182,3 +182,40 @@ def test_el_arbol_dice_cuantas_respuestas_hacen_falta_para_dominar(
 
     assert nodo["min_attempts_to_master"] == skill_tree_service.MIN_ATTEMPTS_FOR_UNLOCK
     assert nodo["unlock_threshold"] == 0.75
+
+
+def test_la_recomendacion_sale_del_arbol_que_se_esta_mirando(
+    client: TestClient, db_session: Session, register_user
+) -> None:
+    """"Empieza por acá" recomendaba SIEMPRE un nodo de M1.
+
+    `get_user_skill_tree` sin argumento devuelve M1 por defecto, y la
+    recomendación lo llamaba así. En la práctica, alguien que abría el árbol de
+    Ciencias leía "Medidas de posición" —un nodo de Matemática M1— y al tocar
+    "Practicar ahora" terminaba fuera de la prueba que estaba preparando.
+    """
+    from paes_api.modules.skill_tree.models import Subject
+
+    nodo_m1 = _make_node(db_session, "reco_m1")
+    nodo_cie = SkillNode(
+        code="reco_ciencias",
+        name="Un tema de Ciencias",
+        axis=SkillAxis.BIOLOGIA,
+        subject=Subject.CIENCIAS,
+        tier=1,
+        unlock_threshold=0.75,
+    )
+    db_session.add(nodo_cie)
+    db_session.commit()
+
+    headers, _ = register_user(email="reco-por-prueba@milpaes.cl")
+
+    m1 = client.get("/api/skill-tree/recommended", headers=headers).json()
+    assert m1 is not None and m1["code"] == nodo_m1.code
+
+    ciencias = client.get(
+        "/api/skill-tree/recommended", params={"subject": "ciencias"}, headers=headers
+    ).json()
+    assert ciencias is not None, "el árbol de Ciencias tiene nodos: debe recomendar uno"
+    assert ciencias["code"] == "reco_ciencias"
+    assert ciencias["subject"] == "ciencias", "la recomendación salió de otra prueba"

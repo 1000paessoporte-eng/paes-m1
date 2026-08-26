@@ -253,6 +253,30 @@ def main() -> None:
 
         print(f"preguntas en produccion: {len(filas)}")
         print(f"  sobran (ya no estan en seed_data):        {len(sobran)}")
+        # Lo que cuesta borrarlas, en ensayos de alumnos reales.
+        #
+        # El borrado arrastra las filas de exam_answers y
+        # exam_attempt_questions de esas preguntas, y hasta ahora eso se
+        # informaba como "N filas borradas", sin decir que eran respuestas de
+        # alguien. En produccion quedaron cinco ensayos entregados SIN NINGUNA
+        # pregunta y con su puntaje intacto —uno marcaba 823— porque perdieron
+        # todo su contenido por esta via. Verlo antes de aplicar es la
+        # diferencia entre retirar una pregunta y romperle el historial a un
+        # estudiante sin enterarse.
+        if sobran:
+            cur.execute(
+                "select count(distinct q.attempt_id), count(distinct a.user_id) "
+                "from exam_attempt_questions q "
+                "join exam_attempts a on a.id = q.attempt_id "
+                "where q.question_id = any(%s) and a.status = 'SUBMITTED'",
+                ([q[0] for q in sobran],),
+            )
+            ensayos_tocados, alumnos_tocados = cur.fetchone()
+            if ensayos_tocados:
+                print(
+                    f"    -> AFECTA a {ensayos_tocados} ensayos ya rendidos "
+                    f"de {alumnos_tocados} alumnos"
+                )
         print(f"  con alternativas distintas (se reparan):  {len(difieren_alt)}")
         print(
             f"    -> {alt_corregidas} alternativas corregidas, "
@@ -408,6 +432,23 @@ def main() -> None:
                     f"delete from {t} where question_id = any(%s)", (borrar_preguntas,)
                 )
                 print(f"  {t}: {cur.rowcount} filas borradas")
+
+            # Un ensayo que se quedo sin ninguna pregunta ya no dice nada del
+            # alumno, y su puntaje pasa a ser un numero suelto sin respaldo.
+            # Se marca como no representativo para que salga del historial, del
+            # mejor puntaje y del panel, igual que un ensayo entregado en
+            # blanco. No se borra: el intento existio y su registro se queda.
+            cur.execute(
+                "update exam_attempts a set representativo = false "
+                "where a.status = 'SUBMITTED' and a.representativo "
+                "and not exists (select 1 from exam_attempt_questions q "
+                "                where q.attempt_id = a.id)"
+            )
+            if cur.rowcount:
+                print(
+                    f"  {cur.rowcount} ensayos quedaron sin preguntas y dejan "
+                    "de contar en las estadisticas"
+                )
             cur.execute("delete from questions where id = any(%s)", (borrar_preguntas,))
             print(f"  questions: {cur.rowcount} borradas")
 
