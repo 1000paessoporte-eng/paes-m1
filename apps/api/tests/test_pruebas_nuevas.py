@@ -197,16 +197,36 @@ def test_cada_texto_de_lectora_sostiene_varias_preguntas():
         )
 
 
-def test_lectora_cubre_sus_tres_habilidades_en_cada_dificultad():
-    """El ensayo mezcla dificultades; si un eje solo tiene preguntas fáciles,
-    el alumno que lo domina nunca encuentra dónde equivocarse."""
-    from paes_api.seed_data import QUESTIONS_LECTORA
+def test_lectora_cubre_cada_tarea_lectora_en_mas_de_una_dificultad():
+    """El ensayo mezcla dificultades; si un nodo solo tiene preguntas fáciles,
+    el alumno que lo domina nunca encuentra dónde equivocarse.
 
-    ejes = {q["skill_node"] for q in QUESTIONS_LECTORA}
-    assert ejes == {"lec_localizar", "lec_interpretar", "lec_evaluar"}
-    for eje in ejes:
-        dificultades = {q["difficulty"] for q in QUESTIONS_LECTORA if q["skill_node"] == eje}
-        assert len(dificultades) >= 2, f"{eje} solo tiene preguntas {dificultades}"
+    Antes esto comprobaba las tres habilidades. Ahora los nodos son las tareas
+    lectoras del temario, que son doce, y la exigencia es la misma para cada
+    una: ningún nodo puede quedar con una sola dificultad ni sin preguntas.
+    """
+    from paes_api.seed_data import QUESTIONS_LECTORA, SKILL_NODES_LECTORA
+
+    declarados = {code for code, *_ in SKILL_NODES_LECTORA}
+    usados = {q["skill_node"] for q in QUESTIONS_LECTORA}
+    assert usados == declarados, (
+        f"sin preguntas: {declarados - usados}; sin nodo: {usados - declarados}"
+    )
+    for nodo in sorted(declarados):
+        dificultades = {q["difficulty"] for q in QUESTIONS_LECTORA if q["skill_node"] == nodo}
+        assert len(dificultades) >= 2, f"{nodo} solo tiene preguntas {dificultades}"
+
+
+def test_cada_tarea_lectora_tiene_su_leccion():
+    """Un nodo sin lección manda al alumno a practicar sin haber estudiado.
+
+    En las otras pruebas hay una lección por nodo y en Lectora también debe
+    haberla: es la mitad "aprender" del árbol.
+    """
+    from paes_api.seed_data import LESSONS, SKILL_NODES_LECTORA
+
+    faltan = [code for code, *_ in SKILL_NODES_LECTORA if code not in LESSONS]
+    assert not faltan, f"nodos de Lectora sin lección: {faltan}"
 
 
 def test_las_figuras_de_las_preguntas_existen_y_estan_descritas():
