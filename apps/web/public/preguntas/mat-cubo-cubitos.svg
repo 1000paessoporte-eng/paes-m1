@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 344" width="400" height="344" role="img">
+  <title>Cubo de 6 cm de arista con sus caras divididas en cuadrados de 2 cm</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M80 120 L260 120 L260 300 L80 300 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M80 120 L150 50 L330 50 L260 120 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M260 120 L330 50 L330 230 L260 300 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="140" y1="120" x2="140" y2="300" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="200" y1="120" x2="200" y2="300" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="80" y1="180" x2="260" y2="180" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="80" y1="240" x2="260" y2="240" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="103" y1="97" x2="283" y2="97" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="126" y1="74" x2="306" y2="74" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="210" y1="50" x2="140" y2="120" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="270" y1="50" x2="200" y2="120" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="283" y1="97" x2="283" y2="277" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="306" y1="74" x2="306" y2="254" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="260" y1="180" x2="330" y2="110" stroke="#4b5563" stroke-width="1.2"/>
+    <line x1="260" y1="240" x2="330" y2="170" stroke="#4b5563" stroke-width="1.2"/>
+    <text x="170" y="326" text-anchor="middle" font-size="15" fill="#111827">6 cm</text>
+  </g>
+</svg>

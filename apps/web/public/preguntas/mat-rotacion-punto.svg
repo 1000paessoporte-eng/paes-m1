@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 361.333" width="420" height="361.333" role="img">
+  <title>Plano cartesiano con el punto M en (3, 2) y el punto M prima en (-3, -2), unidos por una línea punteada que pasa por el origen</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="34" y1="34" x2="34" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="63.3333" y1="34" x2="63.3333" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="92.6667" y1="34" x2="92.6667" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="122" y1="34" x2="122" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="151.333" y1="34" x2="151.333" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="180.667" y1="34" x2="180.667" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="210" y1="34" x2="210" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="239.333" y1="34" x2="239.333" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="268.667" y1="34" x2="268.667" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="298" y1="34" x2="298" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="327.333" y1="34" x2="327.333" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="356.667" y1="34" x2="356.667" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="386" y1="34" x2="386" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="327.333" x2="386" y2="327.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="298" x2="386" y2="298" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="268.667" x2="386" y2="268.667" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="239.333" x2="386" y2="239.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="210" x2="386" y2="210" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="180.667" x2="386" y2="180.667" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="151.333" x2="386" y2="151.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="122" x2="386" y2="122" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="92.6667" x2="386" y2="92.6667" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="63.3333" x2="386" y2="63.3333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="34" x2="386" y2="34" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="24" y1="180.667" x2="400" y2="180.667" stroke="#111827" stroke-width="2"/>
+    <line x1="210" y1="337.333" x2="210" y2="20" stroke="#111827" stroke-width="2"/>
+    <path d="M400 180.667 L390 175.667 L390 185.667 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M210 20 L205 30 L215 30 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <text x="398" y="168.667" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">x</text>
+    <text x="224" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">y</text>
+    <text x="34" y="200.667" text-anchor="middle" font-size="12" fill="#4b5563">-6</text>
+    <text x="92.6667" y="200.667" text-anchor="middle" font-size="12" fill="#4b5563">-4</text>
+    <text x="151.333" y="200.667" text-anchor="middle" font-size="12" fill="#4b5563">-2</text>
+    <text x="268.667" y="200.667" text-anchor="middle" font-size="12" fill="#4b5563">2</text>
+    <text x="327.333" y="200.667" text-anchor="middle" font-size="12" fill="#4b5563">4</text>
+    <text x="386" y="200.667" text-anchor="middle" font-size="12" fill="#4b5563">6</text>
+    <text x="200" y="303" text-anchor="end" font-size="12" fill="#4b5563">-4</text>
+    <text x="200" y="244.333" text-anchor="end" font-size="12" fill="#4b5563">-2</text>
+    <text x="200" y="127" text-anchor="end" font-size="12" fill="#4b5563">2</text>
+    <text x="200" y="68.3333" text-anchor="end" font-size="12" fill="#4b5563">4</text>
+    <circle cx="298" cy="122" r="4.5" fill="#111827"/>
+    <text x="310" y="112" text-anchor="start" font-size="15" font-weight="700" fill="#111827">M</text>
+    <circle cx="122" cy="239.333" r="4.5" fill="#111827"/>
+    <text x="110" y="259.333" text-anchor="end" font-size="15" font-weight="700" fill="#111827">M'</text>
+    <line x1="298" y1="122" x2="122" y2="239.333" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <circle cx="210" cy="180.667" r="4" fill="#111827"/>
+  </g>
+</svg>

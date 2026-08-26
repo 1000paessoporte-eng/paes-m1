@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 296" width="520" height="296" role="img">
+  <title>Rectángulo cuyos lados miden x más 3 y x más 2</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M120 70 L460 70 L460 240 L120 240 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="290" y="266" text-anchor="middle" font-size="15" fill="#111827">x + 3</text>
+    <text x="108" y="160" text-anchor="end" font-size="15" fill="#111827">x + 2</text>
+  </g>
+</svg>

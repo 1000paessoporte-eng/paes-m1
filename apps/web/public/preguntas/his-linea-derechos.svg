@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250" role="img">
+  <title>Línea de tiempo entre 1940 y 2000 con tres hitos marcados: en 1948 la Declaración Universal de Derechos Humanos, en 1966 los pactos internacionales de derechos y en 1989 la Convención sobre los Derechos del Niño</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="90" y1="190" x2="540" y2="190" stroke="#111827" stroke-width="2.4"/>
+    <circle cx="150" cy="190" r="6" fill="#111827"/>
+    <line x1="150" y1="190" x2="150" y2="150" stroke="#4b5563" stroke-width="1.2"/>
+    <text x="150" y="124" text-anchor="middle" font-size="12" fill="#111827">Declaración Universal</text>
+    <text x="150" y="142" text-anchor="middle" font-size="12" fill="#111827">de Derechos Humanos</text>
+    <text x="150" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">1948</text>
+    <circle cx="285" cy="190" r="6" fill="#111827"/>
+    <line x1="285" y1="190" x2="285" y2="150" stroke="#4b5563" stroke-width="1.2"/>
+    <text x="285" y="124" text-anchor="middle" font-size="12" fill="#111827">Pactos internacionales</text>
+    <text x="285" y="142" text-anchor="middle" font-size="12" fill="#111827">de derechos</text>
+    <text x="285" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">1966</text>
+    <circle cx="457.5" cy="190" r="6" fill="#111827"/>
+    <line x1="457.5" y1="190" x2="457.5" y2="150" stroke="#4b5563" stroke-width="1.2"/>
+    <text x="457.5" y="124" text-anchor="middle" font-size="12" fill="#111827">Convención sobre los</text>
+    <text x="457.5" y="142" text-anchor="middle" font-size="12" fill="#111827">Derechos del Niño</text>
+    <text x="457.5" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">1989</text>
+    <line x1="90" y1="182" x2="90" y2="198" stroke="#111827" stroke-width="1.6"/>
+    <text x="90" y="242" text-anchor="middle" font-size="11" fill="#4b5563">1940</text>
+    <line x1="240" y1="182" x2="240" y2="198" stroke="#111827" stroke-width="1.6"/>
+    <text x="240" y="242" text-anchor="middle" font-size="11" fill="#4b5563">1960</text>
+    <line x1="390" y1="182" x2="390" y2="198" stroke="#111827" stroke-width="1.6"/>
+    <text x="390" y="242" text-anchor="middle" font-size="11" fill="#4b5563">1980</text>
+    <line x1="540" y1="182" x2="540" y2="198" stroke="#111827" stroke-width="1.6"/>
+    <text x="540" y="242" text-anchor="middle" font-size="11" fill="#4b5563">2000</text>
+  </g>
+</svg>

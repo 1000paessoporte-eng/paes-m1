@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 276" width="520" height="276" role="img">
+  <title>Cancha rectangular de 24 por 10 metros con una diagonal</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M100 80 L436 80 L436 220 L100 220 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="100" y1="220" x2="436" y2="80" stroke="#111827" stroke-width="2"/>
+    <path d="M436 93 L423 93 L423 80" fill="none" stroke="#111827" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="268" y="248" text-anchor="middle" font-size="15" fill="#111827">24 m</text>
+    <text x="88" y="156" text-anchor="end" font-size="15" fill="#111827">10 m</text>
+    <text x="268" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">?</text>
+  </g>
+</svg>

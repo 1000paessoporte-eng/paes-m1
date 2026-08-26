@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" width="520" height="340" role="img">
+  <title>Rampa apoyada en el suelo: un triángulo rectángulo con base de 24 metros, altura de 7 metros y el ángulo θ que forma la rampa con el suelo</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="80" y1="290" x2="470" y2="290" stroke="#111827" stroke-width="2.4"/>
+    <path d="M110 290 L410 290 L410 202 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M180 290 A70 70 0 0 0 177.2 270.4" fill="none" stroke="#111827" stroke-width="1.6"/>
+    <text x="196" y="278" text-anchor="start" font-size="15" fill="#111827">θ</text>
+    <path d="M410 277 L397 277 L397 290" fill="none" stroke="#111827" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="260" y="314" text-anchor="middle" font-size="15" fill="#111827">24 m</text>
+    <text x="424" y="246" text-anchor="start" font-size="15" fill="#111827">7 m</text>
+  </g>
+</svg>

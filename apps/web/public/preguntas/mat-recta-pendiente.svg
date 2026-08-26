@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.222 430" width="470.222" height="430" role="img">
+  <title>Recta que corta el eje y en 3 y baja una unidad cada dos de x</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="34" y1="34" x2="34" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="74.2222" y1="34" x2="74.2222" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="114.444" y1="34" x2="114.444" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="154.667" y1="34" x2="154.667" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="194.889" y1="34" x2="194.889" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="235.111" y1="34" x2="235.111" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="275.333" y1="34" x2="275.333" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="315.556" y1="34" x2="315.556" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="355.778" y1="34" x2="355.778" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="396" y1="34" x2="396" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="436.222" y1="34" x2="436.222" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="396" x2="436.222" y2="396" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="355.778" x2="436.222" y2="355.778" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="315.556" x2="436.222" y2="315.556" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="275.333" x2="436.222" y2="275.333" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="235.111" x2="436.222" y2="235.111" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="194.889" x2="436.222" y2="194.889" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="154.667" x2="436.222" y2="154.667" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="114.444" x2="436.222" y2="114.444" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="74.2222" x2="436.222" y2="74.2222" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="34" y1="34" x2="436.222" y2="34" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="24" y1="275.333" x2="450.222" y2="275.333" stroke="#111827" stroke-width="2"/>
+    <line x1="114.444" y1="406" x2="114.444" y2="20" stroke="#111827" stroke-width="2"/>
+    <path d="M450.222 275.333 L440.222 270.333 L440.222 280.333 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M114.444 20 L109.444 30 L119.444 30 Z" fill="#111827" stroke="#111827" stroke-width="1" stroke-linejoin="round"/>
+    <text x="448.222" y="263.333" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">x</text>
+    <text x="128.444" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">y</text>
+    <text x="34" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">-2</text>
+    <text x="74.2222" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">-1</text>
+    <text x="154.667" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">1</text>
+    <text x="194.889" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">2</text>
+    <text x="235.111" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">3</text>
+    <text x="275.333" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">4</text>
+    <text x="315.556" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">5</text>
+    <text x="355.778" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">6</text>
+    <text x="396" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">7</text>
+    <text x="436.222" y="295.333" text-anchor="middle" font-size="12" fill="#4b5563">8</text>
+    <text x="104.444" y="401" text-anchor="end" font-size="12" fill="#4b5563">-3</text>
+    <text x="104.444" y="360.778" text-anchor="end" font-size="12" fill="#4b5563">-2</text>
+    <text x="104.444" y="320.556" text-anchor="end" font-size="12" fill="#4b5563">-1</text>
+    <text x="104.444" y="240.111" text-anchor="end" font-size="12" fill="#4b5563">1</text>
+    <text x="104.444" y="199.889" text-anchor="end" font-size="12" fill="#4b5563">2</text>
+    <text x="104.444" y="159.667" text-anchor="end" font-size="12" fill="#4b5563">3</text>
+    <text x="104.444" y="119.444" text-anchor="end" font-size="12" fill="#4b5563">4</text>
+    <text x="104.444" y="79.2222" text-anchor="end" font-size="12" fill="#4b5563">5</text>
+    <text x="104.444" y="39" text-anchor="end" font-size="12" fill="#4b5563">6</text>
+    <path d="M34 114.444 L436.222 315.556" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="114.444" cy="154.667" r="4" fill="#111827"/>
+    <text x="126.444" y="144.667" text-anchor="start" font-size="13" fill="#111827">(0 ; 3)</text>
+    <circle cx="275.333" cy="235.111" r="4" fill="#111827"/>
+    <text x="287.333" y="225.111" text-anchor="start" font-size="13" fill="#111827">(4 ; 1)</text>
+  </g>
+</svg>

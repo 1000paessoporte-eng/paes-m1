@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" width="540" height="360" role="img">
+  <title>Gráfico de barras con el deporte favorito de 200 personas: fútbol 60, tenis 30, natación 40 y otros 70</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="298" x2="510" y2="298" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="264" x2="510" y2="264" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="230" x2="510" y2="230" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="196" x2="510" y2="196" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="162" x2="510" y2="162" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="128" x2="510" y2="128" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="94" x2="510" y2="94" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="60" x2="510" y2="60" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="510" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="298" x2="510" y2="298" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="298" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="130.25" y1="298" x2="130.25" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="130.25" y="322" text-anchor="middle" font-size="13" fill="#4b5563">Fútbol</text>
+    <line x1="238.75" y1="298" x2="238.75" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="238.75" y="322" text-anchor="middle" font-size="13" fill="#4b5563">Tenis</text>
+    <line x1="347.25" y1="298" x2="347.25" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="347.25" y="322" text-anchor="middle" font-size="13" fill="#4b5563">Natación</text>
+    <line x1="455.75" y1="298" x2="455.75" y2="304" stroke="#111827" stroke-width="1.6"/>
+    <text x="455.75" y="322" text-anchor="middle" font-size="13" fill="#4b5563">Otros</text>
+    <line x1="70" y1="298" x2="76" y2="298" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="303" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="264" x2="76" y2="264" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="269" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <line x1="70" y1="230" x2="76" y2="230" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="235" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <line x1="70" y1="196" x2="76" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="201" text-anchor="end" font-size="13" fill="#4b5563">30</text>
+    <line x1="70" y1="162" x2="76" y2="162" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="167" text-anchor="end" font-size="13" fill="#4b5563">40</text>
+    <line x1="70" y1="128" x2="76" y2="128" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="133" text-anchor="end" font-size="13" fill="#4b5563">50</text>
+    <line x1="70" y1="94" x2="76" y2="94" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="99" text-anchor="end" font-size="13" fill="#4b5563">60</text>
+    <line x1="70" y1="60" x2="76" y2="60" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="65" text-anchor="end" font-size="13" fill="#4b5563">70</text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">80</text>
+    <text x="293" y="344" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Deporte favorito</text>
+    <text x="20" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 162)">Cantidad de personas</text>
+    <rect x="100.412" y="94" width="59.675" height="204" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <rect x="208.913" y="196" width="59.675" height="102" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <rect x="317.413" y="162" width="59.675" height="136" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <rect x="425.913" y="60" width="59.675" height="238" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+  </g>
+</svg>

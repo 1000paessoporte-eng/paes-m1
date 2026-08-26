@@ -249,6 +249,76 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
 
 # Enunciado (recortado) -> valor esperado, recalculado acá de forma independiente.
 COMPROBACIONES: dict[str, str] = {
+    # --- Preguntas con figura (Historia) ---
+    "se informa un grupo de 500": f"{round(500 * 0.42)} personas",
+    "cuántos años pasaron entre la": f"{1989 - 1948} años",
+    "subió el costo total de": f"{round((4320 - 3600) / 3600 * 100)}%",
+    "200.000 millones de dólares": f"{round(200_000 * 0.12):,}".replace(",", ".") + " millones",
+    # --- Preguntas con figura (M2) ---
+    "condiciones de un crédito de consumo": f"{18 * 84_000 - 1_200_000:,}".replace(",", "."),
+    "energía libera un sismo de magnitud 6": f"{10**6 // 10**4} veces",
+    "cateto marcado con el signo de interrogación": f"{round(10 * 0.5)} cm",
+    "tangente del ángulo θ": str(Fraction(7, 24)),
+    "el ángulo AOB tiene su vértice en el centro": f"{80 // 2}°",
+    "las cuerdas AB y CD se cortan": str(6 * 4 // 8),
+    "área de la superficie de la esfera": f"{round(4 * 3.14 * 5**2)} cm²",
+    "volumen de aire que encierra": f"{2 / 3 * 3.14 * 6**3:.2f} m³".replace(".", ","),
+    "pendiente de la recta que aparece": str(Fraction(5 - 2, 6 - 2)),
+    "elige al azar una de las mujeres": f"{22 / 50:.2f}".replace(".", ","),
+    "probabilidad de que un estudiante elegido al azar apruebe":
+        f"{0.7 * 0.9 + 0.3 * 0.4:.2f}".replace(".", ","),
+    "menús distintos de entrada y plato de fondo": f"{2 * 3} menús",
+    "sin repetir ninguna, ¿cuántos números": f"{5 * 4 * 3 * 2} números",
+    "probabilidad de obtener exactamente dos caras": f"{comb(4, 2) / 2**4:.3f}".replace(".", ","),
+    # --- Preguntas con figura (M1, segundo lote) ---
+    "100 celdas iguales": f"{3 * 10 + 5}%",
+    "deporte favorito de un grupo de 200 personas": f"{30 * 100 // 200}%",
+    "cuadrado de la figura tiene un área de 144": str(int(sqrt(144))),
+    "cubo de la figura tiene un volumen de 64": str(round(64 ** (1 / 3))),
+    "área del triángulo de la figura": str(14 * 8 // 2),
+    "círculo con su diámetro acotado": f"{3.14 * 10:.1f}".replace(".", ","),
+    "cuadrado con un círculo inscrito": f"{144 - 3.14 * 6**2:.2f}".replace(".", ","),
+    "conocen la hipotenusa y uno": str(int(sqrt(26**2 - 24**2))),
+    "desarrollo de un cilindro": f"{2 * 3.14 * 3**2 + 2 * 3.14 * 3 * 7:.1f}".replace(".", ","),
+    "volumen de la piscina": str(10 * 6 * 2),
+    "vector que traslada A hasta B": f"({7 - 2}, {4 - 1})",
+    "distancia real entre ellas": str(5 * 20 // 2),
+    "prefiere fútbol o básquetbol": f"{round((0.30 + 0.20) * 100)}%",
+    "balanza de la figura está en equilibrio": f"{(5 + 5 + 2 - 2) // 2} kg",
+    "conviene contratar el plan A": str(200),
+    "sumar sus puntos": str(Fraction(6, 36)),
+    "ocho fichas iguales, numeradas": str(Fraction(4 + 2 - 1, 8)),
+    # --- Preguntas con figura (M1) ---
+    # El dato sale del dibujo, pero la aritmética se recalcula igual que en las
+    # demás: si alguien edita la figura y no la respuesta, esto falla.
+    "terreno con forma de L": str(12 * 8 - 5 * 3),                      # 81 m²
+    "área del trapecio de la figura": str((10 + 6) // 2 * 4),           # 32 cm²
+    "la parte sombreada del círculo": f"{3.14 * 6**2 / 4:.2f}".replace(".", ","),
+    "área del paralelogramo de la figura": str(10 * 6),                 # 60 cm²
+    "escalera está apoyada en un muro": str(int(sqrt(13**2 - 5**2))),   # 12 m
+    "rombo de la figura tiene dibujadas": str(4 * int(sqrt(8**2 + 6**2))),
+    "área del trapecio isósceles": str((14 + 8) // 2 * int(sqrt(5**2 - 3**2))),
+    "diagonal de la cancha rectangular": str(int(sqrt(24**2 + 10**2))),
+    "DE es paralela a BC": f"{float(Fraction(6 * 5, 4)):.1f}".replace(".", ","),
+    "poste y una torre proyectan": str(round(9 * 2 / 1.5)),             # 12 m
+    "T y T' de la figura son semejantes": str(8 * 9 // 6),              # 12 cm
+    "plano de la figura está dibujado a escala": str((4 * 2) * (3 * 2)),
+    "desarrollo plano de una caja": str(6 * 4 * 3),                     # 72 cm³
+    "volumen del cilindro de la figura": f"{round(3.14 * 5**2 * 10):,}".replace(",", "."),
+    "superficie del paralelepípedo": str(2 * (8 * 5 + 8 * 3 + 5 * 3)),
+    "dividido en cubitos iguales": str((6 // 2) ** 3),                  # 27
+    "precio de un producto según los kilos": f"{8 * (3000 // 2):,}".replace(",", "."),
+    "trabajadores de una obra con los días": str(3 * 8 // 12),          # 2 días
+    "agua acumulada por dos llaves": str(24 // 3 * 5),                  # 40 L
+    "de barras muestra las notas de un curso":
+        f"{float(Fraction(4 * 4 + 5 * 6 + 6 * 8 + 7 * 2, 4 + 6 + 8 + 2)):.1f}".replace(".", ","),
+    "cómo llegan al colegio sus 400": str(round(400 * 0.25)),           # 100
+    "tienen 30 años o más": str(9 + 4),                                 # 13
+    "resume los puntajes de un curso": str(60 - 35),                    # 25 puntos
+    "dos extracciones seguidas de una bolsa": str(Fraction(3, 5) * Fraction(2, 4)),
+    "dividida en ocho sectores iguales": str(Fraction(3, 8)),
+    "no practique ninguno de los dos": str(Fraction(5, 30)),
+    "urnas de la figura se saca una bolita": str(Fraction(3, 8) * Fraction(2, 6)),
     # --- M2: las cuatro unidades que no tenian nodo ---
     "¿Cuál es el valor de sen(90°)?": "1",
     "¿Cuál es el valor de cos(0°)?": "1",

@@ -19541,6 +19541,1929 @@ QUESTIONS += [
 ]
 
 
+# ---------- Matemática con figura: geometría ----------
+# Las primeras preguntas de M1 que se apoyan en una imagen. En la PAES de
+# Matemática la geometría casi siempre entra por un dibujo —un terreno acotado,
+# un cuerpo con sus medidas, una figura en la cuadrícula—, y hasta acá el banco
+# entero era texto: el alumno leía las medidas en vez de leerlas de la figura,
+# que es justo la habilidad que la prueba mide.
+#
+# Las figuras son PROPIAS y viven en `apps/web/public/preguntas/`. El enunciado
+# no repite lo que la figura muestra: si el dato se puede leer en el texto, la
+# imagen sobra.
+QUESTIONS += [
+    _q(
+        "geo_plana", "medio",
+        "El plano muestra un terreno con forma de L y sus medidas en metros. ¿Cuál es su área?",
+        "81 m²",
+        "El terreno es un rectángulo al que le falta un pedazo, así que conviene "
+        "completarlo y después descontar lo que sobra.\n\n"
+        "1) Rectángulo completo: 12 · 8 = 96 m².\n"
+        "2) El escalón que falta mide 12 − 7 = 5 m de ancho y 8 − 5 = 3 m de alto.\n"
+        "3) Área del escalón: 5 · 3 = 15 m².\n"
+        "4) Área del terreno: 96 − 15 = 81 m².\n\n"
+        "Las dos medidas del escalón no están escritas en el plano: salen de "
+        "restar las que sí están.",
+        [
+            ("96 m²", "Es el rectángulo completo: no descontó el escalón que le falta al terreno."),
+            ("111 m²", "Sumó el área del escalón en lugar de restarla."),
+            ("56 m²", "Calculó solo la parte alta del terreno, de 7 m por 8 m."),
+        ],
+        imagen="/preguntas/mat-terreno-en-l.svg",
+    ),
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área del trapecio de la figura?",
+        "32 cm²",
+        "El área de un trapecio es el promedio de sus bases por la altura.\n\n"
+        "1) Bases: 10 cm y 6 cm. Promedio: (10 + 6) ÷ 2 = 8 cm.\n"
+        "2) Altura: 4 cm, la que está marcada perpendicular a las bases.\n"
+        "3) Área: 8 · 4 = 32 cm².\n\n"
+        "La altura es la distancia entre las bases, no la medida del lado "
+        "inclinado: por eso en la figura va con ángulo recto.",
+        [
+            ("64 cm²", "Multiplicó la suma de las bases por la altura sin dividir por 2."),
+            ("20 cm²", "Usó solo la base mayor, como si el trapecio fuera un triángulo."),
+            ("12 cm²", "Usó solo la base menor, como si el trapecio fuera un triángulo."),
+        ],
+        imagen="/preguntas/mat-trapecio-acotado.svg",
+    ),
+    _q(
+        "geo_plana", "medio",
+        "En la figura, la parte sombreada del círculo corresponde a un sector. "
+        "¿Cuál es su área? (usa π = 3,14)",
+        "28,26 cm²",
+        "El sector sombreado abarca 90° de los 360° del círculo, o sea la cuarta "
+        "parte.\n\n"
+        "1) Área del círculo completo: 3,14 · 6² = 3,14 · 36 = 113,04 cm².\n"
+        "2) El sector es un cuarto: 113,04 ÷ 4 = 28,26 cm².\n\n"
+        "Otro camino: (90 ÷ 360) · 113,04 llega al mismo número, y sirve igual "
+        "cuando el ángulo no es un cuarto de vuelta.",
+        [
+            ("113,04 cm²", "Es el área del círculo completo, sin quedarse con el sector."),
+            ("56,52 cm²", "Tomó la mitad del círculo; el sector marcado es un cuarto."),
+            ("9,42 cm²", "Calculó el largo del arco, que es una longitud y no un área."),
+        ],
+        imagen="/preguntas/mat-sector-circular.svg",
+    ),
+    _q(
+        "geo_plana", "medio",
+        "¿Cuál es el área del paralelogramo de la figura?",
+        "60 cm²",
+        "En un paralelogramo el área es base por altura, y la altura es la "
+        "perpendicular entre los dos lados paralelos.\n\n"
+        "1) Base: 10 cm.\n"
+        "2) Altura: 6 cm, la marcada con ángulo recto contra la base.\n"
+        "3) Área: 10 · 6 = 60 cm².\n\n"
+        "El 7 cm de la figura es el lado inclinado. Sirve para el perímetro, no "
+        "para el área: si se usara, se estaría midiendo una diagonal en vez de "
+        "la separación entre las bases.",
+        [
+            ("70 cm²", "Multiplicó la base por el lado inclinado en lugar de por la altura."),
+            ("42 cm²", "Multiplicó el lado inclinado por la altura."),
+            ("30 cm²", "Dividió por 2, como si la figura fuera un triángulo."),
+        ],
+        imagen="/preguntas/mat-paralelogramo-altura.svg",
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "Una escalera está apoyada en un muro como muestra la figura. ¿A qué "
+        "altura del muro llega su extremo superior?",
+        "12 m",
+        "La escalera, el muro y el suelo forman un triángulo rectángulo, y la "
+        "escalera es la hipotenusa.\n\n"
+        "1) Pitágoras: 13² = 5² + h².\n"
+        "2) 169 = 25 + h², así que h² = 144.\n"
+        "3) h = 12 m.\n\n"
+        "La hipotenusa es siempre el lado más largo, y acá es la escalera: por "
+        "eso el 13 va solo a un lado de la igualdad.",
+        [
+            ("8 m", "Restó las medidas (13 − 5) en vez de aplicar el teorema."),
+            ("18 m", "Sumó las medidas (13 + 5)."),
+            ("13,9 m", "Sumó los cuadrados en lugar de restarlos, tratando la escalera como cateto."),
+        ],
+        imagen="/preguntas/mat-escalera-muro.svg",
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "El rombo de la figura tiene dibujadas sus dos diagonales. ¿Cuál es su perímetro?",
+        "40 cm",
+        "Las diagonales de un rombo se cortan en su punto medio y son "
+        "perpendiculares, así que parten la figura en cuatro triángulos "
+        "rectángulos iguales.\n\n"
+        "1) Cada triángulo tiene catetos 16 ÷ 2 = 8 cm y 12 ÷ 2 = 6 cm.\n"
+        "2) La hipotenusa de cada uno es un lado del rombo: √(8² + 6²) = √100 = 10 cm.\n"
+        "3) Los cuatro lados son iguales: perímetro = 4 · 10 = 40 cm.\n\n"
+        "El paso clave es partir las diagonales por la mitad. Usarlas enteras da "
+        "un triángulo que no existe en la figura.",
+        [
+            ("10 cm", "Calculó el lado del rombo y se quedó ahí, sin sumar los cuatro."),
+            ("28 cm", "Sumó las dos diagonales, que no son lados del rombo."),
+            ("96 cm", "Calculó el área con las diagonales en vez del perímetro."),
+        ],
+        imagen="/preguntas/mat-rombo-diagonales.svg",
+    ),
+    _q(
+        "geo_pitagoras", "dificil",
+        "¿Cuál es el área del trapecio isósceles de la figura?",
+        "44 cm²",
+        "Falta la altura, y se consigue con Pitágoras antes de poder calcular el área.\n\n"
+        "1) La base mayor sobresale (14 − 8) = 6 cm en total, repartidos en dos "
+        "salientes iguales de 3 cm.\n"
+        "2) Cada lado inclinado es la hipotenusa de un triángulo de catetos 3 cm "
+        "y la altura: 5² = 3² + h², o sea h² = 16 y h = 4 cm.\n"
+        "3) Área: ((14 + 8) ÷ 2) · 4 = 11 · 4 = 44 cm².\n\n"
+        "Que el trapecio sea isósceles es lo que permite repartir los 6 cm en "
+        "dos partes iguales.",
+        [
+            ("55 cm²", "Usó el lado inclinado de 5 cm como si fuera la altura."),
+            ("88 cm²", "Multiplicó la suma de las bases por la altura sin dividir por 2."),
+            ("11 cm²", "Se quedó en el promedio de las bases, sin multiplicar por la altura."),
+        ],
+        imagen="/preguntas/mat-trapecio-isosceles.svg",
+    ),
+    _q(
+        "geo_pitagoras", "facil",
+        "¿Cuánto mide la diagonal de la cancha rectangular de la figura?",
+        "26 m",
+        "La diagonal divide el rectángulo en dos triángulos rectángulos, y en "
+        "cada uno es la hipotenusa.\n\n"
+        "1) Los catetos son los lados de la cancha: 24 m y 10 m.\n"
+        "2) d² = 24² + 10² = 576 + 100 = 676.\n"
+        "3) d = √676 = 26 m.",
+        [
+            ("34 m", "Sumó los dos lados, que es el camino por el borde y no la diagonal."),
+            ("21,8 m", "Restó los cuadrados en vez de sumarlos."),
+            ("14 m", "Restó los lados (24 − 10)."),
+        ],
+        imagen="/preguntas/mat-cancha-diagonal.svg",
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "En el plano de la figura, el triángulo T se trasladó hasta T'. "
+        "¿Cuál es el vector de esa traslación?",
+        "5 unidades a la derecha y 2 unidades hacia arriba",
+        "La traslación se lee comparando un vértice con el que le corresponde en "
+        "la imagen.\n\n"
+        "1) El vértice de abajo a la izquierda de T está en (1, 1); en T' "
+        "está en (6, 3).\n"
+        "2) De 1 a 6 hay 5 unidades a la derecha; de 1 a 3 hay 2 hacia arriba.\n"
+        "3) Cualquier otro par de vértices correspondientes da el mismo "
+        "desplazamiento: en una traslación todos los puntos se mueven igual.",
+        [
+            ("2 unidades a la derecha y 5 unidades hacia arriba", "Cambió el orden: el 5 es el desplazamiento horizontal y el 2 el vertical."),
+            ("5 unidades a la derecha y 2 unidades hacia abajo", "La imagen quedó más arriba, no más abajo."),
+            ("6 unidades a la derecha y 3 unidades hacia arriba", "Leyó las coordenadas del vértice de la imagen en vez del desplazamiento."),
+        ],
+        imagen="/preguntas/mat-traslacion-cuadricula.svg",
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "La figura P se reflejó respecto del eje y y se obtuvo P'. ¿Cuáles "
+        "son las coordenadas del vértice R'?",
+        "(−3, 5)",
+        "Reflejar respecto del eje y deja la altura intacta y cambia el signo de "
+        "la abscisa: (x, y) pasa a (−x, y).\n\n"
+        "1) En la figura, R está en (3, 5).\n"
+        "2) Su reflejo es (−3, 5).\n"
+        "3) Se comprueba en el dibujo: R y R' están a la misma altura y a "
+        "la misma distancia del eje y, uno a cada lado.",
+        [
+            ("(3, −5)", "Reflejó respecto del eje x: eso cambia la altura, no el lado."),
+            ("(−3, −5)", "Cambió los dos signos, que corresponde a un giro de 180° en torno al origen."),
+            ("(5, −3)", "Intercambió las coordenadas, que es lo que hace un giro, no una reflexión."),
+        ],
+        imagen="/preguntas/mat-reflexion-eje.svg",
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "En el plano de la figura, ¿qué transformación lleva la figura F hasta F'?",
+        "Una rotación de 90° en sentido antihorario en torno al origen",
+        "Conviene seguir un vértice y ver dónde termina.\n\n"
+        "1) El vértice (6, 1) de F aparece en (−1, 6) en F'.\n"
+        "2) Eso es exactamente lo que hace un cuarto de vuelta antihorario en "
+        "torno al origen: (x, y) pasa a (−y, x).\n"
+        "3) Se confirma con otro vértice: (2, 3) pasa a (−3, 2).\n\n"
+        "No puede ser una reflexión: la figura no quedó en espejo, quedó girada, "
+        "y el lado que era horizontal ahora es vertical.",
+        [
+            ("Una rotación de 90° en sentido horario en torno al origen", "Un giro horario habría dejado la figura bajo el eje x."),
+            ("Una reflexión respecto del eje y", "Una reflexión conserva la orientación de los lados: el lado horizontal seguiría horizontal."),
+            ("Una rotación de 180° en torno al origen", "Media vuelta dejaría la figura abajo a la izquierda, con (6, 1) en (−6, −1)."),
+        ],
+        imagen="/preguntas/mat-rotacion-origen.svg",
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "De las cuatro figuras planas de la imagen, ¿cuál tiene exactamente dos "
+        "ejes de simetría?",
+        "La figura I",
+        "Un eje de simetría es una recta que deja la figura calzando consigo "
+        "misma al doblarla.\n\n"
+        "1) El rectángulo tiene dos: la horizontal y la vertical que pasan por "
+        "su centro. Sus diagonales NO lo son: al doblar por ellas los lados "
+        "desiguales no calzan.\n"
+        "2) El triángulo equilátero tiene tres, una por cada vértice.\n"
+        "3) El trapecio isósceles tiene uno solo, el vertical.\n"
+        "4) El cuadrado tiene cuatro: las dos medianas y las dos diagonales.",
+        [
+            ("La figura II", "El triángulo equilátero tiene tres ejes, uno por cada vértice."),
+            ("La figura III", "El trapecio isósceles tiene un único eje, el vertical."),
+            ("La figura IV", "El cuadrado tiene cuatro: sus dos diagonales también lo son."),
+        ],
+        imagen="/preguntas/mat-ejes-simetria.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En el triángulo de la figura, DE es paralela a BC y las medidas están "
+        "en centímetros. ¿Cuánto mide x?",
+        "7,5 cm",
+        "Una paralela a un lado corta a los otros dos en segmentos "
+        "proporcionales.\n\n"
+        "1) La proporción es AD : DB = AE : EC, o sea 4 : 6 = 5 : x.\n"
+        "2) Multiplicando cruzado: 4x = 30.\n"
+        "3) x = 7,5 cm.\n\n"
+        "El error frecuente es mezclar el segmento con el lado completo: el 4 se "
+        "compara con el 6, no con el 10 que mide AB entero.",
+        [
+            ("3 cm", "Comparó con el lado completo AB en lugar del segmento DB."),
+            ("6 cm", "Copió la medida de DB, suponiendo que los dos lados se cortan igual."),
+            ("7 cm", "Sumó y restó las medidas en vez de plantear la proporción."),
+        ],
+        imagen="/preguntas/mat-tales-paralela.svg",
+    ),
+    _q(
+        "geo_semejanza", "facil",
+        "A la misma hora del día, un poste y una torre proyectan las sombras que "
+        "muestra la figura. ¿Cuánto mide la torre?",
+        "12 m",
+        "A la misma hora los rayos de sol llegan con la misma inclinación, así "
+        "que el poste y la torre forman triángulos semejantes con sus sombras.\n\n"
+        "1) En el poste, la altura es 2 ÷ 1,5 = 4/3 de su sombra.\n"
+        "2) La torre cumple la misma razón: h = 9 · 4/3.\n"
+        "3) h = 12 m.",
+        [
+            ("6,75 m", "Invirtió la razón: multiplicó por 1,5 y dividió por 2."),
+            ("18 m", "Multiplicó la sombra por la altura del poste sin dividir por su sombra."),
+            ("10,5 m", "Sumó a la sombra de la torre la altura del poste."),
+        ],
+        imagen="/preguntas/mat-sombra-poste.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "Los triángulos T y T' de la figura son semejantes, y sus ángulos "
+        "iguales están marcados. ¿Cuánto mide x?",
+        "12 cm",
+        "En figuras semejantes los lados que se corresponden guardan todos la "
+        "misma razón.\n\n"
+        "1) Los lados marcados 6 cm y 9 cm se corresponden: la razón es 9 ÷ 6 = 1,5.\n"
+        "2) El lado de 8 cm se corresponde con x, así que x = 8 · 1,5.\n"
+        "3) x = 12 cm.\n\n"
+        "Qué lado va con cuál lo dicen los ángulos marcados, no la posición en "
+        "el dibujo.",
+        [
+            ("5,3 cm", "Dividió por la razón en vez de multiplicar: achicó el triángulo grande."),
+            ("11 cm", "Le sumó a 8 la diferencia 9 − 6, en vez de aplicar la razón."),
+            ("13,5 cm", "Aplicó la razón al lado equivocado: multiplicó 9 por 1,5."),
+        ],
+        imagen="/preguntas/mat-triangulos-semejantes.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "El plano de la figura está dibujado a escala. ¿Cuál es el área real de la sala?",
+        "48 m²",
+        "La escala 1 : 200 dice que cada centímetro del papel son 200 cm "
+        "reales, o sea 2 m.\n\n"
+        "1) Largo real: 4 · 2 = 8 m.\n"
+        "2) Ancho real: 3 · 2 = 6 m.\n"
+        "3) Área real: 8 · 6 = 48 m².\n\n"
+        "El área no se multiplica por 200 sino por 200²: al agrandar las dos "
+        "dimensiones, la superficie crece con el cuadrado de la escala. Por eso "
+        "conviene pasar primero cada medida y recién después multiplicar.",
+        [
+            ("24 m²", "Multiplicó el área del dibujo por 2, cuando lo que se duplica son los lados."),
+            ("2.400 m²", "Multiplicó el área del dibujo por 200 en lugar de convertir cada lado."),
+            ("12 m²", "Dio el área del dibujo en centímetros cuadrados, sin aplicar la escala."),
+        ],
+        imagen="/preguntas/mat-plano-escala.svg",
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "La figura es el desarrollo plano de una caja. ¿Cuál es el volumen de la "
+        "caja que se arma con él?",
+        "72 cm³",
+        "Del desarrollo salen las tres medidas de la caja.\n\n"
+        "1) Las caras laterales miden 6 cm y 4 cm de ancho: son el largo y el "
+        "ancho de la base.\n"
+        "2) La altura de esa fila de caras, 3 cm, es la altura de la caja.\n"
+        "3) Volumen: 6 · 4 · 3 = 72 cm³.\n\n"
+        "Las dos caras que están arriba y abajo son las tapas, y sus medidas "
+        "repiten las de la base: no agregan una cuarta dimensión.",
+        [
+            ("108 cm³", "Sumó el área de las seis caras: eso es la superficie, no el volumen."),
+            ("24 cm³", "Multiplicó solo el largo por el ancho: le faltó la altura."),
+            ("13 cm³", "Sumó las tres medidas en vez de multiplicarlas."),
+        ],
+        imagen="/preguntas/mat-desarrollo-prisma.svg",
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el volumen del cilindro de la figura? (usa π = 3,14)",
+        "785 cm³",
+        "El volumen de un cilindro es el área de su base por la altura.\n\n"
+        "1) La base es un círculo de 5 cm de radio: 3,14 · 5² = 78,5 cm².\n"
+        "2) Volumen: 78,5 · 10 = 785 cm³.\n\n"
+        "El radio va elevado al cuadrado, no multiplicado: es lo que hace que "
+        "duplicar el radio multiplique el volumen por cuatro.",
+        [
+            ("157 cm³", "No elevó el radio al cuadrado."),
+            ("314 cm²", "Calculó el área lateral, que además es una superficie y no un volumen."),
+            ("3.140 cm³", "Usó el diámetro donde va el radio."),
+        ],
+        imagen="/preguntas/mat-cilindro-cotas.svg",
+    ),
+    _q(
+        "geo_solidos", "medio",
+        "¿Cuál es el área total de la superficie del paralelepípedo de la figura?",
+        "158 cm²",
+        "La superficie de un paralelepípedo son seis rectángulos, iguales de a "
+        "pares.\n\n"
+        "1) Las dos caras de 8 por 5: 2 · 40 = 80 cm².\n"
+        "2) Las dos caras de 8 por 3: 2 · 24 = 48 cm².\n"
+        "3) Las dos caras de 5 por 3: 2 · 15 = 30 cm².\n"
+        "4) Área total: 80 + 48 + 30 = 158 cm².\n\n"
+        "Cada par de caras opuestas es igual, así que basta calcular tres "
+        "rectángulos y doblar el resultado.",
+        [
+            ("79 cm²", "Calculó las tres caras distintas y olvidó que cada una tiene su opuesta."),
+            ("120 cm²", "Calculó el volumen del cuerpo, que se mide en centímetros cúbicos."),
+            ("16 cm²", "Sumó las tres medidas y las duplicó, en vez de multiplicarlas de a dos."),
+        ],
+        imagen="/preguntas/mat-paralelepipedo-area.svg",
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "El cubo de la figura está dividido en cubitos iguales de 2 cm de "
+        "arista. ¿Cuántos cubitos hay en total?",
+        "27 cubitos",
+        "Cada arista del cubo grande mide 6 cm y cada cubito 2 cm, así que en "
+        "cada dirección caben 6 ÷ 2 = 3.\n\n"
+        "1) A lo largo: 3 cubitos.\n"
+        "2) A lo ancho: 3 cubitos.\n"
+        "3) A lo alto: 3 cubitos.\n"
+        "4) Total: 3 · 3 · 3 = 27 cubitos.\n\n"
+        "Se puede comprobar con volúmenes: 6³ ÷ 2³ = 216 ÷ 8 = 27.",
+        [
+            ("9 cubitos", "Contó los de una sola cara, sin considerar el fondo."),
+            ("18 cubitos", "Contó dos caras y no las tres capas del cubo."),
+            ("3 cubitos", "Contó cuántos caben a lo largo de una arista."),
+        ],
+        imagen="/preguntas/mat-cubo-cubitos.svg",
+    ),
+]
+
+
+# ---------- Matemática con figura: álgebra, datos y azar ----------
+# El otro lugar donde la PAES pregunta por una imagen: un gráfico del que hay
+# que leer una constante o un vértice, un diagrama de cajón, una ruleta. Igual
+# que en geometría, el dato vive en la figura y no en el enunciado.
+QUESTIONS += [
+    _q(
+        "alg_proporcionalidad", "facil",
+        "El gráfico muestra el precio de un producto según los kilos que se "
+        "compran. ¿Cuánto se paga por 8 kg?",
+        "$12.000",
+        "La recta pasa por el origen, así que el precio es proporcional a la "
+        "cantidad y basta con la constante.\n\n"
+        "1) El punto marcado dice que 2 kg cuestan 3 mil pesos.\n"
+        "2) La constante es 3.000 ÷ 2 = 1.500 pesos por kilo.\n"
+        "3) Ocho kilos: 8 · 1.500 = 12.000 pesos.\n\n"
+        "Se puede comprobar en el gráfico: 8 kg cae justo donde el eje vertical "
+        "marca 12 mil.",
+        [
+            ("$24.000", "Tomó los 3 mil como el precio de un kilo, cuando son el precio de dos."),
+            ("$9.000", "Leyó el gráfico en 6 kilos en lugar de 8."),
+            ("$16.000", "Tomó como precio de un kilo el 2 del eje horizontal."),
+        ],
+        imagen="/preguntas/mat-proporcionalidad-directa.svg",
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El gráfico relaciona la cantidad de trabajadores de una obra con los "
+        "días que demoran en terminarla. ¿Cuántos días demoran 12 trabajadores?",
+        "2 días",
+        "La curva no es una recta: al doblar los trabajadores el tiempo se parte "
+        "por la mitad. Eso es proporcionalidad inversa, y lo que se mantiene "
+        "constante es el producto.\n\n"
+        "1) De los puntos marcados: 3 · 8 = 24 y 6 · 4 = 24. La constante es 24.\n"
+        "2) Con 12 trabajadores: 12 · d = 24.\n"
+        "3) d = 2 días.\n\n"
+        "Ese 24 tiene sentido concreto: son los días-trabajador que cuesta la "
+        "obra, y no cambian por repartirla entre más gente.",
+        [
+            ("4 días", "Copió el valor del punto (6 ; 4) sin recalcular para 12 trabajadores."),
+            ("6 días", "Leyó el gráfico con los ejes cambiados."),
+            ("48 días", "Multiplicó la constante por 2 en lugar de dividirla por 12."),
+        ],
+        imagen="/preguntas/mat-proporcionalidad-inversa.svg",
+    ),
+    _q(
+        "alg_proporcionalidad", "medio",
+        "El gráfico muestra el agua acumulada por dos llaves. Cuando la llave B "
+        "ha echado 24 litros, ¿cuántos litros lleva la llave A?",
+        "40 litros",
+        "Las dos rectas parten del origen, así que cada llave echa un caudal "
+        "constante.\n\n"
+        "1) La llave B llega a 30 litros en 10 minutos: 3 litros por minuto. "
+        "Para 24 litros necesita 24 ÷ 3 = 8 minutos.\n"
+        "2) La llave A llega a 50 litros en 10 minutos: 5 litros por minuto.\n"
+        "3) En esos mismos 8 minutos, A lleva 8 · 5 = 40 litros.\n\n"
+        "La pregunta compara las dos llaves en el mismo instante, no en la misma "
+        "cantidad de agua: el puente entre ambas es el tiempo.",
+        [
+            ("24 litros", "Supuso que las dos llaves echan lo mismo, que es lo que las rectas distintas descartan."),
+            ("30 litros", "Leyó el valor de A a los 6 minutos, no a los 8."),
+            ("48 litros", "Dobló los litros de B, cuando la razón entre los caudales es 5 : 3."),
+        ],
+        imagen="/preguntas/mat-dos-llaves.svg",
+    ),
+    _q(
+        "alg_proporcionalidad", "facil",
+        "De los cuatro gráficos de la imagen, ¿cuál representa una "
+        "proporcionalidad directa?",
+        "El gráfico I",
+        "Dos magnitudes son directamente proporcionales cuando su cociente es "
+        "constante, y eso en un gráfico se ve como una recta que pasa por el "
+        "origen.\n\n"
+        "1) El primero es una recta que arranca en el origen: al doblar una "
+        "magnitud se dobla la otra.\n"
+        "2) El segundo también es recto, pero parte por encima del origen: hay "
+        "un valor inicial que se cobra igual con cero unidades, así que el "
+        "cociente cambia.\n"
+        "3) El tercero baja: es una proporcionalidad inversa, donde lo constante "
+        "es el producto.\n"
+        "4) El cuarto sube cada vez más rápido: el cociente crece.",
+        [
+            ("El gráfico II", "Es una recta, pero no pasa por el origen: hay un valor fijo inicial."),
+            ("El gráfico III", "Es una proporcionalidad inversa: cuando una magnitud crece, la otra baja."),
+            ("El gráfico IV", "Crece cada vez más rápido, así que el cociente entre las magnitudes no es constante."),
+        ],
+        imagen="/preguntas/mat-cuatro-graficos.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "El gráfico muestra la parábola de una función cuadrática. ¿Cuál es esa función?",
+        "f(x) = x² − 2x − 3",
+        "La parábola corta el eje x en −1 y en 3, así que esos son los ceros de "
+        "la función.\n\n"
+        "1) Con esos ceros, la función factorizada es (x + 1)(x − 3).\n"
+        "2) Desarrollando: x² − 3x + x − 3 = x² − 2x − 3.\n"
+        "3) Se comprueba con el vértice: en x = 1 la función vale 1 − 2 − 3 = −4, "
+        "que es justo donde el gráfico marca el punto más bajo.\n\n"
+        "Que las ramas suban dice además que el coeficiente de x² es positivo.",
+        [
+            ("f(x) = x² + 2x − 3", "Esa parábola corta el eje x en 1 y en −3, al revés de lo que muestra el gráfico."),
+            ("f(x) = x² − 2x + 3", "No corta el eje x en ningún punto: su valor mínimo es 2."),
+            ("f(x) = −x² + 2x + 3", "Con el coeficiente negativo las ramas irían hacia abajo."),
+        ],
+        imagen="/preguntas/mat-parabola-vertice.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "¿Cuál es la ecuación de la recta dibujada en el gráfico?",
+        "y = −0,5x + 3",
+        "Una recta queda determinada por dónde corta el eje y y por su "
+        "pendiente.\n\n"
+        "1) Corta el eje y en 3: ese es el término libre.\n"
+        "2) Entre los puntos marcados, de (0 ; 3) a (4 ; 1), x avanza 4 y y baja 2.\n"
+        "3) Pendiente: −2 ÷ 4 = −0,5.\n"
+        "4) La ecuación es y = −0,5x + 3.\n\n"
+        "El signo de la pendiente se ve antes de calcular nada: la recta baja de "
+        "izquierda a derecha, así que tiene que ser negativa.",
+        [
+            ("y = 0,5x + 3", "Con pendiente positiva la recta subiría, y la del gráfico baja."),
+            ("y = −2x + 3", "Invirtió la pendiente: dividió el avance horizontal por el vertical."),
+            ("y = −0,5x − 3", "Corta el eje y en −3, y el gráfico lo corta en 3."),
+        ],
+        imagen="/preguntas/mat-recta-pendiente.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "Sobre la parábola del gráfico y la ecuación cuadrática asociada a ella, "
+        "¿cuál de las siguientes afirmaciones es verdadera?",
+        "El coeficiente de x² es negativo y la ecuación tiene dos soluciones reales",
+        "Las dos cosas se leen en el dibujo, sin calcular.\n\n"
+        "1) Las ramas apuntan hacia abajo, y eso solo pasa cuando el coeficiente "
+        "de x² es negativo.\n"
+        "2) Las soluciones de la ecuación son los puntos donde la parábola corta "
+        "el eje x, y en el gráfico lo corta dos veces.\n\n"
+        "Cuántas veces corta el eje x es la lectura gráfica del discriminante: "
+        "dos cortes, dos soluciones reales distintas.",
+        [
+            ("El coeficiente de x² es positivo y la ecuación tiene dos soluciones reales", "Con coeficiente positivo las ramas irían hacia arriba."),
+            ("El coeficiente de x² es negativo y la ecuación no tiene soluciones reales", "Sin soluciones reales la parábola no tocaría el eje x, y acá lo cruza dos veces."),
+            ("El coeficiente de x² es negativo y la ecuación tiene una única solución", "Una sola solución significa que la parábola apenas roza el eje x en su vértice."),
+        ],
+        imagen="/preguntas/mat-parabola-hacia-abajo.svg",
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "El gráfico muestra la altura de un balón lanzado hacia arriba. ¿Cuánto "
+        "tiempo pasa entre el lanzamiento y el momento en que toca el suelo?",
+        "4 segundos",
+        "Tocar el suelo es tener altura cero, así que hay que buscar dónde la "
+        "curva vuelve al eje horizontal.\n\n"
+        "1) La curva parte en el origen: a los 0 segundos el balón está en el suelo.\n"
+        "2) Sube hasta su punto más alto, 20 metros, a los 2 segundos.\n"
+        "3) Vuelve a cortar el eje del tiempo a los 4 segundos.\n\n"
+        "La subida y la bajada demoran lo mismo: la parábola es simétrica "
+        "respecto de la vertical que pasa por su vértice.",
+        [
+            ("2 segundos", "Es el instante en que alcanza la altura máxima, la mitad del recorrido."),
+            ("20 segundos", "Leyó la altura máxima en vez del tiempo."),
+            ("4,5 segundos", "Leyó el borde del gráfico y no el punto donde la curva corta el eje."),
+        ],
+        imagen="/preguntas/mat-trayectoria-balon.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "El gráfico de barras muestra las notas de un curso. ¿Cuál es el "
+        "promedio del curso?",
+        "5,4",
+        "Cada nota pesa según cuántos estudiantes la sacaron, así que el "
+        "promedio es ponderado.\n\n"
+        "1) Estudiantes: 4 + 6 + 8 + 2 = 20.\n"
+        "2) Suma de las notas: 4 · 4 + 5 · 6 + 6 · 8 + 7 · 2 = 16 + 30 + 48 + 14 = 108.\n"
+        "3) Promedio: 108 ÷ 20 = 5,4.\n\n"
+        "Promediar 4, 5, 6 y 7 daría 5,5 y sería otra pregunta: la de qué notas "
+        "existen, no la de cómo se repartió el curso.",
+        [
+            ("5,5", "Promedió las cuatro notas del eje sin considerar cuántos estudiantes sacó cada una."),
+            ("6", "Dio la moda: la nota que más se repite."),
+            ("108", "Sumó todas las notas y no dividió por la cantidad de estudiantes."),
+        ],
+        imagen="/preguntas/mat-barras-notas.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "facil",
+        "El gráfico circular muestra cómo llegan al colegio sus 400 estudiantes. "
+        "¿Cuántos de ellos usan metro?",
+        "100 estudiantes",
+        "El gráfico da porcentajes; el total lo da el enunciado.\n\n"
+        "1) El sector del metro es el 25%.\n"
+        "2) El 25% de 400 es 400 · 0,25.\n"
+        "3) Son 100 estudiantes.",
+        [
+            ("25 estudiantes", "Confundió el porcentaje con la cantidad de estudiantes."),
+            ("160 estudiantes", "Usó el 40% de la micro, que es el sector más grande."),
+            ("60 estudiantes", "Usó el 15% de la bicicleta."),
+        ],
+        imagen="/preguntas/mat-circular-transporte.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "Según el histograma, ¿cuántas personas del grupo tienen 30 años o más?",
+        "13 personas",
+        "Los intervalos que cumplen la condición son los dos últimos.\n\n"
+        "1) De 30 a 40 años: 9 personas.\n"
+        "2) De 40 a 50 años: 4 personas.\n"
+        "3) Total: 9 + 4 = 13 personas.\n\n"
+        "Cada barra cubre un tramo completo de diez años, así que se suman "
+        "barras enteras: no hay que repartir nada dentro de un intervalo.",
+        [
+            ("9 personas", "Consideró solo el intervalo de 30 a 40 años."),
+            ("17 personas", "Sumó los dos primeros intervalos: los que tienen menos de 30."),
+            ("4 personas", "Consideró solo el último intervalo."),
+        ],
+        imagen="/preguntas/mat-histograma-edades.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "El gráfico muestra las ventas mensuales de dos sucursales. ¿En qué mes "
+        "la diferencia entre ambas fue mayor?",
+        "Mayo",
+        "Hay que mirar la separación vertical entre las dos líneas, mes a mes.\n\n"
+        "1) En mayo A vende 50 y B vende 20: la diferencia es 30.\n"
+        "2) El mes que más se le acerca es abril, con 45 contra 30: diferencia 15.\n"
+        "3) En marzo las líneas se cruzan y en junio B queda 5 por encima.\n\n"
+        "Lo que importa es la distancia entre las curvas, no cuál de las dos "
+        "está más alta ni dónde cada una alcanza su máximo.",
+        [
+            ("Marzo", "Ahí las líneas se cruzan: es el mes en que las ventas son casi iguales."),
+            ("Abril", "La diferencia es 15, la mitad de la de mayo."),
+            ("Junio", "La sucursal B supera a la A, pero solo por 5 unidades."),
+        ],
+        imagen="/preguntas/mat-dos-sucursales.svg",
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "El diagrama de cajón resume los puntajes de un curso. ¿Cuál es el rango "
+        "intercuartil?",
+        "25 puntos",
+        "El rango intercuartil es el largo del cajón: mide la dispersión del 50% "
+        "central de los datos.\n\n"
+        "1) El cajón empieza en el primer cuartil, 35, y termina en el tercero, 60.\n"
+        "2) Rango intercuartil: 60 − 35 = 25 puntos.\n\n"
+        "Los bigotes quedan fuera a propósito: llegan hasta los valores extremos "
+        "y por eso el rango total se estira con un solo dato raro, mientras que "
+        "el cajón no.",
+        [
+            ("60 puntos", "Es el rango total, del mínimo al máximo, no el del cajón."),
+            ("45 puntos", "Es la mediana, la línea de adentro del cajón."),
+            ("15 puntos", "Es la distancia de la mediana al tercer cuartil: media caja."),
+        ],
+        imagen="/preguntas/mat-cajon-puntajes.svg",
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "Los dos diagramas de cajón resumen los puntajes de dos cursos. ¿Cuál de "
+        "las siguientes afirmaciones es correcta?",
+        "La mediana del 4°B es mayor que la del 4°A",
+        "La mediana es la línea de adentro de cada cajón.\n\n"
+        "1) En el 4°A está en 55 y en el 4°B, en 60.\n"
+        "2) La del 4°B es mayor, aunque su bigote llegue menos lejos por la "
+        "derecha.\n\n"
+        "Que un curso tenga el mejor puntaje del conjunto no dice nada de su "
+        "mediana: el máximo es un solo dato y la mediana describe al grupo.",
+        [
+            ("El recorrido de los puntajes del 4°A es menor que el del 4°B", "Los dos recorridos miden 60 puntos: de 30 a 90 y de 20 a 80."),
+            ("El 25% de peor rendimiento del 4°B parte de un puntaje más alto", "El 4°B parte en 20 puntos y el 4°A en 30."),
+            ("Los dos cursos tienen el mismo rango intercuartil", "El cajón del 4°A mide 20 puntos y el del 4°B, 30."),
+        ],
+        imagen="/preguntas/mat-dos-cajones.svg",
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "La ojiva muestra la frecuencia acumulada de los puntajes de 40 "
+        "estudiantes. ¿En qué intervalo se encuentra la mediana?",
+        "Entre 20 y 30 puntos",
+        "La mediana deja la mitad de los datos por debajo, y con 40 estudiantes "
+        "esa mitad son 20.\n\n"
+        "1) En 20 puntos la ojiva marca 8 acumulados: todavía no se llega a 20.\n"
+        "2) En 30 puntos marca 22: ahí ya se pasó.\n"
+        "3) Entonces el estudiante número 20 tiene entre 20 y 30 puntos.\n\n"
+        "La ojiva se lee de izquierda a derecha buscando dónde la curva cruza la "
+        "altura que interesa; acá esa altura es 20.",
+        [
+            ("Entre 10 y 20 puntos", "Ahí se acumulan 8 estudiantes: falta para llegar a la mitad."),
+            ("Entre 30 y 40 puntos", "A los 30 puntos ya van 22 acumulados, o sea la mediana quedó atrás."),
+            ("Entre 40 y 50 puntos", "Ese tramo contiene a los últimos 6 estudiantes, los de mejor puntaje."),
+        ],
+        imagen="/preguntas/mat-ojiva-puntajes.svg",
+    ),
+    _q(
+        "prob_posicion", "dificil",
+        "La tabla resume los puntajes de 40 estudiantes. ¿En qué intervalo se "
+        "encuentra el percentil 75?",
+        "En el intervalo [40, 60)",
+        "El percentil 75 deja por debajo al 75% de los datos.\n\n"
+        "1) El 75% de 40 son 30 estudiantes.\n"
+        "2) La frecuencia acumulada llega a 20 al terminar el intervalo [20, 40): "
+        "todavía faltan.\n"
+        "3) En [40, 60) la acumulada llega a 32, así que el estudiante número 30 "
+        "está en ese tramo.\n\n"
+        "La columna acumulada es la que responde: la de frecuencias sueltas "
+        "obligaría a ir sumando de arriba abajo.",
+        [
+            ("En el intervalo [20, 40)", "Ahí la acumulada llega a 20, que corresponde al percentil 50."),
+            ("En el intervalo [60, 80)", "Ese tramo contiene a los 8 estudiantes de más puntaje, del 33 al 40."),
+            ("En el intervalo [0, 20)", "Ahí se acumulan 6 estudiantes: el 15% del total."),
+        ],
+        imagen="/preguntas/mat-tabla-frecuencias.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "El árbol muestra dos extracciones seguidas de una bolsa, sin devolver "
+        "la primera bolita. ¿Cuál es la probabilidad de que las dos sean rojas?",
+        "3/10",
+        "Un camino del árbol se recorre multiplicando las probabilidades de sus "
+        "ramas.\n\n"
+        "1) Primera roja: 3/5.\n"
+        "2) Segunda roja, ya sin esa bolita: 2/4.\n"
+        "3) Las dos: 3/5 · 2/4 = 6/20 = 3/10.\n\n"
+        "Las ramas de la segunda extracción tienen denominador 4 porque queda "
+        "una bolita menos: eso es lo que significa no devolverla.",
+        [
+            ("9/25", "Multiplicó 3/5 por 3/5, que sería el resultado si la bolita se devolviera."),
+            ("5/9", "Sumó por separado los numeradores y los denominadores de las dos ramas."),
+            ("1/2", "Usó solo la segunda rama, dejando fuera la probabilidad de la primera extracción."),
+        ],
+        imagen="/preguntas/mat-arbol-probabilidad.svg",
+    ),
+    _q(
+        "prob_reglas", "facil",
+        "La ruleta de la figura está dividida en ocho sectores iguales. Al "
+        "girarla, ¿cuál es la probabilidad de que se detenga en un sector A?",
+        "3/8",
+        "Como los ocho sectores son iguales, todos tienen la misma probabilidad "
+        "de salir y basta contar.\n\n"
+        "1) Casos favorables: hay 3 sectores marcados con A.\n"
+        "2) Casos posibles: 8 sectores en total.\n"
+        "3) Probabilidad: 3/8.\n\n"
+        "Que los sectores sean iguales es lo que permite contar sectores en vez "
+        "de medir ángulos.",
+        [
+            ("1/4", "Contó dos sectores A en lugar de tres."),
+            ("1/8", "Calculó la probabilidad de un sector cualquiera, como si hubiera un solo A."),
+            ("3/4", "Dividió por la cantidad de letras distintas y no por la de sectores."),
+        ],
+        imagen="/preguntas/mat-ruleta-sectores.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "El diagrama resume qué deportes practica cada estudiante del curso. Si "
+        "se elige uno al azar, ¿cuál es la probabilidad de que no practique "
+        "ninguno de los dos?",
+        "1/6",
+        "El número de afuera de los dos círculos es justo el de los que no "
+        "practican ninguno.\n\n"
+        "1) Casos favorables: 5 estudiantes.\n"
+        "2) Casos posibles: los 30 del curso.\n"
+        "3) Probabilidad: 5/30 = 1/6.\n\n"
+        "Conviene comprobar que las partes suman el total: 11 + 7 + 7 + 5 = 30.",
+        [
+            ("7/30", "Es la probabilidad de que practique los dos deportes."),
+            ("1/5", "Dividió por los 25 que practican algún deporte, en vez de por el curso completo."),
+            ("11/30", "Es la probabilidad de que practique solo fútbol."),
+        ],
+        imagen="/preguntas/mat-venn-deportes.svg",
+    ),
+    _q(
+        "prob_reglas", "dificil",
+        "De cada una de las urnas de la figura se saca una bolita al azar. ¿Cuál "
+        "es la probabilidad de que las dos sean blancas?",
+        "1/8",
+        "Las dos extracciones son independientes: lo que salga de una urna no "
+        "cambia lo que hay en la otra.\n\n"
+        "1) Urna 1: 3 blancas de 8 bolitas, o sea 3/8.\n"
+        "2) Urna 2: 2 blancas de 6 bolitas, o sea 1/3.\n"
+        "3) Las dos a la vez: 3/8 · 1/3 = 3/24 = 1/8.\n\n"
+        "Multiplicar es lo que corresponde cuando se piden dos cosas juntas; "
+        "sumar respondería a que ocurra una u otra.",
+        [
+            ("5/14", "Juntó todas las bolitas en un solo montón: 5 blancas entre 14."),
+            ("17/24", "Sumó las dos probabilidades en lugar de multiplicarlas."),
+            ("1/4", "Supuso que en cada urna la mitad de las bolitas son blancas."),
+        ],
+        imagen="/preguntas/mat-dos-urnas.svg",
+    ),
+]
+
+
+# ---------- Matemática con figura: segundo lote ----------
+# Cubre las unidades del temario DEMRE (Admisión 2027) que el primer lote dejó
+# sin ninguna figura: los tres nodos de Números, expresiones algebraicas,
+# ecuaciones e inecuaciones, sistemas, y las tablas de frecuencia relativa.
+#
+# Las figuras siguen el lenguaje visual de la prueba oficial: línea negra sobre
+# blanco, la cota escrita junto al lado, el ángulo recto con un cuadradito y la
+# zona sombreada en gris. Nada de color: la lámina de la PAES es en blanco y
+# negro, y el color acá tendría que significar algo.
+QUESTIONS += [
+    _q(
+        "num_racionales", "medio",
+        "En la recta numérica de la figura hay cuatro puntos marcados. ¿Cuál de "
+        "ellos corresponde al número −3/4?",
+        "El punto Q",
+        "Conviene ubicar primero entre qué enteros cae el número.\n\n"
+        "1) −3/4 es negativo y su valor absoluto es menor que 1, así que está "
+        "entre −1 y 0.\n"
+        "2) De los cuatro puntos, el único en ese tramo es el que está pegado a "
+        "−1 por la derecha.\n"
+        "3) Además queda a tres cuartos de camino desde 0 hacia −1, que es "
+        "exactamente lo que dice la fracción.",
+        [
+            ("El punto P", "Está entre −2 y −1: corresponde a un número menor que −1."),
+            ("El punto R", "Es positivo, y −3/4 es negativo."),
+            ("El punto S", "Es positivo y mayor que 1."),
+        ],
+        imagen="/preguntas/mat-recta-racionales.svg",
+    ),
+    _q(
+        "num_racionales", "medio",
+        "Las cuatro barras de la figura son iguales y están divididas en partes "
+        "iguales. ¿En cuál de ellas está sombreada la mayor fracción de la barra?",
+        "En la barra I",
+        "Cada barra muestra una fracción distinta, y para compararlas hay que "
+        "llevarlas a un terreno común.\n\n"
+        "1) Las fracciones sombreadas son 3/4, 5/8, 3/5 y 7/10.\n"
+        "2) En decimales: 0,75; 0,625; 0,6 y 0,7.\n"
+        "3) La mayor es 3/4.\n\n"
+        "Contar cuántas partes están pintadas no sirve: la barra con más partes "
+        "pintadas es la que tiene las partes más chicas.",
+        [
+            ("En la barra II", "Tiene cinco partes pintadas, pero son octavos: 5/8 es menos que 3/4."),
+            ("En la barra III", "Tres quintos es 0,6, la menor de las cuatro."),
+            ("En la barra IV", "Siete partes pintadas, pero de diez: 0,7 queda bajo 0,75."),
+        ],
+        imagen="/preguntas/mat-fracciones-barras.svg",
+    ),
+    _q(
+        "num_porcentajes", "facil",
+        "La cuadrícula de la figura está formada por 100 celdas iguales. ¿Qué "
+        "porcentaje de ella está sombreado?",
+        "35%",
+        "Con 100 celdas iguales, el porcentaje se lee contando.\n\n"
+        "1) Hay tres filas completas pintadas: 3 · 10 = 30 celdas.\n"
+        "2) En la cuarta fila hay 5 celdas más: 30 + 5 = 35.\n"
+        "3) Son 35 de 100, o sea el 35%.\n\n"
+        "El porcentaje es, literalmente, cuántas partes de cada cien.",
+        [
+            ("3,5%", "Corrió la coma: 35 de 100 es 35%, no 3,5%."),
+            ("30%", "Contó solo las filas completas y dejó fuera la fila incompleta."),
+            ("65%", "Dio el porcentaje de la parte en blanco."),
+        ],
+        imagen="/preguntas/mat-grilla-porcentaje.svg",
+    ),
+    _q(
+        "num_porcentajes", "medio",
+        "El gráfico muestra el deporte favorito de un grupo de 200 personas. "
+        "¿Qué porcentaje de ellas prefiere el tenis?",
+        "15%",
+        "El gráfico da la cantidad; el porcentaje sale de compararla con el total.\n\n"
+        "1) Prefieren tenis 30 personas.\n"
+        "2) La fracción es 30/200.\n"
+        "3) En porcentaje: 30 ÷ 200 = 0,15, o sea 15%.\n\n"
+        "Conviene comprobar el total sumando las barras: 60 + 30 + 40 + 70 = 200 ✓.",
+        [
+            ("30%", "Usó la cantidad de personas como si ya fuera un porcentaje."),
+            ("20%", "Usó las 40 personas de natación."),
+            ("7,5%", "Dividió por 400 en lugar de por 200."),
+        ],
+        imagen="/preguntas/mat-barras-encuesta.svg",
+    ),
+    _q(
+        "num_potencias_raices", "facil",
+        "El cuadrado de la figura tiene un área de 144 cm². ¿Cuánto mide su lado?",
+        "12 cm",
+        "En un cuadrado el área es el lado elevado al cuadrado, así que el lado "
+        "es la raíz del área.\n\n"
+        "1) Si el lado es L, entonces L² = 144.\n"
+        "2) L = √144.\n"
+        "3) L = 12 cm, porque 12 · 12 = 144.",
+        [
+            ("72 cm", "Dividió el área por 2 en lugar de sacarle la raíz."),
+            ("36 cm", "Dividió el área por 4, como si el área fuera el perímetro."),
+            ("14 cm", "Aproximó mal: 14 · 14 = 196, bastante más que 144."),
+        ],
+        imagen="/preguntas/mat-cuadrado-area.svg",
+    ),
+    _q(
+        "num_potencias_raices", "medio",
+        "El cubo de la figura tiene un volumen de 64 cm³. ¿Cuánto mide su arista?",
+        "4 cm",
+        "En un cubo las tres medidas son iguales, así que el volumen es la "
+        "arista elevada al cubo.\n\n"
+        "1) Si la arista es a, entonces a³ = 64.\n"
+        "2) a = ∛64.\n"
+        "3) a = 4 cm, porque 4 · 4 · 4 = 64.\n\n"
+        "La raíz cúbica deshace el exponente 3, igual que la raíz cuadrada "
+        "deshace el exponente 2.",
+        [
+            ("8 cm", "Sacó la raíz cuadrada: 8² = 64, pero acá el exponente es 3."),
+            ("21,3 cm", "Dividió el volumen por 3 en vez de sacar la raíz cúbica."),
+            ("16 cm", "Dividió el volumen por 4, que no deshace el cubo."),
+        ],
+        imagen="/preguntas/mat-cubo-volumen.svg",
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "¿Cuál de las siguientes expresiones representa el área del rectángulo "
+        "de la figura?",
+        "x² + 5x + 6",
+        "El área de un rectángulo es el producto de sus lados, y acá los lados "
+        "son expresiones.\n\n"
+        "1) Área = (x + 3)(x + 2).\n"
+        "2) Se multiplica término a término: x · x + x · 2 + 3 · x + 3 · 2.\n"
+        "3) Queda x² + 2x + 3x + 6 = x² + 5x + 6.\n\n"
+        "El 5x sale de sumar los dos productos cruzados: es el error más común "
+        "olvidar uno de ellos.",
+        [
+            ("x² + 6", "Multiplicó solo los primeros términos entre sí y los últimos entre sí."),
+            ("2x + 5", "Calculó el semiperímetro en vez del área."),
+            ("x² + 5x + 5", "Sumó los términos libres en lugar de multiplicarlos."),
+        ],
+        imagen="/preguntas/mat-rectangulo-expresion.svg",
+    ),
+    _q(
+        "alg_expresiones", "medio",
+        "El cuadrado de la figura está dividido en cuatro regiones. ¿Qué "
+        "igualdad se puede deducir de ella?",
+        "(a + b)² = a² + 2ab + b²",
+        "La figura calcula la misma área de dos maneras.\n\n"
+        "1) Mirada como un solo cuadrado, su lado mide a + b, así que su área es "
+        "(a + b)².\n"
+        "2) Mirada por partes, son cuatro regiones: a², dos rectángulos ab y b².\n"
+        "3) Como es la misma superficie, (a + b)² = a² + 2ab + b².\n\n"
+        "Los dos rectángulos ab son los que explican por qué el desarrollo lleva "
+        "un 2ab, y no solo a² + b².",
+        [
+            ("(a + b)² = a² + b²", "Deja fuera los dos rectángulos, que son la mitad de la figura."),
+            ("(a + b)² = a² + ab + b²", "Cuenta un solo rectángulo, y en la figura hay dos iguales."),
+            ("(a + b)² = 2a + 2b", "Es el perímetro del cuadrado, no su área."),
+        ],
+        imagen="/preguntas/mat-cuadrado-partido.svg",
+    ),
+    _q(
+        "alg_lineal", "facil",
+        "La balanza de la figura está en equilibrio y las pesas están en kilos. "
+        "¿Cuánto pesa cada caja?",
+        "5 kg",
+        "Que la balanza esté equilibrada significa que los dos platillos pesan "
+        "lo mismo, y eso es una ecuación.\n\n"
+        "1) A la izquierda hay dos cajas iguales y una pesa de 2 kg: 2x + 2.\n"
+        "2) A la derecha, 5 + 5 + 2 = 12 kg.\n"
+        "3) La ecuación es 2x + 2 = 12, así que 2x = 10 y x = 5 kg.\n\n"
+        "Quitar los 2 kg de la izquierda es lo mismo que restar 2 a los dos "
+        "lados: la balanza sigue equilibrada si se saca lo mismo en ambos.",
+        [
+            ("6 kg", "Repartió los 12 kg entre las dos cajas sin descontar antes la pesa de 2 kg."),
+            ("7 kg", "Restó 5 en lugar de restar la pesa de 2 kg y dividir por 2."),
+            ("10 kg", "Se quedó en 2x = 10 sin dividir por la cantidad de cajas."),
+        ],
+        imagen="/preguntas/mat-balanza-ecuacion.svg",
+    ),
+    _q(
+        "alg_lineal", "medio",
+        "En la recta numérica de la figura está marcado el conjunto solución de "
+        "una inecuación. ¿Cuál de las siguientes es esa inecuación?",
+        "x > 3",
+        "Hay que leer dos cosas del dibujo: hacia dónde va la marca y qué pasa "
+        "en el extremo.\n\n"
+        "1) La parte marcada se extiende hacia la derecha del 3, o sea son los "
+        "números mayores que 3.\n"
+        "2) El círculo del 3 está sin rellenar, así que el 3 no pertenece a la "
+        "solución.\n"
+        "3) Eso es exactamente x > 3.\n\n"
+        "Un círculo relleno habría incluido al 3 y la inecuación llevaría el "
+        "signo mayor o igual.",
+        [
+            ("x ≥ 3", "El círculo sin rellenar avisa que el 3 queda fuera."),
+            ("x < 3", "Los números menores que 3 están a la izquierda, y ese tramo no está marcado."),
+            ("x ≤ 3", "Invierte el sentido y además incluiría el 3."),
+        ],
+        imagen="/preguntas/mat-recta-inecuacion.svg",
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "En el plano de la figura se representan las rectas L1 y L2, que "
+        "corresponden a las dos ecuaciones de un sistema. ¿Cuál es la solución "
+        "de ese sistema?",
+        "x = 3 e y = 2",
+        "Resolver un sistema de dos ecuaciones lineales es encontrar el par que "
+        "cumple las dos a la vez, y en el gráfico ese par es el punto donde las "
+        "rectas se cruzan.\n\n"
+        "1) Las rectas se cortan en el punto P.\n"
+        "2) Leyendo sus coordenadas: 3 en el eje horizontal y 2 en el vertical.\n"
+        "3) La solución es x = 3, y = 2.\n\n"
+        "Cualquier otro punto está sobre una de las rectas, pero no sobre las "
+        "dos: cumpliría una ecuación y no la otra.",
+        [
+            ("x = 2 e y = 3", "Cambió el orden de las coordenadas del punto de corte."),
+            ("x = 5 e y = 0", "Es donde una de las rectas corta el eje horizontal, no donde se cruzan."),
+            ("x = 0 e y = 5", "Es donde una de las rectas corta el eje vertical."),
+        ],
+        imagen="/preguntas/mat-sistema-rectas.svg",
+    ),
+    _q(
+        "alg_sistemas", "medio",
+        "El gráfico muestra lo que cobran dos planes de telefonía según los "
+        "minutos que se consumen. ¿A partir de cuántos minutos conviene "
+        "contratar el plan A?",
+        "A partir de los 200 minutos",
+        "Conviene el plan que en ese tramo quede más abajo en el gráfico, porque "
+        "el eje vertical es el costo.\n\n"
+        "1) Antes del cruce, la recta del plan A va por encima: cobra un cargo "
+        "fijo aunque se hable poco.\n"
+        "2) Las dos rectas se cortan en los 200 minutos, donde ambos planes "
+        "cobran lo mismo.\n"
+        "3) Después de ese punto, el plan A queda por debajo del B, así que "
+        "conviene desde ahí.\n\n"
+        "El plan A parte más caro pero sube más lento; el B parte de cero y sube "
+        "más rápido. Por eso el que conviene depende de cuánto se hable.",
+        [
+            ("A partir de los 100 minutos", "Ahí el plan A todavía cobra más que el B."),
+            ("A partir de los 300 minutos", "Conviene antes: desde el cruce, que ocurre en los 200 minutos."),
+            ("Conviene siempre, desde el primer minuto", "Con pocos minutos el plan B es más barato, porque no cobra el cargo fijo."),
+        ],
+        imagen="/preguntas/mat-dos-planes.svg",
+    ),
+    _q(
+        "alg_funciones", "facil",
+        "La tabla de la figura muestra algunos valores de una función lineal "
+        "afín. ¿Cuál es esa función?",
+        "f(x) = 3x + 5",
+        "Una función afín sube siempre lo mismo por cada unidad de x, y ese "
+        "salto constante es la pendiente.\n\n"
+        "1) De x = 0 a x = 1, y pasa de 5 a 8: sube 3. Y sigue subiendo de 3 en "
+        "3 en el resto de la tabla.\n"
+        "2) Cuando x vale 0, y vale 5: ese es el valor inicial.\n"
+        "3) La función es f(x) = 3x + 5.\n\n"
+        "Se comprueba con cualquier columna: para x = 3, 3 · 3 + 5 = 14 ✓.",
+        [
+            ("f(x) = 5x + 3", "Cambió los papeles: 3 es lo que sube por cada unidad y 5 el valor inicial."),
+            ("f(x) = x + 5", "Con esa función y subiría de 1 en 1, y en la tabla sube de 3 en 3."),
+            ("f(x) = 3x", "Le falta el valor inicial: para x = 0 daría 0 y la tabla dice 5."),
+        ],
+        imagen="/preguntas/mat-tabla-funcion.svg",
+    ),
+    _q(
+        "alg_funciones", "medio",
+        "El gráfico muestra tres parábolas de la forma f(x) = ax², todas con "
+        "vértice en el origen. ¿Cuál de ellas tiene el mayor valor de a?",
+        "La parábola I",
+        "El coeficiente a controla cuánto se abren las ramas: mientras más "
+        "grande, más angosta queda la parábola.\n\n"
+        "1) A la misma altura, la parábola I es la que ocupa menos ancho.\n"
+        "2) Eso significa que para un mismo x su valor crece más rápido.\n"
+        "3) Entonces es la que tiene el mayor a.\n\n"
+        "Otra manera de verlo: en x = 1 cada parábola vale exactamente a, así "
+        "que la más alta en ese punto es la de mayor coeficiente.",
+        [
+            ("La parábola II", "Es intermedia: queda más abierta que la I."),
+            ("La parábola III", "Es la más abierta de las tres, o sea la de menor a."),
+            ("Las tres tienen el mismo valor de a", "Con el mismo a las tres se superpondrían en una sola curva."),
+        ],
+        imagen="/preguntas/mat-tres-parabolas.svg",
+    ),
+]
+
+
+# ---------- Matemática con figura: geometría, datos y azar (segundo lote) ----------
+QUESTIONS += [
+    _q(
+        "geo_plana", "facil",
+        "¿Cuál es el área del triángulo de la figura?",
+        "56 cm²",
+        "El área de un triángulo es base por altura dividido en dos.\n\n"
+        "1) Base: 14 cm.\n"
+        "2) Altura: 8 cm, la perpendicular a la base marcada con línea punteada.\n"
+        "3) Área: (14 · 8) ÷ 2 = 112 ÷ 2 = 56 cm².\n\n"
+        "La altura no es ninguno de los lados inclinados: es la distancia desde "
+        "el vértice de arriba hasta la base, medida en perpendicular.",
+        [
+            ("112 cm²", "Multiplicó base por altura y olvidó dividir por 2."),
+            ("22 cm²", "Sumó base y altura en vez de multiplicarlas."),
+            ("28 cm²", "Dividió por 2 dos veces: primero la base y después el producto."),
+        ],
+        imagen="/preguntas/mat-triangulo-altura.svg",
+    ),
+    _q(
+        "geo_plana", "medio",
+        "En la figura se muestra un círculo con su diámetro acotado. ¿Cuál es su "
+        "perímetro? (usa π = 3,14)",
+        "31,4 cm",
+        "El perímetro de un círculo es π por el diámetro, o lo que es lo mismo, "
+        "2 · π · radio.\n\n"
+        "1) El diámetro mide 10 cm.\n"
+        "2) Perímetro: 3,14 · 10 = 31,4 cm.\n\n"
+        "Si se prefiere trabajar con el radio, hay que dividir primero: 10 ÷ 2 = "
+        "5 cm, y entonces 2 · 3,14 · 5 = 31,4 cm ✓. Lo que no se puede es usar "
+        "el diámetro donde va el radio.",
+        [
+            ("62,8 cm", "Usó el diámetro como si fuera el radio."),
+            ("78,5 cm", "Calculó el área del círculo, que además se mide en centímetros cuadrados."),
+            ("15,7 cm", "Calculó π por el radio: eso es la mitad del perímetro."),
+        ],
+        imagen="/preguntas/mat-circulo-diametro.svg",
+    ),
+    _q(
+        "geo_plana", "dificil",
+        "La figura muestra un cuadrado con un círculo inscrito. ¿Cuál es el área "
+        "de la región sombreada? (usa π = 3,14)",
+        "30,96 cm²",
+        "La región sombreada es lo que queda del cuadrado al sacarle el círculo.\n\n"
+        "1) Área del cuadrado: 12 · 12 = 144 cm².\n"
+        "2) El círculo está inscrito, así que su diámetro es el lado del "
+        "cuadrado: 12 cm, y su radio 6 cm.\n"
+        "3) Área del círculo: 3,14 · 6² = 113,04 cm².\n"
+        "4) Región sombreada: 144 − 113,04 = 30,96 cm².\n\n"
+        "El paso que se salta más seguido es el 2: el radio no está en el dibujo "
+        "y hay que deducirlo del lado.",
+        [
+            ("113,04 cm²", "Dio el área del círculo, que es justamente la parte no sombreada."),
+            ("30,96 cm", "El resultado es correcto, pero un área se mide en centímetros cuadrados."),
+            ("144 cm²", "Dio el área del cuadrado completo, sin descontar el círculo."),
+        ],
+        imagen="/preguntas/mat-cuadrado-circulo.svg",
+    ),
+    _q(
+        "geo_pitagoras", "medio",
+        "En el triángulo rectángulo de la figura se conocen la hipotenusa y uno "
+        "de los catetos. ¿Cuánto mide el otro cateto?",
+        "10 cm",
+        "La hipotenusa es el lado opuesto al ángulo recto, y acá es el de 26 cm.\n\n"
+        "1) Pitágoras: 26² = 24² + c².\n"
+        "2) 676 = 576 + c², así que c² = 100.\n"
+        "3) c = 10 cm.\n\n"
+        "Cuando lo que falta es un cateto, los cuadrados se restan. Sumarlos "
+        "daría un lado más largo que la hipotenusa, que es imposible.",
+        [
+            ("50 cm", "Sumó las dos medidas en vez de aplicar el teorema."),
+            ("35,4 cm", "Sumó los cuadrados en lugar de restarlos, y le dio un lado mayor que la hipotenusa."),
+            ("2 cm", "Restó las medidas directamente, sin elevarlas al cuadrado."),
+        ],
+        imagen="/preguntas/mat-triangulo-cateto.svg",
+    ),
+    _q(
+        "geo_solidos", "dificil",
+        "La figura es el desarrollo de un cilindro. ¿Cuál es el área total de su "
+        "superficie? (usa π = 3,14)",
+        "188,4 cm²",
+        "El desarrollo muestra las tres piezas: dos tapas circulares y el manto, "
+        "que al enrollarse forma el tubo.\n\n"
+        "1) Cada tapa es un círculo de radio 3: 3,14 · 3² = 28,26 cm². Las dos "
+        "suman 56,52 cm².\n"
+        "2) El manto es un rectángulo. Su alto es la altura del cilindro (7 cm) "
+        "y su largo es el perímetro de la base: 2 · 3,14 · 3 = 18,84 cm.\n"
+        "3) Área del manto: 18,84 · 7 = 131,88 cm².\n"
+        "4) Área total: 56,52 + 131,88 = 188,4 cm².\n\n"
+        "Lo que hace funcionar el desarrollo es que el largo del rectángulo "
+        "calza exactamente con el contorno del círculo.",
+        [
+            ("131,88 cm²", "Calculó solo el manto y dejó fuera las dos tapas."),
+            ("160,14 cm²", "Contó una sola tapa en vez de las dos."),
+            ("197,82 cm²", "Calculó el volumen del cilindro, que no es un área."),
+        ],
+        imagen="/preguntas/mat-desarrollo-cilindro.svg",
+    ),
+    _q(
+        "geo_solidos", "facil",
+        "¿Cuál es el volumen de la piscina de la figura?",
+        "120 m³",
+        "La piscina tiene forma de paralelepípedo, así que su volumen es el "
+        "producto de sus tres medidas.\n\n"
+        "1) Largo por ancho: 10 · 6 = 60 m², que es el área del fondo.\n"
+        "2) Por la profundidad: 60 · 2 = 120 m³.\n\n"
+        "El volumen se puede pensar como el área del fondo repetida a lo alto: "
+        "por eso las tres medidas se multiplican.",
+        [
+            ("60 m³", "Multiplicó solo largo por ancho: eso es el área del fondo."),
+            ("18 m³", "Sumó las tres medidas en lugar de multiplicarlas."),
+            ("184 m³", "Calculó el área de las paredes y el fondo, no el volumen."),
+        ],
+        imagen="/preguntas/mat-piscina-volumen.svg",
+    ),
+    _q(
+        "geo_transformaciones", "facil",
+        "En el plano de la figura se marcaron los puntos A y B. ¿Cuál es el "
+        "vector que traslada A hasta B?",
+        "(5, 3)",
+        "El vector de traslación se obtiene restando las coordenadas del punto "
+        "de partida a las del de llegada.\n\n"
+        "1) A está en (2, 1) y B en (7, 4).\n"
+        "2) En horizontal: 7 − 2 = 5 unidades a la derecha.\n"
+        "3) En vertical: 4 − 1 = 3 unidades hacia arriba.\n"
+        "4) El vector es (5, 3).",
+        [
+            ("(3, 5)", "Puso primero el desplazamiento vertical: en un vector va primero el horizontal."),
+            ("(7, 4)", "Son las coordenadas de B, no el desplazamiento desde A."),
+            ("(9, 5)", "Sumó las coordenadas de los dos puntos en vez de restarlas."),
+        ],
+        imagen="/preguntas/mat-vector-plano.svg",
+    ),
+    _q(
+        "geo_transformaciones", "medio",
+        "En el plano de la figura, el punto M se transformó en el punto M'. "
+        "¿Qué transformación se aplicó?",
+        "Una rotación de 180° en torno al origen",
+        "Conviene comparar las coordenadas: M está en (3, 2) y M' en (−3, −2).\n\n"
+        "1) Los dos signos cambiaron, y eso es lo que hace media vuelta en torno "
+        "al origen: (x, y) pasa a (−x, −y).\n"
+        "2) Se confirma en el dibujo: los dos puntos están alineados con el "
+        "origen y a la misma distancia de él, uno a cada lado.\n\n"
+        "Una reflexión respecto de un eje cambiaría un solo signo, y el punto "
+        "quedaría en un cuadrante vecino, no en el opuesto.",
+        [
+            ("Una reflexión respecto del eje x", "Eso daría (3, −2): cambia la altura y deja la abscisa igual."),
+            ("Una reflexión respecto del eje y", "Eso daría (−3, 2): cambia el lado y deja la altura igual."),
+            ("Una traslación", "En una traslación los dos puntos no quedarían alineados con el origen y a la misma distancia."),
+        ],
+        imagen="/preguntas/mat-rotacion-punto.svg",
+    ),
+    _q(
+        "geo_semejanza", "medio",
+        "En el mapa de la figura, la distancia entre las dos localidades está "
+        "medida sobre el papel. ¿Cuál es la distancia real entre ellas?",
+        "50 km",
+        "La barra de escala dice cuántos kilómetros representa cada centímetro "
+        "del mapa.\n\n"
+        "1) La barra mide 2 cm y equivale a 20 km, así que 1 cm son 10 km.\n"
+        "2) Entre las dos localidades hay 5 cm en el mapa.\n"
+        "3) Distancia real: 5 · 10 = 50 km.\n\n"
+        "La barra de escala es la que fija la equivalencia: sin ella el dibujo "
+        "no dice nada del terreno.",
+        [
+            ("20 km", "Copió el valor de la barra de escala, que corresponde a 2 cm y no a 5."),
+            ("100 km", "Usó 20 km por centímetro, cuando la barra de 2 cm es la que vale 20 km."),
+            ("10 km", "Dio cuántos kilómetros representa un solo centímetro."),
+        ],
+        imagen="/preguntas/mat-mapa-escala.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "La tabla de la figura resume el deporte preferido de un grupo de "
+        "personas. ¿Qué porcentaje de ellas prefiere fútbol o básquetbol?",
+        "50%",
+        "La columna de frecuencia relativa ya trae la proporción de cada "
+        "categoría respecto del total.\n\n"
+        "1) Fútbol: 0,30. Básquetbol: 0,20.\n"
+        "2) Como son categorías distintas, las proporciones se suman: 0,30 + "
+        "0,20 = 0,50.\n"
+        "3) En porcentaje, 50%.\n\n"
+        "Se puede comprobar con las frecuencias: 12 + 8 = 20 de un total de 40, "
+        "que es la mitad ✓.",
+        [
+            ("20%", "Sumó las frecuencias 12 y 8 y las leyó como si fueran un porcentaje."),
+            ("35%", "Usó la frecuencia relativa del vóleibol."),
+            ("0,5%", "Corrió la coma: 0,50 es 50%, no medio por ciento."),
+        ],
+        imagen="/preguntas/mat-tabla-relativa.svg",
+    ),
+    _q(
+        "prob_estadistica_desc", "medio",
+        "El gráfico compara los libros leídos por cada curso en dos años "
+        "seguidos. ¿En qué curso aumentó más la cantidad de libros leídos entre "
+        "2025 y 2026?",
+        "En 4° medio",
+        "Hay que mirar, curso por curso, cuánto cambió la barra de un año al "
+        "otro.\n\n"
+        "1) En 4° medio se pasó de 10 a 25 libros: 15 más.\n"
+        "2) En 3° medio, de 15 a 20: solo 5 más.\n"
+        "3) En 1° y en 2° medio la cantidad bajó, así que no aumentó nada.\n\n"
+        "La pregunta es por el aumento, no por quién leyó más: 2° medio tuvo la "
+        "barra más alta de todo el gráfico y aun así fue el que más cayó.",
+        [
+            ("En 1° medio", "Bajó de 20 a 15 libros."),
+            ("En 2° medio", "Tuvo la barra más alta en 2025, pero cayó de 25 a 10."),
+            ("En 3° medio", "Aumentó 5 libros, un tercio de lo que subió 4° medio."),
+        ],
+        imagen="/preguntas/mat-barras-dobles.svg",
+    ),
+    _q(
+        "prob_posicion", "medio",
+        "El diagrama de cajón de la figura resume el tiempo que tardó un grupo "
+        "de personas en completar un circuito. ¿Qué representa el 24?",
+        "Que el 75% de las personas tardó 24 minutos o menos",
+        "El 24 es el borde derecho del cajón, o sea el tercer cuartil.\n\n"
+        "1) El tercer cuartil deja por debajo al 75% de los datos.\n"
+        "2) Entonces tres de cada cuatro personas terminaron el circuito en 24 "
+        "minutos o menos.\n\n"
+        "El cajón se lee por porcentajes acumulados, no por cantidad de "
+        "personas: el diagrama no dice cuántas son.",
+        [
+            ("Que 24 personas completaron el circuito", "El eje mide minutos, no personas."),
+            ("Que el 24% de las personas terminó antes que el resto", "El 24 es un tiempo, no un porcentaje."),
+            ("Que la mitad de las personas tardó 24 minutos o menos", "Esa es la mediana, que es la línea de adentro del cajón."),
+        ],
+        imagen="/preguntas/mat-cajon-interpretar.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "La tabla de la figura muestra todos los resultados posibles al lanzar "
+        "dos dados y sumar sus puntos. ¿Cuál es la probabilidad de que la suma "
+        "sea 7?",
+        "1/6",
+        "La tabla tiene los casos posibles ordenados, así que basta contar.\n\n"
+        "1) Casos posibles: 6 filas por 6 columnas, o sea 36.\n"
+        "2) Casos favorables: la suma 7 aparece seis veces, una en cada fila, "
+        "formando la diagonal.\n"
+        "3) Probabilidad: 6/36 = 1/6.\n\n"
+        "El 7 es la suma más probable justamente porque es la que más maneras "
+        "tiene de formarse.",
+        [
+            ("1/12", "Contó tres casos favorables en vez de seis, olvidando que el orden de los dados distingue casos."),
+            ("7/36", "Usó el número 7 como si fuera la cantidad de casos favorables."),
+            ("1/11", "Contó las sumas distintas posibles, del 2 al 12, y no los 36 resultados."),
+        ],
+        imagen="/preguntas/mat-tabla-dados.svg",
+    ),
+    _q(
+        "prob_reglas", "medio",
+        "En una caja hay ocho fichas iguales, numeradas como muestra la figura. "
+        "Si se saca una al azar, ¿cuál es la probabilidad de que el número sea "
+        "par o mayor que 6?",
+        "5/8",
+        "Es la regla aditiva, y hay que cuidar los casos que cumplen las dos "
+        "condiciones a la vez.\n\n"
+        "1) Pares: 2, 4, 6 y 8, o sea 4 fichas.\n"
+        "2) Mayores que 6: 7 y 8, o sea 2 fichas.\n"
+        "3) La ficha 8 está en los dos grupos, así que se cuenta una sola vez: "
+        "4 + 2 − 1 = 5 casos favorables.\n"
+        "4) Probabilidad: 5/8.\n\n"
+        "Sumar sin descontar la ficha repetida es el error clásico de la regla "
+        "aditiva.",
+        [
+            ("6/8", "Sumó 4 y 2 sin descontar la ficha 8, que cumple las dos condiciones."),
+            ("1/2", "Consideró solo los números pares."),
+            ("1/4", "Consideró solo los mayores que 6."),
+        ],
+        imagen="/preguntas/mat-fichas-numeradas.svg",
+    ),
+]
+
+
+# ---------- Matemática M2 con figura ----------
+# M2 evalúa todo M1 y además su propio temario (DEMRE, Admisión 2027), y esas
+# unidades propias son las que más se apoyan en una imagen: el gráfico de una
+# exponencial o de una función trigonométrica, una homotecia, los ángulos de la
+# circunferencia, una tabla de doble entrada. El banco de M2 no tenía ninguna.
+#
+# Mismo lenguaje visual que las figuras de M1: línea negra sobre blanco, la cota
+# junto al lado y el gris reservado para lo que está sombreado.
+QUESTIONS += [
+    _q(
+        "num_reales", "medio",
+        "En la recta numérica de la figura hay cuatro puntos marcados. ¿Cuál de "
+        "ellos está más cerca de √10?",
+        "El punto R",
+        "Para ubicar una raíz sin calculadora, conviene encerrarla entre dos "
+        "cuadrados perfectos.\n\n"
+        "1) 9 < 10 < 16, así que √9 < √10 < √16, o sea 3 < √10 < 4.\n"
+        "2) El único punto marcado entre 3 y 4 es el tercero.\n"
+        "3) Además √10 es apenas mayor que 3 —su valor es cercano a 3,16—, y ese "
+        "punto está justo pasado el 3.",
+        [
+            ("El punto P", "Está entre 1 y 2, y √10 es mayor que 3."),
+            ("El punto Q", "Está entre 2 y 3: ahí caería √4 o √9, no √10."),
+            ("El punto S", "Está entre 4 y 5, donde caen las raíces de números mayores que 16."),
+        ],
+        imagen="/preguntas/mat-recta-real-puntos.svg",
+    ),
+    _q(
+        "num_reales", "dificil",
+        "La figura muestra un cuadrado de lado 1 apoyado sobre una recta "
+        "numérica. Su diagonal se lleva sobre la recta con un arco de "
+        "circunferencia. ¿Qué número queda representado por el punto T?",
+        "√2",
+        "El arco traslada la diagonal del cuadrado hasta la recta, así que T "
+        "queda a esa distancia del 0.\n\n"
+        "1) La diagonal es la hipotenusa de un triángulo rectángulo de catetos 1 "
+        "y 1: d² = 1² + 1², así que d = √2.\n"
+        "2) El arco tiene centro en el 0 y radio igual a esa diagonal, de modo "
+        "que T está a √2 del origen.\n\n"
+        "Esta construcción es la manera clásica de mostrar que √2 tiene un lugar "
+        "exacto en la recta, aunque su escritura decimal no termine nunca: es "
+        "irracional, y aun así se puede señalar con el compás.",
+        [
+            ("1,5", "Es un racional cualquiera entre 1 y 2; la diagonal del cuadrado vale √2 ≈ 1,41."),
+            ("2", "Sería la diagonal si midiera el doble del lado, y en un cuadrado nunca es así."),
+            ("√3", "Aparece como diagonal de un cubo de arista 1, no de un cuadrado."),
+        ],
+        imagen="/preguntas/mat-cuadrado-diagonal-recta.svg",
+    ),
+    _q(
+        "num_financiera", "medio",
+        "El gráfico muestra cómo crece un mismo capital inicial durante diez "
+        "años con dos tipos de interés. ¿Cuál de las dos líneas corresponde al "
+        "interés compuesto?",
+        "La línea I",
+        "La diferencia está en sobre qué se calcula el interés de cada año.\n\n"
+        "1) Con interés simple, el interés se calcula siempre sobre el capital "
+        "inicial: cada año se suma la misma cantidad y el gráfico es una recta.\n"
+        "2) Con interés compuesto, el interés se calcula sobre lo acumulado, "
+        "así que cada año se suma más que el anterior y la curva se empina.\n"
+        "3) La línea I es la que se va empinando: esa es la compuesta.\n\n"
+        "Las dos parten del mismo punto porque el capital inicial es el mismo; "
+        "lo que las separa es el paso del tiempo.",
+        [
+            ("La línea II", "Es una recta: sube lo mismo todos los años, que es lo que hace el interés simple."),
+            ("Las dos, porque parten del mismo capital", "Parten igual, pero solo una crece sobre lo ya ganado."),
+            ("Ninguna, porque el interés compuesto se grafica con una recta", "La recta es el interés simple; el compuesto acelera."),
+        ],
+        imagen="/preguntas/mat-interes-simple-compuesto.svg",
+    ),
+    _q(
+        "num_financiera", "facil",
+        "La tabla de la figura muestra las condiciones de un crédito de "
+        "consumo. ¿Cuánto dinero se termina pagando por sobre el monto prestado?",
+        "$312.000",
+        "Hay que comparar lo que se devuelve con lo que se recibió.\n\n"
+        "1) Total pagado: 18 cuotas de $84.000, o sea 18 · 84.000 = $1.512.000.\n"
+        "2) Monto prestado: $1.200.000.\n"
+        "3) Diferencia: 1.512.000 − 1.200.000 = $312.000.\n\n"
+        "Esa diferencia es el costo del crédito: lo que cuesta disponer del "
+        "dinero antes de tenerlo.",
+        [
+            ("$1.512.000", "Es el total que se paga, no lo que se paga de más."),
+            ("$84.000", "Es el valor de una cuota."),
+            ("$1.200.000", "Es el monto prestado."),
+        ],
+        imagen="/preguntas/mat-tabla-credito.svg",
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "¿A cuál de las siguientes funciones corresponde el gráfico de la figura?",
+        "y = log x",
+        "Tres rasgos del dibujo la identifican.\n\n"
+        "1) Pasa por (1 ; 0): el logaritmo de 1 es 0 en cualquier base.\n"
+        "2) Pasa por (10 ; 1), y eso fija la base en 10, porque 10¹ = 10.\n"
+        "3) Cae bruscamente cuando x se acerca a cero y no existe para valores "
+        "negativos, que es justo el dominio del logaritmo.\n\n"
+        "Crece cada vez más despacio: para subir de 1 a 2 hay que llegar hasta "
+        "x = 100.",
+        [
+            ("y = 10ˣ", "La exponencial crece cada vez más rápido y pasa por (0 ; 1), no por (1 ; 0)."),
+            ("y = x²", "Una parábola no cae hacia menos infinito cerca del cero ni se aplana al crecer."),
+            ("y = √x", "También crece despacio, pero parte del origen y no se hunde cerca del cero."),
+        ],
+        imagen="/preguntas/mat-grafico-logaritmo.svg",
+    ),
+    _q(
+        "num_logaritmos", "medio",
+        "La tabla de la figura relaciona la magnitud de un sismo con la energía "
+        "que libera. ¿Cuántas veces más energía libera un sismo de magnitud 6 "
+        "que uno de magnitud 4?",
+        "100 veces",
+        "La escala es logarítmica: cada punto de magnitud multiplica la energía "
+        "por 10.\n\n"
+        "1) Magnitud 4 libera 10⁴ y magnitud 6 libera 10⁶.\n"
+        "2) La razón es 10⁶ ÷ 10⁴ = 10², o sea 100.\n\n"
+        "Restar magnitudes equivale a dividir energías: eso es exactamente lo "
+        "que hace un logaritmo, convertir productos en sumas.",
+        [
+            ("2 veces", "Restó las magnitudes: en una escala logarítmica esa resta es un exponente, no un factor."),
+            ("10 veces", "Ese es el salto entre dos magnitudes consecutivas, y acá hay dos saltos."),
+            ("1.000 veces", "Corresponde a tres puntos de diferencia, no a dos."),
+        ],
+        imagen="/preguntas/mat-tabla-magnitudes.svg",
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "En el plano de la figura están dibujadas las dos rectas de un sistema "
+        "de ecuaciones lineales. ¿Cuántas soluciones tiene ese sistema?",
+        "Ninguna",
+        "Resolver el sistema es buscar los puntos que están sobre las dos rectas "
+        "a la vez.\n\n"
+        "1) Las rectas de la figura tienen la misma inclinación y nunca se "
+        "juntan: son paralelas.\n"
+        "2) Al no cortarse, no hay ningún par (x, y) que cumpla las dos "
+        "ecuaciones.\n"
+        "3) El sistema no tiene solución.\n\n"
+        "En las ecuaciones esto se ve como dos rectas con la misma pendiente y "
+        "distinto coeficiente libre: una condición que se contradice a sí misma.",
+        [
+            ("Una sola solución", "Eso pasa cuando las rectas se cortan en un punto, y estas no se cortan."),
+            ("Infinitas soluciones", "Eso ocurre si las dos rectas son la misma, y acá están separadas."),
+            ("Dos soluciones", "Dos rectas distintas se cortan una vez o ninguna: nunca dos."),
+        ],
+        imagen="/preguntas/mat-rectas-paralelas.svg",
+    ),
+    _q(
+        "alg_sistemas_casos", "medio",
+        "Al graficar las dos ecuaciones de un sistema lineal se obtuvo la figura, "
+        "donde ambas rectas quedaron una sobre la otra. ¿Qué se puede afirmar "
+        "del sistema?",
+        "Tiene infinitas soluciones",
+        "Las dos ecuaciones describen la misma recta.\n\n"
+        "1) Si toda la recta sirve, cualquier punto de ella cumple las dos "
+        "ecuaciones.\n"
+        "2) Como una recta tiene infinitos puntos, el sistema tiene infinitas "
+        "soluciones.\n\n"
+        "En las ecuaciones esto aparece cuando una es un múltiplo de la otra: "
+        "dicen lo mismo con números amplificados.",
+        [
+            ("No tiene solución", "Eso corresponde a rectas paralelas y separadas, no superpuestas."),
+            ("Tiene una única solución", "Habría un solo punto en común, y acá comparten todos."),
+            ("Tiene exactamente dos soluciones", "Un sistema lineal 2x2 nunca tiene exactamente dos soluciones."),
+        ],
+        imagen="/preguntas/mat-rectas-coincidentes.svg",
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "¿A cuál de las siguientes funciones corresponde la curva de la figura?",
+        "f(x) = 2ˣ",
+        "Los dos puntos marcados bastan para decidirlo.\n\n"
+        "1) Pasa por (0 ; 1): toda exponencial de la forma aˣ vale 1 en cero.\n"
+        "2) Pasa por (3 ; 8), y 2³ = 8, lo que fija la base en 2.\n"
+        "3) Hacia la izquierda la curva se acerca al eje horizontal sin tocarlo, "
+        "que es como se comporta una exponencial con valores negativos de x.\n\n"
+        "Una potencia como x³ también pasaría por un punto alto, pero valdría 0 "
+        "en x = 0, no 1.",
+        [
+            ("f(x) = x³", "Valdría 0 en x = 0, y la curva de la figura corta el eje vertical en 1."),
+            ("f(x) = 3ˣ", "En x = 3 daría 27, muy por encima del 8 que muestra el gráfico."),
+            ("f(x) = 2x", "Es una recta; la figura muestra una curva que se dispara."),
+        ],
+        imagen="/preguntas/mat-grafico-exponencial.svg",
+    ),
+    _q(
+        "alg_funcion_potencia", "medio",
+        "De los tres gráficos de la figura, ¿cuál corresponde a una función "
+        "logarítmica?",
+        "El gráfico II",
+        "Cada curva delata su familia por cómo cambia su ritmo de crecimiento.\n\n"
+        "1) La II sube rápido al principio y después se va aplanando, sin dejar "
+        "de crecer: así crece un logaritmo.\n"
+        "2) La I parte del origen despacio y luego se empina: es una función "
+        "potencia.\n"
+        "3) La III corta el eje vertical por encima del origen y se dispara: es "
+        "una exponencial.\n\n"
+        "La logarítmica y la exponencial son inversas, y eso se nota en el "
+        "dibujo: una es el reflejo de la otra respecto de la diagonal.",
+        [
+            ("El gráfico I", "Crece cada vez más rápido partiendo del origen: es una función potencia."),
+            ("El gráfico III", "Se dispara hacia arriba y corta el eje vertical sobre el origen: es exponencial."),
+            ("Ninguno de los tres", "El segundo cumple todo lo que caracteriza a un logaritmo."),
+        ],
+        imagen="/preguntas/mat-tres-curvas.svg",
+    ),
+    _q(
+        "alg_funciones_trig", "facil",
+        "El gráfico de la figura corresponde a una función trigonométrica. ¿Cuál de "
+        "las siguientes es?",
+        "y = sen x",
+        "Conviene mirar dónde parte la curva y hasta dónde llega.\n\n"
+        "1) En x = 0 la curva vale 0, y el seno de 0 es 0. El coseno valdría 1.\n"
+        "2) Sube hasta 1 en π/2, vuelve a 0 en π y baja hasta −1 en 3π/2.\n"
+        "3) Completa exactamente un ciclo entre 0 y 2π, que es el período del "
+        "seno.",
+        [
+            ("y = cos x", "El coseno parte en 1 cuando x vale 0, y esta curva parte en 0."),
+            ("y = sen 2x", "Esa función completaría dos ciclos entre 0 y 2π, y acá hay uno solo."),
+            ("y = 2 sen x", "Llegaría hasta 2 y hasta −2; esta curva no pasa de 1."),
+        ],
+        imagen="/preguntas/mat-grafico-seno.svg",
+    ),
+    _q(
+        "alg_funciones_trig", "medio",
+        "El gráfico de la figura corresponde a una función de la forma "
+        "y = a · sen(bx). ¿Cuáles son su amplitud y su período?",
+        "Amplitud 3 y período π",
+        "Las dos cosas se leen directamente del dibujo.\n\n"
+        "1) La curva llega hasta 3 y baja hasta −3: la amplitud es 3, o sea el "
+        "valor de a.\n"
+        "2) Un ciclo completo se cierra en π, porque entre 0 y 2π caben dos "
+        "ciclos.\n"
+        "3) Con b = 2 el período es 2π ÷ 2 = π ✓.\n\n"
+        "La amplitud estira la onda a lo alto y el coeficiente de x la comprime "
+        "a lo ancho: son dos cosas independientes.",
+        [
+            ("Amplitud 3 y período 2π", "En 2π caben dos ciclos completos, así que el período es la mitad."),
+            ("Amplitud 2 y período π", "El 2 es el coeficiente que acompaña a x; la altura de la onda es 3."),
+            ("Amplitud 6 y período π", "El 6 es la distancia entre el punto más alto y el más bajo, y la amplitud es la mitad de eso."),
+        ],
+        imagen="/preguntas/mat-seno-amplitud.svg",
+    ),
+]
+
+
+# ---------- Matemática M2 con figura: geometría, datos y azar ----------
+QUESTIONS += [
+    _q(
+        "geo_homotecia", "medio",
+        "En la figura, el triángulo T' es la imagen del triángulo T por una "
+        "homotecia de centro O. ¿Cuál es la razón de esa homotecia?",
+        "2",
+        "La razón de una homotecia compara cada distancia al centro con la "
+        "distancia original.\n\n"
+        "1) Los vértices de T' están alineados con O y con sus correspondientes "
+        "de T, sobre las líneas punteadas.\n"
+        "2) Cada vértice de T' está al doble de distancia de O que el vértice "
+        "que le corresponde.\n"
+        "3) Como la imagen queda del mismo lado de O y al doble, la razón es 2.\n\n"
+        "Que los lados de T' midan el doble es consecuencia de lo mismo: en una "
+        "homotecia todas las medidas se multiplican por la razón.",
+        [
+            ("1/2", "Esa razón achicaría la figura a la mitad, y acá la imagen es la más grande."),
+            ("−2", "El signo negativo pondría la imagen al otro lado de O, y las dos están del mismo lado."),
+            ("4", "Las áreas sí quedan multiplicadas por 4, pero la razón de homotecia compara longitudes."),
+        ],
+        imagen="/preguntas/mat-homotecia-razon.svg",
+    ),
+    _q(
+        "geo_homotecia", "dificil",
+        "En la figura, el triángulo T' se obtuvo del triángulo T mediante una "
+        "homotecia de centro O. ¿Cuál es la razón de esa homotecia?",
+        "−1",
+        "Dos datos del dibujo fijan la razón.\n\n"
+        "1) La imagen está al otro lado de O: cada vértice y su imagen quedan en "
+        "lados opuestos del centro, sobre la misma línea punteada. Eso hace "
+        "negativa la razón.\n"
+        "2) T y T' son del mismo tamaño, así que el valor absoluto de la razón "
+        "es 1.\n"
+        "3) La razón es −1.\n\n"
+        "Una homotecia de razón −1 es lo mismo que un giro de 180° en torno al "
+        "centro: conserva el tamaño y da vuelta la figura.",
+        [
+            ("1", "Con razón 1 la imagen quedaría encima de la original, sin moverse."),
+            ("−2", "El tamaño se duplicaría, y las dos figuras son iguales."),
+            ("2", "Además de duplicar el tamaño, dejaría la imagen del mismo lado de O."),
+        ],
+        imagen="/preguntas/mat-homotecia-negativa.svg",
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "En el triángulo rectángulo de la figura, ¿cuánto mide el cateto marcado "
+        "con el signo de interrogación?",
+        "5 cm",
+        "El cateto buscado es el opuesto al ángulo de 30°, y la medida conocida "
+        "es la hipotenusa: eso pide seno.\n\n"
+        "1) sen 30° = cateto opuesto ÷ hipotenusa.\n"
+        "2) sen 30° = 0,5, así que 0,5 = c ÷ 10.\n"
+        "3) c = 5 cm.\n\n"
+        "Vale la pena recordar el valor: en cualquier triángulo rectángulo con "
+        "un ángulo de 30°, el cateto opuesto es la mitad de la hipotenusa.",
+        [
+            ("8,7 cm", "Usó coseno: eso da el cateto adyacente al ángulo de 30°."),
+            ("5,8 cm", "Usó tangente, que relaciona los dos catetos y no involucra la hipotenusa."),
+            ("20 cm", "Multiplicó por 2 en vez de dividir: un cateto no puede ser mayor que la hipotenusa."),
+        ],
+        imagen="/preguntas/mat-triangulo-trigonometria.svg",
+    ),
+    _q(
+        "geo_trigonometria", "medio",
+        "La figura muestra una rampa apoyada en el suelo. ¿Cuál es el valor de "
+        "la tangente del ángulo θ?",
+        "7/24",
+        "La tangente de un ángulo agudo es el cateto opuesto dividido por el "
+        "adyacente.\n\n"
+        "1) El cateto opuesto a θ es la altura: 7 m.\n"
+        "2) El adyacente es el tramo horizontal: 24 m.\n"
+        "3) tan θ = 7/24.\n\n"
+        "La tangente no necesita la hipotenusa, que acá es la rampa misma y no "
+        "está acotada.",
+        [
+            ("24/7", "Invirtió la razón: eso es la tangente del otro ángulo agudo."),
+            ("7/25", "Usó la hipotenusa, que mide 25 m: eso es el seno, no la tangente."),
+            ("24/25", "Es el coseno de θ."),
+        ],
+        imagen="/preguntas/mat-rampa-angulo.svg",
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En la circunferencia de la figura, el ángulo AOB tiene su vértice en el "
+        "centro y mide 80°. ¿Cuánto mide el ángulo x?",
+        "40°",
+        "Los dos ángulos se apoyan en el mismo arco AB.\n\n"
+        "1) El ángulo AOB tiene el vértice en el centro: es un ángulo del "
+        "centro, y mide lo mismo que el arco, 80°.\n"
+        "2) El ángulo x tiene su vértice en la circunferencia: es un ángulo "
+        "inscrito sobre el mismo arco.\n"
+        "3) Todo ángulo inscrito mide la mitad del ángulo del centro que abarca "
+        "su mismo arco: x = 80° ÷ 2 = 40°.\n\n"
+        "Da igual dónde esté P sobre ese arco mayor: cualquier ángulo inscrito "
+        "que se apoye en AB mide lo mismo.",
+        [
+            ("80°", "Es la medida del ángulo del centro; el inscrito es la mitad."),
+            ("160°", "Duplicó en vez de dividir a la mitad."),
+            ("20°", "Dividió por cuatro: la relación entre inscrito y central es de un medio."),
+        ],
+        imagen="/preguntas/mat-angulo-inscrito.svg",
+    ),
+    _q(
+        "geo_circunferencia", "medio",
+        "En la circunferencia de la figura, las cuerdas AB y CD se cortan en un "
+        "punto interior. ¿Cuánto mide x?",
+        "3",
+        "Cuando dos cuerdas se cortan, los productos de los trozos de cada una "
+        "son iguales.\n\n"
+        "1) En la cuerda AB los trozos miden 6 y 4: su producto es 24.\n"
+        "2) En la cuerda CD uno mide 8 y el otro es x.\n"
+        "3) Entonces 8 · x = 24, y x = 3.\n\n"
+        "La igualdad sale de dos triángulos semejantes que se forman al unir los "
+        "extremos de las cuerdas: comparten los ángulos inscritos.",
+        [
+            ("2", "Dividió 8 por 4 en vez de dividir el producto 24 por 8."),
+            ("6", "Copió el otro trozo de la primera cuerda."),
+            ("12", "Multiplicó en lugar de dividir."),
+        ],
+        imagen="/preguntas/mat-cuerdas-circunferencia.svg",
+    ),
+    _q(
+        "geo_esfera", "medio",
+        "¿Cuál es el área de la superficie de la esfera de la figura? "
+        "(usa π = 3,14)",
+        "314 cm²",
+        "El área de la superficie de una esfera es 4 · π · r².\n\n"
+        "1) El radio es 5 cm, así que r² = 25.\n"
+        "2) Área: 4 · 3,14 · 25 = 314 cm².\n\n"
+        "El radio va elevado al cuadrado porque el área es una medida de "
+        "superficie: si el radio se duplicara, el área se multiplicaría por "
+        "cuatro.",
+        [
+            ("62,8 cm²", "Calculó el perímetro de una circunferencia de radio 5, que es una longitud."),
+            ("78,5 cm²", "Calculó el área de un círculo de radio 5: la superficie de la esfera es cuatro veces eso."),
+            ("523,33 cm³", "Es el volumen de la esfera, que además se mide en centímetros cúbicos."),
+        ],
+        imagen="/preguntas/mat-esfera-radio.svg",
+    ),
+    _q(
+        "geo_esfera", "dificil",
+        "La cúpula de la figura tiene la forma de media esfera. ¿Cuál es el "
+        "volumen de aire que encierra? (usa π = 3,14)",
+        "452,16 m³",
+        "Media esfera encierra la mitad del volumen de la esfera completa.\n\n"
+        "1) Volumen de la esfera de radio 6: (4/3) · 3,14 · 6³ = (4/3) · 3,14 · "
+        "216 = 904,32 m³.\n"
+        "2) La cúpula es la mitad: 904,32 ÷ 2 = 452,16 m³.\n\n"
+        "También se puede calcular directo con (2/3) · π · r³, que es la misma "
+        "fórmula ya dividida.",
+        [
+            ("904,32 m³", "Es el volumen de la esfera completa; la cúpula es la mitad."),
+            ("226,08 m³", "Dividió por cuatro en vez de por dos."),
+            ("226,08 m²", "Además de dividir de más, un volumen no se mide en metros cuadrados."),
+        ],
+        imagen="/preguntas/mat-cupula-hemisferio.svg",
+    ),
+    _q(
+        "geo_rectas", "medio",
+        "En el plano de la figura, las rectas L1 y L2 son perpendiculares. Si la "
+        "pendiente de L1 es 2, ¿cuál es la pendiente de L2?",
+        "−1/2",
+        "Dos rectas perpendiculares tienen pendientes cuyo producto es −1.\n\n"
+        "1) Si m₁ = 2, entonces m₁ · m₂ = −1.\n"
+        "2) m₂ = −1 ÷ 2 = −1/2.\n\n"
+        "El signo se ve en el dibujo: una recta sube y la otra baja. Y la "
+        "inclinación también: L1 avanza 1 y sube 2, mientras que L2 avanza 2 y "
+        "baja 1.",
+        [
+            ("2", "Esa es la pendiente de L1: rectas con la misma pendiente son paralelas, no perpendiculares."),
+            ("−2", "Tiene el signo correcto, pero su producto con 2 da −4 y no −1."),
+            ("1/2", "Es el recíproco, pero le falta el signo negativo: con esa pendiente L2 subiría."),
+        ],
+        imagen="/preguntas/mat-rectas-perpendiculares.svg",
+    ),
+    _q(
+        "geo_rectas", "facil",
+        "¿Cuál es la pendiente de la recta que aparece en la figura?",
+        "3/4",
+        "La pendiente compara cuánto sube la recta con cuánto avanza.\n\n"
+        "1) Los puntos marcados son A(2 ; 2) y B(6 ; 5).\n"
+        "2) Sube: 5 − 2 = 3. Avanza: 6 − 2 = 4.\n"
+        "3) Pendiente: 3/4.\n\n"
+        "El orden de la resta no importa mientras sea el mismo arriba y abajo: "
+        "(2 − 5) ÷ (2 − 6) da lo mismo.",
+        [
+            ("4/3", "Invirtió la razón: puso el avance horizontal arriba."),
+            ("3", "Usó solo cuánto sube, sin dividir por el avance horizontal."),
+            ("7/8", "Sumó las coordenadas en vez de restarlas."),
+        ],
+        imagen="/preguntas/mat-recta-dos-puntos.svg",
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "Los dos gráficos de la figura muestran las notas de dos cursos con la "
+        "misma cantidad de estudiantes. ¿Qué se puede afirmar sobre la "
+        "dispersión de las notas?",
+        "Las notas del curso B están más dispersas que las del A",
+        "La dispersión mide cuánto se apartan los datos de su centro.\n\n"
+        "1) En el curso A casi todos sacaron la nota del medio y muy pocos las "
+        "extremas: las notas están apretadas en torno al promedio.\n"
+        "2) En el curso B las cinco notas se reparten de manera pareja, así que "
+        "hay tantos datos lejos del centro como cerca.\n"
+        "3) Entonces el curso B tiene mayor dispersión, aunque su promedio sea "
+        "parecido.\n\n"
+        "El promedio dice dónde está el centro; la dispersión, cuán confiable es "
+        "ese centro para describir al grupo.",
+        [
+            ("Las notas del curso A están más dispersas que las del B", "En A casi todos están en la misma nota: eso es lo contrario a estar disperso."),
+            ("Las dos tienen la misma dispersión, porque tienen la misma cantidad de estudiantes", "La cantidad de datos no dice nada sobre cuánto se apartan del centro."),
+            ("No se puede comparar sin conocer los promedios", "La forma de los gráficos ya muestra cuál grupo está más repartido."),
+        ],
+        imagen="/preguntas/mat-dos-dispersiones.svg",
+    ),
+    _q(
+        "prob_dispersion", "medio",
+        "La tabla de la figura muestra el promedio y la desviación estándar de "
+        "las notas de tres cursos. ¿Cuál de las siguientes afirmaciones es "
+        "correcta?",
+        "Los cursos A y B tienen el mismo promedio, pero en B las notas están más repartidas",
+        "Cada columna responde una pregunta distinta: dónde está el centro y "
+        "cuánto se apartan los datos de él.\n\n"
+        "1) A y B tienen el mismo promedio, 6,0.\n"
+        "2) La desviación estándar de B es 1,4 y la de A es 0,3: en B las notas "
+        "se alejan mucho más del promedio.\n"
+        "3) Dos grupos con el mismo promedio pueden ser muy distintos, y eso es "
+        "justamente lo que agrega la desviación.\n\n"
+        "En A, con desviación 0,3, casi todas las notas caen entre 5,7 y 6,3.",
+        [
+            ("El curso C es el más disperso, porque tiene el promedio más bajo", "El promedio no mide dispersión; C tiene desviación 0,4, casi la misma que A."),
+            ("El curso A es el más disperso de los tres", "Tiene la desviación más baja, o sea las notas más parecidas entre sí."),
+            ("Los tres cursos tienen la misma dispersión", "Las desviaciones son 0,3; 1,4 y 0,4: la de B es más de cuatro veces la de A."),
+        ],
+        imagen="/preguntas/mat-tabla-desviacion.svg",
+    ),
+    _q(
+        "prob_condicional", "medio",
+        "La tabla de la figura resume si 100 personas usan lentes. Si se elige "
+        "al azar una de las mujeres, ¿cuál es la probabilidad de que use lentes?",
+        "0,44",
+        "El enunciado ya restringe el grupo: solo entran las mujeres. Eso es una "
+        "probabilidad condicional.\n\n"
+        "1) Casos posibles: las 50 mujeres, no las 100 personas.\n"
+        "2) Casos favorables: las 22 mujeres que usan lentes.\n"
+        "3) Probabilidad: 22 ÷ 50 = 0,44.\n\n"
+        "La condición cambia el denominador: se calcula dentro de la columna de "
+        "las mujeres y no sobre el total de la tabla.",
+        [
+            ("0,22", "Dividió por las 100 personas: esa es la probabilidad de ser mujer y usar lentes a la vez."),
+            ("0,40", "Es la proporción de personas con lentes en el total, sin restringirse a las mujeres."),
+            ("0,55", "Es la proporción de mujeres entre quienes usan lentes: la condición al revés."),
+        ],
+        imagen="/preguntas/mat-tabla-contingencia.svg",
+    ),
+    _q(
+        "prob_condicional", "dificil",
+        "El árbol de la figura muestra la probabilidad de estudiar para una "
+        "prueba y la de aprobarla. ¿Cuál es la probabilidad de que un estudiante "
+        "elegido al azar apruebe?",
+        "0,75",
+        "Hay dos caminos que terminan en aprobar, y hay que sumarlos.\n\n"
+        "1) Estudió y aprobó: 0,7 · 0,9 = 0,63.\n"
+        "2) No estudió y aprobó: 0,3 · 0,4 = 0,12.\n"
+        "3) Como son casos que no pueden ocurrir juntos, se suman: 0,63 + 0,12 = "
+        "0,75.\n\n"
+        "Dentro de cada camino se multiplica, porque los dos pasos tienen que "
+        "ocurrir; entre caminos distintos se suma, porque basta con uno.",
+        [
+            ("0,63", "Es solo el camino de quienes estudiaron: falta sumar el de quienes no lo hicieron."),
+            ("0,9", "Es la probabilidad de aprobar habiendo estudiado, que ya supone la condición cumplida."),
+            ("0,81", "Usó la rama de reprobar de quienes no estudiaron en lugar de la de aprobar."),
+        ],
+        imagen="/preguntas/mat-arbol-condicional.svg",
+    ),
+    _q(
+        "prob_combinatoria", "facil",
+        "El árbol de la figura muestra las entradas y los platos de fondo que "
+        "ofrece un restaurante. ¿Cuántos menús distintos de entrada y plato de "
+        "fondo se pueden armar?",
+        "6 menús",
+        "Cada menú es una entrada acompañada de un plato de fondo.\n\n"
+        "1) Hay 2 entradas y, para cada una, 3 platos de fondo.\n"
+        "2) Por el principio multiplicativo: 2 · 3 = 6.\n"
+        "3) En el árbol se ven las seis ramas finales, una por menú.\n\n"
+        "Se multiplica porque elegir la entrada no limita los platos "
+        "disponibles: las tres opciones siguen ahí en los dos casos.",
+        [
+            ("5 menús", "Sumó las opciones en lugar de multiplicarlas."),
+            ("3 menús", "Contó solo los platos de fondo."),
+            ("12 menús", "Duplicó de más: cada entrada se combina con tres platos, no con seis."),
+        ],
+        imagen="/preguntas/mat-arbol-menu.svg",
+    ),
+    _q(
+        "prob_combinatoria", "medio",
+        "Con las cifras que muestra la figura, y sin repetir ninguna, ¿cuántos "
+        "números distintos de cuatro cifras se pueden formar?",
+        "120 números",
+        "Se van llenando los casilleros de izquierda a derecha, y cada cifra "
+        "usada deja de estar disponible.\n\n"
+        "1) Para el primer casillero hay 5 cifras posibles.\n"
+        "2) Para el segundo quedan 4, para el tercero 3 y para el cuarto 2.\n"
+        "3) Total: 5 · 4 · 3 · 2 = 120 números.\n\n"
+        "Es una permutación de 5 elementos tomados de a 4: el orden importa, "
+        "porque 1235 y 3215 son números distintos.",
+        [
+            ("625 números", "Es 5 · 5 · 5 · 5: correspondería a poder repetir cifras."),
+            ("20 números", "Multiplicó solo las dos primeras posiciones."),
+            ("24 números", "Es 4 · 3 · 2 · 1: dejó fuera una de las cinco cifras disponibles."),
+        ],
+        imagen="/preguntas/mat-casilleros-cifras.svg",
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "El gráfico de la figura muestra la probabilidad de obtener cada "
+        "cantidad de caras al lanzar cuatro veces una moneda. ¿Cuál es la "
+        "probabilidad de obtener exactamente dos caras?",
+        "0,375",
+        "El gráfico da la probabilidad de cada resultado posible; basta leer la "
+        "barra que corresponde.\n\n"
+        "1) La barra de 2 caras llega a 0,375.\n"
+        "2) Se puede comprobar contando: de los 16 resultados posibles al lanzar "
+        "cuatro veces, 6 tienen exactamente dos caras, y 6 ÷ 16 = 0,375.\n\n"
+        "Es la barra más alta porque hay más maneras de repartir dos caras entre "
+        "cuatro lanzamientos que de obtener todas caras o ninguna.",
+        [
+            ("0,25", "Es la altura de las barras de 1 y de 3 caras."),
+            ("0,5", "Es la probabilidad de cara en un solo lanzamiento, no la de dos caras en cuatro."),
+            ("0,0625", "Es la probabilidad de un extremo: cero caras o cuatro caras."),
+        ],
+        imagen="/preguntas/mat-barras-binomial.svg",
+    ),
+    _q(
+        "prob_binomial", "medio",
+        "La figura muestra la curva de una distribución normal, con la zona "
+        "sombreada entre una desviación estándar bajo la media y una sobre la "
+        "media. ¿Qué porcentaje aproximado de los datos cae en esa zona?",
+        "Cerca del 68%",
+        "En toda distribución normal los porcentajes por tramos son siempre los "
+        "mismos, sin importar la media ni la desviación.\n\n"
+        "1) Entre una desviación bajo la media y una sobre ella cae "
+        "aproximadamente el 68% de los datos.\n"
+        "2) Entre dos desviaciones, cerca del 95%, y entre tres, casi el 100%.\n\n"
+        "Por eso la desviación estándar es una unidad de medida útil: dice qué "
+        "tan lejos del centro está un dato en términos comparables.",
+        [
+            ("Cerca del 50%", "Ese es el porcentaje que queda a un solo lado de la media."),
+            ("Cerca del 95%", "Ese porcentaje corresponde a dos desviaciones a cada lado."),
+            ("Cerca del 34%", "Es lo que cae en la mitad sombreada, de la media hacia un solo lado."),
+        ],
+        imagen="/preguntas/mat-campana-normal.svg",
+    ),
+]
+
+
 # ---------------------------------------------------------------------------
 # Competencia Lectora
 #
@@ -50934,6 +52857,494 @@ QUESTIONS_HISTORIA = [
             ("Porque no requieren ser contrastadas con otras fuentes", "Todas las fuentes requieren contraste."),
             ("Porque siempre provienen de testigos directos", "Pueden transmitirse a través de generaciones."),
         ],
+    ),
+]
+
+
+# ---------- Historia con figura ----------
+# El temario DEMRE (Admisión 2027) pide de forma explícita trabajar con
+# representaciones: la habilidad de pensamiento temporal y espacial incluye
+# "interpretar la distribución geográfica y las dinámicas del territorio
+# utilizando representaciones como mapas, gráficos, cartogramas", y la de
+# análisis de fuentes, "utilizar mapas, tablas y otras fuentes de información".
+# Sin figuras esos objetivos no se pueden evaluar, y el banco entero era texto.
+#
+# Las figuras son PROPIAS y viven en `apps/web/public/preguntas/`. Cuando llevan
+# cifras, la figura misma declara que son ficticias: acá no se inventan datos
+# para hacerlos pasar por reales.
+QUESTIONS_HISTORIA += [
+    _q(
+        "his_fuentes", "medio",
+        "La tabla de la figura compara dos fuentes sobre un mismo puerto. ¿Cuál "
+        "de ellas es una fuente primaria y por qué?",
+        "La fuente 1, porque fue producida en la época que se estudia",
+        "Una fuente primaria se produce en el periodo estudiado y forma parte de "
+        "él; una secundaria lo interpreta después.\n\n"
+        "1) La carta es de 1887 y la escribió alguien que vivía ese proceso: es "
+        "un testimonio de la época.\n"
+        "2) El artículo es de 2019 y su autora reconstruye lo ocurrido a partir "
+        "de otras fuentes: es una elaboración posterior.\n\n"
+        "Ser primaria no la hace más confiable. Su propósito declarado era "
+        "contarle a su familia cómo vivía, no describir el puerto con exactitud.",
+        [
+            ("La fuente 2, porque la escribió una historiadora", "La formación de quien escribe habla del rigor, no de si la fuente es de la época."),
+            ("La fuente 2, porque es más reciente", "Ser reciente es lo contrario de ser contemporáneo al hecho estudiado."),
+            ("Las dos, porque hablan del mismo puerto", "Compartir tema no las hace primarias: importa cuándo y desde dónde se escribieron."),
+        ],
+        imagen="/preguntas/his-tabla-fuentes.svg",
+    ),
+    _q(
+        "his_fuentes", "medio",
+        "¿Cuál de las siguientes afirmaciones se puede sostener únicamente con "
+        "el gráfico de exportaciones de la figura?",
+        "Las exportaciones subieron tres décadas y luego cayeron",
+        "Una fuente permite afirmar lo que muestra, no lo que la explica.\n\n"
+        "1) El gráfico muestra un alza sostenida entre 1880 y 1910, un "
+        "descenso leve hacia 1920 y una caída fuerte hacia 1930.\n"
+        "2) Eso es una descripción de la curva, y se puede verificar mirándola.\n"
+        "3) Las causas de esa caída no están en el gráfico: para afirmarlas hay "
+        "que recurrir a otras fuentes.\n\n"
+        "Distinguir lo que la fuente muestra de lo que uno ya sabe es la primera "
+        "regla del análisis de fuentes.",
+        [
+            ("La caída se debió a la aparición de un sustituto sintético", "Puede ser cierto históricamente, pero el gráfico no informa causas."),
+            ("El país exportaba solo este producto durante el periodo", "El gráfico muestra un producto, y de ahí no se deduce que fuera el único."),
+            ("La producción se detuvo por completo hacia 1930", "En 1930 las exportaciones bajan a 8 mil toneladas, que no es cero."),
+        ],
+        imagen="/preguntas/his-grafico-exportaciones.svg",
+    ),
+    _q(
+        "his_fuentes", "dificil",
+        "Un estudiante quiere saber cuáles eran las condiciones reales de "
+        "trabajo en las salitreras. ¿Qué puede establecer con el recorte de "
+        "prensa de la figura?",
+        "Cómo un diario de la época presentó el conflicto",
+        "El recorte es una fuente primaria valiosa, pero de otra cosa.\n\n"
+        "1) Lo que entrega con certeza es cómo se informó el hecho: qué se "
+        "destacó, con qué palabras y a quién se le dio la voz.\n"
+        "2) Sobre las condiciones mismas, el diario solo reproduce dos "
+        "versiones en disputa: la de la delegación y la de la empresa.\n"
+        "3) Para establecer las condiciones reales harían falta otras fuentes: "
+        "registros de la empresa, informes de inspección, testimonios.\n\n"
+        "Toda fuente responde bien una pregunta y mal otras. La tarea es saber "
+        "cuál es cuál.",
+        [
+            ("Que las condiciones eran las de costumbre en la industria", "Eso es lo que sostiene la empresa dentro de la nota, no un hecho establecido."),
+            ("Que los obreros exageraban sus demandas ante la empresa", "El recorte no permite evaluar las demandas: solo informa que existieron."),
+            ("Que el conflicto se resolvió a favor de los trabajadores", "La nota es del día de la llegada de la delegación y no informa desenlace."),
+        ],
+        imagen="/preguntas/his-recorte-prensa.svg",
+    ),
+    _q(
+        "his_fuentes", "medio",
+        "Las dos fuentes de la figura muestran la misma variable, pero dan "
+        "impresiones distintas. ¿A qué se debe la diferencia?",
+        "A que cada gráfico cubre un periodo distinto",
+        "Las dos curvas son compatibles: lo que cambia es el tramo que cada una "
+        "muestra.\n\n"
+        "1) La fuente 1 abarca sesenta años y deja ver un aumento grande, de 20 "
+        "a 80.\n"
+        "2) La fuente 2 abarca solo la última década, donde el aumento fue de 72 "
+        "a 80 y por eso la curva se ve casi plana.\n"
+        "3) Ninguna de las dos miente: el recorte temporal decide qué parte del "
+        "proceso queda a la vista.\n\n"
+        "Por eso, al comparar fuentes cuantitativas, lo primero que hay que "
+        "mirar es el eje: qué periodo cubre y con qué escala.",
+        [
+            ("A que una de las dos fuentes está equivocada", "Los valores coinciden en el tramo que comparten: no se contradicen."),
+            ("A que miden variables diferentes", "La figura indica que las dos muestran la misma variable."),
+            ("A que la fuente 2 usa una escala más grande", "Las dos llegan hasta 100 en el eje vertical; lo que cambia es el periodo."),
+        ],
+        imagen="/preguntas/his-dos-recortes.svg",
+    ),
+    _q(
+        "his_temporal", "facil",
+        "Según la línea de tiempo de la figura, ¿en qué periodo ocurrió la "
+        "Segunda Guerra Mundial?",
+        "En el periodo II",
+        "La Segunda Guerra Mundial se desarrolló entre 1939 y 1945.\n\n"
+        "1) El periodo II va de 1925 a 1950.\n"
+        "2) Los años 1939 y 1945 caen completos dentro de ese tramo.\n\n"
+        "Ubicar un hecho en una periodización es la operación básica del "
+        "pensamiento temporal: primero se fija el tramo, después se discute qué "
+        "lo caracteriza.",
+        [
+            ("En el periodo I", "El primer tramo termina en 1925, catorce años antes del inicio de la guerra."),
+            ("En el periodo III", "Ese tramo parte en 1950, cuando la guerra ya había terminado."),
+            ("En el periodo IV", "Corresponde al último cuarto del siglo XX."),
+        ],
+        imagen="/preguntas/his-linea-tiempo.svg",
+    ),
+    _q(
+        "his_temporal", "medio",
+        "¿Qué proceso histórico representa el esquema de la figura?",
+        "La división del mundo en dos bloques durante la Guerra Fría",
+        "El esquema muestra dos zonas con sistemas opuestos y una frontera "
+        "marcada entre ellas.\n\n"
+        "1) De un lado, economía de mercado y democracias liberales; del otro, "
+        "economía planificada y partido único.\n"
+        "2) Los separa una línea gruesa, y sobre ella hay una ciudad partida en "
+        "dos.\n"
+        "3) Esa oposición entre dos modelos, sin guerra directa entre ellos, es "
+        "lo que caracteriza a la Guerra Fría.\n\n"
+        "La ciudad dividida es el detalle que fija el periodo: la frontera no "
+        "solo separaba países, cortaba una ciudad por la mitad.",
+        [
+            ("La formación de los Estados nacionales en el siglo XIX", "Ese proceso no organiza al mundo en dos bloques con sistemas económicos opuestos."),
+            ("La descolonización de África y Asia", "La descolonización produce nuevos Estados, no una frontera entre dos modelos."),
+            ("La expansión del imperio colonial europeo", "Los imperios coloniales competían entre sí, no se agrupaban en dos bloques ideológicos."),
+        ],
+        imagen="/preguntas/his-esquema-bloques.svg",
+    ),
+    _q(
+        "his_temporal", "medio",
+        "Las dos pirámides de población de la figura corresponden al mismo país "
+        "en dos momentos. ¿Qué cambio muestran?",
+        "Un envejecimiento de la población del país",
+        "La forma de la pirámide cuenta la historia demográfica de un país.\n\n"
+        "1) En 1960 la base es la parte más ancha y cada tramo hacia arriba es "
+        "más angosto: nacían muchos y pocos llegaban a viejos.\n"
+        "2) En 2020 la base se angostó y los tramos de adultos y mayores se "
+        "ensancharon.\n"
+        "3) Eso es envejecimiento: menos nacimientos y más personas que llegan a "
+        "edades avanzadas.\n\n"
+        "Es un cambio de ritmo lento, de los que solo se ven comparando dos "
+        "momentos separados por décadas.",
+        [
+            ("Una caída de la población total del país", "La pirámide de 2020 no es más chica: cambió su forma, no necesariamente su tamaño."),
+            ("Un aumento sostenido de la natalidad", "Con más nacimientos la base sería más ancha en 2020, y es al revés."),
+            ("Una migración masiva de adultos jóvenes hacia otro país", "Los tramos de adultos jóvenes no se vacían: se mantienen y los mayores crecen."),
+        ],
+        imagen="/preguntas/his-piramides-poblacion.svg",
+    ),
+    _q(
+        "his_temporal", "facil",
+        "¿Qué proceso muestra el gráfico de la figura entre 1900 y 2000?",
+        "Una urbanización sostenida de la población",
+        "El gráfico entrega el porcentaje de población que vive en ciudades.\n\n"
+        "1) En 1900 era el 20% y en 2000, el 85%.\n"
+        "2) El aumento no tiene retrocesos: sube en cada tramo medido.\n"
+        "3) Ese traslado sostenido del campo a la ciudad es lo que se llama "
+        "urbanización.\n\n"
+        "El gráfico habla de proporciones, no de cantidades: dice dónde vive la "
+        "gente, no cuánta gente hay.",
+        [
+            ("Un despoblamiento del país", "El gráfico muestra dónde vive la población, no cuántos habitantes hay."),
+            ("Un retorno de la población al campo", "Eso haría bajar la curva, y sube durante todo el siglo."),
+            ("Un crecimiento parejo entre campo y ciudad", "Con un crecimiento parejo el porcentaje urbano se mantendría, y pasa de 20% a 85%."),
+        ],
+        imagen="/preguntas/his-grafico-urbanizacion.svg",
+    ),
+    _q(
+        "civ_democracia", "facil",
+        "¿Qué principio de la organización del Estado representa el esquema de "
+        "la figura?",
+        "La separación de los poderes del Estado",
+        "El esquema muestra tres órganos distintos, cada uno con su función.\n\n"
+        "1) El Ejecutivo gobierna y administra; el Legislativo hace las leyes; "
+        "el Judicial resuelve conflictos.\n"
+        "2) Ninguno depende de los otros: son autónomos entre sí.\n"
+        "3) Repartir el poder en órganos separados que se controlan mutuamente "
+        "es lo que se llama separación de poderes.\n\n"
+        "El sentido de esa separación es evitar que quien dicta las normas sea "
+        "también quien las aplica y quien juzga si se cumplieron.",
+        [
+            ("La concentración del poder en el Ejecutivo", "El esquema muestra tres órganos al mismo nivel, ninguno por sobre los otros."),
+            ("La organización territorial en regiones y comunas", "Eso divide el poder por territorio; acá se divide por función."),
+            ("La existencia de partidos políticos", "Los partidos compiten por ocupar cargos, pero no son poderes del Estado."),
+        ],
+        imagen="/preguntas/his-organigrama-poderes.svg",
+    ),
+    _q(
+        "civ_democracia", "medio",
+        "Según el esquema de la figura, ¿qué ocurre inmediatamente después de "
+        "que la cámara de origen aprueba un proyecto de ley?",
+        "Pasa a la cámara revisora",
+        "El esquema ordena las etapas y hay que seguir la flecha.\n\n"
+        "1) Después de la cámara de origen viene la cámara revisora.\n"
+        "2) Recién cuando las dos cámaras han aprobado el proyecto llega al "
+        "Presidente, que puede promulgarlo o vetarlo.\n"
+        "3) La publicación es el último paso, y es la que pone la ley en "
+        "vigencia.\n\n"
+        "Que el proyecto tenga que pasar por dos cámaras es una salvaguarda: "
+        "obliga a revisarlo dos veces y con composiciones distintas.",
+        [
+            ("Es promulgado de inmediato por el Presidente", "El Presidente actúa después, cuando las dos cámaras ya se pronunciaron."),
+            ("Entra en vigencia apenas termina la votación", "La vigencia llega con la publicación, que es el último paso del esquema."),
+            ("Vuelve a la etapa de iniciativa", "La iniciativa es el punto de partida y no se repite dentro del mismo trámite."),
+        ],
+        imagen="/preguntas/his-flujo-ley.svg",
+    ),
+    _q(
+        "civ_democracia", "medio",
+        "¿Cuál de las siguientes afirmaciones describe mejor lo que muestra el "
+        "gráfico de participación electoral de la figura?",
+        "La participación cayó a cerca de la mitad y después volvió a niveles altos",
+        "Hay que leer las cuatro barras como una secuencia.\n\n"
+        "1) La primera elección registra 87% de participación.\n"
+        "2) En la segunda y la tercera cae a 49% y 47%, casi la mitad.\n"
+        "3) En la cuarta vuelve a 85%, cerca del nivel inicial.\n\n"
+        "El gráfico describe el movimiento; explicarlo —cambios en las reglas "
+        "del voto, interés en la elección— exige otras fuentes.",
+        [
+            ("La participación bajó de forma sostenida durante las cuatro elecciones", "La cuarta elección sube a 85%: la caída no fue sostenida."),
+            ("La participación se mantuvo estable en torno al 60%", "Los valores van de 47% a 87%, y ninguno está cerca del 60%."),
+            ("El voto obligatorio explica el alza de la última elección", "Puede ser una hipótesis razonable, pero el gráfico no informa las reglas del voto."),
+        ],
+        imagen="/preguntas/his-grafico-participacion.svg",
+    ),
+    _q(
+        "civ_democracia", "medio",
+        "El gráfico de la figura muestra por qué medio se informa un grupo de "
+        "500 personas. ¿Cuántas de ellas se informan principalmente por redes "
+        "sociales?",
+        "210 personas",
+        "El gráfico entrega porcentajes y el enunciado, el total.\n\n"
+        "1) Las redes sociales concentran el 42%.\n"
+        "2) El 42% de 500 es 500 · 0,42.\n"
+        "3) Son 210 personas.\n\n"
+        "Conviene comprobar que los sectores sumen el total: 42 + 30 + 16 + 12 = "
+        "100% ✓.",
+        [
+            ("42 personas", "Confundió el porcentaje con la cantidad de personas."),
+            ("150 personas", "Corresponde al 30% de la televisión."),
+            ("290 personas", "Es la cantidad que se informa por los otros tres medios juntos."),
+        ],
+        imagen="/preguntas/his-circular-medios.svg",
+    ),
+    _q(
+        "civ_derechos", "facil",
+        "Una persona no está de acuerdo con la sentencia que dictó un juzgado en "
+        "su causa. Según el esquema de la figura, ¿ante quién puede apelar?",
+        "Ante la Corte de Apelaciones",
+        "Las flechas del esquema indican hacia dónde sube una causa.\n\n"
+        "1) Sobre los juzgados de primera instancia están las Cortes de "
+        "Apelaciones.\n"
+        "2) Ahí es donde se revisa lo resuelto por el juzgado.\n"
+        "3) La Corte Suprema está en el nivel superior, pero se llega a ella "
+        "después, y por recursos específicos.\n\n"
+        "Que exista un tribunal superior que pueda revisar la decisión es parte "
+        "del derecho al debido proceso.",
+        [
+            ("Ante la Corte Suprema", "Es el tribunal más alto, pero no es el que revisa directamente lo resuelto por un juzgado."),
+            ("Ante el mismo juzgado que dictó la sentencia", "Apelar es pedir que revise un tribunal distinto y superior."),
+            ("Ante el Congreso Nacional", "El Congreso hace las leyes; no revisa sentencias judiciales."),
+        ],
+        imagen="/preguntas/his-piramide-judicial.svg",
+    ),
+    _q(
+        "civ_derechos", "medio",
+        "Según la línea de tiempo de la figura, ¿cuántos años pasaron entre la "
+        "Declaración Universal de Derechos Humanos y la Convención sobre los "
+        "Derechos del Niño?",
+        "41 años",
+        "Los dos hitos están marcados con su año en la línea.\n\n"
+        "1) La Declaración Universal de Derechos Humanos es de 1948.\n"
+        "2) La Convención sobre los Derechos del Niño es de 1989.\n"
+        "3) La diferencia es 1989 − 1948 = 41 años.\n\n"
+        "Entre ambos hitos aparecen los pactos internacionales de 1966: la "
+        "protección de los derechos se fue construyendo por etapas, no de una "
+        "vez.",
+        [
+            ("23 años", "Es la distancia entre la Convención de 1989 y los pactos de 1966."),
+            ("18 años", "Es la distancia entre la Declaración de 1948 y los pactos de 1966."),
+            ("52 años", "Excede el tramo: entre los dos hitos hay poco más de cuatro décadas."),
+        ],
+        imagen="/preguntas/his-linea-derechos.svg",
+    ),
+    _q(
+        "civ_derechos", "facil",
+        "Un trabajador constata que su empleador lo hace trabajar por sobre la "
+        "jornada máxima legal. Según la tabla de la figura, ¿ante quién debe "
+        "reclamar?",
+        "Ante la Dirección del Trabajo",
+        "La tabla empareja cada derecho con el organismo que lo resguarda.\n\n"
+        "1) La fila de la jornada máxima apunta a la Dirección del Trabajo.\n"
+        "2) Ese es el organismo que fiscaliza el cumplimiento de las normas "
+        "laborales y puede multar al empleador.\n\n"
+        "Los tribunales laborales aparecen en otra fila, para el cobro de "
+        "remuneraciones: cada mecanismo atiende un tipo distinto de problema.",
+        [
+            ("Ante el sindicato de la empresa", "El sindicato negocia colectivamente, según la tabla, y no fiscaliza la jornada."),
+            ("Ante los tribunales laborales", "La tabla los asocia al pago de las remuneraciones pactadas."),
+            ("Ante la mutualidad", "La tabla la vincula a la seguridad en el lugar de trabajo."),
+        ],
+        imagen="/preguntas/his-tabla-derechos-laborales.svg",
+    ),
+    _q(
+        "civ_derechos", "medio",
+        "¿Cuál de las siguientes afirmaciones se sostiene con el gráfico de "
+        "sindicalización de la figura?",
+        "La tasa de sindicalización de la minería más que triplica la del comercio",
+        "El gráfico entrega el porcentaje de trabajadores sindicalizados por "
+        "sector.\n\n"
+        "1) Minería: 32%. Comercio: 9%.\n"
+        "2) 32 dividido por 9 es algo más de 3,5.\n"
+        "3) Entonces la minería más que triplica al comercio.\n\n"
+        "El gráfico compara proporciones dentro de cada sector, no cantidades de "
+        "personas: un sector con pocos trabajadores puede tener una tasa alta.",
+        [
+            ("La minería tiene más trabajadores sindicalizados que los demás sectores", "El gráfico muestra porcentajes, no cantidad de personas."),
+            ("Más de la mitad de los trabajadores de la minería está sindicalizada", "La barra de minería llega a 32%, bastante por debajo de la mitad."),
+            ("En servicios no existe sindicalización", "La barra de servicios marca 12%, que no es cero."),
+        ],
+        imagen="/preguntas/his-grafico-sindicalizacion.svg",
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Según el gráfico de la figura, ¿qué ocurrió con los precios en abril?",
+        "Bajaron levemente respecto de marzo",
+        "El gráfico muestra la variación mensual del IPC, o sea cuánto cambian "
+        "los precios de un mes al siguiente.\n\n"
+        "1) En abril la variación es −0,1%: es el único mes bajo la línea del "
+        "cero.\n"
+        "2) Una variación negativa significa que el nivel de precios fue menor "
+        "que el del mes anterior.\n\n"
+        "Ojo con lo que mide el eje: en los otros meses la variación baja pero "
+        "sigue siendo positiva, y eso significa que los precios siguen subiendo, "
+        "solo que más despacio.",
+        [
+            ("Subieron más rápido que en marzo", "En marzo la variación fue 0,2% y en abril, −0,1%: el cambio fue a la baja."),
+            ("Se mantuvieron exactamente iguales", "Una variación de −0,1% no es cero, aunque sea pequeña."),
+            ("Subieron un 0,1%", "El valor de abril está bajo el eje: es negativo."),
+        ],
+        imagen="/preguntas/his-grafico-ipc.svg",
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "¿Qué muestra el gráfico de desempleo de la figura a lo largo de los "
+        "cuatro trimestres?",
+        "Un aumento durante tres trimestres y una baja en el último",
+        "Basta seguir la altura de las barras en orden.\n\n"
+        "1) Primer trimestre: 7%. Segundo: 8%. Tercero: 10%.\n"
+        "2) Cuarto: 9%, es decir, un punto menos que el trimestre anterior.\n\n"
+        "Que baje en el último trimestre no significa que haya menos personas "
+        "sin trabajo que al principio del año: 9% sigue siendo más que el 7% "
+        "inicial.",
+        [
+            ("Una baja sostenida del desempleo durante todo el año", "Las tres primeras barras suben."),
+            ("Un desempleo estable en torno al 7%", "Los valores van de 7% a 10%."),
+            ("Un aumento sostenido durante los cuatro trimestres", "El cuarto trimestre baja de 10% a 9%."),
+        ],
+        imagen="/preguntas/his-grafico-desempleo.svg",
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Según la tabla de la figura, ¿en qué porcentaje subió el costo total de "
+        "la canasta entre el año 1 y el año 2?",
+        "20%",
+        "La variación porcentual compara el aumento con el valor de partida.\n\n"
+        "1) Aumento: 4.320 − 3.600 = 720 pesos.\n"
+        "2) Se compara con el total del año 1: 720 ÷ 3.600 = 0,2.\n"
+        "3) En porcentaje, 20%.\n\n"
+        "Así se construye un índice de precios: se sigue el costo de la misma "
+        "canasta a lo largo del tiempo, con los mismos productos y cantidades.",
+        [
+            ("720%", "720 es el aumento en pesos, no el porcentaje."),
+            ("12%", "Corresponde a comparar el aumento con el total del año 2 y redondear mal."),
+            ("83%", "Es la proporción que representa el año 1 dentro del año 2, no el alza."),
+        ],
+        imagen="/preguntas/his-tabla-canasta.svg",
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "El gráfico de la figura muestra cómo se compone el PIB de un país. Si "
+        "ese PIB es de 200.000 millones de dólares, ¿cuánto aporta la minería?",
+        "24.000 millones de dólares",
+        "El gráfico da la participación de cada sector y el enunciado, el total.\n\n"
+        "1) La minería aporta el 12%.\n"
+        "2) El 12% de 200.000 millones es 200.000 · 0,12.\n"
+        "3) Son 24.000 millones de dólares.\n\n"
+        "El gráfico circular sirve justo para eso: muestra cómo se reparte un "
+        "todo, y con el valor del todo se recupera cada parte.",
+        [
+            ("12.000 millones de dólares", "Usó el 12 como si fuera el resultado, dividiendo por diez de más."),
+            ("110.000 millones de dólares", "Corresponde a un 55%, que es la participación de los servicios."),
+            ("50.000 millones de dólares", "Sería un cuarto del PIB, y la minería aporta el 12%."),
+        ],
+        imagen="/preguntas/his-circular-pib.svg",
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "En el gráfico de la figura, ¿qué representa el punto E?",
+        "El precio y la cantidad en que coinciden lo que se ofrece y lo que se demanda",
+        "El punto E es donde se cruzan la curva de oferta y la de demanda.\n\n"
+        "1) A ese precio, la cantidad que los vendedores están dispuestos a "
+        "vender es igual a la que los compradores quieren comprar.\n"
+        "2) Por eso se llama punto de equilibrio: no hay presión para que el "
+        "precio suba ni para que baje.\n"
+        "3) Sus coordenadas son el precio de equilibrio y la cantidad de "
+        "equilibrio, marcadas como p* y q*.\n\n"
+        "Por encima de ese precio sobra producto y por debajo falta, y en los "
+        "dos casos el precio tiende a volver a E.",
+        [
+            ("El precio más alto que los compradores están dispuestos a pagar", "Ese sería el extremo superior de la curva de demanda, no el cruce."),
+            ("La cantidad máxima que las empresas pueden producir", "El gráfico no informa capacidad máxima de producción."),
+            ("El punto donde la oferta supera a la demanda", "En E ambas son iguales: por eso se cruzan justo ahí."),
+        ],
+        imagen="/preguntas/his-oferta-demanda.svg",
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "En el gráfico de la figura, la demanda se desplazó de D1 a D2 y la "
+        "oferta no cambió. ¿Qué ocurre con el precio y la cantidad de "
+        "equilibrio?",
+        "Ambos suben",
+        "Hay que comparar el cruce viejo con el nuevo.\n\n"
+        "1) El equilibrio pasa de E1 a E2.\n"
+        "2) E2 está más arriba: el precio de equilibrio es mayor.\n"
+        "3) E2 también está más a la derecha: la cantidad transada es mayor.\n\n"
+        "Un desplazamiento de la demanda hacia la derecha significa que, a "
+        "cualquier precio, ahora se quiere comprar más: por ejemplo, porque "
+        "subió el ingreso de las familias.",
+        [
+            ("El precio sube y la cantidad baja", "Eso ocurriría si la curva que se desplazara fuera la de oferta, hacia la izquierda."),
+            ("El precio baja y la cantidad sube", "Correspondería a un aumento de la oferta, no de la demanda."),
+            ("Ambos bajan", "Sería el efecto de una caída de la demanda, o sea el desplazamiento contrario."),
+        ],
+        imagen="/preguntas/his-demanda-desplazada.svg",
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "Según el esquema del flujo circular de la figura, ¿qué entregan los "
+        "hogares a las empresas?",
+        "Trabajo y capital, y el gasto en bienes",
+        "El esquema tiene flechas en los dos sentidos, y hay que seguir las que "
+        "salen de los hogares.\n\n"
+        "1) Los hogares aportan trabajo y capital: son los dueños de los "
+        "factores productivos.\n"
+        "2) Los hogares también gastan comprando lo que las empresas producen.\n"
+        "3) En el sentido contrario, las empresas entregan sueldos y rentas, y "
+        "bienes y servicios.\n\n"
+        "El esquema se llama circular porque lo que sale por un lado vuelve por "
+        "el otro: el sueldo que paga la empresa financia la compra que la "
+        "empresa recibe.",
+        [
+            ("Sueldos y rentas por el trabajo aportado", "Esa flecha va en el sentido contrario: la pagan las empresas a los hogares."),
+            ("Bienes y servicios ya producidos", "También es una flecha de las empresas hacia los hogares."),
+            ("Solo el gasto en bienes de consumo", "Los hogares además aportan el trabajo y el capital."),
+        ],
+        imagen="/preguntas/his-flujo-circular.svg",
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "El gráfico de la figura muestra un precio máximo fijado por debajo del "
+        "precio de equilibrio. ¿Qué se produce en ese mercado?",
+        "Escasez, porque a ese precio se demanda más de lo que se ofrece",
+        "A un precio más bajo que el de equilibrio, las dos curvas responden en "
+        "sentidos opuestos.\n\n"
+        "1) Los compradores quieren más: la cantidad demandada aumenta.\n"
+        "2) Los vendedores quieren vender menos: la cantidad ofrecida cae.\n"
+        "3) En el gráfico, la cantidad demandada queda muy a la derecha de la "
+        "ofrecida, y esa diferencia es la escasez.\n\n"
+        "El precio máximo se fija para proteger a los compradores, y el efecto "
+        "no buscado es que a ese precio no alcanza el producto para todos.",
+        [
+            ("Sobra producto, porque a ese precio nadie quiere comprar", "A un precio más bajo la gente quiere comprar más, no menos."),
+            ("Nada, porque el precio máximo no altera el mercado", "El gráfico muestra que a ese precio las cantidades dejan de coincidir."),
+            ("El precio de equilibrio sube hasta alcanzar el máximo fijado", "El precio máximo es un tope: impide que el precio llegue al de equilibrio."),
+        ],
+        imagen="/preguntas/his-precio-maximo.svg",
     ),
 ]
 

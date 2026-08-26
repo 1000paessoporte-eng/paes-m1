@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" width="620" height="320" role="img">
+  <title>Dos triángulos semejantes con sus ángulos iguales marcados</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M50 250 L230 250 L110 130 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M74 250 L67 233" fill="none" stroke="#111827" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M206 250 L213 234" fill="none" stroke="#111827" stroke-width="1.6" stroke-linejoin="round"/>
+    <text x="140" y="274" text-anchor="middle" font-size="15" fill="#111827">8 cm</text>
+    <text x="64" y="188" text-anchor="end" font-size="15" fill="#111827">6 cm</text>
+    <text x="140" y="232" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">T</text>
+    <path d="M330 280 L600 280 L420 100 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M360 280 L351 259" fill="none" stroke="#111827" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M570 280 L580 260" fill="none" stroke="#111827" stroke-width="1.6" stroke-linejoin="round"/>
+    <text x="465" y="304" text-anchor="middle" font-size="15" fill="#111827">x</text>
+    <text x="364" y="184" text-anchor="end" font-size="15" fill="#111827">9 cm</text>
+    <text x="450" y="256" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">T'</text>
+  </g>
+</svg>
