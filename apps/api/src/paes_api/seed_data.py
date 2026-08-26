@@ -54918,6 +54918,444 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "dictadura_ochenta",
+        "title": "Un comunicado oficial y una declaración de organizaciones (Chile, 1984)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen documentos históricos "
+            "ni citan a persona alguna: reconstruyen el registro y los "
+            "argumentos de dos tipos de documento que circularon en Chile "
+            "durante las jornadas de protesta de los años ochenta, para "
+            "ejercitar el análisis de fuentes."
+        ),
+        "body": (
+            "**Fuente 1. Comunicado oficial que anuncia medidas de excepción, "
+            "1984.**\n"
+            "\n"
+            "Se comunica a la ciudadanía que, ante los hechos de alteración del "
+            "orden público registrados en los últimos días, se ha dispuesto el "
+            "estado de sitio en todo el territorio nacional. La medida "
+            "contempla la restricción del derecho de reunión, la censura de los "
+            "medios de comunicación social, el toque de queda desde las "
+            "veintidós horas y la facultad de disponer detenciones y traslados "
+            "administrativos sin necesidad de orden judicial. La autoridad hace "
+            "presente que estas disposiciones son transitorias y que responden "
+            "a la acción de grupos minoritarios que buscan alterar la "
+            "normalidad del país. La inmensa mayoría de los chilenos, que "
+            "trabaja y cumple con sus deberes, no tiene motivo alguno de "
+            "inquietud: las medidas no la afectan y están destinadas "
+            "precisamente a protegerla.\n"
+            "\n"
+            "**Fuente 2. Declaración conjunta de organizaciones de derechos "
+            "humanos y de iglesias, semanas después.**\n"
+            "\n"
+            "Hemos recibido en nuestras oficinas, en las últimas tres semanas, "
+            "cuatrocientas once denuncias de detención sin orden judicial. En "
+            "doscientos ochenta casos hemos podido establecer el recinto donde "
+            "la persona se encuentra; en el resto no lo sabemos, y es esa "
+            "incertidumbre lo que hoy nos convoca. Se nos dirá que estas "
+            "medidas son transitorias. Llevamos once años oyéndolo. Se nos dirá "
+            "también que solo afectan a una minoría; observamos que entre los "
+            "detenidos hay dirigentes de juntas de vecinos, profesores, obreros "
+            "y estudiantes de las poblaciones donde se realizaron las "
+            "protestas, y que no se ha formulado cargo contra la mayoría de "
+            "ellos. Un derecho que puede suspenderse por comunicado, sin juez "
+            "que lo revise, no está suspendido: está entregado a quien lo "
+            "suspende. Pedimos la nómina completa de detenidos y el lugar donde "
+            "se encuentran. Es lo mínimo que un Estado debe a las familias que "
+            "preguntan por los suyos."
+        ),
+    },
+    {
+        "key": "dictadura_economia_cifras",
+        "title": "Indicadores económicos y sociales de Chile, 1973-1990",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos. Las "
+            "tendencias —apertura comercial, dos recesiones profundas, caída "
+            "del salario real y traspaso de empresas al sector privado— "
+            "reproducen lo que la historiografía económica describe para el "
+            "período, pero las cifras están redondeadas y no corresponden a una "
+            "serie oficial."
+        ),
+        "body": (
+            "**Tabla 1. Actividad, precios y empleo.**\n"
+            "\n"
+            "| Año | Variación del PIB | Inflación anual | Desocupación | "
+            "Salario real (1970 = 100) |\n"
+            "|---|---|---|---|---|\n"
+            "| 1973 | -5% | 508% | 5% | 81 |\n"
+            "| 1975 | -13% | 341% | 15% | 63 |\n"
+            "| 1980 | 8% | 35% | 12% | 89 |\n"
+            "| 1982 | -14% | 21% | 24% | 87 |\n"
+            "| 1986 | 6% | 17% | 12% | 79 |\n"
+            "| 1990 | 3% | 27% | 8% | 102 |\n"
+            "\n"
+            "**Tabla 2. Estructura de la economía.**\n"
+            "\n"
+            "| Año | Empresas del Estado | Arancel promedio a importaciones | "
+            "Peso de la industria en el PIB |\n"
+            "|---|---|---|---|\n"
+            "| 1973 | 500 | 94% | 26% |\n"
+            "| 1981 | 45 | 10% | 21% |\n"
+            "| 1990 | 45 | 15% | 19% |\n"
+            "\n"
+            "Notas:\n"
+            "— La desocupación no incluye a los inscritos en programas "
+            "estatales de empleo de emergencia, que en 1982 y 1983 ocuparon a "
+            "cientos de miles de personas.\n"
+            "— En 1982 el Estado intervino la banca y asumió sus deudas, pese "
+            "al principio de no intervención que el propio gobierno declaraba.\n"
+            "— El sistema de pensiones de reparto fue reemplazado en 1981 por "
+            "uno de capitalización individual."
+        ),
+    },
+    {
+        "key": "dictadura_interpretaciones",
+        "title": "Tres explicaciones del quiebre de 1973",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes que resume, sin atribuirlas "
+            "a autor alguno, tres familias de interpretación presentes en la "
+            "historiografía chilena sobre las causas del quiebre democrático de "
+            "1973. Los hechos posteriores al golpe que el texto menciona "
+            "corresponden a lo establecido por las comisiones de verdad y los "
+            "tribunales."
+        ),
+        "body": (
+            "Sobre el 11 de septiembre de 1973 hay hechos establecidos y hay "
+            "explicaciones en disputa. Que hubo un golpe de Estado, que siguió "
+            "una dictadura de diecisiete años y que durante ella se cometieron "
+            "violaciones sistemáticas a los derechos humanos —detención sin "
+            "orden judicial, tortura, ejecución y desaparición forzada, con "
+            "organismos creados para esa tarea— es lo primero: fue establecido "
+            "por comisiones de verdad y por sentencias judiciales, y no está en "
+            "discusión historiográfica. Lo que sí se discute es por qué la "
+            "democracia chilena, que llevaba décadas funcionando, se quebró.\n"
+            "\n"
+            "Una primera explicación pone el acento en la polarización interna. "
+            "Sostiene que el sistema de partidos chileno se fragmentó en tres "
+            "bloques sin voluntad de acuerdo, que cada uno llegó a considerar "
+            "ilegítimo al adversario y que las instituciones de mediación —el "
+            "Congreso, los tribunales, la prensa— dejaron de ser reconocidas "
+            "como árbitro común. Desde esta lectura, el quiebre fue el "
+            "desenlace de un proceso en que las responsabilidades están "
+            "repartidas.\n"
+            "\n"
+            "Una segunda explicación subraya el conflicto social y económico. "
+            "Sostiene que el programa de reformas en curso —nacionalizaciones, "
+            "profundización de la reforma agraria, control estatal de la "
+            "distribución— afectó intereses concretos y poderosos, y que la "
+            "reacción de los sectores perjudicados incluyó desabastecimiento, "
+            "paros de gremios y financiamiento de la oposición. Desde esta "
+            "lectura, el quiebre no fue un accidente de la conversación "
+            "política sino la defensa de un orden de propiedad amenazado.\n"
+            "\n"
+            "Una tercera explicación sitúa el caso chileno en la Guerra Fría. "
+            "Sostiene que la confrontación entre bloques convirtió a América "
+            "Latina en un terreno de disputa, que existió intervención "
+            "extranjera documentada en el financiamiento de la oposición y en "
+            "la presión económica, y que la doctrina de seguridad nacional "
+            "entonces vigente formó a las fuerzas armadas de la región para "
+            "identificar un enemigo interno.\n"
+            "\n"
+            "Las tres explicaciones no son incompatibles: cada una ilumina un "
+            "plano distinto y la mayoría de los trabajos recientes las combina, "
+            "discutiendo el peso relativo de cada factor. Lo que sí las "
+            "distingue es dónde ponen la responsabilidad, y por eso la elección "
+            "entre ellas nunca es solo técnica. Una regla ayuda a leerlas: "
+            "explicar por qué ocurrió algo no equivale a justificarlo, y "
+            "confundir ambas cosas hace imposible investigar el pasado "
+            "reciente."
+        ),
+    },
+    {
+        "key": "chile_xx_democratizacion",
+        "title": "Quiénes se incorporaron a la vida política chilena, 1930-1970",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Democratizar no es solo votar más seguido. Entre 1930 y 1970 Chile "
+            "incorporó a la vida política a grupos que hasta entonces estaban "
+            "fuera, y lo hizo por varias vías a la vez: ampliando quién podía "
+            "votar, cambiando cómo se votaba, y reconociendo derechos a quienes "
+            "no los tenían.\n"
+            "\n"
+            "La primera vía fue el padrón. Las mujeres obtuvieron el voto en "
+            "elecciones municipales antes que en las nacionales, y solo a fines "
+            "de los años cuarenta pudieron participar en presidenciales y "
+            "parlamentarias. Los analfabetos quedaron excluidos hasta 1970, en "
+            "un país donde no saber leer no estaba repartido al azar: se "
+            "concentraba en el campo y entre los sectores más pobres, de modo "
+            "que el requisito recaía justamente sobre quienes menos peso "
+            "tenían.\n"
+            "\n"
+            "La segunda vía es menos visible y fue decisiva. Durante décadas "
+            "cada candidatura imprimía y repartía su propio voto, lo que "
+            "permitía saber qué había votado una persona y, en el campo, "
+            "controlar el sufragio de los inquilinos. La cédula única, adoptada "
+            "a fines de los años cincuenta, entregó al Estado la impresión de "
+            "una papeleta con todas las candidaturas. El efecto fue inmediato y "
+            "se notó sobre todo en zonas rurales, donde los resultados dejaron "
+            "de reproducir la voluntad del propietario del fundo. Un voto "
+            "secreto en serio no es un detalle de procedimiento: es la "
+            "condición para que exista voto.\n"
+            "\n"
+            "La tercera vía fue el reconocimiento de derechos fuera de las "
+            "urnas. La sindicalización campesina, prohibida en la práctica "
+            "durante casi todo el período, se autorizó en 1967, y en pocos años "
+            "el número de trabajadores agrícolas organizados pasó de unos pocos "
+            "miles a más de cien mil. La reforma agraria, iniciada en 1962 y "
+            "profundizada desde 1967, alteró la estructura de propiedad sobre "
+            "la que descansaba ese control.\n"
+            "\n"
+            "Conviene no idealizar el proceso. Entre 1948 y 1958 rigió una ley "
+            "que proscribió a un partido, borró a sus militantes de los "
+            "registros electorales y relegó a dirigentes: la ampliación no fue "
+            "una línea recta ni alcanzó a todos al mismo tiempo. Y el país que "
+            "llegó a 1970 con más votantes, más sindicatos y menos "
+            "analfabetismo era también un país con conflictos más agudos, "
+            "porque la incorporación de nuevos actores puso en discusión "
+            "repartos que antes nadie disputaba."
+        ),
+    },
+    {
+        "key": "chile_xx_cifras",
+        "title": "Chile a mediados del siglo XX: población, escuela y padrón",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos. Los órdenes "
+            "de magnitud y las tendencias reproducen lo que la historiografía "
+            "describe para el Chile de mediados del siglo XX, pero las cifras "
+            "están redondeadas y no corresponden a una serie oficial."
+        ),
+        "body": (
+            "**Tabla 1. Población y condiciones de vida.**\n"
+            "\n"
+            "| Año | Población urbana | Analfabetismo | Viviendas sin agua "
+            "potable | Mortalidad infantil por mil |\n"
+            "|---|---|---|---|---|\n"
+            "| 1930 | 49% | 25% | 62% | 234 |\n"
+            "| 1940 | 53% | 20% | 55% | 193 |\n"
+            "| 1952 | 60% | 16% | 47% | 129 |\n"
+            "| 1960 | 68% | 12% | 38% | 114 |\n"
+            "| 1970 | 75% | 11% | 26% | 79 |\n"
+            "\n"
+            "**Tabla 2. Cuerpo electoral.**\n"
+            "\n"
+            "| Elección | Inscritos | Inscritos sobre población total | "
+            "Votantes mujeres sobre el total |\n"
+            "|---|---|---|---|\n"
+            "| 1938 | 500.000 | 10% | no votaban en elección presidencial |\n"
+            "| 1952 | 1.100.000 | 18% | 32% |\n"
+            "| 1964 | 2.900.000 | 34% | 46% |\n"
+            "| 1970 | 3.500.000 | 37% | 51% |\n"
+            "\n"
+            "Notas:\n"
+            "— Las mujeres obtuvieron el derecho a voto en elecciones "
+            "municipales antes que en las presidenciales y parlamentarias.\n"
+            "— Hasta 1970 se exigió saber leer y escribir para inscribirse en "
+            "los registros electorales.\n"
+            "— La cifra de mortalidad infantil corresponde a fallecidos antes "
+            "del primer año por cada mil nacidos vivos."
+        ),
+    },
+    {
+        "key": "chile_xx_migracion",
+        "title": "Dos voces sobre la llegada a la ciudad (Chile, 1952-1957)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen testimonios ni "
+            "informes históricos: son dos piezas ficticias construidas con los "
+            "rasgos que la historiografía documenta para la migración campo- "
+            "ciudad chilena de mediados del siglo XX, para ejercitar la "
+            "comparación de fuentes."
+        ),
+        "body": (
+            "**Fuente 1. Entrevista a una mujer llegada desde el campo, "
+            "recogida por una asistente social en 1957.**\n"
+            "\n"
+            "Nosotros trabajábamos en el fundo, mi marido de inquilino y yo en "
+            "la casa patronal. Nos daban la regalía: una talla de tierra, leña "
+            "y la ración. Plata casi no veíamos, y lo poco que había se iba en "
+            "la pulpería del mismo fundo. Cuando entró la máquina no hicieron "
+            "falta tantas manos y nos avisaron que teníamos que salir. Llegamos "
+            "aquí porque un primo tenía sitio tomado en la loma. La casa la "
+            "levantamos en dos noches con lo que juntamos; agua acarreamos de "
+            "la pila de la esquina, dos cuadras. Yo lavo para afuera y él hace "
+            "pololos en la construcción, no todos los meses. Le voy a decir la "
+            "verdad: comemos peor que en el fundo, pero aquí el niño está en la "
+            "escuela y nadie viene a decirnos a qué hora hay que levantarse.\n"
+            "\n"
+            "**Fuente 2. Informe de una comisión municipal de vivienda, 1952.**\n"
+            "\n"
+            "El sector oriente de la quebrada concentra hoy unas mil doscientas "
+            "viviendas levantadas sin permiso, en terrenos que no admiten "
+            "urbanización. No hay alcantarillado ni red de agua, y el "
+            "abastecimiento se hace por piletas cuya capacidad fue calculada "
+            "para una décima parte de esa población. La comisión constata que "
+            "el crecimiento no proviene del aumento vegetativo sino de la "
+            "llegada continua de familias del campo, atraídas por la "
+            "expectativa de empleo industrial que la ciudad no está en "
+            "condiciones de ofrecer en la cantidad requerida. Se recomienda "
+            "estudiar medidas de contención del flujo migratorio, junto con un "
+            "plan de urbanización de los sectores ya consolidados. La comisión "
+            "hace presente que las erradicaciones practicadas hasta ahora no "
+            "han disminuido la población del sector: las familias erradicadas "
+            "han sido reemplazadas por otras en el término de pocos meses."
+        ),
+    },
+    {
+        "key": "guerra_fria_final",
+        "title": "Cómo terminó la Guerra Fría y qué quedó después",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Historia para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Durante cuarenta años el mundo se ordenó en torno a dos bloques. "
+            "Entre 1989 y 1991 uno de los dos dejó de existir, y lo hizo sin "
+            "que mediara una guerra entre las potencias. Ese desenlace "
+            "sorprendió a casi todos, incluidos los servicios de inteligencia "
+            "que llevaban décadas observándolo.\n"
+            "\n"
+            "Las causas fueron acumulativas. La economía planificada del bloque "
+            "oriental había logrado industrializar rápido en las décadas "
+            "centrales del siglo, pero se mostró incapaz de sostener innovación "
+            "y variedad de consumo; el gasto militar exigido por la competencia "
+            "absorbía una parte creciente de recursos escasos; y las "
+            "intervenciones para sostener gobiernos aliados resultaron costosas "
+            "y desgastantes. A eso se sumó, dentro del propio bloque, una "
+            "crisis de legitimidad: la distancia entre el discurso oficial y la "
+            "vida cotidiana era conocida por todos y ya no convencía a nadie.\n"
+            "\n"
+            "El desenlace tuvo consecuencias que exceden lo militar. Con un "
+            "solo bloque en pie, un conjunto de políticas económicas pasó a "
+            "presentarse como la única alternativa disponible: apertura "
+            "comercial, privatización de empresas públicas, desregulación de "
+            "mercados y disciplina fiscal. Ese programa ya se aplicaba antes de "
+            "1989 en varios países, incluido Chile desde la década de 1970, "
+            "pero el derrumbe del bloque contrario le dio algo que antes no "
+            "tenía, que es la ausencia de un modelo rival al cual compararlo.\n"
+            "\n"
+            "En paralelo se aceleró la globalización. Las mismas décadas "
+            "trajeron contenedores, satélites, cables submarinos y después "
+            "internet, y con ellos cadenas de producción repartidas entre "
+            "continentes. Un producto dejó de fabricarse en un país para "
+            "ensamblarse con piezas de muchos. El efecto fue desigual: abarató "
+            "bienes y sacó de la pobreza a cientos de millones de personas en "
+            "Asia, y al mismo tiempo destruyó empleo industrial en regiones "
+            "enteras de los países que hasta entonces fabricaban esos bienes.\n"
+            "\n"
+            "Conviene resistir dos lecturas apresuradas. La primera es que el "
+            "fin de la Guerra Fría trajo el fin de los conflictos: los años "
+            "noventa fueron intensos en guerras, solo que dejaron de ordenarse "
+            "en torno al eje anterior. La segunda es que el desenlace probó la "
+            "superioridad de un sistema sobre otro en todos los planos. Lo que "
+            "un colapso demuestra es que ese modelo no era sostenible en esas "
+            "condiciones, que es una afirmación más modesta y más útil que la "
+            "otra."
+        ),
+    },
+    {
+        "key": "guerra_fria_america_latina",
+        "title": "América Latina entre 1959 y 1990: procesos y regímenes",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla y notas originales de 1000paes con datos ilustrativos "
+            "referidos a países ficticios. Los tipos de proceso y su "
+            "distribución en el tiempo reproducen lo que la historiografía "
+            "describe para la región, pero las cifras no corresponden a ningún "
+            "registro oficial."
+        ),
+        "body": (
+            "**Tabla 1. Cinco países de la región (ficticios), 1959-1990.**\n"
+            "\n"
+            "| País | Reforma agraria | Gobierno reformista electo | Golpe de "
+            "Estado | Retorno a elecciones |\n"
+            "|---|---|---|---|---|\n"
+            "| Altamar | 1962 | 1964-1968 | 1968 | 1985 |\n"
+            "| Boreal | no hubo | 1970-1973 | 1973 | 1989 |\n"
+            "| Carmenia | 1959 | revolución armada, sin elecciones | no hubo | "
+            "no en el período |\n"
+            "| Delmonte | 1967 | 1966-1976 | 1976 | 1983 |\n"
+            "| Estival | 1971 | 1958-1990, con elecciones periódicas | no hubo "
+            "| continuo |\n"
+            "\n"
+            "**Tabla 2. Informes de comisiones de verdad posteriores al retorno "
+            "democrático.**\n"
+            "\n"
+            "| País | Años cubiertos | Casos calificados de desaparición o "
+            "ejecución | Año del informe |\n"
+            "|---|---|---|---|\n"
+            "| Altamar | 1968-1985 | 2.100 | 1988 |\n"
+            "| Boreal | 1973-1989 | 3.400 | 1991 |\n"
+            "| Delmonte | 1976-1983 | 8.900 | 1985 |\n"
+            "\n"
+            "Notas:\n"
+            "— Las comisiones calificaron únicamente los casos que pudieron "
+            "acreditar con al menos dos fuentes independientes; sus informes "
+            "advierten que la cifra real es superior.\n"
+            "— Carmenia y Estival no constituyeron comisiones porque no hubo en "
+            "ellas gobiernos militares en el período.\n"
+            "— En los tres países con comisión, la doctrina oficial de los "
+            "gobiernos militares describía el conflicto como una guerra interna "
+            "contra un enemigo infiltrado en la sociedad."
+        ),
+    },
+    {
+        "key": "guerra_fria_discursos",
+        "title": "Dos alocuciones radiales en el arranque de la Guerra Fría (1947)",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen discursos históricos "
+            "ni citan a dirigente alguno: reconstruyen los argumentos con que "
+            "cada bloque describió al otro en 1947, para ejercitar la "
+            "comparación de interpretaciones."
+        ),
+        "body": (
+            "**Fuente 1. Alocución radial de un dirigente del bloque "
+            "occidental.**\n"
+            "\n"
+            "El mundo se ha dividido en dos formas de vida, y cada nación "
+            "deberá elegir entre ellas. La primera descansa en la voluntad de "
+            "la mayoría expresada en elecciones libres, en instituciones "
+            "representativas, en garantías contra la arbitrariedad y en la "
+            "libertad de creer y de expresarse. La segunda se impone a la "
+            "mayoría por la fuerza: controla la prensa, dirige las elecciones, "
+            "reprime la disidencia y llama liberación a la ocupación. No "
+            "proponemos una cruzada. Proponemos apoyar a los pueblos libres que "
+            "resisten intentos de sometimiento, porque la ayuda económica y "
+            "financiera es la condición de la estabilidad política. La semilla "
+            "del régimen totalitario prende en la miseria y en la necesidad; "
+            "crece cuando muere la esperanza de una vida mejor. Sostener esa "
+            "esperanza es nuestra tarea, y no es caridad: es la defensa de "
+            "nuestra propia seguridad.\n"
+            "\n"
+            "**Fuente 2. Alocución radial de un dirigente del bloque oriental, "
+            "semanas después.**\n"
+            "\n"
+            "Se nos anuncia una elección entre dos formas de vida. Examinemos "
+            "la que se nos ofrece. Se llama libre a un orden en que unos pocos "
+            "poseen las fábricas, la tierra y los diarios, y el resto vende su "
+            "jornada para comer; se llama elección a la que se hace entre dos "
+            "partidos que defienden el mismo reparto. La libertad de imprenta "
+            "es real para quien puede comprar una imprenta. Se nos ofrece "
+            "además ayuda económica, y conviene mirar sus condiciones: no es un "
+            "regalo sino un préstamo que abre mercados a quien lo concede, ata "
+            "al que lo recibe y le indica con quién puede comerciar. Nosotros "
+            "proponemos otra cosa: que los medios de producción pertenezcan a "
+            "quienes trabajan y que la planificación reemplace al desorden del "
+            "mercado. Dicen que reprimimos. Nosotros decimos que edificamos, y "
+            "que toda edificación exige disciplina mientras el enemigo esté a "
+            "las puertas."
+        ),
+    },
+    {
         "key": "posguerra_marco_regulador",
         "title": "Un mundo con reglas nuevas, 1944-1948",
         "kind": "no_literario",
@@ -56946,6 +57384,2253 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "facil",
+        "Según la Fuente 1, ¿qué medidas contempla el estado de sitio anunciado?",
+        "Reunión restringida, censura, toque de queda y detenciones",
+        "El comunicado las enumera de manera explícita: restricción del derecho de "
+        "reunión, censura de los medios de comunicación social, toque de queda "
+        "desde las veintidós horas y facultad de disponer detenciones y traslados "
+        "administrativos sin necesidad de orden judicial.\nLas cuatro operan sobre "
+        "garantías distintas, y la última es la que la Fuente 2 discutirá con más "
+        "detalle.",
+        [
+            ("La suspensión de las elecciones municipales del año siguiente", "El comunicado no menciona ninguna elección."),
+            ("El cierre de las escuelas y universidades del país", "No figura entre las medidas que el comunicado enumera."),
+            ("La creación de tribunales especiales para juzgar civiles", "El comunicado no anuncia la creación de tribunales."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "facil",
+        "Según la Fuente 2, ¿cuántas denuncias de detención recibieron las "
+        "organizaciones en tres semanas?",
+        "411 denuncias",
+        "La declaración abre con esa cifra: cuatrocientas once denuncias de "
+        "detención sin orden judicial recibidas en las últimas tres semanas.\nY la "
+        "desagrega enseguida: en doscientos ochenta casos pudieron establecer el "
+        "recinto donde la persona se encontraba, y en el resto no. Esa "
+        "incertidumbre es lo que la declaración señala como motivo de su "
+        "convocatoria.",
+        [
+            ("280 denuncias", "Son los casos en que sí pudieron establecer el recinto de detención."),
+            ("131 denuncias", "Corresponde a la diferencia entre ambas cifras, no al total recibido."),
+            ("11 denuncias", "El once del texto se refiere a los años que llevaban oyendo lo mismo."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "facil",
+        "Según la Fuente 2, ¿qué solicitan concretamente las organizaciones?",
+        "La nómina de detenidos y su lugar de detención",
+        "La declaración cierra con esa petición: la nómina completa de detenidos y "
+        "el lugar donde se encuentran.\nY explica por qué se detiene ahí: es lo "
+        "mínimo que un Estado debe a las familias que preguntan por los suyos. La "
+        "petición se limita a información, que es lo que permite después cualquier "
+        "otra gestión.",
+        [
+            ("La derogación inmediata del estado de sitio", "La declaración no pide levantar la medida sino información sobre los detenidos."),
+            ("La renuncia de las autoridades responsables", "No aparece ninguna demanda de ese tipo en el texto."),
+            ("La reparación económica de las familias afectadas", "La declaración no menciona compensaciones."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "La Fuente 1 sostiene que las medidas no afectan a la mayoría. ¿Cómo "
+        "responde la Fuente 2 a ese argumento?",
+        "Mostrando quiénes están entre los detenidos",
+        "La declaración no discute el argumento en abstracto: lo confronta con el "
+        "perfil de las personas detenidas.\nEnumera dirigentes de juntas de "
+        "vecinos, profesores, obreros y estudiantes de las poblaciones donde se "
+        "realizaron las protestas, y agrega un dato decisivo: contra la mayoría de "
+        "ellos no se ha formulado cargo alguno.\nSi no hay imputación, la categoría "
+        "de grupos minoritarios que alteran la normalidad no describe a quienes "
+        "efectivamente están detenidos, y el argumento del comunicado se queda sin "
+        "apoyo.",
+        [
+            ("Negando que existieran alteraciones del orden público", "La declaración menciona las protestas sin negar que ocurrieran."),
+            ("Sosteniendo que la mayoría también participó en las protestas", "No afirma eso: describe quiénes fueron detenidos."),
+            ("Proponiendo que se detenga a otras personas en su lugar", "La declaración no plantea nada semejante."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "¿Qué argumento formula la Fuente 2 sobre los derechos que se suspenden por "
+        "comunicado?",
+        "Quedan entregados a quien decide suspenderlos",
+        "La declaración distingue entre suspender un derecho y hacerlo desaparecer "
+        "como garantía.\nSu formulación es precisa: un derecho que puede "
+        "suspenderse por comunicado, sin juez que lo revise, no está suspendido, "
+        "está entregado a quien lo suspende.\nEl punto es el control judicial. Una "
+        "restricción revisable por un tercero sigue siendo una excepción dentro de "
+        "un orden jurídico; una que solo depende de quien la dicta convierte el "
+        "derecho en una concesión de la autoridad.",
+        [
+            ("Se restablecen automáticamente al terminar el plazo", "La declaración cuestiona precisamente que el plazo dependa de quien dictó la medida."),
+            ("Solo pueden suspenderse con acuerdo del Congreso", "El texto no menciona al Congreso, que además estaba disuelto en el período."),
+            ("Pierden validez porque no fueron publicados en la ley", "El argumento no es de publicidad formal sino de control judicial."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "La Fuente 2 responde llevamos once años oyéndolo a la palabra "
+        "transitorias. ¿Qué está señalando?",
+        "Que lo excepcional se volvió permanente",
+        "El comunicado presenta las medidas como transitorias, y esa palabra hace "
+        "un trabajo importante: sugiere que el orden ordinario sigue en pie y que "
+        "la restricción es un paréntesis.\nLa declaración lo confronta con la "
+        "duración efectiva. Once años de excepciones sucesivas describen un régimen "
+        "y no un paréntesis.\nLa observación es aplicable a cualquier medida de "
+        "excepción: su carácter transitorio no se acredita con la declaración de "
+        "quien la dicta sino con la existencia de un plazo y de alguien que lo "
+        "controle.",
+        [
+            ("Que el comunicado contiene un error en las fechas", "No hay ningún problema de datación en el texto."),
+            ("Que las medidas anteriores fueron más severas", "La declaración no compara la severidad de distintas medidas."),
+            ("Que la autoridad cambió su criterio en once años", "El argumento es el contrario: el mismo criterio se repite."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "¿Qué factor de la recuperación democrática de los años ochenta ilustra la "
+        "Fuente 2?",
+        "Organizaciones que documentaban y hacían públicos los hechos",
+        "La declaración muestra un trabajo concreto: recibir denuncias, "
+        "registrarlas, verificar en qué recinto está cada persona y publicar el "
+        "resultado con cifras.\nEso cumple dos funciones a la vez. Protege en el "
+        "momento, porque una detención registrada es más difícil de negar, y deja "
+        "constancia para después.\nBuena parte de lo que las comisiones de verdad "
+        "pudieron establecer en democracia se apoyó en archivos reunidos así, bajo "
+        "la propia dictadura y por organizaciones de derechos humanos e iglesias.",
+        [
+            ("La competencia electoral entre partidos legalizados", "Los partidos estaban proscritos o en receso durante el período."),
+            ("La intervención de tribunales que revisaban las detenciones", "La declaración señala justamente la ausencia de revisión judicial."),
+            ("La negociación entre el gobierno y la oposición", "El texto no describe ninguna instancia de negociación."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "medio",
+        "¿Qué diferencia de método hay entre ambas fuentes al describir la "
+        "situación?",
+        "Una afirma en general y la otra entrega cifras verificables",
+        "El comunicado describe hechos de alteración del orden público y grupos "
+        "minoritarios sin precisar cuántos, quiénes ni dónde.\nLa declaración "
+        "procede al revés: 411 denuncias, 280 recintos establecidos, tres semanas, "
+        "ausencia de cargos contra la mayoría de los detenidos.\nLa diferencia "
+        "importa porque cambia lo que cada texto permite discutir. Una afirmación "
+        "general se acepta o se rechaza en bloque; una cifra puede contrastarse, "
+        "corregirse o refutarse, y por eso obliga a quien la recibe.",
+        [
+            ("Una describe hechos recientes y la otra, hechos antiguos", "Ambas se refieren a las mismas semanas de 1984."),
+            ("Una se dirige a la ciudadanía y la otra, a los tribunales", "La declaración es pública y no se presenta como escrito judicial."),
+            ("Una usa lenguaje jurídico y la otra, lenguaje religioso", "La declaración argumenta en términos jurídicos, no confesionales."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "El comunicado dice que las medidas están destinadas a proteger a la "
+        "mayoría. ¿Qué operación argumentativa realiza?",
+        "Divide a la población entre protegidos y peligrosos",
+        "El texto construye dos grupos. Por un lado, grupos minoritarios que buscan "
+        "alterar la normalidad; por otro, la inmensa mayoría que trabaja y cumple "
+        "con sus deberes.\nCon esa división, las facultades excepcionales dejan de "
+        "aparecer como una amenaza para el conjunto y pasan a presentarse como un "
+        "servicio prestado a la mayoría.\nLo que la operación oculta es que las "
+        "facultades no distinguen: detener sin orden judicial es una potestad que "
+        "alcanza a cualquiera, y por eso la Fuente 2 responde mostrando quiénes "
+        "están efectivamente detenidos.",
+        [
+            ("Reconoce que las medidas afectan derechos de todos", "Sostiene lo contrario: que la mayoría no tiene motivo de inquietud."),
+            ("Somete las medidas a revisión de un tribunal", "El comunicado no contempla ningún control judicial."),
+            ("Fija un plazo cierto para el término del estado de sitio", "Solo afirma que son transitorias, sin plazo."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "¿Por qué la Fuente 2 destaca que no se ha formulado cargo contra la "
+        "mayoría de los detenidos?",
+        "Porque sin imputación no hay nada que revisar ni desvirtuar",
+        "Una detención en un proceso ordinario supone una imputación: se acusa de "
+        "algo concreto, y esa acusación puede examinarse, refutarse o confirmarse "
+        "ante un tribunal.\nCuando no hay cargo, la persona queda privada de "
+        "libertad sin que exista un hecho que discutir, y por lo tanto sin ninguna "
+        "vía para salir de esa situación por la vía jurídica.\nEse es el punto que "
+        "conecta con el argumento central de la declaración: sin juez que revise, "
+        "la libertad depende por completo de la voluntad de quien detiene.",
+        [
+            ("Porque los cargos deben formularse antes de la detención", "El problema que señala es la ausencia total de imputación, no su oportunidad."),
+            ("Porque sin cargos la detención dura menos tiempo", "El texto no sugiere que la ausencia de cargos acorte la detención."),
+            ("Porque los cargos permitirían identificar a los responsables", "La declaración pide identificar a los detenidos, no a los responsables."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "¿Qué precaución exige que la Fuente 2 provenga de organizaciones que "
+        "asisten a los denunciantes?",
+        "Registran lo que llega a sus oficinas, no todo lo ocurrido",
+        "El propio texto lo dice: las denuncias fueron recibidas en sus oficinas. "
+        "Eso significa que alguien tuvo que llegar hasta ahí, saber que existían y "
+        "atreverse a denunciar.\nEl registro resultante es entonces un piso y no un "
+        "total, y puede estar sesgado hacia sectores donde esas organizaciones "
+        "tenían presencia.\nLa precaución no es descartar la cifra, que es de las "
+        "mejores disponibles para el período, sino leerla como lo que es: un mínimo "
+        "documentado, contrastable con otros archivos y con las investigaciones "
+        "posteriores.",
+        [
+            ("Deberían descartarse por defender a los detenidos", "Asistir a las víctimas no invalida un registro: obliga a contrastarlo."),
+            ("Sus cifras son necesariamente mayores que las reales", "Ocurre lo contrario: un registro por denuncia tiende a quedar por debajo."),
+            ("Al no ser oficiales, no sirven como fuente histórica", "Los archivos de estas organizaciones son fuente central del período."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "¿Qué relación hay entre documentos como la Fuente 2 y las comisiones de "
+        "verdad posteriores?",
+        "Aportaron el registro sobre el que después se investigó",
+        "Las comisiones se constituyeron en democracia, años después de los hechos, "
+        "y necesitaban antecedentes verificables sobre casos ocurridos bajo un "
+        "régimen que no los registraba.\nDocumentos como este los proveen: fechas, "
+        "cifras, recintos identificados, nombres reunidos por organizaciones que "
+        "trabajaron mientras los hechos ocurrían.\nPor eso el trabajo de "
+        "documentación de los años ochenta no fue solo una forma de protección en "
+        "su momento. Fue también la condición de que después se pudiera establecer "
+        "qué había pasado.",
+        [
+            ("Las comisiones desestimaron los archivos de organizaciones", "Buena parte de lo establecido se apoyó en ellos."),
+            ("Las comisiones existían ya en 1984 y recibían estas denuncias", "Se constituyeron en democracia, después del período."),
+            ("Los archivos fueron reemplazados por registros oficiales", "El régimen no llevaba registro público de estas detenciones."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "¿Qué factor de la década de 1980 permite explicar que en 1988 existiera "
+        "una oposición capaz de competir?",
+        "Redes sociales y de derechos humanos activas durante años",
+        "La Fuente 2 muestra parte de ese tejido en funcionamiento: organizaciones "
+        "de derechos humanos e iglesias que registran, verifican y publican, y "
+        "dirigentes de juntas de vecinos, profesores, obreros y estudiantes "
+        "organizados en las poblaciones.\nCon los partidos proscritos o en receso, "
+        "esas redes sostuvieron durante años la capacidad de convocar, informarse y "
+        "coordinarse.\nCuando en 1988 se abrió una instancia de competencia, ese "
+        "tejido acumulado es lo que permitió organizar una campaña en pocos meses. "
+        "Sin él, la convocatoria habría encontrado una sociedad sin estructuras "
+        "desde donde responder.",
+        [
+            ("La existencia de un sistema de partidos plenamente legal", "Los partidos estaban proscritos o en receso durante el período."),
+            ("La libertad de prensa vigente durante los años ochenta", "El propio comunicado establece censura sobre los medios."),
+            ("El control judicial de las detenciones administrativas", "La declaración señala precisamente su ausencia."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_fuentes", "medio",
+        "Un comunicado oficial y una declaración de organizaciones describen los "
+        "mismos días. ¿Qué gana el historiador al leerlos juntos?",
+        "Puede contrastar lo afirmado con lo documentado",
+        "Por separado, cada texto es coherente consigo mismo: el comunicado explica "
+        "una medida y la declaración denuncia sus efectos.\nPuestos uno al lado del "
+        "otro aparece lo que ninguno muestra solo. El comunicado afirma que las "
+        "medidas alcanzan a grupos minoritarios; la declaración entrega el perfil y "
+        "el número de los detenidos, y esa cifra puede contrastarse con archivos "
+        "judiciales y con las investigaciones posteriores.\nEs el procedimiento "
+        "básico del oficio: no elegir entre versiones sino confrontar afirmaciones "
+        "con registros producidos de manera independiente.",
+        [
+            ("Puede establecer cuál de los dos autores es más confiable", "El contraste no clasifica autores: confronta afirmaciones con registros."),
+            ("Puede prescindir de cualquier otra fuente del período", "Ambos son documentos de parte y requieren contraste adicional."),
+            ("Puede datar con precisión el inicio del estado de sitio", "Ninguno de los dos entrega esa fecha exacta."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "facil",
+        "Según la Tabla 1, ¿en qué año la desocupación alcanzó su punto más alto?",
+        "En 1982, con 24%",
+        "La columna de desocupación entrega 5%, 15%, 12%, 24%, 12% y 8% para los "
+        "seis cortes de la serie.\nEl máximo es el 24% de 1982, que coincide con la "
+        "mayor caída del PIB del período. Y la primera nota advierte que la cifra "
+        "real fue mayor: no incluye a los inscritos en programas estatales de "
+        "empleo de emergencia.",
+        [
+            ("En 1975, con 15%", "Es alto y corresponde a la primera recesión, pero está por debajo del de 1982."),
+            ("En 1986, con 12%", "Coincide con el valor de 1980 y no es el máximo de la serie."),
+            ("En 1990, con 8%", "Es el segundo valor más bajo de toda la tabla."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "facil",
+        "Según la Tabla 2, ¿cuántas empresas del Estado quedaban en 1981?",
+        "45 empresas",
+        "La Tabla 2 registra 500 empresas del Estado en 1973 y 45 en 1981, cifra "
+        "que se mantiene en 1990.\nEl traspaso de más de cuatrocientas cincuenta "
+        "empresas al sector privado en ocho años es una de las transformaciones "
+        "estructurales que caracterizan al período.",
+        [
+            ("500 empresas", "Es el número de 1973, antes del proceso de privatizaciones."),
+            ("455 empresas", "Corresponde a la diferencia entre ambos años, no al saldo de 1981."),
+            ("15 empresas", "Es el arancel promedio de 1990, no un número de empresas."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "facil",
+        "Según la Tabla 2, ¿qué ocurrió con el arancel promedio entre 1973 y 1981?",
+        "Bajó de 94% a 10%",
+        "La Tabla 2 registra esos dos valores, lo que representa una apertura "
+        "comercial muy rápida: en ocho años el arancel promedio cae a un noveno de "
+        "su nivel inicial.\nHacia 1990 sube algo, hasta 15%, pero se mantiene muy "
+        "por debajo del punto de partida. Es la medida que dejó a la industria "
+        "nacional expuesta a la competencia externa.",
+        [
+            ("Subió desde 10% hasta 94% en ese período", "El movimiento que registra la tabla va en sentido contrario."),
+            ("Se mantuvo estable en torno al 15% anual", "El 15% corresponde a 1990, no al promedio del período."),
+            ("Bajó de 94% a 15% recién hacia 1990", "Ya en 1981 había caído a 10%."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "medio",
+        "¿Qué muestran juntas las columnas de PIB y desocupación en 1975 y 1982?",
+        "Dos recesiones profundas con desempleo muy alto",
+        "En 1975 el PIB cae 13% y la desocupación llega a 15%; en 1982 el PIB cae "
+        "14% y la desocupación, a 24%.\nSon las dos contracciones mayores de la "
+        "serie y ninguna es un ajuste menor: una caída del producto superior al 10% "
+        "implica que la economía se contrae en más de una décima parte en un "
+        "año.\nLa nota agrega que en 1982 y 1983 los programas estatales de empleo "
+        "de emergencia ocuparon a cientos de miles de personas que no aparecen en "
+        "la cifra de desocupación.",
+        [
+            ("Un crecimiento sostenido con pleno empleo", "Las dos columnas registran caídas del producto y desempleo de dos dígitos."),
+            ("Una recesión seguida de otra sin efecto en el empleo", "La desocupación sube en ambos años respecto de los cortes anteriores."),
+            ("Dos años de inflación creciente y empleo estable", "La inflación baja entre 1975 y 1982, y el empleo no se mantiene."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "medio",
+        "Según la Tabla 1, ¿qué ocurrió con el salario real entre 1970 y 1990?",
+        "Terminó apenas por encima del nivel de 1970",
+        "El índice toma 1970 como base 100 y llega a 102 en 1990, es decir dos "
+        "puntos por encima del punto de partida después de veinte años.\nEntre "
+        "medio la serie recorre un trayecto muy accidentado: cae a 63 en 1975, se "
+        "recupera hasta 89 en 1980 y vuelve a bajar a 79 en 1986.\nEse contraste "
+        "entre el punto final y el recorrido es lo que la tabla permite ver: dos "
+        "décadas en que el poder de compra del salario se desplomó y se recuperó "
+        "sin ganar terreno.",
+        [
+            ("Se duplicó respecto del nivel que tenía en 1970", "El índice llega a 102: apenas dos puntos sobre la base."),
+            ("Cayó de manera sostenida durante los veinte años", "Sube entre 1975 y 1980 y otra vez entre 1986 y 1990."),
+            ("Se mantuvo estable en torno a 100 en toda la serie", "Llega a caer hasta 63 en 1975."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "medio",
+        "¿Qué transformación estructural muestra la Tabla 2 entre 1973 y 1981?",
+        "El Estado deja de ser productor y se abre el comercio",
+        "Las dos primeras columnas se mueven en la misma dirección. Las empresas "
+        "estatales pasan de 500 a 45, y el arancel promedio, de 94% a 10%.\nSon dos "
+        "caras de la misma reorientación: el Estado se retira de la producción y la "
+        "economía se expone a la competencia externa.\nLa tercera columna registra "
+        "un efecto de ese cambio: el peso de la industria en el PIB baja de 26% a "
+        "21%, y sigue bajando hasta 19% en 1990.",
+        [
+            ("El Estado amplía su participación en la producción", "Las empresas estatales caen de 500 a 45 en ocho años."),
+            ("La industria aumenta su peso dentro del producto", "Su participación baja de 26% a 21% en ese lapso."),
+            ("El comercio exterior queda cerrado por altos aranceles", "El arancel promedio cae de 94% a 10%."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "medio",
+        "Según la segunda nota, ¿qué hizo el Estado en 1982 y por qué resulta "
+        "llamativo?",
+        "Intervino la banca pese a declararse no intervencionista",
+        "La nota consigna las dos cosas juntas: el Estado intervino la banca y "
+        "asumió sus deudas, pese al principio de no intervención que el propio "
+        "gobierno declaraba.\nLa tensión es entre el principio enunciado y la "
+        "conducta efectiva, y aparece en el peor momento de la serie: 1982 registra "
+        "la mayor caída del PIB y la mayor desocupación.\nEs un dato útil para no "
+        "leer un modelo económico solo por su declaración de principios: lo que un "
+        "gobierno hace bajo presión informa tanto como lo que dice cuando no la "
+        "tiene.",
+        [
+            ("Nacionalizó la industria para enfrentar la recesión", "La nota se refiere a la banca, y como intervención de rescate."),
+            ("Aumentó los aranceles hasta el nivel de 1973", "El arancel de 1990 es 15%, muy por debajo del 94% inicial."),
+            ("Restableció el sistema de pensiones de reparto", "Ese sistema fue reemplazado en 1981 y no se restableció."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "medio",
+        "Según la primera nota, ¿por qué la cifra de desocupación de 1982 subestima "
+        "el problema?",
+        "Deja fuera a quienes estaban en empleos de emergencia",
+        "La nota lo dice de manera explícita: la desocupación no incluye a los "
+        "inscritos en programas estatales de empleo de emergencia, que en 1982 y "
+        "1983 ocuparon a cientos de miles de personas.\nEsas personas figuran como "
+        "ocupadas en la estadística aunque su situación sea la de quien no "
+        "encuentra trabajo y recibe una asignación del Estado.\nEs un buen ejemplo "
+        "de por qué conviene mirar la definición de un indicador antes de leerlo: "
+        "un 24% ya muy alto describe una realidad todavía peor.",
+        [
+            ("Porque no considera a las personas del sector rural", "La nota no menciona ninguna exclusión territorial."),
+            ("Porque se midió antes de que empezara la recesión", "La cifra corresponde a 1982, el año de la mayor caída del PIB."),
+            ("Porque incluye a quienes ya habían dejado de buscar empleo", "El problema es el contrario: excluye personas del conteo."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "dificil",
+        "¿Qué relación entre apertura comercial e industria permiten observar las "
+        "tablas?",
+        "El peso de la industria baja mientras cae el arancel",
+        "Las dos series se mueven en direcciones inversas y en el mismo período: el "
+        "arancel promedio pasa de 94% a 10% entre 1973 y 1981, y el peso de la "
+        "industria en el PIB, de 26% a 21%.\nEl vínculo es plausible: con aranceles "
+        "muy bajos, la producción local compite con importaciones que antes estaban "
+        "encarecidas, y los sectores menos competitivos se contraen.\nLa tabla "
+        "permite constatar la coincidencia, no probar la causa. Habría que "
+        "descartar otros factores del período, como las dos recesiones, que también "
+        "golpearon a la industria.",
+        [
+            ("La industria crece cuando bajan los aranceles", "Su participación cae en los dos tramos de la serie."),
+            ("El arancel no tiene relación con la estructura productiva", "Las dos series se mueven de manera inversa y simultánea."),
+            ("La industria se mantiene estable pese a la apertura", "Baja de 26% a 21% y luego a 19%."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "dificil",
+        "En 1986 el PIB crece 6% y el salario real cae a 79. ¿Qué muestra esa "
+        "combinación?",
+        "El crecimiento no llegaba a los salarios",
+        "Las dos cifras corresponden al mismo año y no se contradicen: el producto "
+        "puede aumentar mientras la remuneración del trabajo pierde poder de "
+        "compra.\nQue ocurra significa que lo producido se reparte de otro modo, "
+        "sea porque el desempleo alto de esos años debilitaba la posición de quien "
+        "negocia un salario, sea porque la recuperación se concentró en sectores "
+        "con poco empleo.\nLa lección de método es general: el crecimiento agregado "
+        "no describe cómo se reparte lo que se produce, y por eso las dos columnas "
+        "hay que leerlas juntas.",
+        [
+            ("Que la tabla contiene un error en una de las dos columnas", "Las dos cosas pueden ocurrir a la vez sin contradicción alguna."),
+            ("Que la inflación de ese año se comió todo el crecimiento", "La inflación de 1986 es 17%, menor que la de la mayoría de la serie."),
+            ("Que el desempleo bajó gracias a mejores salarios", "El desempleo de 1986 es 12% y el salario real cae respecto de 1982."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "dificil",
+        "Un texto sostiene que las cifras de 1990 prueban el éxito del modelo. ¿Qué "
+        "matiza la serie completa?",
+        "Veinte años para volver al salario real de 1970",
+        "Las cifras de 1990 son mejores que las de los cortes anteriores: PIB "
+        "creciendo, desocupación en 8% y salario real en 102.\nPero la serie "
+        "muestra qué hubo que atravesar para llegar ahí: dos recesiones con caídas "
+        "de dos dígitos, desocupación de 24% en 1982 y un salario real que estuvo "
+        "bajo el nivel de 1970 durante todo el período.\nUn punto final favorable y "
+        "un recorrido costoso son dos afirmaciones distintas, y la tabla sostiene "
+        "las dos. Quedarse con una sola describe mal el período.",
+        [
+            ("Que en 1990 la desocupación seguía por encima del 20%", "En 1990 la tabla registra 8%."),
+            ("Que las privatizaciones se revirtieron después de 1981", "Las empresas del Estado se mantienen en 45 hasta 1990."),
+            ("Que el arancel volvió a su nivel de 1973", "En 1990 es 15%, muy por debajo del 94% inicial."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre el período?",
+        "Cómo se repartieron los costos entre grupos sociales",
+        "Las columnas entregan agregados nacionales: producto, precios, "
+        "desocupación, un índice de salario real, número de empresas, arancel y "
+        "peso de la industria.\nNinguna informa quién perdió el empleo, en qué "
+        "sectores, con qué nivel educativo o en qué regiones, ni quién adquirió las "
+        "empresas traspasadas al sector privado.\nEs una limitación relevante justo "
+        "para este período, porque la discusión sobre el modelo se juega en buena "
+        "parte en esa distribución, y responderla exige series desagregadas y "
+        "registros de las privatizaciones.",
+        [
+            ("Cómo evolucionó la inflación entre 1973 y 1990", "La segunda columna de la Tabla 1 la sigue en los seis cortes."),
+            ("Cuántas empresas estatales fueron traspasadas al sector privado", "Se obtiene comparando las cifras de 1973 y 1981 en la Tabla 2."),
+            ("En qué años la economía se contrajo con mayor fuerza", "La columna de variación del PIB lo muestra en 1975 y 1982."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_dictadura", "dificil",
+        "La tercera nota menciona el reemplazo del sistema de pensiones en 1981. "
+        "¿Por qué es coherente con lo que muestran las tablas?",
+        "Traslada al individuo un riesgo que antes era colectivo",
+        "El resto de la fuente describe la misma dirección: el Estado pasa de "
+        "quinientas empresas a cuarenta y cinco, y la economía se abre a la "
+        "competencia externa.\nEl cambio de pensiones opera igual en otro terreno. "
+        "Un sistema de reparto distribuye el riesgo entre cotizantes de distintas "
+        "generaciones; uno de capitalización individual lo deja en la cuenta de "
+        "cada persona.\nPor eso la nota está donde está: no es un dato suelto sino "
+        "la misma reorientación aplicada a la seguridad social.",
+        [
+            ("Aumenta la participación del Estado en la economía", "Va en el sentido contrario a lo que muestra la Tabla 2."),
+            ("Explica la caída de la inflación después de 1980", "La fuente no vincula el sistema de pensiones con los precios."),
+            ("Compensa la caída del salario real de esos años", "El salario real vuelve a caer entre 1980 y 1986."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_temporal", "dificil",
+        "La serie registra crecimiento en 1980, caída en 1982 y recuperación en "
+        "1986. ¿Cómo se ordena eso temporalmente?",
+        "Como ciclos económicos dentro de un cambio estructural",
+        "Hay dos ritmos superpuestos y conviene no confundirlos. Uno es cíclico: "
+        "expansión, crisis y recuperación, que es el vaivén propio de cualquier "
+        "economía y se mide en años.\nEl otro es estructural y va en una sola "
+        "dirección durante todo el período: el Estado deja de producir, el arancel "
+        "cae y la industria pierde peso, sin que ninguna de esas series "
+        "revierta.\nDistinguirlos importa porque una recuperación cíclica no "
+        "deshace un cambio de estructura, y confundir ambos planos lleva a leer una "
+        "crisis como el fin de un modelo o un repunte como su confirmación.",
+        [
+            ("Como una larga duración de tres siglos", "La serie cubre diecisiete años, muy lejos de esa escala."),
+            ("Como un único acontecimiento ocurrido en 1982", "1982 es un año de la serie, no el conjunto del proceso."),
+            ("Como un ritmo constante sin variaciones internas", "El PIB pasa de crecer 8% a caer 14% en dos años."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "facil",
+        "Según el texto, ¿qué aspecto del período NO está en discusión "
+        "historiográfica?",
+        "Que hubo violaciones sistemáticas a los derechos humanos",
+        "El texto separa desde su primera línea los hechos establecidos de las "
+        "explicaciones en disputa.\nEntre los primeros sitúa el golpe, la dictadura "
+        "de diecisiete años y las violaciones sistemáticas a los derechos humanos, "
+        "con detención sin orden judicial, tortura, ejecución y desaparición "
+        "forzada, y organismos creados para esa tarea.\nY precisa por qué no se "
+        "discuten: fueron establecidos por comisiones de verdad y por sentencias "
+        "judiciales.",
+        [
+            ("Cuál fue la causa principal del quiebre democrático", "Es exactamente lo que el texto presenta como objeto de disputa."),
+            ("Qué peso tuvo la intervención extranjera en el proceso", "Forma parte de la discusión sobre las causas."),
+            ("Si la polarización de los partidos fue determinante", "Es una de las tres explicaciones en disputa."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "facil",
+        "Según el texto, ¿en qué pone el acento la primera explicación?",
+        "En la polarización interna del sistema de partidos",
+        "El texto la resume así: el sistema de partidos se fragmentó en tres "
+        "bloques sin voluntad de acuerdo, cada uno llegó a considerar ilegítimo al "
+        "adversario y las instituciones de mediación dejaron de ser reconocidas "
+        "como árbitro común.\nDe ahí extrae su conclusión característica: el "
+        "quiebre fue el desenlace de un proceso en que las responsabilidades están "
+        "repartidas.",
+        [
+            ("En la intervención de potencias extranjeras", "Corresponde a la tercera explicación del texto."),
+            ("En la defensa de un orden de propiedad amenazado", "Corresponde a la segunda explicación."),
+            ("En la doctrina de seguridad nacional", "Aparece en la tercera explicación."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "facil",
+        "Según el texto, ¿qué elementos menciona la segunda explicación como "
+        "reacción de los sectores perjudicados?",
+        "Desabastecimiento, paros y financiamiento opositor",
+        "El texto los enumera al describir esa lectura, después de señalar qué "
+        "reformas afectaron intereses concretos: nacionalizaciones, profundización "
+        "de la reforma agraria y control estatal de la distribución.\nLa conclusión "
+        "que esa explicación extrae es que el quiebre no fue un accidente de la "
+        "conversación política sino la defensa de un orden de propiedad amenazado.",
+        [
+            ("Manifestaciones estudiantiles y huelgas de hambre", "No figuran entre los elementos que el texto enumera."),
+            ("Reformas constitucionales y consultas populares", "El texto no menciona esas vías institucionales en ese pasaje."),
+            ("Presión de organismos internacionales de crédito", "El texto sitúa la presión económica en la tercera explicación."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "¿Por qué el texto sostiene que las tres explicaciones no son "
+        "incompatibles?",
+        "Cada una ilumina un plano distinto del mismo proceso",
+        "El texto lo afirma expresamente y agrega que la mayoría de los trabajos "
+        "recientes las combina, discutiendo el peso relativo de cada factor.\nLa "
+        "razón es que operan en niveles distintos: una describe el sistema "
+        "político, otra la estructura económica y sus intereses, y la tercera el "
+        "contexto internacional.\nNada obliga a elegir entre ellas como si fueran "
+        "versiones rivales de un mismo hecho. Lo que sí exige una explicación "
+        "completa es decir cuánto pesa cada plano, y ahí sí hay desacuerdo.",
+        [
+            ("Porque las tres atribuyen la responsabilidad a los mismos actores", "El texto señala justamente que difieren en dónde ponen la responsabilidad."),
+            ("Porque las tres fueron formuladas por los mismos autores", "El texto no atribuye ninguna a autor alguno."),
+            ("Porque las tres describen hechos posteriores al golpe", "Las tres explican causas del quiebre, no consecuencias."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "Según el texto, ¿qué es lo que sí distingue a las tres explicaciones entre "
+        "sí?",
+        "Dónde ponen la responsabilidad del quiebre",
+        "El texto lo señala tras admitir que las tres pueden combinarse: lo que las "
+        "distingue es dónde ponen la responsabilidad, y por eso la elección entre "
+        "ellas nunca es solo técnica.\nSe ve en las conclusiones de cada una. La "
+        "primera reparte responsabilidades entre los tres bloques políticos; la "
+        "segunda las concentra en los sectores que defendían un orden de propiedad; "
+        "la tercera incorpora a actores externos.\nDe ahí que elegir un énfasis no "
+        "sea un gesto neutro: cada uno deja a distintos actores en el centro del "
+        "relato.",
+        [
+            ("El período histórico que cada una analiza", "Las tres se refieren al mismo proceso y al mismo desenlace."),
+            ("El tipo de fuentes documentales que utilizan", "El texto no compara las fuentes de cada explicación."),
+            ("Si aceptan o no que hubo un golpe de Estado", "El golpe figura entre los hechos establecidos, no en disputa."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "La primera explicación sostiene que las instituciones de mediación dejaron "
+        "de ser árbitro común. ¿Qué significa eso?",
+        "Ya nadie las aceptaba para resolver el conflicto",
+        "Un árbitro común es aquel cuya decisión las partes aceptan aunque les sea "
+        "adversa. Eso es lo que permite que un conflicto se procese sin salirse del "
+        "sistema.\nEl texto menciona tres de esas instituciones —el Congreso, los "
+        "tribunales, la prensa— y sostiene que dejaron de cumplir esa "
+        "función.\nCuando ocurre, cada bando pasa a leer las decisiones adversas "
+        "como maniobras del contrario y no como resultados legítimos, y el "
+        "conflicto se traslada fuera de los cauces institucionales.",
+        [
+            ("Que esas instituciones dejaron de funcionar materialmente", "El texto habla de reconocimiento, no de cierre o parálisis material."),
+            ("Que fueron reemplazadas por organismos internacionales", "Nada en el texto sugiere ese reemplazo."),
+            ("Que los tres bloques políticos se fusionaron en uno solo", "El texto describe fragmentación, no fusión."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "Según el texto, ¿qué aporta la tercera explicación que las otras dos no "
+        "consideran?",
+        "El contexto internacional y la intervención externa",
+        "Las dos primeras explican el quiebre con factores internos: el "
+        "funcionamiento del sistema de partidos y la estructura de intereses "
+        "económicos.\nLa tercera agrega un plano distinto: la confrontación entre "
+        "bloques convirtió a América Latina en terreno de disputa, hubo "
+        "intervención extranjera documentada en el financiamiento de la oposición y "
+        "en la presión económica, y la doctrina de seguridad nacional formó a las "
+        "fuerzas armadas para identificar un enemigo interno.\nEse último elemento "
+        "es el que conecta el caso chileno con el patrón regional del período.",
+        [
+            ("El papel de los partidos políticos chilenos", "Es el objeto de la primera explicación."),
+            ("El efecto de las nacionalizaciones sobre la economía", "Corresponde a la segunda explicación."),
+            ("Las violaciones a los derechos humanos posteriores al golpe", "El texto las sitúa entre los hechos establecidos, no entre las explicaciones."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "¿Qué relación establece la segunda explicación entre las reformas y el "
+        "quiebre?",
+        "Las reformas afectaron intereses que reaccionaron para defenderse",
+        "El razonamiento tiene dos pasos. Primero identifica qué reformas estaban "
+        "en curso —nacionalizaciones, profundización de la reforma agraria, control "
+        "estatal de la distribución— y sostiene que afectaron intereses concretos y "
+        "poderosos.\nSegundo, describe la reacción: desabastecimiento, paros de "
+        "gremios y financiamiento de la oposición.\nDe ahí la conclusión que el "
+        "texto le atribuye: el quiebre no fue un accidente de la conversación "
+        "política sino la defensa de un orden de propiedad amenazado.",
+        [
+            ("Las reformas fracasaron por errores técnicos de diseño", "El texto no atribuye a esa explicación un juicio sobre el diseño de las reformas."),
+            ("Las reformas fueron impuestas por potencias extranjeras", "La intervención externa aparece en la tercera explicación y del lado opositor."),
+            ("Las reformas no tuvieron relación con el desenlace de 1973", "Esa explicación sostiene exactamente lo contrario."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "El texto advierte que explicar no equivale a justificar. ¿Por qué esa "
+        "distinción es necesaria en este tema?",
+        "Sin ella no se podría investigar el pasado reciente",
+        "Investigar las causas de un quiebre exige reconstruir cómo llegaron a "
+        "actuar quienes actuaron, incluidos los responsables de lo que vino "
+        "después.\nSi describir ese razonamiento se leyera como aprobarlo, "
+        "cualquier explicación quedaría bajo sospecha y la única postura segura "
+        "sería no explicar nada.\nEl texto lo formula con precisión: confundir "
+        "ambas cosas hace imposible investigar el pasado reciente. La distinción no "
+        "relativiza los hechos establecidos, que el propio texto deja fuera de "
+        "discusión: protege la posibilidad de estudiarlos.",
+        [
+            ("Porque las causas del quiebre no pueden establecerse", "El texto presenta tres explicaciones que sí las establecen, con distinto énfasis."),
+            ("Porque los hechos posteriores al golpe siguen en discusión", "El texto los sitúa como establecidos por comisiones y tribunales."),
+            ("Porque toda interpretación histórica es igualmente válida", "El texto discute el peso relativo de cada factor, lo que supone que unas explican mejor que otras."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "¿Por qué el texto separa desde el comienzo los hechos establecidos de las "
+        "explicaciones en disputa?",
+        "Para que discutir las causas no reabra lo que ya está probado",
+        "Sin esa separación, cualquier discusión sobre por qué ocurrió el quiebre "
+        "podría deslizarse hacia poner en duda lo que vino después.\nEl texto lo "
+        "evita fijando primero qué está establecido por comisiones de verdad y "
+        "sentencias judiciales, y recién entonces abre la discusión sobre "
+        "causas.\nEs la misma distinción que ordena cualquier trabajo sobre pasado "
+        "reciente: los hechos se acreditan con evidencia y quedan fuera del debate "
+        "interpretativo; las causas se discuten con argumentos y admiten revisión.",
+        [
+            ("Para sostener que las causas del quiebre son indiscutibles", "El texto presenta tres explicaciones en disputa: es lo contrario."),
+            ("Para evitar mencionar los hechos posteriores al golpe", "Los menciona expresamente y con detalle."),
+            ("Para demostrar que la historiografía chilena está dividida", "Señala que los trabajos recientes combinan las tres explicaciones."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "Un texto escolar explica el quiebre de 1973 usando solo la primera "
+        "explicación. ¿Qué queda fuera de esa versión?",
+        "Los intereses en juego y el contexto internacional",
+        "La primera explicación describe el sistema político y concluye que las "
+        "responsabilidades están repartidas entre los bloques.\nUsada sola, deja "
+        "fuera dos planos que el texto documenta: qué intereses concretos afectaban "
+        "las reformas en curso y cómo reaccionaron, y el papel de la Guerra Fría, "
+        "con intervención extranjera en el financiamiento de la oposición y presión "
+        "económica.\nEl resultado es una explicación en que el conflicto parece un "
+        "problema de conversación entre partidos, y por eso el texto insiste en "
+        "discutir el peso relativo de los tres planos en lugar de elegir uno.",
+        [
+            ("Los hechos establecidos por las comisiones de verdad", "Esos hechos son independientes de qué explicación se adopte."),
+            ("La fecha exacta en que ocurrió el golpe de Estado", "Ninguna de las tres explicaciones altera la cronología."),
+            ("La existencia de un sistema de partidos en Chile", "Es justamente el objeto central de la primera explicación."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "El texto afirma que la elección entre explicaciones nunca es solo técnica. "
+        "¿Qué está señalando con eso?",
+        "Cada énfasis pone a otros actores en el centro",
+        "Una explicación no solo ordena causas: distribuye responsabilidad, y esa "
+        "distribución tiene consecuencias fuera del texto.\nAtribuir el quiebre a "
+        "la polarización reparte la responsabilidad entre todos los bloques; "
+        "atribuirlo a la defensa de un orden de propiedad la concentra en unos "
+        "actores; incorporar la intervención extranjera suma otros.\nEl texto no "
+        "concluye de ahí que todas valgan lo mismo. Concluye que quien elige un "
+        "énfasis debe saber que está haciendo algo más que ordenar factores, y por "
+        "eso pide discutir el peso relativo de cada uno con evidencia.",
+        [
+            ("Que los historiadores no pueden estudiar este período", "El texto describe una historiografía activa que combina explicaciones."),
+            ("Que la evidencia es irrelevante para elegir entre ellas", "El texto pide discutir el peso relativo de cada factor, lo que exige evidencia."),
+            ("Que las tres explicaciones dicen en el fondo lo mismo", "El texto señala que difieren en dónde ponen la responsabilidad."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_dictadura", "dificil",
+        "¿Qué tipo de evidencia permitiría evaluar el peso de la tercera "
+        "explicación?",
+        "Documentos desclasificados de gobiernos extranjeros",
+        "La tercera explicación hace afirmaciones verificables: que hubo "
+        "intervención extranjera en el financiamiento de la oposición y en la "
+        "presión económica, y que la doctrina de seguridad nacional formó a las "
+        "fuerzas armadas de la región.\nCada una remite a un tipo de registro: "
+        "archivos de gobiernos extranjeros, documentos de organismos financieros, "
+        "programas de formación militar del período.\nEl texto ya la califica de "
+        "documentada, de modo que la pregunta abierta no es si existió sino cuánto "
+        "pesó frente a los otros dos planos, y eso exige medir su alcance con esos "
+        "mismos documentos.",
+        [
+            ("Encuestas actuales sobre cómo se recuerda el período", "Informan sobre la memoria presente, no sobre lo ocurrido entonces."),
+            ("Los informes de las comisiones de verdad", "Documentan las violaciones posteriores al golpe, no la intervención externa previa."),
+            ("Las actas de sesiones del Congreso chileno", "Sirven para la primera explicación, no para medir la intervención externa."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_fuentes", "dificil",
+        "Este texto resume tres interpretaciones sin atribuirlas a ningún autor. "
+        "¿Qué límite impone eso a quien lo usa?",
+        "No permite rastrear en qué evidencia se apoya cada una",
+        "Presentar las explicaciones sin autor tiene la ventaja de mostrar el mapa "
+        "del debate sin que la discusión se desvíe hacia quién dijo qué.\nEl costo "
+        "es que ninguna queda anclada a un trabajo concreto, y por lo tanto no se "
+        "puede ir a ver con qué documentos se construyó, qué período examinó ni qué "
+        "objeciones recibió.\nPor eso una síntesis así funciona como puerta de "
+        "entrada. Evaluar el peso relativo de cada explicación, que es lo que el "
+        "propio texto propone, exige acudir a los trabajos que la sostienen.",
+        [
+            ("No permite saber cuáles son las interpretaciones en disputa", "Es justamente lo que el texto sí entrega, con tres explicaciones desarrolladas."),
+            ("Convierte al texto en una fuente primaria del período", "Es una elaboración posterior: una fuente secundaria."),
+            ("Impide distinguir los hechos establecidos de las explicaciones", "El texto los separa expresamente en su primer párrafo."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "facil",
+        "Según el texto, ¿hasta qué año quedaron excluidos del voto los analfabetos "
+        "en Chile?",
+        "Hasta 1970",
+        "El texto lo consigna al describir la primera vía de democratización y "
+        "agrega por qué esa exclusión pesaba: no saber leer no estaba repartido al "
+        "azar.\nSe concentraba en el campo y entre los sectores más pobres, de modo "
+        "que el requisito recaía justamente sobre quienes menos peso tenían.",
+        [
+            ("Hasta 1949", "Ese año se relaciona con el voto femenino en elecciones nacionales."),
+            ("Hasta 1958", "A fines de los cincuenta se adopta la cédula única, que es otra medida."),
+            ("Hasta 1962", "En 1962 se inicia la reforma agraria, según el texto."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "facil",
+        "Según el texto, ¿en qué consistía el sistema de votación anterior a la "
+        "cédula única?",
+        "Cada candidatura imprimía y repartía su propio voto",
+        "El texto lo describe así y señala de inmediato su consecuencia: permitía "
+        "saber qué había votado una persona.\nEn el campo esa posibilidad se "
+        "traducía en control del sufragio de los inquilinos, porque quien entregaba "
+        "la papeleta podía verificar cuál se había usado.",
+        [
+            ("El Estado imprimía una papeleta con todas las candidaturas", "Ese es el sistema que introduce la cédula única."),
+            ("Los votantes escribían a mano el nombre del candidato", "El texto describe papeletas impresas por las candidaturas."),
+            ("El voto se emitía de viva voz ante la mesa receptora", "El texto no describe ese procedimiento."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "facil",
+        "Según el texto, ¿qué ocurrió con la sindicalización campesina en 1967?",
+        "Se autorizó y creció con rapidez",
+        "El texto señala que estuvo prohibida en la práctica durante casi todo el "
+        "período y que se autorizó en 1967.\nY entrega la magnitud del cambio: en "
+        "pocos años el número de trabajadores agrícolas organizados pasó de unos "
+        "pocos miles a más de cien mil.",
+        [
+            ("Se prohibió tras haber estado permitida", "El orden que describe el texto es el inverso."),
+            ("Se mantuvo estable, sin cambios relevantes", "El texto describe un crecimiento de miles a más de cien mil."),
+            ("Se limitó a los trabajadores de la reforma agraria", "El texto no establece esa restricción."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "¿Por qué el texto sostiene que la cédula única fue decisiva y no un "
+        "detalle de procedimiento?",
+        "Porque hizo posible que el voto fuera realmente secreto",
+        "Con papeletas impresas por cada candidatura, quien la entregaba podía "
+        "verificar qué se votaba, y eso volvía verificable la preferencia del "
+        "elector.\nEl texto describe el efecto concreto del cambio: en zonas "
+        "rurales los resultados dejaron de reproducir la voluntad del propietario "
+        "del fundo.\nDe ahí la frase con que cierra el párrafo: un voto secreto en "
+        "serio es la condición para que exista voto, porque sin secreto lo que se "
+        "registra es la preferencia de quien controla, no la de quien vota.",
+        [
+            ("Porque amplió el número de personas inscritas en el padrón", "La cédula única cambia cómo se vota, no quiénes pueden hacerlo."),
+            ("Porque redujo el costo de imprimir las papeletas", "El texto no plantea el problema en términos de costo."),
+            ("Porque permitió votar a quienes no sabían leer", "Los analfabetos siguieron excluidos hasta 1970."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "El texto afirma que no saber leer no estaba repartido al azar. ¿Qué "
+        "consecuencia política extrae de ahí?",
+        "El requisito excluía a quienes menos peso tenían",
+        "El argumento tiene dos pasos. Primero constata que el analfabetismo se "
+        "concentraba en el campo y entre los sectores más pobres.\nDe ahí se sigue "
+        "que un requisito de alfabetización no funcionaba como un filtro neutro: "
+        "dejaba fuera de manera sistemática a los mismos grupos que ya estaban en "
+        "desventaja.\nEl texto lo formula como que el requisito recaía justamente "
+        "sobre quienes menos peso tenían, y esa es la diferencia entre una regla "
+        "formalmente general y una regla con efectos desiguales conocidos de "
+        "antemano.",
+        [
+            ("El requisito afectaba por igual a todos los sectores", "El texto sostiene lo contrario: se concentraba en algunos."),
+            ("El analfabetismo era mayor en las ciudades que en el campo", "El texto lo sitúa concentrado en el campo."),
+            ("La exclusión se corrigió al adoptarse la cédula única", "Los analfabetos siguieron excluidos hasta 1970."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "Según el texto, ¿qué relación hay entre la reforma agraria y el control "
+        "del voto rural?",
+        "La reforma alteró la propiedad en que se apoyaba ese control",
+        "El texto describe un control basado en la relación entre propietario e "
+        "inquilino: quien vive y trabaja en el fundo depende de su dueño, y por eso "
+        "podía ser presionado.\nLa reforma agraria, iniciada en 1962 y profundizada "
+        "desde 1967, modificó justamente la estructura de propiedad sobre la que "
+        "descansaba esa relación.\nEl texto la presenta así como parte del mismo "
+        "proceso que la cédula única y la sindicalización campesina: tres medidas "
+        "distintas que operan sobre la misma dependencia.",
+        [
+            ("La reforma agraria estableció el voto secreto en el campo", "El secreto del voto lo aporta la cédula única, no la reforma."),
+            ("La reforma agraria excluyó del padrón a los propietarios", "El texto no describe ninguna exclusión de ese tipo."),
+            ("No hay relación: son procesos independientes entre sí", "El texto las vincula a través de la estructura de propiedad."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "¿Qué advertencia introduce el texto al mencionar la ley vigente entre 1948 "
+        "y 1958?",
+        "Que la ampliación de derechos no fue una línea recta",
+        "El texto describe la medida sin atenuarla: una ley proscribió a un "
+        "partido, borró a sus militantes de los registros electorales y relegó a "
+        "dirigentes.\nEl dato es incómodo para el relato del período, porque ocurre "
+        "en medio de las mismas décadas en que el padrón se amplía y se adopta la "
+        "cédula única.\nPor eso el texto lo usa como advertencia: la "
+        "democratización avanzó en algunas dimensiones mientras retrocedía en otra, "
+        "y describirla como un progreso continuo obligaría a omitir diez años.",
+        [
+            ("Que el voto secreto se suspendió durante esa década", "El texto no describe ninguna suspensión del secreto del voto."),
+            ("Que las mujeres perdieron el derecho a voto en ese período", "El texto sitúa la incorporación femenina en esos mismos años."),
+            ("Que la reforma agraria se detuvo entre 1948 y 1958", "La reforma agraria comienza en 1962, después de ese período."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "medio",
+        "Según el texto, ¿por qué las mujeres votaron primero en elecciones "
+        "municipales?",
+        "El texto lo consigna sin explicar la razón",
+        "El texto establece el hecho —las mujeres obtuvieron el voto municipal "
+        "antes que el nacional, y solo a fines de los cuarenta pudieron participar "
+        "en presidenciales y parlamentarias— y no ofrece una explicación de ese "
+        "orden.\nReconocer lo que una fuente afirma y lo que deja sin decir es "
+        "parte de leerla bien. Aquí el dato está y el motivo no.\nCualquier "
+        "explicación —que lo municipal se considerara menos político, que fuera una "
+        "concesión gradual— exigiría acudir a los debates parlamentarios del "
+        "período, que esta fuente no contiene.",
+        [
+            ("Porque el voto municipal no requería saber leer", "El texto no establece requisitos distintos según el tipo de elección."),
+            ("Porque en lo municipal el padrón era más amplio", "El texto no compara el tamaño de los padrones."),
+            ("Porque la cédula única se aplicó primero en las comunas", "El texto no vincula la cédula única con el voto femenino."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "El texto describe tres vías de democratización. ¿Qué tienen en común?",
+        "Las tres actúan sobre condiciones que impedían participar",
+        "La primera vía amplía quiénes están habilitados; la segunda protege el "
+        "acto mismo de votar; la tercera reconoce derechos fuera de las "
+        "urnas.\nNinguna se limita a proclamar un principio. Todas modifican una "
+        "condición concreta que en los hechos impedía participar: la exclusión "
+        "legal, la verificabilidad del voto, la prohibición de organizarse.\nPor "
+        "eso el texto abre diciendo que democratizar no es solo votar más seguido. "
+        "Un derecho declarado sin esas condiciones puede quedar en manos de quien "
+        "controla al que lo ejerce.",
+        [
+            ("Las tres fueron aprobadas por el mismo gobierno", "El texto las distribuye a lo largo de cuarenta años."),
+            ("Las tres se refieren al padrón electoral", "Solo la primera lo hace; las otras dos operan en otros planos."),
+            ("Las tres beneficiaron principalmente a los propietarios", "El texto describe medidas que reducen el control de los propietarios."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "El texto cierra diciendo que el país de 1970 tenía conflictos más agudos. "
+        "¿Qué relación establece con la democratización?",
+        "Incorporar actores pone en disputa repartos antes indiscutidos",
+        "El texto no presenta el conflicto como un fracaso del proceso sino como su "
+        "consecuencia esperable.\nMientras un grupo está fuera de la vida política, "
+        "sus intereses no llegan a la discusión pública y el reparto vigente no "
+        "necesita defenderse. Cuando ese grupo vota, se organiza y negocia, esos "
+        "repartos pasan a estar en disputa.\nLa formulación es cuidadosa y conviene "
+        "retenerla: más conflicto no equivale a menos democracia, y puede ser "
+        "justamente la señal de que la democracia alcanzó a más gente.",
+        [
+            ("Los conflictos prueban que la democratización fracasó", "El texto los presenta como consecuencia del proceso, no como su fracaso."),
+            ("Los conflictos provienen del retroceso entre 1948 y 1958", "El texto los vincula con la incorporación de nuevos actores."),
+            ("Los conflictos son ajenos a los cambios que el texto describe", "El texto los deriva expresamente de ellos."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "Un estudiante sostiene que, según el texto, entre 1930 y 1970 Chile se "
+        "democratizó de manera continua. ¿Qué le falta a esa lectura?",
+        "El período de proscripción que el propio texto consigna",
+        "El texto describe avances reales en tres dimensiones y esa parte de la "
+        "lectura es correcta.\nPero dedica un párrafo entero a advertir lo "
+        "contrario de la continuidad: entre 1948 y 1958 una ley proscribió a un "
+        "partido, borró a sus militantes de los registros y relegó a "
+        "dirigentes.\nDiez años de exclusión activa dentro de un período de "
+        "cuarenta no son una excepción menor. El texto los incluye precisamente "
+        "para impedir la lectura en línea recta.",
+        [
+            ("El texto no describe ningún avance en el período", "Describe tres vías distintas de ampliación de derechos."),
+            ("El texto sitúa toda la democratización después de 1970", "La sitúa entre 1930 y 1970."),
+            ("El texto atribuye los avances a un solo gobierno", "No los atribuye a ningún gobierno en particular."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "¿Por qué el texto llama menos visible a la vía de la cédula única?",
+        "Porque cambia el procedimiento y no la lista de habilitados",
+        "Las otras dos vías son fáciles de contar: cuántas personas se incorporan "
+        "al padrón, cuántos trabajadores se sindicalizan. Producen cifras y fechas "
+        "memorables.\nLa cédula única no agrega un solo votante. Modifica cómo se "
+        "emite el voto, que es un cambio administrativo y por eso pasa "
+        "desapercibido en los relatos.\nEl texto sostiene que fue decisiva "
+        "justamente por eso: sin secreto efectivo, ampliar el padrón habría "
+        "ampliado el número de votos controlados en lugar del número de electores.",
+        [
+            ("Porque afectó solo a las elecciones municipales", "El texto no restringe su alcance a un tipo de elección."),
+            ("Porque se adoptó sin que el Congreso la discutiera", "El texto no informa sobre su tramitación."),
+            ("Porque sus efectos aparecieron recién después de 1970", "El texto señala que el efecto fue inmediato."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_chile_xx", "dificil",
+        "¿Qué tipo de fuente permitiría comprobar el efecto rural de la cédula "
+        "única que el texto afirma?",
+        "Resultados electorales por comuna antes y después del cambio",
+        "El texto sostiene que en zonas rurales los resultados dejaron de "
+        "reproducir la voluntad del propietario del fundo. Es una afirmación sobre "
+        "comportamiento electoral y admite verificación.\nLo que se necesita es la "
+        "serie de resultados desagregada por comuna, comparando elecciones "
+        "inmediatamente anteriores y posteriores a la reforma, y contrastando "
+        "comunas rurales con urbanas.\nSi el efecto es real, el quiebre debería "
+        "aparecer en las comunas rurales y no en las urbanas, que es justamente la "
+        "comparación que permite descartar otras causas simultáneas.",
+        [
+            ("El texto de la ley que estableció la cédula única", "La ley dice qué se dispuso, no qué efecto tuvo."),
+            ("Testimonios de propietarios sobre el sistema anterior", "Aportan contexto, pero no permiten medir el cambio en los resultados."),
+            ("Las cifras nacionales de inscripción en el padrón", "La inscripción no cambia con la cédula única: cambia cómo se vota."),
+        ],
+    ),
+    _ql(
+        "chile_xx_democratizacion", "his_fuentes", "dificil",
+        "El texto afirma que la sindicalización campesina pasó de unos pocos miles "
+        "a más de cien mil. ¿Qué exige esa cifra antes de usarla?",
+        "Conocer qué se contó como trabajador organizado",
+        "Un salto de esa magnitud puede reflejar un cambio real y también un cambio "
+        "en el registro: antes de 1967 la sindicalización estaba prohibida en la "
+        "práctica, de modo que lo que existía no quedaba anotado en ninguna "
+        "parte.\nComparar un período sin registro con otro que sí lo tiene exagera "
+        "la diferencia, aunque el crecimiento sea genuino.\nEso no invalida la "
+        "cifra ni el proceso que describe. Obliga a establecer con qué se está "
+        "comparando: cuántos había según qué fuente antes de 1967 y cómo se "
+        "contabilizaron después.",
+        [
+            ("Descartarla por provenir de un texto sin fuentes citadas", "La cifra es verificable en registros sindicales; lo que hace falta es precisar el criterio."),
+            ("Comprobar que la reforma agraria fue anterior a 1967", "La reforma comienza en 1962, pero eso no valida ni invalida la cifra sindical."),
+            ("Verificar que los sindicatos eran exclusivamente agrícolas", "El texto ya especifica que se trata de trabajadores agrícolas."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "facil",
+        "Según la Tabla 1, ¿qué porcentaje de la población chilena era urbana en "
+        "1970?",
+        "El 75%",
+        "La última fila de la Tabla 1 registra 75% de población urbana en 1970.\nLa "
+        "comparación con 1930 da la medida del proceso: se pasa de 49% a 75% en "
+        "cuarenta años, es decir de un país donde algo más de la mitad vivía en el "
+        "campo a uno donde tres de cada cuatro personas viven en ciudades.",
+        [
+            ("El 68%", "Corresponde a 1960, no a 1970."),
+            ("El 60%", "Corresponde a 1952."),
+            ("El 49%", "Es el valor inicial de la serie, en 1930."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "facil",
+        "Según la Tabla 2, ¿cuántas personas estaban inscritas para votar en 1938?",
+        "500.000 personas",
+        "La primera fila de la Tabla 2 registra 500.000 inscritos en 1938, "
+        "equivalentes al 10% de la población total.\nLa cifra conviene leerla junto "
+        "a la nota que explica una de sus causas: hasta 1970 se exigió saber leer y "
+        "escribir para inscribirse, y la Tabla 1 sitúa el analfabetismo de esos "
+        "años en torno al 25%.",
+        [
+            ("1.100.000 personas", "Corresponde a la elección de 1952."),
+            ("2.900.000 personas", "Corresponde a 1964."),
+            ("3.500.000 personas", "Es la cifra de 1970, la mayor de la serie."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "facil",
+        "Según la Tabla 1, ¿cuántos puntos porcentuales bajó el analfabetismo entre "
+        "1930 y 1970?",
+        "14 puntos porcentuales",
+        "La tabla registra 25% en 1930 y 11% en 1970.\nLa diferencia es 25 − 11 = "
+        "14 puntos porcentuales. Conviene notar que la caída se concentra en las "
+        "primeras décadas: entre 1960 y 1970 baja solo un punto, de 12% a 11%.",
+        [
+            ("11 puntos porcentuales", "Es el valor de 1970, no la variación del período."),
+            ("36 puntos porcentuales", "Sumó ambos valores en lugar de restarlos."),
+            ("25 puntos porcentuales", "Es el valor inicial, de 1930."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "medio",
+        "¿Qué relación aparece entre las dos tablas hacia 1964?",
+        "El padrón crece mucho más rápido que la alfabetización",
+        "Entre 1952 y 1964 el analfabetismo baja de 16% a 12%, cuatro puntos. En el "
+        "mismo lapso los inscritos pasan de 1.100.000 a 2.900.000, y su peso sobre "
+        "la población total, de 18% a 34%.\nLa alfabetización no alcanza a explicar "
+        "un salto así: casi triplicar el padrón exige que se hayan incorporado "
+        "grupos que ya sabían leer y no estaban inscritos.\nLa primera nota apunta "
+        "a uno de ellos, y la tercera columna de la Tabla 2 lo confirma: la "
+        "participación de mujeres pasa de 32% a 46% del total de votantes.",
+        [
+            ("El padrón crece al mismo ritmo que la alfabetización", "El analfabetismo baja cuatro puntos mientras el padrón casi se triplica."),
+            ("La alfabetización crece y el padrón se mantiene estable", "El padrón pasa de 1,1 a 2,9 millones en el período."),
+            ("Ambas series retroceden entre 1952 y 1964", "Las dos mejoran: menos analfabetismo y más inscritos."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "medio",
+        "¿Qué muestra la tercera columna de la Tabla 2 sobre la incorporación de "
+        "las mujeres al padrón?",
+        "Pasan de no votar a ser la mitad de los votantes",
+        "La fila de 1938 registra que las mujeres no votaban en elección "
+        "presidencial. En 1952 son el 32% del total de votantes, en 1964 el 46% y "
+        "en 1970 el 51%.\nLa incorporación es rápida pero no instantánea: pasan "
+        "doce años entre el primer registro y una participación que todavía está "
+        "lejos de la mitad, y otros dieciocho hasta superarla.\nLa primera nota "
+        "explica en parte ese escalonamiento: el derecho llegó antes a las "
+        "elecciones municipales que a las presidenciales y parlamentarias.",
+        [
+            ("Su participación se mantiene estable en todo el período", "Pasa de no existir en presidenciales a 51% del total."),
+            ("Votan desde 1938 en las mismas condiciones que los hombres", "La tabla indica que en 1938 no votaban en elección presidencial."),
+            ("Superan a los hombres ya en la elección de 1952", "En 1952 son el 32% del total de votantes."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "medio",
+        "Según la segunda nota, ¿qué requisito limitaba el acceso al padrón hasta "
+        "1970?",
+        "Saber leer y escribir",
+        "La nota lo consigna directamente y su efecto se puede estimar con la Tabla "
+        "1: con un analfabetismo de 25% en 1930 y de 16% en 1952, ese requisito "
+        "excluía a una parte considerable de la población adulta.\nY no excluía al "
+        "azar. El analfabetismo se concentraba en el campo y entre los sectores más "
+        "pobres, de modo que el requisito recaía sobre grupos determinados.\nEse es "
+        "el sentido de que la nota fije 1970 como límite: hasta entonces el padrón "
+        "dejaba fuera por ley a quienes ya estaban en peor posición.",
+        [
+            ("Acreditar una renta mínima anual", "La nota se refiere a la alfabetización, no a la renta."),
+            ("Haber cumplido el servicio militar", "No figura entre los requisitos que la fuente menciona."),
+            ("Estar afiliado a un partido político", "La fuente no menciona ninguna exigencia de afiliación."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "medio",
+        "¿Qué tendencia común muestran las cuatro columnas de la Tabla 1?",
+        "Mejoran de manera sostenida en los cinco cortes",
+        "La población urbana sube en cada corte; el analfabetismo, las viviendas "
+        "sin agua potable y la mortalidad infantil bajan en todos ellos.\nNo hay "
+        "ninguna reversión en la serie, lo que permite hablar de una tendencia y no "
+        "de oscilaciones.\nConviene medir bien el punto de partida antes de leer "
+        "esas mejoras como bienestar alcanzado: en 1970 todavía una de cada cuatro "
+        "viviendas carecía de agua potable y morían 79 niños por cada mil nacidos "
+        "vivos.",
+        [
+            ("Empeoran a partir de 1952 en todos los indicadores", "Los cuatro siguen mejorando entre 1952 y 1970."),
+            ("Se mantienen estables durante todo el período", "Todas cambian de manera significativa en cuarenta años."),
+            ("Mejoran las urbanas y empeoran las rurales", "La tabla no desagrega por zona: entrega totales nacionales."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "medio",
+        "Un estudiante concluye de la Tabla 1 que en 1970 Chile había superado la "
+        "pobreza. ¿Qué le responden los propios datos?",
+        "Una de cada cuatro viviendas seguía sin agua potable",
+        "La serie muestra mejoras reales y sostenidas, y esa parte de la lectura es "
+        "correcta.\nPero las cifras de 1970 siguen describiendo carencias masivas: "
+        "26% de las viviendas sin agua potable, 11% de analfabetismo y 79 muertes "
+        "infantiles por cada mil nacidos vivos.\nEl error consiste en leer una "
+        "tendencia como si fuera un estado. Que un indicador mejore mucho no dice "
+        "dónde quedó, y las dos cosas hay que afirmarlas por separado.",
+        [
+            ("El analfabetismo había subido respecto de 1960", "Bajó de 12% a 11% entre esos dos cortes."),
+            ("La mortalidad infantil se mantuvo igual desde 1930", "Cayó de 234 a 79 por mil en el período."),
+            ("La población urbana había dejado de crecer", "Sube de 68% a 75% entre 1960 y 1970."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "dificil",
+        "¿Qué relación permiten establecer las dos tablas entre alfabetización y "
+        "democratización, y cuál no?",
+        "Que el requisito de leer acotaba el padrón, sin explicarlo todo",
+        "La conexión es directa y está en la fuente: la nota fija un requisito de "
+        "alfabetización para inscribirse, y la Tabla 1 muestra qué proporción de la "
+        "población quedaba fuera por esa vía.\nLo que las tablas no permiten es "
+        "atribuir a la alfabetización todo el crecimiento del padrón. Entre 1952 y "
+        "1964 el analfabetismo baja cuatro puntos y los inscritos casi se "
+        "triplican: la aritmética no cierra.\nHay al menos otro factor visible en "
+        "la propia fuente —la incorporación de las mujeres— y probablemente otros "
+        "que la tabla no registra, como cambios en el sistema de inscripción.",
+        [
+            ("Que la alfabetización explica por sí sola el crecimiento del padrón", "El padrón crece mucho más rápido de lo que baja el analfabetismo."),
+            ("Que no existe ninguna relación entre ambos fenómenos", "La nota establece la alfabetización como requisito legal para inscribirse."),
+            ("Que el padrón creció pese a que el analfabetismo aumentaba", "El analfabetismo bajó en todos los cortes de la serie."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "dificil",
+        "La Tabla 2 informa inscritos y no votantes efectivos. ¿Qué límite impone "
+        "eso al análisis?",
+        "No se sabe cuántos inscritos fueron a votar",
+        "Inscribirse y votar son dos actos distintos, y la brecha entre ambos puede "
+        "ser amplia.\nLa tabla permite entonces afirmar cuánta gente estaba "
+        "habilitada, que es una medida de inclusión formal, y no cuánta participó "
+        "efectivamente, que es una medida de comportamiento electoral.\nLa "
+        "distinción importa porque las dos cosas responden a causas distintas: la "
+        "primera depende de la ley y del sistema de registro, y la segunda, del "
+        "interés, de la competencia entre candidaturas y de la obligatoriedad del "
+        "voto.",
+        [
+            ("No permite saber cuántas personas estaban habilitadas", "Es justamente lo que la columna de inscritos entrega."),
+            ("No informa sobre la participación de las mujeres", "La tercera columna la entrega para tres de los cuatro cortes."),
+            ("No cubre elecciones posteriores a 1952", "Incluye 1964 y 1970."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "dificil",
+        "¿Qué proceso social explica que la población urbana pase de 49% a 75% en "
+        "cuarenta años?",
+        "La migración desde el campo hacia las ciudades",
+        "Un cambio de esa magnitud en cuarenta años no puede provenir del "
+        "crecimiento vegetativo diferenciado: exige desplazamiento de población de "
+        "un lugar a otro.\nEse es el proceso que la historiografía documenta para "
+        "el Chile de mediados de siglo, empujado por la mecanización agrícola y por "
+        "la expectativa de empleo urbano.\nLa Tabla 1 registra el resultado y no la "
+        "causa. Para establecer el mecanismo harían falta fuentes sobre el campo y "
+        "sobre las condiciones de llegada, que estas columnas no contienen.",
+        [
+            ("El aumento de la natalidad en las ciudades", "La mortalidad infantil cae, pero la tabla no informa sobre natalidad urbana diferenciada."),
+            ("La llegada de migrantes desde otros países", "La fuente no registra migración internacional."),
+            ("La incorporación de las mujeres al padrón electoral", "Es un proceso político, sin relación con la distribución territorial de la población."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre la sociedad chilena del "
+        "período?",
+        "Cómo se repartían las mejoras entre grupos",
+        "Las cuatro columnas de la Tabla 1 entregan promedios o totales nacionales: "
+        "porcentaje de población urbana, de analfabetismo, de viviendas sin agua y "
+        "mortalidad infantil.\nUn promedio nacional puede mejorar mucho y esconder "
+        "diferencias grandes entre campo y ciudad, entre regiones o entre sectores "
+        "de ingreso. La tabla no desagrega por ninguna de esas dimensiones.\nEs una "
+        "limitación importante para un período en que la migración estaba "
+        "reconfigurando justamente esas diferencias, y obliga a buscar series "
+        "desagregadas antes de afirmar quién se benefició.",
+        [
+            ("Cómo evolucionó la mortalidad infantil entre 1930 y 1970", "La cuarta columna de la Tabla 1 la sigue en los cinco cortes."),
+            ("Cuántos inscritos había en el padrón en cada elección", "La Tabla 2 lo entrega directamente."),
+            ("Qué proporción de la población vivía en ciudades en 1960", "La Tabla 1 registra 68% para ese año."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_chile_xx", "dificil",
+        "Si estas cifras provinieran de censos y registros electorales oficiales, "
+        "¿qué precaución exigiría compararlas entre décadas?",
+        "Las definiciones y la cobertura pudieron cambiar entre censos",
+        "Una serie larga rara vez mide exactamente lo mismo en todos sus puntos. "
+        "Qué se cuenta como población urbana depende de un umbral administrativo, y "
+        "ese umbral puede haberse modificado entre 1930 y 1970.\nLo mismo vale para "
+        "agua potable, que puede significar red domiciliaria en un censo y acceso a "
+        "una pileta cercana en otro.\nLa precaución no es descartar la serie sino "
+        "verificar sus definiciones antes de atribuir un salto a un cambio real. Un "
+        "cambio metodológico puede producir el mismo escalón que un cambio en la "
+        "realidad.",
+        [
+            ("Los datos oficiales de un Estado nunca son utilizables", "Los censos son la fuente central para este tipo de análisis; se verifican, no se descartan."),
+            ("Solo pueden compararse cifras del mismo año", "Comparar en el tiempo es justamente para lo que sirve una serie."),
+            ("Las cifras electorales no admiten comparación con las censales", "La Tabla 2 las relaciona expresamente al calcular inscritos sobre población."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_temporal", "medio",
+        "La Tabla 1 muestra que el analfabetismo cae 9 puntos entre 1930 y 1952 y "
+        "solo 1 punto entre 1960 y 1970. ¿Qué describe esa diferencia de ritmo?",
+        "Un avance rápido que después se hace lento",
+        "La serie no cae a velocidad constante: pierde 9 puntos en veintidós años y "
+        "un punto en los diez últimos.\nEse patrón es frecuente en indicadores con "
+        "un techo. Alfabetizar a quien vive en una ciudad y asiste a la escuela es "
+        "más rápido que alcanzar al último tramo, que suele ser rural, adulto y "
+        "disperso.\nReconocer los distintos ritmos dentro de un mismo proceso es "
+        "parte del análisis temporal, y evita proyectar hacia adelante la velocidad "
+        "del primer tramo.",
+        [
+            ("Una reversión de la tendencia a partir de 1960", "El analfabetismo sigue bajando, solo que más despacio."),
+            ("Un ciclo que se repite cada década", "No hay repetición: la caída se desacelera de manera sostenida."),
+            ("Un acontecimiento puntual ocurrido en 1952", "La tabla no registra ningún salto atribuible a un hecho único."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "facil",
+        "Según la Fuente 1, ¿cómo era remunerado el trabajo en el fundo?",
+        "Sobre todo con regalías y casi nada de dinero",
+        "El testimonio describe el sistema con precisión: nos daban la regalía, una "
+        "talla de tierra, leña y la ración, y agrega que plata casi no veían.\nY "
+        "precisa qué ocurría con lo poco que sí había: se iba en la pulpería del "
+        "mismo fundo, de modo que el dinero volvía al patrón sin salir de la "
+        "hacienda.\nEse es el rasgo del inquilinaje que la historiografía documenta "
+        "para el campo chileno hasta mediados del siglo XX.",
+        [
+            ("Con un salario mensual fijado por contrato", "El testimonio señala que plata casi no veían."),
+            ("Con un porcentaje de la cosecha del fundo", "La regalía descrita es tierra, leña y ración, no una parte de la cosecha."),
+            ("Con acceso gratuito a la pulpería del fundo", "La pulpería aparece como el lugar donde se gastaba lo poco que recibían."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "facil",
+        "Según la Fuente 2, ¿de dónde proviene el crecimiento del sector que "
+        "describe el informe?",
+        "De la llegada continua de familias del campo",
+        "La comisión lo establece por descarte y de manera explícita: el "
+        "crecimiento no proviene del aumento vegetativo sino de la llegada continua "
+        "de familias del campo.\nAgrega el motivo que les atribuye: la expectativa "
+        "de empleo industrial que la ciudad no está en condiciones de ofrecer en la "
+        "cantidad requerida.",
+        [
+            ("Del aumento vegetativo de la población del sector", "El informe lo descarta expresamente."),
+            ("De familias erradicadas desde otros sectores de la ciudad", "Las erradicaciones aparecen como una medida aplicada, no como origen del crecimiento."),
+            ("De la llegada de trabajadores extranjeros", "El informe no menciona migración desde otros países."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "facil",
+        "Según la Fuente 2, ¿qué ocurrió con las erradicaciones practicadas hasta "
+        "1952?",
+        "No disminuyeron la población: llegaron otras familias",
+        "El informe lo consigna al final: las erradicaciones practicadas hasta "
+        "ahora no han disminuido la población del sector.\nY explica por qué: las "
+        "familias erradicadas han sido reemplazadas por otras en el término de "
+        "pocos meses. Es un dato que la propia comisión aporta contra la eficacia "
+        "de la medida.",
+        [
+            ("Redujeron a la mitad la población del sector", "El informe afirma que no la disminuyeron."),
+            ("Fueron suspendidas por orden de la comisión", "El informe no menciona ninguna suspensión."),
+            ("Permitieron urbanizar los terrenos desocupados", "El texto no describe ninguna urbanización realizada."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "La Fuente 1 afirma que comen peor que en el fundo y aun así no vuelven. "
+        "¿Qué explica esa decisión, según el propio testimonio?",
+        "El niño estudia y nadie decide su horario",
+        "El testimonio pone las dos cosas en la misma frase final: comemos peor que "
+        "en el fundo, pero aquí el niño está en la escuela y nadie viene a decirnos "
+        "a qué hora hay que levantarse.\nSon dos ganancias de naturaleza distinta a "
+        "la alimentaria: acceso a educación para la generación siguiente y ausencia "
+        "de la tutela permanente que el inquilinaje suponía.\nPor eso el balance de "
+        "la migración no puede hacerse solo en términos de consumo. Quien la "
+        "protagonizó estaba comparando dimensiones que un indicador de ingreso no "
+        "recoge.",
+        [
+            ("El salario en la construcción supera al del fundo", "El testimonio señala que su marido hace pololos y no todos los meses."),
+            ("La vivienda en la loma es mejor que la del fundo", "La describen levantada en dos noches y sin agua en el sitio."),
+            ("El acceso al agua potable es más fácil en la ciudad", "Deben acarrearla desde una pila a dos cuadras."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "¿En qué difieren las dos fuentes al explicar la migración?",
+        "Una la vive; la otra la administra como flujo",
+        "El testimonio de la Fuente 1 relata una salida forzada por la mecanización "
+        "—cuando entró la máquina no hicieron falta tantas manos— y una llegada "
+        "decidida por vínculos familiares, con un balance que la protagonista hace "
+        "por su cuenta.\nEl informe de la Fuente 2 describe el mismo fenómeno como "
+        "un problema administrativo y recomienda estudiar medidas de contención del "
+        "flujo migratorio.\nNo se contradicen en los hechos: ocupan posiciones "
+        "distintas frente a ellos, y por eso una habla de personas que deciden y la "
+        "otra, de un flujo que gestionar.",
+        [
+            ("Una la sitúa en 1952 y la otra, en 1957", "La diferencia de fechas existe, pero no es la que separa sus enfoques."),
+            ("Una la atribuye al campo y la otra, a la ciudad", "Ambas la sitúan como desplazamiento desde el campo hacia la ciudad."),
+            ("Una la considera masiva y la otra, un caso aislado", "El informe cuenta mil doscientas viviendas: también la describe como masiva."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "¿Qué rasgo de la precariedad urbana chilena de mediados de siglo "
+        "documentan ambas fuentes?",
+        "Viviendas autoconstruidas sin agua ni alcantarillado",
+        "Las dos lo describen desde ángulos distintos. El testimonio cuenta una "
+        "casa levantada en dos noches y agua acarreada desde una pila a dos "
+        "cuadras; el informe registra mil doscientas viviendas sin permiso, sin "
+        "alcantarillado ni red de agua.\nLa coincidencia entre una fuente vivida y "
+        "una administrativa es lo que vuelve sólido el dato: no depende de la "
+        "perspectiva de ninguna de las dos.\nEse patrón —tomas de terreno, "
+        "autoconstrucción, servicios ausentes— es el que la historiografía "
+        "documenta para las poblaciones callampa del período.",
+        [
+            ("Conventillos arrendados en el centro de la ciudad", "Ambas fuentes describen terrenos ocupados en la periferia, no arriendo céntrico."),
+            ("Viviendas construidas por el Estado en la periferia", "Las viviendas descritas fueron levantadas por las propias familias."),
+            ("Campamentos temporales junto a las obras de construcción", "Las fuentes describen asentamientos permanentes, no faenas."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "Según la Fuente 2, ¿qué desajuste identifica la comisión entre expectativa "
+        "y realidad?",
+        "Se espera empleo industrial que la ciudad no puede ofrecer",
+        "El informe lo formula al explicar el atractivo de la ciudad: las familias "
+        "llegan atraídas por la expectativa de empleo industrial que la ciudad no "
+        "está en condiciones de ofrecer en la cantidad requerida.\nEl testimonio de "
+        "la Fuente 1 lo confirma desde la experiencia: el marido hace pololos en la "
+        "construcción, no todos los meses, y ella lava para afuera.\nEse desajuste "
+        "es característico del período. La migración fue más rápida que la creación "
+        "de empleo industrial, y el excedente se absorbió en trabajos informales e "
+        "inestables.",
+        [
+            ("Se espera tierra agrícola que la ciudad no posee", "La expectativa que el informe describe es de empleo industrial."),
+            ("Se espera vivienda estatal que no alcanza para todos", "El informe no menciona expectativas de vivienda pública."),
+            ("Se espera educación superior que la ciudad no imparte", "La educación aparece en el testimonio, referida a la escuela básica."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "medio",
+        "¿Qué causa de la salida del campo entrega la Fuente 1?",
+        "La mecanización redujo la mano de obra necesaria",
+        "El testimonio lo dice sin rodeos: cuando entró la máquina no hicieron "
+        "falta tantas manos y nos avisaron que teníamos que salir.\nEs una causa de "
+        "expulsión y no de atracción, lo que matiza la explicación que ofrece el "
+        "informe municipal, centrado en la expectativa de empleo urbano.\nLos dos "
+        "factores operaban a la vez, y por eso el proceso se describe con dos "
+        "términos: lo que empuja desde el campo y lo que atrae desde la ciudad.",
+        [
+            ("El fundo cerró por quiebra de sus dueños", "El testimonio describe mecanización, no cierre del fundo."),
+            ("La familia buscaba mejores salarios en la ciudad", "El testimonio no menciona una comparación de salarios previa."),
+            ("El Estado ofreció sitios urbanizados a los inquilinos", "El sitio lo consiguen por un primo, y estaba tomado."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "La comisión recomienda contener el flujo migratorio y a la vez informa que "
+        "las erradicaciones no funcionaron. ¿Qué tensión hay en ese informe?",
+        "Propone una medida que sus propios datos muestran ineficaz",
+        "El informe entrega dos elementos que no encajan bien entre sí. Constata "
+        "que las familias erradicadas fueron reemplazadas por otras en pocos meses, "
+        "y recomienda estudiar medidas de contención del flujo.\nSi el reemplazo "
+        "ocurre porque las causas de la migración siguen operando en el campo, "
+        "actuar sobre el sector de llegada no las modifica.\nLa segunda "
+        "recomendación del informe —urbanizar los sectores ya consolidados— es "
+        "coherente con esa constatación; la primera arrastra el supuesto de que el "
+        "problema está en quien llega y no en lo que lo expulsa.",
+        [
+            ("Recomienda urbanizar terrenos que declara no urbanizables", "Propone urbanizar los sectores ya consolidados, que es otro conjunto."),
+            ("Niega que exista migración desde el campo", "La identifica expresamente como origen del crecimiento."),
+            ("Atribuye el crecimiento al aumento vegetativo", "Lo descarta de manera explícita."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "¿Qué precaución exige que la Fuente 1 haya sido recogida por una asistente "
+        "social?",
+        "La entrevistada habla ante alguien que gestiona ayuda o traslados",
+        "Un testimonio no se produce en el vacío: quien habla sabe ante quién lo "
+        "hace y qué puede seguirse de lo que diga.\nFrente a una funcionaria "
+        "vinculada al aparato que asigna vivienda o decide erradicaciones, hay "
+        "incentivos para subrayar ciertas carencias y para matizar otras cosas, sin "
+        "que nada de eso implique mentir.\nTampoco conocemos qué se preguntó ni qué "
+        "quedó fuera del registro. La precaución es contrastar con otras fuentes, y "
+        "aquí el propio informe municipal sirve para eso: coincide en la ausencia "
+        "de agua y alcantarillado.",
+        [
+            ("Los testimonios orales no sirven como fuente histórica", "Son fuente central para acceder a quienes no dejaron registro escrito."),
+            ("La entrevistada no podía recordar bien lo ocurrido en el fundo", "Nada en la fuente sugiere un problema de memoria."),
+            ("Al ser de 1957 no permite hablar de la migración de esos años", "Es justamente contemporánea al proceso que describe."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "Un texto sostiene que la migración campo-ciudad chilena fue un simple "
+        "traslado de la pobreza rural a la ciudad. ¿Qué le responden estas fuentes?",
+        "La pobreza persiste, pero cambian condiciones y posibilidades",
+        "Las fuentes confirman la continuidad de la carencia: el informe describe "
+        "viviendas sin agua ni alcantarillado, y el testimonio reconoce que comen "
+        "peor que en el fundo.\nPero también registran diferencias que la fórmula "
+        "del simple traslado borra. El niño accede a la escuela, desaparece la "
+        "tutela permanente del patrón y la familia deja de estar atada a la "
+        "pulpería del fundo.\nDescribir el proceso solo como continuidad omite lo "
+        "que la propia protagonista pone como razón de no volver, y explicar por "
+        "qué la migración no se revirtió exige tomar en cuenta esas razones.",
+        [
+            ("La confirman por completo: nada cambió para esas familias", "El testimonio menciona escuela y ausencia de tutela patronal como cambios."),
+            ("La contradicen: las condiciones materiales mejoraron de inmediato", "El testimonio afirma que comen peor que en el fundo."),
+            ("No permiten evaluarla, porque solo describen un sector de la ciudad", "Ambas describen el proceso migratorio y sus condiciones, que es lo que la afirmación discute."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "¿Qué aporta al análisis que las dos fuentes estén separadas por cinco "
+        "años?",
+        "Muestran el proceso antes y después de las erradicaciones",
+        "El informe de 1952 describe una situación ya consolidada —mil doscientas "
+        "viviendas— y da cuenta de erradicaciones que no lograron reducir la "
+        "población.\nEl testimonio de 1957 muestra que el proceso continuaba: la "
+        "familia llega después de esa fecha y ocupa un sitio tomado por un "
+        "pariente.\nCinco años son suficientes para constatar persistencia y "
+        "demasiado pocos para hablar de un cambio de época. Lo que el par documenta "
+        "es que el fenómeno no era coyuntural, que es distinto de sostener que nada "
+        "cambió en ese lapso.",
+        [
+            ("Muestran que la segunda fuente responde a la primera", "Nada indica que la entrevistada conociera el informe municipal."),
+            ("Prueban que la situación cambió por completo en ese lapso", "Las dos describen condiciones semejantes."),
+            ("Permiten datar con precisión el inicio de la migración", "Ninguna de las dos informa cuándo comenzó el proceso."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "¿Por qué la mecanización agrícola aparece como causa de un fenómeno "
+        "urbano?",
+        "Libera mano de obra que el campo ya no emplea ni retiene",
+        "El sistema de inquilinaje descrito en la Fuente 1 retenía a las familias "
+        "en el fundo entregándoles tierra, leña y ración a cambio de trabajo "
+        "permanente.\nCuando la máquina reduce la mano de obra necesaria, ese "
+        "arreglo deja de tener sentido para el propietario, y la familia pierde a "
+        "la vez su trabajo y su vivienda: por eso el testimonio dice que les "
+        "avisaron que tenían que salir.\nEl desplazamiento hacia la ciudad es "
+        "entonces la consecuencia urbana de un cambio técnico ocurrido en el campo, "
+        "y explicarlo solo por la atracción industrial deja fuera la mitad del "
+        "proceso.",
+        [
+            ("Aumenta la producción y con ella el precio de los alimentos", "El testimonio no relaciona la mecanización con los precios."),
+            ("Obliga a los inquilinos a comprar maquinaria propia", "Nada en la fuente sugiere esa obligación."),
+            ("Reduce la superficie cultivable de los fundos", "La mecanización no reduce superficie: reduce mano de obra necesaria."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_fuentes", "medio",
+        "Una fuente es un testimonio personal y la otra, un informe administrativo. "
+        "¿Cómo se complementan?",
+        "Una aporta la experiencia y la otra, la escala",
+        "El testimonio permite saber qué significó la migración para quienes la "
+        "hicieron: por qué salieron, cómo llegaron, qué ganaron y qué perdieron. Lo "
+        "que no puede decir es cuántos fueron.\nEl informe entrega justamente eso: "
+        "mil doscientas viviendas, capacidad de las piletas, resultado de las "
+        "erradicaciones. Y no puede decir, en cambio, por qué una familia decide "
+        "quedarse aunque coma peor.\nCombinar magnitud y experiencia es lo que "
+        "permite describir un proceso social sin reducirlo a una cifra ni a un "
+        "caso.",
+        [
+            ("Una confirma los datos numéricos de la otra", "El testimonio no entrega cifras que puedan contrastarse."),
+            ("Una reemplaza a la otra por ser más confiable", "Ninguna de las dos sustituye a la otra: responden preguntas distintas."),
+            ("Ambas permiten establecer cuándo comenzó la migración", "Ninguna de las dos informa sobre el inicio del proceso."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "facil",
+        "Según el texto, ¿entre qué años dejó de existir uno de los dos bloques?",
+        "Entre 1989 y 1991",
+        "El texto fija ese período y agrega un rasgo del desenlace: ocurrió sin que "
+        "mediara una guerra entre las potencias.\nY consigna que sorprendió a casi "
+        "todos, incluidos los servicios de inteligencia que llevaban décadas "
+        "observándolo, dato que conviene retener porque advierte contra las "
+        "explicaciones que hacen parecer inevitable lo que nadie previó.",
+        [
+            ("Entre 1979 y comienzos de 1981", "El texto sitúa el desenlace una década después."),
+            ("Entre 1991 y 1995", "El texto termina el proceso en 1991, no lo comienza ahí."),
+            ("Entre 1985 y 1987", "No es el período que el texto establece."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "facil",
+        "Según el texto, ¿qué políticas económicas pasaron a presentarse como la "
+        "única alternativa tras 1989?",
+        "Apertura, privatización, desregulación y disciplina fiscal",
+        "El texto enumera exactamente esas cuatro: apertura comercial, "
+        "privatización de empresas públicas, desregulación de mercados y disciplina "
+        "fiscal.\nY precisa algo importante sobre su cronología: ese programa ya se "
+        "aplicaba antes de 1989 en varios países, incluido Chile desde la década de "
+        "1970.",
+        [
+            ("Planificación central y propiedad estatal de la industria", "Corresponde al modelo del bloque que dejó de existir."),
+            ("Control de cambios y aranceles altos a la importación", "Es lo contrario de la apertura comercial que el texto describe."),
+            ("Aumento del gasto militar y del gasto social", "Ninguno de los dos figura en la enumeración del texto."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "facil",
+        "Según el texto, ¿qué tecnologías acompañaron la aceleración de la "
+        "globalización?",
+        "Contenedores, satélites, cables submarinos e internet",
+        "El texto las enumera al describir el proceso y explica su efecto: con "
+        "ellas aparecieron cadenas de producción repartidas entre continentes.\nLa "
+        "consecuencia productiva la resume en una frase: un producto dejó de "
+        "fabricarse en un país para ensamblarse con piezas de muchos.",
+        [
+            ("El ferrocarril, el telégrafo y la imprenta de vapor", "Corresponden a la integración del siglo XIX, no a este período."),
+            ("La energía nuclear y la industria aeroespacial", "No figuran entre las tecnologías que el texto menciona."),
+            ("La radio, el cine y la televisión en blanco y negro", "El texto no las incluye en esta enumeración."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "Según el texto, ¿qué combinación de causas explica el derrumbe del bloque "
+        "oriental?",
+        "Límites económicos, gasto militar y crisis de legitimidad",
+        "El texto insiste en que las causas fueron acumulativas y enumera tres de "
+        "orden material: una economía que industrializó rápido pero no logró "
+        "sostener innovación y variedad de consumo, un gasto militar que absorbía "
+        "recursos escasos e intervenciones externas costosas.\nY agrega una cuarta "
+        "de otra naturaleza: una crisis de legitimidad interna, porque la distancia "
+        "entre el discurso oficial y la vida cotidiana era conocida por todos y ya "
+        "no convencía a nadie.\nNinguna de las cuatro basta por sí sola, que es lo "
+        "que la palabra acumulativas está señalando.",
+        [
+            ("Una derrota militar frente al bloque contrario", "El texto subraya que el desenlace ocurrió sin guerra entre las potencias."),
+            ("La apertura comercial impuesta por organismos internacionales", "El texto no menciona ninguna imposición externa de ese tipo."),
+            ("El agotamiento de los recursos naturales del bloque", "No figura entre las causas que el texto enumera."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "Según el texto, ¿qué le dio el derrumbe del bloque contrario al programa "
+        "económico que ya se aplicaba antes de 1989?",
+        "La ausencia de un modelo rival con el cual compararlo",
+        "El texto es cuidadoso con la cronología: el programa no nace en 1989, "
+        "porque ya se aplicaba en varios países, incluido Chile desde la década de "
+        "1970.\nLo que cambia es otra cosa. Mientras existió un bloque alternativo, "
+        "ese programa era una opción entre otras y podía discutirse frente a un "
+        "modelo en funcionamiento.\nAl desaparecer el término de comparación, pasó "
+        "a presentarse como la única alternativa disponible, que es una posición "
+        "argumentativa distinta y mucho más fuerte.",
+        [
+            ("Su primera aplicación práctica en un país concreto", "El texto señala que ya se aplicaba antes de 1989."),
+            ("El respaldo militar de la potencia vencedora", "El texto no vincula el programa con una garantía militar."),
+            ("La creación de organismos internacionales que lo impusieran", "El texto no menciona la creación de tales organismos."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "Según el texto, ¿por qué el efecto de la globalización fue desigual?",
+        "Redujo pobreza en Asia y destruyó empleo en otras zonas",
+        "El texto describe los dos efectos como partes del mismo proceso y no como "
+        "versiones rivales de lo ocurrido.\nPor un lado, abarató bienes y sacó de "
+        "la pobreza a cientos de millones de personas en Asia. Por otro, destruyó "
+        "empleo industrial en regiones enteras de los países que hasta entonces "
+        "fabricaban esos bienes.\nAmbos son consecuencia de lo mismo: cadenas de "
+        "producción repartidas entre continentes, que trasladan la fabricación "
+        "adonde resulta más barata.",
+        [
+            ("Benefició solo a los países que ya eran industriales", "El texto describe el efecto contrario en las regiones industriales."),
+            ("Encareció los bienes en todos los países del mundo", "El texto señala que los abarató."),
+            ("Afectó únicamente a los países del antiguo bloque oriental", "El texto no restringe sus efectos a esa región."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "El texto advierte contra la idea de que el fin de la Guerra Fría trajo el "
+        "fin de los conflictos. ¿Con qué argumento?",
+        "Los años noventa fueron intensos en guerras de otro tipo",
+        "El texto responde con un hecho verificable: los años noventa fueron "
+        "intensos en guerras.\nY precisa en qué consistió el cambio: esas guerras "
+        "dejaron de ordenarse en torno al eje anterior, es decir dejaron de ser "
+        "episodios de una confrontación entre dos bloques.\nLa distinción es entre "
+        "desaparecer y reconfigurarse. Lo que terminó fue un modo de ordenar los "
+        "conflictos, no los conflictos mismos.",
+        [
+            ("Las potencias mantuvieron su carrera armamentista intacta", "El texto no plantea que la carrera armamentista continuara igual."),
+            ("El bloque oriental siguió existiendo después de 1991", "El texto afirma que dejó de existir."),
+            ("Los organismos internacionales dejaron de funcionar", "El texto no se refiere al funcionamiento de esos organismos."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "medio",
+        "¿Qué significa que el texto llame acumulativas a las causas del derrumbe?",
+        "Que ninguna basta por sí sola para explicarlo",
+        "El texto enumera cuatro factores de naturaleza distinta —económico, "
+        "militar, de política exterior y de legitimidad— y los presenta operando a "
+        "la vez durante años.\nLlamarlos acumulativos indica que actúan por suma y "
+        "no por reemplazo: cada uno agrava a los demás, y el desenlace ocurre "
+        "cuando el conjunto se vuelve insostenible.\nEs la manera habitual de "
+        "describir procesos multicausales, y advierte contra las explicaciones que "
+        "eligen un solo factor —la economía, o el gasto militar, o un dirigente— y "
+        "descartan el resto.",
+        [
+            ("Que ocurrieron una después de otra en orden fijo", "Acumulativas indica que operan a la vez, no en secuencia."),
+            ("Que solo la causa económica tuvo importancia real", "El texto pone las cuatro en el mismo plano explicativo."),
+            ("Que sus efectos se anularon entre sí", "Se refuerzan mutuamente, que es lo contrario de anularse."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "El texto sostiene que un colapso demuestra que un modelo no era sostenible "
+        "en esas condiciones, y no la superioridad del otro en todos los planos. "
+        "¿Qué distingue ambas afirmaciones?",
+        "Una se limita a lo ocurrido y la otra generaliza sin evidencia",
+        "La primera afirmación describe un hecho acotado: un sistema, en un "
+        "territorio y un período determinados, dejó de poder sostenerse. Es "
+        "verificable y no requiere suposiciones adicionales.\nLa segunda salta a "
+        "una conclusión mucho mayor: que el modelo sobreviviente es mejor en todos "
+        "los planos, incluidos aquellos que el colapso no puso a prueba, como la "
+        "distribución del ingreso o el efecto ambiental.\nEl texto llama a la "
+        "primera más modesta y más útil, y ahí está el criterio: una explicación "
+        "vale por lo que puede sostener con evidencia, no por lo amplia que suene.",
+        [
+            ("Una es política y la otra, económica", "Ambas se refieren al mismo objeto: el desenlace del período."),
+            ("Una se refiere al bloque oriental y la otra, al occidental", "Las dos hablan del mismo hecho desde distinta amplitud explicativa."),
+            ("Una fue formulada en 1991 y la otra, después", "El texto no las distingue por su fecha de formulación."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "¿Por qué el texto destaca que el desenlace sorprendió incluso a los "
+        "servicios de inteligencia?",
+        "Para advertir que el resultado no era previsible ni inevitable",
+        "Todo proceso histórico, visto hacia atrás, tiende a parecer encaminado "
+        "hacia su desenlace: las causas se ordenan en una línea que conduce sin "
+        "desvíos al resultado conocido.\nEl dato de la sorpresa funciona como "
+        "corrección de esa ilusión. Si quienes disponían de la mejor información no "
+        "lo previeron, el desenlace no estaba escrito en las condiciones "
+        "previas.\nEso no invalida las causas que el texto enumera. Cambia su "
+        "estatuto: explican por qué el colapso era posible, no por qué tenía que "
+        "ocurrir cuando ocurrió.",
+        [
+            ("Para sostener que los servicios de inteligencia eran ineficientes", "El texto no evalúa su desempeño: usa el dato como advertencia metodológica."),
+            ("Para probar que las causas económicas no tuvieron importancia", "El texto las enumera como parte central de la explicación."),
+            ("Para sugerir que el desenlace fue provocado desde fuera", "El texto atribuye el proceso a causas acumulativas internas y externas, sin plantear una operación deliberada."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "El texto señala que el programa económico ya se aplicaba en Chile desde "
+        "los setenta. ¿Qué precisión aporta ese dato?",
+        "Que su adopción precedió al fin de la Guerra Fría",
+        "El dato ordena la cronología y descarta una relación causal tentadora: si "
+        "el programa fuera efecto del derrumbe de 1989, no podría haberse aplicado "
+        "quince años antes.\nLo que el texto atribuye a 1989 es otra cosa, más "
+        "precisa: la desaparición del modelo rival con el cual compararlo, lo que "
+        "cambió el estatuto del programa sin cambiar su contenido.\nEs un ejemplo "
+        "útil de por qué las fechas importan. Dos hechos asociados en el relato "
+        "habitual quedan separados en cuanto se pone cada uno en su momento.",
+        [
+            ("Que Chile fue el único país que lo aplicó en el mundo", "El texto dice que se aplicaba en varios países, Chile entre ellos."),
+            ("Que el programa fracasó en su primera aplicación", "El texto no evalúa sus resultados en este punto."),
+            ("Que el bloque oriental lo había adoptado antes", "El texto describe para ese bloque una economía planificada."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "¿Qué relación establece el texto entre el fin de la Guerra Fría y la "
+        "globalización?",
+        "Procesos paralelos que se refuerzan, no uno causado por el otro",
+        "El texto los presenta como simultáneos y usa la expresión en paralelo, sin "
+        "derivar uno del otro.\nLas causas que atribuye a la globalización son "
+        "tecnológicas y logísticas: contenedores, satélites, cables submarinos e "
+        "internet, que venían desarrollándose desde antes de 1989.\nLo que sí "
+        "aporta el desenlace político es la extensión del espacio donde esas "
+        "cadenas pueden operar y la ausencia de un modelo económico rival. Los dos "
+        "procesos se potencian, y por eso conviene no fundirlos en uno solo.",
+        [
+            ("La globalización fue consecuencia directa del derrumbe de 1991", "El texto sitúa sus causas tecnológicas antes de esa fecha."),
+            ("El fin de la Guerra Fría fue causado por la globalización", "El texto atribuye el derrumbe a causas acumulativas internas del bloque."),
+            ("Son el mismo proceso descrito con dos nombres distintos", "El texto los distingue por sus causas y por sus efectos."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_guerra_fria", "dificil",
+        "Un estudiante concluye que, según el texto, la globalización perjudicó a "
+        "todos los sectores. ¿Qué falla esa lectura?",
+        "El texto le atribuye también haber reducido la pobreza en Asia",
+        "El texto describe dos efectos opuestos del mismo proceso, y el estudiante "
+        "conserva solo uno.\nJunto con la destrucción de empleo industrial en "
+        "regiones enteras, el texto consigna que la globalización abarató bienes y "
+        "sacó de la pobreza a cientos de millones de personas en Asia.\nLa palabra "
+        "que el texto usa es desigual, no perjudicial, y la diferencia es central: "
+        "un efecto desigual reparte ganancias y pérdidas entre grupos distintos, y "
+        "describir solo una de las dos mitades impide entender por qué el proceso "
+        "se sostuvo.",
+        [
+            ("El texto sostiene que la globalización no tuvo ningún efecto negativo", "Menciona expresamente la destrucción de empleo industrial."),
+            ("El texto sitúa la globalización antes de la Guerra Fría", "La describe acelerándose en las décadas finales del período."),
+            ("El texto atribuye la globalización a decisiones políticas", "Le atribuye causas tecnológicas y logísticas."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_fuentes", "medio",
+        "Este texto explica un proceso reciente cuyos efectos siguen en curso. ¿Qué "
+        "cuidado exige eso al usarlo como fuente?",
+        "Su interpretación puede cambiar con lo que aún está ocurriendo",
+        "El texto lo insinúa al advertir contra dos lecturas apresuradas: son "
+        "apresuradas porque el proceso no ha terminado de mostrar sus "
+        "consecuencias.\nUn hecho del siglo XIX se estudia sabiendo qué vino "
+        "después; uno de los años noventa, no. Lo que hoy parece el desenlace de un "
+        "proceso puede resultar más adelante una etapa intermedia de otro.\nEso no "
+        "impide analizarlo, y de hecho el texto lo hace. Obliga a distinguir lo que "
+        "ya está establecido —qué ocurrió y cuándo— de la interpretación de su "
+        "alcance, que es la parte que seguirá revisándose.",
+        [
+            ("Los procesos recientes no pueden estudiarse históricamente", "El propio texto los estudia: lo que cambia es el grado de provisionalidad."),
+            ("Las fuentes actuales son más objetivas que las antiguas", "La cercanía no garantiza objetividad: suele traer más intereses en juego."),
+            ("Un texto reciente no requiere contrastarse con otros", "El contraste es más necesario, no menos, cuando el proceso sigue abierto."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "facil",
+        "Según la Tabla 1, ¿qué países sufrieron un golpe de Estado en el período?",
+        "Altamar, Boreal y Delmonte",
+        "La columna de golpes de Estado registra 1968 para Altamar, 1973 para "
+        "Boreal y 1976 para Delmonte.\nCarmenia y Estival aparecen con la anotación "
+        "no hubo, y la segunda nota lo confirma al explicar por qué ninguno de los "
+        "dos constituyó comisión de verdad: no hubo en ellos gobiernos militares en "
+        "el período.",
+        [
+            ("Carmenia y Estival", "Son justamente los dos países sin golpe de Estado en la tabla."),
+            ("Solamente Boreal y Delmonte", "Altamar también registra un golpe, en 1968."),
+            ("Los cinco países de la tabla", "Dos de ellos figuran con la anotación no hubo."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "facil",
+        "Según la Tabla 2, ¿qué país registra el mayor número de casos calificados?",
+        "Delmonte, con 8.900 casos",
+        "La tabla entrega 2.100 casos para Altamar, 3.400 para Boreal y 8.900 para "
+        "Delmonte.\nDelmonte concentra así más casos que los otros dos países "
+        "sumados, y lo hace en el período más corto de los tres: siete años, entre "
+        "1976 y 1983.",
+        [
+            ("Boreal, con 3.400 casos", "Es la cifra intermedia de la tabla."),
+            ("Altamar, con 2.100 casos", "Es la menor de las tres."),
+            ("Carmenia, que no constituyó comisión", "Carmenia no figura en la Tabla 2."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "facil",
+        "Según la Tabla 1, ¿qué distingue el caso de Carmenia de los demás?",
+        "Llegó a una revolución armada y no a elecciones",
+        "La fila de Carmenia registra reforma agraria en 1959 y, en la columna de "
+        "gobierno, la anotación revolución armada, sin elecciones.\nNo registra "
+        "golpe de Estado ni retorno a elecciones dentro del período, de modo que su "
+        "trayectoria es distinta tanto de los países con dictadura militar como de "
+        "Estival, que mantuvo elecciones periódicas.",
+        [
+            ("Fue el único país que no aplicó reforma agraria", "La aplicó en 1959; el que no la tuvo fue Boreal."),
+            ("Fue el único que sufrió dos golpes de Estado", "Su columna de golpes registra no hubo."),
+            ("Mantuvo elecciones periódicas durante todo el período", "Esa es la trayectoria de Estival."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "medio",
+        "¿Qué relación aparece en la Tabla 1 entre los gobiernos reformistas "
+        "electos y los golpes de Estado?",
+        "En tres países el golpe ocurre al terminar el gobierno reformista",
+        "Altamar registra un gobierno reformista entre 1964 y 1968 y un golpe en "
+        "1968; Boreal, entre 1970 y 1973 con golpe en 1973; Delmonte, entre 1966 y "
+        "1976 con golpe en 1976.\nLas tres fechas coinciden, de modo que el golpe "
+        "aparece como el desenlace de esos procesos y no como un hecho "
+        "independiente de ellos.\nLa tabla registra la coincidencia; explicar por "
+        "qué ocurrió exige otras fuentes, porque estas columnas no informan quién "
+        "promovió cada golpe ni con qué argumentos.",
+        [
+            ("Los golpes ocurren siempre antes de cualquier reforma", "Las reformas agrarias de Altamar y Delmonte son anteriores a sus golpes."),
+            ("Los países con reforma agraria no sufrieron golpes", "Altamar y Delmonte tuvieron ambas cosas."),
+            ("Los golpes ocurren solo en países sin elecciones previas", "Los tres países con golpe registran gobiernos electos antes de él."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "medio",
+        "Estival aplica una reforma agraria en 1971 y mantiene elecciones "
+        "periódicas hasta 1990. ¿Qué muestra ese caso frente a los demás?",
+        "Que las reformas no llevaban necesariamente a un quiebre institucional",
+        "Tres de los cinco países combinan reformas y quiebre, lo que podría "
+        "sugerir una relación necesaria entre ambas cosas.\nEstival funciona como "
+        "contraejemplo: aplica una reforma agraria en 1971 y su columna de golpes "
+        "registra no hubo, con elecciones periódicas durante todo el "
+        "período.\nBasta un caso para descartar la afirmación general. Lo que la "
+        "tabla sugiere es que la relación entre reforma y quiebre dependía de "
+        "factores que estas columnas no registran, y que hay que buscar caso por "
+        "caso.",
+        [
+            ("Que las reformas agrarias fracasaron en toda la región", "La tabla no informa sobre resultados de las reformas."),
+            ("Que Estival no llegó a aplicar realmente su reforma", "La tabla la consigna en 1971 sin ninguna salvedad."),
+            ("Que las elecciones periódicas impiden toda reforma social", "Estival muestra lo contrario: reformó manteniéndolas."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "medio",
+        "Según la última nota, ¿cómo describían los gobiernos militares el "
+        "conflicto que enfrentaban?",
+        "Como una guerra interna contra un enemigo infiltrado",
+        "La nota lo consigna para los tres países con comisión de verdad: la "
+        "doctrina oficial describía el conflicto como una guerra interna contra un "
+        "enemigo infiltrado en la sociedad.\nEsa descripción tiene consecuencias "
+        "prácticas. Si el enemigo está infiltrado y no se distingue del resto de la "
+        "población, cualquier persona pasa a ser un sospechoso posible y las "
+        "garantías ordinarias se presentan como un obstáculo.\nPor eso el "
+        "vocabulario de una doctrina no es un dato accesorio: contiene ya la "
+        "justificación de los procedimientos que después se aplicaron.",
+        [
+            ("Como una disputa electoral entre partidos rivales", "La nota describe una doctrina de guerra interna, no una competencia electoral."),
+            ("Como una invasión militar procedente de otro país", "La doctrina sitúa al enemigo dentro de la propia sociedad."),
+            ("Como un conflicto limitado a organizaciones armadas conocidas", "La palabra infiltrado indica lo contrario: un enemigo no identificable."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "medio",
+        "Según la primera nota, ¿por qué las comisiones advierten que la cifra real "
+        "es superior a la que informan?",
+        "Porque solo calificaron casos acreditados con dos fuentes",
+        "La nota describe el criterio: las comisiones calificaron únicamente los "
+        "casos que pudieron acreditar con al menos dos fuentes independientes.\nUn "
+        "umbral así deja necesariamente fuera casos ocurridos pero no "
+        "documentables, sea porque no hubo testigos, porque los registros fueron "
+        "destruidos o porque nadie sobrevivió para denunciar.\nLa advertencia es "
+        "entonces una consecuencia del método y no una debilidad de él: la "
+        "exigencia de prueba que hace confiable cada caso calificado es la misma "
+        "que garantiza que el total sea un piso y no un techo.",
+        [
+            ("Porque los gobiernos militares les impidieron trabajar", "La nota atribuye el límite al criterio de acreditación, no a un impedimento."),
+            ("Porque incluyeron casos que no lograron verificar", "El criterio descrito es exactamente el contrario."),
+            ("Porque los informes se publicaron muchos años después", "Los tres informes se publican entre dos y cinco años tras el retorno."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "medio",
+        "Comparando ambas tablas, ¿qué observación permite hacer el caso de "
+        "Delmonte?",
+        "Concentra más casos que los otros dos en el período más corto",
+        "La Tabla 2 muestra que Delmonte registra 8.900 casos en siete años, entre "
+        "1976 y 1983.\nAltamar registra 2.100 en diecisiete años y Boreal, 3.400 en "
+        "dieciséis. La diferencia no es solo de magnitud sino de intensidad: más "
+        "casos en menos tiempo.\nLa tabla permite constatarlo pero no explicarlo. "
+        "Las causas —el tipo de aparato represivo, la existencia o no de "
+        "organizaciones armadas, el grado de movilización social previa— requieren "
+        "fuentes que estas columnas no contienen.",
+        [
+            ("Fue el país con el gobierno militar más prolongado", "El de Boreal cubre dieciséis años y el de Altamar diecisiete: ambos más largos."),
+            ("Su comisión de verdad fue la última en publicar su informe", "Publica en 1985, antes que las de Altamar y Boreal."),
+            ("Fue el único país que no aplicó reforma agraria", "La aplicó en 1967; el que no la tuvo fue Boreal."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "dificil",
+        "¿Qué papel cumple la Guerra Fría en la lectura de estas dos tablas?",
+        "Ofrece el marco ideológico con que se justificó la represión",
+        "La tabla registra una secuencia repetida: gobierno reformista electo, "
+        "golpe de Estado, régimen militar, casos de desaparición y ejecución, "
+        "retorno a elecciones.\nLa nota entrega la pieza que conecta esa secuencia "
+        "con el conflicto internacional: la doctrina oficial describía el conflicto "
+        "como una guerra interna contra un enemigo infiltrado en la sociedad. Esa "
+        "doctrina es hija de la confrontación ideológica del período.\nReconocer el "
+        "marco no significa atribuir cada proceso a una decisión externa. Cada país "
+        "tiene su historia propia, y la tabla misma lo muestra al incluir dos casos "
+        "que no siguieron esa secuencia.",
+        [
+            ("Explica por completo cada uno de los golpes de la región", "La tabla incluye dos países sin golpe: el marco no determina el desenlace."),
+            ("Es irrelevante, porque los procesos fueron puramente internos", "La doctrina que las notas describen proviene del conflicto internacional."),
+            ("Determina que todos los países terminaran con dictaduras", "Carmenia y Estival muestran trayectorias distintas."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "dificil",
+        "Un texto sostiene que las cifras de las comisiones son poco confiables "
+        "porque sus propios informes admiten estar incompletas. ¿Qué falla en ese "
+        "razonamiento?",
+        "Confunde una cifra incompleta con una cifra inexacta",
+        "La nota explica de dónde viene la advertencia: las comisiones calificaron "
+        "solo los casos acreditados con al menos dos fuentes independientes.\nEse "
+        "criterio produce dos efectos distintos que el razonamiento mezcla. Cada "
+        "caso incluido está mejor documentado que si el umbral fuera más bajo, de "
+        "modo que la cifra es más confiable; y el total queda por debajo del real, "
+        "de modo que es incompleta.\nSer un piso verificado no es lo mismo que ser "
+        "un número dudoso. Que un informe declare sus límites es una señal de rigor "
+        "y no de debilidad, y usarlo en su contra invierte el sentido de la "
+        "advertencia.",
+        [
+            ("Supone que las comisiones ocultaron casos deliberadamente", "La nota atribuye la diferencia al criterio de acreditación, no a una omisión intencional."),
+            ("Ignora que los informes se publicaron tras el retorno democrático", "La fecha de publicación no es lo que está en discusión."),
+            ("Confunde casos de desaparición con casos de ejecución", "La tabla los agrupa en una sola columna y el razonamiento no depende de esa distinción."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre los procesos "
+        "latinoamericanos?",
+        "Por qué cada país siguió una trayectoria distinta",
+        "Las tablas registran qué ocurrió y cuándo: reformas, gobiernos, golpes, "
+        "retornos y casos calificados.\nLo que no contienen son las variables que "
+        "permitirían explicar las diferencias: la estructura social de cada país, "
+        "la fuerza de sus instituciones, el papel de sus fuerzas armadas, la "
+        "existencia de organizaciones armadas o la intervención de potencias "
+        "extranjeras.\nPor eso la fuente sirve para establecer el patrón regional y "
+        "para advertir sus excepciones, pero cualquier explicación de por qué "
+        "Estival conservó sus elecciones y Boreal no exige investigar caso por "
+        "caso.",
+        [
+            ("En qué año retornó a elecciones cada país con dictadura", "La Tabla 1 lo entrega en su última columna."),
+            ("Cuántos casos calificó cada comisión de verdad", "Es exactamente lo que registra la Tabla 2."),
+            ("Qué países aplicaron reformas agrarias en el período", "La primera columna de la Tabla 1 lo indica."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "dificil",
+        "¿Por qué la constitución de comisiones de verdad aparece asociada al "
+        "retorno democrático y no antes?",
+        "Investigar al aparato estatal exige que este ya no gobierne",
+        "Las tres comisiones publican entre 1985 y 1991, siempre después del "
+        "retorno a elecciones que registra la Tabla 1.\nLa razón está en la "
+        "naturaleza de lo que investigan. Los hechos calificados fueron cometidos "
+        "por agentes del propio Estado bajo una doctrina oficial, de modo que "
+        "mientras ese aparato conserva el poder controla también los archivos, los "
+        "testigos y a quienes podrían investigarlo.\nLa segunda nota lo confirma en "
+        "negativo: Carmenia y Estival no constituyeron comisiones porque no hubo en "
+        "ellos gobiernos militares en el período.",
+        [
+            ("Porque las comisiones son un requisito de las elecciones", "Nada en la fuente indica que sean condición para votar."),
+            ("Porque los casos ocurrieron recién al terminar cada dictadura", "Los años cubiertos por cada informe corresponden al período militar."),
+            ("Porque antes no existían organismos capaces de documentarlos", "La fuente no plantea un problema de capacidad técnica."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "dificil",
+        "Estas tablas usan países ficticios para describir un patrón regional. ¿Qué "
+        "ventaja y qué límite tiene ese procedimiento?",
+        "Permite ver el patrón y no reemplaza el estudio de cada caso",
+        "La ventaja es de método: al despojar los casos de su nombre, lo que queda "
+        "a la vista es la secuencia repetida y también sus excepciones, sin que el "
+        "juicio previo sobre un país concreto interfiera.\nEl límite es del mismo "
+        "orden. Un patrón describe regularidades y borra justamente lo que hace "
+        "distinto a cada proceso: sus actores, sus fechas propias, la magnitud real "
+        "de lo ocurrido.\nPor eso una fuente así funciona como puerta de entrada y "
+        "no como conclusión. Lo que ocurrió en cada país tiene nombres, cifras "
+        "verificadas e informes oficiales, y estudiarlo exige acudir a ellos.",
+        [
+            ("No tiene ninguna ventaja: los casos ficticios no sirven", "Permiten aislar el patrón sin el ruido del juicio previo sobre un país concreto."),
+            ("Permite reemplazar por completo el estudio de los casos reales", "Un patrón describe regularidades y omite lo específico de cada proceso."),
+            ("Evita tener que verificar cualquier afirmación histórica", "La verificación sigue siendo necesaria: la nota advierte que los datos son ilustrativos."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_temporal", "dificil",
+        "Los tres países con golpe lo sufren en 1968, 1973 y 1976, y retornan a "
+        "elecciones en 1985, 1989 y 1983. ¿Qué patrón temporal describe eso?",
+        "Procesos paralelos con un desfase de pocos años entre sí",
+        "Los quiebres se concentran en ocho años y los retornos, en seis. Ningún "
+        "par coincide exactamente, pero todos caen dentro de dos tramos "
+        "estrechos.\nEsa configuración —fenómenos comparables en sociedades "
+        "distintas, desplazados unos pocos años— es lo que el análisis histórico "
+        "llama simultaneidad, y obliga a buscar causas que alcancen a todos los "
+        "casos y no solo dentro de cada país.\nEl desfase importa tanto como la "
+        "coincidencia: si los procesos fueran idénticos y sincrónicos cabría "
+        "sospechar un solo hecho mal registrado, y si estuvieran dispersos en "
+        "décadas no habría patrón que explicar.",
+        [
+            ("Un ciclo económico que se repite cada quince años", "La fuente no registra ninguna variable económica cíclica."),
+            ("Una larga duración que abarca varios siglos", "Todo el período de la tabla cubre poco más de tres décadas."),
+            ("Una sucesión causal donde cada golpe provoca el siguiente", "La tabla no aporta ningún vínculo causal entre los procesos de distintos países."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "facil",
+        "Según la Fuente 1, ¿en qué descansa la primera forma de vida que describe?",
+        "En elecciones libres e instituciones representativas",
+        "La alocución la define enumerando: la voluntad de la mayoría expresada en "
+        "elecciones libres, instituciones representativas, garantías contra la "
+        "arbitrariedad y libertad de creer y de expresarse.\nLa segunda forma de "
+        "vida queda descrita por oposición a esos mismos elementos: se impone a la "
+        "mayoría por la fuerza, controla la prensa y dirige las elecciones.",
+        [
+            ("En la propiedad colectiva de los medios de producción", "Esa es la propuesta que formula la Fuente 2."),
+            ("En la planificación económica dirigida por el Estado", "El texto no la incluye entre los rasgos de la primera forma de vida."),
+            ("En la ayuda económica a los países aliados", "La ayuda es el instrumento que propone, no el fundamento del régimen."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "facil",
+        "Según la Fuente 2, ¿qué objeción formula a la ayuda económica ofrecida?",
+        "Que es un préstamo con condiciones para quien lo recibe",
+        "La alocución invita a mirar sus condiciones y las enumera: no es un regalo "
+        "sino un préstamo que abre mercados a quien lo concede, ata al que lo "
+        "recibe y le indica con quién puede comerciar.\nLa objeción no es que la "
+        "ayuda no exista, sino que viene acompañada de obligaciones que benefician "
+        "a quien la entrega.",
+        [
+            ("Que su monto es demasiado bajo para reconstruir Europa", "El texto no discute el monto de la ayuda."),
+            ("Que se entrega solo a los países vencidos en la guerra", "El texto no plantea ese criterio de reparto."),
+            ("Que reemplaza a la planificación por el mercado libre", "La objeción concreta que formula es sobre las condiciones del préstamo."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "facil",
+        "Según la Fuente 1, ¿dónde prende la semilla del régimen totalitario?",
+        "En la miseria y en la necesidad",
+        "La alocución lo afirma con esas palabras y agrega que crece cuando muere "
+        "la esperanza de una vida mejor.\nDe ahí extrae su propuesta: la ayuda "
+        "económica y financiera es la condición de la estabilidad política, y "
+        "sostener esa esperanza no es caridad sino defensa de la propia seguridad.",
+        [
+            ("En los países que no reciben ayuda extranjera", "El texto sitúa el origen en la miseria, no en la ausencia de ayuda."),
+            ("En las instituciones representativas débiles", "El texto no señala a las instituciones como el terreno donde prende."),
+            ("En la libertad de prensa mal regulada", "La libertad de expresión aparece como rasgo del propio bloque, no como causa."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "¿Qué tienen en común las dos alocuciones en la manera de presentar el "
+        "conflicto?",
+        "Ambas lo plantean como una elección entre dos sistemas",
+        "La Fuente 1 abre diciendo que el mundo se ha dividido en dos formas de "
+        "vida y que cada nación deberá elegir. La Fuente 2 retoma exactamente ese "
+        "marco: se nos anuncia una elección entre dos formas de vida.\nNinguna de "
+        "las dos describe un conflicto entre Estados por territorios o recursos: "
+        "ambas lo presentan como una disputa entre modelos de organización "
+        "social.\nEse encuadre es lo característico de la Guerra Fría. La "
+        "confrontación se argumenta en términos ideológicos, y por eso alcanza a la "
+        "prensa, la educación y la cultura además de la política exterior.",
+        [
+            ("Ambas lo describen como una disputa por territorios en Europa", "Ninguna de las dos plantea reclamos territoriales."),
+            ("Ambas sostienen que el conflicto puede evitarse negociando", "Ninguna propone una negociación entre los dos bloques."),
+            ("Ambas atribuyen el conflicto a la Segunda Guerra Mundial", "La guerra no aparece como causa en ninguno de los dos textos."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "La Fuente 2 sostiene que la libertad de imprenta es real para quien puede "
+        "comprar una imprenta. ¿Qué está argumentando?",
+        "Que sin medios materiales el derecho declarado no se ejerce",
+        "El argumento distingue dos planos: que un derecho esté reconocido y que "
+        "alguien esté en condiciones de usarlo.\nAplicado a la prensa, sostiene que "
+        "la garantía formal no reparte la capacidad de publicar, y que esa "
+        "capacidad depende de quién posee los medios.\nEs una crítica "
+        "característica del período: no niega que las libertades existan sobre el "
+        "papel, sino que discute su alcance efectivo bajo una determinada "
+        "estructura de propiedad. La Fuente 1 responde en otro plano, por lo que "
+        "las dos rara vez llegan a discutir lo mismo.",
+        [
+            ("Que la prensa debe ser propiedad exclusiva del Estado", "El texto no formula esa propuesta para la prensa."),
+            ("Que la libertad de expresión no debería estar garantizada", "No cuestiona la garantía sino las condiciones para ejercerla."),
+            ("Que los diarios del otro bloque publican información falsa", "La objeción es sobre quién puede publicar, no sobre la veracidad."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "¿Cómo justifica la Fuente 2 la represión que se le atribuye?",
+        "Como disciplina necesaria mientras exista una amenaza externa",
+        "La alocución no niega el hecho: dice que reprimimos y responde que "
+        "edificamos, y que toda edificación exige disciplina mientras el enemigo "
+        "esté a las puertas.\nEl argumento traslada la discusión desde si ocurre "
+        "hacia si está justificado, y la justificación descansa por completo en la "
+        "existencia de una amenaza.\nConviene notar la estructura, porque se repite "
+        "en muchos contextos: una amenaza permanente vuelve permanente la excepción "
+        "que autoriza, y la medida transitoria no tiene fecha de término.",
+        [
+            ("Negando que existan presos políticos en su territorio", "El texto no niega la represión: la justifica."),
+            ("Sosteniendo que la represión también existe en el otro bloque", "No recurre a ese argumento comparativo."),
+            ("Afirmando que la disciplina fue exigida por sus aliados", "El texto la presenta como una decisión propia."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "La Fuente 1 afirma que la ayuda no es caridad sino defensa de la propia "
+        "seguridad. ¿Qué revela esa formulación?",
+        "Que la ayuda es también un instrumento estratégico",
+        "El propio texto encadena el razonamiento: el régimen totalitario prende en "
+        "la miseria, luego sostener la esperanza de una vida mejor impide que "
+        "prenda, luego financiar esa esperanza protege al bloque que financia.\nAl "
+        "declararlo abiertamente, la alocución evita presentarse como un gesto "
+        "desinteresado y ofrece en cambio un argumento de interés propio, "
+        "presumiblemente más persuasivo ante su audiencia.\nLa Fuente 2 leerá ese "
+        "mismo hecho de otro modo: no como seguridad compartida sino como un "
+        "préstamo que ata a quien lo recibe.",
+        [
+            ("Que la ayuda se entregará sin condiciones de ningún tipo", "El texto no se pronuncia sobre las condiciones; la Fuente 2 es la que las señala."),
+            ("Que el bloque occidental carecía de recursos para donar", "El texto no plantea limitaciones de recursos."),
+            ("Que la ayuda estaba destinada solo a fines militares", "La describe como ayuda económica y financiera."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "medio",
+        "¿Qué manifestación cultural de la Guerra Fría anticipan estos dos textos "
+        "al ser alocuciones radiales?",
+        "La disputa por la opinión pública a través de los medios",
+        "Ninguna de las dos piezas está dirigida a un gobierno ni a una mesa de "
+        "negociación: son emisiones destinadas a poblaciones enteras, propias y "
+        "ajenas.\nEso indica dónde se libraba una parte del conflicto. Si la "
+        "disputa es entre dos formas de vida, el terreno decisivo incluye lo que la "
+        "gente cree, y por eso la radio, el cine, los libros y las exposiciones "
+        "pasan a ser instrumentos de política exterior.\nDe ahí que la Guerra Fría "
+        "se estudie también como una confrontación cultural y no solo como una "
+        "carrera armamentista.",
+        [
+            ("El fin de la censura en ambos bloques durante el período", "La Fuente 1 acusa al otro de controlar la prensa y la Fuente 2 justifica la disciplina."),
+            ("La creación de organismos internacionales de comunicación", "Ninguno de los dos textos menciona organismos de ese tipo."),
+            ("El abandono de la propaganda como herramienta política", "Los dos textos son ejemplos de esa herramienta en uso."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "Cada fuente usa la palabra libertad con un contenido distinto. ¿En qué "
+        "consiste la diferencia?",
+        "Una la define por garantías y la otra, por medios materiales",
+        "La Fuente 1 la asocia a elecciones libres, instituciones representativas, "
+        "garantías contra la arbitrariedad y libertad de creer y expresarse: un "
+        "conjunto de límites al poder.\nLa Fuente 2 no niega que eso sea deseable, "
+        "sino que discute si basta. Sostiene que un derecho declarado sin los "
+        "medios para ejercerlo queda en manos de quien posee esos medios.\nPor eso "
+        "los dos discursos rara vez se encuentran: usan la misma palabra para "
+        "nombrar cosas distintas, y cada uno responde a una pregunta que el otro no "
+        "formuló.",
+        [
+            ("Una la considera un derecho y la otra, un privilegio heredado", "Ninguna de las dos la describe como privilegio hereditario."),
+            ("Una la limita a la prensa y la otra, a la propiedad", "La Fuente 1 abarca elecciones e instituciones, no solo prensa."),
+            ("Una la reconoce a los Estados y la otra, a las personas", "Ambas discuten la libertad de las personas dentro de un orden social."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "¿Qué estrategia común emplean ambas alocuciones al describir al bloque "
+        "contrario?",
+        "Muestran su modelo por sus principios y el ajeno por sus hechos",
+        "La Fuente 1 describe lo propio por lo que garantiza —elecciones libres, "
+        "libertad de creencia— y lo ajeno por lo que hace: controla la prensa, "
+        "dirige elecciones, reprime.\nLa Fuente 2 hace lo mismo en espejo: describe "
+        "lo propio por lo que se propone —que los medios pertenezcan a quienes "
+        "trabajan— y lo ajeno por sus resultados: unos pocos poseen las fábricas y "
+        "el resto vende su jornada.\nLa comparación queda así desnivelada de "
+        "antemano, porque enfrenta el ideal de un sistema con la realidad del otro. "
+        "Detectarlo es útil frente a cualquier par de fuentes enfrentadas.",
+        [
+            ("Ambas reconocen los aciertos del bloque contrario", "Ninguna de las dos concede mérito alguno al otro modelo."),
+            ("Ambas evitan referirse al modelo contrario", "Las dos lo describen extensamente."),
+            ("Ambas describen los dos modelos por sus resultados concretos", "Cada una describe el propio por sus principios."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "La Fuente 1 dice que no propone una cruzada y a continuación propone "
+        "apoyar a los pueblos libres que resisten. ¿Qué tensión hay en esa "
+        "formulación?",
+        "Descarta la cruzada y compromete un apoyo sin límite",
+        "La negación inicial acota el alcance: no habrá una campaña de conversión "
+        "ni una guerra declarada.\nPero la frase siguiente compromete apoyo a los "
+        "pueblos libres que resisten intentos de sometimiento, sin precisar dónde, "
+        "hasta cuándo ni con qué medios.\nUn compromiso así puede leerse como ayuda "
+        "económica —que es lo que el texto menciona— o extenderse mucho más lejos, "
+        "y de hecho la historia posterior del período incluye ambas cosas. Advertir "
+        "esa indefinición es leer el texto con la precisión que exige.",
+        [
+            ("Anuncia una guerra abierta contra el otro bloque", "El texto descarta expresamente la cruzada y habla de ayuda económica."),
+            ("Renuncia a intervenir en cualquier país extranjero", "El apoyo a pueblos que resisten es una forma de intervención."),
+            ("Condiciona el apoyo a que los países adopten su modelo", "El texto no plantea esa condición explícita."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "¿Qué NO permite establecer este par de fuentes sobre la Guerra Fría?",
+        "Cómo vivían realmente las poblaciones de cada bloque",
+        "Las dos alocuciones son piezas de propaganda dirigidas a persuadir, y "
+        "documentan muy bien lo que cada bloque decía de sí mismo y del otro.\nLo "
+        "que no entregan es evidencia sobre las condiciones de vida: no hay cifras "
+        "de salarios, vivienda, consumo ni represión, y cada una describe al "
+        "adversario con el propósito de descalificarlo.\nPara eso harían falta "
+        "fuentes de otro tipo: estadísticas, testimonios, informes de organismos "
+        "independientes. Confundir el discurso de un régimen con la realidad de la "
+        "sociedad que gobierna es el error más común al trabajar con propaganda.",
+        [
+            ("Cómo cada bloque describía al otro en 1947", "Es exactamente lo que las dos fuentes documentan."),
+            ("Qué argumentos usaba cada bloque para justificarse", "Ambas los exponen por extenso."),
+            ("Qué papel se atribuía a la ayuda económica en el conflicto", "Las dos fuentes se refieren a ella de manera explícita."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_guerra_fria", "dificil",
+        "Ambas alocuciones invocan a la mayoría o a los que trabajan. ¿Qué problema "
+        "plantea eso para el historiador?",
+        "Cada régimen dice representar a un sujeto que no lo eligió a él",
+        "La Fuente 1 apela a la voluntad de la mayoría expresada en elecciones; la "
+        "Fuente 2, a quienes trabajan y no poseen los medios de producción. Los dos "
+        "invocan un sujeto colectivo como fuente de su legitimidad.\nEl problema es "
+        "que ninguna de las dos invocaciones se verifica en el propio texto: ambas "
+        "afirman representar sin mostrar cómo se estableció esa representación.\nEl "
+        "trabajo del historiador es no aceptar esa identificación como dato. Qué "
+        "pensaban efectivamente las poblaciones de cada bloque es una pregunta "
+        "abierta que requiere fuentes distintas de los discursos que dicen hablar "
+        "por ellas.",
+        [
+            ("Que ambos regímenes eran en realidad idénticos entre sí", "Sus propuestas sobre propiedad e instituciones son claramente distintas."),
+            ("Que la propaganda no sirve como fuente histórica", "Sirve, y muy bien, para estudiar cómo cada bloque se presentaba."),
+            ("Que las mayorías no existían en ninguno de los dos bloques", "El problema es cómo se acredita la representación, no la existencia de poblaciones."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_discursos", "his_fuentes", "dificil",
+        "Al trabajar con dos piezas de propaganda enfrentadas, ¿cuál es el "
+        "procedimiento correcto?",
+        "Leerlas como testimonio de lo que cada bando quiso instalar",
+        "Una pieza de propaganda es una fuente excelente para una pregunta y muy "
+        "mala para otra. Documenta con precisión qué mensaje quiso instalar su "
+        "autor, ante quién y con qué argumentos.\nNo documenta, en cambio, si lo "
+        "que afirma es cierto. Ninguna de las dos alocuciones ofrece evidencia "
+        "verificable sobre la sociedad que describe.\nEl procedimiento consiste "
+        "entonces en cambiar la pregunta que se le hace a la fuente: en lugar de "
+        "preguntarle qué ocurría, preguntarle qué se quería que la gente creyera "
+        "que ocurría, y buscar lo primero en otras fuentes.",
+        [
+            ("Descartar ambas por su carácter interesado", "La propaganda es una fuente central para estudiar el período; se interroga bien, no se descarta."),
+            ("Aceptar como cierto aquello en que las dos coinciden", "Dos propagandas pueden coincidir en un error o en un supuesto compartido de la época."),
+            ("Elegir la más verosímil y usarla como descripción", "Verosimilitud no es verificación: ninguna aporta evidencia contrastable."),
+        ],
+    ),
     _ql(
         "posguerra_marco_regulador", "his_posguerra", "facil",
         "Según el texto, ¿qué problema buscaba evitar el sistema económico acordado "
