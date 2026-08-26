@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 350" width="470" height="350" role="img">
+  <title>Esfera con su radio dibujado y acotado en 5 centímetros</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <circle cx="230" cy="190" r="130" fill="none" stroke="#111827" stroke-width="2"/>
+    <ellipse cx="230" cy="190" rx="130" ry="42" fill="none" stroke="#4b5563" stroke-width="1.4" stroke-dasharray="7 5"/>
+    <line x1="230" y1="190" x2="360" y2="190" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="230" cy="190" r="4" fill="#111827"/>
+    <text x="292" y="178" text-anchor="middle" font-size="15" fill="#111827">5 cm</text>
+  </g>
+</svg>

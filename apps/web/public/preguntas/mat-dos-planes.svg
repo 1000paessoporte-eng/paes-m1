@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 370" width="540" height="370" role="img">
+  <title>Costo de dos planes de telefonía según los minutos consumidos: el plan A parte de 4 mil pesos y sube más despacio; el plan B parte de cero y sube más rápido; las dos rectas se cruzan</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="308" x2="510" y2="308" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="282.364" x2="510" y2="282.364" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="256.727" x2="510" y2="256.727" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="231.091" x2="510" y2="231.091" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="205.455" x2="510" y2="205.455" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="179.818" x2="510" y2="179.818" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="154.182" x2="510" y2="154.182" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="128.545" x2="510" y2="128.545" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="102.909" x2="510" y2="102.909" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="77.2727" x2="510" y2="77.2727" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="51.6364" x2="510" y2="51.6364" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="510" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="308" x2="510" y2="308" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="308" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="308" x2="76" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="76" y="332" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <line x1="162.8" y1="308" x2="162.8" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="162.8" y="332" text-anchor="middle" font-size="13" fill="#4b5563">100</text>
+    <line x1="249.6" y1="308" x2="249.6" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="249.6" y="332" text-anchor="middle" font-size="13" fill="#4b5563">200</text>
+    <line x1="336.4" y1="308" x2="336.4" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="336.4" y="332" text-anchor="middle" font-size="13" fill="#4b5563">300</text>
+    <line x1="423.2" y1="308" x2="423.2" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="423.2" y="332" text-anchor="middle" font-size="13" fill="#4b5563">400</text>
+    <line x1="510" y1="308" x2="510" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="510" y="332" text-anchor="middle" font-size="13" fill="#4b5563">500</text>
+    <line x1="70" y1="308" x2="76" y2="308" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="313" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="282.364" x2="76" y2="282.364" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="287.364" text-anchor="end" font-size="13" fill="#4b5563">2</text>
+    <line x1="70" y1="256.727" x2="76" y2="256.727" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="261.727" text-anchor="end" font-size="13" fill="#4b5563">4</text>
+    <line x1="70" y1="231.091" x2="76" y2="231.091" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="236.091" text-anchor="end" font-size="13" fill="#4b5563">6</text>
+    <line x1="70" y1="205.455" x2="76" y2="205.455" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="210.455" text-anchor="end" font-size="13" fill="#4b5563">8</text>
+    <line x1="70" y1="179.818" x2="76" y2="179.818" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="184.818" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <line x1="70" y1="154.182" x2="76" y2="154.182" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="159.182" text-anchor="end" font-size="13" fill="#4b5563">12</text>
+    <line x1="70" y1="128.545" x2="76" y2="128.545" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="133.545" text-anchor="end" font-size="13" fill="#4b5563">14</text>
+    <line x1="70" y1="102.909" x2="76" y2="102.909" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="107.909" text-anchor="end" font-size="13" fill="#4b5563">16</text>
+    <line x1="70" y1="77.2727" x2="76" y2="77.2727" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="82.2727" text-anchor="end" font-size="13" fill="#4b5563">18</text>
+    <line x1="70" y1="51.6364" x2="76" y2="51.6364" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="56.6364" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">22</text>
+    <text x="293" y="354" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Minutos consumidos</text>
+    <text x="20" y="167" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 167)">Costo (miles de $)</text>
+    <path d="M76 256.727 L510 128.545" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M76 308 L510 51.6364" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="449.24" y="159.309" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Plan A</text>
+    <text x="423.2" y="84.9636" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">Plan B</text>
+  </g>
+</svg>

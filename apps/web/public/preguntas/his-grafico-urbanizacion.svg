@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" width="540" height="400" role="img">
+  <title>Gráfico del porcentaje de población urbana de un país entre 1900 y 2000: sube de 20% a 30%, 45%, 70% y 85%</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="308" x2="510" y2="308" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="251.6" x2="510" y2="251.6" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="195.2" x2="510" y2="195.2" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="138.8" x2="510" y2="138.8" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="82.4" x2="510" y2="82.4" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="510" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="308" x2="510" y2="308" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="308" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="308" x2="76" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="76" y="332" text-anchor="middle" font-size="13" fill="#4b5563">1900</text>
+    <line x1="184.5" y1="308" x2="184.5" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="184.5" y="332" text-anchor="middle" font-size="13" fill="#4b5563">1925</text>
+    <line x1="293" y1="308" x2="293" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="293" y="332" text-anchor="middle" font-size="13" fill="#4b5563">1950</text>
+    <line x1="401.5" y1="308" x2="401.5" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="401.5" y="332" text-anchor="middle" font-size="13" fill="#4b5563">1975</text>
+    <line x1="510" y1="308" x2="510" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="510" y="332" text-anchor="middle" font-size="13" fill="#4b5563">2000</text>
+    <line x1="70" y1="308" x2="76" y2="308" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="313" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="251.6" x2="76" y2="251.6" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="256.6" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <line x1="70" y1="195.2" x2="76" y2="195.2" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="200.2" text-anchor="end" font-size="13" fill="#4b5563">40</text>
+    <line x1="70" y1="138.8" x2="76" y2="138.8" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="143.8" text-anchor="end" font-size="13" fill="#4b5563">60</text>
+    <line x1="70" y1="82.4" x2="76" y2="82.4" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="87.4" text-anchor="end" font-size="13" fill="#4b5563">80</text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">100</text>
+    <text x="293" y="354" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Año</text>
+    <text x="20" y="167" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 167)">Población urbana (%)</text>
+    <path d="M76 251.6 L184.5 223.4 L293 181.1 L401.5 110.6 L510 68.3" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="76" cy="251.6" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="184.5" cy="223.4" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="293" cy="181.1" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="401.5" cy="110.6" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <circle cx="510" cy="68.3" r="4" fill="#ffffff" stroke="#111827" stroke-width="1.8"/>
+    <text x="270" y="390" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

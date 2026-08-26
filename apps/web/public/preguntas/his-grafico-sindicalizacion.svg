@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" width="540" height="400" role="img">
+  <title>Gráfico de barras con el porcentaje de trabajadores sindicalizados por sector: minería 32%, industria 18%, comercio 9% y servicios 12%</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="308" x2="510" y2="308" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="237.5" x2="510" y2="237.5" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="167" x2="510" y2="167" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="96.5" x2="510" y2="96.5" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="26" x2="510" y2="26" stroke="#d4d4d8" stroke-width="1"/>
+    <line x1="76" y1="308" x2="510" y2="308" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="308" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <line x1="130.25" y1="308" x2="130.25" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="130.25" y="332" text-anchor="middle" font-size="13" fill="#4b5563">Minería</text>
+    <line x1="238.75" y1="308" x2="238.75" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="238.75" y="332" text-anchor="middle" font-size="13" fill="#4b5563">Industria</text>
+    <line x1="347.25" y1="308" x2="347.25" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="347.25" y="332" text-anchor="middle" font-size="13" fill="#4b5563">Comercio</text>
+    <line x1="455.75" y1="308" x2="455.75" y2="314" stroke="#111827" stroke-width="1.6"/>
+    <text x="455.75" y="332" text-anchor="middle" font-size="13" fill="#4b5563">Servicios</text>
+    <line x1="70" y1="308" x2="76" y2="308" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="313" text-anchor="end" font-size="13" fill="#4b5563">0</text>
+    <line x1="70" y1="237.5" x2="76" y2="237.5" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="242.5" text-anchor="end" font-size="13" fill="#4b5563">10</text>
+    <line x1="70" y1="167" x2="76" y2="167" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="172" text-anchor="end" font-size="13" fill="#4b5563">20</text>
+    <line x1="70" y1="96.5" x2="76" y2="96.5" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="101.5" text-anchor="end" font-size="13" fill="#4b5563">30</text>
+    <line x1="70" y1="26" x2="76" y2="26" stroke="#111827" stroke-width="1.6"/>
+    <text x="64" y="31" text-anchor="end" font-size="13" fill="#4b5563">40</text>
+    <text x="293" y="354" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Sector</text>
+    <text x="20" y="167" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 167)">Trabajadores sindicalizados (%)</text>
+    <rect x="100.412" y="82.4" width="59.675" height="225.6" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <rect x="208.913" y="181.1" width="59.675" height="126.9" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <rect x="317.413" y="244.55" width="59.675" height="63.45" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <rect x="425.913" y="223.4" width="59.675" height="84.6" fill="#111827" stroke="#111827" stroke-width="1.6"/>
+    <text x="270" y="390" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

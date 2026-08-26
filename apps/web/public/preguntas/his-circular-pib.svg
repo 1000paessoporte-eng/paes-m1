@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 370" width="520" height="370" role="img">
+  <title>Gráfico circular con la composición del PIB de un país por sector: servicios 55%, industria 25%, minería 12% y agricultura 8%</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M190 190 L190.0 72.0 A118 118 0 1 1 153.5 302.2 Z" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="266.921" y="207.183" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">55%</text>
+    <path d="M190 190 L153.5 302.2 A118 118 0 0 1 77.8 153.5 Z" fill="#c7cad1" stroke="#111827" stroke-width="2"/>
+    <text x="120.608" y="230.357" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">25%</text>
+    <path d="M190 190 L77.8 153.5 A118 118 0 0 1 133.2 86.6 Z" fill="#8b8f98" stroke="#111827" stroke-width="2"/>
+    <text x="129.992" y="145.357" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">12%</text>
+    <path d="M190 190 L133.2 86.6 A118 118 0 0 1 190.0 72.0 Z" fill="#4b5563" stroke="#111827" stroke-width="2"/>
+    <text x="170.632" y="119.567" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">8%</text>
+    <text x="280" y="350" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+    <rect x="350" y="92" width="20" height="20" fill="#ffffff" stroke="#111827" stroke-width="1.6"/>
+    <text x="382" y="108" text-anchor="start" font-size="14" fill="#111827">Servicios</text>
+    <rect x="350" y="132" width="20" height="20" fill="#c7cad1" stroke="#111827" stroke-width="1.6"/>
+    <text x="382" y="148" text-anchor="start" font-size="14" fill="#111827">Industria</text>
+    <rect x="350" y="172" width="20" height="20" fill="#8b8f98" stroke="#111827" stroke-width="1.6"/>
+    <text x="382" y="188" text-anchor="start" font-size="14" fill="#111827">Minería</text>
+    <rect x="350" y="212" width="20" height="20" fill="#4b5563" stroke="#111827" stroke-width="1.6"/>
+    <text x="382" y="228" text-anchor="start" font-size="14" fill="#111827">Agricultura</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 310" width="500" height="310" role="img">
+  <title>Cuadrado cuya área es 144 centímetros cuadrados</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M150 60 L350 60 L350 260 L150 260 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="250" y="168" text-anchor="middle" font-size="16" font-weight="600" fill="#111827">Área = 144 cm²</text>
+    <text x="250" y="288" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">?</text>
+    <line x1="150" y1="274" x2="350" y2="274" stroke="#4b5563" stroke-width="1.2"/>
+  </g>
+</svg>

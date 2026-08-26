@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" role="img">
+  <title>Esquema de un territorio partido en dos por una línea gruesa. A la izquierda, el bloque occidental, con economía de mercado y democracias liberales. A la derecha, el bloque oriental, con economía planificada y partido único. Sobre la línea divisoria hay una ciudad dividida</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M60 60 L540 60 L540 290 L60 290 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="300" y1="60" x2="300" y2="290" stroke="#111827" stroke-width="4"/>
+    <text x="180" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">BLOQUE</text>
+    <text x="180" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">OCCIDENTAL</text>
+    <text x="420" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">BLOQUE</text>
+    <text x="420" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">ORIENTAL</text>
+    <text x="180" y="176" text-anchor="middle" font-size="13" fill="#4b5563">economía de mercado</text>
+    <text x="180" y="196" text-anchor="middle" font-size="13" fill="#4b5563">democracias liberales</text>
+    <text x="420" y="176" text-anchor="middle" font-size="13" fill="#4b5563">economía planificada</text>
+    <text x="420" y="196" text-anchor="middle" font-size="13" fill="#4b5563">partido único</text>
+    <circle cx="300" cy="240" r="6" fill="#111827"/>
+    <text x="300" y="264" text-anchor="middle" font-size="12" fill="#4b5563">ciudad dividida</text>
+    <text x="300" y="320" text-anchor="middle" font-size="11" fill="#4b5563">Esquema, no un mapa a escala.</text>
+  </g>
+</svg>

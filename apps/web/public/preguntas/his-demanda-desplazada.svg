@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" width="460" height="360" role="img">
+  <title>Gráfico de precio contra cantidad. La curva de oferta sube. La demanda D1 se desplaza hacia la derecha hasta D2, y el punto de equilibrio pasa de E1 a E2, más arriba y más a la derecha</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="298" x2="430" y2="298" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="298" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <text x="253" y="344" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Cantidad</text>
+    <text x="20" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 162)">Precio</text>
+    <path d="M111.4 243.6 L394.6 53.2" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M111.4 107.6 L359.2 270.8" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M164.5 39.6 L412.3 202.8" fill="none" stroke="#111827" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="366.28" y="259.92" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">D1</text>
+    <text x="401.68" y="178.32" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">D2</text>
+    <text x="383.98" y="53.2" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">O</text>
+    <circle cx="221.14" cy="170.16" r="4.5" fill="#111827"/>
+    <circle cx="295.48" cy="118.48" r="4.5" fill="#111827"/>
+    <text x="209.14" y="188.16" text-anchor="end" font-size="13" fill="#111827">E1</text>
+    <text x="307.48" y="108.48" text-anchor="start" font-size="13" fill="#111827">E2</text>
+  </g>
+</svg>

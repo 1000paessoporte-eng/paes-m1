@@ -167,16 +167,25 @@ def test_historia_no_afirma_hechos_sin_fuente():
     """Toda pregunta de los ejes de historia y ciudadanía se apoya en una fuente.
 
     Es la regla que hace verificable este banco: la respuesta se comprueba
-    contra un texto que escribimos, no contra conocimiento histórico que
+    contra una fuente que escribimos, no contra conocimiento histórico que
     ningún script puede validar. Las de economía son de cálculo y no la
     necesitan.
+
+    La fuente puede ser un texto (`passage`) o una figura propia (`image_url`).
+    El temario DEMRE pide trabajar con mapas, gráficos y tablas, y en esas
+    preguntas la fuente ES el dibujo: vive en el repositorio, se revisa en el
+    mismo pull request y viaja con la pregunta, igual que un texto. Lo que la
+    regla prohíbe sigue prohibido: preguntar de memoria, sin nada que
+    contrastar.
     """
     from paes_api.seed_data import QUESTIONS_HISTORIA, SKILL_NODES_HISTORIA
 
     ejes = {n[0]: n[2] for n in SKILL_NODES_HISTORIA}
     for q in QUESTIONS_HISTORIA:
         if ejes[q["skill_node"]] in ("historia", "ciudadania"):
-            assert q.get("passage"), f"sin fuente: {q['stem'][:50]}"
+            assert q.get("passage") or q.get("image_url"), (
+                f"sin fuente: {q['stem'][:50]}"
+            )
 
 
 def test_cada_texto_de_lectora_sostiene_varias_preguntas():

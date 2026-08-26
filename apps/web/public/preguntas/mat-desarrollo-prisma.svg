@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320" width="540" height="320" role="img">
+  <title>Desarrollo plano de una caja: cuatro caras en fila y dos tapas</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M60 140 L180 140 L180 200 L60 200 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M180 140 L260 140 L260 200 L180 200 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M260 140 L380 140 L380 200 L260 200 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M380 140 L460 140 L460 200 L380 200 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M60 60 L180 60 L180 140 L60 140 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M60 200 L180 200 L180 280 L60 280 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="120" y="302" text-anchor="middle" font-size="15" fill="#111827">6 cm</text>
+    <text x="48" y="106" text-anchor="end" font-size="15" fill="#111827">4 cm</text>
+    <text x="474" y="176" text-anchor="start" font-size="15" fill="#111827">3 cm</text>
+  </g>
+</svg>

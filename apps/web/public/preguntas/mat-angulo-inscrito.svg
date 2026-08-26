@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="500" height="380" role="img">
+  <title>Circunferencia de centro O con los puntos A y B en la parte de abajo del borde. El ángulo AOB, que tiene su vértice en el centro, mide 80 grados. Desde el punto P, en lo más alto del borde, salen dos trazos hacia A y hacia B que forman el ángulo x</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <circle cx="250" cy="200" r="130" fill="none" stroke="#111827" stroke-width="2"/>
+    <line x1="250" y1="200" x2="166.438" y2="299.586" stroke="#111827" stroke-width="2"/>
+    <line x1="250" y1="200" x2="333.562" y2="299.586" stroke="#111827" stroke-width="2"/>
+    <line x1="250" y1="70" x2="166.438" y2="299.586" stroke="#111827" stroke-width="2"/>
+    <line x1="250" y1="70" x2="333.562" y2="299.586" stroke="#111827" stroke-width="2"/>
+    <circle cx="250" cy="200" r="4" fill="#111827"/>
+    <circle cx="166.438" cy="299.586" r="4" fill="#111827"/>
+    <circle cx="333.562" cy="299.586" r="4" fill="#111827"/>
+    <circle cx="250" cy="70" r="4" fill="#111827"/>
+    <text x="240" y="190" text-anchor="end" font-size="14" font-weight="700" fill="#111827">O</text>
+    <text x="154.438" y="315.586" text-anchor="end" font-size="14" font-weight="700" fill="#111827">A</text>
+    <text x="345.562" y="315.586" text-anchor="start" font-size="14" font-weight="700" fill="#111827">B</text>
+    <text x="250" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">P</text>
+    <text x="250" y="252" text-anchor="middle" font-size="14" fill="#111827">80°</text>
+    <text x="250" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">x</text>
+  </g>
+</svg>

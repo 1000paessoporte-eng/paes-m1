@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 336" width="430" height="336" role="img">
+  <title>Cuadrado de 12 cm de lado con un círculo inscrito; la zona entre el cuadrado y el círculo está sombreada</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M60 40 H300 V280 H60 Z M180 40 A120 120 0 0 0 180 280 A120 120 0 0 0 180 40 Z" fill="#c7cad1" fill-rule="evenodd" stroke="none"/>
+    <path d="M60 40 L300 40 L300 280 L60 280 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="180" cy="160" r="120" fill="none" stroke="#111827" stroke-width="2"/>
+    <text x="180" y="306" text-anchor="middle" font-size="15" fill="#111827">12 cm</text>
+  </g>
+</svg>

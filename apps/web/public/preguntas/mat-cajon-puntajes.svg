@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 250" width="540" height="250" role="img">
+  <title>Diagrama de cajón con los puntajes de un curso</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="156" y1="90" x2="220.5" y2="90" stroke="#111827" stroke-width="2"/>
+    <line x1="328" y1="90" x2="414" y2="90" stroke="#111827" stroke-width="2"/>
+    <line x1="156" y1="71.4" x2="156" y2="108.6" stroke="#111827" stroke-width="2"/>
+    <line x1="414" y1="71.4" x2="414" y2="108.6" stroke="#111827" stroke-width="2"/>
+    <rect x="220.5" y="59" width="107.5" height="62" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <line x1="263.5" y1="59" x2="263.5" y2="121" stroke="#111827" stroke-width="2"/>
+    <line x1="220.5" y1="121" x2="220.5" y2="190" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="263.5" y1="121" x2="263.5" y2="190" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="328" y1="121" x2="328" y2="190" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="4 4"/>
+    <line x1="70" y1="190" x2="500" y2="190" stroke="#111827" stroke-width="2"/>
+    <line x1="70" y1="190" x2="70" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="70" y="214" text-anchor="middle" font-size="13" fill="#4b5563">0</text>
+    <line x1="113" y1="190" x2="113" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="113" y="214" text-anchor="middle" font-size="13" fill="#4b5563">10</text>
+    <line x1="156" y1="190" x2="156" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="156" y="214" text-anchor="middle" font-size="13" fill="#4b5563">20</text>
+    <line x1="199" y1="190" x2="199" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="199" y="214" text-anchor="middle" font-size="13" fill="#4b5563">30</text>
+    <line x1="242" y1="190" x2="242" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="242" y="214" text-anchor="middle" font-size="13" fill="#4b5563">40</text>
+    <line x1="285" y1="190" x2="285" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="285" y="214" text-anchor="middle" font-size="13" fill="#4b5563">50</text>
+    <line x1="328" y1="190" x2="328" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="328" y="214" text-anchor="middle" font-size="13" fill="#4b5563">60</text>
+    <line x1="371" y1="190" x2="371" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="371" y="214" text-anchor="middle" font-size="13" fill="#4b5563">70</text>
+    <line x1="414" y1="190" x2="414" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="414" y="214" text-anchor="middle" font-size="13" fill="#4b5563">80</text>
+    <line x1="457" y1="190" x2="457" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="457" y="214" text-anchor="middle" font-size="13" fill="#4b5563">90</text>
+    <line x1="500" y1="190" x2="500" y2="196" stroke="#111827" stroke-width="1.6"/>
+    <text x="500" y="214" text-anchor="middle" font-size="13" fill="#4b5563">100</text>
+    <text x="285" y="238" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Puntaje</text>
+  </g>
+</svg>

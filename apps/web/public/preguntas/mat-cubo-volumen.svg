@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" width="400" height="340" role="img">
+  <title>Cubo cuyo volumen es 64 centímetros cúbicos</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M100 130 L260 130 L260 290 L100 290 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M100 130 L170 60 L330 60 L260 130 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M260 130 L330 60 L330 220 L260 290 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="180" y="216" text-anchor="middle" font-size="16" font-weight="600" fill="#111827">64 cm³</text>
+    <text x="180" y="316" text-anchor="middle" font-size="17" font-weight="700" fill="#111827">?</text>
+    <line x1="100" y1="302" x2="260" y2="302" stroke="#4b5563" stroke-width="1.2"/>
+  </g>
+</svg>

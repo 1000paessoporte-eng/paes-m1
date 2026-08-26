@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" role="img">
+  <title>Tabla con los precios en pesos de una canasta de tres productos en dos años: pan de 1.200 a 1.440, leche de 900 a 1.080 y arroz de 1.500 a 1.800. El total pasa de 3.600 a 4.320</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <rect x="60" y="40" width="520" height="46" fill="#eef0f3" stroke="none"/>
+    <text x="170" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Producto</text>
+    <text x="355" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Año 1</text>
+    <text x="505" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Año 2</text>
+    <text x="170" y="116" text-anchor="middle" font-size="14" fill="#111827">Pan (1 kg)</text>
+    <text x="355" y="116" text-anchor="middle" font-size="14" fill="#111827">1.200</text>
+    <text x="505" y="116" text-anchor="middle" font-size="14" fill="#111827">1.440</text>
+    <text x="170" y="162" text-anchor="middle" font-size="14" fill="#111827">Leche (1 L)</text>
+    <text x="355" y="162" text-anchor="middle" font-size="14" fill="#111827">900</text>
+    <text x="505" y="162" text-anchor="middle" font-size="14" fill="#111827">1.080</text>
+    <text x="170" y="208" text-anchor="middle" font-size="14" fill="#111827">Arroz (1 kg)</text>
+    <text x="355" y="208" text-anchor="middle" font-size="14" fill="#111827">1.500</text>
+    <text x="505" y="208" text-anchor="middle" font-size="14" fill="#111827">1.800</text>
+    <text x="170" y="254" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">Total de la canasta</text>
+    <text x="355" y="254" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">3.600</text>
+    <text x="505" y="254" text-anchor="middle" font-size="14" font-weight="700" fill="#111827">4.320</text>
+    <line x1="60" y1="40" x2="580" y2="40" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="86" x2="580" y2="86" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="132" x2="580" y2="132" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="178" x2="580" y2="178" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="224" x2="580" y2="224" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="270" x2="580" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="60" y1="40" x2="60" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="280" y1="40" x2="280" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="430" y1="40" x2="430" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <line x1="580" y1="40" x2="580" y2="270" stroke="#111827" stroke-width="1.4"/>
+    <text x="320" y="296" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

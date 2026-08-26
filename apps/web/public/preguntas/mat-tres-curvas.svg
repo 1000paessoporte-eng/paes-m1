@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400" role="img">
+  <title>Tres gráficos numerados sin escala: el I parte del origen, sube despacio y después se empina; el II sube rápido al principio y después se aplana; el III corta el eje vertical por encima del origen y se dispara hacia arriba</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <g transform="translate(40,20)">
+    <line x1="0" y1="130" x2="190" y2="130" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="130" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M0 130 L4 129.988 L8 129.908 L12 129.688 L16 129.261 L20 128.557 L24 127.507 L28 126.042 L32 124.091 L36 121.587 L40 118.46 L44 114.64 L48 110.059 L52 104.646 L56 98.3337 L60 91.0518 L64 82.7314 L68 73.303 L72 62.6976 L76 50.8458 L80 37.6784 L84 23.1263 L88 7.12" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="95" y="162" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">I</text>
+    </g>
+    <g transform="translate(320,20)">
+    <line x1="0" y1="130" x2="190" y2="130" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="130" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M5 126.124 L9 115.913 L13 109.525 L17 104.864 L21 101.194 L25 98.1648 L29 95.5865 L33 93.3418 L37 91.3543 L41 89.571 L45 87.9539 L49 86.4746 L53 85.1114 L57 83.8474 L61 82.6692 L65 81.5659 L69 80.5284 L73 79.5495 L77 78.6228 L81 77.743 L85 76.9056 L89 76.1068 L93 75.3431 L97 74.6115 L101 73.9095 L105 73.2348 L109 72.5853 L113 71.9593 L117 71.355 L121 70.771 L125 70.206 L129 69.6588 L133 69.1283 L137 68.6136 L141 68.1136 L145 67.6277 L149 67.1549 L153 66.6947 L157 66.2464 L161 65.8094 L165 65.383 L169 64.9669 L173 64.5606 L177 64.1635 L181 63.7753" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="95" y="162" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">II</text>
+    </g>
+    <g transform="translate(180,220)">
+    <line x1="0" y1="130" x2="190" y2="130" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="130" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M0 104 L4 102.226 L8 100.33 L12 98.3056 L16 96.1428 L20 93.8323 L24 91.3641 L28 88.7276 L32 85.9111 L36 82.9024 L40 79.6883 L44 76.255 L48 72.5873 L52 68.6694 L56 64.4841 L60 60.0132 L64 55.2372 L68 50.1352 L72 44.6851 L76 38.8631 L80 32.6438 L84 26 L88 18.9029 L92 11.3214" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="95" y="162" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">III</text>
+    </g>
+  </g>
+</svg>

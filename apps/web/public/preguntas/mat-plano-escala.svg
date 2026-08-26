@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 316" width="560" height="316" role="img">
+  <title>Plano de una sala con sus medidas en el papel y la escala</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M120 70 L440 70 L440 230 L120 230 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="280" y="156" text-anchor="middle" font-size="16" font-weight="600" fill="#111827">Sala</text>
+    <text x="280" y="262" text-anchor="middle" font-size="15" fill="#111827">4 cm en el plano</text>
+    <text x="108" y="156" text-anchor="end" font-size="15" fill="#111827">3 cm</text>
+    <text x="280" y="296" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Escala 1 : 200</text>
+  </g>
+</svg>

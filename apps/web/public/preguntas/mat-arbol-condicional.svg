@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 400" width="550" height="400" role="img">
+  <title>Árbol de probabilidades de dos etapas. En la primera, estudió con probabilidad 0,7 y no estudió con 0,3. De quienes estudiaron, aprueba 0,9 y reprueba 0,1. De quienes no estudiaron, aprueba 0,4 y reprueba 0,6</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="130" y1="190" x2="260" y2="110" stroke="#111827" stroke-width="2"/>
+    <line x1="130" y1="190" x2="260" y2="280" stroke="#111827" stroke-width="2"/>
+    <line x1="300" y1="110" x2="430" y2="70" stroke="#111827" stroke-width="2"/>
+    <line x1="300" y1="110" x2="430" y2="155" stroke="#111827" stroke-width="2"/>
+    <line x1="300" y1="280" x2="430" y2="240" stroke="#111827" stroke-width="2"/>
+    <line x1="300" y1="280" x2="430" y2="325" stroke="#111827" stroke-width="2"/>
+    <text x="195" y="136" text-anchor="middle" font-size="14" fill="#111827">0,7</text>
+    <text x="195" y="257" text-anchor="middle" font-size="14" fill="#111827">0,3</text>
+    <text x="365" y="78" text-anchor="middle" font-size="14" fill="#111827">0,9</text>
+    <text x="365" y="152.5" text-anchor="middle" font-size="14" fill="#111827">0,1</text>
+    <text x="365" y="248" text-anchor="middle" font-size="14" fill="#111827">0,4</text>
+    <text x="365" y="324.5" text-anchor="middle" font-size="14" fill="#111827">0,6</text>
+    <circle cx="110" cy="190" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <circle cx="280" cy="110" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="280" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">L</text>
+    <circle cx="280" cy="280" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="280" y="286" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">N</text>
+    <circle cx="450" cy="70" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="450" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">A</text>
+    <circle cx="450" cy="155" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="450" y="161" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">R</text>
+    <circle cx="450" cy="240" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="450" y="246" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">A</text>
+    <circle cx="450" cy="325" r="20" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="450" y="331" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">R</text>
+    <text x="280" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#4b5563">Estudia</text>
+    <text x="450" y="44" text-anchor="middle" font-size="13" font-weight="600" fill="#4b5563">Resultado</text>
+    <text x="520" y="366" text-anchor="end" font-size="12" fill="#4b5563">L: estudió &#183; N: no estudió</text>
+    <text x="520" y="384" text-anchor="end" font-size="12" fill="#4b5563">A: aprobó &#183; R: reprobó</text>
+  </g>
+</svg>

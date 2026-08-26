@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 370" width="590" height="370" role="img">
+  <title>Cuatro gráficos numerados: una recta por el origen, una recta que no pasa por el origen, una curva decreciente y una curva creciente cada vez más empinada</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <g transform="translate(40,20)">
+    <line x1="0" y1="115" x2="200" y2="115" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="115" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M0 115 L190 12" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="100" y="145" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">I</text>
+    </g>
+    <g transform="translate(330,20)">
+    <line x1="0" y1="115" x2="200" y2="115" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="115" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M0 77 L190 16" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="100" y="145" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">II</text>
+    </g>
+    <g transform="translate(40,200)">
+    <line x1="0" y1="115" x2="200" y2="115" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="115" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M8 12.5 L14 56.4286 L20 74 L26 83.4615 L32 89.375 L38 93.4211 L44 96.3636 L50 98.6 L56 100.357 L62 101.774 L68 102.941 L74 103.919 L80 104.75 L86 105.465 L92 106.087 L98 106.633 L104 107.115 L110 107.545 L116 107.931 L122 108.279 L128 108.594 L134 108.881 L140 109.143 L146 109.384 L152 109.605 L158 109.81 L164 110 L170 110.176 L176 110.341 L182 110.495 L188 110.638" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="100" y="145" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">III</text>
+    </g>
+    <g transform="translate(330,200)">
+    <line x1="0" y1="115" x2="200" y2="115" stroke="#111827" stroke-width="2"/>
+    <line x1="0" y1="115" x2="0" y2="0" stroke="#111827" stroke-width="2"/>
+    <path d="M0 115 L5 114.852 L10 114.408 L15 113.669 L20 112.633 L25 111.302 L30 109.675 L35 107.751 L40 105.533 L45 103.018 L50 100.207 L55 97.1006 L60 93.6982 L65 90 L70 86.0059 L75 81.716 L80 77.1302 L85 72.2485 L90 67.071 L95 61.5976 L100 55.8284 L105 49.7633 L110 43.4024 L115 36.7456 L120 29.7929 L125 22.5444 L130 15" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="100" y="145" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">IV</text>
+    </g>
+  </g>
+</svg>

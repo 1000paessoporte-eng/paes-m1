@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 370" width="470" height="370" role="img">
+  <title>Gráfico de oferta y demanda con una línea horizontal por debajo del punto de equilibrio, rotulada precio máximo. A ese precio, la cantidad que se ofrece es mucho menor que la que se demanda</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <line x1="76" y1="308" x2="440" y2="308" stroke="#111827" stroke-width="2"/>
+    <line x1="76" y1="308" x2="76" y2="26" stroke="#111827" stroke-width="2"/>
+    <text x="258" y="354" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">Cantidad</text>
+    <text x="20" y="167" text-anchor="middle" font-size="14" font-weight="600" fill="#111827" transform="rotate(-90 20 167)">Precio</text>
+    <path d="M112.4 54.2 L403.6 251.6" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M112.4 251.6 L403.6 54.2" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <text x="389.04" y="234.68" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">D</text>
+    <text x="389.04" y="54.2" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">O</text>
+    <line x1="76" y1="209.3" x2="440" y2="209.3" stroke="#111827" stroke-width="2.2" stroke-dasharray="9 5"/>
+    <text x="425.44" y="197.3" text-anchor="end" font-size="12" fill="#4b5563">precio máximo</text>
+    <circle cx="152.44" cy="209.3" r="4.5" fill="#111827"/>
+    <circle cx="345.36" cy="209.3" r="4.5" fill="#111827"/>
+    <text x="152.44" y="330" text-anchor="middle" font-size="12" fill="#4b5563">q oferta</text>
+    <text x="345.36" y="330" text-anchor="middle" font-size="12" fill="#4b5563">q demanda</text>
+    <line x1="152.44" y1="209.3" x2="152.44" y2="308" stroke="#4b5563" stroke-width="1.1" stroke-dasharray="4 4"/>
+    <line x1="345.36" y1="209.3" x2="345.36" y2="308" stroke="#4b5563" stroke-width="1.1" stroke-dasharray="4 4"/>
+  </g>
+</svg>

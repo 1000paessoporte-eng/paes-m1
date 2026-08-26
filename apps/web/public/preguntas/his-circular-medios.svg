@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" role="img">
+  <title>Gráfico circular con el medio por el que un grupo de personas se informa: redes sociales 42%, televisión 30%, radio 16% y diarios 12%</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M190 185 L190.0 70.0 A115 115 0 0 1 245.4 285.8 Z" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+    <text x="263.515" y="171.124" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">42%</text>
+    <path d="M190 185 L245.4 285.8 A115 115 0 0 1 77.0 206.5 Z" fill="#c7cad1" stroke="#111827" stroke-width="2"/>
+    <text x="157.683" y="258.676" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">30%</text>
+    <path d="M190 185 L77.0 206.5 A115 115 0 0 1 111.3 101.2 Z" fill="#8b8f98" stroke="#111827" stroke-width="2"/>
+    <text x="117.815" y="166.546" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">16%</text>
+    <path d="M190 185 L111.3 101.2 A115 115 0 0 1 190.0 70.0 Z" fill="#4b5563" stroke="#111827" stroke-width="2"/>
+    <text x="162.059" y="119.43" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">12%</text>
+    <text x="280" y="340" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+    <rect x="345" y="92" width="20" height="20" fill="#ffffff" stroke="#111827" stroke-width="1.6"/>
+    <text x="377" y="108" text-anchor="start" font-size="14" fill="#111827">Redes sociales</text>
+    <rect x="345" y="132" width="20" height="20" fill="#c7cad1" stroke="#111827" stroke-width="1.6"/>
+    <text x="377" y="148" text-anchor="start" font-size="14" fill="#111827">Televisión</text>
+    <rect x="345" y="172" width="20" height="20" fill="#8b8f98" stroke="#111827" stroke-width="1.6"/>
+    <text x="377" y="188" text-anchor="start" font-size="14" fill="#111827">Radio</text>
+    <rect x="345" y="212" width="20" height="20" fill="#4b5563" stroke="#111827" stroke-width="1.6"/>
+    <text x="377" y="228" text-anchor="start" font-size="14" fill="#111827">Diarios</text>
+  </g>
+</svg>

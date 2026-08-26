@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" role="img">
+  <title>Cuatro casilleros vacíos en fila, rotulados como primera, segunda, tercera y cuarta posición de un número de cuatro cifras distintas, con las cifras disponibles 1, 2, 3, 5 y 7</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M90 120 L170 120 L170 200 L90 200 Z" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="130" y="232" text-anchor="middle" font-size="14" fill="#4b5563">1ª</text>
+    <path d="M200 120 L280 120 L280 200 L200 200 Z" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="240" y="232" text-anchor="middle" font-size="14" fill="#4b5563">2ª</text>
+    <path d="M310 120 L390 120 L390 200 L310 200 Z" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="350" y="232" text-anchor="middle" font-size="14" fill="#4b5563">3ª</text>
+    <path d="M420 120 L500 120 L500 200 L420 200 Z" fill="none" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+    <text x="460" y="232" text-anchor="middle" font-size="14" fill="#4b5563">4ª</text>
+    <text x="280" y="88" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Un número de cuatro cifras distintas</text>
+    <text x="280" y="268" text-anchor="middle" font-size="14" fill="#4b5563">Cifras disponibles: 1, 2, 3, 5, 7</text>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" width="560" height="340" role="img">
+  <title>Un triángulo T y su imagen T', del mismo tamaño pero al otro lado de un punto O y girada media vuelta; cada vértice está unido con su imagen por una línea punteada que pasa por O</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <path d="M350 140 L410 190 L360 240 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M210 240 L150 190 L200 140 Z" fill="none" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="350" y1="140" x2="210" y2="240" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <line x1="410" y1="190" x2="150" y2="190" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <line x1="360" y1="240" x2="200" y2="140" stroke="#4b5563" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <circle cx="280" cy="190" r="5" fill="#111827"/>
+    <text x="280" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">O</text>
+    <text x="378" y="196" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">T</text>
+    <text x="190" y="196" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">T'</text>
+  </g>
+</svg>
