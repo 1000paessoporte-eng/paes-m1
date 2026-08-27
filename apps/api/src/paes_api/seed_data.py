@@ -54918,6 +54918,144 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "eco_proyecto_extractivo",
+        "title": "Dos intervenciones en una audiencia sobre un proyecto minero",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen intervenciones reales "
+            "ni se refieren a ningún proyecto existente: reconstruyen los "
+            "argumentos habituales en las audiencias sobre proyectos "
+            "extractivos, para ejercitar la comparación de posiciones."
+        ),
+        "body": (
+            "**Intervención 1. Un dirigente sindical de la construcción.**\n"
+            "\n"
+            "En esta comuna el desempleo lleva años sobre el promedio del país "
+            "y los jóvenes se van apenas terminan el liceo. El proyecto "
+            "compromete mil doscientos empleos en la etapa de obras y "
+            "trescientos permanentes durante la operación, además de las "
+            "patentes que recibirá el municipio. Yo he escuchado la objeción "
+            "ambiental y la tomo en serio: pido que la exijan por escrito, con "
+            "monitoreo público y con una garantía que se ejecute si el "
+            "compromiso se incumple. Lo que no acepto es que se nos diga que "
+            "esperemos. Llevamos veinte años esperando un proyecto que llegue "
+            "sin costo alguno, y en veinte años se fue media comuna. Quien vive "
+            "en la capital puede permitirse el lujo de rechazar y seguir con su "
+            "vida igual. Nosotros no.\n"
+            "\n"
+            "**Intervención 2. Una hidrogeóloga de la universidad regional.**\n"
+            "\n"
+            "No vengo a discutir la necesidad de empleo, que es real y que "
+            "nadie en esta sala niega. Vengo a precisar tres cosas sobre el "
+            "agua. Primero: el acuífero que abastece a la comuna se recarga con "
+            "una lentitud que se mide en décadas, de modo que un consumo mayor "
+            "al de recarga no se corrige reduciéndolo después. Segundo: los "
+            "trescientos empleos permanentes duran lo que dure la ley del "
+            "mineral, y la experiencia de esta región es que ese plazo se "
+            "cuenta en años y no en generaciones; el acuífero, en cambio, tenía "
+            "que durar siempre. Tercero: una garantía se ejecuta cuando el daño "
+            "ya ocurrió, y hay daños que ninguna suma repone, porque no existe "
+            "manera de volver a llenar un acuífero agotado. La pregunta que "
+            "corresponde no es si aceptar o rechazar, sino con qué límite de "
+            "extracción de agua este proyecto es compatible con que la comuna "
+            "siga habitada después de que la faena cierre."
+        ),
+    },
+    {
+        "key": "eco_modelos_cifras",
+        "title": "Cuatro economías con distinta estrategia de desarrollo",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos referidos a "
+            "países ficticios. Las combinaciones reproducen contrastes que la "
+            "literatura sobre modelos de desarrollo describe, pero las cifras "
+            "no corresponden a ninguna serie oficial: el ejercicio es de "
+            "lectura e inferencia."
+        ),
+        "body": (
+            "**Tabla 1. Perfil económico y social.**\n"
+            "\n"
+            "| País | PIB per cápita (US$) | Índice de desarrollo humano | "
+            "Coeficiente de Gini | Pobreza |\n"
+            "|---|---|---|---|---|\n"
+            "| Aurelia | 24.000 | 0,72 | 0,52 | 18% |\n"
+            "| Bardenas | 23.000 | 0,86 | 0,29 | 6% |\n"
+            "| Corvina | 9.000 | 0,68 | 0,41 | 27% |\n"
+            "| Duraznal | 8.500 | 0,74 | 0,33 | 19% |\n"
+            "\n"
+            "**Tabla 2. Estructura productiva e impacto ambiental.**\n"
+            "\n"
+            "| País | Exportaciones que son recursos naturales | Emisiones por "
+            "habitante (t) | Superficie de bosque perdida en 20 años |\n"
+            "|---|---|---|---|\n"
+            "| Aurelia | 81% | 9,4 | 14% |\n"
+            "| Bardenas | 22% | 5,1 | 1% |\n"
+            "| Corvina | 74% | 3,2 | 22% |\n"
+            "| Duraznal | 38% | 2,6 | 3% |\n"
+            "\n"
+            "Notas:\n"
+            "— El índice de desarrollo humano va de 0 a 1 y combina ingreso, "
+            "esperanza de vida y escolaridad.\n"
+            "— En el coeficiente de Gini, 0 sería reparto perfectamente "
+            "igualitario y 1, concentración total.\n"
+            "— La pobreza se mide con la misma línea en los cuatro países, "
+            "ajustada por poder de compra."
+        ),
+    },
+    {
+        "key": "eco_medir_desarrollo",
+        "title": "Cuando el indicador deja de describir lo que importa",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Sistema económico para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Durante décadas se usó el crecimiento del producto como sinónimo "
+            "de progreso. Producir más parecía suficiente: si un país aumentaba "
+            "lo que fabricaba y vendía, se suponía que la vida de su gente "
+            "mejoraba con ello. La experiencia del siglo XX obligó a separar "
+            "ambas cosas.\n"
+            "\n"
+            "El primer problema del producto como medida es que no dice cómo se "
+            "reparte. Un país puede crecer 5% al año durante una década "
+            "mientras la mitad de su población no mejora, si ese crecimiento se "
+            "concentra en pocos sectores o en pocas manos. El promedio sube y "
+            "la mediana no se mueve.\n"
+            "\n"
+            "El segundo problema es que el producto suma sin distinguir. "
+            "Reconstruir una ciudad después de un terremoto aumenta el "
+            "producto, y también lo aumentan el gasto en tratar enfermedades "
+            "causadas por la contaminación y el tiempo perdido en congestión, "
+            "porque el combustible quemado se contabiliza como consumo. Nada de "
+            "eso mejora la vida de nadie: repara un daño o compensa una "
+            "pérdida.\n"
+            "\n"
+            "El tercero es el que más importa para el largo plazo. El producto "
+            "registra lo que se extrae y no lo que se agota. Un país que tala "
+            "su bosque y vende la madera anota un ingreso, sin que en ninguna "
+            "parte quede registrado que tiene menos bosque que el año anterior. "
+            "Si esa madera fuera una máquina, la contabilidad descontaría su "
+            "depreciación; con un recurso natural no se hace, y por eso una "
+            "economía puede parecer próspera mientras consume el capital del "
+            "que vive.\n"
+            "\n"
+            "De ahí surgieron medidas complementarias. Los índices de "
+            "desarrollo humano combinan ingreso con esperanza de vida y "
+            "escolaridad, para responder no cuánto se produce sino qué puede "
+            "hacer la gente con su vida. Los coeficientes de desigualdad "
+            "describen el reparto. Y los indicadores ambientales estiman cuánto "
+            "de lo consumido se repone.\n"
+            "\n"
+            "Ninguna de estas medidas reemplaza al producto, que sigue siendo "
+            "útil para lo que fue diseñado: estimar la actividad económica de "
+            "un período. El error no está en el indicador sino en el uso: tomar "
+            "una medida de producción y leerla como una medida de bienestar. "
+            "Todo indicador responde una pregunta determinada, y conviene saber "
+            "cuál antes de usarlo para decidir algo."
+        ),
+    },
+    {
         "key": "eco_tope_arriendo",
         "title": "Dos columnas sobre un tope al precio de los arriendos",
         "kind": "no_literario",
@@ -57981,6 +58119,663 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "facil",
+        "Según la Intervención 1, ¿qué compromete el proyecto en materia de empleo?",
+        "1.200 empleos en obras y 300 permanentes",
+        "La intervención entrega ambas cifras y las distingue por etapa: mil "
+        "doscientos durante las obras y trescientos permanentes durante la "
+        "operación.\nMenciona además un beneficio para el municipio: las patentes "
+        "que recibirá.",
+        [
+            ("300 empleos en obras y 1.200 permanentes", "Invierte las cifras: los 1.200 corresponden a la etapa de obras."),
+            ("1.500 empleos permanentes durante toda la operación", "Sumó ambas cifras y las trató como permanentes."),
+            ("1.200 empleos permanentes financiados por el municipio", "El municipio recibe patentes: no financia los empleos."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "facil",
+        "Según la Intervención 2, ¿en cuánto tiempo se recarga el acuífero de la "
+        "comuna?",
+        "En décadas",
+        "La hidrogeóloga lo señala como su primera precisión y de ahí extrae la "
+        "consecuencia: un consumo mayor al de recarga no se corrige reduciéndolo "
+        "después.\nEl punto es la asimetría entre extraer y reponer. Agotar puede "
+        "ocurrir en pocos años; recuperar el nivel exige un plazo que ninguna "
+        "decisión administrativa puede acortar.",
+        [
+            ("En pocos meses tras la temporada de lluvias", "El texto habla de una lentitud que se mide en décadas."),
+            ("En el mismo plazo que dure la faena minera", "La intervención contrapone justamente ambos plazos."),
+            ("En un plazo que la ciencia todavía no puede estimar", "La hidrogeóloga entrega una estimación: décadas."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "facil",
+        "Según la Intervención 1, ¿qué condiciones pide para aceptar el proyecto?",
+        "Compromiso escrito, monitoreo público y garantía",
+        "El dirigente las enumera después de declarar que toma en serio la objeción "
+        "ambiental.\nLas tres apuntan a lo mismo: que la exigencia ambiental no "
+        "quede en una declaración de buenas intenciones sino en obligaciones "
+        "verificables y con consecuencia en caso de incumplimiento.",
+        [
+            ("Que el proyecto financie la educación de los jóvenes", "El texto no plantea esa condición."),
+            ("Que la empresa contrate solo a residentes de la comuna", "El texto no menciona ninguna exigencia de residencia."),
+            ("Que el municipio administre directamente la faena", "El municipio recibe patentes; no administra el proyecto."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "medio",
+        "¿Qué contraste de plazos plantea la Intervención 2?",
+        "El empleo dura años y el acuífero tenía que durar siempre",
+        "La hidrogeóloga sitúa la duración de los trescientos empleos permanentes "
+        "en lo que dure la ley del mineral, y agrega que la experiencia de la "
+        "región cuenta ese plazo en años y no en generaciones.\nFrente a eso pone "
+        "el otro término: el acuífero tenía que durar siempre.\nEl argumento no "
+        "niega el beneficio sino que lo mide contra su costo en la escala correcta: "
+        "un ingreso temporal frente a un recurso que la comuna necesita después de "
+        "que la faena cierre.",
+        [
+            ("El proyecto dura décadas y el acuífero se recarga en años", "El texto plantea exactamente la relación inversa."),
+            ("Las obras duran más que la operación de la faena", "La intervención no compara ambas etapas del proyecto."),
+            ("El monitoreo público debe extenderse por generaciones", "El monitoreo lo propone la otra intervención, sin ese plazo."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "medio",
+        "Según la Intervención 2, ¿qué límite tiene la garantía que propone la "
+        "Intervención 1?",
+        "Se ejecuta cuando el daño ya ocurrió",
+        "La hidrogeóloga no rechaza la garantía: señala en qué momento opera.\nUna "
+        "garantía compensa después, y hay daños que ninguna suma repone, porque no "
+        "existe manera de volver a llenar un acuífero agotado.\nEl argumento "
+        "distingue entonces dos tipos de daño. Cuando el perjuicio es reparable, "
+        "una compensación cumple su función; cuando es irreversible, la garantía "
+        "transfiere dinero sin restituir lo perdido.",
+        [
+            ("Su monto suele ser insuficiente para el daño causado", "La objeción no es sobre el monto sino sobre la irreversibilidad."),
+            ("Las empresas no suelen pagarla cuando corresponde", "El texto no cuestiona su cobro."),
+            ("Solo cubre daños ocurridos durante la etapa de obras", "La intervención no establece esa limitación temporal."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "medio",
+        "¿Qué reproche formula la Intervención 1 a quienes rechazan el proyecto "
+        "desde fuera?",
+        "No soportan el costo de que nada llegue",
+        "El dirigente lo plantea al cerrar: quien vive en la capital puede "
+        "permitirse el lujo de rechazar y seguir con su vida igual.\nEl argumento "
+        "apunta a quién asume las consecuencias de cada decisión. En la comuna, "
+        "rechazar significa continuar con un desempleo sobre el promedio del país y "
+        "con jóvenes que se van apenas terminan el liceo.\nEs una objeción sobre la "
+        "posición de quien opina y no sobre el contenido de la objeción ambiental, "
+        "que el propio dirigente dice tomar en serio.",
+        [
+            ("Desconocen los datos técnicos sobre el acuífero", "El dirigente no cuestiona la información ambiental."),
+            ("Están financiados por empresas competidoras", "No hay ninguna imputación de ese tipo en el texto."),
+            ("Se oponen a todo proyecto por principio", "El reproche es sobre quién paga el costo de rechazar, no sobre una postura general."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "medio",
+        "¿Qué reformulación propone la Intervención 2 para la discusión?",
+        "Preguntar con qué límite de extracción es compatible",
+        "La hidrogeóloga cierra desplazando la pregunta: no si aceptar o rechazar, "
+        "sino con qué límite de extracción de agua el proyecto es compatible con "
+        "que la comuna siga habitada después de que la faena cierre.\nEl cambio "
+        "convierte una decisión binaria en un problema técnico con una respuesta "
+        "cuantificable.\nY fija un criterio explícito para evaluarla: la "
+        "habitabilidad de la comuna una vez terminada la operación, que es el plazo "
+        "que ninguna de las cifras de empleo cubre.",
+        [
+            ("Rechazar el proyecto hasta contar con más estudios", "La intervención descarta expresamente el marco de aceptar o rechazar."),
+            ("Aceptarlo si la empresa aumenta el número de empleos", "El número de empleos no es el criterio que propone."),
+            ("Trasladar la decisión a la autoridad de la capital", "El texto no propone cambiar quién decide."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "dificil",
+        "¿Por qué la Intervención 2 abre reconociendo que la necesidad de empleo es "
+        "real?",
+        "Deja el desacuerdo en el límite y no en el objetivo",
+        "Al conceder que el problema del empleo existe y que nadie en la sala lo "
+        "niega, la hidrogeóloga evita que la discusión se convierta en empleo "
+        "contra medio ambiente.\nDesde ahí puede plantear sus tres precisiones como "
+        "información técnica y no como una postura contraria al proyecto.\nEl "
+        "movimiento es coherente con su cierre: si el objetivo compartido es que la "
+        "comuna esté mejor, la pregunta pertinente es con qué límite de extracción "
+        "eso se logra, y no cuál de los dos valores debe ceder.",
+        [
+            ("Busca ganarse la simpatía del auditorio presente", "El reconocimiento cumple una función argumentativa, no retórica."),
+            ("Admite que el proyecto debe aprobarse sin condiciones", "Su intervención completa apunta a fijar un límite de extracción."),
+            ("Reconoce que sus datos sobre el acuífero son inciertos", "Los presenta como precisiones, no como estimaciones dudosas."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "dificil",
+        "¿Qué tipo de costo describe la Intervención 2 que no aparece en las cifras "
+        "de la Intervención 1?",
+        "Un costo irreversible que recae en el futuro",
+        "Las cifras del dirigente son verificables y están acotadas en el tiempo: "
+        "mil doscientos empleos en obras, trescientos permanentes, patentes "
+        "municipales.\nEl costo que la hidrogeóloga introduce no cabe en ese "
+        "registro. No es un monto ni un plazo sino la pérdida de un recurso que se "
+        "recarga en décadas y que la comuna necesitará cuando la faena ya haya "
+        "cerrado.\nEse desajuste es característico de las decisiones sobre "
+        "proyectos extractivos: los beneficios se pueden contar hoy y el costo "
+        "aparece después, sobre personas que no participaron de la audiencia.",
+        [
+            ("Un costo que la empresa asumirá con su garantía", "La intervención sostiene que hay daños que ninguna suma repone."),
+            ("Un costo que se paga durante la etapa de obras", "El costo que describe se manifiesta después del cierre."),
+            ("Un costo que recae sobre los trabajadores contratados", "Recae sobre la comuna y su disponibilidad de agua."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "dificil",
+        "¿Qué queda sin responder en la Intervención 1?",
+        "De qué vivirá la comuna cuando cierre la faena",
+        "El dirigente sostiene un argumento sólido sobre el presente: el desempleo "
+        "está sobre el promedio, los jóvenes se van y esperar veinte años ya tuvo "
+        "un costo.\nSus condiciones —compromiso escrito, monitoreo, garantía— "
+        "apuntan a controlar el impacto durante la operación.\nLo que no aborda es "
+        "lo que la otra intervención pone en el centro: los trescientos empleos "
+        "duran lo que dure el mineral, y después la comuna necesitará seguir "
+        "habitada. Su argumento quedaría completo si mostrara qué queda instalado "
+        "cuando la faena termine.",
+        [
+            ("Si el desempleo de la comuna es realmente alto", "La otra intervención no discute ese diagnóstico."),
+            ("Si la objeción ambiental merece ser escuchada", "El dirigente declara tomarla en serio y pide exigirla por escrito."),
+            ("Cuántos empleos generará la etapa de obras", "Entrega esa cifra de manera explícita."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "dificil",
+        "¿Qué queda sin responder en la Intervención 2?",
+        "Qué hacer con el desempleo mientras se fija el límite",
+        "La hidrogeóloga acierta al reformular la pregunta en términos de límite de "
+        "extracción, y su argumento sobre la irreversibilidad es difícil de "
+        "rebatir.\nPero el problema que ella misma reconoce como real —el desempleo "
+        "y la emigración de los jóvenes— sigue operando mientras se determina ese "
+        "límite, y su intervención no dice qué ocurre en ese intervalo.\nEs la "
+        "contracara del reproche del dirigente: llevamos veinte años esperando, y "
+        "en veinte años se fue media comuna. Un estudio bien hecho también toma "
+        "tiempo, y alguien lo está pagando.",
+        [
+            ("Si el acuífero se recarga con lentitud", "Es precisamente el dato técnico que ella aporta."),
+            ("Si el proyecto generará empleos permanentes", "Toma la cifra de la otra intervención y discute su duración."),
+            ("Si las garantías se ejecutan tras el daño", "Lo señala de manera explícita en su tercera precisión."),
+        ],
+    ),
+    _ql(
+        "eco_proyecto_extractivo", "eco_desarrollo", "dificil",
+        "¿Qué muestra este par de intervenciones sobre las decisiones de desarrollo "
+        "en localidades pequeñas?",
+        "Los beneficios y los costos recaen en tiempos distintos",
+        "El empleo, las patentes y la actividad económica aparecen de inmediato y "
+        "son medibles: hay cifras, fechas y personas concretas.\nEl costo ambiental "
+        "que la otra intervención describe se manifiesta cuando la faena ya cerró, "
+        "y recae sobre quienes vivan ahí entonces, que no están en la sala donde se "
+        "decide.\nEsa asimetría explica por qué estas discusiones son difíciles y "
+        "por qué ninguna de las dos posiciones es irracional. También explica la "
+        "utilidad de la reformulación final: fijar un límite es una manera de hacer "
+        "que ambos plazos entren en la misma decisión.",
+        [
+            ("El empleo y el medio ambiente son objetivos incompatibles", "La segunda intervención propone un límite que hace compatibles ambos."),
+            ("Las comunidades locales carecen de información técnica", "La audiencia cuenta con una especialista que la aporta."),
+            ("La decisión corresponde siempre a la autoridad central", "Ninguna de las dos intervenciones plantea ese traslado."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "facil",
+        "Según la Tabla 1, ¿qué país tiene el índice de desarrollo humano más alto?",
+        "Bardenas, con 0,86",
+        "La columna del índice entrega 0,72, 0,86, 0,68 y 0,74 para Aurelia, "
+        "Bardenas, Corvina y Duraznal.\nEl valor más alto es el de Bardenas, que "
+        "además registra el menor Gini y la menor pobreza de la tabla, con un PIB "
+        "por habitante similar al de Aurelia.",
+        [
+            ("Aurelia, con 0,72", "Es el tercer valor de la columna, pese a tener el mayor PIB por habitante."),
+            ("Duraznal, con 0,74", "Es el segundo más alto, por debajo de Bardenas."),
+            ("Corvina, con 0,68", "Es el valor más bajo de la tabla."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "facil",
+        "Según la Tabla 2, ¿qué país depende más de exportar recursos naturales?",
+        "Aurelia, con 81%",
+        "La primera columna de la Tabla 2 entrega 81%, 22%, 74% y 38%.\nAurelia "
+        "encabeza la lista, seguida de cerca por Corvina con 74%. Las dos son "
+        "también las que registran mayor pérdida de superficie de bosque en veinte "
+        "años.",
+        [
+            ("Corvina, con 74% de sus exportaciones", "Es la segunda, por debajo de Aurelia."),
+            ("Duraznal, con 38% de sus exportaciones", "Es la tercera de la tabla."),
+            ("Bardenas, con 22% de sus exportaciones", "Es la menos dependiente de las cuatro."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "facil",
+        "Según la Tabla 2, ¿cuántas toneladas por habitante emite Duraznal?",
+        "2,6 toneladas",
+        "La columna de emisiones por habitante entrega 9,4 para Aurelia, 5,1 para "
+        "Bardenas, 3,2 para Corvina y 2,6 para Duraznal.\nDuraznal registra así el "
+        "menor valor de la tabla, con menos de un tercio de las emisiones por "
+        "habitante de Aurelia.",
+        [
+            ("3,2 toneladas por habitante", "Corresponde a Corvina."),
+            ("5,1 toneladas por habitante", "Corresponde a Bardenas."),
+            ("9,4 toneladas por habitante", "Es el valor más alto, y corresponde a Aurelia."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "medio",
+        "Aurelia y Bardenas tienen un PIB por habitante parecido. ¿Qué las "
+        "distingue según la Tabla 1?",
+        "Bardenas reparte mejor y vive mejor",
+        "Los dos ingresos por habitante son cercanos: 24.000 y 23.000 "
+        "dólares.\nTodo lo demás difiere. Bardenas registra 0,86 de desarrollo "
+        "humano frente a 0,72, un Gini de 0,29 frente a 0,52 y 6% de pobreza frente "
+        "a 18%.\nEl par muestra por qué el ingreso por habitante no basta para "
+        "describir una sociedad: dos países pueden producir lo mismo por persona y "
+        "ofrecer condiciones de vida muy distintas.",
+        [
+            ("Aurelia produce mucho más por habitante", "La diferencia es de mil dólares: los dos valores son cercanos."),
+            ("Bardenas tiene más pobreza pero menos desigualdad", "Registra menos pobreza y menos desigualdad a la vez."),
+            ("Las dos tienen indicadores sociales equivalentes", "Difieren en desarrollo humano, Gini y pobreza."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "medio",
+        "¿Qué relación aparece entre las dos tablas al comparar Aurelia con "
+        "Bardenas?",
+        "Más dependencia de recursos con peores indicadores sociales",
+        "Aurelia exporta 81% de recursos naturales y registra 0,72 de desarrollo "
+        "humano, 0,52 de Gini y 18% de pobreza. Bardenas exporta 22% de recursos y "
+        "registra 0,86, 0,29 y 6%.\nLa coincidencia entre ambos perfiles es "
+        "marcada, pero la tabla no permite establecer causa: puede que la "
+        "especialización en recursos incida en el reparto, o que ambas cosas "
+        "dependan de factores que estas columnas no registran.\nDuraznal y Corvina, "
+        "con 38% y 74%, se ordenan en el mismo sentido, lo que refuerza el patrón "
+        "sin probarlo.",
+        [
+            ("Más dependencia de recursos con mejores indicadores sociales", "El patrón de las cuatro filas va en sentido contrario."),
+            ("No hay ninguna relación observable entre ambas tablas", "Las cuatro filas se ordenan de manera consistente."),
+            ("La dependencia de recursos determina el nivel de emisiones", "Corvina exporta 74% de recursos y emite menos que Bardenas."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "medio",
+        "Duraznal tiene menor PIB por habitante que Aurelia y mayor índice de "
+        "desarrollo humano. ¿Qué muestra ese contraste?",
+        "Producir menos no impide vivir mejor",
+        "Aurelia registra 24.000 dólares por habitante y 0,72 de índice; Duraznal, "
+        "8.500 y 0,74.\nEl caso funciona como contraejemplo de la equivalencia "
+        "entre producción y bienestar: con menos de la mitad del ingreso por "
+        "persona, Duraznal alcanza un índice mayor.\nLas otras columnas ayudan a "
+        "entender por qué. Duraznal tiene un Gini de 0,33 frente a 0,52 y una "
+        "pobreza de 19% frente a 18%, es decir un ingreso menor pero mucho mejor "
+        "repartido.",
+        [
+            ("Duraznal produce en realidad más que Aurelia", "Su PIB por habitante es menos de la mitad."),
+            ("El índice de desarrollo humano no considera el ingreso", "La primera nota señala que sí lo incluye."),
+            ("Aurelia tiene menos pobreza gracias a su mayor ingreso", "Registra 18% frente al 19% de Duraznal: la diferencia es de un punto."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "medio",
+        "Corvina registra el mayor porcentaje de bosque perdido y las segundas "
+        "emisiones más bajas. ¿Cómo se explica esa combinación?",
+        "Son dos impactos ambientales de origen distinto",
+        "Las emisiones por habitante dependen sobre todo del consumo de energía, "
+        "del parque industrial y del transporte, que en una economía de bajo "
+        "ingreso suelen ser menores.\nLa pérdida de bosque depende de otra cosa: "
+        "del avance de la frontera agrícola, de la tala y de la extracción, que es "
+        "justamente lo que un país con 74% de exportaciones de recursos naturales "
+        "tiende a hacer.\nEl caso muestra que impacto ambiental no es una única "
+        "magnitud. Un país puede estar bajo en un indicador y muy alto en otro, y "
+        "describirlo con uno solo produce un retrato falso.",
+        [
+            ("Una de las dos cifras debe estar mal registrada", "Las dos pueden darse a la vez: miden fenómenos distintos."),
+            ("Las emisiones bajas compensan la pérdida de bosque", "Son impactos distintos y no se compensan entre sí."),
+            ("La pérdida de bosque reduce las emisiones del país", "La deforestación no reduce las emisiones: tiende a aumentarlas."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "medio",
+        "Según la segunda nota, ¿qué significa que Aurelia tenga un Gini de 0,52 y "
+        "Bardenas de 0,29?",
+        "El ingreso está más concentrado en Aurelia",
+        "La nota fija los extremos: 0 sería reparto perfectamente igualitario y 1, "
+        "concentración total.\nUn valor más alto indica entonces mayor "
+        "concentración, de modo que el 0,52 de Aurelia describe un ingreso "
+        "repartido de manera bastante más desigual que el 0,29 de Bardenas.\nEl "
+        "dato es imprescindible junto al PIB por habitante: los dos países producen "
+        "casi lo mismo por persona y ese ingreso llega a la población de maneras "
+        "muy distintas.",
+        [
+            ("Aurelia reparte su ingreso de forma más igualitaria", "Un Gini mayor indica más concentración, no menos."),
+            ("Bardenas tiene el doble de ingreso que Aurelia", "El Gini describe el reparto, no el nivel del ingreso."),
+            ("Aurelia tiene menos población que Bardenas", "El coeficiente no informa sobre el tamaño de la población."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "dificil",
+        "¿Qué patrón sugieren ambas tablas sobre las economías muy dependientes de "
+        "recursos naturales?",
+        "Concentran ingreso y pierden más bosque",
+        "Aurelia y Corvina exportan 81% y 74% de recursos naturales, y registran "
+        "los dos Gini más altos —0,52 y 0,41— junto a las mayores pérdidas de "
+        "bosque, de 14% y 22%.\nBardenas y Duraznal, con 22% y 38%, muestran el "
+        "perfil inverso en las cuatro columnas relevantes.\nCon cuatro casos el "
+        "patrón es una sugerencia y no una regla. Para sostenerlo haría falta una "
+        "muestra mayor y controlar otros factores, porque la coincidencia entre dos "
+        "variables no establece cuál incide sobre cuál.",
+        [
+            ("Emiten más gases por habitante que las demás", "Corvina exporta 74% de recursos y emite menos que Bardenas."),
+            ("Alcanzan siempre un PIB por habitante más alto", "Corvina exporta 74% y tiene el segundo PIB más bajo."),
+            ("Registran menores tasas de pobreza que el resto", "Aurelia y Corvina tienen 18% y 27%, las más altas junto a Duraznal."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "dificil",
+        "Un texto sostiene que la deforestación es el precio inevitable de exportar "
+        "recursos. ¿Cómo se comporta esa afirmación frente a la Tabla 2?",
+        "Duraznal exporta 38% y perdió solo 3%",
+        "Si la relación fuera inevitable, la pérdida de bosque debería crecer de "
+        "manera consistente con la dependencia de recursos en las cuatro "
+        "filas.\nDuraznal rompe ese orden: exporta casi el doble de recursos que "
+        "Bardenas y perdió apenas 3% de su bosque, muy lejos del 14% de Aurelia y "
+        "del 22% de Corvina.\nBasta un caso para descartar la inevitabilidad. Lo "
+        "que la tabla sugiere es más modesto y más útil: el impacto depende de qué "
+        "recurso se exporta y de cómo se regula la extracción, factores que estas "
+        "columnas no registran.",
+        [
+            ("La confirma: los cuatro países perdieron bosque", "Perder algo de bosque no prueba que la magnitud sea inevitable."),
+            ("No permite evaluarla, porque no registra deforestación", "La tercera columna de la Tabla 2 la entrega para los cuatro países."),
+            ("La confirma, porque Corvina es la que más perdió", "Un caso favorable no prueba la regla si otro la contradice."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre los modelos de desarrollo?",
+        "Qué política produjo cada resultado",
+        "Las tablas describen estados: cuánto produce cada país por habitante, cómo "
+        "reparte, qué exporta, cuánto emite y cuánto bosque perdió.\nNada informan "
+        "sobre las decisiones que llevaron ahí: qué impuestos se cobraron a la "
+        "extracción, qué se hizo con esos ingresos, qué regulación ambiental rigió, "
+        "qué inversión hubo en educación y salud.\nSin eso no se puede recomendar "
+        "nada. Saber que Bardenas está mejor no dice cómo llegó, y copiar su perfil "
+        "exportador sin conocer el resto de sus políticas no reproduciría sus "
+        "indicadores sociales.",
+        [
+            ("Qué país tiene el mayor índice de desarrollo humano", "La Tabla 1 lo entrega directamente."),
+            ("Cuánto bosque perdió cada país en veinte años", "Es la tercera columna de la Tabla 2."),
+            ("Cómo se ordena la dependencia de recursos entre los cuatro", "La primera columna de la Tabla 2 lo permite."),
+        ],
+    ),
+    _ql(
+        "eco_modelos_cifras", "eco_desarrollo", "dificil",
+        "La tercera nota indica que la pobreza se mide con la misma línea ajustada "
+        "por poder de compra. ¿Por qué importa esa precisión?",
+        "Sin ella las cifras no serían comparables",
+        "La pobreza se mide como la proporción de personas bajo un umbral de "
+        "ingreso, y ese umbral puede definirse de maneras distintas en cada "
+        "país.\nSi cada uno usara su propia línea, un 6% y un 27% podrían reflejar "
+        "dos definiciones diferentes en lugar de dos realidades diferentes.\nEl "
+        "ajuste por poder de compra agrega la otra condición necesaria: el mismo "
+        "monto en dólares compra cantidades distintas de bienes en cada país, y sin "
+        "corregir eso la comparación seguiría siendo engañosa aunque la línea fuera "
+        "idéntica.",
+        [
+            ("Permite calcular el Gini a partir de la pobreza", "Son indicadores independientes: uno no se deriva del otro."),
+            ("Asegura que los cuatro países tengan la misma moneda", "El ajuste corrige diferencias de precios, no unifica monedas."),
+            ("Garantiza que la pobreza baje en los cuatro países", "La nota se refiere a la comparabilidad, no a la tendencia."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "facil",
+        "Según el texto, ¿qué NO informa el producto sobre el crecimiento de un "
+        "país?",
+        "Cómo se reparte entre la población",
+        "El texto lo señala como el primer problema del producto como medida: no "
+        "dice cómo se reparte.\nY lo ilustra con un caso: un país puede crecer 5% "
+        "al año durante una década mientras la mitad de su población no mejora, "
+        "porque el promedio sube y la mediana no se mueve.",
+        [
+            ("Cuánta actividad económica hubo en el período", "Es justamente lo que el producto sí mide, según el texto."),
+            ("Qué sectores participaron de la producción", "El texto no señala esa limitación."),
+            ("En qué moneda se expresan las transacciones", "El texto no plantea ningún problema de unidad monetaria."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "facil",
+        "Según el texto, ¿qué combinan los índices de desarrollo humano?",
+        "Ingreso, esperanza de vida y escolaridad",
+        "El texto los presenta entre las medidas complementarias que surgieron ante "
+        "los límites del producto.\nY precisa a qué pregunta responden: no cuánto "
+        "se produce, sino qué puede hacer la gente con su vida.",
+        [
+            ("Producción industrial, exportaciones y empleo", "Ninguno de los tres figura en la definición del texto."),
+            ("Ingreso, inflación y tasa de interés", "El texto no incluye variables monetarias en ese índice."),
+            ("Emisiones, consumo de agua y superficie de bosque", "Esos corresponden a los indicadores ambientales."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "facil",
+        "Según el texto, ¿qué ejemplo da de algo que aumenta el producto sin "
+        "mejorar la vida de nadie?",
+        "Reconstruir tras un terremoto",
+        "El texto lo presenta como caso del segundo problema: el producto suma sin "
+        "distinguir.\nJunto a ese ejemplo menciona otros dos: el gasto en tratar "
+        "enfermedades causadas por la contaminación y el combustible quemado en "
+        "congestión, que se contabiliza como consumo.\nLos tres comparten un rasgo: "
+        "reparan un daño o compensan una pérdida, en lugar de agregar algo nuevo.",
+        [
+            ("Aumentar la escolaridad de la población", "El texto la incluye entre las dimensiones del desarrollo humano."),
+            ("Reponer el bosque que se taló el año anterior", "Reponer un recurso no es uno de los ejemplos que el texto da."),
+            ("Reducir la desigualdad en el reparto del ingreso", "El texto no lo menciona como un caso de este tipo."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "Según el texto, ¿por qué el promedio puede subir sin que la mediana se "
+        "mueva?",
+        "Porque el crecimiento se concentra en pocos",
+        "El promedio reparte el total entre todos y por lo tanto sube si alguien "
+        "gana mucho más, aunque nadie más mejore.\nLa mediana describe a quien está "
+        "justo al medio de la distribución, y solo se mueve si mejora la situación "
+        "de las personas que ocupan ese lugar.\nEl texto usa el contraste para "
+        "mostrar por qué el producto por habitante puede describir mal la "
+        "experiencia de la mayoría: es un promedio, y un promedio no informa sobre "
+        "el reparto.",
+        [
+            ("Porque la población total del país disminuye", "El texto no atribuye la diferencia a un cambio demográfico."),
+            ("Porque el producto se mide en una moneda distinta", "La unidad de medida no interviene en el argumento."),
+            ("Porque la mediana se calcula cada diez años", "El texto no plantea ninguna diferencia de periodicidad."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué diferencia hay entre una máquina y un bosque en la "
+        "contabilidad?",
+        "A la máquina se le descuenta la depreciación",
+        "El texto lo plantea como el tercer problema y el más importante para el "
+        "largo plazo: el producto registra lo que se extrae y no lo que se "
+        "agota.\nCon una máquina la contabilidad reconoce que pierde valor con el "
+        "uso y descuenta esa depreciación. Con un recurso natural no se hace: talar "
+        "el bosque y vender la madera anota un ingreso, sin que quede registrado "
+        "que hay menos bosque que antes.\nPor eso una economía puede parecer "
+        "próspera mientras consume el capital del que vive.",
+        [
+            ("El bosque se contabiliza y la máquina no", "El texto describe exactamente la situación inversa."),
+            ("Ambos se descuentan de la misma manera", "El texto señala que el recurso natural no se descuenta."),
+            ("La máquina no aparece en la contabilidad nacional", "El texto la usa como ejemplo de lo que sí se contabiliza bien."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "Según el texto, ¿por qué el gasto en tratar enfermedades por contaminación "
+        "aumenta el producto?",
+        "Porque el producto suma sin distinguir su origen",
+        "El texto lo presenta junto con la reconstrucción tras un terremoto y el "
+        "combustible quemado en congestión.\nLos tres son gastos efectivos: alguien "
+        "paga por un tratamiento, por una obra o por bencina, y esas transacciones "
+        "entran en la contabilidad nacional como cualquier otra.\nEl indicador no "
+        "pregunta por qué se gastó. Y ese es precisamente el punto del texto: "
+        "reparar un daño y crear algo nuevo suman igual, aunque solo lo segundo "
+        "mejore la vida de alguien.",
+        [
+            ("Porque la salud es parte del desarrollo humano", "La salud figura en el índice de desarrollo humano, no en este argumento."),
+            ("Porque los enfermos dejan de trabajar y producir", "El texto no plantea el efecto sobre la producción de quien enferma."),
+            ("Porque el Estado financia esos tratamientos", "El texto no distingue según quién paga el gasto."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué error hay que evitar al usar el producto?",
+        "Leer una medida de producción como una de bienestar",
+        "El texto lo formula al cerrar y es explícito en dónde sitúa el problema: "
+        "no está en el indicador sino en el uso.\nEl producto sigue siendo útil "
+        "para lo que fue diseñado, que es estimar la actividad económica de un "
+        "período, y ninguna de las medidas complementarias lo reemplaza.\nLa regla "
+        "general con que termina vale para cualquier indicador: todos responden una "
+        "pregunta determinada, y conviene saber cuál antes de usarlo para decidir "
+        "algo.",
+        [
+            ("Usarlo para estimar la actividad económica del año", "El texto señala que para eso fue diseñado y sigue siendo útil."),
+            ("Compararlo con el de otros países del mismo tamaño", "El texto no objeta la comparación entre países."),
+            ("Calcularlo sin descontar la inflación del período", "El texto no discute la corrección por precios."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "Según el texto, ¿qué preguntan los indicadores ambientales que el producto "
+        "no responde?",
+        "Cuánto de lo consumido se repone",
+        "El texto lo señala al enumerar las medidas complementarias, y la pregunta "
+        "responde directamente al tercer problema que había descrito.\nEl producto "
+        "anota el ingreso obtenido al extraer un recurso y no registra la reducción "
+        "del stock disponible.\nUn indicador que mide reposición cierra ese vacío: "
+        "permite distinguir una economía que vive de su renta de otra que está "
+        "consumiendo su capital natural.",
+        [
+            ("Cuánto crece la actividad económica cada año", "Es la pregunta que el producto sí responde."),
+            ("Cómo se reparte el ingreso entre la población", "Esa pregunta corresponde a los coeficientes de desigualdad."),
+            ("Cuánta escolaridad alcanza la población adulta", "La escolaridad forma parte del índice de desarrollo humano."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "dificil",
+        "¿Por qué el texto llama al agotamiento de recursos el problema más "
+        "importante para el largo plazo?",
+        "Un país puede prosperar consumiendo aquello que lo sostiene",
+        "Los otros dos problemas describen mediciones imprecisas: el producto no "
+        "dice cómo se reparte y suma gastos que solo reparan daños.\nEste es de "
+        "otro orden. El indicador no solo describe mal: puede mostrar prosperidad "
+        "creciente justamente mientras se destruye la base que la hace posible, "
+        "porque el ingreso por vender el recurso se anota y su desaparición no.\nLa "
+        "consecuencia es temporal y por eso el texto la separa: la señal es "
+        "positiva hasta el momento en que el recurso se acaba, y entonces ya no hay "
+        "margen para corregir.",
+        [
+            ("Porque los recursos naturales son la única fuente de riqueza", "El texto no sostiene que sean la única fuente."),
+            ("Porque la contabilidad no registra las exportaciones", "Las registra: el problema es que no descuenta el stock agotado."),
+            ("Porque las máquinas se deprecian más rápido que un bosque", "El texto usa la máquina como ejemplo de contabilidad correcta, no de velocidad."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "dificil",
+        "El texto sostiene que el error no está en el indicador sino en el uso. "
+        "¿Qué implica esa distinción?",
+        "El producto no falla: responde otra pregunta",
+        "Criticar un indicador supone que mide mal aquello que dice medir. El texto "
+        "sostiene algo distinto: el producto estima correctamente la actividad "
+        "económica de un período, que es para lo que fue diseñado.\nLo que falla es "
+        "la inferencia de quien lo usa: tomar esa cifra como si describiera el "
+        "bienestar de una población.\nDe ahí que la solución no sea reemplazarlo "
+        "sino acompañarlo. Las medidas complementarias responden las preguntas que "
+        "el producto nunca se propuso responder, y usarlas juntas exige saber qué "
+        "pregunta contesta cada una.",
+        [
+            ("El producto está mal calculado en la mayoría de los países", "El texto no cuestiona su cálculo."),
+            ("Los índices de desarrollo humano deben reemplazarlo", "El texto afirma que ninguna medida lo reemplaza."),
+            ("Cualquier indicador sirve si se interpreta con cuidado", "El texto sostiene que cada uno responde una pregunta determinada."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "dificil",
+        "Un país crece 5% al año durante una década y su índice de desarrollo "
+        "humano casi no se mueve. ¿Qué explicaciones admite el texto?",
+        "El crecimiento se concentró o se gastó en reparar daños",
+        "El texto ofrece dos vías compatibles con ese resultado. La primera es de "
+        "reparto: si el crecimiento se concentra en pocos sectores o en pocas "
+        "manos, el promedio sube y la mediana no se mueve.\nLa segunda es de "
+        "composición: buena parte de ese producto puede corresponder a gastos que "
+        "reparan daños —reconstrucción, tratamientos, combustible en congestión— y "
+        "que no mejoran la vida de nadie.\nComo el índice combina ingreso con "
+        "esperanza de vida y escolaridad, cualquiera de las dos situaciones explica "
+        "que el producto avance y el índice se quede quieto.",
+        [
+            ("El producto de ese país está mal medido", "El texto no cuestiona el cálculo del indicador."),
+            ("El índice de desarrollo humano no incluye el ingreso", "El texto señala que sí lo incluye, junto a otras dos dimensiones."),
+            ("Los indicadores ambientales contradicen al producto", "Miden cosas distintas: no se contradicen entre sí."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "dificil",
+        "¿Qué tienen en común los tres problemas del producto que describe el "
+        "texto?",
+        "Registran la transacción y no su efecto",
+        "El producto anota lo que se transa: un pago por reconstruir, por un "
+        "tratamiento, por madera vendida.\nNinguno de los tres problemas cuestiona "
+        "ese registro. Lo que señalan es que el efecto de cada transacción sobre la "
+        "vida de la gente o sobre la base material del país queda fuera: si "
+        "benefició a muchos o a pocos, si creó algo o reparó un daño, si consumió "
+        "un recurso irrecuperable.\nDe ahí que las medidas complementarias apunten "
+        "todas a lo mismo: preguntar por el efecto, que es la dimensión que el "
+        "indicador de actividad no puede capturar.",
+        [
+            ("Muestran que el producto se calcula con datos incompletos", "El texto no cuestiona los datos con que se construye."),
+            ("Se corrigen sumando los indicadores ambientales", "Solo el tercero se relaciona con esos indicadores."),
+            ("Afectan únicamente a los países exportadores de recursos", "Los dos primeros no dependen del tipo de economía."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_desarrollo", "dificil",
+        "Según el texto, ¿por qué conviene usar varios indicadores en vez de buscar "
+        "uno mejor?",
+        "Cada uno responde una pregunta distinta",
+        "El texto no propone reemplazar el producto por una medida superior. "
+        "Sostiene que responde bien a su propia pregunta y que las otras exigen "
+        "instrumentos propios.\nLos índices de desarrollo humano preguntan qué "
+        "puede hacer la gente con su vida; los coeficientes de desigualdad, cómo se "
+        "reparte; los indicadores ambientales, cuánto se repone.\nUn indicador "
+        "único que respondiera las cuatro preguntas a la vez tendría que "
+        "combinarlas con algún peso, y ese peso sería una decisión que quedaría "
+        "oculta dentro de la cifra en lugar de discutirse.",
+        [
+            ("Porque ninguno de los indicadores existentes es confiable", "El texto no cuestiona la confiabilidad de ninguno."),
+            ("Porque los países no aceptan una medida común", "El texto no plantea un problema de acuerdo entre países."),
+            ("Porque el producto quedará obsoleto en pocos años", "El texto sostiene que sigue siendo útil para su propósito."),
+        ],
+    ),
+    _ql(
+        "eco_medir_desarrollo", "eco_indicadores", "dificil",
+        "Según el texto, ¿qué precaución exige informar el PIB por habitante de un "
+        "país?",
+        "Es un promedio y no describe el reparto",
+        "El PIB por habitante divide toda la producción del país entre toda su "
+        "población, de modo que entrega una cifra por persona que quizá ninguna "
+        "persona recibe.\nEl texto lo explica con el contraste entre promedio y "
+        "mediana: el primero sube si el ingreso se concentra en pocos, y el segundo "
+        "permanece quieto.\nPor eso la cifra se informa junto a un coeficiente de "
+        "desigualdad. Sin ese acompañamiento, dos países con la misma cifra pueden "
+        "tener realidades muy distintas y el indicador no permite distinguirlas.",
+        [
+            ("Está expresado en una moneda que cambia de valor", "El texto no plantea el problema en términos monetarios."),
+            ("Incluye solo la producción de bienes y no de servicios", "El texto no establece esa restricción."),
+            ("Se calcula con la población de años anteriores", "El texto no menciona ningún desfase demográfico."),
+        ],
+    ),
     _ql(
         "eco_tope_arriendo", "eco_estado_mercado", "facil",
         "Según la Columna 1, ¿qué ocurrió con los arriendos durante ocho años?",
