@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="32" height="32" role="img" aria-label="1000paes">
+  <!--
+    El favicon.
+
+    Dos cosas que este archivo hace y un PNG generado NO puede hacer:
+
+    1. FONDO TRANSPARENTE. La versión anterior pintaba un cuadrado blanco
+       opaco, y en una pestaña oscura eso se ve como una calcomanía pegada en
+       vez de un icono. El icono tiene que apoyarse sobre el color de la
+       pestaña, sea cual sea.
+
+    2. SE ADAPTA AL TEMA. Con el fondo transparente aparece el problema
+       contrario: la burbuja es grafito (#2b2b33) y sobre una pestaña oscura
+       queda invisible. Un PNG no puede cambiar de color; un SVG sí, con
+       prefers-color-scheme. Sobre papel se dibuja en grafito y sobre grafito
+       en papel, que es la misma regla que sigue el logotipo con currentColor.
+
+    OJO: esto vale para el favicon y NO para `apple-icon.tsx`. iOS enmascara el
+    icono de la pantalla de inicio y convierte cualquier transparencia en
+    NEGRO, así que ahí el fondo blanco opaco es lo correcto y debe quedarse.
+
+    Y va el dibujo chico del sistema (círculo limpio, anillo grueso), no el
+    contorno hecho a mano: a 16 px el borde irregular se lee como suciedad.
+    Ver `components/ui/marca.tsx`.
+  -->
+  <style>
+    /* El anillo NO cambia con el tema: es un gris medio que se ve tanto sobre
+       claro como sobre oscuro. Es la red de seguridad — si el navegador tiene
+       la barra de pestañas en un tema y el sistema en el otro, el relleno
+       podría quedar del color equivocado, y el anillo sigue dibujando la
+       burbuja igual. */
+    .anillo { stroke: #8a8990; opacity: .85; }
+    .grafito { fill: #2b2b33; }
+    @media (prefers-color-scheme: dark) {
+      .grafito { fill: #e8e7e3; }
+    }
+  </style>
+  <circle class="anillo" cx="60" cy="60" r="46" fill="none" stroke-width="10" />
+  <circle class="grafito" cx="60" cy="60" r="38" />
+</svg>
