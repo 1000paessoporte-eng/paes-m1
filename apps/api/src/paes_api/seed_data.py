@@ -55861,12 +55861,7 @@ PASSAGES_HISTORIA = [
         "title": "Indicadores económicos y sociales de Chile, 1973-1990",
         "kind": "discontinuo",
         "source_note": (
-            "Tablas originales de 1000paes con datos ilustrativos. Las "
-            "tendencias —apertura comercial, dos recesiones profundas, caída "
-            "del salario real y traspaso de empresas al sector privado— "
-            "reproducen lo que la historiografía económica describe para el "
-            "período, pero las cifras están redondeadas y no corresponden a una "
-            "serie oficial."
+            "Tablas originales de 1000paes con datos ilustrativos. Las tendencias reproducen lo que la historiografía económica describe para el período, pero las cifras están redondeadas y no corresponden a una serie oficial."
         ),
         "body": (
             "**Tabla 1. Actividad, precios y empleo.**\n"
@@ -55905,12 +55900,7 @@ PASSAGES_HISTORIA = [
         "title": "Tres explicaciones del quiebre de 1973",
         "kind": "no_literario",
         "source_note": (
-            "Texto expositivo original de 1000paes que resume, sin atribuirlas "
-            "a autor alguno, tres familias de interpretación presentes en la "
-            "historiografía chilena sobre las causas del quiebre democrático de "
-            "1973. Los hechos posteriores al golpe que el texto menciona "
-            "corresponden a lo establecido por las comisiones de verdad y los "
-            "tribunales."
+            "Texto expositivo original de 1000paes que resume tres familias de interpretación de la historiografía chilena sobre las causas del quiebre de 1973. Los hechos posteriores al golpe corresponden a lo establecido por las comisiones de verdad y los tribunales."
         ),
         "body": (
             "Sobre el 11 de septiembre de 1973 hay hechos establecidos y hay "
@@ -56453,11 +56443,7 @@ PASSAGES_HISTORIA = [
         "title": "Efectos de la crisis de 1929 en cinco economías, 1929-1938",
         "kind": "discontinuo",
         "source_note": (
-            "Tablas originales de 1000paes con datos ilustrativos, no "
-            "oficiales. Las magnitudes reproducen el orden de los efectos que "
-            "la historiografía describe —Chile entre las economías más "
-            "golpeadas por su dependencia de un producto de exportación— pero "
-            "las cifras no corresponden a ninguna serie estadística real."
+            "Tablas originales de 1000paes con datos ilustrativos, no oficiales. Las magnitudes reproducen el orden de los efectos que la historiografía describe, pero las cifras no corresponden a ninguna serie estadística real."
         ),
         "body": (
             "**Tabla 1. Índice de producción industrial (1929 = 100).**\n"
