@@ -54918,6 +54918,148 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "eco_tope_arriendo",
+        "title": "Dos columnas sobre un tope al precio de los arriendos",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen columnas publicadas "
+            "ni citan a persona alguna: reconstruyen los dos argumentos "
+            "centrales del debate sobre control de arriendos, para ejercitar la "
+            "comparación de posiciones."
+        ),
+        "body": (
+            "**Columna 1. A favor del tope.**\n"
+            "\n"
+            "En esta ciudad el arriendo subió más rápido que los sueldos "
+            "durante ocho años seguidos. Quien defiende dejar el precio libre "
+            "supone que la oferta responderá y el problema se corregirá solo. "
+            "No ha ocurrido, y hay una razón: construir vivienda toma años y el "
+            "suelo urbano no se fabrica. Mientras la oferta reacciona, si es "
+            "que reacciona, una familia que no puede pagar no aplaza su "
+            "decisión: se va a vivir más lejos, se hacina o queda en la calle. "
+            "La vivienda no es una compra que pueda postergarse hasta el "
+            "próximo semestre. Un tope no resuelve la escasez, pero impide que "
+            "el ajuste lo pague entero quien tiene menos margen, y compra el "
+            "tiempo que las políticas de suelo y construcción necesitan para "
+            "producir efecto.\n"
+            "\n"
+            "**Columna 2. En contra del tope.**\n"
+            "\n"
+            "El diagnóstico es correcto y el remedio empeora lo que quiere "
+            "curar. Si el precio queda bajo el nivel que equilibra el mercado, "
+            "más familias buscan arrendar y menos propietarios ofrecen: algunos "
+            "venden, otros dejan la vivienda vacía, otros la destinan a "
+            "arriendo por días. La escasez que hoy se expresa en precios altos "
+            "pasa a expresarse en algo peor, que es no encontrar nada. Y cuando "
+            "la vivienda escasea, el arrendador elige, y elige a quien tiene "
+            "contrato indefinido y aval: quedan fuera justamente las familias "
+            "que el tope decía proteger. Agrego que un precio congelado "
+            "desincentiva mantener el inmueble, porque la inversión en "
+            "reparaciones ya no se recupera. Si el objetivo es que nadie quede "
+            "sin techo, un subsidio directo a las familias que lo necesitan "
+            "llega a ellas sin destruir la oferta."
+        ),
+    },
+    {
+        "key": "eco_tabla_mercado",
+        "title": "Oferta y demanda de un producto en una feria mayorista",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tabla original de 1000paes con datos construidos para el "
+            "ejercicio. Las cantidades y precios no corresponden a ningún "
+            "mercado real: sirven para practicar la lectura de una tabla de "
+            "oferta y demanda."
+        ),
+        "body": (
+            "**Tabla 1. Cajas de un producto agrícola, por semana.**\n"
+            "\n"
+            "| Precio por caja | Cantidad demandada | Cantidad ofrecida |\n"
+            "|---|---|---|\n"
+            "| $200 | 900 | 300 |\n"
+            "| $300 | 750 | 450 |\n"
+            "| $400 | 600 | 600 |\n"
+            "| $500 | 450 | 750 |\n"
+            "| $600 | 300 | 900 |\n"
+            "\n"
+            "**Tabla 2. Hacia dónde se desplaza cada curva.**\n"
+            "\n"
+            "| Cambio | Curva que se desplaza | Dirección |\n"
+            "|---|---|---|\n"
+            "| Sube el ingreso de los hogares (bien normal) | Demanda | A la "
+            "derecha |\n"
+            "| Una helada arruina parte de la cosecha | Oferta | A la izquierda "
+            "|\n"
+            "| Baja el precio del combustible del transporte | Oferta | A la "
+            "derecha |\n"
+            "| Se difunde que el producto hace mal a la salud | Demanda | A la "
+            "izquierda |\n"
+            "\n"
+            "Notas:\n"
+            "— Un desplazamiento a la derecha significa que a cada precio se "
+            "demanda u ofrece una cantidad mayor que antes.\n"
+            "— Un cambio en el precio del propio producto no desplaza ninguna "
+            "curva: mueve un punto a lo largo de ella.\n"
+            "— Las cantidades de la Tabla 1 corresponden a una semana y suponen "
+            "que todo lo demás se mantiene constante."
+        ),
+    },
+    {
+        "key": "eco_fallas_mercado",
+        "title": "Cuatro situaciones en que el mercado no llega solo al mejor resultado",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Sistema económico para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Un mercado con muchos oferentes y compradores informados suele "
+            "asignar bien: el precio transmite qué escasea, quién lo valora más "
+            "lo obtiene y producir de más o de menos se corrige solo. La "
+            "discusión sobre el papel del Estado no consiste en negar eso, sino "
+            "en identificar cuándo esas condiciones no se cumplen. Se conocen "
+            "cuatro situaciones típicas.\n"
+            "\n"
+            "La primera es el monopolio natural. Hay actividades donde tener "
+            "una sola red resulta mucho más barato que duplicarla: agua "
+            "potable, alcantarillado, distribución eléctrica. Nadie va a tender "
+            "una segunda cañería para competir con la primera, de modo que la "
+            "competencia no aparecerá por sí sola y el único proveedor puede "
+            "fijar el precio. Aquí el Estado regula la tarifa porque la "
+            "competencia no puede existir, no porque no le guste.\n"
+            "\n"
+            "La segunda son las externalidades. Una actividad puede imponer "
+            "costos a terceros que no participan de la transacción, como el "
+            "humo de una planta sobre un barrio vecino. El precio recoge los "
+            "costos de quien produce y no ese otro, así que resulta "
+            "artificialmente bajo y se produce más de lo conveniente. Las hay "
+            "también positivas: quien se vacuna protege a otros sin cobrarles, "
+            "y por eso el mercado tiende a producir menos vacunación de la que "
+            "convendría.\n"
+            "\n"
+            "La tercera es la información asimétrica. Cuando una parte sabe "
+            "mucho más que la otra sobre lo que se vende —el estado real de un "
+            "auto usado, la letra chica de un crédito—, quien sabe menos no "
+            "puede evaluar lo que compra. El resultado no es solo que algunos "
+            "salgan perjudicados: si nadie puede distinguir lo bueno de lo "
+            "malo, el comprador ofrece un precio promedio y los productos "
+            "buenos se retiran del mercado.\n"
+            "\n"
+            "La cuarta son los bienes públicos, aquellos que no se pueden negar "
+            "a quien no paga y cuyo uso por una persona no impide el de otra: "
+            "el alumbrado de una calle, la defensa, un faro. Ninguna empresa "
+            "los proveerá, porque no hay manera de cobrar, y sin embargo todos "
+            "los quieren. Se financian con impuestos justamente por eso.\n"
+            "\n"
+            "Conviene un cierre honesto. Que exista una falla de mercado "
+            "muestra que intervenir puede mejorar el resultado, no que "
+            "cualquier intervención lo mejore. Una tarifa mal calculada, un "
+            "subsidio que llega a quien no lo necesita o una regulación escrita "
+            "por los propios regulados pueden dejar la situación peor que "
+            "antes. Identificar la falla es el primer paso; diseñar bien el "
+            "remedio es otro problema."
+        ),
+    },
+    {
         "key": "civ_just_acceso",
         "title": "Dos intervenciones en un seminario sobre acceso a la justicia",
         "kind": "no_literario",
@@ -57839,6 +57981,743 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "facil",
+        "Según la Columna 1, ¿qué ocurrió con los arriendos durante ocho años?",
+        "Subieron más rápido que los sueldos",
+        "La columna abre con ese dato y sobre él construye todo su argumento.\nLa "
+        "comparación con los sueldos es lo relevante: no se trata solo de que el "
+        "arriendo suba, sino de que absorba una parte creciente del ingreso de las "
+        "familias.",
+        [
+            ("Se mantuvieron congelados por decisión de la autoridad", "La columna describe un mercado sin tope, que es lo que propone cambiar."),
+            ("Bajaron gracias al aumento de la oferta de vivienda", "La columna sostiene que la oferta no reaccionó."),
+            ("Subieron al mismo ritmo que el costo de construcción", "El texto no compara arriendos con costos de construcción."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "facil",
+        "Según la Columna 2, ¿qué harían algunos propietarios si el precio quedara "
+        "bajo el de equilibrio?",
+        "Vender, dejar vacío o arrendar por días",
+        "La columna enumera exactamente esas tres reacciones al describir por qué "
+        "la oferta se reduciría.\nLas tres tienen algo en común: son maneras de "
+        "retirar la vivienda del arriendo de largo plazo sin dejar de ser "
+        "propietario, o de dejar de serlo.",
+        [
+            ("Bajar el precio aún más para atraer arrendatarios", "La columna describe menos oferta, no competencia por bajar precios."),
+            ("Invertir en reparaciones para justificar la tarifa", "El texto sostiene lo contrario sobre el mantenimiento."),
+            ("Construir viviendas nuevas para aprovechar la demanda", "La columna no atribuye ese efecto al tope."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "facil",
+        "Según la Columna 2, ¿qué medida alternativa propone?",
+        "Un subsidio directo a las familias que lo necesitan",
+        "La columna cierra con esa propuesta y con su justificación: llega a esas "
+        "familias sin destruir la oferta.\nLa diferencia con el tope es de "
+        "instrumento. El subsidio actúa sobre la capacidad de pago del arrendatario "
+        "y deja el precio libre; el tope actúa sobre el precio y, según la columna, "
+        "reduce la cantidad disponible.",
+        [
+            ("Congelar el precio solo para las familias vulnerables", "Sigue siendo un tope, que es lo que la columna objeta."),
+            ("Prohibir el arriendo por días en la ciudad", "Menciona esa práctica como efecto del tope, no propone prohibirla."),
+            ("Aumentar los impuestos a las viviendas desocupadas", "Esa medida no aparece en el texto."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "medio",
+        "Según la Columna 1, ¿por qué la oferta de vivienda no corrige el problema "
+        "por sí sola?",
+        "Construir toma años y el suelo no se fabrica",
+        "La columna entrega esas dos razones para explicar por qué la respuesta de "
+        "la oferta es lenta o insuficiente.\nY agrega el argumento decisivo: "
+        "mientras la oferta reacciona, si es que reacciona, la familia que no puede "
+        "pagar no aplaza su decisión.\nEl punto es la asimetría de plazos. La "
+        "oferta responde en años y la necesidad de vivienda opera este mes, de modo "
+        "que el ajuste ocurre mientras alguien lo está soportando.",
+        [
+            ("Porque los propietarios acuerdan entre sí los precios", "La columna no plantea un acuerdo entre propietarios."),
+            ("Porque el Estado ya fijó un tope a los arriendos", "El tope es lo que la columna propone, no lo que existe."),
+            ("Porque la demanda de vivienda es constante en el tiempo", "El argumento es sobre la lentitud de la oferta, no sobre la demanda."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "medio",
+        "¿Qué quiere decir la Columna 1 con que la vivienda no es una compra "
+        "postergable?",
+        "Quien no puede pagar sufre el ajuste de inmediato",
+        "En muchos mercados un precio alto se soporta postergando la compra hasta "
+        "que baje, y esa espera es parte del mecanismo que lo corrige.\nLa columna "
+        "sostiene que en vivienda esa opción no existe. Enumera lo que ocurre en su "
+        "lugar: irse a vivir más lejos, hacinarse o quedar en la calle.\nDe ahí se "
+        "sigue su tesis: el ajuste no se produce en el tiempo sino sobre personas "
+        "concretas, y el tope busca que no lo pague entero quien tiene menos "
+        "margen.",
+        [
+            ("Que su precio no responde a la oferta y la demanda", "La columna admite que responde: sostiene que lo hace lentamente."),
+            ("Que las familias prefieren comprar antes que arrendar", "El texto no compara la compra con el arriendo."),
+            ("Que el Estado debe construir todas las viviendas", "La columna no propone que el Estado sea el constructor."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "medio",
+        "Según la Columna 2, ¿por qué el tope perjudicaría a las familias que dice "
+        "proteger?",
+        "Al escasear la vivienda, el arrendador elige",
+        "El razonamiento tiene dos pasos. Primero, un precio bajo el de equilibrio "
+        "aumenta la cantidad demandada y reduce la ofrecida, de modo que hay más "
+        "postulantes que viviendas.\nSegundo, cuando eso ocurre la selección la "
+        "hace quien arrienda, y la columna precisa el criterio: elige a quien tiene "
+        "contrato indefinido y aval.\nJustamente las familias más vulnerables son "
+        "las que no cumplen ese perfil, de modo que la medida las dejaría fuera del "
+        "mercado en lugar de abaratarles el acceso.",
+        [
+            ("Porque el precio subiría todavía más que antes", "El tope impide que suba: el problema que describe es la escasez."),
+            ("Porque tendrían que pagar el subsidio con sus impuestos", "El subsidio es la alternativa que propone, no un efecto del tope."),
+            ("Porque los arrendadores exigirían pagar por adelantado", "El texto no menciona esa condición."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "medio",
+        "Según la Columna 2, ¿qué efecto tiene un precio congelado sobre el estado "
+        "del inmueble?",
+        "Desincentiva mantenerlo y repararlo",
+        "La columna lo señala como un argumento adicional al de la escasez, y "
+        "explica el mecanismo: la inversión en reparaciones ya no se recupera.\nEn "
+        "un mercado con precio libre, mejorar el inmueble permite cobrar más y por "
+        "eso conviene hacerlo. Con el precio fijo ese retorno desaparece.\nEl "
+        "efecto es de mediano plazo y no aparece de inmediato, lo que lo vuelve "
+        "difícil de atribuir a la medida cuando ocurre.",
+        [
+            ("Obliga al propietario a mejorar la vivienda", "La columna sostiene el efecto contrario."),
+            ("No tiene ninguna relación con el mantenimiento", "El texto vincula ambas cosas expresamente."),
+            ("Aumenta la inversión en reparaciones del arrendatario", "El texto no atribuye ese gasto al arrendatario."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "medio",
+        "¿En qué coinciden las dos columnas?",
+        "En que el problema del arriendo existe y es grave",
+        "La Columna 2 abre reconociéndolo: el diagnóstico es correcto y el remedio "
+        "empeora lo que quiere curar.\nNinguna de las dos sostiene que los "
+        "arriendos estén en un nivel razonable ni que la situación se corrija sola "
+        "en el corto plazo.\nEl desacuerdo es sobre el instrumento: tope al precio "
+        "frente a subsidio directo, y sobre qué efectos tendría cada uno en la "
+        "cantidad de vivienda disponible.",
+        [
+            ("En que un tope al precio mejoraría la situación", "La Columna 2 sostiene que la empeoraría."),
+            ("En que la oferta de vivienda responderá con rapidez", "La Columna 1 argumenta precisamente lo contrario."),
+            ("En que el Estado no debe intervenir en este mercado", "Ambas proponen alguna forma de intervención."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "dificil",
+        "La Columna 1 admite que el tope no resuelve la escasez. ¿Qué le atribuye "
+        "entonces?",
+        "Repartir el costo del ajuste y ganar tiempo",
+        "La concesión es notable porque quita fuerza al argumento más obvio a favor "
+        "de la medida.\nLo que la columna reivindica es más acotado y por eso más "
+        "difícil de refutar: impedir que el ajuste lo pague entero quien tiene "
+        "menos margen, y comprar el tiempo que las políticas de suelo y "
+        "construcción necesitan para producir efecto.\nEl tope aparece así como una "
+        "medida transitoria y complementaria, no como la solución del problema de "
+        "fondo, que la propia columna sitúa en la oferta.",
+        [
+            ("Aumentar la cantidad de viviendas disponibles", "La columna admite expresamente que no resuelve la escasez."),
+            ("Reemplazar a las políticas de suelo y construcción", "Las presenta como lo que el tope debe permitir esperar."),
+            ("Reducir de manera permanente el precio del suelo urbano", "El texto no le atribuye efecto sobre el precio del suelo."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "dificil",
+        "¿Qué diferencia de fondo hay entre un tope al precio y un subsidio "
+        "directo?",
+        "Uno fija el precio y el otro, la capacidad de pago",
+        "El tope actúa sobre el precio: prohíbe cobrar por encima de cierto nivel, "
+        "y por eso incide en cuántas viviendas se ofrecen a ese precio.\nEl "
+        "subsidio deja el precio donde el mercado lo forme y actúa sobre el otro "
+        "lado: entrega recursos a la familia para que pueda pagarlo.\nDe ahí que la "
+        "Columna 2 lo prefiera: no reduce la oferta. Pero tiene un costo que ella "
+        "no menciona, y es que al aumentar la demanda sin aumentar la oferta puede "
+        "empujar el precio hacia arriba, con parte del subsidio quedando en manos "
+        "del arrendador.",
+        [
+            ("Uno lo paga el Estado y el otro también", "El tope no supone gasto fiscal: es una prohibición de cobrar más."),
+            ("Uno se aplica a la vivienda y el otro, a los sueldos", "El subsidio propuesto es para arrendar, no un complemento salarial."),
+            ("Uno es transitorio y el otro, permanente por definición", "Ninguno de los dos instrumentos es por naturaleza transitorio o permanente."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "dificil",
+        "¿Qué objeción tendría que responder la Columna 1 para completar su "
+        "argumento?",
+        "Qué pasa con las familias que no encuentren arriendo",
+        "La columna sostiene que el tope reparte mejor el costo del ajuste, y eso "
+        "vale para quien logra arrendar a ese precio.\nLo que no aborda es el "
+        "efecto que la Columna 2 describe: si a ese precio hay más postulantes que "
+        "viviendas, alguien queda fuera, y el arrendador elegirá a quien tenga "
+        "contrato indefinido y aval.\nSu argumento quedaría completo si mostrara "
+        "que ese racionamiento no ocurriría en la magnitud que la otra columna "
+        "supone, o si propusiera un criterio de asignación distinto del que aplica "
+        "el arrendador.",
+        [
+            ("Si los arriendos subieron realmente en esos ocho años", "La Columna 2 acepta el diagnóstico: ese punto no está en disputa."),
+            ("Si el suelo urbano puede fabricarse", "Es una premisa que la otra columna no discute."),
+            ("Si las políticas de construcción existen en el país", "El debate no depende de su existencia actual."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "dificil",
+        "La Columna 2 dice que la escasez pasaría a expresarse en algo peor. ¿Qué "
+        "está señalando?",
+        "Que el racionamiento reemplaza al precio",
+        "Cuando el precio es libre, la escasez se manifiesta en un valor alto: el "
+        "producto está disponible para quien pueda pagarlo.\nCon un tope por debajo "
+        "del equilibrio, la escasez no desaparece pero cambia de forma: ya no hay "
+        "precio que ajuste la demanda a la oferta, y entonces alguien debe repartir "
+        "lo que hay.\nLa columna considera esa segunda forma peor porque el "
+        "criterio de reparto lo fija el arrendador según su conveniencia, y no "
+        "queda registrado ni discutido en ninguna parte.",
+        [
+            ("Que el precio subiría por encima del tope establecido", "El tope impide cobrar más: el problema es la cantidad disponible."),
+            ("Que las viviendas perderían valor en el mercado", "El texto no discute el valor patrimonial de los inmuebles."),
+            ("Que el Estado tendría que construir las viviendas faltantes", "La columna no plantea esa consecuencia."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "dificil",
+        "Ambas columnas se refieren al mismo hecho: que a cierto precio hay más "
+        "demanda que oferta. ¿Por qué llegan a conclusiones opuestas?",
+        "Discrepan sobre qué costo es más grave",
+        "Las dos aceptan que un tope bajo el equilibrio produce exceso de demanda: "
+        "la Columna 1 lo admite al decir que no resuelve la escasez.\nLa diferencia "
+        "está en qué consecuencia les preocupa más. Para la Columna 1, el costo de "
+        "no intervenir recae sobre familias que se hacinan o quedan en la calle "
+        "mientras la oferta reacciona. Para la Columna 2, el costo de intervenir "
+        "recae sobre esas mismas familias, que quedarán fuera del "
+        "racionamiento.\nNo es entonces un desacuerdo sobre cómo funciona el "
+        "mercado sino sobre cuál de dos daños previsibles conviene aceptar.",
+        [
+            ("Una acepta la ley de demanda y la otra la rechaza", "Las dos razonan con ella: por eso ambas anticipan exceso de demanda."),
+            ("Una habla de arriendo y la otra, de compra de vivienda", "Las dos se refieren al mercado de arriendo."),
+            ("Una usa datos y la otra, solo argumentos morales", "Ambas argumentan sobre efectos previsibles del mismo mecanismo."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_estado_mercado", "dificil",
+        "¿Qué habría que medir para evaluar cuál de las dos posiciones acierta?",
+        "Cuánto cae la oferta y quién queda fuera",
+        "El desacuerdo es sobre magnitudes y no sobre principios, y por lo tanto "
+        "admite evidencia.\nHabría que medir cuántas viviendas salen del arriendo "
+        "de largo plazo tras aplicarse un tope, cuánto tiempo tarda ese retiro y "
+        "qué perfil tienen las familias que dejan de encontrar arriendo.\nCon esas "
+        "cifras se puede comparar el daño que el tope evita con el que produce, que "
+        "es exactamente lo que ninguna de las dos columnas puede resolver "
+        "argumentando.",
+        [
+            ("Qué opinan los propietarios sobre la medida", "Su opinión no establece la magnitud de los efectos."),
+            ("Cuántos países aplicaron topes al arriendo", "El número de casos no dice qué ocurrió en cada uno."),
+            ("Cuánto subieron los arriendos en los ocho años previos", "Ese dato está fuera de disputa: ambas lo aceptan."),
+        ],
+    ),
+    _ql(
+        "eco_tope_arriendo", "eco_desarrollo", "dificil",
+        "¿Qué tensión entre eficiencia y equidad ilustra este debate?",
+        "El precio asigna bien y deja fuera a quien no puede pagar",
+        "La Columna 2 defiende el mecanismo por su eficacia asignadora: un precio "
+        "libre iguala la cantidad ofrecida con la demandada y evita que la vivienda "
+        "se retire del mercado.\nLa Columna 1 no discute que funcione así. Señala "
+        "quién soporta el resultado: el precio asigna la vivienda a quien puede "
+        "pagarla, y quien no puede no posterga la compra sino que se hacina o queda "
+        "en la calle.\nEsa es la tensión de fondo. Un mecanismo puede ser eficiente "
+        "y producir un reparto que la sociedad considere inaceptable, y ninguna de "
+        "las dos propiedades se deduce de la otra.",
+        [
+            ("El mercado es siempre ineficiente en vivienda", "La Columna 2 argumenta justamente su eficacia asignadora."),
+            ("La equidad y la eficiencia siempre coinciden", "El debate completo consiste en que aquí no coinciden."),
+            ("El precio libre garantiza acceso universal a la vivienda", "La Columna 1 describe a quienes quedan fuera de ese acceso."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "facil",
+        "Según la Tabla 1, ¿cuál es el precio de equilibrio de este mercado?",
+        "$400 por caja",
+        "El equilibrio es el precio al que la cantidad demandada iguala a la "
+        "cantidad ofrecida, de modo que no sobra ni falta producto.\nEn la tabla "
+        "eso ocurre en la fila de $400, donde ambas columnas registran 600 "
+        "cajas.\nEn las filas anteriores la demanda supera a la oferta y en las "
+        "siguientes ocurre lo contrario, lo que confirma que el cruce está justo "
+        "ahí.",
+        [
+            ("$300 por caja, donde la demanda es mayor", "A ese precio se demandan 750 cajas y se ofrecen 450: hay escasez."),
+            ("$500 por caja, donde la oferta es mayor", "A ese precio sobran 300 cajas: no hay equilibrio."),
+            ("$600 por caja, el precio más alto de la tabla", "El precio más alto no es el de equilibrio: ahí sobran 600 cajas."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "facil",
+        "Según la Tabla 1, ¿cuántas cajas se transan en el equilibrio?",
+        "600 cajas",
+        "En la fila de $400 la cantidad demandada y la ofrecida coinciden en 600 "
+        "cajas.\nEsa coincidencia es lo que define el equilibrio: todo lo que se "
+        "ofrece encuentra comprador y todo el que quiere comprar a ese precio "
+        "consigue producto.",
+        [
+            ("900 cajas, la mayor cantidad de la tabla", "Esa cifra aparece como demanda a $200 y como oferta a $600, nunca en equilibrio."),
+            ("450 cajas, según la columna de oferta", "Corresponde a la oferta a $300, donde no hay equilibrio."),
+            ("1.200 cajas, sumando ambas columnas", "Sumar demanda y oferta no entrega la cantidad transada."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "facil",
+        "Según la Tabla 2, ¿qué ocurre con la curva de oferta si una helada arruina "
+        "parte de la cosecha?",
+        "Se desplaza a la izquierda",
+        "La Tabla 2 lo registra directamente. La helada reduce lo que hay "
+        "disponible para vender, de modo que a cada precio se ofrece menos que "
+        "antes.\nLa primera nota entrega la clave para leer el sentido del "
+        "desplazamiento: a la derecha significa más cantidad a cada precio, así que "
+        "a la izquierda es lo contrario.",
+        [
+            ("Se desplaza a la derecha, porque sube el precio", "Un cambio de precio no desplaza la curva, según la segunda nota."),
+            ("Se desplaza la curva de demanda a la izquierda", "La helada afecta a los productores, no a las preferencias de los compradores."),
+            ("No se desplaza ninguna curva, solo cambia el precio", "La tabla indica que la oferta sí se desplaza."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "medio",
+        "El Estado fija un precio máximo de $300 por caja. Según la Tabla 1, ¿qué "
+        "situación se produce?",
+        "Faltan 300 cajas cada semana",
+        "A $300 la tabla registra 750 cajas demandadas y 450 ofrecidas.\nLa "
+        "diferencia es 750 − 450 = 300 cajas de escasez semanal: a ese precio hay "
+        "más gente queriendo comprar que producto disponible.\nEl mecanismo es el "
+        "que la unidad enseña: un precio máximo por debajo del equilibrio abarata "
+        "el producto para quien logra comprarlo y al mismo tiempo desincentiva "
+        "producirlo.",
+        [
+            ("Sobran 300 cajas cada semana en el mercado", "Invierte la situación: a $300 la demanda supera a la oferta."),
+            ("El mercado queda en equilibrio a ese precio", "En equilibrio ambas cantidades coinciden, y aquí difieren en 300."),
+            ("Faltan 1.200 cajas cada semana", "Sumó ambas cantidades en lugar de restarlas."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "medio",
+        "Si el precio se fija en $500 por caja, ¿qué muestra la Tabla 1?",
+        "Sobran 300 cajas",
+        "A $500 la tabla registra 750 cajas ofrecidas y 450 demandadas.\nLa "
+        "diferencia es 750 − 450 = 300 cajas que se ofrecen y no encuentran "
+        "comprador a ese precio.\nEs la situación inversa a la del precio máximo: "
+        "un precio por encima del equilibrio hace atractivo producir y desalienta "
+        "comprar, de modo que el excedente presiona el precio hacia abajo.",
+        [
+            ("Faltan 300 cajas para satisfacer la demanda", "A ese precio ocurre lo contrario: la oferta supera a la demanda."),
+            ("El mercado alcanza su equilibrio a ese precio", "El equilibrio de la tabla está en $400 con 600 cajas."),
+            ("Sobran 1.200 cajas en el mercado", "Sumó ambas cantidades en lugar de restarlas."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "medio",
+        "¿Cuál es el ingreso total de los vendedores en el equilibrio de la Tabla "
+        "1?",
+        "$240.000 por semana",
+        "El ingreso total se obtiene multiplicando el precio por la cantidad "
+        "vendida.\nEn el equilibrio el precio es $400 y la cantidad transada, 600 "
+        "cajas, de modo que 400 × 600 = 240.000 pesos por semana.\nConviene notar "
+        "que un precio más alto no garantiza mayor ingreso: a $600 se venderían "
+        "solo 300 cajas, es decir 180.000 pesos.",
+        [
+            ("$1.000 por semana, sumando precio y cantidad", "Sumó ambos valores en lugar de multiplicarlos."),
+            ("$180.000 por semana, al precio más alto de la tabla", "Corresponde a $600 por 300 cajas, que no es el equilibrio."),
+            ("$360.000 por semana, con la mayor cantidad ofrecida", "Multiplicó $400 por 900 cajas, que no se transan a ese precio."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "medio",
+        "Según la segunda nota, ¿qué NO desplaza una curva?",
+        "Un cambio en el precio del propio producto",
+        "La nota lo precisa y agrega qué ocurre en su lugar: mueve un punto a lo "
+        "largo de la curva.\nLa distinción es la que ordena toda la Tabla 2. Los "
+        "cuatro cambios que ahí figuran son ajenos al precio del producto: ingreso "
+        "de los hogares, una helada, el precio del combustible y una noticia sobre "
+        "la salud.\nConfundir ambas cosas es el error más frecuente de la unidad: "
+        "lleva a hablar de aumento de la demanda cuando lo que hubo fue una baja de "
+        "precio.",
+        [
+            ("Un cambio en el ingreso de los hogares", "La Tabla 2 lo registra desplazando la demanda a la derecha."),
+            ("Una helada que arruina parte de la cosecha", "La Tabla 2 la registra desplazando la oferta a la izquierda."),
+            ("Una baja en el precio del combustible del transporte", "La Tabla 2 la registra desplazando la oferta a la derecha."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "medio",
+        "Según la Tabla 2, ¿qué efecto tiene sobre el equilibrio que baje el precio "
+        "del combustible del transporte?",
+        "La oferta crece y el precio de equilibrio baja",
+        "La Tabla 2 indica que ese cambio desplaza la oferta a la derecha, es decir "
+        "que a cada precio se ofrece más que antes.\nCon más producto disponible y "
+        "la misma demanda, el equilibrio se alcanza a un precio menor y con una "
+        "cantidad mayor que la anterior.\nEl combustible es un costo de llevar el "
+        "producto al mercado: si baja, producir y transportar resulta más barato y "
+        "los oferentes están dispuestos a vender más al mismo precio.",
+        [
+            ("La demanda crece y el precio de equilibrio sube", "El combustible afecta a los oferentes, no a las preferencias de los compradores."),
+            ("La oferta cae y el precio de equilibrio sube", "Una baja de costos aumenta la oferta, no la reduce."),
+            ("No cambia nada, porque el precio del producto es el mismo", "El desplazamiento de la oferta modifica el propio precio de equilibrio."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "dificil",
+        "Se difunde que el producto hace mal a la salud y a la vez una helada "
+        "arruina parte de la cosecha. ¿Qué se puede afirmar del nuevo equilibrio?",
+        "La cantidad baja y el precio queda indeterminado",
+        "Según la Tabla 2, la noticia desplaza la demanda a la izquierda y la "
+        "helada desplaza la oferta también a la izquierda.\nSobre la cantidad ambos "
+        "efectos apuntan en el mismo sentido: se demanda menos y se ofrece menos, "
+        "de modo que la cantidad transada cae con seguridad.\nSobre el precio los "
+        "efectos se oponen. Menos demanda lo empuja hacia abajo y menos oferta lo "
+        "empuja hacia arriba, y cuál predomina depende de la magnitud de cada "
+        "desplazamiento, que la tabla no entrega.",
+        [
+            ("El precio sube con seguridad y la cantidad también", "La caída de la demanda presiona el precio a la baja y reduce la cantidad."),
+            ("El precio baja con seguridad y la cantidad se mantiene", "Los dos desplazamientos reducen la cantidad transada."),
+            ("Ambas curvas se compensan y nada cambia", "Los dos desplazamientos reducen la cantidad: no se compensan ahí."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "dificil",
+        "El Estado quiere que el precio no supere los $300 y que no falte producto. "
+        "¿Qué muestra la Tabla 1 sobre esa combinación?",
+        "Con esta oferta las dos metas no se logran juntas",
+        "A $300 la tabla registra 450 cajas ofrecidas y 750 demandadas: fijar ese "
+        "tope produce necesariamente una escasez de 300 cajas.\nLas dos metas son "
+        "incompatibles mientras la oferta sea la de la Tabla 1, porque a ese precio "
+        "ningún productor está dispuesto a vender las 750 cajas que se "
+        "demandan.\nLograr ambas exigiría desplazar la oferta a la derecha —por "
+        "ejemplo bajando los costos de producción o transporte, como muestra la "
+        "Tabla 2— y no solamente fijar un precio.",
+        [
+            ("Bastaría con fijar también un precio mínimo", "Un precio mínimo agrava el problema: reduce aún más lo demandado."),
+            ("La escasez desaparecería en pocas semanas por sí sola", "Nada en la tabla permite anticipar ese ajuste automático."),
+            ("El equilibrio se trasladaría solo a los $300", "El equilibrio depende de las curvas, no del precio que se decrete."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "dificil",
+        "Un comerciante afirma que si el precio subiera a $600 su ingreso sería el "
+        "mayor posible. ¿Qué muestran los datos?",
+        "A $600 vendería 300 cajas y ganaría menos",
+        "El ingreso total es precio por cantidad, y las dos cosas se mueven en "
+        "sentidos opuestos a lo largo de la tabla.\nA $600 la cantidad demandada "
+        "cae a 300 cajas, de modo que el ingreso sería 600 × 300 = 180.000 pesos, "
+        "por debajo de los 240.000 del equilibrio.\nEl error del comerciante "
+        "consiste en considerar solo el precio y olvidar que la cantidad vendida no "
+        "es independiente de él: subirlo no basta si con eso se pierde la mitad de "
+        "los compradores.",
+        [
+            ("A $600 vendería 900 cajas y sería el mayor ingreso", "Las 900 cajas son la cantidad ofrecida a ese precio, no la vendida."),
+            ("A $600 el ingreso sería igual al del equilibrio", "Serían 180.000 pesos frente a 240.000 del equilibrio."),
+            ("El ingreso no depende de la cantidad vendida", "El ingreso total es precisamente el producto de precio por cantidad."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "dificil",
+        "¿Qué supone la tercera nota al decir que todo lo demás se mantiene "
+        "constante?",
+        "Solo se examina el efecto del precio",
+        "La tabla relaciona una única variable con las cantidades: el precio del "
+        "producto. Para que esa relación sea legible, el resto de los factores debe "
+        "quedar fijo.\nSi al mismo tiempo cambiara el ingreso de los hogares o el "
+        "costo del transporte, no habría manera de saber cuánto de la variación "
+        "observada corresponde al precio.\nPor eso los cambios de la Tabla 2 se "
+        "tratan aparte: cada uno rompe ese supuesto y obliga a dibujar una tabla "
+        "nueva, con otras cantidades a los mismos precios.",
+        [
+            ("Que los precios de la tabla no cambiarán nunca", "El precio es justamente la variable que la tabla hace variar."),
+            ("Que la tabla vale para cualquier producto agrícola", "El supuesto no se refiere a la generalidad del caso."),
+            ("Que la oferta y la demanda son siempre iguales", "Solo coinciden en la fila del equilibrio."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_estado_mercado", "dificil",
+        "¿Qué NO permite establecer esta fuente sobre el mercado que describe?",
+        "Si el precio de equilibrio es justo para las partes",
+        "Las tablas permiten calcular el equilibrio, medir excesos y escaseces, "
+        "estimar el ingreso total y anticipar la dirección de un "
+        "desplazamiento.\nTodo eso describe cómo funciona el mercado. Nada dice "
+        "sobre si el resultado es deseable: un equilibrio puede dejar fuera a "
+        "quienes no pueden pagar $400 por caja, y la tabla no registra a esas "
+        "personas porque no forman parte de la cantidad demandada.\nEvaluar si el "
+        "resultado es aceptable exige criterios que una tabla de oferta y demanda "
+        "no contiene.",
+        [
+            ("Cuántas cajas se transan en el equilibrio", "La Tabla 1 lo entrega: 600 cajas a $400."),
+            ("Qué ocurre si se fija un precio máximo de $300", "Se obtiene restando las cantidades de esa fila."),
+            ("Hacia dónde se desplaza la oferta tras una helada", "La Tabla 2 lo indica directamente."),
+        ],
+    ),
+    _ql(
+        "eco_tabla_mercado", "eco_desarrollo", "dificil",
+        "Una helada reduce la cosecha y el precio de equilibrio sube. ¿Qué muestra "
+        "eso sobre la relación entre economía y medio ambiente?",
+        "Un hecho natural altera precios y cantidades",
+        "La Tabla 2 registra que la helada desplaza la oferta a la izquierda, y de "
+        "ahí se sigue un equilibrio con menos cajas y mayor precio.\nEl caso "
+        "muestra que las condiciones ambientales no son un telón de fondo de la "
+        "actividad económica: entran directamente en la determinación de cuánto se "
+        "produce y a qué precio.\nLa implicancia excede al ejemplo. Si fenómenos de "
+        "ese tipo se vuelven más frecuentes, lo que la tabla describe como una "
+        "perturbación pasajera deja de serlo y se convierte en una condición "
+        "estructural de ese mercado.",
+        [
+            ("El medio ambiente no incide en los precios de mercado", "La propia Tabla 2 muestra lo contrario."),
+            ("Los productores pueden compensar cualquier pérdida natural", "La tabla no contempla ningún mecanismo de compensación."),
+            ("El Estado debe fijar el precio tras cada helada", "La fuente no propone ninguna intervención en ese caso."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "facil",
+        "Según el texto, ¿qué caracteriza a un monopolio natural?",
+        "Duplicar la red cuesta mucho más que tener una",
+        "El texto lo define por la estructura de costos de la actividad y da tres "
+        "ejemplos: agua potable, alcantarillado y distribución eléctrica.\nDe ahí "
+        "se sigue lo demás: nadie va a tender una segunda cañería para competir con "
+        "la primera, de modo que la competencia no aparecerá por sí sola.",
+        [
+            ("Una empresa compró a todos sus competidores del rubro", "El texto lo explica por la estructura de costos, no por adquisiciones."),
+            ("El Estado prohibió que otras empresas ingresen al mercado", "El texto no menciona ninguna prohibición legal de entrada."),
+            ("El producto tiene una calidad muy superior a la de otros", "La calidad no interviene en la definición del texto."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "facil",
+        "Según el texto, ¿qué ejemplo da de externalidad positiva?",
+        "Quien se vacuna protege a otros sin cobrarles",
+        "El texto lo presenta como el reverso del caso del humo de una planta: aquí "
+        "el efecto sobre terceros es beneficioso y tampoco se refleja en el "
+        "precio.\nY extrae la consecuencia correspondiente: el mercado tiende a "
+        "producir menos vacunación de la que convendría, porque quien decide "
+        "vacunarse no recibe nada por el beneficio que genera en los demás.",
+        [
+            ("El humo de una planta que afecta a un barrio vecino", "Ese es el ejemplo de externalidad negativa."),
+            ("El alumbrado de una calle financiado con impuestos", "El texto lo usa como ejemplo de bien público."),
+            ("La letra chica de un contrato de crédito", "Corresponde al caso de información asimétrica."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "facil",
+        "Según el texto, ¿por qué ninguna empresa proveerá un bien público?",
+        "Porque no hay manera de cobrar por él",
+        "El texto define el bien público por dos rasgos: no se puede negar a quien "
+        "no paga y su uso por una persona no impide el de otra.\nEl primero es el "
+        "que impide el negocio. Si el faro alumbra igual a quien pagó y a quien no, "
+        "nadie tiene motivo para pagar, y sin ingresos no hay empresa que lo "
+        "construya.\nPor eso el texto señala que estos bienes se financian con "
+        "impuestos justamente por eso.",
+        [
+            ("Porque su producción resulta técnicamente imposible", "El texto no plantea ningún obstáculo técnico."),
+            ("Porque la ley reserva esas actividades al Estado", "El texto explica el problema por la imposibilidad de cobrar."),
+            ("Porque nadie los demanda en cantidad suficiente", "El texto señala que todos los quieren."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "Según el texto, ¿por qué una externalidad negativa lleva a producir de "
+        "más?",
+        "El precio no incluye el costo que soportan otros",
+        "El texto lo explica en dos pasos. El precio recoge los costos de quien "
+        "produce —insumos, salarios, energía— y no el daño que la actividad impone "
+        "a terceros.\nCon ese costo fuera de la cuenta, el precio queda "
+        "artificialmente bajo, y a un precio más bajo se compra y se produce "
+        "más.\nEl resultado es que la sociedad termina con más de esa actividad de "
+        "lo que elegiría si el daño estuviera incluido en lo que cuesta.",
+        [
+            ("Los productores reciben un subsidio del Estado", "El texto no menciona ningún subsidio en este caso."),
+            ("Los consumidores desconocen la calidad del producto", "Ese es el problema de la información asimétrica."),
+            ("La empresa vende por debajo de su costo de producción", "Sus costos privados están cubiertos: falta el que recae en terceros."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué efecto tiene la información asimétrica más allá de "
+        "perjudicar a algunos compradores?",
+        "Los productos buenos se retiran del mercado",
+        "El texto señala que el problema no se agota en que algunos salgan "
+        "perjudicados.\nSi nadie puede distinguir lo bueno de lo malo, el comprador "
+        "no está dispuesto a pagar el precio de lo bueno y ofrece un precio "
+        "promedio.\nA ese precio, quien vende un producto de buena calidad prefiere "
+        "no vender, de modo que la oferta empeora y el problema se agrava por sí "
+        "solo.",
+        [
+            ("Los precios suben por encima del promedio del mercado", "El texto describe compradores que ofrecen un precio promedio, no mayor."),
+            ("El Estado queda obligado a producir el bien directamente", "El texto no plantea esa consecuencia."),
+            ("Los vendedores pierden interés en informar sus precios", "El problema es la información sobre la calidad, no sobre el precio."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "Según el texto, ¿por qué el Estado regula la tarifa de un monopolio "
+        "natural?",
+        "Porque la competencia no puede existir ahí",
+        "El texto lo formula con esa precisión y agrega la aclaración que evita el "
+        "malentendido: no porque no le guste el monopolio.\nEl argumento es "
+        "estructural. En una actividad donde duplicar la red cuesta mucho más que "
+        "operar una sola, ningún competidor entrará aunque el precio sea alto, y "
+        "por lo tanto la disciplina que la competencia impone en otros mercados no "
+        "llegará nunca.\nLa regulación sustituye entonces esa disciplina ausente, "
+        "en lugar de corregir una decisión empresarial concreta.",
+        [
+            ("Porque el monopolio produce bienes de mala calidad", "El texto no vincula el monopolio natural con la calidad."),
+            ("Porque las empresas privadas no pueden operar redes", "El texto no plantea ningún impedimento para que las operen."),
+            ("Porque los consumidores no conocen las tarifas vigentes", "El problema descrito no es de información sino de ausencia de competencia."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "Según el texto, ¿qué condiciones hacen que un mercado asigne bien?",
+        "Muchos oferentes y compradores informados",
+        "El texto las enuncia al abrir, antes de discutir cualquier "
+        "intervención.\nCumplidas esas condiciones, describe tres efectos: el "
+        "precio transmite qué escasea, quien lo valora más lo obtiene y producir de "
+        "más o de menos se corrige solo.\nEl resto del texto se ordena a partir de "
+        "ahí: las cuatro fallas son justamente situaciones donde una de esas "
+        "condiciones no se cumple.",
+        [
+            ("Un solo oferente con capacidad de fijar el precio", "Es la descripción del monopolio, que el texto trata como falla."),
+            ("Precios fijados por la autoridad económica", "El texto no incluye la fijación de precios entre esas condiciones."),
+            ("Compradores que desconocen la calidad del producto", "Esa es la situación de información asimétrica."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "Un auto usado con fallas ocultas se vende al mismo precio que uno en buen "
+        "estado. ¿Qué falla del texto ilustra?",
+        "La información asimétrica entre las partes",
+        "El caso reúne los dos elementos que el texto describe: una parte sabe "
+        "mucho más que la otra sobre lo que se vende, y quien sabe menos no puede "
+        "evaluar lo que compra.\nEl auto usado es precisamente el ejemplo que el "
+        "texto entrega, junto con la letra chica de un crédito.\nY trae consigo la "
+        "consecuencia que el texto describe: si los compradores no pueden "
+        "distinguir, ofrecerán un precio promedio y los autos en buen estado "
+        "dejarán de ofrecerse.",
+        [
+            ("Una externalidad negativa sobre terceros", "El perjuicio recae sobre el comprador, que sí participa de la transacción."),
+            ("Un monopolio natural en el mercado automotor", "Nada indica que exista un solo oferente."),
+            ("Un bien público que nadie puede cobrar", "El auto se cobra y su uso excluye a otros."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "dificil",
+        "El texto cierra advirtiendo que una falla de mercado no justifica "
+        "cualquier intervención. ¿Qué distingue ambas afirmaciones?",
+        "Una identifica un problema y la otra supone la solución",
+        "Detectar una falla establece que el resultado del mercado puede mejorarse. "
+        "No establece que una medida concreta lo consiga.\nEl texto entrega tres "
+        "ejemplos de intervenciones que empeoran: una tarifa mal calculada, un "
+        "subsidio que llega a quien no lo necesita y una regulación escrita por los "
+        "propios regulados.\nPor eso separa las dos tareas: identificar la falla es "
+        "el primer paso y diseñar bien el remedio es otro problema. Saltarse el "
+        "segundo convierte un diagnóstico correcto en una política mala.",
+        [
+            ("Una se refiere al Estado y la otra, al mercado", "Ambas se refieren a la relación entre los dos."),
+            ("Una es económica y la otra, jurídica", "Las dos afirmaciones son del mismo orden."),
+            ("Una vale para monopolios y la otra, para externalidades", "La advertencia cubre las cuatro fallas por igual."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "dificil",
+        "¿Qué tienen en común las cuatro fallas que describe el texto?",
+        "El precio deja de reflejar el costo o el valor real",
+        "En el monopolio natural el precio no se forma por competencia y lo fija "
+        "quien no la enfrenta. En la externalidad no incluye un costo que alguien "
+        "está soportando. En la información asimétrica el comprador no puede saber "
+        "qué está pagando. En el bien público no hay precio posible.\nLas cuatro "
+        "atacan lo que el texto identifica al comienzo como la virtud del mercado: "
+        "que el precio transmita qué escasea y cuánto se valora.\nRoto ese "
+        "mecanismo, la asignación deja de corregirse sola, y por eso las cuatro se "
+        "agrupan bajo el mismo nombre.",
+        [
+            ("En todas hay un solo oferente en el mercado", "Solo el monopolio natural supone un único proveedor."),
+            ("En todas el Estado ya está interviniendo el mercado", "El texto las describe como situaciones previas a la intervención."),
+            ("En todas los compradores actúan de mala fe", "Ninguna de las cuatro se explica por la conducta desleal de las partes."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "dificil",
+        "El texto menciona una regulación escrita por los propios regulados. ¿Qué "
+        "problema señala con eso?",
+        "La norma protege a la empresa y no al usuario",
+        "Una regulación tiene sentido cuando compensa la ausencia de competencia o "
+        "corrige un costo que el precio no recoge.\nSi quienes la redactan son las "
+        "empresas reguladas, la norma tenderá a fijar condiciones que les "
+        "convienen: tarifas holgadas, exigencias que un entrante nuevo no podría "
+        "cumplir, obligaciones débiles de calidad.\nEl resultado es peor que no "
+        "regular, porque el monopolio conserva su posición y además obtiene el "
+        "respaldo de una norma pública que aparenta protegerlo todo. Por eso el "
+        "texto lo pone junto a la tarifa mal calculada y al subsidio mal dirigido.",
+        [
+            ("La empresa deja de cumplir la regulación vigente", "El problema es qué dice la norma, no su incumplimiento."),
+            ("El Estado pierde la facultad de fijar tarifas", "El texto no describe una pérdida de competencias."),
+            ("Los usuarios dejan de pagar por el servicio", "El texto no plantea ese efecto."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "dificil",
+        "¿Por qué el texto trata la vacunación y el faro como casos distintos, si "
+        "en ambos alguien se beneficia sin pagar?",
+        "En uno hay mercado imperfecto y en el otro no hay mercado",
+        "La vacuna se puede vender y se vende: quien no paga no la recibe. El "
+        "problema es que el beneficio se extiende más allá del comprador, de modo "
+        "que se produce menos de la que convendría.\nEl faro no se puede negar a "
+        "quien no paga, y por eso no hay negocio posible: no se trata de que el "
+        "mercado produzca poco, sino de que no produce nada.\nLa diferencia importa "
+        "para el remedio. La externalidad positiva se corrige con un subsidio que "
+        "empuje a producir más; el bien público exige financiamiento con impuestos, "
+        "porque no hay a quién cobrarle.",
+        [
+            ("En uno el beneficio es individual y en el otro, colectivo", "En los dos casos el beneficio alcanza a terceros."),
+            ("En uno interviene el Estado y en el otro, no", "El texto contempla intervención estatal en ambos."),
+            ("En uno el bien es escaso y en el otro, abundante", "La escasez no es lo que distingue ambos casos en el texto."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_estado_mercado", "dificil",
+        "Un dirigente sostiene que todo mercado necesita regulación porque siempre "
+        "hay fallas. ¿Qué le responde el texto?",
+        "Describe condiciones bajo las cuales el mercado asigna bien",
+        "El texto abre reconociendo que un mercado con muchos oferentes y "
+        "compradores informados suele asignar bien, y describe tres virtudes "
+        "concretas de ese funcionamiento.\nLas cuatro fallas se presentan como "
+        "situaciones típicas y acotadas, no como la condición general de todos los "
+        "mercados.\nY el cierre corta la inferencia por el otro extremo: aunque "
+        "exista una falla, eso no prueba que cualquier intervención mejore el "
+        "resultado. El texto exige identificar la falla concreta antes de proponer "
+        "un remedio.",
+        [
+            ("Sostiene que ninguna intervención estatal está justificada", "El texto justifica la intervención en los cuatro casos que describe."),
+            ("Afirma que las cuatro fallas están presentes en todo mercado", "Las presenta como situaciones típicas, no universales."),
+            ("Señala que los monopolios naturales son la regla general", "Los describe como una situación acotada a ciertas actividades."),
+        ],
+    ),
+    _ql(
+        "eco_fallas_mercado", "eco_desarrollo", "medio",
+        "Según el texto, ¿por qué el humo de una planta sobre un barrio vecino es "
+        "un problema económico y no solo ambiental?",
+        "Alguien soporta un costo que el precio no recoge",
+        "El texto lo trata como una externalidad negativa: la actividad impone "
+        "costos a terceros que no participan de la transacción.\nEse daño es real y "
+        "alguien lo paga —en salud, en calidad de vida, en el valor de sus "
+        "viviendas—, pero no aparece en el precio del producto ni en las cuentas de "
+        "la empresa.\nPor eso es un problema de asignación y no solo de "
+        "contaminación: al quedar ese costo fuera del precio, se produce y se "
+        "consume más de lo que la sociedad elegiría si lo considerara.",
+        [
+            ("Porque la empresa no puede vender su producto", "El problema es que lo vende a un precio que no incluye ese costo."),
+            ("Porque los vecinos son también clientes de la planta", "El texto los describe como terceros ajenos a la transacción."),
+            ("Porque el Estado ya cobra un impuesto por esa actividad", "El impuesto puede ser el remedio, no la descripción del problema."),
+        ],
+    ),
     _ql(
         "civ_just_acceso", "civ_justicia", "facil",
         "Según la Intervención 1, ¿qué les falta a las tres personas que describe?",

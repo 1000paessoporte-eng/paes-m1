@@ -231,6 +231,12 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # Fuentes nuevas de Historia
     "mujeres rurales entre 1930 y 2020": str(96 - 19),
     "plebiscito de 2020 que en la municipal de 2016": f"{23_000 - 15_400:,}".replace(",", "."),
+    # Ampliación de Historia: la tabla de oferta y demanda de la feria
+    # mayorista. El equilibrio está en $400 con 600 cajas; a $300 se demandan
+    # 750 y se ofrecen 450, y a $500 se ofrecen 750 y se demandan 450.
+    "precio máximo de $300 por caja": str(750 - 450),
+    "Si el precio se fija en $500 por caja": str(750 - 450),
+    "ingreso total de los vendedores en el equilibrio": f"{400 * 600:,}".replace(",", "."),
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),
