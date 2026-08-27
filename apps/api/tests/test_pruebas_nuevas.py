@@ -188,6 +188,29 @@ def test_historia_no_afirma_hechos_sin_fuente():
             )
 
 
+def test_historia_cubre_cada_nodo_en_mas_de_una_dificultad():
+    """Ningún nodo de Historia puede quedar vacío ni con una sola dificultad.
+
+    El árbol de Historia mezclaba las dos dimensiones del temario: unos nodos
+    eran habilidades y otros eran contenidos, así que el eje de Historia no
+    tenía ningún nodo de contenido. Ahora el eje historia agrupa por habilidad
+    y los de ciudadanía y economía por los temas del temario. Esto fija que el
+    reparto siga siendo practicable.
+    """
+    from paes_api.seed_data import QUESTIONS_HISTORIA, SKILL_NODES_HISTORIA
+
+    declarados = {code for code, *_ in SKILL_NODES_HISTORIA}
+    usados = {q["skill_node"] for q in QUESTIONS_HISTORIA}
+    assert usados == declarados, (
+        f"sin preguntas: {declarados - usados}; sin nodo: {usados - declarados}"
+    )
+    for nodo in sorted(declarados):
+        dificultades = {
+            q["difficulty"] for q in QUESTIONS_HISTORIA if q["skill_node"] == nodo
+        }
+        assert len(dificultades) >= 2, f"{nodo} solo tiene preguntas {dificultades}"
+
+
 def test_cada_texto_de_lectora_sostiene_varias_preguntas():
     """En la prueba real un texto nunca trae una sola pregunta.
 
