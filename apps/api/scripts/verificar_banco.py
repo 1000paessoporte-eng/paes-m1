@@ -237,6 +237,14 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "precio máximo de $300 por caja": str(750 - 450),
     "Si el precio se fija en $500 por caja": str(750 - 450),
     "ingreso total de los vendedores en el equilibrio": f"{400 * 600:,}".replace(",", "."),
+    # Ampliación de Historia: costos y escala en eco_mercado. La panadería tiene
+    # $600.000 de costo fijo y $400 por unidad; vende a $1.000, así que cada pan
+    # deja $600 de margen para cubrir el arriendo.
+    "$400 en insumos por cada pan": f"{600_000 + 400 * 2_000:,}".replace(",", "."),
+    "¿Cuántos panes debe vender al mes": f"{600_000 // (1_000 - 400):,}".replace(",", "."),
+    "su costo total sube a $63.000.000": f"{63_000_000 // 30_000:,}".replace(",", "."),
+    "vendía 400 kilos de arroz por semana": f"{1_000 * 500:,}".replace(",", "."),
+    "compra paltas a $1.500 el kilo": f"{(2_400 - 1_500) * 120 - 18_000:,}".replace(",", "."),
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),

@@ -58272,6 +58272,465 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _q(
+        "eco_mercado", "facil",
+        "Un almacén vendía 400 kilos de arroz por semana a $1.200. Baja el precio a "
+        "$1.000 y pasa a vender 500 kilos. ¿Qué ocurrió con su ingreso semanal?",
+        "Subió de $480.000 a $500.000",
+        "El ingreso total es precio por cantidad, y hay que calcularlo en los dos "
+        "escenarios porque las dos variables cambiaron.\nAntes: 1.200 × 400 = "
+        "$480.000. Después: 1.000 × 500 = $500.000.\nEl precio bajó y el ingreso "
+        "subió, lo que solo ocurre cuando la cantidad aumenta proporcionalmente más "
+        "de lo que cae el precio.",
+        [
+            ("Bajó de $500.000 a $480.000 por la rebaja aplicada", "Invierte el orden: $480.000 es el ingreso anterior a la rebaja."),
+            ("Se mantuvo, porque la rebaja compensó las ventas", "Los dos ingresos difieren en $20.000."),
+            ("Subió a $600.000, sumando ambas cantidades vendidas", "Sumar las cantidades de ambos escenarios no corresponde."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "¿Qué mide la elasticidad precio de la oferta?",
+        "Cuánto varía la cantidad ofrecida ante el precio",
+        "La elasticidad de la oferta compara la variación porcentual de la cantidad "
+        "que los productores están dispuestos a vender con la variación porcentual "
+        "del precio que la provocó.\nEs alta cuando producir más resulta rápido y "
+        "barato, y baja cuando la producción requiere tiempo o instalaciones que no "
+        "se improvisan.\nPor eso la oferta agrícola suele ser poco elástica en el "
+        "corto plazo: una cosecha no se adelanta porque el precio suba esta semana.",
+        [
+            ("El precio máximo que los productores aceptan cobrar", "La elasticidad mide una reacción, no un nivel de precio."),
+            ("La diferencia entre el costo de producción y el precio", "Esa diferencia es el margen, no la elasticidad."),
+            ("La cantidad total que se produce en un período", "La elasticidad no mide un volumen sino una sensibilidad."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "El Estado entrega un subsidio de $300 por cada unidad producida de un "
+        "bien. ¿Qué ocurre con la curva de oferta?",
+        "Se desplaza hacia la derecha",
+        "El subsidio por unidad reduce el costo efectivo de producir: por cada "
+        "unidad que vende, el productor recibe el precio de mercado más $300.\nCon "
+        "ese incentivo está dispuesto a ofrecer una cantidad mayor a cada precio, "
+        "que es exactamente lo que significa un desplazamiento hacia la "
+        "derecha.\nEl nuevo equilibrio tendrá una cantidad mayor y un precio menor "
+        "que antes, de modo que el beneficio del subsidio se reparte entre "
+        "productor y consumidor.",
+        [
+            ("Se desplaza hacia la izquierda por el mayor gasto fiscal", "El gasto lo asume el Estado; para el productor es un ingreso adicional."),
+            ("Se desplaza la curva de demanda hacia la derecha", "El subsidio se entrega por unidad producida, no al comprador."),
+            ("No se desplaza ninguna curva: solo cambia el precio", "El precio cambia justamente porque la oferta se desplazó."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "El precio de un producto sube 20% y la cantidad demandada cae 6%. ¿Cómo es "
+        "su demanda?",
+        "Inelástica: reacciona menos que el precio",
+        "La elasticidad compara ambas variaciones porcentuales. Aquí la cantidad se "
+        "movió 6% frente a un cambio de precio de 20%, es decir bastante menos que "
+        "proporcionalmente.\nUna demanda así se llama inelástica, y suele "
+        "corresponder a bienes sin sustitutos cercanos o de gasto pequeño dentro "
+        "del presupuesto.\nLa consecuencia práctica es que al vendedor le conviene "
+        "el alza: pierde pocas unidades y cobra bastante más por cada una que sigue "
+        "vendiendo.",
+        [
+            ("Elástica: reacciona más que proporcionalmente", "Sería elástica si la cantidad hubiera caído más de 20%."),
+            ("De elasticidad unitaria, porque ambas variaciones existen", "La elasticidad unitaria exige que ambos porcentajes coincidan."),
+            ("Perfectamente inelástica, porque la caída es pequeña", "Sería perfectamente inelástica solo si la cantidad no cambiara nada."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Sube el precio de la harina y al mismo tiempo aumenta el ingreso de los "
+        "hogares. ¿Qué ocurre con el equilibrio del mercado del pan?",
+        "El precio sube y la cantidad queda indeterminada",
+        "Los dos cambios operan sobre curvas distintas. La harina es un insumo, de "
+        "modo que su alza desplaza la oferta de pan hacia la izquierda; el mayor "
+        "ingreso desplaza la demanda hacia la derecha.\nSobre el precio ambos "
+        "efectos apuntan en el mismo sentido: menos oferta lo empuja hacia arriba y "
+        "más demanda también, así que sube con seguridad.\nSobre la cantidad se "
+        "oponen. Menos oferta la reduce y más demanda la aumenta, y cuál predomina "
+        "depende de la magnitud de cada desplazamiento.",
+        [
+            ("La cantidad sube y el precio queda indeterminado", "Invierte el análisis: sobre el precio ambos efectos coinciden."),
+            ("Tanto el precio como la cantidad bajan", "El mayor ingreso empuja ambos hacia arriba, no hacia abajo."),
+            ("Los dos efectos se anulan y nada cambia", "Sobre el precio se suman, de modo que no se anulan."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Un feriante compra paltas a $1.500 el kilo y las vende a $2.400. Vende 120 "
+        "kilos en el día y paga $18.000 de puesto. ¿Cuál es su ganancia?",
+        "$90.000",
+        "Conviene separar los tres componentes. El ingreso es 2.400 × 120 = "
+        "$288.000.\nEl costo de la mercadería es 1.500 × 120 = $180.000, y a eso se "
+        "suma el costo fijo del puesto, $18.000, lo que da $198.000 de costo "
+        "total.\nLa ganancia es 288.000 − 198.000 = $90.000. Otra vía más corta: "
+        "cada kilo deja $900 de margen, 900 × 120 = $108.000, menos los $18.000 del "
+        "puesto.",
+        [
+            ("$108.000, que es el margen de las paltas vendidas", "Omite el costo del puesto, que también hay que descontar."),
+            ("$288.000, que es lo que recibió en el día", "Es el ingreso total, sin descontar ningún costo."),
+            ("$270.000, restando solo el arriendo del puesto", "Omite el costo de la mercadería, que es el mayor de los dos."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "En un mercado de autos usados nadie puede verificar el estado real de los "
+        "vehículos. ¿Qué le conviene hacer a quien vende uno en buen estado?",
+        "Ofrecer una garantía escrita del vehículo",
+        "El problema es que el comprador no puede distinguir un auto bueno de uno "
+        "malo y por eso ofrece un precio promedio, insuficiente para el auto "
+        "bueno.\nLa garantía resuelve esa asimetría por una vía indirecta: es una "
+        "promesa que solo le conviene hacer a quien sabe que su auto está en buen "
+        "estado, porque a quien vende uno defectuoso le costaría dinero "
+        "cumplirla.\nAl ofrecerla, el vendedor transmite información creíble sobre "
+        "algo que el comprador no puede verificar por sí mismo.",
+        [
+            ("Bajar el precio hasta el promedio del mercado", "Eso confirma el problema en lugar de resolverlo."),
+            ("Esperar a que suba el precio promedio de los usados", "El promedio no distingue calidades: el problema seguiría igual."),
+            ("Vender el auto sin informar su estado real", "Callar no permite al comprador distinguirlo de uno defectuoso."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Un productor guarda parte de su cosecha esperando que el precio suba en "
+        "tres meses. ¿Qué función cumple esa conducta en el mercado?",
+        "Reparte la oferta a lo largo del tiempo",
+        "Al retirar producto ahora y ofrecerlo después, el productor reduce la "
+        "oferta del período de abundancia y la aumenta en el de escasez.\nEl efecto "
+        "sobre los precios es el mismo movimiento visto desde el otro lado: "
+        "sostiene el precio en cosecha y lo modera cuando el producto falta, de "
+        "modo que la curva de precios a lo largo del año se aplana.\nLa conducta "
+        "puede volverse dañina si alguien con poder de mercado acumula lo "
+        "suficiente para provocar la escasez que dice anticipar, y por eso los "
+        "mercados con pocos oferentes suelen vigilarse.",
+        [
+            ("Reduce de manera permanente la oferta del mercado", "El producto vuelve al mercado tres meses después: no desaparece."),
+            ("Aumenta el precio de equilibrio de todo el año", "Lo sostiene en un período y lo modera en otro."),
+            ("Constituye colusión con los demás productores", "La colusión exige un acuerdo entre competidores, que aquí no existe."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Un empresario dice que su negocio deja $2.000.000 al año y que por eso "
+        "conviene mantenerlo. Podría vender el local y obtener $30.000.000, que en "
+        "un depósito rendirían $2.400.000 al año. ¿Qué le falta a su razonamiento?",
+        "No consideró lo que gana la alternativa",
+        "Un resultado positivo no basta para decidir: hay que compararlo con lo "
+        "mejor que se podría hacer con los mismos recursos.\nAquí la alternativa "
+        "rinde $2.400.000 al año contra los $2.000.000 del negocio, de modo que "
+        "mantenerlo cuesta $400.000 anuales frente a la opción descartada.\nEse es "
+        "el costo de oportunidad, y es el que convierte una ganancia contable en "
+        "una decisión económica. La conclusión puede cambiar si el empresario "
+        "valora algo más que el retorno, pero entonces conviene que lo diga.",
+        [
+            ("El negocio en realidad está dando pérdidas contables", "Deja $2.000.000: el resultado contable es positivo."),
+            ("Debería aumentar el precio de lo que vende", "El enunciado no plantea nada sobre su política de precios."),
+            ("El depósito tiene un riesgo mayor que el negocio", "El enunciado no aporta información sobre riesgos."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Dos supermercados vecinos bajan sus precios repetidamente hasta vender "
+        "casi sin margen. Uno de los dos tiene mucho más respaldo financiero. ¿Qué "
+        "resultado es previsible?",
+        "El más débil sale y el otro puede subir precios",
+        "Vender sin margen produce pérdidas, y sostenerlas exige respaldo. Quien "
+        "tiene menos lo agota antes y debe retirarse.\nCon un solo oferente en la "
+        "zona, la presión que mantenía los precios bajos desaparece y el que queda "
+        "puede subirlos por encima del nivel previo.\nPor eso una guerra de precios "
+        "no siempre beneficia al consumidor: el abaratamiento es transitorio y el "
+        "mercado queda más concentrado que antes, sobre todo si existen barreras "
+        "que impidan la entrada de un competidor nuevo.",
+        [
+            ("Los dos mantendrán precios bajos de manera permanente", "Vender sin margen no es sostenible en el tiempo para ninguno."),
+            ("El más débil obtendrá más clientes por sus precios bajos", "Ambos bajan precios: la diferencia está en quién resiste las pérdidas."),
+            ("El Estado fijará el precio para terminar el conflicto", "El enunciado no contempla ninguna intervención."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "El precio de un producto es $8.000 y hay compradores dispuestos a pagar "
+        "hasta $12.000 por él. ¿Qué describe esa diferencia?",
+        "Lo que el comprador gana en la transacción",
+        "Cada comprador tiene un precio máximo que estaría dispuesto a pagar, y si "
+        "el precio de mercado es menor, la diferencia queda en su bolsillo.\nQuien "
+        "valoraba el producto en $12.000 y lo consigue en $8.000 obtiene una "
+        "ganancia de $4.000 aunque no reciba ningún dinero: pagó menos de lo que "
+        "estaba dispuesto.\nEse excedente es la razón por la que un intercambio "
+        "voluntario deja mejor a ambas partes, y también lo que explica que un alza "
+        "de precios reduzca el bienestar de los compradores aunque sigan comprando.",
+        [
+            ("El margen de ganancia que obtiene el vendedor", "El margen del vendedor se calcula sobre su costo, no sobre la disposición a pagar."),
+            ("El impuesto que grava esa transacción", "El enunciado no menciona ningún impuesto."),
+            ("La escasez del producto en ese mercado", "La disposición a pagar no mide la cantidad disponible."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Una empresa de agua potable no enfrenta competidores y la autoridad le "
+        "fija una tarifa. ¿Por qué la tarifa no se fija simplemente en el costo de "
+        "producción?",
+        "Sin margen nadie repondría la red",
+        "Una tarifa igual al costo de operación cubriría el día a día y dejaría a "
+        "la empresa sin recursos para renovar cañerías, ampliar cobertura ni "
+        "enfrentar una falla mayor.\nEl servicio se deterioraría con el tiempo, y "
+        "el efecto aparecería años después de la decisión que lo causó.\nPor eso la "
+        "regulación busca un punto intermedio: una tarifa que permita sostener y "
+        "renovar la infraestructura sin entregar a la empresa la ganancia que "
+        "obtendría si pudiera fijar el precio por su cuenta.",
+        [
+            ("Porque el costo de producción es imposible de calcular", "Es calculable: el problema es que no basta para sostener la red."),
+            ("Porque la empresa debe competir con otros proveedores", "El enunciado establece que no tiene competidores."),
+            ("Porque los usuarios pagarían cualquier precio por el agua", "Esa es la razón para regular, no para fijar la tarifa sobre el costo."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Sube fuertemente el precio de las entradas al cine y también cae la venta "
+        "de cabritas en sus salas. ¿Qué relación hay entre ambos productos?",
+        "Son bienes complementarios",
+        "Dos bienes son complementarios cuando se consumen juntos, de modo que el "
+        "precio de uno afecta la demanda del otro en sentido inverso.\nAquí el alza "
+        "de la entrada reduce el número de personas que van al cine, y quienes no "
+        "van tampoco compran cabritas: la caída de la segunda venta no se explica "
+        "por su propio precio.\nSi fueran sustitutos ocurriría lo contrario: "
+        "encarecer uno aumentaría la venta del otro, como pasa entre el té y el "
+        "café.",
+        [
+            ("Son bienes sustitutos entre sí", "En ese caso el alza de uno habría aumentado la venta del otro."),
+            ("Son bienes inferiores en el consumo familiar", "Esa categoría describe la relación con el ingreso, no con otro precio."),
+            ("No tienen relación: son mercados independientes", "Si el precio de uno mueve la demanda del otro, la relación existe."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "Una panadería paga $600.000 de arriendo al mes y gasta $400 en insumos por "
+        "cada pan que produce. ¿Cuánto le cuesta producir 2.000 panes en un mes?",
+        "$1.400.000",
+        "El costo total es la suma del costo fijo y del costo variable.\nEl "
+        "arriendo es fijo: son $600.000 al mes, se produzca mucho o poco. Los "
+        "insumos son variables: 400 × 2.000 = $800.000.\nEl total es 600.000 + "
+        "800.000 = $1.400.000. Notar que el costo por pan no es $400 sino $700, "
+        "porque el arriendo también se reparte entre las unidades producidas.",
+        [
+            ("$800.000, que es lo que se gasta en insumos", "Omite el arriendo, que también forma parte del costo del mes."),
+            ("$600.000, que es lo que cuesta mantener el local", "Es solo el costo fijo, sin los insumos de las 2.000 unidades."),
+            ("$1.000.000, promediando ambos costos del mes", "Los costos se suman, no se promedian entre sí."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "Esa misma panadería vende cada pan a $1.000. ¿Cuántos panes debe vender al "
+        "mes para cubrir exactamente todos sus costos?",
+        "1.000 panes",
+        "Cada pan deja $1.000 − $400 = $600 después de pagar sus propios insumos. "
+        "Ese margen es lo único que puede destinarse a cubrir el arriendo.\nPara "
+        "cubrir los $600.000 de arriendo hacen falta 600.000 ÷ 600 = 1.000 "
+        "panes.\nEse punto se llama umbral de equilibrio: bajo esa cantidad la "
+        "panadería pierde, y sobre ella cada pan adicional deja $600 de ganancia.",
+        [
+            ("600 panes, uno por cada mil pesos de arriendo", "Divide el arriendo por el precio y no por el margen de cada pan."),
+            ("1.500 panes, para cubrir el costo total del mes", "Divide el costo total de 2.000 panes por el precio, mezclando dos cantidades distintas."),
+            ("2.000 panes, la producción del mes", "Es la producción del ejemplo anterior, no el umbral de equilibrio."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "En una ciudad hay tres empresas de telefonía y ninguna otra puede entrar "
+        "sin una inversión enorme en antenas. ¿Qué tipo de mercado es?",
+        "Un oligopolio",
+        "El oligopolio es un mercado con pocos oferentes, donde cada uno tiene peso "
+        "suficiente para que sus decisiones afecten a los demás.\nEl caso reúne los "
+        "dos rasgos: son tres empresas y existe una barrera de entrada, que es la "
+        "inversión en antenas.\nNo es monopolio, porque hay más de un oferente; ni "
+        "competencia perfecta, que supone muchos vendedores y entrada libre.",
+        [
+            ("Un monopolio, porque hay barreras de entrada al mercado", "El monopolio tiene un solo oferente, y aquí hay tres."),
+            ("Una competencia perfecta con productos homogéneos", "La competencia perfecta supone muchos oferentes y entrada libre."),
+            ("Un mercado regulado por la autoridad de telecomunicaciones", "El enunciado no menciona ninguna regulación de precios."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "facil",
+        "¿Qué es una barrera de entrada a un mercado?",
+        "Algo que dificulta que entren nuevos oferentes",
+        "Una barrera de entrada es cualquier obstáculo que impide o encarece que "
+        "una empresa nueva empiece a competir en un mercado.\nPuede ser una "
+        "inversión inicial muy alta, una patente, una licencia exigida por ley o el "
+        "control de un insumo indispensable.\nSu efecto es sostener en el tiempo el "
+        "poder de quienes ya están: sin entrada posible, un precio alto no atrae "
+        "competidores que lo hagan bajar.",
+        [
+            ("Un impuesto que grava las importaciones del producto", "Un arancel encarece el producto extranjero, pero no es la definición general."),
+            ("Un acuerdo de precios entre las empresas del rubro", "Ese acuerdo es colusión: una conducta, no una barrera estructural."),
+            ("La distancia entre el productor y sus compradores", "El costo de transporte incide en el precio, pero no define esta categoría."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "El Estado aplica un impuesto de $200 por cada unidad vendida de un "
+        "producto. ¿Qué ocurre con la curva de oferta?",
+        "Se desplaza hacia la izquierda",
+        "El impuesto por unidad se comporta como un costo adicional de producir: "
+        "para entregar la misma cantidad, el vendedor necesita recibir $200 más que "
+        "antes.\nDicho en términos de la curva, a cada precio los oferentes están "
+        "dispuestos a vender menos que antes, y eso es un desplazamiento hacia la "
+        "izquierda.\nEl nuevo equilibrio tendrá un precio mayor y una cantidad "
+        "menor. Notar que el precio no sube los $200 completos: parte del impuesto "
+        "la absorbe el vendedor.",
+        [
+            ("Se desplaza hacia la derecha por el mayor ingreso fiscal", "El ingreso lo recibe el Estado, no el vendedor: su oferta no aumenta."),
+            ("Se desplaza la curva de demanda hacia la izquierda", "El impuesto grava la venta y actúa como un costo del oferente."),
+            ("No se desplaza ninguna curva: solo sube el precio", "El precio sube justamente porque la oferta se desplazó."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Se aplica un impuesto a un medicamento sin sustitutos, cuya demanda casi "
+        "no cambia con el precio. ¿Quién termina pagando la mayor parte?",
+        "El consumidor",
+        "Quien carga con un impuesto no es necesariamente quien lo entera al fisco, "
+        "sino quien tiene menos margen para evitarlo.\nSi la demanda casi no "
+        "reacciona al precio, el vendedor puede trasladar el impuesto sin perder "
+        "ventas: quien necesita el medicamento lo comprará igual.\nEl caso opuesto "
+        "lo confirma. Si existieran sustitutos y la demanda fuera sensible, subir "
+        "el precio costaría clientes y el vendedor tendría que absorber buena parte "
+        "del impuesto.",
+        [
+            ("El vendedor, porque es quien entera el impuesto al fisco", "Quién lo entera no determina quién soporta el costo."),
+            ("Se reparte siempre en partes iguales entre ambos", "El reparto depende de cuán sensible al precio sea cada lado."),
+            ("El Estado, porque devuelve lo recaudado en subsidios", "El enunciado no contempla ninguna devolución."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Un país fija un salario mínimo por encima del que equilibraría el mercado "
+        "de trabajo poco calificado. ¿Qué efecto se espera en ese mercado?",
+        "Más personas buscando empleo que puestos ofrecidos",
+        "El salario es el precio del trabajo, y un precio mínimo por sobre el "
+        "equilibrio produce el mismo efecto que en cualquier otro mercado.\nA ese "
+        "salario más personas quieren trabajar y las empresas están dispuestas a "
+        "contratar menos horas, de modo que aparece un excedente de oferta, que en "
+        "este mercado se llama desempleo.\nEl efecto depende de cuán por encima del "
+        "equilibrio quede el mínimo y de qué tan sensible sea la contratación al "
+        "costo, y por eso su magnitud se discute caso a caso.",
+        [
+            ("Más puestos ofrecidos que personas dispuestas a trabajar", "Invierte la situación: el precio alto atrae oferta de trabajo, no demanda."),
+            ("El mercado se equilibra en el nuevo salario fijado", "Un precio impuesto sobre el equilibrio no iguala ambas cantidades."),
+            ("Ningún efecto, porque los salarios los fija cada empresa", "Un mínimo legal obliga a todas las empresas del mercado."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Una fábrica produce 10.000 unidades con un costo total de $30.000.000. Al "
+        "producir 30.000 unidades, su costo total sube a $63.000.000. ¿Qué ocurre "
+        "con el costo por unidad?",
+        "Baja de $3.000 a $2.100",
+        "El costo por unidad se obtiene dividiendo el costo total por la cantidad "
+        "producida.\nCon 10.000 unidades: 30.000.000 ÷ 10.000 = $3.000. Con 30.000 "
+        "unidades: 63.000.000 ÷ 30.000 = $2.100.\nEse descenso se llama economía de "
+        "escala: el costo total sube menos que proporcionalmente porque los costos "
+        "fijos se reparten entre más unidades. Es también una barrera de entrada, "
+        "porque un competidor pequeño no puede igualar ese costo.",
+        [
+            ("Sube de $3.000 a $2.100 por unidad", "De 3.000 a 2.100 el costo baja, no sube."),
+            ("Se mantiene en $3.000 por unidad", "El costo total no se triplicó al triplicarse la producción."),
+            ("Baja de $3.000 a $630 por unidad", "Divide el costo total por la producción inicial y no por la nueva."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "medio",
+        "Cuando sube el ingreso de los hogares, la venta de pasajes de avión crece "
+        "mucho más que la de pan. ¿Qué muestra esa diferencia?",
+        "Los pasajes responden más al ingreso",
+        "La sensibilidad de la demanda al ingreso varía según el bien, y ese es "
+        "justamente el rasgo que la comparación revela.\nEl pan cubre una necesidad "
+        "que ya se satisfacía antes del alza, de modo que un ingreso mayor no lleva "
+        "a comprar mucho más. Un pasaje de avión, en cambio, es un gasto que se "
+        "posterga cuando el presupuesto es estrecho.\nLos dos son bienes normales, "
+        "porque su demanda sube con el ingreso; lo que los distingue es cuánto "
+        "sube.",
+        [
+            ("El pan es un bien inferior y el pasaje, normal", "Un bien inferior reduce su demanda al subir el ingreso, y el pan no la reduce."),
+            ("Los pasajes tienen más sustitutos que el pan", "La comparación es con el ingreso, no con el precio de otros bienes."),
+            ("El precio de los pasajes bajó en ese período", "El enunciado atribuye el cambio al ingreso, no al precio."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Dos marcas de bebida venden un producto casi idéntico y cada una gasta "
+        "fuertemente en publicidad. ¿Qué explica ese gasto?",
+        "Buscan que su producto no parezca reemplazable",
+        "Si los compradores consideran ambos productos intercambiables, la única "
+        "manera de ganar clientes es bajar el precio, y esa competencia empuja el "
+        "margen de las dos hacia abajo.\nLa publicidad busca romper esa "
+        "equivalencia: si una parte de los consumidores prefiere una marca en "
+        "particular, esa empresa puede sostener un precio algo mayor sin "
+        "perderlos.\nEsa es la lógica de la competencia monopolística: muchos "
+        "oferentes, productos diferenciados y cada empresa con algún margen sobre "
+        "el precio de lo suyo.",
+        [
+            ("Informar a los consumidores sobre la calidad del producto", "El enunciado precisa que los productos son casi idénticos: no hay diferencia que informar."),
+            ("Cumplir una exigencia legal para vender el producto", "No existe ninguna obligación de publicitar un producto."),
+            ("Aumentar la oferta total del mercado de bebidas", "La publicidad busca repartir la demanda, no producir más."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Tras fijarse un precio máximo muy por debajo del equilibrio, aparece una "
+        "reventa informal del producto a precios altos. ¿Cómo se explica?",
+        "El precio bajo no eliminó la escasez",
+        "El tope fija cuánto se puede cobrar, no cuánto producto hay. A ese precio "
+        "la cantidad demandada supera a la ofrecida, y esa diferencia no desaparece "
+        "porque una norma lo disponga.\nAlguien tiene que quedarse sin producto, y "
+        "quienes lo valoran más que el precio legal están dispuestos a pagar por "
+        "conseguirlo.\nEl resultado es que parte del mercado se traslada fuera de "
+        "la norma, y el precio que ahí se paga suele ser mayor que el que habría "
+        "existido sin tope, porque incorpora el riesgo de operar al margen.",
+        [
+            ("El tope aumentó la cantidad demandada y también la ofrecida", "Un precio bajo aumenta la demanda y reduce la oferta."),
+            ("Los productores acordaron entre sí subir el precio", "No hace falta ningún acuerdo: la escasez basta para explicarlo."),
+            ("La reventa demuestra que el precio de equilibrio era muy alto", "Muestra lo contrario: hay quien pagaría más que el precio legal."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "Un taller puede producir una unidad más con un costo adicional de $8.000 y "
+        "venderla en $7.000. ¿Qué le conviene hacer y por qué?",
+        "No producirla: pierde $1.000 en esa unidad",
+        "La decisión sobre una unidad adicional se toma comparando lo que agrega al "
+        "ingreso con lo que agrega al costo, y no con el promedio de las unidades "
+        "anteriores.\nAquí esa unidad suma $7.000 de ingreso y $8.000 de costo, de "
+        "modo que producirla reduce la ganancia total en $1.000.\nQue las unidades "
+        "anteriores hayan sido rentables no cambia el cálculo: cada unidad "
+        "adicional se evalúa por sí sola, porque los costos ya comprometidos se "
+        "pagan igual.",
+        [
+            ("Producirla, porque cada venta agrega ingreso al taller", "Agrega ingreso y agrega más costo: el saldo es negativo."),
+            ("Producirla si las unidades anteriores dieron ganancia", "La rentabilidad previa no altera el resultado de esta unidad."),
+            ("Producirla y subir el precio de todas las unidades", "El enunciado fija el precio de venta: no es una variable de la decisión."),
+        ],
+    ),
+    _q(
+        "eco_mercado", "dificil",
+        "¿Qué diferencia hay entre un monopolio y una competencia monopolística?",
+        "En una hay un oferente y en la otra, muchos",
+        "El monopolio tiene un solo oferente y por eso enfrenta a toda la demanda "
+        "del mercado: puede fijar el precio sin que nadie ofrezca lo mismo.\nLa "
+        "competencia monopolística tiene muchos oferentes, y lo que cada uno "
+        "controla es solo su versión del producto, diferenciada por marca, calidad "
+        "percibida o ubicación.\nEl margen del segundo es por eso mucho más "
+        "estrecho: si sube demasiado el precio, el comprador se cambia a otra "
+        "marca, opción que en un monopolio no existe.",
+        [
+            ("En una el producto es homogéneo y en la otra, diferenciado", "Ambas pueden tener producto diferenciado: la diferencia está en el número de oferentes."),
+            ("En una el Estado regula el precio y en la otra, no", "La regulación es una respuesta posible, no parte de la definición."),
+            ("En una existen barreras de entrada y en la otra, ninguna", "La competencia monopolística también puede tener barreras menores."),
+        ],
+    ),
     _ql(
         "eco_tendencias_trabajo", "eco_laborales", "facil",
         "Según el texto, ¿sobre qué figura se construyó el derecho laboral?",
