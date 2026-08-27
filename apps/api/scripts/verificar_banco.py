@@ -164,7 +164,7 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "ofrecen 800 unidades": str(800 - 500),
     "vende 200 unidades a 3.000 pesos": f"{3_000 * 200:,}".replace(",", "."),
     "cayó el sector primario": str(55 - 11),
-    "comienza en 1810 y termina en 1830": str(1830 - 1810),
+    "comienza en 1798 y termina en 1802": str(1802 - 1798),
     # Segunda tanda de Ciencias
     "recorre 300 m en 20 s": str((300 + 100) // (20 + 5)),
     "lanza verticalmente hacia arriba a 30 m/s": str(30 // 10),
@@ -231,6 +231,29 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # Fuentes nuevas de Historia
     "mujeres rurales entre 1930 y 2020": str(96 - 19),
     "plebiscito de 2020 que en la municipal de 2016": f"{23_000 - 15_400:,}".replace(",", "."),
+    # Ampliación de Historia: la tabla de oferta y demanda de la feria
+    # mayorista. El equilibrio está en $400 con 600 cajas; a $300 se demandan
+    # 750 y se ofrecen 450, y a $500 se ofrecen 750 y se demandan 450.
+    "precio máximo de $300 por caja": str(750 - 450),
+    "Si el precio se fija en $500 por caja": str(750 - 450),
+    "ingreso total de los vendedores en el equilibrio": f"{400 * 600:,}".replace(",", "."),
+    # Ampliación de Historia: costos y escala en eco_mercado. La panadería tiene
+    # $600.000 de costo fijo y $400 por unidad; vende a $1.000, así que cada pan
+    # deja $600 de margen para cubrir el arriendo.
+    "$400 en insumos por cada pan": f"{600_000 + 400 * 2_000:,}".replace(",", "."),
+    "¿Cuántos panes debe vender al mes": f"{600_000 // (1_000 - 400):,}".replace(",", "."),
+    "su costo total sube a $63.000.000": f"{63_000_000 // 30_000:,}".replace(",", "."),
+    "vendía 400 kilos de arroz por semana": f"{1_000 * 500:,}".replace(",", "."),
+    "compra paltas a $1.500 el kilo": f"{(2_400 - 1_500) * 120 - 18_000:,}".replace(",", "."),
+    # eco_indicadores: empleo, cuentas externas y precios
+    "6.500.000 de ellas forman parte de la fuerza": f"{6_500_000 * 100 // 10_000_000}%",
+    "6.000.000 de personas están ocupadas": f"{6_000_000 * 100 // 10_000_000}%",
+    "exportó bienes por 45.000 millones": f"{45_000 - 38_000:,}".replace(",", "."),
+    "deuda pública de un país es de 90.000 millones": f"{90_000 * 100 // 300_000}%",
+    "10% el primer año y de 10% el segundo": f"{round((1.10 * 1.10 - 1) * 100)}%",
+    "canasta básica se estima en $60.000": f"{60_000 * 4:,}".replace(",", "."),
+    "54.000 millones de dólares a gasto social": f"{54_000 * 100 // 300_000}%",
+    "20 trabajadores producen 400 unidades": f"{400 // 20} unidades",
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),
