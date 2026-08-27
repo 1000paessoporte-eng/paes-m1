@@ -58239,6 +58239,234 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "his_duraciones", "his_temporal", "facil",
+        "Según el texto, ¿qué escala temporal abarca décadas?",
+        "La media duración",
+        "El texto ordena tres escalas por su extensión: el acontecimiento dura días "
+        "o meses, la media duración abarca décadas y los procesos de larga duración "
+        "se extienden por siglos.\nLos ejemplos que da para la media duración son "
+        "una crisis económica y un ciclo político: cosas que alguien puede ver "
+        "empezar y terminar a lo largo de su vida adulta.\nLa escala importa porque "
+        "fija qué se puede observar. Un proceso de siglos no se detecta mirando un "
+        "año, y un acontecimiento se pierde si solo se miran siglos.",
+        [
+            ("El acontecimiento", "El texto lo sitúa en días o meses, como una batalla o una elección."),
+            ("La larga duración", "Esa se extiende por siglos: mentalidades y estructuras económicas."),
+            ("La periodización", "No es una escala de tiempo sino la herramienta que divide el tiempo en etapas."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "facil",
+        "Un hecho ocurrió en el año 1600. Según la regla del texto, ¿a qué siglo "
+        "pertenece?",
+        "Al siglo XVI",
+        "El texto da la regla y su excepción: se toman las dos primeras cifras del "
+        "año y se suma uno, salvo que el año termine exactamente en 00.\n1600 "
+        "termina en 00, así que la excepción se aplica y el año cierra el siglo XVI "
+        "en vez de abrir el XVII. El texto lo dice de otra manera al señalar que el "
+        "siglo XVI comprende de 1501 a 1600.\nLa regla existe porque el primer "
+        "siglo va del año 1 al 100: no hubo año cero, y ese desfase se arrastra "
+        "hasta hoy.",
+        [
+            ("Al siglo XVII", "Sería el resultado de aplicar la regla general olvidando la excepción del 00."),
+            ("Al siglo XV", "El siglo XV termina en 1500, cien años antes."),
+            ("Al siglo XVIII", "El siglo XVIII comprende de 1701 a 1800."),
+        ],
+    ),
+    _ql(
+        "his_cambio_continuidad", "his_temporal", "facil",
+        "Según el texto, ¿qué plano de la realidad puede transformarse en meses?",
+        "El político",
+        "El texto ordena los planos por velocidad: lo político puede transformarse "
+        "en meses, lo económico en décadas, y las mentalidades y las estructuras "
+        "sociales en siglos.\nPor eso un mismo proceso admite lecturas opuestas "
+        "según el plano que se mire: la independencia cambió el régimen político y "
+        "dejó casi intacta la propiedad de la tierra.\nConfundir la velocidad de un "
+        "plano con la del conjunto es el error que el texto quiere evitar cuando "
+        "pide precisar qué cambió y a qué ritmo.",
+        [
+            ("El económico", "El texto le asigna décadas, no meses."),
+            ("Las mentalidades", "El texto las sitúa en la escala de los siglos."),
+            ("Las estructuras sociales", "El texto las pone junto a las mentalidades, en siglos."),
+        ],
+    ),
+    _ql(
+        "his_duraciones", "his_temporal", "facil",
+        "Según el texto, ¿cómo se obtiene la extensión de un período?",
+        "Restando el año inicial del final",
+        "El texto separa dos operaciones que suelen confundirse. Para ubicar un "
+        "hecho en un siglo se toman las dos primeras cifras del año y se suma uno; "
+        "para medir cuánto duró un período se resta el año inicial del final.\nSon "
+        "cosas distintas porque responden preguntas distintas: una sitúa, la otra "
+        "mide.\nDe ahí que un período breve pueda cruzar dos siglos, como el que va "
+        "de 1798 a 1802, y que eso no diga nada sobre su duración.",
+        [
+            ("Sumando uno a las dos primeras cifras del año final", "Esa es la regla para ubicar un año en su siglo, no para medir un período."),
+            ("Contando los siglos que el período atraviesa", "Un período de cuatro años puede cruzar dos siglos sin durar doscientos."),
+            ("Dividiendo el período según sus escalas de duración", "Las escalas describen la velocidad del cambio, no la extensión del período."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "facil",
+        "Según el texto, ¿qué es una fuente histórica?",
+        "Cualquier vestigio que permita conocer el pasado",
+        "El texto abre con esa definición, deliberadamente amplia: cualquier "
+        "vestigio que permita conocer el pasado.\nLa amplitud no es descuido. Si la "
+        "definición exigiera que la fuente fuera escrita, o que hubiera sido "
+        "producida para dejar registro, quedarían fuera las herramientas, los "
+        "edificios y los relatos orales, que son lo único disponible para buena "
+        "parte de las sociedades.\nLas clasificaciones vienen después: primaria o "
+        "secundaria según la distancia a los hechos, escrita, material u oral según "
+        "el soporte.",
+        [
+            ("Un documento escrito en la época que se estudia", "Eso describe una fuente primaria escrita, que es un caso particular."),
+            ("Un texto de historia que interpreta los hechos", "Eso es una fuente secundaria, también un caso particular."),
+            ("Un relato transmitido por quienes vivieron el hecho", "Es una fuente oral: otro caso particular de la definición."),
+        ],
+    ),
+    _ql(
+        "his_tipos_fuentes", "his_fuentes", "facil",
+        "Según el texto, ¿cuáles de estos son ejemplos de fuentes primarias?",
+        "Cartas, actas, fotografías y registros parroquiales",
+        "El texto enumera como primarias las producidas en la época estudiada: "
+        "cartas, actas, fotografías, herramientas, edificios y registros "
+        "parroquiales.\nNinguna de ellas es primaria por su formato. Lo son porque "
+        "nacieron dentro del período que se investiga, y por eso una fotografía de "
+        "1910 es primaria para el estudio de 1910 y secundaria para nada.\nEl texto "
+        "insiste en que la diferencia no está en la calidad sino en la distancia "
+        "respecto de los hechos.",
+        [
+            ("Libros de historia y artículos académicos", "El texto los da como ejemplos de fuentes secundarias."),
+            ("Solo los documentos oficiales de la época", "La lista del texto incluye cartas, fotografías y objetos, no solo documentos oficiales."),
+            ("Las fuentes escritas, a diferencia de las materiales", "El soporte es otra clasificación: hay primarias escritas, materiales y orales."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "facil",
+        "Según la Fuente 1, ¿a quién atribuye el administrador las quejas?",
+        "A agitadores venidos de fuera",
+        "El administrador es explícito: las quejas provienen de agitadores venidos "
+        "de fuera, ajenos por completo a la vida de la pampa, y no del "
+        "personal.\nLa atribución cumple una función dentro del informe. Si el "
+        "descontento viene de afuera, la oficina no tiene nada que corregir; si "
+        "viniera del personal, habría que revisar las condiciones que el mismo "
+        "informe describe como buenas.\nLa Fuente 2 responde exactamente a eso "
+        "cuando dice que nadie los agita.",
+        [
+            ("A los operarios de la oficina", "El informe sostiene lo contrario: dice que el personal cumple sin reparos."),
+            ("A la falta de escuela y de agua", "El informe presenta ambas como servicios que la oficina sí ofrece."),
+            ("Al precio de los artículos de la pulpería", "Ese reclamo aparece en la Fuente 2, no en el informe."),
+        ],
+    ),
+    _ql(
+        "fuentes_salitre", "his_fuentes", "facil",
+        "Según la Fuente 2, ¿en qué se pagaba el trabajo en la oficina?",
+        "En fichas que solo servían en la pulpería",
+        "La carta lo dice sin rodeos: el pago no venía en dinero sino en fichas que "
+        "solo servían en la pulpería de la misma oficina.\nEl detalle que sigue es "
+        "el que importa: allí el precio lo ponía la propia empresa. Un salario que "
+        "solo puede gastarse en un negocio cuyo dueño fija los precios no es del "
+        "todo un salario.\nDe ahí la frase con que cierra el pasaje: uno trabaja el "
+        "mes entero y termina debiendo.",
+        [
+            ("En dinero, con descuento por el alojamiento", "La carta niega justamente que el pago viniera en dinero."),
+            ("En mercadería traída del sur", "La carta no menciona pago en mercadería, sino en fichas."),
+            ("En dinero más una ración de agua", "La carta dice que el agua se compraba."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "his_fuentes", "facil",
+        "Según la Fuente 1, ¿qué concesión anterior considera prudente el "
+        "parlamentario?",
+        "Haber concedido el voto municipal",
+        "El parlamentario distingue entre dos cosas: concederle el voto municipal a "
+        "la mujer le parece prudente, y extenderlo a la elección presidencial le "
+        "parece «otra cosa».\nLa distinción le permite oponerse sin declararse "
+        "contrario al voto femenino, que es la posición que su intervención "
+        "necesita sostener.\nLa Fuente 2 no discute esa distinción: discute la "
+        "prudencia de esperar, y responde que llevan esperando desde que existe la "
+        "República.",
+        [
+            ("Haber ampliado la educación de la mujer", "La intervención no menciona ninguna concesión en materia educativa."),
+            ("Haber reconocido su papel en el hogar", "Eso es un argumento suyo, no una concesión legal anterior."),
+            ("Haber concedido el voto en elecciones parlamentarias", "Es justamente lo que la intervención resiste."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "facil",
+        "Según el texto, ¿qué significa que los procesos históricos sean "
+        "multicausales?",
+        "Que resultan de la combinación de varios factores",
+        "El texto lo define así: los fenómenos sociales resultan de la combinación "
+        "de factores políticos, económicos, sociales y culturales.\nEl ejemplo que "
+        "da es una revolución, que no se explica solo por el hambre, ni solo por "
+        "las ideas, ni solo por la debilidad del gobierno. Es la convergencia lo "
+        "que la vuelve posible.\nDe ahí la distinción que el texto agrega "
+        "enseguida: causas estructurales, que preparan el terreno durante años, y "
+        "causas inmediatas, que actúan como detonante.",
+        [
+            ("Que cada proceso tiene una causa principal y otras menores", "El texto no jerarquiza una causa por sobre las demás: habla de convergencia."),
+            ("Que sus causas solo pueden conocerse mucho después", "El texto se refiere a la cantidad de factores, no al momento en que se conocen."),
+            ("Que un mismo proceso tuvo consecuencias en varios planos", "Eso describiría multiplicidad de consecuencias, no de causas."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "facil",
+        "Según el texto, ¿qué temas aparecieron cuando la historiografía cambió sus "
+        "preguntas?",
+        "La vida cotidiana, el trabajo de las mujeres y los pueblos sin escritura",
+        "El texto los enumera como ejemplo de lo que ocurre cuando cambian las "
+        "preguntas: aparecieron temas enteros que antes no se investigaban.\nEl "
+        "argumento de fondo es que el pasado no cambia y las preguntas sí. A eso el "
+        "texto suma dos causas materiales: archivos que se abren y técnicas nuevas "
+        "de análisis.\nY cierra con el límite: eso no vuelve arbitraria la "
+        "disciplina, porque las afirmaciones siguen exigiendo evidencia. Lo que "
+        "cambia es qué se busca y con qué herramientas.",
+        [
+            ("Las batallas, los tratados y las dinastías de cada nación", "Son los temas clásicos, los que ya se investigaban antes del cambio."),
+            ("Los archivos que se abren y las técnicas nuevas de análisis", "El texto los menciona como causas del cambio, no como los temas que aparecieron."),
+            ("La evidencia que toda afirmación sigue exigiendo", "Son la exigencia que el texto mantiene, no un tema nuevo de investigación."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "facil",
+        "Según el texto, ¿por qué debe entenderse cada época según lo que era "
+        "pensable en ella?",
+        "Porque juzgarla con categorías de otra época es anacronismo",
+        "El texto abre con esa regla: el anacronismo consiste en aplicar al pasado "
+        "categorías, valores o conocimientos de otra época.\nY agrega la razón por "
+        "la que el error importa: reprochar a alguien no saber algo que en su "
+        "tiempo aún no había sido establecido no describe su ignorancia, sino la "
+        "confusión de quien juzga.\nEvitarlo no obliga a aprobar lo que hizo cada "
+        "época. Obliga a explicarla con lo que estaba disponible en ella, que es "
+        "una condición para entender por qué actuó como actuó.",
+        [
+            ("Porque el pasado no puede juzgarse de ninguna manera", "El texto pide evitar el anacronismo, no renunciar a todo juicio."),
+            ("Porque cada época tuvo su propia verdad igualmente válida", "El texto sostiene después que las afirmaciones siguen exigiendo evidencia."),
+            ("Porque las fuentes de otras épocas son poco confiables", "El anacronismo es un error de quien interpreta, no un defecto de las fuentes."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_critico", "facil",
+        "Según el texto, ¿cuáles fueron los tres instrumentos con que el siglo XIX "
+        "produjo la nación?",
+        "La escuela, el servicio militar y el ferrocarril",
+        "El texto los enumera juntos: la escuela primaria obligatoria, que enseñó a "
+        "leer en una lengua única y transmitió un relato del pasado nacional; el "
+        "servicio militar, que reunió bajo la misma disciplina a jóvenes de "
+        "regiones distintas; y el ferrocarril, junto con el telégrafo y el correo, "
+        "que acortó la distancia entre capital y periferia.\nLos tres hacen lo "
+        "mismo por vías distintas: producen una población que comparte lengua, "
+        "relato, calendario y medidas.\nPor eso el texto concluye que primero se "
+        "constituyó el Estado y después este construyó la nación que decía "
+        "representar.",
+        [
+            ("La lengua, la historia común y los símbolos compartidos", "Son el resultado que se buscaba producir, no los instrumentos con que se produjo."),
+            ("El censo, la moneda única y el código civil", "El texto no los menciona entre los instrumentos."),
+            ("Las guerras, las fronteras y los tratados de límites", "El texto los presenta como conflictos que el principio nacional generó, no como instrumentos."),
+        ],
+    ),
     _q(
         "eco_indicadores", "facil",
         "En un país hay 3.000.000 de menores de 15 años, 1.500.000 mayores de 64 y "
@@ -58723,7 +58951,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "dificil",
+        "civ_ninez", "civ_ddhh", "medio",
         "¿Por qué el texto sostiene que ratificar la Convención no basta?",
         "Sin leyes, instituciones y presupuesto no se puede exigir",
         "El texto reconoce que ratificar un tratado obliga al Estado, de modo que "
@@ -58790,7 +59018,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_ddhh", "dificil",
+        "civ_igualdad", "civ_ddhh", "medio",
         "¿Por qué el texto sostiene que un ajuste no otorga ventaja?",
         "Remueve un obstáculo que otros no enfrentan",
         "La objeción habitual es que dar tiempo adicional o un formato distinto "
@@ -59033,7 +59261,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_democracia", "dificil",
+        "civ_constitucion", "civ_democracia", "medio",
         "¿Por qué el texto sostiene que ningún país resolvió de una vez el "
         "equilibrio entre rigidez y flexibilidad constitucional?",
         "Cada grado de rigidez tiene un costo propio",
@@ -59118,7 +59346,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "nacion_impactos", "his_critico", "medio",
+        "nacion_impactos", "his_critico", "facil",
         "Según el texto, ¿qué produjo el principio de que a cada nación le "
         "corresponde un Estado?",
         "Reclamos sobre fronteras que dejaban compatriotas fuera",
@@ -60736,7 +60964,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "eco_tendencias_trabajo", "eco_laborales", "facil",
         "Según el texto, ¿en qué consiste el efecto de la automatización sobre los "
         "puestos de trabajo?",
         "Cambia las tareas dentro de cada puesto",
@@ -60753,7 +60981,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "eco_tendencias_trabajo", "eco_laborales", "facil",
         "Según el texto, ¿qué problema trae el trabajo a distancia junto con sus "
         "ventajas?",
         "Borra el límite entre la jornada y el día",
@@ -60788,7 +61016,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "eco_tendencias_trabajo", "eco_laborales", "facil",
         "Según el texto, ¿qué pregunta corresponde hacerse frente a estas nuevas "
         "modalidades?",
         "Quién dirige el trabajo y quién responde por él",
@@ -60842,7 +61070,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "eco_tendencias_trabajo", "eco_laborales", "medio",
         "¿Por qué el texto afirma que la automatización afecta más a unos "
         "trabajadores que a otros?",
         "Los puestos rutinarios los ocupa quien menos puede capacitarse",
@@ -61215,7 +61443,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_derechos_laborales", "eco_laborales", "medio",
+        "eco_derechos_laborales", "eco_laborales", "facil",
         "Según el texto, ¿qué distingue a la Dirección del Trabajo de los "
         "tribunales laborales?",
         "Fiscaliza y sanciona sin necesidad de un juicio",
@@ -61251,7 +61479,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_derechos_laborales", "eco_laborales", "medio",
+        "eco_derechos_laborales", "eco_laborales", "facil",
         "Según el texto, ¿cuál es el origen de derechos como la jornada limitada o "
         "el descanso semanal?",
         "Conquistas de organizaciones de trabajadores",
@@ -61268,7 +61496,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_derechos_laborales", "eco_laborales", "dificil",
+        "eco_derechos_laborales", "eco_laborales", "medio",
         "¿Por qué el texto sostiene que la irrenunciabilidad se entiende mejor al "
         "revés?",
         "Renunciables serían una condición para contratar",
@@ -61425,7 +61653,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_proyecto_extractivo", "eco_desarrollo", "medio",
+        "eco_proyecto_extractivo", "eco_desarrollo", "facil",
         "Según la Intervención 2, ¿qué límite tiene la garantía que propone la "
         "Intervención 1?",
         "Se ejecuta cuando el daño ya ocurrió",
@@ -61874,7 +62102,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "eco_medir_desarrollo", "eco_desarrollo", "facil",
         "Según el texto, ¿qué error hay que evitar al usar el producto?",
         "Leer una medida de producción como una de bienestar",
         "El texto lo formula al cerrar y es explícito en dónde sitúa el problema: "
@@ -61891,7 +62119,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_medir_desarrollo", "eco_desarrollo", "medio",
+        "eco_medir_desarrollo", "eco_desarrollo", "facil",
         "Según el texto, ¿qué preguntan los indicadores ambientales que el producto "
         "no responde?",
         "Cuánto de lo consumido se repone",
@@ -62118,7 +62346,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_tope_arriendo", "eco_estado_mercado", "medio",
+        "eco_tope_arriendo", "eco_estado_mercado", "facil",
         "Según la Columna 2, ¿qué efecto tiene un precio congelado sobre el estado "
         "del inmueble?",
         "Desincentiva mantenerlo y repararlo",
@@ -62578,7 +62806,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "eco_fallas_mercado", "eco_estado_mercado", "facil",
         "Según el texto, ¿qué efecto tiene la información asimétrica más allá de "
         "perjudicar a algunos compradores?",
         "Los productos buenos se retiran del mercado",
@@ -62613,7 +62841,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "eco_fallas_mercado", "eco_estado_mercado", "medio",
+        "eco_fallas_mercado", "eco_estado_mercado", "facil",
         "Según el texto, ¿qué condiciones hacen que un mercado asigne bien?",
         "Muchos oferentes y compradores informados",
         "El texto las enuncia al abrir, antes de discutir cualquier "
@@ -63117,7 +63345,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_just_mapa", "civ_justicia", "medio",
+        "civ_just_mapa", "civ_justicia", "facil",
         "Según la Tabla 1, ¿qué tribunal ve un reclamo por un producto defectuoso?",
         "El juzgado de policía local, por la ley del consumidor",
         "La Tabla 1 le asigna las infracciones al tránsito y a la ley del "
@@ -63327,7 +63555,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_just_proceso", "civ_justicia", "medio",
+        "civ_just_proceso", "civ_justicia", "facil",
         "Según el texto, ¿qué ocurre con un juicio sin defensa?",
         "Se convierte en un monólogo: nadie discute la acusación",
         "El texto describe el mecanismo: alguien acusa, nadie discute la acusación "
@@ -63360,7 +63588,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_just_proceso", "civ_justicia", "medio",
+        "civ_just_proceso", "civ_justicia", "facil",
         "Según el texto, ¿qué consecuencia práctica tiene la presunción de "
         "inocencia?",
         "La carga de la prueba recae en quien acusa",
@@ -63448,7 +63676,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_just_proceso", "civ_justicia", "dificil",
+        "civ_just_proceso", "civ_justicia", "medio",
         "¿Por qué el texto sostiene que la defensa protege también al tribunal y no "
         "solo al imputado?",
         "Sin contradicción el tribunal decide sobre una sola versión",
@@ -63570,7 +63798,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_info_regulacion", "civ_informacion", "medio",
+        "civ_info_regulacion", "civ_informacion", "facil",
         "Según la Intervención 2, ¿quién resulta perjudicado por el exceso de "
         "eliminación?",
         "Quien publica algo incómodo y lo ve desaparecer",
@@ -64093,7 +64321,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_info_desinformacion", "civ_informacion", "medio",
+        "civ_info_desinformacion", "civ_informacion", "facil",
         "Según el texto, ¿qué efecto tiene que a cada persona se le muestre sobre "
         "todo aquello con lo que ya interactúa?",
         "Su entorno informativo se vuelve más homogéneo",
@@ -64129,7 +64357,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_info_desinformacion", "civ_informacion", "medio",
+        "civ_info_desinformacion", "civ_informacion", "facil",
         "Según el texto, ¿cuáles son las tres medidas previas que propone?",
         "Ver quién publica, desconfiar y sostener medios serios",
         "El texto las enumera: saber quién publica algo y con qué financiamiento, "
@@ -64638,7 +64866,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_inst_tramitacion", "civ_institucionalidad", "medio",
+        "civ_inst_tramitacion", "civ_institucionalidad", "facil",
         "Según la Tabla 1, ¿qué ocurre en el tercer trámite?",
         "La cámara de origen revisa los cambios hechos",
         "La fila correspondiente lo indica: el proyecto vuelve a la sala de la "
@@ -64901,7 +65129,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_inst_autonomos", "civ_institucionalidad", "medio",
+        "civ_inst_autonomos", "civ_institucionalidad", "facil",
         "Según el texto, ¿qué problema de plazos justifica la autonomía del Banco "
         "Central?",
         "La política monetaria rinde después de la elección siguiente",
@@ -64958,7 +65186,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_inst_autonomos", "civ_institucionalidad", "dificil",
+        "civ_inst_autonomos", "civ_institucionalidad", "medio",
         "¿Por qué el texto sostiene que el control de la Contraloría es jurídico y "
         "no político?",
         "Revisa atribuciones, no la conveniencia de la medida",
@@ -65613,7 +65841,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "dictadura_interpretaciones", "his_dictadura", "facil",
         "Según el texto, ¿qué es lo que sí distingue a las tres explicaciones entre "
         "sí?",
         "Dónde ponen la responsabilidad del quiebre",
@@ -65650,7 +65878,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "dictadura_interpretaciones", "his_dictadura", "medio",
+        "dictadura_interpretaciones", "his_dictadura", "facil",
         "Según el texto, ¿qué aporta la tercera explicación que las otras dos no "
         "consideran?",
         "El contexto internacional y la intervención externa",
@@ -66392,7 +66620,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "chile_xx_migracion", "his_chile_xx", "medio",
+        "chile_xx_migracion", "his_chile_xx", "facil",
         "Según la Fuente 2, ¿qué desajuste identifica la comisión entre expectativa "
         "y realidad?",
         "Se espera empleo industrial que la ciudad no puede ofrecer",
@@ -66607,7 +66835,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "guerra_fria_final", "his_guerra_fria", "medio",
+        "guerra_fria_final", "his_guerra_fria", "facil",
         "Según el texto, ¿qué le dio el derrumbe del bloque contrario al programa "
         "económico que ya se aplicaba antes de 1989?",
         "La ausencia de un modelo rival con el cual compararlo",
@@ -67385,7 +67613,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "posguerra_marco_regulador", "his_posguerra", "facil",
         "Según el texto, ¿en qué consistió el efecto real de la declaración de "
         "1948?",
         "Instaló un lenguaje con el que se puede acusar a un gobierno",
@@ -67423,7 +67651,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "posguerra_marco_regulador", "his_posguerra", "medio",
+        "posguerra_marco_regulador", "his_posguerra", "facil",
         "Según el texto, ¿qué precio tuvo el diseño del consejo de seguridad?",
         "Una desigualdad escrita en el propio tratado fundacional",
         "El texto reconoce el objetivo del diseño —corregir el defecto de la "
@@ -68175,7 +68403,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
+        "crisis_bienestar_populismo", "his_crisis_liberal", "facil",
         "Según el texto, ¿en qué se diferenció la experiencia chilena del período "
         "de otras de la región?",
         "Mantuvo elecciones competitivas y alternancia mientras ampliaba el Estado",
@@ -68270,7 +68498,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "crisis_bienestar_populismo", "his_crisis_liberal", "dificil",
+        "crisis_bienestar_populismo", "his_crisis_liberal", "medio",
         "¿Por qué el texto sostiene que la desocupación de los años treinta no era "
         "un desajuste pasajero?",
         "Porque ningún mecanismo automático la reabsorbió",
@@ -75151,16 +75379,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_institucionalidad", "medio",
+        "civ_poderes", "civ_institucionalidad", "facil",
         "Según el texto, ¿cuál es el papel del Presidente en el proceso de "
         "formación de una ley?",
         "Puede presentar, vetar y promulgar, pero no legisla",
-        "El texto describe una participación acotada: el Presidente interviene "
-        "en varias etapas, sin reemplazar al Congreso.\n\n"
-        "Un proyecto debe ser aprobado por ambas cámaras antes de llegar a él "
-        "para su promulgación.\n\n"
-        "Esa cooperación forzada entre dos poderes es parte del diseño: ninguno "
-        "puede legislar por su cuenta.",
+        "El texto describe una participación acotada: el Presidente interviene en "
+        "varias etapas, sin reemplazar al Congreso.\n\nUn proyecto debe ser "
+        "aprobado por ambas cámaras antes de llegar a él para su "
+        "promulgación.\n\nEsa cooperación forzada entre dos poderes es parte del "
+        "diseño: ninguno puede legislar por su cuenta.",
         [
             ("Aprueba las leyes en reemplazo del Congreso cuando hay urgencia", "El texto señala que no legisla por sí solo."),
             ("No participa en absoluto del proceso legislativo", "Puede presentar proyectos, vetar y promulgar."),
@@ -75185,16 +75412,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_institucionalidad", "medio",
+        "civ_poderes", "civ_institucionalidad", "facil",
         "Según el texto, ¿qué funciones cumple el concejo municipal?",
         "Normativas, resolutivas y de fiscalización",
-        "El texto enumera las tres funciones y agrega dos tareas concretas: "
-        "aprueba el presupuesto comunal y controla la gestión del alcalde."
-        "\n\n"
-        "La fiscalización es la más relevante: introduce un contrapeso dentro "
-        "del propio municipio.\n\n"
-        "Ambas autoridades son elegidas por votación popular, así que el "
-        "control no viene de arriba sino de otro órgano con el mismo origen.",
+        "El texto enumera las tres funciones y agrega dos tareas concretas: aprueba "
+        "el presupuesto comunal y controla la gestión del alcalde.\n\nLa "
+        "fiscalización es la más relevante: introduce un contrapeso dentro del "
+        "propio municipio.\n\nAmbas autoridades son elegidas por votación popular, "
+        "así que el control no viene de arriba sino de otro órgano con el mismo "
+        "origen.",
         [
             ("Únicamente asesorar al alcalde en sus decisiones", "El texto le atribuye funciones resolutivas y de fiscalización, no solo asesoría."),
             ("Designar al alcalde de entre sus miembros", "El alcalde es elegido por votación popular."),
@@ -75202,17 +75428,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_sufragio", "civ_democracia", "medio",
+        "civ_sufragio", "civ_democracia", "facil",
         "Según el texto, ¿qué significa que el sufragio sea secreto y para qué "
         "sirve?",
         "Que nadie puede saber qué votó y por lo tanto presionar",
         "El texto liga la característica a su propósito: el secreto existe para "
-        "impedir la presión.\n\n"
-        "Si el voto fuera conocido, un empleador, un dirigente o un familiar "
-        "podría condicionarlo, y la libertad de elegir se volvería nominal."
-        "\n\n"
-        "Cada uno de los cuatro adjetivos del sufragio responde a un abuso "
-        "histórico concreto; este responde al de la coacción.",
+        "impedir la presión.\n\nSi el voto fuera conocido, un empleador, un "
+        "dirigente o un familiar podría condicionarlo, y la libertad de elegir se "
+        "volvería nominal.\n\nCada uno de los cuatro adjetivos del sufragio "
+        "responde a un abuso histórico concreto; este responde al de la coacción.",
         [
             ("Que el conteo de votos se realiza en privado", "El escrutinio es público; lo secreto es el voto individual."),
             ("Que solo la autoridad electoral conoce el resultado", "El resultado es público."),
@@ -75237,16 +75461,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_sufragio", "civ_democracia", "medio",
+        "civ_sufragio", "civ_democracia", "facil",
         "Según el texto, ¿qué demuestra la alternancia en el poder?",
         "Que quien pierde acepta el resultado y entrega el poder",
         "El texto enumera las tres cosas que la alternancia prueba, y las tres "
-        "importan por separado.\n\n"
-        "Que las elecciones sean competitivas descarta que estén amarradas; "
-        "que el perdedor acepte descarta el fraude denunciado; que el poder se "
-        "entregue descarta el atrincheramiento.\n\n"
-        "Un sistema donde el oficialismo nunca puede perder tiene elecciones, "
-        "pero no competencia real.",
+        "importan por separado.\n\nQue las elecciones sean competitivas descarta "
+        "que estén amarradas; que el perdedor acepte descarta el fraude denunciado; "
+        "que el poder se entregue descarta el atrincheramiento.\n\nUn sistema donde "
+        "el oficialismo nunca puede perder tiene elecciones, pero no competencia "
+        "real.",
         [
             ("Que el gobierno saliente hizo mal su trabajo", "La alternancia no es un juicio sobre la gestión."),
             ("Que la ciudadanía cambia de opinión con facilidad", "El texto no interpreta la alternancia como volatilidad."),
@@ -75254,7 +75477,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_ddhh", "medio",
+        "civ_ddhh", "civ_ddhh", "facil",
         "Según el texto, ¿qué significa que los derechos humanos sean inalienables?",
         "Que nadie puede renunciar a ellos ni ser despojado de ellos",
         "El texto lo señala al cerrar el primer párrafo: son inalienables porque "
@@ -75326,16 +75549,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_justicia", "medio",
+        "civ_proteccion", "civ_justicia", "facil",
         "Según el texto, ¿qué distingue al recurso de protección de un juicio "
         "ordinario?",
         "Su rapidez: no espera a que termine un juicio completo",
-        "El texto lo señala como su característica definitoria.\n\n"
-        "Un juicio ordinario puede tomar años, y hay vulneraciones que no "
-        "admiten esa espera: una amenaza a la vida o a la salud requiere "
-        "respuesta inmediata.\n\n"
-        "Por eso se acude directamente a la Corte de Apelaciones, saltándose "
-        "las etapas de un procedimiento común.",
+        "El texto lo señala como su característica definitoria.\n\nUn juicio "
+        "ordinario puede tomar años, y hay vulneraciones que no admiten esa espera: "
+        "una amenaza a la vida o a la salud requiere respuesta inmediata.\n\nPor "
+        "eso se acude directamente a la Corte de Apelaciones, saltándose las etapas "
+        "de un procedimiento común.",
         [
             ("Que solo pueden usarlo los abogados", "El texto señala que puede acudir cualquier persona."),
             ("Que no requiere presentarse ante un tribunal", "Se presenta ante la Corte de Apelaciones."),
@@ -75446,15 +75668,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_critico", "medio",
+        "his_oficio", "his_critico", "facil",
         "Según el texto, ¿qué distingue una causa estructural de una inmediata?",
         "La estructural prepara el terreno; la inmediata detona",
-        "El texto introduce la distinción al hablar de multicausalidad.\n\n"
-        "Las causas estructurales operan lentamente y crean las condiciones: "
+        "El texto introduce la distinción al hablar de multicausalidad.\n\nLas "
+        "causas estructurales operan lentamente y crean las condiciones: "
         "desigualdad acumulada, deterioro institucional. Las inmediatas son el "
-        "hecho puntual que desencadena.\n\n"
-        "Confundirlas hace que el detonante parezca la explicación completa, "
-        "que es el error más común al contar un proceso histórico.",
+        "hecho puntual que desencadena.\n\nConfundirlas hace que el detonante "
+        "parezca la explicación completa, que es el error más común al contar un "
+        "proceso histórico.",
         [
             ("La estructural es política y la inmediata, económica", "Ambas pueden ser de cualquier tipo."),
             ("La estructural es más importante que la inmediata", "El texto no las jerarquiza: operan en tiempos distintos."),
@@ -75735,15 +75957,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_tipos_fuentes", "his_fuentes", "medio",
+        "his_tipos_fuentes", "his_fuentes", "facil",
         "Según el texto, ¿qué costo tiene privilegiar las fuentes escritas?",
         "Dejar fuera a las sociedades sin escritura",
-        "El texto lo señala al hablar de los soportes.\n\n"
-        "Las escritas son las más usadas, pero solo representan a quienes "
-        "escribían: en sociedades con altos niveles de analfabetismo, eso es "
-        "una minoría.\n\n"
-        "Por eso las fuentes materiales y orales no son un complemento menor: "
-        "son la única vía de acceso a sectores enteros de la población.",
+        "El texto lo señala al hablar de los soportes.\n\nLas escritas son las más "
+        "usadas, pero solo representan a quienes escribían: en sociedades con altos "
+        "niveles de analfabetismo, eso es una minoría.\n\nPor eso las fuentes "
+        "materiales y orales no son un complemento menor: son la única vía de "
+        "acceso a sectores enteros de la población.",
         [
             ("Que resultan más difíciles de conservar en el tiempo", "El texto no plantea un problema de conservación."),
             ("Que suelen contener más errores que las orales", "El texto no compara su exactitud."),
@@ -75768,15 +75989,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_tipos_fuentes", "his_fuentes", "medio",
+        "his_tipos_fuentes", "his_fuentes", "facil",
         "Según el texto, ¿cuál es el procedimiento básico frente a una fuente?",
         "Identificar quién la produjo, cuándo y con qué intención",
         "El texto cierra con ese procedimiento de cuatro preguntas más el "
-        "contraste.\n\n"
-        "Ninguna de las preguntas es sobre el contenido: todas son sobre las "
-        "condiciones en que la fuente se produjo.\n\n"
-        "Y agrega el criterio final: «Una sola fuente rara vez basta, y dos que "
-        "coinciden dicen más que una que afirma».",
+        "contraste.\n\nNinguna de las preguntas es sobre el contenido: todas son "
+        "sobre las condiciones en que la fuente se produjo.\n\nY agrega el criterio "
+        "final: «Una sola fuente rara vez basta, y dos que coinciden dicen más que "
+        "una que afirma».",
         [
             ("Determinar si es verdadera o falsa antes de usarla", "El texto propone situarla y contrastarla, no clasificarla en verdadera o falsa."),
             ("Traducirla al lenguaje actual para comprenderla", "La traducción no es el procedimiento que el texto describe."),
@@ -75784,16 +76004,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_tipos_fuentes", "his_fuentes", "medio",
+        "his_tipos_fuentes", "his_fuentes", "facil",
         "Según el texto, ¿qué son las fuentes materiales y qué permiten?",
         "Objetos y restos que informan sobre quienes no escribían",
         "El texto las menciona junto a las orales como alternativa a la fuente "
-        "escrita.\n\n"
-        "Su valor está en que no requieren alfabetización de quien las produjo: "
-        "una herramienta o una vivienda informan sobre la vida de quien nunca "
-        "escribió un documento.\n\n"
-        "Por eso son decisivas para estudiar sociedades sin escritura y "
-        "sectores populares de sociedades que sí la tenían.",
+        "escrita.\n\nSu valor está en que no requieren alfabetización de quien las "
+        "produjo: una herramienta o una vivienda informan sobre la vida de quien "
+        "nunca escribió un documento.\n\nPor eso son decisivas para estudiar "
+        "sociedades sin escritura y sectores populares de sociedades que sí la "
+        "tenían.",
         [
             ("Documentos oficiales conservados en archivos", "Esos son fuentes escritas."),
             ("Testimonios recogidos en entrevistas", "Esas son fuentes orales."),
@@ -75836,16 +76055,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_cambio_continuidad", "his_temporal", "medio",
+        "his_cambio_continuidad", "his_temporal", "facil",
         "Según el texto, ¿qué permaneció tras las independencias?",
         "La propiedad de la tierra y la jerarquía social",
-        "El texto lo enuncia con precisión: la propiedad de la tierra «se "
-        "mantuvo prácticamente intacta» y la sociedad «siguió organizada de "
-        "forma jerárquica».\n\n"
-        "Añade un tercer elemento: mujeres, esclavos y pueblos originarios "
-        "quedaron fuera de la ciudadanía que la república proclamaba.\n\n"
-        "Que el cambio político no arrastrara al social es justamente lo que "
-        "el análisis de continuidades permite ver.",
+        "El texto lo enuncia con precisión: la propiedad de la tierra «se mantuvo "
+        "prácticamente intacta» y la sociedad «siguió organizada de forma "
+        "jerárquica».\n\nAñade un tercer elemento: mujeres, esclavos y pueblos "
+        "originarios quedaron fuera de la ciudadanía que la república "
+        "proclamaba.\n\nQue el cambio político no arrastrara al social es "
+        "justamente lo que el análisis de continuidades permite ver.",
         [
             ("La soberanía radicada en la Corona", "La soberanía sí cambió: pasó a las repúblicas."),
             ("Los símbolos y el vocabulario público", "El texto los incluye entre los cambios."),
@@ -75905,16 +76123,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_cambio_continuidad", "his_temporal", "medio",
+        "his_cambio_continuidad", "his_temporal", "facil",
         "Según el texto, ¿qué grupos quedaron fuera de la ciudadanía que "
         "proclamaban las nuevas repúblicas?",
         "Mujeres, esclavos y pueblos originarios",
         "El texto los enumera al describir lo que permaneció tras las "
-        "independencias.\n\n"
-        "El dato es significativo porque muestra la distancia entre el "
-        "discurso republicano y su aplicación efectiva.\n\n"
-        "La república se proclamaba de todos, y en los hechos la ciudadanía "
-        "quedó restringida a una fracción de la población.",
+        "independencias.\n\nEl dato es significativo porque muestra la distancia "
+        "entre el discurso republicano y su aplicación efectiva.\n\nLa república se "
+        "proclamaba de todos, y en los hechos la ciudadanía quedó restringida a una "
+        "fracción de la población.",
         [
             ("Únicamente los esclavos", "El texto menciona además a mujeres y pueblos originarios."),
             ("Los propietarios de tierras", "Fueron justamente quienes conservaron su posición."),
@@ -76022,16 +76239,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_institucionalidad", "medio",
+        "civ_constitucion", "civ_institucionalidad", "facil",
         "Según el texto, ¿qué distingue la función orgánica de la dogmática?",
         "La orgánica estructura el poder; la dogmática, los derechos",
-        "El texto separa ambas con claridad.\n\n"
-        "La parte orgánica responde cómo se organiza el Estado: qué órganos "
-        "existen, cómo se eligen, qué puede hacer cada uno. La dogmática fija "
-        "los derechos y garantías, es decir «el límite que el poder no puede "
-        "cruzar».\n\n"
-        "Una organiza el poder; la otra lo limita. Ambas son igualmente "
-        "constitucionales.",
+        "El texto separa ambas con claridad.\n\nLa parte orgánica responde cómo se "
+        "organiza el Estado: qué órganos existen, cómo se eligen, qué puede hacer "
+        "cada uno. La dogmática fija los derechos y garantías, es decir «el límite "
+        "que el poder no puede cruzar».\n\nUna organiza el poder; la otra lo "
+        "limita. Ambas son igualmente constitucionales.",
         [
             ("La orgánica es obligatoria y la dogmática, declarativa", "Ambas partes tienen fuerza normativa."),
             ("La orgánica trata del gobierno y la dogmática, de la religión", "La parte dogmática se refiere a derechos y garantías."),
@@ -76124,15 +76339,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_participacion_local", "civ_democracia", "medio",
+        "civ_participacion_local", "civ_democracia", "facil",
         "Según el texto, ¿qué son los presupuestos participativos?",
         "Que los vecinos deciden parte de los recursos municipales",
-        "El texto los menciona entre los mecanismos comunales, junto a los "
-        "consejos de la sociedad civil y las audiencias públicas.\n\n"
-        "Reconoce que su alcance «suele ser acotado»: se decide sobre una parte "
-        "del presupuesto, no sobre el total.\n\n"
-        "Pero les atribuye una virtud concreta: «obligan a discutir prioridades "
-        "en público», que es algo que el presupuesto ordinario no hace.",
+        "El texto los menciona entre los mecanismos comunales, junto a los consejos "
+        "de la sociedad civil y las audiencias públicas.\n\nReconoce que su alcance "
+        "«suele ser acotado»: se decide sobre una parte del presupuesto, no sobre "
+        "el total.\n\nPero les atribuye una virtud concreta: «obligan a discutir "
+        "prioridades en público», que es algo que el presupuesto ordinario no hace.",
         [
             ("Una consulta no vinculante sobre el gasto municipal", "El texto señala que los vecinos deciden, no solo opinan."),
             ("El presupuesto que el alcalde presenta cada año", "Ese es el presupuesto comunal ordinario."),
@@ -76140,15 +76354,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_participacion_local", "civ_democracia", "medio",
+        "civ_participacion_local", "civ_democracia", "facil",
         "Según el texto, ¿qué permite el derecho de petición?",
         "Dirigirse a la autoridad y obtener respuesta",
-        "El texto lo describe brevemente entre los mecanismos disponibles."
-        "\n\n"
-        "Lo decisivo es la segunda parte: no basta con poder escribir, la "
-        "autoridad debe responder.\n\n"
-        "Sin esa obligación de respuesta, el derecho se reduciría a la "
-        "posibilidad de enviar cartas que nadie está obligado a leer.",
+        "El texto lo describe brevemente entre los mecanismos disponibles.\n\nLo "
+        "decisivo es la segunda parte: no basta con poder escribir, la autoridad "
+        "debe responder.\n\nSin esa obligación de respuesta, el derecho se "
+        "reduciría a la posibilidad de enviar cartas que nadie está obligado a "
+        "leer.",
         [
             ("Exigir que la autoridad adopte la medida solicitada", "Garantiza respuesta, no que se acoja lo pedido."),
             ("Presentar demandas ante los tribunales de justicia", "Esa es la vía judicial, distinta del derecho de petición."),
@@ -76203,7 +76416,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_justicia", "medio",
+        "civ_igualdad", "civ_justicia", "facil",
         "Según el texto, ¿cuál es el argumento a favor de las acciones afirmativas?",
         "Que corrigen una desigualdad de partida que la sola igualdad formal no "
         "toca",
@@ -76219,7 +76432,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_justicia", "medio",
+        "civ_igualdad", "civ_justicia", "facil",
         "Según el texto, ¿qué criterio ayuda a distinguir un ajuste de un "
         "privilegio?",
         "Si es temporal y busca cerrar una brecha medible",
@@ -76236,14 +76449,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_justicia", "medio",
+        "civ_igualdad", "civ_justicia", "facil",
         "Según el texto, ¿qué está fuera de discusión en este debate?",
         "Que la distinción arbitraria está prohibida en todo caso",
-        "El texto cierra separando lo discutible de lo que no lo es.\n\n"
-        "El debate sobre acciones afirmativas sigue abierto, pero el punto de "
-        "partida no: la distinción arbitraria está prohibida siempre.\n\n"
-        "Esa distinción entre lo consensuado y lo controvertido es lo que "
-        "permite discutir sin volver a cero cada vez.",
+        "El texto cierra separando lo discutible de lo que no lo es.\n\nEl debate "
+        "sobre acciones afirmativas sigue abierto, pero el punto de partida no: la "
+        "distinción arbitraria está prohibida siempre.\n\nEsa distinción entre lo "
+        "consensuado y lo controvertido es lo que permite discutir sin volver a "
+        "cero cada vez.",
         [
             ("Que las acciones afirmativas son necesarias", "El texto presenta ese punto como discutido."),
             ("Que los ajustes por discapacidad deben ser permanentes", "El texto no se pronuncia sobre su duración."),
@@ -76268,16 +76481,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "medio",
-        "Según el texto, ¿qué establece el principio del interés superior del "
-        "niño?",
+        "civ_ninez", "civ_ddhh", "facil",
+        "Según el texto, ¿qué establece el principio del interés superior del niño?",
         "Que debe primar lo mejor para él en cualquier decisión",
         "El texto lo presenta como el primero de los dos principios "
-        "ordenadores.\n\n"
-        "Su alcance es amplio: aplica a «cualquier decisión que le afecte», sea "
-        "judicial, administrativa o familiar.\n\n"
-        "Lo exigente del principio es que ese interés debe primar «por sobre "
-        "otras consideraciones», incluidas las de los adultos involucrados.",
+        "ordenadores.\n\nSu alcance es amplio: aplica a «cualquier decisión que le "
+        "afecte», sea judicial, administrativa o familiar.\n\nLo exigente del "
+        "principio es que ese interés debe primar «por sobre otras "
+        "consideraciones», incluidas las de los adultos involucrados.",
         [
             ("Que los niños tienen más derechos que los adultos", "No se trata de una jerarquía entre personas sino de un criterio de decisión."),
             ("Que el Estado debe reemplazar a la familia", "El principio orienta las decisiones, no sustituye a la familia."),
@@ -76300,15 +76511,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "medio",
+        "civ_ninez", "civ_ddhh", "facil",
         "Según el texto, ¿qué tipos de derechos abarca la Convención?",
         "Derechos de identidad, familia, educación, salud y juego",
-        "El texto enumera derechos de naturaleza distinta: civiles, sociales y "
-        "de protección.\n\n"
-        "La inclusión del juego y el descanso es la más llamativa, porque "
-        "reconoce necesidades propias de la infancia y no solo versiones "
-        "reducidas de los derechos adultos.\n\n"
-        "Esa amplitud es coherente con el enfoque de sujeto de derecho.",
+        "El texto enumera derechos de naturaleza distinta: civiles, sociales y de "
+        "protección.\n\nLa inclusión del juego y el descanso es la más llamativa, "
+        "porque reconoce necesidades propias de la infancia y no solo versiones "
+        "reducidas de los derechos adultos.\n\nEsa amplitud es coherente con el "
+        "enfoque de sujeto de derecho.",
         [
             ("Solo derechos de protección frente al maltrato", "Ese es uno de los ámbitos, no el único."),
             ("Únicamente el derecho a la educación y la salud", "El texto menciona varios más."),
@@ -76332,16 +76542,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "medio",
+        "civ_ninez", "civ_ddhh", "facil",
         "Según el texto, ¿en qué año ratificó Chile la Convención?",
         "En 1990",
         "El texto lo indica en el cierre: la Convención fue aprobada por las "
-        "Naciones Unidas en 1989 y Chile la ratificó en 1990.\n\n"
-        "Ambas fechas son distintas y conviene no confundirlas: una es la "
-        "aprobación internacional, la otra el compromiso del Estado chileno."
-        "\n\n"
-        "Ratificar es el acto por el cual un país se obliga a cumplir un "
-        "tratado ya aprobado.",
+        "Naciones Unidas en 1989 y Chile la ratificó en 1990.\n\nAmbas fechas son "
+        "distintas y conviene no confundirlas: una es la aprobación internacional, "
+        "la otra el compromiso del Estado chileno.\n\nRatificar es el acto por el "
+        "cual un país se obliga a cumplir un tratado ya aprobado.",
         [
             ("En 1989", "Ese es el año de aprobación por las Naciones Unidas."),
             ("En 1948", "Corresponde a la Declaración Universal de los Derechos Humanos."),
@@ -76454,7 +76662,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_sufragio", "civ_democracia", "medio",
+        "civ_sufragio", "civ_democracia", "facil",
         "Según el texto, ¿qué significa que el sufragio sea personal?",
         "Que nadie puede votar en lugar de otra persona",
         "El texto lo define entre las cuatro características del sufragio en "
@@ -76469,15 +76677,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_justicia", "medio",
+        "civ_poderes", "civ_justicia", "facil",
         "Según el texto, ¿qué órgano encabeza el Poder Judicial?",
         "La Corte Suprema",
-        "El texto lo señala al describir los tres poderes: el Judicial "
-        "resuelve los conflictos aplicando la ley, «con la Corte Suprema a la "
-        "cabeza».\n\n"
-        "Es el tribunal de mayor jerarquía del país.\n\n"
-        "Su independencia respecto de los otros dos poderes es lo que permite "
-        "que pueda resolver conflictos en los que el propio Estado es parte.",
+        "El texto lo señala al describir los tres poderes: el Judicial resuelve los "
+        "conflictos aplicando la ley, «con la Corte Suprema a la cabeza».\n\nEs el "
+        "tribunal de mayor jerarquía del país.\n\nSu independencia respecto de los "
+        "otros dos poderes es lo que permite que pueda resolver conflictos en los "
+        "que el propio Estado es parte.",
         [
             ("El Tribunal Constitucional", "Revisa la constitucionalidad de las normas, con función propia."),
             ("El Ministerio de Justicia", "Es parte del Poder Ejecutivo."),
@@ -76485,17 +76692,16 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_ddhh", "medio",
+        "civ_ddhh", "civ_ddhh", "facil",
         "Según el texto, ¿qué contexto explica el contenido de la Declaración "
         "Universal?",
         "El fin de la Segunda Guerra Mundial y el Holocausto",
         "El texto sitúa la Declaración tres años después del fin de la guerra y "
-        "explica qué la motivó.\n\n"
-        "El Holocausto había mostrado que las atrocidades podían cometerse "
-        "dentro del marco legal de un Estado, con sus propias leyes.\n\n"
-        "De ahí la necesidad de derechos que valgan por encima de cualquier "
-        "legislación nacional: si dependieran de ella, no habrían protegido a "
-        "nadie.",
+        "explica qué la motivó.\n\nEl Holocausto había mostrado que las atrocidades "
+        "podían cometerse dentro del marco legal de un Estado, con sus propias "
+        "leyes.\n\nDe ahí la necesidad de derechos que valgan por encima de "
+        "cualquier legislación nacional: si dependieran de ella, no habrían "
+        "protegido a nadie.",
         [
             ("La independencia de las colonias africanas y asiáticas", "Ese proceso fue posterior."),
             ("La creación de la Sociedad de las Naciones", "Fue anterior y no dio origen a la Declaración."),
@@ -76503,16 +76709,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_justicia", "medio",
-        "Según el texto, ¿ante qué tribunal se presenta el recurso de "
-        "protección?",
+        "civ_proteccion", "civ_justicia", "facil",
+        "Según el texto, ¿ante qué tribunal se presenta el recurso de protección?",
         "Ante la Corte de Apelaciones",
-        "El texto lo indica al describir el mecanismo: permite acudir "
-        "«directamente a la Corte de Apelaciones».\n\n"
-        "La palabra «directamente» importa: no hay que pasar antes por "
-        "tribunales de primera instancia, lo que explica su rapidez.\n\n"
-        "Esa vía abreviada es precisamente lo que lo distingue de un juicio "
-        "ordinario.",
+        "El texto lo indica al describir el mecanismo: permite acudir «directamente "
+        "a la Corte de Apelaciones».\n\nLa palabra «directamente» importa: no hay "
+        "que pasar antes por tribunales de primera instancia, lo que explica su "
+        "rapidez.\n\nEsa vía abreviada es precisamente lo que lo distingue de un "
+        "juicio ordinario.",
         [
             ("Ante el juzgado de policía local", "El texto señala la Corte de Apelaciones."),
             ("Ante el Tribunal Constitucional", "Ese tribunal revisa la constitucionalidad de normas."),
@@ -76520,16 +76724,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_justicia", "medio",
-        "Según el texto, ¿qué garantía contempla la Ley 19.496 frente a un "
-        "producto defectuoso?",
+        "civ_proteccion", "civ_justicia", "facil",
+        "Según el texto, ¿qué garantía contempla la Ley 19.496 frente a un producto "
+        "defectuoso?",
         "Reparación, cambio o devolución del dinero",
-        "El texto enumera las tres opciones al describir la garantía legal."
-        "\n\n"
-        "Son alternativas: el consumidor no queda obligado a aceptar solo la "
-        "reparación si prefiere el cambio o la devolución.\n\n"
-        "El SERNAC es el organismo encargado de velar por su cumplimiento y "
-        "recibir denuncias.",
+        "El texto enumera las tres opciones al describir la garantía legal.\n\nSon "
+        "alternativas: el consumidor no queda obligado a aceptar solo la reparación "
+        "si prefiere el cambio o la devolución.\n\nEl SERNAC es el organismo "
+        "encargado de velar por su cumplimiento y recibir denuncias.",
         [
             ("Únicamente la reparación del producto", "El texto menciona tres alternativas."),
             ("Una indemnización fijada por el tribunal", "La garantía legal opera sin necesidad de juicio."),
@@ -76537,17 +76739,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_justicia", "medio",
-        "Según el texto, ¿qué caracteriza a un ajuste como el tiempo adicional "
-        "en una prueba?",
+        "civ_igualdad", "civ_justicia", "facil",
+        "Según el texto, ¿qué caracteriza a un ajuste como el tiempo adicional en "
+        "una prueba?",
         "Que no otorga ventaja sino que remueve un obstáculo",
         "El texto lo formula exactamente así al hablar de formatos accesibles y "
-        "tiempo adicional.\n\n"
-        "La distinción es precisa: una ventaja mejoraría la posición de quien "
-        "la recibe por sobre los demás; remover un obstáculo lo pone en "
-        "condiciones de competir en igualdad.\n\n"
-        "Confundir ambas cosas es lo que suele estar detrás de la objeción a "
-        "cualquier medida de este tipo.",
+        "tiempo adicional.\n\nLa distinción es precisa: una ventaja mejoraría la "
+        "posición de quien la recibe por sobre los demás; remover un obstáculo lo "
+        "pone en condiciones de competir en igualdad.\n\nConfundir ambas cosas es "
+        "lo que suele estar detrás de la objeción a cualquier medida de este tipo.",
         [
             ("Que reduce el nivel de exigencia de la evaluación", "El ajuste modifica las condiciones, no el estándar."),
             ("Que compensa una desventaja económica", "El ejemplo se refiere a una discapacidad, no a la situación económica."),
@@ -76555,16 +76755,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_institucionalidad", "medio",
-        "Según el texto, ¿qué ocurre con una ley que contradice la "
-        "Constitución?",
+        "civ_constitucion", "civ_institucionalidad", "facil",
+        "Según el texto, ¿qué ocurre con una ley que contradice la Constitución?",
         "Puede ser declarada inconstitucional",
         "El texto lo señala como consecuencia directa de la jerarquía "
-        "constitucional.\n\n"
-        "No basta con que una ley sea aprobada por el Congreso: debe además "
-        "ajustarse a la norma superior.\n\n"
-        "Ese control es lo que convierte la jerarquía en algo efectivo. Sin él, "
-        "la Constitución sería una declaración sin consecuencias prácticas.",
+        "constitucional.\n\nNo basta con que una ley sea aprobada por el Congreso: "
+        "debe además ajustarse a la norma superior.\n\nEse control es lo que "
+        "convierte la jerarquía en algo efectivo. Sin él, la Constitución sería una "
+        "declaración sin consecuencias prácticas.",
         [
             ("Se aplica igualmente por haber sido aprobada por el Congreso", "La aprobación no la exime del control de constitucionalidad."),
             ("Reforma automáticamente la Constitución", "Reformar la Constitución exige un procedimiento especial."),
@@ -76572,16 +76770,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_participacion_local", "civ_democracia", "medio",
+        "civ_participacion_local", "civ_democracia", "facil",
         "Según el texto, ¿qué virtud tienen los mecanismos comunales pese a su "
         "alcance acotado?",
         "Que obligan a discutir prioridades en público",
-        "El texto reconoce que su alcance «suele ser acotado» y de inmediato "
-        "señala su valor.\n\n"
-        "Discutir prioridades en público cambia la naturaleza de la decisión: "
-        "obliga a justificar por qué un proyecto va antes que otro, frente a "
-        "quienes serán afectados.\n\n"
-        "Es una virtud del procedimiento, no del monto involucrado.",
+        "El texto reconoce que su alcance «suele ser acotado» y de inmediato señala "
+        "su valor.\n\nDiscutir prioridades en público cambia la naturaleza de la "
+        "decisión: obliga a justificar por qué un proyecto va antes que otro, "
+        "frente a quienes serán afectados.\n\nEs una virtud del procedimiento, no "
+        "del monto involucrado.",
         [
             ("Que reemplazan la decisión del concejo municipal", "El texto no les atribuye ese alcance."),
             ("Que garantizan mayor presupuesto para la comuna", "No aumentan los recursos disponibles."),
@@ -76589,16 +76786,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "medio",
+        "civ_ninez", "civ_ddhh", "facil",
         "Según el texto, ¿qué predominaba antes de la Convención de 1989?",
         "Que eran objeto de protección y otros decidían por ellos",
-        "El texto describe el enfoque anterior con precisión: alguien decidía "
-        "«en su nombre y sin consultarlos».\n\n"
-        "Protección había, pero desde una posición pasiva: el niño era "
-        "destinatario de decisiones ajenas, no titular de derechos propios."
-        "\n\n"
-        "El cambio de la Convención no fue agregar protección sino cambiar "
-        "quién es el titular.",
+        "El texto describe el enfoque anterior con precisión: alguien decidía «en "
+        "su nombre y sin consultarlos».\n\nProtección había, pero desde una "
+        "posición pasiva: el niño era destinatario de decisiones ajenas, no titular "
+        "de derechos propios.\n\nEl cambio de la Convención no fue agregar "
+        "protección sino cambiar quién es el titular.",
         [
             ("Que los niños tenían los mismos derechos que los adultos", "El reconocimiento como sujetos de derecho vino con la Convención."),
             ("Que no existía ninguna forma de protección a la infancia", "Sí existía, pero desde otro enfoque."),
@@ -76606,17 +76801,16 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_duraciones", "his_temporal", "medio",
+        "his_duraciones", "his_temporal", "facil",
         "Según el texto, ¿cuánto dura un acontecimiento en la escala de las "
         "duraciones históricas?",
         "Días o meses, como una batalla o una elección",
         "El texto ordena tres escalas: el acontecimiento dura días o meses, la "
         "media duración abarca décadas y la larga duración se extiende por "
-        "siglos.\n\n"
-        "Los ejemplos que da para el acontecimiento son una batalla y una "
-        "elección.\n\n"
-        "La escala no mide importancia: un acontecimiento breve puede ser "
-        "decisivo, y un proceso de larga duración puede pasar inadvertido.",
+        "siglos.\n\nLos ejemplos que da para el acontecimiento son una batalla y "
+        "una elección.\n\nLa escala no mide importancia: un acontecimiento breve "
+        "puede ser decisivo, y un proceso de larga duración puede pasar "
+        "inadvertido.",
         [
             ("Décadas, como una crisis económica", "Eso corresponde a la media duración."),
             ("Siglos, como los cambios en las mentalidades", "Esa es la larga duración."),
@@ -76624,16 +76818,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_critico", "medio",
-        "Según el texto, ¿qué ejemplo muestra que una misma acción puede "
-        "significar cosas opuestas?",
+        "his_oficio", "his_critico", "facil",
+        "Según el texto, ¿qué ejemplo muestra que una misma acción puede significar "
+        "cosas opuestas?",
         "Publicar un texto crítico bajo dictadura o en democracia",
-        "El texto lo usa para explicar por qué el contexto es indispensable."
-        "\n\n"
-        "La acción es idéntica en ambos casos; lo que cambia es lo que "
-        "significa y lo que arriesga quien la realiza.\n\n"
-        "Por eso reconstruir el contexto «no es un adorno introductorio»: sin "
-        "él, el historiador describiría gestos vacíos de sentido.",
+        "El texto lo usa para explicar por qué el contexto es indispensable.\n\nLa "
+        "acción es idéntica en ambos casos; lo que cambia es lo que significa y lo "
+        "que arriesga quien la realiza.\n\nPor eso reconstruir el contexto «no es "
+        "un adorno introductorio»: sin él, el historiador describiría gestos vacíos "
+        "de sentido.",
         [
             ("Estudiar la vida cotidiana o la historia política", "Ese ejemplo se usa para hablar de la renovación de las preguntas."),
             ("Consultar una fuente primaria o una secundaria", "Esa distinción aparece en otro texto."),
@@ -76641,16 +76834,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_cambio_continuidad", "his_critico", "medio",
-        "Según el texto, ¿qué hace el análisis histórico frente a un proceso "
-        "como las independencias?",
+        "his_cambio_continuidad", "his_critico", "facil",
+        "Según el texto, ¿qué hace el análisis histórico frente a un proceso como "
+        "las independencias?",
         "Precisar qué cambió, qué permaneció y a qué ritmo",
-        "El texto rechaza las descripciones de una sola palabra: ni «ruptura» "
-        "ni «continuidad» bastan.\n\n"
-        "Lo que corresponde es una descripción más fina, que distinga planos y "
-        "velocidades.\n\n"
-        "Esa exigencia de precisión es lo que separa el análisis histórico de "
-        "la simple narración de hechos.",
+        "El texto rechaza las descripciones de una sola palabra: ni «ruptura» ni "
+        "«continuidad» bastan.\n\nLo que corresponde es una descripción más fina, "
+        "que distinga planos y velocidades.\n\nEsa exigencia de precisión es lo que "
+        "separa el análisis histórico de la simple narración de hechos.",
         [
             ("Determinar si el proceso fue positivo o negativo", "El análisis describe transformaciones; no emite ese juicio."),
             ("Establecer la fecha exacta en que comenzó", "Los procesos rara vez tienen una fecha nítida de inicio."),
@@ -76871,7 +77062,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-organigrama-poderes.svg",
     ),
     _q(
-        "civ_democracia", "medio",
+        "civ_democracia", "facil",
         "Según el esquema de la figura, ¿qué ocurre inmediatamente después de que "
         "la cámara de origen aprueba un proyecto de ley?",
         "Pasa a la cámara revisora para su discusión",
@@ -77005,18 +77196,16 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-grafico-sindicalizacion.svg",
     ),
     _q(
-        "eco_indicadores", "medio",
+        "eco_indicadores", "facil",
         "Según el gráfico de la figura, ¿qué ocurrió con los precios en abril?",
         "Bajaron levemente respecto de marzo",
-        "El gráfico muestra la variación mensual del IPC, o sea cuánto cambian "
-        "los precios de un mes al siguiente.\n\n"
-        "1) En abril la variación es −0,1%: es el único mes bajo la línea del "
-        "cero.\n"
-        "2) Una variación negativa significa que el nivel de precios fue menor "
-        "que el del mes anterior.\n\n"
-        "Ojo con lo que mide el eje: en los otros meses la variación baja pero "
-        "sigue siendo positiva, y eso significa que los precios siguen subiendo, "
-        "solo que más despacio.",
+        "El gráfico muestra la variación mensual del IPC, o sea cuánto cambian los "
+        "precios de un mes al siguiente.\n\n1) En abril la variación es −0,1%: es "
+        "el único mes bajo la línea del cero.\n2) Una variación negativa significa "
+        "que el nivel de precios fue menor que el del mes anterior.\n\nOjo con lo "
+        "que mide el eje: en los otros meses la variación baja pero sigue siendo "
+        "positiva, y eso significa que los precios siguen subiendo, solo que más "
+        "despacio.",
         [
             ("Subieron más rápido que en marzo", "En marzo la variación fue 0,2% y en abril, −0,1%: el cambio fue a la baja."),
             ("Se mantuvieron exactamente iguales", "Una variación de −0,1% no es cero, aunque sea pequeña."),
