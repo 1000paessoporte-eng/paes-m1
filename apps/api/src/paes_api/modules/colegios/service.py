@@ -129,10 +129,15 @@ def resumen_alumnos(db: Session, colegio_id: int) -> list[dict]:
         .group_by(ExamAttempt.user_id)
         .subquery()
     )
+    # La práctica trae su fecha además del conteo. Sin ella, quien contesta
+    # cincuenta preguntas sueltas cada semana pero no se sienta a rendir un
+    # ensayo completo aparecía como si no hubiera entrado nunca, y el panel
+    # mandaba al profesor a buscar justo al que más está trabajando.
     practicas = (
         select(
             PracticeAnswer.user_id.label("uid"),
             func.count(PracticeAnswer.id).label("respuestas"),
+            func.max(PracticeAnswer.answered_at).label("ultima"),
         )
         .group_by(PracticeAnswer.user_id)
         .subquery()
@@ -148,6 +153,7 @@ def resumen_alumnos(db: Session, colegio_id: int) -> list[dict]:
             ensayos.c.promedio,
             ensayos.c.ultimo,
             practicas.c.respuestas,
+            practicas.c.ultima,
         )
         .outerjoin(ensayos, ensayos.c.uid == User.id)
         .outerjoin(practicas, practicas.c.uid == User.id)
@@ -167,6 +173,7 @@ def resumen_alumnos(db: Session, colegio_id: int) -> list[dict]:
             "ultimo_ensayo": f[6],
             "dias_sin_rendir": _dias_desde(ahora, f[6]),
             "respuestas_practica": int(f[7] or 0),
+            "dias_sin_practicar": _dias_desde(ahora, f[8]),
         }
         for f in filas
     ]

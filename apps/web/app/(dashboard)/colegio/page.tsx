@@ -69,9 +69,17 @@ export default async function ColegioPage() {
   // profesor abre esta página, y contarla a ojo en una lista de treinta no se
   // puede. Los días los cuenta la API: leer el reloj mientras se dibuja un
   // componente da un número distinto en cada render, y React lo prohíbe.
-  const perdidos = alumnos.filter(
-    (a) => a.dias_sin_rendir == null || a.dias_sin_rendir > DIAS_PERDIDO
-  ).length;
+  //
+  // Cuenta las dos actividades. Mirando solo los ensayos, quien practica todas
+  // las semanas sin rendir uno completo entraba en la cifra de perdidos y el
+  // profesor iba a buscar a alguien que sí está trabajando. Que no rinda
+  // ensayos es una conversación distinta, y no es esta.
+  const perdidos = alumnos.filter((a) => {
+    const dias = [a.dias_sin_rendir, a.dias_sin_practicar].filter(
+      (d): d is number => d != null
+    );
+    return dias.length === 0 || Math.min(...dias) > DIAS_PERDIDO;
+  }).length;
 
   return colegio.es_profesor ? (
     <PanelProfesor

@@ -405,6 +405,61 @@ def test_la_tabla_dice_cuantos_dias_lleva_sin_rendir(
     assert fila["dias_sin_rendir"] == 9
 
 
+def test_quien_practica_no_figura_como_desaparecido(
+    client: TestClient, register_user, db_session
+) -> None:
+    """Practicar es aparecer, aunque no se rinda ningún ensayo.
+
+    La tabla mandaba al profesor a buscar al alumno que más estaba trabajando:
+    quien contesta preguntas sueltas todas las semanas sin sentarse nunca a un
+    ensayo completo salía con `dias_sin_rendir` en null, igual que quien no
+    entró jamás.
+    """
+    from sqlalchemy import select
+
+    from paes_api.modules.content.models import Difficulty, Question
+    from paes_api.modules.practice.models import PracticeAnswer
+    from paes_api.modules.skill_tree.models import SkillAxis, SkillNode
+    from paes_api.modules.users.models import User
+
+    profe, _ = register_user(email="profe.practica@milpaes.cl")
+    curso = client.post(
+        "/api/colegio", json={"nombre": "Liceo A-2"}, headers=profe
+    ).json()
+    alumno, _ = register_user(email="practicante@milpaes.cl")
+    client.post("/api/colegio/unirse", json={"codigo": curso["codigo"]}, headers=alumno)
+    practicante = db_session.execute(
+        select(User).where(User.email == "practicante@milpaes.cl")
+    ).scalar_one()
+    nodo = SkillNode(
+        code="n_practica", name="Números", axis=SkillAxis.NUMEROS, tier=1
+    )
+    db_session.add(nodo)
+    db_session.flush()
+    pregunta = Question(
+        skill_node_id=nodo.id, difficulty=Difficulty.MEDIO, stem="P"
+    )
+    db_session.add(pregunta)
+    db_session.flush()
+
+    db_session.add(
+        PracticeAnswer(
+            user_id=practicante.id,
+            question_id=pregunta.id,
+            skill_node_id=pregunta.skill_node_id,
+            is_correct=True,
+            answered_at=datetime.now(UTC) - timedelta(days=2),
+        )
+    )
+    db_session.commit()
+
+    fila = client.get("/api/colegio/alumnos", headers=profe).json()[0]
+    assert fila["ensayos"] == 0
+    assert fila["dias_sin_rendir"] is None
+    assert fila["respuestas_practica"] == 1
+    assert fila["dias_sin_practicar"] == 2
+
+
 def test_el_profesor_que_se_sale_recupera_su_curso(
     client: TestClient, register_user
 ) -> None:

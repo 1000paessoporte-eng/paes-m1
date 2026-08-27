@@ -42,6 +42,10 @@ class AlumnoOut(BaseModel):
     #: componente daría un número distinto en cada dibujado.
     dias_sin_rendir: int | None
     respuestas_practica: int
+    #: Días desde la última respuesta en Modo Práctica. `null` si nunca
+    #: practicó. Va junto al anterior porque "sin actividad" son los dos: quien
+    #: practica todos los días y no rinde ensayos no es alguien perdido.
+    dias_sin_practicar: int | None = None
 
 
 class EjeCursoOut(BaseModel):

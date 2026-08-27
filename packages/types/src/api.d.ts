@@ -1511,6 +1511,8 @@ export interface components {
             dias_sin_rendir: number | null;
             /** Respuestas Practica */
             respuestas_practica: number;
+            /** Dias Sin Practicar */
+            dias_sin_practicar?: number | null;
         };
         /**
          * AlumnosOut
