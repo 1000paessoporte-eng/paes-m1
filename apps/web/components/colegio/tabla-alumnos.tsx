@@ -12,11 +12,27 @@ import type { AlumnoDelCurso } from "@/lib/api";
  * practica. Por eso el orden inicial es por ÚLTIMA ACTIVIDAD ascendente --los
  * que llevan más tiempo sin aparecer arriba--, y no por nombre: una lista
  * alfabética esconde justo a los que hay que ir a buscar.
+ *
+ * "Actividad" son las dos cosas, no solo los ensayos. Mientras miró únicamente
+ * los ensayos entregados, quien contestaba cincuenta preguntas sueltas por
+ * semana sin sentarse nunca a rendir uno completo salía primero en la lista de
+ * los perdidos, empatado con el que no entró jamás: el panel mandaba al
+ * profesor a buscar al que más estaba trabajando.
  */
 
 type Criterio = "actividad" | "nombre" | "puntaje" | "ensayos";
 
 const FECHA = new Intl.DateTimeFormat("es-CL", { day: "2-digit", month: "short" });
+
+/** Días desde que esta persona hizo algo: rendir o practicar, lo más reciente.
+ *
+ *  `null` en las dos cosas es no haber hecho nada nunca, y eso va primero. */
+function diasSinActividad(a: AlumnoDelCurso): number {
+  const dias = [a.dias_sin_rendir, a.dias_sin_practicar].filter(
+    (d): d is number => d != null
+  );
+  return dias.length === 0 ? Number.MAX_SAFE_INTEGER : Math.min(...dias);
+}
 
 function ordenar(alumnos: AlumnoDelCurso[], criterio: Criterio): AlumnoDelCurso[] {
   const copia = [...alumnos];
@@ -31,13 +47,10 @@ function ordenar(alumnos: AlumnoDelCurso[], criterio: Criterio): AlumnoDelCurso[
     case "ensayos":
       return copia.sort((a, b) => b.ensayos - a.ensayos);
     default:
-      // Los que nunca rindieron van primero: son los que hay que ir a buscar.
-      // `dias_sin_rendir` lo cuenta la API, para no leer el reloj en render.
-      return copia.sort(
-        (a, b) =>
-          (b.dias_sin_rendir ?? Number.MAX_SAFE_INTEGER) -
-          (a.dias_sin_rendir ?? Number.MAX_SAFE_INTEGER)
-      );
+      // Los que llevan más tiempo sin aparecer van primero: son los que hay
+      // que ir a buscar. Los días los cuenta la API, para no leer el reloj
+      // durante el render.
+      return copia.sort((a, b) => diasSinActividad(b) - diasSinActividad(a));
   }
 }
 
@@ -134,14 +147,23 @@ export function TablaAlumnos({ alumnos }: { alumnos: AlumnoDelCurso[] }) {
               ) : (
                 <p className="text-right text-xs text-muted">sin ensayos</p>
               )}
+
             </div>
 
-            <div className="w-20 shrink-0 text-right text-xs tabular-nums">
+            <div className="w-24 shrink-0 text-right text-xs tabular-nums">
               <p>
                 {a.ensayos} {a.ensayos === 1 ? "ensayo" : "ensayos"}
               </p>
+              {/* La segunda línea contesta "¿hizo algo?". Con ensayos rendidos
+                  eso es la fecha del último; sin ninguno, lo que dice si esta
+                  persona apareció o no es la práctica. Un guión en las dos
+                  situaciones las hacía ver iguales. */}
               <p className="text-muted">
-                {a.ultimo_ensayo ? FECHA.format(new Date(a.ultimo_ensayo)) : "—"}
+                {a.ultimo_ensayo
+                  ? FECHA.format(new Date(a.ultimo_ensayo))
+                  : a.respuestas_practica > 0
+                    ? `${a.respuestas_practica} en práctica`
+                    : "—"}
               </p>
             </div>
           </motion.li>

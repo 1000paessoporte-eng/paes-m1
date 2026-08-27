@@ -80,7 +80,7 @@ export function PanelProfesor({
               ? `${alumnos.length} ${alumnos.length === 1 ? "alumno" : "alumnos"} en el curso. Todavía nadie rinde un ensayo.`
               : perdidos === 0
                 ? `${alumnos.length} ${alumnos.length === 1 ? "alumno" : "alumnos"}, y todos rindieron algo esta semana.`
-                : `${alumnos.length} ${alumnos.length === 1 ? "alumno" : "alumnos"}. ${perdidos} ${perdidos === 1 ? "lleva" : "llevan"} más de una semana sin rendir un ensayo.`}
+                : `${alumnos.length} ${alumnos.length === 1 ? "alumno" : "alumnos"}. ${perdidos} ${perdidos === 1 ? "lleva" : "llevan"} más de una semana sin aparecer.`}
         </p>
       </div>
 
