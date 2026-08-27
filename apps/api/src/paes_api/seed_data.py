@@ -54918,6 +54918,165 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "civ_just_acceso",
+        "title": "Dos intervenciones en un seminario sobre acceso a la justicia",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen intervenciones reales "
+            "ni citan a persona alguna: reconstruyen dos posiciones habituales "
+            "en el debate sobre acceso a la justicia, para ejercitar la "
+            "comparación de interpretaciones."
+        ),
+        "body": (
+            "**Intervención 1. Una abogada de una corporación de asistencia "
+            "jurídica.**\n"
+            "\n"
+            "Todos los días atiendo a personas que tienen razón y no lo saben. "
+            "Una mujer a la que su empleador no pagó las últimas semanas y cree "
+            "que reclamar le costará más de lo que va a recuperar. Un "
+            "arrendatario al que le retuvieron la garantía sin motivo y supone "
+            "que eso es normal. Un consumidor al que le vendieron un artefacto "
+            "que falló al mes y que ya se resignó. Ninguno de los tres enfrenta "
+            "una ley que los desampare: los tres tienen derecho y tribunal. Lo "
+            "que no tienen es información, tiempo y dinero. Reclamar exige "
+            "faltar al trabajo, entender un procedimiento y sostenerlo durante "
+            "meses. Un derecho cuyo ejercicio cuesta más que lo reclamado "
+            "existe en el papel y no en la vida de nadie, y esa distancia no la "
+            "cierra una ley nueva: la cierran horarios compatibles, "
+            "procedimientos simples y asistencia jurídica que alcance para "
+            "todos.\n"
+            "\n"
+            "**Intervención 2. Un juez con años en tribunales de base.**\n"
+            "\n"
+            "Comparto cada palabra del diagnóstico y agrego lo que veo desde el "
+            "otro lado del estrado. También llegan causas, muchas más de las "
+            "que podemos resolver con el tiempo que cada una merece. Aumentar "
+            "el acceso sin aumentar la capacidad de resolver produce un "
+            "resultado que nadie declara pero todos conocen: audiencias breves, "
+            "resoluciones apuradas y plazos que se estiran hasta que la persona "
+            "abandona. Eso también es negar justicia, y es peor, porque ocurre "
+            "después de que alguien hizo el esfuerzo de reclamar. Insisto en un "
+            "punto que suele omitirse: buena parte de estos conflictos no "
+            "necesitaba un juicio. Un cobro impago o una garantía retenida "
+            "podrían resolverse en una instancia previa, rápida y sin abogado. "
+            "Reservemos el tribunal para lo que de verdad requiere un juicio, y "
+            "tendremos tiempo para hacerlo bien."
+        ),
+    },
+    {
+        "key": "civ_just_mapa",
+        "title": "Qué tribunal ve cada asunto y adónde se reclama",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes, elaboradas a partir del temario de "
+            "Formación ciudadana. Recogen la organización de los tribunales "
+            "chilenos y las vías de reclamo más frecuentes; no reproducen el "
+            "texto de ninguna norma."
+        ),
+        "body": (
+            "**Tabla 1. Tribunales según la materia.**\n"
+            "\n"
+            "| Tribunal | De qué conoce |\n"
+            "|---|---|\n"
+            "| Juzgado de garantía | Resguarda los derechos del imputado "
+            "durante la investigación penal |\n"
+            "| Tribunal de juicio oral en lo penal | Realiza el juicio y dicta "
+            "sentencia en causas penales |\n"
+            "| Juzgado de letras | Asuntos civiles, como deudas, contratos y "
+            "arrendamientos |\n"
+            "| Tribunal de familia | Cuidado personal, alimentos y violencia "
+            "intrafamiliar |\n"
+            "| Juzgado de letras del trabajo | Despidos, remuneraciones y "
+            "derechos laborales |\n"
+            "| Juzgado de policía local | Infracciones al tránsito y a la ley "
+            "del consumidor |\n"
+            "\n"
+            "**Tabla 2. Estructura y revisión.**\n"
+            "\n"
+            "| Nivel | Órgano | Función principal |\n"
+            "|---|---|---|\n"
+            "| Superior | Corte Suprema | Uniforma la interpretación de la ley "
+            "y conoce recursos de nulidad y casación |\n"
+            "| Intermedio | Cortes de Apelaciones | Revisan lo resuelto por los "
+            "tribunales de su territorio |\n"
+            "| Base | Tribunales de primera instancia | Conocen y resuelven el "
+            "asunto por primera vez |\n"
+            "\n"
+            "**Tabla 3. Vías de reclamo más frecuentes.**\n"
+            "\n"
+            "| Vía | Para qué sirve | Dónde se presenta |\n"
+            "|---|---|---|\n"
+            "| Recurso de protección | Frente a actos arbitrarios o ilegales "
+            "que afectan ciertos derechos | Corte de Apelaciones |\n"
+            "| Recurso de amparo | Frente a una privación ilegítima de libertad "
+            "| Corte de Apelaciones |\n"
+            "| Apelación | Pedir que un tribunal superior revise lo resuelto | "
+            "Tribunal que dictó la resolución |\n"
+            "\n"
+            "Notas:\n"
+            "— Que un tribunal superior revise no significa que rehaga el "
+            "juicio: revisa lo que se le plantea en el recurso.\n"
+            "— Los juzgados de policía local dependen de las municipalidades, "
+            "aunque ejercen función jurisdiccional.\n"
+            "— El recurso de protección y el de amparo se presentan "
+            "directamente ante la Corte, sin pasar por un tribunal de base."
+        ),
+    },
+    {
+        "key": "civ_just_proceso",
+        "title": "Tres funciones que nadie puede acumular",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Formación ciudadana para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El sistema penal chileno reparte entre tres instituciones "
+            "distintas lo que durante mucho tiempo hizo una sola. Ese reparto "
+            "no es un detalle organizativo: es la garantía principal de que un "
+            "juicio sea algo más que un trámite.\n"
+            "\n"
+            "El Ministerio Público investiga y decide si acusa. Sus fiscales "
+            "dirigen la investigación, reúnen la prueba y sostienen la "
+            "acusación ante el tribunal. La Defensoría Penal Pública asegura "
+            "que toda persona imputada cuente con abogado, la pague o no. Y los "
+            "tribunales juzgan: no investigan ni acusan, resuelven sobre lo que "
+            "las partes les presentan.\n"
+            "\n"
+            "Por qué separarlas se entiende mejor mirando qué ocurre si se "
+            "juntan. Quien investigó durante meses tiene una hipótesis y prueba "
+            "reunida para sostenerla; pedirle que evalúe imparcialmente esa "
+            "misma prueba es pedirle que se contradiga a sí mismo. Y sin "
+            "defensa el juicio se convierte en un monólogo: alguien acusa, "
+            "nadie discute la acusación y el tribunal resuelve sobre una sola "
+            "versión.\n"
+            "\n"
+            "El proceso es además oral y público. Las partes exponen frente al "
+            "tribunal y frente a quien quiera entrar a la sala, en vez de "
+            "intercambiar escritos que solo ellas leen. La publicidad no busca "
+            "espectáculo: un juicio que cualquiera puede presenciar es un "
+            "juicio que cualquiera puede controlar, y la oralidad obliga a que "
+            "la prueba se produzca delante de quien va a decidir.\n"
+            "\n"
+            "Dos principios ordenan el resto. La presunción de inocencia "
+            "dispone que toda persona es inocente mientras no se pruebe lo "
+            "contrario, de modo que la carga de la prueba recae en quien acusa "
+            "y no en el imputado; si la prueba no alcanza, corresponde "
+            "absolver. Y el derecho a defensa incluye conocer de qué se acusa, "
+            "disponer de tiempo para preparar la respuesta y contradecir la "
+            "prueba de la contraparte.\n"
+            "\n"
+            "De ahí que la prisión preventiva sea excepcional. Encerrar a "
+            "alguien antes de que exista sentencia es aplicar la consecuencia "
+            "del delito a quien todavía es inocente ante la ley, y solo se "
+            "justifica por razones acotadas: riesgo de fuga, peligro para la "
+            "investigación o para la seguridad de la víctima. Un tribunal debe "
+            "fundarla, revisarla y dejarla sin efecto cuando esas razones "
+            "desaparecen. Usarla como anticipo de castigo es exactamente lo que "
+            "el diseño prohíbe."
+        ),
+    },
+    {
         "key": "civ_info_regulacion",
         "title": "Dos intervenciones en una comisión sobre plataformas digitales",
         "kind": "no_literario",
@@ -57680,6 +57839,749 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "civ_just_acceso", "civ_justicia", "facil",
+        "Según la Intervención 1, ¿qué les falta a las tres personas que describe?",
+        "Información, tiempo y dinero",
+        "La intervención lo enuncia tras aclarar lo contrario: ninguno de los tres "
+        "enfrenta una ley que los desampare, y los tres tienen derecho y "
+        "tribunal.\nLo que no tienen es lo que enumera a continuación, y que "
+        "después detalla: reclamar exige faltar al trabajo, entender un "
+        "procedimiento y sostenerlo durante meses.",
+        [
+            ("Una ley que reconozca sus derechos", "La intervención señala expresamente que la ley los ampara."),
+            ("Un tribunal competente para conocer sus casos", "Afirma que los tres tienen tribunal."),
+            ("Pruebas suficientes para acreditar lo que reclaman", "El texto no plantea un problema probatorio."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "facil",
+        "Según la Intervención 2, ¿qué produce aumentar el acceso sin aumentar la "
+        "capacidad de resolver?",
+        "Audiencias breves y plazos que se estiran",
+        "La intervención describe el resultado que, según dice, nadie declara pero "
+        "todos conocen: audiencias breves, resoluciones apuradas y plazos que se "
+        "estiran hasta que la persona abandona.\nY agrega una valoración: eso "
+        "también es negar justicia, y es peor, porque ocurre después de que alguien "
+        "hizo el esfuerzo de reclamar.",
+        [
+            ("Una mejora sostenida en la calidad de las sentencias", "El texto describe resoluciones apuradas, no mejores."),
+            ("La disminución del número de causas que ingresan", "El problema que plantea es el aumento de causas."),
+            ("El cierre de los tribunales de base por saturación", "La intervención no menciona ningún cierre."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "facil",
+        "Según la Intervención 2, ¿qué propone para los conflictos más simples?",
+        "Una instancia previa, rápida y sin abogado",
+        "La propuesta aparece al cerrar y se apoya en una observación: buena parte "
+        "de estos conflictos no necesitaba un juicio.\nLos ejemplos que menciona "
+        "son un cobro impago o una garantía retenida, y sobre esa base plantea "
+        "reservar el tribunal para lo que de verdad requiere un juicio.",
+        [
+            ("Que los tribunales resuelvan sin audiencia previa", "Su preocupación es la calidad de las audiencias, no suprimirlas."),
+            ("Que se dicten leyes nuevas para cada tipo de conflicto", "No plantea legislar sobre cada materia."),
+            ("Que las personas contraten asesoría privada especializada", "Su propuesta es una vía que no requiere abogado."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "medio",
+        "¿Qué quiere decir la Intervención 1 con que hay personas que tienen razón "
+        "y no lo saben?",
+        "Ignoran que la ley las ampara y no reclaman",
+        "Los tres casos que describe comparten una estructura: la persona sufre un "
+        "perjuicio, la ley le da la razón y ella no lo sabe o lo da por "
+        "perdido.\nLa mujer cree que reclamar le costará más de lo que recuperará; "
+        "el arrendatario supone que retener la garantía es normal; el consumidor ya "
+        "se resignó.\nEn ninguno de los tres el problema es jurídico. Por eso la "
+        "intervención sostiene que esa distancia no la cierra una ley nueva.",
+        [
+            ("Tienen razón pero la ley no las ampara todavía", "La intervención afirma que la ley sí las ampara."),
+            ("Reclamaron y perdieron por falta de pruebas", "Ninguno de los tres llegó a reclamar."),
+            ("Confunden el tribunal al que deben acudir", "El texto señala que los tres tienen tribunal."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "medio",
+        "Según la Intervención 1, ¿por qué un derecho puede existir en el papel y "
+        "no en la vida de nadie?",
+        "Porque ejercerlo cuesta más que lo reclamado",
+        "La intervención lo formula así y lo respalda con lo que exige reclamar: "
+        "faltar al trabajo, entender un procedimiento y sostenerlo durante "
+        "meses.\nCuando esos costos superan lo que se puede recuperar, no reclamar "
+        "deja de ser una omisión y pasa a ser la decisión razonable.\nDe ahí que la "
+        "intervención señale como remedio no una norma sino condiciones concretas: "
+        "horarios compatibles, procedimientos simples y asistencia jurídica que "
+        "alcance para todos.",
+        [
+            ("Porque la ley que lo reconoce no ha sido publicada", "El texto no plantea ningún problema de vigencia de la norma."),
+            ("Porque los tribunales rechazan ese tipo de reclamos", "Los casos descritos ni siquiera llegan a los tribunales."),
+            ("Porque el derecho fue derogado sin que nadie se enterara", "La intervención afirma que los tres tienen derecho."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "medio",
+        "¿Por qué la Intervención 2 sostiene que la demora es peor que no poder "
+        "reclamar?",
+        "Ocurre después del esfuerzo de haber reclamado",
+        "La intervención lo dice de manera directa: eso también es negar justicia, "
+        "y es peor, porque ocurre después de que alguien hizo el esfuerzo de "
+        "reclamar.\nEl argumento compara dos formas de quedarse sin respuesta. "
+        "Quien no reclama conserva su tiempo y su dinero; quien reclamó ya faltó al "
+        "trabajo, entendió el procedimiento y lo sostuvo durante meses.\nPerder "
+        "después de haber pagado ese costo agrega al perjuicio original la "
+        "constatación de que el esfuerzo no servía, y eso desalienta también a "
+        "quien observa.",
+        [
+            ("Porque las causas demoradas se resuelven en contra del reclamante", "El texto no afirma que el resultado sea desfavorable."),
+            ("Porque los tribunales cobran por cada audiencia realizada", "No se menciona ningún cobro por audiencia."),
+            ("Porque la demora impide apelar ante un tribunal superior", "El texto no vincula la demora con la posibilidad de recurrir."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "medio",
+        "¿En qué coinciden ambas intervenciones?",
+        "En que existe una brecha entre el derecho y su ejercicio",
+        "La Intervención 2 abre diciendo que comparte cada palabra del diagnóstico, "
+        "de modo que la existencia del problema no está en disputa.\nLas dos "
+        "describen personas que tienen derecho y no obtienen respuesta: una porque "
+        "no llega a reclamar, la otra porque reclama y el sistema no alcanza a "
+        "resolver.\nEl desacuerdo aparece recién en el remedio, y ni siquiera ahí "
+        "es frontal: la segunda agrega una dimensión que la primera no consideró en "
+        "lugar de contradecirla.",
+        [
+            ("En que se requieren leyes nuevas para cerrar la brecha", "La Intervención 1 sostiene expresamente que una ley nueva no la cierra."),
+            ("En que el problema principal es la falta de tribunales", "Ninguna de las dos propone crear más tribunales."),
+            ("En que las personas no conocen sus derechos por desinterés", "La Intervención 1 atribuye el desconocimiento a la falta de información."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "medio",
+        "¿Qué dimensión agrega la Intervención 2 que la primera no considera?",
+        "La capacidad del sistema para resolver lo que ingresa",
+        "La Intervención 1 mira el problema desde antes del tribunal: qué impide "
+        "que una persona con derecho llegue a reclamar.\nLa Intervención 2 mira lo "
+        "que ocurre después: llegan muchas más causas de las que se pueden resolver "
+        "con el tiempo que cada una merece.\nLas dos miradas son complementarias, y "
+        "su combinación produce la advertencia central del segundo texto: resolver "
+        "solo la primera mitad del problema empeora la segunda.",
+        [
+            ("La ausencia de una ley que ampare a esas personas", "Ambas coinciden en que la ley las ampara."),
+            ("La falta de información sobre los derechos vigentes", "Esa dimensión ya está en la Intervención 1."),
+            ("La necesidad de contratar abogados particulares", "Su propuesta apunta a una vía que no requiere abogado."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "dificil",
+        "¿Qué relación establece la Intervención 2 entre las dos formas de negar "
+        "justicia?",
+        "Resolver una sin la otra agrava la segunda",
+        "La primera forma es la que describe la Intervención 1: personas con "
+        "derecho que no llegan a reclamar. La segunda es la suya: causas que "
+        "ingresan y no reciben el tiempo que merecen.\nEl vínculo que establece es "
+        "de consecuencia. Si se remueven los obstáculos de entrada sin ampliar la "
+        "capacidad de resolver, el resultado es más causas sobre la misma "
+        "estructura, es decir audiencias más breves y plazos más largos.\nPor eso "
+        "no objeta las medidas de la primera intervención: advierte que aplicadas "
+        "solas producen un problema distinto en lugar de resolver el original.",
+        [
+            ("Son problemas independientes que deben tratarse por separado", "El texto muestra justamente cómo uno incide sobre el otro."),
+            ("La segunda desaparece cuando se resuelve la primera", "La intervención sostiene lo contrario: se agrava."),
+            ("Ninguna de las dos tiene solución posible", "El texto termina proponiendo una instancia previa."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "dificil",
+        "La propuesta de una instancia previa sin abogado responde a las dos "
+        "intervenciones a la vez. ¿Por qué?",
+        "Baja el costo de reclamar y descarga los tribunales",
+        "Para la Intervención 1, el obstáculo era el costo de ejercer el derecho: "
+        "tiempo, dinero y comprensión de un procedimiento. Una instancia rápida y "
+        "sin abogado reduce los tres.\nPara la Intervención 2, el problema era el "
+        "volumen de causas frente a la capacidad de resolver. Si los conflictos "
+        "simples se resuelven antes de llegar al tribunal, este recupera tiempo "
+        "para los que sí requieren juicio.\nEsa doble respuesta explica por qué la "
+        "propuesta cierra el intercambio: no elige entre las dos preocupaciones "
+        "sino que atiende a ambas con la misma medida.",
+        [
+            ("Reemplaza a los tribunales en todas las materias", "La propuesta reserva el tribunal para lo que requiere un juicio."),
+            ("Obliga a las personas a renunciar a su derecho", "La instancia previa busca que puedan ejercerlo, no que renuncien."),
+            ("Aumenta el número de abogados disponibles", "La vía propuesta es justamente sin abogado."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "dificil",
+        "¿Qué objeción tendría que responder la propuesta de la Intervención 2?",
+        "Qué pasa si la parte fuerte no acepta esa instancia",
+        "Los ejemplos de la Intervención 1 tienen una asimetría reconocible: un "
+        "empleador frente a una trabajadora, un arrendador frente a un "
+        "arrendatario, un comercio frente a un consumidor.\nUna instancia previa "
+        "rápida y sin abogado funciona bien cuando ambas partes quieren resolver. "
+        "Si la parte con más recursos puede simplemente no comparecer o no cumplir "
+        "lo acordado, el reclamante habrá invertido tiempo para terminar igual en "
+        "el tribunal.\nLa propuesta quedaría completa si mostrara con qué fuerza "
+        "cuenta esa instancia: si sus acuerdos obligan, quién los hace cumplir y "
+        "qué ocurre con quien no asiste.",
+        [
+            ("Si los tribunales aceptarían perder esas causas", "El texto no plantea que los tribunales resistan descargarse."),
+            ("Si existen suficientes abogados para atenderla", "La instancia propuesta funciona sin abogado."),
+            ("Si la ley permite crear instancias fuera del Poder Judicial", "Ese punto no aparece en el debate entre ambas intervenciones."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "dificil",
+        "La Intervención 1 sostiene que la brecha no la cierra una ley nueva. ¿Qué "
+        "supuesto sobre los derechos hay detrás?",
+        "Un derecho vale por sus condiciones de ejercicio",
+        "El razonamiento parte de un hecho que la intervención establece antes: los "
+        "tres casos ya están amparados por la ley y tienen tribunal.\nSi la norma "
+        "existe y el resultado sigue siendo el mismo, agregar otra norma no cambia "
+        "nada. Lo que falla está en otro plano: información, horarios, complejidad "
+        "del procedimiento y costo de sostenerlo.\nEl supuesto es que declarar un "
+        "derecho es solo el primer paso, y que su existencia real se mide por si "
+        "alguien en esa situación puede efectivamente ejercerlo.",
+        [
+            ("Los derechos solo existen si están escritos en la ley", "La intervención muestra casos donde están escritos y no operan."),
+            ("Las leyes nuevas siempre empeoran la situación anterior", "El texto no sostiene que perjudiquen: dice que no bastan."),
+            ("El acceso a la justicia depende de la voluntad del juez", "Los obstáculos que describe son previos al tribunal."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "dificil",
+        "¿Qué operación argumentativa comparten ambas intervenciones?",
+        "Parten de casos concretos y no de principios",
+        "La Intervención 1 abre con tres personas: una trabajadora sin pago, un "
+        "arrendatario sin garantía, un consumidor con un artefacto fallado. La "
+        "Intervención 2 describe lo que ocurre en su sala: audiencias breves, "
+        "resoluciones apuradas, personas que abandonan.\nNinguna de las dos discute "
+        "qué es la justicia ni invoca una norma superior para zanjar el "
+        "punto.\nArgumentar desde lo observado tiene una ventaja en este debate: "
+        "obliga al interlocutor a hacerse cargo de un hecho verificable, y no de "
+        "una definición que puede rechazar sin costo.",
+        [
+            ("Ambas apelan a la Constitución para fundar su posición", "Ninguna de las dos invoca norma alguna."),
+            ("Ambas proponen crear nuevos tribunales especializados", "Ninguna plantea crear tribunales."),
+            ("Ambas atribuyen el problema a la falta de leyes", "Las dos coinciden en que la ley ampara a esas personas."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_justicia", "dificil",
+        "¿Qué habría que medir para saber cuál de las dos preocupaciones es más "
+        "urgente hoy?",
+        "Cuántos no reclaman y cuánto demoran los que sí",
+        "Las dos intervenciones describen problemas reales y ninguna niega el de la "
+        "otra, de modo que la pregunta no es cuál existe sino cuál pesa más.\nEso "
+        "admite medición. Por un lado, cuántas personas con un conflicto "
+        "justiciable no acuden a ningún mecanismo y por qué razón; por otro, cuánto "
+        "demoran las causas que sí ingresan y cuántas terminan por abandono.\nCon "
+        "esas dos cifras se puede decidir dónde invertir primero, y también "
+        "anticipar el efecto que la advertencia de la segunda intervención "
+        "describe: qué pasaría con los plazos si entrara una parte de quienes hoy "
+        "no reclaman.",
+        [
+            ("Cuántos abogados ejercen en cada región del país", "El número de abogados no responde ninguna de las dos preguntas."),
+            ("Qué opina la ciudadanía sobre el Poder Judicial", "La percepción no mide ni el acceso ni la demora efectiva."),
+            ("Cuántas leyes se aprobaron sobre estas materias", "Ambas coinciden en que el problema no es la falta de leyes."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_derechos", "dificil",
+        "Según estas intervenciones, ¿qué distingue tener un derecho de poder "
+        "ejercerlo?",
+        "Ejercerlo exige condiciones que la norma no entrega",
+        "Los tres casos de la Intervención 1 tienen el derecho resuelto: la ley los "
+        "ampara y existe tribunal competente.\nLo que falta está fuera de la norma: "
+        "saber que se tiene razón, disponer de tiempo para reclamar, entender el "
+        "procedimiento y poder sostenerlo durante meses.\nLa Intervención 2 agrega "
+        "una condición más, que tampoco depende de la ley: que el sistema tenga "
+        "capacidad de resolver en un plazo razonable. Sin ellas, el derecho sigue "
+        "reconocido y deja de operar para quien lo necesita.",
+        [
+            ("Tener un derecho supone que alguien ya lo reconoció en juicio", "Los tres casos tienen derecho sin haber llegado a juicio."),
+            ("Ejercer un derecho depende de que la ley lo permita", "La ley ya lo permite en los tres casos descritos."),
+            ("No hay diferencia: un derecho reconocido siempre se ejerce", "Las dos intervenciones documentan lo contrario."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "facil",
+        "Según la Tabla 1, ¿qué tribunal conoce de un despido?",
+        "El juzgado de letras del trabajo",
+        "La Tabla 1 le asigna despidos, remuneraciones y derechos "
+        "laborales.\nConviene distinguirlo del juzgado de letras a secas, que la "
+        "misma tabla reserva para asuntos civiles como deudas, contratos y "
+        "arrendamientos.",
+        [
+            ("El juzgado de letras, por tratarse de un contrato", "Ese juzgado conoce asuntos civiles; el contrato de trabajo tiene sede propia."),
+            ("El juzgado de policía local de la comuna", "La tabla le asigna infracciones al tránsito y a la ley del consumidor."),
+            ("El tribunal de juicio oral en lo penal", "Ese tribunal realiza juicios en causas penales."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "facil",
+        "Según la Tabla 3, ¿ante qué órgano se presenta un recurso de protección?",
+        "Ante la Corte de Apelaciones",
+        "La Tabla 3 lo indica, y la tercera nota agrega un rasgo importante: tanto "
+        "el recurso de protección como el de amparo se presentan directamente ante "
+        "la Corte, sin pasar por un tribunal de base.\nEsa vía directa es lo que "
+        "les da rapidez frente a un acto arbitrario o ilegal.",
+        [
+            ("Ante el juzgado de garantía del territorio", "Ese juzgado resguarda derechos del imputado en la investigación penal."),
+            ("Ante la Corte Suprema, en única instancia", "La Corte Suprema conoce recursos de nulidad y casación, según la Tabla 2."),
+            ("Ante el tribunal que dictó el acto reclamado", "Esa es la vía de la apelación, no la del recurso de protección."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "facil",
+        "Según la Tabla 2, ¿cuál es la función principal de las Cortes de "
+        "Apelaciones?",
+        "Revisar lo resuelto por los tribunales de su territorio",
+        "La Tabla 2 las sitúa en el nivel intermedio con esa función.\nPor encima "
+        "está la Corte Suprema, que uniforma la interpretación de la ley y conoce "
+        "recursos de nulidad y casación; por debajo, los tribunales de primera "
+        "instancia, que conocen el asunto por primera vez.",
+        [
+            ("Uniformar la interpretación de la ley en todo el país", "Esa es la función que la tabla asigna a la Corte Suprema."),
+            ("Conocer y resolver los asuntos por primera vez", "Corresponde a los tribunales de primera instancia."),
+            ("Fiscalizar la legalidad de los actos de la administración", "Esa función es de la Contraloría, y no figura en esta tabla."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "medio",
+        "Una persona es detenida y su familia sostiene que la privación de libertad "
+        "es ilegítima. ¿Qué vía de la Tabla 3 corresponde?",
+        "El recurso de amparo, ante la Corte de Apelaciones",
+        "La Tabla 3 asigna al amparo exactamente ese supuesto: una privación "
+        "ilegítima de libertad.\nLa tercera nota agrega por qué la vía sirve en un "
+        "caso así: se presenta directamente ante la Corte, sin pasar por un "
+        "tribunal de base, de modo que no hay que esperar la tramitación de una "
+        "causa.\nEl recurso de protección cubre otros derechos frente a actos "
+        "arbitrarios o ilegales, pero para la libertad personal la tabla reserva "
+        "una vía específica.",
+        [
+            ("El recurso de protección, por tratarse de un acto ilegal", "La tabla reserva una vía propia para la privación de libertad."),
+            ("La apelación ante el tribunal que ordenó la detención", "La apelación revisa una resolución ya dictada en un proceso en curso."),
+            ("Una denuncia ante el juzgado de policía local", "Ese juzgado conoce infracciones al tránsito y al consumo."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "medio",
+        "Según la primera nota, ¿qué NO hace un tribunal superior al revisar?",
+        "Rehacer el juicio completo",
+        "La nota lo precisa: revisar no significa repetir el juicio, sino examinar "
+        "lo que se le plantea en el recurso.\nLa consecuencia práctica es "
+        "importante para quien reclama. Si el recurso no plantea un punto, el "
+        "tribunal superior no lo examinará aunque exista, porque su competencia "
+        "está delimitada por lo que se le pidió revisar.\nDe ahí que redactar bien "
+        "un recurso no sea un formalismo: define qué parte de lo resuelto podrá ser "
+        "corregida.",
+        [
+            ("Examinar lo que el recurso le plantea", "Es justamente lo que sí hace, según la nota."),
+            ("Confirmar o revocar lo resuelto por el tribunal de base", "La nota no excluye esa facultad."),
+            ("Conocer causas de su propio territorio", "Es la función que la Tabla 2 asigna a las Cortes de Apelaciones."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "medio",
+        "¿Qué diferencia hay entre el juzgado de garantía y el tribunal de juicio "
+        "oral, según la Tabla 1?",
+        "Uno resguarda derechos y el otro dicta sentencia",
+        "La Tabla 1 asigna al juzgado de garantía el resguardo de los derechos del "
+        "imputado durante la investigación penal, y al tribunal de juicio oral, la "
+        "realización del juicio y la sentencia.\nLos dos intervienen en la misma "
+        "causa penal pero en etapas distintas, y esa separación es coherente con el "
+        "reparto de funciones del sistema: quien controló la investigación no es "
+        "quien después juzga.\nNinguno de los dos investiga: esa función "
+        "corresponde al Ministerio Público.",
+        [
+            ("Uno investiga el delito y el otro acusa al imputado", "Investigar y acusar corresponde al Ministerio Público, no a estos tribunales."),
+            ("Uno conoce delitos graves y el otro, delitos menores", "La tabla los distingue por la etapa del proceso, no por la gravedad."),
+            ("Uno depende de la municipalidad y el otro, de la Corte", "La dependencia municipal es la de los juzgados de policía local."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "medio",
+        "Según la Tabla 1, ¿qué tribunal ve un reclamo por un producto defectuoso?",
+        "El juzgado de policía local",
+        "La Tabla 1 le asigna las infracciones al tránsito y a la ley del "
+        "consumidor.\nLa segunda nota agrega un rasgo poco conocido de estos "
+        "juzgados: dependen de las municipalidades, aunque ejercen función "
+        "jurisdiccional.\nEs una excepción dentro del mapa, porque los demás "
+        "tribunales de la tabla integran el Poder Judicial y se ordenan bajo las "
+        "Cortes.",
+        [
+            ("El juzgado de letras, por tratarse de un contrato de compraventa", "La tabla reserva la ley del consumidor a los juzgados de policía local."),
+            ("El tribunal de familia de la comuna donde se compró", "Ese tribunal conoce cuidado personal, alimentos y violencia intrafamiliar."),
+            ("La Corte de Apelaciones mediante un recurso de protección", "Esa vía procede frente a actos arbitrarios o ilegales que afectan ciertos derechos."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "medio",
+        "Según la Tabla 2, ¿por qué la Corte Suprema uniforma la interpretación de "
+        "la ley?",
+        "Para que la misma norma no se aplique de modos distintos",
+        "La Tabla 2 le asigna esa función junto con el conocimiento de los recursos "
+        "de nulidad y casación.\nEl problema que resuelve es previsible en "
+        "cualquier sistema con muchos tribunales: dos jueces pueden entender de "
+        "manera distinta la misma disposición, y entonces el resultado de un caso "
+        "dependería de dónde se presentó.\nUna interpretación uniforme permite "
+        "además que las personas anticipen las consecuencias jurídicas de sus "
+        "actos, que es una condición de la seguridad jurídica.",
+        [
+            ("Para revisar todos los juicios que se realizan en el país", "La tabla no le atribuye una revisión general de todas las causas."),
+            ("Para reemplazar al Congreso en la creación de leyes", "Interpretar la ley no equivale a dictarla."),
+            ("Para resolver los asuntos por primera vez", "Esa función corresponde a los tribunales de base."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "dificil",
+        "¿Qué tienen en común el recurso de protección y el de amparo, según la "
+        "Tabla 3 y sus notas?",
+        "Van directo a la Corte y no esperan un juicio",
+        "La tercera nota lo consigna para ambos: se presentan directamente ante la "
+        "Corte de Apelaciones, sin pasar por un tribunal de base.\nEsa vía directa "
+        "responde a la naturaleza de lo que protegen. Frente a una privación "
+        "ilegítima de libertad o a un acto arbitrario que ya está produciendo "
+        "efectos, esperar la tramitación completa de una causa equivaldría a no "
+        "tener remedio.\nSe distinguen de la apelación, que supone un proceso en "
+        "curso y una resolución ya dictada que se pide revisar.",
+        [
+            ("Ambos exigen que exista antes un juicio en curso", "La nota señala que se presentan sin pasar por un tribunal de base."),
+            ("Ambos se presentan ante la Corte Suprema", "La Tabla 3 los sitúa ante la Corte de Apelaciones."),
+            ("Ambos protegen exclusivamente la libertad personal", "El recurso de protección cubre otros derechos, no solo ese."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "dificil",
+        "Una persona quiere reclamar por lo resuelto en su causa laboral, pero su "
+        "recurso solo menciona un punto de los tres que la perjudican. ¿Qué le "
+        "advierte la primera nota?",
+        "El tribunal superior solo revisará ese punto",
+        "La nota establece que revisar no significa rehacer el juicio: el tribunal "
+        "superior examina lo que se le plantea en el recurso.\nLos otros dos "
+        "puntos, aunque existan y sean fundados, quedarán fuera del examen porque "
+        "nadie los sometió a revisión.\nDe ahí que el acceso a la justicia no se "
+        "agote en la posibilidad formal de recurrir: depende también de contar con "
+        "asistencia capaz de identificar y plantear todos los puntos que "
+        "corresponden.",
+        [
+            ("El tribunal revisará de oficio los tres puntos", "La nota descarta esa revisión ampliada."),
+            ("El recurso será rechazado por estar incompleto", "La nota no plantea una consecuencia de inadmisibilidad."),
+            ("La causa volverá al tribunal de base para repetirse", "Nada en la fuente contempla ese reenvío automático."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "dificil",
+        "La segunda nota señala que los juzgados de policía local dependen de las "
+        "municipalidades. ¿Qué particularidad supone eso?",
+        "Ejercen función jurisdiccional fuera del Poder Judicial",
+        "El resto de los tribunales de la Tabla 1 se ordena bajo las Cortes según "
+        "la estructura de la Tabla 2, dentro del Poder Judicial.\nLos juzgados de "
+        "policía local resuelven conflictos aplicando la ley, que es función "
+        "jurisdiccional, y sin embargo su dependencia administrativa es "
+        "municipal.\nAdvertirlo importa porque el mapa judicial no coincide "
+        "exactamente con el Poder Judicial: hay órganos que ejercen jurisdicción "
+        "sin integrarlo, y conocer esa excepción evita buscar en el lugar "
+        "equivocado.",
+        [
+            ("No pueden dictar resoluciones obligatorias", "Ejercen función jurisdiccional, de modo que sus resoluciones obligan."),
+            ("Sus decisiones no pueden ser revisadas por nadie", "La fuente no establece que queden exentas de revisión."),
+            ("Conocen las mismas materias que los juzgados de letras", "La Tabla 1 les asigna materias distintas."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "dificil",
+        "¿Qué muestra la Tabla 1 sobre la organización del sistema judicial "
+        "chileno?",
+        "Está especializado por materia",
+        "Los seis tribunales de la tabla no se distinguen por territorio ni por la "
+        "importancia del asunto, sino por el tipo de conflicto: penal, civil, "
+        "familiar, laboral y de infracciones.\nLa especialización busca que quien "
+        "resuelve conozca la materia y su regulación propia, que en áreas como "
+        "familia o trabajo difiere bastante del derecho civil general.\nTiene un "
+        "costo que la propia tabla insinúa: quien no sabe a qué categoría pertenece "
+        "su problema puede acudir al tribunal equivocado y perder tiempo antes de "
+        "llegar al que corresponde.",
+        [
+            ("Está organizado según la gravedad de cada caso", "La tabla no clasifica los tribunales por gravedad."),
+            ("Todos los asuntos comienzan en la Corte de Apelaciones", "La Tabla 2 sitúa el inicio en los tribunales de primera instancia."),
+            ("Cada tribunal puede conocer cualquier tipo de causa", "La tabla asigna materias específicas a cada uno."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_justicia", "dificil",
+        "¿Qué NO permite establecer esta fuente sobre el acceso a la justicia en "
+        "Chile?",
+        "Cuánto demora y cuánto cuesta llegar a cada tribunal",
+        "Las tablas describen la organización: qué tribunal ve cada materia, cómo "
+        "se ordenan los niveles y qué vías de reclamo existen.\nNada informan sobre "
+        "las condiciones reales de acceso: tiempos de tramitación, costo de "
+        "representación, distancia hasta el tribunal más cercano o disponibilidad "
+        "de asistencia jurídica gratuita.\nEsa diferencia importa porque un sistema "
+        "puede estar bien diseñado en el papel y ser inaccesible en los hechos. "
+        "Para evaluarlo harían falta estadísticas judiciales y estudios de acceso, "
+        "no un organigrama.",
+        [
+            ("Qué tribunal conoce de un asunto de familia", "La Tabla 1 lo entrega directamente."),
+            ("Ante qué órgano se presenta un recurso de amparo", "La Tabla 3 lo indica: la Corte de Apelaciones."),
+            ("Qué órgano uniforma la interpretación de la ley", "La Tabla 2 lo asigna a la Corte Suprema."),
+        ],
+    ),
+    _ql(
+        "civ_just_mapa", "civ_democracia", "dificil",
+        "¿Por qué la existencia de tribunales que revisan lo resuelto forma parte "
+        "del control del poder?",
+        "Ninguna decisión queda sin posibilidad de examen",
+        "La Tabla 2 organiza los tribunales en niveles y asigna a los superiores la "
+        "revisión de lo resuelto por los de base.\nEse diseño aplica al Poder "
+        "Judicial el mismo principio que rige para los demás: quien ejerce poder "
+        "queda sometido a un control externo. Un juez también puede equivocarse o "
+        "exceder sus atribuciones.\nLa primera nota marca el límite de esa "
+        "garantía: la revisión alcanza a lo que el recurso plantea, de modo que "
+        "existe la posibilidad de examen pero hay que activarla y saber cómo "
+        "hacerlo.",
+        [
+            ("Permite que el gobierno corrija las sentencias adversas", "La revisión la hacen tribunales superiores, no el gobierno."),
+            ("Garantiza que toda persona gane su juicio en segunda instancia", "Revisar no implica revertir lo resuelto."),
+            ("Impide que la Corte Suprema interprete la ley", "La Tabla 2 le asigna justamente esa función."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "facil",
+        "Según el texto, ¿qué institución investiga y decide si acusa?",
+        "El Ministerio Público",
+        "El texto le asigna esa función de manera directa: sus fiscales dirigen la "
+        "investigación, reúnen la prueba y sostienen la acusación ante el "
+        "tribunal.\nLas otras dos instituciones tienen funciones distintas: la "
+        "Defensoría asegura abogado a toda persona imputada, y los tribunales "
+        "juzgan sin investigar ni acusar.",
+        [
+            ("La Defensoría Penal Pública, en representación del Estado", "La Defensoría representa a la persona imputada, no acusa."),
+            ("El tribunal que después dictará la sentencia", "El texto señala que los tribunales no investigan ni acusan."),
+            ("La Contraloría General de la República", "No interviene en el proceso penal."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "facil",
+        "Según el texto, ¿qué asegura la Defensoría Penal Pública?",
+        "Que toda persona imputada tenga abogado",
+        "El texto lo consigna con una precisión que importa: la pague o no.\nEl "
+        "acceso a defensa no depende entonces de la capacidad económica de la "
+        "persona, lo que conecta con lo que el texto dice después: sin defensa el "
+        "juicio se convierte en un monólogo.",
+        [
+            ("Que las víctimas cuenten con representación gratuita", "El texto refiere la función de la Defensoría a la persona imputada."),
+            ("Que los fiscales dispongan de asesoría jurídica", "Los fiscales integran el Ministerio Público."),
+            ("Que las sentencias se revisen ante un tribunal superior", "La revisión de sentencias es otra materia."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "facil",
+        "Según el texto, ¿qué razones pueden justificar la prisión preventiva?",
+        "Riesgo de fuga o peligro para la investigación o la víctima",
+        "El texto las enumera de manera taxativa y las llama acotadas: riesgo de "
+        "fuga, peligro para la investigación o para la seguridad de la víctima.\nY "
+        "agrega qué debe hacer el tribunal con ella: fundarla, revisarla y dejarla "
+        "sin efecto cuando esas razones desaparecen.",
+        [
+            ("La gravedad de la pena que el delito tiene asignada", "El texto no incluye la gravedad de la pena entre las razones válidas."),
+            ("La existencia de una acusación formal del fiscal", "Acusar no basta: el texto exige alguna de las tres razones acotadas."),
+            ("El rechazo social que provoque el hecho investigado", "Ese criterio no figura en el texto."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "medio",
+        "Según el texto, ¿por qué quien investigó no puede además juzgar?",
+        "Ya tiene una hipótesis y prueba para sostenerla",
+        "El texto lo formula con precisión: pedirle que evalúe imparcialmente esa "
+        "misma prueba es pedirle que se contradiga a sí mismo.\nEl problema no es "
+        "de honestidad sino de posición. Quien pasó meses construyendo una "
+        "explicación de los hechos difícilmente pueda examinarla como si la viera "
+        "por primera vez.\nPor eso la separación de funciones es, según el texto, "
+        "la garantía principal de que un juicio sea algo más que un trámite.",
+        [
+            ("Porque los fiscales carecen de formación para juzgar", "El texto no plantea un problema de competencia técnica."),
+            ("Porque el tribunal debe investigar por su cuenta", "El texto señala que los tribunales no investigan."),
+            ("Porque la ley prohíbe que un fiscal ingrese a la sala", "El fiscal sostiene la acusación ante el tribunal, según el texto."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "medio",
+        "Según el texto, ¿qué ocurre con un juicio sin defensa?",
+        "Se convierte en un monólogo",
+        "El texto describe el mecanismo: alguien acusa, nadie discute la acusación "
+        "y el tribunal resuelve sobre una sola versión.\nEl problema no es solo que "
+        "la persona imputada quede desprotegida. Es que el tribunal pierde aquello "
+        "que le permite decidir bien: la contradicción entre dos versiones que se "
+        "examinan mutuamente.\nDe ahí que el derecho a defensa aparezca en el texto "
+        "como parte del diseño del proceso y no como un beneficio otorgado al "
+        "acusado.",
+        [
+            ("El tribunal debe suspender la audiencia hasta el año siguiente", "El texto no describe ninguna suspensión de ese tipo."),
+            ("El fiscal asume también la defensa del imputado", "El fiscal sostiene la acusación: no puede defender a quien acusa."),
+            ("La causa pasa directamente a un tribunal superior", "El texto no contempla ese traslado."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "medio",
+        "Según el texto, ¿para qué sirve que el proceso sea público?",
+        "Para que cualquiera pueda controlarlo",
+        "El texto lo dice sin rodeos y descarta antes otra lectura: la publicidad "
+        "no busca espectáculo.\nSu formulación es que un juicio que cualquiera "
+        "puede presenciar es un juicio que cualquiera puede controlar.\nLa oralidad "
+        "opera en el mismo sentido pero sobre otro punto: obliga a que la prueba se "
+        "produzca delante de quien va a decidir, en vez de llegarle por escrito y "
+        "de segunda mano.",
+        [
+            ("Para que los medios puedan difundir las audiencias", "El texto descarta expresamente la finalidad de espectáculo."),
+            ("Para que las partes intercambien escritos con más rapidez", "El proceso oral reemplaza justamente ese intercambio."),
+            ("Para que el tribunal conozca la opinión del público", "La publicidad permite controlar, no orientar la decisión."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "medio",
+        "Según el texto, ¿qué consecuencia práctica tiene la presunción de "
+        "inocencia?",
+        "La carga de la prueba recae en quien acusa",
+        "El texto encadena las dos cosas: toda persona es inocente mientras no se "
+        "pruebe lo contrario, de modo que probar corresponde a quien acusa y no al "
+        "imputado.\nY extrae la consecuencia que suele omitirse: si la prueba no "
+        "alcanza, corresponde absolver.\nEsa regla no supone que el tribunal crea "
+        "al acusado. Supone que la duda opera a su favor, porque el Estado no puede "
+        "condenar sin acreditar lo que afirma.",
+        [
+            ("El acusado debe demostrar que no cometió el delito", "Es exactamente lo contrario de lo que la presunción establece."),
+            ("El tribunal debe creer la versión del imputado", "El tribunal valora la prueba; no está obligado a creer a nadie."),
+            ("Nadie puede ser detenido antes de la sentencia", "El texto admite la prisión preventiva como medida excepcional."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "medio",
+        "Según el texto, ¿qué incluye el derecho a defensa además de contar con "
+        "abogado?",
+        "Conocer la acusación, prepararse y contradecir la prueba",
+        "El texto enumera los tres elementos: conocer de qué se acusa, disponer de "
+        "tiempo para preparar la respuesta y contradecir la prueba de la "
+        "contraparte.\nLos tres son condiciones para que la defensa signifique "
+        "algo. Un abogado que no sabe de qué se acusa a su cliente, o que no puede "
+        "examinar la prueba en contra, cumple una función meramente formal.",
+        [
+            ("Elegir el tribunal que conocerá de la causa", "El texto no contempla la elección del tribunal."),
+            ("Impedir que la audiencia sea pública", "La publicidad es un rasgo del proceso, no algo que la defensa pueda excluir."),
+            ("Obtener una sentencia dentro de un plazo fijo", "El texto no menciona plazos de sentencia."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "dificil",
+        "El texto dice que usar la prisión preventiva como anticipo de castigo es "
+        "lo que el diseño prohíbe. ¿Por qué?",
+        "Aplica la pena a quien aún es inocente ante la ley",
+        "La prisión preventiva y la pena de cárcel producen el mismo efecto "
+        "material: privación de libertad.\nLo que las distingue es su "
+        "justificación. La pena presupone una sentencia que estableció "
+        "responsabilidad; la prisión preventiva opera antes, sobre alguien que la "
+        "presunción de inocencia protege.\nPor eso el texto exige razones acotadas "
+        "y ajenas a la culpabilidad —fuga, peligro para la investigación o para la "
+        "víctima— y obliga al tribunal a revisarla. Si se aplicara por la gravedad "
+        "del hecho imputado, sería una condena dictada antes del juicio.",
+        [
+            ("Porque los tribunales carecen de recintos adecuados", "El texto no plantea un problema de infraestructura."),
+            ("Porque la fiscalía no puede solicitar esa medida", "El texto no impide solicitarla: exige que se funde en razones acotadas."),
+            ("Porque toda medida cautelar está prohibida en Chile", "El texto la admite como excepción justificada."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "dificil",
+        "¿Qué tienen en común la separación de funciones y la oralidad del proceso?",
+        "Ambas buscan que quien decide no dependa de otro",
+        "La separación asegura que quien juzga no haya construido antes la "
+        "acusación, de modo que llega al caso sin una hipótesis propia que "
+        "defender.\nLa oralidad asegura que la prueba se produzca delante del "
+        "tribunal, en vez de llegarle filtrada por escritos que resumen lo que otro "
+        "examinó.\nLas dos protegen lo mismo desde ángulos distintos: la "
+        "posibilidad de que el tribunal forme su convicción por sí mismo, con lo "
+        "que ve y oye, y no con lo que alguien ya decidió presentarle de cierta "
+        "manera.",
+        [
+            ("Ambas aceleran la tramitación de las causas", "El texto no las justifica por su efecto en los plazos."),
+            ("Ambas reducen el costo del sistema judicial", "El costo no aparece entre las razones que el texto entrega."),
+            ("Ambas limitan el acceso del público a las audiencias", "La oralidad va acompañada de publicidad, que amplía ese acceso."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "dificil",
+        "Un dirigente propone que los tribunales investiguen los casos más graves "
+        "para acelerarlos. ¿Qué objeción se sigue del texto?",
+        "El tribunal llegaría con una hipótesis propia",
+        "El texto identifica el problema en abstracto y la propuesta cae "
+        "exactamente en él: quien investigó tiene una hipótesis y prueba reunida "
+        "para sostenerla.\nSi el mismo órgano investiga y juzga, la evaluación de "
+        "la prueba deja de ser un examen y pasa a ser una revisión del propio "
+        "trabajo.\nLa objeción es además independiente de la gravedad del caso. Los "
+        "casos más graves son precisamente aquellos donde la garantía importa más, "
+        "porque la consecuencia de un error es mayor.",
+        [
+            ("Los tribunales no tienen atribuciones para acelerar causas", "El problema no es de atribuciones sino de imparcialidad."),
+            ("La aceleración solo puede decidirla el Ministerio Público", "El texto no asigna a nadie la facultad de acelerar causas."),
+            ("La gravedad del delito impide aplicar la presunción de inocencia", "La presunción rige con independencia de la gravedad imputada."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "dificil",
+        "¿Por qué el texto sostiene que la defensa protege también al tribunal y no "
+        "solo al imputado?",
+        "Sin contradicción el tribunal decide sobre una sola versión",
+        "El texto describe qué pierde un juicio sin defensa: alguien acusa, nadie "
+        "discute la acusación y el tribunal resuelve sobre una sola versión.\nUn "
+        "tribunal que solo escucha a una parte no puede detectar los puntos débiles "
+        "de la prueba, porque nadie se los va a señalar y no es su función "
+        "buscarlos: él juzga, no investiga.\nLa defensa cumple entonces una función "
+        "que excede el interés del acusado. Es el mecanismo por el que la "
+        "información que llega al tribunal ha sido sometida a examen antes de que "
+        "decida.",
+        [
+            ("Porque el abogado defensor asesora al tribunal", "El defensor representa al imputado, no al tribunal."),
+            ("Porque sin defensa el fiscal no puede acusar", "El texto describe justamente ese escenario como posible y defectuoso."),
+            ("Porque la defensa reemplaza la investigación del fiscal", "Son funciones distintas y ninguna sustituye a la otra."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_justicia", "dificil",
+        "El texto exige que el tribunal revise la prisión preventiva y la deje sin "
+        "efecto cuando las razones desaparecen. ¿Qué supone esa exigencia?",
+        "Que la medida se funda en un riesgo actual y no pasado",
+        "Las tres razones que el texto admite —fuga, peligro para la investigación "
+        "o para la víctima— describen situaciones que pueden cambiar con el "
+        "tiempo.\nSi la prueba ya fue recogida, o si las circunstancias que hacían "
+        "probable la fuga se modificaron, el fundamento de la medida desaparece "
+        "aunque la acusación siga en pie.\nDe ahí la obligación de revisar: una "
+        "decisión bien fundada al dictarse puede dejar de estarlo semanas después, "
+        "y mantenerla sin ese fundamento la convierte en el anticipo de castigo que "
+        "el diseño prohíbe.",
+        [
+            ("Que el tribunal debe absolver si la revisión resulta favorable", "Revisar la medida cautelar no resuelve el fondo de la acusación."),
+            ("Que la medida caduca automáticamente al cumplirse un plazo", "El texto no fija plazos: exige que el tribunal la revise."),
+            ("Que la fiscalía puede prolongarla mientras dure la investigación", "La duración de la investigación no es una de las razones admitidas."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_derechos", "dificil",
+        "Según el texto, ¿por qué el acceso a defensa se garantiza a quien no puede "
+        "pagarla?",
+        "Porque un derecho que depende del dinero no es igual para todos",
+        "El texto lo señala con una fórmula breve: la Defensoría asegura abogado a "
+        "toda persona imputada, la pague o no.\nLa razón está en el resto del "
+        "argumento. Si la defensa es una condición para que el juicio funcione, y "
+        "no un servicio que se contrata, entonces su ausencia no perjudica solo a "
+        "quien no tiene recursos: convierte su juicio en un monólogo.\nUn sistema "
+        "donde la calidad del proceso depende del patrimonio de cada acusado "
+        "produce dos justicias distintas bajo la misma ley, y eso es exactamente lo "
+        "que la igualdad ante la ley excluye.",
+        [
+            ("Porque el Estado debe compensar económicamente a los imputados", "La Defensoría entrega defensa jurídica, no una compensación."),
+            ("Porque quien no paga abogado renuncia a defenderse", "El texto establece lo contrario: la defensa se garantiza igual."),
+            ("Porque los tribunales exigen abogado para admitir la acusación", "El fundamento que da el texto es el derecho a defensa, no un requisito de admisibilidad."),
+        ],
+    ),
     _ql(
         "civ_info_regulacion", "civ_informacion", "facil",
         "Según la Intervención 1, ¿por qué una plataforma no es un tablón de "
