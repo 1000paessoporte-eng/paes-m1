@@ -157,10 +157,8 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # Competencia Lectora: la tabla de residuos
     # Competencia Lectora: la campaña del agua
     # Historia y Cs. Sociales: economía y cálculo temporal
-    "4.500.000 personas ocupadas": str(round(500_000 / (4_500_000 + 500_000) * 100)),
     "IPC de un país pasa de 100 a 106": str(round((106 - 100) / 100 * 100)),
     "PIB de 300.000 millones": f"{300_000 // 20:,}".replace(",", "."),
-    "fuerza de trabajo es de 60.000": str(round(3_000 / 60_000 * 100)),
     "ofrecen 800 unidades": str(800 - 500),
     "vende 200 unidades a 3.000 pesos": f"{3_000 * 200:,}".replace(",", "."),
     "cayó el sector primario": str(55 - 11),
@@ -222,8 +220,6 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "pOH 4, ¿cuál es su pH": str(14 - 4),
     "pH 2 y otra pH 6": f"{10 ** (6 - 2):,}".replace(",", "."),
     # Segunda tanda de Historia: economía
-    "IPC sube de 120 a 126": str(round((126 - 120) / 120 * 100)),
-    "PIB de 120.000 millones y 8 millones": f"{120_000 // 8:,}".replace(",", "."),
     "8 millones de personas en edad de trabajar": str(round(500 / 5500 * 100, 1)).replace(".", ","),
     "a $500 los consumidores demandan 900": str(900 - 400),
     "vende 500 unidades a $2.000": f"{2_000 * 500 - 700_000:,}".replace(",", "."),
@@ -231,6 +227,7 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # Fuentes nuevas de Historia
     "mujeres rurales entre 1930 y 2020": str(96 - 19),
     "plebiscito de 2020 que en la municipal de 2016": f"{23_000 - 15_400:,}".replace(",", "."),
+    "3.000.000 de menores de 15 años": f"{(3_000_000 + 1_500_000) * 100 // 9_000_000}%",
     # Ampliación de Historia: la tabla de oferta y demanda de la feria
     # mayorista. El equilibrio está en $400 con 600 cajas; a $300 se demandan
     # 750 y se ofrecen 450, y a $500 se ofrecen 750 y se demandan 450.

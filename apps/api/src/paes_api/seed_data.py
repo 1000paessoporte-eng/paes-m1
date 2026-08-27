@@ -55503,9 +55503,7 @@ PASSAGES_HISTORIA = [
             "\n"
             "De ahí que la prisión preventiva sea excepcional. Encerrar a "
             "alguien antes de que exista sentencia es aplicar la consecuencia "
-            "del delito a quien todavía es inocente ante la ley, y solo se "
-            "justifica por razones acotadas: riesgo de fuga, peligro para la "
-            "investigación o para la seguridad de la víctima. Un tribunal debe "
+            "del delito a quien todavía es inocente ante la ley, y solo se justifica por razones acotadas: riesgo de fuga, peligro para el éxito de la investigación y peligro para la seguridad de la sociedad o de la víctima. Un tribunal debe "
             "fundarla, revisarla y dejarla sin efecto cuando esas razones "
             "desaparecen. Usarla como anticipo de castigo es exactamente lo que "
             "el diseño prohíbe."
@@ -55768,9 +55766,7 @@ PASSAGES_HISTORIA = [
             "\n"
             "La Contraloría General de la República fiscaliza la legalidad de "
             "los actos de la administración y controla el uso de los fondos "
-            "públicos. Antes de que un decreto o una resolución produzca "
-            "efectos, la Contraloría examina si se ajusta a la ley: si no lo "
-            "hace, lo representa y el acto no puede aplicarse sin más. Ese "
+            "públicos. Los decretos y resoluciones que la ley somete a ese control pasan por la Contraloría antes de producir efectos: si el acto no se ajusta a la ley, lo representa y no puede aplicarse sin más. Ese "
             "control es previo y jurídico, no político: no evalúa si una medida "
             "es conveniente, sino si la autoridad tenía atribuciones para "
             "adoptarla.\n"
@@ -58252,6 +58248,96 @@ PASSAGES_HISTORIA = [
 
 QUESTIONS_HISTORIA = [
     _q(
+        "eco_indicadores", "facil",
+        "En un país hay 3.000.000 de menores de 15 años, 1.500.000 mayores de 64 y "
+        "9.000.000 de personas entre 15 y 64. ¿Cuál es su tasa de dependencia "
+        "demográfica?",
+        "50%",
+        "La tasa de dependencia compara a quienes por su edad no están en el tramo "
+        "laboral con quienes sí lo están.\nEl cálculo es (3.000.000 + 1.500.000) ÷ "
+        "9.000.000 = 0,50, es decir 50%: hay una persona en edad dependiente por "
+        "cada dos en edad de trabajar.\nEl indicador no dice cuántas de esas nueve "
+        "millones efectivamente trabajan, que es lo que miden la participación y la "
+        "ocupación. Describe una estructura de edades, no un mercado laboral.",
+        [
+            ("33%, dividiendo por la población total del país", "El denominador es la población en edad de trabajar, no el total."),
+            ("200%, invirtiendo la razón entre ambos grupos", "La razón va con los dependientes en el numerador."),
+            ("17%, contando solo a los mayores de 64 años", "La tasa incluye a los menores de 15 junto con los mayores de 64."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "¿Qué ventaja tiene un índice mensual de actividad económica frente al PIB "
+        "trimestral?",
+        "Avisa antes de lo que está pasando",
+        "El PIB trimestral es la medida más completa de la producción, pero se "
+        "publica semanas después de terminado el trimestre: cuando llega, el "
+        "período que describe ya quedó atrás.\nUn índice mensual entrega una señal "
+        "más temprana y más frecuente, aunque cubra menos actividades y se corrija "
+        "después.\nLos dos se usan juntos y para cosas distintas: el índice mensual "
+        "para advertir un giro a tiempo, el PIB trimestral para medirlo bien.",
+        [
+            ("Mide la producción con más precisión que el PIB", "El PIB trimestral es la medida más completa: el índice mensual cubre menos."),
+            ("Incluye actividades que el PIB deja fuera por definición", "Un índice mensual suele cubrir menos actividades, no más."),
+            ("Elimina el efecto de los precios sobre la producción", "Ese ajuste lo hace el paso de valores nominales a reales, no la frecuencia."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Las ventas del comercio suben todos los diciembres y caen todos los "
+        "eneros. ¿Para qué sirve desestacionalizar esa serie?",
+        "Para distinguir el cambio real del que se repite cada año",
+        "Una parte del movimiento de la serie no informa nada nuevo: ocurre todos "
+        "los años en la misma fecha, por fiestas, vacaciones o "
+        "cosechas.\nDesestacionalizar retira ese componente previsible y deja a la "
+        "vista lo que sí cambió respecto de lo habitual para esa época.\nSin ese "
+        "ajuste, cualquier enero parecería una caída y cualquier diciembre un auge, "
+        "y sería imposible saber si la economía se está enfriando o simplemente "
+        "terminaron las fiestas.",
+        [
+            ("Para corregir el efecto de la inflación sobre las ventas", "Ese ajuste es otro: pasar de valores nominales a reales."),
+            ("Para eliminar los meses en que las ventas fueron atípicas", "No se eliminan meses: se descuenta el patrón que se repite todos los años."),
+            ("Para comparar las ventas con las de otros países", "La comparación entre países no depende de este ajuste."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Un país tiene superávit en su balanza comercial y aun así déficit en su "
+        "cuenta corriente. ¿Cómo se explica?",
+        "La cuenta corriente incluye más que el comercio de bienes",
+        "La balanza comercial compara exportaciones e importaciones de bienes. La "
+        "cuenta corriente es más amplia: suma además los servicios, las rentas de "
+        "inversión y las transferencias.\nUn país puede vender más bienes de los "
+        "que compra y aun así quedar en déficit si paga al exterior utilidades, "
+        "intereses o fletes por un monto mayor que ese excedente.\nEs un caso "
+        "frecuente en economías con inversión extranjera importante: las utilidades "
+        "que esas empresas remiten afuera pesan en la cuenta corriente y no en la "
+        "balanza comercial.",
+        [
+            ("La balanza comercial está mal calculada ese año", "Las dos cosas pueden ocurrir a la vez sin ningún error de cálculo."),
+            ("El superávit comercial se descuenta de la cuenta corriente", "El superávit comercial suma a la cuenta corriente, no se descuenta de ella."),
+            ("La cuenta corriente solo registra movimientos de capital", "Los movimientos de capital pertenecen a otra cuenta de la balanza de pagos."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Tras meses sin encontrar empleo, un grupo de personas deja de buscar. ¿Qué "
+        "ocurre con la tasa de desempleo?",
+        "Baja, aunque nadie haya conseguido trabajo",
+        "La tasa de desempleo cuenta a quienes no trabajaron y buscaron trabajo "
+        "activamente, sobre el total de la fuerza de trabajo.\nQuien deja de buscar "
+        "sale de las dos cifras a la vez: ya no es desocupado y tampoco integra la "
+        "fuerza de trabajo. El numerador y el denominador caen, y el cociente "
+        "baja.\nA esas personas se las llama trabajadores desalentados, y su efecto "
+        "se detecta mirando la tasa de participación: si el desempleo baja mientras "
+        "la participación también baja, la mejora puede ser aparente.",
+        [
+            ("Sube, porque hay más personas sin trabajo que antes", "Al dejar de buscar salen del conteo de desocupados."),
+            ("No cambia, porque siguen sin tener empleo", "Sí cambia: dejan de contarse como desocupados y como fuerza de trabajo."),
+            ("Baja porque encontraron empleo en el sector informal", "El enunciado dice que dejaron de buscar, no que se emplearan."),
+        ],
+    ),
+    _q(
         "his_representaciones", "facil",
         "Según el mapa, ¿qué región de Ventura tiene la mayor proporción de "
         "población urbana?",
@@ -58262,9 +58348,9 @@ QUESTIONS_HISTORIA = [
         "tramo.\nLeer un mapa de coropletas es siempre esa operación en dos pasos: "
         "identificar el sombreado y buscarlo en la leyenda.",
         [
-            ("La región A, que está en el segundo tramo más alto", "A está entre 60% y 89%, por debajo del tramo de C."),
-            ("La región E, la más austral del mapa", "E tiene el sombreado más claro, de menos de 30%."),
-            ("La región B, que ocupa una posición central", "B está entre 30% y 59%, según la leyenda."),
+            ("La región A", "A está entre 60% y 89%, por debajo del tramo de C."),
+            ("La región E", "E tiene el sombreado más claro, de menos de 30%."),
+            ("La región B", "B está entre 30% y 59%, según la leyenda."),
         ],
         imagen="/preguntas/his-mapa-coropleta-urbana.svg",
     ),
@@ -58280,9 +58366,9 @@ QUESTIONS_HISTORIA = [
         "es corriente, y advertirlo evita suponer que cada tramo tiene por fuerza "
         "un caso.",
         [
-            ("El de 90% o más, que ninguna región alcanza", "Q lleva ese sombreado en el mapa."),
-            ("El de menos de 50%, que la leyenda no usa", "S está en ese tramo."),
-            ("El de 50% a 69%, que solo tendría una región", "Lo comparten dos regiones, P y R."),
+            ("El de 90% o más", "Q lleva ese sombreado en el mapa."),
+            ("El de menos de 50%", "S está en ese tramo."),
+            ("El de 50% a 69%", "Lo comparten dos regiones, P y R."),
         ],
         imagen="/preguntas/his-mapa-coropleta-alfabetizacion.svg",
     ),
@@ -58313,9 +58399,9 @@ QUESTIONS_HISTORIA = [
         "el otro extremo está O, con el sombreado más oscuro, que la leyenda asocia "
         "a 100 o más habitantes por kilómetro cuadrado.",
         [
-            ("La región O, que aparece con el sombreado más oscuro", "Ese sombreado corresponde al tramo más alto, de 100 o más."),
-            ("La región M, que está en el segundo tramo", "M está entre 5 y 24 habitantes por kilómetro cuadrado."),
-            ("La región N, que ocupa una posición intermedia", "N está entre 25 y 99 habitantes por kilómetro cuadrado."),
+            ("La región O", "Ese sombreado corresponde al tramo más alto, de 100 o más."),
+            ("La región M", "M está entre 5 y 24 habitantes por kilómetro cuadrado."),
+            ("La región N", "N está entre 25 y 99 habitantes por kilómetro cuadrado."),
         ],
         imagen="/preguntas/his-mapa-coropleta-densidad.svg",
     ),
@@ -58917,9 +59003,9 @@ QUESTIONS_HISTORIA = [
         "2024.\nEl padrón crece de manera sostenida en toda la serie, lo que la "
         "nota atribuye a la inscripción automática vigente desde 2012.",
         [
-            ("19.200 personas, según la segunda columna", "Esa cifra corresponde a los votos emitidos, no al padrón."),
+            ("19.200 personas", "Esa cifra corresponde a los votos emitidos, no al padrón."),
             ("46.000 personas, como en el plebiscito de 2020", "Ese es el padrón de 2020, no el de 2024."),
-            ("40%, que es la participación de ese año", "El 40% es un porcentaje, no un número de personas."),
+            ("40%", "El 40% es un porcentaje, no un número de personas."),
         ],
     ),
     _ql(
@@ -59040,7 +59126,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "nacion_impactos", "his_critico", "facil",
+        "nacion_impactos", "his_critico", "medio",
         "Según el texto, ¿qué produjo el principio de que a cada nación le "
         "corresponde un Estado?",
         "Reclamos sobre fronteras que dejaban compatriotas fuera",
@@ -59270,9 +59356,9 @@ QUESTIONS_HISTORIA = [
         "de la serie: casi dos de cada tres viviendas del país no tenían agua "
         "potable.",
         [
-            ("El 55%, según el segundo corte de la tabla", "Ese valor corresponde a 1940."),
-            ("El 26%, según el último corte de la tabla", "Ese valor corresponde a 1970."),
-            ("El 49%, que es la población urbana de ese año", "Ese porcentaje corresponde a otra columna de la tabla."),
+            ("El 55%", "Ese valor corresponde a 1940."),
+            ("El 26%", "Ese valor corresponde a 1970."),
+            ("El 49%", "Ese porcentaje corresponde a otra columna de la tabla."),
         ],
     ),
     _ql(
@@ -59284,8 +59370,8 @@ QUESTIONS_HISTORIA = [
         "17 corresponden a Asia y África.\nLa comparación con los extremos de la "
         "serie da la medida del proceso: eran 8 en 1945 y llegan a 76 en 1975.",
         [
-            ("76 miembros, según esa misma fila", "El 76 de 1955 es el total de miembros, no los de Asia y África."),
-            ("55 miembros, que es la cifra de 1965", "Los 55 corresponden al corte de 1965."),
+            ("76 miembros", "El 76 de 1955 es el total de miembros, no los de Asia y África."),
+            ("55 miembros", "Los 55 corresponden al corte de 1965."),
             ("8 miembros, como en la fundación", "Los 8 corresponden a 1945."),
         ],
     ),
@@ -59301,8 +59387,8 @@ QUESTIONS_HISTORIA = [
         "lo que permite hablar de terciarización y no de un simple traspaso entre "
         "dos sectores.",
         [
-            ("El sector secundario, que sube hasta 1980", "Sube hasta 1980 y luego cae: no crece en los tres tramos."),
-            ("El sector primario, que se moderniza en el período", "Cae en todos los tramos, de 55% a 11%."),
+            ("El sector secundario", "Sube hasta 1980 y luego cae: no crece en los tres tramos."),
+            ("El sector primario", "Cae en todos los tramos, de 55% a 11%."),
             ("Ninguno: los tres varían en ambas direcciones", "El terciario sube en los tres tramos."),
         ],
     ),
@@ -59336,9 +59422,9 @@ QUESTIONS_HISTORIA = [
         "desocupación baja, y las de producto e inflación describen el agregado sin "
         "decir cómo se reparte.",
         [
-            ("La de variación del PIB, que vuelve a crecer", "Muestra la recuperación, no a quién alcanzó."),
-            ("La de inflación, que baja en el período", "El nivel de precios no informa sobre el poder de compra del salario por sí solo."),
-            ("La de desocupación, que también mejora", "Baja de 24% a 12%: no muestra el retroceso."),
+            ("La de variación del PIB", "Muestra la recuperación, no a quién alcanzó."),
+            ("La de inflación", "El nivel de precios no informa sobre el poder de compra del salario por sí solo."),
+            ("La de desocupación", "Baja de 24% a 12%: no muestra el retroceso."),
         ],
     ),
     _ql(
@@ -59920,8 +60006,8 @@ QUESTIONS_HISTORIA = [
         "3.500.000 restantes son población inactiva: estudian, cuidan a alguien, "
         "están jubilados o simplemente no buscan empleo.",
         [
-            ("35%, que es la proporción restante", "Ese porcentaje corresponde a la población inactiva."),
-            ("6,5%, según la proporción calculada", "Corrió la coma decimal al pasar la proporción a porcentaje."),
+            ("35%", "Ese porcentaje corresponde a la población inactiva."),
+            ("6,5%", "Corrió la coma decimal al pasar la proporción a porcentaje."),
             ("154%, dividiendo al revés ambas cifras", "Invirtió la razón: la fuerza de trabajo va en el numerador."),
         ],
     ),
@@ -59936,9 +60022,9 @@ QUESTIONS_HISTORIA = [
         "usa otro denominador: los 500.000 desocupados sobre los 6.500.000 de la "
         "fuerza de trabajo dan 7,7%, no 40%.",
         [
-            ("40%, que corresponde a quienes no trabajan", "Es el complemento de la tasa de ocupación, no la tasa misma."),
+            ("40%", "Es el complemento de la tasa de ocupación, no la tasa misma."),
             ("92%, comparándola con la fuerza de trabajo", "Ese cálculo usa otro denominador y da la tasa de ocupación laboral."),
-            ("7,7%, que es la proporción de desocupados", "Corresponde a la tasa de desempleo, con otro denominador."),
+            ("7,7%", "Corresponde a la tasa de desempleo, con otro denominador."),
         ],
     ),
     _q(
@@ -59987,8 +60073,8 @@ QUESTIONS_HISTORIA = [
         "muy grande.",
         [
             ("20%, sumando ambas inflaciones anuales", "Sumar los porcentajes ignora que el segundo se aplica sobre un nivel ya mayor."),
-            ("10%, porque la inflación fue la misma cada año", "Es la inflación de cada año, no la acumulada del período."),
-            ("100%, porque los precios se duplicaron", "Los precios pasaron de 100 a 121, no a 200."),
+            ("10%", "Es la inflación de cada año, no la acumulada del período."),
+            ("100%", "Los precios pasaron de 100 a 121, no a 200."),
         ],
     ),
     _q(
@@ -60236,8 +60322,8 @@ QUESTIONS_HISTORIA = [
         "cada kilo deja $900 de margen, 900 × 120 = $108.000, menos los $18.000 del "
         "puesto.",
         [
-            ("$108.000, que es el margen de las paltas vendidas", "Omite el costo del puesto, que también hay que descontar."),
-            ("$288.000, que es lo que recibió en el día", "Es el ingreso total, sin descontar ningún costo."),
+            ("$108.000", "Omite el costo del puesto, que también hay que descontar."),
+            ("$288.000", "Es el ingreso total, sin descontar ningún costo."),
             ("$270.000, restando solo el arriendo del puesto", "Omite el costo de la mercadería, que es el mayor de los dos."),
         ],
     ),
@@ -60382,8 +60468,8 @@ QUESTIONS_HISTORIA = [
         "800.000 = $1.400.000. Notar que el costo por pan no es $400 sino $700, "
         "porque el arriendo también se reparte entre las unidades producidas.",
         [
-            ("$800.000, que es lo que se gasta en insumos", "Omite el arriendo, que también forma parte del costo del mes."),
-            ("$600.000, que es lo que cuesta mantener el local", "Es solo el costo fijo, sin los insumos de las 2.000 unidades."),
+            ("$800.000", "Omite el arriendo, que también forma parte del costo del mes."),
+            ("$600.000", "Es solo el costo fijo, sin los insumos de las 2.000 unidades."),
             ("$1.000.000, promediando ambos costos del mes", "Los costos se suman, no se promedian entre sí."),
         ],
     ),
@@ -60399,8 +60485,8 @@ QUESTIONS_HISTORIA = [
         "panadería pierde, y sobre ella cada pan adicional deja $600 de ganancia.",
         [
             ("600 panes, uno por cada mil pesos de arriendo", "Divide el arriendo por el precio y no por el margen de cada pan."),
-            ("1.500 panes, para cubrir el costo total del mes", "Divide el costo total de 2.000 panes por el precio, mezclando dos cantidades distintas."),
-            ("2.000 panes, la producción del mes", "Es la producción del ejemplo anterior, no el umbral de equilibrio."),
+            ("1.500 panes", "Divide el costo total de 2.000 panes por el precio, mezclando dos cantidades distintas."),
+            ("2.000 panes", "Es la producción del ejemplo anterior, no el umbral de equilibrio."),
         ],
     ),
     _q(
@@ -60466,9 +60552,9 @@ QUESTIONS_HISTORIA = [
         "el precio costaría clientes y el vendedor tendría que absorber buena parte "
         "del impuesto.",
         [
-            ("El vendedor, porque es quien entera el impuesto al fisco", "Quién lo entera no determina quién soporta el costo."),
+            ("El vendedor", "Quién lo entera no determina quién soporta el costo."),
             ("Se reparte siempre en partes iguales entre ambos", "El reparto depende de cuán sensible al precio sea cada lado."),
-            ("El Estado, porque devuelve lo recaudado en subsidios", "El enunciado no contempla ninguna devolución."),
+            ("El Estado", "El enunciado no contempla ninguna devolución."),
         ],
     ),
     _q(
@@ -60861,8 +60947,8 @@ QUESTIONS_HISTORIA = [
         "34 puntos porcentuales, la mayor de las tres filas en términos absolutos.",
         [
             ("El 88%, igual que los cubiertos", "El 88% corresponde a quienes sí están cubiertos."),
-            ("El 41%, según la fila de capacitación", "Ese valor corresponde a otra fila de la tabla."),
-            ("El 12%, según la columna sin negociación", "El 12% es la capacitación pagada, no el contrato indefinido."),
+            ("El 41%", "Ese valor corresponde a otra fila de la tabla."),
+            ("El 12%", "El 12% es la capacitación pagada, no el contrato indefinido."),
         ],
     ),
     _ql(
@@ -62211,9 +62297,9 @@ QUESTIONS_HISTORIA = [
         "siguientes ocurre lo contrario, lo que confirma que el cruce está justo "
         "ahí.",
         [
-            ("$300 por caja, donde la demanda es mayor", "A ese precio se demandan 750 cajas y se ofrecen 450: hay escasez."),
-            ("$500 por caja, donde la oferta es mayor", "A ese precio sobran 300 cajas: no hay equilibrio."),
-            ("$600 por caja, el precio más alto de la tabla", "El precio más alto no es el de equilibrio: ahí sobran 600 cajas."),
+            ("$300 por caja", "A ese precio se demandan 750 cajas y se ofrecen 450: hay escasez."),
+            ("$500 por caja", "A ese precio sobran 300 cajas: no hay equilibrio."),
+            ("$600 por caja", "El precio más alto no es el de equilibrio: ahí sobran 600 cajas."),
         ],
     ),
     _ql(
@@ -62225,8 +62311,8 @@ QUESTIONS_HISTORIA = [
         "ofrece encuentra comprador y todo el que quiere comprar a ese precio "
         "consigue producto.",
         [
-            ("900 cajas, la mayor cantidad de la tabla", "Esa cifra aparece como demanda a $200 y como oferta a $600, nunca en equilibrio."),
-            ("450 cajas, según la columna de oferta", "Corresponde a la oferta a $300, donde no hay equilibrio."),
+            ("900 cajas", "Esa cifra aparece como demanda a $200 y como oferta a $600, nunca en equilibrio."),
+            ("450 cajas", "Corresponde a la oferta a $300, donde no hay equilibrio."),
             ("1.200 cajas, sumando ambas columnas", "Sumar demanda y oferta no entrega la cantidad transada."),
         ],
     ),
@@ -63217,13 +63303,17 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_proceso", "civ_justicia", "facil",
         "Según el texto, ¿qué razones pueden justificar la prisión preventiva?",
-        "Riesgo de fuga o peligro para la investigación o la víctima",
+        "Fuga, riesgo para la investigación o para la seguridad",
         "El texto las enumera de manera taxativa y las llama acotadas: riesgo de "
-        "fuga, peligro para la investigación o para la seguridad de la víctima.\nY "
-        "agrega qué debe hacer el tribunal con ella: fundarla, revisarla y dejarla "
-        "sin efecto cuando esas razones desaparecen.",
+        "fuga, peligro para el éxito de la investigación y peligro para la "
+        "seguridad de la sociedad o de la víctima.\nNinguna de las tres se refiere "
+        "a lo que la persona hizo, sino a lo que podría ocurrir si queda en "
+        "libertad mientras dura el proceso. Esa es la diferencia entre una medida "
+        "cautelar y una pena.\nY el texto agrega qué debe hacer el tribunal con "
+        "ella: fundarla, revisarla y dejarla sin efecto cuando esas razones "
+        "desaparecen.",
         [
-            ("La gravedad de la pena que el delito tiene asignada", "El texto no incluye la gravedad de la pena entre las razones válidas."),
+            ("La cantidad de causas pendientes en el tribunal", "La carga de trabajo del tribunal no figura entre las causales."),
             ("La existencia de una acusación formal del fiscal", "Acusar no basta: el texto exige alguna de las tres razones acotadas."),
             ("El rechazo social que provoque el hecho investigado", "Ese criterio no figura en el texto."),
         ],
@@ -63720,15 +63810,15 @@ QUESTIONS_HISTORIA = [
         "civ_info_cifras", "civ_informacion", "facil",
         "Según la Tabla 1, ¿qué vía se mantiene casi igual en los cuatro grupos de "
         "edad?",
-        "Los diarios impresos",
+        "Diarios impresos",
         "La fila de diarios impresos registra 4%, 3%, 4% y 4%, con una variación de "
         "un solo punto entre el mayor y el menor.\nTodas las demás filas se mueven "
         "mucho más: las redes sociales van de 62% a 9% y la televisión, de 14% a "
         "63%.",
         [
-            ("La televisión, que se mantiene estable en toda la tabla", "Va de 14% a 63% según el grupo de edad."),
-            ("Las redes sociales, con valores parecidos en cada grupo", "Caen de 62% a 9% al aumentar la edad."),
-            ("La radio, que no varía entre los grupos", "Va de 5% a 13%, casi triplicándose."),
+            ("Televisión", "Va de 14% a 63%: es la fila que más cambia junto con las redes."),
+            ("Redes sociales", "Caen de 62% a 9% entre el grupo más joven y el mayor."),
+            ("Sitios de medios", "Se mueve entre 11% y 20%: más estable que el resto, pero no tanto como los diarios."),
         ],
     ),
     _ql(
@@ -73379,24 +73469,6 @@ QUESTIONS_HISTORIA = [
     # ---------- ECONOMÍA: indicadores ----------
     _q(
         "eco_indicadores", "facil",
-        "En un país hay 4.500.000 personas ocupadas y 500.000 desocupadas. "
-        "¿Cuál es la tasa de desempleo?",
-        "10%",
-        "La tasa de desempleo NO se calcula sobre la población total, sino "
-        "sobre la fuerza de trabajo: quienes trabajan más quienes buscan "
-        "trabajo.\n\n"
-        "1) Fuerza de trabajo: $4.500.000 + 500.000 = 5.000.000$.\n"
-        "2) Tasa: $\\frac{500.000}{5.000.000} \\times 100 = 10\\%$.\n\n"
-        "Quien está estudiando, jubilado o no busca empleo queda fuera del "
-        "cálculo: son población inactiva, no desempleados.",
-        [
-            ("11,1%", "Dividió los desocupados por los ocupados en vez de por la fuerza de trabajo."),
-            ("5%", "Usó una población total mayor, no la fuerza de trabajo."),
-            ("90%", "Calculó la proporción de ocupados, que es la tasa de ocupación."),
-        ],
-    ),
-    _q(
-        "eco_indicadores", "facil",
         "El IPC de un país pasa de 100 a 106 puntos en un año. ¿Cuál fue la "
         "inflación anual?",
         "6%",
@@ -73507,23 +73579,6 @@ QUESTIONS_HISTORIA = [
             ("Creció 8%", "Ese es el crecimiento nominal, que incluye el efecto de los precios."),
             ("Creció 16%", "Sumó inflación y crecimiento nominal; el ajuste es una resta, no una suma."),
             ("Cayó 8%", "La caída ocurriría si el PIB nominal no hubiera subido nada."),
-        ],
-    ),
-    _q(
-        "eco_indicadores", "medio",
-        "En un país de 100.000 habitantes, la fuerza de trabajo es de 60.000 "
-        "personas y hay 3.000 desocupados. ¿Cuál es la tasa de desempleo?",
-        "5%",
-        "El denominador siempre es la fuerza de trabajo, no la población "
-        "total.\n\n"
-        "$\\frac{3.000}{60.000} \\times 100 = 5\\%$.\n\n"
-        "Usar los 100.000 habitantes daría 3%, un número más bajo y "
-        "equivocado: incluiría en el denominador a niños, jubilados y a "
-        "cualquiera que no esté en el mercado laboral.",
-        [
-            ("3%", "Dividió por la población total en vez de por la fuerza de trabajo."),
-            ("20%", "Invirtió la razón entre las cifras."),
-            ("57%", "Restó los desocupados de la fuerza de trabajo en vez de calcular la proporción."),
         ],
     ),
     _q(
@@ -74482,20 +74537,6 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Segunda tanda: economía ----------
     _q(
-        "eco_indicadores", "facil",
-        "Si el IPC sube de 120 a 126 puntos en un año, ¿cuál fue la inflación?",
-        "5%",
-        "La inflación es la variación porcentual del índice.\n\n"
-        "$\\frac{126 - 120}{120} \\times 100 = 5\\%$.\n\n"
-        "El denominador es siempre el valor inicial: dividir por 126 daría un "
-        "resultado distinto y equivocado.",
-        [
-            ("6%", "Entregó la diferencia en puntos, no el porcentaje."),
-            ("126%", "Entregó el valor del índice."),
-            ("4,8%", "Dividió por el valor final en vez del inicial."),
-        ],
-    ),
-    _q(
         "eco_indicadores", "medio",
         "En un país sube el ingreso promedio de los hogares y, en el mismo año, "
         "sube también el porcentaje de personas bajo la línea de la pobreza. ¿Cómo "
@@ -74513,22 +74554,6 @@ QUESTIONS_HISTORIA = [
             ("Es imposible: si sube el promedio, la pobreza siempre baja", "El promedio no describe cómo se reparte el ingreso, así que ambas cosas pueden ocurrir juntas."),
             ("La línea de la pobreza mide desempleo, no ingresos", "El desempleo lo mide otro indicador; la línea es un umbral de ingreso."),
             ("Significa que el país cambió la definición de necesidades básicas", "No hace falta ningún cambio metodológico para que ocurra."),
-        ],
-    ),
-    _q(
-        "eco_indicadores", "medio",
-        "Un país tiene un PIB de 120.000 millones y 8 millones de habitantes. "
-        "¿Cuál es su PIB per cápita?",
-        "15.000",
-        "El PIB per cápita reparte la producción entre todos los habitantes."
-        "\n\n"
-        "$\\frac{120.000}{8} = 15.000$ por habitante.\n\n"
-        "Como todo promedio, esconde la distribución: dos países con el mismo "
-        "PIB per cápita pueden tener realidades muy distintas.",
-        [
-            ("960.000", "Multiplicó en vez de dividir."),
-            ("1.500", "Se equivocó en un factor diez."),
-            ("8.000", "Entregó la población, no el resultado."),
         ],
     ),
     _q(
@@ -74640,24 +74665,6 @@ QUESTIONS_HISTORIA = [
             ("Que las cifras de crecimiento están necesariamente falseadas", "No hace falta ningún fraude: crecimiento y desarrollo miden cosas distintas."),
             ("Que el desarrollo siempre precede al crecimiento económico", "El enunciado no permite establecer ningún orden entre ambos."),
             ("Que un país en crecimiento no puede tener pobreza", "El caso descrito es justamente un contraejemplo de esa afirmación."),
-        ],
-    ),
-    _q(
-        "eco_indicadores", "medio",
-        "El sueldo de una persona sube 4% y la inflación del año fue 7%. ¿Qué "
-        "ocurrió con su poder adquisitivo?",
-        "Disminuyó, porque los precios subieron más que su sueldo",
-        "El salario real depende de la relación entre el alza del sueldo y la "
-        "de los precios.\n\n"
-        "Con un sueldo que sube 4% y precios que suben 7%, lo que la persona "
-        "puede comprar se reduce: perdió poder adquisitivo aproximadamente un "
-        "3%.\n\n"
-        "Un aumento nominal por debajo de la inflación es, en los hechos, una "
-        "rebaja de sueldo.",
-        [
-            ("Aumentó 4%, según el reajuste recibido", "Ese es el aumento nominal, que la inflación más que compensó."),
-            ("Se mantuvo igual, porque ambos subieron", "Solo se mantendría si ambos subieran lo mismo."),
-            ("Aumentó 3%, por la diferencia entre ambas cifras", "La diferencia va en contra, no a favor."),
         ],
     ),
     _q(
@@ -75170,16 +75177,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_institucionalidad", "dificil",
-        "Según el texto, ¿qué implica que el Estado de derecho alcance también "
-        "al gobierno?",
+        "civ_poderes", "civ_institucionalidad", "medio",
+        "Según el texto, ¿qué implica que el Estado de derecho alcance también al "
+        "gobierno?",
         "Que ni el Presidente está por encima de la ley",
-        "El texto lo enuncia con esos tres ejemplos, y no son casuales: cubren "
-        "el Ejecutivo y el Legislativo, es decir a quienes tienen el poder."
-        "\n\n"
-        "Mencionar a la mayoría parlamentaria es lo más exigente: significa que "
-        "ni siquiera ganar una elección habilita a saltarse la ley.\n\n"
-        "Ese es el contenido real del principio. Si obligara solo a los "
+        "El texto lo enuncia con esos tres ejemplos, y no son casuales: cubren el "
+        "Ejecutivo y el Legislativo, es decir a quienes tienen el "
+        "poder.\n\nMencionar a la mayoría parlamentaria es lo más exigente: "
+        "significa que ni siquiera ganar una elección habilita a saltarse la "
+        "ley.\n\nEse es el contenido real del principio. Si obligara solo a los "
         "gobernados, no sería Estado de derecho sino simple autoridad.",
         [
             ("Que el gobierno puede modificar la ley cuando lo estime necesario", "El texto sostiene lo contrario: también está sometido a ella."),
@@ -75223,17 +75229,16 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_sufragio", "civ_democracia", "dificil",
-        "Según el texto, ¿por qué la sociedad civil organizada es un "
-        "complemento y no un sustituto de la representación electoral?",
+        "civ_sufragio", "civ_democracia", "medio",
+        "Según el texto, ¿por qué la sociedad civil organizada es un complemento y "
+        "no un sustituto de la representación electoral?",
         "Porque actúa de forma permanente en el territorio",
         "El texto distingue dos temporalidades. El voto se ejerce cada cierto "
-        "número de años; la sociedad civil organizada canaliza demandas «de "
-        "forma permanente».\n\n"
-        "Por eso no compite con la representación: cubre el espacio entre una "
-        "elección y la siguiente, en el día a día del territorio.\n\n"
-        "Ninguna de las dos formas alcanza sola: la representación decide, la "
-        "organización social vigila y presiona.",
+        "número de años; la sociedad civil organizada canaliza demandas «de forma "
+        "permanente».\n\nPor eso no compite con la representación: cubre el espacio "
+        "entre una elección y la siguiente, en el día a día del "
+        "territorio.\n\nNinguna de las dos formas alcanza sola: la representación "
+        "decide, la organización social vigila y presiona.",
         [
             ("Porque sus dirigentes no son elegidos democráticamente", "El texto no plantea un problema de legitimidad."),
             ("Porque solo puede ocuparse de asuntos locales menores", "El texto no restringe su alcance a asuntos menores."),
@@ -75380,16 +75385,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_justicia", "dificil",
+        "civ_proteccion", "civ_justicia", "medio",
         "Según el texto, ¿por qué exigir al acusado que demuestre su inocencia "
         "sería un problema práctico además de jurídico?",
         "Porque lo obligaría a probar un hecho negativo",
-        "El texto agrega esa razón práctica a la garantía jurídica.\n\n"
-        "Probar que algo ocurrió requiere presentar evidencia de ello. Probar "
-        "que NO ocurrió exige, en rigor, descartar todas las posibilidades, y "
-        "eso rara vez puede hacerse.\n\n"
-        "Por eso la carga recae en quien acusa: es el único que puede aportar "
-        "evidencia positiva de lo que sostiene.",
+        "El texto agrega esa razón práctica a la garantía jurídica.\n\nProbar que "
+        "algo ocurrió requiere presentar evidencia de ello. Probar que NO ocurrió "
+        "exige, en rigor, descartar todas las posibilidades, y eso rara vez puede "
+        "hacerse.\n\nPor eso la carga recae en quien acusa: es el único que puede "
+        "aportar evidencia positiva de lo que sostiene.",
         [
             ("Porque los acusados no tienen acceso a abogados", "El texto no menciona el acceso a defensa como fundamento."),
             ("Porque los tribunales no cuentan con tiempo suficiente", "La razón es la naturaleza de la prueba, no la carga de trabajo."),
@@ -75466,17 +75470,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_critico", "dificil",
+        "his_oficio", "his_critico", "medio",
         "Según el texto, ¿por qué reconstruir el contexto «no es un adorno "
         "introductorio»?",
         "Porque impide leer el pasado como si fuera nuestra época",
-        "El texto entrega un ejemplo que lo demuestra: publicar un texto "
-        "crítico bajo una dictadura y hacerlo en democracia «no son el mismo "
-        "acto».\n\n"
-        "La acción es idéntica; lo que cambia es lo que significa y lo que "
-        "arriesga quien la realiza.\n\n"
-        "Sin contexto, el historiador describiría gestos vacíos. Con él, puede "
-        "explicar por qué ocurrieron y qué pesaban.",
+        "El texto entrega un ejemplo que lo demuestra: publicar un texto crítico "
+        "bajo una dictadura y hacerlo en democracia «no son el mismo acto».\n\nLa "
+        "acción es idéntica; lo que cambia es lo que significa y lo que arriesga "
+        "quien la realiza.\n\nSin contexto, el historiador describiría gestos "
+        "vacíos. Con él, puede explicar por qué ocurrieron y qué pesaban.",
         [
             ("Porque permite ubicar el hecho en el mapa", "La ubicación geográfica es un dato del contexto, pero no su función principal."),
             ("Porque las introducciones deben ser extensas", "El texto discute la función del contexto, no la extensión de un escrito."),
@@ -75859,17 +75861,16 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_cambio_continuidad", "his_temporal", "dificil",
-        "Según el texto, ¿por qué distintos planos de la realidad cambian a "
-        "ritmos distintos?",
+        "his_cambio_continuidad", "his_temporal", "medio",
+        "Según el texto, ¿por qué distintos planos de la realidad cambian a ritmos "
+        "distintos?",
         "Porque lo político cambia en meses y las mentalidades en siglos",
-        "El texto ordena tres velocidades y las asocia a tres planos.\n\n"
-        "Un régimen político puede caer en semanas; una estructura productiva "
-        "tarda décadas en reconvertirse; las formas de pensar y las jerarquías "
-        "sociales se mueven a lo largo de generaciones.\n\n"
-        "Por eso un cambio político profundo puede convivir con una continuidad "
-        "social casi total, que es exactamente lo que muestra el caso de las "
-        "independencias.",
+        "El texto ordena tres velocidades y las asocia a tres planos.\n\nUn régimen "
+        "político puede caer en semanas; una estructura productiva tarda décadas en "
+        "reconvertirse; las formas de pensar y las jerarquías sociales se mueven a "
+        "lo largo de generaciones.\n\nPor eso un cambio político profundo puede "
+        "convivir con una continuidad social casi total, que es exactamente lo que "
+        "muestra el caso de las independencias.",
         [
             ("Porque los historiadores los estudian por separado", "La diferencia de ritmos es del proceso, no del método."),
             ("Porque las fuentes de cada plano son distintas", "El texto no atribuye la diferencia al tipo de fuente."),
@@ -76117,17 +76118,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_participacion_local", "civ_democracia", "dificil",
+        "civ_participacion_local", "civ_democracia", "medio",
         "Según el texto, ¿por qué el acceso a la información es la base de los "
         "demás mecanismos de control?",
         "Porque no se puede fiscalizar lo que no se conoce",
-        "El texto lo afirma sin rodeos: sin ese derecho, «los demás mecanismos "
-        "de control se vuelven decorativos».\n\n"
-        "Un consejo de la sociedad civil o una audiencia pública solo sirven "
-        "si quienes participan saben qué se decidió, con qué recursos y bajo "
-        "qué criterios.\n\n"
-        "Por eso se lo presenta como condición previa y no como un mecanismo "
-        "más de la lista.",
+        "El texto lo afirma sin rodeos: sin ese derecho, «los demás mecanismos de "
+        "control se vuelven decorativos».\n\nUn consejo de la sociedad civil o una "
+        "audiencia pública solo sirven si quienes participan saben qué se decidió, "
+        "con qué recursos y bajo qué criterios.\n\nPor eso se lo presenta como "
+        "condición previa y no como un mecanismo más de la lista.",
         [
             ("Porque es el único mecanismo establecido por ley", "El texto menciona varios mecanismos legales."),
             ("Porque reemplaza a los demás mecanismos de participación", "Es su base, no su reemplazo."),
@@ -76167,15 +76166,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_participacion_local", "civ_democracia", "dificil",
+        "civ_participacion_local", "civ_democracia", "medio",
         "Según el texto, ¿por qué estos mecanismos no reemplazan al voto?",
         "Porque no eligen autoridades ni deciden políticas nacionales",
         "El texto cierra delimitando el alcance: estos mecanismos «no eligen "
-        "autoridades ni deciden políticas nacionales».\n\n"
-        "Lo que hacen es cubrir el espacio que el voto deja vacío, «que es la "
-        "mayor parte del tiempo».\n\n"
-        "Es una precisión importante: reconocer su valor sin atribuirles una "
-        "función que no cumplen.",
+        "autoridades ni deciden políticas nacionales».\n\nLo que hacen es cubrir el "
+        "espacio que el voto deja vacío, «que es la mayor parte del tiempo».\n\nEs "
+        "una precisión importante: reconocer su valor sin atribuirles una función "
+        "que no cumplen.",
         [
             ("Porque son voluntarios y el voto es obligatorio", "El texto no compara su obligatoriedad."),
             ("Porque solo pueden usarlos quienes están organizados", "El acceso a la información y la petición son individuales."),
@@ -76215,17 +76213,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_justicia", "dificil",
-        "Según el texto, ¿cuál es el argumento a favor de las acciones "
-        "afirmativas?",
+        "civ_igualdad", "civ_justicia", "medio",
+        "Según el texto, ¿cuál es el argumento a favor de las acciones afirmativas?",
         "Que corrigen una desigualdad de partida que la sola igualdad formal no "
         "toca",
-        "El texto presenta ambas posiciones sin tomar partido.\n\n"
-        "Quienes las defienden sostienen que hay una desventaja acumulada que "
-        "existe antes de cualquier concurso o postulación, y que tratar a todos "
-        "igual desde ahí conserva esa desventaja.\n\n"
-        "Quienes las objetan responden que introducen «justamente el tipo de "
-        "distinción que la igualdad prohíbe».",
+        "El texto presenta ambas posiciones sin tomar partido.\n\nQuienes las "
+        "defienden sostienen que hay una desventaja acumulada que existe antes de "
+        "cualquier concurso o postulación, y que tratar a todos igual desde ahí "
+        "conserva esa desventaja.\n\nQuienes las objetan responden que introducen "
+        "«justamente el tipo de distinción que la igualdad prohíbe».",
         [
             ("Que garantizan la representación proporcional de cada grupo", "El texto no plantea la proporcionalidad como fundamento."),
             ("Que compensan económicamente a quienes fueron excluidos", "El texto se refiere a cupos y programas, no a compensación económica."),
@@ -76233,17 +76229,16 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_justicia", "dificil",
+        "civ_igualdad", "civ_justicia", "medio",
         "Según el texto, ¿qué criterio ayuda a distinguir un ajuste de un "
         "privilegio?",
         "Si es temporal y busca cerrar una brecha medible",
         "El texto ofrece ese criterio para una discusión que reconoce como no "
-        "zanjada.\n\n"
-        "Una medida temporal, con una brecha identificada y evaluación "
+        "zanjada.\n\nUna medida temporal, con una brecha identificada y evaluación "
         "periódica, se parece a un ajuste: tiene un objetivo y un término. Una "
-        "permanente y sin evaluación «se parece a un privilegio».\n\n"
-        "No resuelve el debate, pero entrega una manera de examinar cada "
-        "medida concreta en vez de discutir en abstracto.",
+        "permanente y sin evaluación «se parece a un privilegio».\n\nNo resuelve el "
+        "debate, pero entrega una manera de examinar cada medida concreta en vez de "
+        "discutir en abstracto.",
         [
             ("Si la medida beneficia a una mayoría o a una minoría", "El tamaño del grupo no es el criterio propuesto."),
             ("Si la medida está establecida en la Constitución o en una ley", "El rango normativo no es lo que el texto distingue."),
@@ -76300,15 +76295,14 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "dificil",
+        "civ_ninez", "civ_ddhh", "medio",
         "Según el texto, ¿qué NO significa el derecho a ser oído?",
         "Que la decisión final la tome el niño",
-        "El texto advierte que ese principio «suele malinterpretarse».\n\n"
-        "Ser oído significa que su punto de vista debe considerarse y que «no "
-        "puede ignorarse por el solo hecho de su edad». No traslada la decisión "
-        "al niño.\n\n"
-        "La distinción importa: confundir participación con decisión final es "
-        "el argumento más usado para desacreditar el principio completo.",
+        "El texto advierte que ese principio «suele malinterpretarse».\n\nSer oído "
+        "significa que su punto de vista debe considerarse y que «no puede "
+        "ignorarse por el solo hecho de su edad». No traslada la decisión al "
+        "niño.\n\nLa distinción importa: confundir participación con decisión final "
+        "es el argumento más usado para desacreditar el principio completo.",
         [
             ("Que su opinión debe considerarse según su edad", "Eso es precisamente lo que el derecho sí significa."),
             ("Que se le debe escuchar en los asuntos que le conciernen", "Es el contenido del derecho."),
@@ -76332,17 +76326,15 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_ddhh", "dificil",
+        "civ_ninez", "civ_ddhh", "medio",
         "Según el texto, ¿por qué ratificar la Convención no basta?",
         "Porque exige después leyes, instituciones y presupuesto",
         "El texto cierra con esa advertencia sobre Chile, que la ratificó en "
-        "1990.\n\n"
-        "Ratificar obliga al Estado, pero un tratado no se aplica solo: "
-        "requiere normas internas que lo desarrollen, organismos que lo "
-        "implementen y recursos que lo financien.\n\n"
-        "Es la distancia clásica entre el derecho declarado y el derecho "
-        "efectivo, y explica por qué un país puede tener buenos tratados "
-        "firmados y malos resultados.",
+        "1990.\n\nRatificar obliga al Estado, pero un tratado no se aplica solo: "
+        "requiere normas internas que lo desarrollen, organismos que lo implementen "
+        "y recursos que lo financien.\n\nEs la distancia clásica entre el derecho "
+        "declarado y el derecho efectivo, y explica por qué un país puede tener "
+        "buenos tratados firmados y malos resultados.",
         [
             ("Porque la Convención no es obligatoria para los Estados", "El texto señala que ratificar sí obliga."),
             ("Porque debe ratificarse nuevamente cada cierto tiempo", "No se plantea una renovación periódica."),
