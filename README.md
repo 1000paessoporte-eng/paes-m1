@@ -349,14 +349,31 @@ un `postgresql://…` con contraseña en minutos.
 > escritura, nadie puede volver a leerla (ni el dueño). Si se pierden esas dos
 > copias locales, la única salida es rotar la base. Ya pasó una vez.
 
-Aplicar cambios de esquema y contenido a producción:
+Aplicar cambios de esquema y contenido a producción son **dos pasos de
+contenido**, no uno:
 
 ```bash
 cd apps/api
 export DATABASE_URL="<connection string DIRECTA>"
 uv run alembic upgrade head
 uv run python scripts/seed.py
+uv run python scripts/sincronizar.py --aplicar
 ```
+
+`seed.py` solo INSERTA, y salta cualquier pregunta cuyo enunciado ya exista.
+Corriéndolo solo, no llegan a producción los cambios de dificultad, ni los
+distractores corregidos, ni las justificaciones reescritas; y una pregunta
+reescrita entra como adicional dejando viva la versión vieja. `sincronizar.py`
+es el que corrige en su lugar y borra lo que ya no está. Los detalles y las
+trampas del enum están en el encabezado de ese script.
+
+> Si el `seed.py` se queda colgado en un `TimeoutError`, el problema puede ser
+> la red y no Neon: hay conexiones domésticas y corporativas que bloquean el
+> **puerto 5432 de salida**. Se comprueba en un minuto —abrir un socket al host
+> de Neon en 5432 y en 443— y se rodea con `scripts/tunel_neon.py`, que empalma
+> un puerto local con el protocolo Postgres sobre WebSocket que Neon publica en
+> el 443. Con el túnel arriba, los dos scripts corren sin cambios apuntando a
+> `127.0.0.1:54320`.
 
 ---
 
