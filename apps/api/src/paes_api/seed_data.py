@@ -58275,6 +58275,411 @@ PASSAGES_HISTORIA = [
 
 QUESTIONS_HISTORIA = [
     _ql(
+        "his_oficio", "his_critico", "facil",
+        "Según el texto, ¿en qué consiste el anacronismo?",
+        "Aplicar al pasado categorías de otra época",
+        "El texto lo define como la primera regla del oficio y la enuncia por lo "
+        "que hay que evitar: aplicar al pasado categorías, valores o conocimientos "
+        "de otra época.\nY aclara qué describe realmente ese error: reprochar a "
+        "alguien no saber algo que en su tiempo aún no había sido establecido no "
+        "describe su ignorancia, sino la confusión de quien juzga.",
+        [
+            ("Confundir la fecha en que ocurrió un hecho", "Ese sería un error de datación, no un anacronismo."),
+            ("Atribuir a un proceso una sola causa posible", "El texto trata la monocausalidad como un problema distinto."),
+            ("Usar fuentes producidas después de los hechos", "Las fuentes posteriores son material legítimo del oficio."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "facil",
+        "Según el texto, ¿qué conjunto de condiciones forma el contexto histórico "
+        "de un hecho?",
+        "Las políticas, económicas, sociales y culturales de la época",
+        "El texto lo define enumerando esas cuatro dimensiones y precisa para qué "
+        "sirven: permiten comprender por qué un hecho ocurrió y qué significó.\nDe "
+        "ahí que reconstruir el contexto no sea, según el texto, un adorno "
+        "introductorio: es lo que impide leer el pasado como si hubiera ocurrido en "
+        "nuestra época.",
+        [
+            ("La secuencia de hechos ocurridos inmediatamente antes", "Esos son los antecedentes; el contexto es más amplio que la cronología."),
+            ("El lugar geográfico exacto en que sucedió", "La ubicación es un dato del contexto, pero no lo agota."),
+            ("La opinión que los historiadores actuales tienen del hecho", "Esa es la interpretación historiográfica, no el contexto de la época."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_critico", "facil",
+        "Según el texto, ¿qué produjo el principio de que a cada nación le "
+        "corresponde un Estado?",
+        "Reclamos sobre fronteras que dejaban compatriotas fuera",
+        "El texto describe el efecto como una consecuencia lógica del propio "
+        "principio.\nSi a cada nación le corresponde un Estado, toda población que "
+        "se considere nación puede reclamar uno, y toda frontera que deje "
+        "compatriotas del otro lado queda pendiente de corrección.\nSobre esa base, "
+        "dice el texto, se argumentó buena parte de las guerras europeas del siglo "
+        "XIX y de las disputas limítrofes americanas.",
+        [
+            ("El fin de los conflictos entre Estados europeos", "El texto describe el efecto contrario."),
+            ("La renuncia de los Estados a expandir su territorio", "El texto documenta expansión, no renuncia."),
+            ("El reconocimiento de las minorías dentro de cada Estado", "El texto señala que quedaron descritas como obstáculos a la unidad."),
+        ],
+    ),
+    _ql(
+        "crisis_bienestar_populismo", "his_critico", "facil",
+        "Según el texto, ¿qué tenían en común las tres salidas a la crisis del "
+        "Estado liberal?",
+        "Las tres ampliaron el papel del Estado",
+        "El texto parte de un diagnóstico compartido: los dos supuestos del Estado "
+        "liberal quedaron golpeados y ninguna de las tres respuestas propone "
+        "restaurarlos.\nEl Estado de bienestar asume seguros, pensiones y obras; el "
+        "populismo latinoamericano conduce la industrialización; el totalitarismo "
+        "interviene la economía junto con todo lo demás.\nLo que las separa no es "
+        "cuánto interviene el Estado sino qué ocurre con el pluralismo político "
+        "mientras lo hace.",
+        [
+            ("Las tres suprimieron los partidos políticos", "El Estado de bienestar los conserva, según el texto."),
+            ("Las tres se aplicaron en América Latina", "El texto sitúa dos de ellas en Europa y Estados Unidos."),
+            ("Las tres redujeron el gasto público", "Todas lo aumentan al asumir funciones nuevas."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_critico", "facil",
+        "Según el texto, ¿cuántas explicaciones del quiebre de 1973 presenta y cómo "
+        "se relacionan?",
+        "Tres, y no son incompatibles entre sí",
+        "El texto presenta tres familias de interpretación: la polarización "
+        "interna, el conflicto social y económico, y el caso chileno dentro de la "
+        "Guerra Fría.\nY afirma que no son incompatibles, porque cada una ilumina "
+        "un plano distinto y la mayoría de los trabajos recientes las combina.\nLo "
+        "que sí las distingue es dónde ponen la responsabilidad, y por eso la "
+        "elección entre ellas nunca es solo técnica.",
+        [
+            ("Tres, y hay que elegir una de las tres", "El texto señala que los trabajos recientes las combinan."),
+            ("Dos, una nacional y otra internacional", "Son tres, y una de ellas es económica y social."),
+            ("Tres, pero solo una está respaldada por evidencia", "El texto no descalifica ninguna de las tres."),
+        ],
+    ),
+    _ql(
+        "his_oficio", "his_critico", "medio",
+        "Un texto explica una guerra únicamente por la ambición de un gobernante. "
+        "¿Qué principio del oficio incumple?",
+        "La multicausalidad de los procesos históricos",
+        "El texto sostiene que los fenómenos sociales resultan de la combinación de "
+        "factores políticos, económicos, sociales y culturales.\nExplicar una "
+        "guerra por una sola voluntad individual deja fuera todo lo demás: los "
+        "intereses en juego, el estado de las instituciones, las condiciones "
+        "materiales que hicieron posible movilizar un ejército.\nEl texto lo "
+        "formula con otro ejemplo: una revolución no se explica solo por el hambre, "
+        "ni solo por las ideas, ni solo por la debilidad del gobierno.",
+        [
+            ("La prohibición de juzgar el pasado con criterios actuales", "El anacronismo es otro error: aquí el problema es la explicación monocausal."),
+            ("La necesidad de contrastar fuentes independientes", "El texto no plantea aquí un problema de fuentes."),
+            ("La distinción entre fuentes primarias y secundarias", "Esa clasificación no interviene en este caso."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_critico", "medio",
+        "El texto sostiene que las causas del derrumbe fueron acumulativas. ¿Qué "
+        "descarta con esa palabra?",
+        "Que una sola causa explique el desenlace",
+        "El texto enumera cuatro factores de naturaleza distinta —económico, "
+        "militar, de política exterior y de legitimidad— y los presenta operando a "
+        "la vez durante años.\nLlamarlos acumulativos indica que actúan por suma y "
+        "no por reemplazo: cada uno agrava a los demás y el desenlace ocurre cuando "
+        "el conjunto se vuelve insostenible.\nLo que descarta es la explicación que "
+        "elige un solo factor y descarta el resto, sea la economía, el gasto "
+        "militar o la decisión de un dirigente.",
+        [
+            ("Que el desenlace haya tenido causas internas", "Tres de los cuatro factores que enumera son internos al bloque."),
+            ("Que las causas puedan identificarse con evidencia", "El texto las identifica y las describe una por una."),
+            ("Que el proceso se haya desarrollado durante años", "La acumulación supone precisamente ese despliegue temporal."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_critico", "medio",
+        "El texto se detiene en que la prensa llamó pacificación a una campaña "
+        "militar. ¿Qué operación de análisis propone con eso?",
+        "Examinar qué da por establecido cada palabra",
+        "El texto muestra que el vocabulario de una fuente hace un trabajo "
+        "argumentativo antes de que nadie argumente.\nLlamar pacificación supone "
+        "que había un desorden previo que corregir; llamar colonización supone que "
+        "las tierras estaban disponibles. En ambos casos el nombre presenta como "
+        "restablecimiento de un orden natural lo que fue la incorporación forzada "
+        "de un territorio habitado.\nLa operación es aplicable a cualquier "
+        "documento: antes de aceptar los términos en que describe lo ocurrido, "
+        "conviene preguntar qué queda afirmado por el solo hecho de usarlos.",
+        [
+            ("Traducir los términos antiguos al lenguaje actual", "El texto propone examinarlos, no reemplazarlos."),
+            ("Descartar las fuentes que usan lenguaje interesado", "Casi toda fuente lo usa: por eso se analiza en vez de descartarse."),
+            ("Fechar con precisión cuándo se acuñó cada término", "El análisis propuesto no es sobre el origen de las palabras."),
+        ],
+    ),
+    _ql(
+        "posguerra_marco_regulador", "his_critico", "medio",
+        "El texto explica cada institución de posguerra por el problema que buscaba "
+        "evitar. ¿Qué supuesto hay detrás de esa forma de explicar?",
+        "Que las instituciones responden a experiencias previas",
+        "El texto lo enuncia al abrir: no fue un plan único, fueron respuestas "
+        "sucesivas a lo que acababa de ocurrir, y cada una lleva la marca del "
+        "problema que intentaba evitar.\nEl supuesto es que un diseño institucional "
+        "no se deduce de principios abstractos sino que se construye contra un "
+        "fracaso concreto: la Depresión, la guerra, la impunidad amparada por la "
+        "ley interna.\nTiene un límite que conviene tener presente: explicar una "
+        "institución por el mal que dice remediar deja fuera los intereses de "
+        "quienes la diseñaron.",
+        [
+            ("Que las instituciones se diseñan desde principios abstractos", "El texto sostiene lo contrario."),
+            ("Que toda institución internacional fracasa con el tiempo", "El texto no plantea ese destino."),
+            ("Que los problemas de posguerra fueron todos económicos", "El texto describe tres problemas de naturaleza distinta."),
+        ],
+    ),
+    _ql(
+        "chile_xx_migracion", "his_critico", "medio",
+        "El informe municipal atribuye la migración a la expectativa de empleo "
+        "urbano y el testimonio, a la mecanización del fundo. ¿Cómo se relacionan "
+        "ambas causas?",
+        "Una empuja desde el campo y la otra atrae desde la ciudad",
+        "Las dos fuentes describen el mismo proceso desde extremos distintos y "
+        "ninguna contradice a la otra.\nEl testimonio entrega una causa de "
+        "expulsión: cuando entró la máquina no hicieron falta tantas manos y les "
+        "avisaron que tenían que salir. El informe entrega una de atracción: la "
+        "expectativa de empleo industrial.\nLos dos factores operaban a la vez, y "
+        "por eso el proceso se describe con dos términos. Quedarse con uno solo "
+        "lleva a políticas que actúan donde el problema no se origina.",
+        [
+            ("Se contradicen y una de las dos debe descartarse", "Ambas pueden ser ciertas a la vez: describen extremos distintos del mismo proceso."),
+            ("La segunda es consecuencia directa de la primera", "La expectativa urbana no se deriva de la mecanización agrícola."),
+            ("Las dos describen el mismo factor con otras palabras", "Una ocurre en el campo y la otra, en la ciudad."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_critico", "dificil",
+        "¿Qué consecuencia tiene para el análisis que las tres explicaciones de "
+        "1973 difieran en dónde ponen la responsabilidad?",
+        "Elegir un énfasis no es una decisión neutra",
+        "Una explicación no solo ordena causas: distribuye responsabilidad, y esa "
+        "distribución tiene efectos fuera del texto.\nAtribuir el quiebre a la "
+        "polarización la reparte entre todos los bloques políticos; atribuirlo a la "
+        "defensa de un orden de propiedad la concentra en unos actores; incorporar "
+        "la intervención extranjera suma otros.\nDe ahí no se sigue que todas "
+        "valgan lo mismo. Se sigue que quien elige un énfasis debe saber que hace "
+        "algo más que ordenar factores, y por eso el texto pide discutir el peso "
+        "relativo de cada uno con evidencia.",
+        [
+            ("Ninguna de las tres puede sostenerse con evidencia", "El texto propone discutir su peso relativo, lo que supone evidencia."),
+            ("Las tres describen en el fondo el mismo proceso causal", "Difieren en qué plano identifican como decisivo."),
+            ("La discusión debe resolverse antes de estudiar el período", "El texto la presenta como parte del estudio, no como su requisito."),
+        ],
+    ),
+    _ql(
+        "nacion_impactos", "his_critico", "dificil",
+        "El texto sostiene que primero se constituyó el Estado y después este "
+        "construyó la nación. ¿Qué cambia esa inversión al leer una fuente del "
+        "siglo XIX?",
+        "Invocar una nación antigua pasa a ser un acto político",
+        "Si la nación fuera un dato previo, un documento que la invoca estaría "
+        "describiendo algo que existe.\nBajo la explicación del texto ese mismo "
+        "documento hace otra cosa: contribuye a producir la comunidad que dice "
+        "constatar, porque en 1800 casi ningún territorio cumplía las condiciones "
+        "que el principio daba por existentes.\nLa consecuencia práctica es de "
+        "método. Frente a una fuente que apela a la nación conviene preguntar qué "
+        "está construyendo con esa apelación, en vez de tomarla como testimonio de "
+        "algo ya formado.",
+        [
+            ("Las fuentes del siglo XIX dejan de ser utilizables", "Siguen siendo material central: cambia qué se les pregunta."),
+            ("La nación deja de existir como objeto de estudio", "El texto la estudia justamente como producto de un proceso."),
+            ("Los Estados del siglo XIX pierden su legitimidad", "El texto describe un proceso histórico, no juzga legitimidades."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_critico", "dificil",
+        "El periodista sostiene que la fuerza del discurso está en lo que da por "
+        "resuelto. ¿Qué método de análisis de argumentos aplica?",
+        "Examinar las premisas y no solo las conclusiones",
+        "Un argumento se discute habitualmente por lo que afirma, y ahí es donde su "
+        "autor está preparado para defenderlo.\nEl periodista trabaja sobre otra "
+        "capa: las afirmaciones que el discurso instala sin someterlas a discusión "
+        "—que la nación tiene una sola voluntad, que discutir produjo la crisis, "
+        "que discrepar debilita al organismo.\nEsa capa pasa inadvertida porque "
+        "llega arrastrada por el acuerdo inicial sobre la descripción de la crisis, "
+        "que es exacta. Detectarla es lo que permite rechazar la conclusión sin "
+        "negar los hechos.",
+        [
+            ("Verificar los datos económicos que el discurso entrega", "El periodista ya concedió que esa descripción es exacta."),
+            ("Comparar el discurso con otros del mismo período", "Trabaja sobre este texto, sin recurrir a otros."),
+            ("Identificar quién financió la concentración", "El análisis es sobre el argumento, no sobre su financiamiento."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_critico", "dificil",
+        "Dos de los cinco países no siguieron la secuencia de reforma, golpe y "
+        "dictadura. ¿Qué exige eso de cualquier explicación regional del período?",
+        "Que explique también los casos que no la siguen",
+        "Una explicación que solo da cuenta de los casos que encajan describe una "
+        "regularidad parcial y la presenta como regla.\nCarmenia y Estival muestran "
+        "trayectorias distintas dentro del mismo contexto internacional, de modo "
+        "que ese contexto no basta por sí solo para producir el desenlace.\nUna "
+        "explicación completa tiene que decir qué había de distinto en esos dos "
+        "casos, y eso obliga a incorporar factores internos que la tabla no "
+        "registra: estructura social, fuerza de las instituciones, papel de las "
+        "fuerzas armadas.",
+        [
+            ("Que se descarten esos dos casos por excepcionales", "Descartar lo que no encaja convierte la explicación en circular."),
+            ("Que se abandone toda explicación de alcance regional", "El patrón existe en tres de los cinco casos y pide explicación."),
+            ("Que se atribuya el desenlace solo a causas externas", "Las causas externas son comunes a los cinco: no distinguen los casos."),
+        ],
+    ),
+    _ql(
+        "chile_xx_cifras", "his_representaciones", "facil",
+        "Según la Tabla 1, ¿cuántas viviendas carecían de agua potable en 1930?",
+        "El 62%",
+        "La columna correspondiente de la Tabla 1 entrega 62% en 1930, 55% en 1940, "
+        "47% en 1952, 38% en 1960 y 26% en 1970.\nEl valor de 1930 es el más alto "
+        "de la serie: casi dos de cada tres viviendas del país no tenían agua "
+        "potable.",
+        [
+            ("El 55%, según el segundo corte de la tabla", "Ese valor corresponde a 1940."),
+            ("El 26%, según el último corte de la tabla", "Ese valor corresponde a 1970."),
+            ("El 49%, que es la población urbana de ese año", "Ese porcentaje corresponde a otra columna de la tabla."),
+        ],
+    ),
+    _ql(
+        "posguerra_descolonizacion", "his_representaciones", "facil",
+        "Según la Tabla 2, ¿cuántos miembros de Asia y África tenía la organización "
+        "en 1955?",
+        "17 miembros",
+        "La fila de 1955 de la Tabla 2 registra 76 miembros en total, de los cuales "
+        "17 corresponden a Asia y África.\nLa comparación con los extremos de la "
+        "serie da la medida del proceso: eran 8 en 1945 y llegan a 76 en 1975.",
+        [
+            ("76 miembros, según esa misma fila", "El 76 de 1955 es el total de miembros, no los de Asia y África."),
+            ("55 miembros, que es la cifra de 1965", "Los 55 corresponden al corte de 1965."),
+            ("8 miembros, como en la fundación", "Los 8 corresponden a 1945."),
+        ],
+    ),
+    _ql(
+        "empleo_sectores", "his_representaciones", "medio",
+        "Según la tabla, ¿cuál fue el único sector que creció en los tres períodos "
+        "medidos?",
+        "El sector terciario",
+        "La columna del sector terciario entrega 25, 34, 52 y 70: sube en cada uno "
+        "de los tres tramos sin excepción.\nEl primario cae siempre, de 55 a 11. El "
+        "secundario sube hasta 1980 y después baja, de modo que su trayectoria no "
+        "es monótona.\nDistinguir una tendencia sostenida de una que se revierte es "
+        "lo que permite hablar de terciarización y no de un simple traspaso entre "
+        "dos sectores.",
+        [
+            ("El sector secundario, que sube hasta 1980", "Sube hasta 1980 y luego cae: no crece en los tres tramos."),
+            ("El sector primario, que se moderniza en el período", "Cae en todos los tramos, de 55% a 11%."),
+            ("Ninguno: los tres varían en ambas direcciones", "El terciario sube en los tres tramos."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_representaciones", "medio",
+        "Un estudiante afirma que el país B fue el que menos avanzó en "
+        "alfabetización. ¿Qué muestra la Tabla 1?",
+        "Avanzó 37 puntos, más que el país D",
+        "La tabla registra para B un paso de 25% a 62%, es decir 37 puntos "
+        "porcentuales. El país D avanza de 47% a 87%, o sea 40 puntos, y A avanza "
+        "38 puntos, de 58% a 96%.\nEl avance de B es el menor de los cuatro por un "
+        "margen estrecho, pero la afirmación se apoya en otra cosa: B termina "
+        "último en 1910, con 62%.\nTerminar último y avanzar poco son afirmaciones "
+        "distintas, y confundirlas es el error más común al leer una serie con "
+        "puntos de partida desiguales.",
+        [
+            ("Avanzó menos que ningún otro país de la tabla", "Su avance de 37 puntos es cercano a los 38 del país A."),
+            ("No avanzó nada entre 1850 y 1910", "Pasa de 25% a 62% en ese período."),
+            ("Terminó primero en la alfabetización de 1910", "Termina último: el primero es C, con 98%."),
+        ],
+    ),
+    _ql(
+        "dictadura_economia_cifras", "his_representaciones", "medio",
+        "¿Qué columna de la Tabla 1 permite ver que la recuperación posterior a "
+        "1982 no alcanzó a los trabajadores?",
+        "La del salario real",
+        "El índice de salario real toma 1970 como base 100 y registra 87 en 1982 y "
+        "79 en 1986.\nEn ese mismo tramo el PIB pasa de caer 14% a crecer 6%, de "
+        "modo que la actividad se recupera mientras el poder de compra del salario "
+        "retrocede ocho puntos.\nNinguna de las otras columnas muestra eso: la de "
+        "desocupación baja, y las de producto e inflación describen el agregado sin "
+        "decir cómo se reparte.",
+        [
+            ("La de variación del PIB, que vuelve a crecer", "Muestra la recuperación, no a quién alcanzó."),
+            ("La de inflación, que baja en el período", "El nivel de precios no informa sobre el poder de compra del salario por sí solo."),
+            ("La de desocupación, que también mejora", "Baja de 24% a 12%: no muestra el retroceso."),
+        ],
+    ),
+    _ql(
+        "tabla_alfabetizacion", "his_representaciones", "medio",
+        "¿Qué habría que agregar a esta tabla para saber cuánta población de la "
+        "región sabía leer en cada año?",
+        "El peso de cada grupo en la población total",
+        "La tabla entrega el porcentaje alfabetizado dentro de cada uno de los "
+        "cuatro grupos, pero no cuántas personas hay en cada uno.\nSin ese dato no "
+        "se puede promediar: si el grupo rural femenino fuera mucho más numeroso "
+        "que el urbano masculino, el total de la región estaría más cerca de su 19% "
+        "que del 62% del otro grupo.\nEs la misma advertencia que la propia fuente "
+        "hace al señalar que la tabla no permite afirmar que la mayoría de la "
+        "población supiera leer en 1930.",
+        [
+            ("Los años intermedios entre 1930 y 2020", "Más cortes afinan la tendencia, pero no permiten calcular el total."),
+            ("La distinción entre lectura y escritura", "Precisar la definición no resuelve el problema de la ponderación."),
+            ("Los datos de otras regiones del país", "La pregunta es por esta región: otras no la componen."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_representaciones", "dificil",
+        "Las dos tablas usan unidades distintas: índices con base 100 y "
+        "porcentajes. ¿Qué cuidado exige combinarlas?",
+        "Un índice compara con un año, no entre países",
+        "El índice de producción industrial mide a cada país contra sí mismo en "
+        "1929, de modo que un 47 y un 89 describen trayectorias y no tamaños.\nLa "
+        "desocupación de la Tabla 2, en cambio, es un porcentaje de la fuerza de "
+        "trabajo de cada país y sí admite comparación directa entre ellos.\nMezclar "
+        "ambas lecturas lleva a conclusiones falsas: que Chile caiga a 47 no "
+        "significa que produzca menos que el país Z, que está en 89, sino que "
+        "perdió una proporción mayor de lo que producía antes.",
+        [
+            ("Los porcentajes no pueden compararse entre países", "La desocupación en porcentaje sí es comparable entre países."),
+            ("Las dos tablas deben cubrir los mismos años", "Cubren años distintos a propósito y eso no impide combinarlas."),
+            ("Los índices deben convertirse a dólares antes de leerse", "Un índice de producción no requiere conversión monetaria."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "his_representaciones", "dificil",
+        "La tabla informa padrón, votos y participación. ¿Qué comprobación permite "
+        "hacer esa redundancia?",
+        "Verificar que las tres columnas sean coherentes",
+        "La participación es el cociente entre votos emitidos y padrón, de modo que "
+        "la tercera columna se puede recalcular a partir de las dos primeras.\nEn "
+        "2012, por ejemplo, 22.000 sobre 40.000 da 55%, que es lo que la tabla "
+        "informa. La comprobación funciona en las cuatro filas.\nEs una práctica "
+        "útil frente a cualquier tabla que incluya un dato derivado: si no calza, "
+        "hay un error de transcripción o una definición distinta de la que se "
+        "supone, y conviene saberlo antes de razonar sobre las cifras.",
+        [
+            ("Determinar por qué la participación bajó en 2016", "Las causas no se deducen de la coherencia aritmética."),
+            ("Estimar cuántas personas votarán en la próxima elección", "La tabla no permite proyectar hacia adelante."),
+            ("Comparar este padrón con el de otras comunas", "La tabla cubre una sola comuna."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_representaciones", "dificil",
+        "Las dos tablas están en porcentajes y ninguna informa montos. ¿Qué "
+        "afirmaciones quedan fuera de alcance?",
+        "Las que comparan magnitudes entre los dos años",
+        "Una participación describe cómo se reparte un total, no cuán grande es ese "
+        "total.\nPor eso la fuente permite afirmar que el salitre pasó de 3% a 68% "
+        "del valor exportado, y no permite afirmar si el país exportó más o menos "
+        "en 1910 que en 1850, ni cuánto recaudó el fisco en pesos de cada año.\nEl "
+        "caso del trigo lo muestra con claridad: cae de 31% a 5% de participación y "
+        "podría perfectamente haber vendido más toneladas, si el total creció más "
+        "rápido que él.",
+        [
+            ("Las que describen cómo cambió la composición exportadora", "Es justamente lo que los porcentajes sí permiten establecer."),
+            ("Las que identifican el rubro mayoritario de cada año", "Se obtiene comparando las columnas de una misma fila."),
+            ("Las que relacionan las exportaciones con el ingreso fiscal", "Ambas tablas están en porcentajes y sí pueden relacionarse entre sí."),
+        ],
+    ),
+    _ql(
         "chile_xx_migracion", "his_chile_xx", "dificil",
         "El informe de 1952 recomienda contener el flujo migratorio. ¿Qué supone "
         "esa recomendación sobre dónde está el problema?",
