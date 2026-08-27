@@ -58272,6 +58272,731 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "chile_xx_migracion", "his_chile_xx", "dificil",
+        "El informe de 1952 recomienda contener el flujo migratorio. ¿Qué supone "
+        "esa recomendación sobre dónde está el problema?",
+        "Que el problema está en quien llega",
+        "Contener un flujo es actuar sobre el punto de llegada: impedir o "
+        "desalentar que la gente se instale en el sector.\nEsa medida solo tiene "
+        "sentido si se entiende la migración como la causa del problema. El "
+        "testimonio de la Fuente 1 muestra otro origen: la mecanización expulsó a "
+        "esa familia del fundo y les avisaron que tenían que salir.\nSi la causa "
+        "está en el campo, contener en la ciudad no la toca, y eso explica lo que "
+        "el propio informe constata: las familias erradicadas fueron reemplazadas "
+        "por otras en pocos meses.",
+        [
+            ("Que el problema está en la falta de urbanización", "Esa constatación lleva a la otra recomendación del informe, no a contener el flujo."),
+            ("Que el problema está en la mecanización del campo", "Si lo supusiera, la medida se dirigiría al origen y no a la llegada."),
+            ("Que el problema está en el precio de la vivienda urbana", "El informe no menciona el costo de la vivienda."),
+        ],
+    ),
+    _ql(
+        "crisis_totalitarismo", "his_crisis_liberal", "dificil",
+        "El discurso de 1933 promete recuperar lo que se le arrebató al Estado. "
+        "¿Qué función cumple esa formulación?",
+        "Presenta el poder que pide como una devolución",
+        "Decir que algo se arrebató supone que pertenecía legítimamente a quien "
+        "ahora lo reclama, y que alguien lo quitó de manera indebida.\nCon esa "
+        "premisa instalada, concentrar poder deja de aparecer como una toma y pasa "
+        "a presentarse como la restitución de un orden anterior.\nEs la misma "
+        "operación que la Fuente 2 identifica en el resto del discurso: lo decisivo "
+        "no son las promesas sino lo que el texto da por resuelto antes de "
+        "argumentar nada.",
+        [
+            ("Detalla qué bienes serán expropiados y a quiénes", "El discurso no identifica ningún bien ni ningún responsable concreto."),
+            ("Reconoce que el Estado actuó mal en el pasado reciente", "Presenta al Estado como víctima de un despojo, no como responsable."),
+            ("Anuncia un programa de reconstrucción de infraestructura", "La promesa material del discurso es trabajo y pan, no obras."),
+        ],
+    ),
+    _ql(
+        "dictadura_ochenta", "his_dictadura", "dificil",
+        "El comunicado de 1984 dispone censura de los medios y la declaración de "
+        "las organizaciones circula igual. ¿Qué muestra esa coexistencia?",
+        "Existían circuitos que la censura no alcanzaba",
+        "Una medida de censura opera sobre los medios formales: diarios, radio y "
+        "televisión, que requieren autorización, tienen domicilio conocido y pueden "
+        "ser clausurados.\nLa declaración de la Fuente 2 no depende de ese canal. "
+        "Circula a través de organizaciones de derechos humanos e iglesias, que "
+        "tenían presencia territorial y vínculos internacionales.\nEsa capacidad de "
+        "sostener información fuera del circuito controlado es parte de lo que "
+        "explica que en 1988 existiera una oposición capaz de organizarse en pocos "
+        "meses.",
+        [
+            ("Que la censura anunciada nunca llegó a aplicarse", "El comunicado la dispone expresamente entre sus medidas."),
+            ("Que los medios formales publicaron la declaración completa", "Nada en la fuente indica que lo hicieran."),
+            ("Que la autoridad autorizó su circulación por escrito", "El texto no menciona ninguna autorización."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_america_latina", "his_guerra_fria", "dificil",
+        "Los tres países con golpe retornan a elecciones entre 1983 y 1989, dentro "
+        "de la Guerra Fría todavía en curso. ¿Qué se sigue de ese dato?",
+        "El fin del conflicto no explica esos retornos",
+        "Las tres fechas de retorno son anteriores a 1989, de modo que ocurren "
+        "mientras el orden bipolar sigue vigente.\nSi el desenlace del conflicto "
+        "internacional fuera la causa de la redemocratización latinoamericana, los "
+        "retornos deberían haberse producido después y no antes.\nLa explicación "
+        "hay que buscarla entonces en factores propios de cada país —crisis "
+        "económicas, movilización social, desgaste de los regímenes— que estas "
+        "tablas registran solo parcialmente.",
+        [
+            ("El fin de la Guerra Fría provocó los tres retornos", "Los tres ocurren antes de 1989: la cronología lo descarta."),
+            ("Los retornos fueron simultáneos en los tres países", "Ocurren en 1983, 1985 y 1989, con seis años de diferencia."),
+            ("Las comisiones de verdad provocaron el fin de las dictaduras", "Las comisiones se constituyen después del retorno democrático."),
+        ],
+    ),
+    _ql(
+        "nacion_debate_1840", "his_fuentes", "facil",
+        "¿Qué tipo de fuente son las dos intervenciones del debate electoral de "
+        "1840?",
+        "Fuentes escritas de la época estudiada",
+        "Ambas son piezas producidas dentro del período que se quiere conocer, por "
+        "actores que participaban de él.\nEso las convierte en fuentes primarias: "
+        "no interpretan el pasado desde afuera, forman parte del pasado que se "
+        "estudia.\nUna elaboración posterior sobre ese mismo debate —un manual, un "
+        "artículo académico— sería en cambio una fuente secundaria.",
+        [
+            ("Fuentes secundarias elaboradas por historiadores", "Son intervenciones de los propios protagonistas, no interpretaciones posteriores."),
+            ("Fuentes materiales, como objetos y restos", "Las fuentes materiales son objetos, no textos."),
+            ("Fuentes orales recogidas mediante entrevistas", "Se trata de intervenciones escritas en un debate legislativo."),
+        ],
+    ),
+    _ql(
+        "chile_xix_exportaciones", "his_fuentes", "facil",
+        "¿Qué tipo de información entrega una fuente como las tablas de "
+        "exportaciones chilenas?",
+        "Datos cuantitativos sobre un período",
+        "Una fuente estadística no relata hechos ni expone opiniones: entrega "
+        "magnitudes ordenadas en el tiempo.\nEso permite establecer tendencias y "
+        "comparar períodos, algo que un testimonio o un documento aislado no puede "
+        "hacer con la misma precisión.\nSu límite es el complementario: no dice por "
+        "qué ocurrió lo que las cifras muestran, y para eso hacen falta fuentes de "
+        "otro tipo.",
+        [
+            ("La opinión de los comerciantes de la época", "Las tablas no recogen valoraciones de ningún actor."),
+            ("El relato de un testigo presencial de los hechos", "Una serie estadística no es un testimonio."),
+            ("La interpretación historiográfica del período", "Las cifras son el material sobre el que se interpreta, no la interpretación."),
+        ],
+    ),
+    _ql(
+        "posguerra_veto_debate", "his_fuentes", "dificil",
+        "Los dos memorandos de 1945 fueron escritos con semanas de diferencia. ¿Qué "
+        "aporta ese dato al análisis?",
+        "El segundo responde a un argumento ya conocido",
+        "La diferencia de fechas establece un orden y, con él, una relación entre "
+        "los textos: el segundo memorando conoce el primero y lo discute punto por "
+        "punto.\nEso se verifica en el propio texto, que retoma la afirmación de "
+        "que la desigualdad existe de todos modos para invertir su conclusión.\nEl "
+        "dato importa porque cambia lo que cada fuente prueba. El primero documenta "
+        "una posición; el segundo documenta además que esa posición fue objetada "
+        "mientras se discutía, y no solo después.",
+        [
+            ("Permite establecer cuál de los dos tiene razón", "El orden temporal no arbitra entre posiciones."),
+            ("Indica que ambos fueron escritos por la misma delegación", "Provienen de delegaciones distintas y con posiciones opuestas."),
+            ("Demuestra que el debate se resolvió en pocas semanas", "Ninguno de los dos informa sobre el desenlace de la discusión."),
+        ],
+    ),
+    _ql(
+        "dictadura_interpretaciones", "his_fuentes", "dificil",
+        "El texto sobre 1973 distingue lo establecido por comisiones y tribunales "
+        "de lo que la historiografía discute. ¿Qué criterio de trabajo aplica?",
+        "Los hechos se acreditan y las causas se argumentan",
+        "Un hecho se establece con evidencia: testimonios contrastados, documentos, "
+        "peritajes, sentencias. Una vez acreditado, deja de estar en discusión "
+        "aunque resulte incómodo.\nUna explicación causal es de otro orden: se "
+        "sostiene con argumentos, admite alternativas y puede revisarse cuando "
+        "aparece evidencia nueva.\nConfundir ambos planos tiene dos formas y las "
+        "dos son errores: tratar un hecho acreditado como una opinión más, o "
+        "presentar una interpretación causal como si estuviera probada.",
+        [
+            ("Toda afirmación histórica admite interpretaciones distintas", "El texto excluye expresamente de la discusión los hechos establecidos."),
+            ("Las sentencias judiciales determinan la interpretación histórica", "Acreditan hechos: no fijan cómo explicarlos."),
+            ("Las causas de un proceso no pueden establecerse nunca", "El texto presenta tres explicaciones y propone discutir su peso relativo."),
+        ],
+    ),
+    _ql(
+        "nacion_cifras_europa", "his_temporal", "facil",
+        "La Tabla 1 compara los mismos indicadores en 1850 y 1910. ¿Qué operación "
+        "del análisis temporal permite hacer?",
+        "Medir el cambio en un período definido",
+        "Dos mediciones del mismo indicador en fechas distintas permiten establecer "
+        "qué cambió, en qué dirección y cuánto.\nSin el segundo corte solo habría "
+        "una fotografía: se sabría cuánta alfabetización había en 1850 y nada sobre "
+        "su evolución.\nEl período elegido también decide qué se ve. Sesenta años "
+        "bastan para registrar la transformación de la alfabetización, pero no "
+        "permiten distinguir qué ocurrió dentro de ese tramo.",
+        [
+            ("Establecer las causas de cada transformación", "Comparar dos cortes muestra el cambio, no lo que lo produjo."),
+            ("Determinar qué país tenía más habitantes", "La tabla no registra población."),
+            ("Fijar la fecha exacta en que ocurrió cada cambio", "Con dos cortes separados por sesenta años eso no es posible."),
+        ],
+    ),
+    _ql(
+        "chile_xix_nacion", "his_temporal", "facil",
+        "Según el texto, ¿qué proceso chileno se extiende entre 1861 y 1883?",
+        "La ocupación de la Araucanía",
+        "El texto la sitúa en esas fechas al describir cómo el Estado fijó su "
+        "territorio, y precisa que la prensa de la época la llamó "
+        "pacificación.\nVeintidós años sitúan el proceso en la escala de la media "
+        "duración: es demasiado extenso para tratarse de un acontecimiento y "
+        "demasiado breve para ser un proceso secular.",
+        [
+            ("La ocupación del estrecho de Magallanes", "El texto la sitúa en 1843, en un solo año."),
+            ("La dictación de las leyes laicas", "El texto las sitúa entre 1883 y 1884."),
+            ("La colonización de Valdivia y Llanquihue", "El texto la sitúa desde 1850, sin fecha de término."),
+        ],
+    ),
+    _ql(
+        "crisis_depresion_cifras", "his_temporal", "dificil",
+        "La tabla mide la producción industrial en 1929, 1932, 1935 y 1938. ¿Qué "
+        "efecto tiene elegir esos cortes y no otros?",
+        "Fija qué se ve y qué queda entre medio",
+        "Una serie con cortes cada tres años muestra la forma general del proceso: "
+        "la caída, el fondo y la recuperación.\nLo que ocurre entre dos cortes "
+        "queda invisible. Si una economía tocó fondo en 1933 y se recuperó "
+        "parcialmente antes de 1935, la tabla no lo registra y su curva aparece más "
+        "suave de lo que fue.\nEl caso muestra que la periodización no es solo un "
+        "asunto de nombres: la elección de los puntos de medición decide qué "
+        "transformaciones resultan visibles.",
+        [
+            ("Garantiza que se vean todos los cambios del período", "Los cortes cada tres años ocultan lo que ocurre entre ellos."),
+            ("Impide comparar los países entre sí", "Todos comparten los mismos cortes: la comparación es posible."),
+            ("Determina cuál fue la causa de la crisis", "La elección de cortes no informa sobre causas."),
+        ],
+    ),
+    _ql(
+        "guerra_fria_final", "his_temporal", "dificil",
+        "El texto advierte que los años noventa fueron intensos en guerras, solo "
+        "que dejaron de ordenarse en torno al eje anterior. ¿Qué distinción "
+        "temporal propone?",
+        "Terminó un modo de ordenar, no los conflictos",
+        "El texto separa dos cosas que la fecha de 1991 tiende a fundir: el fin de "
+        "una estructura y el fin de los fenómenos que esa estructura "
+        "organizaba.\nLo que concluye en 1991 es el orden bipolar, es decir el "
+        "marco que hacía que cada conflicto local se leyera como episodio de una "
+        "confrontación mayor.\nLos conflictos continuaron con otras causas y otros "
+        "alineamientos. Por eso una fecha de cierre marca el término de un modo de "
+        "ordenar el mundo y no el de todo lo que ocurría bajo él.",
+        [
+            ("Los conflictos terminaron junto con el orden bipolar", "El texto afirma que los años noventa fueron intensos en guerras."),
+            ("El orden bipolar sobrevivió a la caída del bloque oriental", "El texto sitúa su término entre 1989 y 1991."),
+            ("Las guerras de los noventa siguieron el mismo eje anterior", "El texto señala expresamente que dejaron de ordenarse así."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_democracia", "facil",
+        "Según la Columna 1, ¿qué distingue una mayoría de una hegemonía?",
+        "Que deba negociar con quien perdió",
+        "La columna cierra con esa distinción, después de asumir la objeción de que "
+        "las mayorías especiales obligan a acordar con la oposición.\nSu respuesta "
+        "es que esa obligación no es un defecto del sistema sino justamente lo que "
+        "impide que ganar una elección equivalga a disponer de todas las reglas.",
+        [
+            ("Que haya obtenido más votos en la elección", "El número de votos no distingue ambas situaciones."),
+            ("Que gobierne durante todo su período completo", "La columna no cuestiona la duración del mandato."),
+            ("Que cuente con mayoría en las dos cámaras del Congreso", "La columna no plantea el problema en términos de composición."),
+        ],
+    ),
+    _ql(
+        "civ_just_acceso", "civ_democracia", "dificil",
+        "¿Por qué el acceso efectivo a la justicia es un asunto democrático y no "
+        "solo judicial?",
+        "Un derecho que no se ejerce deja de operar",
+        "Las dos intervenciones describen personas cuyos derechos están reconocidos "
+        "por ley y que no obtienen respuesta: unas porque no llegan a reclamar, "
+        "otras porque el sistema no alcanza a resolver.\nSi eso se generaliza, la "
+        "ley pasa a regir solo para quienes disponen de tiempo, información y "
+        "dinero, y deja de hacerlo para el resto.\nUna democracia supone que las "
+        "mismas reglas alcanzan a todos. Cuando el acceso depende de la posición de "
+        "cada uno, la igualdad ante la ley se mantiene declarada y deja de "
+        "funcionar.",
+        [
+            ("Porque los jueces son designados por el gobierno de turno", "Ninguna de las dos intervenciones plantea ese problema."),
+            ("Porque las leyes deben aprobarse con quórum especial", "El quórum de aprobación no incide en el acceso a la justicia."),
+            ("Porque los tribunales deben resolver según la opinión pública", "Ninguna de las dos intervenciones sostiene eso."),
+        ],
+    ),
+    _ql(
+        "civ_just_proceso", "civ_derechos", "facil",
+        "Según el texto, ¿qué garantiza la Defensoría Penal Pública a quien no "
+        "puede pagar un abogado?",
+        "Que igual contará con defensa",
+        "El texto lo señala con una fórmula breve: la Defensoría asegura que toda "
+        "persona imputada cuente con abogado, la pague o no.\nLa garantía no "
+        "depende entonces de la situación económica, lo que es coherente con lo que "
+        "el texto sostiene después: sin defensa el juicio se convierte en un "
+        "monólogo.",
+        [
+            ("Que su causa se resolverá a su favor", "La defensa garantiza representación, no un resultado."),
+            ("Que no será sometido a prisión preventiva", "La medida procede por razones acotadas, con independencia de la defensa."),
+            ("Que el fiscal deberá retirar la acusación", "El fiscal sostiene la acusación; la defensa la contradice."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_derechos", "dificil",
+        "Ambas intervenciones invocan la libertad de expresión y proponen medidas "
+        "distintas. ¿Qué explica ese desacuerdo?",
+        "Discrepan sobre qué la amenaza más",
+        "La Intervención 1 considera que el riesgo está en que un contenido ya "
+        "declarado falso circule con ventaja, porque eso deteriora la discusión "
+        "pública que la libertad de expresión existe para proteger.\nLa "
+        "Intervención 2 considera que el riesgo está en la eliminación excesiva y "
+        "en la facultad de retiro que la ley entregaría a la autoridad de "
+        "turno.\nNinguna de las dos discute el valor del derecho. Lo que difiere es "
+        "el diagnóstico sobre qué lo pone en peligro, y por eso las medidas que "
+        "proponen apuntan en direcciones distintas.",
+        [
+            ("Una defiende ese derecho y la otra prefiere limitarlo", "Las dos lo invocan como fundamento de su propia posición."),
+            ("Una se refiere a la prensa y la otra, a los particulares", "Ambas discuten el contenido que circula en plataformas."),
+            ("Una acepta la censura previa y la otra la rechaza", "Ninguna de las dos propone control previo a la publicación."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "En un país la canasta básica se estima en $60.000 mensuales por persona. "
+        "¿Cuál es la línea de la pobreza para un hogar de cuatro integrantes?",
+        "$240.000 mensuales",
+        "La línea se construye multiplicando el costo per cápita de la canasta por "
+        "el número de personas del hogar.\nEl cálculo es 60.000 × 4 = $240.000 al "
+        "mes. Un hogar de cuatro personas con ingreso menor a esa suma queda bajo "
+        "la línea.\nEn la práctica las mediciones aplican ajustes por economías de "
+        "escala del hogar, porque algunos gastos no se multiplican por cada "
+        "integrante.",
+        [
+            ("$60.000 mensuales, igual que la canasta per cápita", "Esa es la canasta de una persona, no la del hogar completo."),
+            ("$15.000 mensuales por cada integrante del hogar", "Dividió la canasta entre cuatro en lugar de multiplicarla."),
+            ("$120.000 mensuales, contando a los dos adultos", "La línea considera a todos los integrantes del hogar."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "Un país destina 54.000 millones de dólares a gasto social y su PIB es de "
+        "300.000 millones. ¿Qué porcentaje del PIB representa ese gasto?",
+        "18%",
+        "El indicador compara el gasto con el tamaño de la economía que lo "
+        "financia.\nEl cálculo es 54.000 ÷ 300.000 = 0,18, es decir 18% del "
+        "PIB.\nSe usa esa proporción y no el monto absoluto porque permite comparar "
+        "países de tamaños muy distintos y seguir la evolución de un mismo país en "
+        "el tiempo.",
+        [
+            ("5,4% del producto interno bruto del país", "Corrió la coma decimal al calcular la proporción."),
+            ("54%, que corresponde al monto del gasto", "Confunde el monto en millones con un porcentaje."),
+            ("5,5 veces el PIB anual del país", "Invirtió la razón: dividió el PIB por el gasto."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "En una fábrica 20 trabajadores producen 400 unidades por jornada. ¿Cuál es "
+        "la productividad por trabajador?",
+        "20 unidades por jornada",
+        "La productividad por trabajador se obtiene dividiendo lo producido por el "
+        "número de personas que lo produjeron.\nEl cálculo es 400 ÷ 20 = 20 "
+        "unidades por trabajador y por jornada.\nEl indicador no dice cuánto se "
+        "esfuerza cada persona: depende sobre todo de la maquinaria disponible, de "
+        "la organización del trabajo y de la formación recibida.",
+        [
+            ("400 unidades por trabajador y por jornada", "Es la producción total del turno, no la de cada trabajador."),
+            ("8.000 unidades, multiplicando ambas cifras", "La productividad se obtiene dividiendo, no multiplicando."),
+            ("0,05 unidades por trabajador", "Invirtió la razón: dividió los trabajadores por las unidades."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "¿Qué mide la tasa de informalidad laboral?",
+        "La proporción que trabaja sin contrato ni cotizaciones",
+        "El indicador cuenta a quienes trabajan al margen del sistema de protección "
+        "laboral y previsional, con independencia de qué actividad realicen.\nSu "
+        "importancia es directa: quien está en esa condición no acumula fondos de "
+        "pensión, no tiene cobertura por accidente del trabajo ni acceso a las "
+        "protecciones que la ley reconoce a un trabajador con contrato.\nPor eso "
+        "una tasa de desempleo baja acompañada de informalidad alta describe un "
+        "mercado laboral que funciona peor de lo que la primera cifra sugiere.",
+        [
+            ("La cantidad de personas que buscan empleo activamente", "Esa magnitud corresponde a la población desocupada."),
+            ("El porcentaje de trabajadores con jornada parcial", "La jornada parcial puede ser perfectamente formal."),
+            ("La proporción de empresas que no pagan impuestos", "El indicador se refiere a la situación de los trabajadores."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "En casi todos los países la tasa de desempleo juvenil supera a la general. "
+        "¿Qué lo explica?",
+        "Los jóvenes recién entran al mercado y rotan más",
+        "Quien busca su primer empleo no tiene experiencia que acreditar, y la "
+        "primera búsqueda toma tiempo: durante ese período la persona está "
+        "desocupada y buscando, que es la definición del indicador.\nA eso se suma "
+        "que los empleos de entrada suelen ser más breves y menos estables, de modo "
+        "que un joven atraviesa más períodos de búsqueda en pocos años.\nEl grupo "
+        "de mayor edad, en cambio, está compuesto en su mayoría por personas ya "
+        "insertas, cuyo empleo dura más tiempo.",
+        [
+            ("Los jóvenes tienen menos interés en trabajar", "Para contarlos como desocupados deben estar buscando trabajo activamente."),
+            ("El indicador excluye a quienes estudian y trabajan", "Quien trabaja se cuenta como ocupado, estudie o no."),
+            ("Las empresas tienen prohibido contratar menores de 25 años", "No existe ninguna prohibición de ese tipo."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "¿Por qué el PIB por habitante se ajusta por poder de compra al comparar "
+        "países?",
+        "Porque un dólar compra distinto en cada país",
+        "Convertir el producto de cada país a una moneda común con el tipo de "
+        "cambio de mercado no basta: los precios internos difieren mucho entre "
+        "países.\nUn mismo corte de pelo, arriendo o almuerzo cuesta bastante menos "
+        "en unas economías que en otras, de modo que el mismo monto en dólares "
+        "permite un nivel de vida muy distinto.\nEl ajuste corrige esa diferencia y "
+        "hace comparables las cifras. Sin él, los países con precios internos bajos "
+        "aparecen sistemáticamente más pobres de lo que su población efectivamente "
+        "consume.",
+        [
+            ("Porque el tipo de cambio varía todos los días", "El problema no es la volatilidad sino la diferencia de precios internos."),
+            ("Porque algunos países no publican su PIB en dólares", "El ajuste no responde a un problema de disponibilidad de datos."),
+            ("Porque el PIB incluye bienes que no se comercian", "La razón es la diferencia de precios, no la composición del producto."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "Un país mide la pobreza por ingreso y decide agregar una medición "
+        "multidimensional. ¿Qué agrega esa segunda medida?",
+        "Carencias que el ingreso del hogar no revela",
+        "La medición por ingreso compara lo que el hogar recibe con el costo de una "
+        "canasta, y con eso responde una pregunta acotada: si alcanza o no "
+        "alcanza.\nLa multidimensional examina otras carencias directamente: "
+        "escolaridad, acceso a salud, hacinamiento, servicios básicos, condición "
+        "laboral.\nLas dos no coinciden siempre. Un hogar puede superar la línea de "
+        "ingreso y vivir sin agua potable o con sus niños fuera del sistema "
+        "escolar, y el primer indicador no lo registraría.",
+        [
+            ("Una línea de ingreso más alta que la anterior", "No eleva la línea: mide dimensiones distintas del ingreso."),
+            ("El número de hogares que quedan bajo la línea", "Eso ya lo entrega la medición por ingreso."),
+            ("El costo actualizado de la canasta básica", "La actualización de la canasta pertenece a la medición por ingreso."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "En un país la productividad por trabajador crece 30% en una década y el "
+        "salario real, 5%. ¿Qué muestra ese contraste?",
+        "Lo producido de más se repartió de otro modo",
+        "La productividad mide cuánto produce cada trabajador; el salario real, "
+        "cuánto puede comprar con lo que recibe. Nada obliga a que ambos crezcan al "
+        "mismo ritmo.\nSi la producción por persona sube 30% y la remuneración solo "
+        "5%, la diferencia quedó en otra parte: en utilidades, en menores precios "
+        "para los compradores o en reinversión.\nEl dato no dice cuál de esos "
+        "destinos predominó. Lo que sí establece es que el aumento de productividad "
+        "no se traduce automáticamente en mejores remuneraciones, que es un "
+        "supuesto frecuente y no una ley económica.",
+        [
+            ("La productividad se midió con un método equivocado", "Las dos series pueden divergir sin que ninguna esté mal medida."),
+            ("Los trabajadores redujeron sus horas de trabajo", "El enunciado no aporta información sobre la jornada."),
+            ("El salario real siempre crece menos que la productividad", "No es una regla: en otros períodos y países han crecido a la par."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "Se informa que el salario promedio de las mujeres es 20% menor que el de "
+        "los hombres. ¿Qué NO se puede concluir directamente de esa cifra?",
+        "Que a igual trabajo se paga distinto",
+        "La comparación de promedios mezcla en una sola cifra dos cosas distintas: "
+        "diferencias de remuneración dentro del mismo puesto y diferencias en qué "
+        "puestos ocupa cada grupo.\nBuena parte de la brecha puede provenir de la "
+        "distribución por sector, nivel jerárquico, jornada o años de experiencia "
+        "continua, factores que el promedio no separa.\nEso no vuelve inocua la "
+        "cifra: una brecha así describe una desigualdad real y exige explicación. "
+        "Lo que no permite es atribuirla, sin más análisis, a pagar distinto por el "
+        "mismo trabajo.",
+        [
+            ("Que existe una diferencia de ingresos entre ambos grupos", "Es exactamente lo que la cifra sí establece."),
+            ("Que la brecha merece ser investigada con más detalle", "El dato justifica precisamente ese análisis adicional."),
+            ("Que ambos grupos tienen ingresos promedio distintos", "Es la constatación directa que entrega el indicador."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "Un país cambia la definición de empleo informal y su tasa cae de 28% a 22% "
+        "de un año a otro. ¿Cómo debe leerse ese descenso?",
+        "No indica que la situación haya mejorado",
+        "Un indicador mide lo que su definición establece que cuente. Si la "
+        "definición cambia, la cifra nueva y la anterior describen conjuntos "
+        "distintos y no son comparables entre sí.\nLa caída de seis puntos puede "
+        "corresponder por completo al cambio metodológico, sin que la situación de "
+        "una sola persona se haya modificado.\nPara saber si hubo mejora real hay "
+        "que recalcular la serie anterior con el criterio nuevo, o el nuevo dato "
+        "con el criterio antiguo. Sin ese empalme, comparar ambas cifras produce "
+        "una conclusión falsa.",
+        [
+            ("Muestra una mejora de seis puntos en el mercado laboral", "La caída puede deberse por completo al cambio de definición."),
+            ("Confirma que la definición anterior estaba equivocada", "Cambiar un criterio no implica que el anterior fuera erróneo."),
+            ("Indica que la informalidad seguirá bajando el año siguiente", "Un cambio metodológico no permite proyectar ninguna tendencia."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "Un gobierno evalúa una política de empleo solo con la tasa de desempleo. "
+        "¿Qué riesgo corre?",
+        "Puede mejorar la cifra sin mejorar el empleo",
+        "La tasa de desempleo cuenta a quienes no trabajaron nada y buscaron "
+        "trabajo activamente. Basta con que alguien trabaje unas horas, o con que "
+        "deje de buscar, para que salga del numerador.\nUna política puede entonces "
+        "bajar la cifra generando empleos muy breves, o sin generarlos, si quienes "
+        "se desaniman abandonan la búsqueda y pasan a contarse como inactivos.\nPor "
+        "eso conviene evaluarla junto a la tasa de participación, la informalidad y "
+        "el subempleo, que capturan lo que el primer indicador deja fuera.",
+        [
+            ("La tasa de desempleo es un indicador poco confiable", "Es confiable para lo que mide: el problema es usarla sola."),
+            ("La política tardará años en producir efectos medibles", "El riesgo señalado no es de plazos sino de qué se está midiendo."),
+            ("El desempleo depende únicamente del ciclo económico", "El enunciado no discute las causas del desempleo."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "¿Por qué un país necesita ahorro interno o externo para financiar sus "
+        "inversiones?",
+        "Invertir hoy exige recursos que alguien no consumió",
+        "Construir una carretera, una fábrica o una red requiere destinar recursos "
+        "presentes a algo que rendirá después. Esos recursos tienen que salir de "
+        "alguna parte.\nEl ahorro es precisamente eso: ingreso que no se consumió y "
+        "queda disponible para financiar proyectos. Puede provenir de los hogares, "
+        "de las empresas, del propio Estado o del exterior.\nCuando el ahorro "
+        "interno no alcanza, el país recurre al externo, y esa es también la razón "
+        "por la que un déficit fiscal persistente compite con la inversión privada "
+        "por los mismos fondos.",
+        [
+            ("Porque la inversión debe pagarse con impuestos", "El impuesto es una vía posible, pero no la explicación del requisito."),
+            ("Porque el Banco Central prohíbe invertir sin respaldo", "No existe una prohibición de ese tipo."),
+            ("Porque la inversión solo puede financiarse desde el extranjero", "El ahorro interno también la financia."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "En un país hay 10.000.000 de personas en edad de trabajar y 6.500.000 de "
+        "ellas forman parte de la fuerza de trabajo. ¿Cuál es la tasa de "
+        "participación?",
+        "65%",
+        "La tasa de participación mide qué proporción de la población en edad de "
+        "trabajar está en el mercado laboral, sea trabajando o buscando "
+        "trabajo.\nEl cálculo es 6.500.000 ÷ 10.000.000 = 0,65, es decir 65%.\nLos "
+        "3.500.000 restantes son población inactiva: estudian, cuidan a alguien, "
+        "están jubilados o simplemente no buscan empleo.",
+        [
+            ("35%, que es la proporción restante", "Ese porcentaje corresponde a la población inactiva."),
+            ("6,5%, según la proporción calculada", "Corrió la coma decimal al pasar la proporción a porcentaje."),
+            ("154%, dividiendo al revés ambas cifras", "Invirtió la razón: la fuerza de trabajo va en el numerador."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "En ese mismo país 6.000.000 de personas están ocupadas. ¿Cuál es la tasa "
+        "de ocupación respecto de la población en edad de trabajar?",
+        "60%",
+        "La tasa de ocupación compara a quienes efectivamente trabajan con toda la "
+        "población en edad de trabajar.\nEl cálculo es 6.000.000 ÷ 10.000.000 = "
+        "0,60, es decir 60%.\nConviene no confundirla con la tasa de desempleo, que "
+        "usa otro denominador: los 500.000 desocupados sobre los 6.500.000 de la "
+        "fuerza de trabajo dan 7,7%, no 40%.",
+        [
+            ("40%, que corresponde a quienes no trabajan", "Es el complemento de la tasa de ocupación, no la tasa misma."),
+            ("92%, comparándola con la fuerza de trabajo", "Ese cálculo usa otro denominador y da la tasa de ocupación laboral."),
+            ("7,7%, que es la proporción de desocupados", "Corresponde a la tasa de desempleo, con otro denominador."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "Un país exportó bienes por 45.000 millones de dólares e importó por 38.000 "
+        "millones. ¿Cuál fue su balanza comercial?",
+        "Superávit de 7.000 millones",
+        "La balanza comercial es la diferencia entre lo exportado y lo importado en "
+        "bienes.\nEl cálculo es 45.000 − 38.000 = 7.000 millones de dólares a "
+        "favor, lo que se llama superávit comercial.\nHabría déficit en el caso "
+        "contrario, cuando las importaciones superan a las exportaciones. Ninguno "
+        "de los dos resultados es bueno o malo por sí mismo: depende de qué se "
+        "importa y de cómo se financia.",
+        [
+            ("Déficit de 7.000 millones de dólares", "Hay déficit cuando las importaciones superan a las exportaciones."),
+            ("Superávit de 83.000 millones de dólares", "Sumó ambas cifras en lugar de restarlas."),
+            ("Equilibrio, porque ambas cifras son cercanas", "Difieren en 7.000 millones: no hay equilibrio."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "facil",
+        "La deuda pública de un país es de 90.000 millones de dólares y su PIB "
+        "anual, de 300.000 millones. ¿A qué porcentaje del PIB equivale la deuda?",
+        "30%",
+        "El indicador compara el saldo de deuda con la producción anual del país, "
+        "que es una medida de su capacidad de pago.\nEl cálculo es 90.000 ÷ 300.000 "
+        "= 0,30, es decir 30% del PIB.\nSe usa esa proporción y no el monto "
+        "absoluto porque una misma deuda pesa muy distinto según el tamaño de la "
+        "economía que debe servirla.",
+        [
+            ("3,33 veces el PIB anual del país", "Invirtió la razón: dividió el PIB por la deuda."),
+            ("90%, que es el monto de la deuda", "Confunde el monto en millones con un porcentaje."),
+            ("13%, sumando ambas magnitudes", "No corresponde a ninguna operación válida con esos datos."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "En un país la inflación fue de 10% el primer año y de 10% el segundo. "
+        "¿Cuánto subieron los precios en total en los dos años?",
+        "21%",
+        "Las inflaciones no se suman: el segundo año los precios suben sobre un "
+        "nivel que ya había subido.\nSi algo costaba 100, tras el primer año cuesta "
+        "110, y tras el segundo, 110 × 1,10 = 121. El alza acumulada es entonces de "
+        "21%.\nEl punto extra proviene de que el segundo 10% se aplica también "
+        "sobre el primer aumento. Con inflaciones altas esa diferencia se vuelve "
+        "muy grande.",
+        [
+            ("20%, sumando ambas inflaciones anuales", "Sumar los porcentajes ignora que el segundo se aplica sobre un nivel ya mayor."),
+            ("10%, porque la inflación fue la misma cada año", "Es la inflación de cada año, no la acumulada del período."),
+            ("100%, porque los precios se duplicaron", "Los precios pasaron de 100 a 121, no a 200."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Un depósito paga 8% de interés anual y la inflación del año fue 5%. "
+        "¿Cuánto ganó realmente el ahorrante?",
+        "Cerca de 3%",
+        "El interés nominal indica cuánto crece la cantidad de dinero; el real, "
+        "cuánto crece lo que ese dinero puede comprar.\nComo los precios subieron "
+        "5%, del 8% recibido esa parte solo compensa el alza. Lo que queda es "
+        "aproximadamente 8% − 5% = 3% de ganancia real.\nEs una aproximación "
+        "suficiente con cifras bajas. El cálculo exacto divide 1,08 por 1,05 y da "
+        "2,9%, diferencia que solo importa cuando la inflación es alta.",
+        [
+            ("8%, que es lo que efectivamente le pagaron", "Ese es el interés nominal, sin descontar el alza de precios."),
+            ("13%, sumando el interés y la inflación", "El ajuste por inflación es una resta, no una suma."),
+            ("5%, que corresponde a la inflación del año", "Es lo que se descuenta, no lo que el ahorrante gana."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "medio",
+        "Un país tuvo déficit fiscal durante cinco años seguidos y ahora cierra el "
+        "año con superávit. ¿Qué ocurre con su deuda pública?",
+        "Sigue alta, aunque deje de crecer",
+        "Conviene distinguir dos cosas que suelen confundirse. El déficit o "
+        "superávit es un flujo anual: describe si en ese año se gastó más o menos "
+        "de lo que se recaudó.\nLa deuda es un saldo acumulado: el resultado de "
+        "todos los años anteriores juntos.\nUn año de superávit permite dejar de "
+        "endeudarse e incluso pagar una parte, pero no borra los cinco años "
+        "previos. Reducir el saldo de manera significativa exige sostener el "
+        "superávit durante varios períodos.",
+        [
+            ("Desaparece, porque el superávit la cancela", "Un año de superávit no alcanza a pagar cinco de déficit acumulado."),
+            ("Aumenta, porque el superávit obliga a emitir deuda", "El superávit permite lo contrario: reducir el endeudamiento."),
+            ("Se convierte automáticamente en reservas del Banco Central", "No existe esa conversión: son magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "El PIB nominal de un país creció 12% en un año y el nivel general de "
+        "precios también subió 12%. ¿Qué ocurrió con la producción?",
+        "Se mantuvo prácticamente igual",
+        "El PIB nominal mide la producción a los precios de cada año, de modo que "
+        "aumenta tanto si se produce más como si lo mismo se vende más caro.\nSi "
+        "todo el crecimiento del valor se explica por el alza de precios, la "
+        "cantidad producida no cambió: el PIB real creció alrededor de 0%.\nPor eso "
+        "las comparaciones entre años siempre se hacen con el PIB real. El nominal "
+        "puede mostrar cifras muy altas en un país con inflación fuerte sin que se "
+        "haya producido una unidad más.",
+        [
+            ("Creció 12%, igual que el PIB nominal del período", "Ese porcentaje incluye el efecto de los precios."),
+            ("Creció 24%, sumando producción y precios", "El ajuste por precios es una resta, no una suma."),
+            ("Cayó 12%, por efecto de la inflación registrada", "La caída ocurriría si el PIB nominal no hubiera subido nada."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "La inflación de un año fue 6%, pero los alimentos subieron 14% y el "
+        "transporte 11%. ¿A qué hogares golpea más ese año?",
+        "A los que gastan más en alimento y transporte",
+        "El IPC promedia el alza de precios ponderando cada producto por su peso en "
+        "una canasta representativa del consumo del país.\nEl alza que enfrenta un "
+        "hogar concreto depende de su propia canasta. Si alimento y transporte "
+        "ocupan una parte mayor de su presupuesto, su inflación efectiva estará más "
+        "cerca del 14% y el 11% que del 6% promedio.\nEsos productos pesan más en "
+        "los hogares de menores ingresos, que destinan una fracción mayor de su "
+        "gasto a lo básico. Por eso una misma cifra de inflación no describe la "
+        "misma realidad para todos.",
+        [
+            ("A todos por igual, porque el IPC es un promedio nacional", "El promedio nacional no describe la canasta de cada hogar."),
+            ("A los hogares de mayores ingresos, que consumen más", "Consumen más en total, pero alimento y transporte pesan menos en su presupuesto."),
+            ("A ninguno, porque la inflación general fue solo 6%", "El 6% es un promedio que oculta alzas mayores en productos concretos."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "El dólar sube fuertemente frente a la moneda local. ¿Qué efecto es "
+        "esperable sobre los precios internos?",
+        "Suben los productos importados y los que usan insumos externos",
+        "Un dólar más caro significa que cada unidad de moneda local compra menos "
+        "afuera, de modo que traer un producto del exterior cuesta más en moneda "
+        "nacional.\nEl efecto no se limita a lo que llega terminado: también "
+        "encarece los insumos importados, el combustible y los repuestos, y esos "
+        "costos se trasladan a productos fabricados dentro del país.\nEl otro lado "
+        "del movimiento favorece a los exportadores, que reciben dólares y los "
+        "convierten a más moneda local que antes.",
+        [
+            ("Bajan los precios internos por la mayor competencia externa", "Los productos externos se encarecen: la competencia que ejercen se debilita."),
+            ("No cambia nada, porque los precios internos están en moneda local", "Estarlo no impide que suban cuando sus insumos se encarecen."),
+            ("Suben solo los productos que se exportan al extranjero", "El exportador se beneficia; el alza afecta a lo importado."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "Una persona trabaja diez horas semanales y quisiera trabajar cuarenta, "
+        "pero no encuentra más. ¿Cómo la registra la estadística laboral?",
+        "Como ocupada, aunque esté subempleada",
+        "La estadística clasifica como ocupado a quien trabajó al menos una hora en "
+        "el período de referencia, con independencia de cuántas quisiera "
+        "trabajar.\nEsa persona no aparece en la tasa de desempleo, que solo cuenta "
+        "a quienes no trabajaron nada y buscaron trabajo activamente.\nEl fenómeno "
+        "se llama subempleo y se mide aparte. Por eso una tasa de desempleo baja "
+        "puede convivir con un mercado laboral deteriorado: no dice nada sobre la "
+        "calidad ni la cantidad de horas del empleo existente.",
+        [
+            ("Como desocupada, porque no consigue el empleo que busca", "Para ser desocupado hay que no haber trabajado en el período."),
+            ("Como inactiva, porque no trabaja jornada completa", "La población inactiva es la que no trabaja ni busca trabajo."),
+            ("No la registra, porque trabaja menos de veinte horas", "La estadística la cuenta como ocupada desde la primera hora trabajada."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "En Chile muchos contratos de largo plazo se pactan en unidades "
+        "reajustables por inflación y no en pesos. ¿Qué problema resuelve esa "
+        "práctica?",
+        "Que la inflación altere lo pactado años antes",
+        "Un contrato de arriendo o un crédito a veinte años fija hoy sumas que se "
+        "pagarán mucho después, cuando los precios habrán cambiado.\nSi el monto "
+        "quedara en pesos, la inflación transferiría valor de una parte a la otra "
+        "sin que ninguna lo hubiera acordado: quien recibe cobraría menos de lo que "
+        "pactó en términos reales.\nUna unidad que se reajusta con los precios "
+        "mantiene el valor real de lo acordado. No elimina la inflación ni protege "
+        "el sueldo de nadie: solo evita que el paso del tiempo modifique el "
+        "contenido del contrato.",
+        [
+            ("Que los precios suban durante la vigencia del contrato", "El reajuste no impide la inflación: solo la neutraliza dentro del contrato."),
+            ("Que las partes puedan renegociar el monto cada año", "El reajuste es automático y no supone renegociación."),
+            ("Que el Banco Central deba fijar la tasa de interés", "La indexación es independiente de la política monetaria."),
+        ],
+    ),
+    _q(
+        "eco_indicadores", "dificil",
+        "¿Por qué un banco central sigue de cerca lo que la población espera que "
+        "ocurra con los precios?",
+        "Porque esas expectativas terminan produciendo la inflación",
+        "Las expectativas no son solo un pronóstico: influyen en las decisiones que "
+        "las hacen realidad.\nSi todos esperan que los precios suban un 10%, las "
+        "empresas ajustan sus listas por adelantado y los trabajadores piden "
+        "reajustes de esa magnitud. Esos dos movimientos producen, por sí solos, "
+        "buena parte del alza esperada.\nDe ahí que un banco central dedique tanto "
+        "esfuerzo a que sus anuncios sean creíbles: si logra que la expectativa se "
+        "mantenga en su meta, buena parte del trabajo de contener los precios ya "
+        "está hecho.",
+        [
+            ("Porque las expectativas se calculan a partir del IPC pasado", "El interés no está en cómo se forman sino en el efecto que producen."),
+            ("Porque la ley obliga a consultar a la población antes de decidir", "No existe tal obligación en política monetaria."),
+            ("Porque las expectativas reemplazan a la tasa de interés", "Son cosas distintas: la tasa sigue siendo el instrumento."),
+        ],
+    ),
     _q(
         "eco_mercado", "facil",
         "Un almacén vendía 400 kilos de arroz por semana a $1.200. Baja el precio a "

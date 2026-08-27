@@ -245,6 +245,15 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "su costo total sube a $63.000.000": f"{63_000_000 // 30_000:,}".replace(",", "."),
     "vendía 400 kilos de arroz por semana": f"{1_000 * 500:,}".replace(",", "."),
     "compra paltas a $1.500 el kilo": f"{(2_400 - 1_500) * 120 - 18_000:,}".replace(",", "."),
+    # eco_indicadores: empleo, cuentas externas y precios
+    "6.500.000 de ellas forman parte de la fuerza": f"{6_500_000 * 100 // 10_000_000}%",
+    "6.000.000 de personas están ocupadas": f"{6_000_000 * 100 // 10_000_000}%",
+    "exportó bienes por 45.000 millones": f"{45_000 - 38_000:,}".replace(",", "."),
+    "deuda pública de un país es de 90.000 millones": f"{90_000 * 100 // 300_000}%",
+    "10% el primer año y de 10% el segundo": f"{round((1.10 * 1.10 - 1) * 100)}%",
+    "canasta básica se estima en $60.000": f"{60_000 * 4:,}".replace(",", "."),
+    "54.000 millones de dólares a gasto social": f"{54_000 * 100 // 300_000}%",
+    "20 trabajadores producen 400 unidades": f"{400 // 20} unidades",
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
     "se divide por mitosis": str(46),
