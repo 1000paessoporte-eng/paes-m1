@@ -55988,9 +55988,7 @@ PASSAGES_HISTORIA = [
             "permitía saber qué había votado una persona y, en el campo, "
             "controlar el sufragio de los inquilinos. La cédula única, adoptada "
             "a fines de los años cincuenta, entregó al Estado la impresión de "
-            "una papeleta con todas las candidaturas. El efecto fue inmediato y "
-            "se notó sobre todo en zonas rurales, donde los resultados dejaron "
-            "de reproducir la voluntad del propietario del fundo. Un voto "
+            "una papeleta con todas las candidaturas. Los estudios electorales del período le atribuyen un efecto rápido en zonas rurales, donde los resultados dejaron de reproducir la voluntad del propietario del fundo. Un voto "
             "secreto en serio no es un detalle de procedimiento: es la "
             "condición para que exista voto.\n"
             "\n"
@@ -56269,8 +56267,7 @@ PASSAGES_HISTORIA = [
             "reconstrucción. La idea era que un país en apuros tuviera algo que "
             "hacer distinto de cerrarse.\n"
             "\n"
-            "El segundo problema era la guerra misma. En 1945 se fundó una "
-            "organización mundial con dos órganos principales: una asamblea "
+            "El segundo problema era la guerra misma. En 1945 se fundó una organización mundial cuyo diseño descansa en dos de sus órganos: una asamblea "
             "donde cada Estado dispone de un voto y un consejo reducido, con "
             "cinco miembros permanentes dotados de veto, encargado de la "
             "seguridad internacional. El diseño buscaba corregir el defecto de "
@@ -56555,9 +56552,7 @@ PASSAGES_HISTORIA = [
         "body": (
             "Al independizarse, Chile era un territorio con menos de un millón "
             "de habitantes, mal comunicado y sin ninguna experiencia de "
-            "gobierno propio. La década de 1820 se fue en ensayos "
-            "constitucionales sucesivos —federal, liberal, moralista— que no "
-            "lograron estabilizarse, y el conflicto se resolvió por las armas "
+            "gobierno propio. La década de 1820 se fue en ensayos constitucionales sucesivos —moralista, federal, liberal— que no lograron estabilizarse, y el conflicto se resolvió por las armas "
             "en 1830. El orden que se impuso entonces quedó escrito en la "
             "Constitución de 1833 y se sostuvo sobre una idea sencilla: antes "
             "que discutir la mejor forma de gobierno, había que asegurar que "
@@ -56567,9 +56562,7 @@ PASSAGES_HISTORIA = [
             "representar. Creó instituciones destinadas a formar una elite "
             "letrada y un funcionariado: la Universidad de Chile en 1842 y la "
             "Escuela Normal de Preceptores en 1842, que preparaba a quienes "
-            "enseñarían en las escuelas públicas. La ley de instrucción "
-            "primaria de 1860 obligó a las municipalidades a sostener escuelas, "
-            "aunque la asistencia siguió siendo voluntaria durante décadas y la "
+            "enseñarían en las escuelas públicas. La ley de instrucción primaria de 1860 declaró la enseñanza primaria gratuita y a cargo del Estado, aunque la asistencia siguió siendo voluntaria durante décadas y la "
             "mayoría de la población continuó sin saber leer.\n"
             "\n"
             "También se dedicó a fijar el territorio. En 1843 ocupó el estrecho "
@@ -57228,8 +57221,7 @@ PASSAGES_HISTORIA = [
             "la banca y a asumir sus deudas, pese al principio de no "
             "intervención que declaraba.\n"
             "\n"
-            "La Constitución aprobada en 1980 estableció mecanismos que "
-            "restringían lo que una mayoría electa podría decidir después: "
+            "El marco institucional de 1980, completado por las leyes orgánicas dictadas antes de entregar el gobierno, estableció mecanismos que restringían lo que una mayoría electa podría decidir después: "
             "senadores no elegidos por votación popular, un sistema electoral "
             "que sobrerrepresentaba a la primera minoría, quórums muy altos "
             "para reformar ciertas leyes y limitaciones a la remoción de los "
@@ -57468,8 +57460,7 @@ PASSAGES_HISTORIA = [
             "vida entera de la sociedad: la escuela, el trabajo, la prensa, el "
             "ocio y hasta la vida privada.\n"
             "\n"
-            "En América Latina surgieron durante el mismo período liderazgos "
-            "como los de Getúlio Vargas en Brasil y Juan Domingo Perón en "
+            "En América Latina surgieron en esos años, y en los inmediatamente siguientes, liderazgos como los de Getúlio Vargas en Brasil y Juan Domingo Perón en "
             "Argentina. También ellos apelaron directamente a los sectores "
             "populares, por encima de los partidos tradicionales, y ampliaron "
             "derechos sociales y laborales. La diferencia con el totalitarismo "
@@ -66500,14 +66491,16 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "posguerra_marco_regulador", "his_posguerra", "facil",
-        "Según el texto, ¿cuáles son los dos órganos principales de la organización "
+        "Según el texto, ¿en qué dos órganos descansa el diseño de la organización "
         "fundada en 1945?",
         "Una asamblea con un voto por Estado y un consejo reducido",
         "El texto los describe así: una asamblea donde cada Estado dispone de un "
         "voto y un consejo reducido, con cinco miembros permanentes dotados de "
         "veto, encargado de la seguridad internacional.\nY explica el propósito del "
         "diseño: corregir el defecto de la organización anterior, que aprobaba "
-        "resoluciones que nadie ejecutaba.",
+        "resoluciones que nadie ejecutaba.\nNo son los únicos órganos de la "
+        "organización, sino los dos sobre los que descansa el arreglo que el texto "
+        "discute.",
         [
             ("Una asamblea y un tribunal de crímenes contra la humanidad", "Los tribunales de posguerra son distintos de los órganos de la organización, según el texto."),
             ("Un consejo económico y un banco de reconstrucción", "Esos organismos provienen del acuerdo de 1944, no de la fundación de 1945."),
@@ -68066,18 +68059,19 @@ QUESTIONS_HISTORIA = [
         "chile_xix_nacion", "his_chile_xix", "medio",
         "Según el texto, ¿por qué la ley de instrucción primaria de 1860 no bastó "
         "para alfabetizar al país?",
-        "Obligaba a sostener escuelas, pero la asistencia era voluntaria",
-        "El texto distingue con cuidado dos obligaciones distintas: la ley obliga a "
-        "las municipalidades a sostener escuelas, no a las familias a enviar a sus "
-        "hijos.\nY consigna el resultado: la asistencia siguió siendo voluntaria "
+        "Declaraba la enseñanza gratuita, pero la asistencia era libre",
+        "El texto distingue con cuidado dos cosas distintas: la ley declaró la "
+        "enseñanza primaria gratuita y a cargo del Estado, que es una obligación "
+        "sobre quien la ofrece.\nNo obligó a las familias a enviar a sus hijos. El "
+        "texto consigna el resultado: la asistencia siguió siendo voluntaria "
         "durante décadas y la mayoría de la población continuó sin saber leer.\nLa "
         "distinción es útil frente a cualquier norma: crear la oferta de un "
         "servicio y garantizar que la población acceda a él son dos decisiones "
         "separadas.",
         [
-            ("Porque las municipalidades no existían todavía en 1860", "La ley se dirige justamente a ellas, de modo que existían."),
+            ("Porque el Estado no disponía de fondos para financiarla", "El texto no atribuye el resultado a un problema de financiamiento."),
             ("Porque no se habían formado profesores para esas escuelas", "La Escuela Normal de Preceptores funcionaba desde 1842."),
-            ("Porque la enseñanza siguió en manos exclusivas de la Iglesia", "El texto describe escuelas públicas sostenidas por las municipalidades."),
+            ("Porque la enseñanza siguió en manos exclusivas de la Iglesia", "El texto describe una enseñanza primaria a cargo del Estado."),
         ],
     ),
     _ql(
