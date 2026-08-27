@@ -1722,6 +1722,21 @@ def main() -> int:
         if not p.get("source_note"):
             fallas.append(f"texto '{p['key']}' sin nota de origen")
 
+    # El título y la nota de origen viajan a columnas acotadas
+    # (`reading_passages.title` es String(200) y `source_note`, String(300)).
+    # Pasarse no rompe ningún test, porque en Python son strings cualquiera:
+    # revienta recién en el INSERT contra Postgres. Y revienta a mitad de
+    # camino, cuando el seed ya escribió los nodos, dejando la base con nodos
+    # sin preguntas. Pasó el 2026-08-27 con tres notas de Historia.
+    for p in TODOS_LOS_PASAJES:
+        for campo, tope in (("title", 200), ("source_note", 300)):
+            largo = len(p.get(campo) or "")
+            if largo > tope:
+                fallas.append(
+                    f"texto '{p['key']}': {campo} mide {largo} caracteres y la "
+                    f"columna admite {tope}; el seed a producción fallaría"
+                )
+
     vistos: Counter[str] = Counter()
     for q in todas:
         stem = q["stem"]
