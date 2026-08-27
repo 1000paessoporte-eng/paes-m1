@@ -54918,6 +54918,159 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "eco_tendencias_trabajo",
+        "title": "Cuatro cambios que el derecho laboral no vio venir",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Sistema económico para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "El derecho laboral se construyó sobre una figura concreta: una "
+            "persona que trabaja para un empleador identificable, en un lugar "
+            "determinado, con horario y por tiempo indefinido. Casi todas sus "
+            "protecciones dependen de esa relación. Cuatro tendencias la han "
+            "ido erosionando, y cada una plantea un problema distinto.\n"
+            "\n"
+            "La primera es el trabajo por plataformas. Una aplicación conecta a "
+            "quien necesita un servicio con quien lo presta, y la empresa que "
+            "la opera sostiene que solo intermedia. Sin embargo fija la tarifa, "
+            "asigna los encargos, evalúa el desempeño y puede desconectar a "
+            "alguien: eso se parece bastante a dirigir un trabajo. La discusión "
+            "no es sobre la tecnología sino sobre si existe subordinación, que "
+            "es el criterio del que dependen todas las protecciones.\n"
+            "\n"
+            "La segunda es la subcontratación. Una empresa contrata a otra para "
+            "tareas que antes hacía con personal propio, y quien trabaja en el "
+            "lugar responde ante alguien distinto de quien lo emplea. La cadena "
+            "puede tener varios eslabones, y en cada uno se diluye la "
+            "responsabilidad: cuando algo falla, no siempre está claro a quién "
+            "reclamar.\n"
+            "\n"
+            "La tercera es la automatización. No se trata solo de puestos que "
+            "desaparecen, sino de tareas dentro de un puesto: cuando una "
+            "máquina asume la parte rutinaria, lo que queda exige otras "
+            "capacidades y la persona debe aprenderlas o quedar fuera. El "
+            "efecto se concentra en quienes tienen menos posibilidades de "
+            "capacitarse, que suelen ser los mismos que ocupan los empleos más "
+            "rutinarios.\n"
+            "\n"
+            "La cuarta es el trabajo a distancia. Ahorra traslados y permite "
+            "compatibilizar obligaciones, y al mismo tiempo borra el límite "
+            "entre la jornada y el resto del día. Un correo a las once de la "
+            "noche no obliga formalmente a nadie, pero quien lo recibe sabe que "
+            "responderlo cuenta.\n"
+            "\n"
+            "Las cuatro comparten una misma dificultad. Las protecciones "
+            "laborales se activan cuando existe una relación de subordinación "
+            "reconocida, y estas formas de trabajo o la difuminan, o la "
+            "reparten entre varias empresas, o la trasladan a un lugar donde "
+            "nadie fiscaliza. La respuesta no es negar que estas modalidades "
+            "existen ni suponer que las reglas anteriores sirven sin cambios. "
+            "Es preguntar, en cada caso, quién dirige efectivamente el trabajo "
+            "y quién debe responder por él."
+        ),
+    },
+    {
+        "key": "eco_laborales_cifras",
+        "title": "Organización sindical y condiciones de trabajo, 1970-2020",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos referidos a "
+            "un país ficticio. Las tendencias reproducen patrones que la "
+            "investigación sobre mercados laborales describe, pero las cifras "
+            "no corresponden a ninguna serie oficial: el ejercicio es de "
+            "lectura e inferencia."
+        ),
+        "body": (
+            "**Tabla 1. Evolución del trabajo asalariado.**\n"
+            "\n"
+            "| Año | Sindicalización | Cubiertos por negociación colectiva | "
+            "Empleo informal | Jornada legal máxima |\n"
+            "|---|---|---|---|---|\n"
+            "| 1970 | 34% | 38% | 21% | 48 horas |\n"
+            "| 1980 | 17% | 14% | 29% | 48 horas |\n"
+            "| 1990 | 15% | 13% | 31% | 48 horas |\n"
+            "| 2005 | 14% | 12% | 28% | 45 horas |\n"
+            "| 2020 | 20% | 18% | 26% | 45 horas |\n"
+            "\n"
+            "**Tabla 2. Diferencias entre trabajadores cubiertos y no cubiertos "
+            "por negociación colectiva, 2020.**\n"
+            "\n"
+            "| Indicador | Con negociación colectiva | Sin negociación "
+            "colectiva |\n"
+            "|---|---|---|\n"
+            "| Contrato indefinido | 88% | 54% |\n"
+            "| Capacitación pagada por la empresa | 41% | 12% |\n"
+            "| Accidentes laborales por cada mil | 19 | 34 |\n"
+            "\n"
+            "Notas:\n"
+            "— El empleo informal corresponde a trabajo sin contrato ni "
+            "cotizaciones previsionales.\n"
+            "— Entre 1975 y 1985 la ley restringió la constitución de "
+            "sindicatos y la negociación colectiva por rama de actividad.\n"
+            "— La Tabla 2 compara grupos que difieren también en tamaño de "
+            "empresa y sector, de modo que no todas las diferencias son "
+            "atribuibles a la negociación."
+        ),
+    },
+    {
+        "key": "eco_derechos_laborales",
+        "title": "Por qué un trabajador no puede renunciar a sus derechos",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Sistema económico para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "Un contrato de trabajo se parece a cualquier otro contrato en que "
+            "dos partes acuerdan algo, y se diferencia de todos en una cosa: "
+            "las partes no están en igualdad de condiciones. Quien contrata "
+            "puede esperar; quien busca empleo necesita el sueldo este mes. "
+            "Sobre esa asimetría descansa todo el derecho laboral, y por eso "
+            "sus reglas no funcionan como las de un contrato corriente.\n"
+            "\n"
+            "La primera consecuencia es la irrenunciabilidad. Los derechos "
+            "laborales mínimos no se pueden ceder ni siquiera con acuerdo del "
+            "trabajador mientras la relación esté vigente. Puede parecer "
+            "paternalista, y se entiende mejor al revés: si fueran "
+            "renunciables, cualquier empleador podría exigir la renuncia como "
+            "condición para contratar, y el derecho existiría solo para quien "
+            "no lo necesita.\n"
+            "\n"
+            "La segunda es que el contrato debe constar por escrito y contener "
+            "lo esencial: qué se hará, dónde, en qué jornada y por cuánto. La "
+            "exigencia protege sobre todo a quien tendría que probar después lo "
+            "que se acordó, y esa persona no es la que guarda los registros de "
+            "la empresa.\n"
+            "\n"
+            "Los derechos individuales tienen un límite conocido: se ejercen de "
+            "a uno. Un trabajador que reclama solo enfrenta a una organización "
+            "entera y arriesga su puesto. De ahí que el ordenamiento reconozca "
+            "derechos colectivos: organizarse en sindicato, negociar "
+            "colectivamente las condiciones de trabajo y declarar la huelga "
+            "dentro del procedimiento legal. La huelga es el punto donde la "
+            "negociación deja de ser una conversación: sin la posibilidad de "
+            "detener la producción, una de las partes puede simplemente no "
+            "responder.\n"
+            "\n"
+            "Para que estos derechos operen hacen falta dos instituciones "
+            "distintas. La Dirección del Trabajo fiscaliza, interpreta la norma "
+            "y puede sancionar por vía administrativa, sin que nadie tenga que "
+            "iniciar un juicio. Los tribunales laborales resuelven los "
+            "conflictos con un procedimiento propio, más rápido que el civil y "
+            "con reglas de prueba que consideran quién dispone de los "
+            "antecedentes.\n"
+            "\n"
+            "Ninguno de estos derechos apareció por decisión de un legislador "
+            "aislado. La jornada limitada, el descanso semanal, la protección "
+            "frente al despido y la propia existencia del sindicato fueron "
+            "conquistas de organizaciones de trabajadores que las exigieron "
+            "durante décadas, y buena parte de la legislación laboral es el "
+            "registro escrito de esos conflictos."
+        ),
+    },
+    {
         "key": "eco_proyecto_extractivo",
         "title": "Dos intervenciones en una audiencia sobre un proyecto minero",
         "kind": "no_literario",
@@ -58119,6 +58272,694 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "facil",
+        "Según el texto, ¿sobre qué figura se construyó el derecho laboral?",
+        "Un empleador identificable, un lugar y un horario",
+        "El texto la describe al comenzar y agrega un cuarto rasgo: por tiempo "
+        "indefinido.\nY precisa por qué importa esa descripción: casi todas las "
+        "protecciones del derecho laboral dependen de que exista esa relación.",
+        [
+            ("Un trabajador independiente que ofrece sus servicios", "El texto describe una relación de dependencia, no de trabajo autónomo."),
+            ("Una empresa que subcontrata parte de sus tareas", "La subcontratación es una de las tendencias que erosionan esa figura."),
+            ("Una persona que trabaja a distancia con horario flexible", "El trabajo a distancia es la cuarta tendencia que el texto describe."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "facil",
+        "Según el texto, ¿qué hace la empresa que opera una plataforma, pese a "
+        "sostener que solo intermedia?",
+        "Fija la tarifa, asigna encargos y evalúa",
+        "El texto enumera esas funciones y agrega una cuarta: puede desconectar a "
+        "alguien.\nY extrae la consecuencia: eso se parece bastante a dirigir un "
+        "trabajo, que es justamente lo que caracteriza a una relación de "
+        "subordinación.",
+        [
+            ("Solo pone en contacto a las partes sin intervenir", "Es lo que la empresa sostiene, y el texto lo contrasta con lo que hace."),
+            ("Contrata directamente a quienes prestan el servicio", "El texto describe precisamente la discusión sobre si existe contrato."),
+            ("Fiscaliza el cumplimiento de la ley laboral", "Esa función no aparece atribuida a la plataforma."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "facil",
+        "Según el texto, ¿qué problema plantea la subcontratación?",
+        "Se diluye a quién corresponde responder",
+        "El texto describe la situación: quien trabaja en el lugar responde ante "
+        "alguien distinto de quien lo emplea.\nY señala el efecto cuando la cadena "
+        "tiene varios eslabones: en cada uno se diluye la responsabilidad, de modo "
+        "que cuando algo falla no siempre está claro a quién reclamar.",
+        [
+            ("Los trabajadores subcontratados ganan siempre menos", "El texto no compara remuneraciones."),
+            ("Las empresas contratantes desaparecen del lugar de trabajo", "El texto describe que el trabajo se realiza en el lugar de la empresa principal."),
+            ("La subcontratación está prohibida por la ley laboral", "El texto no plantea ninguna prohibición."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "Según el texto, ¿por qué la discusión sobre plataformas no es sobre "
+        "tecnología?",
+        "Lo que se discute es si existe subordinación",
+        "El texto lo formula de manera explícita y explica por qué ese es el punto: "
+        "la subordinación es el criterio del que dependen todas las "
+        "protecciones.\nSi la relación es de subordinación, se aplican jornada, "
+        "cotizaciones, protección frente al despido y el resto del estatuto "
+        "laboral. Si no lo es, no se aplica ninguna.\nLa tecnología solo cambia el "
+        "medio por el que se dirige el trabajo, y el criterio jurídico sigue siendo "
+        "el mismo que para cualquier otro empleo.",
+        [
+            ("Porque las aplicaciones no cambian la forma de trabajar", "El texto describe cambios concretos en cómo se asigna y evalúa el trabajo."),
+            ("Porque la ley ya resolvió el estatuto de estas plataformas", "El texto la presenta como una discusión abierta."),
+            ("Porque quienes trabajan ahí no reclaman protecciones", "El texto no plantea nada sobre las demandas de esos trabajadores."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "Según el texto, ¿en qué consiste el efecto de la automatización sobre los "
+        "puestos de trabajo?",
+        "Cambia las tareas dentro de cada puesto",
+        "El texto precisa que no se trata solo de puestos que desaparecen: cuando "
+        "una máquina asume la parte rutinaria, lo que queda del puesto exige otras "
+        "capacidades.\nLa persona debe aprenderlas o quedar fuera, aunque su cargo "
+        "siga existiendo.\nEl texto agrega quién lo resiente más: el efecto se "
+        "concentra en quienes tienen menos posibilidades de capacitarse, que suelen "
+        "ser los mismos que ocupan los empleos más rutinarios.",
+        [
+            ("Elimina por completo los puestos afectados", "El texto precisa que el efecto no se agota en la desaparición de puestos."),
+            ("Aumenta el número de horas que exige cada puesto", "El texto no plantea un efecto sobre la jornada."),
+            ("Traslada los puestos a modalidades de trabajo a distancia", "El trabajo a distancia es otra tendencia, tratada aparte."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "Según el texto, ¿qué problema trae el trabajo a distancia junto con sus "
+        "ventajas?",
+        "Borra el límite entre la jornada y el día",
+        "El texto reconoce primero lo que aporta: ahorra traslados y permite "
+        "compatibilizar obligaciones.\nY describe el costo con un ejemplo preciso: "
+        "un correo a las once de la noche no obliga formalmente a nadie, pero quien "
+        "lo recibe sabe que responderlo cuenta.\nLa dificultad es que la presión no "
+        "aparece como una orden y por eso no deja rastro. La jornada se extiende "
+        "sin que ninguna norma haya sido infringida de manera visible.",
+        [
+            ("Reduce la productividad de quienes trabajan desde su casa", "El texto no discute la productividad."),
+            ("Impide que los trabajadores se organicen en sindicatos", "El texto no plantea ese efecto."),
+            ("Obliga a la empresa a pagar los gastos del hogar", "El texto no se refiere a los costos del trabajo a distancia."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "Según el texto, ¿qué tienen en común las cuatro tendencias?",
+        "Dificultan reconocer la relación de subordinación",
+        "El texto lo enuncia al cerrar: las protecciones laborales se activan "
+        "cuando existe una relación de subordinación reconocida.\nY describe las "
+        "tres maneras en que estas formas de trabajo lo dificultan: o la difuminan, "
+        "como en las plataformas; o la reparten entre varias empresas, como en la "
+        "subcontratación; o la trasladan a un lugar donde nadie fiscaliza, como en "
+        "el trabajo a distancia.\nLa automatización opera por otra vía, alterando "
+        "el contenido del puesto, pero termina afectando la misma relación cuando "
+        "quien no puede adaptarse queda fuera de ella.",
+        [
+            ("Reducen el número total de puestos de trabajo", "Solo la automatización se relaciona con la desaparición de puestos."),
+            ("Dependen todas del desarrollo de nuevas tecnologías", "La subcontratación no requiere tecnología nueva."),
+            ("Fueron reguladas por la ley antes de aparecer", "El texto describe un derecho laboral que no las anticipó."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "medio",
+        "Según el texto, ¿qué pregunta corresponde hacerse frente a estas nuevas "
+        "modalidades?",
+        "Quién dirige el trabajo y quién responde por él",
+        "El texto la propone al cerrar, después de descartar dos respuestas "
+        "extremas.\nNo corresponde negar que estas modalidades existen, ni suponer "
+        "que las reglas anteriores sirven sin cambios.\nLa pregunta que propone se "
+        "responde caso a caso y mira los hechos y no las denominaciones: quién fija "
+        "las condiciones, quién asigna el trabajo y quién obtiene el resultado, con "
+        "independencia de cómo se llame el contrato.",
+        [
+            ("Si la tecnología empleada es reciente o antigua", "El texto descarta que la discusión sea sobre tecnología."),
+            ("Cuántas personas trabajan bajo cada modalidad", "El texto no propone resolverlo por el número de afectados."),
+            ("Si el trabajador acepta voluntariamente esas condiciones", "La aceptación no altera el criterio de subordinación que el texto propone."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "¿Por qué el criterio de subordinación es tan decisivo, según el texto?",
+        "De él dependen todas las protecciones laborales",
+        "El texto lo señala al tratar las plataformas y lo repite al cerrar: las "
+        "protecciones se activan cuando existe una relación de subordinación "
+        "reconocida.\nEso convierte la calificación jurídica en un interruptor. "
+        "Quien es reconocido como trabajador subordinado accede a jornada limitada, "
+        "cotizaciones, protección frente al despido y derechos colectivos; quien "
+        "no, no accede a ninguno.\nPor eso la discusión sobre si una plataforma "
+        "dirige o solo intermedia no es una disputa de etiquetas: define si todo el "
+        "estatuto laboral se aplica o no se aplica.",
+        [
+            ("Porque determina el monto de la remuneración", "El texto no vincula la subordinación con el nivel del sueldo."),
+            ("Porque define qué tribunal conoce el conflicto", "El texto no discute la competencia de los tribunales."),
+            ("Porque establece la duración del contrato de trabajo", "El criterio no fija plazos contractuales."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "El texto sostiene que la empresa que opera una plataforma hace algo que se "
+        "parece a dirigir. ¿Qué operación realiza al decirlo?",
+        "Compara lo declarado con lo que efectivamente ocurre",
+        "La empresa declara una calificación: solo intermedia. El texto no la "
+        "discute en abstracto sino que enumera conductas verificables: fija la "
+        "tarifa, asigna los encargos, evalúa el desempeño y puede desconectar a "
+        "alguien.\nEsas cuatro conductas son las que caracterizan a quien dirige un "
+        "trabajo, con independencia de cómo se llame a sí mismo.\nEs el mismo "
+        "procedimiento que el derecho laboral aplica en cualquier caso dudoso: la "
+        "calificación depende de los hechos de la relación y no de la denominación "
+        "que las partes le den.",
+        [
+            ("Cuestiona la legalidad de la tecnología empleada", "El texto aclara que la discusión no es sobre la tecnología."),
+            ("Propone prohibir el funcionamiento de las plataformas", "El texto no plantea ninguna prohibición."),
+            ("Supone que toda intermediación encubre un empleo", "El texto examina conductas concretas, no presume una regla general."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "¿Por qué el texto afirma que la automatización afecta más a unos "
+        "trabajadores que a otros?",
+        "Los puestos rutinarios los ocupa quien menos puede capacitarse",
+        "El texto encadena dos hechos. Primero, la máquina asume la parte rutinaria "
+        "de las tareas, de modo que el efecto se concentra en los puestos con más "
+        "rutina.\nSegundo, quienes ocupan esos puestos suelen ser los mismos que "
+        "tienen menos posibilidades de capacitarse.\nLa consecuencia es que la "
+        "tecnología no reparte su costo al azar: recae sobre quienes están en peor "
+        "posición para absorberlo, y por eso el texto la trata como un problema de "
+        "derechos laborales y no solo de productividad.",
+        [
+            ("Las máquinas solo pueden reemplazar tareas manuales", "El texto habla de tareas rutinarias, no necesariamente manuales."),
+            ("Las empresas eligen a quién automatizar según su antigüedad", "El texto no atribuye el efecto a una decisión sobre personas."),
+            ("Los trabajadores con más formación pierden más puestos", "El texto sostiene lo contrario."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "¿Qué dificultad particular plantea el ejemplo del correo a las once de la "
+        "noche?",
+        "La presión no deja rastro que pueda fiscalizarse",
+        "El texto es preciso: ese correo no obliga formalmente a nadie, y sin "
+        "embargo quien lo recibe sabe que responderlo cuenta.\nEsa es exactamente "
+        "la situación que una norma sobre jornada no alcanza. No hay una orden que "
+        "se pueda acreditar ni una infracción que un fiscalizador pueda constatar "
+        "en una visita.\nEl trabajo a distancia agrava el problema porque, como "
+        "señala el texto, traslada la relación a un lugar donde nadie fiscaliza. La "
+        "extensión de la jornada ocurre sin que quede registro de que ocurrió.",
+        [
+            ("El correo constituye una orden expresa del empleador", "El texto señala que no obliga formalmente."),
+            ("Los trabajadores a distancia no tienen jornada legal", "El texto no afirma que queden fuera de la norma."),
+            ("Responder un correo no forma parte del trabajo", "El punto del texto es que sí cuenta como tal."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "El texto descarta dos respuestas extremas frente a estas tendencias. "
+        "¿Cuáles y por qué?",
+        "Negar que existen o aplicar las reglas sin cambios",
+        "La primera respuesta descartada consistiría en tratar estas modalidades "
+        "como anomalías que no deberían existir. El texto no la sigue: las describe "
+        "reconociendo lo que aportan, como el ahorro de traslados del trabajo a "
+        "distancia.\nLa segunda consistiría en suponer que el estatuto construido "
+        "para un empleador identificable, un lugar y un horario se aplica sin "
+        "ajustes a formas de trabajo que no tienen ninguno de esos tres "
+        "rasgos.\nEntre ambas propone un criterio de trabajo: preguntar caso a caso "
+        "quién dirige efectivamente el trabajo y quién debe responder por él.",
+        [
+            ("Prohibir las plataformas o dejarlas sin regulación alguna", "El texto no plantea la prohibición como una de las dos respuestas."),
+            ("Automatizar todo o impedir cualquier automatización", "El texto no discute si automatizar."),
+            ("Aumentar la fiscalización o eliminarla por completo", "La fiscalización aparece como una dificultad, no como la disyuntiva."),
+        ],
+    ),
+    _ql(
+        "eco_tendencias_trabajo", "eco_laborales", "dificil",
+        "Una empresa reemplaza a su personal de aseo por una empresa externa y sus "
+        "trabajadores reclaman por las condiciones del lugar. ¿Qué problema del "
+        "texto ilustra?",
+        "La responsabilidad se reparte entre dos empresas",
+        "El caso reúne los elementos que el texto describe para la subcontratación: "
+        "quien trabaja en el lugar responde ante alguien distinto de quien lo "
+        "emplea.\nLas condiciones del lugar dependen de la empresa principal, que "
+        "no es la empleadora; el contrato depende de la contratista, que no "
+        "controla el lugar.\nDe ahí la dificultad que el texto identifica: cuando "
+        "algo falla no siempre está claro a quién reclamar, y ese es exactamente el "
+        "vacío que la pregunta final del texto busca cerrar.",
+        [
+            ("Una plataforma que dirige sin reconocer subordinación", "En este caso existe contrato con una empresa identificable."),
+            ("La automatización de las tareas rutinarias del aseo", "El caso describe un cambio de empleador, no de tecnología."),
+            ("El trabajo a distancia sin límite de jornada", "El trabajo se realiza en el lugar de la empresa principal."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "facil",
+        "Según la Tabla 1, ¿cuál fue la sindicalización más alta de la serie?",
+        "34% en 1970",
+        "La columna de sindicalización entrega 34%, 17%, 15%, 14% y 20% en los "
+        "cinco cortes.\nEl valor de 1970 es el más alto y más que duplica al de "
+        "2020, que es el segundo. La caída se concentra entre 1970 y 1980, cuando "
+        "la serie pierde diecisiete puntos de una sola vez.",
+        [
+            ("20% en 2020, tras la recuperación reciente", "Es el segundo valor de la serie, muy por debajo del de 1970."),
+            ("17% en 1980, antes de la caída posterior", "Es la mitad del valor de 1970."),
+            ("14% en 2005, el punto medio de la serie", "Es el valor más bajo de toda la tabla."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "facil",
+        "Según la Tabla 2, ¿qué proporción de los trabajadores sin negociación "
+        "colectiva tiene contrato indefinido?",
+        "El 54%",
+        "La primera fila de la Tabla 2 entrega 88% para quienes están cubiertos por "
+        "negociación colectiva y 54% para quienes no lo están.\nLa diferencia es de "
+        "34 puntos porcentuales, la mayor de las tres filas en términos absolutos.",
+        [
+            ("El 88%, igual que los cubiertos", "El 88% corresponde a quienes sí están cubiertos."),
+            ("El 41%, según la fila de capacitación", "Ese valor corresponde a otra fila de la tabla."),
+            ("El 12%, según la columna sin negociación", "El 12% es la capacitación pagada, no el contrato indefinido."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "facil",
+        "Según la Tabla 1, ¿cuándo bajó la jornada legal máxima?",
+        "Entre 1990 y 2005",
+        "La columna de jornada registra 48 horas en 1970, 1980 y 1990, y 45 horas "
+        "en 2005 y 2020.\nEl cambio ocurre entonces en algún momento del tramo "
+        "entre esos dos cortes. La tabla no permite precisar el año exacto, porque "
+        "sus mediciones están separadas por quince años.",
+        [
+            ("Entre 1970 y 1980, junto con la caída sindical", "En 1980 la jornada seguía siendo de 48 horas."),
+            ("Entre 2005 y 2020, con la recuperación sindical", "En 2005 la jornada ya era de 45 horas."),
+            ("No bajó en ningún momento de la serie", "Pasa de 48 a 45 horas entre 1990 y 2005."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "medio",
+        "¿Qué relación aparece en la Tabla 1 entre sindicalización e informalidad?",
+        "Cuando cae una, sube la otra",
+        "Las dos columnas se mueven en sentidos opuestos en casi toda la serie. "
+        "Entre 1970 y 1990 la sindicalización cae de 34% a 15% y la informalidad "
+        "sube de 21% a 31%; entre 2005 y 2020 la sindicalización sube de 14% a 20% "
+        "y la informalidad baja de 28% a 26%.\nLa coincidencia es consistente, pero "
+        "la tabla no permite establecer causa: ambas pueden depender de un tercer "
+        "factor, como la estructura productiva o el marco legal.\nLa segunda nota "
+        "apunta a uno de esos factores para el tramo donde la caída es más brusca.",
+        [
+            ("Ambas suben durante toda la serie", "La sindicalización cae entre 1970 y 2005."),
+            ("La informalidad no cambia mientras la sindicalización varía", "La informalidad va de 21% a 31% y luego a 26%."),
+            ("Cuando sube la sindicalización sube también la informalidad", "Entre 2005 y 2020 ocurre lo contrario."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "medio",
+        "Según la segunda nota, ¿qué ocurrió entre 1975 y 1985?",
+        "La ley restringió sindicatos y negociación por rama",
+        "La nota lo consigna de manera directa, y el dato ayuda a leer el tramo "
+        "donde la Tabla 1 muestra su caída más brusca: entre 1970 y 1980 la "
+        "sindicalización pierde diecisiete puntos y la cobertura de negociación "
+        "colectiva, veinticuatro.\nLa restricción a la negociación por rama importa "
+        "especialmente. Negociar por empresa deja fuera a los trabajadores de "
+        "empresas pequeñas, donde formar un sindicato es más difícil.\nLa "
+        "coincidencia temporal es fuerte, aunque la tabla por sí sola no permite "
+        "atribuir toda la caída a esa causa.",
+        [
+            ("La ley amplió el derecho a negociar colectivamente", "La nota describe una restricción, no una ampliación."),
+            ("Se redujo la jornada legal máxima de trabajo", "La jornada bajó de 48 a 45 horas entre 1990 y 2005."),
+            ("Se prohibió el trabajo informal sin contrato", "La nota no menciona ninguna medida sobre informalidad."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "medio",
+        "Según la Tabla 2, ¿qué diferencia hay en accidentes laborales entre ambos "
+        "grupos?",
+        "Casi el doble sin negociación colectiva",
+        "La tercera fila registra 19 accidentes por cada mil trabajadores en el "
+        "grupo con negociación colectiva y 34 en el grupo sin ella.\nLa diferencia "
+        "es de quince accidentes por cada mil, es decir cerca del doble.\nLa "
+        "tercera nota advierte que los dos grupos difieren también en tamaño de "
+        "empresa y sector, de modo que parte de esa brecha puede deberse a que "
+        "ciertos rubros son más riesgosos y a la vez menos sindicalizados.",
+        [
+            ("Casi el doble en el grupo con negociación colectiva", "Invierte los grupos: 19 corresponde a quienes sí negocian."),
+            ("La diferencia es de un accidente por cada mil", "La diferencia entre 19 y 34 es de quince por cada mil."),
+            ("Los dos grupos registran la misma tasa de accidentes", "Las cifras difieren en casi el doble."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "medio",
+        "¿Qué muestra la Tabla 1 sobre el tramo 2005-2020?",
+        "Sube la sindicalización y baja la informalidad",
+        "En ese tramo la sindicalización pasa de 14% a 20% y la cobertura de "
+        "negociación colectiva, de 12% a 18%. La informalidad baja de 28% a "
+        "26%.\nEs el único período de la serie donde las tres columnas mejoran a la "
+        "vez, después de tres décadas de deterioro.\nConviene medir bien el alcance "
+        "de esa recuperación: el 20% de 2020 sigue muy por debajo del 34% de 1970, "
+        "de modo que la serie recupera parte del terreno sin volver al punto de "
+        "partida.",
+        [
+            ("Las tres columnas empeoran respecto de 2005", "Las tres mejoran en ese tramo."),
+            ("La sindicalización vuelve al nivel que tenía en 1970", "Llega a 20% frente al 34% de 1970."),
+            ("La jornada legal máxima vuelve a las 48 horas", "Se mantiene en 45 horas en ambos cortes."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "medio",
+        "Un estudiante concluye de la Tabla 2 que negociar colectivamente reduce "
+        "los accidentes a la mitad. ¿Qué le advierte la tercera nota?",
+        "Los dos grupos difieren también en otras cosas",
+        "La nota señala que los grupos comparados difieren además en tamaño de "
+        "empresa y sector, de modo que no todas las diferencias son atribuibles a "
+        "la negociación colectiva.\nUna construcción pequeña y una empresa grande "
+        "de servicios tienen riesgos muy distintos con independencia de si hay "
+        "sindicato.\nPara aislar el efecto de la negociación habría que comparar "
+        "trabajadores equivalentes en tamaño de empresa y rubro, que es justamente "
+        "lo que esta tabla no permite hacer.",
+        [
+            ("La tabla no registra accidentes laborales", "La tercera fila los entrega para ambos grupos."),
+            ("Las cifras corresponden a años distintos", "Ambas columnas son de 2020."),
+            ("El grupo sin negociación es más pequeño", "La nota no informa sobre el tamaño de cada grupo."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "dificil",
+        "¿Qué relación entre organización colectiva y condiciones de trabajo "
+        "sugieren ambas tablas?",
+        "Donde hay negociación, las condiciones son mejores",
+        "La Tabla 2 lo muestra en tres dimensiones a la vez: más contratos "
+        "indefinidos, más capacitación pagada por la empresa y menos accidentes "
+        "entre quienes están cubiertos por negociación colectiva.\nLa Tabla 1 "
+        "aporta el otro extremo del argumento: cuando la cobertura cae, sube la "
+        "informalidad, es decir el trabajo sin contrato ni cotizaciones.\nLa "
+        "tercera nota impide dar el paso siguiente. Que las condiciones sean "
+        "mejores donde hay negociación no prueba que la negociación las produzca, "
+        "porque los grupos comparados no son equivalentes en todo lo demás.",
+        [
+            ("La negociación colectiva no incide en las condiciones", "Las tres filas de la Tabla 2 muestran diferencias amplias."),
+            ("Las condiciones son mejores donde no hay negociación", "La tabla registra el patrón contrario."),
+            ("La organización sindical explica por completo esas diferencias", "La tercera nota advierte que otros factores intervienen."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "dificil",
+        "¿Por qué la restricción de la negociación por rama afecta más a las "
+        "empresas pequeñas?",
+        "Formar sindicato ahí es más difícil",
+        "Negociar por rama permite que las condiciones acordadas alcancen a todos "
+        "los trabajadores del sector, con independencia del tamaño de la empresa "
+        "donde trabajen.\nSi la negociación solo puede darse dentro de cada "
+        "empresa, hace falta constituir un sindicato en cada una, y en una empresa "
+        "de pocos trabajadores eso es más difícil: se requiere una proporción alta "
+        "del personal y la exposición individual es mayor.\nLa consecuencia aparece "
+        "en la Tabla 1, donde la cobertura de negociación cae de 38% a 14% en el "
+        "tramo que la nota identifica.",
+        [
+            ("Las empresas pequeñas están exentas de la ley laboral", "Nada en la fuente establece esa exención."),
+            ("Los trabajadores de empresas pequeñas ganan más", "La fuente no entrega información sobre remuneraciones."),
+            ("La negociación por rama solo cubre al sector público", "La nota no establece esa restricción."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "dificil",
+        "¿Qué NO permite establecer esta fuente sobre el período 1970-2020?",
+        "Qué causó cada cambio de la serie",
+        "Las tablas registran resultados: cuánta gente estaba sindicalizada, cuánta "
+        "cubierta por negociación, cuánta en informalidad y qué jornada regía.\nLa "
+        "segunda nota entrega un dato de contexto para un tramo, pero no permite "
+        "medir cuánto de la caída se debe a la restricción legal y cuánto a otros "
+        "factores del período, como cambios en la estructura productiva o en el "
+        "tamaño de las empresas.\nAtribuir causas exigiría series desagregadas por "
+        "sector y comparaciones con países que no aplicaron esas restricciones.",
+        [
+            ("Cómo evolucionó la sindicalización en cinco cortes", "Es exactamente lo que entrega la primera columna."),
+            ("Qué diferencias hay entre grupos con y sin negociación", "La Tabla 2 las registra en tres indicadores."),
+            ("En qué tramo bajó la jornada legal máxima", "Se obtiene comparando la última columna entre cortes."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "dificil",
+        "¿Qué papel atribuyen estas tablas a las organizaciones de trabajadores en "
+        "la vigencia efectiva de los derechos?",
+        "Sostienen en la práctica lo que la ley declara",
+        "La jornada legal es la misma para todos: 45 horas en los dos últimos "
+        "cortes, con independencia de si hay sindicato.\nSin embargo la Tabla 2 "
+        "muestra que en el grupo sin negociación colectiva menos de la mitad de los "
+        "indicadores alcanza el nivel del otro grupo, y la Tabla 1 registra que un "
+        "cuarto de los trabajadores está en la informalidad, es decir fuera de todo "
+        "contrato y cotización.\nEl contraste sugiere que la norma escrita no basta "
+        "por sí sola: donde existe una contraparte organizada, los derechos "
+        "declarados tienen más probabilidad de aplicarse.",
+        [
+            ("Reemplazan a la ley laboral en las empresas donde existen", "La ley rige igual: la diferencia está en su aplicación efectiva."),
+            ("Impiden que las empresas contraten trabajadores nuevos", "La fuente no aporta ningún dato sobre contratación."),
+            ("Determinan la jornada legal máxima de cada sector", "La jornada legal es la misma para todos en cada corte."),
+        ],
+    ),
+    _ql(
+        "eco_laborales_cifras", "eco_laborales", "dificil",
+        "Si estas cifras provinieran de encuestas de empleo, ¿qué precaución "
+        "exigiría la columna de informalidad?",
+        "Depende de cómo se defina el trabajo informal",
+        "La primera nota fija un criterio: trabajo sin contrato ni cotizaciones "
+        "previsionales.\nOtras definiciones producen cifras muy distintas. Contar "
+        "como informal a quien tiene contrato pero no cotiza, o a quien trabaja por "
+        "cuenta propia, cambia el porcentaje varios puntos sin que la realidad haya "
+        "cambiado.\nPor eso una serie larga exige verificar que la definición se "
+        "mantuvo constante en los cinco cortes. Un cambio metodológico entre dos "
+        "mediciones produce el mismo escalón que un cambio real en el mercado "
+        "laboral.",
+        [
+            ("Las encuestas de empleo no miden la informalidad", "La nota indica que sí la definen y la miden."),
+            ("La informalidad no puede compararse entre años", "Sí puede, siempre que la definición se mantenga constante."),
+            ("Los trabajadores informales no responden encuestas", "La fuente no plantea ese problema de cobertura."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "facil",
+        "Según el texto, ¿en qué se diferencia el contrato de trabajo de otros "
+        "contratos?",
+        "Las partes no están en igualdad de condiciones",
+        "El texto lo enuncia como el punto de partida de todo el derecho laboral y "
+        "lo explica con una comparación concreta.\nQuien contrata puede esperar; "
+        "quien busca empleo necesita el sueldo este mes. Esa diferencia de urgencia "
+        "es lo que impide tratar el acuerdo como un pacto entre iguales.",
+        [
+            ("Se celebra siempre por escrito ante un tribunal", "El texto exige el escrito, pero no la intervención de un tribunal."),
+            ("Solo puede modificarse con permiso de la autoridad", "El texto no plantea esa exigencia."),
+            ("Su duración está fijada por la ley en todos los casos", "El texto no se refiere a la duración del contrato."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "facil",
+        "Según el texto, ¿qué significa que los derechos laborales sean "
+        "irrenunciables?",
+        "No se pueden ceder ni con acuerdo del trabajador",
+        "El texto lo precisa para el período en que la relación laboral está "
+        "vigente.\nY explica por qué la regla no es paternalista: si fueran "
+        "renunciables, cualquier empleador podría exigir la renuncia como condición "
+        "para contratar, y el derecho existiría solo para quien no lo necesita.",
+        [
+            ("Se pueden ceder si el empleador ofrece una compensación", "El texto excluye la cesión aunque medie acuerdo."),
+            ("Solo rigen para quienes tienen contrato indefinido", "El texto no distingue según el tipo de contrato."),
+            ("Deben renovarse cada vez que cambia el empleador", "El texto no plantea ninguna renovación."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "facil",
+        "Según el texto, ¿qué debe contener el contrato escrito?",
+        "Qué se hará, dónde, en qué jornada y por cuánto",
+        "El texto enumera esos cuatro elementos como lo esencial que el contrato "
+        "debe consignar.\nY entrega la razón de la exigencia: protege sobre todo a "
+        "quien tendría que probar después lo que se acordó, y esa persona no es la "
+        "que guarda los registros de la empresa.",
+        [
+            ("El nombre del sindicato al que pertenece el trabajador", "La afiliación sindical no forma parte de esa enumeración."),
+            ("La fecha en que terminará la relación laboral", "El texto no incluye el término entre los elementos esenciales."),
+            ("La sanción aplicable en caso de incumplimiento", "El texto no menciona ese contenido."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "medio",
+        "Según el texto, ¿por qué los derechos individuales no bastan?",
+        "Quien reclama solo arriesga su puesto",
+        "El texto identifica el límite: los derechos individuales se ejercen de a "
+        "uno, y un trabajador que reclama solo enfrenta a una organización "
+        "entera.\nEl riesgo no es teórico. Quien depende de ese sueldo para el mes "
+        "y sabe que puede perderlo tiene un incentivo fuerte para no reclamar, "
+        "aunque el derecho lo ampare.\nDe ahí que el ordenamiento reconozca además "
+        "derechos colectivos: sindicato, negociación colectiva y huelga.",
+        [
+            ("Porque la ley no reconoce derechos a los trabajadores", "El texto describe un conjunto de derechos reconocidos."),
+            ("Porque los tribunales laborales no admiten reclamos individuales", "El texto no plantea ninguna restricción de ese tipo."),
+            ("Porque los derechos individuales pueden renunciarse", "El texto afirma justamente que son irrenunciables."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "medio",
+        "Según el texto, ¿por qué la huelga es decisiva en la negociación "
+        "colectiva?",
+        "Sin ella una parte puede no responder",
+        "El texto lo formula así: la huelga es el punto donde la negociación deja "
+        "de ser una conversación.\nEl argumento es sobre el poder de negociación. "
+        "Si una de las partes no enfrenta ninguna consecuencia por negarse a "
+        "acordar, puede limitarse a esperar hasta que la otra desista.\nLa "
+        "posibilidad de detener la producción cambia ese cálculo y obliga a "
+        "responder, que es lo que convierte una petición en una negociación.",
+        [
+            ("Permite que el tribunal fije las condiciones de trabajo", "El texto no atribuye esa función a los tribunales."),
+            ("Obliga a la Dirección del Trabajo a intervenir de oficio", "El texto no vincula la huelga con esa intervención."),
+            ("Reemplaza a la negociación colectiva cuando esta fracasa", "El texto la presenta como parte de la negociación, no como su reemplazo."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "medio",
+        "Según el texto, ¿qué distingue a la Dirección del Trabajo de los "
+        "tribunales laborales?",
+        "Fiscaliza y sanciona sin necesidad de un juicio",
+        "El texto asigna a la Dirección del Trabajo tres funciones: fiscalizar, "
+        "interpretar la norma y sancionar por vía administrativa.\nLa diferencia "
+        "decisiva es el acceso: su intervención no requiere que nadie inicie un "
+        "juicio, lo que la vuelve alcanzable para quien no puede sostener un "
+        "proceso judicial.\nLos tribunales laborales resuelven conflictos con un "
+        "procedimiento propio, más rápido que el civil y con reglas de prueba que "
+        "consideran quién dispone de los antecedentes.",
+        [
+            ("Dicta sentencias que pueden apelarse ante la Corte", "Dictar sentencia corresponde a los tribunales."),
+            ("Representa a los trabajadores en los juicios laborales", "El texto no le atribuye función de representación."),
+            ("Negocia colectivamente en nombre de los sindicatos", "La negociación la realizan las partes, no la Dirección del Trabajo."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "medio",
+        "Según el texto, ¿por qué el procedimiento laboral tiene reglas de prueba "
+        "propias?",
+        "Porque una parte guarda los antecedentes",
+        "El texto lo señala al describir a los tribunales laborales: sus reglas de "
+        "prueba consideran quién dispone de los antecedentes.\nEn una relación "
+        "laboral los registros de asistencia, las liquidaciones y los contratos "
+        "están en poder de la empresa. Exigir al trabajador que los aporte sería "
+        "pedirle algo que no tiene.\nLa regla especial corrige entonces la misma "
+        "asimetría que el texto identifica al comienzo, aplicada ahora al momento "
+        "de probar lo ocurrido.",
+        [
+            ("Porque los juicios laborales son más largos que los civiles", "El texto afirma que el procedimiento es más rápido que el civil."),
+            ("Porque los trabajadores no pueden contratar abogados", "El texto no plantea ese impedimento."),
+            ("Porque los tribunales laborales no admiten testigos", "El texto no establece esa restricción."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "medio",
+        "Según el texto, ¿cuál es el origen de derechos como la jornada limitada o "
+        "el descanso semanal?",
+        "Conquistas de organizaciones de trabajadores",
+        "El texto cierra con esa afirmación y agrega la lista: la jornada limitada, "
+        "el descanso semanal, la protección frente al despido y la propia "
+        "existencia del sindicato.\nY descarta expresamente el origen alternativo: "
+        "ninguno apareció por decisión de un legislador aislado.\nDe ahí la "
+        "formulación con que termina: buena parte de la legislación laboral es el "
+        "registro escrito de esos conflictos.",
+        [
+            ("Decisiones técnicas de legisladores especializados", "El texto descarta expresamente ese origen."),
+            ("Recomendaciones de organismos internacionales", "El texto no las menciona."),
+            ("Iniciativas de las propias empresas del sector", "El texto atribuye el origen a organizaciones de trabajadores."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "dificil",
+        "¿Por qué el texto sostiene que la irrenunciabilidad se entiende mejor al "
+        "revés?",
+        "Renunciables serían una condición para contratar",
+        "La objeción habitual es que la regla trata al trabajador como incapaz de "
+        "decidir por sí mismo.\nEl texto responde mostrando qué ocurriría sin ella. "
+        "Si el derecho pudiera cederse, cualquier empleador podría exigir esa "
+        "renuncia como condición para contratar, y quien necesita el sueldo este "
+        "mes la firmaría.\nEl resultado sería que el derecho subsistiría solo para "
+        "quien está en posición de negarse, es decir para quien no lo necesita. La "
+        "regla no protege de una mala decisión propia: protege de una exigencia "
+        "ajena.",
+        [
+            ("Los trabajadores desconocen el contenido de sus derechos", "El argumento no descansa en la ignorancia sino en la asimetría."),
+            ("La ley debe corregir los errores de quienes firman contratos", "El texto no plantea un problema de errores individuales."),
+            ("Los empleadores actúan siempre de mala fe al contratar", "El argumento funciona sin suponer mala fe: describe un incentivo."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "dificil",
+        "¿Qué tienen en común la exigencia de contrato escrito y las reglas de "
+        "prueba del procedimiento laboral?",
+        "Corrigen quién puede probar lo ocurrido",
+        "Las dos operan sobre el mismo problema en momentos distintos. El contrato "
+        "escrito fija de antemano lo acordado, para que después no dependa de la "
+        "memoria ni de los registros de una sola parte.\nLas reglas de prueba "
+        "actúan cuando el conflicto ya está en tribunales y consideran quién "
+        "dispone de los antecedentes.\nEl texto lo dice de ambas de manera casi "
+        "idéntica: quien tendría que probar lo acordado no es quien guarda los "
+        "registros de la empresa. Las dos reglas existen para que esa asimetría no "
+        "decida el resultado.",
+        [
+            ("Reducen el tiempo que dura un juicio laboral", "El texto no atribuye ese efecto al contrato escrito."),
+            ("Permiten al trabajador renunciar a ciertos derechos", "El texto afirma que los derechos mínimos son irrenunciables."),
+            ("Trasladan el conflicto a la Dirección del Trabajo", "Ninguna de las dos reglas cambia el órgano competente."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "dificil",
+        "El texto describe dos instituciones distintas para resguardar los mismos "
+        "derechos. ¿Qué gana el sistema con esa dualidad?",
+        "Una vía sin juicio y otra con decisión obligatoria",
+        "La Dirección del Trabajo interviene sin que nadie inicie un proceso, lo "
+        "que la hace accesible para quien no puede sostener un juicio en tiempo ni "
+        "en dinero. Su alcance es administrativo.\nLos tribunales resuelven con "
+        "fuerza obligatoria y pueden ordenar lo que la vía administrativa no "
+        "alcanza a imponer.\nTener las dos permite graduar la respuesta según el "
+        "conflicto: una infracción verificable en una fiscalización no necesita "
+        "llegar a juicio, y una disputa de fondo sobre lo ocurrido no puede "
+        "resolverse solo con una sanción administrativa.",
+        [
+            ("Permite elegir el órgano que dictará la sentencia", "Solo los tribunales dictan sentencia: la elección no existe."),
+            ("Duplica el control para sancionar dos veces el mismo hecho", "El texto no describe una sanción doble."),
+            ("Traslada al trabajador el costo de elegir la vía correcta", "El texto presenta ambas vías como complementarias, no como una carga."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "dificil",
+        "El texto afirma que la legislación laboral es el registro escrito de "
+        "conflictos pasados. ¿Qué implica esa idea?",
+        "Cada derecho responde a un abuso que existió",
+        "Si las normas nacen de conflictos y no de un diseño abstracto, entonces "
+        "cada una está respondiendo a una situación concreta que alguien enfrentó: "
+        "jornadas sin límite, ausencia de descanso, despidos sin causa.\nEso cambia "
+        "cómo se lee un código laboral. Una regla que parece un detalle "
+        "administrativo suele ser la respuesta a una práctica que se repitió lo "
+        "suficiente como para exigir una norma.\nY tiene una consecuencia hacia "
+        "adelante: cuando aparecen formas de trabajo nuevas, los conflictos que "
+        "generan tienden a preceder a las reglas que después los regulan.",
+        [
+            ("Las normas laborales pierden vigencia con el tiempo", "El texto no plantea que caduquen."),
+            ("Los conflictos laborales deben resolverse sin ley", "El texto describe justamente cómo produjeron leyes."),
+            ("La legislación laboral es idéntica en todos los países", "El texto no compara ordenamientos."),
+        ],
+    ),
+    _ql(
+        "eco_derechos_laborales", "eco_laborales", "dificil",
+        "Un empleador propone a un trabajador pagarle un bono a cambio de no tomar "
+        "su descanso semanal. ¿Qué dice el texto sobre ese acuerdo?",
+        "No es válido aunque el trabajador acepte",
+        "El descanso semanal figura entre los derechos que el texto enumera como "
+        "conquistas incorporadas al ordenamiento, y la irrenunciabilidad alcanza a "
+        "los derechos laborales mínimos mientras la relación esté vigente.\nEl "
+        "consentimiento del trabajador no salva el acuerdo, y esa es exactamente la "
+        "situación que la regla anticipa: si bastara con aceptar, la aceptación "
+        "pasaría a exigirse.\nEl razonamiento vale con independencia de si el bono "
+        "es generoso o de si el trabajador está conforme: lo que la norma impide no "
+        "es un mal negocio sino que el derecho quede disponible para la "
+        "negociación.",
+        [
+            ("Es válido si el bono compensa el descanso perdido", "El monto no habilita la renuncia a un derecho mínimo."),
+            ("Es válido si queda por escrito en el contrato", "Constar por escrito no convierte en renunciable un derecho mínimo."),
+            ("Solo puede autorizarlo la Dirección del Trabajo", "El texto no contempla una autorización de ese tipo."),
+        ],
+    ),
     _ql(
         "eco_proyecto_extractivo", "eco_desarrollo", "facil",
         "Según la Intervención 1, ¿qué compromete el proyecto en materia de empleo?",
