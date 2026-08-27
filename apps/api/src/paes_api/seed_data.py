@@ -54918,6 +54918,246 @@ SKILL_NODES_HISTORIA = [
 
 PASSAGES_HISTORIA = [
     {
+        "key": "civ_info_regulacion",
+        "title": "Dos intervenciones en una comisión sobre plataformas digitales",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen intervenciones reales "
+            "ni citan a persona alguna: reconstruyen los dos argumentos "
+            "centrales del debate sobre regulación de plataformas, para "
+            "ejercitar la comparación de posiciones."
+        ),
+        "body": (
+            "**Intervención 1. Una investigadora en comunicación.**\n"
+            "\n"
+            "Se repite que estas empresas son solo un tablón de anuncios donde "
+            "cada cual cuelga lo que quiere. No lo son. Un tablón muestra todo "
+            "lo colgado y en el orden en que llegó; estas plataformas eligen "
+            "qué ve cada persona, en qué orden y con qué frecuencia. Esa "
+            "elección la hace un sistema diseñado por la empresa y optimizado "
+            "para un objetivo que la empresa fijó. Quien decide qué se ve está "
+            "tomando decisiones editoriales, y a quien toma decisiones "
+            "editoriales se le exige responder por ellas: eso hacen los medios "
+            "desde hace un siglo. No pido que se les obligue a borrar "
+            "opiniones. Pido tres cosas mucho más modestas: que informen con "
+            "qué criterio ordenan los contenidos, que permitan auditar ese "
+            "criterio de forma independiente y que respondan cuando promuevan "
+            "activamente contenido que ya fue declarado falso por un tribunal.\n"
+            "\n"
+            "**Intervención 2. Un abogado especialista en libertades "
+            "públicas.**\n"
+            "\n"
+            "Comparto el diagnóstico y me preocupa el remedio. Toda obligación "
+            "de responder por lo que circula produce el mismo efecto conocido: "
+            "ante la duda, la empresa borra. Le sale más barato eliminar mil "
+            "publicaciones legítimas que arriesgar una sanción por una "
+            "ilegítima, y ese cálculo lo hará un sistema automático, en "
+            "segundos y sin que nadie revise el caso. Quien pierde no es la "
+            "empresa, que se protege: es quien denuncia algo incómodo y ve su "
+            "publicación desaparecer sin explicación ni apelación. Agrego un "
+            "problema de quién decide. Una ley que obliga a retirar contenido "
+            "entrega a la autoridad de turno una herramienta que ninguna "
+            "democracia debería tener a mano, y las autoridades cambian. De las "
+            "tres propuestas, las dos primeras no tengo nada que objetar: "
+            "transparencia y auditoría independiente son exigibles hoy mismo. "
+            "Es la tercera la que abre una puerta que después no se cierra."
+        ),
+    },
+    {
+        "key": "civ_info_cifras",
+        "title": "De dónde sale la información y cuánto se confía en ella",
+        "kind": "discontinuo",
+        "source_note": (
+            "Tablas originales de 1000paes con datos ilustrativos referidos a "
+            "un país ficticio. Las tendencias reproducen patrones que la "
+            "investigación sobre consumo de noticias describe, pero las cifras "
+            "no corresponden a ninguna encuesta real: el ejercicio es de "
+            "lectura e inferencia."
+        ),
+        "body": (
+            "**Tabla 1. Principal vía por la que la población se informa "
+            "(porcentaje de cada grupo de edad).**\n"
+            "\n"
+            "| Vía | 18 a 29 años | 30 a 49 años | 50 a 64 años | 65 y más |\n"
+            "|---|---|---|---|---|\n"
+            "| Redes sociales | 62 | 44 | 21 | 9 |\n"
+            "| Televisión | 14 | 27 | 47 | 63 |\n"
+            "| Sitios de medios | 15 | 20 | 18 | 11 |\n"
+            "| Radio | 5 | 6 | 10 | 13 |\n"
+            "| Diarios impresos | 4 | 3 | 4 | 4 |\n"
+            "\n"
+            "**Tabla 2. Confianza declarada y conducta al compartir.**\n"
+            "\n"
+            "| Grupo de edad | Confía en las noticias que recibe | Ha "
+            "compartido algo que luego supo falso | Verifica antes de compartir "
+            "|\n"
+            "|---|---|---|---|\n"
+            "| 18 a 29 | 31% | 48% | 39% |\n"
+            "| 30 a 49 | 38% | 41% | 33% |\n"
+            "| 50 a 64 | 44% | 34% | 24% |\n"
+            "| 65 y más | 51% | 29% | 17% |\n"
+            "\n"
+            "Notas:\n"
+            "— Las columnas de la Tabla 1 suman 100 en cada grupo de edad.\n"
+            "— La segunda y la tercera columna de la Tabla 2 son declaraciones "
+            "de las personas encuestadas, no conductas observadas.\n"
+            "— Quien no recuerda haber compartido algo falso puede no haberlo "
+            "hecho o no haberse enterado."
+        ),
+    },
+    {
+        "key": "civ_info_desinformacion",
+        "title": "Cómo se propaga una noticia falsa",
+        "kind": "no_literario",
+        "source_note": (
+            "Texto expositivo original de 1000paes, redactado a partir del "
+            "temario de Formación ciudadana para ejercitar lectura de fuentes."
+        ),
+        "body": (
+            "La desinformación no es nueva: los rumores y los panfletos falsos "
+            "son tan antiguos como la política. Lo que cambió es la velocidad, "
+            "el costo y el alcance. Hoy publicar no cuesta nada, cualquiera "
+            "puede hacerlo y un contenido puede llegar a millones de personas "
+            "en horas sin pasar por ningún filtro previo.\n"
+            "\n"
+            "Conviene distinguir tres cosas que suelen confundirse. Un error es "
+            "una afirmación falsa publicada sin intención de engañar, y se "
+            "corrige. La desinformación es contenido falso difundido a "
+            "sabiendas, con un propósito. Y la información engañosa usa datos "
+            "verdaderos ordenados de modo que produzcan una conclusión falsa: "
+            "una cifra real fuera de contexto, un gráfico con la escala "
+            "manipulada, una cita a la que se le quitó la frase que la "
+            "matizaba. Esta última es la más difícil de refutar, porque cada "
+            "pieza resiste la verificación por separado.\n"
+            "\n"
+            "Hay dos razones por las que lo falso circula mejor que su "
+            "desmentido. La primera es de contenido: una noticia falsa se "
+            "diseña para provocar indignación o sorpresa, y esas reacciones "
+            "empujan a compartir antes de leer. La segunda es estructural: las "
+            "plataformas ordenan lo que cada persona ve según lo que "
+            "probablemente la mantendrá conectada, de modo que el contenido que "
+            "genera más reacción obtiene más circulación, sin que nadie haya "
+            "decidido favorecerlo por su contenido.\n"
+            "\n"
+            "Ese mismo criterio produce otro efecto. Si a cada persona se le "
+            "muestra sobre todo aquello con lo que ya interactúa, el entorno "
+            "informativo de cada una se vuelve más homogéneo y las posiciones "
+            "contrarias aparecen menos, o aparecen solo en su versión más "
+            "extrema. El resultado no es solo que la gente se informe distinto: "
+            "es que empieza a discrepar sobre qué hechos ocurrieron, y sin "
+            "hechos compartidos no hay discusión posible.\n"
+            "\n"
+            "Frente a esto se suele proponer verificar. Es necesario y es "
+            "insuficiente. Verificar llega siempre después, alcanza a menos "
+            "gente que el contenido original y no borra lo que ya se leyó. Por "
+            "eso las medidas que más importan son previas: saber quién publica "
+            "algo y con qué financiamiento, desconfiar de lo que confirma "
+            "demasiado bien lo que uno ya pensaba, y sostener medios "
+            "profesionales que respondan por lo que publican. Ninguna de las "
+            "tres es infalible. Las tres son mejores que reaccionar después."
+        ),
+    },
+    {
+        "key": "civ_inst_quorums",
+        "title": "Dos columnas sobre las mayorías especiales",
+        "kind": "no_literario",
+        "source_note": (
+            "Textos originales de 1000paes. No reproducen columnas publicadas "
+            "ni citan a persona alguna: reconstruyen los dos argumentos "
+            "centrales del debate sobre los quórums supramayoritarios, para "
+            "ejercitar la comparación de posiciones."
+        ),
+        "body": (
+            "**Columna 1. A favor de mantener las mayorías especiales.**\n"
+            "\n"
+            "Una regla que puede cambiarse con la misma facilidad con que se "
+            "aprueba cualquier ley no es una regla: es una preferencia del que "
+            "gobierna hoy. Las materias que exigen mayorías especiales no son "
+            "cualesquiera. Son las que definen cómo se compite por el poder, "
+            "cómo se controla a quien lo ejerce y qué derechos quedan fuera del "
+            "alcance de una votación. Pedir para ellas un acuerdo más amplio "
+            "que el de una coalición de gobierno no es desconfiar de la "
+            "democracia: es reconocer que quien gana una elección la ganó bajo "
+            "ciertas reglas y no adquirió con ella el derecho a reescribirlas "
+            "antes de la siguiente. Se dirá que esto obliga a negociar con "
+            "quien perdió. Exactamente. Ese es el punto, y es también lo que "
+            "distingue una mayoría de una hegemonía.\n"
+            "\n"
+            "**Columna 2. En contra de mantenerlas en su nivel actual.**\n"
+            "\n"
+            "El argumento anterior describe bien lo que las mayorías especiales "
+            "protegen y calla lo que cuestan. Un quórum alto no es neutro: "
+            "congela el texto vigente, cualquiera sea. Si lo que está escrito "
+            "favorece a un sector, ese sector obtiene una ventaja permanente, "
+            "porque le basta con reunir el porcentaje necesario para bloquear y "
+            "no necesita convencer a nadie de nada. Quien quiere cambiar debe "
+            "persuadir a una supermayoría; quien quiere que nada cambie no debe "
+            "persuadir a nadie. Llamar acuerdo a esa asimetría es generoso. "
+            "Agréguese que llevamos décadas escuchando que estas reglas obligan "
+            "a negociar, y lo que se observa con más frecuencia no es "
+            "negociación sino parálisis: proyectos que reúnen mayorías amplias "
+            "y sostenidas en el tiempo y aun así no llegan a ser ley. Una regla "
+            "pensada para proteger a las minorías terminó entregando a una de "
+            "ellas la llave de todas las puertas."
+        ),
+    },
+    {
+        "key": "civ_inst_tramitacion",
+        "title": "El camino de un proyecto de ley en Chile",
+        "kind": "discontinuo",
+        "source_note": (
+            "Esquema y tablas originales de 1000paes, elaborados a partir del "
+            "temario de Formación ciudadana. Recogen reglas estables del "
+            "procedimiento legislativo chileno; no reproducen el texto de "
+            "ninguna norma."
+        ),
+        "body": (
+            "**Tabla 1. Etapas de la tramitación.**\n"
+            "\n"
+            "| Etapa | Qué ocurre | Quién actúa |\n"
+            "|---|---|---|\n"
+            "| Iniciativa | El proyecto entra al Congreso | El Presidente por "
+            "mensaje, o parlamentarios por moción |\n"
+            "| Primer trámite | Se discute y vota en la cámara de origen | "
+            "Comisión y sala de esa cámara |\n"
+            "| Segundo trámite | Se discute y vota en la otra cámara | Comisión "
+            "y sala de la cámara revisora |\n"
+            "| Tercer trámite | La cámara de origen revisa los cambios | Sala "
+            "de la cámara de origen |\n"
+            "| Comisión mixta | Se busca acuerdo si las cámaras difieren | "
+            "Diputados y senadores en igual número |\n"
+            "| Veto | El Presidente observa el texto aprobado | Presidente de "
+            "la República |\n"
+            "| Promulgación y publicación | El texto se convierte en ley "
+            "vigente | Presidente y Diario Oficial |\n"
+            "\n"
+            "**Tabla 2. Quórums de aprobación.**\n"
+            "\n"
+            "| Tipo de ley | Quórum exigido |\n"
+            "|---|---|\n"
+            "| Ley común | Mayoría de los parlamentarios presentes en la sala |\n"
+            "| Ley de quórum calificado | Mayoría absoluta de diputados y "
+            "senadores en ejercicio |\n"
+            "| Ley orgánica constitucional | Cuatro séptimos de diputados y "
+            "senadores en ejercicio |\n"
+            "| Reforma constitucional | Un quórum superior al de la ley común, "
+            "fijado en la propia Constitución |\n"
+            "\n"
+            "Notas:\n"
+            "— En ejercicio son todos los parlamentarios en funciones, hayan "
+            "asistido o no a la sesión. Presentes son solo los que están en la "
+            "sala al votar.\n"
+            "— Algunas materias son de iniciativa exclusiva del Presidente: "
+            "entre ellas, las que crean o suprimen tributos y las que fijan "
+            "gastos del Estado. En esas materias los parlamentarios no pueden "
+            "presentar mociones ni aumentar el gasto propuesto.\n"
+            "— Un proyecto puede iniciarse en cualquiera de las dos cámaras, "
+            "salvo casos que la Constitución reserva a una de ellas.\n"
+            "— El quórum de la reforma constitucional ha sido modificado más de "
+            "una vez, por lo que conviene consultar el texto vigente."
+        ),
+    },
+    {
         "key": "civ_inst_autonomos",
         "title": "Los órganos que no dependen de nadie y por qué existen",
         "kind": "no_literario",
@@ -57440,6 +57680,1285 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "facil",
+        "Según la Intervención 1, ¿por qué una plataforma no es un tablón de "
+        "anuncios?",
+        "Porque elige qué ve cada persona y en qué orden",
+        "La intervención contrapone ambas cosas de manera directa: un tablón "
+        "muestra todo lo colgado y en el orden en que llegó.\nLas plataformas, en "
+        "cambio, eligen qué ve cada persona, en qué orden y con qué frecuencia, "
+        "mediante un sistema diseñado por la empresa y optimizado para un objetivo "
+        "que ella fijó.",
+        [
+            ("Porque solo publican contenido de medios profesionales", "La intervención no plantea ninguna restricción sobre quién publica."),
+            ("Porque cobran por difundir cada publicación", "El cobro no aparece en el argumento."),
+            ("Porque revisan cada contenido antes de publicarlo", "La intervención no afirma que exista revisión previa."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "facil",
+        "Según la Intervención 1, ¿cuáles son las tres cosas que pide?",
+        "Informar el criterio, auditarlo y responder por fallos judiciales",
+        "La intervención las enumera al cerrar: que informen con qué criterio "
+        "ordenan los contenidos, que permitan auditar ese criterio de forma "
+        "independiente y que respondan cuando promuevan activamente contenido ya "
+        "declarado falso por un tribunal.\nY aclara antes qué no pide: que se "
+        "obligue a las plataformas a borrar opiniones.",
+        [
+            ("Eliminar el contenido falso y sancionar a quien lo publique", "La intervención descarta expresamente pedir que se borren contenidos."),
+            ("Prohibir que las plataformas ordenen lo que muestran", "Su propuesta es transparentar y auditar ese orden, no prohibirlo."),
+            ("Someter cada publicación a revisión previa de un tribunal", "No plantea ningún control previo."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "facil",
+        "Según la Intervención 2, ¿qué hará una empresa ante la duda si se le "
+        "obliga a responder?",
+        "Borrar el contenido",
+        "La intervención lo formula así y explica el cálculo que hay detrás: a la "
+        "empresa le sale más barato eliminar mil publicaciones legítimas que "
+        "arriesgar una sanción por una ilegítima.\nY agrega cómo se ejecutará esa "
+        "decisión: mediante un sistema automático, en segundos y sin que nadie "
+        "revise el caso.",
+        [
+            ("Consultar a un tribunal antes de decidir", "La intervención describe una decisión automática, sin revisión."),
+            ("Publicar el contenido con una advertencia", "El texto no contempla esa alternativa."),
+            ("Solicitar al autor que rectifique lo publicado", "No aparece ninguna gestión con el autor en el argumento."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "Según la Intervención 1, ¿por qué ordenar contenidos equivale a una "
+        "decisión editorial?",
+        "Porque alguien decide qué se ve y qué no",
+        "El argumento se apoya en una equivalencia funcional. Un medio decide qué "
+        "publica, con qué destaque y en qué lugar de la edición, y por esa decisión "
+        "responde.\nUna plataforma que elige qué ve cada persona, en qué orden y "
+        "con qué frecuencia está tomando el mismo tipo de decisión, aunque no "
+        "escriba el contenido.\nDe ahí la conclusión que la intervención extrae: a "
+        "quien toma decisiones editoriales se le exige responder por ellas, y eso "
+        "es lo que los medios hacen desde hace un siglo.",
+        [
+            ("Porque las plataformas redactan parte del contenido que muestran", "La intervención no afirma que produzcan contenido propio."),
+            ("Porque los medios profesionales las financian", "El financiamiento no forma parte del argumento."),
+            ("Porque publican antes que los medios tradicionales", "La rapidez no es lo que la intervención discute aquí."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "Según la Intervención 2, ¿quién resulta perjudicado por el exceso de "
+        "eliminación?",
+        "Quien publica algo incómodo y lo ve desaparecer",
+        "La intervención distingue con cuidado a quién alcanza el costo. La empresa "
+        "no pierde: borrar es justamente su forma de protegerse.\nEl perjuicio "
+        "recae sobre quien denuncia algo incómodo y ve su publicación desaparecer "
+        "sin explicación ni apelación.\nEl detalle de la apelación es central en el "
+        "argumento: un sistema automático que decide en segundos no ofrece ninguna "
+        "instancia donde discutir la decisión.",
+        [
+            ("La empresa, que enfrenta sanciones económicas frecuentes", "La intervención señala que la empresa se protege borrando."),
+            ("El tribunal, que debe revisar cada caso eliminado", "El texto describe eliminaciones sin revisión de nadie."),
+            ("El autor del contenido falso, que pierde su cuenta", "El perjudicado que identifica publica contenido legítimo."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "¿Qué segundo problema agrega la Intervención 2, además del exceso de "
+        "eliminación?",
+        "Que la herramienta queda en manos de la autoridad de turno",
+        "La intervención lo plantea como un problema de quién decide, distinto del "
+        "problema de cuánto se borra.\nUna ley que obliga a retirar contenido "
+        "entrega a la autoridad una herramienta que, según sostiene, ninguna "
+        "democracia debería tener a mano.\nY añade el argumento decisivo, que no "
+        "depende de qué opine uno del gobierno actual: las autoridades cambian. Una "
+        "facultad creada para un uso puede emplearse después para otro.",
+        [
+            ("Que las plataformas dejarían de ordenar sus contenidos", "Nadie propone que dejen de ordenarlos."),
+            ("Que los tribunales tardarían demasiado en resolver", "La demora judicial no aparece en el argumento."),
+            ("Que los medios profesionales perderían audiencia", "El texto no discute la audiencia de los medios."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "¿En qué coinciden las dos intervenciones?",
+        "En el diagnóstico y en dos de las tres propuestas",
+        "La Intervención 2 abre diciendo que comparte el diagnóstico y le preocupa "
+        "el remedio, de modo que la descripción del problema no está en disputa.\nY "
+        "al cerrar precisa su acuerdo: de las tres propuestas, las dos primeras no "
+        "tiene nada que objetar, porque transparencia y auditoría independiente son "
+        "exigibles hoy mismo.\nEl desacuerdo se reduce entonces a la tercera "
+        "propuesta, que es la única que supone responsabilidad por el contenido que "
+        "circula.",
+        [
+            ("En que ninguna medida es aplicable en el corto plazo", "La Intervención 2 considera exigibles hoy mismo las dos primeras."),
+            ("En que las plataformas deben responder por todo el contenido", "Es justamente el punto que la Intervención 2 objeta."),
+            ("En que el problema descrito no tiene solución posible", "Ambas discuten remedios concretos."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "medio",
+        "¿Qué distingue la tercera propuesta de la Intervención 1 de una obligación "
+        "general de borrar?",
+        "Exige un fallo previo y promoción activa",
+        "La propuesta está acotada por dos condiciones que operan juntas. La "
+        "primera es que el contenido haya sido declarado falso por un tribunal, no "
+        "por la propia empresa ni por la autoridad administrativa.\nLa segunda es "
+        "que la plataforma lo haya promovido activamente, es decir empujado en el "
+        "orden que muestra, y no solo alojado.\nLa Intervención 2 objeta igualmente "
+        "esa formulación, pero conviene registrar que es más estrecha que una "
+        "obligación general de retirar contenido a requerimiento.",
+        [
+            ("Se aplica a cualquier contenido que alguien denuncie", "Exige una declaración judicial previa, no una denuncia."),
+            ("Obliga a revisar todas las publicaciones antes de mostrarlas", "No contempla ningún control previo a la publicación."),
+            ("Permite a la autoridad ordenar retiros sin fallo judicial", "La condición que fija es precisamente la existencia de un fallo."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "La Intervención 2 dice que las autoridades cambian. ¿Qué tipo de argumento "
+        "es ese?",
+        "Evalúa la facultad por su peor uso posible",
+        "El argumento no depende de qué opine su autor sobre el gobierno actual, y "
+        "por eso resulta difícil de responder invocando buenas "
+        "intenciones.\nSostiene que una facultad creada por ley sobrevive a quien "
+        "la crea y quedará disponible para todos los gobiernos siguientes, incluido "
+        "aquel que la use con un propósito distinto del previsto.\nDe ahí que el "
+        "diseño institucional deba evaluarse suponiendo el peor ocupante posible "
+        "del cargo, y no el mejor. Es el mismo razonamiento que justifica los "
+        "límites al poder en cualquier régimen democrático.",
+        [
+            ("Supone que el gobierno actual actúa de mala fe", "El argumento es independiente de quién gobierne hoy: por eso menciona el cambio."),
+            ("Sostiene que ninguna ley debería aprobarse nunca", "Objeta esta facultad en concreto, no la legislación en general."),
+            ("Afirma que los tribunales no son independientes", "No cuestiona la independencia judicial en ningún punto."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "¿Qué costo debe asumir quien sostiene la posición de la Intervención 2?",
+        "Que nadie responda por lo que la plataforma promueve",
+        "La intervención acepta transparencia y auditoría, que permiten saber con "
+        "qué criterio se ordenan los contenidos.\nPero al rechazar la tercera "
+        "propuesta deja sin consecuencia el caso que la Intervención 1 describe: "
+        "una plataforma que empuja activamente un contenido ya declarado falso por "
+        "un tribunal.\nSaber cómo funciona el criterio y que nadie responda cuando "
+        "produce ese resultado son dos cosas distintas. Es el precio que su "
+        "posición paga a cambio de no crear la facultad que teme.",
+        [
+            ("Que las plataformas dejen de ordenar los contenidos", "Su posición no exige que dejen de ordenarlos."),
+            ("Que la autoridad pueda retirar contenido sin fallo", "Es justamente lo que su argumento busca impedir."),
+            ("Que los tribunales pierdan competencia sobre estas materias", "Nada en su posición limita la competencia judicial."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "¿Qué costo debe asumir quien sostiene la posición de la Intervención 1?",
+        "El riesgo de que se borre contenido legítimo",
+        "La Intervención 2 lo describe con precisión y su argumento no depende de "
+        "la mala fe de nadie: es un cálculo económico.\nSi una publicación "
+        "ilegítima puede costar una sanción y mil legítimas no cuestan nada, la "
+        "empresa eliminará de más, y lo hará mediante un sistema automático que "
+        "decide en segundos sin revisión ni apelación.\nQuien defiende la tercera "
+        "propuesta debe hacerse cargo de ese efecto, sea mostrando que la exigencia "
+        "de fallo judicial previo lo acota, sea diseñando una vía de reclamo para "
+        "quien vea desaparecer su publicación.",
+        [
+            ("Que las plataformas dejen de informar sus criterios", "La transparencia es su primera propuesta, no un costo de ella."),
+            ("Que los tribunales queden sin facultades para intervenir", "Su propuesta descansa justamente en un fallo judicial previo."),
+            ("Que se prohíba a los medios profesionales publicar en línea", "Nada en su posición afecta a los medios profesionales."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "¿Por qué la Intervención 2 subraya que la eliminación la hará un sistema "
+        "automático?",
+        "Porque nadie examina el caso concreto",
+        "El detalle traslada el problema desde la norma hacia su aplicación real. "
+        "Una ley puede estar bien redactada y aun así producir un mal resultado si "
+        "quien la ejecuta no puede distinguir los casos.\nA la escala de estas "
+        "plataformas la revisión humana de cada publicación es impracticable, de "
+        "modo que la decisión quedará en manos de un sistema que resuelve en "
+        "segundos aplicando un criterio general.\nEse sistema no evalúa el "
+        "contexto, la ironía ni el valor público de una denuncia. Por eso la "
+        "intervención insiste en que quien pierde es quien publicó algo incómodo y "
+        "no recibe explicación ni apelación.",
+        [
+            ("Porque los sistemas automáticos son ilegales en democracia", "La intervención no cuestiona su legalidad sino su efecto."),
+            ("Porque las empresas no tienen personal para moderar", "El argumento es sobre la escala del problema, no sobre la dotación de una empresa."),
+            ("Porque los tribunales exigen que la revisión sea automática", "Nada en el texto atribuye esa exigencia a los tribunales."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "Ambas intervenciones aceptan la auditoría independiente del criterio de "
+        "ordenamiento. ¿Qué explica ese acuerdo?",
+        "Permite conocer el problema sin crear una facultad de retiro",
+        "La auditoría opera sobre información y no sobre contenidos. Muestra con "
+        "qué criterio se ordena lo que cada persona ve, que es lo que la "
+        "Intervención 1 identifica como decisión editorial.\nAl mismo tiempo no "
+        "obliga a nadie a borrar nada, de modo que no activa el cálculo de "
+        "eliminación excesiva ni entrega a la autoridad la herramienta que la "
+        "Intervención 2 teme.\nPor eso es la medida donde las dos posiciones "
+        "convergen: satisface la exigencia de responsabilidad sin pagar el costo "
+        "que la otra parte considera inaceptable.",
+        [
+            ("Porque obliga a las plataformas a retirar contenido falso", "La auditoría no impone ninguna obligación de retiro."),
+            ("Porque reemplaza la intervención de los tribunales", "No sustituye ninguna función judicial."),
+            ("Porque impide que las plataformas ordenen sus contenidos", "Examina ese ordenamiento; no lo prohíbe."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_informacion", "dificil",
+        "¿Qué operación argumentativa realiza la Intervención 2 al abrir "
+        "compartiendo el diagnóstico?",
+        "Acota la discusión al remedio y no al problema",
+        "Al conceder el diagnóstico, la intervención renuncia a discutir si el "
+        "problema existe y deja toda la disputa en el terreno de qué hacer.\nEso le "
+        "conviene: defender que las plataformas no ordenan contenidos sería "
+        "insostenible, y en cambio el argumento sobre los efectos de la regulación "
+        "es sólido.\nY le da además autoridad para el cierre, donde acepta dos de "
+        "las tres propuestas. Quien concede lo que puede conceder vuelve más "
+        "creíble aquello en lo que no cede.",
+        [
+            ("Niega que las plataformas ordenen lo que muestran", "Comparte el diagnóstico, que incluye ese ordenamiento."),
+            ("Evita pronunciarse sobre las propuestas concretas", "Se pronuncia sobre las tres, aceptando dos."),
+            ("Traslada la responsabilidad a los medios profesionales", "Los medios profesionales no aparecen en su argumento."),
+        ],
+    ),
+    _ql(
+        "civ_info_regulacion", "civ_democracia", "dificil",
+        "¿Qué tensión democrática atraviesa este debate?",
+        "Entre proteger la discusión pública y proteger a quien publica",
+        "Las dos intervenciones defienden algo que una democracia necesita, y por "
+        "eso el desacuerdo no se resuelve mostrando que una está equivocada.\nLa "
+        "primera protege la calidad del debate: un espacio donde el contenido falso "
+        "circula con ventaja termina impidiendo la deliberación. La segunda protege "
+        "la libertad de quien publica: un espacio donde cualquiera puede ver su "
+        "publicación eliminada sin explicación desalienta la denuncia.\nToda "
+        "solución concreta paga algo de una para obtener algo de la otra, y por eso "
+        "el debate se juega en el diseño de los detalles y no en la elección entre "
+        "dos principios.",
+        [
+            ("Entre la libertad de expresión y el derecho de propiedad", "La propiedad de las plataformas no está en discusión en ninguna de las dos intervenciones."),
+            ("Entre los medios profesionales y las plataformas digitales", "El debate no enfrenta a esos dos actores."),
+            ("Entre la ley nacional y los tratados internacionales", "Ninguna de las dos intervenciones plantea un conflicto de normas."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "facil",
+        "Según la Tabla 1, ¿cuál es la principal vía de información entre los 18 y "
+        "los 29 años?",
+        "Las redes sociales, con 62%",
+        "La primera columna de la Tabla 1 reparte a ese grupo en 62% de redes "
+        "sociales, 14% de televisión, 15% de sitios de medios, 5% de radio y 4% de "
+        "diarios impresos.\nLas redes concentran así casi dos tercios del grupo, "
+        "más que las otras cuatro vías juntas.",
+        [
+            ("La televisión, que reúne al 63% de ese grupo", "El 63% de televisión corresponde al grupo de 65 años y más."),
+            ("Los sitios de medios, con 15%", "Es la segunda vía de ese grupo, muy por debajo de las redes."),
+            ("La radio, con 5% de las preferencias", "Es la segunda vía menos usada en ese grupo."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "facil",
+        "Según la Tabla 2, ¿qué grupo declara la mayor confianza en las noticias "
+        "que recibe?",
+        "El de 65 años y más, con 51%",
+        "La segunda columna de la Tabla 2 entrega 31%, 38%, 44% y 51% a medida que "
+        "sube la edad.\nLa confianza declarada crece de manera sostenida con los "
+        "años, y el valor más alto corresponde al grupo de mayor edad, que es "
+        "también el que más se informa por televisión.",
+        [
+            ("El de 18 a 29 años, con 31%", "Es el valor más bajo de la columna."),
+            ("El de 30 a 49 años, con 38%", "Es el segundo más bajo de los cuatro."),
+            ("El de 50 a 64 años, con 44%", "Está por debajo del grupo de mayor edad."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "facil",
+        "Según la Tabla 1, ¿qué vía se mantiene casi igual en los cuatro grupos de "
+        "edad?",
+        "Los diarios impresos",
+        "La fila de diarios impresos registra 4%, 3%, 4% y 4%, con una variación de "
+        "un solo punto entre el mayor y el menor.\nTodas las demás filas se mueven "
+        "mucho más: las redes sociales van de 62% a 9% y la televisión, de 14% a "
+        "63%.",
+        [
+            ("La televisión, que se mantiene estable en toda la tabla", "Va de 14% a 63% según el grupo de edad."),
+            ("Las redes sociales, con valores parecidos en cada grupo", "Caen de 62% a 9% al aumentar la edad."),
+            ("La radio, que no varía entre los grupos", "Va de 5% a 13%, casi triplicándose."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "¿Qué relación aparece entre la Tabla 1 y la Tabla 2 respecto de la edad?",
+        "A menor edad, más redes sociales y menos confianza",
+        "Las dos series se mueven de manera inversa. El uso de redes sociales cae "
+        "de 62% a 9% al subir la edad, mientras la confianza declarada sube de 31% "
+        "a 51%.\nLa coincidencia es clara, pero la fuente no permite establecer qué "
+        "causa qué. Puede que informarse por redes reduzca la confianza, que "
+        "quienes desconfían prefieran esa vía, o que ambas cosas dependan de un "
+        "tercer factor asociado a la edad.\nLo que sí queda establecido es que los "
+        "dos rasgos aparecen juntos en los cuatro grupos, sin excepción.",
+        [
+            ("A menor edad, más televisión y más confianza", "El uso de televisión sube con la edad, no baja."),
+            ("La confianza es igual en todos los grupos de edad", "Va de 31% a 51% entre el grupo más joven y el mayor."),
+            ("Quienes usan redes sociales confían más en lo que reciben", "Los grupos con más uso de redes declaran menos confianza."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "El grupo de 18 a 29 declara la menor confianza y a la vez el mayor "
+        "porcentaje de haber compartido algo falso. ¿Cómo pueden darse ambas cosas?",
+        "Desconfiar en general no impide errar en un caso",
+        "La confianza declarada es una actitud sobre el conjunto de las noticias "
+        "que se reciben; compartir algo falso es un hecho puntual.\nUna persona "
+        "puede desconfiar del entorno informativo y aun así compartir un contenido "
+        "concreto que le pareció verosímil, sobre todo si circula mucho o si "
+        "confirma lo que ya pensaba.\nHay además un factor de exposición: quien más "
+        "contenido recibe y comparte tiene más ocasiones de equivocarse, y el grupo "
+        "más joven es el que más se informa por la vía de mayor circulación.",
+        [
+            ("Una de las dos columnas de la tabla está equivocada", "Las dos cosas pueden ocurrir a la vez sin contradicción."),
+            ("Ese grupo confía más de lo que declara en la encuesta", "La tabla no permite afirmar nada sobre la sinceridad de las respuestas."),
+            ("Compartir algo falso aumenta la confianza en las noticias", "La tabla muestra la relación inversa entre ambas columnas."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "Según la Tabla 2, ¿qué ocurre con la verificación previa al compartir a "
+        "medida que sube la edad?",
+        "Baja de 39% a 17%",
+        "La última columna registra 39%, 33%, 24% y 17% en orden creciente de "
+        "edad.\nEl grupo más joven verifica más del doble que el mayor, y esa "
+        "diferencia convive con lo que muestra la segunda columna: es también el "
+        "grupo que más declara haber compartido algo falso.\nLas dos cosas juntas "
+        "sugieren que la verificación no elimina el error, aunque la fuente no "
+        "permite medir cuánto lo reduce.",
+        [
+            ("Sube de manera sostenida hasta llegar al 51%", "El 51% corresponde a la confianza declarada, no a la verificación."),
+            ("Se mantiene estable en torno a un tercio en los cuatro grupos", "Va de 39% a 17%: la variación es amplia."),
+            ("Baja hasta los 50 años y después vuelve a subir", "La caída es sostenida en los cuatro grupos."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "Según la segunda nota, ¿qué precaución exigen las dos últimas columnas de "
+        "la Tabla 2?",
+        "Son declaraciones y no conductas observadas",
+        "La nota lo advierte de manera explícita, y la distinción cambia lo que la "
+        "tabla permite afirmar.\nUna conducta observada registra lo que la persona "
+        "hizo; una declaración registra lo que dice que hizo, y ambas pueden "
+        "diferir por olvido, por desconocimiento o por el deseo de dar una buena "
+        "impresión.\nEn este caso la diferencia tiende a ir en una dirección "
+        "conocida: verificar es una conducta bien valorada, de modo que el "
+        "porcentaje declarado probablemente supera al real.",
+        [
+            ("Fueron medidas en años distintos entre sí", "La nota no menciona ninguna diferencia de fecha."),
+            ("Corresponden solo al grupo de menor edad", "Las columnas entregan datos para los cuatro grupos."),
+            ("Suman más de 100 y por eso no son comparables", "No son porcentajes de una misma repartición: no tienen por qué sumar 100."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "medio",
+        "Un estudiante concluye de la Tabla 1 que la televisión perdió audiencia en "
+        "los últimos años. ¿Permite la fuente afirmarlo?",
+        "No: la tabla compara edades, no años",
+        "La Tabla 1 muestra cómo se informa cada grupo de edad en un mismo momento. "
+        "No entrega ninguna serie temporal.\nQue los jóvenes usen menos televisión "
+        "que los mayores admite al menos dos lecturas distintas: que cada "
+        "generación conserve el hábito con el que creció, o que las personas "
+        "cambien de vía a medida que envejecen.\nPara distinguir entre ambas haría "
+        "falta seguir a los mismos grupos a lo largo del tiempo, que es "
+        "precisamente lo que esta tabla no permite.",
+        [
+            ("Sí, porque los jóvenes la usan mucho menos", "Esa diferencia es entre grupos de edad, no entre momentos distintos."),
+            ("Sí, porque las redes sociales encabezan la tabla", "Encabezan solo en los dos grupos más jóvenes."),
+            ("No, porque la tabla no incluye a la televisión", "La televisión tiene fila propia en los cuatro grupos."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "dificil",
+        "¿Qué problema para la deliberación pública sugiere la Tabla 1?",
+        "Cada generación se informa por una vía distinta",
+        "La tabla muestra dos mundos informativos casi sin superposición: 62% de "
+        "los más jóvenes se informa por redes sociales y 63% de los mayores, por "
+        "televisión.\nComo cada vía selecciona y ordena los contenidos con "
+        "criterios propios, dos personas de distinta edad pueden estar expuestas a "
+        "agendas diferentes sobre los mismos hechos.\nEl riesgo no es que "
+        "discrepen, que es lo esperable en democracia, sino que lleguen a la "
+        "discusión sin un piso común de hechos, y que atribuyan la diferencia a "
+        "mala fe del otro en vez de a una exposición distinta.",
+        [
+            ("Que la mayoría de la población no se informa por ninguna vía", "Las columnas suman 100 en cada grupo: todos declaran una vía principal."),
+            ("Que los diarios impresos concentran a la mayoría de los lectores", "Reúnen entre 3% y 4% en los cuatro grupos."),
+            ("Que la radio desplazó a la televisión entre los mayores", "La radio llega a 13% y la televisión, a 63% en ese grupo."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "dificil",
+        "El grupo que más verifica es también el que más comparte contenido falso. "
+        "¿Qué NO se puede concluir de ahí?",
+        "Que verificar aumenta el riesgo de compartir algo falso",
+        "La coincidencia es real: 39% de verificación y 48% de contenido falso "
+        "compartido en el grupo más joven.\nPero atribuirle causa invierte una "
+        "relación mucho más plausible. Ese mismo grupo es el que más se informa por "
+        "redes sociales, la vía de mayor circulación, y por lo tanto el que más "
+        "contenido recibe y comparte: tiene más ocasiones de equivocarse.\nLa tabla "
+        "tampoco permite saber cuántos de los que verificaron compartieron algo "
+        "falso, porque las dos columnas describen al grupo y no a las mismas "
+        "personas.",
+        [
+            ("Que el grupo más joven usa más las redes sociales", "La Tabla 1 lo establece directamente: 62%."),
+            ("Que la verificación declarada baja con la edad", "La última columna lo muestra: de 39% a 17%."),
+            ("Que ese grupo declara la menor confianza en las noticias", "La Tabla 2 registra 31% para ese grupo."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "dificil",
+        "Según la tercera nota, ¿por qué el porcentaje de quienes compartieron algo "
+        "falso puede estar subestimado?",
+        "Quien no se enteró responde que no lo hizo",
+        "La nota lo señala con precisión: quien no recuerda haber compartido algo "
+        "falso puede no haberlo hecho o no haberse enterado.\nLa pregunta exige dos "
+        "condiciones para responder que sí: haber compartido un contenido falso y "
+        "haberlo sabido después. Quien cumple la primera y no la segunda queda "
+        "contado como si no hubiera ocurrido.\nPor eso la cifra funciona como un "
+        "piso. Y hay un sesgo adicional en la misma dirección: quien se informa en "
+        "un entorno donde nadie desmiente tiene menos probabilidad de enterarse.",
+        [
+            ("Porque las personas mienten sistemáticamente en las encuestas", "La nota atribuye la subestimación al desconocimiento, no a la mentira."),
+            ("Porque la pregunta se hizo solo al grupo más joven", "La columna entrega datos para los cuatro grupos de edad."),
+            ("Porque el contenido falso se elimina antes de la encuesta", "La nota no menciona ninguna eliminación de contenidos."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "dificil",
+        "¿Qué NO permiten concluir estas tablas sobre la calidad de la información "
+        "que recibe cada grupo?",
+        "Si lo que recibieron era verdadero o falso",
+        "Las tablas miden por dónde llega la información, cuánta confianza declara "
+        "cada grupo y qué dice hacer al compartir.\nNinguna columna evalúa el "
+        "contenido mismo. Una vía muy usada puede entregar información exacta y una "
+        "poco usada puede entregar información deficiente: la tabla no distingue "
+        "entre medios dentro de cada categoría ni examina lo publicado.\nConfundir "
+        "el canal con la calidad es un error frecuente al leer este tipo de "
+        "encuesta, y lleva a conclusiones sobre la exactitud de lo que circula que "
+        "los datos no sostienen.",
+        [
+            ("Por qué vía se informa cada grupo de edad", "Es exactamente lo que entrega la Tabla 1."),
+            ("Cuánta confianza declara cada grupo en lo que recibe", "La segunda columna de la Tabla 2 lo registra."),
+            ("Qué proporción dice verificar antes de compartir", "La última columna de la Tabla 2 lo entrega."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_informacion", "dificil",
+        "Si estas cifras vinieran de una encuesta real, ¿qué habría que revisar "
+        "antes de usarlas?",
+        "Cómo se preguntó y a quiénes se encuestó",
+        "Los resultados de una encuesta dependen tanto del método como de la "
+        "realidad que miden.\nHay que saber cómo se seleccionó la muestra y si "
+        "representa a la población, porque una encuesta aplicada solo por internet "
+        "subrepresenta justamente a quienes menos usan redes. Y hay que ver la "
+        "redacción exacta de las preguntas: principal vía de información puede "
+        "entenderse como la más usada, la más confiable o la primera que se "
+        "consulta en el día.\nSin esos antecedentes, dos encuestas sobre el mismo "
+        "tema pueden diferir veinte puntos sin que ninguna esté equivocada.",
+        [
+            ("Si las columnas de la Tabla 1 suman exactamente 100", "La primera nota ya lo establece, y no es lo que decide la validez del dato."),
+            ("Si los grupos de edad tienen el mismo número de personas", "Los porcentajes se calculan dentro de cada grupo: no requieren grupos iguales."),
+            ("Si el país donde se aplicó tiene diarios impresos", "La tabla ya registra su uso en los cuatro grupos."),
+        ],
+    ),
+    _ql(
+        "civ_info_cifras", "civ_derechos", "dificil",
+        "¿Qué relación hay entre lo que muestran estas tablas y el derecho a "
+        "informarse?",
+        "Tener acceso no equivale a recibir información fiable",
+        "Las tablas describen una población con acceso amplio: los cuatro grupos "
+        "declaran una vía principal y ninguna categoría queda en cero.\nAl mismo "
+        "tiempo, la confianza declarada no supera el 51% en ningún grupo y entre el "
+        "29% y el 48% reconoce haber compartido algo falso.\nEl derecho a "
+        "informarse supone poder acceder a información veraz y contrastable, no "
+        "solo disponer de un canal. Las tablas muestran que la primera condición "
+        "está resuelta y dejan abierta la segunda, que es donde se juega el "
+        "contenido del derecho.",
+        [
+            ("El acceso a un canal basta para ejercer ese derecho", "Las cifras de confianza y de contenido falso muestran que no basta."),
+            ("El derecho a informarse obliga a verificar antes de compartir", "Verificar es una práctica recomendable, no el contenido del derecho."),
+            ("Quien confía en las noticias ejerce mejor ese derecho", "La confianza declarada no indica que la información recibida sea fiable."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "facil",
+        "Según el texto, ¿qué cambió respecto de la desinformación de otras épocas?",
+        "La velocidad, el costo y el alcance",
+        "El texto reconoce que los rumores y los panfletos falsos son tan antiguos "
+        "como la política, de modo que el fenómeno no es nuevo.\nLo que identifica "
+        "como cambio son esas tres dimensiones: hoy publicar no cuesta nada, "
+        "cualquiera puede hacerlo y un contenido puede llegar a millones de "
+        "personas en horas sin pasar por ningún filtro previo.",
+        [
+            ("Que antes no existían noticias falsas en la política", "El texto afirma expresamente lo contrario."),
+            ("Que ahora todos los contenidos pasan por un filtro previo", "El texto señala que no pasan por ningún filtro previo."),
+            ("Que la desinformación dejó de tener un propósito deliberado", "El texto la define justamente por difundirse a sabiendas."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "facil",
+        "Según el texto, ¿qué distingue a un error de la desinformación?",
+        "El error se publica sin intención de engañar",
+        "El texto define el error como una afirmación falsa publicada sin intención "
+        "de engañar, y agrega que se corrige.\nLa desinformación, en cambio, es "
+        "contenido falso difundido a sabiendas y con un propósito. Ambos son "
+        "falsos: lo que los separa es la intención de quien publica.",
+        [
+            ("El error usa datos verdaderos mal ordenados", "Esa es la descripción de la información engañosa, no del error."),
+            ("El error circula más rápido que la desinformación", "El texto no compara la velocidad de circulación de ambos."),
+            ("El error proviene siempre de medios profesionales", "El texto no atribuye el error a ningún tipo de emisor."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "facil",
+        "Según el texto, ¿qué ejemplos da de información engañosa?",
+        "Una cifra fuera de contexto o un gráfico manipulado",
+        "El texto entrega tres ejemplos: una cifra real fuera de contexto, un "
+        "gráfico con la escala manipulada y una cita a la que se le quitó la frase "
+        "que la matizaba.\nLos tres comparten un rasgo: usan datos verdaderos "
+        "ordenados de modo que produzcan una conclusión falsa.",
+        [
+            ("Una afirmación inventada por completo sobre un hecho", "Un contenido inventado corresponde a la desinformación, no a esta categoría."),
+            ("Una noticia publicada por error y luego corregida", "Ese caso corresponde al error, según la distinción del texto."),
+            ("Un rumor difundido sin autor identificable", "El anonimato no es lo que define a la información engañosa."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿por qué la información engañosa es la más difícil de "
+        "refutar?",
+        "Porque cada pieza resiste la verificación por separado",
+        "El texto lo señala expresamente y la razón está en su construcción: los "
+        "datos que usa son verdaderos.\nQuien intenta desmentirla no encuentra una "
+        "afirmación falsa que corregir. La cifra existe, el gráfico usa números "
+        "reales y la cita fue efectivamente pronunciada.\nLo falso está en el "
+        "ordenamiento: en el contexto que se omitió, en la escala que se eligió, en "
+        "la frase que se quitó. Refutarla exige reconstruir todo eso, que es mucho "
+        "más lento que señalar un dato inventado.",
+        [
+            ("Porque circula más rápido que cualquier otro contenido", "El texto no le atribuye una velocidad mayor que a los demás contenidos."),
+            ("Porque nadie puede identificar a quien la publicó", "El texto no plantea un problema de anonimato en este punto."),
+            ("Porque las plataformas la protegen de la verificación", "El texto no describe ninguna protección de ese tipo."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿por qué lo falso circula mejor que su desmentido?",
+        "Por su contenido y por cómo se ordena lo que se ve",
+        "El texto da dos razones y las distingue con cuidado. La primera es de "
+        "contenido: una noticia falsa se diseña para provocar indignación o "
+        "sorpresa, y esas reacciones empujan a compartir antes de leer.\nLa segunda "
+        "es estructural: las plataformas ordenan lo que cada persona ve según lo "
+        "que probablemente la mantendrá conectada, y así el contenido que genera "
+        "más reacción obtiene más circulación.\nEl texto agrega una precisión "
+        "importante sobre esa segunda razón: ocurre sin que nadie haya decidido "
+        "favorecer ese contenido por lo que dice.",
+        [
+            ("Porque los medios profesionales no publican desmentidos", "El texto no atribuye a los medios esa omisión."),
+            ("Porque las plataformas prefieren deliberadamente lo falso", "El texto aclara que nadie decide favorecerlo por su contenido."),
+            ("Porque los desmentidos se publican antes que la noticia", "El texto señala que verificar llega siempre después."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿qué efecto tiene que a cada persona se le muestre sobre "
+        "todo aquello con lo que ya interactúa?",
+        "Su entorno informativo se vuelve más homogéneo",
+        "El texto describe la consecuencia directa: las posiciones contrarias "
+        "aparecen menos, o aparecen solo en su versión más extrema.\nY precisa por "
+        "qué eso importa para la democracia y no solo para cada persona: el "
+        "resultado no es únicamente que la gente se informe distinto, sino que "
+        "empieza a discrepar sobre qué hechos ocurrieron.\nEl remate es la "
+        "consecuencia política: sin hechos compartidos no hay discusión posible, "
+        "porque discutir supone estar en desacuerdo sobre qué hacer y no sobre qué "
+        "pasó.",
+        [
+            ("Las personas acceden a más posiciones contrarias", "El texto describe el efecto inverso."),
+            ("Los medios profesionales aumentan su audiencia", "El texto no vincula ese ordenamiento con la audiencia de los medios."),
+            ("La verificación de contenidos se vuelve automática", "El texto no describe ningún mecanismo automático de verificación."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿por qué verificar es necesario pero insuficiente?",
+        "Llega después y alcanza a menos gente",
+        "El texto entrega tres límites de la verificación y ninguno cuestiona su "
+        "utilidad.\nLlega siempre después, porque desmentir supone que algo ya se "
+        "publicó. Alcanza a menos gente que el contenido original, porque un "
+        "desmentido rara vez provoca la reacción que empuja a compartir. Y no borra "
+        "lo que ya se leyó.\nDe ahí que el texto proponga medidas previas, que "
+        "operan antes de que el contenido circule en lugar de reaccionar cuando ya "
+        "lo hizo.",
+        [
+            ("Porque los verificadores suelen equivocarse", "El texto no cuestiona la exactitud de la verificación."),
+            ("Porque verificar exige permiso de las plataformas", "El texto no plantea ninguna condición de ese tipo."),
+            ("Porque los medios profesionales no la practican", "El texto propone sostener esos medios, no los acusa de omitirla."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "medio",
+        "Según el texto, ¿cuáles son las tres medidas previas que propone?",
+        "Ver quién publica, desconfiar y sostener medios serios",
+        "El texto las enumera: saber quién publica algo y con qué financiamiento, "
+        "desconfiar de lo que confirma demasiado bien lo que uno ya pensaba, y "
+        "sostener medios profesionales que respondan por lo que publican.\nY cierra "
+        "midiendo su alcance con honestidad: ninguna de las tres es infalible, pero "
+        "las tres son mejores que reaccionar después.",
+        [
+            ("Verificar, denunciar el contenido y esperar la corrección", "Las tres corresponden a reaccionar después, que es lo que el texto busca complementar."),
+            ("Prohibir el contenido falso, multar y cerrar las cuentas", "El texto no propone ninguna medida sancionatoria."),
+            ("Leer solo medios oficiales y evitar las plataformas", "El texto no plantea restringir la lectura a fuentes oficiales."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "dificil",
+        "¿Por qué el texto insiste en que las plataformas no favorecen lo falso por "
+        "su contenido?",
+        "Porque el efecto surge del criterio y no de una decisión",
+        "La precisión cambia el tipo de problema que hay que resolver. Si alguien "
+        "hubiera decidido promover contenido falso, bastaría con revertir esa "
+        "decisión.\nLo que el texto describe es otra cosa: un criterio de "
+        "ordenamiento —mostrar lo que probablemente mantendrá conectada a cada "
+        "persona— que produce ese resultado como efecto lateral, porque lo falso "
+        "está diseñado para provocar reacción.\nDe ahí se sigue que el problema no "
+        "se corrige identificando culpables sino revisando el criterio, y que puede "
+        "reaparecer cada vez que el criterio premie la reacción por sobre cualquier "
+        "otra cosa.",
+        [
+            ("Para sostener que las plataformas no tienen responsabilidad", "Señalar el origen del efecto no equivale a eximir de responsabilidad."),
+            ("Para demostrar que el contenido falso es minoritario", "El texto no se pronuncia sobre su proporción."),
+            ("Porque las plataformas no ordenan lo que muestran a cada persona", "El texto afirma expresamente que sí lo ordenan."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "dificil",
+        "El texto sostiene que sin hechos compartidos no hay discusión posible. "
+        "¿Qué está afirmando sobre la democracia?",
+        "Discrepar exige acordar primero qué ocurrió",
+        "Una discusión democrática supone desacuerdo sobre qué hacer: qué política "
+        "adoptar, qué prioridad atender primero, quién debe pagar.\nEse desacuerdo "
+        "necesita un piso común. Si dos personas no coinciden en si un hecho "
+        "ocurrió, no están discutiendo la misma cuestión y ningún argumento puede "
+        "persuadir a la otra, porque cada una parte de una realidad distinta.\nPor "
+        "eso el texto trata la fragmentación del entorno informativo como un "
+        "problema político y no solo individual: erosiona la condición que hace "
+        "posible deliberar.",
+        [
+            ("Que la democracia exige que todos piensen igual", "El texto distingue el acuerdo sobre los hechos del acuerdo sobre qué hacer."),
+            ("Que los desacuerdos deben resolverse por votación", "El texto no discute el mecanismo de decisión."),
+            ("Que los medios deben publicar una sola versión de cada hecho", "El texto no propone uniformar la cobertura."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "dificil",
+        "¿Por qué el texto recomienda desconfiar de lo que confirma demasiado bien "
+        "lo que uno ya pensaba?",
+        "Porque esa coincidencia baja la guardia del lector",
+        "La recomendación apunta a un punto ciego del propio lector y no a una "
+        "característica del contenido.\nFrente a algo que contradice lo que uno "
+        "cree, se examinan la fuente, la fecha y el dato. Frente a algo que lo "
+        "confirma, esa revisión se omite, porque el contenido no produce ninguna "
+        "resistencia.\nQuien fabrica desinformación conoce ese mecanismo y "
+        "construye contenidos que encajan justo con lo que un grupo espera oír. Por "
+        "eso la señal de alarma no es que algo suene falso, sino que suene "
+        "demasiado conveniente.",
+        [
+            ("Porque las afirmaciones coincidentes suelen ser falsas", "El texto no sostiene que coincidir con lo que uno piensa implique falsedad."),
+            ("Porque las opiniones propias no deben influir en la lectura", "El texto no pide suprimir las convicciones propias sino advertir su efecto."),
+            ("Porque conviene leer solo aquello con lo que se discrepa", "La recomendación es revisar con el mismo rigor, no invertir la dieta informativa."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "dificil",
+        "El texto propone sostener medios profesionales que respondan por lo que "
+        "publican. ¿Qué aporta esa condición?",
+        "Alguien identificable asume el costo de equivocarse",
+        "La diferencia que el texto marca no está en la calidad del contenido sino "
+        "en la existencia de un responsable.\nUn medio profesional tiene nombre, "
+        "dirección y reputación que perder, y por eso publicar algo falso le "
+        "cuesta: debe rectificar, puede ser demandado y pierde audiencia.\nUna "
+        "cuenta anónima que difunde lo mismo no enfrenta ninguno de esos costos, y "
+        "por lo tanto tampoco tiene incentivos para verificar antes de publicar. "
+        "Esa asimetría de costos es lo que la condición busca preservar.",
+        [
+            ("Garantiza que ese medio nunca publique información falsa", "El texto aclara que ninguna de las tres medidas es infalible."),
+            ("Permite que las plataformas ordenen mejor los contenidos", "El texto no vincula esta medida con el criterio de las plataformas."),
+            ("Impide que circulen contenidos de origen desconocido", "Sostener medios serios no elimina la circulación de otros contenidos."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_informacion", "dificil",
+        "Un lector concluye que, según el texto, el problema se resuelve enseñando "
+        "a verificar. ¿Qué le falta a esa lectura?",
+        "El texto llama insuficiente a la verificación",
+        "El texto la incluye entre lo necesario y le dedica un párrafo a mostrar "
+        "sus tres límites: llega después, alcanza a menos gente y no borra lo ya "
+        "leído.\nSobre esa base propone medidas previas, y agrega un factor que "
+        "ninguna habilidad individual modifica: el criterio con que las plataformas "
+        "ordenan lo que cada persona ve.\nReducir el problema a una destreza del "
+        "lector deja intacta esa parte estructural, que el texto describe como una "
+        "de las dos razones por las que lo falso circula mejor.",
+        [
+            ("El texto no menciona la verificación en ningún momento", "Le dedica un párrafo completo."),
+            ("El texto sostiene que verificar es innecesario", "Lo llama necesario, y solo agrega que no basta."),
+            ("El texto propone prohibir el contenido falso", "No plantea ninguna medida de prohibición."),
+        ],
+    ),
+    _ql(
+        "civ_info_desinformacion", "civ_democracia", "dificil",
+        "Según el texto, ¿qué riesgo específico corre una democracia cuando el "
+        "entorno informativo se fragmenta?",
+        "Que la deliberación pierda su base común",
+        "El texto encadena dos consecuencias. Primero, cada persona ve sobre todo "
+        "aquello con lo que ya interactúa, de modo que las posiciones contrarias "
+        "aparecen menos o solo en su versión más extrema.\nSegundo, la discrepancia "
+        "deja de ser sobre qué hacer y pasa a ser sobre qué hechos ocurrieron.\nUna "
+        "democracia puede convivir con desacuerdos profundos sobre valores y "
+        "políticas: eso es lo que procesa. Lo que no puede es funcionar cuando las "
+        "partes ni siquiera coinciden en el punto de partida, porque entonces no "
+        "hay argumento capaz de mover a nadie.",
+        [
+            ("Que aumente el número de medios de comunicación disponibles", "El texto no presenta la cantidad de medios como un riesgo."),
+            ("Que la ciudadanía deje de votar en las elecciones", "El texto no vincula la fragmentación con la participación electoral."),
+            ("Que las plataformas dejen de ordenar los contenidos", "El problema que describe es que los ordenan según ese criterio."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "facil",
+        "Según la Columna 1, ¿qué tipo de materias exigen mayorías especiales?",
+        "Las que definen cómo se compite y se controla el poder",
+        "La columna las enumera con precisión: las que definen cómo se compite por "
+        "el poder, cómo se controla a quien lo ejerce y qué derechos quedan fuera "
+        "del alcance de una votación.\nEl argumento descansa en esa selección. No "
+        "sostiene que todas las leyes deban ser difíciles de cambiar, sino que ese "
+        "grupo acotado lo sea.",
+        [
+            ("Todas las leyes que apruebe el Congreso Nacional", "La columna acota la exigencia a un grupo determinado de materias."),
+            ("Las que fijan el presupuesto anual del sector público", "El presupuesto no aparece entre las materias que la columna enumera."),
+            ("Las que regulan el funcionamiento de los municipios", "La columna no menciona la administración comunal."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "facil",
+        "Según la Columna 2, ¿qué efecto tiene un quórum alto sobre el texto "
+        "vigente?",
+        "Lo congela, cualquiera sea su contenido",
+        "La columna lo formula así y de ahí deriva todo su argumento: un quórum "
+        "alto no es neutro porque protege lo que ya está escrito, con independencia "
+        "de qué diga.\nLa consecuencia que señala es que si el texto vigente "
+        "favorece a un sector, ese sector obtiene una ventaja permanente sin "
+        "necesidad de volver a ganarla.",
+        [
+            ("Lo somete a revisión periódica del Tribunal Constitucional", "La columna no menciona ningún control de constitucionalidad."),
+            ("Lo hace más fácil de reformar con el paso del tiempo", "Sostiene lo contrario: lo vuelve difícil de modificar."),
+            ("Lo deja sin efecto si no se ratifica en cada período", "Nada en la columna plantea una caducidad del texto vigente."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "facil",
+        "Según la Columna 1, ¿qué NO adquiere quien gana una elección?",
+        "El derecho a reescribir las reglas del juego",
+        "La columna lo dice de manera directa: quien gana una elección la ganó bajo "
+        "ciertas reglas y no adquirió con ella el derecho a reescribirlas antes de "
+        "la siguiente.\nSobre esa base construye su defensa de las mayorías "
+        "especiales, que existen justamente para que ese grupo acotado de reglas no "
+        "dependa del resultado de una sola elección.",
+        [
+            ("La facultad de presentar proyectos de ley al Congreso", "La columna no discute la iniciativa legislativa."),
+            ("La posibilidad de nombrar a las autoridades de gobierno", "Ese punto no aparece en el texto."),
+            ("El derecho a gobernar durante todo su período", "La columna no cuestiona el mandato de quien gana."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "medio",
+        "¿En qué consiste la asimetría que denuncia la Columna 2?",
+        "Cambiar exige persuadir y bloquear no exige nada",
+        "La columna lo formula con una comparación directa: quien quiere cambiar "
+        "debe persuadir a una supermayoría, y quien quiere que nada cambie no debe "
+        "persuadir a nadie.\nEl punto es que las dos posiciones no enfrentan la "
+        "misma carga. A una se le pide construir un acuerdo amplio; a la otra le "
+        "basta con reunir el porcentaje necesario para impedirlo.\nDe ahí su "
+        "objeción a la palabra acuerdo: describir como negociación una situación en "
+        "que solo un lado necesita convencer al otro le parece generoso.",
+        [
+            ("Que unas materias exigen quórum y otras no", "La asimetría que describe es entre cambiar y bloquear, no entre materias."),
+            ("Que el Congreso decide y la ciudadanía no participa", "La columna no discute la participación ciudadana."),
+            ("Que unas cámaras tienen más peso que otras", "El texto no compara a las dos cámaras entre sí."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "medio",
+        "La Columna 1 responde por adelantado a una objeción. ¿Cuál y cómo?",
+        "Que obliga a negociar con quien perdió, y lo asume",
+        "La columna anticipa la crítica y no la esquiva: se dirá que esto obliga a "
+        "negociar con quien perdió, y responde exactamente.\nConvertir la objeción "
+        "en la propia tesis es una operación argumentativa eficaz, porque deja al "
+        "adversario sin el punto que pensaba usar.\nEl cierre explicita por qué lo "
+        "asume: esa obligación es lo que distingue una mayoría de una hegemonía, es "
+        "decir un gobierno que manda dentro de reglas compartidas de uno que "
+        "dispone de todas ellas.",
+        [
+            ("Que los quórums impiden legislar, y propone bajarlos", "La columna defiende mantenerlos, no reducirlos."),
+            ("Que las minorías quedan desprotegidas, y lo niega", "La columna sostiene que las mayorías especiales las protegen."),
+            ("Que el sistema es demasiado lento, y ofrece acelerarlo", "La velocidad de tramitación no es el punto que anticipa."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "medio",
+        "¿Qué evidencia invoca la Columna 2 contra la promesa de que estas reglas "
+        "obligan a negociar?",
+        "Proyectos con mayorías amplias que no llegan a ser ley",
+        "La columna contrapone el argumento con lo observado a lo largo del tiempo: "
+        "llevamos décadas escuchando que estas reglas obligan a negociar, y lo que "
+        "se ve con más frecuencia es parálisis.\nEl caso que ofrece es concreto: "
+        "proyectos que reúnen mayorías amplias y sostenidas en el tiempo y aun así "
+        "no llegan a ser ley.\nEl movimiento del argumento es del principio a la "
+        "práctica. No discute si la regla busca negociación, sino si la produce.",
+        [
+            ("Encuestas que muestran rechazo ciudadano a los quórums", "La columna no invoca ninguna medición de opinión."),
+            ("Fallos del Tribunal Constitucional sobre esas materias", "El texto no menciona decisiones judiciales."),
+            ("Comparaciones con el sistema legislativo de otros países", "La columna no recurre a ninguna comparación internacional."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "medio",
+        "¿En qué coinciden ambas columnas pese a su desacuerdo?",
+        "En que un quórum alto protege el texto vigente",
+        "Las dos parten del mismo hecho. La Columna 1 lo presenta como virtud: "
+        "impide que la mayoría de turno reescriba las reglas bajo las que compitió. "
+        "La Columna 2 lo presenta como problema: congela el texto vigente, "
+        "cualquiera sea.\nEl desacuerdo no está entonces en qué hace la regla, sino "
+        "en cómo evaluar ese efecto.\nDistinguir el hecho compartido de la "
+        "valoración en disputa es lo que permite leer bien un par de fuentes "
+        "enfrentadas, porque evita discutir sobre algo que ninguna de las dos pone "
+        "en duda.",
+        [
+            ("En que las mayorías especiales deben aplicarse a toda ley", "La Columna 1 las acota a ciertas materias y la Columna 2 objeta su nivel actual."),
+            ("En que el Congreso funciona bien con las reglas actuales", "La Columna 2 describe parálisis, no buen funcionamiento."),
+            ("En que la ciudadanía debería votar directamente estas materias", "Ninguna de las dos propone someterlas a votación popular."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "medio",
+        "La Columna 1 distingue una regla de una preferencia del que gobierna. ¿Qué "
+        "señala esa distinción?",
+        "Una regla vale aunque cambie quien gobierna",
+        "La columna lo plantea al abrir: una regla que puede cambiarse con la misma "
+        "facilidad con que se aprueba cualquier ley no es una regla sino la "
+        "preferencia del que gobierna hoy.\nLo que distingue a una de otra es su "
+        "independencia respecto de quién esté en el poder. Si el contenido de la "
+        "norma sigue al resultado de cada elección, deja de operar como marco y "
+        "pasa a ser un instrumento más del gobierno de turno.\nDe ahí se sigue el "
+        "resto del argumento: para que esas reglas funcionen como marco, cambiarlas "
+        "debe exigir más que ganar una elección.",
+        [
+            ("Una regla obliga solo a quienes la aprobaron", "La columna sostiene lo contrario: obliga con independencia de quién gobierne."),
+            ("Una preferencia se aprueba con quórum más alto", "El texto asocia el quórum alto a las reglas, no a las preferencias."),
+            ("Una regla se aplica únicamente durante un período de gobierno", "El argumento apunta precisamente a que trascienda los períodos."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "dificil",
+        "¿Por qué la Columna 2 afirma que un quórum alto no es neutro?",
+        "Porque siempre favorece a quien prefiere lo vigente",
+        "La regla parece simétrica: se aplica igual a cualquier reforma, venga de "
+        "donde venga.\nLa columna muestra que esa simetría es aparente, porque la "
+        "regla se aplica sobre un punto de partida que no es neutro. Quien está "
+        "conforme con el texto vigente obtiene lo que quiere sin hacer nada; quien "
+        "no lo está debe reunir una supermayoría.\nEl resultado es que la misma "
+        "regla entrega ventajas distintas según qué diga el texto que protege, y "
+        "por eso la columna sostiene que su neutralidad formal esconde un efecto "
+        "sustantivo.",
+        [
+            ("Porque se aplica solo a algunas materias y no a todas", "La objeción no es sobre el alcance sino sobre el efecto del congelamiento."),
+            ("Porque el Congreso puede modificarlo cuando le convenga", "Si pudiera hacerlo con facilidad, no habría problema que denunciar."),
+            ("Porque exige más votos en una cámara que en la otra", "El texto no plantea diferencias entre cámaras."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "dificil",
+        "La Columna 1 dice que negociar con quien perdió distingue una mayoría de "
+        "una hegemonía. ¿Qué está definiendo?",
+        "Que mandar no equivale a disponer de todo",
+        "La distinción separa dos situaciones que el resultado electoral no permite "
+        "diferenciar por sí solo.\nUna mayoría gobierna dentro de reglas que no "
+        "fijó ella y que seguirán ahí cuando pierda. Una hegemonía controla además "
+        "esas reglas, y con ellas las condiciones de la competencia siguiente.\nEl "
+        "argumento no niega que quien ganó deba gobernar. Sostiene que hay un "
+        "conjunto acotado de decisiones que no forman parte del premio, y que "
+        "sustraerlas del alcance de la mayoría de turno es lo que impide el paso de "
+        "una situación a la otra.",
+        [
+            ("Que las mayorías deben renunciar a su programa de gobierno", "La columna no pide renunciar a gobernar sino acotar qué reglas puede cambiar."),
+            ("Que la oposición debe tener mayoría en el Congreso", "Nada en el texto propone alterar el resultado electoral."),
+            ("Que ninguna coalición puede aprobar leyes por sí sola", "Las leyes comunes sí pueden aprobarse con mayoría simple."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "dificil",
+        "¿Qué objeción tendría que responder la Columna 2 para completar su "
+        "argumento?",
+        "Qué protege a las minorías si baja el quórum",
+        "La columna documenta bien el costo de los quórums altos: congelamiento, "
+        "asimetría entre cambiar y bloquear, parálisis observable durante "
+        "décadas.\nLo que no aborda es el problema que la Columna 1 pone en el "
+        "centro. Si esas materias pasaran a decidirse por mayoría simple, cada "
+        "gobierno podría modificar las reglas de la competencia y los derechos "
+        "garantizados durante su propio período.\nSu argumento quedaría completo si "
+        "mostrara qué mecanismo alternativo cumple esa función, o por qué el riesgo "
+        "es menor que el costo que denuncia. Sin eso, identifica un defecto sin "
+        "hacerse cargo de para qué existía la regla.",
+        [
+            ("Si los quórums existen realmente en el sistema chileno", "Ninguna de las dos columnas pone eso en duda."),
+            ("Cuántos proyectos se aprueban cada año en el Congreso", "Su argumento no depende del volumen total de legislación."),
+            ("Por qué el texto vigente favorece a un sector determinado", "Su argumento funciona con cualquier contenido: lo dice expresamente."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "dificil",
+        "¿Qué estrategia usa la Columna 2 al abrir reconociendo lo que la Columna 1 "
+        "describe bien?",
+        "Concede el punto fuerte y ataca lo omitido",
+        "La columna abre diciendo que el argumento anterior describe bien lo que "
+        "las mayorías especiales protegen, y agrega que calla lo que cuestan.\nAl "
+        "conceder la parte sólida evita una discusión que probablemente perdería "
+        "—nadie sostiene que proteger derechos sea malo— y desplaza el terreno "
+        "hacia donde su adversario no argumentó.\nEs la misma operación que hace la "
+        "Columna 1 al asumir la objeción sobre negociar con quien perdió. Las dos "
+        "evitan negar lo evidente y discuten sobre el balance, que es donde "
+        "efectivamente difieren.",
+        [
+            ("Niega los hechos que la primera columna describe", "Los da por buenos en su primera frase."),
+            ("Evita responder y cambia de tema hacia la parálisis", "La parálisis es evidencia de su argumento, no un cambio de tema."),
+            ("Apela a la autoridad de la Constitución para zanjar el punto", "No invoca ninguna norma superior: discute el efecto de la regla."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "dificil",
+        "¿Qué tendría que examinarse para decidir cuál de las dos columnas describe "
+        "mejor el caso chileno?",
+        "Qué proyectos se bloquearon y con qué respaldo",
+        "La disputa no es sobre qué hace un quórum alto: en eso coinciden. Es sobre "
+        "cuál de sus dos efectos predomina en la práctica.\nEsa es una pregunta "
+        "empírica y admite evidencia. Habría que revisar qué proyectos no "
+        "alcanzaron el quórum, cuánto respaldo tenían dentro y fuera del Congreso, "
+        "cuánto tiempo llevaban en tramitación y si el bloqueo produjo después un "
+        "acuerdo o simplemente el archivo del proyecto.\nCon ese registro se puede "
+        "establecer si la regla funcionó como incentivo a negociar, como sostiene "
+        "una columna, o como llave de bloqueo, como sostiene la otra.",
+        [
+            ("Cuál de las dos columnas está mejor escrita", "La calidad de la redacción no resuelve una pregunta sobre efectos."),
+            ("Qué opina la mayoría de la ciudadanía sobre los quórums", "La opinión mayoritaria no establece cómo operó la regla."),
+            ("Qué quórum exigen otros países para materias equivalentes", "La comparación ayuda, pero no dice qué ocurrió en Chile."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_institucionalidad", "dificil",
+        "Un estudiante concluye que la Columna 1 defiende que nada pueda cambiarse. "
+        "¿Qué precisión exige esa lectura?",
+        "Solo defiende un grupo acotado de materias",
+        "La columna acota expresamente su alcance: las materias que exigen mayorías "
+        "especiales no son cualesquiera, sino las que definen cómo se compite por "
+        "el poder, cómo se controla a quien lo ejerce y qué derechos quedan fuera "
+        "de una votación.\nTodo lo demás sigue tramitándose como ley común, con "
+        "mayoría simple.\nAdemás la columna no sostiene que esas materias sean "
+        "inmodificables: sostiene que modificarlas exige un acuerdo más amplio que "
+        "el de una coalición de gobierno. Difícil de cambiar y imposible de cambiar "
+        "no son lo mismo.",
+        [
+            ("La columna no menciona ninguna materia en particular", "Enumera tres tipos de materia de manera explícita."),
+            ("La columna propone eliminar las leyes comunes", "No plantea nada sobre el régimen de la ley común."),
+            ("La columna acepta que se cambien con mayoría simple", "Su tesis es exactamente la contraria."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_derechos", "dificil",
+        "Según la Columna 1, ¿qué relación hay entre las mayorías especiales y los "
+        "derechos?",
+        "Los ponen fuera del alcance de una votación",
+        "La columna incluye entre las materias protegidas las que definen qué "
+        "derechos quedan fuera del alcance de una votación.\nLa formulación supone "
+        "que un derecho garantizado no funciona como una preferencia que se somete "
+        "a mayoría: si pudiera suprimirse ganando una elección, dejaría de proteger "
+        "a quienes la perdieron, que son justamente quienes más lo necesitan.\nLa "
+        "Columna 2 no discute ese punto y por eso el desacuerdo entre ambas no es "
+        "sobre si los derechos deben protegerse, sino sobre si el quórum alto es el "
+        "instrumento adecuado para hacerlo.",
+        [
+            ("Los derechos se definen por mayoría en cada período", "La columna sostiene lo contrario: quedan fuera de esa decisión."),
+            ("Los derechos dependen del quórum con que se aprobó la ley", "El argumento no hace depender el derecho del quórum de origen."),
+            ("Las mayorías especiales impiden reconocer derechos nuevos", "La columna no se pronuncia sobre el reconocimiento de derechos nuevos."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "facil",
+        "Según la Tabla 1, ¿quiénes pueden dar inicio a un proyecto de ley?",
+        "El Presidente por mensaje o parlamentarios por moción",
+        "La primera fila de la Tabla 1 identifica las dos vías de entrada de un "
+        "proyecto al Congreso y les da nombre: mensaje cuando lo presenta el "
+        "Presidente, moción cuando lo presentan parlamentarios.\nLa segunda nota "
+        "agrega un límite a esa regla: hay materias de iniciativa exclusiva del "
+        "Presidente, donde los parlamentarios no pueden presentar mociones.",
+        [
+            ("Cualquier ciudadano mediante una solicitud a la Contraloría", "La Contraloría no interviene en la iniciativa legislativa."),
+            ("Únicamente el Presidente de la República", "La moción parlamentaria es la otra vía que registra la tabla."),
+            ("El Tribunal Constitucional cuando detecta un vacío legal", "Ese tribunal revisa normas; no las propone."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "facil",
+        "Según la Tabla 1, ¿para qué se forma una comisión mixta?",
+        "Para buscar acuerdo cuando las cámaras difieren",
+        "La fila correspondiente lo indica y precisa su composición: diputados y "
+        "senadores en igual número.\nLa paridad no es un detalle. Si una de las dos "
+        "cámaras tuviera mayoría dentro de la comisión, la instancia dejaría de ser "
+        "un espacio de acuerdo y pasaría a imponer la posición de esa cámara.",
+        [
+            ("Para redactar el proyecto antes de que entre al Congreso", "El proyecto ya está en tramitación cuando esta etapa se activa."),
+            ("Para revisar si el proyecto se ajusta a la Constitución", "Ese control corresponde al Tribunal Constitucional."),
+            ("Para reemplazar a la cámara de origen en la votación", "La comisión busca acuerdo; no sustituye a ninguna cámara."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "facil",
+        "Según la Tabla 2, ¿qué quórum exige una ley común?",
+        "Mayoría de los presentes en la sala",
+        "La Tabla 2 lo consigna así, y la primera nota entrega la distinción que "
+        "hace funcionar toda la tabla: presentes son solo los que están en la sala "
+        "al votar.\nEsa es la exigencia más baja de las cuatro, y por eso la ley "
+        "común es la regla general y los demás quórums, la excepción reservada a "
+        "ciertas materias.",
+        [
+            ("Cuatro séptimos de los diputados y senadores en ejercicio", "Ese quórum corresponde a la ley orgánica constitucional."),
+            ("Mayoría absoluta de diputados y senadores en ejercicio", "Corresponde a la ley de quórum calificado."),
+            ("La unanimidad de los parlamentarios de ambas cámaras", "Ningún tipo de ley de la tabla exige unanimidad."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "medio",
+        "Según la primera nota, ¿qué diferencia hay entre en ejercicio y presentes?",
+        "En ejercicio incluye a los que no asistieron",
+        "La nota lo precisa: en ejercicio son todos los parlamentarios en "
+        "funciones, hayan asistido o no a la sesión; presentes son solo los que "
+        "están en la sala al votar.\nLa consecuencia práctica es que un quórum "
+        "sobre los en ejercicio es más exigente, porque la base de cálculo no baja "
+        "cuando falta gente.\nCon quórum sobre los presentes, en cambio, una sesión "
+        "con poca asistencia reduce el número de votos necesarios para aprobar.",
+        [
+            ("Presentes incluye a quienes votaron por delegación", "La nota no contempla el voto por delegación."),
+            ("En ejercicio se refiere solo a los que presiden la sesión", "Alude a todos los parlamentarios en funciones."),
+            ("No hay diferencia práctica entre ambas expresiones", "La base de cálculo cambia y con ella el número de votos exigidos."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "medio",
+        "Según la segunda nota, ¿qué implica la iniciativa exclusiva del Presidente "
+        "en materia de gasto?",
+        "Los parlamentarios no pueden aumentar el gasto propuesto",
+        "La nota señala dos restricciones que operan juntas: en esas materias los "
+        "parlamentarios no pueden presentar mociones ni aumentar el gasto "
+        "propuesto.\nEl alcance es amplio, porque cubre las leyes que crean o "
+        "suprimen tributos y las que fijan gastos del Estado, es decir buena parte "
+        "de lo que un programa de gobierno necesita.\nLa regla concentra en el "
+        "Ejecutivo la decisión sobre ingresos y gastos, y es uno de los rasgos que "
+        "distinguen al sistema chileno de otros regímenes presidenciales.",
+        [
+            ("El Congreso no puede discutir esos proyectos", "Sí los discute y los vota: lo que no puede es iniciarlos ni aumentarlos."),
+            ("El Presidente aprueba esas leyes sin pasar por el Congreso", "Todo proyecto debe recorrer los trámites de la Tabla 1."),
+            ("Esas materias requieren siempre quórum calificado", "La iniciativa exclusiva es independiente del quórum exigido."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "medio",
+        "Un proyecto de ley común se vota en una sala con muchas ausencias. ¿Qué "
+        "efecto tiene eso, según las tablas?",
+        "Bajan los votos necesarios para aprobarlo",
+        "La ley común exige mayoría de los presentes, y la primera nota aclara que "
+        "presentes son solo quienes están en la sala al votar.\nSi la base de "
+        "cálculo se reduce, el número absoluto de votos requeridos baja con ella, "
+        "aunque el porcentaje exigido sea el mismo.\nNada de eso ocurriría con una "
+        "ley de quórum calificado o una orgánica constitucional, porque ambas se "
+        "calculan sobre los en ejercicio, un número que no depende de la "
+        "asistencia.",
+        [
+            ("La votación queda suspendida hasta reunir el quórum en ejercicio", "El quórum de la ley común no se calcula sobre los en ejercicio."),
+            ("El proyecto pasa automáticamente a comisión mixta", "Esa etapa se activa por desacuerdo entre cámaras, no por ausencias."),
+            ("El Presidente debe vetar el texto aprobado", "El veto es una facultad, no una consecuencia de la asistencia."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "medio",
+        "¿En qué etapa de la Tabla 1 interviene el Presidente después de que el "
+        "Congreso aprueba el texto?",
+        "En el veto y en la promulgación",
+        "La Tabla 1 lo sitúa en dos filas posteriores a la votación: el veto, donde "
+        "observa el texto aprobado, y la promulgación, donde el texto se convierte "
+        "en ley vigente junto con su publicación en el Diario Oficial.\nAntes de "
+        "eso puede haber intervenido por otra vía, presentando el proyecto mediante "
+        "un mensaje.\nEl conjunto muestra que el Presidente participa del proceso "
+        "legislativo en varios puntos sin legislar por sí solo: la aprobación del "
+        "texto sigue correspondiendo a las dos cámaras.",
+        [
+            ("Solo en la iniciativa, presentando el proyecto por mensaje", "La tabla registra dos intervenciones posteriores a la aprobación."),
+            ("En la comisión mixta, dirimiendo entre ambas cámaras", "La comisión mixta la integran diputados y senadores en igual número."),
+            ("En el tercer trámite, revisando los cambios introducidos", "Ese trámite corresponde a la sala de la cámara de origen."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "medio",
+        "Según la Tabla 1, ¿qué ocurre en el tercer trámite?",
+        "La cámara de origen revisa los cambios hechos",
+        "La fila correspondiente lo indica: el proyecto vuelve a la sala de la "
+        "cámara donde se inició para que examine las modificaciones que introdujo "
+        "la cámara revisora.\nLa etapa existe porque el segundo trámite puede "
+        "alterar el texto, y quien lo aprobó primero debe pronunciarse sobre esa "
+        "versión distinta.\nSi el desacuerdo persiste, la tabla contempla la etapa "
+        "siguiente: la comisión mixta.",
+        [
+            ("El proyecto se vota por tercera vez en la cámara revisora", "La tabla asigna esa etapa a la sala de la cámara de origen."),
+            ("El Presidente decide si acepta las modificaciones", "La intervención presidencial ocurre después, en la etapa de veto."),
+            ("El proyecto se publica en el Diario Oficial", "La publicación corresponde a la última etapa de la tabla."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "dificil",
+        "¿Por qué la Constitución exige quórums más altos para ciertas materias?",
+        "Para que una mayoría estrecha no las cambie sola",
+        "La Tabla 2 ordena cuatro exigencias crecientes, y esa gradación no es "
+        "arbitraria: reserva las mayores para las materias que estructuran el "
+        "funcionamiento del sistema.\nUna ley común se aprueba con mayoría de los "
+        "presentes y puede modificarse con la misma facilidad. Una que exige cuatro "
+        "séptimos de los en ejercicio necesita acuerdos que exceden a una coalición "
+        "de gobierno.\nEl costo del diseño es el simétrico: lo que resulta difícil "
+        "de cambiar por una mayoría estrecha también resulta difícil de actualizar "
+        "cuando hay razones para hacerlo.",
+        [
+            ("Para que el Presidente pueda vetar esas leyes con más facilidad", "El quórum de aprobación no altera la facultad de veto."),
+            ("Para reducir el número de proyectos que entran al Congreso", "El quórum opera sobre la aprobación, no sobre la iniciativa."),
+            ("Para que el Tribunal Constitucional no tenga que revisarlas", "El control de constitucionalidad es independiente del quórum."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "dificil",
+        "Un gobierno con mayoría estrecha quiere aprobar una ley orgánica "
+        "constitucional. ¿Qué le exigen las tablas?",
+        "Negociar votos fuera de su propia coalición",
+        "El quórum de cuatro séptimos de los diputados y senadores en ejercicio "
+        "está por encima de la mitad más uno, y se calcula sobre el total en "
+        "funciones y no sobre los presentes.\nUna mayoría estrecha no alcanza esa "
+        "cifra por sí sola ni puede compensarla aprovechando ausencias del otro "
+        "lado, porque la base de cálculo no varía con la asistencia.\nEl único "
+        "camino que queda es sumar votos de fuera de la coalición, y eso obliga a "
+        "modificar el proyecto hasta que otros lo acepten.",
+        [
+            ("Esperar a que aumente la asistencia a la sala", "El quórum se calcula sobre los en ejercicio: la asistencia no lo modifica."),
+            ("Presentar el proyecto como mensaje en vez de moción", "La vía de iniciativa no altera el quórum de aprobación."),
+            ("Iniciar la tramitación en la cámara donde tenga más votos", "Ambas cámaras deben reunir el mismo quórum."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "dificil",
+        "¿Qué muestra sobre el diseño chileno que existan materias de iniciativa "
+        "exclusiva del Presidente?",
+        "El Ejecutivo controla la agenda de ingresos y gastos",
+        "La segunda nota reserva al Presidente las leyes que crean o suprimen "
+        "tributos y las que fijan gastos del Estado, y además impide a los "
+        "parlamentarios aumentar el gasto propuesto.\nEl Congreso conserva la "
+        "facultad de discutir, rechazar o reducir, pero no la de proponer. Sobre "
+        "esas materias no puede haber ley que el Ejecutivo no haya querido "
+        "iniciar.\nEs una concentración de poder que no se ve en el esquema de los "
+        "tres poderes, y explica por qué el sistema chileno se describe como "
+        "fuertemente presidencial pese a tener un Congreso con atribuciones "
+        "amplias.",
+        [
+            ("El Congreso puede legislar sobre cualquier materia sin límites", "La nota describe justamente una materia donde no puede iniciar proyectos."),
+            ("El Presidente aprueba las leyes tributarias por sí solo", "El proyecto debe ser aprobado por ambas cámaras."),
+            ("Los tributos se fijan mediante decretos y no por ley", "La nota los trata como materia de ley, con iniciativa reservada."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "dificil",
+        "¿Por qué la comisión mixta se integra con igual número de diputados y "
+        "senadores?",
+        "Para que ninguna cámara imponga su versión",
+        "La comisión existe para resolver un desacuerdo entre dos órganos que "
+        "tienen el mismo peso en la formación de la ley.\nSi su composición diera "
+        "ventaja a una de las dos cámaras, el resultado sería previsible antes de "
+        "sesionar y la instancia dejaría de ser un espacio de acuerdo para volverse "
+        "un trámite de imposición.\nLa paridad obliga entonces a construir una "
+        "fórmula que ambas partes acepten, que es exactamente lo que la etapa busca "
+        "producir.",
+        [
+            ("Para acelerar la tramitación reduciendo el número de sesiones", "La paridad no reduce el tiempo de tramitación."),
+            ("Porque ambas cámaras tienen el mismo número de integrantes", "El número de miembros de cada cámara es distinto."),
+            ("Para permitir que el Presidente dirima el empate", "El Presidente no integra la comisión mixta."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_institucionalidad", "dificil",
+        "La cuarta nota advierte que el quórum de reforma constitucional ha "
+        "cambiado más de una vez. ¿Qué precaución impone al lector?",
+        "Verificar el texto vigente antes de citar una cifra",
+        "La advertencia distingue dos tipos de contenido dentro de la misma fuente. "
+        "Las etapas de tramitación y la distinción entre presentes y en ejercicio "
+        "son estables; una cifra de quórum puede estar desactualizada.\nPor eso la "
+        "Tabla 2 describe ese quórum de manera cualitativa, como superior al de la "
+        "ley común, en vez de fijar una fracción.\nEs una precaución aplicable a "
+        "cualquier material sobre instituciones: conviene saber qué parte describe "
+        "una estructura y qué parte depende de una norma que puede haber sido "
+        "reformada.",
+        [
+            ("Descartar toda la Tabla 2 por contener datos inciertos", "Los otros tres quórums de la tabla no están sujetos a esa advertencia."),
+            ("Suponer que las etapas de tramitación también cambiaron", "La nota se refiere solo al quórum de reforma constitucional."),
+            ("Consultar al Tribunal Constitucional antes de leer la tabla", "Basta con revisar el texto constitucional vigente."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_democracia", "dificil",
+        "¿Qué relación hay entre los quórums de la Tabla 2 y la alternancia en el "
+        "poder?",
+        "Limitan lo que un gobierno puede cambiar solo",
+        "La alternancia supone que quien gana una elección gobierna y quien la "
+        "pierde conserva la posibilidad de volver a competir en igualdad de "
+        "condiciones.\nLos quórums altos protegen esa segunda parte: impiden que la "
+        "mayoría de turno modifique por sí sola las reglas del sistema, que es "
+        "donde se juega si la próxima elección será competitiva.\nEl mismo "
+        "mecanismo tiene una contracara que conviene reconocer: obliga a acordar "
+        "con quienes perdieron la elección, y eso puede bloquear cambios que una "
+        "mayoría amplia respalda.",
+        [
+            ("Impiden que la oposición participe en la discusión legislativa", "El efecto es el contrario: obligan a contar con sus votos."),
+            ("Garantizan que el gobierno cumpla su programa completo", "Un quórum alto dificulta cumplirlo sin acuerdos externos."),
+            ("Reemplazan a las elecciones como forma de decidir", "Operan dentro del Congreso electo, no en lugar de la elección."),
+        ],
+    ),
+    _ql(
+        "civ_inst_tramitacion", "civ_derechos", "dificil",
+        "¿Por qué conviene a la ciudadanía conocer las etapas de la Tabla 1?",
+        "Indica dónde y cuándo se puede incidir",
+        "Un proyecto no se decide en un solo momento: recorre comisiones y salas de "
+        "dos cámaras, puede volver a la de origen y pasar por una comisión "
+        "mixta.\nCada una de esas etapas es un punto donde una organización puede "
+        "ser escuchada en comisión, presentar antecedentes o dirigirse a "
+        "parlamentarios concretos, y todas ocurren antes de que el texto quede "
+        "fijado.\nSin ese mapa, la participación llega tarde: enterarse cuando la "
+        "ley ya se publicó en el Diario Oficial deja como única vía la reforma de "
+        "una norma que ya está vigente.",
+        [
+            ("Permite votar directamente cada proyecto de ley", "La ciudadanía no vota los proyectos: los votan las dos cámaras."),
+            ("Obliga al Congreso a aceptar las propuestas ciudadanas", "Conocer el procedimiento no obliga a nadie a acoger una propuesta."),
+            ("Sirve para vetar leyes ya publicadas en el Diario Oficial", "El veto es una facultad presidencial y previa a la publicación."),
+        ],
+    ),
     _ql(
         "civ_inst_autonomos", "civ_institucionalidad", "facil",
         "Según el texto, ¿qué examina la Contraloría antes de que un decreto "
