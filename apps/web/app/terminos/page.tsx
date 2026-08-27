@@ -59,11 +59,37 @@ export default function TerminosPage() {
           <section>
             <h2>4. Planes y pagos</h2>
             <p>
-              El plan Gratis está disponible hoy sin costo. Los planes Pro y
-              Colegios están en preparación: cuando se habiliten, se
-              informarán con claridad el precio, la periodicidad del cobro y
-              qué incluyen antes de que aceptes contratarlos. No se realizan
-              cobros sin tu consentimiento explícito.
+              El <strong>plan Gratis</strong> no tiene costo e incluye todo el
+              material de estudio: el árbol de habilidades completo, las
+              lecciones de las cinco pruebas y el banco de preguntas. Tiene una
+              cuota mensual de ensayos y permite guardar una carrera en Mi
+              meta. La cuota vigente se publica en la página de{" "}
+              <Link href="/planes" className="underline">Planes</Link>.
+            </p>
+            <p>
+              El <strong>plan Pro</strong> quita la cuota de ensayos y permite
+              guardar hasta diez carreras. Se ofrece en dos períodos: mensual y
+              anual. Los precios están expresados en pesos chilenos, se
+              muestran en la página de Planes antes de contratar y se cobran a
+              través de <strong>Flow</strong>, la pasarela de pago; 1000paes no
+              almacena los datos de tu tarjeta.
+            </p>
+            <p>
+              <strong>Cancelar es un clic desde tu perfil</strong>, sin
+              escribirle a nadie. Al cancelar se detiene la renovación y{" "}
+              <strong>conservas el acceso hasta el final del período que ya
+              pagaste</strong>: no se corta el servicio el día que cancelas ni
+              se cobran días que no vas a usar.
+            </p>
+            <p>
+              El <strong>plan Colegios</strong> no se contrata desde la web: se
+              acuerda conversando y se activa a mano. Si te interesa, escríbenos
+              a <a href="mailto:1000paessoporte@gmail.com" className="underline">1000paessoporte@gmail.com</a>.
+            </p>
+            <p>
+              No se realizan cobros sin tu consentimiento explícito. Si
+              cambiamos los precios, el cambio no afecta a un período que ya
+              pagaste.
             </p>
           </section>
 
