@@ -55885,8 +55885,7 @@ PASSAGES_HISTORIA = [
             "— La desocupación no incluye a los inscritos en programas "
             "estatales de empleo de emergencia, que en 1982 y 1983 ocuparon a "
             "cientos de miles de personas.\n"
-            "— En 1982 el Estado intervino la banca y asumió sus deudas, pese "
-            "al principio de no intervención que el propio gobierno declaraba.\n"
+            "— Entre 1981 y 1983 el Estado intervino la banca y asumió sus deudas, pese al principio de no intervención que el propio gobierno declaraba.\n"
             "— El sistema de pensiones de reparto fue reemplazado en 1981 por "
             "uno de capitalización individual."
         ),
@@ -56464,9 +56463,7 @@ PASSAGES_HISTORIA = [
             "| País Z | 9% | 64 | 133 |\n"
             "\n"
             "Notas:\n"
-            "— El valor exportado de Chile dependía en más de la mitad de un "
-            "solo producto minero cuyo precio se fijaba en mercados "
-            "extranjeros.\n"
+            "— El valor exportado de Chile dependía casi por completo de dos productos mineros cuyos precios se fijaban en mercados extranjeros.\n"
             "— El país Z mantuvo controles de cambio y aranceles altos durante "
             "todo el período.\n"
             "— Los cuatro países no chilenos aumentaron el gasto público entre "
@@ -56549,8 +56546,7 @@ PASSAGES_HISTORIA = [
             "\n"
             "También se dedicó a fijar el territorio. En 1843 ocupó el estrecho "
             "de Magallanes para adelantarse a cualquier reclamo extranjero. "
-            "Desde 1850 promovió la colonización de Valdivia y Llanquihue con "
-            "familias alemanas, a las que entregó tierras y créditos. Y entre "
+            "Desde mediados de siglo promovió la colonización de Valdivia y Llanquihue con familias alemanas, a las que entregó tierras y créditos. Y entre "
             "1861 y 1883 llevó adelante la ocupación de la Araucanía, que la "
             "prensa de la época llamó pacificación: un proceso militar y "
             "colonizador que despojó al pueblo mapuche de la mayor parte de sus "
@@ -57729,8 +57725,7 @@ PASSAGES_HISTORIA = [
             "habilitados. Personal, que nadie puede votar por otro. "
             "Igualitario, que el voto de cada persona vale exactamente lo "
             "mismo que el de cualquier otra, sin que pesen más la riqueza, la "
-            "educación, el sexo o el origen. Secreto, que nadie puede saber "
-            "qué votó una persona y, por lo tanto, presionarla.\n\n"
+            "educación, el sexo o el origen. Secreto, que nadie puede saber qué votó una persona y, por lo tanto, presionarla. Desde 2023 el voto es además obligatorio para quienes están habilitados.\n\n"
             "La democracia puede ejercerse de dos maneras. En la democracia "
             "directa la ciudadanía decide ella misma sobre los asuntos, como "
             "en la asamblea ateniense. En la representativa elige autoridades "
@@ -57772,8 +57767,7 @@ PASSAGES_HISTORIA = [
             "otra condición. No se ganan por mérito ni se otorgan como premio. "
             "Por eso se dice que el Estado no los concede sino que los "
             "reconoce, y su obligación es respetarlos y garantizarlos incluso "
-            "frente a quien la sociedad rechaza. Son además inalienables: no "
-            "pueden limitarse por decisión de una mayoría.\n\n"
+            "frente a quien la sociedad rechaza. Son además inalienables: nadie puede renunciar a ellos ni ser despojado de ellos, y no quedan a disposición de lo que una mayoría decida.\n\n"
             "La Declaración Universal de los Derechos Humanos fue aprobada en "
             "1948 por la Asamblea General de las Naciones Unidas, tres años "
             "después del fin de la Segunda Guerra Mundial. Ese contexto "
@@ -57817,8 +57811,7 @@ PASSAGES_HISTORIA = [
             "la Constitución. Su característica es la rapidez: busca "
             "restablecer el imperio del derecho sin esperar un juicio "
             "ordinario completo.\n\n"
-            "La Ley 20.609, conocida como Ley Zamudio, sanciona la "
-            "discriminación arbitraria, entendida como toda distinción sin "
+            "La Ley 20.609, conocida como Ley Zamudio, establece una acción judicial contra la discriminación arbitraria, entendida como toda distinción sin "
             "justificación razonable basada en categorías como nacionalidad, "
             "sexo, religión, orientación sexual o discapacidad. La palabra "
             "arbitraria es decisiva: no toda distinción es ilegal. Exigir un "
@@ -58002,14 +57995,13 @@ PASSAGES_HISTORIA = [
             "| Municipal 2012 | 40.000 | 22.000 | 55% |\n"
             "| Municipal 2016 | 44.000 | 15.400 | 35% |\n"
             "| Plebiscito 2020 | 46.000 | 23.000 | 50% |\n"
-            "| Municipal 2024 | 48.000 | 19.200 | 40% |\n\n"
+            "| Municipal 2021 | 47.000 | 18.800 | 40% |\n\n"
             "Notas:\n"
             "— Hasta 2012 la inscripción en el padrón era voluntaria y el voto "
             "obligatorio para los inscritos.\n"
             "— Desde 2012 la inscripción pasó a ser automática, lo que amplió "
             "el padrón.\n"
-            "— El plebiscito de 2020 fue una consulta nacional, no una "
-            "elección de autoridades."
+            "— El plebiscito de 2020 fue una consulta nacional, no una elección de autoridades.\n— En 2023 el voto volvió a ser obligatorio, cambio posterior al período que cubre la tabla."
         ),
     },
     {
@@ -58996,22 +58988,22 @@ QUESTIONS_HISTORIA = [
     _ql(
         "tabla_electoral", "civ_democracia", "facil",
         "Según la tabla, ¿cuántas personas estaban habilitadas para votar en la "
-        "municipal de 2024?",
-        "48.000 personas",
+        "municipal de 2021?",
+        "47.000 personas",
         "La primera columna de la tabla entrega el padrón habilitado de cada "
-        "elección: 40.000 en 2012, 44.000 en 2016, 46.000 en 2020 y 48.000 en "
-        "2024.\nEl padrón crece de manera sostenida en toda la serie, lo que la "
+        "elección: 40.000 en 2012, 44.000 en 2016, 46.000 en 2020 y 47.000 en "
+        "2021.\nEl padrón crece de manera sostenida en toda la serie, lo que la "
         "nota atribuye a la inscripción automática vigente desde 2012.",
         [
-            ("19.200 personas", "Esa cifra corresponde a los votos emitidos, no al padrón."),
-            ("46.000 personas, como en el plebiscito de 2020", "Ese es el padrón de 2020, no el de 2024."),
+            ("18.800 personas", "Esa cifra corresponde a los votos emitidos, no al padrón."),
+            ("46.000 personas, como en el plebiscito de 2020", "Ese es el padrón de 2020, no el de 2021."),
             ("40%", "El 40% es un porcentaje, no un número de personas."),
         ],
     ),
     _ql(
         "tabla_electoral", "civ_democracia", "dificil",
-        "Entre 2012 y 2024 el padrón crece 8.000 personas y los votos emitidos caen "
-        "de 22.000 a 19.200. ¿Qué combinación describe eso?",
+        "Entre 2012 y 2021 el padrón crece 7.000 personas y los votos emitidos caen "
+        "de 22.000 a 18.800. ¿Qué combinación describe eso?",
         "Más habilitados y menos votantes efectivos",
         "Las dos columnas se mueven en sentidos opuestos, y por eso la "
         "participación cae de 55% a 40%.\nLa nota explica el primer movimiento: "
@@ -65407,17 +65399,16 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "dictadura_economia_cifras", "his_dictadura", "medio",
-        "Según la segunda nota, ¿qué hizo el Estado en 1982 y por qué resulta "
-        "llamativo?",
+        "Según la segunda nota, ¿qué hizo el Estado entre 1981 y 1983 y por qué "
+        "resulta llamativo?",
         "Intervino la banca pese a declararse no intervencionista",
         "La nota consigna las dos cosas juntas: el Estado intervino la banca y "
         "asumió sus deudas, pese al principio de no intervención que el propio "
         "gobierno declaraba.\nLa tensión es entre el principio enunciado y la "
         "conducta efectiva, y aparece en el peor momento de la serie: 1982 registra "
-        "la mayor caída del PIB y la mayor desocupación.\nEs un dato útil para no "
-        "leer un modelo económico solo por su declaración de principios: lo que un "
-        "gobierno hace bajo presión informa tanto como lo que dice cuando no la "
-        "tiene.",
+        "la mayor caída del PIB y la mayor desocupación de la tabla.\nReconocer esa "
+        "distancia entre lo declarado y lo hecho es parte de leer una fuente, y no "
+        "depende de aprobar o rechazar la medida.",
         [
             ("Nacionalizó la industria para enfrentar la recesión", "La nota se refiere a la banca, y como intervención de rescate."),
             ("Aumentó los aranceles hasta el nivel de 1973", "El arancel de 1990 es 15%, muy por debajo del 94% inicial."),
@@ -68458,14 +68449,15 @@ QUESTIONS_HISTORIA = [
         "¿Por qué la crisis de 1929 golpeó con más fuerza a economías como la "
         "chilena que a economías más cerradas?",
         "Su ingreso dependía de mercados y precios que no controlaban",
-        "La primera nota entrega el rasgo decisivo: más de la mitad del valor "
-        "exportado provenía de un solo producto minero cuyo precio se fijaba en "
+        "La primera nota entrega el rasgo decisivo: el valor exportado dependía "
+        "casi por completo de dos productos mineros cuyos precios se fijaban en "
         "mercados extranjeros.\nCuando la demanda mundial se contrae, ese ingreso "
         "desaparece de golpe y sin que ninguna decisión interna pueda evitarlo. La "
-        "tabla lo muestra: el valor exportado chileno cae a 22 sobre base 100, la "
-        "peor cifra de la serie.\nY como ese ingreso financiaba también al fisco y "
-        "a la actividad interna, la caída se propaga al resto de la economía, que "
-        "es lo que registra el índice de producción industrial de 47.",
+        "tabla lo muestra: el valor exportado cae a 22 sobre 100 en 1932, la caída "
+        "más profunda de las cinco economías.\nEl país Z, que la nota describe con "
+        "controles de cambio y aranceles altos, es el que menos retrocede. La "
+        "comparación no prueba que esa política sea la causa, pero sí muestra que "
+        "la exposición al comercio exterior ordena los resultados.",
         [
             ("Su industria era más grande que la de los países cerrados", "La tabla no informa sobre el tamaño relativo de cada industria."),
             ("Tenían una desocupación más alta antes de que empezara la crisis", "Las cifras de desocupación son de 1932, ya iniciada la crisis."),
@@ -75263,19 +75255,20 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_ddhh", "civ_ddhh", "medio",
-        "Según el texto, ¿qué significa que los derechos humanos sean "
-        "inalienables?",
-        "Que no pueden limitarse por decisión de una mayoría",
-        "El texto lo señala al cerrar el primer párrafo: «Son además "
-        "inalienables: no pueden limitarse por decisión de una mayoría».\n\n"
-        "Es una idea exigente para la democracia: hay cosas que una votación no "
-        "puede decidir, por amplia que sea.\n\n"
-        "Justamente ahí está su función. Un derecho que la mayoría pudiera "
-        "suprimir no protegería a nadie de la mayoría.",
+        "Según el texto, ¿qué significa que los derechos humanos sean inalienables?",
+        "Que nadie puede renunciar a ellos ni ser despojado de ellos",
+        "El texto lo señala al cerrar el primer párrafo: son inalienables porque "
+        "nadie puede renunciar a ellos ni ser despojado de ellos.\nLa palabra "
+        "apunta a que un derecho humano no se transfiere ni se entrega, ni siquiera "
+        "con el acuerdo de quien lo tiene. Por eso el texto dice antes que el "
+        "Estado no los concede: no está en posición de darlos ni de quitarlos.\nQue "
+        "además no queden a disposición de lo que decida una mayoría es otra "
+        "propiedad, y el texto la afirma en la misma frase. Pero esa es su relación "
+        "con la democracia, no lo que significa la palabra inalienable.",
         [
-            ("Que se pierden si la persona comete un delito grave", "El texto afirma que se garantizan incluso a quien la sociedad rechaza."),
-            ("Que solo los reconoce el país donde se nació", "Los derechos humanos no dependen de la nacionalidad."),
-            ("Que deben renovarse periódicamente por ley", "No requieren renovación: se reconocen, no se conceden."),
+            ("Que ninguna ley puede limitar su ejercicio", "Ningún derecho es absoluto: la ley puede limitarlos de forma proporcional. Inalienable no significa ilimitado."),
+            ("Que se pierden si la persona comete un delito grave", "Es lo contrario de lo que dice el texto: no se ganan por mérito ni se pierden por conducta."),
+            ("Que solo los reconoce el país donde se nació", "Eso contradice la universalidad, que el texto afirma en la primera línea."),
         ],
     ),
     _ql(
@@ -75933,15 +75926,14 @@ QUESTIONS_HISTORIA = [
         "tabla_electoral", "civ_democracia", "facil",
         "Según la tabla, ¿en qué elección hubo menor participación?",
         "En la municipal de 2016, con 35%",
-        "Se recorre la columna de participación: 55%, 35%, 50% y 40%.\n\n"
-        "El valor más bajo es 35%, correspondiente a la municipal de 2016."
-        "\n\n"
-        "Es también la elección con menos votos emitidos en términos absolutos: "
-        "15.400, pese a que el padrón ya había crecido.",
+        "Se recorre la columna de participación: 55%, 35%, 50% y 40%.\n\nEl valor "
+        "más bajo es 35%, correspondiente a la municipal de 2016.\n\nEs también la "
+        "elección con menos votos emitidos en términos absolutos: 15.400, pese a "
+        "que el padrón ya había crecido.",
         [
-            ("En la municipal de 2024, con 40%", "Es baja, pero superior al 35% de 2016."),
-            ("En el plebiscito de 2020, con 50%", "Es la segunda participación más alta."),
-            ("En la municipal de 2012, con 55%", "Es la más alta de la serie."),
+            ("En la municipal de 2021, con 40%", "Es la segunda más baja de la serie, no la más baja."),
+            ("En el plebiscito de 2020, con 50%", "Está en la mitad de la serie, muy por encima del mínimo."),
+            ("En la municipal de 2012, con 55%", "Es la participación más alta de las cuatro."),
         ],
     ),
     _ql(
@@ -75984,12 +75976,11 @@ QUESTIONS_HISTORIA = [
         "nacional?",
         "Porque no se vota lo mismo que en una elección municipal",
         "Un plebiscito nacional decide un asunto de alcance país; una elección "
-        "municipal, autoridades comunales.\n\n"
-        "La atención pública, la campaña y lo que está en juego son distintos, "
-        "así que la participación no es directamente comparable.\n\n"
-        "Sin esa advertencia, alguien podría concluir que la gente «volvió a "
-        "votar» en 2020 y se desanimó en 2024, cuando se trata de dos tipos de "
-        "votación distintos.",
+        "municipal, autoridades comunales.\nLa atención pública, la campaña y lo "
+        "que está en juego son distintos, así que la participación no es "
+        "directamente comparable.\nSin esa advertencia, alguien podría concluir que "
+        "la gente volvió a votar en 2020 y se desanimó al año siguiente, cuando se "
+        "trata de dos tipos de votación distintos.",
         [
             ("Porque los plebiscitos no son vinculantes", "La nota no se refiere al carácter vinculante."),
             ("Porque en él votaron personas de otras comunas", "La tabla registra el padrón de Villa Esperanza."),
