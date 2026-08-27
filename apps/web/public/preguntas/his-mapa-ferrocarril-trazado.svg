@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 410" width="560" height="410" role="img">
+  <title>Mapa ferroviario del territorio ficticio de Aurelia hacia 1900. En la costa, a la izquierda, están Puerto Norte y Puerto Sur. En el interior hay cuatro zonas productoras: dos mineras y dos agrícolas. Cuatro líneas férreas unen cada zona con uno de los dos puertos, y ninguna conecta una zona productora con otra. Villa Alta, una localidad del interior, aparece con contorno segmentado y sin ninguna vía que llegue a ella.</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Red ferroviaria de Aurelia hacia 1900</text>
+    <path d="M78 44 L78 366" stroke="#4b5563" stroke-width="2"/>
+    <text x="64" y="205" text-anchor="middle" font-size="12" fill="#4b5563" transform="rotate(-90 64 205)">océano</text>
+    <circle cx="110" cy="118" r="9" fill="#111827"/>
+    <text x="126" y="115" font-size="13" font-weight="600" fill="#111827">Puerto Norte</text>
+    <circle cx="110" cy="290" r="9" fill="#111827"/>
+    <text x="126" y="287" font-size="13" font-weight="600" fill="#111827">Puerto Sur</text>
+    <rect x="300" y="62" width="88" height="38" fill="#9ca3af" stroke="#111827" stroke-width="1.5"/>
+    <text x="344" y="86" text-anchor="middle" font-size="12" fill="#111827">mina 1</text>
+    <path d="M119 118 L300 81" stroke="#111827" stroke-width="2.4"/>
+    <rect x="430" y="128" width="88" height="38" fill="#9ca3af" stroke="#111827" stroke-width="1.5"/>
+    <text x="474" y="152" text-anchor="middle" font-size="12" fill="#111827">mina 2</text>
+    <path d="M119 118 L430 147" stroke="#111827" stroke-width="2.4"/>
+    <rect x="320" y="250" width="88" height="38" fill="#f3f4f6" stroke="#111827" stroke-width="1.5"/>
+    <text x="364" y="274" text-anchor="middle" font-size="12" fill="#111827">trigo 1</text>
+    <path d="M119 290 L320 269" stroke="#111827" stroke-width="2.4"/>
+    <rect x="436" y="312" width="88" height="38" fill="#f3f4f6" stroke="#111827" stroke-width="1.5"/>
+    <text x="480" y="336" text-anchor="middle" font-size="12" fill="#111827">trigo 2</text>
+    <path d="M119 290 L436 331" stroke="#111827" stroke-width="2.4"/>
+    <rect x="250" y="176" width="96" height="38" fill="#ffffff" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="298" y="200" text-anchor="middle" font-size="12" fill="#4b5563">Villa Alta</text>
+    <line x1="300" y1="372" x2="330" y2="372" stroke="#111827" stroke-width="2.4"/>
+    <text x="338" y="376" font-size="12" fill="#4b5563">vía férrea</text>
+    <rect x="60" y="362" width="18" height="14" fill="#9ca3af" stroke="#111827" stroke-width="1.2"/>
+    <text x="84" y="374" font-size="12" fill="#4b5563">zona minera</text>
+    <rect x="176" y="362" width="18" height="14" fill="#f3f4f6" stroke="#111827" stroke-width="1.2"/>
+    <text x="200" y="374" font-size="12" fill="#4b5563">zona agrícola</text>
+    <text x="280" y="398" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

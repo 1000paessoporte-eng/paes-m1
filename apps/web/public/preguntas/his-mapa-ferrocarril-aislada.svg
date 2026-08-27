@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 410" width="560" height="410" role="img">
+  <title>Mapa ferroviario del territorio ficticio de Bermeja hacia 1890. En la costa están Puerto Real y Puerto Chico. En el interior hay tres zonas productoras: dos mineras, de salitre y de cobre, y una agrícola de viñas. Tres líneas férreas unen cada zona con uno de los dos puertos, y ninguna conecta una zona productora con otra. San Remigio, una localidad del interior, aparece con contorno segmentado y sin ninguna vía que llegue a ella.</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Red ferroviaria de Bermeja hacia 1890</text>
+    <path d="M78 44 L78 366" stroke="#4b5563" stroke-width="2"/>
+    <text x="64" y="205" text-anchor="middle" font-size="12" fill="#4b5563" transform="rotate(-90 64 205)">océano</text>
+    <circle cx="110" cy="130" r="9" fill="#111827"/>
+    <text x="126" y="127" font-size="13" font-weight="600" fill="#111827">Puerto Real</text>
+    <circle cx="110" cy="300" r="9" fill="#111827"/>
+    <text x="126" y="297" font-size="13" font-weight="600" fill="#111827">Puerto Chico</text>
+    <rect x="310" y="70" width="88" height="38" fill="#9ca3af" stroke="#111827" stroke-width="1.5"/>
+    <text x="354" y="94" text-anchor="middle" font-size="12" fill="#111827">salitre</text>
+    <path d="M119 130 L310 89" stroke="#111827" stroke-width="2.4"/>
+    <rect x="440" y="150" width="88" height="38" fill="#9ca3af" stroke="#111827" stroke-width="1.5"/>
+    <text x="484" y="174" text-anchor="middle" font-size="12" fill="#111827">cobre</text>
+    <path d="M119 130 L440 169" stroke="#111827" stroke-width="2.4"/>
+    <rect x="330" y="262" width="88" height="38" fill="#f3f4f6" stroke="#111827" stroke-width="1.5"/>
+    <text x="374" y="286" text-anchor="middle" font-size="12" fill="#111827">viñas</text>
+    <path d="M119 300 L330 281" stroke="#111827" stroke-width="2.4"/>
+    <rect x="230" y="186" width="96" height="38" fill="#ffffff" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="278" y="210" text-anchor="middle" font-size="12" fill="#4b5563">San Remigio</text>
+    <line x1="300" y1="372" x2="330" y2="372" stroke="#111827" stroke-width="2.4"/>
+    <text x="338" y="376" font-size="12" fill="#4b5563">vía férrea</text>
+    <rect x="60" y="362" width="18" height="14" fill="#9ca3af" stroke="#111827" stroke-width="1.2"/>
+    <text x="84" y="374" font-size="12" fill="#4b5563">zona minera</text>
+    <rect x="176" y="362" width="18" height="14" fill="#f3f4f6" stroke="#111827" stroke-width="1.2"/>
+    <text x="200" y="374" font-size="12" fill="#4b5563">zona agrícola</text>
+    <text x="280" y="398" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

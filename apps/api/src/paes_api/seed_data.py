@@ -58251,6 +58251,763 @@ PASSAGES_HISTORIA = [
 ]
 
 QUESTIONS_HISTORIA = [
+    _q(
+        "his_representaciones", "facil",
+        "Según el mapa, ¿qué región de Ventura tiene la mayor proporción de "
+        "población urbana?",
+        "La región C",
+        "El mapa asigna a cada región un sombreado y la leyenda dice qué rango "
+        "representa cada uno.\nC es la única con el sombreado más oscuro, que la "
+        "leyenda asocia al tramo de 90% o más. Ninguna otra alcanza ese "
+        "tramo.\nLeer un mapa de coropletas es siempre esa operación en dos pasos: "
+        "identificar el sombreado y buscarlo en la leyenda.",
+        [
+            ("La región A, que está en el segundo tramo más alto", "A está entre 60% y 89%, por debajo del tramo de C."),
+            ("La región E, la más austral del mapa", "E tiene el sombreado más claro, de menos de 30%."),
+            ("La región B, que ocupa una posición central", "B está entre 30% y 59%, según la leyenda."),
+        ],
+        imagen="/preguntas/his-mapa-coropleta-urbana.svg",
+    ),
+    _q(
+        "his_representaciones", "medio",
+        "Según el mapa de Bermeja, ¿qué tramo de alfabetización no tiene ninguna "
+        "región?",
+        "El de 70% a 89%",
+        "La leyenda define cuatro tramos, pero el mapa solo usa tres sombreados: P "
+        "y R comparten el de 50% a 69%, Q tiene el de 90% o más y S el de menos de "
+        "50%.\nNinguna región lleva el sombreado que la leyenda asigna al tramo de "
+        "70% a 89%.\nQue una leyenda ofrezca más categorías de las que el mapa usa "
+        "es corriente, y advertirlo evita suponer que cada tramo tiene por fuerza "
+        "un caso.",
+        [
+            ("El de 90% o más, que ninguna región alcanza", "Q lleva ese sombreado en el mapa."),
+            ("El de menos de 50%, que la leyenda no usa", "S está en ese tramo."),
+            ("El de 50% a 69%, que solo tendría una región", "Lo comparten dos regiones, P y R."),
+        ],
+        imagen="/preguntas/his-mapa-coropleta-alfabetizacion.svg",
+    ),
+    _q(
+        "his_representaciones", "dificil",
+        "Un estudiante concluye del mapa de Cardal que en la región I vive más "
+        "gente con agua potable que en la región II. ¿Es válida esa conclusión?",
+        "No: el mapa muestra proporciones, no cantidades",
+        "El mapa informa qué porcentaje de las viviendas de cada región tiene agua "
+        "potable. Una proporción no dice cuántas viviendas hay.\nLa región I puede "
+        "tener 90% sobre diez mil viviendas y la II un 35% sobre medio millón: los "
+        "sombreados serían los del mapa y la conclusión, falsa.\nEs el error más "
+        "frecuente al leer coropletas, y el propio mapa lo advierte en su nota "
+        "lateral. Para responder harían falta cifras absolutas de viviendas.",
+        [
+            ("Sí, porque I tiene el sombreado más oscuro del mapa", "El sombreado indica el porcentaje, no el número de viviendas."),
+            ("Sí, porque el norte concentra las viviendas urbanizadas", "El mapa no informa dónde se concentran las viviendas."),
+            ("No, porque el mapa no incluye a la región II", "II aparece en el mapa, con el sombreado más claro."),
+        ],
+        imagen="/preguntas/his-mapa-coropleta-agua.svg",
+    ),
+    _q(
+        "his_representaciones", "facil",
+        "Según el mapa de Duna, ¿qué región tiene la menor densidad de población?",
+        "La región P",
+        "La leyenda ordena cuatro tramos de densidad y P lleva el sombreado más "
+        "claro, que corresponde a menos de 5 habitantes por kilómetro cuadrado.\nEn "
+        "el otro extremo está O, con el sombreado más oscuro, que la leyenda asocia "
+        "a 100 o más habitantes por kilómetro cuadrado.",
+        [
+            ("La región O, que aparece con el sombreado más oscuro", "Ese sombreado corresponde al tramo más alto, de 100 o más."),
+            ("La región M, que está en el segundo tramo", "M está entre 5 y 24 habitantes por kilómetro cuadrado."),
+            ("La región N, que ocupa una posición intermedia", "N está entre 25 y 99 habitantes por kilómetro cuadrado."),
+        ],
+        imagen="/preguntas/his-mapa-coropleta-densidad.svg",
+    ),
+    _q(
+        "his_representaciones", "facil",
+        "Según la figura de Ventura, ¿qué representa el tamaño de cada región en el "
+        "cartograma?",
+        "Su población",
+        "La figura muestra dos representaciones del mismo país y las rotula: a la "
+        "izquierda el mapa por superficie y a la derecha el cartograma por "
+        "población.\nLa nota al pie lo confirma: en el cartograma el tamaño "
+        "representa la población y no el territorio.\nPor eso las dos imágenes no "
+        "coinciden, aunque se trate del mismo país con las mismas cinco regiones.",
+        [
+            ("La superficie que ocupa en el territorio", "Esa es la variable del mapa de la izquierda."),
+            ("La proporción de población urbana de cada una", "El cartograma de esta figura no representa esa variable."),
+            ("La distancia que la separa de la región capital", "El cartograma no representa distancias."),
+        ],
+        imagen="/preguntas/his-cartograma-poblacion.svg",
+    ),
+    _q(
+        "his_representaciones", "dificil",
+        "En la figura de Bermeja, S es la región más extensa del mapa y una franja "
+        "delgada en el cartograma. ¿Qué muestra ese contraste?",
+        "Mucho territorio con pocos votantes",
+        "Las dos representaciones miden variables distintas sobre las mismas "
+        "unidades, así que compararlas revela la relación entre ambas.\nS grande "
+        "por superficie y mínima por votantes significa que hay mucho territorio "
+        "por cada persona habilitada para votar.\nEsa es la ventaja del cartograma. "
+        "Un mapa convencional da a las regiones despobladas un peso visual que no "
+        "corresponde a su peso electoral, y el cartograma corrige esa impresión.",
+        [
+            ("Que sus votantes están mal contados en el cartograma", "La diferencia entre ambas figuras es lo que el cartograma busca mostrar, no un error."),
+            ("Que S tiene la mayor participación electoral del país", "La figura no informa nada sobre participación."),
+            ("Que S fue incorporada al país después que las demás", "La figura no entrega información histórica."),
+        ],
+        imagen="/preguntas/his-cartograma-votantes.svg",
+    ),
+    _q(
+        "his_representaciones", "medio",
+        "En la figura de Cardal, ¿qué región cambia más de tamaño entre las dos "
+        "representaciones?",
+        "La región III, que crece en el cartograma",
+        "En el mapa por superficie III es la franja más angosta de las cuatro. En "
+        "el cartograma pasa a ser, con diferencia, la mayor.\nEse contraste "
+        "significa que III concentra mucha producción agrícola en poco "
+        "territorio.\nEl movimiento inverso también está a la vista: IV es la "
+        "región más extensa del mapa y en el cartograma queda con un tamaño "
+        "parecido al de I.",
+        [
+            ("La región IV, que pasa a ser la mayor del cartograma", "La mayor del cartograma es III, no IV."),
+            ("La región I, que desaparece en el cartograma", "I sigue presente y con un tamaño parecido en ambas representaciones."),
+            ("La región II, que se duplica en el cartograma", "II se reduce en el cartograma respecto de su superficie."),
+        ],
+        imagen="/preguntas/his-cartograma-produccion.svg",
+    ),
+    _q(
+        "his_representaciones", "dificil",
+        "En la figura de Duna, ¿para qué pregunta conviene el cartograma antes que "
+        "el mapa por superficie?",
+        "Cuántas personas alcanza una medida",
+        "Si una decisión cubre regiones enteras, lo que importa es cuánta gente "
+        "vive en ellas y no cuánto territorio ocupan.\nEn el mapa por superficie "
+        "una medida que cubra P parece alcanzar a más de la mitad del país; el "
+        "cartograma muestra que alcanzaría a muy poca gente. Y al revés con "
+        "O.\nCada representación responde bien una pregunta distinta. Para "
+        "planificar un camino o estimar una superficie de cultivo, el mapa por "
+        "superficie sigue siendo el adecuado.",
+        [
+            ("Cuánto territorio ocupa cada región del país", "Para eso sirve el mapa por superficie, no el cartograma."),
+            ("A qué distancia queda cada región de la capital", "El cartograma deforma las distancias: no sirve para medirlas."),
+            ("Qué límites tiene cada región con sus vecinas", "El cartograma altera las formas y los límites reales."),
+        ],
+        imagen="/preguntas/his-cartograma-comparado.svg",
+    ),
+    _q(
+        "his_representaciones", "facil",
+        "Según el mapa de Ventura, ¿desde qué región llega el mayor número de "
+        "personas a la región C?",
+        "Desde la región D, con 120 mil",
+        "Las cuatro flechas que llegan a C están rotuladas: 40 mil desde A, 95 mil "
+        "desde B, 120 mil desde D y 60 mil desde E.\nLa mayor es la de D, y el "
+        "grosor lo confirma: la nota al pie indica que es proporcional al número de "
+        "personas, y la de D es la más gruesa del mapa.",
+        [
+            ("Desde la región B, con 95 mil", "Es la segunda en magnitud, por debajo de D."),
+            ("Desde la región E, con 60 mil", "Es la tercera de las cuatro."),
+            ("Desde la región A, con 40 mil", "Es la menor de las cuatro flechas que llegan a C."),
+        ],
+        imagen="/preguntas/his-mapa-migracion-llegadas.svg",
+    ),
+    _q(
+        "his_representaciones", "facil",
+        "Según el mapa de Bermeja, ¿qué ocurre con la región Q además de recibir "
+        "personas?",
+        "Salen 42 mil hacia la región R",
+        "El mapa incluye una flecha en sentido contrario, dibujada con línea "
+        "segmentada, que sale de Q y llega a R con 42 mil personas.\nEs la única "
+        "salida que el mapa registra: las otras tres flechas apuntan hacia Q.\nEl "
+        "detalle importa porque un mapa que solo dibujara las llegadas daría la "
+        "impresión de un movimiento en una sola dirección, y el movimiento real "
+        "casi nunca lo es.",
+        [
+            ("No sale ninguna persona de la región Q", "El mapa dibuja una salida de Q hacia R, con 42 mil personas."),
+            ("Salen 78 mil personas hacia la región R", "Los 78 mil corresponden a la flecha que va de R hacia Q."),
+            ("Salen personas hacia las tres regiones restantes", "El mapa registra una sola salida, hacia R."),
+        ],
+        imagen="/preguntas/his-mapa-migracion-salida.svg",
+    ),
+    _q(
+        "his_representaciones", "medio",
+        "¿Cuál es el saldo neto de personas que gana la región III según el mapa de "
+        "Cardal?",
+        "160 mil personas",
+        "El saldo neto se obtiene restando las salidas de las llegadas.\nLlegan 64 "
+        "+ 88 + 47 = 199 mil personas, y salen 39 mil hacia I. El saldo es 199 − 39 "
+        "= 160 mil.\nConviene distinguir el saldo del total de llegadas: quien "
+        "informa solo los 199 mil describe el flujo de entrada, no el cambio de "
+        "población que el mapa permite estimar.",
+        [
+            ("199 mil personas, sumando las tres flechas de entrada", "Ese es el total de llegadas: falta descontar la salida hacia I."),
+            ("238 mil personas, sumando todas las flechas del mapa", "La flecha hacia I se resta, no se suma."),
+            ("88 mil personas, según la flecha más gruesa", "Esa es la mayor de las llegadas, no el saldo total."),
+        ],
+        imagen="/preguntas/his-mapa-migracion-saldo.svg",
+    ),
+    _q(
+        "his_representaciones", "facil",
+        "Según el mapa de Aurelia, ¿hacia dónde corren todas las líneas férreas?",
+        "Desde el interior hacia los puertos",
+        "El mapa dibuja cuatro líneas y todas nacen en una zona productora del "
+        "interior y terminan en Puerto Norte o en Puerto Sur.\nNinguna línea "
+        "conecta una zona productora con otra, y ese es el rasgo que el trazado "
+        "deja a la vista.\nVilla Alta, la única localidad del interior que el mapa "
+        "dibuja sin producción, aparece con contorno segmentado y sin ninguna vía "
+        "que llegue a ella.",
+        [
+            ("Entre las zonas productoras del interior", "El mapa no dibuja ninguna línea que una dos zonas productoras."),
+            ("Desde los puertos hacia Villa Alta", "Villa Alta queda fuera de la red ferroviaria."),
+            ("Siguiendo la línea de la costa de norte a sur", "Ninguna vía corre paralela a la costa en el mapa."),
+        ],
+        imagen="/preguntas/his-mapa-ferrocarril-trazado.svg",
+    ),
+    _q(
+        "his_representaciones", "medio",
+        "¿Qué revela sobre la economía de Bermeja que San Remigio quede fuera de la "
+        "red ferroviaria?",
+        "La red se trazó para exportar, no para conectar",
+        "San Remigio es la única localidad del interior que el mapa dibuja sin "
+        "producción exportable, y es también la única sin vía férrea.\nLa "
+        "coincidencia indica cuál fue el criterio del trazado: llegar a donde hay "
+        "algo que embarcar. Una red pensada para integrar el territorio habría "
+        "conectado también a las ciudades.\nEs el patrón que la historiografía "
+        "describe para las economías exportadoras del siglo XIX, y el mapa lo hace "
+        "visible sin necesidad de ningún texto.",
+        [
+            ("San Remigio tenía menos habitantes que las zonas productoras", "El mapa no entrega población de ninguna localidad."),
+            ("La construcción de la red se detuvo antes de llegar allí", "El mapa muestra el trazado, no su cronología."),
+            ("San Remigio se conectaba por caminos en vez de vías férreas", "El mapa no representa caminos."),
+        ],
+        imagen="/preguntas/his-mapa-ferrocarril-aislada.svg",
+    ),
+    _q(
+        "his_representaciones", "dificil",
+        "¿Qué NO permite establecer el mapa de Cardal sobre su economía?",
+        "Cuánto se producía en cada zona",
+        "El mapa informa dónde está cada zona productora, de qué tipo es y a qué "
+        "puerto se conecta.\nNo entrega volúmenes ni valores: la zona de carbón y "
+        "la de hierro aparecen idénticas aunque una produjera diez veces más que la "
+        "otra. Tampoco dice en qué año se construyó cada línea ni hacia qué "
+        "mercados salía la carga.\nUn mapa de red muestra la forma de un sistema, "
+        "no su magnitud. Para eso harían falta series de producción y de "
+        "exportaciones.",
+        [
+            ("Qué tipo de producción tiene cada zona del interior", "La leyenda distingue las zonas mineras de las agrícolas."),
+            ("A qué puerto se conecta cada zona productora", "Cada línea del mapa lo indica con claridad."),
+            ("Qué localidad del interior queda fuera de la red", "Los Álamos aparece dibujado sin ninguna vía que llegue a él."),
+        ],
+        imagen="/preguntas/his-mapa-ferrocarril-limites.svg",
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "facil",
+        "Según el texto, ¿qué derechos son de tercera generación?",
+        "Los colectivos, como el medio ambiente y la paz",
+        "El texto los sitúa después de los civiles y políticos, que son de primera "
+        "generación, y de los económicos, sociales y culturales, que son de "
+        "segunda.\nLo que los distingue es que no se ejercen individualmente: su "
+        "titular es una comunidad entera, y por eso el texto los llama derechos "
+        "colectivos.",
+        [
+            ("Los civiles y políticos, como la libertad de expresión", "Esos son los de primera generación."),
+            ("Los económicos y sociales, como la salud y la educación", "Esos son los de segunda generación."),
+            ("Los que solo reconocen algunos países del mundo", "La clasificación no depende de cuántos países los reconozcan."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "facil",
+        "Según el texto, ¿qué deberes menciona junto a los derechos?",
+        "Respetar la Constitución, pagar impuestos y cuidar lo público",
+        "El texto los enumera al cerrar, agregando el deber de respetar los "
+        "derechos de los demás.\nY explica por qué los presenta como la contracara "
+        "de los derechos: para que el Estado garantice educación, salud o seguridad "
+        "necesita recursos y un marco de convivencia respetado por todos.",
+        [
+            ("Militar en un partido y asistir a las votaciones", "El texto no incluye ninguno de los dos entre los deberes."),
+            ("Estar de acuerdo con las decisiones del gobierno", "La discrepancia es un derecho, no lo contrario de un deber."),
+            ("Renunciar a un derecho cuando el Estado lo solicite", "El texto describe derechos inalienables."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "medio",
+        "Un país sostiene que reconoce los derechos humanos solo a quienes tienen "
+        "su nacionalidad. ¿Qué característica desconoce?",
+        "La universalidad de los derechos humanos",
+        "El texto define universales como que corresponden a todas las personas por "
+        "el solo hecho de serlo, sin distinción de nacionalidad, sexo, religión, "
+        "situación migratoria ni ninguna otra condición.\nCondicionarlos a la "
+        "nacionalidad los convierte en derechos de ciudadanía, que son otra cosa: "
+        "los concede cada Estado a quienes reconoce como suyos.\nEl texto refuerza "
+        "el punto por otra vía: sostiene que el Estado no los concede sino que los "
+        "reconoce, de modo que no está en su mano decidir a quiénes alcanzan.",
+        [
+            ("La progresividad de los derechos de segunda generación", "Ese rasgo se refiere al ritmo de realización, no a quién es titular."),
+            ("La existencia de deberes junto a los derechos", "Los deberes no determinan quién es titular de un derecho."),
+            ("La clasificación de los derechos en generaciones", "Las generaciones ordenan los derechos, no a sus titulares."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "¿Por qué el texto insiste en que el Estado reconoce los derechos y no los "
+        "concede?",
+        "Lo concedido puede retirarse; lo reconocido, no",
+        "La diferencia parece de vocabulario y decide todo lo demás. Si el Estado "
+        "otorgara los derechos, tendría también la facultad de recortarlos, porque "
+        "quien da puede dejar de dar.\nAl reconocerlos, admite que existen antes "
+        "que su decisión y con independencia de ella: por eso el texto agrega que "
+        "debe garantizarlos incluso frente a quien la sociedad rechaza.\nAhí se "
+        "apoya también la inalienabilidad que el texto afirma: si no dependen de "
+        "una concesión, tampoco pueden limitarse por decisión de una mayoría.",
+        [
+            ("Porque así los tratados internacionales resultan innecesarios", "El texto no plantea que los tratados sobren."),
+            ("Porque el reconocimiento exige menos recursos que la concesión", "El argumento no es de costo sino de fundamento."),
+            ("Porque los derechos reconocidos no admiten límite alguno", "El texto acepta límites: lo que excluye es que dependan de una concesión."),
+        ],
+    ),
+    _ql(
+        "civ_ddhh", "civ_ddhh", "dificil",
+        "Un gobierno afirma que garantizará la educación cuando la economía lo "
+        "permita, sin fijar plazo. ¿Cómo se evalúa esa respuesta según el texto?",
+        "La progresividad no autoriza a no avanzar",
+        "El texto reconoce que los derechos de segunda generación exigen "
+        "prestaciones activas —escuelas, hospitales, profesionales, presupuesto— y "
+        "que por eso su realización es progresiva y depende de los recursos "
+        "disponibles.\nProgresiva describe un ritmo, no una condición suspensiva. "
+        "Un compromiso sin plazo ni avance verificable convierte el rasgo en una "
+        "excusa permanente.\nLa distinción importa porque el texto sitúa esos "
+        "derechos al mismo nivel que los demás: lo que varía es cómo se cumplen, no "
+        "si obligan.",
+        [
+            ("Es correcta: esos derechos no obligan al Estado", "El texto los presenta como derechos humanos plenos, no como metas optativas."),
+            ("Es incorrecta: deben garantizarse de inmediato y por completo", "El texto admite que su realización es progresiva."),
+            ("Es correcta: la educación no es un derecho humano", "El texto la menciona expresamente entre los de segunda generación."),
+        ],
+    ),
+    _ql(
+        "civ_ninez", "civ_ddhh", "facil",
+        "Según el texto, ¿qué organismo aprobó la Convención sobre los Derechos del "
+        "Niño?",
+        "Las Naciones Unidas, en 1989",
+        "El texto lo consigna al comenzar, y agrega que Chile la ratificó en "
+        "1990.\nTambién precisa qué cambió: hasta entonces predominaba la idea de "
+        "que niños y niñas eran objeto de protección, y la Convención los reconoce "
+        "como sujetos de derecho.",
+        [
+            ("La Organización de Estados Americanos, en 1990", "El texto atribuye la aprobación a las Naciones Unidas."),
+            ("El Congreso chileno, en 1990", "En 1990 Chile ratificó una convención ya aprobada, no la creó."),
+            ("Las Naciones Unidas, en 1948", "En 1948 se aprobó la Declaración Universal de Derechos Humanos."),
+        ],
+    ),
+    _ql(
+        "civ_ninez", "civ_ddhh", "facil",
+        "Según el texto, ¿cuáles son los dos principios que ordenan el resto de la "
+        "Convención?",
+        "El interés superior del niño y el derecho a ser oído",
+        "El texto los presenta como los dos que ordenan todo lo demás.\nEl primero "
+        "establece que ante cualquier decisión que le afecte debe primar lo que "
+        "resulte mejor para él; el segundo, que se escuche su opinión en los "
+        "asuntos que le conciernen y que esa opinión se tenga en cuenta según su "
+        "edad.",
+        [
+            ("El derecho a la educación y el derecho a la salud", "El texto los menciona entre los derechos abarcados, no como principios ordenadores."),
+            ("La protección frente a la violencia y el derecho al juego", "También son derechos abarcados, no los dos principios."),
+            ("La ratificación del tratado y su implementación legal", "Son etapas del proceso, no principios de la Convención."),
+        ],
+    ),
+    _ql(
+        "civ_ninez", "civ_ddhh", "facil",
+        "Según el texto, ¿qué idea predominaba sobre la infancia antes de 1989?",
+        "Que eran objeto de protección y otros decidían por ellos",
+        "El texto lo describe así: alguien decidía por ellos, en su nombre y sin "
+        "consultarlos.\nLa Convención introduce el cambio de enfoque al "
+        "reconocerlos como sujetos de derecho, es decir titulares de derechos "
+        "propios que pueden ejercer según su edad y madurez.",
+        [
+            ("Que tenían exactamente los mismos derechos que los adultos", "Ese reconocimiento llega con la Convención, y matizado por la edad."),
+            ("Que no existía ninguna forma de protección a la infancia", "Sí existía, pero desde otro enfoque."),
+            ("Que su opinión debía considerarse en toda decisión", "Ese es el derecho a ser oído, posterior a 1989."),
+        ],
+    ),
+    _ql(
+        "civ_ninez", "civ_ddhh", "dificil",
+        "Un tribunal escucha a un niño de diez años en un asunto que le concierne y "
+        "luego resuelve en sentido distinto al que él pidió. ¿Se respetó el derecho "
+        "a ser oído?",
+        "Sí, si su opinión se consideró al decidir",
+        "El texto advierte expresamente contra la interpretación contraria: ser "
+        "oído no significa que la decisión final la tome el niño.\nLo que el "
+        "derecho exige es que su punto de vista se escuche, se considere según su "
+        "edad y no se ignore por el solo hecho de que sea menor.\nResolver en otro "
+        "sentido es compatible con eso, porque el otro principio —el interés "
+        "superior del niño— puede apuntar a una solución distinta de la que él "
+        "prefiere.",
+        [
+            ("No, porque el tribunal debía resolver según lo que él pidió", "El texto descarta que la decisión final le corresponda al niño."),
+            ("No, porque a los diez años su opinión no puede considerarse", "El texto prohíbe ignorar su punto de vista por su edad."),
+            ("Sí, porque basta con haberlo escuchado sin más", "El texto exige además que la opinión se tenga en cuenta."),
+        ],
+    ),
+    _ql(
+        "civ_ninez", "civ_ddhh", "dificil",
+        "¿Por qué el texto sostiene que ratificar la Convención no basta?",
+        "Sin leyes, instituciones y presupuesto no se puede exigir",
+        "El texto reconoce que ratificar un tratado obliga al Estado, de modo que "
+        "el problema no es de fuerza jurídica.\nLo que falta después es la "
+        "maquinaria que convierte una declaración en algo reclamable: normas "
+        "internas que la desarrollen, organismos que la apliquen y recursos que la "
+        "financien.\nEs el mismo razonamiento que aparece en cualquier derecho "
+        "prestacional: entre el texto que lo declara y la persona que lo ejerce hay "
+        "una distancia que se cubre con decisiones concretas, no con la firma.",
+        [
+            ("Porque la Convención no obliga a los Estados que la firman", "El texto afirma que ratificar sí obliga."),
+            ("Porque debe ratificarse otra vez cada cierto número de años", "El texto no plantea ninguna renovación periódica."),
+            ("Porque solo rige para los países que la redactaron", "Obliga a todos los Estados que la ratifican."),
+        ],
+    ),
+    _ql(
+        "civ_igualdad", "civ_ddhh", "facil",
+        "Según el texto, ¿qué ejemplo usa para mostrar que el trato idéntico no "
+        "siempre produce igualdad?",
+        "Una prueba escrita igual para una persona ciega y una vidente",
+        "El texto lo describe como formalmente igual y materialmente injusto: una "
+        "de las dos no puede rendirla.\nDe ahí introduce la figura del ajuste "
+        "—formatos accesibles, tiempo adicional—, que según el texto no otorga "
+        "ventaja sino que remueve un obstáculo.",
+        [
+            ("Un cupo reservado para un grupo históricamente excluido", "Ese es el ejemplo de acción afirmativa, que el texto trata aparte."),
+            ("Un impuesto que grava por igual a todos los ingresos", "El texto no usa ejemplos tributarios."),
+            ("Una ley aprobada sin el acuerdo de todos los sectores", "El texto aclara que la igualdad se refiere a la aplicación de la norma."),
+        ],
+    ),
+    _ql(
+        "civ_igualdad", "civ_ddhh", "facil",
+        "Según el texto, ¿qué está fuera de discusión en el debate sobre igualdad?",
+        "Que la distinción arbitraria está prohibida siempre",
+        "El texto cierra separando lo que se discute de lo que no. Las acciones "
+        "afirmativas son objeto de desacuerdo; el punto de partida, no.\nEse punto "
+        "de partida es que la distinción sin justificación razonable está prohibida "
+        "en cualquier caso, y sobre él coinciden quienes defienden y quienes "
+        "objetan esas medidas.",
+        [
+            ("Que las acciones afirmativas son necesarias", "El texto las presenta como el punto discutido."),
+            ("Que los ajustes deben ser permanentes", "El texto propone la temporalidad como criterio para distinguirlos de un privilegio."),
+            ("Que la igualdad formal basta para lograr igualdad real", "El texto muestra casos donde no basta."),
+        ],
+    ),
+    _ql(
+        "civ_igualdad", "civ_ddhh", "dificil",
+        "Una universidad reserva cupos para estudiantes de liceos públicos y los "
+        "evalúa cada tres años según la brecha de acceso. ¿Cómo se ubica esa medida "
+        "en el criterio del texto?",
+        "Se parece a un ajuste: es temporal y se evalúa",
+        "El texto ofrece un criterio explícito para distinguir: si la medida es "
+        "temporal y busca cerrar una brecha medible, se parece a un ajuste; si es "
+        "permanente y no se evalúa, se parece a un privilegio.\nLa medida descrita "
+        "cumple las dos condiciones del primer caso: tiene una brecha identificada "
+        "y una revisión periódica que puede terminarla.\nEl texto no zanja el "
+        "debate de fondo sobre las acciones afirmativas. Lo que entrega es una "
+        "manera de examinar cada medida concreta en vez de discutirlas todas "
+        "juntas.",
+        [
+            ("Se parece a un privilegio, porque reserva cupos por origen", "El criterio del texto no es qué reserva sino si es temporal y se evalúa."),
+            ("Queda fuera del debate, porque las universidades son autónomas", "La autonomía institucional no interviene en el criterio del texto."),
+            ("Es un ajuste solo si beneficia a la mayoría de los postulantes", "El texto descarta el tamaño del grupo como criterio."),
+        ],
+    ),
+    _ql(
+        "civ_igualdad", "civ_ddhh", "dificil",
+        "¿Por qué el texto sostiene que un ajuste no otorga ventaja?",
+        "Remueve un obstáculo que otros no enfrentan",
+        "La objeción habitual es que dar tiempo adicional o un formato distinto "
+        "coloca a alguien en mejor posición que el resto.\nEl texto responde "
+        "señalando el punto de partida: quien recibe el ajuste enfrentaba una "
+        "barrera que los demás no tienen, y el ajuste la retira sin agregar nada "
+        "por encima.\nDe ahí que la exigencia no baje. El ejemplo de la prueba lo "
+        "muestra: el estándar evaluado sigue siendo el mismo, y lo que cambia son "
+        "las condiciones en que se rinde.",
+        [
+            ("Reduce el nivel de exigencia para quien lo recibe", "El texto sostiene que el ajuste modifica las condiciones, no el estándar."),
+            ("Se aplica por igual a todas las personas evaluadas", "Se aplica a quien enfrenta el obstáculo."),
+            ("Compensa una desventaja económica de origen", "El ejemplo del texto se refiere a una discapacidad."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_ddhh", "facil",
+        "Según el texto, ¿qué organismo vela por el cumplimiento de los derechos "
+        "del consumidor?",
+        "El SERNAC",
+        "El texto lo señala al describir la Ley 19.496, y agrega que recibe "
+        "denuncias.\nY explica por qué esa ley existe: entre un comercio y un "
+        "consumidor hay un desequilibrio que el solo acuerdo privado no corrige.",
+        [
+            ("El Instituto Nacional de Derechos Humanos", "El INDH promueve y protege los derechos humanos, no el consumo."),
+            ("La Corte de Apelaciones de cada región", "Ante ella se presenta el recurso de protección."),
+            ("La Contraloría General de la República", "El texto no la menciona en este ámbito."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_ddhh", "medio",
+        "Una universidad exige título profesional para contratar a un docente y "
+        "otra rechaza a un postulante por su religión. ¿Cómo las distingue la Ley "
+        "20.609 según el texto?",
+        "La primera tiene justificación razonable y la segunda no",
+        "El texto sostiene que la palabra arbitraria es decisiva: no toda "
+        "distinción es ilegal.\nY usa un par casi idéntico para explicarlo: exigir "
+        "un título profesional para ejercer medicina es razonable, y rechazar a "
+        "alguien por su nacionalidad no lo es.\nEl criterio, entonces, no es si "
+        "hubo distinción sino si existe una razón que la sostenga. La religión "
+        "figura entre las categorías que el texto enumera como protegidas.",
+        [
+            ("Ambas son discriminación arbitraria según la ley", "El texto admite las distinciones con justificación razonable."),
+            ("Ninguna lo es, porque el empleador elige a quién contrata", "El texto señala que las categorías protegidas limitan esa libertad."),
+            ("Se distinguen por la intención de quien contrata", "El criterio es la falta de justificación, no la intención."),
+        ],
+    ),
+    _ql(
+        "civ_proteccion", "civ_ddhh", "dificil",
+        "¿Qué tienen en común el recurso de protección, la Ley 20.609 y la Ley "
+        "19.496, según el texto?",
+        "Convierten un derecho declarado en algo exigible",
+        "El texto abre con esa idea: un derecho escrito que no puede exigirse queda "
+        "en declaración, y por eso el ordenamiento contempla mecanismos "
+        "concretos.\nCada uno opera sobre un ámbito distinto —un acto arbitrario "
+        "que afecta garantías constitucionales, una distinción sin justificación, "
+        "un producto defectuoso— y los tres entregan una vía concreta para "
+        "reclamar.\nEsa es la diferencia entre reconocer un derecho y protegerlo: "
+        "lo primero lo enuncia y lo segundo define ante quién y cómo se hace valer.",
+        [
+            ("Los tres se tramitan ante la Corte de Apelaciones", "Solo el recurso de protección se presenta ante ese tribunal."),
+            ("Los tres protegen exclusivamente derechos de consumo", "Solo la Ley 19.496 se refiere al consumo."),
+            ("Los tres fueron creados por la misma reforma legal", "El texto no los presenta como parte de una sola reforma."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "facil",
+        "Según el texto, ¿qué significa que el sufragio sea universal?",
+        "Que votan todos los ciudadanos habilitados",
+        "El texto lo define así al enumerar los cuatro caracteres del sufragio "
+        "chileno.\nConviene no confundirlo con el igualitario, que se refiere a que "
+        "el voto de cada persona vale lo mismo, ni con el personal, que exige que "
+        "nadie vote por otro.",
+        [
+            ("Que el voto de cada persona vale exactamente lo mismo", "Esa es la característica de igualitario."),
+            ("Que nadie puede saber por quién votó una persona", "Corresponde al carácter secreto del sufragio."),
+            ("Que el voto se emite en persona y no por delegación", "Eso define el carácter personal."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "facil",
+        "Según el texto, ¿qué organizaciones menciona como parte de la sociedad "
+        "civil?",
+        "Juntas de vecinos, sindicatos y centros de alumnos",
+        "El texto las enumera junto con las fundaciones al describir la "
+        "participación que no ocurre votando.\nY precisa su función: canalizan "
+        "demandas y ejercen control social de forma permanente, en el día a día del "
+        "territorio donde el voto no llega.",
+        [
+            ("Los partidos políticos y sus candidaturas", "El texto los trata aparte, como actores del sistema representativo."),
+            ("El Congreso Nacional y las municipalidades", "Son órganos del Estado, no organizaciones de la sociedad civil."),
+            ("Los tribunales electorales de cada región", "El texto no los menciona en ese pasaje."),
+        ],
+    ),
+    _ql(
+        "civ_sufragio", "civ_democracia", "dificil",
+        "Un dirigente propone reemplazar las elecciones por consultas ciudadanas "
+        "permanentes sobre cada asunto. ¿Qué problema plantea esa idea según el "
+        "texto?",
+        "Confunde dos formas de democracia que cumplen funciones distintas",
+        "El texto distingue la democracia directa, donde la ciudadanía decide ella "
+        "misma sobre los asuntos, de la representativa, donde elige autoridades que "
+        "deciden en su nombre durante un período y les pide cuentas en la elección "
+        "siguiente.\nChile combina ambas: es representativo como regla y contempla "
+        "plebiscitos comunales y nacionales.\nSuprimir las elecciones eliminaría el "
+        "mecanismo de rendición de cuentas que el texto describe, sin que las "
+        "consultas lo reemplacen: una consulta resuelve un asunto, no designa a "
+        "quien deberá responder por lo decidido.",
+        [
+            ("Las consultas ciudadanas están prohibidas en Chile", "El texto señala que el sistema contempla mecanismos de participación directa."),
+            ("La democracia directa nunca ha existido en ningún país", "El texto menciona la asamblea ateniense como ejemplo."),
+            ("Los plebiscitos solo pueden convocarse a nivel nacional", "El texto indica que existen a nivel comunal y nacional."),
+        ],
+    ),
+    _ql(
+        "civ_participacion_local", "civ_democracia", "facil",
+        "Según el texto, ¿qué mecanismos comunales de participación menciona?",
+        "Consejos de la sociedad civil, audiencias y presupuestos participativos",
+        "El texto los enumera como los mecanismos que existen a nivel comunal, "
+        "además del acceso a la información pública y del derecho de petición.\nY "
+        "reconoce su límite: su alcance suele ser acotado. Pero les atribuye una "
+        "virtud propia, que es obligar a discutir prioridades en público.",
+        [
+            ("Elecciones primarias y plebiscitos nacionales", "El texto no los incluye entre los mecanismos comunales."),
+            ("Recursos judiciales ante la Corte de Apelaciones", "Esa es una vía de protección de derechos, no de participación comunal."),
+            ("Consultas obligatorias antes de cada decisión municipal", "El texto no describe ninguna consulta obligatoria."),
+        ],
+    ),
+    _ql(
+        "civ_participacion_local", "civ_democracia", "facil",
+        "Según el texto, ¿qué debe hacer un órgano del Estado ante una solicitud de "
+        "información pública?",
+        "Entregarla, salvo causal legal de reserva",
+        "El texto lo establece junto con la otra cara de la regla: quien la "
+        "solicita no debe explicar para qué la quiere.\nLa excepción está acotada a "
+        "las causales que la ley define, de modo que negarse exige invocar una de "
+        "ellas y no basta con no querer entregarla.",
+        [
+            ("Entregarla solo si quien la pide acredita interés legítimo", "El texto señala que no hace falta explicar para qué se quiere."),
+            ("Entregarla únicamente a los vecinos de la comuna", "El acceso no está limitado por domicilio."),
+            ("Publicarla en el sitio municipal dentro del mismo día", "El texto no fija ese procedimiento ni ese plazo."),
+        ],
+    ),
+    _ql(
+        "civ_participacion_local", "civ_democracia", "dificil",
+        "Una alcaldesa dice que los presupuestos participativos son innecesarios "
+        "porque el concejo ya representa a los vecinos. ¿Qué le responde el texto?",
+        "Entre una elección y otra pasan años",
+        "El texto abre con esa constatación: entre una elección y otra la "
+        "ciudadanía queda sin mecanismos si solo cuenta con el voto.\nLos "
+        "presupuestos participativos operan en ese intervalo y hacen algo que la "
+        "representación no hace: los vecinos deciden directamente el destino de una "
+        "parte de los recursos, en vez de delegarlo.\nEl texto no los presenta como "
+        "reemplazo del concejo. Sostiene que cubren el espacio que el voto deja "
+        "vacío, que es la mayor parte del tiempo.",
+        [
+            ("El concejo municipal no representa realmente a los vecinos", "El texto no cuestiona la legitimidad del concejo."),
+            ("Los presupuestos participativos reemplazan al concejo", "El texto los presenta como complemento, no como sustituto."),
+            ("Las decisiones del concejo pueden ser anuladas por los vecinos", "Ninguno de los mecanismos descritos tiene ese efecto."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "civ_democracia", "facil",
+        "¿Qué reconoce la Fuente 1 sobre las mujeres, pese a oponerse al proyecto?",
+        "Que no es una cuestión de capacidad intelectual",
+        "La fuente declara ese punto de manera explícita antes de formular su "
+        "objeción.\nSu argumento va por otro lado: sostiene que el voto apartaría a "
+        "las mujeres de una función del hogar que considera "
+        "irremplazable.\nRegistrar esa distinción importa para leer bien el "
+        "documento: quien se opone no siempre lo hace con el argumento que uno "
+        "esperaría, y atribuirle uno que no usó debilita la crítica.",
+        [
+            ("Que ya cuentan con el derecho a voto presidencial", "La fuente reconoce el voto municipal y objeta extenderlo."),
+            ("Que su participación mejoraría la calidad de las leyes", "La fuente no concede ese punto."),
+            ("Que el hogar no debería ser una función exclusiva suya", "La fuente sostiene lo contrario."),
+        ],
+    ),
+    _ql(
+        "fuente_voto_femenino", "civ_democracia", "dificil",
+        "¿Qué muestra este par de fuentes sobre cómo se amplía un derecho político?",
+        "Hubo que discutirlo y disputarlo, no se concedió solo",
+        "El par documenta una discusión real: una posición argumenta contra la "
+        "extensión del sufragio y la otra responde punto por punto.\nEso descarta "
+        "la imagen de una ampliación que llega sola con el paso del tiempo. La "
+        "Fuente 2 lo dice al cerrar, recordando cuánto llevaban esperando.\nLa "
+        "lección excede el caso: los derechos que hoy parecen evidentes fueron en "
+        "su momento objeto de disputa, y reconstruir esa disputa es lo que impide "
+        "leer el pasado como una progresión natural.",
+        [
+            ("Los derechos se amplían cuando la mayoría cambia de opinión", "Las fuentes muestran una disputa entre posiciones, no un cambio espontáneo."),
+            ("La ampliación del sufragio fue un trámite administrativo", "El par de fuentes documenta un debate político abierto."),
+            ("El derecho se reconoció sin que nadie se opusiera", "La Fuente 1 es precisamente una oposición al proyecto."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "civ_democracia", "facil",
+        "Según la tabla, ¿cuántas personas estaban habilitadas para votar en la "
+        "municipal de 2024?",
+        "48.000 personas",
+        "La primera columna de la tabla entrega el padrón habilitado de cada "
+        "elección: 40.000 en 2012, 44.000 en 2016, 46.000 en 2020 y 48.000 en "
+        "2024.\nEl padrón crece de manera sostenida en toda la serie, lo que la "
+        "nota atribuye a la inscripción automática vigente desde 2012.",
+        [
+            ("19.200 personas, según la segunda columna", "Esa cifra corresponde a los votos emitidos, no al padrón."),
+            ("46.000 personas, como en el plebiscito de 2020", "Ese es el padrón de 2020, no el de 2024."),
+            ("40%, que es la participación de ese año", "El 40% es un porcentaje, no un número de personas."),
+        ],
+    ),
+    _ql(
+        "tabla_electoral", "civ_democracia", "dificil",
+        "Entre 2012 y 2024 el padrón crece 8.000 personas y los votos emitidos caen "
+        "de 22.000 a 19.200. ¿Qué combinación describe eso?",
+        "Más habilitados y menos votantes efectivos",
+        "Las dos columnas se mueven en sentidos opuestos, y por eso la "
+        "participación cae de 55% a 40%.\nLa nota explica el primer movimiento: "
+        "desde 2012 la inscripción pasó a ser automática, lo que incorporó al "
+        "padrón a personas que antes no figuraban en él.\nEl segundo movimiento la "
+        "tabla no lo explica. Que haya menos votos emitidos en términos absolutos, "
+        "y no solo en proporción, es un dato que exige buscar causas fuera de esta "
+        "fuente.",
+        [
+            ("Más habilitados y también más votantes efectivos", "Los votos emitidos caen de 22.000 a 19.200."),
+            ("Menos habilitados y menos votantes efectivos", "El padrón crece de 40.000 a 48.000."),
+            ("El mismo padrón con distinta participación", "El padrón cambia en 8.000 personas entre ambos extremos."),
+        ],
+    ),
+    _ql(
+        "civ_constitucion", "civ_democracia", "facil",
+        "Según el texto, ¿qué exige la reforma de una Constitución?",
+        "Quórums especiales y a veces participación directa",
+        "El texto lo señala al explicar por qué reformarla es más difícil que "
+        "aprobar una ley común.\nY entrega la razón de esa rigidez: si una mayoría "
+        "circunstancial pudiera modificarla como cualquier ley, dejaría de ser un "
+        "límite y pasaría a ser un instrumento de quien gobierna en ese momento.",
+        [
+            ("La mayoría de los presentes en cada cámara", "Ese es el quórum de una ley común, según el texto."),
+            ("La aprobación previa del Tribunal Constitucional", "El texto no exige ese trámite para reformar."),
+            ("El acuerdo unánime de todos los partidos con representación", "El texto no menciona ninguna exigencia de unanimidad."),
+        ],
+    ),
+    _ql(
+        "civ_constitucion", "civ_democracia", "dificil",
+        "¿Por qué el texto sostiene que ningún país resolvió de una vez el "
+        "equilibrio entre rigidez y flexibilidad constitucional?",
+        "Cada grado de rigidez tiene un costo propio",
+        "El texto describe la disyuntiva sin salida limpia: una Constitución muy "
+        "rígida protege bien los derechos y se vuelve difícil de actualizar cuando "
+        "la sociedad cambia; una muy flexible se adapta con facilidad y protege "
+        "menos.\nNo hay un punto que elimine los dos costos a la vez: moverse hacia "
+        "un lado compra una ventaja pagando la otra.\nPor eso el texto señala que "
+        "la cuestión se discute en cada proceso constitucional, y no que exista una "
+        "respuesta técnica esperando ser encontrada.",
+        [
+            ("Porque los países no comparten el mismo tipo de Constitución", "El texto plantea el problema como propio de cualquier diseño."),
+            ("Porque las constituciones rígidas son siempre preferibles", "El texto señala también los costos de la rigidez."),
+            ("Porque el equilibrio depende de la extensión del texto", "La extensión no interviene en el argumento."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_democracia", "medio",
+        "¿Qué papel juega el resultado de una elección en el argumento de la "
+        "Columna 1?",
+        "Da el gobierno, no las reglas bajo las que se compitió",
+        "La columna lo formula así: quien gana una elección la ganó bajo ciertas "
+        "reglas y no adquirió con ella el derecho a reescribirlas antes de la "
+        "siguiente.\nLa distinción separa dos cosas que el triunfo electoral tiende "
+        "a confundir: la facultad de gobernar durante un período y la de modificar "
+        "las condiciones de la competencia futura.\nSobre esa base la columna "
+        "defiende que un grupo acotado de materias exija acuerdos más amplios que "
+        "el de una coalición de gobierno.",
+        [
+            ("Habilita a la mayoría para cambiar cualquier norma", "La columna sostiene exactamente lo contrario."),
+            ("No tiene relación con las facultades del gobierno electo", "La columna reconoce que la elección entrega el gobierno."),
+            ("Obliga a la oposición a aprobar el programa del ganador", "La columna defiende que haya materias donde deba negociarse."),
+        ],
+    ),
+    _ql(
+        "civ_inst_quorums", "civ_democracia", "dificil",
+        "¿Qué supuesto sobre la alternancia comparten las dos columnas, aunque "
+        "discrepen en todo lo demás?",
+        "Que quien gobierna hoy puede perder mañana",
+        "La Columna 1 defiende las mayorías especiales para que la mayoría de turno "
+        "no reescriba las reglas antes de la siguiente elección, lo que supone que "
+        "habrá una siguiente y que puede perderla.\nLa Columna 2 objeta que el "
+        "texto vigente quede congelado a favor de quien lo prefiere, lo que también "
+        "supone que las posiciones cambian de lado.\nNinguna de las dos razona "
+        "desde un gobierno permanente. Ese acuerdo de fondo es lo que hace que su "
+        "desacuerdo sea sobre el diseño y no sobre si debe haber competencia.",
+        [
+            ("Que la oposición nunca llegará a gobernar", "Las dos posiciones razonan suponiendo lo contrario."),
+            ("Que los quórums deben ser iguales para toda materia", "La Columna 1 los reserva para un grupo acotado de materias."),
+            ("Que el texto vigente favorece siempre a la mayoría de turno", "La Columna 2 sostiene que favorece a quien prefiere no cambiarlo."),
+        ],
+    ),
     _ql(
         "his_oficio", "his_critico", "facil",
         "Según el texto, ¿en qué consiste el anacronismo?",
