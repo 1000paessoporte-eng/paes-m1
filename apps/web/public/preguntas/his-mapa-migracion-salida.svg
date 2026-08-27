@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 410" width="560" height="410" role="img">
+  <title>Mapa de flujos migratorios internos del país ficticio de Bermeja en una década. A la izquierda están las regiones P, R y S; a la derecha, la región capital Q. Tres flechas llegan a Q: 55 mil personas desde P, 78 mil desde R y 30 mil desde S. Una cuarta flecha, de línea segmentada, sale de Q hacia R con 42 mil personas. El grosor de cada flecha es proporcional al número de personas.</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Bermeja: migración interna en una década</text>
+    <rect x="356" y="150" width="128" height="104" fill="#9ca3af" stroke="#111827" stroke-width="2"/>
+    <text x="420" y="196" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Q</text>
+    <text x="420" y="220" text-anchor="middle" font-size="12" fill="#111827">región capital</text>
+    <rect x="60" y="60" width="96" height="54" fill="#f3f4f6" stroke="#111827" stroke-width="1.6"/>
+    <text x="108" y="93" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">P</text>
+    <path d="M164 87 L348 178" stroke="#111827" stroke-width="3.5"/>
+    <path d="M348 178 L336 174 M348 178 L338 184" stroke="#111827" stroke-width="3.5"/>
+    <text x="252" y="72" text-anchor="middle" font-size="12" fill="#111827">55 mil</text>
+    <rect x="60" y="148" width="96" height="54" fill="#f3f4f6" stroke="#111827" stroke-width="1.6"/>
+    <text x="108" y="181" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">R</text>
+    <path d="M164 175 L348 198" stroke="#111827" stroke-width="4.4"/>
+    <path d="M348 198 L336 194 M348 198 L338 204" stroke="#111827" stroke-width="4.4"/>
+    <text x="252" y="160" text-anchor="middle" font-size="12" fill="#111827">78 mil</text>
+    <rect x="60" y="236" width="96" height="54" fill="#f3f4f6" stroke="#111827" stroke-width="1.6"/>
+    <text x="108" y="269" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">S</text>
+    <path d="M164 263 L348 218" stroke="#111827" stroke-width="2.6"/>
+    <path d="M348 218 L336 214 M348 218 L338 224" stroke="#111827" stroke-width="2.6"/>
+    <text x="252" y="248" text-anchor="middle" font-size="12" fill="#111827">30 mil</text>
+    <path d="M352 162 L168 140" stroke="#4b5563" stroke-width="1.4" stroke-dasharray="6 4"/>
+    <path d="M168 140 L180 137 M168 140 L179 146" stroke="#4b5563" stroke-width="1.4"/>
+    <text x="262" y="130" text-anchor="middle" font-size="12" fill="#4b5563">42 mil (Q hacia R)</text>
+    <text x="280" y="380" text-anchor="middle" font-size="12" fill="#4b5563">El grosor de cada flecha es proporcional al número de personas.</text>
+    <text x="280" y="398" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

@@ -745,4 +745,112 @@ export const DESCRIPCION_FIGURA: Record<string, string> = {
     "Gráfico de oferta y demanda con una línea horizontal punteada por debajo " +
     "del cruce, rotulada precio máximo. A ese precio, la cantidad ofrecida queda " +
     "muy a la izquierda de la cantidad demandada.",
+  "/preguntas/his-mapa-coropleta-urbana.svg":
+    "Mapa del país ficticio de Ventura dividido en cinco regiones en franjas " +
+    "de norte a sur, rotuladas A, B, C, D y E, sombreadas según el " +
+    "porcentaje de población urbana. La leyenda define cuatro tramos: menos " +
+    "de 30%, de 30% a 59%, de 60% a 89%, y 90% o más. A está en el tramo de " +
+    "60% a 89%; B y D comparten el de 30% a 59%; C tiene el sombreado de 90% " +
+    "o más; y E, el de menos de 30%. Una nota advierte que el mapa informa " +
+    "una proporción, no cuánta gente vive en cada región.",
+  "/preguntas/his-mapa-coropleta-alfabetizacion.svg":
+    "Mapa del país ficticio de Bermeja dividido en cuatro regiones en " +
+    "franjas de norte a sur, rotuladas P, Q, R y S, sombreadas según el " +
+    "porcentaje de alfabetización. La leyenda define cuatro tramos: menos de " +
+    "50%, de 50% a 69%, de 70% a 89%, y 90% o más. P y R comparten el tramo " +
+    "de 50% a 69%; Q tiene el sombreado de 90% o más; y S, el de menos de " +
+    "50%. Ninguna región está en el tramo de 70% a 89%.",
+  "/preguntas/his-mapa-coropleta-agua.svg":
+    "Mapa del país ficticio de Cardal dividido en cinco regiones en franjas " +
+    "de norte a sur, rotuladas I, II, III, IV y V, sombreadas según el " +
+    "porcentaje de viviendas con agua potable. La leyenda define cuatro " +
+    "tramos: menos de 40%, de 40% a 64%, de 65% a 84%, y 85% o más. La " +
+    "región I está en el tramo más alto; III, en el de 65% a 84%; IV, en el " +
+    "de 40% a 64%; y las regiones II y V, en el más bajo. Una nota advierte " +
+    "que el mapa informa una proporción, no cuánta gente vive en cada " +
+    "región.",
+  "/preguntas/his-mapa-coropleta-densidad.svg":
+    "Mapa del país ficticio de Duna dividido en cuatro regiones en franjas " +
+    "de norte a sur, rotuladas M, N, O y P, sombreadas según la densidad de " +
+    "población. La leyenda define cuatro tramos: menos de 5 habitantes por " +
+    "kilómetro cuadrado, de 5 a 24, de 25 a 99, y 100 o más. M está en el " +
+    "tramo de 5 a 24; N, en el de 25 a 99; O, en el más alto; y P, en el más " +
+    "bajo.",
+  "/preguntas/his-cartograma-poblacion.svg":
+    "Dos representaciones del mismo país ficticio de Ventura, una al lado de " +
+    "la otra. A la izquierda, el mapa por superficie: las cinco regiones A, " +
+    "B, C, D y E se dibujan según el territorio que ocupan y E es con " +
+    "diferencia la más extensa, mientras C es una de las franjas más " +
+    "angostas. A la derecha, el cartograma por población: cada región se " +
+    "redibuja proporcional a sus habitantes, C pasa a ser la mayor con " +
+    "diferencia y E queda reducida a una franja muy delgada. Una nota indica " +
+    "que en el cartograma el tamaño representa la población y no el " +
+    "territorio.",
+  "/preguntas/his-cartograma-votantes.svg":
+    "Dos representaciones del mismo país ficticio de Bermeja. A la " +
+    "izquierda, el mapa por superficie: las regiones P, Q, R y S se dibujan " +
+    "según el territorio, y S es la más extensa mientras Q es la más " +
+    "pequeña. A la derecha, el cartograma por votantes: Q pasa a ser con " +
+    "diferencia la mayor y S queda reducida a una franja delgada. Una nota " +
+    "indica que en el cartograma el tamaño representa los votantes y no el " +
+    "territorio.",
+  "/preguntas/his-cartograma-produccion.svg":
+    "Dos representaciones del mismo país ficticio de Cardal. A la izquierda, " +
+    "el mapa por superficie: las regiones I, II, III y IV se dibujan según " +
+    "el territorio, y IV es la más extensa mientras III es la más angosta. A " +
+    "la derecha, el cartograma por producción agrícola: III pasa a ser con " +
+    "diferencia la mayor. Una nota indica que en el cartograma el tamaño " +
+    "representa la producción agrícola y no el territorio.",
+  "/preguntas/his-cartograma-comparado.svg":
+    "Dos representaciones del mismo país ficticio de Duna. A la izquierda, " +
+    "el mapa por superficie: las regiones M, N, O y P se dibujan según el " +
+    "territorio, y P ocupa más de la mitad del país mientras O es la más " +
+    "angosta. A la derecha, el cartograma por población: O pasa a ser la " +
+    "mayor y P queda reducida a una franja delgada. Una nota indica que en " +
+    "el cartograma el tamaño representa la población y no el territorio.",
+  "/preguntas/his-mapa-migracion-llegadas.svg":
+    "Mapa de flujos migratorios internos del país ficticio de Ventura en una " +
+    "década. A la izquierda están las regiones A, B, D y E; a la derecha, la " +
+    "región capital C. Cuatro flechas llegan a C: 40 mil personas desde A, " +
+    "95 mil desde B, 120 mil desde D y 60 mil desde E. Una quinta flecha, de " +
+    "línea segmentada, sale de C hacia B con 25 mil personas. El grosor de " +
+    "cada flecha es proporcional al número de personas.",
+  "/preguntas/his-mapa-migracion-salida.svg":
+    "Mapa de flujos migratorios internos del país ficticio de Bermeja en una " +
+    "década. A la izquierda están las regiones P, R y S; a la derecha, la " +
+    "región capital Q. Tres flechas llegan a Q: 55 mil personas desde P, 78 " +
+    "mil desde R y 30 mil desde S. Una cuarta flecha, de línea segmentada, " +
+    "sale de Q hacia R con 42 mil personas. El grosor de cada flecha es " +
+    "proporcional al número de personas.",
+  "/preguntas/his-mapa-migracion-saldo.svg":
+    "Mapa de flujos migratorios internos del país ficticio de Cardal en una " +
+    "década. A la izquierda están las regiones I, II y IV; a la derecha, la " +
+    "región capital III. Tres flechas llegan a III: 64 mil personas desde I, " +
+    "88 mil desde II y 47 mil desde IV. Una cuarta flecha, de línea " +
+    "segmentada, sale de III hacia I con 39 mil personas. El grosor de cada " +
+    "flecha es proporcional al número de personas.",
+  "/preguntas/his-mapa-ferrocarril-trazado.svg":
+    "Mapa ferroviario del territorio ficticio de Aurelia hacia 1900. En la " +
+    "costa, a la izquierda, están Puerto Norte y Puerto Sur. En el interior " +
+    "hay cuatro zonas productoras: dos mineras y dos agrícolas. Cuatro " +
+    "líneas férreas unen cada zona con uno de los dos puertos, y ninguna " +
+    "conecta una zona productora con otra. Villa Alta, una localidad del " +
+    "interior, aparece con contorno segmentado y sin ninguna vía que llegue " +
+    "a ella.",
+  "/preguntas/his-mapa-ferrocarril-aislada.svg":
+    "Mapa ferroviario del territorio ficticio de Bermeja hacia 1890. En la " +
+    "costa están Puerto Real y Puerto Chico. En el interior hay tres zonas " +
+    "productoras: dos mineras, de salitre y de cobre, y una agrícola de " +
+    "viñas. Tres líneas férreas unen cada zona con uno de los dos puertos, y " +
+    "ninguna conecta una zona productora con otra. San Remigio, una " +
+    "localidad del interior, aparece con contorno segmentado y sin ninguna " +
+    "vía que llegue a ella.",
+  "/preguntas/his-mapa-ferrocarril-limites.svg":
+    "Mapa ferroviario del territorio ficticio de Cardal hacia 1910. En la " +
+    "costa están Puerto Grande y Puerto Bajo. En el interior hay cuatro " +
+    "zonas productoras: dos mineras, de carbón y de hierro, y dos agrícolas, " +
+    "de maíz y de lana. Cuatro líneas férreas unen cada zona con uno de los " +
+    "dos puertos. Los Álamos, una localidad del interior, aparece con " +
+    "contorno segmentado y sin ninguna vía que llegue a ella. El mapa no " +
+    "informa volúmenes de producción ni fechas de construcción.",
 };

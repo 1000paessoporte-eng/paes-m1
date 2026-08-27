@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 410" width="560" height="410" role="img">
+  <title>Mapa ferroviario del territorio ficticio de Cardal hacia 1910. En la costa están Puerto Grande y Puerto Bajo. En el interior hay cuatro zonas productoras: dos mineras, de carbón y de hierro, y dos agrícolas, de maíz y de lana. Cuatro líneas férreas unen cada zona con uno de los dos puertos. Los Álamos, una localidad del interior, aparece con contorno segmentado y sin ninguna vía que llegue a ella. El mapa no informa volúmenes de producción ni fechas de construcción.</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Red ferroviaria de Cardal hacia 1910</text>
+    <path d="M78 44 L78 366" stroke="#4b5563" stroke-width="2"/>
+    <text x="64" y="205" text-anchor="middle" font-size="12" fill="#4b5563" transform="rotate(-90 64 205)">océano</text>
+    <circle cx="110" cy="112" r="9" fill="#111827"/>
+    <text x="126" y="109" font-size="13" font-weight="600" fill="#111827">Puerto Grande</text>
+    <circle cx="110" cy="296" r="9" fill="#111827"/>
+    <text x="126" y="293" font-size="13" font-weight="600" fill="#111827">Puerto Bajo</text>
+    <rect x="296" y="58" width="88" height="38" fill="#9ca3af" stroke="#111827" stroke-width="1.5"/>
+    <text x="340" y="82" text-anchor="middle" font-size="12" fill="#111827">carbón</text>
+    <path d="M119 112 L296 77" stroke="#111827" stroke-width="2.4"/>
+    <rect x="420" y="140" width="88" height="38" fill="#f3f4f6" stroke="#111827" stroke-width="1.5"/>
+    <text x="464" y="164" text-anchor="middle" font-size="12" fill="#111827">maíz</text>
+    <path d="M119 112 L420 159" stroke="#111827" stroke-width="2.4"/>
+    <rect x="316" y="254" width="88" height="38" fill="#f3f4f6" stroke="#111827" stroke-width="1.5"/>
+    <text x="360" y="278" text-anchor="middle" font-size="12" fill="#111827">lana</text>
+    <path d="M119 296 L316 273" stroke="#111827" stroke-width="2.4"/>
+    <rect x="440" y="318" width="88" height="38" fill="#9ca3af" stroke="#111827" stroke-width="1.5"/>
+    <text x="484" y="342" text-anchor="middle" font-size="12" fill="#111827">hierro</text>
+    <path d="M119 296 L440 337" stroke="#111827" stroke-width="2.4"/>
+    <rect x="240" y="180" width="96" height="38" fill="#ffffff" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="288" y="204" text-anchor="middle" font-size="12" fill="#4b5563">Los Álamos</text>
+    <line x1="300" y1="372" x2="330" y2="372" stroke="#111827" stroke-width="2.4"/>
+    <text x="338" y="376" font-size="12" fill="#4b5563">vía férrea</text>
+    <rect x="60" y="362" width="18" height="14" fill="#9ca3af" stroke="#111827" stroke-width="1.2"/>
+    <text x="84" y="374" font-size="12" fill="#4b5563">zona minera</text>
+    <rect x="176" y="362" width="18" height="14" fill="#f3f4f6" stroke="#111827" stroke-width="1.2"/>
+    <text x="200" y="374" font-size="12" fill="#4b5563">zona agrícola</text>
+    <text x="280" y="398" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>

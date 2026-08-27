@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 410" width="560" height="410" role="img">
+  <title>Mapa del país ficticio de Ventura dividido en cinco regiones en franjas de norte a sur, rotuladas A, B, C, D y E, sombreadas según el porcentaje de población urbana. La leyenda define cuatro tramos: menos de 30%, de 30% a 59%, de 60% a 89%, y 90% o más. A está en el tramo de 60% a 89%; B y D comparten el de 30% a 59%; C tiene el sombreado de 90% o más; y E, el de menos de 30%. Una nota advierte que el mapa informa una proporción, no cuánta gente vive en cada región.</title>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" fill="none" stroke="none">
+    <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="600" fill="#111827">Ventura: población urbana</text>
+    <rect x="120" y="40" width="140" height="64" fill="#9ca3af" stroke="#111827" stroke-width="1.6"/>
+    <text x="190" y="79" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">A</text>
+    <rect x="120" y="104" width="140" height="64" fill="#d1d5db" stroke="#111827" stroke-width="1.6"/>
+    <text x="190" y="143" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">B</text>
+    <rect x="120" y="168" width="140" height="64" fill="#4b5563" stroke="#111827" stroke-width="1.6"/>
+    <text x="190" y="207" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">C</text>
+    <rect x="120" y="232" width="140" height="64" fill="#d1d5db" stroke="#111827" stroke-width="1.6"/>
+    <text x="190" y="271" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">D</text>
+    <rect x="120" y="296" width="140" height="64" fill="#f3f4f6" stroke="#111827" stroke-width="1.6"/>
+    <text x="190" y="335" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">E</text>
+    <text x="108" y="46" text-anchor="end" font-size="12" fill="#4b5563">norte</text>
+    <text x="108" y="358" text-anchor="end" font-size="12" fill="#4b5563">sur</text>
+    <text x="320" y="72" font-size="13" font-weight="600" fill="#111827">Población urbana</text>
+    <rect x="320" y="86" width="26" height="20" fill="#f3f4f6" stroke="#111827" stroke-width="1.4"/>
+    <text x="356" y="101" font-size="13" fill="#4b5563">menos de 30%</text>
+    <rect x="320" y="116" width="26" height="20" fill="#d1d5db" stroke="#111827" stroke-width="1.4"/>
+    <text x="356" y="131" font-size="13" fill="#4b5563">30% a 59%</text>
+    <rect x="320" y="146" width="26" height="20" fill="#9ca3af" stroke="#111827" stroke-width="1.4"/>
+    <text x="356" y="161" font-size="13" fill="#4b5563">60% a 89%</text>
+    <rect x="320" y="176" width="26" height="20" fill="#4b5563" stroke="#111827" stroke-width="1.4"/>
+    <text x="356" y="191" font-size="13" fill="#4b5563">90% o más</text>
+    <text x="320" y="236" font-size="12" fill="#4b5563">El mapa informa una proporción,</text>
+    <text x="320" y="254" font-size="12" fill="#4b5563">no cuánta gente vive en cada</text>
+    <text x="320" y="272" font-size="12" fill="#4b5563">región.</text>
+    <text x="280" y="398" text-anchor="middle" font-size="11" fill="#4b5563">Datos ficticios, con fines de práctica.</text>
+  </g>
+</svg>
