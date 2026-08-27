@@ -57,21 +57,21 @@ directo a la base: es más barato que discutirla.
 
 - **52 nodos** de habilidad y **52 lecciones**, una por nodo. Las cinco
   pruebas tienen teoría escrita, no solo M1.
-- **2.911 preguntas** con **11.644 alternativas**, y cada alternativa
+- **3.033 preguntas** con **12.132 alternativas**, y cada alternativa
   incorrecta trae su `distractor_justification`.
 
   | Prueba | Preguntas | Un ensayo pide | Nodos |
   |---|---:|---:|---:|
-  | Matemática M1 | 1.088 | 65 | 17 |
+  | Matemática M1 | 1.156 | 65 | 17 |
   | Competencia Lectora | 1.103 | 65 | 12 |
   | Ciencias | 312 | 80 | 14 |
-  | Matemática M2 | 213 | 55 | 15 |
-  | Historia y Cs. Sociales | 195 | 65 | 6 |
+  | Matemática M2 | 243 | 55 | 15 |
+  | Historia y Cs. Sociales | 219 | 65 | 10 |
 
   Las cinco superan tres veces lo que pide un ensayo completo. **Ampliar el
   banco ya no es el cuello de botella**; lo era cuando esta sección decía 344
   preguntas. (M2 reutiliza los nodos de M1, así que un ensayo de M2 elige entre
-  1.301 preguntas, no 213.)
+  1.399 preguntas, no 243.)
 
 - **108 textos fuente** (`reading_passages`): 87 de Competencia Lectora y 21 de
   Historia.
@@ -82,9 +82,12 @@ lectoras* que el temario enumera dentro de cada habilidad, con una lección por
 nodo. El eje sigue siendo la habilidad, así que en pantalla son los mismos tres
 grupos con doce nodos dentro.
 
-**Queda Historia**: 195 preguntas en 6 nodos, contra los 17 de M1. Ahí el "qué
-estudiar después" sólo puede recomendar una de seis cosas, y es donde el árbol
-rinde menos de lo que promete.
+**Historia también se reestructuró** el 2026-08-26. Su árbol mezclaba las dos
+dimensiones del temario --unos nodos eran *habilidades* y otros *contenidos*--,
+de modo que el eje "Historia: Mundo, América y Chile" no tenía ningún nodo de
+contenido. Ahora el eje historia agrupa por las tres habilidades que el temario
+define y los ejes de ciudadanía y economía por sus temas: 10 nodos, 219
+preguntas, ninguno bajo 11.
 - **1.855 carreras** con sus ponderaciones oficiales, extraídas del PDF del
   DEMRE con `scripts/extraer_carreras.py`. **Se re-extraen cada proceso de
   admisión**: las ponderaciones cambian todos los años. Varias preguntas comparten un mismo texto, igual que en la
@@ -424,8 +427,21 @@ Ordenado por impacto:
      preguntas.
    - **Lectora, dos nodos flacos**: *Idea central y jerarquía* (10 preguntas) y
      *Aplicar el texto a un caso nuevo* (12), contra 237 del mayor.
-   - **Historia**: 195 preguntas repartidas en 6 nodos. Es la prueba que le
-     queda al desbalance de nodos después de arreglar Lectora.
+   - **Historia, el eje de contenido histórico está vacío.** El temario define
+     cuatro temas en "Historia: Mundo, América y Chile" --el siglo XIX en
+     Europa, América y Chile; Chile en el siglo XIX; la primera mitad del siglo
+     XX; y la segunda mitad con la Guerra Fría, la Dictadura Militar y el
+     retorno a la democracia-- y el banco no tiene **ninguna** pregunta de
+     contenido sobre ellos. Lo que hay en ese eje son las tres habilidades
+     (fuentes, tiempo, pensamiento crítico) ejercidas sobre fuentes que
+     escribimos nosotros.
+
+     No es un descuido: la regla del proyecto deja la historia factual fuera
+     hasta que un profesor la revise (punto 3). Pero conviene saber que ese eje
+     hoy entrena a analizar fuentes, no a saber historia.
+   - **Derechos laborales**: es un tema oficial completo del eje económico y el
+     banco tiene **dos** preguntas. No alcanzan para un nodo propio, así que
+     por ahora viven en *Justicia, igualdad y protección de derechos*.
 3. **Contenido factual con revisión de profesor.** Historia y Biología de
    memoria siguen fuera del banco a propósito: ningún script puede verificar
    que una afirmación histórica sea cierta. Ese tramo entra cuando alguien con

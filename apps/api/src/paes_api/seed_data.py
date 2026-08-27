@@ -54895,12 +54895,32 @@ QUESTIONS_CIENCIAS = [
 # ---------------------------------------------------------------------------
 
 SKILL_NODES_HISTORIA = [
+    # El temario de Historia tiene DOS dimensiones: tres habilidades
+    # (pensamiento temporal y espacial, analisis de fuentes, pensamiento
+    # critico) y tres ejes tematicos con sus contenidos. El arbol viejo las
+    # mezclaba: `his_fuentes` y `his_temporal` eran habilidades mientras que
+    # `civ_*` y `eco_*` eran contenidos, asi que el eje de Historia no tenia
+    # ningun nodo de contenido y las habilidades no aparecian en los otros dos.
+    #
+    # Aca se separan. El eje historia agrupa por la operacion de habilidad que
+    # la pregunta exige --que es lo unico que ese eje evalua en este banco,
+    # porque la historia factual de memoria esta fuera a proposito hasta que un
+    # profesor la revise-- y los ejes de ciudadania y economia agrupan por los
+    # temas que el temario enumera.
+
+    # --- Eje Historia: Mundo, America y Chile (las tres habilidades) ---
     ("his_fuentes", "Análisis de fuentes históricas", "historia", 1, []),
-    ("his_temporal", "Pensamiento temporal y cambio histórico", "historia", 2, ["his_fuentes"]),
-    ("civ_democracia", "Democracia y participación", "ciudadania", 1, []),
-    ("civ_derechos", "Derechos y deberes ciudadanos", "ciudadania", 2, ["civ_democracia"]),
-    ("eco_indicadores", "Indicadores económicos", "economia", 1, []),
-    ("eco_mercado", "Oferta, demanda y mercado", "economia", 2, ["eco_indicadores"]),
+    ("his_representaciones", "Mapas, gráficos y líneas de tiempo", "historia", 1, []),
+    ("his_temporal", "Tiempo histórico: continuidad y cambio", "historia", 2, ["his_fuentes"]),
+    ("his_critico", "Causalidad, contexto e interpretaciones", "historia", 3, ["his_temporal"]),
+    # --- Eje Formacion ciudadana ---
+    ("civ_democracia", "Democracia, participación y sufragio", "ciudadania", 1, []),
+    ("civ_institucionalidad", "Institucionalidad del Estado en Chile", "ciudadania", 2, ["civ_democracia"]),
+    ("civ_ddhh", "Derechos humanos y deberes ciudadanos", "ciudadania", 2, ["civ_democracia"]),
+    ("civ_justicia", "Justicia, igualdad y protección de derechos", "ciudadania", 3, ["civ_ddhh"]),
+    # --- Eje Sistema economico ---
+    ("eco_mercado", "Mercado: oferta, demanda y sus fallas", "economia", 1, []),
+    ("eco_indicadores", "Indicadores y política económica", "economia", 2, ["eco_mercado"]),
 ]
 
 PASSAGES_HISTORIA = [
@@ -55583,7 +55603,7 @@ PASSAGES_HISTORIA = [
 QUESTIONS_HISTORIA = [
     # ---------- Análisis de fuentes: la tabla ----------
     _ql(
-        "migracion_tabla", "his_fuentes", "facil",
+        "migracion_tabla", "his_representaciones", "facil",
         "Según la tabla, ¿cuánto aumentó la población total de la comuna entre "
         "1990 y 2020?",
         "16.300 habitantes",
@@ -55600,7 +55620,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "migracion_tabla", "his_temporal", "medio",
+        "migracion_tabla", "his_representaciones", "medio",
         "¿Qué proceso muestra la tabla entre 1990 y 2020?",
         "Un crecimiento urbano acompañado de despoblamiento rural",
         "Hay que leer dos tendencias a la vez y relacionarlas.\n\n"
@@ -55661,7 +55681,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_participacion", "civ_derechos", "dificil",
+        "fuente_participacion", "civ_democracia", "dificil",
         "¿Qué supuesto sobre la representación política sostiene la Fuente 2?",
         "Que un padrón sesgado da autoridades poco representativas",
         "El supuesto no está dicho como tesis, hay que extraerlo del cierre del "
@@ -56088,7 +56108,7 @@ QUESTIONS_HISTORIA = [
     # ---------- CIUDADANÍA: democracia y participación ----------
     _ql(
         "civ_poderes",
-        "civ_democracia", "facil",
+        "civ_institucionalidad", "facil",
         "¿Cuáles son los tres poderes del Estado en Chile?",
         "Ejecutivo, Legislativo y Judicial",
         "La separación de poderes reparte el poder del Estado en tres órganos "
@@ -56187,7 +56207,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_poderes",
-        "civ_democracia", "medio",
+        "civ_institucionalidad", "medio",
         "¿Qué caracteriza a un Estado de derecho?",
         "Que todos, incluido el gobierno, están sometidos a la ley",
         "La clave está en el 'incluido el gobierno'. En un Estado de derecho "
@@ -56206,7 +56226,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_poderes",
-        "civ_democracia", "facil",
+        "civ_institucionalidad", "facil",
         "¿Qué autoridades encabezan el gobierno de una comuna en Chile?",
         "El alcalde y el concejo municipal",
         "La administración de cada comuna corresponde a la municipalidad, "
@@ -56286,7 +56306,7 @@ QUESTIONS_HISTORIA = [
     # ---------- CIUDADANÍA: derechos y deberes ----------
     _ql(
         "civ_ddhh",
-        "civ_derechos", "facil",
+        "civ_ddhh", "facil",
         "Los derechos humanos son universales. ¿Qué significa exactamente esa "
         "característica?",
         "Que corresponden a todas las personas, sin distinción",
@@ -56306,7 +56326,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_ddhh",
-        "civ_derechos", "facil",
+        "civ_ddhh", "facil",
         "¿En qué año y en qué organismo se aprobó la Declaración Universal de "
         "los Derechos Humanos?",
         "En 1948, en las Naciones Unidas",
@@ -56326,7 +56346,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_ddhh",
-        "civ_derechos", "medio",
+        "civ_ddhh", "medio",
         "El derecho a la educación y el derecho a la salud pertenecen a los "
         "llamados derechos de segunda generación. ¿Qué los caracteriza?",
         "Son económicos, sociales y culturales, y exigen prestaciones",
@@ -56347,7 +56367,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_proteccion",
-        "civ_derechos", "medio",
+        "civ_justicia", "medio",
         "¿Qué es el recurso de protección en el ordenamiento jurídico chileno?",
         "Una acción judicial para amparar derechos constitucionales",
         "El recurso de protección permite que cualquier persona acuda "
@@ -56366,7 +56386,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_proteccion",
-        "civ_derechos", "medio",
+        "civ_justicia", "medio",
         "Una persona es rechazada en un empleo exclusivamente por su "
         "nacionalidad. ¿Qué figura describe esa situación en Chile?",
         "Discriminación arbitraria, sancionada por la Ley 20.609",
@@ -56386,7 +56406,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_ddhh",
-        "civ_derechos", "facil",
+        "civ_democracia", "facil",
         "Además de derechos, la ciudadanía implica deberes. ¿Cuál de los "
         "siguientes es un deber ciudadano en Chile?",
         "Respetar la Constitución y pagar los impuestos",
@@ -56406,7 +56426,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_proteccion",
-        "civ_derechos", "medio",
+        "civ_justicia", "medio",
         "Un consumidor compra un producto con fallas y el local se niega a "
         "responder. ¿Qué normativa lo ampara en Chile?",
         "La Ley del Consumidor (19.496)",
@@ -56426,7 +56446,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_proteccion",
-        "civ_derechos", "dificil",
+        "civ_ddhh", "dificil",
         "¿Por qué se dice que la libertad de expresión no es un derecho "
         "absoluto?",
         "Porque su ejercicio encuentra límites en otros derechos, como la honra "
@@ -56448,7 +56468,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_proteccion",
-        "civ_derechos", "medio",
+        "civ_ddhh", "medio",
         "¿Cuál es la función del Instituto Nacional de Derechos Humanos (INDH) "
         "en Chile?",
         "Promover y proteger los derechos humanos, de forma autónoma",
@@ -56468,7 +56488,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "civ_proteccion",
-        "civ_derechos", "dificil",
+        "civ_justicia", "dificil",
         "La presunción de inocencia establece que toda persona es inocente "
         "mientras no se pruebe lo contrario. ¿Qué consecuencia práctica tiene "
         "en un proceso penal?",
@@ -56549,7 +56569,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_fuentes", "facil",
+        "empleo_sectores", "his_representaciones", "facil",
         "Según la tabla, ¿cuántos puntos porcentuales cayó el sector primario "
         "entre 1960 y 2020?",
         "44 puntos porcentuales",
@@ -56567,7 +56587,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_fuentes", "medio",
+        "empleo_sectores", "his_representaciones", "medio",
         "¿Qué proceso muestra la tabla en el conjunto del período 1960-2020?",
         "Una terciarización: el empleo se desplaza a los servicios",
         "Hay que leer las tres columnas a la vez.\n\n"
@@ -56584,7 +56604,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_fuentes", "medio",
+        "empleo_sectores", "his_representaciones", "medio",
         "¿En qué período el sector secundario alcanzó su punto más alto según "
         "la tabla?",
         "En 1980, con 28%",
@@ -56602,7 +56622,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_fuentes", "dificil",
+        "empleo_sectores", "his_representaciones", "dificil",
         "Un estudiante concluye a partir de la tabla que «en 2020 el país "
         "producía menos alimentos que en 1960». ¿Es válida esa conclusión?",
         "No, porque la tabla informa sobre empleo, no producción",
@@ -56696,7 +56716,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_duraciones",
-        "his_temporal", "medio",
+        "his_critico", "medio",
         "En el análisis histórico, ¿qué se entiende por procesos de larga "
         "duración?",
         "Transformaciones lentas que se extienden por siglos",
@@ -56737,7 +56757,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_oficio",
-        "his_temporal", "dificil",
+        "his_critico", "dificil",
         "Un estudiante afirma que «los campesinos medievales eran ignorantes "
         "porque no sabían que la Tierra giraba alrededor del Sol». ¿Qué error "
         "de razonamiento histórico comete?",
@@ -56778,7 +56798,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_oficio",
-        "his_temporal", "medio",
+        "his_critico", "medio",
         "¿Por qué los historiadores sostienen que un mismo proceso puede tener "
         "múltiples causas?",
         "Porque combinan factores políticos, económicos y culturales",
@@ -56816,7 +56836,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_oficio",
-        "his_temporal", "medio",
+        "his_critico", "medio",
         "¿Qué se entiende por contexto histórico de un hecho?",
         "Las condiciones de la época que explican por qué ocurrió",
         "Un hecho aislado dice poco. El contexto es el entramado de "
@@ -56835,7 +56855,7 @@ QUESTIONS_HISTORIA = [
     ),
     _ql(
         "his_oficio",
-        "his_temporal", "dificil",
+        "his_critico", "dificil",
         "¿Por qué se afirma que la historia se reescribe con cada generación?",
         "Porque cada época le hace preguntas nuevas al pasado",
         "El pasado no cambia, pero las preguntas que se le hacen sí.\n\n"
@@ -57248,7 +57268,7 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Más preguntas sobre las fuentes ya existentes ----------
     _ql(
-        "migracion_tabla", "his_fuentes", "medio",
+        "migracion_tabla", "his_representaciones", "medio",
         "Según la tabla, ¿en qué década la población rural tuvo su mayor caída "
         "absoluta?",
         "Entre 1990 y 2000, con 1.200 habitantes menos",
@@ -57264,7 +57284,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "migracion_tabla", "his_temporal", "medio",
+        "migracion_tabla", "his_representaciones", "medio",
         "¿Qué relación puede establecerse entre las obras mencionadas y los "
         "datos de la tabla?",
         "El agua potable y el camino coinciden con el alza urbana",
@@ -57334,7 +57354,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_participacion", "civ_derechos", "medio",
+        "fuente_participacion", "civ_ddhh", "medio",
         "¿Qué derecho está en el centro del debate entre ambas fuentes?",
         "El derecho a sufragio y las condiciones para ejercerlo",
         "Las dos fuentes discuten sobre el voto: si conviene que sea voluntario "
@@ -57368,7 +57388,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_conquista", "his_temporal", "dificil",
+        "fuente_conquista", "his_fuentes", "dificil",
         "¿Qué error se cometería al juzgar la Fuente 1 con criterios morales "
         "actuales sin más análisis?",
         "Un anacronismo: juzgar otra época con categorías de hoy",
@@ -57403,7 +57423,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_fuentes", "medio",
+        "empleo_sectores", "his_representaciones", "medio",
         "Según la tabla, ¿cuánto creció el sector terciario entre 1960 y 2000?",
         "27 puntos porcentuales",
         "Se ubican ambos valores en la columna del sector terciario y se "
@@ -57420,7 +57440,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_temporal", "dificil",
+        "empleo_sectores", "his_representaciones", "dificil",
         "¿Qué proceso de larga duración refleja la tabla?",
         "El cambio de la estructura productiva en sesenta años",
         "La tabla cubre seis décadas y muestra un cambio sostenido, sin "
@@ -57437,7 +57457,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "empleo_sectores", "his_fuentes", "medio",
+        "empleo_sectores", "his_representaciones", "medio",
         "¿Qué actividades incluye el sector secundario según la nota de la "
         "tabla?",
         "Industria y construcción",
@@ -57470,7 +57490,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_memoria", "his_temporal", "dificil",
+        "fuente_memoria", "his_fuentes", "dificil",
         "¿Qué muestra este par de fuentes sobre la relación entre memoria y "
         "tiempo histórico?",
         "Que el tiempo no cierra un proceso: la disputa sigue",
@@ -57487,7 +57507,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_memoria", "civ_derechos", "medio",
+        "fuente_memoria", "civ_ddhh", "medio",
         "¿Qué demanda plantea la agrupación de familiares en la Fuente 2?",
         "Saber qué pasó y quién lo decidió",
         "La Fuente 2 formula su exigencia de manera precisa: «Mientras no se "
@@ -57503,7 +57523,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_democracia", "medio",
+        "civ_poderes", "civ_institucionalidad", "medio",
         "Según el texto, ¿por qué existe la separación de poderes?",
         "Para el control recíproco: cada poder limita a los otros",
         "El texto es explícito: «La finalidad de esta separación no es la "
@@ -57519,7 +57539,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_democracia", "medio",
+        "civ_poderes", "civ_institucionalidad", "medio",
         "Según el texto, ¿cuál es el papel del Presidente en el proceso de "
         "formación de una ley?",
         "Puede presentar, vetar y promulgar, pero no legisla",
@@ -57536,7 +57556,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_democracia", "dificil",
+        "civ_poderes", "civ_institucionalidad", "dificil",
         "Según el texto, ¿qué implica que el Estado de derecho alcance también "
         "al gobierno?",
         "Que ni el Presidente está por encima de la ley",
@@ -57554,7 +57574,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_democracia", "medio",
+        "civ_poderes", "civ_institucionalidad", "medio",
         "Según el texto, ¿qué funciones cumple el concejo municipal?",
         "Normativas, resolutivas y de fiscalización",
         "El texto enumera las tres funciones y agrega dos tareas concretas: "
@@ -57624,7 +57644,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_derechos", "medio",
+        "civ_ddhh", "civ_ddhh", "medio",
         "Según el texto, ¿qué significa que los derechos humanos sean "
         "inalienables?",
         "Que no pueden limitarse por decisión de una mayoría",
@@ -57641,7 +57661,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_derechos", "dificil",
+        "civ_ddhh", "civ_ddhh", "dificil",
         "Según el texto, ¿por qué la realización de los derechos de segunda "
         "generación es progresiva?",
         "Porque exigen prestaciones y dependen de los recursos",
@@ -57659,7 +57679,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_derechos", "medio",
+        "civ_ddhh", "civ_ddhh", "medio",
         "Según el texto, ¿por qué se dice que el Estado no concede los derechos "
         "humanos sino que los reconoce?",
         "Porque corresponden a las personas por el hecho de serlo",
@@ -57677,7 +57697,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_derechos", "medio",
+        "civ_ddhh", "civ_ddhh", "medio",
         "Según el texto, ¿qué relación hay entre los derechos y los deberes "
         "ciudadanos?",
         "Son la contracara: sin ellos no habría cómo garantizarlos",
@@ -57695,7 +57715,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "medio",
+        "civ_proteccion", "civ_justicia", "medio",
         "Según el texto, ¿qué distingue al recurso de protección de un juicio "
         "ordinario?",
         "Su rapidez: no espera a que termine un juicio completo",
@@ -57712,7 +57732,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "dificil",
+        "civ_proteccion", "civ_justicia", "dificil",
         "Según el texto, ¿por qué la palabra «arbitraria» es decisiva en la "
         "definición de discriminación?",
         "Porque lo prohibido es la distinción sin justificación",
@@ -57729,7 +57749,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "medio",
+        "civ_proteccion", "civ_justicia", "medio",
         "Según el texto, ¿por qué existe una ley especial que protege al "
         "consumidor?",
         "Porque hay un desequilibrio que el acuerdo privado no corrige",
@@ -57746,7 +57766,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "dificil",
+        "civ_proteccion", "civ_justicia", "dificil",
         "Según el texto, ¿por qué exigir al acusado que demuestre su inocencia "
         "sería un problema práctico además de jurídico?",
         "Porque lo obligaría a probar un hecho negativo",
@@ -57763,7 +57783,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "medio",
+        "civ_proteccion", "civ_ddhh", "medio",
         "Según el texto, ¿por qué la autonomía del INDH es esencial para su "
         "función?",
         "Porque debe fiscalizar al Estado, el principal obligado",
@@ -57798,7 +57818,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_duraciones", "his_temporal", "dificil",
+        "his_duraciones", "his_critico", "dificil",
         "Según el texto, ¿por qué un mismo hecho puede ser causa y consecuencia "
         "a la vez?",
         "Porque depende del proceso que se esté analizando",
@@ -57816,7 +57836,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_temporal", "medio",
+        "his_oficio", "his_critico", "medio",
         "Según el texto, ¿qué distingue una causa estructural de una inmediata?",
         "La estructural prepara el terreno; la inmediata detona",
         "El texto introduce la distinción al hablar de multicausalidad.\n\n"
@@ -57832,7 +57852,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_temporal", "dificil",
+        "his_oficio", "his_critico", "dificil",
         "Según el texto, ¿por qué reconstruir el contexto «no es un adorno "
         "introductorio»?",
         "Porque impide leer el pasado como si fuera nuestra época",
@@ -57850,7 +57870,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_temporal", "medio",
+        "his_oficio", "his_critico", "medio",
         "Según el texto, ¿qué NO implica que la historia se reescriba con cada "
         "generación?",
         "Que la disciplina sea arbitraria",
@@ -57868,7 +57888,7 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Alfabetización en Los Nogales ----------
     _ql(
-        "tabla_alfabetizacion", "his_fuentes", "facil",
+        "tabla_alfabetizacion", "his_representaciones", "facil",
         "Según la tabla, ¿qué grupo tenía la menor alfabetización en 1930?",
         "Las mujeres rurales, con 19%",
         "Se recorre la fila de 1930: 62, 48, 34 y 19.\n\n"
@@ -57882,7 +57902,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "tabla_alfabetizacion", "his_fuentes", "medio",
+        "tabla_alfabetizacion", "his_representaciones", "medio",
         "¿Cuántos puntos porcentuales creció la alfabetización de las mujeres "
         "rurales entre 1930 y 2020?",
         "77 puntos porcentuales",
@@ -57899,7 +57919,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "tabla_alfabetizacion", "his_fuentes", "medio",
+        "tabla_alfabetizacion", "his_representaciones", "medio",
         "¿Qué muestra la tabla respecto de la brecha entre hombres y mujeres?",
         "Que se redujo hasta desaparecer en 2020",
         "Conviene comparar los pares por zona en cada año.\n\n"
@@ -57914,7 +57934,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "tabla_alfabetizacion", "his_temporal", "dificil",
+        "tabla_alfabetizacion", "his_representaciones", "dificil",
         "¿Qué relación puede establecerse entre la nota sobre 1965 y los datos "
         "de la tabla?",
         "La obligatoriedad coincide con el mayor avance del período",
@@ -57933,7 +57953,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "tabla_alfabetizacion", "his_fuentes", "dificil",
+        "tabla_alfabetizacion", "his_representaciones", "dificil",
         "Un estudiante concluye que en 1930 «la mayoría de la población de la "
         "región sabía leer». ¿Permite la tabla afirmarlo?",
         "No, porque la tabla no entrega el peso de cada grupo en el total",
@@ -58054,7 +58074,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuentes_salitre", "his_temporal", "medio",
+        "fuentes_salitre", "his_fuentes", "medio",
         "¿Qué aporta que ambas fuentes estén fechadas con un año de "
         "diferencia?",
         "Que describen el mismo momento y son comparables",
@@ -58156,7 +58176,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_tipos_fuentes", "his_temporal", "medio",
+        "his_tipos_fuentes", "his_fuentes", "medio",
         "Según el texto, ¿qué son las fuentes materiales y qué permiten?",
         "Objetos y restos que informan sobre quienes no escribían",
         "El texto las menciona junto a las orales como alternativa a la fuente "
@@ -58329,7 +58349,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "tabla_electoral", "civ_democracia", "medio",
+        "tabla_electoral", "civ_institucionalidad", "medio",
         "¿Cuántos votos más se emitieron en el plebiscito de 2020 que en la "
         "municipal de 2016?",
         "7.600 votos",
@@ -58380,7 +58400,7 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Qué es una Constitución ----------
     _ql(
-        "civ_constitucion", "civ_democracia", "facil",
+        "civ_constitucion", "civ_institucionalidad", "facil",
         "Según el texto, ¿qué lugar ocupa la Constitución respecto de las demás "
         "leyes?",
         "Es la norma de mayor jerarquía, y las demás deben ajustarse a ella",
@@ -58397,7 +58417,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_democracia", "medio",
+        "civ_constitucion", "civ_institucionalidad", "medio",
         "Según el texto, ¿qué distingue la función orgánica de la dogmática?",
         "La orgánica estructura el poder; la dogmática, los derechos",
         "El texto separa ambas con claridad.\n\n"
@@ -58414,7 +58434,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_democracia", "dificil",
+        "civ_constitucion", "civ_institucionalidad", "dificil",
         "Según el texto, ¿por qué la reforma constitucional exige requisitos "
         "más altos que una ley común?",
         "Para que una mayoría circunstancial no pueda cambiarla",
@@ -58432,7 +58452,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_democracia", "dificil",
+        "civ_constitucion", "civ_institucionalidad", "dificil",
         "¿Qué tensión describe el texto en el diseño constitucional?",
         "Que la rigidez protege, pero dificulta actualizar la norma",
         "El texto presenta ambos extremos sin resolverlos.\n\n"
@@ -58449,7 +58469,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_derechos", "medio",
+        "civ_constitucion", "civ_ddhh", "medio",
         "Según el texto, ¿qué relación hay entre la Constitución y los derechos "
         "de las personas?",
         "La parte dogmática los pone como límite al poder",
@@ -58550,7 +58570,7 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Igualdad ante la ley ----------
     _ql(
-        "civ_igualdad", "civ_derechos", "facil",
+        "civ_igualdad", "civ_justicia", "facil",
         "Según el texto, ¿qué significa la igualdad ante la ley?",
         "Que se aplica a todos sin distinciones arbitrarias",
         "El texto abre con esa definición y menciona tres criterios que no "
@@ -58565,7 +58585,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_derechos", "medio",
+        "civ_igualdad", "civ_justicia", "medio",
         "¿Qué muestra el ejemplo de la prueba escrita para una persona ciega?",
         "Que tratar a todos igual puede ser materialmente injusto",
         "El texto lo plantea con precisión: la prueba idéntica «es formalmente "
@@ -58581,7 +58601,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_derechos", "dificil",
+        "civ_igualdad", "civ_justicia", "dificil",
         "Según el texto, ¿cuál es el argumento a favor de las acciones "
         "afirmativas?",
         "Que corrigen una desigualdad de partida que la sola igualdad formal no "
@@ -58599,7 +58619,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_derechos", "dificil",
+        "civ_igualdad", "civ_justicia", "dificil",
         "Según el texto, ¿qué criterio ayuda a distinguir un ajuste de un "
         "privilegio?",
         "Si es temporal y busca cerrar una brecha medible",
@@ -58617,7 +58637,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_derechos", "medio",
+        "civ_igualdad", "civ_justicia", "medio",
         "Según el texto, ¿qué está fuera de discusión en este debate?",
         "Que la distinción arbitraria está prohibida en todo caso",
         "El texto cierra separando lo discutible de lo que no lo es.\n\n"
@@ -58633,7 +58653,7 @@ QUESTIONS_HISTORIA = [
     ),
     # ---------- Derechos de la niñez ----------
     _ql(
-        "civ_ninez", "civ_derechos", "facil",
+        "civ_ninez", "civ_ddhh", "facil",
         "Según el texto, ¿qué cambio de enfoque introdujo la Convención de "
         "1989?",
         "Reconocerlos como sujetos de derecho, no como objeto",
@@ -58649,7 +58669,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_derechos", "medio",
+        "civ_ninez", "civ_ddhh", "medio",
         "Según el texto, ¿qué establece el principio del interés superior del "
         "niño?",
         "Que debe primar lo mejor para él en cualquier decisión",
@@ -58666,7 +58686,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_derechos", "dificil",
+        "civ_ninez", "civ_ddhh", "dificil",
         "Según el texto, ¿qué NO significa el derecho a ser oído?",
         "Que la decisión final la tome el niño",
         "El texto advierte que ese principio «suele malinterpretarse».\n\n"
@@ -58682,7 +58702,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_derechos", "medio",
+        "civ_ninez", "civ_ddhh", "medio",
         "Según el texto, ¿qué tipos de derechos abarca la Convención?",
         "Derechos de identidad, familia, educación, salud y juego",
         "El texto enumera derechos de naturaleza distinta: civiles, sociales y "
@@ -58698,7 +58718,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_derechos", "dificil",
+        "civ_ninez", "civ_ddhh", "dificil",
         "Según el texto, ¿por qué ratificar la Convención no basta?",
         "Porque exige después leyes, instituciones y presupuesto",
         "El texto cierra con esa advertencia sobre Chile, que la ratificó en "
@@ -58716,7 +58736,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_derechos", "medio",
+        "civ_ninez", "civ_ddhh", "medio",
         "Según el texto, ¿en qué año ratificó Chile la Convención?",
         "En 1990",
         "El texto lo indica en el cierre: la Convención fue aprobada por las "
@@ -58785,7 +58805,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_voto_femenino", "civ_derechos", "medio",
+        "fuente_voto_femenino", "civ_ddhh", "medio",
         "¿Qué derecho está en disputa entre ambas fuentes?",
         "El derecho a sufragio en igualdad de condiciones",
         "El debate gira en torno a extender el voto femenino desde el ámbito "
@@ -58802,7 +58822,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_voto_femenino", "his_temporal", "dificil",
+        "fuente_voto_femenino", "his_fuentes", "dificil",
         "¿Qué error se cometería al leer la Fuente 1 sin considerar su "
         "contexto?",
         "Un anacronismo: juzgarla solo con criterios actuales",
@@ -58821,7 +58841,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "fuente_voto_femenino", "his_temporal", "medio",
+        "fuente_voto_femenino", "his_fuentes", "medio",
         "¿Qué proceso histórico ilustra el debate entre ambas fuentes?",
         "La ampliación gradual del sufragio a sectores antes excluidos",
         "El intercambio muestra un momento concreto de un proceso más largo: "
@@ -58855,7 +58875,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_poderes", "civ_democracia", "medio",
+        "civ_poderes", "civ_justicia", "medio",
         "Según el texto, ¿qué órgano encabeza el Poder Judicial?",
         "La Corte Suprema",
         "El texto lo señala al describir los tres poderes: el Judicial "
@@ -58871,7 +58891,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ddhh", "civ_derechos", "medio",
+        "civ_ddhh", "civ_ddhh", "medio",
         "Según el texto, ¿qué contexto explica el contenido de la Declaración "
         "Universal?",
         "El fin de la Segunda Guerra Mundial y el Holocausto",
@@ -58889,7 +58909,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "medio",
+        "civ_proteccion", "civ_justicia", "medio",
         "Según el texto, ¿ante qué tribunal se presenta el recurso de "
         "protección?",
         "Ante la Corte de Apelaciones",
@@ -58906,7 +58926,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_proteccion", "civ_derechos", "medio",
+        "civ_proteccion", "civ_justicia", "medio",
         "Según el texto, ¿qué garantía contempla la Ley 19.496 frente a un "
         "producto defectuoso?",
         "Reparación, cambio o devolución del dinero",
@@ -58923,7 +58943,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_igualdad", "civ_derechos", "medio",
+        "civ_igualdad", "civ_justicia", "medio",
         "Según el texto, ¿qué caracteriza a un ajuste como el tiempo adicional "
         "en una prueba?",
         "Que no otorga ventaja sino que remueve un obstáculo",
@@ -58941,7 +58961,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_constitucion", "civ_democracia", "medio",
+        "civ_constitucion", "civ_institucionalidad", "medio",
         "Según el texto, ¿qué ocurre con una ley que contradice la "
         "Constitución?",
         "Puede ser declarada inconstitucional",
@@ -58975,7 +58995,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "civ_ninez", "civ_derechos", "medio",
+        "civ_ninez", "civ_ddhh", "medio",
         "Según el texto, ¿qué predominaba antes de la Convención de 1989?",
         "Que eran objeto de protección y otros decidían por ellos",
         "El texto describe el enfoque anterior con precisión: alguien decidía "
@@ -59010,7 +59030,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_oficio", "his_temporal", "medio",
+        "his_oficio", "his_critico", "medio",
         "Según el texto, ¿qué ejemplo muestra que una misma acción puede "
         "significar cosas opuestas?",
         "Publicar un texto crítico bajo dictadura o en democracia",
@@ -59027,7 +59047,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_cambio_continuidad", "his_temporal", "medio",
+        "his_cambio_continuidad", "his_critico", "medio",
         "Según el texto, ¿qué hace el análisis histórico frente a un proceso "
         "como las independencias?",
         "Precisar qué cambió, qué permaneció y a qué ritmo",
@@ -59044,7 +59064,7 @@ QUESTIONS_HISTORIA = [
         ],
     ),
     _ql(
-        "his_tipos_fuentes", "his_temporal", "medio",
+        "his_tipos_fuentes", "his_fuentes", "medio",
         "Según el texto, ¿por qué las fuentes orales resultan valiosas?",
         "Porque permiten acceder a sectores que no dejaron registro escrito",
         "El texto las menciona junto a las materiales como alternativa a la "
@@ -59075,7 +59095,7 @@ QUESTIONS_HISTORIA = [
 # para hacerlos pasar por reales.
 QUESTIONS_HISTORIA += [
     _q(
-        "his_fuentes", "medio",
+        "his_representaciones", "medio",
         "La tabla de la figura compara dos fuentes sobre un mismo puerto. ¿Cuál "
         "de ellas es una fuente primaria y por qué?",
         "La fuente 1, porque fue producida en la época que se estudia",
@@ -59095,7 +59115,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-tabla-fuentes.svg",
     ),
     _q(
-        "his_fuentes", "medio",
+        "his_representaciones", "medio",
         "¿Cuál de las siguientes afirmaciones se puede sostener únicamente con "
         "el gráfico de exportaciones de la figura?",
         "Las exportaciones subieron tres décadas y luego cayeron",
@@ -59115,7 +59135,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-grafico-exportaciones.svg",
     ),
     _q(
-        "his_fuentes", "dificil",
+        "his_representaciones", "dificil",
         "Un estudiante quiere saber cuáles eran las condiciones reales de "
         "trabajo en las salitreras. ¿Qué puede establecer con el recorte de "
         "prensa de la figura?",
@@ -59137,7 +59157,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-recorte-prensa.svg",
     ),
     _q(
-        "his_fuentes", "medio",
+        "his_representaciones", "medio",
         "Las dos fuentes de la figura muestran la misma variable, pero dan "
         "impresiones distintas. ¿A qué se debe la diferencia?",
         "A que cada gráfico cubre un periodo distinto",
@@ -59159,7 +59179,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-dos-recortes.svg",
     ),
     _q(
-        "his_temporal", "facil",
+        "his_representaciones", "facil",
         "Según la línea de tiempo de la figura, ¿en qué periodo ocurrió la "
         "Segunda Guerra Mundial?",
         "En el periodo II",
@@ -59177,7 +59197,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-linea-tiempo.svg",
     ),
     _q(
-        "his_temporal", "medio",
+        "his_representaciones", "medio",
         "¿Qué proceso histórico representa el esquema de la figura?",
         "La división del mundo en dos bloques durante la Guerra Fría",
         "El esquema muestra dos zonas con sistemas opuestos y una frontera "
@@ -59198,7 +59218,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-esquema-bloques.svg",
     ),
     _q(
-        "his_temporal", "medio",
+        "his_representaciones", "medio",
         "Las dos pirámides de población de la figura corresponden al mismo país "
         "en dos momentos. ¿Qué cambio muestran?",
         "Un envejecimiento de la población del país",
@@ -59219,7 +59239,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-piramides-poblacion.svg",
     ),
     _q(
-        "his_temporal", "facil",
+        "his_representaciones", "facil",
         "¿Qué proceso muestra el gráfico de la figura entre 1900 y 2000?",
         "Una urbanización sostenida de la población",
         "El gráfico entrega el porcentaje de población que vive en ciudades.\n\n"
@@ -59257,7 +59277,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-organigrama-poderes.svg",
     ),
     _q(
-        "civ_democracia", "medio",
+        "civ_institucionalidad", "medio",
         "Según el esquema de la figura, ¿qué ocurre inmediatamente después de "
         "que la cámara de origen aprueba un proyecto de ley?",
         "Pasa a la cámara revisora",
@@ -59314,7 +59334,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-circular-medios.svg",
     ),
     _q(
-        "civ_derechos", "facil",
+        "civ_justicia", "facil",
         "Una persona no está de acuerdo con la sentencia que dictó un juzgado en "
         "su causa. Según el esquema de la figura, ¿ante quién puede apelar?",
         "Ante la Corte de Apelaciones",
@@ -59334,7 +59354,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-piramide-judicial.svg",
     ),
     _q(
-        "civ_derechos", "medio",
+        "civ_ddhh", "medio",
         "Según la línea de tiempo de la figura, ¿cuántos años pasaron entre la "
         "Declaración Universal de Derechos Humanos y la Convención sobre los "
         "Derechos del Niño?",
@@ -59354,7 +59374,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-linea-derechos.svg",
     ),
     _q(
-        "civ_derechos", "facil",
+        "civ_justicia", "facil",
         "Un trabajador constata que su empleador lo hace trabajar por sobre la "
         "jornada máxima legal. Según la tabla de la figura, ¿ante quién debe "
         "reclamar?",
@@ -59373,7 +59393,7 @@ QUESTIONS_HISTORIA += [
         imagen="/preguntas/his-tabla-derechos-laborales.svg",
     ),
     _q(
-        "civ_derechos", "medio",
+        "civ_justicia", "medio",
         "¿Cuál de las siguientes afirmaciones se sostiene con el gráfico de "
         "sindicalización de la figura?",
         "La tasa de sindicalización de la minería más que triplica la del comercio",
@@ -61931,7 +61951,7 @@ LESSONS: dict[str, dict] = {
             "ser democrático."
         ),
     },
-    "civ_derechos": {
+    "civ_ddhh": {
         "intro": (
             "Los derechos definen qué puede exigir una persona y qué le debe el "
             "Estado. Vienen siempre acompañados de deberes, y esa relación es "
@@ -61942,18 +61962,19 @@ LESSONS: dict[str, dict] = {
             "indivisibles.** Universales porque los tiene toda persona por serlo; "
             "inalienables porque no se pueden ceder ni quitar; indivisibles "
             "porque no se pueden respetar unos y desconocer otros.\n\n"
+            "**El Estado no los concede: los reconoce.** No nacen de una ley que "
+            "los otorga, así que tampoco desaparecen si una ley los ignora. Esa "
+            "distinción aparece una y otra vez en las preguntas.\n\n"
             "**Se suelen agrupar en generaciones.** Los civiles y políticos "
             "(vida, libertad, voto), los económicos, sociales y culturales "
             "(educación, salud, trabajo) y los colectivos (medio ambiente sano, "
             "desarrollo). La agrupación es didáctica: ninguno vale menos que "
-            "otro.\n\n"
+            "otro. Los de segunda generación se realizan de forma progresiva, "
+            "porque dependen de recursos.\n\n"
             "**A cada derecho corresponde un deber.** El derecho de uno se "
             "sostiene en la obligación de los demás y del Estado de respetarlo. "
-            "La libertad de expresión convive con el deber de no calumniar.\n\n"
-            "**Los derechos tienen límites y garantías.** Casi ninguno es "
-            "absoluto: se limitan cuando chocan con los de otros. Y para "
-            "hacerlos valer existen mecanismos: en Chile, el recurso de "
-            "protección y el recurso de amparo ante los tribunales."
+            "La libertad de expresión convive con el deber de no calumniar, y "
+            "por eso casi ningún derecho es absoluto."
         ),
         "example_statement": (
             "Una persona publica en redes sociales acusaciones falsas contra un "
@@ -61980,6 +62001,212 @@ LESSONS: dict[str, dict] = {
             "entonces puedo\". Todos los derechos conviven con los de los demás, "
             "y esa convivencia es justamente lo que las preguntas de esta unidad "
             "ponen a prueba."
+        ),
+    },
+    "civ_justicia": {
+        "intro": (
+            "Tener un derecho y poder hacerlo valer no son lo mismo. Esta unidad "
+            "es la segunda parte: qué hace una persona cuando le vulneran un "
+            "derecho, y cuándo una diferencia de trato es discriminación."
+        ),
+        "theory": (
+            "**El sistema judicial chileno es jerárquico.** Juzgados de primera "
+            "instancia, Cortes de Apelaciones y, arriba, la Corte Suprema. Que "
+            "exista una instancia superior es lo que permite revisar una "
+            "sentencia con la que no se está de acuerdo.\n\n"
+            "**El recurso de protección es la vía rápida.** Se presenta ante la "
+            "Corte de Apelaciones cuando un acto arbitrario o ilegal amenaza un "
+            "derecho garantizado por la Constitución. No reemplaza al juicio "
+            "ordinario: busca restablecer el derecho ahora, no resolver el fondo "
+            "del conflicto.\n\n"
+            "**La palabra clave de la discriminación es «arbitraria».** No toda "
+            "distinción es discriminación: exigir un título para ejercer "
+            "medicina distingue con una razón. Es arbitraria cuando la razón no "
+            "guarda relación con lo que se está decidiendo, como rechazar a "
+            "alguien por su nacionalidad.\n\n"
+            "**Un ajuste no es un privilegio.** Dar más tiempo en una prueba a "
+            "una persona ciega no la pone por encima de nadie: remueve un "
+            "obstáculo para que rinda en las mismas condiciones. El criterio es "
+            "si la medida iguala el punto de partida o si otorga una ventaja."
+        ),
+        "example_statement": (
+            "Una empresa publica un aviso de trabajo para operario de bodega que "
+            "dice: «Abstenerse extranjeros». Una persona peruana con la "
+            "experiencia exigida postula y es rechazada solo por eso. ¿Cómo se "
+            "analiza el caso?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Compruebo si hay una distinción de trato: sí, se excluye a un grupo de personas por su nacionalidad.",
+                "porque": "Sin distinción no hay nada que analizar. El primer paso siempre es verificar que a alguien se le trató distinto.",
+            },
+            {
+                "accion": "Pregunto si la razón guarda relación con el trabajo. Ser operario de bodega no exige una nacionalidad determinada.",
+                "porque": "Acá se decide todo. Si el requisito fuera hablar español para atender público, habría una razón atendible; la nacionalidad, para cargar bodega, no lo es.",
+            },
+            {
+                "accion": "Concluyo que es discriminación arbitraria, y que la persona puede recurrir por la Ley Zamudio o por recurso de protección.",
+                "porque": "El derecho vulnerado —la igualdad ante la ley y la no discriminación— está garantizado en la Constitución, lo que abre esas dos vías.",
+            },
+        ],
+        "common_error": (
+            "Creer que toda diferencia de trato es discriminación. Las preguntas "
+            "de esta unidad casi siempre se juegan en si la razón invocada tiene "
+            "que ver o no con la decisión que se está tomando. Busca esa "
+            "conexión antes de responder."
+        ),
+    },
+    "civ_institucionalidad": {
+        "intro": (
+            "Saber que hay tres poderes no alcanza. Lo que se evalúa es cómo se "
+            "controlan entre sí, cómo nace una ley y por qué la Constitución "
+            "está por encima de todas las demás."
+        ),
+        "theory": (
+            "**La separación de poderes existe para limitar el poder, no para "
+            "repartir tareas.** Ejecutivo, Legislativo y Judicial se controlan "
+            "mutuamente: el Congreso legisla y fiscaliza, el Presidente puede "
+            "vetar, los tribunales revisan. Si un poder pudiera todo, el resto "
+            "sería decorativo.\n\n"
+            "**Una ley recorre un camino con vuelta atrás.** Se presenta en una "
+            "cámara de origen, pasa a la revisora, y las diferencias se "
+            "resuelven entre ambas antes de llegar al Presidente, que promulga o "
+            "veta. Las preguntas suelen ir al paso siguiente de uno dado.\n\n"
+            "**La Constitución manda sobre las leyes.** Una ley que la "
+            "contradice puede ser declarada inconstitucional. Por eso "
+            "reformarla exige quórums más altos: si cambiarla costara lo mismo "
+            "que una ley común, no protegería nada.\n\n"
+            "**El Estado de derecho alcanza también al gobierno.** No es que "
+            "haya leyes: es que la autoridad también está sometida a ellas y "
+            "puede ser controlada. En lo local, el alcalde y el concejo "
+            "municipal reproducen a escala esa lógica de gobierno y contrapeso."
+        ),
+        "example_statement": (
+            "Un proyecto de ley es aprobado por la Cámara de Diputados, que "
+            "actuó como cámara de origen. ¿Qué ocurre inmediatamente después?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Ubico en qué punto del camino está el proyecto: recién salió de la cámara de origen.",
+                "porque": "Estas preguntas piden el paso SIGUIENTE, no el final. Saltar a «se publica en el Diario Oficial» es el error más común.",
+            },
+            {
+                "accion": "Recuerdo que el sistema es bicameral: todo proyecto necesita el acuerdo de las dos cámaras.",
+                "porque": "La segunda cámara no es un trámite: puede rechazar o modificar, y ahí se abre el mecanismo para resolver las diferencias.",
+            },
+            {
+                "accion": "Respondo que pasa al Senado como cámara revisora.",
+                "porque": "Solo después de que ambas cámaras concuerden el proyecto llega al Presidente para su promulgación o veto.",
+            },
+        ],
+        "common_error": (
+            "Contestar con el final del proceso en vez de con el paso siguiente. "
+            "Lee bien si la pregunta dice «inmediatamente después», «finalmente» "
+            "o «para que sea ley»: cada una pide un punto distinto del camino."
+        ),
+    },
+    "his_representaciones": {
+        "intro": (
+            "Buena parte de esta prueba no se lee: se mira. Mapas, gráficos, "
+            "pirámides de población y líneas de tiempo traen la respuesta, y el "
+            "problema es leerlos con cuidado, no recordar datos."
+        ),
+        "theory": (
+            "**Lee primero los ejes, la leyenda y las unidades.** Un gráfico mal "
+            "leído se responde con seguridad y se responde mal. Antes de mirar "
+            "la curva, fíjate qué mide cada eje y en qué unidad.\n\n"
+            "**Porcentaje y cantidad no son lo mismo.** Un grupo puede bajar su "
+            "porcentaje mientras crece en número, si el total creció más. Muchas "
+            "alternativas incorrectas viven exactamente en esa confusión.\n\n"
+            "**Puntos porcentuales no son porcentaje.** Pasar de 20% a 30% es un "
+            "alza de diez PUNTOS porcentuales, pero de un 50%. Si la pregunta "
+            "dice «puntos», resta; si dice «en qué porcentaje», divide.\n\n"
+            "**En una pirámide de población, la forma es el mensaje.** Base "
+            "ancha significa población joven y alta natalidad; base angosta y "
+            "cima ancha, envejecimiento. Comparar dos pirámides del mismo país "
+            "es comparar dos momentos de su historia demográfica.\n\n"
+            "**La escala puede exagerar o esconder.** Dos gráficos de los mismos "
+            "datos dan impresiones distintas si el eje vertical no parte de cero "
+            "o si cambia el rango. Cuando dos fuentes muestran la misma variable "
+            "y se ven distintas, mira la escala antes que los datos."
+        ),
+        "example_statement": (
+            "Un gráfico muestra la alfabetización de las mujeres rurales en "
+            "Chile: 34% en 1930 y 96% en 2020.\n\n"
+            "¿Cuántos puntos porcentuales creció en ese período?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Leo qué pide exactamente: PUNTOS porcentuales, no en qué porcentaje creció.",
+                "porque": "Son dos operaciones distintas y ambas aparecen como alternativas. La palabra «puntos» decide cuál corresponde.",
+            },
+            {
+                "accion": "Resto los dos valores: 96 − 34 = 62.",
+                "porque": "Los puntos porcentuales son la diferencia aritmética entre dos porcentajes. No hay que dividir ni aplicar variación porcentual.",
+            },
+            {
+                "accion": "Descarto la alternativa que dice 182%, que es el crecimiento relativo (62 dividido por 34).",
+                "porque": "Ese número también es correcto, pero responde otra pregunta. Está puesto ahí precisamente para quien no distinguió las dos operaciones.",
+            },
+        ],
+        "common_error": (
+            "Responder desde la impresión visual sin mirar la escala. Una curva "
+            "que «se dispara» puede ser un alza de dos puntos en un eje que "
+            "parte en 48. Verifica siempre los números antes de describir la "
+            "tendencia."
+        ),
+    },
+    "his_critico": {
+        "intro": (
+            "La tercera habilidad del temario es la que más se parece a pensar: "
+            "reconocer que un proceso tiene varias causas, que el contexto "
+            "cambia el significado de un hecho y que los historiadores discrepan "
+            "sin que ninguno mienta."
+        ),
+        "theory": (
+            "**Casi ningún proceso tiene una sola causa.** Suelen combinarse "
+            "causas económicas, políticas, sociales y culturales. Una alternativa "
+            "que reduce un proceso grande a un único motivo casi siempre es el "
+            "distractor.\n\n"
+            "**Distingue causa estructural de causa inmediata.** La estructural "
+            "venía formándose hace tiempo y explica por qué el proceso era "
+            "posible; la inmediata es el detonante, y explica por qué ocurrió "
+            "justo entonces. Las dos son verdaderas y no compiten.\n\n"
+            "**Un mismo hecho puede ser causa y consecuencia.** El ferrocarril "
+            "es consecuencia de la industrialización y causa de la migración a "
+            "las ciudades. Depende del proceso desde el cual se lo mire.\n\n"
+            "**No juzgues el pasado con los criterios del presente.** Es lo que "
+            "se llama presentismo. Explicar por qué alguien pensaba así en su "
+            "época no es justificarlo: es entenderlo.\n\n"
+            "**Que la historia se reescriba no significa que sea opinable.** "
+            "Cada generación pregunta cosas nuevas y aparecen fuentes nuevas, "
+            "pero las interpretaciones siguen teniendo que sostenerse en "
+            "evidencia. Reescribirse no es inventarse."
+        ),
+        "example_statement": (
+            "Un estudiante afirma: «los campesinos medievales eran ignorantes "
+            "porque no sabían que la Tierra giraba alrededor del Sol».\n\n"
+            "¿Qué error de razonamiento histórico comete?"
+        ),
+        "example_steps": [
+            {
+                "accion": "Identifico con qué criterio se está juzgando: con un conocimiento que en esa época todavía no existía como saber establecido.",
+                "porque": "El punto no es si la afirmación astronómica es correcta hoy, sino si era exigible entonces. Ahí está el error.",
+            },
+            {
+                "accion": "Nombro el error: presentismo, juzgar el pasado con los criterios y conocimientos del presente.",
+                "porque": "Es uno de los conceptos que el temario evalúa por su nombre, y reconocerlo es lo que la pregunta pide.",
+            },
+            {
+                "accion": "Formulo la alternativa correcta: hay que evaluar a esas personas según el saber disponible en su contexto.",
+                "porque": "Entender por qué alguien creía algo en su época es distinto de darle la razón. Esa distinción es la que separa explicar de justificar.",
+            },
+        ],
+        "common_error": (
+            "Confundir explicar con justificar. Cuando una pregunta pide "
+            "entender por qué un grupo actuó de cierta manera, no está pidiendo "
+            "que lo apruebes. La alternativa que suena a condena moral rara vez "
+            "es la respuesta histórica."
         ),
     },
     "eco_indicadores": {
