@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } from "@/lib/auth";
 import { TemaToggle } from "@/components/tema-toggle";
+import { Logotipo } from "@/components/ui/marca";
 
 // Menú de la aplicación: solo tiene sentido con la sesión iniciada, porque
 // todas estas rutas exigen autenticación.
@@ -83,16 +84,8 @@ export function SiteHeader() {
   return (
     <header className="glass sticky top-0 z-50">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href={user ? "/panel" : "/"} className="flex items-center gap-2">
-          <span
-            className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-accent-foreground"
-            style={{
-              background: "linear-gradient(135deg, var(--accent), var(--accent-2))",
-            }}
-          >
-            1K
-          </span>
-          <span className="text-sm font-semibold tracking-tight">1000paes</span>
+        <Link href={user ? "/panel" : "/"} className="flex items-center">
+          <Logotipo className="text-base font-bold text-foreground" tamanoPx={16} />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
