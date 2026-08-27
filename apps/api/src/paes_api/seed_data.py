@@ -58260,16 +58260,16 @@ QUESTIONS_HISTORIA = [
         "millones efectivamente trabajan, que es lo que miden la participación y la "
         "ocupación. Describe una estructura de edades, no un mercado laboral.",
         [
-            ("33%, dividiendo por la población total del país", "El denominador es la población en edad de trabajar, no el total."),
-            ("200%, invirtiendo la razón entre ambos grupos", "La razón va con los dependientes en el numerador."),
-            ("17%, contando solo a los mayores de 64 años", "La tasa incluye a los menores de 15 junto con los mayores de 64."),
+            ("33%", "El denominador es la población en edad de trabajar, no el total."),
+            ("200%", "La razón va con los dependientes en el numerador."),
+            ("17%", "La tasa incluye a los menores de 15 junto con los mayores de 64."),
         ],
     ),
     _q(
         "eco_indicadores", "facil",
         "¿Qué ventaja tiene un índice mensual de actividad económica frente al PIB "
         "trimestral?",
-        "Avisa antes de lo que está pasando",
+        "Entrega una señal más temprana de lo que está ocurriendo",
         "El PIB trimestral es la medida más completa de la producción, pero se "
         "publica semanas después de terminado el trimestre: cuando llega, el "
         "período que describe ya quedó atrás.\nUn índice mensual entrega una señal "
@@ -58409,7 +58409,7 @@ QUESTIONS_HISTORIA = [
         "his_representaciones", "facil",
         "Según la figura de Ventura, ¿qué representa el tamaño de cada región en el "
         "cartograma?",
-        "Su población",
+        "La cantidad de personas que viven en ella",
         "La figura muestra dos representaciones del mismo país y las rotula: a la "
         "izquierda el mapa por superficie y a la derecha el cartograma por "
         "población.\nLa nota al pie lo confirma: en el cartograma el tamaño "
@@ -58426,7 +58426,7 @@ QUESTIONS_HISTORIA = [
         "his_representaciones", "dificil",
         "En la figura de Bermeja, S es la región más extensa del mapa y una franja "
         "delgada en el cartograma. ¿Qué muestra ese contraste?",
-        "Mucho territorio con pocos votantes",
+        "Que concentra mucho territorio y pocos votantes",
         "Las dos representaciones miden variables distintas sobre las mismas "
         "unidades, así que compararlas revela la relación entre ambas.\nS grande "
         "por superficie y mínima por votantes significa que hay mucho territorio "
@@ -58522,9 +58522,9 @@ QUESTIONS_HISTORIA = [
         "informa solo los 199 mil describe el flujo de entrada, no el cambio de "
         "población que el mapa permite estimar.",
         [
-            ("199 mil personas, sumando las tres flechas de entrada", "Ese es el total de llegadas: falta descontar la salida hacia I."),
-            ("238 mil personas, sumando todas las flechas del mapa", "La flecha hacia I se resta, no se suma."),
-            ("88 mil personas, según la flecha más gruesa", "Esa es la mayor de las llegadas, no el saldo total."),
+            ("199 mil personas", "Ese es el total de llegadas: falta descontar la salida hacia I."),
+            ("238 mil personas", "La flecha hacia I se resta, no se suma."),
+            ("88 mil personas", "Esa es la mayor de las llegadas, no el saldo total."),
         ],
         imagen="/preguntas/his-mapa-migracion-saldo.svg",
     ),
@@ -58567,7 +58567,7 @@ QUESTIONS_HISTORIA = [
     _q(
         "his_representaciones", "dificil",
         "¿Qué NO permite establecer el mapa de Cardal sobre su economía?",
-        "Cuánto se producía en cada zona",
+        "Qué volumen se producía en cada zona del interior",
         "El mapa informa dónde está cada zona productora, de qué tipo es y a qué "
         "puerto se conecta.\nNo entrega volúmenes ni valores: la zona de carbón y "
         "la de hierro aparecen idénticas aunque una produjera diez veces más que la "
@@ -58818,7 +58818,7 @@ QUESTIONS_HISTORIA = [
         "civ_proteccion", "civ_ddhh", "facil",
         "Según el texto, ¿qué organismo vela por el cumplimiento de los derechos "
         "del consumidor?",
-        "El SERNAC",
+        "El Servicio Nacional del Consumidor",
         "El texto lo señala al describir la Ley 19.496, y agrega que recibe "
         "denuncias.\nY explica por qué esa ley existe: entre un comercio y un "
         "consumidor hay un desequilibrio que el solo acuerdo privado no corrige.",
@@ -58946,7 +58946,7 @@ QUESTIONS_HISTORIA = [
         "civ_participacion_local", "civ_democracia", "dificil",
         "Una alcaldesa dice que los presupuestos participativos son innecesarios "
         "porque el concejo ya representa a los vecinos. ¿Qué le responde el texto?",
-        "Entre una elección y otra pasan años",
+        "Entre una elección municipal y la siguiente pasan años",
         "El texto abre con esa constatación: entre una elección y otra la "
         "ciudadanía queda sin mecanismos si solo cuenta con el voto.\nLos "
         "presupuestos participativos operan en ese intervalo y hacen algo que la "
@@ -59503,7 +59503,7 @@ QUESTIONS_HISTORIA = [
         "chile_xx_migracion", "his_chile_xx", "dificil",
         "El informe de 1952 recomienda contener el flujo migratorio. ¿Qué supone "
         "esa recomendación sobre dónde está el problema?",
-        "Que el problema está en quien llega",
+        "Que el problema está en las personas que llegan",
         "Contener un flujo es actuar sobre el punto de llegada: impedir o "
         "desalentar que la gente se instale en el sector.\nEsa medida solo tiene "
         "sentido si se entiende la migración como la causa del problema. El "
@@ -59764,7 +59764,7 @@ QUESTIONS_HISTORIA = [
         "civ_info_regulacion", "civ_ddhh", "dificil",
         "Ambas intervenciones invocan la libertad de expresión y proponen medidas "
         "distintas. ¿Qué explica ese desacuerdo?",
-        "Discrepan sobre qué la amenaza más",
+        "Discrepan sobre cuál es la amenaza más grave para ella",
         "La Intervención 1 considera que el riesgo está en que un contenido ya "
         "declarado falso circule con ventaja, porque eso deteriora la discusión "
         "pública que la libertad de expresión existe para proteger.\nLa "
@@ -59791,32 +59791,32 @@ QUESTIONS_HISTORIA = [
         "escala del hogar, porque algunos gastos no se multiplican por cada "
         "integrante.",
         [
-            ("$60.000 mensuales, igual que la canasta per cápita", "Esa es la canasta de una persona, no la del hogar completo."),
+            ("$60.000 mensuales", "Esa es la canasta de una persona, no la del hogar completo."),
             ("$15.000 mensuales por cada integrante del hogar", "Dividió la canasta entre cuatro en lugar de multiplicarla."),
-            ("$120.000 mensuales, contando a los dos adultos", "La línea considera a todos los integrantes del hogar."),
+            ("$120.000 mensuales", "La línea considera a todos los integrantes del hogar."),
         ],
     ),
     _q(
         "eco_indicadores", "facil",
         "Un país destina 54.000 millones de dólares a gasto social y su PIB es de "
         "300.000 millones. ¿Qué porcentaje del PIB representa ese gasto?",
-        "18%",
+        "18% del PIB",
         "El indicador compara el gasto con el tamaño de la economía que lo "
         "financia.\nEl cálculo es 54.000 ÷ 300.000 = 0,18, es decir 18% del "
         "PIB.\nSe usa esa proporción y no el monto absoluto porque permite comparar "
         "países de tamaños muy distintos y seguir la evolución de un mismo país en "
         "el tiempo.",
         [
-            ("5,4% del producto interno bruto del país", "Corrió la coma decimal al calcular la proporción."),
-            ("54%, que corresponde al monto del gasto", "Confunde el monto en millones con un porcentaje."),
-            ("5,5 veces el PIB anual del país", "Invirtió la razón: dividió el PIB por el gasto."),
+            ("5,4% del PIB", "Corre la coma un lugar: el cociente de 54.000 entre 300.000 es 0,18, no 0,054."),
+            ("54% del PIB", "Confunde el monto del gasto con la proporción que representa."),
+            ("5,5 veces el PIB", "El gasto social es una fracción del producto, no un múltiplo."),
         ],
     ),
     _q(
         "eco_indicadores", "facil",
         "En una fábrica 20 trabajadores producen 400 unidades por jornada. ¿Cuál es "
         "la productividad por trabajador?",
-        "20 unidades por jornada",
+        "20 unidades por trabajador y por jornada",
         "La productividad por trabajador se obtiene dividiendo lo producido por el "
         "número de personas que lo produjeron.\nEl cálculo es 400 ÷ 20 = 20 "
         "unidades por trabajador y por jornada.\nEl indicador no dice cuánto se "
@@ -59923,7 +59923,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "dificil",
         "Se informa que el salario promedio de las mujeres es 20% menor que el de "
         "los hombres. ¿Qué NO se puede concluir directamente de esa cifra?",
-        "Que a igual trabajo se paga distinto",
+        "Que a igual trabajo se paga un salario distinto",
         "La comparación de promedios mezcla en una sola cifra dos cosas distintas: "
         "diferencias de remuneración dentro del mismo puesto y diferencias en qué "
         "puestos ocupa cada grupo.\nBuena parte de la brecha puede provenir de la "
@@ -60031,7 +60031,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "facil",
         "Un país exportó bienes por 45.000 millones de dólares e importó por 38.000 "
         "millones. ¿Cuál fue su balanza comercial?",
-        "Superávit de 7.000 millones",
+        "Superávit de 7.000 millones de dólares",
         "La balanza comercial es la diferencia entre lo exportado y lo importado en "
         "bienes.\nEl cálculo es 45.000 − 38.000 = 7.000 millones de dólares a "
         "favor, lo que se llama superávit comercial.\nHabría déficit en el caso "
@@ -60056,8 +60056,8 @@ QUESTIONS_HISTORIA = [
         "economía que debe servirla.",
         [
             ("3,33 veces el PIB anual del país", "Invirtió la razón: dividió el PIB por la deuda."),
-            ("90%, que es el monto de la deuda", "Confunde el monto en millones con un porcentaje."),
-            ("13%, sumando ambas magnitudes", "No corresponde a ninguna operación válida con esos datos."),
+            ("90%", "Confunde el monto en millones con un porcentaje."),
+            ("13%", "No corresponde a ninguna operación válida con esos datos."),
         ],
     ),
     _q(
@@ -60081,7 +60081,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "medio",
         "Un depósito paga 8% de interés anual y la inflación del año fue 5%. "
         "¿Cuánto ganó realmente el ahorrante?",
-        "Cerca de 3%",
+        "Cerca de un 3% de poder adquisitivo",
         "El interés nominal indica cuánto crece la cantidad de dinero; el real, "
         "cuánto crece lo que ese dinero puede comprar.\nComo los precios subieron "
         "5%, del 8% recibido esa parte solo compensa el alza. Lo que queda es "
@@ -60098,7 +60098,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "medio",
         "Un país tuvo déficit fiscal durante cinco años seguidos y ahora cierra el "
         "año con superávit. ¿Qué ocurre con su deuda pública?",
-        "Sigue alta, aunque deje de crecer",
+        "Sigue alta, aunque este año deje de crecer",
         "Conviene distinguir dos cosas que suelen confundirse. El déficit o "
         "superávit es un flujo anual: describe si en ese año se gastó más o menos "
         "de lo que se recaudó.\nLa deuda es un saldo acumulado: el resultado de "
@@ -60116,7 +60116,7 @@ QUESTIONS_HISTORIA = [
         "eco_indicadores", "dificil",
         "El PIB nominal de un país creció 12% en un año y el nivel general de "
         "precios también subió 12%. ¿Qué ocurrió con la producción?",
-        "Se mantuvo prácticamente igual",
+        "Se mantuvo prácticamente en el mismo nivel",
         "El PIB nominal mide la producción a los precios de cada año, de modo que "
         "aumenta tanto si se produce más como si lo mismo se vende más caro.\nSi "
         "todo el crecimiento del valor se explica por el alza de precios, la "
@@ -60228,7 +60228,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "facil",
         "Un almacén vendía 400 kilos de arroz por semana a $1.200. Baja el precio a "
         "$1.000 y pasa a vender 500 kilos. ¿Qué ocurrió con su ingreso semanal?",
-        "Subió de $480.000 a $500.000",
+        "Subió de $480.000 a $500.000 en la semana",
         "El ingreso total es precio por cantidad, y hay que calcularlo en los dos "
         "escenarios porque las dos variables cambiaron.\nAntes: 1.200 × 400 = "
         "$480.000. Después: 1.000 × 500 = $500.000.\nEl precio bajó y el ingreso "
@@ -60260,7 +60260,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "facil",
         "El Estado entrega un subsidio de $300 por cada unidad producida de un "
         "bien. ¿Qué ocurre con la curva de oferta?",
-        "Se desplaza hacia la derecha",
+        "Se desplaza la curva de oferta hacia la derecha",
         "El subsidio por unidad reduce el costo efectivo de producir: por cada "
         "unidad que vende, el productor recibe el precio de mercado más $300.\nCon "
         "ese incentivo está dispuesto a ofrecer una cantidad mayor a cada precio, "
@@ -60322,9 +60322,9 @@ QUESTIONS_HISTORIA = [
         "cada kilo deja $900 de margen, 900 × 120 = $108.000, menos los $18.000 del "
         "puesto.",
         [
-            ("$108.000", "Omite el costo del puesto, que también hay que descontar."),
-            ("$288.000", "Es el ingreso total, sin descontar ningún costo."),
-            ("$270.000, restando solo el arriendo del puesto", "Omite el costo de la mercadería, que es el mayor de los dos."),
+            ("$108.000", "Es el margen de los 120 kilos sin descontar el arriendo del puesto."),
+            ("$288.000", "Es lo que vendió en total, no lo que ganó."),
+            ("$270.000", "Descuenta el arriendo, pero no lo que le costó la fruta."),
         ],
     ),
     _q(
@@ -60425,7 +60425,7 @@ QUESTIONS_HISTORIA = [
         "Una empresa de agua potable no enfrenta competidores y la autoridad le "
         "fija una tarifa. ¿Por qué la tarifa no se fija simplemente en el costo de "
         "producción?",
-        "Sin margen nadie repondría la red",
+        "Porque sin margen nadie repondría ni mantendría la red",
         "Una tarifa igual al costo de operación cubriría el día a día y dejaría a "
         "la empresa sin recursos para renovar cañerías, ampliar cobertura ni "
         "enfrentar una falla mayor.\nEl servicio se deterioraría con el tiempo, y "
@@ -60443,7 +60443,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "dificil",
         "Sube fuertemente el precio de las entradas al cine y también cae la venta "
         "de cabritas en sus salas. ¿Qué relación hay entre ambos productos?",
-        "Son bienes complementarios",
+        "Son bienes complementarios entre sí",
         "Dos bienes son complementarios cuando se consumen juntos, de modo que el "
         "precio de uno afecta la demanda del otro en sentido inverso.\nAquí el alza "
         "de la entrada reduce el número de personas que van al cine, y quienes no "
@@ -60493,7 +60493,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "facil",
         "En una ciudad hay tres empresas de telefonía y ninguna otra puede entrar "
         "sin una inversión enorme en antenas. ¿Qué tipo de mercado es?",
-        "Un oligopolio",
+        "Un oligopolio, porque son pocas empresas y no entran más",
         "El oligopolio es un mercado con pocos oferentes, donde cada uno tiene peso "
         "suficiente para que sus decisiones afecten a los demás.\nEl caso reúne los "
         "dos rasgos: son tres empresas y existe una barrera de entrada, que es la "
@@ -60525,7 +60525,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "medio",
         "El Estado aplica un impuesto de $200 por cada unidad vendida de un "
         "producto. ¿Qué ocurre con la curva de oferta?",
-        "Se desplaza hacia la izquierda",
+        "Se desplaza la curva de oferta hacia la izquierda",
         "El impuesto por unidad se comporta como un costo adicional de producir: "
         "para entregar la misma cantidad, el vendedor necesita recibir $200 más que "
         "antes.\nDicho en términos de la curva, a cada precio los oferentes están "
@@ -60634,7 +60634,7 @@ QUESTIONS_HISTORIA = [
         "eco_mercado", "dificil",
         "Tras fijarse un precio máximo muy por debajo del equilibrio, aparece una "
         "reventa informal del producto a precios altos. ¿Cómo se explica?",
-        "El precio bajo no eliminó la escasez",
+        "El precio máximo no eliminó la escasez del producto",
         "El tope fija cuánto se puede cobrar, no cuánto producto hay. A ese precio "
         "la cantidad demandada supera a la ofrecida, y esa diferencia no desaparece "
         "porque una norma lo disponga.\nAlguien tiene que quedarse sin producto, y "
@@ -60932,9 +60932,9 @@ QUESTIONS_HISTORIA = [
         "2020, que es el segundo. La caída se concentra entre 1970 y 1980, cuando "
         "la serie pierde diecisiete puntos de una sola vez.",
         [
-            ("20% en 2020, tras la recuperación reciente", "Es el segundo valor de la serie, muy por debajo del de 1970."),
-            ("17% en 1980, antes de la caída posterior", "Es la mitad del valor de 1970."),
-            ("14% en 2005, el punto medio de la serie", "Es el valor más bajo de toda la tabla."),
+            ("20% en 2020", "Es el dato más reciente de la serie, no el más alto."),
+            ("17% en 1980", "Queda muy por debajo del 34% que registra 1970."),
+            ("14% en 2005", "Es el punto más bajo de la serie, no el más alto."),
         ],
     ),
     _ql(
@@ -60960,15 +60960,15 @@ QUESTIONS_HISTORIA = [
         "entre esos dos cortes. La tabla no permite precisar el año exacto, porque "
         "sus mediciones están separadas por quince años.",
         [
-            ("Entre 1970 y 1980, junto con la caída sindical", "En 1980 la jornada seguía siendo de 48 horas."),
-            ("Entre 2005 y 2020, con la recuperación sindical", "En 2005 la jornada ya era de 45 horas."),
-            ("No bajó en ningún momento de la serie", "Pasa de 48 a 45 horas entre 1990 y 2005."),
+            ("Entre 1970 y 1980", "En ese tramo cae la sindicalización; la jornada sigue igual."),
+            ("Entre 2005 y 2020", "La jornada ya había bajado antes de ese tramo."),
+            ("No bajó en ningún tramo", "La tabla registra la baja de la jornada legal máxima."),
         ],
     ),
     _ql(
         "eco_laborales_cifras", "eco_laborales", "medio",
         "¿Qué relación aparece en la Tabla 1 entre sindicalización e informalidad?",
-        "Cuando cae una, sube la otra",
+        "Cuando cae la sindicalización, sube la informalidad",
         "Las dos columnas se mueven en sentidos opuestos en casi toda la serie. "
         "Entre 1970 y 1990 la sindicalización cae de 34% a 15% y la informalidad "
         "sube de 21% a 31%; entre 2005 y 2020 la sindicalización sube de 14% a 20% "
@@ -61075,7 +61075,7 @@ QUESTIONS_HISTORIA = [
         "eco_laborales_cifras", "eco_laborales", "dificil",
         "¿Por qué la restricción de la negociación por rama afecta más a las "
         "empresas pequeñas?",
-        "Formar sindicato ahí es más difícil",
+        "Ahí es más difícil formar y sostener un sindicato",
         "Negociar por rama permite que las condiciones acordadas alcancen a todos "
         "los trabajadores del sector, con independencia del tamaño de la empresa "
         "donde trabajen.\nSi la negociación solo puede darse dentro de cada "
@@ -61093,7 +61093,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_laborales_cifras", "eco_laborales", "dificil",
         "¿Qué NO permite establecer esta fuente sobre el período 1970-2020?",
-        "Qué causó cada cambio de la serie",
+        "Qué causó cada uno de los cambios de la serie",
         "Las tablas registran resultados: cuánta gente estaba sindicalizada, cuánta "
         "cubierta por negociación, cuánta en informalidad y qué jornada regía.\nLa "
         "segunda nota entrega un dato de contexto para un tramo, pero no permite "
@@ -61192,7 +61192,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_derechos_laborales", "eco_laborales", "medio",
         "Según el texto, ¿por qué los derechos individuales no bastan?",
-        "Quien reclama solo arriesga su puesto",
+        "Porque quien reclama solo arriesga su propio puesto",
         "El texto identifica el límite: los derechos individuales se ejercen de a "
         "uno, y un trabajador que reclama solo enfrenta a una organización "
         "entera.\nEl riesgo no es teórico. Quien depende de ese sueldo para el mes "
@@ -61209,7 +61209,7 @@ QUESTIONS_HISTORIA = [
         "eco_derechos_laborales", "eco_laborales", "medio",
         "Según el texto, ¿por qué la huelga es decisiva en la negociación "
         "colectiva?",
-        "Sin ella una parte puede no responder",
+        "Sin ella una de las partes puede no responder",
         "El texto lo formula así: la huelga es el punto donde la negociación deja "
         "de ser una conversación.\nEl argumento es sobre el poder de negociación. "
         "Si una de las partes no enfrenta ninguna consecuencia por negarse a "
@@ -61389,7 +61389,7 @@ QUESTIONS_HISTORIA = [
         "eco_proyecto_extractivo", "eco_desarrollo", "facil",
         "Según la Intervención 2, ¿en cuánto tiempo se recarga el acuífero de la "
         "comuna?",
-        "En décadas",
+        "En un plazo que se mide en décadas",
         "La hidrogeóloga lo señala como su primera precisión y de ahí extrae la "
         "consecuencia: un consumo mayor al de recarga no se corrige reduciéndolo "
         "después.\nEl punto es la asimetría entre extraer y reponer. Agotar puede "
@@ -61593,7 +61593,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_modelos_cifras", "eco_desarrollo", "facil",
         "Según la Tabla 2, ¿qué país depende más de exportar recursos naturales?",
-        "Aurelia, con 81%",
+        "Aurelia, con 81% de sus exportaciones",
         "La primera columna de la Tabla 2 entrega 81%, 22%, 74% y 38%.\nAurelia "
         "encabeza la lista, seguida de cerca por Corvina con 74%. Las dos son "
         "también las que registran mayor pérdida de superficie de bosque en veinte "
@@ -61607,7 +61607,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_modelos_cifras", "eco_desarrollo", "facil",
         "Según la Tabla 2, ¿cuántas toneladas por habitante emite Duraznal?",
-        "2,6 toneladas",
+        "2,6 toneladas por habitante",
         "La columna de emisiones por habitante entrega 9,4 para Aurelia, 5,1 para "
         "Bardenas, 3,2 para Corvina y 2,6 para Duraznal.\nDuraznal registra así el "
         "menor valor de la tabla, con menos de un tercio de las emisiones por "
@@ -61749,7 +61749,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_modelos_cifras", "eco_desarrollo", "dificil",
         "¿Qué NO permiten concluir estas tablas sobre los modelos de desarrollo?",
-        "Qué política produjo cada resultado",
+        "Qué política produjo cada uno de esos resultados",
         "Las tablas describen estados: cuánto produce cada país por habitante, cómo "
         "reparte, qué exporta, cuánto emite y cuánto bosque perdió.\nNada informan "
         "sobre las decisiones que llevaron ahí: qué impuestos se cobraron a la "
@@ -61815,7 +61815,7 @@ QUESTIONS_HISTORIA = [
         "eco_medir_desarrollo", "eco_desarrollo", "facil",
         "Según el texto, ¿qué ejemplo da de algo que aumenta el producto sin "
         "mejorar la vida de nadie?",
-        "Reconstruir tras un terremoto",
+        "Reconstruir lo destruido por un terremoto",
         "El texto lo presenta como caso del segundo problema: el producto suma sin "
         "distinguir.\nJunto a ese ejemplo menciona otros dos: el gasto en tratar "
         "enfermedades causadas por la contaminación y el combustible quemado en "
@@ -62031,7 +62031,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_tope_arriendo", "eco_estado_mercado", "facil",
         "Según la Columna 1, ¿qué ocurrió con los arriendos durante ocho años?",
-        "Subieron más rápido que los sueldos",
+        "Subieron bastante más rápido que los sueldos",
         "La columna abre con ese dato y sobre él construye todo su argumento.\nLa "
         "comparación con los sueldos es lo relevante: no se trata solo de que el "
         "arriendo suba, sino de que absorba una parte creciente del ingreso de las "
@@ -62320,7 +62320,7 @@ QUESTIONS_HISTORIA = [
         "eco_tabla_mercado", "eco_estado_mercado", "facil",
         "Según la Tabla 2, ¿qué ocurre con la curva de oferta si una helada arruina "
         "parte de la cosecha?",
-        "Se desplaza a la izquierda",
+        "Se desplaza la curva de oferta a la izquierda",
         "La Tabla 2 lo registra directamente. La helada reduce lo que hay "
         "disponible para vender, de modo que a cada precio se ofrece menos que "
         "antes.\nLa primera nota entrega la clave para leer el sentido del "
@@ -62352,7 +62352,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "eco_tabla_mercado", "eco_estado_mercado", "medio",
         "Si el precio se fija en $500 por caja, ¿qué muestra la Tabla 1?",
-        "Sobran 300 cajas",
+        "Sobran 300 cajas a ese precio de venta",
         "A $500 la tabla registra 750 cajas ofrecidas y 450 demandadas.\nLa "
         "diferencia es 750 − 450 = 300 cajas que se ofrecen y no encuentran "
         "comprador a ese precio.\nEs la situación inversa a la del precio máximo: "
@@ -62375,9 +62375,9 @@ QUESTIONS_HISTORIA = [
         "que un precio más alto no garantiza mayor ingreso: a $600 se venderían "
         "solo 300 cajas, es decir 180.000 pesos.",
         [
-            ("$1.000 por semana, sumando precio y cantidad", "Sumó ambos valores en lugar de multiplicarlos."),
-            ("$180.000 por semana, al precio más alto de la tabla", "Corresponde a $600 por 300 cajas, que no es el equilibrio."),
-            ("$360.000 por semana, con la mayor cantidad ofrecida", "Multiplicó $400 por 900 cajas, que no se transan a ese precio."),
+            ("$1.000 por semana", "Sumó ambos valores en lugar de multiplicarlos."),
+            ("$180.000 por semana", "Corresponde a $600 por 300 cajas, que no es el equilibrio."),
+            ("$360.000 por semana", "Multiplicó $400 por 900 cajas, que no se transan a ese precio."),
         ],
     ),
     _ql(
@@ -62768,7 +62768,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_acceso", "civ_justicia", "facil",
         "Según la Intervención 1, ¿qué les falta a las tres personas que describe?",
-        "Información, tiempo y dinero",
+        "Información, tiempo y dinero para litigar",
         "La intervención lo enuncia tras aclarar lo contrario: ninguno de los tres "
         "enfrenta una ley que los desampare, y los tres tienen derecho y "
         "tribunal.\nLo que no tienen es lo que enumera a continuación, y que "
@@ -63045,7 +63045,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_mapa", "civ_justicia", "facil",
         "Según la Tabla 3, ¿ante qué órgano se presenta un recurso de protección?",
-        "Ante la Corte de Apelaciones",
+        "Ante la Corte de Apelaciones respectiva",
         "La Tabla 3 lo indica, y la tercera nota agrega un rasgo importante: tanto "
         "el recurso de protección como el de amparo se presentan directamente ante "
         "la Corte, sin pasar por un tribunal de base.\nEsa vía directa es lo que "
@@ -63092,7 +63092,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_mapa", "civ_justicia", "medio",
         "Según la primera nota, ¿qué NO hace un tribunal superior al revisar?",
-        "Rehacer el juicio completo",
+        "Rehacer el juicio completo desde el principio",
         "La nota lo precisa: revisar no significa repetir el juicio, sino examinar "
         "lo que se le plantea en el recurso.\nLa consecuencia práctica es "
         "importante para quien reclama. Si el recurso no plantea un punto, el "
@@ -63127,7 +63127,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_mapa", "civ_justicia", "medio",
         "Según la Tabla 1, ¿qué tribunal ve un reclamo por un producto defectuoso?",
-        "El juzgado de policía local",
+        "El juzgado de policía local, por la ley del consumidor",
         "La Tabla 1 le asigna las infracciones al tránsito y a la ley del "
         "consumidor.\nLa segunda nota agrega un rasgo poco conocido de estos "
         "juzgados: dependen de las municipalidades, aunque ejercen función "
@@ -63218,7 +63218,7 @@ QUESTIONS_HISTORIA = [
         "civ_just_mapa", "civ_justicia", "dificil",
         "¿Qué muestra la Tabla 1 sobre la organización del sistema judicial "
         "chileno?",
-        "Está especializado por materia",
+        "Está especializado según la materia de cada causa",
         "Los seis tribunales de la tabla no se distinguen por territorio ni por la "
         "importancia del asunto, sino por el tipo de conflicto: penal, civil, "
         "familiar, laboral y de infracciones.\nLa especialización busca que quien "
@@ -63274,7 +63274,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_proceso", "civ_justicia", "facil",
         "Según el texto, ¿qué institución investiga y decide si acusa?",
-        "El Ministerio Público",
+        "El Ministerio Público, a través de sus fiscales",
         "El texto le asigna esa función de manera directa: sus fiscales dirigen la "
         "investigación, reúnen la prueba y sostienen la acusación ante el "
         "tribunal.\nLas otras dos instituciones tienen funciones distintas: la "
@@ -63337,7 +63337,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_just_proceso", "civ_justicia", "medio",
         "Según el texto, ¿qué ocurre con un juicio sin defensa?",
-        "Se convierte en un monólogo",
+        "Se convierte en un monólogo: nadie discute la acusación",
         "El texto describe el mecanismo: alguien acusa, nadie discute la acusación "
         "y el tribunal resuelve sobre una sola versión.\nEl problema no es solo que "
         "la persona imputada quede desprotegida. Es que el tribunal pierde aquello "
@@ -63547,7 +63547,7 @@ QUESTIONS_HISTORIA = [
         "civ_info_regulacion", "civ_informacion", "facil",
         "Según la Intervención 2, ¿qué hará una empresa ante la duda si se le "
         "obliga a responder?",
-        "Borrar el contenido",
+        "Borrar el contenido sin más trámite",
         "La intervención lo formula así y explica el cálculo que hay detrás: a la "
         "empresa le sale más barato eliminar mil publicaciones legítimas que "
         "arriesgar una sanción por una ilegítima.\nY agrega cómo se ejecutará esa "
@@ -63704,7 +63704,7 @@ QUESTIONS_HISTORIA = [
         "civ_info_regulacion", "civ_informacion", "dificil",
         "¿Por qué la Intervención 2 subraya que la eliminación la hará un sistema "
         "automático?",
-        "Porque nadie examina el caso concreto",
+        "Porque de ese modo nadie examina el caso concreto",
         "El detalle traslada el problema desde la norma hacia su aplicación real. "
         "Una ley puede estar bien redactada y aun así producir un mal resultado si "
         "quien la ejecuta no puede distinguir los casos.\nA la escala de estas "
@@ -63860,7 +63860,7 @@ QUESTIONS_HISTORIA = [
         "civ_info_cifras", "civ_informacion", "medio",
         "Según la Tabla 2, ¿qué ocurre con la verificación previa al compartir a "
         "medida que sube la edad?",
-        "Baja de 39% a 17%",
+        "Baja de manera sostenida desde 39% hasta 17%",
         "La última columna registra 39%, 33%, 24% y 17% en orden creciente de "
         "edad.\nEl grupo más joven verifica más del doble que el mayor, y esa "
         "diferencia convive con lo que muestra la segunda columna: es también el "
@@ -64024,7 +64024,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_info_desinformacion", "civ_informacion", "facil",
         "Según el texto, ¿qué cambió respecto de la desinformación de otras épocas?",
-        "La velocidad, el costo y el alcance",
+        "La velocidad, el costo y el alcance de su difusión",
         "El texto reconoce que los rumores y los panfletos falsos son tan antiguos "
         "como la política, de modo que el fenómeno no es nuevo.\nLo que identifica "
         "como cambio son esas tres dimensiones: hoy publicar no cuesta nada, "
@@ -64563,7 +64563,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_inst_tramitacion", "civ_institucionalidad", "facil",
         "Según la Tabla 2, ¿qué quórum exige una ley común?",
-        "Mayoría de los presentes en la sala",
+        "Mayoría de los parlamentarios presentes en la sala",
         "La Tabla 2 lo consigna así, y la primera nota entrega la distinción que "
         "hace funcionar toda la tabla: presentes son solo los que están en la sala "
         "al votar.\nEsa es la exigencia más baja de las cuatro, y por eso la ley "
@@ -64631,7 +64631,7 @@ QUESTIONS_HISTORIA = [
         "civ_inst_tramitacion", "civ_institucionalidad", "medio",
         "¿En qué etapa de la Tabla 1 interviene el Presidente después de que el "
         "Congreso aprueba el texto?",
-        "En el veto y en la promulgación",
+        "En el veto y en la promulgación del texto aprobado",
         "La Tabla 1 lo sitúa en dos filas posteriores a la votación: el veto, donde "
         "observa el texto aprobado, y la promulgación, donde el texto se convierte "
         "en ley vigente junto con su publicación en el Diario Oficial.\nAntes de "
@@ -64795,7 +64795,7 @@ QUESTIONS_HISTORIA = [
         "civ_inst_autonomos", "civ_institucionalidad", "facil",
         "Según el texto, ¿qué examina la Contraloría antes de que un decreto "
         "produzca efectos?",
-        "Si el acto se ajusta a la ley",
+        "Si el acto se ajusta a la ley que lo autoriza",
         "El texto describe un control previo: antes de que un decreto o una "
         "resolución produzca efectos, la Contraloría examina si se ajusta a la ley, "
         "y si no lo hace, lo representa.\nY precisa el alcance de ese examen: es "
@@ -65343,7 +65343,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "dictadura_economia_cifras", "his_dictadura", "facil",
         "Según la Tabla 2, ¿qué ocurrió con el arancel promedio entre 1973 y 1981?",
-        "Bajó de 94% a 10%",
+        "Bajó de 94% a 10% en ese período",
         "La Tabla 2 registra esos dos valores, lo que representa una apertura "
         "comercial muy rápida: en ocho años el arancel promedio cae a un noveno de "
         "su nivel inicial.\nHacia 1990 sube algo, hasta 15%, pero se mantiene muy "
@@ -66136,7 +66136,7 @@ QUESTIONS_HISTORIA = [
         "chile_xx_cifras", "his_chile_xx", "medio",
         "Según la segunda nota, ¿qué requisito limitaba el acceso al padrón hasta "
         "1970?",
-        "Saber leer y escribir",
+        "Haber aprendido a leer y escribir",
         "La nota lo consigna directamente y su efecto se puede estimar con la Tabla "
         "1: con un analfabetismo de 25% en 1930 y de 16% en 1952, ese requisito "
         "excluía a una parte considerable de la población adulta.\nY no excluía al "
@@ -69944,7 +69944,7 @@ QUESTIONS_HISTORIA = [
         "nacion_cifras_europa", "his_estado_nacion", "medio",
         "Comparando las dos tablas, ¿qué tienen en común las fechas de instrucción "
         "primaria obligatoria de los cuatro países?",
-        "Se concentran todas entre 1870 y 1882",
+        "Se concentran todas en el tramo que va de 1870 a 1882",
         "La Tabla 2 registra 1882, 1877, 1871 y 1870: las cuatro caen en un tramo "
         "de doce años.\nLa coincidencia es llamativa porque los cuatro países "
         "tienen trayectorias distintas: dos están unificados desde antes de 1800 y "
@@ -70113,7 +70113,7 @@ QUESTIONS_HISTORIA = [
     _ql(
         "nacion_debate_1840", "his_estado_nacion", "facil",
         "Según la Fuente 1, ¿qué dos requisitos debería fijar la ley electoral?",
-        "Un censo de renta y saber leer",
+        "Un censo de renta y saber leer y escribir",
         "El diputado cierra su intervención con la propuesta concreta: que la ley "
         "fije por ahora un censo de renta y la exigencia de saber leer.\nLos dos "
         "requisitos aparecen juntos y en la misma frase, presentados como una "
@@ -70767,7 +70767,7 @@ QUESTIONS_HISTORIA = [
         "eco_desarrollo_fte", "eco_desarrollo", "facil",
         "Chile ha incorporado energía solar y eólica a su matriz eléctrica. ¿Qué "
         "característica comparten esas fuentes?",
-        "No se agotan con su uso",
+        "No se agotan con su uso continuo",
         "El sol y el viento se consideran recursos renovables: utilizarlos hoy no "
         "reduce la cantidad disponible mañana.\nA eso se suma que su operación no "
         "emite gases de efecto invernadero, lo que las vuelve centrales en los "
@@ -72911,7 +72911,7 @@ QUESTIONS_HISTORIA = [
         "El crecimiento de las ciudades chilenas en el tránsito del siglo XIX al XX "
         "estuvo asociado a la llegada de población rural. ¿Qué consecuencia tuvo "
         "ese proceso?",
-        "El hacinamiento en conventillos",
+        "El hacinamiento en los conventillos urbanos",
         "La ciudad recibió más gente de la que podía alojar. El conventillo —piezas "
         "en torno a un patio común, con servicios compartidos— fue la respuesta del "
         "mercado a esa demanda.\nSus consecuencias fueron sanitarias antes que "
@@ -74688,17 +74688,16 @@ QUESTIONS_HISTORIA = [
     _q(
         "eco_mercado", "facil",
         "¿Qué ocurre con la cantidad ofrecida de un bien cuando sube su precio?",
-        "Aumenta",
-        "La ley de la oferta establece una relación directa entre precio y "
-        "cantidad ofrecida.\n\n"
-        "A mayor precio, producir se vuelve más rentable y los productores "
-        "están dispuestos a ofrecer más unidades.\n\n"
-        "Es lo contrario de la demanda, donde la relación es inversa: cuando "
-        "sube el precio, los consumidores compran menos.",
+        "Aumenta la cantidad ofrecida",
+        "La ley de la oferta establece una relación directa entre precio y cantidad "
+        "ofrecida.\n\nA mayor precio, producir se vuelve más rentable y los "
+        "productores están dispuestos a ofrecer más unidades.\n\nEs lo contrario de "
+        "la demanda, donde la relación es inversa: cuando sube el precio, los "
+        "consumidores compran menos.",
         [
-            ("Disminuye", "Esa es la ley de la demanda, no la de la oferta."),
-            ("Se mantiene constante", "Solo ocurriría con una oferta perfectamente inelástica."),
-            ("Depende únicamente del clima", "Los factores externos influyen, pero la ley describe la relación con el precio."),
+            ("Disminuye la cantidad ofrecida", "Esa es la reacción de la cantidad demandada, no de la ofrecida."),
+            ("Se mantiene constante", "Un precio más alto vuelve rentable producir y vender más."),
+            ("Depende solo del clima", "El clima desplaza la curva entera; el precio mueve la cantidad ofrecida a lo largo de ella."),
         ],
     ),
     _q(
@@ -76466,14 +76465,12 @@ QUESTIONS_HISTORIA = [
     _ql(
         "civ_sufragio", "civ_democracia", "medio",
         "Según el texto, ¿qué significa que el sufragio sea personal?",
-        "Que nadie puede votar por otro",
+        "Que nadie puede votar en lugar de otra persona",
         "El texto lo define entre las cuatro características del sufragio en "
-        "Chile.\n\n"
-        "El voto debe emitirlo la propia persona: no se delega ni se transfiere "
-        "a un tercero.\n\n"
-        "Junto con el carácter secreto, es lo que protege la libertad de "
-        "elegir: si se pudiera votar por otro, la presión sobre el elector "
-        "sería mucho más fácil.",
+        "Chile.\n\nEl voto debe emitirlo la propia persona: no se delega ni se "
+        "transfiere a un tercero.\n\nJunto con el carácter secreto, es lo que "
+        "protege la libertad de elegir: si se pudiera votar por otro, la presión "
+        "sobre el elector sería mucho más fácil.",
         [
             ("Que cada persona vota según sus convicciones personales", "Eso es deseable, pero no es lo que define el carácter personal."),
             ("Que el voto se emite en el domicilio del elector", "Se emite en el local de votación asignado."),
@@ -76884,17 +76881,16 @@ QUESTIONS_HISTORIA += [
     ),
     _q(
         "civ_democracia", "medio",
-        "Según el esquema de la figura, ¿qué ocurre inmediatamente después de "
-        "que la cámara de origen aprueba un proyecto de ley?",
-        "Pasa a la cámara revisora",
-        "El esquema ordena las etapas y hay que seguir la flecha.\n\n"
-        "1) Después de la cámara de origen viene la cámara revisora.\n"
-        "2) Recién cuando las dos cámaras han aprobado el proyecto llega al "
-        "Presidente, que puede promulgarlo o vetarlo.\n"
-        "3) La publicación es el último paso, y es la que pone la ley en "
-        "vigencia.\n\n"
-        "Que el proyecto tenga que pasar por dos cámaras es una salvaguarda: "
-        "obliga a revisarlo dos veces y con composiciones distintas.",
+        "Según el esquema de la figura, ¿qué ocurre inmediatamente después de que "
+        "la cámara de origen aprueba un proyecto de ley?",
+        "Pasa a la cámara revisora para su discusión",
+        "El esquema ordena las etapas y hay que seguir la flecha.\n\n1) Después de "
+        "la cámara de origen viene la cámara revisora.\n2) Recién cuando las dos "
+        "cámaras han aprobado el proyecto llega al Presidente, que puede "
+        "promulgarlo o vetarlo.\n3) La publicación es el último paso, y es la que "
+        "pone la ley en vigencia.\n\nQue el proyecto tenga que pasar por dos "
+        "cámaras es una salvaguarda: obliga a revisarlo dos veces y con "
+        "composiciones distintas.",
         [
             ("Es promulgado de inmediato por el Presidente", "El Presidente actúa después, cuando las dos cámaras ya se pronunciaron."),
             ("Entra en vigencia apenas termina la votación", "La vigencia llega con la publicación, que es el último paso del esquema."),
