@@ -57,28 +57,34 @@ directo a la base: es más barato que discutirla.
 
 - **52 nodos** de habilidad y **52 lecciones**, una por nodo. Las cinco
   pruebas tienen teoría escrita, no solo M1.
-- **2.579 preguntas** con **10.316 alternativas**, y cada alternativa
+- **2.911 preguntas** con **11.644 alternativas**, y cada alternativa
   incorrecta trae su `distractor_justification`.
 
   | Prueba | Preguntas | Un ensayo pide | Nodos |
   |---|---:|---:|---:|
-  | Matemática M1 | 1.088 | 65 | 16 |
-  | Competencia Lectora | 843 | 65 | 3 |
-  | Ciencias | 240 | 80 | 12 |
+  | Matemática M1 | 1.088 | 65 | 17 |
+  | Competencia Lectora | 1.103 | 65 | 12 |
+  | Ciencias | 312 | 80 | 14 |
   | Matemática M2 | 213 | 55 | 15 |
   | Historia y Cs. Sociales | 195 | 65 | 6 |
 
   Las cinco superan tres veces lo que pide un ensayo completo. **Ampliar el
   banco ya no es el cuello de botella**; lo era cuando esta sección decía 344
-  preguntas.
+  preguntas. (M2 reutiliza los nodos de M1, así que un ensayo de M2 elige entre
+  1.301 preguntas, no 213.)
 
-- **88 textos fuente** (`reading_passages`): 67 de Competencia Lectora y 21 de
+- **108 textos fuente** (`reading_passages`): 87 de Competencia Lectora y 21 de
   Historia.
 
-El desbalance que sí queda es de **nodos**, no de preguntas: Lectora tiene 843
-preguntas colgando de 3 nodos y Historia 195 de 6, contra los 16 de M1. El
-"qué estudiar después" sólo puede recomendar una de tres cosas en Lectora, y
-ahí es donde el árbol rinde menos de lo que promete.
+El desbalance que quedaba era de **nodos**, no de preguntas, y **Lectora ya se
+resolvió**: el 2026-08-26 pasó de 3 nodos a los 12 que salen de las *tareas
+lectoras* que el temario enumera dentro de cada habilidad, con una lección por
+nodo. El eje sigue siendo la habilidad, así que en pantalla son los mismos tres
+grupos con doce nodos dentro.
+
+**Queda Historia**: 195 preguntas en 6 nodos, contra los 17 de M1. Ahí el "qué
+estudiar después" sólo puede recomendar una de seis cosas, y es donde el árbol
+rinde menos de lo que promete.
 - **1.855 carreras** con sus ponderaciones oficiales, extraídas del PDF del
   DEMRE con `scripts/extraer_carreras.py`. **Se re-extraen cada proceso de
   admisión**: las ponderaciones cambian todos los años. Varias preguntas comparten un mismo texto, igual que en la
@@ -407,9 +413,19 @@ Ordenado por impacto:
    pagado. Falta el circuito comercial: factura, orden de compra y renovación.
    Se decidió así a propósito —un colegio no compra con tarjeta— pero significa
    que alguien tiene que acordarse de renovar la fecha cada año.
-2. **Seguir ampliando el banco de preguntas**, sobre todo Lectora, Ciencias e
-   Historia: entre las tres suman 32 preguntas y cada ensayo oficial pide 60 o
-   más. Matemática está mejor (282), pero un ensayo M1 son 65.
+2. **Huecos concretos del banco**, ya no su tamaño. Las cinco pruebas superan
+   tres veces lo que pide un ensayo completo (ver §1), así que lo que falta son
+   tramos precisos del temario, no volumen:
+
+   - **Lectora, recursos lingüísticos y no lingüísticos.** Es una de las
+     catorce tareas lectoras oficiales y tiene **cero** preguntas. Nuestros
+     textos son sólo texto: no hay infografías, gráficos, color ni tipografía
+     significativa, y el DEMRE sí los evalúa. Pide textos nuevos, no sólo
+     preguntas.
+   - **Lectora, dos nodos flacos**: *Idea central y jerarquía* (10 preguntas) y
+     *Aplicar el texto a un caso nuevo* (12), contra 237 del mayor.
+   - **Historia**: 195 preguntas repartidas en 6 nodos. Es la prueba que le
+     queda al desbalance de nodos después de arreglar Lectora.
 3. **Contenido factual con revisión de profesor.** Historia y Biología de
    memoria siguen fuera del banco a propósito: ningún script puede verificar
    que una afirmación histórica sea cierta. Ese tramo entra cuando alguien con
