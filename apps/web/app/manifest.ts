@@ -25,7 +25,9 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: "#ffffff",
     theme_color: "#2b2b33",
     icons: [
-      { src: "/icon", sizes: "32x32", type: "image/png" },
+      { src: "/icon.svg", sizes: "any", type: "image/svg+xml" },
+      // El de 180 va opaco a propósito: Android y iOS lo recortan sobre su
+      // propio fondo y una transparencia ahí se vuelve negra.
       { src: "/apple-icon", sizes: "180x180", type: "image/png" },
     ],
   };
