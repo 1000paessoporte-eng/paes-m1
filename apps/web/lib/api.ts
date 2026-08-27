@@ -420,6 +420,27 @@ export function submitExam(attemptId: number, token?: string): Promise<ExamResul
   return apiFetch<ExamResult>(`/api/exam/${attemptId}/submit`, token, { method: "POST" });
 }
 
+/** Avisa que el estudiante volvió a la página y cuánto estuvo fuera.
+ *
+ * Se llama al volver, no al salir: recién ahí se sabe cuánto duró la
+ * ausencia. Si el navegador se cerró del todo, la salida no se registra, y
+ * está bien: el reloj del ensayo lo lleva el servidor y corrió igual. */
+export function registrarSalidaExamen(
+  attemptId: number,
+  segundos: number,
+  token?: string
+): Promise<{ salidas: number; segundos_fuera: number }> {
+  return apiFetch<{ salidas: number; segundos_fuera: number }>(
+    `/api/exam/${attemptId}/salida`,
+    token,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ segundos }),
+    }
+  );
+}
+
 export function listExamAttempts(token?: string): Promise<ExamAttemptSummary[]> {
   return apiFetch<ExamAttemptSummary[]>("/api/exam", token);
 }

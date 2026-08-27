@@ -623,6 +623,16 @@ def _repartir_por_dificultad(
 
 
 def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
+    if config.oficial:
+        config = config.model_copy(
+            update={
+                "question_count": scoring.SCORING_BY_SUBJECT[
+                    config.subject
+                ].preguntas_oficiales,
+                "pace": Pace.OFICIAL,
+                "axes": [],
+            }
+        )
     pool = _all_questions(db, config.subject)
     valid_axes = [a for a in config.axes if a in AXIS_LABELS]
     # Solo Lectora usa el historial: es la única prueba donde repetir cuesta
@@ -645,7 +655,17 @@ def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
         pace=config.pace,
         subject=config.subject,
         axes=",".join(valid_axes) or None,
-        duration_limit_seconds=duration_for(len(chosen), config.pace, config.subject),
+        oficial=config.oficial,
+        # El ensayo oficial dura lo que dura la prueba, no lo que sale de
+        # multiplicar el ritmo por la cantidad de preguntas. Si el banco no
+        # alcanzara a completar el set, el tiempo sigue siendo el del DEMRE:
+        # rendir con menos preguntas y proporcionalmente menos tiempo sería
+        # otra cosa, y esto se llama oficial.
+        duration_limit_seconds=(
+            scoring.SCORING_BY_SUBJECT[config.subject].duracion_oficial_min * 60
+            if config.oficial
+            else duration_for(len(chosen), config.pace, config.subject)
+        ),
     )
     db.add(attempt)
     db.flush()  # necesita el id del intento para las filas de preguntas
@@ -661,6 +681,31 @@ def start_attempt(db: Session, user: User, config: ExamConfigIn) -> ExamAttempt:
 
 def get_attempt(db: Session, attempt_id: int) -> ExamAttempt | None:
     return db.get(ExamAttempt, attempt_id)
+
+
+#: Tope por aviso, en segundos. Sin él, una pestaña abierta toda la noche
+#: sumaría ocho horas "fuera" de un ensayo de dos, y el resultado diría un
+#: disparate. El reloj real del ensayo ya está acotado por su propia duración.
+MAX_SEGUNDOS_POR_SALIDA = 30 * 60
+
+
+def registrar_salida(db: Session, attempt: ExamAttempt, segundos: int) -> ExamAttempt:
+    """Anota que el estudiante se fue de la página y cuánto estuvo fuera.
+
+    No hace nada con el reloj: el tiempo del ensayo se mide en el servidor
+    contra `started_at`, así que irse no lo detiene. Esto solo deja constancia
+    de que se fue, que es lo que después se le muestra.
+
+    Solo cuenta mientras el ensayo está en curso. Volver a la pestaña de un
+    ensayo ya entregado no es una salida de nada.
+    """
+    if attempt.status is not AttemptStatus.IN_PROGRESS:
+        return attempt
+    attempt.salidas += 1
+    attempt.segundos_fuera += max(0, min(int(segundos), MAX_SEGUNDOS_POR_SALIDA))
+    db.commit()
+    db.refresh(attempt)
+    return attempt
 
 
 def attempt_questions(db: Session, attempt: ExamAttempt) -> list[Question]:
@@ -702,6 +747,7 @@ def attempt_config(attempt: ExamAttempt, question_count: int) -> ExamConfigOut:
         question_count=question_count,
         pace=attempt.pace,
         axes=attempt.axes.split(",") if attempt.axes else [],
+        oficial=attempt.oficial,
     )
 
 
@@ -930,6 +976,9 @@ def submit_attempt(db: Session, attempt: ExamAttempt) -> ExamResultOut:
         elapsed_seconds=_elapsed_seconds(attempt),
         duration_limit_seconds=attempt.duration_limit_seconds,
         representativo=attempt.representativo,
+        oficial=attempt.oficial,
+        salidas=attempt.salidas,
+        segundos_fuera=attempt.segundos_fuera,
         by_axis=_tally(
             questions, answers, correct_ids, lambda q: AXIS_LABELS[q.skill_node.axis.value]
         ),
@@ -994,6 +1043,9 @@ def list_attempts(db: Session, user: User) -> list[ExamAttemptSummary]:
                 elapsed_seconds=_elapsed_seconds(a),
                 duration_limit_seconds=a.duration_limit_seconds,
                 representativo=a.representativo,
+                oficial=a.oficial,
+                salidas=a.salidas,
+                segundos_fuera=a.segundos_fuera,
                 pace=a.pace,
                 axes=a.axes.split(",") if a.axes else [],
             )

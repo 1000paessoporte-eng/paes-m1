@@ -195,6 +195,62 @@ export function ExamConfigScreen({
         </p>
       </header>
 
+      {/* El formato oficial va primero y aparte: no es una configuración más.
+          Un ensayo a medida entrena contenido; este entrena rendir la prueba,
+          que es la otra mitad de lo que la PAES mide. */}
+      <section className="mb-8 rounded-xl border-2 border-(--color-prueba)/50 bg-(--color-prueba)/5 p-5">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <div className="flex items-center gap-2">
+              <h2 className="text-lg font-semibold">Ensayo oficial</h2>
+              <span className="rounded-full bg-(--color-prueba)/15 px-2 py-0.5 text-[10px] font-semibold text-(--color-prueba)">
+                COMO LA PAES
+              </span>
+            </div>
+            <p className="mt-1 text-sm text-muted">
+              La prueba completa de {SUBJECT_LABELS[subject]}:{" "}
+              <strong className="text-foreground">
+                {options.official_questions} preguntas
+              </strong>{" "}
+              en{" "}
+              <strong className="text-foreground">
+                {formatearDuracionLarga(options.official_duration_min * 60)}
+              </strong>
+              , todos los ejes y el tiempo exacto del DEMRE. Sin elegir cantidad
+              ni ritmo: en eso consiste.
+            </p>
+            <ul className="mt-3 space-y-1 text-xs text-muted">
+              <li>· Arranca en pantalla completa, como rendir en una sala.</li>
+              <li>
+                · El reloj corre en el servidor: si sales de la página o cierras
+                la pestaña, el tiempo sigue avanzando igual.
+              </li>
+              <li>
+                · Se cuentan las veces que sales. No invalida nada; lo verás al
+                terminar.
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            onClick={() =>
+              // El servidor descarta cantidad, ritmo y ejes cuando el ensayo
+              // es oficial; van solo porque el tipo del body los pide.
+              onComenzar({
+                subject,
+                question_count: options.official_questions,
+                pace: "oficial",
+                axes: [],
+                oficial: true,
+              })
+            }
+            className="btn-glow shrink-0 rounded-lg px-5 py-2.5 text-sm font-medium text-accent-foreground"
+          >
+            Rendir ensayo oficial
+          </button>
+        </div>
+      </section>
+
       {repaso.has_data && (
         <div className="mb-8 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-accent/40 bg-accent/5 p-4">
           <div>
@@ -215,6 +271,7 @@ export function ExamConfigScreen({
                 question_count: 20,
                 pace: "oficial",
                 axes: repaso.axes,
+                oficial: false,
               })
             }
             className="btn-glow shrink-0 rounded-lg px-4 py-2 text-sm font-medium text-accent-foreground"
@@ -507,6 +564,7 @@ export function ExamConfigScreen({
               subject,
               question_count: cantidadEfectiva,
               pace: ritmo,
+              oficial: false,
               axes: ejes,
             })
           }

@@ -19,6 +19,7 @@ import {
   answerExamQuestion,
   getExamReview,
   getExamState,
+  registrarSalidaExamen,
   startExam,
   submitExam,
   type ExamAttemptSummary,
@@ -31,6 +32,7 @@ import {
   type Subject,
 } from "@/lib/api";
 import { getClientToken, loginHref } from "@/lib/auth";
+import { formatearTiempo } from "@/lib/tiempo";
 import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 import { formatearReloj } from "@/lib/tiempo";
 
@@ -38,6 +40,22 @@ const STORAGE_KEY = "paes_exam_attempt_id";
 const LABELS = ["A", "B", "C", "D", "E"];
 
 type Phase = "config" | "loading" | "in_progress" | "submitted" | "limite";
+
+/** Pide pantalla completa sin romper nada si el navegador dice que no.
+ *
+ * Safari en iOS no la ofrece para elementos cualesquiera, y cualquier
+ * navegador la rechaza si la llamada no viene de un gesto del usuario. En
+ * ambos casos el ensayo sigue: la pantalla completa acompaña el modo examen,
+ * no lo condiciona. */
+async function entrarAPantallaCompleta(): Promise<void> {
+  try {
+    if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+      await document.documentElement.requestFullscreen();
+    }
+  } catch {
+    // Sin pantalla completa el ensayo se rinde igual.
+  }
+}
 
 interface AnswerState {
   selected: number | null;
@@ -71,6 +89,14 @@ export function ExamRunner({
   const [phase, setPhase] = useState<Phase>("config");
   const [attemptId, setAttemptId] = useState<number | null>(null);
   const [attemptSubject, setAttemptSubject] = useState<Subject>("m1");
+  // El ensayo oficial se rinde en condiciones de examen: pantalla completa y
+  // aviso al salir. En el ensayo a medida no se activa nada de esto, que es
+  // para practicar y se hace entre otras cosas.
+  const [esOficial, setEsOficial] = useState(false);
+  const [avisoSalida, setAvisoSalida] = useState<{ segundos: number; veces: number } | null>(
+    null
+  );
+  const salidaDesdeRef = useRef<number | null>(null);
   const [questions, setQuestions] = useState<ExamQuestion[]>([]);
   const [deadline, setDeadline] = useState<number>(0);
   //: Milisegundos gastados en la pregunta que está a la vista.
@@ -364,6 +390,7 @@ export function ExamRunner({
       localStorage.setItem(STORAGE_KEY, String(id));
       setAttemptId(id);
       setAttemptSubject(state.config.subject);
+      setEsOficial(state.config.oficial);
       setQuestions(state.questions);
       setDeadline(
         new Date(state.started_at).getTime() + state.duration_limit_seconds * 1000
@@ -402,6 +429,67 @@ export function ExamRunner({
     // eslint-disable-next-line react-hooks/set-state-in-effect
     resumeAttempt(id);
   }, [resumeAttempt]);
+
+  // Condiciones de examen del ensayo oficial: se anota cada vez que el
+  // estudiante deja la página o la pantalla completa, y cuánto estuvo fuera.
+  //
+  // No pausa nada ni invalida nada. El reloj lo lleva el servidor contra la
+  // hora de inicio, así que irse nunca detuvo el ensayo; lo que faltaba era
+  // decírselo. Al volver ve cuánto perdió, que es el dato que le sirve:
+  // rendir la PAES son dos horas y media sin levantarse de la silla.
+  useEffect(() => {
+    if (phase !== "in_progress" || !esOficial || attemptId == null) return;
+
+    function seFue() {
+      if (salidaDesdeRef.current == null) salidaDesdeRef.current = Date.now();
+    }
+
+    async function volvio() {
+      const desde = salidaDesdeRef.current;
+      if (desde == null) return;
+      salidaDesdeRef.current = null;
+      const segundos = Math.round((Date.now() - desde) / 1000);
+      // Un parpadeo al cambiar de ventana no es salirse del ensayo.
+      if (segundos < 2) return;
+      try {
+        const estado = await registrarSalidaExamen(
+          attemptId!,
+          segundos,
+          getClientToken() ?? undefined
+        );
+        setAvisoSalida({ segundos, veces: estado.salidas });
+      } catch {
+        // Si el registro falla, el aviso igual se muestra: lo que importa en
+        // pantalla es que sepa que el tiempo corrió sin él.
+        setAvisoSalida({ segundos, veces: 0 });
+      }
+    }
+
+    function onVisibilidad() {
+      if (document.hidden) seFue();
+      else void volvio();
+    }
+
+    function onPantallaCompleta() {
+      if (!document.fullscreenElement) seFue();
+      else void volvio();
+    }
+
+    // La misma referencia en add y en remove: con una flecha nueva en cada
+    // llamada, el listener nunca se quita y se acumula uno por render.
+    const onFoco = () => void volvio();
+
+    document.addEventListener("visibilitychange", onVisibilidad);
+    window.addEventListener("blur", seFue);
+    window.addEventListener("focus", onFoco);
+    document.addEventListener("fullscreenchange", onPantallaCompleta);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibilidad);
+      window.removeEventListener("blur", seFue);
+      window.removeEventListener("focus", onFoco);
+      document.removeEventListener("fullscreenchange", onPantallaCompleta);
+    };
+  }, [phase, esOficial, attemptId]);
 
   // Advertencia al cerrar/recargar la pestaña con un ensayo en curso.
   useEffect(() => {
@@ -501,6 +589,8 @@ export function ExamRunner({
       localStorage.setItem(STORAGE_KEY, String(data.attempt_id));
       setAttemptId(data.attempt_id);
       setAttemptSubject(data.config.subject);
+      setEsOficial(data.config.oficial);
+      if (data.config.oficial) void entrarAPantallaCompleta();
       setQuestions(data.questions);
       setDeadline(new Date(data.started_at).getTime() + data.duration_limit_seconds * 1000);
       setDuracionMs(data.duration_limit_seconds * 1000);
@@ -605,6 +695,45 @@ export function ExamRunner({
 
   return (
     <div className={cn("mx-auto max-w-3xl", hayTextos && "lg:max-w-6xl")}>
+      {/* Aviso al volver de otra pestaña o de otra app, solo en el oficial.
+          No bloquea el ensayo ni descuenta nada: informa lo que ya pasó, que
+          es que el reloj siguió corriendo sin él. */}
+      {avisoSalida && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-foreground/40 p-4 backdrop-blur-sm sm:items-center">
+          <div className="w-full max-w-md rounded-2xl border border-border bg-background p-6 shadow-xl">
+            <p className="text-lg font-semibold">Volviste al ensayo</p>
+            <p className="mt-2 text-sm text-muted">
+              Estuviste{" "}
+              <strong className="text-foreground">
+                {formatearTiempo(avisoSalida.segundos)}
+              </strong>{" "}
+              fuera de la página y el tiempo siguió corriendo, como en la prueba
+              real.
+              {avisoSalida.veces > 1 && (
+                <>
+                  {" "}
+                  Van{" "}
+                  <strong className="text-foreground">
+                    {avisoSalida.veces} salidas
+                  </strong>{" "}
+                  en este ensayo.
+                </>
+              )}
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setAvisoSalida(null);
+                void entrarAPantallaCompleta();
+              }}
+              className="btn-glow mt-5 w-full rounded-lg px-4 py-2.5 text-sm font-medium text-accent-foreground"
+            >
+              Seguir rindiendo
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ── Barra superior ──────────────────────────────────────────── */}
       {/* La franja de arriba dice de qué prueba es este ensayo sin ocupar una
           palabra, con el mismo color que usan el titular de la portada, el
@@ -625,6 +754,11 @@ export function ExamRunner({
           <div className="min-w-0 flex-1">
             <p className="hidden truncate text-xs text-muted sm:block">
               {SUBJECT_LABELS[attemptSubject]}
+              {esOficial && (
+                <span className="ml-2 rounded-full border border-border px-1.5 py-0.5 text-[10px] font-semibold tracking-wide text-foreground">
+                  ENSAYO OFICIAL
+                </span>
+              )}
             </p>
             <p className="font-semibold">
               {variasEnLaPagina

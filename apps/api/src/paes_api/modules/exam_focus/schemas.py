@@ -89,6 +89,10 @@ class ExamConfigIn(BaseModel):
     pace: Pace = Pace.OFICIAL
     #: Ejes seleccionados. Lista vacía significa "todos", repartidos proporcionalmente.
     axes: list[str] = Field(default_factory=list)
+    #: Formato oficial: la prueba completa, todos los ejes y la duración exacta
+    #: del DEMRE. Cuando viene en True, el servidor ignora `question_count`,
+    #: `pace` y `axes`: el formato no es configurable, en eso consiste.
+    oficial: bool = False
 
 
 class ExamConfigOut(BaseModel):
@@ -96,6 +100,9 @@ class ExamConfigOut(BaseModel):
     question_count: int
     pace: Pace
     axes: list[str]
+    #: El ensayo se rinde en formato oficial. La pantalla lo usa para activar
+    #: las condiciones de examen: pantalla completa y aviso al salir.
+    oficial: bool = False
 
 
 class RepasoOut(BaseModel):
@@ -161,6 +168,13 @@ class ExamResultOut(BaseModel):
     #: vale igual --se corrige y se revisa igual-- pero no entra al mejor
     #: puntaje ni a los promedios, porque ahí un número falso engaña.
     representativo: bool = True
+    #: Rendido en formato oficial: prueba completa y duración del DEMRE.
+    oficial: bool = False
+    #: Veces que dejó la página durante el ensayo, y segundos acumulados fuera.
+    #: No invalidan nada: se muestran porque rendir la prueba real son dos
+    #: horas y media sin levantarse.
+    salidas: int = 0
+    segundos_fuera: int = 0
     by_axis: list[BreakdownItemOut]
     by_difficulty: list[BreakdownItemOut]
     by_node: list[BreakdownItemOut]
@@ -182,8 +196,28 @@ class ExamAttemptSummary(BaseModel):
     #: vale igual --se corrige y se revisa igual-- pero no entra al mejor
     #: puntaje ni a los promedios, porque ahí un número falso engaña.
     representativo: bool = True
+    #: Rendido en formato oficial: prueba completa y duración del DEMRE. El
+    #: historial lo marca, porque un 620 en la prueba completa y un 620 en un
+    #: ensayo de veinte preguntas no son el mismo 620.
+    oficial: bool = False
+    #: Veces que dejó la página durante el ensayo, y segundos acumulados fuera.
+    salidas: int = 0
+    segundos_fuera: int = 0
     pace: Pace
     axes: list[str]
+
+
+class SalidaIn(BaseModel):
+    """Aviso de que el estudiante volvió a la página, y cuánto estuvo fuera."""
+
+    segundos: int = Field(default=0, ge=0)
+
+
+class SalidaOut(BaseModel):
+    """Cómo va el contador de salidas después de registrar esta."""
+
+    salidas: int
+    segundos_fuera: int
 
 
 class ReviewAlternativeOut(BaseModel):

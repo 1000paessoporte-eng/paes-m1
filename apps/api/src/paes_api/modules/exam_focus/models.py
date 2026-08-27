@@ -90,6 +90,34 @@ class ExamAttempt(Base):
     representativo: Mapped[bool] = mapped_column(
         Boolean, default=True, server_default="true", nullable=False
     )
+    #: Ensayo rendido en formato oficial: la prueba completa (las 65, 80 o 55
+    #: preguntas que trae la PAES real), todos los ejes y la duración exacta
+    #: del DEMRE, sin ritmo a elección.
+    #:
+    #: Un ensayo de veinte preguntas en media hora entrena contenido; no
+    #: entrena rendir dos horas y veinte seguidas, que es la mitad de lo que
+    #: la prueba mide. Por eso el formato oficial es un modo aparte y se
+    #: distingue en el historial: son dos cosas distintas y comparar sus
+    #: puntajes sin saber cuál fue cuál no dice nada.
+    oficial: Mapped[bool] = mapped_column(
+        Boolean, default=False, server_default="false", nullable=False
+    )
+    #: Cuántas veces el estudiante dejó la pestaña o la pantalla completa.
+    #:
+    #: No invalida el ensayo: una notificación entrante no es hacer trampa, y
+    #: castigarla sería castigar a quien rinde desde el celular. Se registra
+    #: porque el dato le sirve a él: rendir la PAES son dos horas y media sin
+    #: levantarse, y descubrir que salió once veces dice más sobre cómo le va
+    #: a ir que el puntaje mismo.
+    salidas: Mapped[int] = mapped_column(
+        Integer, default=0, server_default="0", nullable=False
+    )
+    #: Segundos acumulados fuera de la página. El reloj del ensayo nunca se
+    #: detiene --se calcula contra `started_at` en el servidor-- así que este
+    #: tiempo se perdió de verdad.
+    segundos_fuera: Mapped[int] = mapped_column(
+        Integer, default=0, server_default="0", nullable=False
+    )
 
     user: Mapped["User"] = relationship(back_populates="exam_attempts")
     answers: Mapped[list["ExamAnswer"]] = relationship(back_populates="attempt")

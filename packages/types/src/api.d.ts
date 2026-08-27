@@ -451,6 +451,31 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/exam/{attempt_id}/salida": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Registrar Salida
+         * @description Registra que el estudiante dejó la página durante el ensayo.
+         *
+         *     Lo llama la pantalla al volver, no al salir: recién ahí se sabe cuánto
+         *     duró la ausencia. Si el navegador se cerró del todo, esa salida no se
+         *     registra nunca, y está bien: el reloj del ensayo corrió igual, que es lo
+         *     que de verdad importa.
+         */
+        post: operations["registrar_salida_api_exam__attempt_id__salida_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/exam/{attempt_id}/submit": {
         parameters: {
             query?: never;
@@ -2271,6 +2296,21 @@ export interface components {
              * @default true
              */
             representativo: boolean;
+            /**
+             * Oficial
+             * @default false
+             */
+            oficial: boolean;
+            /**
+             * Salidas
+             * @default 0
+             */
+            salidas: number;
+            /**
+             * Segundos Fuera
+             * @default 0
+             */
+            segundos_fuera: number;
             pace: components["schemas"]["Pace"];
             /** Axes */
             axes: string[];
@@ -2291,6 +2331,11 @@ export interface components {
             pace: components["schemas"]["Pace"];
             /** Axes */
             axes?: string[];
+            /**
+             * Oficial
+             * @default false
+             */
+            oficial: boolean;
         };
         /** ExamConfigOut */
         ExamConfigOut: {
@@ -2300,6 +2345,11 @@ export interface components {
             pace: components["schemas"]["Pace"];
             /** Axes */
             axes: string[];
+            /**
+             * Oficial
+             * @default false
+             */
+            oficial: boolean;
         };
         /**
          * ExamOptionsOut
@@ -2379,6 +2429,21 @@ export interface components {
              * @default true
              */
             representativo: boolean;
+            /**
+             * Oficial
+             * @default false
+             */
+            oficial: boolean;
+            /**
+             * Salidas
+             * @default 0
+             */
+            salidas: number;
+            /**
+             * Segundos Fuera
+             * @default 0
+             */
+            segundos_fuera: number;
             /** By Axis */
             by_axis: components["schemas"]["BreakdownItemOut"][];
             /** By Difficulty */
@@ -3065,6 +3130,27 @@ export interface components {
             visitas: number;
             /** Visitantes */
             visitantes: number;
+        };
+        /**
+         * SalidaIn
+         * @description Aviso de que el estudiante volvió a la página, y cuánto estuvo fuera.
+         */
+        SalidaIn: {
+            /**
+             * Segundos
+             * @default 0
+             */
+            segundos: number;
+        };
+        /**
+         * SalidaOut
+         * @description Cómo va el contador de salidas después de registrar esta.
+         */
+        SalidaOut: {
+            /** Salidas */
+            salidas: number;
+            /** Segundos Fuera */
+            segundos_fuera: number;
         };
         /** SerieDia */
         SerieDia: {
@@ -4119,6 +4205,41 @@ export interface operations {
                     "application/json": {
                         [key: string]: boolean;
                     };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    registrar_salida_api_exam__attempt_id__salida_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                attempt_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["SalidaIn"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SalidaOut"];
                 };
             };
             /** @description Validation Error */

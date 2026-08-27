@@ -194,6 +194,29 @@ export function ExamResults({ result, review, onNuevoEnsayo, prueba }: Props) {
           {formatearTiempo(result.duration_limit_seconds)}
         </p>
 
+        {/* En el ensayo oficial importa tanto el puntaje como haber aguantado
+            sentado: la prueba real son dos horas y media sin levantarse. Las
+            salidas no descuentan nada; se muestran porque son el dato que
+            avisa cómo va a ser ese día. */}
+        {result.oficial && (
+          <p className="mt-2 text-sm text-muted">
+            Ensayo oficial ·{" "}
+            {result.salidas === 0 ? (
+              <strong className="text-foreground">
+                no saliste de la página en todo el ensayo
+              </strong>
+            ) : (
+              <>
+                saliste de la página{" "}
+                <strong className="text-foreground">
+                  {result.salidas} {result.salidas === 1 ? "vez" : "veces"}
+                </strong>
+                , {formatearTiempo(result.segundos_fuera)} fuera
+              </>
+            )}
+          </p>
+        )}
+
         {/* Terminar un ensayo es el único momento del producto que da ganas de
             mostrarle a alguien. La imagen se arma en el navegador: el puntaje
             es dato privado y no tiene por qué existir en una URL. */}

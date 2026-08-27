@@ -18,6 +18,8 @@ from paes_api.modules.exam_focus.schemas import (
     ExamStateOut,
     PassageOut,
     RepasoOut,
+    SalidaIn,
+    SalidaOut,
 )
 from paes_api.modules.skill_tree.models import Subject
 from paes_api.modules.users.deps import get_current_user
@@ -179,6 +181,25 @@ def answer_question(
         raise HTTPException(status_code=409, detail="El intento ya fue finalizado")
     service.upsert_answer(db, attempt_id, payload)
     return {"ok": True}
+
+
+@router.post("/{attempt_id}/salida", response_model=SalidaOut)
+def registrar_salida(
+    attempt_id: int,
+    payload: SalidaIn,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+) -> SalidaOut:
+    """Registra que el estudiante dejó la página durante el ensayo.
+
+    Lo llama la pantalla al volver, no al salir: recién ahí se sabe cuánto
+    duró la ausencia. Si el navegador se cerró del todo, esa salida no se
+    registra nunca, y está bien: el reloj del ensayo corrió igual, que es lo
+    que de verdad importa.
+    """
+    attempt = _get_attempt_or_404(db, attempt_id, user)
+    attempt = service.registrar_salida(db, attempt, payload.segundos)
+    return SalidaOut(salidas=attempt.salidas, segundos_fuera=attempt.segundos_fuera)
 
 
 @router.post("/{attempt_id}/submit", response_model=ExamResultOut)
