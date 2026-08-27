@@ -136,6 +136,10 @@ export function ExamConfigScreen({
   const [cantidad, setCantidad] = useState(ensayosRendidos === 0 ? 10 : 20);
   const [ritmo, setRitmo] = useState<Pace>("oficial");
   const [ejes, setEjes] = useState<string[]>([]);
+  //: El ensayo oficial se avisa antes de empezar: son dos horas y media de las
+  //: que no se puede salir sin costo, y arrancarlas de un clic es un accidente
+  //: esperando a pasar.
+  const [avisandoOficial, setAvisandoOficial] = useState(false);
   const dias = diasHastaPaes();
 
   const options = optionsBySubject[subject];
@@ -173,6 +177,118 @@ export function ExamConfigScreen({
       style={estiloPrueba(subject)}
       className="mx-auto max-w-3xl pb-36 sm:pb-0"
     >
+      {/* Aviso previo al ensayo oficial.
+          Lo que sigue son dos horas y media seguidas de las que no se sale sin
+          costo, y hasta acá se entraba de un clic, con las condiciones escritas
+          en letra chica dentro de la tarjeta que uno ya dejó de leer. Un
+          estudiante que arranca sin saber que el reloj no se detiene aprende la
+          regla perdiendo un ensayo.
+
+          No es un "¿estás seguro?": lo que hace falta no es confirmar, es saber
+          en qué consiste. Por eso dice lo que va a pasar y cómo prepararse, y
+          la salida ("Ahora no") es tan legítima como entrar. */}
+      {avisandoOficial && (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-foreground/40 p-4 backdrop-blur-sm sm:items-center"
+          onClick={() => setAvisandoOficial(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-aviso-oficial"
+            onClick={(e) => e.stopPropagation()}
+            className="flex max-h-[85vh] w-full max-w-lg flex-col rounded-2xl border border-border bg-background shadow-xl"
+          >
+            {/* Solo el texto scrollea. En un teléfono la lista completa no cabe,
+                y con el panel entero desplazable los dos botones quedaban bajo
+                el pliegue: había que leerse el aviso hasta el final para
+                descubrir dónde se empieza. */}
+            <div className="overflow-y-auto p-6">
+              <h2 id="titulo-aviso-oficial" className="text-lg font-semibold">
+                Esto se rinde, no se practica
+              </h2>
+              <p className="mt-2 text-sm text-muted">
+                <strong className="text-foreground">
+                  {options.official_questions} preguntas
+                </strong>{" "}
+                de {SUBJECT_LABELS[subject]} en{" "}
+                <strong className="text-foreground">
+                  {formatearDuracionLarga(options.official_duration_min * 60)}
+                </strong>
+                , de corrido y sin pausa. La PAES se rinde así, y acá se hace
+                igual. Antes de partir, esto es lo que va a pasar:
+              </p>
+
+              <ul className="mt-4 space-y-2.5 text-sm text-muted">
+                <li>
+                  <strong className="text-foreground">Sin el resto del sitio.</strong>{" "}
+                  Mientras dure, el menú desaparece: no hay Árbol, ni Progreso, ni
+                  Analítica. Es a propósito. La prueba se rinde mirando una sola
+                  cosa, y esa es la mitad de lo que la PAES mide.
+                </li>
+                <li>
+                  <strong className="text-foreground">En pantalla completa.</strong>{" "}
+                  Arranca así, como sentarse en la sala.
+                </li>
+                <li>
+                  <strong className="text-foreground">El reloj no se detiene.</strong>{" "}
+                  Corre en el servidor desde que empiezas. Cerrar la pestaña, irte
+                  a otra sección o dejar el teléfono de lado no lo pausa.
+                </li>
+                <li>
+                  <strong className="text-foreground">Se cuentan las salidas.</strong>{" "}
+                  No invalidan nada y nadie te va a acusar de nada: las verás en tu
+                  resultado, con el tiempo que estuviste fuera, porque ese dato te
+                  sirve.
+                </li>
+                <li>
+                  <strong className="text-foreground">No hay pausa.</strong> Cuando
+                  el tiempo llega a cero el ensayo se entrega solo, con lo que
+                  lleves respondido.
+                </li>
+              </ul>
+
+              <p className="mt-4 rounded-lg border border-border bg-surface px-3 py-2.5 text-sm text-muted">
+                Busca dónde no te interrumpan, deja el teléfono lejos y ten papel
+                y lápiz a mano. Si ahora no es el momento, rinde un ensayo a
+                medida y vuelve a este cuando puedas darle{" "}
+                {formatearDuracionLarga(options.official_duration_min * 60)}{" "}
+                completos.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-2 border-t border-border p-4 sm:flex-row-reverse">
+              <button
+                type="button"
+                onClick={() => {
+                  setAvisandoOficial(false);
+                  // El servidor descarta cantidad, ritmo y ejes cuando el
+                  // ensayo es oficial; van solo porque el tipo del body los
+                  // pide.
+                  onComenzar({
+                    subject,
+                    question_count: options.official_questions,
+                    pace: "oficial",
+                    axes: [],
+                    oficial: true,
+                  });
+                }}
+                className="btn-glow flex-1 rounded-lg px-4 py-2.5 text-sm font-medium text-accent-foreground"
+              >
+                Estoy listo, empezar
+              </button>
+              <button
+                type="button"
+                onClick={() => setAvisandoOficial(false)}
+                className="flex-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-hover"
+              >
+                Ahora no
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <header className="mb-10">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-sm font-medium text-accent">
@@ -233,17 +349,7 @@ export function ExamConfigScreen({
           </div>
           <button
             type="button"
-            onClick={() =>
-              // El servidor descarta cantidad, ritmo y ejes cuando el ensayo
-              // es oficial; van solo porque el tipo del body los pide.
-              onComenzar({
-                subject,
-                question_count: options.official_questions,
-                pace: "oficial",
-                axes: [],
-                oficial: true,
-              })
-            }
+            onClick={() => setAvisandoOficial(true)}
             className="btn-glow shrink-0 rounded-lg px-5 py-2.5 text-sm font-medium text-accent-foreground"
           >
             Rendir ensayo oficial

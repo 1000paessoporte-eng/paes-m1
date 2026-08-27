@@ -32,11 +32,16 @@ import {
   type Subject,
 } from "@/lib/api";
 import { getClientToken, loginHref } from "@/lib/auth";
+import { setModoExamen } from "@/lib/modo-examen";
 import { formatearTiempo } from "@/lib/tiempo";
 import { COLOR_PRUEBA } from "@/lib/colores-prueba";
 import { formatearReloj } from "@/lib/tiempo";
 
 const STORAGE_KEY = "paes_exam_attempt_id";
+//: Instante en que el alumno se fue del ensayo a otra sección del sitio. Se
+//: guarda al salir porque al volver el componente se monta de cero y ya no
+//: queda rastro de cuándo fue; recién ahí se sabe cuánto duró la ausencia.
+const SALIDA_KEY = "paes_exam_salida_desde";
 const LABELS = ["A", "B", "C", "D", "E"];
 
 type Phase = "config" | "loading" | "in_progress" | "submitted" | "limite";
@@ -97,6 +102,12 @@ export function ExamRunner({
     null
   );
   const salidaDesdeRef = useRef<number | null>(null);
+  //: Sección del sitio a la que se quiso ir sin entregar el ensayo, esperando
+  //: confirmación.
+  const [salidaPendiente, setSalidaPendiente] = useState<string | null>(null);
+  //: Cuando la salida ya se confirmó, el guardia se aparta y deja pasar la
+  //: navegación que el propio alumno pidió.
+  const dejarSalirRef = useRef(false);
   const [questions, setQuestions] = useState<ExamQuestion[]>([]);
   const [deadline, setDeadline] = useState<number>(0);
   //: Milisegundos gastados en la pregunta que está a la vista.
@@ -410,6 +421,29 @@ export function ExamRunner({
       setCurrentIndex(0);
       segmentStartRef.current = Date.now();
       setPhase("in_progress");
+
+      // Volver de otra sección del sitio también es una salida. No se puede
+      // medir con `visibilitychange` como la de cambiar de pestaña: al navegar
+      // dentro del sitio este componente se desmonta, así que la ida se anotó
+      // en localStorage y la cuenta se cierra acá, al volver. El tope de 30
+      // minutos por salida lo aplica el servidor.
+      const desde = Number(localStorage.getItem(SALIDA_KEY));
+      localStorage.removeItem(SALIDA_KEY);
+      if (state.config.oficial && desde > 0) {
+        const segundos = Math.round((Date.now() - desde) / 1000);
+        if (segundos >= 2) {
+          try {
+            const estado = await registrarSalidaExamen(
+              id,
+              segundos,
+              getClientToken() ?? undefined
+            );
+            setAvisoSalida({ segundos, veces: estado.salidas });
+          } catch {
+            setAvisoSalida({ segundos, veces: 0 });
+          }
+        }
+      }
     } catch {
       localStorage.removeItem(STORAGE_KEY);
       setPhase("config");
@@ -499,6 +533,65 @@ export function ExamRunner({
     }
     window.addEventListener("beforeunload", onBeforeUnload);
     return () => window.removeEventListener("beforeunload", onBeforeUnload);
+  }, [phase]);
+
+  // Se le avisa al resto del sitio que hay un ensayo corriendo. Lo escucha la
+  // barra superior, que durante el oficial se cierra entera.
+  useEffect(() => {
+    const enCurso = phase === "in_progress";
+    setModoExamen({ activo: enCurso, oficial: enCurso && esOficial });
+    return () => setModoExamen({ activo: false, oficial: false });
+  }, [phase, esOficial]);
+
+  // Guardia de navegación: irse del ensayo a otra sección tiene que ser una
+  // decisión, no un clic distraído.
+  //
+  // Ni `beforeunload` ni `visibilitychange` sirven acá, y por eso esto faltaba:
+  // Next navega en el cliente, así que saltar del ensayo al Árbol no cierra la
+  // pestaña ni la oculta. No pasaba absolutamente nada —ni aviso, ni salida
+  // registrada— y el intento quedaba abierto con el reloj del servidor
+  // corriendo en una pantalla que el alumno ya no estaba mirando.
+  useEffect(() => {
+    if (phase !== "in_progress") return;
+    dejarSalirRef.current = false;
+
+    function onClick(e: MouseEvent) {
+      if (dejarSalirRef.current || e.defaultPrevented) return;
+      // Clic con modificador o que no es del botón principal: el navegador
+      // abre otra pestaña y el ensayo se queda donde está.
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const enlace = (e.target as Element | null)?.closest?.("a");
+      if (!(enlace instanceof HTMLAnchorElement) || enlace.target === "_blank") return;
+      const href = enlace.getAttribute("href");
+      if (!href || href.startsWith("#")) return;
+      const url = new URL(enlace.href, window.location.href);
+      // Un enlace a otro sitio se lleva la pestaña entera: de eso avisa
+      // `beforeunload`, y ahí manda el navegador, no nosotros.
+      if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname) return;
+      e.preventDefault();
+      e.stopPropagation();
+      setSalidaPendiente(url.pathname + url.search);
+    }
+
+    // El botón "atrás" no se intercepta sin una entrada de historial que
+    // gastar: se empuja una al empezar, y el primer "atrás" la consume en vez
+    // de sacar al alumno del ensayo. Se conserva el estado que Next guarda ahí
+    // para su propio enrutador.
+    window.history.pushState({ ...window.history.state, ensayoEnCurso: true }, "");
+
+    function onPopState() {
+      if (dejarSalirRef.current) return;
+      window.history.pushState({ ...window.history.state, ensayoEnCurso: true }, "");
+      setSalidaPendiente("/panel");
+    }
+
+    document.addEventListener("click", onClick, true);
+    window.addEventListener("popstate", onPopState);
+    return () => {
+      document.removeEventListener("click", onClick, true);
+      window.removeEventListener("popstate", onPopState);
+    };
   }, [phase]);
 
   // Reset del cronómetro de "tiempo en esta pregunta" al cambiar de pregunta.
@@ -617,6 +710,19 @@ export function ExamRunner({
     }
   }
 
+  /** El alumno confirmó que se va igual. Se le abre la puerta que el guardia
+   *  tenía cerrada y se anota la hora: la salida se registra al volver, que es
+   *  cuando recién se sabe cuánto duró. */
+  function confirmarSalida() {
+    const destino = salidaPendiente;
+    if (destino == null) return;
+    dejarSalirRef.current = true;
+    setSalidaPendiente(null);
+    if (esOficial) localStorage.setItem(SALIDA_KEY, String(Date.now()));
+    setModoExamen({ activo: false, oficial: false });
+    router.push(destino);
+  }
+
   const respondidas = useMemo(
     () => Object.values(answers).filter((a) => a.selected != null).length,
     [answers]
@@ -730,6 +836,44 @@ export function ExamRunner({
             >
               Seguir rindiendo
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Confirmación antes de dejar el ensayo por otra sección del sitio.
+          El ensayo no se cancela ni se entrega: queda abierto y se puede
+          retomar. Lo que no se recupera es el tiempo, porque el reloj lo lleva
+          el servidor desde que empezó. */}
+      {salidaPendiente && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-foreground/40 p-4 backdrop-blur-sm sm:items-center">
+          <div className="w-full max-w-md rounded-2xl border border-border bg-background p-6 shadow-xl">
+            <p className="text-lg font-semibold">
+              {esOficial ? "Estás rindiendo el ensayo oficial" : "Tienes un ensayo en curso"}
+            </p>
+            <p className="mt-2 text-sm text-muted">
+              {esOficial
+                ? "El reloj no se detiene y la salida queda registrada en tu resultado. El ensayo sigue abierto y puedes retomarlo, pero el tiempo que pase no vuelve."
+                : "El reloj sigue corriendo mientras estás en otra sección. El ensayo queda abierto y puedes retomarlo donde lo dejaste."}
+            </p>
+            <div className="mt-5 flex flex-col gap-2 sm:flex-row-reverse">
+              <button
+                type="button"
+                onClick={() => {
+                  setSalidaPendiente(null);
+                  if (esOficial) void entrarAPantallaCompleta();
+                }}
+                className="btn-glow flex-1 rounded-lg px-4 py-2.5 text-sm font-medium text-accent-foreground"
+              >
+                Seguir rindiendo
+              </button>
+              <button
+                type="button"
+                onClick={confirmarSalida}
+                className="flex-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-surface-hover"
+              >
+                Salir igual
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { cn } from "@paes-m1/utils";
 import { clearClientAuth, getClientUser, onClientAuthChange, type AuthUser } from "@/lib/auth";
+import { useModoExamen } from "@/lib/modo-examen";
 import { TemaToggle } from "@/components/tema-toggle";
 import { Logotipo } from "@/components/ui/marca";
 
@@ -42,6 +43,7 @@ export function SiteHeader() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
+  const examen = useModoExamen();
 
   const items = user ? NAV_ITEMS : NAV_PUBLICO;
 
@@ -79,6 +81,30 @@ export function SiteHeader() {
     setOpen(false);
     router.push("/login");
     router.refresh();
+  }
+
+  // Durante el ensayo oficial la barra se cierra. Rendir la PAES son dos horas
+  // y media mirando una sola cosa, y un menú que ofrece el Árbol, la Analítica
+  // y el Progreso a un clic de distancia invita justo a lo contrario. No queda
+  // ningún enlace: ni el logo, ni el perfil, ni cerrar sesión.
+  //
+  // Esto no es seguridad —la barra de direcciones sigue estando ahí— sino
+  // quitar de en medio la salida fácil, la que se toma sin decidirla. La que sí
+  // se decide pasa por el aviso del ensayo, que la registra como salida.
+  //
+  // Se mantiene la altura de 14 porque la barra del ensayo va pegada debajo
+  // (`sticky top-14`): cambiarla dejaría un hueco o taparía la primera línea.
+  if (examen.activo && examen.oficial) {
+    return (
+      <header className="glass sticky top-0 z-50">
+        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
+          <Logotipo className="text-base font-bold text-foreground" tamanoPx={16} />
+          <span className="rounded-full border border-border px-2.5 py-1 text-[11px] font-semibold tracking-wide text-muted">
+            ENSAYO OFICIAL EN CURSO
+          </span>
+        </div>
+      </header>
+    );
   }
 
   return (
