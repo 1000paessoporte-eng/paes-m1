@@ -81830,3 +81830,1474 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Ondas": espejos, lentes y formación de imágenes
+#
+# El temario pide el comportamiento de la luz en espejos planos, cóncavos y
+# convexos y en lentes convergentes y divergentes, considerando la formación de
+# imágenes; y el funcionamiento de los dispositivos que operan con ondas
+# electromagnéticas: telescopios reflectores y refractores, fibra óptica,
+# prismáticos, radar, entre otros.
+#
+# Los enunciados describen el montaje con palabras en vez de remitir a una
+# figura: sin el dibujo delante, el estudiante tiene que construirse el esquema,
+# que es justamente la habilidad que la pregunta quiere medir.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_optica", "facil",
+        "Un rayo de luz incide sobre un espejo plano formando un ángulo de 30° "
+        "con la normal a la superficie. ¿Qué ángulo forma el rayo reflejado con "
+        "esa misma normal?",
+        "30°",
+        "La ley de reflexión relaciona ambos ángulos de manera directa.\n\n"
+        "1) El ángulo de incidencia y el de reflexión se miden siempre respecto "
+        "de la NORMAL, la recta perpendicular a la superficie.\n"
+        "2) La ley de reflexión establece que ambos son iguales.\n"
+        "3) Si la incidencia es de 30°, la reflexión también es de 30°.\n\n"
+        "Ojo con la referencia: si el ángulo se midiera respecto de la "
+        "superficie, el valor sería 60°, y sigue tratándose del mismo rayo.",
+        [
+            ("60°", "Midió el ángulo respecto de la superficie del espejo y no respecto de la normal."),
+            ("15°", "Dividió el ángulo de incidencia a la mitad, operación que no corresponde a ninguna ley de la reflexión."),
+            ("0°, porque el rayo vuelve por el mismo camino por el que llegó",
+             "Eso ocurre solo si la incidencia es perpendicular al espejo, es decir, con un ángulo de incidencia de 0°."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Una persona se mira en un espejo plano. ¿Qué características tiene la "
+        "imagen que observa?",
+        "Virtual, derecha y del mismo tamaño",
+        "El espejo plano es el caso más simple y siempre da el mismo tipo de "
+        "imagen.\n\n"
+        "1) Es VIRTUAL: los rayos reflejados no se cruzan realmente detrás del "
+        "espejo, solo lo parece al prolongarlos. Por eso no se puede recoger "
+        "sobre una pantalla.\n"
+        "2) Es DERECHA: conserva la orientación de arriba y abajo.\n"
+        "3) Es del MISMO TAMAÑO que el objeto y está a la misma distancia del "
+        "espejo, pero al otro lado.\n\n"
+        "Lo que sí cambia es la izquierda por la derecha, y de ahí que un texto "
+        "se lea al revés frente al espejo.",
+        [
+            ("Real, invertida y del mismo tamaño",
+             "Un espejo plano nunca forma imágenes reales ni invertidas: para eso se necesita una superficie curva convergente."),
+            ("Virtual, derecha y de menor tamaño",
+             "La reducción de tamaño es propia del espejo convexo, no del plano."),
+            ("Real, derecha y de mayor tamaño, porque la luz se concentra al reflejarse",
+             "Un espejo plano no concentra la luz: los rayos paralelos siguen paralelos después de reflejarse."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Los espejos convexos se usan como retrovisores y en la vigilancia de "
+        "pasillos. ¿Qué ventaja ofrecen para esos usos?",
+        "Abarcan un campo de visión más amplio",
+        "La forma de la superficie determina cómo se distribuyen los rayos "
+        "reflejados.\n\n"
+        "1) Un espejo convexo curva hacia afuera, así que los rayos paralelos se "
+        "reflejan divergiendo.\n"
+        "2) Eso permite que la luz proveniente de una zona muy amplia alcance al "
+        "ojo del observador.\n"
+        "3) El precio es que la imagen sale más pequeña que el objeto: se ve más "
+        "territorio, pero cada cosa se ve reducida.\n\n"
+        "Por eso los retrovisores convexos advierten que los objetos están más "
+        "cerca de lo que parecen.",
+        [
+            ("Aumentan el tamaño de los objetos reflejados",
+             "El espejo convexo siempre reduce el tamaño de la imagen; el aumento es propio del cóncavo usado de cerca."),
+            ("Forman imágenes reales que se pueden proyectar sobre una pantalla",
+             "Un espejo convexo forma siempre imágenes virtuales, que no se pueden recoger en una pantalla."),
+            ("Eliminan por completo los puntos ciegos porque reflejan la luz en todas las direcciones",
+             "Amplían el campo pero no lo vuelven total, y no reflejan en todas direcciones sino según la ley de reflexión."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Al hacer incidir sobre una lente convergente un haz de rayos paralelos "
+        "al eje óptico, ¿qué ocurre después de atravesarla?",
+        "Se juntan todos en el foco",
+        "Es la propiedad que da nombre a este tipo de lente.\n\n"
+        "1) La lente convergente es más gruesa en el centro que en los bordes.\n"
+        "2) Cada rayo se desvía al entrar y al salir del vidrio, y la geometría "
+        "hace que todos los rayos paralelos al eje terminen cruzándose en un "
+        "mismo punto.\n"
+        "3) Ese punto es el FOCO, y su distancia al centro de la lente es la "
+        "distancia focal.\n\n"
+        "En una lente divergente ocurre lo contrario: los rayos se separan, y "
+        "sus prolongaciones hacia atrás son las que parecen salir de un foco.",
+        [
+            ("Se separan cada vez más entre sí",
+             "Esa es la conducta de una lente divergente, más delgada en el centro que en los bordes."),
+            ("Siguen paralelos, solo que desplazados hacia un costado",
+             "Eso ocurre al atravesar una lámina de caras paralelas, no una lente."),
+            ("Se reflejan hacia atrás sin llegar a atravesar el vidrio",
+             "Una lente funciona por refracción: la luz la atraviesa. La reflexión es el mecanismo de un espejo."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Una lupa es una lente convergente que se usa acercándola al objeto. "
+        "¿Qué tipo de imagen entrega en ese uso?",
+        "Virtual, derecha y aumentada",
+        "El resultado depende de dónde está el objeto respecto del foco.\n\n"
+        "1) Al usar una lupa se coloca el objeto MÁS CERCA que la distancia "
+        "focal.\n"
+        "2) En esa posición los rayos que salen de la lente siguen divergiendo, "
+        "así que no se cruzan realmente: la imagen es virtual.\n"
+        "3) Al prolongarlos hacia atrás se obtiene una imagen derecha y más "
+        "grande que el objeto, ubicada del mismo lado.\n\n"
+        "Si se aleja el objeto más allá del foco, la misma lente pasa a formar "
+        "una imagen real e invertida: no es la lente la que cambia, es la "
+        "posición.",
+        [
+            ("Real, invertida y aumentada",
+             "Ese es el resultado de colocar el objeto entre el foco y el doble de la distancia focal, no dentro del foco."),
+            ("Virtual, derecha y reducida",
+             "La reducción es propia de una lente divergente; la lupa aumenta."),
+            ("Real, derecha y del mismo tamaño, porque la lente solo desvía los rayos sin alterarlos",
+             "Una imagen real formada por una lente convergente es siempre invertida, y la lente sí modifica el tamaño."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "La fibra óptica transporta señales luminosas a lo largo de kilómetros "
+        "incluso cuando el cable describe curvas. ¿Qué fenómeno lo hace posible?",
+        "La reflexión total interna dentro de la fibra",
+        "La luz queda atrapada en el interior del hilo de vidrio.\n\n"
+        "1) La fibra tiene un núcleo rodeado de un revestimiento con menor "
+        "índice de refracción.\n"
+        "2) Cuando la luz llega a esa frontera con un ángulo suficientemente "
+        "grande, no la atraviesa: se refleja por completo hacia adentro.\n"
+        "3) Repitiendo esa reflexión miles de veces, la señal avanza siguiendo "
+        "las curvas del cable con pérdidas mínimas.\n\n"
+        "Es el principio del que dependen las comunicaciones de internet y la "
+        "telefonía de larga distancia.",
+        [
+            ("La difracción de la luz al pasar por aberturas muy pequeñas",
+             "La difracción dispersa la luz al rodear obstáculos: no serviría para mantenerla confinada en un hilo."),
+            ("El efecto Doppler que corrige la dirección de la señal",
+             "El efecto Doppler cambia la frecuencia percibida cuando hay movimiento relativo, y no guía la luz."),
+            ("La absorción de la luz por el vidrio, que después la vuelve a emitir hacia adelante",
+             "La absorción es justamente lo que se busca minimizar en una fibra: representa pérdida de señal."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Un telescopio refractor y uno reflector cumplen la misma función pero "
+        "usan elementos distintos para recoger la luz. ¿Cuál es la diferencia?",
+        "El refractor usa lentes y el reflector, espejos",
+        "La diferencia está en cómo se concentra la luz que entra.\n\n"
+        "1) El REFRACTOR usa una lente convergente grande: la luz se desvía al "
+        "atravesar el vidrio y se concentra en el foco.\n"
+        "2) El REFLECTOR usa un espejo cóncavo: la luz se refleja en la "
+        "superficie curva y se concentra igualmente en un foco.\n"
+        "3) Los grandes telescopios actuales son reflectores, porque un espejo "
+        "se puede apoyar por detrás y fabricar mucho más grande que una lente, "
+        "que solo se sostiene por el borde.\n\n"
+        "El espejo tiene además la ventaja de reflejar todos los colores por "
+        "igual, mientras que una lente los desvía de forma algo distinta.",
+        [
+            ("El refractor observa de día y el reflector, de noche",
+             "Ambos se usan de noche para observación astronómica; la diferencia es óptica, no horaria."),
+            ("El refractor capta luz visible y el reflector, ondas de radio",
+             "Las ondas de radio se captan con radiotelescopios, que son antenas: los dos tipos de telescopio óptico trabajan con luz."),
+            ("El refractor amplía la imagen y el reflector solo aumenta el brillo de los objetos observados",
+             "Los dos hacen ambas cosas: concentran luz y permiten aumentar la imagen mediante el ocular."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Una persona de 1,70 m quiere verse de cuerpo entero en un espejo plano "
+        "colgado en la pared. ¿Cuál es la altura mínima que debe tener el "
+        "espejo?",
+        "0,85 m",
+        "El resultado sale de la ley de reflexión y no depende de a qué "
+        "distancia se pare la persona.\n\n"
+        "1) Para ver sus pies, el rayo debe reflejarse en un punto ubicado a la "
+        "mitad de la distancia vertical entre los ojos y los pies.\n"
+        "2) Para ver la cabeza, el rayo debe reflejarse a la mitad de la "
+        "distancia entre los ojos y la parte superior de la cabeza.\n"
+        "3) Entre esos dos puntos hay exactamente la mitad de la altura total: "
+        "1,70 ÷ 2 = 0,85 m.\n\n"
+        "Un resultado poco intuitivo: alejarse del espejo no ayuda, porque al "
+        "alejarse la imagen se ve más pequeña en la misma proporción en que "
+        "aumenta el campo abarcado.",
+        [
+            ("1,70 m", "Supuso que el espejo debe medir lo mismo que la persona, sin considerar que los rayos se reflejan a media altura."),
+            ("0,57 m", "Dividió la altura por tres, operación que no corresponde a la geometría de la reflexión."),
+            ("Depende de la distancia a la que se ubique la persona respecto del espejo",
+             "Es justamente lo que no ocurre: al alejarse, el campo abarcado crece en la misma proporción en que la imagen se reduce."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un objeto se coloca frente a un espejo cóncavo, a una distancia mayor "
+        "que el centro de curvatura. ¿Qué características tiene la imagen?",
+        "Real, invertida y de menor tamaño",
+        "En un espejo cóncavo el tipo de imagen depende de dónde esté el objeto "
+        "respecto del foco y del centro de curvatura.\n\n"
+        "1) Con el objeto más allá del centro de curvatura, los rayos "
+        "reflejados se cruzan realmente delante del espejo: la imagen es REAL y "
+        "se puede recoger en una pantalla.\n"
+        "2) Al cruzarse, quedan invertidos respecto del objeto.\n"
+        "3) La imagen se forma entre el foco y el centro de curvatura, y resulta "
+        "MENOR que el objeto.\n\n"
+        "Si el objeto se acercara hasta quedar entre el foco y el espejo, la "
+        "imagen pasaría a ser virtual, derecha y aumentada.",
+        [
+            ("Virtual, derecha y de mayor tamaño",
+             "Ese es el caso del objeto ubicado entre el foco y el espejo, mucho más cerca que el centro de curvatura."),
+            ("Real, invertida y de mayor tamaño",
+             "El aumento se obtiene con el objeto entre el foco y el centro de curvatura, no más allá de este."),
+            ("Virtual, invertida y del mismo tamaño que el objeto original",
+             "Una imagen virtual formada por un espejo es siempre derecha: no existe la combinación virtual e invertida en este caso."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "En un espejo esférico, el radio de curvatura mide 40 cm. ¿Cuál es su "
+        "distancia focal?",
+        "20 cm",
+        "En un espejo esférico el foco está a la mitad del radio de curvatura.\n\n"
+        "1) La relación es f = R / 2.\n"
+        "2) Reemplaza: f = 40 cm ÷ 2.\n"
+        "3) La distancia focal es 20 cm.\n\n"
+        "Es decir, el centro de curvatura está siempre al doble de la distancia "
+        "focal, y esa relación es la que organiza los casos de formación de "
+        "imágenes.",
+        [
+            ("40 cm", "Igualó la distancia focal al radio, cuando el foco está a la mitad de él."),
+            ("80 cm", "Multiplicó el radio por dos en vez de dividirlo: eso invierte la relación."),
+            ("10 cm", "Dividió el radio por cuatro, sin justificación en la geometría del espejo."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Una persona con miopía ve borrosos los objetos lejanos porque la imagen "
+        "se forma antes de llegar a la retina. ¿Qué tipo de lente corrige ese "
+        "defecto?",
+        "Una lente divergente",
+        "La corrección consiste en compensar el exceso o el defecto de "
+        "convergencia del ojo.\n\n"
+        "1) En el ojo miope, el sistema óptico converge DEMASIADO: los rayos se "
+        "cruzan antes de la retina.\n"
+        "2) Para corregirlo hay que hacer que los rayos lleguen al ojo un poco "
+        "separados, de modo que el punto de cruce se desplace hacia atrás.\n"
+        "3) Eso lo consigue una lente divergente, más delgada en el centro que "
+        "en los bordes.\n\n"
+        "La hipermetropía es el caso opuesto: el ojo converge poco y se corrige "
+        "con una lente convergente.",
+        [
+            ("Una lente convergente",
+             "Aumentaría todavía más la convergencia y adelantaría la imagen, empeorando el problema."),
+            ("Un espejo cóncavo colocado delante del ojo",
+             "Los espejos reflejan la luz en vez de dejarla pasar: no sirven para corregir la visión."),
+            ("Una lente convergente de distancia focal muy corta, para acercar el foco a la retina",
+             "El foco ya está demasiado adelantado: acercarlo aún más agrava la miopía en lugar de corregirla."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un objeto se ubica exactamente en el foco de una lente convergente. "
+        "¿Qué ocurre con los rayos que salen de la lente?",
+        "Salen paralelos y no forman imagen",
+        "Es el caso límite entre la imagen real y la virtual.\n\n"
+        "1) Los rayos que salen del objeto llegan a la lente divergiendo desde "
+        "el foco.\n"
+        "2) La lente los desvía justo lo necesario para dejarlos paralelos entre "
+        "sí.\n"
+        "3) Rayos paralelos nunca se cruzan, ni hacia adelante ni al "
+        "prolongarlos hacia atrás: no hay imagen que formar, ni real ni "
+        "virtual.\n\n"
+        "Suele decirse que la imagen se forma en el infinito. Es la "
+        "configuración que se usa para producir un haz colimado, por ejemplo en "
+        "un proyector.",
+        [
+            ("Se cruzan justo en el otro foco formando una imagen real",
+             "Eso ocurre cuando el objeto está en el doble de la distancia focal, no en el foco."),
+            ("Se cruzan sobre la propia lente y la imagen queda del mismo tamaño",
+             "Los rayos no se cruzan sobre la lente: es donde son desviados, no donde se forma la imagen."),
+            ("Salen divergiendo y forman una imagen virtual muy aumentada detrás del objeto",
+             "Ese es el caso de la lupa, con el objeto MÁS CERCA que el foco, no exactamente en él."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "En un telescopio reflector, la luz de una estrella llega prácticamente "
+        "en rayos paralelos. ¿Dónde se forma la imagen que después observa el "
+        "ocular?",
+        "En el foco del espejo primario",
+        "Los rayos paralelos al eje son el caso que define la posición del "
+        "foco.\n\n"
+        "1) La estrella está tan lejos que los rayos que nos llegan de ella son "
+        "esencialmente paralelos.\n"
+        "2) Un espejo cóncavo refleja los rayos paralelos al eje haciéndolos "
+        "converger todos en el foco.\n"
+        "3) Ahí se forma una imagen real, pequeña, que el ocular amplía como si "
+        "fuera una lupa.\n\n"
+        "En la práctica los reflectores llevan un espejo secundario que desvía "
+        "esa luz hacia un costado o hacia atrás, para que la cabeza del "
+        "observador no bloquee la entrada.",
+        [
+            ("En el centro de curvatura del espejo primario",
+             "La imagen se forma en el centro de curvatura solo si el objeto también está ahí, y una estrella está a distancia prácticamente infinita."),
+            ("Sobre la superficie misma del espejo",
+             "En la superficie los rayos se reflejan; la imagen aparece donde vuelven a cruzarse, que es el foco."),
+            ("A una distancia igual al doble de la focal, porque los rayos vienen del infinito",
+             "Es al revés: cuanto más lejos está el objeto, más cerca del foco se forma la imagen, y en el límite coincide con él."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Los radiotelescopios captan ondas de radio provenientes del espacio y "
+        "tienen forma de gran plato parabólico. ¿Qué función cumple esa forma?",
+        "Concentrar en un punto las ondas que llegan paralelas",
+        "El principio es el mismo de un espejo cóncavo, aplicado a otra región "
+        "del espectro.\n\n"
+        "1) Las ondas de radio son ondas electromagnéticas, igual que la luz "
+        "visible, solo que de longitud de onda mucho mayor.\n"
+        "2) Una superficie parabólica refleja hacia un único punto, el foco, "
+        "todas las ondas que le llegan paralelas al eje.\n"
+        "3) En ese foco se ubica la antena receptora, que recibe así una señal "
+        "enormemente más intensa que si estuviera sola.\n\n"
+        "Los platos son grandes porque las señales astronómicas son débiles y "
+        "porque una longitud de onda mayor exige un colector mayor para lograr "
+        "el mismo detalle.",
+        [
+            ("Aumentar la frecuencia de las ondas recibidas",
+             "La forma del reflector no modifica la frecuencia: solo redirige las ondas hacia el receptor."),
+            ("Filtrar las ondas de radio producidas por fuentes terrestres",
+             "El filtrado se hace por electrónica y por la ubicación del observatorio, no por la forma del plato."),
+            ("Convertir las ondas de radio en luz visible para poder observarlas directamente",
+             "La señal se convierte en datos electrónicos; el plato no realiza ninguna conversión de frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un objeto se coloca a 30 cm de una lente convergente de 10 cm de "
+        "distancia focal. Usando 1/f = 1/o + 1/i, ¿a qué distancia de la lente "
+        "se forma la imagen?",
+        "15 cm",
+        "Hay que despejar la distancia imagen a partir de la ecuación de las "
+        "lentes.\n\n"
+        "1) Reemplaza: 1/10 = 1/30 + 1/i.\n"
+        "2) Despeja: 1/i = 1/10 − 1/30.\n"
+        "3) Iguala denominadores: 3/30 − 1/30 = 2/30 = 1/15.\n"
+        "4) Por lo tanto i = 15 cm.\n\n"
+        "El signo positivo indica que la imagen es real y se forma al otro lado "
+        "de la lente. Como el objeto está más allá del doble de la focal, la "
+        "imagen resulta además reducida.",
+        [
+            ("40 cm", "Sumó la distancia del objeto y la focal, en vez de aplicar la ecuación con los inversos."),
+            ("20 cm", "Restó la focal de la distancia del objeto, operación que no corresponde a la ecuación de las lentes."),
+            ("7,5 cm", "Invirtió mal el resultado final: obtuvo 2/30 y lo interpretó como si fuera i en vez de 1/i."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "En una cámara fotográfica, el sensor está a una distancia fija de la "
+        "lente y para enfocar objetos a distintas distancias se desplaza el "
+        "conjunto de lentes. ¿Por qué es necesario ese ajuste?",
+        "La posición de la imagen cambia con la distancia del objeto",
+        "La ecuación de las lentes relaciona tres cantidades, y si una cambia "
+        "otra debe cambiar también.\n\n"
+        "1) Con la distancia focal fija, acercar el objeto desplaza la imagen "
+        "más lejos de la lente, y alejarlo la acerca al foco.\n"
+        "2) El sensor tiene que quedar exactamente donde se forma la imagen: si "
+        "no, cada punto del objeto se reparte en una manchita y la foto sale "
+        "borrosa.\n"
+        "3) Como el sensor no se mueve, hay que mover la lente para que la "
+        "imagen caiga justo sobre él.\n\n"
+        "El ojo humano resuelve el mismo problema de otra manera: deforma el "
+        "cristalino y cambia su distancia focal en vez de desplazarlo.",
+        [
+            ("El tamaño de la imagen debe mantenerse constante en toda fotografía",
+             "El tamaño de la imagen cambia inevitablemente con la distancia; lo que se busca al enfocar es la nitidez."),
+            ("La cantidad de luz que entra depende de la posición de la lente",
+             "La luz que entra la regula el diafragma y el tiempo de exposición, no la posición de enfoque."),
+            ("La lente pierde su distancia focal cuando el objeto está muy cerca y hay que compensarlo",
+             "La distancia focal es una propiedad de la lente y no cambia con la posición del objeto."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un rayo láser se diferencia de la luz de una ampolleta en varias "
+        "propiedades. ¿Cuál de ellas explica que el haz se mantenga estrecho a "
+        "gran distancia?",
+        "Sus rayos son prácticamente paralelos entre sí",
+        "El comportamiento del haz depende de la dirección de sus rayos.\n\n"
+        "1) Una ampolleta emite en todas las direcciones, así que su luz se "
+        "reparte y se debilita rápidamente con la distancia.\n"
+        "2) En un láser, los rayos salen esencialmente paralelos: el haz apenas "
+        "se abre a medida que avanza.\n"
+        "3) Por eso la energía se mantiene concentrada en una sección pequeña "
+        "incluso a gran distancia.\n\n"
+        "Un láser tiene además otras dos propiedades distintivas: emite en una "
+        "sola longitud de onda y sus ondas van en fase.",
+        [
+            ("Su luz tiene mayor rapidez de propagación en el aire",
+             "Toda la luz viaja a la misma rapidez en un mismo medio, sin importar su origen."),
+            ("Emite luz de todos los colores a la vez",
+             "Es lo contrario: un láser emite en una única longitud de onda, y por eso su luz es de un solo color."),
+            ("Su longitud de onda es tan pequeña que no puede ser absorbida por el aire",
+             "Hay láseres de longitudes de onda muy diversas, y todos son absorbidos en alguna medida por el medio."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un estudiante coloca una vela frente a una lente convergente y proyecta "
+        "su imagen sobre una pantalla. Luego tapa con cartón la mitad superior "
+        "de la lente. ¿Qué le ocurre a la imagen proyectada?",
+        "Se ve completa pero más tenue",
+        "Cada punto del objeto envía rayos a TODA la superficie de la lente, no "
+        "a una parte de ella.\n\n"
+        "1) De la punta de la vela salen rayos en muchas direcciones; los que "
+        "llegan a cualquier parte de la lente son desviados hacia el mismo punto "
+        "imagen.\n"
+        "2) Al tapar media lente se bloquea una fracción de esos rayos, pero los "
+        "que pasan por la mitad libre siguen formando el punto imagen completo.\n"
+        "3) Lo mismo vale para todos los puntos del objeto: la imagen conserva "
+        "su forma entera.\n"
+        "4) Lo que se pierde es LUZ: llega menos energía y la imagen se ve más "
+        "oscura.\n\n"
+        "Es un error muy común suponer que media lente da media imagen; el "
+        "experimento lo desmiente en un minuto.",
+        [
+            ("Desaparece la mitad superior de la imagen",
+             "Supone que cada zona de la lente forma una zona de la imagen, cuando en realidad toda la lente contribuye a todos los puntos."),
+            ("Desaparece la mitad inferior, porque la imagen está invertida",
+             "El razonamiento sobre la inversión es correcto, pero el supuesto de partida es el mismo error: ninguna mitad de la imagen desaparece."),
+            ("La imagen se desplaza hacia abajo sobre la pantalla",
+             "La posición de la imagen depende de la distancia del objeto y de la focal, no de qué porción de la lente esté descubierta."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un objeto de 6 cm de alto se ubica frente a un espejo cóncavo y produce "
+        "una imagen real de 2 cm. Si el objeto está a 45 cm del espejo, ¿a qué "
+        "distancia se forma la imagen?",
+        "15 cm",
+        "El aumento relaciona los tamaños con las distancias en la misma "
+        "proporción.\n\n"
+        "1) La razón entre los tamaños es 2 ÷ 6 = 1/3: la imagen mide un tercio "
+        "del objeto.\n"
+        "2) En un espejo, la razón entre las distancias es la misma: la imagen "
+        "está a un tercio de la distancia del objeto.\n"
+        "3) Calcula: 45 ÷ 3 = 15 cm.\n\n"
+        "Comprobación con la ecuación del espejo: 1/f = 1/45 + 1/15 = 1/45 + "
+        "3/45 = 4/45, así que la distancia focal es 11,25 cm. El objeto queda "
+        "más allá del centro de curvatura, que es donde la imagen resulta real, "
+        "invertida y reducida: coincide con lo descrito.",
+        [
+            ("135 cm", "Multiplicó por tres en vez de dividir: eso correspondería a una imagen tres veces mayor, no menor."),
+            ("30 cm", "Restó un tercio de la distancia en lugar de tomar un tercio de ella."),
+            ("5 cm", "Dividió por nueve, usando el cuadrado de la razón de tamaños en vez de la razón misma."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Los grandes observatorios astronómicos usan telescopios reflectores y "
+        "no refractores. Además del tamaño alcanzable, hay una razón óptica. "
+        "¿Cuál es?",
+        "Un espejo refleja todos los colores por igual",
+        "El problema de las lentes es que la desviación depende del color.\n\n"
+        "1) Al refractarse, cada longitud de onda se desvía un poco distinto: es "
+        "el mismo fenómeno que separa los colores en un prisma.\n"
+        "2) En una lente eso significa que el foco del azul no coincide con el "
+        "del rojo, y la imagen queda con bordes coloreados y menos nítida. Se "
+        "llama aberración cromática.\n"
+        "3) En un espejo la luz no atraviesa ningún medio: se refleja, y la ley "
+        "de reflexión es la misma para todas las longitudes de onda. El "
+        "problema simplemente no existe.\n\n"
+        "A eso se suma la razón mecánica: un espejo se sostiene por detrás en "
+        "toda su superficie, mientras que una lente grande se deforma por su "
+        "propio peso.",
+        [
+            ("Un espejo aumenta más la imagen que una lente del mismo tamaño",
+             "El aumento lo determina la relación entre las distancias focales del objetivo y del ocular, no si es espejo o lente."),
+            ("Los espejos captan también las ondas de radio del objeto observado",
+             "Un espejo óptico está diseñado para luz visible; captar radio requiere una antena y un plato de otras dimensiones."),
+            ("La luz recorre un camino más corto dentro del tubo y por eso pierde menos intensidad",
+             "El recorrido en aire dentro del tubo no produce pérdidas apreciables: no es esa la ventaja."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un grupo quiere determinar experimentalmente la distancia focal de una "
+        "lente convergente. Un estudiante propone enfocar la luz del Sol sobre "
+        "una hoja de papel y medir la distancia entre la lente y el punto más "
+        "pequeño y brillante. ¿Por qué funciona ese procedimiento?",
+        "Los rayos del Sol llegan paralelos y convergen justo en el foco",
+        "El método aprovecha una condición que el Sol cumple casi exactamente.\n\n"
+        "1) El foco se define como el punto donde converge un haz de rayos "
+        "PARALELOS al eje.\n"
+        "2) El Sol está tan lejos que sus rayos llegan a la lente prácticamente "
+        "paralelos.\n"
+        "3) Por lo tanto el punto donde la luz se concentra al mínimo es "
+        "justamente el foco, y esa distancia es la focal.\n\n"
+        "El procedimiento es válido y muy directo. Exige, eso sí, no mirar el "
+        "Sol a través de la lente y cuidar que el papel no se queme, que es "
+        "precisamente la prueba de que la concentración funciona.",
+        [
+            ("Porque el Sol emite luz de una sola longitud de onda",
+             "El Sol emite en todo el espectro visible: es una fuente policromática, no monocromática."),
+            ("Porque la luz del Sol es más intensa y por eso se enfoca mejor",
+             "La intensidad hace visible el punto, pero lo que fija la posición del foco es que los rayos lleguen paralelos."),
+            ("Porque a esa distancia la imagen del Sol se forma con su tamaño real reducido a escala",
+             "El punto brillante es la imagen del Sol, pero lo relevante es que se forma en el foco por venir los rayos paralelos."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Se compara una lente convergente y un espejo cóncavo con la misma "
+        "distancia focal. Colocando un objeto a la misma distancia de cada uno, "
+        "¿en qué se diferencian las imágenes reales que producen?",
+        "En el lado donde se forman respecto del objeto",
+        "Los dos elementos convergen la luz, pero uno la transmite y el otro la "
+        "devuelve.\n\n"
+        "1) La lente deja pasar la luz: la imagen real se forma al otro lado, "
+        "opuesto al objeto.\n"
+        "2) El espejo la refleja: la imagen real se forma del MISMO lado que el "
+        "objeto, delante de la superficie.\n"
+        "3) En lo demás coinciden: ambas imágenes son reales, invertidas, y su "
+        "tamaño y posición se calculan con ecuaciones de la misma forma.\n\n"
+        "Es la razón por la que en un telescopio reflector hay que sacar la "
+        "imagen del camino con un espejo secundario: se forma justo donde entra "
+        "la luz.",
+        [
+            ("En que la del espejo es virtual y la de la lente es real",
+             "El enunciado compara las imágenes REALES de ambos: los dos elementos pueden formarlas."),
+            ("En que la del espejo es derecha y la de la lente, invertida",
+             "Las imágenes reales son invertidas en los dos casos."),
+            ("En que la del espejo es siempre más pequeña, porque parte de la luz se pierde en la reflexión",
+             "La pérdida de luz afecta el brillo, no el tamaño, que depende solo de las distancias."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un estudiante afirma que la imagen que ve en el espejo del baño 'está "
+        "detrás del vidrio, a la misma distancia a la que él está adelante'. "
+        "¿Cómo se evalúa esa descripción?",
+        "Es correcta, aunque ahí no haya realmente luz",
+        "La ubicación de una imagen virtual se determina por prolongación de los "
+        "rayos.\n\n"
+        "1) Los rayos que llegan al ojo vienen realmente del espejo, no de "
+        "detrás de él: ahí no hay luz.\n"
+        "2) Pero llegan al ojo con las mismas direcciones que tendrían si "
+        "provinieran de un punto ubicado detrás del vidrio, simétrico respecto "
+        "de la superficie.\n"
+        "3) Esa posición simétrica es, por definición, donde está la imagen "
+        "virtual: a igual distancia del espejo que el objeto.\n\n"
+        "La comprobación es directa: al enfocar una cámara sobre la imagen, hay "
+        "que ajustarla a esa distancia mayor y no a la del espejo.",
+        [
+            ("Es incorrecta: la imagen está sobre la superficie del espejo",
+             "Si estuviera sobre la superficie, se enfocaría a la distancia del espejo, y no es lo que ocurre al fotografiarla."),
+            ("Es incorrecta: la imagen está a la mitad de esa distancia",
+             "La construcción geométrica da simetría exacta respecto del plano del espejo, no la mitad."),
+            ("Es correcta solo si la persona se ubica exactamente frente al centro del espejo",
+             "La simetría respecto del plano del espejo se cumple cualquiera sea la posición del observador."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un profesor pide predecir qué ocurre si se sumerge en agua una lente de "
+        "vidrio convergente y se la usa dentro del agua. ¿Qué cambia?",
+        "Converge menos, porque el contraste con el medio disminuye",
+        "El poder de una lente no depende solo del vidrio: depende de la "
+        "diferencia entre el vidrio y el medio que lo rodea.\n\n"
+        "1) La luz se desvía al pasar de un medio a otro, y el ángulo de "
+        "desviación crece cuanto mayor es la diferencia entre ambos medios.\n"
+        "2) En aire, el contraste entre el vidrio y el entorno es grande.\n"
+        "3) En agua, el medio circundante desvía la luz de manera mucho más "
+        "parecida al vidrio: el contraste se reduce y cada rayo se desvía "
+        "menos.\n"
+        "4) La lente sigue siendo convergente, pero su distancia focal aumenta: "
+        "converge más débilmente.\n\n"
+        "Es la razón por la que se ve borroso bajo el agua sin antiparras: el "
+        "contraste entre el agua y el ojo es mucho menor que entre el aire y el "
+        "ojo.",
+        [
+            ("No cambia nada, porque la forma de la lente sigue siendo la misma",
+             "La forma importa, pero el efecto depende también del contraste entre la lente y su entorno."),
+            ("Se vuelve divergente, porque el agua invierte el sentido de la desviación",
+             "Eso ocurriría si el medio desviara la luz MÁS que el vidrio, y no es el caso del agua frente al vidrio."),
+            ("Converge más, porque el agua concentra la luz antes de que llegue a la lente",
+             "El agua no concentra la luz por sí misma; al reducir el contraste, el efecto es el opuesto."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Se investiga cómo influye la distancia del objeto sobre el tamaño de la "
+        "imagen formada por una lente convergente de focal fija. Se ubica el "
+        "objeto a distintas distancias, se enfoca la imagen en una pantalla y se "
+        "mide su altura. ¿Cuál es la variable controlada?",
+        "La distancia focal de la lente",
+        "Conviene identificar los tres papeles: lo que se hace variar, lo que se "
+        "mide y lo que se mantiene igual.\n\n"
+        "1) La distancia del objeto es la variable INDEPENDIENTE: es lo que el "
+        "grupo modifica deliberadamente.\n"
+        "2) La altura de la imagen es la variable DEPENDIENTE: es lo que se "
+        "mide y se espera que cambie.\n"
+        "3) La distancia focal se mantiene igual durante todo el estudio, "
+        "usando siempre la misma lente. Es una variable CONTROLADA: si se "
+        "cambiara de lente a mitad de camino, no se sabría a cuál de los dos "
+        "cambios atribuir la variación observada.\n\n"
+        "También conviene controlar el tamaño del objeto, por la misma razón.",
+        [
+            ("La distancia entre el objeto y la lente",
+             "Es la variable independiente: justamente lo que se hace variar en cada medición."),
+            ("La altura de la imagen proyectada",
+             "Es la variable dependiente: el resultado que se mide en cada caso."),
+            ("La posición de la pantalla, que se ajusta en cada medición hasta lograr el enfoque",
+             "Precisamente porque se ajusta cada vez, no se mantiene constante: no es una variable controlada."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "En un espejo plano, un texto se ve con las letras invertidas de "
+        "izquierda a derecha, pero no de arriba abajo. ¿Cómo se explica esa "
+        "asimetría aparente?",
+        "El espejo invierte lo cercano y lo lejano, no la izquierda ni la altura",
+        "La descripción habitual es engañosa: lo que el espejo invierte es la "
+        "dirección perpendicular a su superficie.\n\n"
+        "1) La imagen es simétrica del objeto respecto del plano del espejo. "
+        "Solo se invierte el eje que apunta hacia el espejo: lo que está más "
+        "cerca de él queda más cerca en la imagen, pero del otro lado.\n"
+        "2) Arriba sigue arriba y la izquierda sigue a la izquierda; ninguno de "
+        "esos dos ejes se invierte.\n"
+        "3) La sensación de cambio de izquierda a derecha aparece porque "
+        "imaginamos que la persona de la imagen se dio vuelta para mirarnos. Esa "
+        "rotación mental es la que intercambia los lados, no el espejo.\n\n"
+        "Comprobación: si el texto se sostiene contra el espejo con la tinta "
+        "hacia él, se lee perfectamente.",
+        [
+            ("El espejo invierte solo el eje horizontal porque los ojos están alineados en horizontal",
+             "La posición de los ojos no interviene: la imagen sería la misma para un observador con los ojos en vertical."),
+            ("El espejo invierte los tres ejes, pero solo se nota en el horizontal",
+             "Si invirtiera los tres, la imagen aparecería también de cabeza, y no es lo que se observa."),
+            ("La inversión depende de la distancia a la que se sostenga el texto frente al espejo",
+             "El resultado es idéntico a cualquier distancia: la simetría respecto del plano no cambia."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Los prismáticos usan prismas internos además de las lentes. ¿Qué "
+        "función cumplen esos prismas?",
+        "Enderezar la imagen y acortar el instrumento",
+        "El sistema de lentes por sí solo entrega una imagen que no sirve para "
+        "observar.\n\n"
+        "1) El objetivo forma una imagen real e INVERTIDA. En astronomía eso da "
+        "lo mismo, pero para mirar un ave o un partido resulta inutilizable.\n"
+        "2) Los prismas reflejan la luz varias veces y devuelven la imagen a su "
+        "orientación correcta.\n"
+        "3) Al hacerlo, pliegan el recorrido de la luz: el camino óptico "
+        "necesario se acomoda en un tubo mucho más corto.\n\n"
+        "Por eso unos prismáticos son compactos pese a tener un recorrido óptico "
+        "largo.",
+        [
+            ("Separar la luz en colores para mejorar el contraste",
+             "Separar los colores produciría bordes coloreados, que es justamente el defecto que se busca evitar."),
+            ("Aumentar la cantidad de luz que ingresa al instrumento",
+             "La luz que entra la determina el diámetro del objetivo; los prismas solo redirigen la que ya entró."),
+            ("Corregir la miopía del observador sin necesidad de usar lentes",
+             "El ajuste de enfoque acomoda distintas vistas, pero esa función la cumple el movimiento del ocular, no los prismas."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "El radar emite ondas electromagnéticas y detecta las que regresan tras "
+        "chocar con un objeto. ¿Cómo determina la distancia a la que está ese "
+        "objeto?",
+        "Mide el tiempo que la señal tarda en ir y volver",
+        "El principio es el mismo del eco, aplicado a ondas electromagnéticas.\n\n"
+        "1) El equipo emite un pulso y registra el instante en que recibe el "
+        "retorno.\n"
+        "2) Las ondas viajan a la rapidez de la luz, que es conocida, así que "
+        "con el tiempo transcurrido se obtiene la distancia recorrida.\n"
+        "3) Ese recorrido incluye la ida y la vuelta, de modo que hay que "
+        "dividir por dos para obtener la distancia al objeto.\n\n"
+        "Si además se compara la frecuencia emitida con la recibida, el "
+        "corrimiento por efecto Doppler entrega la velocidad con que el objeto "
+        "se acerca o se aleja.",
+        [
+            ("Mide la intensidad de la señal que regresa",
+             "La intensidad depende del tamaño y del material del objeto además de la distancia, así que no permite determinarla por sí sola."),
+            ("Compara el color de la onda emitida con el de la recibida",
+             "Las ondas de radar no son visibles y no tienen color; el corrimiento de frecuencia informa velocidad, no distancia."),
+            ("Cuenta el número de rebotes que da la señal antes de perderse en el ambiente",
+             "El radar trabaja con el primer retorno; los rebotes múltiples son una interferencia que se busca descartar."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Una lente divergente forma siempre el mismo tipo de imagen, sin "
+        "importar dónde se coloque el objeto. ¿Cuál es?",
+        "Virtual, derecha y de menor tamaño",
+        "En una lente divergente los rayos salen separándose, y eso fija el "
+        "resultado.\n\n"
+        "1) Los rayos que salen de la lente divergen: nunca se cruzan hacia "
+        "adelante, así que la imagen no puede ser real.\n"
+        "2) Al prolongarlos hacia atrás se cruzan del mismo lado del objeto: la "
+        "imagen es virtual y derecha.\n"
+        "3) Esa imagen queda siempre entre el foco y la lente, y resulta menor "
+        "que el objeto.\n\n"
+        "Es lo que distingue a este tipo de lente: la convergente cambia de "
+        "comportamiento según la posición del objeto, la divergente no.",
+        [
+            ("Real, invertida y de menor tamaño",
+             "Una lente divergente no puede formar imágenes reales, porque sus rayos de salida nunca se cruzan."),
+            ("Virtual, derecha y de mayor tamaño",
+             "El aumento se obtiene con una lente convergente usada como lupa; la divergente siempre reduce."),
+            ("Virtual, derecha y del mismo tamaño, porque solo desvía los rayos sin concentrarlos",
+             "Sí modifica el tamaño: al separar los rayos, la imagen que se construye resulta menor que el objeto."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Las pantallas de un televisor forman todos los colores combinando "
+        "puntos de solo tres colores. ¿Cuáles son y por qué bastan?",
+        "Rojo, verde y azul, porque el ojo tiene tres tipos de receptores",
+        "La elección no es arbitraria: responde a cómo funciona la visión "
+        "humana.\n\n"
+        "1) La retina tiene tres clases de conos, sensibles a zonas distintas "
+        "del espectro, aproximadamente al rojo, al verde y al azul.\n"
+        "2) El color que percibimos resulta de cuánto se estimula cada uno de "
+        "los tres.\n"
+        "3) Por eso, combinando en distintas proporciones tres fuentes de esos "
+        "colores se puede provocar casi cualquier sensación de color, sin "
+        "necesidad de reproducir el espectro completo.\n\n"
+        "Es una mezcla ADITIVA, de luces que se suman. La mezcla de pinturas es "
+        "sustractiva y funciona al revés: cada pigmento resta parte de la luz.",
+        [
+            ("Rojo, amarillo y azul, porque son los colores primarios de la pintura",
+             "Esos son los primarios de la mezcla sustractiva de pigmentos, que sigue una lógica distinta de la de las luces."),
+            ("Blanco, negro y gris, porque con ellos se construye cualquier tono",
+             "El blanco y el negro dan luminosidad, no color: no permiten generar tonos."),
+            ("Rojo, verde y azul, porque son los únicos colores que puede emitir una pantalla electrónica",
+             "La elección de esos tres se debe a la fisiología de la visión; existen pantallas que agregan un cuarto color para ampliar el rango."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_optica", "facil",
+        "Una linterna tiene una ampolleta pequeña ubicada en el foco de un espejo "
+        "cóncavo. ¿Qué se logra con ese diseño?",
+        "Que la luz salga en un haz de rayos paralelos",
+        "Es el caso inverso al de la formación de imagen a partir de rayos "
+        "paralelos.\n\n"
+        "1) Un espejo cóncavo refleja hacia el foco los rayos que le llegan "
+        "paralelos al eje.\n"
+        "2) El camino de la luz es reversible: si la fuente se pone EN el foco, "
+        "los rayos reflejados salen paralelos.\n"
+        "3) Un haz paralelo se abre poco y mantiene la iluminación concentrada a "
+        "distancia, que es exactamente lo que se busca en una linterna o en el "
+        "faro de un vehículo.",
+        [
+            ("Que la luz se disperse en todas las direcciones",
+             "Es lo que hace la ampolleta sola: el espejo se agrega justamente para evitarlo."),
+            ("Que la luz cambie de color al reflejarse",
+             "La reflexión no modifica la longitud de onda: el color de la luz no cambia."),
+            ("Que la luz se concentre en un punto a pocos centímetros del espejo",
+             "Eso ocurriría si la fuente estuviera más lejos que el foco; con la fuente en el foco el haz sale paralelo."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Una hoja de papel blanco y un espejo reciben la misma luz, pero solo el "
+        "espejo permite ver reflejos nítidos. ¿A qué se debe la diferencia?",
+        "El papel refleja la luz en todas direcciones y el espejo, ordenadamente",
+        "Los dos reflejan casi toda la luz: lo que cambia es la regularidad de "
+        "la superficie.\n\n"
+        "1) La superficie del espejo es lisa a escala de la longitud de onda, "
+        "así que rayos que llegan paralelos salen paralelos. Es reflexión "
+        "ESPECULAR y conserva la información de la imagen.\n"
+        "2) La del papel es rugosa: cada punto refleja en una dirección "
+        "distinta. Es reflexión DIFUSA y la información se pierde.\n"
+        "3) Por eso el papel se ve iluminado desde cualquier ángulo, pero no "
+        "muestra la imagen de lo que tiene delante.\n\n"
+        "En ambos casos se cumple la ley de reflexión: lo que cambia es la "
+        "orientación de la normal en cada punto.",
+        [
+            ("El espejo refleja mucha más luz y el papel absorbe casi toda",
+             "Un papel blanco refleja una fracción muy alta de la luz: por eso se ve blanco y brillante."),
+            ("El papel no cumple la ley de reflexión y el espejo sí",
+             "La ley se cumple en cada punto de las dos superficies; en el papel las normales apuntan en direcciones distintas."),
+            ("El espejo emite luz propia mientras que el papel solo la recibe",
+             "Ninguno de los dos emite luz propia: ambos reflejan la que reciben."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Un objeto opaco iluminado por una fuente pequeña proyecta una sombra de "
+        "bordes nítidos. ¿Qué propiedad de la luz explica ese resultado?",
+        "La luz se propaga en línea recta",
+        "La forma de la sombra reproduce la geometría del objeto porque los "
+        "rayos no se curvan.\n\n"
+        "1) La luz viaja en línea recta mientras no cambie de medio ni encuentre "
+        "obstáculos que la desvíen.\n"
+        "2) Los rayos que rozan el borde del objeto siguen derecho y marcan el "
+        "límite de la región no iluminada.\n"
+        "3) Con una fuente puntual ese límite es abrupto: hay sombra o hay luz, "
+        "sin transición.\n\n"
+        "Con una fuente extensa aparecen zonas parcialmente iluminadas por "
+        "distintas partes de la fuente, la penumbra, y el borde se ve difuso.",
+        [
+            ("La luz se refleja en el objeto y vuelve hacia la fuente",
+             "La reflexión ocurre, pero no es lo que determina la forma ni la nitidez de la sombra."),
+            ("La luz se difracta al pasar junto a los bordes del objeto",
+             "La difracción existe y desdibuja mínimamente los bordes, pero es imperceptible frente a objetos de tamaño cotidiano."),
+            ("La luz pierde intensidad al alejarse y por eso deja de iluminar detrás del objeto",
+             "La pérdida de intensidad con la distancia es gradual y ocurre en todas direcciones: no produce un contorno definido."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Un microscopio óptico usa dos sistemas de lentes convergentes: el "
+        "objetivo, cerca de la muestra, y el ocular, junto al ojo. ¿Cómo se "
+        "combinan?",
+        "El objetivo forma una imagen que el ocular amplía",
+        "El aumento total se consigue en dos etapas encadenadas.\n\n"
+        "1) El objetivo se coloca de modo que la muestra quede algo más allá de "
+        "su foco: forma una imagen real, invertida y aumentada dentro del tubo.\n"
+        "2) Esa imagen intermedia funciona como objeto para el ocular.\n"
+        "3) El ocular la observa como una lupa y entrega una imagen virtual "
+        "todavía mayor.\n\n"
+        "Por eso el aumento total es aproximadamente el producto de los "
+        "aumentos: un objetivo de 40 aumentos con un ocular de 10 da unos 400.",
+        [
+            ("El objetivo desvía la luz y el ocular la vuelve a enderezar",
+             "El ocular no endereza la imagen: la observación en un microscopio óptico simple resulta invertida."),
+            ("Ambas lentes aumentan la muestra por separado y las imágenes se suman",
+             "Las imágenes no se suman: la del objetivo sirve de objeto para el ocular, y los aumentos se multiplican."),
+            ("El objetivo concentra la luz sobre la muestra y el ocular forma toda la imagen",
+             "Concentrar luz sobre la muestra es tarea del condensador; el objetivo forma la primera imagen."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un objeto se ubica entre el foco y el centro de curvatura de un espejo "
+        "cóncavo. ¿Qué características tiene la imagen que se forma?",
+        "Real, invertida y de mayor tamaño",
+        "En un espejo cóncavo el caso depende de la posición respecto del foco y "
+        "del centro de curvatura.\n\n"
+        "1) Con el objeto más allá del foco, los rayos reflejados llegan a "
+        "cruzarse delante del espejo: la imagen es REAL e invertida.\n"
+        "2) Al estar más cerca que el centro de curvatura, la imagen se forma "
+        "más allá de ese centro.\n"
+        "3) Cuanto más lejos del espejo se forma la imagen, mayor resulta: en "
+        "este caso queda AUMENTADA.\n\n"
+        "Es la configuración que aprovecha un espejo de afeitar o de maquillaje "
+        "cuando se lo aleja lo suficiente del rostro.",
+        [
+            ("Real, invertida y de menor tamaño",
+             "La reducción se obtiene con el objeto MÁS ALLÁ del centro de curvatura, no entre este y el foco."),
+            ("Virtual, derecha y de mayor tamaño",
+             "Ese es el caso del objeto ubicado entre el foco y el espejo, más cerca todavía."),
+            ("Real, derecha y del mismo tamaño que el objeto",
+             "Una imagen real de un espejo cóncavo es siempre invertida, y el tamaño solo coincide si el objeto está justo en el centro de curvatura."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un espejo cóncavo tiene 30 cm de distancia focal y un objeto se coloca a "
+        "60 cm de él. ¿Qué tamaño tendrá la imagen respecto del objeto?",
+        "Igual al del objeto",
+        "Sesenta centímetros es exactamente el doble de la focal, es decir, el "
+        "centro de curvatura.\n\n"
+        "1) El centro de curvatura está a R = 2f = 60 cm.\n"
+        "2) Con el objeto justo en el centro de curvatura, la imagen se forma "
+        "también ahí.\n"
+        "3) Cuando las distancias de objeto e imagen coinciden, los tamaños "
+        "también: la imagen es del mismo tamaño, real e invertida.\n\n"
+        "Comprobación con la ecuación: 1/30 = 1/60 + 1/i, así que 1/i = 1/60 e "
+        "i = 60 cm. Objeto e imagen quedan a la misma distancia.",
+        [
+            ("El doble del objeto", "El aumento requeriría que el objeto estuviera entre el foco y el centro de curvatura, es decir, a menos de 60 cm."),
+            ("La mitad del objeto", "La reducción se obtiene con el objeto más allá del centro de curvatura, o sea a más de 60 cm."),
+            ("No se forma imagen, porque el objeto está al doble de la distancia focal",
+             "La imagen no se forma cuando el objeto está EN el foco, a 30 cm, no al doble de esa distancia."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Al mirar una piscina desde el borde, el fondo parece estar menos "
+        "profundo de lo que realmente está. ¿Cómo se explica?",
+        "La luz se desvía al salir del agua y el ojo la prolonga en línea recta",
+        "El cerebro supone siempre que la luz llegó en línea recta.\n\n"
+        "1) Los rayos que parten de un punto del fondo se desvían al pasar del "
+        "agua al aire, alejándose de la normal.\n"
+        "2) Al ojo llegan, entonces, con una inclinación distinta de la que "
+        "tenían dentro del agua.\n"
+        "3) El sistema visual prolonga esos rayos hacia atrás en línea recta y "
+        "ubica el punto donde las prolongaciones se cruzan, que queda más "
+        "arriba que el punto real.\n\n"
+        "El mismo mecanismo hace que una cuchara dentro de un vaso con agua se "
+        "vea quebrada en la superficie.",
+        [
+            ("El agua actúa como una lente convergente que acerca la imagen",
+             "La superficie del agua es plana: el efecto no proviene de una curvatura sino del cambio de medio."),
+            ("La luz pierde rapidez y por eso llega más tarde y se ve más cerca",
+             "La luz sí viaja más lento en el agua, pero el retraso no altera la dirección aparente: lo que importa es la desviación."),
+            ("El fondo refleja la luz hacia arriba y la imagen se forma en la superficie del agua",
+             "La imagen aparente no queda en la superficie sino a una profundidad intermedia, y el fenómeno es de refracción, no de reflexión."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un periscopio simple se construye con dos espejos planos paralelos "
+        "inclinados 45° dentro de un tubo. ¿Cómo se comporta la imagen final?",
+        "Derecha, porque las dos reflexiones se compensan",
+        "Cada reflexión invierte algo, y dos inversiones sucesivas devuelven la "
+        "orientación original.\n\n"
+        "1) El primer espejo desvía la luz que entra horizontalmente hacia "
+        "abajo, invirtiendo el sentido de un eje.\n"
+        "2) El segundo la desvía de nuevo hacia la horizontal, invirtiendo ese "
+        "mismo eje otra vez.\n"
+        "3) El resultado neto deja la imagen en su orientación original.\n\n"
+        "Los espejos planos no aumentan ni reducen: el periscopio solo desplaza "
+        "el punto de vista, que es justamente su propósito.",
+        [
+            ("Invertida, porque cada espejo invierte la imagen",
+             "Cada espejo invierte, pero dos inversiones sucesivas del mismo eje se cancelan."),
+            ("Aumentada, porque la luz recorre un camino más largo",
+             "Un espejo plano no modifica el tamaño de la imagen, y la longitud del recorrido no produce aumento."),
+            ("Reducida, porque parte de la luz se pierde en cada una de las dos reflexiones",
+             "Se pierde algo de intensidad, lo que oscurece la imagen, pero el tamaño no cambia."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "El aumento de un telescopio se obtiene dividiendo la distancia focal del "
+        "objetivo por la del ocular. Si el objetivo tiene 1.200 mm y el ocular "
+        "25 mm, ¿cuál es el aumento?",
+        "48 aumentos",
+        "Es una división directa entre las dos distancias focales.\n\n"
+        "1) Aumento = focal del objetivo ÷ focal del ocular.\n"
+        "2) Reemplaza: 1.200 mm ÷ 25 mm.\n"
+        "3) Resulta 48.\n\n"
+        "Cambiar el ocular por uno de menor distancia focal aumenta la "
+        "ampliación, pero también oscurece la imagen y amplifica la turbulencia "
+        "del aire: por eso más aumentos no significa siempre mejor observación.",
+        [
+            ("30.000 aumentos", "Multiplicó las dos distancias focales en vez de dividirlas."),
+            ("1.225 aumentos", "Sumó las dos distancias focales, operación que no corresponde a la definición del aumento."),
+            ("0,02 aumentos", "Invirtió la división: dividió la focal del ocular por la del objetivo."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Los conductores ven señales de tránsito brillar intensamente de noche "
+        "cuando las iluminan sus focos, aunque la señal no tiene luz propia. "
+        "¿Cómo lo logra el material de la señal?",
+        "Devuelve la luz hacia la dirección de donde vino",
+        "El material está diseñado para no comportarse como una superficie "
+        "común.\n\n"
+        "1) Una superficie difusa reparte la luz en todas direcciones, así que "
+        "al conductor le llega solo una fracción diminuta.\n"
+        "2) Un espejo plano la reflejaría con el ángulo simétrico, y salvo por "
+        "casualidad no apuntaría al conductor.\n"
+        "3) El material retrorreflectante, formado por microesferas o por "
+        "prismas, devuelve la luz aproximadamente por el mismo camino por el que "
+        "llegó, es decir, hacia los focos y por lo tanto hacia el conductor.\n\n"
+        "Por eso la señal se ve brillante desde el auto y apagada para un "
+        "peatón que la mira desde un costado.",
+        [
+            ("Absorbe la luz durante el día y la emite de noche",
+             "Ese es el comportamiento de un material fosforescente, que brilla sin necesidad de ser iluminado en ese momento."),
+            ("Transforma la luz blanca en luz de un solo color más visible",
+             "El color de la señal se debe a sus pigmentos, y no es lo que explica el brillo intenso frente a los focos."),
+            ("Refleja la luz con el mismo ángulo con que incide, como un espejo plano",
+             "Un espejo plano enviaría la luz en otra dirección: solo por casualidad llegaría a los ojos del conductor."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Con la edad, muchas personas dejan de enfocar objetos cercanos aunque "
+        "vean bien de lejos. ¿Cuál es la causa de esa presbicia?",
+        "El cristalino pierde capacidad de cambiar su curvatura",
+        "El ojo enfoca modificando su propia distancia focal, no desplazando la "
+        "lente.\n\n"
+        "1) Para ver de cerca, el cristalino debe abombarse y volverse más "
+        "convergente, mediante los músculos que lo rodean.\n"
+        "2) Con los años el cristalino se endurece y ese abombamiento se vuelve "
+        "cada vez más limitado.\n"
+        "3) Como consecuencia, el punto más cercano que se puede enfocar se aleja "
+        "progresivamente, mientras la visión lejana, que no exige acomodación, "
+        "se mantiene.\n\n"
+        "Se corrige con lentes convergentes para la visión próxima.",
+        [
+            ("El ojo se alarga y la imagen se forma delante de la retina",
+             "Ese es el mecanismo de la miopía, que afecta la visión LEJANA."),
+            ("La retina pierde sensibilidad a la luz de los objetos cercanos",
+             "La sensibilidad de la retina no depende de la distancia del objeto observado."),
+            ("La pupila se dilata en exceso y deja pasar demasiada luz al enfocar de cerca",
+             "Con la edad la pupila tiende a reducirse, y en todo caso su tamaño regula la luz, no el enfoque."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Una cámara oscura es una caja cerrada con un orificio pequeño en una "
+        "cara; en la cara opuesta aparece una imagen invertida del exterior. "
+        "¿Por qué la imagen sale invertida?",
+        "Los rayos de la parte superior llegan a la zona inferior",
+        "La explicación es puramente geométrica y no necesita ninguna lente.\n\n"
+        "1) Cada punto del objeto envía rayos en muchas direcciones, pero solo "
+        "uno de ellos logra pasar por el orificio.\n"
+        "2) El rayo que sale de la parte alta del objeto atraviesa el orificio "
+        "en diagonal descendente y llega abajo en la pared del fondo.\n"
+        "3) El que sale de abajo llega arriba. El resultado es una imagen "
+        "invertida, tanto arriba-abajo como izquierda-derecha.\n\n"
+        "Es el mismo principio por el que la imagen se forma invertida sobre la "
+        "retina, y el cerebro se encarga de interpretarla.",
+        [
+            ("El orificio actúa como una lente convergente y cruza los rayos",
+             "El orificio no desvía la luz: solo selecciona qué rayos pasan. No hay refracción involucrada."),
+            ("La luz rebota dentro de la caja antes de llegar a la pared del fondo",
+             "Los rebotes internos solo agregan luz difusa que resta contraste; la imagen se forma con los rayos directos."),
+            ("La imagen se invierte porque el orificio es muy pequeño y difracta la luz",
+             "La difracción desdibuja la imagen si el orificio es demasiado pequeño, pero no la invierte."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un estudiante sostiene que un espejo cóncavo siempre aumenta y uno "
+        "convexo siempre reduce. ¿Qué corrección corresponde?",
+        "El cóncavo aumenta o reduce según dónde esté el objeto",
+        "Solo una de las dos afirmaciones es válida en general.\n\n"
+        "1) El espejo CONVEXO sí da siempre imágenes virtuales, derechas y "
+        "reducidas, cualquiera sea la posición del objeto.\n"
+        "2) El CÓNCAVO no: con el objeto más allá del centro de curvatura la "
+        "imagen es real, invertida y menor; entre el centro y el foco, real, "
+        "invertida y mayor; dentro del foco, virtual, derecha y mayor.\n"
+        "3) Por eso el mismo espejo de un baño puede mostrar el rostro aumentado "
+        "de cerca y una imagen pequeña e invertida al alejarse.\n\n"
+        "La variedad de casos del cóncavo es justamente lo que hay que dominar.",
+        [
+            ("Los dos aumentan o reducen según la posición del objeto",
+             "El convexo no: da siempre una imagen menor, sin importar la distancia."),
+            ("Es correcta, pero solo cuando el objeto está más allá del foco",
+             "Más allá del foco el espejo cóncavo puede reducir la imagen, así que ahí tampoco se cumple que siempre aumente."),
+            ("Está invertida: el cóncavo siempre reduce y el convexo siempre aumenta",
+             "El convexo nunca aumenta, y el cóncavo puede hacer ambas cosas: la corrección va por otro lado."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Una lente convergente de 20 cm de distancia focal forma una imagen real "
+        "del mismo tamaño que el objeto. ¿A qué distancia de la lente está el "
+        "objeto?",
+        "40 cm",
+        "Que los tamaños coincidan obliga a que las distancias también "
+        "coincidan.\n\n"
+        "1) El aumento es la razón entre la distancia imagen y la distancia "
+        "objeto. Si el tamaño es el mismo, esas dos distancias son iguales: "
+        "o = i.\n"
+        "2) Reemplaza en 1/f = 1/o + 1/i: 1/20 = 1/o + 1/o = 2/o.\n"
+        "3) Despeja: o = 40 cm.\n\n"
+        "Comprobación: 1/20 = 1/40 + 1/40 = 2/40. La imagen se forma también a "
+        "40 cm, al otro lado. Es el caso del objeto ubicado al doble de la "
+        "distancia focal, que da la distancia mínima posible entre objeto e "
+        "imagen real.",
+        [
+            ("20 cm", "Con el objeto en el foco no se forma imagen: los rayos salen paralelos."),
+            ("10 cm", "Dentro del foco la imagen es virtual y aumentada, no real y del mismo tamaño."),
+            ("80 cm", "Más allá del doble de la focal la imagen resulta menor que el objeto, no del mismo tamaño."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Se quiere proyectar sobre una pared la imagen de una diapositiva usando "
+        "una lente convergente. ¿Dónde hay que ubicar la diapositiva respecto de "
+        "la lente y en qué posición hay que colocarla?",
+        "Poco más allá del foco y dada vuelta, porque la imagen sale invertida",
+        "Se necesitan dos cosas: una imagen real, y con la orientación "
+        "correcta.\n\n"
+        "1) Para proyectar sobre una pared la imagen debe ser REAL, y una lente "
+        "convergente solo la produce si el objeto está más allá del foco.\n"
+        "2) Para que salga muy aumentada, el objeto debe quedar apenas más allá "
+        "del foco: cuanto más cerca del foco, más lejos y más grande resulta la "
+        "imagen.\n"
+        "3) Toda imagen real de una lente convergente es invertida, así que la "
+        "diapositiva se coloca al revés para que se vea derecha en la pared.\n\n"
+        "Es exactamente el diseño de un proyector.",
+        [
+            ("Entre el foco y la lente, para que la imagen salga aumentada y derecha",
+             "Ahí la imagen es virtual: no se puede recoger en una pared, solo se ve mirando a través de la lente."),
+            ("Exactamente en el foco, para que la imagen se forme muy lejos",
+             "En el foco los rayos salen paralelos y no se forma imagen alguna."),
+            ("Muy lejos de la lente, más allá del doble de la distancia focal, y en su posición normal",
+             "Ahí la imagen resulta reducida, y además seguiría siendo invertida."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un grupo mide la distancia focal de una lente ubicando un objeto a "
+        "varias distancias y registrando dónde se forma la imagen nítida. "
+        "Grafica 1/i en función de 1/o y obtiene una recta de pendiente negativa "
+        "que corta ambos ejes en el mismo valor. ¿Qué representa ese valor?",
+        "El inverso de la distancia focal",
+        "La ecuación de las lentes es lineal si se usan los inversos de las "
+        "distancias.\n\n"
+        "1) Reescribe 1/f = 1/o + 1/i como 1/i = −1/o + 1/f.\n"
+        "2) Es la ecuación de una recta al graficar 1/i contra 1/o: pendiente "
+        "−1 y ordenada al origen 1/f.\n"
+        "3) Por simetría, corta el eje horizontal también en 1/f.\n\n"
+        "El método es bueno porque usa todas las mediciones a la vez en vez de "
+        "una sola, y porque un punto que se salga de la recta delata un error en "
+        "esa medición.",
+        [
+            ("La distancia focal de la lente en centímetros",
+             "El corte se produce en 1/f: para obtener f hay que invertir ese valor."),
+            ("El aumento máximo que puede lograr la lente",
+             "El aumento depende de la posición del objeto y no aparece como corte con los ejes en este gráfico."),
+            ("La distancia mínima a la que se puede colocar el objeto para obtener una imagen real",
+             "Esa distancia es la focal misma, pero el corte con los ejes es su inverso, no ella."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "En un eclipse de Sol, algunas zonas de la Tierra quedan en oscuridad "
+        "total y otras vecinas ven el Sol parcialmente cubierto. ¿Qué explica "
+        "esa diferencia?",
+        "El Sol no es una fuente puntual, así que hay sombra y penumbra",
+        "El tamaño de la fuente determina la estructura de la sombra.\n\n"
+        "1) Si el Sol fuera un punto, habría solo dos regiones: iluminada u "
+        "oscura.\n"
+        "2) Como es extenso, hay zonas desde las cuales la Luna tapa TODO el "
+        "disco solar: es la umbra, y ahí el eclipse es total.\n"
+        "3) Y hay zonas desde las cuales la Luna tapa solo una parte, porque "
+        "otros puntos del Sol siguen a la vista: es la penumbra, y el eclipse se "
+        "ve parcial.\n\n"
+        "Por eso la franja de totalidad es estrecha mientras la región de "
+        "eclipse parcial abarca miles de kilómetros.",
+        [
+            ("La atmósfera desvía la luz solar y la reparte de manera desigual",
+             "La atmósfera dispersa algo de luz, pero la geometría de umbra y penumbra se produce igual en el vacío."),
+            ("La Luna refleja luz hacia algunas regiones y no hacia otras",
+             "En un eclipse solar la cara de la Luna que apunta a la Tierra está a oscuras: no hay luz reflejada que repartir."),
+            ("La Tierra es curva y por eso algunas regiones reciben la sombra en ángulo",
+             "La curvatura deforma la proyección de la sombra, pero la existencia de dos regiones distintas se debe al tamaño de la fuente."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Un estudiante afirma que un telescopio sirve sobre todo para aumentar "
+        "el tamaño de los objetos observados. ¿Qué precisión conviene hacer?",
+        "Su función principal es recoger más luz que el ojo",
+        "El aumento es útil, pero no es lo que limita la observación "
+        "astronómica.\n\n"
+        "1) Las estrellas están tan lejos que ningún aumento las convierte en "
+        "discos: siguen viéndose como puntos.\n"
+        "2) Lo que un telescopio hace de manera insustituible es RECOGER LUZ: "
+        "un objetivo de 20 cm capta miles de veces más luz que la pupila, y así "
+        "vuelve visibles objetos que a simple vista no lo son.\n"
+        "3) Un objetivo mayor mejora además el poder de resolución, es decir, la "
+        "capacidad de distinguir dos puntos muy juntos.\n\n"
+        "Por eso los telescopios se describen por el diámetro de su objetivo y "
+        "no por sus aumentos.",
+        [
+            ("Su función principal es corregir la refracción de la atmósfera",
+             "La turbulencia atmosférica es un problema que el telescopio sufre, no que resuelva; se compensa con otras técnicas."),
+            ("Su función principal es filtrar la luz de las estrellas más brillantes",
+             "Filtrar luz es lo contrario de lo que se busca: el objetivo es captar la mayor cantidad posible."),
+            ("Su función principal es aumentar la imagen, pero solo de los planetas y no de las estrellas",
+             "El aumento sí ayuda con los planetas, pero la capacidad determinante del instrumento sigue siendo cuánta luz recoge."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Dos estudiantes discuten si un espejo plano puede formar una imagen "
+        "real. Uno propone comprobarlo poniendo una pantalla donde parece estar "
+        "la imagen. ¿Qué resultado obtendrán y qué demuestra?",
+        "Nada aparecerá en la pantalla, porque la imagen es virtual",
+        "La distinción entre imagen real y virtual tiene una prueba "
+        "experimental directa.\n\n"
+        "1) Una imagen es real si los rayos de luz se cruzan efectivamente en "
+        "ese punto: entonces una pantalla puesta ahí recibe luz y muestra la "
+        "imagen.\n"
+        "2) En un espejo plano los rayos reflejados divergen; solo sus "
+        "PROLONGACIONES se cruzan detrás del espejo, donde no llega luz alguna.\n"
+        "3) Al poner una pantalla detrás del espejo no aparece nada, y eso "
+        "confirma que la imagen es virtual.\n\n"
+        "El experimento es una buena manera de distinguir los dos tipos sin "
+        "recurrir a la definición de memoria.",
+        [
+            ("Aparecerá la imagen invertida, demostrando que es real",
+             "La imagen de un espejo plano no es invertida verticalmente ni se puede recoger: ninguna de las dos cosas ocurriría."),
+            ("Aparecerá la imagen pero más tenue, porque la pantalla absorbe parte de la luz",
+             "No aparecerá nada: detrás del espejo no llega luz alguna que la pantalla pudiera mostrar."),
+            ("Aparecerá la imagen solo si la pantalla es blanca y está muy bien iluminada",
+             "Iluminar la pantalla la vuelve más visible a ella, pero no hace aparecer una imagen que no se forma con luz real."),
+        ],
+    ),
+    _q(
+        "cie_optica", "dificil",
+        "Se comparan dos lentes convergentes: una de 5 cm de distancia focal y "
+        "otra de 20 cm. Si se usan como lupa, ¿cuál produce mayor aumento y por "
+        "qué?",
+        "La de 5 cm, porque permite acercar más el objeto",
+        "En una lupa, el aumento depende de qué tan cerca del ojo se puede llevar "
+        "el objeto manteniendo el enfoque.\n\n"
+        "1) La lupa funciona con el objeto dentro de la distancia focal.\n"
+        "2) Con una focal de 5 cm el objeto puede acercarse a pocos centímetros "
+        "del ojo y aun así verse nítido, ocupando un ángulo visual mucho mayor.\n"
+        "3) Con una focal de 20 cm el objeto debe mantenerse más lejos, así que "
+        "se ve bajo un ángulo menor: el aumento es más modesto.\n\n"
+        "Regla general: a menor distancia focal, mayor poder de la lente. Por eso "
+        "las lupas potentes son las de vidrio pequeño y muy abombado.",
+        [
+            ("La de 20 cm, porque su distancia focal es mayor",
+             "Invierte la relación: una focal mayor significa una lente menos potente."),
+            ("Las dos producen el mismo aumento, porque ambas son convergentes",
+             "El tipo de lente determina si converge, pero el aumento depende de cuánto lo hace, es decir, de su distancia focal."),
+            ("La de 20 cm, porque forma la imagen más lejos y por lo tanto más grande",
+             "En el uso como lupa la imagen es virtual y su tamaño angular depende de cuánto se pueda acercar el objeto."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "El control remoto de un televisor emite radiación infrarroja. ¿Por qué "
+        "no se ve el destello al apretar un botón?",
+        "El infrarrojo está fuera del rango que detecta el ojo",
+        "El ojo humano responde solo a una franja estrecha del espectro "
+        "electromagnético.\n\n"
+        "1) El infrarrojo tiene longitud de onda mayor que la del rojo visible.\n"
+        "2) Los receptores de la retina no responden a esa radiación, así que no "
+        "genera ninguna señal visual.\n"
+        "3) La radiación está ahí igualmente: la cámara de un teléfono, cuyo "
+        "sensor sí es sensible al infrarrojo cercano, muestra el destello con "
+        "toda claridad.\n\n"
+        "Es una buena demostración de que el espectro visible es una porción "
+        "diminuta del espectro electromagnético.",
+        [
+            ("La radiación es demasiado débil para ser percibida",
+             "Aunque fuera intensa seguiría siendo invisible: el problema es la longitud de onda, no la potencia."),
+            ("El destello dura muy poco tiempo para que el ojo lo registre",
+             "El ojo detecta destellos mucho más breves; además la emisión se repite mientras el botón está apretado."),
+            ("La luz infrarroja viaja demasiado rápido para que la retina alcance a reaccionar",
+             "Toda radiación electromagnética viaja a la misma rapidez en un mismo medio."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un buzo dentro del agua ilumina la superficie desde abajo con un ángulo "
+        "muy inclinado y comprueba que la luz no sale al aire: vuelve toda hacia "
+        "el agua. ¿Cómo se llama ese fenómeno?",
+        "Reflexión total interna",
+        "Ocurre solo cuando la luz va de un medio a otro en que se propaga más "
+        "rápido, y con un ángulo suficientemente grande.\n\n"
+        "1) Al pasar del agua al aire, el rayo refractado se aleja de la normal.\n"
+        "2) A medida que aumenta el ángulo de incidencia, el rayo refractado se "
+        "acerca cada vez más a la superficie.\n"
+        "3) Superado cierto ángulo, llamado ángulo crítico, ya no hay rayo "
+        "refractado: toda la luz se refleja de vuelta al agua.\n\n"
+        "Es el mismo fenómeno que confina la luz dentro de una fibra óptica.",
+        [
+            ("Difracción en el borde de la superficie",
+             "La difracción aparece al rodear obstáculos o pasar por aberturas pequeñas, no al superar un ángulo límite."),
+            ("Dispersión de la luz en sus colores componentes",
+             "La dispersión separa los colores porque cada uno se desvía distinto, pero no impide que la luz salga."),
+            ("Absorción total de la luz por la capa superficial del agua",
+             "Si fuera absorción, la energía se quedaría en el agua como calor; aquí la luz vuelve reflejada y sigue viajando."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Los anteojos recetados se describen por su potencia en dioptrías, que es "
+        "el inverso de la distancia focal medida en metros. Si una lente tiene "
+        "una distancia focal de 50 cm, ¿cuál es su potencia?",
+        "2 dioptrías",
+        "Hay que expresar primero la distancia focal en metros.\n\n"
+        "1) Convierte: 50 cm = 0,5 m.\n"
+        "2) Aplica la definición: potencia = 1 ÷ 0,5 m.\n"
+        "3) Resulta 2 dioptrías.\n\n"
+        "Cuanto mayor es la potencia, más corta es la focal y más fuerte es la "
+        "lente. En una receta, el signo positivo corresponde a lentes "
+        "convergentes y el negativo, a divergentes.",
+        [
+            ("50 dioptrías", "Usó los centímetros directamente sin convertirlos a metros."),
+            ("0,5 dioptrías", "Tomó la distancia focal en metros como si ya fuera la potencia, sin invertirla."),
+            ("0,02 dioptrías", "Invirtió los 50 centímetros sin convertir a metros: mezcló las dos unidades."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un espejo cóncavo se usa en un horno solar para calentar agua. ¿Dónde "
+        "conviene ubicar el recipiente?",
+        "En el foco del espejo",
+        "El objetivo es concentrar en el menor espacio posible la energía que "
+        "llega del Sol.\n\n"
+        "1) Los rayos del Sol llegan prácticamente paralelos al eje.\n"
+        "2) Un espejo cóncavo los refleja haciéndolos converger todos en el "
+        "foco.\n"
+        "3) Ahí la energía por unidad de superficie es máxima, y por lo tanto "
+        "también la temperatura alcanzada.\n\n"
+        "Es la misma geometría de una antena parabólica o de un radiotelescopio, "
+        "aplicada a concentrar energía en vez de recoger señal.",
+        [
+            ("En el centro de curvatura del espejo",
+             "Ahí convergerían los rayos que salen de ese mismo punto, pero los del Sol llegan paralelos y se juntan en el foco."),
+            ("Pegado a la superficie del espejo",
+             "En la superficie los rayos recién se reflejan y todavía no se han concentrado."),
+            ("A una distancia igual al doble de la focal, para aprovechar toda la superficie reflectante",
+             "Toda la superficie contribuye igual, pero la concentración máxima se produce en el foco, no al doble de esa distancia."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Una lente convergente y una divergente se distinguen a simple vista por "
+        "su forma. ¿Cuál es la diferencia?",
+        "La convergente es más gruesa en el centro que en los bordes",
+        "La forma determina cómo se desvía la luz al atravesarla.\n\n"
+        "1) En la lente convergente el espesor de vidrio crece hacia el centro. "
+        "Los rayos que pasan por la periferia se desvían más hacia el eje, y "
+        "todos terminan juntándose.\n"
+        "2) En la divergente ocurre lo contrario: es más delgada en el centro, y "
+        "los rayos se separan al salir.\n"
+        "3) La convergente se llama también biconvexa y la divergente, "
+        "bicóncava.\n\n"
+        "Una prueba rápida: si al mirar un texto de cerca a través de la lente "
+        "se ve aumentado, es convergente.",
+        [
+            ("La convergente es más delgada en el centro que en los bordes",
+             "Esa descripción corresponde a la lente divergente."),
+            ("La convergente es más grande en diámetro que la divergente",
+             "El diámetro determina cuánta luz entra, no si la lente converge o diverge."),
+            ("La convergente está hecha de vidrio y la divergente, de un material plástico transparente",
+             "Ambas pueden fabricarse en cualquiera de los dos materiales: lo que las distingue es su forma."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Al observar un objeto a través de una lente convergente sostenida muy "
+        "cerca de él, y luego alejando lentamente la lente, en cierto momento la "
+        "imagen se ve borrosa y después aparece invertida. ¿Qué ocurrió en ese "
+        "punto intermedio?",
+        "El objeto pasó a estar en el foco de la lente",
+        "El cambio de imagen derecha a invertida marca un límite bien "
+        "definido.\n\n"
+        "1) Con el objeto más cerca que el foco, la imagen es virtual, derecha y "
+        "aumentada: es el uso de lupa.\n"
+        "2) Con el objeto más allá del foco, la imagen pasa a ser real e "
+        "invertida.\n"
+        "3) Justo en el foco no se forma imagen: los rayos salen paralelos, y "
+        "por eso se ve borroso.\n\n"
+        "Es una manera práctica de estimar la distancia focal de una lente "
+        "desconocida.",
+        [
+            ("La lente se ensució y perdió transparencia",
+             "El fenómeno se repite siempre a la misma distancia y desaparece al volver atrás: no depende del estado del vidrio."),
+            ("El objeto quedó en el centro de curvatura de la lente",
+             "Las lentes no tienen centro de curvatura en el sentido de los espejos, y ahí la imagen sería nítida y del mismo tamaño."),
+            ("El ojo del observador dejó de acomodarse correctamente a esa distancia",
+             "El borroneo ocurre a una distancia fija de la lente y se repite con cualquier observador."),
+        ],
+    ),
+    _q(
+        "cie_optica", "facil",
+        "Una antena parabólica de televisión satelital apunta al cielo con su "
+        "receptor sostenido por un brazo frente al plato. ¿Por qué el receptor "
+        "va ahí y no pegado al plato?",
+        "Porque en ese punto se concentran las ondas reflejadas",
+        "El diseño repite la geometría de un espejo cóncavo.\n\n"
+        "1) Las ondas del satélite llegan prácticamente paralelas por la enorme "
+        "distancia.\n"
+        "2) La superficie parabólica las refleja concentrándolas todas en el "
+        "foco.\n"
+        "3) El brazo sostiene el receptor exactamente ahí, donde la señal es "
+        "máxima. Pegado al plato recibiría solo la fracción que llega a esa "
+        "pequeña zona.\n\n"
+        "Por eso apuntar bien la antena es crítico: si el eje no queda alineado "
+        "con el satélite, la concentración deja de producirse en el receptor.",
+        [
+            ("Porque así no bloquea la señal que llega al plato",
+             "El receptor y su brazo sí bloquean una parte de la señal; se acepta esa pérdida a cambio de ubicarlo en el foco."),
+            ("Porque a esa distancia la señal ya perdió intensidad y no daña el equipo",
+             "La señal de un satélite es débil: el problema es captar suficiente, no protegerse de un exceso."),
+            ("Porque el aire entre el plato y el receptor amplifica las ondas antes de que lleguen",
+             "El aire no amplifica nada: la concentración la produce la forma del reflector."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Se quiere fotografiar un ave lejana y se dispone de dos objetivos: uno "
+        "de 50 mm y otro de 300 mm de distancia focal. ¿Cuál conviene y por qué?",
+        "El de 300 mm, porque forma una imagen mayor sobre el sensor",
+        "Con el objeto muy lejos, la imagen se forma prácticamente en el foco, y "
+        "su tamaño crece con la distancia focal.\n\n"
+        "1) Los rayos de un objeto lejano llegan casi paralelos, así que la "
+        "imagen se forma a una distancia cercana a la focal.\n"
+        "2) Cuanto mayor es esa distancia, más separados quedan los puntos de la "
+        "imagen entre sí: el ave ocupa más superficie del sensor.\n"
+        "3) El de 300 mm da entonces una imagen seis veces mayor que el de "
+        "50 mm.\n\n"
+        "El costo es que abarca un campo mucho más estrecho, y que cualquier "
+        "movimiento de la cámara se amplifica igual que la imagen.",
+        [
+            ("El de 50 mm, porque abarca un campo más amplio y capta mejor al ave",
+             "Un campo amplio ayuda a encontrar al ave, pero la deja ocupando una porción diminuta de la imagen."),
+            ("Cualquiera de los dos, porque el tamaño de la imagen depende solo de la distancia al ave",
+             "Depende de ambas cosas: a igual distancia, la focal mayor da una imagen mayor."),
+            ("El de 50 mm, porque su distancia focal más corta concentra más luz sobre el sensor",
+             "La luz por unidad de superficie depende de la apertura relativa, no directamente de que la focal sea corta."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "En un espejo convexo, ¿dónde se ubica siempre la imagen respecto del "
+        "espejo?",
+        "Detrás del espejo, entre el foco y la superficie",
+        "Los rayos reflejados por un espejo convexo divergen, así que la imagen "
+        "solo puede construirse por prolongación.\n\n"
+        "1) Los rayos que salen del espejo se separan: nunca se cruzan delante "
+        "de él.\n"
+        "2) Al prolongarlos hacia atrás se cruzan detrás del espejo: la imagen "
+        "es virtual.\n"
+        "3) Esa intersección queda siempre entre la superficie y el foco, sin "
+        "importar dónde esté el objeto. Por eso la imagen es siempre menor y "
+        "derecha.\n\n"
+        "Cuando el objeto está muy lejos, la imagen se acerca al foco; cuando "
+        "está muy cerca, se acerca a la superficie.",
+        [
+            ("Delante del espejo, sobre el eje óptico",
+             "Ahí se formaría una imagen real, y un espejo convexo no puede producirla."),
+            ("Detrás del espejo, siempre más allá del foco",
+             "La imagen queda entre el foco y la superficie: nunca lo sobrepasa."),
+            ("A la misma distancia del espejo que el objeto, pero al otro lado",
+             "Esa es la propiedad del espejo PLANO; en el convexo la imagen queda más cerca de la superficie."),
+        ],
+    ),
+    _q(
+        "cie_optica", "medio",
+        "Un estudiante observa que su reflejo en el lado cóncavo de una cuchara "
+        "se ve invertido, y en el lado convexo se ve derecho y pequeño. ¿Qué "
+        "explica la diferencia?",
+        "El lado cóncavo converge la luz y el convexo la separa",
+        "Cada cara de la cuchara se comporta como un tipo distinto de espejo "
+        "esférico.\n\n"
+        "1) La cara cóncava hace converger los rayos reflejados. Como el rostro "
+        "suele estar más lejos que el foco de una cuchara, que es muy corto, se "
+        "forma una imagen real e invertida.\n"
+        "2) La cara convexa hace divergir los rayos, y la imagen resulta siempre "
+        "virtual, derecha y reducida.\n"
+        "3) Acercando mucho la cara cóncava, a menos que su distancia focal, la "
+        "imagen pasaría a verse derecha y aumentada.\n\n"
+        "Una cuchara es un buen laboratorio: tiene los dos tipos de espejo "
+        "esférico en el mismo objeto.",
+        [
+            ("El lado cóncavo está más pulido que el convexo",
+             "El pulido afecta la nitidez del reflejo, no si la imagen sale derecha o invertida."),
+            ("El lado convexo refleja menos luz y por eso la imagen se ve más pequeña",
+             "El tamaño de la imagen depende de la geometría de la reflexión, no de cuánta luz se refleje."),
+            ("El lado cóncavo invierte los colores además de la posición de la imagen",
+             "La reflexión no altera los colores: solo cambia la dirección de los rayos."),
+        ],
+    ),
+]
