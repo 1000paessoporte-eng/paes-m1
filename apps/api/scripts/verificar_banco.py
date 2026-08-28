@@ -108,6 +108,64 @@ RESULTADOS_LECCIONES: dict[str, Fraction] = {
 # el banco marcó como correcta. Es la única forma de que un error de cálculo no
 # pase silenciosamente a un estudiante que lo va a estudiar como verdad.
 COMPROBACIONES_CIENCIAS: dict[str, str] = {
+    # --- Ciencias: física, tanda de ampliación a 600 por eje (2026-08-28) ---
+    # Energía-Tierra
+    "placa de Nazca se aproxima a la Sudamericana": f"{7 * 1_000_000 // 100_000} km",
+    "una tomada a 80 km del eje de la dorsal": f"{80 * 100_000 // 4_000_000} cm",
+    "la onda P llega 40 segundos antes": f"{40 * 8 * 4 // (8 - 4)} km",
+    "dos puntos separados por una falla se acercan": f"{2 * 150 // 100} m",
+    # Cosmología
+    "orbita el Sol a 4 unidades astronómicas": f"{int(sqrt(4 ** 3))} años",
+    "Otra está a 300 millones de años luz": f"{2200 * 3:,}".replace(",", ".") + " km/s",
+    "periodo orbital de 27 años terrestres": f"{round((27 ** 2) ** (1 / 3))} UA",
+    "planeta se encuentra a 25 unidades astronómicas": f"{int(sqrt(25 ** 3))} años",
+    # Óptica
+    "espejo plano formando un ángulo de 30°": "30°",
+    "Una persona de 1,70 m quiere verse de cuerpo entero": f"{1.70 / 2:.2f} m".replace(".", ","),
+    "el radio de curvatura mide 40 cm": f"{40 // 2} cm",
+    "a 30 cm de una lente convergente de 10 cm": f"{round(1 / (1 / 10 - 1 / 30))} cm",
+    "produce una imagen real de 2 cm": f"{45 * 2 // 6} cm",
+    "objetivo tiene 1.200 mm y el ocular": f"{1200 // 25} aumentos",
+    "20 cm de distancia focal forma una imagen real del mismo tamaño": f"{2 * 20} cm",
+    "una distancia focal de 50 cm, ¿cuál es su potencia": f"{int(1 / 0.5)} dioptrías",
+    # Ondas electromagnéticas
+    "tiene un período de 0,004 s": f"{int(1 / 0.004)} Hz",
+    "transmite en 100 MHz": f"{int(3e8 / 1e8)} m",
+    "onda de radio de 1.500 kHz recorre 600 m": str(600 // 200),
+    "pulso láser que rebota en un reflector": f"{int(3e8 * 2.6 / 2 / 1000):,}".replace(",", ".") + " km",
+    "satélite, ubicado a unos 36.000 km de altura": f"{3.6e7 / 3e8:.2f} s".replace(".", ","),
+    # Movimiento
+    "recorre 900 m en 60 s y luego se detiene": f"{900 // 90} m/s",
+    "parte de la posición 20 m y avanza con velocidad constante": f"{20 + 5 * 8} m",
+    "aumenta su rapidez de 10 m/s a 30 m/s en 5 s": f"{(30 - 10) // 5} m/s²",
+    "parte del reposo con aceleración constante de 3 m/s²": f"{int(0.5 * 3 * 4 ** 2)} m",
+    "se deja caer desde el reposo y se desprecia el roce": f"{10 * 3} m/s",
+    "móvil A parte del origen a 20 m/s": f"{100 // (20 - 15)} s",
+    "de una ciudad a otra a 60 km/h y regresa": f"{2 * 60 * 30 // (60 + 30)} km/h",
+    "lanzado verticalmente hacia arriba a 20 m/s": f"{20 // 10} s",
+    "tren de 150 m de largo viaja a 20 m/s": f"{(250 + 150) // 20} s",
+    "camina 30 m hacia el este y luego 40 m hacia el norte": f"{int(sqrt(30 ** 2 + 40 ** 2))} m",
+    "un límite de 108 km/h": f"{int(108 / 3.6)} m/s",
+    "una recta que sube desde 0 hasta 12 m/s en 6 s": f"{12 // 6} m/s² y {6 * 12 // 2} m",
+    "demora 0,8 s en reaccionar": f"{int(20 * 0.8)} m",
+    "frena con aceleración constante de −5 m/s²": f"{20 // 5} s",
+    "vías paralelas en el mismo sentido, uno a 30 m/s": f"{30 - 25} m/s",
+    "lanza verticalmente hacia arriba a 30 m/s": f"{30 ** 2 // 20} m",
+    "alcanza 24 m/s en 8 s": f"{24 // 2} m/s",
+    # Fuerzas
+    "cuerpo de 5 kg actúa una fuerza neta de 15 N": f"{15 // 5} m/s²",
+    "40 N hacia la derecha y 25 N hacia la izquierda": f"{(40 - 25) // 3} m/s²",
+    "dos fuerzas perpendiculares entre sí, una de 6 N": f"{int(sqrt(6 ** 2 + 8 ** 2))} N",
+    "uno de 2 kg y otro de 6 kg, están unidos por una cuerda": f"{16 // (2 + 6)} m/s²",
+    "Un cuerpo de 4 kg cae libremente": f"{4 * 10} N",
+    "de 2 kg y 3 kg, son arrastrados": f"{20 // (2 + 3) * 2} N",
+    "cuerpo de 15 kg alcance una aceleración de 4 m/s²": f"{15 * 4} N",
+    "cuerpo de 10 kg es empujado con una fuerza horizontal de 50 N": f"{50 - 10 * 3} N",
+    "cuerpo de 6 kg está sobre una superficie horizontal sin roce": f"{24 // 6 * 5} m/s",
+    "1 kg y 4 kg están unidos por una cuerda que pasa por una polea": f"{(4 * 10 - 1 * 10) // (1 + 4)} m/s²",
+    "12 N hacia el este y 16 N hacia el norte": f"{20 / 3:.2f} m/s²".replace(".", ","),
+    "persona de 70 kg está de pie sobre el suelo": f"{70 * 10} N",
+    "caja de 8 kg es levantada con aceleración constante": f"{8 * 10 + 8 * 2} N",
     # Preguntas con figura: el dato sale del dibujo, pero la aritmética
     # que lleva a la respuesta se recalcula igual que en las demás.
     "¿Qué distancia recorrió en total?": str((8 + 4) // 2 * 10),

@@ -50319,23 +50319,6 @@ QUESTIONS_CIENCIAS = [
     ),
     # ---------- Tercera tanda: cinemática y dinámica ----------
     _q(
-        "cie_movimiento", "medio",
-        "¿Qué diferencia hay entre rapidez y velocidad?",
-        "La rapidez es solo magnitud; la velocidad incluye además la dirección",
-        "La rapidez es escalar: queda descrita con un número y su unidad, como "
-        "60 km/h.\n\n"
-        "La velocidad es vectorial: exige también dirección y sentido, como 60 "
-        "km/h hacia el norte.\n\n"
-        "Por eso un auto que da una vuelta completa a una pista y regresa al "
-        "punto de partida tuvo rapidez media distinta de cero, pero velocidad "
-        "media nula: no se desplazó.",
-        [
-            ("La velocidad se mide en km/h y la rapidez en m/s", "Ambas pueden expresarse en cualquiera de las dos unidades."),
-            ("La rapidez se usa para cuerpos rápidos y la velocidad para lentos", "No hay relación con qué tan rápido se mueve el cuerpo."),
-            ("Son sinónimos exactos en física", "Se distinguen precisamente por el carácter vectorial de la velocidad."),
-        ],
-    ),
-    _q(
         "cie_movimiento", "facil",
         "En un gráfico de posición versus tiempo, ¿qué representa una recta "
         "horizontal?",
@@ -86085,6 +86068,2373 @@ QUESTIONS_CIENCIAS += [
              "El terreno absorbe las ondas de radio: no atraviesan el planeta."),
             ("Son retransmitidas automáticamente por satélites en órbita baja",
              "La onda corta funcionaba mucho antes de que existieran satélites, por reflexión ionosférica."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Mecánica": descripción del movimiento
+#
+# El temario pide sistemas de referencia, trayectoria, posición, distancia
+# recorrida, desplazamiento, rapidez media, velocidad media e instantánea y
+# aceleración; el MRU y el MRUA con su ecuación de itinerario y sus gráficos; y
+# la relatividad de Galileo en movimientos rectilíneos uniformes.
+#
+# Las preguntas de "reemplaza en la fórmula" que había en el banco se retiraron:
+# la PAES sitúa el cálculo dentro de una situación descrita y suele pedir además
+# interpretar un gráfico o comparar dos móviles.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_movimiento", "facil",
+        "Una persona sentada en un bus que avanza por la carretera afirma estar "
+        "en reposo. Otra, parada en la berma, afirma que esa persona se mueve a "
+        "80 km/h. ¿Cómo se resuelve la contradicción?",
+        "Ambas tienen razón respecto de su sistema de referencia",
+        "El movimiento no es una propiedad absoluta de un cuerpo: se describe "
+        "siempre respecto de algo.\n\n"
+        "1) Para la persona del bus, el sistema de referencia es el propio bus. "
+        "Respecto de él, su posición no cambia: está en reposo.\n"
+        "2) Para quien está en la berma, el sistema de referencia es el suelo. "
+        "Respecto de él, la posición del pasajero cambia continuamente.\n"
+        "3) No hay contradicción porque las dos descripciones se refieren a "
+        "sistemas distintos, y ninguno es el verdadero.\n\n"
+        "Por eso toda descripción de un movimiento debe indicar respecto de qué "
+        "se está midiendo.",
+        [
+            ("Solo tiene razón quien está en la berma, porque el suelo está quieto",
+             "El suelo tampoco está quieto en términos absolutos: la Tierra rota y orbita. No hay un sistema privilegiado."),
+            ("Solo tiene razón el pasajero, porque él percibe directamente su estado",
+             "La percepción propia no define el movimiento; de hecho el pasajero no percibiría diferencia si el bus estuviera detenido."),
+            ("Ninguna tiene razón, porque la velocidad real es el promedio entre ambas descripciones",
+             "Promediar descripciones hechas en sistemas distintos no tiene sentido físico."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un atleta corre una vuelta completa a una pista circular de 400 m y "
+        "vuelve al punto de partida. ¿Cuánto vale su desplazamiento?",
+        "Cero",
+        "Distancia recorrida y desplazamiento son magnitudes distintas.\n\n"
+        "1) La DISTANCIA RECORRIDA es la longitud del camino: en este caso "
+        "400 m.\n"
+        "2) El DESPLAZAMIENTO es el vector que va de la posición inicial a la "
+        "final.\n"
+        "3) Como el atleta termina exactamente donde partió, ese vector tiene "
+        "magnitud cero.\n\n"
+        "Por eso su velocidad media en la vuelta completa también es cero, "
+        "aunque su rapidez media haya sido considerable.",
+        [
+            ("400 m", "Ese es el valor de la distancia recorrida, no del desplazamiento."),
+            ("200 m", "Sería la magnitud del desplazamiento si hubiera recorrido media vuelta, no una completa."),
+            ("Depende del tiempo que haya tardado en dar la vuelta",
+             "El desplazamiento depende solo de las posiciones inicial y final, no del tiempo empleado."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "En un gráfico de posición en función del tiempo, un móvil aparece "
+        "representado por una recta inclinada. ¿Qué tipo de movimiento describe?",
+        "Rectilíneo uniforme, con velocidad constante",
+        "La pendiente de un gráfico de posición contra tiempo es la "
+        "velocidad.\n\n"
+        "1) Una recta tiene pendiente constante.\n"
+        "2) Si la pendiente es constante, la velocidad no cambia: es un "
+        "movimiento rectilíneo uniforme.\n"
+        "3) Cuanto más inclinada la recta, mayor la rapidez; una recta "
+        "descendente indica velocidad negativa, es decir, movimiento en sentido "
+        "contrario.\n\n"
+        "Si el gráfico fuera curvo, la pendiente cambiaría y habría aceleración.",
+        [
+            ("Uniformemente acelerado, porque la posición aumenta",
+             "Que la posición aumente indica movimiento, no aceleración: la aceleración aparecería como una curva."),
+            ("Reposo, porque la recta no cambia de forma",
+             "El reposo se representa con una recta HORIZONTAL: la posición no cambiaría con el tiempo."),
+            ("Movimiento con velocidad que aumenta de manera constante en el tiempo",
+             "Eso daría una parábola en un gráfico de posición; la recta indica velocidad constante."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un vehículo mantiene una rapidez constante mientras recorre una curva "
+        "cerrada. ¿Está acelerando?",
+        "Sí, porque cambia la dirección de su velocidad",
+        "La aceleración mide el cambio de la VELOCIDAD, que es un vector.\n\n"
+        "1) Un vector queda definido por su magnitud y su dirección.\n"
+        "2) En la curva la magnitud no cambia, pero la dirección sí, "
+        "continuamente.\n"
+        "3) Como la velocidad cambia, hay aceleración, aunque el velocímetro "
+        "marque siempre lo mismo.\n\n"
+        "Esa aceleración apunta hacia el centro de la curva, y es la que el "
+        "pasajero percibe como una tendencia a irse hacia afuera.",
+        [
+            ("No, porque su rapidez no cambia",
+             "Confunde rapidez con velocidad: la rapidez es solo la magnitud, y el vector también cambia por su dirección."),
+            ("No, porque solo hay aceleración cuando el motor entrega más potencia",
+             "La aceleración es un concepto cinemático: existe siempre que la velocidad cambie, por cualquier causa."),
+            ("Sí, pero solo si además va aumentando su rapidez al salir de la curva",
+             "El cambio de dirección basta por sí solo para que haya aceleración."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "En un gráfico de velocidad en función del tiempo, una recta horizontal "
+        "por encima del eje indica que el móvil:",
+        "Avanza con velocidad constante",
+        "En este gráfico se lee directamente la velocidad en cada instante.\n\n"
+        "1) Que la recta sea horizontal significa que el valor de la velocidad "
+        "no cambia con el tiempo.\n"
+        "2) Que esté por encima del eje indica que esa velocidad es positiva: "
+        "el móvil avanza en el sentido elegido como positivo.\n"
+        "3) Como la velocidad no cambia, la aceleración es cero.\n\n"
+        "Ojo con no confundir los dos gráficos: una recta horizontal en un "
+        "gráfico de POSICIÓN indicaría reposo, no velocidad constante.",
+        [
+            ("Está detenido", "El reposo correspondería a una recta sobre el eje, con velocidad cero."),
+            ("Acelera de manera constante", "Una aceleración constante aparecería como una recta INCLINADA en este gráfico."),
+            ("Recorre distancias cada vez menores en tiempos iguales",
+             "Con velocidad constante recorre distancias IGUALES en tiempos iguales."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un tren avanza en línea recta con velocidad constante y un pasajero "
+        "suelta una moneda. ¿Dónde cae respecto de su mano?",
+        "Justo debajo, como si el tren estuviera detenido",
+        "Es el argumento de la relatividad de Galileo aplicado a un caso "
+        "concreto.\n\n"
+        "1) Antes de soltarla, la moneda se mueve horizontalmente con la misma "
+        "velocidad que el tren.\n"
+        "2) Al soltarla, nada la frena en esa dirección: conserva su movimiento "
+        "horizontal mientras cae.\n"
+        "3) La mano avanza exactamente lo mismo durante la caída, así que la "
+        "moneda llega justo debajo.\n\n"
+        "De ahí la conclusión general: ningún experimento mecánico hecho dentro "
+        "del tren permite distinguir si se mueve con velocidad constante o está "
+        "detenido.",
+        [
+            ("Más atrás, porque el tren avanza mientras la moneda cae",
+             "Eso ocurriría si la moneda perdiera su movimiento horizontal al ser soltada, y no lo pierde."),
+            ("Más adelante, porque el tren la impulsa hacia el frente",
+             "Una vez soltada, el tren no ejerce ninguna fuerza horizontal sobre ella."),
+            ("Depende de la rapidez del tren: a mayor rapidez, más atrás cae",
+             "El resultado es independiente de la rapidez, siempre que sea constante."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un ciclista recorre 900 m en 60 s y luego se detiene 30 s a descansar. "
+        "¿Cuál es su rapidez media considerando todo el intervalo?",
+        "10 m/s",
+        "La rapidez media es la distancia total dividida por el tiempo total, "
+        "incluyendo las pausas.\n\n"
+        "1) Distancia total recorrida: 900 m.\n"
+        "2) Tiempo total transcurrido: 60 s + 30 s = 90 s.\n"
+        "3) Rapidez media = 900 ÷ 90 = 10 m/s.\n\n"
+        "Ojo con el error frecuente: durante los 60 s de marcha su rapidez fue "
+        "de 15 m/s, pero la rapidez MEDIA del intervalo completo es menor "
+        "porque el tiempo detenido también cuenta.",
+        [
+            ("15 m/s", "Calculó la rapidez del tramo en movimiento, ignorando los 30 s de descanso."),
+            ("30 m/s", "Dividió la distancia por el tiempo de descanso en lugar de por el tiempo total."),
+            ("7,5 m/s", "Usó un tiempo total de 120 s, sumando mal los dos intervalos."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un vehículo parte de la posición 20 m y avanza con velocidad constante "
+        "de 5 m/s. Su ecuación de itinerario es x = 20 + 5t, con x en metros y t "
+        "en segundos. ¿En qué posición se encuentra a los 8 s?",
+        "60 m",
+        "La ecuación de itinerario entrega la posición en cualquier instante.\n\n"
+        "1) Reemplaza t = 8 en la ecuación: x = 20 + 5 · 8.\n"
+        "2) Calcula el producto: 5 · 8 = 40.\n"
+        "3) Suma la posición inicial: x = 20 + 40 = 60 m.\n\n"
+        "Ojo con la distinción: recorrió 40 m en esos 8 segundos, pero su "
+        "POSICIÓN es 60 m porque partió desde 20 m y no desde el origen.",
+        [
+            ("40 m", "Calculó la distancia recorrida pero olvidó sumar la posición inicial."),
+            ("160 m", "Multiplicó la posición inicial por el tiempo en vez de sumar el término 5t."),
+            ("28 m", "Sumó el tiempo a la posición inicial sin multiplicarlo por la velocidad."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "En un gráfico de velocidad en función del tiempo, ¿qué representa el "
+        "área encerrada entre la curva y el eje del tiempo?",
+        "El desplazamiento del móvil",
+        "El área tiene las unidades del producto entre los dos ejes.\n\n"
+        "1) El eje vertical está en metros por segundo y el horizontal en "
+        "segundos.\n"
+        "2) El producto de ambos da metros: una longitud.\n"
+        "3) Esa longitud es el desplazamiento, porque velocidad por tiempo es "
+        "justamente el avance realizado.\n\n"
+        "Cuando la velocidad es negativa el área queda bajo el eje y se cuenta "
+        "como desplazamiento en sentido contrario: por eso el área total puede "
+        "ser cero aunque el móvil se haya movido.",
+        [
+            ("La aceleración del móvil",
+             "La aceleración se obtiene de la PENDIENTE de este gráfico, no de su área."),
+            ("La rapidez media del recorrido",
+             "La rapidez media resulta de dividir el área por el tiempo total, no del área directamente."),
+            ("La distancia total recorrida, incluso si el móvil cambia de sentido",
+             "Si cambia de sentido, el área bajo el eje resta: para obtener la distancia habría que sumar las áreas en valor absoluto."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un automóvil aumenta su rapidez de 10 m/s a 30 m/s en 5 s de manera "
+        "uniforme. ¿Cuál es su aceleración?",
+        "4 m/s²",
+        "La aceleración media es el cambio de velocidad dividido por el tiempo "
+        "empleado.\n\n"
+        "1) Calcula el cambio: 30 m/s − 10 m/s = 20 m/s.\n"
+        "2) Divide por el tiempo: 20 ÷ 5 = 4.\n"
+        "3) La aceleración es 4 m/s², es decir, cada segundo su rapidez aumenta "
+        "en 4 m/s.\n\n"
+        "Comprobación: partiendo de 10 y sumando 4 cada segundo se obtiene 14, "
+        "18, 22, 26 y 30 al cabo de 5 s.",
+        [
+            ("6 m/s²", "Dividió la velocidad final por el tiempo, sin restar la velocidad inicial."),
+            ("8 m/s²", "Sumó las dos velocidades en vez de restarlas antes de dividir."),
+            ("2 m/s²", "Dividió el cambio de velocidad por 10 en lugar de por 5."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Dos estudiantes registran el mismo movimiento. Uno elige como origen el "
+        "punto de partida y el otro, un punto 50 m más atrás. ¿Qué magnitud "
+        "obtienen igual?",
+        "El desplazamiento entre dos instantes",
+        "Cambiar el origen desplaza todas las posiciones en la misma cantidad, "
+        "pero no afecta a las diferencias.\n\n"
+        "1) Las POSICIONES registradas por el segundo estudiante son todas 50 m "
+        "mayores: esas no coinciden.\n"
+        "2) El DESPLAZAMIENTO es la diferencia entre dos posiciones, y al "
+        "restar, el corrimiento de 50 m se cancela.\n"
+        "3) Por lo mismo coinciden la velocidad y la aceleración, que se "
+        "calculan a partir de diferencias.\n\n"
+        "Es una propiedad importante: la elección del origen es arbitraria, así "
+        "que las magnitudes con sentido físico no pueden depender de ella.",
+        [
+            ("La posición en cada instante",
+             "Es justamente lo que cambia: todas las posiciones del segundo estudiante están corridas en 50 m."),
+            ("La posición inicial del móvil",
+             "Uno la registra como 0 y el otro como 50 m: es la que más evidentemente difiere."),
+            ("Ninguna, porque al cambiar el origen cambian todas las magnitudes del movimiento",
+             "Las magnitudes que dependen de diferencias, como el desplazamiento y la velocidad, no cambian."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un cuerpo parte del reposo con aceleración constante de 3 m/s². ¿Qué "
+        "distancia recorre en los primeros 4 s?",
+        "24 m",
+        "Con velocidad inicial nula, la distancia crece con el cuadrado del "
+        "tiempo.\n\n"
+        "1) La relación es d = ½ · a · t², válida porque parte del reposo.\n"
+        "2) Reemplaza: d = ½ · 3 · 4².\n"
+        "3) Calcula el cuadrado: 4² = 16.\n"
+        "4) Resuelve: d = ½ · 3 · 16 = 24 m.\n\n"
+        "Comprobación por otra vía: a los 4 s la velocidad es 3 · 4 = 12 m/s. "
+        "Como el aumento es uniforme desde cero, la velocidad media es 6 m/s, y "
+        "en 4 s eso da 24 m.",
+        [
+            ("48 m", "Olvidó el factor ½ y calculó a · t²."),
+            ("12 m", "Calculó la velocidad final, que es 12 m/s, y la tomó como distancia."),
+            ("6 m", "Usó el tiempo sin elevarlo al cuadrado: calculó ½ · 3 · 4."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un objeto se deja caer desde el reposo y se desprecia el roce del aire. "
+        "Con g = 10 m/s², ¿qué rapidez alcanza a los 3 s?",
+        "30 m/s",
+        "La caída libre es un movimiento uniformemente acelerado con la "
+        "aceleración de gravedad.\n\n"
+        "1) Como parte del reposo, la rapidez es v = g · t.\n"
+        "2) Reemplaza: v = 10 · 3.\n"
+        "3) Resulta 30 m/s.\n\n"
+        "Cada segundo la rapidez aumenta en 10 m/s: 10 al primer segundo, 20 al "
+        "segundo y 30 al tercero. La masa del objeto no interviene, y por eso "
+        "una piedra y una pluma caerían igual sin aire.",
+        [
+            ("10 m/s", "Entregó el valor de la aceleración de gravedad en vez de la rapidez alcanzada."),
+            ("45 m/s", "Calculó la distancia recorrida, que es ½ · 10 · 3² = 45 m, y la confundió con la rapidez."),
+            ("3,3 m/s", "Dividió la aceleración por el tiempo en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un grupo estudia la caída de una pelota registrando su posición cada "
+        "0,1 s con una cámara. Los intervalos recorridos entre fotogramas "
+        "consecutivos crecen de manera regular. ¿Qué muestra ese resultado?",
+        "Que la pelota se mueve con aceleración constante",
+        "Lo informativo es cómo crecen los intervalos, no que crezcan.\n\n"
+        "1) Si los intervalos fueran iguales, la rapidez sería constante y la "
+        "aceleración, cero.\n"
+        "2) Que crezcan indica que la rapidez aumenta.\n"
+        "3) Que el crecimiento sea REGULAR, es decir, que cada intervalo supere "
+        "al anterior en una cantidad fija, indica que el aumento de rapidez es "
+        "uniforme: aceleración constante.\n\n"
+        "Es el experimento con que Galileo estableció que la caída es "
+        "uniformemente acelerada, aunque él usó planos inclinados para hacerla "
+        "más lenta y medible.",
+        [
+            ("Que la pelota se mueve con rapidez constante",
+             "Con rapidez constante los intervalos entre fotogramas serían todos iguales."),
+            ("Que la aceleración aumenta a medida que cae",
+             "Una aceleración creciente haría que los intervalos crecieran cada vez más rápido, no de manera regular."),
+            ("Que la cámara registra los fotogramas a intervalos de tiempo cada vez mayores",
+             "El enunciado precisa que registra cada 0,1 s: el intervalo de tiempo es constante."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un móvil A parte del origen a 20 m/s y otro móvil B parte 100 m más "
+        "adelante a 15 m/s, ambos en el mismo sentido y con velocidad constante. "
+        "¿Cuánto tarda A en alcanzar a B?",
+        "20 s",
+        "Conviene razonar con la diferencia de velocidades, que es la rapidez "
+        "con que A recorta la ventaja.\n\n"
+        "1) A avanza 20 m cada segundo y B avanza 15 m: A gana 5 m por "
+        "segundo.\n"
+        "2) La ventaja inicial de B es 100 m.\n"
+        "3) Tiempo = 100 ÷ 5 = 20 s.\n\n"
+        "Comprobación con las ecuaciones de itinerario: A está en 20t y B en "
+        "100 + 15t. Igualando, 20t = 100 + 15t, así que 5t = 100 y t = 20 s. "
+        "Ambos quedan en la posición 400 m.",
+        [
+            ("5 s", "Dividió la diferencia de velocidades por sí misma, o usó los 100 m divididos por 20."),
+            ("100 s", "Dividió la ventaja por 1 m/s, sin calcular correctamente la diferencia de velocidades."),
+            ("6,7 s", "Dividió los 100 m por 15 m/s, usando solo la velocidad de B."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un automóvil viaja de una ciudad a otra a 60 km/h y regresa por el "
+        "mismo camino a 30 km/h. ¿Cuál es su rapidez media en el viaje "
+        "completo?",
+        "40 km/h",
+        "La rapidez media es la distancia total dividida por el tiempo total, y "
+        "no el promedio de las rapideces.\n\n"
+        "1) Supón que la distancia de ida es d. El viaje completo recorre 2d.\n"
+        "2) El tiempo de ida es d/60 y el de vuelta es d/30 = 2d/60. El tiempo "
+        "total es 3d/60 = d/20.\n"
+        "3) Rapidez media = 2d ÷ (d/20) = 40 km/h.\n\n"
+        "El resultado no es 45 porque el auto pasa MÁS TIEMPO viajando lento: el "
+        "tramo lento pesa más en el promedio. La rapidez media siempre queda más "
+        "cerca de la menor.",
+        [
+            ("45 km/h", "Promedió las dos rapideces, ignorando que el tramo lento toma el doble de tiempo."),
+            ("90 km/h", "Sumó las dos rapideces en vez de calcular distancia total sobre tiempo total."),
+            ("30 km/h", "Tomó la menor de las dos rapideces como resultado del viaje completo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "En un gráfico de posición contra tiempo, la curva de un móvil es una "
+        "parábola cuya pendiente aumenta. ¿Qué se concluye?",
+        "Su velocidad aumenta de manera uniforme",
+        "En este gráfico la pendiente en cada punto es la velocidad "
+        "instantánea.\n\n"
+        "1) Que la pendiente aumente significa que la velocidad aumenta: hay "
+        "aceleración positiva.\n"
+        "2) Que la curva sea una PARÁBOLA indica que la posición depende del "
+        "cuadrado del tiempo, y eso corresponde a aceleración constante.\n"
+        "3) Por lo tanto el aumento de velocidad es uniforme: es un movimiento "
+        "rectilíneo uniformemente acelerado.\n\n"
+        "Si la aceleración no fuera constante, la curva no sería una parábola.",
+        [
+            ("Su velocidad es constante y su posición aumenta",
+             "Velocidad constante da una RECTA en este gráfico, no una parábola."),
+            ("Su aceleración aumenta con el tiempo",
+             "Una aceleración creciente daría una curva de grado mayor que dos, no una parábola."),
+            ("Recorre distancias iguales en intervalos de tiempo iguales",
+             "Eso describe un movimiento uniforme, que daría una recta; aquí las distancias crecen."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un móvil se desplaza y su gráfico de velocidad contra tiempo muestra "
+        "una recta que parte en +10 m/s, cruza el eje a los 5 s y llega a "
+        "−10 m/s a los 10 s. ¿Cuál es su desplazamiento total?",
+        "Cero",
+        "El área bajo el eje cuenta como desplazamiento negativo.\n\n"
+        "1) Entre 0 y 5 s el área es un triángulo de base 5 y altura 10: vale "
+        "25 m, positivos.\n"
+        "2) Entre 5 y 10 s hay un triángulo igual pero bajo el eje: vale 25 m, "
+        "negativos.\n"
+        "3) El desplazamiento total es 25 − 25 = 0 m.\n\n"
+        "El móvil avanzó 25 m, se detuvo a los 5 s y regresó los mismos 25 m: "
+        "terminó donde partió. La DISTANCIA recorrida, en cambio, fue 50 m.",
+        [
+            ("50 m", "Sumó las dos áreas en valor absoluto: eso da la distancia recorrida, no el desplazamiento."),
+            ("25 m", "Consideró solo el primer tramo, ignorando el regreso."),
+            ("100 m", "Multiplicó mal las áreas de los triángulos, usando el rectángulo completo en vez de la mitad."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Se afirma que un cuerpo con aceleración negativa siempre está "
+        "frenando. ¿Es correcta esa afirmación?",
+        "No: depende de si la velocidad tiene el mismo signo",
+        "El signo de la aceleración indica su dirección, no si el cuerpo se "
+        "frena.\n\n"
+        "1) Un cuerpo frena cuando su aceleración apunta en sentido OPUESTO a su "
+        "velocidad.\n"
+        "2) Si la velocidad es positiva y la aceleración negativa, efectivamente "
+        "frena.\n"
+        "3) Pero si la velocidad ya es negativa y la aceleración también, el "
+        "cuerpo se mueve cada vez más rápido en sentido negativo: está "
+        "acelerando.\n\n"
+        "Ejemplo: una pelota lanzada hacia arriba tiene aceleración negativa "
+        "todo el tiempo. Al subir frena; al bajar, acelera. La aceleración no "
+        "cambió de signo en ningún momento.",
+        [
+            ("Sí, porque el signo negativo indica siempre disminución de rapidez",
+             "El signo indica dirección: si coincide con el de la velocidad, la rapidez aumenta."),
+            ("Sí, salvo cuando el cuerpo está en reposo",
+             "El caso en reposo es un instante particular; el problema del razonamiento es más general."),
+            ("No, porque la aceleración negativa significa que el cuerpo se mueve hacia atrás",
+             "La aceleración negativa no implica moverse hacia atrás: indica hacia dónde apunta el cambio de velocidad."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un cuerpo es lanzado verticalmente hacia arriba a 20 m/s. Con "
+        "g = 10 m/s² y despreciando el roce, ¿cuánto tarda en alcanzar su altura "
+        "máxima?",
+        "2 s",
+        "En el punto más alto la velocidad vertical es cero.\n\n"
+        "1) La velocidad disminuye 10 m/s cada segundo por efecto de la "
+        "gravedad.\n"
+        "2) Partiendo de 20 m/s, tarda 20 ÷ 10 = 2 s en llegar a cero.\n"
+        "3) Ese instante corresponde a la altura máxima.\n\n"
+        "Ojo: en ese punto la velocidad es cero pero la ACELERACIÓN sigue siendo "
+        "10 m/s² hacia abajo. Por eso el cuerpo no se queda suspendido: "
+        "inmediatamente empieza a caer.",
+        [
+            ("4 s", "Ese es el tiempo total de vuelo, incluyendo la subida y la bajada completas."),
+            ("20 s", "Dividió la velocidad inicial por 1 en lugar de por la aceleración de gravedad."),
+            ("0,5 s", "Invirtió la división: calculó la aceleración dividida por la velocidad inicial."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Dos estudiantes discuten si tiene sentido decir que un cuerpo tiene "
+        "velocidad cero y aceleración distinta de cero en el mismo instante. "
+        "¿Qué corresponde responder?",
+        "Sí ocurre, por ejemplo en el punto más alto de un lanzamiento vertical",
+        "La aceleración describe cómo CAMBIA la velocidad, no cuánto vale.\n\n"
+        "1) Una pelota lanzada hacia arriba llega a un instante en que su "
+        "velocidad es exactamente cero.\n"
+        "2) En ese mismo instante la gravedad sigue actuando: la aceleración "
+        "vale 10 m/s² hacia abajo.\n"
+        "3) Justamente por eso la pelota no permanece detenida: un instante "
+        "después ya tiene velocidad hacia abajo.\n\n"
+        "Si la aceleración fuera cero en ese punto, la pelota quedaría "
+        "suspendida en el aire, que es lo que ninguna observación muestra.",
+        [
+            ("No, porque sin velocidad no puede haber cambio de velocidad",
+             "El cambio no requiere que la velocidad sea distinta de cero en ese instante: requiere una causa, y la gravedad lo es."),
+            ("No, porque la aceleración es proporcional a la velocidad",
+             "No hay tal proporcionalidad: la aceleración se relaciona con la fuerza neta, no con la velocidad."),
+            ("Sí, pero solo en movimientos circulares, donde la dirección cambia constantemente",
+             "En un movimiento circular la rapidez no es cero; el ejemplo del lanzamiento vertical es rectilíneo y sí lo cumple."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un grupo quiere determinar la aceleración de gravedad midiendo el "
+        "tiempo de caída de una esfera desde distintas alturas. Grafica la "
+        "altura en función del cuadrado del tiempo y obtiene una recta por el "
+        "origen. ¿Qué representa su pendiente?",
+        "La mitad de la aceleración de gravedad",
+        "La forma del gráfico se deduce de la ecuación del movimiento.\n\n"
+        "1) Para una caída desde el reposo, h = ½ · g · t².\n"
+        "2) Al graficar h contra t², la expresión tiene la forma de una recta "
+        "por el origen cuya pendiente es ½ · g.\n"
+        "3) Por lo tanto g se obtiene multiplicando la pendiente por 2.\n\n"
+        "Graficar contra t² en vez de contra t es lo que convierte una curva en "
+        "una recta, y una recta permite usar todas las mediciones a la vez y "
+        "detectar puntos anómalos.",
+        [
+            ("La aceleración de gravedad directamente",
+             "Falta el factor ½ que aparece en la ecuación de la caída: hay que duplicar la pendiente."),
+            ("El doble de la aceleración de gravedad",
+             "Es al revés: la pendiente vale la MITAD de g, no el doble."),
+            ("La velocidad final que alcanza la esfera en cada caída",
+             "La velocidad final cambia en cada medición, así que no puede ser una pendiente constante."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un investigador afirma que su montaje mide la velocidad instantánea de "
+        "un carrito usando dos sensores separados por 2 cm y midiendo el tiempo "
+        "entre ellos. ¿Qué precisión merece esa afirmación?",
+        "Mide la velocidad media en ese tramo, que aproxima la instantánea",
+        "La velocidad instantánea es un límite, y todo instrumento entrega en "
+        "realidad un promedio.\n\n"
+        "1) Dividir 2 cm por el tiempo transcurrido da la velocidad MEDIA en ese "
+        "tramo.\n"
+        "2) Como el tramo es muy corto, la velocidad no alcanza a cambiar mucho "
+        "dentro de él, así que ese promedio se parece bastante a la velocidad "
+        "instantánea en el punto medio.\n"
+        "3) La aproximación mejora cuanto más corto sea el tramo, pero también "
+        "crece el error relativo al medir tiempos tan breves.\n\n"
+        "Ese compromiso entre resolución temporal y precisión es habitual en "
+        "cualquier medición experimental.",
+        [
+            ("Mide exactamente la velocidad instantánea en el punto medio",
+             "Solo la aproxima: la coincidencia exacta requeriría un tramo de longitud nula."),
+            ("No mide velocidad, porque para eso se necesita conocer la aceleración",
+             "La velocidad se obtiene de posiciones y tiempos: no hace falta conocer la aceleración."),
+            ("Mide la aceleración del carrito, porque usa dos sensores en vez de uno",
+             "Con dos sensores se obtiene una velocidad; para la aceleración harían falta dos velocidades en instantes distintos."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un tren de 150 m de largo viaja a 20 m/s y debe atravesar por completo "
+        "un túnel de 250 m. ¿Cuánto tarda desde que la locomotora entra hasta "
+        "que el último vagón sale?",
+        "20 s",
+        "El tren debe recorrer el largo del túnel MÁS su propio largo.\n\n"
+        "1) La locomotora entra al túnel; para que el último vagón salga, el "
+        "tren debe avanzar 250 m del túnel más los 150 m de su propia "
+        "longitud.\n"
+        "2) Distancia total: 250 + 150 = 400 m.\n"
+        "3) Tiempo = 400 ÷ 20 = 20 s.\n\n"
+        "El error clásico es considerar solo el largo del túnel: eso daría el "
+        "instante en que la locomotora sale, no el último vagón.",
+        [
+            ("12,5 s", "Consideró solo los 250 m del túnel, olvidando el largo del tren."),
+            ("7,5 s", "Consideró solo los 150 m del tren, olvidando el túnel."),
+            ("30 s", "Sumó dos veces el largo del tren a la longitud del túnel."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un móvil recorre 60 m en los primeros 4 s y otros 60 m en los "
+        "siguientes 6 s. ¿Qué se puede afirmar de su movimiento?",
+        "No es uniforme, porque su rapidez cambió",
+        "Un movimiento uniforme exige recorrer distancias iguales en tiempos "
+        "iguales.\n\n"
+        "1) En el primer tramo la rapidez media fue 60 ÷ 4 = 15 m/s.\n"
+        "2) En el segundo fue 60 ÷ 6 = 10 m/s.\n"
+        "3) Como las dos rapideces medias difieren, el movimiento no puede ser "
+        "uniforme: en algún momento el móvil disminuyó su rapidez.\n\n"
+        "Con estos datos no se puede decir CÓMO cambió: pudo frenar de manera "
+        "gradual o abrupta. Solo se sabe que cambió.",
+        [
+            ("Es uniforme, porque recorrió la misma distancia en ambos tramos",
+             "Recorrer la misma distancia en tiempos DISTINTOS es precisamente lo contrario de un movimiento uniforme."),
+            ("Es uniformemente acelerado con aceleración constante",
+             "Los datos muestran que la rapidez disminuyó, pero no bastan para afirmar que lo hizo de manera uniforme."),
+            ("Está detenido durante el segundo tramo, porque tardó más tiempo",
+             "Si estuviera detenido no habría recorrido los 60 m del segundo tramo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Una persona camina 30 m hacia el este y luego 40 m hacia el norte. "
+        "¿Cuál es la magnitud de su desplazamiento?",
+        "50 m",
+        "El desplazamiento es el vector que une el punto inicial con el final, y "
+        "los dos tramos son perpendiculares.\n\n"
+        "1) Los dos tramos forman los catetos de un triángulo rectángulo.\n"
+        "2) La magnitud del desplazamiento es la hipotenusa.\n"
+        "3) Aplica el teorema de Pitágoras: la raíz de 30² + 40² es la raíz de "
+        "900 + 1.600 = 2.500, o sea 50 m.\n\n"
+        "La distancia recorrida, en cambio, es 30 + 40 = 70 m: siempre mayor o "
+        "igual que la magnitud del desplazamiento.",
+        [
+            ("70 m", "Sumó los dos tramos: eso da la distancia recorrida, no el desplazamiento."),
+            ("10 m", "Restó los dos tramos, operación que correspondería si fueran opuestos y no perpendiculares."),
+            ("35 m", "Promedió los dos tramos, operación que no corresponde a la suma de vectores."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_movimiento", "facil",
+        "Un letrero de carretera indica un límite de 108 km/h. ¿A cuántos metros "
+        "por segundo equivale?",
+        "30 m/s",
+        "Para pasar de kilómetros por hora a metros por segundo se divide por "
+        "3,6.\n\n"
+        "1) Un kilómetro son 1.000 m y una hora son 3.600 s, así que 1 km/h "
+        "equivale a 1.000/3.600 = 1/3,6 m/s.\n"
+        "2) Divide: 108 ÷ 3,6 = 30.\n"
+        "3) El límite equivale a 30 m/s.\n\n"
+        "Comprobación en sentido inverso: 30 m/s · 3,6 = 108 km/h. Vale la pena "
+        "recordar que 36 km/h son 10 m/s, que sirve de referencia rápida.",
+        [
+            ("388,8 m/s", "Multiplicó por 3,6 en vez de dividir."),
+            ("10,8 m/s", "Dividió por 10, no por 3,6."),
+            ("3 m/s", "Dividió por 36 en lugar de por 3,6."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "En un gráfico de posición contra tiempo, la recta de un móvil desciende "
+        "de manera constante. ¿Qué significa?",
+        "Avanza en sentido negativo a rapidez constante",
+        "La pendiente es la velocidad, con su signo.\n\n"
+        "1) Que la recta sea recta indica pendiente constante, es decir, "
+        "velocidad constante.\n"
+        "2) Que descienda indica pendiente NEGATIVA: la posición disminuye con "
+        "el tiempo.\n"
+        "3) Una velocidad negativa significa que el móvil avanza en el sentido "
+        "opuesto al elegido como positivo.\n\n"
+        "No significa que vaya más lento: la rapidez es la magnitud de la "
+        "pendiente, sin importar su signo.",
+        [
+            ("Está frenando hasta detenerse",
+             "Frenar implicaría una pendiente cuya magnitud disminuye, es decir, una curva que se va aplanando."),
+            ("Se mueve hacia atrás con rapidez cada vez menor",
+             "Con una recta la rapidez es constante: no disminuye."),
+            ("Está en reposo en una posición negativa",
+             "El reposo se representa con una recta horizontal, sin importar a qué altura esté."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un estudiante afirma que el gráfico de posición contra tiempo de un "
+        "móvil muestra el camino que recorrió. ¿Es correcto?",
+        "No: el gráfico relaciona posición con tiempo, no dibuja la trayectoria",
+        "Es una confusión muy frecuente y vale la pena separarla bien.\n\n"
+        "1) La TRAYECTORIA es el camino en el espacio: se dibuja en un plano "
+        "donde ambos ejes son distancias.\n"
+        "2) Un gráfico de posición contra tiempo tiene un eje de distancia y "
+        "uno de TIEMPO: describe cuándo estuvo dónde.\n"
+        "3) Un móvil que va y vuelve en línea recta tiene una trayectoria "
+        "recta, pero su gráfico posición-tiempo es una línea que sube y baja.\n\n"
+        "El caso extremo: un cuerpo en reposo tiene trayectoria de un solo "
+        "punto, y su gráfico posición-tiempo es una recta horizontal.",
+        [
+            ("Sí: la forma de la curva coincide con el camino recorrido",
+             "Solo coincidirían por casualidad; los ejes representan cosas distintas."),
+            ("Sí, pero solo si el movimiento es rectilíneo",
+             "Ni siquiera entonces: un móvil que va y vuelve en línea recta da un gráfico que sube y baja."),
+            ("No, porque el gráfico solo sirve para movimientos con velocidad constante",
+             "El gráfico sirve para cualquier movimiento; el error está en confundirlo con la trayectoria."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "En un gráfico de velocidad contra tiempo, un móvil aparece como una "
+        "recta que sube desde 0 hasta 12 m/s en 6 s. ¿Cuál es su aceleración y "
+        "qué distancia recorrió?",
+        "2 m/s² y 36 m",
+        "La pendiente entrega la aceleración y el área, el desplazamiento.\n\n"
+        "1) Aceleración = pendiente = (12 − 0) ÷ 6 = 2 m/s².\n"
+        "2) El área bajo la recta es un triángulo de base 6 s y altura "
+        "12 m/s.\n"
+        "3) Área = (6 · 12) ÷ 2 = 36 m.\n\n"
+        "Comprobación con la ecuación: d = ½ · a · t² = ½ · 2 · 36 = 36 m. "
+        "Coinciden, como debe ser.",
+        [
+            ("2 m/s² y 72 m", "Calculó el área del rectángulo completo en vez del triángulo: olvidó dividir por dos."),
+            ("12 m/s² y 36 m", "Tomó la velocidad final como aceleración, sin dividir por el tiempo."),
+            ("0,5 m/s² y 36 m", "Invirtió la división al calcular la pendiente: usó 6 dividido por 12."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un conductor viaja a 20 m/s y demora 0,8 s en reaccionar antes de "
+        "frenar. ¿Qué distancia recorre durante ese tiempo de reacción?",
+        "16 m",
+        "Durante la reacción el vehículo mantiene su velocidad: es un tramo de "
+        "movimiento uniforme.\n\n"
+        "1) Todavía no se aplica el freno, así que la velocidad sigue siendo "
+        "20 m/s.\n"
+        "2) Distancia = velocidad · tiempo = 20 · 0,8.\n"
+        "3) Resulta 16 m.\n\n"
+        "Ese tramo se suma a la distancia de frenado propiamente tal. Por eso la "
+        "distancia total de detención crece tanto con la rapidez: el tramo de "
+        "reacción crece de manera proporcional y el de frenado, con el cuadrado.",
+        [
+            ("25 m", "Dividió la velocidad por el tiempo en vez de multiplicarlos."),
+            ("0,04 m", "Dividió el tiempo por la velocidad."),
+            ("8 m", "Usó la mitad de la velocidad, como si el vehículo ya estuviera frenando durante la reacción."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un automóvil que va a 20 m/s frena con aceleración constante de "
+        "−5 m/s². ¿Cuánto tarda en detenerse?",
+        "4 s",
+        "Se busca el instante en que la velocidad llega a cero.\n\n"
+        "1) La velocidad disminuye 5 m/s cada segundo.\n"
+        "2) Partiendo de 20 m/s: 20 ÷ 5 = 4.\n"
+        "3) Tarda 4 s en detenerse.\n\n"
+        "Comprobación con la ecuación v = v₀ + a·t: 0 = 20 + (−5)·t, así que "
+        "5t = 20 y t = 4 s. La distancia recorrida en ese tramo sería 40 m.",
+        [
+            ("100 s", "Multiplicó la velocidad por la aceleración en vez de dividir."),
+            ("0,25 s", "Invirtió la división: usó la aceleración dividida por la velocidad."),
+            ("15 s", "Restó la aceleración de la velocidad, operación que mezcla magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Dos trenes viajan por vías paralelas en el mismo sentido, uno a 30 m/s "
+        "y el otro a 25 m/s. ¿Con qué rapidez ve un pasajero del tren rápido "
+        "alejarse al tren lento?",
+        "5 m/s",
+        "La velocidad relativa entre dos móviles en el mismo sentido es la "
+        "diferencia de sus velocidades.\n\n"
+        "1) Respecto del suelo, uno avanza a 30 m/s y el otro a 25 m/s.\n"
+        "2) Tomando como sistema de referencia el tren rápido, la velocidad del "
+        "lento es 25 − 30 = −5 m/s.\n"
+        "3) El pasajero lo ve quedarse atrás a 5 m/s.\n\n"
+        "Si viajaran en sentidos opuestos, las velocidades se sumarían y la "
+        "rapidez relativa sería 55 m/s: por eso un cruce se siente tan violento.",
+        [
+            ("55 m/s", "Sumó las velocidades, que es lo que corresponde cuando viajan en sentidos opuestos."),
+            ("30 m/s", "Entregó la velocidad del tren rápido respecto del suelo, no la relativa entre ambos."),
+            ("25 m/s", "Entregó la velocidad del tren lento respecto del suelo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un ascensor sube y un pasajero observa que durante unos segundos su "
+        "velocidad es constante. ¿Qué ocurre con su aceleración en ese tramo?",
+        "Es cero",
+        "La aceleración mide el cambio de velocidad, no su valor.\n\n"
+        "1) Si la velocidad no cambia, su variación es nula.\n"
+        "2) Aceleración = cambio de velocidad ÷ tiempo = 0.\n"
+        "3) Por eso el pasajero no siente nada especial en ese tramo, aunque el "
+        "ascensor esté subiendo.\n\n"
+        "Las sensaciones aparecen justo al partir y al llegar, que es cuando la "
+        "velocidad cambia: ahí sí hay aceleración.",
+        [
+            ("Es constante y distinta de cero, porque el ascensor sube",
+             "Subir no implica acelerar: la aceleración depende de si la velocidad cambia."),
+            ("Es igual a la aceleración de gravedad",
+             "Eso ocurriría si el ascensor cayera libremente, sin ninguna fuerza sosteniéndolo."),
+            ("Aumenta a medida que el ascensor gana altura",
+             "La altura no determina la aceleración; en ese tramo la velocidad no cambia."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Una tabla registra la posición de un carrito cada segundo: 0 m, 3 m, "
+        "12 m, 27 m y 48 m. ¿Qué tipo de movimiento describe?",
+        "Uniformemente acelerado",
+        "Conviene mirar cómo cambian las distancias entre registros "
+        "consecutivos.\n\n"
+        "1) Los avances por segundo son 3, 9, 15 y 21 m: no son iguales, así "
+        "que el movimiento no es uniforme.\n"
+        "2) Las diferencias entre esos avances son 6, 6 y 6: constantes.\n"
+        "3) Que el avance aumente en una cantidad fija cada segundo es la firma "
+        "de un movimiento uniformemente acelerado.\n\n"
+        "De hecho, con posiciones proporcionales a 0, 3, 12, 27 y 48 se cumple "
+        "que x = 3t², lo que corresponde a una aceleración de 6 m/s².",
+        [
+            ("Uniforme, porque la posición aumenta de manera continua",
+             "Aumentar de manera continua no basta: en un movimiento uniforme los avances por segundo serían todos iguales."),
+            ("Con aceleración creciente",
+             "Una aceleración creciente haría que las diferencias entre avances también aumentaran, y aquí se mantienen en 6."),
+            ("Con velocidad constante y luego una frenada brusca",
+             "En ningún tramo el avance disminuye: la rapidez aumenta durante todo el registro."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un corredor completa 100 m en 10 s. Un análisis de video muestra que "
+        "durante los últimos 40 m su rapidez fue de 12 m/s. ¿Qué se puede "
+        "afirmar sobre su rapidez media en los primeros 60 m?",
+        "Fue menor que 10 m/s",
+        "Conviene calcular el tiempo de cada tramo.\n\n"
+        "1) Los últimos 40 m a 12 m/s tomaron 40 ÷ 12, es decir, unos 3,3 s.\n"
+        "2) Entonces los primeros 60 m tomaron 10 − 3,3 = 6,7 s "
+        "aproximadamente.\n"
+        "3) Rapidez media en ese tramo: 60 ÷ 6,7, cercana a 9 m/s, menor que "
+        "los 10 m/s del promedio total.\n\n"
+        "Tiene sentido: un corredor parte del reposo y va acelerando, así que el "
+        "primer tramo es siempre más lento que el promedio de la carrera.",
+        [
+            ("Fue exactamente 10 m/s, igual que en toda la carrera",
+             "Los 10 m/s son el promedio de la carrera completa; si el tramo final fue más rápido, el inicial debe ser más lento."),
+            ("Fue mayor que 12 m/s",
+             "Si hubiera sido mayor que la del tramo final, el tiempo total habría resultado bastante menor que 10 s."),
+            ("No se puede saber sin conocer la aceleración inicial del corredor",
+             "Basta con los datos de distancia y tiempo: el tiempo del primer tramo se obtiene por diferencia."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "En un experimento, un carrito se suelta por una rampa y se registra su "
+        "velocidad cada 0,5 s. El gráfico de velocidad contra tiempo resulta una "
+        "recta que no pasa por el origen, sino que parte en 0,4 m/s. ¿Qué indica "
+        "ese valor?",
+        "Que el carrito ya llevaba velocidad cuando comenzó el registro",
+        "La ordenada al origen de un gráfico velocidad-tiempo es la velocidad "
+        "inicial.\n\n"
+        "1) La ecuación del movimiento uniformemente acelerado es v = v₀ + a·t, "
+        "que en el gráfico es una recta con ordenada al origen v₀.\n"
+        "2) Que esa ordenada valga 0,4 m/s significa que en el instante t = 0 "
+        "del registro el carrito ya se movía a esa rapidez.\n"
+        "3) Lo más probable es que el cronómetro haya empezado a contar un poco "
+        "después de soltarlo, o que se le haya dado un pequeño impulso.\n\n"
+        "La pendiente, en cambio, sigue entregando la aceleración, y no se ve "
+        "afectada por ese desfase.",
+        [
+            ("Que la aceleración del carrito es 0,4 m/s²",
+             "La aceleración es la PENDIENTE de la recta, no su ordenada al origen."),
+            ("Que hubo un error de medición en todos los puntos",
+             "Un error sistemático de ese tipo desplazaría la recta, pero la explicación más simple es que el registro empezó tarde."),
+            ("Que el carrito se detiene cuando el tiempo llega a cero",
+             "En t = 0 el carrito se mueve a 0,4 m/s: justamente no está detenido."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un automóvil frena desde 30 m/s hasta detenerse en 60 m. Usando "
+        "v² = v₀² + 2·a·d, ¿cuál fue su aceleración?",
+        "−7,5 m/s²",
+        "La relación permite obtener la aceleración sin conocer el tiempo.\n\n"
+        "1) Reemplaza: 0² = 30² + 2 · a · 60.\n"
+        "2) Desarrolla: 0 = 900 + 120a.\n"
+        "3) Despeja: 120a = −900, así que a = −7,5 m/s².\n\n"
+        "El signo negativo indica que la aceleración se opone al movimiento, es "
+        "decir, que el auto frena. Comprobación del orden de magnitud: a ese "
+        "ritmo tardaría 30 ÷ 7,5 = 4 s en detenerse.",
+        [
+            ("−15 m/s²", "Olvidó el factor 2 del término 2·a·d."),
+            ("−0,5 m/s²", "Dividió la velocidad inicial por la distancia sin elevarla al cuadrado."),
+            ("−900 m/s²", "Se quedó con el cuadrado de la velocidad inicial sin dividir por 2·d."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Se afirma que si un vehículo duplica su rapidez, la distancia que "
+        "necesita para frenar también se duplica. ¿Es correcto?",
+        "No: la distancia de frenado se cuadruplica",
+        "La relación entre rapidez y distancia de frenado no es lineal.\n\n"
+        "1) De v² = v₀² + 2·a·d, con velocidad final cero, se obtiene que la "
+        "distancia es proporcional al CUADRADO de la rapidez inicial.\n"
+        "2) Si la rapidez se duplica, su cuadrado se multiplica por cuatro.\n"
+        "3) Con la misma capacidad de frenado, la distancia necesaria se "
+        "cuadruplica.\n\n"
+        "Es la razón de fondo de los límites de velocidad: pasar de 50 a "
+        "100 km/h no duplica el riesgo, lo multiplica por cuatro en términos de "
+        "distancia de frenado, sin contar el tramo de reacción.",
+        [
+            ("Sí, porque la distancia es proporcional a la rapidez",
+             "Sería cierto si el frenado tomara siempre el mismo tiempo, pero la relación pasa por el cuadrado de la rapidez."),
+            ("No: se multiplica por ocho",
+             "El factor ocho correspondería a una dependencia cúbica, y la relación es cuadrática."),
+            ("No: se mantiene igual, porque la capacidad de frenado del vehículo no cambió",
+             "La capacidad de frenado fija la aceleración, no la distancia: con más rapidez inicial se necesita más distancia."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Dos objetos se sueltan desde la misma altura, uno de 1 kg y otro de "
+        "5 kg, en un tubo del que se extrajo el aire. ¿Qué se observa?",
+        "Llegan al suelo al mismo tiempo",
+        "Sin aire, la única fuerza es el peso, y la aceleración resultante no "
+        "depende de la masa.\n\n"
+        "1) El objeto más pesado recibe una fuerza mayor, pero también tiene más "
+        "masa que acelerar.\n"
+        "2) Los dos efectos se compensan exactamente: la aceleración de caída es "
+        "la misma para ambos.\n"
+        "3) Partiendo de la misma altura y del reposo, emplean el mismo "
+        "tiempo.\n\n"
+        "En el aire el resultado cambia, pero no por el peso: por el roce, que "
+        "afecta mucho más a una pluma que a una esfera compacta. El experimento "
+        "en el vacío separa ambos efectos.",
+        [
+            ("Llega antes el de 5 kg, porque pesa más",
+             "Pesa más pero también cuesta más acelerarlo: los dos efectos se cancelan."),
+            ("Llega antes el de 1 kg, porque tiene menos inercia",
+             "Menos inercia va acompañada de menos peso, así que tampoco resulta favorecido."),
+            ("Llega antes el de 5 kg, pero solo si la altura de caída es suficientemente grande",
+             "La diferencia no aparece a ninguna altura mientras no haya aire que ofrezca resistencia."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un cuerpo se lanza verticalmente hacia arriba a 30 m/s. Con g = 10 m/s² "
+        "y sin roce, ¿qué altura máxima alcanza?",
+        "45 m",
+        "Conviene usar la relación que no involucra el tiempo.\n\n"
+        "1) En el punto más alto la velocidad es cero: 0² = 30² + 2·(−10)·h.\n"
+        "2) Desarrolla: 0 = 900 − 20h.\n"
+        "3) Despeja: h = 900 ÷ 20 = 45 m.\n\n"
+        "Comprobación por otra vía: tarda 3 s en subir, y en ese tramo su "
+        "velocidad media es (30 + 0) ÷ 2 = 15 m/s. Entonces la altura es "
+        "15 · 3 = 45 m.",
+        [
+            ("90 m", "Olvidó el factor 2 en el denominador, o usó la velocidad media incorrecta."),
+            ("30 m", "Confundió la velocidad inicial con la altura alcanzada."),
+            ("22,5 m", "Dividió por 40 en lugar de por 20, duplicando de más el denominador."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un móvil tiene la ecuación de itinerario x = 100 − 8t, con x en metros "
+        "y t en segundos. ¿Qué describe ese movimiento?",
+        "Parte de 100 m y se acerca al origen a 8 m/s",
+        "Cada término de la ecuación tiene una lectura física.\n\n"
+        "1) El término constante, 100, es la posición en t = 0: el móvil parte "
+        "desde los 100 m.\n"
+        "2) El coeficiente de t es la velocidad: −8 m/s. El signo negativo "
+        "indica que se mueve en sentido contrario al positivo.\n"
+        "3) Como parte de una posición positiva y avanza en sentido negativo, se "
+        "acerca al origen: llegará a x = 0 a los 12,5 s.\n\n"
+        "Que la velocidad sea constante confirma que se trata de un movimiento "
+        "rectilíneo uniforme.",
+        [
+            ("Parte del origen y se aleja a 100 m/s",
+             "Confunde los dos términos: 100 es la posición inicial y 8 es la rapidez."),
+            ("Parte de 100 m y frena hasta detenerse a los 8 s",
+             "Una frenada exigiría un término con t², y aquí la velocidad es constante."),
+            ("Parte de 100 m y se aleja del origen a 8 m/s",
+             "El signo negativo indica acercamiento al origen, no alejamiento."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un grupo quiere medir la rapidez media de un ciclista en un tramo "
+        "urbano. Un estudiante propone cronometrar entre dos esquinas y dividir "
+        "la distancia por el tiempo. Otro objeta que ese resultado no sirve para "
+        "conocer la rapidez en cada instante. ¿Cómo se evalúa la objeción?",
+        "Es válida: la rapidez media no informa sobre las variaciones internas",
+        "El procedimiento propuesto es correcto para lo que mide, pero su "
+        "alcance es limitado.\n\n"
+        "1) Dividir distancia por tiempo entrega efectivamente la rapidez MEDIA "
+        "del tramo, y eso es un dato válido.\n"
+        "2) Pero infinitos movimientos distintos pueden dar el mismo promedio: "
+        "el ciclista pudo mantener una rapidez constante, o detenerse y luego "
+        "acelerar.\n"
+        "3) Para conocer las variaciones habría que subdividir el tramo en "
+        "intervalos cortos y medir cada uno.\n\n"
+        "La objeción no invalida el método: precisa qué pregunta responde y cuál "
+        "no.",
+        [
+            ("Es incorrecta: la rapidez media coincide siempre con la instantánea",
+             "Solo coinciden si el movimiento es uniforme, que es justamente lo que no se sabe."),
+            ("Es incorrecta: para medir rapidez basta con conocer la distancia total",
+             "La distancia sola no entrega rapidez: hace falta el tiempo, y aun así solo se obtiene el promedio."),
+            ("Es válida, y por eso el método propuesto no entrega ninguna información útil",
+             "Sí entrega información útil: la rapidez media es un dato legítimo, solo que responde otra pregunta."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Se comparan dos movimientos: el móvil P recorre 100 m en 10 s con "
+        "rapidez constante y el móvil Q recorre los mismos 100 m en 10 s "
+        "partiendo del reposo con aceleración constante. ¿Qué se puede afirmar?",
+        "Q termina el tramo con mayor rapidez que P",
+        "Los dos tienen la misma rapidez MEDIA, pero la distribuyen distinto.\n\n"
+        "1) La rapidez media de ambos es 100 ÷ 10 = 10 m/s.\n"
+        "2) P mantiene 10 m/s todo el tiempo.\n"
+        "3) Q parte de cero y aumenta de manera uniforme. Para que su promedio "
+        "sea 10 m/s, debe terminar en 20 m/s, porque el promedio entre 0 y la "
+        "final es la mitad de la final.\n\n"
+        "Así que Q va más lento que P durante la primera mitad del tiempo y más "
+        "rápido durante la segunda, cruzándose ambos exactamente a los 5 s.",
+        [
+            ("Ambos terminan con la misma rapidez, porque recorrieron lo mismo en el mismo tiempo",
+             "Recorrer lo mismo en el mismo tiempo iguala la rapidez MEDIA, no la final."),
+            ("P termina con mayor rapidez, porque la mantuvo constante todo el tramo",
+             "P termina a 10 m/s y Q a 20 m/s: es Q el que termina más rápido."),
+            ("Q nunca alcanza a P, porque parte del reposo",
+             "Q recorre la misma distancia en el mismo tiempo: lo alcanza justo al final del tramo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "dificil",
+        "Un estudiante sostiene que como la Tierra rota, una persona quieta en "
+        "el suelo se mueve a cientos de metros por segundo, así que en realidad "
+        "nadie está nunca en reposo. ¿Cómo se evalúa esa afirmación?",
+        "Es correcta, y por eso todo movimiento se describe respecto de un sistema",
+        "El estudiante está aplicando bien el concepto de sistema de "
+        "referencia.\n\n"
+        "1) Respecto del suelo, la persona está en reposo. Respecto del eje "
+        "terrestre, se desplaza con la rotación; respecto del Sol, orbita a "
+        "decenas de kilómetros por segundo.\n"
+        "2) Ninguna de esas descripciones es más verdadera que las otras: cada "
+        "una responde a un sistema de referencia distinto.\n"
+        "3) Por eso la afirmación de que un cuerpo 'está en reposo', sin "
+        "especificar respecto de qué, es incompleta.\n\n"
+        "En la práctica se elige el sistema que simplifique el problema, y para "
+        "los movimientos cotidianos ese es el suelo.",
+        [
+            ("Es incorrecta, porque el reposo respecto del suelo es el reposo verdadero",
+             "No existe un sistema privilegiado: el suelo es cómodo, no verdadero."),
+            ("Es incorrecta, porque la rotación terrestre no arrastra a los objetos de la superficie",
+             "Sí los arrastra: la atmósfera y todo lo que está sobre la superficie giran con el planeta."),
+            ("Es correcta, y demuestra que las leyes del movimiento no pueden aplicarse en la Tierra",
+             "Se aplican perfectamente: basta elegir un sistema de referencia adecuado y, si hace falta, corregir por la rotación."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un móvil recorre un tramo con rapidez constante y su gráfico de "
+        "aceleración contra tiempo se dibuja. ¿Qué forma tiene?",
+        "Una recta sobre el eje, en el valor cero",
+        "Con rapidez constante no hay cambio de velocidad.\n\n"
+        "1) La aceleración es el cambio de velocidad por unidad de tiempo.\n"
+        "2) Si la velocidad no cambia, ese valor es cero en todo instante.\n"
+        "3) El gráfico es entonces una recta horizontal coincidente con el eje "
+        "del tiempo.\n\n"
+        "Ojo con no confundir: en el gráfico de POSICIÓN el mismo movimiento da "
+        "una recta inclinada, y en el de VELOCIDAD, una recta horizontal por "
+        "encima del eje.",
+        [
+            ("Una recta inclinada que sube",
+             "Una recta inclinada en este gráfico indicaría una aceleración que cambia con el tiempo."),
+            ("Una recta horizontal por encima del eje",
+             "Eso indicaría una aceleración constante distinta de cero, y entonces la rapidez no sería constante."),
+            ("Una parábola, porque la posición depende del cuadrado del tiempo",
+             "La posición depende del cuadrado del tiempo en un movimiento ACELERADO, y aquí la rapidez es constante."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Una moto acelera uniformemente desde el reposo y alcanza 24 m/s en 8 s. "
+        "¿Cuál es su rapidez media durante ese intervalo?",
+        "12 m/s",
+        "Con aceleración constante desde el reposo, la rapidez media es el "
+        "promedio entre la inicial y la final.\n\n"
+        "1) Rapidez inicial: 0 m/s. Rapidez final: 24 m/s.\n"
+        "2) Como el aumento es uniforme, el promedio es (0 + 24) ÷ 2 = 12 m/s.\n"
+        "3) Comprobación: la distancia recorrida es ½ · 3 · 8² = 96 m, y "
+        "96 ÷ 8 = 12 m/s.\n\n"
+        "Este promedio simple solo vale cuando la aceleración es constante: con "
+        "aceleración variable habría que calcular distancia total sobre tiempo "
+        "total.",
+        [
+            ("24 m/s", "Tomó la rapidez final como si fuera el promedio de todo el intervalo."),
+            ("3 m/s", "Entregó la aceleración, que es 24 ÷ 8 = 3 m/s², no la rapidez media."),
+            ("8 m/s", "Dividió la rapidez final por 3 en lugar de promediarla con la inicial."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un objeto cae libremente desde el reposo. ¿Cómo son las distancias que "
+        "recorre en el primer, el segundo y el tercer segundo de caída?",
+        "Crecen en la proporción 1 : 3 : 5",
+        "Conviene calcular la posición al final de cada segundo y restar.\n\n"
+        "1) Con g = 10 m/s², las posiciones son ½·10·1² = 5 m, ½·10·2² = 20 m y "
+        "½·10·3² = 45 m.\n"
+        "2) Las distancias recorridas en cada segundo son 5, 20 − 5 = 15 y "
+        "45 − 20 = 25 m.\n"
+        "3) La proporción entre ellas es 5 : 15 : 25, es decir, 1 : 3 : 5.\n\n"
+        "Esta regla de los números impares fue uno de los hallazgos de Galileo, "
+        "y es la firma de un movimiento uniformemente acelerado desde el reposo.",
+        [
+            ("Son iguales en cada segundo",
+             "Serían iguales solo si la rapidez fuera constante, y en una caída aumenta."),
+            ("Crecen en la proporción 1 : 2 : 3",
+             "Esa sería la proporción de las VELOCIDADES al final de cada segundo, no de las distancias recorridas."),
+            ("Crecen en la proporción 1 : 4 : 9",
+             "Esa es la proporción de las posiciones ACUMULADAS desde el inicio, no de los tramos recorridos en cada segundo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un móvil parte de la posición −30 m con velocidad constante de 6 m/s en "
+        "sentido positivo. ¿En qué instante pasa por el origen?",
+        "A los 5 s",
+        "Hay que encontrar el instante en que la posición vale cero.\n\n"
+        "1) La ecuación de itinerario es x = −30 + 6t.\n"
+        "2) Iguala a cero: 0 = −30 + 6t.\n"
+        "3) Despeja: 6t = 30, así que t = 5 s.\n\n"
+        "Comprobación: en 5 s recorre 6 · 5 = 30 m, exactamente lo que "
+        "necesitaba para cubrir la distancia que lo separaba del origen.",
+        [
+            ("A los 30 s", "Usó la posición inicial como si fuera el tiempo, sin dividir por la velocidad."),
+            ("A los 180 s", "Multiplicó la posición inicial por la velocidad en vez de dividir."),
+            ("A los 0,2 s", "Invirtió la división: usó la velocidad dividida por la distancia."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "¿Qué diferencia hay entre rapidez y velocidad?",
+        "La velocidad indica además la dirección del movimiento",
+        "Una es un número y la otra, un vector.\n\n"
+        "1) La RAPIDEZ es una magnitud escalar: solo dice cuán rápido, con un "
+        "número y su unidad.\n"
+        "2) La VELOCIDAD es vectorial: incluye la magnitud y además la "
+        "dirección y el sentido.\n"
+        "3) Por eso dos autos que van a 50 km/h en sentidos opuestos tienen la "
+        "misma rapidez y velocidades distintas.\n\n"
+        "De ahí que un cuerpo pueda tener rapidez constante y velocidad "
+        "cambiante, como ocurre al recorrer una curva.",
+        [
+            ("La rapidez se mide en km/h y la velocidad en m/s",
+             "Ambas pueden expresarse en cualquiera de las dos unidades: la diferencia no es de unidades."),
+            ("La velocidad se refiere a trayectos largos y la rapidez a instantes",
+             "Las dos admiten valores medios e instantáneos: no se distinguen por la duración."),
+            ("La rapidez puede ser negativa y la velocidad siempre es positiva",
+             "Es al revés en cuanto al signo: la rapidez, por ser la magnitud, nunca es negativa."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un móvil tiene aceleración constante distinta de cero. ¿Qué se puede "
+        "afirmar con seguridad?",
+        "Su velocidad cambia de manera uniforme",
+        "La aceleración describe cómo varía la velocidad.\n\n"
+        "1) Una aceleración distinta de cero significa que la velocidad no se "
+        "mantiene.\n"
+        "2) Que sea CONSTANTE significa que ese cambio es siempre el mismo por "
+        "unidad de tiempo: la velocidad varía de manera uniforme.\n"
+        "3) No se puede afirmar que el móvil vaya cada vez más rápido: si la "
+        "aceleración se opone a la velocidad, la rapidez disminuye.\n\n"
+        "Tampoco se puede afirmar nada sobre la trayectoria: la aceleración "
+        "constante es compatible con un movimiento rectilíneo o con uno "
+        "parabólico, como el de un proyectil.",
+        [
+            ("Su rapidez aumenta continuamente",
+             "Solo si la aceleración va en el mismo sentido que la velocidad; si se opone, la rapidez disminuye."),
+            ("Recorre distancias iguales en tiempos iguales",
+             "Eso describe un movimiento uniforme, en el que la aceleración es cero."),
+            ("Su trayectoria es necesariamente una línea recta",
+             "Un proyectil tiene aceleración constante y describe una parábola."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "facil",
+        "Un móvil recorre 5 m en el primer segundo, 5 m en el segundo y 5 m en "
+        "el tercero. ¿Qué movimiento describe?",
+        "Rectilíneo uniforme",
+        "La firma de un movimiento uniforme es recorrer distancias iguales en "
+        "tiempos iguales.\n\n"
+        "1) En cada intervalo de un segundo avanza los mismos 5 m.\n"
+        "2) Eso significa que su rapidez es constante e igual a 5 m/s.\n"
+        "3) Con rapidez constante y en línea recta, el movimiento es "
+        "rectilíneo uniforme, y su aceleración es cero.\n\n"
+        "Si las distancias crecieran o disminuyeran de manera regular, sería "
+        "uniformemente acelerado.",
+        [
+            ("Uniformemente acelerado",
+             "En un movimiento acelerado las distancias por segundo cambiarían, y aquí se mantienen."),
+            ("Con aceleración variable",
+             "Cualquier aceleración haría variar las distancias recorridas por unidad de tiempo."),
+            ("En reposo, porque su rapidez no cambia",
+             "Que la rapidez no cambie no significa que sea cero: el móvil avanza 5 m cada segundo."),
+        ],
+    ),
+    _q(
+        "cie_movimiento", "medio",
+        "Un carrito de laboratorio recorre una pista horizontal y luego una "
+        "rampa descendente. En el gráfico de velocidad contra tiempo, ¿cómo se "
+        "distinguen los dos tramos?",
+        "El primero es horizontal y el segundo, una recta inclinada hacia arriba",
+        "Cada tramo tiene una aceleración distinta y eso se lee en la "
+        "pendiente.\n\n"
+        "1) En la pista horizontal, si se desprecia el roce, la velocidad se "
+        "mantiene: la aceleración es cero y el gráfico es una recta "
+        "horizontal.\n"
+        "2) En la rampa descendente, una componente del peso acelera al carrito: "
+        "la velocidad aumenta de manera uniforme.\n"
+        "3) Eso aparece como una recta con pendiente positiva.\n\n"
+        "La transición entre ambos tramos se ve como un quiebre en el gráfico, "
+        "justo en el instante en que el carrito entra a la rampa.",
+        [
+            ("Ambos tramos son rectas horizontales a distinta altura",
+             "Eso indicaría dos velocidades constantes distintas, con un salto instantáneo entre ellas."),
+            ("El primero es una recta inclinada y el segundo, horizontal",
+             "Está invertido: la aceleración aparece en la rampa, no en la pista horizontal."),
+            ("Ambos tramos son curvas, porque la velocidad siempre cambia de manera no uniforme",
+             "En la pista horizontal la velocidad no cambia, y en la rampa lo hace de manera uniforme."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Mecánica": leyes de Newton y diagrama de cuerpo libre
+#
+# El temario acota el área a las leyes de Newton en cuerpos que se desplazan con
+# velocidad constante o aceleración constante, más el diagrama de cuerpo libre.
+# Las fuerzas concretas -peso, normal, tensión, elástica y roce- van en el nodo
+# `cie_roce`, que es la otra mitad del mismo conocimiento.
+#
+# Varias preguntas apuntan a errores conceptuales que las pruebas oficiales
+# explotan seguido: creer que un cuerpo en movimiento necesita una fuerza que lo
+# empuje, o que la acción y la reacción se cancelan entre sí.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_fuerzas", "facil",
+        "Un disco se desliza sobre hielo muy liso, sin que nadie lo empuje, y "
+        "mantiene su rapidez casi sin cambio durante varios metros. ¿Qué "
+        "principio ilustra esa observación?",
+        "Un cuerpo mantiene su movimiento si no actúa una fuerza neta",
+        "Es el enunciado de la primera ley de Newton, también llamada principio "
+        "de inercia.\n\n"
+        "1) El disco no necesita nada que lo empuje para seguir avanzando: el "
+        "movimiento no requiere una causa que lo mantenga.\n"
+        "2) Lo que requiere una causa es el CAMBIO de movimiento.\n"
+        "3) En el hielo el roce es muy pequeño, así que casi nada se opone al "
+        "avance y el disco conserva su velocidad.\n\n"
+        "En una superficie rugosa el disco se detiene, pero no porque el "
+        "movimiento se agote: porque el roce actúa como fuerza en contra.",
+        [
+            ("Todo cuerpo en movimiento necesita una fuerza que lo impulse",
+             "Es justamente la idea que la observación desmiente: el disco avanza sin que nada lo empuje."),
+            ("La fuerza es proporcional a la velocidad del cuerpo",
+             "La fuerza neta se relaciona con la aceleración, no con la velocidad: aquí la velocidad es alta y la fuerza neta, casi nula."),
+            ("El hielo entrega energía al disco que le permite continuar avanzando",
+             "El hielo no entrega energía: simplemente ofrece muy poca resistencia."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Sobre un cuerpo de 5 kg actúa una fuerza neta de 15 N. ¿Cuál es su "
+        "aceleración?",
+        "3 m/s²",
+        "La segunda ley de Newton relaciona fuerza neta, masa y aceleración.\n\n"
+        "1) La relación es a = F / m.\n"
+        "2) Reemplaza: a = 15 N ÷ 5 kg.\n"
+        "3) Resulta 3 m/s².\n\n"
+        "El resultado dice que cada segundo la velocidad del cuerpo cambia en "
+        "3 m/s, siempre en la dirección de la fuerza neta.",
+        [
+            ("75 m/s²", "Multiplicó la fuerza por la masa en vez de dividir."),
+            ("0,33 m/s²", "Invirtió la división: usó la masa dividida por la fuerza."),
+            ("10 m/s²", "Restó la masa de la fuerza, operación que mezcla magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Un libro descansa inmóvil sobre una mesa. ¿Qué se puede afirmar sobre "
+        "las fuerzas que actúan sobre él?",
+        "La fuerza neta es cero",
+        "Un cuerpo en reposo está en equilibrio, y eso significa una condición "
+        "sobre la SUMA de las fuerzas.\n\n"
+        "1) Sobre el libro actúan al menos dos fuerzas: su peso, hacia abajo, y "
+        "la normal que la mesa ejerce, hacia arriba.\n"
+        "2) Como no acelera, la suma vectorial de todas ellas debe ser cero.\n"
+        "3) Eso no significa que no actúe ninguna fuerza: significa que se "
+        "compensan entre sí.\n\n"
+        "La misma condición vale para un cuerpo que se mueve con velocidad "
+        "constante: equilibrio no es sinónimo de reposo.",
+        [
+            ("No actúa ninguna fuerza sobre él",
+             "Sí actúan: el peso y la normal existen, solo que se cancelan mutuamente."),
+            ("Actúa solo la fuerza de gravedad",
+             "Si solo actuara el peso, el libro caería: la mesa debe estar ejerciendo una fuerza hacia arriba."),
+            ("Actúa una fuerza neta hacia abajo igual a su peso",
+             "Con una fuerza neta hacia abajo el libro aceleraría hacia el suelo, y está inmóvil."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Al empujar una pared, una persona siente que la pared la empuja de "
+        "vuelta. ¿Qué ley describe esta situación?",
+        "La tercera ley de Newton",
+        "Las fuerzas siempre aparecen de a pares entre dos cuerpos.\n\n"
+        "1) Si la persona ejerce una fuerza sobre la pared, la pared ejerce "
+        "sobre la persona una fuerza de igual magnitud y sentido opuesto.\n"
+        "2) Ese par existe siempre, sin importar si los cuerpos se mueven o "
+        "no.\n"
+        "3) Las dos fuerzas actúan sobre cuerpos DISTINTOS, y por eso no se "
+        "cancelan entre sí: una actúa sobre la pared y la otra, sobre la "
+        "persona.\n\n"
+        "Es el mismo principio por el que un nadador avanza al empujar el agua "
+        "hacia atrás.",
+        [
+            ("La primera ley de Newton",
+             "La primera ley trata sobre el estado de movimiento cuando la fuerza neta es cero."),
+            ("La segunda ley de Newton",
+             "La segunda relaciona fuerza neta, masa y aceleración de un solo cuerpo."),
+            ("La ley de gravitación universal",
+             "Esa ley describe la atracción entre masas, y aquí la interacción es de contacto."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "En un diagrama de cuerpo libre, ¿qué se representa?",
+        "Solo las fuerzas que actúan sobre el cuerpo elegido",
+        "Es una herramienta para aislar un cuerpo del resto del sistema.\n\n"
+        "1) Se dibuja el cuerpo, muchas veces como un punto, y se representan "
+        "con flechas todas las fuerzas que OTROS cuerpos ejercen sobre él.\n"
+        "2) No se dibujan las fuerzas que ese cuerpo ejerce sobre los demás: "
+        "esas actúan sobre otros cuerpos y pertenecen a otros diagramas.\n"
+        "3) Tampoco se dibuja la velocidad ni la aceleración: no son fuerzas.\n\n"
+        "Hecho el diagrama, sumar las fuerzas entrega la fuerza neta, y de ahí "
+        "sale la aceleración por la segunda ley.",
+        [
+            ("Las fuerzas que el cuerpo ejerce sobre su entorno",
+             "Esas fuerzas existen por la tercera ley, pero actúan sobre otros cuerpos y no entran en este diagrama."),
+            ("La trayectoria que seguirá el cuerpo",
+             "El diagrama no describe el movimiento: describe las fuerzas, de las que después se deduce el movimiento."),
+            ("Las fuerzas sobre el cuerpo y también su velocidad, para saber hacia dónde se mueve",
+             "La velocidad no es una fuerza y dibujarla en el mismo diagrama induce a sumarla con ellas."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre una caja actúan dos fuerzas horizontales: 40 N hacia la derecha y "
+        "25 N hacia la izquierda. Si la caja tiene 3 kg, ¿cuál es su "
+        "aceleración?",
+        "5 m/s² hacia la derecha",
+        "Primero hay que obtener la fuerza neta y después aplicar la segunda "
+        "ley.\n\n"
+        "1) Las fuerzas son opuestas, así que se restan: 40 − 25 = 15 N hacia la "
+        "derecha.\n"
+        "2) Aplica a = F / m: 15 ÷ 3 = 5 m/s².\n"
+        "3) La aceleración apunta en la dirección de la fuerza neta, es decir, "
+        "hacia la derecha.\n\n"
+        "Error frecuente: usar una sola de las fuerzas. La segunda ley se aplica "
+        "a la fuerza NETA, nunca a una fuerza aislada.",
+        [
+            ("21,7 m/s² hacia la derecha", "Sumó las dos fuerzas en vez de restarlas: son opuestas."),
+            ("13,3 m/s² hacia la derecha", "Usó solo la fuerza de 40 N, ignorando la que se le opone."),
+            ("5 m/s² hacia la izquierda", "Calculó bien la magnitud pero invirtió el sentido: la fuerza mayor apunta a la derecha."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un ascensor sube con aceleración constante hacia arriba llevando a una "
+        "persona. ¿Cómo se compara la fuerza que el piso ejerce sobre ella con "
+        "su peso?",
+        "Es mayor que su peso",
+        "La fuerza neta debe apuntar en el sentido de la aceleración.\n\n"
+        "1) Sobre la persona actúan dos fuerzas verticales: el peso, hacia "
+        "abajo, y la normal del piso, hacia arriba.\n"
+        "2) Como acelera hacia arriba, la fuerza neta debe apuntar hacia "
+        "arriba.\n"
+        "3) Eso exige que la normal supere al peso.\n\n"
+        "Por eso la persona se siente más pesada al arrancar hacia arriba. Si el "
+        "ascensor acelerara hacia abajo, la normal sería menor que el peso y se "
+        "sentiría más liviana.",
+        [
+            ("Es igual a su peso", "Eso ocurre solo si la aceleración es cero: en reposo o con velocidad constante."),
+            ("Es menor que su peso", "Con una normal menor que el peso, la fuerza neta apuntaría hacia abajo y el ascensor aceleraría hacia abajo."),
+            ("Es cero, porque la persona no está tocando el suelo con fuerza",
+             "Si la normal fuera cero, la persona estaría en caída libre dentro del ascensor."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un vehículo avanza por una carretera recta con rapidez constante. ¿Qué "
+        "se puede afirmar sobre la fuerza neta que actúa sobre él?",
+        "Es cero, aunque el motor esté funcionando",
+        "Velocidad constante implica aceleración cero, y por lo tanto fuerza "
+        "neta cero.\n\n"
+        "1) El motor impulsa al vehículo hacia adelante, pero el roce y la "
+        "resistencia del aire se oponen.\n"
+        "2) Con rapidez constante, esas fuerzas se compensan exactamente.\n"
+        "3) Por eso la fuerza neta es nula, aunque haya varias fuerzas "
+        "actuando.\n\n"
+        "El motor no está manteniendo el movimiento: está compensando las "
+        "fuerzas que lo frenarían. En ausencia de roce, el vehículo seguiría con "
+        "el motor apagado.",
+        [
+            ("Es igual a la fuerza del motor",
+             "La fuerza del motor está equilibrada por el roce y el aire: la neta es la suma de todas, y vale cero."),
+            ("Apunta hacia adelante, porque el vehículo avanza",
+             "Avanzar no requiere fuerza neta: mantener velocidad constante requiere exactamente fuerza neta nula."),
+            ("Es proporcional a la rapidez del vehículo",
+             "La fuerza neta se relaciona con la aceleración; a rapidez constante es cero cualquiera sea esa rapidez."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un estudiante afirma que la fuerza que un caballo ejerce sobre un carro "
+        "y la que el carro ejerce sobre el caballo son iguales y opuestas, así "
+        "que el conjunto nunca podría moverse. ¿Dónde está el error?",
+        "Esas fuerzas actúan sobre cuerpos distintos y no se cancelan",
+        "El razonamiento aplica bien la tercera ley y mal la condición de "
+        "equilibrio.\n\n"
+        "1) Las dos fuerzas del par acción-reacción son en efecto iguales y "
+        "opuestas: eso es correcto.\n"
+        "2) Pero una actúa SOBRE EL CARRO y la otra SOBRE EL CABALLO. Para "
+        "decidir si un cuerpo acelera hay que sumar solo las fuerzas que actúan "
+        "sobre ÉL.\n"
+        "3) Para el carro, las fuerzas relevantes son el tirón del caballo y el "
+        "roce del suelo. Si el tirón supera al roce, el carro acelera.\n\n"
+        "Dos fuerzas se cancelan solo si actúan sobre el MISMO cuerpo.",
+        [
+            ("La tercera ley no se aplica cuando los cuerpos están en movimiento",
+             "La tercera ley vale siempre, estén los cuerpos en reposo o acelerando."),
+            ("La fuerza del caballo es mayor que la del carro",
+             "Las dos fuerzas del par son exactamente iguales en magnitud: no es ahí donde está el error."),
+            ("El error es que el carro no ejerce ninguna fuerza sobre el caballo",
+             "Sí la ejerce: si no la ejerciera, no habría par acción-reacción."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre un objeto actúan dos fuerzas perpendiculares entre sí, una de "
+        "6 N y otra de 8 N. ¿Cuál es la magnitud de la fuerza neta?",
+        "10 N",
+        "Las fuerzas son vectores y con direcciones perpendiculares se combinan "
+        "con el teorema de Pitágoras.\n\n"
+        "1) Las dos fuerzas son los catetos de un triángulo rectángulo y la "
+        "resultante es la hipotenusa.\n"
+        "2) Calcula: la raíz de 6² + 8² es la raíz de 36 + 64 = 100.\n"
+        "3) La fuerza neta mide 10 N.\n\n"
+        "Sumarlas directamente daría 14 N, que solo sería correcto si apuntaran "
+        "en la misma dirección.",
+        [
+            ("14 N", "Sumó las magnitudes, lo que solo vale si las fuerzas tienen la misma dirección y sentido."),
+            ("2 N", "Restó las magnitudes, lo que correspondería si fueran opuestas."),
+            ("48 N", "Multiplicó las dos magnitudes, operación que no corresponde a la suma de vectores."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Se duplica la fuerza neta sobre un cuerpo y al mismo tiempo se duplica "
+        "su masa. ¿Qué ocurre con su aceleración?",
+        "Se mantiene igual",
+        "La aceleración es el cociente entre fuerza neta y masa.\n\n"
+        "1) La relación es a = F / m.\n"
+        "2) Al duplicar F, el numerador se multiplica por 2; al duplicar m, el "
+        "denominador también.\n"
+        "3) El cociente no cambia: la aceleración se mantiene.\n\n"
+        "Es la misma razón por la que todos los cuerpos caen con igual "
+        "aceleración: un cuerpo más masivo recibe más peso, pero también cuesta "
+        "más acelerarlo, y los dos efectos se compensan.",
+        [
+            ("Se duplica", "Se duplicaría si solo cambiara la fuerza; aquí también cambia la masa."),
+            ("Se reduce a la mitad", "Se reduciría a la mitad si solo se duplicara la masa."),
+            ("Se cuadruplica", "Ese resultado exigiría que la masa se mantuviera y la fuerza se multiplicara por cuatro."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Dos bloques, uno de 2 kg y otro de 6 kg, están unidos por una cuerda "
+        "sobre una superficie sin roce. Se tira del conjunto con una fuerza de "
+        "16 N. ¿Cuál es la aceleración del sistema?",
+        "2 m/s²",
+        "Para la aceleración del conjunto conviene tratar los dos bloques como "
+        "un solo cuerpo.\n\n"
+        "1) La masa total es 2 + 6 = 8 kg.\n"
+        "2) La fuerza externa neta sobre el conjunto es 16 N: la tensión de la "
+        "cuerda es interna y no cuenta.\n"
+        "3) Aplica la segunda ley: a = 16 ÷ 8 = 2 m/s².\n\n"
+        "Los dos bloques aceleran igual porque la cuerda los mantiene unidos. "
+        "Después, si se quisiera la tensión, habría que analizar un bloque por "
+        "separado.",
+        [
+            ("8 m/s²", "Usó solo la masa de 2 kg, en vez de la masa total del sistema."),
+            ("2,67 m/s²", "Usó solo la masa de 6 kg."),
+            ("4 m/s²", "Dividió la fuerza por la diferencia de masas en lugar de por la suma."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un pasajero de pie en un bus se va hacia adelante cuando el vehículo "
+        "frena bruscamente. ¿Cómo se explica?",
+        "Su cuerpo tiende a mantener la velocidad que traía",
+        "Es una manifestación directa de la inercia.\n\n"
+        "1) Antes de frenar, el pasajero y el bus se mueven a la misma "
+        "velocidad.\n"
+        "2) Al frenar, el suelo aplica fuerza sobre el bus y lo desacelera, pero "
+        "sobre el pasajero no actúa una fuerza equivalente hacia atrás.\n"
+        "3) El pasajero conserva su velocidad y por eso avanza respecto del bus, "
+        "que ya va más lento.\n\n"
+        "No hay ninguna fuerza empujándolo hacia adelante: lo que falta es una "
+        "fuerza que lo frene junto con el vehículo. De ahí la utilidad de "
+        "sujetarse.",
+        [
+            ("Una fuerza hacia adelante aparece al frenar el bus",
+             "No aparece ninguna fuerza nueva hacia adelante: lo que falta es una que lo frene."),
+            ("El aire dentro del bus lo empuja hacia el frente",
+             "El aire se mueve con el bus y no ejerce un empuje apreciable sobre el pasajero."),
+            ("El peso del pasajero se inclina hacia adelante al disminuir la velocidad",
+             "El peso apunta siempre hacia abajo y no cambia de dirección por la frenada."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un cohete puede acelerar en el espacio, donde no hay aire ni suelo "
+        "contra el cual empujar. ¿Cómo lo logra?",
+        "Expulsa gases hacia atrás y estos lo empujan hacia adelante",
+        "Es una aplicación de la tercera ley que no requiere ningún medio "
+        "externo.\n\n"
+        "1) El cohete ejerce una fuerza sobre los gases de escape, lanzándolos "
+        "hacia atrás a gran rapidez.\n"
+        "2) Por la tercera ley, los gases ejercen sobre el cohete una fuerza de "
+        "igual magnitud y sentido opuesto: hacia adelante.\n"
+        "3) Esa es la fuerza que lo acelera, y no depende de que haya aire "
+        "alrededor.\n\n"
+        "De hecho un cohete funciona MEJOR en el vacío, porque no tiene que "
+        "vencer la resistencia del aire.",
+        [
+            ("Se apoya en el aire residual que queda en el espacio",
+             "En el espacio no hay aire suficiente para eso, y el cohete funciona igual."),
+            ("Aprovecha la atracción gravitatoria de los planetas cercanos",
+             "La gravedad puede usarse para maniobras, pero el empuje del motor no depende de ella."),
+            ("El calor de la combustión dilata el aire circundante y lo impulsa",
+             "No hay aire circundante que dilatar: el empuje viene de la expulsión de masa."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un cuerpo de 4 kg cae libremente. ¿Cuál es la fuerza neta sobre él, si "
+        "se desprecia el roce y g = 10 m/s²?",
+        "40 N hacia abajo",
+        "En caída libre la única fuerza es el peso.\n\n"
+        "1) El peso es la masa por la aceleración de gravedad: 4 · 10 = 40 N.\n"
+        "2) Al despreciarse el roce, no hay ninguna otra fuerza que lo "
+        "compense.\n"
+        "3) Por lo tanto la fuerza neta es igual al peso: 40 N hacia abajo.\n\n"
+        "Comprobación con la segunda ley: a = F/m = 40 ÷ 4 = 10 m/s², que es "
+        "exactamente la aceleración de gravedad, como debe ser.",
+        [
+            ("4 N hacia abajo", "Entregó la masa en vez del peso: falta multiplicar por la aceleración de gravedad."),
+            ("10 N hacia abajo", "Entregó el valor de la aceleración de gravedad, no la fuerza."),
+            ("0 N, porque en caída libre el cuerpo no siente su peso",
+             "La sensación de ingravidez no significa que el peso desaparezca: es justamente el peso lo que lo hace caer."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Dos bloques unidos por una cuerda, de 2 kg y 3 kg, son arrastrados sobre "
+        "una superficie sin roce por una fuerza de 20 N aplicada al bloque de "
+        "3 kg. ¿Cuál es la tensión de la cuerda?",
+        "8 N",
+        "Conviene calcular primero la aceleración del conjunto y después aislar "
+        "un bloque.\n\n"
+        "1) Masa total: 2 + 3 = 5 kg. Aceleración: 20 ÷ 5 = 4 m/s².\n"
+        "2) Ahora aísla el bloque de 2 kg: la única fuerza horizontal sobre él "
+        "es la tensión de la cuerda.\n"
+        "3) Entonces T = m · a = 2 · 4 = 8 N.\n\n"
+        "Comprobación con el otro bloque: sobre el de 3 kg actúan los 20 N hacia "
+        "adelante y la tensión de 8 N hacia atrás. La neta es 12 N y "
+        "12 ÷ 3 = 4 m/s²: coincide.",
+        [
+            ("20 N", "Supuso que la cuerda transmite la fuerza completa: parte de ella acelera al bloque delantero."),
+            ("12 N", "Calculó la fuerza neta sobre el bloque de 3 kg, no la tensión de la cuerda."),
+            ("4 N", "Entregó el valor de la aceleración, no de la tensión."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un ascensor desciende con velocidad constante. ¿Qué ocurre con la "
+        "lectura de una balanza sobre la que va parada una persona?",
+        "Marca lo mismo que en reposo",
+        "Lo que importa es la aceleración, no el sentido del movimiento.\n\n"
+        "1) Con velocidad constante la aceleración es cero, así que la fuerza "
+        "neta sobre la persona también.\n"
+        "2) Entonces la normal que la balanza ejerce iguala exactamente al "
+        "peso.\n"
+        "3) La balanza mide esa normal, así que marca el mismo valor que en un "
+        "piso quieto.\n\n"
+        "La lectura solo cambia mientras el ascensor ACELERA: al arrancar hacia "
+        "abajo marca menos, y al frenar antes de llegar, más.",
+        [
+            ("Marca menos que en reposo, porque el ascensor baja",
+             "Bajar con velocidad constante no altera la lectura: la disminución ocurre solo mientras acelera hacia abajo."),
+            ("Marca más que en reposo, porque se suma la velocidad de descenso",
+             "La velocidad no se suma a la fuerza: la lectura depende de la aceleración, que aquí es cero."),
+            ("Marca cero, porque la persona está en caída junto con el ascensor",
+             "Eso ocurriría solo en caída libre, con el cable cortado y aceleración igual a la de gravedad."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Se afirma que un cuerpo con mayor masa siempre requiere mayor fuerza "
+        "para moverse. ¿Qué precisión merece esa afirmación?",
+        "Requiere mayor fuerza para lograr la misma aceleración",
+        "La afirmación mezcla mover con acelerar.\n\n"
+        "1) Sobre una superficie sin roce, cualquier fuerza por pequeña que sea "
+        "pone en movimiento a cualquier masa: solo que la acelera muy poco.\n"
+        "2) Lo que sí es cierto es que, para conseguir una aceleración "
+        "determinada, una masa mayor exige una fuerza proporcionalmente "
+        "mayor.\n"
+        "3) En la práctica cotidiana hay roce, y ahí sí existe un umbral que "
+        "vencer, pero ese umbral depende del roce y no solo de la masa.\n\n"
+        "La masa mide la resistencia al CAMBIO de movimiento, que es lo que "
+        "llamamos inercia.",
+        [
+            ("Es correcta sin matices: la masa determina la fuerza mínima necesaria",
+             "Sin roce no existe una fuerza mínima: cualquier fuerza produce alguna aceleración."),
+            ("Es incorrecta: la masa no influye en la fuerza necesaria",
+             "Sí influye, y de manera directa: para la misma aceleración, el doble de masa exige el doble de fuerza."),
+            ("Es correcta solo para cuerpos en reposo, no para los que ya se mueven",
+             "La relación entre fuerza, masa y aceleración vale igual esté el cuerpo en reposo o en movimiento."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un cuerpo cuelga en reposo de dos cuerdas que forman ángulos con la "
+        "vertical. Un estudiante afirma que la tensión de cada cuerda es la "
+        "mitad del peso. ¿Es correcto?",
+        "No: la suma vectorial debe dar el peso, y cada tensión es mayor",
+        "Al estar inclinadas, solo una parte de cada tensión apunta hacia "
+        "arriba.\n\n"
+        "1) Para el equilibrio, la suma de las componentes verticales de ambas "
+        "tensiones debe igualar al peso.\n"
+        "2) Como cada cuerda está inclinada, su componente vertical es menor que "
+        "su tensión total.\n"
+        "3) Por lo tanto cada tensión debe ser MAYOR que la mitad del peso para "
+        "que las componentes verticales sumen lo necesario.\n\n"
+        "Cuanto más abiertas las cuerdas, mayor la tensión: por eso una cuerda "
+        "tendida casi horizontal se rompe con una carga pequeña colgada al "
+        "medio. Solo si las cuerdas fueran verticales cada tensión sería la "
+        "mitad del peso.",
+        [
+            ("Sí, porque son dos cuerdas y el peso se reparte por igual",
+             "El reparto es equitativo si son simétricas, pero cada tensión supera la mitad del peso por estar inclinada."),
+            ("No: cada tensión es menor que la mitad del peso",
+             "Sería así si las componentes verticales pudieran superar a la tensión total, lo que es imposible."),
+            ("Sí, siempre que las dos cuerdas formen el mismo ángulo con la vertical",
+             "La simetría iguala las dos tensiones entre sí, pero no las hace valer la mitad del peso."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "En un experimento se aplica a un carrito una fuerza constante y se mide "
+        "su aceleración; luego se repite agregando masa al carrito. Se grafica "
+        "aceleración en función del inverso de la masa. ¿Qué se espera obtener?",
+        "Una recta por el origen cuya pendiente es la fuerza",
+        "La segunda ley se puede escribir de modo que la relación sea lineal.\n\n"
+        "1) De a = F / m se sigue que a es proporcional a 1/m, con constante de "
+        "proporcionalidad F.\n"
+        "2) Al graficar a contra 1/m, esa proporcionalidad se traduce en una "
+        "recta que pasa por el origen.\n"
+        "3) Su pendiente es la fuerza aplicada.\n\n"
+        "Graficar contra el inverso de la masa es lo que convierte una hipérbola "
+        "en una recta, y una recta permite verificar la ley con todas las "
+        "mediciones a la vez.",
+        [
+            ("Una curva decreciente cada vez más suave",
+             "Esa forma aparece al graficar la aceleración contra la masa directamente, no contra su inverso."),
+            ("Una recta horizontal, porque la fuerza se mantiene constante",
+             "Lo constante es la fuerza, pero la aceleración cambia con la masa: la recta debe tener pendiente."),
+            ("Una recta que corta el eje vertical por encima del origen",
+             "Un corte por encima del origen implicaría aceleración distinta de cero para masa infinita."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Al analizar un cuerpo apoyado sobre una mesa, un estudiante dice que el "
+        "peso y la normal forman un par acción-reacción. ¿Es correcto?",
+        "No: actúan sobre el mismo cuerpo y no son del mismo tipo",
+        "Un par acción-reacción tiene características precisas que este caso no "
+        "cumple.\n\n"
+        "1) Las dos fuerzas de un par actúan sobre cuerpos DISTINTOS. El peso y "
+        "la normal actúan ambos sobre el libro.\n"
+        "2) Las dos fuerzas de un par son de la misma naturaleza. El peso es "
+        "gravitatorio y la normal es de contacto.\n"
+        "3) Que sean iguales y opuestas aquí es una consecuencia del equilibrio, "
+        "no de la tercera ley: si el libro estuviera en un ascensor acelerado, "
+        "dejarían de serlo.\n\n"
+        "Los verdaderos pares son: peso del libro y atracción del libro sobre la "
+        "Tierra; normal de la mesa sobre el libro y fuerza del libro sobre la "
+        "mesa.",
+        [
+            ("Sí, porque son iguales en magnitud y opuestas en sentido",
+             "Esa coincidencia se debe al equilibrio: en un ascensor acelerado dejarían de ser iguales y seguirían existiendo los pares reales."),
+            ("Sí, porque ambas son fuerzas de contacto entre el libro y la mesa",
+             "El peso no es una fuerza de contacto: lo ejerce la Tierra a distancia."),
+            ("No, porque el peso no es una fuerza real sino un efecto de la masa",
+             "El peso sí es una fuerza real: es la atracción gravitatoria que la Tierra ejerce sobre el cuerpo."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un bloque es empujado por una fuerza horizontal constante sobre una "
+        "superficie sin roce. Al cabo de unos segundos se retira la fuerza. "
+        "¿Qué ocurre después?",
+        "Sigue moviéndose con la velocidad que tenía en ese instante",
+        "Sin fuerza neta, se aplica el principio de inercia.\n\n"
+        "1) Mientras actuó la fuerza, el bloque aceleró y ganó velocidad.\n"
+        "2) Al retirarla, y sin roce, no queda ninguna fuerza horizontal.\n"
+        "3) La fuerza neta horizontal es cero, así que la velocidad se "
+        "mantiene: el bloque sigue avanzando indefinidamente.\n\n"
+        "Con roce el resultado sería otro, pero no porque el movimiento se agote: "
+        "porque aparecería una fuerza en contra.",
+        [
+            ("Se detiene de inmediato, porque ya no hay quien lo empuje",
+             "El movimiento no necesita una fuerza que lo mantenga: es el cambio de movimiento el que la necesita."),
+            ("Va disminuyendo su rapidez hasta detenerse",
+             "Eso ocurriría si hubiera roce, y el enunciado precisa que la superficie no lo tiene."),
+            ("Sigue acelerando por inercia hasta alcanzar una rapidez límite",
+             "La inercia conserva la velocidad, no la aumenta: sin fuerza neta no hay aceleración."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "¿Qué fuerza neta se necesita para que un cuerpo de 15 kg alcance una "
+        "aceleración de 4 m/s²?",
+        "60 N",
+        "Se aplica la segunda ley de Newton despejando la fuerza.\n\n"
+        "1) La relación es F = m · a.\n"
+        "2) Reemplaza: F = 15 kg · 4 m/s².\n"
+        "3) Resulta 60 N.\n\n"
+        "Si además hubiera roce, la fuerza aplicada tendría que ser mayor: los "
+        "60 N corresponden a la fuerza NETA, es decir, a lo que queda después de "
+        "descontar lo que se opone.",
+        [
+            ("3,75 N", "Dividió la masa por la aceleración en lugar de multiplicarlas."),
+            ("19 N", "Sumó masa y aceleración, magnitudes que no se pueden sumar."),
+            ("150 N", "Multiplicó la masa por la aceleración de gravedad en vez de por la aceleración pedida."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre un cuerpo actúan tres fuerzas y permanece en reposo. Si se retira "
+        "una de ellas, de 12 N, ¿qué ocurre?",
+        "Adquiere una aceleración en sentido opuesto a la fuerza retirada",
+        "El equilibrio significa que las tres sumaban cero.\n\n"
+        "1) Si la suma de las tres es cero, la suma de las otras dos es "
+        "exactamente opuesta a la que se retiró: vale 12 N en sentido "
+        "contrario.\n"
+        "2) Al retirar una, la fuerza neta pasa a ser esa resultante de 12 N.\n"
+        "3) El cuerpo acelera entonces en la dirección opuesta a la fuerza que "
+        "se quitó.\n\n"
+        "Es un razonamiento útil: en un sistema en equilibrio, cada fuerza "
+        "equilibra a la resultante de todas las demás.",
+        [
+            ("Permanece en reposo, porque las otras dos siguen equilibrándose",
+             "Las otras dos no se equilibraban entre sí: juntas equilibraban a la tercera."),
+            ("Se mueve en la misma dirección de la fuerza retirada",
+             "La resultante de las dos restantes apunta en sentido contrario a la que se quitó."),
+            ("Adquiere una aceleración de 12 m/s², sin importar su masa",
+             "Los 12 N son fuerza, no aceleración: para obtenerla hay que dividir por la masa."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un paracaidista en caída alcanza una rapidez que ya no aumenta más, "
+        "aunque siga cayendo. ¿Qué ocurre en ese momento con las fuerzas?",
+        "La resistencia del aire iguala a su peso",
+        "La rapidez deja de cambiar cuando la fuerza neta se anula.\n\n"
+        "1) Al comenzar la caída, el peso supera a la resistencia del aire y el "
+        "paracaidista acelera.\n"
+        "2) La resistencia del aire crece con la rapidez, así que la fuerza neta "
+        "va disminuyendo.\n"
+        "3) Cuando la resistencia iguala al peso, la fuerza neta es cero, la "
+        "aceleración se anula y la rapidez se mantiene constante.\n\n"
+        "Esa es la rapidez límite. Al abrir el paracaídas la resistencia aumenta "
+        "de golpe, supera al peso, y la rapidez disminuye hasta un nuevo valor "
+        "límite mucho menor.",
+        [
+            ("El peso del paracaidista se anula durante la caída",
+             "El peso no cambia: lo que cambia es la fuerza de resistencia que se le opone."),
+            ("La gravedad deja de actuar a partir de cierta rapidez",
+             "La gravedad actúa siempre: lo que ocurre es que otra fuerza la equilibra."),
+            ("La resistencia del aire supera al peso y por eso deja de acelerar",
+             "Si la superara, el paracaidista frenaría; a rapidez constante ambas fuerzas son iguales."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Se aplica la misma fuerza neta a dos cuerpos, uno de 2 kg y otro de "
+        "8 kg. ¿Cómo se comparan sus aceleraciones?",
+        "La del cuerpo de 2 kg es cuatro veces mayor",
+        "Con la misma fuerza, la aceleración es inversamente proporcional a la "
+        "masa.\n\n"
+        "1) De a = F / m, con F fija, a mayor masa menor aceleración.\n"
+        "2) La masa del segundo cuerpo es cuatro veces la del primero.\n"
+        "3) Por lo tanto su aceleración es cuatro veces menor, o dicho al "
+        "revés, la del primero es cuatro veces mayor.\n\n"
+        "Es una manera de comparar inercias: con la misma fuerza, cuesta cuatro "
+        "veces más cambiar el movimiento del cuerpo de 8 kg.",
+        [
+            ("La del cuerpo de 8 kg es cuatro veces mayor",
+             "Invierte la relación: más masa significa menos aceleración con la misma fuerza."),
+            ("Ambas son iguales, porque la fuerza aplicada es la misma",
+             "La misma fuerza produce aceleraciones distintas si las masas difieren."),
+            ("La del cuerpo de 2 kg es dos veces mayor",
+             "La razón entre las masas es 4, no 2: 8 dividido por 2 da cuatro."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "¿Qué magnitud mide la inercia de un cuerpo?",
+        "Su masa",
+        "La inercia es la resistencia a cambiar el estado de movimiento.\n\n"
+        "1) Cuanto mayor es la masa, más cuesta acelerar un cuerpo con una "
+        "fuerza dada.\n"
+        "2) Por eso la masa es precisamente la medida cuantitativa de la "
+        "inercia.\n"
+        "3) El peso, en cambio, depende del lugar: el mismo cuerpo pesa menos en "
+        "la Luna, pero su inercia no cambia.\n\n"
+        "Empujar un objeto masivo en el espacio, donde no pesa nada, sigue "
+        "costando exactamente lo mismo.",
+        [
+            ("Su peso", "El peso depende de la gravedad del lugar; la inercia no."),
+            ("Su volumen", "Dos cuerpos del mismo volumen pueden tener inercias muy distintas si sus densidades difieren."),
+            ("Su velocidad, porque un cuerpo más rápido es más difícil de detener",
+             "La dificultad para detenerlo depende de la masa y de la velocidad, pero la inercia como propiedad del cuerpo es la masa."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_fuerzas", "facil",
+        "Los vehículos llevan cinturón de seguridad y apoyacabezas. ¿Qué "
+        "principio físico justifica su uso?",
+        "La inercia mantiene el movimiento del cuerpo en un choque",
+        "En una colisión el vehículo cambia de velocidad bruscamente, pero el "
+        "ocupante no.\n\n"
+        "1) Antes del choque, vehículo y ocupante se mueven a la misma "
+        "velocidad.\n"
+        "2) La estructura del auto se detiene en fracciones de segundo, pero "
+        "sobre el ocupante no actúa ninguna fuerza equivalente: conserva su "
+        "velocidad.\n"
+        "3) El cinturón aplica esa fuerza de manera repartida y durante más "
+        "tiempo, lo que reduce la aceleración y el daño.\n\n"
+        "El apoyacabezas cumple la función simétrica en un choque por detrás, "
+        "cuando el torso es empujado hacia adelante y la cabeza tiende a "
+        "quedarse atrás.",
+        [
+            ("El choque genera una fuerza que empuja al ocupante hacia adelante",
+             "No aparece una fuerza hacia adelante: lo que ocurre es que nada frena al ocupante junto con el vehículo."),
+            ("La gravedad aumenta durante el impacto y presiona al ocupante",
+             "La gravedad no cambia durante un choque: es constante."),
+            ("El cinturón reduce la masa efectiva del ocupante durante la colisión",
+             "La masa no cambia: lo que el cinturón hace es aplicar la fuerza necesaria para frenarlo con el vehículo."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Una pelota rebota contra una pared. ¿Qué se puede afirmar sobre las "
+        "fuerzas durante el contacto?",
+        "La pelota y la pared se ejercen fuerzas iguales y opuestas",
+        "Toda interacción entre dos cuerpos es mutua.\n\n"
+        "1) La pelota ejerce una fuerza sobre la pared, y la pared ejerce sobre "
+        "la pelota una de igual magnitud y sentido contrario.\n"
+        "2) Esas fuerzas actúan sobre cuerpos distintos, así que no se "
+        "cancelan.\n"
+        "3) El efecto sobre cada uno es muy diferente porque sus masas lo son: "
+        "la pelota cambia notoriamente su velocidad y la pared, unida al "
+        "edificio, prácticamente nada.\n\n"
+        "La misma fuerza produce efectos distintos según la masa: eso es la "
+        "segunda ley operando sobre cada cuerpo por separado.",
+        [
+            ("La pared ejerce más fuerza porque es más rígida",
+             "La rigidez influye en cuánto se deforman, no en la magnitud de las fuerzas del par, que son iguales."),
+            ("La pelota ejerce más fuerza porque es la que se mueve",
+             "Moverse no aumenta la fuerza que se ejerce: el par acción-reacción es siempre simétrico."),
+            ("Solo la pared ejerce fuerza, porque la pelota únicamente la recibe",
+             "Si la pelota no ejerciera fuerza sobre la pared, no existiría el par y la pelota no rebotaría."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Un astronauta flota dentro de una nave en órbita y empuja una caja "
+        "grande. ¿Qué ocurre?",
+        "La caja se aleja y el astronauta retrocede",
+        "Las dos fuerzas del par actúan sobre cuerpos distintos y ambos "
+        "aceleran.\n\n"
+        "1) El astronauta ejerce una fuerza sobre la caja: la caja acelera y se "
+        "aleja.\n"
+        "2) Por la tercera ley, la caja ejerce sobre el astronauta una fuerza "
+        "igual y opuesta: el astronauta acelera en sentido contrario.\n"
+        "3) Como no hay roce ni suelo que lo sujete, ese retroceso no se "
+        "compensa con nada.\n\n"
+        "Si la caja es mucho más masiva, se moverá poco y el astronauta mucho: "
+        "la misma fuerza produce aceleraciones inversamente proporcionales a las "
+        "masas.",
+        [
+            ("Solo la caja se mueve, porque el astronauta está en reposo",
+             "Estar en reposo no lo exime: recibe una fuerza y por lo tanto acelera."),
+            ("Ninguno de los dos se mueve, porque en el espacio no hay gravedad",
+             "La ausencia de peso no impide el movimiento: la masa y la inercia siguen existiendo."),
+            ("Ambos se mueven exactamente con la misma rapidez, porque las fuerzas son iguales",
+             "Las fuerzas son iguales, pero las aceleraciones dependen de cada masa: el más masivo se mueve menos."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un cuerpo de 10 kg es empujado con una fuerza horizontal de 50 N y "
+        "acelera a 3 m/s². ¿Cuánto vale la fuerza que se opone a su movimiento?",
+        "20 N",
+        "La segunda ley se aplica a la fuerza NETA, así que la resistencia se "
+        "obtiene por diferencia.\n\n"
+        "1) La fuerza neta necesaria es F = m · a = 10 · 3 = 30 N.\n"
+        "2) La fuerza aplicada es 50 N.\n"
+        "3) La diferencia corresponde a lo que se opone: 50 − 30 = 20 N.\n\n"
+        "Comprobación: con 50 N a favor y 20 N en contra, la neta es 30 N, y "
+        "30 ÷ 10 = 3 m/s², como indica el enunciado.",
+        [
+            ("30 N", "Ese es el valor de la fuerza NETA, no de la que se opone."),
+            ("50 N", "Si la resistencia igualara a la fuerza aplicada, el cuerpo no aceleraría."),
+            ("80 N", "Sumó la fuerza neta a la aplicada en vez de restarlas."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un carro de supermercado vacío y otro cargado son empujados con la "
+        "misma fuerza. ¿Cuál es la diferencia en su movimiento?",
+        "El vacío alcanza mayor aceleración",
+        "Con la misma fuerza, la aceleración depende inversamente de la masa.\n\n"
+        "1) El carro cargado tiene mayor masa y por lo tanto mayor inercia.\n"
+        "2) De a = F / m, con la misma fuerza, el de mayor masa obtiene menor "
+        "aceleración.\n"
+        "3) El carro vacío gana velocidad más rápido.\n\n"
+        "Es una experiencia cotidiana que ilustra directamente la segunda ley: "
+        "cuesta más poner en movimiento y también más detener el carro lleno.",
+        [
+            ("El cargado alcanza mayor aceleración porque tiene más masa",
+             "Más masa significa más inercia y por lo tanto menos aceleración con la misma fuerza."),
+            ("Ambos alcanzan la misma aceleración porque la fuerza es igual",
+             "La aceleración depende también de la masa: la misma fuerza no produce el mismo efecto."),
+            ("El cargado se mueve igual pero recorre menos distancia por el roce adicional",
+             "El roce adicional agrava la diferencia, pero incluso sin roce el cargado aceleraría menos."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Sobre un cuerpo actúan tres fuerzas coplanares y el cuerpo se mueve con "
+        "velocidad constante. ¿Qué se concluye?",
+        "La suma vectorial de las tres es cero",
+        "Velocidad constante equivale a aceleración nula, y eso fija la "
+        "condición sobre las fuerzas.\n\n"
+        "1) Si la velocidad no cambia, la aceleración es cero.\n"
+        "2) Por la segunda ley, la fuerza neta también es cero.\n"
+        "3) La fuerza neta es la suma VECTORIAL de las tres, así que esa suma "
+        "debe anularse.\n\n"
+        "Ojo: eso no exige que las magnitudes sean iguales ni que las fuerzas "
+        "sean pequeñas. Tres fuerzas grandes pueden sumar cero si sus "
+        "direcciones se compensan.",
+        [
+            ("Las tres fuerzas tienen la misma magnitud",
+             "No es necesario: tres fuerzas de magnitudes distintas pueden sumar cero según sus direcciones."),
+            ("Al menos una de las tres fuerzas vale cero",
+             "Las tres pueden ser distintas de cero y aun así compensarse."),
+            ("El cuerpo está en reposo, porque la fuerza neta es nula",
+             "Fuerza neta nula significa velocidad constante, que puede ser cero o no."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Se realiza un experimento aplicando fuerzas de distinta magnitud a un "
+        "mismo carrito y midiendo su aceleración en cada caso. ¿Cuál es la "
+        "variable que debe mantenerse constante?",
+        "La masa del carrito",
+        "El diseño busca aislar la relación entre fuerza y aceleración.\n\n"
+        "1) La variable independiente es la fuerza aplicada: es lo que se hace "
+        "variar.\n"
+        "2) La dependiente es la aceleración: es lo que se mide en cada caso.\n"
+        "3) La masa debe mantenerse igual, porque también influye en la "
+        "aceleración. Si cambiara entre ensayos, no se sabría a cuál de los dos "
+        "factores atribuir la variación.\n\n"
+        "También conviene controlar el roce, usando siempre la misma superficie.",
+        [
+            ("La fuerza aplicada al carrito",
+             "Es la variable independiente: justamente lo que se hace variar entre ensayos."),
+            ("La aceleración medida en cada ensayo",
+             "Es la variable dependiente: el resultado que se registra."),
+            ("El tiempo que dura cada ensayo, para que todos sean comparables",
+             "Igualar la duración es una buena práctica pero no es la variable que hay que controlar aquí."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un remolcador arrastra dos vagones idénticos unidos entre sí. ¿Cómo se "
+        "comparan la fuerza que el remolcador ejerce sobre el primer vagón y la "
+        "que el primer vagón ejerce sobre el segundo?",
+        "La del remolcador es mayor, porque acelera a los dos vagones",
+        "Cada enganche debe acelerar solo lo que lleva por detrás.\n\n"
+        "1) El enganche entre el remolcador y el primer vagón transmite la "
+        "fuerza que acelera a AMBOS vagones.\n"
+        "2) El enganche entre el primer y el segundo vagón solo debe acelerar al "
+        "segundo.\n"
+        "3) Con la misma aceleración y la mitad de la masa, esa fuerza es la "
+        "mitad de la anterior.\n\n"
+        "Por eso los enganches delanteros de un tren soportan más esfuerzo que "
+        "los traseros, y se dimensionan de acuerdo con eso.",
+        [
+            ("Son iguales, porque los vagones son idénticos",
+             "Los vagones son idénticos, pero el primer enganche arrastra dos masas y el segundo, una sola."),
+            ("La del primer vagón sobre el segundo es mayor, porque va más atrás",
+             "La posición no aumenta la fuerza: el enganche trasero arrastra menos masa y por lo tanto transmite menos fuerza."),
+            ("No se pueden comparar sin conocer la velocidad del tren",
+             "La comparación depende de la aceleración y de las masas, no de la velocidad."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un cuerpo se mueve hacia la derecha y sobre él actúa una fuerza neta "
+        "hacia la izquierda. ¿Qué ocurre con su movimiento?",
+        "Sigue hacia la derecha pero frenando",
+        "La fuerza determina el cambio de velocidad, no la velocidad misma.\n\n"
+        "1) La velocidad apunta hacia la derecha, así que en ese instante el "
+        "cuerpo se mueve hacia allá.\n"
+        "2) La fuerza neta apunta hacia la izquierda, así que la aceleración "
+        "también: la velocidad va disminuyendo.\n"
+        "3) El cuerpo continúa avanzando a la derecha, cada vez más lento, hasta "
+        "detenerse. Si la fuerza persiste, luego comenzará a moverse hacia la "
+        "izquierda.\n\n"
+        "Es exactamente lo que ocurre con una pelota lanzada hacia arriba: sube "
+        "mientras la fuerza apunta hacia abajo.",
+        [
+            ("Cambia de dirección de inmediato y se mueve hacia la izquierda",
+             "El cambio de sentido no es instantáneo: la velocidad debe pasar por cero primero."),
+            ("Se detiene instantáneamente al aplicarse la fuerza",
+             "Una fuerza produce un cambio gradual de velocidad, no una detención instantánea."),
+            ("Mantiene su rapidez pero se desvía hacia la izquierda",
+             "Eso ocurriría si la fuerza fuera perpendicular a la velocidad, y aquí es opuesta."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Un cuerpo de 6 kg está sobre una superficie horizontal sin roce y se le "
+        "aplica una fuerza de 24 N durante 5 s. ¿Qué rapidez alcanza si partía "
+        "del reposo?",
+        "20 m/s",
+        "Primero la aceleración por la segunda ley y después la cinemática.\n\n"
+        "1) Aceleración: a = F / m = 24 ÷ 6 = 4 m/s².\n"
+        "2) Partiendo del reposo, v = a · t = 4 · 5.\n"
+        "3) La rapidez alcanzada es 20 m/s.\n\n"
+        "Comprobación: en esos 5 s recorrió ½ · 4 · 25 = 50 m, con una rapidez "
+        "media de 10 m/s, que es la mitad de la final: coherente con una "
+        "aceleración constante desde el reposo.",
+        [
+            ("120 m/s", "Multiplicó la fuerza por el tiempo sin dividir por la masa."),
+            ("4 m/s", "Entregó la aceleración en vez de la rapidez alcanzada."),
+            ("5 m/s", "Dividió la aceleración por el tiempo en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un estudiante propone que, como la Tierra atrae a una manzana que cae, "
+        "la manzana también atrae a la Tierra con la misma fuerza, y por lo "
+        "tanto la Tierra debería acelerar visiblemente hacia la manzana. ¿Qué "
+        "corresponde responder?",
+        "La Tierra sí acelera, pero su masa la vuelve imperceptible",
+        "El razonamiento es correcto hasta el último paso.\n\n"
+        "1) Es cierto que las dos fuerzas son iguales en magnitud: forman un par "
+        "acción-reacción.\n"
+        "2) También es cierto que la Tierra acelera hacia la manzana.\n"
+        "3) Pero la aceleración es F/m, y la masa de la Tierra es del orden de "
+        "10²⁵ veces la de una manzana. La aceleración resultante es tan pequeña "
+        "que ningún instrumento la detecta.\n\n"
+        "El error no está en la física sino en esperar efectos iguales de "
+        "fuerzas iguales sobre masas radicalmente distintas.",
+        [
+            ("La manzana no ejerce ninguna fuerza sobre la Tierra",
+             "Sí la ejerce: es la reacción al peso, y tiene exactamente la misma magnitud."),
+            ("La fuerza de la manzana sobre la Tierra es mucho menor",
+             "Las dos fuerzas del par son iguales; lo que difiere enormemente son las masas."),
+            ("La Tierra no acelera porque su tamaño la mantiene fija en el espacio",
+             "El tamaño no fija nada: lo que hace despreciable el efecto es su enorme masa."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Dos cuerpos de 1 kg y 4 kg están unidos por una cuerda que pasa por una "
+        "polea ideal, colgando a ambos lados. Con g = 10 m/s², ¿cuál es la "
+        "aceleración del sistema?",
+        "6 m/s²",
+        "Conviene tratar el sistema como un solo cuerpo con la masa total y la "
+        "fuerza neta que lo impulsa.\n\n"
+        "1) La fuerza neta que mueve el sistema es la diferencia de pesos: "
+        "4 · 10 − 1 · 10 = 30 N.\n"
+        "2) La masa que hay que acelerar es la suma: 1 + 4 = 5 kg.\n"
+        "3) Aceleración: 30 ÷ 5 = 6 m/s².\n\n"
+        "El cuerpo de 4 kg baja con esa aceleración y el de 1 kg sube con la "
+        "misma. Si las masas fueran iguales, la fuerza neta sería cero y el "
+        "sistema quedaría en equilibrio.",
+        [
+            ("10 m/s²", "Usó la aceleración de gravedad, que solo valdría si un lado estuviera libre."),
+            ("2 m/s²", "Dividió la diferencia de pesos por la diferencia de masas en vez de por la suma."),
+            ("7,5 m/s²", "Dividió la diferencia de pesos por la masa de 4 kg, ignorando que también hay que acelerar la de 1 kg."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Se afirma que en un choque entre un camión y un automóvil pequeño, el "
+        "camión ejerce más fuerza sobre el auto que el auto sobre el camión. "
+        "¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: las fuerzas son iguales, los daños no",
+        "La intuición confunde fuerza con consecuencia.\n\n"
+        "1) Por la tercera ley, durante el contacto las dos fuerzas tienen "
+        "exactamente la misma magnitud.\n"
+        "2) Lo que difiere enormemente es el EFECTO: la aceleración de cada "
+        "vehículo es esa fuerza dividida por su masa.\n"
+        "3) El auto, mucho menos masivo, sufre un cambio de velocidad mucho "
+        "mayor, y eso es lo que produce el daño desproporcionado sobre sus "
+        "ocupantes.\n\n"
+        "Por eso la asimetría en las consecuencias no contradice la simetría de "
+        "las fuerzas: son cosas distintas.",
+        [
+            ("Es correcta, porque el camión tiene mayor masa",
+             "La masa no aumenta la fuerza del par: influye en la aceleración que cada vehículo experimenta."),
+            ("Es correcta, porque el camión viaja con mayor cantidad de movimiento",
+             "La cantidad de movimiento influye en el resultado del choque, pero las fuerzas de contacto siguen siendo iguales."),
+            ("Es incorrecta, porque en realidad el auto ejerce más fuerza al ser más rígido",
+             "Ninguno ejerce más que el otro: las dos fuerzas del par son idénticas en magnitud."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un grupo mide la aceleración de un carrito para distintas fuerzas y "
+        "grafica aceleración contra fuerza. Obtiene una recta que no pasa por el "
+        "origen, sino que corta el eje horizontal en 2 N. ¿Cómo se interpreta "
+        "ese corte?",
+        "Hay una fuerza de roce de unos 2 N que debe vencerse primero",
+        "El corte con el eje indica qué fuerza produce aceleración cero.\n\n"
+        "1) Si no hubiera resistencia, cualquier fuerza aplicada produciría "
+        "alguna aceleración y la recta pasaría por el origen.\n"
+        "2) Que la aceleración recién sea distinta de cero a partir de 2 N "
+        "indica que hasta ese valor la fuerza aplicada se consume en equilibrar "
+        "otra que se opone.\n"
+        "3) Esa fuerza opuesta es el roce, y su magnitud es del orden de esos "
+        "2 N.\n\n"
+        "La pendiente sigue siendo válida y entrega el inverso de la masa: el "
+        "roce desplaza la recta pero no la inclina.",
+        [
+            ("La masa del carrito es de 2 kg",
+             "La masa se obtiene de la pendiente, no del corte con el eje horizontal."),
+            ("Hubo un error sistemático de 2 N en la medición de las fuerzas",
+             "Es una posibilidad que conviene descartar, pero la explicación física esperable es el roce."),
+            ("El carrito solo puede moverse si se le aplica una fuerza mayor que su peso",
+             "El peso es vertical y no se opone al movimiento horizontal."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un cuerpo de 2 kg cuelga del techo de un ascensor mediante un "
+        "dinamómetro. Con g = 10 m/s², el instrumento marca 24 N. ¿Qué se "
+        "concluye sobre el ascensor?",
+        "Acelera hacia arriba a 2 m/s²",
+        "La lectura del dinamómetro es la tensión, y difiere del peso solo si "
+        "hay aceleración.\n\n"
+        "1) El peso del cuerpo es 2 · 10 = 20 N.\n"
+        "2) La tensión medida es 24 N, mayor que el peso, así que la fuerza neta "
+        "apunta hacia arriba: 24 − 20 = 4 N.\n"
+        "3) La aceleración es 4 ÷ 2 = 2 m/s², dirigida hacia arriba.\n\n"
+        "Ojo: eso no significa que el ascensor suba. Podría estar bajando y "
+        "frenando, que también corresponde a una aceleración hacia arriba.",
+        [
+            ("Sube con velocidad constante",
+             "Con velocidad constante la aceleración es cero y el dinamómetro marcaría exactamente el peso, 20 N."),
+            ("Acelera hacia abajo a 2 m/s²",
+             "Con aceleración hacia abajo la tensión sería MENOR que el peso, no mayor."),
+            ("Está detenido y el dinamómetro está mal calibrado",
+             "Es una posibilidad que hay que descartar, pero la lectura es perfectamente coherente con una aceleración hacia arriba."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Se comparan dos afirmaciones: (I) un cuerpo en equilibrio está en "
+        "reposo, y (II) un cuerpo en equilibrio tiene fuerza neta nula. ¿Cómo se "
+        "evalúan?",
+        "La segunda es correcta y la primera es un caso particular",
+        "El equilibrio se define por las fuerzas, no por el estado de "
+        "movimiento.\n\n"
+        "1) Fuerza neta nula implica aceleración nula, es decir, velocidad "
+        "CONSTANTE.\n"
+        "2) Esa velocidad constante puede ser cero, y entonces el cuerpo está en "
+        "reposo: es el equilibrio estático.\n"
+        "3) Pero también puede ser distinta de cero, y el cuerpo avanza en línea "
+        "recta con rapidez constante: equilibrio dinámico.\n\n"
+        "Un paracaidista a velocidad límite y un auto en carretera a rapidez "
+        "constante están en equilibrio y no están en reposo.",
+        [
+            ("La primera es correcta y la segunda es incompleta",
+             "Es al revés: la definición general es la de fuerza neta nula, y el reposo es solo un caso."),
+            ("Ambas son equivalentes, porque un cuerpo con fuerza neta nula no puede moverse",
+             "Sí puede: la primera ley de Newton establece que conserva la velocidad que tuviera."),
+            ("Ninguna es correcta, porque el equilibrio exige además que no actúe ninguna fuerza",
+             "Pueden actuar muchas fuerzas: lo que se exige es que su suma vectorial sea cero."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un cuerpo de 3 kg está sometido a dos fuerzas: 12 N hacia el este y 16 N "
+        "hacia el norte. ¿Cuál es la magnitud de su aceleración?",
+        "6,67 m/s²",
+        "Primero se compone la fuerza neta y después se aplica la segunda "
+        "ley.\n\n"
+        "1) Las fuerzas son perpendiculares, así que la resultante es la raíz de "
+        "12² + 16² = raíz de 144 + 256 = raíz de 400 = 20 N.\n"
+        "2) Aplica a = F / m: 20 ÷ 3.\n"
+        "3) Resulta aproximadamente 6,67 m/s², en la dirección de la "
+        "resultante.\n\n"
+        "El error clásico es sumar las magnitudes: 28 N no corresponde a "
+        "ninguna resultante posible entre dos fuerzas perpendiculares.",
+        [
+            ("9,33 m/s²", "Sumó las magnitudes de las fuerzas en vez de componerlas vectorialmente."),
+            ("1,33 m/s²", "Restó las magnitudes, operación que correspondería si las fuerzas fueran opuestas."),
+            ("20 m/s²", "Entregó la fuerza resultante en newton sin dividir por la masa."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "dificil",
+        "Un estudiante dibuja el diagrama de cuerpo libre de una caja empujada "
+        "sobre el suelo e incluye una flecha hacia adelante rotulada 'fuerza del "
+        "movimiento'. ¿Qué corrección corresponde?",
+        "No existe tal fuerza: el movimiento no requiere una que lo mantenga",
+        "Es el error conceptual más persistente en mecánica.\n\n"
+        "1) En el diagrama deben ir solo las fuerzas que otros cuerpos ejercen "
+        "sobre la caja: la mano que empuja, el peso, la normal y el roce.\n"
+        "2) El movimiento no es una fuerza ni la produce: es un estado que se "
+        "conserva mientras la fuerza neta sea cero.\n"
+        "3) Incluir una 'fuerza del movimiento' lleva a sumar dos veces el mismo "
+        "efecto y a predecir aceleraciones inexistentes.\n\n"
+        "El criterio práctico: cada flecha del diagrama debe poder atribuirse a "
+        "un cuerpo identificable que la ejerce.",
+        [
+            ("Debe rotularla como fuerza de inercia, que sí existe",
+             "La inercia no es una fuerza: es la propiedad de conservar el estado de movimiento."),
+            ("Debe dibujarla más pequeña que la fuerza de la mano",
+             "El problema no es el tamaño sino que esa fuerza no existe y no debe aparecer."),
+            ("Debe dibujarla hacia atrás, porque el movimiento se opone al empuje",
+             "Lo que se opone al empuje es el roce, que ya tiene su propia flecha."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Una persona de 70 kg está de pie sobre el suelo. ¿Cuál es la magnitud "
+        "de la fuerza normal que el suelo ejerce sobre ella, con g = 10 m/s²?",
+        "700 N",
+        "En equilibrio vertical, la normal iguala al peso.\n\n"
+        "1) El peso es m · g = 70 · 10 = 700 N, dirigido hacia abajo.\n"
+        "2) Como la persona no acelera verticalmente, la fuerza neta vertical es "
+        "cero.\n"
+        "3) Entonces la normal debe valer 700 N hacia arriba.\n\n"
+        "Esa igualdad vale solo en este caso: sobre un plano inclinado o dentro "
+        "de un ascensor acelerado, la normal difiere del peso.",
+        [
+            ("70 N", "Entregó la masa en newton: falta multiplicar por la aceleración de gravedad."),
+            ("7.000 N", "Multiplicó por 100 en vez de por 10."),
+            ("0 N, porque la persona no ejerce fuerza mientras está quieta",
+             "Si la normal fuera cero, nada equilibraría al peso y la persona caería."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Al saltar, una persona empuja el suelo hacia abajo y se eleva. ¿Qué "
+        "fuerza la impulsa hacia arriba?",
+        "La que el suelo ejerce sobre ella",
+        "La persona no puede impulsarse a sí misma: la fuerza viene de "
+        "afuera.\n\n"
+        "1) Los músculos hacen que los pies empujen el suelo hacia abajo.\n"
+        "2) Por la tercera ley, el suelo empuja a la persona hacia arriba con "
+        "igual magnitud.\n"
+        "3) Mientras esa normal supera al peso, la fuerza neta apunta hacia "
+        "arriba y la persona acelera en ese sentido.\n\n"
+        "Por eso no se puede saltar desde una superficie que ceda por completo, "
+        "como arena muy suelta: no logra devolver una fuerza suficiente.",
+        [
+            ("La fuerza de sus músculos, que actúa directamente sobre su cuerpo",
+             "Los músculos generan el empuje contra el suelo, pero una fuerza interna no puede acelerar al conjunto."),
+            ("La disminución momentánea de su peso al flexionar las piernas",
+             "El peso no cambia al flexionar: lo que cambia es la normal que el suelo ejerce."),
+            ("El aire que se comprime bajo los pies durante el impulso",
+             "El aire no aporta un empuje apreciable: el salto funciona igual con los pies pegados al suelo."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Una caja de 8 kg es levantada con aceleración constante de 2 m/s². Con "
+        "g = 10 m/s², ¿cuál es la fuerza que ejerce la cuerda?",
+        "96 N",
+        "La cuerda debe sostener el peso y además producir la aceleración.\n\n"
+        "1) El peso es 8 · 10 = 80 N hacia abajo.\n"
+        "2) La fuerza neta necesaria hacia arriba es m · a = 8 · 2 = 16 N.\n"
+        "3) La tensión debe superar al peso en esa cantidad: 80 + 16 = 96 N.\n\n"
+        "Si la caja subiera con velocidad constante, la tensión sería exactamente "
+        "80 N; si bajara acelerando, sería menor que 80 N.",
+        [
+            ("80 N", "Consideró solo el peso: eso corresponde a subirla con velocidad constante."),
+            ("16 N", "Entregó la fuerza neta, olvidando que la cuerda debe además sostener el peso."),
+            ("64 N", "Restó la fuerza neta al peso en vez de sumarla: eso correspondería a bajar acelerando."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Se sostiene que en el espacio los objetos no tienen peso y por lo tanto "
+        "tampoco masa. ¿Qué corresponde precisar?",
+        "La masa no cambia: lo que cambia es el peso",
+        "Son dos magnitudes distintas y conviene separarlas bien.\n\n"
+        "1) La MASA es la cantidad de materia y mide la inercia: es una "
+        "propiedad del cuerpo y no depende de dónde esté.\n"
+        "2) El PESO es la fuerza gravitatoria que actúa sobre él, y sí depende "
+        "del entorno: lejos de cualquier astro es prácticamente nulo.\n"
+        "3) Por eso mover una caja masiva en el espacio sigue costando: no pesa, "
+        "pero su inercia es la misma.\n\n"
+        "Las unidades lo reflejan: la masa se mide en kilogramos y el peso, en "
+        "newton, que son unidades de fuerza.",
+        [
+            ("Ni la masa ni el peso cambian: solo se pierde la sensación de peso",
+             "El peso sí cambia realmente: es la fuerza gravitatoria, que disminuye al alejarse de un astro."),
+            ("La masa disminuye porque el cuerpo pesa menos",
+             "La masa no depende de la gravedad: es la misma en la Tierra, en la Luna o en el espacio."),
+            ("El peso se mantiene y lo que cambia es la masa aparente del objeto",
+             "Está invertido: la masa es invariable y el peso es lo que depende del campo gravitatorio."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "En un diagrama de cuerpo libre de una caja que se desliza hacia la "
+        "derecha sobre una mesa, ¿cuántas fuerzas deben aparecer si se considera "
+        "el roce y nadie la empuja?",
+        "Tres: peso, normal y roce",
+        "Hay que identificar qué cuerpos interactúan con la caja.\n\n"
+        "1) La Tierra ejerce el PESO, hacia abajo.\n"
+        "2) La mesa ejerce la NORMAL, perpendicular a la superficie y hacia "
+        "arriba.\n"
+        "3) La mesa ejerce además el ROCE, paralelo a la superficie y opuesto al "
+        "movimiento, es decir, hacia la izquierda.\n\n"
+        "No hay ninguna fuerza hacia la derecha: la caja avanza por inercia y va "
+        "frenando. Con el roce como única fuerza horizontal, terminará "
+        "deteniéndose.",
+        [
+            ("Cuatro: peso, normal, roce y una fuerza de avance",
+             "No existe una fuerza de avance: la caja se mueve por inercia, no porque algo la empuje."),
+            ("Dos: peso y normal",
+             "Falta el roce, que el enunciado pide considerar y que es la única fuerza horizontal."),
+            ("Una: solo el peso, porque es la única fuerza real que actúa sobre la caja",
+             "La normal y el roce son fuerzas igual de reales, ejercidas por la mesa sobre la caja."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "¿Qué establece la segunda ley de Newton?",
+        "La aceleración es proporcional a la fuerza neta e inversa a la masa",
+        "Es la ley que cuantifica cómo una fuerza cambia el movimiento.\n\n"
+        "1) A mayor fuerza neta, mayor aceleración, y en la misma dirección.\n"
+        "2) A mayor masa, menor aceleración para una misma fuerza.\n"
+        "3) La relación se escribe F = m · a, donde F es la fuerza NETA, es "
+        "decir, la suma vectorial de todas las que actúan.\n\n"
+        "La primera ley es en realidad el caso particular de fuerza neta cero, y "
+        "por eso las dos son coherentes entre sí.",
+        [
+            ("Todo cuerpo mantiene su estado de reposo o movimiento uniforme",
+             "Ese es el enunciado de la primera ley."),
+            ("A toda acción corresponde una reacción igual y opuesta",
+             "Ese es el enunciado de la tercera ley."),
+            ("La fuerza es proporcional a la velocidad que alcanza el cuerpo",
+             "La fuerza neta se relaciona con la aceleración, no con la velocidad."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "facil",
+        "Un satélite gira alrededor de la Tierra a rapidez constante. ¿Actúa "
+        "alguna fuerza neta sobre él?",
+        "Sí, la gravedad, que curva su trayectoria",
+        "Un movimiento curvo exige una fuerza neta aunque la rapidez no "
+        "cambie.\n\n"
+        "1) La velocidad del satélite cambia continuamente de dirección, así que "
+        "hay aceleración.\n"
+        "2) Por la segunda ley, esa aceleración exige una fuerza neta.\n"
+        "3) Esa fuerza es la atracción gravitatoria de la Tierra, siempre "
+        "dirigida hacia el centro del planeta.\n\n"
+        "Si esa fuerza desapareciera, el satélite saldría disparado en línea "
+        "recta, tangente a su órbita.",
+        [
+            ("No, porque su rapidez es constante",
+             "La rapidez constante no implica velocidad constante: la dirección cambia, y eso ya requiere fuerza."),
+            ("No, porque en el espacio no actúa la gravedad",
+             "La gravedad actúa a cualquier distancia: es justamente la que lo mantiene en órbita."),
+            ("Sí, una fuerza hacia afuera que lo mantiene alejado de la Tierra",
+             "No existe tal fuerza hacia afuera: lo que evita la caída es su movimiento tangencial."),
         ],
     ),
 ]
