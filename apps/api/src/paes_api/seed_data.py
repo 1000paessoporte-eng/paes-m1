@@ -92134,3 +92134,1496 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - "Herencia y evolución": evidencias y mecanismos
+#
+# El temario pide las evidencias a favor de la evolución biológica -anatomía
+# comparada con estructuras homólogas y análogas, embriología, biología molecular
+# y registro fósil-, los aportes de Lamarck, Darwin y Wallace, y los fundamentos
+# de la selección natural con ejemplos.
+#
+# Buena parte del nodo apunta a los errores conceptuales que la prueba explota:
+# creer que un organismo se adapta porque lo necesita, que la evolución persigue
+# un objetivo, o que un individuo evoluciona a lo largo de su vida.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_evolucion", "facil",
+        "El brazo humano, el ala de un murciélago y la aleta de una ballena "
+        "tienen los mismos huesos dispuestos de la misma manera, aunque cumplen "
+        "funciones distintas. ¿Qué tipo de estructuras son?",
+        "Homólogas",
+        "La clasificación depende del origen común, no de la función.\n\n"
+        "1) Las estructuras HOMÓLOGAS comparten el mismo plan anatómico y el "
+        "mismo origen embrionario, aunque se usen para cosas distintas.\n"
+        "2) Eso se explica si los tres organismos descienden de un antepasado "
+        "común que ya tenía esa disposición de huesos.\n"
+        "3) A partir de ese plan compartido, cada linaje lo modificó según su "
+        "modo de vida: agarrar, volar o nadar.\n\n"
+        "Las estructuras ANÁLOGAS son el caso opuesto: misma función y orígenes "
+        "distintos, como el ala de un insecto y la de un ave.",
+        [
+            ("Análogas", "Las análogas comparten función pero no origen, y no tienen la misma estructura interna."),
+            ("Vestigiales", "Las vestigiales son estructuras reducidas que perdieron su función original, como el apéndice."),
+            ("Convergentes, porque los tres grupos llegaron a la misma solución anatómica",
+             "La convergencia produce estructuras análogas, con la misma función pero distinta anatomía interna."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "El ala de un insecto y el ala de un ave cumplen la misma función pero "
+        "tienen estructuras internas completamente distintas. ¿Qué son?",
+        "Estructuras análogas",
+        "Aquí lo compartido es la función, no el origen.\n\n"
+        "1) El ala de un ave está sostenida por huesos; la de un insecto, por "
+        "una membrana con nervaduras de quitina: no hay ninguna correspondencia "
+        "anatómica.\n"
+        "2) El antepasado común de aves e insectos no volaba ni tenía alas.\n"
+        "3) Cada linaje desarrolló el vuelo por su cuenta, partiendo de "
+        "estructuras distintas: eso es convergencia evolutiva.\n\n"
+        "Las análogas muestran que ambientes parecidos favorecen soluciones "
+        "parecidas, pero no indican parentesco.",
+        [
+            ("Estructuras homólogas", "Las homólogas comparten origen y plan anatómico, que es justamente lo que aquí no ocurre."),
+            ("Estructuras vestigiales", "Las vestigiales están reducidas y han perdido su función; estas alas son plenamente funcionales."),
+            ("Estructuras embrionarias, porque ambas se forman durante el desarrollo",
+             "Todas las estructuras se forman durante el desarrollo: eso no las convierte en una categoría aparte."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "El código genético es prácticamente el mismo en bacterias, plantas y "
+        "animales: los mismos tripletes codifican los mismos aminoácidos. ¿Qué "
+        "evidencia aporta este hecho?",
+        "Que todos los seres vivos comparten un antepasado común",
+        "Es una de las evidencias moleculares más fuertes.\n\n"
+        "1) La correspondencia entre tripletes y aminoácidos es arbitraria: no "
+        "hay razón química que obligue a que un triplete signifique un "
+        "aminoácido y no otro.\n"
+        "2) Si la vida hubiera surgido varias veces de manera independiente, no "
+        "habría motivo para que todos los linajes usaran exactamente el mismo "
+        "diccionario.\n"
+        "3) Que sea universal se explica si todos lo heredaron de un antepasado "
+        "común.\n\n"
+        "Esa universalidad es además lo que permite insertar un gen humano en "
+        "una bacteria y que produzca la proteína correcta.",
+        [
+            ("Que todos los organismos necesitan los mismos aminoácidos para vivir",
+             "Aunque compartan aminoácidos, eso no obligaría a usar el mismo diccionario de tripletes."),
+            ("Que el ADN es la molécula más estable que existe",
+             "La estabilidad química no explica que la correspondencia entre tripletes y aminoácidos sea idéntica."),
+            ("Que las mutaciones ocurren siempre de la misma manera en todos los seres vivos",
+             "El código es lo compartido, no el patrón de mutaciones, que varía entre linajes."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "¿Cuál fue el aporte central de Darwin y Wallace al estudio de la "
+        "evolución?",
+        "Propusieron la selección natural como mecanismo",
+        "La idea de que las especies cambian ya circulaba: lo que faltaba era "
+        "explicar cómo.\n\n"
+        "1) Ambos llegaron de manera independiente a la misma propuesta y la "
+        "presentaron conjuntamente en 1858.\n"
+        "2) La selección natural explica el cambio sin recurrir a ninguna "
+        "intención: los individuos con variantes ventajosas dejan más "
+        "descendencia, y esas variantes se vuelven más frecuentes.\n"
+        "3) Darwin desarrolló el argumento con enorme cantidad de evidencia en "
+        "El origen de las especies, publicado al año siguiente.\n\n"
+        "Lamarck ya había propuesto que las especies se transforman, pero con un "
+        "mecanismo distinto que no resistió la evidencia.",
+        [
+            ("Descubrieron que las especies cambian con el tiempo",
+             "Esa idea era anterior: Lamarck, entre otros, ya la había planteado."),
+            ("Demostraron que los caracteres adquiridos se heredan",
+             "Esa era la propuesta de Lamarck, y precisamente no se sostuvo."),
+            ("Descubrieron el ADN como portador de la información hereditaria",
+             "El papel del ADN se estableció casi un siglo después."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "Según Lamarck, ¿cómo explicaba el cuello largo de las jirafas?",
+        "El esfuerzo por alcanzar hojas altas alargaba el cuello y se heredaba",
+        "Su mecanismo combinaba dos ideas que hoy se sabe que no operan así.\n\n"
+        "1) El USO Y DESUSO: un órgano se desarrolla si se usa y se atrofia si "
+        "no.\n"
+        "2) La HERENCIA DE LOS CARACTERES ADQUIRIDOS: esa modificación obtenida "
+        "durante la vida pasaría a la descendencia.\n"
+        "3) Combinadas, explicarían que generación tras generación el cuello se "
+        "fuera alargando.\n\n"
+        "La explicación por selección natural es distinta: en la población ya "
+        "existían variantes de cuello más largo, y esas dejaron más "
+        "descendencia. La variación es previa y no dirigida.",
+        [
+            ("Las jirafas con cuello más largo dejaban más descendencia",
+             "Esa es la explicación por selección natural, de Darwin y Wallace, no la de Lamarck."),
+            ("Una mutación al azar apareció y se extendió por la población",
+             "El concepto de mutación es muy posterior a Lamarck."),
+            ("Las jirafas de cuello corto migraron a otras regiones y dejaron de competir",
+             "Ni Lamarck ni Darwin explicaron el caso por migración."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "Los embriones de peces, aves, cerdos y humanos son muy parecidos en sus "
+        "etapas iniciales y presentan estructuras semejantes. ¿Qué evidencia "
+        "constituye esto?",
+        "Evidencia embriológica de antepasado común",
+        "El desarrollo temprano conserva rasgos heredados.\n\n"
+        "1) Los embriones de vertebrados muy distintos comparten en sus primeras "
+        "etapas estructuras como los arcos faríngeos y la cola.\n"
+        "2) Esas semejanzas se explican si todos heredaron un mismo programa de "
+        "desarrollo de un antepasado común.\n"
+        "3) Las diferencias entre las especies adultas aparecen en etapas más "
+        "tardías del desarrollo.\n\n"
+        "Es una de las cuatro líneas de evidencia que el temario menciona, junto "
+        "con la anatomía comparada, la biología molecular y el registro fósil.",
+        [
+            ("Evidencia anatómica, porque compara estructuras adultas",
+             "La anatomía comparada trabaja con organismos formados; aquí se comparan embriones."),
+            ("Evidencia molecular, porque los embriones comparten ADN",
+             "La evidencia molecular compara secuencias de ADN o proteínas, no la forma del embrión."),
+            ("Evidencia fósil, porque los embriones conservan formas antiguas",
+             "El registro fósil se basa en restos preservados, no en el desarrollo embrionario."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "En una población de polillas de corteza clara, la contaminación oscurece "
+        "los troncos de los árboles. Con los años, las polillas oscuras pasan de "
+        "ser raras a ser mayoría. ¿Cómo lo explica la selección natural?",
+        "Las oscuras se camuflaban mejor y dejaron más descendencia",
+        "El razonamiento tiene tres pasos y ninguno supone intención.\n\n"
+        "1) La VARIACIÓN ya existía: en la población había polillas claras y "
+        "oscuras antes del cambio ambiental.\n"
+        "2) El AMBIENTE cambió: sobre troncos oscurecidos, las polillas claras "
+        "se volvieron mucho más visibles para las aves.\n"
+        "3) La REPRODUCCIÓN DIFERENCIAL: las oscuras sobrevivieron más y "
+        "dejaron más descendencia, y como el color se hereda, su frecuencia "
+        "aumentó.\n\n"
+        "Ninguna polilla cambió de color: cambió la proporción de cada variante "
+        "en la población.",
+        [
+            ("Las polillas claras se oscurecieron para camuflarse",
+             "Ningún individuo cambia de color: lo que cambia es la proporción de cada variante en la población."),
+            ("La contaminación produjo mutaciones que oscurecieron a las polillas",
+             "La variante oscura ya existía antes de la contaminación; el ambiente seleccionó, no generó la variante."),
+            ("Las polillas oscuras migraron desde otras zonas al encontrar mejor refugio",
+             "El fenómeno se observó en poblaciones locales, y la explicación es el cambio de frecuencias, no la migración."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Un tratamiento con antibióticos deja de funcionar contra una infección "
+        "tras varios ciclos. ¿Cuál es la explicación evolutiva?",
+        "Las bacterias resistentes ya existían y fueron las que sobrevivieron",
+        "Es selección natural operando en una escala de tiempo muy corta.\n\n"
+        "1) En una población bacteriana enorme hay variabilidad: algunas células "
+        "portan mutaciones que las hacen resistentes, por azar y antes de "
+        "cualquier tratamiento.\n"
+        "2) El antibiótico elimina a las sensibles y deja el campo libre a las "
+        "resistentes.\n"
+        "3) Esas se reproducen y en poco tiempo la población entera es "
+        "resistente.\n\n"
+        "Por eso importa completar los tratamientos y no usar antibióticos sin "
+        "necesidad: cada uso incompleto es una ronda más de selección a favor de "
+        "la resistencia.",
+        [
+            ("Las bacterias se acostumbran al antibiótico y aprenden a resistirlo",
+             "Una bacteria individual no aprende ni se acostumbra: la resistencia es una variante heredable previa."),
+            ("El antibiótico provoca mutaciones que vuelven resistentes a las bacterias",
+             "Las mutaciones ocurren al azar antes del tratamiento; el antibiótico selecciona, no las causa."),
+            ("El paciente desarrolla inmunidad al antibiótico y por eso deja de funcionar",
+             "La resistencia se desarrolla en las bacterias, no en el paciente."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Se afirma que la selección natural hace que los organismos se adapten "
+        "porque lo necesitan. ¿Cuál es el error de esa formulación?",
+        "La variación aparece antes y con independencia de la necesidad",
+        "Es el error conceptual más frecuente sobre el mecanismo.\n\n"
+        "1) Las variantes surgen por mutación y recombinación, procesos que no "
+        "consultan lo que al organismo le conviene.\n"
+        "2) El ambiente no genera las variantes: solo determina cuáles dejan más "
+        "descendencia.\n"
+        "3) Si una población no tiene la variante que le serviría, no la produce "
+        "por necesitarla: simplemente disminuye o se extingue.\n\n"
+        "Por eso la extinción es un desenlace frecuente. Una teoría en que los "
+        "organismos generan la adaptación que necesitan no podría explicarla.",
+        [
+            ("La selección natural actúa sobre individuos y no sobre poblaciones",
+             "La selección actúa sobre individuos, pero el resultado evolutivo se observa en la población: eso no es el error."),
+            ("Los organismos sí se adaptan a voluntad, pero solo en algunas especies",
+             "Ningún organismo genera variantes hereditarias a voluntad."),
+            ("La necesidad existe, pero se transmite por el ambiente y no por los genes",
+             "La necesidad no se transmite de ninguna manera: lo que se transmite son las variantes genéticas."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "El apéndice humano y los huesos pélvicos reducidos de las ballenas son "
+        "ejemplos de estructuras que perdieron su función original. ¿Cómo se "
+        "llaman y qué evidencian?",
+        "Vestigiales, y evidencian antepasados donde sí eran funcionales",
+        "Su existencia es difícil de explicar sin historia evolutiva.\n\n"
+        "1) Una estructura vestigial está reducida y ya no cumple la función que "
+        "tiene en otros organismos emparentados.\n"
+        "2) Las ballenas conservan huesos pélvicos aunque no tienen patas "
+        "traseras: se explican como herencia de antepasados terrestres con "
+        "extremidades.\n"
+        "3) Un diseño desde cero no incluiría esos restos; la herencia con "
+        "modificación sí los predice.\n\n"
+        "El registro fósil respalda esa lectura: existen formas intermedias con "
+        "patas traseras cada vez más reducidas.",
+        [
+            ("Análogas, y evidencian que cumplen funciones parecidas",
+             "Las análogas comparten función, y estas estructuras justamente perdieron la suya."),
+            ("Convergentes, y evidencian que dos linajes llegaron a la misma solución",
+             "La convergencia produce semejanzas entre linajes distintos, no restos reducidos dentro de un mismo linaje."),
+            ("Embrionarias, y evidencian que el desarrollo repite la historia de la especie",
+             "Son estructuras presentes en el organismo adulto, no exclusivas del embrión."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "En las islas Galápagos, Darwin encontró pinzones muy parecidos entre sí "
+        "pero con picos de formas distintas según el alimento disponible en cada "
+        "isla. ¿Qué sugirió esa observación?",
+        "Que descendían de un antepasado común y divergieron según el ambiente",
+        "El patrón geográfico es lo informativo.\n\n"
+        "1) Las especies son muy semejantes entre sí y distintas de las del "
+        "continente: eso sugiere un origen común reciente.\n"
+        "2) Sus diferencias se concentran en el pico, justamente el rasgo ligado "
+        "al alimento disponible en cada isla.\n"
+        "3) La explicación más económica es que un grupo colonizó el "
+        "archipiélago y, aislado en cada isla, divergió según las presiones "
+        "locales.\n\n"
+        "Es un caso de radiación adaptativa, y sigue estudiándose: se han medido "
+        "cambios en el tamaño del pico de una generación a otra tras sequías.",
+        [
+            ("Que cada isla creó de forma independiente su propia especie de pinzón",
+             "La enorme semejanza entre las especies apunta a un origen común, no a orígenes independientes."),
+            ("Que los pinzones modificaron su pico durante su vida según lo que comían",
+             "El pico de un individuo no cambia de forma según su dieta: lo que cambia es la composición de la población."),
+            ("Que todas las islas tienen el mismo tipo de alimento y por eso los pinzones se parecen",
+             "El enunciado señala lo contrario: el alimento disponible difiere entre islas."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "¿Qué condiciones deben cumplirse para que actúe la selección natural "
+        "sobre una población?",
+        "Variación heredable y diferencias en la descendencia dejada",
+        "El mecanismo exige tres ingredientes, y ninguno supone intención.\n\n"
+        "1) VARIACIÓN: los individuos deben diferir entre sí en algún rasgo.\n"
+        "2) HERENCIA: esa variación debe transmitirse a la descendencia. Un "
+        "rasgo adquirido durante la vida no sirve.\n"
+        "3) REPRODUCCIÓN DIFERENCIAL: los portadores de ciertas variantes deben "
+        "dejar más descendencia que los demás en ese ambiente.\n\n"
+        "Si falta cualquiera de las tres, la selección natural no puede operar. "
+        "Con las tres presentes, opera necesariamente.",
+        [
+            ("Que los individuos se esfuercen por sobrevivir en su ambiente",
+             "El esfuerzo individual no basta ni es necesario: lo determinante es qué variantes se transmiten."),
+            ("Que el ambiente permanezca estable durante muchas generaciones",
+             "La selección actúa igual en ambientes cambiantes; de hecho el cambio suele intensificarla."),
+            ("Que aparezcan mutaciones nuevas en cada generación de la población",
+             "La variación puede ser preexistente: no hace falta que surjan mutaciones nuevas continuamente."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Al comparar la secuencia de una misma proteína en distintas especies, "
+        "se encuentra que la del ser humano difiere poco de la del chimpancé, "
+        "más de la del ratón y mucho más de la de una levadura. ¿Qué se infiere?",
+        "Que el parentesco es más cercano cuanto menor es la diferencia",
+        "El grado de semejanza molecular refleja el tiempo de divergencia.\n\n"
+        "1) Dos linajes que se separaron hace poco han tenido menos tiempo para "
+        "acumular diferencias en sus secuencias.\n"
+        "2) Cuanto más antigua es la separación, más cambios se han acumulado de "
+        "manera independiente en cada linaje.\n"
+        "3) El orden observado coincide con el que sugieren la anatomía y el "
+        "registro fósil, y esa CONVERGENCIA de líneas de evidencia "
+        "independientes es lo que da fuerza a la conclusión.\n\n"
+        "Que la levadura comparta la proteína, aunque muy modificada, indica "
+        "además un antepasado común muy antiguo.",
+        [
+            ("Que las especies más parecidas viven en ambientes semejantes",
+             "El chimpancé y el ser humano no comparten ambiente, y aun así sus secuencias son casi idénticas."),
+            ("Que las proteínas más largas cambian más rápido que las cortas",
+             "Se compara la MISMA proteína entre especies: su longitud no es la variable en juego."),
+            ("Que las especies con menos diferencias tienen menos mutaciones en su ADN",
+             "Todas las especies acumulan mutaciones; lo que varía es cuánto tiempo llevan divergiendo."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "El registro fósil muestra organismos con características intermedias "
+        "entre grupos actuales, como formas con plumas y a la vez dientes y cola "
+        "ósea. ¿Qué aporta esa evidencia?",
+        "Muestra formas de transición entre grupos hoy separados",
+        "Los fósiles permiten observar estados que ya no existen.\n\n"
+        "1) Las aves actuales no tienen dientes ni cola ósea; los reptiles no "
+        "tienen plumas.\n"
+        "2) Un organismo que combina ambos conjuntos de rasgos es difícil de "
+        "clasificar en cualquiera de los dos grupos, y esa dificultad es "
+        "justamente lo informativo.\n"
+        "3) Indica que los grupos actuales, hoy claramente distintos, estuvieron "
+        "conectados por formas intermedias.\n\n"
+        "El registro es incompleto por la rareza de la fosilización, pero cada "
+        "forma transicional hallada es una predicción cumplida de la teoría.",
+        [
+            ("Demuestra que las aves y los reptiles son la misma especie",
+             "Son grupos distintos: la evidencia habla de un antepasado común, no de identidad."),
+            ("Indica que esos organismos eran menos aptos y por eso se extinguieron",
+             "La extinción de un grupo no se deduce de que tuviera rasgos intermedios."),
+            ("Prueba que la fosilización conserva todos los organismos que existieron",
+             "El registro fósil es notoriamente incompleto: solo una fracción diminuta llega a fosilizar."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Se afirma que en la selección natural sobrevive el más fuerte. ¿Qué "
+        "corrección corresponde?",
+        "Lo decisivo es dejar más descendencia, no la fuerza",
+        "La formulación popular deforma el mecanismo.\n\n"
+        "1) La selección natural mide ÉXITO REPRODUCTIVO: cuántos descendientes "
+        "fértiles deja un individuo.\n"
+        "2) La fuerza puede ayudar en algunos contextos, pero también lo hacen "
+        "el camuflaje, la resistencia a una enfermedad, la eficiencia digestiva "
+        "o la capacidad de atraer pareja.\n"
+        "3) Un individuo fortísimo que no se reproduce no aporta nada a la "
+        "generación siguiente.\n\n"
+        "De hecho hay rasgos que perjudican la supervivencia y aun así se "
+        "extienden, como la cola del pavo real, porque mejoran el acceso a la "
+        "reproducción.",
+        [
+            ("Sobrevive el más grande, que es lo que la fuerza suele indicar",
+             "El tamaño tampoco es determinante: muchas especies pequeñas son extraordinariamente exitosas."),
+            ("Sobreviven todos por igual y el azar decide cuáles se reproducen",
+             "El azar interviene, pero la selección natural implica precisamente que las diferencias heredables importan."),
+            ("Sobrevive el más inteligente, porque puede resolver los problemas del ambiente",
+             "La inteligencia es un rasgo entre muchos, y en la mayoría de las especies no es el determinante."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "¿Qué papel cumplen las mutaciones en la evolución?",
+        "Son la fuente original de variabilidad genética",
+        "Sin variación no hay nada sobre lo que la selección pueda actuar.\n\n"
+        "1) Las mutaciones son cambios en la secuencia del ADN, y ocurren al "
+        "azar respecto de lo que al organismo le conviene.\n"
+        "2) La mayoría es neutra o perjudicial; unas pocas resultan ventajosas "
+        "en un ambiente determinado.\n"
+        "3) Son la única forma de introducir variantes verdaderamente nuevas; la "
+        "reproducción sexual las recombina, pero no crea alelos nuevos.\n\n"
+        "Esa combinación es la clave: la mutación aporta el material bruto sin "
+        "dirección, y la selección natural le da dirección al resultado.",
+        [
+            ("Dirigen el cambio hacia formas mejor adaptadas",
+             "Las mutaciones no tienen dirección: quien introduce el sesgo hacia lo adaptativo es la selección."),
+            ("Aparecen solo cuando el ambiente cambia y las hace necesarias",
+             "Ocurren de manera continua, con independencia de las condiciones del ambiente."),
+            ("Siempre son perjudiciales, y por eso las poblaciones tienden a mantenerse iguales",
+             "Muchas son neutras y algunas resultan ventajosas: si todas fueran perjudiciales no habría evolución adaptativa."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Un estudiante afirma que las jirafas evolucionaron un cuello largo "
+        "porque lo necesitaban para alcanzar las hojas altas. ¿Qué reformulación "
+        "corresponde en términos de selección natural?",
+        "En la población había cuellos de distinto largo y los largos dejaron más crías",
+        "La reformulación debe eliminar toda referencia a una necesidad que "
+        "genere el cambio.\n\n"
+        "1) Punto de partida: en la población ancestral ya existía variación "
+        "heredable en el largo del cuello, por causas ajenas al alimento.\n"
+        "2) En un ambiente donde el follaje bajo escasea, los individuos de "
+        "cuello más largo acceden a más alimento, sobreviven mejor y dejan más "
+        "descendencia.\n"
+        "3) Como el rasgo se hereda, su frecuencia aumenta generación tras "
+        "generación.\n\n"
+        "Ningún individuo alarga su cuello: lo que cambia es la composición de "
+        "la población a lo largo de las generaciones.",
+        [
+            ("Las jirafas estiraron su cuello y transmitieron esa modificación",
+             "Esa es la explicación lamarckiana por herencia de caracteres adquiridos, que no se sostuvo."),
+            ("El ambiente indujo mutaciones específicas que alargaron el cuello",
+             "Las mutaciones ocurren al azar: el ambiente no puede dirigir cuáles aparecen."),
+            ("Las jirafas de cuello corto aprendieron a alimentarse de otras plantas",
+             "El aprendizaje no es hereditario y no explicaría el cambio anatómico de la población."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se comparan dos afirmaciones: (I) un individuo evoluciona a lo largo de "
+        "su vida adaptándose al ambiente, y (II) las poblaciones evolucionan a "
+        "lo largo de las generaciones. ¿Cuál es correcta y por qué?",
+        "La segunda: la evolución es un cambio en las frecuencias de la población",
+        "La unidad que evoluciona no es el individuo.\n\n"
+        "1) Un individuo puede cambiar durante su vida: broncearse, desarrollar "
+        "músculo, aclimatarse a la altura. Nada de eso se transmite a su "
+        "descendencia ni constituye evolución.\n"
+        "2) La evolución se define como el cambio en las frecuencias de las "
+        "variantes hereditarias de una POBLACIÓN a lo largo de las "
+        "generaciones.\n"
+        "3) Ningún individuo de la población de polillas cambió de color: lo que "
+        "cambió fue la proporción de claras y oscuras.\n\n"
+        "Por eso la evolución solo se observa comparando generaciones, no "
+        "siguiendo a un organismo.",
+        [
+            ("La primera: los organismos se transforman según las exigencias del ambiente",
+             "Los cambios que un organismo experimenta en su vida no son hereditarios y no constituyen evolución."),
+            ("Ambas, porque la evolución ocurre en los dos niveles a la vez",
+             "Los cambios individuales no hereditarios no forman parte del proceso evolutivo."),
+            ("La segunda, pero solo cuando el ambiente permanece constante",
+             "El cambio de frecuencias ocurre igual, y a menudo más rápido, en ambientes cambiantes."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Un equipo estudia una población de lagartijas y mide, durante quince "
+        "años, el largo de las patas y la supervivencia de cada individuo tras "
+        "la llegada de un depredador. ¿Qué componente de la investigación es el "
+        "largo de las patas?",
+        "La variable independiente que se relaciona con la supervivencia",
+        "El diseño busca establecer si un rasgo se asocia con la "
+        "supervivencia.\n\n"
+        "1) El largo de las patas es el rasgo cuya variación se registra y "
+        "frente al cual se analiza el resultado: es la variable independiente.\n"
+        "2) La supervivencia es lo que se mide como consecuencia: la variable "
+        "dependiente.\n"
+        "3) El estudio es no experimental, porque nadie asigna el largo de las "
+        "patas a cada lagartija: se aprovecha la variación natural.\n\n"
+        "Para que el resultado sea evidencia de selección natural hace falta "
+        "además comprobar que el rasgo es heredable: si no lo fuera, no habría "
+        "cambio evolutivo aunque haya supervivencia diferencial.",
+        [
+            ("La variable dependiente, porque cambia a lo largo de los quince años",
+             "Lo que se mide como resultado es la supervivencia; el largo de las patas es el rasgo que se relaciona con ella."),
+            ("Una variable controlada, porque se mantiene igual en todos los individuos",
+             "Justamente varía entre individuos: esa variación es la que permite el estudio."),
+            ("La hipótesis de la investigación",
+             "La hipótesis sería la afirmación de que el largo de las patas influye en la supervivencia; el largo en sí es una variable."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se sostiene que la evolución tiene como objetivo producir organismos "
+        "cada vez más complejos y perfectos. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: no hay objetivo y la simplificación también ocurre",
+        "El mecanismo no contiene ninguna meta.\n\n"
+        "1) La selección natural favorece lo que funciona en un ambiente "
+        "determinado, y ese ambiente cambia. No hay una dirección global.\n"
+        "2) Hay linajes que se simplificaron: muchos parásitos perdieron órganos "
+        "completos porque el hospedador los suple, y esa pérdida fue "
+        "ventajosa.\n"
+        "3) Los organismos más abundantes y persistentes del planeta son "
+        "bacterias, de organización sencilla y enorme éxito.\n\n"
+        "Hablar de perfección tampoco corresponde: la selección trabaja sobre lo "
+        "que hay, no sobre lo óptimo. De ahí que abunden soluciones anatómicas "
+        "torpes heredadas de antepasados.",
+        [
+            ("Es correcta: la evolución avanza siempre hacia mayor complejidad",
+             "Hay numerosos casos de simplificación, y la complejidad no confiere por sí sola ventaja."),
+            ("Es correcta, pero solo en los animales y no en las plantas",
+             "La ausencia de dirección vale para todos los linajes por igual."),
+            ("Es incorrecta, porque la evolución en realidad avanza hacia formas cada vez más simples",
+             "Tampoco hay una tendencia general hacia la simplicidad: no hay dirección preferente en ningún sentido."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se comparan dos explicaciones para la resistencia a un pesticida en una "
+        "plaga de insectos: (I) el pesticida indujo la mutación que confiere "
+        "resistencia, y (II) la mutación ya existía y el pesticida seleccionó a "
+        "sus portadores. ¿Qué observación permitiría decidir entre ambas?",
+        "Buscar la mutación en poblaciones nunca expuestas al pesticida",
+        "Las dos hipótesis predicen cosas distintas sobre poblaciones sin "
+        "exposición.\n\n"
+        "1) Si el pesticida INDUJERA la mutación, una población que nunca lo ha "
+        "recibido no debería portarla en absoluto.\n"
+        "2) Si la mutación es previa y azarosa, debería encontrarse en baja "
+        "frecuencia también en poblaciones no expuestas.\n"
+        "3) Buscarla en esas poblaciones distingue entre ambas explicaciones, y "
+        "el resultado observado en estos casos es que sí aparece, en frecuencias "
+        "bajas.\n\n"
+        "Es el mismo diseño con que se estableció, en bacterias, que las "
+        "mutaciones de resistencia son anteriores a la exposición.",
+        [
+            ("Medir cuántos insectos mueren en la primera aplicación del pesticida",
+             "Ambas hipótesis predicen una mortalidad alta inicial: el dato no las distingue."),
+            ("Aumentar la dosis del pesticida y ver si la resistencia desaparece",
+             "Una dosis mayor selecciona con más intensidad, pero no informa sobre el origen de la mutación."),
+            ("Comparar la velocidad con que aparece la resistencia en dos plagas distintas",
+             "Esa comparación depende de muchos factores y no permite decidir si la mutación es previa o inducida."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "¿Qué relación hay entre la selección artificial que practica un criador "
+        "y la selección natural?",
+        "En ambas se reproducen preferentemente ciertas variantes",
+        "El mecanismo es el mismo; lo que cambia es quién ejerce la "
+        "selección.\n\n"
+        "1) En la selección ARTIFICIAL, el criador elige qué individuos se "
+        "reproducen según los rasgos que le interesan.\n"
+        "2) En la NATURAL, el ambiente hace que ciertos individuos dejen más "
+        "descendencia sin que nadie elija.\n"
+        "3) En ambos casos hay variación heredable y reproducción diferencial, y "
+        "el resultado es un cambio en las frecuencias de la población.\n\n"
+        "Darwin usó justamente la selección artificial como argumento: la enorme "
+        "diversidad de razas de palomas obtenida en pocas generaciones mostraba "
+        "cuánto puede modificarse una población por reproducción diferencial.",
+        [
+            ("No tienen relación: la artificial modifica genes y la natural no",
+             "Ninguna de las dos modifica genes directamente: ambas actúan sobre la variación ya existente."),
+            ("En la artificial los cambios son hereditarios y en la natural, no",
+             "En las dos los cambios son hereditarios: si no lo fueran, no habría cambio entre generaciones."),
+            ("Son opuestas: la artificial mejora las especies y la natural las deteriora",
+             "La selección natural no deteriora: favorece lo que funciona en cada ambiente."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Un estudiante señala que el registro fósil es incompleto y concluye que "
+        "no sirve como evidencia de la evolución. ¿Cómo se evalúa esa "
+        "conclusión?",
+        "Es incorrecta: lo que se conserva basta y coincide con otras evidencias",
+        "La premisa es cierta pero la conclusión no se sigue.\n\n"
+        "1) Es verdad que la fosilización es un proceso rarísimo y que el "
+        "registro tiene enormes vacíos.\n"
+        "2) Pero lo que sí se conserva muestra un orden coherente: los grupos "
+        "aparecen en una secuencia temporal, y no se encuentran mamíferos en "
+        "estratos anteriores a los primeros vertebrados.\n"
+        "3) Además, el orden coincide con el que sugieren de manera "
+        "independiente la anatomía comparada y la biología molecular.\n\n"
+        "Un registro incompleto pero ORDENADO y CONCORDANTE con otras líneas de "
+        "evidencia es informativo. Un solo fósil fuera de secuencia sería un "
+        "problema serio, y no se ha encontrado.",
+        [
+            ("Es correcta: sin un registro completo no se puede concluir nada",
+             "Ninguna ciencia histórica dispone de registros completos, y aun así extrae conclusiones sólidas."),
+            ("Es correcta, porque los fósiles no permiten determinar la edad de las rocas",
+             "La datación radiométrica de los estratos es independiente y bastante precisa."),
+            ("Es incorrecta, porque en realidad el registro fósil está prácticamente completo",
+             "El registro es muy incompleto: la respuesta no pasa por negar la premisa sino por mostrar que la conclusión no se sigue."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "¿Cuál fue el aporte de Lamarck al estudio de la evolución, más allá de "
+        "que su mecanismo resultara equivocado?",
+        "Propuso que las especies se transforman y no son fijas",
+        "El valor de una propuesta no se agota en si acertó el mecanismo.\n\n"
+        "1) En su época predominaba la idea de que las especies eran fijas e "
+        "inmutables desde su origen.\n"
+        "2) Lamarck formuló una de las primeras teorías sistemáticas de "
+        "transformación de las especies a lo largo del tiempo.\n"
+        "3) Su mecanismo, el uso y desuso con herencia de caracteres adquiridos, "
+        "no resistió la evidencia posterior.\n\n"
+        "Pero instaló el problema que Darwin y Wallace resolverían medio siglo "
+        "después: si las especies cambian, hay que explicar cómo.",
+        [
+            ("Descubrió los fósiles como evidencia del cambio de las especies",
+             "Los fósiles se conocían desde mucho antes; su interpretación era el punto en disputa."),
+            ("Formuló por primera vez el concepto de selección natural",
+             "La selección natural es aporte de Darwin y Wallace, y es un mecanismo distinto del de Lamarck."),
+            ("Estableció que los organismos comparten un antepasado común universal",
+             "Esa idea se consolidó con Darwin y con la evidencia molecular posterior."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "En una población aislada de una isla, un grupo pequeño de individuos "
+        "queda separado del resto y su descendencia presenta frecuencias "
+        "genéticas muy distintas de las de la población original, sin que medie "
+        "ninguna ventaja adaptativa. ¿Qué mecanismo lo explica?",
+        "El azar en poblaciones pequeñas",
+        "No todo cambio evolutivo se debe a la selección natural.\n\n"
+        "1) En una población grande, las frecuencias de las variantes se "
+        "mantienen bastante estables entre generaciones.\n"
+        "2) En una población muy pequeña, el azar de quién se reproduce puede "
+        "alterarlas de manera importante, sin que ninguna variante sea "
+        "ventajosa.\n"
+        "3) El grupo fundador, además, lleva solo una muestra de la variabilidad "
+        "original, que puede no ser representativa.\n\n"
+        "Por eso las poblaciones pequeñas y aisladas divergen rápido, y por eso "
+        "pierden variabilidad genética, lo que las hace más vulnerables.",
+        [
+            ("La selección natural, que favoreció a los individuos fundadores",
+             "El enunciado precisa que no hay ventaja adaptativa: sin reproducción diferencial ligada al rasgo, no hay selección."),
+            ("Una mutación masiva ocurrida en el grupo fundador",
+             "Las mutaciones son sucesos raros e individuales: no explican un cambio simultáneo de muchas frecuencias."),
+            ("La herencia de caracteres adquiridos durante el aislamiento",
+             "Los caracteres adquiridos no se heredan, y además el enunciado no describe ningún carácter adquirido."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Se afirma que las cuatro líneas de evidencia de la evolución -anatomía "
+        "comparada, embriología, biología molecular y registro fósil- se "
+        "refuerzan entre sí. ¿Qué significa eso?",
+        "Que son independientes y llegan a las mismas relaciones de parentesco",
+        "El valor está en la independencia de los métodos.\n\n"
+        "1) Comparar huesos, comparar embriones, comparar secuencias de ADN y "
+        "datar estratos son procedimientos que no dependen unos de otros: usan "
+        "datos y técnicas distintas.\n"
+        "2) Sin embargo, los árboles de parentesco que resultan de cada uno "
+        "coinciden en lo esencial.\n"
+        "3) Que métodos independientes converjan en el mismo resultado es lo que "
+        "vuelve improbable que se trate de una coincidencia o de un artefacto de "
+        "un método particular.\n\n"
+        "Si una línea contradijera sistemáticamente a las otras, habría un "
+        "problema serio que resolver. No es lo que ocurre.",
+        [
+            ("Que las cuatro usan los mismos datos analizados de maneras distintas",
+             "Usan datos distintos: huesos, embriones, secuencias y estratos son fuentes independientes."),
+            ("Que basta con una de ellas para demostrar la evolución",
+             "Cada una por separado es más débil: la fuerza está justamente en la convergencia."),
+            ("Que las cuatro fueron desarrolladas por los mismos investigadores",
+             "Provienen de disciplinas y épocas distintas, y esa independencia es parte de su valor."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Dos especies de plantas de regiones muy alejadas del planeta "
+        "desarrollaron tallos gruesos que almacenan agua y espinas en vez de "
+        "hojas, pese a no estar emparentadas. ¿Cómo se explica?",
+        "Convergencia: ambientes semejantes favorecen soluciones semejantes",
+        "El parecido no implica parentesco cuando las presiones son "
+        "equivalentes.\n\n"
+        "1) Los dos linajes enfrentaron el mismo problema: escasez de agua y "
+        "alta radiación.\n"
+        "2) En cada uno, la selección natural favoreció variantes con menor "
+        "superficie de evaporación y mayor capacidad de almacenar agua.\n"
+        "3) El resultado son estructuras ANÁLOGAS: misma función, orígenes "
+        "distintos.\n\n"
+        "Al examinar la anatomía interna y las secuencias de ADN aparecen las "
+        "diferencias que delatan el parentesco real de cada una.",
+        [
+            ("Ambas descienden de un antepasado común muy reciente",
+             "Un parentesco cercano se reflejaría en la anatomía interna y en las secuencias, y no es el caso."),
+            ("Una de ellas fue transportada por el ser humano desde la otra región",
+             "El fenómeno se observa en linajes con historias evolutivas independientes y muy antiguas."),
+            ("El ambiente indujo en ambas las mismas mutaciones",
+             "El ambiente no dirige qué mutaciones aparecen: selecciona entre las que surgen al azar."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "¿Qué es una adaptación en términos evolutivos?",
+        "Un rasgo heredable que mejora la reproducción en cierto ambiente",
+        "El término tiene un sentido preciso que conviene distinguir del uso "
+        "cotidiano.\n\n"
+        "1) Debe ser HEREDABLE: un cambio adquirido durante la vida no es una "
+        "adaptación en este sentido.\n"
+        "2) Debe mejorar el éxito reproductivo de sus portadores en un ambiente "
+        "determinado.\n"
+        "3) Es relativa al ambiente: un rasgo ventajoso en un lugar puede ser "
+        "perjudicial en otro.\n\n"
+        "En el lenguaje cotidiano decimos que alguien se adapta a un clima o a "
+        "un trabajo, y eso es aclimatación o aprendizaje: no se transmite a la "
+        "descendencia.",
+        [
+            ("Un cambio que el organismo produce durante su vida para sobrevivir",
+             "Los cambios adquiridos durante la vida no se heredan y no constituyen adaptaciones evolutivas."),
+            ("Una mutación dirigida que responde a una necesidad del ambiente",
+             "Las mutaciones no son dirigidas: ocurren al azar respecto de lo que conviene."),
+            ("Cualquier característica que distinga a una especie de otra",
+             "Muchas diferencias entre especies son neutras y no confieren ninguna ventaja reproductiva."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "¿Qué estudia la anatomía comparada como evidencia de la evolución?",
+        "Las semejanzas y diferencias estructurales entre organismos",
+        "Es la línea de evidencia más antigua y la más directa de observar.\n\n"
+        "1) Compara la organización interna de distintas especies: huesos, "
+        "órganos, disposición de estructuras.\n"
+        "2) Identifica estructuras HOMÓLOGAS, con el mismo plan y distinto uso, "
+        "que indican origen común.\n"
+        "3) Y estructuras ANÁLOGAS, con el mismo uso y distinto plan, que "
+        "indican convergencia sin parentesco cercano.\n\n"
+        "También registra las estructuras vestigiales, que son restos reducidos "
+        "de órganos funcionales en antepasados.",
+        [
+            ("Las secuencias de ADN de especies emparentadas",
+             "Eso corresponde a la biología molecular, otra de las líneas de evidencia."),
+            ("Los restos de organismos conservados en las rocas",
+             "Eso es el registro fósil."),
+            ("El desarrollo de los embriones en las primeras etapas de la vida",
+             "Eso corresponde a la evidencia embriológica."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_evolucion", "facil",
+        "Todos los vertebrados terrestres tienen extremidades con un mismo patrón "
+        "básico: un hueso, dos huesos y luego los dedos. ¿Cómo se interpreta esa "
+        "coincidencia?",
+        "Como herencia de un antepasado común con ese plan",
+        "Un patrón compartido tan específico no se explica por casualidad ni por "
+        "necesidad funcional.\n\n"
+        "1) El patrón se conserva en animales que caminan, vuelan, nadan y "
+        "cavan: no hay una exigencia funcional común que lo imponga.\n"
+        "2) Si cada grupo hubiera desarrollado su extremidad desde cero, no "
+        "habría razón para repetir esa secuencia exacta de huesos.\n"
+        "3) Se explica si todos heredaron el mismo plan de un antepasado y cada "
+        "linaje lo modificó.\n\n"
+        "La evolución trabaja modificando lo que ya existe, no rediseñando desde "
+        "el principio: eso explica tanto las semejanzas como las soluciones "
+        "anatómicas poco elegantes.",
+        [
+            ("Como una coincidencia sin significado biológico",
+             "La especificidad del patrón, repetido en grupos con modos de vida opuestos, hace improbable la coincidencia."),
+            ("Como resultado de que todos viven en el mismo tipo de ambiente",
+             "Viven en ambientes muy distintos: el patrón se conserva pese a esas diferencias."),
+            ("Como prueba de que todos los vertebrados pertenecen a la misma especie",
+             "Son especies distintas: lo que comparten es un antepasado, no la identidad de especie."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "¿Qué es la especiación?",
+        "La formación de nuevas especies a partir de una anterior",
+        "Es el proceso que genera la diversidad de formas vivas.\n\n"
+        "1) Una población se divide y los grupos dejan de intercambiar genes, "
+        "por ejemplo por una barrera geográfica.\n"
+        "2) Cada grupo acumula cambios de manera independiente, por selección y "
+        "por azar.\n"
+        "3) Si esas diferencias llegan a impedir la reproducción entre ambos "
+        "grupos, se trata de especies distintas.\n\n"
+        "El aislamiento reproductivo es el criterio: no basta con verse "
+        "distintos, tienen que dejar de reproducirse entre sí con descendencia "
+        "fértil.",
+        [
+            ("La desaparición de una especie por cambios en el ambiente",
+             "Eso es la extinción, el proceso opuesto."),
+            ("El cambio de un individuo a lo largo de su vida",
+             "Los individuos no cambian de especie: la especiación ocurre entre poblaciones y a lo largo de generaciones."),
+            ("La mezcla de dos especies distintas para formar una tercera",
+             "La hibridación existe en algunos grupos, pero no es lo que define a la especiación."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "Darwin viajó a bordo del Beagle recorriendo Sudamérica y las islas del "
+        "Pacífico. ¿Qué papel cumplió ese viaje en su trabajo?",
+        "Le permitió reunir observaciones que después explicó",
+        "El viaje fue la fuente de datos, no de la teoría.\n\n"
+        "1) Durante casi cinco años recolectó especímenes, fósiles y "
+        "observaciones geográficas en lugares muy distintos.\n"
+        "2) Notó patrones que pedían explicación: especies parecidas en islas "
+        "vecinas, fósiles de animales extinguidos semejantes a los vivos de la "
+        "misma región.\n"
+        "3) La explicación por selección natural la desarrolló años después de "
+        "regresar, trabajando sobre ese material.\n\n"
+        "Es un buen ejemplo de cómo la observación precede a la explicación y de "
+        "que una teoría no surge de un solo hallazgo sino de un patrón "
+        "acumulado.",
+        [
+            ("Durante el viaje formuló y comprobó la teoría de la selección natural",
+             "La teoría la elaboró años después de regresar, sobre el material recolectado."),
+            ("Le permitió recolectar los fósiles que probaron la edad de la Tierra",
+             "La datación de la Tierra es un problema geológico distinto, resuelto mucho después."),
+            ("Fue donde conoció a Wallace y trabajaron juntos en la teoría",
+             "Nunca coincidieron en el viaje: Wallace llegó a la misma idea de manera independiente, años más tarde."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Una cordillera divide en dos a una población de roedores. Miles de años "
+        "después, los individuos de ambos lados ya no pueden cruzarse entre sí. "
+        "¿Qué ocurrió?",
+        "Se produjo especiación por aislamiento geográfico",
+        "El proceso tiene una secuencia identificable.\n\n"
+        "1) La barrera interrumpió el flujo de genes entre los dos grupos.\n"
+        "2) Cada población acumuló cambios de manera independiente, por "
+        "selección en ambientes distintos y por azar.\n"
+        "3) Con el tiempo esas diferencias llegaron a impedir la reproducción "
+        "entre ambos grupos: son especies distintas.\n\n"
+        "El aislamiento geográfico es el escenario más común de especiación, y "
+        "por eso las islas y las cordilleras concentran tanta diversidad y tantas "
+        "especies endémicas.",
+        [
+            ("Los roedores decidieron dejar de reproducirse entre ellos",
+             "El aislamiento reproductivo es una consecuencia de diferencias acumuladas, no una decisión."),
+            ("La cordillera provocó mutaciones distintas en cada lado",
+             "La barrera no genera mutaciones: impide que los genes se mezclen entre las dos poblaciones."),
+            ("Una de las dos poblaciones se extinguió y la otra ocupó su lugar",
+             "El enunciado describe dos poblaciones que persisten y ya no se cruzan."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Se descubre que el ADN humano contiene secuencias muy parecidas a genes "
+        "funcionales de otras especies, pero que en nosotros están dañadas y no "
+        "producen ninguna proteína. ¿Qué evidencian?",
+        "Que descendemos de antepasados donde esos genes funcionaban",
+        "Es el equivalente molecular de una estructura vestigial.\n\n"
+        "1) Esas secuencias conservan la estructura reconocible del gen, pero "
+        "con mutaciones que lo inactivaron.\n"
+        "2) Su presencia no cumple ninguna función actual: son restos.\n"
+        "3) Se explican si el gen era funcional en un antepasado y se inactivó "
+        "en nuestro linaje, quedando la copia rota en el genoma.\n\n"
+        "Un ejemplo conocido es el gen de la síntesis de vitamina C, funcional "
+        "en la mayoría de los mamíferos e inactivado en los primates, que la "
+        "obtienen de la dieta.",
+        [
+            ("Que el ADN humano contiene errores de secuenciación",
+             "Se trata de secuencias reales del genoma, confirmadas repetidamente, no de errores técnicos."),
+            ("Que esos genes se activarán en el futuro cuando sean necesarios",
+             "Un gen inactivado por mutaciones no se reactiva por necesidad: la evolución no anticipa."),
+            ("Que fueron insertados por virus a lo largo de la historia de la especie",
+             "Hay secuencias de origen viral en el genoma, pero estas conservan la estructura de genes celulares funcionales en otras especies."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "En una población de bacterias nunca expuesta a un antibiótico se "
+        "encuentra, en baja frecuencia, la mutación que confiere resistencia. "
+        "¿Qué apoya esta observación?",
+        "Que las mutaciones ocurren al azar, antes de la exposición",
+        "Es la observación decisiva entre dos explicaciones rivales.\n\n"
+        "1) Si el antibiótico indujera la mutación, una población nunca expuesta "
+        "no debería portarla.\n"
+        "2) Encontrarla en frecuencias bajas antes de cualquier exposición "
+        "indica que surge por azar, con independencia de si resulta útil.\n"
+        "3) El papel del antibiótico es SELECCIONAR: elimina a las sensibles y "
+        "deja que las resistentes se multipliquen.\n\n"
+        "Esta distinción entre generar y seleccionar es el corazón del mecanismo "
+        "darwiniano frente al lamarckiano.",
+        [
+            ("Que las bacterias anticipan la llegada del antibiótico",
+             "Ningún organismo anticipa cambios ambientales generando las variantes que le convendrán."),
+            ("Que el antibiótico ya estaba presente en el ambiente en dosis mínimas",
+             "El enunciado precisa que la población nunca fue expuesta; además la explicación por azar es suficiente."),
+            ("Que la resistencia se transmite entre bacterias por contacto directo",
+             "Existe transferencia horizontal de genes, pero eso no explicaría la presencia de la mutación en una población aislada y sin exposición."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "El ser humano y el chimpancé comparten alrededor del 98 % de su "
+        "secuencia de ADN. ¿Qué se puede concluir de ese dato?",
+        "Que su antepasado común es relativamente reciente",
+        "El porcentaje de similitud es un indicador de tiempo de "
+        "divergencia.\n\n"
+        "1) Desde que dos linajes se separan, cada uno acumula cambios de manera "
+        "independiente.\n"
+        "2) Una similitud tan alta indica que ha transcurrido poco tiempo, en "
+        "escala evolutiva, desde la separación.\n"
+        "3) Ese resultado coincide con el que sugieren la anatomía comparada y "
+        "el registro fósil de homínidos.\n\n"
+        "Ojo con la interpretación del 2 % restante: en un genoma de miles de "
+        "millones de bases, esa fracción representa una cantidad enorme de "
+        "diferencias, y en ella están los rasgos que distinguen a ambas "
+        "especies.",
+        [
+            ("Que ambas especies son prácticamente idénticas en sus características",
+             "El 2 % de diferencia abarca millones de posiciones e incluye los rasgos que las distinguen."),
+            ("Que el ser humano desciende directamente del chimpancé",
+             "Ninguno desciende del otro: ambos descienden de un antepasado común ya extinguido."),
+            ("Que ambas especies pueden cruzarse y dejar descendencia fértil",
+             "La similitud genética no implica compatibilidad reproductiva: son especies distintas."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Una especie de flor tiene un tubo floral muy largo y solo un insecto "
+        "con una lengua igual de larga puede polinizarla. ¿Cómo se explica esa "
+        "correspondencia?",
+        "Coevolución: cada especie ejerció presión selectiva sobre la otra",
+        "Cuando dos especies interactúan estrechamente, se seleccionan "
+        "mutuamente.\n\n"
+        "1) Las flores con tubo algo más largo obligan al insecto a hundirse "
+        "más y se polinizan mejor: esa variante se favorece.\n"
+        "2) A su vez, los insectos con lengua algo más larga acceden al néctar "
+        "de esas flores y se alimentan mejor: esa variante se favorece en la "
+        "población de insectos.\n"
+        "3) El proceso se retroalimenta a lo largo de generaciones y produce el "
+        "ajuste observado.\n\n"
+        "Darwin predijo un caso así: al ver una orquídea de tubo larguísimo, "
+        "postuló que debía existir un polinizador con una lengua equivalente. Se "
+        "descubrió décadas después.",
+        [
+            ("Ambas especies descienden de un antepasado común muy reciente",
+             "Una planta y un insecto tienen un antepasado común extremadamente remoto: el ajuste no viene de ahí."),
+            ("El insecto estiró su lengua con el uso y transmitió esa modificación",
+             "Los caracteres adquiridos durante la vida no se heredan."),
+            ("Es una coincidencia, porque cada especie evolucionó de manera independiente",
+             "La correspondencia es demasiado precisa para el azar, y las dos especies interactúan directamente."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "¿Qué papel cumplió la reproducción sexual en la evolución de muchas "
+        "especies?",
+        "Aumenta la variabilidad al recombinar los genes de dos progenitores",
+        "La variabilidad es la materia prima sobre la que actúa la "
+        "selección.\n\n"
+        "1) En la meiosis, los cromosomas se reparten al azar y además "
+        "intercambian fragmentos entre sí.\n"
+        "2) La fecundación combina dos juegos de genes de origen distinto.\n"
+        "3) El resultado es que cada descendiente porta una combinación única, "
+        "distinta de la de sus padres y de la de sus hermanos.\n\n"
+        "No crea alelos nuevos, eso lo hace la mutación, pero genera "
+        "combinaciones inéditas en cada generación, lo que permite responder "
+        "mucho más rápido a cambios del ambiente.",
+        [
+            ("Produce mutaciones nuevas en cada generación",
+             "Las mutaciones ocurren por errores de replicación o por agentes externos, no por la reproducción sexual."),
+            ("Garantiza que la descendencia sea idéntica a los progenitores",
+             "Eso describe la reproducción asexual; la sexual produce descendencia genéticamente distinta."),
+            ("Elimina de la población los alelos perjudiciales en cada cruce",
+             "La recombinación no elimina alelos: los redistribuye en combinaciones nuevas."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Se sostiene que un rasgo llamativo como la cola del pavo real es "
+        "desventajoso, porque hace al ave más visible para los depredadores. "
+        "¿Cómo puede haberse extendido igual?",
+        "Porque mejora el acceso a la reproducción más de lo que perjudica",
+        "El criterio de la selección natural es el éxito reproductivo total, no "
+        "la supervivencia por sí sola.\n\n"
+        "1) Es cierto que la cola aumenta el riesgo de depredación y el gasto "
+        "energético.\n"
+        "2) Pero también aumenta las probabilidades de ser elegido como pareja, "
+        "y por lo tanto de dejar descendencia.\n"
+        "3) Si el beneficio reproductivo supera al costo en supervivencia, el "
+        "rasgo se extiende igual.\n\n"
+        "A esto se le llama selección sexual, y explica muchos rasgos "
+        "aparentemente contraproducentes: colores intensos, cantos que atraen "
+        "depredadores, cornamentas enormes.",
+        [
+            ("Porque en realidad la cola no representa ninguna desventaja",
+             "Sí representa un costo real: el punto es que el beneficio reproductivo lo compensa."),
+            ("Porque los depredadores prefieren presas de colores apagados",
+             "Ocurre lo contrario: un individuo llamativo es más fácil de detectar."),
+            ("Porque el rasgo apareció recientemente y la selección aún no lo elimina",
+             "El rasgo lleva muchísimas generaciones en la población: si solo tuviera costos, ya habría disminuido."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "En un ambiente estable durante mucho tiempo, ¿qué tipo de selección "
+        "esperaría encontrarse sobre un rasgo bien ajustado a ese ambiente?",
+        "Una que favorece los valores intermedios y elimina los extremos",
+        "Cuando el ambiente no cambia, la selección tiende a conservar.\n\n"
+        "1) Si el valor intermedio del rasgo es el mejor ajustado, los "
+        "individuos con valores extremos dejan menos descendencia.\n"
+        "2) El resultado es que la media se mantiene y la variabilidad "
+        "disminuye: la población se vuelve más uniforme.\n"
+        "3) Esa selección estabilizadora explica por qué muchas especies "
+        "cambian poco durante largos periodos.\n\n"
+        "Si el ambiente cambiara, la selección pasaría a favorecer un extremo y "
+        "la media se desplazaría: eso es lo que ocurrió con las polillas al "
+        "oscurecerse los troncos.",
+        [
+            ("Una que desplaza la media del rasgo hacia un extremo",
+             "Eso ocurre cuando el ambiente cambia y un extremo pasa a ser ventajoso."),
+            ("Una que favorece a los dos extremos y elimina el valor intermedio",
+             "Ese patrón aparece en ambientes heterogéneos, no en uno estable y bien ajustado."),
+            ("Ninguna: en un ambiente estable la selección natural deja de actuar",
+             "La selección sigue actuando: por eso el rasgo se mantiene en vez de dispersarse por azar."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Una especie de insecto inofensivo tiene los mismos colores llamativos "
+        "que otra venenosa de la misma región. ¿Cómo se explica esa semejanza?",
+        "Los depredadores evitan ese patrón y eso favorece a los imitadores",
+        "El parecido tiene una ventaja concreta que la selección refuerza.\n\n"
+        "1) Los depredadores aprenden a asociar ese patrón de colores con una "
+        "experiencia desagradable y lo evitan.\n"
+        "2) En la especie inofensiva, los individuos que por variación se "
+        "parecen más al modelo son atacados menos y dejan más descendencia.\n"
+        "3) Generación tras generación, el parecido se acentúa.\n\n"
+        "El sistema tiene un límite: si los imitadores se vuelven demasiado "
+        "abundantes respecto del modelo, los depredadores dejan de asociar el "
+        "patrón con el peligro y la protección se debilita.",
+        [
+            ("Ambas especies descienden de un antepasado común muy reciente",
+             "El parecido es superficial y responde a presión selectiva, no necesariamente a parentesco cercano."),
+            ("La especie inofensiva imita conscientemente a la venenosa",
+             "No hay imitación deliberada: el parecido resulta de reproducción diferencial a lo largo de generaciones."),
+            ("Los colores llamativos aparecen siempre en los insectos de una misma región",
+             "En cualquier región conviven insectos de coloración muy diversa."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se afirma que si la evolución fuera cierta, hoy deberíamos ver a un "
+        "mono convertirse en humano. ¿Cómo se evalúa esa objeción?",
+        "Parte de un error: los humanos y los monos actuales son linajes hermanos",
+        "La objeción supone una escalera lineal que la teoría no plantea.\n\n"
+        "1) La evolución no describe que una especie actual se transforme en "
+        "otra especie actual: describe que ambas descienden de un antepasado "
+        "común ya extinguido.\n"
+        "2) Los monos de hoy llevan tanto tiempo evolucionando como nosotros "
+        "desde esa separación: no son versiones anteriores de nada.\n"
+        "3) Además, los cambios que llevan a una especie nueva requieren miles "
+        "de generaciones y una población, no un individuo.\n\n"
+        "Lo que sí se observa en tiempo humano es evolución en organismos de "
+        "generación corta: bacterias, insectos, virus.",
+        [
+            ("Es correcta: si no se observa esa transformación, la teoría falla",
+             "La teoría nunca predijo esa transformación, así que su ausencia no la refuta."),
+            ("Es correcta, pero el proceso ocurre demasiado lento para observarlo",
+             "El problema no es solo de velocidad: la transformación descrita no forma parte de lo que la teoría afirma."),
+            ("Parte de un error, porque en realidad los humanos no comparten antepasados con los monos",
+             "Sí los comparten: la evidencia molecular y fósil lo respalda con claridad."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Un investigador estudia si el largo del pico de una población de aves "
+        "cambió tras una sequía que dejó solo semillas grandes y duras. ¿Qué "
+        "datos necesita para sostener que hubo selección natural?",
+        "El largo antes y después, y que el rasgo sea heredable",
+        "Establecer selección natural exige más que observar un cambio.\n\n"
+        "1) Hay que comprobar que la distribución del rasgo CAMBIÓ entre "
+        "generaciones: para eso se necesita la medición previa.\n"
+        "2) Hay que comprobar que el rasgo se HEREDA: si los picos grandes no "
+        "se transmitieran a la descendencia, el cambio no sería evolutivo.\n"
+        "3) Y conviene mostrar la relación entre el rasgo y la supervivencia "
+        "durante la sequía.\n\n"
+        "Sin el requisito de heredabilidad, un cambio en la población podría "
+        "deberse a que los individuos crecieron distinto, y eso no es evolución.",
+        [
+            ("Solo el largo del pico después de la sequía",
+             "Sin la medición previa no hay con qué comparar: no se puede afirmar que haya cambiado."),
+            ("La cantidad total de aves antes y después de la sequía",
+             "El tamaño poblacional informa sobre mortalidad, pero no sobre qué rasgos fueron favorecidos."),
+            ("El tipo de semillas disponibles en años anteriores a la sequía",
+             "Es un antecedente útil del ambiente, pero no reemplaza la medición del rasgo ni la prueba de heredabilidad."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se comparan dos afirmaciones: (I) la evolución es una teoría, así que "
+        "no está demostrada, y (II) en ciencia una teoría es una explicación "
+        "respaldada por evidencia. ¿Cómo se evalúan?",
+        "La segunda es correcta: teoría no significa suposición",
+        "La objeción se apoya en el uso cotidiano de la palabra.\n\n"
+        "1) En el lenguaje común, teoría se usa como sinónimo de conjetura o "
+        "sospecha.\n"
+        "2) En ciencia, una teoría es un cuerpo explicativo que integra muchas "
+        "observaciones, hace predicciones contrastables y ha resistido intentos "
+        "de refutación.\n"
+        "3) La teoría de la gravitación y la teoría celular tienen el mismo "
+        "estatus: nadie las considera suposiciones.\n\n"
+        "Que algo sea una teoría es un nivel ALTO de respaldo, no bajo. Una idea "
+        "sin respaldo se llamaría hipótesis, y ni siquiera eso si no es "
+        "contrastable.",
+        [
+            ("La primera es correcta: mientras sea teoría, faltan pruebas",
+             "El estatus de teoría se alcanza justamente por acumular pruebas, no por carecer de ellas."),
+            ("Ambas son correctas y describen aspectos distintos del problema",
+             "No son compatibles: la primera se apoya en un sentido de la palabra que no es el científico."),
+            ("La segunda es correcta, pero solo se aplica a las teorías de la física",
+             "El uso científico del término es común a todas las disciplinas."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se encuentran fósiles de marsupiales en Sudamérica, la Antártica y "
+        "Australia, tres continentes hoy muy separados por el océano. ¿Qué "
+        "explicación integra mejor este hallazgo?",
+        "Los tres continentes estuvieron unidos cuando el grupo se dispersó",
+        "El dato exige combinar biología con geología.\n\n"
+        "1) Los marsupiales son animales terrestres y no podrían haber cruzado "
+        "océanos abiertos de miles de kilómetros.\n"
+        "2) La tectónica de placas indica que Sudamérica, la Antártica y "
+        "Australia formaron parte de un mismo continente austral.\n"
+        "3) El grupo se dispersó por ese territorio continuo y quedó separado "
+        "cuando los bloques se apartaron.\n\n"
+        "Que dos disciplinas independientes, la paleontología y la geología, "
+        "converjan en la misma reconstrucción es lo que da fuerza a la "
+        "explicación.",
+        [
+            ("Los marsupiales evolucionaron de manera independiente en cada continente",
+             "Su semejanza anatómica y molecular es demasiado específica para tres orígenes separados."),
+            ("Fueron transportados entre continentes por corrientes marinas",
+             "Un mamífero terrestre no sobrevive a una travesía oceánica de esa escala."),
+            ("Los fósiles fueron trasladados por procesos geológicos posteriores",
+             "Los fósiles se encuentran en estratos coherentes con la fauna local de cada continente, no desplazados."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Un estudiante afirma que las estructuras análogas prueban parentesco "
+        "cercano entre las especies que las poseen. ¿Cómo se corrige?",
+        "Las análogas indican presiones semejantes, no parentesco",
+        "Es el error inverso al de confundir homología con función.\n\n"
+        "1) Las estructuras ANÁLOGAS comparten función pero tienen orígenes y "
+        "anatomías internas distintas: el ala de un insecto y la de un ave.\n"
+        "2) Su semejanza resulta de que ambos linajes enfrentaron presiones "
+        "parecidas, no de que compartan un antepasado reciente.\n"
+        "3) Las que sí indican parentesco son las HOMÓLOGAS, que conservan el "
+        "mismo plan estructural aunque cumplan funciones distintas.\n\n"
+        "Por eso, para reconstruir parentescos, se buscan homologías y se "
+        "descartan cuidadosamente las analogías: usar estas últimas produce "
+        "árboles equivocados.",
+        [
+            ("Las análogas prueban parentesco, pero solo entre vertebrados",
+             "No prueban parentesco en ningún grupo: su semejanza responde a convergencia."),
+            ("Las análogas y las homólogas son lo mismo con nombres distintos",
+             "Se distinguen precisamente por si comparten origen o solo función."),
+            ("Las análogas indican parentesco lejano, y las homólogas, cercano",
+             "Las análogas no indican grado alguno de parentesco: pueden darse entre linajes remotísimos."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se estudia una población de peces en un lago y se observa que los "
+        "individuos de tamaño intermedio son los más frecuentes, mientras que "
+        "los muy pequeños son depredados y los muy grandes no encuentran refugio. "
+        "¿Qué predicción se puede hacer sobre la población si las condiciones se "
+        "mantienen?",
+        "La variabilidad de tamaños disminuirá con el tiempo",
+        "La selección contra ambos extremos concentra la población en torno al "
+        "valor intermedio.\n\n"
+        "1) Los individuos de los extremos dejan menos descendencia que los "
+        "intermedios.\n"
+        "2) Si el tamaño es heredable, la proporción de variantes extremas "
+        "disminuye generación tras generación.\n"
+        "3) La media se mantiene, pero la dispersión alrededor de ella se "
+        "reduce: la población se vuelve más uniforme.\n\n"
+        "Es selección estabilizadora. Su efecto es conservador, pero tiene un "
+        "costo: menos variabilidad significa menos capacidad de responder si el "
+        "ambiente cambia.",
+        [
+            ("El tamaño promedio aumentará de manera sostenida",
+             "El promedio no se desplaza: la selección actúa contra los dos extremos por igual."),
+            ("Aparecerán dos grupos separados, uno pequeño y otro grande",
+             "Ese resultado correspondería a una selección que favoreciera los extremos, y aquí ocurre lo contrario."),
+            ("La población dejará de evolucionar porque alcanzó su forma óptima",
+             "La selección sigue actuando: mantener el rasgo requiere que siga eliminando los extremos en cada generación."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "¿Por qué una población con poca variabilidad genética es más vulnerable "
+        "ante un cambio ambiental brusco?",
+        "Es menos probable que alguien porte la variante que sirve",
+        "La selección natural solo puede trabajar con lo que ya existe en la "
+        "población.\n\n"
+        "1) Ante un cambio brusco, la supervivencia del grupo depende de que "
+        "algunos individuos porten variantes que funcionen en las nuevas "
+        "condiciones.\n"
+        "2) Con poca variabilidad, la probabilidad de que esas variantes estén "
+        "presentes es baja.\n"
+        "3) La población no puede generarlas por necesitarlas: las mutaciones "
+        "son azarosas y lentas frente a un cambio abrupto.\n\n"
+        "Por eso la conservación de especies amenazadas se preocupa tanto del "
+        "tamaño poblacional: poblaciones pequeñas pierden variabilidad y quedan "
+        "sin margen de respuesta.",
+        [
+            ("Porque sus individuos son físicamente más débiles",
+             "La variabilidad genética no determina la fortaleza individual: determina el rango de respuestas disponibles en la población."),
+            ("Porque las mutaciones ocurren con menor frecuencia en poblaciones uniformes",
+             "La tasa de mutación no depende de cuán variable sea la población."),
+            ("Porque no pueden reproducirse entre sí al ser demasiado parecidos",
+             "Pueden reproducirse; el problema es la falta de variantes útiles ante el cambio, no la incompatibilidad."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "¿Qué aporta el registro fósil que ninguna otra línea de evidencia puede "
+        "aportar?",
+        "Información directa de organismos que ya no existen",
+        "Cada línea de evidencia tiene su alcance propio.\n\n"
+        "1) La anatomía comparada, la embriología y la biología molecular "
+        "trabajan con organismos VIVOS: reconstruyen el pasado por inferencia.\n"
+        "2) El registro fósil aporta restos de organismos que existieron y ya no "
+        "están, con formas que no se podrían haber deducido de los vivos.\n"
+        "3) Además permite ubicar los cambios en el tiempo, mediante la datación "
+        "de los estratos.\n\n"
+        "Esa dimensión temporal es lo que lo hace insustituible: las demás "
+        "evidencias indican parentesco, y el registro fósil indica cuándo.",
+        [
+            ("Las secuencias de ADN de las especies extinguidas",
+             "El ADN se degrada rápidamente: solo se recupera en casos excepcionales y relativamente recientes."),
+            ("El comportamiento de los organismos del pasado",
+             "El comportamiento casi no fosiliza: apenas se infiere de huellas y de la anatomía."),
+            ("La certeza de que todas las especies que existieron dejaron rastro",
+             "Ocurre lo contrario: la inmensa mayoría de las especies no dejó ningún fósil."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Un rasgo neutro, que no confiere ventaja ni desventaja, aumenta su "
+        "frecuencia en una población pequeña a lo largo de varias generaciones. "
+        "¿Qué mecanismo lo explica?",
+        "La deriva génica, es decir, el azar en el muestreo reproductivo",
+        "No todo cambio de frecuencias se debe a la selección.\n\n"
+        "1) Cada generación es una muestra de la anterior, y toda muestra tiene "
+        "variación al azar.\n"
+        "2) En una población pequeña, esa variación puede ser grande: una "
+        "variante puede aumentar o desaparecer sin que nada la favorezca.\n"
+        "3) El proceso es más intenso cuanto menor es la población, y con "
+        "poblaciones grandes se vuelve despreciable.\n\n"
+        "Por eso, para afirmar que un cambio se debe a selección natural, hay "
+        "que descartar antes que pueda explicarse por azar.",
+        [
+            ("La selección natural, que favoreció ese rasgo sin que se note",
+             "Por definición un rasgo neutro no otorga ventaja reproductiva: no hay nada que seleccionar."),
+            ("Una mutación que se repitió muchas veces en la misma población",
+             "Las mutaciones repetidas son rarísimas y no explican un aumento sostenido de frecuencia."),
+            ("El flujo de genes desde otra población vecina",
+             "Es un mecanismo posible en general, pero el enunciado describe una población pequeña y aislada."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Se define especie, en el criterio biológico más usado, como un grupo de "
+        "poblaciones que pueden cruzarse entre sí y dejar descendencia fértil. "
+        "¿Qué dificultad tiene ese criterio?",
+        "No se puede aplicar a fósiles ni a organismos asexuales",
+        "El criterio es útil pero tiene un alcance limitado.\n\n"
+        "1) Con FÓSILES es imposible comprobar si dos poblaciones podían "
+        "cruzarse: solo quedan restos.\n"
+        "2) Con organismos ASEXUALES, como las bacterias, la definición no tiene "
+        "sentido: no hay cruzamiento que evaluar.\n"
+        "3) Por eso se usan además otros criterios, basados en semejanza "
+        "morfológica, ecológica o genética.\n\n"
+        "La existencia de varios criterios no es un defecto: refleja que la "
+        "naturaleza no siempre viene dividida en categorías nítidas, y que hay "
+        "poblaciones en pleno proceso de separación.",
+        [
+            ("Que exige un análisis genético que no siempre está disponible",
+             "El criterio se basa en la capacidad de cruzamiento, no en un análisis genético."),
+            ("Que dos individuos de la misma especie a veces no se reproducen entre sí",
+             "Que dos individuos concretos no se reproduzcan no invalida el criterio, que se refiere a la capacidad de las poblaciones."),
+            ("Que no distingue entre especies muy parecidas entre sí",
+             "Justamente sí las distingue: si no dejan descendencia fértil, son especies distintas por más parecidas que se vean."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "En un archipiélago, una sola especie colonizadora dio origen con el "
+        "tiempo a varias especies que ocupan modos de vida distintos en cada "
+        "isla. ¿Cómo se denomina ese proceso?",
+        "Radiación adaptativa",
+        "Es un patrón característico de ambientes con muchos nichos "
+        "disponibles.\n\n"
+        "1) La especie colonizadora llega a un territorio con recursos variados "
+        "y poca competencia.\n"
+        "2) Poblaciones aisladas en distintas islas quedan sometidas a presiones "
+        "distintas y divergen.\n"
+        "3) En relativamente poco tiempo evolutivo surgen varias especies "
+        "descendientes de una sola, cada una especializada.\n\n"
+        "Los pinzones de Galápagos son el ejemplo clásico, y hay muchos otros en "
+        "archipiélagos y en lagos aislados.",
+        [
+            ("Convergencia evolutiva",
+             "La convergencia produce parecidos entre linajes distintos; aquí un solo linaje se diversifica."),
+            ("Selección estabilizadora",
+             "La selección estabilizadora reduce la variabilidad; aquí ocurre lo contrario."),
+            ("Deriva génica, porque las poblaciones de cada isla son pequeñas",
+             "La deriva puede intervenir, pero el patrón descrito, con especialización según los recursos de cada isla, apunta a selección."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "¿Qué significa que la selección natural actúa sobre el fenotipo y no "
+        "directamente sobre el genotipo?",
+        "El ambiente interactúa con los rasgos expresados del organismo",
+        "La distinción explica varios fenómenos evolutivos.\n\n"
+        "1) El depredador ve el color de la polilla, no su secuencia de ADN: lo "
+        "que determina si sobrevive es el rasgo EXPRESADO.\n"
+        "2) El genotipo se ve afectado de manera indirecta, porque los genes que "
+        "producen fenotipos favorables se transmiten más.\n"
+        "3) Por eso un alelo recesivo puede permanecer largo tiempo en una "
+        "población aunque sea perjudicial: en los heterocigotos no se expresa y "
+        "queda oculto a la selección.\n\n"
+        "También explica que un mismo genotipo pueda tener distinto éxito según "
+        "el ambiente en que se exprese.",
+        [
+            ("El ambiente modifica directamente los genes del organismo",
+             "El ambiente no reescribe los genes: actúa sobre los rasgos expresados y con ello afecta qué genes se transmiten."),
+            ("Los genes no influyen en la supervivencia de un individuo",
+             "Sí influyen, pero a través del fenotipo que producen."),
+            ("Solo los rasgos aprendidos durante la vida están sujetos a selección",
+             "Los rasgos aprendidos no se heredan; los que la selección puede fijar son los que tienen base genética."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Un grupo compara la resistencia a un herbicida en malezas de campos "
+        "tratados durante diez años y en campos nunca tratados. ¿Qué resultado "
+        "sería consistente con la selección natural y cuál la contradiría?",
+        "Consistente: más resistencia en los tratados y algo en los no tratados",
+        "El diseño compara poblaciones con distinta historia de exposición.\n\n"
+        "1) Si la resistencia surge por mutaciones azarosas previas, debería "
+        "aparecer en frecuencias bajas también en los campos no tratados.\n"
+        "2) En los campos tratados, la exposición repetida habría eliminado a "
+        "las sensibles, elevando mucho la frecuencia de resistentes.\n"
+        "3) Ese es el resultado que la selección natural predice.\n\n"
+        "La contradiría encontrar resistencia CERO en los campos no tratados y "
+        "alta en los tratados: eso sugeriría que el herbicida induce la variante "
+        "en vez de seleccionarla.",
+        [
+            ("Consistente: resistencia idéntica en ambos tipos de campo",
+             "Si la frecuencia fuera igual, la exposición no habría tenido ningún efecto selectivo."),
+            ("Consistente: resistencia solo en los campos no tratados",
+             "Sería el resultado opuesto al esperado: la exposición debería aumentar la frecuencia de resistentes."),
+            ("Consistente: resistencia cero en los no tratados y alta en los tratados",
+             "Ese resultado apoyaría la idea de que el herbicida INDUCE la variante, que es la hipótesis rival."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se afirma que la extinción de una especie demuestra que la selección "
+        "natural falló. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: la selección no garantiza la supervivencia del grupo",
+        "La selección natural no es un mecanismo de rescate.\n\n"
+        "1) Solo puede favorecer variantes que YA existen en la población: si "
+        "ninguna sirve en las nuevas condiciones, no hay nada que favorecer.\n"
+        "2) Un cambio ambiental muy rápido puede superar cualquier respuesta "
+        "posible, sobre todo en especies de generación larga.\n"
+        "3) La extinción es de hecho el destino de la enorme mayoría de las "
+        "especies que han existido.\n\n"
+        "Hablar de fallar supone que el proceso persigue un objetivo, y no lo "
+        "hace: describe qué ocurre con las frecuencias, sin garantizar ningún "
+        "resultado.",
+        [
+            ("Es correcta: si la especie estuviera bien adaptada, no se habría extinguido",
+             "La adaptación es siempre a un ambiente determinado: si ese ambiente cambia lo bastante rápido, deja de servir."),
+            ("Es correcta, porque la selección natural debería haber generado las variantes necesarias",
+             "La selección no genera variantes: solo puede actuar sobre las que ya existen."),
+            ("Es incorrecta, porque en realidad las especies bien adaptadas nunca se extinguen",
+             "Se han extinguido especies muy exitosas durante millones de años: ninguna adaptación garantiza permanencia."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "dificil",
+        "Se comparan tres explicaciones para que dos especies compartan un rasgo: "
+        "herencia de un antepasado común, convergencia por presiones semejantes, "
+        "y azar. ¿Qué criterio ayuda a decidir entre la primera y la segunda?",
+        "Examinar si el rasgo comparte estructura interna y desarrollo",
+        "La distinción entre homología y analogía se resuelve mirando el "
+        "detalle.\n\n"
+        "1) Si el rasgo comparte el mismo plan anatómico, los mismos huesos o "
+        "tejidos y un desarrollo embrionario equivalente, se trata de HOMOLOGÍA: "
+        "apunta a antepasado común.\n"
+        "2) Si cumple la misma función con estructuras internas distintas y "
+        "orígenes embrionarios distintos, es ANALOGÍA: apunta a convergencia.\n"
+        "3) La comparación molecular refuerza el diagnóstico: los genes "
+        "implicados coinciden en un caso y no en el otro.\n\n"
+        "El criterio no es qué hace la estructura sino cómo está hecha y de "
+        "dónde viene.",
+        [
+            ("Comparar cuán parecidos se ven los dos organismos a simple vista",
+             "El parecido superficial es justamente lo que puede engañar: hay convergencias muy llamativas entre linajes remotos."),
+            ("Verificar si las dos especies habitan la misma región",
+             "La distribución geográfica es un dato adicional, pero no distingue homología de analogía."),
+            ("Comprobar cuál de las dos especies apareció primero en el registro fósil",
+             "El orden de aparición no informa si el rasgo tiene el mismo origen estructural en ambas."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Alfred Russel Wallace llegó de manera independiente a la misma "
+        "explicación que Darwin y le envió un manuscrito. ¿Qué muestra ese "
+        "episodio sobre el trabajo científico?",
+        "Que una explicación puede surgir en paralelo si la evidencia la sostiene",
+        "El caso es un ejemplo de descubrimiento simultáneo.\n\n"
+        "1) Los dos trabajaban sobre observaciones parecidas: distribución "
+        "geográfica de especies, variación dentro de las poblaciones, presión "
+        "sobre los recursos.\n"
+        "2) Llegaron a la misma explicación sin conocer el trabajo del otro.\n"
+        "3) Sus ideas se presentaron conjuntamente en 1858, y Darwin publicó al "
+        "año siguiente el desarrollo extenso.\n\n"
+        "Que dos personas lleguen por separado a lo mismo sugiere que la "
+        "explicación estaba disponible en la evidencia y no dependía de la "
+        "genialidad de un individuo.",
+        [
+            ("Que Darwin copió el trabajo de Wallace y lo publicó como propio",
+             "Darwin llevaba dos décadas trabajando en el tema, y ambos se presentaron conjuntamente."),
+            ("Que las teorías científicas se aceptan por acuerdo entre investigadores",
+             "Se aceptan por su respaldo empírico; la coincidencia de dos autores no fue lo que la validó."),
+            ("Que la explicación era obvia y cualquiera podía haberla formulado",
+             "No era obvia: llevaba décadas sin resolverse pese a que el problema estaba planteado."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "medio",
+        "Al comparar los huesos de la extremidad anterior de un caballo y de un "
+        "topo, se encuentra el mismo conjunto de huesos con proporciones muy "
+        "distintas. ¿Qué se concluye?",
+        "Son homólogas: mismo origen, modificadas para funciones distintas",
+        "Lo informativo es la correspondencia hueso a hueso.\n\n"
+        "1) Ambas extremidades tienen los mismos elementos anatómicos, "
+        "dispuestos en el mismo orden.\n"
+        "2) Sus proporciones difieren mucho: el caballo corre y el topo cava.\n"
+        "3) Esa combinación de plan compartido y función distinta es la "
+        "definición de homología, y se explica por descendencia con "
+        "modificación.\n\n"
+        "Si fueran análogas no habría correspondencia hueso a hueso: cumplirían "
+        "funciones parecidas con estructuras internas sin relación.",
+        [
+            ("Son análogas: cumplen la misma función con estructuras distintas",
+             "Las funciones son distintas -correr y cavar- y las estructuras, iguales: es exactamente el caso opuesto."),
+            ("Son vestigiales, porque perdieron parte de su función original",
+             "Ambas extremidades son plenamente funcionales, cada una para su modo de vida."),
+            ("No tienen relación entre sí, porque los dos animales viven de maneras muy distintas",
+             "El modo de vida distinto es justamente lo que hace significativa la coincidencia estructural."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "¿Qué se entiende por fósil?",
+        "Un resto o una huella de un organismo del pasado conservado en la roca",
+        "El registro fósil incluye más que huesos.\n\n"
+        "1) Pueden fosilizar partes duras como huesos, dientes y conchas, que "
+        "son las más frecuentes.\n"
+        "2) También quedan huellas, madrigueras, marcas de raíces e incluso "
+        "impresiones de tejidos blandos en condiciones excepcionales.\n"
+        "3) La fosilización requiere que el organismo quede rápidamente cubierto "
+        "por sedimento y protegido de la descomposición: por eso es un proceso "
+        "raro.\n\n"
+        "Esa rareza explica que el registro sea incompleto y que cada hallazgo "
+        "bien conservado sea valioso.",
+        [
+            ("Un organismo antiguo que sigue vivo sin haber cambiado",
+             "Eso a veces se llama fósil viviente, pero es una expresión figurada: un fósil es un resto conservado."),
+            ("Una roca con forma parecida a la de un ser vivo",
+             "El parecido casual no basta: un fósil conserva estructura de origen biológico."),
+            ("Cualquier resto de un organismo, aunque haya muerto hace poco tiempo",
+             "La fosilización requiere procesos geológicos que toman escalas de tiempo mucho mayores."),
+        ],
+    ),
+    _q(
+        "cie_evolucion", "facil",
+        "¿Qué es la variabilidad genética de una población?",
+        "Las diferencias hereditarias que existen entre sus individuos",
+        "Es la condición de partida de todo cambio evolutivo.\n\n"
+        "1) Los individuos de una población no son genéticamente idénticos: "
+        "portan versiones distintas de muchos genes.\n"
+        "2) Esa variabilidad proviene de las mutaciones y, en organismos "
+        "sexuales, de la recombinación durante la meiosis y de la fecundación.\n"
+        "3) Sin ella, la selección natural no tendría entre qué elegir y la "
+        "población no podría cambiar.\n\n"
+        "Por eso conservar la variabilidad de una especie amenazada es tan "
+        "importante como conservar el número de individuos.",
+        [
+            ("Las diferencias de tamaño y peso que dependen de la alimentación",
+             "Esas diferencias no son hereditarias: la variabilidad genética se refiere a lo que se transmite."),
+            ("La cantidad total de genes que tiene cada individuo",
+             "El número de genes es prácticamente el mismo dentro de una especie: lo que varía son las versiones."),
+            ("La capacidad de una especie de generar mutaciones cuando las necesita",
+             "Las mutaciones no se generan por necesidad: ocurren al azar."),
+        ],
+    ),
+]
