@@ -89800,3 +89800,2337 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Electricidad": ley de Ohm y circuitos
+#
+# El temario pide la ley de Ohm con resistores en serie, en paralelo o de forma
+# mixta, y la corriente eléctrica entendida como flujo de cargas en circuitos de
+# corriente continua. El consumo, la eficiencia y la instalación domiciliaria
+# van en el nodo `cie_energia_electrica`.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_electricidad", "facil",
+        "Por un conductor circula una corriente de 2 A durante 5 s. ¿Qué "
+        "cantidad de carga lo atravesó?",
+        "10 C",
+        "La corriente es la carga que pasa por unidad de tiempo.\n\n"
+        "1) La relación es I = Q / t, de donde Q = I · t.\n"
+        "2) Reemplaza: Q = 2 A · 5 s.\n"
+        "3) Resulta 10 C.\n\n"
+        "Un ampere es un coulomb por segundo: por eso la corriente mide caudal "
+        "de carga, igual que un caudal de agua mide litros por segundo.",
+        [
+            ("0,4 C", "Dividió la corriente por el tiempo en lugar de multiplicarlos."),
+            ("2,5 C", "Invirtió la división: usó el tiempo dividido por la corriente."),
+            ("7 C", "Sumó la corriente y el tiempo, magnitudes que no se pueden sumar."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "Por una resistencia de 15 Ω circula una corriente de 4 A. ¿Cuál es la "
+        "diferencia de potencial entre sus extremos?",
+        "60 V",
+        "Se aplica la ley de Ohm en su forma directa.\n\n"
+        "1) La relación es V = I · R.\n"
+        "2) Reemplaza: V = 4 A · 15 Ω.\n"
+        "3) Resulta 60 V.\n\n"
+        "La ley de Ohm relaciona tres magnitudes: conocidas dos de ellas, la "
+        "tercera queda determinada.",
+        [
+            ("3,75 V", "Dividió la resistencia por la corriente en vez de multiplicarlas."),
+            ("0,27 V", "Invirtió la división: usó la corriente dividida por la resistencia."),
+            ("19 V", "Sumó la corriente y la resistencia, que son magnitudes distintas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "Dos resistencias de 8 Ω y 12 Ω se conectan en serie. ¿Cuál es la "
+        "resistencia equivalente?",
+        "20 Ω",
+        "En serie las resistencias se suman directamente.\n\n"
+        "1) La corriente debe atravesar una y después la otra: los obstáculos se "
+        "acumulan.\n"
+        "2) Por eso la equivalente es la suma: 8 + 12 = 20 Ω.\n"
+        "3) La equivalente en serie es siempre MAYOR que cualquiera de las "
+        "resistencias individuales.\n\n"
+        "En paralelo ocurre lo contrario: la equivalente resulta menor que la "
+        "más pequeña de ellas.",
+        [
+            ("4 Ω", "Restó las resistencias: en serie se suman."),
+            ("4,8 Ω", "Aplicó la fórmula del paralelo, que corresponde a la otra conexión."),
+            ("96 Ω", "Multiplicó las resistencias en vez de sumarlas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "En un circuito en serie con dos ampolletas, ¿qué magnitud es igual en "
+        "ambas?",
+        "La corriente que las atraviesa",
+        "En serie hay un único camino para la carga.\n\n"
+        "1) Toda la carga que sale de la fuente debe pasar por la primera "
+        "ampolleta y después por la segunda: no hay bifurcaciones.\n"
+        "2) Por lo tanto la corriente es la misma en todo el circuito.\n"
+        "3) Lo que se reparte es el VOLTAJE: la suma de las caídas en cada "
+        "elemento iguala al voltaje de la fuente.\n\n"
+        "En paralelo la situación se invierte: el voltaje es común y las "
+        "corrientes se reparten.",
+        [
+            ("El voltaje en cada una",
+             "El voltaje común es característico de la conexión en PARALELO, no de la serie."),
+            ("La resistencia de cada una",
+             "Las resistencias pueden ser distintas: eso depende de las ampolletas, no de cómo se conecten."),
+            ("La potencia que disipa cada una, porque comparten la misma fuente",
+             "Con la misma corriente pero resistencias distintas, la potencia disipada difiere entre ambas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "¿Qué es la corriente eléctrica en un circuito de corriente continua?",
+        "Un flujo ordenado de cargas a través del conductor",
+        "La corriente no es una sustancia que se consuma: es un movimiento.\n\n"
+        "1) En un metal, los electrones libres se desplazan en un sentido "
+        "definido cuando se aplica una diferencia de potencial.\n"
+        "2) Ese desplazamiento ordenado es la corriente, y se mide en ampere, "
+        "es decir, coulomb por segundo.\n"
+        "3) En corriente continua ese sentido no cambia con el tiempo, a "
+        "diferencia de la corriente alterna.\n\n"
+        "Las cargas no se gastan al recorrer el circuito: lo que se transfiere y "
+        "se transforma es energía.",
+        [
+            ("Una sustancia que la batería produce y los aparatos consumen",
+             "No hay ninguna sustancia nueva: las cargas ya estaban en el conductor y solo se ponen en movimiento."),
+            ("La energía que viaja desde la fuente hasta el aparato",
+             "La energía sí se transfiere, pero la corriente es el flujo de carga, no la energía misma."),
+            ("El calor que se genera al circular electricidad por un cable",
+             "El calor es un efecto de la corriente, no su definición."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "¿Qué instrumento se conecta en serie para medir la corriente y cuál en "
+        "paralelo para medir el voltaje?",
+        "El amperímetro en serie y el voltímetro en paralelo",
+        "Cada instrumento se conecta según la magnitud que mide.\n\n"
+        "1) El AMPERÍMETRO mide el flujo de carga, así que ese flujo debe "
+        "atravesarlo: se conecta en serie, intercalado en el circuito.\n"
+        "2) El VOLTÍMETRO mide la diferencia de potencial entre dos puntos, así "
+        "que se conecta entre ellos: en paralelo con el elemento.\n"
+        "3) Por eso el amperímetro debe tener resistencia muy baja y el "
+        "voltímetro, muy alta: así ninguno altera el circuito que mide.\n\n"
+        "Conectar un amperímetro en paralelo con una fuente produce un "
+        "cortocircuito.",
+        [
+            ("El amperímetro en paralelo y el voltímetro en serie",
+             "Está invertido: en paralelo el amperímetro provocaría un cortocircuito."),
+            ("Ambos en serie con el elemento a medir",
+             "Un voltímetro en serie, con su resistencia alta, prácticamente interrumpiría el circuito."),
+            ("Ambos en paralelo, porque así no alteran el funcionamiento del circuito",
+             "El amperímetro necesita que la corriente lo atraviese: en paralelo no mediría la corriente del elemento."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Dos resistencias de 6 Ω y 12 Ω se conectan en paralelo. ¿Cuál es la "
+        "resistencia equivalente?",
+        "4 Ω",
+        "En paralelo se suman los inversos.\n\n"
+        "1) La relación es 1/R = 1/6 + 1/12.\n"
+        "2) Iguala denominadores: 2/12 + 1/12 = 3/12 = 1/4.\n"
+        "3) Entonces R = 4 Ω.\n\n"
+        "Comprobación de sentido: la equivalente en paralelo siempre resulta "
+        "menor que la más pequeña de las resistencias, porque agregar caminos "
+        "facilita el paso de la corriente. Aquí 4 es menor que 6.",
+        [
+            ("18 Ω", "Sumó las resistencias, que es lo que corresponde a la conexión en serie."),
+            ("9 Ω", "Promedió las dos resistencias, operación que no corresponde a ninguna conexión."),
+            ("2 Ω", "Calculó 1/6 + 1/12 y olvidó invertir el resultado final."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Tres resistencias iguales de 9 Ω se conectan en paralelo. ¿Cuál es la "
+        "resistencia equivalente?",
+        "3 Ω",
+        "Cuando las resistencias en paralelo son iguales, hay un atajo.\n\n"
+        "1) Con n resistencias iguales de valor R en paralelo, la equivalente es "
+        "R dividida por n.\n"
+        "2) Reemplaza: 9 ÷ 3 = 3 Ω.\n"
+        "3) Comprobación por la fórmula general: 1/9 + 1/9 + 1/9 = 3/9 = 1/3, "
+        "así que R = 3 Ω.\n\n"
+        "Tiene sentido: tres caminos idénticos dejan pasar el triple de "
+        "corriente que uno solo, lo que equivale a un tercio de la resistencia.",
+        [
+            ("27 Ω", "Sumó las tres resistencias, que corresponde a la conexión en serie."),
+            ("9 Ω", "Supuso que la equivalente es igual a cada una, lo que no ocurre en ninguna conexión de tres elementos."),
+            ("1/3 Ω", "Se quedó con la suma de los inversos sin volver a invertir el resultado."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Una resistencia de 40 Ω se conecta a una fuente de 120 V. ¿Qué "
+        "corriente circula por ella?",
+        "3 A",
+        "Se despeja la corriente de la ley de Ohm.\n\n"
+        "1) De V = I · R se obtiene I = V / R.\n"
+        "2) Reemplaza: I = 120 ÷ 40.\n"
+        "3) Resulta 3 A.\n\n"
+        "Si se duplicara la resistencia manteniendo el voltaje, la corriente se "
+        "reduciría a la mitad: son inversamente proporcionales.",
+        [
+            ("4.800 A", "Multiplicó el voltaje por la resistencia en vez de dividir."),
+            ("0,33 A", "Invirtió la división: usó la resistencia dividida por el voltaje."),
+            ("80 A", "Restó la resistencia del voltaje, magnitudes que no se pueden restar."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Dos resistencias de 10 Ω y 20 Ω se conectan en serie a una fuente de "
+        "60 V. ¿Qué corriente circula por el circuito?",
+        "2 A",
+        "Primero la resistencia equivalente y después la ley de Ohm.\n\n"
+        "1) En serie: R = 10 + 20 = 30 Ω.\n"
+        "2) Aplica la ley de Ohm al circuito completo: I = 60 ÷ 30.\n"
+        "3) Resulta 2 A, la misma en las dos resistencias.\n\n"
+        "Comprobación de las caídas de voltaje: 2 · 10 = 20 V en la primera y "
+        "2 · 20 = 40 V en la segunda, que suman los 60 V de la fuente.",
+        [
+            ("6 A", "Usó solo la resistencia de 10 Ω, sin sumar la otra."),
+            ("3 A", "Usó solo la resistencia de 20 Ω."),
+            ("1,5 A", "Calculó la equivalente como si estuvieran en paralelo."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En un circuito en paralelo con dos resistencias distintas conectadas a "
+        "una batería, ¿por cuál circula más corriente?",
+        "Por la de menor resistencia",
+        "En paralelo ambas tienen el mismo voltaje aplicado.\n\n"
+        "1) El voltaje entre los extremos de cada rama es el de la batería, "
+        "igual para las dos.\n"
+        "2) Por la ley de Ohm, I = V / R: con el mismo voltaje, la corriente es "
+        "inversamente proporcional a la resistencia.\n"
+        "3) La rama de menor resistencia deja pasar más corriente.\n\n"
+        "Es lo que ocurre en una instalación domiciliaria: todos los artefactos "
+        "reciben los mismos 220 V y cada uno toma la corriente que su "
+        "resistencia permite.",
+        [
+            ("Por la de mayor resistencia",
+             "Mayor resistencia significa mayor oposición al paso de la carga y por lo tanto menos corriente."),
+            ("Por ambas circula la misma corriente",
+             "Eso ocurre en la conexión en SERIE, donde hay un solo camino."),
+            ("Depende de cuál esté conectada más cerca de la batería",
+             "En paralelo la posición no influye: ambas ramas ven el mismo voltaje."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En un circuito en serie con dos ampolletas, una se quema y deja de "
+        "conducir. ¿Qué ocurre con la otra?",
+        "También se apaga, porque se interrumpe el circuito",
+        "En serie hay un único camino para la corriente.\n\n"
+        "1) La ampolleta quemada deja de conducir: su filamento está cortado.\n"
+        "2) Como la corriente debe atravesar ambas en sucesión, el circuito "
+        "queda abierto.\n"
+        "3) Sin corriente, la segunda ampolleta también se apaga.\n\n"
+        "Por eso las instalaciones domiciliarias se conectan en paralelo: así el "
+        "corte de un artefacto no deja al resto sin funcionamiento.",
+        [
+            ("Sigue encendida con el mismo brillo",
+             "Sin un camino cerrado no circula corriente por ninguna de las dos."),
+            ("Sigue encendida pero con más brillo, porque recibe todo el voltaje",
+             "No recibe nada: el circuito quedó abierto y la corriente es cero."),
+            ("Se apaga solo si ambas ampolletas tienen la misma resistencia",
+             "Se apaga en cualquier caso: la interrupción del camino no depende de las resistencias."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Se agrega una tercera ampolleta en paralelo a un circuito que ya tenía "
+        "dos. ¿Qué ocurre con la resistencia equivalente y con la corriente "
+        "total?",
+        "La resistencia baja y la corriente total aumenta",
+        "Agregar caminos en paralelo facilita el paso de la carga.\n\n"
+        "1) Cada rama nueva es un camino adicional, así que la resistencia "
+        "equivalente DISMINUYE.\n"
+        "2) Con el mismo voltaje de la fuente y menos resistencia, la corriente "
+        "total AUMENTA.\n"
+        "3) Las ampolletas que ya estaban siguen con el mismo voltaje y por lo "
+        "tanto con el mismo brillo.\n\n"
+        "Eso explica por qué enchufar demasiados artefactos en un mismo circuito "
+        "puede hacer saltar el automático: la corriente total crece con cada "
+        "uno.",
+        [
+            ("La resistencia sube y la corriente total disminuye",
+             "Eso ocurriría al agregar la ampolleta en serie, no en paralelo."),
+            ("Ambas se mantienen iguales, porque las ampolletas son idénticas",
+             "Cada rama adicional cambia la equivalente aunque las ampolletas sean iguales."),
+            ("La resistencia baja y la corriente total se mantiene igual",
+             "Con el mismo voltaje y menor resistencia, la corriente necesariamente aumenta."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "¿De qué depende la resistencia eléctrica de un cable conductor?",
+        "Del material, de su longitud y de su sección",
+        "La resistencia es una propiedad geométrica además de material.\n\n"
+        "1) El MATERIAL determina la resistividad: el cobre conduce mucho mejor "
+        "que el hierro.\n"
+        "2) La LONGITUD aumenta la resistencia: un cable más largo opone más "
+        "obstáculos al paso de la carga.\n"
+        "3) La SECCIÓN la disminuye: un cable más grueso ofrece más espacio de "
+        "paso, igual que una cañería ancha.\n\n"
+        "Por eso las instalaciones que llevan mucha corriente usan cables "
+        "gruesos: reducen la resistencia y con ella el calentamiento.",
+        [
+            ("Solo del material del que está hecho",
+             "El material fija la resistividad, pero la resistencia depende además de las dimensiones del cable."),
+            ("Del voltaje que se le aplique",
+             "La resistencia es una propiedad del conductor: no cambia al cambiar el voltaje."),
+            ("De la cantidad de corriente que circule por él en cada momento",
+             "La corriente es consecuencia del voltaje y de la resistencia, no su causa."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Una resistencia de 6 Ω está en serie con la combinación en paralelo de "
+        "dos resistencias de 4 Ω cada una. ¿Cuál es la resistencia equivalente "
+        "del conjunto?",
+        "8 Ω",
+        "En un circuito mixto se resuelve por partes, empezando por la "
+        "combinación más interna.\n\n"
+        "1) Las dos de 4 Ω en paralelo: al ser iguales, equivalen a "
+        "4 ÷ 2 = 2 Ω.\n"
+        "2) Ese bloque queda en serie con la de 6 Ω.\n"
+        "3) En serie se suman: 6 + 2 = 8 Ω.\n\n"
+        "El orden importa: resolver primero la serie y después el paralelo daría "
+        "un resultado distinto y equivocado.",
+        [
+            ("14 Ω", "Sumó las tres resistencias, tratando todo el circuito como si fuera serie."),
+            ("10 Ω", "Sumó una sola de las de 4 Ω, sin resolver el paralelo."),
+            ("1,5 Ω", "Resolvió todo el conjunto como si estuviera en paralelo."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "En un circuito en serie con resistencias de 5 Ω y 15 Ω conectadas a "
+        "40 V, ¿cuál es la caída de voltaje en la resistencia de 15 Ω?",
+        "30 V",
+        "En serie el voltaje se reparte en proporción a las resistencias.\n\n"
+        "1) Resistencia total: 5 + 15 = 20 Ω.\n"
+        "2) Corriente: I = 40 ÷ 20 = 2 A, la misma en ambas.\n"
+        "3) Caída en la de 15 Ω: V = I · R = 2 · 15 = 30 V.\n\n"
+        "Comprobación: en la de 5 Ω la caída es 2 · 5 = 10 V, y 30 + 10 = 40 V, "
+        "el voltaje de la fuente. La resistencia mayor se lleva la mayor parte "
+        "del voltaje.",
+        [
+            ("10 V", "Calculó la caída en la resistencia de 5 Ω en vez de la pedida."),
+            ("40 V", "Asignó todo el voltaje de la fuente a una sola resistencia."),
+            ("20 V", "Repartió el voltaje en partes iguales, sin considerar que las resistencias son distintas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Un estudiante conecta por error un amperímetro directamente entre los "
+        "polos de una batería. ¿Qué ocurre y por qué?",
+        "Se produce un cortocircuito, porque su resistencia es muy baja",
+        "El amperímetro está diseñado para no estorbar al circuito que mide.\n\n"
+        "1) Su resistencia interna es deliberadamente muy pequeña, para que "
+        "intercalarlo no altere la corriente del circuito.\n"
+        "2) Conectado directamente a la batería, esa resistencia mínima es la "
+        "única del camino.\n"
+        "3) Por la ley de Ohm, con resistencia casi nula la corriente se vuelve "
+        "enorme: eso es un cortocircuito, y puede dañar el instrumento y la "
+        "batería.\n\n"
+        "El voltímetro, en cambio, tiene resistencia altísima y sí puede "
+        "conectarse entre los polos sin problema.",
+        [
+            ("No pasa nada, porque el amperímetro solo mide y no consume corriente",
+             "Cualquier elemento conectado forma parte del circuito: su resistencia determina la corriente."),
+            ("La batería no entrega corriente, porque el amperímetro bloquea el paso",
+             "El amperímetro tiene resistencia baja: facilita el paso en vez de bloquearlo."),
+            ("El amperímetro marca cero, porque no hay ningún elemento que consuma energía",
+             "Marcaría un valor altísimo, fuera de escala, antes de dañarse."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Se comparan dos circuitos con la misma batería: en el primero dos "
+        "ampolletas idénticas van en serie y en el segundo, en paralelo. ¿En "
+        "cuál brillan más y por qué?",
+        "En paralelo, porque cada una recibe el voltaje completo",
+        "El brillo depende de la potencia que disipa cada ampolleta.\n\n"
+        "1) En SERIE, el voltaje de la fuente se reparte: cada ampolleta recibe "
+        "la mitad, circula menos corriente y cada una disipa menos potencia.\n"
+        "2) En PARALELO, cada ampolleta queda conectada directamente a los "
+        "bornes de la fuente y recibe el voltaje completo.\n"
+        "3) Con más voltaje y más corriente, cada una disipa más potencia y "
+        "brilla más.\n\n"
+        "El costo es que el circuito en paralelo consume mucha más corriente "
+        "total de la fuente, y la batería se agota antes.",
+        [
+            ("En serie, porque la corriente pasa por las dos y se suma",
+             "La corriente no se suma al atravesar elementos en serie: es la misma en todo el circuito."),
+            ("Brillan igual, porque las ampolletas son idénticas",
+             "Ser idénticas iguala su brillo entre sí dentro de cada circuito, no entre los dos circuitos."),
+            ("En serie, porque la resistencia total es mayor y eso aumenta la potencia",
+             "Con la misma fuente, mayor resistencia significa menos corriente y menos potencia total."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Un grupo mide la corriente que circula por un resistor para distintos "
+        "voltajes y grafica corriente contra voltaje. Obtiene una recta por el "
+        "origen. ¿Qué representa la pendiente y qué confirma el resultado?",
+        "El inverso de la resistencia, y confirma que el resistor es óhmico",
+        "El gráfico pone a prueba la ley de Ohm en vez de darla por supuesta.\n\n"
+        "1) De I = V / R se sigue que I es proporcional a V, con constante de "
+        "proporcionalidad 1/R.\n"
+        "2) Al graficar I contra V, esa proporcionalidad aparece como una recta "
+        "por el origen y su pendiente vale 1/R.\n"
+        "3) Que los puntos se ajusten a una recta confirma que la resistencia no "
+        "cambia con el voltaje: el elemento es óhmico.\n\n"
+        "No todos lo son: en una ampolleta incandescente el filamento se "
+        "calienta y su resistencia aumenta, así que el gráfico se curva.",
+        [
+            ("La resistencia directamente, y confirma la ley de Ohm",
+             "La pendiente vale 1/R: para obtener la resistencia hay que invertirla."),
+            ("La potencia disipada, y confirma que el resistor no se calienta",
+             "La potencia es el producto de voltaje por corriente, no la pendiente de este gráfico."),
+            ("La carga total que circuló, y confirma la conservación de la carga",
+             "La carga se obtendría multiplicando corriente por tiempo, y el tiempo no es una variable del gráfico."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Se afirma que la corriente se consume a medida que recorre un circuito, "
+        "y que por eso vuelve menos corriente a la batería de la que salió. "
+        "¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: la carga se conserva y lo que se transfiere es energía",
+        "Es una confusión frecuente entre carga y energía.\n\n"
+        "1) La carga eléctrica se conserva: la misma cantidad que sale de un "
+        "borne de la batería regresa por el otro. La corriente es igual antes y "
+        "después de una ampolleta en serie.\n"
+        "2) Lo que sí cambia es la ENERGÍA que transporta cada carga: al "
+        "atravesar la ampolleta cede energía, que se transforma en luz y "
+        "calor.\n"
+        "3) Esa pérdida se refleja en la caída de VOLTAJE, no en una "
+        "disminución de la corriente.\n\n"
+        "Un amperímetro colocado antes y otro después de la ampolleta marcan "
+        "exactamente lo mismo.",
+        [
+            ("Es correcta: por eso la ampolleta más lejana de la batería brilla menos",
+             "En un circuito en serie todas las ampolletas reciben la misma corriente, sin importar su posición."),
+            ("Es correcta, porque parte de la carga se transforma en luz y calor",
+             "La carga no se transforma en luz: lo que se transforma es la energía que ella transporta."),
+            ("Es incorrecta, porque en realidad vuelve más corriente de la que salió",
+             "Vuelve exactamente la misma: la carga no se crea ni se destruye."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un artefacto conectado a 220 V deja pasar una corriente de 0,5 A. "
+        "¿Cuál es su resistencia?",
+        "440 Ω",
+        "Se despeja la resistencia de la ley de Ohm.\n\n"
+        "1) De V = I · R se obtiene R = V / I.\n"
+        "2) Reemplaza: R = 220 ÷ 0,5.\n"
+        "3) Resulta 440 Ω.\n\n"
+        "Dividir por 0,5 equivale a multiplicar por 2: es un buen control mental "
+        "para no equivocarse de orden de magnitud.",
+        [
+            ("110 Ω", "Multiplicó el voltaje por la corriente en vez de dividir."),
+            ("220 Ω", "Copió el voltaje sin dividir por la corriente."),
+            ("0,0023 Ω", "Invirtió la división: usó la corriente dividida por el voltaje."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un circuito consta de una batería de 12 V y dos resistencias de 3 Ω en "
+        "paralelo. ¿Qué corriente entrega la batería?",
+        "8 A",
+        "Primero la equivalente y después la ley de Ohm para el circuito "
+        "completo.\n\n"
+        "1) Dos resistencias iguales en paralelo: R = 3 ÷ 2 = 1,5 Ω.\n"
+        "2) Corriente total: I = 12 ÷ 1,5 = 8 A.\n"
+        "3) Cada rama lleva 12 ÷ 3 = 4 A, y las dos suman los 8 A: coincide.\n\n"
+        "Ese control cruzado, comparar la corriente total con la suma de las "
+        "ramas, es la mejor manera de detectar un error en circuitos en "
+        "paralelo.",
+        [
+            ("2 A", "Calculó la equivalente como si estuvieran en serie: 6 Ω."),
+            ("4 A", "Entregó la corriente de una sola rama, no la total de la batería."),
+            ("18 A", "Se equivocó al calcular la resistencia equivalente en paralelo."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "¿Por qué las instalaciones domiciliarias conectan los artefactos en "
+        "paralelo y no en serie?",
+        "Para que cada uno reciba el mismo voltaje y funcione por separado",
+        "La conexión en paralelo resuelve dos problemas a la vez.\n\n"
+        "1) Cada artefacto queda conectado directamente a los 220 V, que es el "
+        "voltaje para el que está diseñado. En serie recibiría solo una "
+        "fracción, distinta según qué más esté encendido.\n"
+        "2) Cada uno funciona con independencia: apagar o desconectar uno no "
+        "interrumpe a los demás.\n"
+        "3) En serie, en cambio, desconectar cualquier artefacto dejaría toda la "
+        "casa sin electricidad.\n\n"
+        "El costo es que la corriente total crece con cada artefacto encendido, "
+        "y por eso existen los interruptores automáticos.",
+        [
+            ("Para que la corriente sea la misma en todos los artefactos",
+             "Eso es lo que ocurre en serie; en paralelo cada artefacto toma la corriente que su resistencia determina."),
+            ("Para que la resistencia total del circuito sea mayor",
+             "El paralelo reduce la resistencia total, no la aumenta."),
+            ("Para reducir el consumo total de energía de la vivienda",
+             "El consumo depende de los artefactos usados, no del tipo de conexión."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "¿Qué magnitud se mide en ohm?",
+        "La resistencia eléctrica",
+        "Cada magnitud del circuito tiene su unidad propia.\n\n"
+        "1) El OHM mide la resistencia, es decir, la oposición al paso de la "
+        "corriente.\n"
+        "2) El ampere mide la corriente, en coulomb por segundo.\n"
+        "3) El volt mide la diferencia de potencial.\n\n"
+        "La ley de Ohm los relaciona: un ohm es la resistencia por la que "
+        "circula un ampere al aplicarle un volt.",
+        [
+            ("La corriente eléctrica", "La corriente se mide en ampere."),
+            ("La diferencia de potencial", "El voltaje se mide en volt."),
+            ("La potencia eléctrica que consume un artefacto", "La potencia se mide en watt."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_electricidad", "medio",
+        "Un pájaro se posa sobre un cable de alta tensión sin recibir descarga "
+        "alguna. ¿Cómo se explica?",
+        "Sus dos patas están casi al mismo potencial",
+        "Para que circule corriente por un cuerpo hace falta una diferencia de "
+        "potencial entre dos puntos de él.\n\n"
+        "1) El pájaro toca el cable en dos puntos muy cercanos, separados por "
+        "unos centímetros de conductor de muy baja resistencia.\n"
+        "2) La diferencia de potencial entre esos dos puntos es diminuta.\n"
+        "3) Sin diferencia de potencial apreciable, la corriente que circula por "
+        "el ave es despreciable.\n\n"
+        "Si el pájaro tocara a la vez el cable y un poste conectado a tierra, la "
+        "diferencia sería de miles de volt y la descarga, fatal.",
+        [
+            ("Las plumas actúan como aislante entre el cable y su cuerpo",
+             "Las patas tocan el cable directamente: no hay aislante de por medio."),
+            ("Los pájaros son inmunes a la corriente eléctrica",
+             "No lo son: mueren si tocan simultáneamente dos conductores a distinto potencial."),
+            ("La corriente prefiere seguir por el cable, que tiene menos resistencia, y no pasa nada por el ave",
+             "El reparto por resistencias es parte de la explicación, pero lo determinante es que casi no hay diferencia de potencial entre sus patas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En un circuito, se duplica el voltaje de la fuente manteniendo la misma "
+        "resistencia. ¿Qué ocurre con la corriente?",
+        "Se duplica",
+        "La ley de Ohm establece una proporcionalidad directa entre voltaje y "
+        "corriente cuando la resistencia no cambia.\n\n"
+        "1) De I = V / R, con R constante, la corriente es proporcional al "
+        "voltaje.\n"
+        "2) Si V se multiplica por 2, I también.\n"
+        "3) La resistencia es una propiedad del elemento y no cambia por "
+        "aplicarle más voltaje, siempre que no se caliente de manera "
+        "apreciable.\n\n"
+        "Esa última salvedad importa: en un filamento incandescente la "
+        "resistencia sí aumenta con la temperatura, y entonces la corriente "
+        "crece menos que el doble.",
+        [
+            ("Se reduce a la mitad", "Eso ocurriría si se duplicara la resistencia manteniendo el voltaje."),
+            ("Se mantiene igual", "Con la misma resistencia, más voltaje empuja más carga por segundo."),
+            ("Se cuadruplica", "La relación es lineal: duplicar el voltaje duplica la corriente, no la cuadruplica."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un circuito tiene una resistencia de 20 Ω en paralelo con otra de 5 Ω, "
+        "conectadas a una fuente de 20 V. ¿Cuál es la corriente total?",
+        "5 A",
+        "Conviene calcular la corriente de cada rama y sumarlas.\n\n"
+        "1) Rama de 20 Ω: I = 20 ÷ 20 = 1 A.\n"
+        "2) Rama de 5 Ω: I = 20 ÷ 5 = 4 A.\n"
+        "3) Corriente total: 1 + 4 = 5 A.\n\n"
+        "Comprobación por la equivalente: 1/R = 1/20 + 1/5 = 1/20 + 4/20 = "
+        "5/20, así que R = 4 Ω y la corriente total es 20 ÷ 4 = 5 A. Coincide.",
+        [
+            ("0,8 A", "Calculó la equivalente como si estuvieran en serie: 25 Ω."),
+            ("1 A", "Entregó la corriente de una sola rama, la de mayor resistencia."),
+            ("4 A", "Entregó la corriente de la otra rama, sin sumar ambas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Se conectan en serie tres resistencias de 2 Ω, 3 Ω y 5 Ω a una fuente "
+        "de 20 V. ¿Cuál es la caída de voltaje en la de 3 Ω?",
+        "6 V",
+        "En serie el voltaje se reparte en proporción a cada resistencia.\n\n"
+        "1) Resistencia total: 2 + 3 + 5 = 10 Ω.\n"
+        "2) Corriente: I = 20 ÷ 10 = 2 A, la misma en las tres.\n"
+        "3) Caída en la de 3 Ω: V = 2 · 3 = 6 V.\n\n"
+        "Comprobación: las caídas son 4 V, 6 V y 10 V, que suman los 20 V de la "
+        "fuente.",
+        [
+            ("20 V", "Asignó todo el voltaje de la fuente a una sola resistencia."),
+            ("4 V", "Calculó la caída en la resistencia de 2 Ω."),
+            ("6,67 V", "Repartió el voltaje en tres partes iguales, sin considerar las resistencias distintas."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un cable de cobre se reemplaza por otro del mismo material y longitud "
+        "pero del doble de sección. ¿Qué ocurre con su resistencia?",
+        "Se reduce a la mitad",
+        "La resistencia es inversamente proporcional a la sección del "
+        "conductor.\n\n"
+        "1) Una sección mayor ofrece más espacio para el paso de las cargas, "
+        "igual que una cañería más ancha deja pasar más agua.\n"
+        "2) Al duplicar la sección, la resistencia se reduce a la mitad.\n"
+        "3) La longitud, en cambio, actúa al revés: duplicarla duplicaría la "
+        "resistencia.\n\n"
+        "Por eso las instalaciones que llevan mucha corriente exigen cables "
+        "gruesos: menos resistencia significa menos calentamiento y menos "
+        "pérdidas.",
+        [
+            ("Se duplica", "Esa sería la consecuencia de duplicar la LONGITUD, no la sección."),
+            ("Se mantiene igual", "La resistencia depende de la geometría del conductor además del material."),
+            ("Se reduce a la cuarta parte", "La relación con la sección es inversa simple, no inversa al cuadrado."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Se afirma que el sentido convencional de la corriente es del polo "
+        "positivo al negativo, pero que los electrones se mueven al revés. "
+        "¿Cómo se explica esa discrepancia?",
+        "La convención se fijó antes de conocerse el portador de carga",
+        "Es un accidente histórico que se conservó por comodidad.\n\n"
+        "1) Cuando se definió el sentido de la corriente, se supuso que las "
+        "cargas móviles eran positivas y se estableció que iban del polo "
+        "positivo al negativo.\n"
+        "2) Después se descubrió que en los metales los portadores son "
+        "electrones, de carga negativa, que se desplazan en sentido contrario.\n"
+        "3) Cambiar la convención habría obligado a reescribir toda la "
+        "literatura sin ningún beneficio: los cálculos dan el mismo resultado "
+        "con cualquiera de las dos.\n\n"
+        "En otros medios, como una disolución, los portadores son iones de ambos "
+        "signos y se mueven en los dos sentidos a la vez.",
+        [
+            ("Los electrones cambian de sentido según el tipo de circuito",
+             "En corriente continua el sentido del movimiento de los electrones es siempre el mismo."),
+            ("Se trata de dos corrientes distintas que circulan simultáneamente",
+             "Hay una sola corriente: lo que hay son dos maneras de describir su sentido."),
+            ("La convención es errónea y debería corregirse en los textos actuales",
+             "No es errónea: es una convención, y los resultados físicos no dependen de ella."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un circuito consta de dos resistencias iguales en serie conectadas a "
+        "una batería. Si se agrega una tercera resistencia igual, también en "
+        "serie, ¿qué ocurre con la corriente?",
+        "Disminuye a dos tercios de su valor",
+        "En serie la resistencia total crece y la corriente cae en la misma "
+        "proporción.\n\n"
+        "1) Con dos resistencias de valor R, la total es 2R y la corriente es "
+        "V / 2R.\n"
+        "2) Con tres, la total pasa a 3R y la corriente es V / 3R.\n"
+        "3) La razón entre ambas es (V/3R) ÷ (V/2R) = 2/3.\n\n"
+        "Por eso agregar elementos en serie va apagando las ampolletas de un "
+        "circuito: cada una recibe menos corriente y menos voltaje.",
+        [
+            ("Disminuye a la mitad", "Ese factor correspondería a pasar de una resistencia a dos, no de dos a tres."),
+            ("Aumenta a un tercio más", "Agregar resistencia en serie siempre disminuye la corriente."),
+            ("Se mantiene igual, porque la fuente entrega siempre lo mismo",
+             "La fuente mantiene el voltaje, y con más resistencia eso implica menos corriente."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Al conectar por accidente los dos bornes de una batería con un alambre "
+        "de resistencia muy baja, el alambre se calienta rápidamente. ¿Cómo se "
+        "llama esa situación y por qué ocurre?",
+        "Un cortocircuito: con muy poca resistencia la corriente es enorme",
+        "La ley de Ohm explica directamente lo que ocurre.\n\n"
+        "1) La corriente es el voltaje dividido por la resistencia del camino.\n"
+        "2) Con una resistencia casi nula, ese cociente se dispara: circula una "
+        "corriente muy grande.\n"
+        "3) Esa corriente disipa mucha energía en el alambre, que se calienta "
+        "hasta poder incendiarse.\n\n"
+        "Para eso existen los fusibles y los interruptores automáticos: cortan "
+        "el circuito antes de que la corriente alcance valores peligrosos.",
+        [
+            ("Una sobrecarga: la batería entrega más voltaje del normal",
+             "El voltaje de la batería no aumenta: lo que cambia es la resistencia del camino."),
+            ("Una descarga a tierra: la corriente escapa del circuito",
+             "La corriente sigue circulando por el circuito cerrado; no escapa a ninguna parte."),
+            ("Un circuito abierto: el alambre interrumpe el paso de la corriente",
+             "Es lo contrario: el alambre cierra el circuito con resistencia mínima."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un circuito mixto tiene una resistencia de 2 Ω en serie con dos de 6 Ω "
+        "conectadas en paralelo entre sí, todo alimentado por 20 V. ¿Cuál es la "
+        "corriente que entrega la fuente?",
+        "4 A",
+        "Se resuelve por etapas, de adentro hacia afuera.\n\n"
+        "1) Las dos de 6 Ω en paralelo equivalen a 6 ÷ 2 = 3 Ω.\n"
+        "2) Ese bloque queda en serie con la de 2 Ω: total 2 + 3 = 5 Ω.\n"
+        "3) Corriente de la fuente: 20 ÷ 5 = 4 A.\n\n"
+        "Esa corriente pasa entera por la resistencia de 2 Ω y luego se reparte "
+        "en 2 A por cada rama de 6 Ω, porque son iguales.",
+        [
+            ("1,43 A", "Sumó las tres resistencias como si todas estuvieran en serie."),
+            ("10 A", "Usó solo la resistencia de 2 Ω, ignorando el bloque en paralelo."),
+            ("2 A", "Entregó la corriente de una de las ramas en paralelo, no la total."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un estudiante quiere medir la resistencia de un elemento usando un "
+        "voltímetro y un amperímetro. ¿Cómo debe proceder?",
+        "Medir voltaje y corriente y dividir uno por otra",
+        "La resistencia se obtiene de la ley de Ohm a partir de dos "
+        "mediciones.\n\n"
+        "1) El amperímetro se intercala en serie con el elemento para medir la "
+        "corriente que lo atraviesa.\n"
+        "2) El voltímetro se conecta en paralelo con el elemento para medir la "
+        "diferencia de potencial entre sus extremos.\n"
+        "3) La resistencia es R = V / I.\n\n"
+        "Conviene repetir la medición con varios voltajes: si el cociente se "
+        "mantiene, el elemento es óhmico; si cambia, su resistencia depende de "
+        "la corriente.",
+        [
+            ("Multiplicar la lectura del voltímetro por la del amperímetro",
+             "Ese producto entrega la potencia disipada, no la resistencia."),
+            ("Medir solo el voltaje, porque la resistencia es proporcional a él",
+             "Con un solo dato no se puede: la resistencia relaciona voltaje con corriente."),
+            ("Conectar los dos instrumentos en serie y restar sus lecturas",
+             "Las lecturas son de magnitudes distintas y no se pueden restar entre sí."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Dos ampolletas de distinta resistencia se conectan en serie a una "
+        "batería. ¿Cuál brilla más y por qué?",
+        "La de mayor resistencia, porque disipa más potencia",
+        "En serie la corriente es común, así que la potencia depende solo de la "
+        "resistencia.\n\n"
+        "1) La potencia disipada en un elemento es P = I² · R.\n"
+        "2) Como la corriente I es la misma en ambas, la potencia es "
+        "proporcional a R.\n"
+        "3) La ampolleta de mayor resistencia disipa más potencia y por lo tanto "
+        "brilla más.\n\n"
+        "En PARALELO el resultado se invierte: ahí el voltaje es común, "
+        "P = V² / R, y brilla más la de MENOR resistencia. Es un buen recordatorio "
+        "de que la respuesta depende de cómo estén conectadas.",
+        [
+            ("La de menor resistencia, porque deja pasar más corriente",
+             "En serie la corriente es la misma en las dos: ninguna deja pasar más que la otra."),
+            ("Brillan igual, porque la corriente que las atraviesa es la misma",
+             "La corriente igual no basta: la potencia depende además de la resistencia de cada una."),
+            ("La de menor resistencia, porque su filamento se calienta más rápido",
+             "Con la misma corriente, el que disipa más potencia es el de mayor resistencia."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Se comparan dos maneras de conectar tres resistencias iguales de 6 Ω a "
+        "una fuente de 12 V: todas en serie o todas en paralelo. ¿En cuál caso "
+        "la fuente entrega más corriente y cuánta?",
+        "En paralelo, con 6 A frente a 0,67 A en serie",
+        "La conexión determina la resistencia equivalente y con ella la "
+        "corriente.\n\n"
+        "1) En SERIE: R = 6 + 6 + 6 = 18 Ω, así que I = 12 ÷ 18, cerca de "
+        "0,67 A.\n"
+        "2) En PARALELO: R = 6 ÷ 3 = 2 Ω, así que I = 12 ÷ 2 = 6 A.\n"
+        "3) La conexión en paralelo exige nueve veces más corriente a la "
+        "fuente.\n\n"
+        "Por eso una batería dura mucho menos alimentando un circuito en "
+        "paralelo: entrega mucha más carga por segundo.",
+        [
+            ("En serie, con 6 A frente a 0,67 A en paralelo",
+             "Están invertidos: la serie aumenta la resistencia total y por lo tanto reduce la corriente."),
+            ("En ambos casos entrega la misma corriente, porque las resistencias son iguales",
+             "Ser iguales no basta: lo determinante es cómo se conectan entre sí."),
+            ("En paralelo, con 2 A frente a 18 A en serie",
+             "Confundió las resistencias equivalentes con las corrientes: 2 Ω y 18 Ω son resistencias, no amperes."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "En un circuito en paralelo con dos ramas, un amperímetro colocado en la "
+        "rama principal marca 6 A y otro en una de las ramas marca 2 A. ¿Qué "
+        "marca un amperímetro colocado en la otra rama?",
+        "4 A",
+        "La carga se conserva: lo que entra a un nodo debe salir de él.\n\n"
+        "1) La corriente total que llega al punto de bifurcación es 6 A.\n"
+        "2) Una rama se lleva 2 A.\n"
+        "3) La otra debe llevarse el resto: 6 − 2 = 4 A.\n\n"
+        "Ese principio, que la suma de las corrientes que entran a un nodo "
+        "iguala a la que sale, permite resolver circuitos sin conocer las "
+        "resistencias individuales. De paso indica que la segunda rama tiene "
+        "menos resistencia, porque conduce más corriente con el mismo voltaje.",
+        [
+            ("6 A", "Esa es la corriente total: si ambas ramas llevaran 6 A, sumarían 12 A y la carga no se conservaría."),
+            ("2 A", "Ambas ramas llevarían lo mismo solo si sus resistencias fueran iguales, y aquí no lo son."),
+            ("8 A", "Sumó las dos lecturas en vez de restarlas: la total es la suma de las ramas, no de la total con una rama."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Un grupo arma un circuito y mide la corriente para tres resistencias "
+        "distintas manteniendo el voltaje fijo. Grafica corriente contra "
+        "resistencia y obtiene una curva decreciente. ¿Cómo podría linealizar "
+        "ese gráfico y qué obtendría?",
+        "Graficando la corriente contra el inverso de la resistencia",
+        "La ley de Ohm es lineal si se elige bien la variable del eje.\n\n"
+        "1) De I = V / R se sigue que I es proporcional a 1/R, con constante de "
+        "proporcionalidad V.\n"
+        "2) Al graficar I contra 1/R se obtiene una recta por el origen.\n"
+        "3) Su pendiente es el voltaje aplicado, que puede compararse con el "
+        "valor medido de la fuente como control del experimento.\n\n"
+        "Linealizar tiene dos ventajas: una recta se ajusta con todas las "
+        "mediciones a la vez, y un punto fuera de ella delata de inmediato un "
+        "error en esa medición.",
+        [
+            ("Graficando la corriente contra el cuadrado de la resistencia",
+             "La relación es inversa simple, no cuadrática: ese gráfico seguiría siendo curvo."),
+            ("Graficando el voltaje contra la resistencia",
+             "El voltaje se mantuvo fijo durante el experimento: ese gráfico sería una recta horizontal sin información."),
+            ("Graficando la resistencia contra la corriente, que es la misma relación al revés",
+             "Intercambiar los ejes deja la curva igual de curva: hay que graficar contra el INVERSO de la resistencia."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Un estudiante afirma que en un circuito en serie la corriente es mayor "
+        "cerca de la batería y va disminuyendo a medida que atraviesa cada "
+        "resistencia. ¿Cómo se evalúa?",
+        "Es incorrecta: la corriente es la misma en todo el circuito",
+        "La afirmación contradice la conservación de la carga.\n\n"
+        "1) En un circuito en serie hay un único camino: toda la carga que pasa "
+        "por un punto debe pasar por todos los demás.\n"
+        "2) Si la corriente disminuyera a lo largo del recorrido, la carga se "
+        "estaría acumulando en algún punto, y eso no ocurre.\n"
+        "3) Lo que sí disminuye a lo largo del circuito es el POTENCIAL: cada "
+        "resistencia produce una caída de voltaje.\n\n"
+        "Dos amperímetros colocados en puntos distintos de un circuito en serie "
+        "marcan exactamente lo mismo, y ese es el experimento que zanja la "
+        "discusión.",
+        [
+            ("Es correcta: cada resistencia consume parte de la corriente",
+             "Las resistencias consumen energía, no carga: la corriente que sale de una es igual a la que entró."),
+            ("Es correcta solo si las resistencias son muy grandes",
+             "El valor de las resistencias determina cuánta corriente circula, pero esa corriente es la misma en todo el circuito."),
+            ("Es incorrecta: la corriente en realidad aumenta a lo largo del circuito",
+             "Tampoco aumenta: se mantiene constante."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Una batería de 9 V alimenta una resistencia y circula una corriente de "
+        "0,3 A. ¿Cuál es el valor de la resistencia?",
+        "30 Ω",
+        "Se despeja de la ley de Ohm.\n\n"
+        "1) R = V / I.\n"
+        "2) Reemplaza: R = 9 ÷ 0,3.\n"
+        "3) Resulta 30 Ω.\n\n"
+        "Control mental: dividir por 0,3 equivale a multiplicar por algo más de "
+        "3, así que el resultado debe estar cerca de 30, no de 3 ni de 300.",
+        [
+            ("2,7 Ω", "Multiplicó el voltaje por la corriente en vez de dividir."),
+            ("3 Ω", "Se equivocó en un orden de magnitud al dividir por 0,3."),
+            ("0,03 Ω", "Invirtió la división: usó la corriente dividida por el voltaje."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Dos resistencias, una de 100 Ω y otra de 1 Ω, se conectan en paralelo. "
+        "¿Qué valor tiene aproximadamente la resistencia equivalente?",
+        "Poco menos de 1 Ω",
+        "En paralelo, la equivalente siempre queda por debajo de la resistencia "
+        "menor.\n\n"
+        "1) Calcula: 1/R = 1/100 + 1/1 = 0,01 + 1 = 1,01.\n"
+        "2) Entonces R = 1 ÷ 1,01, algo menos de 1 Ω.\n"
+        "3) La rama de 100 Ω aporta un camino tan malo que apenas modifica el "
+        "resultado.\n\n"
+        "Es una buena regla de control: si el resultado de un paralelo sale "
+        "mayor que la resistencia más pequeña, hubo un error de cálculo.",
+        [
+            ("Poco más de 101 Ω", "Sumó las resistencias, que es lo que corresponde a la conexión en serie."),
+            ("Cerca de 50,5 Ω", "Promedió las dos resistencias, operación que no corresponde a ninguna conexión."),
+            ("Poco más de 100 Ω", "En paralelo la equivalente es menor que la resistencia más pequeña, no mayor que la más grande."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En un circuito en paralelo, ¿qué magnitud es igual en todas las ramas?",
+        "La diferencia de potencial entre sus extremos",
+        "En paralelo todas las ramas están conectadas a los mismos dos "
+        "puntos.\n\n"
+        "1) Los extremos de cada rama coinciden con los mismos nodos del "
+        "circuito.\n"
+        "2) Por lo tanto la diferencia de potencial entre ellos es la misma para "
+        "todas.\n"
+        "3) Lo que se reparte es la CORRIENTE: cada rama toma la que su "
+        "resistencia le permite, y la suma es la corriente total.\n\n"
+        "Es exactamente lo contrario de la conexión en serie, donde la corriente "
+        "es común y el voltaje se reparte.",
+        [
+            ("La corriente que circula por cada rama",
+             "La corriente común es propia de la conexión en serie; en paralelo se reparte."),
+            ("La resistencia de cada rama",
+             "Las resistencias pueden ser distintas: eso depende de los elementos, no de la conexión."),
+            ("La potencia que disipa cada rama del circuito",
+             "Con el mismo voltaje pero resistencias distintas, cada rama disipa una potencia distinta."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un artefacto de resistencia fija se conecta primero a 110 V y después a "
+        "220 V. ¿Qué ocurre con la corriente que circula por él?",
+        "Se duplica",
+        "Con resistencia constante, corriente y voltaje son directamente "
+        "proporcionales.\n\n"
+        "1) De I = V / R, si R no cambia, duplicar V duplica I.\n"
+        "2) El artefacto tomará el doble de corriente.\n"
+        "3) Como la potencia es el producto de ambos, se cuadruplica: por eso "
+        "conectar a 220 V un aparato diseñado para 110 V suele quemarlo.\n\n"
+        "Ese es el motivo de que los aparatos de viaje traigan selector de "
+        "voltaje o transformador.",
+        [
+            ("Se mantiene igual, porque la resistencia no cambió",
+             "Precisamente porque la resistencia no cambia, más voltaje produce más corriente."),
+            ("Se reduce a la mitad", "Esa sería la consecuencia de duplicar la resistencia, no el voltaje."),
+            ("Se cuadruplica", "Lo que se cuadruplica es la potencia; la corriente solo se duplica."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Un circuito tiene una resistencia desconocida en serie con una de 4 Ω. "
+        "Conectado a 24 V circulan 2 A. ¿Cuánto vale la resistencia "
+        "desconocida?",
+        "8 Ω",
+        "Primero la resistencia total y después la diferencia.\n\n"
+        "1) Resistencia total: R = V / I = 24 ÷ 2 = 12 Ω.\n"
+        "2) En serie las resistencias se suman, así que 12 = 4 + x.\n"
+        "3) Despeja: x = 8 Ω.\n\n"
+        "Comprobación: las caídas de voltaje son 2 · 4 = 8 V y 2 · 8 = 16 V, "
+        "que suman los 24 V de la fuente.",
+        [
+            ("12 Ω", "Ese es el valor de la resistencia TOTAL: falta restar la de 4 Ω."),
+            ("16 Ω", "Sumó la de 4 Ω a la total en vez de restarla."),
+            ("6 Ω", "Dividió la total por dos, como si ambas resistencias fueran iguales."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Se quiere reducir a la mitad la corriente que circula por un artefacto "
+        "sin cambiar la fuente. ¿Qué se puede hacer?",
+        "Agregar en serie una resistencia igual a la del artefacto",
+        "Con el voltaje fijo, la corriente depende solo de la resistencia "
+        "total.\n\n"
+        "1) Para que la corriente sea la mitad, la resistencia total debe ser el "
+        "doble.\n"
+        "2) Agregar en serie una resistencia igual a la del artefacto duplica "
+        "exactamente el total.\n"
+        "3) Conectarla en paralelo haría lo contrario: reduciría la resistencia "
+        "total y aumentaría la corriente que entrega la fuente.\n\n"
+        "El costo de este método es que la resistencia agregada disipa energía "
+        "en forma de calor: es simple pero poco eficiente.",
+        [
+            ("Agregar en paralelo una resistencia igual a la del artefacto",
+             "El paralelo reduce la resistencia total y aumenta la corriente que entrega la fuente."),
+            ("Duplicar la longitud de los cables de conexión",
+             "Los cables tienen resistencia muy baja: duplicar su largo apenas cambia el total."),
+            ("Cambiar el sentido de conexión de los bornes de la fuente",
+             "Invertir la polaridad cambia el sentido de la corriente, no su magnitud."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "En un circuito cerrado con una batería y una ampolleta, ¿qué se "
+        "transfiere desde la fuente hasta la ampolleta?",
+        "Energía, mientras la carga circula sin consumirse",
+        "Conviene separar el portador del contenido.\n\n"
+        "1) Las cargas ya están en el conductor y solo se ponen en movimiento: "
+        "recorren el circuito y vuelven a la fuente.\n"
+        "2) Lo que la batería aporta es ENERGÍA, que entrega a esas cargas "
+        "elevando su potencial.\n"
+        "3) Al atravesar la ampolleta, las cargas ceden esa energía, que se "
+        "transforma en luz y calor, y siguen su camino.\n\n"
+        "Por eso la corriente es la misma antes y después de la ampolleta, pero "
+        "el potencial no: hay una caída de voltaje.",
+        [
+            ("Cargas eléctricas nuevas producidas por la batería",
+             "La batería no fabrica cargas: pone en movimiento las que ya existen en el conductor."),
+            ("Electrones que la ampolleta absorbe y convierte en luz",
+             "Los electrones no se consumen ni se transforman en luz: ceden energía y continúan."),
+            ("Calor generado en la batería y conducido por el cable hasta la ampolleta",
+             "La ampolleta genera su propio calor y luz a partir de la energía eléctrica, no de calor transportado."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "¿Qué significa que un elemento sea óhmico?",
+        "Que su resistencia se mantiene constante al variar el voltaje",
+        "No todos los elementos cumplen la ley de Ohm en todo su rango.\n\n"
+        "1) En un elemento óhmico, el cociente entre voltaje y corriente es el "
+        "mismo cualquiera sea el voltaje aplicado.\n"
+        "2) Eso se reconoce en el gráfico de corriente contra voltaje: es una "
+        "recta por el origen.\n"
+        "3) Un filamento incandescente no lo es: al calentarse su resistencia "
+        "aumenta, y el gráfico se curva.\n\n"
+        "La ley de Ohm es entonces una buena descripción de muchos materiales, "
+        "no una ley universal como las de Newton.",
+        [
+            ("Que no ofrece resistencia al paso de la corriente",
+             "Un elemento óhmico sí tiene resistencia: lo característico es que se mantenga constante."),
+            ("Que su resistencia aumenta con la corriente que lo atraviesa",
+             "Ese comportamiento es justamente el de un elemento NO óhmico."),
+            ("Que solo funciona con corriente continua y no con alterna",
+             "El carácter óhmico no depende del tipo de corriente."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "En un circuito eléctrico simple, ¿qué función cumple la batería?",
+        "Mantener una diferencia de potencial entre sus bornes",
+        "La batería es el elemento que impulsa la circulación de carga.\n\n"
+        "1) Mediante reacciones químicas internas, acumula carga positiva en un "
+        "borne y negativa en el otro.\n"
+        "2) Esa diferencia de potencial es la que empuja a las cargas a "
+        "recorrer el circuito externo.\n"
+        "3) Mientras la reacción se mantenga, el voltaje entre bornes se "
+        "conserva aproximadamente constante.\n\n"
+        "Cuando los reactivos se agotan, la batería ya no puede sostener esa "
+        "diferencia y el circuito deja de funcionar.",
+        [
+            ("Almacenar electrones para entregarlos al circuito",
+             "Los electrones ya están en el conductor: la batería aporta energía, no partículas."),
+            ("Aumentar la resistencia del circuito para controlar la corriente",
+             "La batería impulsa la corriente; controlar la resistencia es función de otros elementos."),
+            ("Transformar la corriente alterna en corriente continua",
+             "Esa es la función de un rectificador o de una fuente de poder, no de una batería."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "facil",
+        "¿Qué ocurre con la corriente en un circuito si se abre un interruptor "
+        "conectado en serie?",
+        "Deja de circular en todo el circuito",
+        "Un circuito necesita un camino cerrado para que la carga circule.\n\n"
+        "1) Al abrir el interruptor se interrumpe la continuidad del "
+        "conductor.\n"
+        "2) Sin camino cerrado no puede haber flujo sostenido de carga: la "
+        "corriente se anula.\n"
+        "3) Como el interruptor está en serie, esa interrupción afecta a todo el "
+        "circuito.\n\n"
+        "Por eso los interruptores de una casa se instalan en serie con los "
+        "artefactos que controlan.",
+        [
+            ("Aumenta, porque la resistencia del circuito disminuye",
+             "Abrir un interruptor equivale a una resistencia infinita, no a una resistencia menor."),
+            ("Se mantiene igual, porque la batería sigue conectada",
+             "La batería sostiene el voltaje, pero sin camino cerrado no circula carga."),
+            ("Circula solo por la mitad del circuito, hasta llegar al interruptor",
+             "No hay flujo sostenido: sin circuito cerrado la corriente es cero en todas partes."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "medio",
+        "Un circuito tiene tres resistencias iguales conectadas en paralelo a "
+        "una fuente. Si una de ellas se desconecta, ¿qué ocurre con la corriente "
+        "que circula por las otras dos?",
+        "Se mantiene igual en cada una",
+        "En paralelo cada rama es independiente de las demás.\n\n"
+        "1) Cada rama está conectada directamente a los bornes de la fuente y "
+        "recibe el mismo voltaje.\n"
+        "2) Ese voltaje no cambia al desconectar otra rama, así que la corriente "
+        "de cada una tampoco.\n"
+        "3) Lo que sí disminuye es la corriente TOTAL que entrega la fuente, "
+        "porque hay un camino menos.\n\n"
+        "Es exactamente la propiedad que se busca en una instalación "
+        "domiciliaria: apagar un artefacto no altera el funcionamiento de los "
+        "demás.",
+        [
+            ("Aumenta en cada una, porque se reparten la corriente de la que faltaba",
+             "La corriente no se reparte hacia atrás: cada rama toma la que su resistencia determina con el voltaje disponible."),
+            ("Disminuye en cada una, porque la resistencia total aumenta",
+             "La resistencia total sí aumenta, pero eso reduce la corriente TOTAL, no la de cada rama."),
+            ("Se detiene por completo, porque el circuito queda abierto",
+             "En paralelo, abrir una rama no interrumpe las otras: cada una tiene su propio camino cerrado."),
+        ],
+    ),
+    _q(
+        "cie_electricidad", "dificil",
+        "Se dispone de dos resistencias de 12 Ω y se quiere obtener una "
+        "resistencia equivalente de 6 Ω. ¿Cómo deben conectarse?",
+        "En paralelo",
+        "Cada conexión da un resultado distinto y previsible.\n\n"
+        "1) En SERIE la equivalente sería 12 + 12 = 24 Ω, el doble de cada "
+        "una.\n"
+        "2) En PARALELO, al ser iguales, la equivalente es 12 ÷ 2 = 6 Ω, la "
+        "mitad de cada una.\n"
+        "3) Como se busca 6 Ω, la conexión correcta es en paralelo.\n\n"
+        "Regla general con resistencias iguales: en serie se multiplica por el "
+        "número de elementos, y en paralelo se divide por él.",
+        [
+            ("En serie", "En serie se obtendrían 24 Ω, cuatro veces el valor buscado."),
+            ("Una en serie con la fuente y la otra en paralelo con ella",
+             "Esa configuración no forma una única resistencia equivalente entre dos puntos."),
+            ("En paralelo, pero solo si además se duplica el voltaje de la fuente",
+             "La resistencia equivalente no depende del voltaje aplicado."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Electricidad": potencia, consumo e instalación
+#
+# El temario pide potencia y energía eléctrica en circuitos de corriente
+# continua; consumo energético, eficiencia energética y potencia en artefactos; y
+# los componentes de la instalación eléctrica domiciliaria y sus funciones.
+#
+# Es el nodo más aplicado del eje: la boleta de la luz, el automático que salta y
+# la etiqueta de eficiencia de un refrigerador son contextos que el estudiante
+# reconoce, y el temario pide justamente analizar estos contenidos en situaciones
+# concretas.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_energia_electrica", "facil",
+        "Un artefacto funciona con 12 V y por él circulan 3 A. ¿Cuál es su "
+        "potencia eléctrica?",
+        "36 W",
+        "La potencia es el producto del voltaje por la corriente.\n\n"
+        "1) La relación es P = V · I.\n"
+        "2) Reemplaza: P = 12 V · 3 A.\n"
+        "3) Resulta 36 W.\n\n"
+        "La potencia indica cuánta energía transforma el artefacto por segundo: "
+        "36 watt son 36 joule por segundo.",
+        [
+            ("4 W", "Dividió el voltaje por la corriente en vez de multiplicarlos."),
+            ("15 W", "Sumó el voltaje y la corriente, que son magnitudes distintas."),
+            ("0,25 W", "Invirtió la división: usó la corriente dividida por el voltaje."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "Un hervidor de 2.000 W funciona durante media hora. ¿Cuánta energía "
+        "consume, expresada en kilowatt-hora?",
+        "1 kWh",
+        "El kilowatt-hora es el producto de una potencia en kilowatt por un "
+        "tiempo en horas.\n\n"
+        "1) Convierte la potencia: 2.000 W = 2 kW.\n"
+        "2) Convierte el tiempo: media hora = 0,5 h.\n"
+        "3) Energía = 2 kW · 0,5 h = 1 kWh.\n\n"
+        "El kilowatt-hora es la unidad con que se factura la electricidad, y por "
+        "eso conviene manejarla: es energía, no potencia.",
+        [
+            ("2 kWh", "Usó la potencia sin multiplicarla por el tiempo, o tomó una hora completa."),
+            ("1.000 kWh", "Mezcló watt con kilowatt: hay que convertir la potencia antes de multiplicar."),
+            ("4 kWh", "Dividió por 0,5 en vez de multiplicar."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "¿Qué función cumple el interruptor automático del tablero eléctrico de "
+        "una vivienda?",
+        "Cortar el circuito cuando la corriente supera un valor seguro",
+        "Es un dispositivo de protección de la instalación.\n\n"
+        "1) Cada circuito está diseñado para cierta corriente máxima, que "
+        "depende de la sección de sus cables.\n"
+        "2) Si se conectan demasiados artefactos o se produce un cortocircuito, "
+        "la corriente supera ese valor y los cables se calientan "
+        "peligrosamente.\n"
+        "3) El automático detecta esa sobrecorriente e interrumpe el circuito "
+        "antes de que se produzca un incendio.\n\n"
+        "A diferencia del fusible, no se destruye al actuar: se rearma bajando y "
+        "subiendo la palanca, una vez corregida la causa.",
+        [
+            ("Aumentar el voltaje disponible en los enchufes de la casa",
+             "El voltaje lo fija la red de distribución: el automático no lo modifica."),
+            ("Medir el consumo de energía para la facturación mensual",
+             "Esa es la función del medidor, un dispositivo distinto."),
+            ("Convertir la corriente alterna de la red en corriente continua para los artefactos",
+             "Esa conversión la hacen las fuentes de poder de cada aparato, no el tablero."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "¿Cuál es la función de la conexión a tierra en una instalación "
+        "domiciliaria?",
+        "Dar un camino seguro a la corriente si un aparato se energiza",
+        "Es una protección para las personas, no para el aparato.\n\n"
+        "1) Si por una falla la carcasa metálica de un artefacto queda "
+        "energizada, tocarla haría circular corriente por el cuerpo hacia el "
+        "suelo.\n"
+        "2) El conductor de tierra conecta esa carcasa directamente al terreno, "
+        "que ofrece muchísima menos resistencia que una persona.\n"
+        "3) La corriente se va por ahí, y además el aumento brusco de corriente "
+        "hace actuar a las protecciones.\n\n"
+        "Por eso el tercer contacto de un enchufe no es un adorno, y anularlo "
+        "elimina justamente esa protección.",
+        [
+            ("Reducir el consumo de energía de los artefactos conectados",
+             "El conductor de tierra no conduce corriente en funcionamiento normal y no afecta el consumo."),
+            ("Aumentar la potencia disponible en el circuito",
+             "La potencia disponible depende del voltaje y de la corriente máxima del circuito."),
+            ("Descargar la electricidad estática que acumulan los aparatos durante el uso",
+             "Puede contribuir a eso, pero su función principal es proteger a las personas ante una falla de aislación."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "Una ampolleta LED de 9 W entrega la misma luz que una incandescente de "
+        "60 W. ¿Qué explica la diferencia?",
+        "La incandescente transforma casi toda la energía en calor",
+        "La eficiencia mide qué fracción de la energía se convierte en lo que "
+        "se quiere obtener.\n\n"
+        "1) La ampolleta incandescente produce luz calentando un filamento hasta "
+        "que emite en el visible: la mayor parte de la energía se va como calor "
+        "y como radiación infrarroja.\n"
+        "2) El LED genera luz directamente por un proceso electrónico, con "
+        "pérdidas mucho menores.\n"
+        "3) Por eso necesita bastante menos potencia para el mismo flujo "
+        "luminoso.\n\n"
+        "Ese es el sentido de la eficiencia energética: obtener el mismo "
+        "servicio con menos energía consumida.",
+        [
+            ("El LED produce una luz de menor intensidad que se percibe igual",
+             "El enunciado precisa que entregan la misma luz: la diferencia está en la energía consumida."),
+            ("La incandescente funciona con corriente alterna y el LED con continua",
+             "Ambas se conectan a la red domiciliaria; el LED lleva su propio circuito de conversión."),
+            ("El LED aprovecha la luz ambiente y por eso necesita menos potencia",
+             "El LED genera toda su luz: no amplifica ni aprovecha luz externa."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Una estufa eléctrica de 1.500 W se usa 4 horas diarias. Si el kWh "
+        "cuesta 150 pesos, ¿cuánto cuesta usarla durante un día?",
+        "$900",
+        "Primero la energía consumida y después su costo.\n\n"
+        "1) Potencia en kilowatt: 1.500 W = 1,5 kW.\n"
+        "2) Energía diaria: 1,5 kW · 4 h = 6 kWh.\n"
+        "3) Costo: 6 · 150 = 900 pesos.\n\n"
+        "El cálculo muestra por qué los artefactos de calefacción dominan la "
+        "boleta: su potencia es alta y suelen usarse muchas horas seguidas.",
+        [
+            ("$225", "Multiplicó la potencia en kilowatt por el precio, olvidando las horas de uso."),
+            ("$600", "Usó 4 kWh en vez de 6: multiplicó las horas por 1 kW en lugar de 1,5 kW."),
+            ("$90.000", "No convirtió los watt a kilowatt antes de multiplicar."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un artefacto de 1.100 W se conecta a 220 V. ¿Qué corriente circula por "
+        "él?",
+        "5 A",
+        "Se despeja la corriente de la relación de potencia.\n\n"
+        "1) De P = V · I se obtiene I = P / V.\n"
+        "2) Reemplaza: I = 1.100 ÷ 220.\n"
+        "3) Resulta 5 A.\n\n"
+        "Este cálculo es el que permite dimensionar un circuito: si el automático "
+        "es de 10 A, ese artefacto usa la mitad de la capacidad disponible.",
+        [
+            ("242.000 A", "Multiplicó la potencia por el voltaje en vez de dividir."),
+            ("0,2 A", "Invirtió la división: usó el voltaje dividido por la potencia."),
+            ("880 A", "Restó el voltaje de la potencia, magnitudes que no se pueden restar."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Por una resistencia de 8 Ω circula una corriente de 3 A. ¿Qué potencia "
+        "disipa?",
+        "72 W",
+        "Conviene usar la forma de la potencia que combina corriente y "
+        "resistencia.\n\n"
+        "1) La relación es P = I² · R.\n"
+        "2) Reemplaza: P = 3² · 8 = 9 · 8.\n"
+        "3) Resulta 72 W.\n\n"
+        "Comprobación por otra vía: el voltaje es V = 3 · 8 = 24 V, y "
+        "P = V · I = 24 · 3 = 72 W. Coincide, como debe ser.",
+        [
+            ("24 W", "Multiplicó la corriente por la resistencia: eso da el voltaje, no la potencia."),
+            ("2,67 W", "Dividió la resistencia por la corriente en lugar de aplicar la relación de potencia."),
+            ("216 W", "Elevó la resistencia al cuadrado en vez de la corriente."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "¿Por qué los cables de una instalación se calientan cuando circula "
+        "corriente por ellos?",
+        "Porque su resistencia disipa parte de la energía como calor",
+        "Ningún conductor real tiene resistencia nula.\n\n"
+        "1) Los electrones que se desplazan chocan con los iones de la red "
+        "metálica y transfieren energía a la estructura del material.\n"
+        "2) Esa energía se manifiesta como aumento de temperatura, y la potencia "
+        "disipada es I² · R.\n"
+        "3) Como depende del CUADRADO de la corriente, duplicar la corriente "
+        "cuadruplica el calentamiento.\n\n"
+        "Por eso los circuitos de alta corriente exigen cables gruesos, de menor "
+        "resistencia, y por eso una sobrecarga puede provocar un incendio.",
+        [
+            ("Porque la corriente alterna cambia de sentido muchas veces por segundo",
+             "El calentamiento ocurre también con corriente continua: no depende del tipo de corriente."),
+            ("Porque el voltaje de la red es demasiado alto para el cable",
+             "El calentamiento depende de la corriente que circula y de la resistencia, no directamente del voltaje de la red."),
+            ("Porque los electrones pierden masa al recorrer el conductor",
+             "Los electrones no pierden masa: ceden energía en los choques con la red del metal."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "En una vivienda, ¿qué componente registra la energía consumida para "
+        "efectos de facturación?",
+        "El medidor",
+        "Cada componente de la instalación cumple una función distinta.\n\n"
+        "1) El MEDIDOR se instala a la entrada y acumula la energía consumida, "
+        "en kilowatt-hora.\n"
+        "2) El TABLERO distribuye la energía en circuitos separados y aloja las "
+        "protecciones.\n"
+        "3) Los AUTOMÁTICOS protegen contra sobrecorrientes y el DIFERENCIAL, a "
+        "las personas ante fugas de corriente.\n\n"
+        "La boleta se calcula multiplicando los kilowatt-hora registrados por el "
+        "precio de la energía, más los cargos fijos.",
+        [
+            ("El interruptor automático", "Protege el circuito ante sobrecorrientes; no lleva registro de consumo."),
+            ("El interruptor diferencial", "Protege a las personas detectando fugas de corriente hacia tierra."),
+            ("El tablero de distribución", "Reparte la energía en circuitos y aloja las protecciones, pero no mide consumo."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "El interruptor diferencial de una vivienda actúa cuando detecta una "
+        "diferencia entre la corriente que entra y la que sale del circuito. "
+        "¿Qué protege?",
+        "A las personas, cortando ante una fuga de corriente",
+        "Es una protección distinta de la del automático.\n\n"
+        "1) En condiciones normales, toda la corriente que entra por un "
+        "conductor regresa por el otro: la diferencia es cero.\n"
+        "2) Si parte de la corriente se escapa hacia tierra, por ejemplo a "
+        "través del cuerpo de una persona, esa igualdad se rompe.\n"
+        "3) El diferencial detecta esa fuga, de apenas unas milésimas de "
+        "ampere, y corta en milisegundos.\n\n"
+        "El automático protege la instalación de sobrecorrientes; el diferencial "
+        "protege a las personas de la electrocución. Son complementarios.",
+        [
+            ("A los artefactos, cortando ante variaciones de voltaje",
+             "Las variaciones de voltaje las manejan otros dispositivos, como los estabilizadores."),
+            ("A los cables, cortando cuando la corriente supera su capacidad",
+             "Esa es la función del interruptor automático, no del diferencial."),
+            ("Al medidor, evitando que registre consumos que no corresponden a la vivienda",
+             "El diferencial no interviene en la medición del consumo."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Se conectan a un mismo circuito de 10 A varios artefactos y el "
+        "automático salta. ¿Cuál es la explicación más probable?",
+        "La suma de las corrientes superó la capacidad del circuito",
+        "En una instalación domiciliaria los artefactos van en paralelo.\n\n"
+        "1) Cada artefacto conectado agrega una rama y toma su propia "
+        "corriente.\n"
+        "2) La corriente total que circula por el cable del circuito es la suma "
+        "de todas ellas.\n"
+        "3) Cuando esa suma supera los 10 A para los que está dimensionado, el "
+        "automático corta para evitar el sobrecalentamiento de los cables.\n\n"
+        "La solución no es poner un automático de mayor amperaje: eso dejaría "
+        "pasar más corriente de la que los cables resisten. Hay que repartir la "
+        "carga en otro circuito.",
+        [
+            ("El voltaje de la red aumentó por sobre los 220 V",
+             "Una sobretensión afectaría a todos los circuitos de la casa, no solo al sobrecargado."),
+            ("Los artefactos en paralelo aumentan la resistencia total del circuito",
+             "El paralelo REDUCE la resistencia total, y por eso aumenta la corriente."),
+            ("Uno de los artefactos tiene la conexión a tierra desconectada",
+             "Eso es un riesgo para las personas, pero no hace saltar el automático, que responde a la corriente."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "¿Qué diferencia hay entre la corriente continua y la corriente alterna?",
+        "En la alterna el sentido de la corriente cambia periódicamente",
+        "La distinción está en cómo varía la corriente en el tiempo.\n\n"
+        "1) En corriente CONTINUA las cargas circulan siempre en el mismo "
+        "sentido: es lo que entrega una pila o una batería.\n"
+        "2) En corriente ALTERNA el sentido se invierte muchas veces por "
+        "segundo: en Chile, 50 veces por segundo.\n"
+        "3) La red domiciliaria es alterna porque así resulta mucho más simple "
+        "elevar y reducir el voltaje con transformadores, lo que permite "
+        "transportarla a larga distancia con menos pérdidas.\n\n"
+        "Muchos aparatos electrónicos funcionan internamente con continua, y por "
+        "eso llevan una fuente que convierte.",
+        [
+            ("En la continua el voltaje es siempre más alto",
+             "El voltaje no distingue a una de otra: hay corriente continua de alto voltaje y alterna de bajo."),
+            ("En la alterna las cargas se mueven más rápido por el conductor",
+             "La rapidez de desplazamiento de las cargas es muy baja en ambos casos: lo que cambia es el sentido."),
+            ("En la continua circulan electrones y en la alterna, protones",
+             "En un conductor metálico los portadores son electrones en ambos casos: los protones no se desplazan."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "La etiqueta de eficiencia energética de un refrigerador indica su "
+        "consumo anual en kilowatt-hora. ¿Qué permite comparar?",
+        "Cuánta energía usa cada modelo para prestar el mismo servicio",
+        "La etiqueta existe para hacer comparable algo que no se ve en el "
+        "precio.\n\n"
+        "1) Dos refrigeradores de igual capacidad pueden consumir cantidades "
+        "muy distintas de energía al año.\n"
+        "2) El consumo anual en kilowatt-hora permite estimar directamente el "
+        "costo de operación durante la vida útil del aparato.\n"
+        "3) Un modelo más caro pero más eficiente puede resultar más barato en "
+        "total.\n\n"
+        "La comparación es válida entre aparatos de la misma categoría y "
+        "capacidad: un refrigerador grande consumirá más que uno pequeño aunque "
+        "sea más eficiente.",
+        [
+            ("La potencia máxima que el aparato puede alcanzar",
+             "La etiqueta informa el consumo anual estimado, que integra potencia y horas de funcionamiento."),
+            ("La cantidad de frío que el refrigerador es capaz de producir",
+             "La capacidad de enfriamiento se informa por separado; la etiqueta se refiere a la energía consumida."),
+            ("El voltaje al que debe conectarse el artefacto para funcionar bien",
+             "El voltaje de operación es un dato técnico distinto y es el mismo para todos los aparatos domiciliarios."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Dos ampolletas, una de 40 W y otra de 100 W, están diseñadas para el "
+        "mismo voltaje. ¿Cuál tiene mayor resistencia?",
+        "La de 40 W",
+        "Con el mismo voltaje, la potencia depende inversamente de la "
+        "resistencia.\n\n"
+        "1) La relación es P = V² / R.\n"
+        "2) Con V fijo, una potencia MAYOR corresponde a una resistencia "
+        "MENOR.\n"
+        "3) La de 100 W tiene entonces menos resistencia, y la de 40 W, más.\n\n"
+        "Tiene sentido: menos resistencia deja pasar más corriente y por lo "
+        "tanto disipa más potencia. Ojo con no aplicar esta conclusión a "
+        "elementos conectados en serie, donde el razonamiento se invierte.",
+        [
+            ("La de 100 W", "Mayor potencia con el mismo voltaje implica menor resistencia, no mayor."),
+            ("Ambas tienen la misma resistencia, porque funcionan al mismo voltaje",
+             "Si tuvieran la misma resistencia y el mismo voltaje, disiparían la misma potencia."),
+            ("No se puede saber sin conocer la corriente que circula por cada una",
+             "La corriente se deduce de la potencia y el voltaje: los datos entregados bastan."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Una vivienda consume 250 kWh en un mes de 30 días. ¿Cuál es su potencia "
+        "media de consumo?",
+        "Alrededor de 350 W",
+        "La potencia media es la energía dividida por el tiempo total.\n\n"
+        "1) Horas del mes: 30 · 24 = 720 h.\n"
+        "2) Potencia media: 250 kWh ÷ 720 h, aproximadamente 0,35 kW.\n"
+        "3) Eso equivale a unos 350 W.\n\n"
+        "El resultado es un promedio: en la práctica el consumo se concentra en "
+        "las horas de uso y es casi nulo de madrugada. Sirve, eso sí, para "
+        "dimensionar por ejemplo una instalación solar.",
+        [
+            ("Alrededor de 8.300 W", "Dividió por 30 días en vez de por las 720 horas del mes."),
+            ("Alrededor de 250 W", "Tomó el valor de la energía y le cambió la unidad a potencia."),
+            ("Alrededor de 35 W", "Se equivocó en un orden de magnitud al convertir kilowatt a watt."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "La energía eléctrica se transporta a larga distancia en líneas de alta "
+        "tensión. ¿Cuál es la razón física?",
+        "A mayor voltaje se necesita menos corriente y hay menos pérdidas",
+        "Las pérdidas en la línea dependen del cuadrado de la corriente.\n\n"
+        "1) Para transportar una misma potencia, P = V · I, se puede usar mucho "
+        "voltaje y poca corriente, o poco voltaje y mucha corriente.\n"
+        "2) La potencia que se pierde calentando los cables es I² · R, así que "
+        "depende del CUADRADO de la corriente.\n"
+        "3) Elevando el voltaje diez veces, la corriente baja diez veces y las "
+        "pérdidas caen cien veces.\n\n"
+        "Por eso se transporta a decenas de miles de volt y se reduce con "
+        "transformadores cerca del consumo. Es también la razón de que la red "
+        "sea de corriente alterna: transformar es simple con ella.",
+        [
+            ("El alto voltaje hace que la electricidad viaje más rápido por el cable",
+             "La señal se propaga prácticamente a la misma rapidez sin importar el voltaje."),
+            ("A mayor voltaje los cables se calientan menos porque conducen mejor",
+             "La resistencia del cable no cambia con el voltaje: lo que baja es la corriente que lo atraviesa."),
+            ("El alto voltaje permite usar cables más delgados sin que se corten por el peso",
+             "El calibre se elige por la corriente y por resistencia mecánica; el beneficio principal es la reducción de pérdidas."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Un estudiante afirma que apagar las luces al salir de una habitación "
+        "ahorra más energía que cambiar el refrigerador por uno eficiente. ¿Cómo "
+        "se evalúa esa afirmación?",
+        "Depende de las potencias y de las horas de funcionamiento de cada uno",
+        "El ahorro se mide en energía, que es potencia por tiempo.\n\n"
+        "1) Una ampolleta LED de 9 W encendida de más durante 3 horas diarias "
+        "consume unos 0,8 kWh al mes.\n"
+        "2) Un refrigerador funciona las 24 horas del día todo el año, y la "
+        "diferencia entre un modelo eficiente y uno antiguo puede superar los "
+        "20 kWh mensuales.\n"
+        "3) Comparar potencias sin considerar las horas lleva a conclusiones "
+        "equivocadas: lo que importa es el producto.\n\n"
+        "La afirmación no es falsa en abstracto, pero necesita esos datos para "
+        "evaluarse; con los valores típicos, el refrigerador pesa mucho más.",
+        [
+            ("Es correcta, porque la iluminación es el mayor consumo de una vivienda",
+             "Con tecnología LED la iluminación suele ser una fracción menor del consumo domiciliario."),
+            ("Es incorrecta, porque apagar las luces no produce ningún ahorro",
+             "Sí produce ahorro: el punto es que suele ser menor que el de un refrigerador eficiente."),
+            ("Es correcta, porque el refrigerador consume solo cuando el motor está encendido",
+             "El motor cicla, pero acumulado sobre 24 horas diarias su consumo anual es alto."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Se quiere comparar el consumo de dos ampolletas midiendo con un medidor "
+        "de consumo enchufable. ¿Qué condiciones deben mantenerse iguales para "
+        "que la comparación sea válida?",
+        "El tiempo de funcionamiento y el voltaje de alimentación",
+        "El diseño debe aislar la variable en estudio, que es el tipo de "
+        "ampolleta.\n\n"
+        "1) El TIEMPO debe ser el mismo, porque la energía consumida es "
+        "potencia por tiempo: una ampolleta encendida más rato consumiría más "
+        "aunque fuera más eficiente.\n"
+        "2) El VOLTAJE debe ser el mismo, porque la potencia depende de él.\n"
+        "3) La variable independiente es el tipo de ampolleta y la dependiente, "
+        "la energía registrada.\n\n"
+        "Conviene además verificar que ambas entreguen un flujo luminoso "
+        "comparable: consumir menos no es un mérito si además ilumina menos.",
+        [
+            ("La potencia nominal de ambas ampolletas",
+             "Igualar la potencia eliminaría justamente la diferencia que se quiere medir."),
+            ("La cantidad de energía consumida por cada una",
+             "Esa es la variable dependiente: el resultado de la medición, no una condición."),
+            ("El color de la luz que emite cada ampolleta",
+             "Es deseable para comparar la calidad de la iluminación, pero no es lo que hace válida la medición de consumo."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un computador portátil de 60 W permanece encendido 8 horas diarias. "
+        "¿Cuánta energía consume en 30 días?",
+        "14,4 kWh",
+        "Se calcula la energía diaria y se multiplica por los días.\n\n"
+        "1) Potencia: 60 W = 0,06 kW.\n"
+        "2) Energía diaria: 0,06 kW · 8 h = 0,48 kWh.\n"
+        "3) En 30 días: 0,48 · 30 = 14,4 kWh.\n\n"
+        "Con un precio de 150 pesos el kilowatt-hora, eso equivale a unos 2.160 "
+        "pesos al mes: sirve para dimensionar cuánto pesa realmente cada "
+        "artefacto en la boleta.",
+        [
+            ("1,44 kWh", "Se equivocó en un orden de magnitud al convertir watt a kilowatt."),
+            ("144 kWh", "Se equivocó en el otro sentido con la misma conversión."),
+            ("480 kWh", "Multiplicó los watt por las horas sin convertir a kilowatt."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un fusible y un interruptor automático cumplen una función parecida. "
+        "¿En qué se diferencian?",
+        "El fusible se destruye al actuar y el automático se rearma",
+        "Ambos interrumpen el circuito ante una sobrecorriente, pero por "
+        "mecanismos distintos.\n\n"
+        "1) El FUSIBLE contiene un hilo que se funde al superarse cierta "
+        "corriente: una vez actuado, hay que reemplazarlo.\n"
+        "2) El AUTOMÁTICO usa un mecanismo térmico y magnético que abre un "
+        "contacto, y puede rearmarse bajando y subiendo la palanca.\n"
+        "3) Los dos protegen la instalación de sobrecorrientes, no a las "
+        "personas: para eso está el diferencial.\n\n"
+        "Nunca hay que reemplazar un fusible por uno de mayor amperaje ni "
+        "puentearlo: eso deja los cables sin protección.",
+        [
+            ("El fusible protege a las personas y el automático, a los cables",
+             "Ninguno de los dos protege a las personas de una electrocución: esa es función del diferencial."),
+            ("El fusible actúa ante sobretensiones y el automático ante sobrecorrientes",
+             "Los dos responden a la corriente, no al voltaje."),
+            ("El fusible se usa en corriente continua y el automático en corriente alterna",
+             "Ambos se fabrican para los dos tipos de corriente."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Muchos artefactos siguen consumiendo energía cuando están apagados con "
+        "el control remoto. ¿A qué se debe?",
+        "Mantienen circuitos activos a la espera de la señal",
+        "El modo de espera no es un apagado real.\n\n"
+        "1) Para poder responder al control remoto, el aparato debe mantener "
+        "encendido su receptor y parte de su electrónica.\n"
+        "2) Esa potencia es baja, del orden de unos pocos watt, pero se sostiene "
+        "las 24 horas del día.\n"
+        "3) Acumulada sobre un año y sobre todos los aparatos de una vivienda, "
+        "llega a ser una fracción apreciable del consumo.\n\n"
+        "Por eso desconectar del enchufe o usar una zapatilla con interruptor "
+        "elimina ese consumo por completo.",
+        [
+            ("El aparato acumula energía para arrancar más rápido después",
+             "No hay acumulación: la energía se consume de manera continua en los circuitos activos."),
+            ("La corriente alterna sigue circulando aunque el aparato esté apagado",
+             "Si el circuito estuviera realmente abierto no circularía corriente: el punto es que no lo está."),
+            ("El medidor de la vivienda registra un consumo mínimo por cada enchufe ocupado",
+             "El medidor registra la energía efectivamente consumida: un enchufe ocupado sin consumo no suma nada."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un secador de pelo indica 2.200 W y se conecta a 220 V. ¿Cuál es su "
+        "resistencia?",
+        "22 Ω",
+        "Conviene usar la relación entre potencia, voltaje y resistencia.\n\n"
+        "1) De P = V² / R se despeja R = V² / P.\n"
+        "2) Reemplaza: R = 220² ÷ 2.200 = 48.400 ÷ 2.200.\n"
+        "3) Resulta 22 Ω.\n\n"
+        "Comprobación por otra vía: la corriente es 2.200 ÷ 220 = 10 A, y "
+        "R = V / I = 220 ÷ 10 = 22 Ω. Coincide.",
+        [
+            ("10 Ω", "Ese es el valor de la corriente en ampere, no de la resistencia."),
+            ("0,1 Ω", "Invirtió la relación: dividió la potencia por el cuadrado del voltaje."),
+            ("484 Ω", "Elevó el voltaje al cuadrado y dividió por 100 en vez de por la potencia."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "¿Qué componente de la instalación domiciliaria reparte la energía en "
+        "varios circuitos independientes?",
+        "El tablero de distribución",
+        "Separar la instalación en circuitos tiene varias ventajas.\n\n"
+        "1) El tablero recibe la alimentación general y la reparte en circuitos "
+        "distintos: iluminación, enchufes, cocina.\n"
+        "2) Cada circuito lleva su propia protección, dimensionada según la "
+        "corriente que debe soportar.\n"
+        "3) Así una falla en un circuito no deja sin electricidad a toda la "
+        "vivienda, y se puede intervenir uno sin cortar los demás.\n\n"
+        "El tablero aloja además el interruptor general y el diferencial.",
+        [
+            ("El medidor", "El medidor registra el consumo total y no reparte circuitos."),
+            ("El conductor de tierra", "Es una vía de protección ante fallas, no un elemento de distribución."),
+            ("El interruptor diferencial", "Detecta fugas de corriente; se aloja en el tablero pero no reparte los circuitos."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Dos resistencias, una de 4 Ω y otra de 8 Ω, se conectan en serie a una "
+        "fuente. ¿Cuál disipa más potencia y en qué proporción?",
+        "La de 8 Ω, el doble que la otra",
+        "En serie la corriente es común, así que la potencia es proporcional a "
+        "la resistencia.\n\n"
+        "1) La potencia en cada elemento es P = I² · R, y la corriente I es la "
+        "misma para ambas.\n"
+        "2) Por lo tanto la razón entre las potencias es la razón entre las "
+        "resistencias: 8 ÷ 4 = 2.\n"
+        "3) La de 8 Ω disipa el doble.\n\n"
+        "En PARALELO el resultado se invierte: ahí el voltaje es común, "
+        "P = V² / R, y la de menor resistencia disipa más. La conexión decide la "
+        "respuesta.",
+        [
+            ("La de 4 Ω, el doble que la otra",
+             "Con la misma corriente, la potencia crece con la resistencia: la de 8 Ω disipa más."),
+            ("Ambas disipan la misma potencia, porque la corriente es igual",
+             "La corriente igual no basta: la potencia depende además de la resistencia."),
+            ("La de 8 Ω, el cuádruple que la otra",
+             "La relación es proporcional a R, no a su cuadrado: el factor es 2."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Una familia quiere reducir su boleta eléctrica y duda entre reemplazar "
+        "diez ampolletas incandescentes de 60 W por LED de 9 W, o cambiar un "
+        "calefactor de 2.000 W por uno de 1.500 W. Las ampolletas se usan 4 h "
+        "diarias y el calefactor, 3 h. ¿Cuál cambio ahorra más al día?",
+        "Las ampolletas, con 2,04 kWh frente a 1,5 kWh",
+        "Hay que calcular el ahorro de energía de cada alternativa.\n\n"
+        "1) AMPOLLETAS: el ahorro por unidad es 60 − 9 = 51 W. Por diez "
+        "ampolletas son 510 W. En 4 horas: 0,51 kW · 4 h = 2,04 kWh.\n"
+        "2) CALEFACTOR: el ahorro es 2.000 − 1.500 = 500 W. En 3 horas: "
+        "0,5 kW · 3 h = 1,5 kWh.\n"
+        "3) El cambio de ampolletas ahorra más.\n\n"
+        "El resultado no es evidente de antemano: el calefactor tiene mucha más "
+        "potencia, pero son diez ampolletas y se usan más horas. Comparar "
+        "potencias sin considerar cantidad ni tiempo lleva a la respuesta "
+        "equivocada.",
+        [
+            ("El calefactor, con 1,5 kWh frente a 1,02 kWh",
+             "Calculó el ahorro de una sola ampolleta en vez de las diez."),
+            ("El calefactor, porque su potencia es mucho mayor",
+             "La potencia mayor no basta: hay que multiplicar por las horas y por la cantidad de artefactos."),
+            ("Ambos ahorran lo mismo, porque la diferencia de potencia total es de 500 W en los dos casos",
+             "En las ampolletas la diferencia total es 510 W y además se usan 4 horas, no 3."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Una ampolleta de 60 W se conecta durante 5 horas. ¿Cuánta energía "
+        "consume en joule?",
+        "1.080.000 J",
+        "El joule es la unidad de energía del sistema internacional: potencia "
+        "por tiempo en segundos.\n\n"
+        "1) Convierte el tiempo: 5 h = 5 · 3.600 = 18.000 s.\n"
+        "2) Energía = P · t = 60 W · 18.000 s.\n"
+        "3) Resulta 1.080.000 J.\n\n"
+        "En kilowatt-hora el mismo consumo son 0,06 kW · 5 h = 0,3 kWh: la "
+        "misma energía expresada en la unidad de la boleta.",
+        [
+            ("216.000 J", "Convirtió solo una hora a segundos en vez de las cinco."),
+            ("18.060 J", "Sumó la potencia al tiempo en segundos en lugar de multiplicarlos."),
+            ("18.000 J", "Entregó el tiempo en segundos sin multiplicarlo por la potencia."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "¿En qué unidad se factura habitualmente la energía eléctrica "
+        "domiciliaria?",
+        "En kilowatt-hora",
+        "La unidad de facturación combina potencia y tiempo.\n\n"
+        "1) Un kilowatt-hora es la energía que consume un artefacto de 1.000 W "
+        "funcionando durante una hora.\n"
+        "2) Es una unidad de ENERGÍA, no de potencia: el watt mide potencia y el "
+        "kilowatt-hora, energía acumulada.\n"
+        "3) Se prefiere al joule porque las cifras resultan manejables: un "
+        "kilowatt-hora equivale a 3.600.000 joule.\n\n"
+        "El medidor de la vivienda acumula justamente esos kilowatt-hora.",
+        [
+            ("En watt", "El watt mide potencia, es decir, energía por unidad de tiempo."),
+            ("En ampere", "El ampere mide corriente eléctrica."),
+            ("En volt-ampere, que es la unidad de energía de la red domiciliaria",
+             "El volt-ampere mide potencia aparente, no energía."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_energia_electrica", "facil",
+        "En una instalación domiciliaria, ¿qué conductor está normalmente a un "
+        "potencial peligroso respecto de tierra?",
+        "La fase",
+        "Los tres conductores de un circuito domiciliario cumplen funciones "
+        "distintas.\n\n"
+        "1) La FASE es el conductor activo: está a unos 220 V respecto de "
+        "tierra, y tocarlo es peligroso.\n"
+        "2) El NEUTRO cierra el circuito y está a un potencial cercano al de "
+        "tierra.\n"
+        "3) La TIERRA de protección no conduce corriente en funcionamiento "
+        "normal: solo actúa ante una falla.\n\n"
+        "Por eso los interruptores de una vivienda deben cortar la fase y no el "
+        "neutro: cortando el neutro el artefacto se apaga, pero sigue "
+        "energizado.",
+        [
+            ("El neutro", "El neutro está a un potencial cercano al de tierra."),
+            ("El conductor de tierra", "No conduce corriente en operación normal y está al potencial del terreno."),
+            ("Los tres por igual, porque forman parte del mismo circuito",
+             "Solo la fase está a alto potencial respecto de tierra: esa es justamente la diferencia entre ellos."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "Un artefacto transforma en luz solo una parte de la energía eléctrica "
+        "que recibe y el resto se disipa como calor. ¿Cómo se llama la razón "
+        "entre la energía útil y la consumida?",
+        "Eficiencia",
+        "Es la magnitud que permite comparar cuánto se aprovecha.\n\n"
+        "1) La eficiencia se define como energía útil dividida por energía "
+        "consumida, y suele expresarse como porcentaje.\n"
+        "2) Nunca alcanza el 100 %: siempre hay pérdidas, generalmente como "
+        "calor.\n"
+        "3) Un LED es mucho más eficiente que una ampolleta incandescente "
+        "porque destina una fracción mayor de la energía a producir luz.\n\n"
+        "En una estufa eléctrica, en cambio, el calor ES la energía útil: ahí la "
+        "eficiencia es prácticamente total.",
+        [
+            ("Potencia", "La potencia es energía por unidad de tiempo, no una razón entre dos energías."),
+            ("Resistencia", "La resistencia es la oposición al paso de la corriente."),
+            ("Consumo", "El consumo es la energía total utilizada, sin compararla con la aprovechada."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "¿Por qué no conviene conectar varios artefactos de alta potencia a una "
+        "misma zapatilla o alargador?",
+        "Porque la corriente total puede superar lo que el cable resiste",
+        "El alargador tiene un límite de corriente propio.\n\n"
+        "1) Los artefactos conectados quedan en paralelo, así que sus corrientes "
+        "se suman en el cable del alargador.\n"
+        "2) Ese cable tiene una sección determinada y una corriente máxima "
+        "admisible.\n"
+        "3) Superarla lo calienta, puede derretir la aislación y provocar un "
+        "incendio, muchas veces sin que el automático de la casa alcance a "
+        "actuar.\n\n"
+        "Por eso los alargadores indican una potencia máxima, y los artefactos "
+        "de calefacción conviene enchufarlos directamente al muro.",
+        [
+            ("Porque el voltaje se reparte entre los artefactos y ninguno funciona bien",
+             "En paralelo todos reciben el mismo voltaje: el voltaje no se reparte."),
+            ("Porque la resistencia total aumenta y los aparatos pierden potencia",
+             "En paralelo la resistencia total disminuye, y por eso la corriente aumenta."),
+            ("Porque la corriente alterna se desfasa al pasar por varios enchufes seguidos",
+             "El desfase no es lo que produce el riesgo: es el calentamiento por exceso de corriente."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Una batería de teléfono indica 4.000 mAh a 3,7 V. ¿Aproximadamente "
+        "cuánta energía almacena?",
+        "Unos 14,8 Wh",
+        "La capacidad en miliampere-hora es carga, y hay que multiplicarla por "
+        "el voltaje para obtener energía.\n\n"
+        "1) Convierte: 4.000 mAh = 4 Ah.\n"
+        "2) Energía = carga · voltaje = 4 Ah · 3,7 V = 14,8 Wh.\n"
+        "3) En kilowatt-hora son unos 0,0148 kWh: menos de dos pesos de "
+        "electricidad por carga completa.\n\n"
+        "Comparar baterías solo por los miliampere-hora es engañoso: si trabajan "
+        "a voltajes distintos, la energía almacenada no es proporcional a esa "
+        "cifra.",
+        [
+            ("Unos 4.000 Wh", "Tomó la capacidad en miliampere-hora como si fuera energía, sin convertir ni multiplicar por el voltaje."),
+            ("Unos 1.081 Wh", "Dividió la capacidad por el voltaje en vez de multiplicarla."),
+            ("Unos 3,7 Wh", "Entregó el voltaje con otra unidad, sin usar la capacidad de la batería."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un panel solar entrega 300 W en condiciones de máxima radiación y "
+        "recibe el equivalente a 5 horas de sol pleno al día. ¿Cuánta energía "
+        "produce en un día?",
+        "1,5 kWh",
+        "Se multiplica la potencia por las horas equivalentes de sol pleno.\n\n"
+        "1) Convierte la potencia: 300 W = 0,3 kW.\n"
+        "2) Energía diaria: 0,3 kW · 5 h = 1,5 kWh.\n"
+        "3) Esa es la energía aprovechable de ese panel en un día promedio.\n\n"
+        "El concepto de horas de sol pleno resuelve un problema práctico: la "
+        "radiación varía durante el día, y esta magnitud resume toda esa "
+        "variación en un número equivalente.",
+        [
+            ("1.500 kWh", "No convirtió los watt a kilowatt antes de multiplicar."),
+            ("60 kWh", "Dividió por la potencia en vez de multiplicar, o usó 24 horas."),
+            ("0,06 kWh", "Dividió la potencia por las horas en lugar de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un motor eléctrico consume 500 W y entrega 400 W de potencia mecánica. "
+        "¿Cuál es su eficiencia?",
+        "80 %",
+        "La eficiencia es la razón entre lo aprovechado y lo consumido.\n\n"
+        "1) Eficiencia = potencia útil ÷ potencia consumida = 400 ÷ 500.\n"
+        "2) Resulta 0,8.\n"
+        "3) Expresado como porcentaje, 80 %.\n\n"
+        "Los 100 W restantes se disipan como calor en los devanados y en los "
+        "rozamientos: por eso un motor en funcionamiento se calienta.",
+        [
+            ("125 %", "Invirtió la división: usó la potencia consumida dividida por la útil. Ninguna eficiencia puede superar el 100 %."),
+            ("100 W", "Entregó la potencia perdida en watt, no la eficiencia, que es una razón adimensional."),
+            ("20 %", "Calculó la fracción perdida en vez de la aprovechada."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Dos ampolletas idénticas se conectan en paralelo a una batería. ¿Cómo "
+        "es la potencia total consumida comparada con la de una sola ampolleta?",
+        "El doble",
+        "En paralelo cada ampolleta funciona como si estuviera sola.\n\n"
+        "1) Cada una recibe el voltaje completo de la fuente y toma la misma "
+        "corriente que tomaría por separado.\n"
+        "2) Por lo tanto cada una disipa la misma potencia que una sola.\n"
+        "3) La potencia total es la suma: el doble.\n\n"
+        "En SERIE el resultado sería muy distinto: cada ampolleta recibiría la "
+        "mitad del voltaje y la potencia total sería la mitad de la de una sola, "
+        "no el doble.",
+        [
+            ("La mitad", "Ese sería el resultado de conectarlas en serie, no en paralelo."),
+            ("La misma", "Cada ampolleta consume por su cuenta: dos ramas consumen el doble que una."),
+            ("El cuádruple", "Cada una consume lo mismo que una sola: la suma es el doble, no el cuádruple."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Una lavadora indica un consumo de 0,8 kWh por ciclo y se usa 4 veces "
+        "por semana. Con el kWh a 150 pesos, ¿cuánto cuesta al mes, "
+        "considerando 4 semanas?",
+        "$1.920",
+        "Se acumula el consumo y después se aplica el precio.\n\n"
+        "1) Ciclos al mes: 4 por semana · 4 semanas = 16 ciclos.\n"
+        "2) Energía: 16 · 0,8 = 12,8 kWh.\n"
+        "3) Costo: 12,8 · 150 = 1.920 pesos.\n\n"
+        "El cálculo permite comparar alternativas concretas: lavar con agua fría, "
+        "por ejemplo, reduce bastante el consumo por ciclo, porque el grueso de "
+        "la energía se va en calentar el agua.",
+        [
+            ("$480", "Calculó el costo de una semana en vez del mes completo."),
+            ("$120", "Calculó el costo de un solo ciclo."),
+            ("$7.680", "Multiplicó por 16 dos veces, o usó 64 ciclos en lugar de 16."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un transformador reduce el voltaje de 220 V a 12 V para alimentar un "
+        "equipo. Si se desprecian las pérdidas, ¿qué ocurre con la corriente?",
+        "Aumenta en la misma proporción en que baja el voltaje",
+        "La potencia se conserva en un transformador ideal.\n\n"
+        "1) La potencia de entrada iguala a la de salida: V · I es el mismo a "
+        "ambos lados.\n"
+        "2) Si el voltaje se reduce unas 18 veces, la corriente debe aumentar "
+        "unas 18 veces para que el producto no cambie.\n"
+        "3) Por eso el lado de bajo voltaje de un transformador usa cables mucho "
+        "más gruesos.\n\n"
+        "El transformador no crea ni destruye energía: solo intercambia voltaje "
+        "por corriente, y por eso funciona únicamente con corriente alterna.",
+        [
+            ("Disminuye junto con el voltaje",
+             "Si ambos disminuyeran, la potencia de salida sería mucho menor que la de entrada y se estaría perdiendo energía."),
+            ("Se mantiene igual, porque el transformador solo cambia el voltaje",
+             "Con la misma corriente y menos voltaje, la potencia de salida sería mucho menor que la de entrada."),
+            ("Aumenta al cuadrado de la razón de voltajes",
+             "La relación es proporcional simple: lo que se conserva es el producto de voltaje por corriente."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Se comparan dos refrigeradores: el modelo A consume 300 kWh al año y "
+        "cuesta 250.000 pesos; el modelo B consume 450 kWh y cuesta 200.000. Con "
+        "el kWh a 150 pesos, ¿en cuántos años se recupera la diferencia de "
+        "precio?",
+        "En algo más de 2 años",
+        "Hay que comparar el sobreprecio con el ahorro anual.\n\n"
+        "1) Diferencia de precio: 250.000 − 200.000 = 50.000 pesos.\n"
+        "2) Ahorro anual de energía: 450 − 300 = 150 kWh, que a 150 pesos son "
+        "22.500 pesos al año.\n"
+        "3) Tiempo de recuperación: 50.000 ÷ 22.500, algo más de 2 años.\n\n"
+        "Como un refrigerador dura bastante más que eso, el modelo eficiente "
+        "resulta más barato en el total de su vida útil pese a costar más.",
+        [
+            ("En algo más de 10 años", "Usó un ahorro anual mucho menor: la diferencia de consumo es de 150 kWh, no de unos pocos."),
+            ("En menos de 1 año", "El ahorro anual es de 22.500 pesos, bastante menor que los 50.000 de diferencia."),
+            ("Nunca se recupera, porque el modelo eficiente siempre resulta más caro",
+             "Sí se recupera: el ahorro anual acumulado supera la diferencia de precio en pocos años."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Una ampolleta diseñada para 220 V se conecta por error a 110 V. ¿Qué "
+        "fracción de su potencia nominal disipa, suponiendo que su resistencia "
+        "no cambia?",
+        "La cuarta parte",
+        "La potencia depende del cuadrado del voltaje cuando la resistencia es "
+        "fija.\n\n"
+        "1) La relación es P = V² / R.\n"
+        "2) Al reducir el voltaje a la mitad, su cuadrado se reduce a la cuarta "
+        "parte.\n"
+        "3) Con la misma resistencia, la potencia también: la ampolleta "
+        "alumbrará muy débilmente.\n\n"
+        "Al revés, conectar a 220 V un artefacto de 110 V cuadruplicaría su "
+        "potencia, y por eso suele quemarse de inmediato. En la práctica la "
+        "resistencia del filamento varía con la temperatura, así que el factor "
+        "no es exactamente cuatro.",
+        [
+            ("La mitad", "La relación es cuadrática: la mitad del voltaje da la cuarta parte de la potencia."),
+            ("La misma potencia", "Con menos voltaje circula menos corriente y la potencia disminuye."),
+            ("La octava parte", "Ese factor correspondería a una dependencia cúbica, y la relación es cuadrática."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Un estudiante sostiene que un artefacto de 2.000 W siempre consume más "
+        "energía que uno de 500 W. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: depende también del tiempo de funcionamiento",
+        "Potencia y energía son magnitudes distintas.\n\n"
+        "1) La POTENCIA indica el ritmo de consumo: cuánta energía se usa por "
+        "segundo.\n"
+        "2) La ENERGÍA consumida es potencia por tiempo.\n"
+        "3) Un hervidor de 2.000 W usado 5 minutos consume unos 0,17 kWh, "
+        "mientras que un refrigerador de 500 W funcionando 8 horas efectivas "
+        "consume 4 kWh: mucho más.\n\n"
+        "Por eso la boleta no se explica mirando solo las potencias de los "
+        "artefactos: hay que multiplicarlas por las horas de uso.",
+        [
+            ("Es correcta: mayor potencia implica siempre mayor consumo",
+             "Solo si el tiempo de uso es el mismo, y en la práctica rara vez lo es."),
+            ("Es correcta, porque la potencia ya incluye el tiempo en su definición",
+             "La potencia es energía POR unidad de tiempo: no incluye cuánto tiempo funciona el aparato."),
+            ("Es incorrecta, porque la energía consumida no tiene relación con la potencia del artefacto",
+             "Sí tiene relación directa: la energía es el producto de la potencia por el tiempo."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Un circuito domiciliario está protegido por un automático de 16 A a "
+        "220 V. ¿Cuál es la potencia máxima que se puede conectar a él?",
+        "3.520 W",
+        "La potencia máxima resulta del voltaje y de la corriente admisible.\n\n"
+        "1) La relación es P = V · I.\n"
+        "2) Reemplaza: P = 220 V · 16 A.\n"
+        "3) Resulta 3.520 W.\n\n"
+        "Ese es el límite del circuito completo, no de cada enchufe: si se "
+        "conectan un hervidor de 2.000 W y una estufa de 2.000 W a la vez, la "
+        "suma supera el límite y el automático corta.",
+        [
+            ("13,75 W", "Dividió el voltaje por la corriente en vez de multiplicarlos."),
+            ("236 W", "Sumó el voltaje y la corriente, que son magnitudes distintas."),
+            ("352 W", "Se equivocó en un orden de magnitud al multiplicar."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Se quiere determinar experimentalmente la eficiencia de un hervidor "
+        "eléctrico. ¿Qué mediciones se necesitan?",
+        "La energía eléctrica consumida y el calor entregado al agua",
+        "La eficiencia compara lo aprovechado con lo consumido, así que hacen "
+        "falta las dos cantidades.\n\n"
+        "1) La ENERGÍA CONSUMIDA se obtiene con un medidor enchufable, o "
+        "multiplicando la potencia nominal por el tiempo de funcionamiento.\n"
+        "2) El CALOR ENTREGADO al agua se calcula a partir de la masa de agua y "
+        "de su aumento de temperatura.\n"
+        "3) La eficiencia es el cociente entre ambos.\n\n"
+        "Hay que cuidar además las condiciones: la temperatura inicial del agua y "
+        "la del ambiente influyen en las pérdidas y deben registrarse.",
+        [
+            ("Solo la potencia nominal indicada en el artefacto",
+             "La potencia nominal informa el consumo, pero no cuánta energía llegó efectivamente al agua."),
+            ("Solo el tiempo que tarda el agua en hervir",
+             "El tiempo es un dato necesario, pero por sí solo no permite calcular ninguna de las dos energías."),
+            ("La resistencia interna del hervidor y el voltaje de la red",
+             "Con eso se obtiene la potencia consumida, pero falta medir la energía que efectivamente recibió el agua."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un televisor de 100 W permanece 6 horas encendido y 18 horas en modo de "
+        "espera consumiendo 2 W. ¿Cuánta energía consume en un día?",
+        "0,636 kWh",
+        "Hay que sumar los dos regímenes por separado.\n\n"
+        "1) Encendido: 0,1 kW · 6 h = 0,6 kWh.\n"
+        "2) En espera: 0,002 kW · 18 h = 0,036 kWh.\n"
+        "3) Total: 0,6 + 0,036 = 0,636 kWh.\n\n"
+        "El modo de espera aporta poco en un día, pero son unos 13 kWh al año "
+        "por aparato: multiplicado por todos los equipos de una casa, deja de "
+        "ser despreciable.",
+        [
+            ("0,6 kWh", "Ignoró por completo el consumo en modo de espera."),
+            ("2,4 kWh", "Consideró el televisor encendido las 24 horas del día."),
+            ("0,036 kWh", "Consideró solo el modo de espera, ignorando las horas de uso."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "¿Por qué los artefactos de calefacción eléctrica son los que más pesan "
+        "en la boteta de la luz?",
+        "Porque combinan alta potencia con muchas horas de uso",
+        "El consumo es el producto de dos factores y estos artefactos son altos "
+        "en ambos.\n\n"
+        "1) Producir calor por efecto eléctrico exige mucha potencia: una estufa "
+        "ronda los 1.500 a 2.000 W, frente a los 10 W de una ampolleta LED.\n"
+        "2) Además suelen usarse varias horas seguidas durante los meses "
+        "fríos.\n"
+        "3) El producto de ambos factores da un consumo muy superior al de "
+        "cualquier aparato electrónico.\n\n"
+        "Lo mismo vale para el hervidor y la plancha, que tienen potencias "
+        "comparables pero se usan pocos minutos: ahí el segundo factor cambia "
+        "todo.",
+        [
+            ("Porque su eficiencia es muy baja y desperdician casi toda la energía",
+             "En una estufa el calor ES la energía útil: su eficiencia es casi total. El problema es la magnitud del consumo."),
+            ("Porque funcionan con corriente alterna y eso aumenta las pérdidas",
+             "El tipo de corriente no explica la diferencia de consumo entre artefactos."),
+            ("Porque necesitan un voltaje mayor que el resto de los aparatos",
+             "Todos los artefactos domiciliarios funcionan al mismo voltaje de red."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "En una instalación, ¿qué relación hay entre la sección de un cable y la "
+        "corriente que puede conducir con seguridad?",
+        "A mayor sección, mayor corriente admisible",
+        "El límite lo pone el calentamiento del conductor.\n\n"
+        "1) La potencia disipada en el cable es I² · R, y la resistencia "
+        "disminuye al aumentar la sección.\n"
+        "2) Un cable más grueso tiene menos resistencia y además más superficie "
+        "para evacuar el calor: se calienta menos con la misma corriente.\n"
+        "3) Por eso las normas fijan una corriente máxima admisible creciente "
+        "con la sección.\n\n"
+        "De ahí que un circuito de cocina, con artefactos de alta potencia, use "
+        "cable más grueso que uno de iluminación.",
+        [
+            ("A mayor sección, menor corriente admisible",
+             "Es al revés: un cable más grueso conduce más corriente con seguridad."),
+            ("La sección no influye: lo determinante es el voltaje del circuito",
+             "El voltaje determina el aislamiento necesario; la corriente admisible depende de la sección."),
+            ("A mayor sección, mayor resistencia y por lo tanto mayor capacidad de conducción",
+             "Mayor sección implica MENOR resistencia; el razonamiento tiene el signo invertido."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Una plancha de 1.200 W se usa 20 minutos. ¿Cuánta energía consume?",
+        "0,4 kWh",
+        "Hay que expresar el tiempo en horas antes de multiplicar.\n\n"
+        "1) Potencia: 1.200 W = 1,2 kW.\n"
+        "2) Tiempo: 20 min = 20/60 h = 0,333 h.\n"
+        "3) Energía: 1,2 · 0,333 = 0,4 kWh.\n\n"
+        "Es una cifra pequeña pese a la alta potencia, justamente porque el uso "
+        "es breve: el tiempo pesa tanto como la potencia.",
+        [
+            ("24 kWh", "Multiplicó la potencia en kilowatt por los 20 minutos sin convertirlos a horas."),
+            ("1,2 kWh", "Consideró una hora completa de uso en vez de 20 minutos."),
+            ("0,02 kWh", "Dividió por 60 dos veces, o convirtió los minutos a segundos."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Dos resistencias iguales se conectan primero en serie y después en "
+        "paralelo a la misma fuente. ¿Cómo se comparan las potencias totales "
+        "disipadas?",
+        "En paralelo se disipa cuatro veces más",
+        "La potencia total depende de la resistencia equivalente.\n\n"
+        "1) Con dos resistencias de valor R en serie, la equivalente es 2R y la "
+        "potencia total es V² / 2R.\n"
+        "2) En paralelo la equivalente es R/2 y la potencia es V² / (R/2) = "
+        "2V² / R.\n"
+        "3) La razón entre ambas es 4: en paralelo se disipa cuatro veces "
+        "más.\n\n"
+        "Ese factor explica por qué una fuente se agota mucho más rápido "
+        "alimentando un circuito en paralelo, y por qué la corriente exigida "
+        "puede hacer saltar una protección.",
+        [
+            ("En serie se disipa cuatro veces más",
+             "En serie la resistencia total es mayor, así que la potencia total es menor."),
+            ("Se disipa la misma potencia en ambos casos",
+             "La resistencia equivalente cambia por un factor 4 entre una conexión y otra, y con ella la potencia."),
+            ("En paralelo se disipa el doble",
+             "El factor entre 2R y R/2 es 4, no 2."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Se afirma que un artefacto desenchufado no consume energía, pero uno "
+        "apagado con su propio interruptor puede seguir consumiendo. ¿Cómo se "
+        "explica esa diferencia?",
+        "El interruptor del aparato no siempre corta toda su electrónica",
+        "Apagar y desconectar no son lo mismo.\n\n"
+        "1) Al desenchufar, el circuito queda físicamente abierto: no puede "
+        "circular corriente y el consumo es exactamente cero.\n"
+        "2) Al apagar con el interruptor del aparato, muchos equipos mantienen "
+        "activa una parte de su electrónica, por ejemplo el receptor del control "
+        "remoto o una fuente de alimentación permanente.\n"
+        "3) Esa parte sigue consumiendo, típicamente unos pocos watt.\n\n"
+        "La comprobación es directa: un medidor enchufable registra un consumo "
+        "distinto de cero con el aparato apagado.",
+        [
+            ("Al desenchufar el aparato la corriente continúa por el cable de tierra",
+             "El conductor de tierra no conduce corriente en operación normal, y un aparato desenchufado no tiene ningún camino cerrado."),
+            ("El interruptor del aparato aumenta la resistencia pero no la hace infinita, y por eso pasa algo de corriente",
+             "Un interruptor abierto sí interrumpe su circuito; lo que ocurre es que no corta toda la electrónica del aparato."),
+            ("Un aparato desenchufado también consume, pero en cantidades imposibles de medir",
+             "Sin circuito cerrado el consumo es exactamente cero, no una cantidad pequeña."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Un grupo mide el consumo de una ampolleta LED y de una incandescente "
+        "que entregan la misma iluminación, y concluye que la LED es más "
+        "eficiente. Un compañero objeta que no midieron la luz emitida. ¿Es "
+        "pertinente la objeción?",
+        "Sí: sin medir la luz, la comparación de eficiencia queda incompleta",
+        "La eficiencia es una razón entre lo útil y lo consumido, y ambas "
+        "cantidades hay que medirlas.\n\n"
+        "1) El grupo midió el consumo, que es el denominador de esa razón.\n"
+        "2) El numerador es la luz efectivamente emitida, y afirmar que es la "
+        "misma sin medirla es un supuesto, no un dato.\n"
+        "3) Si la LED iluminara menos, consumir menos no probaría mayor "
+        "eficiencia.\n\n"
+        "La objeción no invalida el resultado esperado, que se sabe correcto por "
+        "otras vías: señala que ese experimento en particular no lo demuestra.",
+        [
+            ("No: basta con comparar el consumo de ambas ampolletas",
+             "El consumo solo es la mitad de la razón que define la eficiencia."),
+            ("No: la iluminación se puede suponer igual porque ambas son ampolletas",
+             "Suponer no es medir, y dos ampolletas cualesquiera pueden emitir flujos luminosos muy distintos."),
+            ("Sí, pero solo si las dos ampolletas tienen la misma potencia nominal",
+             "Si tuvieran la misma potencia no habría nada que comparar en consumo: la objeción vale precisamente cuando difieren."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "¿Qué información entrega la potencia nominal indicada en un artefacto "
+        "eléctrico?",
+        "La energía que transforma por unidad de tiempo al funcionar",
+        "La potencia describe un ritmo, no una cantidad total.\n\n"
+        "1) Un artefacto de 1.000 W transforma 1.000 joule de energía eléctrica "
+        "cada segundo mientras funciona.\n"
+        "2) Para saber cuánta energía consume en total hay que multiplicar por "
+        "el tiempo de funcionamiento.\n"
+        "3) Por eso dos artefactos de la misma potencia pueden pesar muy "
+        "distinto en la boleta si uno se usa minutos y el otro, horas.\n\n"
+        "La potencia también sirve para dimensionar el circuito: determina la "
+        "corriente que el artefacto exigirá.",
+        [
+            ("La cantidad total de energía que consumirá durante su vida útil",
+             "Eso depende de cuántas horas se use: la potencia solo indica el ritmo de consumo."),
+            ("El voltaje al que debe conectarse para funcionar correctamente",
+             "El voltaje de operación se indica por separado en la placa del artefacto."),
+            ("La resistencia eléctrica de sus componentes internos",
+             "La resistencia puede deducirse de la potencia y el voltaje, pero no es lo que la potencia informa."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Se conectan a un circuito de 220 V un hervidor de 2.000 W y un "
+        "microondas de 1.100 W al mismo tiempo. ¿Qué corriente total circula?",
+        "Alrededor de 14 A",
+        "En paralelo las corrientes se suman.\n\n"
+        "1) Hervidor: I = 2.000 ÷ 220, aproximadamente 9,1 A.\n"
+        "2) Microondas: I = 1.100 ÷ 220 = 5 A.\n"
+        "3) Total: 9,1 + 5 = 14,1 A, alrededor de 14 A.\n\n"
+        "Con un automático de 16 A el circuito aguanta, pero queda muy al "
+        "límite: agregar un tercer artefacto de potencia alta lo haría cortar.",
+        [
+            ("Alrededor de 5 A", "Consideró solo el microondas, ignorando el hervidor."),
+            ("Alrededor de 4,5 A", "Sumó las potencias y dividió por 220 dos veces."),
+            ("Alrededor de 682 A", "Multiplicó las potencias por el voltaje en vez de dividir."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "¿Qué ocurre con el consumo de energía de un artefacto si su potencia se "
+        "mantiene pero se duplica el tiempo de uso?",
+        "Se duplica",
+        "La energía es el producto de potencia por tiempo.\n\n"
+        "1) Con la potencia constante, la energía es directamente proporcional "
+        "al tiempo.\n"
+        "2) Duplicar el tiempo duplica la energía consumida.\n"
+        "3) Es la relación más directa y la más útil para reducir una boleta: "
+        "usar menos horas un artefacto tiene un efecto proporcional inmediato.\n\n"
+        "Por eso las recomendaciones de ahorro apuntan tanto a cambiar "
+        "artefactos como a reducir su tiempo de funcionamiento.",
+        [
+            ("Se mantiene igual, porque la potencia no cambió",
+             "La potencia es el ritmo de consumo: usarlo el doble de tiempo consume el doble de energía."),
+            ("Se cuadruplica", "La relación con el tiempo es lineal, no cuadrática."),
+            ("Se reduce a la mitad, porque el consumo se reparte en más tiempo",
+             "El consumo no se reparte: se acumula mientras el artefacto funciona."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "¿Qué unidad se usa para expresar la potencia eléctrica?",
+        "El watt",
+        "Cada magnitud del circuito tiene su unidad propia.\n\n"
+        "1) El WATT mide potencia: un joule por segundo.\n"
+        "2) El volt mide diferencia de potencial y el ampere, corriente.\n"
+        "3) El kilowatt-hora, en cambio, mide energía: es una potencia "
+        "multiplicada por un tiempo.\n\n"
+        "La confusión más frecuente es entre watt y kilowatt-hora: el primero "
+        "indica el ritmo de consumo y el segundo, la energía acumulada.",
+        [
+            ("El kilowatt-hora", "Mide energía, no potencia: es potencia por tiempo."),
+            ("El volt", "Mide la diferencia de potencial entre dos puntos."),
+            ("El ohm", "Mide la resistencia eléctrica."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "facil",
+        "Un artefacto de 500 W funciona durante 2 horas. ¿Cuánta energía "
+        "consume?",
+        "1 kWh",
+        "Se convierte la potencia a kilowatt y se multiplica por las horas.\n\n"
+        "1) Potencia: 500 W = 0,5 kW.\n"
+        "2) Energía: 0,5 kW · 2 h = 1 kWh.\n"
+        "3) Ese es exactamente el consumo que registra el medidor de la "
+        "vivienda.\n\n"
+        "Comprobación: un artefacto de 1.000 W durante una hora consume lo "
+        "mismo, 1 kWh. La mitad de potencia durante el doble de tiempo da igual "
+        "resultado.",
+        [
+            ("1.000 kWh", "No convirtió los watt a kilowatt antes de multiplicar."),
+            ("250 kWh", "Dividió la potencia por las horas en lugar de multiplicarlas."),
+            ("2 kWh", "Usó la potencia como si fuera 1 kW en vez de 0,5 kW."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "dificil",
+        "Se comparan dos afirmaciones sobre la instalación domiciliaria: (I) el "
+        "interruptor automático protege a las personas de una electrocución, y "
+        "(II) el interruptor diferencial protege los cables de un "
+        "sobrecalentamiento. ¿Cómo se evalúan?",
+        "Las dos están invertidas respecto de su función real",
+        "Cada protección responde a un fenómeno distinto.\n\n"
+        "1) El AUTOMÁTICO responde a la magnitud de la corriente: corta cuando "
+        "supera lo que los cables resisten. Protege la instalación de "
+        "sobrecalentamiento e incendio.\n"
+        "2) El DIFERENCIAL responde a la diferencia entre la corriente que va y "
+        "la que vuelve: corta ante una fuga hacia tierra, que es lo que ocurre "
+        "cuando alguien recibe una descarga. Protege a las personas.\n"
+        "3) Las dos afirmaciones intercambian esas funciones.\n\n"
+        "Por eso ambos dispositivos son necesarios: ninguno reemplaza al otro.",
+        [
+            ("Las dos son correctas y describen protecciones complementarias",
+             "Son complementarias, pero cada afirmación le atribuye a un dispositivo la función del otro."),
+            ("Solo la primera es correcta",
+             "El automático protege la instalación, no a las personas de una electrocución."),
+            ("Solo la segunda es correcta",
+             "El diferencial protege a las personas ante fugas, no a los cables de sobrecalentamiento."),
+        ],
+    ),
+    _q(
+        "cie_energia_electrica", "medio",
+        "Un cargador de teléfono consume 5 W y se deja enchufado sin el teléfono "
+        "durante 24 horas. ¿Cuánta energía consume en ese día?",
+        "0,12 kWh",
+        "Se aplica la misma relación entre potencia, tiempo y energía.\n\n"
+        "1) Potencia: 5 W = 0,005 kW.\n"
+        "2) Energía: 0,005 kW · 24 h = 0,12 kWh.\n"
+        "3) En un año son unos 44 kWh: no es enorme, pero es energía consumida "
+        "sin ningún servicio a cambio.\n\n"
+        "En la práctica un cargador moderno sin carga consume bastante menos de "
+        "5 W; el cálculo muestra el orden de magnitud del hábito.",
+        [
+            ("0,012 kWh", "Se equivocó en un orden de magnitud al convertir watt a kilowatt."),
+            ("120 kWh", "No convirtió la potencia a kilowatt antes de multiplicar."),
+            ("5 kWh", "Tomó la potencia y le cambió la unidad, sin multiplicar por el tiempo."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_electricidad", "medio",
+        "Un estudiante mide con un voltímetro los extremos de cada una de tres "
+        "resistencias conectadas en serie y obtiene 4 V, 6 V y 10 V. ¿Qué "
+        "voltaje entrega la fuente?",
+        "20 V",
+        "En serie, las caídas de voltaje se reparten y suman el total de la "
+        "fuente.\n\n"
+        "1) La carga recorre las tres resistencias una tras otra, cediendo "
+        "energía en cada una.\n"
+        "2) La suma de esas caídas debe igualar la energía que la fuente le "
+        "entregó por unidad de carga.\n"
+        "3) Suma: 4 + 6 + 10 = 20 V.\n\n"
+        "Esa comprobación es una buena manera de detectar errores de medición: "
+        "si las caídas no suman el voltaje de la fuente, alguna lectura está "
+        "mal o hay un elemento sin considerar.",
+        [
+            ("10 V", "Tomó la mayor de las tres caídas en lugar de sumarlas."),
+            ("6,7 V", "Promedió las tres caídas, cuando en serie se suman."),
+            ("240 V", "Multiplicó las tres caídas entre sí en vez de sumarlas."),
+        ],
+    ),
+]
