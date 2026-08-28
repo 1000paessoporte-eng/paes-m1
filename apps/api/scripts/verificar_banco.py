@@ -214,6 +214,10 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "una especie con 8 cromosomas completa la meiosis": f"{8 // 2} cromosomas",
     "combinaciones cromosómicas distintas puede tener un gameto humano": f"{2 ** 23:,}".replace(",", "."),
     "especie con 5 pares de cromosomas homólogos": f"{2 ** 5} combinaciones",
+    # Fotosintesis: proporciones de la ecuacion global
+    "moléculas de oxígeno se liberan por cada molécula de glucosa": f"{6} moléculas",
+    "Si una planta produce 2 moléculas de glucosa": f"{6 * 2} moléculas",
+    "moléculas de agua se necesitan para formar 4 moléculas de glucosa": f"{6 * 4} moléculas",
     # Ácido-base
 }
 

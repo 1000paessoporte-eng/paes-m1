@@ -102804,3 +102804,1315 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biologia - Organismo y ambiente: fotosintesis y respiracion
+#
+# El temario pide las caracteristicas de cada etapa de la fotosintesis (lugar,
+# reactantes, productos y otras moleculas que participan), el efecto de las
+# variables ambientales sobre el proceso, la comparacion entre nutricion
+# autotrofa y heterotrofa, y el rol de la fotosintesis y la respiracion celular
+# en el flujo de energia y en el reciclaje del carbono y del oxigeno.
+#
+# Las trece dificiles son de laboratorio: que controlar al acercar una lampara
+# que ademas calienta, que demuestra la hoja variegada tenida con yodo, que
+# prueba el agua marcada sobre el origen del oxigeno liberado, y como se
+# identifica un factor limitante moviendolo para ver si la meseta se desplaza.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿En qué organelo ocurre la fotosíntesis?",
+        "En el cloroplasto",
+        "El proceso está confinado a un organelo propio de las células "
+        "vegetales.\n\n"
+        "1) El cloroplasto contiene los pigmentos que captan la luz y las "
+        "enzimas que fijan el carbono.\n"
+        "2) Su organización interna separa las dos etapas del proceso: los "
+        "tilacoides y el estroma.\n"
+        "3) Las células animales no tienen cloroplastos, y por eso no pueden "
+        "fabricar materia orgánica a partir de luz.\n\n"
+        "La mitocondria, en cambio, está presente tanto en células vegetales "
+        "como animales, porque ambas respiran.",
+        [
+            ("En la mitocondria",
+             "La mitocondria realiza la respiración celular, que libera la energía almacenada."),
+            ("En el núcleo",
+             "El núcleo guarda el material genético; no participa directamente de la fotosíntesis."),
+            ("En el aparato de Golgi, que procesa y distribuye las moléculas producidas por la célula",
+             "El Golgi modifica y distribuye moléculas, pero no capta luz ni fija carbono."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Qué pigmento capta la luz en la fotosíntesis?",
+        "La clorofila",
+        "La captación de luz depende de una molécula específica.\n\n"
+        "1) La clorofila se ubica en las membranas de los tilacoides, dentro "
+        "del cloroplasto.\n"
+        "2) Absorbe principalmente luz roja y azul, y refleja la verde, que es "
+        "la que llega a nuestros ojos.\n"
+        "3) La energía absorbida es la que pone en marcha las reacciones de la "
+        "etapa lumínica.\n\n"
+        "Existen otros pigmentos que amplían el rango de luz aprovechable, pero "
+        "la clorofila es el principal.",
+        [
+            ("La hemoglobina",
+             "Transporta oxígeno en la sangre de muchos animales; no participa en la fotosíntesis."),
+            ("La queratina",
+             "Es una proteína estructural de pelos y uñas, sin relación con la captación de luz."),
+            ("La celulosa, que forma la pared de las células vegetales y les da su rigidez característica",
+             "La celulosa es un componente estructural y no absorbe la luz que impulsa el proceso."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Cuáles son los reactantes de la fotosíntesis?",
+        "Dióxido de carbono y agua",
+        "La ecuación global identifica lo que entra y lo que sale.\n\n"
+        "1) La planta toma dióxido de carbono del aire a través de los estomas "
+        "y agua desde el suelo por la raíz.\n"
+        "2) Con la energía de la luz, esas dos moléculas se transforman en "
+        "materia orgánica.\n"
+        "3) Los productos son glucosa y oxígeno.\n\n"
+        "La luz no es un reactante que se consuma como materia: es la fuente de "
+        "energía que hace posible la reacción.",
+        [
+            ("Glucosa y oxígeno",
+             "Son los productos del proceso, no lo que entra en él."),
+            ("Oxígeno y agua",
+             "El oxígeno se libera; no se consume en la fotosíntesis."),
+            ("Nitrógeno del aire y sales minerales absorbidas por las raíces desde el suelo",
+             "Las plantas absorben minerales, pero no son los reactantes de la fotosíntesis."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Qué es un organismo autótrofo?",
+        "Uno que fabrica su propia materia orgánica",
+        "La clasificación depende de dónde obtiene el organismo su carbono.\n\n"
+        "1) Un autótrofo sintetiza moléculas orgánicas a partir de sustancias "
+        "inorgánicas, como el dióxido de carbono.\n"
+        "2) La mayoría lo hace usando la energía de la luz, es decir, por "
+        "fotosíntesis.\n"
+        "3) Por eso ocupan el primer nivel de las cadenas tróficas: producen el "
+        "alimento del que dependen los demás.\n\n"
+        "Un heterótrofo, en cambio, obtiene sus moléculas orgánicas "
+        "consumiendo a otros organismos.",
+        [
+            ("Uno que se alimenta de otros organismos",
+             "Esa es la definición de heterótrofo."),
+            ("Uno que no necesita energía para vivir",
+             "Todos los organismos requieren energía: los autótrofos la captan de la luz o de compuestos químicos."),
+            ("Uno que vive en simbiosis con otro organismo del que obtiene todos sus nutrientes orgánicos",
+             "Describe una relación de dependencia, que es lo contrario de la autotrofía."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿En qué organelo ocurre principalmente la respiración celular?",
+        "En la mitocondria",
+        "La respiración celular tiene su propio organelo especializado.\n\n"
+        "1) La mitocondria es donde se completa la degradación de la glucosa en "
+        "presencia de oxígeno.\n"
+        "2) Ahí se obtiene la mayor parte del ATP que la célula usa como "
+        "energía disponible.\n"
+        "3) La primera etapa de la degradación de la glucosa ocurre en el "
+        "citoplasma, antes de entrar a la mitocondria.\n\n"
+        "Las células vegetales tienen mitocondrias además de cloroplastos: "
+        "fabrican materia orgánica y también la degradan.",
+        [
+            ("En el cloroplasto",
+             "El cloroplasto realiza la fotosíntesis, que almacena energía en lugar de liberarla."),
+            ("En el ribosoma",
+             "El ribosoma sintetiza proteínas; no participa de la respiración celular."),
+            ("En la vacuola, que en las células vegetales ocupa la mayor parte del volumen celular",
+             "La vacuola almacena agua y sustancias, pero no realiza la respiración."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Qué gases intervienen en la respiración celular?",
+        "Consume oxígeno y libera dióxido de carbono",
+        "El intercambio de gases es inverso al de la fotosíntesis.\n\n"
+        "1) La respiración celular degrada la glucosa usando oxígeno.\n"
+        "2) De esa degradación se obtiene energía, y se liberan dióxido de "
+        "carbono y agua.\n"
+        "3) La fotosíntesis hace el recorrido inverso: consume dióxido de "
+        "carbono y libera oxígeno.\n\n"
+        "Esa complementariedad es la base del reciclaje del carbono y del "
+        "oxígeno en los ecosistemas.",
+        [
+            ("Consume dióxido de carbono y libera oxígeno",
+             "Ese es el intercambio propio de la fotosíntesis."),
+            ("Consume nitrógeno y libera oxígeno",
+             "El nitrógeno atmosférico no participa de la respiración celular."),
+            ("No intercambia gases con el medio, porque toda la energía proviene de la glucosa almacenada",
+             "La degradación de la glucosa con oxígeno implica necesariamente intercambio de gases."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿De dónde proviene el oxígeno que la planta libera durante la "
+        "fotosíntesis?",
+        "Del agua",
+        "El origen del oxígeno liberado se estableció experimentalmente.\n\n"
+        "1) En la etapa lumínica, la molécula de agua se rompe y libera "
+        "electrones, protones y oxígeno.\n"
+        "2) Ese oxígeno se difunde hacia el exterior de la hoja.\n"
+        "3) El dióxido de carbono, en cambio, aporta el carbono que se "
+        "incorpora a la glucosa.\n\n"
+        "Experimentos con agua marcada isotópicamente confirmaron que el "
+        "oxígeno liberado proviene del agua y no del dióxido de carbono.",
+        [
+            ("Del dióxido de carbono",
+             "El carbono y el oxígeno del dióxido de carbono se incorporan a la materia orgánica."),
+            ("Del aire que la planta almacena",
+             "La planta no almacena oxígeno para liberarlo: lo produce al romper el agua."),
+            ("De los minerales del suelo que la planta absorbe junto con el agua a través de sus raíces",
+             "Los minerales cumplen otras funciones y no son la fuente del oxígeno liberado."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿En qué dos etapas se divide la fotosíntesis?",
+        "La etapa lumínica y la fijación de carbono",
+        "Cada etapa ocurre en un lugar distinto del cloroplasto.\n\n"
+        "1) La etapa lumínica ocurre en las membranas de los tilacoides y "
+        "convierte energía luminosa en energía química.\n"
+        "2) La fijación de carbono ocurre en el estroma e incorpora el dióxido "
+        "de carbono a moléculas orgánicas.\n"
+        "3) La segunda etapa usa lo que produjo la primera, de modo que ambas "
+        "están encadenadas.\n\n"
+        "Separarlas ayuda a entender por qué algunas variables afectan a una y "
+        "no a la otra.",
+        [
+            ("La glucólisis y el ciclo de Krebs",
+             "Esas son etapas de la respiración celular, no de la fotosíntesis."),
+            ("La absorción y la transpiración",
+             "Son procesos de transporte de agua en la planta, no etapas de la fotosíntesis."),
+            ("La etapa nocturna y la etapa diurna, según el momento del día en que cada una ocurre",
+             "La distinción no es horaria: ambas etapas ocurren mientras hay luz disponible."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Qué estructura de la hoja permite el ingreso del dióxido de carbono?",
+        "Los estomas",
+        "El intercambio de gases requiere aberturas controladas.\n\n"
+        "1) Los estomas son poros de la epidermis que se abren y se cierran "
+        "según las condiciones.\n"
+        "2) Abiertos, dejan entrar dióxido de carbono y salir oxígeno y vapor "
+        "de agua.\n"
+        "3) Cerrados, la planta pierde menos agua pero también deja de recibir "
+        "dióxido de carbono.\n\n"
+        "Ese compromiso entre perder agua y captar carbono es central para "
+        "entender la fotosíntesis en climas secos.",
+        [
+            ("Las raíces",
+             "Las raíces absorben agua y minerales del suelo, no dióxido de carbono del aire."),
+            ("El tallo leñoso",
+             "El tallo cumple funciones de sostén y transporte, no de intercambio gaseoso principal."),
+            ("Los cloroplastos, que capturan directamente el dióxido de carbono desde la atmósfera",
+             "El cloroplasto usa el gas una vez dentro de la hoja; no lo capta desde el aire exterior."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Qué produce la fotosíntesis además de oxígeno?",
+        "Glucosa",
+        "El producto orgánico es lo que da sentido al proceso.\n\n"
+        "1) El carbono del dióxido de carbono se incorpora a moléculas "
+        "orgánicas.\n"
+        "2) El producto característico es la glucosa, un azúcar que almacena "
+        "energía en sus enlaces.\n"
+        "3) A partir de ella la planta forma almidón, celulosa y otras "
+        "moléculas.\n\n"
+        "El oxígeno liberado es, desde el punto de vista de la planta, un "
+        "producto secundario del rompimiento del agua.",
+        [
+            ("Proteínas",
+             "Las proteínas requieren además nitrógeno y se sintetizan por otras rutas."),
+            ("Dióxido de carbono",
+             "El dióxido de carbono es un reactante de la fotosíntesis, no un producto."),
+            ("Sales minerales, que la planta fabrica a partir del agua absorbida por sus raíces",
+             "Las sales minerales se absorben del suelo: la planta no las fabrica."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "facil",
+        "¿Por qué las plantas se ven verdes?",
+        "Porque la clorofila refleja la luz verde",
+        "El color observado corresponde a la luz que no se aprovecha.\n\n"
+        "1) La clorofila absorbe con más eficiencia la luz roja y la azul del "
+        "espectro visible.\n"
+        "2) La luz verde es reflejada en mayor proporción y es la que llega a "
+        "nuestros ojos.\n"
+        "3) Por eso el color de una hoja informa qué longitudes de onda usa "
+        "menos, no cuáles aprovecha.\n\n"
+        "En cultivos bajo luz artificial se usan lámparas con predominio de rojo "
+        "y azul, por esa misma razón.",
+        [
+            ("Porque absorbe toda la luz verde",
+             "Si la absorbiera, no la veríamos: el verde es justamente la luz reflejada."),
+            ("Porque el dióxido de carbono es de color verde",
+             "El dióxido de carbono es un gas incoloro."),
+            ("Porque las células vegetales tienen una pared de celulosa que le da ese color a la planta",
+             "La celulosa no aporta color: el verde proviene de los pigmentos del cloroplasto."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué ocurre en la etapa lumínica de la fotosíntesis?",
+        "Se capta luz y se rompe la molécula de agua",
+        "La primera etapa transforma energía luminosa en energía química.\n\n"
+        "1) Los pigmentos de los tilacoides absorben la luz y excitan "
+        "electrones.\n"
+        "2) La molécula de agua se rompe para reponer esos electrones, y en el "
+        "proceso se libera oxígeno.\n"
+        "3) La energía se almacena en ATP y en un transportador de electrones "
+        "que quedará disponible para la etapa siguiente.\n\n"
+        "Nada de carbono se fija todavía: eso ocurre después, en el estroma.",
+        [
+            ("Se fija el dióxido de carbono",
+             "La fijación del carbono ocurre en la segunda etapa, en el estroma."),
+            ("Se sintetiza glucosa directamente a partir de la luz",
+             "La glucosa se forma en la etapa de fijación, con los productos que aporta la lumínica."),
+            ("Se degrada la glucosa acumulada durante la noche para obtener la energía que el proceso requiere",
+             "Esa degradación corresponde a la respiración celular, no a la fotosíntesis."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Dónde ocurre la etapa lumínica y dónde la fijación de carbono?",
+        "En los tilacoides y en el estroma",
+        "La organización interna del cloroplasto separa ambas etapas.\n\n"
+        "1) Los tilacoides son sacos membranosos apilados que contienen los "
+        "pigmentos: ahí ocurre la captación de luz.\n"
+        "2) El estroma es el medio que los rodea y contiene las enzimas que "
+        "incorporan el dióxido de carbono.\n"
+        "3) Los productos de la primera etapa se difunden desde los tilacoides "
+        "al estroma, donde se utilizan.\n\n"
+        "La separación no es solo espacial: permite que cada conjunto de "
+        "reacciones ocurra en las condiciones que necesita.",
+        [
+            ("En el estroma y en los tilacoides",
+             "Invierte los lugares: la captación de luz ocurre en los tilacoides."),
+            ("Ambas en la membrana externa del cloroplasto",
+             "La membrana externa delimita el organelo, pero no aloja estas reacciones."),
+            ("En la mitocondria y en el citoplasma, que es donde la célula obtiene la energía que necesita",
+             "Esos son los lugares de la respiración celular, no de la fotosíntesis."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué papel cumplen el ATP y el transportador de electrones producidos "
+        "en la etapa lumínica?",
+        "Aportan energía y electrones para fijar el carbono",
+        "Ambas moléculas conectan las dos etapas del proceso.\n\n"
+        "1) La etapa lumínica no fabrica azúcar: produce energía química y poder "
+        "reductor.\n"
+        "2) Esas moléculas se difunden al estroma y son consumidas por las "
+        "reacciones que incorporan el dióxido de carbono.\n"
+        "3) Sin ellas, la fijación de carbono se detiene aunque haya dióxido de "
+        "carbono disponible.\n\n"
+        "Por eso la segunda etapa depende de la luz, aunque la luz no participe "
+        "directamente en sus reacciones.",
+        [
+            ("Se liberan al ambiente como productos finales",
+             "Se consumen dentro del mismo cloroplasto: no salen como productos."),
+            ("Transportan agua desde la raíz hasta la hoja",
+             "El transporte de agua ocurre por otros tejidos y mecanismos."),
+            ("Almacenan la energía de la planta a largo plazo para ser utilizada durante el invierno",
+             "El almacenamiento de largo plazo es en forma de almidón, no de ATP."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Por qué la fijación de carbono depende de la luz aunque sus "
+        "reacciones no la usen directamente?",
+        "Porque consume lo que produce la etapa lumínica",
+        "La dependencia es indirecta pero estricta.\n\n"
+        "1) Las reacciones de fijación necesitan ATP y poder reductor para "
+        "incorporar el dióxido de carbono.\n"
+        "2) Esas moléculas solo se generan mientras la etapa lumínica está "
+        "operando.\n"
+        "3) En oscuridad prolongada se agotan y la fijación se detiene, aunque "
+        "las enzimas estén intactas.\n\n"
+        "Por eso llamarla etapa oscura induce a error: no es una etapa que "
+        "ocurra de noche.",
+        [
+            ("Porque sus enzimas necesitan luz para activarse",
+             "Aunque la regulación existe, la razón principal es el suministro de ATP y poder reductor."),
+            ("Porque el dióxido de carbono solo entra a la hoja con luz",
+             "El gas puede entrar si los estomas están abiertos, con independencia de la luz."),
+            ("Porque la luz aporta directamente los electrones que se incorporan a la molécula de glucosa",
+             "Los electrones provienen del agua y llegan a la fijación mediante un transportador."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué diferencia hay entre la nutrición autótrofa y la heterótrofa?",
+        "De dónde proviene el carbono que incorporan",
+        "La distinción es la fuente del carbono y no la de energía.\n\n"
+        "1) Los autótrofos incorporan carbono desde una fuente inorgánica, el "
+        "dióxido de carbono, y con él construyen sus moléculas.\n"
+        "2) Los heterótrofos obtienen carbono ya incorporado en moléculas "
+        "orgánicas, consumiendo a otros organismos.\n"
+        "3) Ambos usan respiración celular para liberar la energía contenida en "
+        "esas moléculas.\n\n"
+        "Por eso los heterótrofos dependen, directa o indirectamente, de la "
+        "producción de los autótrofos.",
+        [
+            ("Que solo los heterótrofos necesitan energía",
+             "Ambos tipos requieren energía para vivir."),
+            ("Que solo los autótrofos tienen mitocondrias",
+             "Ambos tipos de organismos realizan respiración celular en mitocondrias."),
+            ("Que los autótrofos no respiran, porque obtienen toda su energía directamente de la luz solar",
+             "Los autótrofos también respiran: degradan la materia orgánica que fabricaron."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Cómo afecta el aumento de la intensidad luminosa a la tasa de "
+        "fotosíntesis?",
+        "Aumenta hasta cierto punto y luego se estabiliza",
+        "La respuesta describe una curva y no una recta.\n\n"
+        "1) Con poca luz, cada aumento de intensidad se traduce en más "
+        "fotosíntesis, porque la luz es el factor limitante.\n"
+        "2) Superado cierto nivel, la curva se aplana: por más luz que se "
+        "agregue, la tasa no sube.\n"
+        "3) En ese tramo el proceso está limitado por otro factor, como la "
+        "disponibilidad de dióxido de carbono o la temperatura.\n\n"
+        "El punto donde la curva deja de subir informa cuál es el factor que "
+        "está limitando el proceso.",
+        [
+            ("Aumenta de forma indefinida",
+             "Ningún proceso biológico aumenta sin límite: otros factores terminan limitándolo."),
+            ("Disminuye desde el comienzo",
+             "En la zona de baja intensidad, más luz produce más fotosíntesis."),
+            ("No produce ningún efecto, porque la tasa de fotosíntesis depende solo de la temperatura",
+             "La intensidad luminosa sí afecta la tasa, sobre todo en el tramo inicial de la curva."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Cómo afecta la temperatura a la tasa de fotosíntesis?",
+        "Sube hasta un óptimo y después cae",
+        "El efecto se explica por la naturaleza enzimática del proceso.\n\n"
+        "1) Al aumentar la temperatura, las reacciones catalizadas por enzimas "
+        "se aceleran.\n"
+        "2) Pasado un valor óptimo, las enzimas empiezan a perder su forma y su "
+        "actividad disminuye.\n"
+        "3) Por eso la curva sube, alcanza un máximo y luego desciende, a "
+        "diferencia de lo que ocurre con la luz.\n\n"
+        "El valor óptimo no es el mismo para todas las especies: depende del "
+        "ambiente en que cada una evolucionó.",
+        [
+            ("Aumenta de forma constante con la temperatura",
+             "A temperaturas altas la actividad enzimática cae y la tasa disminuye."),
+            ("No tiene ningún efecto sobre la tasa",
+             "El proceso depende de enzimas, cuya actividad varía con la temperatura."),
+            ("Disminuye siempre que la temperatura aumenta, porque el calor destruye la clorofila de la hoja",
+             "En el tramo inicial el aumento de temperatura acelera el proceso."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "En un día muy seco, la planta cierra sus estomas. ¿Qué efecto tiene "
+        "eso sobre la fotosíntesis?",
+        "Disminuye por falta de dióxido de carbono",
+        "El cierre resuelve un problema y crea otro.\n\n"
+        "1) Cerrar los estomas reduce la pérdida de agua por transpiración, que "
+        "es lo que la planta necesita en sequía.\n"
+        "2) Pero los estomas son también la vía de entrada del dióxido de "
+        "carbono.\n"
+        "3) Sin ese gas, la fijación de carbono se detiene aunque haya luz "
+        "abundante.\n\n"
+        "Ese compromiso entre conservar agua y captar carbono limita la "
+        "productividad de las plantas en climas áridos.",
+        [
+            ("Aumenta, porque la planta conserva agua",
+             "Conservar agua evita la deshidratación, pero no mejora la captación de carbono."),
+            ("No se altera, porque el dióxido de carbono se produce dentro de la hoja",
+             "El dióxido de carbono de la respiración no alcanza para sostener la fotosíntesis."),
+            ("Disminuye porque la falta de agua impide que la clorofila absorba la luz de manera adecuada",
+             "El efecto inmediato del cierre es la falta de dióxido de carbono, no un fallo de la clorofila."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Por qué una planta también realiza respiración celular?",
+        "Porque necesita liberar la energía de la glucosa",
+        "Fabricar materia orgánica no es lo mismo que disponer de energía.\n\n"
+        "1) La fotosíntesis almacena energía en los enlaces de la glucosa, pero "
+        "las células no pueden usarla en esa forma.\n"
+        "2) La respiración celular degrada esa glucosa y produce ATP, que es la "
+        "moneda energética de la célula.\n"
+        "3) Por eso la planta respira de día y de noche, en todas sus células, "
+        "incluidas las que no fotosintetizan.\n\n"
+        "Las raíces, por ejemplo, no reciben luz y dependen por completo de la "
+        "materia orgánica que llega desde las hojas.",
+        [
+            ("Porque necesita eliminar el oxígeno sobrante",
+             "El oxígeno se libera por difusión: no se requiere respirar para eliminarlo."),
+            ("Porque solo respira cuando no hay luz",
+             "La respiración es continua: ocurre también mientras la planta fotosintetiza."),
+            ("Porque la respiración le permite absorber el dióxido de carbono que necesita para fotosintetizar",
+             "La respiración produce dióxido de carbono, pero no es su forma de captarlo del ambiente."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "Durante el día, una planta libera oxígeno al ambiente aunque también "
+        "respira. ¿Por qué?",
+        "Porque fotosintetiza más de lo que respira",
+        "Lo que se observa es un balance y no un proceso aislado.\n\n"
+        "1) La planta consume oxígeno por respiración de forma continua.\n"
+        "2) Con luz suficiente, la fotosíntesis produce oxígeno a una tasa "
+        "mayor que la del consumo.\n"
+        "3) La diferencia entre ambos procesos es lo que se libera al "
+        "ambiente.\n\n"
+        "De noche, sin fotosíntesis, solo queda la respiración y la planta "
+        "consume oxígeno sin producirlo.",
+        [
+            ("Porque de día no respira",
+             "La respiración celular ocurre de forma continua, también de día."),
+            ("Porque el oxígeno de la respiración se acumula en la hoja",
+             "Lo observado es un balance entre producción y consumo, no una acumulación."),
+            ("Porque durante el día la planta reemplaza la respiración celular por la fotosíntesis",
+             "Los dos procesos ocurren simultáneamente: no uno en lugar del otro."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué es el punto de compensación lumínica de una planta?",
+        "La luz a la que fotosíntesis y respiración se igualan",
+        "El concepto describe un balance neto igual a cero.\n\n"
+        "1) A intensidades muy bajas, la planta respira más de lo que "
+        "fotosintetiza y pierde materia orgánica.\n"
+        "2) Al aumentar la luz llega a un punto en que ambos procesos ocurren a "
+        "la misma velocidad.\n"
+        "3) En ese punto no hay intercambio neto de gases con el ambiente ni "
+        "ganancia de materia orgánica.\n\n"
+        "Solo por sobre esa intensidad la planta acumula materia y puede "
+        "crecer.",
+        [
+            ("La luz máxima que la planta tolera sin dañarse",
+             "Ese sería un límite superior, distinto del punto en que ambos procesos se igualan."),
+            ("La luz a la que la planta deja de respirar",
+             "La respiración no se detiene en ningún momento."),
+            ("La cantidad de luz necesaria para que todos los estomas de la hoja se abran por completo",
+             "La apertura de estomas responde a otros factores, sobre todo a la disponibilidad de agua."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué relación tiene la fotosíntesis con el reciclaje del carbono en un "
+        "ecosistema?",
+        "Retira carbono del aire y lo incorpora a la materia viva",
+        "El proceso es la principal entrada de carbono a la materia orgánica.\n\n"
+        "1) La fotosíntesis toma dióxido de carbono atmosférico y fija su "
+        "carbono en moléculas orgánicas.\n"
+        "2) Ese carbono pasa a los consumidores a lo largo de la cadena "
+        "trófica.\n"
+        "3) La respiración de todos los organismos y la descomposición lo "
+        "devuelven a la atmósfera como dióxido de carbono.\n\n"
+        "El ciclo se cierra: la fotosíntesis es la única vía por la que ese "
+        "carbono vuelve a entrar de forma significativa a la materia viva.",
+        [
+            ("Devuelve carbono a la atmósfera",
+             "Eso lo hacen la respiración y la descomposición, no la fotosíntesis."),
+            ("No participa del ciclo del carbono",
+             "Es el proceso que incorpora carbono atmosférico a la materia orgánica."),
+            ("Transforma el carbono de la materia orgánica en carbono mineral que se deposita en el suelo",
+             "La fotosíntesis hace el recorrido inverso: incorpora carbono inorgánico a la materia orgánica."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Por qué se dice que los heterótrofos dependen indirectamente de la "
+        "luz solar?",
+        "Porque consumen materia producida con esa energía",
+        "La dependencia se transmite a lo largo de la cadena trófica.\n\n"
+        "1) Los autótrofos convierten energía luminosa en energía química "
+        "almacenada en moléculas orgánicas.\n"
+        "2) Los herbívoros obtienen esa materia comiendo plantas, y los "
+        "carnívoros, comiendo herbívoros.\n"
+        "3) En todos los casos, la energía que sostiene al organismo entró al "
+        "ecosistema por la fotosíntesis.\n\n"
+        "Por eso una caída de la producción de los autótrofos afecta a todos "
+        "los niveles que dependen de ella.",
+        [
+            ("Porque necesitan luz para respirar",
+             "La respiración celular no requiere luz."),
+            ("Porque sus células contienen clorofila",
+             "Las células heterótrofas no tienen clorofila ni cloroplastos."),
+            ("Porque absorben la energía del sol a través de la piel y la transforman en materia orgánica",
+             "Ningún heterótrofo produce materia orgánica a partir de luz."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿En qué forma almacena la planta el exceso de glucosa producido?",
+        "Como almidón",
+        "El almacenamiento exige una molécula distinta de la glucosa libre.\n\n"
+        "1) La glucosa acumulada en gran cantidad alteraría la concentración "
+        "interna de la célula.\n"
+        "2) Unida en cadenas largas forma almidón, que es insoluble y no "
+        "produce ese efecto.\n"
+        "3) Cuando la planta necesita energía, degrada el almidón y libera "
+        "nuevamente glucosa.\n\n"
+        "Esa es la razón de que el almidón se detecte en las hojas que "
+        "fotosintetizaron y no en las que estuvieron en oscuridad.",
+        [
+            ("Como oxígeno",
+             "El oxígeno es un gas que se libera, no una forma de almacenar energía."),
+            ("Como dióxido de carbono",
+             "El dióxido de carbono es el reactante del proceso, no una reserva."),
+            ("Como agua acumulada en las vacuolas de las células de la hoja y del tallo",
+             "El agua no almacena energía química: la reserva es el almidón."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Por qué el fitoplancton es importante para el oxígeno atmosférico?",
+        "Porque realiza gran parte de la fotosíntesis del planeta",
+        "La producción de oxígeno no depende solo de los bosques.\n\n"
+        "1) El fitoplancton está formado por organismos autótrofos microscópicos "
+        "que viven en la zona iluminada del océano.\n"
+        "2) Su enorme abundancia hace que aporte una fracción muy importante de "
+        "la fotosíntesis global.\n"
+        "3) Por eso los cambios en las poblaciones de fitoplancton afectan "
+        "tanto al oxígeno como al carbono a escala planetaria.\n\n"
+        "También es la base de las cadenas tróficas marinas, de modo que su "
+        "papel es doble.",
+        [
+            ("Porque respira más que los demás organismos",
+             "Respirar consume oxígeno: lo relevante es su aporte fotosintético."),
+            ("Porque libera oxígeno desde el fondo del océano",
+             "Vive en la zona iluminada, cerca de la superficie, no en el fondo."),
+            ("Porque descompone la materia orgánica del mar y en ese proceso libera oxígeno al ambiente",
+             "La descomposición consume oxígeno; el fitoplancton lo produce por fotosíntesis."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué ocurre con una planta mantenida varias semanas en oscuridad "
+        "completa?",
+        "Consume sus reservas y termina muriendo",
+        "Sin fotosíntesis, el balance de materia se vuelve negativo.\n\n"
+        "1) La respiración celular continúa y consume la materia orgánica "
+        "almacenada.\n"
+        "2) Sin luz no hay fijación de carbono que reponga esa materia.\n"
+        "3) Agotadas las reservas de almidón, la planta no puede sostener sus "
+        "funciones.\n\n"
+        "Es la comprobación más directa de que la fotosíntesis es su única "
+        "entrada de materia orgánica.",
+        [
+            ("Sigue creciendo con normalidad",
+             "Sin fotosíntesis no hay materia orgánica nueva que permita crecer."),
+            ("Deja de respirar y entra en un estado de reposo indefinido",
+             "La respiración continúa: es lo que agota las reservas."),
+            ("Comienza a absorber materia orgánica del suelo a través de sus raíces para compensar",
+             "Las plantas absorben agua y minerales, no materia orgánica que reemplace a la fotosíntesis."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "Algunos organismos producen materia orgánica sin luz, usando la "
+        "energía de compuestos químicos. ¿Cómo se clasifican?",
+        "Son autótrofos",
+        "La clasificación depende de la fuente de carbono, no de la de "
+        "energía.\n\n"
+        "1) Estos organismos incorporan carbono desde el dióxido de carbono, "
+        "igual que las plantas.\n"
+        "2) La energía para hacerlo no proviene de la luz sino de la oxidación "
+        "de compuestos inorgánicos.\n"
+        "3) Como fabrican su propia materia orgánica a partir de fuentes "
+        "inorgánicas, son autótrofos.\n\n"
+        "Se encuentran, por ejemplo, en fuentes hidrotermales del fondo "
+        "oceánico, donde sostienen ecosistemas completos sin luz solar.",
+        [
+            ("Son heterótrofos",
+             "No consumen materia orgánica producida por otros: la fabrican ellos mismos."),
+            ("Son descomponedores",
+             "Los descomponedores degradan materia orgánica muerta; estos organismos la producen."),
+            ("No pueden clasificarse, porque toda producción de materia orgánica requiere luz solar",
+             "Existe producción de materia orgánica sin luz, y es la que realizan estos organismos."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué relación tiene la fotosíntesis con el oxígeno que respiramos?",
+        "Es la fuente del oxígeno atmosférico",
+        "El vínculo entre ambos procesos es histórico y actual.\n\n"
+        "1) El oxígeno de la atmósfera proviene del rompimiento de moléculas de "
+        "agua durante la fotosíntesis.\n"
+        "2) Ese oxígeno se acumuló a lo largo de miles de millones de años de "
+        "actividad de organismos fotosintéticos.\n"
+        "3) La respiración de todos los seres vivos lo consume, de modo que "
+        "ambos procesos mantienen el ciclo del oxígeno.\n\n"
+        "Sin producción fotosintética continua, el oxígeno atmosférico "
+        "disminuiría por el consumo respiratorio.",
+        [
+            ("No tiene relación con el oxígeno atmosférico",
+             "El oxígeno atmosférico proviene justamente de la actividad fotosintética."),
+            ("Consume el oxígeno que los animales producen",
+             "Los animales consumen oxígeno; no lo producen."),
+            ("Transforma el dióxido de carbono en oxígeno mediante la ruptura directa de esa molécula",
+             "El oxígeno liberado proviene del agua, no del dióxido de carbono."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué le ocurre a una hoja si se le retira el agua disponible, "
+        "manteniendo luz y dióxido de carbono?",
+        "La fotosíntesis se detiene",
+        "El agua es reactante del proceso y no solo un medio.\n\n"
+        "1) La etapa lumínica rompe moléculas de agua para obtener electrones y "
+        "liberar oxígeno.\n"
+        "2) Sin agua no hay fuente de electrones, y esa etapa se detiene.\n"
+        "3) Al faltar sus productos, la fijación de carbono también se detiene, "
+        "aunque haya luz y dióxido de carbono.\n\n"
+        "A eso se suma que la falta de agua provoca el cierre de estomas, lo "
+        "que agrava el efecto.",
+        [
+            ("Continúa igual, porque el agua no participa",
+             "El agua es uno de los reactantes de la fotosíntesis."),
+            ("Aumenta, porque se concentra el dióxido de carbono",
+             "La falta de agua detiene el proceso; ninguna concentración lo compensa."),
+            ("Continúa, pero produciendo almidón en lugar de glucosa como producto principal del proceso",
+             "Sin agua no hay producción de ninguno de los dos: el proceso se detiene."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "En un invernadero se aumenta la concentración de dióxido de carbono. "
+        "¿Qué se espera que ocurra con la fotosíntesis?",
+        "Aumenta si ese gas era el factor limitante",
+        "El efecto de una variable depende de qué esté limitando el proceso.\n\n"
+        "1) Si la luz y la temperatura son adecuadas, el dióxido de carbono "
+        "puede ser el factor que restringe la tasa.\n"
+        "2) En ese caso, aumentar su concentración se traduce en más "
+        "fotosíntesis.\n"
+        "3) Si el proceso ya estaba limitado por otra variable, agregar "
+        "dióxido de carbono no produce cambios apreciables.\n\n"
+        "Esa es la razón de que en los invernaderos se ajusten varias "
+        "condiciones a la vez y no una sola.",
+        [
+            ("Aumenta siempre, sin importar las demás condiciones",
+             "Si otro factor limita el proceso, agregar este gas no produce efecto."),
+            ("Disminuye, porque el exceso de gas daña la hoja",
+             "En los rangos usados en invernaderos, el aumento no daña la hoja."),
+            ("No cambia en ningún caso, porque la planta absorbe siempre la misma cantidad de ese gas",
+             "La absorción depende de la concentración disponible y de las condiciones del proceso."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "En un experimento con una planta acuática, se cuentan las burbujas que "
+        "libera por minuto. ¿Qué variable se está midiendo?",
+        "La tasa de fotosíntesis",
+        "El conteo es una medida indirecta del proceso.\n\n"
+        "1) Las burbujas que libera la planta sumergida están formadas "
+        "principalmente por el oxígeno que produce.\n"
+        "2) Como el oxígeno es un producto de la fotosíntesis, su velocidad de "
+        "liberación refleja la velocidad del proceso.\n"
+        "3) Contar burbujas por minuto entrega entonces una estimación de la "
+        "tasa fotosintética.\n\n"
+        "Es una medida aproximada: el tamaño de las burbujas puede variar, y "
+        "por eso conviene repetir las mediciones.",
+        [
+            ("La cantidad de agua absorbida",
+             "El conteo de burbujas informa sobre el gas liberado, no sobre el agua absorbida."),
+            ("La temperatura del agua",
+             "La temperatura se mide con un termómetro y suele ser una variable a controlar."),
+            ("La cantidad de clorofila presente en las hojas de la planta utilizada en el experimento",
+             "La cantidad de pigmento se determina por otros métodos, no contando burbujas."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "Según la ecuación global de la fotosíntesis, ¿cuántas moléculas de "
+        "oxígeno se liberan por cada molécula de glucosa formada?",
+        "6 moléculas",
+        "La proporción se lee directamente de la ecuación balanceada.\n\n"
+        "1) La ecuación indica que seis moléculas de dióxido de carbono y seis "
+        "de agua forman una de glucosa.\n"
+        "2) En ese mismo proceso se liberan seis moléculas de oxígeno.\n"
+        "3) La proporción entre glucosa y oxígeno es entonces de 1 a 6.\n\n"
+        "La ecuación global resume el balance de materia; no describe los pasos "
+        "intermedios del proceso.",
+        [
+            ("1 molécula",
+             "Confunde la proporción: por cada glucosa se liberan seis moléculas de oxígeno."),
+            ("12 moléculas",
+             "Duplica el valor de la ecuación balanceada."),
+            ("3 moléculas, que corresponden a la mitad de las moléculas de agua que participan",
+             "No hay tal relación de mitad: la proporción es de seis a uno respecto de la glucosa."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Dónde comienza y dónde termina la degradación de la glucosa en la "
+        "respiración celular?",
+        "Comienza en el citoplasma y termina en la mitocondria",
+        "El proceso se reparte entre dos compartimentos de la célula.\n\n"
+        "1) La primera etapa ocurre en el citoplasma y rompe la glucosa en "
+        "moléculas más pequeñas, con una ganancia modesta de energía.\n"
+        "2) Esas moléculas ingresan a la mitocondria, donde se completa la "
+        "degradación en presencia de oxígeno.\n"
+        "3) La mayor parte del ATP se obtiene en esa segunda parte del "
+        "proceso.\n\n"
+        "Por eso las células con alta demanda energética tienen muchas "
+        "mitocondrias.",
+        [
+            ("Comienza y termina en el cloroplasto",
+             "El cloroplasto realiza la fotosíntesis y no la degradación de la glucosa."),
+            ("Comienza en la mitocondria y termina en el núcleo",
+             "El núcleo no participa de la respiración celular."),
+            ("Ocurre por completo en el citoplasma, sin que ningún organelo intervenga en el proceso",
+             "La etapa que aporta la mayor parte del ATP ocurre dentro de la mitocondria."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué diferencia hay entre la respiración celular y la ventilación "
+        "pulmonar?",
+        "Una ocurre en la célula y la otra mueve aire",
+        "El mismo nombre designa dos procesos de escala distinta.\n\n"
+        "1) La ventilación pulmonar es el movimiento de aire que entra y sale "
+        "de los pulmones.\n"
+        "2) La respiración celular es la degradación de la glucosa dentro de "
+        "las células, con producción de ATP.\n"
+        "3) La primera hace llegar el oxígeno hasta la sangre; la segunda es la "
+        "que efectivamente lo usa.\n\n"
+        "Las plantas realizan respiración celular sin tener pulmones ni ningún "
+        "sistema de ventilación.",
+        [
+            ("Son dos nombres del mismo proceso",
+             "Son procesos distintos: uno es un intercambio de aire y el otro, una reacción celular."),
+            ("La respiración celular ocurre solo en animales",
+             "Todas las células que obtienen energía de la glucosa la realizan, incluidas las vegetales."),
+            ("La ventilación pulmonar produce el ATP que las células del organismo utilizan como energía",
+             "El ATP se produce en la respiración celular, no en el movimiento de aire."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "Si una planta produce 2 moléculas de glucosa, ¿cuántas moléculas de "
+        "dióxido de carbono fijó?",
+        "12 moléculas",
+        "La proporción se obtiene de la ecuación balanceada.\n\n"
+        "1) Cada molécula de glucosa se forma a partir de seis moléculas de "
+        "dióxido de carbono.\n"
+        "2) Para dos moléculas de glucosa se requiere el doble: 6 multiplicado "
+        "por 2.\n"
+        "3) El resultado es 12 moléculas de dióxido de carbono fijadas.\n\n"
+        "El mismo razonamiento vale para el oxígeno liberado, que también sigue "
+        "una proporción de seis a uno.",
+        [
+            ("6 moléculas",
+             "Corresponde a una sola molécula de glucosa, no a dos."),
+            ("2 moléculas",
+             "Toma el número de glucosas como si fuera el de dióxido de carbono."),
+            ("24 moléculas, contando además las moléculas de agua que participan en la reacción",
+             "El agua se cuenta aparte: la pregunta pide solo el dióxido de carbono fijado."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "En un frasco cerrado y con luz se colocan una planta acuática y un pez "
+        "pequeño. ¿Qué relación se establece entre ambos?",
+        "El intercambio de gases se complementa",
+        "Cada organismo produce lo que el otro consume.\n\n"
+        "1) La planta consume dióxido de carbono y libera oxígeno mientras "
+        "recibe luz.\n"
+        "2) El pez consume oxígeno y libera dióxido de carbono de forma "
+        "continua.\n"
+        "3) Con luz suficiente, ambos flujos pueden sostenerse mutuamente "
+        "durante un tiempo.\n\n"
+        "El equilibrio es frágil: de noche la planta también consume oxígeno, y "
+        "el sistema cerrado no repone materia ni energía indefinidamente.",
+        [
+            ("Ambos consumen oxígeno y ninguno lo produce",
+             "La planta produce oxígeno mientras fotosintetiza."),
+            ("Ambos producen oxígeno y ninguno lo consume",
+             "El pez consume oxígeno, y la planta también lo hace al respirar."),
+            ("La planta se alimenta de los desechos del pez y por eso deja de requerir luz para vivir",
+             "La planta aprovecha nutrientes, pero sigue necesitando luz para fotosintetizar."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué ocurre con el intercambio de gases de una planta durante la "
+        "noche?",
+        "Consume oxígeno y libera dióxido de carbono",
+        "De noche solo queda uno de los dos procesos.\n\n"
+        "1) Sin luz, la fotosíntesis se detiene y deja de producirse oxígeno.\n"
+        "2) La respiración celular continúa, porque las células siguen "
+        "necesitando ATP.\n"
+        "3) El balance nocturno es entonces el de cualquier organismo "
+        "heterótrofo: consumo de oxígeno y liberación de dióxido de carbono.\n\n"
+        "Es el mismo proceso que ocurre de día, solo que de día queda "
+        "enmascarado por una fotosíntesis más intensa.",
+        [
+            ("Consume dióxido de carbono y libera oxígeno",
+             "Ese es el balance diurno, cuando la fotosíntesis supera a la respiración."),
+            ("No intercambia gases",
+             "La respiración celular continúa durante la noche."),
+            ("Libera oxígeno acumulado durante el día en las vacuolas de las células de la hoja",
+             "El oxígeno no se almacena para liberarlo de noche."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "Una hoja tiene sectores verdes y sectores blancos. ¿Qué se espera de "
+        "los sectores blancos?",
+        "Que no realicen fotosíntesis",
+        "El color informa sobre la presencia del pigmento.\n\n"
+        "1) Los sectores blancos carecen de clorofila y, por lo tanto, no "
+        "captan la energía luminosa.\n"
+        "2) Sin captación de luz no hay etapa lumínica y tampoco fijación de "
+        "carbono.\n"
+        "3) Esos sectores dependen de la materia orgánica que producen las "
+        "zonas verdes de la misma hoja.\n\n"
+        "Este tipo de hoja permite comparar dos condiciones en un mismo "
+        "individuo, lo que elimina muchas diferencias entre plantas.",
+        [
+            ("Que fotosinteticen más rápido",
+             "Sin clorofila no puede haber fotosíntesis en esos sectores."),
+            ("Que produzcan almidón igual que los verdes",
+             "Sin fotosíntesis no se produce el azúcar que se almacena como almidón."),
+            ("Que realicen la fijación de carbono pero no la etapa lumínica del proceso fotosintético",
+             "La fijación depende de los productos de la etapa lumínica, que allí no ocurre."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Por qué las células de la raíz no tienen cloroplastos?",
+        "Porque no reciben luz",
+        "La presencia de un organelo se relaciona con la función de la "
+        "célula.\n\n"
+        "1) La fotosíntesis requiere luz, y la raíz se desarrolla bajo tierra.\n"
+        "2) Mantener cloroplastos funcionales donde no llega luz sería un costo "
+        "sin beneficio.\n"
+        "3) La raíz obtiene la materia orgánica que necesita desde las hojas, a "
+        "través de los tejidos de conducción.\n\n"
+        "Sí tiene mitocondrias, porque necesita respirar para obtener la "
+        "energía con que absorbe agua y minerales.",
+        [
+            ("Porque no necesitan energía",
+             "La raíz necesita energía y la obtiene por respiración celular."),
+            ("Porque no tienen núcleo",
+             "Las células de la raíz tienen núcleo como cualquier célula vegetal."),
+            ("Porque el cloroplasto se destruye al contacto con el agua del suelo que la raíz absorbe",
+             "No hay tal destrucción: simplemente esas células no desarrollan cloroplastos funcionales."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Por qué una capa de polvo sobre las hojas reduce la fotosíntesis?",
+        "Porque bloquea parte de la luz que llega",
+        "La interferencia ocurre antes de que empiece el proceso.\n\n"
+        "1) La luz debe alcanzar a los cloroplastos para que la etapa lumínica "
+        "se ponga en marcha.\n"
+        "2) Una capa de partículas refleja y absorbe parte de esa luz antes de "
+        "que ingrese a la hoja.\n"
+        "3) Con menos luz disponible, la tasa de fotosíntesis disminuye, sobre "
+        "todo si la luz era el factor limitante.\n\n"
+        "El polvo puede además obstruir estomas, lo que agrega una segunda "
+        "limitación por falta de dióxido de carbono.",
+        [
+            ("Porque aumenta la temperatura de la hoja hasta destruir la clorofila",
+             "El efecto principal es la reducción de luz disponible, no la destrucción del pigmento."),
+            ("Porque impide que la raíz absorba agua",
+             "El polvo sobre las hojas no interfiere con la absorción de agua por la raíz."),
+            ("Porque aporta minerales que la planta no puede procesar y que terminan intoxicando sus tejidos",
+             "El mecanismo descrito no es una intoxicación sino una interferencia con la luz."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "Se ilumina una planta con luz verde y con luz roja, a igual "
+        "intensidad. ¿Qué se espera?",
+        "Que fotosintetice más con la luz roja",
+        "La eficacia depende de qué longitudes de onda absorbe el pigmento.\n\n"
+        "1) La clorofila absorbe con eficiencia la luz roja y la azul.\n"
+        "2) La luz verde es reflejada en gran medida, de modo que una parte "
+        "menor de esa energía se aprovecha.\n"
+        "3) A igual intensidad, la luz roja sostiene entonces una tasa de "
+        "fotosíntesis mayor.\n\n"
+        "Ese resultado fue una de las primeras evidencias de que el pigmento "
+        "determina qué luz es útil para el proceso.",
+        [
+            ("Que fotosintetice más con la luz verde",
+             "La luz verde es la que menos se absorbe, por eso las hojas se ven de ese color."),
+            ("Que ambas produzcan la misma tasa",
+             "La absorción de la clorofila no es igual para todas las longitudes de onda."),
+            ("Que no fotosintetice con ninguna de las dos, porque el proceso requiere luz solar completa",
+             "La fotosíntesis ocurre también con luz artificial de longitudes de onda adecuadas."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué diferencia hay entre la producción bruta y la producción neta de "
+        "una planta?",
+        "La neta descuenta lo que la planta respira",
+        "Ambas magnitudes describen la misma actividad en distinto momento del "
+        "balance.\n\n"
+        "1) La producción bruta es toda la materia orgánica que la planta "
+        "fabrica por fotosíntesis.\n"
+        "2) Una parte de esa materia se consume en su propia respiración "
+        "celular.\n"
+        "3) La producción neta es lo que queda disponible para crecer y para "
+        "sostener a los consumidores del ecosistema.\n\n"
+        "Cuando la respiración iguala a la fotosíntesis, la producción neta es "
+        "cero y la planta no crece.",
+        [
+            ("La bruta descuenta lo que la planta respira",
+             "Invierte los términos: es la neta la que descuenta la respiración."),
+            ("La neta considera solo la materia de las hojas",
+             "La distinción no depende del órgano sino del descuento por respiración."),
+            ("La bruta corresponde a la materia orgánica que el ecosistema aprovecha en los niveles superiores",
+             "Lo que aprovechan los consumidores es la producción neta, no la bruta."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "medio",
+        "¿Qué le ocurre a una planta si se bloquean artificialmente todos sus "
+        "estomas?",
+        "Deja de fijar carbono y termina muriendo",
+        "El bloqueo corta la entrada de un reactante esencial.\n\n"
+        "1) Los estomas son la vía por la que el dióxido de carbono ingresa a "
+        "la hoja.\n"
+        "2) Bloqueados, la concentración interna de ese gas cae y la fijación "
+        "de carbono se detiene.\n"
+        "3) La planta continúa respirando y consumiendo sus reservas, sin "
+        "reponerlas.\n\n"
+        "Se detiene además la transpiración, que es lo que impulsa el ascenso "
+        "de agua desde la raíz.",
+        [
+            ("Aumenta su fotosíntesis por conservar agua",
+             "Sin entrada de dióxido de carbono la fotosíntesis no puede aumentar."),
+            ("No sufre ningún efecto",
+             "Los estomas son la vía de intercambio de gases: bloquearlos tiene consecuencias inmediatas."),
+            ("Reemplaza la entrada de dióxido de carbono por absorción de ese gas a través de las raíces",
+             "Las raíces no absorben dióxido de carbono atmosférico en cantidad útil para el proceso."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Para estudiar el efecto de la luz sobre la fotosíntesis de una planta "
+        "acuática, ¿qué variables deben mantenerse constantes?",
+        "La temperatura, el dióxido de carbono y la planta",
+        "El diseño debe dejar variar una sola condición.\n\n"
+        "1) La variable en estudio es la intensidad luminosa, y por eso debe "
+        "tomar valores distintos.\n"
+        "2) Todo lo demás que influya sobre la tasa debe permanecer igual: la "
+        "temperatura del agua, la concentración de dióxido de carbono y el "
+        "mismo ejemplar de planta.\n"
+        "3) Si alguna de esas condiciones cambia junto con la luz, el resultado "
+        "ya no puede atribuirse a la luz.\n\n"
+        "El detalle que suele escaparse es la temperatura: acercar la lámpara "
+        "aumenta la luz y también calienta el agua.",
+        [
+            ("Solo la temperatura del agua",
+             "También deben controlarse el dióxido de carbono disponible y el ejemplar utilizado."),
+            ("La intensidad de la luz en todos los ensayos",
+             "La luz es justamente la variable que debe cambiar entre un ensayo y otro."),
+            ("El número de burbujas contadas en cada uno de los ensayos realizados durante el experimento",
+             "Ese número es el resultado que se mide, no una condición que se mantenga fija."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Al aumentar la intensidad luminosa, la tasa de fotosíntesis sube y "
+        "luego se mantiene constante pese a seguir aumentando la luz. ¿Qué se "
+        "infiere?",
+        "Otro factor pasó a limitar el proceso",
+        "La forma de la curva informa sobre qué restringe el proceso.\n\n"
+        "1) En el tramo ascendente, la luz es el factor limitante: cada "
+        "incremento se traduce en más fotosíntesis.\n"
+        "2) Cuando la curva se aplana, agregar luz ya no produce efecto, de "
+        "modo que la luz dejó de ser lo que limita.\n"
+        "3) La limitación pasó a otra variable, como la concentración de "
+        "dióxido de carbono o la temperatura.\n\n"
+        "Para comprobarlo se repite el ensayo aumentando ese otro factor: si la "
+        "meseta sube, la hipótesis se confirma.",
+        [
+            ("La planta alcanzó su límite absoluto de fotosíntesis",
+             "La meseta puede subir si se aumenta el factor que está limitando: no es un límite absoluto."),
+            ("La luz dejó de llegar a los cloroplastos",
+             "La luz sigue llegando; lo que ocurre es que otro factor restringe el proceso."),
+            ("La planta comenzó a respirar más rápido y eso compensó exactamente el aumento de la fotosíntesis",
+             "Una compensación así de exacta a lo largo de todo el tramo es inverosímil como explicación."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Una hoja con sectores verdes y blancos se mantiene iluminada y luego "
+        "se trata con un reactivo que tiñe el almidón. Solo se tiñen los "
+        "sectores verdes. ¿Qué demuestra?",
+        "Que la clorofila es necesaria para producir almidón",
+        "El experimento compara dos condiciones dentro de una misma hoja.\n\n"
+        "1) Los sectores verdes y blancos comparten la misma planta, la misma "
+        "luz, la misma agua y el mismo aire.\n"
+        "2) La única diferencia relevante entre ellos es la presencia de "
+        "clorofila.\n"
+        "3) Como el almidón aparece solo donde hay clorofila, la producción de "
+        "ese almidón depende del pigmento.\n\n"
+        "La fuerza del diseño está en que el control y el tratamiento conviven "
+        "en el mismo individuo.",
+        [
+            ("Que el almidón se produce solo de noche",
+             "El experimento no compara momentos del día sino sectores con y sin pigmento."),
+            ("Que el reactivo solo reacciona con el color verde",
+             "El reactivo detecta almidón; su reacción no depende del color del tejido."),
+            ("Que los sectores blancos de la hoja no reciben agua desde los tejidos de conducción",
+             "El agua llega a toda la hoja: la diferencia observada es la presencia de clorofila."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Un estudiante afirma que las plantas respiran solo de noche, porque de "
+        "día fotosintetizan. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: respiran de día y de noche",
+        "La afirmación confunde lo observado con lo que ocurre.\n\n"
+        "1) La respiración celular es continua: las células necesitan ATP en "
+        "todo momento.\n"
+        "2) De día ambos procesos ocurren a la vez, y como la fotosíntesis es "
+        "más intensa, el balance observado es de liberación de oxígeno.\n"
+        "3) Ese balance da la impresión de que no hay respiración, cuando lo "
+        "que ocurre es que queda enmascarada.\n\n"
+        "Se comprueba midiendo el intercambio de gases a intensidades "
+        "decrecientes de luz: al bajar la fotosíntesis, el consumo de oxígeno "
+        "vuelve a hacerse visible.",
+        [
+            ("Es correcta, porque de día la planta no necesita energía",
+             "Necesita energía en todo momento, también mientras fotosintetiza."),
+            ("Es correcta, porque los dos procesos no pueden ocurrir a la vez",
+             "Ocurren simultáneamente y en organelos distintos."),
+            ("Es incorrecta, porque las plantas no realizan respiración celular en ningún momento de su vida",
+             "Sí la realizan: es la forma en que obtienen el ATP que utilizan."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "En un experimento se acerca una lámpara a una planta acuática para "
+        "aumentar la luz y se cuentan más burbujas. ¿Qué debilidad tiene esa "
+        "conclusión?",
+        "La lámpara también calentó el agua",
+        "Al acercar la fuente cambian dos condiciones a la vez.\n\n"
+        "1) Acercar la lámpara aumenta la intensidad luminosa que recibe la "
+        "planta.\n"
+        "2) Pero también transfiere calor, con lo que sube la temperatura del "
+        "agua.\n"
+        "3) Como la temperatura afecta la tasa de fotosíntesis, el aumento de "
+        "burbujas puede deberse a cualquiera de las dos.\n\n"
+        "Se corrige interponiendo un recipiente con agua que absorba el calor, "
+        "o midiendo y manteniendo constante la temperatura.",
+        [
+            ("Las burbujas no contienen oxígeno",
+             "Están formadas principalmente por el oxígeno que la planta libera."),
+            ("La planta no estaba recibiendo dióxido de carbono",
+             "Si no lo recibiera no habría fotosíntesis en ninguna de las condiciones."),
+            ("El conteo de burbujas debería haberse hecho durante un periodo más largo que el utilizado",
+             "Alargar la medición mejora la precisión, pero no separa el efecto del calor del de la luz."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "¿Cuántas moléculas de agua se necesitan para formar 4 moléculas de "
+        "glucosa por fotosíntesis?",
+        "24 moléculas",
+        "La proporción se mantiene al escalar la ecuación.\n\n"
+        "1) La ecuación global indica que se requieren seis moléculas de agua "
+        "por cada molécula de glucosa.\n"
+        "2) Para cuatro moléculas de glucosa se multiplica esa cantidad por "
+        "cuatro.\n"
+        "3) El resultado es 6 por 4, es decir, 24 moléculas de agua.\n\n"
+        "Ese mismo factor se aplica al dióxido de carbono consumido y al "
+        "oxígeno liberado.",
+        [
+            ("6 moléculas",
+             "Corresponde a una sola molécula de glucosa."),
+            ("4 moléculas",
+             "Toma el número de glucosas como si fuera el de moléculas de agua."),
+            ("12 moléculas, que resultan de considerar solo la mitad de las moléculas que la ecuación indica",
+             "No hay razón para dividir a la mitad: la proporción es de seis a uno."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Se cultiva una planta con agua marcada isotópicamente y el oxígeno "
+        "liberado aparece marcado. ¿Qué permite concluir?",
+        "Que el oxígeno liberado proviene del agua",
+        "El marcaje permite seguir el destino de los átomos.\n\n"
+        "1) Si el oxígeno liberado tuviera su origen en el dióxido de carbono, "
+        "no aparecería la marca del agua.\n"
+        "2) Al detectarse marcado, queda establecido que esos átomos provienen "
+        "de las moléculas de agua utilizadas.\n"
+        "3) El experimento complementario, con dióxido de carbono marcado, "
+        "muestra la marca en la glucosa y no en el oxígeno.\n\n"
+        "Ambos resultados juntos identifican qué aporta cada reactante, algo "
+        "que la ecuación global por sí sola no distingue.",
+        [
+            ("Que el agua se transforma en glucosa",
+             "El carbono de la glucosa proviene del dióxido de carbono, no del agua."),
+            ("Que el dióxido de carbono no participa del proceso",
+             "Sí participa: aporta el carbono que se incorpora a la materia orgánica."),
+            ("Que la planta absorbe oxígeno del ambiente y luego lo libera sin haberlo modificado",
+             "El oxígeno liberado se produce al romper el agua, no se toma del ambiente."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Si se bloqueara por completo la etapa lumínica, ¿qué ocurriría con la "
+        "fijación de carbono?",
+        "Se detendría al agotarse el ATP disponible",
+        "La segunda etapa depende de los productos de la primera.\n\n"
+        "1) La fijación de carbono consume ATP y poder reductor generados en "
+        "los tilacoides.\n"
+        "2) Bloqueada la etapa lumínica, esas moléculas dejan de producirse y "
+        "las existentes se agotan en poco tiempo.\n"
+        "3) Sin ellas, las enzimas del estroma no pueden incorporar el dióxido "
+        "de carbono, aunque esté disponible.\n\n"
+        "El experimento inverso también funciona: aportando esas moléculas en "
+        "el laboratorio, la fijación ocurre sin luz.",
+        [
+            ("Continuaría igual, porque no necesita luz",
+             "No usa luz directamente, pero sí los productos que la etapa lumínica genera."),
+            ("Se aceleraría por acumulación de dióxido de carbono",
+             "La acumulación del gas no compensa la falta de ATP y de poder reductor."),
+            ("Continuaría usando la energía obtenida de la respiración celular que ocurre en la mitocondria",
+             "El ATP de la mitocondria no sustituye al que la fijación de carbono utiliza en el cloroplasto."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "En una fuente hidrotermal del fondo oceánico, sin luz, se encuentra un "
+        "ecosistema con bacterias que producen materia orgánica. ¿Qué se "
+        "infiere?",
+        "Que existe producción de materia orgánica sin luz",
+        "El hallazgo amplía lo que se entendía por base de un ecosistema.\n\n"
+        "1) A esa profundidad no llega luz solar, así que la fotosíntesis no "
+        "puede sostener el ecosistema.\n"
+        "2) Las bacterias obtienen energía oxidando compuestos inorgánicos que "
+        "emanan de la fuente y con ella fijan carbono.\n"
+        "3) Esa producción sostiene a los consumidores del lugar, igual que "
+        "harían las plantas en la superficie.\n\n"
+        "Sigue tratándose de nutrición autótrofa: lo que cambia es la fuente de "
+        "energía, no la de carbono.",
+        [
+            ("Que esas bacterias son heterótrofas",
+             "Producen su propia materia orgánica a partir de fuentes inorgánicas: son autótrofas."),
+            ("Que la luz solar llega hasta el fondo del océano",
+             "A esa profundidad no llega luz, y ese es justamente el dato de partida."),
+            ("Que ese ecosistema depende de la materia orgánica que cae desde la superficie iluminada",
+             "El aporte desde arriba existe, pero el dato indica producción propia en el lugar."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "En penumbra, una planta encerrada en un recipiente muestra una "
+        "disminución neta de oxígeno. ¿Qué está ocurriendo?",
+        "La respiración supera a la fotosíntesis",
+        "El signo del balance identifica cuál proceso predomina.\n\n"
+        "1) La planta produce oxígeno por fotosíntesis y lo consume por "
+        "respiración, de forma simultánea.\n"
+        "2) Con poca luz la fotosíntesis es lenta, mientras la respiración "
+        "mantiene su ritmo.\n"
+        "3) El resultado neto es un consumo de oxígeno mayor que la "
+        "producción, y por eso la concentración baja.\n\n"
+        "Al aumentar la luz hasta el punto de compensación, el balance se hace "
+        "cero, y por sobre él vuelve a ser positivo.",
+        [
+            ("La planta dejó de respirar",
+             "Si hubiera dejado de respirar, el oxígeno no disminuiría."),
+            ("La planta dejó de fotosintetizar por completo",
+             "Puede haber algo de fotosíntesis: lo que ocurre es que no alcanza a compensar la respiración."),
+            ("El recipiente perdió oxígeno hacia el exterior a través de una filtración en su cierre",
+             "Es una falla posible del montaje, pero se descarta con un recipiente control sin planta."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Se compara la tasa de fotosíntesis de una planta de sombra y una de "
+        "sol, cada una en su ambiente habitual. La de sol resulta mayor. ¿Qué "
+        "problema tiene la comparación?",
+        "Difieren la especie y las condiciones a la vez",
+        "Con dos diferencias simultáneas, el resultado no identifica una "
+        "causa.\n\n"
+        "1) Las plantas pertenecen a especies distintas, con capacidades "
+        "fotosintéticas propias.\n"
+        "2) Además se midieron en ambientes distintos, con distinta intensidad "
+        "luminosa.\n"
+        "3) La mayor tasa observada puede deberse a la especie, al ambiente o a "
+        "ambos, y el diseño no permite separarlos.\n\n"
+        "Para atribuirlo a la especie habría que medir ambas plantas en las "
+        "mismas condiciones de luz, temperatura y agua.",
+        [
+            ("Que la tasa de fotosíntesis no se puede medir en terreno",
+             "Sí puede medirse en terreno; el problema es que varían dos factores a la vez."),
+            ("Que las plantas de sombra no realizan fotosíntesis",
+             "Sí la realizan, y suelen ser eficientes con poca luz."),
+            ("Que debería haberse medido durante la noche para evitar la influencia directa de la luz solar",
+             "Sin luz no habría fotosíntesis que medir: la comparación quedaría sin objeto."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "Una tabla muestra que, con dióxido de carbono abundante, la tasa de "
+        "fotosíntesis sigue subiendo a intensidades de luz donde antes se "
+        "estabilizaba. ¿Qué confirma ese resultado?",
+        "Que el dióxido de carbono era el factor limitante",
+        "El experimento pone a prueba una hipótesis sobre la meseta anterior.\n\n"
+        "1) En la condición original, la curva se aplanaba pese a que la luz "
+        "seguía aumentando.\n"
+        "2) Al aumentar el dióxido de carbono, la meseta se desplaza y la tasa "
+        "vuelve a responder a la luz.\n"
+        "3) Eso indica que lo que restringía el proceso en el tramo plano era "
+        "la disponibilidad de ese gas.\n\n"
+        "Es un ejemplo de cómo se identifica un factor limitante: modificarlo y "
+        "observar si el límite se desplaza.",
+        [
+            ("Que la luz nunca fue un factor limitante",
+             "Lo fue en el tramo ascendente inicial, donde cada aumento producía más fotosíntesis."),
+            ("Que la temperatura es el único factor que importa",
+             "El experimento no varió la temperatura ni permite concluir nada sobre ella."),
+            ("Que la planta cambió su tipo de fotosíntesis al recibir más dióxido de carbono disponible",
+             "El proceso es el mismo: lo que cambió es cuál factor restringe su velocidad."),
+        ],
+    ),
+    _q(
+        "cie_fotosintesis", "dificil",
+        "¿Qué consecuencia tendría para un ecosistema una caída sostenida de la "
+        "producción de sus organismos autótrofos?",
+        "Disminuiría la energía disponible en todos los niveles",
+        "La producción de los autótrofos es la entrada de energía del "
+        "sistema.\n\n"
+        "1) Toda la energía que circula por las cadenas tróficas ingresó por "
+        "fotosíntesis.\n"
+        "2) Si esa entrada disminuye, hay menos materia orgánica disponible "
+        "para los consumidores primarios.\n"
+        "3) El efecto se propaga hacia arriba, porque cada nivel depende del "
+        "anterior y solo aprovecha una fracción de él.\n\n"
+        "Los niveles superiores, que ya reciben la menor proporción, son los "
+        "primeros en verse comprometidos.",
+        [
+            ("Solo se verían afectados los herbívoros",
+             "El efecto se transmite a todos los niveles, porque cada uno depende del anterior."),
+            ("Aumentaría la energía disponible para los carnívoros",
+             "Con menos producción en la base, los niveles superiores reciben menos energía."),
+            ("No habría consecuencias, porque los descomponedores repondrían la materia orgánica faltante",
+             "Los descomponedores reciclan materia, pero no introducen energía nueva al ecosistema."),
+        ],
+    ),
+]
