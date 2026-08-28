@@ -210,6 +210,10 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "muestra de 800 células, el índice mitótico es 5%": f"{int(800 * 0.05)} células",
     "pasa de 500 a 4.000 células en 9 horas": f"{9 // int(log2(4000 / 500))} horas",
     "en metafase mitótica": f"{46} cromosomas y {46 * 2} cromátidas",
+    # Meiosis: reduccion de la dotacion y combinaciones por distribucion al azar
+    "una especie con 8 cromosomas completa la meiosis": f"{8 // 2} cromosomas",
+    "combinaciones cromosómicas distintas puede tener un gameto humano": f"{2 ** 23:,}".replace(",", "."),
+    "especie con 5 pares de cromosomas homólogos": f"{2 ** 5} combinaciones",
     # Ácido-base
 }
 

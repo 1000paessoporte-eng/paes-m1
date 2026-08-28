@@ -101501,3 +101501,1306 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biologia - Herencia y evolucion: meiosis y manipulacion genetica
+#
+# Las otras dos entradas del area, junto al ciclo celular: las etapas de la
+# meiosis I y II y la contribucion del proceso a la variabilidad genetica, y la
+# manipulacion genetica aplicada a alimentos, detergentes, vestuario y farmacos,
+# que el temario nombra uno por uno.
+#
+# Las quince dificiles trabajan sobre lo que la evidencia autoriza a concluir:
+# el conteo de combinaciones, el momento en que ocurre una no disyuncion, un
+# ensayo de campo con el riego cambiado a la vez que la variedad, un resultado
+# negativo que admite tres explicaciones, y el limite entre lo que responde la
+# investigacion y lo que decide una sociedad.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_genetica", "facil",
+        "¿En qué células ocurre la meiosis?",
+        "En las que dan origen a los gametos",
+        "La meiosis está restringida a un tipo celular y a una función.\n\n"
+        "1) Las células somáticas se dividen por mitosis y conservan su "
+        "dotación completa de cromosomas.\n"
+        "2) La meiosis ocurre solo en las células precursoras de los gametos, "
+        "en ovarios y testículos.\n"
+        "3) Su resultado son células con la mitad de los cromosomas, listas "
+        "para la fecundación.\n\n"
+        "Si la meiosis ocurriera en cualquier célula, el organismo perdería su "
+        "dotación cromosómica en cada división.",
+        [
+            ("En todas las células del cuerpo",
+             "La mayoría de las células se divide por mitosis y conserva su dotación completa."),
+            ("En las células de la piel",
+             "Las células de la piel se renuevan por mitosis, no por meiosis."),
+            ("En las células del sistema nervioso, que son las que requieren mayor variabilidad genética",
+             "Las neuronas del adulto en general no se dividen, y menos por meiosis."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Cuántas divisiones celulares comprende la meiosis?",
+        "Dos, con una sola duplicación previa",
+        "La estructura del proceso explica el resultado.\n\n"
+        "1) Antes de la meiosis, el ADN se duplica una sola vez, igual que "
+        "antes de una mitosis.\n"
+        "2) Le siguen dos divisiones consecutivas: la meiosis I y la meiosis "
+        "II, sin duplicación entre ellas.\n"
+        "3) Duplicar una vez y dividir dos veces es lo que reduce a la mitad el "
+        "número de cromosomas.\n\n"
+        "De una célula se obtienen cuatro, cada una con la mitad de la dotación "
+        "original.",
+        [
+            ("Una sola división",
+             "Con una división no se lograría reducir a la mitad el número de cromosomas."),
+            ("Dos, con una duplicación antes de cada una",
+             "Si hubiera duplicación antes de cada división, la dotación no se reduciría."),
+            ("Cuatro divisiones sucesivas, una por cada una de las células que resultan del proceso",
+             "Las cuatro células se obtienen con dos divisiones, no con cuatro."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué caracteriza a una célula haploide?",
+        "Tiene un solo juego de cromosomas",
+        "El término describe cuántos juegos completos hay, no cuántos "
+        "cromosomas.\n\n"
+        "1) Una célula diploide tiene dos juegos de cromosomas, uno aportado "
+        "por cada progenitor.\n"
+        "2) Una haploide tiene un solo juego, y por eso no tiene pares de "
+        "homólogos.\n"
+        "3) En la especie humana, las células somáticas son diploides con 46 "
+        "cromosomas y los gametos son haploides con 23.\n\n"
+        "La fecundación une dos células haploides y restablece la condición "
+        "diploide.",
+        [
+            ("Tiene 46 cromosomas",
+             "Ese es el número de la célula somática humana, que es diploide."),
+            ("No tiene núcleo",
+             "Una célula haploide tiene núcleo: lo que tiene es un solo juego de cromosomas."),
+            ("Tiene el doble de material genético que cualquier otra célula del mismo organismo",
+             "Describe lo contrario: la haploide tiene la mitad de la dotación de una somática."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué se separa durante la anafase I de la meiosis?",
+        "Los cromosomas homólogos",
+        "Cada una de las dos anafases separa cosas distintas.\n\n"
+        "1) En la anafase I migran a polos opuestos los cromosomas homólogos, "
+        "cada uno todavía con sus dos cromátidas.\n"
+        "2) Esa separación es la que reduce a la mitad el número de "
+        "cromosomas.\n"
+        "3) Las cromátidas hermanas recién se separan en la anafase II.\n\n"
+        "Por eso la meiosis I se llama división reduccional y la meiosis II, "
+        "ecuacional.",
+        [
+            ("Las cromátidas hermanas",
+             "Su separación ocurre en la anafase II, no en la primera división."),
+            ("Los nucleosomas",
+             "El nucleosoma es una unidad de enrollamiento del ADN y no se reparte como tal."),
+            ("Las dos células hijas resultantes de la primera división de la meiosis",
+             "Esa separación es la citocinesis, no la migración de cromosomas de la anafase."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué se separa durante la anafase II de la meiosis?",
+        "Las cromátidas hermanas",
+        "La segunda división se parece a una mitosis.\n\n"
+        "1) Al terminar la meiosis I, cada célula quedó con un juego de "
+        "cromosomas formados por dos cromátidas.\n"
+        "2) En la anafase II esas cromátidas se separan y migran a polos "
+        "opuestos.\n"
+        "3) Cada una de las cuatro células resultantes queda con cromosomas de "
+        "una sola cromátida.\n\n"
+        "El número de cromosomas ya no cambia en esta división: por eso se la "
+        "llama ecuacional.",
+        [
+            ("Los cromosomas homólogos",
+             "Los homólogos ya se separaron en la anafase I."),
+            ("Las dos células hijas",
+             "Eso ocurre en la citocinesis, no en la anafase."),
+            ("Las moléculas de ADN que aún no habían terminado de copiarse durante la interfase previa",
+             "La duplicación terminó antes de la meiosis I: no queda ADN por copiar."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué es el entrecruzamiento en la meiosis?",
+        "Un intercambio de material entre homólogos",
+        "El proceso ocurre cuando los homólogos están apareados.\n\n"
+        "1) En la profase I los cromosomas homólogos se aparean a lo largo de "
+        "toda su longitud.\n"
+        "2) Apareados, intercambian segmentos equivalentes entre sí.\n"
+        "3) El resultado son cromosomas con combinaciones de información que no "
+        "existían en ninguno de los dos originales.\n\n"
+        "Es una de las dos fuentes de variabilidad genética que aporta la "
+        "meiosis.",
+        [
+            ("La unión de dos gametos",
+             "Esa es la fecundación, que ocurre después de la meiosis y entre células distintas."),
+            ("La separación de las cromátidas hermanas",
+             "Esa separación ocurre en la anafase II y no implica intercambio de material."),
+            ("La duplicación del material genético que antecede a la primera división de la meiosis",
+             "La duplicación ocurre en la fase S previa y no intercambia información entre cromosomas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Cuántas células resultan de una meiosis completa?",
+        "Cuatro células haploides",
+        "El número surge de las dos divisiones sucesivas.\n\n"
+        "1) La meiosis I divide la célula original en dos, cada una con la "
+        "mitad de los cromosomas.\n"
+        "2) La meiosis II divide cada una de esas dos, sin nueva duplicación "
+        "previa.\n"
+        "3) El resultado son cuatro células, todas haploides y genéticamente "
+        "distintas entre sí.\n\n"
+        "Se diferencia de la mitosis, que produce dos células diploides "
+        "idénticas.",
+        [
+            ("Dos células haploides",
+             "Dos es el resultado de la meiosis I; falta la segunda división."),
+            ("Dos células diploides",
+             "Ese es el resultado de una mitosis, no de una meiosis."),
+            ("Cuatro células diploides, cada una con la misma dotación cromosómica de la célula original",
+             "Las cuatro células son haploides: el número de cromosomas se redujo a la mitad."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué es un organismo transgénico?",
+        "Uno que porta un gen de otra especie",
+        "El nombre describe de dónde viene el gen incorporado.\n\n"
+        "1) Mediante técnicas de manipulación genética se puede insertar en un "
+        "organismo un fragmento de ADN proveniente de otra especie.\n"
+        "2) Si ese gen se integra y se expresa, el organismo produce una "
+        "proteína que antes no fabricaba.\n"
+        "3) Eso es lo que permite, por ejemplo, que una bacteria produzca una "
+        "proteína humana.\n\n"
+        "La transferencia es posible porque el código genético es prácticamente "
+        "el mismo en todos los seres vivos.",
+        [
+            ("Uno que ha sufrido una mutación espontánea",
+             "Las mutaciones espontáneas ocurren sin intervención y no incorporan genes de otra especie."),
+            ("Uno obtenido por cruzamiento entre variedades",
+             "El cruzamiento combina genes de la misma especie: es selección artificial, no transgénesis."),
+            ("Uno al que se le ha retirado por completo su material genético para reemplazarlo por otro",
+             "La transgénesis inserta uno o pocos genes; no reemplaza el genoma completo."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Cómo se produce hoy la insulina que usan las personas con diabetes?",
+        "La fabrican bacterias modificadas",
+        "La aplicación es un caso típico de manipulación genética.\n\n"
+        "1) Se inserta en una bacteria el gen humano que codifica la "
+        "insulina.\n"
+        "2) La bacteria lee ese gen como si fuera propio y fabrica la proteína "
+        "humana.\n"
+        "3) Cultivadas en grandes volúmenes, esas bacterias producen insulina "
+        "idéntica a la humana, que luego se purifica.\n\n"
+        "Antes se extraía del páncreas de animales, con menor disponibilidad y "
+        "diferencias respecto de la humana.",
+        [
+            ("Se sintetiza a partir de azúcares",
+             "La insulina es una proteína y no se obtiene por síntesis a partir de azúcares."),
+            ("Se extrae de plantas cultivadas para ese fin",
+             "La producción actual se basa en microorganismos modificados, no en plantas."),
+            ("Se obtiene del páncreas de personas donantes mediante un procedimiento de extracción controlada",
+             "No se obtiene de donantes humanos: se produce por microorganismos modificados."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Para qué se usan enzimas obtenidas de microorganismos en los "
+        "detergentes?",
+        "Para degradar manchas de grasa y proteínas",
+        "La aplicación aprovecha la especificidad de las enzimas.\n\n"
+        "1) Las manchas orgánicas están formadas por proteínas, grasas y "
+        "almidones.\n"
+        "2) Las enzimas incorporadas al detergente rompen esas moléculas en "
+        "fragmentos más pequeños y solubles.\n"
+        "3) Producidas por microorganismos modificados, se obtienen en gran "
+        "cantidad y a bajo costo.\n\n"
+        "Como actúan a temperaturas moderadas, permiten lavar con agua menos "
+        "caliente y gastar menos energía.",
+        [
+            ("Para perfumar la ropa",
+             "El aroma proviene de otros componentes del producto, no de las enzimas."),
+            ("Para blanquear los tejidos por oxidación",
+             "El blanqueo lo realizan agentes oxidantes, no las enzimas."),
+            ("Para aumentar la temperatura del agua durante el ciclo de lavado y disolver mejor la suciedad",
+             "Las enzimas no calientan el agua: justamente permiten lavar a menor temperatura."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué busca lograr la manipulación genética aplicada a los cultivos?",
+        "Incorporar características útiles a las plantas",
+        "La técnica persigue una característica definida de antemano.\n\n"
+        "1) Se identifica un gen que confiere una característica de interés, "
+        "como resistencia a una plaga o tolerancia a la sequía.\n"
+        "2) Ese gen se introduce en la planta, que pasa a expresarlo.\n"
+        "3) El objetivo es obtener cultivos con esa característica sin esperar "
+        "las generaciones que exigiría el cruzamiento tradicional.\n\n"
+        "Es más rápida y más dirigida que la selección artificial, y por eso "
+        "también se le exige evaluar sus efectos.",
+        [
+            ("Eliminar el material genético de la planta",
+             "Sin material genético la planta no sería viable: lo que se hace es incorporar un gen."),
+            ("Impedir que la planta se reproduzca",
+             "No es el objetivo de la técnica, aunque existan debates sobre variedades estériles."),
+            ("Aumentar el número de cromosomas de la planta para que crezca más rápido que las demás",
+             "La transgénesis introduce genes determinados; no busca multiplicar la dotación cromosómica."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "facil",
+        "¿Qué ocurre en la fecundación con el número de cromosomas?",
+        "Se recupera la dotación diploide",
+        "La fecundación es el paso complementario de la meiosis.\n\n"
+        "1) Cada gameto aporta un juego haploide de cromosomas.\n"
+        "2) Al unirse ambos gametos, la célula resultante queda con dos juegos, "
+        "uno de cada progenitor.\n"
+        "3) En la especie humana, 23 más 23 da los 46 cromosomas de una célula "
+        "somática.\n\n"
+        "Esa alternancia entre reducción y restitución mantiene constante el "
+        "número de cromosomas de la especie a lo largo de las generaciones.",
+        [
+            ("Se reduce a la mitad",
+             "La reducción ocurre en la meiosis; la fecundación hace lo contrario."),
+            ("Se mantiene haploide",
+             "La célula resultante de la fecundación es diploide."),
+            ("Se duplica respecto de la dotación que tenía cada una de las células somáticas del organismo",
+             "El resultado es la dotación somática normal, no el doble de ella."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué ocurre durante la profase I de la meiosis que no ocurre en la "
+        "mitosis?",
+        "Los cromosomas homólogos se aparean",
+        "Esta etapa es la que distingue a la meiosis desde el comienzo.\n\n"
+        "1) En la profase I cada cromosoma se alinea con su homólogo a lo largo "
+        "de toda su longitud.\n"
+        "2) Apareados, intercambian segmentos equivalentes mediante el "
+        "entrecruzamiento.\n"
+        "3) En la mitosis los homólogos nunca se aparean: cada cromosoma se "
+        "comporta de manera independiente.\n\n"
+        "De ese apareamiento dependen tanto el intercambio de material como la "
+        "separación ordenada de los homólogos en la anafase I.",
+        [
+            ("La cromatina se condensa",
+             "La condensación ocurre también en la profase de la mitosis."),
+            ("Se forma el huso",
+             "El huso se organiza en ambas divisiones."),
+            ("La envoltura nuclear se desarma para que las fibras alcancen a los cromosomas",
+             "Eso también ocurre en la mitosis: no es lo distintivo de la profase I."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué diferencia hay entre la metafase I y la metafase II?",
+        "En la I se alinean pares de homólogos",
+        "Lo que se ordena en el plano ecuatorial no es lo mismo en cada "
+        "división.\n\n"
+        "1) En la metafase I los cromosomas homólogos, apareados, se ubican "
+        "como pares a ambos lados del plano central.\n"
+        "2) En la metafase II ya no hay pares: se alinean cromosomas "
+        "individuales, cada uno con sus dos cromátidas.\n"
+        "3) Esa diferencia explica que la primera división separe homólogos y "
+        "la segunda, cromátidas.\n\n"
+        "La metafase II se parece a la de una mitosis, salvo que ocurre en una "
+        "célula que ya es haploide.",
+        [
+            ("En la II el ADN se duplica otra vez",
+             "No hay duplicación entre ambas divisiones: por eso la dotación se reduce."),
+            ("En la I no participa el huso",
+             "El huso participa en las dos divisiones."),
+            ("En la II los cromosomas se ubican en un plano distinto al que ocuparon durante la primera división",
+             "La orientación del plano no es lo que distingue a ambas etapas, sino qué se alinea en él."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué no hay una fase S entre la meiosis I y la meiosis II?",
+        "Porque así la dotación queda reducida a la mitad",
+        "La ausencia de duplicación intermedia es lo que define el "
+        "resultado.\n\n"
+        "1) El ADN se duplicó una sola vez, antes de la meiosis I.\n"
+        "2) La primera división reparte los homólogos y la segunda, las "
+        "cromátidas, sin que se agregue material nuevo.\n"
+        "3) Dividir dos veces lo que se duplicó una vez deja células con la "
+        "mitad de la dotación original.\n\n"
+        "Si hubiera una segunda duplicación, las cuatro células resultantes "
+        "serían diploides y la fecundación duplicaría el número de cromosomas "
+        "en cada generación.",
+        [
+            ("Porque la célula no dispone de tiempo suficiente",
+             "No es una limitación de tiempo: la ausencia de esa fase es lo que produce la reducción."),
+            ("Porque el ADN ya no puede volver a copiarse",
+             "El ADN puede copiarse nuevamente en otros contextos; acá simplemente no ocurre."),
+            ("Porque la duplicación se realiza durante la propia anafase de la primera división meiótica",
+             "En la anafase no hay síntesis de ADN: solo migración de cromosomas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué se dice que la meiosis I es reduccional y la meiosis II es "
+        "ecuacional?",
+        "Porque solo la primera reduce el número de cromosomas",
+        "Los nombres describen qué le pasa a la dotación en cada división.\n\n"
+        "1) La meiosis I separa los homólogos, con lo que cada célula pasa de "
+        "dos juegos a uno solo.\n"
+        "2) La meiosis II separa cromátidas hermanas, de modo que el número de "
+        "cromosomas por célula no cambia.\n"
+        "3) Lo que cambia en la segunda división es la cantidad de ADN por "
+        "célula, no el número de cromosomas.\n\n"
+        "Distinguirlas evita el error frecuente de suponer que cada división "
+        "reduce a la mitad la dotación.",
+        [
+            ("Porque la segunda división ocurre sin huso",
+             "Ambas divisiones utilizan el huso para repartir el material."),
+            ("Porque la primera produce dos células y la segunda, cuatro",
+             "La segunda produce cuatro a partir de dos, pero esa cuenta no es lo que nombran los términos."),
+            ("Porque en la primera se duplica el material genético y en la segunda se reparte entre las hijas",
+             "La duplicación ocurre antes de la meiosis I y no dentro de ella."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Cuáles son las dos fuentes de variabilidad genética que aporta la "
+        "meiosis?",
+        "El entrecruzamiento y la distribución al azar",
+        "Ambas actúan antes de que se formen los gametos.\n\n"
+        "1) El entrecruzamiento intercambia segmentos entre cromosomas "
+        "homólogos y genera combinaciones nuevas dentro de un mismo "
+        "cromosoma.\n"
+        "2) La distribución al azar reparte los homólogos de cada par de manera "
+        "independiente entre las células hijas.\n"
+        "3) Combinadas, ambas hacen que la cantidad de gametos genéticamente "
+        "distintos que un individuo puede producir sea enorme.\n\n"
+        "A eso se suma que la fecundación une al azar dos de esos gametos, lo "
+        "que multiplica todavía más las combinaciones posibles.",
+        [
+            ("La mutación y la selección natural",
+             "Son mecanismos evolutivos, pero no son aportes propios del proceso meiótico."),
+            ("La duplicación del ADN y la citocinesis",
+             "Ambas ocurren también en la mitosis, que no genera variabilidad."),
+            ("La condensación de la cromatina y la formación del huso durante la primera división meiótica",
+             "Son etapas del proceso que ocurren igual en la mitosis y no aportan variabilidad."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Una célula de una especie con 8 cromosomas completa la meiosis. "
+        "¿Cuántos cromosomas tiene cada célula resultante?",
+        "4 cromosomas",
+        "El resultado se obtiene de la reducción a la mitad.\n\n"
+        "1) La célula original es diploide y tiene 8 cromosomas, o sea 4 pares "
+        "de homólogos.\n"
+        "2) La meiosis I separa cada par y deja 4 cromosomas por célula.\n"
+        "3) La meiosis II separa cromátidas y no altera ese número: las cuatro "
+        "células terminan con 4 cromosomas.\n\n"
+        "Al fecundarse, dos de esas células restablecen los 8 cromosomas "
+        "propios de la especie.",
+        [
+            ("8 cromosomas",
+             "Ese es el número de la célula original: la meiosis lo reduce a la mitad."),
+            ("2 cromosomas",
+             "Aplica la reducción dos veces, una por cada división, cuando solo la primera reduce."),
+            ("16 cromosomas, porque el material genético se duplica antes de cada una de las dos divisiones",
+             "Hay una sola duplicación, previa a la meiosis I, y ninguna entre ambas divisiones."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué dos hermanos no gemelos nunca son genéticamente idénticos?",
+        "Porque cada gameto lleva una combinación distinta",
+        "La variabilidad se produce antes de la fecundación.\n\n"
+        "1) Cada meiosis genera gametos con combinaciones distintas, por el "
+        "entrecruzamiento y por la distribución al azar de los homólogos.\n"
+        "2) Cada hijo proviene de la unión de dos gametos particulares, "
+        "distintos de los que originaron a sus hermanos.\n"
+        "3) Por eso comparten aproximadamente la mitad de su información, pero "
+        "no la misma combinación.\n\n"
+        "Los gemelos idénticos son la excepción: provienen de un mismo cigoto "
+        "que se dividió por mitosis.",
+        [
+            ("Porque tienen distinto número de cromosomas",
+             "Todos los individuos de la especie tienen el mismo número de cromosomas."),
+            ("Porque las mutaciones ocurren en cada generación",
+             "Las mutaciones aportan, pero la fuente principal es la combinación distinta de cada gameto."),
+            ("Porque cada progenitor entrega a cada hijo una cantidad diferente de material genético",
+             "Cada progenitor aporta siempre un juego haploide: lo que cambia es su combinación."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué diferencia genética hay entre gemelos idénticos y mellizos?",
+        "Los idénticos provienen de un mismo cigoto",
+        "El origen del embarazo determina el parecido genético.\n\n"
+        "1) Los gemelos idénticos se forman cuando un cigoto se divide por "
+        "mitosis y da dos embriones con la misma información genética.\n"
+        "2) Los mellizos provienen de dos ovocitos distintos fecundados por "
+        "dos espermatozoides distintos.\n"
+        "3) Por eso los mellizos se parecen entre sí como cualquier par de "
+        "hermanos, y los idénticos comparten toda su información.\n\n"
+        "La diferencia se origina en la fecundación y no en el desarrollo "
+        "posterior.",
+        [
+            ("Los mellizos comparten toda su información genética",
+             "Los mellizos comparten aproximadamente la mitad, como cualquier par de hermanos."),
+            ("Los idénticos provienen de dos ovocitos distintos",
+             "Eso describe a los mellizos: los idénticos provienen de un solo cigoto."),
+            ("Los idénticos comparten la mitad de su información y los mellizos, la totalidad de la suya",
+             "Invierte los dos casos: son los idénticos quienes comparten toda su información."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué es una enzima de restricción y para qué se usa en manipulación "
+        "genética?",
+        "Corta el ADN en secuencias específicas",
+        "La herramienta permite trabajar con fragmentos definidos.\n\n"
+        "1) Estas enzimas reconocen secuencias determinadas de bases y cortan "
+        "la molécula justo ahí.\n"
+        "2) Eso permite extraer un gen de interés sin dañar el resto y abrir un "
+        "vector para insertarlo.\n"
+        "3) Los extremos generados por la misma enzima encajan entre sí, lo que "
+        "facilita unir fragmentos de distinto origen.\n\n"
+        "Sin cortes reproducibles en lugares conocidos, la transferencia "
+        "dirigida de genes no sería posible.",
+        [
+            ("Copia el ADN muchas veces",
+             "Esa función corresponde a otras enzimas usadas para amplificar fragmentos."),
+            ("Une fragmentos de ADN de distinto origen",
+             "Esa unión la realiza una ligasa; la enzima de restricción corta."),
+            ("Destruye por completo el material genético de la célula receptora antes de introducir el nuevo",
+             "No se destruye el genoma receptor: se inserta un fragmento en él."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué función cumple un plásmido en la producción de proteínas por "
+        "bacterias?",
+        "Transporta el gen hasta la bacteria",
+        "El plásmido actúa como vehículo del gen que se quiere expresar.\n\n"
+        "1) Es una molécula de ADN circular, independiente del cromosoma "
+        "bacteriano, que la bacteria puede incorporar y replicar.\n"
+        "2) El gen de interés se inserta en ese plásmido y luego el plásmido se "
+        "introduce en la bacteria.\n"
+        "3) Al multiplicarse, la bacteria copia también el plásmido y expresa "
+        "el gen, fabricando la proteína.\n\n"
+        "Es el mecanismo con que se producen la insulina y otras proteínas de "
+        "uso farmacéutico.",
+        [
+            ("Corta el ADN en secuencias específicas",
+             "Esa función la cumplen las enzimas de restricción, no el plásmido."),
+            ("Reemplaza al cromosoma de la bacteria",
+             "El plásmido convive con el cromosoma bacteriano; no lo sustituye."),
+            ("Impide que la bacteria se multiplique mientras produce la proteína de interés para el proceso",
+             "La producción depende justamente de que la bacteria se multiplique."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué diferencia hay entre la selección artificial tradicional y la "
+        "transgénesis?",
+        "La transgénesis inserta un gen determinado",
+        "Las dos modifican organismos, pero por caminos distintos.\n\n"
+        "1) La selección artificial cruza individuos de la misma especie y "
+        "escoge la descendencia con la característica deseada, generación tras "
+        "generación.\n"
+        "2) La transgénesis introduce directamente un gen conocido, que puede "
+        "provenir incluso de otra especie.\n"
+        "3) La primera trabaja con la variabilidad existente y de forma "
+        "indirecta; la segunda es dirigida y mucho más rápida.\n\n"
+        "Ambas producen organismos modificados: lo que cambia es la precisión y "
+        "el tiempo que exigen.",
+        [
+            ("La selección artificial no modifica el material genético",
+             "Sí lo modifica: al elegir qué individuos se cruzan, cambia la frecuencia de los genes."),
+            ("La transgénesis no requiere que el gen se exprese",
+             "El objetivo es justamente que el gen se exprese y produzca la proteína."),
+            ("La selección artificial solo puede aplicarse a plantas y la transgénesis, solo a microorganismos",
+             "Ambas técnicas se aplican tanto a plantas como a animales y microorganismos."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué una bacteria puede fabricar una proteína humana a partir de "
+        "un gen humano?",
+        "Porque el código genético es el mismo",
+        "La compatibilidad tiene una base común a todos los seres vivos.\n\n"
+        "1) La correspondencia entre tripletes de bases y aminoácidos es "
+        "prácticamente igual en todos los organismos.\n"
+        "2) Por eso la maquinaria de la bacteria lee el gen humano y ensambla "
+        "la misma secuencia de aminoácidos.\n"
+        "3) El resultado es una proteína equivalente a la que produciría una "
+        "célula humana.\n\n"
+        "Esa universalidad del código es, además, una de las evidencias del "
+        "origen común de los seres vivos.",
+        [
+            ("Porque las bacterias tienen genes humanos",
+             "No los tienen: el gen se introduce mediante manipulación genética."),
+            ("Porque las proteínas humanas son más simples",
+             "La complejidad no explica la compatibilidad; lo que la explica es el código común."),
+            ("Porque la bacteria transforma su propio material genético en material genético humano",
+             "El genoma bacteriano no se transforma: solo incorpora y expresa el gen introducido."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Una célula humana termina la meiosis I. ¿Cuántos cromosomas tiene y "
+        "cómo están formados?",
+        "23 cromosomas, cada uno con dos cromátidas",
+        "El estado intermedio se presta a confusión.\n\n"
+        "1) La meiosis I separó los homólogos, así que la célula pasó de 46 a "
+        "23 cromosomas.\n"
+        "2) Como no hubo separación de cromátidas, cada uno de esos 23 sigue "
+        "formado por dos cromátidas hermanas.\n"
+        "3) Recién la meiosis II las separa y deja 23 cromosomas de una sola "
+        "cromátida en cada gameto.\n\n"
+        "La célula ya es haploide en número de cromosomas, aunque todavía "
+        "contiene el doble de ADN que un gameto maduro.",
+        [
+            ("46 cromosomas, cada uno con dos cromátidas",
+             "Ese es el estado previo a la meiosis I, no el posterior."),
+            ("23 cromosomas, cada uno con una cromátida",
+             "Ese es el estado del gameto, después de completarse la meiosis II."),
+            ("46 cromosomas de una sola cromátida, porque la primera división separó las cromátidas hermanas",
+             "La primera división separa homólogos; las cromátidas se separan en la segunda."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué es una no disyunción durante la meiosis?",
+        "La falla en la separación de cromosomas",
+        "El error afecta al reparto y no a la copia del material.\n\n"
+        "1) En una división normal, cada polo recibe un cromosoma de cada "
+        "par.\n"
+        "2) Si dos cromosomas que debían separarse migran juntos al mismo polo, "
+        "se produce una no disyunción.\n"
+        "3) El gameto resultante queda con un cromosoma de más y su "
+        "contraparte, con uno de menos.\n\n"
+        "Si ese gameto participa en una fecundación, el individuo tendrá una "
+        "dotación cromosómica alterada.",
+        [
+            ("Una copia incompleta del ADN",
+             "Ese sería un error de la duplicación, previo al reparto."),
+            ("Un intercambio entre cromosomas homólogos",
+             "Ese intercambio es el entrecruzamiento y es parte normal del proceso."),
+            ("La incorporación de un fragmento de ADN de otra especie durante la formación del gameto",
+             "Eso describe una transferencia de genes y no un error de reparto meiótico."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué la reproducción sexual necesita que exista la meiosis?",
+        "Para que el número de cromosomas no se duplique",
+        "El problema aparece al mirar dos generaciones seguidas.\n\n"
+        "1) La fecundación une dos células y suma sus dotaciones "
+        "cromosómicas.\n"
+        "2) Si los gametos fueran diploides, cada generación tendría el doble "
+        "de cromosomas que la anterior.\n"
+        "3) La meiosis reduce la dotación a la mitad antes de la fecundación, "
+        "de modo que la suma vuelve siempre al mismo número.\n\n"
+        "Reducción y fecundación se compensan, y por eso el número de "
+        "cromosomas es una característica estable de cada especie.",
+        [
+            ("Para que las células hijas sean idénticas",
+             "Las células que resultan de la meiosis son genéticamente distintas entre sí."),
+            ("Para reparar el ADN dañado antes de la fecundación",
+             "La reparación no es la función de la meiosis, aunque existan mecanismos que la realizan."),
+            ("Para aumentar el número de cromosomas de la especie a lo largo de las generaciones sucesivas",
+             "Ocurre lo contrario: la meiosis evita que ese número aumente generación tras generación."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Un espermatozoide humano maduro, ¿cuántos cromosomas y cuántas "
+        "cromátidas tiene?",
+        "23 cromosomas y 23 cromátidas",
+        "El gameto maduro ya completó las dos divisiones.\n\n"
+        "1) La meiosis I dejó 23 cromosomas, cada uno con dos cromátidas.\n"
+        "2) La meiosis II separó esas cromátidas y las repartió entre dos "
+        "células.\n"
+        "3) Por eso el gameto maduro tiene 23 cromosomas formados por una sola "
+        "cromátida cada uno.\n\n"
+        "Al fecundar, aporta esos 23 cromosomas y con los del otro gameto se "
+        "completan los 46 del cigoto.",
+        [
+            ("23 cromosomas y 46 cromátidas",
+             "Ese es el estado al terminar la meiosis I, antes de la segunda división."),
+            ("46 cromosomas y 46 cromátidas",
+             "Esa es la dotación de una célula somática, no la de un gameto."),
+            ("46 cromosomas y 92 cromátidas, que corresponden a la dotación duplicada antes de dividirse",
+             "Ese es el estado de una célula somática que duplicó su ADN, no el de un gameto."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué se busca al desarrollar un cultivo resistente a una plaga "
+        "mediante manipulación genética?",
+        "Reducir las pérdidas y el uso de pesticidas",
+        "La aplicación persigue un efecto agronómico concreto.\n\n"
+        "1) Se introduce en la planta un gen que le permite producir una "
+        "sustancia que afecta al insecto que la ataca.\n"
+        "2) Con eso disminuyen las pérdidas de cosecha y la necesidad de "
+        "aplicar pesticidas sobre el cultivo.\n"
+        "3) Antes de autorizarse, esas variedades se evalúan por sus efectos "
+        "sobre la salud y sobre otras especies del ambiente.\n\n"
+        "El beneficio buscado y la evaluación de riesgos son parte del mismo "
+        "proceso, no etapas separadas.",
+        [
+            ("Aumentar el número de cromosomas de la planta",
+             "La técnica introduce genes determinados, no juegos completos de cromosomas."),
+            ("Impedir que la planta produzca semillas",
+             "La resistencia a plagas no tiene relación con la producción de semillas."),
+            ("Lograr que la planta crezca sin necesidad de agua ni de nutrientes del suelo donde se cultiva",
+             "Ninguna modificación genética elimina los requerimientos básicos de una planta."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Además de la insulina, ¿qué otro tipo de producto de uso médico se "
+        "obtiene por manipulación genética?",
+        "Hormonas y vacunas producidas por células modificadas",
+        "El mismo procedimiento sirve para distintas proteínas.\n\n"
+        "1) Una vez que se conoce el gen de una proteína, se puede introducir "
+        "en un microorganismo o en un cultivo celular.\n"
+        "2) Así se producen la hormona de crecimiento, factores de coagulación "
+        "y proteínas usadas en vacunas.\n"
+        "3) La ventaja es obtener producto puro, en cantidad y sin depender de "
+        "tejidos de origen animal o humano.\n\n"
+        "El límite de la técnica es que sirve para proteínas: no todos los "
+        "fármacos lo son.",
+        [
+            ("Los antibióticos de origen mineral",
+             "Los antibióticos no tienen origen mineral; los clásicos provienen de hongos y bacterias."),
+            ("Los analgésicos de síntesis química",
+             "Se obtienen por síntesis química y no por expresión de genes en células."),
+            ("Los materiales de las prótesis, que se fabrican a partir de proteínas producidas por bacterias",
+             "Las prótesis se fabrican con materiales sintéticos y metales, no por expresión de genes."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Cómo se aplica la manipulación genética a la producción de "
+        "vestuario?",
+        "Se modifican fibras vegetales y sus cultivos",
+        "El vínculo con la ropa pasa por la materia prima y por el proceso.\n\n"
+        "1) Buena parte del vestuario proviene de fibras vegetales como el "
+        "algodón, cuyos cultivos pueden modificarse para resistir plagas o "
+        "producir fibra de mejor calidad.\n"
+        "2) También se usan enzimas producidas por microorganismos modificados "
+        "para tratar los tejidos, por ejemplo al desgastar telas.\n"
+        "3) En ambos casos el objetivo es obtener una característica del "
+        "material sin depender de tratamientos químicos más agresivos.\n\n"
+        "Es la misma lógica de los detergentes: enzimas específicas en lugar de "
+        "procesos más costosos en energía o en reactivos.",
+        [
+            ("Se modifican genéticamente las prendas ya confeccionadas",
+             "Una prenda no es un organismo vivo: no tiene material genético que modificar."),
+            ("Se reemplazan las fibras por proteínas humanas",
+             "Las fibras textiles no se sustituyen por proteínas humanas."),
+            ("Se introduce material genético en las máquinas de la industria para que produzcan telas más resistentes",
+             "Las máquinas no tienen material genético: la modificación ocurre en organismos vivos."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Una variedad de arroz fue modificada para producir provitamina A en su "
+        "grano. ¿Qué problema busca resolver?",
+        "Una carencia nutricional en la población",
+        "La modificación responde a un problema de salud y no de "
+        "productividad.\n\n"
+        "1) La deficiencia de vitamina A es frecuente en poblaciones cuya dieta "
+        "depende en gran medida del arroz, que no la aporta.\n"
+        "2) Esa deficiencia causa problemas de visión y debilita las defensas, "
+        "sobre todo en la infancia.\n"
+        "3) Al incorporar los genes de la ruta que produce el precursor de la "
+        "vitamina, el grano pasa a aportarla.\n\n"
+        "Es un ejemplo de modificación orientada al valor nutricional y no al "
+        "rendimiento del cultivo.",
+        [
+            ("Aumentar el rendimiento por hectárea",
+             "La modificación apunta a la composición del grano y no a la cantidad cosechada."),
+            ("Reducir el tiempo de cocción del grano",
+             "La producción de provitamina A no altera el tiempo de cocción."),
+            ("Permitir que el arroz crezca en suelos salinos donde ningún otro cultivo puede desarrollarse",
+             "La tolerancia a la salinidad es otro objetivo, distinto del contenido de vitaminas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Cómo se comportan los cromosomas homólogos en la mitosis y en la "
+        "meiosis?",
+        "Se aparean solo en la meiosis",
+        "El comportamiento de los homólogos es lo que separa a ambos "
+        "procesos.\n\n"
+        "1) En la mitosis cada cromosoma se alinea de forma independiente y sus "
+        "cromátidas se separan.\n"
+        "2) En la meiosis I los homólogos se aparean, intercambian material y "
+        "recién después se separan.\n"
+        "3) Por eso la mitosis conserva la dotación y la meiosis la reduce y "
+        "además genera combinaciones nuevas.\n\n"
+        "Todo lo demás, condensación, huso y citocinesis, ocurre de forma "
+        "equivalente en ambos procesos.",
+        [
+            ("Se aparean en ambos procesos",
+             "En la mitosis los homólogos nunca se aparean entre sí."),
+            ("No se aparean en ninguno de los dos",
+             "En la meiosis I el apareamiento es un paso esencial del proceso."),
+            ("Se aparean solo en la mitosis, porque en ella los cromosomas deben repartirse de a pares",
+             "En la mitosis cada cromosoma se reparte por separado, sin formar pares con su homólogo."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "Además de la meiosis, ¿qué aporta la fecundación a la variabilidad de "
+        "la descendencia?",
+        "La unión al azar de dos gametos distintos",
+        "La variabilidad se construye en dos etapas sucesivas.\n\n"
+        "1) La meiosis genera una enorme cantidad de gametos genéticamente "
+        "distintos en cada progenitor.\n"
+        "2) La fecundación une uno cualquiera de un progenitor con uno "
+        "cualquiera del otro.\n"
+        "3) El número de cigotos posibles es entonces el producto de ambas "
+        "cantidades, mucho mayor que cualquiera de ellas.\n\n"
+        "Por eso dos hermanos, aun con los mismos progenitores, resultan "
+        "genéticamente distintos.",
+        [
+            ("La duplicación del material genético del cigoto",
+             "La duplicación permite el desarrollo, pero no agrega combinaciones nuevas."),
+            ("La aparición de mutaciones en el momento de la unión",
+             "Las mutaciones pueden ocurrir, pero no son el aporte propio de la fecundación."),
+            ("La eliminación de los cromosomas que resultan repetidos entre los dos gametos que se unen",
+             "No se eliminan cromosomas: los dos juegos se conservan y forman los pares de homólogos."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué el entrecruzamiento aumenta la variabilidad más allá de la "
+        "distribución al azar de los homólogos?",
+        "Porque crea cromosomas con combinaciones nuevas",
+        "Cada mecanismo actúa en un nivel distinto.\n\n"
+        "1) La distribución al azar reparte cromosomas completos, tal como los "
+        "recibió el individuo de cada progenitor.\n"
+        "2) El entrecruzamiento intercambia segmentos entre homólogos y produce "
+        "cromosomas que mezclan información de ambos.\n"
+        "3) Así, los cromosomas que se reparten ya no son los originales, sino "
+        "combinaciones que no existían antes.\n\n"
+        "Sin entrecruzamiento la variabilidad seguiría existiendo, pero estaría "
+        "limitada a combinar cromosomas enteros.",
+        [
+            ("Porque aumenta el número de cromosomas del gameto",
+             "El número de cromosomas no cambia: cambia su contenido."),
+            ("Porque produce mutaciones en los cromosomas intercambiados",
+             "El intercambio es equilibrado y no constituye una mutación."),
+            ("Porque permite que un gameto reciba los dos cromosomas de un mismo par de homólogos",
+             "Eso sería una no disyunción, un error de reparto, y no el efecto del entrecruzamiento."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué diferencia hay entre una mutación en una célula somática y una en "
+        "una célula germinal?",
+        "Solo la germinal puede heredarse",
+        "El destino de la célula decide el alcance del cambio.\n\n"
+        "1) Una mutación somática afecta a esa célula y a las que descienden de "
+        "ella por mitosis, dentro del mismo individuo.\n"
+        "2) Una mutación en una célula germinal puede quedar en un gameto y "
+        "pasar a la descendencia.\n"
+        "3) Por eso solo las germinales tienen efecto evolutivo: son las que se "
+        "transmiten a las generaciones siguientes.\n\n"
+        "Una mutación somática puede ser importante para la salud del "
+        "individuo, como ocurre en el origen de un tumor, sin ser hereditaria.",
+        [
+            ("Solo la somática puede heredarse",
+             "Invierte los términos: la somática no pasa a la descendencia."),
+            ("Ninguna de las dos se hereda",
+             "Las mutaciones en células germinales sí se transmiten a los descendientes."),
+            ("Ambas se heredan por igual, porque todas las células del organismo tienen la misma información",
+             "Tienen la misma información de origen, pero solo los gametos la transmiten."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿En qué consiste la terapia génica?",
+        "Introducir una copia funcional de un gen",
+        "La técnica aplica la manipulación genética al tratamiento de "
+        "enfermedades.\n\n"
+        "1) Algunas enfermedades se originan en un gen que no produce una "
+        "proteína funcional.\n"
+        "2) La terapia génica introduce en las células del paciente una copia "
+        "capaz de producirla.\n"
+        "3) Si esas células expresan el gen introducido, recuperan la función "
+        "que faltaba.\n\n"
+        "El desafío técnico está en llevar el gen a las células correctas y en "
+        "que su efecto se mantenga en el tiempo.",
+        [
+            ("Reemplazar todas las células del paciente",
+             "El objetivo es corregir una función en células existentes, no reemplazarlas."),
+            ("Modificar el gen de los descendientes del paciente",
+             "Las terapias en uso actúan sobre células del propio paciente y no sobre su descendencia."),
+            ("Administrar una proteína purificada para que ocupe el lugar de la que el organismo no produce",
+             "Ese es un tratamiento de sustitución con proteínas, distinto de introducir el gen."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Por qué un organismo obtenido por clonación no aporta variabilidad "
+        "genética?",
+        "Porque proviene de divisiones por mitosis",
+        "El origen del individuo determina si hay o no combinaciones "
+        "nuevas.\n\n"
+        "1) La clonación parte del material genético de un solo individuo y no "
+        "de la unión de dos gametos.\n"
+        "2) Las divisiones que forman al nuevo organismo son mitosis, que "
+        "producen copias idénticas.\n"
+        "3) Sin meiosis ni fecundación no hay entrecruzamiento, ni distribución "
+        "al azar, ni unión de dotaciones distintas.\n\n"
+        "Por eso una población de clones es genéticamente uniforme, lo que la "
+        "hace vulnerable frente a un cambio del ambiente.",
+        [
+            ("Porque los clones no tienen material genético propio",
+             "Sí lo tienen: es una copia del material del individuo del que provienen."),
+            ("Porque los clones son estériles",
+             "La esterilidad no es una condición general de los organismos clonados."),
+            ("Porque durante la clonación se eliminan los genes que provienen de uno de los dos progenitores",
+             "No hay dos progenitores: el material proviene de un solo individuo."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué se evalúa antes de autorizar el uso de un cultivo modificado "
+        "genéticamente?",
+        "Sus efectos sobre la salud y el ambiente",
+        "La evaluación es parte del procedimiento y no un trámite posterior.\n\n"
+        "1) Se compara la composición del cultivo modificado con la de la "
+        "variedad convencional equivalente.\n"
+        "2) Se estudia si la proteína introducida puede provocar alergias o "
+        "efectos tóxicos.\n"
+        "3) Se analiza además su efecto sobre otras especies y sobre las "
+        "variedades vecinas.\n\n"
+        "El resultado de esa evaluación es lo que fundamenta la autorización, y "
+        "por eso se hace antes y no después de la comercialización.",
+        [
+            ("Solo el rendimiento por hectárea",
+             "El rendimiento es un objetivo agronómico, no una evaluación de seguridad."),
+            ("Solo el costo de producción de la semilla",
+             "El costo es un criterio económico y no responde a las preguntas de seguridad."),
+            ("La opinión de los consumidores acerca del sabor del producto obtenido a partir del cultivo",
+             "La preferencia de los consumidores es relevante para el mercado, pero no es la evaluación de riesgos."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "En el debate sobre organismos modificados genéticamente, ¿qué tipo de "
+        "pregunta puede responder la investigación científica?",
+        "Si el consumo produce efectos sobre la salud",
+        "La ciencia responde preguntas que admiten evidencia.\n\n"
+        "1) Si el consumo de un producto tiene efectos sobre la salud es una "
+        "pregunta que se investiga con estudios comparativos y mediciones.\n"
+        "2) Si conviene autorizarlo, en cambio, involucra criterios económicos, "
+        "culturales y de valores, que la evidencia sola no resuelve.\n"
+        "3) La investigación aporta antecedentes para esa decisión, pero no la "
+        "reemplaza.\n\n"
+        "Distinguir ambos planos evita dos errores frecuentes: pedirle a la "
+        "ciencia decisiones que no le corresponden, y decidir ignorando la "
+        "evidencia disponible.",
+        [
+            ("Si es correcto modificar seres vivos",
+             "Es una pregunta ética: la evidencia informa el debate, pero no lo resuelve."),
+            ("Si las empresas deben poder patentar semillas",
+             "Es una cuestión legal y económica, no una que se resuelva con experimentos."),
+            ("Si conviene autorizar su cultivo en el país, considerando el conjunto de intereses involucrados",
+             "Esa decisión combina evidencia con criterios políticos y económicos que la exceden."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "medio",
+        "¿Qué proporción de su información genética nuclear comparte un hijo "
+        "con cada uno de sus progenitores?",
+        "Aproximadamente la mitad",
+        "El aporte de cada progenitor está fijado por la fecundación.\n\n"
+        "1) Cada gameto lleva un juego haploide de cromosomas.\n"
+        "2) El cigoto se forma con un juego de cada progenitor, de modo que "
+        "cada uno aporta la mitad de la dotación nuclear.\n"
+        "3) Cuál mitad se aporta varía en cada gameto, por el entrecruzamiento "
+        "y la distribución al azar.\n\n"
+        "Que la proporción sea fija y la combinación variable es lo que hace "
+        "que los hermanos se parezcan sin ser iguales.",
+        [
+            ("La totalidad",
+             "Compartir toda la información ocurre solo entre gemelos idénticos."),
+            ("Una cuarta parte",
+             "Esa es aproximadamente la proporción compartida con un abuelo, no con un progenitor."),
+            ("Una proporción distinta en cada hijo, según cuál de los dos gametos haya participado",
+             "La proporción es siempre la mitad: lo que varía es qué combinación se hereda."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Considerando solo la distribución al azar de los homólogos, ¿cuántas "
+        "combinaciones cromosómicas distintas puede tener un gameto humano?",
+        "8.388.608",
+        "El cálculo se apoya en que cada par se reparte de manera "
+        "independiente.\n\n"
+        "1) La especie humana tiene 23 pares de cromosomas homólogos.\n"
+        "2) En cada par, el gameto puede recibir uno u otro cromosoma: dos "
+        "posibilidades por par.\n"
+        "3) Como los 23 pares se reparten de forma independiente, el total es 2 "
+        "elevado a 23, o sea 8.388.608 combinaciones.\n\n"
+        "Y esa cifra considera solo un mecanismo: el entrecruzamiento la "
+        "aumenta todavía más, porque los cromosomas repartidos ya no son los "
+        "originales.",
+        [
+            ("46",
+             "Corresponde al número de cromosomas de una célula somática, no a las combinaciones posibles."),
+            ("23",
+             "Es el número de pares, que es el exponente del cálculo y no su resultado."),
+            ("529, que resulta de multiplicar el número de pares de cromosomas por sí mismo",
+             "El cálculo no es 23 por 23: cada par aporta un factor 2, no un factor 23."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "En una especie con 5 pares de cromosomas homólogos, ¿cuántas "
+        "combinaciones distintas puede generar la distribución al azar?",
+        "32 combinaciones",
+        "El razonamiento es el mismo cualquiera sea el número de pares.\n\n"
+        "1) Cada par ofrece dos posibilidades al gameto: uno u otro de sus dos "
+        "cromosomas.\n"
+        "2) Los pares se reparten de manera independiente, así que las "
+        "posibilidades se multiplican entre sí.\n"
+        "3) Con 5 pares el total es 2 elevado a 5, que da 32 combinaciones "
+        "distintas.\n\n"
+        "El número crece muy rápido con la cantidad de pares, y por eso en la "
+        "especie humana supera los ocho millones.",
+        [
+            ("10 combinaciones",
+             "Multiplica el número de pares por dos en lugar de elevar dos a esa potencia."),
+            ("25 combinaciones",
+             "Corresponde a 5 por 5, un cálculo que no representa la independencia entre pares."),
+            ("5 combinaciones, una por cada uno de los pares de cromosomas homólogos de la especie",
+             "Cada par no aporta una combinación sino un factor 2 al total."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Una no disyunción ocurre en la anafase I. ¿Cuántos de los cuatro "
+        "gametos resultantes quedan con una dotación alterada?",
+        "Los cuatro",
+        "El momento del error determina cuántas células lo arrastran.\n\n"
+        "1) En la anafase I el error afecta a las dos células que resultan de "
+        "la primera división: una con un cromosoma de más y otra con uno de "
+        "menos.\n"
+        "2) Cada una de esas dos células pasa por la meiosis II y da dos "
+        "gametos.\n"
+        "3) Como el error ya estaba presente, los cuatro gametos resultan "
+        "alterados.\n\n"
+        "Si la no disyunción ocurriera en la anafase II, en cambio, solo dos de "
+        "los cuatro gametos quedarían afectados.",
+        [
+            ("Solo uno",
+             "El error se produce antes de la segunda división y se transmite a más de una célula."),
+            ("Solo dos",
+             "Ese es el resultado de una no disyunción en la anafase II, posterior a la primera división."),
+            ("Ninguno, porque la segunda división meiótica corrige el reparto desigual de la primera",
+             "No existe un mecanismo que corrija en la meiosis II un error ocurrido en la meiosis I."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Se observa al microscopio una célula humana con 23 cromosomas, cada "
+        "uno con dos cromátidas. ¿En qué momento del proceso se encuentra?",
+        "Entre la meiosis I y la meiosis II",
+        "El recuento de cromosomas y de cromátidas ubica a la célula.\n\n"
+        "1) Tener 23 cromosomas indica que los homólogos ya se separaron, o sea "
+        "que la meiosis I terminó.\n"
+        "2) Que cada uno conserve dos cromátidas indica que la meiosis II "
+        "todavía no las separó.\n"
+        "3) La célula está entonces en el intervalo entre ambas divisiones o "
+        "iniciando la segunda.\n\n"
+        "Es el estado que muestra que la reducción de la dotación ocurre en la "
+        "primera división y no en la segunda.",
+        [
+            ("Antes de comenzar la meiosis",
+             "Antes de la meiosis la célula es diploide, con 46 cromosomas."),
+            ("En un gameto maduro",
+             "El gameto maduro tiene 23 cromosomas de una sola cromátida."),
+            ("En plena mitosis, porque solo en esa división los cromosomas conservan sus dos cromátidas",
+             "En una mitosis humana habría 46 cromosomas, no 23."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Un estudiante afirma que la meiosis produce cuatro células idénticas "
+        "entre sí. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: las cuatro son distintas",
+        "El error confunde el resultado de la meiosis con el de la mitosis.\n\n"
+        "1) El entrecruzamiento intercambia segmentos entre homólogos, de modo "
+        "que las cromátidas dejan de ser idénticas entre sí.\n"
+        "2) La distribución al azar reparte los homólogos de manera "
+        "independiente entre las células.\n"
+        "3) Por ambos mecanismos, las cuatro células resultantes difieren en su "
+        "combinación de información genética.\n\n"
+        "Las células idénticas son el resultado de la mitosis, cuya función es "
+        "justamente conservar la información.",
+        [
+            ("Es correcta, porque provienen de una misma célula",
+             "El origen común no implica identidad: la meiosis introduce combinaciones distintas."),
+            ("Es correcta, porque el ADN se copió una sola vez",
+             "La copia única explica la reducción de la dotación, no que las células sean idénticas."),
+            ("Es incorrecta, porque la meiosis produce dos células y no cuatro como sostiene la afirmación",
+             "La meiosis sí produce cuatro células; el error está en suponerlas idénticas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Para comparar la variabilidad de la descendencia de dos formas de "
+        "reproducción, ¿qué convendría medir?",
+        "Las diferencias genéticas dentro de cada descendencia",
+        "La pregunta define qué dato hace falta.\n\n"
+        "1) La variabilidad es una propiedad del conjunto de descendientes, no "
+        "de un individuo aislado.\n"
+        "2) Por eso hay que comparar cuánto difieren entre sí los descendientes "
+        "de reproducción sexual con cuánto difieren los de reproducción "
+        "asexual.\n"
+        "3) Contar descendientes o medir su tamaño no responde la pregunta: "
+        "son otras variables.\n\n"
+        "Lo esperable es encontrar diferencias apreciables en el primer grupo y "
+        "prácticamente ninguna en el segundo, formado por clones.",
+        [
+            ("El número de descendientes de cada grupo",
+             "La cantidad de descendientes no informa cuánto difieren entre sí."),
+            ("El tamaño promedio de los descendientes",
+             "Es un rasgo que depende también del ambiente y no mide variabilidad genética."),
+            ("El tiempo que tarda cada forma de reproducción en producir su primera generación completa",
+             "Mide velocidad reproductiva, que es una variable distinta de la variabilidad."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Alguien sostiene que los alimentos transgénicos son riesgosos porque "
+        "contienen ADN. ¿Cómo se evalúa ese argumento?",
+        "Es incorrecto: todo alimento contiene ADN",
+        "El argumento se apoya en una premisa que no distingue nada.\n\n"
+        "1) Cualquier alimento de origen vegetal o animal contiene el material "
+        "genético de las células que lo componen.\n"
+        "2) Ese ADN se degrada durante la digestión igual que las demás "
+        "moléculas del alimento.\n"
+        "3) Por lo tanto, la presencia de ADN no distingue a un producto "
+        "modificado de uno convencional.\n\n"
+        "Las preguntas de seguridad que sí corresponden son otras: si la "
+        "proteína introducida puede ser alergénica o tóxica, y qué efectos "
+        "tiene el cultivo sobre el ambiente.",
+        [
+            ("Es correcto, porque el ADN modificado no se digiere",
+             "El ADN se degrada en la digestión con independencia de su origen."),
+            ("Es correcto, porque el ADN de otra especie se integra al humano",
+             "El ADN de los alimentos no se integra al genoma de quien los consume."),
+            ("Es incorrecto, porque los alimentos transgénicos son los únicos que no contienen material genético",
+             "También contienen ADN: la premisa correcta es que todos lo contienen."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Una variedad modificada se cultiva en un campo con riego y la "
+        "convencional, en otro sin riego. La primera rinde más. ¿Qué problema "
+        "tiene la comparación?",
+        "El riego pudo causar la diferencia",
+        "Dos condiciones distintas impiden atribuir el resultado a una sola.\n\n"
+        "1) Los cultivos difieren en la variedad sembrada y en la "
+        "disponibilidad de agua.\n"
+        "2) El riego por sí solo aumenta el rendimiento de cualquier "
+        "variedad.\n"
+        "3) Por eso el mayor rendimiento observado puede deberse al agua, a la "
+        "modificación genética o a ambas, y el diseño no permite separarlas.\n\n"
+        "La comparación válida exige sembrar ambas variedades en las mismas "
+        "condiciones de riego, suelo y manejo.",
+        [
+            ("Que no se midió el peso de cada grano cosechado",
+             "Es un detalle de la medición y no la razón por la que el resultado no se puede atribuir."),
+            ("Que una temporada es un periodo demasiado corto",
+             "Repetir temporadas ayuda, pero no corrige que los dos campos difieran en el riego."),
+            ("Que la variedad convencional debería haberse sembrado en los dos campos para poder compararla",
+             "Lo que corresponde es sembrar ambas variedades en condiciones iguales, no repetir solo una."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Si una célula completara la meiosis I pero omitiera la meiosis II, "
+        "¿qué gametos resultarían?",
+        "Dos gametos con cromosomas de dos cromátidas",
+        "Omitir la segunda división deja el proceso a medio camino.\n\n"
+        "1) Tras la meiosis I quedan dos células con 23 cromosomas, cada uno "
+        "formado por dos cromátidas.\n"
+        "2) Sin la meiosis II, esas cromátidas no se separan y no se generan "
+        "las cuatro células habituales.\n"
+        "3) El resultado son dos células con el número de cromosomas de un "
+        "gameto, pero con el doble de ADN.\n\n"
+        "Al fecundar, ese gameto aportaría dos copias de cada cromosoma en vez "
+        "de una.",
+        [
+            ("Cuatro gametos normales",
+             "Los cuatro solo se obtienen si ocurre la segunda división."),
+            ("Dos gametos con 46 cromosomas",
+             "Los homólogos ya se separaron en la meiosis I: quedan 23 cromosomas, no 46."),
+            ("Ningún gameto, porque sin la segunda división el proceso se revierte y la célula vuelve a su estado inicial",
+             "El proceso no se revierte: quedan las dos células producidas por la primera división."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Que una bacteria produzca una proteína humana a partir del gen humano "
+        "correspondiente, ¿de qué es evidencia?",
+        "De que el código genético es común a los seres vivos",
+        "El experimento prueba algo más general que la técnica misma.\n\n"
+        "1) Para fabricar la proteína, la maquinaria bacteriana debe interpretar "
+        "los tripletes del gen humano igual que lo haría una célula humana.\n"
+        "2) Que el producto sea la misma proteína indica que esa "
+        "correspondencia entre tripletes y aminoácidos coincide en ambos "
+        "organismos.\n"
+        "3) La coincidencia entre linajes tan distantes se explica por un "
+        "origen común.\n\n"
+        "Es una evidencia de la biología molecular a favor de la evolución, "
+        "obtenida como subproducto de una aplicación biotecnológica.",
+        [
+            ("De que las bacterias descienden de los seres humanos",
+             "El código común indica ancestro compartido, no descendencia de un linaje respecto del otro."),
+            ("De que las proteínas humanas son de origen bacteriano",
+             "La proteína la produce la bacteria a partir del gen introducido, y eso no dice nada sobre su origen."),
+            ("De que las bacterias pueden desarrollar espontáneamente genes propios de otras especies",
+             "El gen no apareció espontáneamente: fue introducido mediante manipulación genética."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "En un experimento de transformación bacteriana, ¿qué grupo control "
+        "corresponde incluir?",
+        "Bacterias del mismo cultivo sin el plásmido",
+        "El control debe diferir en una sola condición.\n\n"
+        "1) La variable en estudio es la incorporación del plásmido con el gen "
+        "de interés.\n"
+        "2) El control son bacterias del mismo cultivo, tratadas igual en todo "
+        "lo demás, pero sin recibir ese plásmido.\n"
+        "3) Si solo las tratadas producen la proteína, el resultado puede "
+        "atribuirse al plásmido y no al procedimiento ni al medio.\n\n"
+        "Sin ese grupo, cualquier resultado podría explicarse por el "
+        "tratamiento aplicado a las células y no por el gen introducido.",
+        [
+            ("Bacterias de otra especie con el mismo plásmido",
+             "Cambiar la especie introduce una segunda diferencia y no aísla el efecto del plásmido."),
+            ("Bacterias del mismo cultivo con el doble de plásmido",
+             "Esa sería otra condición experimental, útil para dosis, pero no un control sin tratamiento."),
+            ("Bacterias tratadas con el plásmido pero cultivadas a una temperatura distinta de las demás",
+             "Al cambiar también la temperatura, la comparación deja de aislar el efecto del plásmido."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Si en una especie no ocurriera el entrecruzamiento, ¿qué pasaría con "
+        "la variabilidad de sus gametos?",
+        "Disminuiría, pero seguiría existiendo",
+        "Los dos mecanismos de la meiosis son independientes entre sí.\n\n"
+        "1) Sin entrecruzamiento, cada cromosoma pasaría al gameto tal como el "
+        "individuo lo recibió de uno de sus progenitores.\n"
+        "2) La distribución al azar de los homólogos seguiría operando, y solo "
+        "por ella los gametos ya serían distintos entre sí.\n"
+        "3) Lo que se perdería son las combinaciones dentro de cada cromosoma, "
+        "que es lo que el intercambio produce.\n\n"
+        "La variabilidad total caería de manera importante, sin desaparecer.",
+        [
+            ("Desaparecería por completo",
+             "La distribución al azar de los homólogos seguiría generando gametos distintos."),
+            ("Se mantendría igual",
+             "El entrecruzamiento aporta combinaciones que sin él no se producen."),
+            ("Aumentaría, porque los cromosomas conservarían intacta la información de cada progenitor",
+             "Conservarlos intactos reduce las combinaciones posibles en lugar de aumentarlas."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Tras insertar un gen en un cultivo celular, no se detecta la proteína "
+        "esperada. El equipo concluye que el gen es defectuoso. ¿Cómo se "
+        "evalúa?",
+        "Es apresurada: hay otras explicaciones posibles",
+        "Un resultado negativo tiene varias causas posibles.\n\n"
+        "1) El gen pudo no haberse integrado en las células, o haberse "
+        "integrado en muy pocas.\n"
+        "2) Pudo integrarse y no expresarse, o expresarse en una cantidad menor "
+        "a la que el método detecta.\n"
+        "3) También pudo fallar la técnica de detección, cosa que se comprueba "
+        "con un control positivo.\n\n"
+        "Descartar esas alternativas es lo que permitiría concluir algo sobre "
+        "el gen mismo.",
+        [
+            ("Es correcta, porque la ausencia de proteína prueba que el gen no funciona",
+             "La ausencia de señal puede provenir de la integración, de la expresión o de la detección."),
+            ("Es correcta, porque un gen que se inserta siempre se expresa",
+             "La expresión no está garantizada: depende de dónde se integre y de las señales que reciba."),
+            ("Es incorrecta, porque la proteína siempre se produce aunque los métodos actuales no logren detectarla",
+             "Tampoco puede afirmarse lo contrario sin evidencia: lo que corresponde es descartar cada alternativa."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "Un equipo compara el rendimiento de dos variedades durante tres "
+        "temporadas y obtiene resultados casi iguales. ¿Qué conclusión es "
+        "válida?",
+        "En esas condiciones no hubo diferencia de rendimiento",
+        "La conclusión debe quedarse dentro de lo que el estudio midió.\n\n"
+        "1) El resultado indica que, en las temporadas y los campos "
+        "estudiados, ambas variedades rindieron de manera equivalente.\n"
+        "2) No autoriza a extender esa conclusión a otros climas, suelos o "
+        "manejos que no fueron parte del estudio.\n"
+        "3) Tampoco dice nada sobre otras características, como la resistencia "
+        "a plagas o la calidad del grano.\n\n"
+        "Delimitar el alcance de una conclusión es parte de comunicarla "
+        "correctamente.",
+        [
+            ("Las dos variedades son equivalentes en todo sentido",
+             "El estudio midió rendimiento: otras características no fueron evaluadas."),
+            ("La modificación genética no sirve para ningún cultivo",
+             "Un resultado en una variedad y tres temporadas no permite una conclusión general."),
+            ("La variedad modificada rendirá igual en cualquier clima donde se decida cultivarla en el futuro",
+             "Extiende el resultado a condiciones que el estudio no incluyó."),
+        ],
+    ),
+    _q(
+        "cie_genetica", "dificil",
+        "¿Por qué la meiosis es relevante para la evolución de una especie?",
+        "Porque genera la variabilidad sobre la que actúa la selección",
+        "La conexión pasa por qué material queda disponible para la "
+        "selección.\n\n"
+        "1) La selección natural no crea diferencias: actúa sobre las que ya "
+        "existen en la población.\n"
+        "2) La meiosis produce gametos con combinaciones distintas, y la "
+        "fecundación las mezcla entre individuos.\n"
+        "3) Así, cada generación presenta combinaciones nuevas sobre las que el "
+        "ambiente puede ejercer su efecto.\n\n"
+        "Una población sin variabilidad enfrenta cualquier cambio del ambiente "
+        "con un solo repertorio de respuestas.",
+        [
+            ("Porque produce mutaciones dirigidas hacia lo que el ambiente exige",
+             "Ni la meiosis ni la mutación se orientan según lo que el ambiente requiere."),
+            ("Porque permite que los individuos se adapten durante su vida",
+             "Los cambios individuales adquiridos durante la vida no se transmiten por esta vía."),
+            ("Porque asegura que las características favorables se transmitan sin alteración a la descendencia",
+             "La meiosis hace lo contrario: recombina las características en cada generación."),
+        ],
+    ),
+]
