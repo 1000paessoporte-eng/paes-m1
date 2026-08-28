@@ -21,7 +21,7 @@ import re
 import sys
 from collections import Counter
 from fractions import Fraction
-from math import comb, factorial, isclose, sqrt
+from math import comb, factorial, isclose, log2, sqrt
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -198,12 +198,18 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     # eco_indicadores: empleo, cuentas externas y precios
     # Biología: lo que sí se puede recalcular
     "saca 3 iones": str(3 - 2),
-    "se divide por mitosis": str(46),
+    "tiene 46 cromosomas y se divide por mitosis": str(46),
     "moléculas de $CO_2$ se necesitan": str(6),
     "entra en meiosis": str(46 // 2),
     "los productores fijan 10.000 kcal": str(int(10_000 * 0.1 * 0.1)),
     "consumidor primario recibe 500 kcal": f"{int(500 / 0.1):,}".replace(",", "."),
     "8.000 kcal en los productores": str(int(8_000 * 0.1 * 0.1 * 0.1)),
+    # Ciclo celular: proporciones del ciclo y crecimiento de un cultivo
+    "tarda 24 horas en completar su ciclo": f"{round(100 * 1 / 24)}%",
+    "por mitosis cuatro veces seguidas": f"{2 ** 4} células",
+    "muestra de 800 células, el índice mitótico es 5%": f"{int(800 * 0.05)} células",
+    "pasa de 500 a 4.000 células en 9 horas": f"{9 // int(log2(4000 / 500))} horas",
+    "en metafase mitótica": f"{46} cromosomas y {46 * 2} cromátidas",
     # Ácido-base
 }
 

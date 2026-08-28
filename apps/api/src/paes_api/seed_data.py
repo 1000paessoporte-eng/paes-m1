@@ -100210,3 +100210,1294 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biologia - Herencia y evolucion: el ciclo celular
+#
+# El area la define el temario con precision: estructura de la cromatina y sus
+# grados de compactacion, los puntos de control G1-S, G2-M y metafase con su
+# efecto sobre la progresion del ciclo, las etapas de la interfase y de la
+# mitosis, y su importancia en la conservacion de la informacion genetica, el
+# crecimiento, el desarrollo, la reparacion de tejidos y el cancer.
+#
+# El nodo traia cuatro preguntas. Quince de las nuevas son de habilidad
+# cientifica y no de contenido: bloqueos que detienen el ciclo en un punto
+# determinado, un control que falta en un diseno, dos variables que cambian a
+# la vez, y dos conclusiones apresuradas que un mismo resultado no autoriza.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿De qué está formada la cromatina?",
+        "ADN asociado a proteínas",
+        "La cromatina es el estado habitual del material genético dentro del "
+        "núcleo.\n\n"
+        "1) El ADN no está suelto: se enrolla sobre proteínas llamadas "
+        "histonas.\n"
+        "2) Ese conjunto de ADN más proteínas es lo que se denomina "
+        "cromatina.\n"
+        "3) Según cuánto se enrolle, la misma cromatina se ve dispersa o "
+        "condensada en forma de cromosomas.\n\n"
+        "Hablar de cromatina o de cromosoma no es hablar de dos materiales "
+        "distintos, sino del mismo material en distinto grado de compactación.",
+        [
+            ("Solo ADN",
+             "El ADN por sí solo no se compacta: necesita las proteínas sobre las que se enrolla."),
+            ("Solo proteínas",
+             "Sin ADN no habría información genética que compactar ni transmitir."),
+            ("Una mezcla de lípidos y azúcares que rodea al núcleo y le da su forma característica",
+             "Describe componentes de membranas, no el material genético del núcleo."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Cuál es la unidad básica de compactación de la cromatina?",
+        "El nucleosoma",
+        "El primer nivel de compactación se repite a lo largo de toda la "
+        "molécula.\n\n"
+        "1) El ADN da unas dos vueltas alrededor de un grupo de histonas y "
+        "forma una unidad llamada nucleosoma.\n"
+        "2) Esa unidad se repite miles de veces, lo que al microscopio da el "
+        "aspecto de un collar de cuentas.\n"
+        "3) Sobre ese primer nivel se apoyan los siguientes, hasta llegar al "
+        "cromosoma metafásico.\n\n"
+        "La compactación ocurre por etapas y no de una sola vez, y eso permite "
+        "que la célula abra solo las regiones que necesita leer.",
+        [
+            ("El centrómero",
+             "El centrómero es la región por donde se unen las cromátidas hermanas, no una unidad de enrollamiento."),
+            ("El ribosoma",
+             "El ribosoma sintetiza proteínas en el citoplasma; no participa en la compactación del ADN."),
+            ("La cromátida hermana, que corresponde a cada una de las dos copias de un cromosoma duplicado",
+             "Es una copia del cromosoma ya duplicado, no la unidad con que se enrolla el ADN."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿En qué etapa del ciclo celular se duplica el ADN?",
+        "En la fase S",
+        "La duplicación ocurre antes de que empiece la división.\n\n"
+        "1) La interfase se divide en G1, S y G2.\n"
+        "2) La S es la fase de síntesis: cada molécula de ADN se copia y el "
+        "cromosoma queda con dos cromátidas hermanas idénticas.\n"
+        "3) Recién después, en la mitosis, esas cromátidas se reparten entre "
+        "las dos células hijas.\n\n"
+        "Que la copia anteceda al reparto es lo que permite que ambas hijas "
+        "reciban la información completa.",
+        [
+            ("En la fase G1",
+             "En G1 la célula crece y sintetiza proteínas y organelos, pero aún no copia su ADN."),
+            ("En la anafase",
+             "En la anafase se separan cromátidas ya duplicadas; no se sintetiza ADN nuevo."),
+            ("En la telofase, mientras se reconstruye la envoltura nuclear alrededor de cada juego de cromosomas",
+             "En la telofase termina el reparto: la duplicación ocurrió mucho antes."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué ocurre principalmente durante la fase G1?",
+        "La célula crece y sintetiza proteínas",
+        "G1 es la fase que prepara a la célula para poder copiar su ADN.\n\n"
+        "1) Tras la división, la célula hija tiene la mitad del tamaño y del "
+        "contenido de organelos de la original.\n"
+        "2) En G1 aumenta de tamaño, fabrica proteínas y multiplica sus "
+        "organelos.\n"
+        "3) Solo si alcanza las condiciones adecuadas avanza a la fase S y "
+        "duplica su ADN.\n\n"
+        "Es también la fase más variable en duración: en algunos tipos "
+        "celulares dura horas y en otros, años.",
+        [
+            ("Se separan las cromátidas hermanas",
+             "Eso ocurre en la anafase de la mitosis, no en la interfase."),
+            ("Se copia el material genético",
+             "La copia ocurre en la fase S, posterior a G1."),
+            ("Los cromosomas se alinean en el plano central de la célula sujetos por las fibras del huso",
+             "Esa es la metafase, una etapa de la mitosis y no de la interfase."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué caracteriza a la metafase de la mitosis?",
+        "Los cromosomas se alinean en el plano ecuatorial",
+        "Cada etapa de la mitosis se reconoce por la posición de los "
+        "cromosomas.\n\n"
+        "1) En metafase los cromosomas, ya condensados y duplicados, se ubican "
+        "en un plano central de la célula.\n"
+        "2) Cada cromátida queda unida a fibras del huso que provienen de polos "
+        "opuestos.\n"
+        "3) Ese ordenamiento es lo que permite que el reparto posterior sea "
+        "exacto.\n\n"
+        "Por eso los cariotipos se preparan a partir de células detenidas en "
+        "metafase: es cuando los cromosomas son más visibles e identificables.",
+        [
+            ("La envoltura nuclear se reconstruye",
+             "Eso ocurre en la telofase, al final de la mitosis."),
+            ("El ADN se duplica",
+             "La duplicación ocurre en la fase S, antes de que empiece la mitosis."),
+            ("Las cromátidas hermanas se separan y son arrastradas hacia polos opuestos de la célula",
+             "Esa es la anafase, que ocurre inmediatamente después de la metafase."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Cuál es el resultado de una mitosis?",
+        "Dos células con la misma información genética",
+        "El resultado define para qué sirve este tipo de división.\n\n"
+        "1) El ADN se duplicó antes, en la fase S, y en la mitosis se reparte "
+        "una copia completa a cada célula hija.\n"
+        "2) Por eso ambas quedan con el mismo número de cromosomas que la "
+        "célula original y con la misma información.\n"
+        "3) Ese reparto idéntico es lo que permite el crecimiento y la "
+        "reparación de tejidos sin alterar la información.\n\n"
+        "La división que reduce el número de cromosomas y genera variabilidad "
+        "es la meiosis, que ocurre solo en la formación de gametos.",
+        [
+            ("Cuatro células con la mitad de los cromosomas",
+             "Ese es el resultado de la meiosis, no de la mitosis."),
+            ("Dos células con la mitad de los cromosomas",
+             "El número de cromosomas se conserva: la duplicación previa lo garantiza."),
+            ("Una célula de mayor tamaño que contiene el doble de material genético que la original",
+             "Describe una célula que duplicó su ADN pero no se dividió, que no es el resultado de la mitosis."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué es un punto de control del ciclo celular?",
+        "Un mecanismo que verifica antes de avanzar",
+        "El ciclo no avanza por inercia sino por autorización.\n\n"
+        "1) En momentos definidos, la célula comprueba si están dadas las "
+        "condiciones para pasar a la etapa siguiente.\n"
+        "2) Si algo falla, el ciclo se detiene hasta que el problema se corrija.\n"
+        "3) Si no puede corregirse, la célula puede quedar detenida o "
+        "eliminarse.\n\n"
+        "Los tres puntos que el temario nombra son G1–S, G2–M y el de "
+        "metafase.",
+        [
+            ("Un organelo del citoplasma",
+             "No es una estructura sino un mecanismo de regulación."),
+            ("Una etapa más de la mitosis",
+             "Los puntos de control regulan el paso entre etapas; no son etapas en sí mismos."),
+            ("Una región del cromosoma donde se unen las fibras del huso durante la división celular",
+             "Eso describe al centrómero y su cinetocoro, no a un punto de control."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Por qué el ADN necesita compactarse dentro del núcleo?",
+        "Porque es mucho más largo que el núcleo",
+        "El problema es de espacio, y su solución es el enrollamiento.\n\n"
+        "1) El ADN de una célula humana mide alrededor de dos metros si se "
+        "estira, y el núcleo tiene unas pocas milésimas de milímetro.\n"
+        "2) Enrollado sobre histonas y plegado en niveles sucesivos, ese "
+        "material cabe en el núcleo.\n"
+        "3) La compactación máxima llega en la mitosis, cuando además hay que "
+        "transportar los cromosomas sin enredarlos.\n\n"
+        "Una molécula tan larga sin compactar no solo no cabría: se rompería al "
+        "moverse.",
+        [
+            ("Porque así se protege del calor",
+             "La compactación no cumple una función térmica."),
+            ("Porque de lo contrario no podría duplicarse",
+             "La duplicación exige justamente lo contrario: abrir la cromatina para copiarla."),
+            ("Porque el enrollamiento aumenta la cantidad de información que la molécula puede almacenar",
+             "La información depende de la secuencia de bases, no de cuánto se enrolla la molécula."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué son las cromátidas hermanas?",
+        "Las dos copias de un cromosoma duplicado",
+        "El nombre indica su origen común.\n\n"
+        "1) En la fase S cada cromosoma se copia y queda formado por dos "
+        "estructuras idénticas.\n"
+        "2) Esas dos copias permanecen unidas por el centrómero hasta la "
+        "anafase.\n"
+        "3) Al separarse, cada una pasa a una célula hija distinta y vuelve a "
+        "considerarse un cromosoma.\n\n"
+        "Que sean idénticas es lo que garantiza que ambas hijas reciban la "
+        "misma información.",
+        [
+            ("Dos cromosomas de distinto progenitor",
+             "Esa es la definición de cromosomas homólogos, que no son copias entre sí."),
+            ("Dos cromosomas que llevan información distinta",
+             "Las cromátidas hermanas llevan la misma información: una es copia de la otra."),
+            ("Los fragmentos en que se rompe un cromosoma cuando la célula sufre un daño en su material genético",
+             "Describe un daño cromosómico, no la estructura normal de un cromosoma duplicado."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué ocurre en la telofase?",
+        "Se reconstruye la envoltura nuclear",
+        "La telofase deshace lo que la profase había desarmado.\n\n"
+        "1) Los cromosomas ya llegaron a los polos opuestos de la célula.\n"
+        "2) Alrededor de cada juego se forma una nueva envoltura nuclear y el "
+        "material genético se descondensa.\n"
+        "3) El huso se desarma y la célula queda lista para la citocinesis, "
+        "que separa los citoplasmas.\n\n"
+        "Con eso terminan dos núcleos completos, y recién después quedan dos "
+        "células separadas.",
+        [
+            ("Los cromosomas se condensan al máximo",
+             "La condensación máxima ocurre en profase y metafase, no al final de la mitosis."),
+            ("Se duplica el material genético",
+             "La duplicación ocurrió en la fase S, antes de la mitosis."),
+            ("Las cromátidas hermanas se separan por acción de las fibras del huso y migran a los polos",
+             "Esa es la anafase, la etapa inmediatamente anterior."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué es la citocinesis?",
+        "La división del citoplasma",
+        "La mitosis reparte núcleos; la citocinesis, células.\n\n"
+        "1) Al terminar la telofase existen dos núcleos dentro de una misma "
+        "célula.\n"
+        "2) La citocinesis divide el citoplasma y reparte los organelos, con lo "
+        "que quedan dos células independientes.\n"
+        "3) En células animales ocurre por un estrangulamiento de la membrana; "
+        "en vegetales, por la formación de una pared entre ambas.\n\n"
+        "Son procesos distintos aunque suelen ocurrir seguidos: hay casos en "
+        "que el núcleo se divide y el citoplasma no.",
+        [
+            ("La duplicación de los cromosomas",
+             "Corresponde a la fase S de la interfase."),
+            ("La condensación de la cromatina",
+             "Ocurre al inicio de la mitosis, en la profase."),
+            ("El proceso por el cual la célula verifica que su material genético no presente daños",
+             "Eso describe un punto de control, no la separación del citoplasma."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "facil",
+        "¿Qué fase del ciclo celular ocupa la mayor parte del tiempo?",
+        "La interfase",
+        "La proporción del tiempo revela qué es lo excepcional.\n\n"
+        "1) La interfase reúne G1, S y G2: crecimiento, duplicación del ADN y "
+        "preparación de la división.\n"
+        "2) En la mayoría de las células ocupa más del 90% de la duración del "
+        "ciclo.\n"
+        "3) La mitosis, en cambio, es breve: en un ciclo típico de un día dura "
+        "aproximadamente una hora.\n\n"
+        "Por eso, al mirar un tejido al microscopio, la mayoría de las células "
+        "se ve en interfase.",
+        [
+            ("La profase",
+             "Es una etapa de la mitosis y ocupa solo una parte de esa hora."),
+            ("La telofase",
+             "Es la etapa final de la mitosis y una de las más breves."),
+            ("La citocinesis, porque separar el citoplasma exige más tiempo que copiar el material genético",
+             "Ocurre lo contrario: copiar todo el ADN toma horas y la citocinesis, minutos."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué diferencia hay entre la cromatina laxa y la condensada?",
+        "El grado de enrollamiento del ADN",
+        "El grado de compactación decide qué se puede leer.\n\n"
+        "1) En la cromatina laxa el ADN está poco enrollado y las enzimas "
+        "pueden acceder a la secuencia.\n"
+        "2) En la condensada el enrollamiento es tan compacto que ese acceso se "
+        "bloquea.\n"
+        "3) Por eso una región muy condensada no se transcribe, aunque el gen "
+        "esté presente e intacto.\n\n"
+        "Durante la mitosis toda la cromatina se condensa al máximo, y esa es "
+        "una de las razones de que la célula prácticamente no transcriba "
+        "mientras se divide.",
+        [
+            ("Que llevan información genética distinta",
+             "Es el mismo ADN: lo que cambia es cuánto está enrollado."),
+            ("Que la laxa carece de proteínas histonas",
+             "Ambas contienen histonas; la diferencia está en el nivel de plegamiento."),
+            ("Que la condensada corresponde al ADN dañado que la célula ha decidido no reparar",
+             "La condensación es un estado normal de la cromatina y no una marca de daño."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué los cariotipos se preparan con células detenidas en metafase?",
+        "Porque ahí los cromosomas se ven mejor",
+        "El diagnóstico depende de poder distinguir un cromosoma de otro.\n\n"
+        "1) En metafase la condensación es máxima y cada cromosoma aparece como "
+        "una estructura definida.\n"
+        "2) Además están alineados en un plano, lo que facilita fotografiarlos y "
+        "ordenarlos por tamaño.\n"
+        "3) En interfase, en cambio, la cromatina está dispersa y no permite "
+        "identificar cromosomas individuales.\n\n"
+        "Por eso el cultivo se trata con una sustancia que detiene la división "
+        "justo en esa etapa antes de preparar la muestra.",
+        [
+            ("Porque en metafase hay el doble de cromosomas",
+             "El número de cromosomas no cambia: lo que cambia es su visibilidad."),
+            ("Porque solo en metafase el ADN está duplicado",
+             "El ADN se duplicó antes, en la fase S, y sigue duplicado durante toda la mitosis."),
+            ("Porque durante la metafase la envoltura nuclear protege a los cromosomas de los reactivos usados",
+             "La envoltura nuclear está desarmada en metafase, así que no cumple ese papel."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué verifica el punto de control G1–S?",
+        "Si la célula está en condiciones de duplicar su ADN",
+        "Este control decide si el ciclo continúa o se detiene.\n\n"
+        "1) Antes de entrar a la fase S, la célula evalúa su tamaño, la "
+        "disponibilidad de nutrientes y las señales externas.\n"
+        "2) También comprueba que el ADN no tenga daños: copiar una molécula "
+        "dañada multiplica el error.\n"
+        "3) Si algo no se cumple, la célula detiene el ciclo o sale de él hacia "
+        "un estado de reposo.\n\n"
+        "Es el punto de decisión más importante del ciclo, porque después de "
+        "entrar a S la división ya está comprometida.",
+        [
+            ("Si las cromátidas están unidas al huso",
+             "Eso lo verifica el punto de control de metafase, mucho más adelante."),
+            ("Si la citocinesis terminó correctamente",
+             "La citocinesis ocurre al final del ciclo, no antes de la fase S."),
+            ("Si la célula alcanzó el número máximo de divisiones que puede realizar durante su vida",
+             "Ese límite existe en algunos tipos celulares, pero no es lo que evalúa este punto de control."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué verifica el punto de control G2–M?",
+        "Que la duplicación del ADN esté completa y sin daño",
+        "Este control protege el reparto que viene a continuación.\n\n"
+        "1) Entre la fase S y la mitosis, la célula comprueba que todo su ADN "
+        "haya sido copiado una sola vez y por completo.\n"
+        "2) También verifica que no queden roturas ni errores sin reparar.\n"
+        "3) Si detecta un problema, retrasa la entrada en mitosis mientras "
+        "actúan los mecanismos de reparación.\n\n"
+        "Entrar en mitosis con el ADN a medio copiar produciría células hijas "
+        "con información incompleta.",
+        [
+            ("Que la célula tenga nutrientes suficientes para crecer",
+             "Esa evaluación corresponde al punto G1–S, antes de la duplicación."),
+            ("Que los cromosomas estén correctamente alineados",
+             "La alineación se verifica en el punto de control de metafase, ya dentro de la mitosis."),
+            ("Que las dos células hijas hayan recibido la misma cantidad de organelos y de citoplasma",
+             "El reparto del citoplasma ocurre en la citocinesis y no está sujeto a este control."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué verifica el punto de control de metafase?",
+        "Que todos los cromosomas estén unidos al huso",
+        "El control ocurre justo antes del paso irreversible.\n\n"
+        "1) Cada cromosoma debe quedar sujeto por fibras que provienen de los "
+        "dos polos, una por cada cromátida.\n"
+        "2) Mientras quede uno sin unir, se emite una señal que impide el inicio "
+        "de la anafase.\n"
+        "3) Solo cuando todos están correctamente sujetos se libera la "
+        "separación de las cromátidas.\n\n"
+        "Es el último momento en que un error puede corregirse: una vez "
+        "iniciada la anafase, el reparto ya no se deshace.",
+        [
+            ("Que el ADN se haya duplicado por completo",
+             "Eso lo verifica el punto G2–M, antes de que empiece la mitosis."),
+            ("Que la envoltura nuclear se haya reconstruido",
+             "La envoltura se reconstruye en telofase, después de este control."),
+            ("Que la célula haya alcanzado el tamaño necesario para dividirse sin comprometer a sus organelos",
+             "El tamaño se evalúa en G1, mucho antes de la metafase."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué relación tiene el ciclo celular con la cicatrización de una "
+        "herida?",
+        "Las células vecinas se dividen y reponen el tejido",
+        "La reparación de tejidos es una de las funciones de la mitosis.\n\n"
+        "1) Al perderse células, las que rodean la zona reciben señales que las "
+        "hacen entrar nuevamente al ciclo.\n"
+        "2) Se dividen por mitosis y generan células idénticas que ocupan el "
+        "espacio dañado.\n"
+        "3) Cuando el tejido se restablece, las señales cesan y las células "
+        "vuelven a detener su división.\n\n"
+        "Esa detención es tan importante como la división: sin ella, la "
+        "reparación no tendría dónde parar.",
+        [
+            ("Las células dañadas se reparan sin dividirse",
+             "Algunas reparan su ADN, pero reponer células perdidas exige división."),
+            ("Las células vecinas aumentan de tamaño para cubrir el espacio",
+             "El aumento de tamaño no repone tejido perdido: se requieren células nuevas."),
+            ("Las células del tejido se transforman en células de otro tipo para reemplazar a las perdidas",
+             "La reparación habitual ocurre por división de células del mismo tipo, no por transformación."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué caracteriza al estado G0?",
+        "La célula sale del ciclo y no se divide",
+        "No todas las células están en camino a dividirse.\n\n"
+        "1) Desde G1, una célula puede salir del ciclo y entrar en un estado de "
+        "reposo llamado G0.\n"
+        "2) En G0 mantiene su actividad metabólica y cumple su función, pero no "
+        "avanza hacia la duplicación del ADN.\n"
+        "3) Algunas permanecen ahí de forma definitiva, como las neuronas; "
+        "otras pueden reingresar al ciclo si reciben la señal adecuada, como "
+        "las del hígado.\n\n"
+        "Que una célula no se divida no significa que esté inactiva ni "
+        "deteriorada.",
+        [
+            ("La célula duplica su ADN sin dividirse",
+             "Duplicar el ADN es entrar en fase S, o sea seguir dentro del ciclo."),
+            ("La célula se divide más rápido que las demás",
+             "G0 es lo contrario: la célula deja de avanzar hacia la división."),
+            ("La célula pierde su núcleo y queda incapacitada para cualquier actividad metabólica",
+             "En G0 la célula conserva su núcleo y sigue funcionando con normalidad."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué se dice que el cáncer es una enfermedad del ciclo celular?",
+        "Porque falla el control de la división",
+        "El origen está en la regulación y no en la división misma.\n\n"
+        "1) Dividirse es una actividad normal de muchas células del organismo.\n"
+        "2) Lo que la mantiene ordenada son los puntos de control, que detienen "
+        "el ciclo cuando algo anda mal.\n"
+        "3) Si mutaciones dañan esos mecanismos, las células siguen "
+        "dividiéndose pese al daño en el ADN o a la falta de señales.\n\n"
+        "De ahí que un tumor no sea un tejido que se divide, sino uno que no "
+        "sabe cuándo dejar de hacerlo.",
+        [
+            ("Porque las células cancerosas no tienen ADN",
+             "Sí lo tienen, y con frecuencia alterado; el problema es el control de la división."),
+            ("Porque las células cancerosas dejan de dividirse",
+             "Es lo contrario: se dividen sin la regulación que corresponde."),
+            ("Porque el cáncer se origina siempre en células que estaban detenidas de manera permanente en G0",
+             "Las células en G0 pueden reingresar al ciclo, pero el origen del cáncer es la falla del control."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué muchos tratamientos contra el cáncer afectan también al "
+        "cabello y a la mucosa digestiva?",
+        "Porque atacan a las células que se dividen rápido",
+        "El efecto adverso viene del mismo mecanismo que da el efecto buscado.\n\n"
+        "1) Varios fármacos interfieren con la duplicación del ADN o con el "
+        "huso, o sea con la división celular.\n"
+        "2) Las células tumorales se dividen mucho, por eso son especialmente "
+        "sensibles.\n"
+        "3) Pero también se dividen rápido las de los folículos pilosos, la "
+        "mucosa digestiva y la médula ósea, que resultan afectadas.\n\n"
+        "Los efectos adversos característicos de estos tratamientos son la "
+        "consecuencia directa de esa falta de selectividad.",
+        [
+            ("Porque el fármaco se acumula en la piel y en el sistema digestivo",
+             "El efecto no depende de dónde se acumule, sino de qué células se dividen más."),
+            ("Porque esos tejidos comparten el mismo tipo celular que el tumor",
+             "Son tipos celulares distintos: lo que comparten es una alta tasa de división."),
+            ("Porque el tratamiento debilita las defensas y eso hace que el cabello y la mucosa se infecten",
+             "La caída del cabello no se debe a una infección, sino al daño directo sobre células en división."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué función cumple el huso mitótico?",
+        "Mover los cromosomas hacia los polos",
+        "El reparto exacto necesita una maquinaria que lo ejecute.\n\n"
+        "1) El huso está formado por microtúbulos que se extienden desde polos "
+        "opuestos de la célula.\n"
+        "2) Sus fibras se unen a los cromosomas por el centrómero y los alinean "
+        "en el plano central.\n"
+        "3) En la anafase, esas fibras arrastran a cada cromátida hacia un polo "
+        "distinto.\n\n"
+        "Si el huso no se forma, los cromosomas no pueden repartirse y la "
+        "división se detiene.",
+        [
+            ("Duplicar el material genético",
+             "La duplicación ocurre en la fase S y no involucra al huso."),
+            ("Sintetizar las proteínas de la célula hija",
+             "Esa función corresponde a los ribosomas, no al huso."),
+            ("Formar la nueva envoltura nuclear alrededor de cada uno de los dos juegos de cromosomas",
+             "La envoltura se reconstruye en telofase por otros mecanismos, no por el huso."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿En qué se diferencia la citocinesis de una célula vegetal de la de "
+        "una animal?",
+        "La vegetal forma una pared entre las dos hijas",
+        "La pared celular impone una solución distinta al mismo problema.\n\n"
+        "1) En la célula animal la membrana se estrangula por un anillo "
+        "contráctil hasta separar los citoplasmas.\n"
+        "2) La célula vegetal no puede estrangularse, porque su pared rígida no "
+        "se deforma.\n"
+        "3) En su lugar, vesículas se alinean en el centro y construyen una "
+        "nueva pared que separa ambas células.\n\n"
+        "La mitosis es equivalente en ambas; lo que cambia es cómo se completa "
+        "la separación final.",
+        [
+            ("La vegetal no realiza citocinesis",
+             "Sí la realiza: sin ella no habría dos células separadas."),
+            ("La animal forma una pared de celulosa",
+             "Las células animales no tienen pared celular."),
+            ("La vegetal separa sus núcleos sin que llegue a dividirse el citoplasma en ningún momento",
+             "El citoplasma sí se divide: lo hace mediante la formación de una pared nueva."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué la mitosis conserva la información genética?",
+        "Porque cada hija recibe una copia completa",
+        "La conservación descansa en dos pasos encadenados.\n\n"
+        "1) En la fase S, cada cromosoma se copia y queda con dos cromátidas "
+        "idénticas.\n"
+        "2) En la anafase, esas cromátidas se separan y una va a cada polo.\n"
+        "3) Así, cada célula hija recibe exactamente un juego completo, igual "
+        "al de la célula original.\n\n"
+        "Duplicar sin repartir bien, o repartir sin haber duplicado, produciría "
+        "células con información incompleta.",
+        [
+            ("Porque el ADN no se modifica nunca",
+             "El ADN puede sufrir mutaciones; lo que la mitosis asegura es el reparto de la copia."),
+            ("Porque las dos hijas comparten el mismo núcleo",
+             "Cada célula hija forma su propio núcleo en telofase."),
+            ("Porque la información se reparte a la mitad entre las dos células hijas que se producen",
+             "No se reparte a la mitad: cada hija recibe un juego completo gracias a la duplicación previa."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "Una célula se encuentra en G2. ¿En qué estado está su material "
+        "genético?",
+        "Duplicado, con cromosomas de dos cromátidas",
+        "La ubicación en el ciclo determina cuánto ADN hay.\n\n"
+        "1) G2 es posterior a la fase S, donde el ADN ya fue copiado.\n"
+        "2) Cada cromosoma está formado por dos cromátidas hermanas unidas por "
+        "el centrómero.\n"
+        "3) El número de cromosomas no cambió: lo que se duplicó es la cantidad "
+        "de ADN.\n\n"
+        "Es una distinción que se presta a error: contar cromátidas no es lo "
+        "mismo que contar cromosomas.",
+        [
+            ("Sin duplicar, con una cromátida por cromosoma",
+             "Ese es el estado de G1, anterior a la fase S."),
+            ("Duplicado, con el doble de cromosomas",
+             "El número de cromosomas se mantiene; lo que se duplicó fue la cantidad de ADN por cromosoma."),
+            ("En proceso de duplicación, con algunos cromosomas ya copiados y otros todavía sin copiar",
+             "Esa situación corresponde a la fase S; en G2 la duplicación ya terminó."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué ocurre con los organelos durante la división celular?",
+        "Se reparten entre las dos células hijas",
+        "El reparto del citoplasma es menos preciso que el del ADN.\n\n"
+        "1) Antes de dividirse, la célula aumenta el número de sus organelos "
+        "durante G1 y G2.\n"
+        "2) En la citocinesis, esos organelos quedan distribuidos entre ambas "
+        "hijas junto con el citoplasma.\n"
+        "3) La distribución es aproximada y no exacta, a diferencia del reparto "
+        "de cromosomas, que sí lo es.\n\n"
+        "Cada célula hija completa después su dotación durante la fase G1 "
+        "siguiente.",
+        [
+            ("Se destruyen y se sintetizan de nuevo en cada hija",
+             "No se destruyen: se heredan y luego se complementan con nuevos."),
+            ("Quedan todos en una sola de las dos células",
+             "Ambas hijas reciben organelos; de lo contrario una no sería viable."),
+            ("Se fusionan entre sí formando una estructura única que se divide junto con el núcleo",
+             "Los organelos no se fusionan en una estructura única para dividirse con el núcleo."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué ocurre en la profase de la mitosis?",
+        "La cromatina se condensa y se forma el huso",
+        "La profase prepara las condiciones para el reparto.\n\n"
+        "1) La cromatina, hasta entonces dispersa, se compacta hasta hacerse "
+        "visible como cromosomas.\n"
+        "2) Se organiza el huso a partir de los centros organizadores de "
+        "microtúbulos, en polos opuestos.\n"
+        "3) Hacia el final, la envoltura nuclear se desarma y las fibras del "
+        "huso alcanzan a los cromosomas.\n\n"
+        "Sin esa condensación previa, mover moléculas de ADN de dos metros sin "
+        "romperlas sería imposible.",
+        [
+            ("Se separan las cromátidas hermanas",
+             "Esa separación ocurre en la anafase."),
+            ("Se duplica el material genético",
+             "La duplicación ocurrió antes, durante la fase S."),
+            ("Los cromosomas se ubican en un plano central sujetos a fibras de ambos polos de la célula",
+             "Ese ordenamiento define a la metafase, posterior a la profase."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué la anafase es un paso irreversible del ciclo celular?",
+        "Porque separadas, las cromátidas ya no se reúnen",
+        "La irreversibilidad explica dónde se ubica el último control.\n\n"
+        "1) Hasta la metafase, un cromosoma mal unido al huso todavía puede "
+        "corregir su posición.\n"
+        "2) Al iniciarse la anafase se degrada la unión entre cromátidas "
+        "hermanas y cada una migra a un polo.\n"
+        "3) Si el reparto sale desigual, ya no hay mecanismo que lo deshaga: la "
+        "célula terminará la división con el error.\n\n"
+        "Por eso el punto de control de metafase actúa justo antes y no "
+        "después.",
+        [
+            ("Porque en la anafase se destruye el ADN sobrante",
+             "No se destruye ADN: se reparte el que existe."),
+            ("Porque la anafase es la etapa más larga de la mitosis",
+             "Es de las más breves, y la duración no tiene relación con la reversibilidad."),
+            ("Porque después de la anafase la célula ya no dispone de energía suficiente para revertir el proceso",
+             "El motivo no es energético sino estructural: la unión entre cromátidas ya fue degradada."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué consecuencia tiene que una cromátida no se separe correctamente "
+        "en la anafase?",
+        "Una hija queda con un cromosoma de más",
+        "Un error de reparto se traduce en un número anómalo de cromosomas.\n\n"
+        "1) Si las dos cromátidas de un cromosoma migran al mismo polo, ese "
+        "polo recibe una copia extra.\n"
+        "2) El polo opuesto queda con una copia menos de ese mismo "
+        "cromosoma.\n"
+        "3) Las dos células hijas resultan con dotaciones desiguales, y ninguna "
+        "de las dos con la dotación correcta.\n\n"
+        "Ese es el tipo de error que el punto de control de metafase busca "
+        "evitar antes de que la anafase comience.",
+        [
+            ("Ambas hijas quedan con la dotación correcta",
+             "Si una recibe una copia de más, la otra queda con una de menos."),
+            ("La célula duplica su ADN nuevamente para compensar",
+             "No existe un mecanismo de compensación posterior al reparto."),
+            ("La mitosis se detiene y las dos células hijas se fusionan para recuperar la dotación original",
+             "No hay fusión posterior: iniciada la anafase, la división continúa con el error."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Qué diferencia hay entre cariocinesis y citocinesis?",
+        "Una divide el núcleo y la otra el citoplasma",
+        "Son dos procesos que suelen ocurrir seguidos pero son distintos.\n\n"
+        "1) La cariocinesis es la división del núcleo, o sea la mitosis "
+        "propiamente tal.\n"
+        "2) La citocinesis es la separación del citoplasma, que ocurre "
+        "habitualmente al final de la telofase.\n"
+        "3) Que sean procesos separados se comprueba en los casos en que la "
+        "cariocinesis ocurre sin citocinesis y resultan células con varios "
+        "núcleos.\n\n"
+        "La fibra muscular esquelética es un ejemplo de célula con muchos "
+        "núcleos dentro de un mismo citoplasma.",
+        [
+            ("Una ocurre en animales y la otra en vegetales",
+             "Ambas ocurren en los dos tipos de células, con diferencias solo en el mecanismo de separación."),
+            ("Una duplica el ADN y la otra lo reparte",
+             "La duplicación ocurre en la fase S; ninguno de los dos procesos la realiza."),
+            ("Una corresponde a la división de células somáticas y la otra a la de las células que forman gametos",
+             "Esa distinción es la de mitosis y meiosis, no la de cariocinesis y citocinesis."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ciclo_celular", "medio",
+        "El índice mitótico de una muestra es la proporción de células que se "
+        "observan en mitosis. ¿Qué información entrega?",
+        "Qué tan activa es la división en ese tejido",
+        "El indicador traduce una observación en una estimación de actividad.\n\n"
+        "1) Como la mitosis es breve comparada con la interfase, en un tejido "
+        "poco activo casi todas las células se ven en interfase.\n"
+        "2) Mientras más células estén dividiéndose, mayor es la proporción que "
+        "queda sorprendida en mitosis al fijar la muestra.\n"
+        "3) Por eso un índice alto indica un tejido de división frecuente, como "
+        "el epitelio intestinal, y uno bajo, un tejido de división escasa.\n\n"
+        "Es una medida indirecta: no cuenta divisiones ocurridas, sino células "
+        "sorprendidas en el acto.",
+        [
+            ("Cuántos cromosomas tiene cada célula",
+             "El número de cromosomas no se deduce de la proporción de células en mitosis."),
+            ("Cuánto mide el ciclo celular completo",
+             "Da una pista sobre la actividad, pero no permite calcular la duración del ciclo por sí solo."),
+            ("Qué proporción de las células del tejido presenta daños en su material genético sin reparar",
+             "El índice no distingue células dañadas: solo registra en qué etapa del ciclo están."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "Una célula tarda 24 horas en completar su ciclo y su mitosis dura 1 "
+        "hora. ¿Qué porcentaje del ciclo ocupa la mitosis?",
+        "Aproximadamente 4%",
+        "El cálculo pone en números la desproporción entre interfase y "
+        "mitosis.\n\n"
+        "1) La proporción es 1 hora de mitosis sobre 24 horas de ciclo "
+        "completo.\n"
+        "2) Ese cociente es 1 dividido por 24, o sea 0,0417.\n"
+        "3) Expresado como porcentaje, corresponde a un 4,2%, que se aproxima a "
+        "4%.\n\n"
+        "Las 23 horas restantes son interfase, y esa es la razón de que al "
+        "observar un tejido casi todas las células se vean en esa fase.",
+        [
+            ("Aproximadamente 1%",
+             "Resulta de dividir por 100 en vez de calcular la proporción sobre las 24 horas."),
+            ("Aproximadamente 24%",
+             "Confunde el número de horas del ciclo con el porcentaje buscado."),
+            ("Aproximadamente 50%, porque el ciclo se reparte por partes iguales entre interfase y mitosis",
+             "El reparto no es equitativo: la interfase ocupa la mayor parte del ciclo."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "Una célula se divide por mitosis cuatro veces seguidas. ¿Cuántas "
+        "células resultan?",
+        "16 células",
+        "Cada división duplica el número de células presentes.\n\n"
+        "1) Tras la primera división hay 2 células; tras la segunda, 4.\n"
+        "2) Tras la tercera hay 8, y tras la cuarta, 16.\n"
+        "3) El resultado corresponde a 2 elevado a 4, porque cada célula se "
+        "divide en dos y todas lo hacen.\n\n"
+        "Todas las células resultantes tienen la misma información genética que "
+        "la original, porque cada división fue una mitosis.",
+        [
+            ("8 células",
+             "Corresponde a tres divisiones y no a cuatro."),
+            ("4 células",
+             "Multiplica por dos solo dos veces, o confunde el resultado con el de una meiosis."),
+            ("32 células, porque en cada división se generan dos células nuevas además de la original",
+             "La célula original no persiste junto a sus hijas: se transforma en ellas."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "En una muestra de 800 células, el índice mitótico es 5%. ¿Cuántas "
+        "células se observan en mitosis?",
+        "40 células",
+        "El porcentaje se aplica sobre el total observado.\n\n"
+        "1) El 5% de 800 equivale a 800 multiplicado por 0,05.\n"
+        "2) Ese producto da 40 células en mitosis.\n"
+        "3) Las 760 restantes se encuentran en interfase, que es lo esperable "
+        "por la duración relativa de cada fase.\n\n"
+        "Un 5% es un valor propio de un tejido de renovación activa: en un "
+        "tejido adulto de división escasa sería mucho menor.",
+        [
+            ("5 células",
+             "Toma el número del porcentaje como si fuera la cantidad de células."),
+            ("80 células",
+             "Corresponde al 10% del total y no al 5% indicado."),
+            ("400 células, que es la mitad del total observado en la muestra analizada",
+             "La mitad corresponde al 50%, diez veces el índice señalado."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "Un cultivo se trata con una sustancia que impide el ensamblaje de los "
+        "microtúbulos. ¿En qué etapa quedarán detenidas las células?",
+        "En metafase",
+        "El bloqueo actúa sobre la estructura que ejecuta el reparto.\n\n"
+        "1) Sin microtúbulos no se forma el huso, y sin huso los cromosomas no "
+        "pueden quedar unidos por ambos polos.\n"
+        "2) El punto de control de metafase detecta esa falta de unión y no "
+        "autoriza el inicio de la anafase.\n"
+        "3) Las células se acumulan entonces en metafase, con los cromosomas "
+        "condensados y sin repartir.\n\n"
+        "Es el mismo principio que se usa para preparar cariotipos, donde se "
+        "busca justamente acumular células en esa etapa.",
+        [
+            ("En la fase S",
+             "La duplicación del ADN no depende de los microtúbulos y transcurre con normalidad."),
+            ("En telofase",
+             "Para llegar a telofase los cromosomas ya deberían haberse repartido, cosa que sin huso no ocurre."),
+            ("En G1, porque sin microtúbulos la célula no alcanza el tamaño necesario para dividirse",
+             "El crecimiento en G1 no queda impedido por la falta de huso: el bloqueo aparece en la mitosis."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "Un fármaco impide la síntesis de ADN sin afectar otras funciones "
+        "celulares. ¿Dónde se detendrá el ciclo?",
+        "En la fase S",
+        "El bloqueo aparece donde se necesita la función suprimida.\n\n"
+        "1) La célula avanza normalmente por G1, porque ahí solo crece y "
+        "sintetiza proteínas.\n"
+        "2) Al entrar en S intenta copiar su ADN y no puede completarlo.\n"
+        "3) El punto de control G2–M no la dejará entrar en mitosis con la "
+        "duplicación incompleta, de modo que el ciclo queda detenido.\n\n"
+        "Ese es el mecanismo de varios fármacos usados contra tumores de "
+        "división rápida.",
+        [
+            ("En la anafase",
+             "La célula no llega a la mitosis: se detiene antes, con el ADN a medio copiar."),
+            ("En G0",
+             "G0 es una salida del ciclo por señales de reposo, no la consecuencia de este bloqueo."),
+            ("En la profase, porque la condensación de la cromatina requiere que el ADN esté recién sintetizado",
+             "La condensación no depende de la síntesis en curso; el bloqueo aparece antes, en la fase S."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué la mitosis no genera variabilidad genética?",
+        "Porque las hijas son copias de la original",
+        "El mecanismo mismo excluye las fuentes de variabilidad.\n\n"
+        "1) En la mitosis no hay intercambio de material entre cromosomas "
+        "homólogos.\n"
+        "2) Tampoco hay reducción del número de cromosomas ni combinación al "
+        "azar de dotaciones distintas.\n"
+        "3) El único cambio posible es una mutación, que es un error y no un "
+        "mecanismo del proceso.\n\n"
+        "Los dos mecanismos que sí generan variabilidad, el entrecruzamiento y "
+        "la distribución al azar de los homólogos, son propios de la meiosis.",
+        [
+            ("Porque en la mitosis no se copia el ADN",
+             "El ADN sí se copia, en la fase S previa: por eso las hijas resultan idénticas."),
+            ("Porque las mutaciones no ocurren en células somáticas",
+             "Sí ocurren, pero son errores y no un mecanismo propio de la mitosis."),
+            ("Porque las células hijas producidas por mitosis no llegan a dividirse nuevamente en el futuro",
+             "Sí pueden volver a dividirse; eso no tiene relación con la variabilidad."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué el epitelio del intestino tiene un índice mitótico mucho más "
+        "alto que el tejido nervioso adulto?",
+        "Porque se renueva de forma constante",
+        "La tasa de división responde a la función del tejido.\n\n"
+        "1) El epitelio intestinal está expuesto al desgaste y pierde células "
+        "de forma permanente.\n"
+        "2) Para mantener la barrera, esas células se reemplazan cada pocos "
+        "días mediante divisiones continuas.\n"
+        "3) Las neuronas del adulto, en cambio, permanecen en G0 y no se "
+        "dividen: su función depende de conexiones establecidas a lo largo del "
+        "tiempo.\n\n"
+        "Esa diferencia explica también por qué un daño intestinal se repara "
+        "con facilidad y uno nervioso no.",
+        [
+            ("Porque sus células tienen más cromosomas",
+             "Todas las células somáticas del organismo tienen el mismo número de cromosomas."),
+            ("Porque sus células son más pequeñas",
+             "El tamaño no determina la frecuencia con que un tejido se divide."),
+            ("Porque el tejido nervioso adulto pierde su material genético y por eso ya no puede dividirse",
+             "Las neuronas conservan su material genético íntegro: lo que ocurre es que salieron del ciclo."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "Una célula humana se encuentra en metafase mitótica. ¿Cuántos "
+        "cromosomas y cuántas cromátidas tiene?",
+        "46 cromosomas y 92 cromátidas",
+        "Contar cromosomas no es lo mismo que contar cromátidas.\n\n"
+        "1) La célula somática humana tiene 46 cromosomas, y la duplicación de "
+        "la fase S no cambia ese número.\n"
+        "2) Lo que cambió es que cada cromosoma quedó formado por dos "
+        "cromátidas hermanas unidas por el centrómero.\n"
+        "3) Por eso hay 46 cromosomas y, en total, 92 cromátidas.\n\n"
+        "Recién en la anafase, al separarse, cada cromátida pasa a contarse "
+        "como un cromosoma independiente.",
+        [
+            ("92 cromosomas y 92 cromátidas",
+             "Cuenta cada cromátida como un cromosoma, cosa que solo ocurre una vez separadas."),
+            ("46 cromosomas y 46 cromátidas",
+             "Omite la duplicación de la fase S, que dejó dos cromátidas por cromosoma."),
+            ("23 cromosomas y 46 cromátidas, porque en la división el número de cromosomas se reduce a la mitad",
+             "La reducción a la mitad ocurre en la meiosis, no en la mitosis."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Cómo varía la cantidad de ADN de una célula a lo largo de un ciclo "
+        "completo?",
+        "Se duplica en S y vuelve a la mitad al dividirse",
+        "El contenido de ADN sube una vez por ciclo y baja una vez por ciclo.\n\n"
+        "1) Durante G1 la célula mantiene su cantidad de ADN inicial.\n"
+        "2) En la fase S esa cantidad se duplica, y se mantiene duplicada "
+        "durante G2 y la mitosis.\n"
+        "3) Al repartirse entre las dos hijas en la anafase y la citocinesis, "
+        "cada una queda con la cantidad inicial.\n\n"
+        "Ese patrón de subida y bajada es lo que permite identificar en qué "
+        "fase está una célula midiendo su contenido de ADN.",
+        [
+            ("Aumenta de forma continua durante todo el ciclo",
+             "El aumento se concentra en la fase S; en G1 y G2 la cantidad se mantiene estable."),
+            ("Se mantiene constante durante todo el ciclo",
+             "Sin duplicación no habría material para repartir entre las dos células hijas."),
+            ("Se reduce a la mitad en la fase S y se recupera durante la mitosis por síntesis de ADN nuevo",
+             "Invierte el orden: la síntesis ocurre en S y la reducción, al repartirse en la división."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "medio",
+        "¿Por qué en la mitosis los cromosomas homólogos no se aparean entre "
+        "sí?",
+        "Porque cada cromosoma se reparte por separado",
+        "El apareamiento cumple una función que la mitosis no necesita.\n\n"
+        "1) En la mitosis cada cromosoma duplicado se alinea de forma "
+        "independiente en el plano ecuatorial.\n"
+        "2) Lo que se separa son sus dos cromátidas hermanas, no un homólogo de "
+        "otro.\n"
+        "3) El apareamiento de homólogos existe en la meiosis, donde permite el "
+        "intercambio de material y la reducción del número de cromosomas.\n\n"
+        "Por eso la mitosis conserva la dotación completa y la meiosis la "
+        "reduce a la mitad.",
+        [
+            ("Porque las células somáticas no tienen cromosomas homólogos",
+             "Sí los tienen: son diploides, con un juego de cada progenitor."),
+            ("Porque los homólogos ya se separaron en la fase S",
+             "En la fase S no hay separación alguna: solo duplicación."),
+            ("Porque durante la mitosis los cromosomas homólogos permanecen fuera del núcleo hasta la telofase",
+             "Todos los cromosomas participan de la mitosis; ninguno queda fuera del proceso."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Un equipo cultiva células con una sustancia que impide la formación "
+        "del huso y observa que se acumulan cromosomas condensados sin "
+        "repartir. ¿Qué inferencia es correcta?",
+        "El punto de control de metafase está operando",
+        "La acumulación en una etapa concreta informa sobre el mecanismo.\n\n"
+        "1) Si el bloqueo simplemente matara a las células, no se observarían "
+        "acumuladas en una etapa determinada.\n"
+        "2) Que se detengan justo antes de la anafase indica que existe un "
+        "mecanismo que las retiene ahí.\n"
+        "3) Ese mecanismo es el punto de control de metafase, que impide "
+        "avanzar mientras haya cromosomas sin unir al huso.\n\n"
+        "La inferencia se apoya en dónde se detienen, no en cuántas se "
+        "detienen.",
+        [
+            ("La sustancia impide la duplicación del ADN",
+             "Si el ADN no se hubiera duplicado, las células no habrían llegado a condensar cromosomas."),
+            ("Las células perdieron su material genético",
+             "Los cromosomas condensados observados prueban lo contrario."),
+            ("La sustancia acelera el ciclo celular y por eso se observan tantas células en la misma etapa",
+             "Una aceleración no concentraría a las células justo antes del paso que el huso hace posible."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Para probar si una sustancia detiene la división celular, un "
+        "estudiante trata un cultivo y cuenta las células a las 48 horas. ¿Qué "
+        "le falta al diseño?",
+        "Un cultivo idéntico sin la sustancia",
+        "Sin comparación, el resultado no se puede interpretar.\n\n"
+        "1) Contar células a las 48 horas entrega un número, pero no dice si es "
+        "alto o bajo.\n"
+        "2) Ese número depende también de la temperatura, del medio de cultivo "
+        "y de la cantidad inicial de células.\n"
+        "3) Un cultivo con las mismas condiciones y sin la sustancia permite "
+        "atribuir la diferencia observada a la sustancia y no a lo demás.\n\n"
+        "Ese cultivo de comparación es el control del experimento, y es lo que "
+        "convierte una observación en evidencia.",
+        [
+            ("Repetir el conteo con un microscopio de mayor aumento",
+             "Mejora la precisión de la medición, pero sigue sin haber con qué comparar el resultado."),
+            ("Esperar 96 horas en lugar de 48",
+             "Alargar el experimento no reemplaza la falta de un grupo de comparación."),
+            ("Medir además la temperatura del cultivo durante todo el periodo de observación del experimento",
+             "Registrar la temperatura es útil, pero no permite aislar el efecto de la sustancia."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Una técnica mide el contenido de ADN de miles de células. El "
+        "resultado muestra un grupo con cierta cantidad y otro con el doble. "
+        "¿Qué representa cada grupo?",
+        "Células antes y después de la fase S",
+        "El contenido de ADN identifica la posición en el ciclo.\n\n"
+        "1) Las células en G1 todavía no han duplicado su ADN y muestran la "
+        "cantidad menor.\n"
+        "2) Las que ya pasaron por la fase S, o sea las que están en G2 o en "
+        "mitosis, muestran el doble.\n"
+        "3) Entre ambos grupos aparecen las células en plena fase S, con "
+        "valores intermedios.\n\n"
+        "La medición no observa las células dividiéndose: infiere su fase a "
+        "partir de cuánto ADN contienen.",
+        [
+            ("Células de dos especies distintas",
+             "La muestra proviene de un solo cultivo: la diferencia es de fase, no de origen."),
+            ("Células sanas y células con daño genético",
+             "Un daño en el ADN no duplica su cantidad total."),
+            ("Células vivas y células muertas, que conservan el doble de material genético al degradarse",
+             "Las células muertas no duplican su contenido de ADN; al degradarse tienden a mostrar menos."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Un cultivo tratado deja de aumentar su número de células. El "
+        "investigador concluye que la sustancia mata a las células. ¿Cómo se "
+        "evalúa esa conclusión?",
+        "Es apresurada: pudo solo detener la división",
+        "Un mismo resultado admite dos explicaciones distintas.\n\n"
+        "1) Que el número no aumente significa que no se están generando "
+        "células nuevas.\n"
+        "2) Eso ocurre tanto si las células mueren como si siguen vivas pero "
+        "detenidas en el ciclo.\n"
+        "3) Para distinguir ambas cosas hay que evaluar la viabilidad de las "
+        "células y observar si al retirar la sustancia el cultivo vuelve a "
+        "crecer.\n\n"
+        "Si al retirarla el crecimiento se reanuda, la sustancia detenía el "
+        "ciclo sin matar, que es un efecto muy distinto.",
+        [
+            ("Es correcta, porque un cultivo que no crece está muerto",
+             "Un cultivo detenido puede estar formado por células vivas que no se dividen."),
+            ("Es correcta, porque las células solo dejan de dividirse cuando mueren",
+             "Muchas células vivas no se dividen: las que están en G0 son el caso más común."),
+            ("Es incorrecta, porque una sustancia externa no puede alterar el avance del ciclo celular",
+             "Sí puede: existen numerosos compuestos que detienen el ciclo en etapas determinadas."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Dos cultivos idénticos se mantienen a 30 °C y a 37 °C, y solo el "
+        "segundo recibe la sustancia en estudio. Crece más rápido. ¿Qué "
+        "problema tiene la comparación?",
+        "Cambian dos variables a la vez",
+        "Con dos diferencias entre los grupos, el resultado no se puede "
+        "atribuir.\n\n"
+        "1) Los cultivos difieren en la temperatura y en la presencia de la "
+        "sustancia.\n"
+        "2) La temperatura por sí sola modifica la velocidad de la división "
+        "celular.\n"
+        "3) Por lo tanto, el crecimiento mayor podría deberse a la temperatura, "
+        "a la sustancia o a ambas, y el diseño no permite separarlas.\n\n"
+        "Corregirlo exige mantener los dos cultivos a la misma temperatura y "
+        "que la única diferencia sea la sustancia.",
+        [
+            ("Que no se midió el número inicial de células",
+             "Es un dato necesario, pero el problema de fondo es que difieren en dos condiciones."),
+            ("Que 37 °C es una temperatura demasiado alta para un cultivo celular",
+             "37 °C es la temperatura habitual de cultivo de células humanas."),
+            ("Que la sustancia debería haberse agregado a los dos cultivos para poder comparar sus efectos",
+             "Si se agregara a ambos, no habría grupo de comparación sin tratamiento."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "En una línea celular, una mutación inactiva el punto de control "
+        "G1–S. ¿Qué se espera que ocurra?",
+        "Células con ADN dañado entrarán en fase S",
+        "Perder un control no detiene el ciclo: lo deja avanzar sin filtro.\n\n"
+        "1) Ese punto de control impide entrar a la fase S cuando hay daño en "
+        "el ADN o faltan condiciones.\n"
+        "2) Inactivado, las células avanzan igual y copian el ADN dañado tal "
+        "como está.\n"
+        "3) Cada célula hija hereda entonces ese daño, que se acumula a lo "
+        "largo de las divisiones siguientes.\n\n"
+        "La acumulación de alteraciones en el material genético es uno de los "
+        "pasos que llevan a la división descontrolada.",
+        [
+            ("El ciclo celular se detendrá por completo",
+             "Perder un control no detiene el ciclo: lo que se pierde es la capacidad de detenerlo."),
+            ("Las células dejarán de duplicar su ADN",
+             "La duplicación ocurre igual; lo que falta es la verificación previa."),
+            ("Las células repararán su ADN con mayor eficiencia porque disponen de más tiempo en G1",
+             "Sin el control, la célula no se detiene en G1: dispone de menos tiempo para reparar, no de más."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Una biopsia muestra un índice mitótico muy superior al del tejido "
+        "sano vecino. ¿Qué se puede afirmar con ese solo dato?",
+        "Que ese tejido se divide con más frecuencia",
+        "El dato describe una tasa de división, no un diagnóstico.\n\n"
+        "1) Un índice mitótico alto indica que una proporción mayor de células "
+        "está en división en ese momento.\n"
+        "2) Eso es compatible con un tumor, pero también con un tejido en "
+        "regeneración tras una lesión o una inflamación.\n"
+        "3) Distinguir entre esas posibilidades exige otros antecedentes, como "
+        "la forma de las células y la organización del tejido.\n\n"
+        "El índice mitótico se usa efectivamente en el estudio de tumores, pero "
+        "como un dato dentro de un conjunto y no como prueba aislada.",
+        [
+            ("Que el tejido es canceroso",
+             "Un índice alto también aparece en tejidos que se están regenerando."),
+            ("Que sus células tienen mutaciones en los puntos de control",
+             "Es una explicación posible, pero el índice mitótico por sí solo no la demuestra."),
+            ("Que sus células completan el ciclo celular sin pasar por la interfase, y por eso se dividen más",
+             "Ninguna célula se divide sin interfase: es donde se duplica el ADN que luego se reparte."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Un cultivo pasa de 500 a 4.000 células en 9 horas de crecimiento "
+        "estable. ¿Cuánto tarda en promedio cada división?",
+        "3 horas",
+        "El número de duplicaciones se obtiene antes que el tiempo de cada "
+        "una.\n\n"
+        "1) De 500 a 4.000 el cultivo se multiplicó por 8.\n"
+        "2) Multiplicarse por 8 equivale a tres duplicaciones sucesivas: 500 a "
+        "1.000, a 2.000 y a 4.000.\n"
+        "3) Si tres duplicaciones ocupan 9 horas, cada una toma 9 dividido por "
+        "3, o sea 3 horas.\n\n"
+        "El razonamiento vale mientras el crecimiento sea estable: si el "
+        "cultivo se satura, el intervalo entre divisiones se alarga.",
+        [
+            ("9 horas",
+             "Toma el tiempo total del experimento como si correspondiera a una sola división."),
+            ("4,5 horas",
+             "Supone dos duplicaciones, pero de 500 a 4.000 hay tres."),
+            ("1,125 horas, que resulta de repartir las 9 horas entre las 8 veces que aumentó el cultivo",
+             "El factor 8 no es el número de duplicaciones sino su resultado: las duplicaciones son tres."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Se agrega a un cultivo un compuesto que se incorpora únicamente al ADN "
+        "recién sintetizado y se observa que lo incorpora el 20% de las "
+        "células. ¿Qué representa ese porcentaje?",
+        "La proporción de células que están en fase S",
+        "El marcador solo entra donde hay síntesis en curso.\n\n"
+        "1) El compuesto se incorpora mientras el ADN se está copiando, o sea "
+        "durante la fase S.\n"
+        "2) Las células en G1, G2 o mitosis no lo incorporan, porque en esas "
+        "etapas no hay síntesis de ADN.\n"
+        "3) Por lo tanto, el 20% marcado corresponde a las células que se "
+        "encontraban en fase S durante la exposición al compuesto.\n\n"
+        "Es una forma indirecta de estimar qué proporción del ciclo ocupa esa "
+        "fase en ese tipo celular.",
+        [
+            ("La proporción de células en mitosis",
+             "En mitosis no hay síntesis de ADN, así que esas células no incorporan el compuesto."),
+            ("La proporción de células con daño genético",
+             "El compuesto marca síntesis en curso y no distingue células dañadas."),
+            ("La proporción de células que morirán durante las siguientes horas de cultivo por efecto del compuesto",
+             "El marcaje indica actividad de síntesis, no destino celular."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Tras aplicar una sustancia, un cultivo muestra más células en mitosis "
+        "que el control. Se concluye que la sustancia acelera el ciclo. ¿Cómo "
+        "se evalúa?",
+        "Es apresurada: pudo retrasar la salida de mitosis",
+        "Una acumulación admite dos causas opuestas.\n\n"
+        "1) Se ven más células en mitosis si entran más rápido a ella, que es "
+        "la interpretación propuesta.\n"
+        "2) Pero también se ven más si entran al ritmo habitual y demoran más "
+        "en salir, porque se van acumulando.\n"
+        "3) Distinguir ambos casos exige seguir las células en el tiempo o "
+        "medir la duración del ciclo completo, no una foto en un instante.\n\n"
+        "Varias sustancias antitumorales producen exactamente el segundo "
+        "efecto: bloquean la salida de mitosis.",
+        [
+            ("Es correcta, porque más células en mitosis implica más divisiones por hora",
+             "Solo si la duración de la mitosis no cambió, y eso es justamente lo que no se midió."),
+            ("Es correcta, porque el cultivo control confirma la diferencia observada",
+             "El control muestra que hay una diferencia, pero no dice cuál de las dos causas la produce."),
+            ("Es incorrecta, porque la proporción de células en mitosis es siempre la misma en cualquier cultivo",
+             "No es siempre la misma: varía según el tipo celular y las condiciones."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "¿Cuál de las siguientes es una hipótesis que puede ponerse a prueba "
+        "experimentalmente sobre el ciclo celular?",
+        "Cierta sustancia alarga la duración de la fase S",
+        "Una hipótesis contrastable propone una relación medible.\n\n"
+        "1) La duración de la fase S puede medirse con marcadores de síntesis "
+        "de ADN.\n"
+        "2) La sustancia puede aplicarse o no, generando dos grupos "
+        "comparables.\n"
+        "3) Con eso es posible obtener evidencia que la respalde o la "
+        "contradiga, que es lo que exige una hipótesis.\n\n"
+        "Las afirmaciones que no definen qué medir ni cómo compararlo pueden "
+        "ser interesantes, pero no se pueden poner a prueba.",
+        [
+            ("La división celular es un proceso fundamental para la vida",
+             "Es una afirmación general y valiosa, pero no propone nada que se pueda medir ni comparar."),
+            ("El ciclo celular es más importante en unos organismos que en otros",
+             "No define qué se entiende por importante ni cómo se mediría esa comparación."),
+            ("Las células deberían dividirse con más cuidado para evitar los errores que originan enfermedades",
+             "Es un juicio de valor sobre el proceso, no una relación que pueda someterse a prueba."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Si se inactivara el punto de control de metafase en una población "
+        "celular, ¿qué se esperaría observar tras varias divisiones?",
+        "Células hijas con números desiguales de cromosomas",
+        "El control perdido es justamente el que asegura el reparto exacto.\n\n"
+        "1) Ese punto impide iniciar la anafase mientras haya cromosomas mal "
+        "unidos al huso.\n"
+        "2) Sin él, la anafase comienza igual y esos cromosomas se reparten al "
+        "azar entre los polos.\n"
+        "3) Tras varias divisiones se acumulan células con cromosomas de más y "
+        "de menos, cada una distinta de la anterior.\n\n"
+        "Esa variabilidad en el número de cromosomas es una característica "
+        "frecuente en células tumorales.",
+        [
+            ("Células hijas idénticas entre sí",
+             "La identidad depende justamente del reparto exacto que ese control asegura."),
+            ("Células que no logran duplicar su ADN",
+             "La duplicación ocurre en la fase S y no depende de este punto de control."),
+            ("Células que permanecen detenidas en metafase de forma indefinida sin completar la división",
+             "Esa es la consecuencia del control funcionando, no de su ausencia."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Un tejido irradiado detiene su división durante algunas horas y luego "
+        "la reanuda con normalidad. ¿Qué inferencia es más razonable?",
+        "Los puntos de control detuvieron el ciclo mientras se reparaba el daño",
+        "La detención transitoria es una respuesta y no una falla.\n\n"
+        "1) La radiación produce daños en el ADN que los puntos de control "
+        "detectan.\n"
+        "2) Detectado el daño, el ciclo se detiene y actúan los mecanismos de "
+        "reparación.\n"
+        "3) Que la división se reanude con normalidad indica que la reparación "
+        "fue efectiva y el control levantó la detención.\n\n"
+        "Si el daño hubiera sido irreparable, esas células habrían quedado "
+        "detenidas de forma permanente o habrían muerto.",
+        [
+            ("La radiación no produjo ningún daño en el material genético",
+             "Sin daño no habría razón para que la división se detuviera durante horas."),
+            ("Las células perdieron sus puntos de control por efecto de la radiación",
+             "Sin puntos de control la división habría continuado sin pausa, que es lo contrario de lo observado."),
+            ("Las células dañadas murieron y fueron reemplazadas por otras traídas desde tejidos vecinos",
+             "Las células no se desplazan entre tejidos para reemplazar a las dañadas de ese modo."),
+        ],
+    ),
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Se quiere comparar el efecto de tres dosis de un fármaco sobre la "
+        "división celular. ¿Qué debe mantenerse igual entre los cultivos?",
+        "El tipo celular, el medio y la temperatura",
+        "Comparar dosis exige que la dosis sea lo único que cambie.\n\n"
+        "1) La variable en estudio es la dosis del fármaco, y por eso debe "
+        "tomar valores distintos en cada cultivo.\n"
+        "2) Todo lo demás que influya sobre la división debe permanecer "
+        "constante: el mismo tipo celular, el mismo medio, la misma "
+        "temperatura y el mismo número inicial de células.\n"
+        "3) Si alguna de esas condiciones varía junto con la dosis, la "
+        "diferencia observada ya no puede atribuirse al fármaco.\n\n"
+        "Con las condiciones controladas, comparar tres dosis permite además "
+        "describir cómo cambia el efecto al aumentar la cantidad.",
+        [
+            ("La dosis del fármaco en los tres cultivos",
+             "La dosis es justamente lo que debe variar: es la variable en estudio."),
+            ("El número de células observadas al final del experimento",
+             "Ese es el resultado que se mide, no una condición que se fije de antemano."),
+            ("El tiempo de observación, que debe ser distinto en cada cultivo para detectar efectos tardíos",
+             "El tiempo debe ser el mismo en los tres: si varía, deja de poder compararse el resultado."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ciclo_celular", "dificil",
+        "Un cultivo vegetal se trata con una sustancia que impide la formación "
+        "de la pared que separa a las células hijas, sin afectar la mitosis. "
+        "¿Qué se observará?",
+        "Células con dos núcleos en un mismo citoplasma",
+        "El experimento separa dos procesos que suelen ocurrir juntos.\n\n"
+        "1) La mitosis se completa: los cromosomas se reparten y se forman dos "
+        "envolturas nucleares.\n"
+        "2) Lo que queda bloqueado es la citocinesis, que en la célula vegetal "
+        "consiste en levantar una pared entre ambos juegos.\n"
+        "3) El resultado es una sola célula que contiene dos núcleos completos "
+        "en un citoplasma común.\n\n"
+        "Es la evidencia de que cariocinesis y citocinesis son procesos "
+        "distintos, aunque en condiciones normales ocurran encadenados.",
+        [
+            ("Células sin núcleo",
+             "La mitosis no fue afectada: cada juego de cromosomas queda rodeado por su envoltura."),
+            ("Células con la mitad de los cromosomas",
+             "La reducción a la mitad es propia de la meiosis y no ocurre por bloquear la pared."),
+            ("Dos células separadas pero unidas por un puente de citoplasma que se rompe al poco tiempo",
+             "Sin la pared no llegan a separarse: permanecen como una sola célula con dos núcleos."),
+        ],
+    ),
+]
