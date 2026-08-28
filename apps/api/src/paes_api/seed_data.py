@@ -105232,3 +105232,1293 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Estructura atomica: clasificacion de la materia
+#
+# El temario abre el eje por aca: sustancias puras (elementos y compuestos) y
+# mezclas (homogeneas y heterogeneas); los cuatro procedimientos de separacion
+# que nombra —decantacion, filtracion, tamizado y destilacion— con sus
+# aplicaciones; y las propiedades fisicas de los elementos: temperaturas de
+# ebullicion y de fusion, masa, volumen y densidad.
+#
+# Las quince dificiles piden decidir con datos: un intervalo de fusion que
+# delata impurezas, un volumen que sale por desplazamiento y no por la lectura
+# final de la probeta, que evidencia comprueba que una destilacion sirvio, y
+# dos mediciones discrepantes del mismo material.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_materia", "facil",
+        "¿Qué caracteriza a una sustancia pura?",
+        "Tiene composición fija y propiedades constantes",
+        "La composición es el criterio que separa sustancias de mezclas.\n\n"
+        "1) Una sustancia pura está formada por un solo tipo de materia, con "
+        "una composición que no varía de una muestra a otra.\n"
+        "2) Por eso sus propiedades físicas, como el punto de fusión y la "
+        "densidad, son siempre las mismas.\n"
+        "3) Las mezclas, en cambio, admiten proporciones variables y sus "
+        "propiedades dependen de esa proporción.\n\n"
+        "Las sustancias puras se dividen en elementos y compuestos, según "
+        "puedan o no descomponerse en otras más simples.",
+        [
+            ("Está formada por un solo átomo",
+             "Puede estar formada por muchos átomos e incluso por varios elementos, como el agua."),
+            ("Siempre es líquida a temperatura ambiente",
+             "El estado depende de la sustancia: hay sustancias puras sólidas, líquidas y gaseosas."),
+            ("Se puede separar en sus componentes mediante procedimientos físicos como la filtración",
+             "Eso es propio de las mezclas: una sustancia pura no se separa por métodos físicos."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué es un elemento químico?",
+        "Una sustancia formada por un solo tipo de átomo",
+        "El elemento es la sustancia pura más simple.\n\n"
+        "1) Todos sus átomos tienen el mismo número de protones, o sea el mismo "
+        "número atómico.\n"
+        "2) No puede descomponerse en sustancias más simples por métodos "
+        "químicos.\n"
+        "3) El hierro, el oxígeno y el helio son ejemplos, y cada uno se "
+        "representa con un símbolo.\n\n"
+        "Un compuesto, en cambio, contiene átomos de dos o más elementos "
+        "combinados en proporción fija.",
+        [
+            ("Una mezcla de dos sustancias puras",
+             "Una mezcla no es un elemento: sus componentes conservan su identidad."),
+            ("Cualquier sustancia que se encuentre en la naturaleza",
+             "En la naturaleza hay elementos, compuestos y mezclas por igual."),
+            ("Una sustancia que puede descomponerse en otras más simples mediante una reacción química",
+             "Esa es la característica de un compuesto, no de un elemento."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué es un compuesto químico?",
+        "Una sustancia de dos o más elementos combinados",
+        "El compuesto es una sustancia pura formada por varios elementos.\n\n"
+        "1) Sus átomos están unidos químicamente en una proporción fija, que su "
+        "fórmula expresa.\n"
+        "2) Sus propiedades son distintas de las de los elementos que lo "
+        "forman: el agua no se parece al hidrógeno ni al oxígeno.\n"
+        "3) Solo puede separarse en sus elementos mediante una reacción "
+        "química, no por métodos físicos.\n\n"
+        "Esa proporción fija es la diferencia esencial con una mezcla, donde "
+        "las cantidades pueden variar.",
+        [
+            ("Una mezcla homogénea de dos elementos",
+             "En una mezcla los componentes no están unidos químicamente ni en proporción fija."),
+            ("Un elemento en estado líquido",
+             "El estado físico no define si una sustancia es elemento o compuesto."),
+            ("Una sustancia cuyos componentes pueden separarse por filtración o por decantación",
+             "Esos son métodos físicos, que separan mezclas y no compuestos."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué caracteriza a una mezcla homogénea?",
+        "Su composición se ve uniforme en toda la muestra",
+        "La uniformidad se refiere a lo que se distingue en la muestra.\n\n"
+        "1) En una mezcla homogénea los componentes están repartidos de manera "
+        "pareja y no se distinguen a simple vista ni al microscopio óptico.\n"
+        "2) Cualquier porción que se tome tiene la misma composición que el "
+        "resto.\n"
+        "3) El agua con sal disuelta y el aire son ejemplos.\n\n"
+        "Sigue siendo una mezcla: sus componentes conservan su identidad y "
+        "pueden separarse por métodos físicos.",
+        [
+            ("Está formada por un solo tipo de átomo",
+             "Eso describe a un elemento, que es una sustancia pura y no una mezcla."),
+            ("Sus componentes se distinguen a simple vista",
+             "Esa es la característica de una mezcla heterogénea."),
+            ("Sus componentes están unidos químicamente en una proporción fija y definida",
+             "Eso corresponde a un compuesto, no a una mezcla."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Cuál de las siguientes es una mezcla heterogénea?",
+        "Agua con arena",
+        "En una mezcla heterogénea las fases se distinguen.\n\n"
+        "1) La arena no se disuelve: queda como partículas separadas dentro del "
+        "agua.\n"
+        "2) Se pueden ver dos fases distintas, y una porción tomada del fondo no "
+        "es igual a una tomada de la superficie.\n"
+        "3) Por eso basta un método físico simple, como la filtración, para "
+        "separarlas.\n\n"
+        "El agua con sal, en cambio, es homogénea: la sal se disuelve y no se "
+        "distingue del agua.",
+        [
+            ("Agua con sal disuelta",
+             "La sal disuelta forma una mezcla homogénea: no se distinguen fases."),
+            ("Aire limpio",
+             "El aire es una mezcla homogénea de gases."),
+            ("Agua destilada, que se obtiene condensando el vapor de agua hervida en un montaje cerrado",
+             "El agua destilada es una sustancia pura, no una mezcla."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué método se usa para separar un sólido insoluble de un líquido?",
+        "La filtración",
+        "El método se elige según la propiedad que diferencia a los "
+        "componentes.\n\n"
+        "1) La filtración hace pasar la mezcla por un material poroso que "
+        "retiene las partículas sólidas.\n"
+        "2) El líquido atraviesa el filtro y se recoge limpio del sólido "
+        "insoluble.\n"
+        "3) Funciona porque el sólido no está disuelto: si lo estuviera, "
+        "pasaría junto con el líquido.\n\n"
+        "Es el mismo principio del filtro de café y de los filtros usados en "
+        "plantas de tratamiento de agua.",
+        [
+            ("La destilación",
+             "La destilación separa líquidos con distinta temperatura de ebullición."),
+            ("El tamizado",
+             "El tamizado separa sólidos de distinto tamaño de partícula entre sí."),
+            ("La decantación por gravedad, que separa dos líquidos que no se mezclan entre sí",
+             "Esa aplicación de la decantación corresponde a líquidos inmiscibles, no a un sólido insoluble."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué método permite separar agua y aceite?",
+        "La decantación",
+        "La separación aprovecha que ambos líquidos no se mezclan.\n\n"
+        "1) El agua y el aceite son inmiscibles y forman dos capas, con el "
+        "aceite arriba por ser menos denso.\n"
+        "2) Al dejar la mezcla en reposo, las capas quedan bien definidas.\n"
+        "3) La decantación consiste en dejar salir la capa inferior y "
+        "recuperar cada líquido por separado.\n\n"
+        "El mismo procedimiento se usa para separar un sólido sedimentado del "
+        "líquido que lo cubre.",
+        [
+            ("La filtración",
+             "El filtro deja pasar ambos líquidos: no los separa."),
+            ("El tamizado",
+             "El tamizado se aplica a sólidos de distinto tamaño, no a líquidos."),
+            ("La destilación, calentando la mezcla hasta que uno de los dos líquidos alcance su ebullición",
+             "Es posible en principio, pero el método directo para líquidos inmiscibles es la decantación."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿En qué consiste el tamizado?",
+        "Separar sólidos según el tamaño de sus partículas",
+        "El método usa una propiedad física del sólido.\n\n"
+        "1) La mezcla se hace pasar por una malla con aberturas de un tamaño "
+        "determinado.\n"
+        "2) Las partículas más pequeñas atraviesan la malla y las más grandes "
+        "quedan retenidas.\n"
+        "3) Se aplica a mezclas de sólidos, como la arena y la grava.\n\n"
+        "Se usa a diario en la construcción, para clasificar áridos, y en la "
+        "cocina al cernir harina.",
+        [
+            ("Separar un sólido disuelto en un líquido",
+             "Un sólido disuelto atraviesa cualquier malla: se recupera por evaporación."),
+            ("Separar dos líquidos de distinta densidad",
+             "Para líquidos que no se mezclan se usa la decantación."),
+            ("Separar los componentes de una mezcla calentándola hasta que uno de ellos se evapore",
+             "Eso describe la evaporación o la destilación, no el tamizado."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué es la densidad de un material?",
+        "La masa que tiene por unidad de volumen",
+        "La densidad relaciona dos magnitudes que se miden por separado.\n\n"
+        "1) Se calcula dividiendo la masa de la muestra por el volumen que "
+        "ocupa.\n"
+        "2) Se expresa en unidades como gramos por centímetro cúbico o "
+        "kilogramos por metro cúbico.\n"
+        "3) Es característica de cada material a una temperatura dada, y por "
+        "eso sirve para identificarlo.\n\n"
+        "No depende del tamaño de la muestra: un gramo y un kilogramo del mismo "
+        "material tienen la misma densidad.",
+        [
+            ("El peso total de un cuerpo",
+             "El peso depende del tamaño del cuerpo; la densidad, no."),
+            ("El volumen que ocupa una sustancia",
+             "El volumen es uno de los datos del cálculo, no la densidad misma."),
+            ("La temperatura a la que una sustancia pasa del estado sólido al estado líquido",
+             "Esa es la temperatura de fusión, otra propiedad física."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Qué indica la temperatura de ebullición de una sustancia?",
+        "A qué temperatura pasa de líquido a gas",
+        "Es una de las propiedades físicas que caracterizan a una "
+        "sustancia.\n\n"
+        "1) Al calentar un líquido, su temperatura sube hasta alcanzar ese "
+        "valor.\n"
+        "2) Ahí comienza a hervir y la temperatura se mantiene constante "
+        "mientras dura el cambio de estado.\n"
+        "3) Cada sustancia pura tiene su propio valor a una presión dada: el "
+        "agua hierve a 100 °C a nivel del mar.\n\n"
+        "Que ese valor sea fijo es lo que permite usarlo para identificar "
+        "sustancias y para separarlas por destilación.",
+        [
+            ("A qué temperatura pasa de sólido a líquido",
+             "Esa es la temperatura de fusión."),
+            ("Cuánta masa tiene por unidad de volumen",
+             "Esa es la densidad."),
+            ("La cantidad de calor que la sustancia necesita para elevar su temperatura en un grado",
+             "Esa magnitud es el calor específico, distinto de la temperatura de ebullición."),
+        ],
+    ),
+    _q(
+        "cie_materia", "facil",
+        "¿Cuál de las siguientes es una sustancia pura?",
+        "El agua destilada",
+        "La clasificación depende de si hay una o varias sustancias.\n\n"
+        "1) El agua destilada se obtiene condensando vapor de agua, con lo que "
+        "quedan atrás las sales y demás componentes disueltos.\n"
+        "2) El resultado es una sola sustancia, con composición y propiedades "
+        "fijas.\n"
+        "3) El agua de mar, el aire y el bronce son mezclas: contienen varias "
+        "sustancias en proporciones que pueden variar.\n\n"
+        "El agua es un compuesto, o sea una sustancia pura formada por dos "
+        "elementos combinados.",
+        [
+            ("El agua de mar",
+             "Contiene sales disueltas en proporciones variables: es una mezcla."),
+            ("El aire",
+             "Es una mezcla de nitrógeno, oxígeno y otros gases."),
+            ("El bronce, que es una aleación obtenida al fundir juntos cobre y estaño en distintas proporciones",
+             "Las aleaciones son mezclas homogéneas, no sustancias puras."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué las mezclas se separan por métodos físicos y los compuestos "
+        "no?",
+        "Porque en la mezcla no hay enlaces entre componentes",
+        "La diferencia está en cómo se mantienen unidos los componentes.\n\n"
+        "1) En una mezcla, cada sustancia conserva su identidad y sus "
+        "propiedades: no hay unión química entre ellas.\n"
+        "2) Por eso basta aprovechar una diferencia de propiedades, como el "
+        "tamaño, la densidad o el punto de ebullición, para separarlas.\n"
+        "3) En un compuesto los átomos están unidos por enlaces químicos, y "
+        "romperlos exige una reacción química.\n\n"
+        "Esa es la razón de que se pueda destilar agua de mar, pero no separar "
+        "el agua en hidrógeno y oxígeno hirviéndola.",
+        [
+            ("Porque las mezclas siempre son líquidas",
+             "Hay mezclas sólidas, líquidas y gaseosas."),
+            ("Porque los compuestos no pueden separarse de ninguna manera",
+             "Sí pueden, mediante reacciones químicas."),
+            ("Porque en las mezclas los componentes están presentes en cantidades demasiado pequeñas para reaccionar",
+             "La cantidad no es el criterio: lo determinante es que no hay enlace químico entre ellos."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿En qué propiedad se basa la destilación para separar dos líquidos?",
+        "En su distinta temperatura de ebullición",
+        "El método aprovecha que cada líquido hierve a su propia "
+        "temperatura.\n\n"
+        "1) Al calentar la mezcla, el líquido de menor temperatura de "
+        "ebullición pasa a estado gaseoso primero.\n"
+        "2) Ese vapor se conduce hasta un condensador, donde vuelve a estado "
+        "líquido y se recoge por separado.\n"
+        "3) El líquido de mayor temperatura de ebullición permanece en el "
+        "matraz.\n\n"
+        "Es el principio con que se separan los componentes del petróleo y con "
+        "que se obtiene agua destilada.",
+        [
+            ("En su distinta densidad",
+             "La diferencia de densidad es lo que aprovecha la decantación."),
+            ("En el tamaño de sus partículas",
+             "El tamaño de partícula es la base del tamizado, aplicable a sólidos."),
+            ("En la capacidad de uno de ellos para disolver al otro por completo en cualquier proporción",
+             "Que sean miscibles es justamente el problema a resolver, no la propiedad que se aprovecha."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Cómo se clasifica el aire limpio?",
+        "Como una mezcla homogénea de gases",
+        "La clasificación se decide por composición y uniformidad.\n\n"
+        "1) El aire contiene nitrógeno, oxígeno, argón, dióxido de carbono y "
+        "otros gases, en proporciones que pueden variar.\n"
+        "2) Esos gases están mezclados de manera uniforme y no se distinguen "
+        "entre sí.\n"
+        "3) Como no están unidos químicamente, pueden separarse por métodos "
+        "físicos, como la destilación del aire licuado.\n\n"
+        "Precisamente así se obtienen el oxígeno y el nitrógeno de uso "
+        "industrial.",
+        [
+            ("Como una sustancia pura",
+             "Contiene varias sustancias distintas, en proporciones variables."),
+            ("Como un compuesto",
+             "Sus gases no están unidos químicamente ni en proporción fija."),
+            ("Como una mezcla heterogénea, porque sus gases tienen densidades distintas entre sí",
+             "Pese a esa diferencia, el aire se presenta uniforme: es una mezcla homogénea."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "El bronce se obtiene fundiendo cobre y estaño. ¿Cómo se clasifica?",
+        "Como una mezcla homogénea",
+        "Las aleaciones son un caso clásico de mezcla que parece sustancia "
+        "pura.\n\n"
+        "1) El resultado es uniforme a la vista y sus componentes no se "
+        "distinguen.\n"
+        "2) Pero la proporción de cobre y estaño puede variar, y con ella "
+        "varían la dureza y el punto de fusión del material.\n"
+        "3) Esa proporción variable es lo que descarta que sea un compuesto.\n\n"
+        "Las aleaciones se diseñan justamente ajustando esas proporciones para "
+        "obtener las propiedades que se buscan.",
+        [
+            ("Como un compuesto",
+             "Un compuesto tendría proporción fija; en el bronce la proporción se ajusta."),
+            ("Como un elemento",
+             "Contiene dos elementos distintos, así que no puede ser uno solo."),
+            ("Como una mezcla heterogénea, porque el cobre y el estaño se distinguen dentro del material",
+             "El material se presenta uniforme: no se distinguen fases separadas."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Qué diferencia hay entre el agua y una mezcla de hidrógeno y oxígeno "
+        "gaseosos?",
+        "En el agua los elementos están unidos químicamente",
+        "Los mismos elementos pueden formar un compuesto o una mezcla.\n\n"
+        "1) En la mezcla de gases, cada uno conserva sus propiedades y pueden "
+        "estar en cualquier proporción.\n"
+        "2) En el agua, los átomos están unidos por enlaces y siempre en la "
+        "misma proporción, que la fórmula expresa.\n"
+        "3) Las propiedades del agua no se parecen a las de ninguno de los dos "
+        "gases que la componen.\n\n"
+        "Separar la mezcla es un procedimiento físico; separar el agua exige "
+        "una reacción química, como la electrólisis.",
+        [
+            ("No hay ninguna diferencia",
+             "Una es un compuesto y la otra una mezcla: se comportan de manera muy distinta."),
+            ("La mezcla tiene proporción fija y el agua no",
+             "Invierte los términos: la proporción fija es propia del compuesto."),
+            ("El agua contiene un elemento adicional que no está presente en la mezcla de esos dos gases",
+             "El agua contiene exactamente esos dos elementos, pero combinados químicamente."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Para obtener sal a partir de agua de mar, ¿qué procedimiento "
+        "corresponde?",
+        "Evaporar el agua y recoger el sólido",
+        "La sal está disuelta, así que ningún filtro la retiene.\n\n"
+        "1) Una sal disuelta atraviesa cualquier filtro junto con el agua: la "
+        "filtración no sirve.\n"
+        "2) Al evaporar el agua, la sal queda en el recipiente porque no se "
+        "evapora a esa temperatura.\n"
+        "3) Es lo que se hace en las salinas, aprovechando el sol y el "
+        "viento.\n\n"
+        "Si además interesa recuperar el agua, se usa destilación: se condensa "
+        "el vapor en lugar de dejarlo escapar.",
+        [
+            ("Filtrar la mezcla",
+             "El filtro no retiene una sustancia disuelta."),
+            ("Decantar la mezcla",
+             "La decantación separa fases distintas, y aquí la sal está disuelta."),
+            ("Tamizar el agua de mar con una malla de aberturas muy pequeñas para retener la sal",
+             "Ninguna malla retiene partículas disueltas a escala de iones."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "En una planta de tratamiento de agua, ¿para qué se deja reposar el "
+        "agua en grandes estanques antes de filtrarla?",
+        "Para que los sólidos sedimenten y se decanten",
+        "El orden de los métodos responde a la eficiencia del proceso.\n\n"
+        "1) En reposo, las partículas más densas se depositan en el fondo por "
+        "acción de la gravedad.\n"
+        "2) El agua de la parte superior se retira con mucha menos carga de "
+        "sólidos.\n"
+        "3) La filtración posterior retiene las partículas finas que quedaron, "
+        "y así los filtros se saturan mucho más lento.\n\n"
+        "Decantar primero y filtrar después es un ejemplo de cómo se combinan "
+        "métodos de separación en un mismo proceso.",
+        [
+            ("Para que el agua se enfríe antes de filtrarla",
+             "El objetivo del reposo es la sedimentación, no la temperatura."),
+            ("Para que las sales disueltas se evaporen",
+             "Las sales disueltas no se evaporan: el agua sí."),
+            ("Para que el agua se separe en dos capas de distinta densidad que luego se recogen aparte",
+             "El agua no forma capas consigo misma: lo que sedimenta son las partículas sólidas."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué la densidad sirve para identificar un material?",
+        "Porque es característica de cada sustancia",
+        "Una propiedad identificatoria no debe depender de la muestra.\n\n"
+        "1) La densidad de una sustancia pura tiene un valor fijo a una "
+        "temperatura y presión dadas.\n"
+        "2) Ese valor no cambia con el tamaño de la muestra: es el mismo para "
+        "un gramo que para un kilogramo.\n"
+        "3) Por eso, midiendo masa y volumen se puede comparar el resultado con "
+        "valores tabulados e identificar el material.\n\n"
+        "Las propiedades que sí dependen de la cantidad, como la masa o el "
+        "volumen, no sirven para ese propósito.",
+        [
+            ("Porque aumenta con el tamaño de la muestra",
+             "Si aumentara con el tamaño no serviría para identificar nada."),
+            ("Porque es igual para todos los materiales",
+             "Justamente lo contrario: varía de un material a otro."),
+            ("Porque cambia según la forma que tenga el objeto del cual se toma la muestra analizada",
+             "La densidad no depende de la forma del objeto."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Un objeto tiene una masa de 240 g y ocupa un volumen de 30 cm³. ¿Cuál "
+        "es su densidad?",
+        "8 g/cm³",
+        "La densidad se obtiene dividiendo masa por volumen.\n\n"
+        "1) La definición es masa dividida por volumen.\n"
+        "2) Reemplazando: 240 g divididos por 30 cm³.\n"
+        "3) El resultado es 8 g/cm³, un valor cercano al del hierro.\n\n"
+        "El resultado no depende del tamaño de la muestra: otro trozo del mismo "
+        "material daría la misma densidad.",
+        [
+            ("0,125 g/cm³",
+             "Invierte la división: corresponde a volumen dividido por masa."),
+            ("270 g/cm³",
+             "Suma ambas cantidades en lugar de dividirlas."),
+            ("7.200 g/cm³, que resulta de multiplicar la masa por el volumen del objeto",
+             "La densidad es un cociente, no un producto."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué el aceite flota sobre el agua?",
+        "Porque su densidad es menor",
+        "La flotación de un líquido sobre otro depende de sus densidades.\n\n"
+        "1) El aceite y el agua son inmiscibles, así que forman dos capas "
+        "separadas.\n"
+        "2) El aceite tiene menor masa por unidad de volumen que el agua.\n"
+        "3) Por eso se ubica arriba, y esa diferencia es la que aprovecha la "
+        "decantación.\n\n"
+        "Si el líquido más denso fuera el de arriba, la disposición se "
+        "invertiría al dejar la mezcla en reposo.",
+        [
+            ("Porque su masa es menor",
+             "Un litro de aceite tiene más masa que una gota de agua: lo que decide es la densidad."),
+            ("Porque es una sustancia pura",
+             "El aceite es una mezcla, y en todo caso la pureza no determina la flotación."),
+            ("Porque el agua lo empuja hacia arriba al disolverlo parcialmente en su superficie",
+             "El aceite no se disuelve en agua: son líquidos inmiscibles."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Al calentar una sustancia pura, su temperatura sube y luego se "
+        "mantiene constante un rato. ¿Qué ocurre en ese tramo?",
+        "Está ocurriendo un cambio de estado",
+        "La meseta de la curva de calentamiento tiene un significado "
+        "preciso.\n\n"
+        "1) Mientras la sustancia cambia de estado, todo el calor que recibe se "
+        "usa en ese cambio y no en aumentar la temperatura.\n"
+        "2) Por eso el termómetro marca un valor constante aunque se siga "
+        "entregando calor.\n"
+        "3) Cuando todo el material completó el cambio, la temperatura vuelve a "
+        "subir.\n\n"
+        "En una sustancia pura ese tramo es plano y ocurre a una temperatura "
+        "definida; en una mezcla, el cambio se reparte en un intervalo.",
+        [
+            ("La sustancia dejó de recibir calor",
+             "Sigue recibiendo calor: se usa en el cambio de estado."),
+            ("La sustancia se está enfriando",
+             "La temperatura se mantiene constante, no desciende."),
+            ("La sustancia se está descomponiendo en los elementos que la forman por acción del calor",
+             "Un cambio de estado no descompone la sustancia: su composición no cambia."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Qué diferencia hay entre una propiedad intensiva y una extensiva?",
+        "La intensiva no depende de la cantidad de materia",
+        "La distinción organiza las propiedades según su utilidad.\n\n"
+        "1) La masa y el volumen son extensivas: cambian si se toma más o menos "
+        "muestra.\n"
+        "2) La densidad, el punto de fusión y el punto de ebullición son "
+        "intensivas: valen lo mismo para cualquier cantidad.\n"
+        "3) Por eso las intensivas sirven para identificar sustancias y las "
+        "extensivas, para describir una muestra concreta.\n\n"
+        "Una propiedad intensiva puede obtenerse dividiendo dos extensivas, "
+        "como ocurre con la densidad.",
+        [
+            ("La intensiva se mide con instrumentos y la extensiva no",
+             "Ambas se miden; la diferencia es si dependen de la cantidad de materia."),
+            ("La extensiva es siempre más precisa",
+             "La precisión depende del instrumento, no del tipo de propiedad."),
+            ("La intensiva solo puede determinarse en sustancias puras y la extensiva, solo en mezclas",
+             "Ambas se pueden determinar tanto en sustancias puras como en mezclas."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Cómo se determina el volumen de un objeto sólido de forma irregular?",
+        "Midiendo el agua que desplaza al sumergirlo",
+        "El método convierte un problema geométrico en una medición "
+        "directa.\n\n"
+        "1) Se registra el volumen de agua en una probeta antes de introducir "
+        "el objeto.\n"
+        "2) Se sumerge el objeto por completo y se vuelve a leer el volumen.\n"
+        "3) La diferencia entre ambas lecturas es el volumen del objeto, porque "
+        "el agua desplazada ocupa exactamente ese espacio.\n\n"
+        "El método exige que el objeto no flote ni se disuelva en el líquido "
+        "usado.",
+        [
+            ("Calculando el producto de sus tres dimensiones",
+             "Ese cálculo sirve para cuerpos regulares, no para formas irregulares."),
+            ("Pesándolo en una balanza",
+             "La balanza entrega la masa, no el volumen."),
+            ("Midiendo su densidad con un instrumento y comparándola con la de una sustancia conocida",
+             "La densidad se obtiene a partir del volumen: sería un razonamiento circular."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué el agua hierve a menos de 100 °C en la cordillera?",
+        "Porque allí la presión atmosférica es menor",
+        "La temperatura de ebullición depende de la presión externa.\n\n"
+        "1) Un líquido hierve cuando la presión de su vapor iguala a la presión "
+        "que ejerce la atmósfera sobre él.\n"
+        "2) En altura la presión atmosférica es menor, así que esa igualdad se "
+        "alcanza a menor temperatura.\n"
+        "3) Por eso el agua puede hervir a 90 °C o menos en la alta montaña.\n\n"
+        "Como el agua hierve más fría, los alimentos tardan más en cocerse, y "
+        "de ahí la utilidad de las ollas a presión.",
+        [
+            ("Porque el agua de la cordillera es más pura",
+             "La pureza puede alterar levemente el valor, pero el factor determinante es la presión."),
+            ("Porque hace más frío",
+             "La temperatura ambiente no cambia el punto de ebullición del agua."),
+            ("Porque el agua en altura contiene menos oxígeno disuelto que el agua a nivel del mar",
+             "Los gases disueltos no explican el cambio del punto de ebullición."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Una mezcla contiene arena, sal y agua. ¿En qué orden conviene separar "
+        "sus componentes?",
+        "Filtrar primero y luego evaporar el agua",
+        "El orden se decide por el estado en que está cada componente.\n\n"
+        "1) La arena no está disuelta, así que un filtro la retiene y deja "
+        "pasar el agua con la sal.\n"
+        "2) Del líquido filtrado se evapora el agua y la sal queda como "
+        "residuo sólido.\n"
+        "3) Si se evaporara primero, la sal y la arena quedarían mezcladas y "
+        "habría que separarlas después.\n\n"
+        "Elegir el orden correcto es parte del diseño de un procedimiento de "
+        "separación.",
+        [
+            ("Evaporar primero y luego filtrar",
+             "Al evaporar primero quedan mezclados los dos sólidos."),
+            ("Destilar primero y luego tamizar",
+             "El tamizado no separa sal de arena de manera confiable, y la destilación es innecesaria."),
+            ("Decantar primero para separar la sal y filtrar después para recuperar el agua limpia",
+             "La decantación no separa una sal disuelta: esta acompaña al agua."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Qué informa la fórmula de una sustancia como el dióxido de carbono?",
+        "Qué elementos la forman y en qué proporción",
+        "La fórmula es una descripción cuantitativa del compuesto.\n\n"
+        "1) Los símbolos indican qué elementos están presentes: carbono y "
+        "oxígeno.\n"
+        "2) Los subíndices indican cuántos átomos de cada uno hay en la unidad "
+        "de ese compuesto.\n"
+        "3) Esa proporción es fija y es lo que distingue a un compuesto de una "
+        "mezcla.\n\n"
+        "Por eso escribir la fórmula equivale a declarar la composición del "
+        "compuesto, y no solo a darle un nombre corto.",
+        [
+            ("La masa total de la muestra",
+             "La fórmula no informa cuánta sustancia hay, solo su composición."),
+            ("El estado físico en que se encuentra",
+             "El estado depende de la temperatura y la presión, y no aparece en la fórmula."),
+            ("El orden en que los elementos fueron descubiertos por los químicos que los estudiaron",
+             "La fórmula describe composición, no historia."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué el punto de fusión sirve como criterio de pureza de una "
+        "sustancia?",
+        "Porque una sustancia pura funde a temperatura fija",
+        "El comportamiento en el cambio de estado delata la presencia de "
+        "impurezas.\n\n"
+        "1) Una sustancia pura funde a una temperatura definida y bien "
+        "reproducible.\n"
+        "2) La presencia de otra sustancia hace que la fusión ocurra en un "
+        "intervalo y a una temperatura menor.\n"
+        "3) Comparar el valor medido con el tabulado permite entonces evaluar "
+        "la pureza de la muestra.\n\n"
+        "Es una comprobación rápida y de uso habitual en el laboratorio.",
+        [
+            ("Porque todas las sustancias funden a la misma temperatura",
+             "Cada sustancia tiene su propio punto de fusión."),
+            ("Porque las sustancias puras no funden",
+             "Sí funden, y lo hacen a una temperatura característica."),
+            ("Porque el punto de fusión de una sustancia aumenta en proporción a la cantidad de muestra usada",
+             "El punto de fusión no depende de la cantidad: es una propiedad intensiva."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué disolver sal en agua se considera un cambio físico?",
+        "Porque no se forma ninguna sustancia nueva",
+        "El criterio es si cambia o no la identidad de las sustancias.\n\n"
+        "1) Al disolverse, la sal se dispersa entre las moléculas de agua, pero "
+        "sigue siendo sal.\n"
+        "2) Evaporando el agua se recupera la misma sal, con las mismas "
+        "propiedades.\n"
+        "3) En un cambio químico, en cambio, desaparecen sustancias y aparecen "
+        "otras distintas, y el proceso no se revierte por medios físicos.\n\n"
+        "Por eso una disolución es una mezcla y no un compuesto nuevo.",
+        [
+            ("Porque la sal desaparece",
+             "No desaparece: sigue presente y se recupera al evaporar el agua."),
+            ("Porque el agua cambia de estado",
+             "El agua permanece líquida durante la disolución."),
+            ("Porque la sal se transforma en una sustancia distinta que luego vuelve a su forma original",
+             "No hay transformación: la sal conserva su identidad todo el tiempo."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Qué distingue a un cambio químico de un cambio físico?",
+        "En el químico se forman sustancias nuevas",
+        "La distinción se basa en qué le ocurre a la identidad de la "
+        "materia.\n\n"
+        "1) En un cambio físico varían la forma, el estado o la disposición, "
+        "pero las sustancias siguen siendo las mismas.\n"
+        "2) En un cambio químico se rompen y forman enlaces, y aparecen "
+        "sustancias con propiedades distintas.\n"
+        "3) Señales como un gas que se desprende, un sólido que precipita o un "
+        "cambio de color persistente sugieren un cambio químico.\n\n"
+        "Fundir hielo es físico; quemar madera es químico, y por eso la ceniza "
+        "no se convierte de vuelta en madera al enfriarse.",
+        [
+            ("En el físico se forman sustancias nuevas",
+             "Invierte los términos: las sustancias nuevas aparecen en el cambio químico."),
+            ("El químico siempre libera calor",
+             "Hay reacciones que absorben calor y siguen siendo cambios químicos."),
+            ("El cambio físico solo puede ocurrir en sustancias puras y el químico, solo en mezclas",
+             "Ambos tipos de cambio ocurren tanto en sustancias puras como en mezclas."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿En qué se basa la destilación fraccionada del petróleo?",
+        "En que cada fracción hierve a distinta temperatura",
+        "El petróleo es una mezcla de muchos componentes con puntos de "
+        "ebullición distintos.\n\n"
+        "1) Al calentarlo, los componentes más livianos pasan a vapor primero y "
+        "ascienden por la torre.\n"
+        "2) A distintas alturas la temperatura es menor, y cada fracción se "
+        "condensa donde corresponde a su punto de ebullición.\n"
+        "3) Así se recogen por separado gases, gasolina, kerosene, diésel y "
+        "residuos más pesados.\n\n"
+        "Es una destilación en varias etapas simultáneas, adaptada a una mezcla "
+        "de muchos componentes.",
+        [
+            ("En la diferencia de color de cada fracción",
+             "El color no interviene en la separación."),
+            ("En el tamaño de las partículas de cada fracción",
+             "El tamaño de partícula es la base del tamizado, aplicable a sólidos."),
+            ("En que cada fracción reacciona químicamente con un reactivo distinto dentro de la torre",
+             "La destilación es un método físico: no hay reacción química que separe las fracciones."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Una planta desaladora obtiene agua potable a partir de agua de mar. "
+        "¿Qué tipo de proceso realiza?",
+        "Una separación física de una mezcla",
+        "El agua de mar es una mezcla y no un compuesto.\n\n"
+        "1) Contiene agua y sales disueltas, sin unión química entre ellas.\n"
+        "2) Separarlas exige aprovechar una diferencia de propiedades: la sal "
+        "no se evapora a la temperatura a la que el agua sí lo hace.\n"
+        "3) La destilación, o una membrana que deja pasar el agua y retiene las "
+        "sales, cumple esa función.\n\n"
+        "No hay reacción química: al final se tienen las mismas sustancias, "
+        "separadas.",
+        [
+            ("Una reacción química que descompone la sal",
+             "La sal no se descompone: se separa del agua."),
+            ("Una transformación del agua salada en agua pura",
+             "El agua ya estaba presente; lo que se hace es retirar lo demás."),
+            ("Una mezcla de dos procesos químicos que convierten las sales disueltas en agua potable",
+             "Las sales no se convierten en agua: se separan de ella."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Un material tiene una densidad de 2,5 g/cm³. ¿Qué masa tiene una "
+        "muestra de 40 cm³?",
+        "100 g",
+        "La relación entre las tres magnitudes permite despejar cualquiera de "
+        "ellas.\n\n"
+        "1) La densidad es masa dividida por volumen, así que la masa es "
+        "densidad multiplicada por volumen.\n"
+        "2) Reemplazando: 2,5 g/cm³ multiplicado por 40 cm³.\n"
+        "3) El resultado es 100 g.\n\n"
+        "Conviene revisar las unidades: al multiplicar g/cm³ por cm³ quedan "
+        "gramos, que es lo que se pedía.",
+        [
+            ("16 g",
+             "Divide el volumen por la densidad en vez de multiplicarlos."),
+            ("42,5 g",
+             "Suma ambos valores, que además tienen unidades distintas."),
+            ("0,0625 g, que resulta de dividir la densidad por el volumen de la muestra analizada",
+             "Ese cociente no corresponde a ninguna de las tres magnitudes en juego."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué el hielo flota en el agua líquida?",
+        "Porque el hielo es menos denso que el agua",
+        "El agua es una excepción entre las sustancias comunes.\n\n"
+        "1) En la mayoría de las sustancias, el sólido es más denso que el "
+        "líquido y se hunde.\n"
+        "2) Al congelarse, las moléculas de agua se ordenan en una estructura "
+        "más abierta, que ocupa más volumen para la misma masa.\n"
+        "3) Al ser menos denso, el hielo flota.\n\n"
+        "Esa anomalía tiene consecuencias ecológicas: los lagos se congelan "
+        "desde la superficie y conservan agua líquida debajo.",
+        [
+            ("Porque el hielo pesa menos",
+             "Un iceberg pesa muchísimo más que un vaso de agua: lo que decide es la densidad."),
+            ("Porque el hielo es una sustancia distinta del agua",
+             "Es la misma sustancia en estado sólido."),
+            ("Porque el aire atrapado en su interior es lo único que le permite mantenerse en la superficie",
+             "El hielo puro flota igual: la causa es su menor densidad."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "El oxígeno del aire existe como moléculas de dos átomos. ¿Sigue siendo "
+        "un elemento?",
+        "Sí, porque todos sus átomos son iguales",
+        "Que haya moléculas no implica que haya compuesto.\n\n"
+        "1) Un elemento se define por estar formado por un solo tipo de "
+        "átomo.\n"
+        "2) En la molécula de oxígeno los dos átomos son del mismo elemento, "
+        "así que la sustancia sigue siendo un elemento.\n"
+        "3) Un compuesto exige átomos de elementos distintos unidos "
+        "químicamente.\n\n"
+        "Lo mismo ocurre con el nitrógeno, el hidrógeno y el cloro, que en "
+        "condiciones normales existen como moléculas de dos átomos.",
+        [
+            ("No, porque tiene dos átomos",
+             "El número de átomos no define la clasificación: lo hace si son o no del mismo elemento."),
+            ("No, porque forma moléculas",
+             "Un elemento puede presentarse como átomos aislados o como moléculas."),
+            ("Sí, pero solo mientras se encuentre en estado gaseoso dentro de la atmósfera terrestre",
+             "La clasificación no depende del estado físico ni del lugar donde se encuentre."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué el agua con azúcar se ve uniforme aunque contenga dos "
+        "sustancias?",
+        "Porque el azúcar se dispersa en partículas muy pequeñas",
+        "La uniformidad depende del tamaño de lo disperso.\n\n"
+        "1) Al disolverse, el azúcar se separa en partículas de tamaño "
+        "molecular, repartidas entre las moléculas de agua.\n"
+        "2) A esa escala no forman fases visibles ni dispersan la luz, así que "
+        "la mezcla se ve transparente y uniforme.\n"
+        "3) Si el azúcar quedara en granos, se distinguiría y la mezcla sería "
+        "heterogénea.\n\n"
+        "Por eso una disolución es el caso típico de mezcla homogénea, aunque "
+        "contenga dos o más sustancias.",
+        [
+            ("Porque el azúcar se transforma en agua",
+             "El azúcar conserva su identidad: se recupera al evaporar el agua."),
+            ("Porque el azúcar reacciona con el agua",
+             "No hay reacción: la disolución es un cambio físico."),
+            ("Porque el azúcar se deposita en el fondo del recipiente y deja de verse en la mezcla",
+             "Si se depositara, la mezcla sería heterogénea; en una disolución permanece dispersa."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "La leche parece uniforme a simple vista, pero al microscopio se ven "
+        "gotas de grasa dispersas. ¿Cómo se clasifica?",
+        "Como una mezcla heterogénea",
+        "La clasificación depende de si existen o no fases distintas.\n\n"
+        "1) A simple vista la leche se ve pareja, lo que podría sugerir una "
+        "mezcla homogénea.\n"
+        "2) Al microscopio se distinguen gotas de grasa suspendidas en una fase "
+        "acuosa: hay dos fases.\n"
+        "3) Por eso se clasifica como heterogénea, aunque las fases no se "
+        "distingan a simple vista.\n\n"
+        "Que la grasa se separe al reposar, formando nata, confirma esa "
+        "clasificación.",
+        [
+            ("Como una sustancia pura",
+             "Contiene agua, grasas, proteínas y azúcares: no es una sola sustancia."),
+            ("Como un compuesto",
+             "Sus componentes no están unidos químicamente ni en proporción fija."),
+            ("Como una mezcla homogénea, porque a simple vista no se distinguen sus componentes",
+             "La observación al microscopio muestra fases distintas, y ese es el criterio."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Cómo cambia el punto de congelación del agua al disolverle sal?",
+        "Baja por debajo de cero grados",
+        "Las propiedades de una mezcla dependen de su composición.\n\n"
+        "1) El agua pura se congela a 0 °C a presión normal.\n"
+        "2) La presencia de sal disuelta interfiere con la formación de la "
+        "estructura del hielo y obliga a bajar más la temperatura.\n"
+        "3) Mientras más sal, menor es la temperatura de congelación.\n\n"
+        "Por eso se echa sal en las carreteras con hielo, y por eso el agua de "
+        "mar se congela a temperatura menor que el agua dulce.",
+        [
+            ("Sube por encima de cero grados",
+             "Ocurre lo contrario: la presencia de soluto baja el punto de congelación."),
+            ("No cambia",
+             "Una sustancia pura y una disolución no se congelan a la misma temperatura."),
+            ("Se mantiene en cero grados, pero el proceso demora más tiempo en completarse por la sal",
+             "No es solo cuestión de tiempo: la temperatura a la que congela efectivamente baja."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Cuándo conviene usar destilación en lugar de filtración?",
+        "Cuando lo que se quiere separar está disuelto",
+        "La elección del método depende del estado en que está el "
+        "componente.\n\n"
+        "1) La filtración retiene partículas sólidas que no están disueltas.\n"
+        "2) Una sustancia disuelta atraviesa cualquier filtro junto con el "
+        "líquido.\n"
+        "3) La destilación aprovecha la diferencia de temperatura de "
+        "ebullición, que sí distingue a componentes disueltos.\n\n"
+        "Por eso el agua con arena se filtra y el agua con sal se destila.",
+        [
+            ("Cuando la mezcla tiene un sólido en suspensión",
+             "Para un sólido en suspensión basta la filtración, que es mucho más simple."),
+            ("Cuando la mezcla es heterogénea",
+             "Las mezclas heterogéneas suelen separarse por filtración o decantación."),
+            ("Cuando se quiere separar dos sólidos de distinto tamaño de partícula entre sí",
+             "Ese caso corresponde al tamizado."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Qué representa el símbolo de un elemento, como Fe o Na?",
+        "Una abreviatura internacional del elemento",
+        "Los símbolos permiten escribir composiciones sin ambigüedad.\n\n"
+        "1) Cada elemento tiene un símbolo de una o dos letras, con la primera "
+        "en mayúscula.\n"
+        "2) Varios provienen de nombres en latín: Fe de ferrum y Na de "
+        "natrium.\n"
+        "3) Son los mismos en todos los idiomas, lo que permite que una fórmula "
+        "se entienda en cualquier país.\n\n"
+        "Con esos símbolos y los subíndices se escriben las fórmulas de los "
+        "compuestos.",
+        [
+            ("La masa del elemento",
+             "La masa aparece en la tabla periódica, pero no es lo que representa el símbolo."),
+            ("El estado físico del elemento",
+             "El estado depende de las condiciones y no está contenido en el símbolo."),
+            ("El número de átomos que ese elemento aporta a cada compuesto en que participa",
+             "Esa información la dan los subíndices de la fórmula, no el símbolo."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "Se calienta una mezcla de dos líquidos y su temperatura sube sin "
+        "detenerse en un valor fijo. ¿Qué indica ese comportamiento?",
+        "Que la muestra no es una sustancia pura",
+        "La forma de la curva distingue una sustancia de una mezcla.\n\n"
+        "1) Una sustancia pura hierve a temperatura constante mientras dura el "
+        "cambio de estado.\n"
+        "2) En una mezcla, los componentes hierven a temperaturas distintas y "
+        "la composición del líquido va cambiando.\n"
+        "3) Por eso la temperatura sube de manera continua en lugar de "
+        "estabilizarse.\n\n"
+        "Ese comportamiento es la base para reconocer mezclas y también para "
+        "controlar una destilación.",
+        [
+            ("Que la muestra es un elemento",
+             "Un elemento es una sustancia pura y sí mostraría temperatura constante."),
+            ("Que el termómetro está mal calibrado",
+             "Un error de calibración desplazaría los valores, pero no eliminaría la meseta."),
+            ("Que la muestra se está descomponiendo químicamente por efecto del calor recibido",
+             "El comportamiento descrito es el propio de una mezcla en ebullición, no de una descomposición."),
+        ],
+    ),
+    _q(
+        "cie_materia", "medio",
+        "¿Por qué una mezcla puede tener composición variable y un compuesto "
+        "no?",
+        "Porque el compuesto obedece a una proporción fija de átomos",
+        "La diferencia proviene de cómo se unen los componentes.\n\n"
+        "1) En un compuesto, los átomos se combinan en una relación numérica "
+        "definida, que la fórmula expresa.\n"
+        "2) Cambiar esa proporción produce otro compuesto distinto, no el mismo "
+        "en otra concentración.\n"
+        "3) En una mezcla no hay combinación química, así que las cantidades "
+        "pueden ajustarse libremente.\n\n"
+        "Por eso se puede preparar agua con más o menos sal, pero no agua con "
+        "más o menos oxígeno por molécula.",
+        [
+            ("Porque las mezclas siempre contienen más sustancias",
+             "El número de componentes no es lo determinante, sino la existencia de enlaces."),
+            ("Porque los compuestos son siempre sólidos",
+             "Hay compuestos en los tres estados."),
+            ("Porque en la mezcla los componentes reaccionan entre sí hasta alcanzar un equilibrio estable",
+             "En una mezcla no hay reacción: los componentes conservan su identidad."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Una muestra sólida funde entre 118 °C y 126 °C, mientras que la "
+        "sustancia pura correspondiente funde a 127 °C. ¿Qué se infiere?",
+        "La muestra contiene impurezas",
+        "El intervalo de fusión es una señal reconocible.\n\n"
+        "1) Una sustancia pura funde a una temperatura definida, con una "
+        "variación mínima.\n"
+        "2) La presencia de otra sustancia hace que la fusión ocurra en un "
+        "intervalo y a una temperatura menor que la tabulada.\n"
+        "3) La muestra presenta ambos rasgos, así que no es pura.\n\n"
+        "El método sirve además al revés: si tras purificar una muestra el "
+        "intervalo se estrecha y el valor sube, la purificación funcionó.",
+        [
+            ("La muestra es una sustancia distinta",
+             "Podría serlo, pero el intervalo amplio apunta a impurezas en una muestra de la misma sustancia."),
+            ("El termómetro está descalibrado",
+             "Un error de calibración desplazaría el valor, pero no ensancharía el intervalo."),
+            ("La muestra es más pura que la sustancia de referencia usada para comparar el resultado",
+             "Una muestra más pura fundiría en un intervalo más estrecho y a la temperatura tabulada."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Un objeto de 54 g desplaza el agua de una probeta desde 25 mL hasta 45 "
+        "mL. ¿Cuál es su densidad?",
+        "2,7 g/cm³",
+        "El volumen se obtiene por diferencia antes de calcular la densidad.\n\n"
+        "1) El objeto desplaza un volumen igual al suyo: 45 mL menos 25 mL da "
+        "20 mL, o sea 20 cm³.\n"
+        "2) La densidad es masa dividida por volumen: 54 g divididos por 20 "
+        "cm³.\n"
+        "3) El resultado es 2,7 g/cm³, valor característico del aluminio.\n\n"
+        "El error frecuente es usar la lectura final de la probeta en lugar de "
+        "la diferencia entre ambas lecturas.",
+        [
+            ("1,2 g/cm³",
+             "Usa la lectura final, 45 mL, en lugar del volumen desplazado."),
+            ("2,16 g/cm³",
+             "Usa 25 mL, la lectura inicial, que corresponde al agua sola."),
+            ("20 g/cm³, que resulta de tomar directamente la diferencia entre las dos lecturas de la probeta",
+             "Esa diferencia es el volumen del objeto, no su densidad."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Un estudiante afirma que toda mezcla homogénea es una sustancia pura, "
+        "porque se ve uniforme. ¿Cómo se evalúa?",
+        "Es incorrecta: la uniformidad no implica pureza",
+        "El criterio de clasificación no es visual sino de composición.\n\n"
+        "1) Una mezcla homogénea se ve uniforme, pero contiene varias "
+        "sustancias en proporciones que pueden variar.\n"
+        "2) Se comprueba fácilmente: al destilar agua salada se obtienen dos "
+        "cosas distintas, agua y sal.\n"
+        "3) Además, su punto de ebullición no es fijo, cosa que sí ocurre en "
+        "una sustancia pura.\n\n"
+        "El aire y el bronce son mezclas homogéneas, y ninguno de los dos es "
+        "una sustancia pura.",
+        [
+            ("Es correcta, porque no se distinguen sus componentes",
+             "No distinguirlos a simple vista no significa que no estén presentes como sustancias distintas."),
+            ("Es correcta, porque tiene propiedades constantes",
+             "Sus propiedades cambian si cambia la proporción de los componentes."),
+            ("Es incorrecta, porque en realidad toda mezcla homogénea corresponde siempre a un compuesto químico",
+             "Tampoco es un compuesto: no hay enlaces entre sus componentes ni proporción fija."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Se destila una mezcla de dos líquidos que hierven a 78 °C y a 100 °C. "
+        "¿Qué se recoge primero y a qué temperatura se mantiene el termómetro?",
+        "El de 78 °C, mientras dure su destilación",
+        "La destilación separa por orden de temperatura de ebullición.\n\n"
+        "1) El componente más volátil, el de 78 °C, pasa a vapor primero.\n"
+        "2) Mientras ese componente esté destilando, el termómetro en la salida "
+        "del vapor se mantiene cerca de esa temperatura.\n"
+        "3) Cuando se agota, la temperatura sube hasta la del segundo "
+        "componente, que empieza a destilar.\n\n"
+        "Ese salto de temperatura es la señal para cambiar el recipiente de "
+        "recolección.",
+        [
+            ("El de 100 °C, porque tiene mayor temperatura de ebullición",
+             "Mayor temperatura de ebullición significa que es menos volátil: destila después."),
+            ("Ambos a la vez, a una temperatura intermedia",
+             "La separación funciona justamente porque no destilan a la vez."),
+            ("El de 78 °C, pero con el termómetro subiendo de forma continua durante toda la destilación",
+             "Mientras destila un solo componente, la temperatura se mantiene aproximadamente constante."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Para comprobar que una destilación purificó agua salada, ¿qué "
+        "conviene hacer con el líquido obtenido?",
+        "Evaporarlo y ver si queda residuo sólido",
+        "La comprobación busca la sustancia que debía haberse eliminado.\n\n"
+        "1) Si el agua obtenida todavía contiene sal, al evaporarla quedará un "
+        "residuo blanco en el recipiente.\n"
+        "2) Si no queda residuo, la sal permaneció en el matraz de origen y la "
+        "separación funcionó.\n"
+        "3) Conviene comparar con una muestra de agua de mar sometida al mismo "
+        "procedimiento, que sí debe dejar residuo.\n\n"
+        "Medir la conductividad eléctrica del líquido obtenido sirve al mismo "
+        "propósito, porque las sales disueltas la aumentan.",
+        [
+            ("Observar si es transparente",
+             "El agua salada también es transparente: la vista no distingue la sal disuelta."),
+            ("Medir su volumen",
+             "El volumen indica cuánto se recogió, no si contiene sal."),
+            ("Filtrarlo con papel de filtro para comprobar si quedan partículas retenidas en el papel",
+             "El filtro no retiene sal disuelta, así que la prueba no distingue los dos casos."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Una tabla indica que una sustancia funde a −7 °C y hierve a 59 °C. "
+        "¿En qué estado se encuentra a 25 °C?",
+        "Líquido",
+        "Las dos temperaturas delimitan tres intervalos.\n\n"
+        "1) Bajo la temperatura de fusión, −7 °C, la sustancia es sólida.\n"
+        "2) Entre la fusión y la ebullición, o sea entre −7 °C y 59 °C, es "
+        "líquida.\n"
+        "3) Como 25 °C cae dentro de ese intervalo, la sustancia es líquida a "
+        "esa temperatura.\n\n"
+        "El mismo razonamiento permite predecir el estado de cualquier "
+        "sustancia con solo esos dos datos.",
+        [
+            ("Sólido",
+             "A 25 °C ya se superó la temperatura de fusión de −7 °C."),
+            ("Gaseoso",
+             "Para ser gas habría que superar los 59 °C de su temperatura de ebullición."),
+            ("Parte sólido y parte líquido, porque 25 °C está entre las dos temperaturas de la tabla",
+             "La coexistencia de dos estados ocurre durante el cambio de estado, o sea a −7 °C o a 59 °C."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Se quiere comprobar si la densidad depende del tamaño de la muestra. "
+        "¿Qué procedimiento corresponde?",
+        "Medir masa y volumen en trozos de distinto tamaño",
+        "La pregunta se responde comparando muestras del mismo material.\n\n"
+        "1) Se toman varios trozos del mismo material, de tamaños claramente "
+        "distintos.\n"
+        "2) Se mide la masa y el volumen de cada uno y se calcula su "
+        "densidad.\n"
+        "3) Si el cociente resulta prácticamente igual en todos, la densidad no "
+        "depende del tamaño de la muestra.\n\n"
+        "Ese resultado es lo que la clasifica como propiedad intensiva, y es lo "
+        "que permite usarla para identificar materiales.",
+        [
+            ("Medir la masa de un solo trozo grande",
+             "Con una sola medición no hay comparación posible."),
+            ("Comparar dos materiales distintos del mismo tamaño",
+             "Eso compara materiales, no tamaños del mismo material."),
+            ("Calentar un mismo trozo a distintas temperaturas y registrar cómo cambia su masa en cada caso",
+             "Eso estudia el efecto de la temperatura, no el del tamaño de la muestra."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Al evaporar por completo una muestra de agua de un río queda un "
+        "residuo sólido. ¿Qué se concluye?",
+        "El agua del río era una mezcla",
+        "El residuo revela componentes que estaban disueltos.\n\n"
+        "1) El agua se evaporó y el residuo permaneció, así que había al menos "
+        "dos sustancias con comportamientos distintos.\n"
+        "2) Ese residuo estaba disuelto, porque la muestra se veía "
+        "transparente y uniforme.\n"
+        "3) Por lo tanto, el agua del río era una mezcla homogénea y no una "
+        "sustancia pura.\n\n"
+        "El mismo ensayo, hecho con agua destilada, no deja residuo apreciable, "
+        "y esa comparación es la que da fuerza a la conclusión.",
+        [
+            ("El agua se transformó en un sólido",
+             "El agua se evaporó: el residuo es otra sustancia que estaba disuelta."),
+            ("El agua era una sustancia pura",
+             "Una sustancia pura se evapora sin dejar residuo."),
+            ("El recipiente aportó el residuo al reaccionar químicamente con el agua durante el calentamiento",
+             "Es una posibilidad que se descarta repitiendo el ensayo con agua destilada en el mismo recipiente."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "De 250 g de una mezcla se recuperan 180 g de sal tras la separación. "
+        "¿Qué porcentaje de la mezcla era sal?",
+        "72%",
+        "El porcentaje se calcula sobre la masa inicial.\n\n"
+        "1) La fracción recuperada es 180 g sobre 250 g.\n"
+        "2) Ese cociente es 0,72.\n"
+        "3) Expresado como porcentaje, corresponde a un 72% de la masa "
+        "inicial.\n\n"
+        "El 28% restante corresponde a los demás componentes, o bien a pérdidas "
+        "del procedimiento, que conviene reportar por separado.",
+        [
+            ("28%",
+             "Corresponde a lo que no era sal, no a la proporción de sal."),
+            ("180%",
+             "Toma la masa recuperada como si fuera directamente un porcentaje."),
+            ("139%, que resulta de dividir la masa inicial por la masa de sal recuperada al final",
+             "Invierte el cociente, y ningún porcentaje de una parte puede superar el 100%."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Dos estudiantes miden la densidad del mismo material y obtienen 7,8 y "
+        "8,9 g/cm³. ¿Qué conviene revisar primero?",
+        "Cómo midieron el volumen de cada muestra",
+        "Ante resultados discrepantes se revisa la medición más delicada.\n\n"
+        "1) La masa se mide con una balanza y suele ser bastante confiable.\n"
+        "2) El volumen, en cambio, depende de leer bien la probeta, de que la "
+        "muestra quede completamente sumergida y de que no queden burbujas "
+        "atrapadas.\n"
+        "3) Un error en el volumen se traslada directamente al valor de la "
+        "densidad.\n\n"
+        "Conviene además repetir cada medición varias veces: un solo dato por "
+        "estudiante no permite saber cuál está más cerca del valor real.",
+        [
+            ("Cuál de los dos materiales es más denso",
+             "Es el mismo material: la diferencia proviene de la medición."),
+            ("Si la densidad cambia con el tiempo",
+             "La densidad de un material no cambia por sí sola entre una medición y otra."),
+            ("Si los dos estudiantes usaron muestras de distinto tamaño, porque eso altera el resultado",
+             "El tamaño no altera la densidad: es una propiedad intensiva."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "¿Qué evidencia permitiría afirmar que una muestra transparente es agua "
+        "pura y no una disolución?",
+        "Que hierva a temperatura constante y no deje residuo",
+        "La afirmación exige comprobaciones que la vista no entrega.\n\n"
+        "1) El agua pura hierve a una temperatura fija a una presión dada; una "
+        "disolución lo hace a temperatura algo mayor y creciente.\n"
+        "2) Al evaporarla por completo, el agua pura no deja residuo, mientras "
+        "que una disolución sí.\n"
+        "3) Ambas comprobaciones juntas son mucho más sólidas que cualquiera "
+        "por separado.\n\n"
+        "La transparencia no aporta nada: una disolución de sal es igual de "
+        "transparente que el agua pura.",
+        [
+            ("Que sea incolora y transparente",
+             "Muchas disoluciones son incoloras y transparentes."),
+            ("Que no tenga olor",
+             "La ausencia de olor no descarta sustancias disueltas."),
+            ("Que se pueda filtrar sin que quede ningún residuo retenido en el papel de filtro",
+             "El filtro no retiene sustancias disueltas, así que la prueba no distingue ambos casos."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "En un tamiz de 2 mm de abertura queda retenido el 40% de una muestra "
+        "de árido de 5 kg. ¿Cuánta masa pasó por el tamiz?",
+        "3 kg",
+        "Lo retenido y lo que pasa suman el total.\n\n"
+        "1) Si el 40% queda retenido, pasa el 60% restante.\n"
+        "2) El 60% de 5 kg es 5 multiplicado por 0,6.\n"
+        "3) El resultado es 3 kg de material con partículas menores a 2 mm.\n\n"
+        "La suma de ambas fracciones debe dar la masa inicial: 2 kg retenidos "
+        "más 3 kg que pasaron dan los 5 kg de partida.",
+        [
+            ("2 kg",
+             "Corresponde al 40% retenido, no a lo que pasó por el tamiz."),
+            ("4 kg",
+             "Descuenta el porcentaje como si fuera masa en kilogramos."),
+            ("5 kg, porque el tamizado no retiene masa sino que solo clasifica el material por tamaño",
+             "El tamiz sí retiene el material de mayor tamaño: no todo atraviesa la malla."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Se quiere separar una mezcla de aceite, arena y agua con sal disuelta. "
+        "¿Qué secuencia corresponde?",
+        "Decantar, filtrar y luego evaporar",
+        "Cada método se aplica a lo que puede separar, y en el orden que "
+        "conviene.\n\n"
+        "1) La decantación retira el aceite, que forma una capa separada por "
+        "ser inmiscible y menos denso.\n"
+        "2) La filtración retiene la arena, que no está disuelta, y deja pasar "
+        "el agua con la sal.\n"
+        "3) La evaporación del agua deja la sal como residuo sólido.\n\n"
+        "Retirar el aceite primero evita que impregne el filtro y entorpezca el "
+        "paso del agua en el paso siguiente.",
+        [
+            ("Evaporar, filtrar y luego decantar",
+             "Al evaporar primero quedan la arena y la sal mezcladas, y el trabajo aumenta."),
+            ("Filtrar, tamizar y luego decantar",
+             "El tamizado no separa la sal disuelta ni el aceite: hace falta evaporar."),
+            ("Destilar la mezcla completa para separar los tres componentes en una sola operación",
+             "La destilación separa el agua, pero deja el aceite, la arena y la sal juntos en el matraz."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_materia", "dificil",
+        "Dos muestras de un mismo líquido hierven, una a 100 °C y la otra a 103 "
+        "°C, medidas en el mismo lugar y con el mismo termómetro. ¿Qué explica "
+        "la diferencia?",
+        "La segunda tiene alguna sustancia disuelta",
+        "Descartadas la presión y el instrumento, queda la composición.\n\n"
+        "1) Ambas mediciones se hicieron en el mismo lugar, así que la presión "
+        "atmosférica fue la misma.\n"
+        "2) También se usó el mismo termómetro, de modo que un error de "
+        "calibración habría afectado a las dos por igual.\n"
+        "3) La presencia de un soluto eleva la temperatura de ebullición, y eso "
+        "explica que una muestra hierva más arriba que la otra.\n\n"
+        "La muestra de 100 °C se comporta como sustancia pura; la de 103 °C, "
+        "como una disolución.",
+        [
+            ("La segunda se calentó con más fuerza",
+             "Calentar más rápido acelera la ebullición, pero no cambia la temperatura a la que ocurre."),
+            ("La primera muestra tenía menos volumen",
+             "La temperatura de ebullición no depende de cuánto líquido haya."),
+            ("El termómetro se descalibró entre una medición y la otra sin que nadie lo notara",
+             "Es posible en principio, pero se descarta repitiendo ambas mediciones con el mismo instrumento."),
+        ],
+    ),
+    _q(
+        "cie_materia", "dificil",
+        "Una tabla da estas densidades: corcho 0,24; hielo 0,92; agua 1,00 y "
+        "aluminio 2,70 g/cm³. ¿Qué materiales flotan en agua?",
+        "El corcho y el hielo",
+        "La flotación se decide comparando densidades con la del líquido.\n\n"
+        "1) Un material flota en agua si su densidad es menor que 1,00 g/cm³.\n"
+        "2) El corcho, con 0,24, y el hielo, con 0,92, cumplen esa "
+        "condición.\n"
+        "3) El aluminio, con 2,70, es más denso que el agua y se hunde.\n\n"
+        "El criterio cambia si el líquido es otro: en mercurio, cuya densidad "
+        "supera los 13 g/cm³, flotaría incluso el aluminio.",
+        [
+            ("Solo el corcho",
+             "El hielo también tiene densidad menor que la del agua, y por eso flota."),
+            ("El corcho y el aluminio",
+             "El aluminio es casi tres veces más denso que el agua: se hunde."),
+            ("Los tres materiales, porque todos tienen densidades distintas de la del agua líquida",
+             "Ser distinto no basta: para flotar la densidad debe ser menor que la del líquido."),
+        ],
+    ),
+]

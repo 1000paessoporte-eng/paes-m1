@@ -222,6 +222,12 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "los productores fijan 20.000 kcal": f"{int(20_000 * 0.1 * 0.1)} kcal",
     "1.000 kg de biomasa de productores": f"{int(1_000 * 0.1)} kg",
     "consumidores terciarios de una cadena disponen de 5 kcal": f"{5 * 10 ** 3:,}".replace(",", ".") + " kcal",
+    # Quimica: clasificacion de la materia y propiedades fisicas
+    "masa de 240 g y ocupa un volumen de 30": f"{240 // 30} g/cm",
+    "densidad de 2,5 g/cm³. ¿Qué masa tiene": f"{int(2.5 * 40)} g",
+    "objeto de 54 g desplaza el agua": f"{54 / (45 - 25):.1f} g/cm".replace(".", ","),
+    "De 250 g de una mezcla se recuperan 180 g": f"{round(100 * 180 / 250)}%",
+    "tamiz de 2 mm de abertura queda retenido el 40%": f"{int(5 * (1 - 0.4))} kg",
     # Ácido-base
 }
 
