@@ -83975,3 +83975,2116 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ondas", "facil",
+        "En una radiografía los huesos aparecen claros y los tejidos blandos, "
+        "oscuros. ¿Qué propiedad de los rayos X lo explica?",
+        "Los absorben más los materiales densos que los livianos",
+        "La imagen se forma por diferencias en cuánta radiación logra "
+        "atravesar.\n\n"
+        "1) Los rayos X atraviesan la materia, pero no por igual: cuanto más "
+        "densos y pesados son los átomos del material, más radiación absorben.\n"
+        "2) El hueso contiene calcio, bastante más pesado que los elementos "
+        "predominantes en el músculo o la grasa, así que deja pasar menos.\n"
+        "3) Donde llega menos radiación al detector, la imagen sale clara: por "
+        "eso el hueso se ve blanco.\n\n"
+        "El mismo principio opera en los escáneres de equipaje de los "
+        "aeropuertos.",
+        [
+            ("Los rayos X rebotan en los huesos y atraviesan la piel",
+             "No hay reflexión apreciable: la imagen se forma por absorción diferencial, no por rebote."),
+            ("Los huesos emiten rayos X propios al ser iluminados",
+             "El hueso no emite esta radiación: solo absorbe una fracción de la que lo atraviesa."),
+            ("Los rayos X se desvían al pasar junto al hueso y se concentran alrededor de él",
+             "Los rayos X atraviesan en línea recta; una desviación así borronearía la imagen en vez de formarla."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "La atmósfera deja pasar la luz visible del Sol, pero retiene buena "
+        "parte del infrarrojo que la Tierra emite de vuelta. ¿Qué fenómeno "
+        "describe esto?",
+        "El efecto invernadero",
+        "La clave es que la atmósfera no es igualmente transparente en todas las "
+        "regiones del espectro.\n\n"
+        "1) La radiación solar llega sobre todo como luz visible, y la "
+        "atmósfera la deja pasar hasta la superficie.\n"
+        "2) El suelo se calienta y emite radiación propia, que por su "
+        "temperatura corresponde al INFRARROJO.\n"
+        "3) Gases como el dióxido de carbono y el vapor de agua absorben ese "
+        "infrarrojo y lo reemiten en todas direcciones, devolviendo parte hacia "
+        "abajo.\n\n"
+        "El resultado es una temperatura media más alta que la que habría sin "
+        "atmósfera. Aumentar la concentración de esos gases intensifica el "
+        "efecto.",
+        [
+            ("La reflexión total interna en la atmósfera",
+             "La reflexión total interna ocurre en el límite entre dos medios con un ángulo mayor que el crítico, y no describe esta absorción selectiva."),
+            ("La dispersión de la luz solar en sus colores",
+             "La dispersión explica el color azul del cielo y el arcoíris, no la retención de calor."),
+            ("La difracción de la radiación infrarroja al atravesar las nubes",
+             "La difracción desvía las ondas al rodear obstáculos; aquí lo que ocurre es absorción y reemisión por gases."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Una onda electromagnética tiene una frecuencia de 6 · 10¹⁴ Hz. Si viaja "
+        "a 3 · 10⁸ m/s, ¿cuál es su longitud de onda?",
+        "5 · 10⁻⁷ m",
+        "Se despeja la longitud de onda de la relación entre rapidez, frecuencia "
+        "y longitud de onda.\n\n"
+        "1) Longitud de onda = rapidez ÷ frecuencia.\n"
+        "2) Reemplaza: 3 · 10⁸ ÷ 6 · 10¹⁴.\n"
+        "3) Divide los coeficientes: 3 ÷ 6 = 0,5. Resta los exponentes: 8 − 14 = "
+        "−6.\n"
+        "4) Queda 0,5 · 10⁻⁶ m, es decir, 5 · 10⁻⁷ m.\n\n"
+        "Ese valor corresponde a unos 500 nanómetros: luz visible de color "
+        "verde, en el centro del rango que el ojo percibe.",
+        [
+            ("2 · 10⁶ m", "Dividió la frecuencia por la rapidez, invirtiendo la relación."),
+            ("1,8 · 10²³ m", "Multiplicó rapidez por frecuencia en vez de dividir."),
+            ("5 · 10⁻⁶ m", "Se equivocó en un orden de magnitud al restar los exponentes."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Se clasifica la radiación electromagnética en ionizante y no ionizante. "
+        "¿Cuál de los siguientes conjuntos corresponde a radiación ionizante?",
+        "Rayos X y rayos gamma",
+        "El criterio es si la radiación tiene energía suficiente para arrancar "
+        "electrones de los átomos.\n\n"
+        "1) La energía crece con la frecuencia, así que las regiones ionizantes "
+        "están en el extremo de frecuencias altas del espectro.\n"
+        "2) Los rayos X y los rayos gamma superan ampliamente el umbral "
+        "necesario, y también lo hace el ultravioleta más energético.\n"
+        "3) Las ondas de radio, las microondas, el infrarrojo y la luz visible "
+        "quedan por debajo: pueden calentar un material, pero no ionizarlo.\n\n"
+        "La distinción importa porque solo la radiación ionizante puede dañar "
+        "directamente el ADN.",
+        [
+            ("Ondas de radio y microondas",
+             "Son las de menor frecuencia y energía del espectro: no alcanzan a ionizar."),
+            ("Luz visible e infrarrojo",
+             "Su energía basta para calentar y para estimular la retina, pero no para arrancar electrones."),
+            ("Microondas e infrarrojo, porque ambos son capaces de calentar los alimentos",
+             "Calentar y ionizar son cosas distintas: el calentamiento no exige romper enlaces ni liberar electrones."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "La radio AM se transmite en frecuencias del orden de 1 MHz y la FM, del "
+        "orden de 100 MHz. La AM se escucha a mucha mayor distancia, sobre todo "
+        "de noche. ¿Qué explica esa diferencia de alcance?",
+        "Su mayor longitud de onda rodea mejor los obstáculos",
+        "El alcance depende de cómo interactúa la onda con el terreno y la "
+        "atmósfera.\n\n"
+        "1) A 1 MHz la longitud de onda es de cientos de metros, comparable o "
+        "mayor que cerros y edificios: la onda los rodea en vez de ser "
+        "bloqueada.\n"
+        "2) A 100 MHz la longitud de onda es de pocos metros, así que los "
+        "obstáculos proyectan sombra y la señal se limita prácticamente a la "
+        "línea de visión.\n"
+        "3) Además, las ondas de AM se reflejan en la ionósfera, y de noche esa "
+        "capa refleja mejor, lo que permite recibir emisoras muy lejanas.\n\n"
+        "El precio de la AM es la calidad: es más vulnerable al ruido eléctrico "
+        "que la FM.",
+        [
+            ("Su mayor amplitud le permite recorrer más distancia",
+             "La amplitud fija la potencia emitida, y ambas bandas pueden transmitirse con potencias comparables."),
+            ("Viaja más rápido por tener menor frecuencia",
+             "Todas las ondas electromagnéticas viajan a la misma rapidez en el aire."),
+            ("Transporta más energía por su mayor longitud de onda y por eso llega más lejos",
+             "Mayor longitud de onda implica MENOS energía; el alcance se explica por la difracción y la reflexión ionosférica."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Un horno de microondas emite radiación de unos 2,45 GHz. ¿Por qué esa "
+        "frecuencia calienta el agua de los alimentos?",
+        "Hace oscilar las moléculas de agua, que se agitan y transmiten calor",
+        "El calentamiento es un fenómeno de absorción selectiva por parte de una "
+        "molécula concreta.\n\n"
+        "1) La molécula de agua tiene una distribución de carga desigual: un "
+        "extremo algo positivo y otro algo negativo.\n"
+        "2) El campo eléctrico oscilante de la microonda tira de esos extremos "
+        "en sentidos opuestos y la hace girar de un lado a otro.\n"
+        "3) Ese movimiento se transmite por choques a las moléculas vecinas, y "
+        "el conjunto se traduce en aumento de temperatura.\n\n"
+        "Por eso un plato de cerámica seco se calienta poco: es el agua del "
+        "alimento la que absorbe la energía, y el plato se entibia por contacto.",
+        [
+            ("Rompe los enlaces químicos de los alimentos y libera calor",
+             "Las microondas no son ionizantes: no tienen energía para romper enlaces químicos."),
+            ("Convierte el agua en vapor directamente al atravesarla",
+             "El vapor aparece si el alimento llega a la temperatura de ebullición, pero es una consecuencia del calentamiento, no el mecanismo."),
+            ("Aumenta la frecuencia de vibración de los átomos de metal del recipiente, que transmiten calor al alimento",
+             "El metal refleja las microondas y por eso no debe usarse; el calentamiento ocurre en el alimento mismo."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "El vidrio de una ventana es transparente a la luz visible pero bloquea "
+        "buena parte del ultravioleta. ¿Qué muestra este hecho sobre la "
+        "transparencia de los materiales?",
+        "Depende de la región del espectro que se considere",
+        "No existe un material transparente en términos absolutos.\n\n"
+        "1) Que un material sea transparente significa que deja pasar cierta "
+        "radiación sin absorberla apreciablemente.\n"
+        "2) Esa propiedad varía con la longitud de onda: el vidrio deja pasar "
+        "el visible y absorbe buena parte del ultravioleta.\n"
+        "3) Otros materiales invierten la relación: una lámina de silicio es "
+        "opaca al visible y transparente al infrarrojo, y el cuerpo humano es "
+        "opaco a la luz y parcialmente transparente a los rayos X.\n\n"
+        "Por eso no basta preguntarse si un material es transparente: hay que "
+        "precisar a qué radiación.",
+        [
+            ("Que el vidrio refleja el ultravioleta hacia el exterior",
+             "El vidrio absorbe la mayor parte del ultravioleta; la reflexión es una fracción menor."),
+            ("Que el ultravioleta no es una onda electromagnética",
+             "Sí lo es: ocupa la región de frecuencias inmediatamente superiores a la del violeta visible."),
+            ("Que la transparencia depende solo del grosor del material y no de la radiación",
+             "El grosor influye en cuánto se absorbe, pero qué se absorbe depende ante todo de la longitud de onda."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una señal de televisión satelital tarda un tiempo apreciable en ir y "
+        "volver del satélite, ubicado a unos 36.000 km de altura. Con la luz a "
+        "3 · 10⁸ m/s, ¿cuánto demora aproximadamente el viaje de subida?",
+        "0,12 s",
+        "Es un cálculo de tiempo a partir de distancia y rapidez.\n\n"
+        "1) Convierte la distancia: 36.000 km = 3,6 · 10⁷ m.\n"
+        "2) Tiempo = distancia ÷ rapidez = 3,6 · 10⁷ ÷ 3 · 10⁸.\n"
+        "3) Divide los coeficientes: 3,6 ÷ 3 = 1,2. Resta exponentes: 7 − 8 = "
+        "−1.\n"
+        "4) Queda 1,2 · 10⁻¹ s, o sea 0,12 s.\n\n"
+        "El retardo total de ida y vuelta es del orden de un cuarto de segundo, y "
+        "es la razón de las pausas incómodas en los enlaces satelitales en vivo.",
+        [
+            ("0,012 s", "Se equivocó en un orden de magnitud al restar los exponentes."),
+            ("1,2 s", "Se equivocó en un orden de magnitud en el otro sentido."),
+            ("8,3 s", "Invirtió la división: dividió la rapidez por la distancia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Se afirma que en una onda electromagnética 'algo vibra'. ¿Qué es lo que "
+        "oscila?",
+        "Un campo eléctrico y uno magnético, perpendiculares entre sí",
+        "La respuesta es lo que distingue a esta clase de onda de las "
+        "mecánicas.\n\n"
+        "1) No oscila materia: no hay partículas que se muevan de un lado a otro "
+        "como en el sonido.\n"
+        "2) Lo que varía son los campos. Un campo eléctrico que cambia genera un "
+        "campo magnético, y ese campo magnético al cambiar genera nuevamente uno "
+        "eléctrico.\n"
+        "3) Ese acoplamiento se sostiene solo y avanza por el espacio, incluso "
+        "en el vacío. Los dos campos oscilan perpendiculares entre sí y "
+        "perpendiculares a la dirección de avance.\n\n"
+        "Por eso las ondas electromagnéticas son transversales.",
+        [
+            ("Las moléculas del aire que la onda atraviesa",
+             "Si dependiera del aire no podría propagarse en el vacío, y la luz del Sol llega hasta aquí atravesándolo."),
+            ("Los electrones del medio, que se desplazan junto con la onda",
+             "En un medio los electrones responden a la onda, pero la onda existe igualmente sin ningún electrón que perturbar."),
+            ("Un campo eléctrico únicamente, ya que el magnético aparece solo dentro de los conductores",
+             "Los dos campos están presentes siempre y son inseparables: cada uno genera al otro al variar."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Las redes de wifi operan en bandas de 2,4 GHz y 5 GHz. La de 5 GHz "
+        "transmite más datos por segundo pero cubre menos distancia dentro de "
+        "una casa. ¿Cómo se explica ese compromiso?",
+        "A mayor frecuencia hay más capacidad pero peor paso por los muros",
+        "Los dos efectos son consecuencia de la misma propiedad: la "
+        "frecuencia.\n\n"
+        "1) Una frecuencia mayor permite meter más oscilaciones por segundo y "
+        "por lo tanto más información en el mismo tiempo: de ahí la mayor "
+        "capacidad.\n"
+        "2) Pero a mayor frecuencia corresponde menor longitud de onda, y una "
+        "onda corta rodea peor los obstáculos y es absorbida más fácilmente por "
+        "muros y muebles.\n"
+        "3) Por eso la banda de 5 GHz es más rápida cerca del router y la de "
+        "2,4 GHz llega mejor a las piezas del fondo.\n\n"
+        "Es el mismo compromiso que separa a la radio AM de la FM, trasladado a "
+        "otra escala.",
+        [
+            ("La de 5 GHz emite con menos potencia por regulación",
+             "Las potencias permitidas son comparables; la diferencia de alcance viene de cómo la onda atraviesa obstáculos."),
+            ("La de 2,4 GHz viaja más rápido y por eso llega más lejos",
+             "Ambas viajan a la misma rapidez: lo que cambia es su comportamiento frente a los obstáculos."),
+            ("La de 5 GHz se refleja en las paredes y se pierde, mientras la de 2,4 GHz las atraviesa sin ninguna pérdida",
+             "Ambas se atenúan al atravesar muros; la diferencia es de grado y no de todo o nada."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Un instrumento astronómico observa el mismo objeto en luz visible y en "
+        "ondas de radio, y obtiene imágenes muy distintas. ¿Qué conclusión es "
+        "razonable?",
+        "Cada región del espectro revela procesos diferentes del objeto",
+        "Que las imágenes difieran no es un defecto del instrumento sino la "
+        "razón de observar en varias bandas.\n\n"
+        "1) La radiación que un objeto emite en cada región depende de qué "
+        "procesos físicos ocurren en él: la temperatura del gas, los campos "
+        "magnéticos, la presencia de polvo.\n"
+        "2) El polvo, por ejemplo, bloquea la luz visible pero deja pasar las "
+        "ondas de radio, así que estas muestran regiones que el visible oculta.\n"
+        "3) Combinar bandas entrega una descripción más completa que cualquiera "
+        "por separado.\n\n"
+        "Por eso la astronomía moderna observa desde las ondas de radio hasta "
+        "los rayos gamma.",
+        [
+            ("Uno de los dos instrumentos está mal calibrado",
+             "La diferencia es esperable y sistemática: aparecería igual con instrumentos perfectamente calibrados."),
+            ("El objeto cambió entre una observación y la otra",
+             "Los cambios en objetos astronómicos suelen ser lentísimos y no explicarían diferencias sistemáticas de este tipo."),
+            ("Las ondas de radio muestran el objeto tal como era hace más tiempo que la luz visible",
+             "Ambas viajan a la misma rapidez, así que corresponden al mismo instante del pasado."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un estudiante sostiene que si una onda de radio y un rayo gamma tienen "
+        "la misma amplitud, transportan la misma energía. ¿Cómo se evalúa esa "
+        "afirmación?",
+        "Es incorrecta, porque la energía depende también de la frecuencia",
+        "La afirmación toma en cuenta una de las dos variables que importan.\n\n"
+        "1) La amplitud determina cuánta radiación llega, es decir, la "
+        "intensidad del haz.\n"
+        "2) Pero la energía asociada a cada porción de radiación depende de la "
+        "FRECUENCIA, y la de un rayo gamma supera en muchísimos órdenes de "
+        "magnitud a la de una onda de radio.\n"
+        "3) Por eso un rayo gamma ioniza átomos y una onda de radio no, por "
+        "intensa que sea.\n\n"
+        "La distinción es la misma que explica por qué un protector solar filtra "
+        "por tipo de radiación y no por cantidad de luz.",
+        [
+            ("Es correcta, porque la amplitud es lo único que determina la energía de una onda",
+             "En una onda mecánica la energía sí depende sobre todo de la amplitud, pero en la radiación electromagnética la frecuencia es determinante."),
+            ("Es correcta, porque ambas son ondas electromagnéticas y viajan a la misma rapidez",
+             "Compartir la rapidez no implica compartir la energía: la rapidez es la misma para todo el espectro."),
+            ("Es incorrecta, porque las ondas de radio no transportan energía en absoluto",
+             "Sí la transportan: es la energía que una antena convierte en señal eléctrica."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Se propone medir la rapidez de las microondas usando un horno sin plato "
+        "giratorio: se pone una barra de chocolate, se calienta unos segundos y "
+        "se mide la distancia entre los puntos derretidos. ¿En qué se basa el "
+        "procedimiento?",
+        "Los puntos derretidos marcan la separación entre máximos de la onda",
+        "Dentro del horno se forma un patrón fijo, y ese patrón es medible.\n\n"
+        "1) Las microondas rebotan en las paredes metálicas y se superponen "
+        "consigo mismas, formando un patrón con zonas de máxima y de mínima "
+        "intensidad que no se desplaza.\n"
+        "2) El chocolate se derrite justo en los máximos, así que la distancia "
+        "entre dos puntos derretidos consecutivos corresponde a media longitud "
+        "de onda.\n"
+        "3) Con la longitud de onda así obtenida y la frecuencia que indica la "
+        "etiqueta del horno, la rapidez sale de multiplicarlas.\n\n"
+        "Por eso hay que quitar el plato giratorio: si el alimento se mueve, el "
+        "calor se reparte y el patrón desaparece.",
+        [
+            ("El chocolate se derrite antes donde el horno está más caliente por su diseño",
+             "Si fuera un problema de diseño, los puntos no aparecerían regularmente espaciados ni cambiarían con la frecuencia."),
+            ("La distancia entre puntos derretidos equivale a la longitud de onda completa",
+             "Corresponde a MEDIA longitud de onda: los máximos de un patrón estacionario se repiten cada media longitud."),
+            ("El movimiento del plato giratorio distribuye el calor y por eso se necesita medir con él encendido",
+             "Es justo al revés: el giro borra el patrón, y por eso el plato debe retirarse."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Dos fuentes emiten radiación electromagnética. La fuente A emite a "
+        "600 THz con baja intensidad y la fuente B emite a 300 THz con alta "
+        "intensidad. Un material solo reacciona químicamente si recibe radiación "
+        "de al menos 500 THz. ¿Qué se predice?",
+        "Reacciona solo con A, aunque su intensidad sea baja",
+        "El umbral está puesto sobre la frecuencia, no sobre la cantidad de "
+        "radiación.\n\n"
+        "1) La fuente A supera el umbral: 600 THz es mayor que 500 THz. Cada "
+        "porción de su radiación tiene energía suficiente para provocar la "
+        "reacción.\n"
+        "2) La fuente B no lo supera: por mucha radiación que entregue, ninguna "
+        "porción individual alcanza la energía necesaria.\n"
+        "3) Aumentar la intensidad de B multiplica la cantidad de radiación, no "
+        "la energía de cada porción: el efecto no aparece.\n\n"
+        "Este comportamiento de umbral es el que se observa en el efecto "
+        "fotoeléctrico y en el daño del ultravioleta sobre la piel.",
+        [
+            ("Reacciona solo con B, porque entrega mucha más energía total",
+             "La energía total no importa si ninguna porción individual alcanza el umbral: no se acumulan para superarlo."),
+            ("Reacciona con ambas, porque las dos entregan energía al material",
+             "La radiación de B calienta el material pero no dispara la reacción, que exige superar la frecuencia umbral."),
+            ("No reacciona con ninguna, porque la intensidad de A es demasiado baja",
+             "Baja intensidad significa menos reacciones por segundo, no ausencia de reacción."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un equipo quiere comparar cuánto ultravioleta bloquean tres telas. "
+        "Dispone de un sensor de radiación ultravioleta y una lámpara. ¿Cuál es "
+        "el diseño más adecuado?",
+        "Medir sin tela y luego con cada una, sin mover lámpara ni sensor",
+        "El diseño debe aislar la variable en estudio, que es el tipo de "
+        "tela.\n\n"
+        "1) La medición SIN tela establece la referencia: cuánta radiación llega "
+        "al sensor en esas condiciones.\n"
+        "2) Cada tela se interpone después manteniendo constantes la distancia, "
+        "la orientación y la potencia de la lámpara. Así, cualquier diferencia "
+        "se atribuye a la tela.\n"
+        "3) Comparando cada lectura con la referencia se obtiene la fracción "
+        "bloqueada por cada una, que es lo que permite ordenarlas.\n\n"
+        "Mover la lámpara o el sensor entre mediciones introduciría una segunda "
+        "variable y arruinaría la comparación.",
+        [
+            ("Medir cada tela al aire libre en días distintos con el Sol como fuente",
+             "La radiación solar varía con la hora, la nubosidad y la época: las mediciones no serían comparables."),
+            ("Poner las tres telas superpuestas y medir la radiación que las atraviesa",
+             "Eso entrega el bloqueo del conjunto, sin permitir separar el aporte de cada tela."),
+            ("Medir con cada tela colocándola a distintas distancias del sensor para ver cuál bloquea a mayor distancia",
+             "Variar la distancia agrega una segunda variable: no se sabría si la diferencia se debe a la tela o a la separación."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "El GPS de un teléfono determina la posición usando señales de varios "
+        "satélites. Cada satélite envía el instante exacto en que emitió la "
+        "señal. ¿Cómo se obtiene la distancia a cada uno?",
+        "Multiplicando la rapidez de la señal por el tiempo que tardó en llegar",
+        "El principio es el mismo del radar, con la diferencia de que aquí el "
+        "viaje es de una sola dirección.\n\n"
+        "1) El receptor compara el instante que trae el mensaje con el instante "
+        "en que lo recibe: la diferencia es el tiempo de viaje.\n"
+        "2) La señal es una onda electromagnética que viaja a la rapidez de la "
+        "luz, que es conocida.\n"
+        "3) Distancia = rapidez · tiempo. Con la distancia a varios satélites, "
+        "la posición queda determinada por intersección.\n\n"
+        "Como la señal recorre un kilómetro en poco más de tres microsegundos, "
+        "un error diminuto en el reloj se traduce en cientos de metros de error: "
+        "por eso los satélites llevan relojes atómicos.",
+        [
+            ("Comparando la intensidad de la señal recibida con la emitida",
+             "La intensidad depende también de obstáculos y del clima, así que no permite medir distancias con precisión."),
+            ("Midiendo el cambio de frecuencia de la señal por efecto Doppler",
+             "El Doppler informa velocidad relativa, y se usa como dato complementario, pero no entrega la distancia."),
+            ("Contando cuántos satélites logran ver al receptor al mismo tiempo",
+             "El número de satélites visibles mejora la precisión del cálculo, pero no es lo que entrega cada distancia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Se comparan dos afirmaciones sobre el espectro electromagnético: (I) "
+        "está formado por regiones separadas con límites bien definidos, y (II) "
+        "es continuo y las regiones son nombres convencionales. ¿Cuál es "
+        "correcta y por qué?",
+        "La segunda, porque no hay ningún salto físico entre una región y la siguiente",
+        "El espectro se nombra por conveniencia, no por discontinuidad.\n\n"
+        "1) La frecuencia puede tomar cualquier valor: entre el infrarrojo y las "
+        "microondas no hay ningún hueco ni cambio brusco de naturaleza.\n"
+        "2) Los nombres responden a cómo se genera, se detecta o se usa cada "
+        "rango, y los límites son acuerdos que incluso varían entre "
+        "disciplinas.\n"
+        "3) Prueba de ello es que los rayos X y los gamma se solapan en "
+        "frecuencia y se distinguen sobre todo por su origen: unos vienen de los "
+        "electrones y otros del núcleo.\n\n"
+        "Lo único que cambia de manera continua es la frecuencia, y con ella la "
+        "energía.",
+        [
+            ("La primera, porque cada región tiene una frecuencia fija que la caracteriza",
+             "Cada región abarca un intervalo amplio de frecuencias, no un valor fijo."),
+            ("La primera, porque cada región se genera por un mecanismo físico completamente distinto",
+             "Los mecanismos de generación varían, pero eso no crea límites nítidos: los rangos se solapan."),
+            ("Las dos son correctas, porque el espectro es continuo pero los límites entre regiones están fijados internacionalmente",
+             "Existen convenciones, pero no son límites físicos y varían según el uso: la afirmación (I) sigue siendo incorrecta."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Una lámpara emite luz de 500 nm y otra de 700 nm. ¿Cuál tiene mayor "
+        "frecuencia y qué color aproximado corresponde a cada una?",
+        "La de 500 nm, que se ve verde; la de 700 nm se ve roja",
+        "Longitud de onda y frecuencia varían en sentido inverso.\n\n"
+        "1) Como la rapidez es la misma, la de menor longitud de onda tiene "
+        "mayor frecuencia: 500 nm supera en frecuencia a 700 nm.\n"
+        "2) Dentro del visible, las longitudes de onda mayores corresponden al "
+        "rojo y las menores, al violeta.\n"
+        "3) Unos 700 nm caen en el rojo, y unos 500 nm, en la zona verde del "
+        "espectro.\n\n"
+        "Como la energía crece con la frecuencia, la luz verde de este ejemplo "
+        "es también la más energética de las dos.",
+        [
+            ("La de 700 nm, que se ve violeta; la de 500 nm se ve roja",
+             "Invierte las dos cosas: mayor longitud de onda es menor frecuencia, y corresponde al rojo, no al violeta."),
+            ("Ambas tienen la misma frecuencia porque las dos son luz visible",
+             "Ser visible define un intervalo, no un valor único: dentro de él la frecuencia varía y produce los distintos colores."),
+            ("La de 500 nm, que se ve azul; la de 700 nm se ve amarilla",
+             "El orden de frecuencias es correcto, pero 700 nm corresponde al rojo y 500 nm queda en el verde, no en el azul."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Un panel solar convierte radiación electromagnética en energía "
+        "eléctrica. ¿De qué región del espectro proviene la mayor parte de la "
+        "energía que aprovecha?",
+        "De la luz visible y del infrarrojo cercano",
+        "El panel se diseña para la radiación que efectivamente llega en "
+        "cantidad.\n\n"
+        "1) El Sol emite en todo el espectro, pero su emisión alcanza el máximo "
+        "en el visible.\n"
+        "2) La atmósfera absorbe buena parte del ultravioleta y bloquea rangos "
+        "del infrarrojo, dejando pasar sobre todo el visible y el infrarrojo "
+        "cercano.\n"
+        "3) Los materiales de los paneles se eligen para responder justamente a "
+        "esa franja, que es donde está disponible la energía.\n\n"
+        "Por eso un panel produce menos con cielo nublado: no es cuestión de "
+        "calor sino de cuánta radiación de esas longitudes de onda llega.",
+        [
+            ("De los rayos gamma solares, por ser los más energéticos",
+             "Prácticamente no llegan a la superficie, y su cantidad es despreciable frente al visible."),
+            ("De las ondas de radio provenientes del Sol",
+             "El Sol emite en radio, pero con una potencia insignificante comparada con la del visible."),
+            ("Del ultravioleta, porque es la radiación solar que más energía transporta por unidad de superficie",
+             "El ultravioleta es más energético por porción, pero llega en mucha menor cantidad y la atmósfera absorbe buena parte."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Al alejarse de una fuente puntual de luz, la intensidad recibida "
+        "disminuye. ¿Por qué ocurre esto si la energía no se destruye?",
+        "La misma energía se reparte sobre una superficie mayor",
+        "La intensidad es energía por unidad de superficie y por unidad de "
+        "tiempo.\n\n"
+        "1) La fuente emite en todas direcciones una cantidad fija de energía "
+        "por segundo.\n"
+        "2) A cierta distancia, esa energía atraviesa una superficie esférica "
+        "imaginaria; al doble de distancia, la esfera tiene cuatro veces más "
+        "área.\n"
+        "3) La misma energía repartida sobre cuatro veces más superficie da una "
+        "cuarta parte de intensidad en cada punto.\n\n"
+        "La energía se conserva: lo que cambia es cuánta capta un detector de "
+        "tamaño fijo. Por eso los telescopios grandes ven objetos más débiles.",
+        [
+            ("La energía se va transformando en calor mientras la onda avanza",
+             "En el vacío no hay nada que absorba energía, y la disminución de intensidad ocurre igual."),
+            ("La onda pierde frecuencia y por lo tanto energía a medida que avanza",
+             "La frecuencia no cambia por el solo hecho de propagarse: la luz roja lejana sigue siendo roja."),
+            ("La rapidez de la onda disminuye con la distancia y llega menos energía por segundo",
+             "La rapidez se mantiene constante en un mismo medio, sin importar cuánto haya recorrido."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "Los controles de acceso de algunos edificios usan tarjetas que "
+        "funcionan al acercarlas al lector, sin contacto. ¿Qué tipo de onda "
+        "interviene?",
+        "Ondas de radio de corto alcance",
+        "El sistema necesita una onda que atraviese el plástico y funcione a "
+        "pocos centímetros.\n\n"
+        "1) El lector emite una onda de radio que induce una corriente en la "
+        "antena interna de la tarjeta.\n"
+        "2) Esa corriente alimenta el chip, que responde enviando su "
+        "identificador por la misma vía.\n"
+        "3) La tarjeta no lleva batería: toda la energía la recibe del lector, y "
+        "por eso el alcance es de pocos centímetros.\n\n"
+        "El mismo principio opera en las etiquetas antirrobo de las tiendas y en "
+        "los pagos sin contacto.",
+        [
+            ("Ondas sonoras de alta frecuencia",
+             "El sonido no atraviesa bien y exigiría un medio material continuo entre la tarjeta y el lector."),
+            ("Rayos X de baja intensidad",
+             "Serían radiación ionizante innecesaria y peligrosa para un uso cotidiano de este tipo."),
+            ("Luz visible emitida por el lector y reflejada por la tarjeta",
+             "La luz visible no atraviesa el plástico opaco de la tarjeta ni podría alimentar el chip interno."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "facil",
+        "¿Cuál es la relación entre la frecuencia y la longitud de onda de una "
+        "onda electromagnética que viaja en el vacío?",
+        "Son inversamente proporcionales",
+        "La rapidez en el vacío es constante y liga ambas magnitudes.\n\n"
+        "1) El producto de la longitud de onda por la frecuencia es igual a la "
+        "rapidez de propagación.\n"
+        "2) En el vacío esa rapidez es la misma para toda onda "
+        "electromagnética, así que el producto es constante.\n"
+        "3) Si un factor aumenta, el otro debe disminuir en la misma "
+        "proporción: esa es la definición de proporcionalidad inversa.\n\n"
+        "Por eso el espectro se puede ordenar indistintamente por frecuencia "
+        "creciente o por longitud de onda decreciente: es el mismo orden.",
+        [
+            ("Son directamente proporcionales",
+             "Si crecieran juntas, su producto no podría mantenerse igual a una rapidez constante."),
+            ("Son independientes entre sí",
+             "Están ligadas por la rapidez de propagación: fijada una, la otra queda determinada."),
+            ("Su suma es constante e igual a la rapidez de la luz",
+             "La relación es un producto, no una suma, y además las dos magnitudes tienen unidades distintas."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Un técnico afirma que para captar mejor una emisora lejana conviene "
+        "orientar la antena. ¿Qué supone esa recomendación?",
+        "Que la señal llega con una orientación definida en el espacio",
+        "Una antena no capta igual desde todas las direcciones ni en cualquier "
+        "posición.\n\n"
+        "1) La onda que llega hace oscilar las cargas de la antena, y ese "
+        "efecto es máximo cuando la antena está alineada con la dirección en que "
+        "oscila el campo eléctrico de la onda.\n"
+        "2) Si la antena queda perpendicular a esa dirección, la corriente "
+        "inducida es mínima y la señal se recibe débil.\n"
+        "3) Por eso girar la antena cambia la calidad de la recepción, y las "
+        "antenas de televisión terrestre se instalan apuntando a la torre "
+        "emisora.\n\n"
+        "La recomendación supone, entonces, que la orientación de la onda y la "
+        "de la antena importan, y así es.",
+        [
+            ("Que la antena emite una señal hacia la emisora para pedirle más potencia",
+             "Una antena receptora no emite nada hacia la emisora: solo capta lo que llega."),
+            ("Que orientarla acorta la distancia que recorre la onda",
+             "La distancia no cambia por girar la antena unos centímetros."),
+            ("Que al orientarla se modifica la frecuencia recibida y se sintoniza mejor la emisora",
+             "La sintonía se ajusta con el circuito del receptor; la orientación afecta cuánta señal se capta, no su frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "medio",
+        "Un objeto emite radiación electromagnética cuya intensidad máxima se "
+        "desplaza hacia longitudes de onda más cortas a medida que se calienta. "
+        "Un metal pasa de rojo a anaranjado y luego a blanco al calentarse. "
+        "¿Qué muestra esa secuencia?",
+        "Que a mayor temperatura la emisión se corre hacia frecuencias mayores",
+        "El color con que brilla un cuerpo caliente informa su temperatura.\n\n"
+        "1) Todo cuerpo emite radiación, y la longitud de onda en que emite más "
+        "depende de su temperatura.\n"
+        "2) Al calentarse, ese máximo se desplaza hacia longitudes de onda "
+        "menores, es decir, hacia frecuencias mayores: del infrarrojo al rojo, "
+        "luego al anaranjado.\n"
+        "3) El blanco aparece cuando la emisión se reparte por todo el visible y "
+        "el ojo suma todos los colores.\n\n"
+        "La misma relación permite deducir la temperatura de una estrella por su "
+        "color: las azules son más calientes que las rojas.",
+        [
+            ("Que el metal cambia de composición al calentarse",
+             "El metal sigue siendo el mismo: lo que cambia es la distribución de la radiación que emite."),
+            ("Que la emisión se detiene en el infrarrojo y comienza en el visible",
+             "La emisión infrarroja continúa: lo que se desplaza es el máximo, no el rango completo."),
+            ("Que a mayor temperatura el metal refleja mejor la luz del ambiente y por eso se ve más claro",
+             "El brillo proviene de radiación emitida por el propio metal, no de luz reflejada: se ve igual en una pieza a oscuras."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "El color de una estrella permite estimar su temperatura superficial. "
+        "Dos estrellas, una azulada y otra rojiza, se observan con el mismo "
+        "brillo aparente desde la Tierra. ¿Qué se puede inferir?",
+        "La azulada es más caliente, pero no se sabe cuál está más lejos",
+        "Hay que separar lo que el color informa de lo que el brillo aparente no "
+        "informa.\n\n"
+        "1) El COLOR depende de la temperatura superficial: el azul indica mayor "
+        "temperatura que el rojo. Esa inferencia es directa.\n"
+        "2) El BRILLO APARENTE depende de dos cosas a la vez: cuánta energía "
+        "emite la estrella y a qué distancia está.\n"
+        "3) Que ambas se vean igual de brillantes no permite separar esos dos "
+        "factores: una estrella muy luminosa y lejana puede verse igual que una "
+        "débil y cercana.\n\n"
+        "Para estimar la distancia hace falta otra medición independiente, como "
+        "el paralaje.",
+        [
+            ("La azulada es más caliente y está más cerca",
+             "La cercanía no se deduce del brillo aparente: podría estar mucho más lejos y ser mucho más luminosa."),
+            ("Las dos tienen la misma temperatura, porque se ven igual de brillantes",
+             "El brillo no informa temperatura: es el color el que lo hace, y ahí las dos difieren."),
+            ("La rojiza es más caliente, porque el rojo se asocia al calor en la experiencia cotidiana",
+             "La intuición cotidiana engaña: en la emisión térmica el azul corresponde a mayor temperatura que el rojo."),
+        ],
+    ),
+    _q(
+        "cie_ondas", "dificil",
+        "Un fabricante afirma que su protector solar 'bloquea el 99% de la "
+        "radiación'. ¿Qué precisión falta en esa afirmación para que sea "
+        "informativa?",
+        "De qué radiación se trata, porque el riesgo está en el ultravioleta",
+        "Bloquear radiación en general no dice nada sobre la protección "
+        "efectiva.\n\n"
+        "1) La radiación solar que llega incluye visible, infrarrojo y "
+        "ultravioleta. Solo esta última tiene energía suficiente para dañar el "
+        "ADN de la piel.\n"
+        "2) Un producto podría bloquear casi toda la radiación total y aun así "
+        "dejar pasar buena parte del ultravioleta, porque el visible y el "
+        "infrarrojo aportan la mayor parte de la energía.\n"
+        "3) La información útil es qué fracción del ultravioleta detiene, y "
+        "distinguiendo además sus dos rangos, que penetran a distinta "
+        "profundidad.\n\n"
+        "Por eso el índice de protección se define sobre el ultravioleta y no "
+        "sobre la radiación total.",
+        [
+            ("Cuánto tiempo dura la protección después de aplicado",
+             "Es un dato relevante en la práctica, pero no corrige el problema de fondo de la afirmación."),
+            ("Si el bloqueo se logra por absorción o por reflexión",
+             "El mecanismo es secundario: lo determinante es qué región del espectro se detiene."),
+            ("A qué distancia del Sol se hizo la medición del bloqueo",
+             "La medición se realiza en laboratorio con fuentes controladas; la distancia al Sol no es una variable del ensayo."),
+            ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Ondas": absorción, reflexión, refracción, Doppler,
+# interferencia, difracción y formación de colores.
+#
+# El temario separa estos fenómenos de los elementos de la onda, y pide el
+# efecto Doppler, la interferencia y la difracción "en términos cualitativos".
+# Por eso el nodo pregunta por explicaciones y predicciones y no por cálculos
+# de desfase o de ángulos de difracción.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ondas", "medio",
+        "Una emisora de radio y un teléfono móvil emiten ondas de distinta "
+        "frecuencia desde el mismo lugar. ¿Qué magnitud es necesariamente igual "
+        "para ambas señales mientras viajan por el aire?",
+        "La rapidez de propagación",
+        "En un mismo medio, todas las ondas electromagnéticas comparten una "
+        "sola magnitud.\n\n"
+        "1) La rapidez en el aire es prácticamente la del vacío para toda onda "
+        "electromagnética, sin importar su frecuencia.\n"
+        "2) La frecuencia es distinta por definición del enunciado, y como el "
+        "producto de longitud de onda por frecuencia es la rapidez, la longitud "
+        "de onda también difiere.\n"
+        "3) La amplitud depende de la potencia de cada emisor, que no tiene por "
+        "qué coincidir.\n\n"
+        "Queda entonces una sola magnitud forzosamente igual: la rapidez.",
+        [
+            ("La longitud de onda",
+             "Con rapidez igual y frecuencias distintas, las longitudes de onda son necesariamente distintas."),
+            ("La amplitud", "Depende de la potencia de cada emisor y no hay razón para que coincida."),
+            ("La energía que transporta cada porción de radiación",
+             "Esa energía depende de la frecuencia, que el enunciado declara distinta para cada señal."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Una camiseta se ve roja cuando la ilumina luz blanca. ¿Qué ocurre con "
+        "la luz que llega a la tela?",
+        "Refleja el rojo y absorbe los demás colores",
+        "El color de un objeto opaco lo determina qué parte de la luz devuelve.\n\n"
+        "1) La luz blanca contiene todos los colores del visible.\n"
+        "2) El pigmento de la tela absorbe la mayoría de esas componentes y "
+        "convierte esa energía en calor.\n"
+        "3) La componente roja no es absorbida sino reflejada, y es la única "
+        "que llega al ojo: por eso vemos rojo.\n\n"
+        "De ahí que la misma camiseta se vea negruzca bajo una luz que no "
+        "contenga rojo: no hay nada que pueda reflejar.",
+        [
+            ("Emite luz roja propia al ser iluminada",
+             "La tela no emite: solo devuelve parte de la luz que recibe. A oscuras no se ve de ningún color."),
+            ("Absorbe el rojo y refleja los demás colores",
+             "Está invertido: si absorbiera el rojo, ese sería justamente el color que NO veríamos."),
+            ("Refleja toda la luz que recibe, pero el ojo solo distingue la componente roja",
+             "Si reflejara toda la luz se vería blanca; el ojo distingue perfectamente los demás colores cuando están presentes."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Al atravesar un prisma, la luz blanca se separa en una franja de "
+        "colores. ¿Cómo se llama ese fenómeno?",
+        "Dispersión",
+        "El nombre designa la separación de la luz en sus componentes.\n\n"
+        "1) La luz blanca es una mezcla de todas las longitudes de onda del "
+        "visible.\n"
+        "2) Al pasar del aire al vidrio, cada una se desvía un ángulo algo "
+        "distinto, porque la rapidez dentro del vidrio depende ligeramente de la "
+        "longitud de onda.\n"
+        "3) Como los ángulos difieren, los colores salen separados: eso es la "
+        "DISPERSIÓN.\n\n"
+        "El violeta se desvía más y el rojo menos, y de ahí el orden de la "
+        "franja que aparece.",
+        [
+            ("Difracción",
+             "La difracción es el desvío de una onda al rodear un obstáculo o pasar por una abertura estrecha."),
+            ("Reflexión total interna",
+             "Ese fenómeno mantiene la luz dentro de un medio; aquí la luz sale del prisma separada en colores."),
+            ("Absorción selectiva de las longitudes de onda por parte del vidrio",
+             "Si el vidrio absorbiera, faltarían colores en la salida; en la dispersión están todos, solo que separados."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "El arcoíris aparece cuando hay gotas de agua suspendidas en el aire y "
+        "el Sol a espaldas del observador. ¿Qué fenómenos intervienen en las "
+        "gotas?",
+        "Refracción y reflexión de la luz dentro de cada gota",
+        "Cada gota funciona como un pequeño prisma esférico.\n\n"
+        "1) La luz solar entra en la gota y se REFRACTA, separándose en "
+        "colores porque cada longitud de onda se desvía distinto.\n"
+        "2) Dentro de la gota se REFLEJA en la cara posterior.\n"
+        "3) Al salir vuelve a refractarse, lo que aumenta aún más la "
+        "separación.\n\n"
+        "Cada color emerge en un ángulo característico, y por eso el observador "
+        "recibe cada uno desde gotas ubicadas a distinta altura: de ahí el arco "
+        "con los colores ordenados.",
+        [
+            ("Solo reflexión en la superficie exterior de las gotas",
+             "Una reflexión exterior devolvería luz blanca, sin separar los colores."),
+            ("Absorción de la luz por el agua y posterior emisión de colores",
+             "El agua no emite luz coloreada: los colores ya vienen en la luz solar y solo se separan."),
+            ("Difracción de la luz al pasar entre las gotas suspendidas en el aire",
+             "La difracción produce otros fenómenos ópticos, pero el arcoíris se explica por refracción y reflexión dentro de cada gota."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Una ambulancia se acerca a un observador y luego se aleja. La sirena "
+        "se percibe primero más aguda y después más grave. ¿Cómo se llama ese "
+        "fenómeno?",
+        "Efecto Doppler",
+        "El fenómeno consiste en un cambio de frecuencia percibida por el "
+        "movimiento relativo entre fuente y observador.\n\n"
+        "1) Cuando la fuente se acerca, las crestas sucesivas se emiten desde "
+        "posiciones cada vez más cercanas y llegan más juntas: la frecuencia "
+        "percibida AUMENTA.\n"
+        "2) Cuando se aleja, ocurre lo contrario y la frecuencia percibida "
+        "disminuye.\n"
+        "3) La frecuencia emitida por la sirena no cambia en ningún momento: lo "
+        "que cambia es la que recibe el observador.\n\n"
+        "El mismo efecto sobre ondas electromagnéticas es el que produce el "
+        "corrimiento al rojo de las galaxias y el que usan los radares de "
+        "velocidad.",
+        [
+            ("Efecto de interferencia entre las ondas emitidas",
+             "La interferencia resulta de la superposición de dos ondas, no del movimiento de una fuente."),
+            ("Difracción del sonido al rodear los vehículos de la calle",
+             "La difracción permite oír la sirena sin ver la ambulancia, pero no altera la frecuencia percibida."),
+            ("Refracción de las ondas al atravesar capas de aire a distinta temperatura",
+             "La refracción desvía la dirección de propagación; no cambia la frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Un rayo de luz pasa del aire al agua. ¿Qué le ocurre?",
+        "Disminuye su rapidez y cambia de dirección",
+        "La refracción es consecuencia directa del cambio de rapidez.\n\n"
+        "1) En el agua la luz se propaga más lento que en el aire.\n"
+        "2) Si el rayo llega inclinado respecto de la normal, un borde del "
+        "frente de onda entra antes que el otro y se frena antes: el frente gira.\n"
+        "3) El resultado es que el rayo se acerca a la normal al entrar en el "
+        "medio más lento.\n\n"
+        "Si el rayo llegara perpendicular a la superficie, cambiaría su rapidez "
+        "igual, pero no su dirección: no habría nada que girar.",
+        [
+            ("Aumenta su rapidez y se aleja de la normal",
+             "Eso ocurre al pasar del agua al aire, es decir, hacia el medio en que la luz va más rápido."),
+            ("Mantiene su rapidez pero cambia de color",
+             "La rapidez sí cambia, y el color, que depende de la frecuencia, se mantiene."),
+            ("Se refleja por completo y no logra entrar en el agua",
+             "La reflexión total ocurre al intentar salir de un medio más lento con un ángulo grande, no al entrar en él."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "El cielo se ve azul durante el día. ¿Cuál es la explicación?",
+        "La atmósfera desvía más las longitudes de onda cortas",
+        "La luz que llega desde una zona del cielo distinta del Sol es luz "
+        "desviada por la atmósfera.\n\n"
+        "1) Las moléculas del aire dispersan la luz solar en todas "
+        "direcciones, pero no por igual: la dispersión es mucho más eficiente "
+        "para longitudes de onda cortas.\n"
+        "2) El azul y el violeta se desvían mucho más que el rojo.\n"
+        "3) Al mirar el cielo lejos del Sol, lo que llega es sobre todo esa luz "
+        "desviada, predominantemente azul.\n\n"
+        "El violeta se dispersa aún más, pero el Sol emite menos violeta y el "
+        "ojo es menos sensible a él, así que el resultado neto se percibe azul.",
+        [
+            ("El aire es de color azul y transmite ese color a la luz",
+             "El aire es incoloro: en una columna corta se ve transparente, y el color aparece por dispersión a gran escala."),
+            ("El azul del océano se refleja en la atmósfera",
+             "El cielo se ve azul también sobre el desierto y en el interior de los continentes."),
+            ("La capa de ozono absorbe todos los colores salvo el azul, que llega hasta el observador",
+             "El ozono absorbe sobre todo ultravioleta; si absorbiera el resto del visible, el Sol no se vería blanco."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Al atardecer el Sol se ve rojizo y el cielo cercano al horizonte toma "
+        "tonos anaranjados. ¿Cómo se explica con el mismo mecanismo que hace "
+        "azul el cielo de mediodía?",
+        "La luz recorre más atmósfera y pierde las componentes azules",
+        "La explicación es la misma dispersión, cambiando la longitud del "
+        "recorrido.\n\n"
+        "1) Con el Sol bajo, sus rayos atraviesan un espesor de atmósfera mucho "
+        "mayor que al mediodía.\n"
+        "2) A lo largo de ese trayecto, las componentes azules son dispersadas "
+        "una y otra vez y terminan desviadas fuera de la línea de visión.\n"
+        "3) Lo que llega directamente al observador queda empobrecido en azul y "
+        "enriquecido en rojo y naranja.\n\n"
+        "Es el mismo fenómeno visto desde el otro lado: de día miramos la luz "
+        "dispersada, al atardecer miramos la que sobrevivió sin dispersarse.",
+        [
+            ("El Sol emite luz más roja al final del día",
+             "La emisión del Sol no cambia según la hora: lo que cambia es el trayecto de la luz por la atmósfera."),
+            ("La temperatura del aire disminuye y eso enrojece la luz",
+             "La temperatura del aire no altera el color de la luz que lo atraviesa."),
+            ("El polvo y la contaminación son los únicos responsables del color del atardecer",
+             "Intensifican el efecto, pero el atardecer se ve rojizo también en aire muy limpio: la causa es el mayor recorrido."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Un radar de tránsito emite una onda hacia un vehículo y analiza la que "
+        "regresa. ¿Cómo determina la rapidez del vehículo?",
+        "Compara la frecuencia emitida con la que regresa",
+        "El instrumento aprovecha el efecto Doppler sobre ondas "
+        "electromagnéticas.\n\n"
+        "1) Si el vehículo se acerca, refleja la onda como una fuente en "
+        "movimiento: la señal que vuelve tiene frecuencia MAYOR que la "
+        "emitida.\n"
+        "2) Si se aleja, la frecuencia de retorno es menor.\n"
+        "3) El tamaño de esa diferencia es proporcional a la rapidez del "
+        "vehículo, así que medirla equivale a medir la rapidez.\n\n"
+        "El mismo equipo puede además calcular la distancia con el tiempo de ida "
+        "y vuelta, pero son dos mediciones distintas.",
+        [
+            ("Mide el tiempo que tarda la onda en ir y volver",
+             "Ese cálculo entrega la distancia al vehículo, no su rapidez, salvo que se repita y se compare."),
+            ("Mide cuánta energía absorbe la carrocería del vehículo",
+             "La absorción depende del material y del tamaño del vehículo, no de su rapidez."),
+            ("Detecta el cambio de amplitud de la onda reflejada, que crece cuando el auto se acerca",
+             "La amplitud crece al acercarse por la menor distancia, pero eso depende también del tamaño del vehículo y no mide rapidez."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Se puede escuchar a alguien que habla al otro lado de una esquina, "
+        "aunque no se lo vea. ¿Qué diferencia entre el sonido y la luz explica "
+        "esa asimetría?",
+        "La longitud de onda del sonido es comparable al tamaño del obstáculo",
+        "La difracción es apreciable cuando la longitud de onda no es mucho "
+        "menor que el obstáculo o la abertura.\n\n"
+        "1) El sonido audible tiene longitudes de onda de centímetros a metros: "
+        "del orden del ancho de una puerta o una esquina. Por eso las rodea con "
+        "facilidad.\n"
+        "2) La luz visible tiene longitudes de onda de menos de un micrómetro: "
+        "millones de veces menores que el obstáculo. Su difracción es "
+        "imperceptible y proyecta sombras nítidas.\n"
+        "3) La diferencia no está en la naturaleza de la onda sino en la "
+        "relación entre su longitud de onda y el tamaño del obstáculo.\n\n"
+        "Una onda de radio de varios metros rodea una esquina igual que el "
+        "sonido, y por eso la radio se escucha dentro de un edificio.",
+        [
+            ("El sonido viaja más rápido y por eso alcanza a rodear la esquina",
+             "El sonido viaja muchísimo más lento que la luz: la rapidez no explica el fenómeno."),
+            ("El sonido es una onda longitudinal y la luz una onda transversal",
+             "Esa diferencia existe, pero no determina cuánto se difracta una onda."),
+            ("El aire transmite el sonido en todas direcciones mientras la luz solo se propaga en línea recta",
+             "La luz también se difracta; lo que ocurre es que su longitud de onda la hace inapreciable a escala cotidiana."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "La superficie de un disco compacto muestra colores que cambian según "
+        "el ángulo desde el que se mire, aunque el disco es de un solo material. "
+        "¿Qué lo produce?",
+        "La difracción en los surcos, que separa los colores",
+        "El disco tiene una estructura periódica muy fina que se comporta como "
+        "una red de difracción.\n\n"
+        "1) Los surcos están separados por distancias comparables a la longitud "
+        "de onda de la luz visible.\n"
+        "2) La luz que se refleja en surcos vecinos interfiere, y para cada "
+        "longitud de onda la interferencia es constructiva en una dirección "
+        "distinta.\n"
+        "3) El resultado es que cada color sale hacia un ángulo propio, y por "
+        "eso el color observado cambia al girar el disco.\n\n"
+        "No hay pigmentos involucrados: el color proviene de la estructura, igual "
+        "que en las alas de algunas mariposas.",
+        [
+            ("El plástico contiene pigmentos que cambian con la iluminación",
+             "El material es incoloro: el efecto desaparece si se destruye la estructura de surcos."),
+            ("La luz se absorbe y se reemite con distinto color según el ángulo",
+             "La absorción y reemisión no dependen del ángulo de observación de esa manera."),
+            ("La superficie metálica del disco refleja cada color con distinta intensidad según su brillo",
+             "Una superficie metálica lisa refleja todos los colores por igual: lo determinante es la estructura periódica."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Una burbuja de jabón muestra franjas de colores cambiantes. La película "
+        "es transparente e incolora. ¿Qué explica los colores?",
+        "La interferencia entre la luz reflejada en sus dos caras",
+        "La película es tan delgada que la luz reflejada en cada cara puede "
+        "superponerse.\n\n"
+        "1) Parte de la luz se refleja en la cara exterior y parte en la "
+        "interior, tras recorrer el espesor de la película dos veces.\n"
+        "2) Las dos ondas reflejadas se superponen. Según el espesor, para cada "
+        "longitud de onda la interferencia resulta constructiva o destructiva.\n"
+        "3) Los colores reforzados dependen entonces del espesor local, que "
+        "varía y cambia mientras el jabón escurre: de ahí las franjas móviles.\n\n"
+        "El mismo principio se aplica a las capas antirreflejo de los anteojos, "
+        "diseñadas para que la reflexión se cancele.",
+        [
+            ("La dispersión de la luz al atravesar el jabón, como en un prisma",
+             "Un prisma separa colores por refracción y el efecto no dependería del espesor ni cambiaría con el escurrimiento."),
+            ("Los pigmentos del jabón, que se ordenan al formarse la burbuja",
+             "El jabón es incoloro; el color aparece únicamente cuando la película es muy delgada."),
+            ("La absorción selectiva de ciertos colores por la película de agua",
+             "Una película tan delgada absorbe una fracción despreciable, y la absorción no explicaría las franjas cambiantes."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "En un día caluroso, sobre el asfalto parece haber charcos de agua que "
+        "desaparecen al acercarse. ¿Qué produce ese espejismo?",
+        "La refracción en capas de aire a distinta temperatura",
+        "El aire no es un medio uniforme cuando hay un fuerte gradiente de "
+        "temperatura.\n\n"
+        "1) El asfalto calienta la capa de aire inmediatamente encima, que queda "
+        "menos densa que la de arriba.\n"
+        "2) La luz que viaja casi rasante se desvía gradualmente al atravesar "
+        "esas capas, y termina curvándose hacia arriba.\n"
+        "3) Al observador le llega luz proveniente del cielo por una trayectoria "
+        "curva, pero su sistema visual la prolonga en línea recta y la ubica "
+        "sobre el suelo: parece un charco reflejando el cielo.\n\n"
+        "Es el mismo mecanismo por el que un lápiz se ve quebrado en un vaso con "
+        "agua, con la diferencia de que aquí el cambio de medio es gradual.",
+        [
+            ("La reflexión de la luz en una capa de vapor de agua sobre el asfalto",
+             "El fenómeno se observa igual con aire muy seco: no hace falta vapor."),
+            ("La difracción de la luz solar al rozar la superficie rugosa del pavimento",
+             "La difracción en una superficie rugosa dispersa la luz, pero no produce una imagen invertida del cielo."),
+            ("La emisión de luz por el asfalto caliente, que se percibe como brillo en la lejanía",
+             "El asfalto caliente emite en el infrarrojo, invisible al ojo: lo que se ve es luz del cielo desviada."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Un filtro rojo colocado delante de una lámpara blanca deja salir solo "
+        "luz roja. Si detrás de ese filtro se coloca uno azul, ¿qué se observa?",
+        "Prácticamente nada pasa",
+        "Cada filtro absorbe todo salvo su propio color, y los dos criterios se "
+        "aplican en cadena.\n\n"
+        "1) El filtro rojo deja pasar solo la componente roja y absorbe el "
+        "resto.\n"
+        "2) Al filtro azul le llega entonces únicamente luz roja, y su función "
+        "es absorber justamente todo lo que no sea azul.\n"
+        "3) Por lo tanto absorbe también esa luz roja, y casi nada logra "
+        "atravesar el conjunto.\n\n"
+        "Es una buena demostración de que un filtro RESTA componentes: no puede "
+        "agregar un color que ya no está en la luz que le llega.",
+        [
+            ("Se obtiene luz violeta, mezcla de rojo y azul",
+             "Los filtros no suman colores: cada uno resta lo que absorbe. Para obtener violeta hay que sumar dos luces, no filtrarlas en serie."),
+            ("Se obtiene luz blanca, porque los dos filtros se compensan",
+             "Un filtro nunca devuelve componentes que el anterior ya eliminó."),
+            ("Se obtiene luz roja algo más tenue, porque el filtro azul solo reduce la intensidad",
+             "El filtro azul no atenúa de manera pareja: absorbe específicamente el rojo, que es lo único que le llega."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Se compara la luz de una galaxia lejana con la de una fuente de "
+        "laboratorio del mismo elemento. Las líneas de la galaxia aparecen "
+        "corridas hacia el rojo. ¿Qué fenómeno lo explica y qué indica?",
+        "Efecto Doppler, e indica que la galaxia se aleja",
+        "Es el mismo fenómeno de la sirena, aplicado a ondas "
+        "electromagnéticas.\n\n"
+        "1) Cuando la fuente se aleja del observador, las crestas llegan más "
+        "espaciadas: la longitud de onda recibida es MAYOR que la emitida.\n"
+        "2) En el visible, un aumento de longitud de onda corre las líneas hacia "
+        "el extremo rojo del espectro.\n"
+        "3) Que las líneas del mismo elemento aparezcan corridas, conservando su "
+        "patrón, indica movimiento de alejamiento y no un cambio de "
+        "composición.\n\n"
+        "Es la observación sobre la que se apoya la expansión del universo.",
+        [
+            ("Dispersión, e indica que la luz atravesó mucho polvo interestelar",
+             "El polvo enrojece la luz atenuando el azul, pero no desplaza la posición de las líneas espectrales."),
+            ("Difracción, e indica que la luz pasó junto a un objeto masivo",
+             "La difracción no corre las líneas de un espectro; el desplazamiento en bloque corresponde al efecto Doppler."),
+            ("Absorción, e indica que la galaxia contiene elementos distintos de los del laboratorio",
+             "El patrón de líneas se conserva completo: si fueran otros elementos, cambiarían las separaciones relativas."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un estudiante afirma que la luz cambia de color al pasar del aire al "
+        "agua, porque cambia su longitud de onda. ¿Cómo se evalúa esa "
+        "afirmación?",
+        "Es incorrecta: el color depende de la frecuencia, que no cambia",
+        "El razonamiento tiene un paso correcto y una conclusión equivocada.\n\n"
+        "1) Es cierto que la longitud de onda disminuye dentro del agua, porque "
+        "la rapidez es menor y la frecuencia se mantiene.\n"
+        "2) Pero lo que determina el color percibido es la FRECUENCIA, y esa la "
+        "impone la fuente: no cambia al pasar de un medio a otro.\n"
+        "3) Por eso un objeto rojo bajo el agua se sigue viendo rojo, y la luz "
+        "recupera su longitud de onda original al volver al aire.\n\n"
+        "La confusión es frecuente porque en el aire ambos parámetros van "
+        "ligados y suelen usarse como sinónimos.",
+        [
+            ("Es correcta: al cambiar la longitud de onda cambia necesariamente el color",
+             "La correspondencia entre longitud de onda y color vale dentro de un mismo medio; lo que fija el color es la frecuencia."),
+            ("Es incorrecta, porque la longitud de onda en realidad no cambia al entrar en el agua",
+             "Sí cambia: con la frecuencia fija y una rapidez menor, la longitud de onda debe disminuir."),
+            ("Es correcta solo para la luz roja, cuya longitud de onda es más sensible al cambio de medio",
+             "El cambio de longitud de onda ocurre para todos los colores, y en ninguno de ellos cambia la frecuencia."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se hace pasar luz de un solo color por dos rendijas muy juntas y en una "
+        "pantalla aparecen franjas claras y oscuras alternadas. ¿Qué muestra "
+        "este resultado?",
+        "Que las ondas de ambas rendijas se suman y se cancelan según el punto",
+        "El patrón solo se explica si lo que llega a la pantalla puede anularse "
+        "consigo mismo.\n\n"
+        "1) Cada rendija se comporta como una fuente, y a cada punto de la "
+        "pantalla llegan dos ondas que recorrieron distancias algo distintas.\n"
+        "2) Donde esa diferencia hace que lleguen en fase, las ondas se suman y "
+        "aparece una franja CLARA: interferencia constructiva.\n"
+        "3) Donde llegan en oposición, se cancelan y aparece una franja OSCURA: "
+        "interferencia destructiva.\n\n"
+        "El punto notable es que sumar luz a luz puede dar oscuridad, algo que "
+        "un modelo de partículas independientes no explicaría.",
+        [
+            ("Que la luz se absorbe en algunas zonas de la pantalla y en otras no",
+             "La pantalla es uniforme: las zonas oscuras aparecen porque llega menos luz, no porque el material absorba distinto."),
+            ("Que cada rendija produce su propia imagen y las dos se superponen",
+             "Dos imágenes superpuestas darían una zona más iluminada en el traslape, nunca franjas oscuras."),
+            ("Que la luz se dispersa en colores al atravesar las rendijas y algunos no llegan a la pantalla",
+             "El enunciado precisa que la luz es de un solo color: no hay colores que separar."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un objeto se ve blanco bajo luz solar. Si se lo ilumina únicamente con "
+        "luz roja en una pieza oscura, ¿de qué color se verá y por qué?",
+        "Rojo, porque refleja toda la luz que recibe",
+        "Un objeto solo puede devolver componentes que estén presentes en la luz "
+        "que lo ilumina.\n\n"
+        "1) Verse blanco bajo luz solar significa que refleja de manera pareja "
+        "todas las componentes del visible.\n"
+        "2) Si la única luz disponible es roja, no hay otras componentes que "
+        "reflejar.\n"
+        "3) El objeto devuelve entonces esa luz roja, y así se ve.\n\n"
+        "La conclusión general es que el color percibido depende de dos cosas: "
+        "las propiedades del objeto y la composición de la luz que lo ilumina. "
+        "Por eso la ropa se ve distinta bajo la luz de una tienda y a la luz del "
+        "día.",
+        [
+            ("Blanco, porque su color es una propiedad del objeto",
+             "El color no es una propiedad independiente de la iluminación: sin luz blanca no puede verse blanco."),
+            ("Negro, porque no hay luz blanca que reflejar",
+             "Sí hay luz que reflejar: la roja, y el objeto la devuelve porque refleja todas las componentes."),
+            ("Rosado, porque el blanco del objeto se mezcla con el rojo de la iluminación",
+             "El objeto no aporta luz blanca propia que pudiera mezclarse: solo devuelve lo que recibe."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Los anteojos de mejor calidad llevan una capa muy delgada sobre el "
+        "vidrio que reduce los reflejos. ¿En qué principio se basa ese "
+        "recubrimiento?",
+        "En que las dos reflexiones se cancelan por interferencia",
+        "La capa se diseña con un espesor calculado para producir interferencia "
+        "destructiva.\n\n"
+        "1) Parte de la luz se refleja en la superficie de la capa y parte en la "
+        "frontera entre la capa y el vidrio.\n"
+        "2) Si el espesor es el adecuado, esas dos ondas reflejadas llegan en "
+        "oposición y se anulan entre sí.\n"
+        "3) Como la energía no desaparece, la luz que no se refleja es la que "
+        "atraviesa: el lente transmite más y refleja menos.\n\n"
+        "El espesor solo puede optimizarse para una franja del espectro, y por "
+        "eso estos lentes suelen mostrar un reflejo residual verdoso o "
+        "violáceo.",
+        [
+            ("En que la capa absorbe la luz que llega al lente",
+             "Absorber reduciría también la luz transmitida, que es justamente lo que se quiere conservar."),
+            ("En que la capa es más lisa que el vidrio y evita la reflexión difusa",
+             "El vidrio pulido ya es liso; el reflejo que se combate es especular, no difuso."),
+            ("En que la capa dispersa la luz reflejada en muchas direcciones para que no moleste",
+             "Dispersarla no la eliminaría y además volvería la imagen borrosa: el mecanismo es la cancelación por interferencia."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se propone comprobar que la refracción depende del medio y no del color "
+        "del vidrio. ¿Qué diseño permite decidirlo?",
+        "Comparar el desvío en dos vidrios de igual forma y distinto color",
+        "El diseño debe variar solo la propiedad en cuestión y mantener el resto "
+        "constante.\n\n"
+        "1) La forma del bloque y el ángulo de incidencia deben ser iguales, "
+        "porque ambos afectan el desvío por sí mismos.\n"
+        "2) Lo único que cambia entre los dos ensayos es el color del vidrio, "
+        "que es la variable en estudio.\n"
+        "3) Si el desvío resulta prácticamente igual, se concluye que el color "
+        "del material no es lo determinante; si difiere, habrá que revisar si "
+        "los dos vidrios son además de composiciones distintas.\n\n"
+        "Ese matiz importa: el color suele venir de aditivos que también alteran "
+        "la composición, así que la conclusión debe formularse con cuidado.",
+        [
+            ("Medir el desvío en un mismo vidrio iluminándolo con luces de distinto color",
+             "Eso pone a prueba otra cosa: cómo depende el desvío del color de la LUZ, que es el fenómeno de la dispersión."),
+            ("Comparar el desvío de un bloque de vidrio y uno de plástico del mismo color",
+             "Ahí se varía el material y se mantiene el color: es la comparación opuesta a la que se necesita."),
+            ("Medir el desvío en el mismo vidrio a distintas temperaturas para descartar otros factores",
+             "La temperatura es una tercera variable: controlarla es razonable, pero no responde la pregunta planteada."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Una onda electromagnética incide sobre una superficie y no se refleja "
+        "ni la atraviesa. ¿Qué ocurrió con su energía?",
+        "Fue absorbida y se transformó, sobre todo en calor",
+        "La energía no puede desaparecer: si no se refleja ni se transmite, "
+        "quedó en el material.\n\n"
+        "1) Los tres destinos posibles de la radiación que llega a una "
+        "superficie son reflejarse, transmitirse o ser absorbida.\n"
+        "2) Descartados los dos primeros, la energía quedó en el material: puso "
+        "en movimiento sus cargas y ese movimiento se degradó en agitación "
+        "térmica.\n"
+        "3) Por eso una superficie negra expuesta al Sol se calienta más que una "
+        "blanca: absorbe casi todo en vez de reflejarlo.\n\n"
+        "En algunos materiales parte de esa energía se reemite como radiación de "
+        "menor frecuencia, que es el mecanismo de la fluorescencia.",
+        [
+            ("Desapareció, porque la onda dejó de existir al chocar",
+             "La energía se conserva: una onda que se extingue transfirió su energía a algo."),
+            ("Se convirtió en una onda de mayor frecuencia dentro del material",
+             "Aumentar la frecuencia exigiría entregar energía adicional; la reemisión, cuando ocurre, es de menor frecuencia."),
+            ("Se acumuló en la superficie y será devuelta cuando la iluminación cese",
+             "Ese comportamiento corresponde a materiales fosforescentes específicos, no al caso general de la absorción."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se comparan dos afirmaciones sobre por qué el mar se ve azul: (I) porque "
+        "refleja el color del cielo, y (II) porque el agua absorbe con más "
+        "fuerza las longitudes de onda largas. ¿Cómo se evalúan?",
+        "Ambas contribuyen, pero la segunda explica el azul en profundidad",
+        "Conviene distinguir el aporte de cada mecanismo en vez de elegir uno.\n\n"
+        "1) La reflexión del cielo es real y se nota sobre todo en la "
+        "superficie y con ángulos rasantes: por eso el mar se ve gris bajo un "
+        "cielo nublado.\n"
+        "2) Pero el agua en volumen absorbe mucho más el rojo y el naranja que "
+        "el azul. En unos pocos metros de profundidad las componentes cálidas "
+        "prácticamente desaparecen.\n"
+        "3) Por eso una piscina profunda de paredes blancas se ve azulada aun "
+        "bajo techo, donde no hay cielo que reflejar.\n\n"
+        "La segunda explicación es la que da cuenta del color propio del agua; "
+        "la primera, de cuánto varía su apariencia según las condiciones.",
+        [
+            ("Solo la primera es correcta, porque el agua es incolora",
+             "El agua es incolora en pequeñas cantidades, pero en volumen absorbe selectivamente y muestra color propio."),
+            ("Solo la segunda es correcta, porque el cielo no influye en absoluto",
+             "El cielo sí influye: el color del mar cambia notoriamente con la nubosidad y con el ángulo de observación."),
+            ("Ninguna es correcta, porque el color del mar se debe a las algas microscópicas que contiene",
+             "Las algas modifican el tono en ciertas zonas, pero el agua pura ya se ve azul en volumen."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "En el fondo de una piscina iluminada por el Sol se ven manchas "
+        "luminosas que se mueven. ¿Qué las produce?",
+        "La superficie ondulada refracta la luz y la concentra en zonas",
+        "La superficie del agua actúa como un conjunto de lentes cambiantes.\n\n"
+        "1) Cada ondulación de la superficie desvía la luz que la atraviesa, "
+        "porque la refracción depende del ángulo con que el rayo llega.\n"
+        "2) Las zonas curvadas hacia adentro concentran la luz y las curvadas "
+        "hacia afuera la separan.\n"
+        "3) En el fondo eso se traduce en una red de líneas brillantes que se "
+        "desplaza al ritmo de las ondas de la superficie.\n\n"
+        "Si el agua queda completamente quieta, la superficie se vuelve plana y "
+        "las manchas desaparecen: es una buena comprobación del mecanismo.",
+        [
+            ("La reflexión de la luz en el fondo pintado de la piscina",
+             "El fondo es uniforme: si fuera él, el patrón no se movería ni cambiaría con el oleaje."),
+            ("La dispersión de la luz solar en los colores del espectro",
+             "Las manchas son blancas y de bordes brillantes, no franjas de colores separados."),
+            ("Las burbujas de aire disueltas en el agua, que reflejan la luz hacia el fondo",
+             "El fenómeno se observa igual en agua sin burbujas y desaparece si la superficie se aquieta."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Un submarino sumergido no puede comunicarse por radio con una estación "
+        "en tierra. ¿Cuál es la causa?",
+        "El agua de mar absorbe con fuerza las ondas de radio",
+        "Un medio conductor no deja avanzar libremente a una onda "
+        "electromagnética.\n\n"
+        "1) El agua de mar contiene sales disueltas y conduce la electricidad.\n"
+        "2) El campo eléctrico de la onda pone en movimiento esas cargas, y esa "
+        "energía se disipa como calor.\n"
+        "3) La señal se atenúa en pocos metros, tanto más rápido cuanto mayor es "
+        "su frecuencia.\n\n"
+        "Por eso las comunicaciones con submarinos usan frecuencias "
+        "extremadamente bajas, que penetran algo más pero permiten transmitir "
+        "muy poca información por segundo, o el submarino debe acercarse a la "
+        "superficie.",
+        [
+            ("Las ondas de radio no pueden propagarse fuera del aire",
+             "Se propagan incluso en el vacío: el problema no es la ausencia de aire sino la absorción del agua salada."),
+            ("La presión del agua deforma las ondas y las vuelve ilegibles",
+             "La presión no afecta a una onda electromagnética: lo que la atenúa es la conductividad del medio."),
+            ("El casco metálico del submarino refleja las ondas hacia su interior y no las deja salir",
+             "El casco sí bloquea, pero por eso las antenas van en el exterior; aun así el agua absorbe la señal."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Una persona con anteojos de sol polarizados observa el reflejo del Sol "
+        "sobre el agua y nota que se atenúa mucho, mientras que el resto del "
+        "paisaje se ve casi igual. ¿Qué propiedad de la luz reflejada aprovecha "
+        "el filtro?",
+        "La luz reflejada en una superficie queda orientada en una dirección",
+        "La reflexión en una superficie horizontal privilegia una orientación "
+        "del campo eléctrico.\n\n"
+        "1) La luz del Sol llega con su campo eléctrico oscilando en todas las "
+        "direcciones perpendiculares al avance.\n"
+        "2) Al reflejarse en el agua, la componente horizontal se refleja mucho "
+        "mejor que la vertical: el reflejo queda predominantemente orientado en "
+        "horizontal.\n"
+        "3) El filtro polarizado se instala de modo de bloquear justamente esa "
+        "orientación, así que el reflejo se apaga.\n"
+        "4) La luz que viene directamente del paisaje no tiene esa orientación "
+        "privilegiada, y solo se atenúa parcialmente.\n\n"
+        "Es la razón de que estos anteojos sirvan especialmente para conducir y "
+        "para pescar.",
+        [
+            ("La luz reflejada tiene mayor frecuencia que la luz directa",
+             "La reflexión no cambia la frecuencia de la luz."),
+            ("La luz reflejada viaja más lento y el filtro la detiene",
+             "Fuera de un medio material la rapidez no cambia, y un filtro no selecciona por rapidez."),
+            ("La luz reflejada es de menor intensidad y el filtro elimina todo lo que esté bajo cierto umbral",
+             "El reflejo del Sol sobre el agua es justamente lo más intenso de la escena, no lo más débil."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "¿Qué le ocurre a una onda electromagnética cuando incide sobre una "
+        "superficie metálica pulida?",
+        "Se refleja casi por completo",
+        "Los metales tienen electrones libres que responden al campo de la "
+        "onda.\n\n"
+        "1) El campo eléctrico de la onda pone en movimiento a esos electrones "
+        "libres.\n"
+        "2) Al oscilar, los electrones vuelven a emitir radiación de la misma "
+        "frecuencia, y esa emisión se dirige hacia afuera del metal.\n"
+        "3) El resultado neto es que casi toda la energía vuelve al medio de "
+        "origen: la superficie se comporta como espejo.\n\n"
+        "Por eso los espejos llevan una capa metálica y por eso no debe meterse "
+        "metal en un horno de microondas.",
+        [
+            ("La atraviesa sin alterarse",
+             "Un metal es opaco a las ondas electromagnéticas comunes: no las deja pasar apreciablemente."),
+            ("Es absorbida por completo y se convierte en calor",
+             "Una fracción pequeña se absorbe, pero el comportamiento dominante es la reflexión."),
+            ("Se difracta en todas direcciones porque la superficie tiene irregularidades microscópicas",
+             "Si la superficie está pulida, la reflexión es especular; una superficie rugosa daría reflexión difusa, no difracción."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "El fondo de una piscina se ve más cerca de lo que está, y un objeto "
+        "sumergido parece desplazado. ¿Qué fenómeno lo causa?",
+        "La refracción de la luz al pasar del agua al aire",
+        "La dirección con que la luz llega al ojo determina dónde ubicamos el "
+        "objeto.\n\n"
+        "1) Los rayos que salen del objeto se desvían al cruzar la superficie, "
+        "porque cambian de medio y de rapidez.\n"
+        "2) El ojo no percibe esa desviación: prolonga los rayos en línea "
+        "recta.\n"
+        "3) La imagen queda entonces en el punto donde se cruzan esas "
+        "prolongaciones, más arriba y algo desplazado respecto del objeto real.\n\n"
+        "Por eso hay que apuntar por debajo de donde se ve un objeto sumergido "
+        "para alcanzarlo.",
+        [
+            ("La reflexión de la luz en la superficie del agua",
+             "La reflexión produce la imagen del entorno sobre el agua, no el desplazamiento de lo que está sumergido."),
+            ("La absorción de parte de la luz por el agua",
+             "La absorción cambia el brillo y el color, pero no la posición aparente."),
+            ("La dispersión de la luz en el agua, que separa los colores y desplaza la imagen",
+             "La dispersión separa colores; el desplazamiento de la imagen completa se debe a la refracción."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Un vidrio esmerilado deja pasar la luz pero no permite distinguir las "
+        "formas que hay detrás. ¿Cómo se explica?",
+        "Su superficie irregular desvía los rayos en direcciones distintas",
+        "Transmitir luz y transmitir una imagen son cosas distintas.\n\n"
+        "1) Una imagen se conserva si los rayos mantienen sus direcciones "
+        "relativas al atravesar el material.\n"
+        "2) La superficie esmerilada es rugosa a escala microscópica: cada "
+        "porción desvía los rayos hacia un lado distinto.\n"
+        "3) La luz pasa, y por eso el vidrio se ve iluminado, pero la "
+        "información sobre de dónde venía cada rayo se pierde: no hay imagen.\n\n"
+        "Es el equivalente en transmisión de lo que la reflexión difusa hace en "
+        "una hoja de papel.",
+        [
+            ("Absorbe la mayor parte de la luz que le llega",
+             "Si absorbiera casi todo se vería oscuro, y en realidad deja pasar buena parte de la luz."),
+            ("Refleja la luz hacia el lado desde el que se mira",
+             "Parte se refleja, pero lo que impide ver las formas es la dispersión de la luz transmitida."),
+            ("Cambia la frecuencia de la luz al atravesarlo y por eso la imagen se vuelve irreconocible",
+             "La frecuencia no cambia al atravesar un material: el color de lo que hay detrás se sigue percibiendo."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Una antena de radio recibe señal dentro de un valle rodeado de cerros, "
+        "pero la televisión digital, de frecuencia mucho mayor, no llega. ¿Qué "
+        "explica la diferencia?",
+        "La onda de radio se difracta sobre los cerros y la de televisión no",
+        "La capacidad de rodear un obstáculo depende de la relación entre la "
+        "longitud de onda y el tamaño del obstáculo.\n\n"
+        "1) La radio, de longitud de onda larga, se difracta apreciablemente "
+        "sobre el borde de un cerro y alcanza la zona que quedaría en sombra.\n"
+        "2) La televisión digital usa frecuencias mucho mayores y por lo tanto "
+        "longitudes de onda mucho menores, comparables a objetos pequeños: los "
+        "cerros le proyectan una sombra bastante nítida.\n"
+        "3) Por eso su cobertura exige prácticamente línea de visión con la "
+        "antena emisora, o repetidores intermedios.\n\n"
+        "Es el mismo principio que hace que el sonido rodee una esquina y la luz "
+        "no.",
+        [
+            ("La señal de televisión es más débil y no alcanza a llegar",
+             "La potencia de emisión suele ser alta; el problema es geométrico y no de potencia."),
+            ("Los cerros absorben específicamente las frecuencias de televisión",
+             "La roca atenúa ambas señales; lo determinante es que una rodea el obstáculo y la otra no."),
+            ("La televisión digital necesita un satélite y la radio no",
+             "La televisión digital terrestre se emite desde antenas en tierra, igual que la radio."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Newton hizo pasar luz blanca por un prisma, aisló el haz de un solo "
+        "color y lo hizo pasar por un segundo prisma. Ese haz se desvió, pero no "
+        "se separó en más colores. ¿Qué demostró el experimento?",
+        "Que los colores ya estaban en la luz blanca",
+        "El segundo prisma es la clave del razonamiento.\n\n"
+        "1) Una explicación alternativa de la época sostenía que el prisma "
+        "CREABA los colores al alterar la luz.\n"
+        "2) Si así fuera, el segundo prisma debería alterar de nuevo el haz "
+        "aislado y producir más colores.\n"
+        "3) Como no lo hace, el prisma no crea nada: solo separa componentes que "
+        "ya venían en la luz blanca.\n\n"
+        "La prueba definitiva la completó recombinando los colores separados con "
+        "un segundo prisma invertido y recuperando luz blanca.",
+        [
+            ("Que el prisma produce los colores al alterar la luz",
+             "Es justamente la hipótesis que el experimento descarta: el haz aislado no se altera más al pasar por el segundo prisma."),
+            ("Que el vidrio del segundo prisma era de peor calidad",
+             "El resultado se repite con cualquier prisma: no es una limitación del material."),
+            ("Que la luz de un solo color no puede atravesar dos prismas seguidos",
+             "Sí lo hace: el enunciado dice que se desvió, solo que sin separarse."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Si los colores separados por un prisma se hacen pasar por un segundo "
+        "prisma dispuesto en posición invertida, ¿qué se obtiene?",
+        "Luz blanca nuevamente",
+        "El proceso es reversible porque la dispersión no destruye nada.\n\n"
+        "1) El primer prisma separa las componentes desviando cada una un "
+        "ángulo distinto.\n"
+        "2) El segundo, invertido, aplica desviaciones opuestas y vuelve a "
+        "juntarlas en un solo haz.\n"
+        "3) La suma de todas las componentes del visible es, otra vez, luz "
+        "blanca.\n\n"
+        "Es la demostración de que el blanco no es un color más sino la "
+        "presencia simultánea de todos ellos.",
+        [
+            ("Un haz de color violeta, que es el más desviado",
+             "El violeta se desvía más en el primer prisma y menos en el segundo: el efecto se compensa, no se acumula."),
+            ("Un haz oscuro, porque los colores se cancelan entre sí",
+             "Las luces se suman, no se cancelan: sumar todas las componentes da blanco."),
+            ("Los mismos colores pero en el orden inverso al original",
+             "El segundo prisma invertido no reordena los colores: los recombina en un solo haz."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Cuando el Sol ya se ocultó bajo el horizonte, todavía se lo ve durante "
+        "unos minutos. ¿Qué lo explica?",
+        "La atmósfera curva los rayos de luz",
+        "La densidad del aire aumenta hacia abajo, y eso desvía gradualmente la "
+        "luz.\n\n"
+        "1) La luz que viene del Sol atraviesa capas de aire cada vez más "
+        "densas al acercarse al horizonte.\n"
+        "2) En cada cambio de densidad se refracta un poco, y el efecto "
+        "acumulado curva su trayectoria hacia abajo.\n"
+        "3) El observador prolonga esos rayos en línea recta y ve al Sol más "
+        "arriba de donde realmente está: sigue viéndolo aunque geométricamente "
+        "ya se haya puesto.\n\n"
+        "El desvío es de aproximadamente el diámetro aparente del Sol, así que "
+        "cuando parece rozar el horizonte, en realidad ya está debajo.",
+        [
+            ("La luz solar rebota en las nubes altas y llega al observador",
+             "El fenómeno se observa igual con cielo despejado."),
+            ("El Sol sigue emitiendo luz que tarda unos minutos en llegar",
+             "La luz solar tarda unos ocho minutos, pero ese retraso es el mismo durante todo el día y no depende del ocaso."),
+            ("La atmósfera absorbe la luz azul y deja pasar la roja, que se ve durante más tiempo",
+             "Esa absorción explica el color rojizo del atardecer, no que el Sol siga visible tras ocultarse."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Las estrellas parecen titilar mientras que los planetas se ven con luz "
+        "más estable. ¿Cómo se explica la diferencia?",
+        "La estrella es un punto y el planeta, un disco pequeño",
+        "El titileo lo produce la turbulencia atmosférica, y su efecto depende "
+        "del tamaño aparente de la fuente.\n\n"
+        "1) Las capas de aire a distinta temperatura desvían la luz de forma "
+        "cambiante, así que el brillo que llega de un punto fluctúa.\n"
+        "2) Una estrella es tan lejana que su tamaño aparente es prácticamente "
+        "un punto: toda su luz sigue el mismo camino y fluctúa junta.\n"
+        "3) Un planeta se ve como un disco pequeño. Cada zona del disco fluctúa "
+        "de manera independiente y el promedio se mantiene estable.\n\n"
+        "Con un telescopio se comprueba: al ampliar la imagen, el planeta muestra "
+        "un disco y la estrella sigue siendo un punto.",
+        [
+            ("Los planetas están fuera de la atmósfera y las estrellas dentro",
+             "Ambos están fuera de la atmósfera: la luz de los dos la atraviesa por completo."),
+            ("Los planetas emiten luz propia más estable que la de las estrellas",
+             "Los planetas no emiten luz propia: reflejan la del Sol."),
+            ("Las estrellas cambian realmente de brillo en escalas de segundos y los planetas no",
+             "Existen estrellas variables, pero su cambio es lentísimo comparado con el titileo, que es un efecto atmosférico."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Alrededor de la Luna se observa a veces un halo circular luminoso "
+        "cuando hay nubes altas y delgadas. ¿Cómo se forma?",
+        "La luz se refracta en cristales de hielo suspendidos",
+        "Las nubes altas están formadas por cristales, y cada cristal desvía la "
+        "luz un ángulo característico.\n\n"
+        "1) Los cristales de hielo de esas nubes tienen caras planas con "
+        "ángulos definidos.\n"
+        "2) La luz que los atraviesa se refracta y sale desviada "
+        "predominantemente en un ángulo de unos 22 grados.\n"
+        "3) Como los cristales están orientados al azar en todas direcciones, "
+        "los que devuelven luz hacia el observador forman un círculo de ese "
+        "radio angular alrededor de la Luna.\n\n"
+        "El halo aparece con radio fijo justamente porque el ángulo lo determina "
+        "la geometría del cristal y no la distancia a la nube.",
+        [
+            ("La Luna emite luz propia que se dispersa en la atmósfera",
+             "La Luna refleja la luz del Sol; en todo caso, la dispersión no produciría un anillo de radio definido."),
+            ("Las gotas de agua reflejan la luz formando un arcoíris circular",
+             "Las gotas producen arcoíris con colores muy separados y en dirección opuesta a la fuente, no un halo alrededor de ella."),
+            ("La luz se difracta al pasar entre las nubes y forma anillos de interferencia",
+             "La difracción produce coronas de radio variable pegadas al astro; el halo de 22 grados se debe a refracción en cristales."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Un telescopio grande distingue detalles más finos que uno pequeño, "
+        "incluso si ambos usan el mismo aumento. ¿Qué fenómeno impone ese "
+        "límite?",
+        "La difracción de la luz al entrar por la abertura",
+        "Toda abertura difracta, y esa difracción borronea el detalle más "
+        "fino.\n\n"
+        "1) La luz que atraviesa una abertura circular no forma un punto "
+        "perfecto sino una manchita con anillos alrededor.\n"
+        "2) El tamaño de esa manchita es tanto menor cuanto MAYOR es la "
+        "abertura.\n"
+        "3) Dos objetos muy juntos se distinguen solo si sus manchitas no se "
+        "solapan; de ahí que un objetivo más grande resuelva más detalle.\n\n"
+        "Por eso aumentar la ampliación más allá de cierto punto no agrega "
+        "información: solo agranda una imagen ya limitada por la difracción.",
+        [
+            ("La absorción de la luz en el vidrio del objetivo",
+             "La absorción reduce el brillo, no el detalle distinguible."),
+            ("La dispersión de la luz en sus colores dentro del instrumento",
+             "La dispersión afecta a las lentes y se corrige con espejos, pero el límite de resolución persiste igual."),
+            ("La refracción de la luz al entrar en la atmósfera terrestre",
+             "La atmósfera degrada la imagen, pero el límite de resolución existe incluso para un telescopio en el espacio."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Una emisora de radio se escucha bien en casi toda la ciudad, pero hay "
+        "puntos aislados donde la señal se pierde por completo aunque estén cerca "
+        "de la antena. ¿Cuál es una explicación razonable?",
+        "En esos puntos dos caminos de la señal llegan y se cancelan",
+        "La señal no llega por un solo camino: también rebota en edificios y "
+        "cerros.\n\n"
+        "1) A un mismo punto pueden llegar la onda directa y una reflejada, que "
+        "recorrieron distancias distintas.\n"
+        "2) Si esa diferencia hace que lleguen en oposición, las dos se cancelan "
+        "por interferencia destructiva y la señal se anula.\n"
+        "3) El efecto es muy local: unos metros más allá la diferencia de "
+        "camino cambia y la señal reaparece.\n\n"
+        "Es la razón por la que a veces basta mover un poco la radio o el "
+        "teléfono para recuperar la recepción.",
+        [
+            ("La antena emite menos potencia en esas direcciones específicas",
+             "Un patrón de emisión desigual afectaría sectores amplios y regulares, no puntos aislados a pocos metros de otros con buena señal."),
+            ("El aire de esos puntos absorbe la señal por su humedad",
+             "La humedad varía de manera gradual y no produciría anulaciones en puntos tan localizados."),
+            ("La señal pierde energía al recorrer más distancia y por eso desaparece en ciertos lugares",
+             "La atenuación con la distancia es gradual: no explica que un punto cercano quede sin señal y otro contiguo sí la tenga."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Las alas de algunas mariposas cambian de color según el ángulo desde "
+        "el que se las mire, y conservan ese brillo aunque el animal lleve años "
+        "muerto. ¿Qué origina ese color?",
+        "Estructuras microscópicas que producen interferencia",
+        "Hay dos maneras muy distintas de producir color, y esta no es la "
+        "química.\n\n"
+        "1) Un pigmento absorbe ciertas longitudes de onda y refleja el resto. "
+        "Su color no depende del ángulo y se degrada con el tiempo.\n"
+        "2) Un color estructural nace de capas microscópicas regulares que "
+        "reflejan la luz e interfieren entre sí, reforzando una longitud de onda "
+        "según la dirección.\n"
+        "3) Como depende de la geometría y no de una molécula, cambia con el "
+        "ángulo y no se decolora.\n\n"
+        "Es el mismo mecanismo del brillo de las plumas de un colibrí y de las "
+        "manchas de aceite sobre el agua.",
+        [
+            ("Pigmentos muy estables que no se degradan con la luz",
+             "Un pigmento no cambiaría de color según el ángulo de observación."),
+            ("La fluorescencia de las escamas del ala bajo la luz solar",
+             "La fluorescencia emite en una longitud de onda fija, sin depender del ángulo."),
+            ("La refracción de la luz en la capa de humedad que recubre el ala",
+             "El efecto persiste en alas completamente secas y conservadas durante años."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "La atmósfera es transparente a la luz visible y a ciertas ondas de "
+        "radio, pero opaca a la mayor parte del ultravioleta, los rayos X y "
+        "buena parte del infrarrojo. ¿Qué consecuencia tiene para la "
+        "astronomía?",
+        "Ciertas observaciones solo pueden hacerse desde el espacio",
+        "Las regiones donde la atmósfera deja pasar radiación se llaman ventanas "
+        "atmosféricas.\n\n"
+        "1) En el visible y en parte del radio, la atmósfera es transparente: "
+        "por eso los observatorios ópticos y los radiotelescopios funcionan desde "
+        "el suelo.\n"
+        "2) En ultravioleta, rayos X y gamma, la atmósfera absorbe casi todo. Un "
+        "telescopio en tierra sencillamente no recibiría señal.\n"
+        "3) Para observar en esas regiones hay que poner el instrumento sobre la "
+        "atmósfera, en un satélite.\n\n"
+        "Que la atmósfera bloquee esas radiaciones es una desventaja para la "
+        "astronomía y una condición para la vida en la superficie.",
+        [
+            ("Que los telescopios terrestres deben ubicarse a nivel del mar",
+             "Es al revés: se instalan en alta montaña, donde queda menos atmósfera por encima."),
+            ("Que todas las observaciones astronómicas requieren satélites",
+             "En las ventanas atmosféricas la observación desde tierra funciona muy bien y es mucho más barata."),
+            ("Que las imágenes obtenidas desde tierra muestran colores falsos por la absorción atmosférica",
+             "La atmósfera atenúa algo el azul, pero eso se corrige; el problema de fondo es que ciertas regiones no llegan en absoluto."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Un vidrio se puede fabricar para que refleje por un lado y sea "
+        "translúcido por el otro, como los usados en salas de observación. ¿De "
+        "qué depende que funcione?",
+        "De que un lado esté mucho más iluminado que el otro",
+        "El vidrio no distingue lados: la asimetría la produce la "
+        "iluminación.\n\n"
+        "1) El vidrio lleva una capa metálica muy delgada que refleja una parte "
+        "de la luz y transmite otra, igual en ambos sentidos.\n"
+        "2) En la sala iluminada, lo que llega al ojo es sobre todo la luz "
+        "reflejada de esa misma sala, mucho más intensa que la poca que "
+        "atraviesa desde el otro lado: se ve como espejo.\n"
+        "3) En la sala a oscuras ocurre lo contrario: la luz que atraviesa desde "
+        "la sala iluminada domina, y se ve a través.\n\n"
+        "Si se encienden las luces del lado oscuro, el efecto desaparece: es la "
+        "prueba de que depende de la iluminación y no del vidrio.",
+        [
+            ("De que la capa metálica esté aplicada solo en una de las caras",
+             "La capa está en una cara, pero reflejaría y transmitiría igual mirando desde cualquiera de los dos lados."),
+            ("De que el vidrio deje pasar la luz en una sola dirección",
+             "Ningún vidrio hace eso: la transmisión es simétrica en ambos sentidos."),
+            ("De que el vidrio esté polarizado de manera distinta en cada una de sus caras",
+             "La polarización no interviene: lo determinante es el contraste de iluminación entre las dos salas."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un estudiante pregunta por qué el cielo no se ve violeta, si el violeta "
+        "se dispersa aún más que el azul. ¿Cuál es la respuesta más completa?",
+        "El Sol emite menos violeta y el ojo es menos sensible a él",
+        "La explicación exige combinar la física de la dispersión con dos "
+        "factores adicionales.\n\n"
+        "1) Es cierto que la dispersión es más intensa cuanto menor es la "
+        "longitud de onda, así que el violeta se dispersa más que el azul.\n"
+        "2) Pero el Sol emite menos energía en el violeta que en el azul, así "
+        "que hay menos violeta disponible para dispersar.\n"
+        "3) Y los receptores del ojo humano son bastante menos sensibles al "
+        "violeta.\n"
+        "4) El resultado de combinar los tres factores es una sensación de "
+        "azul.\n\n"
+        "El caso muestra que una explicación física completa no siempre se agota "
+        "en la ecuación: aquí interviene también quién observa.",
+        [
+            ("El violeta es absorbido por la capa de ozono antes de llegar",
+             "El ozono absorbe ultravioleta, que está fuera del rango visible; el violeta visible llega a la superficie."),
+            ("El violeta se dispersa menos que el azul, contra lo que dice el estudiante",
+             "El supuesto del estudiante es correcto: a menor longitud de onda, mayor dispersión."),
+            ("El violeta se dispersa tanto que se pierde por completo antes de llegar al observador",
+             "La dispersión redirige la luz, no la elimina; parte del violeta llega igualmente."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se observa el espectro de una estrella y se comprueba que sus líneas se "
+        "corren periódicamente hacia el rojo y hacia el azul, con un ciclo de "
+        "varios días. ¿Qué se puede inferir?",
+        "La estrella orbita algo y se acerca y aleja alternadamente",
+        "Un corrimiento periódico indica un movimiento periódico de acercamiento "
+        "y alejamiento.\n\n"
+        "1) El corrimiento al azul indica acercamiento y el corrimiento al rojo, "
+        "alejamiento.\n"
+        "2) Que alternen con un período regular implica que la estrella se "
+        "mueve en un vaivén respecto de nosotros.\n"
+        "3) La explicación natural es que gira alrededor de un centro común con "
+        "otro cuerpo: otra estrella o un planeta lo bastante masivo.\n\n"
+        "Es uno de los métodos con que se descubren planetas fuera del sistema "
+        "solar: no se ve el planeta, se ve el bamboleo que provoca en su "
+        "estrella.",
+        [
+            ("La estrella cambia de composición química de forma periódica",
+             "Un cambio de composición alteraría qué líneas aparecen, no desplazaría todo el patrón de un lado a otro."),
+            ("La estrella se está expandiendo y contrayendo su superficie",
+             "Existen estrellas pulsantes, pero eso produce además variaciones de brillo y de temperatura características que aquí no se mencionan."),
+            ("La Tierra se acerca y se aleja de la estrella en su órbita alrededor del Sol",
+             "Ese efecto existe pero tiene período anual, no de varios días, y se corrige de manera rutinaria."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se propone comprobar que el color del cielo se debe a la dispersión y "
+        "no al color propio del aire. ¿Qué observación permitiría decidirlo?",
+        "Que la luz transmitida a través de mucho aire se vea rojiza",
+        "La dispersión predice un efecto complementario que un color propio no "
+        "predice.\n\n"
+        "1) Si el aire fuera azul por absorción, la luz que lo atraviesa "
+        "quedaría empobrecida en todo salvo azul y se vería azulada.\n"
+        "2) Si el azul se debe a dispersión, esa componente se DESVÍA fuera del "
+        "haz directo, y lo que atraviesa queda empobrecido en azul: se ve "
+        "rojiza.\n"
+        "3) Eso es exactamente lo que se observa al mirar el Sol a través de "
+        "mucha atmósfera, al amanecer y al atardecer.\n\n"
+        "Las dos hipótesis predicen lo mismo para la luz desviada y cosas "
+        "opuestas para la transmitida: por eso esa es la observación decisiva.",
+        [
+            ("Que el cielo se vea azul también en un día nublado",
+             "Con nubes el cielo se ve gris o blanco, y ese resultado no distingue entre las dos hipótesis."),
+            ("Que el cielo se vea negro desde la superficie de la Luna",
+             "Es un buen indicio de que hace falta atmósfera, pero no distingue entre dispersión y color propio del aire."),
+            ("Que una habitación cerrada llena de aire no se vea azulada",
+             "Con tan poco espesor ninguna de las dos hipótesis predice color apreciable."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un estudiante afirma que la reflexión total interna ocurre siempre que "
+        "la luz intenta pasar del agua al aire. ¿Qué corrección corresponde?",
+        "Solo ocurre si el ángulo supera un valor crítico",
+        "La reflexión total tiene dos condiciones y la afirmación menciona una "
+        "sola.\n\n"
+        "1) La primera condición sí se cumple: la luz debe ir hacia el medio en "
+        "que se propaga más rápido, y va del agua al aire.\n"
+        "2) La segunda es sobre el ángulo. Con incidencia cercana a la normal, "
+        "la luz sale al aire normalmente, solo que desviada.\n"
+        "3) A medida que el ángulo crece, el rayo refractado se acerca a la "
+        "superficie, y superado el ángulo crítico deja de existir: recién ahí "
+        "toda la luz se refleja.\n\n"
+        "Por eso un buzo ve el exterior a través de un círculo luminoso sobre su "
+        "cabeza, y fuera de ese círculo la superficie le funciona como espejo.",
+        [
+            ("Solo ocurre si el agua está perfectamente quieta",
+             "El oleaje cambia la orientación local de la superficie y por lo tanto el ángulo, pero el fenómeno no exige agua quieta."),
+            ("Nunca ocurre del agua al aire, sino solo del aire al agua",
+             "Es exactamente al revés: se produce al ir hacia el medio de mayor rapidez, es decir, del agua al aire."),
+            ("Solo ocurre si la luz es de un único color, porque cada color tiene un ángulo crítico distinto",
+             "El ángulo crítico varía muy poco con el color; el fenómeno ocurre igual con luz blanca."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Dos estudiantes discuten sobre el efecto Doppler. Uno dice que la "
+        "sirena de una ambulancia cambia de frecuencia al acercarse; el otro "
+        "sostiene que la sirena emite siempre igual. ¿Quién tiene razón?",
+        "Los dos, si se distingue frecuencia emitida de percibida",
+        "La discusión se disuelve al precisar de qué frecuencia se habla.\n\n"
+        "1) La sirena emite siempre la misma frecuencia: su mecanismo no cambia "
+        "por el hecho de que el vehículo se desplace. En eso el segundo "
+        "estudiante tiene razón.\n"
+        "2) La frecuencia que RECIBE un observador sí cambia, porque las crestas "
+        "le llegan más juntas o más separadas según el movimiento relativo. En "
+        "eso tiene razón el primero.\n"
+        "3) El conductor de la ambulancia, que se mueve con la fuente, no "
+        "percibe ningún cambio: eso confirma que el efecto es del observador.\n\n"
+        "Distinguir la magnitud en la fuente de la magnitud en el receptor es lo "
+        "que ordena el fenómeno.",
+        [
+            ("Solo el primero, porque la frecuencia de la onda cambia realmente",
+             "Lo que cambia es la frecuencia percibida; la fuente sigue emitiendo igual, como comprueba quien viaja con ella."),
+            ("Solo el segundo, porque el efecto Doppler es una ilusión auditiva",
+             "No es una ilusión: un instrumento fijo mide efectivamente una frecuencia distinta de la emitida."),
+            ("Ninguno, porque el efecto Doppler solo se aplica a ondas electromagnéticas y no al sonido",
+             "Se aplica a ambas; de hecho el caso del sonido es el ejemplo clásico del fenómeno."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un grupo quiere determinar si un vidrio esmerilado dispersa la luz o la "
+        "absorbe. Dispone de una lámpara, el vidrio y un medidor de intensidad "
+        "luminosa. ¿Qué procedimiento decide entre ambas hipótesis?",
+        "Comparar la luz total que sale en todas direcciones con la que entra",
+        "Las dos hipótesis predicen cosas distintas sobre la energía total.\n\n"
+        "1) Si el vidrio DISPERSA, la luz sale repartida en muchas direcciones "
+        "pero la cantidad total se conserva aproximadamente.\n"
+        "2) Si ABSORBE, parte de la energía queda en el material y la suma de "
+        "lo que sale es claramente menor que lo que entra.\n"
+        "3) Medir solo en la dirección del haz original no distingue los casos: "
+        "en ambos la lectura frontal baja.\n\n"
+        "Hay que recoger la luz en todas las direcciones de salida, por ejemplo "
+        "con una esfera integradora o midiendo en muchos ángulos, y comparar el "
+        "total con la referencia sin vidrio.",
+        [
+            ("Medir la intensidad justo detrás del vidrio, en la dirección del haz",
+             "Esa medición baja en ambos casos y por lo tanto no permite distinguirlos."),
+            ("Medir la temperatura del vidrio después de varios minutos de iluminación",
+             "Es un indicio de absorción, pero el vidrio también se calienta algo por otras vías y el resultado es difícil de interpretar."),
+            ("Comparar el color de la luz antes y después de atravesar el vidrio",
+             "Un cambio de color indicaría absorción selectiva, pero un vidrio esmerilado incoloro no lo mostraría aunque absorbiera."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "El sonido de una tormenta se escucha a veces desde muy lejos en las "
+        "noches frías, más lejos que durante el día. ¿Qué fenómeno lo explica?",
+        "La refracción del sonido en capas de aire a distinta temperatura",
+        "El aire estratificado desvía las ondas igual que un medio de índice "
+        "variable desvía la luz.\n\n"
+        "1) De noche, el suelo se enfría y queda una capa de aire frío abajo y "
+        "aire más cálido encima. El sonido viaja más rápido en el aire cálido.\n"
+        "2) Las ondas que salen hacia arriba se curvan de vuelta hacia el suelo "
+        "al atravesar esas capas.\n"
+        "3) Así, energía que de día se perdería hacia la atmósfera regresa a "
+        "nivel del suelo y el sonido alcanza mayores distancias.\n\n"
+        "De día ocurre lo contrario: el aire caliente está abajo y las ondas se "
+        "curvan hacia arriba, alejándose del observador.",
+        [
+            ("El aire frío conduce mejor el sonido y por eso llega más lejos",
+             "El sonido viaja algo más LENTO en aire frío; el efecto se debe a la curvatura de las trayectorias, no a una mejor conducción."),
+            ("De noche hay menos ruido ambiente y por eso se escucha más lejos",
+             "El menor ruido de fondo ayuda a percibirlo, pero el alcance mayor se explica por la refracción."),
+            ("La humedad nocturna transporta el sonido a mayores distancias",
+             "La humedad influye poco en la propagación del sonido comparada con el gradiente de temperatura."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Una lámina de plástico transparente se ve incolora, pero al mirarla "
+        "entre dos filtros polarizadores aparece llena de colores. ¿Qué revela "
+        "ese resultado?",
+        "Que el material altera la orientación de la luz que lo atraviesa",
+        "El efecto solo aparece con los polarizadores, así que informa sobre una "
+        "propiedad que la luz común no revela.\n\n"
+        "1) El primer filtro deja pasar solo luz con cierta orientación.\n"
+        "2) Al atravesar el plástico, esa orientación gira una cantidad que "
+        "depende de la longitud de onda y de las tensiones internas del "
+        "material.\n"
+        "3) El segundo filtro deja pasar unas longitudes de onda y bloquea "
+        "otras según cuánto giraron: el resultado son franjas de colores.\n\n"
+        "La técnica se usa en ingeniería para visualizar dónde se concentran las "
+        "tensiones en una pieza antes de fabricarla en metal.",
+        [
+            ("Que el plástico contiene pigmentos invisibles a simple vista",
+             "Un pigmento se vería sin necesidad de filtros: el color aparece solo por la interacción con la luz polarizada."),
+            ("Que los filtros polarizadores agregan color a la luz que los atraviesa",
+             "Los filtros no agregan color: sin el plástico entre ellos, no aparece ninguna franja coloreada."),
+            ("Que el plástico emite luz propia al ser iluminado con luz polarizada",
+             "No hay emisión: toda la luz observada proviene de la fuente y solo cambió su orientación."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Al mirar una fuente de luz blanca a través de un tejido muy fino, como "
+        "una cortina o un paraguas, se ven cruces y colores alrededor de la "
+        "fuente. ¿Qué fenómeno los produce?",
+        "La difracción de la luz al atravesar la trama del tejido",
+        "El tejido tiene aberturas regulares muy pequeñas y se comporta como una "
+        "red de difracción.\n\n"
+        "1) Cada abertura difracta la luz que la atraviesa, y las ondas de "
+        "aberturas vecinas interfieren entre sí.\n"
+        "2) Para cada longitud de onda la interferencia refuerza en direcciones "
+        "distintas, así que los colores aparecen separados.\n"
+        "3) Como la trama tiene dos direcciones perpendiculares de hilos, el "
+        "patrón resulta en cruz.\n\n"
+        "El mismo fenómeno explica los destellos en cruz que aparecen en las "
+        "fotografías de luces nocturnas al cerrar el diafragma de la cámara.",
+        [
+            ("La reflexión de la luz en los hilos del tejido",
+             "La reflexión en los hilos daría un brillo difuso, sin patrón regular ni colores separados."),
+            ("La dispersión de la luz en las fibras, como en un prisma",
+             "El patrón depende de la separación entre hilos y no del material: es difraccción, no dispersión."),
+            ("La absorción selectiva de algunos colores por el tinte de la tela",
+             "El efecto aparece igual con tela blanca o sin teñir, y produce colores que no están en el tejido."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se sostiene que la propagación rectilínea de la luz es solo una "
+        "aproximación. ¿Qué observación respalda esa afirmación?",
+        "La luz se desvía al pasar por aberturas muy pequeñas",
+        "La propagación rectilínea vale mientras los obstáculos sean grandes "
+        "frente a la longitud de onda.\n\n"
+        "1) Con obstáculos y aberturas de tamaño cotidiano, la luz proyecta "
+        "sombras nítidas y se comporta como si viajara en línea recta.\n"
+        "2) Si la abertura se reduce hasta ser comparable a la longitud de onda, "
+        "la luz se abre al salir: se difracta.\n"
+        "3) El comportamiento rectilíneo es entonces un caso límite del "
+        "comportamiento ondulatorio, no una propiedad absoluta.\n\n"
+        "El mismo razonamiento explica por qué el sonido, de longitud de onda "
+        "mucho mayor, rodea obstáculos que la luz no rodea.",
+        [
+            ("La luz cambia de dirección al pasar del aire al agua",
+             "Eso es refracción, y ocurre en el límite entre dos medios: dentro de cada uno la propagación sigue siendo rectilínea."),
+            ("La luz se refleja en los espejos siguiendo la ley de reflexión",
+             "La reflexión tampoco contradice la propagación rectilínea: el rayo sigue recto antes y después de reflejarse."),
+            ("La luz pierde intensidad a medida que se aleja de la fuente",
+             "La atenuación con la distancia es compatible con una propagación perfectamente rectilínea."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un equipo mide la intensidad de luz que atraviesa un filtro rojo "
+        "iluminándolo primero con luz roja y después con luz verde de la misma "
+        "intensidad. ¿Qué resultados espera y qué conclusión permiten?",
+        "Alta con la roja y baja con la verde, lo que muestra absorción selectiva",
+        "El experimento pone a prueba si el filtro actúa igual sobre todas las "
+        "componentes.\n\n"
+        "1) Con luz roja, el filtro transmite casi toda: la lectura es alta.\n"
+        "2) Con luz verde de la misma intensidad, el filtro absorbe la mayor "
+        "parte: la lectura cae mucho.\n"
+        "3) Como la intensidad de entrada fue la misma en ambos casos, la "
+        "diferencia solo puede atribuirse a la longitud de onda.\n\n"
+        "Eso es exactamente lo que significa absorción SELECTIVA: el filtro no "
+        "atenúa de manera pareja, sino según el color.",
+        [
+            ("Lecturas iguales, porque el filtro atenúa toda la luz en la misma proporción",
+             "Si atenuara parejo sería un filtro gris: no se vería rojo ni serviría como filtro de color."),
+            ("Alta con la verde y baja con la roja, porque el filtro absorbe su propio color",
+             "Un filtro rojo transmite el rojo; si lo absorbiera, no se vería rojo al mirarlo a contraluz."),
+            ("Lecturas altas en ambos casos, porque la intensidad de entrada es la misma",
+             "La intensidad de entrada igual es justamente la condición del experimento: lo que se compara es cuánto sale."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Al mezclar luz roja y luz verde proyectadas sobre una pared blanca se "
+        "obtiene amarillo. Al mezclar pintura roja y pintura verde se obtiene un "
+        "tono pardo oscuro. ¿Por qué resultados tan distintos?",
+        "Las luces se suman y los pigmentos restan componentes",
+        "Son dos tipos de mezcla con lógicas opuestas.\n\n"
+        "1) La mezcla de LUCES es aditiva: a la pared llegan las dos "
+        "componentes y el ojo suma ambos estímulos, dando la sensación de "
+        "amarillo.\n"
+        "2) La mezcla de PIGMENTOS es sustractiva: cada pigmento absorbe parte "
+        "del espectro de la luz que ilumina la superficie.\n"
+        "3) Juntos absorben casi todo lo que el otro dejaba pasar, así que "
+        "queda muy poca luz reflejada: el resultado es oscuro.\n\n"
+        "De ahí que los primarios sean distintos en cada caso: rojo, verde y "
+        "azul para las luces, y cian, magenta y amarillo para las tintas.",
+        [
+            ("Los pigmentos reaccionan químicamente entre sí y cambian de color",
+             "No hay reacción química: el resultado se explica por la absorción combinada de los dos pigmentos."),
+            ("La pared blanca absorbe parte de la luz de colores y altera el resultado",
+             "Una pared blanca refleja todas las componentes por igual: no altera la mezcla."),
+            ("La luz roja y la verde tienen distinta intensidad que las pinturas correspondientes",
+             "El resultado no cambia igualando intensidades: la diferencia es de mecanismo, no de cantidad."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Un objeto se ilumina con dos focos, uno rojo y uno verde, colocados en "
+        "posiciones distintas. El objeto proyecta dos sombras que no son negras "
+        "sino de color. ¿Qué explica esos colores?",
+        "Cada sombra recibe la luz del otro foco solamente",
+        "Una sombra no es ausencia total de luz: es ausencia de la luz de una "
+        "fuente.\n\n"
+        "1) La sombra proyectada por el foco rojo es la zona a la que no llega "
+        "luz roja, pero sí llega la verde: se ve verde.\n"
+        "2) La sombra del foco verde recibe solo luz roja: se ve roja.\n"
+        "3) Donde llegan las dos luces, se suman y la superficie se ve "
+        "amarillenta; solo si un punto quedara sin ninguna de las dos sería "
+        "negro.\n\n"
+        "Es una demostración muy directa de la mezcla aditiva y de que las "
+        "sombras se definen respecto de cada fuente por separado.",
+        [
+            ("Los focos alteran el color propio del objeto que proyecta la sombra",
+             "El color de la sombra se ve sobre la pared, no sobre el objeto, y no depende del color de este."),
+            ("La luz se dispersa al rodear el objeto y produce colores en los bordes",
+             "Las zonas coloreadas son las sombras completas, no franjas en los bordes."),
+            ("Las dos luces interfieren entre sí y se cancelan parcialmente en las sombras",
+             "Focos independientes no producen interferencia estable; las sombras se explican geométricamente."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "¿Qué ocurre cuando dos ondas idénticas llegan a un mismo punto "
+        "exactamente en fase?",
+        "Se refuerzan y la amplitud resultante es mayor",
+        "La superposición suma las perturbaciones punto a punto.\n\n"
+        "1) Estar en fase significa que la cresta de una coincide con la cresta "
+        "de la otra.\n"
+        "2) Al sumarse, la perturbación resultante tiene una amplitud igual a la "
+        "suma de las dos.\n"
+        "3) Eso es la interferencia CONSTRUCTIVA, y en el caso de la luz se "
+        "traduce en una zona más brillante.\n\n"
+        "Si llegaran en oposición, con la cresta de una sobre el valle de la "
+        "otra, se cancelarían: interferencia destructiva.",
+        [
+            ("Se cancelan y no queda perturbación",
+             "Eso ocurre cuando llegan en oposición de fase, no en fase."),
+            ("Cambian su frecuencia al sumarse",
+             "La superposición modifica la amplitud resultante, no la frecuencia de las ondas."),
+            ("Se desvían mutuamente y siguen caminos distintos",
+             "Las ondas se atraviesan sin desviarse: después de superponerse continúan como si nada."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "facil",
+        "Una hoja de papel blanco se ve iluminada desde cualquier ángulo, "
+        "mientras que un espejo solo devuelve la imagen en una dirección "
+        "determinada. ¿Cómo se llama el tipo de reflexión del papel?",
+        "Reflexión difusa",
+        "Los dos casos cumplen la ley de reflexión, pero con superficies "
+        "distintas.\n\n"
+        "1) En el espejo, la superficie es lisa y las normales de todos los "
+        "puntos apuntan en la misma dirección: los rayos paralelos salen "
+        "paralelos. Es reflexión ESPECULAR.\n"
+        "2) En el papel, la superficie es rugosa y cada punto tiene su normal "
+        "orientada distinto: los rayos salen en todas direcciones. Es reflexión "
+        "DIFUSA.\n"
+        "3) Por eso el papel se ve igual de iluminado desde cualquier posición, "
+        "pero no muestra ninguna imagen.\n\n"
+        "Casi todo lo que vemos lo vemos por reflexión difusa.",
+        [
+            ("Reflexión especular",
+             "La especular es la del espejo, que conserva las direcciones relativas de los rayos."),
+            ("Refracción total",
+             "La refracción implica que la luz atraviese el material cambiando de dirección, no que vuelva."),
+            ("Dispersión cromática, porque el papel separa la luz en sus colores",
+             "El papel blanco devuelve todos los colores mezclados: no los separa."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Se afirma que un objeto negro y uno blanco expuestos al Sol alcanzan "
+        "temperaturas distintas. ¿Cuál es la explicación?",
+        "El negro absorbe casi toda la radiación y el blanco la refleja",
+        "La temperatura que alcanza un cuerpo depende de cuánta energía "
+        "absorbe.\n\n"
+        "1) Una superficie blanca refleja de manera pareja casi toda la "
+        "radiación visible que recibe: poca energía queda en el material.\n"
+        "2) Una superficie negra refleja muy poco y absorbe casi todo, "
+        "convirtiendo esa energía en agitación térmica.\n"
+        "3) Con la misma radiación incidente, el objeto negro acumula más "
+        "energía y alcanza mayor temperatura.\n\n"
+        "Por eso la ropa clara resulta más fresca al sol y los paneles solares "
+        "térmicos se fabrican con superficies oscuras.",
+        [
+            ("El negro emite más radiación y por eso se calienta",
+             "Un buen absorbente es también un buen emisor, pero lo que eleva su temperatura al sol es cuánto absorbe."),
+            ("El blanco transmite la radiación hacia el interior del objeto",
+             "Ambos objetos son opacos: la radiación no los atraviesa."),
+            ("El negro tiene mayor conductividad térmica y por eso se calienta más rápido",
+             "El color no determina la conductividad: dos objetos del mismo material y distinto color se calientan distinto igual."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Se comparan dos explicaciones para el hecho de que un lápiz sumergido "
+        "en un vaso se vea quebrado: (I) la luz cambia de dirección al pasar del "
+        "agua al aire, y (II) el agua actúa como una lente que deforma la "
+        "imagen. ¿Cómo se evalúan?",
+        "La primera es correcta y la segunda confunde el mecanismo",
+        "El fenómeno ocurre en una superficie plana, lo que descarta la "
+        "explicación de la lente.\n\n"
+        "1) La refracción ocurre en el LÍMITE entre los dos medios, y basta con "
+        "que ese límite sea plano: no hace falta ninguna curvatura.\n"
+        "2) Una lente funciona precisamente por su forma curva, que hace que "
+        "rayos distintos se desvíen ángulos distintos y converjan.\n"
+        "3) La prueba es que el efecto se ve igual en un recipiente de caras "
+        "planas y paralelas, donde no hay ninguna lente posible.\n\n"
+        "El agua sí puede actuar como lente cuando su superficie es curva, por "
+        "ejemplo en una gota, pero ese es otro fenómeno.",
+        [
+            ("Las dos son correctas y describen el mismo fenómeno con otras palabras",
+             "No son equivalentes: una apela al cambio de medio y la otra a una curvatura que aquí no existe."),
+            ("La segunda es correcta porque el agua siempre concentra la luz",
+             "El agua concentra la luz solo si su superficie es curva; en un recipiente de caras planas no lo hace."),
+            ("Ninguna es correcta, porque el lápiz se ve quebrado por reflexión en la superficie del agua",
+             "La reflexión produce una imagen adicional sobre la superficie, no el quiebre del objeto sumergido."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "dificil",
+        "Un investigador quiere saber si la atenuación de una señal de radio en "
+        "un túnel se debe a absorción por las paredes o a interferencia entre "
+        "trayectos reflejados. ¿Qué observación distinguiría ambas causas?",
+        "Si la señal varía de manera brusca entre puntos vecinos del túnel",
+        "Las dos causas predicen comportamientos espaciales distintos.\n\n"
+        "1) La ABSORCIÓN produce una atenuación progresiva y suave: la señal "
+        "disminuye de manera continua a medida que se avanza.\n"
+        "2) La INTERFERENCIA entre trayectos produce un patrón de máximos y "
+        "mínimos: puntos muy próximos pueden tener niveles muy distintos.\n"
+        "3) Recorrer el túnel midiendo cada pocos metros permite distinguir un "
+        "descenso monótono de un patrón alternante.\n\n"
+        "Si aparecen ambos comportamientos superpuestos, es señal de que los dos "
+        "mecanismos operan a la vez, que es lo habitual.",
+        [
+            ("Si la señal es más débil de noche que de día",
+             "La hora no afecta la propagación dentro de un túnel, donde no interviene la ionósfera."),
+            ("Si la señal mejora al aumentar la potencia del emisor",
+             "Aumentar la potencia sube todos los niveles por igual y no distingue entre las dos causas."),
+            ("Si la temperatura de las paredes del túnel aumenta durante la transmisión",
+             "El calentamiento por absorción de una señal de radio es indetectable en la práctica."),
+        ],
+    ),
+    _q(
+        "cie_ondas_fenomenos", "medio",
+        "Las ondas de radio de onda corta permiten comunicaciones entre "
+        "continentes pese a la curvatura de la Tierra. ¿Qué lo hace posible?",
+        "Se reflejan en la ionósfera y vuelven a la superficie",
+        "El alcance supera con mucho la línea de visión, así que la señal no "
+        "viaja en línea recta hasta el receptor.\n\n"
+        "1) La ionósfera es una capa alta de la atmósfera con abundantes cargas "
+        "libres, producidas por la radiación solar.\n"
+        "2) Esa capa refleja las ondas de radio de ciertas frecuencias, que "
+        "regresan al suelo a miles de kilómetros del emisor.\n"
+        "3) La señal puede rebotar varias veces entre el suelo y la ionósfera y "
+        "así dar la vuelta al planeta.\n\n"
+        "Como la ionización depende del Sol, la propagación cambia entre el día "
+        "y la noche, y de ahí que ciertas emisoras lejanas solo se escuchen de "
+        "madrugada.",
+        [
+            ("Se difractan sobre la curvatura terrestre hasta el otro continente",
+             "La difracción ayuda en distancias moderadas, pero no basta para cubrir miles de kilómetros."),
+            ("Viajan a través del interior de la Tierra atravesando la corteza",
+             "El terreno absorbe las ondas de radio: no atraviesan el planeta."),
+            ("Son retransmitidas automáticamente por satélites en órbita baja",
+             "La onda corta funcionaba mucho antes de que existieran satélites, por reflexión ionosférica."),
+        ],
+    ),
+]
