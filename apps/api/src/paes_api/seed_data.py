@@ -106522,3 +106522,1184 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Quimica - Estructura atomica: modelos y particulas
+#
+# La otra mitad del area: la teoria de Dalton y los modelos de Thomson,
+# Rutherford y Bohr, con la evidencia que obligo a reemplazar cada uno; y los
+# conceptos de electron, proton y neutron, numero atomico y numero masico.
+#
+# Las catorce dificiles trabajan la logica del experimento historico: que se
+# habria observado si Thomson tuviera razon, por que la BAJA FRECUENCIA de las
+# desviaciones —y no su magnitud— prueba que el nucleo es diminuto, y por que
+# decir que Dalton se equivoco pierde de vista lo que su teoria si explicaba.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué carga eléctrica tiene el electrón?",
+        "Negativa",
+        "Las tres partículas se distinguen por su carga y su masa.\n\n"
+        "1) El electrón tiene carga negativa y se ubica en la zona externa del "
+        "átomo.\n"
+        "2) El protón tiene carga positiva de igual magnitud y está en el "
+        "núcleo.\n"
+        "3) El neutrón no tiene carga y acompaña a los protones en el núcleo.\n\n"
+        "En un átomo neutro hay tantos electrones como protones, y por eso las "
+        "cargas se compensan.",
+        [
+            ("Positiva",
+             "La carga positiva corresponde al protón."),
+            ("No tiene carga",
+             "La partícula sin carga es el neutrón."),
+            ("Depende del elemento al que pertenezca el átomo en que se encuentre",
+             "La carga del electrón es la misma en todos los átomos."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué partícula subatómica no tiene carga eléctrica?",
+        "El neutrón",
+        "El nombre de la partícula anticipa su característica.\n\n"
+        "1) El neutrón es eléctricamente neutro y se ubica en el núcleo.\n"
+        "2) Su masa es prácticamente igual a la del protón.\n"
+        "3) Aporta masa al átomo sin alterar su carga total.\n\n"
+        "Por eso dos átomos del mismo elemento pueden tener distinta cantidad "
+        "de neutrones y seguir siendo el mismo elemento.",
+        [
+            ("El protón",
+             "El protón tiene carga positiva."),
+            ("El electrón",
+             "El electrón tiene carga negativa."),
+            ("El núcleo, que concentra la masa del átomo pero no participa de sus reacciones",
+             "El núcleo tiene carga positiva por sus protones, y además no es una partícula subatómica."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué indica el número másico de un átomo?",
+        "La suma de sus protones y neutrones",
+        "El número másico cuenta las partículas del núcleo.\n\n"
+        "1) Se representa con la letra A y corresponde a protones más "
+        "neutrones.\n"
+        "2) No incluye a los electrones, cuya masa es despreciable frente a la "
+        "de las partículas nucleares.\n"
+        "3) Restando el número atómico al número másico se obtiene la cantidad "
+        "de neutrones.\n\n"
+        "Dos átomos del mismo elemento con distinto número másico son isótopos "
+        "entre sí.",
+        [
+            ("La cantidad de electrones",
+             "Los electrones se cuentan con el número atómico en un átomo neutro."),
+            ("La cantidad de protones",
+             "Esa cantidad es el número atómico, no el número másico."),
+            ("La masa exacta del átomo expresada en gramos y medida con una balanza de precisión",
+             "El número másico es un conteo de partículas, no una masa medida en gramos."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué partícula determina de qué elemento se trata?",
+        "El protón",
+        "La identidad química depende de la carga del núcleo.\n\n"
+        "1) El número de protones es el número atómico, y cada elemento tiene "
+        "el suyo.\n"
+        "2) Cambiar el número de protones convierte al átomo en otro elemento "
+        "distinto.\n"
+        "3) Cambiar neutrones da un isótopo, y cambiar electrones da un ion, "
+        "pero en ambos casos el elemento sigue siendo el mismo.\n\n"
+        "Por eso la tabla periódica ordena los elementos justamente por su "
+        "número de protones.",
+        [
+            ("El neutrón",
+             "Variar los neutrones produce isótopos del mismo elemento."),
+            ("El electrón",
+             "Variar los electrones produce iones del mismo elemento."),
+            ("El conjunto de las tres partículas, ya que todas deben coincidir para hablar del mismo elemento",
+             "Basta el número de protones: neutrones y electrones pueden variar sin cambiar el elemento."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué proponía la teoría atómica de Dalton?",
+        "Que la materia está formada por átomos indivisibles",
+        "Fue la primera formulación con base experimental sobre los átomos.\n\n"
+        "1) Dalton sostuvo que toda la materia está formada por partículas "
+        "diminutas e indivisibles.\n"
+        "2) Los átomos de un mismo elemento son iguales entre sí, y los de "
+        "elementos distintos difieren.\n"
+        "3) Los compuestos se forman al combinarse átomos en proporciones "
+        "definidas.\n\n"
+        "El descubrimiento posterior del electrón mostró que el átomo sí tiene "
+        "partes, y obligó a corregir esa primera idea.",
+        [
+            ("Que el átomo tiene un núcleo diminuto",
+             "El núcleo lo propuso Rutherford, un siglo después."),
+            ("Que los electrones giran en niveles de energía",
+             "Esa idea es del modelo de Bohr."),
+            ("Que la carga positiva está repartida por todo el volumen del átomo como una masa continua",
+             "Esa descripción corresponde al modelo de Thomson."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué partícula descubrió Thomson?",
+        "El electrón",
+        "El descubrimiento cambió la idea de un átomo indivisible.\n\n"
+        "1) Trabajando con rayos catódicos, Thomson identificó partículas de "
+        "carga negativa y masa muy pequeña.\n"
+        "2) Esas partículas aparecían con independencia del material del "
+        "electrodo, así que debían formar parte de todos los átomos.\n"
+        "3) Si el átomo contiene partículas, no puede ser indivisible como "
+        "sostenía Dalton.\n\n"
+        "Para explicar la neutralidad del conjunto, Thomson propuso un átomo "
+        "con carga positiva distribuida y electrones incrustados en ella.",
+        [
+            ("El protón",
+             "La carga positiva del núcleo se estableció con trabajos posteriores."),
+            ("El neutrón",
+             "El neutrón se identificó bastante después, ya en el siglo XX."),
+            ("El núcleo atómico, al observar que la mayoría de las partículas atravesaba una lámina delgada",
+             "Ese es el experimento de Rutherford, no el de Thomson."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué propuso el modelo atómico de Rutherford?",
+        "Que la carga positiva se concentra en un núcleo",
+        "El modelo surgió de un resultado experimental inesperado.\n\n"
+        "1) Al bombardear una lámina muy delgada, casi todas las partículas la "
+        "atravesaron sin desviarse.\n"
+        "2) Unas pocas se desviaron con ángulos grandes, e incluso rebotaron "
+        "hacia atrás.\n"
+        "3) Eso solo se explica si la carga positiva y casi toda la masa están "
+        "concentradas en una región diminuta.\n\n"
+        "El resto del átomo resulta ser, en su mayor parte, espacio vacío por "
+        "donde las partículas pasan sin obstáculo.",
+        [
+            ("Que el átomo es indivisible",
+             "Esa era la propuesta de Dalton, anterior al descubrimiento de las partículas subatómicas."),
+            ("Que los electrones ocupan niveles de energía definidos",
+             "Ese aporte es del modelo de Bohr."),
+            ("Que la carga positiva se distribuye de manera uniforme por todo el volumen del átomo",
+             "Esa es la descripción del modelo de Thomson, que el experimento de Rutherford descartó."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Qué agregó el modelo atómico de Bohr?",
+        "Que los electrones ocupan niveles de energía definidos",
+        "El aporte de Bohr fue ordenar la zona externa del átomo.\n\n"
+        "1) Los electrones no pueden estar a cualquier distancia del núcleo: "
+        "ocupan niveles con energías determinadas.\n"
+        "2) Un electrón puede saltar de un nivel a otro absorbiendo o "
+        "emitiendo energía.\n"
+        "3) Esa energía se emite como luz de colores definidos, lo que explica "
+        "los espectros observados.\n\n"
+        "El modelo mantiene el núcleo de Rutherford y le agrega una estructura "
+        "para los electrones.",
+        [
+            ("Que el átomo tiene neutrones",
+             "El neutrón se identificó después y no forma parte del aporte de Bohr."),
+            ("Que la materia está formada por átomos",
+             "Esa idea es muy anterior y corresponde a Dalton."),
+            ("Que la carga positiva está incrustada de manera uniforme en el volumen del átomo",
+             "Esa descripción es del modelo de Thomson."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Cuál de las tres partículas subatómicas tiene menor masa?",
+        "El electrón",
+        "La diferencia de masa entre las partículas es enorme.\n\n"
+        "1) El protón y el neutrón tienen masas muy parecidas entre sí.\n"
+        "2) El electrón tiene una masa unas mil ochocientas veces menor que "
+        "cualquiera de los dos.\n"
+        "3) Por eso la masa del átomo se concentra prácticamente toda en el "
+        "núcleo.\n\n"
+        "Esa es la razón de que el número másico cuente solo protones y "
+        "neutrones.",
+        [
+            ("El protón",
+             "Su masa es comparable a la del neutrón y muy superior a la del electrón."),
+            ("El neutrón",
+             "Es la partícula de mayor masa de las tres, junto con el protón."),
+            ("Las tres tienen la misma masa, porque forman parte de un mismo átomo neutro",
+             "Sus masas son muy distintas: la del electrón es órdenes de magnitud menor."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "En un átomo neutro, ¿qué relación hay entre protones y electrones?",
+        "Hay la misma cantidad de ambos",
+        "La neutralidad es una condición sobre la carga total.\n\n"
+        "1) Cada protón aporta una carga positiva y cada electrón, una negativa "
+        "de igual magnitud.\n"
+        "2) Para que la carga total sea cero, ambas cantidades deben ser "
+        "iguales.\n"
+        "3) Por eso, en un átomo neutro, el número atómico indica tanto los "
+        "protones como los electrones.\n\n"
+        "Si esa igualdad se rompe, el átomo deja de ser neutro y pasa a ser un "
+        "ion.",
+        [
+            ("Hay el doble de electrones",
+             "Con el doble de electrones la carga total sería negativa."),
+            ("Hay más protones que electrones",
+             "Eso describe a un catión, no a un átomo neutro."),
+            ("La relación depende del número de neutrones que tenga el núcleo de ese átomo",
+             "Los neutrones no tienen carga y no intervienen en ese balance."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "facil",
+        "¿Dónde se ubican los electrones dentro del átomo?",
+        "En la zona que rodea al núcleo",
+        "El átomo tiene dos regiones bien distintas.\n\n"
+        "1) El núcleo, diminuto y central, contiene protones y neutrones.\n"
+        "2) Los electrones ocupan la región externa, mucho más amplia que el "
+        "núcleo.\n"
+        "3) Esa región es la que determina el tamaño del átomo y la que "
+        "participa de los enlaces químicos.\n\n"
+        "Por eso las reacciones químicas involucran electrones y no partículas "
+        "del núcleo.",
+        [
+            ("En el núcleo, junto a los protones",
+             "En el núcleo están los protones y los neutrones, no los electrones."),
+            ("En el centro exacto del átomo",
+             "El centro lo ocupa el núcleo."),
+            ("Fuera del átomo, en el espacio que queda entre un átomo y sus vecinos más cercanos",
+             "Los electrones forman parte del átomo y ocupan la región que rodea a su núcleo."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "En el experimento de la lámina de oro, la mayoría de las partículas la "
+        "atravesó sin desviarse. ¿Qué indica ese resultado?",
+        "Que el átomo es en su mayor parte espacio vacío",
+        "La proporción de partículas que pasa informa sobre la estructura.\n\n"
+        "1) Si el átomo fuera macizo, prácticamente todas las partículas se "
+        "habrían desviado al chocar.\n"
+        "2) Que casi todas pasen de largo indica que encuentran muy poco "
+        "material en su camino.\n"
+        "3) Por lo tanto, la materia del átomo está concentrada en una región "
+        "muy pequeña y el resto está esencialmente vacío.\n\n"
+        "Las pocas desviaciones grandes corresponden a las partículas que "
+        "pasaron cerca de esa región concentrada.",
+        [
+            ("Que la lámina tenía agujeros",
+             "El resultado se repitió con láminas de distintos metales y espesores: no eran agujeros."),
+            ("Que las partículas eran demasiado pequeñas para chocar",
+             "Algunas sí chocaron y se desviaron: el tamaño no explica el patrón observado."),
+            ("Que los electrones del oro desviaron a las partículas hacia adelante sin detenerlas",
+             "Los electrones tienen masa demasiado pequeña para desviar apreciablemente a esas partículas."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Por qué unas pocas partículas rebotaron hacia atrás en el experimento "
+        "de Rutherford?",
+        "Porque chocaron con un núcleo denso y positivo",
+        "El rebote exige encontrar algo masivo y de carga concentrada.\n\n"
+        "1) Las partículas usadas tenían carga positiva y bastante masa.\n"
+        "2) Solo una región con carga positiva concentrada y masa comparable "
+        "puede repelerlas con fuerza suficiente para devolverlas.\n"
+        "3) Como esos rebotes eran muy escasos, esa región debía ser diminuta "
+        "comparada con el átomo completo.\n\n"
+        "Rutherford describió ese resultado como disparar a un papel y ver "
+        "volver el proyectil.",
+        [
+            ("Porque chocaron con electrones",
+             "La masa del electrón es demasiado pequeña para producir ese rebote."),
+            ("Porque la lámina era muy gruesa",
+             "La lámina era extremadamente delgada, y aun así ocurrieron los rebotes."),
+            ("Porque la carga positiva repartida por todo el átomo frenó a esas partículas de manera gradual",
+             "Una carga repartida produciría desviaciones pequeñas, no rebotes hacia atrás."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué describía el modelo de Thomson?",
+        "Un átomo con carga positiva difusa y electrones incrustados",
+        "El modelo buscaba explicar un átomo neutro que contiene "
+        "electrones.\n\n"
+        "1) Thomson había descubierto electrones de carga negativa dentro del "
+        "átomo.\n"
+        "2) Como el átomo es neutro, debía existir carga positiva que "
+        "compensara.\n"
+        "3) Propuso que esa carga positiva ocupaba todo el volumen y que los "
+        "electrones estaban incrustados en ella.\n\n"
+        "El experimento de la lámina de oro mostró después que la carga "
+        "positiva no está repartida sino concentrada.",
+        [
+            ("Un átomo indivisible y macizo",
+             "Esa es la idea de Dalton, anterior al descubrimiento del electrón."),
+            ("Un núcleo rodeado de electrones en niveles",
+             "Esa descripción combina los modelos de Rutherford y de Bohr."),
+            ("Un átomo formado por protones y neutrones en el centro y electrones girando alrededor",
+             "Ese es el modelo posterior: Thomson no proponía núcleo."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Cómo explica el modelo de Bohr que un elemento emita luz de colores "
+        "definidos?",
+        "Los electrones saltan entre niveles de energía fija",
+        "Los colores discretos son consecuencia de energías discretas.\n\n"
+        "1) Un electrón que absorbe energía sube a un nivel superior.\n"
+        "2) Al volver a su nivel original, emite exactamente la diferencia de "
+        "energía entre ambos niveles.\n"
+        "3) Como esa diferencia tiene un valor determinado, la luz emitida "
+        "tiene un color definido y no cualquiera.\n\n"
+        "El conjunto de esas líneas forma el espectro característico de cada "
+        "elemento, que funciona como su huella.",
+        [
+            ("Los electrones se desprenden del átomo",
+             "Si se desprendieran, el átomo quedaría ionizado y no emitiría un espectro de líneas."),
+            ("Los neutrones liberan energía al moverse",
+             "Los neutrones no participan de la emisión de luz visible del átomo."),
+            ("La carga positiva del átomo vibra y produce luz de todos los colores del espectro visible",
+             "Eso daría un espectro continuo, no las líneas definidas que se observan."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Cuál es el orden histórico de los modelos atómicos?",
+        "Dalton, Thomson, Rutherford y Bohr",
+        "Cada modelo corrigió al anterior a partir de evidencia nueva.\n\n"
+        "1) Dalton propuso el átomo indivisible.\n"
+        "2) Thomson descubrió el electrón y planteó una carga positiva difusa "
+        "con electrones incrustados.\n"
+        "3) Rutherford estableció el núcleo, y Bohr organizó a los electrones "
+        "en niveles de energía.\n\n"
+        "La secuencia muestra que un modelo se reemplaza cuando aparece una "
+        "observación que no logra explicar.",
+        [
+            ("Thomson, Dalton, Bohr y Rutherford",
+             "Dalton es el primero de la serie, y Bohr posterior a Rutherford."),
+            ("Rutherford, Bohr, Dalton y Thomson",
+             "Invierte por completo la secuencia histórica."),
+            ("Bohr, Rutherford, Thomson y Dalton, que es el orden en que se fueron simplificando los modelos",
+             "Ese es exactamente el orden inverso al histórico."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Un átomo tiene número atómico 11 y número másico 23. ¿Cuántos "
+        "neutrones tiene?",
+        "12 neutrones",
+        "El número de neutrones se obtiene por diferencia.\n\n"
+        "1) El número atómico, 11, indica la cantidad de protones.\n"
+        "2) El número másico, 23, cuenta protones más neutrones.\n"
+        "3) Restando, 23 menos 11 da 12 neutrones.\n\n"
+        "Si el átomo es neutro, además tiene 11 electrones, tantos como "
+        "protones.",
+        [
+            ("11 neutrones",
+             "Ese es el número de protones, indicado por el número atómico."),
+            ("23 neutrones",
+             "Ese es el número másico, que ya incluye a los protones."),
+            ("34 neutrones, que resultan de sumar el número atómico y el número másico del átomo",
+             "La operación correcta es una resta: el másico ya contiene al atómico."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Por qué dos isótopos de un mismo elemento tienen las mismas "
+        "propiedades químicas?",
+        "Porque tienen el mismo número de electrones",
+        "El comportamiento químico depende de la zona externa del átomo.\n\n"
+        "1) Los isótopos difieren en neutrones, que están en el núcleo y no "
+        "tienen carga.\n"
+        "2) Tienen el mismo número de protones y, si son neutros, el mismo "
+        "número de electrones.\n"
+        "3) Como las reacciones químicas involucran a los electrones externos, "
+        "ambos isótopos reaccionan igual.\n\n"
+        "Lo que sí cambia son algunas propiedades físicas, como la masa y, en "
+        "ciertos casos, la estabilidad del núcleo.",
+        [
+            ("Porque tienen la misma masa",
+             "Justamente sus masas son distintas: esa es la diferencia entre isótopos."),
+            ("Porque tienen el mismo número de neutrones",
+             "Los isótopos se distinguen precisamente por su número de neutrones."),
+            ("Porque los neutrones adicionales se reparten entre los niveles de energía externos del átomo",
+             "Los neutrones permanecen en el núcleo y no ocupan niveles electrónicos."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Cómo se forma un catión?",
+        "Cuando un átomo pierde electrones",
+        "El signo de la carga indica qué se perdió o se ganó.\n\n"
+        "1) Al perder uno o más electrones, quedan más protones que electrones "
+        "en el átomo.\n"
+        "2) La carga total resulta positiva, y esa especie se llama catión.\n"
+        "3) El número de protones no cambió, así que sigue siendo el mismo "
+        "elemento.\n\n"
+        "Ganar electrones produce el caso opuesto, un anión, con carga "
+        "negativa.",
+        [
+            ("Cuando un átomo gana electrones",
+             "Ganar electrones produce un anión, de carga negativa."),
+            ("Cuando un átomo gana protones",
+             "Cambiar el número de protones cambiaría el elemento."),
+            ("Cuando un átomo pierde neutrones y queda con menos masa que la de su forma original",
+             "Perder neutrones da un isótopo distinto, no un ion: la carga no cambia."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Por qué las masas atómicas de la tabla periódica no son números "
+        "enteros?",
+        "Porque promedian los isótopos según su abundancia",
+        "El valor de la tabla representa a una muestra real del elemento.\n\n"
+        "1) Casi todos los elementos existen como mezcla de varios isótopos, "
+        "cada uno con su número másico entero.\n"
+        "2) La masa atómica de la tabla es el promedio de esos valores, "
+        "ponderado por la abundancia de cada isótopo.\n"
+        "3) Ese promedio rara vez cae en un número entero.\n\n"
+        "Por eso el cloro aparece con 35,5: es una mezcla de dos isótopos, uno "
+        "de masa 35 y otro de 37.",
+        [
+            ("Porque los átomos pierden masa al reaccionar",
+             "Las reacciones químicas no alteran la masa de los átomos involucrados."),
+            ("Porque la masa de los electrones se suma al total",
+             "La masa del electrón es demasiado pequeña para explicar esas diferencias."),
+            ("Porque los instrumentos de medición no alcanzan la precisión necesaria para obtener enteros",
+             "El valor no entero es real y proviene del promedio, no de un límite de medición."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué le ocurre a un átomo si cambia su número de neutrones?",
+        "Se convierte en otro isótopo del mismo elemento",
+        "Cada partícula que cambia produce un efecto distinto.\n\n"
+        "1) El número de protones no varía, así que el elemento sigue siendo el "
+        "mismo.\n"
+        "2) Cambia el número másico, porque los neutrones se cuentan en él.\n"
+        "3) El resultado es otro isótopo, con las mismas propiedades químicas y "
+        "distinta masa.\n\n"
+        "Cambiar electrones daría un ion, y cambiar protones daría un elemento "
+        "distinto.",
+        [
+            ("Se convierte en otro elemento",
+             "Para cambiar de elemento tendría que cambiar el número de protones."),
+            ("Se convierte en un ion",
+             "Los iones se forman al ganar o perder electrones, no neutrones."),
+            ("No cambia nada, porque los neutrones no forman parte del núcleo del átomo",
+             "Los neutrones sí están en el núcleo y se cuentan en el número másico."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué significa que un modelo atómico haya sido reemplazado por otro?",
+        "Que apareció evidencia que el primero no explicaba",
+        "Los modelos científicos se evalúan por lo que logran explicar.\n\n"
+        "1) Un modelo se sostiene mientras dé cuenta de las observaciones "
+        "disponibles.\n"
+        "2) Cuando aparece un resultado que no encaja, como las desviaciones de "
+        "la lámina de oro, el modelo debe corregirse o reemplazarse.\n"
+        "3) El modelo nuevo conserva lo que el anterior explicaba bien y agrega "
+        "lo que faltaba.\n\n"
+        "Por eso el modelo de Thomson no fue inútil: explicaba la neutralidad "
+        "del átomo y la existencia de electrones.",
+        [
+            ("Que el primero no servía para nada",
+             "Cada modelo explicaba parte de la evidencia disponible en su momento."),
+            ("Que sus autores se equivocaron por descuido",
+             "El reemplazo responde a evidencia nueva, no a errores de descuido."),
+            ("Que la ciencia cambia de opinión con frecuencia y sus resultados no son confiables",
+             "El cambio ante evidencia nueva es justamente lo que hace confiable al procedimiento."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué diferencia hay en tamaño entre el núcleo y el átomo completo?",
+        "El núcleo es unas diez mil veces menor",
+        "La proporción explica el resultado del experimento de la lámina.\n\n"
+        "1) El diámetro del átomo está determinado por la región que ocupan los "
+        "electrones.\n"
+        "2) El núcleo es del orden de diez mil a cien mil veces más pequeño que "
+        "esa región.\n"
+        "3) Por eso casi todo el volumen del átomo es espacio vacío, aunque "
+        "prácticamente toda su masa esté en el núcleo.\n\n"
+        "Si el átomo tuviera el tamaño de un estadio, el núcleo sería "
+        "comparable a una pelota en el centro.",
+        [
+            ("El núcleo ocupa la mitad del átomo",
+             "El núcleo ocupa una fracción minúscula del volumen atómico."),
+            ("Tienen prácticamente el mismo tamaño",
+             "Si así fuera, ninguna partícula habría atravesado la lámina sin desviarse."),
+            ("El núcleo es mayor que el átomo, porque concentra casi la totalidad de su masa",
+             "Concentrar la masa no implica ocupar más volumen: el núcleo es mucho más pequeño."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué son los electrones de valencia?",
+        "Los del último nivel de energía",
+        "Son los electrones que participan de las reacciones químicas.\n\n"
+        "1) Los electrones se distribuyen por niveles alrededor del núcleo.\n"
+        "2) Los del nivel más externo son los que quedan disponibles para "
+        "interactuar con otros átomos.\n"
+        "3) De su número dependen la capacidad de formar enlaces y el tipo de "
+        "ion que el átomo tiende a formar.\n\n"
+        "Por eso elementos con el mismo número de electrones de valencia "
+        "presentan comportamientos químicos parecidos.",
+        [
+            ("Los que están en el núcleo",
+             "En el núcleo hay protones y neutrones, no electrones."),
+            ("Todos los electrones del átomo",
+             "Solo los del último nivel se consideran de valencia."),
+            ("Los electrones que el átomo ha perdido al transformarse en un ion de carga positiva",
+             "Los electrones de valencia son los que el átomo tiene, no los que perdió."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Un átomo neutro tiene 17 electrones. ¿Cuál es su número atómico?",
+        "17",
+        "En un átomo neutro ambos números coinciden.\n\n"
+        "1) El número atómico indica cuántos protones tiene el átomo.\n"
+        "2) Si el átomo es neutro, tiene tantos electrones como protones.\n"
+        "3) Por lo tanto, 17 electrones implican 17 protones y número atómico "
+        "17, que corresponde al cloro.\n\n"
+        "La igualdad se rompe en los iones, donde hay que corregir según la "
+        "carga.",
+        [
+            ("34",
+             "Duplica el valor sin motivo: los electrones y los protones se corresponden uno a uno."),
+            ("8",
+             "No hay ninguna razón para dividir el número de electrones."),
+            ("No se puede determinar sin conocer también el número de neutrones del átomo",
+             "Los neutrones no intervienen: el número atómico se deduce de los protones."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_atomo", "medio",
+        "En la notación de un isótopo, ¿qué indican los dos números que "
+        "acompañan al símbolo del elemento?",
+        "El número másico y el número atómico",
+        "La notación resume la composición del núcleo.\n\n"
+        "1) El número escrito arriba es el másico, o sea protones más "
+        "neutrones.\n"
+        "2) El escrito abajo es el atómico, o sea la cantidad de protones.\n"
+        "3) Restando el segundo del primero se obtiene el número de "
+        "neutrones.\n\n"
+        "El número atómico es redundante, porque el símbolo del elemento ya lo "
+        "determina, pero se escribe para facilitar el cálculo.",
+        [
+            ("La cantidad de electrones y de neutrones",
+             "Los electrones no aparecen en esa notación; se deducen de la carga."),
+            ("La masa en gramos y el volumen del átomo",
+             "La notación no expresa masas en gramos ni volúmenes."),
+            ("El año en que el elemento fue descubierto y el lugar que ocupa en la tabla periódica",
+             "La notación describe la composición del núcleo, no datos históricos."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "Un átomo de número atómico 20 forma un ion con carga 2+. ¿Cuántos "
+        "electrones tiene ese ion?",
+        "18 electrones",
+        "La carga indica cuántos electrones faltan o sobran.\n\n"
+        "1) El átomo neutro tiene 20 protones y 20 electrones.\n"
+        "2) Una carga 2+ significa que perdió dos electrones.\n"
+        "3) Le quedan 18 electrones, mientras los protones siguen siendo 20.\n\n"
+        "El elemento no cambió: sigue siendo el mismo, porque el número de "
+        "protones se mantuvo.",
+        [
+            ("20 electrones",
+             "Ese es el número del átomo neutro, antes de perder los dos electrones."),
+            ("22 electrones",
+             "Suma en vez de restar: una carga positiva indica pérdida de electrones."),
+            ("2 electrones, que corresponden a la carga que aparece indicada en el ion",
+             "La carga indica cuántos electrones se perdieron, no cuántos quedan."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "El hierro tiene número atómico 26. ¿Cuántos electrones tiene su ion de "
+        "carga 3+?",
+        "23 electrones",
+        "El razonamiento es el mismo para cualquier catión.\n\n"
+        "1) El átomo neutro de hierro tiene 26 protones y 26 electrones.\n"
+        "2) La carga 3+ indica que perdió tres electrones.\n"
+        "3) Quedan 23 electrones frente a 26 protones, lo que da carga total "
+        "positiva de 3.\n\n"
+        "Los protones no se ven afectados: por eso el ion sigue siendo hierro.",
+        [
+            ("26 electrones",
+             "Corresponde al átomo neutro, no al ion."),
+            ("29 electrones",
+             "Suma los tres en lugar de restarlos."),
+            ("3 electrones, tantos como indica el número que acompaña al signo de la carga del ion",
+             "Ese número indica cuántos electrones se perdieron, no el total restante."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué ocurre cuando un átomo gana electrones?",
+        "Se transforma en un ion de carga negativa",
+        "El balance entre protones y electrones define la carga.\n\n"
+        "1) Al ganar electrones, la cantidad de cargas negativas supera a la de "
+        "protones.\n"
+        "2) La carga total resulta negativa y la especie se llama anión.\n"
+        "3) El número de protones no cambia, así que sigue siendo el mismo "
+        "elemento.\n\n"
+        "Los elementos que tienden a ganar electrones son los que están cerca "
+        "de completar su último nivel.",
+        [
+            ("Se transforma en otro elemento",
+             "Cambiar de elemento exigiría cambiar el número de protones."),
+            ("Se transforma en un isótopo",
+             "Los isótopos difieren en neutrones, no en electrones."),
+            ("Se transforma en un ion de carga positiva, porque aumenta el número total de partículas",
+             "Ganar cargas negativas produce una carga total negativa."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Cómo se distribuyen los electrones alrededor del núcleo según el "
+        "modelo de Bohr?",
+        "En niveles con una capacidad máxima cada uno",
+        "El modelo organiza a los electrones por niveles de energía.\n\n"
+        "1) El primer nivel admite como máximo dos electrones.\n"
+        "2) El segundo y el tercero admiten hasta ocho en los elementos "
+        "representativos.\n"
+        "3) Los electrones ocupan primero los niveles más cercanos al núcleo, "
+        "que son los de menor energía.\n\n"
+        "Los que quedan en el último nivel ocupado son los de valencia, y son "
+        "los que definen el comportamiento químico.",
+        [
+            ("Todos juntos en un solo nivel",
+             "Cada nivel tiene una capacidad limitada, así que se ocupan varios."),
+            ("Sin ningún orden, en cualquier posición",
+             "El modelo de Bohr surge justamente para dar cuenta de ese orden."),
+            ("Dentro del núcleo, en capas concéntricas ordenadas según su energía creciente",
+             "Los electrones ocupan la región externa, no el núcleo."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Por qué el espectro de emisión sirve para identificar un elemento?",
+        "Porque cada elemento emite un conjunto único de líneas",
+        "Las líneas dependen de la estructura de niveles de cada átomo.\n\n"
+        "1) Los saltos posibles entre niveles son distintos en cada elemento.\n"
+        "2) Cada salto emite luz de una energía determinada, que aparece como "
+        "una línea en una posición precisa.\n"
+        "3) El conjunto de líneas funciona como una huella que no se repite "
+        "entre elementos.\n\n"
+        "Con ese método se identifican elementos en muestras de laboratorio y "
+        "también en la luz de estrellas lejanas.",
+        [
+            ("Porque todos los elementos emiten las mismas líneas",
+             "Si fueran iguales, el método no permitiría distinguir nada."),
+            ("Porque la luz emitida depende de la temperatura de la muestra",
+             "La temperatura influye en la intensidad, pero las posiciones de las líneas son propias del elemento."),
+            ("Porque cada elemento emite luz de un solo color, que se puede reconocer a simple vista",
+             "Un espectro tiene varias líneas, y su conjunto es lo que identifica al elemento."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "En los experimentos con rayos catódicos, el haz se desviaba hacia la "
+        "placa positiva. ¿Qué indicaba eso?",
+        "Que las partículas del haz tenían carga negativa",
+        "La dirección de la desviación revela el signo de la carga.\n\n"
+        "1) Cargas de signo opuesto se atraen y del mismo signo se repelen.\n"
+        "2) Si el haz se desvía hacia la placa positiva, sus partículas deben "
+        "ser negativas.\n"
+        "3) Esas partículas resultaron ser las mismas cualquiera fuera el "
+        "material del electrodo, así que estaban presentes en toda la "
+        "materia.\n\n"
+        "Ese razonamiento es el que llevó a Thomson a proponer el electrón como "
+        "componente de todos los átomos.",
+        [
+            ("Que tenían carga positiva",
+             "Una carga positiva sería repelida por la placa positiva."),
+            ("Que no tenían carga",
+             "Una partícula sin carga no se desviaría en un campo eléctrico."),
+            ("Que su masa era mayor que la de cualquier átomo conocido hasta ese momento",
+             "La desviación informa sobre la carga; además esas partículas resultaron mucho más livianas."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Por qué la tabla periódica ordena los elementos por su número "
+        "atómico?",
+        "Porque ese número define la identidad del elemento",
+        "El criterio de orden debe ser una propiedad que no admita "
+        "ambigüedad.\n\n"
+        "1) El número atómico cuenta los protones y es distinto para cada "
+        "elemento.\n"
+        "2) La masa atómica, en cambio, es un promedio de isótopos y en algunos "
+        "casos rompe el orden de propiedades.\n"
+        "3) Ordenar por número atómico hace que los elementos con propiedades "
+        "parecidas queden alineados en columnas.\n\n"
+        "Ese ordenamiento fue una corrección posterior a la tabla original, que "
+        "se había construido por masas.",
+        [
+            ("Porque es el número más fácil de medir",
+             "La facilidad de medición no es el criterio: lo es que identifique al elemento."),
+            ("Porque coincide con la masa del átomo",
+             "La masa incluye además a los neutrones, y no coincide con el número atómico."),
+            ("Porque indica el número de niveles de energía que tiene ocupados cada uno de sus átomos",
+             "El número de niveles se relaciona con el período, pero no es lo que expresa el número atómico."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué diferencia hay entre número másico y masa atómica?",
+        "Uno cuenta partículas y la otra es un promedio",
+        "Son dos magnitudes que se confunden con facilidad.\n\n"
+        "1) El número másico es un conteo: protones más neutrones de un átomo "
+        "concreto, y siempre es un número entero.\n"
+        "2) La masa atómica que aparece en la tabla es el promedio de las masas "
+        "de los isótopos, ponderado por su abundancia.\n"
+        "3) Por eso el número másico se refiere a un isótopo y la masa atómica, "
+        "al elemento tal como se encuentra en la naturaleza.\n\n"
+        "El cloro ilustra la diferencia: sus isótopos tienen números másicos 35 "
+        "y 37, y su masa atómica es 35,5.",
+        [
+            ("Son dos nombres para lo mismo",
+             "Uno es un entero por isótopo y la otra un promedio del elemento."),
+            ("El número másico incluye a los electrones",
+             "El número másico cuenta solo protones y neutrones."),
+            ("La masa atómica se refiere a un solo átomo y el número másico, a una muestra completa",
+             "Es al revés: el número másico describe un átomo y la masa atómica promedia el elemento."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Cómo describe el modelo actual la ubicación de los electrones?",
+        "Como regiones donde es probable encontrarlos",
+        "El modelo posterior a Bohr abandona la idea de trayectoria.\n\n"
+        "1) No es posible determinar a la vez la posición y la velocidad exacta "
+        "de un electrón.\n"
+        "2) Por eso se describe una región del espacio donde la probabilidad de "
+        "encontrarlo es alta.\n"
+        "3) Esas regiones tienen formas y energías definidas, y reemplazan a "
+        "las órbitas circulares del modelo de Bohr.\n\n"
+        "El modelo de Bohr sigue siendo útil para explicar los espectros y "
+        "ordenar los electrones por niveles.",
+        [
+            ("Como órbitas circulares fijas",
+             "Esa es la descripción del modelo de Bohr, corregida después."),
+            ("Como partículas en reposo alrededor del núcleo",
+             "Los electrones no están en reposo en ninguno de los modelos."),
+            ("Como partículas incrustadas en una masa de carga positiva que ocupa todo el volumen",
+             "Esa es la descripción del modelo de Thomson."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Por qué un átomo es eléctricamente neutro si contiene partículas con "
+        "carga?",
+        "Porque las cargas positivas y negativas se compensan",
+        "La neutralidad es un resultado del balance, no de la ausencia de "
+        "cargas.\n\n"
+        "1) Cada protón aporta una carga positiva y cada electrón, una negativa "
+        "de igual magnitud.\n"
+        "2) En un átomo neutro ambas cantidades son iguales, así que la suma da "
+        "cero.\n"
+        "3) Los neutrones no alteran ese balance porque carecen de carga.\n\n"
+        "Cuando el número de electrones cambia, el balance se rompe y aparece "
+        "un ion.",
+        [
+            ("Porque no tiene electrones",
+             "Todos los átomos tienen electrones; lo que ocurre es que su carga se compensa."),
+            ("Porque los neutrones anulan la carga de los protones",
+             "Los neutrones no tienen carga y no pueden anular ninguna."),
+            ("Porque las cargas se encuentran demasiado alejadas entre sí como para producir algún efecto",
+             "La distancia no anula las cargas: lo que las compensa es que sean iguales en número."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué explicaba la teoría de Dalton sobre las combinaciones entre "
+        "elementos?",
+        "Que se combinan en proporciones numéricas sencillas",
+        "La teoría atómica dio una explicación a las leyes ponderales.\n\n"
+        "1) Si la materia está formada por átomos indivisibles, un compuesto se "
+        "forma uniendo un número entero de átomos de cada elemento.\n"
+        "2) Eso explica que las masas que reaccionan guarden proporciones fijas "
+        "y sencillas.\n"
+        "3) También explica que la masa se conserve: los átomos se reordenan, "
+        "pero no se crean ni se destruyen.\n\n"
+        "Esa capacidad de explicar leyes ya conocidas fue lo que dio fuerza a "
+        "la propuesta de Dalton.",
+        [
+            ("Que se combinan en cualquier proporción",
+             "Las proporciones definidas son justamente lo que la teoría explicaba."),
+            ("Que los átomos se destruyen al reaccionar",
+             "La teoría sostiene lo contrario: los átomos se conservan y se reordenan."),
+            ("Que la masa de los productos siempre supera a la de los reactantes en una reacción",
+             "La masa total se conserva, y la teoría de Dalton daba cuenta de ese hecho."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué información entrega la tabla periódica sobre cada elemento?",
+        "Su símbolo, su número atómico y su masa atómica",
+        "La casilla de la tabla resume la identidad del elemento.\n\n"
+        "1) El símbolo lo identifica de manera universal.\n"
+        "2) El número atómico indica cuántos protones tiene, y en un átomo "
+        "neutro también cuántos electrones.\n"
+        "3) La masa atómica es el promedio de sus isótopos naturales.\n\n"
+        "La posición dentro de la tabla, además, anticipa buena parte de su "
+        "comportamiento químico.",
+        [
+            ("El número de neutrones de cada átomo",
+             "Los neutrones varían entre isótopos y por eso no aparecen como un dato único."),
+            ("El precio y la disponibilidad del elemento",
+             "La tabla organiza información química, no económica."),
+            ("La cantidad exacta de ese elemento que existe en la corteza terrestre según las mediciones",
+             "La abundancia es un dato de interés, pero no es lo que la casilla de la tabla informa."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "medio",
+        "¿Qué problema del modelo de Rutherford intentó resolver Bohr?",
+        "Que los electrones deberían caer hacia el núcleo",
+        "El modelo anterior era inestable según la física conocida.\n\n"
+        "1) Según la teoría vigente, una carga que gira emitiendo energía "
+        "debería perderla y terminar cayendo al núcleo.\n"
+        "2) Como los átomos son estables, algo faltaba en la descripción.\n"
+        "3) Bohr propuso que existen niveles determinados en los que el "
+        "electrón puede permanecer sin emitir energía.\n\n"
+        "Con esa condición el átomo resulta estable y, además, quedan "
+        "explicadas las líneas de los espectros.",
+        [
+            ("Que el núcleo era demasiado grande",
+             "El tamaño del núcleo no era el problema que Bohr abordó."),
+            ("Que faltaba incluir a los neutrones",
+             "El neutrón se identificó después y no fue lo que motivó el modelo de Bohr."),
+            ("Que el experimento de la lámina de oro no había podido repetirse en otros laboratorios",
+             "El experimento sí se reprodujo: el problema era teórico, no de replicación."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Si el modelo de Thomson hubiera sido correcto, ¿qué se habría "
+        "observado en el experimento de la lámina de oro?",
+        "Todas las partículas habrían pasado con desviaciones mínimas",
+        "Una predicción del modelo permite ponerlo a prueba.\n\n"
+        "1) En el modelo de Thomson la carga positiva está repartida por todo "
+        "el volumen del átomo, sin concentrarse en ningún punto.\n"
+        "2) Una carga difusa ejerce fuerzas débiles sobre una partícula que la "
+        "atraviesa.\n"
+        "3) Por lo tanto, se esperarían desviaciones pequeñas y ninguna "
+        "partícula rebotando hacia atrás.\n\n"
+        "Como sí hubo rebotes, la observación contradijo la predicción y el "
+        "modelo tuvo que ser reemplazado.",
+        [
+            ("Ninguna partícula habría atravesado la lámina",
+             "Una carga difusa no bloquea el paso: permite atravesarla con desviaciones pequeñas."),
+            ("Todas habrían rebotado hacia atrás",
+             "El rebote exige una concentración de carga y masa, que ese modelo no contempla."),
+            ("Las partículas se habrían dividido en fragmentos al atravesar la lámina de metal",
+             "Ni ese modelo ni el siguiente predicen una fragmentación de las partículas."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Un elemento tiene dos isótopos: uno de masa 10 con 20% de abundancia y "
+        "otro de masa 11 con 80%. ¿Cuál es su masa atómica?",
+        "10,8",
+        "El promedio se pondera por la abundancia de cada isótopo.\n\n"
+        "1) El aporte del primer isótopo es 10 multiplicado por 0,20, o sea "
+        "2,0.\n"
+        "2) El del segundo es 11 multiplicado por 0,80, o sea 8,8.\n"
+        "3) La suma de ambos aportes da 10,8.\n\n"
+        "El resultado queda más cerca de 11 porque ese isótopo es el más "
+        "abundante, y eso sirve para revisar el cálculo.",
+        [
+            ("10,5",
+             "Corresponde al promedio simple, sin considerar que las abundancias son distintas."),
+            ("10,2",
+             "Invierte las abundancias, asignando el 80% al isótopo de masa 10."),
+            ("21, que resulta de sumar directamente las masas de los dos isótopos del elemento",
+             "Se trata de un promedio ponderado, no de una suma de masas."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Una especie tiene 16 protones, 16 neutrones y 18 electrones. ¿De qué "
+        "se trata?",
+        "Un anión de carga 2−",
+        "El balance entre protones y electrones define la carga.\n\n"
+        "1) Hay 18 cargas negativas y solo 16 positivas.\n"
+        "2) La diferencia es de dos unidades a favor de las negativas, así que "
+        "la carga total es 2−.\n"
+        "3) Los 16 protones indican que el elemento es el azufre, con "
+        "independencia de la carga.\n\n"
+        "Los neutrones no intervienen en el cálculo de la carga: solo aportan "
+        "al número másico.",
+        [
+            ("Un átomo neutro",
+             "Un átomo neutro tendría 16 electrones, tantos como protones."),
+            ("Un catión de carga 2+",
+             "Un catión tendría menos electrones que protones, no más."),
+            ("Un isótopo distinto del mismo elemento, porque el número de neutrones no coincide con el de protones",
+             "Que neutrones y protones coincidan no es requisito: lo que define aquí es el exceso de electrones."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Un estudiante afirma que dos isótopos son elementos distintos porque "
+        "tienen distinta masa. ¿Cómo se evalúa?",
+        "Es incorrecta: el elemento lo define el número de protones",
+        "El criterio de identidad química no es la masa.\n\n"
+        "1) Dos isótopos tienen el mismo número de protones, así que ocupan la "
+        "misma casilla de la tabla periódica.\n"
+        "2) Al tener el mismo número de electrones cuando son neutros, "
+        "presentan las mismas propiedades químicas.\n"
+        "3) Lo único que difiere son los neutrones y, por lo tanto, la masa.\n\n"
+        "El carbono 12 y el carbono 14 son ambos carbono, y participan de las "
+        "mismas reacciones.",
+        [
+            ("Es correcta, porque sus masas son distintas",
+             "La masa no es el criterio que define de qué elemento se trata."),
+            ("Es correcta, porque ocupan casillas distintas en la tabla",
+             "Los isótopos comparten casilla: la tabla se ordena por número atómico."),
+            ("Es incorrecta, porque en realidad los isótopos tienen exactamente la misma masa entre sí",
+             "Sus masas sí difieren: esa es justamente la diferencia entre isótopos."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "El espectro de emisión de un gas muestra líneas separadas en lugar de "
+        "una banda continua. ¿Qué se infiere sobre sus átomos?",
+        "Que sus electrones solo tienen ciertas energías posibles",
+        "La forma del espectro informa sobre la estructura interna.\n\n"
+        "1) Si los electrones pudieran tener cualquier energía, las emisiones "
+        "cubrirían todos los valores y el espectro sería continuo.\n"
+        "2) Al observarse líneas separadas, las energías emitidas toman solo "
+        "ciertos valores.\n"
+        "3) Eso implica que los electrones ocupan niveles definidos, y que cada "
+        "línea corresponde a un salto entre dos de ellos.\n\n"
+        "Esa observación fue la evidencia que sostuvo el modelo de niveles "
+        "propuesto por Bohr.",
+        [
+            ("Que el gas contiene un solo tipo de átomo",
+             "La pureza del gas influye en cuántas series de líneas aparecen, no en que sean discretas."),
+            ("Que los electrones están en reposo",
+             "Un electrón en reposo no explicaría ninguna emisión."),
+            ("Que la temperatura del gas se mantuvo constante durante toda la medición del espectro",
+             "La estabilidad térmica ayuda a la medición, pero no explica que las líneas sean discretas."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "¿Qué permitió a Rutherford concluir que el núcleo es diminuto y no solo "
+        "denso?",
+        "Que las desviaciones grandes fueran muy poco frecuentes",
+        "La conclusión sobre el tamaño proviene de una proporción.\n\n"
+        "1) Si la región concentrada ocupara una fracción grande del átomo, "
+        "muchas partículas la habrían encontrado y se habrían desviado.\n"
+        "2) Solo una de cada varios miles se desvió con ángulo grande.\n"
+        "3) Esa baja frecuencia indica que el blanco es extraordinariamente "
+        "pequeño comparado con el átomo.\n\n"
+        "La densidad se deduce de la magnitud de las desviaciones; el tamaño, "
+        "de cuán raras son.",
+        [
+            ("Que algunas partículas rebotaran hacia atrás",
+             "El rebote muestra que el núcleo es denso y positivo, pero no cuán pequeño es."),
+            ("Que la lámina fuera de oro",
+             "El material se eligió por poder laminarse muy fino, no por el tamaño del núcleo."),
+            ("Que las partículas atravesaran varias láminas seguidas sin perder velocidad apreciable",
+             "El experimento se hizo con una lámina, y la conclusión proviene de la frecuencia de las desviaciones."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Se comparan dos especies: una con 10 electrones y 8 protones, otra con "
+        "10 electrones y 11 protones. ¿Qué tienen en común y en qué difieren?",
+        "Igual número de electrones, distinto elemento",
+        "El número de electrones no identifica al elemento.\n\n"
+        "1) Ambas tienen 10 electrones, así que comparten la misma "
+        "configuración electrónica.\n"
+        "2) Pero una tiene 8 protones y la otra 11: son elementos distintos, "
+        "oxígeno y sodio.\n"
+        "3) La primera es un anión de carga 2− y la segunda, un catión de carga "
+        "1+.\n\n"
+        "Coincidir en electrones explica que compartan cierta estabilidad, pero "
+        "no las convierte en la misma sustancia.",
+        [
+            ("Son el mismo elemento con distinta carga",
+             "Tienen distinto número de protones, así que son elementos distintos."),
+            ("Son isótopos entre sí",
+             "Los isótopos comparten el número de protones, y aquí ese número difiere."),
+            ("Son dos átomos neutros del mismo elemento medidos en condiciones experimentales distintas",
+             "Ninguno de los dos es neutro: en ambos difieren protones y electrones."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Una tabla lista tres átomos: A con 6 protones y 6 neutrones, B con 6 "
+        "protones y 8 neutrones, C con 7 protones y 7 neutrones. ¿Cuáles son "
+        "isótopos entre sí?",
+        "A y B",
+        "Los isótopos comparten el número de protones.\n\n"
+        "1) A y B tienen ambos 6 protones, así que son el mismo elemento.\n"
+        "2) Difieren en neutrones, 6 y 8, de modo que sus números másicos son "
+        "12 y 14.\n"
+        "3) C tiene 7 protones, así que corresponde a otro elemento y no puede "
+        "ser isótopo de ninguno de los dos.\n\n"
+        "Conviene notar que B y C comparten el número másico 14 y aun así no son "
+        "isótopos: coincidir en masa no basta.",
+        [
+            ("B y C",
+             "Tienen distinto número de protones: son elementos distintos."),
+            ("A y C",
+             "Sus números de protones difieren, 6 y 7, así que no son isótopos."),
+            ("Los tres, porque todos tienen un número de neutrones parecido entre sí",
+             "El criterio es el número de protones, no la cercanía en neutrones."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Un estudiante sostiene que Dalton se equivocó, porque hoy sabemos que "
+        "el átomo tiene partes. ¿Cómo se evalúa esa afirmación?",
+        "Es parcial: su teoría explicaba bien las leyes de masa",
+        "Un modelo se evalúa por lo que explicaba con la evidencia "
+        "disponible.\n\n"
+        "1) La idea de átomos indivisibles resultó incorrecta cuando se "
+        "descubrieron los electrones.\n"
+        "2) Pero el resto de su teoría sigue vigente: los átomos se conservan "
+        "en las reacciones y se combinan en proporciones sencillas.\n"
+        "3) Sobre esa base se explican la conservación de la masa y las "
+        "proporciones definidas.\n\n"
+        "Decir simplemente que se equivocó pierde de vista que su teoría dio "
+        "cuenta de leyes que hasta entonces no tenían explicación.",
+        [
+            ("Es correcta: su teoría quedó descartada por completo",
+             "Buena parte de sus postulados sigue siendo la base de la química actual."),
+            ("Es incorrecta: el átomo efectivamente es indivisible",
+             "El átomo tiene partes: protones, neutrones y electrones."),
+            ("Es correcta, porque una teoría que contiene un postulado erróneo debe descartarse entera",
+             "Las teorías se corrigen en los puntos que fallan y conservan lo que explica bien la evidencia."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Un elemento tiene masa atómica 63,5 y dos isótopos, de masas 63 y 65. "
+        "¿Cuál es más abundante?",
+        "El de masa 63",
+        "El promedio se inclina hacia el isótopo más abundante.\n\n"
+        "1) La masa atómica, 63,5, está más cerca de 63 que de 65.\n"
+        "2) En un promedio ponderado, el valor se acerca al dato que pesa "
+        "más.\n"
+        "3) Por lo tanto, el isótopo de masa 63 debe ser el más abundante en la "
+        "mezcla natural.\n\n"
+        "El razonamiento permite estimar la abundancia sin hacer el cálculo "
+        "completo, y sirve para revisar un resultado numérico.",
+        [
+            ("El de masa 65",
+             "Si fuera el más abundante, la masa atómica estaría más cerca de 65."),
+            ("Ambos en la misma proporción",
+             "Con igual proporción la masa atómica sería 64, el promedio simple."),
+            ("No se puede saber sin conocer el número de neutrones de cada uno de los dos isótopos",
+             "Los neutrones ya están reflejados en las masas de cada isótopo: el dato basta."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Para comprobar que las partículas de los rayos catódicos están "
+        "presentes en toda la materia, ¿qué convenía hacer?",
+        "Repetir el experimento con electrodos de distintos materiales",
+        "La afirmación es general y exige variar el material de partida.\n\n"
+        "1) Con un solo material, el resultado podría deberse a ese material en "
+        "particular.\n"
+        "2) Al repetir el experimento con electrodos de metales distintos y "
+        "obtener siempre las mismas partículas, esa explicación se descarta.\n"
+        "3) La conclusión razonable es entonces que esas partículas son "
+        "componentes de todos los átomos.\n\n"
+        "Esa fue la forma en que Thomson sostuvo que el electrón es universal y "
+        "no una peculiaridad de un metal.",
+        [
+            ("Aumentar el voltaje aplicado al tubo",
+             "Un voltaje mayor intensifica el haz, pero no dice nada sobre otros materiales."),
+            ("Usar un tubo de mayor tamaño",
+             "El tamaño del tubo no responde la pregunta sobre la generalidad del resultado."),
+            ("Medir la masa de las partículas con la mayor precisión posible en un solo material",
+             "Mejora el dato, pero sigue proviniendo de un único material de partida."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "Dos átomos neutros del mismo elemento tienen números másicos 24 y 26. "
+        "¿En qué se diferencian y en qué no?",
+        "Difieren en neutrones y no en electrones",
+        "El número másico cambia solo por los neutrones cuando el elemento es "
+        "el mismo.\n\n"
+        "1) Al ser el mismo elemento, ambos tienen igual número de protones.\n"
+        "2) Como son neutros, también tienen igual número de electrones.\n"
+        "3) La diferencia de dos unidades en el número másico proviene "
+        "entonces de dos neutrones adicionales.\n\n"
+        "Por eso son isótopos: misma química, distinta masa.",
+        [
+            ("Difieren en protones y no en neutrones",
+             "Si difirieran en protones no serían el mismo elemento."),
+            ("Difieren en electrones y no en neutrones",
+             "Al ser ambos neutros, tienen el mismo número de electrones."),
+            ("Difieren en las tres partículas, porque el número másico depende de todas ellas",
+             "El número másico no incluye a los electrones, y los protones coinciden por ser el mismo elemento."),
+        ],
+    ),
+    _q(
+        "cie_atomo", "dificil",
+        "¿Qué conserva el modelo de Bohr del modelo de Rutherford y qué le "
+        "agrega?",
+        "Conserva el núcleo y agrega los niveles de energía",
+        "Los modelos se construyen sobre lo que el anterior estableció.\n\n"
+        "1) De Rutherford conserva la idea central: un núcleo diminuto, "
+        "positivo y con casi toda la masa.\n"
+        "2) Agrega que los electrones ocupan niveles de energía determinados y "
+        "no cualquier posición.\n"
+        "3) Con eso resuelve la inestabilidad del modelo anterior y explica los "
+        "espectros de líneas.\n\n"
+        "Ese avance por acumulación, y no por reemplazo total, es característico "
+        "de cómo se desarrollan los modelos científicos.",
+        [
+            ("Conserva la carga positiva difusa y agrega el núcleo",
+             "La carga difusa es del modelo de Thomson, que Rutherford ya había descartado."),
+            ("Conserva los niveles y agrega el núcleo",
+             "Invierte los aportes: el núcleo es de Rutherford y los niveles, de Bohr."),
+            ("No conserva nada del modelo anterior, porque parte de supuestos completamente distintos",
+             "Conserva el núcleo, que es el aporte central del modelo de Rutherford."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_atomo", "dificil",
+        "¿Qué evidencia permite sospechar que una muestra de un elemento "
+        "contiene más de un isótopo?",
+        "Que su masa atómica se aleje de un número entero",
+        "El valor tabulado guarda información sobre la mezcla.\n\n"
+        "1) Cada isótopo tiene un número másico entero, porque cuenta "
+        "partículas.\n"
+        "2) Si el elemento tuviera un solo isótopo, su masa atómica sería muy "
+        "cercana a ese entero.\n"
+        "3) Un valor intermedio, como 35,5, indica que se está promediando "
+        "entre isótopos de masas distintas.\n\n"
+        "La confirmación se obtiene separando los átomos según su masa, que es "
+        "lo que hace un espectrómetro de masas.",
+        [
+            ("Que el elemento tenga varios estados físicos",
+             "El estado físico depende de las condiciones y no informa sobre los isótopos."),
+            ("Que reaccione con varios elementos distintos",
+             "La reactividad depende de los electrones, que son iguales en todos sus isótopos."),
+            ("Que su número atómico no coincida con el lugar que ocupa dentro de la tabla periódica",
+             "El número atómico siempre coincide con esa posición: es el criterio de ordenamiento."),
+        ],
+    ),
+]

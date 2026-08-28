@@ -228,6 +228,12 @@ COMPROBACIONES_CIENCIAS: dict[str, str] = {
     "objeto de 54 g desplaza el agua": f"{54 / (45 - 25):.1f} g/cm".replace(".", ","),
     "De 250 g de una mezcla se recuperan 180 g": f"{round(100 * 180 / 250)}%",
     "tamiz de 2 mm de abertura queda retenido el 40%": f"{int(5 * (1 - 0.4))} kg",
+    # Estructura atomica: numero masico, iones y promedio ponderado de isotopos
+    "número atómico 11 y número másico 23": f"{23 - 11} neutrones",
+    "número atómico 20 forma un ion con carga 2+": f"{20 - 2} electrones",
+    "hierro tiene número atómico 26": f"{26 - 3} electrones",
+    "uno de masa 10 con 20% de abundancia": f"{10 * 0.20 + 11 * 0.80:.1f}".replace(".", ","),
+    "átomo neutro tiene 17 electrones": "17",
     # Ácido-base
 }
 
