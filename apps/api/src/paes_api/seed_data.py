@@ -93627,3 +93627,2496 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - "Organización, estructura y actividad celular":
+# relación entre estructura y función en tipos celulares
+#
+# El temario nombra cuatro ejemplos: el enterocito, la célula muscular
+# esquelética, la neurona y las células secretoras pancreáticas. El nodo no pide
+# recitar sus partes: pide INFERIR la función a partir de la estructura y al
+# revés, que es lo que las pruebas oficiales preguntan.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_celula_tipos", "facil",
+        "Los enterocitos del intestino delgado presentan en su cara libre miles "
+        "de prolongaciones diminutas llamadas microvellosidades. ¿Qué función "
+        "cumple esa estructura?",
+        "Aumentar la superficie disponible para absorber nutrientes",
+        "La forma de la célula responde a lo que tiene que hacer.\n\n"
+        "1) El enterocito absorbe los nutrientes que quedan en el intestino tras "
+        "la digestión.\n"
+        "2) La cantidad que puede absorber depende de cuánta superficie de "
+        "membrana esté en contacto con el contenido intestinal.\n"
+        "3) Las microvellosidades multiplican esa superficie muchísimas veces "
+        "sin aumentar el volumen de la célula.\n\n"
+        "Es el mismo principio que se repite en los pliegues del intestino y en "
+        "las vellosidades: cada nivel de plegamiento multiplica la superficie "
+        "de absorción.",
+        [
+            ("Impedir el paso de bacterias hacia el interior del cuerpo",
+             "La barrera frente a microorganismos la dan las uniones entre células y el mucus, no las microvellosidades."),
+            ("Mover el alimento a lo largo del tubo digestivo",
+             "El avance del contenido lo produce la musculatura de la pared intestinal, no las microvellosidades."),
+            ("Producir las enzimas que digieren los alimentos en el estómago",
+             "La digestión estomacal ocurre antes y en otro órgano; el enterocito absorbe, no digiere en el estómago."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "Las células del páncreas que secretan enzimas digestivas tienen un "
+        "retículo endoplasmático rugoso muy desarrollado. ¿Por qué?",
+        "Porque las enzimas son proteínas y ahí se sintetizan",
+        "La abundancia de un organelo refleja la actividad principal de la "
+        "célula.\n\n"
+        "1) Las enzimas digestivas son proteínas.\n"
+        "2) Las proteínas destinadas a ser exportadas fuera de la célula se "
+        "sintetizan en los ribosomas adheridos al retículo endoplasmático "
+        "rugoso, que es lo que le da su aspecto.\n"
+        "3) Una célula que produce grandes cantidades de proteína para "
+        "exportar necesita mucho de ese organelo.\n\n"
+        "Por eso también tienen un complejo de Golgi muy desarrollado y "
+        "abundantes vesículas de secreción: son las etapas siguientes de la "
+        "misma ruta.",
+        [
+            ("Porque ahí se almacena la energía necesaria para la digestión",
+             "La energía se obtiene en las mitocondrias; el retículo rugoso participa en la síntesis de proteínas."),
+            ("Porque el retículo rugoso digiere las moléculas que la célula absorbe",
+             "La digestión intracelular ocurre en los lisosomas, no en el retículo."),
+            ("Porque ahí se duplica el material genético antes de dividirse",
+             "La duplicación del ADN ocurre en el núcleo, durante la fase S del ciclo celular."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "Las células musculares esqueléticas contienen numerosos núcleos en una "
+        "misma célula. ¿Cómo se explica esa característica?",
+        "Se forman por la fusión de varias células precursoras",
+        "Es una excepción notable a la regla de un núcleo por célula.\n\n"
+        "1) Durante el desarrollo, células precursoras llamadas mioblastos se "
+        "fusionan entre sí.\n"
+        "2) El resultado es una fibra muscular larga y única que conserva todos "
+        "los núcleos aportados.\n"
+        "3) Tener muchos núcleos le permite además sostener la síntesis de "
+        "proteínas a lo largo de toda su extensión, que puede alcanzar varios "
+        "centímetros.\n\n"
+        "Una sola dotación nuclear sería insuficiente para abastecer una célula "
+        "de ese tamaño.",
+        [
+            ("Su núcleo se divide muchas veces para producir más energía",
+             "El núcleo no produce energía: eso es tarea de las mitocondrias."),
+            ("Cada núcleo controla una mitocondria distinta de la célula",
+             "Las mitocondrias tienen su propio ADN y no son controladas cada una por un núcleo."),
+            ("Los núcleos adicionales provienen de células nerviosas que la inervan",
+             "La neurona que inerva la fibra no le aporta núcleos: son células separadas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "Una neurona tiene prolongaciones ramificadas cortas y una prolongación "
+        "única muy larga. ¿Qué función cumple cada una?",
+        "Las cortas reciben señales y la larga las transmite",
+        "La forma de la neurona corresponde al sentido en que viaja la "
+        "información.\n\n"
+        "1) Las DENDRITAS son las prolongaciones cortas y ramificadas: reciben "
+        "las señales de otras neuronas. Su ramificación permite recibir de "
+        "muchas fuentes a la vez.\n"
+        "2) El AXÓN es la prolongación única y larga: conduce el impulso "
+        "nervioso desde el cuerpo celular hacia otras células.\n"
+        "3) En su extremo, el axón se ramifica para contactar a varias células "
+        "destino.\n\n"
+        "Esa polaridad estructural es la que hace que la información viaje en un "
+        "sentido definido.",
+        [
+            ("Las cortas transmiten señales y la larga las recibe",
+             "Está invertido: las dendritas reciben y el axón transmite."),
+            ("Ambas cumplen la misma función y solo difieren en tamaño",
+             "Cumplen funciones opuestas dentro del recorrido de la señal."),
+            ("Las cortas producen el impulso y la larga lo almacena hasta que se necesite",
+             "El impulso no se almacena: se genera y se propaga."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Al observar una célula al microscopio se encuentra una cantidad "
+        "excepcional de mitocondrias. ¿Qué se puede inferir sobre su función?",
+        "Que realiza una actividad con alta demanda de energía",
+        "La abundancia de un organelo indica el tipo de trabajo que la célula "
+        "hace.\n\n"
+        "1) Las mitocondrias son el lugar donde se obtiene la mayor parte del "
+        "ATP de la célula.\n"
+        "2) Una cantidad excepcional de ellas indica una demanda energética "
+        "sostenida y alta.\n"
+        "3) Es lo que se observa en fibras musculares, que se contraen, y en "
+        "enterocitos, que hacen transporte activo contra gradiente.\n\n"
+        "El razonamiento es el que la prueba pide: no memorizar qué célula tiene "
+        "qué, sino inferir la función a partir de la estructura observada.",
+        [
+            ("Que sintetiza grandes cantidades de proteínas para exportar",
+             "Eso se infiere de un retículo endoplasmático rugoso desarrollado, no de las mitocondrias."),
+            ("Que está a punto de dividirse",
+             "La división se anticipa por la duplicación del material genético y la aparición del huso, no por el número de mitocondrias."),
+            ("Que almacena reservas de nutrientes para el organismo",
+             "El almacenamiento se asocia a vacuolas o a inclusiones lipídicas, no a las mitocondrias."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "El enterocito transporta glucosa desde el intestino hacia su interior "
+        "incluso cuando la concentración de glucosa dentro de la célula es mayor "
+        "que fuera. ¿Qué tipo de transporte realiza y qué requiere?",
+        "Transporte activo, que requiere gasto de energía",
+        "Mover una sustancia contra su gradiente no ocurre espontáneamente.\n\n"
+        "1) La difusión lleva las sustancias de donde están más concentradas "
+        "hacia donde están menos: es un proceso espontáneo.\n"
+        "2) Aquí ocurre lo contrario: la glucosa entra hacia donde ya hay más. "
+        "Eso exige aportar energía.\n"
+        "3) La célula lo consigue mediante proteínas transportadoras que "
+        "consumen ATP, directa o indirectamente.\n\n"
+        "Esa demanda energética explica la abundancia de mitocondrias en el "
+        "enterocito: la estructura vuelve a corresponder con la función.",
+        [
+            ("Difusión simple, que no requiere energía",
+             "La difusión simple solo ocurre a favor del gradiente, y aquí es contra el gradiente."),
+            ("Difusión facilitada, que usa proteínas pero no energía",
+             "La difusión facilitada usa transportadores, pero también sigue el gradiente."),
+            ("Ósmosis, porque el agua arrastra la glucosa hacia el interior",
+             "La ósmosis es el paso de agua, y no arrastra solutos contra su gradiente."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Se compara una célula secretora pancreática con una fibra muscular "
+        "esquelética. ¿Qué diferencia estructural refleja mejor sus funciones "
+        "distintas?",
+        "La primera tiene más retículo rugoso y la segunda, más miofibrillas",
+        "Cada tipo celular desarrolla las estructuras que su función exige.\n\n"
+        "1) La célula pancreática exporta enzimas: necesita mucho retículo "
+        "endoplasmático rugoso, un complejo de Golgi desarrollado y vesículas de "
+        "secreción.\n"
+        "2) La fibra muscular se contrae: necesita miofibrillas, que son "
+        "conjuntos ordenados de proteínas contráctiles que ocupan casi todo su "
+        "volumen.\n"
+        "3) Ambas tienen muchas mitocondrias, pero por razones distintas: una "
+        "para sostener la síntesis y el transporte, la otra para la "
+        "contracción.\n\n"
+        "La comparación muestra que la estructura interna es una huella legible "
+        "de la actividad de la célula.",
+        [
+            ("La primera tiene núcleo y la segunda no",
+             "La fibra muscular no solo tiene núcleo: tiene varios."),
+            ("La primera tiene pared celular y la segunda, membrana",
+             "Ninguna célula animal tiene pared celular: eso es propio de plantas, hongos y bacterias."),
+            ("La primera tiene cloroplastos y la segunda, mitocondrias",
+             "Los cloroplastos existen solo en células vegetales y algas: ninguna célula animal los tiene."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "El axón de muchas neuronas está recubierto por una vaina de mielina "
+        "interrumpida a intervalos regulares. ¿Qué efecto tiene sobre la "
+        "conducción del impulso?",
+        "La acelera, porque el impulso salta entre las interrupciones",
+        "La mielina no conduce: aísla, y ese aislamiento cambia el modo de "
+        "propagación.\n\n"
+        "1) La vaina aísla eléctricamente al axón en los tramos que recubre, "
+        "impidiendo el intercambio de iones con el exterior.\n"
+        "2) El impulso solo puede regenerarse en las interrupciones, donde la "
+        "membrana queda expuesta.\n"
+        "3) En vez de recorrer punto a punto toda la membrana, el impulso salta "
+        "de una interrupción a la siguiente, y eso lo vuelve mucho más "
+        "rápido.\n\n"
+        "Por eso las enfermedades que dañan la mielina enlentecen o interrumpen "
+        "la conducción nerviosa.",
+        [
+            ("La retrasa, porque el impulso debe atravesar una capa aislante",
+             "El impulso no atraviesa la mielina: salta entre las zonas descubiertas, y por eso va más rápido."),
+            ("No la modifica: la mielina solo protege al axón de daños mecánicos",
+             "Su efecto sobre la velocidad de conducción es muy grande, y es su función principal."),
+            ("La acelera porque aumenta el diámetro del axón y así circula más corriente",
+             "El diámetro influye, pero el mecanismo de la mielina es el salto entre interrupciones, no el engrosamiento."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Una célula presenta un complejo de Golgi muy desarrollado y numerosas "
+        "vesículas cerca de su membrana. ¿Qué actividad sugiere?",
+        "Secreción de sustancias hacia el exterior",
+        "El Golgi y las vesículas forman la etapa final de la ruta de "
+        "exportación.\n\n"
+        "1) Las proteínas destinadas al exterior se sintetizan en el retículo "
+        "rugoso y pasan al complejo de Golgi.\n"
+        "2) Ahí se modifican, se clasifican y se empaquetan en vesículas.\n"
+        "3) Esas vesículas viajan hacia la membrana y liberan su contenido "
+        "fuera de la célula.\n\n"
+        "Ver el Golgi desarrollado y muchas vesículas cerca de la membrana "
+        "indica que esa ruta está funcionando intensamente: es el perfil de una "
+        "célula secretora.",
+        [
+            ("Alta actividad de división celular",
+             "La división se anticipa por la duplicación del ADN y la formación del huso, no por el desarrollo del Golgi."),
+            ("Gran capacidad de contracción",
+             "La contracción depende de las miofibrillas, no del sistema de endomembranas."),
+            ("Almacenamiento de agua y sales en su interior",
+             "Ese almacenamiento se asocia a las vacuolas, sobre todo en células vegetales."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Se descubre una sustancia que bloquea específicamente el complejo de "
+        "Golgi. ¿Qué tipo celular se vería más afectado?",
+        "Las células secretoras pancreáticas",
+        "El efecto de un bloqueo depende de cuánto dependa cada célula del "
+        "organelo afectado.\n\n"
+        "1) Las células secretoras pancreáticas dependen críticamente del Golgi: "
+        "por ahí pasan las enzimas digestivas antes de ser exportadas.\n"
+        "2) Bloquearlo interrumpe la producción de esas enzimas y por lo tanto "
+        "la digestión.\n"
+        "3) Otras células también tienen Golgi y se verían afectadas, pero "
+        "ninguna de las nombradas depende de él a esa escala.\n\n"
+        "El razonamiento es el que las pruebas oficiales piden: predecir el "
+        "efecto de una intervención a partir de la relación entre estructura y "
+        "función.",
+        [
+            ("Las fibras musculares esqueléticas",
+             "Su función principal es la contracción, que depende de las miofibrillas y no del Golgi."),
+            ("Los glóbulos rojos maduros",
+             "Los glóbulos rojos maduros humanos carecen de organelos: no tienen Golgi que bloquear."),
+            ("Las neuronas, porque necesitan transmitir señales continuamente",
+             "La transmisión del impulso depende de canales y bombas de la membrana, no de la secreción por Golgi."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Los glóbulos rojos maduros de los mamíferos carecen de núcleo y de "
+        "mitocondrias. ¿Qué ventaja funcional tiene esa característica?",
+        "Dejan más espacio para transportar oxígeno y no lo consumen",
+        "La pérdida de organelos es aquí una especialización, no un defecto.\n\n"
+        "1) Sin núcleo ni organelos, casi todo el volumen queda disponible para "
+        "hemoglobina, la proteína que transporta el oxígeno.\n"
+        "2) Sin mitocondrias, la célula no consume el oxígeno que transporta: lo "
+        "entrega íntegro a los tejidos.\n"
+        "3) La forma de disco bicóncavo agrega superficie de intercambio y "
+        "flexibilidad para atravesar capilares estrechos.\n\n"
+        "El costo es que no pueden repararse ni dividirse, y por eso viven unos "
+        "cuatro meses y deben renovarse continuamente.",
+        [
+            ("Pueden dividirse más rápido para reponerse",
+             "Sin núcleo no pueden dividirse en absoluto: se producen en la médula ósea a partir de precursores."),
+            ("Consumen más oxígeno y así lo transportan mejor",
+             "Es al revés: no tener mitocondrias evita que consuman el oxígeno que llevan."),
+            ("Resisten mejor las infecciones al no tener material genético que un virus pueda usar",
+             "La protección frente a infecciones no es la razón de esta especialización."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un equipo mide la cantidad de retículo endoplasmático rugoso en cuatro "
+        "tipos celulares y encuentra el valor más alto en las células "
+        "pancreáticas. Concluye que esas células exportan proteínas. ¿Es válida "
+        "la inferencia?",
+        "Sí, porque esa ruta es la que sintetiza proteínas de exportación",
+        "La inferencia se apoya en una relación bien establecida entre "
+        "estructura y función.\n\n"
+        "1) Los ribosomas del retículo rugoso sintetizan proteínas que entran al "
+        "sistema de endomembranas, destinadas a exportación o a organelos "
+        "específicos.\n"
+        "2) Una cantidad excepcional de ese organelo indica que la célula "
+        "destina una fracción alta de su actividad a esa ruta.\n"
+        "3) La conclusión se refuerza si además se observa un Golgi desarrollado "
+        "y abundantes vesículas de secreción.\n\n"
+        "Conviene, eso sí, formularla como inferencia y no como demostración: la "
+        "comprobación directa sería detectar las proteínas en el medio "
+        "extracelular.",
+        [
+            ("No, porque el retículo rugoso no participa en la síntesis de proteínas",
+             "Sí participa: los ribosomas adheridos a él son los que le dan su aspecto rugoso."),
+            ("No, porque todas las células tienen la misma cantidad de retículo rugoso",
+             "La cantidad varía enormemente entre tipos celulares, y esa variación es justamente el dato."),
+            ("Sí, pero solo si además se comprueba que la célula tiene muchas mitocondrias",
+             "Las mitocondrias indican demanda energética, no exportación de proteínas: no son necesarias para esta inferencia."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se compara la superficie de absorción del intestino delgado con y sin "
+        "microvellosidades. ¿Qué predicción es razonable si un daño las destruye?",
+        "La absorción de nutrientes disminuiría drásticamente",
+        "La cantidad absorbida depende directamente de la superficie "
+        "disponible.\n\n"
+        "1) Las microvellosidades multiplican la superficie de membrana en "
+        "contacto con el contenido intestinal.\n"
+        "2) Si se destruyen, esa superficie se reduce muchísimo y con ella la "
+        "capacidad de absorber.\n"
+        "3) El resultado es que los nutrientes pasan de largo y se pierden, con "
+        "malnutrición aunque la ingesta sea adecuada.\n\n"
+        "Es lo que ocurre en enfermedades que dañan el borde absortivo del "
+        "intestino, y explica por qué el tratamiento pasa por retirar el agente "
+        "que causa el daño.",
+        [
+            ("La digestión de los alimentos se detendría por completo",
+             "La digestión ocurre por enzimas y seguiría funcionando: lo que falla es la absorción posterior."),
+            ("El intestino compensaría absorbiendo por el estómago",
+             "El estómago tiene una capacidad de absorción muy limitada y no puede reemplazar al intestino delgado."),
+            ("Aumentaría la absorción, porque el contenido pasaría más rápido",
+             "Un tránsito más rápido reduce aún más el tiempo de contacto y por lo tanto la absorción."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se afirma que todas las células de un organismo tienen la misma "
+        "información genética, y sin embargo una neurona y una célula "
+        "pancreática son muy distintas. ¿Cómo se explica?",
+        "Cada tipo celular expresa un conjunto distinto de esos genes",
+        "Tener la misma información no obliga a usarla toda.\n\n"
+        "1) Salvo excepciones, todas las células somáticas de un organismo "
+        "portan el mismo genoma completo.\n"
+        "2) Lo que difiere es cuáles genes están ACTIVOS en cada tipo celular: "
+        "la neurona expresa los que necesita para conducir señales y la "
+        "pancreática, los de las enzimas digestivas.\n"
+        "3) Esa expresión diferencial se establece durante el desarrollo y se "
+        "mantiene, y es lo que produce la especialización.\n\n"
+        "Por eso la estructura de una célula es legible: refleja qué parte de su "
+        "información está usando.",
+        [
+            ("Cada tipo celular perdió los genes que no necesita",
+             "El genoma se conserva completo: los genes no usados están presentes pero silenciados."),
+            ("Cada tipo celular recibió una porción distinta del ADN al dividirse",
+             "La mitosis reparte copias idénticas del genoma completo a las dos células hijas."),
+            ("Las diferencias se deben al ambiente y no tienen relación con los genes",
+             "El ambiente influye, pero la especialización se realiza mediante expresión diferencial de genes."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un investigador encuentra una célula alargada, con abundantes "
+        "mitocondrias dispuestas entre estructuras proteicas ordenadas en "
+        "paralelo y varios núcleos periféricos. ¿Qué tipo celular es y en qué se "
+        "basa la identificación?",
+        "Una fibra muscular esquelética, por sus miofibrillas y sus varios núcleos",
+        "Cada rasgo observado apunta en la misma dirección.\n\n"
+        "1) Las estructuras proteicas ordenadas en paralelo son las "
+        "MIOFIBRILLAS, responsables de la contracción.\n"
+        "2) Las mitocondrias intercaladas aportan el ATP que esa contracción "
+        "consume, y su ubicación entre las miofibrillas acorta la distancia de "
+        "entrega.\n"
+        "3) La presencia de VARIOS NÚCLEOS es distintiva: resulta de la fusión "
+        "de mioblastos durante el desarrollo.\n\n"
+        "Ninguno de los otros tipos celulares del temario combina esos tres "
+        "rasgos.",
+        [
+            ("Un enterocito, por sus mitocondrias abundantes",
+             "El enterocito tiene un solo núcleo y microvellosidades, no miofibrillas."),
+            ("Una neurona, por su forma alargada",
+             "La neurona tiene un solo núcleo y sus prolongaciones son dendritas y axón, no miofibrillas."),
+            ("Una célula secretora pancreática, por su abundancia de organelos",
+             "La célula pancreática destaca por retículo rugoso y Golgi, tiene un núcleo y carece de miofibrillas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se plantea la hipótesis de que la cantidad de mitocondrias de una célula "
+        "se relaciona con su demanda energética. ¿Qué diseño permitiría ponerla "
+        "a prueba?",
+        "Comparar el número de mitocondrias entre tipos celulares de demanda conocida",
+        "La hipótesis afirma una relación, así que hay que comparar casos con "
+        "distinto valor de una de las variables.\n\n"
+        "1) Se seleccionan tipos celulares cuya demanda energética se conoce por "
+        "otras vías: fibras musculares, enterocitos, células poco activas.\n"
+        "2) Se cuenta el número de mitocondrias por célula en cada tipo, con el "
+        "mismo método.\n"
+        "3) Si la hipótesis es correcta, los tipos de mayor demanda deben "
+        "mostrar sistemáticamente más mitocondrias.\n\n"
+        "La demanda energética debe establecerse de manera INDEPENDIENTE del "
+        "conteo: si se dedujera del número de mitocondrias, el razonamiento sería "
+        "circular.",
+        [
+            ("Contar las mitocondrias de un solo tipo celular en distintos momentos",
+             "Sin comparar tipos de distinta demanda, no se puede establecer la relación que la hipótesis afirma."),
+            ("Medir el tamaño de las mitocondrias en lugar de contarlas",
+             "El tamaño es otra variable; la hipótesis se refiere a la cantidad."),
+            ("Eliminar las mitocondrias de una célula y ver si sobrevive",
+             "Eso comprueba que son necesarias, cosa ya sabida, pero no la relación entre cantidad y demanda."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "En el extremo del axón, una neurona presenta numerosas vesículas "
+        "pequeñas. ¿Qué contienen y qué función cumplen?",
+        "Neurotransmisores que se liberan para comunicar con la célula siguiente",
+        "La estructura del terminal axónico corresponde a su papel en la "
+        "sinapsis.\n\n"
+        "1) Entre dos neuronas hay un espacio: la señal eléctrica no puede "
+        "saltarlo por sí sola.\n"
+        "2) Al llegar el impulso al terminal, las vesículas se fusionan con la "
+        "membrana y liberan neurotransmisores a ese espacio.\n"
+        "3) Esas moléculas se unen a receptores de la célula siguiente y "
+        "reinician allí la señal.\n\n"
+        "Por eso la comunicación tiene un sentido definido: solo el terminal "
+        "libera y solo la célula siguiente tiene los receptores.",
+        [
+            ("Iones que generan el impulso eléctrico dentro del axón",
+             "Los iones cruzan la membrana por canales, no se almacenan en vesículas para eso."),
+            ("Enzimas que digieren los restos celulares del tejido nervioso",
+             "Esa función corresponde a las células gliales y a los lisosomas, no a las vesículas sinápticas."),
+            ("Mielina que se libera para recubrir el axón de la neurona vecina",
+             "La mielina la producen células especializadas que envuelven el axón, y no viaja en vesículas sinápticas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Una célula vegetal de la hoja y una célula de la raíz de la misma "
+        "planta se diferencian en un organelo importante. ¿Cuál y por qué?",
+        "Los cloroplastos, presentes en la hoja y ausentes en la raíz",
+        "La estructura vuelve a corresponder con la función y con el "
+        "ambiente.\n\n"
+        "1) Los cloroplastos realizan la fotosíntesis, que requiere luz.\n"
+        "2) Las células de la hoja están expuestas a la luz y los contienen en "
+        "abundancia.\n"
+        "3) Las de la raíz están bajo tierra, sin luz: mantener cloroplastos "
+        "ahí sería un gasto sin beneficio.\n\n"
+        "Ambas conservan el mismo genoma, incluidos los genes necesarios para "
+        "los cloroplastos: lo que difiere es qué se expresa según la posición y "
+        "las señales recibidas.",
+        [
+            ("Las mitocondrias, presentes en la raíz y ausentes en la hoja",
+             "Ambas tienen mitocondrias: toda célula vegetal respira, incluidas las fotosintéticas."),
+            ("La pared celular, presente en la hoja y ausente en la raíz",
+             "Todas las células vegetales tienen pared celular."),
+            ("El núcleo, que en las células de la raíz desaparece al especializarse",
+             "Las células de la raíz conservan su núcleo."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "¿Por qué las células que revisten las vías respiratorias tienen cilios "
+        "en su superficie?",
+        "Para desplazar el mucus con partículas atrapadas hacia afuera",
+        "Los cilios son prolongaciones móviles, a diferencia de las "
+        "microvellosidades.\n\n"
+        "1) El mucus de las vías respiratorias atrapa partículas y "
+        "microorganismos del aire inspirado.\n"
+        "2) Los cilios baten de manera coordinada y arrastran esa capa de mucus "
+        "hacia la faringe, donde se elimina.\n"
+        "3) Es un mecanismo de limpieza continuo que protege al pulmón.\n\n"
+        "El humo del tabaco paraliza y destruye estos cilios, y esa es una de las "
+        "razones del deterioro respiratorio que provoca.",
+        [
+            ("Para aumentar la superficie de absorción de oxígeno",
+             "El intercambio de gases ocurre en los alvéolos, y las estructuras que aumentan superficie ahí no son cilios."),
+            ("Para producir el mucus que recubre las vías respiratorias",
+             "El mucus lo producen células caliciformes especializadas, no los cilios."),
+            ("Para detectar la temperatura del aire que entra a los pulmones",
+             "Los cilios no cumplen función sensorial en este tejido: su papel es mecánico."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Una célula del sistema inmune engloba a una bacteria rodeándola con su "
+        "membrana y la incorpora en una vesícula. ¿Con qué organelo debe "
+        "fusionarse esa vesícula para destruir a la bacteria?",
+        "Con un lisosoma",
+        "Cada etapa del proceso involucra una estructura específica.\n\n"
+        "1) El englobamiento por extensiones de la membrana es fagocitosis, y "
+        "produce una vesícula con la bacteria dentro.\n"
+        "2) Los LISOSOMAS contienen enzimas digestivas capaces de degradar "
+        "proteínas, lípidos y ácidos nucleicos.\n"
+        "3) Al fusionarse con la vesícula, vuelcan esas enzimas sobre la "
+        "bacteria y la destruyen.\n\n"
+        "Las enzimas están confinadas en el lisosoma justamente para que no "
+        "dañen a la propia célula: su liberación descontrolada la destruiría.",
+        [
+            ("Con una mitocondria", "La mitocondria produce ATP; no contiene enzimas digestivas."),
+            ("Con el núcleo", "El núcleo alberga el material genético y no participa en la degradación de material englobado."),
+            ("Con un ribosoma", "Los ribosomas sintetizan proteínas; no degradan material."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se comparan dos células del mismo organismo: una con abundantes "
+        "lisosomas y otra con abundante retículo rugoso. ¿Qué diferencia "
+        "funcional sugiere esa observación?",
+        "Una degrada material y la otra sintetiza proteínas para exportar",
+        "Cada organelo abundante señala una actividad predominante.\n\n"
+        "1) Los LISOSOMAS contienen enzimas digestivas: su abundancia indica una "
+        "célula dedicada a degradar material, propio o englobado, como un "
+        "macrófago.\n"
+        "2) El RETÍCULO RUGOSO alberga los ribosomas que sintetizan proteínas de "
+        "exportación: su abundancia indica una célula secretora.\n"
+        "3) Ambas actividades consumen energía y usan el sistema de "
+        "endomembranas, pero apuntan en sentidos opuestos: una desarma y la otra "
+        "produce.\n\n"
+        "La inferencia es indirecta pero robusta, y se puede contrastar buscando "
+        "el producto exportado en el medio.",
+        [
+            ("Una se divide con frecuencia y la otra no",
+             "La frecuencia de división no se lee en la abundancia de lisosomas ni de retículo rugoso."),
+            ("Una realiza fotosíntesis y la otra respiración celular",
+             "Ninguno de los dos organelos mencionados realiza fotosíntesis, y ambas células respiran."),
+            ("Una es procarionte y la otra eucarionte",
+             "Las procariontes carecen de ambos organelos: las dos células descritas son eucariontes."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un fármaco inhibe la síntesis de ATP en las mitocondrias. ¿Qué función "
+        "del enterocito se vería comprometida primero?",
+        "El transporte activo de nutrientes contra su gradiente",
+        "El efecto se concentra en los procesos que dependen directamente del "
+        "ATP.\n\n"
+        "1) El transporte activo mueve sustancias contra su gradiente y por eso "
+        "consume ATP de manera continua.\n"
+        "2) Sin producción de ATP, esas bombas dejan de funcionar y los "
+        "nutrientes ya no pueden ser absorbidos contra gradiente.\n"
+        "3) La difusión simple, en cambio, no requiere energía y seguiría "
+        "ocurriendo mientras exista gradiente favorable.\n\n"
+        "Es un buen ejemplo de cómo una intervención permite distinguir procesos "
+        "que en condiciones normales ocurren juntos.",
+        [
+            ("La difusión simple de agua a través de su membrana",
+             "El paso de agua por ósmosis no requiere ATP y continuaría."),
+            ("La síntesis de su pared celular",
+             "El enterocito es una célula animal y no tiene pared celular."),
+            ("La conducción del impulso nervioso hacia las células vecinas",
+             "El enterocito no conduce impulsos nerviosos: esa es función de las neuronas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "¿Qué relación existe entre la forma alargada de una fibra muscular y su "
+        "función?",
+        "Permite que la contracción se traduzca en un acortamiento útil",
+        "La geometría de la célula determina el efecto mecánico de su "
+        "actividad.\n\n"
+        "1) Las miofibrillas se disponen paralelas al eje largo de la fibra.\n"
+        "2) Al contraerse, todas tiran en la misma dirección, y la célula se "
+        "acorta a lo largo de ese eje.\n"
+        "3) Muchas fibras alineadas producen un acortamiento del músculo "
+        "completo, capaz de mover un hueso.\n\n"
+        "Si las fibras estuvieran orientadas al azar, sus contracciones se "
+        "cancelarían y no habría movimiento neto.",
+        [
+            ("Le permite almacenar más glucosa en su interior",
+             "El almacenamiento de glucógeno existe, pero no depende de la forma alargada."),
+            ("Facilita la difusión de oxígeno hacia su centro",
+             "Una célula alargada y gruesa dificulta la difusión hacia el centro: por eso necesita muchas mitocondrias y buen riego."),
+            ("Le permite dividirse más rápido para reparar el músculo",
+             "Las fibras musculares maduras prácticamente no se dividen: la reparación depende de células satélite."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "En una célula eucarionte, ¿qué organelo dirige el destino de las "
+        "proteínas recién sintetizadas que deben salir de la célula?",
+        "El complejo de Golgi",
+        "La ruta de exportación tiene etapas bien definidas.\n\n"
+        "1) La proteína se sintetiza en los ribosomas del retículo rugoso y "
+        "entra a su interior.\n"
+        "2) Pasa al complejo de GOLGI, donde se modifica químicamente, se "
+        "clasifica y se empaqueta según su destino.\n"
+        "3) Sale en vesículas dirigidas a la membrana, a un lisosoma o al "
+        "exterior.\n\n"
+        "Es la razón de que las células secretoras tengan a la vez retículo "
+        "rugoso y Golgi muy desarrollados: son dos etapas de la misma línea de "
+        "producción.",
+        [
+            ("El retículo endoplasmático liso", "Participa en la síntesis de lípidos y en la detoxificación, no en el despacho de proteínas."),
+            ("El núcleo celular", "Contiene la información para fabricarlas, pero no las clasifica ni las despacha."),
+            ("La mitocondria", "Aporta la energía del proceso, pero no participa en la clasificación de las proteínas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células secretoras pancreáticas producen enzimas capaces de digerir "
+        "proteínas. ¿Cómo evitan digerirse a sí mismas?",
+        "Las mantienen inactivas y confinadas en vesículas hasta liberarlas",
+        "El problema se resuelve por dos vías complementarias.\n\n"
+        "1) Las enzimas se sintetizan en forma INACTIVA: son precursores que "
+        "recién se activan en el intestino.\n"
+        "2) Mientras están dentro de la célula viajan CONFINADAS en vesículas, "
+        "sin contacto con el citoplasma.\n"
+        "3) Recién en el intestino se activan y comienzan a digerir.\n\n"
+        "Cuando ese control falla y las enzimas se activan dentro del páncreas, "
+        "el resultado es una pancreatitis: el órgano se digiere a sí mismo.",
+        [
+            ("Las enzimas solo funcionan a la temperatura del intestino",
+             "La temperatura corporal es prácticamente la misma en el páncreas y en el intestino."),
+            ("La membrana de la célula es resistente a esas enzimas",
+             "La membrana está hecha de lípidos y proteínas: no sería inmune a las enzimas activas."),
+            ("Las producen en cantidades tan pequeñas que no alcanzan a dañarla",
+             "Las producen en cantidades muy grandes: el control es de activación y confinamiento, no de cantidad."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "¿Qué estructura celular contiene el material genético en una célula "
+        "eucarionte?",
+        "El núcleo",
+        "Es la característica que define a las células eucariontes.\n\n"
+        "1) El ADN está confinado en el núcleo, separado del citoplasma por una "
+        "envoltura con poros.\n"
+        "2) Esa separación permite regular qué información se usa y en qué "
+        "momento, porque la transcripción ocurre dentro y la traducción, "
+        "fuera.\n"
+        "3) En las células procariontes, en cambio, el material genético está en "
+        "el citoplasma sin envoltura que lo rodee.\n\n"
+        "Las mitocondrias y los cloroplastos tienen además su propio ADN, "
+        "pequeño y circular, distinto del nuclear.",
+        [
+            ("El ribosoma", "Los ribosomas sintetizan proteínas leyendo el ARN mensajero; no almacenan el material genético."),
+            ("El aparato de Golgi", "Clasifica y empaqueta proteínas."),
+            ("La mitocondria", "Tiene ADN propio, pero el material genético principal de la célula está en el núcleo."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "¿Qué diferencia estructural distingue a una célula procarionte de una "
+        "eucarionte?",
+        "La procarionte carece de núcleo definido y de organelos con membrana",
+        "La diferencia es de organización interna, no de tamaño ni de "
+        "complejidad química.\n\n"
+        "1) En la PROCARIONTE el material genético está en el citoplasma, sin "
+        "una envoltura que lo separe, y no hay organelos delimitados por "
+        "membrana.\n"
+        "2) En la EUCARIONTE el ADN está dentro del núcleo y existen "
+        "compartimentos especializados: mitocondrias, retículo, Golgi, "
+        "lisosomas.\n"
+        "3) Ambas tienen membrana plasmática, citoplasma, ribosomas y material "
+        "genético: lo que cambia es cómo está organizado.\n\n"
+        "Esa compartimentación permite a la eucarionte realizar procesos "
+        "incompatibles entre sí en lugares distintos y al mismo tiempo.",
+        [
+            ("La procarionte no tiene material genético",
+             "Sí lo tiene: está en el citoplasma, sin envoltura nuclear."),
+            ("La procarionte no tiene membrana plasmática",
+             "Todas las células tienen membrana plasmática: es lo que las delimita."),
+            ("La eucarionte no tiene ribosomas y la procarionte sí",
+             "Ambas tienen ribosomas: son imprescindibles para sintetizar proteínas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Una célula del hígado contiene abundante retículo endoplasmático LISO, "
+        "sin ribosomas adheridos. ¿Qué función sugiere?",
+        "Metabolismo de lípidos y detoxificación de sustancias",
+        "El retículo liso cumple funciones distintas de las del rugoso.\n\n"
+        "1) Sin ribosomas adheridos, no participa en la síntesis de proteínas "
+        "para exportar.\n"
+        "2) Interviene en la síntesis de lípidos y en la transformación de "
+        "sustancias potencialmente tóxicas para facilitar su eliminación.\n"
+        "3) El hígado es el órgano central de ese trabajo, y por eso sus células "
+        "tienen abundante retículo liso.\n\n"
+        "La cantidad de este organelo aumenta con la exposición sostenida a "
+        "ciertas sustancias, lo que muestra que la estructura celular se ajusta "
+        "a la demanda funcional.",
+        [
+            ("Síntesis de proteínas destinadas a la exportación",
+             "Esa función corresponde al retículo RUGOSO, con ribosomas adheridos."),
+            ("Producción de energía mediante respiración celular",
+             "La respiración celular ocurre en las mitocondrias."),
+            ("Almacenamiento del material genético de reserva de la célula",
+             "El material genético está en el núcleo y no existe un ADN de reserva en el retículo."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se observa que las mitocondrias de una fibra muscular se ubican "
+        "preferentemente entre las miofibrillas y no dispersas al azar. ¿Qué "
+        "explica esa disposición?",
+        "Acorta la distancia entre la producción de ATP y su consumo",
+        "La ubicación de un organelo también es información funcional.\n\n"
+        "1) El ATP se difunde por el citoplasma, y esa difusión toma tiempo y "
+        "tiene alcance limitado.\n"
+        "2) Las miofibrillas son las que consumen ATP durante la contracción.\n"
+        "3) Situar las mitocondrias justo entre ellas reduce al mínimo la "
+        "distancia que el ATP debe recorrer, y permite sostener contracciones "
+        "intensas.\n\n"
+        "El mismo principio aparece en otras células: los organelos no están "
+        "dispersos al azar sino ubicados donde su producto se necesita.",
+        [
+            ("Evita que las miofibrillas se enreden entre sí durante la contracción",
+             "El ordenamiento de las miofibrillas lo mantiene el citoesqueleto, no las mitocondrias."),
+            ("Permite que las mitocondrias se contraigan junto con la fibra",
+             "Las mitocondrias no se contraen: producen el ATP que la contracción consume."),
+            ("Facilita que las mitocondrias reciban señales del sistema nervioso",
+             "La señal nerviosa llega a la membrana de la fibra, no directamente a las mitocondrias."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un estudiante afirma que basta con ver la forma de una célula al "
+        "microscopio para saber con certeza qué función cumple. ¿Cómo se evalúa?",
+        "La forma orienta la inferencia, pero requiere confirmación",
+        "La relación entre estructura y función es informativa, no "
+        "concluyente.\n\n"
+        "1) Ciertas estructuras son buenos indicios: microvellosidades sugieren "
+        "absorción, miofibrillas sugieren contracción, abundante retículo rugoso "
+        "sugiere secreción.\n"
+        "2) Pero varias células distintas pueden compartir rasgos, y una misma "
+        "célula puede cumplir varias funciones.\n"
+        "3) La confirmación exige otras evidencias: qué proteínas expresa, qué "
+        "sustancias produce o absorbe, cómo responde a intervenciones.\n\n"
+        "La forma es una hipótesis de trabajo excelente y un punto de partida, "
+        "no una conclusión.",
+        [
+            ("Es correcta: la forma determina siempre la función de manera unívoca",
+             "Rasgos parecidos aparecen en células con funciones distintas: la correspondencia no es unívoca."),
+            ("Es incorrecta: la forma de una célula no tiene ninguna relación con su función",
+             "Sí la tiene, y es muy estrecha: por eso la inferencia es razonable como punto de partida."),
+            ("Es correcta solo para células animales, no para vegetales",
+             "La relación entre estructura y función vale en ambos casos, y en ambos requiere confirmación."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_celula_tipos", "facil",
+        "Un espermatozoide tiene un flagelo y una zona intermedia repleta de "
+        "mitocondrias. ¿Qué relación hay entre ambas estructuras?",
+        "Las mitocondrias aportan el ATP que el flagelo consume al moverse",
+        "El desplazamiento es un trabajo mecánico y por lo tanto consume "
+        "energía.\n\n"
+        "1) El flagelo bate continuamente para impulsar a la célula, y ese "
+        "movimiento requiere ATP.\n"
+        "2) Las mitocondrias se concentran justo en la base del flagelo, donde "
+        "esa energía se necesita.\n"
+        "3) La proximidad reduce la distancia que el ATP debe recorrer por "
+        "difusión.\n\n"
+        "El espermatozoide además reduce al mínimo su citoplasma: casi todo su "
+        "volumen es núcleo, mitocondrias y flagelo. Es una célula construida "
+        "para desplazarse y entregar material genético.",
+        [
+            ("Las mitocondrias dirigen el movimiento del flagelo",
+             "La dirección del movimiento no la determinan las mitocondrias: ellas solo aportan energía."),
+            ("El flagelo produce la energía que las mitocondrias almacenan",
+             "Está invertido: el flagelo consume la energía que las mitocondrias producen."),
+            ("Ambas estructuras participan en la fecundación del ovocito por igual",
+             "Las mitocondrias del espermatozoide no ingresan al ovocito: su papel es energético durante el trayecto."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "Las células que forman la pared de los alvéolos pulmonares son "
+        "extremadamente delgadas. ¿Qué función facilita esa característica?",
+        "El intercambio de gases por difusión",
+        "La velocidad de la difusión depende del espesor que hay que "
+        "atravesar.\n\n"
+        "1) El oxígeno debe pasar del aire alveolar a la sangre, y el dióxido de "
+        "carbono en sentido contrario.\n"
+        "2) Cuanto más delgada es la barrera, más rápido ocurre ese "
+        "intercambio.\n"
+        "3) Por eso las células alveolares son casi láminas, y el capilar está "
+        "pegado a ellas.\n\n"
+        "Cuando esa barrera se engrosa por acumulación de líquido o de tejido "
+        "fibroso, el intercambio se dificulta y aparece la sensación de falta de "
+        "aire.",
+        [
+            ("La producción de mucus para atrapar partículas",
+             "El mucus se produce en las vías de conducción, no en los alvéolos, donde entorpecería el intercambio."),
+            ("El almacenamiento de aire durante la espiración",
+             "El alvéolo no almacena aire: lo intercambia con la sangre."),
+            ("La contracción del pulmón durante la respiración",
+             "El movimiento respiratorio lo generan el diafragma y los músculos intercostales."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "Una célula del tejido adiposo está ocupada casi por completo por una "
+        "gran gota de lípidos, con el núcleo desplazado hacia un costado. ¿Qué "
+        "función cumple?",
+        "Almacenar energía en forma de grasa",
+        "La estructura interna revela para qué está construida la célula.\n\n"
+        "1) Los lípidos almacenan más del doble de energía por gramo que los "
+        "hidratos de carbono, y no retienen agua.\n"
+        "2) Una célula que destina casi todo su volumen a esa gota está "
+        "especializada en acumular reserva energética.\n"
+        "3) El núcleo y el resto del citoplasma quedan comprimidos contra la "
+        "membrana.\n\n"
+        "El tejido adiposo cumple además funciones de aislamiento térmico y de "
+        "protección mecánica, y produce señales hormonales.",
+        [
+            ("Producir hormonas esteroidales para el organismo",
+             "Algunas células producen esteroides a partir de lípidos, pero el adipocito está especializado en almacenar."),
+            ("Absorber los nutrientes que llegan por la sangre y digerirlos",
+             "La digestión ocurre en el tubo digestivo; el adipocito almacena lo ya absorbido."),
+            ("Transportar los lípidos desde el intestino hacia los tejidos",
+             "El transporte lo realizan lipoproteínas en la sangre, no los adipocitos."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células de los túbulos del riñón tienen microvellosidades y gran "
+        "cantidad de mitocondrias, igual que los enterocitos. ¿Qué sugiere esa "
+        "coincidencia?",
+        "Que ambas reabsorben sustancias mediante transporte activo",
+        "Estructuras semejantes en tejidos distintos apuntan a funciones "
+        "semejantes.\n\n"
+        "1) Las MICROVELLOSIDADES aumentan la superficie de contacto: indican "
+        "intercambio intenso con el medio.\n"
+        "2) Las MITOCONDRIAS abundantes indican alta demanda de ATP, propia del "
+        "transporte activo contra gradiente.\n"
+        "3) En el riñón, esas células recuperan glucosa, aminoácidos e iones "
+        "del filtrado antes de que se pierdan en la orina.\n\n"
+        "Es un buen ejemplo de que la estructura permite predecir la función "
+        "aunque los órganos sean distintos.",
+        [
+            ("Que ambas producen hormonas para regular el organismo",
+             "Ninguna de las dos estructuras señaladas es característica de una célula productora de hormonas."),
+            ("Que ambas están especializadas en dividirse rápidamente",
+             "Ni las microvellosidades ni las mitocondrias abundantes indican alta tasa de división."),
+            ("Que ambas descienden del mismo tejido durante el desarrollo embrionario",
+             "Provienen de tejidos distintos: la semejanza responde a función, no a origen común."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "El ovocito humano es una de las células más grandes del cuerpo y "
+        "contiene abundantes reservas en su citoplasma. ¿Qué función cumplen "
+        "esas reservas?",
+        "Sostener las primeras divisiones tras la fecundación",
+        "El tamaño de la célula responde a lo que tendrá que hacer después.\n\n"
+        "1) Tras la fecundación, el embrión comienza a dividirse antes de "
+        "implantarse y de recibir nutrientes de la madre.\n"
+        "2) Durante ese periodo depende por completo del material acumulado en "
+        "el citoplasma del ovocito.\n"
+        "3) Por eso el ovocito almacena nutrientes, ARN y proteínas: son el "
+        "abastecimiento inicial del desarrollo.\n\n"
+        "El contraste con el espermatozoide es notable: uno aporta material "
+        "genético y prácticamente nada más, y el otro aporta además todo el "
+        "citoplasma inicial.",
+        [
+            ("Permitir que el ovocito se desplace hacia el útero por sí mismo",
+             "El ovocito no se desplaza por sí mismo: lo movilizan los cilios y la musculatura de la trompa."),
+            ("Aportar la energía necesaria para atraer al espermatozoide",
+             "El encuentro no depende de un desplazamiento activo del ovocito ni de esas reservas."),
+            ("Duplicar el material genético antes de la fecundación",
+             "La duplicación del ADN ocurre en momentos definidos del ciclo celular y no requiere esas reservas."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Se comparan dos células: una con muchos lisosomas y capacidad de "
+        "englobar partículas, y otra con abundante retículo rugoso y vesículas "
+        "de secreción. ¿Qué papel cumple cada una en el organismo?",
+        "La primera degrada material y la segunda exporta proteínas",
+        "Cada perfil de organelos corresponde a un papel distinto.\n\n"
+        "1) Englobar partículas y tener muchos lisosomas es el perfil de una "
+        "célula defensiva, como un macrófago: captura microorganismos y restos "
+        "y los degrada.\n"
+        "2) Retículo rugoso desarrollado y vesículas de secreción corresponden a "
+        "una célula que fabrica proteínas para exportar, como una pancreática o "
+        "una productora de anticuerpos.\n"
+        "3) Ambas usan el sistema de endomembranas, pero en sentidos opuestos: "
+        "una lo emplea para desarmar y la otra para producir.\n\n"
+        "El sistema inmune combina los dos perfiles en células distintas.",
+        [
+            ("Ambas cumplen funciones de defensa mediante fagocitosis",
+             "Solo la primera fagocita; la segunda exporta proteínas, aunque algunas de ellas puedan ser defensivas."),
+            ("La primera produce energía y la segunda la almacena",
+             "La producción de energía corresponde a las mitocondrias, presentes en ambas."),
+            ("La primera transporta oxígeno y la segunda, nutrientes",
+             "El transporte de oxígeno lo realizan los glóbulos rojos, que carecen de ambos perfiles."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Un investigador tiñe una muestra con un colorante que marca "
+        "específicamente las mitocondrias y observa que unas células se ven "
+        "intensamente teñidas y otras apenas. ¿Qué puede concluir?",
+        "Que difieren en su demanda energética",
+        "La intensidad de la tinción es proporcional a la cantidad del organelo "
+        "marcado.\n\n"
+        "1) El colorante marca mitocondrias, así que la intensidad refleja "
+        "cuántas tiene cada célula.\n"
+        "2) La cantidad de mitocondrias se relaciona con la demanda sostenida de "
+        "ATP.\n"
+        "3) Las células intensamente teñidas realizan una actividad "
+        "energéticamente más costosa.\n\n"
+        "La conclusión es una inferencia razonable, no una demostración: "
+        "confirmarla exigiría medir directamente el consumo de oxígeno o la "
+        "producción de ATP.",
+        [
+            ("Que unas células están vivas y las otras muertas",
+             "La tinción indica cantidad de mitocondrias; la viabilidad se evalúa con otros marcadores."),
+            ("Que unas células son procariontes y las otras eucariontes",
+             "Las procariontes no tienen mitocondrias y no se teñirían en absoluto, no débilmente."),
+            ("Que el colorante se degradó durante el procedimiento",
+             "Si se hubiera degradado, ninguna célula se vería teñida, y algunas se ven intensamente."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células del xilema de una planta pierden su contenido vivo al "
+        "madurar y quedan como tubos huecos con paredes reforzadas. ¿Qué función "
+        "cumplen?",
+        "Conducir agua y sales desde la raíz hacia el resto de la planta",
+        "La pérdida del contenido celular es aquí una especialización "
+        "extrema.\n\n"
+        "1) Al morir y vaciarse, las células dejan un conducto continuo y sin "
+        "obstáculos para el paso del agua.\n"
+        "2) Las paredes reforzadas impiden que el tubo colapse bajo la tensión "
+        "que se genera al ascender el agua.\n"
+        "3) El resultado es un sistema de transporte eficiente que no consume "
+        "energía celular.\n\n"
+        "El floema, en cambio, transporta azúcares y sí conserva células vivas, "
+        "porque ese transporte requiere energía.",
+        [
+            ("Realizar la fotosíntesis en el tallo de la planta",
+             "La fotosíntesis requiere cloroplastos y células vivas: el xilema maduro no tiene ninguno de los dos."),
+            ("Almacenar los azúcares producidos en las hojas",
+             "El transporte y la distribución de azúcares corresponden al floema."),
+            ("Proteger a la planta del ataque de insectos",
+             "El refuerzo de la pared cumple una función mecánica de sostén, no defensiva."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Una célula presenta pared celular, cloroplastos y una gran vacuola "
+        "central. ¿De qué tipo de organismo proviene?",
+        "De una planta",
+        "Esos tres rasgos juntos son característicos de la célula vegetal.\n\n"
+        "1) La PARED CELULAR de celulosa da forma y resistencia; las células "
+        "animales no la tienen.\n"
+        "2) Los CLOROPLASTOS realizan fotosíntesis: son exclusivos de plantas y "
+        "algas.\n"
+        "3) La VACUOLA CENTRAL almacena agua y sustancias, y su presión mantiene "
+        "erguida a la planta.\n\n"
+        "Un hongo tiene pared, pero de quitina y sin cloroplastos; una bacteria "
+        "tiene pared pero carece de núcleo y de organelos con membrana.",
+        [
+            ("De un animal", "Las células animales carecen de pared celular, de cloroplastos y de vacuola central."),
+            ("De una bacteria", "Las bacterias tienen pared, pero no cloroplastos ni organelos delimitados por membrana."),
+            ("De un hongo", "Los hongos tienen pared de quitina y no realizan fotosíntesis: carecen de cloroplastos."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células que producen anticuerpos desarrollan un retículo "
+        "endoplasmático rugoso enorme al activarse. ¿Qué indica ese cambio?",
+        "Que aumentaron mucho su síntesis de proteínas para exportar",
+        "La estructura de una célula puede cambiar según su estado "
+        "funcional.\n\n"
+        "1) Los anticuerpos son proteínas destinadas a ser secretadas a la "
+        "sangre.\n"
+        "2) Producirlos en gran cantidad exige ampliar la maquinaria de síntesis "
+        "y exportación: retículo rugoso y complejo de Golgi.\n"
+        "3) Antes de activarse, la misma célula tiene esos organelos poco "
+        "desarrollados, porque no está secretando.\n\n"
+        "Es una buena ilustración de que la relación entre estructura y función "
+        "no es fija: la célula reorganiza su interior según lo que debe hacer.",
+        [
+            ("Que la célula está a punto de dividirse",
+             "La preparación para dividirse implica duplicar el ADN y formar el huso, no ampliar el retículo rugoso."),
+            ("Que la célula aumentó su capacidad de producir energía",
+             "Eso se reflejaría en más mitocondrias, no en más retículo rugoso."),
+            ("Que la célula comenzó a degradar material extraño en su interior",
+             "La degradación se asocia a los lisosomas y a las vesículas de fagocitosis."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un fármaco bloquea la formación de microvellosidades. ¿Qué tipos "
+        "celulares del temario se verían más afectados y por qué?",
+        "El enterocito, porque su absorción depende de esa superficie",
+        "El impacto depende de cuánto dependa cada célula de la estructura "
+        "bloqueada.\n\n"
+        "1) El enterocito absorbe nutrientes, y su capacidad es proporcional a "
+        "la superficie de membrana disponible.\n"
+        "2) Sin microvellosidades, esa superficie se reduce drásticamente y la "
+        "absorción cae.\n"
+        "3) Las neuronas, las fibras musculares y las células pancreáticas no "
+        "dependen de microvellosidades para su función principal.\n\n"
+        "Las células del túbulo renal también se verían afectadas, por la misma "
+        "razón: comparten esa especialización.",
+        [
+            ("La fibra muscular esquelética, porque perdería superficie de contracción",
+             "La contracción depende de las miofibrillas internas, no de proyecciones de la membrana."),
+            ("La neurona, porque no podría recibir señales de otras células",
+             "La recepción ocurre en las dendritas, que no son microvellosidades."),
+            ("La célula secretora pancreática, porque no podría liberar sus enzimas",
+             "La secreción se realiza por fusión de vesículas con la membrana, sin requerir microvellosidades."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se comparan el espermatozoide y el ovocito. Ambos participan en la "
+        "fecundación pero tienen estructuras opuestas. ¿Qué explica esa "
+        "diferencia?",
+        "Uno está especializado en desplazarse y el otro en aportar reservas",
+        "Cada gameto resuelve una parte distinta del problema.\n\n"
+        "1) El ESPERMATOZOIDE debe recorrer una distancia considerable: reduce "
+        "al mínimo su citoplasma, se dota de un flagelo y concentra mitocondrias "
+        "en su base.\n"
+        "2) El OVOCITO no se desplaza por sí mismo, pero debe sostener las "
+        "primeras divisiones del embrión: acumula un citoplasma enorme con "
+        "nutrientes, ARN y proteínas.\n"
+        "3) Ambos aportan la mitad del material genético, así que esa parte es "
+        "simétrica.\n\n"
+        "La asimetría está en todo lo demás, y responde a la división de tareas "
+        "entre movilidad y abastecimiento.",
+        [
+            ("Uno aporta más material genético que el otro",
+             "Ambos aportan un juego haploide de cromosomas: en eso son equivalentes."),
+            ("Uno es una célula eucarionte y el otro, procarionte",
+             "Ambos son células eucariontes del mismo organismo."),
+            ("Uno se divide por mitosis y el otro por meiosis",
+             "Ambos se originan por meiosis; el gameto maduro ya no se divide."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un tejido presenta células unidas entre sí por uniones muy estrechas "
+        "que impiden el paso de sustancias entre una célula y otra. ¿Qué función "
+        "cumple esa disposición?",
+        "Obliga a las sustancias a atravesar las células y no a colarse entre ellas",
+        "El control del transporte exige cerrar los caminos alternativos.\n\n"
+        "1) Si hubiera espacios entre las células, las sustancias podrían pasar "
+        "sin ser reguladas.\n"
+        "2) Las uniones estrechas sellan esos espacios y fuerzan a todo lo que "
+        "pasa a atravesar la membrana celular.\n"
+        "3) Así la célula decide qué entra y qué no, mediante sus "
+        "transportadores.\n\n"
+        "Es lo que ocurre en el epitelio intestinal y en los vasos del cerebro, "
+        "donde ese sellado es la base de la barrera que protege al tejido "
+        "nervioso.",
+        [
+            ("Permite que las células intercambien material genético entre sí",
+             "Las uniones estrechas sellan el espacio extracelular; no transfieren material genético."),
+            ("Aumenta la superficie de absorción del tejido",
+             "La superficie de absorción la aumentan las microvellosidades, no las uniones entre células."),
+            ("Facilita que las células se desplacen dentro del tejido",
+             "Las uniones estrechas hacen justamente lo contrario: fijan las células entre sí."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se afirma que una célula con muchas mitocondrias necesariamente "
+        "sintetiza muchas proteínas. ¿Cómo se evalúa esa inferencia?",
+        "Es incorrecta: las mitocondrias indican demanda de energía, no de síntesis",
+        "Cada organelo señala una actividad distinta y no conviene "
+        "confundirlas.\n\n"
+        "1) Las MITOCONDRIAS producen ATP: su abundancia indica alto consumo de "
+        "energía, cualquiera sea el proceso que la consuma.\n"
+        "2) La síntesis de proteínas para exportar se refleja en el RETÍCULO "
+        "RUGOSO y en el complejo de Golgi.\n"
+        "3) Una fibra muscular tiene muchísimas mitocondrias y no es una célula "
+        "secretora: gasta esa energía en contraerse.\n\n"
+        "La síntesis de proteínas sí consume energía, y por eso una célula "
+        "secretora también tiene mitocondrias abundantes; pero la relación no "
+        "funciona al revés.",
+        [
+            ("Es correcta: toda síntesis de proteínas requiere energía",
+             "Requiere energía, pero muchas otras actividades también: la inferencia en ese sentido no es válida."),
+            ("Es correcta solo en células animales",
+             "El problema del razonamiento es el mismo en cualquier tipo de célula."),
+            ("Es incorrecta porque las mitocondrias no participan en la producción de energía",
+             "Sí participan: son el principal sitio de producción de ATP en la célula eucarionte."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "¿Qué función cumple el citoesqueleto en una célula?",
+        "Dar forma, sostener organelos y permitir el movimiento interno",
+        "Es una red de filamentos proteicos que atraviesa el citoplasma.\n\n"
+        "1) Mantiene la FORMA de la célula y resiste deformaciones, sobre todo "
+        "en células animales, que no tienen pared.\n"
+        "2) Ancla y posiciona los ORGANELOS: por eso las mitocondrias de una "
+        "fibra muscular quedan donde se necesitan.\n"
+        "3) Sirve de vía para el TRANSPORTE interno de vesículas y participa en "
+        "el movimiento celular y en la división.\n\n"
+        "Sin él, el interior de la célula sería una mezcla desordenada y no "
+        "podría organizar sus procesos en el espacio.",
+        [
+            ("Almacenar el material genético de la célula",
+             "El material genético está en el núcleo, no en el citoesqueleto."),
+            ("Producir la energía que la célula necesita",
+             "La producción de ATP corresponde a las mitocondrias."),
+            ("Sintetizar los lípidos de la membrana plasmática",
+             "Esa síntesis ocurre en el retículo endoplasmático liso."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células ciliadas del oído interno tienen prolongaciones rígidas que "
+        "se inclinan ante el movimiento del líquido que las rodea. ¿Qué función "
+        "cumplen?",
+        "Convertir un movimiento mecánico en una señal nerviosa",
+        "La estructura permite transformar un tipo de estímulo en otro.\n\n"
+        "1) El sonido llega al oído interno como vibración de un líquido.\n"
+        "2) Esa vibración inclina las prolongaciones de la célula, y esa "
+        "inclinación abre canales en su membrana.\n"
+        "3) El resultado es un cambio eléctrico que se transmite al nervio "
+        "auditivo.\n\n"
+        "Estas células no se regeneran en el ser humano: su destrucción por "
+        "ruido intenso produce una pérdida auditiva permanente.",
+        [
+            ("Desplazar el líquido del oído interno para amplificar el sonido",
+             "Las prolongaciones responden al movimiento del líquido; no lo generan."),
+            ("Producir el mucus que protege el conducto auditivo",
+             "El cerumen se produce en el conducto externo, no en el oído interno."),
+            ("Atrapar partículas de polvo que ingresan al oído",
+             "Esa función corresponde a estructuras del oído externo."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Una célula procarionte, como una bacteria, realiza respiración celular "
+        "sin tener mitocondrias. ¿Cómo lo consigue?",
+        "Usa su propia membrana plasmática para esos procesos",
+        "La ausencia de un organelo no implica la ausencia de la función.\n\n"
+        "1) La respiración celular requiere una membrana con las proteínas "
+        "adecuadas para transportar electrones y generar ATP.\n"
+        "2) En la eucarionte, esa membrana es la interna de la mitocondria.\n"
+        "3) En la procarionte, es la propia membrana plasmática, a veces con "
+        "pliegues que aumentan su superficie.\n\n"
+        "Esa semejanza funcional es uno de los argumentos de la hipótesis de que "
+        "las mitocondrias descienden de bacterias incorporadas por una célula "
+        "ancestral.",
+        [
+            ("Obtiene energía únicamente por fermentación, sin respirar",
+             "Muchas bacterias realizan respiración celular completa: la fermentación es otra vía."),
+            ("Absorbe el ATP ya formado desde el medio que la rodea",
+             "Las células producen su propio ATP: no lo captan del exterior."),
+            ("Usa su núcleo para producir la energía que necesita",
+             "Las procariontes no tienen núcleo definido, y el núcleo no produce energía en ninguna célula."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se estudia un tejido desconocido y se observan células alargadas, con un "
+        "solo núcleo central, sin miofibrillas y con abundante retículo "
+        "endoplasmático liso. ¿Qué función es más probable?",
+        "Síntesis de lípidos o detoxificación",
+        "El perfil de organelos orienta la respuesta, y las ausencias también "
+        "informan.\n\n"
+        "1) La AUSENCIA de miofibrillas descarta una función contráctil.\n"
+        "2) El retículo LISO, sin ribosomas, no participa en la síntesis de "
+        "proteínas de exportación: interviene en el metabolismo de lípidos y en "
+        "la transformación de sustancias tóxicas.\n"
+        "3) Su abundancia indica que esa es la actividad predominante.\n\n"
+        "Un solo núcleo central descarta además que se trate de una fibra "
+        "muscular esquelética, que es multinucleada y con núcleos periféricos.",
+        [
+            ("Contracción muscular",
+             "La ausencia de miofibrillas descarta esa función."),
+            ("Secreción de proteínas hacia el exterior",
+             "Eso requeriría retículo RUGOSO abundante, y el observado es liso."),
+            ("Conducción de impulsos nerviosos",
+             "Una neurona se reconoce por sus dendritas y su axón, no por el retículo liso."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un equipo quiere comprobar que las células del túbulo renal reabsorben "
+        "glucosa mediante transporte activo. ¿Qué resultado apoyaría esa "
+        "hipótesis?",
+        "Que la reabsorción se detiene al bloquear la producción de ATP",
+        "El transporte activo se distingue de la difusión por su dependencia "
+        "energética.\n\n"
+        "1) La difusión, simple o facilitada, ocurre sin gasto de energía y "
+        "continuaría aunque falte ATP.\n"
+        "2) El transporte activo depende del ATP: si se bloquea su producción, "
+        "debe detenerse.\n"
+        "3) Observar esa detención es evidencia directa a favor de la "
+        "hipótesis.\n\n"
+        "Conviene comprobar además que la célula sigue viva y que otros procesos "
+        "no dependientes de ATP continúan: así se descarta que el bloqueo haya "
+        "simplemente matado la célula.",
+        [
+            ("Que la reabsorción aumenta al elevar la concentración de glucosa en el filtrado",
+             "Eso ocurre también en la difusión facilitada: no distingue entre ambos mecanismos."),
+            ("Que la glucosa se mueve desde donde está más concentrada hacia donde está menos",
+             "Ese es justamente el comportamiento de la difusión, no del transporte activo."),
+            ("Que las células del túbulo tienen microvellosidades en su superficie",
+             "Las microvellosidades indican intercambio intenso, pero no demuestran que sea activo."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "¿Por qué las neuronas del ser humano prácticamente no se dividen una "
+        "vez formadas?",
+        "Están especializadas al extremo y sus conexiones se perderían",
+        "Hay un costo en dividirse que en este caso resulta prohibitivo.\n\n"
+        "1) La función de una neurona depende de su red de conexiones "
+        "específicas, construida a lo largo del desarrollo y de la "
+        "experiencia.\n"
+        "2) Dividirse exigiría desmontar esa arquitectura, incluidas las "
+        "prolongaciones y los contactos sinápticos.\n"
+        "3) El sistema nervioso privilegia la estabilidad de la red por sobre la "
+        "renovación celular.\n\n"
+        "Esa es la razón de que el daño neuronal sea difícil de reparar, y de "
+        "que la recuperación tras una lesión dependa sobre todo de que las "
+        "neuronas sobrevivientes reorganicen sus conexiones.",
+        [
+            ("Porque carecen de núcleo y no pueden duplicar su ADN",
+             "Las neuronas sí tienen núcleo: lo que no realizan es el ciclo de división."),
+            ("Porque no disponen de suficiente energía para dividirse",
+             "Las neuronas tienen alta actividad metabólica y abundantes mitocondrias."),
+            ("Porque su membrana es demasiado rígida para separarse en dos",
+             "La membrana neuronal es tan flexible como la de cualquier célula animal."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células de la piel se renuevan continuamente, mientras que las del "
+        "músculo cardíaco casi no lo hacen. ¿Qué consecuencia tiene esa "
+        "diferencia?",
+        "Una lesión en la piel se repara y una del corazón deja cicatriz",
+        "La capacidad de renovación determina cómo responde el tejido a un "
+        "daño.\n\n"
+        "1) La piel está expuesta a desgaste constante y mantiene una población "
+        "de células que se dividen para reemplazar a las que se pierden.\n"
+        "2) El músculo cardíaco tiene una capacidad de renovación muy baja: las "
+        "células perdidas prácticamente no se reponen.\n"
+        "3) Por eso una herida cutánea se repara con tejido equivalente y un "
+        "infarto deja tejido cicatricial, que no se contrae.\n\n"
+        "Esa cicatriz reduce de manera permanente la capacidad de bombeo del "
+        "corazón.",
+        [
+            ("La piel envejece más rápido que el corazón",
+             "La renovación constante es lo que mantiene funcional a la piel, no lo que la envejece."),
+            ("El corazón resiste mejor las infecciones que la piel",
+             "La resistencia a infecciones depende del sistema inmune, no de la tasa de renovación."),
+            ("La piel consume mucha más energía que el músculo cardíaco",
+             "El músculo cardíaco es uno de los tejidos de mayor demanda energética del cuerpo."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "En la retina hay células especializadas que responden a la luz y "
+        "generan una señal nerviosa. ¿Qué relación tiene esa función con la "
+        "estructura de la neurona?",
+        "Ambas convierten un estímulo en una señal eléctrica que se transmite",
+        "Las células receptoras son parte del mismo sistema de señalización.\n\n"
+        "1) Una neurona recibe señales, genera un cambio eléctrico y lo "
+        "transmite a otra célula.\n"
+        "2) Los fotorreceptores hacen lo mismo, con la diferencia de que el "
+        "estímulo inicial es luz y no un neurotransmisor.\n"
+        "3) La señal resultante se transmite a otras neuronas de la retina y de "
+        "ahí al nervio óptico.\n\n"
+        "El principio general es que los receptores sensoriales traducen "
+        "estímulos de naturaleza muy distinta -luz, sonido, presión- a un mismo "
+        "lenguaje eléctrico.",
+        [
+            ("Ninguna: los fotorreceptores no son células nerviosas",
+             "Forman parte del tejido nervioso y participan en la misma cadena de señalización."),
+            ("Ambas producen la luz que el ojo necesita para ver",
+             "El ojo no produce luz: la capta desde el exterior."),
+            ("Ambas se contraen para enfocar la imagen sobre la retina",
+             "El enfoque lo realizan los músculos del cristalino, no los fotorreceptores."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Se compara la cantidad de mitocondrias en fibras musculares de un atleta "
+        "de resistencia y de una persona sedentaria, y se encuentra una "
+        "diferencia notoria a favor del primero. ¿Qué se concluye y qué habría "
+        "que controlar?",
+        "Que el entrenamiento aumenta las mitocondrias, controlando edad y dieta",
+        "La conclusión es plausible pero exige descartar explicaciones "
+        "alternativas.\n\n"
+        "1) El entrenamiento de resistencia impone una demanda energética "
+        "sostenida, y el tejido responde aumentando su maquinaria "
+        "productora de ATP.\n"
+        "2) Pero la diferencia observada podría deberse a otras variables: edad, "
+        "alimentación, predisposición genética o el tipo de fibra muscular "
+        "predominante.\n"
+        "3) Un diseño sólido compara grupos equiparados en esas variables, o "
+        "mejor aún, sigue a las mismas personas antes y después de un programa "
+        "de entrenamiento.\n\n"
+        "Ese seguimiento longitudinal es el que permite atribuir el cambio al "
+        "entrenamiento y no a diferencias previas entre las personas.",
+        [
+            ("Que las personas con más mitocondrias eligen deportes de resistencia",
+             "Es una explicación alternativa que hay que descartar, no la conclusión que el diseño longitudinal apoya."),
+            ("Que el entrenamiento aumenta el número de fibras musculares",
+             "El entrenamiento modifica sobre todo el tamaño y el contenido de las fibras, no su número."),
+            ("Que la diferencia se debe al azar y no requiere ningún control",
+             "Una diferencia notoria y sistemática entre grupos no se atribuye al azar sin más."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "¿Qué caracteriza a una célula madre frente a una célula ya "
+        "especializada?",
+        "Puede dividirse y originar distintos tipos celulares",
+        "Su valor está justamente en no estar comprometida con una función.\n\n"
+        "1) Conserva la capacidad de DIVIDIRSE, que muchas células "
+        "especializadas pierden.\n"
+        "2) Puede DIFERENCIARSE en más de un tipo celular, según las señales "
+        "que reciba.\n"
+        "3) Una vez especializada, la célula suele perder ambas capacidades: una "
+        "neurona no vuelve a ser otra cosa.\n\n"
+        "Por eso las células madre son la base de la renovación de tejidos como "
+        "la piel, la sangre y el epitelio intestinal, que se reemplazan "
+        "continuamente.",
+        [
+            ("Tiene más genes que una célula especializada",
+             "Todas las células del organismo comparten el mismo genoma: lo que cambia es qué genes expresan."),
+            ("No tiene núcleo hasta que se especializa",
+             "Las células madre tienen núcleo como cualquier célula eucarionte."),
+            ("Produce energía para las demás células del tejido",
+             "Cada célula produce su propio ATP: no hay células que abastezcan energéticamente a otras."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "La membrana plasmática de una neurona contiene muchas más proteínas "
+        "formadoras de canales iónicos que la de un adipocito. ¿Cómo se explica?",
+        "La neurona depende de movimientos rápidos de iones para su función",
+        "La composición de la membrana también se ajusta a la función.\n\n"
+        "1) El impulso nervioso consiste en cambios rápidos del flujo de iones a "
+        "través de la membrana.\n"
+        "2) Esos flujos ocurren por canales que se abren y cierran en "
+        "milisegundos: la neurona necesita muchos y muy diversos.\n"
+        "3) El adipocito almacena lípidos y no requiere esa capacidad de "
+        "señalización eléctrica.\n\n"
+        "La membrana no es solo una barrera: su dotación de proteínas define qué "
+        "puede hacer la célula.",
+        [
+            ("El adipocito no tiene membrana plasmática",
+             "Todas las células tienen membrana plasmática."),
+            ("La neurona necesita absorber más nutrientes que el adipocito",
+             "La absorción de nutrientes no explica la abundancia específica de canales iónicos."),
+            ("Los canales iónicos son los que dan a la neurona su forma alargada",
+             "La forma la sostiene el citoesqueleto, no los canales de la membrana."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "dificil",
+        "Un estudiante propone que, como todas las células tienen el mismo ADN, "
+        "podría convertirse una célula de la piel en una neurona activando los "
+        "genes adecuados. ¿Cómo se evalúa esa propuesta?",
+        "Es plausible en principio y se ha logrado experimentalmente",
+        "La propuesta se apoya en un hecho correcto y llega a una conclusión "
+        "razonable.\n\n"
+        "1) Es cierto que las células somáticas comparten el genoma completo y "
+        "que la especialización resulta de expresión diferencial.\n"
+        "2) Por lo tanto, en principio, cambiar el patrón de expresión debería "
+        "poder cambiar la identidad de la célula.\n"
+        "3) Eso se ha conseguido en el laboratorio: reprogramando células "
+        "adultas se obtienen células capaces de originar otros tipos "
+        "celulares.\n\n"
+        "La dificultad es práctica y enorme: el patrón de expresión está "
+        "estabilizado por múltiples mecanismos, y revertirlo de manera "
+        "controlada es complejo.",
+        [
+            ("Es imposible, porque las células especializadas pierden los genes que no usan",
+             "No los pierden: conservan el genoma completo, con los genes no usados silenciados."),
+            ("Es imposible, porque cada tipo celular tiene un ADN distinto",
+             "El ADN es el mismo en todas las células somáticas del organismo."),
+            ("Es plausible, pero solo entre células del mismo tejido",
+             "Se ha logrado la conversión entre tipos celulares de tejidos muy distintos."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "¿Qué organelo es responsable de la síntesis de proteínas en cualquier "
+        "célula?",
+        "El ribosoma",
+        "Es una estructura presente en todas las células, procariontes "
+        "incluidas.\n\n"
+        "1) El ribosoma lee la secuencia del ARN mensajero y ensambla la cadena "
+        "de aminoácidos correspondiente.\n"
+        "2) Puede estar libre en el citoplasma, y entonces produce proteínas "
+        "para uso interno, o adherido al retículo endoplasmático, y entonces "
+        "produce proteínas para exportar o para organelos.\n"
+        "3) Su presencia universal es una de las evidencias de antepasado común "
+        "entre todos los seres vivos.\n\n"
+        "Que los ribosomas bacterianos difieran algo de los humanos es lo que "
+        "permite que ciertos antibióticos los bloqueen sin afectar a nuestras "
+        "células.",
+        [
+            ("El lisosoma", "El lisosoma degrada material mediante enzimas digestivas."),
+            ("La mitocondria", "Produce ATP; tiene ribosomas propios, pero no es ella la que sintetiza las proteínas celulares."),
+            ("La vacuola", "Almacena sustancias, sobre todo en células vegetales."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "facil",
+        "¿Qué estructura controla el paso de sustancias entre el interior y el "
+        "exterior de la célula?",
+        "La membrana plasmática",
+        "Es el límite de la célula y su principal punto de regulación.\n\n"
+        "1) Está formada por una doble capa de lípidos con proteínas "
+        "incrustadas.\n"
+        "2) Los lípidos impiden el paso libre de la mayoría de las sustancias, y "
+        "las proteínas actúan como canales y transportadores selectivos.\n"
+        "3) Esa combinación permite que la célula decida qué entra y qué sale: "
+        "se dice que es de permeabilidad selectiva.\n\n"
+        "Sin ese control, la composición interna se igualaría a la del medio y "
+        "la célula no podría sostener sus procesos.",
+        [
+            ("La pared celular", "Da resistencia y forma, pero es muy permeable: no realiza el control selectivo."),
+            ("El citoesqueleto", "Organiza el interior de la célula; no delimita ni regula el intercambio con el medio."),
+            ("La envoltura nuclear", "Controla el paso entre el núcleo y el citoplasma, no entre la célula y el exterior."),
+        ],
+    ),
+    _q(
+        "cie_celula_tipos", "medio",
+        "Las células que revisten los vasos sanguíneos del cerebro tienen "
+        "uniones mucho más estrechas que las de otros vasos del cuerpo. ¿Qué "
+        "consecuencia tiene?",
+        "Restringen qué sustancias pasan desde la sangre al tejido nervioso",
+        "El sellado convierte al vaso en una barrera selectiva.\n\n"
+        "1) En la mayoría de los tejidos, muchas sustancias pasan de la sangre "
+        "al espacio entre células con relativa facilidad.\n"
+        "2) En el cerebro, las uniones estrechas cierran esa vía y obligan a "
+        "todo lo que pasa a atravesar las células, que seleccionan.\n"
+        "3) Así el tejido nervioso queda protegido de variaciones bruscas y de "
+        "sustancias potencialmente dañinas.\n\n"
+        "Esa protección tiene un costo: muchos fármacos útiles no logran "
+        "atravesarla, y diseñar tratamientos para el sistema nervioso es "
+        "especialmente difícil.",
+        [
+            ("Permiten un intercambio más rápido de nutrientes con el cerebro",
+             "El sellado hace el intercambio más selectivo y controlado, no más rápido."),
+            ("Impiden por completo el paso de cualquier sustancia hacia el cerebro",
+             "El paso no se impide del todo: la glucosa y el oxígeno atraviesan mediante transportadores específicos."),
+            ("Aumentan la presión sanguínea dentro de los vasos cerebrales",
+             "La presión depende del calibre del vaso y del bombeo cardíaco, no del tipo de unión entre células."),
+        ],
+    ),
+]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - "Organización, estructura y actividad celular":
+# organelos y estructuras celulares
+#
+# El temario enumera explícitamente qué estructuras entran: cápsula, pared
+# celular, membrana, citoesqueleto, núcleo, nucléolo, los dos retículos,
+# ribosomas, lisosomas, peroxisomas, complejo de Golgi, mitocondrias,
+# cloroplastos, vacuolas, centriolos, cilios y flagelos.
+#
+# Las heredadas cubrían membrana y transporte; esta tanda completa las que
+# faltaban y agrega el razonamiento sobre qué ocurre si un organelo falla.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_celula_tipos", "medio",
+        "Se observa una célula muy pequeña, sin núcleo definido, con pared "
+        "celular y un flagelo. ¿Qué tipo de organismo es y qué función cumple "
+        "esa última estructura?",
+        "Una bacteria, y el flagelo le permite desplazarse",
+        "Cada rasgo acota la identificación.\n\n"
+        "1) La ausencia de núcleo definido indica una célula PROCARIONTE.\n"
+        "2) La pared celular es compatible con una bacteria, y le da forma y "
+        "resistencia frente a cambios osmóticos.\n"
+        "3) El FLAGELO es una estructura de movimiento: gira como una hélice y "
+        "propulsa a la célula, lo que le permite desplazarse hacia nutrientes o "
+        "alejarse de sustancias nocivas.\n\n"
+        "El flagelo bacteriano es estructuralmente distinto del de un "
+        "espermatozoide, aunque ambos sirvan para lo mismo: es otro caso de "
+        "estructuras análogas.",
+        [
+            ("Una célula vegetal, y el flagelo la fija al sustrato",
+             "Las células vegetales tienen núcleo definido, y el flagelo no cumple función de fijación."),
+            ("Un hongo, y el flagelo absorbe nutrientes del medio",
+             "Los hongos son eucariontes y el flagelo no absorbe: sirve para el movimiento."),
+            ("Una célula animal, y el flagelo aumenta su superficie de intercambio",
+             "Las células animales no tienen pared celular, y la superficie de intercambio la aumentan las microvellosidades."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "Dentro del núcleo se distingue una región más densa llamada nucléolo. "
+        "¿Qué se produce allí?",
+        "Los componentes de los ribosomas",
+        "El nucléolo es una zona especializada dentro del núcleo.\n\n"
+        "1) Ahí se transcriben los ARN ribosómicos y se ensamblan con proteínas "
+        "para formar las subunidades de los ribosomas.\n"
+        "2) Esas subunidades salen al citoplasma por los poros nucleares y ahí "
+        "se unen para funcionar.\n"
+        "3) Por eso las células que sintetizan muchas proteínas tienen "
+        "nucléolos grandes y bien visibles.\n\n"
+        "El nucléolo no está rodeado por membrana: es una acumulación densa de "
+        "material dentro del propio núcleo.",
+        [
+            ("El ADN de la célula",
+             "El ADN no se produce en el nucléolo: se duplica en el núcleo durante la fase S del ciclo celular."),
+            ("Las enzimas digestivas de los lisosomas",
+             "Esas enzimas son proteínas sintetizadas en el retículo rugoso y procesadas en el Golgi."),
+            ("La energía que la célula utiliza en sus procesos",
+             "El ATP se produce principalmente en las mitocondrias."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "Los peroxisomas contienen enzimas que degradan sustancias como el "
+        "peróxido de hidrógeno. ¿Por qué esas enzimas están confinadas en un "
+        "organelo?",
+        "Porque las reacciones que catalizan dañarían al resto de la célula",
+        "La compartimentación permite realizar procesos incompatibles entre "
+        "sí.\n\n"
+        "1) El peróxido de hidrógeno es un producto tóxico de varias reacciones "
+        "del metabolismo.\n"
+        "2) Confinar su degradación en un organelo evita que dañe otras "
+        "estructuras mientras se procesa.\n"
+        "3) Es el mismo principio que opera con los lisosomas: sus enzimas "
+        "digestivas destruirían el citoplasma si estuvieran sueltas.\n\n"
+        "La compartimentación es una de las grandes ventajas de la célula "
+        "eucarionte: permite mantener condiciones químicas distintas en lugares "
+        "distintos y al mismo tiempo.",
+        [
+            ("Porque necesitan una temperatura más alta que el resto de la célula",
+             "Toda la célula está a la misma temperatura: la compartimentación es química, no térmica."),
+            ("Porque solo funcionan cuando están rodeadas por una membrana",
+             "La membrana las confina, pero las enzimas funcionarían igual fuera: el problema es el daño que causarían."),
+            ("Porque el peróxido de hidrógeno solo se produce dentro de ese organelo",
+             "Se produce en varias reacciones del citoplasma y de otros organelos, y es transportado hacia allí."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "¿Qué estructura recubre a algunas bacterias por fuera de su pared "
+        "celular y les ayuda a resistir la defensa del organismo infectado?",
+        "La cápsula",
+        "Es una capa externa adicional presente en ciertas bacterias.\n\n"
+        "1) Está formada por polisacáridos y recubre a la pared celular.\n"
+        "2) Dificulta que las células defensivas del organismo reconozcan y "
+        "engloben a la bacteria.\n"
+        "3) También le ayuda a adherirse a superficies y a resistir la "
+        "desecación.\n\n"
+        "Por eso las bacterias con cápsula suelen ser más virulentas que las "
+        "variantes de la misma especie que carecen de ella.",
+        [
+            ("La pared celular",
+             "La pared da forma y resistencia mecánica, pero la capa protectora adicional externa es la cápsula."),
+            ("La membrana plasmática",
+             "Es la capa más interna de las tres y regula el paso de sustancias."),
+            ("El citoesqueleto",
+             "Organiza el interior de la célula: no es una cubierta externa."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "En las células vegetales maduras existe una vacuola central de gran "
+        "tamaño. ¿Qué funciones cumple?",
+        "Almacenar sustancias y mantener la turgencia de la célula",
+        "La vacuola combina una función de depósito con una mecánica.\n\n"
+        "1) Almacena agua, sales, azúcares, pigmentos y a veces sustancias de "
+        "desecho o tóxicas para los herbívoros.\n"
+        "2) Al llenarse de agua, presiona la pared celular desde adentro: esa "
+        "presión de turgencia es la que mantiene erguidos los tallos y las "
+        "hojas.\n"
+        "3) Cuando la planta pierde agua, la vacuola se reduce, la presión cae y "
+        "la planta se marchita.\n\n"
+        "Regar una planta marchita revierte el proceso: la vacuola vuelve a "
+        "llenarse y la turgencia se recupera.",
+        [
+            ("Realizar la fotosíntesis de la célula vegetal",
+             "La fotosíntesis ocurre en los cloroplastos."),
+            ("Producir la energía que la célula necesita",
+             "El ATP se produce en las mitocondrias, presentes también en las células vegetales."),
+            ("Sintetizar la celulosa que forma la pared celular",
+             "La celulosa se sintetiza en la membrana plasmática y se deposita hacia el exterior."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "¿Qué función cumplen los centriolos en una célula animal?",
+        "Organizan el huso que separa los cromosomas al dividirse",
+        "Su papel se relaciona con el citoesqueleto y con la división "
+        "celular.\n\n"
+        "1) Los centriolos forman parte del centrosoma, el principal centro "
+        "organizador de microtúbulos de la célula animal.\n"
+        "2) Durante la división, a partir de ahí se organiza el huso, que "
+        "captura los cromosomas y los reparte entre las dos células hijas.\n"
+        "3) También participan en la formación de cilios y flagelos, que están "
+        "hechos de microtúbulos.\n\n"
+        "Las células vegetales se dividen sin centriolos: organizan su huso de "
+        "otra manera, lo que muestra que la función es esencial pero la "
+        "estructura no es única.",
+        [
+            ("Producen la energía necesaria para la división celular",
+             "Esa energía proviene del ATP producido en las mitocondrias."),
+            ("Contienen el material genético que se reparte entre las células hijas",
+             "El material genético está en los cromosomas, dentro del núcleo."),
+            ("Forman la pared que separa a las dos células hijas al final de la división",
+             "En las células animales la separación se produce por estrangulamiento de la membrana."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Una célula ingiere una partícula grande rodeándola con su membrana "
+        "hasta formar una vesícula interna. ¿Cómo se llama ese proceso?",
+        "Endocitosis",
+        "Es el mecanismo con que la célula incorpora material que no puede "
+        "atravesar la membrana.\n\n"
+        "1) La membrana se deforma y envuelve a la partícula hasta cerrarse "
+        "sobre ella.\n"
+        "2) Se forma una vesícula que queda dentro del citoplasma, con el "
+        "material en su interior.\n"
+        "3) Esa vesícula suele fusionarse después con un lisosoma para degradar "
+        "su contenido.\n\n"
+        "El proceso inverso es la EXOCITOSIS: una vesícula interna se fusiona "
+        "con la membrana y libera su contenido al exterior. Es lo que hacen las "
+        "células secretoras.",
+        [
+            ("Exocitosis", "Es el proceso inverso: liberar contenido hacia el exterior."),
+            ("Difusión facilitada", "Permite el paso de moléculas individuales por proteínas transportadoras, no de partículas grandes."),
+            ("Ósmosis", "Es el paso de agua a través de la membrana, no la incorporación de partículas."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "La membrana plasmática se describe como un mosaico fluido. ¿Qué "
+        "significa esa expresión?",
+        "Sus lípidos y proteínas se desplazan lateralmente por la membrana",
+        "Es un modelo que describe a la vez su composición y su "
+        "comportamiento.\n\n"
+        "1) MOSAICO: la membrana no es uniforme, sino una doble capa de lípidos "
+        "con proteínas de distintos tipos incrustadas o asociadas.\n"
+        "2) FLUIDO: esos componentes no están fijos, se desplazan lateralmente "
+        "dentro del plano de la membrana.\n"
+        "3) Esa fluidez permite que la membrana se deforme, se fusione con "
+        "vesículas y se repare, cosas imposibles en una lámina rígida.\n\n"
+        "La proporción de ciertos lípidos y la temperatura influyen en cuán "
+        "fluida es, y la célula la regula para mantener su funcionamiento.",
+        [
+            ("Que la membrana está formada por líquido en su interior",
+             "La membrana no encierra líquido en su espesor: es una doble capa de lípidos."),
+            ("Que la membrana cambia de composición según lo que la célula necesite en cada instante",
+             "La composición se regula, pero lentamente; la fluidez se refiere al movimiento de sus componentes."),
+            ("Que la membrana deja pasar libremente cualquier sustancia disuelta",
+             "Es de permeabilidad selectiva: justamente controla qué pasa."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Un glóbulo rojo colocado en una solución con mayor concentración de "
+        "solutos que su interior se arruga y reduce su volumen. ¿Qué ocurrió?",
+        "Salió agua de la célula hacia la solución por ósmosis",
+        "El agua se mueve hacia donde hay más solutos disueltos.\n\n"
+        "1) La membrana deja pasar agua con facilidad, pero no los solutos.\n"
+        "2) Con más solutos afuera, el agua sale de la célula intentando igualar "
+        "las concentraciones.\n"
+        "3) La célula pierde volumen y su superficie se arruga.\n\n"
+        "En una solución con MENOS solutos ocurriría lo contrario: entraría agua "
+        "y el glóbulo rojo podría llegar a reventar, porque no tiene pared "
+        "celular que lo contenga.",
+        [
+            ("Entró agua a la célula y esta se comprimió",
+             "Si entrara agua, la célula aumentaría de volumen, no se arrugaría."),
+            ("Salieron solutos de la célula hacia la solución",
+             "La membrana no deja pasar libremente los solutos: lo que se desplaza es el agua."),
+            ("La célula consumió su propia agua para producir energía",
+             "El agua no se consume como fuente de energía en la respiración celular animal."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Los cilios y los flagelos permiten movimiento, pero se diferencian entre "
+        "sí. ¿En qué?",
+        "Los cilios son cortos y numerosos; el flagelo es largo y suele ser único",
+        "Comparten estructura interna y difieren en tamaño, número y patrón de "
+        "movimiento.\n\n"
+        "1) Los CILIOS son cortos y aparecen en gran número sobre la superficie "
+        "celular; baten de manera coordinada, como remos.\n"
+        "2) El FLAGELO es largo y generalmente único; se mueve ondulando y "
+        "propulsa a la célula.\n"
+        "3) Los cilios pueden mover el medio que rodea a una célula fija, como "
+        "ocurre en las vías respiratorias, mientras que el flagelo suele "
+        "desplazar a la propia célula.\n\n"
+        "Ambos están construidos con microtúbulos organizados de la misma "
+        "manera, lo que indica un origen común.",
+        [
+            ("Los cilios mueven líquidos y los flagelos, sólidos",
+             "Ninguno de los dos desplaza sólidos: la diferencia está en su tamaño, número y modo de batir."),
+            ("Los cilios están en células vegetales y los flagelos en animales",
+             "Ambos aparecen sobre todo en células animales y en organismos unicelulares."),
+            ("Los cilios se mueven con energía y los flagelos, de manera pasiva",
+             "Ambos consumen ATP para moverse."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué diferencia hay entre el retículo endoplasmático rugoso y el liso?",
+        "El rugoso tiene ribosomas adheridos y el liso no",
+        "La diferencia estructural determina funciones distintas.\n\n"
+        "1) El RUGOSO debe su aspecto a los ribosomas adheridos a su superficie, "
+        "y participa en la síntesis de proteínas destinadas a la exportación o a "
+        "los organelos.\n"
+        "2) El LISO carece de ribosomas e interviene en la síntesis de lípidos, "
+        "en el metabolismo de sustancias tóxicas y, en la fibra muscular, en el "
+        "almacenamiento de calcio.\n"
+        "3) Son continuos entre sí: forman un mismo sistema de membranas.\n\n"
+        "La proporción entre ambos varía mucho: una célula secretora tiene más "
+        "rugoso, y una célula hepática, mucho liso.",
+        [
+            ("El rugoso está en células animales y el liso en vegetales",
+             "Ambos aparecen en células animales y vegetales."),
+            ("El rugoso produce energía y el liso, proteínas",
+             "La energía la producen las mitocondrias, y las proteínas se sintetizan en los ribosomas del rugoso."),
+            ("El rugoso está dentro del núcleo y el liso, en el citoplasma",
+             "Ambos están en el citoplasma; el rugoso se continúa con la envoltura nuclear."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué ocurre si una célula vegetal se coloca en una solución con muy "
+        "poca concentración de solutos?",
+        "Entra agua, la vacuola se hincha y la pared impide que estalle",
+        "La pared celular cambia por completo el resultado respecto de una "
+        "célula animal.\n\n"
+        "1) Con menos solutos afuera, el agua entra a la célula por ósmosis.\n"
+        "2) La vacuola se llena y presiona la pared desde adentro.\n"
+        "3) La pared, rígida, resiste esa presión y evita que la célula "
+        "reviente: la célula queda turgente, que es su estado normal y "
+        "deseable.\n\n"
+        "Una célula animal en la misma situación no tiene esa protección: se "
+        "hincha hasta romperse.",
+        [
+            ("Sale agua y la célula se marchita",
+             "El agua entra cuando hay menos solutos afuera: la salida ocurre en el caso contrario."),
+            ("La célula estalla por la entrada de agua",
+             "La pared celular resiste la presión y lo impide: eso sí ocurriría en una célula animal."),
+            ("No ocurre nada, porque la pared celular impide el paso del agua",
+             "La pared es permeable al agua: lo que hace es resistir la presión, no impedir la entrada."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Los cloroplastos y las mitocondrias tienen algo en común que los "
+        "distingue de otros organelos. ¿Qué es?",
+        "Ambos tienen doble membrana y ADN propio",
+        "Esas dos características son la base de una hipótesis sobre su "
+        "origen.\n\n"
+        "1) Ambos están rodeados por DOS membranas, a diferencia del Golgi o de "
+        "los lisosomas.\n"
+        "2) Ambos contienen su propio ADN, pequeño y circular, y sus propios "
+        "ribosomas, parecidos a los bacterianos.\n"
+        "3) Ambos se dividen por su cuenta dentro de la célula, en vez de ser "
+        "fabricados desde cero.\n\n"
+        "Esas coincidencias sostienen la hipótesis de que descienden de "
+        "bacterias que fueron incorporadas por una célula ancestral y "
+        "permanecieron en su interior.",
+        [
+            ("Ambos realizan la fotosíntesis en distintas condiciones",
+             "Solo los cloroplastos realizan fotosíntesis; las mitocondrias hacen respiración celular."),
+            ("Ambos están presentes en todas las células eucariontes",
+             "Los cloroplastos solo existen en plantas y algas."),
+            ("Ambos carecen de membrana y están libres en el citoplasma",
+             "Ambos tienen dos membranas, que es justamente parte de lo que los distingue."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se descubre una sustancia que inhibe específicamente a los lisosomas. "
+        "¿Qué consecuencia tendría en una célula del sistema inmune que fagocita "
+        "bacterias?",
+        "Englobaría las bacterias pero no lograría destruirlas",
+        "El bloqueo afecta a una etapa concreta del proceso.\n\n"
+        "1) La fagocitosis depende de la membrana y del citoesqueleto: seguiría "
+        "funcionando y las bacterias quedarían dentro de vesículas.\n"
+        "2) La destrucción requiere que esas vesículas se fusionen con "
+        "lisosomas, que aportan las enzimas digestivas.\n"
+        "3) Con los lisosomas inhibidos, las bacterias quedarían encerradas pero "
+        "vivas dentro de la célula.\n\n"
+        "Algunas bacterias patógenas hacen algo parecido de manera natural: "
+        "evitan la fusión con el lisosoma y sobreviven dentro de la célula que "
+        "debía destruirlas.",
+        [
+            ("No podría englobar las bacterias",
+             "El englobamiento depende de la membrana y del citoesqueleto, no de los lisosomas."),
+            ("Las bacterias serían expulsadas intactas al exterior",
+             "La expulsión no ocurre automáticamente: sin degradación, las vesículas permanecen dentro."),
+            ("La célula moriría de inmediato por acumulación de enzimas",
+             "El problema es el opuesto: las enzimas no actúan, no se acumulan de manera dañina."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Un investigador rompe cuidadosamente células y separa sus componentes "
+        "por centrifugación. En una de las fracciones encuentra ADN circular y "
+        "ribosomas más pequeños que los del citoplasma. ¿Qué organelo aisló "
+        "probablemente?",
+        "Mitocondrias o cloroplastos",
+        "Las características encontradas son distintivas de estos dos "
+        "organelos.\n\n"
+        "1) El ADN CIRCULAR es característico de bacterias y de estos dos "
+        "organelos; el ADN nuclear de los eucariontes es lineal.\n"
+        "2) Los RIBOSOMAS MÁS PEQUEÑOS también se parecen a los bacterianos y "
+        "difieren de los del citoplasma eucarionte.\n"
+        "3) Ningún otro organelo de la célula tiene material genético ni "
+        "ribosomas propios.\n\n"
+        "Este tipo de hallazgo fue clave para sostener que ambos organelos "
+        "descienden de bacterias incorporadas por una célula ancestral.",
+        [
+            ("El núcleo de la célula",
+             "El núcleo contiene ADN lineal asociado a proteínas y no tiene ribosomas propios distintos."),
+            ("El complejo de Golgi",
+             "El Golgi carece de material genético y de ribosomas propios."),
+            ("Los lisosomas del citoplasma",
+             "Contienen enzimas digestivas, no ADN ni ribosomas."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se compara la concentración de potasio dentro y fuera de una célula y "
+        "se encuentra que es mucho mayor adentro, y que esa diferencia se "
+        "mantiene de manera estable. ¿Qué se infiere?",
+        "Que la célula gasta energía para sostener esa diferencia",
+        "Una diferencia estable contra el gradiente no se mantiene sola.\n\n"
+        "1) Por difusión, el potasio tendería a salir hasta igualar las "
+        "concentraciones a ambos lados.\n"
+        "2) Que la diferencia se mantenga indica que algo lo bombea de vuelta "
+        "hacia adentro, contra su gradiente.\n"
+        "3) Ese transporte activo consume ATP de manera continua.\n\n"
+        "En una neurona, mantener esas diferencias iónicas consume una fracción "
+        "importante de toda la energía de la célula, y es la condición para "
+        "poder generar impulsos nerviosos.",
+        [
+            ("Que la membrana es impermeable al potasio",
+             "Si fuera del todo impermeable no habría necesidad de bombeo, pero la membrana tiene canales de potasio."),
+            ("Que el potasio se produce dentro de la célula",
+             "Los iones no se producen: la célula los toma del medio."),
+            ("Que la diferencia se debe a la ósmosis del agua",
+             "La ósmosis mueve agua, no iones, y no explica una diferencia sostenida de concentración de potasio."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Un estudiante afirma que la pared celular cumple la misma función que "
+        "la membrana plasmática. ¿Cómo se corrige?",
+        "La pared da soporte y la membrana regula qué entra y sale",
+        "Son estructuras distintas con funciones que no se superponen.\n\n"
+        "1) La PARED CELULAR es rígida y muy permeable: deja pasar agua y "
+        "solutos con facilidad. Su función es mecánica: da forma, resistencia y "
+        "protección frente a la presión osmótica.\n"
+        "2) La MEMBRANA PLASMÁTICA es de permeabilidad selectiva: decide qué "
+        "entra y qué sale mediante sus proteínas.\n"
+        "3) Las células vegetales tienen ambas; las animales, solo membrana.\n\n"
+        "Prueba de la diferencia: una célula vegetal puesta en agua destilada "
+        "absorbe agua a través de la pared sin problema, y es la membrana la que "
+        "controla el paso de los solutos.",
+        [
+            ("Ambas regulan el paso de sustancias, pero la pared lo hace con más precisión",
+             "La pared es muy permeable: no realiza control selectivo alguno."),
+            ("La pared reemplaza a la membrana en las células vegetales",
+             "Las células vegetales tienen ambas estructuras: la pared no reemplaza a la membrana."),
+            ("La membrana da soporte mecánico y la pared regula el intercambio",
+             "Están invertidas: la pared es la que da soporte y la membrana la que regula."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué característica de la membrana plasmática explica que las moléculas "
+        "liposolubles la atraviesen con facilidad y los iones no?",
+        "Su interior es una capa de lípidos que repele las cargas",
+        "La estructura de la doble capa determina qué puede cruzarla "
+        "libremente.\n\n"
+        "1) El interior de la membrana está formado por las colas de los "
+        "lípidos, que son apolares.\n"
+        "2) Una molécula liposoluble se disuelve en ese ambiente y lo atraviesa "
+        "sin dificultad.\n"
+        "3) Un ion tiene carga eléctrica y no puede atravesar ese interior "
+        "apolar: necesita canales o transportadores proteicos.\n\n"
+        "Por eso los gases y muchos fármacos liposolubles entran por difusión "
+        "simple, y el sodio, el potasio o el calcio requieren proteínas "
+        "específicas.",
+        [
+            ("Su superficie está cubierta de proteínas que bloquean los iones",
+             "Las proteínas de membrana son justamente las que permiten el paso de iones, no las que lo bloquean."),
+            ("Los iones son moléculas demasiado grandes para atravesarla",
+             "Los iones son muy pequeños: el obstáculo es su carga eléctrica, no su tamaño."),
+            ("La membrana tiene poros que solo dejan pasar sustancias liposolubles",
+             "Las moléculas liposolubles atraviesan la propia doble capa, sin necesidad de poros."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Se coloca un trozo de papa en agua destilada y otro en agua con mucha "
+        "sal. Tras una hora, el primero está más firme y el segundo, blando. "
+        "¿Cómo se explica?",
+        "En el primero entró agua a las células y en el segundo salió",
+        "El movimiento del agua sigue la diferencia de concentración de "
+        "solutos.\n\n"
+        "1) En AGUA DESTILADA hay menos solutos afuera que dentro de las "
+        "células: el agua entra, las vacuolas se llenan y el tejido se pone "
+        "turgente.\n"
+        "2) En AGUA SALADA hay más solutos afuera: el agua sale, las células "
+        "pierden turgencia y el tejido se ablanda.\n"
+        "3) La pared celular no impide el paso del agua: lo que hace es "
+        "resistir la presión cuando la célula se llena.\n\n"
+        "Es un experimento sencillo y bien controlado: el único factor que "
+        "cambia entre los dos trozos es la concentración del medio.",
+        [
+            ("En ambos casos entró agua, pero en distinta cantidad",
+             "En agua salada el agua SALE de las células: por eso el tejido se ablanda."),
+            ("La sal entró a las células del segundo trozo y las endureció",
+             "El segundo trozo se ablandó, y además la membrana no deja pasar libremente la sal."),
+            ("El primer trozo absorbió sales del agua destilada",
+             "El agua destilada no contiene sales que absorber."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué relación hay entre los ribosomas libres en el citoplasma y los "
+        "adheridos al retículo endoplasmático?",
+        "Son iguales, y su ubicación depende del destino de la proteína",
+        "No son dos tipos distintos de ribosoma.\n\n"
+        "1) Estructuralmente son los mismos y pueden alternar entre ambas "
+        "situaciones.\n"
+        "2) Los LIBRES sintetizan proteínas destinadas a permanecer en el "
+        "citoplasma o a ir al núcleo o a las mitocondrias.\n"
+        "3) Los ADHERIDOS sintetizan proteínas destinadas a la exportación, a la "
+        "membrana o a los lisosomas.\n\n"
+        "Lo que decide dónde termina cada ribosoma es una señal presente en el "
+        "comienzo de la proteína que está sintetizando: si la tiene, el conjunto "
+        "es dirigido al retículo.",
+        [
+            ("Los adheridos son más grandes y sintetizan proteínas más largas",
+             "Son del mismo tamaño y ambos pueden sintetizar proteínas de cualquier longitud."),
+            ("Los libres sintetizan lípidos y los adheridos, proteínas",
+             "Los ribosomas sintetizan proteínas en ambos casos; los lípidos se producen en el retículo liso."),
+            ("Los libres pertenecen a células procariontes y los adheridos, a eucariontes",
+             "Ambos tipos de ubicación existen en la célula eucarionte."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se compara una célula procarionte con una eucarionte en cuanto a la "
+        "posibilidad de realizar procesos incompatibles al mismo tiempo. ¿Qué "
+        "ventaja tiene la eucarionte?",
+        "Sus organelos con membrana permiten separar procesos en el espacio",
+        "La compartimentación es la gran innovación de la célula eucarionte.\n\n"
+        "1) Los lisosomas mantienen enzimas digestivas activas en su interior "
+        "sin dañar el resto de la célula.\n"
+        "2) Las mitocondrias sostienen condiciones internas distintas de las del "
+        "citoplasma para producir ATP.\n"
+        "3) El núcleo separa la transcripción de la traducción, lo que permite "
+        "regular la expresión génica con mucho más detalle.\n\n"
+        "Una procarionte, sin esos compartimentos, debe realizar todo en un mismo "
+        "espacio, lo que limita la complejidad de sus procesos aunque las hace "
+        "muy eficientes y rápidas.",
+        [
+            ("Su ADN es más resistente a las mutaciones",
+             "El ADN eucarionte no es intrínsecamente más resistente a las mutaciones."),
+            ("Puede reproducirse mucho más rápido que una procarionte",
+             "Ocurre lo contrario: las bacterias se dividen mucho más rápido."),
+            ("No necesita membrana plasmática porque tiene organelos internos",
+             "Todas las células tienen membrana plasmática."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Una célula deja de producir ATP. ¿Qué proceso se detendría primero?",
+        "El transporte activo a través de la membrana",
+        "Los procesos que dependen directamente del ATP se detienen antes que "
+        "los demás.\n\n"
+        "1) El transporte activo mueve sustancias contra su gradiente y consume "
+        "ATP de manera continua: sin él, se detiene de inmediato.\n"
+        "2) La difusión simple y la ósmosis no requieren energía y siguen "
+        "ocurriendo mientras haya gradiente.\n"
+        "3) A medida que las bombas se detienen, las diferencias de "
+        "concentración se disipan y la célula pierde su medio interno.\n\n"
+        "Por eso la falta de oxígeno daña tan rápido a las neuronas: sin ATP no "
+        "pueden sostener las diferencias iónicas de las que depende su función.",
+        [
+            ("La ósmosis del agua a través de la membrana",
+             "La ósmosis es un proceso pasivo y no requiere ATP."),
+            ("La difusión simple de gases hacia el interior",
+             "También es pasiva: continúa mientras exista diferencia de concentración."),
+            ("La degradación de la pared celular por falta de energía",
+             "Las células animales no tienen pared, y en las vegetales la pared no se degrada por falta de ATP."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué función cumple la envoltura nuclear y qué permite su estructura?",
+        "Separa el núcleo del citoplasma y regula el paso por sus poros",
+        "Es una doble membrana atravesada por poros.\n\n"
+        "1) SEPARA el material genético del citoplasma, lo que permite que la "
+        "transcripción y la traducción ocurran en compartimentos distintos.\n"
+        "2) Sus POROS regulan el tránsito: dejan salir el ARN mensajero y las "
+        "subunidades de los ribosomas, y dejan entrar proteínas necesarias en el "
+        "núcleo.\n"
+        "3) Es continua con el retículo endoplasmático rugoso, del que forma "
+        "parte estructuralmente.\n\n"
+        "Esa separación es la que permite regular la expresión génica en etapas "
+        "sucesivas, y es una de las diferencias clave con la célula procarionte.",
+        [
+            ("Impide por completo el paso de sustancias entre núcleo y citoplasma",
+             "Sus poros permiten un tránsito constante y regulado en ambos sentidos."),
+            ("Produce los ribosomas que la célula necesita",
+             "Las subunidades ribosómicas se producen en el nucléolo, dentro del núcleo."),
+            ("Contiene las enzimas que duplican el ADN antes de la división",
+             "Esas enzimas actúan dentro del núcleo, no en su envoltura."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se estudia el efecto de la temperatura sobre la fluidez de la membrana. "
+        "¿Qué predicción es razonable si la temperatura baja mucho?",
+        "La membrana se vuelve menos fluida y su funcionamiento se altera",
+        "La fluidez depende del movimiento de los lípidos que la componen.\n\n"
+        "1) A menor temperatura, los lípidos se mueven menos y la membrana se "
+        "vuelve más rígida.\n"
+        "2) Esa rigidez dificulta procesos que requieren deformación: fusión de "
+        "vesículas, endocitosis, funcionamiento de proteínas móviles.\n"
+        "3) Muchos organismos responden cambiando la composición de sus lípidos "
+        "de membrana para mantener la fluidez adecuada.\n\n"
+        "Es una adaptación bien documentada en organismos que viven en ambientes "
+        "fríos, y muestra que la membrana no es una estructura pasiva.",
+        [
+            ("La membrana se vuelve más fluida y deja pasar más sustancias",
+             "El frío reduce el movimiento de los lípidos: la membrana se vuelve menos fluida, no más."),
+            ("La membrana no se ve afectada, porque su composición es fija",
+             "La fluidez depende de la temperatura, y además la composición se ajusta como respuesta."),
+            ("La membrana se disuelve al bajar la temperatura",
+             "El frío no disuelve la membrana: la vuelve más rígida."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué estructura de la célula vegetal realiza la fotosíntesis y qué "
+        "contiene para lograrlo?",
+        "El cloroplasto, que contiene clorofila en sus membranas internas",
+        "La estructura del organelo corresponde a las etapas del proceso.\n\n"
+        "1) El cloroplasto tiene membranas internas apiladas donde se ubica la "
+        "clorofila, el pigmento que capta la luz.\n"
+        "2) Esa disposición aumenta enormemente la superficie disponible para "
+        "captar energía luminosa.\n"
+        "3) El espacio interno que rodea a esas membranas es donde ocurren las "
+        "reacciones que fijan el carbono.\n\n"
+        "El color verde de las plantas se debe a que la clorofila absorbe sobre "
+        "todo el rojo y el azul, y refleja el verde.",
+        [
+            ("La mitocondria, que contiene enzimas respiratorias",
+             "La mitocondria realiza respiración celular, no fotosíntesis."),
+            ("La vacuola, que almacena el agua necesaria para el proceso",
+             "La vacuola almacena agua y sustancias, pero no realiza fotosíntesis."),
+            ("La pared celular, que capta la luz que llega a la hoja",
+             "La pared es de celulosa, incolora, y no participa en la captación de luz."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "Los antibióticos que atacan la pared celular bacteriana no dañan a las "
+        "células humanas. ¿Por qué?",
+        "Porque las células humanas no tienen pared celular",
+        "La selectividad de un fármaco depende de que su blanco exista solo en "
+        "el organismo objetivo.\n\n"
+        "1) Las bacterias tienen una pared celular de composición particular, "
+        "distinta de cualquier estructura humana.\n"
+        "2) Un antibiótico que bloquea su síntesis impide que la bacteria "
+        "mantenga su pared, y esta termina reventando por presión osmótica.\n"
+        "3) Las células humanas carecen de pared: el fármaco no encuentra en "
+        "ellas nada que atacar.\n\n"
+        "Esa es la razón de que estos antibióticos sean tan seguros. Los que "
+        "atacan blancos más parecidos entre bacteria y humano, como los "
+        "ribosomas, tienen más efectos adversos.",
+        [
+            ("Porque las células humanas tienen una pared más resistente",
+             "Las células humanas no tienen pared celular de ningún tipo."),
+            ("Porque el antibiótico no logra entrar a las células humanas",
+             "Muchos antibióticos entran a las células humanas sin problema: su selectividad viene del blanco, no del acceso."),
+            ("Porque las células humanas reparan su pared más rápido de lo que el antibiótico la daña",
+             "No hay pared que reparar: la estructura simplemente no existe en ellas."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se diseña un experimento para comprobar que la membrana plasmática es "
+        "de permeabilidad selectiva. ¿Qué observación lo demostraría?",
+        "Que unas sustancias entran y otras de tamaño similar no",
+        "La selectividad se demuestra comparando sustancias equivalentes en "
+        "otros aspectos.\n\n"
+        "1) Si la membrana fuera un simple filtro por tamaño, todas las "
+        "sustancias pequeñas pasarían por igual.\n"
+        "2) Observar que dos sustancias de tamaño parecido se comportan de "
+        "manera distinta indica que el criterio no es el tamaño sino otra "
+        "propiedad: la carga, la solubilidad en lípidos o la existencia de un "
+        "transportador específico.\n"
+        "3) Esa es exactamente la definición de permeabilidad selectiva.\n\n"
+        "Controlar el tamaño es lo que hace concluyente la comparación: si las "
+        "sustancias difirieran también en tamaño, no se sabría a qué atribuir la "
+        "diferencia.",
+        [
+            ("Que ninguna sustancia logra atravesar la membrana",
+             "Eso indicaría impermeabilidad total, no selectividad."),
+            ("Que todas las sustancias atraviesan la membrana a la misma velocidad",
+             "Eso indicaría permeabilidad indiscriminada, lo opuesto a la selectividad."),
+            ("Que las sustancias más pequeñas siempre atraviesan más rápido",
+             "Eso describiría un filtro por tamaño, que es justamente lo que la selectividad no es."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué le ocurre a una célula animal colocada en una solución con la "
+        "misma concentración de solutos que su interior?",
+        "Mantiene su volumen, porque el agua entra y sale por igual",
+        "En una solución isotónica no hay movimiento neto de agua.\n\n"
+        "1) El agua sigue atravesando la membrana en ambos sentidos: el "
+        "movimiento no se detiene.\n"
+        "2) Pero como las concentraciones son iguales, entra tanta agua como "
+        "sale: el balance neto es cero.\n"
+        "3) La célula conserva su volumen y su forma.\n\n"
+        "Por eso las soluciones que se administran por vía intravenosa son "
+        "isotónicas: inyectar agua pura haría estallar los glóbulos rojos.",
+        [
+            ("Se hincha hasta estallar por la entrada de agua",
+             "Eso ocurre en una solución con MENOS solutos que el interior de la célula."),
+            ("Se arruga por la salida de agua hacia el exterior",
+             "Eso ocurre en una solución con MÁS solutos que el interior."),
+            ("Deja de intercambiar agua con el medio por completo",
+             "El intercambio continúa en ambos sentidos: lo que se anula es el balance neto."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué función cumplen los lisosomas además de degradar material "
+        "englobado desde el exterior?",
+        "Reciclar organelos y componentes propios ya deteriorados",
+        "La degradación también se aplica hacia adentro.\n\n"
+        "1) Los organelos se deterioran con el uso y deben renovarse.\n"
+        "2) La célula los rodea con una membrana y los entrega a un lisosoma, "
+        "que los degrada.\n"
+        "3) Los componentes resultantes, como aminoácidos y azúcares, vuelven al "
+        "citoplasma y se reutilizan para construir estructuras nuevas.\n\n"
+        "Ese reciclaje interno permite a la célula mantenerse funcional durante "
+        "mucho tiempo y sobrevivir a periodos de escasez de nutrientes.",
+        [
+            ("Sintetizar las proteínas que la célula exporta",
+             "Esa función corresponde a los ribosomas del retículo rugoso."),
+            ("Almacenar el material genético de reserva de la célula",
+             "El material genético está en el núcleo y no existe una reserva en los lisosomas."),
+            ("Producir el ATP que la célula consume en sus procesos",
+             "El ATP se produce en las mitocondrias."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "¿Qué organelo se encarga de la respiración celular, el proceso que "
+        "obtiene energía a partir de la glucosa?",
+        "La mitocondria",
+        "Es el organelo donde ocurren las etapas que rinden la mayor parte del "
+        "ATP.\n\n"
+        "1) La glucosa se degrada parcialmente en el citoplasma y los productos "
+        "ingresan a la mitocondria.\n"
+        "2) Allí, en presencia de oxígeno, se completa su oxidación y se obtiene "
+        "la mayor parte del ATP.\n"
+        "3) La estructura del organelo, con su membrana interna muy plegada, "
+        "aumenta la superficie donde ocurre ese proceso.\n\n"
+        "Por eso las células de alta demanda energética tienen tantas "
+        "mitocondrias y con las crestas tan desarrolladas.",
+        [
+            ("El cloroplasto", "Realiza fotosíntesis, que produce glucosa en vez de degradarla."),
+            ("El ribosoma", "Sintetiza proteínas."),
+            ("El peroxisoma", "Degrada sustancias tóxicas como el peróxido de hidrógeno, pero no realiza respiración celular."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "¿Qué componente del citoesqueleto participa en el transporte de "
+        "vesículas dentro de la célula?",
+        "Los microtúbulos, que funcionan como vías internas",
+        "El citoesqueleto no solo sostiene: también organiza el movimiento.\n\n"
+        "1) Los microtúbulos son filamentos que atraviesan el citoplasma y "
+        "definen direcciones dentro de la célula.\n"
+        "2) Proteínas motoras se desplazan sobre ellos consumiendo ATP y "
+        "arrastran vesículas y organelos.\n"
+        "3) Ese transporte dirigido es imprescindible en células grandes: en una "
+        "neurona, el material debe recorrer un axón que puede medir "
+        "centímetros.\n\n"
+        "Los mismos microtúbulos forman el huso durante la división celular y el "
+        "eje interno de cilios y flagelos.",
+        [
+            ("La pared celular, que guía las vesículas hacia la membrana",
+             "La pared es externa y las células animales no la tienen."),
+            ("La envoltura nuclear, que dirige el tráfico desde el núcleo",
+             "Regula el paso entre núcleo y citoplasma, pero no transporta vesículas por el citoplasma."),
+            ("Los ribosomas, que se desplazan junto con las vesículas",
+             "Los ribosomas sintetizan proteínas; no transportan vesículas."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_celula", "facil",
+        "¿Qué organelo contiene enzimas digestivas capaces de degradar restos "
+        "celulares y material englobado?",
+        "El lisosoma",
+        "Es el compartimento de degradación de la célula.\n\n"
+        "1) Contiene enzimas capaces de romper proteínas, lípidos y ácidos "
+        "nucleicos.\n"
+        "2) Esas enzimas están confinadas por una membrana, porque sueltas en el "
+        "citoplasma destruirían a la propia célula.\n"
+        "3) Se fusiona con vesículas que traen material del exterior o con "
+        "organelos deteriorados, y degrada su contenido.\n\n"
+        "Los componentes resultantes vuelven al citoplasma y se reutilizan.",
+        [
+            ("El complejo de Golgi, que clasifica y despacha proteínas",
+             "El Golgi produce los lisosomas y les entrega sus enzimas, pero no realiza la degradación."),
+            ("El retículo endoplasmático rugoso, con sus ribosomas adheridos",
+             "Sintetiza las enzimas, pero la degradación ocurre después, dentro del lisosoma."),
+            ("La mitocondria, que degrada la glucosa para obtener energía",
+             "Degrada moléculas energéticas en un proceso distinto: no digiere material englobado."),
+        ],
+    ),
+    _q(
+        "cie_celula", "facil",
+        "¿Qué estructura da forma y resistencia mecánica a una célula vegetal?",
+        "La pared celular",
+        "Es una capa rígida externa a la membrana plasmática.\n\n"
+        "1) Está compuesta principalmente por celulosa, un polisacárido muy "
+        "resistente.\n"
+        "2) Define la forma de la célula e impide que estalle cuando entra agua "
+        "por ósmosis.\n"
+        "3) Es muy permeable: deja pasar agua y solutos con facilidad, así que "
+        "no cumple funciones de control.\n\n"
+        "Los hongos también tienen pared, pero de quitina, y las bacterias, de "
+        "otra composición distinta a ambas.",
+        [
+            ("La membrana plasmática, que rodea a toda la célula",
+             "La membrana es flexible y regula el paso de sustancias; no aporta rigidez."),
+            ("El citoesqueleto, formado por filamentos de proteína",
+             "Da soporte interno, pero la rigidez de la célula vegetal la aporta la pared."),
+            ("La vacuola central, que ocupa gran parte del volumen celular",
+             "Genera presión de turgencia, pero necesita la pared para que esa presión sostenga a la célula."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué proceso permite a una célula secretora liberar sus productos al "
+        "exterior?",
+        "La exocitosis",
+        "Es el mecanismo inverso a la endocitosis.\n\n"
+        "1) Las sustancias a exportar viajan empaquetadas en vesículas desde el "
+        "complejo de Golgi.\n"
+        "2) La vesícula se acerca a la membrana plasmática y se fusiona con "
+        "ella.\n"
+        "3) Al fusionarse, su contenido queda volcado hacia el exterior sin que "
+        "nada atraviese la membrana.\n\n"
+        "El proceso agrega además membrana de la vesícula a la membrana "
+        "plasmática, así que la célula debe reciclarla para no crecer "
+        "indefinidamente.",
+        [
+            ("La difusión simple a través de la doble capa de lípidos",
+             "Solo la atraviesan moléculas pequeñas y liposolubles, no proteínas empaquetadas en vesículas."),
+            ("El transporte activo mediante bombas de la membrana",
+             "Las bombas mueven iones y moléculas pequeñas, no vesículas completas."),
+            ("La ósmosis, que arrastra las sustancias junto con el agua",
+             "La ósmosis mueve agua y no arrastra proteínas hacia el exterior."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Dónde se encuentra el material genético de una célula procarionte?",
+        "En el citoplasma",
+        "La ausencia de núcleo definido es lo que caracteriza a estas "
+        "células.\n\n"
+        "1) El ADN bacteriano es una molécula circular ubicada en una región del "
+        "citoplasma, sin envoltura que la separe.\n"
+        "2) Esa región se denomina nucleoide, pero no es un organelo: no tiene "
+        "membrana propia.\n"
+        "3) Por eso la transcripción y la traducción ocurren en el mismo espacio "
+        "y prácticamente al mismo tiempo.\n\n"
+        "En la célula eucarionte, en cambio, la envoltura nuclear separa ambos "
+        "procesos y permite regularlos por etapas.",
+        [
+            ("Dentro de un núcleo rodeado por una envoltura con poros",
+             "Esa organización corresponde a las células eucariontes."),
+            ("En el interior de las mitocondrias de la célula",
+             "Las bacterias no tienen mitocondrias: realizan la respiración en su propia membrana."),
+            ("Adherido a la cara interna de la pared celular bacteriana",
+             "El ADN no se ancla a la pared: ocupa una región del citoplasma."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "En una célula muy activa en la síntesis de proteínas para exportar, "
+        "¿qué organelos se esperaría encontrar especialmente desarrollados?",
+        "Retículo rugoso y Golgi",
+        "Ambos son etapas sucesivas de la misma ruta.\n\n"
+        "1) Los ribosomas del RETÍCULO RUGOSO sintetizan las proteínas y las "
+        "introducen en el sistema de endomembranas.\n"
+        "2) El complejo de GOLGI las modifica, las clasifica y las empaqueta en "
+        "vesículas.\n"
+        "3) Las vesículas viajan a la membrana y liberan su contenido.\n\n"
+        "También se esperaría encontrar muchas mitocondrias, porque toda esa "
+        "actividad consume energía, pero los dos organelos característicos de la "
+        "ruta son esos.",
+        [
+            ("Lisosomas y peroxisomas, que degradan sustancias en el citoplasma",
+             "Ambos participan en la degradación, no en la producción de proteínas para exportar."),
+            ("Cloroplastos y vacuolas, propios de las células vegetales",
+             "Ninguno participa en la síntesis de proteínas de exportación."),
+            ("Centriolos y microtúbulos del huso mitótico",
+             "Participan en la división celular, no en la ruta de secreción."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué le ocurre a una célula bacteriana si un antibiótico impide que "
+        "construya su pared celular mientras crece?",
+        "Estalla por presión osmótica",
+        "La pared es lo que contiene la entrada de agua.\n\n"
+        "1) El interior de la bacteria tiene más solutos que el medio, así que "
+        "el agua tiende a entrar por ósmosis.\n"
+        "2) Normalmente la pared resiste esa presión y mantiene el volumen.\n"
+        "3) Sin pared, nada contiene la entrada de agua: la célula se hincha "
+        "hasta romper su membrana.\n\n"
+        "Por eso estos antibióticos actúan sobre bacterias en crecimiento, que "
+        "son las que están construyendo pared nueva, y no sobre las que están "
+        "inactivas.",
+        [
+            ("Deja de reproducirse pero sobrevive indefinidamente sin pared",
+             "Sin pared no puede sostener su volumen frente a la entrada de agua."),
+            ("Sustituye la pared por una segunda membrana plasmática",
+             "Las bacterias no pueden construir una membrana adicional que reemplace la función mecánica de la pared."),
+            ("Reduce su tamaño hasta convertirse en una forma resistente",
+             "La formación de esporas es un proceso distinto y no se desencadena por la falta de pared."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué caracteriza al transporte pasivo a través de la membrana?",
+        "No consume energía",
+        "Es el rasgo que lo distingue del transporte activo.\n\n"
+        "1) Ocurre siempre a favor del gradiente: de donde hay más hacia donde "
+        "hay menos.\n"
+        "2) Ese movimiento es espontáneo, así que la célula no necesita gastar "
+        "ATP.\n"
+        "3) Incluye la difusión simple, la difusión facilitada por proteínas y "
+        "la ósmosis del agua.\n\n"
+        "El transporte ACTIVO es el que va contra el gradiente y por eso exige "
+        "consumo de energía.",
+        [
+            ("Siempre requiere proteínas transportadoras específicas de la membrana",
+             "La difusión simple es transporte pasivo y no requiere proteínas."),
+            ("Mueve sustancias desde donde están menos concentradas hacia donde están más",
+             "Ese es el sentido del transporte activo, que sí consume energía."),
+            ("Solo ocurre en células que carecen de mitocondrias funcionales",
+             "Ocurre en todas las células, tengan o no alta producción de ATP."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se compara la superficie y el volumen de una célula al aumentar su "
+        "tamaño. ¿Por qué eso impone un límite a cuánto puede crecer?",
+        "El volumen crece más rápido que la superficie",
+        "La relación entre ambas magnitudes cambia con el tamaño.\n\n"
+        "1) La superficie crece con el cuadrado del tamaño y el volumen, con el "
+        "cubo.\n"
+        "2) Al duplicar el diámetro, la superficie se multiplica por cuatro y el "
+        "volumen por ocho.\n"
+        "3) La superficie es por donde entran nutrientes y salen desechos, y el "
+        "volumen es lo que hay que abastecer: a mayor tamaño, la membrana "
+        "resulta insuficiente.\n\n"
+        "Por eso las células son pequeñas, y las que necesitan ser grandes "
+        "recurren a estrategias como aplanarse, alargarse o multiplicar su "
+        "superficie con pliegues.",
+        [
+            ("La membrana plasmática se debilita al aumentar el tamaño celular",
+             "La membrana no pierde resistencia por el tamaño: el problema es de proporción entre superficie y volumen."),
+            ("El núcleo no alcanza a controlar una célula de gran tamaño",
+             "Existen células enormes con un solo núcleo y otras que resuelven el problema con varios: no es el límite principal."),
+            ("La cantidad de ADN disponible limita el tamaño que puede alcanzar",
+             "El contenido de ADN no determina el tamaño máximo de una célula."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Una célula tratada con una sustancia que despolimeriza los "
+        "microtúbulos pierde su capacidad de dividirse correctamente. ¿Cómo se "
+        "explica?",
+        "El huso mitótico está hecho de microtúbulos",
+        "La separación de los cromosomas depende de esa estructura.\n\n"
+        "1) Durante la división, los microtúbulos se organizan formando el huso, "
+        "que captura los cromosomas por su centro.\n"
+        "2) Al acortarse, arrastran una copia de cada cromosoma hacia cada "
+        "polo.\n"
+        "3) Sin microtúbulos no se forma el huso, los cromosomas no se reparten "
+        "y las células hijas quedan con dotaciones incorrectas.\n\n"
+        "Varios fármacos usados contra el cáncer actúan justamente sobre los "
+        "microtúbulos, porque afectan sobre todo a las células que se dividen "
+        "con más frecuencia.",
+        [
+            ("Los microtúbulos son los que duplican el material genético",
+             "La duplicación del ADN la realizan enzimas en el núcleo durante la fase S."),
+            ("Los microtúbulos forman la membrana que separa a las células hijas",
+             "La separación final ocurre por estrangulamiento de la membrana plasmática, con participación de otros filamentos."),
+            ("Los microtúbulos aportan la energía necesaria para la división celular",
+             "La energía proviene del ATP producido en las mitocondrias."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué función cumple la membrana interna plegada de la mitocondria?",
+        "Aumentar la superficie donde se produce ATP",
+        "El plegamiento responde a una necesidad concreta.\n\n"
+        "1) Las proteínas que generan ATP están insertas en la membrana "
+        "interna.\n"
+        "2) Cuanta más superficie tenga esa membrana, más de esas proteínas "
+        "caben y más ATP puede producir la mitocondria.\n"
+        "3) Los pliegues, llamados crestas, multiplican esa superficie sin "
+        "aumentar el tamaño del organelo.\n\n"
+        "Es el mismo principio de las microvellosidades del enterocito y de las "
+        "membranas apiladas del cloroplasto: plegar para ganar superficie.",
+        [
+            ("Separar el material genético mitocondrial del resto del organelo",
+             "El ADN mitocondrial está en el espacio interno, sin una envoltura propia que lo separe."),
+            ("Impedir que el oxígeno entre al interior de la mitocondria",
+             "El oxígeno debe entrar: es indispensable para la respiración celular."),
+            ("Almacenar la glucosa que la célula utilizará más adelante",
+             "La glucosa se almacena como glucógeno o almidón en el citoplasma, no en la mitocondria."),
+        ],
+    ),
+    _q(
+        "cie_celula", "medio",
+        "¿Qué tienen en común la membrana plasmática, la envoltura nuclear y la "
+        "membrana de una vesícula?",
+        "Su estructura de doble capa de lípidos",
+        "Todas pertenecen al mismo sistema de membranas de la célula.\n\n"
+        "1) Todas están formadas por una doble capa de lípidos con proteínas "
+        "asociadas.\n"
+        "2) Esa estructura común es lo que permite que se fusionen entre sí: una "
+        "vesícula puede unirse a la membrana plasmática y volcar su contenido "
+        "afuera.\n"
+        "3) La envoltura nuclear se continúa con el retículo endoplasmático, que "
+        "a su vez origina vesículas.\n\n"
+        "Lo que las diferencia no es la estructura básica sino las proteínas "
+        "específicas que cada una lleva, y esas determinan su función.",
+        [
+            ("Todas contienen material genético en su interior",
+             "Solo la envoltura nuclear rodea material genético; las otras dos no."),
+            ("Todas están reforzadas externamente por una pared de celulosa",
+             "La pared de celulosa es exclusiva de las células vegetales y solo recubre la membrana plasmática."),
+            ("Todas producen las proteínas que la célula necesita para funcionar",
+             "Las proteínas se sintetizan en los ribosomas, no en las membranas."),
+        ],
+    ),
+    _q(
+        "cie_celula", "dificil",
+        "Se afirma que una célula sin mitocondrias no puede obtener energía en "
+        "absoluto. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: existe la fermentación en el citoplasma",
+        "La mitocondria es la vía principal, pero no la única.\n\n"
+        "1) La primera etapa de la degradación de la glucosa ocurre en el "
+        "citoplasma y rinde algo de ATP sin necesidad de mitocondrias ni de "
+        "oxígeno.\n"
+        "2) Cuando no hay mitocondrias o falta oxígeno, la célula puede "
+        "continuar por la vía de la fermentación, que mantiene esa producción "
+        "reducida.\n"
+        "3) El rendimiento es mucho menor, pero no es cero.\n\n"
+        "Los glóbulos rojos maduros funcionan así toda su vida: sin "
+        "mitocondrias, obtienen su ATP exclusivamente por esta vía.",
+        [
+            ("Es correcta: sin mitocondrias no hay producción de ATP posible",
+             "La primera etapa de la degradación de la glucosa ocurre en el citoplasma y sí rinde ATP."),
+            ("Es correcta, salvo en las células vegetales que tienen cloroplastos",
+             "Los cloroplastos producen glucosa, y su degradación para obtener ATP sigue las mismas vías."),
+            ("Es incorrecta, porque las células sin mitocondrias obtienen ATP directamente del medio",
+             "Las células no captan ATP del exterior: deben producirlo."),
+        ],
+    ),
+]
