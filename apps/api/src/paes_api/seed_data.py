@@ -97432,3 +97432,1389 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Biología - "Procesos y funciones biológicas": sexualidad humana,
+# gametos y ciclos
+#
+# El temario pide la participación de los gametos y su función en la
+# fecundación, las características generales del ciclo ovárico y del uterino con
+# sus fases, y las características de la sexualidad humana: los aspectos
+# biológicos y también los sociales, afectivos y psicológicos que contribuyen al
+# bienestar integral, como el cuidado, el respeto y la responsabilidad.
+#
+# El contenido es el del currículum escolar y se trata con precisión y sin
+# rodeos, que es como corresponde en material de estudio.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Dónde ocurre normalmente la fecundación en la especie humana?",
+        "En la trompa uterina",
+        "El encuentro entre los gametos ocurre antes de llegar al útero.\n\n"
+        "1) Tras la ovulación, el ovocito es captado por la trompa uterina y "
+        "avanza por ella.\n"
+        "2) Los espermatozoides recorren el trayecto en sentido contrario y el "
+        "encuentro se produce en el tercio superior de la trompa.\n"
+        "3) El cigoto resultante sigue avanzando hacia el útero mientras "
+        "comienza a dividirse, y se implanta ahí varios días después.\n\n"
+        "Cuando la implantación ocurre fuera del útero, generalmente en la propia "
+        "trompa, se produce un embarazo ectópico, que es una urgencia médica.",
+        [
+            ("En el útero, donde después se desarrolla el embrión",
+             "El útero es donde el embrión se implanta y se desarrolla, pero la fecundación ocurre antes."),
+            ("En el ovario, apenas se libera el ovocito",
+             "El ovocito debe salir del ovario y ser captado por la trompa para que ocurra la fecundación."),
+            ("En la vagina, inmediatamente después de la relación sexual",
+             "Los espermatozoides deben recorrer el útero y llegar a la trompa: la fecundación no ocurre ahí."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué aporta cada gameto en la fecundación humana?",
+        "Cada uno aporta la mitad del material genético",
+        "La contribución genética es simétrica; el resto no.\n\n"
+        "1) Tanto el ovocito como el espermatozoide son células HAPLOIDES: "
+        "portan 23 cromosomas cada uno.\n"
+        "2) Al fusionarse, el cigoto queda con 46: la dotación completa de la "
+        "especie.\n"
+        "3) El ovocito aporta además todo el citoplasma, con sus nutrientes, sus "
+        "organelos y su ARN, que sostienen las primeras divisiones.\n\n"
+        "Por eso las mitocondrias, con su propio ADN, se heredan por vía "
+        "materna: las del espermatozoide no ingresan o se degradan.",
+        [
+            ("El espermatozoide aporta el material genético y el ovocito, los nutrientes",
+             "El ovocito aporta también la mitad del material genético: la contribución genética es equitativa."),
+            ("El ovocito aporta la mayor parte del material genético por su tamaño",
+             "El tamaño no se relaciona con la cantidad de cromosomas: ambos aportan 23."),
+            ("Ambos aportan la dotación completa de cromosomas de la especie",
+             "Si ambos aportaran 46, el cigoto quedaría con 92: cada uno aporta la mitad."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué acontecimiento marca la mitad del ciclo ovárico?",
+        "La ovulación",
+        "El ciclo ovárico se organiza en torno a ese momento.\n\n"
+        "1) Durante la FASE FOLICULAR, un folículo del ovario madura y el "
+        "ovocito se prepara.\n"
+        "2) Alrededor del día 14 de un ciclo de 28 se produce la OVULACIÓN: el "
+        "ovocito es liberado del ovario.\n"
+        "3) Comienza entonces la FASE LÚTEA, en que el folículo remanente se "
+        "transforma y produce hormonas que preparan al útero.\n\n"
+        "La duración de la fase lútea es bastante constante; la variabilidad "
+        "entre ciclos se concentra en la fase folicular, y por eso predecir la "
+        "ovulación por calendario es poco confiable.",
+        [
+            ("La menstruación",
+             "La menstruación marca el comienzo del ciclo, no su mitad."),
+            ("La implantación del embrión en el útero",
+             "La implantación ocurre solo si hubo fecundación, varios días después de la ovulación."),
+            ("El engrosamiento máximo del endometrio uterino",
+             "Ese engrosamiento alcanza su máximo después de la ovulación, durante la fase secretora."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "El ciclo uterino comienza con la menstruación. ¿Qué ocurre en ese "
+        "momento?",
+        "Se desprende la capa interna del útero",
+        "La menstruación es la consecuencia de que no hubo implantación.\n\n"
+        "1) Durante el ciclo, el endometrio se engrosa preparándose para recibir "
+        "un embrión.\n"
+        "2) Si no hay implantación, los niveles hormonales que lo sostenían "
+        "caen.\n"
+        "3) Sin ese sostén, la capa funcional del endometrio se desprende y se "
+        "elimina junto con algo de sangre: eso es la menstruación.\n\n"
+        "El ciclo entonces recomienza, con el endometrio reconstruyéndose "
+        "durante la fase siguiente.",
+        [
+            ("Se libera el ovocito desde el ovario",
+             "Esa es la ovulación, que ocurre alrededor de la mitad del ciclo."),
+            ("El endometrio alcanza su máximo espesor",
+             "El máximo espesor se alcanza después de la ovulación, no durante la menstruación."),
+            ("El embrión se implanta en la pared del útero",
+             "La implantación ocurre cuando hubo fecundación, y entonces no hay menstruación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "La sexualidad humana se describe como una dimensión que integra varios "
+        "aspectos. ¿Cuáles son?",
+        "Biológicos, afectivos, psicológicos y sociales",
+        "Reducirla a lo biológico deja fuera buena parte de lo que la "
+        "constituye.\n\n"
+        "1) Lo BIOLÓGICO abarca la estructura y el funcionamiento de los "
+        "sistemas reproductores.\n"
+        "2) Lo AFECTIVO y lo PSICOLÓGICO incluyen los vínculos, las emociones, "
+        "la identidad y el modo en que cada persona se relaciona consigo "
+        "misma.\n"
+        "3) Lo SOCIAL comprende las normas, los valores y las relaciones con "
+        "otras personas.\n\n"
+        "El temario vincula esa integración con el bienestar: el cuidado, el "
+        "respeto y la responsabilidad frente a sí mismo y frente a los demás son "
+        "parte del contenido, no un agregado.",
+        [
+            ("Únicamente los biológicos y reproductivos",
+             "Esa reducción deja fuera las dimensiones afectiva, psicológica y social que el currículum incluye."),
+            ("Solo los aspectos sociales y culturales de cada comunidad",
+             "Los aspectos biológicos también forman parte y son objeto de estudio."),
+            ("Los aspectos genéticos y hereditarios exclusivamente",
+             "La herencia es un tema distinto y no agota lo que la sexualidad humana comprende."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué función cumple el endometrio durante el ciclo uterino?",
+        "Prepararse para recibir e implantar un embrión",
+        "Su transformación cíclica responde a esa función.\n\n"
+        "1) Tras la menstruación, el endometrio se regenera y engrosa durante la "
+        "fase proliferativa.\n"
+        "2) Después de la ovulación entra en la fase secretora: se enriquece en "
+        "vasos y glándulas que podrían nutrir a un embrión.\n"
+        "3) Si hay implantación, ese tejido sostiene el desarrollo inicial; si "
+        "no, se desprende y el ciclo recomienza.\n\n"
+        "Toda esa preparación ocurre en cada ciclo, con independencia de que "
+        "llegue o no a haber fecundación.",
+        [
+            ("Producir los ovocitos que se liberarán en cada ciclo",
+             "Los ovocitos maduran en el ovario, no en el endometrio."),
+            ("Transportar los espermatozoides hasta la trompa uterina",
+             "El transporte se produce por el movimiento del tracto y de los propios espermatozoides."),
+            ("Impedir el paso de microorganismos hacia el interior del útero",
+             "Existen barreras defensivas, pero esa no es la función del ciclo endometrial."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Por qué el ciclo ovárico y el ciclo uterino ocurren de manera "
+        "coordinada?",
+        "Las hormonas del ovario regulan los cambios del útero",
+        "Son dos procesos distintos gobernados por las mismas señales.\n\n"
+        "1) El folículo en desarrollo produce hormonas que estimulan la "
+        "regeneración del endometrio.\n"
+        "2) Tras la ovulación, el cuerpo lúteo produce otras hormonas que lo "
+        "transforman en un tejido apto para la implantación.\n"
+        "3) Cuando esa producción hormonal cae, el endometrio se desprende.\n\n"
+        "La coordinación tiene un sentido funcional evidente: el útero debe "
+        "estar preparado justo cuando podría llegar un embrión, y no antes ni "
+        "después.",
+        [
+            ("El útero envía señales nerviosas al ovario para sincronizarse",
+             "La coordinación es hormonal, no nerviosa."),
+            ("Ambos ciclos duran lo mismo por casualidad y no están relacionados",
+             "Están estrechamente relacionados: las hormonas ováricas gobiernan los cambios uterinos."),
+            ("El endometrio produce las hormonas que desencadenan la ovulación",
+             "Las hormonas que desencadenan la ovulación provienen de la hipófisis y del propio ovario."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué característica del espermatozoide se relaciona directamente con su "
+        "función?",
+        "Su flagelo, que le permite desplazarse",
+        "Su estructura está reducida a lo indispensable para su tarea.\n\n"
+        "1) Debe recorrer una distancia considerable dentro del tracto "
+        "reproductor femenino.\n"
+        "2) El FLAGELO le da movilidad, y las mitocondrias concentradas en su "
+        "base aportan el ATP que ese movimiento consume.\n"
+        "3) Su citoplasma está reducido al mínimo para disminuir el peso a "
+        "desplazar.\n\n"
+        "Lleva además una estructura en su extremo anterior con enzimas que le "
+        "permiten atravesar las cubiertas del ovocito al llegar.",
+        [
+            ("Su gran cantidad de citoplasma con nutrientes de reserva",
+             "El espermatozoide tiene citoplasma reducido al mínimo: las reservas las aporta el ovocito."),
+            ("Su tamaño, que es el mayor entre las células humanas",
+             "Es una de las células más pequeñas del cuerpo; la más grande es el ovocito."),
+            ("Su dotación completa de 46 cromosomas",
+             "Es haploide: aporta 23 cromosomas, la mitad de la dotación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "Se afirma que el bienestar en las relaciones humanas depende también de "
+        "actitudes concretas. ¿Cuáles menciona el currículum en relación con la "
+        "sexualidad?",
+        "El cuidado, el respeto y la responsabilidad",
+        "El contenido no se agota en lo biológico.\n\n"
+        "1) El CUIDADO comprende tanto el propio como el de la otra persona: "
+        "salud, prevención, atención al bienestar.\n"
+        "2) El RESPETO implica reconocer la voluntad y los límites del otro, y "
+        "que toda relación se base en el acuerdo de ambas partes.\n"
+        "3) La RESPONSABILIDAD abarca las consecuencias de las decisiones, "
+        "incluidas las relativas a la salud y a la reproducción.\n\n"
+        "El currículum las plantea como parte del bienestar integral, junto a "
+        "los aspectos biológicos, afectivos y sociales.",
+        [
+            ("La abstinencia como única conducta responsable posible",
+             "El currículum plantea el cuidado, el respeto y la responsabilidad, no una conducta única."),
+            ("El conocimiento técnico de los métodos anticonceptivos únicamente",
+             "Ese conocimiento es parte del contenido, pero las actitudes mencionadas van más allá de lo técnico."),
+            ("La postergación de toda decisión hasta la edad adulta",
+             "El enfoque es de cuidado y responsabilidad informada, no de postergación como norma."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "Tras la fecundación, ¿qué se forma inmediatamente y qué ocurre "
+        "después?",
+        "Un cigoto, que comienza a dividirse mientras avanza al útero",
+        "El desarrollo comienza antes de la implantación.\n\n"
+        "1) La fusión de los dos gametos produce el CIGOTO, una única célula "
+        "diploide.\n"
+        "2) El cigoto empieza a dividirse por mitosis mientras recorre la trompa "
+        "uterina hacia el útero.\n"
+        "3) Al cabo de varios días llega al útero convertido en un conjunto de "
+        "células y se implanta en el endometrio.\n\n"
+        "Durante ese trayecto no recibe nutrientes externos: depende por "
+        "completo de las reservas que aportó el ovocito.",
+        [
+            ("Un embrión completamente formado que se implanta de inmediato",
+             "La implantación ocurre varios días después, y el embrión está lejos de estar formado."),
+            ("Un ovocito de mayor tamaño que permanece en la trompa uterina",
+             "El ovocito deja de existir como tal: la fusión da origen a un cigoto."),
+            ("Dos células hijas independientes que se implantan por separado",
+             "Las divisiones mantienen unidas a las células en un solo conjunto."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué determina que el ciclo continúe con una nueva menstruación en "
+        "lugar de sostener un embarazo?",
+        "La caída de las hormonas al no haber implantación",
+        "El mantenimiento del endometrio depende de una señal hormonal "
+        "continua.\n\n"
+        "1) Tras la ovulación, el cuerpo lúteo produce hormonas que mantienen el "
+        "endometrio preparado.\n"
+        "2) Si hubo implantación, el embrión produce una señal que mantiene "
+        "activo al cuerpo lúteo y con él la producción hormonal.\n"
+        "3) Si no la hubo, el cuerpo lúteo degenera, las hormonas caen y el "
+        "endometrio se desprende.\n\n"
+        "Los tests de embarazo detectan justamente esa señal producida por el "
+        "embrión, y por eso pueden dar resultado antes de la falta de la "
+        "menstruación.",
+        [
+            ("La liberación de un segundo ovocito por el otro ovario",
+             "Normalmente se libera un solo ovocito por ciclo, y eso no determina la menstruación."),
+            ("El engrosamiento excesivo del endometrio durante el ciclo",
+             "El engrosamiento es parte normal del ciclo y no es lo que desencadena su desprendimiento."),
+            ("El aumento sostenido de las hormonas producidas por el ovario",
+             "Es la CAÍDA de esas hormonas, no su aumento, lo que produce la menstruación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Por qué se dice que los gametos se producen por meiosis y no por "
+        "mitosis?",
+        "Porque deben tener la mitad de los cromosomas de la especie",
+        "El tipo de división responde a lo que la fecundación exige.\n\n"
+        "1) Si los gametos se produjeran por mitosis, tendrían 46 cromosomas "
+        "cada uno y el cigoto quedaría con 92.\n"
+        "2) La cantidad se duplicaría en cada generación, lo que es "
+        "insostenible.\n"
+        "3) La MEIOSIS reduce la dotación a la mitad, así que la fusión de dos "
+        "gametos restituye exactamente los 46.\n\n"
+        "La meiosis aporta además variabilidad, porque reparte los cromosomas al "
+        "azar e intercambia fragmentos entre ellos.",
+        [
+            ("Porque la mitosis solo ocurre en las células de la piel",
+             "La mitosis ocurre en la inmensa mayoría de los tejidos del organismo."),
+            ("Porque los gametos necesitan dividirse más rápido que otras células",
+             "La velocidad no es el criterio: lo determinante es la reducción del número de cromosomas."),
+            ("Porque la meiosis produce células idénticas entre sí y eso conviene a los gametos",
+             "La meiosis produce células genéticamente DISTINTAS: esa variabilidad es una de sus ventajas."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se compara la cantidad de gametos producidos a lo largo de la vida en "
+        "ambos sexos y se encuentra una diferencia enorme. ¿Cómo se relaciona "
+        "con la inversión que cada gameto representa?",
+        "El ovocito es costoso de producir y se producen pocos",
+        "La cantidad y el costo por unidad se relacionan de manera inversa.\n\n"
+        "1) El OVOCITO es una célula enorme, cargada de reservas: producirlo "
+        "cuesta mucho, y se libera aproximadamente uno por ciclo.\n"
+        "2) El ESPERMATOZOIDE es diminuto y de estructura mínima: producirlo "
+        "cuesta poco, y se generan en cantidades enormes de manera continua.\n"
+        "3) Ambos aportan lo mismo genéticamente; la asimetría está en todo lo "
+        "demás.\n\n"
+        "Esa asimetría en la inversión reproductiva aparece en muchas especies y "
+        "es un tema clásico de la biología evolutiva.",
+        [
+            ("El espermatozoide es costoso y por eso se producen pocos",
+             "Invierte la relación: el espermatozoide es de bajo costo y se produce en enormes cantidades."),
+            ("Ambos gametos tienen el mismo costo de producción y la diferencia es casual",
+             "La diferencia de tamaño y contenido implica costos muy distintos."),
+            ("La diferencia se debe a que los ovocitos son genéticamente más complejos",
+             "Ambos aportan 23 cromosomas: la diferencia no es genética sino de tamaño y reservas."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Un estudiante afirma que el ciclo menstrual dura exactamente 28 días en "
+        "todas las personas. ¿Cómo se evalúa?",
+        "Es incorrecta: la duración varía entre personas y entre ciclos",
+        "El valor de 28 días es un promedio de referencia, no una regla.\n\n"
+        "1) La duración habitual se sitúa aproximadamente entre 21 y 35 días, y "
+        "puede variar en una misma persona de un ciclo a otro.\n"
+        "2) La fase lútea, posterior a la ovulación, es bastante constante; la "
+        "variabilidad se concentra en la fase folicular.\n"
+        "3) Factores como el estrés, los cambios de peso o la actividad física "
+        "intensa pueden modificarla.\n\n"
+        "Esa variabilidad es justamente lo que hace poco confiables los métodos "
+        "que estiman la ovulación contando días de calendario.",
+        [
+            ("Es correcta: 28 días es la duración fisiológica normal",
+             "Es un promedio: duraciones distintas dentro de un rango amplio son igualmente normales."),
+            ("Es incorrecta, porque el ciclo dura siempre exactamente 30 días",
+             "Ningún valor fijo describe correctamente la variabilidad real."),
+            ("Es correcta, salvo en los primeros ciclos de la adolescencia",
+             "La variabilidad persiste durante toda la vida reproductiva, no solo al comienzo."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "¿Por qué la fecundación produce un individuo genéticamente distinto de "
+        "ambos progenitores?",
+        "Combina dos dotaciones distintas y ya recombinadas",
+        "Hay dos fuentes de variabilidad actuando en cadena.\n\n"
+        "1) Durante la MEIOSIS, los cromosomas de cada progenitor se reparten al "
+        "azar entre los gametos y además intercambian fragmentos entre sí.\n"
+        "2) Cada gameto lleva entonces una combinación única, distinta de la de "
+        "su progenitor.\n"
+        "3) La FECUNDACIÓN reúne dos de esas combinaciones únicas, una de cada "
+        "progenitor.\n\n"
+        "Por eso dos hermanos, con los mismos padres, son genéticamente "
+        "distintos entre sí: cada uno proviene de una combinación diferente.",
+        [
+            ("Porque durante la fecundación aparecen mutaciones nuevas en el cigoto",
+             "Pueden ocurrir mutaciones, pero la fuente principal de diferencia es la recombinación y la combinación de gametos."),
+            ("Porque el cigoto recibe más cromosomas de un progenitor que del otro",
+             "Recibe exactamente 23 de cada uno: el aporte es equitativo."),
+            ("Porque el ambiente modifica el material genético del embrión desde el inicio",
+             "El ambiente influye en la expresión de los genes, pero la diferencia genética viene de la combinación de gametos."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué ocurre con el folículo del ovario después de la ovulación?",
+        "Se transforma en una estructura que produce hormonas",
+        "El folículo no desaparece tras liberar el ovocito.\n\n"
+        "1) Las células que quedaron en el ovario se reorganizan y forman el "
+        "cuerpo lúteo.\n"
+        "2) Esa estructura produce hormonas que mantienen preparado al "
+        "endometrio durante la segunda mitad del ciclo.\n"
+        "3) Si no hay implantación, degenera al cabo de unos días y su "
+        "producción hormonal cae, lo que desencadena la menstruación.\n\n"
+        "Si hubo implantación, una señal del embrión lo mantiene activo hasta "
+        "que la placenta asume esa función.",
+        [
+            ("Desaparece por completo apenas se libera el ovocito",
+             "Persiste como cuerpo lúteo y cumple una función hormonal esencial durante la segunda mitad del ciclo."),
+            ("Se desprende junto con el endometrio durante la menstruación",
+             "El cuerpo lúteo permanece en el ovario: no se elimina con la menstruación."),
+            ("Madura un segundo ovocito para liberarlo en el mismo ciclo",
+             "Normalmente se libera un solo ovocito por ciclo."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "En el sistema reproductor masculino, ¿dónde se producen los "
+        "espermatozoides?",
+        "En los testículos",
+        "Cada estructura del sistema cumple una función definida.\n\n"
+        "1) Los TESTÍCULOS producen los espermatozoides y también hormonas "
+        "sexuales.\n"
+        "2) Su ubicación fuera de la cavidad abdominal mantiene una temperatura "
+        "algo menor que la corporal, necesaria para esa producción.\n"
+        "3) Los espermatozoides maduran y se almacenan en estructuras anexas "
+        "antes de ser expulsados.\n\n"
+        "Las glándulas asociadas aportan el líquido que los transporta y los "
+        "nutre, y que constituye la mayor parte del volumen del semen.",
+        [
+            ("En la próstata, que produce parte del líquido seminal",
+             "La próstata aporta líquido, pero no produce espermatozoides."),
+            ("En las vesículas seminales, donde se almacenan hasta su expulsión",
+             "Las vesículas seminales aportan líquido; el almacenamiento ocurre en el epidídimo."),
+            ("En el conducto deferente, mientras son transportados",
+             "El conducto deferente los transporta, pero no los produce."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué relación hay entre la temperatura y la producción de "
+        "espermatozoides?",
+        "Requiere una temperatura algo menor que la corporal",
+        "La ubicación anatómica de los testículos responde a esa exigencia.\n\n"
+        "1) La producción de espermatozoides es óptima algunos grados por debajo "
+        "de la temperatura corporal interna.\n"
+        "2) Por eso los testículos se ubican fuera de la cavidad abdominal, "
+        "donde la temperatura es menor.\n"
+        "3) Existen además mecanismos que acercan o alejan los testículos del "
+        "cuerpo según la temperatura ambiente.\n\n"
+        "Una exposición sostenida a calor excesivo puede afectar la producción, "
+        "y es un factor que se considera al estudiar la fertilidad.",
+        [
+            ("Requiere una temperatura mayor que la del resto del cuerpo",
+             "Si así fuera, no habría ninguna ventaja en que los testículos estén fuera de la cavidad abdominal."),
+            ("Es independiente de la temperatura del organismo",
+             "La producción es claramente sensible a la temperatura, y por eso existe esa disposición anatómica."),
+            ("Solo ocurre cuando la temperatura corporal supera los 38 grados",
+             "Una temperatura elevada perjudica la producción en lugar de favorecerla."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se afirma que conocer el propio ciclo permite predecir con exactitud el "
+        "día de la ovulación. ¿Qué precisión corresponde?",
+        "Permite estimarla, pero con un margen de error considerable",
+        "La predicción se basa en regularidades que no siempre se cumplen.\n\n"
+        "1) Registrar varios ciclos permite estimar un rango probable para la "
+        "ovulación.\n"
+        "2) Pero la duración de la fase folicular varía entre ciclos, incluso en "
+        "personas con ciclos habitualmente regulares.\n"
+        "3) Factores como el estrés o una enfermedad pueden adelantarla o "
+        "retrasarla sin aviso.\n\n"
+        "Por eso los métodos basados solo en el calendario tienen una eficacia "
+        "considerablemente menor que otros: la estimación es útil, pero no "
+        "equivale a una predicción exacta.",
+        [
+            ("Permite predecirla con exactitud si el ciclo es regular",
+             "Ni siquiera en ciclos regulares la ovulación ocurre en un día fijo garantizado."),
+            ("No aporta ninguna información sobre el momento de la ovulación",
+             "Sí aporta una estimación útil: el punto es que tiene un margen de error."),
+            ("Permite predecirla con exactitud si además se mide la temperatura corporal",
+             "La temperatura basal indica que la ovulación YA ocurrió: no permite anticiparla."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se comparan dos afirmaciones: (I) la sexualidad humana se reduce a la "
+        "función reproductiva, y (II) la sexualidad integra dimensiones "
+        "biológicas, afectivas, psicológicas y sociales. ¿Cómo se evalúan?",
+        "La segunda corresponde al enfoque del currículum",
+        "El contenido oficial es explícito al respecto.\n\n"
+        "1) La reproducción es una de las funciones asociadas, pero no agota lo "
+        "que la sexualidad comprende.\n"
+        "2) El currículum incorpora expresamente los aspectos afectivos, "
+        "psicológicos y sociales, y los vincula con el bienestar integral de las "
+        "relaciones humanas.\n"
+        "3) Menciona en particular el cuidado, el respeto y la responsabilidad "
+        "frente a sí mismo y frente a los demás.\n\n"
+        "Reducirla a lo reproductivo dejaría fuera buena parte del contenido "
+        "evaluable y, sobre todo, lo que le da sentido en la vida de las "
+        "personas.",
+        [
+            ("La primera, porque la biología solo estudia procesos reproductivos",
+             "La biología estudia también el comportamiento y los vínculos, y el currículum los incluye explícitamente."),
+            ("Ambas son equivalentes y describen lo mismo con distintas palabras",
+             "No son equivalentes: la primera excluye dimensiones que la segunda incorpora."),
+            ("La segunda, pero solo en el ámbito de las ciencias sociales y no en biología",
+             "El currículum de ciencias naturales incorpora esas dimensiones dentro de esta área temática."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué ocurre con el ovocito si no es fecundado tras la ovulación?",
+        "Degenera al cabo de aproximadamente un día",
+        "La ventana de tiempo para la fecundación es breve.\n\n"
+        "1) Una vez liberado, el ovocito conserva su capacidad de ser fecundado "
+        "durante alrededor de 24 horas.\n"
+        "2) Pasado ese plazo degenera y es reabsorbido.\n"
+        "3) Los espermatozoides, en cambio, pueden sobrevivir varios días dentro "
+        "del tracto reproductor femenino.\n\n"
+        "La combinación de ambas duraciones define el periodo en que una "
+        "relación puede resultar en fecundación, y explica por qué ese periodo "
+        "es más amplio que la vida del propio ovocito.",
+        [
+            ("Permanece viable durante todo el resto del ciclo",
+             "Su viabilidad es de aproximadamente un día tras la ovulación."),
+            ("Regresa al ovario y espera al ciclo siguiente",
+             "El ovocito no regresa al ovario: degenera y es reabsorbido."),
+            ("Se implanta igualmente en el endometrio sin haber sido fecundado",
+             "Sin fecundación no hay implantación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Por qué se dice que un solo espermatozoide fecunda al ovocito, si "
+        "llegan muchos hasta él?",
+        "Tras la entrada del primero, la cubierta se vuelve impenetrable",
+        "Existe un mecanismo de bloqueo que impide la entrada de más de uno.\n\n"
+        "1) Muchos espermatozoides alcanzan al ovocito y contribuyen a "
+        "atravesar sus cubiertas con sus enzimas.\n"
+        "2) Apenas uno logra fusionarse con la membrana, se desencadenan cambios "
+        "que modifican las cubiertas del ovocito.\n"
+        "3) Esas modificaciones impiden la entrada de cualquier otro.\n\n"
+        "El bloqueo es esencial: si entraran dos, el cigoto quedaría con 69 "
+        "cromosomas y no sería viable.",
+        [
+            ("Solo un espermatozoide logra llegar hasta el ovocito",
+             "Llegan muchos: lo que ocurre es que solo uno consigue fusionarse antes del bloqueo."),
+            ("Los demás espermatozoides son destruidos antes de acercarse",
+             "Muchos alcanzan efectivamente al ovocito y participan atravesando sus cubiertas."),
+            ("El ovocito selecciona activamente al espermatozoide con mejor material genético",
+             "No hay una selección basada en la calidad del material genético del espermatozoide."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "En términos de bienestar, ¿por qué el respeto mutuo se considera parte "
+        "del contenido sobre sexualidad humana?",
+        "Porque toda relación debe basarse en el acuerdo de ambas partes",
+        "El currículum vincula explícitamente la sexualidad con el bienestar de "
+        "las relaciones humanas.\n\n"
+        "1) El respeto implica reconocer la voluntad, los límites y las "
+        "decisiones de la otra persona.\n"
+        "2) Una relación basada en el acuerdo de ambas partes es la condición de "
+        "cualquier vínculo sano; su ausencia constituye una vulneración.\n"
+        "3) A eso se suman el cuidado, que abarca la salud propia y la del otro, "
+        "y la responsabilidad frente a las consecuencias de las decisiones.\n\n"
+        "Son contenidos del currículum, no recomendaciones añadidas: forman "
+        "parte de lo que se espera que un estudiante comprenda.",
+        [
+            ("Porque así se evitan las infecciones de transmisión sexual",
+             "La prevención de infecciones es un contenido distinto y complementario."),
+            ("Porque las relaciones sin acuerdo tienen menor probabilidad de fecundación",
+             "El fundamento no es reproductivo: se refiere al bienestar y a los derechos de las personas."),
+            ("Porque el respeto es una norma social sin relación con la biología",
+             "El currículum lo integra dentro del contenido sobre sexualidad humana, junto a lo biológico."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se investiga si la actividad física intensa afecta la regularidad del "
+        "ciclo. Se compara un grupo de deportistas de alto rendimiento con un "
+        "grupo control. ¿Qué variables conviene controlar?",
+        "La edad, el peso corporal y la alimentación",
+        "Varios factores influyen sobre la regularidad del ciclo y podrían "
+        "confundir el resultado.\n\n"
+        "1) La EDAD influye: los ciclos tienden a ser más variables en los "
+        "extremos de la vida reproductiva.\n"
+        "2) El PESO y la composición corporal se relacionan con la regularidad, "
+        "y las deportistas suelen diferir en ese aspecto.\n"
+        "3) La ALIMENTACIÓN y el balance energético también influyen, y varían "
+        "sistemáticamente entre ambos grupos.\n\n"
+        "Sin controlar esas variables, una diferencia observada podría "
+        "atribuirse al ejercicio cuando en realidad depende del balance "
+        "energético.",
+        [
+            ("La intensidad del entrenamiento de cada participante",
+             "Esa es la variable independiente: justamente lo que distingue a los grupos."),
+            ("La regularidad del ciclo de cada participante",
+             "Esa es la variable dependiente: el resultado que se mide."),
+            ("El deporte específico que practica cada participante, que debe ser distinto en cada caso",
+             "Conviene homogeneizarlo o registrarlo, no diversificarlo deliberadamente."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué función cumplen las trompas uterinas?",
+        "Captar el ovocito y transportarlo hacia el útero",
+        "Son la conexión entre el ovario y el útero, y el lugar de la "
+        "fecundación.\n\n"
+        "1) Su extremo abierto capta el ovocito liberado por el ovario.\n"
+        "2) Cilios y contracciones de su pared lo desplazan hacia el útero.\n"
+        "3) Es en su interior donde ocurre la fecundación si hay "
+        "espermatozoides presentes.\n\n"
+        "Su obstrucción impide el encuentro de los gametos, y es una de las "
+        "causas de infertilidad; algunas infecciones de transmisión sexual "
+        "pueden producirla.",
+        [
+            ("Producir los ovocitos que se liberan en cada ciclo",
+             "Los ovocitos maduran en el ovario, no en las trompas."),
+            ("Alojar al embrión durante todo su desarrollo",
+             "El desarrollo ocurre en el útero; una implantación en la trompa es un embarazo ectópico."),
+            ("Producir las hormonas que regulan el ciclo uterino",
+             "Esas hormonas provienen del ovario y de la hipófisis."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "Un ovocito y un espermatozoide tienen 23 cromosomas cada uno. ¿Cuántos "
+        "tendrá el cigoto y por qué?",
+        "46, porque se suman las dotaciones de ambos gametos",
+        "La fecundación restituye la dotación completa de la especie.\n\n"
+        "1) Cada gameto es haploide: aporta un juego de 23 cromosomas.\n"
+        "2) Al fusionarse los núcleos, el cigoto queda con 23 pares, es decir, "
+        "46 cromosomas.\n"
+        "3) Esa dotación diploide se mantiene en todas las células somáticas del "
+        "individuo, porque se copia de manera idéntica en cada mitosis.\n\n"
+        "La meiosis vuelve a reducirla a la mitad al producir los gametos de la "
+        "generación siguiente, y así el número se mantiene constante a lo largo "
+        "de las generaciones.",
+        [
+            ("23, porque los cromosomas de ambos gametos se combinan en pares únicos",
+             "Los cromosomas se emparejan pero no se fusionan: el total es 46."),
+            ("92, porque cada gameto duplica su material antes de la fusión",
+             "Los gametos no duplican su material antes de fusionarse."),
+            ("46, porque cada gameto aporta 46 y luego se descarta la mitad",
+             "Cada gameto aporta 23; no hay descarte posterior."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué nombre recibe la célula que resulta de la unión del ovocito con el "
+        "espermatozoide?",
+        "Cigoto",
+        "Es la primera célula del nuevo individuo.\n\n"
+        "1) Se forma por la fusión de los dos gametos y de sus núcleos.\n"
+        "2) Es diploide: tiene la dotación completa de 46 cromosomas.\n"
+        "3) A partir de ella, por divisiones sucesivas, se origina todo el "
+        "organismo.\n\n"
+        "El cigoto es totipotente: sus primeras divisiones producen células "
+        "capaces de originar cualquier tipo celular, incluidas las que forman los "
+        "anexos del embrión.",
+        [
+            ("Gameto", "Los gametos son las células que se fusionan: el ovocito y el espermatozoide."),
+            ("Folículo", "El folículo es la estructura del ovario donde madura el ovocito."),
+            ("Endometrio", "El endometrio es la capa interna del útero donde el embrión se implanta."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué son los gametos?",
+        "Las células sexuales que participan en la fecundación",
+        "Son células especializadas con una característica distintiva.\n\n"
+        "1) Son HAPLOIDES: portan la mitad de los cromosomas de la especie.\n"
+        "2) Se producen por meiosis, que es lo que permite esa reducción.\n"
+        "3) Al fusionarse dos de ellos, restituyen la dotación completa en el "
+        "cigoto.\n\n"
+        "En la especie humana son el ovocito y el espermatozoide, con estructuras "
+        "muy distintas pero con el mismo aporte cromosómico.",
+        [
+            ("Las células que forman los tejidos del cuerpo",
+             "Esas son las células somáticas, que son diploides y se dividen por mitosis."),
+            ("Las hormonas que regulan el ciclo reproductivo",
+             "Los gametos son células, no hormonas."),
+            ("Las células madre a partir de las cuales se forma el embrión",
+             "El embrión se origina del cigoto; los gametos son los que se fusionan para formarlo."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Cuál es la diferencia entre la fase proliferativa y la fase secretora "
+        "del ciclo uterino?",
+        "En la primera el endometrio crece y en la segunda se enriquece",
+        "Ambas preparan al útero, pero en momentos y de maneras distintas.\n\n"
+        "1) La fase PROLIFERATIVA ocurre antes de la ovulación: el endometrio se "
+        "regenera tras la menstruación y aumenta su espesor.\n"
+        "2) La fase SECRETORA ocurre después de la ovulación: ese tejido "
+        "desarrolla glándulas y vasos, y acumula sustancias que podrían nutrir a "
+        "un embrión.\n"
+        "3) Si no hay implantación, sigue la menstruación y el ciclo "
+        "recomienza.\n\n"
+        "La transición entre ambas coincide con la ovulación, porque las "
+        "hormonas del cuerpo lúteo son las que desencadenan la fase secretora.",
+        [
+            ("En la primera se produce la menstruación y en la segunda, la ovulación",
+             "La menstruación precede a la fase proliferativa y la ovulación separa ambas fases."),
+            ("En la primera se libera el ovocito y en la segunda se implanta el embrión",
+             "La liberación del ovocito ocurre en el ovario y marca el límite entre ambas fases uterinas."),
+            ("En la primera el endometrio se desprende y en la segunda se regenera",
+             "El desprendimiento es la menstruación, previa a la fase proliferativa."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué órgano del sistema reproductor femenino produce los ovocitos y "
+        "hormonas sexuales?",
+        "El ovario",
+        "Cumple una doble función, reproductiva y endocrina.\n\n"
+        "1) En su interior maduran los folículos, cada uno con un ovocito.\n"
+        "2) Libera aproximadamente un ovocito por ciclo, en la ovulación.\n"
+        "3) Produce además las hormonas que regulan el ciclo uterino y sostienen "
+        "los caracteres sexuales.\n\n"
+        "Esa doble función es la razón de que los ciclos ovárico y uterino estén "
+        "coordinados: el mismo órgano que libera el gameto emite las señales que "
+        "preparan al útero.",
+        [
+            ("El útero, donde se desarrolla el embrión durante el embarazo",
+             "El útero aloja el desarrollo del embrión, pero no produce ovocitos."),
+            ("La trompa uterina, que conecta el ovario con el útero",
+             "La trompa transporta el ovocito y es donde ocurre la fecundación, pero no lo produce."),
+            ("El endometrio, que se renueva en cada ciclo menstrual",
+             "El endometrio es la capa interna del útero: se prepara para la implantación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué ocurre durante la pubertad en relación con el sistema "
+        "reproductor?",
+        "Comienza a producir gametos y se desarrollan los caracteres sexuales",
+        "Es la etapa en que el sistema reproductor se vuelve funcional.\n\n"
+        "1) Aumenta la producción de hormonas sexuales, que desencadenan los "
+        "cambios.\n"
+        "2) Los órganos reproductores maduran y comienzan a producir gametos.\n"
+        "3) Se desarrollan los caracteres sexuales secundarios, y ocurren "
+        "cambios corporales, emocionales y en las relaciones sociales.\n\n"
+        "El momento de inicio y el ritmo varían mucho entre personas, y esa "
+        "variabilidad es normal.",
+        [
+            ("Los órganos reproductores terminan de formarse por primera vez",
+             "Los órganos se forman durante el desarrollo embrionario; en la pubertad maduran y se vuelven funcionales."),
+            ("Se detiene el crecimiento corporal y comienza la producción de gametos",
+             "Durante la pubertad ocurre justamente una aceleración del crecimiento."),
+            ("Se produce el primer ciclo ovárico y con él termina el desarrollo",
+             "La menarquia es un hito dentro de un proceso que continúa durante años."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué papel cumplen las hormonas de la hipófisis en el ciclo ovárico?",
+        "Estimulan la maduración del folículo y la ovulación",
+        "El ciclo se regula por una cadena de señales entre órganos.\n\n"
+        "1) La hipófisis, en la base del encéfalo, libera hormonas que actúan "
+        "sobre el ovario.\n"
+        "2) Una de ellas estimula la maduración del folículo durante la primera "
+        "mitad del ciclo.\n"
+        "3) Un aumento brusco de otra desencadena la ovulación hacia la mitad "
+        "del ciclo.\n\n"
+        "El ovario, a su vez, produce hormonas que informan a la hipófisis de su "
+        "estado: es un sistema de retroalimentación que se ajusta solo.",
+        [
+            ("Producen directamente los ovocitos que se liberan en cada ciclo",
+             "Los ovocitos maduran en el ovario; la hipófisis solo envía las señales que lo estimulan."),
+            ("Se producen en el útero y actúan sobre el ovario",
+             "La hipófisis está en la base del encéfalo, no en el útero."),
+            ("Desencadenan la menstruación al final de cada ciclo",
+             "La menstruación resulta de la caída de las hormonas ováricas, no de una señal hipofisaria."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Por qué el sistema reproductor se considera el único sistema del "
+        "cuerpo que no es indispensable para la supervivencia del individuo?",
+        "Su función es la continuidad de la especie, no la del individuo",
+        "La distinción es entre la vida del organismo y la de la población.\n\n"
+        "1) Sistemas como el circulatorio, el respiratorio o el nervioso son "
+        "imprescindibles: sin ellos el individuo muere.\n"
+        "2) El sistema reproductor no cumple funciones vitales para el propio "
+        "organismo: una persona puede vivir sin reproducirse.\n"
+        "3) Su función es la producción de gametos y la generación de "
+        "descendencia, es decir, la continuidad de la especie.\n\n"
+        "Eso no significa que sea prescindible en términos de salud: las "
+        "hormonas que produce influyen en el metabolismo, en los huesos y en "
+        "muchos otros aspectos del organismo.",
+        [
+            ("Porque sus órganos no cumplen ninguna otra función en el organismo",
+             "Sí cumplen otras funciones: producen hormonas que afectan a muchos sistemas."),
+            ("Porque solo funciona durante una parte de la vida de la persona",
+             "Otros sistemas también cambian con la edad y siguen siendo indispensables."),
+            ("Porque puede ser reemplazado por el sistema endocrino si falla",
+             "El sistema endocrino regula al reproductor, pero no puede reemplazar su función."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué diferencia hay entre la producción de gametos en ambos sexos en "
+        "cuanto a su momento de inicio?",
+        "En un caso comienza en la vida fetal y en el otro, en la pubertad",
+        "Los calendarios de producción son muy distintos.\n\n"
+        "1) La formación de los ovocitos comienza durante la vida FETAL: al "
+        "nacer, el ovario ya contiene todos los que existirán, detenidos en una "
+        "etapa de la meiosis.\n"
+        "2) La producción de espermatozoides comienza en la PUBERTAD y continúa "
+        "de manera constante a lo largo de la vida adulta.\n"
+        "3) La maduración de los ovocitos se reanuda de a uno por ciclo, a "
+        "partir de la pubertad.\n\n"
+        "Esa diferencia explica que el número de ovocitos disponibles disminuya "
+        "con la edad, mientras que la producción de espermatozoides se mantiene.",
+        [
+            ("En ambos casos comienza en la pubertad y continúa toda la vida",
+             "La formación de ovocitos comienza durante la vida fetal, mucho antes de la pubertad."),
+            ("En ambos casos comienza en la vida fetal y se completa antes del nacimiento",
+             "Los espermatozoides recién comienzan a producirse en la pubertad."),
+            ("En ambos casos comienza en la adolescencia y se detiene en la adultez",
+             "La producción de espermatozoides continúa durante la vida adulta."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué son los caracteres sexuales secundarios?",
+        "Rasgos que aparecen en la pubertad sin función reproductiva directa",
+        "Se distinguen de los órganos reproductores propiamente tales.\n\n"
+        "1) Los caracteres PRIMARIOS son los órganos reproductores, presentes "
+        "desde el nacimiento.\n"
+        "2) Los SECUNDARIOS aparecen en la pubertad por acción de las hormonas "
+        "sexuales: cambios en la distribución de la grasa corporal, en el vello, "
+        "en la voz, en la musculatura.\n"
+        "3) No intervienen directamente en la fecundación.\n\n"
+        "Su desarrollo es gradual y muy variable entre personas, tanto en el "
+        "momento de aparición como en su expresión.",
+        [
+            ("Los órganos reproductores internos de cada persona",
+             "Esos son los caracteres primarios, presentes desde el nacimiento."),
+            ("Los gametos que se producen a partir de la pubertad",
+             "Los gametos son células, no caracteres sexuales secundarios."),
+            ("Los cambios hormonales que ocurren durante cada ciclo",
+             "Los caracteres secundarios son rasgos corporales, no fluctuaciones hormonales."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "Se sabe que los espermatozoides pueden sobrevivir varios días en el "
+        "tracto reproductor femenino y que el ovocito es viable unas 24 horas. "
+        "¿Qué consecuencia tiene esa combinación?",
+        "El periodo en que puede haber fecundación es de varios días",
+        "La ventana no coincide con la vida del ovocito.\n\n"
+        "1) Si hay espermatozoides presentes cuando ocurre la ovulación, puede "
+        "haber fecundación aunque hayan llegado varios días antes.\n"
+        "2) Por eso el periodo fértil abarca los días previos a la ovulación y "
+        "no solo el día en que ocurre.\n"
+        "3) Como el momento exacto de la ovulación es difícil de predecir, ese "
+        "periodo resulta más amplio e incierto en la práctica.\n\n"
+        "Es la razón de fondo por la que los métodos basados en calcular días "
+        "tienen una eficacia considerablemente menor que otros.",
+        [
+            ("La fecundación solo es posible el mismo día de la ovulación",
+             "Los espermatozoides sobreviven varios días, así que la ventana es más amplia."),
+            ("La fecundación es posible durante todo el ciclo por igual",
+             "Fuera del periodo cercano a la ovulación no hay ovocito viable que fecundar."),
+            ("La fecundación solo es posible en los días posteriores a la ovulación",
+             "El ovocito es viable unas 24 horas: los días previos son los que más importan por la supervivencia de los espermatozoides."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué ocurre con la producción de ovocitos a lo largo de la vida?",
+        "Su número disminuye desde el nacimiento y no se repone",
+        "Es una reserva finita establecida antes de nacer.\n\n"
+        "1) Todos los ovocitos se forman durante la vida fetal: al nacer, la "
+        "reserva ya está completa.\n"
+        "2) Desde entonces esa cantidad solo disminuye, tanto por la ovulación "
+        "como por degeneración de los folículos que no llegan a madurar.\n"
+        "3) No se producen ovocitos nuevos que repongan la reserva.\n\n"
+        "El agotamiento progresivo de esa reserva es lo que lleva, con los años, "
+        "al fin de los ciclos reproductivos.",
+        [
+            ("Se producen ovocitos nuevos en cada ciclo desde la pubertad",
+             "En cada ciclo madura uno de los ya existentes: no se producen nuevos."),
+            ("La cantidad se mantiene constante durante toda la vida adulta",
+             "Disminuye de manera continua desde antes del nacimiento."),
+            ("Aumenta durante la pubertad y luego se estabiliza",
+             "No hay ninguna etapa en que la reserva aumente."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Dos hermanos nacidos del mismo embarazo son genéticamente idénticos. "
+        "¿Qué explica ese resultado?",
+        "Un solo cigoto se dividió y originó dos embriones",
+        "El origen determina la relación genética entre ambos.\n\n"
+        "1) Si un único cigoto se separa en dos grupos de células durante las "
+        "primeras divisiones, cada grupo origina un embrión.\n"
+        "2) Ambos provienen de la misma combinación genética: son idénticos.\n"
+        "3) Si en cambio se hubieran fecundado DOS ovocitos por dos "
+        "espermatozoides distintos, los hermanos serían genéticamente tan "
+        "distintos como cualquier par de hermanos.\n\n"
+        "Por eso los del primer tipo son siempre del mismo sexo, y los del "
+        "segundo pueden no serlo.",
+        [
+            ("Dos ovocitos fueron fecundados por dos espermatozoides",
+             "Eso da hermanos genéticamente distintos, comparables a cualquier par de hermanos."),
+            ("Un ovocito fue fecundado por dos espermatozoides a la vez",
+             "El bloqueo tras la entrada del primero lo impide, y el resultado no sería viable."),
+            ("Compartieron la misma placenta y por eso se volvieron idénticos",
+             "Compartir placenta es consecuencia del tipo de gestación, no la causa de la identidad genética."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se afirma que la fecundación ocurre inmediatamente después de una "
+        "relación sexual. ¿Qué precisión corresponde?",
+        "Puede ocurrir varios días después, si coincide con la ovulación",
+        "El encuentro entre los gametos depende de dos calendarios distintos.\n\n"
+        "1) Los espermatozoides pueden sobrevivir varios días dentro del tracto "
+        "reproductor femenino.\n"
+        "2) La fecundación solo ocurre si hay un ovocito viable, y eso depende "
+        "del momento de la ovulación.\n"
+        "3) Si la ovulación ocurre dos o tres días después de la relación, "
+        "espermatozoides que llegaron antes pueden fecundar.\n\n"
+        "Esa disociación entre el momento de la relación y el de la fecundación "
+        "es clave para entender el periodo fértil y la eficacia de los distintos "
+        "métodos anticonceptivos.",
+        [
+            ("La fecundación ocurre siempre en las primeras horas tras la relación",
+             "Puede ocurrir días después, si la ovulación se produce en ese lapso."),
+            ("La fecundación solo ocurre si la relación coincide exactamente con la ovulación",
+             "La supervivencia de los espermatozoides amplía considerablemente esa ventana."),
+            ("La fecundación ocurre siempre, y lo que varía es si el embrión se implanta",
+             "La fecundación requiere un ovocito viable presente: no ocurre en cualquier momento del ciclo."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "¿Por qué se dice que el ciclo ovárico funciona por retroalimentación?",
+        "Las hormonas del ovario regulan a las que lo estimulan",
+        "Es un sistema que se controla a sí mismo.\n\n"
+        "1) La hipófisis libera hormonas que estimulan al ovario.\n"
+        "2) El ovario, al responder, produce sus propias hormonas.\n"
+        "3) Esas hormonas actúan de vuelta sobre la hipófisis, aumentando o "
+        "disminuyendo su producción según el momento del ciclo.\n\n"
+        "Ese circuito cerrado es lo que hace posible que el ciclo se desarrolle "
+        "de manera ordenada sin ningún control externo, y es también el "
+        "principio en que se basan los anticonceptivos hormonales.",
+        [
+            ("El útero repite el mismo ciclo cada mes de manera automática",
+             "La repetición no es lo que define la retroalimentación: lo que la define es que el efecto regula a la causa."),
+            ("El ovario recibe señales nerviosas desde el sistema nervioso central",
+             "La regulación es hormonal, transportada por la sangre, no nerviosa."),
+            ("Las hormonas se reciclan y vuelven a usarse en el ciclo siguiente",
+             "Las hormonas se degradan tras cumplir su función: no se reutilizan."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué función cumple el líquido seminal además de transportar a los "
+        "espermatozoides?",
+        "Los nutre y neutraliza la acidez del medio",
+        "Es mucho más que un vehículo.\n\n"
+        "1) Aporta azúcares que los espermatozoides usan como fuente de energía "
+        "para su desplazamiento.\n"
+        "2) Su composición alcalina neutraliza la acidez del tracto reproductor "
+        "femenino, que de otro modo los inactivaría.\n"
+        "3) Contiene además sustancias que favorecen su movilidad y su "
+        "supervivencia.\n\n"
+        "Lo producen glándulas anexas, y constituye la mayor parte del volumen "
+        "del semen: los espermatozoides son una fracción pequeña.",
+        [
+            ("Contiene el material genético que se transmitirá al embrión",
+             "El material genético está en el núcleo del espermatozoide, no en el líquido."),
+            ("Determina el sexo del futuro individuo",
+             "Eso depende del espermatozoide que fecunde, no del líquido seminal."),
+            ("Impide que más de un espermatozoide alcance al ovocito",
+             "El bloqueo lo realiza el propio ovocito tras la entrada del primero."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué relación hay entre la implantación y la continuidad del embarazo?",
+        "Sin implantación el embrión no puede desarrollarse",
+        "El embrión necesita conectarse con el organismo materno.\n\n"
+        "1) Durante los primeros días el embrión vive de las reservas aportadas "
+        "por el ovocito, y esas reservas se agotan.\n"
+        "2) Al implantarse en el endometrio, establece contacto con los vasos "
+        "maternos y comienza a recibir nutrientes y oxígeno.\n"
+        "3) Sin esa conexión, el desarrollo se detiene.\n\n"
+        "La implantación es además la que desencadena la señal hormonal que "
+        "impide la menstruación y sostiene el embarazo.",
+        [
+            ("La implantación solo determina la posición del embrión en el útero",
+             "Determina también su acceso a nutrientes: sin ella el desarrollo no puede continuar."),
+            ("El embrión puede desarrollarse completo sin implantarse si tiene suficientes reservas",
+             "Las reservas del ovocito alcanzan solo para los primeros días."),
+            ("La implantación ocurre inmediatamente después de la fecundación",
+             "Ocurre varios días después, cuando el embrión llega al útero."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "Se dice que el cuidado de la salud sexual es parte del autocuidado. "
+        "¿Qué prácticas involucra?",
+        "Informarse, prevenir infecciones y consultar cuando corresponde",
+        "El autocuidado combina información, prevención y atención "
+        "oportuna.\n\n"
+        "1) INFORMARSE con fuentes confiables permite tomar decisiones "
+        "fundamentadas en vez de basadas en mitos.\n"
+        "2) PREVENIR incluye el uso de métodos de barrera frente a las "
+        "infecciones de transmisión sexual y la elección responsable de métodos "
+        "anticonceptivos.\n"
+        "3) CONSULTAR ante síntomas o dudas permite detectar y tratar a tiempo, "
+        "porque varias infecciones cursan sin síntomas evidentes.\n\n"
+        "El currículum lo plantea junto al respeto y la responsabilidad frente a "
+        "sí mismo y frente a los demás.",
+        [
+            ("Evitar por completo cualquier información sobre el tema hasta la adultez",
+             "La falta de información aumenta el riesgo en vez de reducirlo."),
+            ("Realizarse exámenes solo cuando aparecen síntomas evidentes",
+             "Varias infecciones de transmisión sexual cursan sin síntomas: esperar a que aparezcan retrasa el diagnóstico."),
+            ("Confiar en la información que circula entre pares como fuente principal",
+             "La información entre pares suele contener imprecisiones: conviene recurrir a fuentes confiables."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Un estudiante afirma que si una persona tiene ciclos regulares, puede "
+        "estar segura de que no habrá fecundación fuera de los días centrales "
+        "del ciclo. ¿Cómo se evalúa?",
+        "Es incorrecta: la ovulación puede adelantarse o atrasarse",
+        "La regularidad promedio no garantiza la regularidad de cada ciclo.\n\n"
+        "1) Incluso en ciclos habitualmente regulares, el momento de la "
+        "ovulación puede variar por estrés, enfermedad o cambios en la rutina.\n"
+        "2) Los espermatozoides sobreviven varios días, así que una relación "
+        "anterior puede coincidir con una ovulación adelantada.\n"
+        "3) La combinación de ambos factores amplía y desplaza el periodo en que "
+        "puede haber fecundación.\n\n"
+        "Por eso los métodos basados solo en el calendario tienen una eficacia "
+        "bastante menor que otros disponibles.",
+        [
+            ("Es correcta: con ciclos regulares la ovulación ocurre siempre el mismo día",
+             "La regularidad es estadística: el día exacto puede variar entre ciclos."),
+            ("Es correcta si además se registra la temperatura corporal cada mañana",
+             "La temperatura indica que la ovulación ya ocurrió: no permite anticiparla con seguridad."),
+            ("Es incorrecta, porque la fecundación puede ocurrir en cualquier día del ciclo con igual probabilidad",
+             "La probabilidad no es uniforme: se concentra en torno a la ovulación, aunque su momento sea incierto."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué son los folículos ováricos?",
+        "Estructuras del ovario que contienen y maduran los ovocitos",
+        "Son la unidad funcional del ovario.\n\n"
+        "1) Cada folículo aloja un ovocito rodeado de células que lo nutren y lo "
+        "protegen.\n"
+        "2) En cada ciclo, varios comienzan a madurar bajo el estímulo hormonal, "
+        "pero normalmente solo uno completa el proceso.\n"
+        "3) Ese folículo libera su ovocito en la ovulación y después se "
+        "transforma en cuerpo lúteo.\n\n"
+        "Los demás degeneran, y esa pérdida continua es parte de la razón por la "
+        "que la reserva ovárica disminuye con el tiempo.",
+        [
+            ("Los conductos que transportan el ovocito hacia el útero",
+             "Ese transporte lo realiza la trompa uterina."),
+            ("Las glándulas del endometrio que se desarrollan en cada ciclo",
+             "Esas glándulas están en el útero, no en el ovario."),
+            ("Las células que producen los espermatozoides en el testículo",
+             "Los folículos son estructuras del ovario."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Por qué la fecundación restituye el número de cromosomas de la especie "
+        "en lugar de duplicarlo?",
+        "Porque los gametos son haploides",
+        "La meiosis previa es lo que hace posible ese equilibrio.\n\n"
+        "1) La meiosis reduce la dotación a la mitad al producir cada gameto: "
+        "23 cromosomas en lugar de 46.\n"
+        "2) La fecundación suma dos de esas mitades y restituye los 46.\n"
+        "3) Si los gametos fueran diploides, cada generación duplicaría el "
+        "número de cromosomas, lo que es inviable.\n\n"
+        "La alternancia entre meiosis y fecundación mantiene constante la "
+        "dotación cromosómica a lo largo de las generaciones.",
+        [
+            ("Porque durante la fecundación se descarta la mitad de los cromosomas",
+             "No hay descarte: los gametos ya llegan con la mitad."),
+            ("Porque el cigoto elimina los cromosomas repetidos al formarse",
+             "Los cromosomas se emparejan pero no se eliminan: los pares son necesarios."),
+            ("Porque los cromosomas del espermatozoide se fusionan con los del ovocito uno a uno",
+             "Se emparejan por homología, pero cada uno se conserva íntegro: no se fusionan."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se comparan dos afirmaciones sobre el ovocito: (I) es la célula más "
+        "grande del cuerpo humano porque contiene más material genético, y (II) "
+        "es grande porque acumula reservas para el desarrollo inicial. ¿Cuál es "
+        "correcta?",
+        "La segunda: su tamaño se debe al citoplasma, no al ADN",
+        "El tamaño de una célula no se relaciona con su contenido "
+        "genético.\n\n"
+        "1) El ovocito es haploide: contiene la MITAD del material genético de "
+        "una célula somática común, no más.\n"
+        "2) Su gran tamaño se debe al citoplasma cargado de nutrientes, ARN, "
+        "proteínas y organelos.\n"
+        "3) Esas reservas sostienen las primeras divisiones del embrión antes de "
+        "la implantación.\n\n"
+        "El espermatozoide aporta la misma cantidad de ADN en un volumen miles "
+        "de veces menor: la comparación deja claro que tamaño y contenido "
+        "genético son independientes.",
+        [
+            ("La primera: a mayor tamaño celular, mayor cantidad de ADN",
+             "El ovocito es haploide y el espermatozoide también: ambos tienen la misma cantidad de ADN pese a la enorme diferencia de tamaño."),
+            ("Ambas son correctas y describen causas complementarias",
+             "La primera es falsa: el ovocito no contiene más material genético."),
+            ("Ninguna: su tamaño se debe al gran número de mitocondrias que contiene",
+             "Las mitocondrias son parte de las reservas citoplasmáticas, pero no explican por sí solas el tamaño."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué relación existe entre las hormonas sexuales y los cambios "
+        "corporales de la adolescencia?",
+        "Las hormonas desencadenan y sostienen esos cambios",
+        "El desarrollo puberal es una respuesta a señales hormonales.\n\n"
+        "1) El aumento de las hormonas sexuales activa el desarrollo de los "
+        "órganos reproductores y de los caracteres sexuales secundarios.\n"
+        "2) También influyen en el crecimiento óseo y muscular, y en la "
+        "distribución de la grasa corporal.\n"
+        "3) El momento de inicio y el ritmo dependen de factores genéticos, "
+        "nutricionales y de salud general, y varían mucho entre personas.\n\n"
+        "Esa variabilidad es normal, y compararse con el ritmo de otras personas "
+        "no es un buen criterio.",
+        [
+            ("Los cambios ocurren por el crecimiento y las hormonas aparecen después",
+             "Las hormonas son la causa que desencadena los cambios, no una consecuencia de ellos."),
+            ("Los cambios dependen exclusivamente de la alimentación durante esos años",
+             "La nutrición influye, pero el desencadenante es hormonal."),
+            ("Las hormonas actúan solo sobre los órganos reproductores y no sobre el resto del cuerpo",
+             "Afectan también al crecimiento, a la musculatura y a la distribución de la grasa corporal."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué ocurre con el ciclo reproductivo al final de la vida "
+        "reproductiva?",
+        "Los ciclos se vuelven irregulares y luego cesan",
+        "El proceso es gradual y se relaciona con el agotamiento de la reserva "
+        "ovárica.\n\n"
+        "1) La cantidad de folículos disponibles disminuye a lo largo de la vida "
+        "y llega un punto en que es muy baja.\n"
+        "2) La respuesta del ovario a las señales hormonales se vuelve "
+        "irregular, y los ciclos se espacian o se alteran.\n"
+        "3) Finalmente cesan, y con ellos la producción de las hormonas "
+        "ováricas.\n\n"
+        "Esa caída hormonal tiene efectos en otros sistemas, como el óseo, y por "
+        "eso se acompaña de recomendaciones de cuidado específicas.",
+        [
+            ("Los ciclos se vuelven más regulares antes de detenerse",
+             "La transición se caracteriza justamente por una mayor irregularidad."),
+            ("El ovario comienza a producir más ovocitos antes de agotarse",
+             "La reserva solo disminuye: no hay una etapa de mayor producción."),
+            ("El útero deja de responder a las hormonas, pero el ovario sigue funcionando igual",
+             "El cambio se origina en el ovario, cuya reserva se agota."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Se investiga la relación entre el índice de masa corporal y la "
+        "regularidad de los ciclos. ¿Qué tipo de estudio corresponde y qué "
+        "limitación tiene?",
+        "Observacional, y no permite concluir causa por sí solo",
+        "Hay variables que no se pueden asignar experimentalmente.\n\n"
+        "1) No es admisible asignar a las participantes a tener determinado peso "
+        "corporal: el estudio debe ser observacional.\n"
+        "2) Se compara a personas que naturalmente difieren en esa variable y se "
+        "registra la regularidad de sus ciclos.\n"
+        "3) Una asociación encontrada no establece por sí sola la dirección de "
+        "la causa: podría haber factores comunes, como la alimentación o una "
+        "condición hormonal, que influyan sobre ambas.\n\n"
+        "Para sostener causalidad se requieren estudios adicionales, seguimiento "
+        "en el tiempo y un mecanismo biológico plausible.",
+        [
+            ("Experimental, asignando dietas distintas a cada grupo de participantes",
+             "Un diseño así plantea problemas éticos y prácticos serios, y no es el habitual para esta pregunta."),
+            ("Observacional, y permite concluir directamente que el peso causa la irregularidad",
+             "Una asociación observacional no basta para establecer causalidad."),
+            ("Experimental, y no tiene limitaciones porque se controlan todas las variables",
+             "Ningún estudio controla todas las variables, y este ni siquiera puede ser experimental."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué papel cumple el moco cervical a lo largo del ciclo?",
+        "Cambia de consistencia y facilita o dificulta el paso de espermatozoides",
+        "Su variación acompaña a los cambios hormonales del ciclo.\n\n"
+        "1) Durante la mayor parte del ciclo es espeso y constituye una barrera "
+        "poco permeable.\n"
+        "2) En torno a la ovulación se vuelve más fluido y transparente, lo que "
+        "facilita el desplazamiento de los espermatozoides.\n"
+        "3) Después de la ovulación vuelve a espesarse.\n\n"
+        "Esa variación es lo que algunos métodos naturales intentan aprovechar "
+        "para estimar el periodo fértil, aunque su interpretación requiere "
+        "entrenamiento y no es del todo confiable.",
+        [
+            ("Se mantiene igual durante todo el ciclo y no cumple ninguna función",
+             "Cambia de consistencia de manera notoria y cumple una función de barrera variable."),
+            ("Nutre al ovocito mientras avanza por la trompa uterina",
+             "El ovocito depende de sus propias reservas; el moco cervical actúa antes, en el cuello del útero."),
+            ("Impide siempre el paso de los espermatozoides hacia el útero",
+             "En torno a la ovulación se vuelve permeable y lo facilita."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Qué órgano aloja el desarrollo del embrión y del feto durante el "
+        "embarazo?",
+        "El útero",
+        "Su estructura corresponde a esa función.\n\n"
+        "1) Su pared muscular puede distenderse enormemente durante el "
+        "embarazo.\n"
+        "2) Su capa interna, el endometrio, es donde el embrión se implanta y "
+        "desde donde se establece el intercambio con el organismo materno.\n"
+        "3) Al final del embarazo, esa misma musculatura se contrae de manera "
+        "coordinada durante el parto.\n\n"
+        "Fuera del embarazo, el útero es un órgano de tamaño reducido que se "
+        "prepara y renueva en cada ciclo.",
+        [
+            ("El ovario, donde madura el ovocito antes de la fecundación",
+             "El ovario produce y libera el ovocito, pero no aloja el desarrollo."),
+            ("La trompa uterina, donde ocurre la fecundación",
+             "Es el lugar de la fecundación; una implantación ahí es un embarazo ectópico."),
+            ("El endometrio, que se desprende en cada menstruación",
+             "El endometrio es la capa interna del útero, no un órgano independiente."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "facil",
+        "¿Cuántos cromosomas tiene un gameto humano?",
+        "23",
+        "Los gametos son células haploides.\n\n"
+        "1) Las células somáticas del cuerpo humano tienen 46 cromosomas, "
+        "organizados en 23 pares.\n"
+        "2) La meiosis reduce esa dotación a la mitad al producir los gametos: "
+        "cada uno lleva un cromosoma de cada par.\n"
+        "3) La fecundación reúne dos gametos y restituye los 46.\n\n"
+        "Que cada gameto lleve un cromosoma de cada par, elegido al azar, es una "
+        "de las fuentes de variabilidad genética de la descendencia.",
+        [
+            ("46, la misma dotación que las demás células del cuerpo",
+             "Esa es la dotación de las células somáticas; los gametos tienen la mitad."),
+            ("92, porque duplican su material antes de la fecundación",
+             "Los gametos no duplican su material antes de fusionarse."),
+            ("22, porque los cromosomas sexuales se cuentan aparte",
+             "Los 23 incluyen al cromosoma sexual: no se cuentan por separado."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "En un ciclo de 30 días, ¿cuándo ocurre aproximadamente la ovulación, "
+        "considerando que la fase lútea dura alrededor de 14 días?",
+        "Alrededor del día 16",
+        "La fase lútea es la que tiene duración más constante.\n\n"
+        "1) La fase lútea va desde la ovulación hasta la menstruación siguiente "
+        "y dura aproximadamente 14 días.\n"
+        "2) Si el ciclo completo dura 30 días, la ovulación ocurre "
+        "aproximadamente 14 días antes del final: 30 − 14 = 16.\n"
+        "3) La variabilidad entre ciclos se concentra en la fase folicular, es "
+        "decir, en la primera parte.\n\n"
+        "Por eso calcular hacia atrás desde la menstruación esperada es más "
+        "razonable que suponer que la ovulación ocurre siempre a mitad de ciclo, "
+        "aunque sigue siendo una estimación.",
+        [
+            ("Alrededor del día 14, como en todos los ciclos",
+             "El día 14 corresponde a un ciclo de 28 días; con 30 días la ovulación se desplaza."),
+            ("Alrededor del día 30, justo antes de la menstruación",
+             "La ovulación ocurre unos 14 días antes de la menstruación, no inmediatamente antes."),
+            ("Alrededor del día 8, al comienzo de la fase folicular",
+             "La fase folicular es la primera parte del ciclo y termina con la ovulación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué diferencia hay entre el ciclo ovárico y el ciclo uterino?",
+        "Uno ocurre en el ovario y el otro, en el útero",
+        "Son dos procesos coordinados pero distintos.\n\n"
+        "1) El ciclo OVÁRICO comprende la maduración del folículo, la ovulación "
+        "y la formación del cuerpo lúteo: ocurre en el ovario.\n"
+        "2) El ciclo UTERINO comprende la menstruación, la fase proliferativa y "
+        "la secretora: ocurre en el endometrio.\n"
+        "3) Están sincronizados porque las hormonas producidas por el ovario "
+        "gobiernan los cambios del útero.\n\n"
+        "Suelen presentarse juntos y por eso se confunden, pero identificar dónde "
+        "ocurre cada evento evita la mayoría de los errores.",
+        [
+            ("Uno dura 28 días y el otro, 14",
+             "Ambos ciclos tienen la misma duración total: están sincronizados."),
+            ("Uno ocurre antes de la pubertad y el otro después",
+             "Ambos comienzan en la pubertad y transcurren simultáneamente."),
+            ("Uno depende de hormonas y el otro es controlado por el sistema nervioso",
+             "Ambos están regulados hormonalmente."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "dificil",
+        "Un estudiante sostiene que la sexualidad es un tema exclusivamente "
+        "privado y que no corresponde tratarlo en ciencias. ¿Cómo se evalúa esa "
+        "postura respecto del currículum?",
+        "El currículum la incluye como contenido de ciencias naturales",
+        "El contenido está definido de manera explícita.\n\n"
+        "1) El temario incorpora los aspectos biológicos: estructura y función "
+        "de los sistemas reproductores, gametos, ciclos, métodos de control de "
+        "la natalidad e infecciones de transmisión sexual.\n"
+        "2) Incorpora también los aspectos afectivos, psicológicos y sociales "
+        "que contribuyen al bienestar de las relaciones humanas.\n"
+        "3) Que sea un tema con dimensiones privadas no lo excluye del estudio "
+        "científico, igual que ocurre con la salud o la alimentación.\n\n"
+        "El acceso a información precisa es, de hecho, una condición del "
+        "autocuidado que el currículum busca promover.",
+        [
+            ("Es correcta: la biología solo debe ocuparse de procesos celulares",
+             "La biología estudia también organismos completos, su comportamiento y su salud."),
+            ("Es correcta, porque los aspectos sociales corresponden a otras asignaturas",
+             "El temario de ciencias los incorpora expresamente dentro de esta área temática."),
+            ("Es incorrecta, porque la sexualidad no tiene ninguna dimensión privada",
+             "Sí la tiene: eso no impide que sus aspectos biológicos y de salud se estudien."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué ocurre con los folículos que comienzan a madurar en un ciclo pero "
+        "no llegan a ovular?",
+        "Degeneran y se reabsorben",
+        "Solo uno completa el proceso en cada ciclo.\n\n"
+        "1) Varios folículos comienzan a desarrollarse bajo el estímulo "
+        "hormonal.\n"
+        "2) Normalmente uno se vuelve dominante y los demás dejan de "
+        "responder.\n"
+        "3) Esos folículos degeneran y son reabsorbidos: no quedan en reserva "
+        "para ciclos posteriores.\n\n"
+        "Esa pérdida en cada ciclo, sumada a la degeneración continua a lo largo "
+        "de la vida, explica que la reserva ovárica disminuya mucho más rápido "
+        "de lo que se esperaría contando solo las ovulaciones.",
+        [
+            ("Quedan detenidos y ovulan en el ciclo siguiente",
+             "No se reservan para ciclos posteriores: degeneran."),
+            ("Se transforman todos en cuerpos lúteos productores de hormonas",
+             "Solo el folículo que ovula se transforma en cuerpo lúteo."),
+            ("Se desprenden junto con el endometrio durante la menstruación",
+             "Los folículos están en el ovario y no se eliminan con la menstruación."),
+        ],
+    ),
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Por qué se recomienda que las decisiones sobre la vida sexual se tomen "
+        "de manera informada?",
+        "Porque permiten prevenir riesgos y decidir con autonomía",
+        "La información es la condición de una decisión propia.\n\n"
+        "1) Conocer cómo funciona el ciclo, cómo actúan los distintos métodos y "
+        "cómo se transmiten las infecciones permite anticipar consecuencias.\n"
+        "2) Sin esa información, las decisiones se toman sobre supuestos "
+        "equivocados, y varios mitos frecuentes aumentan el riesgo.\n"
+        "3) Decidir con información es además una condición de la autonomía: sin "
+        "ella, la decisión no es realmente propia.\n\n"
+        "El currículum vincula esto con el cuidado y la responsabilidad frente a "
+        "sí mismo y frente a los demás.",
+        [
+            ("Porque la información garantiza que no habrá ninguna consecuencia",
+             "Ningún nivel de información elimina por completo los riesgos: los reduce y permite anticiparlos."),
+            ("Porque así se cumple con lo que establece el currículum escolar",
+             "El currículum lo incluye porque tiene efectos reales sobre la salud, no como un fin en sí mismo."),
+            ("Porque las decisiones informadas son siempre postergadas en el tiempo",
+             "Estar informado no implica postergar: implica decidir con fundamento."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_reproduccion", "medio",
+        "¿Qué relación existe entre la meiosis y la variabilidad de la "
+        "descendencia?",
+        "Reparte los cromosomas al azar e intercambia fragmentos",
+        "La meiosis no solo reduce el número de cromosomas: los recombina.\n\n"
+        "1) Los cromosomas de cada par se reparten al azar entre los gametos, y "
+        "cada combinación posible es distinta.\n"
+        "2) Antes de repartirse, los cromosomas homólogos intercambian "
+        "fragmentos entre sí, lo que genera combinaciones nuevas dentro de cada "
+        "cromosoma.\n"
+        "3) El resultado es que cada gameto lleva una dotación única, distinta "
+        "de la de cualquier otro.\n\n"
+        "Sumado a que la fecundación reúne dos gametos únicos, eso explica que "
+        "dos hermanos con los mismos padres sean genéticamente distintos.",
+        [
+            ("Produce gametos idénticos entre sí para asegurar la herencia",
+             "Los gametos producidos por meiosis son genéticamente distintos entre sí."),
+            ("Introduce mutaciones nuevas en cada gameto que se forma",
+             "Las mutaciones ocurren por errores de replicación o agentes externos, no como parte del mecanismo de la meiosis."),
+            ("Duplica el material genético para que el cigoto tenga dotación completa",
+             "La meiosis reduce la dotación a la mitad: es la fecundación la que restituye el total."),
+        ],
+    ),
+]
