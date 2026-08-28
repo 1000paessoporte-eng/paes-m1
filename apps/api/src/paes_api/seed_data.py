@@ -88438,3 +88438,1365 @@ QUESTIONS_CIENCIAS += [
         ],
     ),
 ]
+
+
+# ---------------------------------------------------------------------------
+# Ciencias - Física - "Mecánica": peso, normal, tensión, fuerza elástica y roce
+#
+# La otra mitad del conocimiento sobre fuerzas que pide el temario: fuerza peso,
+# elástica (ley de Hooke), tensión y normal; roce estático y cinético por
+# contacto entre superficies; y roce con el aire en términos cualitativos.
+#
+# Cierra además `cie_movimiento` y `cie_fuerzas`, a los que les faltaba una
+# pregunta a cada uno tras retirar un enunciado duplicado.
+# ---------------------------------------------------------------------------
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_movimiento", "medio",
+        "Un tren de metro parte de una estación, avanza y se detiene en la "
+        "siguiente. Un estudiante grafica su rapidez en función del tiempo y "
+        "obtiene un trapecio. ¿Qué representa cada parte de esa figura?",
+        "Un tramo acelerando, uno a rapidez constante y uno frenando",
+        "Cada tramo del gráfico corresponde a una etapa del recorrido.\n\n"
+        "1) El lado que sube desde cero es la partida: la rapidez aumenta, hay "
+        "aceleración positiva.\n"
+        "2) El lado horizontal superior es el tramo entre estaciones a rapidez "
+        "constante: aceleración cero.\n"
+        "3) El lado que baja hasta cero es la frenada: aceleración negativa.\n\n"
+        "El área total del trapecio entrega la distancia entre las dos "
+        "estaciones, y por eso este perfil es el que se usa para planificar "
+        "tiempos de viaje.",
+        [
+            ("Tres tramos con la misma aceleración pero distinta rapidez",
+             "Los tres lados tienen pendientes distintas: positiva, nula y negativa, es decir, tres aceleraciones distintas."),
+            ("Un tramo de ida, uno de espera y uno de regreso",
+             "La rapidez nunca se hace negativa: el tren no retrocede en ningún momento."),
+            ("Tres tramos de rapidez constante a distintas velocidades",
+             "Solo el tramo central tiene rapidez constante; en los otros dos la rapidez cambia."),
+        ],
+    ),
+    _q(
+        "cie_fuerzas", "medio",
+        "Una grúa sostiene inmóvil en el aire un contenedor de 500 kg. Con "
+        "g = 10 m/s², ¿cuál es la tensión del cable?",
+        "5.000 N",
+        "Estando inmóvil, el contenedor está en equilibrio vertical.\n\n"
+        "1) El peso es m · g = 500 · 10 = 5.000 N, hacia abajo.\n"
+        "2) Como no acelera, la fuerza neta vertical es cero.\n"
+        "3) La tensión debe entonces igualar al peso: 5.000 N hacia arriba.\n\n"
+        "Si la grúa comenzara a subir el contenedor acelerando, la tensión "
+        "tendría que superar ese valor; si lo bajara acelerando, sería menor.",
+        [
+            ("500 N", "Entregó la masa expresada en newton: falta multiplicar por la aceleración de gravedad."),
+            ("50.000 N", "Multiplicó por 100 en lugar de por 10."),
+            ("0 N, porque el contenedor no se mueve", "Estar inmóvil significa fuerza NETA cero, no tensión cero: si el cable no tirara, el contenedor caería."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "¿Cuál es el peso de un cuerpo de 12 kg en la superficie terrestre, con "
+        "g = 10 m/s²?",
+        "120 N",
+        "El peso es la fuerza con que la Tierra atrae a un cuerpo.\n\n"
+        "1) La relación es P = m · g.\n"
+        "2) Reemplaza: P = 12 kg · 10 m/s².\n"
+        "3) Resulta 120 N.\n\n"
+        "Ojo con la unidad: la masa se expresa en kilogramos y el peso, en "
+        "newton, porque es una fuerza. Decir que alguien 'pesa 70 kilos' es una "
+        "imprecisión de lenguaje muy extendida.",
+        [
+            ("12 N", "Copió la masa cambiando la unidad, sin multiplicar por la aceleración de gravedad."),
+            ("1,2 N", "Dividió la masa por la aceleración de gravedad en lugar de multiplicar."),
+            ("1.200 N", "Multiplicó por 100 en vez de por 10."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "Un mismo objeto se lleva a la Luna, donde la aceleración de gravedad es "
+        "aproximadamente la sexta parte de la terrestre. ¿Qué ocurre con su masa "
+        "y su peso?",
+        "La masa se mantiene y el peso se reduce a la sexta parte",
+        "Son magnitudes de naturaleza distinta.\n\n"
+        "1) La MASA es la cantidad de materia y mide la inercia: no depende del "
+        "lugar.\n"
+        "2) El PESO es la fuerza gravitatoria, y es proporcional a la "
+        "aceleración de gravedad del lugar.\n"
+        "3) Con g seis veces menor, el peso se reduce a la sexta parte.\n\n"
+        "Por eso los astronautas saltan alto en la Luna pero siguen necesitando "
+        "el mismo esfuerzo para empujar horizontalmente un objeto masivo: su "
+        "inercia no cambió.",
+        [
+            ("Ambas se reducen a la sexta parte",
+             "La masa no depende de la gravedad: es la misma en la Tierra, en la Luna o en el espacio."),
+            ("La masa se reduce y el peso se mantiene",
+             "Está invertido: el peso es el que depende del campo gravitatorio."),
+            ("Ambas se mantienen iguales, porque son propiedades del objeto",
+             "El peso no es una propiedad del objeto solo: depende también del astro que lo atrae."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "¿En qué dirección apunta siempre la fuerza normal que una superficie "
+        "ejerce sobre un cuerpo apoyado?",
+        "Perpendicular a la superficie de contacto",
+        "El nombre de la fuerza describe su dirección.\n\n"
+        "1) La normal es la reacción de la superficie al ser comprimida, y "
+        "actúa siempre PERPENDICULAR al plano de contacto.\n"
+        "2) Sobre un piso horizontal apunta verticalmente hacia arriba, y por "
+        "eso suele confundirse con la opuesta al peso.\n"
+        "3) Sobre un plano inclinado apunta perpendicular al plano, es decir, "
+        "inclinada respecto de la vertical, y su magnitud es menor que el "
+        "peso.\n\n"
+        "En una pared vertical la normal es horizontal: nada tiene que ver con "
+        "la dirección del peso.",
+        [
+            ("Siempre verticalmente hacia arriba",
+             "Solo cuando la superficie es horizontal; sobre un plano inclinado apunta inclinada."),
+            ("Siempre en sentido contrario al peso",
+             "Coincide con esa dirección solo en superficies horizontales; en un plano inclinado no es opuesta al peso."),
+            ("En la dirección del movimiento del cuerpo sobre la superficie",
+             "Esa es la dirección del roce, que es paralelo a la superficie, no perpendicular."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "Un resorte se estira 4 cm cuando se le cuelga un cuerpo, y 8 cm cuando "
+        "se le cuelga el doble de peso. ¿Qué ley describe ese comportamiento?",
+        "La ley de Hooke",
+        "La proporcionalidad entre fuerza y deformación es lo que la ley "
+        "establece.\n\n"
+        "1) La ley de Hooke dice que la fuerza elástica es proporcional a la "
+        "deformación: F = k · x.\n"
+        "2) Por eso duplicar la fuerza duplica el estiramiento, como se "
+        "observa.\n"
+        "3) La constante k, propia de cada resorte, indica cuánta fuerza se "
+        "necesita por unidad de estiramiento.\n\n"
+        "La proporcionalidad vale mientras no se supere el límite elástico: más "
+        "allá, el resorte se deforma de manera permanente y la ley deja de "
+        "cumplirse.",
+        [
+            ("La ley de gravitación universal",
+             "Esa ley describe la atracción entre masas, no la deformación de un resorte."),
+            ("La tercera ley de Newton",
+             "Describe los pares acción-reacción, no la relación entre fuerza y estiramiento."),
+            ("El principio de inercia",
+             "Trata sobre la conservación del estado de movimiento, no sobre deformaciones elásticas."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "¿Qué diferencia hay entre el roce estático y el cinético?",
+        "El estático actúa mientras el cuerpo no se desliza",
+        "Los dos aparecen por el contacto entre superficies, pero en "
+        "situaciones distintas.\n\n"
+        "1) El roce ESTÁTICO actúa cuando el cuerpo está quieto y se le aplica "
+        "una fuerza que aún no logra moverlo. Su magnitud se ajusta a esa fuerza "
+        "hasta un valor máximo.\n"
+        "2) El roce CINÉTICO actúa una vez que el cuerpo ya se desliza, y su "
+        "magnitud es aproximadamente constante.\n"
+        "3) El máximo estático es mayor que el cinético, y por eso cuesta más "
+        "empezar a mover un mueble que mantenerlo en movimiento.\n\n"
+        "Ese salto es una experiencia cotidiana: el mueble se desplaza de golpe "
+        "apenas se vence el estático.",
+        [
+            ("El estático es siempre mayor y el cinético siempre menor que cualquier fuerza aplicada",
+             "El roce estático no es un valor fijo: se ajusta a la fuerza aplicada hasta un máximo."),
+            ("El estático depende de la masa y el cinético, del área de contacto",
+             "Ambos dependen de la normal; el área de contacto influye muy poco en los dos casos."),
+            ("El estático actúa en superficies rugosas y el cinético en superficies lisas",
+             "Los dos aparecen en cualquier superficie: la distinción es si el cuerpo se desliza o no."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un resorte se estira 5 cm al aplicarle una fuerza de 20 N. ¿Cuál es su "
+        "constante elástica?",
+        "400 N/m",
+        "La constante elástica se obtiene de la ley de Hooke, cuidando las "
+        "unidades.\n\n"
+        "1) Convierte la deformación a metros: 5 cm = 0,05 m.\n"
+        "2) Despeja de F = k · x: k = F / x = 20 ÷ 0,05.\n"
+        "3) Resulta 400 N/m.\n\n"
+        "El valor indica que se necesitan 400 N para estirar el resorte un "
+        "metro, si se mantuviera dentro de su rango elástico.",
+        [
+            ("4 N/m", "Usó los 5 cm directamente sin convertirlos a metros."),
+            ("100 N/m", "Multiplicó la fuerza por la deformación en vez de dividir."),
+            ("0,0025 N/m", "Invirtió la división: usó la deformación dividida por la fuerza."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Una caja de 20 kg descansa sobre una superficie horizontal con "
+        "coeficiente de roce cinético 0,4. Con g = 10 m/s², ¿cuál es la fuerza "
+        "de roce mientras se desliza?",
+        "80 N",
+        "El roce cinético es el coeficiente por la fuerza normal.\n\n"
+        "1) Sobre una superficie horizontal y sin fuerzas verticales "
+        "adicionales, la normal iguala al peso: N = 20 · 10 = 200 N.\n"
+        "2) Aplica la relación: roce = coeficiente · normal = 0,4 · 200.\n"
+        "3) Resulta 80 N, opuesto al movimiento.\n\n"
+        "Ojo con no multiplicar el coeficiente por la masa: el roce depende de "
+        "la fuerza normal, no directamente de la masa.",
+        [
+            ("8 N", "Multiplicó el coeficiente por la masa en vez de por la normal."),
+            ("200 N", "Entregó la fuerza normal sin multiplicarla por el coeficiente."),
+            ("50 N", "Dividió la normal por el coeficiente en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Se empuja un mueble pesado con fuerza creciente. Al principio no se "
+        "mueve, luego arranca de golpe y después resulta más fácil mantenerlo en "
+        "movimiento. ¿Cómo se explica esa secuencia?",
+        "El roce estático máximo es mayor que el cinético",
+        "El comportamiento tiene tres etapas y cada una corresponde a un "
+        "régimen distinto.\n\n"
+        "1) Mientras el mueble está quieto, el roce estático crece igualando "
+        "exactamente a la fuerza aplicada: la fuerza neta es cero y no se "
+        "mueve.\n"
+        "2) Al superarse el máximo estático, el mueble se desliza y el roce cae "
+        "al valor cinético, menor. Como la fuerza aplicada no bajó, aparece de "
+        "golpe una fuerza neta: por eso arranca bruscamente.\n"
+        "3) Ya en movimiento, basta una fuerza menor para mantenerlo, porque "
+        "solo hay que equilibrar el roce cinético.\n\n"
+        "De ahí la sensación de que 'cuesta partir' y después 'se va solo'.",
+        [
+            ("El roce desaparece una vez que el cuerpo está en movimiento",
+             "No desaparece: disminuye al valor cinético, y por eso hay que seguir empujando para mantener la rapidez."),
+            ("La masa del mueble disminuye cuando comienza a deslizarse",
+             "La masa no cambia: lo que cambia es la fuerza de roce."),
+            ("La fuerza aplicada aumenta bruscamente en el momento del arranque",
+             "El enunciado describe una fuerza que crece de manera continua: el salto ocurre en el roce, no en la fuerza aplicada."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un bloque descansa sobre un plano inclinado. ¿Cómo es la fuerza normal "
+        "comparada con el peso del bloque?",
+        "Menor que el peso",
+        "La normal equilibra solo la componente del peso perpendicular al "
+        "plano.\n\n"
+        "1) El peso apunta verticalmente hacia abajo, pero el plano está "
+        "inclinado.\n"
+        "2) El peso se descompone en dos partes: una perpendicular al plano y "
+        "otra paralela a él.\n"
+        "3) La normal equilibra solo la componente perpendicular, que es menor "
+        "que el peso total. La componente paralela es la que tiende a hacer "
+        "deslizar el bloque.\n\n"
+        "Cuanto mayor la inclinación, menor la normal y mayor la componente que "
+        "empuja hacia abajo: por eso a partir de cierto ángulo el bloque se "
+        "desliza.",
+        [
+            ("Igual al peso, porque el bloque está apoyado",
+             "Eso vale solo en una superficie horizontal, donde el peso es perpendicular al plano."),
+            ("Mayor que el peso, porque el plano lo empuja hacia arriba",
+             "La normal nunca supera al peso en un plano inclinado sin fuerzas adicionales."),
+            ("Igual a cero, porque el bloque tiende a deslizarse hacia abajo",
+             "Si la normal fuera cero el bloque no estaría apoyado: atravesaría el plano."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Al frenar una bicicleta, ¿qué fuerza la detiene?",
+        "El roce entre las ruedas y el suelo",
+        "El freno actúa sobre la rueda, pero lo que frena a la bicicleta es "
+        "otra cosa.\n\n"
+        "1) Las pastillas aprietan la rueda y reducen su giro: eso es una "
+        "interacción interna al vehículo.\n"
+        "2) Una fuerza interna no puede cambiar el movimiento del conjunto: se "
+        "necesita una fuerza externa.\n"
+        "3) Esa fuerza externa es el roce que el suelo ejerce sobre las ruedas, "
+        "dirigido hacia atrás.\n\n"
+        "Por eso sobre hielo los frenos son inútiles: la rueda se traba, pero "
+        "sin roce con el suelo la bicicleta sigue avanzando.",
+        [
+            ("La fuerza de las pastillas sobre la rueda",
+             "Es una fuerza interna del sistema: por sí sola no puede frenar el conjunto."),
+            ("La resistencia del aire sobre el ciclista",
+             "Contribuye, pero es muy pequeña comparada con el roce del suelo a velocidades normales."),
+            ("El peso de la bicicleta, que se opone al avance",
+             "El peso es vertical: no tiene componente que se oponga al movimiento horizontal."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Se dice que la fuerza de roce entre dos superficies no depende "
+        "apreciablemente del área de contacto. ¿Cómo se explica?",
+        "Al repartirse el peso, la presión compensa el cambio de área",
+        "El resultado es contraintuitivo pero tiene una explicación "
+        "microscópica.\n\n"
+        "1) El roce depende de cuánta superficie está realmente en contacto a "
+        "escala microscópica, y esa área real es una fracción diminuta de la "
+        "aparente.\n"
+        "2) Al apoyar el mismo cuerpo sobre una cara más pequeña, la presión "
+        "aumenta y las rugosidades se aplastan más: el área real de contacto "
+        "crece.\n"
+        "3) Los dos efectos se compensan aproximadamente, y por eso el roce "
+        "depende sobre todo de la fuerza normal.\n\n"
+        "La aproximación tiene límites: los neumáticos anchos de competición "
+        "existen justamente porque el modelo deja de valer en condiciones "
+        "extremas.",
+        [
+            ("El roce solo depende del material y nunca de la fuerza aplicada",
+             "El roce sí depende de la fuerza normal: es proporcional a ella."),
+            ("El área de contacto no influye porque las superficies son perfectamente lisas",
+             "Ninguna superficie real es lisa: justamente la rugosidad microscópica es la que explica el fenómeno."),
+            ("El aire entre las superficies impide que el área influya en el resultado",
+             "El fenómeno ocurre igual en el vacío: no depende del aire."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Una caja de 5 kg está en reposo sobre una superficie con coeficiente de "
+        "roce estático 0,5. Con g = 10 m/s², ¿cuál es la fuerza mínima "
+        "horizontal para empezar a moverla?",
+        "25 N",
+        "Hay que superar el roce estático máximo.\n\n"
+        "1) La normal iguala al peso: N = 5 · 10 = 50 N.\n"
+        "2) El roce estático máximo es 0,5 · 50 = 25 N.\n"
+        "3) Con una fuerza apenas superior a 25 N la caja comienza a "
+        "deslizarse.\n\n"
+        "Con menos de 25 N el roce estático iguala exactamente a la fuerza "
+        "aplicada y la caja permanece quieta: el roce estático no tiene un valor "
+        "fijo, se ajusta hasta ese máximo.",
+        [
+            ("2,5 N", "Multiplicó el coeficiente por la masa en vez de por la normal."),
+            ("50 N", "Entregó la fuerza normal, sin multiplicarla por el coeficiente."),
+            ("100 N", "Dividió la normal por el coeficiente en lugar de multiplicarlos."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un objeto cae en el aire y su rapidez deja de aumentar. ¿De qué "
+        "depende la resistencia del aire que actúa sobre él?",
+        "De su rapidez, su forma y el área que enfrenta al avance",
+        "La resistencia del aire no es una constante del objeto.\n\n"
+        "1) Crece con la RAPIDEZ: por eso aumenta durante la caída hasta "
+        "igualar al peso.\n"
+        "2) Depende del ÁREA que el objeto presenta al avance: una hoja "
+        "extendida cae más lento que la misma hoja hecha bolita.\n"
+        "3) Depende de la FORMA: un cuerpo aerodinámico desplaza el aire con "
+        "menos resistencia que uno plano.\n\n"
+        "Por eso una pluma y una piedra caen distinto en el aire y exactamente "
+        "igual en el vacío: la diferencia la hace el aire, no el peso.",
+        [
+            ("Solo de su masa, igual que el peso",
+             "La masa no aparece en la resistencia del aire: dos objetos de igual forma y distinta masa reciben la misma resistencia a igual rapidez."),
+            ("Solo de la altura desde la que se deja caer",
+             "La altura determina cuánto tiempo cae, pero la resistencia en cada instante depende de la rapidez de ese instante."),
+            ("De la temperatura del aire únicamente, porque afecta su densidad",
+             "La densidad influye, pero la rapidez, la forma y el área son los factores determinantes."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un dinamómetro mide fuerzas mediante el estiramiento de un resorte. "
+        "¿Por qué ese instrumento funciona?",
+        "Porque el estiramiento es proporcional a la fuerza aplicada",
+        "El instrumento traduce una fuerza en una longitud legible.\n\n"
+        "1) Por la ley de Hooke, dentro del rango elástico el estiramiento es "
+        "proporcional a la fuerza.\n"
+        "2) Esa proporcionalidad permite graduar la escala con divisiones "
+        "iguales y leer directamente la fuerza.\n"
+        "3) Si la relación no fuera lineal, la escala tendría divisiones "
+        "desiguales y sería mucho más difícil de fabricar y leer.\n\n"
+        "Por eso cada dinamómetro tiene un rango máximo: pasado el límite "
+        "elástico, el resorte se deforma de manera permanente y el instrumento "
+        "queda descalibrado.",
+        [
+            ("Porque el resorte tiene siempre la misma longitud",
+             "Justamente cambia de longitud: ese cambio es lo que se mide."),
+            ("Porque la fuerza aplicada se convierte en peso dentro del resorte",
+             "El resorte no convierte fuerzas en peso: solo se deforma en proporción a la fuerza."),
+            ("Porque el resorte acumula la fuerza y la muestra sumada al final de la medición",
+             "No hay acumulación: el estiramiento corresponde a la fuerza aplicada en ese instante."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Dos cuerpos idénticos se deslizan sobre superficies distintas con la "
+        "misma rapidez inicial. Uno recorre 3 m antes de detenerse y el otro, "
+        "9 m. ¿Qué se concluye?",
+        "El coeficiente de roce de la segunda superficie es menor",
+        "La distancia recorrida antes de detenerse depende de cuánto frena el "
+        "roce.\n\n"
+        "1) Con la misma rapidez inicial y la misma masa, la única diferencia "
+        "está en la fuerza de roce.\n"
+        "2) Un roce mayor produce una desaceleración mayor y detiene al cuerpo "
+        "en menos distancia.\n"
+        "3) El cuerpo que recorrió 9 m encontró menos roce, así que el "
+        "coeficiente de esa superficie es menor.\n\n"
+        "De hecho, si la distancia es el triple, la desaceleración es un tercio "
+        "y el coeficiente también, porque la distancia de frenado es "
+        "inversamente proporcional a él.",
+        [
+            ("El segundo cuerpo tiene mayor masa",
+             "El enunciado precisa que los cuerpos son idénticos: la masa es la misma."),
+            ("El segundo cuerpo partió con mayor rapidez",
+             "El enunciado fija la misma rapidez inicial para ambos."),
+            ("La segunda superficie ejerce mayor fuerza normal sobre el cuerpo",
+             "Con la misma masa y superficies horizontales, la normal es la misma en ambos casos."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un bloque de 4 kg es arrastrado sobre una superficie horizontal con una "
+        "fuerza de 30 N y el coeficiente de roce cinético es 0,25. Con "
+        "g = 10 m/s², ¿cuál es su aceleración?",
+        "5 m/s²",
+        "Hay que restar el roce a la fuerza aplicada antes de usar la segunda "
+        "ley.\n\n"
+        "1) Normal: N = 4 · 10 = 40 N.\n"
+        "2) Roce: 0,25 · 40 = 10 N, opuesto al movimiento.\n"
+        "3) Fuerza neta: 30 − 10 = 20 N.\n"
+        "4) Aceleración: 20 ÷ 4 = 5 m/s².\n\n"
+        "Sin considerar el roce el resultado habría sido 7,5 m/s², que es el "
+        "error más común en este tipo de problema.",
+        [
+            ("7,5 m/s²", "Usó la fuerza aplicada como si fuera la neta, ignorando el roce."),
+            ("2,5 m/s²", "Restó dos veces el roce, o dividió por una masa mayor que la real."),
+            ("10 m/s²", "Entregó el valor de la fuerza de roce en newton como si fuera una aceleración."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un resorte cumple la ley de Hooke con constante 250 N/m. ¿Qué fuerza se "
+        "necesita para estirarlo 12 cm?",
+        "30 N",
+        "Se aplica la ley cuidando la conversión de unidades.\n\n"
+        "1) Convierte: 12 cm = 0,12 m.\n"
+        "2) Aplica F = k · x = 250 · 0,12.\n"
+        "3) Resulta 30 N.\n\n"
+        "Comprobación: con 250 N/m, cada centímetro de estiramiento exige 2,5 N, "
+        "y 12 centímetros exigen 12 · 2,5 = 30 N.",
+        [
+            ("3.000 N", "Usó los 12 cm directamente sin convertirlos a metros."),
+            ("2.083 N", "Dividió la constante por la deformación en lugar de multiplicar."),
+            ("262 N", "Sumó la constante y la deformación en vez de multiplicarlas."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un estudiante afirma que la fuerza normal es siempre igual y opuesta al "
+        "peso. ¿En qué situación falla esa afirmación?",
+        "En un plano inclinado o dentro de un ascensor acelerado",
+        "La igualdad entre normal y peso es un resultado particular, no una "
+        "definición.\n\n"
+        "1) En una superficie horizontal y sin aceleración vertical, la normal "
+        "resulta igual al peso porque son las dos únicas fuerzas verticales y "
+        "deben equilibrarse.\n"
+        "2) En un plano inclinado, la normal equilibra solo la componente "
+        "perpendicular del peso, y por lo tanto es menor.\n"
+        "3) En un ascensor que acelera hacia arriba, la normal debe superar al "
+        "peso para producir la aceleración; si acelera hacia abajo, es menor.\n\n"
+        "La normal se calcula siempre a partir del equilibrio en la dirección "
+        "perpendicular a la superficie, no copiando el valor del peso.",
+        [
+            ("Nunca falla: es una consecuencia de la tercera ley de Newton",
+             "No forman un par acción-reacción: actúan sobre el mismo cuerpo y son de naturaleza distinta."),
+            ("Solo falla cuando el cuerpo se mueve horizontalmente",
+             "El movimiento horizontal no altera el equilibrio vertical: ahí la igualdad se mantiene."),
+            ("Solo falla si el cuerpo tiene una masa muy grande",
+             "La masa no cambia la relación: lo que la cambia es la inclinación o la aceleración vertical."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un grupo mide el estiramiento de un resorte para distintas masas "
+        "colgadas y grafica fuerza contra estiramiento. La recta se ajusta bien "
+        "hasta cierto punto y luego los datos se curvan hacia abajo. ¿Cómo se "
+        "interpreta?",
+        "Se superó el límite elástico del resorte",
+        "La ley de Hooke tiene un rango de validez.\n\n"
+        "1) Mientras el resorte se comporta elásticamente, la fuerza y el "
+        "estiramiento son proporcionales y los puntos caen sobre una recta.\n"
+        "2) Pasado cierto valor, el material se deforma de manera permanente: "
+        "cada newton adicional produce más estiramiento que antes, y la curva se "
+        "aparta de la recta.\n"
+        "3) Ese punto de quiebre es el límite elástico, y a partir de ahí el "
+        "resorte ya no recupera su longitud original.\n\n"
+        "El tramo recto sigue siendo válido para obtener la constante: lo que "
+        "hay que descartar son los puntos posteriores al quiebre.",
+        [
+            ("El instrumento de medición se descalibró a mitad del experimento",
+             "Es una posibilidad que hay que descartar, pero el comportamiento descrito es exactamente el esperado al superar el límite elástico."),
+            ("Las masas colgadas comenzaron a oscilar y falsearon la medición",
+             "Una oscilación daría dispersión al azar, no una desviación sistemática en un solo sentido."),
+            ("La constante elástica del resorte aumenta con la carga",
+             "La curva hacia abajo indica más estiramiento por unidad de fuerza, es decir, una constante aparente MENOR."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Se comparan dos afirmaciones sobre el roce: (I) siempre se opone al "
+        "movimiento, y (II) siempre se opone al movimiento relativo entre las "
+        "superficies. ¿Cuál es más precisa y por qué?",
+        "La segunda, porque el roce a veces impulsa el movimiento",
+        "La distinción se ve con claridad al caminar.\n\n"
+        "1) Al dar un paso, el pie empuja el suelo hacia atrás. El roce se opone "
+        "a ese deslizamiento relativo, así que actúa sobre el pie hacia "
+        "ADELANTE.\n"
+        "2) Esa fuerza hacia adelante es justamente la que impulsa a la "
+        "persona: el roce no se opone a su movimiento, lo hace posible.\n"
+        "3) Lo mismo ocurre con las ruedas motrices de un vehículo.\n\n"
+        "Por eso sobre hielo cuesta avanzar: sin roce, no hay fuerza externa "
+        "horizontal que impulse al cuerpo.",
+        [
+            ("La primera, porque el roce siempre disipa energía",
+             "Disipar energía y oponerse al movimiento del cuerpo son cosas distintas: el roce puede impulsar y aun así disipar."),
+            ("Ambas son equivalentes, porque el movimiento relativo coincide con el del cuerpo",
+             "No coinciden: al caminar, el pie tiende a deslizar hacia atrás mientras la persona avanza hacia adelante."),
+            ("La segunda, pero solo cuando se trata de roce estático entre superficies rugosas",
+             "La formulación en términos de movimiento relativo es la correcta en general, para roce estático y cinético."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un bloque se suelta sobre un plano inclinado y comienza a deslizarse "
+        "solo cuando la inclinación supera cierto ángulo. ¿Qué determina ese "
+        "ángulo?",
+        "La relación entre el roce estático máximo y la componente del peso",
+        "Es una competencia entre dos fuerzas que cambian al inclinar el "
+        "plano.\n\n"
+        "1) La componente del peso paralela al plano tiende a hacer deslizar el "
+        "bloque, y crece con la inclinación.\n"
+        "2) La componente perpendicular determina la normal y con ella el roce "
+        "estático máximo, que DISMINUYE al inclinar más.\n"
+        "3) Mientras el roce máximo supera a la componente paralela, el bloque "
+        "no se mueve. El deslizamiento comienza justo cuando ambas se igualan.\n\n"
+        "Ese ángulo depende solo del coeficiente de roce estático y no de la "
+        "masa: un bloque pesado y uno liviano del mismo material deslizan a la "
+        "misma inclinación.",
+        [
+            ("La masa del bloque: uno más pesado desliza con menor inclinación",
+             "La masa afecta por igual a las dos componentes del peso y se cancela: el ángulo no depende de ella."),
+            ("El área de la cara apoyada sobre el plano",
+             "El roce depende de la normal y no apreciablemente del área de contacto."),
+            ("La altura desde la que se suelta el bloque sobre el plano inclinado",
+             "El bloque se suelta en reposo: la altura solo determina cuánto recorrerá una vez que empiece a deslizar."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "¿Por qué los neumáticos de un vehículo tienen dibujo en su superficie?",
+        "Para evacuar el agua y mantener el contacto con el pavimento",
+        "El dibujo no aumenta el roce sobre suelo seco: resuelve otro "
+        "problema.\n\n"
+        "1) Sobre pavimento mojado, una capa de agua puede interponerse entre el "
+        "neumático y el suelo y separar las superficies.\n"
+        "2) Sin contacto no hay roce, y el vehículo pierde tracción y "
+        "dirección: es el aquaplaning.\n"
+        "3) Los canales del dibujo desalojan esa agua hacia los costados y "
+        "permiten que la goma toque el pavimento.\n\n"
+        "Por eso los neumáticos de competición en pista seca son lisos: sin agua "
+        "que evacuar, conviene la mayor superficie de goma posible.",
+        [
+            ("Para aumentar el área de contacto y con ella el roce",
+             "El dibujo REDUCE el área de goma en contacto; su función es otra."),
+            ("Para disminuir el roce y así ahorrar combustible",
+             "Un roce menor con el pavimento comprometería la tracción y el frenado."),
+            ("Para que el neumático se caliente menos durante la marcha",
+             "La disipación de calor influye en el diseño, pero la función principal del dibujo es evacuar agua."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Una cuerda ideal sostiene un cuerpo colgado. ¿Qué significa que la "
+        "cuerda sea ideal?",
+        "Que es inextensible y de masa despreciable",
+        "Es una idealización que simplifica el análisis sin cambiar lo "
+        "esencial.\n\n"
+        "1) INEXTENSIBLE significa que no se estira: todos sus puntos se mueven "
+        "con la misma rapidez, lo que permite tratar a los cuerpos unidos como "
+        "un sistema.\n"
+        "2) De MASA DESPRECIABLE significa que no hay que incluir su peso en el "
+        "análisis, y que la tensión es la misma en toda su extensión.\n"
+        "3) Con esas dos condiciones, la cuerda solo transmite fuerza sin "
+        "modificarla.\n\n"
+        "Las pruebas oficiales declaran esta convención al comienzo, junto con la "
+        "de polea ideal, que es la que tiene roce despreciable.",
+        [
+            ("Que puede estirarse sin romperse ante cualquier fuerza",
+             "Una cuerda ideal es justamente inextensible: no se estira."),
+            ("Que su tensión aumenta a lo largo de su longitud",
+             "Con masa despreciable la tensión es la misma en todos sus puntos."),
+            ("Que su masa es igual a la del cuerpo que sostiene, para equilibrar el sistema",
+             "Su masa se considera despreciable frente a la del cuerpo, no igual a ella."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Dos cuerpos de distinta masa se dejan caer desde la misma altura en el "
+        "aire: una hoja de papel extendida y la misma hoja hecha una bolita "
+        "apretada. ¿Qué se observa y qué muestra?",
+        "La bolita llega antes, y muestra que influye la resistencia del aire",
+        "El experimento controla la masa y varía solo la forma.\n\n"
+        "1) Las dos tienen exactamente la misma masa: es la misma hoja.\n"
+        "2) La hoja extendida presenta mucha más área al avance, así que recibe "
+        "mayor resistencia del aire y cae más lento.\n"
+        "3) Como la masa es idéntica, la diferencia no puede atribuirse al "
+        "peso: solo queda el aire.\n\n"
+        "Es un diseño experimental elegante, porque aísla la variable en estudio "
+        "sin necesidad de una cámara de vacío.",
+        [
+            ("Llegan al mismo tiempo, porque tienen la misma masa",
+             "Tienen la misma masa pero distinta resistencia del aire, y por eso caen de manera distinta."),
+            ("La hoja extendida llega antes por tener mayor superficie",
+             "Mayor superficie significa mayor resistencia y por lo tanto caída más lenta."),
+            ("La bolita llega antes porque al comprimirse aumentó su masa",
+             "Comprimir la hoja no cambia su masa: cambia su forma y el área que enfrenta al aire."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un cuerpo de 6 kg cuelga en reposo de una cuerda vertical. Con "
+        "g = 10 m/s², ¿cuál es la tensión de la cuerda?",
+        "60 N",
+        "En equilibrio, la tensión iguala al peso.\n\n"
+        "1) El peso es 6 · 10 = 60 N hacia abajo.\n"
+        "2) El cuerpo está en reposo, así que la fuerza neta es cero.\n"
+        "3) La tensión debe valer 60 N hacia arriba.\n\n"
+        "Si la cuerda comenzara a subir el cuerpo acelerando, la tensión "
+        "superaría los 60 N; si lo dejara bajar acelerando, sería menor.",
+        [
+            ("6 N", "Entregó la masa en newton, sin multiplicar por la aceleración de gravedad."),
+            ("600 N", "Multiplicó por 100 en lugar de por 10."),
+            ("0 N, porque el cuerpo no se mueve", "Fuerza neta cero no significa tensión cero: sin tensión el cuerpo caería."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "¿Qué fuerza permite que un libro apoyado sobre una mesa no la "
+        "atraviese?",
+        "La fuerza normal que la mesa ejerce sobre él",
+        "La mesa no es un obstáculo pasivo: ejerce una fuerza real.\n\n"
+        "1) El peso del libro comprime ligeramente la superficie de la mesa.\n"
+        "2) La mesa, al deformarse de manera imperceptible, responde empujando "
+        "hacia arriba: esa es la fuerza normal.\n"
+        "3) Esa fuerza equilibra al peso y por eso el libro permanece en "
+        "reposo.\n\n"
+        "Si la mesa no pudiera ejercer una normal suficiente, cedería: es lo que "
+        "ocurre al apoyar un objeto demasiado pesado sobre una superficie "
+        "frágil.",
+        [
+            ("La fuerza de roce entre el libro y la mesa",
+             "El roce actúa paralelo a la superficie y se opone al deslizamiento, no al hundimiento."),
+            ("La tensión de la superficie de la mesa",
+             "La tensión es la fuerza que transmite una cuerda o un cable estirado, no una superficie de apoyo."),
+            ("El propio peso del libro, que se equilibra a sí mismo",
+             "Una fuerza no puede equilibrarse a sí misma: hace falta otra, ejercida por otro cuerpo."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "En una superficie horizontal, ¿de qué depende la magnitud de la fuerza "
+        "de roce cinético?",
+        "Del coeficiente de roce y de la fuerza normal",
+        "La relación es un producto de esos dos factores.\n\n"
+        "1) El COEFICIENTE depende del par de materiales en contacto y de su "
+        "estado: goma sobre asfalto seco tiene un coeficiente mucho mayor que "
+        "acero sobre hielo.\n"
+        "2) La NORMAL indica con cuánta fuerza se comprimen las superficies.\n"
+        "3) El roce es el producto de ambos, y su dirección es opuesta al "
+        "movimiento relativo.\n\n"
+        "No depende apreciablemente del área de contacto ni de la rapidez con "
+        "que el cuerpo se desliza.",
+        [
+            ("Del área de contacto entre las superficies",
+             "El área aparente no influye apreciablemente: lo determinante es la fuerza normal."),
+            ("De la rapidez con que se desplaza el cuerpo",
+             "El roce cinético es aproximadamente constante mientras el cuerpo se desliza, sin importar su rapidez."),
+            ("Del volumen del cuerpo que se desliza sobre la superficie",
+             "El volumen no interviene: lo que importa es con cuánta fuerza se aprietan las superficies."),
+        ],
+    ),
+]
+
+QUESTIONS_CIENCIAS += [
+    _q(
+        "cie_roce", "facil",
+        "En un vehículo se prefiere que las ruedas rueden en vez de deslizar al "
+        "frenar. ¿Por qué?",
+        "Rodando se conserva el control de la dirección",
+        "El estado de la rueda determina qué tipo de roce actúa.\n\n"
+        "1) Mientras la rueda gira sin patinar, el contacto con el pavimento es "
+        "de roce ESTÁTICO, que admite fuerzas mayores y permite dirigir.\n"
+        "2) Si la rueda se traba y desliza, pasa a actuar el roce CINÉTICO, "
+        "menor, y además el vehículo pierde la capacidad de girar: sigue "
+        "derecho hacia donde llevaba.\n"
+        "3) Por eso los sistemas antibloqueo sueltan y aprietan el freno muchas "
+        "veces por segundo, manteniendo la rueda al borde del deslizamiento.\n\n"
+        "El resultado es que se frena en menos distancia y sin perder el "
+        "control.",
+        [
+            ("Rodando el roce desaparece por completo",
+             "No desaparece: es justamente el roce el que frena el vehículo."),
+            ("Deslizando la rueda se calienta menos y dura más",
+             "Deslizando la rueda se calienta MUCHO más y se desgasta en un punto."),
+            ("Rodando el vehículo aprovecha la inercia y necesita menos frenado",
+             "La inercia es lo que hay que vencer al frenar: no ayuda a detenerse."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "¿Para qué sirve el aceite lubricante entre dos piezas metálicas que se "
+        "rozan?",
+        "Para reducir el roce interponiendo una capa entre las superficies",
+        "El lubricante evita el contacto directo entre las rugosidades.\n\n"
+        "1) Sin lubricante, las asperezas microscópicas de las dos superficies "
+        "se traban entre sí y se sueldan momentáneamente por la presión.\n"
+        "2) Una capa de aceite las separa, de modo que el deslizamiento ocurre "
+        "dentro del propio fluido, que ofrece mucha menos resistencia.\n"
+        "3) El resultado es menos fuerza necesaria, menos calor y mucho menos "
+        "desgaste.\n\n"
+        "Por eso una máquina sin lubricar no solo consume más energía: se "
+        "destruye.",
+        [
+            ("Para aumentar el roce y mejorar el agarre entre las piezas",
+             "El lubricante hace exactamente lo contrario: reduce el roce."),
+            ("Para enfriar las piezas sin afectar el roce entre ellas",
+             "El aceite también refrigera, pero su función principal es reducir el roce; el calor disminuye como consecuencia."),
+            ("Para aumentar la fuerza normal entre las superficies en contacto",
+             "La normal la determina la carga sobre las piezas, no el lubricante."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "Un cuerpo de 3 kg está en reposo sobre una mesa horizontal. Con "
+        "g = 10 m/s², ¿cuál es la fuerza normal que la mesa ejerce sobre él?",
+        "30 N",
+        "Sobre una superficie horizontal y sin otras fuerzas verticales, la "
+        "normal iguala al peso.\n\n"
+        "1) El peso es m · g = 3 · 10 = 30 N hacia abajo.\n"
+        "2) El cuerpo no acelera verticalmente, así que la fuerza neta vertical "
+        "es cero.\n"
+        "3) La normal vale entonces 30 N hacia arriba.\n\n"
+        "Si alguien empujara el cuerpo hacia abajo, la normal aumentaría; si lo "
+        "tirara hacia arriba con una cuerda, disminuiría.",
+        [
+            ("3 N", "Entregó la masa en newton, sin multiplicar por la aceleración de gravedad."),
+            ("300 N", "Multiplicó por 100 en lugar de por 10."),
+            ("10 N", "Entregó el valor de la aceleración de gravedad en vez de la fuerza."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "Los vehículos de competición y los trenes de alta velocidad tienen "
+        "formas alargadas y suaves. ¿Qué buscan con ese diseño?",
+        "Disminuir la resistencia del aire al avanzar",
+        "La resistencia del aire depende mucho de la forma del cuerpo.\n\n"
+        "1) Una forma achatada obliga al aire a separarse bruscamente y genera "
+        "turbulencia detrás del vehículo, lo que aumenta la resistencia.\n"
+        "2) Una forma alargada permite que el aire vuelva a cerrarse "
+        "suavemente, reduciendo esa turbulencia.\n"
+        "3) Como la resistencia crece rápidamente con la rapidez, a altas "
+        "velocidades esta es la fuerza dominante que hay que vencer.\n\n"
+        "Por eso la aerodinámica importa poco en ciudad y muchísimo en "
+        "carretera.",
+        [
+            ("Aumentar el roce con el suelo para tener mejor agarre",
+             "El agarre depende de los neumáticos y de la carga sobre ellos, no de la forma de la carrocería."),
+            ("Reducir su masa y así necesitar menos fuerza para acelerar",
+             "La forma no determina la masa: un cuerpo aerodinámico puede ser igual de masivo."),
+            ("Evitar que el aire caliente las superficies exteriores del vehículo",
+             "El calentamiento por fricción con el aire es relevante recién a velocidades muchísimo mayores."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un resorte de constante 500 N/m sostiene un cuerpo colgado y se estira "
+        "6 cm. Con g = 10 m/s², ¿cuál es la masa del cuerpo?",
+        "3 kg",
+        "En equilibrio, la fuerza elástica iguala al peso.\n\n"
+        "1) Convierte: 6 cm = 0,06 m.\n"
+        "2) Fuerza elástica: F = k · x = 500 · 0,06 = 30 N.\n"
+        "3) Como el cuerpo está en reposo, esa fuerza iguala al peso: "
+        "m · 10 = 30, así que m = 3 kg.\n\n"
+        "Es el principio de una balanza de resorte: la deformación permite "
+        "deducir la masa, siempre que se conozca la constante y la gravedad "
+        "local.",
+        [
+            ("30 kg", "Se quedó con la fuerza en newton y le cambió la unidad a kilogramos."),
+            ("0,3 kg", "Dividió dos veces por 10, o usó los 6 cm sin convertir."),
+            ("300 kg", "Usó los 6 cm directamente sin convertirlos a metros."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un cuerpo se desliza por un plano inclinado con rapidez constante. "
+        "¿Qué se puede afirmar sobre las fuerzas que actúan sobre él?",
+        "El roce equilibra la componente del peso paralela al plano",
+        "Rapidez constante implica fuerza neta cero, también sobre un plano "
+        "inclinado.\n\n"
+        "1) La componente del peso paralela al plano tiende a acelerar el cuerpo "
+        "hacia abajo.\n"
+        "2) Como no acelera, algo debe equilibrarla exactamente: el roce, "
+        "dirigido hacia arriba a lo largo del plano.\n"
+        "3) En la dirección perpendicular, la normal equilibra la otra "
+        "componente del peso.\n\n"
+        "Ese equilibrio ocurre a un ángulo muy preciso: si el plano se inclinara "
+        "un poco más, el cuerpo aceleraría; un poco menos, se detendría.",
+        [
+            ("La fuerza neta apunta hacia abajo del plano",
+             "Con fuerza neta hacia abajo el cuerpo aceleraría, y su rapidez es constante."),
+            ("La normal equilibra el peso completo del cuerpo",
+             "La normal equilibra solo la componente perpendicular del peso, no el peso entero."),
+            ("No actúa roce, porque el cuerpo está en movimiento",
+             "El roce cinético actúa justamente cuando el cuerpo se desliza."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un método para medir el coeficiente de roce estático consiste en "
+        "inclinar poco a poco un plano hasta que el cuerpo comienza a deslizar. "
+        "¿Por qué ese ángulo entrega el coeficiente?",
+        "En ese punto el roce máximo iguala a la componente del peso",
+        "El instante del deslizamiento marca una igualdad exacta entre dos "
+        "fuerzas.\n\n"
+        "1) Antes de deslizar, el roce estático iguala a la componente del peso "
+        "paralela al plano, que crece con la inclinación.\n"
+        "2) El roce máximo, en cambio, es proporcional a la normal, que "
+        "disminuye al inclinar.\n"
+        "3) El deslizamiento comienza justo cuando ambas se igualan, y de esa "
+        "igualdad se despeja el coeficiente en función del ángulo.\n\n"
+        "El método es elegante porque no requiere medir fuerzas: basta un "
+        "transportador. Y el resultado no depende de la masa del cuerpo.",
+        [
+            ("Porque a ese ángulo la fuerza normal se hace cero",
+             "La normal disminuye con la inclinación pero solo se anula con el plano vertical."),
+            ("Porque a ese ángulo el peso del cuerpo alcanza su valor máximo",
+             "El peso no cambia al inclinar el plano: lo que cambia es cómo se reparte en componentes."),
+            ("Porque el roce cinético supera al estático justo en ese instante",
+             "El cinético es menor que el estático máximo: eso explica el arranque brusco, no la medición del ángulo."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Una persona empuja una caja con una fuerza horizontal de 40 N y la caja "
+        "no se mueve. ¿Cuánto vale la fuerza de roce en ese momento?",
+        "40 N",
+        "El roce estático se ajusta a la fuerza aplicada.\n\n"
+        "1) La caja no acelera, así que la fuerza neta horizontal es cero.\n"
+        "2) La única otra fuerza horizontal es el roce estático.\n"
+        "3) Por lo tanto vale exactamente 40 N, opuesto al empuje.\n\n"
+        "Si la persona empujara con 60 N y la caja siguiera quieta, el roce "
+        "valdría 60 N. Esto continúa hasta alcanzar el máximo estático: pasado "
+        "ese punto, la caja se mueve.",
+        [
+            ("Su valor máximo, que depende del coeficiente de roce",
+             "El máximo es una cota superior; mientras la caja no se mueva, el roce vale lo mismo que la fuerza aplicada."),
+            ("Cero, porque la caja no se desplaza",
+             "Si el roce fuera cero, los 40 N serían fuerza neta y la caja aceleraría."),
+            ("Un valor menor que 40 N, porque parte de la fuerza se pierde en el contacto",
+             "Si fuera menor quedaría fuerza neta y la caja se movería."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un cuerpo de 10 kg cuelga de una cuerda dentro de un ascensor que "
+        "acelera hacia abajo a 3 m/s². Con g = 10 m/s², ¿cuál es la tensión de "
+        "la cuerda?",
+        "70 N",
+        "La tensión debe ser menor que el peso para que la fuerza neta apunte "
+        "hacia abajo.\n\n"
+        "1) El peso es 10 · 10 = 100 N.\n"
+        "2) La fuerza neta necesaria hacia abajo es m · a = 10 · 3 = 30 N.\n"
+        "3) Como la neta es peso menos tensión, se tiene 100 − T = 30, así que "
+        "T = 70 N.\n\n"
+        "Si el ascensor cayera libremente, la aceleración sería 10 m/s² y la "
+        "tensión se anularía: el cuerpo flotaría respecto de la cabina.",
+        [
+            ("100 N", "Ese es el peso: correspondería a un ascensor en reposo o con velocidad constante."),
+            ("130 N", "Sumó la fuerza neta al peso: eso correspondería a una aceleración hacia arriba."),
+            ("30 N", "Entregó la fuerza neta, olvidando que la cuerda además sostiene buena parte del peso."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Se comparan dos superficies para las zapatillas de un deportista. En un "
+        "ensayo, la suela A necesita 120 N para empezar a deslizar sobre el piso "
+        "y la suela B, 90 N, con la misma carga encima. ¿Qué se concluye?",
+        "La suela A tiene mayor coeficiente de roce estático",
+        "Con la misma normal, la fuerza necesaria para iniciar el "
+        "deslizamiento es proporcional al coeficiente.\n\n"
+        "1) La carga es la misma en ambos ensayos, así que la fuerza normal "
+        "también.\n"
+        "2) El roce estático máximo es coeficiente por normal; la suela que "
+        "exige más fuerza para deslizar tiene el máximo mayor.\n"
+        "3) Con la normal igual, eso solo puede deberse a un coeficiente "
+        "mayor.\n\n"
+        "Mantener la carga constante es lo que hace válida la comparación: si "
+        "una suela se hubiera ensayado con más peso encima, el resultado no "
+        "diría nada sobre el material.",
+        [
+            ("La suela B tiene mayor coeficiente porque desliza con menos fuerza",
+             "Deslizar con menos fuerza indica MENOS agarre, es decir, un coeficiente menor."),
+            ("Las dos tienen el mismo coeficiente y lo que cambia es el área de la suela",
+             "El área no influye apreciablemente en el roce; además el enunciado atribuye la diferencia al material."),
+            ("No se puede concluir nada sin conocer la masa del deportista",
+             "El enunciado precisa que la carga fue la misma en los dos ensayos: eso basta para comparar."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un objeto pesa 600 N en la Tierra. En un planeta donde la aceleración "
+        "de gravedad es el doble, ¿cuánto pesa y cuánta masa tiene, si en la "
+        "Tierra g = 10 m/s²?",
+        "1.200 N de peso y 60 kg de masa",
+        "La masa se obtiene del dato terrestre y no cambia al viajar.\n\n"
+        "1) En la Tierra: m = P / g = 600 ÷ 10 = 60 kg.\n"
+        "2) La masa es la misma en cualquier lugar: 60 kg.\n"
+        "3) En el otro planeta, con g doble: P = 60 · 20 = 1.200 N.\n\n"
+        "El peso se duplicó y la masa no cambió: es la distinción central entre "
+        "ambas magnitudes.",
+        [
+            ("1.200 N de peso y 120 kg de masa",
+             "La masa no cambia al cambiar de planeta: sigue siendo 60 kg."),
+            ("600 N de peso y 60 kg de masa",
+             "Con una gravedad doble el peso también se duplica: no puede mantenerse igual."),
+            ("300 N de peso y 60 kg de masa",
+             "Con gravedad DOBLE el peso aumenta, no disminuye."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Al empujar un mueble sobre el piso, una persona lo hace primero "
+        "horizontalmente y luego con la misma fuerza pero inclinada hacia abajo. "
+        "¿Qué ocurre con el roce en el segundo caso?",
+        "Aumenta, porque la componente vertical incrementa la normal",
+        "Empujar en diagonal cambia la fuerza normal y con ella el roce.\n\n"
+        "1) Al inclinar el empuje hacia abajo, aparece una componente vertical "
+        "que se suma al peso comprimiendo el piso.\n"
+        "2) La normal aumenta, y como el roce es proporcional a ella, el roce "
+        "también aumenta.\n"
+        "3) Además, la componente horizontal disponible para mover el mueble es "
+        "menor que la fuerza total.\n\n"
+        "Por eso conviene empujar horizontalmente o incluso tirar ligeramente "
+        "hacia arriba, lo que reduce la normal y el roce.",
+        [
+            ("Disminuye, porque parte de la fuerza deja de actuar horizontalmente",
+             "Es cierto que la componente horizontal disminuye, pero el roce aumenta porque la normal crece."),
+            ("No cambia, porque el roce solo depende de los materiales",
+             "El roce depende del coeficiente y también de la fuerza normal, que sí cambia."),
+            ("Aumenta, porque la fuerza aplicada es mayor en el segundo caso",
+             "El enunciado precisa que la fuerza es la misma: lo que cambia es su dirección."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "¿Qué significa que en un problema se indique que la polea es ideal?",
+        "Que su roce y su masa son despreciables",
+        "Es una convención que las pruebas oficiales declaran explícitamente.\n\n"
+        "1) ROCE DESPRECIABLE significa que la polea no consume fuerza al girar, "
+        "así que la tensión de la cuerda es la misma a ambos lados.\n"
+        "2) MASA DESPRECIABLE significa que no hay que considerar la inercia de "
+        "la polea al calcular la aceleración del sistema.\n"
+        "3) Con esas dos condiciones, la polea solo cambia la dirección de la "
+        "fuerza sin alterar su magnitud.\n\n"
+        "Una polea real tiene roce e inercia, y por eso la tensión difiere "
+        "ligeramente entre ambos lados.",
+        [
+            ("Que duplica la fuerza aplicada sobre la cuerda",
+             "Una polea fija no multiplica la fuerza: solo cambia su dirección."),
+            ("Que la cuerda no puede deslizar sobre ella en ninguna condición",
+             "El enunciado sobre poleas ideales se refiere a roce y masa despreciables, no al agarre de la cuerda."),
+            ("Que su radio es tan pequeño que no influye en el resultado del problema",
+             "El radio no interviene si la masa es despreciable: lo determinante es esa condición, no el tamaño."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un bloque de 2 kg se desliza sobre una superficie horizontal y se "
+        "detiene tras recorrer 8 m desde una rapidez inicial de 4 m/s. Con "
+        "g = 10 m/s², ¿cuál es el coeficiente de roce cinético?",
+        "0,1",
+        "Primero la desaceleración por cinemática y después el coeficiente.\n\n"
+        "1) De v² = v₀² + 2·a·d: 0 = 16 + 2·a·8, así que 16a = −16 y "
+        "a = −1 m/s².\n"
+        "2) La fuerza de roce es m · a = 2 · 1 = 2 N.\n"
+        "3) La normal es 2 · 10 = 20 N, así que el coeficiente es "
+        "2 ÷ 20 = 0,1.\n\n"
+        "Nota que la masa se cancela: el coeficiente se puede obtener solo con "
+        "la rapidez inicial y la distancia de frenado, sin conocer la masa.",
+        [
+            ("0,2", "Se equivocó en un factor 2 al despejar la aceleración de la relación cinemática."),
+            ("0,5", "Dividió la rapidez inicial por la distancia sin pasar por la aceleración."),
+            ("1", "Confundió la aceleración de frenado, que vale 1 m/s², con el coeficiente, que es adimensional."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Dos resortes idénticos de constante 200 N/m se cuelgan uno a "
+        "continuación del otro y se les aplica una fuerza de 40 N en el extremo "
+        "inferior. ¿Cuánto se estira el conjunto?",
+        "40 cm",
+        "En serie, cada resorte soporta la fuerza completa.\n\n"
+        "1) La tensión se transmite íntegra a lo largo de la cadena: cada "
+        "resorte recibe los 40 N.\n"
+        "2) Cada uno se estira x = F / k = 40 ÷ 200 = 0,2 m = 20 cm.\n"
+        "3) El estiramiento total es la suma: 20 + 20 = 40 cm.\n\n"
+        "Dicho de otro modo, dos resortes en serie equivalen a uno de constante "
+        "mitad: 100 N/m, y 40 ÷ 100 = 0,4 m. Si estuvieran lado a lado, en "
+        "cambio, se repartirían la carga y el estiramiento sería la mitad.",
+        [
+            ("20 cm", "Calculó el estiramiento de un solo resorte, sin sumar el del otro."),
+            ("10 cm", "Supuso que la fuerza se reparte entre los dos, lo que ocurre si están lado a lado, no en serie."),
+            ("80 cm", "Duplicó dos veces el estiramiento individual."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un estudiante afirma que en el vacío una pluma y un martillo caen "
+        "igual porque en el vacío no hay gravedad. ¿Qué corrección corresponde?",
+        "Caen igual porque no hay aire, y la gravedad sí actúa",
+        "La conclusión es correcta pero la razón está invertida.\n\n"
+        "1) En el vacío hay gravedad: es justamente ella la que hace caer a los "
+        "dos cuerpos. Si no la hubiera, quedarían flotando.\n"
+        "2) Lo que falta es el AIRE, y por lo tanto la resistencia que en la "
+        "atmósfera frena mucho más a la pluma que al martillo.\n"
+        "3) Sin esa resistencia, la única fuerza es el peso, y la aceleración "
+        "resultante no depende de la masa.\n\n"
+        "El experimento se realizó en la Luna en 1971, donde hay gravedad y "
+        "prácticamente no hay atmósfera: los dos objetos llegaron al suelo a la "
+        "vez.",
+        [
+            ("Es correcta: sin gravedad los cuerpos caen todos igual",
+             "Sin gravedad no caerían en absoluto: permanecerían flotando."),
+            ("Caen igual porque en el vacío la masa de los cuerpos se anula",
+             "La masa no cambia en el vacío: sigue siendo la misma."),
+            ("Caen igual porque en el vacío la aceleración de gravedad es mucho mayor",
+             "La aceleración de gravedad no aumenta al quitar el aire: simplemente deja de haber una fuerza que la contrarreste."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Se afirma que el roce siempre es un fenómeno indeseable que conviene "
+        "eliminar. ¿Cómo se evalúa esa afirmación?",
+        "Es incorrecta: sin roce no se podría caminar ni frenar",
+        "El roce disipa energía, pero también hace posibles cosas esenciales.\n\n"
+        "1) Es cierto que en un motor o en un eje el roce produce desgaste y "
+        "pérdidas, y por eso se lubrica.\n"
+        "2) Pero caminar depende del roce entre el pie y el suelo; frenar, del "
+        "roce entre neumático y pavimento; sostener un objeto en la mano, del "
+        "roce entre los dedos y su superficie.\n"
+        "3) Sobre hielo, donde el roce es mínimo, esas tres acciones se vuelven "
+        "muy difíciles.\n\n"
+        "El criterio correcto no es eliminarlo sino controlarlo: reducirlo donde "
+        "estorba y aumentarlo donde se necesita.",
+        [
+            ("Es correcta, porque el roce siempre transforma energía útil en calor",
+             "La disipación es real, pero eso no vuelve indeseable al roce en las situaciones donde es imprescindible."),
+            ("Es correcta, salvo en las máquinas donde el roce se aprovecha para generar calor",
+             "El calor no es el aprovechamiento principal: la tracción y el frenado son los usos esenciales."),
+            ("Es incorrecta, porque el roce nunca produce pérdidas de energía en un sistema real",
+             "Sí las produce: por eso se lubrican los motores y se diseñan rodamientos."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un grupo mide la fuerza necesaria para arrastrar un bloque a rapidez "
+        "constante, agregando pesas encima en cada ensayo. Grafica esa fuerza "
+        "contra la fuerza normal y obtiene una recta por el origen. ¿Qué "
+        "representa la pendiente?",
+        "El coeficiente de roce cinético",
+        "El gráfico es la expresión directa de la relación entre roce y "
+        "normal.\n\n"
+        "1) A rapidez constante, la fuerza aplicada iguala exactamente al roce: "
+        "la fuerza neta es cero.\n"
+        "2) La relación entre roce y normal es roce = coeficiente · normal, que "
+        "en el gráfico es una recta por el origen.\n"
+        "3) Su pendiente es, por lo tanto, el coeficiente de roce cinético, que "
+        "es adimensional.\n\n"
+        "Que la recta pase por el origen confirma además que sin carga no hay "
+        "roce, y que la relación es proporcional y no de otro tipo.",
+        [
+            ("La masa del bloque utilizado en el experimento",
+             "La masa está incorporada en la normal, que es una de las variables del gráfico, no su pendiente."),
+            ("La fuerza de roce estático máximo",
+             "El ensayo se hace a rapidez constante, así que mide roce cinético; además ese sería un punto, no una pendiente."),
+            ("La aceleración del bloque durante cada ensayo",
+             "El bloque se mueve a rapidez constante: su aceleración es cero en todos los ensayos."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Una caja de 12 kg se empuja sobre un piso con coeficiente de roce "
+        "cinético 0,3, aplicando una fuerza horizontal de 60 N. Con g = 10 m/s², "
+        "¿qué ocurre con la caja?",
+        "Acelera a 2 m/s²",
+        "Hay que comparar la fuerza aplicada con el roce y aplicar la segunda "
+        "ley.\n\n"
+        "1) Normal: 12 · 10 = 120 N.\n"
+        "2) Roce cinético: 0,3 · 120 = 36 N.\n"
+        "3) Fuerza neta: 60 − 36 = 24 N.\n"
+        "4) Aceleración: 24 ÷ 12 = 2 m/s².\n\n"
+        "Si la fuerza aplicada hubiera sido menor que 36 N, la caja no se habría "
+        "movido y el roce estático habría igualado a esa fuerza.",
+        [
+            ("Se mueve con rapidez constante",
+             "Eso ocurriría si la fuerza aplicada igualara exactamente al roce, es decir, 36 N."),
+            ("Permanece en reposo, porque el roce supera a la fuerza aplicada",
+             "El roce vale 36 N y la fuerza aplicada 60 N: la fuerza aplicada es mayor."),
+            ("Acelera a 5 m/s²",
+             "Usó los 60 N como fuerza neta, ignorando el roce que se opone."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un cuerpo cuelga de dos cuerdas que forman 60° entre sí y está en "
+        "reposo. Si se separan las cuerdas hasta formar 120°, manteniendo el "
+        "mismo cuerpo, ¿qué ocurre con la tensión de cada una?",
+        "Aumenta",
+        "Cuanto más abiertas las cuerdas, menor es la fracción de cada tensión "
+        "que apunta hacia arriba.\n\n"
+        "1) El equilibrio exige que las componentes verticales de ambas "
+        "tensiones sumen el peso, que no cambia.\n"
+        "2) Al abrir el ángulo, cada cuerda queda más cerca de la horizontal y "
+        "su componente vertical representa una fracción menor de su tensión "
+        "total.\n"
+        "3) Para que esas componentes sigan sumando el peso, la tensión de cada "
+        "cuerda debe aumentar.\n\n"
+        "En el límite, con las cuerdas casi horizontales, la tensión crece sin "
+        "cota: por eso un cable tendido casi recto se corta con una carga "
+        "pequeña colgada al medio.",
+        [
+            ("Disminuye", "Al abrirse, cada cuerda contribuye menos por unidad de tensión, así que debe tensarse más, no menos."),
+            ("Se mantiene igual, porque el peso del cuerpo no cambió",
+             "El peso no cambia, pero sí cambia cómo se reparte entre las cuerdas según su inclinación."),
+            ("Se anula, porque las cuerdas quedan casi horizontales y dejan de sostener",
+             "Nunca se anula: si lo hiciera, nada sostendría al cuerpo y este caería."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "En un ascensor que acelera hacia abajo, una persona sobre una balanza "
+        "observa que la lectura disminuye. ¿Cómo se explica?",
+        "La normal es menor que su peso porque la fuerza neta apunta abajo",
+        "La balanza mide la normal, no el peso.\n\n"
+        "1) Para que la persona acelere hacia abajo, la fuerza neta debe "
+        "apuntar en ese sentido.\n"
+        "2) Las dos fuerzas verticales son el peso, hacia abajo, y la normal, "
+        "hacia arriba. Para que la neta apunte hacia abajo, la normal debe ser "
+        "MENOR que el peso.\n"
+        "3) La balanza registra esa normal disminuida y por eso marca menos.\n\n"
+        "El peso no cambió en ningún momento: lo que cambió es la fuerza con que "
+        "la persona presiona la balanza.",
+        [
+            ("El peso de la persona disminuye durante el descenso",
+             "El peso depende de la masa y de la gravedad, y ninguna de las dos cambia dentro del ascensor."),
+            ("La balanza se descalibra al moverse el ascensor",
+             "La lectura es correcta: efectivamente la fuerza sobre la balanza es menor."),
+            ("La gravedad dentro del ascensor disminuye mientras este acelera",
+             "La gravedad no cambia: lo que cambia es el estado de movimiento del sistema."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Se cuelga un cuerpo de un resorte y el sistema queda en reposo. ¿Qué "
+        "fuerzas actúan sobre el cuerpo y cómo se relacionan?",
+        "El peso y la fuerza elástica, iguales en magnitud y opuestas",
+        "Es una situación de equilibrio con dos fuerzas verticales.\n\n"
+        "1) El peso tira del cuerpo hacia abajo.\n"
+        "2) El resorte, estirado, tira del cuerpo hacia arriba con una fuerza "
+        "proporcional a su deformación.\n"
+        "3) Como el cuerpo está en reposo, la fuerza neta es cero: las dos "
+        "fuerzas son iguales en magnitud y opuestas en sentido.\n\n"
+        "El resorte se estira exactamente lo necesario para que su fuerza "
+        "iguale al peso: por eso un cuerpo más pesado lo estira más.",
+        [
+            ("Solo la fuerza elástica, porque el resorte sostiene al cuerpo",
+             "El peso sigue actuando: si no lo hiciera, el resorte no se estiraría."),
+            ("Solo el peso, porque el resorte no ejerce fuerza cuando está en reposo",
+             "Un resorte estirado ejerce fuerza aunque el sistema esté en reposo: por eso el cuerpo no cae."),
+            ("El peso y la fuerza elástica, siendo la elástica siempre mayor",
+             "Si fuera mayor, el cuerpo aceleraría hacia arriba en vez de quedar en reposo."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Se afirma que el roce con el aire aumenta con la rapidez del cuerpo. "
+        "¿Qué consecuencia tiene eso para un objeto que cae?",
+        "Alcanza una rapidez límite y deja de acelerar",
+        "La dependencia con la rapidez produce un equilibrio automático.\n\n"
+        "1) Al comenzar la caída, la rapidez es baja y la resistencia del aire "
+        "es pequeña: el peso domina y el cuerpo acelera.\n"
+        "2) Al aumentar la rapidez, la resistencia crece y la fuerza neta "
+        "disminuye: la aceleración se va reduciendo.\n"
+        "3) Cuando la resistencia iguala al peso, la fuerza neta se anula y la "
+        "rapidez se estabiliza.\n\n"
+        "Ese valor límite depende de la forma y del área del cuerpo: por eso un "
+        "paracaídas abierto reduce drásticamente la rapidez límite.",
+        [
+            ("Acelera cada vez más rápido a medida que gana rapidez",
+             "Ocurre lo contrario: la resistencia creciente reduce la aceleración."),
+            ("Se detiene en el aire cuando la resistencia iguala al peso",
+             "No se detiene: deja de acelerar y continúa cayendo a rapidez constante."),
+            ("Comienza a subir cuando la resistencia del aire supera al peso",
+             "La resistencia no llega a superar al peso: ambos se igualan y el sistema se estabiliza."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un cuerpo de 8 kg es levantado verticalmente con velocidad constante "
+        "mediante una cuerda. Con g = 10 m/s², ¿cuál es la tensión?",
+        "80 N",
+        "Velocidad constante significa equilibrio, aunque el cuerpo esté "
+        "subiendo.\n\n"
+        "1) El peso es 8 · 10 = 80 N hacia abajo.\n"
+        "2) Con velocidad constante, la aceleración es cero y por lo tanto la "
+        "fuerza neta también.\n"
+        "3) La tensión debe entonces igualar al peso: 80 N.\n\n"
+        "Subir no exige una fuerza mayor que el peso: lo exige ACELERAR hacia "
+        "arriba. Una vez alcanzada la rapidez deseada, basta con equilibrar el "
+        "peso.",
+        [
+            ("Mayor que 80 N, porque el cuerpo está subiendo",
+             "Subir con velocidad constante no requiere fuerza extra: la fuerza mayor se necesita solo para acelerar."),
+            ("Menor que 80 N, porque el movimiento ya está iniciado",
+             "Con una tensión menor que el peso, el cuerpo desaceleraría y terminaría bajando."),
+            ("8 N", "Entregó la masa en newton, sin multiplicar por la aceleración de gravedad."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "¿Qué es la fuerza de tensión?",
+        "La que transmite una cuerda o un cable estirado",
+        "Es una fuerza de contacto propia de los elementos que solo pueden "
+        "tirar.\n\n"
+        "1) Aparece cuando una cuerda, un cable o una barra se estira por la "
+        "acción de fuerzas en sus extremos.\n"
+        "2) Actúa siempre a lo largo de la cuerda y en el sentido de tirar: una "
+        "cuerda no puede empujar.\n"
+        "3) En una cuerda ideal, de masa despreciable, la tensión es la misma en "
+        "todos sus puntos.\n\n"
+        "Por eso una cuerda floja no ejerce tensión: para que aparezca, debe "
+        "estar estirada.",
+        [
+            ("La que una superficie ejerce perpendicular al contacto",
+             "Esa es la fuerza normal, no la tensión."),
+            ("La que se opone al deslizamiento entre dos superficies",
+             "Esa es la fuerza de roce."),
+            ("La que ejerce un resorte comprimido sobre los cuerpos que lo aprietan",
+             "Esa es la fuerza elástica en compresión; la tensión corresponde a elementos que tiran, no que empujan."),
+        ],
+    ),
+    _q(
+        "cie_roce", "facil",
+        "Un resorte cumple la ley de Hooke. Si la fuerza aplicada se triplica, "
+        "¿qué ocurre con su estiramiento?",
+        "Se triplica",
+        "La ley establece una proporcionalidad directa entre ambas "
+        "magnitudes.\n\n"
+        "1) La relación es F = k · x, con k constante para cada resorte.\n"
+        "2) Si F se multiplica por 3 y k no cambia, x debe multiplicarse por 3 "
+        "para mantener la igualdad.\n"
+        "3) El estiramiento se triplica.\n\n"
+        "La proporcionalidad vale mientras no se supere el límite elástico: más "
+        "allá, un aumento de fuerza produce un estiramiento mayor que el "
+        "proporcional.",
+        [
+            ("Se mantiene igual", "Si el estiramiento no cambiara, la fuerza elástica tampoco podría cambiar."),
+            ("Se reduce a un tercio", "Eso correspondería a una relación inversa, y la ley de Hooke es de proporcionalidad directa."),
+            ("Se multiplica por nueve", "El factor al cuadrado no corresponde: la relación es lineal, no cuadrática."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un vehículo frena en una carretera mojada y necesita mucha más "
+        "distancia que en seco. ¿Qué magnitud cambió?",
+        "El coeficiente de roce entre el neumático y el pavimento",
+        "Ni la masa ni la rapidez inicial explican la diferencia.\n\n"
+        "1) El agua interpuesta entre el neumático y el pavimento reduce el "
+        "contacto directo entre ambas superficies.\n"
+        "2) Eso disminuye el coeficiente de roce y por lo tanto la fuerza "
+        "máxima que puede frenar al vehículo.\n"
+        "3) Con menor fuerza de frenado, la desaceleración es menor y la "
+        "distancia necesaria, mayor.\n\n"
+        "La masa del vehículo, en cambio, no cambia la distancia de frenado: "
+        "más masa da más roce disponible en la misma proporción, y ambos efectos "
+        "se cancelan.",
+        [
+            ("La masa del vehículo, que aumenta con el agua acumulada",
+             "El agua sobre el pavimento no aumenta apreciablemente la masa del vehículo."),
+            ("El peso del vehículo, que disminuye por el empuje del agua",
+             "Una lámina de agua sobre el pavimento no produce un empuje que aligere al vehículo."),
+            ("La rapidez inicial, que en mojado siempre resulta mayor",
+             "La rapidez inicial la determina el conductor, no el estado del pavimento."),
+        ],
+    ),
+    _q(
+        "cie_roce", "medio",
+        "Un cuerpo de 5 kg se encuentra sobre un piso y alguien tira de él hacia "
+        "arriba con una cuerda que ejerce 30 N, sin llegar a levantarlo. Con "
+        "g = 10 m/s², ¿cuál es la fuerza normal?",
+        "20 N",
+        "La normal se obtiene del equilibrio vertical, considerando todas las "
+        "fuerzas.\n\n"
+        "1) Las fuerzas verticales son el peso, 50 N hacia abajo; la tensión, "
+        "30 N hacia arriba; y la normal, hacia arriba.\n"
+        "2) El cuerpo no acelera verticalmente, así que la suma es cero: "
+        "N + 30 − 50 = 0.\n"
+        "3) Despeja: N = 20 N.\n\n"
+        "La normal disminuyó respecto de los 50 N que valdría sin la cuerda, y "
+        "con ella disminuye también el roce disponible: por eso conviene tirar "
+        "algo hacia arriba al arrastrar un objeto pesado.",
+        [
+            ("50 N", "Ese sería el valor sin la cuerda: la tensión hacia arriba alivia parte de la carga sobre el piso."),
+            ("80 N", "Sumó la tensión al peso en vez de restarla: eso correspondería a empujar hacia abajo."),
+            ("30 N", "Entregó el valor de la tensión, no el de la normal."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Se quiere comparar el coeficiente de roce de tres materiales distintos "
+        "usando el método del plano inclinado. ¿Qué debe mantenerse constante "
+        "entre los tres ensayos?",
+        "El bloque usado y el estado de las superficies",
+        "El método mide el ángulo al que comienza el deslizamiento, y ese "
+        "ángulo depende solo del coeficiente.\n\n"
+        "1) La masa del bloque no afecta el resultado, porque se cancela: pero "
+        "conviene usar el mismo para descartar diferencias de forma o de cara "
+        "de apoyo.\n"
+        "2) El ESTADO de las superficies sí es crítico: humedad, polvo o "
+        "desgaste alteran el coeficiente y falsean la comparación.\n"
+        "3) La variable independiente es el material del plano, y la dependiente, "
+        "el ángulo de deslizamiento.\n\n"
+        "Conviene además repetir cada medición varias veces: el ángulo de "
+        "arranque tiene bastante dispersión entre ensayos.",
+        [
+            ("La masa del bloque, porque de ella depende directamente el ángulo",
+             "El ángulo no depende de la masa: se cancela al igualar las dos fuerzas."),
+            ("El ángulo del plano, para que la comparación sea justa",
+             "El ángulo es justamente lo que se mide en cada ensayo: no puede fijarse de antemano."),
+            ("La altura desde la que se suelta el bloque sobre el plano inclinado",
+             "El bloque se apoya en reposo y el plano se inclina progresivamente: no hay altura de soltado que fijar."),
+        ],
+    ),
+    _q(
+        "cie_roce", "dificil",
+        "Un estudiante sostiene que un cuerpo más pesado tarda menos en frenar "
+        "al deslizarse, porque el roce es mayor. ¿Cómo se evalúa esa "
+        "afirmación?",
+        "Es incorrecta: más roce va con más inercia y se cancelan",
+        "Hay que mirar la aceleración, no solo la fuerza.\n\n"
+        "1) Es cierto que un cuerpo más pesado experimenta mayor fuerza de roce, "
+        "porque la normal es mayor.\n"
+        "2) Pero la desaceleración es esa fuerza dividida por la masa, y ambas "
+        "crecen en la misma proporción.\n"
+        "3) El resultado es que la desaceleración depende solo del coeficiente y "
+        "de la gravedad: dos cuerpos del mismo material frenan en la misma "
+        "distancia partiendo de la misma rapidez.\n\n"
+        "Es la misma cancelación que hace que todos los cuerpos caigan con igual "
+        "aceleración en el vacío.",
+        [
+            ("Es correcta: a mayor peso, mayor fuerza de roce y menor distancia de frenado",
+             "La fuerza de roce sí aumenta, pero también la inercia que hay que frenar: la distancia no cambia."),
+            ("Es incorrecta: un cuerpo más pesado tarda más en frenar",
+             "Tampoco tarda más: los dos efectos se cancelan exactamente."),
+            ("Es correcta solo si los dos cuerpos son del mismo material",
+             "Siendo del mismo material la cancelación es exacta y las distancias resultan iguales, no distintas."),
+        ],
+    ),
+]
